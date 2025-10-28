@@ -45613,8 +45613,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -45623,9 +45623,10 @@
       function _(_) {
         const { fnGetAltText: _, fnSetAltText: __webpack_require__ } = _,
           _ = (0, _._)(),
-          _ = (0, _._)(() => _(_)),
+          _ = _(_),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
+          _ = (0, _._)(),
           _ = (0, _.useCallback)(
             (_) => {
               const _ = _.target.files?.[0];
@@ -45732,7 +45733,9 @@
               _.createElement(_._, {
                 type: "text",
                 value: _,
-                onChange: (_) => __webpack_require__(_, _.currentTarget.value),
+                onChange: (_) => {
+                  __webpack_require__(_, _.currentTarget.value), _();
+                },
                 label: "Alternative Text",
                 tooltip:
                   "Required for screen readers for the visually impaired. Should be the copy burned into the image.",

@@ -41467,22 +41467,23 @@
         r = a(63556),
         i = a(1909),
         s = a(90626),
-        l = a(65946),
-        o = a(16676),
-        c = a(75026),
-        m = a.n(c),
-        d = a(26408),
-        u = a(22797),
-        p = a(21869),
-        _ = a(78395),
-        g = a(68797);
+        l = a(16676),
+        o = a(75026),
+        c = a.n(o),
+        m = a(26408),
+        d = a(22797),
+        u = a(21869),
+        p = a(78395),
+        _ = a(68797),
+        g = a(64753);
       function h(e) {
         const { fnGetAltText: t, fnSetAltText: a } = e,
-          c = (0, r.E)(),
-          h = (0, l.q3)(() => t(c)),
+          o = (0, r.E)(),
+          h = t(o),
           [E, S] = (0, s.useState)(!1),
           [v, y] = (0, s.useState)(null),
-          f = (0, s.useCallback)(
+          f = (0, g.CH)(),
+          b = (0, s.useCallback)(
             (e) => {
               const t = e.target.files?.[0];
               if (!t) return;
@@ -41501,7 +41502,7 @@
                     }
                   });
                 } catch (e) {
-                  const t = (0, g.H)(e);
+                  const t = (0, _.H)(e);
                   console.error(
                     "Failed to read or parse JSON:",
                     e,
@@ -41517,7 +41518,7 @@
             [a],
           );
         return E
-          ? s.createElement(u.t, { string: "Loading" })
+          ? s.createElement(d.t, { string: "Loading" })
           : s.createElement(
               s.Fragment,
               null,
@@ -41526,13 +41527,13 @@
               }),
               s.createElement(
                 "div",
-                { className: m().Ctn },
+                { className: c().Ctn },
                 s.createElement(i.iN, null),
                 s.createElement(
-                  o.JU,
+                  l.JU,
                   null,
                   "Or import json ",
-                  s.createElement(d.o, {
+                  s.createElement(m.o, {
                     tooltip:
                       'The json should use API language code in lower case as they key { "english": "my string", "german": "my german string", ... }, see https://partner.steamgames.com/doc/store/localization/languages',
                   }),
@@ -41540,10 +41541,10 @@
                 s.createElement("input", {
                   type: "file",
                   accept: ".json",
-                  onChange: f,
+                  onChange: b,
                 }),
                 s.createElement(
-                  o.$n,
+                  l.$n,
                   {
                     onClick: () => {
                       let e = {};
@@ -41563,10 +41564,10 @@
                 ),
               ),
               s.createElement(
-                p.E,
+                u.E,
                 { active: Boolean(v) },
                 s.createElement(
-                  _.o0,
+                  p.o0,
                   {
                     strTitle: "Error Importing Localization JSON",
                     strDescription: "Error from parsing JSON:",
@@ -41577,10 +41578,12 @@
                   s.createElement("p", null, v),
                 ),
               ),
-              s.createElement(o.pd, {
+              s.createElement(l.pd, {
                 type: "text",
                 value: h,
-                onChange: (e) => a(c, e.currentTarget.value),
+                onChange: (e) => {
+                  a(o, e.currentTarget.value), f();
+                },
                 label: "Alternative Text",
                 tooltip:
                   "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
