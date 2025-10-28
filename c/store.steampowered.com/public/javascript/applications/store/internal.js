@@ -5866,6 +5866,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "PC_HideOwned",
+        _ = "PC_HideEarlyAccess",
         _ = "PC_GameCount",
         _ = "PC_WishlistedDisplay";
       var _;
@@ -5877,7 +5878,7 @@
       const _ = {
         selectedTag: 0,
         bHideOwned: "1" == localStorage.getItem(_),
-        bHideEarlyAccess: "1" == localStorage.getItem("PC_HideEarlyAccess"),
+        bHideEarlyAccess: "1" == localStorage.getItem(_),
         cResultsToShow: parseInt(localStorage.getItem(_) ?? "100"),
         wishlistDisplay: parseInt(localStorage.getItem(_) ?? "0"),
       };

@@ -388,8 +388,8 @@ function ListEdit_AddAppElement( elTarget, appid, blurb, listid )
 
 	g_rgAppsInLists.push( appid );
 
-	var strHTML = "\n\n\t<div id=\"app_%4$s\">\n\t\t<div class=\"capsule\">\n\t\t\t<img  src=\"%1$s\" >\n\t\t<\/div>\n\t\t<div class=\"description\">\n\t\t\t<h2>%5$s<\/h2>\n\t\t<\/div>\n\t\t<div class=\"controls\">\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\" class=\"remove_item_from_list\"><img src=\"https:\/\/store.fastly.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\n\t\t<\/div>\n\t<\/div>\n\t".replace(/%1\$s/, 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/'+appid+'/header_292x136.jpg?t=1487329718' )
-		.replace(/%2\$s/, V_EscapeHTML(  blurb ) ).replace(/%3\$s/, listid).replace(/%4\$s/g, appid)
+	var strHTML = "\n\n\t<div id=\"app_%4$s\">\n\t\t<div class=\"capsule\">\n\t\t\t<img  src=\"%1$s\" >\n\t\t<\/div>\n\t\t<div class=\"description\">\n\t\t\t<h2>%5$s<\/h2>\n\t\t<\/div>\n\t\t<div class=\"controls\">\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\" class=\"remove_item_from_list\"><img src=\"https:\/\/store.fastly.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\n\t\t<\/div>\n\t<\/div>\n\t".replace(/%1\$s/, V_EscapeHTML( appInfo.header_url ) )
+		.replace(/%2\$s/, V_EscapeHTML( blurb ) ).replace(/%3\$s/, listid).replace(/%4\$s/g, appid)
 		.replace(/%5\$s/g, V_EscapeHTML( appInfo.app_name ) );
 
 

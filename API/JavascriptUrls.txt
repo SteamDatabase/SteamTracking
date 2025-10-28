@@ -2844,7 +2844,6 @@ https://s.team/remoteplay/connect/${}?appid=${}&${}
 https://s.team/steamos
 https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${appid}/${filename}
 https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${appid}/${}
-https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${appid}/header_292x136.jpg?t=1487329718
 https://sketchfab.com/models/${modelID}/embed?autostart=1
 https://sketchfab.com/models/${modelid}/embed?autostart=1
 https://sketchfab.com/oembed?url=https://sketchfab.com/models/${modelID}

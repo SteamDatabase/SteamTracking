@@ -3891,7 +3891,7 @@
     },
     98162: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => $e });
+      a.r(t), a.d(t, { default: () => et });
       var r = a(90626),
         s = a(45237);
       const n = ["initial", "sm", "md", "lg"],
@@ -5089,22 +5089,23 @@
         Re = a(30894),
         Me = a(65946);
       const Be = "PC_HideOwned",
-        Le = "PC_GameCount",
-        Oe = "PC_WishlistedDisplay";
-      var ke;
+        Le = "PC_HideEarlyAccess",
+        Oe = "PC_GameCount",
+        ke = "PC_WishlistedDisplay";
+      var Fe;
       !(function (e) {
         (e[(e.Show = 0)] = "Show"),
           (e[(e.Only = 1)] = "Only"),
           (e[(e.Hide = 2)] = "Hide");
-      })(ke || (ke = {}));
-      const Fe = {
+      })(Fe || (Fe = {}));
+      const He = {
         selectedTag: 0,
         bHideOwned: "1" == localStorage.getItem(Be),
-        bHideEarlyAccess: "1" == localStorage.getItem("PC_HideEarlyAccess"),
-        cResultsToShow: parseInt(localStorage.getItem(Le) ?? "100"),
-        wishlistDisplay: parseInt(localStorage.getItem(Oe) ?? "0"),
+        bHideEarlyAccess: "1" == localStorage.getItem(Le),
+        cResultsToShow: parseInt(localStorage.getItem(Oe) ?? "100"),
+        wishlistDisplay: parseInt(localStorage.getItem(ke) ?? "0"),
       };
-      function He(e) {
+      function Ge(e) {
         const { count: t } = e;
         return r.createElement(
           Pe.Z,
@@ -5122,7 +5123,7 @@
             ),
         );
       }
-      function Ge() {
+      function ze() {
         return r.createElement(
           Pe.Z,
           { className: Ae.PersonalCalendarLoginPrompt },
@@ -5134,7 +5135,7 @@
           ),
         );
       }
-      function ze(e) {
+      function We(e) {
         const {
           state: t,
           onChange: a,
@@ -5158,24 +5159,24 @@
           r.createElement(
             Pe.Z,
             { className: Ae.Options },
-            r.createElement(We, {
+            r.createElement(Ue, {
               userTags: n,
               tagMap: s,
               selectedTag: t.selectedTag,
               onChange: (e) => a({ ...t, selectedTag: e }),
             }),
-            r.createElement(Ue, {
+            r.createElement(je, {
               count: t.cResultsToShow,
               onChange: (e) => {
-                localStorage.setItem(Le, e.toString()),
+                localStorage.setItem(Oe, e.toString()),
                   a({ ...t, cResultsToShow: e });
               },
               max: i,
             }),
-            r.createElement(je, {
+            r.createElement(qe, {
               wishlistDisplay: t.wishlistDisplay,
               onChange: (e) => {
-                localStorage.setItem(Oe, e.toString()),
+                localStorage.setItem(ke, e.toString()),
                   a({ ...t, wishlistDisplay: e });
               },
               disabled: !e.usesWishlists,
@@ -5199,7 +5200,7 @@
                 {
                   checked: t.bHideEarlyAccess,
                   onChange: (e) => {
-                    localStorage.setItem(Be, e ? "1" : "0"),
+                    localStorage.setItem(Le, e ? "1" : "0"),
                       a({ ...t, bHideEarlyAccess: e });
                   },
                 },
@@ -5209,7 +5210,7 @@
           ),
         );
       }
-      function We(e) {
+      function Ue(e) {
         const { userTags: t, tagMap: a, selectedTag: s, onChange: n } = e,
           [i, o] = r.useState(""),
           { tagStrings: l, tagStringMap: c } = r.useMemo(() => {
@@ -5262,7 +5263,7 @@
           }),
         );
       }
-      function Ue(e) {
+      function je(e) {
         const { count: t, onChange: a, max: s } = e,
           n = [10, 25, 50, 100, 250, 500];
         let i = [];
@@ -5287,19 +5288,19 @@
           }),
         );
       }
-      function je(e) {
+      function qe(e) {
         const { wishlistDisplay: t, onChange: a } = e,
           s = (e) => {
             switch (e) {
-              case ke.Show:
+              case Fe.Show:
                 return (0, Ne.we)("#PersonalCalendar_WishlistShow");
-              case ke.Hide:
+              case Fe.Hide:
                 return (0, Ne.we)("#PersonalCalendar_WishlistHide");
-              case ke.Only:
+              case Fe.Only:
                 return (0, Ne.we)("#PersonalCalendar_WishlistOnly");
             }
           },
-          n = [s(ke.Show), s(ke.Hide), s(ke.Only)];
+          n = [s(Fe.Show), s(Fe.Hide), s(Fe.Only)];
         return r.createElement(
           Pe.Z,
           {
@@ -5326,20 +5327,20 @@
                     ((e) => {
                       switch (e) {
                         case (0, Ne.we)("#PersonalCalendar_WishlistShow"):
-                          return ke.Show;
+                          return Fe.Show;
                         case (0, Ne.we)("#PersonalCalendar_WishlistHide"):
-                          return ke.Hide;
+                          return Fe.Hide;
                         case (0, Ne.we)("#PersonalCalendar_WishlistOnly"):
-                          return ke.Only;
+                          return Fe.Only;
                       }
-                      return ke.Show;
+                      return Fe.Show;
                     })(t),
                   ),
             radius: "sm",
           }),
         );
       }
-      function qe(e) {
+      function Ze(e) {
         const { games: t } = e,
           a =
             (0, Me.q3)(() =>
@@ -5373,7 +5374,7 @@
           ),
         );
       }
-      function Ze(e) {
+      function Ve(e) {
         const { games: t } = e,
           a =
             (0, Me.q3)(() =>
@@ -5407,7 +5408,7 @@
           ),
         );
       }
-      function Ve(e) {
+      function Ke(e) {
         const {
             dayWeekTimestamps: t,
             appReleasesByDay: a,
@@ -5439,7 +5440,7 @@
                 0 == t
                   ? null
                   : n || 6 != t
-                    ? r.createElement(Ke, {
+                    ? r.createElement(Ye, {
                         key: `WeekHeader_${e}`,
                         timestamp: e,
                       })
@@ -5447,7 +5448,7 @@
               ),
             ),
             t.map((e, t) =>
-              r.createElement(Ye, {
+              r.createElement(Je, {
                 key: `Week_${t}`,
                 dayTimestamps: e,
                 appReleasesByDay: a,
@@ -5478,7 +5479,7 @@
               (0, Ne.we)("#PersonalCalendar_Upcoming"),
             ),
             t.map((e, t) =>
-              r.createElement(Je, {
+              r.createElement(Qe, {
                 key: `WeekLinear_${t}`,
                 dayTimestamps: e,
                 appReleasesByDay: a,
@@ -5489,14 +5490,14 @@
           ),
         );
       }
-      function Ke(e) {
+      function Ye(e) {
         const t = new Date(1e3 * e.timestamp).toLocaleDateString(
           Ne.pf.GetPreferredLocales(),
           { weekday: "long" },
         );
         return r.createElement(Pe.Z, { className: Ae.DayOfWeekHeader }, t);
       }
-      function Ye(e) {
+      function Je(e) {
         const [t, a] = r.useState(e.maxGames);
         if (e.todayTimestamp > Math.max(...e.dayTimestamps)) return null;
         const s = e.dayTimestamps
@@ -5522,7 +5523,7 @@
             0 == i
               ? null
               : e.includeSaturday || 6 != i
-                ? r.createElement(Qe, {
+                ? r.createElement(Xe, {
                     key: n,
                     timestamp: n,
                     appsToday: e.appReleasesByDay[n],
@@ -5535,7 +5536,7 @@
           ),
         );
       }
-      function Je(e) {
+      function Qe(e) {
         if (e.todayTimestamp > Math.max(...e.dayTimestamps)) return null;
         const t = { month: "long", day: "numeric" },
           a = new Date(1e3 * e.dayTimestamps[0]).toLocaleDateString(
@@ -5554,7 +5555,7 @@
             Pe.Z,
             { className: Ae.LinearDayList },
             e.dayTimestamps?.map((t) =>
-              r.createElement(Xe, {
+              r.createElement($e, {
                 key: t,
                 timestamp: t,
                 appsToday: e.appReleasesByDay[t],
@@ -5567,7 +5568,7 @@
           ),
         );
       }
-      function Qe(e) {
+      function Xe(e) {
         const t = new Date(1e3 * e.timestamp).toLocaleDateString(
             Ne.pf.GetPreferredLocales(),
             { month: "long", day: "numeric" },
@@ -5623,7 +5624,7 @@
           ),
         );
       }
-      function Xe(e) {
+      function $e(e) {
         const t = new Date(1e3 * e.timestamp).toLocaleDateString(
             Ne.pf.GetPreferredLocales(),
             { weekday: "long" },
@@ -5671,9 +5672,9 @@
                 ),
             );
       }
-      const $e = () => {
+      const et = () => {
         const { data: e } = (0, Se.Fv)(xe.TS.LANGUAGE),
-          [t, a] = r.useState(Fe),
+          [t, a] = r.useState(He),
           s = (0, De.I)({
             queryKey: ["personalcalendar", t.selectedTag],
             queryFn: async () => {
@@ -5737,12 +5738,12 @@
                         const t = Te.A.Get().GetApp(e.appid);
                         return !t?.BIsEarlyAccess();
                       })),
-                    s != ke.Show &&
+                    s != Fe.Show &&
                       (n = n.filter((e) => {
                         switch (s) {
-                          case ke.Hide:
+                          case Fe.Hide:
                             return !Re.Fm.Get().BIsGameWishlisted(e.appid);
-                          case ke.Only:
+                          case Fe.Only:
                             return Re.Fm.Get().BIsGameWishlisted(e.appid);
                         }
                       })),
@@ -5834,15 +5835,15 @@
                   r.createElement(
                     Pe.Z,
                     { className: Ae.PersonalCalendarContainer },
-                    r.createElement(He, {
+                    r.createElement(Ge, {
                       count: s.data ? t.cResultsToShow : void 0,
                     }),
-                    !xe.iA.steamid && r.createElement(Ge, null),
+                    !xe.iA.steamid && r.createElement(ze, null),
                     s.data &&
                       r.createElement(
                         r.Fragment,
                         null,
-                        r.createElement(ze, {
+                        r.createElement(We, {
                           state: t,
                           onChange: a,
                           tagMap: e,
@@ -5851,10 +5852,10 @@
                           usesWishlists: c,
                         }),
                         g.length > 0 &&
-                          r.createElement(qe, { games: g, includeSaturday: y }),
+                          r.createElement(Ze, { games: g, includeSaturday: y }),
                         _.length > 0 &&
-                          r.createElement(Ze, { games: _, includeSaturday: y }),
-                        r.createElement(Ve, {
+                          r.createElement(Ve, { games: _, includeSaturday: y }),
+                        r.createElement(Ke, {
                           dayWeekTimestamps: i,
                           appReleasesByDay: h,
                           todayTimestamp: p,
