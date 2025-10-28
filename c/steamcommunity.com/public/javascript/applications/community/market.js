@@ -1,5 +1,5 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [9560],
+  [7331],
   {
     chunkid: (module) => {
       module.exports = {
@@ -82,6 +82,8 @@
         Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
         SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
         Item: "_2aNlsjcdOdHOtP8uACA3bM",
+        "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
+        "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
       };
     },
     chunkid: (module) => {
@@ -378,12 +380,15 @@
         Display: "_1jz8vOMNXWjuOs8PNx6twM",
         Elevation: "_51vKfcQCBgoT8lSk1q3iX",
         Border: "_2lajVjbyrA4lq9xF0X4NQW",
+        BorderColor: "_1x6gylcu6acqj_bRoqrFHf",
         Outline: "_2UkNTTzKtJJdhYEnuwtVRd",
       };
     },
     chunkid: (module) => {
       module.exports = {
         Root: "_2KPA3I9eXE9r251_-GX_iv",
+        DataAttributes: "_1tmKnx6V_8Ez9jIC5eMgat",
+        AfterDataAttributes: "_3BGADF5vKbdAji-Xj65xxm",
       };
     },
     chunkid: (module) => {
@@ -403,7 +408,6 @@
     chunkid: (module) => {
       module.exports = {
         Text: "f6hU22EA7Z8peFWZVBJU",
-        Secondary: "_1ON8bAEdabDmKAdMmOShha",
         Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
         "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
         "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
@@ -417,11 +421,20 @@
         TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
         TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
         LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
       };
     },
     chunkid: (module) => {
       module.exports = {
         Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ItemDescriptionRule: "_2QkVHUdg2nMVhlNHjtqvm5",
+        ItemDescription: "_2MixhMbHTxS0qJ2uAefnVy",
+        GameImage: "_3LTPlbh1oIRZyLjujpw83H",
+        GameImagePlaceholder: "_27u72fjp-gJgeD5k7NQ1Vf",
       };
     },
     chunkid: (module) => {
@@ -450,98 +463,948 @@
       "use strict";
       __webpack_require__._(module_exports),
         __webpack_require__._(module_exports, {
+          default: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        steamidOwner: void 0,
+      });
+      function _(_) {
+        const { steamidOwner: _, children: __webpack_require__ } = _,
+          _ = _.useMemo(
+            () => ({
+              steamidOwner: _,
+            }),
+            [_],
+          );
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          __webpack_require__,
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        const _ = (function (_, _, _, _ = _._.GetAssetClassInfo) {
+          return (0, _._)(`AssetClassInfo_${_}_${_}`, () =>
+            (function (_, _, _, _ = _._.GetAssetClassInfo) {
+              return new (_())(async (_) => {
+                var _;
+                let _ = _._.Init(_._);
+                _.Body().set_language(_),
+                  _.Body().set_appid(_),
+                  _.forEach((_) => {
+                    const [_, _] = _.split("_"),
+                      _ = _.Body().add_classes();
+                    _.set_classid(_), _.set_instanceid(_);
+                  });
+                const _ = await _(_, _);
+                if (1 != _.GetEResult())
+                  throw `Error loading econ items: ${_.GetErrorMessage()}`;
+                return null !== (_ = _.Body().toObject().descriptions) &&
+                  void 0 !== _
+                  ? _
+                  : [];
+              });
+            })(_, _, _, _),
+          );
+        })((0, _._)(), _, _._.LANGUAGE);
+        return (0, _._)(
+          (function (_, _, _) {
+            const _ = `${null == _ ? void 0 : _.classid}_${null == _ ? void 0 : _.instanceid}`;
+            return {
+              queryKey: ["AssetClassInfo", _, _],
+              queryFn: async () => _.load(_),
+              enabled: !!_ && !!_.classid,
+            };
+          })(_, _, _),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, asset: __webpack_require__, ..._ } = _,
+          [_, _] = (0, _._)(),
+          _ = _.useRef(null);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.cloneElement(_, {
+            ..._,
+            ref: _,
+          }),
+          _ &&
+            __webpack_require__ &&
+            _.createElement(_, {
+              asset: __webpack_require__,
+              ..._,
+              refElement: _,
+            }),
+        );
+      }
+      const _ = 346;
+      function _(_) {
+        var _;
+        const {
+            description: __webpack_require__,
+            asset: _,
+            bHideImage: _ = !1,
+            refElement: _,
+          } = _,
+          [_, _] = _.useState(),
+          { data: _ } = _(_.appid, __webpack_require__ ? void 0 : _),
+          _ = _.useCallback(() => {
+            const _ = _.current;
+            if (!_) return void _(void 0);
+            const _ = _.getBoundingClientRect(),
+              _ = _.ownerDocument.defaultView.innerWidth;
+            _.right + 1.02 * _ > _ && _.left - 1.02 * _ > 0
+              ? _({
+                  right: _ - _.left + "px",
+                  top: `${_.top}px`,
+                })
+              : _({
+                  left: `${_.right}px`,
+                  top: `${_.top}px`,
+                });
+          }, [_]),
+          _ =
+            null === (_ = _.current) || void 0 === _
+              ? void 0
+              : _.ownerDocument.defaultView;
+        _.useLayoutEffect(() => _(), [_]),
+          (0, _._)(_, "resize", _),
+          (0, _._)(_, "scroll", _);
+        const _ = null != __webpack_require__ ? __webpack_require__ : _;
+        return _ && _
+          ? _.createElement(
+              _._,
+              {
+                style: {
+                  ..._,
+                  position: "fixed",
+                  zIndex: 1,
+                  width: `${_}px`,
+                },
+              },
+              _.createElement(
+                _.Root,
+                {
+                  description: _,
+                  asset: _,
+                },
+                _.createElement(
+                  _.Container,
+                  null,
+                  !_ &&
+                    _.createElement(
+                      _.Fragment,
+                      null,
+                      _.createElement(_.Image, null),
+                      _.createElement(_.Separator, null),
+                    ),
+                  _.createElement(_.Name, null),
+                  _.createElement(_.GameInfo, null),
+                  _.createElement(_.Descriptions, null),
+                  _.createElement(_.OwnerDescriptions, null),
+                  _.createElement(_.Tags, null),
+                ),
+              ),
+            )
+          : null;
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _.name_color ? `#${_.name_color}` : _;
+      }
+      function _(_) {
+        const {
+            description: _,
+            asset: __webpack_require__,
+            style: _ = {},
+            ..._
+          } = _,
+          _ =
+            "string" ==
+            typeof (null == __webpack_require__
+              ? void 0
+              : __webpack_require__.amount)
+              ? parseInt(__webpack_require__.amount)
+              : null == __webpack_require__
+                ? void 0
+                : __webpack_require__.amount;
+        return _.createElement(
+          _._,
+          {
+            contrast: "note",
+            ..._,
+            style: {
+              ...(null != _ ? _ : {}),
+              color: _(_),
+            },
+          },
+          _ && _ > 1 ? `${_.toLocaleString()} ` : void 0,
+          _.name,
+        );
+      }
+      function _(_) {
+        var _;
+        const _ = _.context.itemDescription;
+        if (
+          !(null === (_ = _.container_properties) || void 0 === _
+            ? void 0
+            : _.contained_items)
+        )
+          return null;
+        const _ = _.appid,
+          _ = _.container_properties.contained_items;
+        return _.createElement(
+          "ul",
+          null,
+          _.map((_, _) =>
+            _.createElement(_, {
+              key: _,
+              appid: _,
+              contained_item: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { appid: _, contained_item: __webpack_require__ } = _,
+          { data: _ } = _(_, __webpack_require__);
+        return _
+          ? _.createElement(
+              _,
+              {
+                asset: __webpack_require__,
+                description: _,
+              },
+              _.createElement(
+                "li",
+                null,
+                _.createElement(_, {
+                  description: _,
+                }),
+              ),
+            )
+          : null;
+      }
+      function _(_, _) {
+        var _, _;
+        return (
+          null === (_ = null == _ ? void 0 : _.public_data) || void 0 === _
+            ? void 0
+            : _.profile_url
+        )
+          ? `${_._.COMMUNITY_BASE_URL}id/${_.public_data.profile_url}`
+          : (function (_) {
+              return _ ? `${_._.COMMUNITY_BASE_URL}profiles/${_}` : "";
+            })(
+              (null === (_ = null == _ ? void 0 : _.public_data) || void 0 === _
+                ? void 0
+                : _.steamid) || _,
+            );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return ["PlayerLinkDetails", _];
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_);
+        return (0, _._)(
+          (function (_, _) {
+            const _ =
+              "number" == typeof _
+                ? _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString()
+                : _;
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                var _;
+                if (_) {
+                  const _ = await _.load(_);
+                  return (
+                    null === (_ = null == _ ? void 0 : _.private_data) ||
+                      void 0 === _ ||
+                      delete _.account_name,
+                    _
+                  );
+                }
+                return null;
+              },
+              enabled: !!_,
+            };
+          })(_, _),
+        );
+      }
+      function _(_) {
+        var _, _;
+        const _ = parseInt(
+            null !==
+              (_ =
+                null === (_ = _.children) || void 0 === _
+                  ? void 0
+                  : _.toString()) && void 0 !== _
+              ? _
+              : "0",
+          ),
+          _ = _._.InitFromAccountID(_, _._.EUNIVERSE).ConvertTo64BitString(),
+          { data: _, isLoading: _ } = _(_);
+        if (!_ && _) return null;
+        const _ = _(_, _);
+        return _.createElement(
+          "a",
+          {
+            href: _,
+            "data-miniprofile": _,
+          },
+          _ ? _.public_data.persona_name : _,
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return void 0 === _ ? _[""] : _[_];
+      }
+      const _ = {
+        _: {
+          Constructor: function (_) {
+            return _.createElement("b", null, _.children);
+          },
+        },
+        _: {
+          Constructor: function (_) {
+            return _.createElement("i", null, _.children);
+          },
+        },
+        _: {
+          Constructor: function (_) {
+            return _.createElement("u", null, _.children);
+          },
+        },
+        strike: {
+          Constructor: function (_) {
+            return _.createElement("s", null, _.children);
+          },
+        },
+        color: {
+          Constructor: function (_) {
+            const _ = _(_.args),
+              _ = {};
+            _ &&
+              (_.match(/^#[a-fA-F0-9]+$/) || _.match(/rgba?\([0-9, ]+\)$/)) &&
+              (_.color = _);
+            return _.createElement(
+              "span",
+              {
+                style: _,
+              },
+              _.children,
+            );
+          },
+        },
+      };
+      const _ = {
+        _: {
+          Constructor: function (_) {
+            return _.createElement("h1", null, _.children);
+          },
+          skipFollowingNewline: !0,
+        },
+        _: {
+          Constructor: function (_) {
+            return _.createElement("h2", null, _.children);
+          },
+          skipFollowingNewline: !0,
+        },
+        _: {
+          Constructor: function (_) {
+            return _.createElement("h3", null, _.children);
+          },
+          skipFollowingNewline: !0,
+        },
+        quote: {
+          Constructor: function (_) {
+            return _.createElement("blockquote", null, _.children);
+          },
+          skipFollowingNewline: !0,
+          skipInternalNewline: !0,
+        },
+        _: {
+          Constructor: function (_) {
+            return _.createElement(
+              _.Fragment,
+              null,
+              _.createElement("hr", null),
+              _.children,
+            );
+          },
+          skipFollowingNewline: !0,
+        },
+      };
+      function _(_) {
+        var _;
+        const _ =
+          null !== (_ = _(_.args)) && void 0 !== _ ? _ : _(_.args, "href");
+        return _ && __webpack_require__.match(/^https?:\/\//)
+          ? _.createElement(
+              "a",
+              {
+                target: "_blank",
+                href: _,
+              },
+              _.children,
+            )
+          : _.children;
+      }
+      const _ = {
+        list: {
+          Constructor: function (_) {
+            return _.createElement("ul", null, _.children);
+          },
+          skipInternalNewline: !0,
+        },
+        olist: {
+          Constructor: function (_) {
+            return _.createElement("ol", null, _.children);
+          },
+          skipInternalNewline: !0,
+        },
+        "*": {
+          Constructor: function (_) {
+            return _.createElement("li", null, _.children);
+          },
+          autocloses: !0,
+        },
+      };
+      function _(_) {
+        const { itemDescription: _, bbcode: __webpack_require__ = "" } = _,
+          _ = _.useMemo(() => {
+            const _ = {
+              ..._,
+              ..._,
+              ..._,
+              url: {
+                Constructor: _,
+              },
+              container_item_list: {
+                Constructor: _,
+              },
+              persona: {
+                Constructor: _,
+              },
+            };
+            return new _._(_, (_) => new _._(), _._.LANGUAGE);
+          }, []),
+          _ = _.useMemo(
+            () => ({
+              itemDescription: _,
+            }),
+            [_],
+          );
+        return _.useMemo(
+          () => _.ParseBBCode(__webpack_require__, _),
+          [_, __webpack_require__, _],
+        );
+      }
+      function _(_) {
+        const {
+            description: _,
+            type: __webpack_require__ = "descriptions",
+            ..._
+          } = _,
+          _ = _[__webpack_require__];
+        return _.createElement(
+          _._,
+          {
+            direction: "column",
+          },
+          null == _
+            ? void 0
+            : _.map((_, _) =>
+                _.createElement(_, {
+                  key: _,
+                  line: _,
+                  description: _,
+                  ..._,
+                }),
+              ),
+        );
+      }
+      function _(_) {
+        const { line: _, description: __webpack_require__, ..._ } = _,
+          _ = {
+            _: "div",
+            ..._,
+            whiteSpace: "pre-wrap",
+            style: {
+              color: _.color ? `#${_.color}` : void 0,
+            },
+          };
+        switch (_.type) {
+          case "html":
+            return _.createElement(
+              _._,
+              {
+                ..._,
+              },
+              _.createElement("span", {
+                style: {
+                  display: "contents",
+                },
+                dangerouslySetInnerHTML: {
+                  __html: _.value || "",
+                },
+              }),
+            );
+          case "bbcode":
+            return _.createElement(
+              _._,
+              {
+                ..._,
+              },
+              _.createElement(_, {
+                itemDescription: __webpack_require__,
+                bbcode: _.value,
+              }),
+            );
+          default:
+            return _.createElement(
+              _._,
+              {
+                ..._,
+              },
+              _.value,
+            );
+        }
+      }
+      const _ = _.createContext(void 0);
+      function _() {
+        return _.useContext(_).description;
+      }
+      function _() {
+        return _.useContext(_).asset;
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { actions: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            wrap: "wrap",
+            gap: "2",
+          },
+          _.map((_, _) =>
+            _.createElement(_, {
+              key: _,
+              action: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { action: _ } = _,
+          _ = _.useContext(_).steamidOwner,
+          _ = (_(), _()),
+          _ = (function (_, _, _, _) {
+            var _, _;
+            return _.replace(
+              /%assetid%/,
+              null !== (_ = null == _ ? void 0 : _.assetid) && void 0 !== _
+                ? _
+                : "",
+            )
+              .replace(
+                /%contextid%/,
+                null !== (_ = null == _ ? void 0 : _.contextid) && void 0 !== _
+                  ? _
+                  : "",
+              )
+              .replace(/%owner_steamid%/, null != _ ? _ : "");
+          })(_.link, 0, _, _);
+        if (_.startsWith("javascript:")) {
+          const _ = _.substring(11),
+            _ = new Function(_);
+          return _.createElement(
+            _._,
+            {
+              onClick: _,
+              size: "1",
+              color: "dull",
+            },
+            _.name,
+          );
+        }
+        return _.createElement(
+          _._,
+          {
+            href: _,
+            size: "1",
+            color: "dull",
+          },
+          _.name,
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+        Root: function (_) {
+          const { description: _, asset: __webpack_require__, children: _ } = _,
+            _ = _.useMemo(
+              () => ({
+                description: _,
+                asset: __webpack_require__,
+              }),
+              [_, __webpack_require__],
+            );
+          return _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
+            _,
+          );
+        },
+        Container: function (_) {
+          const { children: _ } = _,
+            _ = _();
+          return _.createElement(
+            _._,
+            {
+              direction: "column",
+              border: `2px solid ${_(_, "#3A3A3A")}`,
+              padding: "2",
+              className: _.ItemDescription,
+              gapY: "2",
+            },
+            _,
+          );
+        },
+        Image: function (_) {
+          const { bAllowAnimatedIcon: _ = !0 } = _,
+            _ = _(),
+            _ =
+              `${_._.COMMUNITY_CDN_URL}economy/image/${_.icon_url_large || _.icon_url}/330x192` +
+              (_ ? "?allow_animated=1" : "");
+          return _.createElement(
+            _._,
+            {
+              height: "196px",
+              align: "center",
+              justify: "start",
+            },
+            _.createElement("img", {
+              src: _,
+              alt: _.name,
+            }),
+          );
+        },
+        Separator: function () {
+          return _.createElement("hr", {
+            className: _.ItemDescriptionRule,
+          });
+        },
+        Name: function () {
+          const _ = _(),
+            _ = _();
+          return _.createElement(
+            _._,
+            {
+              size: "6",
+            },
+            _.createElement(_, {
+              description: _,
+              asset: _,
+            }),
+          );
+        },
+        GameInfo: function () {
+          var _;
+          const _ = _(),
+            _ = _.appid,
+            { data: _ } = (0, _._)({
+              appid: _,
+            }),
+            { data: _ } = (0, _._)({
+              appid: _,
+            }),
+            _ = _ && _.community_icon ? (0, _._)(_, "community_icon") : void 0;
+          return _.createElement(
+            _._,
+            {
+              direction: "row",
+              gapX: "2",
+              align: "center",
+            },
+            _
+              ? _.createElement(_._, {
+                  alt:
+                    null !== (_ = null == _ ? void 0 : _.name) && void 0 !== _
+                      ? _
+                      : "",
+                  src: _,
+                  className: _.GameImage,
+                })
+              : _.createElement(_._, {
+                  className: _.GameImagePlaceholder,
+                }),
+            _.createElement(
+              _._,
+              {
+                direction: "column",
+              },
+              _.createElement(
+                _._,
+                {
+                  size: "3",
+                  contrast: "note",
+                },
+                null == _ ? void 0 : _.name,
+              ),
+              _.createElement(
+                _._,
+                {
+                  size: "3",
+                  contrast: "note",
+                },
+                _.type,
+              ),
+            ),
+          );
+        },
+        Descriptions: function () {
+          const _ = _();
+          return _.createElement(_, {
+            description: _,
+            contrast: "description",
+            size: "3",
+          });
+        },
+        Actions: function () {
+          const _ = _(),
+            { actions: _ } = _;
+          return (
+            _ &&
+            _.createElement(_, {
+              actions: _,
+            })
+          );
+        },
+        OwnerDescriptions: function () {
+          const _ = _();
+          return _.createElement(_, {
+            description: _,
+            type: "owner_descriptions",
+            contrast: "description",
+            size: "3",
+          });
+        },
+        OwnerActions: function () {
+          const _ = _(),
+            { owner_actions: _, market_actions: __webpack_require__ } = _;
+          return _.createElement(
+            _.Fragment,
+            null,
+            _ &&
+              _.createElement(_, {
+                actions: _,
+              }),
+            __webpack_require__ &&
+              _.createElement(_, {
+                actions: __webpack_require__,
+              }),
+          );
+        },
+        Tags: function () {
+          const _ = _(),
+            { tags: _ } = _;
+          return _ && _.length
+            ? _.createElement(
+                _._,
+                {
+                  size: "3",
+                  contrast: "note",
+                },
+                "Tags: ",
+                " ",
+                _.map((_) => _.localized_tag_name).join(", "),
+              )
+            : null;
+        },
+      };
+      const _ = Object.assign(function (_) {
+        const { description: _, asset: __webpack_require__ } = _;
+        return _.createElement(
+          _.Root,
+          {
+            description: _,
+            asset: __webpack_require__,
+          },
+          _.createElement(
+            _.Container,
+            null,
+            _.createElement(_.Image, null),
+            _.createElement(_.Separator, null),
+            _.createElement(_.Name, null),
+            _.createElement(_.GameInfo, null),
+            _.createElement(_.Descriptions, null),
+            _.createElement(_.Actions, null),
+            _.createElement(_.OwnerDescriptions, null),
+            _.createElement(_.OwnerActions, null),
+            _.createElement(_.Tags, null),
+          ),
+        );
+      }, _);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { name: _, bIsMarket: __webpack_require__, steamidOwner: _ } = _,
+          [_, _] = _.useState();
+        return (
+          (0, _.useEffect)(
+            () =>
+              (function (_, _) {
+                var _;
+                const _ = window;
+                _.UpdateReactItemInfo ||
+                  (_.UpdateReactItemInfo = (_, _, _) => {
+                    const _ = _.get(_);
+                    _ ? _(_, _) : (0, _._)(!1, `Updater not registered: ${_}`);
+                  });
+                if (
+                  null === (_ = _.g_mapPendingItemInfo) || void 0 === _
+                    ? void 0
+                    : __webpack_require__.has(_)
+                ) {
+                  const { description: _, asset: _ } =
+                    _.g_mapPendingItemInfo.get(_);
+                  _(_, _), _.g_mapPendingItemInfo.delete(_);
+                }
+                return (
+                  _.set(_, _),
+                  () => {
+                    _.delete(_);
+                  }
+                );
+              })(_, (_, _) =>
+                _(
+                  _ && {
+                    description: _,
+                    asset: _,
+                  },
+                ),
+              ),
+            [_],
+          ),
+          _
+            ? _.createElement(
+                _._,
+                null,
+                _.createElement(
+                  _,
+                  {
+                    steamidOwner: _,
+                  },
+                  _.createElement(
+                    _._,
+                    null,
+                    __webpack_require__
+                      ? _.createElement(_, {
+                          description: _.description,
+                          asset: _.asset,
+                        })
+                      : _.createElement(_, {
+                          description: _.description,
+                          asset: _.asset,
+                        }),
+                  ),
+                ),
+              )
+            : null
+        );
+      }
+      function _(_) {
+        const { description: _, asset: __webpack_require__ } = _;
+        return _.createElement(
+          _.Root,
+          {
+            description: _,
+            asset: __webpack_require__,
+          },
+          _.createElement(
+            _._,
+            {
+              direction: "row",
+              align: "start",
+              gap: "4",
+            },
+            _.createElement(
+              _._,
+              {
+                flexGrow: "1",
+                flexShrink: "1",
+                flexBasis: "0%",
+                style: {
+                  boxShadow: "0 0 14px #030303 inset",
+                  background: "#071215",
+                },
+                radius: "sm",
+                direction: "column",
+                align: "center",
+                minHeight: "360px",
+                justify: "center",
+              },
+              _.createElement(_.Image, null),
+            ),
+            _.createElement(
+              _._,
+              {
+                flexGrow: "1",
+                flexShrink: "1",
+                flexBasis: "0%",
+                direction: "column",
+                gapY: "2",
+                minWidth: "0",
+              },
+              _.createElement(_.Name, null),
+              _.createElement(_.GameInfo, null),
+              _.createElement(_.Descriptions, null),
+              _.createElement(_.Actions, null),
+            ),
+          ),
+        );
+      }
+      const _ = new Map();
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports),
+        __webpack_require__._(module_exports, {
           MarketBaseUIRoot: () => _,
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _.createContext)({}),
-        _ = (0, _.createContext)(() => {});
-      function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)({});
-        return _.createElement(
-          _.Provider,
-          {
-            value: _,
-          },
-          _.createElement(
-            _.Provider,
-            {
-              value: __webpack_require__,
-            },
-            _.children,
-          ),
-        );
-      }
-      function _() {
-        return (0, _.useContext)(_);
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = _.memo(function (_) {
-        const {
-            defaultTextSize: _ = "3",
-            accentColor: __webpack_require__ = "blue",
-            dullColor: _ = "greyneutral",
-            breakpoints: _,
-            children: _,
-            zoo: _,
-          } = _,
-          _ = {
-            "--default-font-size": `var(--text-size-${_})`,
-            "--default-line-height": `var(--line-height-${_})`,
-            "--default-letter-spacing": `var(--letter-spacing-${_})`,
-            "--text-color": `var(--color-${_}-12)`,
-            "--text-color-secondary": `var(--color-${_}-11)`,
-            "--color-debug": "hotpink",
-            "--color-accent-contrast": "white",
-          };
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _._,
-            {
-              breakpoints: _,
-            },
-            _.createElement(
-              _,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _()(_.Root, "noOpinionatedGlobalStyles"),
-                  style: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    "data-accent-color": __webpack_require__,
-                    "data-dull-color": _,
-                  },
-                  _,
-                  !1,
-                ),
-              ),
-            ),
-          ),
-        );
-      });
-      function _(_) {
-        const { children: _ } = _,
-          { formFactorOverride: __webpack_require__ } = _();
-        return _.createElement(
-          _._,
-          {
-            formFactor: __webpack_require__,
-          },
-          _,
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -658,10 +1521,164 @@
         );
       }
       function _(_) {
-        return _.createElement(_, {
+        return _.createElement(_._, {
           ..._,
         });
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports),
+        __webpack_require__._(module_exports, {
+          default: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { app: _, initialValue: __webpack_require__, debugMode: _ } = _,
+          [_, _] = (0, _.useState)(__webpack_require__),
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(!0);
+        return _.createElement(
+          _._.Provider,
+          {
+            value: _,
+          },
+          _.createElement(
+            _.MarketBaseUIRoot,
+            null,
+            _.createElement(
+              _._,
+              {
+                width: "259px",
+                ref: _,
+                position: "relative",
+                style: {
+                  zIndex: 402,
+                },
+              },
+              _.createElement(_._, {
+                value: _,
+                onTextChange: _,
+                app: _ ? _ : void 0,
+                onClearApp: () => _(!1),
+                radius: "none",
+                variant: "default",
+                name: "q",
+                autoComplete: "off",
+              }),
+            ),
+          ),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          variant: _ = "default",
+          size: __webpack_require__ = "2",
+          ..._
+        } = _;
+        return _.createElement("button", {
+          type: "button",
+          ...(0, _._)(
+            {
+              ..._,
+              variant: _,
+              size: __webpack_require__,
+              className: _.Button,
+            },
+            _,
+          ),
+        });
+      }
+      function _(_) {
+        const {
+            variant: _ = "default",
+            size: __webpack_require__ = "2",
+            disabled: _,
+            ..._
+          } = _,
+          _ = _ ? _ : void 0;
+        return _.createElement("a", {
+          ...(0, _._)(
+            {
+              onClick: _,
+              ..._,
+              variant: _,
+              size: __webpack_require__,
+              className: _.Button,
+            },
+            _,
+          ),
+        });
+      }
+      function _(_) {
+        _.preventDefault();
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`Size-${_}`],
+        },
+        {
+          prop: "variant",
+          className: (_) => _[`Variant-${_}`],
+        },
+        {
+          prop: "color",
+          dataProperty: (_) => ["accent-color", `${_}`],
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(
+          {
+            ..._,
+            className: _.className,
+          },
+          _,
+        );
+        return _.createElement("img", {
+          ..._,
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "objectFit",
+          className: _.ObjectFit,
+          cssProperty: "--object-fit",
+        },
+        {
+          prop: "objectPosition",
+          className: _.ObjectPosition,
+          cssProperty: "--object-position",
+        },
+      ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -690,6 +1707,83 @@
       const _ = _._;
       function _(_) {
         return (0, _._)(_, _._);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(
+          {
+            ..._,
+            className: _()(_.className, _.Flex),
+          },
+          _,
+        );
+        return _.createElement("div", {
+          ..._,
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "direction",
+          responsive: !0,
+          className: _.Direction,
+          cssProperty: "--direction",
+        },
+        {
+          prop: "justify",
+          responsive: !0,
+          className: _.Justify,
+          cssProperty: (_) => ["--justify", _(_)],
+        },
+        {
+          prop: "align",
+          responsive: !0,
+          className: _.Align,
+          cssProperty: "--align",
+        },
+        {
+          prop: "gap",
+          responsive: !0,
+          className: _.Gap,
+          cssProperty: (_) => ["--gap", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapX",
+          responsive: !0,
+          className: _.GapX,
+          cssProperty: (_) => ["--gap-x", `var(--spacing-${_})`],
+        },
+        {
+          prop: "gapY",
+          responsive: !0,
+          className: _.GapY,
+          cssProperty: (_) => ["--gap-y", `var(--spacing-${_})`],
+        },
+        {
+          prop: "wrap",
+          responsive: !0,
+          className: _.Wrap,
+          cssProperty: "--wrap",
+        },
+        {
+          prop: "inline",
+          responsive: !0,
+          className: _.Inline,
+        },
+      ];
+      function _(_) {
+        return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -947,6 +2041,12 @@
             prop: "border",
             responsive: !0,
             className: _.Border,
+            cssProperty: "--border",
+          },
+          {
+            prop: "borderColor",
+            responsive: !0,
+            className: [_.Border, _.BorderColor].join(" "),
             cssProperty: (_) => ["--border-color", (0, _._)(_)],
           },
           {
@@ -1022,7 +2122,7 @@
               }
               if (_.cssProperty)
                 if ("function" == typeof _.cssProperty) {
-                  const _ = _.cssProperty(_);
+                  const _ = _.cssProperty(_, _);
                   if (_.length && Array.isArray(_[0]))
                     __webpack_require__.forEach(([_, _]) => (_[_] = _));
                   else {
@@ -1069,12 +2169,7 @@
         return `rgb( from ${`var(--color-${_})`} r g b / ${__webpack_require__} )`;
       }
       function _(_, _) {
-        const _ = _[_.length - 1];
-        return "%" === _ ||
-          (__webpack_require__.charCodeAt("chunkid") >= 48 &&
-            __webpack_require__.charCodeAt("chunkid") <= 57)
-          ? _(_)
-          : _(`${_}-${_}`);
+        return _.startsWith("text") ? `var(--color-${_}-${_})` : _(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1160,6 +2255,333 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
+      const _ = [
+        "greyneutral",
+        "mauve",
+        "slate",
+        "sage",
+        "olive",
+        "sand",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "bronze",
+        "gold",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "orange",
+      ];
+      var _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)({}),
+        _ = (0, _.createContext)(() => {});
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)({});
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.createElement(
+            _.Provider,
+            {
+              value: __webpack_require__,
+            },
+            _.children,
+          ),
+        );
+      }
+      function _() {
+        return (0, _.useContext)(_);
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const {
+            defaultTextSize: _ = "3",
+            accentColor: __webpack_require__ = "blue",
+            dullColor: _ = "greyneutral",
+            bodyTextColor: _ = "text-light",
+            breakpoints: _,
+            children: _,
+            zoo: _,
+          } = _,
+          [_, _] = _.useState(_),
+          [_, _] = _.useState(__webpack_require__),
+          _ = window,
+          _ = (_) => (_) => {
+            _.includes(_) ? _(_) : console.error("Unknown color!");
+          };
+        (_.setAccent = _(_)), (_.setDull = _(_));
+        const _ = {
+          "--default-font-size": `var(--text-size-${_})`,
+          "--default-line-height": `var(--line-height-${_})`,
+          "--default-letter-spacing": `var(--letter-spacing-${_})`,
+          "--color-debug": "hotpink",
+          "--color-accent-contrast": "white",
+        };
+        return _.createElement(
+          _,
+          null,
+          _.createElement(
+            _._,
+            {
+              breakpoints: _,
+            },
+            _.createElement(
+              _,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _()(_.Root, "noOpinionatedGlobalStyles"),
+                  style: _,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    "data-accent-color": _,
+                    "data-dull-color": _,
+                    "data-body-text-color": _,
+                    className: _.DataAttributes,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.AfterDataAttributes,
+                    },
+                    _,
+                    !1,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      });
+      function _(_) {
+        const { children: _ } = _,
+          { formFactorOverride: __webpack_require__ } = _();
+        return _.createElement(
+          _._,
+          {
+            formFactor: __webpack_require__,
+          },
+          _,
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        depth: 0,
+      });
+      function _(_) {
+        const { level: _ = "auto", color: __webpack_require__ } = _,
+          _ = (function (_, _) {
+            if ("auto" === _ && 0 === _) return "h1";
+            const _ = "auto" === _ ? _.toString() : _;
+            if (!/^[1-6]$/.test(_))
+              return "auto" === _
+                ? (console.error(
+                    '<Section> nesting has exceeded "h6" for headings.',
+                  ),
+                  "h6")
+                : (console.error(
+                    `Attempt to render invalid heading level, "${_}".`,
+                  ),
+                  "h1");
+            return "h" + _;
+          })(_, (0, _.useContext)(_).depth);
+        return _.createElement(_, {
+          ...(0, _._)(
+            {
+              ..._,
+              className: _.Heading,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`HeadingSize-${_}`],
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _ = "span",
+            ref: __webpack_require__,
+            className: _,
+            ..._
+          } = _,
+          _ = _;
+        return _.createElement(_, {
+          ref: __webpack_require__,
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()(_.Text, _),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+          {
+            prop: "weight",
+            responsive: !0,
+            className: _.TextWeight,
+            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: _.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            cssProperty: (_, _) => {
+              var _;
+              return [
+                "--text-color",
+                (0, _._)(
+                  _,
+                  null !== (_ = _.contrast) && void 0 !== _ ? _ : "body",
+                ),
+              ];
+            },
+          },
+          {
+            prop: "contrast",
+            cssProperty: (_, _) => {
+              var _;
+              return [
+                "--text-color",
+                (0, _._)(
+                  null !== (_ = _.color) && void 0 !== _ ? _ : "text-body",
+                  _,
+                ),
+              ];
+            },
+          },
+          {
+            prop: "truncate",
+            className: _.Truncate,
+          },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: _.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: _.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        _ = [
+          ..._,
+          ..._._,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (_) => _[`TextSize-${_}`],
+          },
+        ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        return new (_())(
+          async (_) => {
+            const _ = [..._],
+              _ = await _._.GetPlayerLinkDetails(_, {
+                steamids: _,
+              }),
+              _ = new Map();
+            return (
+              _.Body()
+                .accounts()
+                .forEach((_) => {
+                  const _ = _.toObject();
+                  _.set(_.public_data.steamid, _);
+                }),
+              __webpack_require__.map((_) => {
+                var _;
+                return null !== (_ = _.get(_)) && void 0 !== _ ? _ : null;
+              })
+            );
+          },
+          {
+            maxBatchSize: 100,
+            cache: !1,
+            ..._,
+          },
+        );
+      }
+      function _(_) {
+        return (0, _._)("PlayerLinkDetails", () => _(_));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
@@ -1205,178 +2627,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            _: _ = "span",
-            ref: __webpack_require__,
-            className: _,
-            ..._
-          } = _,
-          _ = _;
-        return _.createElement(_, {
-          ref: __webpack_require__,
-          ...(0, _._)(
-            {
-              ..._,
-              className: _()(_.Text, _),
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-          {
-            prop: "weight",
-            responsive: !0,
-            className: _.TextWeight,
-            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
-          },
-          {
-            prop: "align",
-            responsive: !0,
-            className: _.TextAlign,
-            cssProperty: "--text-align",
-          },
-          {
-            prop: "color",
-            cssProperty: (_) => [
-              ["--text-color", (0, _._)(_, "11")],
-              ["--text-color-secondary", (0, _._)(_, "9")],
-            ],
-          },
-          {
-            prop: "truncate",
-            className: _.Truncate,
-          },
-          {
-            prop: "lineClamp",
-            responsive: !0,
-            className: _.LineClamp,
-            cssProperty: "--line-clamp",
-          },
-        ],
-        _ = [
-          ..._,
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`TextSize-${_}`],
-          },
-          {
-            prop: "secondary",
-            className: _.Secondary,
-          },
-        ];
-      var _ = __webpack_require__("chunkid");
-      const _ = _.createContext({
-        depth: 0,
-      });
-      function _(_) {
-        const { level: _ = "auto" } = _,
-          _ = (function (_, _) {
-            if ("auto" === _ && 0 === _) return "h1";
-            const _ = "auto" === _ ? _.toString() : _;
-            if (!/^[1-6]$/.test(_))
-              return "auto" === _
-                ? (console.error(
-                    '<Section> nesting has exceeded "h6" for headings.',
-                  ),
-                  "h6")
-                : (console.error(
-                    `Attempt to render invalid heading level, "${_}".`,
-                  ),
-                  "h1");
-            return "h" + _;
-          })(_, (0, _.useContext)(_).depth);
-        return _.createElement(_, {
-          ...(0, _._)(
-            {
-              ..._,
-              className: _.Heading,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._,
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`HeadingSize-${_}`],
-        },
-      ];
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(
-          {
-            ..._,
-            className: _()(_.className, _.Flex),
-          },
-          _,
-        );
-        return _.createElement("div", {
-          ..._,
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "direction",
-          responsive: !0,
-          className: _.Direction,
-          cssProperty: "--direction",
-        },
-        {
-          prop: "justify",
-          responsive: !0,
-          className: _.Justify,
-          cssProperty: (_) => ["--justify", _(_)],
-        },
-        {
-          prop: "align",
-          responsive: !0,
-          className: _.Align,
-          cssProperty: "--align",
-        },
-        {
-          prop: "gap",
-          responsive: !0,
-          className: _.Gap,
-          cssProperty: (_) => ["--gap", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapX",
-          responsive: !0,
-          className: _.GapX,
-          cssProperty: (_) => ["--gap-x", `var(--spacing-${_})`],
-        },
-        {
-          prop: "gapY",
-          responsive: !0,
-          className: _.GapY,
-          cssProperty: (_) => ["--gap-y", `var(--spacing-${_})`],
-        },
-        {
-          prop: "wrap",
-          responsive: !0,
-          className: _.Wrap,
-          cssProperty: "--wrap",
-        },
-        {
-          prop: "inline",
-          responsive: !0,
-          className: _.Inline,
-        },
-      ];
-      function _(_) {
-        return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
-      }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
           orientation: _ = "horizontal",
@@ -1458,7 +2710,9 @@
           }),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const {
             checked: _,
@@ -1475,7 +2729,7 @@
             __webpack_require__ && __webpack_require__(!!_ || !_);
           };
         return _.createElement(
-          _,
+          _._,
           {
             ref: _,
             role: "checkbox",
@@ -1519,43 +2773,8 @@
           }),
         );
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          variant: _ = "default",
-          size: __webpack_require__ = "2",
-          ..._
-        } = _;
-        return _.createElement("button", {
-          type: "button",
-          ...(0, _._)(
-            {
-              ..._,
-              variant: _,
-              size: __webpack_require__,
-              className: _.Button,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`Size-${_}`],
-        },
-        {
-          prop: "variant",
-          className: (_) => _[`Variant-${_}`],
-        },
-        {
-          prop: "color",
-          dataProperty: (_) => ["accent-color", `${_}`],
-        },
-      ];
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -1574,7 +2793,7 @@
           } = _,
           _ = "underline" === _ ? "none" : _;
         return _.createElement(
-          _,
+          _._,
           {
             ..._,
             radius: _,
@@ -1592,7 +2811,7 @@
           },
           _ &&
             _.createElement(
-              _,
+              _._,
               {
                 paddingRight: "2",
               },
@@ -1608,7 +2827,7 @@
           ),
           _ &&
             _.createElement(
-              _,
+              _._,
               {
                 paddingLeft: "2",
               },
@@ -1682,7 +2901,7 @@
             _,
             _.createElement(_._, {
               radius: "sm",
-              background: "dull-5",
+              background: "dull-8",
               className: _.ListBox,
             }),
             {
@@ -2140,33 +3359,9 @@
         const _ = (0, _.useContext)(_);
         return (0, _._)(_, `${_} must be used within an <Autocomplete>!`), _;
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(
-          {
-            ..._,
-            className: _.className,
-          },
-          _,
-        );
-        return _.createElement("img", {
-          ..._,
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "objectFit",
-          className: _.ObjectFit,
-          cssProperty: "--object-fit",
-        },
-        {
-          prop: "objectPosition",
-          className: _.ObjectPosition,
-          cssProperty: "--object-position",
-        },
-      ];
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
         const { options: _, ...__webpack_require__ } = _;
@@ -2215,8 +3410,9 @@
           _ = _ ? void 0 : () => _(_),
           _ = void 0 === __webpack_require__ ? _ : __webpack_require__;
         return _.createElement(
-          "div",
+          _._,
           {
+            radius: _.radius,
             ref: _,
             onClick: _,
             "data-selected": _ ? "true" : "false",
@@ -2227,7 +3423,7 @@
       }),
         (_.Root = function (_) {
           const {
-              variant: _,
+              variant: _ = "default",
               radius: __webpack_require__,
               children: _,
               value: _,
@@ -2255,9 +3451,12 @@
           return _.createElement(
             _,
             {
+              clickable: !1,
+              hoverable: !1,
+              focusable: !1,
               variant: _,
               radius: __webpack_require__,
-              className: _.SegmentedControlBox,
+              className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
               tabIndex: 0,
               onKeyDown: (_) => {
                 let _ = 0;
@@ -2273,7 +3472,7 @@
                 if (_) {
                   const _ = _[_],
                     _ = Array.from(Object.values(_)).sort(_),
-                    _ = __webpack_require__.findIndex((_) => _ === _);
+                    _ = _.findIndex((_) => _ === _);
                   (0, _._)(
                     "number" == typeof _,
                     "Could not find current segmented value position",
@@ -2283,7 +3482,7 @@
                     _ = Object.keys(_).find((_) => _[_] === _);
                   "string" != typeof _
                     ? console.error("Could not find next segmeneted value")
-                    : _(_);
+                    : (_(_), _.stopPropagation(), _.preventDefault());
                 }
               },
             },
@@ -2296,8 +3495,9 @@
                     onValueChange: _,
                     register: _,
                     unregister: _,
+                    radius: __webpack_require__,
                   }),
-                  [_, _, _, _],
+                  [_, _, _, _, __webpack_require__],
                 ),
               },
               _.createElement(
@@ -2456,7 +3656,7 @@
             ref: _,
           },
           _.createElement(
-            _,
+            _._,
             {
               direction: "column",
               maxHeight: "var(--popover-max-height)",
@@ -2517,7 +3717,7 @@
             },
             _ &&
               _.createElement(
-                _,
+                _._,
                 {
                   gap: "2",
                   align: "center",
@@ -2814,15 +4014,16 @@
         },
         DefaultOptionFilter: _,
         Value: function (_) {
-          return _.createElement(_, {
+          return _.createElement(_._, {
             weight: "medium",
             truncate: !0,
+            contrast: "title",
             ..._,
           });
         },
         Placeholder: function (_) {
-          return _.createElement(_, {
-            secondary: !0,
+          return _.createElement(_._, {
+            contrast: "description",
             truncate: !0,
             weight: "medium",
             ..._,
@@ -2980,7 +4181,7 @@
               ),
               __webpack_require__ &&
                 _.createElement(
-                  _,
+                  _._,
                   {
                     position: "absolute",
                     inset: "0",
@@ -3145,7 +4346,7 @@
             },
             _ &&
               _.createElement(
-                _,
+                _._,
                 {
                   gap: "2",
                   align: "center",
@@ -3225,19 +4426,20 @@
         },
         Value: function (_) {
           return _.createElement(
-            _,
+            _._,
             {
               weight: "medium",
               truncate: !0,
+              contrast: "title",
             },
             _.children,
           );
         },
         Placeholder: function (_) {
           return _.createElement(
-            _,
+            _._,
             {
-              secondary: !0,
+              contrast: "description",
               truncate: !0,
             },
             _.children,
@@ -3397,7 +4599,7 @@
               {
                 value: _,
               },
-              _.createElement(_, {
+              _.createElement(_._, {
                 direction: _,
                 wrap: _ ? "wrap" : void 0,
                 gap: "column" === _ ? "1" : "4",
@@ -3574,10 +4776,9 @@
                 __webpack_require__,
                 ": ",
                 _.createElement(
-                  _,
+                  _._,
                   {
-                    color: "accent",
-                    secondary: !0,
+                    color: "accent-8",
                   },
                   _(_),
                 ),
@@ -3594,7 +4795,7 @@
                   key: _(_),
                 },
                 _.createElement(
-                  _,
+                  _._,
                   {
                     gap: "2",
                     align: "center",
@@ -3649,10 +4850,9 @@
                 __webpack_require__,
                 ": ",
                 _.createElement(
-                  _,
+                  _._,
                   {
-                    color: "accent",
-                    secondary: !0,
+                    color: "accent-8",
                   },
                   _(_),
                 ),
@@ -3669,7 +4869,7 @@
                   key: _(_),
                 },
                 _.createElement(
-                  _,
+                  _._,
                   {
                     gap: "2",
                     align: "center",
@@ -3714,9 +4914,10 @@
             marginBottom: "4",
           },
           _.createElement(
-            _,
+            _._,
             {
               weight: "medium",
+              contrast: "title",
             },
             __webpack_require__,
           ),
@@ -3753,9 +4954,10 @@
             value: _,
           },
           _.createElement(
-            _,
+            _._,
             {
-              color: __webpack_require__ ? "accent" : void 0,
+              color: __webpack_require__ ? "accent-11" : void 0,
+              contrast: __webpack_require__ ? void 0 : "title",
             },
             _,
           ),
@@ -3764,7 +4966,7 @@
       function _(_) {
         const { label: _, active: __webpack_require__, onActiveChange: _ } = _;
         return _.createElement(
-          _,
+          _._,
           {
             gap: "4",
             align: "center",
@@ -3772,7 +4974,7 @@
             paddingY: "2",
           },
           _.createElement(
-            _,
+            _._,
             {
               weight: "medium",
             },
@@ -3796,7 +4998,7 @@
             onActiveChange: _,
           });
         return _.createElement(
-          _,
+          _._,
           {
             gap: "2",
             radius: "sm",
@@ -3811,9 +5013,10 @@
               className: _.Icon,
             }),
           _.createElement(
-            _,
+            _._,
             {
               weight: "medium",
+              contrast: "title",
             },
             _,
           ),
@@ -3827,7 +5030,7 @@
           computeNext: _ = (_, _) => _,
         } = _;
         return _.createElement(
-          _,
+          _._,
           {
             gap: "4",
             align: "center",
@@ -4287,13 +5490,13 @@
           _ <= 0
             ? null
             : _.createElement(
-                _,
+                _._,
                 {
                   direction: "column",
                   gap: "2",
                 },
                 _.createElement(
-                  _,
+                  _._,
                   {
                     gap: "2",
                     align: "center",
@@ -4307,7 +5510,7 @@
                     ),
                   }),
                   _.createElement(
-                    _,
+                    _._,
                     {
                       size: "4",
                       weight: "medium",
@@ -5556,7 +6759,7 @@
           ),
           _.createElement(_, {
             size: "4",
-            color: "dull-6",
+            color: "dull-9",
             marginTop: "4",
           }),
           _.createElement(
@@ -5568,7 +6771,7 @@
               ...__webpack_require__,
             }),
             _.createElement(
-              _,
+              _._,
               {
                 gap: "2",
                 direction: "column",
@@ -5598,10 +6801,10 @@
             title: _,
           });
         return _.createElement(
-          _,
+          _._,
           {
             flexGrow: "1",
-            background: "dull-5 50%",
+            background: "dull-8 50%",
             radius: "sm",
             paddingY: "5",
             justify: "center",
@@ -5611,11 +6814,11 @@
             className: _.ToggleButton,
           },
           _.createElement(
-            _,
+            _._,
             {
               weight: "medium",
-              color: _ ? "accent" : void 0,
-              secondary: _,
+              color: _ ? "accent-8" : void 0,
+              contrast: "title",
             },
             _,
           ),
@@ -5637,9 +6840,9 @@
               }
             : void 0;
         let _ = _.createElement(
-          _,
+          _._,
           {
-            background: "dull-5 50%",
+            background: "dull-8 50%",
             flexGrow: "1",
             align: "center",
             paddingX: "3",
@@ -5658,7 +6861,7 @@
           ),
           _ && _
             ? _.createElement(
-                _,
+                _._,
                 {
                   align: "center",
                   justify: "center",
@@ -5675,10 +6878,10 @@
               _.Fragment,
               null,
               _.createElement(
-                _,
+                _._,
                 {
                   align: "center",
-                  background: "dull-5 50%",
+                  background: "dull-8 50%",
                   gap: "2",
                   paddingY: "1",
                   paddingX: "3",
@@ -5728,9 +6931,9 @@
                 ),
               ),
               _.createElement(
-                _,
+                _._,
                 {
-                  background: "dull-5 50%",
+                  background: "dull-8 50%",
                   align: "center",
                   justify: "center",
                   padding: "5",
@@ -5742,7 +6945,7 @@
               ),
             )),
           _.createElement(
-            _,
+            _._,
             {
               ..._,
               gap: "1",
@@ -5846,7 +7049,7 @@
             !_ && _.createElement(_.Value, null, __webpack_require__),
             _ &&
               _.createElement(
-                _,
+                _._,
                 {
                   align: "center",
                   gap: "2",
@@ -5857,17 +7060,16 @@
                   __webpack_require__,
                   ": ",
                   _.createElement(
-                    _,
+                    _._,
                     {
-                      color: "accent",
-                      secondary: !0,
+                      color: "accent-8",
                     },
                     _,
                   ),
                 ),
                 _ &&
                   _.createElement(
-                    _,
+                    _._,
                     {
                       align: "center",
                       justify: "center",
@@ -5889,7 +7091,7 @@
                 _
                   ? _.strLabel
                   : _.createElement(
-                      _,
+                      _._,
                       {
                         align: "center",
                         gap: "1",
@@ -5959,13 +7161,12 @@
                 __webpack_require__,
                 ": ",
                 _.createElement(
-                  _,
+                  _._,
                   {
-                    color: "accent",
-                    secondary: !0,
+                    color: "accent-8",
                   },
                   _.createElement(
-                    _,
+                    _._,
                     {
                       inline: !0,
                       align: "center",
@@ -5990,7 +7191,7 @@
                 _
                   ? _.strLabel
                   : _.createElement(
-                      _,
+                      _._,
                       {
                         align: "center",
                         gap: "1",
@@ -6061,7 +7262,7 @@
             !_ && _.createElement(_.Value, null, __webpack_require__),
             _ &&
               _.createElement(
-                _,
+                _._,
                 {
                   align: "center",
                   gap: "2",
@@ -6072,17 +7273,16 @@
                   __webpack_require__,
                   ": ",
                   _.createElement(
-                    _,
+                    _._,
                     {
-                      color: "accent",
-                      secondary: !0,
+                      color: "accent-8",
                     },
                     _,
                   ),
                 ),
                 _ &&
                   _.createElement(
-                    _,
+                    _._,
                     {
                       align: "center",
                       justify: "center",
@@ -6104,7 +7304,7 @@
                 _
                   ? _.strLabel
                   : _.createElement(
-                      _,
+                      _._,
                       {
                         align: "center",
                         gap: "1",
@@ -6196,7 +7396,7 @@
                   },
                   !_.bNewMarket &&
                     _.createElement(
-                      _,
+                      _._,
                       {
                         size: "6",
                         weight: "heavy",
@@ -6204,7 +7404,7 @@
                       _.Localize("#AdvancedSearch_Heading"),
                     ),
                   _.createElement(
-                    _,
+                    _._,
                     {
                       gap: _,
                       align: {
@@ -6236,11 +7436,11 @@
                         _.createElement(_, {
                           size: "1",
                           orientation: "vertical",
-                          color: "dull-6",
+                          color: "dull-9",
                         }),
                       ),
                     _.createElement(
-                      _,
+                      _._,
                       {
                         direction: "column",
                         flexGrow: "1",
@@ -6329,7 +7529,7 @@
             Object.keys(_.facets).length > 0,
           _ = (0, _._)("sm"),
           _ = _.createElement(
-            _,
+            _._,
             {
               type: "submit",
               onClick: () => {
@@ -6390,7 +7590,7 @@
             _.Localize("#AdvancedSearch_Search"),
           );
         return _.createElement(
-          _,
+          _._,
           {
             justify: _ ? "between" : void 0,
             marginTop: _,
@@ -6400,7 +7600,7 @@
           _.bNewMarket
             ? _.createElement("div", null)
             : _.createElement(
-                _,
+                _._,
                 {
                   gap: "2",
                   align: "center",
@@ -6418,7 +7618,7 @@
                   _.createElement(_, {
                     size: "1",
                     orientation: "vertical",
-                    color: "dull-6",
+                    color: "dull-9",
                   }),
                 _.createElement(
                   "span",
@@ -6434,14 +7634,14 @@
               ),
           _ &&
             _.createElement(
-              _,
+              _._,
               {
                 gap: _,
                 justify: "end",
               },
               _ &&
                 _.createElement(
-                  _,
+                  _._,
                   {
                     color: "dull",
                     variant: "ghost",
@@ -6537,11 +7737,11 @@
           ),
           _ = _
             ? _.createElement(
-                _,
+                _._,
                 {
                   cursor: "pointer",
                   radius: _.radius || "sm",
-                  background: "dull-4",
+                  background: "dull-6",
                   paddingY: "1",
                   paddingX: "2",
                   align: "center",
@@ -6550,7 +7750,7 @@
                   maxWidth: "24ch",
                   onMouseDown: _,
                 },
-                _.createElement(_, {
+                _.createElement(_._, {
                   height: "20px",
                   objectFit: "contain",
                   src: _.icon,
@@ -6617,9 +7817,8 @@
             "data-visible": !!_,
           },
           _.createElement(
-            _,
+            _._,
             {
-              secondary: !0,
               truncate: !0,
             },
             __webpack_require__,
@@ -6642,7 +7841,7 @@
           {
             value: __webpack_require__,
             render: (_, _) =>
-              _.createElement(_, {
+              _.createElement(_._, {
                 align: "center",
                 gap: "2",
                 className: _.SearchSuggestion,
@@ -6665,23 +7864,24 @@
             alt: "",
           }),
           _.createElement(
-            _,
+            _._,
             {
               direction: "column",
               gap: "1",
               minWidth: "0",
             },
             _.createElement(
-              _,
+              _._,
               {
                 size: "3",
                 weight: "medium",
                 truncate: !0,
+                contrast: "title",
               },
               _,
             ),
             _.createElement(
-              _,
+              _._,
               {
                 size: "1",
                 truncate: !0,
@@ -6695,7 +7895,7 @@
               null,
               _ &&
                 _.createElement(
-                  _,
+                  _._,
                   {
                     size: "1",
                   },
@@ -6704,7 +7904,7 @@
                 ),
               _ > 0
                 ? _.createElement(
-                    _,
+                    _._,
                     {
                       size: "1",
                     },
@@ -6714,7 +7914,7 @@
                 : null,
               _ > 0
                 ? _.createElement(
-                    _,
+                    _._,
                     {
                       size: "1",
                     },
@@ -6884,7 +8084,7 @@
             _,
             null,
             _.createElement(
-              _,
+              _._,
               {
                 size: "4",
               },
@@ -7052,7 +8252,7 @@
             marginTop: _,
           },
           _.createElement(
-            _,
+            _._,
             {
               weight: "medium",
               size: "3",
@@ -7119,17 +8319,18 @@
             );
         const _ = _._.logged_in;
         return _.createElement(
-          _,
+          _._,
           {
             direction: "column",
             marginTop: "3",
             marginBottom: "2",
           },
           _.createElement(
-            _,
+            _._,
             {
               weight: "medium",
               size: "3",
+              contrast: "title",
             },
             _
               ? _.Localize("#AdvancedSearch_AppSelect_YourGames")
@@ -7181,7 +8382,7 @@
       }
       function _(_) {
         return _.createElement(
-          _,
+          _._,
           {
             minHeight: "min(400px, 30vh)",
             direction: "column",
@@ -7292,7 +8493,7 @@
             ),
             _ < _.length - 1
               ? _.createElement(_, {
-                  color: "dull-6",
+                  color: "dull-9",
                   key: `sep_${_}`,
                   size: "4",
                   marginTop: _,
@@ -7303,7 +8504,7 @@
       }
       function _(_) {
         return _.createElement(
-          _,
+          _._,
           {
             flexGrow: "1",
             radius: "sm",
@@ -7314,10 +8515,9 @@
             className: _.NoFilters,
           },
           _.createElement(
-            _,
+            _._,
             {
               align: "center",
-              secondary: !0,
               _: "div",
               marginTop: _,
             },
@@ -7340,7 +8540,7 @@
             _,
             null,
             _.createElement(
-              _,
+              _._,
               {
                 size: "4",
               },
@@ -7367,10 +8567,9 @@
                 _,
                 null,
                 _.createElement(
-                  _,
+                  _._,
                   {
                     align: "center",
-                    secondary: !0,
                     _: "div",
                     marginTop: _,
                     size: "6",
@@ -7379,10 +8578,9 @@
                   _.Localize("#AdvancedSearch_NoFacetsSearch"),
                 ),
                 _.createElement(
-                  _,
+                  _._,
                   {
                     align: "center",
-                    secondary: !0,
                     _: "div",
                     marginTop: _,
                     size: "4",
@@ -7486,6 +8684,7 @@
                 _.Placeholder,
                 {
                   weight: "medium",
+                  contrast: "title",
                 },
                 _.Localize("#AdvancedSearch_AppSelect_Placeholder"),
               ),
@@ -7517,7 +8716,7 @@
           size: _,
         } = _;
         return _.createElement(
-          _,
+          _._,
           {
             align: "center",
             gap: "2",
@@ -7528,10 +8727,10 @@
               size: _,
             }),
           _.createElement(
-            _,
+            _._,
             {
-              color: _ ? "accent" : void 0,
-              secondary: _,
+              color: _ ? "accent-8" : void 0,
+              contrast: _ ? void 0 : "title",
             },
             __webpack_require__,
           ),
@@ -7567,7 +8766,7 @@
       }
       function _() {
         return _.createElement(
-          _,
+          _._,
           {
             justify: "center",
             align: "center",
@@ -7680,6 +8879,215 @@
               _.call(_, _),
             (_.current = _.isIntersecting);
         }, _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        return "[object Object]" === Object.prototype.toString.call(_);
+      }
+      function _(..._) {
+        return JSON.stringify(_, (_, _) => {
+          if (
+            (function (_) {
+              if (!_(_)) return !1;
+              const _ = _.constructor;
+              if (void 0 === _) return !0;
+              const _ = _.prototype;
+              return (
+                !!_(_) &&
+                !!Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
+              );
+            })(_)
+          ) {
+            const _ = {};
+            return (
+              Object.keys(_)
+                .sort()
+                .forEach((_) => {
+                  _[_] = _[_];
+                }),
+              _
+            );
+          }
+          return _;
+        });
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)({
+        instances: {},
+        factories: {},
+      });
+      function _(_, _) {
+        var _;
+        const _ = (0, _.useContext)(_),
+          _ = "string" == typeof _ ? _ : _(..._);
+        let _ = _;
+        for (; _; ) {
+          if (_ in _.instances) return _.instances[_];
+          if (_ in _.factories) break;
+          _ = _.parent;
+        }
+        const _ = (null !== (_ = _.factories[_]) && void 0 !== _ ? _ : _)();
+        return (_.instances[_] = _), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (_[_]) {
+          if ("community_icon" == _) {
+            const _ = _.asset_url_format
+              .replace(/^steam\//, "images/")
+              .replace("${FILENAME}", `${_[_]}.jpg`)
+              .replace(/\?.*$/, "");
+            return `${_._.MEDIA_CDN_COMMUNITY_URL}${_}`;
+          }
+          {
+            const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
+            return `${_._.STORE_ITEM_BASE_URL}${_}`;
+          }
+        }
+      }
+      function _(_, _ = "full") {
+        let _ = "";
+        switch (_) {
+          case "thumb":
+            _ = ".116x65";
+            break;
+          case "600x338":
+            _ = ".600x338";
+            break;
+          case "1920x1080":
+            _ = ".1920x1080";
+            break;
+          case "full":
+            _ = "";
+            break;
+          default:
+            (0, _._)(_, `Invalid size: ${_}`);
+        }
+        return (
+          _._.STORE_ITEM_BASE_URL + _.filename.replace(/\.[^.*]$/, `${_}$&`)
+        );
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)(_),
+          _ = (0, _._)();
+        if (_)
+          return [
+            ...(_.all_ages_screenshots || []),
+            ...(!_ && _.mature_content_screenshots
+              ? _.mature_content_screenshots
+              : []),
+          ].sort((_, _) => _.ordinal - _.ordinal);
+      }
+      function _(_, _ = !1) {
+        const { data: __webpack_require__ } = (0, _._)({
+          appid: _,
+        });
+        return void 0 === __webpack_require__
+          ? void 0
+          : null === __webpack_require__
+            ? null
+            : _ && __webpack_require__.library_capsule_2x
+              ? _(__webpack_require__, "library_capsule_2x")
+              : __webpack_require__.library_capsule
+                ? _(__webpack_require__, "library_capsule")
+                : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/portrait.png`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        eAdultOnlyMediaBehavior: "masked",
+      });
+      function _() {
+        const { eAdultOnlyMediaBehavior: _ } = _.useContext(_),
+          _ = (function () {
+            const { data: _ } = (0, _._)({
+              queryKey: ["AOWarningCookie"],
+              queryFn: () => _(),
+              placeholderData: () => _(),
+              staleTime: 0,
+            });
+            return _ && _ > Date.now() / 1e3;
+          })();
+        return _.useMemo(() => {
+          const _ = (0, _._)("forceallages");
+          return (
+            !(!_ || "0" === _) ||
+            !(!_._.IN_MOBILE_WEBVIEW || !navigator.userAgent.match(/Android/))
+          );
+        }, []) ||
+          ("masked" == _ &&
+            (_._.excluded_content_descriptors.includes(4) ||
+              _._.excluded_content_descriptors.includes(3)))
+          ? "blocked"
+          : "masked" == _ && _
+            ? "allowed"
+            : _;
+      }
+      function _() {
+        return "allowed" != _();
+      }
+      const _ = "bDisableAOWarning",
+        _ = 2 * _._.PerDay;
+      function _() {
+        const _ = (0, _._)();
+        return _.useCallback(() => {
+          (0, _._)(_, String(Math.floor(Date.now() / 1e3) + _)),
+            _.invalidateQueries({
+              queryKey: ["AOWarningCookie"],
+            });
+        }, [_]);
+      }
+      function _() {
+        const _ = (0, _._)(_),
+          _ = _ ? parseInt(_) : 0;
+        return 0 != _ ? _ : null;
+      }
+      function _(_) {
+        const _ = "blocked" == _() && !!_,
+          { data: __webpack_require__ } = (0, _._)(
+            _
+              ? {
+                  appid: _,
+                }
+              : void 0,
+          );
+        return (
+          !!_ &&
+          (!__webpack_require__ ||
+            __webpack_require__.content_descriptorids.includes(3) ||
+            __webpack_require__.content_descriptorids.includes(4))
+        );
       }
     },
   },

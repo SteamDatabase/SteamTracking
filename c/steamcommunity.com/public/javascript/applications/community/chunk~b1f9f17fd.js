@@ -279,6 +279,7 @@
         FlavorLabel: "KDLASaMCaASZ6LnF3kQY8",
         SelectedFlavor: "qYruXlm9Lip3i2lmnsxum",
         SuggestContainer: "_1YWp1WOcTPesvO2Yp5SuOA",
+        ViewModeToggle: "_2GvBzfFkdSM256yF-Qt91T",
         Debug: "_1MGr0XISx00Rhmq-im9N42",
         EmptyResults: "_3U-cq3FxCNFcRt2r3vettM",
         ShowContentsContainer: "_36qA-3ePJIusV1oKLQep-w",
@@ -448,7 +449,7 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Ctn: "_2aeq1EsgEidbP1gObw4Bqg",
+        SubMenuCtn: "_1QP7mh3IZ6mkLZFarqOI6K",
       };
     },
     chunkid: (module) => {
@@ -641,6 +642,8 @@
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         Container: "_2DwHnbQk_PGfGThmz17qKu",
+        GridTemplateOverlay: "_2c_kO004iBIxHH6YRI5O18",
+        ContainerCarousel: "_1ot6qj42ixCCDQSGkTjeVv",
         MediaRow: "_2jMLxod69Znt-d4pzECIaA",
         RowSize2: "H7KOQjMVfmfUfoCuoJTNB",
         RowSize3: "xIqX_PvYjm1_rnxpXFAu5",
@@ -651,6 +654,7 @@
         HorizontalMediaFirst: "Wmy8KeRvOfiwLViUN-MIe",
         VerticalMediaFirst: "_2UqJLTFsqhBo09zeRKEtj8",
         VerticalTextFirst: "_2H9EAWk-ECoLA4S_PGHkpE",
+        TextOnlyDisplay: "dUvMvaolFV7cCSsIyUxMU",
         LivePreview: "_2WX2HLoszD567aFrCJKkYG",
         JumpedTo: "vhRymhbQwtCHWZXUp5bP3",
         JumpToSubsection: "_3sa-ldAw4XUh68OJIpPdgi",
@@ -689,6 +693,7 @@
         TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
         RightCenter: "_3bs5PtXj13iPSm-b5e2od-",
         BottomRight: "_1W0qyKmuCBSZPrQkdDFRIV",
+        TextSectionScaling: "_1JcmAfIR_1398hfU7MCSJc",
         MediaMax: "_2g9MxQcUyFYffpZTktM-Wl",
       };
     },
@@ -4356,6 +4361,8 @@
                       (_.sale_background_color = _.sale_background_color),
                       (_.sale_carousel_arrow_color =
                         _.sale_carousel_arrow_color),
+                      (_.sale_carousel_arrow_style =
+                        _.sale_carousel_arrow_style),
                       (_.sale_background_repeat = _.sale_background_repeat),
                       (_.sale_background_video_webm =
                         _.sale_background_video_webm),
@@ -16972,7 +16979,7 @@
         return _.createElement(
           "div",
           {
-            className: _().Ctn,
+            className: _().SubMenuCtn,
             style: {
               ...(0, _._)(__webpack_require__, _, _),
             },
@@ -22599,6 +22606,7 @@
             bAutoAdvance: !1,
             bHideIfTooFewItems: !1,
             arrowFill: _.jsondata.sale_carousel_arrow_color,
+            arrowStyle: _.jsondata.sale_carousel_arrow_style,
           },
           _ = (0, _._)(
             __webpack_require__.unique_id,
@@ -23541,6 +23549,7 @@
             bAutoAdvance: !1,
             bHideIfTooFewItems: !0,
             arrowFill: _.jsondata.sale_carousel_arrow_color,
+            arrowStyle: _.jsondata.sale_carousel_arrow_style,
           },
           _ = (0, _._)(
             _.unique_id,
@@ -26180,7 +26189,6 @@
       }
       const _ = 1;
       function _(_, _, _, _) {
-        if (!(0, _._)(_, _) || _.length <= 1) return _;
         const _ = _(
             _,
             _.rtime32_last_modified,
@@ -26188,13 +26196,10 @@
           ),
           _ = [],
           _ = [];
-        let _ =
-          _.random_order_top_x > 0
-            ? Math.min(_.random_order_top_x, _.length)
-            : _.length;
+        let _ = _ > 0 ? Math.min(_, _.length) : _.length;
         if (_)
           for (const _ of _.data.groups) {
-            const _ = _.splice(0, _.nCount),
+            const _ = __webpack_require__.splice(0, _.nCount),
               _ = _(_.nSeed);
             (0, _._)(_, Math.min(_, _.length), _),
               (_ -= Math.min(_, _.length)),
@@ -26216,6 +26221,11 @@
               });
           } else _.push(..._);
         return _;
+      }
+      function _(_, _, _, _) {
+        return !(0, _._)(_, _) || _.length <= 1
+          ? _
+          : _(_, _, _, _.random_order_top_x);
       }
       function _(_, _, _) {
         var _, _;
@@ -26733,27 +26743,16 @@
       (0, _._)([_._], _.prototype, "m_mapMasterAppToBenefitApps", void 0);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _ ? _.filter((_) => _.ShouldShowOnTab(_)) : _;
       }
-      var _ = __webpack_require__("chunkid");
       async function _(_, _, _, _, _, _, _, _, _, _ = 0, _ = void 0, _) {
         const _ = _(_, _, _);
-        if ((0, _._)(_.section_type) && "sale_tabhub" != _.smart_section_type) {
-          const {
-            rgCapsules: _,
-            nHiddenCapsules: _,
-            bCapsuleArrayTruncated: _,
-            bAwaitingShowContentLoading: _,
-          } = await _(_, _, _, _, _, _, _, _, _, _, _, _);
-          return {
-            rgCapsules: _,
-            nHiddenCapsules: _,
-            bCapsuleArrayTruncated: _,
-            bAwaitingShowContentLoading: _,
-          };
-        }
+        if ((0, _._)(_.section_type) && "sale_tabhub" != _.smart_section_type)
+          return await _(_, _, _, _, _, _, _, _, _, _, _, _);
         if ("events" === _.section_type || "sale_events" == _.section_type) {
           const _ = await (async function (_, _, _, _) {
             let _;
@@ -26940,6 +26939,25 @@
             rgLinks: _,
           };
         }
+        if ("creator_list_of_lists" === _.section_type) {
+          const _ = await (async function (_, _) {
+            const _ = _.clanSteamID.GetAccountID(),
+              _ = await _._.fetchQuery((0, _._)(_));
+            if (!(null == _ ? void 0 : _.length)) return [];
+            const _ = await _._.LoadCreatorHome(_.clanSteamID),
+              _ = null,
+              _ = _.GetCreatorHomeURL(_);
+            return _.map((_) => ({
+              listid: _.listid(),
+              title: _.title(),
+              description: _.blurb(),
+              url: `${_}list/${_.listid()}`,
+            }));
+          })(_);
+          return {
+            rgCuratorLists: _,
+          };
+        }
       }
       async function _(_, _, _, _, _, _, _, _, _, _ = 0, _, _, _) {
         var _, _;
@@ -27061,6 +27079,45 @@
                         type: "game",
                       }
                     : null,
+                }
+              );
+            }
+            if ("curator_list" == _) {
+              const _ = _.clanSteamID.GetAccountID(),
+                _ = await _._.fetchQuery(
+                  (0, _._)(_, _.smart_section_curator_listid),
+                );
+              if (!_ || 0 == _.list_state() || !_.apps().length)
+                return {
+                  capsules: [],
+                  bMoreRemaining: !1,
+                };
+              let _ = _.apps().map((_) => ({
+                appid: _.recommended_app().appid(),
+                sortOrder: _.sort_order(),
+              }));
+              const _ = await _._.LoadCreatorHome(_.clanSteamID),
+                _ = null == _ ? void 0 : _.GetListInfo().get(_.listid());
+              return (
+                "specified" == (null == _ ? void 0 : _.order)
+                  ? _.sort((_, _) => _.sortOrder - _.sortOrder)
+                  : (_ = _(
+                      _,
+                      _(
+                        _,
+                        _,
+                        _,
+                        "curator_list",
+                        null == _ ? void 0 : _.GetActiveTabUniqueID(),
+                      ),
+                      _,
+                    )),
+                {
+                  capsules: _.map((_) => ({
+                    _: _.appid,
+                    type: "game",
+                  })),
+                  bMoreRemaining: !1,
                 }
               );
             }
@@ -27593,14 +27650,15 @@
           }),
         );
       }
+      var _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "trailercarousel",
         _ = "trailercarousel_seen_intro_video",
         _ = 3;
       function _(_) {
-        var _;
+        var _, _;
         const {
-            event: __webpack_require__,
+            event: _,
             appVisibilityTracker: _,
             section: _,
             activeTab: _,
@@ -27784,7 +27842,7 @@
               nAppIDCount: _.length,
               bInitialLoad: _,
             };
-          })(__webpack_require__, _, _, _, _, _, _, _, _, _),
+          })(_, _, _, _, _, _, _, _, _, _),
           _ = _ && _ === _,
           _ = _.useCallback(
             (_) => {
@@ -27816,11 +27874,11 @@
                 _().SaleSectionCtn,
                 _().TrailerCarouselCtn,
               ),
-              style: (0, _._)(_, __webpack_require__, _),
+              style: (0, _._)(_, _, _),
             },
             _.createElement(_._, {
               section: _,
-              event: __webpack_require__,
+              event: _,
               language: _,
             }),
             _.createElement(_, {
@@ -27834,9 +27892,13 @@
               appIndex: _,
               appCount: _,
               arrowFill:
-                null === (_ = __webpack_require__.jsondata) || void 0 === _
+                null === (_ = _.jsondata) || void 0 === _
                   ? void 0
                   : _.sale_carousel_arrow_color,
+              arrowStyle:
+                null === (_ = _.jsondata) || void 0 === _
+                  ? void 0
+                  : _.sale_carousel_arrow_style,
             }),
           ),
         );
@@ -27854,7 +27916,8 @@
             appCount: _,
             wrapAround: _,
             arrows: _ = !0,
-            arrowFill: _ = "white",
+            arrowFill: _,
+            arrowStyle: _,
           } = _,
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
@@ -28013,8 +28076,10 @@
                         onClick: () => _(!1),
                         disabled: !_,
                       },
-                      _.createElement(_.uMb, {
-                        fill: _,
+                      _.createElement(_._, {
+                        arrowFill: _,
+                        arrowStyle: _,
+                        direction: "left",
                       }),
                     ),
                   _.createElement(
@@ -28062,8 +28127,10 @@
                         onClick: () => _(!0),
                         disabled: !_,
                       },
-                      _.createElement(_.uMb, {
-                        fill: _,
+                      _.createElement(_._, {
+                        arrowFill: _,
+                        arrowStyle: _,
+                        direction: "right",
                       }),
                     ),
                 ),
@@ -28362,6 +28429,7 @@
             arrowFill: __webpack_require__,
             autoAdvance: _,
             hideAppBackground: _,
+            arrowStyle: _,
           } = _,
           _ = (0, _._)(),
           [_, _] = _.useState(0),
@@ -28415,6 +28483,7 @@
               arrows: !_,
               arrowFill: __webpack_require__,
               showDemoInfo: !0,
+              arrowStyle: _,
             }),
             (_ || (0, _._)() || _) &&
               _.createElement(_, {
@@ -28436,6 +28505,7 @@
             optin_prune_tagid: _,
             optin_only: _,
             arrowFill: _,
+            arrowStyle: _,
             autoAdvance: _,
             hideAppBackground: _,
           } = _,
@@ -28533,7 +28603,7 @@
           })(_);
         let _ = _;
         return (
-          (null == _ ? void 0 : _.length) > 0 && (_ = _),
+          _ && _.length > 0 && (_ = _),
           _ || _ || !_
             ? _.createElement(
                 "div",
@@ -28555,6 +28625,7 @@
                   arrowFill: _,
                   autoAdvance: _,
                   hideAppBackground: _,
+                  arrowStyle: _,
                 }),
               )
         );
@@ -28985,8 +29056,8 @@
             });
       }
       const _ = (0, _._)((_) => {
-        var _;
-        const { section: __webpack_require__, event: _ } = _,
+        var _, _, _;
+        const { section: _, event: _ } = _,
           [_, _] = _.useState(null);
         return (
           _.useEffect(() => {
@@ -29007,15 +29078,12 @@
                       _,
                     ))),
                   (null ===
-                    (_ =
-                      null == __webpack_require__
-                        ? void 0
-                        : __webpack_require__.featured_curator_list) ||
+                    (_ = null == _ ? void 0 : _.featured_curator_list) ||
                   void 0 === _
                     ? void 0
                     : _.length) > 0 &&
                     !_.token.reason &&
-                    __webpack_require__.featured_curator_list.forEach((_) => {
+                    _.featured_curator_list.forEach((_) => {
                       const _ = _._.InitFromClanID(_.clanAccountID);
                       _.push(_._.Get().LoadListDetails(_, _.listID, _));
                     });
@@ -29037,7 +29105,7 @@
                   );
                 [..._, ..._].forEach((_) => {
                   if (!_.has(_.listid)) {
-                    _.add(_.listid), _.push(_);
+                    _.add(_.listid), __webpack_require__.push(_);
                     const _ = _._.Get().GetClanAccountFromListID(_.listid);
                     if (!_.has(_)) {
                       _.add(_);
@@ -29057,9 +29125,8 @@
           }, [
             _.GID,
             _.clanSteamID,
-            __webpack_require__.featured_curator_list,
-            null === (_ = __webpack_require__.featured_curator_list) ||
-            void 0 === _
+            _.featured_curator_list,
+            null === (_ = _.featured_curator_list) || void 0 === _
               ? void 0
               : _.length,
           ]),
@@ -29084,6 +29151,14 @@
                     ),
                     padded: !0,
                     screenIsWide: (0, _._)(),
+                    arrowFill:
+                      null === (_ = _.jsondata) || void 0 === _
+                        ? void 0
+                        : _.sale_carousel_arrow_color,
+                    arrowStyle:
+                      null === (_ = _.jsondata) || void 0 === _
+                        ? void 0
+                        : _.sale_carousel_arrow_style,
                   },
                   _.map((_) =>
                     _.createElement(_, {
@@ -31305,7 +31380,8 @@
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(0),
           [_, _] = (0, _.useState)([]),
-          [_, _] = (0, _.useState)(void 0),
+          [_, _] = (0, _.useState)([]),
+          [_, _] = (0, _.useState)([]),
           [_, _] = (0, _.useState)([]),
           [_, _] = _(_, _.section, _),
           { nMaxCapsulesPerRow: _, bScreenIsWide: _ } = (0, _._)(
@@ -31355,7 +31431,9 @@
                   _(_.bAwaitingShowContentLoading))
                 : "rgEvents" in _
                   ? _(_.rgEvents)
-                  : "rgLinks" in _ && _(_.rgLinks),
+                  : "rgLinks" in _
+                    ? _(_.rgLinks)
+                    : "rgCuratorLists" in _ && _(_.rgCuratorLists),
                 _(!0);
             })();
           }, [
@@ -31400,6 +31478,7 @@
                   (null == _ ? void 0 : _.length) || 0,
                   (null == _ ? void 0 : _.length) || 0,
                   (null == _ ? void 0 : _.length) || 0,
+                  (null == _ ? void 0 : _.length) || 0,
                 ) + 1;
             _._.Get().AddInteraction(_.unique_id, _), _(_);
           },
@@ -31414,6 +31493,7 @@
               capsules: _(_, _),
               links: _,
               events: _(_, _),
+              curatorLists: _,
               language: _,
               nMaxCapsulesPerRow: _,
               bScreenIsWide: _,
@@ -31424,6 +31504,7 @@
               bAutoAdvance: _.carousel_auto_advance,
               bHideIfTooFewItems: _.hide_section_if_too_few_items,
               arrowFill: _.jsondata.sale_carousel_arrow_color,
+              arrowStyle: _.jsondata.sale_carousel_arrow_style,
             },
             _ = _(_, _.nShowAdditionalRows),
             _ = _((0, _._)(_, _), _, _.capsules.length);
@@ -32100,12 +32181,17 @@
         }
         componentDidMount() {
           window.addEventListener("resize", this.OnResize), this.LoadCapsules();
-          const { section: _, activeTab: _ } = this.props;
+          const {
+            section: _,
+            activeTab: _,
+            displayStyle: __webpack_require__,
+          } = this.props;
           this.setState({
             fnUnregisterCallback: (0, _._)(
               _.unique_id,
               null == _ ? void 0 : _.GetActiveTabUniqueID(),
             ).Register(this.OnDynamicCapsuleInsert).Unregister,
+            bCompactViewMode: this.BDisplayStyleIsCompact(__webpack_require__),
           });
         }
         componentWillUnmount() {
@@ -32182,6 +32268,12 @@
                 () => this.LoadCapsules(),
               );
           }
+          this.props.displayStyle != _.displayStyle &&
+            this.setState({
+              bCompactViewMode: this.BDisplayStyleIsCompact(
+                this.props.displayStyle,
+              ),
+            });
         }
         OnDynamicCapsuleInsert(_) {
           const { activeTab: _, section: __webpack_require__ } = this.props;
@@ -32227,6 +32319,11 @@
                   this.LoadCapsules();
                 },
               ));
+        }
+        SetViewMode(_) {
+          this.setState({
+            bCompactViewMode: _,
+          });
         }
         async FilterItems(_) {
           const {
@@ -32517,6 +32614,9 @@
             bIsNarrowScreen: (0, _._)(),
           });
         }
+        BDisplayStyleIsCompact(_) {
+          return !_ || "compactlist" == _;
+        }
         render() {
           var _;
           const {
@@ -32525,6 +32625,7 @@
               event: _,
               language: _,
               activeTab: _,
+              displayStyle: _,
             } = this.props,
             {
               bInitialLoadComplete: _,
@@ -32578,6 +32679,9 @@
                 feature: _,
                 depth: _,
                 activeTab: _,
+                displayStyle: this.state.bCompactViewMode
+                  ? "compactlist"
+                  : "library",
               }),
             _ &&
               0 == _.length &&
@@ -32679,13 +32783,33 @@
                       className: _().SaleItemBrowserHeader,
                     },
                     _,
-                    _.enable_search &&
-                      !this.props.bInGamepadUI &&
+                    !this.props.bInGamepadUI &&
                       _.createElement(
                         "div",
                         {
                           className: _().SuggestContainer,
                         },
+                        _.createElement(
+                          _,
+                          {
+                            className: (0, _._)(
+                              _().ViewModeToggle,
+                              this.state.bCompactViewMode && _().Compact,
+                            ),
+                            onChange: this.SetViewMode,
+                            value: this.state.bCompactViewMode,
+                            tooltip: this.state.bCompactViewMode
+                              ? (0, _._)(
+                                  "#Sale_ItemBrowser_ViewMode_SwitchToExpanded",
+                                )
+                              : (0, _._)(
+                                  "#Sale_ItemBrowser_ViewMode_SwitchToCompact",
+                                ),
+                          },
+                          this.state.bCompactViewMode
+                            ? _.createElement(_.f9b, null)
+                            : _.createElement(_.Emg, null),
+                        ),
                         _.createElement(_.eSy, null),
                         _.createElement(_._, {
                           type: "text",
@@ -32705,6 +32829,32 @@
           );
         }
       };
+      function _(_) {
+        const {
+          value: _,
+          onChange: __webpack_require__,
+          className: _,
+          tooltip: _,
+          children: _,
+        } = _;
+        return _.createElement(
+          _._,
+          {
+            toolTipContent: _,
+          },
+          _.createElement(
+            "button",
+            {
+              type: "button",
+              className: _,
+              onClick: () => __webpack_require__(!_),
+              "aria-pressed": _,
+              "data-state": _ ? "on" : "off",
+            },
+            _,
+          ),
+        );
+      }
       function _(_) {
         const [_, __webpack_require__] = _.useState(),
           [_, _] = _.useState(),
@@ -32794,6 +32944,7 @@
             feature: _,
             depth: _,
             activeTab: _,
+            displayStyle: _,
           } = _,
           _ = (0, _._)();
         return _.createElement(
@@ -32835,6 +32986,7 @@
                   type: _.type || "game",
                   fnOnClickOverride: _,
                   bPreferDemoStorePage: _.prefer_demo_store_page,
+                  displayStyle: null != _ ? _ : "compactlist",
                 })
               );
             }),
@@ -32926,10 +33078,12 @@
       (_.contextType = _._),
         (0, _._)([_._], _.prototype, "OnDynamicCapsuleInsert", null),
         (0, _._)([_._], _.prototype, "ShowMoreRows", null),
+        (0, _._)([_._], _.prototype, "SetViewMode", null),
         (0, _._)([_._], _.prototype, "FilterItems", null),
         (0, _._)([_._], _.prototype, "OnUpdateSearch", null),
         (0, _._)([_._], _.prototype, "OnUpdateFacetFilter", null),
         (0, _._)([_._], _.prototype, "OnResize", null),
+        (0, _._)([_._], _.prototype, "BDisplayStyleIsCompact", null),
         (_ = (0, _._)([_._], _));
       const _ = (0, _._)((_) => {
         const { section: _, event: __webpack_require__, activeTab: _ } = _,
@@ -32959,6 +33113,7 @@
             browseInfo: _.item_browse_section_data,
             section: _,
             bInGamepadUI: _,
+            displayStyle: _.single_item_style,
             ..._,
           }),
         );
@@ -37218,7 +37373,6 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _, _, _, _, _, _, _, _;
@@ -37860,6 +38014,7 @@
                       bAutoAdvance: _.carousel_auto_advance,
                       bHideIfTooFewItems: _.hide_section_if_too_few_items,
                       arrowFill: _.jsondata.sale_carousel_arrow_color,
+                      arrowStyle: _.jsondata.sale_carousel_arrow_style,
                     },
                     (null == _
                       ? void 0
@@ -38700,12 +38855,32 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        let _;
+        return (
+          _ == _._.k_Left
+            ? (_ = {
+                "--horiz-margin-start": `${_}%`,
+              })
+            : _ == _._.k_Right
+              ? (_ = {
+                  "--horiz-margin-end": `${_}%`,
+                })
+              : _ == _._.k_Center &&
+                (_ = {
+                  "--horiz-margin-start": _ / 2 + "%",
+                  "--horiz-margin-end": _ / 2 + "%",
+                }),
+          _
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
-        var _, _;
-        const { event: _, section: _, language: _ } = _,
+        const { event: _, section: __webpack_require__, language: _ } = _,
           _ = (0, _._)();
         return _.createElement(
           _._,
@@ -38721,6 +38896,266 @@
                 _.SaleSection,
                 _().SaleSectionCtn,
                 _().Container,
+                _.className,
+              ),
+              style: (0, _._)(__webpack_require__, _, _),
+            },
+            _.createElement(_, {
+              section: __webpack_require__,
+              event: _,
+              language: _,
+            }),
+            _.createElement(_, {
+              media_overlay: __webpack_require__.media_overlay,
+              language: _,
+              event: _,
+              section: __webpack_require__,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            media_overlay: _,
+            language: __webpack_require__,
+            event: _,
+            section: _,
+          } = _,
+          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(
+            () => {
+              var _;
+              const _ = _._.GetELanguageFallback(__webpack_require__);
+              return [
+                (_ && (null == _ ? void 0 : _.text_placement)) || _._.k_TopLeft,
+                null == _ ? void 0 : _.media_type,
+                _ && _.localized_media && _.localized_media.length > 0
+                  ? (null == _
+                      ? void 0
+                      : _.localized_media[__webpack_require__]) ||
+                    (null == _ ? void 0 : _.localized_media[_]) ||
+                    {}
+                  : void 0,
+                _ &&
+                _.localized_media_title &&
+                _.localized_media_title.length > 0
+                  ? (null == _
+                      ? void 0
+                      : _.localized_media_title[__webpack_require__]) ||
+                    (null == _ ? void 0 : _.localized_media_title[_]) ||
+                    ""
+                  : void 0,
+                _ &&
+                _.localized_media_subtitle &&
+                _.localized_media_subtitle.length > 0
+                  ? (null == _
+                      ? void 0
+                      : _.localized_media_subtitle[__webpack_require__]) ||
+                    (null == _ ? void 0 : _.localized_media_subtitle[_]) ||
+                    ""
+                  : void 0,
+                _ &&
+                _.localized_media_description &&
+                _.localized_media_description.length > 0
+                  ? (null == _
+                      ? void 0
+                      : _.localized_media_description[__webpack_require__]) ||
+                    (null == _ ? void 0 : _.localized_media_description[_]) ||
+                    ""
+                  : void 0,
+                null == _ ? void 0 : _.eTitleDisplaySize,
+                null == _ ? void 0 : _.title_alignment,
+                null == _ ? void 0 : _.subtitle_alignment,
+                null == _ ? void 0 : _.description_alignment,
+                null == _ ? void 0 : _.media_horizontal_alignment,
+                null == _ ? void 0 : _.media_vertical_alignment,
+                (null == _ ? void 0 : _.is_title_as_image) &&
+                _ &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? (null == _
+                      ? void 0
+                      : _.title_media.localized_media[__webpack_require__]) ||
+                    (null == _ ? void 0 : _.title_media.localized_media[_]) ||
+                    {}
+                  : void 0,
+                (null == _ ? void 0 : _.is_title_as_image) &&
+                _ &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? null == _
+                    ? void 0
+                    : _.title_media.media_type
+                  : void 0,
+                (null == _ ? void 0 : _.is_title_as_image) &&
+                _ &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? null == _
+                    ? void 0
+                    : _.title_media.media_vertical_alignment
+                  : void 0,
+                (null == _ ? void 0 : _.is_title_as_image) &&
+                _ &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? null == _
+                    ? void 0
+                    : _.title_media.media_horizontal_alignment
+                  : void 0,
+                null == _ ? void 0 : _.eDescriptionDisplaySize,
+                null === (_ = null == _ ? void 0 : _.title_media) ||
+                void 0 === _
+                  ? void 0
+                  : _.media_scale,
+                null == _ ? void 0 : _.text_scale,
+              ];
+            },
+          );
+        let _;
+        if (_) {
+          let _ = _._.k_Left;
+          if (_)
+            switch (_) {
+              case _._.k_TopLeft:
+              case _._.k_LeftCenter:
+              case _._.k_BottomLeft:
+                _ = _._.k_Right;
+                break;
+              case _._.k_TopRight:
+              case _._.k_RightCenter:
+              case _._.k_BottomRight:
+                _ = _._.k_Left;
+                break;
+              case _._.k_TopCenter:
+              case _._.k_Center:
+              case _._.k_BottomCenter:
+                _ = _._.k_Center;
+            }
+          _ = _(_, _);
+        }
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().MediaOverlayCtn, _.className),
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)({
+                [_().TopLeft]: !_ || _ == _._.k_TopLeft,
+                [_().TopCenter]: _ == _._.k_TopCenter,
+                [_().TopRight]: _ == _._.k_TopRight,
+                [_().LeftCenter]: _ == _._.k_LeftCenter,
+                [_().Center]: _ == _._.k_Center,
+                [_().RightCenter]: _ == _._.k_RightCenter,
+                [_().BottomLeft]: _ == _._.k_BottomLeft,
+                [_().BottomCenter]: _ == _._.k_BottomCenter,
+                [_().BottomRight]: _ == _._.k_BottomRight,
+                [_().TextSectionScaling]: !0,
+              }),
+              style: _,
+            },
+            _.createElement(_, {
+              title: _,
+              titleAlign: _,
+              subtitle: _,
+              subtitleAlign: _,
+              description: _,
+              descAlign: _,
+              eTitleDisplaySize: _,
+              eDescriptionDisplaySize: _,
+              titleMedia: _,
+              titleMediaType: _,
+              titleVAlign: _,
+              titleHAlign: _,
+              event: _,
+              section: _,
+              language: __webpack_require__,
+              titleMediaScale: _,
+            }),
+          ),
+          _.createElement(_, {
+            media: _,
+            mediaType: _,
+            mediaHAlign: _,
+            mediaVAlign: _,
+            className: _().MediaMax,
+            clanAccountID: _.clanSteamID.GetAccountID(),
+          }),
+        );
+      }
+      function _(_) {
+        var _, _;
+        const { event: _, section: _, language: _ } = _,
+          [_, _, _, _, _, _, _] = (0, _._)(() => {
+            var _, _, _, _;
+            return [
+              _.cap_section_content && !_.show_as_carousel,
+              Boolean(_.show_as_carousel),
+              _.cap_section_content
+                ? Math.max(1, _.cap_section_row_count || 1)
+                : (null ===
+                    (_ =
+                      null === (_ = null == _ ? void 0 : _.media_container) ||
+                      void 0 === _
+                        ? void 0
+                        : _.media_rows) || void 0 === _
+                    ? void 0
+                    : _.length) || 0,
+              (null ===
+                (_ =
+                  null === (_ = null == _ ? void 0 : _.media_container) ||
+                  void 0 === _
+                    ? void 0
+                    : _.media_rows) || void 0 === _
+                ? void 0
+                : _.length) || 0,
+              Boolean(null == _ ? void 0 : _.carousel_auto_advance),
+              _.jsondata.sale_carousel_arrow_color,
+              _.jsondata.sale_carousel_arrow_style,
+            ];
+          }),
+          _ = (0, _._)(),
+          _ = (0, _._)(_._),
+          [_, _] = (0, _.useState)(Boolean(_ && _ < _)),
+          _ =
+            null ===
+              (_ =
+                null === (_ = null == _ ? void 0 : _.media_container) ||
+                void 0 === _
+                  ? void 0
+                  : _.media_rows) || void 0 === _
+              ? void 0
+              : __webpack_require__
+                  .filter((_, _) => !_ || _ < _)
+                  .map((_, _) =>
+                    _.createElement(_, {
+                      key: "templategrid_" + _.unique_id + "_" + _,
+                      ..._,
+                      row: _,
+                    }),
+                  );
+        return _.createElement(
+          _._,
+          {
+            feature: "templatemediacontent",
+          },
+          _.createElement(
+            _._,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: _._,
+              className: (0, _._)(
+                _.SaleSection,
+                _().SaleSectionCtn,
+                _().Container,
+                {
+                  [_().ContainerCarousel]: _,
+                },
               ),
               style: (0, _._)(_, _, _),
             },
@@ -38729,43 +39164,92 @@
               event: _,
               language: _,
             }),
-            null ===
-              (_ =
-                null === (_ = null == _ ? void 0 : _.media_container) ||
-                void 0 === _
-                  ? void 0
-                  : _.media_rows) || void 0 === _
-              ? void 0
-              : __webpack_require__.map((_, _) =>
-                  _.createElement(_, {
-                    key: "templategrid_" + _.unique_id + "_" + _,
-                    ..._,
-                    row: _,
-                  }),
-                ),
+            _
+              ? _.createElement(
+                  _._,
+                  {
+                    hideArrows: !_,
+                    hidePips: _,
+                    useTestScrollbar: !1,
+                    visibleElements: 1,
+                    bLazyRenderChildren: !1,
+                    screenIsWide: _,
+                    bAutoAdvance: _,
+                    arrowFill: _,
+                    arrowStyle: _,
+                    className: (0, _._)(
+                      _().TemplateCarousel,
+                      "template-carousel",
+                    ),
+                  },
+                  _,
+                )
+              : _.createElement(_.Fragment, null, _),
+            _ &&
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _(!1),
+                },
+                (0, _._)("#Sale_ShowMore"),
+              ),
+            !_ &&
+              _ &&
+              _ < _ &&
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _(!0),
+                },
+                (0, _._)("#Sale_ShowLess"),
+              ),
           ),
         );
       }
       function _(_) {
-        var _;
-        const {
-            event: __webpack_require__,
-            section: _,
-            language: _,
-            row: _,
-          } = _,
-          _ = (0, _._)(() => {
+        var _, _;
+        const { event: _, section: _, language: _, row: _ } = _,
+          [_, _] = (0, _._)(() => {
             var _;
-            return (
+            const _ =
               (null === (_ = _.media_columns) || void 0 === _
                 ? void 0
-                : _.length) || 0
-            );
+                : _.length) || 0;
+            let _ = [];
+            for (let _ = 0; _ < _; ++_) {
+              let _, _, _, _;
+              _.media_columns &&
+                _ < _.media_columns.length &&
+                (_ >= 1 &&
+                _ <= 2 &&
+                (_.media_columns[_].display_order ==
+                  _._.k_HorizontalMediaFirst ||
+                  _.media_columns[_].display_order == _._.k_HorizontalTextFirst)
+                  ? (_ = _.media_columns[_].text_scale)
+                  : _.media_columns[_].display_order == _._.k_TitleDescOnly &&
+                    ((_ = _.media_columns[_].display_order),
+                    (_ = _.media_columns[_].text_scale),
+                    (_ =
+                      _.media_columns[_].text_scale_margin_alignment ||
+                      _._.k_Left))),
+                _ &&
+                  _ > 0 &&
+                  (_ = _
+                    ? _(_, _)
+                    : {
+                        "--horiz-min-col": `${_}%`,
+                      }),
+                __webpack_require__.push(_);
+            }
+            return [_, _];
           }),
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(void 0),
           _ = (0, _._)(() => []),
-          _ = _.media_columns.length,
+          _ =
+            (null === (_ = _.media_columns) || void 0 === _
+              ? void 0
+              : _.length) || 0,
           _ = _.useCallback(
             (_, _, _) => {
               (_[_] = {
@@ -38798,7 +39282,7 @@
           },
           null === (_ = _.media_columns) || void 0 === _
             ? void 0
-            : _.map((_, _) =>
+            : __webpack_require__.map((_, _) =>
                 _.createElement(_, {
                   key: "mc_" + _.unique_id + "_" + _.unique_id,
                   ..._,
@@ -38807,6 +39291,8 @@
                   mediaFirstHeight: _,
                   textFirstHeight: _,
                   mediaHeightChanged: _,
+                  additionalStyle:
+                    (null == _ ? void 0 : _.length) > _ ? _[_] : void 0,
                 }),
               ),
         );
@@ -38821,33 +39307,27 @@
             mediaFirstHeight: _,
             textFirstHeight: _,
             mediaHeightChanged: _,
+            additionalStyle: _,
           } = _,
           [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
-            var _, _, _, _, _, _, _, _;
             const _ = _._.GetELanguageFallback(_);
             return [
               _.display_order || _._.k_HorizontalMediaFirst,
               _.media_type,
-              (null === (_ = _.localized_media) || void 0 === _
-                ? void 0
-                : _.length) > 0
+              _.localized_media && _.localized_media.length > 0
                 ? _.localized_media[_] || _.localized_media[_] || {}
                 : void 0,
-              (null === (_ = _.localized_media_title) || void 0 === _
-                ? void 0
-                : _.length) > 0
+              _.localized_media_title && _.localized_media_title.length > 0
                 ? _.localized_media_title[_] || _.localized_media_title[_] || ""
                 : void 0,
-              (null === (_ = _.localized_media_subtitle) || void 0 === _
-                ? void 0
-                : _.length) > 0
+              _.localized_media_subtitle &&
+              _.localized_media_subtitle.length > 0
                 ? _.localized_media_subtitle[_] ||
                   _.localized_media_subtitle[_] ||
                   ""
                 : void 0,
-              (null === (_ = _.localized_media_description) || void 0 === _
-                ? void 0
-                : _.length) > 0
+              _.localized_media_description &&
+              _.localized_media_description.length > 0
                 ? _.localized_media_description[_] ||
                   _.localized_media_description[_] ||
                   ""
@@ -38859,29 +39339,29 @@
               _.media_horizontal_alignment,
               _.media_vertical_alignment,
               _.is_title_as_image &&
-              (null === (_ = _.title_media) || void 0 === _
-                ? void 0
-                : _.localized_media.length) > 0
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
                 ? _.title_media.localized_media[_] ||
                   _.title_media.localized_media[_] ||
                   {}
                 : void 0,
               _.is_title_as_image &&
-              (null === (_ = _.title_media) || void 0 === _
-                ? void 0
-                : _.localized_media.length) > 0
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
                 ? _.title_media.media_type
                 : void 0,
               _.is_title_as_image &&
-              (null === (_ = _.title_media) || void 0 === _
-                ? void 0
-                : _.localized_media.length) > 0
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
                 ? _.title_media.media_vertical_alignment
                 : void 0,
               _.is_title_as_image &&
-              (null === (_ = _.title_media) || void 0 === _
-                ? void 0
-                : _.localized_media.length) > 0
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
                 ? _.title_media.media_horizontal_alignment
                 : void 0,
             ];
@@ -38911,6 +39391,7 @@
           mediaFirstHeight: _,
           textFirstHeight: _,
           mediaHeightChanged: _,
+          additionalStyle: _,
         });
       }
       function _(_) {
@@ -38922,6 +39403,7 @@
             mediaHeightChanged: _,
             mediaFirstHeight: _,
             textFirstHeight: _,
+            additionalStyle: _,
           } = _,
           _ = (0, _._)(),
           _ = _.useRef(void 0),
@@ -38979,21 +39461,44 @@
                 [_().HorizontalTextFirst]: _ == _._.k_HorizontalTextFirst,
                 [_().VerticalMediaFirst]: _ == _._.k_MediaTitleDesc,
                 [_().VerticalTextFirst]: _ == _._.k_TitleDescMedia,
+                [_().TextOnlyDisplay]: _ == _._.k_TitleDescOnly,
+                [_().OverlayMedia]: _ == _._.k_OverlayMedia,
               }),
-              style: (0, _._)(__webpack_require__, _),
+              style: {
+                ...(0, _._)(__webpack_require__, _),
+                ...(null != _ ? _ : {}),
+              },
             },
-            _ &&
-              _.createElement(_, {
-                ..._,
-                mediaHeight: _,
-                setImageSize: _,
-              }),
-            !_ &&
-              _.createElement(_, {
-                ..._,
-                mediaHeight: _,
-                setImageSize: _,
-              }),
+            _ == _._.k_TitleDescOnly
+              ? _.createElement(_, {
+                  ..._,
+                })
+              : _.createElement(
+                  _.Fragment,
+                  null,
+                  _ == _._.k_OverlayMedia
+                    ? _.createElement(_, {
+                        ..._,
+                        className: _().GridTemplateOverlay,
+                        media_overlay: __webpack_require__,
+                      })
+                    : _.createElement(
+                        _.Fragment,
+                        null,
+                        _ &&
+                          _.createElement(_, {
+                            ..._,
+                            mediaHeight: _,
+                            setImageSize: _,
+                          }),
+                        !_ &&
+                          _.createElement(_, {
+                            ..._,
+                            mediaHeight: _,
+                            setImageSize: _,
+                          }),
+                      ),
+                ),
           )
         );
       }
@@ -39279,7 +39784,9 @@
               {
                 className: (0, _._)({
                   [_().Subtitle]: !0,
-                  [_]: !0,
+                  ...(_ && {
+                    [_]: !0,
+                  }),
                   [_().Left]: !_ || _ == _._.k_Left,
                   [_().Center]: _ == _._.k_Center,
                   [_().Right]: _ == _._.k_Right,
@@ -39316,7 +39823,9 @@
               {
                 className: (0, _._)({
                   [_().Title]: !0,
-                  [_]: !0,
+                  ...(_ && {
+                    [_]: !0,
+                  }),
                   [_()._]: _ == _._.k_Header1,
                   [_()._]: _ == _._.k_Header2,
                   [_()._]: _ == _._.k_Header3,
@@ -39327,7 +39836,7 @@
                 }),
               },
               _.createElement(_._, {
-                text: __webpack_require__,
+                text: __webpack_require__ || "",
                 partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
@@ -39728,318 +40237,8 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
       function _(_) {
-        const { event: _, section: __webpack_require__, language: _ } = _,
-          _ = ((0, _._)(), (0, _._)()),
-          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(
-            () => {
-              var _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _,
-                _;
-              const _ = _._.GetELanguageFallback(_);
-              return [
-                (null === (_ = __webpack_require__.media_overlay) ||
-                void 0 === _
-                  ? void 0
-                  : _.text_placement) || _._.k_TopLeft,
-                null === (_ = __webpack_require__.media_overlay) || void 0 === _
-                  ? void 0
-                  : _.media_type,
-                (null ===
-                  (_ =
-                    null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media) || void 0 === _
-                  ? void 0
-                  : _.length) > 0
-                  ? (null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media[_]) ||
-                    (null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media[_]) ||
-                    {}
-                  : void 0,
-                (null ===
-                  (_ =
-                    null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media_title) || void 0 === _
-                  ? void 0
-                  : _.length) > 0
-                  ? (null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media_title[_]) ||
-                    (null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media_title[_]) ||
-                    ""
-                  : void 0,
-                (null ===
-                  (_ =
-                    null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media_subtitle) || void 0 === _
-                  ? void 0
-                  : _.length) > 0
-                  ? (null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media_subtitle[_]) ||
-                    (null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media_subtitle[_]) ||
-                    ""
-                  : void 0,
-                (null ===
-                  (_ =
-                    null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media_description) || void 0 === _
-                  ? void 0
-                  : _.length) > 0
-                  ? (null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media_description[_]) ||
-                    (null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.localized_media_description[_]) ||
-                    ""
-                  : void 0,
-                null === (_ = __webpack_require__.media_overlay) || void 0 === _
-                  ? void 0
-                  : _.eTitleDisplaySize,
-                null === (_ = __webpack_require__.media_overlay) || void 0 === _
-                  ? void 0
-                  : _.title_alignment,
-                null === (_ = __webpack_require__.media_overlay) || void 0 === _
-                  ? void 0
-                  : _.subtitle_alignment,
-                null === (_ = __webpack_require__.media_overlay) || void 0 === _
-                  ? void 0
-                  : _.description_alignment,
-                null === (_ = __webpack_require__.media_overlay) || void 0 === _
-                  ? void 0
-                  : _.media_horizontal_alignment,
-                null === (_ = __webpack_require__.media_overlay) || void 0 === _
-                  ? void 0
-                  : _.media_vertical_alignment,
-                (null === (_ = __webpack_require__.media_overlay) ||
-                void 0 === _
-                  ? void 0
-                  : _.is_title_as_image) &&
-                (null ===
-                  (_ =
-                    null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.title_media) || void 0 === _
-                  ? void 0
-                  : _.localized_media.length) > 0
-                  ? (null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.title_media.localized_media[_]) ||
-                    (null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.title_media.localized_media[_]) ||
-                    {}
-                  : void 0,
-                (null === (_ = __webpack_require__.media_overlay) ||
-                void 0 === _
-                  ? void 0
-                  : _.is_title_as_image) &&
-                (null ===
-                  (_ =
-                    null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.title_media) || void 0 === _
-                  ? void 0
-                  : _.localized_media.length) > 0
-                  ? null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                    ? void 0
-                    : _.title_media.media_type
-                  : void 0,
-                (null === (_ = __webpack_require__.media_overlay) ||
-                void 0 === _
-                  ? void 0
-                  : _.is_title_as_image) &&
-                (null ===
-                  (_ =
-                    null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.title_media) || void 0 === _
-                  ? void 0
-                  : _.localized_media.length) > 0
-                  ? null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                    ? void 0
-                    : _.title_media.media_vertical_alignment
-                  : void 0,
-                (null === (_ = __webpack_require__.media_overlay) ||
-                void 0 === _
-                  ? void 0
-                  : _.is_title_as_image) &&
-                (null ===
-                  (_ =
-                    null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.title_media) || void 0 === _
-                  ? void 0
-                  : _.localized_media.length) > 0
-                  ? null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                    ? void 0
-                    : _.title_media.media_horizontal_alignment
-                  : void 0,
-                null === (_ = __webpack_require__.media_overlay) || void 0 === _
-                  ? void 0
-                  : _.eDescriptionDisplaySize,
-                null ===
-                  (_ =
-                    null === (_ = __webpack_require__.media_overlay) ||
-                    void 0 === _
-                      ? void 0
-                      : _.title_media) || void 0 === _
-                  ? void 0
-                  : _.media_scale,
-              ];
-            },
-          );
-        return _.createElement(
-          _._,
-          {
-            feature: "templatemediacontent",
-          },
-          _.createElement(
-            _._,
-            {
-              placeholderHeight: "100vh",
-              rootMargin: _._,
-              className: (0, _._)(
-                _.SaleSection,
-                _().SaleSectionCtn,
-                _().Container,
-              ),
-              style: (0, _._)(__webpack_require__, _, _),
-            },
-            _.createElement(_, {
-              section: __webpack_require__,
-              event: _,
-              language: _,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _().MediaOverlayCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)({
-                    [_().TopLeft]: !_ || _ == _._.k_TopLeft,
-                    [_().TopCenter]: _ == _._.k_TopCenter,
-                    [_().TopRight]: _ == _._.k_TopRight,
-                    [_().LeftCenter]: _ == _._.k_LeftCenter,
-                    [_().Center]: _ == _._.k_Center,
-                    [_().RightCenter]: _ == _._.k_RightCenter,
-                    [_().BottomLeft]: _ == _._.k_BottomLeft,
-                    [_().BottomCenter]: _ == _._.k_BottomCenter,
-                    [_().BottomRight]: _ == _._.k_BottomRight,
-                  }),
-                },
-                _.createElement(_, {
-                  title: _,
-                  titleAlign: _,
-                  subtitle: _,
-                  subtitleAlign: _,
-                  description: _,
-                  descAlign: _,
-                  eTitleDisplaySize: _,
-                  eDescriptionDisplaySize: _,
-                  titleMedia: _,
-                  titleMediaType: _,
-                  titleVAlign: _,
-                  titleHAlign: _,
-                  event: _,
-                  section: __webpack_require__,
-                  language: _,
-                  titleMediaScale: _,
-                }),
-              ),
-              _.createElement(_, {
-                media: _,
-                mediaType: _,
-                mediaHAlign: _,
-                mediaVAlign: _,
-                className: _().MediaMax,
-                clanAccountID: _.clanSteamID.GetAccountID(),
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        var _, _, _;
+        var _, _, _, _;
         const { event: _, section: _, activeTab: _, language: _ } = _,
           _ = (0, _._)();
         switch (_.section_type) {
@@ -40049,6 +40248,7 @@
           case "links":
           case "title_image":
           case "crosspromotesalepage":
+          case "creator_list_of_lists":
             return _.createElement(_, {
               ..._,
             });
@@ -40202,6 +40402,10 @@
                 null === (_ = _.jsondata) || void 0 === _
                   ? void 0
                   : _.sale_carousel_arrow_color,
+              arrowStyle:
+                null === (_ = _.jsondata) || void 0 === _
+                  ? void 0
+                  : _.sale_carousel_arrow_style,
               autoAdvance: _.carousel_auto_advance,
               hideAppBackground: _.carousel_hide_app_background,
               ..._,

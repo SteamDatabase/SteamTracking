@@ -3551,6 +3551,11 @@ html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
   flex: 1;
   overflow-y: auto;
 }
+.oAqlZTgPU37Nb8gBT5eAM ._36zpRzyxmtd8eBgf7p9Ewi ._1JiQcVD1LUE2KxWb_oOv-K {
+  font-size: 11px;
+  padding: 2px 4px;
+  color: #bbb;
+}
 .oAqlZTgPU37Nb8gBT5eAM a:hover {
   color: #fff;
 }
@@ -4389,7 +4394,6 @@ span._1P__hyqsgd049GH0Bn007_ {
   background-color: #000;
   position: relative;
   padding: 4px 24px;
-  margin-top: var(--store-menu-overlap-height, 0px);
   z-index: 10;
   align-items: center;
 }

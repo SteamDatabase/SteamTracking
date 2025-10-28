@@ -2845,7 +2845,7 @@ GHomepage = {
 
 		const $Img = $J('<img/>', $J.extend( {}, rgDefaultImageProperties, rgImageProperties ) );
 
-		$CapCtn.append( $J('<div/>', {'class': 'capsule_image_ctn' } ).append( $J('<div/>', {'class': 'sale_capsule_image_hover'} ), $Img ) );
+		$CapCtn.append( $J('<div/>', {'class': 'capsule_image_ctn' } ).append( $Img ) );
 
 		if ( rgOptions.html_before_price )
 		{
@@ -2932,7 +2932,7 @@ GHomepage = {
 				$CapCtn.removeClass( 'microtrailer_active' );
 			};
 
-			if ( $CapCtn.data('microtrailerOnImageHover') )
+			if ( $CapCtn.data('microtrailerOnImageHover') && !window.UseTabletScreenMode() )
 			{
 				$ImgCtn.on( 'mouseenter vgp_onfocus', fnPlay );
 				$ImgCtn.on( 'mouseleave vgp_onblur', fnPause );

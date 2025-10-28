@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Content relabelled",
 	"moderation_resolutionstatus_suspicious": "Account locked for suspicious content",
 	"moderation_resolutionstatus_harassmentstrike": "Steam Community privileges suspended",
+	"moderation_resolutionstatus_removeandwarn": "Removed and warned",
+	"moderation_resolutionstatus_removeandban": "Removed and banned from hub",
 	"moderation_resolutionstatus_unknown": "Unknown",
 	"moderationaction_acquitted": "Acquitted",
 	"moderationaction_cancelled": "Last open report cancelled",

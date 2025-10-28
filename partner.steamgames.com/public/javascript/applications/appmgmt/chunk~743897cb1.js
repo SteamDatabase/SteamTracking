@@ -11346,12 +11346,13 @@
           let n,
             l = 0;
           try {
-            if (this.m_bJWTToken && e.bSendAuth) {
+            if (this.m_bJWTToken && e.bSendAuth && this.m_webApiAccessToken) {
               const e = Date.now() / 1e3;
               this.m_refreshAccessTokenPromise
                 ? await this.m_refreshAccessTokenPromise
-                : this.m_fnRequestNewAccessToken &&
-                  e - this.m_dtLastExpireCheck > 60 &&
+                : (window.bForceTokenRefresh ||
+                    (this.m_fnRequestNewAccessToken &&
+                      e - this.m_dtLastExpireCheck > 60)) &&
                   ((this.m_dtLastExpireCheck = e),
                   (function (e) {
                     const t = c(e),
@@ -11365,11 +11366,7 @@
                       c(e) - i < Date.now() / 1e3
                     );
                   })(m(this.m_webApiAccessToken)) &&
-                    ((this.m_refreshAccessTokenPromise =
-                      this.m_fnRequestNewAccessToken(this.m_webApiAccessToken)),
-                    (this.m_webApiAccessToken =
-                      await this.m_refreshAccessTokenPromise),
-                    (this.m_refreshAccessTokenPromise = void 0)));
+                    (await this.AttemptTokenRefresh()));
             }
             const u = await this.Send(e, t, r, s);
             if (((l = u.status), 200 == l))
@@ -11402,11 +11399,8 @@
               this.m_bJWTToken &&
               e.bSendAuth &&
               this.m_fnRequestNewAccessToken &&
-              ((this.m_refreshAccessTokenPromise =
-                this.m_fnRequestNewAccessToken(this.m_webApiAccessToken)),
-              (this.m_webApiAccessToken =
-                await this.m_refreshAccessTokenPromise),
-              (this.m_refreshAccessTokenPromise = void 0)),
+              this.m_webApiAccessToken &&
+              (await this.AttemptTokenRefresh()),
             n
           );
         }
@@ -11463,6 +11457,16 @@
             r && a.Hdr().set_error_message(r),
             a
           );
+        }
+        async AttemptTokenRefresh() {
+          if (this.m_fnRequestNewAccessToken) {
+            this.m_refreshAccessTokenPromise = this.m_fnRequestNewAccessToken(
+              this.m_webApiAccessToken,
+            );
+            const e = await this.m_refreshAccessTokenPromise;
+            (this.m_refreshAccessTokenPromise = void 0),
+              e && (this.m_webApiAccessToken = e);
+          }
         }
       }
       var B = r(8527);
@@ -26606,7 +26610,7 @@
         ft = r(9154),
         Mt = r(738),
         wt = r(75933),
-        St = r(1596);
+        St = r(87884);
       function ht(e) {
         const t = (0, S.Qn)(),
           r = (0, wt.a4)(wt.Wn),
@@ -27534,30 +27538,33 @@
         const {
             text: t,
             partnerEventStore: r,
-            languageOverride: s,
-            event: o,
-            showErrorInfo: l,
-            bShowShortSpeakerInfo: m,
+            languageOverride: o,
+            event: l,
+            showErrorInfo: m,
+            bShowShortSpeakerInfo: c,
           } = e,
-          c = n.useCallback(
+          u = n.useCallback(
             (e) =>
               new p(
                 new g(
                   new d(new a.OJ(new a.R8(), 0), e, Ie(), {
                     partnerEventStore: r,
-                    event: o,
+                    event: l,
                   }),
                 ),
                 e,
               ),
-            [r, o],
+            [r, l],
           );
         return n
-          .useMemo(() => new i.B(cr.sm_BBCodeDictionary, c, s), [c, s])
+          .useMemo(
+            () => new i.B(cr.sm_BBCodeDictionary, u, o || s.TS.LANGUAGE),
+            [u, o],
+          )
           .ParseBBCode(t, {
-            showErrorInfo: l,
-            event: o,
-            bShowShortSpeakerInfo: m,
+            showErrorInfo: m,
+            event: l,
+            bShowShortSpeakerInfo: c,
           });
       }
     },
@@ -28444,23 +28451,24 @@
             },
             ref: t,
             className: c,
-            style: { width: d >= 1 && d < 100 ? `${d}%` : void 0 },
+            style: { width: d && d >= 1 && d < 100 ? `${d}%` : void 0 },
           },
           a.createElement(p, { rgVideoSources: r.rgVideoSources }),
           a.createElement(B, { rgVideoTracks: r.rgVideoTracks }),
         );
       });
       function g(e) {
-        try {
-          const t = new URL(e);
-          return (
-            (t.search =
-              (t.search ? t.search + "&" : "?") + "origin=" + (0, m.xv)()),
-            t.toString()
-          );
-        } catch {
-          return e;
-        }
+        if (e)
+          try {
+            const t = new URL(e);
+            return (
+              (t.search =
+                (t.search ? t.search + "&" : "?") + "origin=" + (0, m.xv)()),
+              t.toString()
+            );
+          } catch {
+            return e;
+          }
       }
       function p(e) {
         const { rgVideoSources: t } = e;

@@ -976,17 +976,17 @@
               : c),
           H = 0 == r.GetStoreItemType();
         return l.createElement(
-          C.oj,
-          { appid: H && r.GetAppID() },
+          "div",
+          {
+            className: (0, P.A)(
+              f().StoreSaleWidgetContainer,
+              f().LibraryAssetExpandedDisplay,
+              "LibraryAssetExpandedDisplay",
+            ),
+          },
           l.createElement(
-            "div",
-            {
-              className: (0, P.A)(
-                f().StoreSaleWidgetContainer,
-                f().LibraryAssetExpandedDisplay,
-                "LibraryAssetExpandedDisplay",
-              ),
-            },
+            C.oj,
+            { appid: H && r.GetAppID() },
             l.createElement(
               "div",
               { className: f().StoreSaleWidgetLibraryAssetExtendedTop },

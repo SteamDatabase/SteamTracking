@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Conținut reetichetat",
 	"moderation_resolutionstatus_suspicious": "Contul a fost blocat din cauza conținutului suspect",
 	"moderation_resolutionstatus_harassmentstrike": "Privilegiile din comunitatea Steam au fost suspendate",
+	"moderation_resolutionstatus_removeandwarn": "Eliminat și avertizat",
+	"moderation_resolutionstatus_removeandban": "Eliminat și interzis în centru",
 	"moderation_resolutionstatus_unknown": "Necunoscut",
 	"moderationaction_acquitted": "Achitat",
 	"moderationaction_cancelled": "Ultimul raport deschis a fost anulat",

@@ -4010,6 +4010,7 @@
                     nCreatorAccountID: e.creatorAccountID,
                     nWidthMultiplier: e.nWidthMultiplier,
                     bShowIgnoreButton: e.bShowIgnoreButton,
+                    bShowDescription: e.bShowDescriptionInHover,
                   },
                   v,
                 ),

@@ -136,6 +136,7 @@
         WishlistButtonNotTop: "_3VcyYP_egkOaX_rJ1e_SQk",
         BottomShelf: "oAqlZTgPU37Nb8gBT5eAM",
         BottomShelfOffScreen: "_36zpRzyxmtd8eBgf7p9Ewi",
+        ShortDescription: "_1JiQcVD1LUE2KxWb_oOv-K",
         TextContent: "_2VvFLg2irh9gPAhhxE4Kpo",
         GameTitle: "_405wj1BgSyf8l06uMjNBV",
         TagRow: "_2SWQMqXxu7mJMIuNemYJq8",
@@ -12523,6 +12524,7 @@
             bUseSubscriptionLayout: _,
             nCreatorAccountID: _,
             bPreventNavigation: _,
+            bShowDescription: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(""),
@@ -12616,6 +12618,14 @@
                   _?.GetName() || _,
                 ),
               ),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ShortDescription,
+                  },
+                  _?.GetShortDescription(),
+                ),
               Boolean(_) &&
                 _.createElement(_, {
                   rgTagIDs: _.GetTagIDs(),
@@ -12736,6 +12746,7 @@
             bShowDeckCompatibilityDialog: _,
             bShowWishlistButton: _ = !0,
             bShowIgnoreButton: _ = !1,
+            bShowDescription: _ = !1,
             ..._
           } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), {}),
@@ -12776,6 +12787,7 @@
             nCreatorAccountID: _,
             bShowWishlistButton: _,
             bShowIgnoreButton: _,
+            bShowDescription: _,
           },
           _ = _.createElement(_, {
             ..._,
@@ -13300,21 +13312,22 @@
           return _.createElement(
             _._,
             {
-              appid: _ ? _.GetAppID() : void 0,
+              className: (0, _._)({
+                [_().StoreSaleWidgetOuterContainer]: !0,
+                [_().AllowTwoLineHeader]: _,
+                StoreSaleWidgetOuterContainer: !0,
+              }),
+              onMouseEnter: () => !_ && __webpack_require__(!0),
+              onMouseLeave: () => !_ && __webpack_require__(!1),
+              "flow-children": "grid",
+              navEntryPreferPosition: _._.PREFERRED_CHILD,
+              autoFocus: _,
+              navKey: "preview_widget_" + _.GetID(),
             },
             _.createElement(
               _._,
               {
-                className: (0, _._)({
-                  [_().StoreSaleWidgetOuterContainer]: !0,
-                  [_().AllowTwoLineHeader]: _,
-                }),
-                onMouseEnter: () => !_ && __webpack_require__(!0),
-                onMouseLeave: () => !_ && __webpack_require__(!1),
-                "flow-children": "grid",
-                navEntryPreferPosition: _._.PREFERRED_CHILD,
-                autoFocus: _,
-                navKey: "preview_widget_" + _.GetID(),
+                appid: _ ? _.GetAppID() : void 0,
               },
               _.createElement(
                 _._,

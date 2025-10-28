@@ -2173,7 +2173,7 @@
             ref: _,
             className: _,
             style: {
-              width: _ >= 1 && _ < 100 ? `${_}%` : void 0,
+              width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
             },
           },
           _.createElement(_, {
@@ -2185,16 +2185,17 @@
         );
       });
       function _(_) {
-        try {
-          const _ = new URL(_);
-          return (
-            (_.search =
-              (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
-            _.toString()
-          );
-        } catch {
-          return _;
-        }
+        if (_)
+          try {
+            const _ = new URL(_);
+            return (
+              (_.search =
+                (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
+              _.toString()
+            );
+          } catch {
+            return _;
+          }
       }
       function _(_) {
         const { rgVideoSources: _ } = _;

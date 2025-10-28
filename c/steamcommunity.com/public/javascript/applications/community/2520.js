@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Treści opatrzone nowym oznaczeniem",
 	"moderation_resolutionstatus_suspicious": "Konto zablokowane z powodu podejrzanych treści",
 	"moderation_resolutionstatus_harassmentstrike": "Dostęp do Społeczności Steam został zawieszony",
+	"moderation_resolutionstatus_removeandwarn": "Usunięto i ostrzeżono",
+	"moderation_resolutionstatus_removeandban": "Usunięto i zbanowano z centrum",
 	"moderation_resolutionstatus_unknown": "Nieznany",
 	"moderationaction_acquitted": "Uniewinniono",
 	"moderationaction_cancelled": "Ostatnie otwarte zgłoszenie anulowane",

@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Innehåll ommärkt",
 	"moderation_resolutionstatus_suspicious": "Kontot har låsts på grund av misstänkt innehåll",
 	"moderation_resolutionstatus_harassmentstrike": "Dina rättigheter inom Steams gemenskap har tagits bort",
+	"moderation_resolutionstatus_removeandwarn": "Borttagen och varnad",
+	"moderation_resolutionstatus_removeandban": "Borttagen och avstängd från central",
 	"moderation_resolutionstatus_unknown": "Okänt",
 	"moderationaction_acquitted": "Frikänd",
 	"moderationaction_cancelled": "Senaste öppna anmälan avbruten",

@@ -13,11 +13,11 @@ html.tablet .recommended_creators_ctn {
 /* Set to 3 col */
 html.tablet .store_capsule,
 html.tablet .spotlight_img,
-html.tablet .carousel_container.spotlight .carousel_items > * .store_capsule,
+html.tablet .carousel_container.spotlight .store_capsule,
 html.tablet .spotlight_img img,
 html.tablet #live_streams_carousel .carousel_items .store_capsule,
 html.tablet .recommended_creators_ctn .store_capsule,
-html.tablet .carousel_container.spotlight .carousel_items > * > div,
+html.tablet .home_area_spotlight,
 html.tablet .spotlight_weeklong_ctn,
 html.tablet .home_marketing_message,
 html.tablet .recommendation_carousel_item .carousel_cap,
@@ -132,7 +132,6 @@ html.tablet .recommended_creators_ctn .store_capsule,
 html.tablet body.v6 .newonsteam_capsules > a,
 html.tablet .dailydeal_ctn,
 html.tablet .recommendation_carousel_item .carousel_cap {
-	box-shadow: var( --gpShadow-Medium );
 	scroll-snap-align: start;
 }
 

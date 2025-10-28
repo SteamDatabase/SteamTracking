@@ -4863,6 +4863,34 @@ html.responsive.touch
   ._1edLKYpcJyTYC7ku9fYI1_
   .Eh-ow8RpArn1HQyPR8RFY
   ._1YWp1WOcTPesvO2Yp5SuOA
+  ._2GvBzfFkdSM256yF-Qt91T {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-inline-end: 6px;
+}
+._18byEIHFiivSklOwKqIx2b
+  ._1edLKYpcJyTYC7ku9fYI1_
+  .Eh-ow8RpArn1HQyPR8RFY
+  ._1YWp1WOcTPesvO2Yp5SuOA
+  ._2GvBzfFkdSM256yF-Qt91T
+  svg {
+  opacity: 0.5;
+  width: 26px;
+  transition: opacity .2s ease-in-out;
+}
+._18byEIHFiivSklOwKqIx2b
+  ._1edLKYpcJyTYC7ku9fYI1_
+  .Eh-ow8RpArn1HQyPR8RFY
+  ._1YWp1WOcTPesvO2Yp5SuOA
+  ._2GvBzfFkdSM256yF-Qt91T:hover
+  svg {
+  opacity: 1;
+}
+._18byEIHFiivSklOwKqIx2b
+  ._1edLKYpcJyTYC7ku9fYI1_
+  .Eh-ow8RpArn1HQyPR8RFY
+  ._1YWp1WOcTPesvO2Yp5SuOA
   .DialogInput {
   padding: 2px;
 }
@@ -4941,6 +4969,10 @@ html.responsive.touch
   ._36qA-3ePJIusV1oKLQep-w
   ._2tkiJ4VfEdI9kq1agjZyNz:hover {
   background-color: rgba(255, 255, 255, 0.24);
+}
+._18byEIHFiivSklOwKqIx2b .LibraryAssetExpandedDisplay,
+._18byEIHFiivSklOwKqIx2b .StoreSaleWidgetOuterContainer {
+  margin-bottom: 6px;
 }
 ._1YWp1WOcTPesvO2Yp5SuOA {
   display: flex;
@@ -5556,9 +5588,14 @@ html.responsive.touch
   color: #fff;
 }
 ._78Qv2C95AM2DNCuLD5o8U {
-  width: 220px;
+  width: calc((100% - 12px) / 2);
   position: relative;
   flex-shrink: 0;
+}
+@media screen and (max-width: 700px) {
+  ._78Qv2C95AM2DNCuLD5o8U {
+    width: 100%;
+  }
 }
 ._78Qv2C95AM2DNCuLD5o8U video {
   position: absolute;
@@ -5571,7 +5608,6 @@ html.responsive.touch
   flex-direction: column;
   justify-content: center;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  width: 220px;
   background: rgba(255, 255, 255, 0.1);
   padding: 6px 12px;
 }
@@ -5596,20 +5632,6 @@ html.responsive.touch
 }
 ._2qz5D65VkY796Xw-al9f_a .SaleTagBlockCtn .TagBox {
   max-height: 38px;
-}
-.widestore ._78Qv2C95AM2DNCuLD5o8U {
-  width: 275px;
-}
-html.responsive.touch .widestore ._78Qv2C95AM2DNCuLD5o8U {
-  width: 220px;
-}
-@media screen and (max-width: 910px) {
-  html.responsive .widestore ._78Qv2C95AM2DNCuLD5o8U {
-    width: 220px;
-  }
-}
-.widestore ._2qz5D65VkY796Xw-al9f_a {
-  width: 100%;
 }
 html:not(.client)
   .events_listing
@@ -9214,6 +9236,12 @@ html.responsive.touch ._3xpkvUfVoGX-QZFAF9bHX1 {
   height: auto;
   display: block;
   transition: transform .3s ease-in-out;
+}
+._30RNOxqk1P9UdZBI76xoIw {
+  padding: 10px;
+  display: block;
+  background-color: rgba(60, 60, 60, 0.63);
+  aspect-ratio: 1.6;
 }
 ._3T5cuT1JEgQKn-huguKotK {
   width: 160px;

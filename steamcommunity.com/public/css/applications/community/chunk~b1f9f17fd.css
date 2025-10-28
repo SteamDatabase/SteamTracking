@@ -329,8 +329,10 @@ strong {
   object-fit: none;
   transform: scaleY(-1);
 }
-._2aeq1EsgEidbP1gObw4Bqg {
-  padding: 5px;
+._1QP7mh3IZ6mkLZFarqOI6K {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
 }
 ._1Un6hCqh2IuOm0WLmrrA7w {
   display: flex;
@@ -3533,6 +3535,34 @@ html.responsive.touch
   ._1edLKYpcJyTYC7ku9fYI1_
   .Eh-ow8RpArn1HQyPR8RFY
   ._1YWp1WOcTPesvO2Yp5SuOA
+  ._2GvBzfFkdSM256yF-Qt91T {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-inline-end: 6px;
+}
+._18byEIHFiivSklOwKqIx2b
+  ._1edLKYpcJyTYC7ku9fYI1_
+  .Eh-ow8RpArn1HQyPR8RFY
+  ._1YWp1WOcTPesvO2Yp5SuOA
+  ._2GvBzfFkdSM256yF-Qt91T
+  svg {
+  opacity: 0.5;
+  width: 26px;
+  transition: opacity .2s ease-in-out;
+}
+._18byEIHFiivSklOwKqIx2b
+  ._1edLKYpcJyTYC7ku9fYI1_
+  .Eh-ow8RpArn1HQyPR8RFY
+  ._1YWp1WOcTPesvO2Yp5SuOA
+  ._2GvBzfFkdSM256yF-Qt91T:hover
+  svg {
+  opacity: 1;
+}
+._18byEIHFiivSklOwKqIx2b
+  ._1edLKYpcJyTYC7ku9fYI1_
+  .Eh-ow8RpArn1HQyPR8RFY
+  ._1YWp1WOcTPesvO2Yp5SuOA
   .DialogInput {
   padding: 2px;
 }
@@ -3611,6 +3641,10 @@ html.responsive.touch
   ._36qA-3ePJIusV1oKLQep-w
   ._2tkiJ4VfEdI9kq1agjZyNz:hover {
   background-color: rgba(255, 255, 255, 0.24);
+}
+._18byEIHFiivSklOwKqIx2b .LibraryAssetExpandedDisplay,
+._18byEIHFiivSklOwKqIx2b .StoreSaleWidgetOuterContainer {
+  margin-bottom: 6px;
 }
 ._1YWp1WOcTPesvO2Yp5SuOA {
   display: flex;
@@ -5379,7 +5413,13 @@ a._3Yte63gpPpxfk_3mq15blY:hover {
 }
 
 ._2DwHnbQk_PGfGThmz17qKu {
-  padding: 32px;
+  padding: 64px;
+}
+._2DwHnbQk_PGfGThmz17qKu:has(._2c_kO004iBIxHH6YRI5O18) {
+  padding: 0;
+}
+._1ot6qj42ixCCDQSGkTjeVv ._2jMLxod69Znt-d4pzECIaA {
+  margin-bottom: 0px;
 }
 ._2jMLxod69Znt-d4pzECIaA {
   display: grid;
@@ -5410,22 +5450,22 @@ html.responsive.touch ._2jMLxod69Znt-d4pzECIaA {
   display: grid;
 }
 ._1O__hioeAf860tvMTF75fa .-BNnqulztTaTeP1QNeSBu._1dmoVJbb-pQB030J1JNfcs {
-  grid-template-columns: minmax(35%, 1fr) auto;
+  grid-template-columns: minmax(var(--horiz-min-col, 35%), 1fr) auto;
   align-items: center;
   gap: 1rem;
 }
 .H7KOQjMVfmfUfoCuoJTNB .-BNnqulztTaTeP1QNeSBu._1dmoVJbb-pQB030J1JNfcs {
-  grid-template-columns: minmax(0, 225px) minmax(0, 1fr);
+  grid-template-columns: minmax(var(--horiz-min-col, 35%), 1fr) auto;
   align-items: center;
   gap: .5rem;
 }
 ._1O__hioeAf860tvMTF75fa .-BNnqulztTaTeP1QNeSBu.Wmy8KeRvOfiwLViUN-MIe {
-  grid-template-columns: auto minmax(35%, 1fr);
+  grid-template-columns: auto minmax(var(--horiz-min-col, 35%), 1fr);
   align-items: center;
   gap: 1rem;
 }
 .H7KOQjMVfmfUfoCuoJTNB .-BNnqulztTaTeP1QNeSBu.Wmy8KeRvOfiwLViUN-MIe {
-  grid-template-columns: minmax(0, 225px) minmax(0, 1fr);
+  grid-template-columns: auto minmax(var(--horiz-min-col, 35%), 1fr);
   align-items: center;
   gap: .5rem;
 }
@@ -5436,6 +5476,11 @@ html.responsive.touch ._2jMLxod69Znt-d4pzECIaA {
 .-BNnqulztTaTeP1QNeSBu._2H9EAWk-ECoLA4S_PGHkpE {
   grid-template-rows: 1fr auto;
   gap: 1rem;
+}
+.-BNnqulztTaTeP1QNeSBu.dUvMvaolFV7cCSsIyUxMU {
+  gap: 1rem;
+  margin-inline-start: var(--horiz-margin-start, 0%);
+  margin-inline-end: var(--horiz-margin-end, 0%);
 }
 .-BNnqulztTaTeP1QNeSBu._2WX2HLoszD567aFrCJKkYG {
   outline: 4px solid #00f811bb;
@@ -5585,7 +5630,6 @@ html.responsive.touch .-BNnqulztTaTeP1QNeSBu {
   height: auto;
   display: block;
 }
-
 ._1OfOnnPi_1tjY-hFpLV1x7 {
   padding: 0px;
 }
@@ -5623,6 +5667,10 @@ html.responsive.touch .-BNnqulztTaTeP1QNeSBu {
 ._2ol_Y4sMpjQ86Dtzmc_8tB:has(._1W0qyKmuCBSZPrQkdDFRIV) {
   align-items: flex-end;
 }
+._2ol_Y4sMpjQ86Dtzmc_8tB ._1JcmAfIR_1398hfU7MCSJc {
+  margin-inline-start: var(--horiz-margin-start, 0%);
+  margin-inline-end: var(--horiz-margin-end, 0%);
+}
 ._2Ars_QZL3AKTZg52VUb9kA,
 ._24ktrYb4G8jXg0mIonnkXZ,
 ._1FRN6F0C7u6Rfh30H_yggW,
@@ -5633,11 +5681,15 @@ html.responsive.touch .-BNnqulztTaTeP1QNeSBu {
 ._2157ASOvqcVmPZ7QZk_SDy,
 ._1W0qyKmuCBSZPrQkdDFRIV {
   position: absolute;
-  padding: 32px;
+  padding: 64px;
 }
 ._2g9MxQcUyFYffpZTktM-Wl {
   max-width: 1200px;
 }
+._2ol_Y4sMpjQ86Dtzmc_8tB video {
+  display: block;
+}
+
 ._1RsiclQYbOWMcz3Hr6dVT9 {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.65);

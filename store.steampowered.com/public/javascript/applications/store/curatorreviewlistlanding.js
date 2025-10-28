@@ -102,7 +102,7 @@
     },
     17083: (e, t, a) => {
       "use strict";
-      a.d(t, { N_: () => f, k2: () => v });
+      a.d(t, { N_: () => f, k2: () => g });
       var n = a(92757),
         r = a(42891),
         o = a(90626),
@@ -152,14 +152,14 @@
             r = void 0 === a ? _ : a,
             f = e.replace,
             E = e.to,
-            g = e.innerRef,
-            v = (0, i.A)(e, ["component", "replace", "to", "innerRef"]);
+            v = e.innerRef,
+            g = (0, i.A)(e, ["component", "replace", "to", "innerRef"]);
           return o.createElement(n.XZ.Consumer, null, function (e) {
             e || (0, c.A)(!1);
             var a = e.history,
               n = m(u(E, e.location), e.location),
               i = n ? a.createHref(n) : "",
-              _ = (0, s.A)({}, v, {
+              _ = (0, s.A)({}, g, {
                 href: i,
                 navigate: function () {
                   var t = u(E, e.location),
@@ -168,7 +168,7 @@
                 },
               });
             return (
-              d !== p ? (_.ref = t || g) : (_.innerRef = g),
+              d !== p ? (_.ref = t || v) : (_.innerRef = v),
               o.createElement(r, _)
             );
           });
@@ -176,23 +176,23 @@
         E = function (e) {
           return e;
         },
-        g = o.forwardRef;
-      void 0 === g && (g = E);
-      var v = g(function (e, t) {
+        v = o.forwardRef;
+      void 0 === v && (v = E);
+      var g = v(function (e, t) {
         var a = e["aria-current"],
           r = void 0 === a ? "page" : a,
           l = e.activeClassName,
           d = void 0 === l ? "active" : l,
           p = e.activeStyle,
           _ = e.className,
-          v = e.exact,
+          g = e.exact,
           h = e.isActive,
           b = e.location,
           C = e.sensitive,
           S = e.strict,
           I = e.style,
-          y = e.to,
-          w = e.innerRef,
+          w = e.to,
+          y = e.innerRef,
           A = (0, i.A)(e, [
             "aria-current",
             "activeClassName",
@@ -210,13 +210,13 @@
         return o.createElement(n.XZ.Consumer, null, function (e) {
           e || (0, c.A)(!1);
           var a = b || e.location,
-            l = m(u(y, a), a),
+            l = m(u(w, a), a),
             i = l.pathname,
             D = i && i.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
             T = D
               ? (0, n.B6)(a.pathname, {
                   path: D,
-                  exact: v,
+                  exact: g,
                   sensitive: C,
                   strict: S,
                 })
@@ -244,7 +244,7 @@
             A,
           );
           return (
-            E !== g ? (G.ref = t || w) : (G.innerRef = w), o.createElement(f, G)
+            E !== v ? (G.ref = t || y) : (G.innerRef = y), o.createElement(f, G)
           );
         });
       });
@@ -295,8 +295,8 @@
         F6: () => h,
         ME: () => S,
         RA: () => C,
-        cc: () => y,
-        fq: () => w,
+        cc: () => w,
+        fq: () => y,
         m1: () => I,
       });
       var n = a(34629),
@@ -313,8 +313,8 @@
         _ = a(81393),
         f = a(68797),
         E = a(84933),
-        g = a(78327);
-      function v(e) {
+        v = a(78327);
+      function g(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
           ? (e.list_jsondata = JSON.parse(e.list_jsondata))
           : ((0, _.wT)(
@@ -361,7 +361,7 @@
         async LoadListDetails(e, t, a) {
           if (this.m_mapList.has(t)) return this.m_mapList.get(t);
           const n =
-              g.TS.STORE_BASE_URL +
+              v.TS.STORE_BASE_URL +
               "curator/" +
               e.GetAccountID() +
               "/admin/ajaxgetlistdetails",
@@ -372,7 +372,7 @@
               const a = { ...l.data.list_details };
               return (
                 (0, _.wT)(t == a?.listid, "Wanted" + t + "but got" + a?.listid),
-                v(a),
+                g(a),
                 b(l.data.curation_language, a),
                 this.m_mapList.set(t, a),
                 this.m_mapListIDToClanAccount.set(t, e.GetAccountID()),
@@ -391,12 +391,12 @@
         }
         async LoadMyFollowedSaleCurationLists(e, t, a) {
           if (
-            !g.iA.logged_in ||
+            !v.iA.logged_in ||
             (u.Fm.Get().BIsLoaded() &&
               0 == u.Fm.Get().GetFollowedCuratorCount())
           )
             return [];
-          const n = g.TS.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
+          const n = v.TS.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
             r = {
               clan_account_id: e.GetAccountID(),
               clan_event_gid: t,
@@ -417,7 +417,7 @@
         async LoadAllSaleCurationLists(e, t, a) {
           if (this.m_mapEventGIDToLists.has(t))
             return this.m_mapEventGIDToLists.get(t);
-          const n = g.TS.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
+          const n = v.TS.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
             r = {
               clan_account_id: e.GetAccountID(),
               clan_event_gid: t,
@@ -446,7 +446,7 @@
                           a.listid,
                           t.clan_account_id,
                         ),
-                          v(a),
+                          g(a),
                           b(t.curation_language, a),
                           this.m_mapList.set(a.listid, a),
                           e.push(a);
@@ -469,9 +469,9 @@
         }
         constructor() {
           (0, l.Gn)(this),
-            "dev" == g.TS.WEB_UNIVERSE && (window.g_curatorListStore = this);
-          let e = (0, g.Tc)("curatorlistdata", "application_config");
-          ("dev" != g.TS.WEB_UNIVERSE && "beta" != g.TS.WEB_UNIVERSE) ||
+            "dev" == v.TS.WEB_UNIVERSE && (window.g_curatorListStore = this);
+          let e = (0, v.Tc)("curatorlistdata", "application_config");
+          ("dev" != v.TS.WEB_UNIVERSE && "beta" != v.TS.WEB_UNIVERSE) ||
             console.log(
               "DEV_DEBUG: CCuratorListStore loading list payload: " + e?.length,
               e,
@@ -480,7 +480,7 @@
               (0, l.h5)(() => {
                 e.forEach((e) => {
                   e.multi_detail_lists.forEach((t) => {
-                    v(t),
+                    g(t),
                       b(e.curation_language, t),
                       this.m_mapList.set(t.listid, t);
                   });
@@ -547,16 +547,16 @@
           t
         );
       }
-      function y(e) {
+      function w(e) {
         return Boolean(e?.sale_clan_event_gid) && Boolean(e?.sale_clan_steamid);
       }
-      function w(e) {
+      function y(e) {
         const t = (0, E.CH)(),
-          a = y(e) ? e.sale_clan_event_gid : null,
+          a = w(e) ? e.sale_clan_event_gid : null,
           n = a && m.O3.GetClanEventModel(a);
         return (
           (0, s.useEffect)(() => {
-            if (n || !y(e)) return;
+            if (n || !w(e)) return;
             const r = o().CancelToken.source();
             return (
               (async () => {
@@ -641,15 +641,15 @@
         _ = a(45359),
         f = a(18654),
         E = a.n(f),
-        g = a(3661),
-        v = a(37346),
+        v = a(3661),
+        g = a(37346),
         h = a(72860),
         b = a(70300),
         C = a(47235),
         S = a(37076),
         I = a(54492),
-        y = a(60014),
-        w = a(52038),
+        w = a(60014),
+        y = a(52038),
         A = a(61859),
         D = a(61336),
         T = a(78327),
@@ -668,26 +668,26 @@
             bHideStoreHover: d,
             onlyOneDiscountPct: _,
             bPreferDemoStorePage: f,
-            bShowEarlyAccessBanner: g,
+            bShowEarlyAccessBanner: v,
           } = e,
-          [v, h] = n.useState(!1),
+          [g, h] = n.useState(!1),
           [C] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
           [S] = (0, m.t7)(a && C?.GetParentAppID(), r.Xh);
         if (!C) return null;
         const I = Boolean(S),
-          y = n.createElement(F, {
+          w = n.createElement(F, {
             ...e,
             strExtraParams: e.strExtraParams,
             info: t,
-            bIsHovered: v,
+            bIsHovered: g,
             bHasParentAppToDisplay: I,
             onlyOneDiscountPct: _,
-            bShowEarlyAccessBanner: g,
+            bShowEarlyAccessBanner: v,
           });
         return n.createElement(
           l.Z,
           {
-            className: (0, w.A)({
+            className: (0, y.A)({
               [E().OuterCapsuleContainer]: !0,
               [R + i]: 0 == i,
             }),
@@ -701,7 +701,7 @@
               ? n.createElement(
                   "div",
                   { onMouseEnter: () => h(!0), onMouseLeave: () => h(!1) },
-                  y,
+                  w,
                 )
               : n.createElement(
                   p.Qf,
@@ -719,8 +719,9 @@
                     nCreatorAccountID: e.creatorAccountID,
                     nWidthMultiplier: e.nWidthMultiplier,
                     bShowIgnoreButton: e.bShowIgnoreButton,
+                    bShowDescription: e.bShowDescriptionInHover,
                   },
-                  y,
+                  w,
                 ),
             Boolean(o) && n.createElement(n.Fragment, null, o),
           ),
@@ -740,7 +741,7 @@
             childAppType: l,
             bPreferDemoStorePage: s,
           } = e,
-          i = (0, y.n9)(),
+          i = (0, w.n9)(),
           c = (0, T.Qn)();
         return n.createElement(
           o.ml,
@@ -785,7 +786,7 @@
             bShowEarlyAccessBanner: h,
           } = e,
           [b] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
-          C = (0, y.n9)(),
+          C = (0, w.n9)(),
           S = (0, G.w)(),
           A = (0, n.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
         if (!b) return null;
@@ -803,30 +804,30 @@
           null,
           n.createElement(
             "div",
-            { className: (0, w.A)({ [N().TwoWidthCtn]: R }) },
+            { className: (0, y.A)({ [N().TwoWidthCtn]: R }) },
             n.createElement(
               o.Ii,
               {
                 href: L ? null : T,
                 style: { display: "block", cursor: "pointer" },
-                className: (0, w.A)({ [N().TwoWidthCapsule]: R }),
+                className: (0, y.A)({ [N().TwoWidthCapsule]: R }),
                 preferredFocus: d,
                 onClick: L,
               },
-              n.createElement(v.V, {
+              n.createElement(g.V, {
                 appids: A,
                 hide_status_banners: a,
                 show_early_access: e.bShowEarlyAccessBanner,
               }),
               "none" != c && n.createElement(_.aU, { imageType: c, info: t }),
               n.createElement(I.J, { storeItem: b }),
-              Boolean(p) && n.createElement(g.m, { appInfo: t }),
+              Boolean(p) && n.createElement(v.m, { appInfo: t }),
             ),
             R &&
               n.createElement(
                 "div",
                 {
-                  className: (0, w.A)(N().TwoWidthSideInfo, "TwoWidthSideInfo"),
+                  className: (0, y.A)(N().TwoWidthSideInfo, "TwoWidthSideInfo"),
                 },
                 n.createElement("div", { className: N().Reason }, f),
                 n.createElement(
@@ -860,16 +861,16 @@
             creatorAccountID: p,
             bIsHovered: f,
             onlyOneDiscountPct: E,
-            strDoubleCapsuleMessage: g,
+            strDoubleCapsuleMessage: v,
           } = e,
-          [v] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
+          [g] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
           h =
-            v &&
-            v?.GetIncludedAppIDsOrSelf().length > 0 &&
-            v?.GetIncludedAppIDsOrSelf().every((e) => c.Fm.Get().BOwnsApp(e)),
+            g &&
+            g?.GetIncludedAppIDsOrSelf().length > 0 &&
+            g?.GetIncludedAppIDsOrSelf().every((e) => c.Fm.Get().BOwnsApp(e)),
           b = h && !o;
-        if (l && 0 == v?.GetStoreItemType())
-          return n.createElement(C.E, { appid: v.GetAppID(), bIsMuted: f });
+        if (l && 0 == g?.GetStoreItemType())
+          return n.createElement(C.E, { appid: g.GetAppID(), bIsMuted: f });
         if (s) return null;
         const S = h && a,
           I = b;
@@ -882,7 +883,7 @@
           creatorAccountID: p,
           bShowName: e.bShowName,
           onlyOneDiscountPct: E,
-          bShowWishlistButton: Boolean(g),
+          bShowWishlistButton: Boolean(v),
         });
       }
     },
@@ -999,8 +1000,8 @@
         _ = a(4434),
         f = a(41735),
         E = a.n(f),
-        g = a(78327),
-        v = a(68797);
+        v = a(78327),
+        g = a(68797);
       function h(e, t) {
         const [a, n] = (0, r.useState)(
             e?.BUsesContentHubForItemSource() ? new Set() : null,
@@ -1012,7 +1013,7 @@
               !a &&
               (async function (e, t) {
                 const a =
-                    g.TS.STORE_BASE_URL +
+                    v.TS.STORE_BASE_URL +
                     "contenthub/ajaxfilterappsbycontenthub",
                   n = {
                     hubtype: e.GetContentHubType(),
@@ -1030,9 +1031,9 @@
                   const e = await E().get(a, { params: n });
                   if (1 == e?.data?.success)
                     return e.data.appids.forEach((e) => o.add(e)), o;
-                  r = (0, v.H)(e);
+                  r = (0, g.H)(e);
                 } catch (e) {
-                  r = (0, v.H)(e);
+                  r = (0, g.H)(e);
                 }
                 return (
                   console.error(
@@ -1052,8 +1053,8 @@
         C = a(30894),
         S = a(82097),
         I = a(62792),
-        y = a(55263),
-        w = a(39020),
+        w = a(55263),
+        y = a(39020),
         A = a(33380),
         D = a.n(A),
         T = a(12155),
@@ -1094,7 +1095,7 @@
               className: (0, L.A)("YoutubePreviewImage", N.YoutubePreviewImage),
               src:
                 t ||
-                g.TS.COMMUNITY_CDN_URL +
+                v.TS.COMMUNITY_CDN_URL +
                   "public/shared/images/responsive/youtube_16x9_placeholder.gif",
             }),
             r.createElement(
@@ -1103,7 +1104,7 @@
               r.createElement(T.IOc, null),
             ),
           );
-        let p = (0, g.xv)().replace("https://", "");
+        let p = (0, v.xv)().replace("https://", "");
         const _ = p.indexOf("/");
         _ >= 0 && (p = p.substring(0, _));
         let f = l
@@ -1128,7 +1129,7 @@
                 e.imageClassnames,
               ),
               src:
-                g.TS.COMMUNITY_CDN_URL +
+                v.TS.COMMUNITY_CDN_URL +
                 "public/shared/images/responsive/youtube_16x9_placeholder.gif",
             }),
             r.createElement("iframe", {
@@ -1156,7 +1157,7 @@
         V = a(22584);
       function Z(e) {
         const { clanInfo: t } = e,
-          { curator_link: a, curator_medium_avatar: n } = (0, g.Tc)(
+          { curator_link: a, curator_medium_avatar: n } = (0, v.Tc)(
             "curator_header",
             "application_config",
           );
@@ -1190,7 +1191,7 @@
                 { className: "curator_details" },
                 r.createElement(z.r, {
                   className: V.BreadContainer,
-                  crumbs: (0, g.Tc)("breadcrumbs", "application_config"),
+                  crumbs: (0, v.Tc)("breadcrumbs", "application_config"),
                 }),
                 r.createElement(
                   s.Ii,
@@ -1212,12 +1213,12 @@
       };
       function q(e) {
         const t = parseInt(
-            (0, g.Tc)("curator_account_id", "application_config"),
+            (0, v.Tc)("curator_account_id", "application_config"),
           ),
           a = (0, b.m1)(t),
           n = (0, b.ME)(a?.clanSteamID, e.listid);
         return (
-          (0, w.vb)(g.TS.LANGUAGE),
+          (0, y.vb)(v.TS.LANGUAGE),
           n
             ? r.createElement(
                 X.Ay,
@@ -1355,7 +1356,7 @@
               ),
               r.createElement(
                 s.Ii,
-                { href: g.TS.STORE_BASE_URL + "account/preferences/" },
+                { href: v.TS.STORE_BASE_URL + "account/preferences/" },
                 (0, M.we)("#SteamCurator_Setting"),
               ),
             ),
@@ -1364,13 +1365,13 @@
       function Q(e) {
         const { listDetails: t } = e,
           a = (0, b.fq)(t),
-          n = (0, g.Tc)("showlisttitle", "application_config"),
-          o = (0, g.Tc)("titleareaheight", "application_config"),
+          n = (0, v.Tc)("showlisttitle", "application_config"),
+          o = (0, v.Tc)("titleareaheight", "application_config"),
           i =
             t.list_jsondata.youtube_link &&
             (0, u.XU)(t.list_jsondata.youtube_link),
           c = t.list_jsondata.youtube_link && G(t.list_jsondata.youtube_link),
-          m = (0, l.sf)(g.TS.LANGUAGE),
+          m = (0, l.sf)(v.TS.LANGUAGE),
           d = M.NT.GetWithFallback(t.localized_flat_title, m),
           p = M.NT.GetWithFallback(t.localized_flat_blurb, m),
           _ = M.NT.GetWithFallback(t.localized_flat_link, m),
@@ -1423,9 +1424,9 @@
       }
       const ee = (0, n.PA)((e) => {
         const { item: t, listDetails: a, bAutoFocus: n } = e,
-          o = parseInt((0, g.Tc)("curator_account_id", "application_config")),
+          o = parseInt((0, v.Tc)("curator_account_id", "application_config")),
           l = (0, b.m1)(o),
-          [s] = (0, y.t7)(t?.recommended_app?.appid, {
+          [s] = (0, w.t7)(t?.recommended_app?.appid, {
             include_assets: !0,
             include_release: !0,
           }),
@@ -1445,12 +1446,12 @@
             recommendation_state: f,
           } = t.recommended_app,
           E = l.is_creator_home && !l.is_ogg,
-          v = a.list_jsondata.app_data?.[m],
+          g = a.list_jsondata.app_data?.[m],
           h = d && (0, u.XU)(d),
           C = d && G(d),
           S = p != b.F6 && p,
-          w = s.BHasDemo(),
-          A = v?.img_url,
+          y = s.BHasDemo(),
+          A = g?.img_url,
           D = `curator_clanid=${l.clanAccountID}&curator_listid=${a.listid}`,
           T = s.GetStorePageURL() + "/?curator_clanid=" + l.clanAccountID;
         return r.createElement(
@@ -1465,14 +1466,14 @@
                   nStartSeconds: h?.nStartSeconds,
                   info: i,
                   strImgOverrideUrl: A,
-                  bShowDemoButton: w,
+                  bShowDemoButton: y,
                   strExtraParams: D,
                   bTwitchVideo: Boolean(C),
                 })
               : r.createElement(x.W, {
                   imageType: "header",
                   capsule: i,
-                  bShowDemoButton: w,
+                  bShowDemoButton: y,
                   strExtraParams: D,
                 }),
           ),
@@ -1519,7 +1520,7 @@
             strExtraParams: s,
             bTwitchVideo: i,
           } = e,
-          [c] = (0, y.G6)(n.id, (0, I.SW)(n.type), { include_assets: !0 });
+          [c] = (0, w.G6)(n.id, (0, I.SW)(n.type), { include_assets: !0 });
         return r.createElement(
           "div",
           { className: U().YouTubeCapsule },
@@ -1602,8 +1603,8 @@
         let t = (0, p.OZ)(e.url);
         (0, o.p)(t) &&
           (t =
-            (g.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
-            g.TS.COMMUNITY_BASE_URL +
+            (v.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
+            v.TS.COMMUNITY_BASE_URL +
             "linkfilter/?url=" +
             t);
         const a = (0, Y.wm)(e.url),

@@ -162,7 +162,7 @@
         I = n(78395),
         b = n(71298),
         L = n(21869),
-        p = n(67165);
+        p = n(8092);
       function f(e) {
         const { clanAccountID: t, page_config: n } = e,
           a = (0, _.YR)(() => new s.b(t, o.TS.EUNIVERSE, 7, 0)),

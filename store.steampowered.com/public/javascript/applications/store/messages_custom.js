@@ -54,13 +54,12 @@
         UserName: "_2abMWA9UNwMI6BYz8ageN",
         ConclusionName: "_2LIZW41r4i3LCn9wYtJZFm",
         GridItem: "_2VCOc-AY0D8dBOVhuBWjes",
-        Game0: "_3itR-HuQVaIbu0zoK_1sN_",
-        Game1: "_2rx_vXB3aHsuoeEoKGxDnR",
-        Game2: "_24X3ZfCn5pHSk4lYUOsG0o",
         AchievementBlock: "_3w6ckg8P8IMl8YXkmAoE-c",
         StreakBlock: "Y5ho7ytc4Q0MFUzxAxUJE",
         HardwareBlock: "_1ljEln7y5NmyV8-686A5tu",
         DeviceBlock: "_20l6G_fpxCmwTlLTRBXvNh",
+        SummaryCtnShadow: "_2icFjx8wVXZL8n19vN1Pnt",
+        BackgroundImage: "_2_TD0l8kMc5PQlyTiIPFpU",
         SummaryCtn: "_2m_pbZrGAbk7TRHDOwZJt9",
         TimeRelatedCtn: "_1F5_QWHvb6XSU5S7oaSGpQ",
         TopHonorsSection: "_1tc8tBjsTsJLvWaE-jrRC3",
@@ -144,13 +143,12 @@
         UserName: "EJneUpw0eEOyIkpmR8rKb",
         ConclusionName: "_2qriz4haXnDJcXhSonp6ws",
         GridItem: "_2u4ymScF_4dMRGuXqN6YWl",
-        Game0: "_3B1V77JS3RpdTul0p4-fGR",
-        Game1: "TyaIatbRPsCieJIiSVL-w",
-        Game2: "_2MJi2j8rOJs3Coo-gUu7fW",
         AchievementBlock: "SK6THAegoaWx7n2L1OMSR",
         StreakBlock: "_1HWMUM4EvU8lG3lW8Wdnz3",
         HardwareBlock: "_3u55AOzBK4Gw3F9Whr2g9F",
         DeviceBlock: "_30NltD8972gdutFNYCw8gE",
+        SummaryCtnShadow: "_2pWvuCdj5il0MXggZMwLLV",
+        BackgroundImage: "KH2X2qTp8hdZp_fnGTvk_",
         SummaryCtn: "_3B7MSTJad91FqdpvbYmYpM",
         TimeRelatedCtn: "_1NReDjhB8y4CeL8J79cwG6",
         TopHonorsSection: "_3_b2Ul0vfz1cfIQUGnvkgT",
@@ -367,11 +365,11 @@
     },
     27144: (e, a, t) => {
       "use strict";
-      t.d(a, { B3: () => k, KM: () => f, KT: () => h });
+      t.d(a, { B3: () => k, KM: () => A, KT: () => h });
       var o = t(41735),
-        r = t.n(o),
-        n = t(58632),
-        c = t.n(n),
+        n = t.n(o),
+        r = t(58632),
+        c = t.n(r),
         _ = t(90626),
         i = t(20194),
         l = t(75233),
@@ -382,7 +380,7 @@
         C = t(37735),
         g = t(23809);
       const u = "nicknames";
-      function f(e) {
+      function A(e) {
         const a = (0, g.KV)(),
           { data: t, isLoading: o } = (0, i.I)({
             queryKey: [u],
@@ -402,7 +400,7 @@
           });
         return t ? t.get(e) : null;
       }
-      const A = new (c())(
+      const f = new (c())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -412,7 +410,7 @@
                   : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const t = { accountid: e[0], origin: self.origin },
-                  o = await r().get(`${a}actions/ajaxgetavatarpersona`, {
+                  o = await n().get(`${a}actions/ajaxgetavatarpersona`, {
                     params: t,
                   });
                 if (
@@ -426,7 +424,7 @@
               }
               {
                 const t = { accountids: e.join(","), origin: self.origin },
-                  o = await r().get(`${a}actions/ajaxgetmultiavatarpersona`, {
+                  o = await n().get(`${a}actions/ajaxgetmultiavatarpersona`, {
                     params: t,
                   });
                 if (
@@ -436,12 +434,12 @@
                   !o.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, m.H))(o).strErrorMsg}`;
-                const n = new Map();
+                const r = new Map();
                 return (
                   o.data.userinfos.forEach((e) =>
-                    n.set(new s.b(e.steamid).GetAccountID(), e),
+                    r.set(new s.b(e.steamid).GetAccountID(), e),
                   ),
-                  e.map((e) => n.get(e))
+                  e.map((e) => r.get(e))
                 );
               }
             })(e),
@@ -451,7 +449,7 @@
       function h(e) {
         const { data: a, isLoading: t } = (0, i.I)({
           queryKey: [v, e],
-          queryFn: () => A.load(e),
+          queryFn: () => f.load(e),
         });
         return [a, t];
       }
@@ -460,7 +458,7 @@
           { data: t, isLoading: o } = (0, i.I)({
             queryKey: [v, e],
             queryFn: async () => {
-              const t = await A.loadMany(e);
+              const t = await f.loadMany(e);
               return (
                 t.forEach((e) => {
                   const t = [v, new s.b(e.steamid).GetAccountID()];
@@ -471,7 +469,7 @@
             },
             enabled: e?.length > 0,
           }),
-          r = (0, _.useMemo)(() => {
+          n = (0, _.useMemo)(() => {
             const e = new Array();
             return (
               t?.forEach((a) => {
@@ -480,15 +478,15 @@
               e
             );
           }, [t]);
-        return o ? null : r;
+        return o ? null : n;
       }
     },
     79194: (e, a, t) => {
       "use strict";
       t.r(a), t.d(a, { default: () => p });
       var o = t(80620),
-        r = t(54926),
-        n = t(90626),
+        n = t(54926),
+        r = t(90626),
         c = t(76217),
         _ = t(27144),
         i = t(61859),
@@ -499,33 +497,33 @@
       function p(e) {
         const a = (0, m.b)(e.year),
           t = h();
-        return n.createElement(
+        return r.createElement(
           "div",
           {
             className: (0, d.A)(s.MMFrame, a.MMFrame, a.MMOverride),
             onClick: t,
           },
-          n.createElement(
+          r.createElement(
             "div",
             { className: s.HeaderCtn },
-            n.createElement(f, {
+            r.createElement(A, {
               baseClass: (0, d.A)(s.ReplayLogo, a.ReplayLogo),
               accentClass: (0, d.A)(s.ReplayLogoAccent, a.ReplayLogoAccent),
             }),
-            n.createElement(A, { year: e.year, theme: a }),
+            r.createElement(f, { year: e.year, theme: a }),
           ),
-          n.createElement(u, { className: (0, d.A)(s.SteamLogo, a.SteamLogo) }),
-          n.createElement(v, { theme: a }),
-          n.createElement(
+          r.createElement(u, { className: (0, d.A)(s.SteamLogo, a.SteamLogo) }),
+          r.createElement(v, { theme: a }),
+          r.createElement(
             "div",
             { className: (0, d.A)(s.Content, a.Content) },
-            n.createElement(C, { theme: a }),
-            n.createElement(
+            r.createElement(C, { theme: a }),
+            r.createElement(
               "div",
               { className: (0, d.A)(s.Description, a.Description) },
               (0, i.we)("#YIR_MM_Generic_Desc"),
             ),
-            n.createElement(g, { theme: a }),
+            r.createElement(g, { theme: a }),
           ),
         );
       }
@@ -533,22 +531,22 @@
         const { theme: a } = e,
           [t] = (0, _.KT)(l.iA.accountid);
         return t
-          ? n.createElement(
-              n.Fragment,
+          ? r.createElement(
+              r.Fragment,
               null,
-              n.createElement(
+              r.createElement(
                 "div",
                 { className: (0, d.A)(s.Avatar, a.Avatar) },
                 t &&
                   t.avatar_url &&
-                  n.createElement("img", {
+                  r.createElement("img", {
                     src: t.avatar_url.replace(/\.jpg$/, "_full.jpg"),
                   }),
               ),
-              n.createElement(
+              r.createElement(
                 "div",
                 { className: (0, d.A)(s.DataBlock, a.DataBlock) },
-                n.createElement(
+                r.createElement(
                   "div",
                   { className: (0, d.A)(s.PersonaName, a.PersonaName) },
                   t ? t.persona_name : "",
@@ -560,7 +558,7 @@
       function g(e) {
         const { theme: a } = e,
           t = h();
-        return n.createElement(
+        return r.createElement(
           c.Z,
           {
             className: (0, d.A)(s.ViewPageButton, a.ViewPageButton),
@@ -570,7 +568,7 @@
         );
       }
       function u(e) {
-        return n.createElement(
+        return r.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -578,26 +576,26 @@
             fill: "none",
             ...e,
           },
-          n.createElement("path", {
+          r.createElement("path", {
             fill: "currentColor",
             d: "M120.149 -86.0844C-66.5487 -86.0844 -219.429 57.91 -234 240.963L-43.5621 319.782C-27.4326 308.711 -7.95244 302.318 13.0861 302.318C14.9562 302.318 16.8263 302.318 18.6964 302.474L103.396 179.608C103.396 179.062 103.396 178.438 103.396 177.892C103.396 103.985 163.551 43.7991 237.419 43.7991C311.288 43.7991 371.443 103.985 371.443 177.892C371.443 251.8 311.288 311.986 237.419 311.986C236.406 311.986 235.394 311.986 234.381 311.986L113.604 398.211C113.604 399.77 113.682 401.407 113.682 402.966C113.682 458.475 68.5656 503.614 13.0861 503.614C-35.6142 503.614 -76.2888 468.844 -85.5613 422.769L-221.766 366.325C-179.611 515.542 -42.5491 625 120.149 625C316.431 625 475.467 465.803 475.467 269.497C475.467 73.1904 316.353 -86.0844 120.149 -86.0844Z",
             fillOpacity: "0.15",
           }),
-          n.createElement("path", {
+          r.createElement("path", {
             fill: "currentColor",
             d: "M-11.3061 453.406L-54.9417 435.397C-47.2275 451.535 -33.8252 465.022 -16.0593 472.429C22.3556 488.411 66.6145 470.168 82.6661 431.733C90.3802 413.1 90.4582 392.596 82.744 373.964C75.1078 355.331 60.6146 340.752 41.9915 333.034C23.5244 325.316 3.73256 325.628 -13.6437 332.176L31.4723 350.809C59.8354 362.659 73.2377 395.169 61.3938 423.547C49.6278 451.925 17.057 465.334 -11.3061 453.484V453.406Z",
             fillOpacity: "0.15",
           }),
-          n.createElement("path", {
+          r.createElement("path", {
             fill: "currentColor",
             d: "M326.71 177.812C326.71 128.541 286.659 88.4688 237.413 88.4688C188.167 88.4688 148.116 128.541 148.116 177.812C148.116 227.084 188.167 267.156 237.413 267.156C286.659 267.156 326.71 227.084 326.71 177.812ZM170.479 177.656C170.479 140.625 200.557 110.532 237.569 110.532C274.581 110.532 304.658 140.547 304.658 177.656C304.658 214.766 274.659 244.781 237.569 244.781C200.479 244.781 170.479 214.766 170.479 177.656Z",
             fillOpacity: "0.15",
           }),
         );
       }
-      function f(e) {
+      function A(e) {
         const { baseClass: a, accentClass: t } = e;
-        return n.createElement(
+        return r.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -605,33 +603,33 @@
             fill: "none",
             className: a,
           },
-          n.createElement("path", {
+          r.createElement("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             d: "M23.2213 0C17.4482 0.00172977 11.8873 2.17351 7.64545 6.08314C3.40358 9.99277 0.791694 15.3536 0.32959 21.0987L12.6419 26.1835C13.7181 25.445 14.9936 25.0504 16.2994 25.0519H16.6621L22.1382 17.1305V17.0399C22.1382 15.329 22.6464 13.6564 23.5985 12.2338C24.5506 10.8112 25.9039 9.70245 27.4872 9.0477C29.0705 8.39295 30.8128 8.22163 32.4936 8.55542C34.1745 8.88921 35.7184 9.71311 36.9303 10.9229C38.1421 12.1328 38.9673 13.6742 39.3017 15.3522C39.636 17.0303 39.4644 18.7697 38.8086 20.3504C38.1528 21.9311 37.0421 23.2822 35.6172 24.2327C34.1922 25.1833 32.517 25.6907 30.8032 25.6907H30.6218L22.8132 31.2533V31.5601C22.8098 33.1681 22.2087 34.7177 21.1265 35.9087C20.0443 37.0998 18.5579 37.8475 16.9551 38.0071C15.3524 38.1668 13.7473 37.7269 12.4507 36.7729C11.1541 35.8188 10.2583 34.4183 9.93666 32.8426L1.1306 29.2063C2.29301 33.3131 4.58013 37.0146 7.7347 39.8946C10.8893 42.7746 14.7862 44.7187 18.987 45.5082C23.1879 46.2978 27.5261 45.9015 31.5138 44.364C35.5014 42.8264 38.9802 40.2086 41.5589 36.805C44.1376 33.4013 45.7139 29.3468 46.1105 25.0976C46.5071 20.8484 45.7083 16.5729 43.8039 12.7522C41.8995 8.9315 38.9651 5.71705 35.3307 3.47042C31.6963 1.2238 27.5061 0.034119 23.2314 0.0352101L23.2213 0ZM14.7278 34.804L11.9016 33.6371C12.3115 34.4904 12.9613 35.2061 13.7719 35.6969C14.5824 36.1876 15.5185 36.4321 16.4659 36.4006C17.4133 36.369 18.331 36.0628 19.107 35.5193C19.8829 34.9757 20.4836 34.2184 20.8357 33.3397C21.1877 32.461 21.2759 31.499 21.0895 30.5712C20.903 29.6433 20.45 28.7897 19.7858 28.1145C19.1215 27.4394 18.2747 26.9719 17.3488 26.7692C16.4229 26.5665 15.4579 26.6373 14.5716 26.973L17.4885 28.1801C18.3439 28.5615 19.0162 29.2614 19.362 30.1307C19.7079 30.9999 19.6998 31.9696 19.3397 32.833C18.9796 33.6964 18.2958 34.3852 17.4343 34.7524C16.5727 35.1197 15.6015 35.1364 14.7278 34.7989V34.804ZM35.606 13.8365C36.2398 14.785 36.5776 15.8999 36.5766 17.04C36.5726 18.567 35.9629 20.0302 34.8809 21.1095C33.7989 22.1887 32.3327 22.7962 30.8032 22.7988C29.6612 22.7988 28.5448 22.4606 27.5953 21.8271C26.6457 21.1935 25.9058 20.293 25.4689 19.2396C25.0321 18.1861 24.9181 17.0269 25.1413 15.9087C25.3644 14.7905 25.9148 13.7635 26.7227 12.9576C27.5306 12.1517 28.5598 11.6032 29.68 11.3814C30.8003 11.1595 31.9612 11.2744 33.0161 11.7114C34.0709 12.1484 34.9723 12.888 35.606 13.8365ZM27.2044 14.6328C26.7283 15.3456 26.4748 16.1834 26.4758 17.04C26.4771 18.1877 26.9347 19.2878 27.748 20.0988C28.5613 20.9099 29.6638 21.3654 30.8133 21.3654C31.6714 21.3654 32.5102 21.1113 33.2237 20.6353C33.9371 20.1592 34.493 19.4826 34.8212 18.691C35.1493 17.8995 35.2349 17.0285 35.0672 16.1883C34.8994 15.3482 34.4858 14.5766 33.8786 13.9712C33.2715 13.3658 32.4982 12.9537 31.6565 12.7872C30.8147 12.6207 29.9424 12.7072 29.1499 13.0357C28.3574 13.3642 27.6804 13.92 27.2044 14.6328Z",
           }),
-          n.createElement("path", {
+          r.createElement("path", {
             fill: "#4AD4FF",
             className: t,
             d: "M31.635 45.874C31.5218 45.874 31.4969 45.716 31.6033 45.6773C40.8922 42.2999 47.5266 33.3932 47.5266 22.937C47.5266 12.4808 40.8922 3.57411 31.6033 0.196722C31.4969 0.15803 31.5218 0 31.635 0C44.3028 0 54.5721 10.2692 54.5721 22.937C54.5721 35.6048 44.3028 45.874 31.635 45.874Z",
           }),
-          n.createElement("path", {
+          r.createElement("path", {
             fill: "#4AD4FF",
             className: t,
             d: "M39.9974 45.874C39.8841 45.874 39.8592 45.716 39.9656 45.6773C49.2545 42.2999 55.8889 33.3932 55.8889 22.937C55.8889 12.4808 49.2545 3.57411 39.9656 0.196722C39.8592 0.15803 39.8841 0 39.9974 0C52.6651 0 62.9344 10.2692 62.9344 22.937C62.9344 35.6048 52.6651 45.874 39.9974 45.874Z",
           }),
         );
       }
-      function A(e) {
+      function f(e) {
         const { year: a, theme: t } = e;
-        return n.createElement(
+        return r.createElement(
           "div",
           { className: (0, d.A)(s.Header, t.Header) },
           (0, i.PP)(
             "#YIR_MM_Header",
-            n.createElement("br", null),
-            n.createElement(
+            r.createElement("br", null),
+            r.createElement(
               "div",
               { className: (0, d.A)(s.YearSubtitle, t.YearSubtitle) },
               (0, i.we)("#date_year", a),
@@ -640,14 +638,14 @@
         );
       }
       function v(e) {
-        return n.createElement(
+        return r.createElement(
           "div",
           { className: (0, d.A)(s.Hashtag, e.theme.Hashtag) },
           (0, i.we)("#YIR_MM_HashTag"),
         );
       }
       function h() {
-        const e = (0, r.J)().GetTemplateVars();
+        const e = (0, n.J)().GetTemplateVars();
         return (0, o.WN)(e.linkurl, 1);
       }
     },
@@ -655,20 +653,20 @@
       "use strict";
       t.d(a, { b: () => _ });
       var o = t(90626);
-      const r = {
+      const n = {
           2022: t(47277),
           2023: t(25150),
           2024: t(94595),
           2025: t(62324),
         },
-        n = Object.values(r).reduce((e, a) => ({ ...e, ...a }), {}),
+        r = Object.values(n).reduce((e, a) => ({ ...e, ...a }), {}),
         c = 2022;
       function _(e) {
         const [a, t] = (0, o.useState)({});
         return (
           (0, o.useEffect)(() => {
-            let a = r[e];
-            a || (a = r[c]), t({ ...n, ...a });
+            let a = n[e];
+            a || (a = n[c]), t({ ...r, ...a });
           }, [e]),
           a
         );

@@ -406,6 +406,16 @@ html._14wqdluDeDnnEcg3OSLEmd body {
 ._1IeRz_QzfsACNiXS4gXHIT {
   color: #199fff;
 }
+._15p32SPTbcOsOrlb8o1MdF:dir(rtl) .fX8M83YDC9--4QLgVAEir {
+  transform: translateX(730px);
+}
+._15p32SPTbcOsOrlb8o1MdF:dir(rtl) ._1GjVGP2qdwSOEBKimtRG0k,
+._15p32SPTbcOsOrlb8o1MdF:dir(rtl) ._12AVA1wr7SWXg9INaLfBzD {
+  transform: translateX(-300px);
+}
+.AMU5Zvf1pJLZGVqbpGcUC:dir(rtl) {
+  scale: -1 1;
+}
 body._1Xs5dtPK2K37sd1U9BLX3S {
   overflow-y: hidden;
   height: 100vh;
@@ -915,6 +925,16 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 .ixiWPQKqTMxnq43WgT3vj {
   height: 2px;
   min-height: 2px;
+}
+@media (prefers-contrast: no-preference) {
+  #MainNavMenu-Rest .ixiWPQKqTMxnq43WgT3vj {
+    background-color: #000;
+  }
+}
+@media (prefers-contrast: more) {
+  #MainNavMenu-Rest .ixiWPQKqTMxnq43WgT3vj {
+    background-color: #fff;
+  }
 }
 ._34o03-8cUc3fQX1u650c0L._3-IFyrv9R_fZqALBsjlUS5 ._18C7xpEWME7W-bxMsvyXdi {
   flex: 1 0 auto;
@@ -5247,6 +5267,7 @@ html.client ._16jZ3HEbtaJTl80pQINN2Y {
 ._1wn1lBlAzl3HMRqS1llwie {
   margin-inline-start: 16px;
   display: flex;
+  padding-right: 5px;
 }
 ._1wn1lBlAzl3HMRqS1llwie:empty {
   margin-inline-start: 0;

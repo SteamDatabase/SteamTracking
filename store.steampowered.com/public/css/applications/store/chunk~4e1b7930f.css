@@ -1370,9 +1370,6 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   opacity: 0.1;
   filter: none;
 }
-._13rGo4vexAbY9-CP7FsLOg.S8IHdovT5T2iEVg_97xve {
-  transform: rotateZ(180deg);
-}
 ._13rGo4vexAbY9-CP7FsLOg svg {
   opacity: 0.7;
   transition: opacity .2s ease-in-out, filter .2s ease-in-out;
@@ -1430,6 +1427,18 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   display: flex;
   justify-content: center;
   margin-top: 12px;
+}
+._3dMffY_iRZXHjZmXN9aLej {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 0;
+  padding: 12px 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
 }
 .LY1m24ODS7AFRuzclt0Sl {
   display: flex;

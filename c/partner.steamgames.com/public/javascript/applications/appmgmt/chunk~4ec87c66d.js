@@ -1243,12 +1243,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
-        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Emoticon_Toggle: "Y5J3nttqNZsLax6MbnH-L",
         Active: "YCbwLzK9cJ7QissjKq11n",
         Emoticon: "_2o57_fRPxv5_x6BkjL_cgc",
@@ -1618,6 +1612,7 @@
         FlavorLabel: "KDLASaMCaASZ6LnF3kQY8",
         SelectedFlavor: "qYruXlm9Lip3i2lmnsxum",
         SuggestContainer: "_1YWp1WOcTPesvO2Yp5SuOA",
+        ViewModeToggle: "_2GvBzfFkdSM256yF-Qt91T",
         Debug: "_1MGr0XISx00Rhmq-im9N42",
         EmptyResults: "_3U-cq3FxCNFcRt2r3vettM",
         ShowContentsContainer: "_36qA-3ePJIusV1oKLQep-w",
@@ -1647,6 +1642,11 @@
         Banner: "_2bT8irkKNnA5sxFG3MUXzH",
         Big: "sGy-bB7uqEt4Hoe7U5iA1",
         Mobile: "mhii5hgMCQvO2tXOUdWPQ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ItemCtn: "_30RNOxqk1P9UdZBI76xoIw",
       };
     },
     chunkid: (module) => {
@@ -45613,13 +45613,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { fnGetAltText: _, fnSetAltText: __webpack_require__ } = _,
           _ = (0, _._)(),
@@ -86160,26 +86160,6 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { _: _, type: __webpack_require__ } = _,
-          [_] = (0, _._)(_, (0, _._)(__webpack_require__), {});
-        return _.createElement(
-          "div",
-          {
-            className: _().SaleItemBrowserRow,
-          },
-          _.createElement(_._, {
-            ..._,
-            bLoadShortDescription: !0,
-            bShowReviewSummary: !0,
-            bShowDemoButton: _.bShowDemoButton || 1 == _?.GetAppType(),
-            bPreferDemoStorePage: _.bPreferDemoStorePage,
-          }),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_userData;
@@ -87333,6 +87313,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       (0, _._)((_) => {
         const {
@@ -87726,6 +87708,24 @@
                   ),
               ),
           ),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _, type: __webpack_require__ } = _,
+          [_] = (0, _._)(_, (0, _._)(__webpack_require__), {});
+        return _.createElement(
+          "div",
+          {
+            className: _().SaleItemBrowserRow,
+          },
+          _.createElement(_._, {
+            ..._,
+            bLoadShortDescription: !0,
+            bShowReviewSummary: !0,
+            bShowDemoButton: _.bShowDemoButton || 1 == _?.GetAppType(),
+            bPreferDemoStorePage: _.bPreferDemoStorePage,
+          }),
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -90515,7 +90515,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      (0, _._)((_) => {
+      const _ = (0, _._)((_) => {
         const {
             myInstance: _,
             setIsHovered: __webpack_require__,
@@ -90551,18 +90551,18 @@
               : _),
           _ = 0 == _.GetStoreItemType();
         return _.createElement(
-          _._,
+          "div",
           {
-            appid: _ && _.GetAppID(),
+            className: (0, _._)(
+              _().StoreSaleWidgetContainer,
+              _().LibraryAssetExpandedDisplay,
+              "LibraryAssetExpandedDisplay",
+            ),
           },
           _.createElement(
-            "div",
+            _._,
             {
-              className: (0, _._)(
-                _().StoreSaleWidgetContainer,
-                _().LibraryAssetExpandedDisplay,
-                "LibraryAssetExpandedDisplay",
-              ),
+              appid: _ && _.GetAppID(),
             },
             _.createElement(
               "div",
@@ -90752,9 +90752,126 @@
           ),
         );
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { displayStoreItem: _, displayInfo: __webpack_require__ } = (0,
+          _._)(_),
+          {
+            bShowDemoButton: _,
+            bHidePrice: _,
+            bHidePlatforms: _,
+            bShowDeckCompatibilityDialog: _,
+            bAutoFocus: _,
+          } = _,
+          _ = 0 == _.GetStoreItemType();
+        return _.createElement(
+          _._,
+          {
+            appid: _ ? _.GetAppID() : void 0,
+          },
+          _.createElement(
+            _._,
+            {
+              "flow-children": "grid",
+              navEntryPreferPosition: _._.PREFERRED_CHILD,
+              autoFocus: _,
+              navKey: "purchase_only_" + _.GetID(),
+            },
+            "\t",
+            _.createElement(
+              "div",
+              {
+                className: _.PurchaseOnlyCtn,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.PurchaseOnlyNameCtn,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.Name,
+                  },
+                  _.GetName(),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.PurchaseAndPlatformCtn,
+                },
+                Boolean(!_ && 10 != _.GetAppType()) &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _._,
+                    },
+                    _.createElement(_._, {
+                      item: __webpack_require__,
+                    }),
+                    Boolean(
+                      _ && 0 == _?.GetStoreItemType() && _.GetPlatforms(),
+                    ) &&
+                      _.createElement(_._, {
+                        className: _.DeckCompatIcon,
+                        category: _.GetPlatforms().steam_deck_compat_category,
+                      }),
+                  ),
+                _.createElement(_._, {
+                  info: __webpack_require__,
+                  className: _.PurchaseOnlyActionCtn,
+                  bShowDemoButton: _,
+                  bShowCartButton: !0,
+                  bHidePrice: _,
+                  bHideWishlistButton: !0,
+                  bShowDeckCompatibilityDialog: _,
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      const _ = (_) => {
+        let { displayStyle: _ } = _,
+          _ = (0, _._)();
+        if ("purchaseonlydisplay" === _)
+          return _.createElement(_, {
+            ..._,
+          });
+        if ("bundle" == _.type || "sub" == _.type)
+          return _.createElement(_._, {
+            ..._,
+          });
+        if (_)
+          return _.createElement(_._, {
+            ..._,
+          });
+        switch (
+          (!(0, _._)() ||
+            ("library" != _ && "animated" != _) ||
+            (_ = "bordered"),
+          _)
+        ) {
+          case "library":
+          case "animated":
+            return _.createElement(_, {
+              ..._,
+            });
+          case "compactlist":
+            return _.createElement(_, {
+              ..._,
+            });
+          default:
+            return _.createElement(_._, {
+              ..._,
+              bShowReviewSummary: !0,
+            });
+        }
+      };
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new (class {
@@ -91337,12 +91454,17 @@
         }
         componentDidMount() {
           window.addEventListener("resize", this.OnResize), this.LoadCapsules();
-          const { section: _, activeTab: _ } = this.props;
+          const {
+            section: _,
+            activeTab: _,
+            displayStyle: __webpack_require__,
+          } = this.props;
           this.setState({
             fnUnregisterCallback: _(
               _.unique_id,
               _?.GetActiveTabUniqueID(),
             ).Register(this.OnDynamicCapsuleInsert).Unregister,
+            bCompactViewMode: this.BDisplayStyleIsCompact(__webpack_require__),
           });
         }
         componentWillUnmount() {
@@ -91402,6 +91524,12 @@
                 () => this.LoadCapsules(),
               );
           }
+          this.props.displayStyle != _.displayStyle &&
+            this.setState({
+              bCompactViewMode: this.BDisplayStyleIsCompact(
+                this.props.displayStyle,
+              ),
+            });
         }
         OnDynamicCapsuleInsert(_) {
           const { activeTab: _, section: __webpack_require__ } = this.props;
@@ -91439,6 +91567,11 @@
                   this.LoadCapsules();
                 },
               ));
+        }
+        SetViewMode(_) {
+          this.setState({
+            bCompactViewMode: _,
+          });
         }
         async FilterItems(_) {
           const {
@@ -91717,6 +91850,9 @@
             bIsNarrowScreen: (0, _._)(),
           });
         }
+        BDisplayStyleIsCompact(_) {
+          return !_ || "compactlist" == _;
+        }
         render() {
           const {
               browseInfo: _,
@@ -91724,6 +91860,7 @@
               event: __webpack_require__,
               language: _,
               activeTab: _,
+              displayStyle: _,
             } = this.props,
             {
               bInitialLoadComplete: _,
@@ -91774,6 +91911,9 @@
                 feature: _,
                 depth: _,
                 activeTab: _,
+                displayStyle: this.state.bCompactViewMode
+                  ? "compactlist"
+                  : "library",
               }),
             _ &&
               0 == _.length &&
@@ -91872,13 +92012,33 @@
                       className: _().SaleItemBrowserHeader,
                     },
                     _,
-                    _.enable_search &&
-                      !this.props.bInGamepadUI &&
+                    !this.props.bInGamepadUI &&
                       _.createElement(
                         "div",
                         {
                           className: _().SuggestContainer,
                         },
+                        _.createElement(
+                          _,
+                          {
+                            className: (0, _._)(
+                              _().ViewModeToggle,
+                              this.state.bCompactViewMode && _().Compact,
+                            ),
+                            onChange: this.SetViewMode,
+                            value: this.state.bCompactViewMode,
+                            tooltip: this.state.bCompactViewMode
+                              ? (0, _._)(
+                                  "#Sale_ItemBrowser_ViewMode_SwitchToExpanded",
+                                )
+                              : (0, _._)(
+                                  "#Sale_ItemBrowser_ViewMode_SwitchToCompact",
+                                ),
+                          },
+                          this.state.bCompactViewMode
+                            ? _.createElement(_.f9b, null)
+                            : _.createElement(_.Emg, null),
+                        ),
                         _.createElement(_.eSy, null),
                         _.createElement(_._, {
                           type: "text",
@@ -91898,6 +92058,32 @@
           );
         }
       };
+      function _(_) {
+        const {
+          value: _,
+          onChange: __webpack_require__,
+          className: _,
+          tooltip: _,
+          children: _,
+        } = _;
+        return _.createElement(
+          _._,
+          {
+            toolTipContent: _,
+          },
+          _.createElement(
+            "button",
+            {
+              type: "button",
+              className: _,
+              onClick: () => __webpack_require__(!_),
+              "aria-pressed": _,
+              "data-state": _ ? "on" : "off",
+            },
+            _,
+          ),
+        );
+      }
       function _(_) {
         const [_, __webpack_require__] = _.useState(),
           [_, _] = _.useState(),
@@ -91987,6 +92173,7 @@
             feature: _,
             depth: _,
             activeTab: _,
+            displayStyle: _,
           } = _,
           _ = (0, _._)();
         return _.createElement(
@@ -92025,6 +92212,7 @@
                   type: _.type || "game",
                   fnOnClickOverride: _,
                   bPreferDemoStorePage: _.prefer_demo_store_page,
+                  displayStyle: _ ?? "compactlist",
                 })
               );
             }),
@@ -92059,10 +92247,12 @@
       }
       (0, _._)([_._], _.prototype, "OnDynamicCapsuleInsert", null),
         (0, _._)([_._], _.prototype, "ShowMoreRows", null),
+        (0, _._)([_._], _.prototype, "SetViewMode", null),
         (0, _._)([_._], _.prototype, "FilterItems", null),
         (0, _._)([_._], _.prototype, "OnUpdateSearch", null),
         (0, _._)([_._], _.prototype, "OnUpdateFacetFilter", null),
         (0, _._)([_._], _.prototype, "OnResize", null),
+        (0, _._)([_._], _.prototype, "BDisplayStyleIsCompact", null),
         (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -108112,18 +108302,27 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         m_filesToUpload = _._.array();
+        static k_nSingleMediaConvertThresholdBytes = 25e4;
         m_strUploadPath = null;
         m_rgImageOptions;
         m_bSynchronousUpload = !1;
-        constructor(_, _, _) {
+        m_bTwoPhaseUpload = !1;
+        m_bDirectTempStorageUpload = !1;
+        constructor(_, _, _, _, _) {
           super(),
             (0, _._)(this),
             (this.m_strUploadPath = _),
             (this.m_rgImageOptions = (0, _._)(_)),
-            (this.m_bSynchronousUpload = _);
+            (this.m_bSynchronousUpload = _),
+            (this.m_bTwoPhaseUpload = _),
+            (this.m_bDirectTempStorageUpload = _);
         }
         GetUploadPath() {
           return this.m_strUploadPath;
@@ -108192,19 +108391,18 @@
                 ]),
                 !0
               );
-            console.error(
-              "CCloudImageUploader failed to determine file type, not image, video or subtitle",
-              _,
-              _.type,
-            );
+            "dev" == _._.WEB_UNIVERSE &&
+              console.error(
+                "CCloudImageUploader failed to determine file type, not image, video or subtitle",
+                _,
+                _.type,
+              );
           }
           return !1;
         }
         async UploadSingleImage(_, _, _, _) {
-          let _ = null;
           const _ = new FormData();
-          _.append("assetfile", _.file, _),
-            _.append("sessionid", _._.SESSIONID),
+          _.append("sessionid", _._.SESSIONID),
             _.append("elangauge", "" + _),
             _.append("originalname", _);
           const _ = _.GetCurrentImageOption();
@@ -108213,31 +108411,162 @@
           if (!_)
             return {
               bSuccess: !1,
-              elErrorMessage:
-                "Invalid file extension, cannot determine mimetype",
+              elErrorMessage: (0, _._)(
+                "#MediaConvert_CloudUpload_ErrorFileType",
+              ),
             };
+          let _;
           _.append("mimetype", _);
-          let _,
-            _ = !1;
+          const _ =
+              this.m_bDirectTempStorageUpload &&
+              _.file.size > _.k_nSingleMediaConvertThresholdBytes,
+            _ =
+              this.m_bTwoPhaseUpload &&
+              _.file.size > _.k_nSingleMediaConvertThresholdBytes;
           try {
-            (_ = await _().post(this.m_strUploadPath, _, {
-              withCredentials: !0,
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-              cancelToken: _,
-            })),
-              200 == _?.status && 1 == _?.data.success
-                ? (_ = !0)
-                : (_ = _?.data?.message);
+            if (_) {
+              const _ = await this.HandleDirectUploadToTempFromBrowser(_, _);
+              if (!_.temp_file_id) throw new Error(_.strError || "");
+              _.append("temp_file_id", _.temp_file_id);
+            } else _.append("assetfile", _.file, _);
+            if (_) {
+              const _ = await this.HandleConvertAndPoll(_, _, _, _);
+              if (_.uploadResults)
+                return {
+                  bSuccess: !0,
+                  result: _.uploadResults,
+                  elErrorMessage: _,
+                };
+              throw new Error(_.strError || "");
+            }
+            {
+              const _ = await _().post(this.m_strUploadPath, _, {
+                withCredentials: !0,
+                headers: {
+                  "Content-Type": "multipart/form-data",
+                },
+                cancelToken: _,
+              });
+              if (200 == _?.status && 1 == _?.data.success)
+                return {
+                  bSuccess: !0,
+                  elErrorMessage: _,
+                  result: _?.data,
+                };
+              {
+                const _ = _?.data?.message ?? _?.data?.msg;
+                throw ((_ = _), new Error(_));
+              }
+            }
           } catch (_) {
             const _ = (0, _._)(_);
-            console.log("CCloudImageUploader.UploadFile failed ", _, _);
+            console.log(
+              "CCloudImageUploader.UploadSingleImage try/catch failed ",
+              _,
+              _,
+              _,
+            );
           }
           return {
-            bSuccess: _,
+            bSuccess: !1,
             elErrorMessage: _,
-            result: _?.data,
+            result: void 0,
+          };
+        }
+        async HandleConvertAndPoll(_, _, _, _) {
+          const _ = (0, _._)(this.m_strUploadPath, "ajax", "async");
+          (0, _._)(_, "upload path must contain ajax");
+          const _ = await _().post(_, _, {
+            withCredentials: !0,
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+            cancelToken: _,
+          });
+          if (200 != _?.status || 1 != _?.data?.success || !_.data.requestID)
+            return {
+              strError:
+                _?.data?.msg ??
+                (0, _._)("#MediaConvert_CloudUpload_UploadError"),
+            };
+          {
+            const _ = (0, _._)(this.m_strUploadPath, "ajax", "status"),
+              _ = {
+                sessionid: _._.SESSIONID,
+                requestid: _.data.requestID,
+                elanguage: _,
+                originalname: _,
+              };
+            for (;;) {
+              const _ = await _().get(_, {
+                params: _,
+                withCredentials: !0,
+              });
+              if (
+                200 != _?.status ||
+                (1 != _?.data?.success && 22 != _?.data?.success)
+              )
+                return {
+                  strError: _?.data?.error ?? _?.data?.message ?? _?.data?.msg,
+                };
+              if (22 != _?.data?.success)
+                return {
+                  uploadResults: _?.data,
+                };
+              await (0, _._)(2e3);
+            }
+          }
+        }
+        async HandleDirectUploadToTempFromBrowser(_, _) {
+          const _ = new FormData();
+          __webpack_require__.append("filesize", "" + _.file.size),
+            __webpack_require__.append("sessionid", _._.SESSIONID);
+          const _ =
+              (0, _._)(this.m_strUploadPath, "ajax", "uploadurl") ||
+              this.m_strUploadPath,
+            _ = await _().post(_, _, {
+              withCredentials: !0,
+              cancelToken: _,
+            });
+          if (
+            200 == _?.status &&
+            1 == _?.data?.success &&
+            _.data.file_id &&
+            _.data.upload_url
+          ) {
+            const _ = new Set([
+                "content-length",
+                "host",
+                "origin",
+                "referer",
+                "user-agent",
+                "cookie",
+                "set-cookie",
+                "connection",
+                "upgrade",
+              ]),
+              _ = {
+                "Content-Type": "application/octet-stream",
+              };
+            if (_.data.headers_for_upload)
+              for (const _ of _.data.headers_for_upload)
+                _.has(_.name.toLocaleLowerCase()) || (_[_.name] = _.value);
+            return (await _()
+              .put(_.data.upload_url, _.file, {
+                headers: _,
+              })
+              .then((_) => 200 == _.status || 201 == _.status)
+              .catch(() => !1))
+              ? {
+                  temp_file_id: _.data.file_id,
+                }
+              : {
+                  strError: (0, _._)("#MediaConvert_CloudUpload_UploadError"),
+                };
+          }
+          return {
+            strError:
+              _?.data?.msg ?? (0, _._)("#MediaConvert_CloudUpload_UploadError"),
           };
         }
       }
@@ -108254,12 +108583,14 @@
             bSynchronousUpload: _,
             rgSupportArtwork: _,
             rgRealmList: _,
+            bTwoPhaseUpload: _,
+            bDirectTempStorageUpload: _,
           } = _,
           _ = _._.Get().GetCurEditLanguage(),
-          _ = (function (_, _, _) {
+          _ = (function (_, _, _, _, _) {
             const _ = (0, _._)(_ instanceof Array ? _ : [_]);
-            return _.useMemo(() => new _(_, _, _), [_, _, _]);
-          })(_, _, _ ?? !1);
+            return _.useMemo(() => new _(_, _, _, _, _), [_, _, _, _, _]);
+          })(_, _, _ ?? !1, _ ?? !1, _ ?? !1);
         return (
           _.useEffect(() => {
             _.GetUploadPath() != _ && _.SetUploadPath(_);
@@ -108307,88 +108638,6 @@
         }
         return null;
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        state = {
-          color: this.props.color || "rgba(255, 255, 255, 1)",
-        };
-        static GetColorString(_) {
-          return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
-        }
-        OnColorChange(_) {
-          const _ = _.GetColorString(_);
-          this.setState({
-            color: _,
-          }),
-            this.props.onChange(_);
-        }
-        async OnEyedropperClick() {
-          if ("EyeDropper" in window)
-            try {
-              const _ = new window.EyeDropper(),
-                _ = (await _.open()).sRGBHex,
-                _ = this.hexToRgba(_);
-              this.setState({
-                color: _,
-              }),
-                this.props.onChange(_);
-            } catch (_) {
-              console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
-            }
-          else alert((0, _._)("#Sale_EyeDropperError"));
-        }
-        hexToRgba(_) {
-          const _ = parseInt(_.slice(1), 16);
-          return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
-        }
-        render() {
-          return _.createElement(
-            "div",
-            null,
-            _.createElement(_._, {
-              onChange: this.OnColorChange,
-              color: this.state.color,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _().EyeDropperCtn,
-              },
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().EyeDropperBtn,
-                    onClick: this.OnEyedropperClick,
-                  },
-                  _.createElement(_.O7b, null),
-                ),
-              ),
-            ),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnColorChange", null),
-        (0, _._)([_._], _.prototype, "OnEyedropperClick", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -113236,6 +113485,12 @@
                 return _
                   ? (0, _._)("#Sale_PersonalizedCarousel_Section_title", _)
                   : null;
+              case "curator_list":
+                return (
+                  (_.smart_section_curator_listid
+                    ? _._.GetListTitle(_.smart_section_curator_listid)
+                    : void 0) ?? null
+                );
             }
           if ("tabs" === _.section_type) return "";
           if ("curator" === _.section_type) {
@@ -113330,15 +113585,20 @@
       }
       function _(_, _, _) {
         const _ = (function (_, _) {
-          if (
-            (0, _._)(_.section_type) &&
-            "personalized_carousel" == _.smart_section_type
-          ) {
-            const _ = _.Get().GetTagNameForSaleSection(_, _);
-            return _
-              ? (0, _._)("#Sale_PersonalizedCarousel_Section_subtitle", _)
-              : null;
-          }
+          if ((0, _._)(_.section_type))
+            switch (_.smart_section_type) {
+              case "personalized_carousel":
+                const _ = _.Get().GetTagNameForSaleSection(_, _);
+                return _
+                  ? (0, _._)("#Sale_PersonalizedCarousel_Section_subtitle", _)
+                  : null;
+              case "curator_list":
+                return (
+                  (_.smart_section_curator_listid
+                    ? _._.GetListSubtitle(_.smart_section_curator_listid)
+                    : void 0) ?? null
+                );
+            }
           return null;
         })(_, _);
         if (null !== _) return _ && _.startsWith("#") ? (0, _._)(_) : _;

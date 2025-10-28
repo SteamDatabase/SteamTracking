@@ -998,6 +998,9 @@ CInventory.prototype.LoadMoreAssets = function( count )
 	if ( typeof(g_bIsInMarketplace) != 'undefined' && g_bIsInMarketplace )
 		params.market = 1;
 
+	if ( window.g_bReactRenderedItemDescriptions && g_bReactRenderedItemDescriptions )
+		params.preserve_bbcode = 1;
+
 	if ( this.m_ulLastAssetID )
 		params.start_assetid = this.m_ulLastAssetID;
 
@@ -1825,6 +1828,21 @@ CInventory.prototype.LoadItemImage = function( $Item )
 	}
 };
 
+function RenderItemInfo( name, description, asset )
+{
+	if ( window.UpdateReactItemInfo )
+	{
+		window.UpdateReactItemInfo(name, description, asset );
+	}
+	else
+	{
+		// too early, queue
+		if (!window.g_mapPendingItemInfo)
+			window.g_mapPendingItemInfo = new Map();
+		window.g_mapPendingItemInfo.set(name, { description: description, asset: asset } );
+	}
+}
+
 
 CInventory.prototype.SelectItem = function( event, elItem, rgItem, bUserAction )
 {
@@ -1849,23 +1867,52 @@ CInventory.prototype.SelectItem = function( event, elItem, rgItem, bUserAction )
 	var sNewInfo = 'iteminfo' + iNewSelect;
 
 
-	var elOldInfo = $(sOldInfo);
-	var elNewInfo = $(sNewInfo);
+	var $OldInfo = $J( '#' + sOldInfo );
+	var $NewInfo = $J( '#' + sNewInfo );
 
-	elOldInfo.style.position = 'absolute';
-	elNewInfo.style.position = '';
+	$OldInfo.css( 'position', 'absolute' );
+	$NewInfo.css( 'position', 'static' );
 
-	if ( elNewInfo.visible && !bShouldShowPopup )
+	if ( $NewInfo.is(':visible') && !bShouldShowPopup )
 	{
-		elNewInfo.effect && elNewInfo.effect.cancel();
-		elNewInfo.hide();
-		elNewInfo.style.opacity = 1;
+		$NewInfo.fadeIn()
 	}
-	if ( elNewInfo.blankTimeout )
+	if ( $NewInfo.data( 'blankTimeout' ) )
 	{
-		window.clearTimeout( elNewInfo.blankTimeout );
+		window.clearTimeout( $NewInfo.data( 'blankTimeout' ) );
 	}
-	BuildHover( sNewInfo, rgItem, UserYou );
+
+	if ( window.g_bReactRenderedItemDescriptions && g_bReactRenderedItemDescriptions )
+	{
+		// PHP merges the assetinfo with the description, unmerge it here
+		/*
+
+	export interface CEcon_Asset_t
+	{
+		appid?: number;
+		contextid?: string;
+		assetid?: string;
+		classid?: string;
+		instanceid?: string;
+		amount?: string;
+		missing?: boolean;
+		est_usd?: string;
+	}
+		 */
+		const asset = {
+			appid: rgItem.appid,
+			contextid: rgItem.contextid,
+			assetid: rgItem.assetid,
+			classid: rgItem.classid,
+			instanceid: rgItem.instanceid,
+			amount: rgItem.amount,
+			missing: rgItem.missing,
+			est_usd: rgItem.est_usd,
+		};
+		RenderItemInfo(sNewInfo, rgItem.description, asset );
+	}
+	else
+		BuildHover( sNewInfo, rgItem, UserYou );
 
 
 	if ( bShouldShowPopup )
@@ -1873,9 +1920,7 @@ CInventory.prototype.SelectItem = function( event, elItem, rgItem, bUserAction )
 		// event indicates the user tapped an item, otherwise they may have just switched inventories
 		if ( bUserAction )
 		{
-			var $Info = $J(elNewInfo);
-
-			var $BtnAddToTrade = $Info.find('.item_desc_addtotrade');
+			var $BtnAddToTrade = $NewInfo.find('.item_desc_addtotrade');
 			if ( $BtnAddToTrade.length && typeof OnDoubleClickItem != 'undefined' )
 			{
 				var bInTrade = $J(elItem).parents('.itemHolder').hasClass('trade_slot');
@@ -1902,34 +1947,42 @@ CInventory.prototype.SelectItem = function( event, elItem, rgItem, bUserAction )
 					$BtnAddToTrade.show();
 			}
 
-			ShowItemHoverAsPopup( $Info, function() {
+			ShowItemHoverAsPopup( $NewInfo, function() {
 				$BtnAddToTrade.off('click');
 
-				$J('.inventory_page_right' ).append( $Info );
+				$J('.inventory_page_right' ).append( $NewInfo );
 				g_ActiveItemPopupModal = null;
 			} );
 		}
 	}
 	else
 	{
-		elOldInfo.style.zIndex = 2;
-		elNewInfo.style.zIndex = 1;
-		elNewInfo.show();
+		$OldInfo.css( 'z-index', 2 );
+		$NewInfo.css( 'z-index', 1 );
 
-		elOldInfo.hiding = false;
-		HideWithFade( elOldInfo );
+		$NewInfo.show();
+		$OldInfo.fadeOut( 200 );
 	}
 
-	if ( elOldInfo.builtFor && elOldInfo.builtFor.element )
-		elOldInfo.builtFor.element.removeClassName('activeInfo');
-	$(rgItem.element).addClassName('activeInfo');
+	var builtFor = $OldInfo.data( 'builtFor' );
+	if ( builtFor && builtFor.element )
+		$J(builtFor.element).removeClass('activeInfo');
+
+	$J(rgItem.element).addClass('activeInfo');
+	$NewInfo.data( 'builtFor', rgItem );
+
 	this.selectedItem = rgItem;
 
 	// the user has the appwide context selected, so update the active item there.
 	if ( g_ActiveInventory && g_ActiveInventory != this && g_ActiveInventory.contextid == APPWIDE_CONTEXT )
 		g_ActiveInventory.selectedItem = rgItem;
 
-	elOldInfo.blankTimeout = window.setTimeout( function() { $(sOldInfo+'_item_icon').src = 'https://community.fastly.steamstatic.com/public/images/trans.gif'; }, 200 );
+	$OldInfo.data( 'blankTimeout', window.setTimeout( function() {
+		if ( window.g_bReactRenderedItemDescriptions && g_bReactRenderedItemDescriptions )
+			RenderItemInfo( sOldInfo, undefined );
+		else
+			$(sOldInfo+'_item_icon').src = 'https://community.fastly.steamstatic.com/public/images/trans.gif';
+	}, 200 ) );
 
 	iActiveSelectView = iNewSelect;
 };

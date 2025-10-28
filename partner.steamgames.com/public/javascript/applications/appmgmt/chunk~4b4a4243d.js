@@ -477,7 +477,7 @@
     },
     13549: (e, t, a) => {
       "use strict";
-      a.d(t, { i: () => D, q: () => A });
+      a.d(t, { i: () => v, q: () => A });
       var n = a(23910),
         r = a(65946),
         s = a(90626),
@@ -491,24 +491,24 @@
         p = a(62792),
         g = a(55263),
         _ = a(52038),
-        f = a(16676),
-        h = a(56330),
+        h = a(16676),
+        f = a(56330),
         E = a(22797),
         I = a(61859),
         b = a(30470),
-        v = a(26408);
-      function D(e) {
+        S = a(26408);
+      function v(e) {
         const { oEditableMessage: t } = e,
           [a] = (0, r.q3)(() => [t.GetStoreItemKey()]);
         return a && "app" == a.item_type
-          ? s.createElement(S, { oEditableMessage: t, idKey: a })
+          ? s.createElement(D, { oEditableMessage: t, idKey: a })
           : s.createElement(
               "div",
-              { className: h.ErrorStylesWithIcon },
+              { className: f.ErrorStylesWithIcon },
               "Error: Major Update does not support anything but targeting app",
             );
       }
-      function S(e) {
+      function D(e) {
         const { oEditableMessage: t, idKey: a } = e,
           [l, i] = (0, r.q3)(() => [
             t.GetUpdateEventClanAccountID(),
@@ -554,9 +554,9 @@
             label: r,
             tooltip: p,
             strUrlLearnMore: g,
-            bFilterOutDrafts: D,
+            bFilterOutDrafts: v,
           } = e,
-          S = (0, d.f1)(),
+          D = (0, d.f1)(),
           { clanInfo: A, bLoadingClanInfo: P } = (0, l.vF)(t),
           w = (function (e, t) {
             const a = (0, c.a)(),
@@ -595,10 +595,10 @@
                     ),
               [r.data, r.isLoading],
             );
-          })(A?.clanAccountID, S - 2592e3),
+          })(A?.clanAccountID, D - 2592e3),
           y = (0, s.useMemo)(
-            () => (D ? w?.filter((e) => !e.hidden) : w),
-            [w, D],
+            () => (v ? w?.filter((e) => !e.hidden) : w),
+            [w, v],
           ),
           C = (0, s.useMemo)(
             () =>
@@ -643,7 +643,7 @@
                         "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
                       ),
                     ),
-                  s.createElement(f.m, {
+                  s.createElement(h.m, {
                     label: r,
                     tooltip: p,
                     selectedOption: T,
@@ -655,15 +655,15 @@
                   s.Fragment,
                   null,
                   s.createElement(
-                    f.JU,
+                    h.JU,
                     null,
                     r,
                     " ",
-                    s.createElement(v.o, { tooltip: p }),
+                    s.createElement(S.o, { tooltip: p }),
                   ),
                   s.createElement(
                     "div",
-                    { className: (0, _.A)(h.ErrorStylesWithIcon, "ErrorCtn") },
+                    { className: (0, _.A)(f.ErrorStylesWithIcon, "ErrorCtn") },
                     (0, I.oW)(
                       "#EventDropDown_NoEventFound",
                       s.createElement("a", {
@@ -703,26 +703,26 @@
             fnFilterID: o,
             className: c,
             tooltip: g,
-            autoFocus: f,
-            bIncludeRetired: h,
+            autoFocus: h,
+            bIncludeRetired: f,
             bShowDLCToggle: E,
             bOnlyDLC: I,
             bRunQueryOnLoad: b,
-            rgParentAppIDs: v,
+            rgParentAppIDs: S,
           } = e,
-          [D, S] = s.useState(""),
+          [v, D] = s.useState(""),
           [A, P] = s.useState(!1),
           [w, y] = s.useState(!1),
           [C] = s.useState(new i.LU()),
           [T, L] = s.useState(new Array()),
-          [N, k] = s.useState(new Array()),
+          [k, N] = s.useState(new Array()),
           [M, F] = s.useState(new Array()),
           B = s.createRef(),
           G = s.createRef();
         const R = (0, s.useCallback)(
             async (e, t) => {
               y(!0);
-              let a = { json: 1, term: e, bexcluderetired: !h },
+              let a = { json: 1, term: e, bexcluderetired: !f },
                 s = `${u.TS.PARTNER_BASE_URL}appsearch/suggestapps`;
               switch (n) {
                 case 1:
@@ -733,15 +733,15 @@
                   break;
                 default:
                   I ? (a.includedlc = !0) : !1 === t && (a.includedlc = !1),
-                    v &&
+                    S &&
                       ((a.bfilterappids = !0),
-                      (a.rgParentAppIds = JSON.stringify(v)));
+                      (a.rgParentAppIds = JSON.stringify(S)));
               }
               const l = await r().get(s, { params: a, withCredentials: !0 });
               200 == l?.status && 1 == l.data?.success
                 ? o
                   ? (L(l.data.matches?.filter((e) => o(e.id)) || []),
-                    k(
+                    N(
                       l.data.package_matches?.filter((e) => o(e.packageid)) ||
                         [],
                     ),
@@ -749,12 +749,12 @@
                       l.data.bundle_matches?.filter((e) => o(e.bundleid)) || [],
                     ))
                   : (L(l.data.matches || []),
-                    k(l.data.package_matches || []),
+                    N(l.data.package_matches || []),
                     F(l.data.bundle_matches || []))
-                : (L([]), k([]), F([])),
+                : (L([]), N([]), F([])),
                 y(!1);
             },
-            [o, n, h, I, v],
+            [o, n, f, I, S],
           ),
           U = (0, s.useCallback)(
             (e) => {
@@ -765,7 +765,7 @@
           H = (0, s.useCallback)(
             (e) => {
               const t = e?.target?.value?.toLocaleLowerCase() ?? "";
-              S(t);
+              D(t);
               const a = G.current?.checked;
               C.Schedule(1e3, () => R(t, a));
             },
@@ -774,7 +774,7 @@
         let x;
         switch (
           (s.useEffect(() => {
-            b && R(D);
+            b && R(v);
           }, []),
           n)
         ) {
@@ -802,9 +802,9 @@
               tooltip: g,
               placeholder: x,
               onChange: H,
-              value: D,
-              bAlwaysShowClearAction: D.length > 0,
-              focusOnMount: f,
+              value: v,
+              bAlwaysShowClearAction: v.length > 0,
+              focusOnMount: h,
             }),
             O &&
               s.createElement(l.Yh, {
@@ -837,8 +837,8 @@
                   },
                 }),
               ),
-            Boolean(N?.length > 0) &&
-              N.map((e) =>
+            Boolean(k?.length > 0) &&
+              k.map((e) =>
                 s.createElement(_, {
                   key: e.packageid,
                   name: e.name,
@@ -846,7 +846,7 @@
                   type: 1,
                   is_visible: e.is_visible,
                   fnSetItemID: () => {
-                    k([]), t(e.packageid);
+                    N([]), t(e.packageid);
                   },
                 }),
               ),
@@ -946,7 +946,7 @@
     },
     71725: (e, t, a) => {
       "use strict";
-      a.d(t, { z: () => v });
+      a.d(t, { z: () => S });
       var n = a(41735),
         r = a.n(n),
         s = a(90626),
@@ -960,8 +960,8 @@
         p = a(61859),
         g = a(8743),
         _ = a.n(g),
-        f = a(22797),
-        h = a(28865);
+        h = a(22797),
+        f = a(28865);
       function E(e) {
         const { rgAssetURL: t, rgLang: a, bIsImage: n } = e,
           [r, l] = (0, s.useState)([]);
@@ -980,13 +980,13 @@
           }, [t, n]),
           !r)
         )
-          return s.createElement(f.t, {
+          return s.createElement(h.t, {
             size: "small",
             string: "Checking Assets...",
           });
         const i = r.map((e, t) => (e ? -1 : t)).filter((e) => -1 !== e);
         return 0 === i.length
-          ? s.createElement(h._, {
+          ? s.createElement(f._, {
               bDone: !0,
               name: "Uploaded assets verified",
               tooltip:
@@ -995,14 +995,14 @@
           : s.createElement(
               s.Fragment,
               null,
-              s.createElement(h._, {
+              s.createElement(f._, {
                 bDone: !1,
                 name: `${i.length} Asset(s) uploaded failed to fetch`,
               }),
               i
                 .map((e) => ({ url: t[e], lang: a[e] }))
                 .map((e) =>
-                  s.createElement(h._, {
+                  s.createElement(f._, {
                     key: e.url,
                     bDone: !1,
                     name: `${(0, o.Lg)(e.lang)} - Not found`,
@@ -1026,7 +1026,7 @@
             (a.src = e);
         });
       }
-      function v(e) {
+      function S(e) {
         const {
             rgAssetLangs: t,
             initialLang: a,
@@ -1039,11 +1039,11 @@
             bVideoAsset: d,
           } = e,
           [g, _] = s.useState(a ?? c.O.Get().GetCurEditLanguage() ?? t[0]),
-          [f, h] = s.useState(n(g)),
+          [h, f] = s.useState(n(g)),
           I = s.useMemo(() => [...t].sort(), [t]);
         s.useEffect(() => {
           const e = n(g);
-          e ? h(e) : I.length > 0 ? _(I[0]) : h(null);
+          e ? f(e) : I.length > 0 ? _(I[0]) : f(null);
         }, [g, n, I]);
         const b = (0, s.useMemo)(() => t.map((e) => n(e)), [n, t]);
         return s.createElement(
@@ -1052,7 +1052,7 @@
           s.createElement(
             "div",
             { className: u().UploaderLeftCol },
-            s.createElement(S, { curAssetURL: f, imageClassname: o }),
+            s.createElement(D, { curAssetURL: h, imageClassname: o }),
           ),
           s.createElement(
             "div",
@@ -1069,7 +1069,7 @@
                 "div",
                 { className: u().LangSelectCtn },
                 I.map((e) =>
-                  s.createElement(D, {
+                  s.createElement(v, {
                     key: e,
                     language: e,
                     selectedLanguage: g,
@@ -1097,7 +1097,7 @@
           ),
         );
       }
-      function D(e) {
+      function v(e) {
         const {
             language: t,
             selectedLanguage: a,
@@ -1132,7 +1132,7 @@
           ),
         );
       }
-      function S(e) {
+      function D(e) {
         const { curAssetURL: t, imageClassname: a } = e;
         if (!t)
           return s.createElement(
@@ -1227,10 +1227,10 @@
     },
     24655: (e, t, a) => {
       "use strict";
-      a.d(t, { hA: () => v, ux: () => D });
+      a.d(t, { hA: () => S, ux: () => v });
       var n = a(90626),
         r = a(76217),
-        s = a(12493),
+        s = a(13773),
         o = a(30894),
         l = (a(55263), a(45699)),
         i = a(78327);
@@ -1248,20 +1248,20 @@
         p = a(82227),
         g = a(61336),
         _ = a(84811),
-        f = a(32630),
-        h = a(22797),
+        h = a(32630),
+        f = a(22797),
         E = a(56524),
         I = a(48838),
         b = a(95695);
-      function v(e) {
+      function S(e) {
         const {
             creatorID: t,
             bShowTagline: a,
             bHideCreatorType: l,
             bSmallFormat: m,
-            bHideFollowButton: v,
-            bAddLinkToMemberList: D,
-            bMinimalDisplay: S,
+            bHideFollowButton: S,
+            bAddLinkToMemberList: v,
+            bMinimalDisplay: D,
           } = e,
           { creatorHome: A } = (0, s.FV)(t.clan_account_id),
           [P] = (0, o.L2)();
@@ -1269,7 +1269,7 @@
           return n.createElement(
             "div",
             { className: E.DevSummaryWidgetCtn },
-            n.createElement(h.t, {
+            n.createElement(f.t, {
               string: (0, d.we)("#Loading"),
               size: "medium",
               position: "center",
@@ -1288,7 +1288,7 @@
           _.tH,
           null,
           n.createElement(
-            f.Ay,
+            h.Ay,
             { feature: "salecreatorhome" },
             n.createElement(
               r.Z,
@@ -1296,7 +1296,7 @@
                 className: (0, u.A)(
                   E.DevSummaryCtn,
                   m ? E.SmallFormat : E.LargeFormat,
-                  S ? E.MinimalDisplay : "",
+                  D ? E.MinimalDisplay : "",
                 ),
                 "flow-children": "row",
               },
@@ -1373,7 +1373,7 @@
                         n.createElement(
                           "div",
                           { className: (0, u.A)(E.FollowBtnCtn) },
-                          Boolean(!v) &&
+                          Boolean(!S) &&
                             n.createElement(I.of, {
                               clanAccountID: t.clan_account_id,
                               creatorID: t,
@@ -1396,7 +1396,7 @@
                       ),
                     ),
                   ),
-                  Boolean(D) &&
+                  Boolean(v) &&
                     n.createElement(
                       "a",
                       {
@@ -1416,7 +1416,7 @@
           ),
         );
       }
-      function D(e) {
+      function v(e) {
         const { clanInfo: t, bAddLinkToMemberList: a } = e;
         if (
           ((0, m.wT)(
@@ -1434,7 +1434,7 @@
         return n.createElement(
           "div",
           { className: E.CuratorHoverCtn },
-          n.createElement(v, {
+          n.createElement(S, {
             creatorID: r,
             bSmallFormat: !0,
             bShowTagline: !0,
@@ -1460,14 +1460,14 @@
         p = a(29863),
         g = a(45359),
         _ = a(18654),
-        f = a.n(_),
-        h = a(3661),
+        h = a.n(_),
+        f = a(3661),
         E = a(37346),
         I = a(72860),
         b = a(70300),
-        v = a(47235),
-        D = a(37076),
-        S = a(54492),
+        S = a(47235),
+        v = a(37076),
+        D = a(54492),
         A = a(60014),
         P = a(52038),
         w = a(61859),
@@ -1475,8 +1475,8 @@
         C = a(78327),
         T = a(91291),
         L = a.n(T),
-        N = a(99956),
-        k = a(49411);
+        k = a(99956),
+        N = a(49411);
       const M = "capsule_index_";
       function F(e) {
         const {
@@ -1488,25 +1488,27 @@
             bHideStoreHover: d,
             onlyOneDiscountPct: g,
             bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: f,
           } = e,
-          [h, E] = n.useState(!1),
-          [I] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          [v] = (0, u.t7)(a && I?.GetParentAppID(), r.Xh);
-        if (!I) return null;
+          [E, I] = n.useState(!1),
+          [S] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
+          [v] = (0, u.t7)(a && S?.GetParentAppID(), r.Xh);
+        if (!S) return null;
         const D = Boolean(v),
-          S = n.createElement(G, {
+          A = n.createElement(G, {
             ...e,
             strExtraParams: e.strExtraParams,
             info: t,
-            bIsHovered: h,
+            bIsHovered: E,
             bHasParentAppToDisplay: D,
             onlyOneDiscountPct: g,
+            bShowEarlyAccessBanner: f,
           });
         return n.createElement(
           o.Z,
           {
             className: (0, P.A)({
-              [f().OuterCapsuleContainer]: !0,
+              [h().OuterCapsuleContainer]: !0,
               [M + i]: 0 == i,
             }),
             navEntryPreferPosition: l.iU.PREFERRED_CHILD,
@@ -1514,17 +1516,17 @@
           },
           n.createElement(
             b.oj,
-            { appid: I.GetAppID() },
+            { appid: S.GetAppID() },
             Boolean(d)
               ? n.createElement(
                   "div",
-                  { onMouseEnter: () => E(!0), onMouseLeave: () => E(!1) },
-                  S,
+                  { onMouseEnter: () => I(!0), onMouseLeave: () => I(!1) },
+                  A,
                 )
               : n.createElement(
                   p.Qf,
                   {
-                    className: f().CapsuleContainer,
+                    className: h().CapsuleContainer,
                     item: t,
                     elElementToAppend: e.elElementToAppendToHover,
                     bShowDemoButton: e.bShowDemoButton,
@@ -1536,8 +1538,10 @@
                     strExtraParams: e.strExtraParams,
                     nCreatorAccountID: e.creatorAccountID,
                     nWidthMultiplier: e.nWidthMultiplier,
+                    bShowIgnoreButton: e.bShowIgnoreButton,
+                    bShowDescription: e.bShowDescriptionInHover,
                   },
-                  S,
+                  A,
                 ),
             Boolean(s) && n.createElement(n.Fragment, null, s),
           ),
@@ -1545,7 +1549,7 @@
             n.createElement(B, {
               strExtraParams: e.strExtraParams,
               parentStoreItem: v,
-              childAppType: I.GetAppType(),
+              childAppType: S.GetAppType(),
               bPreferDemoStorePage: _,
             }),
         );
@@ -1561,13 +1565,13 @@
           c = (0, C.Qn)();
         return n.createElement(
           s.ml,
-          { className: f().CapsuleParentInfo, ...(0, I.S)(a, i, c, l, t) },
+          { className: h().CapsuleParentInfo, ...(0, I.S)(a, i, c, l, t) },
           n.createElement(
             b.oj,
             { appid: a.GetAppID() },
             n.createElement(
               "div",
-              { className: f().ParentType },
+              { className: h().ParentType },
               (0, w.we)(
                 11 == o
                   ? "#SalePage_ParentApp_SoundTrack"
@@ -1575,7 +1579,7 @@
               ),
             ),
             n.createElement(
-              D.u,
+              v.u,
               { type: "app", id: a.GetAppID(), strExtraParams: t },
               n.createElement("img", {
                 loading: "lazy",
@@ -1598,15 +1602,16 @@
             bHasParentAppToDisplay: d,
             bIsHovered: p,
             strDoubleCapsuleMessage: _,
-            bPreferDemoStorePage: I,
+            bPreferDemoStorePage: h,
+            bShowEarlyAccessBanner: I,
           } = e,
           [b] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          v = (0, A.n9)(),
-          D = (0, k.w)(),
+          S = (0, A.n9)(),
+          v = (0, N.w)(),
           w = (0, n.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
         if (!b) return null;
         const C = (0, y.NT)(
-          (0, i.It)(`${b.GetStorePageURL(I)}${o ? `?${o}` : ""}`, v, D),
+          (0, i.It)(`${b.GetStorePageURL(h)}${o ? `?${o}` : ""}`, S, v),
         );
         let T;
         "overrideNavigation" in t &&
@@ -1619,45 +1624,47 @@
           null,
           n.createElement(
             "div",
-            { className: f().CapsuleFocusCtn },
+            { className: (0, P.A)({ [L().TwoWidthCtn]: M }) },
             n.createElement(
-              "div",
-              { className: (0, P.A)({ [L().TwoWidthCtn]: M }) },
+              s.Ii,
+              {
+                href: T ? null : C,
+                style: { display: "block", cursor: "pointer" },
+                className: (0, P.A)({ [L().TwoWidthCapsule]: M }),
+                preferredFocus: d,
+                onClick: T,
+              },
+              n.createElement(E.V, {
+                appids: w,
+                hide_status_banners: a,
+                show_early_access: e.bShowEarlyAccessBanner,
+              }),
+              "none" != c && n.createElement(g.aU, { imageType: c, info: t }),
+              n.createElement(D.J, { storeItem: b }),
+              Boolean(p) && n.createElement(f.m, { appInfo: t }),
+            ),
+            M &&
               n.createElement(
-                s.Ii,
+                "div",
                 {
-                  href: T ? null : C,
-                  style: { display: "block", cursor: "pointer" },
-                  className: (0, P.A)({ [L().TwoWidthCapsule]: M }),
-                  preferredFocus: d,
-                  onClick: T,
+                  className: (0, P.A)(L().TwoWidthSideInfo, "TwoWidthSideInfo"),
                 },
-                n.createElement(E.V, { appids: w, hide_status_banners: a }),
-                "none" != c && n.createElement(g.aU, { imageType: c, info: t }),
-                n.createElement(S.J, { storeItem: b }),
-                Boolean(p) && n.createElement(h.m, { appInfo: t }),
-              ),
-              M &&
+                n.createElement("div", { className: L().Reason }, _),
                 n.createElement(
                   "div",
-                  { className: L().TwoWidthSideInfo },
-                  n.createElement("div", { className: L().Reason }, _),
+                  { className: L().StoreSaleItemRelease },
                   n.createElement(
-                    "div",
-                    { className: L().StoreSaleItemRelease },
-                    n.createElement(
-                      "span",
-                      null,
-                      b.GetFormattedSteamReleaseDate(),
-                    ),
+                    "span",
+                    null,
+                    b.GetFormattedSteamReleaseDate(),
                   ),
-                  n.createElement(N.n, {
-                    bHideTitle: !0,
-                    rgTagIDs: b.GetTagIDs(),
-                    instanceNum: l,
-                  }),
                 ),
-            ),
+                n.createElement(k.n, {
+                  bHideTitle: !0,
+                  rgTagIDs: b.GetTagIDs(),
+                  instanceNum: l,
+                }),
+              ),
           ),
           n.createElement(R, { ...e }),
         );
@@ -1673,8 +1680,8 @@
             bHidePlatforms: d,
             creatorAccountID: p,
             bIsHovered: _,
-            onlyOneDiscountPct: f,
-            strDoubleCapsuleMessage: h,
+            onlyOneDiscountPct: h,
+            strDoubleCapsuleMessage: f,
           } = e,
           [E] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
           I =
@@ -1683,20 +1690,20 @@
             E?.GetIncludedAppIDsOrSelf().every((e) => c.Fm.Get().BOwnsApp(e)),
           b = I && !s;
         if (o && 0 == E?.GetStoreItemType())
-          return n.createElement(v.E, { appid: E.GetAppID(), bIsMuted: _ });
+          return n.createElement(S.E, { appid: E.GetAppID(), bIsMuted: _ });
         if (l) return null;
-        const D = I && a,
-          S = b;
+        const v = I && a,
+          D = b;
         return n.createElement(g.qn, {
           info: t,
-          bShowAsMuted: S,
+          bShowAsMuted: D,
           bHidePrice: i,
-          bShowInLibraryInsteadOfPrice: D,
+          bShowInLibraryInsteadOfPrice: v,
           bHidePlatforms: d,
           creatorAccountID: p,
           bShowName: e.bShowName,
-          onlyOneDiscountPct: f,
-          bShowWishlistButton: Boolean(h),
+          onlyOneDiscountPct: h,
+          bShowWishlistButton: Boolean(f),
         });
       }
     },

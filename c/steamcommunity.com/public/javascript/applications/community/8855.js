@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Το περιεχόμενο άλλαξε κατηγορία",
 	"moderation_resolutionstatus_suspicious": "Ο λογαριασμός έχει κλειδωθεί για ύποπτο περιεχόμενο",
 	"moderation_resolutionstatus_harassmentstrike": "Τα δικαιώματα Κοινότητας Steam αναστάλθηκαν",
+	"moderation_resolutionstatus_removeandwarn": "Έγινε αφαίρεση και δόθηκε προειδοποίηση",
+	"moderation_resolutionstatus_removeandban": "Αφαιρέθηκε και αποκλείστηκε από το Κέντρο",
 	"moderation_resolutionstatus_unknown": "Άγνωστη",
 	"moderationaction_acquitted": "Απαλλάχθηκε",
 	"moderationaction_cancelled": "Η τελευταία ανοιχτή αναφορά ακυρώθηκε",

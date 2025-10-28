@@ -212,6 +212,7 @@
         FlavorLabel: "KDLASaMCaASZ6LnF3kQY8",
         SelectedFlavor: "qYruXlm9Lip3i2lmnsxum",
         SuggestContainer: "_1YWp1WOcTPesvO2Yp5SuOA",
+        ViewModeToggle: "_2GvBzfFkdSM256yF-Qt91T",
         Debug: "_1MGr0XISx00Rhmq-im9N42",
         EmptyResults: "_3U-cq3FxCNFcRt2r3vettM",
         ShowContentsContainer: "_36qA-3ePJIusV1oKLQep-w",
@@ -327,6 +328,11 @@
         NextStop: "KdgpVSfXU5BQa2BcYkJRw",
         Title: "OhR_CZ0RXCy-aKnI3v9dA",
         Timer: "gxKX9N8KXrZV81yX38eyP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ItemCtn: "_30RNOxqk1P9UdZBI76xoIw",
       };
     },
     chunkid: (module) => {
@@ -589,6 +595,8 @@
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         Container: "_2DwHnbQk_PGfGThmz17qKu",
+        GridTemplateOverlay: "_2c_kO004iBIxHH6YRI5O18",
+        ContainerCarousel: "_1ot6qj42ixCCDQSGkTjeVv",
         MediaRow: "_2jMLxod69Znt-d4pzECIaA",
         RowSize2: "H7KOQjMVfmfUfoCuoJTNB",
         RowSize3: "xIqX_PvYjm1_rnxpXFAu5",
@@ -599,6 +607,7 @@
         HorizontalMediaFirst: "Wmy8KeRvOfiwLViUN-MIe",
         VerticalMediaFirst: "_2UqJLTFsqhBo09zeRKEtj8",
         VerticalTextFirst: "_2H9EAWk-ECoLA4S_PGHkpE",
+        TextOnlyDisplay: "dUvMvaolFV7cCSsIyUxMU",
         LivePreview: "_2WX2HLoszD567aFrCJKkYG",
         JumpedTo: "vhRymhbQwtCHWZXUp5bP3",
         JumpToSubsection: "_3sa-ldAw4XUh68OJIpPdgi",
@@ -637,6 +646,7 @@
         TopRight: "_1FRN6F0C7u6Rfh30H_yggW",
         RightCenter: "_3bs5PtXj13iPSm-b5e2od-",
         BottomRight: "_1W0qyKmuCBSZPrQkdDFRIV",
+        TextSectionScaling: "_1JcmAfIR_1398hfU7MCSJc",
         MediaMax: "_2g9MxQcUyFYffpZTktM-Wl",
       };
     },
@@ -7166,12 +7176,32 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        const { curatorList: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _.ItemCtn,
+          },
+          _.createElement(
+            "a",
+            {
+              href: _.url,
+            },
+            _.createElement("div", null, _.title),
+          ),
+        );
+      }
+      function _(_) {
+        let _ = !1;
         return (
-          ["dlc", "dlc_onsale", "dlc_music_onsale"].includes(
-            _.smart_section_type,
-          ) || _.show_parent_app
+          _.smart_section_type &&
+            (_ = ["dlc", "dlc_onsale", "dlc_music_onsale"].includes(
+              _.smart_section_type,
+            )),
+          Boolean(_ || _.show_parent_app)
         );
       }
       function _(_, _) {
@@ -7186,6 +7216,7 @@
             ? _
               ? _.capsules_per_row_array.map((_, _) => {
                   const _ =
+                    _.capsule_style_per_row_array &&
                     _.capsule_style_per_row_array?.length > _
                       ? _.capsule_style_per_row_array[_]
                       : "grid";
@@ -7196,7 +7227,7 @@
               ? _
                 ? [2, 3]
                 : [2, 3, 4, 3]
-              : [_._(_.capsules_per_row, 1, _ ? 3 : 5) || 1];
+              : [_._(_.capsules_per_row || 1, 1, _ ? 3 : 5) || 1];
       }
       function _(_, _, _) {
         const _ = _(_, _),
@@ -7214,10 +7245,8 @@
             ? ["fullrow"]
             : ["grid"];
       }
-      function _(_, _, _, _, _, _) {
-        return Boolean(
-          "events" === _.section_type || "sale_events" === _.section_type,
-        )
+      function _(_, _, _, _, _, _, _) {
+        return "events" === _.section_type || "sale_events" === _.section_type
           ? _
             ? _.filter((_) => Boolean(_)).map((_) => ({
                 Render: (_) =>
@@ -7287,9 +7316,9 @@
                   })(_, _),
               }))
             : []
-          : Boolean("links" === _.section_type) ||
-              Boolean("title_image" === _.section_type) ||
-              Boolean("sale_tabhub" === _.smart_section_type)
+          : "links" === _.section_type ||
+              "title_image" === _.section_type ||
+              "sale_tabhub" === _.smart_section_type
             ? _
               ? __webpack_require__.map((_) => ({
                   Render: (_) =>
@@ -7403,7 +7432,7 @@
                       })(_, _),
                   }))
                 : []
-              : Boolean("itemdef" === _.section_type)
+              : "itemdef" === _.section_type
                 ? _
                   ? _.map((_) => ({
                       Render: (_) =>
@@ -7419,21 +7448,35 @@
                         })(_, _),
                     }))
                   : []
-                : Boolean("point_shop_smart" === _.section_type) && _
-                  ? _.map((_) => ({
-                      Render: (_) =>
-                        (function (_, _) {
-                          const { section: _, language: _, saleEvent: _ } = _;
-                          return _.createElement(_._, {
-                            key: _.unique_id + "_" + _.defid,
-                            section: _,
-                            reward: _,
-                            language: _,
-                            clanAccountID: _.clanSteamID.GetAccountID(),
-                          });
-                        })(_, _),
-                    }))
-                  : [];
+                : "point_shop_smart" === _.section_type
+                  ? _
+                    ? _.map((_) => ({
+                        Render: (_) =>
+                          (function (_, _) {
+                            const { section: _, language: _, saleEvent: _ } = _;
+                            return _.createElement(_._, {
+                              key: _.unique_id + "_" + _.defid,
+                              section: _,
+                              reward: _,
+                              language: _,
+                              clanAccountID: _.clanSteamID.GetAccountID(),
+                            });
+                          })(_, _),
+                      }))
+                    : []
+                  : "creator_list_of_lists" === _.section_type && _
+                    ? _.map((_) => ({
+                        Render: (_) =>
+                          (function (_, _) {
+                            const { section: _ } = _;
+                            return _.createElement(_, {
+                              key: _.unique_id + "_" + _.listid,
+                              section: _,
+                              curatorList: _,
+                            });
+                          })(_, _),
+                      }))
+                    : [];
       }
       function _(_, _) {
         return _[_ % _.length];
@@ -7447,6 +7490,7 @@
           bAutoAdvance: _,
           bHideIfTooFewItems: _,
           arrowFill: _,
+          arrowStyle: _,
         } = _;
         if (0 === _.length)
           return {
@@ -7497,6 +7541,7 @@
               screenIsWide: _,
               navKey: _,
               arrowFill: _,
+              arrowStyle: _,
             },
             _(_, 0, _.length, _, _(0, _)),
           );
@@ -7588,6 +7633,7 @@
                   onSlide: (_) => _._.Get().AddInteraction(_, _ * _),
                   screenIsWide: _,
                   arrowFill: _,
+                  arrowStyle: _,
                 },
                 _,
               ));
@@ -7609,6 +7655,7 @@
         __webpack_require__.carousel_rows > 1 &&
           (_ ||
             (!__webpack_require__.smart_section &&
+              __webpack_require__.capsules_per_row_array &&
               __webpack_require__.capsules_per_row_array.length > 0 &&
               __webpack_require__.capsules_per_row_array[0] >=
                 __webpack_require__.capsules.length)) &&
@@ -7620,6 +7667,7 @@
           _.events,
           _.itemdefs,
           _.rewards,
+          _.curatorLists,
         );
         if (0 === _.length)
           return {
@@ -8362,6 +8410,7 @@
             bAutoAdvance: _.carousel_auto_advance,
             bHideIfTooFewItems: _.hide_section_if_too_few_items,
             arrowFill: _.jsondata.sale_carousel_arrow_color,
+            arrowStyle: _.jsondata.sale_carousel_arrow_style,
           };
         let { content: _, bAdditionalContent: _ } = (0, _._)(_);
         return _.createElement(
@@ -8585,6 +8634,12 @@
                 return _
                   ? (0, _._)("#Sale_PersonalizedCarousel_Section_title", _)
                   : null;
+              case "curator_list":
+                return (
+                  (_.smart_section_curator_listid
+                    ? _._.GetListTitle(_.smart_section_curator_listid)
+                    : void 0) ?? null
+                );
             }
           if ("tabs" === _.section_type) return "";
           if ("curator" === _.section_type) {
@@ -8679,15 +8734,20 @@
       }
       function _(_, _, _) {
         const _ = (function (_, _) {
-          if (
-            (0, _._)(_.section_type) &&
-            "personalized_carousel" == _.smart_section_type
-          ) {
-            const _ = _._.Get().GetTagNameForSaleSection(_, _);
-            return _
-              ? (0, _._)("#Sale_PersonalizedCarousel_Section_subtitle", _)
-              : null;
-          }
+          if ((0, _._)(_.section_type))
+            switch (_.smart_section_type) {
+              case "personalized_carousel":
+                const _ = _._.Get().GetTagNameForSaleSection(_, _);
+                return _
+                  ? (0, _._)("#Sale_PersonalizedCarousel_Section_subtitle", _)
+                  : null;
+              case "curator_list":
+                return (
+                  (_.smart_section_curator_listid
+                    ? _._.GetListSubtitle(_.smart_section_curator_listid)
+                    : void 0) ?? null
+                );
+            }
           return null;
         })(_, _);
         if (null !== _) return _ && _.startsWith("#") ? (0, _._)(_) : _;
@@ -9562,6 +9622,7 @@
             bAutoAdvance: _.carousel_auto_advance,
             bHideIfTooFewItems: _.hide_section_if_too_few_items,
             arrowFill: _.jsondata.sale_carousel_arrow_color,
+            arrowStyle: _.jsondata.sale_carousel_arrow_style,
           };
         let { content: _, bAdditionalContent: _ } = (0, _._)(_);
         return _.createElement(
@@ -10818,6 +10879,7 @@
             bAutoAdvance: !1,
             bHideIfTooFewItems: !1,
             arrowFill: _.jsondata.sale_carousel_arrow_color,
+            arrowStyle: _.jsondata.sale_carousel_arrow_style,
           },
           _ = (0, _._)(
             __webpack_require__.unique_id,
@@ -11366,6 +11428,7 @@
             bAutoAdvance: !1,
             bHideIfTooFewItems: !0,
             arrowFill: _.jsondata.sale_carousel_arrow_color,
+            arrowStyle: _.jsondata.sale_carousel_arrow_style,
           },
           _ = (0, _._)(
             _.unique_id,
@@ -13238,7 +13301,6 @@
       var _ = __webpack_require__("chunkid");
       const _ = 1;
       function _(_, _, _, _) {
-        if (!(0, _._)(_, _) || _.length <= 1) return _;
         const _ = _(
             _,
             _.rtime32_last_modified,
@@ -13246,13 +13308,10 @@
           ),
           _ = [],
           _ = [];
-        let _ =
-          _.random_order_top_x > 0
-            ? Math.min(_.random_order_top_x, _.length)
-            : _.length;
+        let _ = _ > 0 ? Math.min(_, _.length) : _.length;
         if (_)
           for (const _ of _.data.groups) {
-            const _ = _.splice(0, _.nCount),
+            const _ = __webpack_require__.splice(0, _.nCount),
               _ = _._(_.nSeed);
             (0, _._)(_, Math.min(_, _.length), _),
               (_ -= Math.min(_, _.length)),
@@ -13274,6 +13333,11 @@
               });
           } else _.push(..._);
         return _;
+      }
+      function _(_, _, _, _) {
+        return !(0, _._)(_, _) || _.length <= 1
+          ? _
+          : _(_, _, _, _.random_order_top_x);
       }
       function _(_, _, _) {
         if (!(0, _._)(_, _) || !window.sessionStorage) return _;
@@ -13901,6 +13965,8 @@
           "all_released",
           "all_upcoming",
         ];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _ ? _.filter((_) => _.ShouldShowOnTab(_)) : _;
       }
@@ -14008,6 +14074,35 @@
                 : null,
             }
           );
+        }
+        if ("curator_list" == _) {
+          const _ = _.clanSteamID.GetAccountID(),
+            _ = await _._.fetchQuery(
+              (0, _._)(_, _.smart_section_curator_listid),
+            );
+          if (!_ || 0 == _.list_state() || !_.apps().length)
+            return {
+              capsules: [],
+              bMoreRemaining: !1,
+            };
+          let _ = _.apps().map((_) => ({
+            appid: _.recommended_app().appid(),
+            sortOrder: _.sort_order(),
+          }));
+          const _ = await _._.LoadCreatorHome(_.clanSteamID),
+            _ = _?.GetListInfo().get(_.listid());
+          if ("specified" == _?.order)
+            _.sort((_, _) => _.sortOrder - _.sortOrder);
+          else {
+            _ = _(_, _(_, _, _, "curator_list", _?.GetActiveTabUniqueID()), _);
+          }
+          return {
+            capsules: _.map((_) => ({
+              _: _.appid,
+              type: "game",
+            })),
+            bMoreRemaining: !1,
+          };
         }
         if (((_ = _), _.indexOf(_) >= 0))
           try {
@@ -14259,23 +14354,10 @@
           }
         );
       }
-      var _ = __webpack_require__("chunkid");
       async function _(_, _, _, _, _, _, _, _, _, _ = 0, _ = void 0, _) {
         const _ = _(_, _, _);
-        if ((0, _._)(_.section_type) && "sale_tabhub" != _.smart_section_type) {
-          const {
-            rgCapsules: _,
-            nHiddenCapsules: _,
-            bCapsuleArrayTruncated: _,
-            bAwaitingShowContentLoading: _,
-          } = await _(_, _, _, _, _, _, _, _, _, _, _, _);
-          return {
-            rgCapsules: _,
-            nHiddenCapsules: _,
-            bCapsuleArrayTruncated: _,
-            bAwaitingShowContentLoading: _,
-          };
-        }
+        if ((0, _._)(_.section_type) && "sale_tabhub" != _.smart_section_type)
+          return await _(_, _, _, _, _, _, _, _, _, _, _, _);
         if ("events" === _.section_type || "sale_events" == _.section_type) {
           const _ = await (async function (_, _, _, _) {
             let _;
@@ -14445,6 +14527,25 @@
           })(_, _, _, _);
           return {
             rgLinks: _,
+          };
+        }
+        if ("creator_list_of_lists" === _.section_type) {
+          const _ = await (async function (_, _) {
+            const _ = _.clanSteamID.GetAccountID(),
+              _ = await _._.fetchQuery((0, _._)(_));
+            if (!_?.length) return [];
+            const _ = await _._.LoadCreatorHome(_.clanSteamID),
+              _ = null,
+              _ = _.GetCreatorHomeURL(_);
+            return _.map((_) => ({
+              listid: _.listid(),
+              title: _.title(),
+              description: _.blurb(),
+              url: `${_}list/${_.listid()}`,
+            }));
+          })(_);
+          return {
+            rgCuratorLists: _,
           };
         }
       }
@@ -14691,6 +14792,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "trailercarousel",
@@ -14915,6 +15017,7 @@
               appIndex: _,
               appCount: _,
               arrowFill: _.jsondata?.sale_carousel_arrow_color,
+              arrowStyle: _.jsondata?.sale_carousel_arrow_style,
             }),
           ),
         );
@@ -14932,7 +15035,8 @@
             appCount: _,
             wrapAround: _,
             arrows: _ = !0,
-            arrowFill: _ = "white",
+            arrowFill: _,
+            arrowStyle: _,
           } = _,
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
@@ -15082,8 +15186,10 @@
                         onClick: () => _(!1),
                         disabled: !_,
                       },
-                      _.createElement(_.uMb, {
-                        fill: _,
+                      _.createElement(_._, {
+                        arrowFill: _,
+                        arrowStyle: _,
+                        direction: "left",
                       }),
                     ),
                   _.createElement(
@@ -15131,8 +15237,10 @@
                         onClick: () => _(!0),
                         disabled: !_,
                       },
-                      _.createElement(_.uMb, {
-                        fill: _,
+                      _.createElement(_._, {
+                        arrowFill: _,
+                        arrowStyle: _,
+                        direction: "right",
                       }),
                     ),
                 ),
@@ -15368,6 +15476,7 @@
             arrowFill: __webpack_require__,
             autoAdvance: _,
             hideAppBackground: _,
+            arrowStyle: _,
           } = _,
           _ = (0, _._)(),
           [_, _] = _.useState(0),
@@ -15414,6 +15523,7 @@
               arrows: !_,
               arrowFill: __webpack_require__,
               showDemoInfo: !0,
+              arrowStyle: _,
             }),
             (_ || (0, _._)() || _) &&
               _.createElement(_._, {
@@ -15435,6 +15545,7 @@
             optin_prune_tagid: _,
             optin_only: _,
             arrowFill: _,
+            arrowStyle: _,
             autoAdvance: _,
             hideAppBackground: _,
           } = _,
@@ -15525,7 +15636,7 @@
           })(_);
         let _ = _;
         return (
-          _?.length > 0 && (_ = _),
+          _ && _.length > 0 && (_ = _),
           _ || _ || !_
             ? _.createElement(
                 "div",
@@ -15547,6 +15658,7 @@
                   arrowFill: _,
                   autoAdvance: _,
                   hideAppBackground: _,
+                  arrowStyle: _,
                 }),
               )
         );
@@ -16039,6 +16151,10 @@
                     ),
                     padded: !0,
                     screenIsWide: (0, _._)(),
+                    arrowFill:
+                      __webpack_require__.jsondata?.sale_carousel_arrow_color,
+                    arrowStyle:
+                      __webpack_require__.jsondata?.sale_carousel_arrow_style,
                   },
                   _.map((_) =>
                     _.createElement(_, {
@@ -18105,7 +18221,8 @@
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(0),
           [_, _] = (0, _.useState)([]),
-          [_, _] = (0, _.useState)(void 0),
+          [_, _] = (0, _.useState)([]),
+          [_, _] = (0, _.useState)([]),
           [_, _] = (0, _.useState)([]),
           [_, _] = _(_, _.section, _),
           { nMaxCapsulesPerRow: _, bScreenIsWide: _ } = (0, _._)(
@@ -18155,7 +18272,9 @@
                   _(_.bAwaitingShowContentLoading))
                 : "rgEvents" in _
                   ? _(_.rgEvents)
-                  : "rgLinks" in _ && _(_.rgLinks),
+                  : "rgLinks" in _
+                    ? _(_.rgLinks)
+                    : "rgCuratorLists" in _ && _(_.rgCuratorLists),
                 _(!0);
             })();
           }, [
@@ -18194,7 +18313,13 @@
           _ = async () => {
             const _ = Math.max(_(_, 0), 4),
               _ = _ + _,
-              _ = Math.max(_?.length || 0, _?.length || 0, _?.length || 0) + 1;
+              _ =
+                Math.max(
+                  _?.length || 0,
+                  _?.length || 0,
+                  _?.length || 0,
+                  _?.length || 0,
+                ) + 1;
             _._.Get().AddInteraction(_.unique_id, _), _(_);
           },
           _ = (function (_, _, _) {
@@ -18208,6 +18333,7 @@
               capsules: _(_, _),
               links: _,
               events: _(_, _),
+              curatorLists: _,
               language: _,
               nMaxCapsulesPerRow: _,
               bScreenIsWide: _,
@@ -18218,6 +18344,7 @@
               bAutoAdvance: _.carousel_auto_advance,
               bHideIfTooFewItems: _.hide_section_if_too_few_items,
               arrowFill: _.jsondata.sale_carousel_arrow_color,
+              arrowStyle: _.jsondata.sale_carousel_arrow_style,
             },
             _ = _(_, _.nShowAdditionalRows),
             _ = _((0, _._)(_, _), _, _.capsules.length);
@@ -18792,12 +18919,17 @@
         }
         componentDidMount() {
           window.addEventListener("resize", this.OnResize), this.LoadCapsules();
-          const { section: _, activeTab: _ } = this.props;
+          const {
+            section: _,
+            activeTab: _,
+            displayStyle: __webpack_require__,
+          } = this.props;
           this.setState({
             fnUnregisterCallback: (0, _._)(
               _.unique_id,
               _?.GetActiveTabUniqueID(),
             ).Register(this.OnDynamicCapsuleInsert).Unregister,
+            bCompactViewMode: this.BDisplayStyleIsCompact(__webpack_require__),
           });
         }
         componentWillUnmount() {
@@ -18857,6 +18989,12 @@
                 () => this.LoadCapsules(),
               );
           }
+          this.props.displayStyle != _.displayStyle &&
+            this.setState({
+              bCompactViewMode: this.BDisplayStyleIsCompact(
+                this.props.displayStyle,
+              ),
+            });
         }
         OnDynamicCapsuleInsert(_) {
           const { activeTab: _, section: __webpack_require__ } = this.props;
@@ -18894,6 +19032,11 @@
                   this.LoadCapsules();
                 },
               ));
+        }
+        SetViewMode(_) {
+          this.setState({
+            bCompactViewMode: _,
+          });
         }
         async FilterItems(_) {
           const {
@@ -19158,6 +19301,9 @@
             bIsNarrowScreen: (0, _._)(),
           });
         }
+        BDisplayStyleIsCompact(_) {
+          return !_ || "compactlist" == _;
+        }
         render() {
           const {
               browseInfo: _,
@@ -19165,6 +19311,7 @@
               event: __webpack_require__,
               language: _,
               activeTab: _,
+              displayStyle: _,
             } = this.props,
             {
               bInitialLoadComplete: _,
@@ -19215,6 +19362,9 @@
                 feature: _,
                 depth: _,
                 activeTab: _,
+                displayStyle: this.state.bCompactViewMode
+                  ? "compactlist"
+                  : "library",
               }),
             _ &&
               0 == _.length &&
@@ -19313,13 +19463,33 @@
                       className: _().SaleItemBrowserHeader,
                     },
                     _,
-                    _.enable_search &&
-                      !this.props.bInGamepadUI &&
+                    !this.props.bInGamepadUI &&
                       _.createElement(
                         "div",
                         {
                           className: _().SuggestContainer,
                         },
+                        _.createElement(
+                          _,
+                          {
+                            className: (0, _._)(
+                              _().ViewModeToggle,
+                              this.state.bCompactViewMode && _().Compact,
+                            ),
+                            onChange: this.SetViewMode,
+                            value: this.state.bCompactViewMode,
+                            tooltip: this.state.bCompactViewMode
+                              ? (0, _._)(
+                                  "#Sale_ItemBrowser_ViewMode_SwitchToExpanded",
+                                )
+                              : (0, _._)(
+                                  "#Sale_ItemBrowser_ViewMode_SwitchToCompact",
+                                ),
+                          },
+                          this.state.bCompactViewMode
+                            ? _.createElement(_.f9b, null)
+                            : _.createElement(_.Emg, null),
+                        ),
                         _.createElement(_.eSy, null),
                         _.createElement(_._, {
                           type: "text",
@@ -19339,6 +19509,32 @@
           );
         }
       };
+      function _(_) {
+        const {
+          value: _,
+          onChange: __webpack_require__,
+          className: _,
+          tooltip: _,
+          children: _,
+        } = _;
+        return _.createElement(
+          _._,
+          {
+            toolTipContent: _,
+          },
+          _.createElement(
+            "button",
+            {
+              type: "button",
+              className: _,
+              onClick: () => __webpack_require__(!_),
+              "aria-pressed": _,
+              "data-state": _ ? "on" : "off",
+            },
+            _,
+          ),
+        );
+      }
       function _(_) {
         const [_, __webpack_require__] = _.useState(),
           [_, _] = _.useState(),
@@ -19428,6 +19624,7 @@
             feature: _,
             depth: _,
             activeTab: _,
+            displayStyle: _,
           } = _,
           _ = (0, _._)();
         return _.createElement(
@@ -19466,6 +19663,7 @@
                   type: _.type || "game",
                   fnOnClickOverride: _,
                   bPreferDemoStorePage: _.prefer_demo_store_page,
+                  displayStyle: _ ?? "compactlist",
                 })
               );
             }),
@@ -19551,10 +19749,12 @@
       }
       (0, _._)([_._], _.prototype, "OnDynamicCapsuleInsert", null),
         (0, _._)([_._], _.prototype, "ShowMoreRows", null),
+        (0, _._)([_._], _.prototype, "SetViewMode", null),
         (0, _._)([_._], _.prototype, "FilterItems", null),
         (0, _._)([_._], _.prototype, "OnUpdateSearch", null),
         (0, _._)([_._], _.prototype, "OnUpdateFacetFilter", null),
         (0, _._)([_._], _.prototype, "OnResize", null),
+        (0, _._)([_._], _.prototype, "BDisplayStyleIsCompact", null),
         (_ = (0, _._)([_._], _));
       const _ = (0, _._)((_) => {
         const { section: _, event: __webpack_require__, activeTab: _ } = _,
@@ -19582,6 +19782,7 @@
             browseInfo: _.item_browse_section_data,
             section: _,
             bInGamepadUI: _,
+            displayStyle: _.single_item_style,
             ..._,
           }),
         );
@@ -23396,7 +23597,6 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { event: _, section: __webpack_require__, activeTab: _ } = _,
@@ -23956,6 +24156,7 @@
                       bHideIfTooFewItems:
                         __webpack_require__.hide_section_if_too_few_items,
                       arrowFill: _.jsondata.sale_carousel_arrow_color,
+                      arrowStyle: _.jsondata.sale_carousel_arrow_style,
                     },
                     _?.map((_) => ({
                       Render: (_) =>
@@ -24744,7 +24945,9 @@
             (_[(_.k_TitleMediaDesc = 2)] = "k_TitleMediaDesc"),
             (_[(_.k_TitleDescMedia = 3)] = "k_TitleDescMedia"),
             (_[(_.k_HorizontalMediaFirst = 4)] = "k_HorizontalMediaFirst"),
-            (_[(_.k_HorizontalTextFirst = 5)] = "k_HorizontalTextFirst");
+            (_[(_.k_HorizontalTextFirst = 5)] = "k_HorizontalTextFirst"),
+            (_[(_.k_TitleDescOnly = 6)] = "k_TitleDescOnly"),
+            (_[(_.k_OverlayMedia = 7)] = "k_OverlayMedia");
         })(_ || (_ = {})),
         (function (_) {
           (_.k_Header1 = "h1"), (_.k_Header2 = "h2"), (_.k_Header3 = "h3");
@@ -24846,9 +25049,7 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _
           ? _.startsWith("https://") || _.startsWith("http://")
@@ -24856,6 +25057,29 @@
             : `${_._.CLAN_CDN_ASSET_URL}images/clan/${_}/${_}`
           : _;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        let _;
+        return (
+          _ == _.k_Left
+            ? (_ = {
+                "--horiz-margin-start": `${_}%`,
+              })
+            : _ == _.k_Right
+              ? (_ = {
+                  "--horiz-margin-end": `${_}%`,
+                })
+              : _ == _.k_Center &&
+                (_ = {
+                  "--horiz-margin-start": _ / 2 + "%",
+                  "--horiz-margin-end": _ / 2 + "%",
+                }),
+          _
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { event: _, section: __webpack_require__, language: _ } = _,
           _ = (0, _._)();
@@ -24873,6 +25097,7 @@
                 _.SaleSection,
                 _().SaleSectionCtn,
                 _().Container,
+                _.className,
               ),
               style: (0, _._)(__webpack_require__, _, _),
             },
@@ -24881,13 +25106,259 @@
               event: _,
               language: _,
             }),
-            __webpack_require__?.media_container?.media_rows?.map((_, _) =>
+            _.createElement(_, {
+              media_overlay: __webpack_require__.media_overlay,
+              language: _,
+              event: _,
+              section: __webpack_require__,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            media_overlay: _,
+            language: __webpack_require__,
+            event: _,
+            section: _,
+          } = _,
+          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(
+            () => {
+              const _ = _._.GetELanguageFallback(__webpack_require__);
+              return [
+                (_ && _?.text_placement) || _.k_TopLeft,
+                _?.media_type,
+                _ && _.localized_media && _.localized_media.length > 0
+                  ? _?.localized_media[__webpack_require__] ||
+                    _?.localized_media[_] ||
+                    {}
+                  : void 0,
+                _ &&
+                _.localized_media_title &&
+                _.localized_media_title.length > 0
+                  ? _?.localized_media_title[__webpack_require__] ||
+                    _?.localized_media_title[_] ||
+                    ""
+                  : void 0,
+                _ &&
+                _.localized_media_subtitle &&
+                _.localized_media_subtitle.length > 0
+                  ? _?.localized_media_subtitle[__webpack_require__] ||
+                    _?.localized_media_subtitle[_] ||
+                    ""
+                  : void 0,
+                _ &&
+                _.localized_media_description &&
+                _.localized_media_description.length > 0
+                  ? _?.localized_media_description[__webpack_require__] ||
+                    _?.localized_media_description[_] ||
+                    ""
+                  : void 0,
+                _?.eTitleDisplaySize,
+                _?.title_alignment,
+                _?.subtitle_alignment,
+                _?.description_alignment,
+                _?.media_horizontal_alignment,
+                _?.media_vertical_alignment,
+                _?.is_title_as_image &&
+                _ &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? _?.title_media.localized_media[__webpack_require__] ||
+                    _?.title_media.localized_media[_] ||
+                    {}
+                  : void 0,
+                _?.is_title_as_image &&
+                _ &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? _?.title_media.media_type
+                  : void 0,
+                _?.is_title_as_image &&
+                _ &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? _?.title_media.media_vertical_alignment
+                  : void 0,
+                _?.is_title_as_image &&
+                _ &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? _?.title_media.media_horizontal_alignment
+                  : void 0,
+                _?.eDescriptionDisplaySize,
+                _?.title_media?.media_scale,
+                _?.text_scale,
+              ];
+            },
+          );
+        let _;
+        if (_) {
+          let _ = _.k_Left;
+          if (_)
+            switch (_) {
+              case _.k_TopLeft:
+              case _.k_LeftCenter:
+              case _.k_BottomLeft:
+                _ = _.k_Right;
+                break;
+              case _.k_TopRight:
+              case _.k_RightCenter:
+              case _.k_BottomRight:
+                _ = _.k_Left;
+                break;
+              case _.k_TopCenter:
+              case _.k_Center:
+              case _.k_BottomCenter:
+                _ = _.k_Center;
+            }
+          _ = _(_, _);
+        }
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().MediaOverlayCtn, _.className),
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)({
+                [_().TopLeft]: !_ || _ == _.k_TopLeft,
+                [_().TopCenter]: _ == _.k_TopCenter,
+                [_().TopRight]: _ == _.k_TopRight,
+                [_().LeftCenter]: _ == _.k_LeftCenter,
+                [_().Center]: _ == _.k_Center,
+                [_().RightCenter]: _ == _.k_RightCenter,
+                [_().BottomLeft]: _ == _.k_BottomLeft,
+                [_().BottomCenter]: _ == _.k_BottomCenter,
+                [_().BottomRight]: _ == _.k_BottomRight,
+                [_().TextSectionScaling]: !0,
+              }),
+              style: _,
+            },
+            _.createElement(_, {
+              title: _,
+              titleAlign: _,
+              subtitle: _,
+              subtitleAlign: _,
+              description: _,
+              descAlign: _,
+              eTitleDisplaySize: _,
+              eDescriptionDisplaySize: _,
+              titleMedia: _,
+              titleMediaType: _,
+              titleVAlign: _,
+              titleHAlign: _,
+              event: _,
+              section: _,
+              language: __webpack_require__,
+              titleMediaScale: _,
+            }),
+          ),
+          _.createElement(_, {
+            media: _,
+            mediaType: _,
+            mediaHAlign: _,
+            mediaVAlign: _,
+            className: _().MediaMax,
+            clanAccountID: _.clanSteamID.GetAccountID(),
+          }),
+        );
+      }
+      function _(_) {
+        const { event: _, section: __webpack_require__, language: _ } = _,
+          [_, _, _, _, _, _, _] = (0, _._)(() => [
+            __webpack_require__.cap_section_content &&
+              !__webpack_require__.show_as_carousel,
+            Boolean(__webpack_require__.show_as_carousel),
+            __webpack_require__.cap_section_content
+              ? Math.max(1, __webpack_require__.cap_section_row_count || 1)
+              : __webpack_require__?.media_container?.media_rows?.length || 0,
+            __webpack_require__?.media_container?.media_rows?.length || 0,
+            Boolean(__webpack_require__?.carousel_auto_advance),
+            _.jsondata.sale_carousel_arrow_color,
+            _.jsondata.sale_carousel_arrow_style,
+          ]),
+          _ = (0, _._)(),
+          _ = (0, _._)(_._),
+          [_, _] = (0, _.useState)(Boolean(_ && _ < _)),
+          _ = __webpack_require__?.media_container?.media_rows
+            ?.filter((_, _) => !_ || _ < _)
+            .map((_, _) =>
               _.createElement(_, {
                 key: "templategrid_" + __webpack_require__.unique_id + "_" + _,
                 ..._,
                 row: _,
               }),
-            ),
+            );
+        return _.createElement(
+          _._,
+          {
+            feature: "templatemediacontent",
+          },
+          _.createElement(
+            _._,
+            {
+              placeholderHeight: "100vh",
+              rootMargin: _._,
+              className: (0, _._)(
+                _.SaleSection,
+                _().SaleSectionCtn,
+                _().Container,
+                {
+                  [_().ContainerCarousel]: _,
+                },
+              ),
+              style: (0, _._)(__webpack_require__, _, _),
+            },
+            _.createElement(_, {
+              section: __webpack_require__,
+              event: _,
+              language: _,
+            }),
+            _
+              ? _.createElement(
+                  _._,
+                  {
+                    hideArrows: !_,
+                    hidePips: _,
+                    useTestScrollbar: !1,
+                    visibleElements: 1,
+                    bLazyRenderChildren: !1,
+                    screenIsWide: _,
+                    bAutoAdvance: _,
+                    arrowFill: _,
+                    arrowStyle: _,
+                    className: (0, _._)(
+                      _().TemplateCarousel,
+                      "template-carousel",
+                    ),
+                  },
+                  _,
+                )
+              : _.createElement(_.Fragment, null, _),
+            _ &&
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _(!1),
+                },
+                (0, _._)("#Sale_ShowMore"),
+              ),
+            !_ &&
+              _ &&
+              _ < _ &&
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _(!0),
+                },
+                (0, _._)("#Sale_ShowLess"),
+              ),
           ),
         );
       }
@@ -24898,11 +25369,39 @@
             language: _,
             row: _,
           } = _,
-          _ = (0, _._)(() => _.media_columns?.length || 0),
+          [_, _] = (0, _._)(() => {
+            const _ = _.media_columns?.length || 0;
+            let _ = [];
+            for (let _ = 0; _ < _; ++_) {
+              let _, _, _, _;
+              _.media_columns &&
+                _ < _.media_columns.length &&
+                (_ >= 1 &&
+                _ <= 2 &&
+                (_.media_columns[_].display_order == _.k_HorizontalMediaFirst ||
+                  _.media_columns[_].display_order == _.k_HorizontalTextFirst)
+                  ? (_ = _.media_columns[_].text_scale)
+                  : _.media_columns[_].display_order == _.k_TitleDescOnly &&
+                    ((_ = _.media_columns[_].display_order),
+                    (_ = _.media_columns[_].text_scale),
+                    (_ =
+                      _.media_columns[_].text_scale_margin_alignment ||
+                      _.k_Left))),
+                _ &&
+                  _ > 0 &&
+                  (_ = _
+                    ? _(_, _)
+                    : {
+                        "--horiz-min-col": `${_}%`,
+                      }),
+                _.push(_);
+            }
+            return [_, _];
+          }),
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(void 0),
           _ = (0, _._)(() => []),
-          _ = _.media_columns.length,
+          _ = _.media_columns?.length || 0,
           _ = _.useCallback(
             (_, _, _) => {
               (_[_] = {
@@ -24942,6 +25441,7 @@
               mediaFirstHeight: _,
               textFirstHeight: _,
               mediaHeightChanged: _,
+              additionalStyle: _?.length > _ ? _[_] : void 0,
             }),
           ),
         );
@@ -24956,24 +25456,27 @@
             mediaFirstHeight: _,
             textFirstHeight: _,
             mediaHeightChanged: _,
+            additionalStyle: _,
           } = _,
           [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
             const _ = _._.GetELanguageFallback(_);
             return [
               _.display_order || _.k_HorizontalMediaFirst,
               _.media_type,
-              _.localized_media?.length > 0
+              _.localized_media && _.localized_media.length > 0
                 ? _.localized_media[_] || _.localized_media[_] || {}
                 : void 0,
-              _.localized_media_title?.length > 0
+              _.localized_media_title && _.localized_media_title.length > 0
                 ? _.localized_media_title[_] || _.localized_media_title[_] || ""
                 : void 0,
-              _.localized_media_subtitle?.length > 0
+              _.localized_media_subtitle &&
+              _.localized_media_subtitle.length > 0
                 ? _.localized_media_subtitle[_] ||
                   _.localized_media_subtitle[_] ||
                   ""
                 : void 0,
-              _.localized_media_description?.length > 0
+              _.localized_media_description &&
+              _.localized_media_description.length > 0
                 ? _.localized_media_description[_] ||
                   _.localized_media_description[_] ||
                   ""
@@ -24984,18 +25487,30 @@
               _.description_alignment,
               _.media_horizontal_alignment,
               _.media_vertical_alignment,
-              _.is_title_as_image && _.title_media?.localized_media.length > 0
+              _.is_title_as_image &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
                 ? _.title_media.localized_media[_] ||
                   _.title_media.localized_media[_] ||
                   {}
                 : void 0,
-              _.is_title_as_image && _.title_media?.localized_media.length > 0
+              _.is_title_as_image &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
                 ? _.title_media.media_type
                 : void 0,
-              _.is_title_as_image && _.title_media?.localized_media.length > 0
+              _.is_title_as_image &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
                 ? _.title_media.media_vertical_alignment
                 : void 0,
-              _.is_title_as_image && _.title_media?.localized_media.length > 0
+              _.is_title_as_image &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
                 ? _.title_media.media_horizontal_alignment
                 : void 0,
             ];
@@ -25025,6 +25540,7 @@
           mediaFirstHeight: _,
           textFirstHeight: _,
           mediaHeightChanged: _,
+          additionalStyle: _,
         });
       }
       function _(_) {
@@ -25036,6 +25552,7 @@
             mediaHeightChanged: _,
             mediaFirstHeight: _,
             textFirstHeight: _,
+            additionalStyle: _,
           } = _,
           _ = (0, _._)(),
           _ = _.useRef(void 0),
@@ -25088,21 +25605,44 @@
                 [_().HorizontalTextFirst]: _ == _.k_HorizontalTextFirst,
                 [_().VerticalMediaFirst]: _ == _.k_MediaTitleDesc,
                 [_().VerticalTextFirst]: _ == _.k_TitleDescMedia,
+                [_().TextOnlyDisplay]: _ == _.k_TitleDescOnly,
+                [_().OverlayMedia]: _ == _.k_OverlayMedia,
               }),
-              style: (0, _._)(__webpack_require__, _),
+              style: {
+                ...(0, _._)(__webpack_require__, _),
+                ...(_ ?? {}),
+              },
             },
-            _ &&
-              _.createElement(_, {
-                ..._,
-                mediaHeight: _,
-                setImageSize: _,
-              }),
-            !_ &&
-              _.createElement(_, {
-                ..._,
-                mediaHeight: _,
-                setImageSize: _,
-              }),
+            _ == _.k_TitleDescOnly
+              ? _.createElement(_, {
+                  ..._,
+                })
+              : _.createElement(
+                  _.Fragment,
+                  null,
+                  _ == _.k_OverlayMedia
+                    ? _.createElement(_, {
+                        ..._,
+                        className: _().GridTemplateOverlay,
+                        media_overlay: __webpack_require__,
+                      })
+                    : _.createElement(
+                        _.Fragment,
+                        null,
+                        _ &&
+                          _.createElement(_, {
+                            ..._,
+                            mediaHeight: _,
+                            setImageSize: _,
+                          }),
+                        !_ &&
+                          _.createElement(_, {
+                            ..._,
+                            mediaHeight: _,
+                            setImageSize: _,
+                          }),
+                      ),
+                ),
           )
         );
       }
@@ -25388,7 +25928,9 @@
               {
                 className: (0, _._)({
                   [_().Subtitle]: !0,
-                  [_]: !0,
+                  ...(_ && {
+                    [_]: !0,
+                  }),
                   [_().Left]: !_ || _ == _.k_Left,
                   [_().Center]: _ == _.k_Center,
                   [_().Right]: _ == _.k_Right,
@@ -25425,7 +25967,9 @@
               {
                 className: (0, _._)({
                   [_().Title]: !0,
-                  [_]: !0,
+                  ...(_ && {
+                    [_]: !0,
+                  }),
                   [_()._]: _ == _.k_Header1,
                   [_()._]: _ == _.k_Header2,
                   [_()._]: _ == _.k_Header3,
@@ -25436,7 +25980,7 @@
                 }),
               },
               _.createElement(_._, {
-                text: __webpack_require__,
+                text: __webpack_require__ || "",
                 partnerEventStore: _._,
                 showErrorInfo: _,
                 event: _,
@@ -25783,161 +26327,6 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { event: _, section: __webpack_require__, language: _ } = _,
-          _ = ((0, _._)(), (0, _._)()),
-          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(
-            () => {
-              const _ = _._.GetELanguageFallback(_);
-              return [
-                __webpack_require__.media_overlay?.text_placement ||
-                  _.k_TopLeft,
-                __webpack_require__.media_overlay?.media_type,
-                __webpack_require__.media_overlay?.localized_media?.length > 0
-                  ? __webpack_require__.media_overlay?.localized_media[_] ||
-                    __webpack_require__.media_overlay?.localized_media[_] ||
-                    {}
-                  : void 0,
-                __webpack_require__.media_overlay?.localized_media_title
-                  ?.length > 0
-                  ? __webpack_require__.media_overlay?.localized_media_title[
-                      _
-                    ] ||
-                    __webpack_require__.media_overlay?.localized_media_title[
-                      _
-                    ] ||
-                    ""
-                  : void 0,
-                __webpack_require__.media_overlay?.localized_media_subtitle
-                  ?.length > 0
-                  ? __webpack_require__.media_overlay?.localized_media_subtitle[
-                      _
-                    ] ||
-                    __webpack_require__.media_overlay?.localized_media_subtitle[
-                      _
-                    ] ||
-                    ""
-                  : void 0,
-                __webpack_require__.media_overlay?.localized_media_description
-                  ?.length > 0
-                  ? __webpack_require__.media_overlay
-                      ?.localized_media_description[_] ||
-                    __webpack_require__.media_overlay
-                      ?.localized_media_description[_] ||
-                    ""
-                  : void 0,
-                __webpack_require__.media_overlay?.eTitleDisplaySize,
-                __webpack_require__.media_overlay?.title_alignment,
-                __webpack_require__.media_overlay?.subtitle_alignment,
-                __webpack_require__.media_overlay?.description_alignment,
-                __webpack_require__.media_overlay?.media_horizontal_alignment,
-                __webpack_require__.media_overlay?.media_vertical_alignment,
-                __webpack_require__.media_overlay?.is_title_as_image &&
-                __webpack_require__.media_overlay?.title_media?.localized_media
-                  .length > 0
-                  ? __webpack_require__.media_overlay?.title_media
-                      .localized_media[_] ||
-                    __webpack_require__.media_overlay?.title_media
-                      .localized_media[_] ||
-                    {}
-                  : void 0,
-                __webpack_require__.media_overlay?.is_title_as_image &&
-                __webpack_require__.media_overlay?.title_media?.localized_media
-                  .length > 0
-                  ? __webpack_require__.media_overlay?.title_media.media_type
-                  : void 0,
-                __webpack_require__.media_overlay?.is_title_as_image &&
-                __webpack_require__.media_overlay?.title_media?.localized_media
-                  .length > 0
-                  ? __webpack_require__.media_overlay?.title_media
-                      .media_vertical_alignment
-                  : void 0,
-                __webpack_require__.media_overlay?.is_title_as_image &&
-                __webpack_require__.media_overlay?.title_media?.localized_media
-                  .length > 0
-                  ? __webpack_require__.media_overlay?.title_media
-                      .media_horizontal_alignment
-                  : void 0,
-                __webpack_require__.media_overlay?.eDescriptionDisplaySize,
-                __webpack_require__.media_overlay?.title_media?.media_scale,
-              ];
-            },
-          );
-        return _.createElement(
-          _._,
-          {
-            feature: "templatemediacontent",
-          },
-          _.createElement(
-            _._,
-            {
-              placeholderHeight: "100vh",
-              rootMargin: _._,
-              className: (0, _._)(
-                _.SaleSection,
-                _().SaleSectionCtn,
-                _().Container,
-              ),
-              style: (0, _._)(__webpack_require__, _, _),
-            },
-            _.createElement(_, {
-              section: __webpack_require__,
-              event: _,
-              language: _,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _().MediaOverlayCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)({
-                    [_().TopLeft]: !_ || _ == _.k_TopLeft,
-                    [_().TopCenter]: _ == _.k_TopCenter,
-                    [_().TopRight]: _ == _.k_TopRight,
-                    [_().LeftCenter]: _ == _.k_LeftCenter,
-                    [_().Center]: _ == _.k_Center,
-                    [_().RightCenter]: _ == _.k_RightCenter,
-                    [_().BottomLeft]: _ == _.k_BottomLeft,
-                    [_().BottomCenter]: _ == _.k_BottomCenter,
-                    [_().BottomRight]: _ == _.k_BottomRight,
-                  }),
-                },
-                _.createElement(_, {
-                  title: _,
-                  titleAlign: _,
-                  subtitle: _,
-                  subtitleAlign: _,
-                  description: _,
-                  descAlign: _,
-                  eTitleDisplaySize: _,
-                  eDescriptionDisplaySize: _,
-                  titleMedia: _,
-                  titleMediaType: _,
-                  titleVAlign: _,
-                  titleHAlign: _,
-                  event: _,
-                  section: __webpack_require__,
-                  language: _,
-                  titleMediaScale: _,
-                }),
-              ),
-              _.createElement(_, {
-                media: _,
-                mediaType: _,
-                mediaHAlign: _,
-                mediaVAlign: _,
-                className: _().MediaMax,
-                clanAccountID: _.clanSteamID.GetAccountID(),
-              }),
-            ),
-          ),
-        );
-      }
       function _(_) {
         const {
             event: _,
@@ -25953,6 +26342,7 @@
           case "links":
           case "title_image":
           case "crosspromotesalepage":
+          case "creator_list_of_lists":
             return _.createElement(_, {
               ..._,
             });
@@ -26098,6 +26488,7 @@
               optin_prune_tagid: _.jsondata.optin_prune_tagid,
               optin_only: _.jsondata.optin_only,
               arrowFill: _.jsondata?.sale_carousel_arrow_color,
+              arrowStyle: _.jsondata?.sale_carousel_arrow_style,
               autoAdvance: __webpack_require__.carousel_auto_advance,
               hideAppBackground:
                 __webpack_require__.carousel_hide_app_background,

@@ -9,7 +9,9 @@
         EditionPickerHr: "_2N7bWzRE2_6yMlW8HoWwKL",
         NeedToPublishNotification: "_1YyjMfNhBo6lWsvunbhkmG",
         EditionsEditorRow: "_1kVAFKlQN-iaGJNQM64lbU",
+        ImageProvided: "_3acPE1-7PEV9Fv1BIkpb1d",
         PublishReminder: "_2bw5Zr8a6ik4-NIjVgcZSn",
+        TaskDone: "_3cgXyLkVbKXYv6hxcrj0P9",
         EditionsEditorContents: "WKVcCeIwShQXxr0XjInT9",
         ErrorList: "_34AP-LqjTCmVO7oQmBRksn",
         ErrorListItems: "_3OPqG7OUgCU252R-DdB0Qj",
@@ -79,8 +81,8 @@
         p = a(22797),
         E = a(78327),
         u = a(12155);
-      const g = 748,
-        _ = 896;
+      const _ = 748,
+        g = 896;
       class S {
         rgSet = new Set();
         constructor(e) {
@@ -107,20 +109,20 @@
       }
       function h(e) {
         const [t, a] = (0, n.useState)("closed"),
-          o = e.rgEditions,
-          [c, g] = (0, n.useState)(new S(o)),
-          _ = new Map();
+          c = e.rgEditions,
+          [_, g] = (0, n.useState)(new S(c)),
+          h = new Map();
         for (const t of Object.keys(e.rgEditionsComparisonGraphics))
-          _.set(t, e.rgEditionsComparisonGraphics[t]);
-        const [h, b] = (0, n.useState)(() => {
+          h.set(t, e.rgEditionsComparisonGraphics[t]);
+        const [b, w] = (0, n.useState)(() => {
             const t = new Map();
             for (const a of Object.keys(e.rgEditionsAltText))
               t.set(a, e.rgEditionsAltText[a]);
             return t;
           }),
-          [C, w] = (0, n.useState)(_),
-          f = Object.keys(e.rgEditionsComparisonGraphics).length > 0,
-          R = (function (e, t) {
+          [C, f] = (0, n.useState)(h),
+          R = Object.keys(e.rgEditionsComparisonGraphics).length > 0,
+          N = (function (e, t) {
             return (0, d.n)({
               mutationFn: async (a) => {
                 const {
@@ -181,23 +183,23 @@
                 return m().post(d, s);
               },
             });
-          })(e.nItemId, o),
-          N = new Map();
-        for (const t of e.rgCandidates) N.set(t.nId, t);
-        let v = null;
+          })(e.nItemId, c),
+          v = new Map();
+        for (const t of e.rgCandidates) v.set(t.nId, t);
+        let k = null;
         if (
-          c.size > 0 &&
+          _.size > 0 &&
           -1 !== e.nBasePackageId &&
-          !c.has({ packageid: e.nBasePackageId })
+          !_.has({ packageid: e.nBasePackageId })
         ) {
           const t = e.rgCandidates.find((t) => t.nId === e.nBasePackageId);
-          v = (0, l.we)(
+          k = (0, l.we)(
             "#StoreAdmin_EditEditions_MustIncludeCheapestBasePageError",
             t?.strName,
             e.nBasePackageId,
           );
         }
-        const k = n.useId();
+        const T = n.useId();
         return n.createElement(
           n.Fragment,
           null,
@@ -206,7 +208,7 @@
             { active: "editor" === t || "alert" === t },
             n.createElement(
               s.eV,
-              { "aria-labelledby": k, closeModal: () => a("closed") },
+              { "aria-labelledby": T, closeModal: () => a("closed") },
               "editor" === t &&
                 n.createElement(
                   n.Fragment,
@@ -216,23 +218,23 @@
                     { className: i.EditionsEditorContents },
                     n.createElement(
                       "h2",
-                      { id: k },
+                      { id: T },
                       (0, l.we)("#StoreAdmin_EditEditions_DialogTitle"),
                     ),
-                    R.isPending && n.createElement(p.t, null),
-                    !R.isPending &&
+                    N.isPending && n.createElement(p.t, null),
+                    !N.isPending &&
                       n.createElement(
                         n.Fragment,
                         null,
-                        null !== v &&
+                        null !== k &&
                           n.createElement(
                             "div",
                             { className: i.ErrorBox },
                             n.createElement(u.X, null),
-                            n.createElement("div", null, v),
+                            n.createElement("div", null, k),
                           ),
                         n.createElement(A, {
-                          rgEditions: c,
+                          rgEditions: _,
                           rgCandidates: e.rgCandidates,
                           setEditions: g,
                         }),
@@ -240,11 +242,11 @@
                           className: i.EditionPickerHr,
                         }),
                         n.createElement(D, {
-                          mapOriginalImages: _,
+                          mapOriginalImages: h,
                           mapImages: C,
-                          setImages: w,
-                          mapAltText: h,
-                          setAltText: b,
+                          setImages: f,
+                          mapAltText: b,
+                          setAltText: w,
                           bAppHasSteamChinaToolsEnabled:
                             e.bAppHasSteamChinaToolsEnabled,
                         }),
@@ -257,20 +259,20 @@
                       "button",
                       {
                         className: "btn_green_white_innerfade",
-                        disabled: null !== v,
+                        disabled: null !== k,
                         onClick: async () => {
                           const e = new Map();
                           C.forEach((t, a) => {
                             t instanceof File && e.set(a, t);
                           });
                           const t = [];
-                          _.forEach((e, a) => {
+                          h.forEach((e, a) => {
                             C.has(a) || t.push(a);
                           }),
-                            R.mutate({
-                              rgEditionsToSave: Array.from(c),
+                            N.mutate({
+                              rgEditionsToSave: Array.from(_),
                               mapGraphicsToUpload: e,
-                              mapAltText: h,
+                              mapAltText: b,
                               rgGraphicsToDelete: t,
                             }),
                             a("alert");
@@ -282,7 +284,7 @@
                       "button",
                       {
                         onClick: () => {
-                          g(new S(o)), a("closed");
+                          g(new S(c)), a("closed");
                         },
                       },
                       (0, l.we)("#StoreAdmin_EditEditions_CancelButton"),
@@ -315,7 +317,7 @@
                     n.createElement(
                       "div",
                       { className: i.EditionsEditorSaveStatus },
-                      R.isPending &&
+                      N.isPending &&
                         n.createElement(
                           n.Fragment,
                           null,
@@ -323,7 +325,7 @@
                           " ",
                           (0, l.we)("#StoreAdmin_EditEditions_Saving"),
                         ),
-                      !R.isPending &&
+                      !N.isPending &&
                         n.createElement(
                           "span",
                           null,
@@ -364,7 +366,12 @@
               null,
               n.createElement(
                 "div",
-                { className: i.EditionsEditorRow },
+                {
+                  className: (0, o.A)(
+                    i.EditionsEditorRow,
+                    R && i.ImageProvided,
+                  ),
+                },
                 "closed" === t &&
                   n.createElement(
                     n.Fragment,
@@ -379,13 +386,13 @@
                         "#StoreAdmin_EditEditions_ManageEditionsButton",
                       ),
                     ),
-                    c?.size > 0
+                    _?.size > 0
                       ? n.createElement(
                           "span",
                           null,
                           (0, l.we)(
                             "#StoreAdmin_EditEditions_ManageEditionsDescription",
-                            c.size,
+                            _.size,
                           ),
                         )
                       : n.createElement(
@@ -398,11 +405,22 @@
                     n.createElement(
                       "span",
                       null,
-                      (0, l.we)(
-                        f
-                          ? "#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic"
-                          : "#StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic",
-                      ),
+                      R
+                        ? n.createElement(
+                            "span",
+                            {
+                              className: (0, o.A)(
+                                i.TaskDone,
+                                "icon_check_green",
+                              ),
+                            },
+                            (0, l.we)(
+                              "#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic",
+                            ),
+                          )
+                        : (0, l.we)(
+                            "#StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic",
+                          ),
                     ),
                   ),
                 "refreshing" === t &&
@@ -428,6 +446,23 @@
         return n.createElement(
           "div",
           { className: i.EditionPicker },
+          n.createElement(
+            "p",
+            null,
+            (0, l.oW)(
+              "#StoreAdmin_EditEditions_GroupEditionsIntro",
+              n.createElement("a", {
+                target: "_blank",
+                href: `${E.TS.PARTNER_BASE_URL}doc/store/manageeditions`,
+              }),
+            ),
+          ),
+          n.createElement("br", null),
+          n.createElement(
+            "h3",
+            null,
+            (0, l.we)("#StoreAdmin_EditEditions_StepNumber1"),
+          ),
           n.createElement(
             "p",
             null,
@@ -564,12 +599,17 @@
           "div",
           { className: i.LocalizedImageSelector },
           n.createElement(
+            "h3",
+            null,
+            (0, l.we)("#StoreAdmin_EditEditions_StepNumber2"),
+          ),
+          n.createElement(
             "p",
             null,
             (0, l.we)(
               "#StoreAdmin_EditEditions_UploadComparisonGraphicsDescription",
-              g,
               _,
+              g,
             ),
           ),
           n.createElement(
@@ -582,12 +622,12 @@
                 if (e.target.files && e.target.files[0]) {
                   const t = e.target.files[0],
                     n = await createImageBitmap(t);
-                  if (n.width !== g || n.height !== _)
+                  if (n.width !== _ || n.height !== g)
                     return void m(
                       (0, l.we)(
                         "#StoreAdmin_EditEditions_ImageSizeError",
-                        g,
                         _,
+                        g,
                         n.width,
                         n.height,
                       ),
@@ -634,12 +674,12 @@
                 ) {
                   const t = e.dataTransfer.files[0],
                     n = await createImageBitmap(t);
-                  if (n.width !== g || n.height !== _)
+                  if (n.width !== _ || n.height !== g)
                     return void m(
                       (0, l.we)(
                         "#StoreAdmin_EditEditions_ImageSizeError",
-                        g,
                         _,
+                        g,
                         n.width,
                         n.height,
                       ),
@@ -681,6 +721,11 @@
                   { className: i.DragAndDropDescriptionWithoutImage },
                   (0, l.we)("#StoreAdmin_EditEditions_DragAndDropHere"),
                 ),
+          ),
+          n.createElement(
+            "h3",
+            null,
+            (0, l.we)("#StoreAdmin_EditEditions_StepNumber3"),
           ),
           n.createElement(
             "label",
@@ -756,7 +801,7 @@
     },
     67045: (e, t, a) => {
       "use strict";
-      a.d(t, { M: () => x });
+      a.d(t, { M: () => O });
       var n = a(90626),
         i = a(63369),
         l = a(61859),
@@ -769,14 +814,14 @@
         p = a(20194),
         E = a(16676),
         u = a(99637),
-        g = a(9154),
-        _ = a(22797),
+        _ = a(9154),
+        g = a(22797),
         S = a(7860),
         h = a(61336),
         b = a(78327),
         A = a(39679),
         D = a(51780);
-      function C(e) {
+      function w(e) {
         const { appid: t, onClose: a, onCommit: i } = e,
           [r, s] = n.useState(null),
           {
@@ -804,23 +849,23 @@
             },
             [t, i, E],
           );
-        let g = n.createElement(R, { setOnOKButton: s, onCommit: u });
+        let _ = n.createElement(R, { setOnOKButton: s, onCommit: u });
         return (
           m
-            ? (g = n.createElement(N, {
+            ? (_ = n.createElement(N, {
                 strError: (0, l.we)("#Error_ErrorCommunicatingWithNetwork"),
               }))
-            : (!d && o) || (g = n.createElement(_.t, null)),
+            : (!d && o) || (_ = n.createElement(g.t, null)),
           n.createElement(
-            w.Provider,
+            C.Provider,
             { value: o },
-            n.createElement(k, { fnSubmit: r, fnCloseModal: a }, g),
+            n.createElement(k, { fnSubmit: r, fnCloseModal: a }, _),
           )
         );
       }
-      const w = n.createContext(null);
+      const C = n.createContext(null);
       function f() {
-        return n.useContext(w);
+        return n.useContext(C);
       }
       const R = n.memo(function (e) {
         const {
@@ -832,15 +877,15 @@
           { setOnOKButton: s, onCommit: o } = e,
           [d, m] = n.useState(i),
           [p, u] = n.useState(r || void 0),
-          [g, _] = n.useState("none"),
-          [S, C] = n.useState(),
-          w = n.useCallback((e) => {
-            C(e), _("none");
+          [_, g] = n.useState("none"),
+          [S, w] = n.useState(),
+          C = n.useCallback((e) => {
+            w(e), g("none");
           }, []),
           R = n.useCallback(() => {
             if (d)
               if (p) {
-                _("submitting"), C(null);
+                g("submitting"), w(null);
                 (async function (e) {
                   const {
                       unAppID: t,
@@ -865,21 +910,21 @@
                   strComingSoonDisplay: p,
                 })
                   .then(() => {
-                    _("refreshing"), o(d, p);
+                    g("refreshing"), o(d, p);
                   })
                   .catch((e) => {
-                    w(e);
+                    C(e);
                   });
               } else
-                w(
+                C(
                   (0, l.we)("#App_Landing_ReleaseDate_Error_ComingSoonDisplay"),
                 );
-            else w((0, l.we)("#App_Landing_ReleaseDate_Error_NoDate"));
-          }, [t, d, p, a, o, w]);
+            else C((0, l.we)("#App_Landing_ReleaseDate_Error_NoDate"));
+          }, [t, d, p, a, o, C]);
         return (
           n.useEffect(() => {
-            s("none" == g ? () => R : null);
-          }, [R, a, g, s]),
+            s("none" == _ ? () => R : null);
+          }, [R, a, _, s]),
           n.createElement(
             n.Fragment,
             null,
@@ -975,7 +1020,7 @@
             bCanUpdateComingSoonDate: !0,
           };
         return n.createElement(
-          g.mt,
+          _.mt,
           { active: !0, className: D.ReleaseDateModal, onDismiss: t },
           n.createElement(
             E.Y9,
@@ -1081,8 +1126,8 @@
             );
       }
       var y = a(52038),
-        O = a(96409);
-      function x(e) {
+        x = a(96409);
+      function O(e) {
         const {
             bIsGameEdit: t,
             unAppID: a,
@@ -1091,21 +1136,21 @@
           [d, c] = n.useState(e.rtReleaseDate),
           [m, p] = n.useState(e.strComingSoonDisplay),
           [E, u] = n.useState(!1),
-          [g, _] = n.useState(!1),
+          [_, g] = n.useState(!1),
           S = n.useCallback(() => u(!0), []),
           h = n.useCallback(() => u(!1), []),
           b = n.useCallback((e, t, a) => {
-            c(e), p(t), u(!1), a && _(!0);
+            c(e), p(t), u(!1), a && g(!0);
           }, []);
         return n.createElement(
           n.Fragment,
           null,
-          E && n.createElement(C, { appid: a, onClose: h, onCommit: b }),
-          g &&
+          E && n.createElement(w, { appid: a, onClose: h, onCommit: b }),
+          _ &&
             n.createElement(U, {
               appid: a,
               bIsGameEdit: t,
-              closeModal: () => _(!1),
+              closeModal: () => g(!1),
             }),
           n.createElement(
             "div",
@@ -1189,14 +1234,14 @@
             a
               ? (window.TabSelect("tab_publish"), window.scrollTo(0, 0))
               : (window.location.href =
-                  O.bI.GameEditByAppID(t.toString()) +
+                  x.bI.GameEditByAppID(t.toString()) +
                   "?activetab=tab_publish"),
               i();
           }, [t, a, i]);
         return n.createElement(
-          g.EN,
+          _.EN,
           { active: !0 },
-          n.createElement(g.o0, {
+          n.createElement(_.o0, {
             strTitle: (0, l.we)("#App_Landing_ReleaseDate_ChangesSaved"),
             strDescription: (0, l.we)(
               "#App_Landing_Release_PublishStorePrompt",

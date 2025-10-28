@@ -191,7 +191,7 @@
       };
     },
     73003: (e) => {
-      e.exports = { Ctn: "_2aeq1EsgEidbP1gObw4Bqg" };
+      e.exports = { SubMenuCtn: "_1QP7mh3IZ6mkLZFarqOI6K" };
     },
     59313: (e) => {
       e.exports = {
@@ -1146,17 +1146,17 @@
         B = n(30756),
         M = n(21529),
         x = n(52038),
-        R = n(78327),
-        U = n(73003),
-        O = n.n(U),
+        U = n(78327),
+        R = n(73003),
+        O = n.n(R),
         P = n(1276),
         F = n(45699);
       function H(e) {
         const { event: t, subMenu: n, language: a } = e,
-          l = (0, R.Qn)();
+          l = (0, U.Qn)();
         return r.createElement(
           "div",
-          { className: O().Ctn, style: { ...(0, P.Vb)(n, t, l) } },
+          { className: O().SubMenuCtn, style: { ...(0, P.Vb)(n, t, l) } },
           n.menu_items.map((e) =>
             r.createElement(z, {
               key: "submenuitem" + e.unique_id,
@@ -1262,7 +1262,7 @@
                   a &&
                     r.createElement("source", { src: a, type: "video/webm" }),
                   l &&
-                    !R.TS.IN_CLIENT &&
+                    !U.TS.IN_CLIENT &&
                     r.createElement("source", { src: l, type: "video/mp4" }),
                 ),
               )
@@ -1356,7 +1356,7 @@
                 "a",
                 {
                   className: K().SalePageLogoCtn,
-                  href: R.TS.STORE_BASE_URL + l,
+                  href: U.TS.STORE_BASE_URL + l,
                 },
                 r.createElement("img", {
                   src: t.GetImageURLWithFallback("sale_logo", n),
@@ -1438,87 +1438,79 @@
         ie = n(56011),
         se = n(30294),
         ce = n(6379),
-        ue = n(34629),
-        me = n(61257),
+        ue = n(61257),
+        me = n(4869),
         ge = n(57361),
-        de = n.n(ge),
-        pe = n(4869);
-      class _e extends r.Component {
-        state = { color: this.props.color || "rgba(255, 255, 255, 1)" };
-        static GetColorString(e) {
-          return `rgba(${e.rgb.r}, ${e.rgb.g}, ${e.rgb.b}, ${e.rgb.a})`;
-        }
-        OnColorChange(e) {
-          const t = _e.GetColorString(e);
-          this.setState({ color: t }), this.props.onChange(t);
-        }
-        async OnEyedropperClick() {
-          if ("EyeDropper" in window)
-            try {
-              const e = new window.EyeDropper(),
-                t = (await e.open()).sRGBHex,
-                n = this.hexToRgba(t);
-              this.setState({ color: n }), this.props.onChange(n);
-            } catch (e) {
-              console.warn((0, p.we)("#Sale_EyeDropperFailed"), e);
-            }
-          else alert((0, p.we)("#Sale_EyeDropperError"));
-        }
-        hexToRgba(e) {
-          const t = parseInt(e.slice(1), 16);
-          return `rgba(${(t >> 16) & 255}, ${(t >> 8) & 255}, ${255 & t}, 1)`;
-        }
-        render() {
-          return r.createElement(
+        de = n.n(ge);
+      function pe(e) {
+        const { color: t, onChange: n, strTitle: a, disableAlpha: l } = e,
+          [o, i] = (0, r.useState)(() => t || "rgba(255, 255, 255, 1)"),
+          s = (0, r.useCallback)(async () => {
+            if ("EyeDropper" in window)
+              try {
+                const e = new window.EyeDropper(),
+                  t = await e.open(),
+                  a = (function (e) {
+                    const t = parseInt(e.slice(1), 16);
+                    return `rgba(${(t >> 16) & 255}, ${(t >> 8) & 255}, ${255 & t}, 1)`;
+                  })(t.sRGBHex);
+                i(a), n(a);
+              } catch (e) {
+                console.warn((0, p.we)("#Sale_EyeDropperFailed"), e);
+              }
+            else alert((0, p.we)("#Sale_EyeDropperError"));
+          }, [n]);
+        return r.createElement(
+          "div",
+          null,
+          Boolean(a) && r.createElement(ae.JU, null, a),
+          r.createElement(ue.xk, {
+            onChange: (e) => {
+              const t = (function (e) {
+                return `rgba(${e.rgb.r}, ${e.rgb.g}, ${e.rgb.b}, ${e.rgb.a})`;
+              })(e);
+              i(t), n(t);
+            },
+            color: o,
+            disableAlpha: l,
+          }),
+          r.createElement(
             "div",
-            null,
-            r.createElement(me.xk, {
-              onChange: this.OnColorChange,
-              color: this.state.color,
-            }),
+            { className: de().EyeDropperCtn },
             r.createElement(
-              "div",
-              { className: de().EyeDropperCtn },
+              G.Gq,
+              { toolTipContent: (0, p.we)("#Sale_BackgroundColorPicker") },
               r.createElement(
-                G.Gq,
-                { toolTipContent: (0, p.we)("#Sale_BackgroundColorPicker") },
-                r.createElement(
-                  ae.$n,
-                  {
-                    className: de().EyeDropperBtn,
-                    onClick: this.OnEyedropperClick,
-                  },
-                  r.createElement(pe.O7b, null),
-                ),
+                ae.$n,
+                { className: de().EyeDropperBtn, onClick: s },
+                r.createElement(me.O7b, null),
               ),
             ),
-          );
-        }
+          ),
+        );
       }
-      (0, ue.Cg)([_.oI], _e.prototype, "OnColorChange", null),
-        (0, ue.Cg)([_.oI], _e.prototype, "OnEyedropperClick", null);
-      var Ee = n(95695),
-        ve = n.n(Ee),
-        be = n(13447),
-        we = n.n(be),
-        Ie = n(32190),
-        he = n.n(Ie),
-        fe = n(17720),
-        Se = n(28954),
-        Ce = n(86355),
-        ke = n(68359),
-        De = n(69343),
-        ye = n(68797),
-        Ge = n(75844),
-        Te = n(2160),
-        Le = n(64953),
-        Ne = n(72739);
-      function Ae(e) {
+      var _e = n(95695),
+        Ee = n.n(_e),
+        ve = n(13447),
+        be = n.n(ve),
+        we = n(32190),
+        Ie = n.n(we),
+        he = n(17720),
+        fe = n(28954),
+        Se = n(86355),
+        Ce = n(68359),
+        ke = n(69343),
+        De = n(68797),
+        ye = n(75844),
+        Ge = n(2160),
+        Te = n(64953),
+        Le = n(72739);
+      function Ne(e) {
         e.preventDefault();
       }
-      var Be = n(71647),
-        Me = n.n(Be);
-      function xe(e) {
+      var Ae = n(71647),
+        Be = n.n(Ae);
+      function Me(e) {
         const {
             onDropFiles: t,
             renderDesciption: n,
@@ -1539,7 +1531,7 @@
                   ie.NO(e) && n(!1);
                 }, []),
                 onDragEnd: r.useCallback(() => n(!1), []),
-                onDragOver: t ? Ae : void 0,
+                onDragOver: t ? Ne : void 0,
                 onDrop: r.useCallback(
                   (t) => {
                     t.dataTransfer.files?.length &&
@@ -1565,10 +1557,10 @@
               ),
               l = r.useCallback(() => n.current.click(), []);
             return [
-              Ne.createPortal(
+              Le.createPortal(
                 r.createElement(
                   "form",
-                  { onSubmit: Ae, style: { display: "none" } },
+                  { onSubmit: Ne, style: { display: "none" } },
                   r.createElement("input", {
                     ...t,
                     type: "file",
@@ -1589,7 +1581,7 @@
           {
             ...o,
             className: (0, x.A)(
-              i ? Me().DragAndDropContainerDragging : Me().DragAndDropContainer,
+              i ? Be().DragAndDropContainerDragging : Be().DragAndDropContainer,
               "DragAndDropContainer",
             ),
           },
@@ -1601,7 +1593,7 @@
           ),
           r.createElement(
             "div",
-            { className: Me().ImageUploadBar },
+            { className: Be().ImageUploadBar },
             s,
             r.createElement(
               "label",
@@ -1614,7 +1606,7 @@
               ),
               r.createElement(
                 "span",
-                { className: Me().SelectImageButton },
+                { className: Be().SelectImageButton },
                 (0, p.we)("#selectimage_select_file"),
               ),
             ),
@@ -1623,11 +1615,11 @@
           e.children,
         );
       }
-      var Re = n(66331),
+      var xe = n(66331),
         Ue = n(27344),
-        Oe = n.n(Ue),
-        Pe = n(78511);
-      function Fe(e) {
+        Re = n.n(Ue),
+        Oe = n(78511);
+      function Pe(e) {
         const {
             imageUploader: t,
             fnUploadComplete: n,
@@ -1646,9 +1638,9 @@
                 a = !0;
               for (let e = 0; e < n.length; e++) {
                 const l = n[e],
-                  { language: o } = (0, De.jj)(l?.name, u);
+                  { language: o } = (0, ke.jj)(l?.name, u);
                 try {
-                  const n = (0, De.PD)(o, u, s);
+                  const n = (0, ke.PD)(o, u, s);
                   (a = await t.AddImageForLanguage(l, n)),
                     a ||
                       (console.error(
@@ -1667,7 +1659,7 @@
                         window,
                       ));
                 } catch (e) {
-                  let t = (0, ye.H)(e);
+                  let t = (0, De.H)(e);
                   console.error(
                     "ImageUploaderPanel.OnDropFiles: " + t.strErrorMsg,
                     t,
@@ -1704,7 +1696,7 @@
           c.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
         );
         return r.createElement(
-          xe,
+          Me,
           {
             onDropFiles: m,
             elAdditonalButtons: g,
@@ -1715,9 +1707,9 @@
             null,
             r.createElement(
               "div",
-              { className: Oe().UploadPreviewCtn },
+              { className: Re().UploadPreviewCtn },
               c.map((e) =>
-                r.createElement(ze, {
+                r.createElement(He, {
                   key: "arttabupload_" + e.filename + "_" + e.uploadTime,
                   asset: e,
                   forceResolution: o,
@@ -1727,7 +1719,7 @@
               ),
             ),
           ),
-          r.createElement(He, {
+          r.createElement(Fe, {
             imageUploader: t,
             fnOnUploadImageRequested: async () => {
               const e = await t.UploadAllImages(o);
@@ -1736,7 +1728,7 @@
           }),
         );
       }
-      function He(e) {
+      function Fe(e) {
         const { imageUploader: t, fnOnUploadImageRequested: n } = e,
           [l] = (0, a.q3)(() => [t.GetUploadImages()]),
           o = l.some((e) => "pending" == e.status),
@@ -1750,7 +1742,7 @@
           "div",
           {
             style: { display: "flex" },
-            className: Oe().UploadPreviewButtonsCtn,
+            className: Re().UploadPreviewButtonsCtn,
           },
           Boolean(l.length) &&
             r.createElement(
@@ -1766,7 +1758,7 @@
             ),
         );
       }
-      const ze = (0, Ge.PA)(function (e) {
+      const He = (0, ye.PA)(function (e) {
         const { asset: t, fnOnRemove: n, languageRealms: a } = e,
           l = t.ImageOptions?.map((e) => {
             let n,
@@ -1778,7 +1770,7 @@
                 (n = (0, p.we)("#ImageUpload_Deprecated_ttip"))),
               (t.BIsOriginalMinimumDimensions(e) &&
                 t.FileTypeMatchesImageTypes(e)) ||
-                (a = Oe().ImageDimensionTooSmall);
+                (a = Re().ImageDimensionTooSmall);
             return { label: r, data: e, strOptionClass: a, tooltip: n };
           }).filter((e) => !e.data.bHiddenFromDropdown),
           o = {
@@ -1804,7 +1796,7 @@
                   n
                 );
               })(
-                p.A0.GetLanguageListForRealms(a ?? [Te.TU.k_ESteamRealmGlobal]),
+                p.A0.GetLanguageListForRealms(a ?? [Ge.TU.k_ESteamRealmGlobal]),
               )
             : null,
           s = t.IsValidAssetType(e.forceResolution, e.forceFileType),
@@ -1820,16 +1812,16 @@
         m || (m = l?.[0]?.data);
         return r.createElement(
           "div",
-          { className: Oe().UploadPreview },
+          { className: Re().UploadPreview },
           r.createElement(
             "div",
-            { className: Oe().UploadPreviewDelete, onClick: () => n(t) },
+            { className: Re().UploadPreviewDelete, onClick: () => n(t) },
             r.createElement(S.sED, null),
           ),
-          r.createElement(je, { asset: t }),
+          r.createElement(ze, { asset: t }),
           i &&
             r.createElement(ae.m, {
-              strDropDownClassName: ve().DropDownScroll,
+              strDropDownClassName: Ee().DropDownScroll,
               rgOptions: i,
               selectedOption: t.language,
               onChange: (e) => (t.language = e.data),
@@ -1848,7 +1840,7 @@
             s.warnings?.map((e, t) =>
               r.createElement(
                 "div",
-                { key: `warning${t}`, className: Oe().UploadPreviewWarning },
+                { key: `warning${t}`, className: Re().UploadPreviewWarning },
                 e,
               ),
             ),
@@ -1856,7 +1848,7 @@
             s.messages?.map((e, t) =>
               r.createElement(
                 "div",
-                { key: `message${t}`, className: Oe().UploadPreviewMessage },
+                { key: `message${t}`, className: Re().UploadPreviewMessage },
                 e,
               ),
             ),
@@ -1864,12 +1856,12 @@
             "div",
             {
               className: (0, x.A)({
-                [ve().FlexColumnContainer]: !0,
-                [Oe().UploadPreviewError]: "failed" == t.status,
+                [Ee().FlexColumnContainer]: !0,
+                [Re().UploadPreviewError]: "failed" == t.status,
               }),
             },
             u,
-            (0, Pe.o)(t.status) &&
+            (0, Oe.o)(t.status) &&
               r.createElement(
                 "div",
                 { className: y().FlexCenter },
@@ -1878,14 +1870,14 @@
           ),
           r.createElement(
             "div",
-            { className: Oe().UploadPreviewError },
+            { className: Re().UploadPreviewError },
             t.message,
           ),
           c &&
             s.error &&
             r.createElement(
               "div",
-              { className: Oe().UploadPreviewError },
+              { className: Re().UploadPreviewError },
               s.error,
             ),
           c &&
@@ -1895,10 +1887,10 @@
               {
                 onClick: () =>
                   ((t) => {
-                    if (t instanceof Le.M7) {
+                    if (t instanceof Te.M7) {
                       t.ResetImage();
                       const n = window,
-                        a = r.createElement(Re.q, {
+                        a = r.createElement(xe.q, {
                           ownerWin: n,
                           uploadFile: t,
                           forceResolution: e.forceResolution,
@@ -1919,19 +1911,19 @@
             ),
         );
       });
-      function je(e) {
+      function ze(e) {
         const { asset: t } = e;
         return t.BIsVideo()
           ? r.createElement(
               "div",
               {
-                className: Oe().PreviewImgCtn,
+                className: Re().PreviewImgCtn,
                 onClick: (e) =>
-                  (0, le.pg)(r.createElement(We, { asset: t }), (0, ie.uX)(e)),
+                  (0, le.pg)(r.createElement(je, { asset: t }), (0, ie.uX)(e)),
               },
               r.createElement(
                 "span",
-                { className: Oe().PreviewImgInfo },
+                { className: Re().PreviewImgInfo },
                 t.width,
                 " x ",
                 t.height,
@@ -1951,19 +1943,19 @@
           : r.createElement(
               "div",
               {
-                className: Oe().PreviewImgCtn,
+                className: Re().PreviewImgCtn,
                 style: { backgroundImage: `url(${t.dataUrl})` },
               },
               r.createElement(
                 "span",
-                { className: Oe().PreviewImgInfo },
+                { className: Re().PreviewImgInfo },
                 t.width,
                 " x ",
                 t.height,
               ),
             );
       }
-      function We(e) {
+      function je(e) {
         const { asset: t, closeModal: n } = e;
         return r.createElement(
           re.o0,
@@ -1975,28 +1967,28 @@
           ),
         );
       }
-      var qe;
+      var We;
       !(function (e) {
         (e[(e.k_eInsertThumbnail = 1)] = "k_eInsertThumbnail"),
           (e[(e.k_eInsertFullImage = 2)] = "k_eInsertFullImage"),
           (e[(e.k_eShowImageGroup = 3)] = "k_eShowImageGroup"),
           (e[(e.k_eInsertVideo = 4)] = "k_eInsertVideo");
-      })(qe || (qe = {}));
-      var Ve = n(60746),
-        Ye = n(29347),
-        Qe = n(96236),
-        Ze = n(53732),
-        Ke = n.n(Ze),
-        Xe = n(49460);
-      function Je(e) {
+      })(We || (We = {}));
+      var qe = n(60746),
+        Ve = n(29347),
+        Ye = n(96236),
+        Qe = n(53732),
+        Ze = n.n(Qe),
+        Ke = n(49460);
+      function Xe(e) {
         const { fnSetImageSearch: t } = e,
           n = (0, r.useRef)(null);
         return r.createElement(
           "div",
-          { className: Xe.PickerTitle },
+          { className: Ke.PickerTitle },
           r.createElement("input", {
             ref: n,
-            className: Xe.SearchInput,
+            className: Ke.SearchInput,
             type: "text",
             placeholder: (0, p.we)("#ImagePicker_Search"),
             onChange: (e) => t(e.currentTarget.value),
@@ -2006,7 +1998,7 @@
           }),
         );
       }
-      const $e = r.memo(function (e) {
+      const Je = r.memo(function (e) {
         const {
           fileNameSearch: t,
           clanAccountID: n,
@@ -2016,11 +2008,11 @@
           InternalOpenLocalizeImageGroup: i,
         } = e;
         return r.createElement(
-          et,
+          $e,
           { clanAccountID: n, fileNameSearch: t },
           (e, t) =>
             e.map((e) =>
-              r.createElement(tt, {
+              r.createElement(et, {
                 key: e.imageid,
                 clanImage: e,
                 searchStringHilight: t,
@@ -2032,20 +2024,20 @@
             ),
         );
       });
-      function et(e) {
+      function $e(e) {
         const { clanAccountID: t, fileNameSearch: n, children: a } = e,
-          l = (0, Ce.n9)(t),
+          l = (0, Se.n9)(t),
           o = n.trim().toLowerCase() || "",
-          i = Ce.pU.GetFilteredClanImagesList(l, o);
+          i = Se.pU.GetFilteredClanImagesList(l, o);
         if (0 == i.length) {
-          const e = fe.b.InitFromClanID(t);
-          let n = Ce.pU.GetLoadState(e);
+          const e = he.b.InitFromClanID(t);
+          let n = Se.pU.GetLoadState(e);
           return n && n.loaded
             ? r.createElement(
                 "div",
                 {
                   key: "ImagePicker_Result",
-                  className: Ke().ResultNotification,
+                  className: Ze().ResultNotification,
                 },
                 o.length > 0
                   ? (0, p.we)("#ImagePicker_EmptySearch")
@@ -2054,21 +2046,21 @@
             : n && n.errMsg
               ? r.createElement(
                   "div",
-                  { key: "ImagePicker_Result", className: Ke().ErrorCode },
+                  { key: "ImagePicker_Result", className: Ze().ErrorCode },
                   (0, p.we)("#ImagePicker_Error", n.errMsg),
                 )
               : r.createElement(
                   "div",
                   {
                     key: "ImagePicker_Result",
-                    className: Ke().ResultNotification,
+                    className: Ze().ResultNotification,
                   },
                   (0, p.we)("#Loading"),
                 );
         }
         return a(i, o);
       }
-      function tt(e) {
+      function et(e) {
         const {
             clanImage: t,
             searchStringHilight: n,
@@ -2078,7 +2070,7 @@
             fnOnOpenLocalizedImageGroup: i,
           } = e,
           [s, c] = r.useState(!1),
-          u = () => a(t, qe.k_eInsertFullImage),
+          u = () => a(t, We.k_eInsertFullImage),
           m = (e) => {
             console.log("ClanImageWrapper on delete error: " + e),
               (0, le.pg)(
@@ -2097,52 +2089,52 @@
           },
           g = () => {
             c(!0);
-            let e = fe.b.InitFromClanID(t.clanAccountID);
-            Ce.pU
+            let e = he.b.InitFromClanID(t.clanAccountID);
+            Se.pU
               .DeleteClanImage(e, t)
               .then((e) => {
-                1 != e.success && m((0, ye.H)(e).strErrorMsg), c(!1);
+                1 != e.success && m((0, De.H)(e).strErrorMsg), c(!1);
               })
               .catch((e) => {
-                m((0, ye.H)(e).strErrorMsg), c(!1);
+                m((0, De.H)(e).strErrorMsg), c(!1);
               }),
               d();
           },
           d = () => {},
           _ = t.file_name ? t.file_name : "",
-          E = (0, Ye.r)(n, _, String(t.imageid), Ke().Hilight),
+          E = (0, Ve.r)(n, _, String(t.imageid), Ze().Hilight),
           v = w.z.BIsClanImageVideo(t),
           b = o && !s && !v,
           I = o && !s && !v,
           h = o && !s && v,
           f = o && !s && !v;
         return r.createElement(
-          Qe.K,
+          Ye.K,
           {
             placeholderHeight: "100vh",
-            className: Ke().ImageWrapperContainer,
+            className: Ze().ImageWrapperContainer,
             rootMargin: "0px 0px 100% 0px",
           },
           r.createElement(
             "div",
-            { className: Ke().ImageButton },
+            { className: Ze().ImageButton },
             r.createElement(
               "div",
               {
-                className: Ke().ImageWrapper,
+                className: Ze().ImageWrapper,
                 style: { backgroundImage: v ? "" : `url( '${t.thumb_url}' )` },
                 draggable: !0,
                 onDragStart: (e) => {
                   t.url &&
                     (e.dataTransfer.setData("text", t.url),
-                    Ce.pU.GetClanImageDragListener().forEach((e) => {
-                      e(fe.b.InitFromClanID(t.clanAccountID), !0);
+                    Se.pU.GetClanImageDragListener().forEach((e) => {
+                      e(he.b.InitFromClanID(t.clanAccountID), !0);
                     }));
                 },
                 onDragEnd: (e) => {
                   t.url &&
-                    Ce.pU.GetClanImageDragListener().forEach((e) => {
-                      e(fe.b.InitFromClanID(t.clanAccountID), !1);
+                    Se.pU.GetClanImageDragListener().forEach((e) => {
+                      e(he.b.InitFromClanID(t.clanAccountID), !1);
                     });
                 },
                 onDoubleClick: u,
@@ -2150,34 +2142,34 @@
                   l && l(t);
                 },
               },
-              r.createElement(at, {
+              r.createElement(nt, {
                 clanImage: t,
-                className: Ke().VideoBackground,
+                className: Ze().VideoBackground,
               }),
             ),
             b &&
               r.createElement(
                 "span",
-                { className: Ke().Full, onClick: u },
+                { className: Ze().Full, onClick: u },
                 (0, p.we)("#ImagePicker_FullSize"),
               ),
             s &&
               r.createElement($.t, {
                 size: "medium",
-                className: Ke().FloatingThrobber,
+                className: Ze().FloatingThrobber,
               }),
             I &&
               r.createElement(
                 "span",
                 {
-                  className: Ke().Thumb,
-                  onClick: () => a(t, qe.k_eInsertThumbnail),
+                  className: Ze().Thumb,
+                  onClick: () => a(t, We.k_eInsertThumbnail),
                 },
                 (0, p.we)("#ImagePicker_Thumbnail"),
               ),
             f &&
               i &&
-              r.createElement(nt, {
+              r.createElement(tt, {
                 bDeleting: s,
                 clanImage: t,
                 fnOnOpenLocalizedImageGroup: i,
@@ -2186,8 +2178,8 @@
               r.createElement(
                 "span",
                 {
-                  className: Ke().Full,
-                  onClick: () => a(t, qe.k_eInsertVideo),
+                  className: Ze().Full,
+                  onClick: () => a(t, We.k_eInsertVideo),
                 },
                 (0, p.we)("#ImagePicker_Video"),
               ),
@@ -2195,7 +2187,7 @@
               r.createElement(
                 "span",
                 {
-                  className: Ke().Delete,
+                  className: Ze().Delete,
                   onClick: (e) => {
                     (0, le.pg)(
                       r.createElement(
@@ -2235,31 +2227,31 @@
               ),
             r.createElement(
               "div",
-              { className: Ke().ImageWrapperFilename, title: _ },
+              { className: Ze().ImageWrapperFilename, title: _ },
               E,
             ),
           ),
         );
       }
-      function nt(e) {
+      function tt(e) {
         const {
             clanImage: t,
             fnOnOpenLocalizedImageGroup: n,
             bDeleting: a,
           } = e,
-          l = (0, Ve.Ec)(t.clanAccountID);
+          l = (0, qe.Ec)(t.clanAccountID);
         return a || !l.valve_admin
           ? null
           : r.createElement(
               "span",
               {
-                className: (0, x.A)(Ke().Localized, ve().ValveOnlyBackground),
+                className: (0, x.A)(Ze().Localized, Ee().ValveOnlyBackground),
                 onClick: () => n?.(t),
               },
               "(VO) " + (0, p.we)("#ImagePicker_Localized"),
             );
       }
-      function at(e) {
+      function nt(e) {
         const { clanImage: t, className: n } = e;
         return w.z.BIsClanImageVideo(t)
           ? r.createElement(
@@ -2272,7 +2264,7 @@
             )
           : null;
       }
-      function rt(e) {
+      function at(e) {
         const { clanSteamID: t, closeModal: n, OnClanImageSelected: a } = e,
           l = r.useCallback(
             (e, t) => {
@@ -2290,8 +2282,8 @@
             onOK: n,
             onCancel: n,
           },
-          r.createElement(Je, { fnSetImageSearch: i }),
-          r.createElement($e, {
+          r.createElement(Xe, { fnSetImageSearch: i }),
+          r.createElement(Je, {
             clanAccountID: t.GetAccountID(),
             fileNameSearch: o,
             imageInsertCallBack: l,
@@ -2299,11 +2291,11 @@
           }),
         );
       }
-      function lt(e) {
+      function rt(e) {
         const { clanSteamID: t, OnClanImageSelected: n } = e;
         return r.createElement(
           "div",
-          { className: Me().ImageUploadBar },
+          { className: Be().ImageUploadBar },
           r.createElement(
             "label",
             { htmlFor: "clanimagedialog" },
@@ -2315,7 +2307,7 @@
             ),
             r.createElement(
               "span",
-              { className: Me().SelectImageButton },
+              { className: Be().SelectImageButton },
               (0, p.we)("#ImagePicker_PreviousImages2"),
             ),
           ),
@@ -2325,14 +2317,14 @@
             type: "button",
             onClick: (e) => {
               (0, le.pg)(
-                r.createElement(rt, { clanSteamID: t, OnClanImageSelected: n }),
+                r.createElement(at, { clanSteamID: t, OnClanImageSelected: n }),
                 (0, ie.uX)(e) ?? window,
               );
             },
           }),
         );
       }
-      function ot(e) {
+      function lt(e) {
         const {
             clanSteamID: t,
             rgSupportArtwork: n,
@@ -2342,7 +2334,7 @@
             rgRealmList: s,
           } = e,
           [c] = (0, a.q3)(() => [d.O.Get().GetCurEditLanguage()]),
-          u = (0, Se.zO)(t, n, l),
+          u = (0, fe.zO)(t, n, l),
           m = e.uploaderOverride || u,
           [g, _] = r.useState(!1),
           E = r.useCallback(
@@ -2350,11 +2342,11 @@
               if (!g) {
                 _(!0);
                 try {
-                  const { language: t } = (0, De.jj)(e.file_name ?? "", c),
-                    n = (0, De.PD)(t, c, s);
+                  const { language: t } = (0, ke.jj)(e.file_name ?? "", c),
+                    n = (0, ke.PD)(t, c, s);
                   await m.AddExistingClanImage(e, n);
                 } catch (e) {
-                  let t = (0, ye.H)(e);
+                  let t = (0, De.H)(e);
                   console.error("AddExistingClanImage: " + t.strErrorMsg, t),
                     (0, le.pg)(
                       r.createElement(re.KG, {
@@ -2376,7 +2368,7 @@
               o
                 ? [
                     [
-                      r.createElement(lt, {
+                      r.createElement(rt, {
                         key: "clanartworkpicker",
                         clanSteamID: t,
                         OnClanImageSelected: E,
@@ -2386,7 +2378,7 @@
                 : null,
             [E, o, t],
           );
-        return r.createElement(Fe, {
+        return r.createElement(Pe, {
           ...e,
           imageUploader: m,
           rgRealmList: s,
@@ -2404,13 +2396,13 @@
             for (const n of e) {
               const e = n.uploadResult;
               if (e?.origimagehash) {
-                const t = (0, De.PD)(e.language, c, s);
-                ke.R.AddLocalizeImageUploaded(e.origimagehash, t);
+                const t = (0, ke.PD)(e.language, c, s);
+                Ce.R.AddLocalizeImageUploaded(e.origimagehash, t);
               } else {
-                const a = Ce.pU.GetClanImageByImageHash(t, e?.image_hash ?? ""),
+                const a = Se.pU.GetClanImageByImageHash(t, e?.image_hash ?? ""),
                   r = n.image.GetCurrentImageOption();
                 if (a && r) {
-                  const e = (0, De.PD)(n.image.language, c, s);
+                  const e = (0, ke.PD)(n.image.language, c, s);
                   i(r.artworkType, a, e);
                 }
               }
@@ -2418,7 +2410,8 @@
           },
         });
       }
-      var it = n(14947),
+      var ot = n(34629),
+        it = n(14947),
         st = n(73744),
         ct = n(55263),
         ut = n(25359),
@@ -2434,7 +2427,7 @@
             fnLangHasData: s,
           } = e,
           [c, u] = (0, r.useState)(l),
-          m = fe.b.InitFromClanID(t.clanAccountID),
+          m = he.b.InitFromClanID(t.clanAccountID),
           g = (0, a.q3)(() =>
             w.z.GenerateURLFromHashAndExt(m, w.z.GetHashAndExt(t) ?? ""),
           );
@@ -2449,7 +2442,7 @@
           },
           r.createElement(
             "div",
-            { className: (0, x.A)(ve().FlexColumnContainer, mt().ReassignCtn) },
+            { className: (0, x.A)(Ee().FlexColumnContainer, mt().ReassignCtn) },
             r.createElement(
               "div",
               { className: mt().ImagePreviewContainer },
@@ -2490,12 +2483,12 @@
           fnLangHasData: a,
           fnOnRemoveImage: l,
         } = e;
-        (0, Ce.mr)(t.GetAccountID());
+        (0, Se.mr)(t.GetAccountID());
         const o = r.useMemo(() => {
           let e = new Array();
           const t = p.A0.GetLanguageListForRealms([
-            Te.TU.k_ESteamRealmGlobal,
-            Te.TU.k_ESteamRealmChina,
+            Ge.TU.k_ESteamRealmGlobal,
+            Ge.TU.k_ESteamRealmChina,
           ]);
           for (const a of t) {
             const t = n(a);
@@ -2558,13 +2551,13 @@
             fnOnRemoveImage: m,
           } = e,
           [d, _] = (0, a.q3)(() => {
-            const e = Ce.pU.GetClanImageByImageHash(t, n.imgHash);
+            const e = Se.pU.GetClanImageByImageHash(t, n.imgHash);
             let a = "";
             e &&
               (a = w.z.GenerateURLFromHashAndExtAndLang(
                 t,
                 w.z.GetHashAndExt(e),
-                Ce.wI.full,
+                Se.wI.full,
                 n.lang,
               ));
             let r = mt().LanguageSelectorSelected;
@@ -2621,7 +2614,7 @@
               !e || !e.includes("."),
               "ChangeLanguageButton: Unexpected File Extension: " + e,
             );
-            return Ce.pU.GetClanImageByImageHash(t, e);
+            return Se.pU.GetClanImageByImageHash(t, e);
           });
         if (d)
           return r.createElement(
@@ -2711,7 +2704,7 @@
             },
             [t, l],
           ),
-          d = c || (0, g.sf)(R.TS.LANGUAGE),
+          d = c || (0, g.sf)(U.TS.LANGUAGE),
           [p, _, E, v] = (0, a.q3)(() => [
             t.GetSummaryWithFallback(d),
             t.GetNameWithFallback(d),
@@ -2722,22 +2715,22 @@
         (b =
           void 0 !== n
             ? [n]
-            : 2434320 == t.appid || 2 == R.TS.EUNIVERSE
+            : 2434320 == t.appid || 2 == U.TS.EUNIVERSE
               ? u
                 ? t.GetImageForSizeAsArrayWithFallback(
                     "localized_store_app_spotlight_mobile",
                     d,
-                    Ce.wI.full,
+                    Se.wI.full,
                   )
                 : t.GetImageForSizeAsArrayWithFallback(
                     "localized_store_app_spotlight",
                     d,
-                    Ce.wI.full,
+                    Se.wI.full,
                   )
               : t.GetImageForSizeAsArrayWithFallback(
                   "spotlight",
                   d,
-                  Ce.wI.spotlight_main,
+                  Se.wI.spotlight_main,
                 )),
           s && (b = s(b));
         const w = p.replace(/https:\/\/[^ ]*/gi, "").trimLeft();
@@ -2813,7 +2806,7 @@
       }
       var Mt = n(79949),
         xt = n.n(Mt);
-      function Rt(e) {
+      function Ut(e) {
         const {
             langOverride: t,
             artworkType: n,
@@ -2829,7 +2822,7 @@
           } = e,
           _ = d(n, t),
           E = _
-            ? w.z.GenerateURLFromHashAndExtAndLang(o, _, Ce.wI.full, t)
+            ? w.z.GenerateURLFromHashAndExtAndLang(o, _, Se.wI.full, t)
             : "",
           [v] = (0, a.q3)(() => [qt(n, d)]);
         return 0 == v
@@ -2839,13 +2832,13 @@
               "capsule" === n &&
                 r.createElement(Ot, {
                   imgURL:
-                    R.TS.IMG_URL + "events/defaults/default_img_cover.jpg",
+                    U.TS.IMG_URL + "events/defaults/default_img_cover.jpg",
                   eventModel: i,
                 }),
               "background" === n &&
                 r.createElement(Pt, {
                   imgURL:
-                    R.TS.IMG_URL + "events/defaults/default_img_header.jpg",
+                    U.TS.IMG_URL + "events/defaults/default_img_header.jpg",
                   lang: t,
                   eventModel: i,
                   partnerEventStore: s,
@@ -2857,7 +2850,7 @@
                   "localized_store_app_spotlight_mobile",
                 ].includes(n),
               ) &&
-                r.createElement(Ut, {
+                r.createElement(Rt, {
                   langOverride: t,
                   artworkType: n,
                   eventModel: i,
@@ -2897,10 +2890,10 @@
                 }),
               "sale_header" === n && r.createElement(zt, { imgURL: E }),
               "sale_overlay" === n && r.createElement(jt, { imgURL: E }),
-              Ce.pb.includes(n) &&
+              Se.pb.includes(n) &&
                 r.createElement("img", {
                   className: It.PreviewImg,
-                  src: ke.R.GetLocalizedImageGroupForEditAsURL(o, t) ?? void 0,
+                  src: Ce.R.GetLocalizedImageGroupForEditAsURL(o, t) ?? void 0,
                 }),
               "product_banner" === n && r.createElement(Wt, { imgURL: E }),
               "product_mobile_banner" === n &&
@@ -2921,7 +2914,7 @@
               }),
             );
       }
-      function Ut(e) {
+      function Rt(e) {
         const { artworkType: t, langOverride: n, eventModel: a } = e,
           l = st.Fj[t],
           o = r.useMemo(
@@ -3224,7 +3217,7 @@
                         r.createElement(
                           "a",
                           {
-                            href: `${R.TS.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
+                            href: `${U.TS.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
                           },
                           (0, p.we)("#PartnerEvent_MM_LearnMore"),
                         ),
@@ -3317,7 +3310,7 @@
                         null,
                         r.createElement(
                           "div",
-                          { className: ve().EventElementRequired },
+                          { className: Ee().EventElementRequired },
                           (0, p.we)("#selectimage_tip_required_title"),
                         ),
                         r.createElement(
@@ -3408,7 +3401,7 @@
                                       "a",
                                       {
                                         href: Vt,
-                                        target: R.TS.IN_CLIENT
+                                        target: U.TS.IN_CLIENT
                                           ? void 0
                                           : "_blank",
                                       },
@@ -3423,7 +3416,7 @@
                                   null,
                                   r.createElement(
                                     "div",
-                                    { className: ve().EventElementOptional },
+                                    { className: Ee().EventElementOptional },
                                     (0, p.we)(
                                       "#selectimage_tip_optional_title",
                                     ),
@@ -3450,7 +3443,7 @@
                                     null,
                                     r.createElement(
                                       "div",
-                                      { className: ve().EventElementOptional },
+                                      { className: Ee().EventElementOptional },
                                       (0, p.we)(
                                         "#selectimage_tip_optional_title",
                                       ),
@@ -3523,7 +3516,7 @@
                                           "div",
                                           {
                                             className:
-                                              ve().EventElementOptional,
+                                              Ee().EventElementOptional,
                                           },
                                           (0, p.we)(
                                             "#selectimage_tip_optional_title",
@@ -3552,7 +3545,7 @@
                                           "div",
                                           {
                                             className:
-                                              ve().EventElementRequired,
+                                              Ee().EventElementRequired,
                                           },
                                           (0, p.we)(
                                             "#selectimage_tip_required_title",
@@ -3727,7 +3720,7 @@
                   style: { textTransform: "uppercase", width: "200px" },
                   onClick: () =>
                     window.open(
-                      `${R.TS.PARTNER_BASE_URL}admin/game/editbyappid/${c}?activetab=tab_graphicalassets`,
+                      `${U.TS.PARTNER_BASE_URL}admin/game/editbyappid/${c}?activetab=tab_graphicalassets`,
                     ),
                 },
                 (0, p.we)("#ImageUpload_EditHeroImage"),
@@ -3753,7 +3746,7 @@
                       mt().MainPreviewBlock,
                     ),
                   },
-                  r.createElement(Rt, {
+                  r.createElement(Ut, {
                     eventModel: s,
                     clanSteamID: a,
                     fnOnLanguagePreviewChange: (e) => {
@@ -3808,7 +3801,7 @@
                   "div",
                   {
                     key: "img_lang_" + t.clanImage.imageid + "_" + a,
-                    className: ve().FlexRowContainer,
+                    className: Ee().FlexRowContainer,
                   },
                   r.createElement(
                     "span",
@@ -3837,8 +3830,8 @@
           return r.createElement("div", { className: mt().UploadSuccess }, t);
         }
       };
-      (0, ue.Cg)([_.oI], Xt.prototype, "ShowLangChangeDialog", null),
-        (Xt = (0, ue.Cg)([Ge.PA], Xt));
+      (0, ot.Cg)([_.oI], Xt.prototype, "ShowLangChangeDialog", null),
+        (Xt = (0, ot.Cg)([ye.PA], Xt));
       var Jt = n(82705);
       function $t(e) {
         const {
@@ -3854,40 +3847,40 @@
             partnerEventStore: g,
           } = e,
           [d, _] = (0, r.useState)(!1),
-          E = (0, Se.zO)(t, s),
+          E = (0, fe.zO)(t, s),
           v = t.GetAccountID(),
           [b] = (0, a.q3)(() => [
             E.GetFilesToUpload().length - E.GetCompletedFiles(),
           ]);
         (0, r.useEffect)(() => {
           _(!1),
-            ke.R.ClearImageGroup(),
+            Ce.R.ClearImageGroup(),
             i?.forEach((e, t) => {
-              const n = fe.b.InitFromClanID(v);
-              if (0 == ke.R.GetAllLocalizedGroupImages().length) {
+              const n = he.b.InitFromClanID(v);
+              if (0 == Ce.R.GetAllLocalizedGroupImages().length) {
                 const t = e && w.z.GetHashFromHashAndExt(e),
-                  a = t && Ce.pU.GetClanImageByImageHash(n, t);
-                a && ke.R.SetPrimaryImageForImageGroup(a, s);
+                  a = t && Se.pU.GetClanImageByImageHash(n, t);
+                a && Ce.R.SetPrimaryImageForImageGroup(a, s);
               }
-              ke.R.SetLocalizedImageGroupAtLang(t, n, e ?? null);
+              Ce.R.SetLocalizedImageGroupAtLang(t, n, e ?? null);
             }),
             _(!0);
         }, [i, v, s]);
         const I = (0, r.useCallback)(
             (e, t, n = 0) => {
-              const a = fe.b.InitFromClanID(v),
+              const a = he.b.InitFromClanID(v),
                 r = w.z.GetHashAndExt(t ?? null);
-              if (0 == ke.R.GetAllLocalizedGroupImages().length) {
+              if (0 == Ce.R.GetAllLocalizedGroupImages().length) {
                 const t = r && w.z.GetHashFromHashAndExt(r),
-                  n = t && Ce.pU.GetClanImageByImageHash(a, t);
-                n && ke.R.SetPrimaryImageForImageGroup(n, e);
+                  n = t && Se.pU.GetClanImageByImageHash(a, t);
+                n && Ce.R.SetPrimaryImageForImageGroup(n, e);
               }
-              ke.R.SetLocalizedImageGroupAtLang(n, a, r);
+              Ce.R.SetLocalizedImageGroupAtLang(n, a, r);
             },
             [v],
           ),
           h = (0, r.useCallback)((e, t) => {
-            const n = ke.R.GetLocalizedImageGroupForEdit();
+            const n = Ce.R.GetLocalizedImageGroupForEdit();
             return n?.localized_images[t];
           }, []);
         return r.createElement(
@@ -3902,7 +3895,7 @@
             strDescription: e.strLocalizedDescription,
             bOKDisabled: b > 0,
             onOK: () => {
-              ke.R.GetAllLocalizedGroupImages().forEach((e, t) => {
+              Ce.R.GetAllLocalizedGroupImages().forEach((e, t) => {
                 if (e) {
                   let n = e.lastIndexOf("/");
                   const a = e.substring(n + 1);
@@ -3918,7 +3911,7 @@
                   );
                 }
               }),
-                ke.R.ClearImageGroup(),
+                Ce.R.ClearImageGroup(),
                 e.onOK ? e.onOK() : u?.();
             },
             strOKButtonText:
@@ -3933,7 +3926,7 @@
             : r.createElement(
                 r.Fragment,
                 null,
-                r.createElement(ot, {
+                r.createElement(lt, {
                   clanSteamID: t,
                   rgSupportArtwork: [s],
                   fnSetImageURL: I,
@@ -3994,7 +3987,7 @@
             a || (0, p.we)("#EventEditor_Tile_Title"),
           ),
           r.createElement(ae.m, {
-            strDropDownClassName: Ee.DropDownScroll,
+            strDropDownClassName: _e.DropDownScroll,
             rgOptions: l,
             selectedOption: t || "no-repeat",
             onChange: (e) => n(e.data),
@@ -4062,10 +4055,10 @@
           },
           r.createElement(
             "div",
-            { className: we().ConfDialogOptions },
+            { className: be().ConfDialogOptions },
             r.createElement(
               "div",
-              { className: we().ImageOptions },
+              { className: be().ImageOptions },
               r.createElement(en, {
                 setting: c,
                 fnUpdateSetting: (e) => {
@@ -4090,7 +4083,7 @@
             ),
             r.createElement(
               "div",
-              { className: we().ColorOptions },
+              { className: be().ColorOptions },
               r.createElement(
                 ae.JU,
                 null,
@@ -4098,7 +4091,7 @@
               ),
               r.createElement(
                 "div",
-                { className: he().ColorCtn },
+                { className: Ie().ColorCtn },
                 r.createElement(
                   ae.$n,
                   {
@@ -4129,7 +4122,7 @@
               ),
               r.createElement(
                 "div",
-                { className: we().SwapColorsCtn },
+                { className: be().SwapColorsCtn },
                 r.createElement(
                   ae.$n,
                   {
@@ -4142,7 +4135,7 @@
               Boolean("single-color" !== _) &&
                 r.createElement(
                   "div",
-                  { className: he().ColorCtn },
+                  { className: Ie().ColorCtn },
                   r.createElement(
                     ae.$n,
                     {
@@ -4189,7 +4182,7 @@
             closeModal: t,
             onOK: () => a(l),
           },
-          r.createElement(_e, { onChange: (e) => o(e), color: l }),
+          r.createElement(pe, { onChange: (e) => o(e), color: l }),
         );
       }
       function rn(e) {
@@ -4226,7 +4219,7 @@
             a || (0, p.we)("#BackgroundGroups_Scaling"),
           ),
           r.createElement(ae.m, {
-            strDropDownClassName: Ee.DropDownScroll,
+            strDropDownClassName: _e.DropDownScroll,
             disabled: l,
             rgOptions: o,
             selectedOption: t || "cover",
@@ -4265,7 +4258,7 @@
             a || (0, p.we)("#EventEditor_ColorSetting_Title"),
           ),
           r.createElement(ae.m, {
-            strDropDownClassName: Ee.DropDownScroll,
+            strDropDownClassName: _e.DropDownScroll,
             rgOptions: l,
             selectedOption: t || "top-to-bottom",
             onChange: (e) => n(e.data),
@@ -4288,6 +4281,10 @@
                 data: "center",
               }),
               e.push({
+                label: (0, p.we)("#BackgroundGroups_Position_CenteredTop"),
+                data: "top center",
+              }),
+              e.push({
                 label: (0, p.we)("#BackgroundGroups_Position_TopLeft"),
                 data: "top left",
               }),
@@ -4307,7 +4304,7 @@
             a || (0, p.we)("#BackgroundGroups_Position"),
           ),
           r.createElement(ae.m, {
-            strDropDownClassName: Ee.DropDownScroll,
+            strDropDownClassName: _e.DropDownScroll,
             rgOptions: l,
             selectedOption: t || "unset",
             onChange: (e) => n(e.data),
@@ -4326,7 +4323,7 @@
           s = (0, a.q3)(() => t.GetSalePageLastCoverSectionUntilEnd());
         return r.createElement(
           "div",
-          { className: we().Ctn },
+          { className: be().Ctn },
           r.createElement(
             u.tH,
             null,
@@ -4466,7 +4463,7 @@
             r.createElement("br", null),
             r.createElement(
               "div",
-              { className: we().EditorTitle },
+              { className: be().EditorTitle },
               (0, p.we)("#BackgroundGroups_ContentTitle"),
             ),
             r.createElement(
@@ -4560,7 +4557,7 @@
         const { backgroundImageEditModel: t, nLastSectionID: n, nTabID: a } = e;
         return r.createElement(
           "div",
-          { className: we().CtnEditor },
+          { className: be().CtnEditor },
           r.createElement(
             ae.$n,
             {
@@ -4639,7 +4636,7 @@
           w = (0, _.w6)(b);
         return r.createElement(
           "div",
-          { className: we().CtnEditor, ref: w },
+          { className: be().CtnEditor, ref: w },
           Boolean(g && d && d > g) &&
             r.createElement(
               ae.$n,
@@ -4687,7 +4684,7 @@
           u = (0, _.w6)(c);
         return r.createElement(
           "div",
-          { className: (0, x.A)(we().CtnEditor, pn().TabCtn), ref: u },
+          { className: (0, x.A)(be().CtnEditor, pn().TabCtn), ref: u },
           Boolean(o && i && i > o) &&
             r.createElement(
               ae.$n,
@@ -4743,14 +4740,14 @@
       }
       var vn = n(84603),
         bn = n(40353),
-        wn = n(53677),
+        wn = n(50136),
         In = n(59313),
         hn = n.n(In),
         fn = n(51272);
       function Sn(e) {
         const { rgPresenters: t } = e;
         if (!t || 0 == t.length) return null;
-        const n = (0, g.sf)(R.TS.LANGUAGE);
+        const n = (0, g.sf)(U.TS.LANGUAGE);
         return 1 == t.length
           ? r.createElement(
               "div",
@@ -4846,7 +4843,7 @@
             Boolean(
               n.jsondata.sale_vanity_id_valve_approved_for_sale_subpath,
             ) &&
-            "community" == (0, R.yK)()
+            "community" == (0, U.yK)()
           ) {
             const e = document.getElementsByTagName("HEAD")[0],
               t = document.createElement("style");
@@ -4870,7 +4867,7 @@
           L = r.useMemo(
             () => ({
               promotionName: t,
-              clanid: Number(R.UF.CLANACCOUNTID),
+              clanid: Number(U.UF.CLANACCOUNTID),
               nAppIDVOD: Number(T?.broadcast_preroll_vod_appid),
               event: n,
               bIsPreview: l,
@@ -5018,7 +5015,7 @@
         let y = !1;
         const G = [{ elements: [], activeTab: new J.y(null, c) }];
         let T = null;
-        const L = (0, R.Qn)();
+        const L = (0, U.Qn)();
         D.forEach((a, l) => {
           const o = G[G.length - 1].activeTab;
           if (o && !o.ShouldShowSection(a)) return;
@@ -5033,7 +5030,7 @@
           let m = (0, bn.I)(a, u, t, n, L);
           if (void 0 === m) return;
           if (m);
-          else if ((0, Q.su)(a) && !R.iA.logged_in)
+          else if ((0, Q.su)(a) && !U.iA.logged_in)
             y ||
               ((m = r.createElement(Q.CC, {
                 section: a,
@@ -5261,8 +5258,8 @@
       }
       function An(e) {
         const { eventModel: t } = e,
-          n = (0, Ve.Ec)(t.clanSteamID.GetAccountID());
-        if (!n || (!n.can_edit && !n.support_user) || "store" != (0, R.yK)())
+          n = (0, qe.Ec)(t.clanSteamID.GetAccountID());
+        if (!n || (!n.can_edit && !n.support_user) || "store" != (0, U.yK)())
           return;
         const a = t.GetAllTags(),
           l = [];
@@ -5676,8 +5673,8 @@
         B = n(99487),
         M = n(7193),
         x = n(39199),
-        R = n(96971),
-        U = n(53677),
+        U = n(96971),
+        R = n(50136),
         O = n(40353);
       function P(e) {
         const { eventModel: t, nEventBadgeID: n } = e,
@@ -5774,7 +5771,7 @@
           ? r.createElement(z, { nDoorIndex: t }, e.children)
           : null;
       }
-      const W = (0, N.y)(U.H);
+      const W = (0, N.y)(R.H);
       function q(e) {
         const t = Number.parseInt((0, m.j$)(e.args)),
           { event: n, showErrorInfo: a } = e.context;
@@ -5785,7 +5782,7 @@
           if (l >= 0) {
             const t = n.GetDayIndexFromEventStart();
             return r.createElement(
-              R.Cs,
+              U.Cs,
               { location: a ? 2 : 0 },
               r.createElement(W, {
                 event: n,

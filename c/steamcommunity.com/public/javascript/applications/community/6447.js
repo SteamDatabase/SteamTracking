@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "İçerik yeniden etiketlendi",
 	"moderation_resolutionstatus_suspicious": "Hesap şüpheli içerik nedeniyle kilitlendi.",
 	"moderation_resolutionstatus_harassmentstrike": "Steam Topluluğu ayrıcalıkları askıya alındı",
+	"moderation_resolutionstatus_removeandwarn": "Silindi ve kullanıcı uyarıldı",
+	"moderation_resolutionstatus_removeandban": "Silindi ve merkezden yasaklandı",
 	"moderation_resolutionstatus_unknown": "Bilinmiyor",
 	"moderationaction_acquitted": "Aklandı",
 	"moderationaction_cancelled": "Son açık şikâyet iptal edildi",

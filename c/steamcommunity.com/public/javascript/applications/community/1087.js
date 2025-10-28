@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Contenuto rietichettato",
 	"moderation_resolutionstatus_suspicious": "Account sospeso per contenuti sospetti",
 	"moderation_resolutionstatus_harassmentstrike": "Privilegi della Comunità di Steam sospesi",
+	"moderation_resolutionstatus_removeandwarn": "Rimosso e avvisato",
+	"moderation_resolutionstatus_removeandban": "Rimosso e bandito dall'hub",
 	"moderation_resolutionstatus_unknown": "Sconosciuto",
 	"moderationaction_acquitted": "Assolto",
 	"moderationaction_cancelled": "Ultima segnalazione aperta annullata",

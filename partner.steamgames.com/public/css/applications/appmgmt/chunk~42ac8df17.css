@@ -1256,6 +1256,54 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
     display: none;
   }
 }
+._3NbZqMjO0na446Hl2elpae {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  left: 8px;
+  border-radius: 2px;
+  background: radial-gradient(ellipse at top right, #949494, #414141);
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+}
+.BasicUI ._3NbZqMjO0na446Hl2elpae {
+  display: none;
+}
+._3NbZqMjO0na446Hl2elpae svg {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  display: block;
+  fill: #fff;
+  color: #fff;
+}
+._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d {
+  color: transparent;
+  width: 0;
+  height: 0;
+  padding: 7px 0;
+  transition: padding-right .2s ease-out;
+  font-size: 13px;
+}
+._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d._2R3kegZfZASFduBjtw168d {
+  filter: opacity(50%);
+}
+html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
+._3NbZqMjO0na446Hl2elpae:hover ._1gTs9_O1m2-Sibih5GJ43d {
+  color: #fff;
+  width: auto;
+  height: auto;
+  padding-right: 8px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
+  ._3NbZqMjO0na446Hl2elpae:hover ._1gTs9_O1m2-Sibih5GJ43d {
+    display: none;
+  }
+}
 ._3VcyYP_egkOaX_rJ1e_SQk {
   top: unset;
 }
@@ -1286,6 +1334,11 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 .oAqlZTgPU37Nb8gBT5eAM ._36zpRzyxmtd8eBgf7p9Ewi {
   flex: 1;
   overflow-y: auto;
+}
+.oAqlZTgPU37Nb8gBT5eAM ._36zpRzyxmtd8eBgf7p9Ewi ._1JiQcVD1LUE2KxWb_oOv-K {
+  font-size: 11px;
+  padding: 2px 4px;
+  color: #bbb;
 }
 .oAqlZTgPU37Nb8gBT5eAM a:hover {
   color: #fff;
@@ -2890,6 +2943,10 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 }
 ._2gxv9cF-4n9wq4yxruOTNl._2o-5t6bgEJxfbWVSmxT88V {
   background-color: #66c0f4;
+}
+._2gxv9cF-4n9wq4yxruOTNl._2Hl_ERfCdYklXHAYAqvd4R {
+  background: linear-gradient(to right, #56a3cf, #315f7c);
+  color: #fff;
 }
 ._2gxv9cF-4n9wq4yxruOTNl ._3LecBjgbnwvS6bCFqxs6SC {
   height: 10px;
@@ -4830,7 +4887,6 @@ span._1P__hyqsgd049GH0Bn007_ {
   background-color: #000;
   position: relative;
   padding: 4px 24px;
-  margin-top: var(--store-menu-overlap-height, 0px);
   z-index: 10;
   align-items: center;
 }

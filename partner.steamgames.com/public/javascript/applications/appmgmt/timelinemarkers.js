@@ -9157,7 +9157,7 @@
           },
           n.createElement(
             "div",
-            { className: m },
+            { className: m, dir: "ltr" },
             n.createElement(Hn, null),
             n.createElement(Xn, null),
             n.createElement(

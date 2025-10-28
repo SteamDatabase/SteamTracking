@@ -24,13 +24,14 @@
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         carouselNavButton: "_13rGo4vexAbY9-CP7FsLOg",
-        left: "S8IHdovT5T2iEVg_97xve",
         carouselBtnCtn: "_3zfZ9tkIrSDZdSTv8mvZ3-",
+        left: "S8IHdovT5T2iEVg_97xve",
         right: "Cq59o5WQ49zTvvFY56QYS",
         carouselBody: "_3a31O8XB_8lD-yov8FB9-9",
         sliderBody: "_2M3SnYGvMvplWUC8yGhowo",
         slideTrayCustomize: "_2VUpHDtxN8lR1LDahY_cI2",
         breadcrumbContainer: "_3HjnEmKg66o82ah74EIvmq",
+        breadcrumbContainerTemplate: "_3dMffY_iRZXHjZmXN9aLej",
         pipList: "LY1m24ODS7AFRuzclt0Sl",
         pipScrollerContainer: "_3SyN-YtXsML6ado0q-Gdve",
         pipScrollButton: "qE43Jfzl0qJX_a6XrMgSr",
@@ -6667,12 +6668,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC";
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -6711,10 +6712,16 @@
           : _;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       class _ extends _.Component {
         render() {
-          const { showArrows: _, arrowFill: _ } = this.props,
+          const {
+              showArrows: _,
+              arrowFill: _,
+              arrowStyle: __webpack_require__,
+            } = this.props,
             _ = this.props.visibleSlides,
             _ = this.props.totalSlides,
             _ = this.props.currentSlide;
@@ -6738,8 +6745,10 @@
                     _.carouselNavButton,
                   ),
                 },
-                _.createElement(_.uMb, {
-                  fill: _ || "white",
+                _.createElement(_._, {
+                  arrowFill: _,
+                  arrowStyle: __webpack_require__,
+                  direction: "left",
                 }),
               ),
             _.createElement(
@@ -6805,8 +6814,10 @@
                     _.carouselNavButton,
                   ),
                 },
-                _.createElement(_.uMb, {
-                  fill: _ || "white",
+                _.createElement(_._, {
+                  arrowFill: _,
+                  arrowStyle: __webpack_require__,
+                  direction: "right",
                 }),
               ),
           );
@@ -6878,6 +6889,7 @@
                 bAutoAdvance: _.bAutoAdvance && !_,
                 onSlide: _.onSlide,
                 arrowFill: _.arrowFill,
+                arrowStyle: _.arrowStyle,
               },
               _.Children.map(_.children, (_, _) => {
                 const _ = _.bLazyRenderChildren
@@ -6914,7 +6926,11 @@
                 : _.createElement(
                     "div",
                     {
-                      className: _.breadcrumbContainer,
+                      className: _()({
+                        [_.breadcrumbContainer]: !0,
+                        [_.breadcrumbContainerTemplate]:
+                          _.className?.includes("template-carousel"),
+                      }),
                     },
                     ((_) =>
                       _.Children.map(_.children, (_, _) =>
@@ -6945,6 +6961,7 @@
             children: _,
             onSlide: _,
             arrowFill: _,
+            arrowStyle: _,
           } = _,
           _ = _.useContext(_._),
           _ = _.useRef(_.state.currentSlide),
@@ -7006,9 +7023,10 @@
                 ),
                 "aria-label": (0, _._)("#Carousel_Prev"),
               },
-              _.createElement(_.uMb, {
-                fill: _ || "white",
-                role: "presentation",
+              _.createElement(_._, {
+                arrowFill: _,
+                arrowStyle: _,
+                direction: "left",
               }),
             ),
           _.createElement(
@@ -7033,9 +7051,10 @@
                 ),
                 "aria-label": (0, _._)("#Carousel_Next"),
               },
-              _.createElement(_.uMb, {
-                fill: _ || "white",
-                role: "presentation",
+              _.createElement(_._, {
+                arrowFill: _,
+                arrowStyle: _,
+                direction: "right",
               }),
             ),
         );
@@ -11154,7 +11173,7 @@
             [__webpack_require__, _],
           );
         return _.useMemo(
-          () => new _._(_.sm_BBCodeDictionary, _, _),
+          () => new _._(_.sm_BBCodeDictionary, _, _ || _._.LANGUAGE),
           [_, _],
         ).ParseBBCode(_, {
           showErrorInfo: _,
@@ -11773,6 +11792,70 @@
           }),
           Boolean(_) && _.createElement("span", null, _?.item_name),
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.k_ECutArrowStyle = "single"),
+          (_.k_EDoubleArrowStyle = "double"),
+          (_.k_EThickChevron = "chevron"),
+          (_.k_EFilledArrow = "filled"),
+          (_.k_EPointyArrow = "pointy");
+      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          arrowFill: _,
+          arrowStyle: __webpack_require__,
+          direction: _,
+        } = _;
+        switch (__webpack_require__) {
+          default:
+          case _.k_ECutArrowStyle: {
+            const _ = "right" == _ ? 0 : 180;
+            return _.createElement(_.uMb, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EDoubleArrowStyle: {
+            const _ = "right" == _ ? 180 : 0;
+            return _.createElement(_.F2T, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EThickChevron: {
+            const _ = "right" == _ ? 0 : 180;
+            return _.createElement(_.l8x, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EFilledArrow: {
+            const _ = "right" == _ ? 90 : 270;
+            return _.createElement(_.V5W, {
+              fill: _ || "white",
+              role: "presentation",
+              angle: _,
+            });
+          }
+          case _.k_EPointyArrow:
+            return _.createElement(_.L0X, {
+              fill: _ || "white",
+              role: "presentation",
+              direction: _ || "left",
+            });
+        }
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -632,10 +632,9 @@ body.profile_page.flat_page #footer_spacer {
 
 .profile_header {
 	position: relative;
-	max-width: 926px;
+	max-width: 976px;
+	padding: 24px 12px 0 24px;
 	margin: 0 auto;
-	padding-top: 24px;
-
 }
 
 .profile_header_content {
@@ -644,7 +643,7 @@ body.profile_page.flat_page #footer_spacer {
 	color: #c4c4c4;
 	font-size: 13px;
 	display: grid;
-	grid-template-columns: auto 1fr 268px;
+	grid-template-columns: auto 1fr 288px;
 }
 
 .profile_header_centered_col {
@@ -758,7 +757,9 @@ body.profile_page.flat_page #footer_spacer {
 }
 
 .profile_header_actions {
-	white-space: nowrap;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
 }
 
 .profile_header .persona_name {

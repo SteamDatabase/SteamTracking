@@ -3077,7 +3077,7 @@
         L = n(7193),
         F = n(39199),
         k = n(96971),
-        N = n(53677),
+        N = n(50136),
         U = n(40353);
       function O(e) {
         const { eventModel: t, nEventBadgeID: n } = e,

@@ -20,6 +20,7 @@
         Verified: "rPLi6KykwBz7wWFaOR1No",
         Subtitle: "_6LI-PA19CCd4wG66K1LCD",
         DeviceFullWidthShadow: "_1ZypsWqUQ3VfW_f7ejdOZK",
+        VideoDisclaimer: "_15KuWTak5pd2L2qftpXWxR",
         DeviceWrapper: "_2fzfPUIAzZV7i8hrd1ITwy",
         CapsuleWrapper: "_3ITlsF2xSEJOu22StqAI04",
         Link: "ToHDGm6UHpfNOf4qmfMhX",
@@ -29,52 +30,52 @@
     },
     69409: (e, t, r) => {
       "use strict";
-      r.d(t, { m: () => d });
+      r.d(t, { m: () => g });
       var a = r(90626),
         n = r(22837),
         s = r(38390),
-        l = r(52038),
-        i = r(61859),
+        i = r(52038),
+        l = r(61859),
         c = r(61336),
         o = r(78327),
         m = r(15392),
-        g = r(27666);
-      function d(e) {
+        d = r(27666);
+      function g(e) {
         const { gidEvent: t } = e,
           r = (0, s.RR)(t),
-          [d, u] = (0, a.useMemo)(() => {
+          [g, u] = (0, a.useMemo)(() => {
             if (
               r?.jsondata?.localized_sale_product_banner?.length > 0 &&
               r?.jsondata?.localized_sale_product_mobile_banner?.length > 0
             ) {
               const e = (0, n.sf)(o.TS.LANGUAGE),
-                t = i.NT.GetWithFallback(
+                t = l.NT.GetWithFallback(
                   r.jsondata.localized_sale_product_banner,
                   e,
                 ),
-                a = i.NT.GetWithFallback(
+                a = l.NT.GetWithFallback(
                   r.jsondata.localized_sale_product_mobile_banner,
                   e,
                 );
               if (t?.length > 0 && a?.length > 0)
                 return [
-                  g.z.GenerateURLFromHashAndExt(r.clanSteamID, t),
-                  g.z.GenerateURLFromHashAndExt(r.clanSteamID, a),
+                  d.z.GenerateURLFromHashAndExt(r.clanSteamID, t),
+                  d.z.GenerateURLFromHashAndExt(r.clanSteamID, a),
                 ];
             }
             return [null, null];
           }, [r]);
-        return d?.length > 0 && u?.length > 0
+        return g?.length > 0 && u?.length > 0
           ? a.createElement(
               "a",
               { href: (0, c.k2)(r.GetSaleURL()), className: m.Link },
               a.createElement("img", {
-                src: d,
-                className: (0, l.A)(m.Banner, m.Big),
+                src: g,
+                className: (0, i.A)(m.Banner, m.Big),
               }),
               a.createElement("img", {
                 src: u,
-                className: (0, l.A)(m.Banner, m.Mobile),
+                className: (0, i.A)(m.Banner, m.Mobile),
               }),
             )
           : null;
@@ -82,11 +83,11 @@
     },
     3088: (e, t, r) => {
       "use strict";
-      r.d(t, { c: () => l });
+      r.d(t, { c: () => i });
       var a = r(34629),
         n = r(90626),
         s = r(84933);
-      class l extends n.Component {
+      class i extends n.Component {
         m_refImage = n.createRef();
         constructor(e) {
           super(e), (this.state = { nImage: 0 });
@@ -136,17 +137,17 @@
               strAltText: a,
               ...s
             } = this.props,
-            l = this.src;
+            i = this.src;
           return n.createElement("img", {
             ref: this.m_refImage,
             ...s,
-            src: l,
+            src: i,
             onError: this.OnImageError,
             alt: a,
           });
         }
       }
-      (0, a.Cg)([s.oI], l.prototype, "OnImageError", null);
+      (0, a.Cg)([s.oI], i.prototype, "OnImageError", null);
     },
     12813: (e, t, r) => {
       "use strict";
@@ -154,22 +155,22 @@
       var a = r(22837),
         n = r(45699),
         s = r(8527),
-        l = r(60014),
-        i = r(90626),
+        i = r(60014),
+        l = r(90626),
         c = r(57876),
         o = r(55263),
         m = r(84811),
-        g = r(53354),
-        d = r(89409),
+        d = r(53354),
+        g = r(89409),
         u = r(60801),
         p = r(32630),
         h = r(54096),
         f = r(10224),
         E = r(52038),
         A = r(61859),
-        I = r(61336),
-        _ = r(70124),
-        S = r.n(_);
+        _ = r(61336),
+        I = r(70124),
+        S = r.n(I);
       function b(e) {
         const {
             match: {
@@ -179,38 +180,38 @@
           r = Number.parseInt(t),
           [a] = (0, o.t7)(r, c.Xh);
         return (
-          (0, i.useEffect)(() => {
+          (0, l.useEffect)(() => {
             if (a) {
               const e = a.GetStorePageURL().replace("/app/", "/verified/");
               e != window.location.href &&
                 window.history.replaceState({}, "", e);
             }
           }, [a]),
-          i.createElement(
+          l.createElement(
             p.Ay,
             { method: "verifiedprogram" },
-            i.createElement(m.tH, null, i.createElement(k, { storeItem: a })),
+            l.createElement(m.tH, null, l.createElement(D, { storeItem: a })),
           )
         );
       }
-      function G(e) {
+      function k(e) {
         const { storeItem: t } = e,
-          r = (0, I.L$)(
+          r = (0, _.L$)(
             "https://clan.akamai.steamstatic.com/images/41316928/846f603df6057b070667f2741730c2038648955d.png",
           );
-        return i.createElement(
-          i.Fragment,
+        return l.createElement(
+          l.Fragment,
           null,
-          i.createElement(
+          l.createElement(
             "div",
             { className: S().Headline },
             (0, A.PP)(
               "#VerifiedProgram_DeckTitle",
               t.GetName(),
-              i.createElement(
+              l.createElement(
                 "span",
                 { className: S().Verified },
-                i.createElement("img", {
+                l.createElement("img", {
                   src: r,
                   alt: (0, A.we)("#VerifiedProgram_DeckAlt"),
                 }),
@@ -218,12 +219,12 @@
               ),
             ),
           ),
-          i.createElement(
+          l.createElement(
             "div",
             { className: S().Subtitle },
             (0, A.oW)(
               "#VerifiedProgram_DeckSubTitle",
-              i.createElement(n.Ii, {
+              l.createElement(n.Ii, {
                 className: S().Link,
                 href: `${s.TS.STORE_BASE_URL}greatondeck`,
               }),
@@ -231,41 +232,41 @@
           ),
         );
       }
-      function k(e) {
+      function D(e) {
         const { storeItem: t } = e;
         if (!t) return null;
         const r =
           t.GetAssets().GetLibraryHeroURL_2x() ??
           t.GetAssets().GetLibraryHeroURL();
-        return i.createElement(
+        return l.createElement(
           "div",
           { className: S().Ctn },
-          i.createElement(
+          l.createElement(
             "div",
             { className: S().BackgroundImageCtn },
-            i.createElement("img", { src: r, alt: "" }),
+            l.createElement("img", { src: r, alt: "" }),
           ),
-          i.createElement(
+          l.createElement(
             "div",
             { className: S().BackgroundImageBlurCtn },
-            i.createElement("img", { src: r, alt: "" }),
+            l.createElement("img", { src: r, alt: "" }),
           ),
-          i.createElement(
+          l.createElement(
             "div",
             { className: (0, E.A)("page_content") },
-            i.createElement(G, { storeItem: t }),
-            i.createElement(L, { storeItem: t }),
-            i.createElement(N, { storeItem: t }),
-            i.createElement(T, { storeItem: t }),
+            l.createElement(k, { storeItem: t }),
+            l.createElement(T, { storeItem: t }),
+            l.createElement(G, { storeItem: t }),
+            l.createElement(N, { storeItem: t }),
           ),
         );
       }
-      function N(e) {
+      function G(e) {
         const { storeItem: t } = e;
-        return i.createElement(
+        return l.createElement(
           "div",
           { className: S().CapsuleWrapper },
-          i.createElement(d.y, {
+          l.createElement(g.y, {
             id: t.GetID(),
             type: "game",
             bShowDeckCompatibilityDialog: !1,
@@ -275,21 +276,21 @@
           }),
         );
       }
-      function T(e) {
+      function N(e) {
         const { storeItem: t } = e,
-          r = (0, l.aL)(
+          r = (0, i.aL)(
             `${s.TS.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`,
             "banner",
           );
-        return i.createElement(
+        return l.createElement(
           n.Ii,
           { href: r, className: (0, E.A)(S().HardwareBannerCtn) },
-          i.createElement(C, null),
+          l.createElement(L, null),
         );
       }
-      function L(e) {
+      function T(e) {
         const { storeItem: t } = e,
-          r = (0, I.L$)(
+          r = (0, _.L$)(
             "https://clan.akamai.steamstatic.com/images//39049601/6d623258307ee751edb132215ffe83e9b31bba95.png",
           ),
           a = [
@@ -298,39 +299,44 @@
           ],
           n = a?.[0]?.GetTrailersDash(),
           s = a?.[0]?.GetTrailerHls(),
-          l = a?.[0]?.GetScreenshot();
-        return i.createElement(
+          i = a?.[0]?.GetScreenshot();
+        return l.createElement(
           "div",
           { className: S().DeviceFullWidthShadow },
-          i.createElement(
+          l.createElement(
             "div",
             { className: (0, E.A)(S().DeviceWrapper) },
-            i.createElement(
+            l.createElement(
               u.S,
               null,
-              i.createElement(
+              l.createElement(
                 "div",
                 { className: S().TrailerCtn },
-                i.createElement(h.P, {
+                l.createElement(h.P, {
                   dashManifests: n,
                   hlsManifest: s,
-                  screenshot: l,
+                  screenshot: i,
                   altText: t.GetName(),
                   muteWhenAutoplayBlocked: !0,
                 }),
               ),
             ),
-            i.createElement("img", {
+            l.createElement("img", {
               src: r,
               alt: (0, A.we)("#VerifiedProgram_DeckDeviceAlt"),
             }),
           ),
+          l.createElement(
+            "div",
+            { className: S().VideoDisclaimer },
+            (0, A.we)("#VerifiedProgram_DeckDisclaimer"),
+          ),
         );
       }
-      function C(e) {
+      function L(e) {
         const t = (0, f.zI)(),
           r = (0, a.sf)(s.TS.LANGUAGE);
-        return i.createElement(g.u, {
+        return l.createElement(d.u, {
           language: r,
           strAltText: (0, A.we)("#VerifiedProgram_DeckShopBannerAlt"),
           strImageToken: t

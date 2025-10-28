@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "เนื้อหาได้รับการติดป้ายกำกับใหม่",
 	"moderation_resolutionstatus_suspicious": "บัญชีถูกล็อกเนื่องจากเนื้อหาที่น่าสงสัย",
 	"moderation_resolutionstatus_harassmentstrike": "สิทธิ์ในการเข้าถึงชุมชน Steam ถูกระงับ",
+	"moderation_resolutionstatus_removeandwarn": "ถูกลบและเตือนแล้ว",
+	"moderation_resolutionstatus_removeandban": "ถูกลบและถูกแบนจากศูนย์กลางแล้ว",
 	"moderation_resolutionstatus_unknown": "ไม่รู้จัก",
 	"moderationaction_acquitted": "พ้นผิดแล้ว",
 	"moderationaction_cancelled": "รายงานที่เปิดอยู่ล่าสุดถูกยกเลิก",

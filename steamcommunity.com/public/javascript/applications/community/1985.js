@@ -121,7 +121,7 @@
         h = a(86261),
         U = a(86244),
         b = a.n(U),
-        Q = a(14336);
+        Q = a(41471);
       const _ = (0, C.PA)((e) => {
         const { appid: t, eventLink: a } = e,
           n = M.useRef(null),

@@ -17,11 +17,11 @@ body .responsive_page_content {
     background-size: 1920px 1080px;
 }
 
-a, a:visited {
-color: #07d1da;
+.page_content_ctn.labs a, .page_content_ctn.labs a:visited {
+	color: #07d1da;
 }
 
-a:hover {
+.page_content_ctn.labs a:hover {
 color: #fff;
 }
 
@@ -245,8 +245,8 @@ body.v6 .capsule h2 {
 	color: #fff;
 }
 
-a.experiment-button,
-a.experiment-button:visited {
+.page_content_ctn.labs a.experiment-button,
+.page_content_ctn.labs a.experiment-button:visited {
     color: #181d3a;
 }
 

@@ -307,7 +307,11 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
-          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: u },
+          spotlight_art: {
+            width: [306, 374],
+            height: [260, 448],
+            rgAcceptableTypes: u,
+          },
           old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: u },
           marketingmessage_art: {
             width: 570,

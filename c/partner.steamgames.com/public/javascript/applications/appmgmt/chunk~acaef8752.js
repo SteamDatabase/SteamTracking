@@ -4,6 +4,12 @@
   {
     chunkid: (module) => {
       module.exports = {
+        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
+        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DragAndDropContainer: "_2RL1a79W53-tCW7090DcUp",
         DragAndDropContainerDragging: "wn604fTvW5SH1o852jAnI",
         ImageUploadBar: "_2Zk7b2c_FLMvZPqYvzTzt5",
@@ -47,6 +53,79 @@
         EventEditorVisibilityCtn: "_4gWwydbAbp2t1NCeW9LLV",
         DateErrorCtn: "_1Ao_g72kBAdoOo0lGUG7Mr",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            color: _,
+            onChange: __webpack_require__,
+            strTitle: _,
+            disableAlpha: _,
+          } = _,
+          [_, _] = (0, _.useState)(() => _ || "rgba(255, 255, 255, 1)"),
+          _ = (0, _.useCallback)(async () => {
+            if ("EyeDropper" in window)
+              try {
+                const _ = new window.EyeDropper(),
+                  _ = await _.open(),
+                  _ = (function (_) {
+                    const _ = parseInt(_.slice(1), 16);
+                    return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
+                  })(_.sRGBHex);
+                _(_), __webpack_require__(_);
+              } catch (_) {
+                console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
+              }
+            else alert((0, _._)("#Sale_EyeDropperError"));
+          }, [__webpack_require__]);
+        return _.createElement(
+          "div",
+          null,
+          Boolean(_) && _.createElement(_._, null, _),
+          _.createElement(_._, {
+            onChange: (_) => {
+              const _ = (function (_) {
+                return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
+              })(_);
+              _(_), __webpack_require__(_);
+            },
+            color: _,
+            disableAlpha: _,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().EyeDropperCtn,
+            },
+            _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+              },
+              _.createElement(
+                _._,
+                {
+                  className: _().EyeDropperBtn,
+                  onClick: _,
+                },
+                _.createElement(_.O7b, null),
+              ),
+            ),
+          ),
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

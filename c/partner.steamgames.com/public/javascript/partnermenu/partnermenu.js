@@ -15707,6 +15707,9 @@ Error generating stack: ` +
   var _ = _(() => {
     "use strict";
   });
+  var _ = _(() => {
+    "use strict";
+  });
   var _ = _((exports, module) => {
     "use strict";
     var $jscomp = $jscomp || {};
@@ -31826,6 +31829,7 @@ Error generating stack: ` +
     _();
     _();
     _();
+    _();
   });
   var _ = _(() => {
     "use strict";
@@ -42439,8 +42443,13 @@ Error generating stack: ` +
     }
   }
   _();
+  function _(_, _) {
+    return _?.public_data?.profile_url
+      ? `${_.COMMUNITY_BASE_URL}id/${_.public_data.profile_url}`
+      : _(_?.public_data?.steamid || _);
+  }
   function _(_) {
-    return `${_.COMMUNITY_BASE_URL}${_.public_data?.profile_url ? "id/" + _.public_data.profile_url : "profiles/" + _.public_data?.steamid}/`;
+    return _ ? `${_.COMMUNITY_BASE_URL}profiles/${_}` : "";
   }
   _();
   var _ = _(_(), 1);

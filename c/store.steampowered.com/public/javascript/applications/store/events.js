@@ -4943,6 +4943,8 @@
                   bLazyRenderChildren: !0,
                   disableEdgeWrap: !0,
                   screenIsWide: this.state.bScreenIsWide,
+                  arrowFill: this.props.arrowFill,
+                  arrowStyle: this.props.arrowStyle,
                 },
                 _,
               ),

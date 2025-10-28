@@ -898,10 +898,22 @@ html.responsive.touch ._3xpkvUfVoGX-QZFAF9bHX1 {
   text-shadow: 1px 1px 14px #0000004a;
 }
 ._1ZypsWqUQ3VfW_f7ejdOZK {
+  position: relative;
   width: 98vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+._1ZypsWqUQ3VfW_f7ejdOZK ._15KuWTak5pd2L2qftpXWxR {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  color: #99a7ad;
+  font-style: italic;
+  font-size: 11px;
+  text-align: center;
 }
 ._2fzfPUIAzZV7i8hrd1ITwy {
   position: relative;

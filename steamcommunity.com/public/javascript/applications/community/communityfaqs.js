@@ -215,7 +215,7 @@
         B = a(91675),
         y = a(87669),
         k = a(93084),
-        G = a(14336);
+        G = a(41471);
       const V = "title",
         q = "content";
       const x = (e) => {

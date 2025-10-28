@@ -1887,23 +1887,24 @@
             },
             ref: t,
             className: d,
-            style: { width: u >= 1 && u < 100 ? `${u}%` : void 0 },
+            style: { width: u && u >= 1 && u < 100 ? `${u}%` : void 0 },
           },
           r.createElement(E, { rgVideoSources: n.rgVideoSources }),
           r.createElement(_, { rgVideoTracks: n.rgVideoTracks }),
         );
       });
       function p(e) {
-        try {
-          const t = new URL(e);
-          return (
-            (t.search =
-              (t.search ? t.search + "&" : "?") + "origin=" + (0, c.xv)()),
-            t.toString()
-          );
-        } catch {
-          return e;
-        }
+        if (e)
+          try {
+            const t = new URL(e);
+            return (
+              (t.search =
+                (t.search ? t.search + "&" : "?") + "origin=" + (0, c.xv)()),
+              t.toString()
+            );
+          } catch {
+            return e;
+          }
       }
       function E(e) {
         const { rgVideoSources: t } = e;

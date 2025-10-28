@@ -18,6 +18,7 @@
         Verified: "rPLi6KykwBz7wWFaOR1No",
         Subtitle: "_6LI-PA19CCd4wG66K1LCD",
         DeviceFullWidthShadow: "_1ZypsWqUQ3VfW_f7ejdOZK",
+        VideoDisclaimer: "_15KuWTak5pd2L2qftpXWxR",
         DeviceWrapper: "_2fzfPUIAzZV7i8hrd1ITwy",
         CapsuleWrapper: "_3ITlsF2xSEJOu22StqAI04",
         Link: "ToHDGm6UHpfNOf4qmfMhX",
@@ -387,6 +388,13 @@
               src: _,
               alt: (0, _._)("#VerifiedProgram_DeckDeviceAlt"),
             }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().VideoDisclaimer,
+            },
+            (0, _._)("#VerifiedProgram_DeckDisclaimer"),
           ),
         );
       }

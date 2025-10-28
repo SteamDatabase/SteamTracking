@@ -2473,7 +2473,8 @@
   width: 320px;
   display: flex;
   flex-direction: column;
-  padding: 16px 16px 0px 16px;
+  padding: 16px;
+  padding-bottom: 0px;
 }
 .iJ-nnbMoplnO7sW4GoKZE ._1p6K1C-xCaggsPiZeYS6xb {
   display: flex;
@@ -2687,8 +2688,8 @@
   margin-bottom: 2px;
   font-size: 14px;
   font-family: "Roboto Mono", monospace;
-  align-items: left;
-  left: 8px;
+  align-items: flex-start;
+  inset-inline-start: 8px;
   position: absolute;
   display: flex;
 }
@@ -3942,7 +3943,7 @@
 ._1lcizT_Nbxsk484XzTtcFf ._1A5Qloms_qv3D5xh052LKf {
   position: absolute;
   top: 14px;
-  right: 14px;
+  inset-inline-end: 14px;
   cursor: pointer;
 }
 ._1lcizT_Nbxsk484XzTtcFf ._1A5Qloms_qv3D5xh052LKf .kcjJIs0EE3MG_h_t5nCza {

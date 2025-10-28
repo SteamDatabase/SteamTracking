@@ -950,7 +950,27 @@
 		height: unset;
 	}
 
+	html.responsive .ReviewContentCtn {
+		flex-direction: column;
+	}
 
+	html.responsive .ReviewContentCtn .author_counts {
+		display: flex;
+		flex-direction: row;
+		gap: 24px;
+	}
+
+	html.responsive .ReviewContentCtn .author_details {
+		line-height: 15px;
+	}
+
+	html.responsive .review_box .review_leftcol {
+		width: 100%;
+	}
+
+	html.responsive .review_box .short_header .persona_name {
+		width: unset;
+	}
 
 
 

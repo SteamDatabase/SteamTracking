@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Inhalt umbenannt",
 	"moderation_resolutionstatus_suspicious": "Account gesperrt aufgrund verdächtiger Inhalte",
 	"moderation_resolutionstatus_harassmentstrike": "Steam-Communityprivilegien entzogen",
+	"moderation_resolutionstatus_removeandwarn": "Entfernt und verwarnt",
+	"moderation_resolutionstatus_removeandban": "Entfernt und aus Hub ausgeschlossen",
 	"moderation_resolutionstatus_unknown": "Unbekannt",
 	"moderationaction_acquitted": "Keine Maßnahmen ergriffen",
 	"moderationaction_cancelled": "Zuletzt geöffnete Meldung abgebrochen",

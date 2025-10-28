@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Konten dilabel ulang",
 	"moderation_resolutionstatus_suspicious": "Akun dikunci karena konten yang mencurigakan",
 	"moderation_resolutionstatus_harassmentstrike": "Hak istimewa Komunitas Steam-mu ditangguhkan",
+	"moderation_resolutionstatus_removeandwarn": "Dihapus dan diperingatkan",
+	"moderation_resolutionstatus_removeandban": "Dihapus dan di-ban dari hub",
 	"moderation_resolutionstatus_unknown": "Tidak Diketahui Kompatibilitasnya",
 	"moderationaction_acquitted": "Dibebaskan",
 	"moderationaction_cancelled": "Laporan aktif terakhir dibatalkan",

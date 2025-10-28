@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Съдържанието е преетикетирано",
 	"moderation_resolutionstatus_suspicious": "Акаунтът е заключен за подозрително съдържание",
 	"moderation_resolutionstatus_harassmentstrike": "Привилегиите в Steam общността са преустановени",
+	"moderation_resolutionstatus_removeandwarn": "Премахнато и предупредено",
+	"moderation_resolutionstatus_removeandban": "Премахнато и забранено от центъра",
 	"moderation_resolutionstatus_unknown": "Неизвестно",
 	"moderationaction_acquitted": "Оправдано",
 	"moderationaction_cancelled": "Последният отворен доклад е отказан",

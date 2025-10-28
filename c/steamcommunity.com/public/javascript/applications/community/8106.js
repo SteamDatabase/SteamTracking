@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Rótulo do conteúdo alterado",
 	"moderation_resolutionstatus_suspicious": "Conta trancada devido a conteúdos suspeitos",
 	"moderation_resolutionstatus_harassmentstrike": "Os seus privilégios na Comunidade Steam foram suspensos",
+	"moderation_resolutionstatus_removeandwarn": "Removido e advertido",
+	"moderation_resolutionstatus_removeandban": "Removido e banido da central",
 	"moderation_resolutionstatus_unknown": "Desconhecido",
 	"moderationaction_acquitted": "Absolvido",
 	"moderationaction_cancelled": "Última denúncia aberta cancelada",

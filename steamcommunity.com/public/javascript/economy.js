@@ -2528,6 +2528,22 @@ function GetNameForItem( item )
 	return strName;
 }
 
+
+function RenderItemInfo( name, description, asset )
+{
+	if ( window.UpdateReactItemInfo )
+	{
+		window.UpdateReactItemInfo(name, description, asset );
+	}
+	else
+	{
+		// too early, queue
+		if (!window.g_mapPendingItemInfo)
+			window.g_mapPendingItemInfo = new Map();
+		window.g_mapPendingItemInfo.set(name, { description: description, asset: asset } );
+	}
+}
+
 /* We allow owner to be a CUser or string ( steamid ) */
 function BuildHover( prefix, item, owner )
 {

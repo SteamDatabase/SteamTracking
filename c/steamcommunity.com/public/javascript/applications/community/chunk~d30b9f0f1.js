@@ -3,6 +3,15 @@
   {
     chunkid: (module) => {
       module.exports = {
+        SectionCtn: "_3IFGx1DX3zzpxDgG4d3__f",
+        EditLink: "i_CIp-5596IR0nTy_CGmS",
+        ListOfListsHeader: "_1WWwSBpHbpQUq03Z4xb2CC",
+        ListOfLists: "_3Hez7MwQxTE1FQR0UVuGSH",
+        ListEmptyText: "_3gHCyZMaqF2EFaOe0upv3u",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Ctn: "ksXUj612xIKmPglVngiI0",
       };
     },
@@ -70,10 +79,10 @@
     },
     chunkid: (module) => {
       module.exports = {
-        TitleCtn: "_3MDBcJnVnwjccSnGOTjmD3",
-        SubTitleCtn: "jhUsK0y96Y3i5NkiDdYYv",
         ToolBarCtn: "_3fZWbGOr6zSzRucCSwl9Gm",
         ToolBarTitle: "shE6lb0d1wS1ehkaDs4Md",
+        ScaleSlider: "_2bK37Fk1KguLC3tDPkOrHY",
+        ScaleCtn: "_27cF0oR9pKrbmkuo_b4OWo",
       };
     },
     chunkid: (module) => {
@@ -589,12 +598,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
-        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Main: "_1Zn_5pvuMbqr57ws1eJKe",
       };
     },
@@ -683,6 +686,11 @@
         dropdown: "_2uDosrOO-P5HteHs8r2DHF",
         ItemDefCtn: "_2xiHGC5uLleLI4yqeulx5a",
         ItemActionBtn: "_2fJMMn4OtB-DA4H4GDPp5I",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ItemCtn: "_30RNOxqk1P9UdZBI76xoIw",
       };
     },
     chunkid: (module) => {
@@ -6346,6 +6354,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         constructor(_, _, _, _, _) {
@@ -6429,16 +6438,17 @@
                 ]),
                 !0
               );
-            console.error(
-              "CCloudImageUploader failed to determine file type, not image, video or subtitle",
-              _,
-              _.type,
-            );
+            "dev" == _._.WEB_UNIVERSE &&
+              console.error(
+                "CCloudImageUploader failed to determine file type, not image, video or subtitle",
+                _,
+                _.type,
+              );
           }
           return !1;
         }
         async UploadSingleImage(_, _, _, _) {
-          var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+          var _, _, _;
           const _ = new FormData();
           _.append("sessionid", _._.SESSIONID),
             _.append("elangauge", "" + _),
@@ -6450,164 +6460,35 @@
           if (!_)
             return {
               bSuccess: !1,
-              elErrorMessage:
-                "Invalid file extension, cannot determine mimetype",
+              elErrorMessage: (0, _._)(
+                "#MediaConvert_CloudUpload_ErrorFileType",
+              ),
             };
           let _;
           _.append("mimetype", _);
+          const _ =
+              this.m_bDirectTempStorageUpload &&
+              _.file.size > _.k_nSingleMediaConvertThresholdBytes,
+            _ =
+              this.m_bTwoPhaseUpload &&
+              _.file.size > _.k_nSingleMediaConvertThresholdBytes;
           try {
-            if (this.m_bDirectTempStorageUpload) {
-              const _ = new FormData();
-              _.append("filesize", "" + _.file.size),
-                _.append("sessionid", _._.SESSIONID);
-              const _ =
-                  (0, _._)(this.m_strUploadPath, "ajax", "uploadurl") ||
-                  this.m_strUploadPath,
-                _ = await _().post(_, _, {
-                  withCredentials: !0,
-                  cancelToken: _,
-                });
-              if (
-                !(
-                  200 == (null == _ ? void 0 : _.status) &&
-                  1 ==
-                    (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                      ? void 0
-                      : _.success) &&
-                  _.data.file_path &&
-                  _.data.upload_url &&
-                  _.data.download_url
-                )
-              ) {
-                const _ =
-                  null !==
-                    (_ =
-                      null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                        ? void 0
-                        : _.msg) && void 0 !== _
-                    ? _
-                    : "Failed to find create place to upload source asset";
-                throw ((_ = _), new Error(_));
-              }
-              {
-                const _ = {
-                  "Content-Type": "application/octet-stream",
-                };
-                if (_.data.headers_for_upload)
-                  for (const _ of _.data.headers_for_upload)
-                    _[_.name] = _.value;
-                if (
-                  !(await _()
-                    .put(_.data.upload_url, _.file, {
-                      headers: _,
-                      cancelToken: _,
-                    })
-                    .then((_) => 200 == _.status || 201 == _.status)
-                    .catch(() => !1))
-                ) {
-                  const _ = "Failed to upload source asset";
-                  throw ((_ = _), new Error(_));
-                }
-                _.append("temp_file_path", _.data.file_path),
-                  _.append("temp_download_url", _.data.download_url);
-              }
+            if (_) {
+              const _ = await this.HandleDirectUploadToTempFromBrowser(_, _);
+              if (!_.temp_file_id) throw new Error(_.strError || "");
+              _.append("temp_file_id", _.temp_file_id);
             } else _.append("assetfile", _.file, _);
-            if (this.m_bTwoPhaseUpload) {
-              const _ = (0, _._)(this.m_strUploadPath, "ajax", "async");
-              (0, _._)(_, "upload path must contain ajax");
-              const _ = await _().post(_, _, {
-                withCredentials: !0,
-                headers: {
-                  "Content-Type": "multipart/form-data",
-                },
-                cancelToken: _,
-              });
-              if (
-                200 != (null == _ ? void 0 : _.status) ||
-                1 !=
-                  (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                    ? void 0
-                    : _.success) ||
-                !_.data.requestID
-              ) {
-                const _ =
-                  null !==
-                    (_ =
-                      null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                        ? void 0
-                        : _.msg) && void 0 !== _
-                    ? _
-                    : "Fail to setup upload of asset";
-                throw ((_ = _), new Error(_));
-              }
-              {
-                const _ = (0, _._)(this.m_strUploadPath, "ajax", "status"),
-                  _ = {
-                    sessionid: _._.SESSIONID,
-                    requestid: _.data.requestID,
-                    elanguage: _,
-                    originalname: _,
-                  };
-                for (;;) {
-                  const _ = await _().get(_, {
-                    params: _,
-                    withCredentials: !0,
-                  });
-                  if (
-                    200 != (null == _ ? void 0 : _.status) ||
-                    (1 !=
-                      (null === (_ = null == _ ? void 0 : _.data) ||
-                      void 0 === _
-                        ? void 0
-                        : _.success) &&
-                      22 !=
-                        (null === (_ = null == _ ? void 0 : _.data) ||
-                        void 0 === _
-                          ? void 0
-                          : _.success))
-                  ) {
-                    (_ =
-                      null !==
-                        (_ =
-                          null !==
-                            (_ =
-                              null === (_ = null == _ ? void 0 : _.data) ||
-                              void 0 === _
-                                ? void 0
-                                : _.error) && void 0 !== _
-                            ? _
-                            : null === (_ = null == _ ? void 0 : _.data) ||
-                                void 0 === _
-                              ? void 0
-                              : _.message) && void 0 !== _
-                        ? _
-                        : null === (_ = null == _ ? void 0 : _.data) ||
-                            void 0 === _
-                          ? void 0
-                          : _.msg),
-                      "dev" == _._.WEB_UNIVERSE &&
-                        console.error(
-                          "Failed on status",
-                          null == _ ? void 0 : _.data,
-                        );
-                    break;
-                  }
-                  if (
-                    22 !=
-                    (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                      ? void 0
-                      : _.success)
-                  )
-                    return {
-                      bSuccess: !0,
-                      elErrorMessage: _,
-                      result: null == _ ? void 0 : _.data,
-                    };
-                  "dev" == _._.WEB_UNIVERSE && console.log("Sleeping 500ms"),
-                    await (0, _._)(500);
-                }
-              }
-            } else {
+            if (_) {
+              const _ = await this.HandleConvertAndPoll(_, _, _, _);
+              if (_.uploadResults)
+                return {
+                  bSuccess: !0,
+                  result: _.uploadResults,
+                  elErrorMessage: _,
+                };
+              throw new Error(_.strError || "");
+            }
+            {
               const _ = await _().post(this.m_strUploadPath, _, {
                 withCredentials: !0,
                 headers: {
@@ -6624,21 +6505,19 @@
                   elErrorMessage: _,
                   result: null == _ ? void 0 : _.data,
                 };
-              (_ =
-                null !==
-                  (_ =
-                    null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+              {
+                const _ =
+                  null !==
+                    (_ =
+                      null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                        ? void 0
+                        : _.message) && void 0 !== _
+                    ? _
+                    : null === (_ = null == _ ? void 0 : _.data) || void 0 === _
                       ? void 0
-                      : _.message) && void 0 !== _
-                  ? _
-                  : null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                    ? void 0
-                    : _.msg),
-                "dev" == _._.WEB_UNIVERSE &&
-                  console.error(
-                    "Failed on single direct upload",
-                    null == _ ? void 0 : _.data,
-                  );
+                      : _.msg;
+                throw ((_ = _), new Error(_));
+              }
             }
           } catch (_) {
             const _ = (0, _._)(_);
@@ -6646,19 +6525,167 @@
               "CCloudImageUploader.UploadSingleImage try/catch failed ",
               _,
               _,
+              _,
             );
           }
-          return (
-            console.log("CCloudImageUploader.UploadSingleImage failed: ", _),
-            {
-              bSuccess: !1,
-              elErrorMessage: _,
-              result: void 0,
+          return {
+            bSuccess: !1,
+            elErrorMessage: _,
+            result: void 0,
+          };
+        }
+        async HandleConvertAndPoll(_, _, _, _) {
+          var _, _, _, _, _, _, _, _, _, _, _;
+          const _ = (0, _._)(this.m_strUploadPath, "ajax", "async");
+          (0, _._)(_, "upload path must contain ajax");
+          const _ = await _().post(_, _, {
+            withCredentials: !0,
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+            cancelToken: _,
+          });
+          if (
+            200 != (null == _ ? void 0 : _.status) ||
+            1 !=
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) ||
+            !_.data.requestID
+          )
+            return {
+              strError:
+                null !==
+                  (_ =
+                    null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                      ? void 0
+                      : _.msg) && void 0 !== _
+                  ? _
+                  : (0, _._)("#MediaConvert_CloudUpload_UploadError"),
+            };
+          {
+            const _ = (0, _._)(this.m_strUploadPath, "ajax", "status"),
+              _ = {
+                sessionid: _._.SESSIONID,
+                requestid: _.data.requestID,
+                elanguage: _,
+                originalname: _,
+              };
+            for (;;) {
+              const _ = await _().get(_, {
+                params: _,
+                withCredentials: !0,
+              });
+              if (
+                200 != (null == _ ? void 0 : _.status) ||
+                (1 !=
+                  (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                    ? void 0
+                    : _.success) &&
+                  22 !=
+                    (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                      ? void 0
+                      : _.success))
+              )
+                return {
+                  strError:
+                    null !==
+                      (_ =
+                        null !==
+                          (_ =
+                            null === (_ = null == _ ? void 0 : _.data) ||
+                            void 0 === _
+                              ? void 0
+                              : _.error) && void 0 !== _
+                          ? _
+                          : null === (_ = null == _ ? void 0 : _.data) ||
+                              void 0 === _
+                            ? void 0
+                            : _.message) && void 0 !== _
+                      ? _
+                      : null === (_ = null == _ ? void 0 : _.data) ||
+                          void 0 === _
+                        ? void 0
+                        : _.msg,
+                };
+              if (
+                22 !=
+                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                  ? void 0
+                  : _.success)
+              )
+                return {
+                  uploadResults: null == _ ? void 0 : _.data,
+                };
+              await (0, _._)(2e3);
             }
-          );
+          }
+        }
+        async HandleDirectUploadToTempFromBrowser(_, _) {
+          var _, _, _;
+          const _ = new FormData();
+          _.append("filesize", "" + _.file.size),
+            _.append("sessionid", _._.SESSIONID);
+          const _ =
+              (0, _._)(this.m_strUploadPath, "ajax", "uploadurl") ||
+              this.m_strUploadPath,
+            _ = await _().post(_, _, {
+              withCredentials: !0,
+              cancelToken: _,
+            });
+          if (
+            200 == (null == _ ? void 0 : _.status) &&
+            1 ==
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) &&
+            _.data.file_id &&
+            _.data.upload_url
+          ) {
+            const _ = new Set([
+                "content-length",
+                "host",
+                "origin",
+                "referer",
+                "user-agent",
+                "cookie",
+                "set-cookie",
+                "connection",
+                "upgrade",
+              ]),
+              _ = {
+                "Content-Type": "application/octet-stream",
+              };
+            if (_.data.headers_for_upload)
+              for (const _ of _.data.headers_for_upload)
+                _.has(_.name.toLocaleLowerCase()) || (_[_.name] = _.value);
+            return (await _()
+              .put(_.data.upload_url, _.file, {
+                headers: _,
+              })
+              .then((_) => 200 == _.status || 201 == _.status)
+              .catch(() => !1))
+              ? {
+                  temp_file_id: _.data.file_id,
+                }
+              : {
+                  strError: (0, _._)("#MediaConvert_CloudUpload_UploadError"),
+                };
+          }
+          return {
+            strError:
+              null !==
+                (_ =
+                  null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                    ? void 0
+                    : _.msg) && void 0 !== _
+                ? _
+                : (0, _._)("#MediaConvert_CloudUpload_UploadError"),
+          };
         }
       }
-      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+      (_.k_nSingleMediaConvertThresholdBytes = 25e4),
+        (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
         (0, _._)([_._], _.prototype, "GetUploadImages", null),
         (0, _._)([_._], _.prototype, "ClearImages", null),
         (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
@@ -6733,7 +6760,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -12677,6 +12703,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _, saleSection: __webpack_require__ } = _,
@@ -12729,6 +12756,10 @@
                 ..._,
               }),
             Boolean("personalized_carousel" === _) &&
+              _.createElement(_, {
+                ..._,
+              }),
+            Boolean("curator_list" === _) &&
               _.createElement(_, {
                 ..._,
               }),
@@ -12823,8 +12854,16 @@
       }
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
-          [_] = (0, _._)(() => [_.smart_section_type || "wishlist"]);
+          [_, _] = (0, _._)(() => [
+            __webpack_require__.GetEventType(),
+            _.smart_section_type || "wishlist",
+          ]);
         let _ = [
+          36 == _ && {
+            label: (0, _._)("#Sale_SmartSection_CreatorList") + " (?)",
+            tooltip: (0, _._)("#Sale_SmartSection_CreatorList_ttip"),
+            data: "curator_list",
+          },
           {
             label: (0, _._)("#Sale_Wishlist") + " (?)",
             tooltip: (0, _._)("#Sale_Wishlist_ttip"),
@@ -13065,7 +13104,7 @@
           _.createElement(_._, {
             strClassName: _.SmartSelType,
             label: (0, _._)("#Sale_SmartSectionType"),
-            rgOptions: _,
+            rgOptions: _.filter(Boolean),
             selectedOption: _,
             onChange: (_) => {
               (_.smart_section_type = _.data),
@@ -13204,6 +13243,46 @@
               null,
               "Filtering/Discount Priority controls are only editable in the first personalized caruosel. They are applied to all carousels.",
             ),
+        );
+      }
+      function _(_) {
+        const { saleSection: _, editModel: __webpack_require__ } = _,
+          { lists: _ } = (0, _._)(__webpack_require__.GetClanAccountID()),
+          [_] = (0, _._)(() => [_.smart_section_curator_listid]),
+          _ = _.useMemo(
+            () =>
+              null == _
+                ? void 0
+                : _.map((_) => ({
+                    label:
+                      0 == _.list_state()
+                        ? (0, _._)(
+                            "#Sale_SmartSection_CreatorList_ListHidden",
+                            _.title(),
+                          )
+                        : _.title(),
+                    data: _.listid(),
+                  })),
+            [_],
+          );
+        return _.createElement(
+          "div",
+          {
+            className: _.SmartSectionOptions,
+          },
+          _.createElement(_._, {
+            label: (0, _._)("#Sale_SmartSection_CreatorList"),
+            strDropDownClassName: _.DropDownScroll,
+            rgOptions: null != _ ? _ : [],
+            selectedOption: _,
+            onChange: (_) => {
+              (_.smart_section_curator_listid = _.data),
+                __webpack_require__.SetDirty(_._.jsondata_sales);
+            },
+            contextMenuPositionOptions: {
+              bDisablePopTop: !0,
+            },
+          }),
         );
       }
       function _(_) {
@@ -14094,7 +14173,6 @@
         return _ ? _[_] : "";
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -17646,7 +17724,7 @@
           } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)((0, _._)(_).toString()),
-          [_, _, _, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.section_type,
             _.smart_section_type,
             _.single_item_style,
@@ -17655,8 +17733,11 @@
             (0, _._)(_),
             (0, _._)(_),
             _.enable_faceted_browsing,
+            (0, _._)(_.section_type) || "events" == _.section_type,
+            _.cap_section_content,
           ]),
           _ = "trailercarousel" === _,
+          _ = "template_media_content" === _,
           _ =
             __webpack_require__ &&
             (0, _._)(_) &&
@@ -17669,27 +17750,18 @@
             (0, _._)(_) &&
             (!_ || (1 == (null == _ ? void 0 : _.length) && 1 == _[0])),
           _ = (0, _._)(_) || "dlc_for_you" == _;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              style: {
-                display: "flex",
-              },
-              className: _.EventDefaultRowContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.HalfColumn,
-              },
-              !_ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
+        return "sale_item_browser" == _
+          ? _.createElement(_, {
+              editModel: _,
+              section: _,
+            })
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, {
+                leftChildren: [
                   !_ &&
+                    !_ &&
                     _.createElement(_._, {
                       varName: "show_as_carousel",
                       editModel: _,
@@ -17697,7 +17769,9 @@
                       textToken: "#Sale_Section_ShowAsCarousel",
                       ttipToken: "#Sale_Section_ShowAsCarousel_Tooltip",
                     }),
-                  Boolean(_) &&
+                  !_ &&
+                    _ &&
+                    !_ &&
                     _.createElement(_._, {
                       label: (0, _._)("#Sale_Section_CarouselRows"),
                       showValue: !0,
@@ -17709,7 +17783,8 @@
                       },
                       tooltip: (0, _._)("#Sale_Section_CarouselRows_Tooltip"),
                     }),
-                  Boolean(_) &&
+                  !_ &&
+                    _ &&
                     _.createElement(_._, {
                       varName: "carousel_auto_advance",
                       editModel: _,
@@ -17717,181 +17792,194 @@
                       textToken: "#Sale_Section_CarouselAutoAdvance",
                       ttipToken: "#Sale_Section_CarouselAutoAdvance_Tooltip",
                     }),
-                  Boolean(!_) &&
+                  !_ &&
+                    !_ &&
+                    _.createElement(_._, {
+                      varName: "cap_section_content",
+                      onChange: () => {
+                        _((0, _._)(_).toString());
+                      },
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_CapSectionContent",
+                      ttipToken: "#Sale_Section_CapSectionContent_Tooltip",
+                    }),
+                  !_ &&
+                    _ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.InsetOption,
+                      },
+                      _.createElement(_._, {
+                        mustBeNumeric: !0,
+                        rangeMin: 1,
+                        label: (0, _._)("#Sale_Section_CapSectionContentCount"),
+                        tooltip: (0, _._)(
+                          "#Sale_Section_CapSectionContentCount_hint",
+                        ),
+                        onChange: (_) => {
+                          const _ = Number(_.currentTarget.value);
+                          _ > 0 &&
+                            ((_.cap_section_row_count = _),
+                            _.SetDirty(_._.jsondata_sales)),
+                            _(_.currentTarget.value);
+                        },
+                        value: _,
+                      }),
+                    ),
+                ],
+                rightChildren: [
+                  !_ &&
+                    !_ &&
                     _.createElement(
                       _.Fragment,
                       null,
-                      _.createElement(_._, {
-                        varName: "cap_section_content",
-                        onChange: () => {
-                          _((0, _._)(_).toString());
-                        },
-                        editModel: _,
-                        section: _,
-                        textToken: "#Sale_Section_CapSectionContent",
-                        ttipToken: "#Sale_Section_CapSectionContent_Tooltip",
+                      _.createElement(_, {
+                        ..._,
                       }),
                       _.createElement(
                         "div",
                         {
                           className: _.InsetOption,
                         },
-                        _.createElement(_._, {
-                          mustBeNumeric: !0,
-                          rangeMin: 1,
-                          label: (0, _._)(
-                            "#Sale_Section_CapSectionContentCount",
-                          ),
-                          tooltip: (0, _._)(
-                            "#Sale_Section_CapSectionContentCount_hint",
-                          ),
-                          onChange: (_) => {
-                            const _ = Number(_.currentTarget.value);
-                            _ > 0 &&
-                              ((_.cap_section_row_count = _),
-                              _.SetDirty(_._.jsondata_sales)),
-                              _(_.currentTarget.value);
-                          },
-                          value: _,
+                        _.createElement(_, {
+                          editModel: _,
+                          section: _,
+                          bDisabled: !_,
                         }),
                       ),
                     ),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.HalfColumn,
-              },
-              !_ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    ..._,
-                  }),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.InsetOption,
-                    },
+                  !_ &&
+                    _.createElement(_, {
+                      ..._,
+                      setMaxRowsString: _,
+                    }),
+                  _ &&
+                    _.createElement(_._, {
+                      varName: "random_from_entire_set",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_RandomFromSmartSet",
+                      ttipToken: "#Sale_Section_RandomFromSmartSet_hint",
+                    }),
+                  _ &&
+                    _.createElement(
+                      _.Fragment,
+                      null,
+                      _.createElement(_, {
+                        editModel: _,
+                        section: _,
+                      }),
+                      _.createElement(_, {
+                        editModel: _,
+                        section: _,
+                      }),
+                    ),
+                  _ &&
                     _.createElement(_, {
                       editModel: _,
                       section: _,
-                      bDisabled: !_,
                     }),
-                  ),
-                ),
-              _.createElement(_, {
-                ..._,
-                setMaxRowsString: _,
+                  _ &&
+                    _.createElement(_._, {
+                      varName: "show_purchase_options",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_ShowPurchaseOptions",
+                      ttipToken: "#Sale_Section_ShowPurchaseOptions_ttip",
+                    }),
+                ],
               }),
-              _ &&
-                _.createElement(_._, {
-                  varName: "random_from_entire_set",
-                  editModel: _,
-                  section: _,
-                  textToken: "#Sale_Section_RandomFromSmartSet",
-                  ttipToken: "#Sale_Section_RandomFromSmartSet_hint",
-                }),
-              _ &&
+              _.createElement(_, {
+                leftChildren: [
+                  !_ &&
+                    _.createElement(_._, {
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_HideIfTooFewItems",
+                      ttipToken: "#Sale_Section_HideIfTooFewItems_ttip",
+                      varName: "hide_section_if_too_few_items",
+                    }),
+                  _ &&
+                    _.createElement(_._, {
+                      valveOnly: !0,
+                      varName: "hide_prices",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_HidePrices",
+                      ttipToken: "#Sale_Section_HidePrices_ttip",
+                    }),
+                  _ &&
+                    _.createElement(_._, {
+                      valveOnly: !0,
+                      varName: "show_deck_compability_details",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_ShowDeckCompatibility",
+                      ttipToken: "#Sale_Section_ShowDeckCompatibility_ttip",
+                    }),
+                ],
+                rightChildren: [
+                  _ &&
+                    _.createElement(_, {
+                      editModel: _,
+                      saleSection: _,
+                    }),
+                  "events" === _ &&
+                    _ &&
+                    _.createElement(_._, {
+                      valveOnly: !0,
+                      editModel: _,
+                      section: _,
+                      varName: "hide_duplicate_events",
+                      textToken: "#Sale_Section_HideDuplicateEvents",
+                      ttipToken: "#Sale_Section_HideDuplicateEvents_ttip",
+                    }),
+                  ("sale_events" === _ || "events" === _) &&
+                    _.createElement(_._, {
+                      valveOnly: !0,
+                      varName: "click_opens_event_directly",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_EventClickDirectOpen",
+                      ttipToken: "#Sale_Section_EventClickDirectOpen_ttip",
+                    }),
+                ],
+              }),
+            );
+      }
+      function _(_) {
+        const { leftChildren: _, rightChildren: __webpack_require__ } = _,
+          _ = _.Children.toArray(_).filter(Boolean),
+          _ = _.Children.toArray(__webpack_require__).filter(Boolean);
+        return 0 == _.length && 0 == _.length
+          ? null
+          : _.createElement(
+              "div",
+              {
+                style: {
+                  display: "flex",
+                },
+                className: _.EventDefaultRowContainer,
+              },
+              _.length > 0 &&
                 _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    editModel: _,
-                    section: _,
-                  }),
-                  _.createElement(_, {
-                    editModel: _,
-                    section: _,
-                  }),
+                  "div",
+                  {
+                    className: _.HalfColumn,
+                  },
+                  _,
                 ),
-              _ &&
-                _.createElement(_, {
-                  editModel: _,
-                  section: _,
-                }),
-              _ &&
-                _.createElement(_._, {
-                  varName: "show_purchase_options",
-                  editModel: _,
-                  section: _,
-                  textToken: "#Sale_Section_ShowPurchaseOptions",
-                  ttipToken: "#Sale_Section_ShowPurchaseOptions_ttip",
-                }),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              style: {
-                display: "flex",
-              },
-              className: _.EventDefaultRowContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.HalfColumn,
-              },
-              _.createElement(_._, {
-                editModel: _,
-                section: _,
-                textToken: "#Sale_Section_HideIfTooFewItems",
-                ttipToken: "#Sale_Section_HideIfTooFewItems_ttip",
-                varName: "hide_section_if_too_few_items",
-              }),
-              _ &&
-                _.createElement(_._, {
-                  valveOnly: !0,
-                  varName: "hide_prices",
-                  editModel: _,
-                  section: _,
-                  textToken: "#Sale_Section_HidePrices",
-                  ttipToken: "#Sale_Section_HidePrices_ttip",
-                }),
-              _ &&
-                _.createElement(_._, {
-                  valveOnly: !0,
-                  varName: "show_deck_compability_details",
-                  editModel: _,
-                  section: _,
-                  textToken: "#Sale_Section_ShowDeckCompatibility",
-                  ttipToken: "#Sale_Section_ShowDeckCompatibility_ttip",
-                }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.HalfColumn,
-              },
-              _.createElement(_, {
-                editModel: _,
-                saleSection: _,
-              }),
-              "events" === _ &&
-                _ &&
-                _.createElement(_._, {
-                  valveOnly: !0,
-                  editModel: _,
-                  section: _,
-                  varName: "hide_duplicate_events",
-                  textToken: "#Sale_Section_HideDuplicateEvents",
-                  ttipToken: "#Sale_Section_HideDuplicateEvents_ttip",
-                }),
-              ("sale_events" === _ || "events" === _) &&
-                _.createElement(_._, {
-                  valveOnly: !0,
-                  varName: "click_opens_event_directly",
-                  editModel: _,
-                  section: _,
-                  textToken: "#Sale_Section_EventClickDirectOpen",
-                  ttipToken: "#Sale_Section_EventClickDirectOpen_ttip",
-                }),
-            ),
-          ),
-        );
+              _.length > 0 &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _.HalfColumn,
+                  },
+                  _,
+                ),
+            );
       }
       function _(_) {
         const {
@@ -18042,17 +18130,24 @@
               section: __webpack_require__,
               bDisabled: _,
             } = _,
-            _ = (0, _._)(() => __webpack_require__.single_item_style);
-          if (!(0, _._)(__webpack_require__.section_type)) return null;
+            [_, _] = (0, _._)(() => [
+              __webpack_require__.single_item_style,
+              __webpack_require__.section_type,
+            ]),
+            _ = "sale_item_browser" == _,
+            _ = _ ? "compactlist" : _._;
+          if (!(0, _._)(_) && !_) return null;
           const _ = (0, _._)(_.GetClanSteamID(), !1),
             _ = _._([
-              {
-                label: (0, _._)("#Sale_Section_SingleItemDisplay_bordered"),
-                tooltip: (0, _._)(
-                  "#Sale_Section_SingleItemDisplay_bordered_ttip",
-                ),
-                data: "bordered",
-              },
+              _
+                ? null
+                : {
+                    label: (0, _._)("#Sale_Section_SingleItemDisplay_bordered"),
+                    tooltip: (0, _._)(
+                      "#Sale_Section_SingleItemDisplay_bordered_ttip",
+                    ),
+                    data: "bordered",
+                  },
               {
                 label: (0, _._)("#Sale_Section_SingleItemDisplay_library"),
                 tooltip: (0, _._)(
@@ -18067,8 +18162,9 @@
                 ),
                 data: "compactlist",
               },
-              _ || "purchaseonlydisplay" == _
-                ? {
+              (!_ && "purchaseonlydisplay" != _) || _
+                ? null
+                : {
                     label:
                       (_ ? "(VO) " : "") +
                       (0, _._)("#Sale_Section_SingleItemDisplay_purchaseonly"),
@@ -18076,8 +18172,7 @@
                       "#Sale_Section_SingleItemDisplay_purchaseonly_ttip",
                     ),
                     data: "purchaseonlydisplay",
-                  }
-                : null,
+                  },
             ]);
           return _.createElement(_._, {
             disabled: _,
@@ -18093,7 +18188,7 @@
                 : "#Sale_Section_SingleItemDisplay_ttip",
             ),
             strDropDownClassName: _.DropDownScroll,
-            selectedOption: _ || _._,
+            selectedOption: _ || _,
             onChange: (_) => {
               __webpack_require__.single_item_style !== _.data &&
                 ((__webpack_require__.single_item_style = _.data),
@@ -21678,6 +21773,7 @@
           }),
         );
       }
+      const _ = 100;
       function _(_) {
         const {
             localizedMedia: _,
@@ -21686,11 +21782,9 @@
             bAllowMediaAlignmentSettings: _,
             bAllowScalingMedia: _,
           } = _,
-          [_, _, _, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             _.media_horizontal_alignment || _._.k_Center,
             _.media_vertical_alignment || _._.k_Center,
-            _.media_type || _._.k_MediaImage,
-            _.media_scale || 100,
           ]);
         return _.createElement(
           "div",
@@ -21730,21 +21824,27 @@
                 bText: !1,
               }),
             _ &&
-              _.createElement(_._, {
-                className: _().ScaleSlider,
-                showValue: !0,
-                min: 1,
-                max: 100,
-                label: (0, _._)("#Template_Section_Slider_Scaling"),
-                tooltip: (0, _._)("#Template_Section_Slider_Scaling_ttip"),
-                value: _,
-                onChange: (_) => {
-                  _.media_scale != _ &&
-                    ((_.media_scale = _), __webpack_require__());
-                },
+              _.createElement(_, {
+                ..._,
               }),
           ),
         );
+      }
+      function _(_) {
+        const { localizedMedia: _, fnOnDirty: __webpack_require__ } = _,
+          [_] = (0, _._)(() => [_.media_scale || _]);
+        return _.createElement(_._, {
+          className: _().ScaleSlider,
+          showValue: !0,
+          min: 1,
+          max: 100,
+          label: (0, _._)("#Template_Section_Slider_Scaling"),
+          tooltip: (0, _._)("#Template_Section_Slider_Scaling_ttip"),
+          value: _,
+          onChange: (_) => {
+            _.media_scale != _ && ((_.media_scale = _), __webpack_require__());
+          },
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -21779,6 +21879,7 @@
             titleSubDesc: _,
             fnOnDirty: __webpack_require__,
             uniqueID: _,
+            bAllowScalingMedia: _,
           } = _,
           [_, _] = (0, _._)(() => {
             var _;
@@ -21837,8 +21938,153 @@
               _.createElement(_.EZL, null),
             ),
             _.createElement(_._, null),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().ScaleCtn,
+                },
+                _.createElement(_, {
+                  ..._,
+                }),
+              ),
           ),
         );
+      }
+      const _ = 35,
+        _ = 0;
+      function _(_) {
+        const {
+          titleSubDesc: _,
+          fnOnDirty: __webpack_require__,
+          bTextOnlyScaling: _,
+          uniqueID: _,
+          bInvertScalingValue: _,
+        } = _;
+        let _ = _ || _ ? _ : _;
+        const [_] = (0, _._)(() => [_.text_scale || _]),
+          _ = (0, _._)(() => _.text_scale_margin_alignment || _._.k_Left),
+          _ = _ ? 100 : 75;
+        let _ = _;
+        return (
+          _ && ((_ = 100 - _), (_ = 100 - _)),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_._, {
+              className: _().ScaleSlider,
+              showValue: !0,
+              min: 25,
+              max: _,
+              label: (0, _._)("#Template_Section_Slider_TextScaling"),
+              tooltip: (0, _._)(
+                "#Template_Section_Slider_TextScaling_ttip",
+                25,
+                _,
+                _,
+              ),
+              value: _,
+              onChange: (_) => {
+                let _ = _;
+                _ && (_ = 100 - _),
+                  _.text_scale != _ &&
+                    ((_.text_scale = _), __webpack_require__());
+              },
+            }),
+            Boolean(_ !== _) &&
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    (_.text_scale = void 0), __webpack_require__();
+                  },
+                },
+                (0, _._)("#Template_SEction_Slider_Reset"),
+              ),
+            Boolean(_) &&
+              _.createElement(_, {
+                uniqueID: "margin_toggles" + _,
+                eAlignment: _,
+                fnUpdateAlignment: (_) => {
+                  _.text_scale_margin_alignment != _ &&
+                    ((_.text_scale_margin_alignment = _),
+                    __webpack_require__());
+                },
+              }),
+          )
+        );
+      }
+      const _ = [_._.k_Left, _._.k_Center, _._.k_Right];
+      function _(_) {
+        const {
+          uniqueID: _,
+          eAlignment: __webpack_require__,
+          fnUpdateAlignment: _,
+        } = _;
+        return __webpack_require__
+          ? _.createElement(
+              _.Fragment,
+              null,
+              _.map((_) =>
+                _.createElement(
+                  _._,
+                  {
+                    key: _ + _,
+                    toolTipContent: _(_),
+                    direction: "bottom",
+                  },
+                  _.createElement(
+                    "div",
+                    null,
+                    _.createElement(
+                      _._,
+                      {
+                        onClick: (_) => {
+                          var _;
+                          null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                            void 0 === _ ||
+                            __webpack_require__.focus(),
+                            _(_);
+                        },
+                        toggled: _ == __webpack_require__,
+                      },
+                      _.createElement(_, {
+                        alignment: _,
+                      }),
+                    ),
+                  ),
+                ),
+              ),
+            )
+          : null;
+      }
+      function _(_) {
+        switch (_) {
+          case _._.k_Left:
+            return (0, _._)(
+              "#Template_Section_MediaContent_Margin_Horizontal_Left",
+            );
+          case _._.k_Center:
+            return (0, _._)(
+              "#Template_Section_MediaContent_Margin_Horizontal_Center",
+            );
+          case _._.k_Right:
+            return (0, _._)(
+              "#Template_Section_MediaContent_Margin_Horizontal_Right",
+            );
+        }
+      }
+      function _(_) {
+        const { alignment: _ } = _;
+        switch (_) {
+          case _._.k_Left:
+            return _.createElement(_.BlK, null);
+          case _._.k_Center:
+            return _.createElement(_.vIU, null);
+          case _._.k_Right:
+          default:
+            return _.createElement(_._, null);
+        }
       }
       const _ = 80;
       function _(_) {
@@ -22269,6 +22515,140 @@
               ),
             ),
           )
+        );
+      }
+      function _(_) {
+        const { saleSection: _, editModel: __webpack_require__ } = _,
+          _ = (0, _._)(),
+          _ = (0, _.useCallback)(
+            () => __webpack_require__.SetDirty(_._.jsondata_sales),
+            [__webpack_require__],
+          );
+        (0, _.useEffect)(() => {
+          _.media_overlay ||
+            (_.media_overlay = {
+              localized_media: (0, _._)([], 31, null),
+              localized_media_title: (0, _._)([], 31, null),
+              localized_media_subtitle: (0, _._)([], 31, null),
+              localized_media_description: (0, _._)([], 31, null),
+              media_type: _._.k_MediaImage,
+              text_placement: _._.k_Center,
+            });
+        }, [_]);
+        const [_, _] = (0, _._)(() => [
+            _.background_gradient_bottom,
+            _.background_gradient_top,
+          ]),
+          _ = (0, _._)(_, _),
+          _ = (0, _.useMemo)(
+            () => ({
+              row: 0,
+              col: 0,
+            }),
+            [],
+          );
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "h1",
+            null,
+            (0, _._)("#Template_Section_MediaOverlay"),
+          ),
+          _.createElement(
+            "p",
+            null,
+            (0, _._)("#Template_Section_MediaOverlay_desc"),
+          ),
+          _.createElement(_, {
+            media_overlay: _.media_overlay,
+            fnOnDirty: _,
+          }),
+          _.media_overlay &&
+            _.createElement(_, {
+              language: _,
+              uniqueID: "" + _.unique_id,
+              localizedMedia: _.media_overlay,
+              titleSubDesc: _.media_overlay,
+              fnOnDirty: _,
+              position: _,
+              totalColumns: 1,
+              strOverrideBackgroundColor: _,
+            }),
+        );
+      }
+      function _(_) {
+        const { media_overlay: _, fnOnDirty: __webpack_require__ } = _,
+          [_] = (0, _._)(() => [
+            (null == _ ? void 0 : _.text_placement) || _._.k_TopLeft,
+          ]),
+          _ = (0, _.useMemo)(
+            () => [
+              {
+                data: _._.k_TopLeft,
+                label: (0, _._)("#Template_Section_MediaOverlay_top_left"),
+              },
+              {
+                data: _._.k_TopCenter,
+                label: (0, _._)("#Template_Section_MediaOverlay_top_center"),
+              },
+              {
+                data: _._.k_TopRight,
+                label: (0, _._)("#Template_Section_MediaOverlay_top_right"),
+              },
+              {
+                data: _._.k_LeftCenter,
+                label: (0, _._)("#Template_Section_MediaOverlay_left_center"),
+              },
+              {
+                data: _._.k_Center,
+                label: (0, _._)("#Template_Section_MediaOverlay_center"),
+              },
+              {
+                data: _._.k_RightCenter,
+                label: (0, _._)("#Template_Section_MediaOverlay_right_center"),
+              },
+              {
+                data: _._.k_BottomLeft,
+                label: (0, _._)("#Template_Section_MediaOverlay_bottom_left"),
+              },
+              {
+                data: _._.k_BottomCenter,
+                label: (0, _._)("#Template_Section_MediaOverlay_bottom_center"),
+              },
+              {
+                data: _._.k_BottomRight,
+                label: (0, _._)("#Template_Section_MediaOverlay_bottom_right"),
+              },
+            ],
+            [],
+          );
+        return _.createElement(_._, {
+          label: (0, _._)("#Template_Section_MediaOverlay_location"),
+          rgOptions: _,
+          selectedOption: _,
+          onChange: (_) => {
+            _.text_placement != _.data &&
+              ((_.text_placement = _.data), __webpack_require__());
+          },
+        });
+      }
+      function _(_) {
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            ..._,
+            bAllowScalingMedia: !0,
+            bInvertScalingValue: !0,
+          }),
+          _.createElement(_, {
+            ..._,
+            bAllowDescHeaders: !0,
+          }),
+          _.createElement(_, {
+            ..._,
+          }),
         );
       }
       function _(_) {
@@ -22894,6 +23274,7 @@
           )
         );
       }
+      const _ = (_) => _ <= 2;
       function _(_) {
         const {
             mediaContent: _,
@@ -22901,7 +23282,7 @@
             position: _,
             totalColumns: _,
           } = _,
-          _ = _ <= 2,
+          _ = _(_),
           [_, _, _] = (0, _._)(() => [
             _.display_order || _._.k_MediaTitleDesc,
             _.internal_name,
@@ -22953,34 +23334,98 @@
           ),
           _.createElement(_, {
             ..._,
-            titleSubDesc: _,
-          }),
-          _.createElement(_, {
-            ..._,
-            titleSubDesc: _,
-          }),
-          _.createElement(_, {
-            ..._,
-            localizedMedia: _,
           }),
         );
+      }
+      function _(_) {
+        const {
+            mediaContent: _,
+            totalColumns: __webpack_require__,
+            fnOnDirty: _,
+          } = _,
+          _ = _(__webpack_require__),
+          [_, _] = (0, _._)(() => [
+            _.display_order || _._.k_MediaTitleDesc,
+            _ &&
+              (_.display_order == _._.k_HorizontalMediaFirst ||
+                _.display_order == _._.k_HorizontalTextFirst ||
+                _.display_order == _._.k_TitleDescOnly),
+          ]),
+          _ = (0, _.useMemo)(
+            () => ({
+              row: 0,
+              col: 0,
+            }),
+            [],
+          );
+        return _ == _._.k_OverlayMedia
+          ? _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, {
+                media_overlay: _,
+                fnOnDirty: _,
+              }),
+              _.createElement(_, {
+                ..._,
+                localizedMedia: _,
+                titleSubDesc: _,
+                fnOnDirty: _,
+                position: _,
+                totalColumns: 1,
+              }),
+            )
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, {
+                ..._,
+                titleSubDesc: _,
+                bAllowScalingMedia: _,
+                bTextOnlyScaling: _ == _._.k_TitleDescOnly,
+                bInvertScalingValue: _ == _._.k_TitleDescOnly,
+              }),
+              _.createElement(_, {
+                ..._,
+                titleSubDesc: _,
+              }),
+              _ !== _._.k_TitleDescOnly &&
+                _.createElement(_, {
+                  ..._,
+                  localizedMedia: _,
+                }),
+            );
       }
       const _ = [
         {
           type: _._.k_HorizontalMediaFirst,
           bHorizontal: !0,
+          bMediaEditor: !0,
         },
         {
           type: _._.k_HorizontalTextFirst,
           bHorizontal: !0,
+          bMediaEditor: !0,
         },
         {
           type: _._.k_MediaTitleDesc,
           bHorizontal: !1,
+          bMediaEditor: !0,
         },
         {
           type: _._.k_TitleDescMedia,
           bHorizontal: !1,
+          bMediaEditor: !0,
+        },
+        {
+          type: _._.k_TitleDescOnly,
+          bHorizontal: !0,
+          bMediaEditor: !1,
+        },
+        {
+          type: _._.k_OverlayMedia,
+          bHorizontal: !1,
+          bMediaEditor: !1,
         },
       ];
       function _(_) {
@@ -23014,6 +23459,26 @@
                 ),
               },
               _.createElement(_.Ehx, null),
+            );
+          case _._.k_TitleDescOnly:
+            return _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)(
+                  "#Template_Section_MediaContent_TextOnly_ttip",
+                ),
+              },
+              _.createElement(_.UNh, null),
+            );
+          case _._.k_OverlayMedia:
+            return _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)(
+                  "#Template_Section_MediaContent_Overlay_ttip",
+                ),
+              },
+              _.createElement(_.yGy, null),
             );
         }
         return _.createElement(
@@ -23130,137 +23595,6 @@
             "#Template_Seciton_MediaContent_Option_Desc",
           ),
         });
-      }
-      function _(_) {
-        const { saleSection: _, editModel: __webpack_require__ } = _,
-          _ = (0, _._)(),
-          _ = (0, _.useCallback)(
-            () => __webpack_require__.SetDirty(_._.jsondata_sales),
-            [__webpack_require__],
-          );
-        (0, _.useEffect)(() => {
-          _.media_overlay ||
-            (_.media_overlay = {
-              localized_media: (0, _._)([], 31, null),
-              localized_media_title: (0, _._)([], 31, null),
-              localized_media_subtitle: (0, _._)([], 31, null),
-              localized_media_description: (0, _._)([], 31, null),
-              media_type: _._.k_MediaImage,
-              text_placement: _._.k_Center,
-            });
-        }, [_]);
-        const [_, _] = (0, _._)(() => [
-            _.background_gradient_bottom,
-            _.background_gradient_top,
-          ]),
-          _ = (0, _._)(_, _),
-          _ = (0, _.useMemo)(
-            () => [
-              {
-                data: _._.k_TopLeft,
-                label: (0, _._)("#Template_Section_MediaOverlay_top_left"),
-              },
-              {
-                data: _._.k_TopCenter,
-                label: (0, _._)("#Template_Section_MediaOverlay_top_center"),
-              },
-              {
-                data: _._.k_TopRight,
-                label: (0, _._)("#Template_Section_MediaOverlay_top_right"),
-              },
-              {
-                data: _._.k_LeftCenter,
-                label: (0, _._)("#Template_Section_MediaOverlay_left_center"),
-              },
-              {
-                data: _._.k_Center,
-                label: (0, _._)("#Template_Section_MediaOverlay_center"),
-              },
-              {
-                data: _._.k_RightCenter,
-                label: (0, _._)("#Template_Section_MediaOverlay_right_center"),
-              },
-              {
-                data: _._.k_BottomLeft,
-                label: (0, _._)("#Template_Section_MediaOverlay_bottom_left"),
-              },
-              {
-                data: _._.k_BottomCenter,
-                label: (0, _._)("#Template_Section_MediaOverlay_bottom_center"),
-              },
-              {
-                data: _._.k_BottomRight,
-                label: (0, _._)("#Template_Section_MediaOverlay_bottom_right"),
-              },
-            ],
-            [],
-          ),
-          [_] = (0, _._)(() => {
-            var _;
-            return [
-              null === (_ = _.media_overlay) || void 0 === _
-                ? void 0
-                : _.text_placement,
-            ];
-          }),
-          _ = (0, _.useMemo)(
-            () => ({
-              row: 0,
-              col: 0,
-            }),
-            [],
-          );
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(
-            "h1",
-            null,
-            (0, _._)("#Template_Section_MediaOverlay"),
-          ),
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#Template_Section_MediaOverlay_desc"),
-          ),
-          _.createElement(_._, {
-            label: (0, _._)("#Template_Section_MediaOverlay_location"),
-            rgOptions: _,
-            selectedOption: _,
-            onChange: (_) => {
-              _.media_overlay.text_placement != _.data &&
-                ((_.media_overlay.text_placement = _.data), _());
-            },
-          }),
-          _.media_overlay &&
-            _.createElement(_, {
-              language: _,
-              uniqueID: "" + _.unique_id,
-              localizedMedia: _.media_overlay,
-              titleSubDesc: _.media_overlay,
-              fnOnDirty: _,
-              position: _,
-              totalColumns: 1,
-              strOverrideBackgroundColor: _,
-            }),
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, {
-            ..._,
-            bAllowScalingMedia: !0,
-          }),
-          _.createElement(_, {
-            ..._,
-            bAllowDescHeaders: !0,
-          }),
-          _.createElement(_, {
-            ..._,
-          }),
-        );
       }
       function _(_, _) {
         var _;
@@ -25441,6 +25775,94 @@
             ),
         );
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { editModel: _, saleSection: __webpack_require__ } = _,
+          [_] = (0, _._)(() => [_.GetClanAccountID()]),
+          { creatorHome: _, isFetching: _ } = (0, _._)(_),
+          { lists: _ } = (0, _._)(_.GetClanAccountID());
+        if (_) return _.createElement(_._, null);
+        if (!_) return null;
+        const _ = _.GetCreatorHomeURL(null) + "admin/lists_manage",
+          _ = !!(null == _ ? void 0 : _.some((_) => 0 != _.list_state()));
+        return _.createElement(
+          "div",
+          {
+            className: _.SectionCtn,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.EditLink,
+            },
+            (0, _._)(
+              "#Sale_CreatorListOfLists_Manage",
+              _.createElement("a", {
+                href: _,
+                target: "_blank",
+              }),
+            ),
+          ),
+          _ &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _.ListOfListsHeader,
+                },
+                (0, _._)("#Sale_CreatorListOfLists_Select"),
+              ),
+              _.createElement(
+                "ul",
+                {
+                  className: _.ListOfLists,
+                },
+                null == _
+                  ? void 0
+                  : _.map((_) =>
+                      _.createElement(_, {
+                        key: _.listid(),
+                        list: _,
+                      }),
+                    ),
+              ),
+            ),
+          !_ &&
+            _.createElement(
+              "div",
+              {
+                className: _.ListEmptyText,
+              },
+              (0, _._)("#Sale_CreatorListOfLists_Empty"),
+            ),
+        );
+      }
+      function _(_) {
+        var _;
+        const { list: __webpack_require__ } = _,
+          _ =
+            0 == __webpack_require__.list_state()
+              ? (0, _._)(
+                  "#Sale_SmartSection_CreatorList_ListHidden",
+                  __webpack_require__.title(),
+                )
+              : __webpack_require__.title();
+        return _.createElement(
+          "li",
+          {
+            className: _.ListItem,
+          },
+          _,
+          (null === (_ = __webpack_require__.blurb()) || void 0 === _
+            ? void 0
+            : _.trim().length) > 0 &&
+            _.createElement(_._, {
+              tooltip: __webpack_require__.blurb(),
+            }),
+        );
+      }
       const _ = (0, _._)((_) => {
         const _ = _.saleSection.section_type;
         switch (_) {
@@ -25552,6 +25974,10 @@
               ..._,
             });
           case "social_share":
+            return _.createElement(_, {
+              ..._,
+            });
+          case "creator_list_of_lists":
             return _.createElement(_, {
               ..._,
             });
@@ -26221,9 +26647,16 @@
                     data: "unselected_empty",
                   },
                   {
-                    label: (0, _._)("#Sale_Items"),
+                    label: (0, _._)(_ ? "#Sale_Items_Apps" : "#Sale_Items"),
                     data: "items",
-                    tooltip: (0, _._)("#Sale_Items_ttip"),
+                    tooltip: (0, _._)(
+                      _ ? "#Sale_Items_Apps_ttip" : "#Sale_Items_ttip",
+                    ),
+                  },
+                  _ && {
+                    label: (0, _._)("#Sale_CreatorListOfLists"),
+                    data: "creator_list_of_lists",
+                    tooltip: (0, _._)("#Sale_CreatorListOfLists_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_TitleImage"),
@@ -26446,10 +26879,13 @@
               "events",
               "links",
               "crosspromotesalepage",
+              "creator_list_of_lists",
               "itemdef",
               "trailercarousel",
               "point_shop_smart",
               "dlc_for_you",
+              "template_media_content",
+              "sale_item_browser",
             ].includes(_);
           })(_.section_type),
           _ = (0, _._)(_.GetClanSteamID()),
@@ -30945,6 +31381,81 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        if (_[_]) {
+          if ("community_icon" == _) {
+            const _ = _.asset_url_format
+              .replace(/^steam\//, "images/")
+              .replace("${FILENAME}", `${_[_]}.jpg`)
+              .replace(/\?.*$/, "");
+            return `${_._.MEDIA_CDN_COMMUNITY_URL}${_}`;
+          }
+          {
+            const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
+            return `${_._.STORE_ITEM_BASE_URL}${_}`;
+          }
+        }
+      }
+      function _(_, _ = "full") {
+        let _ = "";
+        switch (_) {
+          case "thumb":
+            _ = ".116x65";
+            break;
+          case "600x338":
+            _ = ".600x338";
+            break;
+          case "1920x1080":
+            _ = ".1920x1080";
+            break;
+          case "full":
+            _ = "";
+            break;
+          default:
+            (0, _._)(_, `Invalid size: ${_}`);
+        }
+        return (
+          _._.STORE_ITEM_BASE_URL + _.filename.replace(/\.[^.*]$/, `${_}$&`)
+        );
+      }
+      function _(_) {
+        const { data: _ } = (0, _._)(_),
+          _ = (0, _._)();
+        if (_)
+          return [
+            ...(_.all_ages_screenshots || []),
+            ...(!_ && _.mature_content_screenshots
+              ? _.mature_content_screenshots
+              : []),
+          ].sort((_, _) => _.ordinal - _.ordinal);
+      }
+      function _(_, _ = !1) {
+        const { data: __webpack_require__ } = (0, _._)({
+          appid: _,
+        });
+        return void 0 === __webpack_require__
+          ? void 0
+          : null === __webpack_require__
+            ? null
+            : _ && __webpack_require__.library_capsule_2x
+              ? _(__webpack_require__, "library_capsule_2x")
+              : __webpack_require__.library_capsule
+                ? _(__webpack_require__, "library_capsule")
+                : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/portrait.png`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -31779,7 +32290,9 @@
             (_[(_.k_TitleMediaDesc = 2)] = "k_TitleMediaDesc"),
             (_[(_.k_TitleDescMedia = 3)] = "k_TitleDescMedia"),
             (_[(_.k_HorizontalMediaFirst = 4)] = "k_HorizontalMediaFirst"),
-            (_[(_.k_HorizontalTextFirst = 5)] = "k_HorizontalTextFirst");
+            (_[(_.k_HorizontalTextFirst = 5)] = "k_HorizontalTextFirst"),
+            (_[(_.k_TitleDescOnly = 6)] = "k_TitleDescOnly"),
+            (_[(_.k_OverlayMedia = 7)] = "k_OverlayMedia");
         })(_ || (_ = {})),
         (function (_) {
           (_.k_Header1 = "h1"), (_.k_Header2 = "h2"), (_.k_Header3 = "h3");
@@ -34201,91 +34714,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              color: this.props.color || "rgba(255, 255, 255, 1)",
-            });
-        }
-        static GetColorString(_) {
-          return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
-        }
-        OnColorChange(_) {
-          const _ = _.GetColorString(_);
-          this.setState({
-            color: _,
-          }),
-            this.props.onChange(_);
-        }
-        async OnEyedropperClick() {
-          if ("EyeDropper" in window)
-            try {
-              const _ = new window.EyeDropper(),
-                _ = (await _.open()).sRGBHex,
-                _ = this.hexToRgba(_);
-              this.setState({
-                color: _,
-              }),
-                this.props.onChange(_);
-            } catch (_) {
-              console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
-            }
-          else alert((0, _._)("#Sale_EyeDropperError"));
-        }
-        hexToRgba(_) {
-          const _ = parseInt(_.slice(1), 16);
-          return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
-        }
-        render() {
-          return _.createElement(
-            "div",
-            null,
-            _.createElement(_._, {
-              onChange: this.OnColorChange,
-              color: this.state.color,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: _().EyeDropperCtn,
-              },
-              _.createElement(
-                _._,
-                {
-                  toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    className: _().EyeDropperBtn,
-                    onClick: this.OnEyedropperClick,
-                  },
-                  _.createElement(_.O7b, null),
-                ),
-              ),
-            ),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnColorChange", null),
-        (0, _._)([_._], _.prototype, "OnEyedropperClick", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -36098,12 +36526,32 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        const { curatorList: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _.ItemCtn,
+          },
+          _.createElement(
+            "a",
+            {
+              href: _.url,
+            },
+            _.createElement("div", null, _.title),
+          ),
+        );
+      }
+      function _(_) {
+        let _ = !1;
         return (
-          ["dlc", "dlc_onsale", "dlc_music_onsale"].includes(
-            _.smart_section_type,
-          ) || _.show_parent_app
+          _.smart_section_type &&
+            (_ = ["dlc", "dlc_onsale", "dlc_music_onsale"].includes(
+              _.smart_section_type,
+            )),
+          Boolean(_ || _.show_parent_app)
         );
       }
       function _(_, _) {
@@ -36119,6 +36567,7 @@
               ? _.capsules_per_row_array.map((_, _) => {
                   var _;
                   const _ =
+                    _.capsule_style_per_row_array &&
                     (null === (_ = _.capsule_style_per_row_array) ||
                     void 0 === _
                       ? void 0
@@ -36132,7 +36581,7 @@
               ? _
                 ? [2, 3]
                 : [2, 3, 4, 3]
-              : [_._(_.capsules_per_row, 1, _ ? 3 : 5) || 1];
+              : [_._(_.capsules_per_row || 1, 1, _ ? 3 : 5) || 1];
       }
       function _(_, _, _) {
         const _ = _(_, _),
@@ -36150,10 +36599,8 @@
             ? ["fullrow"]
             : ["grid"];
       }
-      function _(_, _, _, _, _, _) {
-        return Boolean(
-          "events" === _.section_type || "sale_events" === _.section_type,
-        )
+      function _(_, _, _, _, _, _, _) {
+        return "events" === _.section_type || "sale_events" === _.section_type
           ? _
             ? _.filter((_) => Boolean(_)).map((_) => ({
                 Render: (_) =>
@@ -36231,9 +36678,9 @@
                   })(_, _),
               }))
             : []
-          : Boolean("links" === _.section_type) ||
-              Boolean("title_image" === _.section_type) ||
-              Boolean("sale_tabhub" === _.smart_section_type)
+          : "links" === _.section_type ||
+              "title_image" === _.section_type ||
+              "sale_tabhub" === _.smart_section_type
             ? _
               ? __webpack_require__.map((_) => ({
                   Render: (_) =>
@@ -36356,7 +36803,7 @@
                       })(_, _),
                   }))
                 : []
-              : Boolean("itemdef" === _.section_type)
+              : "itemdef" === _.section_type
                 ? _
                   ? _.map((_) => ({
                       Render: (_) =>
@@ -36372,21 +36819,35 @@
                         })(_, _),
                     }))
                   : []
-                : Boolean("point_shop_smart" === _.section_type) && _
-                  ? _.map((_) => ({
-                      Render: (_) =>
-                        (function (_, _) {
-                          const { section: _, language: _, saleEvent: _ } = _;
-                          return _.createElement(_._, {
-                            key: _.unique_id + "_" + _.defid,
-                            section: _,
-                            reward: _,
-                            language: _,
-                            clanAccountID: _.clanSteamID.GetAccountID(),
-                          });
-                        })(_, _),
-                    }))
-                  : [];
+                : "point_shop_smart" === _.section_type
+                  ? _
+                    ? _.map((_) => ({
+                        Render: (_) =>
+                          (function (_, _) {
+                            const { section: _, language: _, saleEvent: _ } = _;
+                            return _.createElement(_._, {
+                              key: _.unique_id + "_" + _.defid,
+                              section: _,
+                              reward: _,
+                              language: _,
+                              clanAccountID: _.clanSteamID.GetAccountID(),
+                            });
+                          })(_, _),
+                      }))
+                    : []
+                  : "creator_list_of_lists" === _.section_type && _
+                    ? _.map((_) => ({
+                        Render: (_) =>
+                          (function (_, _) {
+                            const { section: _ } = _;
+                            return _.createElement(_, {
+                              key: _.unique_id + "_" + _.listid,
+                              section: _,
+                              curatorList: _,
+                            });
+                          })(_, _),
+                      }))
+                    : [];
       }
       function _(_, _) {
         return _[_ % _.length];
@@ -36400,6 +36861,7 @@
           bAutoAdvance: _,
           bHideIfTooFewItems: _,
           arrowFill: _,
+          arrowStyle: _,
         } = _;
         if (0 === _.length)
           return {
@@ -36450,6 +36912,7 @@
               screenIsWide: _,
               navKey: _,
               arrowFill: _,
+              arrowStyle: _,
             },
             _(_, 0, _.length, _, _(0, _)),
           );
@@ -36541,6 +37004,7 @@
                   onSlide: (_) => _._.Get().AddInteraction(_, _ * _),
                   screenIsWide: _,
                   arrowFill: _,
+                  arrowStyle: _,
                 },
                 _,
               ));
@@ -36562,6 +37026,7 @@
         __webpack_require__.carousel_rows > 1 &&
           (_ ||
             (!__webpack_require__.smart_section &&
+              __webpack_require__.capsules_per_row_array &&
               __webpack_require__.capsules_per_row_array.length > 0 &&
               __webpack_require__.capsules_per_row_array[0] >=
                 __webpack_require__.capsules.length)) &&
@@ -36573,6 +37038,7 @@
           _.events,
           _.itemdefs,
           _.rewards,
+          _.curatorLists,
         );
         if (0 === _.length)
           return {
@@ -37135,6 +37601,7 @@
             bAutoAdvance: _.carousel_auto_advance,
             bHideIfTooFewItems: _.hide_section_if_too_few_items,
             arrowFill: _.jsondata.sale_carousel_arrow_color,
+            arrowStyle: _.jsondata.sale_carousel_arrow_style,
           };
         let { content: _, bAdditionalContent: _ } = (0, _._)(_);
         return _.createElement(
@@ -37360,6 +37827,11 @@
               return _
                 ? (0, _._)("#Sale_PersonalizedCarousel_Section_title", _)
                 : null;
+            case "curator_list":
+              const _ = _.smart_section_curator_listid
+                ? _._.GetListTitle(_.smart_section_curator_listid)
+                : void 0;
+              return null != _ ? _ : null;
           }
         if ("tabs" === _.section_type) return "";
         if ("curator" === _.section_type) {
@@ -37466,15 +37938,19 @@
       }
       function _(_, _, _) {
         const _ = (function (_, _) {
-          if (
-            (0, _._)(_.section_type) &&
-            "personalized_carousel" == _.smart_section_type
-          ) {
-            const _ = _._.Get().GetTagNameForSaleSection(_, _);
-            return _
-              ? (0, _._)("#Sale_PersonalizedCarousel_Section_subtitle", _)
-              : null;
-          }
+          if ((0, _._)(_.section_type))
+            switch (_.smart_section_type) {
+              case "personalized_carousel":
+                const _ = _._.Get().GetTagNameForSaleSection(_, _);
+                return _
+                  ? (0, _._)("#Sale_PersonalizedCarousel_Section_subtitle", _)
+                  : null;
+              case "curator_list":
+                const _ = _.smart_section_curator_listid
+                  ? _._.GetListSubtitle(_.smart_section_curator_listid)
+                  : void 0;
+                return null != _ ? _ : null;
+            }
           return null;
         })(_, _);
         if (null !== _) return _ && _.startsWith("#") ? (0, _._)(_) : _;
@@ -37483,36 +37959,6 @@
           (_.default_subtitle && "#Sale_default_subtitle" !== _.default_subtitle
             ? (0, _._)(_.default_subtitle)
             : "")
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { _: _, type: __webpack_require__ } = _,
-          [_] = (0, _._)(_, (0, _._)(__webpack_require__), {});
-        return _.createElement(
-          "div",
-          {
-            className: _().SaleItemBrowserRow,
-          },
-          _.createElement(_._, {
-            ..._,
-            bLoadShortDescription: !0,
-            bShowReviewSummary: !0,
-            bShowDemoButton:
-              _.bShowDemoButton || 1 == (null == _ ? void 0 : _.GetAppType()),
-            bPreferDemoStorePage: _.bPreferDemoStorePage,
-          }),
         );
       }
     },
@@ -37657,12 +38103,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        if (!_[_]) return;
-        const _ = _.asset_url_format.replace("${FILENAME}", _[_]);
-        return `${_._.STORE_ITEM_BASE_URL}${_}`;
-      }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             arrDiscoveryApps: _,
@@ -37777,59 +38217,13 @@
             appid: _,
           },
           { data: _ } = (0, _._)(_),
-          _ = (function (_, _ = !1) {
-            const { data: _ } = (0, _._)({
-              appid: _,
-            });
-            return void 0 === _
-              ? void 0
-              : null === _
-                ? null
-                : _ && _.library_capsule_2x
-                  ? _(_, "library_capsule_2x")
-                  : _.library_capsule
-                    ? _(_, "library_capsule")
-                    : `${_._.STORE_ITEM_BASE_URL}steam/apps/${_}/portrait.png`;
-          })(_),
-          _ =
-            (function (_) {
-              const { data: _ } = (0, _._)(_),
-                _ = (0, _._)();
-              if (_)
-                return [
-                  ...(_.all_ages_screenshots || []),
-                  ...(!_ && _.mature_content_screenshots
-                    ? _.mature_content_screenshots
-                    : []),
-                ].sort((_, _) => _.ordinal - _.ordinal);
-            })(_) || [],
+          _ = (0, _._)(_),
+          _ = (0, _._)(_) || [],
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         let _ = _.length
-          ? (function (_, _ = "full") {
-              let _ = "";
-              switch (_) {
-                case "thumb":
-                  _ = ".116x65";
-                  break;
-                case "600x338":
-                  _ = ".600x338";
-                  break;
-                case "1920x1080":
-                  _ = ".1920x1080";
-                  break;
-                case "full":
-                  _ = "";
-                  break;
-                default:
-                  (0, _._)(_, `Invalid size: ${_}`);
-              }
-              return (
-                _._.STORE_ITEM_BASE_URL +
-                _.filename.replace(/\.[^.*]$/, `${_}$&`)
-              );
-            })(_[0], "600x338")
-          : _ && _(_, "main_capsule");
+          ? (0, _._)(_[0], "600x338")
+          : _ && (0, _._)(_, "main_capsule");
         const _ = {
           backgroundImage:
             "radial-gradient(135% 125% at 100% 0%, rgba(0, 0, 0, 0) 22.5%, rgba(0, 0, 0, 1) 92.5%)" +
@@ -37866,6 +38260,7 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid");
       const _ = _.createContext({
           showDiscoveryQueue: (_) =>
             (window.location.href = `${_._.STORE_BASE_URL}explore/next/${_}`),
@@ -38817,6 +39212,27 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { _: _, type: __webpack_require__ } = _,
+          [_] = (0, _._)(_, (0, _._)(__webpack_require__), {});
+        return _.createElement(
+          "div",
+          {
+            className: _().SaleItemBrowserRow,
+          },
+          _.createElement(_._, {
+            ..._,
+            bLoadShortDescription: !0,
+            bShowReviewSummary: !0,
+            bShowDemoButton:
+              _.bShowDemoButton || 1 == (null == _ ? void 0 : _.GetAppType()),
+            bPreferDemoStorePage: _.bPreferDemoStorePage,
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -38831,8 +39247,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38879,18 +39293,18 @@
               : _),
           _ = 0 == _.GetStoreItemType();
         return _.createElement(
-          _._,
+          "div",
           {
-            appid: _ && _.GetAppID(),
+            className: (0, _._)(
+              _().StoreSaleWidgetContainer,
+              _().LibraryAssetExpandedDisplay,
+              "LibraryAssetExpandedDisplay",
+            ),
           },
           _.createElement(
-            "div",
+            _._,
             {
-              className: (0, _._)(
-                _().StoreSaleWidgetContainer,
-                _().LibraryAssetExpandedDisplay,
-                "LibraryAssetExpandedDisplay",
-              ),
+              appid: _ && _.GetAppID(),
             },
             _.createElement(
               "div",
@@ -39202,7 +39616,7 @@
               ..._,
             });
           case "compactlist":
-            return _.createElement(_._, {
+            return _.createElement(_, {
               ..._,
             });
           default:
@@ -39589,6 +40003,7 @@
             bAutoAdvance: _.carousel_auto_advance,
             bHideIfTooFewItems: _.hide_section_if_too_few_items,
             arrowFill: _.jsondata.sale_carousel_arrow_color,
+            arrowStyle: _.jsondata.sale_carousel_arrow_style,
           };
         let { content: _, bAdditionalContent: _ } = (0, _._)(_);
         return _.createElement(
@@ -39814,6 +40229,7 @@
             bHideStoreHover: _,
             onlyOneDiscountPct: _,
             bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
           } = _,
           [_, _] = _.useState(!1),
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
@@ -39830,6 +40246,7 @@
             bIsHovered: _,
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
+            bShowEarlyAccessBanner: _,
           });
         return _.createElement(
           _._,
@@ -39870,6 +40287,8 @@
                     strExtraParams: _.strExtraParams,
                     nCreatorAccountID: _.creatorAccountID,
                     nWidthMultiplier: _.nWidthMultiplier,
+                    bShowIgnoreButton: _.bShowIgnoreButton,
+                    bShowDescription: _.bShowDescriptionInHover,
                   },
                   _,
                 ),
@@ -39944,6 +40363,7 @@
             bIsHovered: _,
             strDoubleCapsuleMessage: _,
             bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
           } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ = (0, _._)(),
@@ -39968,77 +40388,72 @@
           _.createElement(
             "div",
             {
-              className: _().CapsuleFocusCtn,
+              className: (0, _._)({
+                [_().TwoWidthCtn]: _,
+              }),
             },
             _.createElement(
-              "div",
+              _._,
               {
-                className: (0, _._)({
-                  [_().TwoWidthCtn]: _,
-                }),
-              },
-              _.createElement(
-                _._,
-                {
-                  href: _ ? null : _,
-                  style: {
-                    display: "block",
-                    cursor: "pointer",
-                  },
-                  className: (0, _._)({
-                    [_().TwoWidthCapsule]: _,
-                  }),
-                  preferredFocus: _,
-                  onClick: _,
+                href: _ ? null : _,
+                style: {
+                  display: "block",
+                  cursor: "pointer",
                 },
-                _.createElement(_._, {
-                  appids: _,
-                  hide_status_banners: __webpack_require__,
+                className: (0, _._)({
+                  [_().TwoWidthCapsule]: _,
                 }),
-                "none" != _ &&
-                  _.createElement(_._, {
-                    imageType: _,
-                    info: _,
-                  }),
+                preferredFocus: _,
+                onClick: _,
+              },
+              _.createElement(_._, {
+                appids: _,
+                hide_status_banners: __webpack_require__,
+                show_early_access: _.bShowEarlyAccessBanner,
+              }),
+              "none" != _ &&
                 _.createElement(_._, {
-                  storeItem: _,
+                  imageType: _,
+                  info: _,
                 }),
-                Boolean(_) &&
-                  _.createElement(_._, {
-                    appInfo: _,
-                  }),
-              ),
-              _ &&
+              _.createElement(_._, {
+                storeItem: _,
+              }),
+              Boolean(_) &&
+                _.createElement(_._, {
+                  appInfo: _,
+                }),
+            ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().TwoWidthSideInfo, "TwoWidthSideInfo"),
+                },
                 _.createElement(
                   "div",
                   {
-                    className: _().TwoWidthSideInfo,
+                    className: _().Reason,
+                  },
+                  _,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().StoreSaleItemRelease,
                   },
                   _.createElement(
-                    "div",
-                    {
-                      className: _().Reason,
-                    },
-                    _,
+                    "span",
+                    null,
+                    _.GetFormattedSteamReleaseDate(),
                   ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().StoreSaleItemRelease,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      _.GetFormattedSteamReleaseDate(),
-                    ),
-                  ),
-                  _.createElement(_._, {
-                    bHideTitle: !0,
-                    rgTagIDs: _.GetTagIDs(),
-                    instanceNum: _,
-                  }),
                 ),
-            ),
+                _.createElement(_._, {
+                  bHideTitle: !0,
+                  rgTagIDs: _.GetTagIDs(),
+                  instanceNum: _,
+                }),
+              ),
           ),
           _.createElement(_, {
             ..._,

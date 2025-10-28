@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Contenu reclassifié",
 	"moderation_resolutionstatus_suspicious": "Votre compte a été verrouillé pour cause de contenu suspect.",
 	"moderation_resolutionstatus_harassmentstrike": "Privilèges de participation à la communauté Steam suspendus",
+	"moderation_resolutionstatus_removeandwarn": "Supprimé et compte averti",
+	"moderation_resolutionstatus_removeandban": "Supprimé et compte banni du hub",
 	"moderation_resolutionstatus_unknown": "Inconnu",
 	"moderationaction_acquitted": "Acquittement",
 	"moderationaction_cancelled": "Dernier signalement ouvert annulé",

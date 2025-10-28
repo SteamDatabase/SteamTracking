@@ -9192,7 +9192,7 @@
           },
           a.createElement(
             "div",
-            { className: m },
+            { className: m, dir: "ltr" },
             a.createElement(Gn, null),
             a.createElement(wn, null),
             a.createElement(

@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "内容已重新标识",
 	"moderation_resolutionstatus_suspicious": "由于内容可疑，已锁定帐户",
 	"moderation_resolutionstatus_harassmentstrike": "已禁用 Steam 社区权限",
+	"moderation_resolutionstatus_removeandwarn": "已移除并警告",
+	"moderation_resolutionstatus_removeandban": "已移除并实施全中心封禁",
 	"moderation_resolutionstatus_unknown": "未知",
 	"moderationaction_acquitted": "已判为无责",
 	"moderationaction_cancelled": "上次打开的举报已取消",

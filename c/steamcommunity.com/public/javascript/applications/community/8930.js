@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Nội dung đã đổi nhãn",
 	"moderation_resolutionstatus_suspicious": "Tài khoản bị khóa vị nội dung đáng ngờ",
 	"moderation_resolutionstatus_harassmentstrike": "Đình chỉ quyền cộng đồng Steam",
+	"moderation_resolutionstatus_removeandwarn": "Đã gỡ bỏ và cảnh báo",
+	"moderation_resolutionstatus_removeandban": "Đã gỡ bỏ và cấm khỏi trung tâm",
 	"moderation_resolutionstatus_unknown": "Không xác định",
 	"moderationaction_acquitted": "Không phạt",
 	"moderationaction_cancelled": "Tố cáo đã mở cuối cùng bị hủy",

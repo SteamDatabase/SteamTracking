@@ -130,9 +130,13 @@
         WishlistButton: "_3notzMjxQtogi11XHZMYXI",
         WishlistButtonText: "VI5mZtnq0CL7fw_2mxhfm",
         WishlistLoadingText: "_7-s8T3gdbCrmXoLzhnC5p",
+        IgnoreButton: "_3NbZqMjO0na446Hl2elpae",
+        IgnoreButtonText: "_1gTs9_O1m2-Sibih5GJ43d",
+        IgnoreLoadingText: "_2R3kegZfZASFduBjtw168d",
         WishlistButtonNotTop: "_3VcyYP_egkOaX_rJ1e_SQk",
         BottomShelf: "oAqlZTgPU37Nb8gBT5eAM",
         BottomShelfOffScreen: "_36zpRzyxmtd8eBgf7p9Ewi",
+        ShortDescription: "_1JiQcVD1LUE2KxWb_oOv-K",
         TextContent: "_2VvFLg2irh9gPAhhxE4Kpo",
         GameTitle: "_405wj1BgSyf8l06uMjNBV",
         TagRow: "_2SWQMqXxu7mJMIuNemYJq8",
@@ -326,6 +330,7 @@
         ParentType: "_3FCPPT5eoSXF0nNcICVdP6",
         Banner: "_2gxv9cF-4n9wq4yxruOTNl",
         Blue: "_2o-5t6bgEJxfbWVSmxT88V",
+        EarlyAccessGradient: "_2Hl_ERfCdYklXHAYAqvd4R",
         LinesImg: "_3LecBjgbnwvS6bCFqxs6SC",
         CapsuleDecorators: "_1xNQcxU9_OtQ-_PrMbviS4",
         BundleContentsCtnTransition: "_24KNcWMI5Yvb_AnPAb23Fm",
@@ -18056,7 +18061,7 @@
             : _,
         );
       }
-      const _ = (0, _._)((_) => {
+      const _ = (0, _._)(function (_) {
           const { appID: _, snr: __webpack_require__, classOverride: _ } = _,
             [_] = (0, _._)(_, {}),
             [_, _] = (0, _.useState)(() =>
@@ -18110,196 +18115,240 @@
             ),
           );
         }),
-        _ = (_) => {
-          const { nCreatorAccountID: _ } = _,
-            [__webpack_require__, _] = (0, _._)(_),
-            { creatorHome: _ } = (0, _._)(_);
-          return _.createElement(
-            "div",
-            {
-              className: _().GameHoverCreatorFollowButtonCtn,
-            },
-            _.createElement(
-              "a",
-              {
-                href: null == _ ? void 0 : _.GetCreatorHomeURL("developer"),
-              },
-              _.createElement("img", {
-                src: __webpack_require__
-                  ? (0, _._)(null, "medium")
-                  : _.avatar_medium_url,
-              }),
-            ),
-            _.createElement(_._, {
-              clanAccountID: _,
-            }),
-          );
-        },
-        _ = (0, _._)((_) => {
-          const {
-              info: _,
-              displayInfo: __webpack_require__,
-              name: _,
-              strStoreUrl: _,
-              elElementToAppend: _,
-              bShowDemoButton: _,
-              bHideBottomHalf: _,
-              bHidePrice: _,
-              bShowDeckCompatibilityDialog: _,
-              bUseSubscriptionLayout: _,
-              nCreatorAccountID: _,
-              bPreventNavigation: _,
-            } = _,
+        _ = (0, _._)(function (_) {
+          const { appID: _, snr: __webpack_require__, classOverride: _ } = _,
+            [_] = (0, _._)(_, {}),
             [_, _] = (0, _.useState)(!1),
-            [_, _] = (0, _.useState)(""),
-            [_] = (0, _._)(_._, (0, _._)(_.type), {
-              include_release: !0,
-              include_platforms: !0,
-              include_reviews: !0,
-              include_tag_count: 20,
-            }),
-            [_] = (0, _._)(
-              __webpack_require__._,
-              (0, _._)(__webpack_require__.type),
-              {
-                include_assets: !0,
-              },
-            ),
-            _ = !_ && !_ && !_,
-            _ = 0 == (null == _ ? void 0 : _.GetStoreItemType());
+            _ = (0, _._)("GameHoverIgnoreButton"),
+            _ = _ && _._.Get().BIsGameWishlisted(_);
           return _.createElement(
             "div",
             {
-              className: _().BottomShelf,
-              style: {
-                transform: _ && _ ? _ : "",
-              },
-              onMouseEnter: () => _(!0),
-              onFocus: () => _(!0),
-              onMouseLeave: () => _(!1),
-              onBlur: () => _(!1),
-            },
-            _.createElement(
-              "a",
-              {
-                href: _ ? null : _,
-                target: _._.IN_CLIENT ? void 0 : "_blank",
-                className: _().Midline,
-              },
-              Boolean(_) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().CapsuleImageAnchorPoint,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _().CapsuleImageCtn,
-                        _().WithCornerShine,
+              className: (0, _._)(_().IgnoreButton, _),
+              onClick: async (_) => {
+                _.preventDefault(),
+                  _.stopPropagation(),
+                  _._.logged_in
+                    ? (_(!0),
+                      await _._.Get().UpdateAppIgnore(
+                        _,
+                        !_,
+                        __webpack_require__,
                       ),
-                    },
-                    _.createElement("img", {
-                      loading: "lazy",
-                      src: null == _ ? void 0 : _.GetAssets().GetHeaderURL(),
-                      alt: null == _ ? void 0 : _.GetName(),
-                    }),
-                  ),
-                ),
-              Boolean(!_ && !_) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Price,
-                  },
-                  _.createElement(_._, {
-                    info: _,
-                    onlyOneDiscountPct: !0,
-                  }),
-                ),
-            ),
+                      _.token.reason || _(!1))
+                    : (0, _._)();
+              },
+            },
+            _.createElement(_.NtH, null),
             _.createElement(
               "div",
               {
-                className: _().BottomShelfOffScreen,
-                ref: (_) =>
-                  _(
-                    `translateY( -${(null == _ ? void 0 : _.clientHeight) || 0}px )`,
-                  ),
+                className: (0, _._)(
+                  _().IgnoreButtonText,
+                  _ && _().IgnoreLoadingText,
+                ),
               },
+              (0, _._)(_ ? "#Sale_RemoveFromIgnored" : "#Sale_Ignore"),
+            ),
+          );
+        });
+      function _(_) {
+        const { nCreatorAccountID: _ } = _,
+          [__webpack_require__, _] = (0, _._)(_),
+          { creatorHome: _ } = (0, _._)(_);
+        return _.createElement(
+          "div",
+          {
+            className: _().GameHoverCreatorFollowButtonCtn,
+          },
+          _.createElement(
+            "a",
+            {
+              href: null == _ ? void 0 : _.GetCreatorHomeURL("developer"),
+            },
+            _.createElement("img", {
+              src: __webpack_require__
+                ? (0, _._)(null, "medium")
+                : _.avatar_medium_url,
+            }),
+          ),
+          _.createElement(_._, {
+            clanAccountID: _,
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            info: _,
+            displayInfo: __webpack_require__,
+            name: _,
+            strStoreUrl: _,
+            elElementToAppend: _,
+            bShowDemoButton: _,
+            bHideBottomHalf: _,
+            bHidePrice: _,
+            bShowDeckCompatibilityDialog: _,
+            bUseSubscriptionLayout: _,
+            nCreatorAccountID: _,
+            bPreventNavigation: _,
+            bShowDescription: _,
+          } = _,
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(""),
+          [_] = (0, _._)(_._, (0, _._)(_.type), {
+            include_release: !0,
+            include_platforms: !0,
+            include_reviews: !0,
+            include_tag_count: 20,
+          }),
+          [_] = (0, _._)(
+            __webpack_require__._,
+            (0, _._)(__webpack_require__.type),
+            {
+              include_assets: !0,
+            },
+          ),
+          _ = !_ && !_ && !_,
+          _ = 0 == (null == _ ? void 0 : _.GetStoreItemType());
+        return _.createElement(
+          "div",
+          {
+            className: _().BottomShelf,
+            style: {
+              transform: _ && _ ? _ : "",
+            },
+            onMouseEnter: () => _(!0),
+            onFocus: () => _(!0),
+            onMouseLeave: () => _(!1),
+            onBlur: () => _(!1),
+          },
+          _.createElement(
+            "a",
+            {
+              href: _ ? null : _,
+              className: _().Midline,
+            },
+            Boolean(_) &&
               _.createElement(
                 "div",
                 {
-                  className: _().TextContent,
+                  className: _().CapsuleImageAnchorPoint,
                 },
                 _.createElement(
-                  "a",
+                  "div",
                   {
-                    href: _ ? null : _,
-                    target: _._.IN_CLIENT ? void 0 : "_blank",
+                    className: (0, _._)(
+                      _().CapsuleImageCtn,
+                      _().WithCornerShine,
+                    ),
                   },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().GameTitle,
-                    },
-                    (null == _ ? void 0 : _.GetName()) || _,
-                  ),
+                  _.createElement("img", {
+                    loading: "lazy",
+                    src: null == _ ? void 0 : _.GetAssets().GetHeaderURL(),
+                    alt: null == _ ? void 0 : _.GetName(),
+                  }),
                 ),
-                Boolean(_) &&
-                  _.createElement(_, {
-                    rgTagIDs: _.GetTagIDs(),
-                  }),
-                Boolean(!_ && _) &&
-                  _.createElement(_, {
-                    appInfo: _,
-                  }),
-                Boolean(!_ && _) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ReviewsAndRelease,
-                    },
-                    _.createElement(_._, {
-                      item: _,
-                      strClassName: _().PlatformDisplay,
-                    }),
-                    Boolean(
-                      null == _ ? void 0 : _.GetFormattedSteamReleaseDate(),
-                    ) &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ReleaseDate,
-                        },
-                        null == _ ? void 0 : _.GetFormattedSteamReleaseDate(),
-                      ),
-                  ),
-                _ &&
-                  _.createElement(_._, {
-                    info: _,
-                    className: _().DemoButton,
-                  }),
-                Boolean(_ && _) &&
-                  _.createElement(_._, {
-                    storeItem: _,
-                  }),
-                Boolean(_) && _,
-                Boolean(_ && _) &&
-                  _.createElement(_._, {
-                    appid: _._,
-                    bIsMuted: !1,
-                  }),
-                _ &&
-                  _.createElement(_, {
-                    nCreatorAccountID: _,
-                  }),
               ),
+            Boolean(!_ && !_) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().Price,
+                },
+                _.createElement(_._, {
+                  info: _,
+                  onlyOneDiscountPct: !0,
+                }),
+              ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().BottomShelfOffScreen,
+              ref: (_) =>
+                _(
+                  `translateY( -${(null == _ ? void 0 : _.clientHeight) || 0}px )`,
+                ),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().TextContent,
+              },
+              _.createElement(
+                "a",
+                {
+                  href: _ ? null : _,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().GameTitle,
+                  },
+                  (null == _ ? void 0 : _.GetName()) || _,
+                ),
+              ),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ShortDescription,
+                  },
+                  null == _ ? void 0 : _.GetShortDescription(),
+                ),
+              Boolean(_) &&
+                _.createElement(_, {
+                  rgTagIDs: _.GetTagIDs(),
+                }),
+              Boolean(!_ && _) &&
+                _.createElement(_, {
+                  appInfo: _,
+                }),
+              Boolean(!_ && _) &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ReviewsAndRelease,
+                  },
+                  _.createElement(_._, {
+                    item: _,
+                    strClassName: _().PlatformDisplay,
+                  }),
+                  Boolean(
+                    null == _ ? void 0 : _.GetFormattedSteamReleaseDate(),
+                  ) &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().ReleaseDate,
+                      },
+                      null == _ ? void 0 : _.GetFormattedSteamReleaseDate(),
+                    ),
+                ),
+              _ &&
+                _.createElement(_._, {
+                  info: _,
+                  className: _().DemoButton,
+                }),
+              Boolean(_ && _) &&
+                _.createElement(_._, {
+                  storeItem: _,
+                }),
+              Boolean(_) && _,
+              Boolean(_ && _) &&
+                _.createElement(_._, {
+                  appid: _._,
+                  bIsMuted: !1,
+                }),
+              _ &&
+                _.createElement(_, {
+                  nCreatorAccountID: _,
+                }),
             ),
-          );
-        }),
-        _ = (0, _._)((_) => {
+          ),
+        );
+      }
+      const _ = (0, _._)(function (_) {
           _.useEffect(() => {
             _._.Get().HintLoad();
           }, []);
@@ -18310,6 +18359,7 @@
             bHideBottomHalf: _,
             bShowDeckCompatibilityDialog: _,
             bShowWishlistButton: _ = !0,
+            bShowIgnoreButton: _ = !1,
           } = _;
           let _;
           return (
@@ -18328,9 +18378,13 @@
                 "a",
                 {
                   href: _ ? null : _,
-                  target: _._.IN_CLIENT ? void 0 : "_blank",
                   className: _().TrailerAnchorStoreLink,
                 },
+                Boolean(_ && !_ && !_) &&
+                  _.createElement(_, {
+                    appID: __webpack_require__._,
+                    snr: _.strSNR,
+                  }),
                 Boolean(_ && !_ && !_) &&
                   _.createElement(_, {
                     appID: __webpack_require__._,
@@ -18363,6 +18417,8 @@
             nWidthMultiplier: _,
             bShowDeckCompatibilityDialog: _,
             bShowWishlistButton: _ = !0,
+            bShowIgnoreButton: _ = !1,
+            bShowDescription: _ = !1,
             ..._
           } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), {}),
@@ -18391,7 +18447,7 @@
                   _,
                   _,
                 ),
-          _ = _.createElement(_, {
+          _ = {
             info: _,
             displayInfo: _,
             name: __webpack_require__,
@@ -18399,7 +18455,6 @@
             strStoreUrl: _,
             elElementToAppend: _,
             bShowDemoButton: _,
-            bPreferDemoStorePage: _,
             bShowDeckCompatibilityDialog: _,
             bHideBottomHalf: _,
             bHidePrice: _,
@@ -18407,6 +18462,11 @@
             strSNR: _,
             nCreatorAccountID: _,
             bShowWishlistButton: _,
+            bShowIgnoreButton: _,
+            bShowDescription: _,
+          },
+          _ = _.createElement(_, {
+            ..._,
           });
         return _.createElement(
           _,
@@ -18460,36 +18520,28 @@
             nWidthMultiplier: _,
             children: _,
             className: _,
-            ..._
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = !_ && !_,
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0);
+          [_, _] = _.useState(void 0),
+          _ = _ ? "a" : "div";
         return _.createElement(
-          "div",
+          _,
           {
             "data-key": "hover div",
             className: (0, _._)(_().ItemHoverSource, _ && _().Selectable, _),
-            ..._,
             onMouseEnter: (_) => {
               _(!0), _(_.currentTarget);
             },
             onMouseLeave: () => _(!1),
-            onClick: _
-              ? (_) => {
-                  _(!1),
-                    (window.location.href = _),
-                    _.preventDefault(),
-                    _.stopPropagation();
-                }
-              : void 0,
             onTouchStart: () => _(!1),
             onKeyDown: (_) => {
               27 == _.keyCode &&
                 (_(!1), _.preventDefault(), _.stopPropagation());
             },
+            href: _,
           },
           _ &&
             _.createElement(
@@ -18982,21 +19034,22 @@
           return _.createElement(
             _._,
             {
-              appid: _ ? _.GetAppID() : void 0,
+              className: (0, _._)({
+                [_().StoreSaleWidgetOuterContainer]: !0,
+                [_().AllowTwoLineHeader]: _,
+                StoreSaleWidgetOuterContainer: !0,
+              }),
+              onMouseEnter: () => !_ && _(!0),
+              onMouseLeave: () => !_ && _(!1),
+              "flow-children": "grid",
+              navEntryPreferPosition: _._.PREFERRED_CHILD,
+              autoFocus: _,
+              navKey: "preview_widget_" + _.GetID(),
             },
             _.createElement(
               _._,
               {
-                className: (0, _._)({
-                  [_().StoreSaleWidgetOuterContainer]: !0,
-                  [_().AllowTwoLineHeader]: _,
-                }),
-                onMouseEnter: () => !_ && _(!0),
-                onMouseLeave: () => !_ && _(!1),
-                "flow-children": "grid",
-                navEntryPreferPosition: _._.PREFERRED_CHILD,
-                autoFocus: _,
-                navKey: "preview_widget_" + _.GetID(),
+                appid: _ ? _.GetAppID() : void 0,
               },
               _.createElement(
                 _._,
@@ -19775,7 +19828,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, __webpack_require__("chunkid")._)(function (_) {
-        const { appids: _, hide_status_banners: __webpack_require__ } = _,
+        const {
+            appids: _,
+            hide_status_banners: __webpack_require__,
+            show_early_access: _,
+          } = _,
           _ = _.length > 0 && _.every((_) => _._.Get().BOwnsApp(_)),
           _ = _.length > 0 && _.every((_) => _._.Get().BIsGameWishlisted(_)),
           _ = _.some((_) => {
@@ -19783,7 +19840,14 @@
             return _ && _(_, null == _ ? void 0 : _.GetParentAppID());
           }),
           _ = _ && !__webpack_require__,
-          _ = _ && !__webpack_require__;
+          _ = _ && !__webpack_require__,
+          _ =
+            _.some((_) => {
+              const _ = _._.Get().GetApp(_);
+              return _ && _.BIsEarlyAccess();
+            }) &&
+            !__webpack_require__ &&
+            _;
         return _.createElement(
           "div",
           {
@@ -19811,6 +19875,16 @@
                 className: _().LinesImg,
               }),
               (0, _._)("#Sale_OnWishlist"),
+            ),
+          _ &&
+            !_ &&
+            !_ &&
+            _.createElement(
+              "span",
+              {
+                className: (0, _._)(_().Banner, _().EarlyAccessGradient),
+              },
+              (0, _._)("#Sale_EarlyAccess"),
             ),
           _ && _.createElement(_._, null),
         );

@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Sisältö luokiteltu uudelleen",
 	"moderation_resolutionstatus_suspicious": "Tili lukittu epäilyttävän sisällön vuoksi",
 	"moderation_resolutionstatus_harassmentstrike": "Steam-yhteisön käyttöoikeudet evätty",
+	"moderation_resolutionstatus_removeandwarn": "Poistettu ja varoitettu",
+	"moderation_resolutionstatus_removeandban": "Poistettu ja estetty pääsy keskukseen",
 	"moderation_resolutionstatus_unknown": "Tuntematon",
 	"moderationaction_acquitted": "Sallittu",
 	"moderationaction_cancelled": "Viimeinen avoin ilmoitus peruttu",

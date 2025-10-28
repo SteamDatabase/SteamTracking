@@ -2556,8 +2556,7 @@
               _.append("asset_type", "extra_asset_v2"),
               _.append("name", _),
               _
-                ? (_.append("download_url", _.download_url),
-                  _.append("file_path", _.file_path))
+                ? _.append("temp_file_id", _.temp_file_id)
                 : _.append("file", _.file);
             const _ = await this.MakePost(
               this.m_urls.strBeginConvert,
@@ -4588,23 +4587,7 @@
         );
       });
       var _ = __webpack_require__("chunkid");
-      function _(_) {
-        if (_.startsWith("rgb")) {
-          const _ = _.match(/\d+/g);
-          if (!_ || _.length < 3) return "#000000";
-          const [__webpack_require__, _, _] = _.map(Number);
-          return (
-            "#" +
-            [__webpack_require__, _, _]
-              .map((_) => {
-                const _ = _.toString(16);
-                return 1 === _.length ? "0" + _ : _;
-              })
-              .join("")
-          );
-        }
-        return _;
-      }
+      var _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
             schema: _,
@@ -4625,8 +4608,9 @@
           _ = _.useCallback(() => {
             const { state: _, dispatch: __webpack_require__ } = _,
               _ = _ ? _.marks.color : _.marks.bgcolor;
-            if (!_) return;
-            if (!_ || !_.startsWith("#") || 7 !== _.length) return;
+            if (!_) return void console.log("debug: no markType");
+            if (!_ || !_.startsWith("#") || 7 !== _.length)
+              return void console.log("debug: invalid color text: " + _);
             if (_ < 0 || _ > _.doc.content.size || _ > _)
               return void console.error("Invalid selection range:", _, _);
             let _;
@@ -4685,12 +4669,23 @@
             strOKText: _,
             bOKDisabled: !_ || 0 == _.length,
           },
-          _.createElement(_._, null, (0, _._)("#FormattingToolbar_Color")),
-          _.createElement("input", {
-            type: "color",
-            ref: _,
-            value: _(_),
-            onChange: (_) => _(_.currentTarget.value),
+          _.createElement(_._, {
+            color: _,
+            strTitle: _,
+            disableAlpha: !0,
+            onChange: (_) =>
+              _(
+                (function (_) {
+                  const _ = _.match(
+                    /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/i,
+                  );
+                  if (_) {
+                    let [, _, __webpack_require__, _, _] = _;
+                    return `#${((1 << 24) + (parseInt(_, 10) << 16) + (parseInt(__webpack_require__, 10) << 8) + parseInt(_, 10)).toString(16).slice(1)}`;
+                  }
+                  return "#7e3232";
+                })(_),
+              ),
           }),
         );
       });

@@ -1,15 +1,15 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10184000";
+var CLSTAMP = "10188448";
 (self.webpackChunk_steam_friendsui =
   self.webpackChunk_steam_friendsui || []).push([
   [9489],
   {
-    68448: (e, r, t) => {
+    3858: (e, r, t) => {
       t.d(r, { S7: () => n });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
+        s = t(8396);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -338,19 +338,19 @@ var CLSTAMP = "10184000";
         }
       }
     },
-    13320: (e, r, t) => {
+    66506: (e, r, t) => {
       function i(e) {
         return "unknown EMsg ( " + e + " )";
       }
       t.d(r, { JS: () => i });
     },
-    81593: (e, r, t) => {
+    97091: (e, r, t) => {
       t.d(r, { T4: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -754,14 +754,14 @@ var CLSTAMP = "10184000";
         };
       })(i || (i = {}));
     },
-    83412: (e, r, t) => {
+    24470: (e, r, t) => {
       t.d(r, { $y: () => a, Fn: () => d, c4: () => i });
       var i,
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(59318),
-        l = t(81743);
+        o = t(8396),
+        l = t(30657);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -1086,7 +1086,7 @@ var CLSTAMP = "10184000";
           };
         })(a || (a = {}));
     },
-    13340: (e, r, t) => {
+    3690: (e, r, t) => {
       t.d(r, {
         Ev: () => p,
         Qc: () => v,
@@ -1101,9 +1101,9 @@ var CLSTAMP = "10184000";
         s,
         n = t(58663),
         o = t.n(n),
-        l = t(59318),
-        c = t(81743),
-        m = t(65237);
+        l = t(8396),
+        c = t(30657),
+        m = t(55235);
       class u extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -4641,20 +4641,21 @@ var CLSTAMP = "10184000";
             });
         })(s || (s = {}));
     },
-    65237: (e, r, t) => {
+    55235: (e, r, t) => {
       t.d(r, {
         LH: () => l,
+        O2: () => d,
         TT: () => m,
         WV: () => u,
         gF: () => c,
-        h2: () => B,
+        h2: () => g,
         kK: () => n,
-        ke: () => g,
-        u2: () => b,
+        ke: () => b,
+        u2: () => M,
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
+        s = t(8396);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -5284,12 +5285,11 @@ var CLSTAMP = "10184000";
       }
       i.Message;
       i.Message;
-      i.Message;
       class d extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            d.prototype.clanid || s.Sg(d.M()),
+            d.prototype.language || s.Sg(d.M()),
             i.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -5299,6 +5299,67 @@ var CLSTAMP = "10184000";
             d.sm_m ||
               (d.sm_m = {
                 proto: d,
+                fields: {
+                  language: { n: 1, br: s.qM.readUint32, bw: s.gp.writeUint32 },
+                  localized_string: {
+                    n: 2,
+                    br: s.qM.readString,
+                    bw: s.gp.writeString,
+                  },
+                },
+              }),
+            d.sm_m
+          );
+        }
+        static MBF() {
+          return d.sm_mbf || (d.sm_mbf = s.w0(d.M())), d.sm_mbf;
+        }
+        toObject(e = !1) {
+          return d.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return s.BT(d.M(), e, r);
+        }
+        static fromObject(e) {
+          return s.Uq(d.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (a().BinaryReader)(e),
+            t = new d();
+          return d.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return s.zj(d.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (a().BinaryWriter)();
+          return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          s.i0(d.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (a().BinaryWriter)();
+          return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CLocalizationToken";
+        }
+      }
+      class B extends i.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            B.prototype.clanid || s.Sg(B.M()),
+            i.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
                 fields: {
                   clanid: { n: 1, br: s.qM.readUint32, bw: s.gp.writeUint32 },
                   event_gid: {
@@ -5340,77 +5401,6 @@ var CLSTAMP = "10184000";
                   },
                 },
               }),
-            d.sm_m
-          );
-        }
-        static MBF() {
-          return d.sm_mbf || (d.sm_mbf = s.w0(d.M())), d.sm_mbf;
-        }
-        toObject(e = !1) {
-          return d.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return s.BT(d.M(), e, r);
-        }
-        static fromObject(e) {
-          return s.Uq(d.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (a().BinaryReader)(e),
-            t = new d();
-          return d.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return s.zj(d.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (a().BinaryWriter)();
-          return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          s.i0(d.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (a().BinaryWriter)();
-          return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClanEventUserNewsTuple";
-        }
-      }
-      class B extends i.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            B.prototype.rtime_before || s.Sg(B.M()),
-            i.Message.initialize(this, e, 0, -1, [4], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            B.sm_m ||
-              (B.sm_m = {
-                proto: B,
-                fields: {
-                  rtime_before: {
-                    n: 1,
-                    br: s.qM.readUint32,
-                    bw: s.gp.writeUint32,
-                  },
-                  rtime_after: {
-                    n: 2,
-                    br: s.qM.readUint32,
-                    bw: s.gp.writeUint32,
-                  },
-                  qualified: {
-                    n: 3,
-                    br: s.qM.readUint32,
-                    bw: s.gp.writeUint32,
-                  },
-                  events: { n: 4, c: d, r: !0, q: !0 },
-                },
-              }),
             B.sm_m
           );
         }
@@ -5446,18 +5436,15 @@ var CLSTAMP = "10184000";
           return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClanMatchEventByRange";
+          return "CClanEventUserNewsTuple";
         }
       }
-      i.Message;
-      i.Message;
-      i.Message;
       class g extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            g.prototype.packageid || s.Sg(g.M()),
-            i.Message.initialize(this, e, 0, -1, void 0, null);
+            g.prototype.rtime_before || s.Sg(g.M()),
+            i.Message.initialize(this, e, 0, -1, [4], null);
         }
         static sm_m;
         static sm_mbf;
@@ -5466,6 +5453,80 @@ var CLSTAMP = "10184000";
             g.sm_m ||
               (g.sm_m = {
                 proto: g,
+                fields: {
+                  rtime_before: {
+                    n: 1,
+                    br: s.qM.readUint32,
+                    bw: s.gp.writeUint32,
+                  },
+                  rtime_after: {
+                    n: 2,
+                    br: s.qM.readUint32,
+                    bw: s.gp.writeUint32,
+                  },
+                  qualified: {
+                    n: 3,
+                    br: s.qM.readUint32,
+                    bw: s.gp.writeUint32,
+                  },
+                  events: { n: 4, c: B, r: !0, q: !0 },
+                },
+              }),
+            g.sm_m
+          );
+        }
+        static MBF() {
+          return g.sm_mbf || (g.sm_mbf = s.w0(g.M())), g.sm_mbf;
+        }
+        toObject(e = !1) {
+          return g.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return s.BT(g.M(), e, r);
+        }
+        static fromObject(e) {
+          return s.Uq(g.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (a().BinaryReader)(e),
+            t = new g();
+          return g.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return s.zj(g.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (a().BinaryWriter)();
+          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          s.i0(g.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (a().BinaryWriter)();
+          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClanMatchEventByRange";
+        }
+      }
+      i.Message;
+      i.Message;
+      i.Message;
+      class b extends i.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            b.prototype.packageid || s.Sg(b.M()),
+            i.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            b.sm_m ||
+              (b.sm_m = {
+                proto: b,
                 fields: {
                   packageid: {
                     n: 1,
@@ -5525,64 +5586,6 @@ var CLSTAMP = "10184000";
                   },
                 },
               }),
-            g.sm_m
-          );
-        }
-        static MBF() {
-          return g.sm_mbf || (g.sm_mbf = s.w0(g.M())), g.sm_mbf;
-        }
-        toObject(e = !1) {
-          return g.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return s.BT(g.M(), e, r);
-        }
-        static fromObject(e) {
-          return s.Uq(g.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new (a().BinaryReader)(e),
-            t = new g();
-          return g.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return s.zj(g.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new (a().BinaryWriter)();
-          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          s.i0(g.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new (a().BinaryWriter)();
-          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPackageReservationStatus";
-        }
-      }
-      i.Message;
-      i.Message;
-      class b extends i.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            b.prototype.content_descriptors_to_exclude || s.Sg(b.M()),
-            i.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            b.sm_m ||
-              (b.sm_m = {
-                proto: b,
-                fields: {
-                  content_descriptors_to_exclude: { n: 1, c: M, r: !0, q: !0 },
-                },
-              }),
             b.sm_m
           );
         }
@@ -5618,15 +5621,17 @@ var CLSTAMP = "10184000";
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "UserContentDescriptorPreferences";
+          return "CPackageReservationStatus";
         }
       }
+      i.Message;
+      i.Message;
       class M extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            M.prototype.content_descriptorid || s.Sg(M.M()),
-            i.Message.initialize(this, e, 0, -1, void 0, null);
+            M.prototype.content_descriptors_to_exclude || s.Sg(M.M()),
+            i.Message.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -5636,16 +5641,7 @@ var CLSTAMP = "10184000";
               (M.sm_m = {
                 proto: M,
                 fields: {
-                  content_descriptorid: {
-                    n: 1,
-                    br: s.qM.readUint32,
-                    bw: s.gp.writeUint32,
-                  },
-                  timestamp_added: {
-                    n: 2,
-                    br: s.qM.readUint32,
-                    bw: s.gp.writeUint32,
-                  },
+                  content_descriptors_to_exclude: { n: 1, c: _, r: !0, q: !0 },
                 },
               }),
             M.sm_m
@@ -5683,11 +5679,76 @@ var CLSTAMP = "10184000";
           return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "UserContentDescriptorPreferences";
+        }
+      }
+      class _ extends i.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            _.prototype.content_descriptorid || s.Sg(_.M()),
+            i.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  content_descriptorid: {
+                    n: 1,
+                    br: s.qM.readUint32,
+                    bw: s.gp.writeUint32,
+                  },
+                  timestamp_added: {
+                    n: 2,
+                    br: s.qM.readUint32,
+                    bw: s.gp.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = s.w0(_.M())), _.sm_mbf;
+        }
+        toObject(e = !1) {
+          return _.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return s.BT(_.M(), e, r);
+        }
+        static fromObject(e) {
+          return s.Uq(_.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (a().BinaryReader)(e),
+            t = new _();
+          return _.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return s.zj(_.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (a().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          s.i0(_.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (a().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "UserContentDescriptorPreferences_ContentDescriptor";
         }
       }
     },
-    33983: (e, r, t) => {
+    24613: (e, r, t) => {
       t.d(r, {
         DK: () => i,
         Lw: () => E,
@@ -5701,8 +5762,8 @@ var CLSTAMP = "10184000";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(59318),
-        l = t(81743);
+        o = t(8396),
+        l = t(30657);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -11354,7 +11415,7 @@ var CLSTAMP = "10184000";
             });
         })(a || (a = {}));
     },
-    65596: (e, r, t) => {
+    1094: (e, r, t) => {
       t.d(r, {
         AF: () => Vr,
         Cw: () => vr,
@@ -11423,9 +11484,9 @@ var CLSTAMP = "10184000";
         l,
         c = t(58663),
         m = t.n(c),
-        u = t(59318),
-        d = t(81743),
-        B = t(91452);
+        u = t(8396),
+        d = t(30657),
+        B = t(20486);
       function g(e) {
         return "unknown EChatRoomMemberStateChange ( " + e + " )";
       }
@@ -21572,14 +21633,14 @@ var CLSTAMP = "10184000";
           };
         })(l || (l = {}));
     },
-    51881: (e, r, t) => {
+    77721: (e, r, t) => {
       t.d(r, { lO: () => R, _o: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743),
-        l = t(95623);
+        n = t(8396),
+        o = t(30657),
+        l = t(62265);
       class c extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -22793,13 +22854,13 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    94054: (e, r, t) => {
+    38708: (e, r, t) => {
       t.d(r, { Ek: () => l, oH: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -23381,13 +23442,13 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    54951: (e, r, t) => {
+    51781: (e, r, t) => {
       t.d(r, { BR: () => m, Jo: () => i, aX: () => _, f6: () => f });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -24910,7 +24971,7 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    18376: (e, r, t) => {
+    98729: (e, r, t) => {
       t.d(r, {
         IR: () => C,
         Gf: () => z,
@@ -24924,8 +24985,8 @@ var CLSTAMP = "10184000";
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -27492,7 +27553,7 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    54161: (e, r, t) => {
+    75783: (e, r, t) => {
       t.d(r, {
         A7: () => o,
         DA: () => l,
@@ -27502,7 +27563,7 @@ var CLSTAMP = "10184000";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
+        s = t(8396);
       i.Message;
       i.Message;
       i.Message;
@@ -28035,7 +28096,7 @@ var CLSTAMP = "10184000";
       i.Message;
       i.Message;
     },
-    91452: (e, r, t) => {
+    20486: (e, r, t) => {
       t.d(r, {
         Ce: () => y,
         Fh: () => p,
@@ -28057,7 +28118,7 @@ var CLSTAMP = "10184000";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
+        s = t(8396);
       i.Message;
       i.Message;
       i.Message;
@@ -29750,7 +29811,7 @@ var CLSTAMP = "10184000";
         }
       }
     },
-    48260: (e, r, t) => {
+    66426: (e, r, t) => {
       t.d(r, {
         Q_: () => c,
         Sb: () => l,
@@ -29762,8 +29823,8 @@ var CLSTAMP = "10184000";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318),
-        n = t(65237);
+        s = t(8396),
+        n = t(55235);
       class o extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -30703,12 +30764,12 @@ var CLSTAMP = "10184000";
       i.Message;
       i.Message;
     },
-    10194: (e, r, t) => {
+    56352: (e, r, t) => {
       t.d(r, { $Z: () => n });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
-      t(65237);
+        s = t(8396);
+      t(55235);
       i.Message;
       i.Message;
       i.Message;
@@ -30804,7 +30865,7 @@ var CLSTAMP = "10184000";
       i.Message;
       i.Message;
     },
-    89523: (e, r, t) => {
+    831: (e, r, t) => {
       t.d(r, {
         rs: () => c,
         sZ: () => u,
@@ -30814,8 +30875,8 @@ var CLSTAMP = "10184000";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
-      t(65237);
+        s = t(8396);
+      t(55235);
       i.Message;
       i.Message;
       i.Message;
@@ -31621,7 +31682,7 @@ var CLSTAMP = "10184000";
         }
       }
     },
-    43125: (e, r, t) => {
+    45339: (e, r, t) => {
       t.d(r, {
         $Y: () => F,
         BE: () => i,
@@ -31634,9 +31695,9 @@ var CLSTAMP = "10184000";
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743),
-        l = t(65237);
+        n = t(8396),
+        o = t(30657),
+        l = t(55235);
       class c extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -35683,12 +35744,12 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    38085: (e, r, t) => {
+    54988: (e, r, t) => {
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -38314,7 +38375,7 @@ var CLSTAMP = "10184000";
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            J.prototype.steamid || n.Sg(J.M()),
+            J.prototype.subject_type || n.Sg(J.M()),
             a.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -38325,19 +38386,14 @@ var CLSTAMP = "10184000";
               (J.sm_m = {
                 proto: J,
                 fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.qM.readFixed64String,
-                    bw: n.gp.writeFixed64String,
-                  },
-                  subject_type: { n: 2, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  subject_type: { n: 1, br: n.qM.readEnum, bw: n.gp.writeEnum },
                   subject_group_id: {
-                    n: 3,
+                    n: 2,
                     br: n.qM.readUint64String,
                     bw: n.gp.writeUint64String,
                   },
                   subject_id: {
-                    n: 4,
+                    n: 3,
                     br: n.qM.readUint64String,
                     bw: n.gp.writeUint64String,
                   },
@@ -38414,6 +38470,107 @@ var CLSTAMP = "10184000";
         }
         getClassName() {
           return "CContentModeration_ReleaseSubject_Response";
+        }
+      }
+      class X extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            X.prototype.subject_type || n.Sg(X.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            X.sm_m ||
+              (X.sm_m = {
+                proto: X,
+                fields: {
+                  subject_type: { n: 1, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  subject_group_id: {
+                    n: 2,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  subject_id: {
+                    n: 3,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
+            X.sm_m
+          );
+        }
+        static MBF() {
+          return X.sm_mbf || (X.sm_mbf = n.w0(X.M())), X.sm_mbf;
+        }
+        toObject(e = !1) {
+          return X.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.BT(X.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.Uq(X.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (s().BinaryReader)(e),
+            t = new X();
+          return X.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.zj(X.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.i0(X.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_ClaimSubject_Request";
+        }
+      }
+      class Y extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return Y.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return e ? { $jspbMessageInstance: r } : {};
+        }
+        static fromObject(e) {
+          return new Y();
+        }
+        static deserializeBinary(e) {
+          let r = new (s().BinaryReader)(e),
+            t = new Y();
+          return Y.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {}
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_ClaimSubject_Response";
         }
       }
       !(function (e) {
@@ -38568,16 +38725,24 @@ var CLSTAMP = "10184000";
               Z,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
+          }),
+          (e.ClaimSubject = function (e, r) {
+            return e.SendMsg(
+              "ContentModeration.ClaimSubject#1",
+              (0, o.I8)(X, r),
+              Y,
+              { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
+            );
           });
       })(i || (i = {}));
     },
-    26861: (e, r, t) => {
+    54095: (e, r, t) => {
       t.d(r, { Bi: () => w, qp: () => R, tB: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -39898,13 +40063,13 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    14410: (e, r, t) => {
+    50160: (e, r, t) => {
       t.d(r, { Oi: () => l, iq: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -40031,12 +40196,12 @@ var CLSTAMP = "10184000";
         };
       })(i || (i = {}));
     },
-    84540: (e, r, t) => {
+    89874: (e, r, t) => {
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -41090,6 +41255,7 @@ var CLSTAMP = "10184000";
                     bw: n.gp.writeUint64String,
                   },
                   reason: { n: 6, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  resolution: { n: 7, br: n.qM.readEnum, bw: n.gp.writeEnum },
                 },
               }),
             f.sm_m
@@ -41201,6 +41367,7 @@ var CLSTAMP = "10184000";
                     bw: n.gp.writeUint64String,
                   },
                   reason: { n: 5, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  resolution: { n: 6, br: n.qM.readEnum, bw: n.gp.writeEnum },
                 },
               }),
             S.sm_m
@@ -41682,7 +41849,7 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    66078: (e, r, t) => {
+    69632: (e, r, t) => {
       t.d(r, {
         I4: () => B,
         L4: () => p,
@@ -41698,8 +41865,8 @@ var CLSTAMP = "10184000";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(59318),
-        l = t(81743);
+        o = t(8396),
+        l = t(30657);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -43287,7 +43454,7 @@ var CLSTAMP = "10184000";
             });
         })(a || (a = {}));
     },
-    51949: (e, r, t) => {
+    93315: (e, r, t) => {
       t.d(r, {
         AJ: () => a,
         DF: () => i,
@@ -43300,9 +43467,9 @@ var CLSTAMP = "10184000";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(59318),
-        l = t(81743),
-        c = t(91452);
+        o = t(8396),
+        l = t(30657),
+        c = t(20486);
       class m extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -43878,14 +44045,14 @@ var CLSTAMP = "10184000";
           };
         })(a || (a = {}));
     },
-    17856: (e, r, t) => {
+    49599: (e, r, t) => {
       t.d(r, { Dr: () => f, vW: () => i });
       var i,
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(59318),
-        l = t(81743);
+        o = t(8396),
+        l = t(30657);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -45346,7 +45513,7 @@ var CLSTAMP = "10184000";
             });
         })(a || (a = {}));
     },
-    21936: (e, r, t) => {
+    6582: (e, r, t) => {
       t.d(r, {
         $A: () => c,
         Nh: () => u,
@@ -45356,7 +45523,7 @@ var CLSTAMP = "10184000";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
+        s = t(8396);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -45917,7 +46084,7 @@ var CLSTAMP = "10184000";
         }
       }
     },
-    90821: (e, r, t) => {
+    46947: (e, r, t) => {
       t.d(r, {
         JL: () => i,
         QG: () => g,
@@ -45929,9 +46096,9 @@ var CLSTAMP = "10184000";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(59318),
-        l = t(81743),
-        c = t(21936);
+        o = t(8396),
+        l = t(30657),
+        c = t(6582);
       class m extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -47903,14 +48070,14 @@ var CLSTAMP = "10184000";
             });
         })(a || (a = {}));
     },
-    19577: (e, r, t) => {
+    1875: (e, r, t) => {
       t.d(r, { BT: () => i, St: () => c });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743),
-        l = t(95623);
+        n = t(8396),
+        o = t(30657),
+        l = t(62265);
       class c extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -48177,13 +48344,13 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    30137: (e, r, t) => {
+    3555: (e, r, t) => {
       t.d(r, { Hh: () => i, MV: () => l });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -48321,7 +48488,7 @@ var CLSTAMP = "10184000";
         };
       })(i || (i = {}));
     },
-    64237: (e, r, t) => {
+    92647: (e, r, t) => {
       t.d(r, {
         $J: () => br,
         B4: () => Sr,
@@ -48343,9 +48510,9 @@ var CLSTAMP = "10184000";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(59318),
-        l = t(81743),
-        c = t(65237);
+        o = t(8396),
+        l = t(30657),
+        c = t(55235);
       class m extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -57573,13 +57740,13 @@ var CLSTAMP = "10184000";
             });
         })(a || (a = {}));
     },
-    59252: (e, r, t) => {
+    75110: (e, r, t) => {
       t.d(r, { cH: () => i, dT: () => ie, rf: () => me, zv: () => Z });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -62801,18 +62968,18 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    97177: (e, r, t) => {
+    73375: (e, r, t) => {
       t.d(r, { Gr: () => W, nd: () => i, xf: () => V });
       var i,
         a,
         s,
         n = t(58663),
         o = t.n(n),
-        l = t(59318),
-        c = t(81743),
-        m = t(68448),
-        u = t(95623),
-        d = t(65237);
+        l = t(8396),
+        c = t(30657),
+        m = t(3858),
+        u = t(62265),
+        d = t(55235);
       class B extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -67610,7 +67777,7 @@ var CLSTAMP = "10184000";
             });
         })(s || (s = {}));
     },
-    95623: (e, r, t) => {
+    62265: (e, r, t) => {
       t.d(r, {
         $4: () => i,
         O4: () => P,
@@ -67624,9 +67791,9 @@ var CLSTAMP = "10184000";
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743),
-        l = t(68448);
+        n = t(8396),
+        o = t(30657),
+        l = t(3858);
       function c(e) {
         return "unknown EStoreItemType ( " + e + " )";
       }
@@ -71495,12 +71662,12 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    96645: (e, r, t) => {
+    94830: (e, r, t) => {
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -72192,14 +72359,561 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    51107: (e, r, t) => {
+    34446: (e, r, t) => {
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743),
-        l = t(68448),
-        c = t(95623);
+        n = t(8396),
+        o = t(30657),
+        l = t(55235);
+      class c extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            c.prototype.appid || n.Sg(c.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            c.sm_m ||
+              (c.sm_m = {
+                proto: c,
+                fields: {
+                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  clanid: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  link_url: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
+                  link_text: {
+                    n: 4,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  blurb: { n: 5, br: n.qM.readString, bw: n.gp.writeString },
+                  time_recommended: {
+                    n: 6,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  comment_count: {
+                    n: 7,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
+                  },
+                  upvote_count: {
+                    n: 8,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
+                  },
+                  accountid_creator: {
+                    n: 9,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  recommendation_state: {
+                    n: 10,
+                    br: n.qM.readEnum,
+                    bw: n.gp.writeEnum,
+                  },
+                  received_compensation: {
+                    n: 11,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                  received_for_free: {
+                    n: 12,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                },
+              }),
+            c.sm_m
+          );
+        }
+        static MBF() {
+          return c.sm_mbf || (c.sm_mbf = n.w0(c.M())), c.sm_mbf;
+        }
+        toObject(e = !1) {
+          return c.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.BT(c.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.Uq(c.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (s().BinaryReader)(e),
+            t = new c();
+          return c.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.zj(c.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.i0(c.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_RecommendedApp";
+        }
+      }
+      class m extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            m.prototype.listid || n.Sg(m.M()),
+            a.Message.initialize(this, e, 0, -1, [10, 12, 13, 14], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            m.sm_m ||
+              (m.sm_m = {
+                proto: m,
+                fields: {
+                  listid: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  title: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  blurb: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
+                  link: { n: 4, br: n.qM.readString, bw: n.gp.writeString },
+                  list_state: { n: 5, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  sort_order: {
+                    n: 6,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  time_created: {
+                    n: 7,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  time_updated: {
+                    n: 8,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  accountid: {
+                    n: 9,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  apps: { n: 10, c: u, r: !0, q: !0 },
+                  list_type: { n: 11, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  title_localization: { n: 12, c: l.O2, r: !0, q: !0 },
+                  blurb_localization: { n: 13, c: l.O2, r: !0, q: !0 },
+                  link_localization: { n: 14, c: l.O2, r: !0, q: !0 },
+                  sale_clan_steamid: {
+                    n: 15,
+                    br: n.qM.readFixed64String,
+                    bw: n.gp.writeFixed64String,
+                  },
+                  sale_clan_event_gid: {
+                    n: 16,
+                    br: n.qM.readFixed64String,
+                    bw: n.gp.writeFixed64String,
+                  },
+                  list_jsondata: {
+                    n: 17,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  clan_account_id: {
+                    n: 18,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                },
+              }),
+            m.sm_m
+          );
+        }
+        static MBF() {
+          return m.sm_mbf || (m.sm_mbf = n.w0(m.M())), m.sm_mbf;
+        }
+        toObject(e = !1) {
+          return m.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.BT(m.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.Uq(m.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (s().BinaryReader)(e),
+            t = new m();
+          return m.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.zj(m.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.i0(m.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_ListDetails";
+        }
+      }
+      class u extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            u.prototype.recommended_app || n.Sg(u.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            u.sm_m ||
+              (u.sm_m = {
+                proto: u,
+                fields: {
+                  recommended_app: { n: 1, c },
+                  blurb: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  sort_order: {
+                    n: 3,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                },
+              }),
+            u.sm_m
+          );
+        }
+        static MBF() {
+          return u.sm_mbf || (u.sm_mbf = n.w0(u.M())), u.sm_mbf;
+        }
+        toObject(e = !1) {
+          return u.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.BT(u.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.Uq(u.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (s().BinaryReader)(e),
+            t = new u();
+          return u.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.zj(u.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.i0(u.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_ListDetails_ListItem";
+        }
+      }
+      class d extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            d.prototype.steamid || n.Sg(d.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            d.sm_m ||
+              (d.sm_m = {
+                proto: d,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: n.qM.readFixed64String,
+                    bw: n.gp.writeFixed64String,
+                  },
+                  list_state: { n: 2, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  start: { n: 3, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  count: { n: 4, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  return_total_only: {
+                    n: 5,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                  return_metadata_only: {
+                    n: 6,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                  max_apps: { n: 7, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                  sale_clan_event_gid: {
+                    n: 8,
+                    br: n.qM.readFixed64String,
+                    bw: n.gp.writeFixed64String,
+                  },
+                },
+              }),
+            d.sm_m
+          );
+        }
+        static MBF() {
+          return d.sm_mbf || (d.sm_mbf = n.w0(d.M())), d.sm_mbf;
+        }
+        toObject(e = !1) {
+          return d.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.BT(d.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.Uq(d.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (s().BinaryReader)(e),
+            t = new d();
+          return d.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.zj(d.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.i0(d.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetLists_Request";
+        }
+      }
+      class B extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            B.prototype.list_details || n.Sg(B.M()),
+            a.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
+                fields: {
+                  list_details: { n: 1, c: m, r: !0, q: !0 },
+                  total: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                },
+              }),
+            B.sm_m
+          );
+        }
+        static MBF() {
+          return B.sm_mbf || (B.sm_mbf = n.w0(B.M())), B.sm_mbf;
+        }
+        toObject(e = !1) {
+          return B.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.BT(B.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.Uq(B.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (s().BinaryReader)(e),
+            t = new B();
+          return B.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.zj(B.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.i0(B.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetLists_Response";
+        }
+      }
+      class g extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            g.prototype.steamid || n.Sg(g.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            g.sm_m ||
+              (g.sm_m = {
+                proto: g,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: n.qM.readFixed64String,
+                    bw: n.gp.writeFixed64String,
+                  },
+                  listid: {
+                    n: 2,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
+            g.sm_m
+          );
+        }
+        static MBF() {
+          return g.sm_mbf || (g.sm_mbf = n.w0(g.M())), g.sm_mbf;
+        }
+        toObject(e = !1) {
+          return g.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.BT(g.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.Uq(g.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (s().BinaryReader)(e),
+            t = new g();
+          return g.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.zj(g.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.i0(g.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetListDetails_Request";
+        }
+      }
+      class b extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            b.prototype.list_details || n.Sg(b.M()),
+            a.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            b.sm_m ||
+              (b.sm_m = { proto: b, fields: { list_details: { n: 1, c: m } } }),
+            b.sm_m
+          );
+        }
+        static MBF() {
+          return b.sm_mbf || (b.sm_mbf = n.w0(b.M())), b.sm_mbf;
+        }
+        toObject(e = !1) {
+          return b.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.BT(b.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.Uq(b.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new (s().BinaryReader)(e),
+            t = new b();
+          return b.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.zj(b.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.i0(b.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetListDetails_Response";
+        }
+      }
+      !(function (e) {
+        (e.GetLists = function (e, r) {
+          return e.SendMsg("StoreCuration.GetLists#1", (0, o.I8)(d, r), B, {
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1,
+          });
+        }),
+          (e.GetListDetails = function (e, r) {
+            return e.SendMsg(
+              "StoreCuration.GetListDetails#1",
+              (0, o.I8)(g, r),
+              b,
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+            );
+          });
+      })(i || (i = {}));
+    },
+    70889: (e, r, t) => {
+      var i,
+        a = t(58663),
+        s = t.n(a),
+        n = t(8396),
+        o = t(30657),
+        l = t(3858),
+        c = t(62265);
       class m extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -73730,13 +74444,13 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    51117: (e, r, t) => {
+    88167: (e, r, t) => {
       t.d(r, { bv: () => f, fz: () => i, ot: () => p });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743);
+        n = t(8396),
+        o = t(30657);
       class l extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -75111,15 +75825,15 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    46751: (e, r, t) => {
+    25729: (e, r, t) => {
       t.d(r, { DB: () => M, rs: () => i, s3: () => b });
       var i,
         a,
         s,
         n = t(58663),
         o = t.n(n),
-        l = t(59318),
-        c = t(81743);
+        l = t(8396),
+        c = t(30657);
       class m extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -75737,7 +76451,7 @@ var CLSTAMP = "10184000";
           };
         })(s || (s = {}));
     },
-    66390: (e, r, t) => {
+    48416: (e, r, t) => {
       t.d(r, {
         BL: () => b,
         NT: () => c,
@@ -75754,8 +76468,8 @@ var CLSTAMP = "10184000";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(59318),
-        l = t(81743);
+        o = t(8396),
+        l = t(30657);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -77293,7 +78007,7 @@ var CLSTAMP = "10184000";
             });
         })(a || (a = {}));
     },
-    62241: (e, r, t) => {
+    48199: (e, r, t) => {
       t.d(r, {
         LH: () => c,
         NF: () => u,
@@ -77305,8 +78019,8 @@ var CLSTAMP = "10184000";
         a,
         s = t(58663),
         n = t.n(s),
-        o = t(59318),
-        l = t(81743);
+        o = t(8396),
+        l = t(30657);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -77924,7 +78638,7 @@ var CLSTAMP = "10184000";
             });
         })(a || (a = {}));
     },
-    96455: (e, r, t) => {
+    92921: (e, r, t) => {
       t.d(r, {
         CX: () => o,
         Cv: () => M,
@@ -77951,7 +78665,7 @@ var CLSTAMP = "10184000";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
+        s = t(8396);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -79091,11 +79805,11 @@ var CLSTAMP = "10184000";
         }
       }
     },
-    48880: (e, r, t) => {
+    11938: (e, r, t) => {
       t.d(r, { DX: () => n, Ut: () => l, iM: () => o });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
+        s = t(8396);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -79235,11 +79949,11 @@ var CLSTAMP = "10184000";
         );
       }
     },
-    94318: (e, r, t) => {
+    45645: (e, r, t) => {
       t.d(r, { _i: () => k, nV: () => A });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
+        s = t(8396);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -81198,11 +81912,11 @@ var CLSTAMP = "10184000";
         },
       };
     },
-    31717: (e, r, t) => {
+    50411: (e, r, t) => {
       t.d(r, { S1: () => n, sR: () => o });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
+        s = t(8396);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -81320,7 +82034,7 @@ var CLSTAMP = "10184000";
       i.Message;
       i.Message;
     },
-    37730: (e, r, t) => {
+    67120: (e, r, t) => {
       t.d(r, {
         Bl: () => b,
         DR: () => n,
@@ -81336,7 +82050,7 @@ var CLSTAMP = "10184000";
       });
       var i = t(58663),
         a = t.n(i),
-        s = t(59318);
+        s = t(8396);
       class n extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -81938,14 +82652,14 @@ var CLSTAMP = "10184000";
         }
       }
     },
-    36625: (e, r, t) => {
+    82386: (e, r, t) => {
       t.d(r, { xM: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743),
-        l = t(75394);
+        n = t(8396),
+        o = t(30657),
+        l = t(26496);
       a.Message;
       a.Message;
       class c extends a.Message {
@@ -88988,14 +89702,14 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    73732: (e, r, t) => {
+    1946: (e, r, t) => {
       t.d(r, { UP: () => i, fx: () => c, i6: () => m });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743),
-        l = t(75394);
+        n = t(8396),
+        o = t(30657),
+        l = t(26496);
       class c extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -89789,14 +90503,14 @@ var CLSTAMP = "10184000";
           });
       })(i || (i = {}));
     },
-    45465: (e, r, t) => {
+    715: (e, r, t) => {
       t.d(r, { F6: () => c, Ft: () => i });
       var i,
         a = t(58663),
         s = t.n(a),
-        n = t(59318),
-        o = t(81743),
-        l = t(75394);
+        n = t(8396),
+        o = t(30657),
+        l = t(26496);
       class c extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {

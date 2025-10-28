@@ -4881,7 +4881,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { strArrowColor: _, fnUpdateArrowColor: __webpack_require__ } = _,
+        const {
+            strArrowColor: _,
+            fnUpdateArrowColor: __webpack_require__,
+            arrowStyle: _,
+          } = _,
           [_, _] = _.useState(null == _);
         return _.createElement(
           _.Fragment,
@@ -4903,17 +4907,107 @@
                 );
               },
             },
-            _.createElement(_.uMb, {
+            _.createElement(_._, {
               direction: "left",
-              fill: _ || "white",
+              arrowFill: _,
+              arrowStyle: _,
             }),
             (0, _._)("#EventEditor_BG_Arrow_Color"),
             _.createElement(_._, {
               tooltip: (0, _._)("#EventEditor_BG_Arrow_Color_ttip"),
             }),
-            _.createElement(_.uMb, {
+            _.createElement(_._, {
               direction: "right",
-              fill: _ || "white",
+              arrowFill: _,
+              arrowStyle: _,
+            }),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__, _] = (0, _._)(() => [
+            _.GetEventModel().jsondata.sale_carousel_arrow_color,
+            _.GetEventModel().jsondata.sale_carousel_arrow_style ||
+              _._.k_ECutArrowStyle,
+          ]),
+          _ = (0, _.useMemo)(() => {
+            const _ = [];
+            return (
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_CutArrowStyles"),
+                data: _._.k_ECutArrowStyle,
+              }),
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_DoubleArrowStyles"),
+                data: _._.k_EDoubleArrowStyle,
+              }),
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_ChevronStyles"),
+                data: _._.k_EThickChevron,
+              }),
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_FlatArrowStyles"),
+                data: _._.k_EFilledArrow,
+              }),
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_PointyArrowStyles"),
+                data: _._.k_EPointyArrow,
+              }),
+              _
+            );
+          }, []);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().FlexRowContainer, _().BackgroundConfigCtn),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#Sale_Section_Carousel_Colors"),
+            ),
+            _.createElement(_, {
+              strArrowColor: __webpack_require__,
+              arrowStyle: _,
+              fnUpdateArrowColor: (_) => {
+                _.GetEventModel().jsondata.sale_carousel_arrow_color != _ &&
+                  ((_.GetEventModel().jsondata.sale_carousel_arrow_color = _),
+                  _.SetDirty(_._.jsondata_sales));
+              },
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#Sale_Section_Carousel_ArrowStyles"),
+            ),
+            _.createElement(_._, {
+              strDropDownClassName: _().DropDownScroll,
+              rgOptions: _,
+              selectedOption: _,
+              onChange: (_) => {
+                _.GetEventModel().jsondata.sale_carousel_arrow_style !=
+                  _.data &&
+                  ((_.GetEventModel().jsondata.sale_carousel_arrow_style =
+                    _.data),
+                  _.SetDirty(_._.jsondata_sales));
+              },
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
+              },
             }),
           ),
         );
@@ -5017,9 +5111,8 @@
       }
       function _(_) {
         const { editModel: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [__webpack_require__, _] = (0, _._)(() => [
             _.GetEventModel().jsondata.sale_background_color,
-            _.GetEventModel().jsondata.sale_carousel_arrow_color,
             _.GetEventModel().jsondata.sale_background_repeat,
           ]),
           [_, _] = _.useState(null == __webpack_require__);
@@ -5070,13 +5163,6 @@
                 },
                 (0, _._)("#Sale_BackgroundColor"),
               ),
-              _.createElement(_, {
-                strArrowColor: _,
-                fnUpdateArrowColor: (_) => {
-                  (_.GetEventModel().jsondata.sale_carousel_arrow_color = _),
-                    _.SetDirty(_._.jsondata_sales);
-                },
-              }),
               Boolean(_._.is_support) &&
                 _.createElement(
                   "div",
@@ -5114,6 +5200,9 @@
               }),
             ),
           ),
+          _.createElement(_, {
+            editModel: _,
+          }),
           _.createElement(_, {
             editModel: _,
           }),
@@ -6405,6 +6494,7 @@
             );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {

@@ -1709,15 +1709,6 @@ enum UnnamedEnum15675cb60f1450a5
 	RateLimitExceeded = 4;
 }
 
-enum UnnamedEnum17dd37ca155cd6aa
-{
-	k_MediaTitleDesc = 1;
-	k_TitleMediaDesc = 2;
-	k_TitleDescMedia = 3;
-	k_HorizontalMediaFirst = 4;
-	k_HorizontalTextFirst = 5;
-}
-
 enum UnnamedEnum183417f294ffc34a
 {
 	None = 0;
@@ -4328,6 +4319,17 @@ enum UnnamedEnumee13fc02f2c6851d
 	Snap = 3;
 	Sliding = 4;
 	SlidingEdge = 5;
+}
+
+enum UnnamedEnumee2bf8818bf5319a
+{
+	k_MediaTitleDesc = 1;
+	k_TitleMediaDesc = 2;
+	k_TitleDescMedia = 3;
+	k_HorizontalMediaFirst = 4;
+	k_HorizontalTextFirst = 5;
+	k_TitleDescOnly = 6;
+	k_OverlayMedia = 7;
 }
 
 enum UnnamedEnumf0865f3c163d92e3

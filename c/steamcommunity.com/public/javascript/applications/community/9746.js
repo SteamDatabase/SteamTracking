@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Tartalom átcímkézve",
 	"moderation_resolutionstatus_suspicious": "Fiók gyanús tartalom miatt zárolva",
 	"moderation_resolutionstatus_harassmentstrike": "Steam közösségi jogosultságok felfüggesztve",
+	"moderation_resolutionstatus_removeandwarn": "Eltávolítva és figyelmeztetve",
+	"moderation_resolutionstatus_removeandban": "Eltávolítva és kitiltva a központból",
 	"moderation_resolutionstatus_unknown": "Ismeretlen",
 	"moderationaction_acquitted": "Felmentve",
 	"moderationaction_cancelled": "Legutóbb megnyitott jelentés törölve",

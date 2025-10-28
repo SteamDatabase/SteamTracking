@@ -1229,18 +1229,18 @@
               : _),
           _ = 0 == _.GetStoreItemType();
         return _.createElement(
-          _._,
+          "div",
           {
-            appid: _ && _.GetAppID(),
+            className: (0, _._)(
+              _().StoreSaleWidgetContainer,
+              _().LibraryAssetExpandedDisplay,
+              "LibraryAssetExpandedDisplay",
+            ),
           },
           _.createElement(
-            "div",
+            _._,
             {
-              className: (0, _._)(
-                _().StoreSaleWidgetContainer,
-                _().LibraryAssetExpandedDisplay,
-                "LibraryAssetExpandedDisplay",
-              ),
+              appid: _ && _.GetAppID(),
             },
             _.createElement(
               "div",

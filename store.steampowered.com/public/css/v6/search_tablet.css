@@ -230,6 +230,11 @@ html.tablet .sortbox .dselect_container {
 	width: 200px;
 }
 
+html.tablet .sortbox .dselect_container button {
+	width: 100%;
+	box-sizing: border-box;
+}
+
 html.tablet .sortbox .label {
 	font: var(--gpText-BodyLarge);
 	color: var(--gpStoreLightestGrey);
@@ -281,16 +286,6 @@ html.tablet .search_result_row.gpfocus {
 
 html.tablet .search_result_row .col {
 	height: unset;
-}
-
-
-/* Flex all search item info */
-html.tablet .responsive_search_name_combined {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	padding: 0px 12px;
-	align-items: center;
 }
 
 html.tablet .search_result_row .title {

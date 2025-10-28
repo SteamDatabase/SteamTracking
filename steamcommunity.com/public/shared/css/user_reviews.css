@@ -537,3 +537,7 @@ select {
 .ico16 {
 	vertical-align: middle;
 }
+
+::highlight(TopicHighlight) {
+	background-color: rgb(80, 79, 79);
+}

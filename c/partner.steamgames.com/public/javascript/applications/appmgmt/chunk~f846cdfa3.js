@@ -7,7 +7,9 @@
         EditionPickerHr: "_2N7bWzRE2_6yMlW8HoWwKL",
         NeedToPublishNotification: "_1YyjMfNhBo6lWsvunbhkmG",
         EditionsEditorRow: "_1kVAFKlQN-iaGJNQM64lbU",
+        ImageProvided: "_3acPE1-7PEV9Fv1BIkpb1d",
         PublishReminder: "_2bw5Zr8a6ik4-NIjVgcZSn",
+        TaskDone: "_3cgXyLkVbKXYv6hxcrj0P9",
         EditionsEditorContents: "WKVcCeIwShQXxr0XjInT9",
         ErrorList: "_34AP-LqjTCmVO7oQmBRksn",
         ErrorListItems: "_3OPqG7OUgCU252R-DdB0Qj",
@@ -391,7 +393,10 @@
               _.createElement(
                 "div",
                 {
-                  className: _.EditionsEditorRow,
+                  className: (0, _._)(
+                    _.EditionsEditorRow,
+                    _ && _.ImageProvided,
+                  ),
                 },
                 "closed" === _ &&
                   _.createElement(
@@ -424,11 +429,22 @@
                     _.createElement(
                       "span",
                       null,
-                      (0, _._)(
-                        _
-                          ? "#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic"
-                          : "#StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic",
-                      ),
+                      _
+                        ? _.createElement(
+                            "span",
+                            {
+                              className: (0, _._)(
+                                _.TaskDone,
+                                "icon_check_green",
+                              ),
+                            },
+                            (0, _._)(
+                              "#StoreAdmin_EditEditions_ManageEditions_HasComparisonGraphic",
+                            ),
+                          )
+                        : (0, _._)(
+                            "#StoreAdmin_EditEditions_ManageEditions_NoComparisonGraphic",
+                          ),
                     ),
                   ),
                 "refreshing" === _ &&
@@ -468,6 +484,23 @@
           {
             className: _.EditionPicker,
           },
+          _.createElement(
+            "p",
+            null,
+            (0, _._)(
+              "#StoreAdmin_EditEditions_GroupEditionsIntro",
+              _.createElement("a", {
+                target: "_blank",
+                href: `${_._.PARTNER_BASE_URL}doc/store/manageeditions`,
+              }),
+            ),
+          ),
+          _.createElement("br", null),
+          _.createElement(
+            "h3",
+            null,
+            (0, _._)("#StoreAdmin_EditEditions_StepNumber1"),
+          ),
           _.createElement(
             "p",
             null,
@@ -622,6 +655,11 @@
             className: _.LocalizedImageSelector,
           },
           _.createElement(
+            "h3",
+            null,
+            (0, _._)("#StoreAdmin_EditEditions_StepNumber2"),
+          ),
+          _.createElement(
             "p",
             null,
             (0, _._)(
@@ -757,6 +795,11 @@
                   },
                   (0, _._)("#StoreAdmin_EditEditions_DragAndDropHere"),
                 ),
+          ),
+          _.createElement(
+            "h3",
+            null,
+            (0, _._)("#StoreAdmin_EditEditions_StepNumber3"),
           ),
           _.createElement(
             "label",

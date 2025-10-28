@@ -38,6 +38,8 @@
         Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
         SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
         Item: "_2aNlsjcdOdHOtP8uACA3bM",
+        "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
+        "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
       };
     },
     chunkid: (module) => {
@@ -291,12 +293,15 @@
         Display: "_1jz8vOMNXWjuOs8PNx6twM",
         Elevation: "_51vKfcQCBgoT8lSk1q3iX",
         Border: "_2lajVjbyrA4lq9xF0X4NQW",
+        BorderColor: "_1x6gylcu6acqj_bRoqrFHf",
         Outline: "_2UkNTTzKtJJdhYEnuwtVRd",
       };
     },
     chunkid: (module) => {
       module.exports = {
         Root: "_2KPA3I9eXE9r251_-GX_iv",
+        DataAttributes: "_1tmKnx6V_8Ez9jIC5eMgat",
+        AfterDataAttributes: "_3BGADF5vKbdAji-Xj65xxm",
       };
     },
     chunkid: (module) => {
@@ -655,6 +660,7 @@
                     nCreatorAccountID: _.creatorAccountID,
                     nWidthMultiplier: _.nWidthMultiplier,
                     bShowIgnoreButton: _.bShowIgnoreButton,
+                    bShowDescription: _.bShowDescriptionInHover,
                   },
                   _,
                 ),
@@ -4440,8 +4446,41 @@
         __webpack_require__._(module_exports, {
           default: () => _,
         });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      const _ = [
+        "greyneutral",
+        "mauve",
+        "slate",
+        "sage",
+        "olive",
+        "sand",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "bronze",
+        "gold",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "orange",
+      ];
+      var _ = __webpack_require__("chunkid");
       const _ = ["initial", "sm", "md", "lg"],
         _ = (0, _.createContext)("lg");
       function _(_) {
@@ -4516,19 +4555,25 @@
             defaultTextSize: _ = "3",
             accentColor: __webpack_require__ = "blue",
             dullColor: _ = "greyneutral",
+            bodyTextColor: _ = "text-light",
             breakpoints: _,
             children: _,
             zoo: _,
           } = _,
-          _ = {
-            "--default-font-size": `var(--text-size-${_})`,
-            "--default-line-height": `var(--line-height-${_})`,
-            "--default-letter-spacing": `var(--letter-spacing-${_})`,
-            "--text-color": `var(--color-${_}-12)`,
-            "--text-color-secondary": `var(--color-${_}-11)`,
-            "--color-debug": "hotpink",
-            "--color-accent-contrast": "white",
+          [_, _] = _.useState(_),
+          [_, _] = _.useState(__webpack_require__),
+          _ = window,
+          _ = (_) => (_) => {
+            _.includes(_) ? _(_) : console.error("Unknown color!");
           };
+        (_.setAccent = _(_)), (_.setDull = _(_));
+        const _ = {
+          "--default-font-size": `var(--text-size-${_})`,
+          "--default-line-height": `var(--line-height-${_})`,
+          "--default-letter-spacing": `var(--letter-spacing-${_})`,
+          "--color-debug": "hotpink",
+          "--color-accent-contrast": "white",
+        };
         return _.createElement(
           _,
           null,
@@ -4549,11 +4594,19 @@
                 _.createElement(
                   "div",
                   {
-                    "data-accent-color": __webpack_require__,
+                    "data-accent-color": _,
                     "data-dull-color": _,
+                    "data-body-text-color": _,
+                    className: _.DataAttributes,
                   },
-                  _,
-                  !1,
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.AfterDataAttributes,
+                    },
+                    _,
+                    !1,
+                  ),
                 ),
               ),
             ),
@@ -4629,7 +4682,7 @@
               }
               if (_.cssProperty)
                 if ("function" == typeof _.cssProperty) {
-                  const _ = _.cssProperty(_);
+                  const _ = _.cssProperty(_, _);
                   if (_.length && Array.isArray(_[0]))
                     __webpack_require__.forEach(([_, _]) => (_[_] = _));
                   else {
@@ -4923,6 +4976,12 @@
             prop: "border",
             responsive: !0,
             className: _.Border,
+            cssProperty: "--border",
+          },
+          {
+            prop: "borderColor",
+            responsive: !0,
+            className: [_.Border, _.BorderColor].join(" "),
             cssProperty: (_) => ["--border-color", _(_)],
           },
           {
@@ -5252,7 +5311,7 @@
             _,
             _.createElement(_, {
               radius: "sm",
-              background: "dull-5",
+              background: "dull-8",
               className: _.ListBox,
             }),
             {
@@ -5752,8 +5811,9 @@
           _ = _ ? void 0 : () => _(_),
           _ = void 0 === __webpack_require__ ? _ : __webpack_require__;
         return _.createElement(
-          "div",
+          _,
           {
+            radius: _.radius,
             ref: _,
             onClick: _,
             "data-selected": _ ? "true" : "false",
@@ -5764,7 +5824,7 @@
       }),
         (_.Root = function (_) {
           const {
-              variant: _,
+              variant: _ = "default",
               radius: __webpack_require__,
               children: _,
               value: _,
@@ -5792,9 +5852,12 @@
           return _.createElement(
             _,
             {
+              clickable: !1,
+              hoverable: !1,
+              focusable: !1,
               variant: _,
               radius: __webpack_require__,
-              className: _.SegmentedControlBox,
+              className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
               tabIndex: 0,
               onKeyDown: (_) => {
                 let _ = 0;
@@ -5810,7 +5873,7 @@
                 if (_) {
                   const _ = _[_],
                     _ = Array.from(Object.values(_)).sort(_),
-                    _ = __webpack_require__.findIndex((_) => _ === _);
+                    _ = _.findIndex((_) => _ === _);
                   (0, _._)(
                     "number" == typeof _,
                     "Could not find current segmented value position",
@@ -5820,7 +5883,7 @@
                     _ = Object.keys(_).find((_) => _[_] === _);
                   "string" != typeof _
                     ? console.error("Could not find next segmeneted value")
-                    : _(_);
+                    : (_(_), _.stopPropagation(), _.preventDefault());
                 }
               },
             },
@@ -5833,8 +5896,9 @@
                     onValueChange: _,
                     register: _,
                     unregister: _,
+                    radius: __webpack_require__,
                   }),
-                  [_, _, _, _],
+                  [_, _, _, _, __webpack_require__],
                 ),
               },
               _.createElement(
@@ -5853,7 +5917,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6204,6 +6267,7 @@
                   imageType: "header",
                   bShowEarlyAccessBanner: !0,
                   bShowIgnoreButton: !0,
+                  bShowDescriptionInHover: !0,
                 }),
               ),
             ),
@@ -6247,6 +6311,7 @@
                   imageType: "header",
                   bShowEarlyAccessBanner: !0,
                   bShowIgnoreButton: !0,
+                  bShowDescriptionInHover: !0,
                 }),
               ),
             ),
@@ -6501,6 +6566,7 @@
                   bHidePrice: !0,
                   bShowEarlyAccessBanner: !0,
                   bShowIgnoreButton: !0,
+                  bShowDescriptionInHover: !0,
                 }),
               ),
             ),
@@ -6574,6 +6640,7 @@
                         bHidePrice: !0,
                         bHideStatusBanners: !0,
                         bShowIgnoreButton: !0,
+                        bShowDescriptionInHover: !0,
                       }),
                     ),
                   ),
@@ -6647,11 +6714,7 @@
                   ([_, _]) => (
                     (_ = _.filter((_) => _.rank < _)),
                     _ && (_ = _.filter((_) => !_.owned)),
-                    _ &&
-                      (_ = _.filter((_) => {
-                        const _ = _._.Get().GetApp(_.appid);
-                        return !_?.BIsEarlyAccess();
-                      })),
+                    _ && (_ = _.filter((_) => !_.earlyaccess)),
                     _ != _.Show &&
                       (_ = _.filter((_) => {
                         switch (_) {

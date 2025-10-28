@@ -2343,8 +2343,7 @@
               r.append("asset_type", "extra_asset_v2"),
               r.append("name", t),
               a
-                ? (r.append("download_url", a.download_url),
-                  r.append("file_path", a.file_path))
+                ? r.append("temp_file_id", a.temp_file_id)
                 : r.append("file", e.file);
             const o = await this.MakePost(
               this.m_urls.strBeginConvert,
@@ -4034,23 +4033,7 @@
         );
       });
       var de = n(30175);
-      function ue(e) {
-        if (e.startsWith("rgb")) {
-          const t = e.match(/\d+/g);
-          if (!t || t.length < 3) return "#000000";
-          const [n, a, r] = t.map(Number);
-          return (
-            "#" +
-            [n, a, r]
-              .map((e) => {
-                const t = e.toString(16);
-                return 1 === t.length ? "0" + t : t;
-              })
-              .join("")
-          );
-        }
-        return e;
-      }
+      var ue = n(64046);
       const me = f.memo(function (e) {
         const {
             schema: t,
@@ -4071,8 +4054,9 @@
           C = f.useCallback(() => {
             const { state: e, dispatch: n } = d,
               a = o ? t.marks.color : t.marks.bgcolor;
-            if (!a) return;
-            if (!p || !p.startsWith("#") || 7 !== p.length) return;
+            if (!a) return void console.log("debug: no markType");
+            if (!p || !p.startsWith("#") || 7 !== p.length)
+              return void console.log("debug: invalid color text: " + p);
             if (u < 0 || m > e.doc.content.size || u > m)
               return void console.error("Invalid selection range:", u, m);
             let r;
@@ -4125,12 +4109,23 @@
             strOKText: k,
             bOKDisabled: !p || 0 == p.length,
           },
-          f.createElement(ae.JU, null, (0, Q.we)("#FormattingToolbar_Color")),
-          f.createElement("input", {
-            type: "color",
-            ref: g,
-            value: ue(p),
-            onChange: (e) => _(e.currentTarget.value),
+          f.createElement(ue.s, {
+            color: p,
+            strTitle: S,
+            disableAlpha: !0,
+            onChange: (e) =>
+              _(
+                (function (e) {
+                  const t = e.match(
+                    /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/i,
+                  );
+                  if (t) {
+                    let [, e, n, a, r] = t;
+                    return `#${((1 << 24) + (parseInt(e, 10) << 16) + (parseInt(n, 10) << 8) + parseInt(a, 10)).toString(16).slice(1)}`;
+                  }
+                  return "#7e3232";
+                })(e),
+              ),
           }),
         );
       });
@@ -7140,7 +7135,7 @@
         ue = n(82359),
         me = n(17720),
         pe = n(4796),
-        _e = n(12493),
+        _e = n(13773),
         ge = n(96001);
       !(function (e) {
         (e[(e.k_CreatorHomeNone = 0)] = "k_CreatorHomeNone"),

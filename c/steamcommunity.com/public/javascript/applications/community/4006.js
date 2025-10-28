@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Изменены пометки",
 	"moderation_resolutionstatus_suspicious": "Аккаунт заблокирован из-за подозрительного контента",
 	"moderation_resolutionstatus_harassmentstrike": "Пользователь временно лишён прав в сообществе Steam",
+	"moderation_resolutionstatus_removeandwarn": "Контент удалён, пользователю выдано предупреждение",
+	"moderation_resolutionstatus_removeandban": "Контент удалён, пользователь заблокирован в центре сообщества",
 	"moderation_resolutionstatus_unknown": "Неизвестно",
 	"moderationaction_acquitted": "Пользователь оправдан",
 	"moderationaction_cancelled": "Последняя открытая жалоба отменена",

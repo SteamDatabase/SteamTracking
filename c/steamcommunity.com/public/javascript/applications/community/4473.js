@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Inhoudslabels gewijzigd",
 	"moderation_resolutionstatus_suspicious": "Account vergrendeld vanwege verdachte inhoud",
 	"moderation_resolutionstatus_harassmentstrike": "Gebruiksrechten voor de Steam-community opgeschort",
+	"moderation_resolutionstatus_removeandwarn": "Verwijderd en gewaarschuwd",
+	"moderation_resolutionstatus_removeandban": "Verwijderd en verbannen van de hub",
 	"moderation_resolutionstatus_unknown": "Onbekend",
 	"moderationaction_acquitted": "Vrijgesproken",
 	"moderationaction_cancelled": "Laatste open melding geannuleerd",

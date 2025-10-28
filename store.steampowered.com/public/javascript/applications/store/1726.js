@@ -379,7 +379,11 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
-          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: o },
+          spotlight_art: {
+            width: [306, 374],
+            height: [260, 448],
+            rgAcceptableTypes: o,
+          },
           old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: o },
           marketingmessage_art: {
             width: 570,
@@ -540,7 +544,7 @@
         d = a(86355),
         m = a(68359),
         u = a(4796),
-        h = a(67165),
+        h = a(8092),
         p = a(44165),
         _ = a(82097),
         g = a(81393),

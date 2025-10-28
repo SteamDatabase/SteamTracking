@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Byla změněna značka obsahu",
 	"moderation_resolutionstatus_suspicious": "Účet byl uzamčen kvůli podezřelému obsahu",
 	"moderation_resolutionstatus_harassmentstrike": "Byla pozastavena oprávnění v komunitě služby Steam",
+	"moderation_resolutionstatus_removeandwarn": "Obsah byl smazán a uživatel varován",
+	"moderation_resolutionstatus_removeandban": "Obsah byl smazán a uživatel zabanován v centru",
 	"moderation_resolutionstatus_unknown": "Neznámý stav",
 	"moderationaction_acquitted": "Zproštěno",
 	"moderationaction_cancelled": "Poslední otevřené nahlášení bylo zrušeno",

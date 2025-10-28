@@ -819,7 +819,7 @@
         F = n(7193),
         H = n(39199),
         R = n(96971),
-        x = n(53677),
+        x = n(50136),
         M = n(40353);
       function O(e) {
         const { eventModel: t, nEventBadgeID: n } = e,
@@ -4284,6 +4284,8 @@
                   bLazyRenderChildren: !0,
                   disableEdgeWrap: !0,
                   screenIsWide: this.state.bScreenIsWide,
+                  arrowFill: this.props.arrowFill,
+                  arrowStyle: this.props.arrowStyle,
                 },
                 l,
               ),

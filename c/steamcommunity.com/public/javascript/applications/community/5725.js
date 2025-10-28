@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Маркування вмісту змінено",
 	"moderation_resolutionstatus_suspicious": "Акаунт заблоковано через підозрілий вміст",
 	"moderation_resolutionstatus_harassmentstrike": "Привілеї спільноти Steam призупинено",
+	"moderation_resolutionstatus_removeandwarn": "Вилучено та попереджено",
+	"moderation_resolutionstatus_removeandban": "Вилучено та заблоковано в центрі",
 	"moderation_resolutionstatus_unknown": "Невідомо",
 	"moderationaction_acquitted": "Виправдано",
 	"moderationaction_cancelled": "Останню відкриту скаргу скасовано",

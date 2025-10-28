@@ -3,6 +3,12 @@
   {
     chunkid: (module) => {
       module.exports = {
+        EyeDropperCtn: "_2cT7wst-UhvDbRqPOUFLHl",
+        EyeDropperBtn: "_1SFKrl2Gt5OR-Nop7cqHIP",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         Container: "_30v-6zb_axOypIUr5VRHE1",
@@ -1666,6 +1672,79 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            color: _,
+            onChange: __webpack_require__,
+            strTitle: _,
+            disableAlpha: _,
+          } = _,
+          [_, _] = (0, _.useState)(() => _ || "rgba(255, 255, 255, 1)"),
+          _ = (0, _.useCallback)(async () => {
+            if ("EyeDropper" in window)
+              try {
+                const _ = new window.EyeDropper(),
+                  _ = await _.open(),
+                  _ = (function (_) {
+                    const _ = parseInt(_.slice(1), 16);
+                    return `rgba(${(_ >> 16) & 255}, ${(_ >> 8) & 255}, ${255 & _}, 1)`;
+                  })(_.sRGBHex);
+                _(_), __webpack_require__(_);
+              } catch (_) {
+                console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
+              }
+            else alert((0, _._)("#Sale_EyeDropperError"));
+          }, [__webpack_require__]);
+        return _.createElement(
+          "div",
+          null,
+          Boolean(_) && _.createElement(_._, null, _),
+          _.createElement(_._, {
+            onChange: (_) => {
+              const _ = (function (_) {
+                return `rgba(${_.rgb._}, ${_.rgb._}, ${_.rgb._}, ${_.rgb._})`;
+              })(_);
+              _(_), __webpack_require__(_);
+            },
+            color: _,
+            disableAlpha: _,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().EyeDropperCtn,
+            },
+            _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)("#Sale_BackgroundColorPicker"),
+              },
+              _.createElement(
+                _._,
+                {
+                  className: _().EyeDropperBtn,
+                  onClick: _,
+                },
+                _.createElement(_.O7b, null),
+              ),
+            ),
+          ),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -1795,23 +1874,6 @@
             ),
         ];
       }
-      function _(_) {
-        if (_.startsWith("rgb")) {
-          const _ = _.match(/\d+/g);
-          if (!_ || _.length < 3) return "#000000";
-          const [__webpack_require__, _, _] = _.map(Number);
-          return (
-            "#" +
-            [__webpack_require__, _, _]
-              .map((_) => {
-                const _ = _.toString(16);
-                return 1 === _.length ? "0" + _ : _;
-              })
-              .join("")
-          );
-        }
-        return _;
-      }
       const _ = _.memo(function (_) {
         const {
             schema: _,
@@ -1832,8 +1894,9 @@
           _ = _.useCallback(() => {
             const { state: _, dispatch: __webpack_require__ } = _,
               _ = _ ? _.marks.color : _.marks.bgcolor;
-            if (!_) return;
-            if (!_ || !_.startsWith("#") || 7 !== _.length) return;
+            if (!_) return void console.log("debug: no markType");
+            if (!_ || !_.startsWith("#") || 7 !== _.length)
+              return void console.log("debug: invalid color text: " + _);
             if (_ < 0 || _ > _.doc.content.size || _ > _)
               return void console.error("Invalid selection range:", _, _);
             let _;
@@ -1904,12 +1967,23 @@
             strOKText: _,
             bOKDisabled: !_ || 0 == _.length,
           },
-          _.createElement(_._, null, (0, _._)("#FormattingToolbar_Color")),
-          _.createElement("input", {
-            type: "color",
-            ref: _,
-            value: _(_),
-            onChange: (_) => _(_.currentTarget.value),
+          _.createElement(_._, {
+            color: _,
+            strTitle: _,
+            disableAlpha: !0,
+            onChange: (_) =>
+              _(
+                (function (_) {
+                  const _ = _.match(
+                    /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)$/i,
+                  );
+                  if (_) {
+                    let [, _, __webpack_require__, _, _] = _;
+                    return `#${((1 << 24) + (parseInt(_, 10) << 16) + (parseInt(__webpack_require__, 10) << 8) + parseInt(_, 10)).toString(16).slice(1)}`;
+                  }
+                  return "#7e3232";
+                })(_),
+              ),
           }),
         );
       });

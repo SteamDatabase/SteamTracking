@@ -10062,6 +10062,7 @@
             "div",
             {
               className: _,
+              dir: "ltr",
             },
             _.createElement(_, null),
             _.createElement(_, null),

@@ -777,6 +777,7 @@
                     nCreatorAccountID: _.creatorAccountID,
                     nWidthMultiplier: _.nWidthMultiplier,
                     bShowIgnoreButton: _.bShowIgnoreButton,
+                    bShowDescription: _.bShowDescriptionInHover,
                   },
                   _,
                 ),

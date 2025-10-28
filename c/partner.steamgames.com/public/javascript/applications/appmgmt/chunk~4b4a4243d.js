@@ -1676,6 +1676,7 @@
             bHideStoreHover: _,
             onlyOneDiscountPct: _,
             bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
           } = _,
           [_, _] = _.useState(!1),
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
@@ -1689,6 +1690,7 @@
             bIsHovered: _,
             bHasParentAppToDisplay: _,
             onlyOneDiscountPct: _,
+            bShowEarlyAccessBanner: _,
           });
         return _.createElement(
           _._,
@@ -1729,6 +1731,8 @@
                     strExtraParams: _.strExtraParams,
                     nCreatorAccountID: _.creatorAccountID,
                     nWidthMultiplier: _.nWidthMultiplier,
+                    bShowIgnoreButton: _.bShowIgnoreButton,
+                    bShowDescription: _.bShowDescriptionInHover,
                   },
                   _,
                 ),
@@ -1803,6 +1807,7 @@
             bIsHovered: _,
             strDoubleCapsuleMessage: _,
             bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
           } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ = (0, _._)(),
@@ -1824,77 +1829,72 @@
           _.createElement(
             "div",
             {
-              className: _().CapsuleFocusCtn,
+              className: (0, _._)({
+                [_().TwoWidthCtn]: _,
+              }),
             },
             _.createElement(
-              "div",
+              _._,
               {
-                className: (0, _._)({
-                  [_().TwoWidthCtn]: _,
-                }),
-              },
-              _.createElement(
-                _._,
-                {
-                  href: _ ? null : _,
-                  style: {
-                    display: "block",
-                    cursor: "pointer",
-                  },
-                  className: (0, _._)({
-                    [_().TwoWidthCapsule]: _,
-                  }),
-                  preferredFocus: _,
-                  onClick: _,
+                href: _ ? null : _,
+                style: {
+                  display: "block",
+                  cursor: "pointer",
                 },
-                _.createElement(_._, {
-                  appids: _,
-                  hide_status_banners: __webpack_require__,
+                className: (0, _._)({
+                  [_().TwoWidthCapsule]: _,
                 }),
-                "none" != _ &&
-                  _.createElement(_._, {
-                    imageType: _,
-                    info: _,
-                  }),
+                preferredFocus: _,
+                onClick: _,
+              },
+              _.createElement(_._, {
+                appids: _,
+                hide_status_banners: __webpack_require__,
+                show_early_access: _.bShowEarlyAccessBanner,
+              }),
+              "none" != _ &&
                 _.createElement(_._, {
-                  storeItem: _,
+                  imageType: _,
+                  info: _,
                 }),
-                Boolean(_) &&
-                  _.createElement(_._, {
-                    appInfo: _,
-                  }),
-              ),
-              _ &&
+              _.createElement(_._, {
+                storeItem: _,
+              }),
+              Boolean(_) &&
+                _.createElement(_._, {
+                  appInfo: _,
+                }),
+            ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().TwoWidthSideInfo, "TwoWidthSideInfo"),
+                },
                 _.createElement(
                   "div",
                   {
-                    className: _().TwoWidthSideInfo,
+                    className: _().Reason,
+                  },
+                  _,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().StoreSaleItemRelease,
                   },
                   _.createElement(
-                    "div",
-                    {
-                      className: _().Reason,
-                    },
-                    _,
+                    "span",
+                    null,
+                    _.GetFormattedSteamReleaseDate(),
                   ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().StoreSaleItemRelease,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      _.GetFormattedSteamReleaseDate(),
-                    ),
-                  ),
-                  _.createElement(_._, {
-                    bHideTitle: !0,
-                    rgTagIDs: _.GetTagIDs(),
-                    instanceNum: _,
-                  }),
                 ),
-            ),
+                _.createElement(_._, {
+                  bHideTitle: !0,
+                  rgTagIDs: _.GetTagIDs(),
+                  instanceNum: _,
+                }),
+              ),
           ),
           _.createElement(_, {
             ..._,

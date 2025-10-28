@@ -19,6 +19,11 @@ var _ = {
   SteamDeckCompatUnknown: "oUwLb33aAOc-",
   SteamOSCompatInformation: "woJ2d8cqx-8-",
   SteamOSCompatCompatible: "-d7KPaKpMNY-",
+  SteamTVIcon: "VcS83RyrPtk-",
+  SteamTVLogo: "YE6RLQX710Y-",
+  SteamTVSteam: "xdlZoG98cAg-",
+  SteamTVTV: "uH04AR0hsgQ-",
+  FlipInRTL: "ZZ7YQLT5n-g-",
 };
 var _ = _(_());
 var _ = _(_());

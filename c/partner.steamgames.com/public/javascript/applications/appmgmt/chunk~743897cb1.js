@@ -12936,12 +12936,13 @@
           let _,
             _ = 0;
           try {
-            if (this.m_bJWTToken && _.bSendAuth) {
+            if (this.m_bJWTToken && _.bSendAuth && this.m_webApiAccessToken) {
               const _ = Date.now() / 1e3;
               this.m_refreshAccessTokenPromise
                 ? await this.m_refreshAccessTokenPromise
-                : this.m_fnRequestNewAccessToken &&
-                  _ - this.m_dtLastExpireCheck > 60 &&
+                : (window.bForceTokenRefresh ||
+                    (this.m_fnRequestNewAccessToken &&
+                      _ - this.m_dtLastExpireCheck > 60)) &&
                   ((this.m_dtLastExpireCheck = _),
                   (function (_) {
                     const _ = _(_),
@@ -12955,11 +12956,7 @@
                       _(_) - _ < Date.now() / 1e3
                     );
                   })(_(this.m_webApiAccessToken)) &&
-                    ((this.m_refreshAccessTokenPromise =
-                      this.m_fnRequestNewAccessToken(this.m_webApiAccessToken)),
-                    (this.m_webApiAccessToken =
-                      await this.m_refreshAccessTokenPromise),
-                    (this.m_refreshAccessTokenPromise = void 0)));
+                    (await this.AttemptTokenRefresh()));
             }
             const _ = await this.Send(_, _, _, _);
             if (((_ = _.status), 200 == _))
@@ -12992,11 +12989,8 @@
               this.m_bJWTToken &&
               _.bSendAuth &&
               this.m_fnRequestNewAccessToken &&
-              ((this.m_refreshAccessTokenPromise =
-                this.m_fnRequestNewAccessToken(this.m_webApiAccessToken)),
-              (this.m_webApiAccessToken =
-                await this.m_refreshAccessTokenPromise),
-              (this.m_refreshAccessTokenPromise = void 0)),
+              this.m_webApiAccessToken &&
+              (await this.AttemptTokenRefresh()),
             _
           );
         }
@@ -13063,6 +13057,16 @@
             _ && _.Hdr().set_error_message(_),
             _
           );
+        }
+        async AttemptTokenRefresh() {
+          if (this.m_fnRequestNewAccessToken) {
+            this.m_refreshAccessTokenPromise = this.m_fnRequestNewAccessToken(
+              this.m_webApiAccessToken,
+            );
+            const _ = await this.m_refreshAccessTokenPromise;
+            (this.m_refreshAccessTokenPromise = void 0),
+              _ && (this.m_webApiAccessToken = _);
+          }
         }
       }
       var _ = __webpack_require__("chunkid");
@@ -30835,7 +30839,7 @@
             [__webpack_require__, _],
           );
         return _.useMemo(
-          () => new _._(_.sm_BBCodeDictionary, _, _),
+          () => new _._(_.sm_BBCodeDictionary, _, _ || _._.LANGUAGE),
           [_, _],
         ).ParseBBCode(_, {
           showErrorInfo: _,
@@ -31834,7 +31838,7 @@
             ref: _,
             className: _,
             style: {
-              width: _ >= 1 && _ < 100 ? `${_}%` : void 0,
+              width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
             },
           },
           _.createElement(_, {
@@ -31846,16 +31850,17 @@
         );
       });
       function _(_) {
-        try {
-          const _ = new URL(_);
-          return (
-            (_.search =
-              (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
-            _.toString()
-          );
-        } catch {
-          return _;
-        }
+        if (_)
+          try {
+            const _ = new URL(_);
+            return (
+              (_.search =
+                (_.search ? _.search + "&" : "?") + "origin=" + (0, _._)()),
+              _.toString()
+            );
+          } catch {
+            return _;
+          }
       }
       function _(_) {
         const { rgVideoSources: _ } = _;

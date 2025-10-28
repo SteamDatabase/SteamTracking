@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Contenido reclasificado",
 	"moderation_resolutionstatus_suspicious": "Cuenta bloqueada debido a contenido sospechoso",
 	"moderation_resolutionstatus_harassmentstrike": "Privilegios de la Comunidad de Steam suspendidos",
+	"moderation_resolutionstatus_removeandwarn": "Eliminado y advertido",
+	"moderation_resolutionstatus_removeandban": "Eliminado y bloqueado del punto de encuentro",
 	"moderation_resolutionstatus_unknown": "Desconocido",
 	"moderationaction_acquitted": "Absuelto",
 	"moderationaction_cancelled": "Última denuncia abierta cancelada",

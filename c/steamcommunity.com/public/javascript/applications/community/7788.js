@@ -170,6 +170,8 @@
 	"moderation_resolutionstatus_relabelled": "Indholdsmærkning ændret",
 	"moderation_resolutionstatus_suspicious": "Konto låst på grund af mistænkeligt indhold",
 	"moderation_resolutionstatus_harassmentstrike": "Adgang til Steam-fællesskabet suspenderet",
+	"moderation_resolutionstatus_removeandwarn": "Fjernet og advaret",
+	"moderation_resolutionstatus_removeandban": "Fjernet og udelukket fra hub",
 	"moderation_resolutionstatus_unknown": "Ukendt",
 	"moderationaction_acquitted": "Frikendt",
 	"moderationaction_cancelled": "Senest åbnede rapport annulleret",

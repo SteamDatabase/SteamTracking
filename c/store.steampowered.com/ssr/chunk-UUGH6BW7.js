@@ -10959,6 +10959,71 @@ var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
+        _.prototype.language || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        _.sm_m ||
+          (_.sm_m = {
+            proto: _,
+            fields: {
+              language: {
+                _: 1,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
+              localized_string: {
+                _: 2,
+                _: _.readString,
+                _: _.writeString,
+              },
+            },
+          }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.default.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return "CLocalizationToken";
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
         _.prototype.clanid || _(_._()),
         _.Message.initialize(this, _, 0, -1, void 0, null);
     }
@@ -11688,6 +11753,7 @@ var _ = () => _().useActiveSteamInterface()?.GetServiceTransport(),
   _ = () => _().useStorage(),
   _ = () => _().useActiveSteamInterface();
 export {
+  _,
   _,
   _,
   _,

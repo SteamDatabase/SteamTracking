@@ -9,8 +9,8 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -30,17 +30,17 @@ import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -48,11 +48,11 @@ import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -1176,19 +1176,16 @@ var _ = class {
     let _,
       _ = 0;
     try {
-      if (this.m_bJWTToken && _.bSendAuth) {
+      if (this.m_bJWTToken && _.bSendAuth && this.m_webApiAccessToken) {
         let _ = Date.now() / 1e3;
         this.m_refreshAccessTokenPromise
           ? await this.m_refreshAccessTokenPromise
-          : this.m_fnRequestNewAccessToken &&
-            _ - this.m_dtLastExpireCheck > 60 &&
+          : (window.bForceTokenRefresh ||
+              (this.m_fnRequestNewAccessToken &&
+                _ - this.m_dtLastExpireCheck > 60)) &&
             ((this.m_dtLastExpireCheck = _),
             _(_(this.m_webApiAccessToken)) &&
-              ((this.m_refreshAccessTokenPromise =
-                this.m_fnRequestNewAccessToken(this.m_webApiAccessToken)),
-              (this.m_webApiAccessToken =
-                await this.m_refreshAccessTokenPromise),
-              (this.m_refreshAccessTokenPromise = void 0)));
+              (await this.AttemptTokenRefresh()));
       }
       let _ = await this.Send(_, _, _, _);
       if (((_ = _.status), _ == 200))
@@ -1218,11 +1215,8 @@ var _ = class {
         this.m_bJWTToken &&
         _.bSendAuth &&
         this.m_fnRequestNewAccessToken &&
-        ((this.m_refreshAccessTokenPromise = this.m_fnRequestNewAccessToken(
-          this.m_webApiAccessToken,
-        )),
-        (this.m_webApiAccessToken = await this.m_refreshAccessTokenPromise),
-        (this.m_refreshAccessTokenPromise = void 0)),
+        this.m_webApiAccessToken &&
+        (await this.AttemptTokenRefresh()),
       _
     );
   }
@@ -1287,6 +1281,16 @@ var _ = class {
       _
     );
   }
+  async AttemptTokenRefresh() {
+    if (this.m_fnRequestNewAccessToken) {
+      this.m_refreshAccessTokenPromise = this.m_fnRequestNewAccessToken(
+        this.m_webApiAccessToken,
+      );
+      let _ = await this.m_refreshAccessTokenPromise;
+      (this.m_refreshAccessTokenPromise = void 0),
+        _ && (this.m_webApiAccessToken = _);
+    }
+  }
 };
 var _ = class {
   async GetObject(_) {
@@ -1338,27 +1342,35 @@ function _(_) {
   });
 }
 async function _(_) {
-  let _ = await (
-    await fetch(`${_.LOGIN_BASE_URL}jwt/ajaxrefresh`, {
-      method: "POST",
-      body: new URLSearchParams({
-        redir: window.location.href,
-      }),
-      credentials: "include",
-      mode: "cors",
-    })
-  ).json();
-  if (_.success) {
+  try {
     let _ = await (
-      await fetch(_.login_url, {
+      await fetch(`${_.LOGIN_BASE_URL}jwt/ajaxrefresh`, {
         method: "POST",
         body: new URLSearchParams({
-          ..._,
-          prior: _,
+          redir: window.location.href,
         }),
+        credentials: "include",
+        mode: "cors",
       })
     ).json();
-    if (_.result === 1) return _.token;
+    if (!_ || !_.success)
+      return console.error(`ajaxrefresh failed: "${_.error}"`), "";
+    if (_.success) {
+      let _ = await (
+        await fetch(_.login_url, {
+          method: "POST",
+          body: new URLSearchParams({
+            ..._,
+            prior: _,
+          }),
+        })
+      ).json();
+      return !_ || _.result !== 1
+        ? (console.error(`Token refresh: failed to set token: ${_.result}`), "")
+        : _.token;
+    }
+  } catch (_) {
+    console.error(`Failed to refresh token: ${_}`);
   }
   return "";
 }

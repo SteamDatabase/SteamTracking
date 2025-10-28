@@ -4,26 +4,26 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5955],
   {
-    4796: (e, t, n) => {
-      n.d(t, {
-        Ao: () => v,
-        TB: () => g,
-        W$: () => I,
+    4796: (e, t, r) => {
+      r.d(t, {
+        Ao: () => B,
+        TB: () => h,
+        W$: () => y,
         Yp: () => f,
-        _5: () => y,
-        ac: () => h,
+        _5: () => I,
+        ac: () => g,
       });
-      var a = n(34629),
-        r = n(41735),
-        i = n.n(r),
-        s = n(14947),
-        o = n(90626),
-        l = n(17720),
-        c = n(81393),
-        m = n(78327),
-        u = n(67165),
-        d = n(26161),
-        p = n(60746);
+      var n = r(34629),
+        i = r(41735),
+        a = r.n(i),
+        s = r(14947),
+        o = r(90626),
+        l = r(17720),
+        c = r(81393),
+        m = r(78327),
+        u = r(8092),
+        d = r(26161),
+        p = r(60746);
       class _ {
         constructor() {
           (this.m_mapAppIDToClanInfo = new Map()),
@@ -145,12 +145,12 @@
         async InternalLoadOGGClanInfoForAppID(e) {
           const t =
             m.TS.COMMUNITY_BASE_URL + "ogg/" + e + "/ajaxgetvanityandclanid/";
-          let n = null;
+          let r = null;
           try {
-            n = (await i().get(t, { params: this.GetRequestParam() })).data;
+            r = (await a().get(t, { params: this.GetRequestParam() })).data;
           } catch (e) {}
-          return n
-            ? (this.InternalSetupValue(n), this.m_mapAppIDToClanInfo.get(e))
+          return r
+            ? (this.InternalSetupValue(r), this.m_mapAppIDToClanInfo.get(e))
             : null;
         }
         async LoadOGGClanInfoForIdentifier(e) {
@@ -176,9 +176,9 @@
         async InternalLoadOGGClanInfoForIdentifier(e) {
           const t =
             m.TS.COMMUNITY_BASE_URL + "games/" + e + "/ajaxgetvanityandclanid/";
-          let n = await i().get(t, { params: this.GetRequestParam() });
+          let r = await a().get(t, { params: this.GetRequestParam() });
           return (
-            this.InternalSetupValue(n.data),
+            this.InternalSetupValue(r.data),
             this.m_mapVanityToClanInfo.get(
               null == e ? void 0 : e.toLocaleLowerCase(),
             )
@@ -212,9 +212,9 @@
             "groups/" +
             e +
             "/ajaxgetvanityandclanid/";
-          let n = await i().get(t, { params: this.GetRequestParam() });
+          let r = await a().get(t, { params: this.GetRequestParam() });
           return (
-            this.InternalSetupValue(n.data),
+            this.InternalSetupValue(r.data),
             this.m_mapVanityToClanInfo.get(
               null == e ? void 0 : e.toLocaleLowerCase(),
             )
@@ -225,14 +225,14 @@
           let t = e.GetAccountID();
           if (this.m_mapClanAccountIDToClanInfo.has(t))
             return this.m_mapClanAccountIDToClanInfo.get(t);
-          let n = "clanaccountid_" + t;
+          let r = "clanaccountid_" + t;
           return (
-            this.m_mapPromisesLoading.has(n) ||
+            this.m_mapPromisesLoading.has(r) ||
               this.m_mapPromisesLoading.set(
-                n,
+                r,
                 this.InternalLoadClanInfoForClanSteamID(e),
               ),
-            this.m_mapPromisesLoading.get(n)
+            this.m_mapPromisesLoading.get(r)
           );
         }
         async LoadClanInfoForClanAccountID(e) {
@@ -241,14 +241,14 @@
         }
         async InternalLoadClanInfoForClanSteamID(e) {
           let t = e.GetAccountID();
-          const n =
+          const r =
             m.TS.COMMUNITY_BASE_URL +
             "gid/" +
             e.ConvertTo64BitString() +
             "/ajaxgetvanityandclanid/";
-          let a = await i().get(n, { params: this.GetRequestParam() });
+          let n = await a().get(r, { params: this.GetRequestParam() });
           return (
-            this.InternalSetupValue(a.data),
+            this.InternalSetupValue(n.data),
             this.m_mapClanAccountIDToClanInfo.get(t)
           );
         }
@@ -298,61 +298,61 @@
         GetCreatorStoreURL(e) {
           let t = u.pF.GetCreatorHome(e);
           if (t) return t.GetCreatorHomeURL("developer");
-          let n = this.GetClanInfoByClanAccountID(e.GetAccountID());
+          let r = this.GetClanInfoByClanAccountID(e.GetAccountID());
           return (
             m.TS.COMMUNITY_BASE_URL +
-            (n.vanity_url
-              ? "groups/" + n.vanity_url
+            (r.vanity_url
+              ? "groups/" + r.vanity_url
               : "gid/" + e.ConvertTo64BitString())
           );
         }
       }
-      (0, a.Cg)([s.sH], _.prototype, "m_mapAppIDToClanInfo", void 0),
-        (0, a.Cg)([s.sH], _.prototype, "m_mapVanityToClanInfo", void 0),
-        (0, a.Cg)([s.sH], _.prototype, "m_mapClanAccountIDToClanInfo", void 0),
-        (0, a.Cg)([s.XI], _.prototype, "RegisterClanData", null),
-        (0, a.Cg)([s.XI], _.prototype, "InternalSetupValue", null);
-      const h = new _();
-      function g(e) {
-        const [t, n] = (0, o.useState)(
-            e ? h.GetClanInfoByClanAccountID(e) : void 0,
+      (0, n.Cg)([s.sH], _.prototype, "m_mapAppIDToClanInfo", void 0),
+        (0, n.Cg)([s.sH], _.prototype, "m_mapVanityToClanInfo", void 0),
+        (0, n.Cg)([s.sH], _.prototype, "m_mapClanAccountIDToClanInfo", void 0),
+        (0, n.Cg)([s.XI], _.prototype, "RegisterClanData", null),
+        (0, n.Cg)([s.XI], _.prototype, "InternalSetupValue", null);
+      const g = new _();
+      function h(e) {
+        const [t, r] = (0, o.useState)(
+            e ? g.GetClanInfoByClanAccountID(e) : void 0,
           ),
-          [a, r] = (0, o.useState)(!!e && !h.BHasClanInfoLoadedByAccountID(e));
+          [n, i] = (0, o.useState)(!!e && !g.BHasClanInfoLoadedByAccountID(e));
         return (
           (0, o.useEffect)(() => {
             if (e)
-              if (h.BHasClanInfoLoadedByAccountID(e))
-                n(h.GetClanInfoByClanAccountID(e)), r(!1);
+              if (g.BHasClanInfoLoadedByAccountID(e))
+                r(g.GetClanInfoByClanAccountID(e)), i(!1);
               else {
-                r(!0);
+                i(!0);
                 const t = l.b.InitFromClanID(
                   "string" == typeof e ? Number.parseInt(e) : e,
                 );
-                h.LoadClanInfoForClanSteamID(t)
+                g.LoadClanInfoForClanSteamID(t)
                   .then((e) => {
-                    n(null != e ? e : void 0), r(!1);
+                    r(null != e ? e : void 0), i(!1);
                   })
                   .catch((t) =>
                     console.error(`Failed to load clan info ${e}`, t),
                   );
               }
-            else n(void 0), r(!1);
+            else r(void 0), i(!1);
           }, [e]),
-          [a, t]
+          [n, t]
         );
       }
-      function I(e) {
-        const [t, n] = (0, o.useState)(h.GetOGGClanInfo(e));
+      function y(e) {
+        const [t, r] = (0, o.useState)(g.GetOGGClanInfo(e));
         return (
           (0, o.useEffect)(() => {
-            t || h.LoadOGGClanInfoForGroupVanity(e).then(n);
+            t || g.LoadOGGClanInfoForGroupVanity(e).then(r);
           }, [t, e]),
           t
         );
       }
       function f(e) {
         const t = e.BIsOGGEvent(),
-          n = p.KN.Get().GetPartnerEventPermissions(e.clanSteamID).valve_admin;
+          r = p.KN.Get().GetPartnerEventPermissions(e.clanSteamID).valve_admin;
         if (t) return { bVisible: !1 };
         if (36 == e.GetEventType()) return { bVisible: !1 };
         if (e.BHasSaleEnabled()) return { bVisible: !0 };
@@ -362,49 +362,57 @@
         )
           return { bVisible: !0 };
         if (e.clanSteamID.GetAccountID() == (0, d.H)()) return { bVisible: !1 };
-        const a = u.pF.GetCreatorHome(e.clanSteamID);
-        return a && a.BHasClanAccountFlagSet(32)
+        const n = u.pF.GetCreatorHome(e.clanSteamID);
+        return n && n.BHasClanAccountFlagSet(32)
           ? { bVisible: !0 }
-          : n
+          : r
             ? { bVisible: !0, bValveOnly: !0 }
             : { bVisible: !1 };
       }
-      function y(e) {
+      function I(e) {
         const t = e.BIsOGGEvent(),
-          n = p.KN.Get().GetPartnerEventPermissions(e.clanSteamID).valve_admin;
+          r = p.KN.Get().GetPartnerEventPermissions(e.clanSteamID).valve_admin;
         return t
           ? e.BHasSaleEnabled()
             ? { bVisible: !0 }
             : 1 == m.TS.EUNIVERSE
               ? { bVisible: !1 }
-              : n && 14 == e.GetEventType()
+              : r && 14 == e.GetEventType()
                 ? { bVisible: !0, bValveOnly: !0 }
                 : { bVisible: !1 }
           : { bVisible: !1 };
       }
-      function v(e) {
+      function B(e) {
         const t = e.BIsOGGEvent(),
-          n = p.KN.Get().GetPartnerEventPermissions(e.clanSteamID).valve_admin;
+          r = p.KN.Get().GetPartnerEventPermissions(e.clanSteamID).valve_admin;
         return t || 36 != e.GetEventType()
           ? { bVisible: !1 }
           : e.BHasSaleEnabled()
             ? { bVisible: !0 }
             : e.clanSteamID.GetAccountID() == (0, d.H)()
               ? { bVisible: !1 }
-              : n
+              : r
                 ? { bVisible: !0, bValveOnly: !0 }
                 : { bVisible: !1 };
       }
-      window.g_ClanStore = h;
+      window.g_ClanStore = g;
     },
-    67165: (e, t, n) => {
-      n.d(t, { A2: () => G, pF: () => D, FV: () => L });
-      var a,
-        r = n(34629),
-        i = n(56545),
-        s = n(80613),
-        o = n.n(s),
-        l = n(89068);
+    8092: (e, t, r) => {
+      r.d(t, {
+        mD: () => H,
+        ie: () => N,
+        A2: () => W,
+        zt: () => q,
+        pF: () => O,
+        FV: () => V,
+        $$: () => k,
+      });
+      var n,
+        i = r(34629),
+        a = r(56545),
+        s = r(80613),
+        o = r.n(s),
+        l = r(89068);
       class c extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -446,8 +454,8 @@
         }
         static deserializeBinary(e) {
           let t = new (o().BinaryReader)(e),
-            n = new c();
-          return c.deserializeBinaryFromReader(n, t);
+            r = new c();
+          return c.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return l.zj(c.MBF(), e, t);
@@ -512,8 +520,8 @@
         }
         static deserializeBinary(e) {
           let t = new (o().BinaryReader)(e),
-            n = new m();
-          return m.deserializeBinaryFromReader(n, t);
+            r = new m();
+          return m.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return l.zj(m.MBF(), e, t);
@@ -590,8 +598,8 @@
         }
         static deserializeBinary(e) {
           let t = new (o().BinaryReader)(e),
-            n = new u();
-          return u.deserializeBinaryFromReader(n, t);
+            r = new u();
+          return u.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return l.zj(u.MBF(), e, t);
@@ -627,8 +635,8 @@
         }
         static deserializeBinary(e) {
           let t = new (o().BinaryReader)(e),
-            n = new d();
-          return d.deserializeBinaryFromReader(n, t);
+            r = new d();
+          return d.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
@@ -679,8 +687,8 @@
         }
         static deserializeBinary(e) {
           let t = new (o().BinaryReader)(e),
-            n = new p();
-          return p.deserializeBinaryFromReader(n, t);
+            r = new p();
+          return p.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return l.zj(p.MBF(), e, t);
@@ -731,8 +739,8 @@
         }
         static deserializeBinary(e) {
           let t = new (o().BinaryReader)(e),
-            n = new _();
-          return _.deserializeBinaryFromReader(n, t);
+            r = new _();
+          return _.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return l.zj(_.MBF(), e, t);
@@ -752,18 +760,18 @@
           return "CStoreCatalog_GetDevPageLinks_Response";
         }
       }
-      class h extends s.Message {
+      class g extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            h.prototype.clan_account_ids || l.Sg(h.M()),
+            g.prototype.clan_account_ids || l.Sg(g.M()),
             s.Message.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
+            g.sm_m ||
+              (g.sm_m = {
+                proto: g,
                 fields: {
                   clan_account_ids: {
                     n: 1,
@@ -775,58 +783,6 @@
                   },
                   ignore_dlc: { n: 2, br: l.qM.readBool, bw: l.gp.writeBool },
                 },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = l.w0(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return l.BT(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return l.Uq(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (o().BinaryReader)(e),
-            n = new h();
-          return h.deserializeBinaryFromReader(n, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return l.zj(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (o().BinaryWriter)();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          l.i0(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (o().BinaryWriter)();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreCatalog_GetDevPageAllAppsLinked_Request";
-        }
-      }
-      class g extends s.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            g.prototype.results || l.Sg(g.M()),
-            s.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            g.sm_m ||
-              (g.sm_m = {
-                proto: g,
-                fields: { results: { n: 1, c: m, r: !0, q: !0 } },
               }),
             g.sm_m
           );
@@ -845,8 +801,8 @@
         }
         static deserializeBinary(e) {
           let t = new (o().BinaryReader)(e),
-            n = new g();
-          return g.deserializeBinaryFromReader(n, t);
+            r = new g();
+          return g.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return l.zj(g.MBF(), e, t);
@@ -863,125 +819,67 @@
           return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreCatalog_GetDevPageAllAppsLinked_Response";
+          return "CStoreCatalog_GetDevPageAllAppsLinked_Request";
         }
       }
-      class I extends s.Message {
+      class h extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            I.prototype.partnerid || l.Sg(I.M()),
-            s.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
-                fields: {
-                  partnerid: {
-                    n: 1,
-                    br: l.qM.readUint32,
-                    bw: l.gp.writeUint32,
-                  },
-                },
-              }),
-            I.sm_m
-          );
-        }
-        static MBF() {
-          return I.sm_mbf || (I.sm_mbf = l.w0(I.M())), I.sm_mbf;
-        }
-        toObject(e = !1) {
-          return I.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return l.BT(I.M(), e, t);
-        }
-        static fromObject(e) {
-          return l.Uq(I.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (o().BinaryReader)(e),
-            n = new I();
-          return I.deserializeBinaryFromReader(n, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return l.zj(I.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (o().BinaryWriter)();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          l.i0(I.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (o().BinaryWriter)();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreCatalog_GetDevPagesForPartner_Request";
-        }
-      }
-      class f extends s.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            f.prototype.results || l.Sg(f.M()),
+            h.prototype.results || l.Sg(h.M()),
             s.Message.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
-                fields: { results: { n: 1, c: y, r: !0, q: !0 } },
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: { results: { n: 1, c: m, r: !0, q: !0 } },
               }),
-            f.sm_m
+            h.sm_m
           );
         }
         static MBF() {
-          return f.sm_mbf || (f.sm_mbf = l.w0(f.M())), f.sm_mbf;
+          return h.sm_mbf || (h.sm_mbf = l.w0(h.M())), h.sm_mbf;
         }
         toObject(e = !1) {
-          return f.toObject(e, this);
+          return h.toObject(e, this);
         }
         static toObject(e, t) {
-          return l.BT(f.M(), e, t);
+          return l.BT(h.M(), e, t);
         }
         static fromObject(e) {
-          return l.Uq(f.M(), e);
+          return l.Uq(h.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (o().BinaryReader)(e),
-            n = new f();
-          return f.deserializeBinaryFromReader(n, t);
+            r = new h();
+          return h.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return l.zj(f.MBF(), e, t);
+          return l.zj(h.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (o().BinaryWriter)();
-          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          l.i0(f.M(), e, t);
+          l.i0(h.M(), e, t);
         }
         serializeBase64String() {
           var e = new (o().BinaryWriter)();
-          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CStoreCatalog_GetDevPagesForPartner_Response";
+          return "CStoreCatalog_GetDevPageAllAppsLinked_Response";
         }
       }
       class y extends s.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            y.prototype.clan_accountid || l.Sg(y.M()),
-            s.Message.initialize(this, e, 0, -1, [2], null);
+            y.prototype.partnerid || l.Sg(y.M()),
+            s.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -989,17 +887,10 @@
               (y.sm_m = {
                 proto: y,
                 fields: {
-                  clan_accountid: {
+                  partnerid: {
                     n: 1,
                     br: l.qM.readUint32,
                     bw: l.gp.writeUint32,
-                  },
-                  linknames: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: l.qM.readString,
-                    bw: l.gp.writeRepeatedString,
                   },
                 },
               }),
@@ -1020,8 +911,8 @@
         }
         static deserializeBinary(e) {
           let t = new (o().BinaryReader)(e),
-            n = new y();
-          return y.deserializeBinaryFromReader(n, t);
+            r = new y();
+          return y.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return l.zj(y.MBF(), e, t);
@@ -1038,6 +929,123 @@
           return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStoreCatalog_GetDevPagesForPartner_Request";
+        }
+      }
+      class f extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            f.prototype.results || l.Sg(f.M()),
+            s.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            f.sm_m ||
+              (f.sm_m = {
+                proto: f,
+                fields: { results: { n: 1, c: I, r: !0, q: !0 } },
+              }),
+            f.sm_m
+          );
+        }
+        static MBF() {
+          return f.sm_mbf || (f.sm_mbf = l.w0(f.M())), f.sm_mbf;
+        }
+        toObject(e = !1) {
+          return f.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.BT(f.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.Uq(f.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (o().BinaryReader)(e),
+            r = new f();
+          return f.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.zj(f.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (o().BinaryWriter)();
+          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.i0(f.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (o().BinaryWriter)();
+          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCatalog_GetDevPagesForPartner_Response";
+        }
+      }
+      class I extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            I.prototype.clan_accountid || l.Sg(I.M()),
+            s.Message.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            I.sm_m ||
+              (I.sm_m = {
+                proto: I,
+                fields: {
+                  clan_accountid: {
+                    n: 1,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                  linknames: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: l.qM.readString,
+                    bw: l.gp.writeRepeatedString,
+                  },
+                },
+              }),
+            I.sm_m
+          );
+        }
+        static MBF() {
+          return I.sm_mbf || (I.sm_mbf = l.w0(I.M())), I.sm_mbf;
+        }
+        toObject(e = !1) {
+          return I.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.BT(I.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.Uq(I.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (o().BinaryReader)(e),
+            r = new I();
+          return I.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.zj(I.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (o().BinaryWriter)();
+          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.i0(I.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (o().BinaryWriter)();
+          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStoreCatalog_GetDevPagesForPartner_Response_CDevPageInfo";
         }
       }
@@ -1045,7 +1053,7 @@
         (e.SetDevPageLink = function (e, t) {
           return e.SendMsg(
             "StoreCatalog.SetDevPageLink#1",
-            (0, i.I8)(u, t),
+            (0, a.I8)(u, t),
             d,
             { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
           );
@@ -1053,7 +1061,7 @@
           (e.GetDevPageLinks = function (e, t) {
             return e.SendMsg(
               "StoreCatalog.GetDevPageLinks#1",
-              (0, i.I8)(p, t),
+              (0, a.I8)(p, t),
               _,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
@@ -1061,26 +1069,553 @@
           (e.GetDevPageAllAppsLinked = function (e, t) {
             return e.SendMsg(
               "StoreCatalog.GetDevPageAllAppsLinked#1",
-              (0, i.I8)(h, t),
-              g,
+              (0, a.I8)(g, t),
+              h,
               { ePrivilege: 1 },
             );
           }),
           (e.GetDevPagesForPartner = function (e, t) {
             return e.SendMsg(
               "StoreCatalog.GetDevPagesForPartner#1",
-              (0, i.I8)(I, t),
+              (0, a.I8)(y, t),
               f,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           });
-      })(a || (a = {}));
-      var v = n(88942),
-        C = n(41735),
-        B = n.n(C),
-        S = n(14947),
-        w = n(78327);
-      class b {
+      })(n || (n = {}));
+      var B,
+        b = r(36003);
+      class w extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            w.prototype.appid || l.Sg(w.M()),
+            s.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            w.sm_m ||
+              (w.sm_m = {
+                proto: w,
+                fields: {
+                  appid: { n: 1, br: l.qM.readUint32, bw: l.gp.writeUint32 },
+                  clanid: { n: 2, br: l.qM.readUint32, bw: l.gp.writeUint32 },
+                  link_url: { n: 3, br: l.qM.readString, bw: l.gp.writeString },
+                  link_text: {
+                    n: 4,
+                    br: l.qM.readString,
+                    bw: l.gp.writeString,
+                  },
+                  blurb: { n: 5, br: l.qM.readString, bw: l.gp.writeString },
+                  time_recommended: {
+                    n: 6,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                  comment_count: {
+                    n: 7,
+                    br: l.qM.readInt32,
+                    bw: l.gp.writeInt32,
+                  },
+                  upvote_count: {
+                    n: 8,
+                    br: l.qM.readInt32,
+                    bw: l.gp.writeInt32,
+                  },
+                  accountid_creator: {
+                    n: 9,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                  recommendation_state: {
+                    n: 10,
+                    br: l.qM.readEnum,
+                    bw: l.gp.writeEnum,
+                  },
+                  received_compensation: {
+                    n: 11,
+                    br: l.qM.readBool,
+                    bw: l.gp.writeBool,
+                  },
+                  received_for_free: {
+                    n: 12,
+                    br: l.qM.readBool,
+                    bw: l.gp.writeBool,
+                  },
+                },
+              }),
+            w.sm_m
+          );
+        }
+        static MBF() {
+          return w.sm_mbf || (w.sm_mbf = l.w0(w.M())), w.sm_mbf;
+        }
+        toObject(e = !1) {
+          return w.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.BT(w.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.Uq(w.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (o().BinaryReader)(e),
+            r = new w();
+          return w.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.zj(w.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (o().BinaryWriter)();
+          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.i0(w.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (o().BinaryWriter)();
+          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_RecommendedApp";
+        }
+      }
+      class v extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            v.prototype.listid || l.Sg(v.M()),
+            s.Message.initialize(this, e, 0, -1, [10, 12, 13, 14], null);
+        }
+        static M() {
+          return (
+            v.sm_m ||
+              (v.sm_m = {
+                proto: v,
+                fields: {
+                  listid: {
+                    n: 1,
+                    br: l.qM.readUint64String,
+                    bw: l.gp.writeUint64String,
+                  },
+                  title: { n: 2, br: l.qM.readString, bw: l.gp.writeString },
+                  blurb: { n: 3, br: l.qM.readString, bw: l.gp.writeString },
+                  link: { n: 4, br: l.qM.readString, bw: l.gp.writeString },
+                  list_state: { n: 5, br: l.qM.readEnum, bw: l.gp.writeEnum },
+                  sort_order: {
+                    n: 6,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                  time_created: {
+                    n: 7,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                  time_updated: {
+                    n: 8,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                  accountid: {
+                    n: 9,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                  apps: { n: 10, c: S, r: !0, q: !0 },
+                  list_type: { n: 11, br: l.qM.readEnum, bw: l.gp.writeEnum },
+                  title_localization: { n: 12, c: b.O2, r: !0, q: !0 },
+                  blurb_localization: { n: 13, c: b.O2, r: !0, q: !0 },
+                  link_localization: { n: 14, c: b.O2, r: !0, q: !0 },
+                  sale_clan_steamid: {
+                    n: 15,
+                    br: l.qM.readFixed64String,
+                    bw: l.gp.writeFixed64String,
+                  },
+                  sale_clan_event_gid: {
+                    n: 16,
+                    br: l.qM.readFixed64String,
+                    bw: l.gp.writeFixed64String,
+                  },
+                  list_jsondata: {
+                    n: 17,
+                    br: l.qM.readString,
+                    bw: l.gp.writeString,
+                  },
+                  clan_account_id: {
+                    n: 18,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                },
+              }),
+            v.sm_m
+          );
+        }
+        static MBF() {
+          return v.sm_mbf || (v.sm_mbf = l.w0(v.M())), v.sm_mbf;
+        }
+        toObject(e = !1) {
+          return v.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.BT(v.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.Uq(v.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (o().BinaryReader)(e),
+            r = new v();
+          return v.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.zj(v.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (o().BinaryWriter)();
+          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.i0(v.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (o().BinaryWriter)();
+          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_ListDetails";
+        }
+      }
+      class S extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            S.prototype.recommended_app || l.Sg(S.M()),
+            s.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            S.sm_m ||
+              (S.sm_m = {
+                proto: S,
+                fields: {
+                  recommended_app: { n: 1, c: w },
+                  blurb: { n: 2, br: l.qM.readString, bw: l.gp.writeString },
+                  sort_order: {
+                    n: 3,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                },
+              }),
+            S.sm_m
+          );
+        }
+        static MBF() {
+          return S.sm_mbf || (S.sm_mbf = l.w0(S.M())), S.sm_mbf;
+        }
+        toObject(e = !1) {
+          return S.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.BT(S.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.Uq(S.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (o().BinaryReader)(e),
+            r = new S();
+          return S.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.zj(S.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (o().BinaryWriter)();
+          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.i0(S.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (o().BinaryWriter)();
+          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_ListDetails_ListItem";
+        }
+      }
+      class C extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            C.prototype.steamid || l.Sg(C.M()),
+            s.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            C.sm_m ||
+              (C.sm_m = {
+                proto: C,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: l.qM.readFixed64String,
+                    bw: l.gp.writeFixed64String,
+                  },
+                  list_state: { n: 2, br: l.qM.readEnum, bw: l.gp.writeEnum },
+                  start: { n: 3, br: l.qM.readUint32, bw: l.gp.writeUint32 },
+                  count: { n: 4, br: l.qM.readUint32, bw: l.gp.writeUint32 },
+                  return_total_only: {
+                    n: 5,
+                    br: l.qM.readBool,
+                    bw: l.gp.writeBool,
+                  },
+                  return_metadata_only: {
+                    n: 6,
+                    br: l.qM.readBool,
+                    bw: l.gp.writeBool,
+                  },
+                  max_apps: { n: 7, br: l.qM.readInt32, bw: l.gp.writeInt32 },
+                  sale_clan_event_gid: {
+                    n: 8,
+                    br: l.qM.readFixed64String,
+                    bw: l.gp.writeFixed64String,
+                  },
+                },
+              }),
+            C.sm_m
+          );
+        }
+        static MBF() {
+          return C.sm_mbf || (C.sm_mbf = l.w0(C.M())), C.sm_mbf;
+        }
+        toObject(e = !1) {
+          return C.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.BT(C.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.Uq(C.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (o().BinaryReader)(e),
+            r = new C();
+          return C.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.zj(C.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (o().BinaryWriter)();
+          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.i0(C.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (o().BinaryWriter)();
+          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetLists_Request";
+        }
+      }
+      class M extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            M.prototype.list_details || l.Sg(M.M()),
+            s.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            M.sm_m ||
+              (M.sm_m = {
+                proto: M,
+                fields: {
+                  list_details: { n: 1, c: v, r: !0, q: !0 },
+                  total: { n: 2, br: l.qM.readUint32, bw: l.gp.writeUint32 },
+                },
+              }),
+            M.sm_m
+          );
+        }
+        static MBF() {
+          return M.sm_mbf || (M.sm_mbf = l.w0(M.M())), M.sm_mbf;
+        }
+        toObject(e = !1) {
+          return M.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.BT(M.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.Uq(M.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (o().BinaryReader)(e),
+            r = new M();
+          return M.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.zj(M.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (o().BinaryWriter)();
+          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.i0(M.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (o().BinaryWriter)();
+          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetLists_Response";
+        }
+      }
+      class T extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            T.prototype.steamid || l.Sg(T.M()),
+            s.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            T.sm_m ||
+              (T.sm_m = {
+                proto: T,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: l.qM.readFixed64String,
+                    bw: l.gp.writeFixed64String,
+                  },
+                  listid: {
+                    n: 2,
+                    br: l.qM.readUint64String,
+                    bw: l.gp.writeUint64String,
+                  },
+                },
+              }),
+            T.sm_m
+          );
+        }
+        static MBF() {
+          return T.sm_mbf || (T.sm_mbf = l.w0(T.M())), T.sm_mbf;
+        }
+        toObject(e = !1) {
+          return T.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.BT(T.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.Uq(T.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (o().BinaryReader)(e),
+            r = new T();
+          return T.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.zj(T.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (o().BinaryWriter)();
+          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.i0(T.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (o().BinaryWriter)();
+          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetListDetails_Request";
+        }
+      }
+      class A extends s.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            A.prototype.list_details || l.Sg(A.M()),
+            s.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            A.sm_m ||
+              (A.sm_m = { proto: A, fields: { list_details: { n: 1, c: v } } }),
+            A.sm_m
+          );
+        }
+        static MBF() {
+          return A.sm_mbf || (A.sm_mbf = l.w0(A.M())), A.sm_mbf;
+        }
+        toObject(e = !1) {
+          return A.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return l.BT(A.M(), e, t);
+        }
+        static fromObject(e) {
+          return l.Uq(A.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (o().BinaryReader)(e),
+            r = new A();
+          return A.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return l.zj(A.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (o().BinaryWriter)();
+          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          l.i0(A.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (o().BinaryWriter)();
+          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStoreCuration_GetListDetails_Response";
+        }
+      }
+      !(function (e) {
+        (e.GetLists = function (e, t) {
+          return e.SendMsg("StoreCuration.GetLists#1", (0, a.I8)(C, t), M, {
+            bConstMethod: !0,
+            ePrivilege: 2,
+            eWebAPIKeyRequirement: 1,
+          });
+        }),
+          (e.GetListDetails = function (e, t) {
+            return e.SendMsg(
+              "StoreCuration.GetListDetails#1",
+              (0, a.I8)(T, t),
+              A,
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+            );
+          });
+      })(B || (B = {}));
+      var G = r(88942),
+        D = r(41735),
+        L = r.n(D),
+        z = r(14947),
+        R = r(78327);
+      class F {
         constructor(e) {
           (this.m_appidList = new Array()),
             (this.m_strName = ""),
@@ -1090,14 +1625,15 @@
             (this.m_strVanity = ""),
             (this.m_webLink = void 0),
             (this.m_linkedEvent = void 0),
+            (this.m_mapListInfo = new Map()),
             (this.m_bIsLoaded = !1),
             (this.m_bIsHidden = !1),
             (this.m_clanAccountFlags = 0),
-            (0, S.Gn)(this),
+            (0, z.Gn)(this),
             (this.m_clanSteamID = e);
         }
         Initialize(e) {
-          var t;
+          var t, r;
           (this.m_strName = e.name || ""),
             (this.m_strAvatarURLFullSize =
               e.avatar_url_full_size ||
@@ -1110,6 +1646,11 @@
             (this.m_clanAccountFlags =
               null !== (t = e.clan_account_flags) && void 0 !== t ? t : 0),
             (this.m_linkedEvent = e.linked_event),
+            (this.m_mapListInfo = new Map(
+              Object.entries(
+                null !== (r = e.list_info) && void 0 !== r ? r : {},
+              ),
+            )),
             e.appids && e.appids.forEach((e) => this.m_appidList.push(e)),
             (this.m_bIsLoaded = !0);
         }
@@ -1159,17 +1700,17 @@
             switch (e) {
               case "publisher":
                 return (
-                  w.TS.STORE_BASE_URL + "publisher/" + this.m_strVanity + "/"
+                  R.TS.STORE_BASE_URL + "publisher/" + this.m_strVanity + "/"
                 );
               case "franchise":
                 return (
-                  w.TS.STORE_BASE_URL + "franchise/" + this.m_strVanity + "/"
+                  R.TS.STORE_BASE_URL + "franchise/" + this.m_strVanity + "/"
                 );
             }
-            return w.TS.STORE_BASE_URL + "developer/" + this.m_strVanity + "/";
+            return R.TS.STORE_BASE_URL + "developer/" + this.m_strVanity + "/";
           }
           return (
-            w.TS.STORE_BASE_URL +
+            R.TS.STORE_BASE_URL +
             "curator/" +
             this.m_clanSteamID.GetAccountID() +
             "/"
@@ -1187,6 +1728,9 @@
         GetLinkedEventGID() {
           return this.m_linkedEvent;
         }
+        GetListInfo() {
+          return this.m_mapListInfo;
+        }
         AdjustFollower(e) {
           this.m_nFollowers += e;
         }
@@ -1195,58 +1739,60 @@
             (await this.UpdateGroupFlagsFeature([2, 8], !0));
         }
         async UpdateGroupFlagsFeature(e, t) {
-          let n = w.TS.PARTNER_BASE_URL + "sales/ajaxupdateclanaccountflags",
-            a = this.m_clanAccountFlags;
+          let r = R.TS.PARTNER_BASE_URL + "sales/ajaxupdateclanaccountflags",
+            n = this.m_clanAccountFlags;
           if (
             (e.forEach((e) => {
-              t ? (a |= e) : (a &= ~e);
+              t ? (n |= e) : (n &= ~e);
             }),
-            a == this.m_clanAccountFlags)
+            n == this.m_clanAccountFlags)
           )
             return;
-          let r = new Array();
-          1 & a && r.push(1),
-            8 & a && r.push(8),
-            2 & a && r.push(2),
-            4 & a && r.push(4),
-            16 & a && r.push(16),
-            32 & a && r.push(32),
-            64 & a && r.push(64);
-          let i = new FormData();
-          i.append("sessionid", w.TS.SESSIONID),
-            i.append("clan_account_id", this.GetClanAccountID().toString()),
-            i.append("accountflags", JSON.stringify(r));
-          let s = await B().post(n, i);
+          let i = new Array();
+          1 & n && i.push(1),
+            8 & n && i.push(8),
+            2 & n && i.push(2),
+            4 & n && i.push(4),
+            16 & n && i.push(16),
+            32 & n && i.push(32),
+            64 & n && i.push(64);
+          let a = new FormData();
+          a.append("sessionid", R.TS.SESSIONID),
+            a.append("clan_account_id", this.GetClanAccountID().toString()),
+            a.append("accountflags", JSON.stringify(i));
+          let s = await L().post(r, a);
           s &&
             200 == s.status &&
             1 == s.data.success &&
-            (this.m_clanAccountFlags = a);
+            (this.m_clanAccountFlags = n);
         }
       }
-      (0, r.Cg)([S.sH], b.prototype, "m_appidList", void 0),
-        (0, r.Cg)([S.sH], b.prototype, "m_nFollowers", void 0),
-        (0, r.Cg)([S.sH], b.prototype, "m_clanAccountFlags", void 0);
-      var T = n(17720);
-      class A {
+      (0, i.Cg)([z.sH], F.prototype, "m_appidList", void 0),
+        (0, i.Cg)([z.sH], F.prototype, "m_nFollowers", void 0),
+        (0, i.Cg)([z.sH], F.prototype, "m_clanAccountFlags", void 0);
+      var U = r(96059),
+        E = r(17720);
+      class P {
         constructor() {
           (this.m_mapClanToCreatorHome = new Map()),
             (this.m_mapAppToCreatorIDList = new Map()),
             (this.m_bLoadedFromConfig = !1),
-            (0, S.Gn)(this);
+            (this.m_serviceTransport = void 0),
+            (0, z.Gn)(this);
         }
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
-            let e = (0, w.Tc)("creatorhome", "application_config");
+            const e = (0, R.Tc)("creatorhome", "application_config");
             this.ValidateStoreDefault(e) &&
               e.forEach((e) => {
-                let t = Number(e.creator_clan_id),
-                  n = T.b.InitFromClanID(t),
-                  a = new b(n);
-                a.Initialize(e),
-                  (a.m_promise = A.GetAsPromise(a)),
-                  this.m_mapClanToCreatorHome.set(t, a);
+                const t = Number(e.creator_clan_id),
+                  r = E.b.InitFromClanID(t),
+                  n = new F(r);
+                n.Initialize(e),
+                  (n.m_promise = P.GetAsPromise(n)),
+                  this.m_mapClanToCreatorHome.set(t, n);
               });
-            let t = (0, w.Tc)("creatorhomeforapp", "application_config");
+            const t = (0, R.Tc)("creatorhomeforapp", "application_config");
             this.ValidateStoreDefaultAppList(t) &&
               t.forEach((e) => {
                 void 0 !== e.appid &&
@@ -1256,6 +1802,14 @@
               }),
               (this.m_bLoadedFromConfig = !0);
           }
+        }
+        GetServiceTransport() {
+          if (!this.m_serviceTransport) {
+            const e = (0, R.Tc)("loyalty_webapi_token", "application_config"),
+              t = new U.D(R.TS.WEBAPI_BASE_URL, e || void 0);
+            this.m_serviceTransport = t.GetServiceTransport();
+          }
+          return this.m_serviceTransport;
         }
         static async GetAsPromise(e) {
           return e;
@@ -1301,66 +1855,66 @@
         GetCreatorHomeByID(e) {
           return this.m_mapClanToCreatorHome.get(e.clan_account_id);
         }
-        async LoadCreatorHome(e, t = !1, n) {
+        async LoadCreatorHome(e, t = !1, r) {
           if (
             (this.LazyInit(),
             t || !this.m_mapClanToCreatorHome.has(e.GetAccountID()))
           ) {
-            let t = new b(e);
-            (t.m_promise = this.InternalCreatorHome(t, n)),
+            let t = new F(e);
+            (t.m_promise = this.InternalCreatorHome(t, r)),
               await t.m_promise,
               this.m_mapClanToCreatorHome.set(e.GetAccountID(), t);
           }
           return this.m_mapClanToCreatorHome.get(e.GetAccountID()).m_promise;
         }
         async InternalCreatorHome(e, t) {
-          let n = { get_appids: !0, l: w.TS.LANGUAGE, origin: self.origin },
-            a =
-              w.TS.STORE_BASE_URL +
+          let r = { get_appids: !0, l: R.TS.LANGUAGE, origin: self.origin },
+            n =
+              R.TS.STORE_BASE_URL +
               "curator/" +
               e.GetClanAccountID() +
               "/ajaxgetcreatorhomeinfo",
-            r = await B().get(a, { params: n, cancelToken: t && t.token });
-          return e.Initialize(r.data), e;
+            i = await L().get(n, { params: r, cancelToken: t && t.token });
+          return e.Initialize(i.data), e;
         }
         async LoadCreatorHomeListForAppIncludeHiddden(e, t) {
           if ((this.LazyInit(), !this.m_mapAppToCreatorIDList.has(e))) {
-            let n = { appid: e },
-              a = w.TS.STORE_BASE_URL + "events/ajaxgetcreatorhomeidforapp",
-              r = await B().get(a, {
-                params: n,
+            let r = { appid: e },
+              n = R.TS.STORE_BASE_URL + "events/ajaxgetcreatorhomeidforapp",
+              i = await L().get(n, {
+                params: r,
                 cancelToken: t && t.token,
                 withCredentials: !0,
               });
-            this.m_mapAppToCreatorIDList.set(e, r.data.creator_list);
+            this.m_mapAppToCreatorIDList.set(e, i.data.creator_list);
           }
           return this.m_mapAppToCreatorIDList.get(e);
         }
-        async SearchCreatorHomeStore(e, t, n) {
-          let a = `${w.TS.STORE_BASE_URL}curator/0/ajaxsearchcurators`,
-            r = {
+        async SearchCreatorHomeStore(e, t, r) {
+          let n = `${R.TS.STORE_BASE_URL}curator/0/ajaxsearchcurators`,
+            i = {
               term: e.replace(" ", "+"),
               require_creator: t,
-              cc: w.TS.COUNTRY,
-              l: w.TS.LANGUAGE,
+              cc: R.TS.COUNTRY,
+              l: R.TS.LANGUAGE,
               origin: self.origin,
             },
-            i = new Array();
-          const s = await B().get(a, { params: r, cancelToken: n.token });
+            a = new Array();
+          const s = await L().get(n, { params: i, cancelToken: r.token });
           return (
             s.data.curators &&
-              (0, S.h5)(() => {
+              (0, z.h5)(() => {
                 s.data.curators.forEach((e) => {
                   if (!this.m_mapClanToCreatorHome.has(e.creator_clan_id)) {
-                    let t = T.b.InitFromClanID(e.creator_clan_id),
-                      n = new b(t);
-                    n.Initialize(e),
-                      this.m_mapClanToCreatorHome.set(e.creator_clan_id, n);
+                    let t = E.b.InitFromClanID(e.creator_clan_id),
+                      r = new F(t);
+                    r.Initialize(e),
+                      this.m_mapClanToCreatorHome.set(e.creator_clan_id, r);
                   }
-                  i.push(this.m_mapClanToCreatorHome.get(e.creator_clan_id));
+                  a.push(this.m_mapClanToCreatorHome.get(e.creator_clan_id));
                 });
               }),
-            i
+            a
           );
         }
         GetCreatorHomeListForAppIncludeHidden(e) {
@@ -1369,39 +1923,122 @@
             : [];
         }
       }
-      (0, r.Cg)([S.sH], A.prototype, "m_mapClanToCreatorHome", void 0),
-        (0, r.Cg)([S.sH], A.prototype, "m_mapAppToCreatorIDList", void 0),
-        (0, r.Cg)([S.XI], A.prototype, "LazyInit", null);
-      const D = new A();
-      function G(e) {
-        const t = T.b.InitFromClanID(e);
+      (0, i.Cg)([z.sH], P.prototype, "m_mapClanToCreatorHome", void 0),
+        (0, i.Cg)([z.sH], P.prototype, "m_mapAppToCreatorIDList", void 0),
+        (0, i.Cg)([z.XI], P.prototype, "LazyInit", null);
+      const O = new P();
+      window.g_CreatorHomeStore = O;
+      class j {
+        constructor() {
+          (this.m_mapListToTitle = new Map()),
+            (this.m_mapListToSubtitle = new Map()),
+            (this.m_bLoadedFromConfig = !1),
+            (0, z.Gn)(this);
+        }
+        LazyInit() {
+          if (!this.m_bLoadedFromConfig) {
+            const e = (0, R.Tc)(
+              "creator_home_list_titles",
+              "application_config",
+            );
+            if (this.ValidateCreatorHomeTitles(e))
+              for (const [t, { title: r, description: n }] of Object.entries(
+                null != e ? e : {},
+              ))
+                r &&
+                  (this.m_mapListToTitle.set(t, r),
+                  n && this.m_mapListToSubtitle.set(t, n));
+            this.m_bLoadedFromConfig = !0;
+          }
+        }
+        ValidateCreatorHomeTitles(e) {
+          return null != e && "object" == typeof e && !Array.isArray(e);
+        }
+        GetListTitle(e) {
+          return this.LazyInit(), this.m_mapListToTitle.get(e);
+        }
+        GetListSubtitle(e) {
+          return this.LazyInit(), this.m_mapListToSubtitle.get(e);
+        }
+      }
+      (0, i.Cg)([z.sH], j.prototype, "m_mapListToTitle", void 0),
+        (0, i.Cg)([z.sH], j.prototype, "m_mapListToSubtitle", void 0),
+        (0, i.Cg)([z.XI], j.prototype, "LazyInit", null);
+      const q = new j();
+      function W(e) {
+        const t = E.b.InitFromClanID(e);
         return {
           queryKey: ["CreatorHome", e],
-          initialData: () => D.GetCreatorHome(t),
+          initialData: () => O.GetCreatorHome(t),
           queryFn: async () => {
-            const t = T.b.InitFromClanID(e);
-            return await D.LoadCreatorHome(t, !0);
+            const t = E.b.InitFromClanID(e);
+            return await O.LoadCreatorHome(t, !0);
           },
         };
       }
-      function L(e) {
-        const { data: t, isFetching: n, refetch: a } = (0, v.I)(G(e));
-        return { creatorHome: t, isFetching: n, refetch: a };
+      function V(e) {
+        const { data: t, isFetching: r, refetch: n } = (0, G.I)(W(e));
+        return { creatorHome: t, isFetching: r, refetch: n };
       }
-      window.g_CreatorHomeStore = D;
+      function H(e) {
+        return {
+          queryKey: ["GetCreatorHomeGetAllListsQuery", e],
+          queryFn: async () => {
+            const t = O.GetServiceTransport(),
+              r = a.w.Init(C);
+            r
+              .Body()
+              .set_steamid(
+                new E.b(e, R.TS.EUNIVERSE, 7, 0).ConvertTo64BitString(),
+              ),
+              r.Body().set_count(100);
+            const n = await B.GetLists(t, r);
+            return n.BSuccess() ? n.Body().list_details() : null;
+          },
+          enabled: e > 0,
+        };
+      }
+      function k(e) {
+        const { data: t, isFetching: r, refetch: n } = (0, G.I)(H(e));
+        return { lists: t, isFetching: r, refetch: n };
+      }
+      function N(e, t) {
+        return {
+          queryKey: ["GetCreatorHomeGetListsDetailsQuery", e, t],
+          queryFn: async () => {
+            var r;
+            const n = O.GetServiceTransport(),
+              i = a.w.Init(T);
+            i
+              .Body()
+              .set_steamid(
+                new E.b(e, R.TS.EUNIVERSE, 7, 0).ConvertTo64BitString(),
+              ),
+              i.Body().set_listid(t);
+            const s = await B.GetListDetails(n, i);
+            return s.BSuccess() &&
+              null !== (r = s.Body().list_details()) &&
+              void 0 !== r
+              ? r
+              : null;
+          },
+          enabled: e > 0,
+        };
+      }
+      window.g_CreatorHomeListTitleStore = q;
     },
-    60746: (e, t, n) => {
-      n.d(t, { KN: () => v, Nh: () => _, Ec: () => C });
-      var a = n(34629),
-        r = n(41735),
-        i = n.n(r),
-        s = n(14947),
-        o = n(56545),
-        l = n(37403),
-        c = n(6144),
-        m = n(6419),
-        u = n(78327),
-        d = n(68797);
+    60746: (e, t, r) => {
+      r.d(t, { KN: () => B, Nh: () => _, Ec: () => b });
+      var n = r(34629),
+        i = r(41735),
+        a = r.n(i),
+        s = r(14947),
+        o = r(56545),
+        l = r(37403),
+        c = r(6144),
+        m = r(6419),
+        u = r(78327),
+        d = r(68797);
       class p {
         constructor(e) {
           (this.m_setShownEvents = new Set()),
@@ -1411,31 +2048,31 @@
             (this.m_bUploading = !1),
             (this.m_CMInterface = e);
         }
-        MarkEventShown(e, t, n) {
-          let a = this.MakeKey(e, n);
-          if (this.m_setShownEvents.has(a)) return !1;
-          this.m_setShownEvents.add(a);
-          let r = new l.kZ();
+        MarkEventShown(e, t, r) {
+          let n = this.MakeKey(e, r);
+          if (this.m_setShownEvents.has(n)) return !1;
+          this.m_setShownEvents.add(n);
+          let i = new l.kZ();
           return (
-            r.set_event_gid(e),
-            r.set_clanid(t),
-            r.set_display_location(n),
-            r.set_mark_shown(!0),
-            this.QueueForUpload(r),
+            i.set_event_gid(e),
+            i.set_clanid(t),
+            i.set_display_location(r),
+            i.set_mark_shown(!0),
+            this.QueueForUpload(i),
             !0
           );
         }
-        MarkEventRead(e, t, n) {
-          let a = this.MakeKey(e, n);
-          if (this.m_setReadEvents.has(a)) return !1;
-          this.m_setReadEvents.add(a);
-          let r = new l.kZ();
+        MarkEventRead(e, t, r) {
+          let n = this.MakeKey(e, r);
+          if (this.m_setReadEvents.has(n)) return !1;
+          this.m_setReadEvents.add(n);
+          let i = new l.kZ();
           return (
-            r.set_event_gid(e),
-            r.set_clanid(t),
-            r.set_display_location(n),
-            r.set_mark_read(!0),
-            this.QueueForUpload(r),
+            i.set_event_gid(e),
+            i.set_clanid(t),
+            i.set_display_location(r),
+            i.set_mark_read(!0),
+            this.QueueForUpload(i),
             !0
           );
         }
@@ -1462,25 +2099,25 @@
           if (0 == e.length) return;
           let t = !1;
           if (this.m_CMInterface) {
-            let n = o.w.Init(l.wS);
-            for (let t of e) n.Body().add_markings(t);
+            let r = o.w.Init(l.wS);
+            for (let t of e) r.Body().add_markings(t);
             this.m_bUploading = !0;
-            let a = await l.BE.MarkPartnerEventsForUser(
+            let n = await l.BE.MarkPartnerEventsForUser(
               this.m_CMInterface.GetServiceTransport(),
-              n,
+              r,
             );
-            (this.m_bUploading = !1), (t = 1 == a.GetEResult());
+            (this.m_bUploading = !1), (t = 1 == n.GetEResult());
           } else {
             if (!u.iA.logged_in) return;
-            let n = e.map((e) => e.toObject()),
-              a = (0, u.xv)() + "actions/ajaxmarkpartnerevents";
-            const r = new FormData();
-            r.append("sessionid", u.TS.SESSIONID),
-              r.append("request", JSON.stringify(n));
+            let r = e.map((e) => e.toObject()),
+              n = (0, u.xv)() + "actions/ajaxmarkpartnerevents";
+            const i = new FormData();
+            i.append("sessionid", u.TS.SESSIONID),
+              i.append("request", JSON.stringify(r));
             try {
               t =
                 1 ==
-                (await i().post(a, r, { withCredentials: !0 })).data.success;
+                (await a().post(n, i, { withCredentials: !0 })).data.success;
             } catch (e) {
               let t = (0, d.H)(e);
               console.error(
@@ -1499,13 +2136,13 @@
               this.m_schUpload.Schedule(6e4, this.UploadPendingData));
         }
       }
-      (0, a.Cg)([m.o], p.prototype, "UploadPendingData", null);
+      (0, n.Cg)([m.o], p.prototype, "UploadPendingData", null);
       var _,
-        h = n(17720),
-        g = n(81393),
-        I = n(90626),
-        f = n(26161);
-      class y {
+        g = r(17720),
+        h = r(81393),
+        y = r(90626),
+        f = r(26161);
+      class I {
         constructor(e) {
           (this.clanid = void 0),
             (this.appid = 0),
@@ -1522,23 +2159,23 @@
             (this.clanid = e);
         }
       }
-      (0, a.Cg)([s.sH], y.prototype, "clanid", void 0),
-        (0, a.Cg)([s.sH], y.prototype, "appid", void 0),
-        (0, a.Cg)([s.sH], y.prototype, "can_edit", void 0),
-        (0, a.Cg)([s.sH], y.prototype, "owns_app", void 0),
-        (0, a.Cg)([s.sH], y.prototype, "follows_app", void 0),
-        (0, a.Cg)([s.sH], y.prototype, "support_user", void 0),
-        (0, a.Cg)([s.sH], y.prototype, "valve_admin", void 0),
-        (0, a.Cg)([s.sH], y.prototype, "limited_user", void 0),
-        (0, a.Cg)([s.sH], y.prototype, "event_ignored", void 0),
-        (0, a.Cg)([s.sH], y.prototype, "event_followed", void 0),
-        (0, a.Cg)([s.sH], y.prototype, "event_followed_flags", void 0),
+      (0, n.Cg)([s.sH], I.prototype, "clanid", void 0),
+        (0, n.Cg)([s.sH], I.prototype, "appid", void 0),
+        (0, n.Cg)([s.sH], I.prototype, "can_edit", void 0),
+        (0, n.Cg)([s.sH], I.prototype, "owns_app", void 0),
+        (0, n.Cg)([s.sH], I.prototype, "follows_app", void 0),
+        (0, n.Cg)([s.sH], I.prototype, "support_user", void 0),
+        (0, n.Cg)([s.sH], I.prototype, "valve_admin", void 0),
+        (0, n.Cg)([s.sH], I.prototype, "limited_user", void 0),
+        (0, n.Cg)([s.sH], I.prototype, "event_ignored", void 0),
+        (0, n.Cg)([s.sH], I.prototype, "event_followed", void 0),
+        (0, n.Cg)([s.sH], I.prototype, "event_followed_flags", void 0),
         (function (e) {
           (e[(e.k_ENotifyFlagNone = 0)] = "k_ENotifyFlagNone"),
             (e[(e.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
             (e[(e.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
         })(_ || (_ = {}));
-      class v {
+      class B {
         constructor() {
           (this.m_mapClanToUserPermissions = new Map()),
             (this.m_mapAnnounceGIDToVote = new Map()),
@@ -1550,26 +2187,26 @@
         }
         static Get() {
           return (
-            (0, g.wT)(
-              !!v.s_EventUserStore,
+            (0, h.wT)(
+              !!B.s_EventUserStore,
               "Have not yet initialized global EventUserStore",
             ),
-            v.s_EventUserStore
+            B.s_EventUserStore
           );
         }
         static IsInitialized() {
-          return !!v.s_EventUserStore;
+          return !!B.s_EventUserStore;
         }
         static async InitGlobal(e) {
-          if (!v.s_EventUserStore) {
-            const t = new v();
+          if (!B.s_EventUserStore) {
+            const t = new B();
             await t.Init(e),
-              (v.s_EventUserStore = t),
+              (B.s_EventUserStore = t),
               "dev" == u.TS.WEB_UNIVERSE && (window.g_EventUserStore = t);
           }
         }
         static BIsInited() {
-          return Boolean(v.s_EventUserStore);
+          return Boolean(B.s_EventUserStore);
         }
         async Init(e) {
           (this.m_cm = e), (this.m_tracker = new p(e));
@@ -1577,10 +2214,10 @@
           this.ValidateStoreDefault(t) &&
             ((0, s.h5)(() => {
               t.forEach((e) => {
-                let t = new y(e.clanid),
-                  n = { result: t, promise: v.RemapToPromise(t), bLoaded: !0 };
-                this.CopyFromResponseToTrack(n, e),
-                  this.m_mapClanToUserPermissions.set(e.clanid, n);
+                let t = new I(e.clanid),
+                  r = { result: t, promise: B.RemapToPromise(t), bLoaded: !0 };
+                this.CopyFromResponseToTrack(r, e),
+                  this.m_mapClanToUserPermissions.set(e.clanid, r);
               });
             }),
             ("dev" != u.TS.WEB_UNIVERSE && "beta" != u.TS.WEB_UNIVERSE) ||
@@ -1589,10 +2226,10 @@
                 this.m_mapClanToUserPermissions.size,
                 this.m_mapClanToUserPermissions,
               ));
-          let n = (0, u.Fd)("uservotes", "application_config");
-          n &&
+          let r = (0, u.Fd)("uservotes", "application_config");
+          r &&
             (0, s.h5)(() => {
-              n.forEach((e) => {
+              r.forEach((e) => {
                 let t = !!e.voted_up || (!e.voted_down && void 0);
                 this.m_mapAnnounceGIDToVote.set(e.clanAnnouncementGID, t);
               });
@@ -1655,7 +2292,7 @@
           );
         }
         GetPartnerEventPermissions(e) {
-          if (!e || !e.BIsValid()) return new y(0);
+          if (!e || !e.BIsValid()) return new I(0);
           const t = e.GetAccountID();
           this.m_mapClanToUserPermissions.has(t) ||
             this.LoadSingleAppEventPermissions(e);
@@ -1666,10 +2303,10 @@
             -1 != this.GetPartnerEventPermissions(e).event_followed.indexOf(t)
           );
         }
-        BFollowsEventAndNotifiedBy(e, t, n) {
-          let a = this.GetPartnerEventPermissions(e),
-            r = a.event_followed.indexOf(t);
-          return -1 !== r && (a.event_followed_flags[r] & n) == n;
+        BFollowsEventAndNotifiedBy(e, t, r) {
+          let n = this.GetPartnerEventPermissions(e),
+            i = n.event_followed.indexOf(t);
+          return -1 !== i && (n.event_followed_flags[i] & r) == r;
         }
         BIgnoresEvent(e, t) {
           return (
@@ -1678,29 +2315,29 @@
         }
         async LoadSingleAppEventPermissions(e) {
           let t = e.GetAccountID(),
-            n = this.m_mapClanToUserPermissions.get(t);
+            r = this.m_mapClanToUserPermissions.get(t);
           return (
-            n ||
-              ((n = {
+            r ||
+              ((r = {
                 promise: this.InternalLoadSingleAppEventPermissions(e),
-                result: new y(t),
+                result: new I(t),
                 bLoaded: !1,
               }),
-              this.m_mapClanToUserPermissions.set(t, n)),
-            n.promise
+              this.m_mapClanToUserPermissions.set(t, r)),
+            r.promise
           );
         }
         CopyFromResponseToTrack(e, t) {
-          var n, a, r, i;
-          (e.result.appid = null !== (n = t.appid) && void 0 !== n ? n : 0),
+          var r, n, i, a;
+          (e.result.appid = null !== (r = t.appid) && void 0 !== r ? r : 0),
             (e.result.can_edit = !!t.can_edit),
             (e.result.clanid = t.appid),
             (e.result.event_followed =
-              null !== (a = t.event_followed) && void 0 !== a ? a : []),
+              null !== (n = t.event_followed) && void 0 !== n ? n : []),
             (e.result.event_ignored =
-              null !== (r = t.event_ignored) && void 0 !== r ? r : []),
+              null !== (i = t.event_ignored) && void 0 !== i ? i : []),
             (e.result.event_followed_flags =
-              null !== (i = t.event_followed_flags) && void 0 !== i ? i : []),
+              null !== (a = t.event_followed_flags) && void 0 !== a ? a : []),
             (e.result.follows_app = !!t.follows_app),
             (e.result.owns_app = !!t.owns_app),
             (e.result.limited_user = !!t.limited_user),
@@ -1714,19 +2351,19 @@
         }
         async InternalLoadSingleAppEventPermissions(e) {
           let t = null,
-            n = e.GetAccountID(),
-            a = !Boolean(u.iA.logged_in);
-          if (!this.m_mapClanToUserPermissions.has(n)) {
-            let t = new y(e.GetAccountID());
-            this.m_mapClanToUserPermissions.set(n, {
+            r = e.GetAccountID(),
+            n = !Boolean(u.iA.logged_in);
+          if (!this.m_mapClanToUserPermissions.has(r)) {
+            let t = new I(e.GetAccountID());
+            this.m_mapClanToUserPermissions.set(r, {
               result: t,
-              promise: v.RemapToPromise(t),
+              promise: B.RemapToPromise(t),
               bLoaded: !1,
             });
           }
           try {
             if (Boolean(u.iA.logged_in)) {
-              let r =
+              let i =
                   u.TS.COMMUNITY_BASE_URL +
                   "gid/" +
                   e.ConvertTo64BitString() +
@@ -1734,31 +2371,31 @@
                 s = {};
               if (
                 ("partnerweb" == (0, u.yK)()
-                  ? ((r =
+                  ? ((i =
                       u.TS.PARTNER_BASE_URL +
                       "partnerevents/ajaxgetpartnereventpermissions"),
                     (s = { clanaccountid: e.GetAccountID() }))
                   : "store" == (0, u.yK)() &&
-                    ((r =
+                    ((i =
                       u.TS.STORE_BASE_URL +
                       "events/ajaxgetpartnereventpermissions"),
                     (s = { clanaccountid: e.GetAccountID() })),
-                (t = await i().get(r, { params: s, withCredentials: !0 })),
+                (t = await a().get(i, { params: s, withCredentials: !0 })),
                 t && 1 == t.data.success)
               ) {
-                let e = this.m_mapClanToUserPermissions.get(n);
+                let e = this.m_mapClanToUserPermissions.get(r);
                 e && this.CopyFromResponseToTrack(e, t.data);
               } else
                 console.error(
                   "Partner Events Failed Load:" +
                     (0, d.H)(null == t ? void 0 : t.data).strErrorMsg,
                 ),
-                  (a = !0);
+                  (n = !0);
             }
           } catch (e) {
             if (
               ((t = e.response),
-              (a = !0),
+              (n = !0),
               e &&
                 void 0 !== e.response &&
                 void 0 !== e.response.data &&
@@ -1769,113 +2406,113 @@
               const t = (0, d.H)(e);
               console.error(
                 "InternalLoadSingleAppEventPermissions account: " +
-                  n +
+                  r +
                   ": " +
                   t.strErrorMsg,
                 t,
               );
             }
           } finally {
-            a &&
+            n &&
               (0, s.h5)(() => {
                 var e;
-                let a = this.m_mapClanToUserPermissions.get(n);
-                (a.result.appid =
+                let n = this.m_mapClanToUserPermissions.get(r);
+                (n.result.appid =
                   null !== (e = null == t ? void 0 : t.data.appid) &&
                   void 0 !== e
                     ? e
                     : 0),
-                  (a.result.can_edit = !1),
-                  (a.result.clanid = t && t.data ? t.data.clanid : 0),
-                  (a.result.event_followed = new Array()),
-                  (a.result.event_ignored = new Array()),
-                  (a.result.event_followed_flags = new Array()),
-                  (a.result.follows_app = !1),
-                  (a.result.owns_app = !1),
-                  (a.result.support_user = !1),
-                  (a.result.valve_admin = !1),
-                  (a.result.limited_user = !1),
-                  (a.bLoaded = !0);
+                  (n.result.can_edit = !1),
+                  (n.result.clanid = t && t.data ? t.data.clanid : 0),
+                  (n.result.event_followed = new Array()),
+                  (n.result.event_ignored = new Array()),
+                  (n.result.event_followed_flags = new Array()),
+                  (n.result.follows_app = !1),
+                  (n.result.owns_app = !1),
+                  (n.result.support_user = !1),
+                  (n.result.valve_admin = !1),
+                  (n.result.limited_user = !1),
+                  (n.bLoaded = !0);
               });
           }
-          return this.m_mapClanToUserPermissions.get(n).result;
+          return this.m_mapClanToUserPermissions.get(r).result;
         }
-        async SetFollowOrUnfollowEvent(e, t, n, a, r) {
-          let o = this.GetPartnerEventPermissions(n),
-            l = o.event_followed.indexOf(a),
+        async SetFollowOrUnfollowEvent(e, t, r, n, i) {
+          let o = this.GetPartnerEventPermissions(r),
+            l = o.event_followed.indexOf(n),
             c = 0;
           -1 !== l &&
-            ((c = o.event_followed_flags[l]), e ? (r = c & ~r) : (r |= c));
-          let m = 0 == r,
+            ((c = o.event_followed_flags[l]), e ? (i = c & ~i) : (i |= c));
+          let m = 0 == i,
             d =
               ("store" === (0, u.yK)()
                 ? u.TS.STORE_BASE_URL + "events"
                 : u.TS.COMMUNITY_BASE_URL +
                   "/gid/" +
-                  n.ConvertTo64BitString()) +
+                  r.ConvertTo64BitString()) +
               (m ? "/unfolloworunignoreevent" : "/followorignoreevent"),
             p = new URLSearchParams();
           p.append("sessionid", u.TS.SESSIONID),
             p.append("ignore", "" + t),
-            p.append("gid", a),
-            p.append("notification_flag", "" + r),
-            p.append("clan_accountid", "" + n.GetAccountID());
-          await i().post(d, p, { withCredentials: !0 });
+            p.append("gid", n),
+            p.append("notification_flag", "" + i),
+            p.append("clan_accountid", "" + r.GetAccountID());
+          await a().post(d, p, { withCredentials: !0 });
           (0, s.h5)(() => {
-            let e = this.m_mapClanToUserPermissions.get(n.GetAccountID()),
-              i = null,
+            let e = this.m_mapClanToUserPermissions.get(r.GetAccountID()),
+              a = null,
               s = null,
               o = null,
               l = null;
             m
-              ? ((i = t ? e.result.event_ignored : e.result.event_followed),
+              ? ((a = t ? e.result.event_ignored : e.result.event_followed),
                 (o = t ? null : e.result.event_followed_flags))
               : t
-                ? ((i = e.result.event_followed),
+                ? ((a = e.result.event_followed),
                   (o = e.result.event_followed_flags),
                   (s = e.result.event_ignored))
-                : ((i = e.result.event_ignored),
+                : ((a = e.result.event_ignored),
                   (s = e.result.event_followed),
                   (l = e.result.event_followed_flags));
-            let c = i.indexOf(a);
-            if ((c > -1 && (i.splice(c, 1), o && o.splice(c, 1)), s)) {
-              let e = s.indexOf(a);
-              -1 == e ? (s.push(a), l && l.push(r)) : l && (l[e] = r);
+            let c = a.indexOf(n);
+            if ((c > -1 && (a.splice(c, 1), o && o.splice(c, 1)), s)) {
+              let e = s.indexOf(n);
+              -1 == e ? (s.push(n), l && l.push(i)) : l && (l[e] = i);
             }
           });
         }
-        async Vote(e, t, n) {
+        async Vote(e, t, r) {
           if (!e || !e.AnnouncementGID) return !1;
-          const a = this.m_mapAnnounceGIDToVote.get(e.AnnouncementGID);
-          if (a === t) return !0;
+          const n = this.m_mapAnnounceGIDToVote.get(e.AnnouncementGID);
+          if (n === t) return !0;
           if (
             (this.m_mapAnnounceGIDToVote.set(e.AnnouncementGID, t),
             (0, s.h5)(() => {
-              !0 === a && e.UpdateVoteCount("up", -1),
-                !1 === a && e.UpdateVoteCount("down", -1),
+              !0 === n && e.UpdateVoteCount("up", -1),
+                !1 === n && e.UpdateVoteCount("down", -1),
                 !0 === t && e.UpdateVoteCount("up", 1),
                 !1 === t && e.UpdateVoteCount("down", 1);
             }),
             this.m_cm)
           ) {
-            let n = o.w.Init(l.QU);
+            let r = o.w.Init(l.QU);
             return (
-              n.Body().set_announcementid(e.AnnouncementGID),
-              n.Body().set_vote_up(!!t),
-              n.Body().set_clan_accountid(e.clanSteamID.GetAccountID()),
+              r.Body().set_announcementid(e.AnnouncementGID),
+              r.Body().set_vote_up(!!t),
+              r.Body().set_clan_accountid(e.clanSteamID.GetAccountID()),
               1 ==
                 (
                   await l.BE.RateClanAnnouncement(
                     this.m_cm.GetServiceTransport(),
-                    n,
+                    r,
                   )
                 ).GetEResult()
             );
           }
           {
-            const a = (0, u.yK)(),
-              r =
-                "community" == a || "steamtv" == a
+            const n = (0, u.yK)(),
+              i =
+                "community" == n || "steamtv" == n
                   ? u.TS.COMMUNITY_BASE_URL +
                     "gid/" +
                     e.clanSteamID.ConvertTo64BitString() +
@@ -1889,43 +2526,43 @@
               s.append("voteup", t ? "1" : "0"),
               s.append("clanid", "" + e.clanSteamID.GetAccountID()),
               s.append("ajax", "1");
-            const o = { withCredentials: !0, cancelToken: n.token };
-            return 1 == (await i().post(r, s, o)).data.success;
+            const o = { withCredentials: !0, cancelToken: r.token };
+            return 1 == (await a().post(i, s, o)).data.success;
           }
         }
         async LoadMyVote(e, t) {
           if (null == e ? void 0 : e.AnnouncementGID) {
             if (this.m_mapAnnounceGIDToVote.has(e.AnnouncementGID))
               return !!this.m_mapAnnounceGIDToVote.get(e.AnnouncementGID);
-            let n;
+            let r;
             if (this.m_cm) {
               let t = o.w.Init(l.$Y);
               t.Body().set_announcementid(e.AnnouncementGID);
-              let a = await l.BE.GetClanAnnouncementVoteForUser(
+              let n = await l.BE.GetClanAnnouncementVoteForUser(
                 this.m_cm.GetServiceTransport(),
                 t,
               );
-              1 == a.GetEResult() &&
-                (n =
-                  !!a.Body().voted_up() || (!a.Body().voted_down() && void 0));
+              1 == n.GetEResult() &&
+                (r =
+                  !!n.Body().voted_up() || (!n.Body().voted_down() && void 0));
             } else {
-              const a = "store" == (0, u.yK)(),
-                r = a
+              const n = "store" == (0, u.yK)(),
+                i = n
                   ? u.TS.STORE_BASE_URL + "actions/ajaxgetmyannouncementvote"
                   : u.TS.COMMUNITY_BASE_URL +
                     "gid/" +
                     e.clanSteamID.ConvertTo64BitString() +
                     "/announcements/ajaxgetmyvote/" +
                     e.AnnouncementGID,
-                s = { gid: a ? e.AnnouncementGID : void 0 },
-                o = await i().get(r, {
+                s = { gid: n ? e.AnnouncementGID : void 0 },
+                o = await a().get(i, {
                   withCredentials: !0,
                   cancelToken: t.token,
                   params: s,
                 });
-              n = !!o.data.voted_up || (!o.data.voted_down && void 0);
+              r = !!o.data.voted_up || (!o.data.voted_down && void 0);
             }
-            return this.m_mapAnnounceGIDToVote.set(e.AnnouncementGID, n), n;
+            return this.m_mapAnnounceGIDToVote.set(e.AnnouncementGID, r), r;
           }
         }
         SetVote(e, t) {
@@ -1949,35 +2586,35 @@
           return (u.UF.IS_OGG || u.UF.IS_VALVE_GROUP) && t.valve_admin;
         }
       }
-      function C(e) {
-        const [t, n] = (0, I.useState)(
-            v.Get().BIsPartnerEventPermissionsLoaded(e),
+      function b(e) {
+        const [t, r] = (0, y.useState)(
+            B.Get().BIsPartnerEventPermissionsLoaded(e),
           ),
-          a = h.b.InitFromClanID(e),
-          [r, i] = (0, I.useState)(v.Get().GetPartnerEventPermissions(a));
+          n = g.b.InitFromClanID(e),
+          [i, a] = (0, y.useState)(B.Get().GetPartnerEventPermissions(n));
         return (
-          (0, I.useEffect)(() => {
+          (0, y.useEffect)(() => {
             if (!t) {
-              const t = h.b.InitFromClanID(e);
-              v.Get()
+              const t = g.b.InitFromClanID(e);
+              B.Get()
                 .LoadSingleAppEventPermissions(t)
                 .then((e) => {
-                  i(e), n(!0);
+                  a(e), r(!0);
                 });
             }
           }, [t, e]),
-          r
+          i
         );
       }
-      (0, a.Cg)([s.sH], v.prototype, "m_mapClanToUserPermissions", void 0),
-        (0, a.Cg)([s.sH], v.prototype, "m_mapAnnounceGIDToVote", void 0),
-        (0, a.Cg)([s.sH], v.prototype, "m_setReadEventGIDs", void 0),
-        (0, a.Cg)([s.XI], v.prototype, "CopyFromResponseToTrack", null);
+      (0, n.Cg)([s.sH], B.prototype, "m_mapClanToUserPermissions", void 0),
+        (0, n.Cg)([s.sH], B.prototype, "m_mapAnnounceGIDToVote", void 0),
+        (0, n.Cg)([s.sH], B.prototype, "m_setReadEventGIDs", void 0),
+        (0, n.Cg)([s.XI], B.prototype, "CopyFromResponseToTrack", null);
     },
-    26161: (e, t, n) => {
-      n.d(t, { H: () => r });
-      var a = n(30470);
-      const r = () => (2 === a.TS.EUNIVERSE ? 2581 : 45267781);
+    26161: (e, t, r) => {
+      r.d(t, { H: () => i });
+      var n = r(30470);
+      const i = () => (2 === n.TS.EUNIVERSE ? 2581 : 45267781);
     },
   },
 ]);
