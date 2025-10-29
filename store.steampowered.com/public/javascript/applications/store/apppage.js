@@ -161,8 +161,8 @@
         ClanName: "_1l0-iEDSNo_iZ95BUT31hW",
         ClanAvatarImage: "PO1KWbUEvLt8ZVYRTAvMt",
         CarouselFollowSection: "_3-Zh-Ypvsn0buzyWGzuOQf",
-        CreatorHomeWithoutItems: "_24bEdzyRcz_FKDUqulljpX",
         ClanInfoColumn: "fL1BVr1TCO7p3NcU6YlxG",
+        CreatorHomeWithoutItems: "_24bEdzyRcz_FKDUqulljpX",
         ClanFollowTitle: "cSNCliWjnECzm1QAZPjDw",
         ClanFollowButtonContainer: "_2CipbQE9-jPKtQxmGJxtAs",
         FollowButton: "sAZjP8hrS9narmNgqgbXf",
@@ -1738,26 +1738,25 @@
             mapAppIDsToCreatorClanID: s,
             strFeatureFirstAppMsg: i,
           } = e,
-          c = (0, te.a4)(940),
-          u = (0, v.Qn)(),
-          [m, d] = (0, ne.TB)(n),
-          { creatorHome: p } = (0, ae.FV)(n),
-          h = p?.GetCreatorHomeURL(t),
-          [g, E] = a.useState(void 0);
-        if (!p) return;
-        const _ = c && !u && (i ? 1 == g : g <= 2) && d;
+          c = ((0, te.a4)(940), (0, v.Qn)()),
+          [u, m] = (0, ne.TB)(n),
+          { creatorHome: d } = (0, ae.FV)(n),
+          p = d?.GetCreatorHomeURL(t),
+          [h, g] = a.useState(void 0);
+        if (!d) return;
+        const E = !c && (i ? 1 == h : h <= 2) && m;
         return a.createElement(
           "div",
           {
             className: (0, V.A)(
               J().CreatorHomeWithItems,
-              _ ? J().WithFollowBtn : "",
+              E ? J().WithFollowBtn : "",
             ),
           },
-          d?.creator_page_bg_url &&
+          m?.creator_page_bg_url &&
             a.createElement("div", {
               className: J().Background,
-              style: { backgroundImage: `url(${d.creator_page_bg_url})` },
+              style: { backgroundImage: `url(${m.creator_page_bg_url})` },
             }),
           a.createElement(
             "div",
@@ -1765,33 +1764,33 @@
             a.createElement(
               "div",
               { className: J().ClanInfoRow },
-              Boolean(d) &&
+              Boolean(m) &&
                 a.createElement(
                   "div",
                   null,
                   a.createElement(
                     "a",
-                    { href: h },
+                    { href: p },
                     a.createElement("img", {
                       className: J().ClanAvatarImage,
-                      src: p.GetAvatarURLFullSize(),
+                      src: d.GetAvatarURLFullSize(),
                     }),
                   ),
                 ),
               a.createElement("img", {
                 className: J().AvatarBackground,
-                src: p.GetAvatarURLFullSize(),
+                src: d.GetAvatarURLFullSize(),
               }),
               a.createElement(
                 "div",
                 { className: J().ClanName },
-                a.createElement("a", { href: h }, r || p.GetName()),
+                a.createElement("a", { href: p }, r || d.GetName()),
               ),
             ),
             a.createElement(
               "div",
               { className: J().ButtonContainer },
-              Boolean(!_ && d) &&
+              Boolean(!E && m) &&
                 a.createElement(le.of, {
                   className: J().CarouselFollowButton,
                   clanAccountID: n,
@@ -1804,27 +1803,27 @@
             {
               className: (0, V.A)(
                 J().CarouselContentsRow,
-                _ && J().WithFollowSection,
+                E && J().WithFollowSection,
               ),
             },
             a.createElement(oe._, {
               navKey: "store_page_" + t,
               classes: J().Carousel,
               appIDs: o,
-              maxItemCount: _ ? g : 4,
+              maxItemCount: E ? h : 4,
               shrinkToFitItems: !0,
               mapAppToCreatorClan: s,
               strFeatureFirstAppMsg: i,
-              setNumberVisibleItems: E,
+              setNumberVisibleItems: g,
             }),
-            _ &&
+            E &&
               a.createElement(
                 "div",
                 { className: J().CarouselFollowSection },
                 a.createElement(ue, {
                   clanID: n,
-                  creatorName: p.GetName(),
-                  creatorUrl: h,
+                  creatorName: d.GetName(),
+                  creatorUrl: p,
                 }),
               ),
           ),

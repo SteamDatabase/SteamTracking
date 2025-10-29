@@ -422,7 +422,18 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				file_put_contents( $File, $Data );
 
-				system( 'unzip -jo ".support/archives/steam-android.apk" "assets/index.android.bundle" -d ".support/archives"' );
+				$Zip = new ZipArchive();
+				if( $Zip->open( '.support/archives/steam-android.apk' ) === true )
+				{
+					$ExtractedFile = $Zip->getFromName( 'assets/index.android.bundle' );
+
+					if( $ExtractedFile !== false )
+					{
+						file_put_contents( '.support/archives/index.android.bundle', $ExtractedFile );
+					}
+
+					$Zip->close();
+				}
 
 				if( file_exists( '.support/archives/index.android.bundle' ) )
 				{

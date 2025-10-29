@@ -161,8 +161,8 @@
         ClanName: "_1l0-iEDSNo_iZ95BUT31hW",
         ClanAvatarImage: "PO1KWbUEvLt8ZVYRTAvMt",
         CarouselFollowSection: "_3-Zh-Ypvsn0buzyWGzuOQf",
-        CreatorHomeWithoutItems: "_24bEdzyRcz_FKDUqulljpX",
         ClanInfoColumn: "fL1BVr1TCO7p3NcU6YlxG",
+        CreatorHomeWithoutItems: "_24bEdzyRcz_FKDUqulljpX",
         ClanFollowTitle: "cSNCliWjnECzm1QAZPjDw",
         ClanFollowButtonContainer: "_2CipbQE9-jPKtQxmGJxtAs",
         FollowButton: "sAZjP8hrS9narmNgqgbXf",
@@ -1967,14 +1967,13 @@
             mapAppIDsToCreatorClanID: _,
             strFeatureFirstAppMsg: _,
           } = _,
-          _ = (0, _._)(940),
-          _ = (0, _._)(),
+          _ = ((0, _._)(940), (0, _._)()),
           [_, _] = (0, _._)(__webpack_require__),
           { creatorHome: _ } = (0, _._)(__webpack_require__),
           _ = _?.GetCreatorHomeURL(_),
           [_, _] = _.useState(void 0);
         if (!_) return;
-        const _ = _ && !_ && (_ ? 1 == _ : _ <= 2) && _;
+        const _ = !_ && (_ ? 1 == _ : _ <= 2) && _;
         return _.createElement(
           "div",
           {

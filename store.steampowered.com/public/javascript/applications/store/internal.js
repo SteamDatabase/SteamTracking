@@ -5832,12 +5832,12 @@
               if (t % 7 == 0 && a[e[t]]?.length > 0) {
                 const r = e[t + 1];
                 t < e.length - 1 &&
-                  (a[r] || (a[r] = []), a[r].push(...a[e[t]]));
+                  (a[r] || (a[r] = []), a[r].push(...a[e[t]]), (a[e[t]] = []));
               }
               if (t % 7 == 6 && !n && a[e[t]]?.length > 0) {
                 const r = e[t + 2];
                 t < e.length - 2 &&
-                  (a[r] || (a[r] = []), a[r].push(...a[e[t]]));
+                  (a[r] || (a[r] = []), a[r].push(...a[e[t]]), (a[e[t]] = []));
               }
             }
             const l = [],
