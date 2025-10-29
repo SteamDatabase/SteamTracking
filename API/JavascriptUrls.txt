@@ -119,11 +119,9 @@ ${CHAT_BASE_URL}chat/avatarfileupload/
 ${CHAT_BASE_URL}chat/beginfileupload/
 ${CHAT_BASE_URL}chat/commitfileupload/
 ${CHAT_BASE_URL}comment/recommendation/formattinghelp
-${CHAT_BASE_URL}miniprofile/${accountid}/json
 ${CHAT_BASE_URL}miniprofile/${m_accountid}/json/?origin=${}
 ${CHAT_BASE_URL}profiles/${steamid64}/ajaxsetpersonaname/
 ${CHAT_BASE_URL}public/images/broadcast/cs2_major2025_aus_icon.png
-${CHAT_BASE_URL}public/images/broadcast/csgo_esl_2019_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CLAN_CDN_ASSET_URL}images/
 ${CLAN_CDN_ASSET_URL}images/clan/${}/${}
@@ -143,7 +141,6 @@ ${COMMUNITY_BASE_URL}/actions/ConvertHTMLToBBCode
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/${countrycode}/${statecode}
-${COMMUNITY_BASE_URL}/app/${m_unGamePlayedAppID}
 ${COMMUNITY_BASE_URL}/eventadmin/ajaxgettimezones
 ${COMMUNITY_BASE_URL}/gid/${_ ? _ : _}/partnerevents/edit/${}
 ${COMMUNITY_BASE_URL}/gid/${}
@@ -303,7 +300,6 @@ ${COMMUNITY_BASE_URL}partnereventdata/ajaxrequestsalepagereview
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxsetprivatedata
 ${COMMUNITY_BASE_URL}profiles/${STEAM_ID}/wishlist
 ${COMMUNITY_BASE_URL}profiles/${steamid64}/
-${COMMUNITY_BASE_URL}profiles/${steamid64}/tradeoffers/sent/#tradeofferid_${}
 ${COMMUNITY_BASE_URL}profiles/${steamid}
 ${COMMUNITY_BASE_URL}profiles/${steamid}/
 ${COMMUNITY_BASE_URL}profiles/${steamid}/edit/goldenprofile
@@ -371,17 +367,13 @@ ${COMMUNITY_BASE_URL}tradeoffer/${}/
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&for_items[]=${}_${}_${}
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&token=${}
-${COMMUNITY_BASE_URL}user/
 ${COMMUNITY_BASE_URL}vtt/video/${}
-${COMMUNITY_CDN_ASSET_URL}${_ ? "lny2020" : "winter2019"}/roomeffects/96px/${}.png
 ${COMMUNITY_CDN_ASSET_URL}${imgHeadshot}
 ${COMMUNITY_CDN_ASSET_URL}${screenshot}
 ${COMMUNITY_CDN_ASSET_URL}${}/roomeffects/${}/${}
 ${COMMUNITY_CDN_ASSET_URL}${}/roomeffects/96px/${}.png
-${COMMUNITY_CDN_ASSET_URL}${}/roomeffects/fireworks/${}
 ${COMMUNITY_CDN_ASSET_URL}prettify/prettify.js
 ${COMMUNITY_CDN_ASSET_URL}winter2019/roomeffects/96px/flake_${}.png
-${COMMUNITY_CDN_ASSET_URL}winter2019/roomeffects/snowball/
 ${COMMUNITY_CDN_URL}economy/boosterpack/${}?l=${LANGUAGE}
 ${COMMUNITY_CDN_URL}economy/emoticon/${}
 ${COMMUNITY_CDN_URL}economy/emoticonhoverjson/${}?l=${}&origin=${origin}
@@ -460,7 +452,6 @@ ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=920
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=927
 ${HELP_BASE_URL}wizard/HelpWithSteamGuardCode
-${HELP_BASE_URL}wizard/HelpWithSteamMobileChat
 ${IMG_URL}${_ ? "favorite_star.png" : "favorite_star_empty.png"}
 ${IMG_URL}${image}
 ${IMG_URL}${img_after}
@@ -959,7 +950,6 @@ ${MEDIA_CDN_COMMUNITY_URL}images/apps/${}/${}_full.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/
 ${MEDIA_CDN_COMMUNITY_URL}images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/
-${MEDIA_CDN_COMMUNITY_URL}images/chaticons/${}/${}/${}/${}_${}.jpg
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_image_large}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${item_image_small}
 ${MEDIA_CDN_COMMUNITY_URL}images/items/${appid}/${}
@@ -975,7 +965,6 @@ ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
 ${MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png
 ${MEDIA_CDN_URL}steam/
-${MEDIA_CDN_URL}steam/apps/${m_unAppID}/header.jpg
 ${MEDIA_CDN_URL}steam/clusters/${}/${}/${}${}
 ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
 ${MEDIA_CDN_URL}steam/spotlights/${}/${}${}
@@ -1411,7 +1400,6 @@ ${STORE_BASE_URL}actions/ajaxresolvepackages
 ${STORE_BASE_URL}actions/ajaxresolvesubscriptions
 ${STORE_BASE_URL}ajaxreportproductaction/${}/
 ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
-${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=basic,price_overview,developers,release_date,content_descriptors
 ${STORE_BASE_URL}app${appid}/landing/${sale_update_landing_page_vanity_id}
 ${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
@@ -1845,15 +1833,12 @@ ${VIDEO_URL}international2022/taunts/${}_taunt.webm
 ${VIDEO_URL}international2022/truesight_logo.mp4
 ${VIDEO_URL}international2022/truesight_logo.webm
 ${VIDEO_URL}shortfilmcontest2025/clapper_2025.webm
-${WEBAPI_BASE_URL}${}/${}/v000${}
 ${WEBAPI_BASE_URL}IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}IBroadcastService/PostChatMessage/v0001?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}IBroadcastService/RemoveUserChatText/v0001/?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}IBroadcastService/UpdateChatMessageFlair/v0001/?access_token=${m_webApiToken}
-${WEBAPI_BASE_URL}ISteamDirectory/GetCMList/v1/?cellid=0
 ${WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets&origin=${origin}
 ${WEBAPI_BASE_URL}ISteamUserOAuth/GetUserSummaries/v2/
-${_url}${}${}
 ${agreement_session_url}&redir=${href}
 ${agreement_session_url}&redir=${m_strBaseURL}
 ${anchorURL}${value}
@@ -2074,7 +2059,6 @@ ${profileUrl}/ajaxsetnickname/
 ${rateURL}${gid}
 ${sCurrentURL}#buy${sElementPrefix}|${listingid}|${}|${}|${}
 ${sc_url}${}
-${serverUrl}${}?platform=android&hash=${hash}
 ${short_url}/${invite_token}
 ${strBaseURL}${_ ? '' : '/'}${m_bIsMobile ? 'mobilelogin' : 'login'}/
 ${strBaseURL}${strLocation}
@@ -2113,7 +2097,6 @@ ${url}?filter=${filter}
 ${url}?t=${}
 ${url}overview
 ${url}post/${steamidOwner}/${gidFeature}
-${url}symbolicate
 ${webkitURL}${}
 ${webm_url}${_ ? _ : _}
 ${wiki_doc_url}${}
@@ -2554,7 +2537,6 @@ https://confluence.valve.org/display/etc...
 https://confluence.valve.org/display/~adils/Steam+Season+Passes
 https://confluence.valve.org/pages/viewpage.action?pageId=131008106
 https://confluence.valve.org/pages/viewpage.action?pageId=320176134
-https://d1wp6m56sqw74a.cloudfront.net/~assets/${}
 https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 https://en.wikipedia.org/wiki/Main_Page
 https://facebook.com/dota2/
@@ -2838,10 +2820,8 @@ https://rd.playstation.com/controller/fwupdater/
 https://react.dev/errors/${}
 https://reactflow.dev
 https://reactjs.org/docs/error-decoder.html?invariant=${}
-https://s.team/chat/${}
 https://s.team/deck
 https://s.team/join
-https://s.team/remoteplay/connect/${}?appid=${appID}&${remoteplayString}
 https://s.team/remoteplay/connect/${}?appid=${}&${}
 https://s.team/steamos
 https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${appid}/${filename}
@@ -3307,7 +3287,6 @@ https://www.youtube-nocookie.com/embed/p0qKpJXOJsY
 https://www.youtube.com/
 https://www.youtube.com/c/SteamYT
 https://www.youtube.com/embed/${id}?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct
-https://www.youtube.com/embed/${}
 https://www.youtube.com/embed/74Gh0lU89Ic?controls=0&autoplay=1&mute=1&hd=1&loop=1&playlist=m9MqIzmWG24
 https://www.youtube.com/iframe_api
 https://www.youtube.com/user/dota2
@@ -3345,7 +3324,6 @@ steam://friends/status/invisible
 steam://friends/status/offline
 steam://friends/status/online
 steam://gamewebcallback/
-steam://joinlobby/${appID}/${lobbyID}/${}
 steam://joinlobby/${}/${}/${}
 steam://nav/games/
 steam://nav/games/details/${appid}
@@ -3406,12 +3384,10 @@ steam://openurl_external/https://help.steampowered.com/faqs/view/1433-AD20-F11D-
 steam://openurl_external/https://help.steampowered.com/faqs/view/443B-C1B8-0998-C02A
 steam://openurl_external/https://help.steampowered.com/faqs/view/4593-5CB7-DC3C-64F0
 steam://remoteplay/connect
-steam://remoteplay/connect/${}?appid=${appID}&${remoteplayString}
 steam://remoteplay/connect/${}?appid=${}&${}
 steam://run/${appid}
 steam://run/${}
 steam://run/250820
-steam://rungame/${appID}/${}
 steam://rungame/${}/${}
 steam://rungameid/${}
 steam://settings

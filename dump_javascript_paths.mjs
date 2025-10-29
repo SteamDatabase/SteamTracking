@@ -7,7 +7,6 @@ Syntax.StaticBlock = "StaticBlock";
 VisitorKeys.StaticBlock = ["body"];
 
 const pathsToRecurse = [
-	"./Scripts/",
 	"./ClientExtracted/",
 	"./help.steampowered.com/",
 	"./partner.steamgames.com/",
@@ -21,7 +20,6 @@ const pathsToRecurse = [
 
 // Should this just be a recursive search for all webpack files?
 const paths = [
-	"./Scripts/WebUI/",
 	"./ClientExtracted/clientui/",
 	"./ClientExtracted/steamui/",
 	"./help.steampowered.com/public/javascript/applications/help/",

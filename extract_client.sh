@@ -18,7 +18,6 @@ echo Deleting existing files
 rm -rf linux_bins/*
 rm -rf "${DIR}"/ClientExtracted/*
 rm -rf "${DIR}"/c/ClientExtracted/*
-rm -f "${DIR}"/BuildbotPaths/*
 rm -rf "${DIR}"/Protobufs/*
 
 #
