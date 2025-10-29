@@ -70359,10 +70359,20 @@
           { className: ma.RecommendationLinkColumn },
           !e &&
             n.createElement(
-              fa,
-              { eStoreDiscoveryQueueType: 0 },
-              cr("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
+              wn,
+              { href: `${te.TS.STORE_BASE_URL}personalcalendar/` },
+              cr("#Menu_Section_Recommendations_PersonalCalendar"),
             ),
+          n.createElement(
+            fa,
+            { eStoreDiscoveryQueueType: 0 },
+            cr("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
+          ),
+          n.createElement(
+            wn,
+            { href: `${te.TS.STORE_BASE_URL}communityrecommendations/` },
+            cr("#Menu_Section_Recommendations_CommunityRecommendations"),
+          ),
           n.createElement(
             fa,
             { eStoreDiscoveryQueueType: 3 },
@@ -70416,66 +70426,68 @@
         );
       }
       function ba() {
-        return n.createElement(
-          Ce.Ii,
-          {
-            className: mr()(ma.DiscoveryQueue, ma.PersonalCalendar),
-            href: `${te.TS.STORE_BASE_URL}personalcalendar/`,
-          },
-          n.createElement(
-            "div",
-            { className: ma.Background },
-            n.createElement("div", {
-              className: ma.BackgroundImage,
-              style: {
-                backgroundImage: `url('${te.TS.MEDIA_CDN_URL}store/labs/main/images/personal_calendar_menu_bg.png')`,
+        return Tn()
+          ? n.createElement(
+              Ce.Ii,
+              {
+                className: mr()(ma.DiscoveryQueue, ma.PersonalCalendar),
+                href: `${te.TS.STORE_BASE_URL}personalcalendar/`,
               },
-            }),
-            n.createElement("div", { className: ma.BackgroundOverlay }),
-          ),
-          n.createElement(
-            "div",
-            { className: ma.New },
-            cr("#Menu_Section_Recommendations_New"),
-          ),
-          n.createElement(
-            "div",
-            { className: ma.Content },
-            n.createElement(
-              "div",
-              { className: ma.LeftColumn },
-              n.createElement(da, null),
-            ),
-            n.createElement(
-              "div",
-              { className: ma.RightColumn },
               n.createElement(
                 "div",
-                { className: ma.Title },
-                cr("#Menu_Section_Recommendations_PersonalCalendar"),
+                { className: ma.Background },
+                n.createElement("div", {
+                  className: ma.BackgroundImage,
+                  style: {
+                    backgroundImage: `url('${te.TS.MEDIA_CDN_URL}store/labs/main/images/personal_calendar_menu_bg.png')`,
+                  },
+                }),
+                n.createElement("div", { className: ma.BackgroundOverlay }),
               ),
               n.createElement(
                 "div",
-                { className: ma.Description },
-                cr(
-                  "#Menu_Section_Recommendations_PersonalCalendar_Description",
-                ),
+                { className: ma.New },
+                cr("#Menu_Section_Recommendations_New"),
               ),
               n.createElement(
                 "div",
-                { className: ma.ActionButton },
+                { className: ma.Content },
                 n.createElement(
-                  "span",
-                  { className: ma.ButtonText },
-                  cr(
-                    "#Menu_Section_Recommendations_PersonalCalendar_ActionButton",
+                  "div",
+                  { className: ma.LeftColumn },
+                  n.createElement(da, null),
+                ),
+                n.createElement(
+                  "div",
+                  { className: ma.RightColumn },
+                  n.createElement(
+                    "div",
+                    { className: ma.Title },
+                    cr("#Menu_Section_Recommendations_PersonalCalendar"),
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: ma.Description },
+                    cr(
+                      "#Menu_Section_Recommendations_PersonalCalendar_Description",
+                    ),
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: ma.ActionButton },
+                    n.createElement(
+                      "span",
+                      { className: ma.ButtonText },
+                      cr(
+                        "#Menu_Section_Recommendations_PersonalCalendar_ActionButton",
+                      ),
+                    ),
+                    n.createElement(Ca, null),
                   ),
                 ),
-                n.createElement(Ca, null),
               ),
-            ),
-          ),
-        );
+            )
+          : null;
       }
       const Ba = { include_assets: !0, apply_user_filters: !0 },
         wa = Math.floor(Date.now() / 6e5);

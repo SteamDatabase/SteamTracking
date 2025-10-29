@@ -1,64 +1,64 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -6060,9 +6060,17 @@ function _() {
     children: [
       !_ &&
         (0, _.jsx)(_, {
-          eStoreDiscoveryQueueType: 0,
-          children: _("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
+          href: `${_.STORE_BASE_URL}personalcalendar/`,
+          children: _("#Menu_Section_Recommendations_PersonalCalendar"),
         }),
+      (0, _.jsx)(_, {
+        eStoreDiscoveryQueueType: 0,
+        children: _("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
+      }),
+      (0, _.jsx)(_, {
+        href: `${_.STORE_BASE_URL}communityrecommendations/`,
+        children: _("#Menu_Section_Recommendations_CommunityRecommendations"),
+      }),
       (0, _.jsx)(_, {
         eStoreDiscoveryQueueType: 3,
         children: _("#Menu_Section_Recommendations_NewReleasesQueue"),
@@ -6111,66 +6119,70 @@ function _(_) {
   });
 }
 function _() {
-  return (0, _.jsxs)(_, {
-    className: (0, _.default)(_, _),
-    href: `${_.STORE_BASE_URL}personalcalendar/`,
-    children: [
-      (0, _.jsxs)("div", {
-        className: _,
+  return _()
+    ? (0, _.jsxs)(_, {
+        className: (0, _.default)(_, _),
+        href: `${_.STORE_BASE_URL}personalcalendar/`,
         children: [
-          (0, _.jsx)("div", {
+          (0, _.jsxs)("div", {
             className: _,
-            style: {
-              backgroundImage: `url('${_.MEDIA_CDN_URL}store/labs/main/images/personal_calendar_menu_bg.png')`,
-            },
+            children: [
+              (0, _.jsx)("div", {
+                className: _,
+                style: {
+                  backgroundImage: `url('${_.MEDIA_CDN_URL}store/labs/main/images/personal_calendar_menu_bg.png')`,
+                },
+              }),
+              (0, _.jsx)("div", {
+                className: _,
+              }),
+            ],
           }),
           (0, _.jsx)("div", {
             className: _,
-          }),
-        ],
-      }),
-      (0, _.jsx)("div", {
-        className: _,
-        children: _("#Menu_Section_Recommendations_New"),
-      }),
-      (0, _.jsxs)("div", {
-        className: _,
-        children: [
-          (0, _.jsx)("div", {
-            className: _,
-            children: (0, _.jsx)(_, {}),
+            children: _("#Menu_Section_Recommendations_New"),
           }),
           (0, _.jsxs)("div", {
             className: _,
             children: [
               (0, _.jsx)("div", {
                 className: _,
-                children: _("#Menu_Section_Recommendations_PersonalCalendar"),
-              }),
-              (0, _.jsx)("div", {
-                className: _,
-                children: _(
-                  "#Menu_Section_Recommendations_PersonalCalendar_Description",
-                ),
+                children: (0, _.jsx)(_, {}),
               }),
               (0, _.jsxs)("div", {
                 className: _,
                 children: [
-                  (0, _.jsx)("span", {
+                  (0, _.jsx)("div", {
                     className: _,
                     children: _(
-                      "#Menu_Section_Recommendations_PersonalCalendar_ActionButton",
+                      "#Menu_Section_Recommendations_PersonalCalendar",
                     ),
                   }),
-                  (0, _.jsx)(_, {}),
+                  (0, _.jsx)("div", {
+                    className: _,
+                    children: _(
+                      "#Menu_Section_Recommendations_PersonalCalendar_Description",
+                    ),
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _,
+                    children: [
+                      (0, _.jsx)("span", {
+                        className: _,
+                        children: _(
+                          "#Menu_Section_Recommendations_PersonalCalendar_ActionButton",
+                        ),
+                      }),
+                      (0, _.jsx)(_, {}),
+                    ],
+                  }),
                 ],
               }),
             ],
           }),
         ],
-      }),
-    ],
-  });
+      })
+    : null;
 }
 var _ = {
     include_assets: !0,

@@ -78875,10 +78875,24 @@
             _.createElement(
               _,
               {
-                eStoreDiscoveryQueueType: 0,
+                href: `${_._.STORE_BASE_URL}personalcalendar/`,
               },
-              _("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
+              _("#Menu_Section_Recommendations_PersonalCalendar"),
             ),
+          _.createElement(
+            _,
+            {
+              eStoreDiscoveryQueueType: 0,
+            },
+            _("#Menu_Section_Recommendations_DiscoveryQueue_Title"),
+          ),
+          _.createElement(
+            _,
+            {
+              href: `${_._.STORE_BASE_URL}communityrecommendations/`,
+            },
+            _("#Menu_Section_Recommendations_CommunityRecommendations"),
+          ),
           _.createElement(
             _,
             {
@@ -78948,84 +78962,88 @@
         );
       }
       function _() {
-        return _.createElement(
-          _._,
-          {
-            className: _()(_.DiscoveryQueue, _.PersonalCalendar),
-            href: `${_._.STORE_BASE_URL}personalcalendar/`,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.Background,
-            },
-            _.createElement("div", {
-              className: _.BackgroundImage,
-              style: {
-                backgroundImage: `url('${_._.MEDIA_CDN_URL}store/labs/main/images/personal_calendar_menu_bg.png')`,
-              },
-            }),
-            _.createElement("div", {
-              className: _.BackgroundOverlay,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.New,
-            },
-            _("#Menu_Section_Recommendations_New"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.Content,
-            },
-            _.createElement(
-              "div",
+        return _()
+          ? _.createElement(
+              _._,
               {
-                className: _.LeftColumn,
-              },
-              _.createElement(_, null),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.RightColumn,
+                className: _()(_.DiscoveryQueue, _.PersonalCalendar),
+                href: `${_._.STORE_BASE_URL}personalcalendar/`,
               },
               _.createElement(
                 "div",
                 {
-                  className: _.Title,
+                  className: _.Background,
                 },
-                _("#Menu_Section_Recommendations_PersonalCalendar"),
+                _.createElement("div", {
+                  className: _.BackgroundImage,
+                  style: {
+                    backgroundImage: `url('${_._.MEDIA_CDN_URL}store/labs/main/images/personal_calendar_menu_bg.png')`,
+                  },
+                }),
+                _.createElement("div", {
+                  className: _.BackgroundOverlay,
+                }),
               ),
               _.createElement(
                 "div",
                 {
-                  className: _.Description,
+                  className: _.New,
                 },
-                _("#Menu_Section_Recommendations_PersonalCalendar_Description"),
+                _("#Menu_Section_Recommendations_New"),
               ),
               _.createElement(
                 "div",
                 {
-                  className: _.ActionButton,
+                  className: _.Content,
                 },
                 _.createElement(
-                  "span",
+                  "div",
                   {
-                    className: _.ButtonText,
+                    className: _.LeftColumn,
                   },
-                  _(
-                    "#Menu_Section_Recommendations_PersonalCalendar_ActionButton",
+                  _.createElement(_, null),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.RightColumn,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Title,
+                    },
+                    _("#Menu_Section_Recommendations_PersonalCalendar"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Description,
+                    },
+                    _(
+                      "#Menu_Section_Recommendations_PersonalCalendar_Description",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.ActionButton,
+                    },
+                    _.createElement(
+                      "span",
+                      {
+                        className: _.ButtonText,
+                      },
+                      _(
+                        "#Menu_Section_Recommendations_PersonalCalendar_ActionButton",
+                      ),
+                    ),
+                    _.createElement(_, null),
                   ),
                 ),
-                _.createElement(_, null),
               ),
-            ),
-          ),
-        );
+            )
+          : null;
       }
       const _ = {
           include_assets: !0,
