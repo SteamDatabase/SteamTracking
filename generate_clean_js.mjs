@@ -27,9 +27,9 @@
  */
 
 import fs from "node:fs";
-import { parse, latestEcmaVersion } from "espree";
-import { traverse, Syntax } from "estraverse";
 import { generate } from "astring";
+import { latestEcmaVersion, parse } from "espree";
+import { Syntax, traverse } from "estraverse";
 import "./dump_javascript_paths.mjs"; // fixing estraverse Syntax and VisitorKeys
 
 // Process command line arguments

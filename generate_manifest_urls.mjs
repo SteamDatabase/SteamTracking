@@ -1,28 +1,31 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { parse, latestEcmaVersion } from "espree";
-import { traverse, Syntax } from "estraverse";
+import { resolve as pathResolve } from "node:path";
+import { latestEcmaVersion, parse } from "espree";
+import { Syntax, traverse } from "estraverse";
 import "./dump_javascript_paths.mjs"; // fixing estraverse Syntax and VisitorKeys
+
+const __dirname = import.meta.dirname;
 
 const files = [
 	{
-		file: "store.steampowered.com/public/javascript/applications/store/manifest.js",
+		file: pathResolve(__dirname, "store.steampowered.com/public/javascript/applications/store/manifest.js"),
 		cdn: "https://store.steampowered.com/public/",
 	},
 	{
-		file: "steamcommunity.com/public/javascript/applications/community/manifest.js",
+		file: pathResolve(__dirname, "steamcommunity.com/public/javascript/applications/community/manifest.js"),
 		cdn: "https://steamcommunity.com/public/",
 	},
 	{
-		file: "help.steampowered.com/public/javascript/applications/help/manifest.js",
+		file: pathResolve(__dirname, "help.steampowered.com/public/javascript/applications/help/manifest.js"),
 		cdn: "https://help.steampowered.com/public/",
 	},
 	{
-		file: "partner.steamgames.com/public/javascript/applications/appmgmt/manifest.js",
+		file: pathResolve(__dirname, "partner.steamgames.com/public/javascript/applications/appmgmt/manifest.js"),
 		cdn: "https://partner.steamgames.com/public/",
 	},
 	/* different AST
 	{
-		file: "partner.steamgames.com/public/javascript/webui/storeadmin/storeadmin.js",
+		file: pathResolve(__dirname, "partner.steamgames.com/public/javascript/webui/storeadmin/storeadmin.js"),
 		cdn: "https://partner.steamgames.com/public/",
 	},
 	*/
@@ -32,7 +35,9 @@ const urls = new Set();
 let oldUrls = [];
 
 try {
-	oldUrls = (await readFile(".support/urls_from_manifests.txt", { encoding: "utf8" })).trim().split("\n");
+	oldUrls = (await readFile(pathResolve(__dirname, ".support/urls_from_manifests.txt"), { encoding: "utf8" }))
+		.trim()
+		.split("\n");
 } catch {
 	// file does not exist
 }
@@ -140,4 +145,4 @@ console.log("Found", urls.size, "urls");
 
 const strings = [...urls.values()].sort().join("\n") + "\n";
 
-await writeFile(".support/urls_from_manifests.txt", strings);
+await writeFile(pathResolve(__dirname, ".support/urls_from_manifests.txt"), strings);

@@ -1,7 +1,10 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { parse, latestEcmaVersion } from "espree";
-import { traverse, Syntax } from "estraverse";
+import { resolve as pathResolve } from "node:path";
+import { latestEcmaVersion, parse } from "espree";
+import { Syntax, traverse } from "estraverse";
 import { GetRecursiveFilesToParse } from "./dump_javascript_paths.mjs";
+
+const __dirname = import.meta.dirname;
 
 const allStrings = new Set();
 
@@ -40,10 +43,10 @@ for await (const file of GetRecursiveFilesToParse()) {
 
 console.log("Found", allStrings.size, "strings");
 
-const filteredStrings = [...allStrings.values()].filter(url => !url.startsWith("https://swarm.valve.org/changes/"));
+const filteredStrings = [...allStrings.values()].filter((url) => !url.startsWith("https://swarm.valve.org/changes/"));
 const strings = filteredStrings.sort().join("\n") + "\n";
 
-await writeFile("API/JavascriptUrls.txt", strings);
+await writeFile(pathResolve(__dirname, "API/JavascriptUrls.txt"), strings);
 
 function IsLeftSideBaseUrlExpression(node) {
 	return node.left.type === Syntax.BinaryExpression

@@ -1,12 +1,14 @@
-import { readdir, readFile, writeFile } from "node:fs/promises";
-import { parse, latestEcmaVersion } from "espree";
-import { traverse, Syntax } from "estraverse";
-import { extname, join } from "node:path";
+import { readFile, readdir, writeFile } from "node:fs/promises";
+import { extname, join, resolve as pathResolve } from "node:path";
+import { latestEcmaVersion, parse } from "espree";
+import { Syntax, traverse } from "estraverse";
 import "./dump_javascript_paths.mjs"; // fixing estraverse Syntax and VisitorKeys
+
+const __dirname = import.meta.dirname;
 
 const folders = [
 	{
-		folder: "store.steampowered.com/ssr",
+		folder: pathResolve(__dirname, "store.steampowered.com/ssr"),
 		cdn: "https://cdn.fastly.steamstatic.com/store/ssr/",
 	},
 ];
@@ -85,4 +87,4 @@ console.log("Found", urls.size, "SSR urls");
 
 const strings = [...urls.values()].sort().join("\n") + "\n";
 
-await writeFile(".support/urls_from_ssr.txt", strings);
+await writeFile(pathResolve(__dirname, ".support/urls_from_ssr.txt"), strings);

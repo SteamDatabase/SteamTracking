@@ -203,6 +203,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				system( 'node dump_javascript_protobufs.mjs' );
 				system( 'node dump_javascript_urls.mjs' );
+				system( 'node tools/dump_javascript_svg.mjs' );
 			}
 
 			if( $this->SyncProtobufs && DIRECTORY_SEPARATOR === '/' )

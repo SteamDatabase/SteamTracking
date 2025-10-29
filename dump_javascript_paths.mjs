@@ -1,38 +1,40 @@
-import { join as pathJoin, resolve as pathResolve } from "node:path";
 import { readdir as readDir } from "node:fs/promises";
+import { join as pathJoin, resolve as pathResolve } from "node:path";
 import { Syntax, VisitorKeys } from "estraverse";
+
+const __dirname = import.meta.dirname;
 
 // https://github.com/estools/estraverse/pull/120
 Syntax.StaticBlock = "StaticBlock";
 VisitorKeys.StaticBlock = ["body"];
 
 const pathsToRecurse = [
-	"./ClientExtracted/",
-	"./help.steampowered.com/",
-	"./partner.steamgames.com/",
-	"./steamcommunity.com/",
-	"./store.steampowered.com/",
-	"./checkout.steampowered.com/",
-	"./www.dota2.com/",
-	"./www.underlords.com/",
-	"./www.counter-strike.net/",
+	pathResolve(__dirname, "ClientExtracted/"),
+	pathResolve(__dirname, "help.steampowered.com/"),
+	pathResolve(__dirname, "partner.steamgames.com/"),
+	pathResolve(__dirname, "steamcommunity.com/"),
+	pathResolve(__dirname, "store.steampowered.com/"),
+	pathResolve(__dirname, "checkout.steampowered.com/"),
+	pathResolve(__dirname, "www.dota2.com/"),
+	pathResolve(__dirname, "www.underlords.com/"),
+	pathResolve(__dirname, "www.counter-strike.net/"),
 ];
 
 // Should this just be a recursive search for all webpack files?
 const paths = [
-	"./ClientExtracted/clientui/",
-	"./ClientExtracted/steamui/",
-	"./help.steampowered.com/public/javascript/applications/help/",
-	"./partner.steamgames.com/public/javascript/applications/appmgmt/",
-	"./steamcommunity.com/public/javascript/applications/community/",
-	"./steamcommunity.com/public/javascript/webui/",
-	"./store.steampowered.com/public/javascript/applications/interactive_recommender/",
-	"./store.steampowered.com/public/javascript/applications/store/",
-	"./store.steampowered.com/public/shared/javascript/legacy_web/",
-	"./www.dota2.com/public/javascript/applications/dpc/",
-	"./www.dota2.com/public/javascript/dota_react/",
-	"./www.underlords.com/public/javascript/",
-	"./www.counter-strike.net/public/javascript/csgo_react/",
+	pathResolve(__dirname, "ClientExtracted/clientui/"),
+	pathResolve(__dirname, "ClientExtracted/steamui/"),
+	pathResolve(__dirname, "help.steampowered.com/public/javascript/applications/help/"),
+	pathResolve(__dirname, "partner.steamgames.com/public/javascript/applications/appmgmt/"),
+	pathResolve(__dirname, "steamcommunity.com/public/javascript/applications/community/"),
+	pathResolve(__dirname, "steamcommunity.com/public/javascript/webui/"),
+	pathResolve(__dirname, "store.steampowered.com/public/javascript/applications/interactive_recommender/"),
+	pathResolve(__dirname, "store.steampowered.com/public/javascript/applications/store/"),
+	pathResolve(__dirname, "store.steampowered.com/public/shared/javascript/legacy_web/"),
+	pathResolve(__dirname, "www.dota2.com/public/javascript/applications/dpc/"),
+	pathResolve(__dirname, "www.dota2.com/public/javascript/dota_react/"),
+	pathResolve(__dirname, "www.underlords.com/public/javascript/"),
+	pathResolve(__dirname, "www.counter-strike.net/public/javascript/csgo_react/"),
 ];
 
 /**

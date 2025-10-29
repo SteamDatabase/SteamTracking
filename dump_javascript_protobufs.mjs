@@ -1,10 +1,12 @@
-import { join as pathJoin } from "node:path";
-import { readFile, writeFile } from "node:fs/promises";
-import { createWriteStream } from "node:fs";
 import { createHash } from "node:crypto";
-import { parse, latestEcmaVersion } from "espree";
-import { traverse, Syntax } from "estraverse";
+import { createWriteStream } from "node:fs";
+import { readFile, writeFile } from "node:fs/promises";
+import { join as pathJoin, resolve as pathResolve } from "node:path";
+import { latestEcmaVersion, parse } from "espree";
+import { Syntax, traverse } from "estraverse";
 import { GetFilesToParse } from "./dump_javascript_paths.mjs";
+
+const __dirname = import.meta.dirname;
 
 /**
  * @typedef {Object} Field
@@ -74,7 +76,7 @@ import { GetFilesToParse } from "./dump_javascript_paths.mjs";
  * @property {Map<string, string>} exportedIds
  */
 
-const outputPath = "./../ValveProtobufs/webui/";
+const outputPath = pathResolve(__dirname, "../ValveProtobufs/webui/");
 const files = await GetFilesToParse();
 
 const NotImplemented = "NotImplemented";
@@ -350,7 +352,10 @@ message NotImplemented {
 
 	console.log("Found", mergedEnums.size, "enums");
 
-	const stream = createWriteStream("Structs/webui_enums.steamd", { flags: "w", encoding: "utf8" });
+	const stream = createWriteStream(pathResolve(__dirname, "Structs/webui_enums.steamd"), {
+		flags: "w",
+		encoding: "utf8",
+	});
 	OutputEnums(mergedEnums, stream);
 	stream.end();
 }

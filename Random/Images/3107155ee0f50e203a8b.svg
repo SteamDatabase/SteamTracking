@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" fill="none">
+  <g>
+    <path fill="currentColor" d="M7 0L4.88269 4.68067L0 5.348L3.5688 8.918L2.67216 14L7 11.536L11.3278 14L10.4268 8.918L14 5.348L9.11731 4.68067L7 0Z"/>
+  </g>
+  <defs>
+    <clipPath>
+      <rect fill="currentColor" width="14" height="14" transform="matrix(-1 0 0 1 14 0)"/>
+    </clipPath>
+  </defs>
+</svg>

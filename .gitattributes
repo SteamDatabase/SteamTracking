@@ -9,6 +9,7 @@
 *.tga binary
 *.ttf binary
 *.wav binary
+*.webp binary
 
 ClientManifest/* linguist-generated=true
 help.steampowered.com/public/javascript/applications/help/**/*.js linguist-generated=true
