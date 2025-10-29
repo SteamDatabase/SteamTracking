@@ -14614,6 +14614,17 @@
           case 39:
             _.push(_.bert_tokenizer().sequence_length());
             break;
+          case 41: {
+            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
+              _,
+              _.connectors()[0].connector_id(),
+            );
+            if (_) {
+              const _ = _(_, _, _);
+              _.push(..._);
+            }
+            break;
+          }
           default:
             (0, _._)(
               !1,
@@ -14842,6 +14853,7 @@
           case 27:
           case 38:
           case 39:
+          case 41:
             return _.Preprocessing;
           case 2:
           case 3:
@@ -31797,6 +31809,390 @@
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
+          let _ = "";
+          switch (_.threshold().comparison()) {
+            case 4:
+              _ = (0, _._)(
+                "#SteamLearn_Config_Node_Threshold_Comparison_Equal",
+              );
+              break;
+            case 0:
+              _ = (0, _._)("#SteamLearn_Config_Node_Threshold_Comparison_LT");
+              break;
+            case 2:
+              _ = (0, _._)("#SteamLearn_Config_Node_Threshold_Comparison_LTE");
+              break;
+            case 1:
+              _ = (0, _._)("#SteamLearn_Config_Node_Threshold_Comparison_GT");
+              break;
+            case 3:
+              _ = (0, _._)("#SteamLearn_Config_Node_Threshold_Comparison_GTE");
+          }
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.FlowNode, _.ThresholdNode, _.Preprocessing),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_Threshold"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)(
+                      "#SteamLearn_Config_Node_Threshold_ThresholdValue",
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _.threshold().threshold_value(),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Threshold_Comparison"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _,
+                  ),
+                ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(
+              _.msgNode.threshold().threshold_value().toFixed(5),
+            ),
+            [_, _] = _.useState(_.msgNode.threshold().comparison());
+          _.useEffect(() => {
+            _(_.msgNode.comment()),
+              _(_.msgNode.threshold().threshold_value().toFixed(5)),
+              _(_.msgNode.threshold().comparison());
+          }, [_.bVisible, _.msgNode]);
+          let _ = [
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Threshold_Comparison_LT",
+              ),
+              value: 0,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Threshold_Comparison_LTE",
+              ),
+              value: 2,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Threshold_Comparison_GT",
+              ),
+              value: 1,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Threshold_Comparison_GTE",
+              ),
+              value: 3,
+            },
+            {
+              label: (0, _._)(
+                "#SteamLearn_Config_Node_Threshold_Comparison_Equal",
+              ),
+              value: 4,
+            },
+          ];
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_Threshold"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Threshold"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Threshold_ThresholdValue"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_Threshold_ThresholdValueDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  isText: !0,
+                  fnGetInitialValue: () => _,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Threshold_Comparison"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)(
+                    "#SteamLearn_Config_Node_Threshold_ComparisonDescDesc",
+                  ),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetValue: () => _,
+                  fnSetValue: (_) => _(parseInt(_)),
+                  options: _,
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.threshold().set_threshold_value(parseFloat(_)),
+                      _.msgNode.threshold().set_comparison(_),
+                      _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
           return _.createElement(
             "div",
             {
@@ -34620,6 +35016,7 @@
                 nodeBert: _,
                 nodeBertTokenizer: _,
                 nodeBertFinetune: _,
+                nodeThreshold: _,
               }),
               [],
             );
@@ -34740,6 +35137,12 @@
                         (_ = 1),
                         _.bert_finetune().set_bert_model(2),
                         _.bert_finetune().set_unfrozen_layers(1);
+                      break;
+                    case 41:
+                      (_ = 1),
+                        (_ = 1),
+                        _.threshold().set_threshold_value(0),
+                        _.threshold().set_comparison(0);
                       break;
                     case 13:
                       (_ = 3), (_ = 2);
@@ -35230,6 +35633,16 @@
                       }),
                       _.createElement(_, {
                         fnDragStart: _,
+                        eType: 41,
+                        strName: (0, _._)(
+                          "#SteamLearn_Config_Node_Title_Threshold",
+                        ),
+                        strTooltip: (0, _._)(
+                          "#SteamLearn_Config_Node_Tooltip_Threshold",
+                        ),
+                      }),
+                      _.createElement(_, {
+                        fnDragStart: _,
                         eType: 32,
                         strName: (0, _._)(
                           "#SteamLearn_Config_Node_Title_TokenMask",
@@ -35592,6 +36005,8 @@
             return "nodeBertTokenizer";
           case 40:
             return "nodeBertFinetune";
+          case 41:
+            return "nodeThreshold";
           default:
             (0, _._)(!1, `Unknown type in GetNodeTypeString: ${_}`);
         }
