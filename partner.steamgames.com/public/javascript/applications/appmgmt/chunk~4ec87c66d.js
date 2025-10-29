@@ -709,6 +709,7 @@
         Promo: "Tk6iBLgHjRHuLoBAj21Ry",
         Recent: "_2O0cufWlwHuuMxjD8nKFkE",
         Upcoming: "_3ruO2Dupvk3EcLFjNxW2mr",
+        DeepDiscount: "_2cKCFvHFlNO2P3eYO_N1GJ",
         OpenInvite: "wA4yCJ9cCiNkwZ2w6FFp_",
         ExpiredInvite: "_3ZPXxn8qkP6c3ffvDzTi8R",
         SalesRank: "_2KWeGH6NTF15xAqmMWPJF",
@@ -64445,9 +64446,32 @@
             ?.data?.map(Sr.VJ)
             .filter(Boolean)
             .sort((e, t) => t.start_date - e.start_date),
-          _ = Date.now() / 1e3,
-          g = Date.now() / 1e3 - 1578e4,
-          h = (0, c.useMemo)(() => {
+          _ = (function (e) {
+            const [t] = (0, c.useState)(() =>
+              (0, Mr.Tc)("deep_discount_events", "application_config"),
+            );
+            return (0, c.useMemo)(() => {
+              let a = [];
+              return (
+                t?.length > 0 &&
+                  t.forEach((t) => {
+                    -1 != t.sale_page_appid.findIndex((t) => t == e) &&
+                      a.push({
+                        unique_id: t.unique_id,
+                        event_name: t.event_name,
+                        start_time: t.start_time,
+                        end_time: t.end_time,
+                        rtime_start_time:
+                          new Date(t.start_time).getTime() / 1e3,
+                      });
+                  }),
+                a
+              );
+            }, [e, t]);
+          })(t.appid),
+          g = Date.now() / 1e3,
+          h = Date.now() / 1e3 - 1578e4,
+          E = (0, c.useMemo)(() => {
             const e = new Array();
             return (
               p?.forEach((t) =>
@@ -64465,9 +64489,16 @@
               d?.forEach((t) =>
                 e.push({ date: t.rtinvitetime, type: "invite", promo: t }),
               ),
+              _?.forEach((t) =>
+                e.push({
+                  date: t.rtime_start_time,
+                  type: "deepdiscount",
+                  promo: t,
+                }),
+              ),
               e.sort((e, t) => (t.date ?? 0) - (e.date ?? 0))
             );
-          }, [m, u, o, p, d]);
+          }, [m, u, o, p, d, _]);
         return c.createElement(
           c.Fragment,
           null,
@@ -64475,7 +64506,7 @@
             c.createElement(
               "div",
               { className: Cr().RecentPromos },
-              h.map((e) => {
+              E.map((e) => {
                 if ("sp" == e.type) {
                   const t = e.promo;
                   return c.createElement(
@@ -64484,8 +64515,8 @@
                       key: "saleplan_" + t.id,
                       className: (0, x.A)(
                         Cr().Promo,
-                        t.start_date > _ ? Cr().Upcoming : "",
-                        t.start_date > g ? Cr().Recent : "",
+                        t.start_date > g ? Cr().Upcoming : "",
+                        t.start_date > h ? Cr().Recent : "",
                       ),
                     },
                     c.createElement(
@@ -64519,8 +64550,8 @@
                       key: "plan_" + t.id,
                       className: (0, x.A)(
                         Cr().Promo,
-                        t.start_date > _ ? Cr().Upcoming : "",
-                        t.start_date > g ? Cr().Recent : "",
+                        t.start_date > g ? Cr().Upcoming : "",
+                        t.start_date > h ? Cr().Recent : "",
                       ),
                     },
                     c.createElement(
@@ -64549,8 +64580,8 @@
                       key: "dd_" + t.gid,
                       className: (0, x.A)(
                         Cr().Promo,
-                        t.rtime32_start_time > _ ? Cr().Upcoming : "",
-                        t.rtime32_start_time > g ? Cr().Recent : "",
+                        t.rtime32_start_time > g ? Cr().Upcoming : "",
+                        t.rtime32_start_time > h ? Cr().Recent : "",
                       ),
                     },
                     c.createElement(
@@ -64577,8 +64608,8 @@
                       key: "mm_" + t.gid,
                       className: (0, x.A)(
                         Cr().Promo,
-                        t.start_date > _ ? Cr().Upcoming : "",
-                        t.start_date > g ? Cr().Recent : "",
+                        t.start_date > g ? Cr().Upcoming : "",
+                        t.start_date > h ? Cr().Recent : "",
                       ),
                     },
                     c.createElement(
@@ -64596,6 +64627,34 @@
                       c.createElement("b", null, "MM"),
                       " ",
                       c.createElement("span", null, t.title),
+                    ),
+                  );
+                }
+                if ("deepdiscount" == e.type) {
+                  const t = e.promo;
+                  return c.createElement(
+                    "div",
+                    {
+                      key: "deep_" + t.unique_id,
+                      className: (0, x.A)(
+                        Cr().Promo,
+                        t.rtime_start_time > g ? Cr().Upcoming : "",
+                        t.rtime_start_time > h ? Cr().Recent : "",
+                        Cr().DeepDiscount,
+                      ),
+                    },
+                    c.createElement(
+                      "a",
+                      { href: "#" },
+                      c.createElement(
+                        "b",
+                        null,
+                        (0, z.$z)(new Date(t.rtime_start_time).getTime()),
+                      ),
+                      " ",
+                      c.createElement("b", null, "Deep Discount Sale Page"),
+                      " ",
+                      c.createElement("span", null, t.event_name),
                     ),
                   );
                 }

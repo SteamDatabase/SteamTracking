@@ -717,6 +717,7 @@
         Promo: "Tk6iBLgHjRHuLoBAj21Ry",
         Recent: "_2O0cufWlwHuuMxjD8nKFkE",
         Upcoming: "_3ruO2Dupvk3EcLFjNxW2mr",
+        DeepDiscount: "_2cKCFvHFlNO2P3eYO_N1GJ",
         OpenInvite: "wA4yCJ9cCiNkwZ2w6FFp_",
         ExpiredInvite: "_3ZPXxn8qkP6c3ffvDzTi8R",
         SalesRank: "_2KWeGH6NTF15xAqmMWPJF",
@@ -72222,6 +72223,29 @@
             ?.data?.map(_._)
             .filter(Boolean)
             .sort((_, _) => _.start_date - _.start_date),
+          _ = (function (_) {
+            const [_] = (0, _.useState)(() =>
+              (0, _._)("deep_discount_events", "application_config"),
+            );
+            return (0, _.useMemo)(() => {
+              let _ = [];
+              return (
+                _?.length > 0 &&
+                  _.forEach((_) => {
+                    -1 != _.sale_page_appid.findIndex((_) => _ == _) &&
+                      __webpack_require__.push({
+                        unique_id: _.unique_id,
+                        event_name: _.event_name,
+                        start_time: _.start_time,
+                        end_time: _.end_time,
+                        rtime_start_time:
+                          new Date(_.start_time).getTime() / 1e3,
+                      });
+                  }),
+                _
+              );
+            }, [_, _]);
+          })(_.appid),
           _ = Date.now() / 1e3,
           _ = Date.now() / 1e3 - 1578e4,
           _ = (0, _.useMemo)(() => {
@@ -72262,9 +72286,16 @@
                   promo: _,
                 }),
               ),
+              _?.forEach((_) =>
+                _.push({
+                  date: _.rtime_start_time,
+                  type: "deepdiscount",
+                  promo: _,
+                }),
+              ),
               _.sort((_, _) => (_.date ?? 0) - (_.date ?? 0))
             );
-          }, [_, _, _, _, _]);
+          }, [_, _, _, _, _, _]);
         return _.createElement(
           _.Fragment,
           null,
@@ -72390,6 +72421,36 @@
                       _.createElement("b", null, "MM"),
                       " ",
                       _.createElement("span", null, _.title),
+                    ),
+                  );
+                }
+                if ("deepdiscount" == _.type) {
+                  const _ = _.promo;
+                  return _.createElement(
+                    "div",
+                    {
+                      key: "deep_" + _.unique_id,
+                      className: (0, _._)(
+                        _().Promo,
+                        _.rtime_start_time > _ ? _().Upcoming : "",
+                        _.rtime_start_time > _ ? _().Recent : "",
+                        _().DeepDiscount,
+                      ),
+                    },
+                    _.createElement(
+                      "a",
+                      {
+                        href: "#",
+                      },
+                      _.createElement(
+                        "b",
+                        null,
+                        (0, _._)(new Date(_.rtime_start_time).getTime()),
+                      ),
+                      " ",
+                      _.createElement("b", null, "Deep Discount Sale Page"),
+                      " ",
+                      _.createElement("span", null, _.event_name),
                     ),
                   );
                 }
