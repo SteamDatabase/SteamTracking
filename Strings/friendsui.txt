@@ -1,12 +1,12 @@
-  Actual   : 
+  Actual   :
   Comment started here.
-  Expected : 
+  Expected :
   f_bavail: %llu\n
   f_bfree : %llu\n
   f_blocks: %llu\n
   f_bsize : %lu\n
   f_frsize: %lu\n
-  what():  
+  what():
  !"#$%&'()*+,-./0123
  +0000
  2>/dev/null
@@ -16,16 +16,16 @@
  Outdent() without matching Indent().
  Parameter to BackUp() can't be negative.
  ReadToken overflow
- Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
- Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
- [clone 
+ Tokenizer::ParseFloat() passed text that could not have been tokenized as a float:
+ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
+ [clone
  [default = $0
  \n\vinitial_top
  __vector(
- a protocol 
+ a protocol
  args were given.  Full format string was: "
- arguments. 
- but running with 
+ arguments.
+ but running with
  bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
  cannot be required.
  conflicts with an existing enum type.
@@ -33,20 +33,20 @@
  conflicts with an existing nested message type.
  conflicts with an existing oneof type.
  const
- contains invalid 
+ contains invalid
  definition file imports the proto which defines the option.
- details: 
- exceeded maximum protobuf size of 2GB: 
- for 
- has the same name as 
+ details:
+ exceeded maximum protobuf size of 2GB:
+ for
+ has the same name as
  if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
- inflate 1.2.11 Copyright 1995-2017 Mark Adler 
+ inflate 1.2.11 Copyright 1995-2017 Mark Adler
  is unused.
  libpng version 1.6.37 - April 14, 2019\n\n
  message of type "
  noexcept
  not found
- of the Protocol Buffer runtime library, but the installed version is 
+ of the Protocol Buffer runtime library, but the installed version is
  of the Protocol Buffer runtime library, which is not compatible with the installed version (
  restrict
  stack frames not accounted for stack unwind.
@@ -56,7 +56,7 @@
  using zstream
  volatile
  was modified concurrently during serialization.
- with type 
+ with type
 !"Not implemented"
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
@@ -79,7 +79,7 @@
 !sm_bShuttingDown
 !sm_pLogInstance
 " \n\rCMsgSetUIMode
-" because it is missing required fields: 
+" because it is missing required fields:
 " conflicts with field "
 " conflicts with the existing symbol "
 " contains null character.
@@ -96,7 +96,7 @@
 " is already defined in file "
 " is already defined.
 " is an atomic type, not a message.
-" is missing required fields: 
+" is missing required fields:
 " is not a field or extension of message "
 " is not a message type.
 " is not a proto3 enum, but is used in "
@@ -109,7 +109,7 @@
 " is resolved to "(
 " is specified along with field "
 " is specified multiple times.
-" must be unique within 
+" must be unique within
 " not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
 " seems to be defined in "
 " stored in google.protobuf.Any has missing required fields
@@ -133,14 +133,14 @@
 "*\n(CClientNotificationClaimSteamDeckRewards"6\n
 "*\n(CClientNotificationHardwareSurveyPending"7\n
 ", another member of oneof "
-", but only 
-", field number 
+", but only
+", field number
 ", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
 ", which is not imported by "
 ".  To use it here, please add the necessary import.
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
 ". This appears to be a value from a sibling type.
-". This is not 
+". This is not
 ". Value: "
 "/*" inside block comment.  Block comments cannot be nested.
 "0x" must be followed by hex digits.
@@ -319,7 +319,7 @@
 #VGui_Select
 #bML"
 #include
-#include is NULL 
+#include is NULL
 #tDq
 #var_%s
 #vgui_CreateDirectoryFail_AlreadyExists
@@ -346,8 +346,8 @@
 #vgui_ok
 $0  extend .$1 {\n
 $0  extensions $1 to $2;\n
-$0  reserved 
-$0 to max, 
+$0  reserved
+$0 to max,
 $0$1$2 $3 = $4
 $0enum $1 {\n
 $0message $1
@@ -441,7 +441,6 @@ $\nY8O
 %\n!k_SystemAudioPortDirection_Output
 %\n!k_SystemAudioPortType_Video32RGBA
 %a, %e %b %Y %H:%M:%S
-%a, %e %b %Y %H:%M:%S 
 %a, %e-%b-%Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
 %d %d %d %d
@@ -672,7 +671,7 @@ $\nY8O
 (cannot determine missing fields for lite message)
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
 (elem == Count()) || IsValidIndex(elem)
-(merge 
+(merge
 (null)
 (unsigned)elem <= (unsigned)m_Size
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
@@ -805,7 +804,7 @@ $\nY8O
 +\n\vmouse_wheel
 +ulsX
 , bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars, string font
-, but was 
+, but was
 , int SubTabPosition
 , int showDownArrow
 , int zpos, string image, string border, string fillcolor, bool scaleImage, bool gradientVertical, color gradientStart, color gradientEnd
@@ -895,7 +894,7 @@ $\nY8O
 -toggle-overlay-html-mode
 -vguimessages
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-. Difference of 
+. Difference of
 ...<truncated>...
 ..Too many IDATs found
 ./google/protobuf/arena_impl.h
@@ -1131,7 +1130,7 @@ $\nY8O
 /tmp
 /tmp/disk-free.XXXXXX
 /ubuntu12_32
-/ubuntu12_64/disk-free 
+/ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 /usr/bin/xdg-open
 /yQA
@@ -2074,8 +2073,8 @@ $\nY8O
 9\n5k_PublishedFileQueryType_RankedByAveragePlaytimeTrend
 9\n\noneof_decl
 9a&g
-: Tried to copy from a message with a different type. to: 
-: Tried to merge from a message with a different type.  to: 
+: Tried to copy from a message with a different type. to:
+: Tried to merge from a message with a different type.  to:
 : failed to parse contents
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EClientNotificationType_GameRecordingUserMarkerAdded
@@ -2115,7 +2114,7 @@ $\nY8O
 @nSpewThrottleUnconditionalResumeMs
 @nSpewThrottleUnconditionalTriggerCount
 A file with this name is already in the pool.
-A protocol message was rejected because it was too big (more than 
+A protocol message was rejected because it was too big (more than
 A@qVc"
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
@@ -2229,7 +2228,7 @@ Button
 ButtonClicked
 ButtonToggled
 Bx\r9
-Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of
 C-Yn
 CANCELLED
 CAdHocValidation::~CAdHocValidation()
@@ -2320,241 +2319,241 @@ CFriendsWebChat::OnVoiceHotKeyStateChanged
 CGetCursorImageMsg
 CGetTouchConfigDataMsg
 CGetTouchIconDataMsg
-CHECK failed: !InRealOneof(field): 
-CHECK failed: !IsDefault(default_value): 
-CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1): 
-CHECK failed: !checkpoints_.empty(): 
-CHECK failed: !descriptor_: 
-CHECK failed: !ext->is_repeated: 
-CHECK failed: !extension->is_repeated: 
-CHECK failed: !failed_: 
-CHECK failed: !field->options().weak(): 
-CHECK failed: !fields_.empty(): 
-CHECK failed: !file->finished_building_: 
-CHECK failed: !file_: 
-CHECK failed: !had_error_: 
-CHECK failed: !is_closed_: 
-CHECK failed: !name_: 
-CHECK failed: !once_: 
-CHECK failed: !oneof_descriptor->is_synthetic(): 
-CHECK failed: !out.HadError(): 
-CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field): 
-CHECK failed: !tagged_ptr_.IsTagged(): 
-CHECK failed: !tree->empty(): 
-CHECK failed: !value || options_ != nullptr: 
-CHECK failed: !value || source_code_info_ != nullptr: 
-CHECK failed: (&from) != (this): 
-CHECK failed: (&from) != (to): 
-CHECK failed: (&other) != (this): 
-CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL): 
-CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED): 
-CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD): 
-CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD): 
-CHECK failed: (*buffer) == (first_byte): 
-CHECK failed: (0) != (n): 
-CHECK failed: (0) <= (pos): 
-CHECK failed: (0) == (BufferSize()): 
-CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()): 
-CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()): 
-CHECK failed: (backup_bytes_) == (0): 
-CHECK failed: (bucket_index_ & 1) == (0u): 
-CHECK failed: (buffer[0]) >= (128): 
-CHECK failed: (buffer_size) >= (0): 
-CHECK failed: (buffer_used_) == (0): 
-CHECK failed: (buffer_used_) == (buffer_size_): 
-CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization): 
-CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization): 
-CHECK failed: (calc_escaped_size) == (escaped_len): 
-CHECK failed: (count) <= (buffer_used_): 
-CHECK failed: (count) <= (kMaxLength): 
-CHECK failed: (count) <= (last_returned_size_): 
-CHECK failed: (count) == (tree->size()): 
-CHECK failed: (count) >= (0): 
-CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64): 
-CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64): 
-CHECK failed: (current_size_) > (0): 
-CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()): 
-CHECK failed: (digits) < (100): 
-CHECK failed: (extension->is_packed) == (other_extension.is_packed): 
-CHECK failed: (extension->is_packed) == (packed): 
-CHECK failed: (extension->type) == (other_extension.type): 
-CHECK failed: (field->message_type()) == (desc): 
-CHECK failed: (field->options().ctype()) == (ctype): 
-CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES): 
-CHECK failed: (field_count()) == (2): 
-CHECK failed: (final_byte_count) < (target_byte_count): 
-CHECK failed: (first_byte & 0x80) == (0x80): 
-CHECK failed: (first_byte_or_zero) != (0): 
-CHECK failed: (first_byte_or_zero) == (buffer_[0]): 
-CHECK failed: (from.GetDescriptor()) == (descriptor): 
-CHECK failed: (has_bit_index) != (~0u): 
-CHECK failed: (index) < (current_size_): 
-CHECK failed: (index) >= (0): 
-CHECK failed: (internal::AlignUpTo8(n)) == (n): 
-CHECK failed: (it.m_) == (this): 
-CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size): 
-CHECK failed: (last_returned_size_) > (0): 
-CHECK failed: (len) <= (dest_len): 
-CHECK failed: (len) >= (0): 
-CHECK failed: (limit_) >= (ptr_): 
-CHECK failed: (message1->GetReflection()) == (this): 
-CHECK failed: (message2->GetReflection()) == (this): 
-CHECK failed: (message_type) == (field->message_type()): 
-CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize): 
-CHECK failed: (n & (n - 1)) == (0): 
-CHECK failed: (n) >= (0): 
-CHECK failed: (new_num_buckets) >= (kMinTableSize): 
-CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit): 
-CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
-CHECK failed: (out) == (begin + result->size()): 
-CHECK failed: (out) == (begin + result.size()): 
-CHECK failed: (overrun) <= (kSlopBytes): 
-CHECK failed: (pos) <= (x.length_): 
-CHECK failed: (recursion_budget_) < (recursion_limit_): 
-CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u): 
-CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)): 
-CHECK failed: (size) <= (6): 
-CHECK failed: (size) <= (static_cast<size_t>(0x7fffffff)): 
-CHECK failed: (size) > (0): 
-CHECK failed: (static_cast<int64>(new_size)) <= (static_cast<int64>((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0]))): 
-CHECK failed: (static_cast<size_t>(count)) <= (target_->size()): 
-CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)): 
-CHECK failed: (table_[b]) == (table_[b ^ 1]): 
-CHECK failed: (target - output->data()) == (output->size()): 
-CHECK failed: (temp[0]) == ('1'): 
-CHECK failed: (temp[size - 1]) == ('5'): 
-CHECK failed: (to->GetDescriptor()) == (descriptor): 
-CHECK failed: (total_size_ - current_size_) >= (n): 
-CHECK failed: (total_size_) > (0): 
-CHECK failed: (type) != (WireFormatLite::TYPE_ENUM): 
-CHECK failed: (type) != (WireFormatLite::TYPE_GROUP): 
-CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE): 
-CHECK failed: (type) == (WireFormatLite::TYPE_ENUM): 
-CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((c).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((d).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (v.size()) <= (kStringPrintfVectorMaxArgs): 
-CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)): 
-CHECK failed: *ptr: 
-CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size): 
-CHECK failed: GetArena() == NULL: 
-CHECK failed: GetArena() == nullptr: 
-CHECK failed: GetArena() == other->GetArena(): 
-CHECK failed: HasExtensionSet(): 
-CHECK failed: HasHasbits(): 
-CHECK failed: IsDefault(default_value): 
-CHECK failed: IsInitialized(): 
-CHECK failed: IsMapValid() && other.IsMapValid(): 
-CHECK failed: TableEntryIsNonEmptyList(b): 
-CHECK failed: TableEntryIsTree(b): 
-CHECK failed: a.type() == b.type(): 
-CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field: 
-CHECK failed: arena != nullptr: 
-CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL: 
-CHECK failed: builder_: 
-CHECK failed: checkpoints_.empty(): 
-CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE: 
-CHECK failed: ctx.LastTag() != 1: 
-CHECK failed: cur_: 
-CHECK failed: desc_proto.has_name(): 
-CHECK failed: descriptor: 
-CHECK failed: dest: 
-CHECK failed: dynamic.get() != nullptr: 
-CHECK failed: end >= ptr: 
-CHECK failed: enum_type_->value_count(): 
-CHECK failed: errors == nullptr: 
-CHECK failed: extension != NULL: 
-CHECK failed: extension->is_repeated: 
-CHECK failed: fallback_database_ == nullptr: 
-CHECK failed: field != nullptr: 
-CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32): 
-CHECK failed: field->is_repeated() || (index == -1): 
-CHECK failed: field->is_repeated(): 
-CHECK failed: file != nullptr: 
-CHECK failed: file && file->pool_: 
-CHECK failed: file()->finished_building_ == true: 
-CHECK failed: file->pool_->lazily_build_dependencies_: 
-CHECK failed: file_->finished_building_: 
-CHECK failed: find(node->kv.first) == end(): 
-CHECK failed: finished_building_ == true: 
-CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_: 
-CHECK failed: has_default_value(): 
-CHECK failed: i >= 0: 
-CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr: 
-CHECK failed: is_prototype(): 
-CHECK failed: is_repeated: 
-CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes: 
-CHECK failed: limit_ > 0: 
-CHECK failed: limit_ > kSlopBytes: 
-CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_): 
-CHECK failed: limit_end_ == buffer_end_: 
-CHECK failed: m1->GetArena() != m2_arena: 
-CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr: 
-CHECK failed: message_arena != submessage_arena: 
-CHECK failed: mutex_ == nullptr: 
-CHECK failed: n <= size: 
-CHECK failed: n >= kMinTableSize: 
-CHECK failed: node_ != nullptr && m_ != nullptr: 
-CHECK failed: options_ != nullptr: 
-CHECK failed: options_descriptor: 
-CHECK failed: original_uninterpreted_options_field != nullptr: 
-CHECK failed: other->GetArena() != GetArena(): 
-CHECK failed: out_location != nullptr: 
-CHECK failed: output->message_info.prototype != nullptr: 
-CHECK failed: output: 
-CHECK failed: overrun != limit_: 
-CHECK failed: overrun < limit_: 
-CHECK failed: overrun <= kSlopBytes: 
-CHECK failed: overrun >= 0 && overrun <= kSlopBytes: 
-CHECK failed: overrun >= 0: 
-CHECK failed: owning_arena == nullptr: 
-CHECK failed: prototype != NULL: 
-CHECK failed: ptr < end_: 
-CHECK failed: ptr <= buffer_end_ + kSlopBytes: 
-CHECK failed: ptr <= end_ + kSlopBytes: 
-CHECK failed: reflection: 
-CHECK failed: result != nullptr: 
-CHECK failed: s != nullptr: 
-CHECK failed: s >= 0: 
-CHECK failed: schema_.HasHasbits(): 
-CHECK failed: size > 0: 
-CHECK failed: size > chunk_size: 
-CHECK failed: size_ == 0: 
-CHECK failed: size_ > kSlopBytes: 
-CHECK failed: source_code_info_ != nullptr: 
-CHECK failed: submessage->GetArena() == submessage_arena: 
-CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0: 
-CHECK failed: tagged_ptr_.UnsafeGet() != nullptr: 
-CHECK failed: target + size == res: 
-CHECK failed: target_ != NULL: 
-CHECK failed: this != other: 
-CHECK failed: this == other_mutator: 
-CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP: 
-CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE: 
-CHECK failed: uninterpreted_options_field != nullptr: 
-CHECK failed: value != nullptr: 
-CHECK failed: z.first != NULL: 
+CHECK failed: !InRealOneof(field):
+CHECK failed: !IsDefault(default_value):
+CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1):
+CHECK failed: !checkpoints_.empty():
+CHECK failed: !descriptor_:
+CHECK failed: !ext->is_repeated:
+CHECK failed: !extension->is_repeated:
+CHECK failed: !failed_:
+CHECK failed: !field->options().weak():
+CHECK failed: !fields_.empty():
+CHECK failed: !file->finished_building_:
+CHECK failed: !file_:
+CHECK failed: !had_error_:
+CHECK failed: !is_closed_:
+CHECK failed: !name_:
+CHECK failed: !once_:
+CHECK failed: !oneof_descriptor->is_synthetic():
+CHECK failed: !out.HadError():
+CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field):
+CHECK failed: !tagged_ptr_.IsTagged():
+CHECK failed: !tree->empty():
+CHECK failed: !value || options_ != nullptr:
+CHECK failed: !value || source_code_info_ != nullptr:
+CHECK failed: (&from) != (this):
+CHECK failed: (&from) != (to):
+CHECK failed: (&other) != (this):
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED):
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD):
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD):
+CHECK failed: (*buffer) == (first_byte):
+CHECK failed: (0) != (n):
+CHECK failed: (0) <= (pos):
+CHECK failed: (0) == (BufferSize()):
+CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()):
+CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: (backup_bytes_) == (0):
+CHECK failed: (bucket_index_ & 1) == (0u):
+CHECK failed: (buffer[0]) >= (128):
+CHECK failed: (buffer_size) >= (0):
+CHECK failed: (buffer_used_) == (0):
+CHECK failed: (buffer_used_) == (buffer_size_):
+CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization):
+CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization):
+CHECK failed: (calc_escaped_size) == (escaped_len):
+CHECK failed: (count) <= (buffer_used_):
+CHECK failed: (count) <= (kMaxLength):
+CHECK failed: (count) <= (last_returned_size_):
+CHECK failed: (count) == (tree->size()):
+CHECK failed: (count) >= (0):
+CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64):
+CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64):
+CHECK failed: (current_size_) > (0):
+CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
+CHECK failed: (digits) < (100):
+CHECK failed: (extension->is_packed) == (other_extension.is_packed):
+CHECK failed: (extension->is_packed) == (packed):
+CHECK failed: (extension->type) == (other_extension.type):
+CHECK failed: (field->message_type()) == (desc):
+CHECK failed: (field->options().ctype()) == (ctype):
+CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES):
+CHECK failed: (field_count()) == (2):
+CHECK failed: (final_byte_count) < (target_byte_count):
+CHECK failed: (first_byte & 0x80) == (0x80):
+CHECK failed: (first_byte_or_zero) != (0):
+CHECK failed: (first_byte_or_zero) == (buffer_[0]):
+CHECK failed: (from.GetDescriptor()) == (descriptor):
+CHECK failed: (has_bit_index) != (~0u):
+CHECK failed: (index) < (current_size_):
+CHECK failed: (index) >= (0):
+CHECK failed: (internal::AlignUpTo8(n)) == (n):
+CHECK failed: (it.m_) == (this):
+CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size):
+CHECK failed: (last_returned_size_) > (0):
+CHECK failed: (len) <= (dest_len):
+CHECK failed: (len) >= (0):
+CHECK failed: (limit_) >= (ptr_):
+CHECK failed: (message1->GetReflection()) == (this):
+CHECK failed: (message2->GetReflection()) == (this):
+CHECK failed: (message_type) == (field->message_type()):
+CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize):
+CHECK failed: (n & (n - 1)) == (0):
+CHECK failed: (n) >= (0):
+CHECK failed: (new_num_buckets) >= (kMinTableSize):
+CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit):
+CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP):
+CHECK failed: (out) == (begin + result->size()):
+CHECK failed: (out) == (begin + result.size()):
+CHECK failed: (overrun) <= (kSlopBytes):
+CHECK failed: (pos) <= (x.length_):
+CHECK failed: (recursion_budget_) < (recursion_limit_):
+CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u):
+CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)):
+CHECK failed: (size) <= (6):
+CHECK failed: (size) <= (static_cast<size_t>(0x7fffffff)):
+CHECK failed: (size) > (0):
+CHECK failed: (static_cast<int64>(new_size)) <= (static_cast<int64>((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0]))):
+CHECK failed: (static_cast<size_t>(count)) <= (target_->size()):
+CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)):
+CHECK failed: (table_[b]) == (table_[b ^ 1]):
+CHECK failed: (target - output->data()) == (output->size()):
+CHECK failed: (temp[0]) == ('1'):
+CHECK failed: (temp[size - 1]) == ('5'):
+CHECK failed: (to->GetDescriptor()) == (descriptor):
+CHECK failed: (total_size_ - current_size_) >= (n):
+CHECK failed: (total_size_) > (0):
+CHECK failed: (type) != (WireFormatLite::TYPE_ENUM):
+CHECK failed: (type) != (WireFormatLite::TYPE_GROUP):
+CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE):
+CHECK failed: (type) == (WireFormatLite::TYPE_ENUM):
+CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (uintptr_t((c).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (uintptr_t((d).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (v.size()) <= (kStringPrintfVectorMaxArgs):
+CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)):
+CHECK failed: *ptr:
+CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size):
+CHECK failed: GetArena() == NULL:
+CHECK failed: GetArena() == nullptr:
+CHECK failed: GetArena() == other->GetArena():
+CHECK failed: HasExtensionSet():
+CHECK failed: HasHasbits():
+CHECK failed: IsDefault(default_value):
+CHECK failed: IsInitialized():
+CHECK failed: IsMapValid() && other.IsMapValid():
+CHECK failed: TableEntryIsNonEmptyList(b):
+CHECK failed: TableEntryIsTree(b):
+CHECK failed: a.type() == b.type():
+CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field:
+CHECK failed: arena != nullptr:
+CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL:
+CHECK failed: builder_:
+CHECK failed: checkpoints_.empty():
+CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE:
+CHECK failed: ctx.LastTag() != 1:
+CHECK failed: cur_:
+CHECK failed: desc_proto.has_name():
+CHECK failed: descriptor:
+CHECK failed: dest:
+CHECK failed: dynamic.get() != nullptr:
+CHECK failed: end >= ptr:
+CHECK failed: enum_type_->value_count():
+CHECK failed: errors == nullptr:
+CHECK failed: extension != NULL:
+CHECK failed: extension->is_repeated:
+CHECK failed: fallback_database_ == nullptr:
+CHECK failed: field != nullptr:
+CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32):
+CHECK failed: field->is_repeated() || (index == -1):
+CHECK failed: field->is_repeated():
+CHECK failed: file != nullptr:
+CHECK failed: file && file->pool_:
+CHECK failed: file()->finished_building_ == true:
+CHECK failed: file->pool_->lazily_build_dependencies_:
+CHECK failed: file_->finished_building_:
+CHECK failed: find(node->kv.first) == end():
+CHECK failed: finished_building_ == true:
+CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_:
+CHECK failed: has_default_value():
+CHECK failed: i >= 0:
+CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr:
+CHECK failed: is_prototype():
+CHECK failed: is_repeated:
+CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes:
+CHECK failed: limit_ > 0:
+CHECK failed: limit_ > kSlopBytes:
+CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_):
+CHECK failed: limit_end_ == buffer_end_:
+CHECK failed: m1->GetArena() != m2_arena:
+CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr:
+CHECK failed: message_arena != submessage_arena:
+CHECK failed: mutex_ == nullptr:
+CHECK failed: n <= size:
+CHECK failed: n >= kMinTableSize:
+CHECK failed: node_ != nullptr && m_ != nullptr:
+CHECK failed: options_ != nullptr:
+CHECK failed: options_descriptor:
+CHECK failed: original_uninterpreted_options_field != nullptr:
+CHECK failed: other->GetArena() != GetArena():
+CHECK failed: out_location != nullptr:
+CHECK failed: output->message_info.prototype != nullptr:
+CHECK failed: output:
+CHECK failed: overrun != limit_:
+CHECK failed: overrun < limit_:
+CHECK failed: overrun <= kSlopBytes:
+CHECK failed: overrun >= 0 && overrun <= kSlopBytes:
+CHECK failed: overrun >= 0:
+CHECK failed: owning_arena == nullptr:
+CHECK failed: prototype != NULL:
+CHECK failed: ptr < end_:
+CHECK failed: ptr <= buffer_end_ + kSlopBytes:
+CHECK failed: ptr <= end_ + kSlopBytes:
+CHECK failed: reflection:
+CHECK failed: result != nullptr:
+CHECK failed: s != nullptr:
+CHECK failed: s >= 0:
+CHECK failed: schema_.HasHasbits():
+CHECK failed: size > 0:
+CHECK failed: size > chunk_size:
+CHECK failed: size_ == 0:
+CHECK failed: size_ > kSlopBytes:
+CHECK failed: source_code_info_ != nullptr:
+CHECK failed: submessage->GetArena() == submessage_arena:
+CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0:
+CHECK failed: tagged_ptr_.UnsafeGet() != nullptr:
+CHECK failed: target + size == res:
+CHECK failed: target_ != NULL:
+CHECK failed: this != other:
+CHECK failed: this == other_mutator:
+CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP:
+CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE:
+CHECK failed: uninterpreted_options_field != nullptr:
+CHECK failed: value != nullptr:
+CHECK failed: z.first != NULL:
 CHROMEOS
 CHTMLFindBar
 CHTMLPageSecurityInfo
@@ -2875,14 +2874,14 @@ Call to NULL read function
 Call to NULL write function
 Caller should provide us with *buffer_ when buffer is non-empty
 Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
-Can't 
+Can't
 Can't BackUp() after failed Next().
 Can't add Keybindings Context for unnamed panels\n
 Can't discard critical data on CRC error
 Can't get here.
 Can't get here: failed to get default value as string
 Can't happen
-Can't print proto content: proto type 
+Can't print proto content: proto type
 Can't reach
 Can't set both read_data_fn and write_data_fn in the same structure
 Can't write sCAL (buffer too small)
@@ -2894,7 +2893,7 @@ CancelButton
 Cannot call BuildFile on a DescriptorPool that uses a DescriptorDatabase.  You must instead find a way to get your file into the underlying database.
 Cannot copy json_name to a proto of a different size.
 Cannot get here
-Cannot skip field value, unexpected token: 
+Cannot skip field value, unexpected token:
 Caps Lock
 Caps Lock Toggle
 CaptionGripPanel
@@ -2998,7 +2997,7 @@ Convars
 ConversionMode
 ConversionModeMenu
 Copy
-Could not create an instance of 
+Could not create an instance of
 Could not find type "
 Could not get SERVERBROWSER and RUNGAMEENGINE interfaces.
 Could not parse
@@ -3078,8 +3077,8 @@ DoPaste
 DoSelectAll
 DoSentenceModeChanged
 Don't know how to check filesystem type on POSIX!
-Don't lookup extension types if they aren't present (1). 
-Don't lookup extension types if they aren't present (2). 
+Don't lookup extension types if they aren't present (1).
+Don't lookup extension types if they aren't present (2).
 Down
 DragDrop
 DragDrop.DragFrame
@@ -3198,7 +3197,7 @@ English
 EnsureValidBoolValue
 Enter
 Entry
-Enum name 
+Enum name
 Enum type "
 Enum value "$0" is reserved multiple times.
 Enum value "$0" is reserved.
@@ -3212,7 +3211,7 @@ EnumValueOptions
 Enums must contain at least one value.
 Error
 Error State on string being set.
-Error parsing text-format 
+Error parsing text-format
 Error reporting not implemented.
 Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
@@ -3220,22 +3219,22 @@ Escape
 Estonian
 Execute: %s\n
 Expand
-Expanded map entry type 
-Expect a decimal number, got: 
+Expanded map entry type
+Expect a decimal number, got:
 Expected "
 Expected %lld but got %lld!
-Expected double, got: 
+Expected double, got:
 Expected eight hex digits up to 10ffff for \U escape sequence
 Expected four hex digits for \u escape sequence.
 Expected hex digits for escape sequence.
-Expected identifier, got: 
-Expected integer or identifier, got: 
-Expected integer, got: 
-Expected string, got: 
+Expected identifier, got:
+Expected integer or identifier, got:
+Expected integer, got:
+Expected string, got:
 Explicit default values are not allowed in proto3.
 Extension "
-Extension conflicts with extension already in database: extend 
-Extension factory's GetPrototype() returned NULL for extension: 
+Extension conflicts with extension already in database: extend
+Extension factory's GetPrototype() returned NULL for extension:
 Extension not found.
 Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
 Extension number $0 has already been used in "$1" by extension "$2".
@@ -3270,12 +3269,12 @@ Failed to provide options
 Failed to remove log event from threadsafe queue!
 Failed to start Addl Log Instance for prefix %s
 False
-FastHexToBuffer() wants non-negative integers, not 
+FastHexToBuffer() wants non-negative integers, not
 February
 Feel free to add support for more if you need it.
 Field "
 Field "$0" uses reserved number $1.
-Field = 
+Field =
 Field does not match message type.
 Field is not a map field.
 Field is repeated; the method requires a singular field.
@@ -3288,7 +3287,7 @@ Field numbers cannot be greater than $0.
 Field numbers must be positive integers.
 Field with message or enum type missing type_name.
 Field with primitive type has type_name.
-Field: 
+Field:
 FieldDescriptorProto
 FieldDescriptorProto.extendee not set for extension field.
 FieldDescriptorProto.extendee set for non-extension field.
@@ -3299,12 +3298,12 @@ FieldSize
 Fields in the same oneof must be defined consecutively. "$0" cannot be defined before the completion of the "$1" oneof definition.
 Fields of oneofs must themselves have label LABEL_OPTIONAL.
 Fields with proto3_optional set must be a member of a one-field oneof
-File already exists in database: 
-File appears to be in generated pool but wasn't registered: 
+File already exists in database:
+File appears to be in generated pool but wasn't registered:
 File change notification for %s but no file contents changed based on hash\n
-File is already registered: 
-File not found in database (unexpected): 
-File recursively imports itself: 
+File is already registered:
+File not found in database (unexpected):
+File recursively imports itself:
 FileCompletionEdit
 FileDescriptorProto
 FileDescriptorSet
@@ -3333,7 +3332,7 @@ FoCLcx
 FolderIcon
 FolderUpButton
 ForwardButton
-Found invalid proto option data for: 
+Found invalid proto option data for:
 Frame
 Frame.AutoSnapRange
 Frame.ClientInsetX
@@ -3501,7 +3500,7 @@ Ignoring extension "
 Ignoring invalid time value
 Ignoring request to write a PLTE chunk in grayscale PNG
 IiGM>nw
-Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field: 
+Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
 Image
 Image height exceeds user limit in IHDR
 Image height is zero in IHDR
@@ -3513,12 +3512,12 @@ ImagePanel
 ImeCancelComposition
 ImeCommitString
 ImeCompositionString
-Import 
+Import
 Import "
 Incorrect number of arguments.  %d arguments required, %d were given.\n
 Index must be -1 for non-repeated fields
 Index must be -1 for singular fields.
-Index must be in range of repeated field values. 
+Index must be in range of repeated field values.
 Index out-of-bounds (field is empty).
 Indonesian
 Infinite time value
@@ -3558,7 +3557,7 @@ Invalid escape sequence in string literal.
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
 Invalid filter method in IHDR
 Invalid filter type specified
-Invalid float number: 
+Invalid float number:
 Invalid format for pCAL parameter
 Invalid iCCP compression method
 Invalid image color type specified
@@ -3576,7 +3575,7 @@ Invalid number of transparent colors specified
 Invalid object
 Invalid pCAL equation type
 Invalid pCAL parameter count
-Invalid package name: 
+Invalid package name:
 Invalid palette
 Invalid palette length
 Invalid palette size, hIST allocation skipped
@@ -3593,16 +3592,16 @@ Invalid sCAL width ignored
 Invalid sRGB rendering intent specified
 Invalid spew group
 Invalid strings::Substitute() format string: "
-Invalid symbol name: 
+Invalid symbol name:
 Invalid time specified for tIME chunk
 Invalid time value
 Invalid value for boolean field "
 Invalid weak dependency index.
-Invalid wire type for CPPTYPE_INT32: 
-Invalid wire type for CPPTYPE_INT64: 
-Invalid wire type for CPPTYPE_MESSAGE: 
-Invalid wire type for CPPTYPE_UINT32: 
-Invalid wire type for CPPTYPE_UINT64: 
+Invalid wire type for CPPTYPE_INT32:
+Invalid wire type for CPPTYPE_INT64:
+Invalid wire type for CPPTYPE_MESSAGE:
+Invalid wire type for CPPTYPE_UINT32:
+Invalid wire type for CPPTYPE_UINT64:
 Invalidate
 Irish
 Is64BitOS
@@ -3838,7 +3837,7 @@ Kyrgyz
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" 
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
 LINUX
 LINUX32
 LINUX64
@@ -3907,7 +3906,7 @@ Log started.\n
 Log stopped.\n
 Logger
 Logger does not handle * char as used for a width specifier (where width is a param)
-Logic problem? szsrc = 
+Logic problem? szsrc =
 LookInLabel
 Lowered '%s' -> '%s'\n
 Luxembourgish
@@ -3940,7 +3939,7 @@ MapKey::GetInt64Value
 MapKey::GetStringValue
 MapKey::GetUInt32Value
 MapKey::GetUInt64Value
-MapKey::type MapKey is not initialized. 
+MapKey::type MapKey is not initialized.
 MapValueConstRef::GetBoolValue
 MapValueConstRef::GetDoubleValue
 MapValueConstRef::GetEnumValue
@@ -3984,9 +3983,9 @@ Message '%s' not handled by panel '%s'\n
 Message '%s', sent to '%s', has an invalid parameter type\n
 Message '%s', sent to '%s', has invalid parameter types\n
 Message class "
-Message does not support reflection (type 
-Message is too deep, the parser exceeded the configured recursion limit of 
-Message missing required fields: 
+Message does not support reflection (type
+Message is too deep, the parser exceeded the configured recursion limit of
+Message missing required fields:
 Message of type "
 Message type "
 MessageBox
@@ -4334,7 +4333,7 @@ Not a PNG file
 Not connected / invalid hSharedConnection
 Not enough image data
 Not found
-Not implemented field number 
+Not implemented field number
 Not recognizing known sRGB profile that has been edited
 Not supported.
 NotConnected
@@ -4501,14 +4500,14 @@ Reached impossible case in HasBit().
 Read Error
 Read failure in png_handle_zTXt
 Read palette index exceeding num_palette
-Recursion limit at end of parse should be 
+Recursion limit at end of parse should be
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got conditional between key and value
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got } in key
 ReleaseLast
-ReleaseLast() called on a RepeatedPtrField that is on an arena, 
+ReleaseLast() called on a RepeatedPtrField that is on an arena,
 ReleaseMessage
 ReloadButton
 Remote call failed
@@ -4728,7 +4727,7 @@ Slovenian
 Sm"\vg
 SnapRange
 Software\Valve\Steam\FriendsUI\FriendsUIJSON
-Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
+Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
 Sorani
 Sotho
 Sounds_EventsAndAnnouncements
@@ -4865,7 +4864,7 @@ String literals cannot cross line boundaries.
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
-StringPrintfVector currently only supports up to 
+StringPrintfVector currently only supports up to
 SubTabPosition
 Sunday
 Supported Types (%s)
@@ -4875,8 +4874,8 @@ Swedish
 Symbol name "
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 Synthetic oneofs must be after all other oneofs
-TLS init function for 
-TLS wrapper function for 
+TLS init function for
+TLS wrapper function for
 TMPDIR
 TSListBase_Init
 TSListBase_Pop
@@ -4908,13 +4907,13 @@ TextKillFocus
 TextNewLine
 Thai
 The JSON camel-case name of field "
-The [proto3_optional=true] option may only be set on proto3fields, not 
-The extension 
+The [proto3_optional=true] option may only be set on proto3fields, not
+The extension
 The first enum value must be zero in proto3.
-The type parameter T in RepeatedFieldRef<T> API doesn't match 
+The type parameter T in RepeatedFieldRef<T> API doesn't match
 This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
-This program requires version 
-This program was compiled against version 
+This program requires version
+This program was compiled against version
 This shouldn't be called if all the sizes are equal.
 ThreadGetCurrentId
 ThreadGetCurrentProcessId
@@ -4952,7 +4951,7 @@ TreeNodeText
 TreeView
 TreeViewItemSelected
 TreeViewSubPanel
-Tried to merge messages of different types 
+Tried to merge messages of different types
 Tried to register a non-generated type with the generated type registry.
 True
 Tswana
@@ -4960,8 +4959,8 @@ Tuesday
 Turkish
 Turkmen
 Type
-Type appears to be in generated pool but wasn't 
-Type is already registered: 
+Type appears to be in generated pool but wasn't
+Type is already registered:
 Type: %s\n
 UNAUTHENTICATED
 UNAVAILABLE
@@ -4976,7 +4975,7 @@ URLLabel
 URLStatusImage
 URLText
 UTF-8
-UTF-8 data when 
+UTF-8 data when
 UUUU
 Ukrainian
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
@@ -4984,9 +4983,9 @@ Unbuffered read should be called with pvData buffer that is aligned to system pa
 Unexpected Error
 Unexpected end of string.
 Unexpected error
-Unexpected failure while serializing option submessage 
+Unexpected failure while serializing option submessage
 Unhandled notification type coming from Friends UI?
-Unimplemented type: 
+Unimplemented type:
 Uninitialized row
 Uninterpreted option is missing name or value.
 UninterpretedOption
@@ -5010,7 +5009,7 @@ Unrecognized character code '%c' in format string, ignoring
 Unrecognized character code (%c) in format string, ignoring
 Unrecognized equation type for pCAL chunk
 Unrecognized field type: %d
-Unrecognized syntax: 
+Unrecognized syntax:
 Unrecognized unit type for oFFs chunk
 Unrecognized unit type for pHYs chunk
 Unsupported
@@ -5040,7 +5039,7 @@ VGuiModuleTracker001
 VISTA
 VPanel
 VProfInternalEnterScopeCurrentThread
-VTT for 
+VTT for
 V_AppendSlash
 V_ComposeFileName
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
@@ -5137,7 +5136,7 @@ WINDOWS
 WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 Warning
-Warning parsing text-format 
+Warning parsing text-format
 Wb8e{ ;
 WeakRandomFloat
 WeakRandomInt
@@ -5203,7 +5202,7 @@ Zulu
 [%s] applying key '%s', has changed from '%s' to '%s'\n
 [A:%u:%u:%u]
 [M:%u:%u:%u]
-[TXN:%llu] 
+[TXN:%llu]
 [abi:
 [h1R
 [lazy = true] can only be specified for submessage fields.
@@ -5211,13 +5210,13 @@ Zulu
 [packed = true] can only be specified for repeated primitive fields.
 \%03o
 \U%08x
-\n    Actual    : 
-\n    Field type: 
-\n  Field       : 
-\n  Message type: 
-\n  Problem     : 
-\n  Problem     : Enum value did not match field type:\n    Expected  : 
-\n  Problem     : Field is not the right type for this message:\n    Expected  : 
+\n    Actual    :
+\n    Field type:
+\n  Field       :
+\n  Message type:
+\n  Problem     :
+\n  Problem     : Enum value did not match field type:\n    Expected  :
+\n  Problem     : Field is not the right type for this message:\n    Expected  :
 \n CClientNotificationFriendMessage
 \n EWindowsUpdateInstallationImpact
 \n google/protobuf/descriptor.proto
@@ -5235,7 +5234,7 @@ Zulu
 \n(ESteamDeckCompatibilityResultDisplayType
 \n+steammessages_clientnotificationtypes.proto"4\n#CClientNotificationCloudSyncFailure
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
-\nParsing attempt:  
+\nParsing attempt:
 \nYg:a
 \n\fCQuitRequest"%\n
 \n\fCSetTitleMsg
@@ -5478,7 +5477,7 @@ _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
-_Sat 
+_Sat
 _SpewMessageType
 ___tls_get_addr
 __assert_fail
@@ -5628,7 +5627,7 @@ aesni_xts_encrypt
 afrikaans
 aggregate_value
 albanian
-alignof 
+alignof
 allocator
 allowed in proto3.
 allowed_daily_minutes
@@ -5723,7 +5722,7 @@ bad data option (internal error)
 bad encoding (internal error)
 bad height format
 bad keyword
-bad longjmp: 
+bad longjmp:
 bad parameters to zlib
 bad width format
 bad_function_call
@@ -5795,7 +5794,7 @@ btowc
 buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
 buf.IsText()
 buffer error
-buffer. Use the 'bytes' type if you intend to send raw 
+buffer. Use the 'bytes' type if you intend to send raw
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
 buildGroup != NULL
 build_id
@@ -5805,7 +5804,7 @@ button
 bwiO'
 byte
 bytes
-bytes. 
+bytes.
 cActualReplacements == cReplacements
 cChildren <= SHRT_MAX
 cDaysKeepPersistentLogFiles > 0
@@ -5887,7 +5886,7 @@ clientui_overlay_fps
 clip_id
 clock_gettime
 close
-close() failed: 
+close() failed:
 closedir
 closeonescape
 cloud
@@ -5905,7 +5904,7 @@ column
 com.google.protobufB
 command
 community.csgo.com.cn
-complex 
+complex
 compressed data too long
 config
 configResponse
@@ -5920,7 +5919,7 @@ const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::inte
 const google::protobuf::internal::ExtensionSet::KeyValue* google::protobuf::internal::ExtensionSet::flat_end() const
 const string& google::protobuf::UnknownField::length_delimited() const
 const_cast
-construction vtable for 
+construction vtable for
 content
 context.m_vecStack.Count() <= 1
 contextmenu
@@ -5949,7 +5948,7 @@ copyurl
 could not get input settings
 count
 count >= 0
-covariant return thunk to 
+covariant return thunk to
 created
 created64
 creation_flags
@@ -5998,8 +5997,8 @@ decltype(nullptr)
 default
 default_local_path
 deflateEnd failed (ignored)
-delete 
-delete[] 
+delete
+delete[]
 delta
 deltax
 deltay
@@ -6125,7 +6124,6 @@ faccessat
 facebook.com
 fallocate64
 false
-false 
 false"
 false"&\n\fCMsgStopFind
 false"M\n
@@ -6291,8 +6289,8 @@ gettext
 getuid
 getwc
 gizmodo.com
-global constructors keyed to 
-global destructors keyed to 
+global constructors keyed to
+global destructors keyed to
 global_achieved_pct
 gmtime
 google.fr
@@ -6424,7 +6422,7 @@ gray[8] color-map: too few entries
 greek
 greeting
 group
-guard variable for 
+guard variable for
 guest_id
 guestid
 guestpass
@@ -6448,7 +6446,7 @@ height
 help
 hi5.com
 hidden
-hidden alias for 
+hidden alias for
 hindi
 hintText
 horizontal-align
@@ -6545,7 +6543,7 @@ image-width-only
 imageAlignment
 imageSelected
 imagecolor
-imaginary 
+imaginary
 import "$0";\n
 import public "$0";\n
 import weak "$0";\n
@@ -6655,8 +6653,8 @@ itemIndex
 itemid
 ja_JP
 japanese
-java Class for 
-java resource 
+java Class for
+java resource
 java_generate_equals_and_hash
 java_generic_services
 java_multiple_files
@@ -7498,7 +7496,7 @@ negative_int_value
 nepali
 network
 networkmgr
-new 
+new
 new[]
 new_backpack_items
 new_invite_count
@@ -7512,8 +7510,8 @@ no_NO
 no_standard_descriptor_accessor
 non-positive height
 non-positive width
-non-transaction clone for 
-non-virtual thunk to 
+non-transaction clone for
+non-virtual thunk to
 none
 normal_keycode
 north
@@ -7522,7 +7520,7 @@ north-west
 northeast
 northwest
 norwegian
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 notification_type
 notificationid
 null
@@ -7554,8 +7552,7 @@ openexternalforpid/
 opengl
 openurl_external
 operator
-operator 
-operator"" 
+operator""
 option json_name is not allowed on extension fields.
 optional
 options
@@ -7747,7 +7744,7 @@ pvecAddressesOut != nullptr || pSingleOutput != nullptr
 pwrite64
 py_generic_services
 qR5FE%
-qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
+qdZRMHD@=;86421/.-+*)(''&%$$#""!!
 quality
 quechua
 queueAsList
@@ -7773,7 +7770,7 @@ reference temporary #
 referrer
 refresh_rate_denominator
 refresh_rate_numerator
-registered: 
+registered:
 reinterpret_cast
 reject
 relative
@@ -7956,10 +7953,10 @@ sinhala
 sint32
 sint64
 size
-size too big: 
+size too big:
 size_t to int conversion
 sizeable
-sizeof 
+sizeof
 sizeof...
 slovak
 slovenian
@@ -8091,7 +8088,7 @@ strchr
 strcmp
 strcpy
 strdup
-stream 
+stream
 stream end
 stream error
 streaming
@@ -8140,7 +8137,7 @@ swedish
 symlink
 syntax
 syntax = "$0";\n\n
-syntax error at line %d near: 
+syntax error at line %d near:
 syscall
 system
 system_can_suspend
@@ -8162,7 +8159,7 @@ tatar
 tchinese
 teamfortress.com
 telugu
-template parameter object for 
+template parameter object for
 temporary_enabled_features
 temporary_playtime_restrictions
 terminate called after throwing an instance of '
@@ -8183,12 +8180,11 @@ textureid
 tf2.com
 th_TH
 thai
-the actual field type (for enums T should be the generated enum 
+the actual field type (for enums T should be the generated enum
 the global scope
 this
 threads
 throw
-throw 
 tigrinya
 time
 time_requested
@@ -8214,7 +8210,7 @@ topGrip
 trGrip
 tr_TR
 trailing_comments
-transaction clone for 
+transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 true
@@ -8232,15 +8228,15 @@ type() == TYPE_LENGTH_DELIMITED
 type() == TYPE_VARINT
 type.googleapis.com/
 type.googleprod.com/
-typeinfo fn for 
-typeinfo for 
+typeinfo fn for
+typeinfo for
 typeinfo for SteamThreadTools::CThread
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
-typeinfo name for 
+typeinfo name for
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
 typeinfo name for __gnu_cxx::__concurrence_lock_error
@@ -8305,7 +8301,7 @@ unsupported zlib version
 uparrow
 upper
 urdu
-url 
+url
 urls
 use_qos
 user_css
@@ -8355,7 +8351,7 @@ vi_VN
 vietnamese
 viewfriendsgame
 viewsource
-virtual thunk to 
+virtual thunk to
 visible
 vkHotKey
 void
@@ -8368,7 +8364,7 @@ void google::protobuf::internal::byteswap<8>(void*)
 void google::protobuf::io::CodedInputStream::UnsafeDecrementRecursionDepth()
 vr_overlay_key
 vsnprintf
-vtable for 
+vtable for
 vtable for CAdHocValidation_SimpleCallback
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
@@ -8407,7 +8403,7 @@ wide
 wide > 0
 width
 wikipedia.org
-with a type that does not implement MergeFrom. This is unsafe; 
+with a type that does not implement MergeFrom. This is unsafe;
 wmemchr
 wmemcmp
 wmemcpy

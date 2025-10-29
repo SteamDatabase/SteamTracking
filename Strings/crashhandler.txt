@@ -12,7 +12,7 @@
   f_blocks: %llu\n
   f_bsize : %lu\n
   f_frsize: %lu\n
-  what():  
+  what():
  (deleted)
  - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u\n
  2>/dev/null
@@ -23,12 +23,12 @@
  KiB
  Mbps
  MiB
- [clone 
+ [clone
  __vector(
  bps
  bytes
  const
- for 
+ for
  noexcept
  restrict
  throw
@@ -61,7 +61,7 @@ $ORIGIN
 %0.8X%0.4X%0.4X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
 %0.8X-%0.4X-%0.4X-%0.2X%0.2X-%0.2X%0.2X%0.2X%0.2X%0.2X%0.2X
 %02d:%02d:%02d
-%02i/%02i %02i:%02i:%02i 
+%02i/%02i %02i:%02i:%02i
 %04d%02d%02d%02d%02d%02d
 %8X%4X%4X%2X%2X%2X%2X%2X%2X%2X%2X
 %8X-%4X-%4X-%2X%2X-%2X%2X%2X%2X%2X%2X
@@ -223,7 +223,7 @@ $ORIGIN
 &yacute;
 &yen;
 &yuml;
-'', upload 
+'', upload
 ( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
 ( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
 (%zu) Descend: %s, (%s), %s\n
@@ -312,7 +312,7 @@ $ORIGIN
 /tmp
 /tmp/disk-free.XXXXXX
 /tmp/dumps
-/ubuntu12_64/disk-free 
+/ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 0123456789
 0123456789ABCDEF
@@ -477,7 +477,7 @@ Failed to get thread priority: foreign thread unsupported\n
 Failed to get thread priority: getpriority failed %d\n
 Failed to set thread local value
 Failed writing minidump, nothing to upload.\n
-Fatal Assertion Failed: 
+Fatal Assertion Failed:
 Fatal assert
 Fatal assert; application exiting
 February
@@ -704,8 +704,8 @@ SteamRealPath
 SteamUniverse
 SteamUser
 Sunday
-TLS init function for 
-TLS wrapper function for 
+TLS init function for
+TLS wrapper function for
 TMPDIR
 Target buffer for V_URLEncode should be 3x source length, plus one for terminating null\n
 Target buffer too short to terminate\n
@@ -735,7 +735,7 @@ Unmatched %s\n
 Uploading dump (in-process) [url '%s', proxy '%s']\n%s\n
 UserID
 VPROF Report for Thread: %d - %s\n
-VTT for 
+VTT for
 V_AppendSlash: ran out of space on %s.
 V_ConvertStringToUUID
 V_ConvertUUIDToString
@@ -784,7 +784,7 @@ _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _IsValidIndex( y, unNodeSize, pMemBase )
 _STEAM_SETENV_MANAGER
-_Sat 
+_Sat
 ___tls_get_addr
 __assert_fail
 __ctype_b_loc
@@ -888,7 +888,7 @@ aarch64
 abort
 access
 adding %d curl form parameters\n
-alignof 
+alignof
 all_proxy
 allocation_state_ == ARRAY
 allocation_state_ == SINGLE_OBJECT_WITH_ARRAY
@@ -980,19 +980,19 @@ closedir
 cmdline
 cntrl
 com.valvesoftware.steam
-complex 
+complex
 components.Count() == 0
 console
 const char* google_breakpad::ProcCpuInfoReader::GetValueAndLen(size_t*)
 const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Shdr = Elf32_Shdr; typename ElfClass::Word = unsigned int]
 const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Shdr = Elf64_Shdr; typename ElfClass::Word = unsigned int]
 const_cast
-construction vtable for 
+construction vtable for
 count && length
 count == 0 || s1 != NULL
 count == 0 || s2 != NULL
 count >= 0
-covariant return thunk to 
+covariant return thunk to
 cpu family
 crash
 crashhandler.so
@@ -1026,8 +1026,8 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-delete 
-delete[] 
+delete
+delete[]
 descriptor.path_.empty()
 dest != NULL
 destCapacity != 0
@@ -1054,7 +1054,7 @@ endmntent
 environ
 error
 error:  %s\n
-exec 
+exec
 execv
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 expandableSpace
@@ -1064,7 +1064,6 @@ externaltests.so
 faccessat
 fallocate64
 false
-false 
 fclose
 fcntl
 fd_ != -1 || minidump_path
@@ -1126,8 +1125,8 @@ getpriority
 gettext
 gettimeofday
 getwc
-global constructors keyed to 
-global destructors keyed to 
+global constructors keyed to
+global destructors keyed to
 gmtime
 gmtime_r
 gnu_get_libc_version
@@ -1137,15 +1136,15 @@ google_breakpad::MinidumpDescriptor::MinidumpDescriptor(const string&)
 gp_regs || size
 graph
 gsoapwrapper.so
-guard variable for 
+guard variable for
 half
-hidden alias for 
+hidden alias for
 http_proxy
 https://crash.steampowered.com/submit
 iconv
 iconv_close
 iconv_open
-imaginary 
+imaginary
 in != out
 info != __null
 info.m_pReplacementString == 0
@@ -1156,8 +1155,8 @@ iswalnum
 iswalpha
 iswspace
 item %p sentinel corrupted. skipping.\n
-java Class for 
-java resource 
+java Class for
+java resource
 kill
 lchown
 ld-linux.so.2
@@ -1272,11 +1271,11 @@ nValue >= 0 && nValue <= 15
 name != __null
 nanosleep
 nattypeprobe.so
-new 
+new
 new[]
-non-transaction clone for 
-non-virtual thunk to 
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+non-transaction clone for
+non-virtual thunk to
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 nsection > 0
 null
 num > 0
@@ -1289,8 +1288,7 @@ open
 open64
 opendir
 operator
-operator 
-operator"" 
+operator""
 output
 outsize >= ( inputbytes * 2 ) + 1
 outsize >= 1
@@ -1433,7 +1431,7 @@ signal
 signed char
 sigprocmask
 size
-sizeof 
+sizeof
 sizeof...
 snprintf
 space
@@ -1519,34 +1517,33 @@ success = %s\n
 swprintf
 swscanf
 symlink
-syntax error at line %d near: 
+syntax error at line %d near:
 syscall
 sysconf
 system
 szDomainName != nullptr
 task
-template parameter object for 
+template parameter object for
 tenfoot.so
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
-the 
+the
 the same event name (%s) was created as both manual and auto reset, something's fubar'd
 this
 throw
-throw 
 tid(%u) pthread_key_create failed: %s\n
 time
 timegm
 timezone
 tolower
 towupper
-transaction clone for 
+transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 true
-typeinfo fn for 
-typeinfo for 
+typeinfo fn for
+typeinfo for
 typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
@@ -1634,7 +1631,7 @@ typeinfo for void*
 typeinfo for wchar_t
 typeinfo for wchar_t const*
 typeinfo for wchar_t*
-typeinfo name for 
+typeinfo name for
 typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
@@ -1756,7 +1753,7 @@ vgui2_s.so
 video.so
 video64_server.so
 virtual bool google_breakpad::LinuxPtraceDumper::GetThreadInfoByIndex(size_t, google_breakpad::ThreadInfo*)
-virtual thunk to 
+virtual thunk to
 void
 void google_breakpad::LineReader::PopLine(unsigned int)
 void google_breakpad::MinidumpDescriptor::UpdatePath(const char*)
@@ -1771,7 +1768,7 @@ vsnprintf
 vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
-vtable for 
+vtable for
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception

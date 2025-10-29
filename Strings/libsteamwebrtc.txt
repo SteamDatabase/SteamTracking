@@ -1,36 +1,36 @@
-            Not Before: 
+            Not Before:
         Issuer:%c
         Serial Number:
-        Subject OCSP hash: 
+        Subject OCSP hash:
         Subject Public Key Info:\n
         Subject:%c
         Validity\n
-    Signature Algorithm: 
+    Signature Algorithm:
    3 ; A I S \n
   !!""##$$%%&&''(())**+,-./0123456789:
   !!""##$$%%&&''(())**+,-./0123456789:;<>@BDFHJLNP
   !!""##$$%%&''(())**++,-./0123456789:;<=>?@
-  delay: 
-  self-test: 
+  delay:
+  self-test:
  !!"#$$%&''()**+,-../012234567789:;<<=>?@ABCCDEFGHIJKKLMNOPQRSTUVVWXYZ[\]^_`abcd
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  $8O[lv
  %s%lu (%s0x%lx)\n
- ' ) - 3 G M Q _ c e i w } 
- (%s vs. %s)\n# 
+ ' ) - 3 G M Q _ c e i w }
+ (%s vs. %s)\n#
  (INVALID PSS PARAMETERS)\n
  (Negative)
- (added to 
+ (added to
  (after switching dampening interval)
  (default stream)
- (expecting 
+ (expecting
  (line:
- (referencing SPS 
+ (referencing SPS
  +06BKKQSS\aaacciiiii{
  -- error want read
  -- error want write
- -- flushed 
+ -- flushed
  -- onStreamReadable
  -- onStreamWriteable
  -- remote side closed
@@ -43,67 +43,67 @@
  => available=
  > kMaxValidRatio (
  @ffffff
- Actual: 
+ Actual:
  Asize <= kMaxSize
  BGRA
  BackUp() can only be called after Next().
- Best 
+ Best
  Can't back up over more bytes than were returned by the last call to Next().
- Capture Requested 
- Changes: 
- ConstrainSupportedFormats 
+ Capture Requested
+ Changes:
+ ConstrainSupportedFormats
  Failed to insert packet
- FlexFEC packets with payload type: 
- Frame stats: 
+ FlexFEC packets with payload type:
+ Frame stats:
  Fu%d
  GMT
  HTTP/1.0\r\n
- Hz not supported. 
- Input: 
- Interval 
- Local address: 
- Minimum to probe further: 
+ Hz not supported.
+ Input:
+ Interval
+ Local address:
+ Minimum to probe further:
  NAL units. Will not keep track sps and pps ids for all of them.
- New state: 
+ New state:
  No acceptable camera format found
- Old state: 
- Output fps: 
- Output: 
+ Old state:
+ Output fps:
+ Output:
  Parameter to BackUp() can't be negative.
  Qko
- RTCP blocks were skipped due to being malformed or of unrecognized/unsupported type, during the past 
- Reset bitrates to min: 
+ RTCP blocks were skipped due to being malformed or of unrecognized/unsupported type, during the past
+ Reset bitrates to min:
  SE_READ
  SE_WRITE
  SRTP session: invalid key
- SRTP session: unsupported cipher_suite 
+ SRTP session: unsupported cipher_suite
  SRTP session: unsupported cipher_suite without length information
- Scale: 
- Should be 
- Supported 
- Transport 
+ Scale:
+ Should be
+ Supported
+ Transport
  Value:
- [cluster id: 
- [ratio: 
- [receive interval: 
- [receive: 
+ [cluster id:
+ [ratio:
+ [receive interval:
+ [receive:
  `82Y
  after padding was set.
  after payload was set.
  and 1000 ms.
- and PPS id 
- and SSRC: 
- and audio delay 
+ and PPS id
+ and SSRC:
+ and audio delay
  and crypto is required
- and current estimate of 
+ and current estimate of
  and packet range [
- and protection bitrate 
+ and protection bitrate
  and stream_id=
  are removed.
- at resolution 
+ at resolution
  available connections
- avg_burst_loss_length must be 
- based on ICE RTT 
+ avg_burst_loss_length must be
+ based on ICE RTT
  because of sync group change.
  because sid is too high.
  because stream already exists.
@@ -115,111 +115,110 @@
  bindings has been reached.
  bitstream buffer is not large enough.
  bps is ignored.
- bps,  max: 
- bps, received at 
- bps, start: 
+ bps,  max:
+ bps, received at
+ bps, start:
  bps.
- bps. Mean send delta: 
+ bps. Mean send delta:
  buffer and inserting the frame.
- but only 
- but was 
+ but only
+ but was
  bytes
- bytes 
- bytes / 
- bytes failed with error 
+ bytes /
+ bytes failed with error
  bytes for a valid Sdes packet. Size should be multiple of 4 bytes
  bytes left in buffer.
- bytes) to fit a FeedbackPacket. Minimum size = 
- bytes) to fit an RtcpPacket with a header and 
+ bytes) to fit a FeedbackPacket. Minimum size =
+ bytes) to fit an RtcpPacket with a header and
  bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
  bytes.
  called with invalid session options
  called with invalid session options.
  can't be called before SetRemoteDescription.
  candidates
- channels: 
- clamped to 
+ channels:
+ clamped to
  codec.
- connection to 
+ connection to
  consecutive old packets received. Flushing the jitter buffer.
- converted to NTP clock: 
+ converted to NTP clock:
  could not be resolved
  cpu
- current diff: 
+ current diff:
  decodable video frame
- distance 
- does not match 
+ distance
+ does not match
  doesn't fit into one byte
- enabled with 
- encode usage 
- estimated time in receiver clock: 
+ enabled with
+ encode usage
+ estimated time in receiver clock:
  failed because DTLS identity request failed
  failed because remote_description is not an offer.
  failed because the session was shut down
  failed: No send codec is registered.
- failed; result: 
+ failed; result:
  fields.
- for RTX codec 
- for audio stream 
+ for RTX codec
+ for audio stream
  for decoder.
  for external decoder.
- for mid 
- for recv stream with ssrc 
- for stream 
+ for mid
+ for recv stream with ssrc
+ for stream
  for the first time
  for typing detection.
- for video stream 
- fps_bad: 
- fps_variance: 
- frame since WebRTC-SpsPpsIdrIsH264Keyframe is 
- frames. Old offset: 
- from FlexFEC stream with SSRC: 
+ for video stream
+ fps_bad:
+ fps_variance:
+ frame since WebRTC-SpsPpsIdrIsH264Keyframe is
+ frames. Old offset:
+ from FlexFEC stream with SSRC:
  from already-established BUNDLE group.
- from unknown address 
- from unknown address: 
+ from unknown address
+ from unknown address:
  gathering complete
  gathering complete, but using continual gathering so not changing gathering state.
  has been configured in the local description.
  has more than 1 connection.
  height:
- in NTP clock: 
+ in NTP clock:
  in response to the remote description.
  indicates it was for a previous generation.
- input frame rate 
- instead of 
+ input frame rate
+ instead of
  is NULL
  is already added.
- is below configured min bitrate 
+ is below configured min bitrate
  is destroyed.
  is disconnected
  is invalid. RTCP-MUX is not enabled when it is required.
- is less than the needed 
+ is less than the needed
  is missing an associated payload type.
  is not associated with a receiving track
  is not associated with a sending track
- is not evenly divisible by 
+ is not evenly divisible by
  is not in use.
  is not ready to use the remote candidate because the local or remote description is not set.
  is not registered.
  is not valid for TMMBN.
  is not valid for a TMMBR.
- is smaller than 
+ is smaller than
  is too small for Remb packet.
  is too small for TMMBN.
  is too small for a Nack.
  is too small for a TMMBR.
  length=
- local: 
- loss rate 
+ local:
+ loss rate
  low-priority TURN ports
  mUx)
  mapped to a second payload type (
  matching no m= section.
- max bitrate 
- max frame rate 
- max payload size 
+ max bitrate
+ max frame rate
+ max payload size
  mean_deviation(us):
- media packets per frame. Max is 
+ media packets per frame. Max is
  message of type "
  milliseconds
  milliseconds.
@@ -229,54 +228,54 @@
  ms window.
  ms without a response, ms since last received ping=
  ms without a response, rtt=
- ms) longer than expected, limiting to 
+ ms) longer than expected, limiting to
  ms), resetting.
- ms, mean recv delta: 
- ms, num probes: 
+ ms, mean recv delta:
+ ms, num probes:
  ms, recv delta=
  ms, recv time=
  ms, requesting keyframe.
  ms, send delta=
  networks
  networks:
- new remote network id 
+ new remote network id
  not supported
  not supported.
- notification: 
- number of channels not supported for 
+ notification:
+ number of channels not supported for
  number=
  observed after observer shutdown
- of RTX codec 
- of the Protocol Buffer runtime library, but the installed version is 
+ of RTX codec
+ of the Protocol Buffer runtime library, but the installed version is
  of the Protocol Buffer runtime library, which is not compatible with the installed version (
  on an SCTP packet.  Dropping.
- on rtx ssrc 
- on stream 
- on transport 
+ on rtx ssrc
+ on stream
+ on transport
  or higher.
  outgoing streams.
- overuse detections 
- packet loss 
+ overuse detections
+ packet loss
  packet when SRTP is inactive and crypto is required
  packet without encryption.
  packet: wrong size=
- packets encoded. Expected 
+ packets encoded. Expected
  period_size :
- ping failures and 
+ ping failures and
  ports because their networks were gone
- qp_bad: 
- rampup delay 
+ qp_bad:
+ rampup delay
  reason='
  receiver for track_id=
- recv cipher_suite 
+ recv cipher_suite
  remaining
  remaining)
  removed from NACK list due to max retries.
  retries for STUN_ERROR_ALLOCATION_MISMATCH
- rtt 
+ rtt
  second period.
  seconds.
- server_address_: 
+ server_address_:
  should be rejected.
  since CreateOffer specified offer_to_receive=0
  since the media section is being recycled.
@@ -284,18 +283,18 @@
  sink binding ignored; limit of
  smoothed_rtt(us):
  ssrcs.
- start bitrate 
+ start bitrate
  state changed. Check if state is complete.
  stream=
  streams
  succeeded
- temporal 
+ temporal
  the last decoded frame, dropping frame.
  to a different value than other encoding layers.
  to an integer.
  to be a valid Rapid Resynchronisation Request
- to bitrate 
- to position 
+ to bitrate
+ to position
  to remove.
  track.
  transceiver for AddTrack.
@@ -305,18 +304,18 @@
  true
  username=
  using tcp.
- usrsctp_sendv: 
- variance_bad: 
- vs max of 
+ usrsctp_sendv:
+ variance_bad:
+ vs max of
  was modified concurrently during serialization.
  which doesn't exist.
  will not be used.
- with configured min bitrate 
- with mode 
- with negotiated parameters: send cipher_suite 
- with payload type: 
- with type 
- writability changed to 
+ with configured min bitrate
+ with mode
+ with negotiated parameters: send cipher_suite
+ with payload type:
+ with type
+ writability changed to
 !!!!,,>>>EMW______kknx
 !'2;AHHRRR[dddddmmmmmy
 !(IsSrtpActive())
@@ -348,8 +347,8 @@
 !stream_priorities_.empty()
 !two_byte_header_required || extensions_.ExtmapAllowMixed()
 !wt$Kr!
-" because it is missing required fields: 
-" replaced by default bitrate 
+" because it is missing required fields:
+" replaced by default bitrate
 "!"%"+"1"9"K"O"c"g"s"u"
 """"&&999EIR\\\\\\``hu
 "$&')*+,-.//123456779:;<=>??ABCDEFGG(
@@ -357,7 +356,7 @@
 "$477FHIIIfhllllmmmmmmmw
 "&&&&&***?HHLPPPPPPPYerrrrvvvvvvvvv
 ")6>>EKRRRR\biinuuuuu||~~~~~~
-". Reason: 
+". Reason:
 "2CScs
 "3Hau
 "7?NWlv
@@ -410,17 +409,17 @@ $v4n
 %*sFull Name:\n
 %*sIndirect CRL\n
 %*sNo Qualifiers\n
-%*sNumber%s: 
+%*sNumber%s:
 %*sOnly Attribute Certificates\n
 %*sOnly CA Certificates\n
 %*sOnly User Certificates\n
 %*sOrganization: %s\n
-%*sPath Length Constraint: 
-%*sPolicy Language: 
+%*sPath Length Constraint:
+%*sPolicy Language:
 %*sPolicy Text: %s\n
-%*sPolicy: 
+%*sPolicy:
 %*sRelative Name:\n%*s
-%*sUnknown Qualifier: 
+%*sUnknown Qualifier:
 %*sUser Notice:\n
 %*sVersion: %ld (0x%lX)
 %,88?KKKKXXoooopppppppr
@@ -430,15 +429,15 @@ $v4n
 %02x%c
 %04d%02d%02d%02d%02d%02dZ
 %0@Thv
-%12sPublic Key Algorithm: 
+%12sPublic Key Algorithm:
 %12sUnable to load Public Key\n
 %2.2x%c
 %255s %8X %8X %4X %*d %*u %*d %8X
 %3;NYk{
 %3AObq~
 %4?K\fw
-%8sIssuer Unique ID: 
-%8sSubject Unique ID: 
+%8sIssuer Unique ID:
+%8sSubject Unique ID:
 %8sVersion: %lu (0x%lx)\n
 %USERTrust ECC Certification Authority0
 %USERTrust ECC Certification Authority0v0
@@ -455,7 +454,7 @@ $v4n
 %s %2d %02d:%02d:%02d %d%s
 %s %2d %02d:%02d:%02d%.*s %d%s
 %s chunk of length %u
-%s failed.\nExpected: 
+%s failed.\nExpected:
 %s%02x
 %s:                           tag length %d\n
 %s:   (mismatch at octet %d)\n
@@ -582,9 +581,9 @@ $v4n
 ' (found in trial: "
 ' already exists.
 ' being rejected in answer.
-' from 
+' from
 ' in trial: "
-' missing from StreamParams ssrcs: 
+' missing from StreamParams ssrcs:
 ' with invalid id:
 ' with ssrc=
 '()+,-./:=?
@@ -624,7 +623,7 @@ $v4n
 (v?xcv?X
 (|?gM|?`q|?
 ) != output_size_samples_ (
-) (state 
+) (state
 ) FAILED: (destination)->WriteBits(bits_tmp, 1)
 ) FAILED: (destination)->WriteBits(bits_tmp, 24)
 ) FAILED: (destination)->WriteBits(bits_tmp, 32)
@@ -664,23 +663,23 @@ $v4n
 ) FAILED: source->ReadExponentialGolomb(&max_num_reorder_frames)
 ) already inserted, dropping frame.
 ) but buffer is full, clearing
-) could not be inserted due to the frame 
-) current direction from 
+) could not be inserted due to the frame
+) current direction from
 ) depends on a non-decoded frame more previous than
-) error: 
-) failed: 
-) for a packet payload size of 
+) error:
+) failed:
+) for a packet payload size of
 ) for different decoders.
 ) for incoming frame. Dropping.
 ) for postpone decoding after expand, using default (
 ) for receiver report.
 ) for sender report.
-) from 
+) from
 ) has invalid frame references, dropping frame.
 ) inserted after frame (
 ) is referenced by too many frames.
 ) remaining in buffer to parse RTCP header (4 bytes).
-) since it likely is reordered, but the unwrapperfailed to handle it. Feedback window starts at 
+) since it likely is reordered, but the unwrapperfailed to handle it. Feedback window starts at
 ) was handed off for decoding, dropping frame.
 )!)#)?)G)])e)i)o)u)
 ), failed to increase size. Clearing PacketBuffer.
@@ -688,12 +687,12 @@ $v4n
 ), reducing bitrate.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 ). Resetting the video jitter buffer.
-). Treating as 
+). Treating as
 )448EEEEEEEEEEEEEEEEEEEEOOOOSSS^^^^jjjjjssss}}}}}}
 )77CHJJZZZ[[[iiiiikzzz{{
 )7ESbp
 )8ag
-): Unknown sid 
+): Unknown sid
 ): stream not open.
 )BIV_o
 )Entrust Root Certification Authority - G20
@@ -739,151 +738,149 @@ $v4n
 +inf ms
 +ulsX
 +w?FFv?
-, ALR end budget level percent: 
-, ALR experiment group ID: 
-, ALR start bandwidth usage percent: 
-, Best Delay: 
-, Capture mean: 
-, Capture_standard deviation: 
-, Covariance: 
+, ALR end budget level percent:
+, ALR experiment group ID:
+, ALR start bandwidth usage percent:
+, Best Delay:
+, Capture mean:
+, Capture_standard deviation:
+, Covariance:
 , Discard rest of packets.
 , Ignored
-, Last capture power: 
-, Last render power: 
-, Reliability: 
-, Render mean: 
-, Render standard deviation: 
+, Last capture power:
+, Last render power:
+, Reliability:
+, Render mean:
+, Render standard deviation:
 , SSRC=
 , Type=
-, abs send time: 
-, active ? 
-, active: 
-, allow_comfort_noise: 
-, arrival time: 
-, audio_ptr_num_channels = 
-, audio_report_interval_ms: 
-, bitrate_priority: 
-, but it is already used for 
-, but sync was at 
-, but wanted 
-, clockrate_hz: 
-, cng_payload_type: 
+, abs send time:
+, active ?
+, active:
+, allow_comfort_noise:
+, arrival time:
+, audio_ptr_num_channels =
+, audio_report_interval_ms:
+, bitrate_priority:
+, but it is already used for
+, but sync was at
+, but wanted
+, clockrate_hz:
+, cng_payload_type:
 , cnonce=
 , code=0, rtt=
-, codec 
+, codec
 , codec_params: {
-, component 
-, configured min bitrate 
-, content_type: 
-, current allocation 
-, decoder format 
-, default_bitrate_bps: 
-, dropped (due to encoder blocked) 
+, component
+, configured min bitrate
+, content_type:
+, current allocation
+, decoder format
+, default_bitrate_bps:
+, dropped (due to encoder blocked)
 , dropping.
-, dst_frame->mutable_data() = 
-, dst_frame->sample_rate_hz_ = 
+, dst_frame->mutable_data() =
+, dst_frame->sample_rate_hz_ =
 , enable_fast_accelerate=
 , enable_muted_state=
 , enable_post_decode_vad=
-, encoder_specific_settings: 
+, encoder_specific_settings:
 , encrypt
-, error code: 
+, error code:
 , error=
-, expected: 
+, expected:
 , extensions: [
-, extmap-allow-mixed: 
-, flexfec: {payload_type: 
-, format: 
-, fragment length 
-, framerate = 
-, height: 
+, extmap-allow-mixed:
+, flexfec: {payload_type:
+, format:
+, fragment length
+, framerate =
+, height:
 , ignored.
-, interval (us) = 
-, interval_ms 
+, interval (us) =
+, interval_ms
 , last seqnum=
 , latest=
-, local_ssrc: 
-, max pacer queue length: 
+, local_ssrc:
+, max pacer queue length:
 , max_bitrate_bps:
-, max_bitrate_bps: 
-, max_framerate: 
-, max_packet_size: 
+, max_framerate:
+, max_packet_size:
 , max_packets_in_buffer=
-, media_transport: 
+, media_transport:
 , min_bitrate_bps:
-, min_bitrate_bps: 
-, min_transmit_bitrate_bps: 
+, min_transmit_bitrate_bps:
 , ms since last received data=
-, nack: {rtp_history_ms: 
-, new offset: 
-, new timestamp: 
+, nack: {rtp_history_ms:
+, new offset:
+, new timestamp:
 , nomination=
 , nonce=
-, num_channels: 
-, num_temporal_layers: 
-, only 
+, num_channels:
+, num_temporal_layers:
+, only
 , opaque=
-, options: 
-, outFreq = 
-, packet capacity 
+, options:
+, outFreq =
+, packet capacity
 , parameters: {
 , password_=
-, payload_name: 
-, payload_type: 
+, payload_name:
+, payload_type:
 , period_size:
 , pings_since_last_response=
 , port() Network:
-, pre_encode_callback: 
-, previous failure count: 
+, pre_encode_callback:
+, previous failure count:
 , protected_media_ssrcs: [
 , rather than an address associated with network:
 , reached maximum number of stored RRTRs.
 , realm=
 , reason=
-, red_payload_type: 
-, red_rtx_payload_type: 
-, red_type: 
+, red_payload_type:
+, red_rtx_payload_type:
+, red_type:
 , remb=
-, remote_ssrc: 
-, render_delay_ms: 
-, renderer: 
-, renomination 
-, requires at least 
+, remote_ssrc:
+, render_delay_ms:
+, renderer:
+, renomination
+, requires at least
 , response="
-, rtcp_mode: 
-, rtcp_send_transport: 
-, rtcp_xr: 
+, rtcp_mode:
+, rtcp_send_transport:
+, rtcp_xr:
 , rtp_header_extensions: [
 , rtx_payload_types: {
-, rtx_ssrc: 
-, send_codec_spec: 
-, send_transport: 
+, rtx_ssrc:
+, send_codec_spec:
+, send_transport:
 , seqnum=
-, sequence number: 
-, skipped packets 
-, source = 
-, src_length = 
-, started: 
-, supports_network_adaption: 
-, suspend_below_min_bitrate: 
-, sync_group: 
+, sequence number:
+, skipped packets
+, source =
+, src_length =
+, started:
+, supports_network_adaption:
+, suspend_below_min_bitrate:
+, sync_group:
 , target_bitrate_bps:
-, target_delay_ms: 
-, temporal index 
+, target_delay_ms:
+, temporal index
 , texture=
-, timestamp: 
-, toffset: 
-, total: 
+, timestamp:
+, toffset:
+, total:
 , transport_cc=
-, transport_cc_enabled: 
-, ulpfec: 
-, ulpfec_payload_type: 
+, transport_cc_enabled:
+, ulpfec:
+, ulpfec_payload_type:
 , use_candidate=
-, using 
-, using default value: 
+, using
+, using default value:
 , using default values.
-, was already mapped to 
-, {flexfec_bitrate_bps: 
+, was already mapped to
+, {flexfec_bitrate_bps:
 ,#,/,5,9,A,W,Y,i,w,
 ,,,,,,222222222DDDDDDDUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUiiiiiiiiiiiiiiiiiiiiiiiiXXXXXXXXX
 ,,;CCCQQYYYappppppppw~~~~~
@@ -896,26 +893,26 @@ $v4n
 ,http://crl.usertrust.com/UTN-DATACorpSGC.crl0*
 ,name:
 ,value:
------BEGIN 
+-----BEGIN
 -1FL
 -22DFPUYYZ___hhhhhmmpr
 -5?KYks
 -;-C-I-M-a-e-q-
-->ConfigureSctpSocket(): 
+->ConfigureSctpSocket():
 ->Connect().
-->Connect(): 
+->Connect():
 ->Connect(): Ignored as socket is already established.
-->OnDataFromSctpToTransport(...): 
-->OnInboundPacketFromSctpToTransport(...): 
+->OnDataFromSctpToTransport(...):
+->OnInboundPacketFromSctpToTransport(...):
 ->OnInboundPacketFromSctpToTransport(...): No data, closing.
-->OnPacketFromSctpToNetwork(...): 
-->OnPacketRead(...): 
-->OpenSctpSocket(): 
-->OpenStream(...): 
+->OnPacketFromSctpToNetwork(...):
+->OnPacketRead(...):
+->OpenSctpSocket():
+->OpenStream(...):
 ->ResetStream(
-->SendData(...): 
+->SendData(...):
 ->SendData(...): EWOULDBLOCK returned
-->SendQueuedStreamResets(): Failed to send a stream reset for 
+->SendQueuedStreamResets(): Failed to send a stream reset for
 -?Vb,?H$+?Z
 -Ff\fAFf
 -GeoTrust Primary Certification Authority - G20
@@ -930,18 +927,18 @@ $v4n
 . Discarding TURN port.
 . Expected format <attribute>:<value>.
 . Expected to find size of the text.
-. Expected to find text of size 
-. Id already in use by extension type 
-. Next delta is for 
-. Number of candidates created: 
-. Number of connections created: 
-. Number of streams 
+. Expected to find text of size
+. Id already in use by extension type
+. Next delta is for
+. Number of candidates created:
+. Number of connections created:
+. Number of streams
 . Overwriting.
-. Saved: 
+. Saved:
 . Send time history too small?
 . Still allowing it since it's localhost.
 . Still allowing it since it's the 'any' address, possibly caused by multiple_routes being disabled.
-. received 
+. received
 .$//021-2!3\r4
 .%.-.3.7.9.?.W.[.o.y.
 ...00000000BBBBP]]]]____dsssssssss
@@ -1778,21 +1775,15 @@ $v4n
 .InterframeDelayMaxInMs
 .KeyFramesReceivedInPermille
 .MeanFreezeDurationMs
-.MeanFreezeDurationMs 
 .MeanTimeBetweenFreezesMs
-.MeanTimeBetweenFreezesMs 
 .MediaBitrateReceivedInKbps
 .NumberFreezesPerMinute
-.NumberFreezesPerMinute 
 .NumberResolutionDownswitchesPerMinute
-.NumberResolutionDownswitchesPerMinute 
 .ReceivedHeightInPixels
 .ReceivedWidthInPixels
 .TBMD
 .TimeInBlockyVideoPercentage
-.TimeInBlockyVideoPercentage 
 .TimeInHdPercentage
-.TimeInHdPercentage 
 .U'oy
 .http://www2.public-trust.com/crl/ct/ctroot.crl0
 .ivf
@@ -2018,7 +2009,7 @@ $v4n
 5EPX_f
 5KBRJ
 5Mj*
-5NvCq 
+5NvCq
 5P&16P<
 5QPR
 5Rc<
@@ -2036,8 +2027,8 @@ $v4n
 6#6165676;6M6O6S6Y6a6k6m6
 6%G*X
 6-7r7
-60402
 6400
+60402
 640c
 687y7 8
 6?k 6?t
@@ -2119,59 +2110,59 @@ $v4n
 9?\rm4?2
 9jCsK
 9w?O
-: A new connection was created on an existing remote address. New remote candidate: 
-: Accepted connection from 
+: A new connection was created on an existing remote address. New remote candidate:
+: Accepted connection from
 : Added port to allocator
-: Allocating a new socket after STUN_ERROR_ALLOCATION_MISMATCH, retry: 
+: Allocating a new socket after STUN_ERROR_ALLOCATION_MISMATCH, retry:
 : Allocation Phase=
 : Allocation destroyed
 : Applying STUN_ATTR_NONCE attribute in try alternate error response.
 : Applying STUN_ATTR_REALM attribute in try alternate error response.
-: Attempted to send to an unknown destination: 
+: Attempted to send to an unknown destination:
 : Blocking attempted redirect to loopback address.
 : Bound channel, id=
 : Caching DTLS ClientHello packet until DTLS is started.
 : Can't change DTLS local identity in this state
 : Can't set DTLS remote settings in this state.
-: Change connected_ to 
-: Changed writable_ to 
-: Connecting from 
-: Connection closed with error 
+: Change connected_ to
+: Changed writable_ to
+: Connecting from
+: Connection closed with error
 : Connection created
 : Connection destroyed
-: Connection established to 
+: Connection established to
 : Connection pruned
-: Connection with server failed with error: 
+: Connection with server failed with error:
 : Couldn't set DTLS certificate digest.
 : Couldn't set DTLS-SRTP ciphers.
 : Couldn't start DTLS handshake
-: Create permission for 
+: Create permission for
 : Created allocation with lifetime=
-: Created connection with origin: 
+: Created connection with origin:
 : Created permission, peer=
 : DTLS handshake complete.
 : DTLS setup complete.
 : DTLS transport closed
 : DTLS transport error, code=
-: Discarding TURN message from unknown address: 
+: Discarding TURN message from unknown address:
 : Discarding cached DTLS ClientHello packet because we don't have the server role.
 : DtlsTransport: Started DTLS handshake
 : Failed to authenticate with the server after challenge.
 : Failed to create DTLS adapter.
-: Failed to create connection to 
+: Failed to create connection to
 : Failed to handle DTLS packet.
 : Failed to send STUN ping  err=
 : Failed to send STUN ping response, to=
-: Failed to send TURN message, error: 
-: Gathered candidate: 
-: Giving up on the port after 
+: Failed to send TURN message, error:
+: Gathered candidate:
+: Giving up on the port after
 : Handling cached DTLS ClientHello packet.
 : Have a pingable connection for the first time; starting to ping.
-: Ice not completed yet for this channel as 
+: Ice not completed yet for this channel as
 : Ignoring STUN binding response message on shared socket.
 : Ignoring identical DTLS identity
 : Ignoring identical remote DTLS fingerprint
-: Invalid TURN message type received: 
+: Invalid TURN message type received:
 : Missing STUN_ATTR_ALTERNATE_SERVER attribute in try alternate error response
 : Missing STUN_ATTR_DATA attribute in data indication.
 : Missing STUN_ATTR_NONCE attribute in allocate unauthorized response.
@@ -2182,7 +2173,7 @@ $v4n
 : Missing STUN_ATTR_XOR_PEER_ADDRESS attribute in data indication.
 : Missing STUN_ATTR_XOR_RELAYED_ADDRESS attribute in allocate success response
 : NULL DTLS identity supplied. Not doing DTLS
-: New selected connection: 
+: New selected connection:
 : No selected connection
 : Not a DTLS ClientHello packet; dropping.
 : Not listening due to firewall restrictions.
@@ -2191,111 +2182,111 @@ $v4n
 : Packet received before DTLS started.
 : Packet received before we know if we are doing DTLS or not.
 : Port completed gathering candidates.
-: Port created with network cost 
+: Port created with network cost
 : Port deleted
 : Port encountered error while gathering candidates.
 : Port ready.
-: Previous selected connection: 
-: Received STUN binding error without a error code from 
+: Previous selected connection:
+: Received STUN binding error without a error code from
 : Received STUN binding error: class=
-: Received STUN binding indication: from 
+: Received STUN binding indication: from
 : Received STUN error response id=
 : Received STUN error response, code=
 : Received STUN packet with invalid type (
 : Received STUN ping response, id=
 : Received STUN ping, id=
-: Received STUN request with bad M-I from 
-: Received STUN request with bad local username 
-: Received STUN request with bad remote username 
-: Received STUN request without username/M-I from: 
+: Received STUN request with bad M-I from
+: Received STUN request with bad local username
+: Received STUN request with bad remote username
+: Received STUN request without username/M-I from:
 : Received TURN allocate error response, id=
 : Received TURN channel bind error response, id=
-: Received TURN channel data message for invalid channel, channel_id: 
-: Received TURN channel data message with incorrect length, len: 
+: Received TURN channel data message for invalid channel, channel_id:
+: Received TURN channel data message with incorrect length, len:
 : Received TURN create permission error response, id=
-: Received TURN data indication with unknown peer address, addr: 
+: Received TURN data indication with unknown peer address, addr:
 : Received TURN message that was too short
 : Received TURN message while the TURN port is disconnected
-: Received TURN message with invalid message integrity, msg_type: 
+: Received TURN message with invalid message integrity, msg_type:
 : Received TURN refresh error response, id=
-: Received a remote ping with high retransmit count: 
+: Received a remote ping with high retransmit count:
 : Received channel data for invalid channel, id=
 : Received external packet without permission, peer=
 : Received invalid TURN data indication
 : Received invalid send indication
 : Received non-DTLS packet before DTLS complete.
-: Received non-STUN packet from unknown address: 
-: Received response with long lifetime: 
-: Received response with short lifetime: 
+: Received non-STUN packet from unknown address:
+: Received response with long lifetime:
+: Received response with short lifetime:
 : Received send indication without permission peer=
-: Received unexpected STUN message type: 
+: Received unexpected STUN message type:
 : Received unexpected non-DTLS packet.
 : Redirecting from TURN server [
 : Redirection to [
 : Refreshed allocation, lifetime=
-: Removed connection 
+: Removed connection
 : Removed port from allocator (
-: Scheduled channel bind in 
-: Scheduled create-permission-request in 
-: Scheduled refresh in 
+: Scheduled channel bind in
+: Scheduled create-permission-request in
+: Scheduled refresh in
 : Sending STUN binding error: reason=
 : Sending STUN ping, id=
 : Sent STUN ping response, to=
 : Sent STUN ping, id=
 : SetOption(
-: Starting STUN host lookup for 
-: Starting TURN host lookup for 
-: StunPort: stun host lookup received error 
-: Successful channel bind for 
+: Starting STUN host lookup for
+: Starting TURN host lookup for
+: StunPort: stun host lookup received error
+: Successful channel bind for
 : TCP Connection with remote is closed, trying to reconnect
-: TCP send of 
+: TCP send of
 : TCP server socket creation failed; continuing anyway.
-: TURN allocate request 
+: TURN allocate request
 : TURN allocate request sent, id=
 : TURN allocate requested successfully, id=
 : TURN channel bind request sent, id=
 : TURN channel bind requested successfully, id=
-: TURN channel bind timeout 
+: TURN channel bind timeout
 : TURN create permission request sent, id=
-: TURN create permission timeout 
-: TURN host lookup received error 
+: TURN create permission timeout
+: TURN host lookup received error
 : TURN permission requested successfully, id=
 : TURN refresh request sent, id=
 : TURN refresh requested successfully, id=
-: TURN refresh timeout 
-: Timed out after 
-: Timing-out STUN ping 
-: Transport channel state changed from 
-: Trying to connect to TURN server via 
-: UDP send of 
+: TURN refresh timeout
+: Timed out after
+: Timing-out STUN ping
+: Transport channel state changed from
+: Trying to connect to TURN server via
+: UDP send of
 : UDP socket creation failed
-: Unwritable after 
+: Unwritable after
 : UpdateState(), ms since last received response=
 : Updating local candidate type to prflx.
 : Updating local candidate type to srflx.
-: configuring DTLS handshake timeout 
-: expected 
-: ice_transport receiving state changed to 
-: ice_transport writable state changed to 
-: new local network id 
+: configuring DTLS handshake timeout
+: expected
+: ice_transport receiving state changed to
+: ice_transport writable state changed to
+: new local network id
 : no RTT estimate - using default DTLS handshake timeout
 : set_dtls_state from:
-: set_receiving to 
+: set_receiving to
 : set_state
-: set_writable to: 
-: set_write_state from: 
-: socket ipaddr: 
+: set_writable to:
+: set_write_state from:
+: socket ipaddr:
 :':+:1:K:Q:[:c:g:m:y:
 :8P[w1
 :B<BAB
 :SKC
 :V98o
-; already sent 
+; already sent
 ; ignoring since socket is using 'any' address.
 ; killing connection
-; length: 
+; length:
 ; pruned connection.
-; resend delay = 
+; resend delay =
 ;!;#;-;9;E;S;Y;_;q;{;
 ;4eu
 ;P62<PM
@@ -2414,10 +2405,10 @@ $v4n
 @g834}
 A As@
 A Is
-A frame about to be decoded is out of the configured 
+A frame about to be decoded is out of the configured
 A jump in picture id was detected, clearing buffer.
-A protocol message was rejected because it was too big (more than 
-A remote candidate arrives with an unknown ufrag: 
+A protocol message was rejected because it was too big (more than
+A remote candidate arrives with an unknown ufrag:
 A!A3A5A;A?AYAeAkAwA{A
 A'KNZ
 A-A-A-A-A-A-A-A-~
@@ -2487,8 +2478,8 @@ AES_KEY_SETUP_FAILED
 AES_set_decrypt_key failed.\n
 AES_set_encrypt_key failed.\n
 AF_CONN address: %p\n
-AGC set to 
-AHighpass filter activated: 
+AGC set to
+AHighpass filter activated:
 AKID_MISMATCH
 AKO?
 ALL:!SHA256:!SHA384:!aPSK:!ECDSA+SHA1:!ADH:!LOW:!EXP:!MD5
@@ -2537,22 +2528,22 @@ Ab qu{KA
 Acceptable OCSP Responses
 Accepted must be greater than or equal to 0.
 Accepted peer certificate.
-AcmReceiver::AddCodec 
-AcmReceiver::AddCodec failed for payload type 
-AcmReceiver::AddCodec: Could not remove existing decoder for payload type 
-AcmReceiver::DecoderByPayloadType 
+AcmReceiver::AddCodec
+AcmReceiver::AddCodec failed for payload type
+AcmReceiver::AddCodec: Could not remove existing decoder for payload type
+AcmReceiver::DecoderByPayloadType
 AcmReceiver::GetAudio - NetEq Failed.
 AcmReceiver::GetAudio - Resampling audio_buffer_ failed.
 AcmReceiver::GetAudio - Resampling last_audio_buffer_ failed.
-AcmReceiver::InsertPacket 
-AcmReceiver::RemoveCodec 
-AcmReceiver::SetExtraDelay 
+AcmReceiver::InsertPacket
+AcmReceiver::RemoveCodec
+AcmReceiver::SetExtraDelay
 ActiveAudioLayer
 Actual CPU overuse measurements in effect.
 AdaptChangesPerMinute.Cpu
 AdaptChangesPerMinute.Quality
-Add remote ssrc: 
-Add send stream ssrc: 
+Add remote ssrc:
+Add send stream ssrc:
 Add.
 Add10MsData
 AddBitstreamRestriction
@@ -2566,13 +2557,13 @@ AddOrUpdateSink
 AddPartialResults
 AddRecvStream
 AddRecvStream with ssrc==0 is not supported.
-AddRecvStream: 
+AddRecvStream:
 AddRemoteCandidates
 AddRemoteIceCandidate
-AddSctpDataCodec: Got SCTP Port Number 
+AddSctpDataCodec: Got SCTP Port Number
 AddSctpDataStream
 AddSctpDataStream called when sctp_transport_ is NULL.
-AddSendStream: 
+AddSendStream:
 AddSink
 AddStream
 AddStream is not available with Unified Plan SdpSemantics. Please use AddTrack instead.
@@ -2584,7 +2575,7 @@ AddTrust Class 1 CA Root
 AddTrust Class 1 CA Root0
 AddTrust External CA Root
 AddTrust External CA Root0
-AddTrust External TTP Network1"0 
+AddTrust External TTP Network1"0
 AddTrust Public CA Root
 AddTrust Public CA Root0
 AddTrust Qualified CA Root
@@ -2594,10 +2585,10 @@ AddTrust TTP Network1!0
 AddTrust TTP Network1#0!
 Added data recv stream '
 Added data send stream '
-Adding 
-Adding allocated port for 
-Adding connection from 
-Adding one recvonly 
+Adding
+Adding allocated port for
+Adding connection from
+Adding one recvonly
 Address added
 Affiliation Changed
 AffirmTrust Commercial0
@@ -2610,12 +2601,12 @@ Agc2
 AgcClippingLevelExperiment;
 AjsS
 AlG`
-All candidates gathered for 
+All candidates gathered for
 All candidates gathered for pooled session.
 All fragments of a user message must be ordered or unordered (TSN=%8.8x)
 Alloc[
 Allocate error response: code=
-Allocate ports on 
+Allocate ports on
 Allocate request timed out
 Allocate response missing mapped address.
 AllocatePorts
@@ -2633,10 +2624,10 @@ AlrExperimentSettings::MaxOneFieldTrialEnabled()
 Altret buffer not referenced, but present in search order.
 An RtpSender has been configured in the local description with an unexpected media type.
 An m= section associated with the BUNDLE-tag doesn't exist.
-An unknown RtpSender with id 
+An unknown RtpSender with id
 AnalyzeCaptureAudio
 Ani'
-Answer cannot remove m= section  
+Answer cannot remove m= section
 Answerer must use either active or passive value for setup attribute.
 Any Extended Key Usage
 Any Purpose
@@ -2646,7 +2637,7 @@ Applying the same SRTP recv parameters again. No-op.
 Applying the same SRTP send parameters again. No-op.
 Arf buffer was not updated during pattern cycle.
 Arizona1
-Arrival time out of bounds: 
+Arrival time out of bounds:
 Association change SCTP_CANT_STR_ASSOC
 Association change SCTP_COMM_LOST
 Association change SCTP_COMM_UP
@@ -2655,23 +2646,23 @@ Association change SCTP_SHUTDOWN_COMP
 Association change UNKNOWN
 Association error counter exceeded
 Assuming benign blocking error
-AsyncHttpsProxySocket << 
-AsyncHttpsProxySocket >> 
+AsyncHttpsProxySocket <<
+AsyncHttpsProxySocket >>
 AsyncHttpsProxySocket::Connect(
 AsyncHttpsProxySocket::OnCloseEvent(
 AsyncHttpsProxySocket::OnConnectEvent
 AsyncUDPSocket[
 Asynchronous certificate generation request failed.
-Asynchronously resolving ICE candidate hostname 
-At most 
+Asynchronously resolving ICE candidate hostname
+At most
 AttachAudioBuffer
-Attempt to change a remote candidate. Existing remote candidate: 
+Attempt to change a remote candidate. Existing remote candidate:
 Attempt to change tiebreaker after Port has been allocated.
-Attempt to set number of temporal layers to incorrect value: 
+Attempt to set number of temporal layers to incorrect value:
 Attempted to create an encoder with more than 1 encoding parameter.
 Attempted to set RtpParameters bitrate_priority to an invalid number. bitrate_priority must be > 0.
 Attempted to set RtpParameters min bitrate larger than max bitrate.
-Attempted to set RtpParameters num_temporal_layers at encoding layer i: 
+Attempted to set RtpParameters num_temporal_layers at encoding layer i:
 Attempted to set RtpParameters num_temporal_layers to an invalid number.
 Attempted to set RtpParameters with different encoding count
 Attempted to set RtpParameters with modified RTCP parameters
@@ -2680,18 +2671,18 @@ Attempted to set RtpParameters with modified header extensions
 Attempted to set an unimplemented parameter of RtpParameters.
 Attempting to get RTP parameters for the default, unsignaled audio receive stream, but not yet configured to receive such a stream.
 Attempting to get RTP parameters for the default, unsignaled video receive stream, but not yet configured to receive such a stream.
-Attempting to get RTP receive parameters for stream 
-Attempting to get RTP send parameters for stream 
+Attempting to get RTP receive parameters for stream
+Attempting to get RTP send parameters for stream
 Attempting to get contributing sources for SSRC:
-Attempting to resume SSL session to 
+Attempting to resume SSL session to
 Attempting to set RTP parameters for the default, unsignaled audio receive stream, but not yet configured to receive such a stream.
 Attempting to set RTP parameters for the default, unsignaled video receive stream, but not yet configured to receive such a stream.
-Attempting to set RTP receive parameters for stream 
-Attempting to set RTP send parameters for stream 
+Attempting to set RTP receive parameters for stream
+Attempting to set RTP send parameters for stream
 Attempting to sync more than one audio stream within the same sync group. This is not supported in the current implementation.
 Attempting to sync more than one audio/video pair within the same sync group. This is not supported in the current implementation.
-Attempting to use payload type 
-Audio delay: 
+Attempting to use payload type
+Audio delay:
 Audio device initialization failed.
 Audio m= section '
 Audio source unknown
@@ -2704,7 +2695,7 @@ AudioDeviceLinuxALSA
 AudioDeviceLinuxPulse
 AudioDeviceModuleImpl
 AudioEncoder::Encode
-AudioEncoderOpusImpl: Overhead unknown, target audio bitrate 
+AudioEncoderOpusImpl: Overhead unknown, target audio bitrate
 AudioMixer
 AudioMixerManagerLinuxALSA
 AudioMixerManagerLinuxALSA::MicrophoneVolume() => vol=
@@ -2729,14 +2720,14 @@ AudioMixerManagerLinuxPulse::SetSpeakerVolume(volume=
 AudioMixerManagerLinuxPulse::SpeakerMute() => enabled=
 AudioMixerManagerLinuxPulse::SpeakerVolume() => vol=
 AudioMixerManagerLinuxPulse::StereoRecordingIsAvailable()
-AudioProcessing module config error\nGain Controller 2: 
+AudioProcessing module config error\nGain Controller 2:
 AudioProcessing::AnalyzeReverseStream_ChannelLayout
 AudioProcessing::ProcessReverseStream_AudioFrame
 AudioProcessing::ProcessReverseStream_StreamConfig
 AudioProcessing::ProcessStream_AudioFrame
 AudioProcessing::ProcessStream_ChannelLayout
 AudioProcessing::ProcessStream_StreamConfig
-AudioReceiveStream::ConfigureStream: 
+AudioReceiveStream::ConfigureStream:
 AudioRtpReceiver::OnSetVolume: No audio channel exists.
 AudioRtpReceiver::Reconfigure: No audio channel exists.
 AudioRtpReceiver::SetParameters
@@ -2746,13 +2737,13 @@ AudioRtpSender::SetParameters
 AudioRtpSender::SetSsrc
 AudioRtpSender::SetTrack
 AudioRtpSender::Stop
-AudioSendStream::ConfigureStream: 
+AudioSendStream::ConfigureStream:
 AuthANY
 AuthECDSA
 AuthPSK
 AuthRSA
 Authority Information Access
-Available number of cores: 
+Available number of cores:
 AvgBurstLossLength
 AyB%C
 B#B)B/BCBSBUB[BaBsB}B
@@ -2842,22 +2833,22 @@ BSendData
 BUFFERED_MESSAGES_ON_CIPHER_CHANGE
 BUFFER_TOO_SMALL
 BUNDLE
-BWE Setting start bitrate to: 
-BWE and MID, so the extension 
+BWE Setting start bitrate to:
+BWE and MID, so the extension
 BWebRTC.Audio.Agc2.DigitalGainApplied
 Back-off factor must be greater than 0.
 Back-off factor must be less than 1.
 BackUp() can only be called after a successful Next().
-Bad RTP extension ID: 
+Bad RTP extension ID:
 Bad Request
-Bad call (any) end: 
-Bad call (any) start: 
-Bad call (fps) end: 
-Bad call (fps) start: 
-Bad call (qp) end: 
-Bad call (qp) start: 
-Bad call (variance) end: 
-Bad call (variance) start: 
+Bad call (any) end:
+Bad call (any) start:
+Bad call (fps) end:
+Bad call (fps) start:
+Bad call (qp) end:
+Bad call (qp) start:
+Bad call (variance) end:
+Bad call (variance) start:
 Bad optional access
 Bad problem find_ep got a diff inp then special_locate?\n
 Bad time value
@@ -2877,26 +2868,26 @@ Basic OCSP Response
 Bc?y9
 Bd&\tB
 Be>x
-Becoming application limited. Last sent packet: 
+Becoming application limited. Last sent packet:
 BeginSSL
 BeginSSL with peer.
 Bi<0
 Big gap in media/ULPFEC sequence numbers. No need to keep the old packets in the FEC buffers, thus resetting them.
-Bind() failed with error 
+Bind() failed with error
 Binding address has bad family
 Binding error response: class=
-Binding request timed out from 
+Binding request timed out from
 Binding response missing mapped address.
-Binding socket to loopback address 
-Binding socket to network address 
+Binding socket to loopback address
+Binding socket to network address
 Biometric Info
-Bitrate estimate state changed, BWE: 
+Bitrate estimate state changed, BWE:
 Bitrate must be smaller enough to avoid overflows.
 BkCTD=E%F\rG
 Bkn:?
 Block length longer than packet.
 Both FlexFEC and ULPFEC are configured. Disabling ULPFEC.
-Bound on 
+Bound on
 Bound on <IPV6>:
 Bsnd_device_name_free_hint
 Buffer overflow while parsing packet.
@@ -2907,7 +2898,7 @@ BuiltInAECIsAvailable
 BuiltInAGCIsAvailable
 BuiltInNSIsAvailable
 ByByF
-Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of
 C%C'C3C7C9COCWCiC
 C%CyB
 C../../../third_party/protobuf/src/google/protobuf/arena.cc
@@ -2959,27 +2950,27 @@ CERT_LENGTH_MISMATCH
 CHACHA20
 CHANNEL_ID_NOT_P256
 CHANNEL_ID_SIGNATURE_INVALID
-CHECK failed: !coded_out.HadError(): 
-CHECK failed: (backup_bytes_) == (0): 
-CHECK failed: (buffer_size) >= (0): 
-CHECK failed: (buffer_used_) == (buffer_size_): 
-CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization): 
-CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization): 
-CHECK failed: (count) <= (buffer_used_): 
-CHECK failed: (count) <= (last_returned_size_): 
-CHECK failed: (count) <= (target_->size()): 
-CHECK failed: (count) >= (0): 
-CHECK failed: (last_returned_size_) > (0): 
-CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - kBlockHeaderSize): 
-CHECK failed: (new_size) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0])): 
-CHECK failed: (scc->visit_status.load(std::memory_order_relaxed)) == (SCCInfoBase::kRunning): 
-CHECK failed: (value.size()) <= (kint32max): 
+CHECK failed: !coded_out.HadError():
+CHECK failed: (backup_bytes_) == (0):
+CHECK failed: (buffer_size) >= (0):
+CHECK failed: (buffer_used_) == (buffer_size_):
+CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization):
+CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization):
+CHECK failed: (count) <= (buffer_used_):
+CHECK failed: (count) <= (last_returned_size_):
+CHECK failed: (count) <= (target_->size()):
+CHECK failed: (count) >= (0):
+CHECK failed: (last_returned_size_) > (0):
+CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - kBlockHeaderSize):
+CHECK failed: (new_size) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0])):
+CHECK failed: (scc->visit_status.load(std::memory_order_relaxed)) == (SCCInfoBase::kRunning):
+CHECK failed: (value.size()) <= (kint32max):
 CHECK failed: WebRtcIlbcfix_CbConstruct( &decresidual[(iLBCbits_inst->startIdx + 1 + subframe) * SUBL], iLBCbits_inst->cb_index + subcount * CB_NSTAGES, iLBCbits_inst->gain_index + subcount * CB_NSTAGES, mem, MEM_LF_TBL, SUBL)
 CHECK failed: WebRtcIlbcfix_CbConstruct( &decresidual[start_pos + iLBCenc_inst->state_short_len], iLBCbits_inst->cb_index, iLBCbits_inst->gain_index, mem + CB_MEML - ST_MEM_L_TBL, ST_MEM_L_TBL, diff)
 CHECK failed: WebRtcIlbcfix_CbConstruct( &reverseDecresidual[subframe * SUBL], iLBCbits_inst->cb_index + subcount * CB_NSTAGES, iLBCbits_inst->gain_index + subcount * CB_NSTAGES, mem, MEM_LF_TBL, SUBL)
 CHECK failed: WebRtcIlbcfix_CbConstruct( reverseDecresidual, iLBCbits_inst->cb_index, iLBCbits_inst->gain_index, mem + CB_MEML - ST_MEM_L_TBL, ST_MEM_L_TBL, diff)
-CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL: 
-CHECK failed: target_ != NULL: 
+CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL:
+CHECK failed: target_ != NULL:
 CICESession
 CIPHER_HAS_NO_OBJECT_IDENTIFIER
 CIPHER_IS_NULL
@@ -2991,9 +2982,9 @@ CLIENT_HANDSHAKE_TRAFFIC_SECRET
 CLIENT_RANDOM
 CLIENT_TRAFFIC_SECRET_0
 CMAC
-CN #channels 
-CN frequency 
-CNAME not found for ssrc 
+CN #channels
+CN frequency
+CNAME not found for ssrc
 COMMAND_NOT_SUPPORTED
 COMODO CA Limited1'0%
 COMODO CA Limited1+0)
@@ -3001,7 +2992,6 @@ COMODO Certification Authority0
 COMP routines
 CONNE
 CONNECT
-CONNECT 
 CONNECTION_REJECTED
 CONNECTION_TYPE_NOT_SET
 CONNECT_ERROR
@@ -3032,9 +3022,9 @@ CXXABI_1.3
 CXXABI_1.3.5
 C\tD\vD
 Ca;Od
-Caching SSL session for 
+Caching SSL session for
 Call
-Call stats: 
+Call stats:
 Call::CreateAudioReceiveStream
 Call::CreateAudioSendStream
 Call::CreateFlexfecReceiveStream
@@ -3047,12 +3037,12 @@ Call::DestroyAudioSendStream
 Call::DestroyFlexfecReceiveStream
 Call::DestroyVideoReceiveStream
 Call::DestroyVideoSendStream
-Called in wrong state: 
+Called in wrong state:
 Called with SDP without DTLS fingerprint.
 Called with SDP without SDES crypto.
 Called with SDP without ice-ufrag and ice-pwd.
-Can't 
-Can't add new extension id 
+Can't
+Can't add new extension id
 Can't bind socket to network because network binding is not implemented for this OS.
 Can't buffer any more data for the data channel.
 Can't change SCTP port after SCTP association formed.
@@ -3061,7 +3051,7 @@ Can't change crypto_options after calling SetLocalDescription.
 Can't change media_transport after calling SetLocalDescription.
 Can't change media_transport after calling SetRemoteDescription.
 Can't close file.
-Can't find a decoder associated with payload type: 
+Can't find a decoder associated with payload type:
 Can't find audio content in local description.
 Can't find audio content in remote description.
 Can't find data content in local description.
@@ -3072,10 +3062,10 @@ Can't find video content in remote description.
 Can't have multiple fingerprint attributes at the same level.
 Can't have multiple sctp port attributes.
 Can't initialize NullVideoDecoder.
-Can't load 
+Can't load
 Can't open file. WebRTC event log not started.
-Can't process incoming 
-Can't protect 
+Can't process incoming
+Can't protect
 Can't query latency
 Can't read data!
 Can't register decode complete callback on NullVideoDecoder.
@@ -3090,31 +3080,31 @@ CanInsertDtmf: No audio channel exists.
 CanInsertDtmf: Sender does not have SSRC.
 Cand-
 Cand[
-Candidate has an unknown component: 
+Candidate has an unknown component:
 Cannot Add 10 ms audio, input frequency and length doesn't match
 Cannot Add 10 ms audio, input frequency not valid
 Cannot Add 10 ms audio, invalid number of channels.
 Cannot Add 10 ms audio, payload length is zero
 Cannot add 10 ms audio, resampling failed
-Cannot allocate buffer larger than kint32max for 
+Cannot allocate buffer larger than kint32max for
 Cannot change width or height after initialization
 Cannot create identity digest with no certificate
-Cannot enable RED at 
+Cannot enable RED at
 Cannot enqueue a new runtime setting.
-Cannot gather candidates because ICE parameters are empty ufrag: 
+Cannot gather candidates because ICE parameters are empty ufrag:
 Cannot increase lag_in_frames
 Cannot increase width or height larger than their initial values
 Cannot initialize receiver
 Cannot register external decoder with NULL pointer
-Cannot remove payload 
-Cannot set padding size 
+Cannot remove payload
+Cannot set padding size
 Cannot set payload, not enough space in buffer.
 Cannot set up secure media transport
 Cannot toggle rtx after initialization!
 Cannot use nested redundant encoders.
 CapacityKbps
 Capture
-Capture analyzer activated: 
+Capture analyzer activated:
 Capture element set
 CcjRK
 Cellular
@@ -3124,12 +3114,12 @@ Certificate:\n
 Certification Services Division1806
 Cessation Of Operation
 ChaCha20-Poly1305
-Changing 
-Changing FlexFEC payload type (recv) from 
-Changing IceConnectionState 
+Changing
+Changing FlexFEC payload type (recv) from
+Changing IceConnectionState
 Changing data state, recv=
-Changing recv codecs from 
-Changing the RTP receive parameters is currently 
+Changing recv codecs from
+Changing the RTP receive parameters is currently
 Changing the negotiated BUNDLE-tag is not supported.
 Changing to 8000 Hz.
 Changing to ICE completed state because all transports are complete.
@@ -3148,36 +3138,36 @@ ChannelManager::DestroyVoiceChannel
 Channel[
 Char=
 CheckAndPing
-CheckPayloadTypes: unknown RTP payload type 
+CheckPayloadTypes: unknown RTP payload type
 CheckPlatform
-Checking average QP 
+Checking average QP
 Chk TSN: %u size: %d inflight cnt: %d\n
 Chunk of length %u
 Cipher functions
 ClearAudioSend
 ClearAudioSend: No audio channel exists.
-ClearAudioSend: ssrc is incorrect: 
+ClearAudioSend: ssrc is incorrect:
 ClearGettingPorts
 ClearVideoSend
 Close
 CloseMicrophone
 CloseSpeaker
-Closing IVF file due to reaching size limit: 
+Closing IVF file due to reaching size limit:
 Closing playout mixer
 Closing record mixer
 Closing record mixer 2
 Closing record mixer 3
 Closing record mixer 4
 Closing the DataChannel due to a failure to queue additional data.
-Closing the DataChannel due to a failure to send data, send_result = 
-Closing the DataChannel due to a failure to send the CONTROL message, send_result = 
+Closing the DataChannel due to a failure to send data, send_result =
+Closing the DataChannel due to a failure to send the CONTROL message, send_result =
 Code Signing
 Codec internal FEC and RED cannot be co-enabled.
-Codec payload type out of range: 
+Codec payload type out of range:
 Codec payload types overlap.
-Codec with invalid payload type: 
-Codec with max < min bitrate: 
-Comfort noise generator returned error code: 
+Codec with invalid payload type:
+Codec with max < min bitrate:
+Comfort noise generator returned error code:
 ComfortNoiseDecoder::Genererate failed to generate comfort noise
 Comodo CA Limited1!0
 Comodo CA Limited1$0"
@@ -3190,18 +3180,18 @@ Conflicting flags.
 Conn-
 Conn[
 Connect
-Connect failed with 
-Connect() failed with error 
-Connecting to relay via 
-Connection already exists for peer reflexive candidate: 
-Connection deleted with number of pings sent: 
+Connect failed with
+Connect() failed with error
+Connecting to relay via
+Connection already exists for peer reflexive candidate:
+Connection deleted with number of pings sent:
 Connection::OnConnectionRequestResponse - No MAPPED-ADDRESS or XOR-MAPPED-ADDRESS found in the stun response message
 Connection::OnConnectionRequestResponse - No STUN_ATTR_PRIORITY found in the stun response message
 Construct
 Content-Length:
 Content-Length: 0\r\n
 ContinueSSL
-ContinueSSL -- error 
+ContinueSSL -- error
 Cookie timer expired, but no cookie
 CopyAndRewriteVui
 CopyHrdParameters
@@ -3209,14 +3199,14 @@ CopyRemainingBits
 Corrupt payload found.
 Corrupt/truncated FEC packet.
 Could not create default receive stream.
-Could not create encoder of type 
+Could not create encoder of type
 Could not create unsignaled receive stream.
 Could not find capture volume on the mixer.
-Could not find cipher: 
+Could not find cipher:
 Could not find output volume in the mixer.
 Could not find rtt_mult_experiment.
-Could not get lengths for crypto suite(s): recv cipher_suite 
-Could not get lengths for crypto suite(s): send cipher_suite 
+Could not get lengths for crypto suite(s): recv cipher_suite
+Could not get lengths for crypto suite(s): send cipher_suite
 Could not read OPEN message channel type.
 Could not read OPEN message label
 Could not read OPEN message label length.
@@ -3226,13 +3216,13 @@ Could not read OPEN message reliabilility param.
 Could not read OPEN message reliabilility prioirty.
 Could not read OPEN message type.
 Could not read OPEN_ACK message type.
-Couldn't convert payload type 
+Couldn't convert payload type
 Couldn't create answer: %s\n
 Couldn't create offer: %s\n
-Couldn't find associated codec with payload type 
-Couldn't find matching 
-Couldn't find sender 
-Couldn't read /proc/net/route, skipping default 
+Couldn't find associated codec with payload type
+Couldn't find matching
+Couldn't find sender
+Couldn't read /proc/net/route, skipping default
 Couldn't set mask
 Couldn't set session description: %s\n
 Couldn't set sigaction
@@ -3241,7 +3231,7 @@ Couldn't set up DTLS-SRTP on RTP channel.
 Couldn't start socket thread\n
 CpuLimitedResolutionInPercent
 Create
-Create SDP failed: 
+Create SDP failed:
 CreateAnswer
 CreateAnswer - observer is NULL.
 CreateAnswer failed to UpdateCryptoParamsForBundle.
@@ -3250,7 +3240,7 @@ CreateAnswer: offer_to_receive_audio is not supported with Unified Plan semantic
 CreateAnswer: offer_to_receive_video is not supported with Unified Plan semantics. Use the RtpTransceiver API instead.
 CreateAudioSource
 CreateAudioTrack
-CreateChannel. Options: 
+CreateChannel. Options:
 CreateDataChannel
 CreateEncoder
 CreateForTest
@@ -3269,7 +3259,7 @@ CreatePlatformSpecificObjects
 CreateRandomString(len, &str)
 CreateRtpDataChannel
 CreateSender
-CreateSender called with invalid kind: 
+CreateSender called with invalid kind:
 CreateSender is not available with Unified Plan SdpSemantics. Please use AddTransceiver instead.
 CreateSpeechEncoderIfNecessary(encoder_factory_.get())
 CreateVideoChannel
@@ -3282,9 +3272,9 @@ CreateWebRTCSession
 CreateWebRTCTURNServer
 Created
 Created CheckQpTask. Scheduling on queue...
-Created IVF file for codec data of type 
-Created channel for 
-Creating 
+Created IVF file for codec data of type
+Created channel for
+Creating
 Creating BBR controller
 Creating default receive stream for SSRC=
 Creating fallback controller
@@ -3296,7 +3286,7 @@ CrlID
 Cum ack %8.8x greater or equal than TSN %8.8x
 Cumulative lost is oversized.
 Cumulative lost is too big to fit into Report Block
-Current BWE 
+Current BWE
 Cybertrust Global Root0
 Cybertrust, Inc1
 CzD#E
@@ -3321,7 +3311,7 @@ DECRYPTION_FAILED
 DECRYPTION_FAILED_OR_BAD_RECORD_MAC
 DEFAULT
 DEFAULT:!NULL:!aNULL:!SHA256:!SHA384:!aECDH:!AESGCM+AES256:!aPSK
-DEK-Info: 
+DEK-Info:
 DEPTH_EXCEEDED
 DES-CBC3-SHA
 DES-CDMF
@@ -3373,13 +3363,13 @@ DSA-old
 DTLS timeout expired
 DTLS-SRTP disabled.
 DTLS-SRTP enabled; has certificate parameter.
-DTLS-SRTP enabled; sending DTLS identity request (key type: 
+DTLS-SRTP enabled; sending DTLS identity request (key type:
 DTLS-SRTP key export failed
 DTLS-SRTP key installation for RTCP failed
 DTLS-SRTP key installation for RTP failed
 DTLS/SCTP
 DTLS_MESSAGE_TOO_BIG
-DTMF event code 
+DTMF event code
 DUPLICATE_EXTENSION
 DUPLICATE_KEY_SHARE
 DUPLICATE_SIGNATURE_ALGORITHM
@@ -3389,8 +3379,8 @@ D\vvf:
 D_E_NOT_CONGRUENT_TO_1
 D_OUT_OF_RANGE
 Da4`c
-Data Channel OPEN message of unexpected type: 
-Data Channel OPEN_ACK message of unexpected type: 
+Data Channel OPEN message of unexpected type:
+Data Channel OPEN_ACK message of unexpected type:
 Data Encipherment
 Data channel state: UNKNOWN(%d)\n
 Data channel state: kClosed\n
@@ -3401,30 +3391,30 @@ Data channel type mismatch. Expected RTP, got SCTP.
 Data indication has no data
 Data indication has no source address
 Data is not supported in the answer.
-DataChannel failed to parse OPEN_ACK message, sid = 
-DataChannel received DATA message, sid = 
-DataChannel received OPEN_ACK message, sid = 
-DataChannel received unexpected CONTROL message, sid = 
-DataChannel with label 
+DataChannel failed to parse OPEN_ACK message, sid =
+DataChannel received DATA message, sid =
+DataChannel received OPEN_ACK message, sid =
+DataChannel received unexpected CONTROL message, sid =
+DataChannel with label
 DataCodec[
 Decipher Only
 Decode error
 Decoded too much CNG.
 Decoded too much.
 Decoder error (no error code)
-Decoder returned error code: 
+Decoder returned error code:
 DecoderThreadStarting
 DecodingThread
 DefaultRtcpCname
 DegradedSendThread
 Deinit
-Delay agnostic aec is enabled? 
+Delay agnostic aec is enabled?
 Delay must be in the range of 0-10000 milliseconds.
-Delay stats: number of old packets 
+Delay stats: number of old packets
 DelayStdDevMs
 Delivered MID=%8.8x, got TSN=%8.8x, SID=%4.4x, MID=%8.8x
 Delivered SSN=%4.4x, got TSN=%8.8x, SID=%4.4x, SSN=%4.4x
-Delta 
+Delta
 Delta value too large ( >= 2^16 ticks )
 DeltaComplete
 Description contains invalid candidates.
@@ -3434,12 +3424,12 @@ DestroyInternalSocket
 DestroyRtpDataChannel
 DestroyVideoChannel
 DestroyVoiceChannel
-Destroyed channel: 
+Destroyed channel:
 Destroying old default receive stream for SSRC=
 Detected big bandwidth drop, start probing.
 Device has no name
 DfIlIrI
-Did not find the TurnEntry for address 
+Did not find the TurnEntry for address
 Didn't expect message type in REMB RtcpFeedback.
 Didn't expect message type in transport-cc RtcpFeedback.
 Diffie-Hellman based MAC
@@ -3456,7 +3446,7 @@ DigiCert Global Root G30v0
 DigiCert Trusted Root G40
 Digital Signature
 DirName
-DirName: 
+DirName:
 Directory
 Disable candidates on link-local network interfaces.
 DisableOpusDtx
@@ -3469,7 +3459,7 @@ Discarding FlexFEC packet with malformed header.
 Discarding candidate because it doesn't match filter.
 Discarding candidate because port is already done gathering.
 Discarding frame with unexpected rotation.
-Discarding received RRTR for ssrc 
+Discarding received RRTR for ssrc
 Discarding recovered packet with RED encapsulation
 Discarding truncated FlexFEC packet.
 DisconnectDataChannel called when rtp_data_channel_ and sctp_transport_ are NULL.
@@ -3481,39 +3471,35 @@ DmyF1~\n
 Do not gather candidates on high-cost networks
 DoAllocate
 DoInsertDtmf
-Don't send data with unknown payload type: 
+Don't send data with unknown payload type:
 Down
 Downgrade counts: fps: {
-Drop Frame 
+Drop Frame
 Dropped data packet of len=
 DroppedFrames.Capturer
-DroppedFrames.Capturer 
 DroppedFrames.Encoder
-DroppedFrames.Encoder 
 DroppedFrames.EncoderQueue
-DroppedFrames.EncoderQueue 
 DroppedFrames.Ratelimiter
-DroppedFrames.Ratelimiter 
-Dropping ICE candidate with hostname address 
-Dropping a remote candidate because its ufrag 
-Dropping connection as TCP socket bound to IP 
+Dropping ICE candidate with hostname address
+Dropping a remote candidate because its ufrag
+Dropping connection as TCP socket bound to IP
 Dropping frame. Too large for target bitrate.
-Dropping incoming 
-Dropping outgoing 
+Dropping incoming
+Dropping outgoing
 Dropping packet: entry not locked
 Dropping packet: unknown address
 DtlsTransport[
 Due to sequence number gaps, cannot protect media packets with a single block of FEC packets.
 Dummy Audio APIs will be utilized.
 Duplicate MID=%8.8x detected.
-Duplicate RTP extension ID: 
-Duplicate candidate: 
-Duplicate header extension id: 
-Duplicate id found. Reassigning from 
+Duplicate RTP extension ID:
+Duplicate candidate:
+Duplicate header extension id:
+Duplicate id found. Reassigning from
 Duplicate payload type (
-Duplicate rtp header extension id 
-Duplicate voice receiver SSRC: 
-Duplicate voice sender SSRC: 
+Duplicate rtp header extension id
+Duplicate voice receiver SSRC:
+Duplicate voice sender SSRC:
 E#EzD
 E*N>U
 E+E1EAEIESEUEaEwE}E
@@ -3582,7 +3568,7 @@ ERROR_PARSING_EXTENSION
 ERROR_SETTING_CIPHER_PARAMS
 ERROR_SETTING_NBIO
 ERROR_TRANSPORT
-ERR_LIB_SSL: 
+ERR_LIB_SSL:
 EVENT_NOEPOLL
 EVENT_NOPOLL
 EVENT_NOSELECT
@@ -3616,8 +3602,8 @@ EXTRACTOR-dtls_srtp
 EXTRA_DATA_IN_MESSAGE
 E]sv
 E`R7YC<
-Echo control set to 
-Echo detector internal state: {Echo likelihood: 
+Echo control set to
+Echo detector internal state: {Echo likelihood:
 EchoController;
 EdiPartyName
 EdiPartyName:<unsupported>
@@ -3625,7 +3611,7 @@ Ee{5
 EkPT0\r
 Elapsed time (
 Empty feedback messages not allowed.
-Empty hostname in ICE URI: 
+Empty hostname in ICE URI:
 Empty payload.
 Empty primary ssrcs vector, returning empty optional
 Empty transport feedback packet received.
@@ -3636,7 +3622,7 @@ EnableBuiltInAGC
 EnableBuiltInNS
 EnableOpusDtx
 Enabled
-Enabled BweLossExperiment with parameters 
+Enabled BweLossExperiment with parameters
 Enabled,BBR
 Enabled,Injected
 Enabled-%d
@@ -3650,9 +3636,8 @@ Enabled-%lld
 Enabled-%zu
 EnabledByFlag_%zuSL%zuTL
 Encipher Only
-Encode failed (error code 
+Encode failed (error code
 EncodeTimeInMs
-EncodeTimeInMs 
 Encoded image outside simulcast range (
 Encoded.Qp.H264
 Encoded.Qp.H264.S0
@@ -3674,77 +3659,77 @@ Encoder.ForcedSwFallbackChangesPerMinute.Vp8
 Encoder.ForcedSwFallbackTimeInPercent.Vp8
 EncoderPaused
 Enterprises
-Enum device 
+Enum device
 Eq02
 Equifax1-0+
 Er0\n
-Error = 
-Error changing master volume: 
-Error changing microphone volume: 
-Error closing current recording sound device, error: 
-Error closing playout sound device, error: 
-Error closing record sound device, error: 
-Error detaching playout mixer: 
-Error detaching record mixer: 
-Error getting capture switch: 
-Error getting get_playback_volume_range: 
-Error getting inputvolume: 
-Error getting microphone volume range: 
-Error getting outputvolume: 
-Error getting playback switch: 
+Error =
+Error changing master volume:
+Error changing microphone volume:
+Error closing current recording sound device, error:
+Error closing playout sound device, error:
+Error closing record sound device, error:
+Error detaching playout mixer:
+Error detaching record mixer:
+Error getting capture switch:
+Error getting get_playback_volume_range:
+Error getting inputvolume:
+Error getting microphone volume range:
+Error getting outputvolume:
+Error getting playback switch:
 Error in read()
-Error in replacing default auth module, error: 
+Error in replacing default auth module, error:
 Error in the Arf buffer
 Error in the Golden buffer
 Error in the Last buffer
-Error loading symbol 
+Error loading symbol
 Error parsing ICE candidate '%s': %s\n
 Error parsing ICE candidates on line %s: %s\n
 Error parsing ICE candidates: %s\n
 Error parsing SDP answer on line %s: %s\n
 Error parsing SDP offer on line %s: %s\n
 Error parsing VP8 payload descriptor!
-Error set encoder parameters (loss = 
-Error set encoder rate (total bitrate bps = 
-Error setting capture switch: 
+Error set encoder parameters (loss =
+Error set encoder rate (total bitrate bps =
+Error setting capture switch:
 Error setting minimum playout delay.
-Error setting playback switch: 
+Error setting playback switch:
 Error snd_mixer_close(handleMixer) errVal=
-Error stop playing: 
-Error stop recording: 
+Error stop playing:
+Error stop recording:
 Error writing address attribute: unknown family.
 Error writing xor-address attribute: unknown family.
-Estimated available bandwidth 
+Estimated available bandwidth
 Ethernet
 EuSq\
-Exceeded maximum protobuf size of 2GB: 
+Exceeded maximum protobuf size of 2GB:
 Exceeding mtu of %d out size is %d\n
 Excluded
-Exiting startup due to rtt increase from: 
-Expect line: 
+Exiting startup due to rtt increase from:
+Expect line:
 Expect one line only
 Expected format "<encoding name>/<clock rate>[/<encodingparameters>]".
 Expected format "msid:<identifier>[ <appdata>]".
-Expected to find delta for seq_no 
-Expecting: 
-Expects 
-Expects at least 
+Expected to find delta for seq_no
+Expecting:
+Expects
+Expects at least
 Expects m line.
 Experiment to disable sending ULPFEC is enabled.
 Experimental
-Experimental ns is enabled? 
+Experimental ns is enabled?
 Extended OCSP Status
-Extended filter aec is enabled? 
+Extended filter aec is enabled?
 Extension
 Extension cannot be registered: Not enough space left in buffer to change to two-byte header extension and add new extension.
 Extension cannot be registered: Not enough space left in buffer.
 External FEC Controller will be used.
 Extract
 ExtractMediaInfo
-Extracting keys from transport: 
+Extracting keys from transport:
 EyP]
 E{MZ
-E{ulpfec_payload_type: 
+E{ulpfec_payload_type:
 F%w0\r
 F33\
 FAILED: slice_reader.ReadBits(&adaptive_ref_pic_marking_mode_flag, 1)
@@ -3787,10 +3772,10 @@ Failed parsing VP9 payload data.
 Failed parsing VP9 picture id.
 Failed parsing VP9 ref indices.
 Failed parsing payload.
-Failed resending RTP packet 
-Failed to 
+Failed resending RTP packet
+Failed to
 Failed to AddTransportAnswer, content name=
-Failed to AddTransportInfo with content name: 
+Failed to AddTransportInfo with content name:
 Failed to AddTransportOffer, content name=
 Failed to GetRtpAuthParams: SRTP not active
 Failed to GetSrtpOverhead: SRTP not active
@@ -3798,15 +3783,15 @@ Failed to ProtectRtcp: SRTP not active
 Failed to ProtectRtp: SRTP not active
 Failed to SetApplicationSpecificData.
 Failed to SetReceive on data channel
-Failed to SetRecvCodecs because of unknown codec: 
+Failed to SetRecvCodecs because of unknown codec:
 Failed to SetSend on data channel
 Failed to SetSend on video channel
 Failed to SetSendCodecs because there is no known codec.
 Failed to UnprotectRtcp: SRTP not active
 Failed to UnprotectRtp: SRTP not active
 Failed to add audio track to PeerConnection: %s\n
-Failed to add remote stream ssrc: 
-Failed to add send stream ssrc: 
+Failed to add remote stream ssrc:
+Failed to add send stream ssrc:
 Failed to add video track to PeerConnection: %s\n
 Failed to allocate MFQE framebuffer
 Failed to allocate SCTP sid.
@@ -3842,7 +3827,7 @@ Failed to apply SSL session from cache
 Failed to apply configuration to PortAllocator.
 Failed to apply engine options during channel SetOptions.
 Failed to apply remote fingerprint.
-Failed to apply the description for 
+Failed to apply the description for
 Failed to check IsExternalAuthActive: SRTP not active
 Failed to compute peer cert digest.
 Failed to configure encoder.
@@ -3866,35 +3851,35 @@ Failed to create encoder configuration.
 Failed to create fingerprint from the digest.
 Failed to create identity fingerprint, alg=
 Failed to create key pair from PEM string.
-Failed to create relay port with 
+Failed to create relay port with
 Failed to create stereo encoder configuration.
 Failed to create the platform specific ADM implementation.
 Failed to create the private key from PEM string.
 Failed to create video channel.
 Failed to create voice channel.
 Failed to decode CNG
-Failed to decode frame with timestamp 
+Failed to decode frame with timestamp
 Failed to decode sprop/pps *
 Failed to decode sprop/sps *
 Failed to deliver RTP packet on re-delivery.
-Failed to enable/disable AGC: 
-Failed to enable/disable NS: 
-Failed to enable/disable VAD: 
-Failed to encode frame. Error code: 
+Failed to enable/disable AGC:
+Failed to enable/disable NS:
+Failed to enable/disable VAD:
+Failed to encode frame. Error code:
 Failed to extract QP from VP8 video frame
 Failed to find a suitable video format.
-Failed to find delta for seq_no 
-Failed to fit a fragment to packet in SingleNalu packetization mode. Payload size left 
+Failed to find delta for seq_no
+Failed to fit a fragment to packet in SingleNalu packetization mode. Payload size left
 Failed to generate CNAME.
 Failed to generate random string!
 Failed to get QP, end of file reached.
 Failed to get QP, invalid length.
-Failed to get QP, invalid length: 
+Failed to get QP, invalid length:
 Failed to get auth keys from libsrtp!.
 Failed to get codec header from frame, dropping frame.
 Failed to get the DTLS role.
-Failed to get the ssrc attribute value from 
-Failed to get the value of attribute: 
+Failed to get the ssrc attribute value from
+Failed to get the value of attribute:
 Failed to get transport stats for transport_name=
 Failed to get video channel stats
 Failed to get video stats.
@@ -3910,7 +3895,7 @@ Failed to initialize the ADM.
 Failed to initialize the RTP data channel due to invalid DataChannelInit.
 Failed to initialize the SCTP data channel due to invalid DataChannelInit.
 Failed to initialize the answer.
-Failed to initialize the encoder associated with codec type: 
+Failed to initialize the encoder associated with codec type:
 Failed to initialize the offer.
 Failed to initialize video encoder.
 Failed to initiate iterator for addr_mgmt_ep_sa\n
@@ -3919,25 +3904,25 @@ Failed to initiate iterator for sendall\n
 Failed to insert DTMF to channel.
 Failed to insert packet due to frame being too big.
 Failed to install SRTP event handler, err=
-Failed to lookup send time for 
+Failed to lookup send time for
 Failed to make EC key pair
 Failed to make RSA key pair
-Failed to parse ALR experiment: 
-Failed to parse PPS from first fragment of FU-A NAL unit with original type: 
+Failed to parse ALR experiment:
+Failed to parse PPS from first fragment of FU-A NAL unit with original type:
 Failed to parse PPS id and SPS id from PPS slice.
-Failed to parse PPS id from slice of type: 
+Failed to parse PPS id from slice of type:
 Failed to parse PPS.
 Failed to parse SPS id from SPS slice.
 Failed to parse SPS.
 Failed to parse audio codecs correctly.
-Failed to parse bitstream. Error: 
+Failed to parse bitstream. Error:
 Failed to parse certificate from PEM string.
-Failed to parse parameters for 
+Failed to parse parameters for
 Failed to parse parameters for AimdRateControl experiment from field trial string. Using default.
 Failed to parse parameters for BweLossExperiment experiment from field trial string. Using default.
 Failed to parse parameters for BweTrendlineFilter experiment from field trial string. Using default.
 Failed to parse parameters for CwndExperiment from field trial string. Experiment disabled.
-Failed to parse the OPEN message for sid 
+Failed to parse the OPEN message for sid
 Failed to parse the address type.
 Failed to parse the connection data. Multicast is not currently supported.
 Failed to parse the connection data. The address type is mismatching.
@@ -3952,45 +3937,45 @@ Failed to process the bundled m= section.
 Failed to protect RTCP packet: size=
 Failed to protect RTP packet: size=
 Failed to protect SRTCP packet, err=
-Failed to protect SRTCP packet: The buffer length 
+Failed to protect SRTCP packet: The buffer length
 Failed to protect SRTCP packet: no SRTP Session
 Failed to protect SRTP packet, seqnum=
-Failed to protect SRTP packet: The buffer length 
+Failed to protect SRTP packet: The buffer length
 Failed to protect SRTP packet: no SRTP Session
 Failed to push down SCTP parameters.
 Failed to query stereo playout.
 Failed to query stereo recording.
 Failed to queue task.
-Failed to read STUN response 
+Failed to read STUN response
 Failed to read field with key: '
 Failed to register extension uri:'
 Failed to register the sink for RTP demuxer.
-Failed to remove remote stream with ssrc 
-Failed to remove send stream with ssrc 
-Failed to resolve ICE candidate hostname 
+Failed to remove remote stream with ssrc
+Failed to remove send stream with ssrc
+Failed to resolve ICE candidate hostname
 Failed to retrieve the certificate's digest algorithm
-Failed to send FlexFEC packet 
-Failed to send RED packet 
+Failed to send FlexFEC packet
+Failed to send RED packet
 Failed to send RTCP BYE
-Failed to send ULPFEC packet 
+Failed to send ULPFEC packet
 Failed to send frame, rtc_error=
 Failed to send the packet because SRTP transport is inactive.
-Failed to send video packet 
-Failed to set 
-Failed to set AGC mode: 
+Failed to send video packet
+Failed to set
+Failed to set AGC mode:
 Failed to set SCTP to non blocking.
 Failed to set SCTP_ENABLE_STREAM_RESET.
-Failed to set SCTP_EVENT type: 
+Failed to set SCTP_EVENT type:
 Failed to set SCTP_EXPLICIT_EOR.
 Failed to set SCTP_NODELAY.
 Failed to set SCTP_PEER_ADDR_PARAMS.
 Failed to set SO_LINGER.
 Failed to set SSL role for the transport.
 Failed to set audio transport since media was active
-Failed to set codec 
-Failed to set compression gain: 
+Failed to set codec
+Failed to set compression gain:
 Failed to set high NS level.
-Failed to set limiter on/off: 
+Failed to set limiter on/off:
 Failed to set local audio description recv parameters.
 Failed to set local audio description streams.
 Failed to set local data description streams.
@@ -4008,7 +3993,7 @@ Failed to set remote video description send parameters.
 Failed to set remote video description streams.
 Failed to set stereo playout mode.
 Failed to set stereo recording mode.
-Failed to set target level: 
+Failed to set target level:
 Failed to set the crypto key params
 Failed to set up audio demuxing.
 Failed to set up data demuxing.
@@ -4037,14 +4022,14 @@ Failed writing VP9 SS data.
 Failed writing VP9 layer info.
 Failed writing VP9 picture id.
 Failed writing VP9 ref indices.
-FecBitrateSentInBps 
+FecBitrateSentInBps
 FecBitrateSentInKbps
 Feedback packet sequence number set exceed it's max size', will get reset.
 Feedback timed out (
 Ff.M
 Field=
 FillBitrateInfo
-Filtered out 
+Filtered out
 FindAudioTrack
 FindVideoTrack
 Fingerprint provided but no identity available.
@@ -4055,13 +4040,13 @@ FlexFEC is enabled, but no protected media SSRC given. Therefore disabling FlexF
 FlexFEC packet protecting multiple media SSRCs. We do not yet support this, thus discarding packet.
 FlexFEC packet with inflexible generator matrix. We do not yet support this, thus discarding packet.
 FlexFEC packet with retransmission bit set. We do not yet support this, thus discarding the packet.
-FlexfecReceiveStream stats: 
+FlexfecReceiveStream stats:
 FlexfecReceiveStreamImpl
-FlexfecSender only supports RTP header extensions for 
+FlexfecSender only supports RTP header extensions for
 Flight size-express incorrect F: %d I: %d R: %d Ab: %d ACK: %d\n
 FlushBuffers
 FlushRtcpMessages_n
-For a total packet loss of 
+For a total packet loss of
 Forbidden
 Found additional streams NOT managed by scheduler, corrected\n
 Found chk:%p tsn:%x <= last_acked_seq:%x\n
@@ -4074,16 +4059,16 @@ Found unknown MediaStream constraint. Name:
 Frame (
 Frame conversion failed, dropping frame.
 Frame decryption required but not attached to this stream. Dropping  frame.
-Frame has an incorrect temporal index. Expected: 
+Frame has an incorrect temporal index. Expected:
 Frame is referencing higher temporal layer.
 Frame scheduled out of order, render_time=
-Frame size cannot be larger than 
-Frame size changed: scaled 
+Frame size cannot be larger than
+Frame size changed: scaled
 Frame size must be an integer multiple of 10 ms.
 Frame too long into the future, timestamp=
 Frame with (picture_id:spatial_id) (
 Frame with no encode started time recordings. Encoder may be reordering frames or not preserving RTP timestamps.
-Frame with picture id 
+Frame with picture id
 FrameBuffer::AdvanceLastDecodedFrame
 FrameBuffer::ClearFramesAndHistory
 FrameBuffer::InsertFrame
@@ -4097,9 +4082,9 @@ FrameBuffer::UpdateFrameInfoWithIncomingFrame
 FrameBuffer::UpdateJitterDelay
 FrameBuffer::UpdatePlayoutDelays
 FrameBuffer::UpdateTimingFrameInfo
-Frames decoded 
+Frames decoded
 Frames decoded was not 1 when first qp value was received.
-Frames encoded 
+Frames encoded
 FwV;
 Fz0+jyXs
 G(fM
@@ -4123,7 +4108,7 @@ GENERAL_SUBTREE
 GENERIC
 GENSTR
 GENTIME
-GET 
+GET
 GLIBCXX_3.4
 GLIBCXX_3.4.11
 GLIBCXX_3.4.14
@@ -4165,7 +4150,7 @@ GROUP2PKPARAMETERS_FAILURE
 GROUP_MISMATCH
 GWebRTC.Call.NumberOfPauseEvents
 G_codecDataBase.DeregisterExternalDecoder(payloadType)
-Gain Controller 2 activated: 
+Gain Controller 2 activated:
 GainController2;
 Gak, put out entire msg with NO end!-1\n
 Gak, put out entire msg with NO end!-2\n
@@ -4173,7 +4158,7 @@ Gak, would have overrun map end: %d slide_end: %d\n
 GeneralNames
 GeneralString
 GenerateCertificateAsync
-Generated 
+Generated
 Generating certificate
 Generating key pair
 Generic
@@ -4189,8 +4174,8 @@ GetCallStats
 GetConfiguration
 GetDataMid()
 GetDevicesInfo - Could not find device name or numbers
-GetDevicesInfo - device name free hint error: 
-GetDevicesInfo - device name hint error: 
+GetDevicesInfo - device name free hint error:
+GetDevicesInfo - device name hint error:
 GetDtlsRole
 GetDtmfSender
 GetFrameDecryptor
@@ -4214,7 +4199,7 @@ GetSource
 GetSources
 GetStats
 GetStats - observer is NULL.
-GetStats is called with an invalid track: 
+GetStats is called with an invalid track:
 GetStatsReportInternal
 GetTransceivers
 GetTransceivers is only supported with Unified Plan SdpSemantics.
@@ -4233,8 +4218,8 @@ GoDaddy.com, Inc.110/
 Golden buffer not referenced, but present in search order.
 Golden buffer was not updated during pattern cycle.
 Got ENOTCONN from transport.
-Got different send size than expected: 
-Got role conflict; switching to 
+Got different send size than expected:
+Got role conflict; switching to
 Got send_s from tsn:%x + 1 of tp1: %p\n
 Gq)>1m
 Greater Manchester1
@@ -4250,11 +4235,11 @@ HANDSHAKE_FAILURE_ON_CLIENT_HELLO
 HANDSHAKE_NOT_COMPLETE
 HC../../../modules/congestion_controller/goog_cc/probe_bitrate_estimator.cc
 HCgNr*
-HEAD 
+HEAD
 HEADER_TOO_LONG
 HFs\t
 HIGH
-HISTOGRAM(WebRTC.Audio.RecordedOnlyZeros): 
+HISTOGRAM(WebRTC.Audio.RecordedOnlyZeros):
 HKDF functions
 HMAC
 HMAC GOST 34.11-94
@@ -4267,7 +4252,7 @@ HTTP_REQUEST
 HandleAllocateRequest
 HandleRefreshRequest
 HandleTooLargeNackList
-Hash Algorithm: 
+Hash Algorithm:
 Hen\fM
 Hi There\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\vnull authentication function
 Hi There\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\vt
@@ -4278,7 +4263,7 @@ Hold Instruction Code
 Hold Instruction None
 Hold Instruction Reject
 Hopeless peer! biggest_tsn_acked:%x largest seq:%x\n
-Host: 
+Host:
 Hq0u0u
 Huh, freeing tail? - TSNH\n
 Huh, how can to_move be larger?\n
@@ -4301,7 +4286,7 @@ IANA
 ICC or token signature
 ICE OnReceivingState now %d\n
 ICE OnWritableState now %d\n
-ICE candidate hostname 
+ICE candidate hostname
 ICE completed\n
 ICE connection state: %d\n
 ICE failed\n
@@ -4421,7 +4406,7 @@ IOID
 IP Address
 IP Address:%d.%d.%d.%d
 IP Address:<invalid>
-IP address family does not match. server: 
+IP address family does not match. server:
 IPSec End System
 IPSec Tunnel
 IPSec User
@@ -4440,27 +4425,27 @@ IX#m
 IYUVI420YU16I422YU24I444YUYVYUY2yuvsYUY2HDYCUYVY2vuyUYVYJPEGMJPGdmb1MJPGBA81BGGRRGB3raw BGR324BG
 IceServer has hostname field set, but URI does not contain an IP address.
 Identity generation failed
-Ignore rtpmap line that did not appear in the <fmt> of the m-line: 
-Ignored line: 
+Ignore rtpmap line that did not appear in the <fmt> of the m-line:
+Ignored line:
 Ignoring "b=AS:-1"; will be treated as "no bandwidth limit".
-Ignoring Proxy-Authenticate: 
+Ignoring Proxy-Authenticate:
 Ignoring attempt to re-create existing socket.
 Ignoring call to SetFeedbackParameters because parameters are unchanged; nack=
 Ignoring call to SetLocalSsrc because parameters are unchanged; local_ssrc=
 Ignoring data media section with MID=
-Ignoring measured send_delta, because it's is 
+Ignoring measured send_delta, because it's is
 Ignoring negative value of cumulative_lost
 Ignoring removal of %d ICE candidate\n
 Illegal message sequence, missing end for MID: %8.8x
-Illegal temporal dependency out of defined pattern from position 
+Illegal temporal dependency out of defined pattern from position
 Image size must match encoder init configuration size
 Inactive SRTP transport received an RTCP packet. Drop it.
 Inactive SRTP transport received an RTP packet. Drop it.
 Incomig frame has diffferent resolution then previous: (
-Incoming FIR from SSRC 
-Incoming NACK length: 
-Incoming PLI from SSRC 
-Incoming REMB: 
+Incoming FIR from SSRC
+Incoming NACK length:
+Incoming PLI from SSRC
+Incoming REMB:
 Incoming empty RTCP packet
 Incoming frame doesn't match set resolution. Dropping.
 Incoming frame dropped due to that the encoder is blocked.
@@ -4470,14 +4455,14 @@ IncomingVideoStream
 IncomingVideoStream::Dequeue
 IncomingVideoStream::OnFrame
 Incorrect protection length, dropping FEC packet.
-Incorrect rrtr block size 
-Incorrect temporal layer set for frame: 
-Incorrectly formatted field trial string for 
+Incorrect rrtr block size
+Incorrect temporal layer set for frame:
+Incorrectly formatted field trial string for
 Independent
 Inherit all
 Inhibit Policy Mapping
 Init
-InitEncode() has been called, but a callback function 
+InitEncode() has been called, but a callback function
 InitMicrophone
 InitMicrophone() failed
 InitPlayout
@@ -4488,43 +4473,40 @@ InitSpeaker
 InitSpeaker() failed
 Init_w
 Initial back-off interval must be between 10 and 200 ms.
-Initial window for throughput estimation must be between 
+Initial window for throughput estimation must be between
 Initialize
-InitializeIfNeeded failed: sample_rate_hz = 
+InitializeIfNeeded failed: sample_rate_hz =
 InitializeIfNeeded(
 InitializeUsrSctp
 Initialized
 Initializing decoder with payload type '
 Input buffer overflow
 InputFramesPerSecond
-InputFramesPerSecond 
 InputHeightInPixels
-InputHeightInPixels 
 InputWidthInPixels
-InputWidthInPixels 
 InsertDtmf
 InsertDtmf is called on DtmfSender that can't send DTMF.
-InsertDtmf is called with invalid duration or tones gap. The duration cannot be more than 
+InsertDtmf is called with invalid duration or tones gap. The duration cannot be more than
 InsertDtmf: No audio channel exists.
 InsertDtmf: Sender does not have SSRC.
 InsertEvent invalid parameters
 InsertPacket
 InsertPacket invalid packet
 InsertPacketInternal
-Inserted SPS id 
+Inserted SPS id
 Inserting keyframe (picture_id:spatial_id) (
-Interesting usage signature 
+Interesting usage signature
 Internal error in absl::variant implementation. Attempted to rethrow an exception when building with exceptions disabled.
 InternalCreateDataChannel: Data is not supported in this call.
 International Organizations
-Invalid (non-positive) normal/overuse/underuse periods: 
-Invalid FlexFEC SSRC given. 
-Invalid FlexFEC payload type given. 
+Invalid (non-positive) normal/overuse/underuse periods:
+Invalid FlexFEC SSRC given.
+Invalid FlexFEC payload type given.
 Invalid RTCP header: Padding bit set but 0 padding size specified.
 Invalid RTCP header: Padding bit set but 0 payload size specified.
 Invalid RTCP header: Too many padding bytes (
-Invalid RTCP header: Version must be 
-Invalid RTX payload type: 
+Invalid RTCP header: Version must be
+Invalid RTX payload type:
 Invalid SDP line.
 Invalid SRTP crypto suite
 Invalid STUN server address '%s'\n
@@ -4532,54 +4514,54 @@ Invalid TCP candidate type.
 Invalid alpha value provided, using default.
 Invalid attribute value.
 Invalid audio transport
-Invalid codec ID: 
+Invalid codec ID:
 Invalid codec setting for the send codec.
 Invalid configuration.
-Invalid configuration: 
-Invalid delta_size for seq_no 
+Invalid configuration:
+Invalid delta_size for seq_no
 Invalid file. WebRTC event log not started.
-Invalid hostname format: 
+Invalid hostname format:
 Invalid ice-ufrag or ice-pwd length.
 Invalid image format. Only YV12 and I420 images are supported
-Invalid jitter upper bound sigmas, must be >= 0.0: 
-Invalid layer in XR target bitrate pack: spatial index 
+Invalid jitter upper bound sigmas, must be >= 0.0:
+Invalid layer in XR target bitrate pack: spatial index
 Invalid mandatory value for
-Invalid maxaveragebitrate 
+Invalid maxaveragebitrate
 Invalid maxaveragebitrate "
 Invalid message type in CCM RtcpFeedback.
 Invalid message type in NACK RtcpFeedback.
-Invalid nomination: 
+Invalid nomination:
 Invalid non-TCP candidate
 Invalid number of parameters provided.
 Invalid operation kUndefined.
-Invalid packet buffer max size: 
-Invalid parameter for 
+Invalid packet buffer max size:
+Invalid parameter for
 Invalid parameter value provided.
-Invalid parameters for 
+Invalid parameters for
 Invalid parameters in RTCP mux answer
 Invalid parameters in RTCP mux provisional answer
 Invalid parameters in SRTP answer
-Invalid payload size 
-Invalid payload type 
-Invalid payload-type 
-Invalid payload_type 
+Invalid payload size
+Invalid payload type
+Invalid payload-type
+Invalid payload_type
 Invalid port number.
-Invalid port: 
-Invalid reason length: 
-Invalid remb bitrate value : 
+Invalid port:
+Invalid reason length:
+Invalid remb bitrate value :
 Invalid sctp port value.
-Invalid seperator position 
+Invalid seperator position
 Invalid session description.
 Invalid size for a valid FIR packet.
 Invalid state for RTCP mux answer
 Invalid state for RTCP mux provisional answer
 Invalid state for SRTP answer
 Invalid state for change of RTCP mux offer
-Invalid tmmb bitrate value : 
-Invalid transport parameter in ICE URI: 
+Invalid tmmb bitrate value :
+Invalid transport parameter in ICE URI:
 Invalid transport parameter key.
-Invalid user@hostname format: 
-Invalid value: 
+Invalid user@hostname format:
+Invalid value:
 Invalidity Date
 Invoking SSL Verify Callback.
 IrZ)9
@@ -4624,7 +4606,6 @@ Key Encipherment
 Key type requested not understood
 KeyComplete
 KeyFramesSentInPermille
-KeyFramesSentInPermille 
 KuLZM>N!O
 KutO
 KwV\r
@@ -4648,21 +4629,21 @@ LUZQ;"B
 L[U}\q17:_J-Vy9g@/P
 Last buffer not referenced, but present in search order.
 Last buffer was not updated during pattern cycle.
-Last timestamp mismatch. Calculated: 
+Last timestamp mismatch. Calculated:
 LeY`g
-Length mismatch for extension id 
+Length mismatch for extension id
 Lfft
 Linux ALSA APIs will be utilized.
 Linux PulseAudio APIs will be utilized
-Listen() failed with error 
+Listen() failed with error
 LmFY
 Local and Remote descriptions must be applied to get the SSL Role of the SCTP transport.
 Local and Remote descriptions must be applied to get the SSL Role of the session.
-Local fingerprint does not match identity. Expected: 
+Local fingerprint does not match identity. Expected:
 Local fingerprint supplied when caller didn't offer DTLS.
 LocalKeySet
-LogVideoSendStreamConfig currently only supports one 
-Long feedback delay detected, reducing BWE to 
+LogVideoSendStreamConfig currently only supports one
+Long feedback delay detected, reducing BWE to
 Loopback
 Loss threshold must be greater than 0.
 Loss threshold must be less than or equal to 1.
@@ -4706,13 +4687,13 @@ MUST_HAVE_AT_LEAST_TWO_PRIMES
 M]?Ng
 Machine has no networks; no ports will be allocated
 Mail
-Making certificate for 
+Making certificate for
 Making key pair
-Malformed toggling interval: 
+Malformed toggling interval:
 Management
 Mapped address has bad family
 Mapping array size: %d, baseTSN: %8.8x, cumAck: %8.8x, highestTSN: (%8.8x, %8.8x).\n
-Mask Algorithm: 
+Mask Algorithm:
 Master
 Master element found
 Max SDES chunks reached.
@@ -4727,17 +4708,17 @@ MaybeSwitchSelectedConnection
 Mb@?../../../pc/videotrack.cc:68
 MbP?
 MbPArtp_sender_
-Measured bitrate: 
-Media packet 
+Measured bitrate:
+Media packet
 Media section has more than one track specified with a=ssrc lines which is not supported with Unified Plan.
-MediaBitrateSentInBps 
+MediaBitrateSentInBps
 MediaBitrateSentInKbps
-MediaStream with ID 
+MediaStream with ID
 MediaTransportLabel
-Message took 
+Message took
 MessageQueue::Dispatch
 Mic element found
-Microphone hardware volume range, min: 
+Microphone hardware volume range, min:
 MicrophoneIsInitialized
 MicrophoneMute
 MicrophoneMuteIsAvailable
@@ -4753,7 +4734,7 @@ Microsoft Server Gated Crypto
 Microsoft Smartcardlogin
 Microsoft Trust List Signing
 Microsoft Universal Principal Name
-Missing ':' in ICE URI: 
+Missing ':' in ICE URI:
 Missing STUN_ATTR_NONCE attribute in stale nonce error response.
 Missing STUN_ATTR_REALM attribute in stale nonce error response.
 Missing allocate response error code.
@@ -4772,14 +4753,14 @@ More than 2 blocks in packet not supported.
 More than one H264 SPS NAL units needing rewriting found within a single STAP-A packet. Keeping the first and rewriting the last.
 MtW42+9:F
 Mu(uj
-Multiple FlexFEC streams in local SDP, but our implementation only supports a single FlexFEC stream. Will not enable FlexFEC for proposed stream with SSRC: 
-Multiple SSRCs in stream parameters: 
+Multiple FlexFEC streams in local SDP, but our implementation only supports a single FlexFEC stream. Will not enable FlexFEC for proposed stream with SSRC:
+Multiple SSRCs in stream parameters:
 Multiple consecutively invalid RTCP SR reports, clearing measurements.
 Multiplex
 N2Lbw
-NACK list contains too old sequence numbers: 
+NACK list contains too old sequence numbers:
 NACK list full, clearing NACK list and requesting keyframe.
-NACK list has grown too large: 
+NACK list has grown too large:
 NAME_CONSTRAINTS
 NAME_TOO_LONG
 NBIO_CONNECT_ERROR
@@ -4861,7 +4842,7 @@ NO_SUBJECT_DETAILS
 NO_SUCH_FILE
 NO_SUPPORTED_VERSIONS_ENABLED
 NPc5OPz
-NS set to 
+NS set to
 NULL pointers supplied as input
 NULL-SHA
 NULL_BEFORE_BLOCK_MISSING
@@ -4875,12 +4856,12 @@ N_NOT_EQUAL_P_Q
 N_U9203
 NackPacketsReceivedPerMinute
 NeedMorePlayData() failed
-NetEq capacity is 
-NetEq config: 
-NetEq fast mode? 
+NetEq capacity is
+NetEq config:
+NetEq fast mode?
 NetEqImpl::GetAudio
 NetEqImpl::InsertPacket
-NetEqImpl::RegisterPayloadType: payload type 
+NetEqImpl::RegisterPayloadType: payload type
 Net[
 Netscape
 Netscape Base Url
@@ -4898,24 +4879,24 @@ Netscape SSL Server Name
 Netscape SSL server
 Netscape Server Gated Crypto
 Network change was observed
-Network cost changed from 
+Network cost changed from
 Network manager has started
-Network queue: 
-Network route changed on transport 
-NetworkManager detected 
+Network queue:
+Network route changed on transport
+NetworkManager detected
 Never sent serial number %8.8x
 New SSRC=
 New cum ack %8.8x too high, highest TSN %8.8x
-New remote candidate: 
+New remote candidate:
 Newer RTCP SR report with older RTP timestamp, dropping
 No DTLS-SRTP selected crypto suite
-No FrameEncryptor is attached to this video sending stream but 
+No FrameEncryptor is attached to this video sending stream but
 No PPS id in IDR nalu.
-No PPS with id << 
-No SPS with id << 
-No SSRCs in stream parameters: 
+No PPS with id <<
+No SPS with id <<
+No SSRCs in stream parameters:
 No crypto keys are provided for SDES.
-No decodable frame in 
+No decodable frame in
 No decoder of this type exists.
 No error
 No field with key: '
@@ -4928,49 +4909,48 @@ No microphone volume available
 No more relay addresses left to try
 No multi-channel support
 No parameter provided.
-No protected media SSRC supplied. 
-No sending stream on ssrc 
+No protected media SSRC supplied.
+No sending stream on ssrc
 No stream found to attach frame encryptor
-No stream_id specified for sender. Generated stream ID: 
+No stream_id specified for sender. Generated stream ID:
 No such bucket for address\n
 No video codecs supported.
-No video sender info for sender with ssrc 
+No video sender info for sender with ssrc
 Non Critical
 Non Repudiation
 Non renegable mapping array (last %d entries are zero):\n
 Non-I420 frame requiring rotation. Discarding.
-Non-monotonic clock behavior observed. Previous timestamp: 
+Non-monotonic clock behavior observed. Previous timestamp:
 Non-rejected SCTP m= section is needed to get the SSL Role of the SCTP transport.
-Not After: 
+Not After:
 Not adding candidate because the JsepTransport doesn't exist. Ignore it.
 Not adding data recv stream '
 Not adding data send stream '
-Not adding data stream 
+Not adding data stream
 Not changing max. protocol version while DTLS is negotiating
 Not enough space for all given SSRCs.
 Not enough space in H.264 codec header to insert SPS/PPS provided out-of-band.
 Not enough space left for chunk #
-Not implemented field number 
+Not implemented field number
 Not ready.
-Not receiving packet 
-Not removing candidate because it does not have a transport name set: 
+Not receiving packet
+Not removing candidate because it does not have a transport name set:
 Not removing candidate because the JsepTransport doesn't exist.
 Not sending data because binary type is unsupported.
-Not sending data because codec is unknown: 
-Not sending data because sid is unknown or closing: 
-Not sending data because ssrc is unknown: 
+Not sending data because codec is unknown:
+Not sending data because sid is unknown or closing:
+Not sending data because ssrc is unknown:
 Not sending packet with sid=
 Not sending packet with ssrc=
 Not supported on this platform
-Not switching the selected connection on controlled side yet: 
+Not switching the selected connection on controlled side yet:
 Nr>N\fo>
 Null
 NullVideoDecoder
 Number of channels must be positive.
 Number of frames in GOF is zero. Assume that stream has only one temporal layer.
-Number of frames: captured 
+Number of frames: captured
 NumberOfPauseEvents
-NumberOfPauseEvents 
 O$RcT
 O-p?A6
 O/Y0"
@@ -5027,7 +5007,7 @@ Offerer must use actpass value for setup attribute.
 Offerer must use actpass value or current negotiated role for setup attribute.
 OnAllocateError
 OnAudioChannelGone
-OnBitrateUpdated, bitrate 
+OnBitrateUpdated, bitrate
 OnClose
 OnConnectionDestroyed
 OnDataChannelReadyToSend
@@ -5036,7 +5016,7 @@ OnErrorResponse
 OnMessage
 OnNetworkRouteChanged
 OnPacketReceived
-OnReadyToSend: 
+OnReadyToSend:
 OnRefreshError
 OnResponse
 OnSctpClosingProcedureComplete_n
@@ -5046,18 +5026,18 @@ OnSctpInboundPacket
 OnSctpOutboundPacket
 OnSctpTransportDataReceived_n
 OnSctpTransportReadyToSendData_n
-OnSendPacket: failed sending to 
+OnSendPacket: failed sending to
 OnStateChange
 OnTransportCandidateGathered_n
 OnTransportCandidatesRemoved_n
-OnTransportControllerCandidatesGathered: content name 
-OnTransportControllerCandidatesRemoved: empty content name in candidate 
+OnTransportControllerCandidatesGathered: content name
+OnTransportControllerCandidatesRemoved: empty content name in candidate
 OnTransportReadyToSend
 OnTryAlternate
 Only RED or only ULPFEC enabled, but not both. Disabling both.
 Only Some Reasons
 Oops!\n\n
-OpenSSLAdapter::BeginSSL: 
+OpenSSLAdapter::BeginSSL:
 OpenSSLAdapter::Cleanup
 OpenSSLAdapter::Error(
 OpenSSLAdapter::OnCloseEvent(
@@ -5065,7 +5045,7 @@ OpenSSLAdapter::OnConnectEvent
 OpenSSLStreamAdapter::Error(
 OpenSSLStreamAdapter::OnEvent
 OpenSSLStreamAdapter::OnEvent SE_OPEN
-OpenSSLStreamAdapter::OnEvent(SE_CLOSE, 
+OpenSSLStreamAdapter::OnEvent(SE_CLOSE,
 OpenSSLStreamAdapter::Read(
 OpenSSLStreamAdapter::Write(
 Our FlexFEC implementation only supports protecting a single media streams. This session has multiple media streams however, so no FlexFEC SSRC will be generated.
@@ -5075,7 +5055,7 @@ Out of SCTP-INPCB->hashinit - no resources\n
 Out of dynamic payload types, skipping the rest.
 Out of memory\n
 Out of the blue
-Output array is too short. 
+Output array is too short.
 Oversized rtp header extension.
 P"g1M
 P*\h;cBPQVYB6_F3P
@@ -5085,7 +5065,7 @@ P-384
 P-521
 P-qX
 P00***33----****P00000,00+**....0................(...........***PP
-P2PTransportChannel: 
+P2PTransportChannel:
 P2PTransportChannel::OnTransportGatheringState now %d\n
 P2PTransportChannel::OnUnknownAddress - No STUN_ATTR_PRIORITY found in the stun request message
 P8\fl
@@ -5141,8 +5121,8 @@ POLICY_MAPPINGS
 POLICY_PATH_LENGTH
 POLICY_PATH_LENGTH_ALREADY_DEFINED
 POLICY_WHEN_PROXY_LANGUAGE_REQUIRES_NO_POLICY
-POST 
-PPS size  
+POST
+PPS size
 PRE_SHARED_KEY_MUST_BE_LAST
 PRIVATE_KEY_DECODE_ERROR
 PRIVATE_KEY_ENCODE_ERROR
@@ -5160,7 +5140,7 @@ PUBLIC_KEY_DECODE_ERROR
 PUBLIC_KEY_ENCODE_ERROR
 PUBLIC_KEY_VALIDATION_FAILED
 PURH
-PUT 
+PUT
 P_IS_NOT_PRIME
 PacedSender is not designed to handle 0 bitrate.
 PacedSender paused.
@@ -5174,14 +5154,14 @@ Packet is too small to be an ExtendedReports packet.
 Packet is too small to contain CSRCs it promise to have.
 Packet is too small to contain all the data.
 Packet missing where it shouldn't.
-Packet payload size should be 
+Packet payload size should be
 Packet pointer is null in history for seq_no
-Packet received on SSRC: 
+Packet received on SSRC:
 PacketBuffer is already at max size (
-PacketBuffer size expanded to 
+PacketBuffer size expanded to
 Packets are being reordered on the path from the socket to the bandwidth estimator. Ignoring this packet for bandwidth estimation, resetting.
 Padding was set, but padding size is zero
-PaddingBitrateSentInBps 
+PaddingBitrateSentInBps
 PaddingBitrateSentInKbps
 ParseEvent payload too short
 ParseNonParameterSetNalu
@@ -5189,14 +5169,13 @@ Parsed QP value out of range.
 Parsed invalid QP from bitstream.
 Parsing sprop "
 PausedTimeInPercent
-PausedTimeInPercent 
-Pausing observer 
-Payload length 
+Pausing observer
+Payload length
 Payload length is zero.
-Payload size 
-Payload type 
-Payload type already registered: 
-Payload-type 
+Payload size
+Payload type
+Payload type already registered:
+Payload-type
 Pc4?\fU\v
 PeerConnection cannot create an answer in a state other than have-remote-offer or have-local-pranswer.
 PeerConnection initialized without a PeerConnectionObserver
@@ -5221,7 +5200,7 @@ PeerConnection::SetRemoteDescription
 PeerConnection::~PeerConnection
 Permanent Identifier
 Permitted
-PhysicalSocketServer asked to remove a unknown 
+PhysicalSocketServer asked to remove a unknown
 Ping interval of backup candidate pairs is shorter than that of general candidate pairs when ICE is strongly connected
 Ping interval of candidate pairs is shorter when ICE is strongly connected than that when ICE is weakly connected
 Ping interval of stable and writable candidate pairs is shorter than that of general candidate pairs when ICE is strongly connected
@@ -5230,7 +5209,7 @@ Pl$M?
 PlatformAudioLayer
 Playing
 Playout error: _writeErrors=
-Playout hardware volume range, min: 
+Playout hardware volume range, min:
 Playout underflow
 PlayoutData failed, RecOut Failed
 PlayoutDeviceName
@@ -5249,25 +5228,25 @@ PostCreateSessionDescriptionSucceeded
 PostEvent
 PostSetSessionDescriptionFailure
 PostSetSessionDescriptionSuccess
-Posting with length: 
+Posting with length:
 Pq?6
 Pq?A6
-Pre-amplifier activated: 
+Pre-amplifier activated:
 PrepareTransceiverStatsInfos_s
-Preparing TCP address, current state: 
+Preparing TCP address, current state:
 Private
 PrivateKeyToPEMString
 Privilege Withdrawn
 Probe cluster (bitrate:min bytes:min packets): (
-Probe failed, sent at 
+Probe failed, sent at
 Probe packet received: send time=
-Probe successful, sent at 
+Probe successful, sent at
 Probing successful
 Probing unsuccessful, invalid send/receive interval
 Probing unsuccessful, receive/send ratio too high
 Problem with AUTH parameters
 Problem with address parameters
-Proc-Type: 
+Proc-Type:
 Proc-Type: 4,
 Process
 ProcessFrameP
@@ -5276,22 +5255,21 @@ ProcessThreadImpl
 Processing the addition of a new track for MID=
 Processing the removal of a track for MID=
 ProtectionOverheadRateThreshold field trial is set to an invalid value, expecting a value between (0, 1].
-ProtectionOverheadRateThreshold is set to 
+ProtectionOverheadRateThreshold is set to
 Proxy Certificate Information
 Proxy-Authenticate:
-Proxy-Authorization: 
+Proxy-Authorization:
 Proxy-Connection: Keep-Alive
 Proxy-Connection: Keep-Alive\r\n
 Prune
-Prune 
-Pruning candidate from old generation: 
+Pruning candidate from old generation:
 PublicKeyToPEMString
 PulseAudio connection terminated early
 PulseAudio objects has not been set
 PulseAudio objects have not been set
 PulseAudio support is enabled.
 PulseAudio terminated
-PulseAudio version 
+PulseAudio version
 Purging packet history in order to re-set status.
 PushdownMediaDescription
 PvL@
@@ -5304,17 +5282,16 @@ Q:RI
 Q>0P7>
 Q@Lz[l
 QCELP
-QP stats not recorded for H264 spatial idx 
-QP stats not recorded for VP8 spatial idx 
-QP stats not recorded for VP9 spatial layer 
+QP stats not recorded for H264 spatial idx
+QP stats not recorded for VP8 spatial idx
+QP stats not recorded for VP9 spatial layer
 QP sum was already set and no QP was given for a frame.
-QP thresholds: low: 
+QP thresholds: low:
 QV}_6M6
 Q\vgV
 Qb{o@Z}\vs
 QualityLimitedResolutionDownscales
 QualityLimitedResolutionInPercent
-QualityLimitedResolutionInPercent 
 Queue to str MID: %u duplicate
 QueueLength
 Queued received data exceeds the max buffer size.
@@ -5339,7 +5316,7 @@ RDNS
 READ_KEY
 READ_TIMEOUT_EXPIRED
 REAL
-RECORD_ERROR, error = 
+RECORD_ERROR, error =
 RECORD_LENGTH_MISMATCH
 RECORD_TOO_LARGE
 REMB identifier not found, not a REMB packet.
@@ -5391,11 +5368,11 @@ RTCMediaStream_
 RTCOutboundRTP
 RTCP
 RTCPeerConnection
-RTCStatsCollector: No voice sender info for sender with ssrc 
+RTCStatsCollector: No voice sender info for sender with ssrc
 RTCTransport_
 RTP keep-alive parameters not supported by this channel.
-RTP timestamp: 
-RTP-based data channels may not send more than 
+RTP timestamp:
+RTP-based data channels may not send more than
 RTP/
 RTP/AVP
 RTP/AVPF
@@ -5404,8 +5381,8 @@ RTX SSRC '
 RTX SSRC unset.
 RTX SSRCs configured but there's no configured RTX payload type the set codec. Ignoring RTX.
 RTX SSRCs configured but there's no configured RTX payload type. Ignoring.
-RTX SSRCs exist, but don't cover all SSRCs (unsupported): 
-RTX codec with invalid or no associated payload type: 
+RTX SSRCs exist, but don't cover all SSRCs (unsupported):
+RTX codec with invalid or no associated payload type:
 RTX mapped to payload not in codec list.
 RTX missing associated payload type.
 RTX not mapped to regular video codec or RED codec.
@@ -5413,17 +5390,17 @@ RW=SD/RoZ
 R_T5Y
 Reached maximum number of DLRR items.
 Ready.
-ReadyToUseRemoteCandidate: Invalid candidate media index 
+ReadyToUseRemoteCandidate: Invalid candidate media index
 Reass %x,CF:%x,TSN=%8.8x,SID=%4.4x,FSN=%8.8x,MID:%8.8x
 Reass %x,CI:%x,TSN=%8.8x,SID=%4.4x,FSN=%4.4x,SSN:%4.4x
 Reassembly problem (MID=%8.8x)
 Receive
 Receive stream for SSRC '
 Receive stream with SSRC '
-Received BAD stun type from server: 
+Received BAD stun type from server:
 Received FEC packet has an all-zero packet mask.
 Received FEC packet is protecting an unknown media SSRC; dropping.
-Received H.264-IDR frame 
+Received H.264-IDR frame
 Received RED packet with different SSRC than expected; dropping.
 Received RED packet with length exceeds maximum IP packet size; dropping.
 Received REMB for packet feedback only GoogCC
@@ -5431,21 +5408,21 @@ Received SCTP data:
 Received STUN ping id=
 Received TURN CreatePermission error response, code=
 Received a data packet on a timed-out Connection. Resetting state to STATE_WRITE_INIT.
-Received an unknown PPID 
+Received an unknown PPID
 Received conflicting role from the peer.
 Received feedback before information about sent packets.
-Received first 
+Received first
 Received first complete key frame
 Received invalid STUN message
-Received invalid send network priority: 
+Received invalid send network priority:
 Received keyframe without scalability structure
-Received packet containing more than 
-Received packet for unknown ssrc: 
+Received packet containing more than
+Received packet for unknown ssrc:
 Received remote ICE parameters: ufrag=
 Received report block where extended high sequence number goes backwards, ignoring.
-Received response with wrong type: 
+Received response with wrong type:
 Received scalability structure on a non base layer frame. Scalability structure ignored.
-Received signal with no handler: 
+Received signal with no handler:
 Receiving timeout is shorter than the minimal ping interval.
 RecordedDataIsAvailable() failed
 Recording
@@ -5455,9 +5432,9 @@ RecordingDevices
 RecordingIsAvailable
 RecordingIsInitialized
 Recover attempts a restart cnt:%d\n
-Recovered media packet with SSRC: 
+Recovered media packet with SSRC:
 Recovery - snd_pcm_recover OK
-Recovery - snd_pcm_start error: 
+Recovery - snd_pcm_start error:
 Recovery fails %d times??\n
 Recreate all the receive streams because the send codec has changed.
 RecreateEncoderInstance(conf)
@@ -5471,19 +5448,19 @@ RecreateWebRtcVideoStream (recv) because of SetRecvParameters
 Recreating AudioReceiveStream for SSRC=
 Recursive encrypted header.
 Recv
-Recv() returned error: 
+Recv() returned error:
 RecvFrom
-Redundant relay address: 
-Reference past the last sync frame. Referenced 
+Redundant relay address:
+Reference past the last sync frame. Referenced
 RefinedAdaptiveFilter;
 Refresh
 Regather candidates on all networks
 Regather candidates on failed networks
 RegisterAudioCallback
-RegisterExternalDecoder 
+RegisterExternalDecoder
 RegisterExternalReceiveCodec
 RegisterObserver
-RegisterPayloadType 
+RegisterPayloadType
 RegisterProcessThread
 RegisterReceiveCodec
 RegisterReceiveCodecUnlocked
@@ -5494,47 +5471,46 @@ RegisterVADCallback()
 Registered ID
 Rejected peer certificate due to mismatched digest.
 Relay
-Relay 
-Relay allocate succeeded: 
+Relay allocate succeeded:
 Relay connection failed: socket closed
 Remote encapsulation port changed
 Remote peer requested a DataChannel butCreateDataChannel failed.
-Remote peer requests ICE restart for 
-Remote supports flexfec-03, but we will not send since 
+Remote peer requests ICE restart for
+Remote supports flexfec-03, but we will not send since
 RemoteBitrateEstimatorAbsSendTime: Instantiating.
 RemoteBitrateEstimatorAbsSendTimeImpl: Incoming packet is missing absolute send time extension!
 RemoteBitrateEstimatorSingleStream: Instantiating.
 RemoteEstimatorProxy: Incoming packet is missing the transport sequence number extension!
 Removal of unknown sink.
 Remove From CRL
-Remove remote ssrc: 
+Remove remote ssrc:
 RemoveIceCandidates
-RemoveIceCandidates: Error when removing remote candidates: 
-RemoveIceCandidates: Failed to remove candidates. Requested 
+RemoveIceCandidates: Error when removing remote candidates:
+RemoveIceCandidates: Failed to remove candidates. Requested
 RemoveIceCandidates: ICE candidates can't be removed without any remote session description.
 RemoveIceCandidates: PeerConnection is closed.
 RemoveIceCandidates: candidates are empty.
-RemoveRecvStream: 
+RemoveRecvStream:
 RemoveRemoteCandidates
 RemoveSctpDataStream
 RemoveSctpDataStream called when sctp_transport_ is NULL.
-RemoveSendStream: 
+RemoveSendStream:
 RemoveSink
 RemoveStream
 RemoveStream is not available with Unified Plan SdpSemantics. Please use RemoveTrack instead.
 RemoveTrack
-Removed 
-Removed port because it is destroyed: 
-Removed port: 
-Removed remote candidate 
-Removing 
+Removed
+Removed port because it is destroyed:
+Removed port:
+Removed remote candidate
+Removing
 Removing framerate down-scaling setting.
 Removing resolution down-scaling setting.
 Removing unsignaled receive stream with SSRC=
 Renegable mapping array (last %d entries are zero):\n
 Report Block should be 24 bytes long
 Report block in extended report packet is too big.
-Reporting high QP, framedrop percent 
+Reporting high QP, framedrop percent
 RequestKeyFrame
 RequestSortAndStateUpdate
 Requested size is too large to fit into size_t.
@@ -5542,39 +5518,39 @@ Requesting key frame due to missing too old packets
 Requesting key frame due to too large NACK list.
 Require Explicit Policy
 Reregistering extension uri:'
-Resample failed: audio_ptr = 
+Resample failed: audio_ptr =
 Resample(
-Reset() called with unsupported channel count, num_channels = 
-Reset() called with unsupported sample rates, inFreq = 
-Resetting timestamp translation after averaging 
-Resolved ICE candidate hostname 
+Reset() called with unsupported channel count, num_channels =
+Reset() called with unsupported sample rates, inFreq =
+Resetting timestamp translation after averaging
+Resolved ICE candidate hostname
 Resolving addr in PhysicalSocket::Connect
-Resuming observer 
+Resuming observer
 Resumption
-RetransmittedBitrateSentInBps 
+RetransmittedBitrateSentInBps
 RetransmittedBitrateSentInKbps
 Returning certificate
 Returning key pair
-Reusing an existing 
+Reusing an existing
 Rng().Generate(&id, sizeof(id))
 Rng().Generate(bytes.get(), 31)
 Role Conflict
 Root CA1
 Rrtr already set, overwriting.
-Rtcp packet size mismatch. Calculated: 
+Rtcp packet size mismatch. Calculated:
 RtcpMode::kCompound
 RtcpMode::kReducedSize
 RtpDataChannel::SetLocalContent_w
 RtpDataChannel::SetRemoteContent_w
 RtpDataChannel::~RtpDataChannel
-RtpDataMediaChannel::SetSendBandwidth to 
-RtpReceiver for track with id 
-RtpSender for track with id 
-RtpStreamReceiverController::Receiver::Receiver: Sink 
+RtpDataMediaChannel::SetSendBandwidth to
+RtpReceiver for track with id
+RtpSender for track with id
+RtpStreamReceiverController::Receiver::Receiver: Sink
 RtpTransport::OnReadPacket
 RtpTransportControllerSend
 RtpVideoStreamReceiver
-RtxBitrateSentInBps 
+RtxBitrateSentInBps
 RtxBitrateSentInKbps
 RtxReceiveStream created with empty payload type mapping.
 R}b*XhUu
@@ -5587,12 +5563,12 @@ S/MIME signing
 S0Q0
 S:91@~K$W 9
 S@lX
-SAMPLE: sample_length: 
+SAMPLE: sample_length:
 SAP@
 SCSV_RECEIVED_WHEN_RENEGOTIATING
 SCTP
 SCTP iterator
-SCTP seems to have made a packet that is bigger 
+SCTP seems to have made a packet that is bigger
 SCTP timer
 SCTP_ADAPTATION_INDICATION
 SCTP_ASSOC_CHANGE
@@ -5644,16 +5620,16 @@ SMIME
 SMIME-CAPS
 SNMPv2
 SPS Nalu header missing
-SPS size  
-SRTCP activated with negotiated parameters: send cipher_suite 
-SRTP 
+SPS size
+SRTCP activated with negotiated parameters: send cipher_suite
+SRTP
 SRTP Decode
 SRTP Encode
 SRTP event: SSRC collision
 SRTP event: reached hard key usage limit
 SRTP event: reached hard packet limit (2^48 packets)
 SRTP event: reached soft key usage limit
-SRTP event: unknown 
+SRTP event: unknown
 SRTP_AEAD_AES_128_GCM
 SRTP_AEAD_AES_256_GCM
 SRTP_AES128_CM_SHA1_32
@@ -5681,15 +5657,15 @@ SSLV3_ALERT_ILLEGAL_PARAMETER
 SSLV3_ALERT_NO_CERTIFICATE
 SSLV3_ALERT_UNEXPECTED_MESSAGE
 SSLV3_ALERT_UNSUPPORTED_CERTIFICATE
-SSL_CTX creation failed: 
+SSL_CTX creation failed:
 SSL_CTX creation failed: Failed to load any trusted ssl root certificates.
 SSL_CTX_HAS_NO_DEFAULT_SSL_VERSION
 SSL_HANDSHAKE_FAILURE
 SSL_SESSION_ID_CONTEXT_TOO_LONG
 SSL_SESSION_ID_TOO_LONG
 SSL_read
-SSL_send_fatal_alert failed, error = 
-SSL_shutdown failed, error = 
+SSL_send_fatal_alert failed, error =
+SSL_shutdown failed, error =
 SSL_write
 SSL_write couldn't write to the underlying socket; buffering data.
 STAP-A packet too short
@@ -5708,14 +5684,14 @@ Salford1
 Salt Lake City1
 Salt Length: 0x
 Same/old NTP timestamp (
-Sample rate 
+Sample rate
 Sample rate must be larger than 0 Hz
 Sas]
 SbT?U
-Scaling down framerate: 
-Scaling down resolution, max pixels: 
-Scaling up framerate: 
-Scaling up resolution, max pixels: 
+Scaling down framerate:
+Scaling down resolution, max pixels:
+Scaling up framerate:
+Scaling up resolution, max pixels:
 ScheduleEntryDestruction
 ScheduleRecurringRegatheringOnAllNetworks
 ScheduleRecurringRegatheringOnFailedNetworks
@@ -5729,77 +5705,72 @@ See www.entrust.net/legal-terms1907
 Seek(original_byte_offset, original_bit_offset)
 Selected Attribute Types
 Selected connection destroyed. Will choose a new one.
-Selecting connection for triggered check: 
+Selecting connection for triggered check:
 Send
 Send stream with SSRC '
 SendControllerThread
 SendData
 SendData called when rtp_data_channel_ and sctp_transport_ are NULL.
 SendDelayed
-SendNackDelay is set to 
+SendNackDelay is set to
 SendPacket
 SendQueuedStreamResets[
 SendSideDelayInMs
 SendSideDelayMaxInMs
-SendThresholdCallback: Failed to get transport for socket 
-Sender already exists for track 
+SendThresholdCallback: Failed to get transport for socket
+Sender already exists for track
 Sender is null.
-Sending an 
+Sending an
 Sending data as ordered for unordered DataChannel because the OPEN_ACK message has not been received.
 Sending error response, type=
-Sent CONTROL message on channel 
-Sent RTP data packet: 
-Sent STUN request 
+Sent CONTROL message on channel
+Sent RTP data packet:
+Sent STUN request
 Sent first RTP packet of the first video frame (pre-pacer)
 Sent last RTP packet of the first video frame (pre-pacer)
 SentFramesPerSecond
-SentFramesPerSecond 
 SentHeightInPixels
-SentHeightInPixels 
 SentPacketsLostInPercent
-SentPacketsLostInPercent 
 SentToInputFpsRatioPercent
-SentToInputFpsRatioPercent 
 SentWidthInPixels
-SentWidthInPixels 
-Sequence number 
+Sequence number
 Server Error
 Server IP address family does not match with local host address family type
-Server and local address families are not compatible. Server address: 
+Server and local address families are not compatible. Server address:
 Session description must have DTLS fingerprint if DTLS enabled.
 Session description must have SDES when DTLS disabled.
 Session description must have ice ufrag and pwd.
-Session error code: 
-Session error description: 
-Session: 
+Session error code:
+Session error description:
+Session:
 SessionDescription is NULL.
-Set ICE receiving timeout to 
-Set ICE ufrag: 
+Set ICE receiving timeout to
+Set ICE ufrag:
 Set SRTP keys for DTLS-SRTP is not supported.
-Set STUN keepalive interval to 
-Set backup connection ping interval to 
-Set continual_gathering_policy to 
-Set default nomination mode to 
-Set max framerate: 
-Set min ping interval to 
-Set network preference to 
-Set ping most likely connection to 
-Set presume writable when fully relayed to 
-Set receiving_switching_delay to 
-Set regather_all_networks_interval_range to 
-Set regather_on_failed_networks_interval to 
-Set stable_writable_connection_ping_interval to 
-Set strong ping interval to 
-Set unwritable min checks to 
-Set unwritable timeout to 
-Set voice channel options. Current options: 
-Set weak ping interval to 
+Set STUN keepalive interval to
+Set backup connection ping interval to
+Set continual_gathering_policy to
+Set default nomination mode to
+Set max framerate:
+Set min ping interval to
+Set network preference to
+Set ping most likely connection to
+Set presume writable when fully relayed to
+Set receiving_switching_delay to
+Set regather_all_networks_interval_range to
+Set regather_on_failed_networks_interval to
+Set stable_writable_connection_ping_interval to
+Set strong ping interval to
+Set unwritable min checks to
+Set unwritable timeout to
+Set voice channel options. Current options:
+Set weak ping interval to
 SetActiveResetSrtpParams
 SetAudioPlayout
 SetAudioRecording
 SetAudioSend
 SetAudioSend: No audio channel exists.
-SetAudioSend: ssrc is incorrect: 
+SetAudioSend: ssrc is incorrect:
 SetBitrate
 SetBitrateAllocationStrategy
 SetCodecPreferences
@@ -5814,8 +5785,8 @@ SetLocalCertificate
 SetLocalContent
 SetLocalDescription
 SetLocalDescription - observer is NULL.
-SetLocalDescription: 
-SetLocalSource failed with ssrc 
+SetLocalDescription:
+SetLocalSource failed with ssrc
 SetLocalSsrc on all the receive streams because the previous local SSRC was removed.
 SetLocalSsrc on all the receive streams because we added a send stream.
 SetMicrophoneMute
@@ -5825,8 +5796,8 @@ SetOption
 SetOptions
 SetOpusMaxPlaybackRate
 SetOutputVolume
-SetOutputVolume() to 
-SetOutputVolume: no recv stream 
+SetOutputVolume() to
+SetOutputVolume: no recv stream
 SetPacketAudioLength
 SetPacketLossRate
 SetParameters
@@ -5836,24 +5807,24 @@ SetPlayoutChannels(
 SetPlayoutDevice
 SetPlayoutSampleRate(
 SetPulseAudioObjects
-SetRawAudioSink: no recv stream 
+SetRawAudioSink: no recv stream
 SetRecording(
 SetRecordingChannels(
 SetRecordingDevice
 SetRecordingSampleRate(
-SetRecvParameters called with unsupported video codec: 
+SetRecvParameters called with unsupported video codec:
 SetRecvParameters called without any video codecs.
-SetRecvParameters: 
+SetRecvParameters:
 SetRemoteAuth
 SetRemoteContent
 SetRemoteDescription
 SetRemoteDescription - observer is NULL.
-SetRemoteDescription: 
+SetRemoteDescription:
 SetRtpTransport
-SetSampleRateAndChannels 
+SetSampleRateAndChannels
 SetSend(true) called before setting codec.
-SetSend: 
-SetSendParameters: 
+SetSend:
+SetSendParameters:
 SetSink
 SetSink: ssrc:
 SetSpeakerMute
@@ -5862,18 +5833,18 @@ SetSsrc
 SetStereoPlayout
 SetStereoRecording
 SetTrack
-SetTrack called on audio RtpSender with 
-SetTrack called on video RtpSender with 
+SetTrack called on audio RtpSender with
+SetTrack called on video RtpSender with
 SetTrack can't be called on a stopped RtpSender.
 SetVideoSend
-SetVideoSend (ssrc= 
+SetVideoSend (ssrc=
 SetVideoSend: No video channel exists.
-Setting RTCP Transport on 
+Setting RTCP Transport on
 Setting RTCP for DTLS/SRTP after the DTLS is active should never happen.
-Setting RTP Transport on 
-Setting active_reset_srtp_params of DtlsSrtpTransport to: 
+Setting RTP Transport on
+Setting active_reset_srtp_params of DtlsSrtpTransport to:
 Setting an RTX SSRC explicitly while leaving the primary SSRC unset is not currently supported.
-Setting codecs without a video codec is invalid: 
+Setting codecs without a video codec is invalid:
 Setting local data description
 Setting local video description
 Setting local voice description
@@ -5883,7 +5854,7 @@ Setting remote data description
 Setting remote video description
 Setting remote voice description
 Setting the SRTP send key twice is currently unsupported.
-Setting voice channel options: 
+Setting voice channel options:
 Sharpness out of range [..7]
 ShgV>
 Should always be able to extract a packet here
@@ -5891,21 +5862,21 @@ Should have read at least one byte
 Shutdown guard timer expired
 SignalEncoderActive, Encoder is active.
 SignalEncoderTimedOut, Encoder timed out.
-SignalNetworkState 
+SignalNetworkState
 SignalSentPacket_n
 SignalThread
 Simulating CPU overuse.
 Simulating CPU underuse.
-Simulating overuse with intervals 
-Size of playout buffer: 
-Size of recording buffer: 
+Simulating overuse with intervals
+Size of playout buffer:
+Size of recording buffer:
 Skipping this sequence number (
 SlotSimulcastMaxResolution to width:
 Sm"\vg
 Socket creation failed
 Socket is bound to the address:
 Socket::OPT_DSCP not supported.
-Sorting 
+Sorting
 Source address has bad family
 Speaker
 Speaker element found
@@ -5917,24 +5888,24 @@ SpeakerVolumeIsAvailable
 Speech encoder not provided.
 SplitAudio unknown payload type
 SplitRed length mismatch
-SplitRed too many blocks: 
+SplitRed too many blocks:
 SsrY
 Stale Nonce
 StapA header truncated.
 StapA packet with incorrect NALU packet lengths.
 Starfield Technologies, Inc.1200
 Start
-Start getting ports with prune_turn_ports 
+Start getting ports with prune_turn_ports
 StartAecDump
 StartGettingPorts
 StartPlayout
 StartRecording
 StartRtcEventLog
 StartUpdating
-Starting WebRTC event log. (Timestamp, UTC) = 
-Stats report does not exist for ssrc 
+Starting WebRTC event log. (Timestamp, UTC) =
+Stats report does not exist for ssrc
 Steam
-Stereo swapping enabled? 
+Stereo swapping enabled?
 StereoPlayout
 StereoPlayoutIsAvailable
 StereoRecording
@@ -5948,12 +5919,12 @@ StopRtcEventLog
 Stopping QP Check task.
 Stopping WebRTC event log.
 Stopping transceiver for MID=
-Stored incoming frames: 
+Stored incoming frames:
 Strange in state %d not cookie-echoed yet c-e timer expires?\n
 Strange, data left in the control buffer .. invarients would panic?\n
 Strange, data left in the control buffer. Cleaning up.\n
-Stream already exists with ssrc 
-Stream not found for ssrc: 
+Stream already exists with ssrc
+Stream not found for ssrc:
 Streams with pred_weight_table unsupported.
 StringOutputStream.
 Strong Extranet ID
@@ -5962,10 +5933,10 @@ Superseded
 Supported recv codecs in order of preference:
 Supported send codecs in order of preference:
 Sw$t
-Switching selected connection due to: 
-Symbol 
-Sync bit is set incorrectly on a frame. Expected: 
-Sync video delay 
+Switching selected connection due to:
+Symbol
+Sync bit is set incorrectly on a frame. Expected:
+Sync video delay
 SyncCurrentAudioDelay
 SyncCurrentVideoDelay
 SyncRelativeDelay
@@ -5978,14 +5949,14 @@ TAG_TOO_LARGE
 TAG_VALUE_TOO_HIGH
 TC TrustCenter Class 2 CA II0
 TC TrustCenter Class 2 CA1%0#
-TC TrustCenter GmbH1"0 
+TC TrustCenter GmbH1"0
 TC TrustCenter GmbH1$0"
 TC TrustCenter Universal CA I0
 TC TrustCenter Universal CA1&0$
-TCP accept failed with error 
-TCP bind failed with error 
+TCP accept failed with error
+TCP bind failed with error
 TCP candidates are disabled.
-TCP connect failed with error 
+TCP connect failed with error
 TCP/DTLS/SCTP
 TCP/TLS/RTP/SAVP
 TCP/TLS/RTP/SAVPF
@@ -6138,14 +6109,14 @@ The BUNDLE group in answer contains a MID that was not in the offered group.
 The Dtmf provider is deleted. Clear the sending queue.
 The DtmfProvider can no longer send DTMF.
 The DtmfProvider has been destroyed.
-The FEC packet is truncated: it does not contain enough room 
+The FEC packet is truncated: it does not contain enough room
 The Go Daddy Group, Inc.110/
 The NullVideoDecoder doesn't support decoding.
-The SSRC 
+The SSRC
 The USERTRUST Network1!0
 The USERTRUST Network1.0,
 The a=extmap MUST be either all session level or all media level.
-The arrival time clock offset has changed (diff = 
+The arrival time clock offset has changed (diff =
 The low loss threshold must be less than or equal to the high loss threshold.
 The m= section:
 The minimum regathering interval for all networks is negative.
@@ -6154,29 +6125,29 @@ The order of m-lines in subsequent offer doesn't match order from previous offer
 The over-use estimator's covariance matrix is no longer semi-definite.
 The params in SRTP transport are reset.
 The port number is invalid
-The recovered packet had a length larger than a 
+The recovered packet had a length larger than a
 The resulting key pair is missing public key parameters.
 The runtime settings queue is full. Oldest setting discarded.
 The send key and receive key must have the same cipher suite.
-The specified ssrc 
+The specified ssrc
 The supplied FlexfecConfig contained multiple protected media streams, but our implementation currently only supports protecting a single media stream. To avoid confusion, disabling FlexFEC completely.
 The timeout period for the writability state to become UNRELIABLE is longer than that to become TIMEOUT.
-The video target delay has grown larger than 
+The video target delay has grown larger than
 This FlexfecReceiveStream will therefore be useless.
 This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 This conflict in free SHOULD not be happening! from %d, imm %d\n
-This program requires version 
-This program was compiled against version 
+This program requires version
+This program was compiled against version
 This shouldn't be called if all the sizes are equal.
 Thread::Invoke
 Time Stamp signing
 Time of the previously acked packet is larger than the time of the current packet.
 Timeout: No RTCP RR received.
 Timeout: No increase in RTCP RR extended highest sequence number.
-Timestamp no increasing: 
+Timestamp no increasing:
 Too few parameters provided.
 Too little data (
-Too long non-decodable duration: 
+Too long non-decodable duration:
 Too many CSRCs for Bye packet.
 Too many dependencies in generic descriptor.
 Too many frames backed up in the decoder, dropping this one.
@@ -6189,17 +6160,17 @@ Too many report blocks (
 Too old frame, timestamp=
 Too short payload for generic header.
 Tq<YDeM
-Track has invalid kind: 
+Track has invalid kind:
 Track is null.
 Track kind is not audio or video
 Trailer Field: 0x
 Transceiver type does not match media description type.
-TransformAlpnProtocols received proto with size 
-TransformAlpnProtocols: Adding proto: 
-TransmissionMaxBitrateMultiplier is set to 
+TransformAlpnProtocols received proto with size
+TransformAlpnProtocols: Adding proto:
+TransmissionMaxBitrateMultiplier is set to
 Transmitting payload type without picture ID using NACK+ULPFEC is a waste of bandwidth since ULPFEC packets also have to be retransmitted. Disabling ULPFEC.
 Transport failed to send packet.
-Transport overhead exceeds 
+Transport overhead exceeds
 Transport parameter missing value.
 Transport parameter should always be udp or tcp.
 TransportFeedback::Parse
@@ -6207,25 +6178,25 @@ Tried to get DTMF sender from video sender.
 Tried to invoke while destroying the invoker.
 Tried to set SRTCP Params when filter already active
 Truncated FlexFEC packet, discarding.
-Truncated packet or corrupt partition 
+Truncated packet or corrupt partition
 Trust Root
 Trusted Certificate Services0
 Try Alternate Server
-Try to remove stream with ssrc 
+Try to remove stream with ssrc
 Trying to change 'presume writable' while connections already exist!
 Trying to change candidate pool size after pool was frozen.
 Trying to change continual gathering policy when gathering has already started!
 Trying to create SCTP transport, but didn't compile with SCTP support (HAVE_SCTP)
 Trying to decode non-CNG payload as CNG.
-Trying to recover from 
+Trying to recover from
 Trying to serialize Unified Plan SDP with more than one track in a media section. Omitting 'a=msid'.
-TurnPort connected to 
+TurnPort connected to
 Two Dlrr blocks found in same Extended Report packet
 Two different track IDs in msid attribute in one m= section
 Two rrtr blocks found in same Extended Report packet
 Tx\t!q
 Ty\i@fH
-Typing detection is enabled? 
+Typing detection is enabled?
 U&o5
 U)l:T^8rv\n
 U4Q@L
@@ -6235,7 +6206,7 @@ U?:CU?K
 U?\fRU?0
 UB85D_T
 UB:R
-UDP bind failed with error 
+UDP bind failed with error
 UDP/DTLS/SCTP
 UDP/TLS/RTP/SAVP
 UDP/TLS/RTP/SAVPF
@@ -6337,9 +6308,9 @@ Udt@
 Unable to access microphone.
 Unable to access speaker.
 Unable to add certificate.
-Unable to assign payload type to format: 
-Unable to connect to the Google Talk service due to an incompatibility with your proxy.\r\nPlease help us resolve this issue by submitting the following information to us using our technical issue submission form at:\r\n\r\nhttp://www.google.com/support/talk/bin/request.py\r\n\r\nWe apologize for the inconvenience.\r\n\r\nInformation to submit to Google: 
-Unable to create pthread, error 
+Unable to assign payload type to format:
+Unable to connect to the Google Talk service due to an incompatibility with your proxy.\r\nPlease help us resolve this issue by submitting the following information to us using our technical issue submission form at:\r\n\r\nhttp://www.google.com/support/talk/bin/request.py\r\n\r\nWe apologize for the inconvenience.\r\n\r\nInformation to submit to Google:
+Unable to create pthread, error
 Unable to get empty frame; Recycling.
 Unable to parse PPS from H264 bitstream.
 Unable to parse SPS from H264 bitstream.
@@ -6350,83 +6321,83 @@ Unable to set recording device.
 Unable to write IVF header for ivf output file.
 Unable to write frame to file.
 Unauthorized
-Unencoded delta for seq_no 
+Unencoded delta for seq_no
 Unexpected AsyncResolver signal
 Unexpected OnPortDestroyed for nonexistent port.
 Unexpected STAP-A or FU-A received.
 Unexpected end of packet while reading chunk #
 Unexpected frame type=
-Unexpected input timestamp: 
+Unexpected input timestamp:
 UninitializeUsrSctp
 UniqueNackRequestsReceivedInPercent
 Unknown
-Unknown CODEC type: 
+Unknown CODEC type:
 Unknown DTLS-SRTP crypto suite
-Unknown DataChannel state: 
+Unknown DataChannel state:
 Unknown RtcEventLog encoder type (
-Unknown SCTP event: 
-Unknown codec 
-Unknown crypto suite(s) received: recv cipher_suite 
-Unknown crypto suite(s) received: send cipher_suite 
-Unknown digest algorithm: 
-Unknown extended report block type 
+Unknown SCTP event:
+Unknown codec
+Unknown crypto suite(s) received: recv cipher_suite
+Unknown crypto suite(s) received: send cipher_suite
+Unknown digest algorithm:
+Unknown extended report block type
 Unknown extension uri:'
 Unknown it ctl flag %x\n
-Unknown payload type 
-Unknown protocol: 
+Unknown payload type
+Unknown protocol:
 Unknown section type.
-Unknown signature algorithm NID: 
+Unknown signature algorithm NID:
 Unknown transceiver
 Unknwown payload type
 Unreachable code.
-Unrecoverable alsa stream error: 
+Unrecoverable alsa stream error:
 UnregisterObserver
 Unset
 Unspecified
 Unsupported Protocol
-Unsupported RTCP feedback type: 
-Unsupported RTP extension: 
+Unsupported RTCP feedback type:
+Unsupported RTP extension:
 Unsupported candidate type.
-Unsupported codec: 
+Unsupported codec:
 Unsupported cpu speed setting, value ignored.
 Unsupported exp value provided, value ignored.
-Unsupported media type: 
+Unsupported media type:
 Unsupported nal unit type.
-Unsupported number of channels: 
-Unsupported parameter for CCM RTCP feedback: 
-Unsupported parameter for NACK RTCP feedback: 
-Unsupported parameter for REMB RTCP feedback: 
-Unsupported parameter for transport-cc RTCP feedback: 
-Unsupported rtp extension 
-Unsupported sample rate 
+Unsupported number of channels:
+Unsupported parameter for CCM RTCP feedback:
+Unsupported parameter for NACK RTCP feedback:
+Unsupported parameter for REMB RTCP feedback:
+Unsupported parameter for transport-cc RTCP feedback:
+Unsupported rtp extension
+Unsupported sample rate
 Unsupported transport type.
 Unused
 UpdateAggregateNetworkState: aggregate_state=
 UpdateAggregateStates_n
-UpdateAllocationLimits : total_requested_min_bitrate: 
+UpdateAllocationLimits : total_requested_min_bitrate:
 UpdateMediaSendRecvState
 UpdateNetworksContinually
 UpdateRtpHeaderExtensionMap
-Updating the active_reset_srtp_params for JsepTransportController: 
+Updating the active_reset_srtp_params for JsepTransportController:
 Use the CreateWindowsCoreAudioAudioDeviceModule() factory method instead for this option.
 UseCandidate: Invalid candidate media index.
 UseCandidatesInSessionDescription: Not ready to use candidate.
 UseTwccPlrForAna
 User defined functions
-User-Agent: 
-Using ALR experiment settings: pacing factor: 
+User-Agent:
+Using ALR experiment settings: pacing factor:
 Using BBR network controller factory
 Using Legacy SSCC
 Using Master as output volume.
 Using Mic as capture volume.
-Using SetParameters to change the set of codecs 
+Using SetParameters to change the set of codecs
 Using Speaker as output volume.
 Using TaskQueue based SSCC
-Using Trendline filter for delay change estimation with window size 
-Using aimd rate control with back off factor 
+Using Trendline filter for delay change estimation with window size
+Using aimd rate control with back off factor
 Using aimd rate control with initial back-off interval
 Using certificate supplied to the constructor.
-Using codec: 
+Using codec:
 Using default network controller factory
 Using injected network controller factory
 Ut? %vmo
@@ -6437,12 +6408,12 @@ V5.0:4.0
 V7.1:4.0
 V?wm\v
 V@resampler_.ResetIfNeeded(sample_rate_hz, kSampleRateHz, kNumChannels) == 0
-VAD set to 
+VAD set to
 VAD/DTX not supported for stereo sending
 VALUE_MISSING
 VARIABLE_EXPANSION_TOO_LONG
 VARIABLE_HAS_NO_VALUE
-VAdapt Drop Frame: scaled 
+VAdapt Drop Frame: scaled
 VCM::PacketKeyFrame
 VCMDecodedFrameCallback::Decoded
 VCMEncodedFrameCallback::Encoded
@@ -6479,7 +6450,7 @@ Video clock rate must be 90000.
 Video codec shouldn't have num_channels.
 Video frame parameters changed: dimensions=
 Video m= section '
-Video suspend state changed to: 
+Video suspend state changed to:
 VideoBitrateAllocation [
 VideoBitrateAllocation [ [] ]
 VideoBwe
@@ -6490,7 +6461,7 @@ VideoCodec[
 VideoOptions {
 VideoReceiveStream
 VideoReceiveStream not connected to a VideoSink.
-VideoReceiveStream stats: 
+VideoReceiveStream stats:
 VideoReceiveStream::Decode
 VideoReceiver::Decode
 VideoRtpReceiver::SetParameters
@@ -6501,7 +6472,7 @@ VideoRtpSender::SetParameters
 VideoRtpSender::SetSsrc
 VideoRtpSender::SetTrack
 VideoRtpSender::Stop
-VideoSendStream stats: 
+VideoSendStream stats:
 VideoSendStream::OnEncoderConfigurationChanged
 VideoSendStream::Start
 VideoSendStream::Stop
@@ -6537,7 +6508,7 @@ WRONG_TYPE
 WRONG_VERSION_NUMBER
 WRONG_VERSION_ON_EARLY_DATA
 WUPo
-Waiting for the thread to join, 
+Waiting for the thread to join,
 Waiting to verify certificate until digest is known.
 Warning chunk of %d bytes > mtu:%d and yet PMTU disc missed\n
 Warning flight size incorrect should be 0 is %d\n
@@ -6675,21 +6646,21 @@ WebRTC.BWE.RampUpTimeTo1000kbpsInMs
 WebRTC.BWE.RampUpTimeTo2000kbpsInMs
 WebRTC.BWE.RampUpTimeTo500kbpsInMs
 WebRTC.BWE.Types
-WebRTC.Call.AudioBitrateReceivedInBps, 
+WebRTC.Call.AudioBitrateReceivedInBps,
 WebRTC.Call.AudioBitrateReceivedInKbps
-WebRTC.Call.BitrateReceivedInBps, 
+WebRTC.Call.BitrateReceivedInBps,
 WebRTC.Call.BitrateReceivedInKbps
 WebRTC.Call.EstimatedSendBitrateInKbps
-WebRTC.Call.EstimatedSendBitrateInKbps, 
+WebRTC.Call.EstimatedSendBitrateInKbps,
 WebRTC.Call.LifetimeInSeconds
 WebRTC.Call.PacerBitrateInKbps
-WebRTC.Call.PacerBitrateInKbps, 
+WebRTC.Call.PacerBitrateInKbps,
 WebRTC.Call.RtcpBitrateReceivedInBps
-WebRTC.Call.RtcpBitrateReceivedInBps, 
+WebRTC.Call.RtcpBitrateReceivedInBps,
 WebRTC.Call.TimeReceivingAudioRtpPacketsInSeconds
 WebRTC.Call.TimeReceivingVideoRtpPacketsInSeconds
 WebRTC.Call.TimeSendingAudioRtpPacketsInSeconds
-WebRTC.Call.VideoBitrateReceivedInBps, 
+WebRTC.Call.VideoBitrateReceivedInBps,
 WebRTC.Call.VideoBitrateReceivedInKbps
 WebRTC.PeerConnection.AddIceCandidate
 WebRTC.PeerConnection.CandidatePairType_TCP
@@ -6711,12 +6682,11 @@ WebRTC.PeerConnection.SslCipherSuite.Audio
 WebRTC.PeerConnection.SslCipherSuite.Data
 WebRTC.PeerConnection.SslCipherSuite.Video
 WebRTC.PeerConnection.UsagePattern
-WebRTC.RtpTransportControllerSend.SetClientBitratePreferences: 
-WebRTC.RtpTransportControllerSend.SetSdpBitrateParameters: 
+WebRTC.RtpTransportControllerSend.SetClientBitratePreferences:
+WebRTC.RtpTransportControllerSend.SetSdpBitrateParameters:
 WebRTC.Video
 WebRTC.Video.
 WebRTC.Video.AVSyncOffsetInMs
-WebRTC.Video.AVSyncOffsetInMs 
 WebRTC.Video.AverageRoundTripTimeInMilliseconds
 WebRTC.Video.BadCall.Any
 WebRTC.Video.BadCall.FrameRate
@@ -6725,46 +6695,35 @@ WebRTC.Video.BadCall.Qp
 WebRTC.Video.BitrateReceivedInKbps
 WebRTC.Video.CompleteFramesReceivedPerSecond
 WebRTC.Video.CurrentDelayInMs
-WebRTC.Video.CurrentDelayInMs 
 WebRTC.Video.CustomH264Encoder.Event
 WebRTC.Video.DecodeTimeInMs
-WebRTC.Video.DecodeTimeInMs 
 WebRTC.Video.Decoded.Vp8.Qp
-WebRTC.Video.Decoded.Vp8.Qp 
 WebRTC.Video.DecodedFramesPerSecond
 WebRTC.Video.DelayedFramesToRenderer
 WebRTC.Video.DelayedFramesToRenderer_AvgDelayInMs
 WebRTC.Video.DiscardedPacketsInPercent
 WebRTC.Video.DroppedFrames.Receiver
-WebRTC.Video.DroppedFrames.Receiver 
 WebRTC.Video.DroppedFrames.RenderQueue
-WebRTC.Video.DroppedFrames.RenderQueue 
 WebRTC.Video.DuplicatedPacketsInPercent
 WebRTC.Video.Encoder.CodecType
 WebRTC.Video.FecBitrateReceivedInKbps
 WebRTC.Video.FirPacketsSentPerMinute
 WebRTC.Video.H264.SpsValid
 WebRTC.Video.JitterBufferDelayInMs
-WebRTC.Video.JitterBufferDelayInMs 
 WebRTC.Video.KeyFramesReceivedInPermille
-WebRTC.Video.KeyFramesReceivedInPermille 
 WebRTC.Video.MediaBitrateReceivedInKbps
-WebRTC.Video.MediaBitrateReceivedInKbps 
 WebRTC.Video.NackPacketsSentPerMinute
 WebRTC.Video.OnewayDelayInMs
 WebRTC.Video.PaddingBitrateReceivedInKbps
 WebRTC.Video.PliPacketsSentPerMinute
 WebRTC.Video.ReceiveStreamLifetimeInSeconds
-WebRTC.Video.ReceiveStreamLifetimeInSeconds 
 WebRTC.Video.ReceivedFecPacketsInPercent
 WebRTC.Video.ReceivedPacketsLostInPercent
-WebRTC.Video.ReceivedPacketsLostInPercent 
 WebRTC.Video.RecoveredMediaPacketsInPercentOfFec
 WebRTC.Video.RenderFramesPerSecond
 WebRTC.Video.RenderSqrtPixelsPerSecond
 WebRTC.Video.RetransmittedBitrateReceivedInKbps
 WebRTC.Video.RtpToNtpFreqOffsetInKhz
-WebRTC.Video.RtpToNtpFreqOffsetInKhz 
 WebRTC.Video.RtxBitrateReceivedInKbps
 WebRTC.Video.Screenshare
 WebRTC.Video.Screenshare.
@@ -6777,10 +6736,9 @@ WebRTC.Video.Screenshare.Layer1.FrameRate
 WebRTC.Video.Screenshare.Layer1.Qp
 WebRTC.Video.Screenshare.Layer1.TargetBitrate
 WebRTC.Video.SendDelayInMs
-WebRTC.Video.SendDelayInMs, 
+WebRTC.Video.SendDelayInMs,
 WebRTC.Video.SendStreamLifetimeInSeconds
 WebRTC.Video.TargetDelayInMs
-WebRTC.Video.TargetDelayInMs 
 WebRTC.Video.UniqueNackRequestsSentInPercent
 WebRtcSessionDescriptionFactory
 WebRtcVad_Init(handle_) == 0
@@ -6794,7 +6752,7 @@ WebRtcVideoChannel::SetSendParameters
 WebRtcVideoEngine::WebRtcVideoEngine()
 WebRtcVideoEngine::~WebRtcVideoEngine
 WebRtcVideoSendStream::SetVideoSend
-WebRtcVoiceEngine::ApplyOptions: 
+WebRtcVoiceEngine::ApplyOptions:
 WebRtcVoiceEngine::Init
 WebRtcVoiceEngine::WebRtcVoiceEngine
 WebRtcVoiceEngine::~WebRtcVoiceEngine
@@ -6808,10 +6766,10 @@ WebRtcVoiceMediaChannel::RemoveSendStream
 WebRtcVoiceMediaChannel::SetMaxSendBitrate.
 WebRtcVoiceMediaChannel::SetRawAudioSink: ssrc:
 WebRtcVoiceMediaChannel::SetRecvParameters
-WebRtcVoiceMediaChannel::SetRecvParameters: 
+WebRtcVoiceMediaChannel::SetRecvParameters:
 WebRtcVoiceMediaChannel::SetSend
 WebRtcVoiceMediaChannel::SetSendParameters
-WebRtcVoiceMediaChannel::SetSendParameters: 
+WebRtcVoiceMediaChannel::SetSendParameters:
 WebRtcVoiceMediaChannel::WebRtcVoiceMediaChannel
 WebRtcVoiceMediaChannel::~WebRtcVoiceMediaChannel
 Wifi
@@ -6819,7 +6777,7 @@ Wildcard
 Window size must be greater than 1.
 WindowsDeviceType not supported
 WrappingBitrateEstimator: Switching to absolute send time RBE.
-WrappingBitrateEstimator: Switching to transmission 
+WrappingBitrateEstimator: Switching to transmission
 Write to WebRtcEventLog file failed.
 Wrong Credentials
 Wrong codec params to be registered as receive codec
@@ -6918,12 +6876,12 @@ ZPKE?81("
 ZW][Rb
 ZWebRTCFakeNetwork
 ZcK:[
-[%s : %d] RAW: 
+[%s : %d] RAW:
 [0Y0W0U
 [0x%08X]
 [Fec
 [Invalid CheckArgType]
-[PLAY: 
+[PLAY:
 [agc] VolumeCallbacks returned an invalid level=
 [libprotobuf %s %s:%d] %s\n
 [m,67NL
@@ -6947,26 +6905,26 @@ ZcK:[
 \fthawte, Inc.1806
 \f~\fx\fp\f]\fU\fO\fG\f=\f5\f/\f'\f
 \f~\fx\fp\f]\fU\fO\fG\f=\f5\f/\f'\f\r\f
-\n            Not After : 
-\n        Public key OCSP hash: 
+\n            Not After :
+\n        Public key OCSP hash:
 \n!\n1\n9\n=\nI\nW\na\nc\ng\no\nu\n{\n
-\n%*sZone: %s, User: 
+\n%*sZone: %s, User:
 \n%12s%s
 \n%\n+\n3\n=\nE\nK\nS\ni\nq\nw\n
-\n%c %02d:%02d:%02d.%06ld 
+\n%c %02d:%02d:%02d.%06ld
 \n'\n-\n5\n?\nG\nM\nU\nh\np\nv\n~\n
 \n2N4\tZ
 \n6x1
 \n?wm\v?#!\f?n
-\nCalculated: 
-\nCapture post processor activated: 
-\nCyberTrust1"0 
+\nCalculated:
+\nCapture post processor activated:
+\nCyberTrust1"0
 \nGlobalSign0
 \nGlobalSign0Y0
 \nGlobalSign0v0
 \nGlobalSign1
 \nNew Jersey1
-\nRender pre processor activated: 
+\nRender pre processor activated:
 \nReverting to default parameter set
 \nScottsdale1
 \nScottsdale1%0#
@@ -7119,20 +7077,20 @@ ZcK:[
 \vx\vp\vj\vb\vX\vP\vJ\vB\v/\v'\v!\v
 \v{\vu\vm\vc\v[\vU\vM\v:\v2\v,\v$\v
 ] P#z&V*j./3
-] U K C = 5 " 
-] [send interval: 
-] already received, 
+] U K C = 5 "
+] [send interval:
+] already received,
 ] has no GoP, dropping frame.
 ] ignored, allocation failed.
-] receive failed with error 
+] receive failed with error
 ] to TURN server [
-], transport_cc: 
-]: Resetting 
+], transport_cc:
+]: Resetting
 ]?PeY?1
 ]GeT
 ]J<0"0i3
 ]JldN
-]Mk6 
+]Mk6
 ^PNz
 ^bF1O
 ^hmpsv
@@ -7273,7 +7231,7 @@ ansi-X9-62
 answer
 anyExtendedKeyUsage
 anyPolicy
-appending acknowledged data for out of order packet. (Diff: 
+appending acknowledged data for out of order packet. (Diff:
 application
 ar?Mgs?
 arbitrary
@@ -7316,7 +7274,7 @@ availableIncomingBitrate
 availableOutgoingBitrate
 avg:
 avg_burst_loss_length > min_avg_burst_loss_length
-avg_delay_ms: 
+avg_delay_ms:
 axixiHqHq
 b != nullptr
 b"Iq
@@ -7352,8 +7310,8 @@ biometricInfo
 bitrate_bps >= 0
 bluetooth
 bool std::operator==<std::string, std::allocator<std::string>>(std::vector<std::string, std::allocator<std::string>> const&, std::vector<std::string, std::allocator<std::string>> const&)
-bps, total_requested_max_bitrate: 
-bps, total_requested_padding_bitrate: 
+bps, total_requested_max_bitrate:
+bps, total_requested_padding_bitrate:
 brainpoolP160r1
 brainpoolP160t1
 brainpoolP192r1
@@ -7371,7 +7329,7 @@ brainpoolP512t1
 bucket_count > 0
 bucket_milliseconds > 0
 buffer being full, dropping frame.
-buffer. Use the 'bytes' type if you intend to send raw 
+buffer. Use the 'bytes' type if you intend to send raw
 buffer_
 buffered_amount
 buildingName
@@ -7384,7 +7342,7 @@ burstPacketsDiscarded
 burstPacketsLost
 businessCategory
 but blocking calls have been disallowed
-bw_adapted: 
+bw_adapted:
 bweforvideo
 bwiO'
 bytesReceived
@@ -7455,13 +7413,13 @@ candidate-pair
 candidateType
 candidates != nullptr
 capture
-capture snd_pcm_avail_update error: 
-capture snd_pcm_delay: 
+capture snd_pcm_avail_update error:
+capture snd_pcm_delay:
 capture snd_pcm_get_params, buffer_size:
 capture snd_pcm_prepare failed (
-capture snd_pcm_readi error: 
-capture snd_pcm_start 2nd try err: 
-capture snd_pcm_start err: 
+capture snd_pcm_readi error:
+capture snd_pcm_start 2nd try err:
+capture snd_pcm_start err:
 capture snd_pcm_wait timeout
 caseIgnoreIA5StringSyntax
 cast5-cbc
@@ -7487,7 +7445,7 @@ channel label not found
 channels
 char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
 characteristic-two-field
-checking PulseAudio version: 
+checking PulseAudio version:
 chk:%p TSN:%x\n
 cib)
 cipher
@@ -7587,8 +7545,8 @@ crypto kernel
 cryptocom
 cryptopro
 ctx_ != nullptr
-cum_loss: 
-cur_delay_ms: 
+cum_loss:
+cur_delay_ms:
 curent_bitrate_bps < 0
 current platform is Linux
 currentRoundTripTime
@@ -7633,7 +7591,7 @@ dcobject
 debug
 debug modules loaded:\n
 decipherOnly
-decode_fps: 
+decode_fps:
 decoder.decoder_factory
 decoder_payload_types.find(decoder.payload_type) == decoder_payload_types.end()
 default
@@ -7695,10 +7653,10 @@ direction
 directory
 directory services (X.500)
 directory services - algorithms
-discarded: 
+discarded:
 disconnected playback
 disconnected recording
-dispatcher, potentially from a duplicate call to 
+dispatcher, potentially from a duplicate call to
 dispatcher, potentially from a duplicate call to Add.
 distinguishedName
 distpoint
@@ -7761,7 +7719,7 @@ ecdsa-with-Specified
 echoReturnLoss
 echoReturnLossEnhancement
 eh?o
-either infinite, zero, or negative.  send_delta = 
+either infinite, zero, or negative.  send_delta =
 elliptic curve routines
 email:%s
 emailAddress
@@ -7773,9 +7731,9 @@ enable_limiter() failed.
 enabled
 enabled.
 encipherOnly
-encode_fps: 
-encode_ms: 
-encode_usage_perc: 
+encode_fps:
+encode_ms:
+encode_usage_perc:
 encoded->size() - old_size == info.encoded_bytes
 encoder_rate_gain
 encoder_rate_gain_in_probe_rtt
@@ -7860,7 +7818,7 @@ failed to dup /dev/urandom fd
 failed to dup supplied urandom fd
 failed to get flags from urandom fd
 failed to initialize PulseAudio
-failed to initialize sampling frequency, set to 
+failed to initialize sampling frequency, set to
 failed to load symbol table
 failed to open /dev/urandom
 failed to retrieve current microphone level
@@ -7904,12 +7862,12 @@ file
 fingerprint
 fingerprintAlgorithm
 finished
-fir: 
+fir:
 firCount
 fired_direction
 first_packet
 first_packet_index < size_
-fixed_gain_dB: 
+fixed_gain_dB:
 flags != -1
 flexfec-03
 floor
@@ -7987,7 +7945,7 @@ getenv
 geteuid
 getgid
 getifaddrs
-getifaddrs failed to gather interface data: 
+getifaddrs failed to gather interface data:
 getpeername
 getpid
 getrandom
@@ -8110,7 +8068,7 @@ handle_playout is now set to NULL
 has not been set with RegisterEncodeCompleteCallback()
 hash
 hashAlgorithm
-hash_of_addr:%x mask:%x table:%x - 
+hash_of_addr:%x mask:%x table:%x -
 hashdestroy: hash not empty.\n
 hashinit: bad elements?
 height_ > 0
@@ -8453,7 +8411,7 @@ input
 input buffer overflow
 input device index has not been set
 input_buffer_.size() == Num10msFramesPerPacket() * SamplesPer10msFrame()
-input_fps: 
+input_fps:
 inter_tone_gap
 internal error
 international-organizations
@@ -8477,7 +8435,6 @@ is smaller than RTP header.
 isRemote
 is_last_fragment
 is_screencast
-is_screencast 
 isac
 isdigit
 islower
@@ -8498,7 +8455,7 @@ j?2*j?5
 jPAe
 jT7W
 janetMailbox
-jb_delay_ms: 
+jb_delay_ms:
 jc!u
 jitter
 jitterBufferDelay
@@ -8528,7 +8485,7 @@ kHavePrAnswer
 kHaveRemoteOffer
 kHaveRemotePrAnswer
 kHz clock resolution.
-kHz] callbacks: 
+kHz] callbacks:
 kInactive
 kLinePrefixLength + attribute.size() <= line.size()
 kMaxTemporalStreams >= number_of_temporal_layers
@@ -8545,7 +8502,7 @@ kWaitingForProbingResult: timeout
 kbps.
 key expansion
 key.has_value()
-key: 
+key:
 keyAgreement
 keyBag
 keyCertSign
@@ -8589,7 +8546,7 @@ length <= AudioFrame::kMaxDataSizeBytes
 length <= kMaxDataSizeSamples
 length > 0U
 length_cname < 256
-length_ms = 
+length_ms =
 level-asymmetry-allowed
 lib(%u)
 libasound.so.2
@@ -8672,13 +8629,13 @@ max_bitrate_bps < 0
 max_bitrate_bps < min_bitrate_bps
 max_bitrate_bps < start_bitrate_bps
 max_cwin
-max_decode_ms: 
-max_delay_ms: 
-max_ext_seq: 
+max_decode_ms:
+max_delay_ms:
+max_ext_seq:
 max_measurements > 1
 max_nack_list_size <= kNackListSizeLimitLocal
 max_nack_list_size > 0
-max_pad_bps: 
+max_pad_bps:
 max_plaintext_byte_size <= frame->size()
 max_size_bytes_ <= kMaxReasonableFileSize
 maxaveragebitrate
@@ -8698,7 +8655,7 @@ mdc2
 mdc2WithRSA
 media type is not audio or video
 mediaType
-media_bps: 
+media_bps:
 media_transport == nullptr
 media_transport_result.ok()
 media_type
@@ -8733,7 +8690,7 @@ minHeight
 minWidth
 min_bitrate_bps <= 0
 min_cwin
-min_playout_delay_ms: 
+min_playout_delay_ms:
 minimum
 minptime
 minsize=
@@ -8741,11 +8698,11 @@ mobileTelephoneNumber
 modf
 move
 mp@R
-ms normal mode, 
-ms or less than 
+ms normal mode,
+ms or less than
 ms overuse mode.
-ms to dispatch. Posted from: 
-ms. The gap between tones must be at least 
+ms to dispatch. Posted from:
+ms. The gap between tones must be at least
 msCTLSign
 msCodeCom
 msCodeInd
@@ -8754,7 +8711,7 @@ msExtReq
 msSGC
 msSmartcardLogin
 msUPN
-msec, 
+msec,
 msid
 msid-semantic
 mslabel
@@ -8784,16 +8741,16 @@ nameAssigner
 nameConstraints
 nanosleep
 nanosleep() returning early
-ndZTNGA:3-' 
-needs-ice-restart flag cleared for transport 
-needs-ice-restart flag set for transport 
+ndZTNGA:3-'
+needs-ice-restart flag cleared for transport
+needs-ice-restart flag set for transport
 needs_denoising
 negotiated
 network preference changed
 network-cost
 network-id
 networkType
-network_fps: 
+network_fps:
 new candidate pairs created from a new local candidate
 new candidate pairs created from a new remote candidate
 new_bit_index < 8 * new_mask_bytes
@@ -8844,10 +8801,10 @@ num_spatial_layers > 0
 num_startup_rtts
 num_temporal_layers == 3
 num_temporal_layers > 0
-number of available audio output devices is 
-number of availiable audio input devices is 
-number of availiable input devices is 
-number of availiable output devices is 
+number of available audio output devices is
+number of availiable audio input devices is
+number of availiable input devices is
+number of availiable output devices is
 number_of_temporal_layers >= 0
 number_of_temporal_layers_ <= kMaxNumTemporalLayers
 number_of_temporal_layers_ > 0
@@ -8904,9 +8861,9 @@ out_byte_offset != nullptr
 out_ptr
 outbound-rtp
 output device index has not been set
-output: 
-output: guid = 
-output: name = 
+output:
+output: guid =
+output: name =
 owner
 oz>!km>
 p26=V%
@@ -8979,7 +8936,7 @@ pa_threaded_mainloop_start
 pa_threaded_mainloop_stop
 pa_threaded_mainloop_unlock
 pa_threaded_mainloop_wait
-pacer_delay_ms: 
+pacer_delay_ms:
 pacing_rate_as_target
 packet->first_fragment
 packet.enqueue_time_it != enqueue_times_.end()
@@ -9075,13 +9032,13 @@ pkeyalg
 play stream connected
 play stream ready
 playStream
-playout snd_pcm_avail_update error: 
-playout snd_pcm_delay: 
+playout snd_pcm_avail_update error:
+playout snd_pcm_delay:
 playout snd_pcm_get_params buffer_size:
 playout snd_pcm_prepare failed (
 playout snd_pcm_wait timeout
-playout snd_pcm_writei error: 
-pli: 
+playout snd_pcm_writei error:
+pli:
 pliCount
 policyConstraints
 policyIdentifier
@@ -9206,7 +9163,7 @@ r\r)SP
 raddr
 rand
 random number generator
-rate diff: 
+rate diff:
 rate_based_recovery
 rate_based_startup
 raw profile-id
@@ -9239,13 +9196,13 @@ realm
 realtime
 reason(%u)
 recStream
-receive_rtp_config_ lookup failed for ssrc 
+receive_rtp_config_ lookup failed for ssrc
 receiver
 recording in stereo is not supported
 recovered_packet
 recovered_packet->pkt
 recv
-recv_bw_bps: 
+recv_bw_bps:
 recv_mean_ms > 0.0f
 recv_session_
 recvfrom
@@ -9254,7 +9211,7 @@ regather_all_networks_interval_range specified but continual gathering policy is
 registeredAddress
 reject
 relay
-relay tcp connected to 
+relay tcp connected to
 relayProtocol
 relayed
 reliable
@@ -9270,7 +9227,7 @@ remote_streams
 remote_streams is not available with Unified Plan SdpSemantics. Please use GetReceivers instead.
 remotecandidate
 removeFromCRL
-render_fps: 
+render_fps:
 renomination
 repair-window
 report
@@ -9289,7 +9246,7 @@ resumption
 resurrected
 retransmissionsReceived
 retransmissionsSent
-retransmit_bps: 
+retransmit_bps:
 revocationDate
 revoked
 rfc822Mailbox
@@ -9325,7 +9282,7 @@ rtp_packet->Parse(fec_packet->data(), fec_packet->length())
 rtp_rtcp->RegisterRtpHeaderExtension(extension, id)
 rtp_send_controller
 rtpmap
-rtt_ms: 
+rtt_ms:
 rv]p
 s ap traffic
 s hs traffic
@@ -9343,7 +9300,7 @@ sample_rate_hz == 16000 || sample_rate_hz == 32000
 sample_rate_hz > 0
 sample_rate_hz=
 sample_rate_hz_ == sample_rate_hz
-samples: 
+samples:
 sbgp-autonomousSysNum
 sbgp-ipAddrBlock
 sbgp-routerIdentifier
@@ -9444,7 +9401,7 @@ sem_post
 sem_wait
 semantics:
 send
-send_bw_bps: 
+send_bw_bps:
 send_mean_ms > 0.0f
 send_session_
 send_stream_impl != nullptr
@@ -9671,16 +9628,16 @@ snd_dlsym
 snd_lib_error
 snd_lib_error_set_handler
 snd_mixer_attach
-snd_mixer_attach(_inputMixerHandle, 
-snd_mixer_attach(_outputMixerHandle, 
+snd_mixer_attach(_inputMixerHandle,
+snd_mixer_attach(_outputMixerHandle,
 snd_mixer_close
 snd_mixer_detach
 snd_mixer_elem_next
 snd_mixer_first_elem
 snd_mixer_free
 snd_mixer_load
-snd_mixer_load(_inputMixerHandle), error: 
-snd_mixer_load(_outputMixerHandle), error: 
+snd_mixer_load(_inputMixerHandle), error:
+snd_mixer_load(_outputMixerHandle), error:
 snd_mixer_open
 snd_mixer_open(&_inputMixerHandle, 0) - error
 snd_mixer_open(&_outputMixerHandle, 0) - error
@@ -9688,7 +9645,6 @@ snd_mixer_selem_get_capture_switch
 snd_mixer_selem_get_capture_volume
 snd_mixer_selem_get_capture_volume_range
 snd_mixer_selem_get_name
-snd_mixer_selem_get_name 
 snd_mixer_selem_get_playback_switch
 snd_mixer_selem_get_playback_volume
 snd_mixer_selem_get_playback_volume_range
@@ -9698,8 +9654,8 @@ snd_mixer_selem_has_playback_switch
 snd_mixer_selem_has_playback_volume
 snd_mixer_selem_is_active
 snd_mixer_selem_register
-snd_mixer_selem_register(_inputMixerHandle, NULL, NULL), 
-snd_mixer_selem_register(_outputMixerHandle, NULL, NULL), 
+snd_mixer_selem_register(_inputMixerHandle, NULL, NULL),
+snd_mixer_selem_register(_outputMixerHandle, NULL, NULL),
 snd_mixer_selem_set_capture_switch_all
 snd_mixer_selem_set_capture_volume_all
 snd_mixer_selem_set_playback_switch_all
@@ -9711,8 +9667,7 @@ snd_pcm_delay
 snd_pcm_drop
 snd_pcm_frames_to_bytes
 snd_pcm_get_params
-snd_pcm_get_params 
-snd_pcm_get_params: 
+snd_pcm_get_params:
 snd_pcm_hw_params
 snd_pcm_hw_params_any
 snd_pcm_hw_params_free
@@ -9770,7 +9725,7 @@ src_func
 src_size == src_channels() * src_frames()
 srflx
 srtp
-srtp: in stream 0x%x: 
+srtp: in stream 0x%x:
 srtpCipher
 srtp_shutdown failed. err=
 sslCA
@@ -10051,7 +10006,7 @@ strchr
 strcmp
 strcpy
 stream
-stream state 
+stream state
 stream state cb
 streamIdentifier
 stream_ids
@@ -10100,15 +10055,15 @@ superseded
 supportedAlgorithms
 supportedApplicationContext
 surname
-suspended: 
+suspended:
 swap
 swoJ9S
-sync_offset_ms: 
-syntax error at line %d near: 
+sync_offset_ms:
+syntax error at line %d near:
 syscall
 sysconf
 system library
-system time (us) = 
+system time (us) =
 t0r0
 t0r08
 t;mq
@@ -10125,11 +10080,11 @@ t\fO5[2\v
 t^t\nt
 tag=
 tanh
-targ_delay_ms: 
-target bitrate 
+targ_delay_ms:
+target bitrate
 targetBitrate
 targetInformation
-target_bps: 
+target_bps:
 tcptype
 telephone-event
 telephone-event cannot be a send codec
@@ -10144,7 +10099,7 @@ textEncodedORAddress
 textNotice
 tf/j8
 th-l
-than its official MTU: 
+than its official MTU:
 thawte Primary Root CA - G20
 thawte Primary Root CA - G20v0
 thawte Primary Root CA - G30
@@ -10160,19 +10115,19 @@ timestamp
 timestamp_ms >= time_last_updated_ms_
 timestampsign
 title
-tls13 
+tls13
 tn+Q@=g
 token_partitions out of range [VP8_ONE_TOKENPARTITION..VP8_EIGHT_TOKENPARTITION]
 tolower
 tones
-too short translated timestamp interval: 
-total playout time: 
-total recording time: 
+too short translated timestamp interval:
+total playout time:
+total recording time:
 totalAudioEnergy
 totalRoundTripTime
 totalSamplesDuration
 totalSamplesReceived
-total_bps: 
+total_bps:
 toupper
 tpBasis
 tqQ]
@@ -10226,10 +10181,10 @@ udt\
 ufrag
 uj?I
 ulpfec
-unable to open playback device: 
-unable to open record device: 
-unable to set playback device: 
-unable to set record settings: 
+unable to open playback device:
+unable to open record device:
+unable to set playback device:
+unable to set record settings:
 unable to set stereo mode while playing side is initialized
 unconnected
 undefined
@@ -10466,15 +10421,15 @@ wildcard
 will write
 wimax
 window_size > 0
-with SSRC 
-with overhead is larger than 
+with SSRC
+with overhead is larger than
 wkw"w
 wlan
 wm\v?1
 wnT'[m<
 writable
 written_elements <= max_elements
-wsqnmcb_OD420-+ 
+wsqnmcb_OD420-+
 wu\0\r
 wwan
 www.digicert.com1 0
@@ -10505,7 +10460,7 @@ xH0E
 xKO+B9
 xe\Y]fv
 xlW*
-xnbUH<1( 
+xnbUH<1(
 xrga[UNHB<6/)#
 xsZtLj1D
 xty+z
@@ -10536,21 +10491,21 @@ z|zAz
 {A7Dd
 {N{N{N{N{N{N{N{N
 {S&@{S&@{S&@{S&@
-{codec_type: 
+{codec_type:
 {decoders: [
-{enabled: 
-{encoder_settings: { experiment_cpu_load_estimator: 
-{format: 
-{nack_enabled: 
-{name: 
-{receiver_reference_time_report: 
-{remote_ssrc: 
+{enabled:
+{encoder_settings: { experiment_cpu_load_estimator:
+{format:
+{nack_enabled:
+{name:
+{receiver_reference_time_report:
+{remote_ssrc:
 {ri`XPH@92,&!
-{sample_rate_hz: 
+{sample_rate_hz:
 {ssrcs: [
 {uoib\VPJC=71+$
-{video_report_interval_ms: 
-{width: 
+{video_report_interval_ms:
+{width:
 {wwgEbDgxvvfGb
 |0z0<
 |3WA<
@@ -10574,8 +10529,8 @@ z|zAz
 ~AudioDeviceModuleImpl
 ~AudioMixerManagerLinuxALSA
 ~AudioMixerManagerLinuxPulse
-~AudioReceiveStream: 
-~AudioSendStream: 
+~AudioReceiveStream:
+~AudioSendStream:
 ~AudioTrackProxyWithInternal
 ~B8@d
 ~CICESession
@@ -10583,7 +10538,7 @@ z|zAz
 ~ChannelManager
 ~DataChannelProxyWithInternal
 ~DtmfSenderProxyWithInternal
-~FlexfecReceiveStreamImpl: 
+~FlexfecReceiveStreamImpl:
 ~JsepTransportController
 ~MediaStreamProxyWithInternal
 ~PeerConnection
@@ -10594,11 +10549,11 @@ z|zAz
 ~RtpTransceiverProxyWithInternal
 ~SxY>B
 ~TemporaryDeregistration
-~VideoReceiveStream: 
-~VideoSendStreamInternal: 
+~VideoReceiveStream:
+~VideoSendStreamInternal:
 ~VideoTrackProxyWithInternal
 ~VideoTrackSourceProxyWithInternal
 ~Z?PeY?SHX?
 ~vs&Ru
-~wph_YSNHB<6/' 
+~wph_YSNHB<6/'
 ~z~z~z~z~z~z~z~zH

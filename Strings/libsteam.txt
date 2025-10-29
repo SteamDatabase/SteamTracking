@@ -3,24 +3,24 @@
     File not found
     due to exception: %s
     due to unknown exception
- - already defined to: 
- - remote process 
+ - already defined to:
+ - remote process
  Actual:
  Expected:
  Failed Validation\n
- Total Files, 
- but 
- but got 
- but required to be 
+ Total Files,
+ but
+ but got
+ but required to be
  but the file is still there
  doesn't exist
  expected to be a file but isn't
- failed 
+ failed
  failed signature verification
  failed with error: input TSteamError pointer is null
- failed: 
+ failed:
  for value info
- inflate 1.1.4 Copyright 1995-2002 Mark Adler 
+ inflate 1.1.4 Copyright 1995-2002 Mark Adler
  is me\n
  wZiK
 ! CacheRequestList[uIndex].m_bDataRdy
@@ -87,7 +87,7 @@
 !u8SizeOfAppOwnershipTicket
 " does not exist
 "%260[^"]",%llu,%llu
-", expected 
+", expected
 "3ii
 "Create semaphore failed in CreateSemaphoreInternal" && !pchErr
 "WriteFileFailed" && !pchErr
@@ -1201,15 +1201,15 @@
 (uOldDataStart - uDataStart) % cuDataBlockSize == 0
 (uPreLength + uPostLength) <= (2*uCompressionBlkSize)
 (wrappedWSABUF.ExtractGap(u32ChunkSize)) == (pu8RxLocation)
-) failed with error 
+) failed with error
 *0x%p="%s",0x%p
 *0x%p=%s,0x%p
 *0x%x="%s",0x%x
 *0x%x=%s,0x%x
 +2Hp
 +HpXhE
-, errno 
-, line 
+, errno
+, line
 .L10
 .L1000
 .L1001
@@ -1920,11 +1920,11 @@
 30819d300d06092a864886f70d010101050003818b0030818702818100bc265d3402562c8afb78904e7ec84ee5b6662a09216b6b50da4205094c54f8b09d211bdeb8219ca4df67e39d2349bcbe9cb3b0d1e18b23cf33b5b51cabbeaa529a27e2b3928bdbe1c5c5a7de6bee7e87aecfa26f82286cad35df7ee53fe12adb2d1e81e98ca5faa6db509de8c4f482fa3c4fcf875ce21d443ed635bbdcb425db020111
 30819d300d06092a864886f70d010101050003818b0030818702818100d3bb0de9bbab4becf8efc894c0723c54c3d7f8ff7bcef9f4d9c810668ca1cad7a292017c537bab1a68db17f8bd9a94751c2e37f30a7fab23c6a0443edd2d6896c1f5fcc89bb4e32291a44044777eb72c5e1ff1a9c113c75b49abdfd5bdc732c7807a18c836944279d63ef9bb4a38f50805b157ad32556e07e6575a112ca346ff020111
 3333
-333333
 33fU
 4444
-4h\4
 5555
+333333
+4h\4
 55j_WW
 5ICmd_
 6-nn
@@ -2331,9 +2331,9 @@ Bad handle
 Bad launch configuration
 Bad number string: '%s' is not a signed number
 Bad number string: '%s' is not a unsigned number
-Bad sIPAddr: 
-Badly formed '%' value (missing ,Default) in line: 
-Badly formed '%' value (only one '%') in line: 
+Bad sIPAddr:
+Badly formed '%' value (missing ,Default) in line:
+Badly formed '%' value (only one '%') in line:
 Bahamas
 Bahrain
 Bangladesh
@@ -2652,11 +2652,11 @@ Canada
 CancelItem
 CancelPendingCall(%u,%u)
 CancelPendingCalls(%u)
-Cannot Remove Directory, Error is 
-Cannot delete file 
+Cannot Remove Directory, Error is
+Cannot delete file
 Cannot delete root key
 Cannot find content ticket
-Cannot open blob archive file: 
+Cannot open blob archive file:
 Cannot open file '%s'
 Cannot open output file '%s'
 Cannot perform this operation while offline
@@ -2697,7 +2697,7 @@ ClientAppVersionNum
 ClientBandwidthStats
 ClientCallbackAgent
 ClientConfigRecord
-ClientConfigRecord is version 
+ClientConfigRecord is version
 ClientExternalIPAddr does not match that in ticket
 ClientExternalIPAddress
 ClientLocalIPAddr does not match that in ticket
@@ -2743,7 +2743,7 @@ Considering creating preloader (1) for AppId %d with %d fs records
 Considering creating preloader (2) for AppId %d
 Content
 ContentDescriptionRecord
-ContentDescriptionRecord is version 
+ContentDescriptionRecord is version
 ContentServer rejected client protocol version
 ContentServer rejected client's protocol version
 ContentServerCDDBIPAddrPort
@@ -3493,11 +3493,11 @@ Downloading resources
 Downloading resources. . .
 EEEE
 EItemState=%d, Handle=%d
-ERROR: copied 
-ERROR: copying 
-ERROR: delete of 
-ERROR: deleted 
-ERROR: renamed 
+ERROR: copied
+ERROR: copying
+ERROR: delete of
+ERROR: deleted
+ERROR: renamed
 Ecuador
 Egypt
 El Salvador
@@ -3579,12 +3579,12 @@ FSM.m_uSizeOfNextCompressedBlockChunk <= FSM.m_uSizeOfNextCompressedBlock
 Failed GetNextResource due to exception: %s
 Failed GetNextResource due to unknown exception
 Failed app scan for appid %d
-Failed create pipe: 
+Failed create pipe:
 Failed ticket decryption, throwing it out
 Failed to SetUser
 Failed to add file: %s
 Failed to connect
-Failed to connect to 
+Failed to connect to
 Failed to connect to any GeneralDirectoryServer
 Failed to create Event handle
 Failed to create OS thread
@@ -3593,17 +3593,17 @@ Failed to create a new cache(%d): unknown exception
 Failed to create cache work thread.
 Failed to create cache(%d) from existing file: %s
 Failed to create cache(%d) from existing file: unknown exception
-Failed to create directory 
+Failed to create directory
 Failed to create event handle
 Failed to create file access mutex
-Failed to create key 
+Failed to create key
 Failed to create new cache(%d) file
 Failed to create semaphore
 Failed to create session socket
 Failed to create temp file
 Failed to create thread
 Failed to delete cache file
-Failed to delete key 
+Failed to delete key
 Failed to find Master AuthenticationServer
 Failed to find Master BillingBridgeServer
 Failed to find Master GlobalTransactionServer
@@ -3619,55 +3619,55 @@ Failed to get local IP address of SocketToServer
 Failed to get path environment variable
 Failed to get user ticket: %s
 Failed to initialize cache file
-Failed to insert 
+Failed to insert
 Failed to launch application process (%s)
 Failed to make pack directory map
 Failed to open config file %s
-Failed to open file 
+Failed to open file
 Failed to open file: %s
-Failed to open key 
-Failed to open logfile 
+Failed to open key
+Failed to open logfile
 Failed to open master pipe lock
-Failed to query key 
-Failed to read 
+Failed to query key
+Failed to read
 Failed to read cache fixed data for App %d
 Failed to read file '%s'
 Failed to read file: %s
 Failed to read manifest binary
 Failed to read user ticket: %s
 Failed to reconnect session
-Failed to remove directory 
-Failed to remove file 
+Failed to remove directory
+Failed to remove file
 Failed to remove file "
-Failed to rename key 
+Failed to rename key
 Failed to resize cache(%d) file
 Failed to resize the cache file
-Failed to seek 
-Failed to serialize content tickets: 
+Failed to seek
+Failed to serialize content tickets:
 Failed to serialize content tickets: unknown error
 Failed to serialize dirty tickets for app %u
 Failed to serialize dirty tickets for app %u: %s
 Failed to serialize(%d)
 Failed to set file attributes
 Failed to set socket to non-blocking
-Failed to store named arg 
-Failed to write 
+Failed to store named arg
+Failed to write
 Failed to write output file '%s'
 Failed to write to file
 Falkland Islands (Malvinas)
 Faroe Islands
 Field does not exist
 Fiji
-File does not exist: 
+File does not exist:
 File does not exist: '%s'
 File or path not found=%s
 File seek error
 FileId does not exist in checksum table
 FileId out of range
 FileInfo.iterManifest->GetCacheIndex() < m_vecResourceFileInfo.size()
-FileSink: error opening file for writing: 
+FileSink: error opening file for writing:
 FileSink: error writing file
-FileStore: error opening file for reading: 
+FileStore: error opening file for reading:
 FileStore: error reading file
 Filesystem
 Filesystem configuration error
@@ -3685,7 +3685,7 @@ Flush
 FlushCache
 FlushFileBuffers(void*)
 FlushViewOfFile(void const*, unsigned int)
-Flushing file: 
+Flushing file:
 ForceCacheValidateAtStartup
 ForceOfflineMode
 Forcing local logout because user ticket invalid
@@ -6779,7 +6779,7 @@ Invalid client connect ACK code
 Invalid client connect code
 Invalid handle value
 Invalid node
-Invalid port: 
+Invalid port:
 Invalid session handle
 Invalid uSizeOfSerializedContentServerIdWithIPAddrPort %u
 Invalid uSizeOfSerializedIPAddrPorts
@@ -6894,35 +6894,35 @@ Minimum
 MinimumRequiredClientAppPackageVersion
 Missing '-' in CD-key
 Missing SubscriptionBillingInfo field in CAccountSubscriptionBillingInfoRecord
-Missing end-quote in: 
-Missing field in CAccountExternalBillingInfoRecord: 
-Missing field in CAccountPaymentCardInfoRecord: 
-Missing field in CAccountPaymentCardReceiptRecord: 
-Missing field in CAccountPrepurchaseInfoRecord: 
-Missing field in CAccountPrepurchaseReceiptRecord: 
-Missing field in CAccountSubscriptionRecord: 
-Missing field in CAccountUserPasswordRecord: 
-Missing field in CAccountUserRecord: 
-Missing field in CAppFilesystemRecord: 
-Missing field in CAppLaunchOption: 
-Missing field in CAppRecord: 
-Missing field in CAppRegionRecord: 
-Missing field in CAppVersionInfoRecord: 
-Missing field in CClientAuthenticationTicket: 
+Missing end-quote in:
+Missing field in CAccountExternalBillingInfoRecord:
+Missing field in CAccountPaymentCardInfoRecord:
+Missing field in CAccountPaymentCardReceiptRecord:
+Missing field in CAccountPrepurchaseInfoRecord:
+Missing field in CAccountPrepurchaseReceiptRecord:
+Missing field in CAccountSubscriptionRecord:
+Missing field in CAccountUserPasswordRecord:
+Missing field in CAccountUserRecord:
+Missing field in CAppFilesystemRecord:
+Missing field in CAppLaunchOption:
+Missing field in CAppRecord:
+Missing field in CAppRegionRecord:
+Missing field in CAppVersionInfoRecord:
+Missing field in CClientAuthenticationTicket:
 Missing field in CClientConfigRecord
-Missing field in CClientContentTicket: 
-Missing field in CCustSupportAccountRecord: 
-Missing field in CDiscountQualifierRecord: 
-Missing field in CDiscountRecord: 
-Missing field in CRateLimitRecord: 
-Missing field in CShippingInfoRecord: 
-Missing field in CSubscriberAccountRecord: 
-Missing field in CSubscriptionRecord: 
-Missing field in CVACRecord: 
-Missing field in ContentDescriptionRecord: 
-Missing key/value separator ('=') in line: 
+Missing field in CClientContentTicket:
+Missing field in CCustSupportAccountRecord:
+Missing field in CDiscountQualifierRecord:
+Missing field in CDiscountRecord:
+Missing field in CRateLimitRecord:
+Missing field in CShippingInfoRecord:
+Missing field in CSubscriberAccountRecord:
+Missing field in CSubscriptionRecord:
+Missing field in CVACRecord:
+Missing field in ContentDescriptionRecord:
+Missing key/value separator ('=') in line:
 Missing or non-file input file: '%s'
-Missing value in line: 
+Missing value in line:
 Moldova, Republic of
 Monaco
 Mongolia
@@ -7700,7 +7700,7 @@ PreLoadMisc
 PreLoadStart
 PreLoader
 Precondition
-Preloader Thread - App 
+Preloader Thread - App
 PrepurchasedInfo
 PrepurchasedReceipt
 PrevDirEntry.GetCompressionType() == uCompressionType
@@ -7987,7 +7987,7 @@ Sri Lanka
 St8iteratorISt26random_access_iterator_tagSsiPSsRSsE
 Start (%d)
 StartLoadingCache
-Starting validation of 
+Starting validation of
 StatComplete
 StatRequest
 StaticInitializers::~StaticInitializers()
@@ -8514,13 +8514,13 @@ Steam_RunCallbacks
 Stop
 StopLoadingCache
 String
-String: 
+String:
 SubRequired
 SubsId
 Subscribe
 SubscribedDate
 SubscriberAccountRecord
-SubscriberAccountRecord is version 
+SubscriberAccountRecord is version
 SubscriptionAppId < vec_rcpAppSubscriptionIdsRecords.size()
 SubscriptionAppIdsRecord
 SubscriptionId
@@ -8605,9 +8605,9 @@ TransDate
 TransTime
 TransactionType
 TranslateServerToClientSessionHandle failed for hServerSession=%u
-TransmitFile failed for file 
+TransmitFile failed for file
 TrickleVersionId
-Tried to read undefined arg name: 
+Tried to read undefined arg name:
 Trinidad and Tobago
 Tunisia
 Turkey
@@ -8622,10 +8622,10 @@ UUPx((
 Uganda
 Ukraine
 Unable to get home directory
-Unable to remove directory 
+Unable to remove directory
 Unable to write to the current Steam application folder.\nPlease move Steam to a folder where you have write privileges.\n
-Unexpected HandleCompletedRecv() in state 
-Unexpected HandleCompletedSend() in state 
+Unexpected HandleCompletedRecv() in state
+Unexpected HandleCompletedSend() in state
 Unexpected number of bytes returned
 Unexpected offset received
 Unexpected request
@@ -8746,8 +8746,8 @@ ValidOSList
 ValidateTicketServerIPAddrPort
 Validating data for cache(%d)
 Validating data...
-Validation complete: 
-Validation failure: 
+Validation complete:
+Validation failure:
 Value "
 ValvePlatformMutex
 Vanuatu
@@ -8787,7 +8787,7 @@ Y77n
 Y@End of file
 YYYYGGGG
 Yemen
-Your clock differs too much from the servers time of UTC 
+Your clock differs too much from the servers time of UTC
 Your subscription attempt failed as you have not yet confirmed your email address.
 Your subscription attempt failed due to unexpectedly high demand. Please try again later.
 Your system must be rebooted in order to complete this operation
@@ -8799,11 +8799,11 @@ Zero CSs logged in
 ZiKw
 Zimbabwe
 Zjz\v
-[Source file 
+[Source file
 \44h
 \Copy (
-\Copy of 
-\n Details: 
+\Copy of
+\n Details:
 \r8STs\ne
 \steamapps\
 \t(%zu) comparing %s with %s\n
@@ -10139,13 +10139,12 @@ failed connection detected when ready to issue body receive
 failed path create to File=%s
 failed to bind outgoing socket to %s
 failed to open dev/null
-failed to open file 
-failed to seek into file 
+failed to open file
+failed to seek into file
 failed to take master pipe connection lock
 failed to write local app file
 fake@fakemail.com
 false
-false 
 fchmod
 fchmod@@GLIBC_2.0
 fchown
@@ -10734,9 +10733,9 @@ pathmatch(char const*, char**, bool, char*, unsigned int)::s_pszDbgPathMatch
 pchDirStart && pchDirEnd
 pchNameStart && pchNameEnd
 pchSteamInstancePublicKey
-peek of pipe from 
-pipe read to 
-pipe write 
+peek of pipe from
+pipe read to
+pipe write
 pmbAppOwnershipTicket->GetSize() <= 0xFFFF
 pos != std::string::npos
 pos->m_EItemState != eCancel
@@ -10837,7 +10836,7 @@ realpath@@GLIBC_2.3
 receive buffer too small
 received bad response code
 received error response code
-received unexpected signature length for 
+received unexpected signature length for
 received unknown compression type
 recv
 recv@@GLIBC_2.0

@@ -1,11 +1,11 @@
   handle %llu: m_iTextureID %d m_fdPaintBuffer %d\n
   skipping tracking for nested window\n
   using display %p window 0x%lx key input win 0x%lx (event mask 0x%x)\n
-  what():  
- [clone 
+  what():
+ [clone
  __vector(
  const
- for 
+ for
  noexcept
  restrict
  throw
@@ -324,8 +324,8 @@ Steamworks_IPCSend: %s::%s
 Stopped movie recording\n
 StreamForOpenVR
 StreamingSendPacket: %s %u %u %u %u %u %d
-TLS init function for 
-TLS wrapper function for 
+TLS init function for
+TLS wrapper function for
 Taking screenshot via %s, %u milliseconds since last one was triggered. (skipdebounce=%s)\n
 Texture
 Texture size(%d) was != width(%u)*height(%u)*4, not loading\n
@@ -347,7 +347,7 @@ Unsupported render command (%d) in vgui render stream\n
 Update size of 0x%lx to %u,%u\n
 VALVE
 VR_Compositor_OverlayVSync_%u
-VTT for 
+VTT for
 Value
 Value 0x%x
 ValveGetOutputBounds( %d, %d, %d, %d)\n
@@ -470,7 +470,7 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_Sat 
+_Sat
 ___tls_get_addr
 __assert_fail
 __ctype_b_loc
@@ -497,7 +497,7 @@ __vsnprintf_chk
 __xstat64
 _exit
 abort
-alignof 
+alignof
 allocator
 asctime_r
 auto
@@ -528,12 +528,12 @@ clock_gettime
 close
 closedir
 compatibility
-complex 
+complex
 connect
 const_cast
-construction vtable for 
+construction vtable for
 core
-covariant return thunk to 
+covariant return thunk to
 ctime_r
 daylight
 decimal128
@@ -542,8 +542,8 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-delete 
-delete[] 
+delete
+delete[]
 depth <= 16
 depth >= 1
 depth >= 10
@@ -563,7 +563,7 @@ dy != __null
 dynamic_cast
 en_US.UTF-8
 enable
-exec 
+exec
 execv
 f5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 false
@@ -716,20 +716,20 @@ glXGetProcAddress
 glXGetProcAddressARB
 glXMakeCurrent
 glXSwapBuffers
-global constructors keyed to 
-global destructors keyed to 
+global constructors keyed to
+global destructors keyed to
 gmtime_r
-guard variable for 
+guard variable for
 half
 height > 0
-hidden alias for 
-imaginary 
+hidden alias for
+imaginary
 in external stream
 in saved stream
 inputStyle
 ioctl
-java Class for 
-java resource 
+java Class for
+java resource
 k;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 kill
 ld-linux.so.2
@@ -758,16 +758,15 @@ mmap
 mold 1.10.1 (compatible with GNU ld)
 munmap
 nanosleep
-new 
+new
 new[]
-non-transaction clone for 
-non-virtual thunk to 
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+non-transaction clone for
+non-virtual thunk to
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 open
 opendir
 operator
-operator 
-operator"" 
+operator""
 pid %d != %d, skipping destruction (fork without exec?)\n
 pthread_attr_init
 pthread_attr_setstacksize
@@ -837,7 +836,7 @@ sigaddset
 sigemptyset
 signed char
 sigprocmask
-sizeof 
+sizeof
 sizeof...
 socket
 sqrtf
@@ -879,23 +878,22 @@ strtol
 strtoull
 syscall
 system
-template parameter object for 
+template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 this
 throw
-throw 
 time
 timegm
 timezone
-transaction clone for 
+transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 true
-typeinfo fn for 
-typeinfo for 
-typeinfo name for 
+typeinfo fn for
+typeinfo for
+typeinfo name for
 ubuntu12_32/steamclient.so
 ubuntu12_64/steamclient.so
 uniform bool bFlipRendering;\nvoid main()\n{\n\tgl_TexCoord[0] = gl_MultiTexCoord0;\n   gl_Position = gl_Vertex;\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n}
@@ -917,7 +915,7 @@ video frame captured
 video frame ready, buffer ready
 video sleep done
 video sleep until end of frame
-virtual thunk to 
+virtual thunk to
 void
 void libyuv::Convert16To8Row_C(const uint16_t*, uint8_t*, int, int)
 void libyuv::MergeAR64Row_C(const uint16_t*, const uint16_t*, const uint16_t*, const uint16_t*, uint16_t*, int, int)
@@ -959,7 +957,7 @@ void libyuv::SplitARGBPlaneOpaque(const uint8_t*, int, uint8_t*, int, uint8_t*, 
 void libyuv::SplitUVRow_16_C(const uint16_t*, uint16_t*, uint16_t*, int, int)
 vrmonitor
 vsnprintf
-vtable for 
+vtable for
 waitid
 waitpid
 wchar_t

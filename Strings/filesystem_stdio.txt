@@ -3,12 +3,12 @@
   f_blocks: %llu\n
   f_bsize : %lu\n
   f_frsize: %lu\n
-  what():  
+  what():
  2>/dev/null
- [clone 
+ [clone
  __vector(
  const
- for 
+ for
  noexcept
  restrict
  throw
@@ -92,7 +92,7 @@ $ORIGIN
 /tmp
 /tmp/disk-free.XXXXXX
 /ubuntu12_32
-/ubuntu12_64/disk-free 
+/ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 0123456789
 0123456789ABCDEF
@@ -425,8 +425,8 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 Sunday
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
-TLS init function for 
-TLS wrapper function for 
+TLS init function for
+TLS wrapper function for
 TMPDIR
 TSListBase_Init
 TSListBase_Pop
@@ -459,7 +459,7 @@ Unmatched %s\n
 VBaseFileSystem008
 VFileSystem014
 VProfInternalEnterScopeCurrentThread
-VTT for 
+VTT for
 V_AppendSlash
 V_ComposeFileName
 V_ExtractFileExtension
@@ -513,7 +513,7 @@ _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _IsValidIndex( y, unNodeSize, pMemBase )
-_Sat 
+_Sat
 ___tls_get_addr
 __ctype_b_loc
 __ctype_get_mb_cur_max
@@ -612,7 +612,7 @@ _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 abort
 access
-alignof 
+alignof
 allocator
 alnum
 alpha
@@ -657,9 +657,9 @@ clock_gettime
 close
 closedir
 cntrl
-complex 
+complex
 const_cast
-construction vtable for 
+construction vtable for
 copy "%%binsrc%%\bin\*.asi" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\engine.dll" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\filesystem_stdio.dll" "%%fs_target%%\bin"\n
@@ -682,7 +682,7 @@ copy "%%binsrc%%\hl2.exe" "%%fs_target%%"\n
 copy "%%binsrc%%\hl2\bin\gameui.dll" "%%fs_target%%\hl2\bin"\n
 copy "%%binsrc%%\hl2\resource\*.ttf" "%%fs_target%%\hl2\resource"\n
 copy "%s" "%s"\n
-covariant return thunk to 
+covariant return thunk to
 cubBytesToRead < INT32_MAX
 cubData < FIO_MAX_IO_BYTES
 cubData < INT32_MAX
@@ -692,8 +692,8 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-delete 
-delete[] 
+delete
+delete[]
 desktop
 dgettext
 digit
@@ -717,7 +717,6 @@ expandableSpace
 faccessat
 fallocate64
 false
-false 
 fclose
 fcntl
 fdatasync
@@ -772,23 +771,23 @@ getenv
 getmntent
 gettext
 getwc
-global constructors keyed to 
-global destructors keyed to 
+global constructors keyed to
+global destructors keyed to
 goto done\n
 graph
-guard variable for 
+guard variable for
 half
-hidden alias for 
+hidden alias for
 iconv
 iconv_close
 iconv_open
 if "%%fs_target%%" == "" goto error\n
-imaginary 
+imaginary
 info.m_pReplacementString == 0
 ioctl
 isspace
-java Class for 
-java resource 
+java Class for
+java resource
 lchown
 ld-linux.so.2
 len <= INT_MAX
@@ -877,11 +876,11 @@ nMinCapacity >= nChars
 nPut + nPutDelta <= outBuf.TellMaxPut()
 nSize != 0
 nSize >= 0
-new 
+new
 new[]
-non-transaction clone for 
-non-virtual thunk to 
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+non-transaction clone for
+non-virtual thunk to
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 null
 num > 0
 numElements >= 0
@@ -893,8 +892,7 @@ open
 open64
 opendir
 operator
-operator 
-operator"" 
+operator""
 pConv && pConv->GetDelimiterLength() > 0
 pEndingDelim && pEndingDelim[0]
 pFile->m_hFileDest != INVALID_OSFILEHANDLE
@@ -958,7 +956,7 @@ setmntent
 setvbuf
 short
 signed char
-sizeof 
+sizeof
 sizeof...
 space
 spaceGranted
@@ -1014,32 +1012,31 @@ strtold_l
 strtoll
 strtoul
 symlink
-syntax error at line %d near: 
+syntax error at line %d near:
 syscall
 system
-template parameter object for 
+template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 this
 throw
-throw 
 time
 tolower
 toupper
-transaction clone for 
+transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 true
-typeinfo fn for 
-typeinfo for 
+typeinfo fn for
+typeinfo for
 typeinfo for SteamThreadTools::CThread
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
-typeinfo name for 
+typeinfo name for
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
 typeinfo name for __gnu_cxx::__concurrence_lock_error
@@ -1063,10 +1060,10 @@ usleep
 utime
 utimes
 vector::_M_realloc_insert
-virtual thunk to 
+virtual thunk to
 void
 vsnprintf
-vtable for 
+vtable for
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception

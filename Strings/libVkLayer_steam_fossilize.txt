@@ -1,9 +1,9 @@
-  what():  
+  what():
  (pNext->sType chain: [
- [clone 
+ [clone
  __vector(
  const
- for 
+ for
  noexcept
  restrict
  throw
@@ -31,8 +31,8 @@ $ORIGIN
 .wN\f9
 /fossilize-replayer-%d-%u
 /proc/self/%s
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789ABCDEF
 10.0.3
 11eU%
@@ -348,8 +348,8 @@ St9time_base
 St9type_info
 Sunday
 T%L9
-TLS init function for 
-TLS wrapper function for 
+TLS init function for
+TLS wrapper function for
 TOUCH
 Thursday
 Tuesday
@@ -361,7 +361,7 @@ VK_EXT_pipeline_creation_cache_control
 VK_KHR_get_physical_device_properties2
 VK_LAYER_fossilize_GetDeviceProcAddr
 VK_LAYER_fossilize_GetInstanceProcAddr
-VTT for 
+VTT for
 VendorID
 W4vC
 Wednesday
@@ -384,7 +384,7 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_Sat 
+_Sat
 ___tls_get_addr
 __ctype_get_mb_cur_max
 __cxa_atexit
@@ -436,7 +436,7 @@ abort
 addressModeU
 addressModeV
 addressModeW
-alignof 
+alignof
 allocation failed
 allocator
 allowClusterAccelerationStructure
@@ -535,18 +535,18 @@ combinerOps
 compareEnable
 compareMask
 compareOp
-complex 
+complex
 components
 compression failed
 computePipelines
 conservativeRasterizationMode
 const_cast
 constantID
-construction vtable for 
+construction vtable for
 contains
 correlatedViewMasks
 correlationMasks
-covariant return thunk to 
+covariant return thunk to
 cullMode
 customBorderColor
 d6\f6
@@ -562,8 +562,8 @@ decltype(nullptr)
 decompression failed or archive is corrupted
 defaultBucketVariantDependencies
 defaultBucketVariantFeatureDependencies
-delete 
-delete[] 
+delete
+delete[]
 dependencies
 dependencyFlags
 depthAttachmentFormat
@@ -675,24 +675,24 @@ getenv
 getpgrp
 getpid
 gettext
-global constructors keyed to 
-global destructors keyed to 
+global constructors keyed to
+global destructors keyed to
 graph
 graphicsPipelines
 groups
-guard variable for 
+guard variable for
 hGT.
 half
 hash
 height
-hidden alias for 
+hidden alias for
 i]Wb
 iconv
 iconv_close
 iconv_open
 image2DViewOf3D
 images
-imaginary 
+imaginary
 immutableSamplers
 initialLayout
 inputAssemblyState
@@ -705,8 +705,8 @@ invalid filename
 invalid header or archive is corrupted
 invalid parameter
 isxdigit
-java Class for 
-java resource 
+java Class for
+java resource
 k*do^
 k0V(
 killpg
@@ -784,23 +784,22 @@ name
 nanosleep
 need dictionary
 negativeOneToOne
-new 
+new
 new[]
 nice
 no error
 noInvocationFragmentShadingRates
-non-transaction clone for 
-non-virtual thunk to 
+non-transaction clone for
+non-virtual thunk to
 nonnull
 not a ZIP archive
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 nullDescriptor
 offset
 open
 opendir
 operator
-operator 
-operator"" 
+operator""
 out of memory
 pH_r
 pNext
@@ -900,7 +899,7 @@ short
 shutdown
 signed char
 size
-sizeof 
+sizeof
 sizeof...
 socketpair
 space
@@ -966,24 +965,23 @@ syscall
 system
 tC7Ddx
 taskShader
-template parameter object for 
+template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 tessellationState
 this
 throw
-throw 
 time
 too many files
 topology
-transaction clone for 
+transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 true
 type
-typeinfo fn for 
-typeinfo for 
+typeinfo fn for
+typeinfo for
 typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
@@ -992,7 +990,7 @@ typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
-typeinfo name for 
+typeinfo name for
 typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
@@ -1042,7 +1040,7 @@ viewOffsets
 viewportCount
 viewportState
 viewports
-virtual thunk to 
+virtual thunk to
 vkCreateComputePipelines
 vkCreateDescriptorSetLayout
 vkCreateDevice
@@ -1070,7 +1068,7 @@ vkGetShaderModuleCreateInfoIdentifierEXT
 vkGetShaderModuleIdentifierEXT
 void
 vsnprintf
-vtable for 
+vtable for
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception

@@ -5,6 +5,5 @@ parameters:
 	checkUnionTypes: false
 	reportMaybes: true
 	paths:
+		- tools
 		- update.php
-		- extract_json_from_webpack.php
-		- generate_urls_from_html.php

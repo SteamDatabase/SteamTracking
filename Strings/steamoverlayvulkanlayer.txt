@@ -1,8 +1,8 @@
-  what():  
- [clone 
+  what():
+ [clone
  __vector(
  const
- for 
+ for
  noexcept
  restrict
  throw
@@ -152,8 +152,8 @@ St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9time_base
 St9type_info
 Sunday
-TLS init function for 
-TLS wrapper function for 
+TLS init function for
+TLS wrapper function for
 Thursday
 Tuesday
 UTF-8
@@ -164,7 +164,7 @@ VK_KHR_get_memory_requirements2
 VK_KHR_maintenance1
 VK_KHR_maintenance2
 VK_KHR_sampler_ycbcr_conversion
-VTT for 
+VTT for
 Vcoeff
 Voffset
 VulkanSteamOverlayBeginRendering
@@ -190,7 +190,7 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_Sat 
+_Sat
 ___tls_get_addr
 __ctype_get_mb_cur_max
 __cxa_atexit
@@ -231,7 +231,7 @@ _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
 abort
-alignof 
+alignof
 allocator
 alnum
 alpha
@@ -269,19 +269,19 @@ color
 colorX
 colorY
 color_in
-complex 
+complex
 compositeDesc
 const_cast
-construction vtable for 
-covariant return thunk to 
+construction vtable for
+covariant return thunk to
 decimal128
 decimal32
 decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-delete 
-delete[] 
+delete
+delete[]
 dgettext
 digit
 dispatchThreadId
@@ -329,23 +329,23 @@ getenv
 gettext
 getwc
 gl_Position
-global constructors keyed to 
-global destructors keyed to 
+global constructors keyed to
+global destructors keyed to
 graph
-guard variable for 
+guard variable for
 half
-hidden alias for 
+hidden alias for
 i.nVertexIndex
 i.vTexCoord
 iconv
 iconv_close
 iconv_open
-imaginary 
+imaginary
 inConstants
 inLayerTex0
 ioctl
-java Class for 
-java resource 
+java Class for
+java resource
 ld-linux.so.2
 libc.so.6
 libdl.so.2
@@ -369,15 +369,14 @@ memmove
 memset
 mold 1.10.1 (compatible with GNU ld)
 nanosleep
-new 
+new
 new[]
 nits
-non-transaction clone for 
-non-virtual thunk to 
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+non-transaction clone for
+non-virtual thunk to
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 operator
-operator 
-operator"" 
+operator""
 outHeight
 outImage
 outWidth
@@ -412,7 +411,7 @@ setlocale
 setvbuf
 short
 signed char
-sizeof 
+sizeof
 sizeof...
 space
 static_cast
@@ -445,19 +444,18 @@ strtol
 strtold_l
 syscall
 system
-template parameter object for 
+template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 this
 throw
-throw 
-transaction clone for 
+transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 true
-typeinfo fn for 
-typeinfo for 
+typeinfo fn for
+typeinfo for
 typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
@@ -466,7 +464,7 @@ typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
-typeinfo name for 
+typeinfo name for
 typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
@@ -491,7 +489,7 @@ uv_in
 vOutputResolution
 vector::_M_default_append
 vector::_M_realloc_insert
-virtual thunk to 
+virtual thunk to
 vkAcquireDrmDisplayEXT
 vkAcquireNextImage2KHR
 vkAcquireNextImageKHR
@@ -1084,7 +1082,7 @@ vkWriteMicromapsPropertiesEXT
 vk_layerGetPhysicalDeviceProcAddr
 void
 vsnprintf
-vtable for 
+vtable for
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
 vtable for __cxxabiv1::__foreign_exception

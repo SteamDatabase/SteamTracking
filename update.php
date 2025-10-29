@@ -19,12 +19,12 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 	require '/var/www/steamdb.info/Library/Bugsnag/Autoload.php';
 }
 
-	new SteamTracker( count( $argv ) === 2 ? $argv[ 1 ] : '' );
+	new SteamTracker( isset( $argv ) && count( $argv ) === 2 ? $argv[ 1 ] : '' );
 
 	class SteamTracker
 	{
 		private string $APIKey = '';
-		private float $AppStart;
+		private int $AppStart;
 		private int $CurrentTime;
 		private bool $UseCache = true;
 		private bool $ExtractClientArchives = false;
@@ -74,7 +74,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 		public function __construct( string $Option )
 		{
-			$this->AppStart = microtime( true );
+			$this->AppStart = hrtime( true );
 
 			if( $Option === 'force' )
 			{
@@ -192,7 +192,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				$this->DumpJavascriptFiles = true;
 				$this->SyncProtobufs = true;
 
-				system( 'bash extract_client.sh' );
+				system( escapeshellarg( PHP_BINARY ) . ' tools/extract_client.php' );
 			}
 
 			if( $this->DumpJavascriptFiles )
@@ -1095,7 +1095,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 		private function Log( string $String ) : void
 		{
 			$Log  = '[';
-			$Log .= number_format( microtime( true ) - $this->AppStart, 2 );
+			$Log .= number_format( ( hrtime( true ) - $this->AppStart ) / 1e9, 2 );
 			$Log .= 's] ';
 			$Log .= $String;
 			$Log .= '{normal}';

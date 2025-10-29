@@ -3,18 +3,18 @@
   f_blocks: %llu\n
   f_bsize : %lu\n
   f_frsize: %lu\n
-  what():  
+  what():
  2>/dev/null
  Gbps
  Kbps
  Mbps
  ReadToken overflow
- [clone 
+ [clone
  __vector(
  bps
  bytes
  const
- for 
+ for
  noexcept
  restrict
  throw
@@ -35,7 +35,7 @@
 #!/bin/sh\nexit 0\n
 #FLR
 #include
-#include is NULL 
+#include is NULL
 #tDq
 $ORIGIN
 $\nY8O
@@ -247,7 +247,7 @@ $\nY8O
 /tmp
 /tmp/disk-free.XXXXXX
 /ubuntu12_32
-/ubuntu12_64/disk-free 
+/ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 0123456789
 0123456789ABCDEF
@@ -1026,8 +1026,8 @@ TECHNOLOGY
 TIENDA
 TIPS
 TIROL
-TLS init function for 
-TLS wrapper function for 
+TLS init function for
+TLS wrapper function for
 TMPDIR
 TODAY
 TOKYO
@@ -1089,7 +1089,7 @@ VOYAGE
 VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
 VStdLib_GetICVarFactory
-VTT for 
+VTT for
 V_AggressiveStripAllMeanWhitespace
 V_AggressiveStripPrecedingAndTrailingWhitespace
 V_AggressiveStripPrecedingAndTrailingWhitespaceW
@@ -1429,7 +1429,7 @@ _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _IsValidIndex( y, unNodeSize, pMemBase )
-_Sat 
+_Sat
 _SpewMessageType
 ___tls_get_addr
 __ctype_b_loc
@@ -1524,7 +1524,7 @@ _txnal_runtime_error_get_msg(void*)
 a\rxg[
 abort
 access
-alignof 
+alignof
 allocator
 alnum
 alpha
@@ -1585,17 +1585,17 @@ clock_gettime
 close
 closedir
 cntrl
-complex 
+complex
 components.Count() == 0
 console
 const_cast
-construction vtable for 
+construction vtable for
 context.m_vecStack.Count() <= 1
 convar_
 count == 0 || s1 != NULL
 count == 0 || s2 != NULL
 count >= 0
-covariant return thunk to 
+covariant return thunk to
 cubBytesToRead < INT32_MAX
 cubData < FIO_MAX_IO_BYTES
 cubData < INT32_MAX
@@ -1606,8 +1606,8 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-delete 
-delete[] 
+delete
+delete[]
 dest != NULL
 destCapacity != 0
 destSize >= 1
@@ -1635,7 +1635,6 @@ f.N%H
 faccessat
 fallocate64
 false
-false 
 fclose
 fcntl
 fdatasync
@@ -1693,12 +1692,12 @@ getsockname
 gettext
 getuid
 getwc
-global constructors keyed to 
-global destructors keyed to 
+global constructors keyed to
+global destructors keyed to
 graph
-guard variable for 
+guard variable for
 half
-hidden alias for 
+hidden alias for
 iOS 1
 iOS 10
 iOS 10.1
@@ -1734,7 +1733,7 @@ iconv
 iconv_close
 iconv_open
 ig,o
-imaginary 
+imaginary
 in != out
 info.m_pReplacementString == 0
 invalid input pointer
@@ -1744,8 +1743,8 @@ isspace
 iswalnum
 iswalpha
 iswspace
-java Class for 
-java resource 
+java Class for
+java resource
 k2U\v
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
@@ -1867,11 +1866,11 @@ nSize != 0
 nSize >= 0
 nTotal number of strings %u, longest string size %u, avg size %u\n
 nValue >= 0 && nValue <= 15
-new 
+new
 new[]
-non-transaction clone for 
-non-virtual thunk to 
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+non-transaction clone for
+non-virtual thunk to
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 null
 num > 0
 numElements >= 0
@@ -1883,8 +1882,7 @@ open
 open64
 opendir
 operator
-operator 
-operator"" 
+operator""
 out of order normalization entry
 outsize >= ( inputbytes * 2 ) + 1
 outsize >= 1
@@ -1974,7 +1972,7 @@ shm_unlink
 short
 signed char
 size < INT_MAX
-sizeof 
+sizeof
 sizeof...
 snprintf
 space
@@ -2044,29 +2042,28 @@ strtoull
 swprintf
 swscanf
 symlink
-syntax error at line %d near: 
+syntax error at line %d near:
 syscall
 system
 szDomainName != nullptr
-template parameter object for 
+template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 test string
-the 
+the
 this
 throw
-throw 
 time
 tolower
 towlower
 towupper
-transaction clone for 
+transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 true
-typeinfo fn for 
-typeinfo for 
+typeinfo fn for
+typeinfo for
 typeinfo for CUniformRandomStream
 typeinfo for SteamThreadTools::CThread
 typeinfo for __cxxabiv1::__class_type_info
@@ -2076,7 +2073,7 @@ typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
-typeinfo name for 
+typeinfo name for
 typeinfo name for CUniformRandomStream
 typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
@@ -2106,7 +2103,7 @@ utime
 utimes
 vasprintf
 vector::_M_realloc_insert
-virtual thunk to 
+virtual thunk to
 void
 vsnprintf
 vstdlib_s.dll
@@ -2115,7 +2112,7 @@ vstdlib_wcsnicmp
 vstdlib_wcstoi64
 vstdlib_wcstoui64
 vswprintf
-vtable for 
+vtable for
 vtable for CUniformRandomStream
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind

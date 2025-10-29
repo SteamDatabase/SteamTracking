@@ -1,9 +1,9 @@
-                    
+
                     ... and %d detail types\n
                     ... and %d other unique values\n
                     details: %s [locked by %s - %s / %s (%ldms)] (%d) (%ldms)\n
                     details: %s%s (%d) (%dms)\n
-            Not Before: 
+            Not Before:
           %s %d %s\n
           waiting on %d %s%s  (%ldms)\n
          %u requests queued waiting for a connection\n
@@ -13,7 +13,7 @@
         %4u %4u %4u %4u %4u %4u %4u %4u
         Issuer:%c
         Serial Number:
-        Subject OCSP hash: 
+        Subject OCSP hash:
         Subject Public Key Info:\n
         Subject:%c
         Validity\n
@@ -55,7 +55,7 @@
     Component %d: dc=%d ac=%d
     Foreground color %s\n
     Remote host is in data center '%s'\n
-    Signature Algorithm: 
+    Signature Algorithm:
     connection to %s:\n
     with %d x %d thumbnail image
    %s - %llu total requests made%s %lld completed (%u max/host)\n
@@ -71,13 +71,13 @@
   (use "jobs <field>" or "jobs hdr.<field>" to show top jobs grouped by request message fields)\n
   ---------------------- ------------------------ ----------- ----------- -----------\n
   ALS %d gain %f model %d
-  Actual   : 
+  Actual   :
   Chip ID: %s\n
   Comment started here.
   Connection gap %.0fms.
   Created %lldms ago, current wait %lldms for %s\n
   Created %lldms ago\n
-  Expected : 
+  Expected :
   Interface:    %d\n\n
   Local routes: %s\n
   Manufacturer: %s\n
@@ -91,7 +91,7 @@
   Remote Address         File                     Bytes Left  Bytes Total Pct Done\n
   Requested migration.
   Ss=%d, Se=%d, Ah=%d, Al=%d
-  delay: 
+  delay:
   f_bavail: %llu\n
   f_bfree : %llu\n
   f_blocks: %llu\n
@@ -100,7 +100,7 @@
   message pending type %d, packets %d, seq [%d, %d], first unacked: %d, size %d\n
   message received seq: %d, size %d\n
   none\n
-  what():  
+  what():
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
@@ -117,8 +117,8 @@
  %s%lu (%s0x%lx)\n
  %s/../bin/d3ddriverquery%s.exe
  %s: Duration control call for app id %d lt %d enable %d override desired %d
- %u target: 
- ' ) - 3 G M Q _ c e i w } 
+ %u target:
+ ' ) - 3 G M Q _ c e i w }
  (%ld unused bits)\n
  (%llu proxied)
  (%u in total)\n
@@ -133,7 +133,7 @@
  (Unknown SAFI %u)
  (Update delayed for %d secs)
  (VPLS)
- (expecting 
+ (expecting
  (flags 0x%x)
  (pipe is disconnected)
  (recursive)
@@ -149,12 +149,12 @@
  - %s [locked by %s - %s / %s (%lums)]
  - AppID %u, GameID %s, ProcessID %u, IP:Port %s:%u \n   commandline "%s" \n   extra info "%s"  \n   associated PIDs ( %s )  \n   dwLastIsRunningCheck %u \n
  - ContentCachePort %u, DownloadPeerGroup %u, PeerContentServer %u\n
- - Depots   : 
+ - Depots   :
  - Hostname "%s", IP %s\n
  - InstanceID %llu, SteamVersion %llu, Online %s\n
  - Original Owner : %u \n
  - Purchased : %s in "%s", %s\n
- - State   : 
+ - State   :
  - StreamingEnabled %u, SiteLicenseProvider %u, bTrackingPlatformType %u\n
  - TCP    : %u oustanding sends (%s)\n
  - Version %u, MinVersion %u\n
@@ -164,7 +164,7 @@
  --bitrate %d
  --captureres %s
  --clean
- --controller-overlay-hotkey 
+ --controller-overlay-hotkey
  --controller-overlay-hotkey none
  --enable-duplicate-detection
  --force
@@ -176,7 +176,7 @@
  --quality %d
  --relay %s
  --sdr_config "%s"
- --settingsdata 
+ --settingsdata
  --windowed
  -d3d12
  -gamepadui
@@ -230,21 +230,21 @@
  3CQ`p
  7Me}
  = { <proto text format> }". To set fields within it, use syntax like "
- Accel Check Failed: ( %f ) >  ( %f )  
+ Accel Check Failed: ( %f ) >  ( %f )
  Acceleration Tolerance: %f\n
  Applied Gyroscope Drift Per Second: ( %f,  %f,  %f ).\n
  BackUp() can only be called after Next().
- Can't Dispatch to 
- Can't Post to 
- Can't PostDelayed to 
+ Can't Dispatch to
+ Can't Post to
+ Can't PostDelayed to
  Can't back up over more bytes than were returned by the last call to Next().
  Closed locally
- Closed with error: 
+ Closed with error:
  Connected
  Current sdr ping [%f] %s \n
  GET[ '%s' ]: %s\n
  GMT
- Gyro Check Failed: ( %f ) >  ( %f )  
+ Gyro Check Failed: ( %f ) >  ( %f )
  Gyro NoiseBox Size: %f, Gyro Noise Delta: %f. Accel NoiseBox Size: %f, Accel Noise Delta: %f\n
  Gyroscope Tolerance: %f\n
  HTTP/1.0\r\n
@@ -264,18 +264,18 @@
  Parameter to BackUp() can't be negative.
  ReadToken overflow
  Saving Gyroscope Drift Per Second: ( %f,  %f,  %f ).\n
- Tokenizer::ParseFloat() passed text that could not have been tokenized as a float: 
- Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string: 
+ Tokenizer::ParseFloat() passed text that could not have been tokenized as a float:
+ Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
  Updated Acceleration Tolerance : %f\n
  Updated Gyroscope Tolerance For AutoDrift Calibration: %f\n
  Workshop Content folder : "%s" - no update needed \n
  Workshop Content folder : "%s" - updated needed %s \n
- [clone 
+ [clone
  [default = $0
  \n\vinitial_top
  \vjpF
  __vector(
- a protocol 
+ a protocol
  ack_relay
  ack_relay_fwd_target(%d)
  ack_routes(%d)
@@ -283,12 +283,12 @@
  and %d siblings
  appid=%u
  args were given.  Full format string was: "
- arguments. 
- at offset 
+ arguments.
+ at offset
  backup_session
  backup_transport
  because it is being destructed.
- but running with 
+ but running with
  bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in third_party/protobuf/src/google/protobuf/io/coded_stream.h.
  cannot be required.
  characters
@@ -301,32 +301,32 @@
  connections
  consecutive unprintable ##
  const
- contains invalid 
+ contains invalid
  count  job:\n
  counter=
  datePurchased=
  definition file imports the proto which defines the option.
- details: 
+ details:
  downwarn
  e2e.life
  e2e.rate
- exceeded maximum protobuf size of 2GB: 
+ exceeded maximum protobuf size of 2GB:
  filename="%s"%s
  filename="smime.p7s"%s%s
- for 
+ for
  fwd_target(%d)
  google/protobuf/descriptor.proto"
  google/protobuf/descriptor.proto"1\n\rCMsgIPAddress
  google/protobuf/descriptor.proto"\f\n\nNoResponse*]\n
- has the same name as 
+ has the same name as
  held by
  iciNWq
  if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
  inactive
- inflate 1.2.11 Copyright 1995-2017 Mark Adler 
+ inflate 1.2.11 Copyright 1995-2017 Mark Adler
  is unused.
  libpng version 1.6.37 - April 14, 2019\n\n
- loc 
+ loc
  local=%d
  message of type "
  micalg="
@@ -340,16 +340,16 @@
  noexcept
  not found
  number=
- of the Protocol Buffer runtime library, but the installed version is 
+ of the Protocol Buffer runtime library, but the installed version is
  of the Protocol Buffer runtime library, which is not compatible with the installed version (
  other=%d
- ports and 
+ ports and
  protocol="%ssignature";
  rating=
  reason='
  relay.life
  relay.rate
- rem 
+ rem
  remaining
  remaining)
  remote=%d
@@ -358,13 +358,13 @@
  request_ack_e2e
  request_ack_immediate
  request_ack_relay
- resolved to 
+ resolved to
  restrict
  route=%d
  routes
  seller=
  siblings="%s"
- size is 
+ size is
  smime-type=%s;
  stack frames not accounted for stack unwind.
  stats.life
@@ -379,8 +379,8 @@
  volatile
  wZiK
  was modified concurrently during serialization.
- with 
- with type 
+ with
+ with type
  xmlns:
  xmlns="
  } routes:{
@@ -721,7 +721,7 @@
 !vecEntryFields.IsEmpty()
 !zipBucketDirIter.BCurrentIsDir()
 " \n\rCMsgSetUIMode
-" because it is missing required fields: 
+" because it is missing required fields:
 " conflicts with field "
 " conflicts with the existing symbol "
 " contains null character.
@@ -738,7 +738,7 @@
 " is already defined in file "
 " is already defined.
 " is an atomic type, not a message.
-" is missing required fields: 
+" is missing required fields:
 " is not a field or extension of message "
 " is not a message type.
 " is not a proto3 enum, but is used in "
@@ -751,7 +751,7 @@
 " is resolved to "(
 " is specified along with field "
 " is specified multiple times.
-" must be unique within 
+" must be unique within
 " not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
 " seems to be defined in "
 " stored in google.protobuf.Any has missing required fields
@@ -835,11 +835,11 @@
 "+\n)CPlayer_SetSteamDeckKeyboardSkin_Response"_\n$CPlayer_GetProfileItemsOwned_Request
 "+\n)CUserAccount_GetAccountLinkStatus_Request"}\n*CUserAccount_GetAccountLinkStatus_Response
 ", another member of oneof "
-", but only 
+", but only
 ", expecting "data"
 ", expecting "mean"
 ", expecting "name"
-", field number 
+", field number
 ", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
 ", which is not imported by "
 ",\n*CFamilyGroups_UndeleteFamilyGroup_Response"B\n(CFamilyGroups_GetPlaytimeSummary_Request
@@ -854,7 +854,7 @@
 ".  To use it here, please add the necessary import.
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
 ". This appears to be a value from a sibling type.
-". This is not 
+". This is not
 ". Value: "
 ".CBluetoothManager_Connect_Request
 ".CBluetoothManager_Forget_Response
@@ -1158,8 +1158,8 @@
 "f\n'CSteamTV_SetSteamTVUserSettings_Request
 "f\n/CCommunity_GetClanEventCrowdInMetadata_Response
 "f\n/CContentServerDirectory_GetCDNAuthToken_Request
-"game_action 
-"game_action_analog 
+"game_action
+"game_action_analog
 "h\n!CCloud_ClientFileDownload_Request
 "j\n0CGameRecording_TimelineEntryRemoved_Notification
 "l\n(CGameRecording_UploadClipToSteam_Request
@@ -1422,7 +1422,7 @@
 #]hK Ed
 #bML"
 #include
-#include is NULL 
+#include is NULL
 #origin_PS5_leftfn
 #origin_PS5_leftgrip
 #origin_PS5_rightfn
@@ -1759,8 +1759,8 @@ $.CTwoFactor_AddAuthenticator_Request
 $.CUserAccount_GetUserCountry_Request
 $0  extend .$1 {\n
 $0  extensions $1 to $2;\n
-$0  reserved 
-$0 to max, 
+$0  reserved
+$0 to max,
 $0$1$2 $3 = $4
 $09LWiv
 $0enum $1 {\n
@@ -1874,12 +1874,12 @@ $steammessages_parental_objects.proto"
 %*s      %s%s%s%s\n
 %*s    Info Entries:\n
 %*s    Profession OIDs:\n
-%*s    registrationNumber: 
+%*s    registrationNumber:
 %*s  Profession Info Entry %0d:\n
 %*s  admissionAuthority:\n
-%*s  admissionAuthorityId: 
-%*s  namingAuthorityText: 
-%*s  namingAuthorityUrl: 
+%*s  admissionAuthorityId:
+%*s  namingAuthorityText:
+%*s  namingAuthorityUrl:
 %*s%n %n%*s%n HTTP/%lu.%lu
 %*s%s OF %s {\n
 %*s%s Private-Key:\n
@@ -1898,34 +1898,34 @@ $steammessages_parental_objects.proto"
 %*sIPv4
 %*sIPv6
 %*sIndirect CRL\n
-%*sIssuer: 
-%*sKey Id: 
+%*sIssuer:
+%*sKey Id:
 %*sNo Qualifiers\n
 %*sNo Rejected Uses.\n
 %*sNo Trusted Uses.\n
-%*sNumber%s: 
+%*sNumber%s:
 %*sOnly Attribute Certificates\n
 %*sOnly CA Certificates\n
 %*sOnly User Certificates\n
 %*sOrganization: %s\n
-%*sPath Length Constraint: 
-%*sPolicy Language: 
+%*sPath Length Constraint:
+%*sPolicy Language:
 %*sPolicy Text: %s\n
-%*sPolicy: 
+%*sPolicy:
 %*sRejected Uses:\n%*s
 %*sRelative Name:\n%*s
 %*sSigned Certificate Timestamp:
 %*sTrusted Uses:\n%*s
 %*sUnknown AFI %u
-%*sUnknown Qualifier: 
+%*sUnknown Qualifier:
 %*sUser Notice:\n
 %*sVersion: %ld (0x%lX)
 %*sadmissionAuthority:\n
-%*scrlNum: 
-%*scrlTime: 
-%*scrlUrl: 
+%*scrlNum:
+%*scrlTime:
+%*scrlUrl:
 %*sinherit\n
-%*snamingAuthority: 
+%*snamingAuthority:
 %*spriv:\n
 %-18s
 %-20.20s %-40.40s %-10.10s %-10.10s %-10.10s\n
@@ -1989,7 +1989,6 @@ $steammessages_parental_objects.proto"
 %.CUserAccount_GetUserCountry_Response"
 %.CVideo_SetVideoBookmark_Notification
 %02X
-%02X 
 %02X%02X
 %02X:
 %02d%02d%02d%02d%02d%02dZ
@@ -2007,7 +2006,7 @@ $steammessages_parental_objects.proto"
 %04u-%02u-%02u %02u:%02u:%02u
 %08llx
 %08lx
-%08u %s:%02u > %s::%s( 
+%08u %s:%02u > %s::%s(
 %09u
 %0@Thv
 %0nV4
@@ -2015,14 +2014,14 @@ $steammessages_parental_objects.proto"
 %1.4lfms
 %10llu %6.1f%% %14llu %6.1f%% %10d %s\n
 %12llu %s %u\n
-%12sPublic Key Algorithm: 
+%12sPublic Key Algorithm:
 %12sUnable to load Public Key\n
 %2s %04x   %-04x   %-04x   %-15s  %-15s  %6s  %-12s       %-4d       %2d/(%d bytes).\n
 %3;NYk{
 %3A%5C
 %3AObq~
 %4.4u
-%44s %12lld     
+%44s %12lld
 %44s %12lld %12lld %12lld %12lld %8lld %8lld %8lld %8lld %8lld %8lld %8lld %8lld %8lld %8lld\n
 %4?K\fw
 %50s        count    duration     lock       for lock      netmsg   fileio    sleep   waitlock  yield workitem\n
@@ -2038,8 +2037,8 @@ $steammessages_parental_objects.proto"
 %7d%9.0f%8d%9.0f%10.0f   %*s%s\n
 %7d%9.0f%8s%9s%10s   %*s%s\n
 %7s%9s%8s%9s%10s   %s\n
-%8sIssuer Unique ID: 
-%8sSubject Unique ID: 
+%8sIssuer Unique ID:
+%8sSubject Unique ID:
 %8sVersion: %ld (0x%lx)\n
 %8sVersion: Unknown (%ld)\n
 %ATP
@@ -2174,7 +2173,6 @@ $steammessages_parental_objects.proto"
 %a %b %d %H:%M:%S %Y UTC
 %a, %d %b %Y %H:%M:%S GMT
 %a, %e %b %Y %H:%M:%S
-%a, %e %b %Y %H:%M:%S 
 %a, %e-%b-%Y %H:%M:%S
 %a, %e-%b-%y %H:%M:%S
 %cdkey%
@@ -2210,7 +2208,7 @@ $steammessages_parental_objects.proto"
 %lld
 %llu
 %llu bytes [%02x
-%llu bytes [%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x ... %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x], 
+%llu bytes [%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x ... %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x],
 %llu%cscreenshots%c%s_%u.jpg
 %llu%cscreenshots%c%s_%u_vr.jpg
 %llu%cscreenshots%cperiodic%c%s.jpg
@@ -2482,13 +2480,13 @@ $steammessages_parental_objects.proto"
 %s/personalization.vdf
 %s/power1_cap
 %s/power2_cap
-%s/reaper SteamLaunch AppId=%u%s -- 
+%s/reaper SteamLaunch AppId=%u%s --
 %s/replay_cache
 %s/shader_cache_temp_dir_%s_%s
 %s/shaderhitcache
 %s/siteserverui
 %s/state_%u.files
-%s/steam-launch-wrapper 
+%s/steam-launch-wrapper
 %s/steam-runtime/amd64/usr/bin/steam-runtime-system-info > %s 2>&1
 %s/steam.cfg
 %s/steamXXXXXX
@@ -4301,12 +4299,12 @@ $steammessages_parental_objects.proto"
 (links.m_pNext->*pMbrLinks).m_pPrev == this
 (links.m_pPrev->*pMbrLinks).m_pNext == this
 (m_unNextAvailableOffset==0) || (m_bIsEncrypted == bEncrypted)
-(merge 
+(merge
 (new content only)
 (no current pipe)
 (none)
 (null)
-(only-if-cached) 
+(only-if-cached)
 (pPrev->*pMbrLinks).m_pNext == pSuccessor
 (pPrev->*pMbrLinks).m_pQueue == pQueue
 (pSuccessor->*pMbrLinks).m_pQueue == pQueue
@@ -4334,8 +4332,8 @@ $steammessages_parental_objects.proto"
 (void *)m_pObject != NULL
 (wMww
 (|YGNk
-) Send error: 
-) failed: 
+) Send error:
+) failed:
 )!)#)?)G)])e)i)o)u)
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ))Kb00\f<ZZ
@@ -5211,9 +5209,9 @@ $steammessages_parental_objects.proto"
 , %1.4lfms
 , CServerPipe not found
 , Type=
-, but was 
+, but was
 , cnonce=
-, fingerprint size is 
+, fingerprint size is
 , inprocess
 , nonce=
 , not just within "
@@ -5286,7 +5284,7 @@ $steammessages_parental_objects.proto"
 ,.CUserAccount_GetFriendInviteTokens_Response"
 ,.CUserAccount_ViewFriendInviteToken_Response"
 ,9JYiy
-,AckPeerRoutes 
+,AckPeerRoutes
 ,AlsoSentViaRelay
 ,CBKE
 ,EZr
@@ -5435,9 +5433,9 @@ $steammessages_parental_objects.proto"
 ,steammessages_unified_base.steamclient.proto"y\n
 ,value:
 - %s ( %s ) = %s\n
-- %s ( %s[%u] ) = 
+- %s ( %s[%u] ) =
 - %s ( char[%u] ) = "%s"\n
-- Item %llu : 
+- Item %llu :
 - callback definition not available\n
 - host "%s" %s, RemmoteClientID %llu, IP %s, %u connections \n
 - host %s, vhost %s, cell %u, %s (#%u), %u connections of %u max\n
@@ -5453,7 +5451,7 @@ $steammessages_parental_objects.proto"
 -------------------- ---------------------------------------- ---------- ---------- ----------\n
 ------------------------%08lx%08lx
 -----------------------------------------
------BEGIN 
+-----BEGIN
 -----BEGIN %s-----\n
 -----BEGIN CERTIFICATE-----
 -----END %s-----\n
@@ -5518,7 +5516,7 @@ $steammessages_parental_objects.proto"
 --force-device-scale-factor=1
 --force-renderer-accessibility
 --full-memory-crash-report
---gameid 
+--gameid
 --gpu-launcher='%s'
 --graphics-pipeline-range
 --ignore-gpu-blocklist
@@ -5871,7 +5869,7 @@ $steammessages_parental_objects.proto"
 -websocketignorecertissues
 .  It will be discarded from the tag.
 .  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
-. Difference of 
+. Difference of
 .%.-.3.7.9.?.W.[.o.y.
 .. P2P system failed to initialize\n
 .. P2P system successfully initialized\n
@@ -7507,11 +7505,11 @@ $steammessages_parental_objects.proto"
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
 /ubuntu12_32
-/ubuntu12_64/disk-free 
+/ubuntu12_64/disk-free
 /usr/bin/
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam-runtime-launch-client --alongside-steam --env-fd %d -- 
+/usr/bin/steam-runtime-launch-client --alongside-steam --env-fd %d --
 /usr/bin/steam_serialnumber.sh
 /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
@@ -7631,15 +7629,15 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-0000000000000000
 0000000000000000000000000000000000000000
+0000000000000000
 00000001
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789
 0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7727,7 +7725,7 @@ $steammessages_parental_objects.proto"
 0x%04x/0x%04x,
 0x%08x
 0x%llX
-0x%llX, 
+0x%llX,
 0x%x 0x%x
 0x2808/0x1015,
 0|t?L
@@ -7783,10 +7781,10 @@ $steammessages_parental_objects.proto"
 100-continue
 100.64.0.0/10
 1000
+1024
 10000
 1000000
 10000000
-1024
 10ByteReader
 10CClientJob
 10CClientUGC
@@ -10013,8 +10011,8 @@ $steammessages_parental_objects.proto"
 14StoreItem_Link
 14TwoFactor_Stub
 14VideoClip_Stub
-15000
 1536
+15000
 15AccountHardware
 15BroadcastClient
 15CBootReserveJob
@@ -11092,11 +11090,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-20000
-2000000
 200M
 2019
 2048
+20000
+2000000
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -12696,9 +12694,9 @@ $steammessages_parental_objects.proto"
 3.CSteamNotification_PreferencesUpdated_Notification
 30!]^JV
 30.0
+3072
 30000
 30500
-3072
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819D300D06092A864886F70D010101050003818B00308187028181009957897BBA6BF554958165AE91669D08C2D35DC2803CC6929C233862D48626877CABA0DAE1DA4186142B546CBB74AD117795EC13EAE021793C2DDD26031B16E0F9DADC9E23F8288E57A2D8593EA7402158B451F1C39632C9987FA6C84DEC057D8B88526B5C629B2CD0C0C5516B15CB1E46415E8ABB9B8FC05546DF2D4AD55F6D020111
 30819D300D06092A864886F70D010101050003818B0030818702818100AAA1281C05F4EFD6207BA11B78BA957C43B3760BD2B8AC8BA664B5BA237FC4475A16B9AABCB94EB72D0B9DEC12B6C113F896A11938CBD33EEEF70BB3DB09B37488FD95FCE9706A75EB6D8060B756CAD693981492404228649BDE9BD63148873BB23CD2894998F34975CA8E5191642E5F437C8A6F6C546A57C7DB859A0189FD35020111
@@ -13935,7 +13933,7 @@ $steammessages_parental_objects.proto"
 3Cn(
 3DES
 3DES(168)
-3HLhx 
+3HLhx
 3Wk1^
 3YH_!
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
@@ -15778,8 +15776,8 @@ $steammessages_parental_objects.proto"
 9kQp
 9rK9J
 9w?O
-: Tried to copy from a message with a different type. to: 
-: Tried to merge from a message with a different type.  to: 
+: Tried to copy from a message with a different type. to:
+: Tried to merge from a message with a different type.  to:
 : failed to parse contents
 : inherit\n
 :%02X
@@ -15983,7 +15981,7 @@ $steammessages_parental_objects.proto"
 >6uu?L
 >6uu?uj
 >= or is NULL
->>>>> Destroying 
+>>>>> Destroying
 >>>>> SHAKE <<<<< >>>>> SHAKE <<<<< >>>>> SHAKE <<<<<
 >EHfOTX
 >I{TrEX
@@ -16274,7 +16272,7 @@ A picture block must contain at least 5 bytes.
 A picture frame must contain at least 5 bytes.
 A poll group handle was used where a listen socket handle was expected
 A private frame must contain at least 2 bytes.
-A protocol message was rejected because it was too big (more than 
+A protocol message was rejected because it was too big (more than
 A reservation already exists
 A summary of all IPC calls will be output once IPC logging has been disabled\n
 A user URL link frame must contain at least 2 bytes.
@@ -16597,7 +16595,7 @@ AbsoluteMouseCoordinates
 Abuse reporter's UGC Image
 AcG\nt
 Accept
-Accept error: 
+Accept error:
 Accept returned true but returned a NULL pipe
 Accept-Encoding
 AcceptConnection
@@ -16610,7 +16608,7 @@ AcceptVoiceCall
 Acceptable OCSP Responses
 Accepted
 Accepted peer connection from %s as %d
-Accepted peer connection from %s at %s (matching IP) 
+Accepted peer connection from %s at %s (matching IP)
 Accepted peer connection from %s at %s (matching token)
 AcceptedForGameRankedByAcceptanceDate
 Access Denied
@@ -16918,11 +16916,11 @@ AppID %s adding PID %d as a tracked process "%s"
 AppID %s no longer tracking PID %d, exit code %d
 AppID %s start in VR mode with '%s' '%s' %d
 AppID %u "%s" : "%s"\n
-AppID %u %s update changed : 
+AppID %u %s update changed :
 AppID %u %sconfig changed : added depots %s
 AppID %u %sconfig changed : removed depots %s
 AppID %u %sconfig changed : updated depots %s
-AppID %u (%s): 
+AppID %u (%s):
 AppID %u : "%s" : %s \n
 AppID %u : preallocation failed for %s (%u MB), retrying without
 AppID %u : requesting %u MB additional space from host for preallocation
@@ -16938,27 +16936,27 @@ AppID %u exited.
 AppID %u failed to downloading manifest %llu (%s)
 AppID %u failed to update ownership ticket (%s)
 AppID %u finished uninstall (%s)
-AppID %u finished update, %u mounted depots (BuildID %u) : 
-AppID %u has no changes, %u active: 
+AppID %u finished update, %u mounted depots (BuildID %u) :
+AppID %u has no changes, %u active:
 AppID %u in Timed Trial mode : %u + %u seconds played, %u seconds allowed, %u seconds left\n
 AppID %u may use compat tool %u "%s" via launch options - marking as dependency.
 AppID %u moving from "%s" to "%s"
 AppID %u no local content server for beta "%s", falling back to public
 AppID %u not in Timed Trial mode\n
-AppID %u offline : soft shutdown after %u seconds offline 
-AppID %u preallocated %u files (%llu MB) 
-AppID %u preallocated %u files (%llu MB, %llu MB as sparse files) 
+AppID %u offline : soft shutdown after %u seconds offline
+AppID %u preallocated %u files (%llu MB)
+AppID %u preallocated %u files (%llu MB, %llu MB as sparse files)
 AppID %u recovering files from folder "%s"
 AppID %u reset error : %s
 AppID %u reset playtime : seconds allowed %u, seconds played %u
 AppID %u restoring backups from folder "%s"
 AppID %u resuming download of previous manifest (%llu) for depot ID %u
-AppID %u scheduler finished : %s (result %s, state 0x%x) 
+AppID %u scheduler finished : %s (result %s, state 0x%x)
 AppID %u scheduler update : %s, not played for %u seconds, update disabled for %u seconds
 AppID %u scheduler update : updates disabled by app; blocking attempt %s
 AppID %u signature verification failed for file "%s".
 AppID %u starting commit from "%s" to "%s" : %u updated, %u moved, %u deleted files
-AppID %u state changed : 
+AppID %u state changed :
 AppID %u status error : %s
 AppID %u status update : seconds allowed %u, seconds played %u
 AppID %u switched staging folder to "%s" (%llu bytes available)
@@ -16971,11 +16969,11 @@ AppID %u update playtime : seconds reported %u, seconds allowed %u, seconds play
 AppID %u update prefetch canceled : %s (%s)
 AppID %u update prefetch finished : %llu bytes to download, %llu bytes to stage
 AppID %u update started : download %lld/%lld, store %lld/%lld, reuse %lld/%lld, delta %lld/%lld, stage %lld/%lld %s
-AppID %u, DLC %u : 
+AppID %u, DLC %u :
 AppID : %u, change number : %u/%u, last change : %s \n
 AppID mismatch in text buffer for app %u
 AppIDToRedirect
-AppIDs . . : 
+AppIDs . . :
 AppId_t
 AppInfo
 AppInfoCache_WriteToDisk
@@ -17016,7 +17014,7 @@ ApproveFeatureAccess
 ApprovePlaytime
 Approved Friends
 Apps
-Apps changed: 
+Apps changed:
 Apps changed: force all
 April
 Arabic
@@ -17054,8 +17052,8 @@ AsyncFileIOForceGenericIO
 AsyncFileIOMaxPendingWin32
 AsyncFileIOReadHandleCache
 AsyncFileIOWriteHandleCache
-AsyncHttpsProxySocket << 
-AsyncHttpsProxySocket >> 
+AsyncHttpsProxySocket <<
+AsyncHttpsProxySocket >>
 AsyncHttpsProxySocket::Connect(
 AsyncHttpsProxySocket::OnCloseEvent(
 AsyncHttpsProxySocket::OnConnectEvent
@@ -17703,7 +17701,7 @@ Bad oscompare value for app %u
 Bad packet received: EMsg would be %u, next 12 bytes: %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X\n
 Bad packet received: EMsg would be %u\n
 Bad packet size: %d
-Bad pkt 0x%02x from %s: 
+Bad pkt 0x%02x from %s:
 Bad private key size returned by callback
 Bad response
 Bad setting in sources - at time of writing this func always returned true\n
@@ -17734,7 +17732,7 @@ Banned
 Base::BInitConnection
 BaseLanguages
 BasePrice
-Basic 
+Basic
 Basic %s
 Basic OCSP Response
 Basis Type: %s\n
@@ -17749,7 +17747,7 @@ BeginAppUploadBatch
 BeginAsyncRequestFakeIP
 BeginAsyncRequestFakeIP - request already active.\n
 BeginAuthSession
-BeginAuthSession called with invalid gameid 
+BeginAuthSession called with invalid gameid
 BeginAuthSessionViaCredentials
 BeginAuthSessionViaCredentials failed, %d/%d (%s)
 BeginAuthSessionViaQR
@@ -17780,7 +17778,7 @@ Billing agreement cancelled
 Billing name is invalid because it looks like it contains credit card data
 BillingCurrency
 BillingTotal
-Bind error: 
+Bind error:
 Binding "%s" referenced invalid set #%s
 Binding address has bad family
 Binding error response:
@@ -17838,7 +17836,7 @@ Bopomofo
 Borrowed
 Bosnian
 Bounce
-Bound on 
+Bound on
 Bound on <IPV6>:
 Bradesco Online
 Brahmi
@@ -17959,7 +17957,7 @@ But we still have a valid cert, continuing with that one\n
 Button
 BwG4P
 Bx\r9
-Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of 
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of
 BytesDownloaded
 BytesStaged
 BytesToDownload
@@ -17982,7 +17980,7 @@ CA key %llu (or an antecedent) expired %lld seconds ago!
 CA key %llu is not known
 CA key %llu is not known to us
 CA key %llu is not trusted.  %s
-CA key %llu not trusted.  
+CA key %llu not trusted.
 CA signature digest algorithm too weak
 CACompromise
 CAM::BConvertDeprecatedLogonMsg
@@ -18964,239 +18962,239 @@ CGlibContextManager::RunFrame
 CHACHA20
 CHACHA20/POLY1305(256)
 CHANGE_PRESET
-CHECK failed: !InRealOneof(field): 
-CHECK failed: !IsDefault(default_value): 
-CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1): 
-CHECK failed: !checkpoints_.empty(): 
-CHECK failed: !descriptor_: 
-CHECK failed: !ext->is_repeated: 
-CHECK failed: !extension->is_repeated: 
-CHECK failed: !failed_: 
-CHECK failed: !field->options().weak(): 
-CHECK failed: !fields_.empty(): 
-CHECK failed: !file->finished_building_: 
-CHECK failed: !file_: 
-CHECK failed: !had_error_: 
-CHECK failed: !is_closed_: 
-CHECK failed: !name_: 
-CHECK failed: !once_: 
-CHECK failed: !oneof_descriptor->is_synthetic(): 
-CHECK failed: !out.HadError(): 
-CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field): 
-CHECK failed: !tagged_ptr_.IsTagged(): 
-CHECK failed: !tree->empty(): 
-CHECK failed: !value || options_ != nullptr: 
-CHECK failed: !value || source_code_info_ != nullptr: 
-CHECK failed: (&from) != (this): 
-CHECK failed: (&from) != (to): 
-CHECK failed: (&other) != (this): 
-CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL): 
-CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED): 
-CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD): 
-CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD): 
-CHECK failed: (*buffer) == (first_byte): 
-CHECK failed: (0) != (n): 
-CHECK failed: (0) <= (pos): 
-CHECK failed: (0) == (BufferSize()): 
-CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()): 
-CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()): 
-CHECK failed: (backup_bytes_) == (0): 
-CHECK failed: (bucket_index_ & 1) == (0u): 
-CHECK failed: (buffer[0]) >= (128): 
-CHECK failed: (buffer_size) >= (0): 
-CHECK failed: (buffer_used_) == (0): 
-CHECK failed: (buffer_used_) == (buffer_size_): 
-CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization): 
-CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization): 
-CHECK failed: (calc_escaped_size) == (escaped_len): 
-CHECK failed: (count) <= (buffer_used_): 
-CHECK failed: (count) <= (kMaxLength): 
-CHECK failed: (count) <= (last_returned_size_): 
-CHECK failed: (count) == (tree->size()): 
-CHECK failed: (count) >= (0): 
-CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32): 
-CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64): 
-CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32): 
-CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64): 
-CHECK failed: (current_size_) > (0): 
-CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()): 
-CHECK failed: (digits) < (100): 
-CHECK failed: (extension->is_packed) == (other_extension.is_packed): 
-CHECK failed: (extension->is_packed) == (packed): 
-CHECK failed: (extension->type) == (other_extension.type): 
-CHECK failed: (field->message_type()) == (desc): 
-CHECK failed: (field->options().ctype()) == (ctype): 
-CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES): 
-CHECK failed: (field_count()) == (2): 
-CHECK failed: (final_byte_count) < (target_byte_count): 
-CHECK failed: (first_byte & 0x80) == (0x80): 
-CHECK failed: (first_byte_or_zero) != (0): 
-CHECK failed: (first_byte_or_zero) == (buffer_[0]): 
-CHECK failed: (from.GetDescriptor()) == (descriptor): 
-CHECK failed: (has_bit_index) != (~0u): 
-CHECK failed: (index) < (current_size_): 
-CHECK failed: (index) >= (0): 
-CHECK failed: (internal::AlignUpTo8(n)) == (n): 
-CHECK failed: (it.m_) == (this): 
-CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size): 
-CHECK failed: (last_returned_size_) > (0): 
-CHECK failed: (len) <= (dest_len): 
-CHECK failed: (len) >= (0): 
-CHECK failed: (limit_) >= (ptr_): 
-CHECK failed: (message1->GetReflection()) == (this): 
-CHECK failed: (message2->GetReflection()) == (this): 
-CHECK failed: (message_type) == (field->message_type()): 
-CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize): 
-CHECK failed: (n & (n - 1)) == (0): 
-CHECK failed: (n) >= (0): 
-CHECK failed: (new_num_buckets) >= (kMinTableSize): 
-CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit): 
-CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
-CHECK failed: (out) == (begin + result->size()): 
-CHECK failed: (out) == (begin + result.size()): 
-CHECK failed: (pos) <= (x.length_): 
-CHECK failed: (recursion_budget_) < (recursion_limit_): 
-CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u): 
-CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)): 
-CHECK failed: (size) <= (6): 
-CHECK failed: (size) <= (static_cast<size_t>(0x7fffffff)): 
-CHECK failed: (size) > (0): 
-CHECK failed: (static_cast<int64>(new_size)) <= (static_cast<int64>((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0]))): 
-CHECK failed: (static_cast<size_t>(count)) <= (target_->size()): 
-CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)): 
-CHECK failed: (table_[b]) == (table_[b ^ 1]): 
-CHECK failed: (target - output->data()) == (output->size()): 
-CHECK failed: (temp[0]) == ('1'): 
-CHECK failed: (temp[size - 1]) == ('5'): 
-CHECK failed: (to->GetDescriptor()) == (descriptor): 
-CHECK failed: (total_size_ - current_size_) >= (n): 
-CHECK failed: (total_size_) > (0): 
-CHECK failed: (type) != (WireFormatLite::TYPE_ENUM): 
-CHECK failed: (type) != (WireFormatLite::TYPE_GROUP): 
-CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE): 
-CHECK failed: (type) == (WireFormatLite::TYPE_ENUM): 
-CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((c).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (uintptr_t((d).data() - (*result).data())) > (uintptr_t((*result).size())): 
-CHECK failed: (v.size()) <= (kStringPrintfVectorMaxArgs): 
-CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)): 
-CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size): 
-CHECK failed: GetArena() == NULL: 
-CHECK failed: GetArena() == nullptr: 
-CHECK failed: GetArena() == other->GetArena(): 
-CHECK failed: HasExtensionSet(): 
-CHECK failed: HasHasbits(): 
-CHECK failed: IsDefault(default_value): 
-CHECK failed: IsInitialized(): 
-CHECK failed: IsMapValid() && other.IsMapValid(): 
-CHECK failed: TableEntryIsNonEmptyList(b): 
-CHECK failed: TableEntryIsTree(b): 
-CHECK failed: a.type() == b.type(): 
-CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field: 
-CHECK failed: arena != nullptr: 
-CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL: 
-CHECK failed: builder_: 
-CHECK failed: checkpoints_.empty(): 
-CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE: 
-CHECK failed: ctx.LastTag() != 1: 
-CHECK failed: cur_: 
-CHECK failed: desc_proto.has_name(): 
-CHECK failed: descriptor: 
-CHECK failed: dest: 
-CHECK failed: dynamic.get() != nullptr: 
-CHECK failed: end >= ptr: 
-CHECK failed: enum_type_->value_count(): 
-CHECK failed: errors == nullptr: 
-CHECK failed: extension != NULL: 
-CHECK failed: extension->is_repeated: 
-CHECK failed: fallback_database_ == nullptr: 
-CHECK failed: field != nullptr: 
-CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32): 
-CHECK failed: field->is_repeated() || (index == -1): 
-CHECK failed: field->is_repeated(): 
-CHECK failed: file != nullptr: 
-CHECK failed: file && file->pool_: 
-CHECK failed: file()->finished_building_ == true: 
-CHECK failed: file->pool_->lazily_build_dependencies_: 
-CHECK failed: file_->finished_building_: 
-CHECK failed: find(node->kv.first) == end(): 
-CHECK failed: finished_building_ == true: 
-CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_: 
-CHECK failed: has_default_value(): 
-CHECK failed: i >= 0: 
-CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr: 
-CHECK failed: is_prototype(): 
-CHECK failed: is_repeated: 
-CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes: 
-CHECK failed: limit_ > 0: 
-CHECK failed: limit_ > kSlopBytes: 
-CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_): 
-CHECK failed: limit_end_ == buffer_end_: 
-CHECK failed: m1->GetArena() != m2_arena: 
-CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr: 
-CHECK failed: message_arena != submessage_arena: 
-CHECK failed: mutex_ == nullptr: 
-CHECK failed: n <= size: 
-CHECK failed: n >= kMinTableSize: 
-CHECK failed: node_ != nullptr && m_ != nullptr: 
-CHECK failed: options_ != nullptr: 
-CHECK failed: options_descriptor: 
-CHECK failed: original_uninterpreted_options_field != nullptr: 
-CHECK failed: other->GetArena() != GetArena(): 
-CHECK failed: out_location != nullptr: 
-CHECK failed: output->message_info.prototype != nullptr: 
-CHECK failed: output: 
-CHECK failed: overrun != limit_: 
-CHECK failed: overrun < limit_: 
-CHECK failed: overrun <= kSlopBytes: 
-CHECK failed: overrun >= 0 && overrun <= kSlopBytes: 
-CHECK failed: overrun >= 0: 
-CHECK failed: owning_arena == nullptr: 
-CHECK failed: prototype != NULL: 
-CHECK failed: ptr < end_: 
-CHECK failed: ptr <= buffer_end_ + kSlopBytes: 
-CHECK failed: ptr <= end_ + kSlopBytes: 
-CHECK failed: reflection: 
-CHECK failed: result != nullptr: 
-CHECK failed: s != nullptr: 
-CHECK failed: s >= 0: 
-CHECK failed: schema_.HasHasbits(): 
-CHECK failed: size > 0: 
-CHECK failed: size > chunk_size: 
-CHECK failed: size_ == 0: 
-CHECK failed: size_ > kSlopBytes: 
-CHECK failed: source_code_info_ != nullptr: 
-CHECK failed: submessage->GetArena() == submessage_arena: 
-CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0: 
-CHECK failed: tagged_ptr_.UnsafeGet() != nullptr: 
-CHECK failed: target + size == res: 
-CHECK failed: target_ != NULL: 
-CHECK failed: this != other: 
-CHECK failed: this == other_mutator: 
-CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP: 
-CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE: 
-CHECK failed: uninterpreted_options_field != nullptr: 
-CHECK failed: value != nullptr: 
-CHECK failed: z.first != NULL: 
+CHECK failed: !InRealOneof(field):
+CHECK failed: !IsDefault(default_value):
+CHECK failed: !TableEntryIsTree(b) && !TableEntryIsTree(b ^ 1):
+CHECK failed: !checkpoints_.empty():
+CHECK failed: !descriptor_:
+CHECK failed: !ext->is_repeated:
+CHECK failed: !extension->is_repeated:
+CHECK failed: !failed_:
+CHECK failed: !field->options().weak():
+CHECK failed: !fields_.empty():
+CHECK failed: !file->finished_building_:
+CHECK failed: !file_:
+CHECK failed: !had_error_:
+CHECK failed: !is_closed_:
+CHECK failed: !name_:
+CHECK failed: !once_:
+CHECK failed: !oneof_descriptor->is_synthetic():
+CHECK failed: !out.HadError():
+CHECK failed: !schema_.InRealOneof(field) || HasOneofField(message, field):
+CHECK failed: !tagged_ptr_.IsTagged():
+CHECK failed: !tree->empty():
+CHECK failed: !value || options_ != nullptr:
+CHECK failed: !value || source_code_info_ != nullptr:
+CHECK failed: (&from) != (this):
+CHECK failed: (&from) != (to):
+CHECK failed: (&other) != (this):
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED):
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (OPTIONAL_FIELD):
+CHECK failed: ((*extension).is_repeated ? REPEATED_FIELD : OPTIONAL_FIELD) == (REPEATED_FIELD):
+CHECK failed: (*buffer) == (first_byte):
+CHECK failed: (0) != (n):
+CHECK failed: (0) <= (pos):
+CHECK failed: (0) == (BufferSize()):
+CHECK failed: (FieldDescriptor::TypeToCppType(field->type())) == (value.type()):
+CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: (backup_bytes_) == (0):
+CHECK failed: (bucket_index_ & 1) == (0u):
+CHECK failed: (buffer[0]) >= (128):
+CHECK failed: (buffer_size) >= (0):
+CHECK failed: (buffer_used_) == (0):
+CHECK failed: (buffer_used_) == (buffer_size_):
+CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization):
+CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization):
+CHECK failed: (calc_escaped_size) == (escaped_len):
+CHECK failed: (count) <= (buffer_used_):
+CHECK failed: (count) <= (kMaxLength):
+CHECK failed: (count) <= (last_returned_size_):
+CHECK failed: (count) == (tree->size()):
+CHECK failed: (count) >= (0):
+CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64):
+CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64):
+CHECK failed: (current_size_) > (0):
+CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
+CHECK failed: (digits) < (100):
+CHECK failed: (extension->is_packed) == (other_extension.is_packed):
+CHECK failed: (extension->is_packed) == (packed):
+CHECK failed: (extension->type) == (other_extension.type):
+CHECK failed: (field->message_type()) == (desc):
+CHECK failed: (field->options().ctype()) == (ctype):
+CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES):
+CHECK failed: (field_count()) == (2):
+CHECK failed: (final_byte_count) < (target_byte_count):
+CHECK failed: (first_byte & 0x80) == (0x80):
+CHECK failed: (first_byte_or_zero) != (0):
+CHECK failed: (first_byte_or_zero) == (buffer_[0]):
+CHECK failed: (from.GetDescriptor()) == (descriptor):
+CHECK failed: (has_bit_index) != (~0u):
+CHECK failed: (index) < (current_size_):
+CHECK failed: (index) >= (0):
+CHECK failed: (internal::AlignUpTo8(n)) == (n):
+CHECK failed: (it.m_) == (this):
+CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size):
+CHECK failed: (last_returned_size_) > (0):
+CHECK failed: (len) <= (dest_len):
+CHECK failed: (len) >= (0):
+CHECK failed: (limit_) >= (ptr_):
+CHECK failed: (message1->GetReflection()) == (this):
+CHECK failed: (message2->GetReflection()) == (this):
+CHECK failed: (message_type) == (field->message_type()):
+CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize):
+CHECK failed: (n & (n - 1)) == (0):
+CHECK failed: (n) >= (0):
+CHECK failed: (new_num_buckets) >= (kMinTableSize):
+CHECK failed: (new_size) > (kRepeatedFieldUpperClampLimit):
+CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP):
+CHECK failed: (out) == (begin + result->size()):
+CHECK failed: (out) == (begin + result.size()):
+CHECK failed: (pos) <= (x.length_):
+CHECK failed: (recursion_budget_) < (recursion_limit_):
+CHECK failed: (reinterpret_cast<uintptr_t>(mem) & 7) == (0u):
+CHECK failed: (result.bucket_index_) == (b & ~static_cast<size_type>(1)):
+CHECK failed: (size) <= (6):
+CHECK failed: (size) <= (static_cast<size_t>(0x7fffffff)):
+CHECK failed: (size) > (0):
+CHECK failed: (static_cast<int64>(new_size)) <= (static_cast<int64>((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(old_rep->elements[0]))):
+CHECK failed: (static_cast<size_t>(count)) <= (target_->size()):
+CHECK failed: (static_cast<size_t>(new_size)) <= ((std::numeric_limits<size_t>::max() - kRepHeaderSize) / sizeof(Element)):
+CHECK failed: (table_[b]) == (table_[b ^ 1]):
+CHECK failed: (target - output->data()) == (output->size()):
+CHECK failed: (temp[0]) == ('1'):
+CHECK failed: (temp[size - 1]) == ('5'):
+CHECK failed: (to->GetDescriptor()) == (descriptor):
+CHECK failed: (total_size_ - current_size_) >= (n):
+CHECK failed: (total_size_) > (0):
+CHECK failed: (type) != (WireFormatLite::TYPE_ENUM):
+CHECK failed: (type) != (WireFormatLite::TYPE_GROUP):
+CHECK failed: (type) != (WireFormatLite::TYPE_MESSAGE):
+CHECK failed: (type) == (WireFormatLite::TYPE_ENUM):
+CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (uintptr_t((c).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (uintptr_t((d).data() - (*result).data())) > (uintptr_t((*result).size())):
+CHECK failed: (v.size()) <= (kStringPrintfVectorMaxArgs):
+CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)):
+CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size):
+CHECK failed: GetArena() == NULL:
+CHECK failed: GetArena() == nullptr:
+CHECK failed: GetArena() == other->GetArena():
+CHECK failed: HasExtensionSet():
+CHECK failed: HasHasbits():
+CHECK failed: IsDefault(default_value):
+CHECK failed: IsInitialized():
+CHECK failed: IsMapValid() && other.IsMapValid():
+CHECK failed: TableEntryIsNonEmptyList(b):
+CHECK failed: TableEntryIsTree(b):
+CHECK failed: a.type() == b.type():
+CHECK failed: allow_unknown_field_ || allow_unknown_extension_ || reserved_field:
+CHECK failed: arena != nullptr:
+CHECK failed: backup_bytes_ == 0 && buffer_.get() != NULL:
+CHECK failed: builder_:
+CHECK failed: checkpoints_.empty():
+CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE:
+CHECK failed: ctx.LastTag() != 1:
+CHECK failed: cur_:
+CHECK failed: desc_proto.has_name():
+CHECK failed: descriptor:
+CHECK failed: dest:
+CHECK failed: dynamic.get() != nullptr:
+CHECK failed: end >= ptr:
+CHECK failed: enum_type_->value_count():
+CHECK failed: errors == nullptr:
+CHECK failed: extension != NULL:
+CHECK failed: extension->is_repeated:
+CHECK failed: fallback_database_ == nullptr:
+CHECK failed: field != nullptr:
+CHECK failed: field->cpp_type() == cpp_type || (field->cpp_type() == FieldDescriptor::CPPTYPE_ENUM && cpp_type == FieldDescriptor::CPPTYPE_INT32):
+CHECK failed: field->is_repeated() || (index == -1):
+CHECK failed: field->is_repeated():
+CHECK failed: file != nullptr:
+CHECK failed: file && file->pool_:
+CHECK failed: file()->finished_building_ == true:
+CHECK failed: file->pool_->lazily_build_dependencies_:
+CHECK failed: file_->finished_building_:
+CHECK failed: find(node->kv.first) == end():
+CHECK failed: finished_building_ == true:
+CHECK failed: had_errors_ || recursion_limit_ == initial_recursion_limit_:
+CHECK failed: has_default_value():
+CHECK failed: i >= 0:
+CHECK failed: index_of_first_non_null_ == num_buckets_ || table_[index_of_first_non_null_] != nullptr:
+CHECK failed: is_prototype():
+CHECK failed: is_repeated:
+CHECK failed: limit >= 0 && limit <= INT_MAX - kSlopBytes:
+CHECK failed: limit_ > 0:
+CHECK failed: limit_ > kSlopBytes:
+CHECK failed: limit_end_ == buffer_end_ + (std::min)(0, limit_):
+CHECK failed: limit_end_ == buffer_end_:
+CHECK failed: m1->GetArena() != m2_arena:
+CHECK failed: m_->index_of_first_non_null_ == m_->num_buckets_ || m_->table_[m_->index_of_first_non_null_] != nullptr:
+CHECK failed: message_arena != submessage_arena:
+CHECK failed: mutex_ == nullptr:
+CHECK failed: n <= size:
+CHECK failed: n >= kMinTableSize:
+CHECK failed: node_ != nullptr && m_ != nullptr:
+CHECK failed: options_ != nullptr:
+CHECK failed: options_descriptor:
+CHECK failed: original_uninterpreted_options_field != nullptr:
+CHECK failed: other->GetArena() != GetArena():
+CHECK failed: out_location != nullptr:
+CHECK failed: output->message_info.prototype != nullptr:
+CHECK failed: output:
+CHECK failed: overrun != limit_:
+CHECK failed: overrun < limit_:
+CHECK failed: overrun <= kSlopBytes:
+CHECK failed: overrun >= 0 && overrun <= kSlopBytes:
+CHECK failed: overrun >= 0:
+CHECK failed: owning_arena == nullptr:
+CHECK failed: prototype != NULL:
+CHECK failed: ptr < end_:
+CHECK failed: ptr <= buffer_end_ + kSlopBytes:
+CHECK failed: ptr <= end_ + kSlopBytes:
+CHECK failed: reflection:
+CHECK failed: result != nullptr:
+CHECK failed: s != nullptr:
+CHECK failed: s >= 0:
+CHECK failed: schema_.HasHasbits():
+CHECK failed: size > 0:
+CHECK failed: size > chunk_size:
+CHECK failed: size_ == 0:
+CHECK failed: size_ > kSlopBytes:
+CHECK failed: source_code_info_ != nullptr:
+CHECK failed: submessage->GetArena() == submessage_arena:
+CHECK failed: table_[b] == table_[b + 1] && (b & 1) == 0:
+CHECK failed: tagged_ptr_.UnsafeGet() != nullptr:
+CHECK failed: target + size == res:
+CHECK failed: target_ != NULL:
+CHECK failed: this != other:
+CHECK failed: this == other_mutator:
+CHECK failed: type == WireFormatLite::TYPE_MESSAGE || type == WireFormatLite::TYPE_GROUP:
+CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE:
+CHECK failed: uninterpreted_options_field != nullptr:
+CHECK failed: value != nullptr:
+CHECK failed: z.first != NULL:
 CHIDDeviceInfo
 CHIDDeviceInputReport
 CHIDDeviceListSDL(): Couldn't load %s, not enumerating devices\n
@@ -20106,7 +20104,6 @@ CONF_load_fp
 CONF_parse_list
 CONNE
 CONNECT
-CONNECT 
 CONNECT %s HTTP/1.1\r\nHost: %s\r\n\r\n
 CONNECT_ERROR
 CONTENTGROUP
@@ -21164,7 +21161,7 @@ Camellia_encrypt
 Camellia_set_key
 Can only initiate call while in waiting mode\n
 Can only initiate connection to global FakeIP
-Can't 
+Can't
 Can't AbortConnection as it deletes inside a HTTP2 callback from nghttp2, doing async - but fix caller
 Can't BackUp() after failed Next().
 Can't authorize, RSA encryption failed\n
@@ -21186,7 +21183,7 @@ Can't perform CEG wrap; couldn't add %s to ZIP file\n
 Can't perform CEG wrap; couldn't create ZIP file\n
 Can't perform CEG wrap; couldn't finalize ZIP file\n
 Can't perform CEG wrap; couldn't get temp filename\n
-Can't print proto content: proto type 
+Can't print proto content: proto type
 Can't query FakeIP server %s (query type %d), we don't know the AppID\n
 Can't reach
 Can't read enough bytes for cache file footer, skipping.
@@ -21218,10 +21215,10 @@ CanSuspendThenHibernate
 Canadian_Aboriginal
 Cancel
 CancelAuthTicket
-CancelAuthTicket called on invalid ticket 
+CancelAuthTicket called on invalid ticket
 CancelAuthTicket called on invalid ticket\n
-CancelAuthTicket called on nonexistent ticket 
-CancelAuthTicket called with invalid gameid 
+CancelAuthTicket called on nonexistent ticket
+CancelAuthTicket called with invalid gameid
 CancelBackup
 CancelBatch
 CancelCurrentAndPendingOperations
@@ -21296,7 +21293,7 @@ Cannot ship goods internationally
 Cannot ship to APO/FPO
 Cannot ship to PO Box
 Cannot ship to country because shipping is not defined
-Cannot skip field value, unexpected token: 
+Cannot skip field value, unexpected token:
 Cannot specify LocalVirtualPort when connecting by FakeIP
 Cannot talk to any relays. Check Internet connection
 Cannot transcode due to multiple use of quantization table %d
@@ -21378,7 +21375,7 @@ Cert request returned invalid private key
 Cert request returned invalid public key
 Cert request returned invalid signature
 Cert request returned public/private key mismatch
-Cert signed by CA 
+Cert signed by CA
 Cert store does not contain chain authorizing public key ID%llu.
 Cert was issued to %s, not %s
 Cert with no identity must be scoped to PoPID.
@@ -21429,7 +21426,7 @@ Chat job : received 500 (Internal Server Error)
 Chat job : received status code %u
 Chat job : request timeout
 Chat job : start listing to "%s"
-Chat job : stopped (%u failed requests) 
+Chat job : stopped (%u failed requests)
 ChatActionResult
 ChatCreate
 ChatEnter
@@ -21675,7 +21672,7 @@ CmNQW-j/t
 Code Signing
 Code=
 CodeSignature
-Cofactor: 
+Cofactor:
 CollectAllThreadProcessList opendir /proc failed
 CollectAllThreadProcessList readdir /proc failed after %d entries errno %d %s
 Collection
@@ -21723,7 +21720,7 @@ CommunityLinkFilter.GetLinkFilterHashes#1
 CommunityLinkFilter.GetLinkFilterListVersion#1
 CommunityPreferencesUpdated_t
 CompareConnectionCandidates
-Compat tool %d at build ID %d has computed cached buckets: 
+Compat tool %d at build ID %d has computed cached buckets:
 Compat tool failed
 CompatAudioMediaV%u
 CompatTool_LauncherService
@@ -21808,9 +21805,9 @@ Connected to remote client: 0x%x
 Connecting
 Connecting . . .
 Connecting P2P socket to self (%s).  Traffic will be relayed over the network
-Connecting from 
-Connecting to %s %s PSK: 
-Connecting to relay via 
+Connecting from
+Connecting to %s %s PSK:
+Connecting to relay via
 Connecting to remote: 0x%x %s
 Connecting to site license mgr: 0x%x %s
 Connection
@@ -21954,7 +21951,7 @@ Controller slots reset\n
 Controller uses V1 HID protocol via BLE\n
 Controller uses V1 HID protocol via Dongle\n
 Controller uses V1 HID protocol via USB\n
-Controller uses V1 HID protocol\n 
+Controller uses V1 HID protocol\n
 Controller uses V2 HID protocol\n
 Controller using HIDAPI driver, vid=0x%.4x, pid=0x%.4x\n
 ControllerActiveConfigMsg
@@ -22008,13 +22005,13 @@ Corrupted Stats block from Client: MsgClientStoreUserStats_Deprecated_t
 Corrupted or unrecoverable data error
 Corruption detected in '%s', clean bytes tally reset to 0
 Could not bind to %s.  %s\n
-Could not create an instance of 
+Could not create an instance of
 Could not create stats session
 Could not find job for received '%s' (%d).  Will attempt to spawn a new job.\n
 Could not find shader cache directory for AppID %u!
 Could not find type "
 Could not lookup user's account name.
-Could not open file 
+Could not open file
 Could not read existing registry file.
 Could not read microtransaction info from message
 Could not read wallet info from message
@@ -22144,7 +22141,6 @@ CreateTransports
 CreateUnauthenticatedUserConnection
 CreateWebRTCICESession
 Created
-Created 
 Created Fake IP session for outbound communications to %s\n
 Created OPUS PLC voice decoder\n
 Created OPUS PLC voice encoder\n
@@ -22564,7 +22560,7 @@ Dependency unavailable
 Deploy
 Deposit is not required to purchase
 Depot
-Depot %u has %llu MB additional downloads due to single file mode 
+Depot %u has %llu MB additional downloads due to single file mode
 Depot %u unavailable on peer content server
 Depot Build
 Depot Chunk location unknown (unreachable?)
@@ -22787,8 +22783,8 @@ Don't know Steam universe.  Order of init bug?
 Don't know how to check filesystem type on POSIX!
 Don't know our AppID.  Order of init bug?
 Don't know the public key for unknown universe %d\n
-Don't lookup extension types if they aren't present (1). 
-Don't lookup extension types if they aren't present (2). 
+Don't lookup extension types if they aren't present (1).
+Don't lookup extension types if they aren't present (2).
 Don't post callbacks to WinUI
 Done with merging potential NVIDIA fragments.
 Done with merging whitelist(s), merging replay cache fragments in %s.
@@ -23581,7 +23577,7 @@ Empty/corrupt bucket depot? AppID %u.
 EmptyFragments
 EmptySteamDepot
 Enable
-Enable (Pseudo) One Euro Filter to internal gyro quaternion. This reduces low level sensor noise and hand shake. 
+Enable (Pseudo) One Euro Filter to internal gyro quaternion. This reduces low level sensor noise and hand shake.
 Enable GPU debugging in Chromium, costs a glGetError() call after every command
 Enable HTTP/2 connections on Linux clients
 Enable HTTP/2 connections on Windows clients
@@ -23656,8 +23652,8 @@ End-to-end connection: connecting\n
 End-to-end connection: performing rendezvous\n
 End-to-end ping sample
 EndAuthSession
-EndAuthSession called with invalid gameid 
-EndAuthSession called with invalid steamid 
+EndAuthSession called with invalid gameid
+EndAuthSession called with invalid steamid
 EndBroadcastSession
 EndBroadcastSessionResult_t
 EndChatRoomVoiceSpeaking
@@ -23684,7 +23680,7 @@ Enter
 Enter PEM pass phrase:
 Enterprises
 Entry
-Enum name 
+Enum name
 Enum type "
 Enum value "$0" is reserved multiple times.
 Enum value "$0" is reserved.
@@ -23735,7 +23731,7 @@ Error loading %s: patch file mismatch
 Error loading %s: staging mismatch
 Error loading %s: wrong marker
 Error on Release(): Not the lock owner\n
-Error parsing text-format 
+Error parsing text-format
 Error pipe( stdin ) for %s\n
 Error pipe( stdout ) for %s\n
 Error rebooting controller after firmware upgrade.
@@ -23887,8 +23883,8 @@ Existing cancelled license
 Existing symmetric connection [%s]
 Exiting workitem thread\n
 Exito
-Expanded map entry type 
-Expect a decimal number, got: 
+Expanded map entry type
+Expect a decimal number, got:
 Expectation Failed
 Expected "
 Expected %lld but got %lld!
@@ -23899,38 +23895,38 @@ Expected '}' or ',' but found '%c' (0x%02x) instead
 Expected connection attempt scheduled
 Expected connection state %d/%d but got %d
 Expected digit after '-' in JSON number, found 0x%02x instead
-Expected double, got: 
+Expected double, got:
 Expected eight hex digits up to 10ffff for \U escape sequence
 Expected four hex digits for \u escape sequence.
 Expected hex digits for escape sequence.
-Expected identifier, got: 
-Expected integer or identifier, got: 
-Expected integer, got: 
+Expected identifier, got:
+Expected integer or identifier, got:
+Expected integer, got:
 Expected k_EConnectionStateConnecting but got %d - shouldn't call ConnectFailed?
 Expected m_eConnectionStateLast == k_EConnectionStateConnectStarting but it was %d
-Expected string, got: 
+Expected string, got:
 Expecting '
 Expecting ack for wire seq 0x%4x, with two different send timestamps %llx and %llx
-Expecting: 
+Expecting:
 Experimental
 Expired
 Expired Login Auth Code
 Expired card
 Expired embedded client token for %s\n
 Expires
-Expires. . : 
+Expires. . :
 Expiring packet gap, which had pending NACK
 Explicit default values are not allowed in proto3.
 Explorer Windows MR HMD
 Exponent:
 ExportClipPreview
-Extended Module: 
+Extended Module:
 Extended OCSP Status
 Extension
 Extension "
 Extension Request
-Extension conflicts with extension already in database: extend 
-Extension factory's GetPrototype() returned NULL for extension: 
+Extension conflicts with extension already in database: extend
+Extension factory's GetPrototype() returned NULL for extension:
 Extension not found.
 Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
 Extension number $0 has already been used in "$1" by extension "$2".
@@ -24097,7 +24093,7 @@ FactoryReset
 Failed
 Failed %s - index %u out of bounds. Only %u results!\n
 Failed %s - no request with handle %llu!\n
-Failed After %d Samples: 
+Failed After %d Samples:
 Failed Dependency
 Failed adding library folder "%s" : not an absolute path
 Failed adding library folder "%s" : same path already mounted
@@ -24129,8 +24125,8 @@ Failed downloading %u manifests
 Failed downloading manifest file "%s" for local CS
 Failed downloading patch file depot_%u_%llu_%llu.delta from %s (%s)
 Failed file request %s %s: GLE: %X
-Failed finding info for chunk "%s" 
-Failed finding source file for chunk "%s" 
+Failed finding info for chunk "%s"
+Failed finding source file for chunk "%s"
 Failed finishing upload (%s, transport error %u) %s
 Failed flushing write-aside store '%s' to path '%s'
 Failed in DeserializeResult because the appid does not match( result %u != %u )
@@ -24144,7 +24140,7 @@ Failed on chmod action (appID %d)
 Failed on defaults action (appID %d)
 Failed on symlink action (appID %d)
 Failed parsing ProtoBuf body %s out of message: %s(%d)
-Failed posting read file for chunk "%s" 
+Failed posting read file for chunk "%s"
 Failed request %s
 Failed running GameID %s: "%s" (OS Error %u)
 Failed running app %u (entry for launch option %u not found)
@@ -24262,7 +24258,7 @@ Failed to get SDR network config!\n
 Failed to get Steam Service Start function
 Failed to get UGC lock
 Failed to get cert from steam
-Failed to get chunk index from %s 
+Failed to get chunk index from %s
 Failed to get chunk info in %s
 Failed to get decryption key for depot %u
 Failed to get free disc space for target folder "%s"
@@ -24341,7 +24337,7 @@ Failed to parse string
 Failed to parse the schema KV buffer
 Failed to parse verified settings for account ID %u
 Failed to post %u bytes to chunk store %s
-Failed to post chunk for reading from %s 
+Failed to post chunk for reading from %s
 Failed to post write to chunkstore %s
 Failed to preallocate
 Failed to process chunk %s
@@ -24495,7 +24491,7 @@ FamilyGroupsClient.NotifyGroupChanged#1
 FamilyGroupsClient.NotifyGroupStatus#1
 FamilyGroupsClient.NotifyRunningApps#1
 Fan control available: %d current: %d
-FastHexToBuffer() wants non-negative integers, not 
+FastHexToBuffer() wants non-negative integers, not
 Fatal error: %s\n
 FavoriteServersLastUpdateTime
 FavoritedByFriendsRankedByPublicationDate
@@ -24509,7 +24505,7 @@ Fetching public config, but we don't know the realm.  This won't work in China!
 FiRCY
 Field "
 Field "$0" uses reserved number $1.
-Field = 
+Field =
 Field Type: %s\n
 Field does not match message type.
 Field is not a map field.
@@ -24523,7 +24519,7 @@ Field numbers cannot be greater than $0.
 Field numbers must be positive integers.
 Field with message or enum type missing type_name.
 Field with primitive type has type_name.
-Field: 
+Field:
 Field=
 FieldDescriptorProto
 FieldDescriptorProto.extendee not set for extension field.
@@ -24543,15 +24539,15 @@ File '%s' is too large\r\n
 File '%s' not found
 File Locked
 File Not Found
-File already exists in database: 
-File appears to be in generated pool but wasn't registered: 
+File already exists in database:
+File appears to be in generated pool but wasn't registered:
 File change notification for %s but no file contents changed based on hash\n
 File commit failed: %s
 File creation failed
-File is already registered: 
+File is already registered:
 File locked
-File not found in database (unexpected): 
-File recursively imports itself: 
+File not found in database (unexpected):
+File recursively imports itself:
 File transfers in progress:\n
 File::insert() -- invalid file.
 File::insert() -- read only file.
@@ -24612,7 +24608,7 @@ Finalization timeout waiting for processing of %d to complete
 FinalizeAddAuthenticator
 FinalizeLocalCrypto
 Finansbank
-Find apps with a certain appinfo value set, eg 'common/type media'. * is any. 
+Find apps with a certain appinfo value set, eg 'common/type media'. * is any.
 FindControllerByPath
 FindDRMUploads
 FindFriendVoiceChatHandle
@@ -24742,7 +24738,7 @@ Found %u pre-existing matching files for depot %u (%llu bytes)
 Found App Manifest for appid %d - specified path : %s - os path : %s \n
 Found an action set without a name.
 Found existing connection [%s].  Only one symmetric connection can be active at a time.
-Found invalid proto option data for: 
+Found invalid proto option data for:
 Found multiple action sets with the same name: "%s"
 FovasVideo.ClientGetOPFSettings#1
 Fractional sampling not implemented yet
@@ -24860,7 +24856,7 @@ GENRE
 GENSTR
 GENTIME
 GEOB
-GET 
+GET
 GID SequentialCount out of range
 GID StartTime out of range
 GID Sys ID overflow
@@ -25157,9 +25153,9 @@ GetAssociatedSiteName
 GetAuthSessionInfo
 GetAuthSessionRiskInfo
 GetAuthSessionTicket
-GetAuthSessionTicket called but no app ownership ticket available 
-GetAuthSessionTicket called with buffer too small for ticket 
-GetAuthSessionTicket called with invalid gameid 
+GetAuthSessionTicket called but no app ownership ticket available
+GetAuthSessionTicket called with buffer too small for ticket
+GetAuthSessionTicket called with invalid gameid
 GetAuthSessionTicketForGameID
 GetAuthSessionTicketV2
 GetAuthSessionTicketV3
@@ -26135,7 +26131,6 @@ H8xp
 H@H9xqI
 HBJ\nTRF
 HEAD
-HEAD 
 HEAD request does not allow a body in response, not sending
 HEADERS: could not unpack
 HEADERS: insufficient padding space
@@ -26345,7 +26340,7 @@ HasFriend
 HasGameMapping
 HasHardwareMicBoost
 HasWallet
-Hash Algorithm: 
+Hash Algorithm:
 HashSearchTrie
 Hausa
 Have peer jobs running, but no external target sources connected
@@ -26393,7 +26388,7 @@ Home
 Host
 Host is configured with multiple public IPv4s.  Using %s; ignoring %s\n
 Host is configured with multiple public IPv6s!  Using %s; ignoring %s\n
-Host: 
+Host:
 HostStringToNetAdr
 Hosted dedicated server listen socket must be created on the server interface.\n.
 Hostname mismatch
@@ -26510,9 +26505,9 @@ IClientUtils
 IClientVR
 IClientVideo
 ID%llu
-ID3 
+ID3
 ID3v1 tag is not valid or could not be read at the specified offset.
-ID3v2.4 no longer supports the frame type 
+ID3v2.4 no longer supports the frame type
 IDEA
 IDEA(128)
 IDEA-CBC
@@ -26793,7 +26788,7 @@ Ignoring POP %s invalid alias '%s'
 Ignoring POP %s invalid relay ipv4 address '%s'
 Ignoring POP %s router %s with missing/invalid port range
 Ignoring PlayStation controller due to duplicate serial number\n
-Ignoring Proxy-Authenticate: 
+Ignoring Proxy-Authenticate:
 Ignoring SteamID %s; it is not valid for networking identity purposes\n
 Ignoring attempt to clear the caller deadline, since the deadline has already been reached.
 Ignoring attempt to connect to invalid address '%s'
@@ -26845,7 +26840,7 @@ Ignoring weird timestamp %llu in ConnectOK, current time is %llu, remote delay w
 IiGM>nw
 Ik\f`dub`D
 Illegal character (\) in IPC name.
-Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field: 
+Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
 Illegal password
 Image height exceeds user limit in IHDR
 Image height is zero in IHDR
@@ -26856,7 +26851,7 @@ Image width is too large for this architecture
 Image width is zero in IHDR
 Images
 Imperial_Aramaic
-Import 
+Import
 Import "
 Improper call to JPEG library in state %d
 Impulse Tracker
@@ -26906,7 +26901,7 @@ Index %u, ContentID %llu, Path "%s", Label "%s", Disk Space %s/%s, Apps %u, Moun
 Index HMD
 Index must be -1 for non-repeated fields
 Index must be -1 for singular fields.
-Index must be in range of repeated field values. 
+Index must be in range of repeated field values.
 Index out-of-bounds (field is empty).
 IndexToSNetSocket( i, SNetSocketToSerial( hSocket ) ) == hSocket
 IndicateAchievementProgress
@@ -27188,7 +27183,7 @@ Invalid filename to UnlinkCacheFile
 Invalid filter method in IHDR
 Invalid filter type specified
 Invalid firmware type\n
-Invalid float number: 
+Invalid float number:
 Invalid format for pCAL parameter
 Invalid formatted driver description '%s'
 Invalid formatted driver description!
@@ -27236,7 +27231,7 @@ Invalid operation %s\n
 Invalid or duplicate file name %s
 Invalid pCAL equation type
 Invalid pCAL parameter count
-Invalid package name: 
+Invalid package name:
 Invalid palette
 Invalid palette length
 Invalid palette size, hIST allocation skipped
@@ -27282,7 +27277,7 @@ Invalid state %d
 Invalid status code in response received by HTTP client from %s (%s): %s\n
 Invalid stream state
 Invalid strings::Substitute() format string: "
-Invalid symbol name: 
+Invalid symbol name:
 Invalid system directory %d
 Invalid tax address
 Invalid time specified for tIME chunk
@@ -27293,11 +27288,11 @@ Invalid usertype %s in CUserStats::BUserAllowedToSetField()
 Invalid value '%s' for command line argument '%s' (See net_fake_state)\n
 Invalid value for boolean field "
 Invalid weak dependency index.
-Invalid wire type for CPPTYPE_INT32: 
-Invalid wire type for CPPTYPE_INT64: 
-Invalid wire type for CPPTYPE_MESSAGE: 
-Invalid wire type for CPPTYPE_UINT32: 
-Invalid wire type for CPPTYPE_UINT64: 
+Invalid wire type for CPPTYPE_INT32:
+Invalid wire type for CPPTYPE_INT64:
+Invalid wire type for CPPTYPE_MESSAGE:
+Invalid wire type for CPPTYPE_UINT32:
+Invalid wire type for CPPTYPE_UINT64:
 InvalidateActionManifestPath
 InvalidateBindingCache
 InvalidateCredentials
@@ -27532,7 +27527,7 @@ K-283
 K-409
 K-571
 K/UI_:ihr
-K4K 
+K4K
 K;xs
 KDF routines
 KEEP_CURRENT_VALUE
@@ -27825,7 +27820,7 @@ LC_PAPER
 LC_TELEPHONE
 LC_TIME
 LD_LIBRARY_PATH
-LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" 
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" amixer -c acp5x contents
 LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" bash -c "for i in \`xrandr | grep ' connected' | cut -d' ' -f1 | xargs\`; do xrandr --output \$i --gamma %f:%f:%f; done" &
@@ -28016,7 +28011,7 @@ ListSeats
 ListSessions
 ListUsers
 List_
-Listen error: 
+Listen error:
 Listen socket child list corruption!
 Listen socket handle bookkeeping bug!
 ListenSocket()
@@ -28132,7 +28127,7 @@ Logging On
 Logging in account %s\n
 Logging off\n
 Logging on %s
-Logic problem? szsrc = 
+Logic problem? szsrc =
 LogicalCPUCount
 LogicalProcessors
 Login1Manager
@@ -28168,7 +28163,7 @@ M5my
 M8MF
 M;;va
 M@WQf
-MAC 
+MAC
 MANGOHUD_CONFIGFILE
 MARK
 MASK:
@@ -28223,7 +28218,7 @@ MP4: Invalid atom size
 MP4: Invalid free-form item name "
 MP4: No audio tracks
 MP4: Unexpected atom "
-MP4: Unknown covr format 
+MP4: Unknown covr format
 MP4: Unknown item name "
 MP4: We currently don't support values with multiple types
 MP4::File::save() -- File is read only.
@@ -28320,7 +28315,7 @@ MapKey::GetInt64Value
 MapKey::GetStringValue
 MapKey::GetUInt32Value
 MapKey::GetUInt64Value
-MapKey::type MapKey is not initialized. 
+MapKey::type MapKey is not initialized.
 MapName
 MapValueConstRef::GetBoolValue
 MapValueConstRef::GetDoubleValue
@@ -28363,7 +28358,7 @@ MarketingMessages.DoesUserHavePendingMarketingMessages#1
 MarketingMessages.MarkMessageSeen#1
 Marking %s as fully trusted.  (No routing secret, but dev environment.)  (Previous trust was %d)\n
 Marking bad download source %s, %u jobs
-Mask Algorithm: 
+Mask Algorithm:
 Master
 Master App Editor
 Master Subscription
@@ -28415,10 +28410,10 @@ MesaV2
 Message
 Message %s constructed to be sent but was received instead. Use the default constructor instead.
 Message class "
-Message does not support reflection (type 
+Message does not support reflection (type
 Message from relay session %u mapped to %s, but that connection has no TransportFromSDRClient?
-Message is too deep, the parser exceeded the configured recursion limit of 
-Message missing required fields: 
+Message is too deep, the parser exceeded the configured recursion limit of
+Message missing required fields:
 Message of type "
 Message size %d is too big.  Max is %d
 Message type "
@@ -29284,7 +29279,7 @@ Missing install folder for AppID %u ( "%s" )
 Missing interface adapter for %s %s\n
 Missing location info in SetupReconstructionContexts
 Missing manifest dispatch: %s : %u\n
-Missing manifest or password for depot %u, beta "%s" 
+Missing manifest or password for depot %u, beta "%s"
 Missing name.
 Missing or corrupt index file: %s\n
 Missing parameters!\n
@@ -30222,7 +30217,7 @@ NULL point passed to BGetUserScreenshotDirectory
 NULL row buffer
 NULL shared library method
 NULL spectator server name\n
-NULL, 
+NULL,
 NULL-MD5
 NULL-SHA
 NULL-SHA256
@@ -30321,7 +30316,7 @@ Never gathered *any* host candidates?
 Never received any remote candidates
 New Age
 New Wave
-New best connection: 
+New best connection:
 NewPreset
 NewRelaySession
 NewSteamAnnouncementStateChange_t
@@ -30484,13 +30479,13 @@ NonMembers
 NonPublicBuild
 Nonce
 None
-None of %d certs trusted.  (E.g.: 
+None of %d certs trusted.  (E.g.:
 Normal
 Norwegian
 Not Acceptable
-Not After: 
+Not After:
 Not Attempted
-Not Before: 
+Not Before:
 Not Extended
 Not Found
 Not Implemented
@@ -30516,7 +30511,7 @@ Not enough room in destination buffer for branch (%s)!\n
 Not enough time to send '%s' and get reply
 Not enough time to send msg %d and get reply
 Not from trusted address; dropped
-Not implemented field number 
+Not implemented field number
 Not implemented yet
 Not in manual poll mode!
 Not initialized
@@ -31063,7 +31058,7 @@ Opus::Properties::read() -- Could not find valid first and last Ogg pages.
 Opus::Properties::read() -- The PCM values for the start or end of this file was incorrect.
 OpusHead
 OpusTags
-Order: 
+Order:
 OrderID
 Origin
 Oriya
@@ -31268,7 +31263,7 @@ PHOTO
 PICTURES
 PID=0x%.4x\n
 PING: stream_id != 0
-PINIT 
+PINIT
 PKCS #7 SIGNED DATA
 PKCS12
 PKCS12 import password
@@ -31390,13 +31385,12 @@ POP '%s' penalty changed %d -> %d
 POP '%s' session changed
 POP '%s' session lost
 POPM
-POPs . . . : 
+POPs . . . :
 POSA code is not activated
 POSIX
 POSIX collating elements are not supported
 POSIX named classes are supported only within a class
 POST
-POST 
 POST of %d bytes\n
 PPxD<<%
 PRB+
@@ -31465,7 +31459,7 @@ PUSH_PROMISE: push disabled
 PUSH_PROMISE: stream closed
 PUSH_PROMISE: stream in idle
 PUSH_PROMISE: stream_id == 0
-PUT 
+PUT
 PWXR`kkqu
 P\n\rRegisterCDKey
 P\n\rcountry_stats
@@ -31475,7 +31469,7 @@ Package requires an invitation for a reservation to purchase
 PackageCount
 PackageID
 PackageID : %u, change number : %u/%u \n
-Packages changed: 
+Packages changed:
 Packages changed: force all
 Packet dump: raw size %u, header size %u, body size %u, var size %u\n
 Packet has illegal total message size of %d
@@ -31650,7 +31644,7 @@ Pichincha Cash
 Pii[2cc
 PinValidda
 Ping
-Ping = %d = %d+%d+%d (front+interior+remote).  
+Ping = %d = %d+%d+%d (front+interior+remote).
 Ping data good enough to make routing decisions.  First ping received %.1fs ago, great=%d, good+=%d, ok+=%d, valid=%d, ignored=%d\n
 Ping failure to cluster %s was %.1fs ago.  Discarding record of failure, might try again.
 Ping location: %s\n
@@ -31934,7 +31928,7 @@ ProofOfPurchaseTicketRevision
 Prop: %s = %s
 ProtectedStore
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
-Protobuf (%zu bytes), 
+Protobuf (%zu bytes),
 Protobuf failed to parse
 Protobuf failed to parse CMsgSteamDatagramCertificateSigned
 Protobuf parse failed %s
@@ -31952,7 +31946,7 @@ Proxy Certificate Information
 Proxy-Authenticate
 Proxy-Authenticate:
 Proxy-Authorization
-Proxy-Authorization: 
+Proxy-Authorization:
 Proxy-Connection
 Proxy-Connection: Keep-Alive
 Proxy-Connection: Keep-Alive\r\n
@@ -31969,7 +31963,7 @@ Psychedelic
 Psychedelic Rock
 Public
 Public Key
-Public key 
+Public key
 Public key ID%llu at %llu (%.1f hours ago).
 Public-Key
 Public-Key: (%d bit)\n
@@ -32273,7 +32267,7 @@ RaiseWindowForGame
 Ran out of IPC SharedObjectManager entries!\n
 Range
 Range request upper bound is less than lower bound
-Rank=%d 
+Rank=%d
 RankedByAveragePlaytimeTrend
 RankedByBanContentCheck
 RankedByInappropriateContentRating
@@ -32349,7 +32343,7 @@ Received %s from %s using active connection ID %u, but we didn't know about a se
 Received %s from %s using incorrect/stale connection ID %u.  Dropped without reply due to global spam reply rate limit.
 Received %s from %s using incorrect/stale connection ID %u.  Rejecting wth NoConnection reply.
 Received %s from %s with matching session/connection ID, but wrong client type!?
-Received BAD stun type from server: 
+Received BAD stun type from server:
 Received CMsgSteamDatagramGameserverSessionEstablished from %s with unknown stale/invalid connection ID %u
 Received CMsgSteamDatagramP2PSessionEstablished from %s with unknown stale/invalid connection ID %u
 Received CMsgSteamDatagramP2PSessionEstablished without token?
@@ -32376,7 +32370,7 @@ Received connection nack from %s, connection attempt denied
 Received content-type: application/x-www-form-urlencoded with unsupported charset, %s\n
 Received corrupt deprecated logon message from IP %u (PublicIP %u)
 Received discovery message from client %llu at %s
-Received error on call: 
+Received error on call:
 Received large message over websocket, payload size %llu
 Received likely STUN packet with no username
 Received likely STUN packet with short username
@@ -32387,7 +32381,7 @@ Received non-STUN packet from unknown address (
 Received offline message from client %llu at %s
 Received packet of invalid size %d from %s
 Received parental change notification for account %u
-Received response with wrong type: 
+Received response with wrong type:
 Received silence data from remote end (%d samples)\n
 Received streaming cancel request %u with device ID %llu from %s
 Received streaming request %u with device ID %llu from %s
@@ -32396,8 +32390,8 @@ Received undersized packet from tracker %llu\n
 Received unexpected 'no connection'
 Received unexpected 'no connection' from peer
 Received unexpected P2P 'no connection' signal
-Received unexpected STUN_ALLOCATE_REQUEST from server: 
-Received unexpected STUN_ALLOCATE_RESPONSE from server: 
+Received unexpected STUN_ALLOCATE_REQUEST from server:
+Received unexpected STUN_ALLOCATE_RESPONSE from server:
 Received unexpected introducer message %d\n
 Received unexpected introducer message _ClientToTrackerAddLocalCandidates\n
 Received unwanted patch file depot_%u_%llu_%llu.delta (ignoring)
@@ -32429,7 +32423,7 @@ Recurring option does not allow stacking
 Recurring option is not valid for billing agreement
 Recurring option will stack time beyond our maximum limit
 Recurring payment option
-Recursion limit at end of parse should be 
+Recursion limit at end of parse should be
 Recursive
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got NULL key
@@ -32439,7 +32433,7 @@ RecursiveLoadFromBuffer:  got } in key
 Recv
 Recv %s stats from %s for %s:%s\n
 Recv message: %s - %u bytes\n
-Recv: 
+Recv:
 RecvBufferMessages
 RecvBufferSize
 RecvCryptoHandshake failed creating localhost socket pair.  %s
@@ -32464,7 +32458,7 @@ RedeemGuestPass
 RedeemGuestPassResponse
 Redirect
 Reduce buffering requirements for live video playback
-Redundant relay address: 
+Redundant relay address:
 RefreshDevices
 RefreshLibraryFolders
 RefreshRate
@@ -32519,7 +32513,7 @@ Relay %s is going offline in %d seconds
 Relay %s sent CMsgSteamDatagramRouterPingReply with extra route info about data center %x, but no ping for that data center?.
 Relay Failed
 Relay ack was pended for %lld usec, cannot pack delay properly!  [%s] usecNow=%llx, timestamp=%llx, usecThen=%llx
-Relay allocate succeeded: 
+Relay allocate succeeded:
 Relay session bookkeeping bug!  Relay found in listen socket's global list, but not in client!
 Relay session table bookkeeping duplication
 Relay session table bookkeeping missing
@@ -32540,7 +32534,7 @@ ReleaseCookieContainer
 ReleaseGMSQuery
 ReleaseHTTPRequest
 ReleaseLast
-ReleaseLast() called on a RepeatedPtrField that is on an arena, 
+ReleaseLast() called on a RepeatedPtrField that is on an arena,
 ReleaseMessage
 ReleaseMethod
 ReleaseQueryUGCRequest
@@ -32653,7 +32647,7 @@ Removed connection (
 Removed embedded client token.\n
 Removed native depot cache file %s
 Removed native depot cache precompiled file: %s.
-Removed port from p2p socket: 
+Removed port from p2p socket:
 Removed: %s (%lld KB)
 Removing CM Force override - returning to default CM list \n
 Removing download source from list: (%s,%u) - %s (%s)
@@ -33350,7 +33344,7 @@ SSL Context failed loading private key data: %s\n
 SSL Context failed loading private key file %s: %s\n
 SSL SESSION PARAMETERS
 SSL Server
-SSL alert number 
+SSL alert number
 SSL client
 SSL for verify callback
 SSL negotiation finished successfully
@@ -33366,7 +33360,7 @@ SSL::ThreadedPerformRead - Realloc
 SSL::ThreadedPerformRead - SecureZeroMemory
 SSL::WakeJobsWaitingOnSends
 SSLERR
-SSLOK 
+SSLOK
 SSL_CERT_DIR
 SSL_CERT_FILE
 SSL_CIPHER_description
@@ -33756,7 +33750,7 @@ SeatNew
 SeatRemoved
 Seating controller %u in slot %u\n
 Sec-WebSocket-Accept
-Sec-WebSocket-Accept: 
+Sec-WebSocket-Accept:
 Sec-WebSocket-Key
 Sec-WebSocket-Version
 Second
@@ -34645,7 +34639,7 @@ Software\Valve\Steam\apps\%u\cloudsynconsuspendenabled
 Software\Valve\Steam\cip
 Software\Valve\Steam\ipv6check_%s_state
 Solo
-Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options: 
+Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
 Some response data was sent for CHTTPServerResponse, but BYieldingFlushAndCloseResponse was not called, you must call it.
 SomeAMDChip
 Something else
@@ -34679,7 +34673,7 @@ SpecifyCompatExperiment
 SpecifyCompatTool
 SpectatorServerName
 Speech
-Speex   
+Speex
 Speex::File::read() -- invalid Speex identification header
 Speex::Properties::read() -- Could not find valid first and last Ogg pages.
 Speex::Properties::read() -- Either the PCM values for the start or end of this file was incorrect or the sample rate is zero.
@@ -34891,7 +34885,7 @@ Steam ID in logon response doesn't match, but our previous value was non-anon an
 Steam Link
 Steam Music: Unable to create audio device\n
 Steam Relay Server
-Steam Runtime Launch Service: 
+Steam Runtime Launch Service:
 Steam SDL Dummy OpenGL Window
 Steam Service Error: %s\n
 Steam Video
@@ -35359,7 +35353,7 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringCompare
 StringFindSuffix
-StringPrintfVector currently only supports up to 
+StringPrintfVector currently only supports up to
 Strong Extranet ID
 Struct dump: %u bytes\n
 Subject Information Access
@@ -35525,8 +35519,8 @@ TLS 1.3, server CertificateVerify
 TLS Feature
 TLS Web Client Authentication
 TLS Web Server Authentication
-TLS init function for 
-TLS wrapper function for 
+TLS init function for
+TLS wrapper function for
 TLS1-PRF
 TLS_AES_128_CCM_8_SHA256
 TLS_AES_128_CCM_SHA256
@@ -35856,7 +35850,7 @@ T\n\treactions
 Ta?jib?
 Table %s Key %d\n
 TagGroup
-TagLib: 
+TagLib:
 TagLib::ID3v2::Header::parse() - One of the size bytes in the id3v2 header was greater than the allowed 128.
 TagLib::ID3v2::Header::parse() - The tag size as read was 0 bytes!
 TagPublishedFile
@@ -35886,7 +35880,7 @@ Tatar
 Techno
 Techno-Industrial
 Telugu
-Temp file already exists: "%s" 
+Temp file already exists: "%s"
 Temp folder not writable
 Temporary Redirect
 Tenpay
@@ -35927,13 +35921,13 @@ The JSON camel-case name of field "
 The Job Manager changed, that seems bad.
 The VAD has been replaced by a hack pending a complete rewrite
 The XTest extension doesn't exist
-The [proto3_optional=true] option may only be set on proto3fields, not 
+The [proto3_optional=true] option may only be set on proto3fields, not
 The bucket count must be greater than 0 or the implementation will crash due to an incorrect mod mask.
 The current Steam realm does not match the requested resource
 The current session is closing
 The data being accessed is not supported by this API
 The echo canceller started acting funny and got slapped (reset). It swears it will behave now.
-The extension 
+The extension
 The first enum value must be zero in proto3.
 The following processes have open IPC connections:\n
 The gift is not valid for the recipient's region
@@ -35946,7 +35940,7 @@ The original purchase cannot be replayed
 The purchase is still in progress, but waiting for success status from provider
 The remote host closed the connection.
 The transmission is not allowed for this stream
-The type parameter T in RepeatedFieldRef<T> API doesn't match 
+The type parameter T in RepeatedFieldRef<T> API doesn't match
 The user callback function failed
 The user callback function failed due to the temporal error
 The value of the cart in local currency is too high
@@ -35958,8 +35952,8 @@ This account is currently logged in at another location. You will need to log th
 This account is protected by a Steam Guard mobile authenticator.
 This could be a misconfiguration or intentional - forcing linux as a supported platform.\n
 This is an S/MIME signed message%s%s
-This program requires version 
-This program was compiled against version 
+This program requires version
+This program was compiled against version
 This should never happen as this exclusively gets called from a non-master instance!
 This shouldn't be called if all the sizes are equal.
 This shouldn't happen anymore--see CUCMJobPublishedFileContentUpdated
@@ -36233,7 +36227,7 @@ Tried to initiate an outbound connection to %s, bound to local address %s.  An e
 Tried to lag a packet on a socket that has already been closed and is pending destruction!
 Tried to lag a packet that w as too big!
 Tried to make a pessimistic ping estimate without any ping data at all!
-Tried to merge messages of different types 
+Tried to merge messages of different types
 Tried to register a non-generated type with the generated type registry.
 Tried to remove non-existent object
 Tried to use encrypted OpenSSH private key
@@ -36280,8 +36274,8 @@ Two-factor activation code mismatch
 Two-factor code mismatch
 TwoFactor.QueryStatus#1
 Type
-Type appears to be in generated pool but wasn't 
-Type is already registered: 
+Type appears to be in generated pool but wasn't
+Type is already registered:
 Type=
 T~uW
 U$qk.
@@ -36342,7 +36336,7 @@ UNKNOWN
 UNKNOWN ATTRIBUTE
 UNKNOWN/
 UNKNOWN_ENUM_VALUE_%s_%d
-UNKWN 
+UNKWN
 UNRELIABLE
 UNUSED1
 UNVERIFIED
@@ -36350,7 +36344,6 @@ UP_ARROW
 URI:
 URL Regex matched different number of params than job is registered for, URL is: %s
 URL:
-URL: 
 US-ASCII
 USB Sample
 USE TLS
@@ -36364,7 +36357,7 @@ UTF-16
 UTF-16BE
 UTF-16LE
 UTF-8
-UTF-8 data when 
+UTF-8 data when
 UTF32)
 UTF8
 UTF8)
@@ -36394,7 +36387,7 @@ Unable to accept connection from %s.  %s
 Unable to add lobby filter %s, key cannot be longer than %d characters\n
 Unable to add lobby filter on key '%s', key cannot be longer than %d characters\n
 Unable to communicate with ANY of %d Steam Datagram routing cluster.  Possible problem with local internet connection?
-Unable to connect to the Google Talk service due to an incompatibility with your proxy.\r\nPlease help us resolve this issue by submitting the following information to us using our technical issue submission form at:\r\n\r\nhttp://www.google.com/support/talk/bin/request.py\r\n\r\nWe apologize for the inconvenience.\r\n\r\nInformation to submit to Google: 
+Unable to connect to the Google Talk service due to an incompatibility with your proxy.\r\nPlease help us resolve this issue by submitting the following information to us using our technical issue submission form at:\r\n\r\nhttp://www.google.com/support/talk/bin/request.py\r\n\r\nWe apologize for the inconvenience.\r\n\r\nInformation to submit to Google:
 Unable to create a bound socket on the shared socket.
 Unable to decrement IOCP eventfd, error %d
 Unable to delete FOZ file %s
@@ -36460,7 +36453,7 @@ Unexpected connectivity test result %d
 Unexpected end of string.
 Unexpected end-of-input
 Unexpected error
-Unexpected failure while serializing option submessage 
+Unexpected failure while serializing option submessage
 Unexpected g_eAvailAnyRelay %d while ping measurement in progress
 Unexpected g_eAvailNetworkConfig %d
 Unexpected header in connect reply: %d\n
@@ -36469,7 +36462,7 @@ Unexpected number of glibc version components
 Unexpected number of glibc version components: %d
 Unexpected peer connection from %s
 Unexpected remote client address type
-Unexpected result from V_SplitString() 
+Unexpected result from V_SplitString()
 Unexpected sleep reason %d in CJobMgr::BResumeSleepingJobs. Job %s Yield Info %s.  Code is bad.\n
 Unexpected state %d
 Unexpected sync state (%d) in CConfigStore::BEnsureInitialized for Roaming config store
@@ -36484,7 +36477,7 @@ Unhandled pending I/O type %d
 Unhandled query type %d
 UnifiedMessages
 Unimplemented rounding method %d. Rounding half up!
-Unimplemented type: 
+Unimplemented type:
 Uninitialized
 Uninitialized row
 Uninstall
@@ -36532,14 +36525,14 @@ Unknown connection type: %u
 Unknown content encoding '%s' in CHTTPServerRequest::BDecodeRequestBody()
 Unknown content encoding in CHTTPResponse::BSetBodyData()
 Unknown content-type "%s" for POST data of size %d to API %s\n
-Unknown control code: 
+Unknown control code:
 Unknown control message
 Unknown crypto suite to GetSRTPKeyAndSaltLengths: %s
 Unknown currency code %d
 Unknown custom filter method
 Unknown delta compression method
 Unknown depot chunk location. (unreachable?)
-Unknown destination: 
+Unknown destination:
 Unknown ePidType in PID stream
 Unknown ePriority %u
 Unknown enumeration value of "
@@ -36573,8 +36566,8 @@ Unknown proxy setting: %d
 Unknown row filter for method 0
 Unknown shader cache type in ProcessNativeDriverCache.
 Unknown shader cache type, ignoring.
-Unknown speex_echo_ctl request: 
-Unknown speex_preprocess_ctl request: 
+Unknown speex_echo_ctl request:
+Unknown speex_preprocess_ctl request:
 Unknown stat type
 Unknown state %d
 Unknown stream device form factor %d
@@ -36630,7 +36623,7 @@ Unrecognized equation type for pCAL chunk
 Unrecognized format character %c in "%s"
 Unrecognized identity format
 Unrecognized identity format.  (%d unknown field(s), first ID=%d)
-Unrecognized syntax: 
+Unrecognized syntax:
 Unrecognized unit type for oFFs chunk
 Unrecognized unit type for pHYs chunk
 Unregister failed to find a valid IPipewireEventListener
@@ -36649,7 +36642,7 @@ UnsubscribeItem
 UnsubscribePublishedFile
 Unsupported
 Unsupported DH key type %d
-Unsupported Data: 
+Unsupported Data:
 Unsupported HTTP version in response received by HTTP client from %s (%s): %s\n
 Unsupported JPEG data precision %d
 Unsupported JPEG process: SOF type 0x%02x
@@ -36814,7 +36807,7 @@ User is offline
 User is online
 User().RunFrame()
 User-Agent
-User-Agent: 
+User-Agent:
 User/Controller Activity
 UserAccount.CancelLicenseForApp#1
 UserAccount.GetAccountLinkStatus#1
@@ -36912,7 +36905,7 @@ VSZd
 VTC Pay Cards
 VTC Pay Online Banking
 VTC Pay Wallet
-VTT for 
+VTT for
 V\f`EgTn
 V\n\rAddRoleToUser
 V\n\rFriendMessage
@@ -37060,8 +37053,8 @@ Validation: full scan in "%s" found %u/%u mismatching files (%s/%s) in %u second
 Validation: missing file "%s"
 Validation: quick scan in "%s" found %u/%u mismatching files (%u seconds).
 Validation: read %u files missing and %u files corrupt for AppID %u
-Validation: truncated unwanted %llu bytes from file "%s"  
-Validation: wrong size of %llu bytes for file "%s"  
+Validation: truncated unwanted %llu bytes from file "%s"
+Validation: wrong size of %llu bytes for file "%s"
 Value is out of range
 Value must be "true" or "false" for boolean option "
 Value must be identifier for boolean option "
@@ -37306,7 +37299,7 @@ WalletAmt
 WalletCur
 WarmOptInStatus
 Warning
-Warning parsing text-format 
+Warning parsing text-format
 Warning! Mounted library folder "%s" is read-only
 Warning, couldn't get controller details for SC, PID=%d\n
 Warning, couldn't get controller details for SDL controller, vid=%x, pid=%x\n
@@ -37396,7 +37389,7 @@ WebUIJob
 WebUINoResponse*
 WebUITransport
 WebUITransport Health Check
-WebUITransport: 
+WebUITransport:
 WebUITransportHealthCheck
 Websocket connection from: %s
 Websocket connection rejected
@@ -37887,7 +37880,7 @@ You can stop logging IPC calls using "log_ipc 0"\n
 You can't set a body manually AND set POST params
 You must at least specify a frame ID.
 You must refund this transaction to wallet
-You must type in 
+You must type in
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 You should not use gameport = queryport.  To use shared socket mode, pass STEAMGAMESERVER_QUERY_PORT_SHARED for queryport\n
 Your ping location string buffer is too small, truncation is possible
@@ -37984,7 +37977,7 @@ Zulu
 [ AppID %u ] got bucket manifest %llu (%llu bytes) for bucket ID %llu, type %s/%s.
 [ no best connection set ]
 [ unknown reason ]
-[%03u:%03u] 
+[%03u:%03u]
 [%d-%llu]: Failed to start tracking playtime\n
 [%d-%llu]: Successfuly started tracking playtime\n
 [%d] BShouldQueueVoicePayload() is now %d\n
@@ -38339,15 +38332,15 @@ Zulu
 [AppID %u] Could not set stats for user %s. User was not verified as playing on the server
 [AppID %u] Create new workshop item of type %s for AppID %u : %llu (%s)
 [AppID %u] Currently already synced to global change number '%llu', should be nothing to download
-[AppID %u] Delaying next workshop updated 5 minutes 
+[AppID %u] Delaying next workshop updated 5 minutes
 [AppID %u] DeleteItem request for %llu => %s
 [AppID %u] DeletePublishedFile request for %llu => %s
 [AppID %u] Detected app platform change sinc last sync - from '%s' to '%s'
 [AppID %u] Detected workshop change (%s) : changed cached item %llu, new manifest %llu
 [AppID %u] Detected workshop change : added subscribed item %llu
-[AppID %u] Detected workshop change : changed cached item %llu, new handle %llu 
+[AppID %u] Detected workshop change : changed cached item %llu, new handle %llu
 [AppID %u] Detected workshop change : keeping unsubscribed item %llu
-[AppID %u] Detected workshop change : removing unknown item %llu 
+[AppID %u] Detected workshop change : removing unknown item %llu
 [AppID %u] Detected workshop change : removing unsubscribed item %llu
 [AppID %u] Detected workshop change : removing unused item %llu
 [AppID %u] Download %s for file %s
@@ -38376,8 +38369,8 @@ Zulu
 [AppID %u] Failed to load installscript "%s"
 [AppID %u] Failed to open file '%s' temp file for write '%s'
 [AppID %u] Failed to parse results of GetItemDefPrices app:\n%s\n\n
-[AppID %u] Failed to read preview file %s 
-[AppID %u] Failed to read single file %s 
+[AppID %u] Failed to read preview file %s
+[AppID %u] Failed to read single file %s
 [AppID %u] Failed to rename temp file for '%s' from '%s' to '%s'
 [AppID %u] Failed to retrieve eligible promo items for user %s: %s (%s)\n
 [AppID %u] Failed to send BSignalAppExitSyncDone
@@ -38454,7 +38447,7 @@ Zulu
 [AppID %u] OnMicroTransactionAuthResponse - mismatch in appids %u != %u for transaction %llu\n
 [AppID %u] Platform change complete, removing sync inhibit
 [AppID %u] Platform change: launching restore job, removing sync inhibit
-[AppID %u] Preview file %s is too small, could not be an image. 
+[AppID %u] Preview file %s is too small, could not be an image.
 [AppID %u] PublishFile complete, result %s
 [AppID %u] QueryFiles failed: %s (%s)
 [AppID %u] Removing installed item %llu, manifest %llu
@@ -38473,7 +38466,7 @@ Zulu
 [AppID %u] Schema not found on disk
 [AppID %u] Set %u item(s) to %s locally
 [AppID %u] Setting local load order for workshop items
-[AppID %u] Size limit exceeded for preview file %s. File must be less than 1 MB. 
+[AppID %u] Size limit exceeded for preview file %s. File must be less than 1 MB.
 [AppID %u] Skipping download of file %s to our platform
 [AppID %u] Skipping download of file %s to our platform, failed to resolve path
 [AppID %u] Skipping invalid upload entry with offset/size (%llu/%u) that exceeds shaderBuffer size (%llu) in file %s\n
@@ -38559,10 +38552,10 @@ Zulu
 [Roaming Config] PerformSyncCloud - upload throttled, downloading only
 [S2k
 [S_API FAIL] deadlock! waited for matchmaking callbacks for over 1000ms, proceeding unsafely!\n
-[S_API WARN] 
+[S_API WARN]
 [TRACE %s] Recv %s (0x%02x):\n%s\n
 [TRACE %s] Send %s (0x%02x):\n%s\n
-[TXN:%llu] 
+[TXN:%llu]
 [Trace Recv] %s <- %s | %d bytes\n
 [Trace Send] %s -> %s | %d bytes\n
 [UGC] Range check received more streaming content than requested for URL %s%s
@@ -38661,33 +38654,33 @@ Zulu
 \fGB z
 \g is not followed by a braced, angle-bracketed, or quoted name/number or by a plain number
 \k is not followed by a braced, angle-bracketed, or quoted name
-\n            Not After : 
+\n            Not After :
 \n          Size Chunks File SHA                                 Flags Name\n
-\n        Public key OCSP hash: 
-\n    Actual    : 
-\n    Field type: 
-\n   "%s"="%s" 
+\n        Public key OCSP hash:
+\n    Actual    :
+\n    Field type:
+\n   "%s"="%s"
 \n   %u : %s (manifest %llu)
 \n  %5d  %s (%llums)\n
-\n  Field       : 
-\n  Message type: 
-\n  Problem     : 
-\n  Problem     : Enum value did not match field type:\n    Expected  : 
-\n  Problem     : Field is not the right type for this message:\n    Expected  : 
+\n  Field       :
+\n  Message type:
+\n  Problem     :
+\n  Problem     : Enum value did not match field type:\n    Expected  :
+\n  Problem     : Field is not the right type for this message:\n    Expected  :
 \n - exports depot %u to apps %s,
 \n - imports shared depot %u from app %u
 \n - install dir: "%s"
-\n - install state: 
+\n - install state:
 \n - install state: uninstalled\n
-\n - launch parameters: 
-\n - mounted depots: 
+\n - launch parameters:
+\n - mounted depots:
 \n - no user config
 \n - release state: %s (
 \n - size on disk: %llu bytes, BuildID %u
 \n - update delay: %u seconds
 \n - update started: %s, staged: %llu/%llu MB %u%%, downloaded: %llu/%llu MB %u%% - %u KB/s
-\n - update state: 
-\n - user config: 
+\n - update state:
+\n - user config:
 \n BeginGameRecordingSegmentsUpload
 \n CChatRoom_GetInviteInfo_Response
 \n CChatRoom_SearchMembers_Response
@@ -38873,14 +38866,14 @@ Zulu
 \n$steammessages_econ.steamclient.proto
 \n$steammessages_gamenetworkingui.proto
 \n$steammessages_parental_objects.proto
-\n%*s            
-\n%*sExtensions: 
+\n%*s
+\n%*sExtensions:
 \n%*sLog       : %s
-\n%*sLog ID    : 
-\n%*sSignature : 
-\n%*sTimestamp : 
-\n%*sVersion   : 
-\n%*sZone: %s, User: 
+\n%*sLog ID    :
+\n%*sSignature :
+\n%*sTimestamp :
+\n%*sVersion   :
+\n%*sZone: %s, User:
 \n%12s%s
 \n%CChatRoom_CreateChatRoomGroup_Request
 \n%CClientMetrics_ClipRange_Notification
@@ -39278,7 +39271,7 @@ Zulu
 \nHey, you just set %s's number values to be 0.  Is that what you wanted?\n\nIf you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.\nDid you mean to do `%s %s` instead?\n
 \nLAN Peer sources:\n
 \nO1Ie
-\nParsing attempt:  
+\nParsing attempt:
 \nRunning as site license provider\n
 \nThis report shows all running jobs, organized into a tree based on what\nthey are waiting on.  If a job is waiting on X, then it will be indented\nand underneath X, a child in the tree.\n\nThe report contains three types of items:\n  - Jobs (prefixed by 'Job:')\n  - Things that jobs are waiting on (net messages, SQL, DBOs, memcached,\n    locks, HTTP, etc).  Note: a job can be a "thing a job is waiting on"\n\t(e.g. when it holds a lock), leading to a chain.\n  - Callers\n\nLegend:\n  Hier Jobs        :  Number of jobs in total, including this item and its descendants\n  Hier Avg Wait ms :  Average wait time (ms) of all jobs in this branch of the tree\n  Num Jobs         :  Number of jobs of this specific type waiting on this same cause chain\n  Job Avg Wait ms  :  Average wait time (ms) of the jobs of this type that have been waiting\n                      on this cause chain\n  Avg Job Dur ms   :  Average total job run time (ms).  Not just the time spent in the current\n                      yield.\n
 \nW2a
@@ -40717,7 +40710,7 @@ Zulu
 \r!\r+\r-\r=\r?\rO\rU\ri\ry\r
 \r7AO\n
 \r8STs\ne
-\rEuR 
+\rEuR
 \rLAM
 \rMinghuaQu\f
 \rRoOs
@@ -40877,7 +40870,7 @@ _NET_WM_DESKTOP
 _NET_WM_NAME
 _NET_WM_PID
 _STEAM_SETENV_MANAGER
-_Sat 
+_Sat
 _SetBasicServerData
 _SpewMessageType
 _TbF~
@@ -41361,7 +41354,7 @@ algorithms
 alias
 aliases
 alicloud
-alignof 
+alignof
 all zeros
 all_ages
 all_ages_screenshots
@@ -41514,7 +41507,7 @@ append_exp
 append_strings
 appid
 appid: %10u %10u sec (started at %u, %u seconds ago) %s\n
-appid=%u, 
+appid=%u,
 appid_%u
 appidredirect
 appids
@@ -41910,7 +41903,6 @@ background_timeline_offset
 background_url
 backlog
 backup
-backup 
 bad adaptive filter value
 bad argument
 bad back reference
@@ -41957,7 +41949,7 @@ bad key update
 bad keyword
 bad legacy version
 bad length
-bad longjmp: 
+bad longjmp:
 bad magic number
 bad nPayloadType %d
 bad object
@@ -42106,7 +42098,7 @@ bin64
 binary
 binary_path_linux
 bind
-bind: 
+bind:
 bind_textdomain_codeset
 binder does not verify
 binding
@@ -42291,7 +42283,7 @@ buf[0] >= '0' && buf[0] <= '9'
 buffer
 buffer error
 buffer too small
-buffer. Use the 'bytes' type if you intend to send raw 
+buffer. Use the 'bytes' type if you intend to send raw
 buffer.GetBytesRemaining() == 0
 buffer.TellPut() > 0
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
@@ -42399,9 +42391,8 @@ by_file_ctrl
 bypass_proxies_of_type
 byte
 bytes
-bytes 
 bytes %u-%u/%u
-bytes. 
+bytes.
 bytes=
 bytes=%d-%d
 bytes=%llu-%llu
@@ -42959,7 +42950,6 @@ clan_accountid
 clan_tag
 clanid
 class
-class 
 classes
 classid
 classified_agent
@@ -43065,7 +43055,7 @@ clips
 clock_gettime
 close
 close notify
-close() failed: 
+close() failed:
 close_all_devices
 close_console
 closed
@@ -43223,7 +43213,7 @@ compatibility_mode
 compatibilitytools
 compatible
 compatmanager_layer_name
-complex 
+complex
 component_code
 component_name
 component_type
@@ -43320,7 +43310,7 @@ connections_udp
 connectivity_state
 connector_name
 connectpipe should occur on the client pipe, not the master pipe
-cons: 
+cons:
 consecutive_ping_timeout
 console
 const
@@ -43336,7 +43326,7 @@ construct_ca_names
 construct_key_exchange_tbs
 construct_stateful_ticket
 construct_stateless_ticket
-construction vtable for 
+construction vtable for
 consumed
 consumer_app_id
 consumer_appid
@@ -43552,7 +43542,7 @@ countryname_actual
 countryname_loginattempt
 counts
 covalensolutions.com
-covariant return thunk to 
+covariant return thunk to
 covr
 cpil
 cprt
@@ -44039,8 +44029,8 @@ d2i_SSL_SESSION
 d2i_ocsp_nonce
 d3d11
 d3d12
-d=%-2d hl=%ld l=%4ld 
-d=%-2d hl=%ld l=inf  
+d=%-2d hl=%ld l=%4ld
+d=%-2d hl=%ld l=inf
 d?qq
 dFDFBB"
 dITRedirect
@@ -44175,8 +44165,7 @@ delayed_balance
 delayed_balance_in_usd
 delayed_balance_newest_source
 delete
-delete 
-delete[] 
+delete[]
 delete_on_cleanup
 deleted
 deleted_comments
@@ -44465,7 +44454,7 @@ display_refresh_manual_hz_max
 display_refresh_manual_hz_min
 displayratesasbits
 displays
-displays information about running games tracked by Steam 
+displays information about running games tracked by Steam
 displays information about the game's use of Steam voice
 distance
 distinguishedName
@@ -44473,7 +44462,7 @@ distpoint
 distpoint already set
 div by zero
 dkxw$
-dlCz 
+dlCz
 dl_bind_func
 dl_iterate_phdr
 dl_load
@@ -44571,7 +44560,7 @@ download_sources
 download_types_known
 downloading
 downloading chunk "%s" (%s)
-downloading, 
+downloading,
 downtime_warning_reached
 dpad
 dpad_click
@@ -45336,7 +45325,6 @@ fakeip
 fakeport #%d
 fallocate64
 false
-false 
 false"
 false"&\n\fCMsgStopFind
 false"+\n
@@ -45355,7 +45343,6 @@ family_groupid
 fan_control_mode
 fastly
 fatal
-fatal 
 favor_rarer_tags
 favorite
 favorites
@@ -45544,7 +45531,7 @@ fminf
 fmkKp\ru
 fmod
 fmodf
-fmt 
+fmt
 fnmatch
 focus
 focused
@@ -46140,7 +46127,7 @@ geteuid
 getgid
 gethostbyname
 gethostbyname addr is not af inet
-gethostbyname error: 
+gethostbyname error:
 gethostname
 getifaddrs
 getifaddrs failed, returning %d
@@ -46187,8 +46174,8 @@ glXMakeCurrent
 glibc_version_major
 glibc_version_minor
 global
-global constructors keyed to 
-global destructors keyed to 
+global constructors keyed to
+global destructors keyed to
 global_rank_new
 global_rank_previous
 gmail.com
@@ -46391,7 +46378,7 @@ gsm-sim-not-inserted
 gsm-sim-pin-required
 gsm-sim-puk-required
 gsm-sim-wrong
-guard variable for 
+guard variable for
 guest
 guestid
 guestpass
@@ -46645,7 +46632,7 @@ hheeeeixxkknnhhhhyymmiaaaa
 hi5.com
 hid_get_feature_report returned false
 hidden
-hidden alias for 
+hidden alias for
 hidden_by_user
 hide
 hide_categorized_friends
@@ -47228,7 +47215,7 @@ id-tc26-wrap-gostr3412-2015-kuznyechik
 id-tc26-wrap-gostr3412-2015-kuznyechik-kexp15
 id-tc26-wrap-gostr3412-2015-magma
 id-tc26-wrap-gostr3412-2015-magma-kexp15
-id3 
+id3
 idProduct
 idVendor
 id_ID
@@ -47348,7 +47335,7 @@ image_url_not_achieved
 images
 images/apps/%s/%s
 images/chaticons/%.2s/%.2s/%.2s/%s_%d.jpg
-imaginary 
+imaginary
 imap
 impl != NULL
 impl_ != NULL
@@ -47500,7 +47487,7 @@ initial_revision
 initial_route_kind
 initial_time_unit
 initialization error
-initialized 
+initialized
 initials
 initiate
 initiator
@@ -47523,7 +47510,7 @@ install_path
 install_script
 installdir
 installed
-installed (%llu bytes, %s), 
+installed (%llu bytes, %s),
 installed file locked
 installed\n
 installed_depots
@@ -48021,8 +48008,8 @@ jabber:x:delay
 janetMailbox
 japanese
 jastel
-java Class for 
-java resource 
+java Class for
+java resource
 java_generate_equals_and_hash
 java_generic_services
 java_multiple_files
@@ -50338,7 +50325,7 @@ left_trigger
 left_trigger_threshold
 left_west
 legacy
-legacy, 
+legacy,
 legacy_ack_e2e
 legacy_authorized_steam_id
 legacy_challenge
@@ -50473,7 +50460,7 @@ limit number of peers connected
 limited_launch_active
 limiteduserquota
 limits
-line 
+line
 line_item_description
 linear
 linear_list
@@ -53379,7 +53366,7 @@ msgsigdigest verification failure
 msgsigdigest wrong length
 msgtype
 msn.com
-mss reduced to 
+mss reduced to
 mstring not universal
 mstring wrong tag
 msvsmon%s/x64/msvsmon.exe /noclrwarn /nowowwarn /nofirewallwarn /anyuser /noauth /nosecuritywarn /silent
@@ -53624,7 +53611,7 @@ n\tMr
 n\vDsv
 nack count upper bits
 name
-name = 
+name =
 name constraints minimum and maximum not supported
 name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)
 name too long
@@ -53654,7 +53641,7 @@ nbio connect error
 nbiof_new
 ncurrent-inhibitors
 ncurrent-sessions
-ndZTNGA:3-' 
+ndZTNGA:3-'
 ndef_prefix
 ndef_suffix
 need dictionary
@@ -53686,7 +53673,7 @@ network_config_version
 network_ping_location
 networkmgr
 never
-new 
+new
 newConnection.m_eCmd != 0
 newWorkshopItem.m_unManifestID != k_uManifestIdInvalid
 newWorkshopItem.m_unManifestID != k_uManifestIdLegacyItem || newWorkshopItem.m_hLegacyContent != k_UGCHandleInvalid
@@ -54140,8 +54127,8 @@ non-hex character in \x{} (closing brace missing?)
 non-octal character in \o{} (closing brace missing?)
 non-positive height
 non-positive width
-non-transaction clone for 
-non-virtual thunk to 
+non-transaction clone for
+non-virtual thunk to
 nonRepudiation
 nonce
 nonce mismatch
@@ -54154,7 +54141,7 @@ normal disconnect
 normal_keycode
 normalized_name
 norwegian
-not 
+not
 not XOF or invalid length
 not a NIST prime
 not a certificate
@@ -54171,7 +54158,7 @@ not encrypted
 not encrypted data
 not enough data
 not enough disk space for file
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 not implemented
 not in
 not in cache, requesting from Steam
@@ -54419,8 +54406,7 @@ operation not supported on this type
 operation_in_progress
 operaton not initialized
 operator
-operator 
-operator"" 
+operator""
 operator()
 opt3001
 optin
@@ -55691,8 +55677,8 @@ price_category
 price_category_floor
 price_is_pay_what_you_want
 prices
-prim: 
-primary 
+prim:
+primary
 primary.m_sessionSelectQualityMetrics.m_nScore < k_nRouteScoreHuge
 primary_controller_type
 primary_language
@@ -55711,14 +55697,14 @@ prime2:
 prime:
 prime_infos
 print
-print current sdr ping location string 
+print current sdr ping location string
 print_sdr_ping
 prioritize_chacha
 priority
 priority_class
 priority_reason
 priority_score
-priv [ %d ] 
+priv [ %d ]
 priv:
 priv_key
 privacy
@@ -55890,9 +55876,9 @@ pthread_self
 pthread_setschedparam
 pthread_setspecific
 ptr + escape_overhead < s
-ptr 0x%p, 
+ptr 0x%p,
 ptr < end && *ptr == '\"'
-pub: 
+pub:
 pubBeginSkippedData == pubStartCleanData
 pubData
 pubData || unLength == 0
@@ -56012,7 +55998,7 @@ qTiltedQuaternion.IsValid()
 qUN1
 q\n\tStats_UDP
 qcStatements
-qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
+qdZRMHD@=;86421/.-+*)(''&%$$#""!!
 qeei
 qfefkv}
 qoslevel
@@ -56209,7 +56195,7 @@ recursive entity reference
 recv
 recv_tos
 recvfrom
-recvfrom: 
+recvfrom:
 recvmsg
 recvs
 reddit.com
@@ -56245,7 +56231,7 @@ regfree
 region
 regions
 register_status_update
-registered: 
+registered:
 registeredAddress
 registration-required
 registrationNumber
@@ -56264,7 +56250,7 @@ relative_mouse.vdf
 relativename
 relay
 relay tcp connect failed
-relay tcp connected to 
+relay tcp connected to
 relay_clusters
 relay_override_active
 relay_ping_only
@@ -57038,7 +57024,7 @@ sending unbuffered data
 sending unbuffered data after immediate disconnect
 sendmsg
 sendto
-sendto: 
+sendto:
 sensitivity
 sensitivity_horiz_scale
 sensitivity_vert_scale
@@ -57475,9 +57461,9 @@ sitelicense_steamcmd
 siteserver.vdf
 size
 size <= 1024 * 1025
-size too big: 
+size too big:
 size_t to int conversion
-sizeof 
+sizeof
 sizeof( SHADigest_t ) == missing_chunk.sha().size()
 sizeof(XML_Char)
 sizeof(XML_LChar)
@@ -57671,7 +57657,7 @@ srtp protection profile list too long
 srtp unknown protection profile
 srvping
 sscanf
-ssh-ed25519 
+ssh-ed25519
 ssh-ed25519 %nAAAA%*s%n
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJrsoE4XUc5iaNVpACyh4fobLbwm02tOo6AIOtNygpuE ID18220590129359924542
 ssid
@@ -58242,7 +58228,6 @@ strcmp
 strcpy
 strdup
 stream
-stream 
 stream end
 stream error
 stream->closed_next == ((void *)0)
@@ -58335,8 +58320,8 @@ subpattern name expected
 subpattern name is too long (maximum 32 characters)
 subscribe
 subscribed
-subscribed, 
-subscribed-but-disabled-locally, 
+subscribed,
+subscribed-but-disabled-locally,
 subscribed_files
 subscribed_personas
 subscribedby
@@ -58427,7 +58412,7 @@ syncstate
 syntax
 syntax = "$0";\n\n
 syntax error
-syntax error at line %d near: 
+syntax error at line %d near:
 syntax error in subpattern name (missing terminator)
 sys$assign error
 sys$dassgn error
@@ -58530,7 +58515,7 @@ telugu
 telus
 temp
 template
-template parameter object for 
+template parameter object for
 template_vars_json
 tempname
 temporarily_owned
@@ -58598,7 +58583,7 @@ tfhd
 tfjgvmfv
 th_TH
 thai
-the actual field type (for enums T should be the generated enum 
+the actual field type (for enums T should be the generated enum
 the asn1 object identifier is not known for this md
 the global scope
 the join request was approved by a mod
@@ -58623,7 +58608,6 @@ thread
 threads
 throttling_kbps
 throw
-throw 
 thumbnail
 thumbnail_broadcast_session_id
 thumbnail_data
@@ -58958,7 +58942,7 @@ tls invalid ecpointformat list
 tls1-prf
 tls12_check_peer_sigalg
 tls12_copy_sigalgs
-tls13 
+tls13
 tls13_change_cipher_state
 tls13_enc
 tls13_final_finish_mac
@@ -59316,7 +59300,7 @@ trailer_url_format
 trailers
 trailing_comments
 trak
-transaction clone for 
+transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 transaction_time
@@ -59429,12 +59413,12 @@ type() == TYPE_LENGTH_DELIMITED
 type() == TYPE_VARINT
 type.googleapis.com/
 type.googleprod.com/
-type: 
+type:
 type=%s\n
 type_id
 type_int
-typeinfo fn for 
-typeinfo for 
+typeinfo fn for
+typeinfo for
 typeinfo for EWatchdogStallResult (*)(unsigned int)
 typeinfo for EWatchdogStallResult (unsigned int)
 typeinfo for SteamThreadTools::CThread
@@ -59456,7 +59440,7 @@ typeinfo for tinyxml2::XMLUnknown
 typeinfo for tinyxml2::XMLVisitor
 typeinfo for void ()
 typeinfo for void (*)()
-typeinfo name for 
+typeinfo name for
 typeinfo name for EWatchdogStallResult (*)(unsigned int)
 typeinfo name for EWatchdogStallResult (unsigned int)
 typeinfo name for __cxxabiv1::__forced_unwind
@@ -59813,7 +59797,7 @@ unrecognized character follows \
 unrecognized equation type
 unrecognized name
 unrecognized signature nid
-unreferenced server pipe handle 
+unreferenced server pipe handle
 unregister_status_update
 unregistered scheme
 unreliable
@@ -59918,7 +59902,7 @@ update_percentage
 update_preview_file
 update_visibility
 updated
-updated required( %llu/%llu bytes ), 
+updated required( %llu/%llu bytes ),
 updated_secret
 updates
 updating
@@ -59987,7 +59971,6 @@ used_bytes
 used_files
 useinstead
 user
-user 
 user canceled
 user data duplication unsupported
 user initiated logoff
@@ -59998,7 +59981,7 @@ user-new
 user-removed
 user-requested
 user-stop-delay-usec
-user=%u %s, 
+user=%u %s,
 userCertificate
 userClass
 userId
@@ -60183,7 +60166,7 @@ viewers
 views
 vin.x * scalar <= 255.0f && vin.y * scalar <= 255.0f && vin.z * scalar <= 255.0f
 vin.x >= 0.0f && vin.y >= 0.0f && vin.z >= 0.0f
-virtual thunk to 
+virtual thunk to
 virtual_cap_size
 virtual_mode
 virtual_stick_throw
@@ -60257,7 +60240,7 @@ vrlink
 vrpathreg.sh
 vsAd
 vsnprintf
-vtable for 
+vtable for
 vtable for CAdHocValidation_SimpleCallback
 vtable for __cxxabiv1::__class_type_info
 vtable for __cxxabiv1::__forced_unwind
@@ -60428,7 +60411,7 @@ wge6
 what
 whenEnded >= m_usecWhenSelected
 which lsof >/dev/null 2>&1
-while 
+while
 whirlpool
 whitelisted
 wide
@@ -60474,7 +60457,7 @@ wine\n
 wired
 wireless
 wishlist
-with a type that does not implement MergeFrom. This is unsafe; 
+with a type that does not implement MergeFrom. This is unsafe;
 wl_buffer_interface
 wl_compositor_interface
 wl_data_device_interface
@@ -60587,7 +60570,7 @@ wrong tag
 wrong type
 wrong version number
 ws://%s/transportsocket/
-wsqnmcb_OD420-+ 
+wsqnmcb_OD420-+
 wtd_load
 wvpk
 www-authenticat
@@ -60644,7 +60627,7 @@ xml version="1.0" encoding="UTF-8"
 xml-not-well-formed
 xml=http://www.w3.org/XML/1998/namespace
 xmlns
-xnbUH<1( 
+xnbUH<1(
 xpH8
 xqI9
 xrJ:DCG
@@ -60749,4 +60732,4 @@ zy:HO
 ~TbF
 ~Transport
 ~\n\tVRSupport
-~wph_YSNHB<6/' 
+~wph_YSNHB<6/'

@@ -1,9 +1,9 @@
-  what():  
+  what():
  St12ctype_bynameIcE
- [clone 
+ [clone
  __vector(
  const
- for 
+ for
  for detail.\n
  noexcept
  restrict
@@ -87,8 +87,8 @@
 *N12_GLOBAL__N_122generic_error_categoryE
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
--0123456789
 -1e+9999
+-0123456789
 -Infinity
 ./obj_openvr_api_linux32/release/libopenvr_api.so
 .L10
@@ -1558,7 +1558,7 @@ RepairUTF8(std::string const&, std::string&)
 ReturnStdString(std::string const&, char*, unsigned int)
 STEAMVR_APPKEY
 Saturday
-See 
+See
 September
 SetEnvironmentVariable(char const*, char const*)
 Settings manager init failed (118)
@@ -1712,8 +1712,8 @@ StringToUpper(std::string const&)
 StringToUpper(std::string const&) (.cold)
 Sunday
 Syntax error: value, object or array expected.
-TLS init function for 
-TLS wrapper function for 
+TLS init function for
+TLS wrapper function for
 TMPDIR
 The requested interface is incompatible with the compositor and the compositor is running (122)
 This interface is not available to utility applications (123)
@@ -1739,9 +1739,9 @@ Unable to connect to Oculus Runtime, possible bad install (1114)
 Unable to create path registry directory %s\n
 Unable to determine VR Path Registry filename
 Unable to find Steam installation (2000)
-Unable to parse 
+Unable to parse
 Unable to parse token length
-Unable to read VR Path Registry from 
+Unable to read VR Path Registry from
 Unable to write VR path registry to %s\n
 Unable to write path registry (113)
 Unknown error (%d)
@@ -2006,7 +2006,7 @@ VR_RuntimePath
 VR_RuntimePath::rchBuffer
 VR_ShutdownInternal
 VR_ShutdownInternal.cold
-VTT for 
+VTT for
 VTT for std::basic_fstream<char, std::char_traits<char>>
 VTT for std::basic_fstream<wchar_t, std::char_traits<wchar_t>>
 VTT for std::basic_ifstream<char, std::char_traits<char>>
@@ -2060,7 +2060,7 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_Sat 
+_Sat
 _Unwind_Backtrace
 _Unwind_DebugHook
 _Unwind_DeleteException
@@ -2312,7 +2312,7 @@ abort
 add_fdes
 additional six characters expected to parse unicode surrogate pair.
 adds.9711
-alignof 
+alignof
 allocator
 allowComments
 allowDroppedNullPlaceholders
@@ -2434,10 +2434,10 @@ collectComments
 commentStyle
 commentStyle must be 'All' or 'None'
 completed.7532
-complex 
+complex
 config
 const_cast
-construction vtable for 
+construction vtable for
 construction vtable for std::basic_iostream<wchar_t, std::char_traits<wchar_t>>-in-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>
 construction vtable for std::basic_iostream<wchar_t, std::char_traits<wchar_t>>-in-std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>
 construction vtable for std::basic_istream<wchar_t, std::char_traits<wchar_t>>-in-std::basic_fstream<wchar_t, std::char_traits<wchar_t>>
@@ -2462,7 +2462,7 @@ construction vtable for std::ostream-in-std::basic_ofstream<char, std::char_trai
 construction vtable for std::ostream-in-std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char>>
 construction vtable for std::ostream-in-std::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>
 construction vtable for std::ostream-in-std::iostream
-covariant return thunk to 
+covariant return thunk to
 cplus_demangle_builtin_types
 cplus_demangle_operators
 d_abi_tags
@@ -2513,8 +2513,8 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-delete 
-delete[] 
+delete
+delete[]
 deleted virtual method called\n
 deque::_M_new_elements_at_back
 deregister_tm_clones
@@ -2574,10 +2574,10 @@ getcwd
 getenv
 gettext
 getwc
-global constructors keyed to 
-global destructors keyed to 
+global constructors keyed to
+global destructors keyed to
 graph
-guard variable for 
+guard variable for
 guard variable for (anonymous namespace)::get_locale_cache_mutex()::locale_cache_mutex
 guard variable for (anonymous namespace)::get_locale_mutex()::locale_mutex
 guard variable for UTF16to8(wchar_t const*)::s_converter
@@ -2608,14 +2608,14 @@ guard variable for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std:
 guard variable for std::time_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::id
 guard variable for std::time_put<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t>>>::id
 half
-hidden alias for 
+hidden alias for
 http://
 https://
 iHexCharToInt(char)
 iconv
 iconv_close
 iconv_open
-imaginary 
+imaginary
 in Json::Value::asCString(): requires stringValue
 in Json::Value::clear(): requires complex value
 in Json::Value::duplicateAndPrefixStringValue(): Failed to allocate string value buffer
@@ -2644,8 +2644,8 @@ int std::__int_to_char<wchar_t, unsigned long>(wchar_t*, unsigned long, wchar_t 
 ioctl
 ios_base::_M_grow_words allocation failed
 ios_base::_M_grow_words is not valid
-java Class for 
-java resource 
+java Class for
+java resource
 jsonid
 keylength >= 2^30
 ld-linux.so.2
@@ -2676,19 +2676,19 @@ memmove
 memset
 mkdir
 modf
-new 
+new
 new[]
 next_is_type_qual.isra.0
 nfinity
-non-transaction clone for 
-non-virtual thunk to 
+non-transaction clone for
+non-virtual thunk to
 non-virtual thunk to std::basic_fstream<char, std::char_traits<char>>::~basic_fstream()
 non-virtual thunk to std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::~basic_fstream()
 non-virtual thunk to std::basic_iostream<char, std::char_traits<char>>::~basic_iostream()
 non-virtual thunk to std::basic_iostream<wchar_t, std::char_traits<wchar_t>>::~basic_iostream()
 non-virtual thunk to std::basic_stringstream<char, std::char_traits<char>, std::allocator<char>>::~basic_stringstream()
 non-virtual thunk to std::basic_stringstream<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t>>::~basic_stringstream()
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
 null
 object_mutex
 once_regsizes.9910
@@ -2696,7 +2696,6 @@ openvr
 openvr.component.vrserver
 openvrpaths.vrpath
 operator
-operator 
 operator delete(void*)
 operator delete(void*, unsigned int)
 operator delete[](void*)
@@ -2706,7 +2705,7 @@ operator new(unsigned int) (.cold)
 operator new[](unsigned int)
 operator new[](unsigned int, std::nothrow_t const&)
 operator new[](unsigned int, std::nothrow_t const&) (.cold)
-operator"" 
+operator""
 parse_lsda_header(_Unwind_Context*, unsigned char const*, lsda_header_info*)
 poll
 precision
@@ -2743,7 +2742,7 @@ short
 signed char
 size_of_encoded_value
 size_of_encoded_value.cold
-sizeof 
+sizeof
 sizeof...
 snprintf
 space
@@ -4892,17 +4891,16 @@ strtoull
 subs.9712
 syscall
 system
-template parameter object for 
+template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
 terminate called without an active exception\n
 terminator.9555
 this
 throw
-throw 
 tolower
 toupper
-transaction clone for 
+transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 transaction clone for std::bad_exception::what() const
@@ -4939,8 +4937,8 @@ transaction clone for std::underflow_error::underflow_error(char const*)
 transaction clone for std::underflow_error::underflow_error(char const*) (.cold)
 transaction clone for std::underflow_error::~underflow_error()
 true
-typeinfo fn for 
-typeinfo for 
+typeinfo fn for
+typeinfo for
 typeinfo for (anonymous namespace)::generic_error_category
 typeinfo for (anonymous namespace)::system_error_category
 typeinfo for Json::BuiltStyledStreamWriter
@@ -5181,7 +5179,7 @@ typeinfo for void*
 typeinfo for wchar_t
 typeinfo for wchar_t const*
 typeinfo for wchar_t*
-typeinfo name for 
+typeinfo name for
 typeinfo name for (anonymous namespace)::generic_error_category
 typeinfo name for (anonymous namespace)::system_error_category
 typeinfo name for Json::BuiltStyledStreamWriter
@@ -5450,7 +5448,7 @@ vector::_M_default_append
 vector::_M_realloc_insert
 vector::reserve
 version
-virtual thunk to 
+virtual thunk to
 virtual thunk to std::basic_fstream<char, std::char_traits<char>>::~basic_fstream()
 virtual thunk to std::basic_fstream<wchar_t, std::char_traits<wchar_t>>::~basic_fstream()
 virtual thunk to std::basic_ifstream<char, std::char_traits<char>>::~basic_ifstream()
@@ -5501,7 +5499,7 @@ vrclient.so
 vrpathreg
 vrserver internal error (124)
 vsnprintf
-vtable for 
+vtable for
 vtable for (anonymous namespace)::generic_error_category
 vtable for (anonymous namespace)::system_error_category
 vtable for Json::BuiltStyledStreamWriter

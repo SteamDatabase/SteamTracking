@@ -6,17 +6,17 @@
   ---------- ------      ------\n
   ---------------------------------------------------- ----------- ----------- ------ ----------- ------ ----------- ----------- -----------\n
   Scope                                                      Calls  Time+Child    Pct        Time    Pct   Avg+Child         Avg        Peak\n
-  what():  
+  what():
  - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u\n
  Avg Time/Frame (ms)\n
  GiB
  KiB
  MiB
- [clone 
+ [clone
  __vector(
  bytes
  const
- for 
+ for
  noexcept
  restrict
  throw
@@ -238,7 +238,7 @@ Failed to create thread (error 0x%x)
 Failed to get thread priority: foreign thread unsupported\n
 Failed to get thread priority: getpriority failed %d\n
 Failed to set thread local value
-Fatal Assertion Failed: 
+Fatal Assertion Failed:
 Fatal assert
 Fatal assert; application exiting
 FileSystem
@@ -580,8 +580,8 @@ Steamworks_IPCSend
 Steamworks_IPCSend: %s::%s
 Streaming
 StreamingSendPacket: %s %u %u %u %u %u %d
-TLS init function for 
-TLS wrapper function for 
+TLS init function for
+TLS wrapper function for
 TSListBase_Init
 TSListBase_Pop
 TSListBase_Push
@@ -664,7 +664,7 @@ VGUI
 VPROF Report for Thread: %d - %s\n
 VProfInternalEnterScopeCurrentThread
 VProfInternalGetProfileForCurrentThread
-VTT for 
+VTT for
 Validate Failed: !!!Leaked:\t%llu %s%s\n
 Validate Failed: Leaked connection %u\n
 Validate Failed: Leaked file %p\n
@@ -699,7 +699,7 @@ _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_Sat 
+_Sat
 _SpewMessageType
 _SpewMessageTypeSourceFmt
 _SpewMessageTypeSourceV
@@ -783,7 +783,7 @@ _txnal_runtime_error_get_msg(void*)
 aarch64
 abort
 access
-alignof 
+alignof
 allocator
 asctime_r
 audio.so
@@ -813,12 +813,12 @@ clock_gettime
 close
 closedir
 com.valvesoftware.steam
-complex 
+complex
 console
 const_cast
-construction vtable for 
+construction vtable for
 core id
-covariant return thunk to 
+covariant return thunk to
 crashhandler.so
 crashhandler002
 crashhandler003
@@ -831,8 +831,8 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
-delete 
-delete[] 
+delete
+delete[]
 dl_iterate_phdr
 dladdr
 dlclose
@@ -842,12 +842,11 @@ dlsym
 double
 dynamic_cast
 eGroup < VPROF_BUDGETGROUP_MAX
-exec 
+exec
 execv
 externaltests.so
 faccessat
 false
-false 
 fclose
 fflush
 fgets
@@ -879,18 +878,18 @@ getpid
 getpriority
 gettext
 gettimeofday
-global constructors keyed to 
-global destructors keyed to 
+global constructors keyed to
+global destructors keyed to
 gmtime_r
 gnu_get_libc_version
 gsoapwrapper.so
-guard variable for 
+guard variable for
 half
-hidden alias for 
-imaginary 
+hidden alias for
+imaginary
 item %p sentinel corrupted. skipping.\n
-java Class for 
-java resource 
+java Class for
+java resource
 kill
 lchown
 ld-linux.so.2
@@ -933,16 +932,15 @@ mprotect
 munmap
 nanosleep
 nattypeprobe.so
-new 
+new
 new[]
-non-transaction clone for 
-non-virtual thunk to 
+non-transaction clone for
+non-virtual thunk to
 open
 open64
 opendir
 operator
-operator 
-operator"" 
+operator""
 p2pcore.so
 p2prelayserver.so
 p2pstunserver.so
@@ -1023,7 +1021,7 @@ sigaddset
 sigemptyset
 signed char
 sigprocmask
-sizeof 
+sizeof
 sizeof...
 snprintf
 sscanf
@@ -1073,7 +1071,7 @@ strtol
 symlink
 syscall
 system
-template parameter object for 
+template parameter object for
 tenfoot.so
 terminate called after throwing an instance of '
 terminate called recursively\n
@@ -1081,19 +1079,18 @@ terminate called without an active exception\n
 the same event name (%s) was created as both manual and auto reset, something's fubar'd
 this
 throw
-throw 
 tid(%u) pthread_key_create failed: %s\n
 tier1
 time
 timegm
 timezone
 tolower
-transaction clone for 
+transaction clone for
 transaction clone for operator delete(void*)
 transaction clone for operator new[](unsigned int)
 true
-typeinfo fn for 
-typeinfo for 
+typeinfo fn for
+typeinfo for
 typeinfo for CAdHocValidation
 typeinfo for CAdHocValidation_SimpleCallback
 typeinfo for SteamThreadTools::CThread
@@ -1183,7 +1180,7 @@ typeinfo for void*
 typeinfo for wchar_t
 typeinfo for wchar_t const*
 typeinfo for wchar_t*
-typeinfo name for 
+typeinfo name for
 typeinfo name for CAdHocValidation
 typeinfo name for CAdHocValidation_SimpleCallback
 typeinfo name for SteamThreadTools::CThread
@@ -1293,9 +1290,9 @@ vector::reserve
 vgui2_s.so
 video.so
 video64_server.so
-virtual thunk to 
+virtual thunk to
 void
-vtable for 
+vtable for
 vtable for CAdHocValidation
 vtable for CAdHocValidation_SimpleCallback
 vtable for SteamThreadTools::CThread
