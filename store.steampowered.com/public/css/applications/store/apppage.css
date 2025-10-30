@@ -1975,9 +1975,9 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   aspect-ratio: 16 / 9;
 }
 ._2_ZDORN00rF5dsEzd-tfpO ._3eFhSH3a_Uh0AF_AWuqHjR {
-  width: 100%;
-  min-width: 100%;
-  height: 100%;
+  width: 100vw;
+  min-width: 100vw;
+  height: 100vh;
 }
 ._3pzTJNRx9UoRhXeeA2IisY,
 ._3MyKwsurcFxFwiLabbudSk {
