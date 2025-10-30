@@ -27,6 +27,8 @@ message CContentBuilder_InitDepotBuild_Response {
 	optional uint32 compression_method = 12;
 	optional string download_host = 13;
 	optional uint64 manifest_request_code = 14;
+	optional string chunk_upload_host = 15;
+	optional string manifest_upload_host = 16;
 }
 
 message CContentBuilder_StartDepotUpload_Request {

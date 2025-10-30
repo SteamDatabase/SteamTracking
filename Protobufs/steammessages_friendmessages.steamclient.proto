@@ -10,6 +10,11 @@ enum EMessageReactionType {
 	k_EMessageReactionType_Sticker = 2;
 }
 
+enum EChatSessionNotice {
+	k_EChatSessionNotice_Invalid = 0;
+	k_EChatSessionNotice_Suspicious = 1;
+}
+
 message CFriendMessages_GetRecentMessages_Request {
 	optional fixed64 steamid1 = 1;
 	optional fixed64 steamid2 = 2;
@@ -52,6 +57,7 @@ message CFriendsMessages_GetActiveMessageSessions_Response {
 		optional uint32 last_message = 2;
 		optional uint32 last_view = 3;
 		optional uint32 unread_message_count = 4;
+		repeated .EChatSessionNotice notices = 5;
 	}
 
 	repeated .CFriendsMessages_GetActiveMessageSessions_Response.FriendMessageSession message_sessions = 1;
@@ -127,6 +133,11 @@ message CFriendMessages_ResolveReport_Request {
 message CFriendMessages_ResolveReport_Response {
 }
 
+message CFriendMessages_DismissSessionNotice_Notification {
+	optional fixed64 steamid_friend = 1;
+	optional .EChatSessionNotice notice_type = 2 [default = k_EChatSessionNotice_Invalid];
+}
+
 message CFriendMessages_IncomingMessage_Notification {
 	optional fixed64 steamid_friend = 1;
 	optional int32 chat_entry_type = 2;
@@ -149,6 +160,12 @@ message CFriendMessages_MessageReaction_Notification {
 	optional bool is_add = 7;
 }
 
+message CFriendMessages_SessionNotice_Notification {
+	optional fixed64 steamid_friend = 1;
+	optional .EChatSessionNotice notice_type = 2 [default = k_EChatSessionNotice_Invalid];
+	optional bool active = 3;
+}
+
 service FriendMessages {
 	rpc GetRecentMessages (.CFriendMessages_GetRecentMessages_Request) returns (.CFriendMessages_GetRecentMessages_Response);
 	rpc GetActiveMessageSessions (.CFriendsMessages_GetActiveMessageSessions_Request) returns (.CFriendsMessages_GetActiveMessageSessions_Response);
@@ -158,6 +175,7 @@ service FriendMessages {
 	rpc UpdateMessageReaction (.CFriendMessages_UpdateMessageReaction_Request) returns (.CFriendMessages_UpdateMessageReaction_Response);
 	rpc ReportMessage (.CFriendMessages_ReportMessage_Request) returns (.CFriendMessages_ReportMessage_Response);
 	rpc ResolveReport (.CFriendMessages_ResolveReport_Request) returns (.CFriendMessages_ResolveReport_Response);
+	rpc DismissSessionNotice (.CFriendMessages_DismissSessionNotice_Notification) returns (.NoResponse);
 }
 
 service FriendMessagesClient {
@@ -166,4 +184,5 @@ service FriendMessagesClient {
 	rpc IncomingMessage (.CFriendMessages_IncomingMessage_Notification) returns (.NoResponse);
 	rpc NotifyAckMessageEcho (.CFriendMessages_AckMessage_Notification) returns (.NoResponse);
 	rpc MessageReaction (.CFriendMessages_MessageReaction_Notification) returns (.NoResponse);
+	rpc SessionNotice (.CFriendMessages_SessionNotice_Notification) returns (.NoResponse);
 }

@@ -36,8 +36,6 @@ else # if [ "$UNAME" == "Darwin" ]; then
   export DYLD_FRAMEWORK_PATH="$STEAMROOT:${DYLD_FRAMEWORK_PATH-}"
 fi
 
-ulimit -n 2048
-
 MAGIC_RESTART_EXITCODE=42
 
 : "${DEBUGGER=}"

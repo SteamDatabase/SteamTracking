@@ -1206,6 +1206,7 @@
 "|\n)CFamilyGroups_GetPurchaseRequests_Request
 "|\n-CBroadcast_SendBroadcastStateToServer_Request
 "}\n1CMarketingMessages_UpdateMarketingMessage_Request
+"~\n*CFriendMessages_SessionNotice_Notification
 "~\n:CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Request
 "~\n;CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response
 #!/bin/sh\nexit 0\n
@@ -2716,7 +2717,6 @@ $steammessages_parental_objects.proto"
 %u/depotfromapp
 %u/manifests/public/gid
 %u/sharedinstall
-%u: setting platform override dest %s src %s
 %u_depotcache_*.csd
 %verb%
 %x:%x.%x "%x" "%x" "%x"
@@ -3316,7 +3316,6 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
-(1f.Q
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -3324,6 +3323,7 @@ $steammessages_parental_objects.proto"
 (B1f9
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
+(Hz) The maximum callback rate for Controller Jerk Events.
 (INVALID PSS PARAMETERS)\n
 (NONE)
 (NULL == transport_) || (transport == transport_)
@@ -3516,6 +3516,7 @@ $steammessages_parental_objects.proto"
 (\n\rowner_actions
 (\n\rparty_beacons
 (\n\rreceiver_role
+(\n\vnotice_type
 (\r"#\n!CBluetoothManager_Forget_Response"3\n!CBluetoothManager_Connect_Request
 (\r"#\n!CPlayer_SetFavoriteBadge_Response"
 (\r"#\n\tCMsgPaste
@@ -4690,6 +4691,7 @@ $steammessages_parental_objects.proto"
 *23CInternalLambdaWorkItemIZN19CAppUpdateDepotsJob21BYieldingRunClientJobEvEUlvE0_vE
 *23CInternalLambdaWorkItemIZN19CAppUpdateDepotsJob21BYieldingRunClientJobEvEUlvE_vE
 *23CInternalLambdaWorkItemIZN19CAppWorkshopContent13BReadAppStateEbEUlvE_vE
+*23CInternalLambdaWorkItemIZN19CRemoteClientDongle17YldRunDongleCheckEvEUlvE0_vE
 *23CInternalLambdaWorkItemIZN19CRemoteClientDongle17YldRunDongleCheckEvEUlvE_vE
 *23CInternalLambdaWorkItemIZN20CBatteryStateManager21BYldQueryBatteryStateEP27SystemBatteryStateChanged_tEUlvE_bE
 *23CInternalLambdaWorkItemIZN20CDepotReconstructCtx30BYieldingInitializeDeltaChunksEPKcEUlvE_vE
@@ -4806,6 +4808,8 @@ $steammessages_parental_objects.proto"
 *ZN16CSteamController17SetGyroTolerancesEjiffEUlP22IControllerAbstractionE_
 *ZN16CSteamController18SetGyroCalibratingEjibEUlP22IControllerAbstractionE_
 *ZN16CSteamController20SetGyroAutoCalibrateEjbEUlP22IControllerAbstractionE_
+*ZN16CSteamController23RegisterForIMUJerkEventEjEUlP22IControllerAbstractionE_
+*ZN16CSteamController25UnregisterForIMUJerkEventEjEUlP22IControllerAbstractionE_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerEndControllerStateFlowJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE50CWebUISteamInputManagerStartControllerStateFlowJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE54CWebUISteamInputManagerStartGyroSoftwareCalibrationJob
@@ -5046,6 +5050,7 @@ $steammessages_parental_objects.proto"
 +.CFamilyGroups_UndeleteFamilyGroup_Response"
 +.CFriendMessages_GetRecentMessages_Response"
 +.CFriendMessages_IsInFriendsUIBeta_Response"
++.CFriendMessages_SessionNotice_Notification
 +.CGameNetworking_ReleaseFakeIP_Notification
 +.CGameRecording_ExportProgress_Notification
 +.CGameRecording_GetEnoughDiskSpace_Response
@@ -6391,6 +6396,8 @@ $steammessages_parental_objects.proto"
 .EChatRoomNotificationLevel
 .EChatRoomNotificationLevel:$k_EChatroomNotificationLevel_Invalid
 .EChatRoomServerMessage
+.EChatSessionNotice
+.EChatSessionNotice"
 .EClanImageFileType
 .EClanImageGroup
 .EClientExecutionSite:
@@ -6408,7 +6415,7 @@ $steammessages_parental_objects.proto"
 .EContentDescriptorID"M\n0CPublishedFile_UpdateContentDescriptors_Response
 .EContentHubDiscountFilterType
 .EContentReportReason
-.EContentReportReason"(\n&CFriendMessages_ResolveReport_Response"
+.EContentReportReason"(\n&CFriendMessages_ResolveReport_Response"u\n1CFriendMessages_DismissSessionNotice_Notification
 .EContentReportResolution
 .EControllerElementType
 .EDiskSpaceType">\n.CGameRecording_GetTotalDiskSpaceUsage_Response
@@ -6871,6 +6878,7 @@ $steammessages_parental_objects.proto"
 /bin/lsof
 /bin/sh
 /chunk/
+/chunkupload/%s
 /common
 /compatdata
 /compatibilitytools.d
@@ -7387,6 +7395,7 @@ $steammessages_parental_objects.proto"
 /index
 /index.html
 /legacycompat/Steam.dll
+/manifestupload
 /music
 /name
 /nvidiav1/GLCache/%s/%s
@@ -7586,11 +7595,13 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
-0.0333
 0.050
 0.13.15.106
 0.15
 0.3.27
+0000000000000000000000000000000000000000
+0000000000000000
+0.0333
 0.75
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
@@ -7629,8 +7640,6 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-0000000000000000000000000000000000000000
-0000000000000000
 00000001
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -9643,6 +9652,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI41GameServerClient_QueryServerData_ResponseE
 12CProtoBufMsgI42CChatRoom_ChatRoomHeaderState_NotificationE
 12CProtoBufMsgI42CCloud_ClientLogUploadRequest_NotificationE
+12CProtoBufMsgI42CFriendMessages_SessionNotice_NotificationE
 12CProtoBufMsgI42CMsgCREUpdateUserPublishedItemVoteResponseE
 12CProtoBufMsgI42CMsgClientDPSendSpecialSurveyResponseReplyE
 12CProtoBufMsgI42CMsgClientEnableOrDisableDownloadsResponseE
@@ -11066,6 +11076,7 @@ $steammessages_parental_objects.proto"
 2.CFamilyGroups_ConfirmInviteToFamilyGroup_Response"
 2.CFamilyGroups_RespondToRequestedPurchase_Response"
 2.CFamilyGroups_SetFamilyCooldownOverrides_Response"
+2.CFriendMessages_DismissSessionNotice_Notification
 2.CFriendsMessages_GetActiveMessageSessions_Request
 2.CGameRecording_GetAppsWithBackgroundVideo_Request
 2.CMarketingMessages_CreateMarketingMessage_Request
@@ -11090,10 +11101,10 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+20000
 200M
 2019
 2048
-20000
 2000000
 20AccountHardware_Stub
 20AppOwnershipTicket_t
@@ -12486,6 +12497,7 @@ $steammessages_parental_objects.proto"
 29CClientJobGetTwoFactorDetails
 29CClientJobInitiateTradeResult
 29CClientJobMicroTxnAuthRequest
+29CClientJobNotifySessionNotice
 29CClientJobPlayingSessionState
 29CClientJobRequestStoreAuthURL
 29CClientJobSiteLicenseCheckout
@@ -14248,6 +14260,7 @@ $steammessages_parental_objects.proto"
 42CFamilyGroups_UndeleteFamilyGroup_Response
 42CFriendMessages_GetRecentMessages_Response
 42CFriendMessages_IsInFriendsUIBeta_Response
+42CFriendMessages_SessionNotice_Notification
 42CGameNetworking_ReleaseFakeIP_Notification
 42CGameRecording_ExportProgress_Notification
 42CGameRecording_GetEnoughDiskSpace_Response
@@ -14728,6 +14741,7 @@ $steammessages_parental_objects.proto"
 49CFamilyGroups_ConfirmInviteToFamilyGroup_Response
 49CFamilyGroups_RespondToRequestedPurchase_Response
 49CFamilyGroups_SetFamilyCooldownOverrides_Response
+49CFriendMessages_DismissSessionNotice_Notification
 49CFriendsMessages_GetActiveMessageSessions_Request
 49CGameRecording_GetAppsWithBackgroundVideo_Request
 49CInventory_ModifyItems_Request_ItemPropertyUpdate
@@ -17370,7 +17384,6 @@ BIsCancelled()
 BIsChatRoomVoiceSpeaking
 BIsClientUIInForeground
 BIsCompatLayerEnabled
-BIsCompatibilityToolAvailable %u setting source platform to %s
 BIsCompatibilityToolEnabled
 BIsCurrentlyNVStreaming
 BIsDirectoryWritable Yielding IO Job
@@ -20936,7 +20949,6 @@ CUtlStringBuilder::InternalPrepareBuffer
 CUtlStringBuilder::ReplaceInternal
 CUtlSymbol
 CUtlSymbolTable
-CUx*
 CVProfile_ExitScope
 CVRConnectionReady
 CVRManager
@@ -22048,6 +22060,7 @@ Couldn't open to sending socket for %s
 Couldn't open toc/bin, skipping %s.
 Couldn't parse CMsgRemoteDeviceAuthorizationRequest from pairing info
 Couldn't parse default value "
+Couldn't parse input settings: %s
 Couldn't read file '%s'\r\n
 Couldn't read header, skipping %s.
 Couldn't read manifest from bucket file!
@@ -22487,6 +22500,7 @@ Deactivating
 Death Metal
 Debit Card (Nodwin)
 Debug
+Debug spew to tell us the current "Jerk" value coming from the accelerometer
 DebugInstall
 DebugStatsSystem
 December
@@ -22751,6 +22765,7 @@ Disk read failure
 Disk write failure
 DismissFloatingGamepadTextInput
 DismissGamepadTextInput
+DismissSessionNotice
 DispatchClearAllBrowsingData
 DispatchClientPostMessage
 DispatchClientSettingsChanged
@@ -23094,6 +23109,7 @@ EChatRoomMemberStateChange
 EChatRoomMessageReactionType
 EChatRoomNotificationLevel
 EChatRoomServerMessage
+EChatSessionNotice
 EChildProcessQueryCommand
 EChildProcessQueryExitCode
 EClanAccountType
@@ -24618,7 +24634,6 @@ FindMarketingMessages
 FindOrCreateLeaderboard
 FindRichPresenceMap called for non-cached user %s\n
 FindSessionForStanza
-FindToolForTargetApp %u is invalid platform - applying wildcard mapping %s (over %s)
 FindToolForTargetApp matched with itself - ignoring: %u %s
 Finding AMD cache files, base directory: %s.
 Finding FOZ media files for archive version %u, base directory: %s.
@@ -24775,6 +24790,7 @@ FriendMessages
 FriendMessagesClient
 FriendMessagesClient.IncomingMessage#1
 FriendMessagesClient.MessageReaction#1
+FriendMessagesClient.SessionNotice#1
 FriendMsgEchoToSender
 FriendMsgIncoming
 Friends
@@ -25237,6 +25253,7 @@ GetBroadcastViewerStats
 GetBucketManifest
 GetBuildClipStatus
 GetBuildID
+GetBuiltInControllerIndex
 GetCDNAuthToken
 GetCMListForConnect -- DC '%s' count: %d
 GetCMListForConnect -- failed to parse KV response
@@ -26118,6 +26135,7 @@ Guides
 Gujarati
 Gurmukhi
 Gy?K
+Gyro Noise Value: %f, Raw Jerk Value: %f, Low Pass Jerk Value: %f, Jerk Threshold: %f, Jerks Detected: %u\n
 Gyro Rate switched from: %u us to: %u us.\n
 Gyro Sensor value: (%u us) fell outside of margin of error: (%u%%). Falling back on estimated polling value (%u us). \n
 GzOKV
@@ -26401,6 +26419,7 @@ How do we have an active SDR client connection with no sessions?
 How do we not have SDRPhsyicalSocket?
 How do we not know the FakeIP of the peer we are talking to?
 How many clean MB must we verify before backing off on auto-verifies
+How quickly the low pass filter chases the raw gyro jerk value.
 Hp!v
 HqI9x
 HsP;Va\Bb"i
@@ -26722,6 +26741,7 @@ IVRSteamPrivate_025
 IVRSystem_022
 I\n\finvite_links
 I\n\nSendShader
+I\n\rSessionNotice
 I\n\vChatMessage
 I\nlQ
 I\tHA\t981G'dc
@@ -28566,6 +28586,7 @@ Method DevGenerateItem() not implemented.
 Method DevSetNextDrop() not implemented.
 Method DisableParentalSettings() not implemented.
 Method Disconnect() not implemented.
+Method DismissSessionNotice() not implemented.
 Method DoesUserHavePendingMarketingMessages() not implemented.
 Method Download() not implemented.
 Method Eject() not implemented.
@@ -29070,6 +29091,7 @@ Method SendShader() not implemented.
 Method SendSteamBroadcastPacket() not implemented.
 Method SendSteamToSteamPacket() not implemented.
 Method SendThumbnailToRelay() not implemented.
+Method SessionNotice() not implemented.
 Method SetAnimatedAvatar() not implemented.
 Method SetAppChatRoomGroupForceActive() not implemented.
 Method SetAppChatRoomGroupStopForceActive() not implemented.
@@ -32479,6 +32501,7 @@ Region restricted
 Register Shader request for %s / %s shader %d failed with server reply: %s
 RegisterCompatTool
 RegisterEMsgHandler
+RegisterForIMUJerkEvent
 RegisterListeners
 RegisterOutput
 RegisterOutput: %u
@@ -35922,6 +35945,7 @@ The Job Manager changed, that seems bad.
 The VAD has been replaced by a hack pending a complete rewrite
 The XTest extension doesn't exist
 The [proto3_optional=true] option may only be set on proto3fields, not
+The amount of Gyro Jerk (gyro change per second) required to create a Controller Jerk count. Note, only available on SteamDeck/Neptune/Galileo
 The bucket count must be greater than 0 or the implementation will crash due to an incorrect mod mask.
 The current Steam realm does not match the requested resource
 The current session is closing
@@ -36628,6 +36652,7 @@ Unrecognized unit type for oFFs chunk
 Unrecognized unit type for pHYs chunk
 Unregister failed to find a valid IPipewireEventListener
 Unregister failed to find a valid IUdevEventListener
+UnregisterForIMUJerkEvent
 UnregisterOutput
 UnregisterOutput: %u
 UnregisterProcess
@@ -37850,8 +37875,6 @@ YieldingWaitForUpdateLock
 YieldingWritePendingAppStateChanges
 YieldingWritePerfOverlayConfig
 YieldingWriteToDisk
-YldCheckIfAppNeedsPlatformCompatibility: sub-verbose for %u in the k_nAppIdAll loop
-YldCheckIfAppNeedsPlatformCompatibility: verbose for %u
 YldCreateEmptyFilesAndFolders
 YldDoesGamePhaseRecordingExist
 YldFileDeleteInternal
@@ -42917,6 +42940,7 @@ chunkInfo.m_cubRaw > 0
 chunk_bytes_corrupt
 chunk_data_location
 chunk_responses
+chunk_upload_host
 chunked
 chunks
 chunks_corrupt
@@ -42943,7 +42967,7 @@ clFriendSource.m_vecUsers
 claim_membership
 claim_ownership
 clamp_range_slot
-clamped s_convarWriteHandleCache and s_convarReadHandleCache to stay under max open descriptor limits %u
+clamped s_convarWriteHandleCache and s_convarReadHandleCache from %d/%d to %d, to stay under max open descriptor limit %u
 clan_account_flags
 clan_account_id
 clan_accountid
@@ -43222,7 +43246,9 @@ compressed
 compressed data too long
 compressed length too long
 compressed-data
+compressed_crc
 compressed_file_size
+compressed_size
 compression disabled
 compression failed in mz_zip_writer_add_mem
 compression failed in mz_zip_writer_finalize_heap_archive
@@ -43433,6 +43459,10 @@ controller_hid_switch_pro
 controller_hori_steam
 controller_idle_poll_interval
 controller_index
+controller_jerk_low_pass_filter_rate
+controller_jerk_threshold
+controller_jerk_threshold_debug
+controller_jerk_throttle
 controller_keyboard_generic
 controller_legion_go
 controller_legion_go_s
@@ -48227,6 +48257,8 @@ k_EChatRoomServerMsg_Invited
 k_EChatRoomServerMsg_Joined
 k_EChatRoomServerMsg_Kicked
 k_EChatRoomServerMsg_Parted
+k_EChatSessionNotice_Invalid
+k_EChatSessionNotice_Suspicious
 k_EChildProcessQueryCommand_Max
 k_EClanBetaReleaseEvent
 k_EClanBroadcastEvent
@@ -48348,7 +48380,7 @@ k_EContentReportReason_Trolling
 k_EContentReportReason_Unknown
 k_EContentReportResolution_MAX
 k_EContentReportSubjectType_MAX
-k_EControllerAction_Add_ActionSet_Layerk_EControllerAction_BigPicture_Minimizek_EControllerAction_BigPicture_Openk_EControllerAction_BigPicture_Quitk_EControllerAction_Camera_DotsPer360_CalibrationSpink_EControllerAction_Camera_Horizon_Resetk_EControllerAction_Camera_Turn_To_Face_Directionk_EControllerAction_Change_Player_Numberk_EControllerAction_Change_Presetk_EControllerAction_Change_TouchscreenMode_Hoverk_EControllerAction_Change_TouchscreenMode_LeftClickk_EControllerAction_Change_TouchscreenMode_MiddleClickk_EControllerAction_Change_TouchscreenMode_Nativek_EControllerAction_Change_TouchscreenMode_Nonek_EControllerAction_Change_TouchscreenMode_RightClickk_EControllerAction_Chord_Hint_Dismissk_EControllerAction_Chord_Hint_Displayk_EControllerAction_Controller_PowerOffk_EControllerAction_Countk_EControllerAction_Empty_Sub_Commandk_EControllerAction_Force_Guide_Upk_EControllerAction_GR_Clipk_EControllerAction_GR_Markerk_EControllerAction_GR_Togglek_EControllerAction_GuideQAMStateChangek_EControllerAction_Hold_ActionSet_Layerk_EControllerAction_Host_PowerOffk_EControllerAction_Host_Restartk_EControllerAction_Host_Suspendk_EControllerAction_Layer_Empty_Bindingk_EControllerAction_Mouse_Deltak_EControllerAction_Mouse_Positionk_EControllerAction_Notify_ActionSetLayer_Changek_EControllerAction_Notify_ActionSet_Changek_EControllerAction_Notify_InputGeneratedk_EControllerAction_Notify_XInput_Slot_Changek_EControllerAction_Open_Configuratork_EControllerAction_Open_QuickMenuk_EControllerAction_Quit_Applicationk_EControllerAction_Remove_ActionSet_Layerk_EControllerAction_RequestConfigActivationk_EControllerAction_RequestCursorVisibilityChecksk_EControllerAction_ScreenReader_Disablek_EControllerAction_ScreenReader_Enablek_EControllerAction_ScreenReader_NextHeadingk_EControllerAction_ScreenReader_NextItemk_EControllerAction_ScreenReader_NextLandmarkk_EControllerAction_ScreenReader_NextWordk_EControllerAction_ScreenReader_PrevHeadingk_EControllerAction_ScreenReader_PrevItemk_EControllerAction_ScreenReader_PrevLandmarkk_EControllerAction_ScreenReader_PrevWordk_EControllerAction_ScreenReader_StopTalkingk_EControllerAction_ScreenReader_ToggleModek_EControllerAction_Screen_Brightness_Downk_EControllerAction_Screen_Brightness_Upk_EControllerAction_Screenshotk_EControllerAction_Set_LEDk_EControllerAction_Show_Keyboardk_EControllerAction_SteamMusic_Nextk_EControllerAction_SteamMusic_PlayPausek_EControllerAction_SteamMusic_Prevk_EControllerAction_SteamMusic_VolDownk_EControllerAction_SteamMusic_VolMutek_EControllerAction_SteamMusic_VolUpk_EControllerAction_System_Key_0k_EControllerAction_System_Key_1k_EControllerAction_Toggle_Hapticsk_EControllerAction_Toggle_Hudk_EControllerAction_Toggle_Lizard_Modek_EControllerAction_Toggle_Magnifierk_EControllerAction_Toggle_Rumble
+k_EControllerAction_Add_ActionSet_Layerk_EControllerAction_BigPicture_Minimizek_EControllerAction_BigPicture_Openk_EControllerAction_BigPicture_Quitk_EControllerAction_Camera_DotsPer360_CalibrationSpink_EControllerAction_Camera_Horizon_Resetk_EControllerAction_Camera_Turn_To_Face_Directionk_EControllerAction_Change_Player_Numberk_EControllerAction_Change_Presetk_EControllerAction_Change_TouchscreenMode_Hoverk_EControllerAction_Change_TouchscreenMode_LeftClickk_EControllerAction_Change_TouchscreenMode_MiddleClickk_EControllerAction_Change_TouchscreenMode_Nativek_EControllerAction_Change_TouchscreenMode_Nonek_EControllerAction_Change_TouchscreenMode_RightClickk_EControllerAction_Chord_Hint_Dismissk_EControllerAction_Chord_Hint_Displayk_EControllerAction_Controller_PowerOffk_EControllerAction_Countk_EControllerAction_Empty_Sub_Commandk_EControllerAction_Force_Guide_Upk_EControllerAction_GR_Clipk_EControllerAction_GR_Markerk_EControllerAction_GR_Togglek_EControllerAction_GuideQAMStateChangek_EControllerAction_Hold_ActionSet_Layerk_EControllerAction_Host_PowerOffk_EControllerAction_Host_Restartk_EControllerAction_Host_Suspendk_EControllerAction_IMUJerkEventk_EControllerAction_Layer_Empty_Bindingk_EControllerAction_Mouse_Deltak_EControllerAction_Mouse_Positionk_EControllerAction_Notify_ActionSetLayer_Changek_EControllerAction_Notify_ActionSet_Changek_EControllerAction_Notify_InputGeneratedk_EControllerAction_Notify_XInput_Slot_Changek_EControllerAction_Open_Configuratork_EControllerAction_Open_QuickMenuk_EControllerAction_Quit_Applicationk_EControllerAction_Remove_ActionSet_Layerk_EControllerAction_RequestConfigActivationk_EControllerAction_RequestCursorVisibilityChecksk_EControllerAction_ScreenReader_Disablek_EControllerAction_ScreenReader_Enablek_EControllerAction_ScreenReader_NextHeadingk_EControllerAction_ScreenReader_NextItemk_EControllerAction_ScreenReader_NextLandmarkk_EControllerAction_ScreenReader_NextWordk_EControllerAction_ScreenReader_PrevHeadingk_EControllerAction_ScreenReader_PrevItemk_EControllerAction_ScreenReader_PrevLandmarkk_EControllerAction_ScreenReader_PrevWordk_EControllerAction_ScreenReader_StopTalkingk_EControllerAction_ScreenReader_ToggleModek_EControllerAction_Screen_Brightness_Downk_EControllerAction_Screen_Brightness_Upk_EControllerAction_Screenshotk_EControllerAction_Set_LEDk_EControllerAction_Show_Keyboardk_EControllerAction_SteamMusic_Nextk_EControllerAction_SteamMusic_PlayPausek_EControllerAction_SteamMusic_Prevk_EControllerAction_SteamMusic_VolDownk_EControllerAction_SteamMusic_VolMutek_EControllerAction_SteamMusic_VolUpk_EControllerAction_System_Key_0k_EControllerAction_System_Key_1k_EControllerAction_Toggle_Hapticsk_EControllerAction_Toggle_Hudk_EControllerAction_Toggle_Lizard_Modek_EControllerAction_Toggle_Magnifierk_EControllerAction_Toggle_Rumble
 k_EControllerActivationType_Analogk_EControllerActivationType_Chordk_EControllerActivationType_Countk_EControllerActivationType_DoublePressk_EControllerActivationType_FullPressk_EControllerActivationType_LongPressk_EControllerActivationType_Nonek_EControllerActivationType_Releasek_EControllerActivationType_SoftPressk_EControllerActivationType_StartPress
 k_EControllerDigitalInput_BatteryLowk_EControllerDigitalInput_Button1k_EControllerDigitalInput_Button2k_EControllerDigitalInput_Button3k_EControllerDigitalInput_Button4k_EControllerDigitalInput_ButtonAk_EControllerDigitalInput_ButtonAlwaysOnk_EControllerDigitalInput_ButtonAncillary1k_EControllerDigitalInput_ButtonBk_EControllerDigitalInput_ButtonBackLeftk_EControllerDigitalInput_ButtonBackLeft2k_EControllerDigitalInput_ButtonBackRightk_EControllerDigitalInput_ButtonBackRight2k_EControllerDigitalInput_ButtonDownk_EControllerDigitalInput_ButtonEscapek_EControllerDigitalInput_ButtonLeftk_EControllerDigitalInput_ButtonLeftBumperk_EControllerDigitalInput_ButtonLeftJoystickClickk_EControllerDigitalInput_ButtonLeftTriggerk_EControllerDigitalInput_ButtonMacro0k_EControllerDigitalInput_ButtonMacro1k_EControllerDigitalInput_ButtonMacro1Fingerk_EControllerDigitalInput_ButtonMacro2k_EControllerDigitalInput_ButtonMacro2Fingerk_EControllerDigitalInput_ButtonMacro3k_EControllerDigitalInput_ButtonMacro4k_EControllerDigitalInput_ButtonMacro5k_EControllerDigitalInput_ButtonMacro6k_EControllerDigitalInput_ButtonMacro7k_EControllerDigitalInput_ButtonMenuk_EControllerDigitalInput_ButtonNonek_EControllerDigitalInput_ButtonRightk_EControllerDigitalInput_ButtonRightBumperk_EControllerDigitalInput_ButtonRightJoystickClickk_EControllerDigitalInput_ButtonRightTriggerk_EControllerDigitalInput_ButtonSteamk_EControllerDigitalInput_ButtonUpk_EControllerDigitalInput_ButtonXk_EControllerDigitalInput_ButtonYk_EControllerDigitalInput_Countk_EControllerDigitalInput_LeftAuxCapSensek_EControllerDigitalInput_LeftTrackPadTouchk_EControllerDigitalInput_LeftTrackpadClickk_EControllerDigitalInput_LeftTrackpadDoubleTapk_EControllerDigitalInput_LeftTrackpadEk_EControllerDigitalInput_LeftTrackpadNk_EControllerDigitalInput_LeftTrackpadNek_EControllerDigitalInput_LeftTrackpadNwk_EControllerDigitalInput_LeftTrackpadOuterRadiusk_EControllerDigitalInput_LeftTrackpadSk_EControllerDigitalInput_LeftTrackpadSek_EControllerDigitalInput_LeftTrackpadSwk_EControllerDigitalInput_LeftTrackpadWk_EControllerDigitalInput_LeftTriggerThresholdk_EControllerDigitalInput_RightAuxCapSensek_EControllerDigitalInput_RightTrackPadTouchk_EControllerDigitalInput_RightTrackpadClickk_EControllerDigitalInput_RightTrackpadDoubleTapk_EControllerDigitalInput_RightTrackpadEk_EControllerDigitalInput_RightTrackpadNk_EControllerDigitalInput_RightTrackpadNek_EControllerDigitalInput_RightTrackpadNwk_EControllerDigitalInput_RightTrackpadOuterRadiusk_EControllerDigitalInput_RightTrackpadSk_EControllerDigitalInput_RightTrackpadSek_EControllerDigitalInput_RightTrackpadSwk_EControllerDigitalInput_RightTrackpadWk_EControllerDigitalInput_RightTriggerThresholdk_EControllerDigitalInput_StickDownk_EControllerDigitalInput_StickLeftk_EControllerDigitalInput_StickRightk_EControllerDigitalInput_StickUpk_EControllerDigitalInput_Touch1k_EControllerDigitalInput_Touch2k_EControllerDigitalInput_Touch3k_EControllerDigitalInput_Touch4
 k_EControllerElementTypeButtonA
@@ -50055,7 +50087,6 @@ k_eP2PDisconnectReasonNone
 k_eP2PDisconnectReasonTCPConnectionAborted
 k_eP2PDisconnectReasonTimeout
 k_eRGB
-k_nAppIdAll: setting platform override for invalid platform app %u dest %s src %s
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 k_nSymmetricKeyLen256 == cubKey || k_nSymmetricKeyLen128 == cubKey
@@ -50121,6 +50152,7 @@ key_type
 key_up
 keyblob header parse error
 keyblob too short
+keyboard=%d,mouse=%d,controller=%d
 keyboard_enabled
 keycode
 keyfunc
@@ -50624,14 +50656,14 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:467
 low-pri yield - /data/src/clientdll/clientjob.cpp:776
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6850
-low-pri yield - /data/src/clientdll/compatmanager.cpp:1959
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2232
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2527
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3198
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3230
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3243
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3295
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3902
+low-pri yield - /data/src/clientdll/compatmanager.cpp:1953
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2226
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2497
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3163
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3195
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3208
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3260
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3867
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3071
@@ -50787,7 +50819,6 @@ m_KnockoutNoColorGlyphs
 m_KnockoutOutlineGlyphs
 m_KnockoutOutlineNoColorGlyphs
 m_LastRequestInfo
-m_LeftAntiDriftMonitor
 m_LightGlyphs
 m_LightNoColorGlyphs
 m_LightOutlineGlyphs
@@ -50962,7 +50993,6 @@ m_WorkThreads[ iWorkThread ]
 m_addressActiveWebSocket
 m_allSessions
 m_allocMsg
-m_antiDriftMonitor
 m_apiCall
 m_arMarker[n-1].m_nID != m_arMarker[n].m_nID
 m_arrDictionaryLastModifiedTime[ iLanguage ][ iDictType ]
@@ -51204,6 +51234,7 @@ m_gameID
 m_gameid
 m_gidAnnouncement
 m_gidLaunchID
+m_gyroProcessing[ i ].m_antiDriftMonitor
 m_hCEFHandle != INVALID_PROCESS_HANDLE
 m_hCEFHandle == INVALID_PROCESS_HANDLE
 m_hConnection != 0xdddddddd
@@ -51665,7 +51696,6 @@ m_nFakeIPPortsRequested > 0
 m_nFlags & k_nSteamNetworkingSend_Reliable
 m_nFrontPingLocal <= m_nFrontPingLocalMax
 m_nFrontPingLocalMin <= m_nFrontPingLocal
-m_nGameID
 m_nHandle < 0
 m_nHeldLocks > 0
 m_nIndex
@@ -52938,6 +52968,7 @@ manifest_id_source
 manifest_id_target
 manifest_request_code
 manifest_requests
+manifest_upload_host
 manifestgid
 manifestid
 manifests
@@ -54196,6 +54227,7 @@ noticeNumbers
 notice_section
 noticenos
 noticeref
+notices
 notification_id
 notification_key
 notification_targets
@@ -54712,6 +54744,7 @@ pGameStats->GetNewSession k_uAPICallInvalid
 pGlobal->IsSet()
 pGlobal->m_pInherit == nullptr
 pGlobalUser->GetPUser()
+pGroup->m_bIsHost
 pH88
 pHYs
 pHandle
@@ -56283,7 +56316,7 @@ remoteStorageConfig
 remote_address
 remote_candidate_types
 remote_client_dongle
-remote_client_dongle [[connect|monitor] clientid ssid password isWPA2]|[[disconnect|status|checkon] clientid]|remonitor
+remote_client_dongle [[connect|monitor] clientid ssid password isWPA2]|[[disconnect|status|disable|enable|checkon] clientid]|remonitor
 remote_client_dongle [[connect|monitor] clientid ssid password isWPA2|disconnect|status|checkon clientid]
 remote_client_id
 remote_clients
@@ -57913,7 +57946,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct 23 2025 22:23:25
+steam Oct 30 2025 00:54:23
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -58255,6 +58288,7 @@ streaming/Clients
 streaming/Devices
 streaming/PIN
 streaming/PINSize
+streaming/PerUserGameInputSettings
 streaming_client_caps
 streaming_client_config
 streaming_provider_id
