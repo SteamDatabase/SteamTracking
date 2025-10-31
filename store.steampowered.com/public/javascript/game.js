@@ -2365,14 +2365,13 @@ $J(document).ready(function() {
 		return $btnPlayPause;
 	}
 
-	function addExpandIcon($actionBar, $img) {
+	function addExpandIcon($actionBar, $img, bigSrc) {
 		const strPanel = 'data-panel="{&quot;focusable&quot;:true,&quot;clickOnActivate&quot;:true}" role="button"';
 		const $btnExpand = $J(`<div class='bb_img_expand' ${strPanel}>🔎</div>`);
 		$actionBar.append($btnExpand);
 
 		$btnExpand.on("click", function(e) {
-			const src = $img.attr("src");
-			const newSrc = src.replace("/extras/", "/extras_big/");
+			const newSrc = bigSrc && bigSrc.length ? bigSrc : $img.attr("src");
 			window.open(newSrc, "_blank");
 		});
 
@@ -2457,8 +2456,9 @@ $J(document).ready(function() {
 
 		// only imgs can have expand buttons
 		let $btnExpand = null;
-		if ($img.length !== 0 && $img.data("has-big") !== undefined) {
-			$btnExpand = addExpandIcon($actionBar, $img);
+		const nColumnWidth = 780;
+		if ($img.length !== 0 && ($img.data("big-src") !== undefined || $img.attr("width") > nColumnWidth * 1.25)) {
+			$btnExpand = addExpandIcon($actionBar, $img, $img.data("big-src"));
 		}
 
 		const bVideoWithSources = $video.length !== 0 && $video.find("source").length > 0;
