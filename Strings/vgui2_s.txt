@@ -2425,6 +2425,7 @@ PNG_TRANSFORM_STRIP_FILLER: BEFORE+AFTER not supported
 PORTABILITY
 POSIX
 PRETTY_NAME
+Package id 0
 PackageCount
 PackageID
 Palette is NULL in indexed image
@@ -2769,6 +2770,7 @@ String field
 String literals cannot cross line boundaries.
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
+StringFindSuffix
 StringPrintfVector currently only supports up to
 Sunday
 SurfaceSetCursorPos needs to be implemented!\n
@@ -2798,6 +2800,8 @@ Table %s Key %d\n
 Tajik
 Tamil
 Tatar
+Tctl
+Tdie
 Telugu
 TerritoryCode
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)\n
@@ -3457,6 +3461,8 @@ _english.txt
 _exit
 _fini
 _init
+_input
+_label
 _longjmp
 _popupList
 _setjmp
@@ -3476,6 +3482,7 @@ about to perform blocking dns call from the main thread.  consider refactoring.\
 accept
 access
 accessor_ == other.accessor_
+acpitz
 active
 additional_includes
 additive
@@ -3521,6 +3528,7 @@ arabic
 armenian
 array
 assamese
+asusec
 auto
 auto:
 availableSpace
@@ -3689,6 +3697,7 @@ control
 controls
 convar_
 copypos == vecTraversalCache.Count()
+coretemp
 corner
 corner_rounding
 count >= 0
@@ -4300,6 +4309,7 @@ json_name = "
 jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
 jupiter
+k10temp
 k2U\v
 kKKEY_K
 kannada
@@ -4635,6 +4645,7 @@ numElements >= 0
 number
 oFFs
 oOKEY_O
+oTK4
 objc_class_prefix
 object
 odia
@@ -4682,6 +4693,7 @@ pPKEY_P
 pPlat->m_hWindow
 pPool->m_SpaceUsed < 0xFFFF
 pRoot->Client()
+pTemperature is a required paramater
 pToken
 pVPanel->IsVisible()
 pWatcher != NULL
@@ -5105,6 +5117,8 @@ tcgetattr
 tchinese
 tcsetattr
 telugu
+temp*
+temp1_input
 template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
@@ -5334,6 +5348,7 @@ zTXt
 zTXt: invalid compression type
 zTXt: invalid keyword
 zZKEY_Z
+zenpower
 zh-cn
 zh-tw
 zh-xc

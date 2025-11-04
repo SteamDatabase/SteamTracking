@@ -913,6 +913,7 @@
 ".\n,CGameRecording_GetAvailableDiskSpace_Request"=\n-CGameRecording_GetAvailableDiskSpace_Response
 ".\n,CGameRecording_PhaseListChanged_Notification"
 ".\n,CPublishedFile_StopPlaytimeTracking_Response"J\n9CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request
+".\n,CSleepManager_ResumeFromSuspend_Notification"*\n(CSleepManager_ShowPowerMenu_Notification"]\n(CSleepManager_SwitchToPowerState_Request
 ".\n,CStore_QueueWishlistDemoEmailToFire_Response"
 "/*" inside block comment.  Block comments cannot be nested.
 "/\n-CFamilyGroups_ConfirmJoinFamilyGroup_Response"`\n+CFamilyGroups_RemoveFromFamilyGroup_Request
@@ -3734,6 +3735,7 @@ $steammessages_parental_objects.proto"
 (\t"*\n(CSteamTV_ReportBroadcastChannel_Response"O\n/CSteamTV_GetBroadcastChannelInteraction_Request
 (\t"*\n(GameServerClient_QueryServerData_Request"
 (\t"*\n(SiteServerUI_ContentCacheConfig_ResponseB
+(\t"+\n)CSleepManager_SwitchToPowerState_Response*
 (\t",\n*CChatRoom_SetChatRoomGroupTagline_Response"U\n(CChatRoom_SetChatRoomGroupAvatar_Request
 (\t".\n,CSteamTV_SetBroadcastChannelProfile_Response"K\n+CSteamTV_GetBroadcastChannelProfile_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
@@ -4401,6 +4403,7 @@ $steammessages_parental_objects.proto"
 ).CSiteLicense_ClientSeatCheckout_Response"
 ).CSiteLicense_InitiateAssociation_Request
 ).CSleepManager_ShowPowerMenu_Notification
+).CSleepManager_SwitchToPowerState_Request
 ).CSteamTV_CreateBroadcastChannel_Response"
 ).CSteamTV_FollowBroadcastChannel_Response"
 ).CSteamTV_GetMyBroadcastChannels_Response"
@@ -4538,12 +4541,14 @@ $steammessages_parental_objects.proto"
 )\n%k_EStreamControlDisableHighResCapture
 )\n%k_EStreamControlSaveTouchConfigLayout
 )\n%k_EStreamFrameResultDroppedDecodeSlow
+)\n%k_ESystemPowerState_LowPowerDownloads
 )\n%k_ETimelineEntryType_StateDescription
 )\n%k_ETwoFactorStatusFieldFlag_LastUsage
 )\n%k_EnhancedMarketAppearanceStatus_None
 )\n%k_PublishedFileQueryType_RankedByVote
 )\n\ncategories
 )\n\nmouse_down
+)\n\rcurrent_state
 )\n\rdecoder_limit
 )\n\rdisplay_limit
 )\n\rjoystick_left
@@ -4629,6 +4634,7 @@ $steammessages_parental_objects.proto"
 *.CSiteLicense_InitiateAssociation_Response"
 *.CSiteManagerClient_IncomingClient_Request
 *.CSleepManager_RequestSuspend_Notification
+*.CSleepManager_SwitchToPowerState_Response
 *.CSteamOSManager_StateChanged_Notification
 *.CSteamTV_GetBroadcastChannelClips_Request
 *.CSteamTV_GetBroadcastChannelLinks_Request
@@ -6186,7 +6192,7 @@ $steammessages_parental_objects.proto"
 .CMsgNetworkDeviceIP6Config
 .CMsgNetworkDevicesData.Device
 .CMsgShortcutInfo"$\n
-.CMsgSleepManagerState")\n'CSleepManager_StateChanged_Notification"+\n)CSleepManager_RequestSuspend_Notification".\n,CSleepManager_ResumeFromSuspend_Notification"*\n(CSleepManager_ShowPowerMenu_Notification2
+.CMsgSleepManagerState")\n'CSleepManager_StateChanged_Notification"a\n)CSleepManager_RequestSuspend_Notification
 .CMsgSteamDatagramCertificateB
 .CMsgSteamNetworkingIPAddress
 .CMsgSteamUIBrowserWindow2
@@ -6530,6 +6536,8 @@ $steammessages_parental_objects.proto"
 .ESystemAudioPortDirection
 .ESystemAudioPortType
 .ESystemFanControlMode
+.ESystemPowerState
+.ESystemPowerState" \n
 .ESystemServiceState
 .ETextFilterSetting
 .EThumbnailFormat:
@@ -7034,10 +7042,10 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/systemdockmanager_linux.cpp:564
 /data/src/clientdll/systemlogcollector.cpp
 /data/src/clientdll/systemmanager.cpp
-/data/src/clientdll/systemmanager.cpp:2659
-/data/src/clientdll/systemmanager.cpp:3172
-/data/src/clientdll/systemmanager.cpp:4714
-/data/src/clientdll/systemmanager.cpp:5320
+/data/src/clientdll/systemmanager.cpp:2657
+/data/src/clientdll/systemmanager.cpp:3146
+/data/src/clientdll/systemmanager.cpp:4670
+/data/src/clientdll/systemmanager.cpp:5276
 /data/src/clientdll/systemperfmanager.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp:1340
@@ -7595,13 +7603,11 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
+0.0333
 0.050
 0.13.15.106
 0.15
 0.3.27
-0000000000000000000000000000000000000000
-0000000000000000
-0.0333
 0.75
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
@@ -7640,6 +7646,8 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
+0000000000000000000000000000000000000000
+0000000000000000
 00000001
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -11101,10 +11109,10 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-20000
 200M
 2019
 2048
+20000
 2000000
 20AccountHardware_Stub
 20AppOwnershipTicket_t
@@ -14085,6 +14093,7 @@ $steammessages_parental_objects.proto"
 40CSiteLicense_ClientSeatCheckout_Response
 40CSiteLicense_InitiateAssociation_Request
 40CSleepManager_ShowPowerMenu_Notification
+40CSleepManager_SwitchToPowerState_Request
 40CSteamTV_CreateBroadcastChannel_Response
 40CSteamTV_FollowBroadcastChannel_Response
 40CSteamTV_GetMyBroadcastChannels_Response
@@ -14198,6 +14207,7 @@ $steammessages_parental_objects.proto"
 41CSiteLicense_InitiateAssociation_Response
 41CSiteManagerClient_IncomingClient_Request
 41CSleepManager_RequestSuspend_Notification
+41CSleepManager_SwitchToPowerState_Response
 41CSteamOSManager_StateChanged_Notification
 41CSteamTV_GetBroadcastChannelClips_Request
 41CSteamTV_GetBroadcastChannelLinks_Request
@@ -14786,6 +14796,7 @@ $steammessages_parental_objects.proto"
 4T9\n
 4\fZQ
 4\n'k_EChildProcessQueryExitCode_ErrorOther
+4\n,optionally_transition_to_low_power_downloads
 4\n/k_EMsgAISBroadcastSubordinateContentDescription
 4\n/k_EMsgBSBoaCompraConfirmProductDeliveryResponse
 4\n/k_EMsgClientChatGetFriendMessageHistoryResponse
@@ -19941,7 +19952,7 @@ CMsgShowBrowserContextMenu
 CMsgShowToolTip
 CMsgShowWindow
 CMsgSigmoidalCurve
-CMsgSleepManagerState" \n
+CMsgSleepManagerState
 CMsgStartDownload
 CMsgStartRequest
 CMsgStartRequestResponse
@@ -23406,6 +23417,7 @@ ESystemAudioPortDirection
 ESystemAudioPortType
 ESystemDisplayCompatibilityMode
 ESystemFanControlMode
+ESystemPowerState
 ESystemServiceState
 ETCO
 ETIMEDOUT
@@ -29170,6 +29182,7 @@ Method Subscribe() not implemented.
 Method SubscribeBroadcastChannel() not implemented.
 Method SuspendAppSession() not implemented.
 Method SwitchBackgroundRecordingGame() not implemented.
+Method SwitchToPowerState() not implemented.
 Method TakeScreenshot() not implemented.
 Method ThreadedCount() not implemented.
 Method TrackedPaymentsNotification() not implemented.
@@ -31487,6 +31500,7 @@ P\n\rRegisterCDKey
 P\n\rcountry_stats
 P\n\vReorderRole
 P\n\vUploadImage
+Package id 0
 Package requires an invitation for a reservation to purchase
 PackageCount
 PackageID
@@ -34647,8 +34661,6 @@ Software\Valve\Steam\System\DisplayNightModeTintStrength
 Software\Valve\Steam\System\FanMode
 Software\Valve\Steam\System\HostID
 Software\Valve\Steam\System\IdleBacklightDimACSeconds
-Software\Valve\Steam\System\IdleSuspendACSeconds
-Software\Valve\Steam\System\IdleSuspendBatterySeconds
 Software\Valve\Steam\System\WifiPowerManagementEnabled
 Software\Valve\Steam\TimeCellIDSet
 Software\Valve\Steam\ToolMapping
@@ -35215,6 +35227,9 @@ SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
+SteamTraceEnter
+SteamTraceExit
+SteamTraceModule
 SteamUdevContext
 SteamUniverse
 SteamUser
@@ -35451,6 +35466,7 @@ Switch State: %llx\n
 SwitchBackgroundRecordingGame
 SwitchConfirm
 SwitchSettingsChanged
+SwitchToPowerState
 SwitchToUser
 Switching Protocols
 Syloti_Nagri
@@ -35900,6 +35916,8 @@ Target hour, in local time, for auto-scheduled app updates. Will be spread aroun
 TargetBuildID
 TaskQueue
 Tatar
+Tctl
+Tdie
 Techno
 Techno-Industrial
 Telugu
@@ -41032,8 +41050,10 @@ _exit
 _fini
 _g@Cg
 _init
+_input
 _jbF~T
 _jgqnyu
+_label
 _longjmp
 _nSize == 0
 _out.wav
@@ -41193,6 +41213,7 @@ ack_forward_target_revision
 ack_peer_routes_revision
 ack_reliable_msg
 acosf
+acpitz
 acpt_state
 action
 action->type == k_EControllerBindingType_Modeshift
@@ -41715,6 +41736,7 @@ associated_item_id
 associated_message
 associated_name
 association_type
+asusec
 async disconnect
 async file read
 async file write
@@ -43273,6 +43295,9 @@ config-failed
 config.vdf
 config/GameOverlay_CompatMode
 config/GameOverlay_TestMode
+config/SteamTraceEnter
+config/SteamTraceExit
+config/SteamTraceModule
 config/coplay_%llu.vdf
 config/mangohud.conf
 config/oslist
@@ -43537,6 +43562,7 @@ copy
 copy error
 copy_email
 copy_issuer
+coretemp
 corrupted stream
 corruption_type
 cosf
@@ -46183,7 +46209,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen2{N
 ghjkl
 gidlist
 gidparentcomment
@@ -47278,9 +47304,6 @@ idle-hint
 idle-since-hint
 idle-since-hint-monotonic
 idle_backlight_dim_ac_seconds
-idle_suspend_ac_seconds
-idle_suspend_battery_seconds
-idle_suspend_supressed
 idp mismatch
 ids_only
 idx != m_mapRemoteFileCacheData.InvalidIndex()
@@ -47901,6 +47924,7 @@ is_large()
 is_live
 is_look_supported
 is_low_latency_mode_enabled
+is_low_power_download_supported
 is_mandatory_update_available
 is_manual_gpu_clock_available
 is_media_available
@@ -47952,6 +47976,7 @@ is_vrs_available
 is_websocket_connect
 is_wifi_debug_force_disabled
 is_wifi_debug_supported
+is_wifi_driver_reload_available
 is_wifi_enabled
 is_wifi_powersave_enabled
 is_wifi_scanning_enabled
@@ -48100,6 +48125,7 @@ jurisdictionST
 jurisdictionStateOrProvinceName
 jwK\v\n
 k'pd
+k10temp
 k2U\v
 k53i
 k=E.x=i
@@ -49940,6 +49966,9 @@ k_EStreamingAudioData
 k_EStreamingMicrophoneData
 k_EStreamingNeptuneData
 k_EStreamingVideoData
+k_ESystemPowerState_Invalid
+k_ESystemPowerState_Normal
+k_ESystemPowerState_Sleep
 k_ESystemServiceState_Disabled
 k_ESystemServiceState_Enabled
 k_ETesterStatusExpired
@@ -54974,6 +55003,7 @@ pTask->m_eTaskState == CQueuedTask::k_ETaskState_Queued
 pTask->m_eTaskState == CQueuedTask::k_ETaskState_ReadyToDelete
 pTask->m_pTarget == nullptr
 pTask->m_pTarget == this
+pTemperature is a required paramater
 pThis->m_nReplyTimeoutsSinceLastRecv == 0
 pThread
 pTicket != NULL
@@ -57946,7 +57976,7 @@ stderr
 stdin
 stdout
 steam
-steam Oct 30 2025 00:54:23
+steam Nov  4 2025 20:42:17
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -58548,6 +58578,8 @@ teliasonera
 telugu
 telus
 temp
+temp*
+temp1_input
 template
 template parameter object for
 template_vars_json
@@ -60416,6 +60448,7 @@ webuimessages_base.proto"7\n#CTransportAuth_Authenticate_Request
 webuimessages_base.proto"E\n+CTransportValidation_AppendToString_Request
 webuimessages_base.proto"V\n
 webuimessages_base.proto"V\n4CSteamEngine_UpdateTextFilterDictionary_Notification
+webuimessages_base.proto"k\n
 webuimessages_base.proto"}\n
 webuimessages_bluetooth.proto
 webuimessages_gamenotes.proto
@@ -60707,6 +60740,7 @@ zC`G;
 zTXt
 zTXt: invalid compression type
 zTXt: invalid keyword
+zenpower
 zh-cn
 zh-tw
 zh-xc

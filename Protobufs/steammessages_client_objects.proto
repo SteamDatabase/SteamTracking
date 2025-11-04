@@ -513,9 +513,6 @@ message CMsgSystemDisplayManagerSetMode {
 message CMsgSystemManagerSettings {
 	optional float idle_backlight_dim_battery_seconds = 1;
 	optional float idle_backlight_dim_ac_seconds = 2;
-	optional float idle_suspend_battery_seconds = 3;
-	optional float idle_suspend_ac_seconds = 4;
-	optional bool idle_suspend_supressed = 5;
 	optional bool is_adaptive_brightness_available = 6;
 	optional bool display_adaptive_brightness_enabled = 7;
 	optional bool display_nightmode_enabled = 10;

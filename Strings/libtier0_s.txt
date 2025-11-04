@@ -94,10 +94,10 @@ $ORIGIN
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
-00:52:08
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
+20:42:09
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -324,9 +324,9 @@ Network
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
+Nov  4 2025
 OUT OF MEMORY
 Object
-Oct 30 2025
 Only thread can stop self: Use a higher-level protocol
 OverlayFrameMark
 OverlayInput

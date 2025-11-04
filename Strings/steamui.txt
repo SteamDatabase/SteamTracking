@@ -671,6 +671,7 @@
 ".\n,CGameRecording_GetAvailableDiskSpace_Request"=\n-CGameRecording_GetAvailableDiskSpace_Response
 ".\n,CGameRecording_PhaseListChanged_Notification"
 ".\n,CPublishedFile_StopPlaytimeTracking_Response"J\n9CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request
+".\n,CSleepManager_ResumeFromSuspend_Notification"*\n(CSleepManager_ShowPowerMenu_Notification"]\n(CSleepManager_SwitchToPowerState_Request
 ".\n,CStore_QueueWishlistDemoEmailToFire_Response"
 "/*" inside block comment.  Block comments cannot be nested.
 "/\n-CFamilyGroups_ConfirmJoinFamilyGroup_Response"`\n+CFamilyGroups_RemoveFromFamilyGroup_Request
@@ -2231,6 +2232,7 @@ ${LANGUAGE}
 %s: rescheduling trim to run in %d seconds: %s
 %s: restoring previous glx context\n
 %s: result: %d - %s
+%s: set atomupd proxy: enabled: %d, address: %s:%d
 %s: set hostname to %s\n
 %s: set screen reader voice: %s -> %s
 %s: set timezone to %s\n
@@ -3267,6 +3269,7 @@ ${LANGUAGE}
 (\t"*\n(CSteamTV_ReportBroadcastChannel_Response"O\n/CSteamTV_GetBroadcastChannelInteraction_Request
 (\t"*\n(GameServerClient_QueryServerData_Request"
 (\t"*\n(SiteServerUI_ContentCacheConfig_ResponseB
+(\t"+\n)CSleepManager_SwitchToPowerState_Response*
 (\t",\n*CChatRoom_SetChatRoomGroupTagline_Response"U\n(CChatRoom_SetChatRoomGroupAvatar_Request
 (\t",\n*CClientNotificationDockUnsupportedFirmware"H\n$CClientNotificationPeerContentUpload
 (\t".\n,CSteamTV_SetBroadcastChannelProfile_Response"K\n+CSteamTV_GetBroadcastChannelProfile_Request
@@ -3748,6 +3751,7 @@ ${LANGUAGE}
 (osa{sv})
 (qFfQ
 (root)
+(sia{sv})
 (size_t) pNetPacket->CubData() >= sizeof( ProtoBufMsgHeader_t )
 (size_t)(p - (uint8_t *)ov_copy) == nov * sizeof(nghttp2_origin_entry) + len + nov
 (ssv)
@@ -3833,6 +3837,7 @@ ${LANGUAGE}
 ).CSiteLicense_ClientSeatCheckout_Response"
 ).CSiteLicense_InitiateAssociation_Request
 ).CSleepManager_ShowPowerMenu_Notification
+).CSleepManager_SwitchToPowerState_Request
 ).CSteamTV_CreateBroadcastChannel_Response"
 ).CSteamTV_FollowBroadcastChannel_Response"
 ).CSteamTV_GetMyBroadcastChannels_Response"
@@ -3966,12 +3971,14 @@ ${LANGUAGE}
 )\n%k_EStreamControlDisableHighResCapture
 )\n%k_EStreamControlSaveTouchConfigLayout
 )\n%k_EStreamFrameResultDroppedDecodeSlow
+)\n%k_ESystemPowerState_LowPowerDownloads
 )\n%k_ETimelineEntryType_StateDescription
 )\n%k_ETwoFactorStatusFieldFlag_LastUsage
 )\n%k_EnhancedMarketAppearanceStatus_None
 )\n%k_PublishedFileQueryType_RankedByVote
 )\n\ncategories
 )\n\nmouse_down
+)\n\rcurrent_state
 )\n\rdecoder_limit
 )\n\rdisplay_limit
 )\n\rjoystick_left
@@ -4057,6 +4064,7 @@ ${LANGUAGE}
 *.CSiteLicense_InitiateAssociation_Response"
 *.CSiteManagerClient_IncomingClient_Request
 *.CSleepManager_RequestSuspend_Notification
+*.CSleepManager_SwitchToPowerState_Response
 *.CSteamOSManager_StateChanged_Notification
 *.CSteamTV_GetBroadcastChannelClips_Request
 *.CSteamTV_GetBroadcastChannelLinks_Request
@@ -4084,6 +4092,7 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN14CLEDController10InitializeEvE29CWebUILEDManagerSetEnabledJob30CLEDManager_SetEnabled_Request31CLEDManager_SetEnabled_ResponseE
 *18CWebUIMsgLambdaJobIZN14CLEDController10InitializeEvE32CWebUILEDManagerSetBrightnessJob33CLEDManager_SetBrightness_Request34CLEDManager_SetBrightness_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSleepController10InitializeEvE29CWebUISleepManagerGetStateJob30CSleepManager_GetState_Request31CSleepManager_GetState_ResponseE
+*18CWebUIMsgLambdaJobIZN16CSleepController10InitializeEvE39CWebUISleepManagerSwitchToPowerStateJob40CSleepManager_SwitchToPowerState_Request41CSleepManager_SwitchToPowerState_ResponseE
 *18CWebUIMsgLambdaJobIZN17CSteamOSTelemetry10InitializeEvE27CWebUISteamOSSLSGetStateJob28CSteamOSSLS_GetState_Request29CSteamOSSLS_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN17CSteamOSTelemetry10InitializeEvE29CWebUISteamOSSLSSetEnabledJob30CSteamOSSLS_SetEnabled_Request31CSteamOSSLS_SetEnabled_ResponseE
 *18CWebUIMsgLambdaJobIZN17CSteamOSTelemetry10InitializeEvE35CWebUISteamOSSLSSetPluginEnabledJob36CSteamOSSLS_SetPluginEnabled_Request37CSteamOSSLS_SetPluginEnabled_ResponseE
@@ -4216,6 +4225,7 @@ ${LANGUAGE}
 *Z16InitializeChromeP21IHTMLChromeController7EUIModeEUlRK10StringViewE_
 *Z25GetUserAchievementsForApp7CGameID8CSteamID9CSmartPtrI18CJSCallbackPromiseEEUlP19UserStatsReceived_tbS3_E_
 *ZL24YldGetBrowserProcessInfovEUlPK27CMsgProcessInfoNotificationE_
+*ZL27toggle_idle_suspend_inhibitPvR9ConParamsR10ConCommandEUlvE_
 *ZL7profilePvR9ConParamsR10ConCommandEUlvE_
 *ZN11CHTMLWindow21BrowserFileLoadDialogEPK18CMsgFileLoadDialogEUlRKN11IHTMLWindow24OpenFileDialogResponse_tEE_
 *ZN11CLoginUsers10SaveAvatarE8CSteamIDEUlvE_
@@ -4240,7 +4250,9 @@ ${LANGUAGE}
 *ZN15CWebUITransport23ThreadedRequestShutdownEvEUlvE_
 *ZN15CWebUITransport29ThreadedBroadcastNotificationEPKcRN6google8protobuf11MessageLiteEEUlvE_
 *ZN16CSleepController10InitializeEvE29CWebUISleepManagerGetStateJob
+*ZN16CSleepController10InitializeEvE39CWebUISleepManagerSwitchToPowerStateJob
 *ZN16CSleepController10InitializeEvEUlRK30CSleepManager_GetState_RequestR31CSleepManager_GetState_ResponseE_
+*ZN16CSleepController10InitializeEvEUlRK40CSleepManager_SwitchToPowerState_RequestR41CSleepManager_SwitchToPowerState_ResponseE0_
 *ZN17CSteamOSTelemetry10InitializeEvE27CWebUISteamOSSLSGetStateJob
 *ZN17CSteamOSTelemetry10InitializeEvE29CWebUISteamOSSLSSetEnabledJob
 *ZN17CSteamOSTelemetry10InitializeEvE35CWebUISteamOSSLSSetPluginEnabledJob
@@ -4305,6 +4317,7 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE20_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE25_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE27_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlbE28_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE4_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE8_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlbE9_
@@ -4318,6 +4331,7 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE15_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE17_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE26_
+*ZN23CSteamOSControllerLinux10InitializeEvEUlvE29_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE5_
 *ZN23CSteamOSControllerLinux10InitializeEvEUlvE7_
 *ZN23CSteamOSControllerLinux12SetWifiDebugEbEUlvE_
@@ -4330,6 +4344,7 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux20SetScreenReaderPitchEfEUlvE_
 *ZN23CSteamOSControllerLinux21SetScreenReaderLocaleEPKcEUlvE_
 *ZN23CSteamOSControllerLinux21SetScreenReaderVolumeEfEUlvE_
+*ZN23CSteamOSControllerLinux22SetLowPowerModeEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux22SetScreenReaderEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux23CommitChargeLimitUpdateEvEUlvE_
 *ZN23CSteamOSControllerLinux24SetManualGPUClockEnabledEbEUlvE_
@@ -5678,7 +5693,7 @@ ${LANGUAGE}
 .CMsgNetworkDeviceIP6Config
 .CMsgNetworkDevicesData.Device
 .CMsgShortcutInfo"$\n
-.CMsgSleepManagerState")\n'CSleepManager_StateChanged_Notification"+\n)CSleepManager_RequestSuspend_Notification".\n,CSleepManager_ResumeFromSuspend_Notification"*\n(CSleepManager_ShowPowerMenu_Notification2
+.CMsgSleepManagerState")\n'CSleepManager_StateChanged_Notification"a\n)CSleepManager_RequestSuspend_Notification
 .CMsgSteamUIBrowserWindow2
 .CMsgStorageDevicesData.Drive
 .CMsgSystemAudioManagerDevice
@@ -6027,6 +6042,8 @@ ${LANGUAGE}
 .ESystemAudioPortDirection
 .ESystemAudioPortType
 .ESystemFanControlMode
+.ESystemPowerState
+.ESystemPowerState" \n
 .ESystemServiceState
 .ESystemUpdateNotificationType"
 .ETextFilterSetting
@@ -6209,6 +6226,7 @@ ${LANGUAGE}
 .dummy
 .exe
 .foo = value".
+.force-ath11k-reload
 .gif
 .google.protobuf.Any*.\n
 .google.protobuf.EnumOptions
@@ -6390,6 +6408,7 @@ ${LANGUAGE}
 /bin/sh
 /chat/
 /checkout/externallinkex/
+/com/steampowered/Atomupd1
 /com/steampowered/SteamOSLogSubmitter/Manager
 /com/steampowered/SteamOSLogSubmitter/helpers/Devcoredump
 /com/steampowered/SteamOSLogSubmitter/helpers/Gpu
@@ -6688,8 +6707,9 @@ ${LANGUAGE}
 /data/src/steamUI/shutdowncontroller.cpp
 /data/src/steamUI/spewmanager.cpp
 /data/src/steamUI/startupmodemanager.cpp
+/data/src/steamUI/steamoscontroller.cpp
 /data/src/steamUI/steamosmanager.cpp
-/data/src/steamUI/steamosmanager.cpp:586
+/data/src/steamUI/steamosmanager.cpp:588
 /data/src/steamUI/steamuiapicallhelpers.h
 /data/src/steamUI/steamuiappcontroller.cpp
 /data/src/steamUI/steamuibetacontroller.cpp
@@ -6895,6 +6915,7 @@ ${LANGUAGE}
 /usr/bin/xdg-open
 /usr/lib/jupiter-dock-updater/jupiter-dock-updater-mock.sh
 /usr/lib/os-release
+/usr/lib/systemd/system-sleep/modules-reload.sh
 /usr/lib/udev/rules.d/70-steam-jupiter-input.rules
 /usr/local/ssl
 /usr/local/ssl/cert.pem
@@ -6985,11 +7006,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+00:00:00
+01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
-01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7008,6 +7029,7 @@ ${LANGUAGE}
 0HKEY_CURRENT_USER\Software\Valve\Steam\ForceOOBE
 0Ntl
 0SX;
+0Software\Valve\Steam\System\IdleSuspendACSeconds
 0Z@q
 0ZQ;
 0\n!download_throttle_while_streaming
@@ -7470,7 +7492,6 @@ ${LANGUAGE}
 10CUtlMemoryIN26CSteamUISharedJSController15SteamUIWindow_tEE
 10CUtlMemoryIN26CSteamUISharedJSController20FocusableAppWindow_tEE
 10CUtlMemoryIN27CSteamUIMessagingController15QueuedMessage_tEE
-10CUtlMemoryIN28CSteamBootstrapperController16ClientBetaInfo_tEE
 10CUtlMemoryIN4CJob22ResourceAccessRecord_tEE
 10CUtlMemoryIN4vgui10BoundKey_tEE
 10CUtlMemoryIN4vgui11layoutcmd_tEE
@@ -7744,6 +7765,7 @@ ${LANGUAGE}
 10CUtlVectorIN23CValveControllerManager29CachedControllerBindingInfo_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN24CControllerDeviceSupport11AxisState_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN24CGameRecordingController13PendingClip_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN24CSleepTemperatureMonitor8Sample_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN24CSteamParentalController15UnlockPromise_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN26CSteamUISharedJSController15SteamUIWindow_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN26CSteamUISharedJSController20FocusableAppWindow_tE10CUtlMemoryIS1_EE
@@ -8563,6 +8585,7 @@ ${LANGUAGE}
 17CMsgSystemDisplay
 17CMsgUpdateToolTip
 17CNegotiatedConfig
+17CPeriodicFunctionI16CSleepControllerE
 17CPeriodicFunctionI25CGamescopeControllerLinuxE
 17CPurchaseGiftInfo
 17CSDLAudioRecorder
@@ -8659,6 +8682,7 @@ ${LANGUAGE}
 18CScheduledFunctionI14CNetConnectionE
 18CScheduledFunctionI14CUDPConnectionE
 18CScheduledFunctionI16CScreenSaverDBusE
+18CScheduledFunctionI16CSleepControllerE
 18CScheduledFunctionI18COpenSSLConnectionE
 18CScheduledFunctionI19CSettingsControllerE
 18CScheduledFunctionI20CWebSocketConnectionE
@@ -10949,6 +10973,7 @@ ${LANGUAGE}
 3M*T
 3Nw\n
 3Rh\t
+3Software\Valve\Steam\System\EnableLowPowerDownloads
 3UC%
 3Wk1^
 3Y%O
@@ -11079,6 +11104,7 @@ ${LANGUAGE}
 40CSiteLicense_ClientSeatCheckout_Response
 40CSiteLicense_InitiateAssociation_Request
 40CSleepManager_ShowPowerMenu_Notification
+40CSleepManager_SwitchToPowerState_Request
 40CSteamTV_CreateBroadcastChannel_Response
 40CSteamTV_FollowBroadcastChannel_Response
 40CSteamTV_GetMyBroadcastChannels_Response
@@ -11175,6 +11201,7 @@ ${LANGUAGE}
 41CSiteLicense_InitiateAssociation_Response
 41CSiteManagerClient_IncomingClient_Request
 41CSleepManager_RequestSuspend_Notification
+41CSleepManager_SwitchToPowerState_Response
 41CSteamOSManager_StateChanged_Notification
 41CSteamTV_GetBroadcastChannelClips_Request
 41CSteamTV_GetBroadcastChannelLinks_Request
@@ -11695,6 +11722,7 @@ ${LANGUAGE}
 4T9\n
 4\fZQ
 4\n'k_EChildProcessQueryExitCode_ErrorOther
+4\n,optionally_transition_to_low_power_downloads
 4\n/k_EMsgAISBroadcastSubordinateContentDescription
 4\n/k_EMsgBSBoaCompraConfirmProductDeliveryResponse
 4\n/k_EMsgClientChatGetFriendMessageHistoryResponse
@@ -11954,7 +11982,6 @@ ${LANGUAGE}
 57CSteamInputService_ControllerAccessibilityStrings_Request
 57CSteamInputService_ControllerAxesStateChange_Notification
 57CUserAccount_GetAvailableValveDiscountPromotions_Response
-58'K
 58CAccountHardware_SteamControllerGetConfig_ControllerConfig
 58CAccountHardware_SteamControllerSetConfig_ControllerConfig
 58CAuthenticationSupport_QueryRefreshTokensByAccount_Request
@@ -11993,9 +12020,11 @@ ${LANGUAGE}
 5Cloud
 5EPX_f
 5F16IX11EventHandler
+5H,K
 5Itc
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 5O Z
+5Software\Valve\Steam\System\IdleSuspendBatterySeconds
 5Store
 5T&w&
 5Video
@@ -12538,6 +12567,7 @@ ${LANGUAGE}
 9PE,$
 9Q`V,
 9R>U
+9Software\Valve\Steam\System\AllowBatteryLowPowerDownloads
 9StoreItem
 9TwoFactor
 9VideoClip
@@ -12627,7 +12657,6 @@ ${LANGUAGE}
 :pat
 :path
 :protoco
-:qji
 :schem
 :scheme
 :statu
@@ -12727,6 +12756,7 @@ ${LANGUAGE}
 <appid> Manually triggers background cloud sync of app.
 <appid> Manually triggers on-launch cloud sync for the given app.
 <appid> [bExternalAPI=1]
+<delay> Enable/disable suspend inhibit after specified delay
 <dump|leaks> <threshold> : validates memory
 <eState> Force the display to a specific state.
 <eState> missing
@@ -12847,6 +12877,7 @@ ${LANGUAGE}
 ? * + invalid
 ?(MZct
 ?0DS=
+?10CUtlMemoryIN24CSleepTemperatureMonitor8Sample_tEE
 ?10CUtlMemoryIP13CJSMethodArgsE
 ?12CDynamicFuncIPFiPvjPjiEE
 ?24CGameStreamVideoStageAMF
@@ -16117,7 +16148,7 @@ CMsgShowBrowserContextMenu
 CMsgShowToolTip
 CMsgShowWindow
 CMsgSigmoidalCurve
-CMsgSleepManagerState" \n
+CMsgSleepManagerState
 CMsgStartDownload
 CMsgStartRequest
 CMsgStartRequestResponse
@@ -16177,7 +16208,6 @@ CMsgWebUITransportFailure
 CMsgWebUITransportInfo
 CMsgZoomToElementAtPosition
 CMsgZoomToFocusedElement
-CNO&
 CNegotiatedConfig
 CNegotiationCompleteMsg"
 CNegotiationInitMsg
@@ -16541,9 +16571,18 @@ CShowCursorMsg
 CShowOnScreenKeyboardMsg"~\n#CControllerPersonalizationUpdateMsg
 CShutdownController::OnInvalidateCredentials
 CSiteLicenseClient_YldReconnectSiteLicenseProviders
+CSleepController::CheckIdleTimeout
+CSleepController::OnBatteryStateChanged
+CSleepController::OnControllerActionTriggered
 CSleepController::OnResumeFromSuspend
+CSleepController::OnSystemResumed
+CSleepController::OnSystemSuspending
 CSleepManager_GetState_Request"H\n
 CSleepManager_GetState_Response
+CSleepTemperatureMonitor: succesful read, restarting temperature monitoring
+CSleepTemperatureMonitor: system exceeds low power temperature limit
+CSleepTemperatureMonitor: temperature constantantly rising - can't vent heat?
+CSleepTemperatureMonitor: too many unsuccesful reads, stopping temperature monitoring
 CSpewManager
 CStartAudioDataMsg
 CStartNeptuneDataMsg
@@ -16580,6 +16619,7 @@ CSteamDoc::OnSteamLogon
 CSteamDoc::OnUnlockH264Result
 CSteamDoc::SetCurrentLanguage: invalid ELanguage %u
 CSteamGamesUIModule::LoadSteamClient
+CSteamOSControllerLinux::YldInit
 CSteamOSManager::OnControllerActionTriggered
 CSteamOSManager::YldProcessControllerAction
 CSteamOSManagerLegacy: using session bus
@@ -17664,6 +17704,14 @@ Compression buffer size cannot be changed because it is in use
 Compression buffer size cannot be reduced below 6
 Compute and print SHA of file on disk
 ComputeCumulativeSumRow_C
+ComputeNextPowerState: active: %d < %d
+ComputeNextPowerState: active: %d < %d (%s)
+ComputeNextPowerState: finishing active downloads before sleep: %d
+ComputeNextPowerState: finishing downloads with screen on
+ComputeNextPowerState: idle low battery limit: %d / %s / %d
+ComputeNextPowerState: shutting down
+ComputeNextPowerState: skipping: suppressed: %d
+ComputeNextPowerState: temperature monitor requested transition to sleep
 ComputeStartupMode
 Computed freshness lifetime for %s is %lld\n
 Computer
@@ -17942,6 +17990,7 @@ Currency Conversion
 Currency of purchase does not match currency of wallet
 CurrencyCode
 Current
+Current device doesn't support low power mode temperature monitoring: %d
 CurrentCellID
 Cursor
 CursorEntered
@@ -18356,6 +18405,7 @@ DirectoryTreeView
 Disable client beta filtering
 Disable controller support
 DisableAllToasts
+DisableHttpProxy
 DisableParentalSettings
 DisableStreaming
 DisableToastsInGame
@@ -18950,6 +19000,7 @@ ESystemAudioPortDirection
 ESystemAudioPortType
 ESystemDisplayCompatibilityMode
 ESystemFanControlMode
+ESystemPowerState
 ESystemServiceState
 ESystemUpdateNotificationType
 ETIMEDOUT
@@ -19128,9 +19179,11 @@ Enable PipeWire desktop capture
 Enable PipeWire desktop capture using DMA-BUF
 Enable devkit functionality
 Enable test storage data
+EnableBuiltInControllerDisplacementEvents
 EnableCaptureNVFBC
 EnableGameOverlay
 EnableHardwareEncoding
+EnableHttpProxy
 EnableParentalSettings
 EnablePlatformCertificateVerification called on client without m_pSSLContext, won't work
 EnableTrafficPriority
@@ -19167,6 +19220,7 @@ EnsureValidBoolValue
 Enter
 Enter PEM pass phrase:
 EnterDownloadMode
+Entered low power mode: %d
 Enterprises
 EntitledApp
 Entry
@@ -19282,7 +19336,9 @@ Error: %s: failed to connect to steamos telemetry daemon - telemetry will not be
 Error: %s: failed to create IFileChooserDialog
 Error: %s: failed to create skeleton\n
 Error: %s: failed to create system report file path
+Error: %s: failed to disable built-in controller jerk events: %u
 Error: %s: failed to emit screen reader action: %d - %s
+Error: %s: failed to enable built-in controller jerk events: %u
 Error: %s: failed to export agent: %s\n
 Error: %s: failed to find a voice name for locale: %s
 Error: %s: failed to find home directory
@@ -19311,6 +19367,8 @@ Error: %s: failed to retrieve network devices data
 Error: %s: failed to retrieve perf settings state
 Error: %s: failed to retrieve system manager settings
 Error: %s: failed to set adapter to discovery mode %s
+Error: %s: failed to set atomupd proxy: %s:%d
+Error: %s: failed to set low power mode %s
 Error: %s: failed to set steamos telemetry state, not connected to daemon
 Error: %s: failed to set system trace state
 Error: %s: failed to set wifi debug mode %s
@@ -19336,6 +19394,7 @@ Error: %s: invalid drive object
 Error: %s: invalid drive: 0x%x
 Error: %s: invalid screen reader action: %d
 Error: %s: invalid screen reader mode: %d
+Error: %s: low power mode already active
 Error: %s: no options provided
 Error: %s: not a valid directory: %s
 Error: %s: only accessible in gamescope session
@@ -19343,10 +19402,12 @@ Error: %s: operation not supported
 Error: %s: popen failed
 Error: %s: steamos-priv-write failed %s: %s\n
 Error: %s: timed out
+Error: %s: timed out waiting for atomupd proxy config request
 Error: %s: timed out waiting for drive eject result
 Error: %s: timed out waiting for filesystem unmount result
 Error: %s: timed out while emitting screen reader action: %d
 Error: %s: timed out while setting adapter discovery mode
+Error: %s: timed out while setting low power mode
 Error: %s: timed out while setting wifi debug mode
 Error: %s: unsupported platform
 Error: %s: update check failed: %s\n%s
@@ -19375,10 +19436,12 @@ Error: failed to create action binding: %s
 Error: failed to disable wireless power management: %d\n
 Error: failed to initialize CSystemReportController
 Error: failed to initialize SteamOS telemetry service
+Error: failed to initialize system dbus connection: %s
 Error: failed to opt out of sideloaded steam client
 Error: failed to run steamos-mandatory-update check
 Error: failed to set TDP limit: cap1
 Error: failed to unregister for X11 property callback
+Error: fauiled to retrieve fdlist fd: %s\n
 Error: invalid adapter id: 0x%x
 Error: invalid display state: %d
 Error: invalid profile: %s
@@ -19415,6 +19478,7 @@ ExecuteSteamURL: "%s"\n
 Existing cancelled license
 Exit
 ExitCode
+Exiting low power mode: %d
 Exito
 Expand
 Expanded map entry type
@@ -24112,6 +24176,7 @@ Method Subscribe() not implemented.
 Method SubscribeBroadcastChannel() not implemented.
 Method SuspendAppSession() not implemented.
 Method SwitchBackgroundRecordingGame() not implemented.
+Method SwitchToPowerState() not implemented.
 Method TakeScreenshot() not implemented.
 Method ThreadedCount() not implemented.
 Method TrackedPaymentsNotification() not implemented.
@@ -24369,7 +24434,11 @@ N15CSteamOSManager45CCallbackInternal_OnControllerActionTriggeredE
 N15CVRStreamThread14CCaptureThreadE
 N16CCookieContainer11CCookieInfoE
 N16CProtoBufMsgBase20IProtoBufSendHandlerE
+N16CSleepController33CCallbackInternal_OnSystemResumedE
+N16CSleepController36CCallbackInternal_OnSystemSuspendingE
 N16CSleepController37CCallbackInternal_OnResumeFromSuspendE
+N16CSleepController39CCallbackInternal_OnBatteryStateChangedE
+N16CSleepController45CCallbackInternal_OnControllerActionTriggeredE
 N16CSteamRootDialog40CCallbackInternal_OnServiceRepairRequestE
 N16CVR2DGameOverlay18CVRStreamingThreadE
 N16CVR2DGameOverlay20CGameStreamingThreadE
@@ -25598,6 +25667,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
+Nov  4 2025 20:42:22
 November
 NrZl
 NullMetrics()
@@ -25779,7 +25849,6 @@ Object Signing CA
 Objects
 Obtained EMS handle %u
 Obtained XMS handle %u
-Oct 30 2025 00:54:43
 Octal/hex numbers are not valid JSON values.
 October
 Odia
@@ -25829,6 +25898,8 @@ OnMouseFocusTicked
 OnNewFolder
 OnNotificationsRequested
 OnOpen
+OnPowerButtonPressedShort
+OnPowerButtonPressedShort: non-battery device automatically finishing downloads
 OnProfileSlotsChanged
 OnRelease
 OnRequestAuthorization
@@ -26377,6 +26448,7 @@ Pacific/Guam
 Pacific/Honolulu
 Pacific/Pago_Pago
 Pacific/Tongatapu
+Package id 0
 Package requires an invitation for a reservation to purchase
 Package version: %d
 Package version: local
@@ -27352,6 +27424,7 @@ RequestPurchase
 RequestRecoveryCode
 RequestResponse
 RequestSyncAction
+RequestUpdateDeviceData
 Requested Force create but SharedObjectMutex already created\n
 Requested audio session: %s
 Requested feature was omitted at compile time
@@ -28245,6 +28318,7 @@ Set manual gpu clock enabled: %d
 Set manual gpu clock hz: %d
 Set offline mode: %d
 Set platform performance profile: %s
+Set reload wifi driver on sleep: %d
 Set screen reader enabled: %d
 Set screen reader locale: %s
 Set screen reader pitch: %f
@@ -28310,6 +28384,7 @@ SetInt32
 SetInt64
 SetLabel
 SetLoginState: %s - %s
+SetLowPowerModeEnabled
 SetManualGPUClock
 SetManualGPUClockEnabled
 SetMiniDumpBuildID
@@ -28544,6 +28619,7 @@ SleepManager.NotifyRequestSuspend#1
 SleepManager.NotifyResumeFromSuspend#1
 SleepManager.NotifyShowPowerMenu#1
 SleepManager.NotifyStateChanged#1
+SleepManager.SwitchToPowerState#1
 Sleeping for new frame
 Sleeping for time
 Slider
@@ -28912,6 +28988,7 @@ SteamOS/VRSEnabled
 SteamOS/WakeOnResume
 SteamOS/WifiDebug
 SteamOS/WifiForceWPASupplicant
+SteamOS/WifiReloadDriverOnSleep
 SteamOSGeneric
 SteamOSLogSubmitterHelper
 SteamOSLogSubmitterHelperProxy
@@ -29355,6 +29432,9 @@ SupportsOpenXR
 SurveyResults
 Suspect
 Suspected Hijacker
+Suspend inhibit: %d\n
+Suspend notification: entering
+Suspend notification: resuming
 SuspendAppSession
 SuspendProcess
 Suspended
@@ -29370,10 +29450,12 @@ SwitchBackgroundRecordingGame
 SwitchToDesktopMode
 SwitchToGameMode
 SwitchToLoginMode
+SwitchToPowerState
 SwitchToUser
 Switching Protocols
 Switching to desktopui (from legacy vgui mode)\n
 Switching to gamepadui\n
+Switching to power state: [ %s ] reason: '%s'
 Syloti_Nagri
 Symbol name "
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
@@ -29494,8 +29576,10 @@ System.UpdateSettings
 System.VideoRecordingDriverCheck
 System/Bluetooth/Enabled
 System/HardwareUpdater/Enabled
+SystemGoingIntoSuspend_t. Most likely external request.
 SystemReport: found debug wifi trace file. Saving to: %s
 SystemRestartMachine
+SystemResumingFromSuspend_t: resumed from sleep
 SystemShutdownMachine
 SystemSuspendMachine
 T*8U
@@ -29839,6 +29923,8 @@ Takri
 Tamil
 TaskbarRestart
 Tatar
+Tctl
+Tdie
 TdpLimit
 TdpLimitMax
 TdpLimitMin
@@ -30426,6 +30512,7 @@ Unknown method: %s
 Unknown method: NULL
 Unknown microphone data codec
 Unknown parse type:
+Unknown proxy mode: %d
 Unknown proxy setting: %d
 Unknown quality preference
 Unknown query type '%s'
@@ -31033,6 +31120,7 @@ WaitingOpenVRRoomSetup
 WaitingPrevProcess
 WaitingVerification
 WakeAllowed
+Waking up screen due to IMU jerk event
 Wallet
 Wallet (Nodwin)
 WalletAmt
@@ -31580,11 +31668,13 @@ YldRequestBadgeLevels
 YldRunHardwareUpdaterCommand
 YldSaveClip
 YldSaveToDesktop
+YldSetAtomUpdateProxyConfig
 YldSetBluetoothEnabledInternal
 YldSetBlurParams
 YldSetCECEnabled
 YldSetDiscovering
 YldSetEnabled
+YldSetLowPowerModeEnabled
 YldSetPlatformPerformanceProfile
 YldSetPluginEnabled
 YldSetScreenReaderLocale
@@ -31698,6 +31788,7 @@ ZooDialog
 ZooPropertyPage
 Zpm"U
 Zulu
+[ %f, %f, %f ] %f - %f
 [%04d] %07.2f %07.2f
 [%06.2f] %06.3f %06.3f
 [%07d] %09.2f %09.2f %08.2fp
@@ -33738,6 +33829,7 @@ Zulu
 ^j[o3
 ^oEZ_
 _(knN
+_10CUtlMemoryIN28CSteamBootstrapperController16ClientBetaInfo_tEE
 _55j
 _Accum
 _DIR
@@ -33777,6 +33869,7 @@ _XReply
 _XSend
 _XSetLastRequestRead
 _\n%gamerecording_export_limit_frame_rate
+_\n(steamos_wifi_reload_wifi_driver_on_sleep
 _\n\vpublic_data
 ________________________________
 ___tls_get_addr
@@ -33900,8 +33993,10 @@ _hero
 _imageDar
 _imageDar.IsValidIndex( index )
 _init
+_input
 _internal.RegisterForStyleChanges
 _jbF~T
+_label
 _leftCaption
 _logo
 _longjmp
@@ -34050,6 +34145,7 @@ achievement_name
 achievement_progress
 achievements
 ackGuestPass
+acpitz
 acpt_state
 action
 action_set_name
@@ -34533,6 +34629,7 @@ associated_item_id
 associated_message
 associated_name
 association_type
+asusec
 async file read
 async file write
 async_ctx_new
@@ -35941,6 +36038,7 @@ com.google.Chrome
 com.google.protobufB
 com.google.protobufB\rWrappersProtoP
 com.google.protobufB\tTypeProtoP
+com.steampowered.Atomupd1
 com.steampowered.SteamOSLogSubmitter
 com.steampowered.SteamOSLogSubmitter.Helper
 com.steampowered.SteamOSLogSubmitter.Manager
@@ -36265,6 +36363,7 @@ copy_issuer
 copylink
 copyurl
 coredumpctl -r --since -10d
+coretemp
 corrupted stream
 corruption_type
 cosf
@@ -38422,6 +38521,7 @@ g_datalist_clear
 g_datalist_get_data
 g_datalist_id_set_data_full
 g_dbus_connection_call
+g_dbus_connection_call_finish
 g_dbus_connection_emit_signal
 g_dbus_connection_get_type
 g_dbus_connection_get_unique_name
@@ -38624,6 +38724,7 @@ g_variant_get_bytestring
 g_variant_get_bytestring_array
 g_variant_get_child
 g_variant_get_double
+g_variant_get_handle
 g_variant_get_int16
 g_variant_get_int32
 g_variant_get_int64
@@ -38862,7 +38963,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenn\rn
 ghost_
 gidlist
 gidparentcomment
@@ -42533,9 +42634,6 @@ identity,*;q=0
 identity_secret
 identity_verification
 idle_backlight_dim_ac_seconds
-idle_suspend_ac_seconds
-idle_suspend_battery_seconds
-idle_suspend_supressed
 idp mismatch
 ids_only
 idx != m_mapSendShortcutIcon.InvalidIndex()
@@ -43059,6 +43157,7 @@ is_large()
 is_live
 is_look_supported
 is_low_latency_mode_enabled
+is_low_power_download_supported
 is_mandatory_update_available
 is_manual_gpu_clock_available
 is_media_available
@@ -43107,6 +43206,7 @@ is_vrs_available
 is_websocket_connect
 is_wifi_debug_force_disabled
 is_wifi_debug_supported
+is_wifi_driver_reload_available
 is_wifi_enabled
 is_wifi_powersave_enabled
 is_wifi_scanning_enabled
@@ -43227,6 +43327,7 @@ justify
 jwK\v\n
 jxN\
 j{HY
+k10temp
 k2U\v
 k53i
 k;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
@@ -45121,6 +45222,9 @@ k_EStreamingAudioData
 k_EStreamingMicrophoneData
 k_EStreamingNeptuneData
 k_EStreamingVideoData
+k_ESystemPowerState_Invalid
+k_ESystemPowerState_Normal
+k_ESystemPowerState_Sleep
 k_ESystemServiceState_Disabled
 k_ESystemServiceState_Enabled
 k_ETesterStatusExpired
@@ -45380,6 +45484,7 @@ lHt\
 lNrZ
 lRecorded >= m_lFirstAudioPTS
 l\n NotifyGyroQuaternionStateChanged
+l\n!system_enable_low_power_downloads
 l\n\npromotions
 l\vDZ2\fs
 l`UROM=;98310-*)(&$"
@@ -46948,6 +47053,7 @@ m_vecRequestsToSend.Count()
 m_vecRequestsToSend.Count() == 1
 m_vecResourceAccessRecord
 m_vecSSLHostnames
+m_vecSamples
 m_vecScreenshotCallbacks
 m_vecScreenshotHandles
 m_vecSections
@@ -48660,6 +48766,7 @@ pSteamApp->GetGameID().IsValid()
 pSurface->pitch == pSurface->w * 4
 pT6w.
 pTCPConnection->m_cOutstandingSends > 0
+pTemperature is a required paramater
 pThread
 pToken
 pToolWindow
@@ -51645,6 +51752,7 @@ steamos_tests
 steamos_vrs_enabled
 steamos_wifi_debug
 steamos_wifi_force_wpa_supplicant
+steamos_wifi_reload_wifi_driver_on_sleep
 steamosctl --version
 steamoverlay_i386.json
 steamoverlay_x86_64.json
@@ -52038,9 +52146,13 @@ system\InGameOverlayScreenshotSaveUncompressedPath
 system\InGameOverlayShortcutKey
 system\JumplistSettings
 system\SteamVRHMDVGUIWarning
+system_allow_battery_low_power_downloads
 system_bluetooth_enabled
 system_can_suspend
 system_default
+system_enable_low_power_downloads
+system_idle_suspend_ac_sec
+system_idle_suspend_battery_sec
 system_restart_pending
 system_trace_service_state
 systemd-run --user --wait --pipe flatpak install --noninteractive --assumeyes flathub %s
@@ -52119,6 +52231,8 @@ telexNumber
 teliasonera
 telugu
 telus
+temp*
+temp1_input
 template parameter object for
 template://
 template://%s
@@ -52730,6 +52844,8 @@ tlsv13 alert certificate required
 tlsv13 alert missing extension
 toBY
 toRead > 0
+toggle_idle_suspend_inhibit
+toggle_idle_suspend_inhibit: missing parameter
 toggledevtools
 togglemute
 toggleplayingrepeatstatus
@@ -53955,6 +54071,7 @@ webuimessages_base.proto"7\n#CTransportAuth_Authenticate_Request
 webuimessages_base.proto"E\n+CTransportValidation_AppendToString_Request
 webuimessages_base.proto"V\n
 webuimessages_base.proto"V\n4CSteamEngine_UpdateTextFilterDictionary_Notification
+webuimessages_base.proto"k\n
 webuimessages_base.proto"}\n
 webuimessages_bluetooth.proto
 webuimessages_gamenotes.proto
@@ -54213,6 +54330,7 @@ yC\r7
 yM+7
 yS{Q/
 yU\n2`
+y\n(system_allow_battery_low_power_downloads
 y_local
 y_scale
 ycMW
@@ -54248,6 +54366,7 @@ zTXt: invalid keyword
 zadkn\r
 zbJR
 zeD[
+zenpower
 zerolatency
 zfB^\n
 zh-cn

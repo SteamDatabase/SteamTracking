@@ -276,6 +276,7 @@ message CMsgClientSettings {
 	optional bool steamos_system_tracing_enabled = 22014 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/SystemTracingEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional bool steamos_vrs_enabled = 22015 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/VRSEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional bool steamos_separate_led_colors = 22016 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/SeparaeLEDColors", (setting_default_bool) = false];
+	optional bool steamos_wifi_reload_wifi_driver_on_sleep = 22017 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/WifiReloadDriverOnSleep", (setting_default_bool) = false];
 	optional bool setting_validation_bool = 23001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyBool"];
 	optional .EHDRVisualization setting_validation_enum = 23002 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyEnum"];
 	optional int32 setting_validation_int32 = 23003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyInt32"];
@@ -286,6 +287,10 @@ message CMsgClientSettings {
 	optional .CMsgHotkey setting_validation_hotkey = 23008 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyHotkey"];
 	optional bool system_bluetooth_enabled = 24000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "System/Bluetooth/Enabled", (setting_default_bool) = false];
 	optional bool hardware_updater_enabled = 24001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "System/HardwareUpdater/Enabled", (setting_default_bool) = false];
+	optional int32 system_idle_suspend_battery_sec = 24003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\System\\IdleSuspendBatterySeconds", (setting_default_int) = 900];
+	optional int32 system_idle_suspend_ac_sec = 24004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\System\\IdleSuspendACSeconds", (setting_default_int) = 3600];
+	optional bool system_enable_low_power_downloads = 24005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\System\\EnableLowPowerDownloads", (setting_default_bool) = true];
+	optional bool system_allow_battery_low_power_downloads = 24006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\System\\AllowBatteryLowPowerDownloads", (setting_default_bool) = false];
 	optional .EFrameRateReportEnabled game_framerate_report_enabled = 24007 [default = k_EFrameRateReportEnabled_Unset, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "System/GameFrameRateReportEnabled", (setting_default_int) = 0];
 	optional bool vr_show_perf_graph_in_hmd = 25000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "VR/ShowPerfGraphInHMD", (setting_default_bool) = false];
 	optional bool accessibility_debug_visualizer = 26000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/DebugVisualizer", (setting_default_bool) = false];
