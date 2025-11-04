@@ -17018,10 +17018,7 @@
             eTextAlignment: p,
             fnShowRichTextEditor: g,
           } = e,
-          [h, S] = c.useState(),
-          [v, E] = c.useState(),
-          b = c.useRef(void 0),
-          f = (function () {
+          h = (function () {
             const e = c.useRef(void 0);
             e.current ||
               (e.current = (function () {
@@ -17053,20 +17050,20 @@
               })());
             return e.current;
           })(),
-          y = (0, Ua.LU)();
-        c.useEffect(() => {
-          S(new Ca.n(f, t, (e) => l(e)));
-        }, [f, t, l]);
-        const [T, w] = c.useState(!1),
-          C = c.useCallback(
+          [S] = c.useState(() => new Ca.n(h, t, (e) => l(e))),
+          [v, E] = c.useState(),
+          b = c.useRef(void 0),
+          f = (0, Ua.LU)(),
+          [y, T] = c.useState(!1),
+          w = c.useCallback(
             (e) =>
               e.borderBoxSize.length > 0 &&
-              w(e.borderBoxSize[0].blockSize > 300),
+              T(e.borderBoxSize[0].blockSize > 300),
             [],
           ),
-          I = (0, Ya.wY)(C);
+          C = (0, Ya.wY)(w);
         return (
-          (0, Ia.i)(h, { msAutosaveTimeout: 1e3 }),
+          (0, Ia.i)(S, { msAutosaveTimeout: 1e3 }),
           c.createElement(
             c.Fragment,
             null,
@@ -17084,10 +17081,10 @@
               c.createElement(tn, {
                 view: v,
                 refUpdateToolbar: b,
-                sticky: T,
+                sticky: y,
                 bSingleLineEditor: s,
                 rctToolbarControls: _,
-                schema: f.pm_schema,
+                schema: h.pm_schema,
                 fnShowRichTextEditor: g,
               }),
             ),
@@ -17097,9 +17094,9 @@
                 className: $a().RichTextBackgroundCtn,
                 style: {
                   backgroundColor:
-                    y.GetEventModel().jsondata.sale_background_color,
+                    f.GetEventModel().jsondata.sale_background_color,
                   backgroundRepeat:
-                    y.GetEventModel().jsondata.sale_background_repeat,
+                    f.GetEventModel().jsondata.sale_background_repeat,
                 },
               },
               " ",
@@ -17116,7 +17113,7 @@
                     [$a().Center]: p == Me.YI.k_Center,
                     [$a().Right]: p == Me.YI.k_Right,
                   }),
-                  ref: I,
+                  ref: C,
                   style: { backgroundImage: u },
                 },
                 c.createElement(
@@ -17124,26 +17121,26 @@
                   {
                     panelProps: {
                       lang: (0, A.d$)((0, n.Lg)(a)),
-                      onBlur: () => (null == h ? void 0 : h.CommitChanges()),
+                      onBlur: () => (null == S ? void 0 : S.CommitChanges()),
                     },
                     className: (0, k.A)({
                       [$a().EditorPanel]: !0,
                       [Ra().SingleLineProseMirror]: Boolean(d),
                     }),
-                    pmState: h,
+                    pmState: S,
                     refOnUpdate: b,
                     refView: E,
                     bSingleLine: s,
                   },
-                  "color" in f.pm_schema.marks &&
+                  "color" in h.pm_schema.marks &&
                     c.createElement(Na, {
-                      colorMarkType: f.pm_schema.marks.color,
-                      schema: f.pm_schema,
+                      colorMarkType: h.pm_schema.marks.color,
+                      schema: h.pm_schema,
                     }),
-                  "color" in f.pm_schema.marks &&
+                  "color" in h.pm_schema.marks &&
                     c.createElement(Na, {
-                      colorMarkType: f.pm_schema.marks.bgcolor,
-                      schema: f.pm_schema,
+                      colorMarkType: h.pm_schema.marks.bgcolor,
+                      schema: h.pm_schema,
                     }),
                   Boolean(d) && c.createElement(Pa.TG, { nMaxChars: d }),
                   c.createElement(Ha, { strPlaceholder: r }),
