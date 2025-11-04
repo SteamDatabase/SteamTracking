@@ -18820,11 +18820,14 @@
               })());
             return _.current;
           })(),
-          [_] = _.useState(() => new _._(_, _, (_) => _(_))),
+          [_, _] = _.useState(null),
           [_, _] = _.useState(),
           _ = _.useRef(void 0),
-          _ = (0, _._)(),
-          [_, _] = _.useState(!1),
+          _ = (0, _._)();
+        (0, _.useEffect)(() => {
+          _(new _._(_, _, (_) => _(_)));
+        }, [_, _, _]);
+        const [_, _] = _.useState(!1),
           _ = _.useCallback(
             (_) =>
               _.borderBoxSize.length > 0 &&

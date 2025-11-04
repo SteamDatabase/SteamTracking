@@ -17050,18 +17050,21 @@
               })());
             return e.current;
           })(),
-          [S] = c.useState(() => new Ca.n(h, t, (e) => l(e))),
-          [v, E] = c.useState(),
-          b = c.useRef(void 0),
-          f = (0, Ua.LU)(),
-          [y, T] = c.useState(!1),
-          w = c.useCallback(
+          [S, v] = c.useState(null),
+          [E, b] = c.useState(),
+          f = c.useRef(void 0),
+          y = (0, Ua.LU)();
+        (0, c.useEffect)(() => {
+          v(new Ca.n(h, t, (e) => l(e)));
+        }, [h, t, l]);
+        const [T, w] = c.useState(!1),
+          C = c.useCallback(
             (e) =>
               e.borderBoxSize.length > 0 &&
-              T(e.borderBoxSize[0].blockSize > 300),
+              w(e.borderBoxSize[0].blockSize > 300),
             [],
           ),
-          C = (0, Ya.wY)(w);
+          I = (0, Ya.wY)(C);
         return (
           (0, Ia.i)(S, { msAutosaveTimeout: 1e3 }),
           c.createElement(
@@ -17079,9 +17082,9 @@
                   o && c.createElement(M.o, { tooltip: o }),
                 ),
               c.createElement(tn, {
-                view: v,
-                refUpdateToolbar: b,
-                sticky: y,
+                view: E,
+                refUpdateToolbar: f,
+                sticky: T,
                 bSingleLineEditor: s,
                 rctToolbarControls: _,
                 schema: h.pm_schema,
@@ -17094,9 +17097,9 @@
                 className: $a().RichTextBackgroundCtn,
                 style: {
                   backgroundColor:
-                    f.GetEventModel().jsondata.sale_background_color,
+                    y.GetEventModel().jsondata.sale_background_color,
                   backgroundRepeat:
-                    f.GetEventModel().jsondata.sale_background_repeat,
+                    y.GetEventModel().jsondata.sale_background_repeat,
                 },
               },
               " ",
@@ -17113,7 +17116,7 @@
                     [$a().Center]: p == Me.YI.k_Center,
                     [$a().Right]: p == Me.YI.k_Right,
                   }),
-                  ref: C,
+                  ref: I,
                   style: { backgroundImage: u },
                 },
                 c.createElement(
@@ -17128,8 +17131,8 @@
                       [Ra().SingleLineProseMirror]: Boolean(d),
                     }),
                     pmState: S,
-                    refOnUpdate: b,
-                    refView: E,
+                    refOnUpdate: f,
+                    refView: b,
                     bSingleLine: s,
                   },
                   "color" in h.pm_schema.marks &&
