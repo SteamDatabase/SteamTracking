@@ -289,7 +289,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 							$this->URLsToFetch[ ] =
 							[
-								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Hash,
+								'URL'  => 'https://client-update.fastly.steamstatic.com/' . $Archive . '.' . $Hash,
 								'File' => $Path,
 							];
 						}
