@@ -510,12 +510,16 @@ select.gray_bevel {
 .ProfilePrivacyHeader .ProfilePrivacyDropDown
 {
 	display: inline-flex;
-	padding: 0px;
+	padding: 6px 10px;
 	width: unset;
 	color: #c6d4df;
 	text-decoration: underline;
 	margin-left: 8px;
 	cursor: pointer;
+}
+
+.profile_edit_page ._DialogInputContainer button > div {
+	white-space: nowrap;
 
 }
 

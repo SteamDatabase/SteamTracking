@@ -1059,6 +1059,12 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
+        PrintEnabledLogs() {
+          this.LogAsLogManager(
+            "Will print log messages for:",
+            Array.from(this.m_setEnabledDebugLogs),
+          );
+        }
         static Get() {
           return (
             null == _.s_Singleton && (_.s_Singleton = new _()), _.s_Singleton
@@ -1187,6 +1193,13 @@
         (window.DebugLogDisableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!1)),
         (window.DebugLogNames = _),
+        (window.DebugLogEnabled = (..._) => {
+          _.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            _.Get().PrintEnabledLogs();
+        }),
         (window.EnableSteamConsole = (_ = !0) =>
           _.Get().SetDebugLogEnabled("SteamClient", _));
     },

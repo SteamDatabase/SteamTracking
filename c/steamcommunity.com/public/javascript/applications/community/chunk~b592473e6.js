@@ -12,6 +12,7 @@
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         Container: "_30v-6zb_axOypIUr5VRHE1",
+        SingleLine: "_2i9qH2AM6Wg5660Tkf_fTt",
         ToolbarRowOverflowContainer: "nXEH21nf47u2OH7BjQKei",
         ToolbarRow: "LCeIT0gmFTY8fdfaVgk4j",
         Gap: "_19z0fjj7o0n9vAjVjvYZNU",
@@ -2381,7 +2382,11 @@
           },
           _.createElement(_._, {
             key: `editordiv_${_}`,
-            className: (0, _._)(__webpack_require__, _.Container),
+            className: (0, _._)({
+              ["" + __webpack_require__]: !!__webpack_require__,
+              [_.Container]: !0,
+              [_.SingleLine]: !!_,
+            }),
             ref: _,
             spellCheck: _,
             focusable: !0,

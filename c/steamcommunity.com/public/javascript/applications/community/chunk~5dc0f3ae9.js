@@ -134,6 +134,7 @@
         IgnoreButtonText: "_1gTs9_O1m2-Sibih5GJ43d",
         IgnoreLoadingText: "_2R3kegZfZASFduBjtw168d",
         WishlistButtonNotTop: "_3VcyYP_egkOaX_rJ1e_SQk",
+        FollowGameButtonNotTop: "_3BT5AfGR6BYqJdn9DbgwtX",
         BottomShelf: "oAqlZTgPU37Nb8gBT5eAM",
         BottomShelfOffScreen: "_36zpRzyxmtd8eBgf7p9Ewi",
         ShortDescription: "_1JiQcVD1LUE2KxWb_oOv-K",
@@ -2435,6 +2436,241 @@
         }
         getClassName() {
           return "CStore_GetUserGameInterestState_Response_InQueue";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStore_GetGamesFollowed_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appids || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appids: {
+                    _: 1,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStore_GetGamesFollowed_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStore_GetGamesFollowedCount_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.followed_game_count || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  followed_game_count: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CStore_GetGamesFollowedCount_Response";
         }
       }
       class _ extends _.Message {
@@ -5432,6 +5668,25 @@
               _,
               {
                 ePrivilege: 1,
+              },
+            );
+          }),
+          (_.GetGamesFollowed = function (_, _) {
+            return _.SendMsg("Store.GetGamesFollowed#1", (0, _._)(_, _), _, {
+              bConstMethod: !0,
+              ePrivilege: 2,
+              eWebAPIKeyRequirement: 1,
+            });
+          }),
+          (_.GetGamesFollowedCount = function (_, _) {
+            return _.SendMsg(
+              "Store.GetGamesFollowedCount#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
               },
             );
           }),
@@ -11667,6 +11922,9 @@
         BIsGameIgnored(_) {
           return this.m_mapIgnoredApps && this.m_mapIgnoredApps.has(_);
         }
+        BIsGameFollowed(_) {
+          return this.m_setFollowedApps && this.m_setFollowedApps.has(_);
+        }
         BIsPackageIgnored(_) {
           var _;
           return null === (_ = this.m_mapIgnoredPackages) || void 0 === _
@@ -12155,41 +12413,28 @@
         _: () => _,
         _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      !(function (_) {
-        (_.Default = "default"),
-          (_.Upcoming = "upcoming"),
-          (_.Featured = "featured"),
-          (_.Press = "press"),
-          (_.Steam = "steam"),
-          (_.Halloween = "halloween"),
-          (_.Dev_Sales = "sales"),
-          (_.Dev_All = "all"),
-          (_.Dev_AssociatedPress = "associated_press");
-      })(_ || (_ = {}));
-      new Map();
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         return {
@@ -12234,7 +12479,7 @@
         }
         BIsShowingFeaturedFeed() {
           return Boolean(
-            this.GetCollectionID() === _.Featured ||
+            this.GetCollectionID() === _._.Featured ||
               (this.BIsGlobalCalendar() && !_._.accountid),
           );
         }
@@ -12952,6 +13197,127 @@
         return null !== _.get();
       }
       window.g_EventCalendarMap = _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.Default = "default"),
+          (_.Upcoming = "upcoming"),
+          (_.Featured = "featured"),
+          (_.Press = "press"),
+          (_.Steam = "steam"),
+          (_.Halloween = "halloween"),
+          (_.Dev_Sales = "sales"),
+          (_.Dev_All = "all"),
+          (_.Dev_AssociatedPress = "associated_press");
+      })(_ || (_ = {}));
+      const _ = new Map();
+      function _(_) {
+        return (
+          0 == _.size &&
+            (function () {
+              const _ = (0, _._)();
+              _.set(_.Default, {
+                _: _.Default,
+                strUrl: `${_}/`,
+                strName: (0, _._)("#EventCalendar_NewsChannel_YourNews"),
+                strSubtitle: (0, _._)(
+                  "#EventCalendar_NewsChannel_Personalized",
+                ),
+                strHeaderTitle: (0, _._)(
+                  "#EventCalendar_NewsChannel_YourNews_HeaderTitle",
+                ),
+              }),
+                _.set(_.Upcoming, {
+                  _: _.Upcoming,
+                  strUrl: `${_}/?upcoming=1`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_Upcoming"),
+                  strShortName: (0, _._)(
+                    "#EventCalendar_NewsChannel_UpcomingShort",
+                  ),
+                  strSubtitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_Personalized",
+                  ),
+                }),
+                _.set(_.Featured, {
+                  _: _.Featured,
+                  strUrl: `${_}/collection/featured/`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_Featured"),
+                  strSubtitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_TopSellers",
+                  ),
+                  strHeaderTitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_Featured_HeaderTitle",
+                  ),
+                }),
+                _.set(_.Press, {
+                  _: _.Press,
+                  strUrl: `${_}/collection/press/`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_Press"),
+                  strHeaderTitle: (0, _._)(
+                    "#EventCalendar_Collection_News_Title",
+                  ),
+                  strHeaderSubtitle: (0, _._)(
+                    "#EventCalendar_Collection_News_Subtitle",
+                  ),
+                }),
+                _.set(_.Steam, {
+                  _: _.Steam,
+                  strUrl: `${_}/collection/steam/`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_Steam"),
+                  strSubtitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_SteamSubtitle",
+                  ),
+                  strHeaderTitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_Steam_HeaderTitle",
+                  ),
+                }),
+                _.set(_.Halloween, {
+                  _: _.Halloween,
+                  strUrl: `${_}/collection/halloween/`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_Halloween"),
+                  strSubtitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_HalloweenSubtitle",
+                  ),
+                  strHeaderTitle: (0, _._)(
+                    "#EventCalendar_Collection_Halloween_Title",
+                  ),
+                  strHeaderSubtitle: (0, _._)(
+                    "#EventCalendar_Collection_Halloween_Subtitle",
+                  ),
+                }),
+                _.set(_.Dev_Sales, {
+                  _: _.Dev_Sales,
+                  strUrl: `${_}/collection/sales/`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_AllSales"),
+                }),
+                _._.is_support &&
+                  (_.set(_.Dev_All, {
+                    _: _.Dev_All,
+                    strUrl: `${_}/collection/all/`,
+                    strName: (0, _._)("#EventCalendar_NewsChannel_All"),
+                    bIsValveOnly: !0,
+                  }),
+                  _.set(_.Dev_AssociatedPress, {
+                    _: _.Dev_AssociatedPress,
+                    strUrl: `${_}/collection/associated_press/`,
+                    strName: (0, _._)(
+                      "#EventCalendar_NewsChannel_AssociatedPress",
+                    ),
+                    bIsValveOnly: !0,
+                  }));
+            })(),
+          _.get(_)
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -17628,8 +17994,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -18120,7 +18488,7 @@
             [_] = (0, _._)(_, {}),
             [_, _] = (0, _.useState)(!1),
             _ = (0, _._)("GameHoverIgnoreButton"),
-            _ = _ && _._.Get().BIsGameWishlisted(_);
+            _ = _ && _._.Get().BIsGameIgnored(_);
           return _.createElement(
             "div",
             {
@@ -18152,6 +18520,38 @@
             ),
           );
         });
+      function _(_) {
+        const { appID: _, classOverride: __webpack_require__ } = _,
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)("GameHoverIgnoreButton"),
+          _ = (0, _._)(() => _ && _._.Get().BIsFollowingCurator(_));
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().IgnoreButton, __webpack_require__),
+            onClick: async (_) => {
+              _.preventDefault(),
+                _.stopPropagation(),
+                _._.logged_in
+                  ? (_(!0),
+                    await _._.Get().UpdateFollowingApp(_, !_),
+                    _.token.reason || _(!1))
+                  : (0, _._)();
+            },
+          },
+          _ ? _.createElement(_.pPV, null) : _.createElement(_.c9e, null),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _().IgnoreButtonText,
+                _ && _().IgnoreLoadingText,
+              ),
+            },
+            (0, _._)(_ ? "#Sale_StopFollowingGame" : "#Sale_FollowGame"),
+          ),
+        );
+      }
       function _(_) {
         const { nCreatorAccountID: _ } = _,
           [__webpack_require__, _] = (0, _._)(_),
@@ -18413,6 +18813,7 @@
             bHidePrice: _,
             bUseSubscriptionLayout: _,
             strExtraParams: _,
+            children: _,
             nCreatorAccountID: _,
             nWidthMultiplier: _,
             bShowDeckCompatibilityDialog: _,
@@ -18467,16 +18868,24 @@
           },
           _ = _.createElement(_, {
             ..._,
-          });
+          }),
+          _ = _
+            ? _.createElement(
+                "a",
+                {
+                  href: _,
+                },
+                _,
+              )
+            : _;
         return _.createElement(
           _,
           {
             hoverContent: _,
-            strClickUrl: _,
             nWidthMultiplier: _,
             ..._,
           },
-          _.children,
+          _,
         );
       }
       function _(_) {
@@ -18516,7 +18925,6 @@
             hoverContent: _,
             hoverProps: __webpack_require__,
             nDelayShowMs: _,
-            strClickUrl: _,
             nWidthMultiplier: _,
             children: _,
             className: _,
@@ -18525,13 +18933,12 @@
           _ = (0, _._)(),
           _ = !_ && !_,
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0),
-          _ = _ ? "a" : "div";
+          [_, _] = _.useState(void 0);
         return _.createElement(
-          _,
+          "div",
           {
             "data-key": "hover div",
-            className: (0, _._)(_().ItemHoverSource, _ && _().Selectable, _),
+            className: (0, _._)(_().ItemHoverSource, _),
             onMouseEnter: (_) => {
               _(!0), _(_.currentTarget);
             },
@@ -18541,7 +18948,6 @@
               27 == _.keyCode &&
                 (_(!1), _.preventDefault(), _.stopPropagation());
             },
-            href: _,
           },
           _ &&
             _.createElement(

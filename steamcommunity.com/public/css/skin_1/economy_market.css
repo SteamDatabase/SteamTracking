@@ -1544,6 +1544,10 @@ input.filter_search_box:focus {
 	color: #dddddd;
 }
 
+.largeiteminfo_react_placeholder {
+	min-height: 360px;
+}
+
 #largeiteminfo {
 	overflow: hidden;
 	max-width: 444px;

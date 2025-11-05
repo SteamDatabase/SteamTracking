@@ -2120,7 +2120,7 @@
       }
       var Et = a(68033),
         bt = a(41550),
-        vt = a(92432),
+        vt = a(89104),
         It = a(35685),
         ht = a(9709),
         St = a(64753),
@@ -4392,7 +4392,7 @@
       }
       var Ea = a(84603),
         ba = a(40353),
-        va = a(50136),
+        va = a(11632),
         Ia = a(59313),
         ha = a.n(Ia),
         Sa = a(51272);
@@ -4463,17 +4463,8 @@
           } = e,
           [_, E] = l.useState(a?.GetDayIndexFromEventStart()),
           [b, v] = l.useState(null),
-          [I, h] = l.useState((0, i.rp)()),
-          S = l.useCallback(() => h((0, i.rp)()), []);
-        l.useEffect(
-          () => (
-            window.addEventListener("resize", S),
-            () => window.removeEventListener("resize", S)
-          ),
-          [S],
-        );
-        const k = (0, n.q3)(() => a.jsondata.sale_header_disable_top_margin),
-          f = (function (e, t) {
+          I = (0, n.q3)(() => a.jsondata.sale_header_disable_top_margin),
+          h = (function (e, t) {
             const [a] = (0, m.QD)(i.jD, void 0);
             return l.useMemo(() => {
               const n = e.GetSaleSectionFirstMatchByType("tabs"),
@@ -4486,7 +4477,7 @@
               }
             }, [e, t, a]);
           })(a, _),
-          [D, T] = (0, l.useState)(!1);
+          [S, k] = (0, l.useState)(!1);
         l.useEffect(() => {
           if (
             a.jsondata.sale_custom_css &&
@@ -4515,20 +4506,20 @@
             }
           );
         }, [a, b, r]);
-        const y = a?.jsondata,
-          L = l.useMemo(
+        const f = a?.jsondata,
+          D = l.useMemo(
             () => ({
               promotionName: t,
               clanid: Number(x.UF.CLANACCOUNTID),
-              nAppIDVOD: Number(y?.broadcast_preroll_vod_appid),
+              nAppIDVOD: Number(f?.broadcast_preroll_vod_appid),
               event: a,
               bIsPreview: r,
               language: o,
-              accountIDs: r ? y?.broadcast_whitelist : void 0,
+              accountIDs: r ? f?.broadcast_whitelist : void 0,
               chat_announcement_giveaway:
-                y?.broadcast_chat_announcement_giveaway,
+                f?.broadcast_chat_announcement_giveaway,
             }),
-            [r, a, y, o, t],
+            [r, a, f, o, t],
           );
         if (a && void 0 !== _) {
           const e = a.jsondata.localized_sale_logo?.filter(Boolean).length > 0,
@@ -4552,8 +4543,8 @@
                 a.GetContentHubTag(),
               ),
             v = Boolean(!b),
-            I = r
-              ? !D && c?.BIsBackgroundImageEnabled()
+            f = r
+              ? !S && c?.BIsBackgroundImageEnabled()
                 ? ba.S.EPreviewMode_EditBackground
                 : ba.S.EPreviewMode_Enabled
               : ba.S.EPreviewMode_Disabled;
@@ -4574,15 +4565,15 @@
                   Boolean(c) &&
                     l.createElement(ia, {
                       backgroundImageEditModel: c,
-                      bBackgroundImgGroupEditMode: D,
-                      fnSetBackgroundImgGroupEditMode: T,
+                      bBackgroundImgGroupEditMode: S,
+                      fnSetBackgroundImgGroupEditMode: k,
                     }),
                   l.createElement(
                     "div",
                     {
                       className: (0, U.A)({
                         [C().SaleOuterContainer]: !0,
-                        [C().SaleOuterTopMargin]: k,
+                        [C().SaleOuterTopMargin]: I,
                         [C().SaleNewSizing]: p,
                         [C()[`CustomStyle_${a.jsondata.sale_vanity_id}`]]: !0,
                         SaleOuterContainer: !0,
@@ -4595,16 +4586,16 @@
                     l.createElement(wa, {
                       rgPresenters: a.jsondata.sale_presenters,
                     }),
-                    l.createElement(q, { event: a, broadcastEmbedContext: L }),
+                    l.createElement(q, { event: a, broadcastEmbedContext: D }),
                     l.createElement(Da, {
-                      ePreviewMode: I,
+                      ePreviewMode: f,
                       event: a,
                       backgroundImageEditModel: c,
                       language: o,
                       promotionName: t,
                       nSaleDayIndex: _,
-                      broadcastEmbedContext: L,
-                      selectedTab: f,
+                      broadcastEmbedContext: D,
+                      selectedTab: h,
                     }),
                     !d &&
                       l.createElement(V, {

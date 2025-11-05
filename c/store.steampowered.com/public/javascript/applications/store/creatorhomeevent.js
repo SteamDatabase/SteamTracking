@@ -5098,16 +5098,7 @@
           } = _,
           [_, _] = _.useState(__webpack_require__?.GetDayIndexFromEventStart()),
           [_, _] = _.useState(null),
-          [_, _] = _.useState((0, _._)()),
-          _ = _.useCallback(() => _((0, _._)()), []);
-        _.useEffect(
-          () => (
-            window.addEventListener("resize", _),
-            () => window.removeEventListener("resize", _)
-          ),
-          [_],
-        );
-        const _ = (0, _._)(
+          _ = (0, _._)(
             () => __webpack_require__.jsondata.sale_header_disable_top_margin,
           ),
           _ = (function (_, _) {

@@ -1955,10 +1955,10 @@
           return null != e && "object" == typeof e && !Array.isArray(e);
         }
         GetListTitle(e) {
-          return this.LazyInit(), this.m_mapListToTitle.get(e);
+          return this.LazyInit(), e ? this.m_mapListToTitle.get(e) : void 0;
         }
         GetListSubtitle(e) {
-          return this.LazyInit(), this.m_mapListToSubtitle.get(e);
+          return this.LazyInit(), e ? this.m_mapListToSubtitle.get(e) : void 0;
         }
       }
       (0, i.Cg)([z.sH], j.prototype, "m_mapListToTitle", void 0),

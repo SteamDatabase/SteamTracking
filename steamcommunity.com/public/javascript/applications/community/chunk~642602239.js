@@ -2181,7 +2181,7 @@
                       n
                         .split(",")
                         .map((e, t) =>
-                          c.createElement(W, { key: t, width: e }),
+                          c.createElement(x, { key: t, width: e }),
                         ),
                     ),
                   c.createElement("tbody", null, e.children),
@@ -2210,7 +2210,7 @@
             "th",
             {
               Constructor: function (e) {
-                return x("th", e);
+                return W("th", e);
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -2221,7 +2221,7 @@
             "td",
             {
               Constructor: function (e) {
-                return x("td", e);
+                return W("td", e);
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -2644,7 +2644,7 @@
           )
         );
       }
-      function W(e) {
+      function x(e) {
         const { width: t } = e;
         let r;
         return (
@@ -2652,7 +2652,7 @@
           c.createElement("col", { style: r })
         );
       }
-      function x(e, t) {
+      function W(e, t) {
         const r = I(t.args, "width"),
           n = I(t.args, "colspan"),
           a = I(t.args, "rowspan"),
@@ -3906,7 +3906,7 @@
                       s.createElement($, null),
                     ),
                   renderContent: () =>
-                    s.createElement(W, {
+                    s.createElement(x, {
                       store: t,
                       onItemSelect: (e) => a(e.name),
                       flairGroupID: n,
@@ -4016,7 +4016,7 @@
                         s.createElement($, null),
                       ),
                     renderContent: () =>
-                      s.createElement(W, {
+                      s.createElement(x, {
                         store: e,
                         onItemSelect: (e) => t(e.name),
                         flairGroupID: n,
@@ -4191,7 +4191,7 @@
           );
         }
       }
-      class W extends s.Component {
+      class x extends s.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
         }
@@ -4212,11 +4212,11 @@
             renderEmpty: () =>
               n
                 ? s.createElement(M, null, (0, u.we)("#AddonPicker_NoResults"))
-                : s.createElement(x, null),
+                : s.createElement(W, null),
           });
         }
       }
-      function x() {
+      function W() {
         return s.createElement(
           s.Fragment,
           null,
@@ -4392,7 +4392,7 @@
                           null,
                           (0, u.we)("#AddonPicker_NoResults"),
                         )
-                      : s.createElement(x, null),
+                      : s.createElement(W, null),
                 },
               ],
             })
@@ -4424,7 +4424,7 @@
                         null,
                         (0, u.we)("#AddonPicker_NoResults"),
                       )
-                    : s.createElement(x, null),
+                    : s.createElement(W, null),
               },
             ],
           });
@@ -4865,7 +4865,7 @@
               );
         }
         ShowMenu() {
-          let e = s.createElement(x, {
+          let e = s.createElement(W, {
               ...this.props,
               fnHasReminderSet: (e) => this.BHasSomeNotificationSetting(e),
               fnHidePanel: this.HideMenu,
@@ -4970,14 +4970,14 @@
         const a = (0, o.sf)(N.TS.LANGUAGE);
         return s.createElement(F, { lang: a, ...n, eventModel: i });
       }
-      function W(e) {
+      function x(e) {
         return a.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
       }
       (0, n.Cg)([M.oI], F.prototype, "ToggleMenu", null),
         (0, n.Cg)([M.oI], F.prototype, "ShowMenu", null),
         (0, n.Cg)([M.oI], F.prototype, "HideMenu", null),
         (F = (0, n.Cg)([i.PA], F));
-      const x = (0, i.PA)((e) => {
+      const W = (0, i.PA)((e) => {
         const {
             eventModel: t,
             bShowStartTime: r,
@@ -5045,7 +5045,7 @@
           },
           F = h.O.BHasValidatedEmail(),
           O = h.O.BHasPushNotification(),
-          x = r && t.GetStartTimeAndDateUnixSeconds();
+          W = r && t.GetStartTimeAndDateUnixSeconds();
         return s.createElement(
           "div",
           null,
@@ -5093,20 +5093,20 @@
                 size: "xlarge",
                 position: "center",
               }),
-            x &&
+            W &&
               s.createElement(
                 "div",
                 { className: P.FullStartTime },
                 (0, C.PP)(
                   "#EventDisplay_EventUpcoming_WithDateAndTime",
                   (0, C.TW)(
-                    x,
+                    W,
                     (0, T.Ct)(
-                      new Date(1e3 * x),
+                      new Date(1e3 * W),
                       p.HD.GetTimeNowWithOverrideAsDate(),
                     ),
                   ),
-                  (0, f.yi)(x, !0),
+                  (0, f.yi)(W, !0),
                 ),
               ),
             s.createElement(
@@ -5247,8 +5247,8 @@
                           })(),
                         ),
                         n = t.GetStartTimeAndDateUnixSeconds(),
-                        i = W(n),
-                        a = W(
+                        i = x(n),
+                        a = x(
                           t.GetEndTimeAndDateUnixSeconds() || n + T.Kp.PerHour,
                         ),
                         s =
@@ -5320,8 +5320,10 @@
             bMuted: o,
             className: m,
             mediaScale: d,
+            onClick: E,
+            altText: _,
           } = e,
-          E = (0, i.useMemo)(() => {
+          f = (0, i.useMemo)(() => {
             var e;
             return Boolean(
               null === (e = r.rgVideoTracks) || void 0 === e
@@ -5331,9 +5333,9 @@
                   ),
             );
           }, [r.rgVideoTracks]),
-          [_, f] = i.useState(!1);
+          [S, y] = i.useState(!1);
         if (!r.rgVideoSources || !r.rgVideoSources.length) return null;
-        const S = (function (e) {
+        const B = (function (e) {
           return !(
             !(0, l.ZF)(e.sPoster) ||
             (e.rgVideoSources &&
@@ -5341,32 +5343,32 @@
             (e.rgVideoTracks && e.rgVideoTracks.some((e) => !(0, l.ZF)(e.sURL)))
           );
         })(r);
-        let y;
-        (!S || (E && "public" == c.TS.WEB_UNIVERSE)) && (y = "anonymous");
-        const B = o || (n && u.Get().BVolumePreferenceMuted()),
-          b = r.sPoster ? p(r.sPoster) : "";
+        let b;
+        (!B || (f && "public" == c.TS.WEB_UNIVERSE)) && (b = "anonymous");
+        const w = o || (n && u.Get().BVolumePreferenceMuted()),
+          A = r.sPoster ? p(r.sPoster) : "";
         return i.createElement(
           "video",
           {
             width: "100%",
             height: "auto",
             autoPlay: n,
-            muted: B,
+            muted: w,
             playsInline: !0,
             controls: a,
-            poster: b,
+            poster: A,
             loop: s,
-            crossOrigin: y,
+            crossOrigin: b,
             onVolumeChange: (e) => {
               const t = e.target,
                 r = t.muted ? 0 : t.volume;
-              _ && u.Get().SetVolumePreference(r);
+              S && u.Get().SetVolumePreference(r);
             },
             onPlay: (e) => {
               const t = e.target,
                 r = 0 == t.currentTime,
                 i = u.Get().BUserHasVolumePreference();
-              if ((f(!0), r))
+              if ((y(!0), r))
                 if (i || n)
                   i &&
                     ((t.volume = u.Get().GetVolumePreference()),
@@ -5378,6 +5380,8 @@
             },
             ref: t,
             className: m,
+            onClick: E,
+            "aria-label": _,
             style: { width: d && d >= 1 && d < 100 ? `${d}%` : void 0 },
           },
           i.createElement(g, { rgVideoSources: r.rgVideoSources }),

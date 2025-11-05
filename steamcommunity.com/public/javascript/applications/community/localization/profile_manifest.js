@@ -77,9 +77,9 @@
   Profile_Edit_FavoriteBadge: "Featured Badge",
   Profile_Edit_ChooseFavoriteBadge: "Choose a badge to feature",
   Profile_EditPrivacySettings: "Privacy Settings",
-  Profile_Edit_FeaturedShowcase: "Featured Showcase",
-  Profile_Edit_ProfileModifier: "Special Profile",
-  ProfileModifier_EnabledTitle: "Enable Special Profile Modifier",
+  Profile_Edit_FeaturedShowcase: "Showcase Manager",
+  Profile_Edit_ProfileModifier: "Game Profile",
+  ProfileModifier_EnabledTitle: "Enable Game Profile Modifier",
   ProfileModifier_DisabledTitle: "None",
   Profile_Edit_EditYourAvatar: "Edit Your Avatar",
   Profile_Edit_Avatar_Instructions: "Choose your avatar image and frame.",
@@ -102,7 +102,7 @@
   Profile_Edit_MiniProfile_Instructions:
     "Choose a background to appear in your miniprofile hover.",
   Profile_Edit_ProfileModifier_Instructions:
-    "Choose a Special Profile item that will set a special theme, background, miniprofile hover, and avatar frame.",
+    "Choose a special Game Profile item that will set a theme, background, miniprofile hover, and avatar frame.",
   Profile_Edit_Theme_Instructions:
     "Choose a color theme for your profile page.",
   Profile_Edit_Badge_Instructions:

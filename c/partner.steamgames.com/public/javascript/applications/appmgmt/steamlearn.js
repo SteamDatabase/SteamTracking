@@ -403,6 +403,7 @@
         SnapshotExampleEntry: "_4-nU5LnTKvzPQwnXIz9T-",
         DataElementPath: "_1x5vmKA8y70_ky2mIlYe72",
         DataElementValue: "_3mjov3sNC0cnRbx6K0DknH",
+        InferenceTest: "_3w7tAXr358bx2g4hlxhbTZ",
       };
     },
     chunkid: (module) => {
@@ -2969,6 +2970,10 @@
                   },
                   threshold: {
                     _: 50,
+                    _: _,
+                  },
+                  logic: {
+                    _: 51,
                     _: _,
                   },
                 },
@@ -5898,6 +5903,66 @@
         }
         getClassName() {
           return "CMsgSteamLearnModelNodeThreshold";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.logic_operator || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  logic_operator: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearnModelNodeLogic";
         }
       }
       class _ extends _.Message {
@@ -14625,6 +14690,17 @@
             }
             break;
           }
+          case 42: {
+            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(
+              _,
+              _.connectors()[0].connector_id(),
+            );
+            if (_) {
+              const _ = _(_, _, _);
+              _.push(..._);
+            }
+            break;
+          }
           default:
             (0, _._)(
               !1,
@@ -14854,6 +14930,7 @@
           case 38:
           case 39:
           case 41:
+          case 42:
             return _.Preprocessing;
           case 2:
           case 3:
@@ -27738,6 +27815,324 @@
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
+          let _ = "";
+          switch (_.logic().logic_operator()) {
+            case 0:
+              _ = (0, _._)("#SteamLearn_Config_Node_Logic_Operator_AND");
+              break;
+            case 1:
+              _ = (0, _._)("#SteamLearn_Config_Node_Logic_Operator_OR");
+              break;
+            case 2:
+              _ = (0, _._)("#SteamLearn_Config_Node_Logic_Operator_XOR");
+              break;
+            case 3:
+              _ = (0, _._)("#SteamLearn_Config_Node_Logic_Operator_NAND");
+              break;
+            case 4:
+              _ = (0, _._)("#SteamLearn_Config_Node_Logic_Operator_NOR");
+              break;
+            case 5:
+              _ = (0, _._)("#SteamLearn_Config_Node_Logic_Operator_XNOR");
+          }
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.FlowNode, _.LogicNode, _.Preprocessing),
+            },
+            _.createElement(_, {
+              bVisible: __webpack_require__,
+              fnSetPopupVisible: _,
+              msgNode: _,
+            }),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "target",
+                  position: _._.Top,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Title,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.TitleText,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Title_Logic"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeID,
+                },
+                _.node_id(),
+              ),
+              _.createElement("div", {
+                className: _.EditGear,
+                onClick: () => _(!0),
+              }),
+              _.createElement("div", {
+                className: _.Delete,
+                onClick: () =>
+                  (0, _._)(
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#SteamLearn_Config_Node_Delete_Node"),
+                      strDescription: (0, _._)(
+                        "#SteamLearn_Config_Node_Delete_NodeDetails",
+                      ),
+                      onOK: () => _(_, _.node_id()),
+                    }),
+                    window,
+                  ),
+              }),
+            ),
+            _.createElement("div", {
+              className: _.TitleUnderBar,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _.Body,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.CenterSection,
+                },
+                _.comment().length > 0 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Comment,
+                    },
+                    _.comment(),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.LabelValue,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Label,
+                    },
+                    (0, _._)("#SteamLearn_Config_Node_Logic_Operator"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.Value,
+                    },
+                    _,
+                  ),
+                ),
+              ),
+            ),
+            _.map((_, _) => {
+              const _ = Math.floor(
+                  ((_ + 1) / (_.length + 1)) * parseInt(_.nodeWidth),
+                ),
+                _ = _(_.connector_id());
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  type: "source",
+                  position: _._.Bottom,
+                  _: _,
+                  style: {
+                    left: _,
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ConnectorID,
+                  },
+                  _.connector_id(),
+                ),
+              );
+            }),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.logic().logic_operator());
+          _.useEffect(() => {
+            _(_.msgNode.comment()), _(_.msgNode.logic().logic_operator());
+          }, [_.bVisible, _.msgNode]);
+          let _ = [
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Logic_Operator_AND"),
+              value: 0,
+            },
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Logic_Operator_OR"),
+              value: 1,
+            },
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Logic_Operator_XOR"),
+              value: 2,
+            },
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Logic_Operator_NAND"),
+              value: 3,
+            },
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Logic_Operator_NOR"),
+              value: 4,
+            },
+            {
+              label: (0, _._)("#SteamLearn_Config_Node_Logic_Operator_XNOR"),
+              value: 5,
+            },
+          ];
+          return _.createElement(
+            _._,
+            {
+              active: _.bVisible,
+              onDismiss: () => _.fnSetPopupVisible(!1),
+              modalClassName: "NodeEditDialog",
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.NodeHeader,
+              },
+              (0, _._)("#SteamLearn_Config_Node_Title_Logic"),
+              _.createElement(
+                "div",
+                {
+                  className: _.SubHeader,
+                },
+                (0, _._)("#SteamLearn_Config_Node_Tooltip_Logic"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.NodeBody,
+              },
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Comment"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_CommentDesc"),
+                ),
+                _.createElement(_, {
+                  isText: !0,
+                  dontUpdateProject: !0,
+                  width: 200,
+                  fnGetInitialValue: () => __webpack_require__,
+                  fnSetValue: (_) => _(_),
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.NodeOptionBlock,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionHeader,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Logic_Operator"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.NodeOptionDesc,
+                  },
+                  (0, _._)("#SteamLearn_Config_Node_Logic_OperatorDesc"),
+                ),
+                _.createElement(_, {
+                  dontUpdateProject: !0,
+                  fnGetValue: () => _,
+                  fnSetValue: (_) => _(parseInt(_)),
+                  options: _,
+                }),
+              ),
+              _.createElement("div", {
+                className: _.Separator,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.Buttons,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => {
+                    _.msgNode.logic().set_logic_operator(_),
+                      _.msgNode.set_comment(__webpack_require__),
+                      _(_),
+                      _.fnSetPopupVisible(!1);
+                  },
+                },
+                (0, _._)("#SteamLearn_Confirm"),
+              ),
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _.fnSetPopupVisible(!1),
+                },
+                (0, _._)("#SteamLearn_Cancel"),
+              ),
+            ),
+          );
+        },
+        _ = (_) => {
+          const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(!1),
+            _ = _.data.msgNode,
+            _ = _.connectors().filter((_) => _.is_input_connector()),
+            _ = _.connectors().filter((_) => !_.is_input_connector());
           return _.createElement(
             "div",
             {
@@ -35017,6 +35412,7 @@
                 nodeBertTokenizer: _,
                 nodeBertFinetune: _,
                 nodeThreshold: _,
+                nodeLogic: _,
               }),
               [],
             );
@@ -35143,6 +35539,9 @@
                         (_ = 1),
                         _.threshold().set_threshold_value(0),
                         _.threshold().set_comparison(0);
+                      break;
+                    case 42:
+                      (_ = 2), (_ = 1), _.logic().set_logic_operator(0);
                       break;
                     case 13:
                       (_ = 3), (_ = 2);
@@ -35569,6 +35968,16 @@
                         ),
                         strTooltip: (0, _._)(
                           "#SteamLearn_Config_Node_Tooltip_KMeans",
+                        ),
+                      }),
+                      _.createElement(_, {
+                        fnDragStart: _,
+                        eType: 42,
+                        strName: (0, _._)(
+                          "#SteamLearn_Config_Node_Title_Logic",
+                        ),
+                        strTooltip: (0, _._)(
+                          "#SteamLearn_Config_Node_Tooltip_Logic",
                         ),
                       }),
                       _.createElement(_, {
@@ -36007,6 +36416,8 @@
             return "nodeBertFinetune";
           case 41:
             return "nodeThreshold";
+          case 42:
+            return "nodeLogic";
           default:
             (0, _._)(!1, `Unknown type in GetNodeTypeString: ${_}`);
         }
@@ -36052,7 +36463,7 @@
       const _ = () => {
           const { msgWorkingProjectConfig: _ } = _(),
             _ = _(),
-            _ = _(_.project_id(), _.published_version(), 5).data,
+            _ = _(_.project_id(), _.published_version(), 20).data,
             [_, _] = _.useState(!1);
           if (!_.isSuccess) return null;
           let _ = [];
@@ -37080,6 +37491,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
+            [__webpack_require__, _] = _.useState(void 0),
             _ = _.msgSnapshotExample.map_storage_elements().sort((_, _) => {
               const _ = _.data_source_element_usages().find(
                   (_) => _.sql_column() == _.key(),
@@ -37089,6 +37501,99 @@
                 );
               return _.data_element_path() < _.data_element_path() ? -1 : 1;
             });
+          let _ = [];
+          if (__webpack_require__)
+            for (const _ of __webpack_require__.outputs()) {
+              if (_.regression().value().length > 0) {
+                _.push(_.createElement("div", null, "OUTPUT"));
+                for (let _ = 0; _ < _.regression().value().length; _++)
+                  _.push(
+                    _.createElement(
+                      "div",
+                      null,
+                      `[${_}] ${_.regression().value()[_]}`,
+                    ),
+                  );
+              }
+              if (_.named_inference().value().length > 0) {
+                _.push(_.createElement("div", null, "OUTPUT"));
+                for (let _ = 0; _ < _.named_inference().value().length; _++)
+                  _.push(
+                    _.createElement(
+                      "div",
+                      null,
+                      `${_.named_inference().value()[_]}`,
+                    ),
+                  );
+              }
+              if (_.multi_binary_crossentropy().value().length > 0) {
+                _.push(_.createElement("div", null, "OUTPUT"));
+                for (
+                  let _ = 0;
+                  _ < _.multi_binary_crossentropy().value().length;
+                  _++
+                )
+                  _.push(
+                    _.createElement(
+                      "div",
+                      null,
+                      `${_.multi_binary_crossentropy().value()[_]} - ${(100 * _.multi_binary_crossentropy().weight()[_]).toFixed(2)}%`,
+                    ),
+                  );
+              }
+              if (_.multi_binary_crossentropy().value_sequence().length > 0) {
+                _.push(_.createElement("div", null, "OUTPUT"));
+                for (
+                  let _ = 0;
+                  _ < _.multi_binary_crossentropy().value_sequence().length;
+                  _++
+                )
+                  _.push(
+                    _.createElement(
+                      "div",
+                      null,
+                      `${_.multi_binary_crossentropy().value_sequence()[_].value()} - ${(100 * _.multi_binary_crossentropy().weight()[_]).toFixed(2)}%`,
+                    ),
+                  );
+              }
+              if (
+                (_.binary_crossentropy().value() &&
+                  (_.push(_.createElement("div", null, "OUTPUT")),
+                  _.push(
+                    _.createElement(
+                      "div",
+                      null,
+                      `${(100 * _.binary_crossentropy().value()).toFixed(2)}%`,
+                    ),
+                  )),
+                _.categorical_crossentropy().value().length > 0)
+              )
+                for (
+                  let _ = 0;
+                  _ < _.categorical_crossentropy().value().length;
+                  _++
+                )
+                  _.push(
+                    _.createElement(
+                      "div",
+                      null,
+                      `${_.categorical_crossentropy().value()[_]} - ${(100 * _.categorical_crossentropy().weight()[_]).toFixed(2)}%`,
+                    ),
+                  );
+              if (_.categorical_crossentropy().value_sequence().length > 0)
+                for (
+                  let _ = 0;
+                  _ < _.categorical_crossentropy().value_sequence().length;
+                  _++
+                )
+                  _.push(
+                    _.createElement(
+                      "div",
+                      null,
+                      `${_.categorical_crossentropy().value_sequence()[_]} - ${(100 * _.categorical_crossentropy().weight()[_]).toFixed(2)}%`,
+                    ),
+                  );
+            }
           return _.createElement(
             "div",
             {
@@ -37109,7 +37614,7 @@
               {
                 className: _.ExampleValues,
               },
-              __webpack_require__.map((_) => {
+              _.map((_) => {
                 const _ = _.data_source_element_usages().find(
                   (_) =>
                     _.input() > 0 &&
@@ -37141,6 +37646,69 @@
                     )
                   : null;
               }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.InferenceTest,
+              },
+              _.createElement(
+                "button",
+                {
+                  className: (0, _._)(_.DialogButton, _.ShowExamplesButton),
+                  onClick: () =>
+                    (async (_) => {
+                      let _ = _._.Init(_);
+                      __webpack_require__.Body().set_project_id(_.project_id()),
+                        Math.max(..._.train_infos().map((_) => _.train_id()));
+                      const _ = await (async function (_, _) {
+                          const _ = _.map(_);
+                          return _[(await Promise.all(_)).findIndex((_) => _)];
+                        })(
+                          _.train_infos().map((_) => _.train_id()),
+                          async (_) => {
+                            let _ = _._.Init(_);
+                            __webpack_require__
+                              .Body()
+                              .set_project_id(_.project_id()),
+                              __webpack_require__.Body().set_train_id(_);
+                            const _ = await _.GetTrainStatus(
+                              _.Get().GetServiceTransport(),
+                              _,
+                            );
+                            return _?.Body().active();
+                          },
+                        ),
+                        _ =
+                          _.train_infos()
+                            .find((_) => _.train_id() == _)
+                            ?.fetch_id() || 0;
+                      __webpack_require__.Body().set_fetch_id(_),
+                        __webpack_require__.Body().set_train_id(_),
+                        __webpack_require__.Body().set_additional_data([10]);
+                      const _ = _.sort((_, _) => _.key() - _.key());
+                      for (const _ of _) {
+                        const _ = _.data_source_element_usages().find(
+                          (_) => _.input() > 0 && _.sql_column() == _.key(),
+                        );
+                        if (_ && 0 != _.input()) {
+                          const _ = new _();
+                          isNaN(+_.value())
+                            ? _.set_string_value(_.value().string_value())
+                            : _.set_float_value(_.value().float_value()),
+                            __webpack_require__.Body().add_data(_);
+                        }
+                      }
+                      const _ = await _.InferenceBackend(
+                        _.Get().GetServiceTransport(),
+                        _,
+                      );
+                      _.BIsValid() && 1 == _.GetEResult() && _(_.Body());
+                    })(_),
+                },
+                "Inference",
+              ),
+              _.createElement("div", null, _),
             ),
           );
         };

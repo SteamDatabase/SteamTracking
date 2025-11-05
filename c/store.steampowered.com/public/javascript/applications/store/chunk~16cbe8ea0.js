@@ -1994,7 +1994,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 3334340,
+      const _ = 4147080,
         _ = 2215130;
       let _;
       function _() {
@@ -4943,6 +4943,7 @@
                 _.createElement("img", {
                   className: _().SteamAwardHeaderImage,
                   src: this.m_awardEventDetails.strTrophyImg,
+                  role: "presentation",
                 }),
                 _.createElement(
                   "div",

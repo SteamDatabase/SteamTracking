@@ -14,6 +14,7 @@
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         Container: "_30v-6zb_axOypIUr5VRHE1",
+        SingleLine: "_2i9qH2AM6Wg5660Tkf_fTt",
         ToolbarRowOverflowContainer: "nXEH21nf47u2OH7BjQKei",
         ToolbarRow: "LCeIT0gmFTY8fdfaVgk4j",
         Gap: "_19z0fjj7o0n9vAjVjvYZNU",
@@ -1957,7 +1958,11 @@
           { view: w, pmState: t },
           u.createElement(r.Z, {
             key: `editordiv_${m}`,
-            className: (0, b.A)(o, T.Container),
+            className: (0, b.A)({
+              ["" + o]: !!o,
+              [T.Container]: !0,
+              [T.SingleLine]: !!h,
+            }),
             ref: M,
             spellCheck: m,
             focusable: !0,

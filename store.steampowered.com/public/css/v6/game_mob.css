@@ -116,6 +116,10 @@
 		background-image: unset !important;
 	}
 
+	html.responsive .game_page_background_ctn.game {
+		display: none;
+	}
+
 	/* app reviews needs additional top margin */
 	html.responsive .app_reviews_area {
 		margin-top: 10px;
@@ -640,12 +644,14 @@
 	}
 
 	/* formatting for the "This game is already in your library" message */
-	html.responsive .game_area_already_owned.page_content {
+	html.responsive body.v6 .game_area_already_owned.page_content {
 		line-height: unset !important;
 		display: flex;
 		flex-direction: row;
 		height: unset;
 		padding: 5px 0px;
+		box-sizing: border-box;
+		width: 96%;
 	}
 	html.responsive .game_area_already_owned .already_in_library {
 		font-size: 14px;
@@ -712,20 +718,18 @@
 	html.responsive #add_to_wishlist_area_success,
 	html.responsive #add_to_wishlist_area_fail {
 		width: 100%;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
-	html.responsive #add_to_wishlist_area a,
-	html.responsive #add_to_wishlist_area_success a,
-	html.responsive #add_to_wishlist_area_fail a {
-		width: 100%;
-		text-align: center;
 	}
 
 	/* button row below wishlist */
 	html.responsive .queue_actions_ctn {
 		padding: 16px 9px;
+		flex-direction: column;
+		row-gap: 3px;
+		width: fit-content;
+		margin: 0 auto;
+	}
+	html.responsive .queue_actions_ctn .expand_to_fill {
+		display: none;
 	}
 	html.responsive .queue_actions_ctn p {
 		margin-bottom: 10px;
@@ -733,6 +737,7 @@
 	html.responsive #rowBtnActions {
 		display: flex !important;
 		flex-direction: row;
+		gap: 6px;
 		width: 100%;
 		justify-content: center;
 		flex-wrap: wrap;
@@ -764,6 +769,9 @@
 	html.responsive #queueBtnFollow > button {
 		width: 100%;
 		text-align: center;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 	}
 
 	/* discovery queue */
@@ -777,11 +785,12 @@
 		flex-direction: column;
 		margin: 5px 16px;
 		width: unset;
+		/* this padding leaves room for the queue button */
+		padding-right: 204px;
 	}
 	html.responsive .next_in_queue_area {
-		position: relative;
-		align-content: center;
-		max-width: unset;
+		position: absolute;
+		bottom: 149px;
 		top: unset;
 	}
 	html.responsive .btn_next_in_queue {

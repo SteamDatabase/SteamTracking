@@ -1596,6 +1596,11 @@
                     pbr: _._.readPackedUint32,
                     _: _._.writeRepeatedUint32,
                   },
+                  purchaseable: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m

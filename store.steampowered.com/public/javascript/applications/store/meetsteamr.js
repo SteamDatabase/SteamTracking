@@ -54,6 +54,32 @@
         DescriptionWrapper: "_17o_wRtaDyujn3Bx4gGiu5",
       };
     },
+    20019: (e, t, n) => {
+      "use strict";
+      function a(e) {
+        switch (e) {
+          case 0:
+            return "game";
+          case 6:
+            return "software";
+          case 1:
+            return "demo";
+          case 4:
+            return "dlc";
+          case 7:
+          case 3:
+            return "video";
+          case 11:
+            return "music";
+          case 12:
+            return "beta";
+          case 2:
+            return "mod";
+        }
+        return "invalid";
+      }
+      n.d(t, { U: () => a });
+    },
     27144: (e, t, n) => {
       "use strict";
       n.d(t, { B3: () => h, KM: () => S, KT: () => y });
@@ -64,8 +90,8 @@
         o = n(90626),
         l = n(20194),
         c = n(75233),
-        m = n(17720),
-        u = n(68797),
+        u = n(17720),
+        m = n(68797),
         d = n(78327),
         p = n(56545),
         g = n(37735),
@@ -110,7 +136,7 @@
                   1 != a.data?.success ||
                   !a.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, u.H))(a).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(a).strErrorMsg}`;
                 return [a.data.userinfo];
               }
               {
@@ -124,11 +150,11 @@
                   1 != a.data?.success ||
                   !a.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, u.H))(a).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(a).strErrorMsg}`;
                 const r = new Map();
                 return (
                   a.data.userinfos.forEach((e) =>
-                    r.set(new m.b(e.steamid).GetAccountID(), e),
+                    r.set(new u.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => r.get(e))
                 );
@@ -152,7 +178,7 @@
               const n = await f.loadMany(e);
               return (
                 n.forEach((e) => {
-                  const n = [v, new m.b(e.steamid).GetAccountID()];
+                  const n = [v, new u.b(e.steamid).GetAccountID()];
                   t.setQueryData(n, e);
                 }),
                 n
@@ -183,9 +209,9 @@
       function l(e) {
         const { accountID: t, bHideWhenNotAvailable: n, bHideName: l } = e,
           [c] = (0, r.KT)(t),
-          m = (0, r.KM)(t),
-          u = a.useMemo(() => s.b.InitFromAccountID(t), [t]),
-          d = `${o.TS.COMMUNITY_BASE_URL}profiles/${u.ConvertTo64BitString()}`;
+          u = (0, r.KM)(t),
+          m = a.useMemo(() => s.b.InitFromAccountID(t), [t]),
+          d = `${o.TS.COMMUNITY_BASE_URL}profiles/${m.ConvertTo64BitString()}`;
         return a.createElement(
           a.Fragment,
           null,
@@ -201,13 +227,13 @@
                 a.createElement("img", {
                   className: i.SmallAvatar,
                   src: c.avatar_url,
-                  "data-miniprofile": "s" + u.ConvertTo64BitString(),
+                  "data-miniprofile": "s" + m.ConvertTo64BitString(),
                 }),
                 Boolean(!l) &&
                   a.createElement(
                     "span",
                     null,
-                    m ? `${m} (${c.persona_name})` : c.persona_name,
+                    u ? `${u} (${c.persona_name})` : c.persona_name,
                   ),
               ),
         );
@@ -223,8 +249,8 @@
         o = n(52038),
         l = n(95695),
         c = n(84811),
-        m = n(64734),
-        u = n(65946),
+        u = n(64734),
+        m = n(65946),
         d = n(26408);
       function p(e) {
         const {
@@ -236,7 +262,7 @@
             children: p,
             elAdditionalButtons: g,
           } = e,
-          _ = (0, u.q3)(() => a());
+          _ = (0, m.q3)(() => a());
         return i.createElement(
           i.Fragment,
           null,
@@ -245,8 +271,8 @@
             {
               className: (0, o.A)(
                 r,
-                m.SectionTitleHeader,
-                m.required_title,
+                u.SectionTitleHeader,
+                u.required_title,
                 "SectionTitleHeader",
               ),
             },
@@ -263,7 +289,7 @@
             ),
             i.createElement(
               "div",
-              { className: m.SectionTitleButtons },
+              { className: u.SectionTitleButtons },
               g,
               i.createElement(E, { bIsMinimized: _, fnToggleMinimize: s }),
             ),
@@ -293,7 +319,7 @@
     },
     57912: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => ue, default: () => de });
+      n.r(t), n.d(t, { MeetSteamRoutes: () => me, default: () => de });
       var a = n(90626),
         s = n(43527),
         r = n(92757),
@@ -301,8 +327,8 @@
         o = n(2160),
         l = n(8527),
         c = n(60746),
-        m = n(6379),
-        u = n(30756),
+        u = n(6379),
+        m = n(30756),
         d = n(92557),
         p = n(22797),
         g = n(61859),
@@ -314,7 +340,7 @@
         if (
           (a.useEffect(() => {
             n &&
-              (m.O3.Init(), Promise.all([c.KN.InitGlobal()]).then(() => s(!1)));
+              (u.O3.Init(), Promise.all([c.KN.InitGlobal()]).then(() => s(!1)));
           }, [n]),
           n)
         )
@@ -322,7 +348,7 @@
             string: (0, g.we)("#Loading"),
             position: "center",
           });
-        const S = m.O3.GetClanEventModel(t);
+        const S = u.O3.GetClanEventModel(t);
         return S
           ? a.createElement(
               _.tH,
@@ -339,7 +365,7 @@
                 adminPanel:
                   l.TS.EREALM === o.TU.k_ESteamRealmChina
                     ? a.createElement(E.P, { eventModel: S })
-                    : a.createElement(u.g, {
+                    : a.createElement(m.g, {
                         eventModel: S,
                         bSupportsSticky: !0,
                       }),
@@ -353,8 +379,8 @@
         h = n(62216),
         M = n(44165),
         T = n(30470),
-        N = n(24484);
-      function w(e, t, n) {
+        w = n(24484);
+      function N(e, t, n) {
         for (const a of e)
           if (a.group_id === t) {
             const e = a.sessions.find((e) => e.id === n);
@@ -365,22 +391,22 @@
       function C(e, t) {
         const n = (0, M.f1)(),
           [s] = (0, a.useState)(() =>
-            (0, N.Tc)("registrations", "application_config")
+            (0, w.Tc)("registrations", "application_config")
               .map((e) => ((e.userReg = JSON.parse(e.jsondata)), e))
               .sort((t, n) => {
-                const a = w(
+                const a = N(
                     e.jsondata.meet_steam_groups,
                     t.group_id,
                     t.session_id,
                   ),
-                  s = w(e.jsondata.meet_steam_groups, n.group_id, n.session_id);
+                  s = N(e.jsondata.meet_steam_groups, n.group_id, n.session_id);
                 return (
                   (s?.session?.rtime_start || 0) -
                   (a?.session?.rtime_start || 0)
                 );
               })
               .map((t) => {
-                const a = w(
+                const a = N(
                   e.jsondata.meet_steam_groups,
                   t.group_id,
                   t.session_id,
@@ -563,9 +589,9 @@
           [r] = (0, k.KT)(t.userReg.accountid),
           [i, o] = (0, a.useState)(!0),
           [l, c] = (0, a.useState)([]),
-          [m, u] = (0, a.useState)(!1),
+          [u, m] = (0, a.useState)(!1),
           d = t.userReg,
-          { group: p, session: g } = w(
+          { group: p, session: g } = N(
             n.jsondata.meet_steam_groups,
             t.group_id,
             t.session_id,
@@ -573,7 +599,7 @@
           [E, S, v] = (0, H.uD)(),
           h =
             ((M = n.GID),
-            (N = s),
+            (w = s),
             (C = t.group_id),
             (D = t.session_id),
             (0, f.n)({
@@ -581,7 +607,7 @@
                 const n = new FormData();
                 n.append("sessionid", T.TS.SESSIONID),
                   n.append("gid", M),
-                  n.append("accountid", "" + N),
+                  n.append("accountid", "" + w),
                   n.append("meetsteam_group_id", "" + C),
                   n.append("meetsteam_session_id", "" + D),
                   n.append("include_self", "" + (e ? 1 : 0)),
@@ -591,7 +617,7 @@
                 return 1 == s?.data?.success;
               },
             }));
-        var M, N, C, D;
+        var M, w, C, D;
         const A = new Set(
             t.guests_attendance?.length > 0
               ? t.guests_attendance.split("|")
@@ -639,7 +665,7 @@
           "div",
           null,
           a.createElement(V, { group: p, session: g }),
-          Boolean(m)
+          Boolean(u)
             ? a.createElement(
                 "div",
                 { className: z().CheckedIn },
@@ -704,7 +730,7 @@
                 bIncludeSelf: i,
                 rgGuestsAttending: l,
                 fnMarkAttendance: h,
-                fnOnSuccess: () => u(!0),
+                fnOnSuccess: () => m(!0),
               }),
             ),
           ),
@@ -985,7 +1011,7 @@
               (e, t) => (null == e || (1e3 * t > n.getTime() && t < e) ? t : e),
               void 0,
             ) ?? 0,
-          m = Array.from(i.keys()).some((e) =>
+          u = Array.from(i.keys()).some((e) =>
             (0, ee.JD)(n, new Date(1e3 * e)),
           );
         return a.createElement(
@@ -1008,7 +1034,7 @@
                 sessionsAndGroups: i.get(e),
                 rgRegistrationInfo: l,
                 isToday: (0, ee.JD)(
-                  m ? n : new Date(1e3 * c),
+                  u ? n : new Date(1e3 * c),
                   new Date(1e3 * e),
                 ),
               }),
@@ -1055,8 +1081,8 @@
           } = e,
           l = (0, i.sf)(T.TS.LANGUAGE),
           c = (0, M.s4)(),
-          { sDisplayTimeZone: m, rtime_start: u } = (0, h._t)(r),
-          d = (0, h.us)(u, m),
+          { sDisplayTimeZone: u, rtime_start: m } = (0, h._t)(r),
+          d = (0, h.us)(m, u),
           p = o.reduce((e, t) => e + (t.guests_registered ?? 0), 0),
           g = o.reduce(
             (e, t) =>
@@ -1067,15 +1093,15 @@
             0,
           ),
           [E, S, v] = (0, H.uD)(),
-          N =
-            ((w = t.GID),
+          w =
+            ((N = t.GID),
             (C = s.group_id),
             (D = r.id),
             (0, f.n)({
               mutationFn: async ({ nCapacity: e }) => {
                 const t = new FormData();
                 t.append("sessionid", T.TS.SESSIONID),
-                  t.append("gid", w),
+                  t.append("gid", N),
                   t.append("meetsteam_group_id", "" + C),
                   t.append("meetsteam_session_id", "" + D),
                   t.append("capacity", "" + e);
@@ -1084,7 +1110,7 @@
                 return 1 == a?.data?.success;
               },
             }));
-        var w, C, D;
+        var N, C, D;
         return a.createElement(
           "div",
           { className: Z().DisplaySession },
@@ -1098,12 +1124,12 @@
             ),
             a.createElement("div", { className: Z().SessionTime }, d),
           ),
-          a.createElement(me, {
+          a.createElement(ue, {
             title: "Registered:",
             nCount: p,
             nCapacity: r.max_capacity,
           }),
-          a.createElement(me, {
+          a.createElement(ue, {
             title: "Checked in:",
             nCount: g,
             nCapacity: r.max_capacity,
@@ -1126,7 +1152,7 @@
                   a.createElement(ce, {
                     closeModal: v,
                     nCapacity: r.max_capacity ?? 0,
-                    fnUpdateCapacity: N,
+                    fnUpdateCapacity: w,
                     fnOnSuccess: () => window.location.reload(),
                   }),
                 ),
@@ -1185,7 +1211,7 @@
               }),
             );
       }
-      function me(e) {
+      function ue(e) {
         const { title: t, nCount: n, nCapacity: s } = e,
           r = n >= s,
           i = Math.min((n / s) * 100, 100),
@@ -1204,7 +1230,7 @@
           ),
         );
       }
-      const ue = {
+      const me = {
         MeetSteamAttendance: () => `${s.B.MeetSteamRoute()}attendance`,
         MeetSteamEvent: () => `${s.B.MeetSteamRoute()}:gid(\\d+)`,
         MeetSteamAttendeeList: () => `${s.B.MeetSteamRoute()}attendeelist`,
@@ -1214,15 +1240,15 @@
           r.dO,
           null,
           a.createElement(r.qh, {
-            path: ue.MeetSteamAttendance(),
+            path: me.MeetSteamAttendance(),
             render: (e) => a.createElement(O, { ...e }),
           }),
           a.createElement(r.qh, {
-            path: ue.MeetSteamAttendeeList(),
+            path: me.MeetSteamAttendeeList(),
             render: (e) => a.createElement(ae, { ...e }),
           }),
           a.createElement(r.qh, {
-            path: ue.MeetSteamEvent(),
+            path: me.MeetSteamEvent(),
             render: (e) => a.createElement(S, { ...e }),
           }),
           a.createElement(r.qh, null, a.createElement(W.a, null)),

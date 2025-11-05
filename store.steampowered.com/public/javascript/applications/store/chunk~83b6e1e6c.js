@@ -1830,8 +1830,10 @@
             bMuted: o,
             className: d,
             mediaScale: u,
+            onClick: h,
+            altText: g,
           } = e,
-          h = (0, r.useMemo)(
+          f = (0, r.useMemo)(
             () =>
               Boolean(
                 n.rgVideoTracks?.some(
@@ -1840,9 +1842,9 @@
               ),
             [n.rgVideoTracks],
           ),
-          [g, f] = r.useState(!1);
+          [v, S] = r.useState(!1);
         if (!n.rgVideoSources || !n.rgVideoSources.length) return null;
-        const v = (function (e) {
+        const T = (function (e) {
           return !(
             !(0, s.ZF)(e.sPoster) ||
             (e.rgVideoSources &&
@@ -1850,32 +1852,32 @@
             (e.rgVideoTracks && e.rgVideoTracks.some((e) => !(0, s.ZF)(e.sURL)))
           );
         })(n);
-        let S;
-        (!v || (h && "public" == c.TS.WEB_UNIVERSE)) && (S = "anonymous");
-        const T = o || (a && m.Get().BVolumePreferenceMuted()),
-          N = n.sPoster ? p(n.sPoster) : "";
+        let N;
+        (!T || (f && "public" == c.TS.WEB_UNIVERSE)) && (N = "anonymous");
+        const C = o || (a && m.Get().BVolumePreferenceMuted()),
+          y = n.sPoster ? p(n.sPoster) : "";
         return r.createElement(
           "video",
           {
             width: "100%",
             height: "auto",
             autoPlay: a,
-            muted: T,
+            muted: C,
             playsInline: !0,
             controls: i,
-            poster: N,
+            poster: y,
             loop: l,
-            crossOrigin: S,
+            crossOrigin: N,
             onVolumeChange: (e) => {
               const t = e.target,
                 n = t.muted ? 0 : t.volume;
-              g && m.Get().SetVolumePreference(n);
+              v && m.Get().SetVolumePreference(n);
             },
             onPlay: (e) => {
               const t = e.target,
                 n = 0 == t.currentTime,
                 r = m.Get().BUserHasVolumePreference();
-              if ((f(!0), n))
+              if ((S(!0), n))
                 if (r || a)
                   r &&
                     ((t.volume = m.Get().GetVolumePreference()),
@@ -1887,6 +1889,8 @@
             },
             ref: t,
             className: d,
+            onClick: h,
+            "aria-label": g,
             style: { width: u && u >= 1 && u < 100 ? `${u}%` : void 0 },
           },
           r.createElement(E, { rgVideoSources: n.rgVideoSources }),

@@ -402,6 +402,7 @@
           "calendarevent",
           "color",
           "bgcolor",
+          "userpolls",
         ],
         _ = [
           "h1",
@@ -807,6 +808,12 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
+          user_poll_background: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
           spotlight_art: {
             width: [306, 374],
             height: [260, 448],
@@ -1093,6 +1100,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1159,12 +1169,14 @@
       const _ = 593110,
         _ = 1675200,
         _ = [_, 766, 221410],
+        _ = 4145017,
         _ = 39049601,
         _ = 41316928,
+        _ = 4397053,
         _ = 4,
         _ = 20,
         _ = 45559995,
-        _ = [4145017, 35143931, _, _, _],
+        _ = [_, 35143931, _, _, _],
         _ = 1e4,
         _ = 99999,
         _ = [12, 34];
@@ -1240,13 +1252,16 @@
       }
       function _(_) {
         return (
-          "items" === _ ||
-          "trailercarousel" === _ ||
-          "crosspromotesalepage" == _
+          "items" == _ ||
+          "trailercarousel" == _ ||
+          "crosspromotesalepage" == _ ||
+          "creator_list" == _
         );
       }
       function _(_) {
-        return "items" === _ || "crosspromotesalepage" == _;
+        return (
+          "items" == _ || "crosspromotesalepage" == _ || "creator_list" == _
+        );
       }
       function _(_, _) {
         var _;
@@ -1320,6 +1335,18 @@
           internal_type: "subscription_pricing",
         };
       var _;
+      function _(_) {
+        return {
+          arrowFill: null == _ ? void 0 : _.sale_carousel_arrow_color,
+          arrowStyle: null == _ ? void 0 : _.sale_carousel_arrow_style,
+          breadcrumbActiveColor:
+            null == _ ? void 0 : _.sale_carousel_active_breadcrumb_color,
+          breadcrumbColor:
+            null == _ ? void 0 : _.sale_carousel_breadcrumb_color,
+          breadcrumbStyle:
+            null == _ ? void 0 : _.sale_carousel_breadcrumb_style,
+        };
+      }
       function _(_, _) {
         (_.library_spotlight = void 0),
           _.email_setting &&
@@ -6676,6 +6703,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6883,6 +6911,14 @@
       }
       function _(_, _, _) {
         return _(
+          _,
+          _,
+          "forceAbsolute" === _ || !_(_, _) ? "absolute" : "relative",
+        );
+      }
+      function _(_, _, _, _) {
+        return _(
+          _,
           _,
           _,
           "forceAbsolute" === _ || !_(_, _) ? "absolute" : "relative",

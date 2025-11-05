@@ -486,6 +486,7 @@
         FlexColumnContainer: "_1qhLqXcizfytm6omB4ywDD",
         FlexRowContainer: "Ke5f13IVZVzYSmQVJgVyd",
         Centered: "qy-9mgJyhfEb8Wt0gqzaF",
+        VCentered: "_2Ke6gF28pxI9dp-gD87LfB",
         FlexContainSpaceBetween: "_3nPGWNNLFjqXgZ6hjwUnkf",
         FlexRowWrapSpaceBetweenContainer: "_19CjIj6mAtlIoY_7_iyOlz",
         FlexRowWrapFlexStartContainer: "tyP_cnaOBcolou13sADst",
@@ -546,6 +547,7 @@
         maintitle: "vEk_z-3SSNZ_QNdilG5U8",
         AppTitle: "l-Ow7jLX9GkLm9eYHQVAP",
         subtitle: "_2mJfcOfmivoiCR4CW-GrjN",
+        ValveOnlyText: "_206saj_KMAibQF6XQ50lq0",
         ValveOnlyBackground: "JckrnbJXboKxpRp3fULfa",
         ValveOnlyAdminBackground: "_3HVu1O7B4zeCZWaOaUWPCo",
         Columns: "_1oVIRGhMwAB3uN9G3t8kZe",
@@ -821,7 +823,7 @@
         "./shared_koreana.json": [30295, 139],
         "./shared_latam.json": [50559, 5803],
         "./shared_norwegian.json": [86512, 6120],
-        "./shared_polish.json": [52889, 2959],
+        "./shared_polish.json": [52889, 5340],
         "./shared_portuguese.json": [72269, 823],
         "./shared_romanian.json": [34419, 2021],
         "./shared_russian.json": [75777, 6577],
@@ -869,7 +871,7 @@
         "./shared_koreana.json": [30295, 139],
         "./shared_latam.json": [50559, 5803],
         "./shared_norwegian.json": [86512, 6120],
-        "./shared_polish.json": [52889, 2959],
+        "./shared_polish.json": [52889, 5340],
         "./shared_portuguese.json": [72269, 823],
         "./shared_romanian.json": [34419, 2021],
         "./shared_russian.json": [75777, 6577],
@@ -2697,44 +2699,46 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2851,6 +2855,8 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2995,10 +3001,10 @@
           HubRoot: (_) => `/app/${_}(/workshop/)?`,
           HubUGC: (_) => `/app/${_}/videos/`,
           GroupRoot: (_) => `/groups/${_}/`,
-          ProfileVanity: (_) => `/id/${_}`,
-          ProfileSteamID: (_) => `/profiles/${_}`,
-          ProfileVanityGamesList: (_) => `${_.ProfileVanity(_)}/games`,
-          ProfileSteamIDGamesLIst: (_) => `${_.ProfileSteamID(_)}/games`,
+          ProfileVanity: (_, _) => `/id/${_}${_ ? `/${_}` : ""}`,
+          ProfileSteamID: (_, _) => `/profiles/${_}${_ ? `/${_}` : ""}`,
+          ProfileVanityGamesList: (_) => _.ProfileVanity(_, "games"),
+          ProfileSteamIDGamesList: (_) => _.ProfileSteamID(_, "games"),
           ProfileVanityItemCollection: (_) =>
             `${_.ProfileVanity(_)}/itemcollection`,
           ProfileSteamIDItemCollection: (_) =>
@@ -3220,7 +3226,7 @@
                   _.createElement(_._, {
                     path: [
                       _.ProfileVanityGamesList(":vanity_url"),
-                      _.ProfileSteamIDGamesLIst(":steamid"),
+                      _.ProfileSteamIDGamesList(":steamid"),
                     ],
                     render: (_) =>
                       _.createElement(_._, {
@@ -3354,6 +3360,30 @@
                   }),
                   _.createElement(_._, null, _.createElement(_._, null)),
                 ),
+                _.createElement(
+                  _._,
+                  {
+                    path: [
+                      _.ProfileVanity(":vanity_url", "inventory"),
+                      _.ProfileSteamID(":steamid", "inventory"),
+                      _.Market(),
+                    ],
+                  },
+                  _.createElement(_._, {
+                    config: {
+                      iteminfo: (_) =>
+                        _.createElement(
+                          _.Suspense,
+                          {
+                            fallback: null,
+                          },
+                          _.createElement(_, {
+                            ..._,
+                          }),
+                        ),
+                    },
+                  }),
+                ),
               ),
             ),
           );
@@ -3440,16 +3470,6 @@
                 _.createElement(_._, {
                   ..._,
                 }),
-              iteminfo: (_) =>
-                _.createElement(
-                  _.Suspense,
-                  {
-                    fallback: null,
-                  },
-                  _.createElement(_, {
-                    ..._,
-                  }),
-                ),
             },
           }),
         );
@@ -8138,7 +8158,11 @@
       function _(_) {
         return _.filter((_) => null != _);
       }
+      function _(_) {
+        return _.filter((_) => null != _ && !1 !== _);
+      }
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -34413,6 +34437,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -34505,12 +34530,26 @@
           _
         );
       }
+      function _(_) {
+        let _ = _.useRef(null);
+        return (
+          _.useEffect(() => {
+            _ &&
+              _.current &&
+              _.current.focus({
+                preventScroll: !0,
+              });
+          }, [_, _]),
+          _
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _._,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _._,
@@ -34561,6 +34600,36 @@
             }, _);
             return () => clearInterval(_);
           }, [_, _, ...__webpack_require__]);
+      }
+      function _(_, _, __webpack_require__ = !0, _ = !1) {
+        const _ = _.useRef(_);
+        _.current = _;
+        const [_, _] = _.useState(!1),
+          _ = _.useRef(0),
+          _ = _.useCallback(() => {
+            _(!0), _.current && _.current();
+          }, []),
+          _ = _.useCallback(() => {
+            window.clearTimeout(_.current);
+          }, []),
+          _ = _.useCallback(() => {
+            _(!1), _(), (_.current = window.setTimeout(_, _));
+          }, [_, _, _]),
+          _ = _.useCallback(() => {
+            __webpack_require__ && _();
+          }, [__webpack_require__, _]);
+        return (
+          _.useEffect(_, [_, _]),
+          _.useEffect(() => _, [_]),
+          _.useEffect(() => {
+            _ && _ && _();
+          }, [_, _, _]),
+          {
+            bTimerCompleted: _,
+            fnStopTimer: _,
+            fnRestartTimer: _,
+          }
+        );
       }
       function _() {
         const [, _] = _.useState(0);
@@ -50440,6 +50509,133 @@
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
                   },
+                  action: {
+                    _: 4,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  automated_action: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  additional_json_data: {
+                    _: 6,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  actor_steamid: {
+                    _: 7,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_WriteToAuditLog_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_WriteToAuditLog_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.subject_type || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  subject_type: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  subject_group_id: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  subject_id: {
+                    _: 3,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
                 },
               }),
             _.sm_m
@@ -51006,6 +51202,16 @@
           (_.GetContentReportSubjectGroup = function (_, _) {
             return _.SendMsg(
               "ContentModeration.GetContentReportSubjectGroup#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 1,
+              },
+            );
+          }),
+          (_.WriteToAuditLog = function (_, _) {
+            return _.SendMsg(
+              "ContentModeration.WriteToAuditLog#1",
               (0, _._)(_, _),
               _,
               {
@@ -61456,6 +61662,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  subject_type: {
+                    _: 9,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m
@@ -61533,6 +61744,118 @@
         }
         getClassName() {
           return "CChatRoom_ReportMessage_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.subject_group_id || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  subject_group_id: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  subject_id: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  resolution: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  reason: {
+                    _: 4,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CChatRoom_ResolveReport_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CChatRoom_ResolveReport_Response";
         }
       }
       class _ extends _.Message {
@@ -63263,6 +63586,12 @@
             (_.ReportMessage = function (_, _) {
               return _.SendMsg("ChatRoom.ReportMessage#1", (0, _._)(_, _), _, {
                 ePrivilege: 3,
+              });
+            }),
+            (_.ResolveReport = function (_, _) {
+              return _.SendMsg("ChatRoom.ResolveReport#1", (0, _._)(_, _), _, {
+                ePrivilege: 1,
+                eWebAPIKeyRequirement: 2,
               });
             });
         })(_ || (_ = {})),
@@ -65960,6 +66289,7 @@
         _: () => _,
         _: () => _._,
         _: () => _._,
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -69216,21 +69546,21 @@
             }),
         );
       }
-      const _ = _.forwardRef(function (_, _) {
-          var _;
-          return _.createElement(_._, {
-            noFocusRing: !0,
-            ..._,
-            ref: _,
-            className: (0, _._)(_().BasicTextInput, _.className),
-            size: null !== (_ = _.size) && void 0 !== _ ? _ : 1,
-          });
-        }),
-        _ = (_) =>
-          _.createElement(_, {
-            layout: "below",
-            ..._,
-          });
+      function _(_) {
+        var _;
+        return _.createElement(_._, {
+          noFocusRing: !0,
+          ..._,
+          className: (0, _._)(_().BasicTextInput, _.className),
+          size: null !== (_ = _.size) && void 0 !== _ ? _ : 1,
+        });
+      }
+      function _(_) {
+        return _.createElement(_, {
+          layout: "below",
+          ..._,
+        });
+      }
       function _(_) {
         return _.createElement(
           _._.Provider,
@@ -71785,6 +72115,7 @@
         Epp: () => _,
         FId: () => _,
         Gj3: () => _,
+        Hsy: () => _,
         JPq: () => _,
         JaO: () => _,
         K6w: () => _,
@@ -71815,7 +72146,9 @@
         dWO: () => _,
         dyV: () => _,
         fG_: () => _,
+        fQB: () => _,
         ffu: () => _,
+        gat: () => _,
         hJ4: () => _,
         iDD: () => _,
         iYj: () => _,
@@ -71840,6 +72173,7 @@
         qY3: () => _,
         qzO: () => _,
         r7n: () => _,
+        rlm: () => _,
         rnq: () => _,
         rxV: () => _,
         sED: () => _,
@@ -72947,6 +73281,29 @@
             viewBox: "0 0 36 36",
             fill: "none",
             ..._,
+          },
+          _.createElement("path", {
+            _: "M32 4V19H27V12.54L20.18 19.35L16.65 15.82L23.46 9H17V4H32Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            _: "M13.8186 18.6392L9.14462 23.3132L12.6802 26.8487L17.3541 22.1748L13.8186 18.6392Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            _: "M6.31957 26.1476L3.23658 29.2306L6.77212 32.7661L9.8551 29.6832L6.31957 26.1476Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
             className: (0, _._)(_.className, _().Spinner),
           },
           _.createElement("path", {
@@ -73008,6 +73365,21 @@
           }),
           _.createElement("path", {
             _: "M27 32.2952H9L7 14.2952H29L27 32.2952ZM12 29.2952H14V17.2952H12V29.2952ZM17 17.2952V29.2952H19V17.2952H17ZM22 29.2952H24V17.2952H22V29.2952Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            _: "M33 16H3V21H33V16Z",
             fill: "currentColor",
           }),
         );
@@ -73111,6 +73483,33 @@
           _.createElement("path", {
             _: "M2 6.05005V30.05H34V6.05005H2ZM8 27.05H5V23.05H8V27.05ZM8 20.05H5V16.05H8V20.05ZM8 13.05H5V9.05005H8V13.05ZM14 23.82V12.28L24 18.05L14 23.82ZM31 27.05H28V23.05H31V27.05ZM31 20.05H28V16.05H31V20.05ZM31 13.05H28V9.05005H31V13.05Z",
             fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            baseProfile: "tiny",
+            version: "1.2",
+            viewBox: "0 0 36 36",
+            ..._,
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M7.4,29.2c-.7,0-1.4-.3-2-.8-.5-.5-.8-1.2-.8-2s.3-1.4.8-2c.5-.5,1.2-.8,2-.8,0,0,0,0,0,0,.7,0,1.4.3,2,.8,1.1,1.1,1.1,2.9,0,4-.5.5-1.2.8-2,.8h0ZM7.4,24.6c-.5,0-.9.2-1.3.5-.3.3-.5.8-.5,1.3s.2.9.5,1.3c.3.3.8.5,1.3.5.5,0,.9-.2,1.3-.5.7-.7.7-1.8,0-2.5h0c-.3-.4-.8-.5-1.3-.5ZM7.4,20.8c-.7,0-1.4-.3-2-.8-1.1-1.1-1.1-2.9,0-3.9,1.1-1.1,2.9-1.1,3.9,0,1.1,1.1,1.1,2.9,0,3.9-.5.5-1.2.8-2,.8ZM7.4,16.2c-.5,0-.9.2-1.3.5-.7.7-.7,1.8,0,2.5.7.7,1.9.7,2.5,0,.7-.7.7-1.8,0-2.5-.3-.3-.8-.5-1.3-.5Z",
+            strokeWidth: "0",
+          }),
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M15,11.1h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8ZM15,19.5h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8ZM15,27.9h15.4c.5,0,1-.3,1.3-.8.3-.5.3-1.1,0-1.5-.3-.5-.8-.8-1.3-.8h-15.4c-.5,0-1,.3-1.3.8-.3.5-.3,1.1,0,1.5.3.5.8.8,1.3.8Z",
+            strokeWidth: "0",
+          }),
+          _.createElement("polygon", {
+            fill: "currentColor",
+            points: "7 12 4.4 9.3 5.9 7.9 7 9.4 9.9 5.6 11.5 6.9 7 12",
+            strokeWidth: "0",
           }),
         );
       }
@@ -74750,6 +75149,33 @@
           }),
           _.createElement("path", {
             _: "M23 6.5C23 7.88071 21.8979 9 20.5384 9C19.1789 9 18.0768 7.88071 18.0768 6.5C18.0768 5.11929 19.1789 4 20.5384 4C21.8979 4 23 5.11929 23 6.5Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            viewBox: "0 0 24 24",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TextLink",
+          },
+          _.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M3 6h14v10H3V6Zm2 2v6h10V8H5Z",
+            fill: "currentColor",
+          }),
+          _.createElement("path", {
+            _: "M10 9l4 3-4 3V9Z",
+            fill: "currentColor",
+          }),
+          _.createElement("circle", {
+            _: "20.5",
+            _: "5.5",
+            _: "2.5",
             fill: "currentColor",
           }),
         );
@@ -76839,6 +77265,7 @@
         DK4: () => _,
         DQe: () => _,
         Dp6: () => _,
+        EOr: () => _,
         Ehx: () => _,
         Emg: () => _,
         F2T: () => _,
@@ -76849,9 +77276,11 @@
         GrD: () => _,
         Gv$: () => _,
         HxD: () => _,
+        IGf: () => _,
         IOc: () => _,
         IrQ: () => _,
         Jlk: () => _,
+        JpU: () => _,
         KKS: () => _,
         L0X: () => _,
         LHj: () => _,
@@ -76897,6 +77326,7 @@
         ZjT: () => _,
         ZnA: () => _,
         Zo0: () => _,
+        ZzC: () => _,
         _EF: () => _,
         _VW: () => _,
         _bA: () => _,
@@ -76904,11 +77334,13 @@
         aVR: () => _,
         agV: () => _,
         apU: () => _,
+        az8: () => _,
         b8_: () => _,
         bKN: () => _,
         bPr: () => _,
         bcZ: () => _,
         bfp: () => _,
+        c9e: () => _,
         ccb: () => _,
         dJT: () => _,
         eSy: () => _,
@@ -76933,16 +77365,19 @@
         jdP: () => _,
         jlt: () => _,
         kPc: () => _,
+        koA: () => _,
         l8x: () => _,
         lMJ: () => _,
         lNU: () => _,
         lRD: () => _,
         mb7: () => _,
+        nkJ: () => _,
         nm_: () => _,
         o5Q: () => _,
         ofN: () => _,
         _: () => _,
         _: () => _,
+        pPV: () => _,
         qcc: () => _,
         qnF: () => _,
         rI_: () => _,
@@ -76954,6 +77389,7 @@
         tID: () => _,
         tIO: () => _,
         uMb: () => _,
+        vCk: () => _,
         vRz: () => _,
         vfN: () => _,
         vjL: () => _,
@@ -77222,6 +77658,31 @@
             _: "M4.16683 8.982C4.10732 8.3908 3.83847 7.42693 4.15486 7.17995C4.46877 6.93489 4.7797 6.90487 5.90123 7.31306L31.1931 17.2282C32.2693 17.6503 32.2686 18.335 31.1931 18.7564L5.90123 28.6715C4.77972 29.1235 4.46864 29.0497 4.15487 28.8049C3.83836 28.5579 4.0953 27.5939 4.15484 27.0028L4.7797 21.2151C4.89862 20.0374 5.92644 18.9801 7.0706 18.854L15.467 18.4429C24.1686 17.9924 24.1686 17.9924 15.467 17.5419L7.0706 17.1313C5.92423 17.0053 4.89825 15.9476 4.7797 14.7706L4.16683 8.982Z",
             fill: "currentColor",
           }),
+        );
+      }
+      function _(_) {
+        const [_, __webpack_require__] = (0, _._)();
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, _._)("SVGIcon_LangOptions", _.className),
+            _: "0px",
+            _: "0px",
+            width: "100px",
+            height: "91.582px",
+            viewBox: "0 0 100 91.582",
+            enableBackground: "new 0 0 100 91.582",
+          },
+          _.createElement(
+            "g",
+            null,
+            _.createElement("path", {
+              clipPath: __webpack_require__,
+              _: "M88.853,29.724H62.271V11.351C62.262,5.18,57.26,0.179,51.089,0.169H11.255\n\t\t\t\tC5.085,0.179,0.085,5.18,0.074,11.351v24.908c-0.001,2.207,0.657,4.36,1.888,6.19c3.942,7.586,22.118,18.799,22.314,18.916\n\t\t\t\tc0.389,0.229,0.83,0.354,1.281,0.361c1.351,0.01,2.455-1.074,2.468-2.426c0.003-0.329-0.062-0.654-0.187-0.958\n\t\t\t\tc-1.319-3.565-2.341-7.233-3.053-10.968h13.135v18.389C37.93,71.9,42.882,76.882,49.02,76.928H75.29\n\t\t\t\tc-0.715,3.724-1.737,7.379-3.054,10.936c-0.517,1.248,0.076,2.678,1.323,3.196c0.303,0.125,0.63,0.188,0.959,0.186\n\t\t\t\tc0.451-0.006,0.894-0.13,1.279-0.361c0.197-0.115,18.373-11.329,22.314-18.914c1.235-1.834,1.894-3.997,1.888-6.207V40.906\n\t\t\t\tC99.99,34.746,95.01,29.751,88.853,29.724 M32.797,42.449H21.831c-0.721,0.01-1.4,0.327-1.873,0.869\n\t\t\t\tc-0.464,0.544-0.669,1.265-0.558,1.973c0,0.228,0.59,3.79,1.641,8.028c-5.517-3.842-12.773-9.425-14.776-13.136\n\t\t\t\tc-0.067-0.162-0.149-0.314-0.247-0.46c-0.738-1.033-1.13-2.276-1.116-3.546V11.351c0.008-3.463,2.825-6.264,6.288-6.255h0.065\n\t\t\t\th39.833c3.45,0.007,6.246,2.804,6.255,6.255v18.373H49.02c-3.223,0.005-6.286,1.399-8.406,3.825\n\t\t\t\tc-1.744-0.054-3.464-0.427-5.074-1.101c2.588-3.257,4.169-7.2,4.548-11.345h1.33c1.359,0,2.463-1.103,2.463-2.463\n\t\t\t\tc0-1.361-1.104-2.461-2.463-2.461h-7.784v-4.384c0-1.36-1.102-2.464-2.461-2.464c-1.361,0-2.463,1.104-2.463,2.464v4.384h-7.668\n\t\t\t\tc-1.361,0-2.462,1.1-2.462,2.461c0,1.36,1.102,2.463,2.462,2.463H35.13c-0.348,3.137-1.604,6.104-3.613,8.538\n\t\t\t\tc-1.439-1.598-2.553-3.46-3.284-5.482c-0.489-1.271-1.916-1.903-3.185-1.414c-1.27,0.489-1.902,1.917-1.412,3.185\n\t\t\t\tc0.892,2.395,2.192,4.619,3.841,6.57c-2.017,0.812-4.178,1.208-6.354,1.165c-1.359,0-2.463,1.102-2.463,2.461\n\t\t\t\tc0,1.362,1.104,2.465,2.463,2.465c3.647,0.07,7.244-0.868,10.393-2.71c2.032,1.239,4.293,2.049,6.649,2.38\n\t\t\t\tc-0.218,0.859-0.327,1.741-0.327,2.627v1.641L32.797,42.449z M95.19,65.763c0.013,1.271-0.379,2.514-1.117,3.547\n\t\t\t\tc-0.097,0.138-0.181,0.287-0.246,0.443c-1.938,3.678-9.211,9.277-14.776,13.135c1.099-4.236,1.64-7.799,1.64-8.03\n\t\t\t\tc0.111-0.704-0.091-1.425-0.558-1.969c-0.462-0.548-1.138-0.871-1.854-0.887H49.02c-3.447,0-6.246-2.791-6.255-6.239V40.906\n\t\t\t\tc0.009-3.452,2.805-6.249,6.255-6.257h39.833c3.449,0.008,6.246,2.805,6.256,6.257L95.19,65.763z M77.834,56.635L77.834,56.635\n\t\t\t\tl-6.564-16.42c-0.037-0.092-0.081-0.18-0.133-0.262l-0.099-0.165c-0.047-0.078-0.102-0.15-0.164-0.214l-0.132-0.164l-0.182-0.147\n\t\t\t\tl-0.195-0.099c-0.056-0.043-0.116-0.076-0.182-0.098l-0.246-0.132c-0.06-0.009-0.121-0.009-0.18,0l-0.248-0.082h-0.245h-0.231\n\t\t\t\th-0.261h-0.214l-0.279,0.082c-0.055-0.007-0.109-0.007-0.164,0l-0.246,0.132l-0.247,0.098c-0.064,0.044-0.124,0.095-0.18,0.147\n\t\t\t\tl-0.182,0.148l-0.149,0.166c-0.056,0.066-0.113,0.138-0.161,0.211v0.166l-0.149,0.263l-6.567,16.418l-3.282,8.21\n\t\t\t\tc-0.546,1.246,0.026,2.697,1.272,3.24c0.036,0.016,0.072,0.029,0.105,0.042c0.29,0.127,0.604,0.189,0.919,0.182\n\t\t\t\tc1.005-0.006,1.905-0.616,2.283-1.544l2.657-6.665h9.854l2.66,6.665c0.383,0.931,1.291,1.54,2.298,1.544\n\t\t\t\tc0.31,0.003,0.619-0.059,0.904-0.182c1.269-0.485,1.906-1.907,1.422-3.18c-0.014-0.034-0.028-0.069-0.044-0.103L77.834,56.635z\n\t\t\t\tM66.062,55.123l2.939-7.323l2.923,7.323H66.062z",
+            }),
+          ),
         );
       }
       function _() {
@@ -79453,6 +79914,41 @@
           "svg",
           {
             version: "1.1",
+            _: "Layer_3_copy",
+            xmlns: "http://www.w3.org/2000/svg",
+            _: "0px",
+            _: "0px",
+            viewBox: "0 0 256 256",
+          },
+          _.createElement(
+            "g",
+            {
+              _: "Layer_3_copy",
+            },
+            _.createElement(
+              "g",
+              {
+                _: "g4768_1_",
+                transform: "translate(-6.9308024,-10)",
+              },
+              _.createElement("g", {
+                _: "g4763_1_",
+              }),
+            ),
+            _.createElement("path", {
+              _: "M206.3,36.6c-19.4,0-35.8,14.1-40.3,33H24.8c-6,0-10.8,4.8-10.8,10.8s4.8,10.8,10.8,10.8h141.3\n\t\t\t\tc4.7,18.6,20.9,32.4,40.2,32.4c22.9,0,41.5-19.5,41.5-43.5C247.9,56.2,229.2,36.6,206.3,36.6z M206.3,109.7\n\t\t\t\tc-15.2,0-27.5-13.2-27.5-29.5c0-16.3,12.4-29.5,27.5-29.5s27.5,13.2,27.5,29.5C233.9,96.4,221.5,109.7,206.3,109.7z",
+            }),
+            _.createElement("path", {
+              _: "M230.4,157.3H107.9c-4.6-14.6-18.3-25.2-34.3-25.2s-29.7,10.6-34.3,25.2H24.8c-6,0-10.8,4.8-10.8,10.8\n\t\t\t\tS18.9,179,24.8,179h14.3c4.6,14.6,18.3,25.2,34.3,25.2s29.7-10.6,34.3-25.2h122.5c6,0,10.8-4.8,10.8-10.8S236.4,157.3,230.4,157.3z\n\t\t\t\tM73.5,189.8c-8,0-14.9-4.3-18.7-10.8l0,0c-0.7-1.2-1.3-2.4-1.7-3.7c0,0,0-0.1,0-0.1c-0.1-0.4-0.2-0.8-0.4-1.2c0-0.1,0-0.1,0-0.2\n\t\t\t\tc-0.2-0.8-0.4-1.7-0.5-2.6c0-0.1,0-0.2,0-0.3c0-0.3-0.1-0.7-0.1-1c0-0.1,0-0.2,0-0.4c0-0.4,0-0.9,0-1.3s0-0.9,0-1.3\n\t\t\t\tc0-0.1,0-0.2,0-0.4c0-0.3,0.1-0.7,0.1-1c0-0.1,0-0.2,0-0.3c0.1-0.9,0.3-1.8,0.5-2.6c0-0.1,0-0.1,0-0.2c0.1-0.4,0.2-0.8,0.4-1.2\n\t\t\t\tc0,0,0-0.1,0-0.1c0.5-1.3,1-2.6,1.7-3.7c3.7-6.4,10.7-10.8,18.7-10.8c8,0,14.9,4.3,18.7,10.8c0.7,1.2,1.3,2.4,1.7,3.7\n\t\t\t\tc0,0,0,0.1,0,0.1c0.1,0.4,0.3,0.8,0.4,1.2c0,0.1,0,0.1,0,0.2c0.2,0.8,0.4,1.7,0.5,2.6c0,0.1,0,0.2,0,0.3c0,0.3,0.1,0.7,0.1,1\n\t\t\t\tc0,0.1,0,0.2,0,0.4c0,0.4,0,0.9,0,1.3s0,0.9,0,1.3c0,0.1,0,0.2,0,0.4c0,0.3-0.1,0.7-0.1,1c0,0.1,0,0.2,0,0.3\n\t\t\t\tc-0.1,0.9-0.3,1.8-0.5,2.6c0,0.1,0,0.1,0,0.2c-0.1,0.4-0.2,0.8-0.4,1.2c0,0,0,0.1,0,0.1c-0.5,1.3-1,2.6-1.7,3.7l0,0\n\t\t\t\tC88.5,185.4,81.5,189.8,73.5,189.8z",
+            }),
+          ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "svg",
+          {
+            version: "1.1",
             _: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
             _: "0px",
@@ -79966,6 +80462,56 @@
             fill: "currentColor",
             _: "M600,96c-277.2,0-504,226.8-504,504s226.8,504,504,504,504-226.8,504-504S877.2,96,600,96ZM600,222c83.2,0,158.8,26.5,220.5,70.6L292.6,820.5c-44.1-61.7-70.6-137.3-70.6-220.5,0-209.2,168.8-378,378-378ZM907.4,379.5c44.1,61.7,70.6,137.3,70.6,220.5,0,209.2-168.8,378-378,378s-158.8-26.5-220.5-70.6L907.4,379.5Z",
             strokeWidth: "0",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("circle", {
+            _: "12",
+            _: "12",
+            _: "10",
+            stroke: "currentColor",
+            strokeWidth: "2",
+          }),
+          _.createElement("path", {
+            _: "M12 8v8M8 12h8",
+            stroke: "currentColor",
+            strokeWidth: "2",
+            strokeLinecap: "round",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 1200 1200",
+            ..._,
+          },
+          _.createElement("circle", {
+            _: "600",
+            _: "600",
+            _: "504",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "120",
+          }),
+          _.createElement("rect", {
+            _: "300",
+            _: "540",
+            width: "600",
+            height: "120",
+            fill: "currentColor",
+            _: "60",
           }),
         );
       }
@@ -81511,6 +82057,33 @@
             height: "24",
             viewBox: "0 0 24 24",
             xmlns: "http://www.w3.org/2000/svg",
+            overflow: "visible",
+            ..._,
+          },
+          _.createElement("path", {
+            _: "M12 3 L4 6 V11 C4 16 8 20 12 21 C16 20 20 16 20 11 V6 Z",
+            fill: "none",
+            stroke: "white",
+            strokeWidth: "1.5",
+            strokeDasharray: "3,2",
+          }),
+          _.createElement("path", {
+            _: "M9 12 L11 14 L15 10",
+            fill: "none",
+            stroke: "white",
+            strokeWidth: "1.5",
+            strokeLinecap: "round",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            xmlns: "http://www.w3.org/2000/svg",
             version: "1.1",
             overflow: "visible",
             ..._,
@@ -81626,6 +82199,164 @@
             _: "10",
             width: "9",
             height: "9",
+          }),
+        );
+      }
+      function _(_) {
+        const { fill: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 10 10",
+            width: "10",
+            height: "10",
+            fill: "none",
+            ...__webpack_require__,
+          },
+          _.createElement("circle", {
+            _: "5",
+            _: "5",
+            _: "4",
+            fill: _.fill || "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        const { fill: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 16 8",
+            width: "16",
+            height: "8",
+            fill: "none",
+            ...__webpack_require__,
+          },
+          _.createElement("rect", {
+            _: "0",
+            _: "0",
+            width: "16",
+            height: "8",
+            _: "4",
+            fill: _.fill || "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        const { fill: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 10 10",
+            width: "10",
+            height: "10",
+            fill: "none",
+            ...__webpack_require__,
+          },
+          _.createElement("rect", {
+            _: "1",
+            _: "1",
+            width: "8",
+            height: "8",
+            fill: _.fill || "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 24 24",
+            width: "24",
+            height: "24",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "1.5",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            ..._,
+          },
+          _.createElement("rect", {
+            _: "3",
+            _: "5",
+            width: "18",
+            height: "14",
+            _: "2",
+            _: "2",
+            opacity: "0.25",
+          }),
+          _.createElement(
+            "text",
+            {
+              _: "12",
+              _: "15",
+              textAnchor: "middle",
+              fontSize: "8",
+              fontWeight: "bold",
+              fill: "currentColor",
+            },
+            "T",
+          ),
+          _.createElement("path", {
+            _: "M7 12h-3l2-2m-2 2l2 2",
+          }),
+          "     ",
+          _.createElement("path", {
+            _: "M17 12h3l-2-2m2 2l-2 2",
+          }),
+          "     ",
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 24 24",
+            width: "24",
+            height: "24",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: "1.5",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            ..._,
+          },
+          _.createElement("rect", {
+            _: "2.5",
+            _: "2.5",
+            width: "12",
+            height: "19",
+            _: "2",
+            opacity: "0.25",
+          }),
+          _.createElement("line", {
+            _: "6.5",
+            _: "5.25",
+            _: "10.5",
+            _: "5.25",
+          }),
+          _.createElement("line", {
+            _: "7.75",
+            _: "19.75",
+            _: "9.25",
+            _: "19.75",
+          }),
+          _.createElement("path", {
+            _: "M13.5 14.5L12.75 17.5L15.75 16.75L21.5 11L18 7.5L13.5 12",
+          }),
+          _.createElement("line", {
+            _: "17.1",
+            _: "8.9",
+            _: "20.1",
+            _: "11.9",
+          }),
+          _.createElement("path", {
+            _: "M21.5 11L22.5 10L19.5 7L18.5 8",
           }),
         );
       }
@@ -83095,6 +83826,7 @@
         _: () => _._,
         _: () => _,
         _: () => _,
+        _: () => _._,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -84092,6 +84824,12 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
+        PrintEnabledLogs() {
+          this.LogAsLogManager(
+            "Will print log messages for:",
+            Array.from(this.m_setEnabledDebugLogs),
+          );
+        }
         static Get() {
           return (
             null == _.s_Singleton && (_.s_Singleton = new _()), _.s_Singleton
@@ -84223,6 +84961,13 @@
         (window.DebugLogDisableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!1)),
         (window.DebugLogNames = _),
+        (window.DebugLogEnabled = (..._) => {
+          _.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            _.Get().PrintEnabledLogs();
+        }),
         (window.EnableSteamConsole = (_ = !0) =>
           _.Get().SetDebugLogEnabled("SteamClient", _));
     },
@@ -84237,6 +84982,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _,
+        _: () => _._,
         _: () => _._,
         _: () => _._,
         _: () => _._,

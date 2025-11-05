@@ -2025,7 +2025,7 @@ body.ShoppingCart {
   position: relative;
   flex-shrink: 0;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 910px) {
   ._78Qv2C95AM2DNCuLD5o8U {
     width: 100%;
   }
@@ -2040,6 +2040,7 @@ body.ShoppingCart {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 1;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   background: rgba(255, 255, 255, 0.1);
   padding: 6px 12px;

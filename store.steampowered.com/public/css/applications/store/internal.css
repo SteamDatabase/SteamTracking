@@ -1781,7 +1781,7 @@ a:link {
   position: relative;
   flex-shrink: 0;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 910px) {
   ._78Qv2C95AM2DNCuLD5o8U {
     width: 100%;
   }
@@ -1796,6 +1796,7 @@ a:link {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 1;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   background: rgba(255, 255, 255, 0.1);
   padding: 6px 12px;
@@ -2661,18 +2662,18 @@ a:link {
   --color-jade-10: #27b08b;
   --color-jade-11: #1fd8a4;
   --color-jade-12: #adf0d4;
-  --color-green-1: #0e1512;
-  --color-green-2: #121b17;
-  --color-green-3: #132d21;
-  --color-green-4: #113b29;
-  --color-green-5: #174933;
-  --color-green-6: #20573e;
-  --color-green-7: #28684a;
-  --color-green-8: #2f7c57;
-  --color-green-9: #30a46c;
-  --color-green-10: #33b074;
-  --color-green-11: #3dd68c;
-  --color-green-12: #b1f1cb;
+  --color-green-1: #00ff00;
+  --color-green-2: #00ff00;
+  --color-green-3: #46602a;
+  --color-green-4: #536904;
+  --color-green-5: #5c7e10;
+  --color-green-6: #00ff00;
+  --color-green-7: #799905;
+  --color-green-8: #80a006;
+  --color-green-9: #a1bf07;
+  --color-green-10: #a5cb00;
+  --color-green-11: #9dc473;
+  --color-green-12: #d2e885;
   --color-grass-1: #0e1511;
   --color-grass-2: #141a15;
   --color-grass-3: #1b2a1e;

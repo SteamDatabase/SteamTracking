@@ -541,6 +541,7 @@
         FlexColumnContainer: "_1qhLqXcizfytm6omB4ywDD",
         FlexRowContainer: "Ke5f13IVZVzYSmQVJgVyd",
         Centered: "qy-9mgJyhfEb8Wt0gqzaF",
+        VCentered: "_2Ke6gF28pxI9dp-gD87LfB",
         FlexContainSpaceBetween: "_3nPGWNNLFjqXgZ6hjwUnkf",
         FlexRowWrapSpaceBetweenContainer: "_19CjIj6mAtlIoY_7_iyOlz",
         FlexRowWrapFlexStartContainer: "tyP_cnaOBcolou13sADst",
@@ -601,6 +602,7 @@
         maintitle: "vEk_z-3SSNZ_QNdilG5U8",
         AppTitle: "l-Ow7jLX9GkLm9eYHQVAP",
         subtitle: "_2mJfcOfmivoiCR4CW-GrjN",
+        ValveOnlyText: "_206saj_KMAibQF6XQ50lq0",
         ValveOnlyBackground: "JckrnbJXboKxpRp3fULfa",
         ValveOnlyAdminBackground: "_3HVu1O7B4zeCZWaOaUWPCo",
         Columns: "_1oVIRGhMwAB3uN9G3t8kZe",
@@ -2136,6 +2138,7 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -18095,6 +18098,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -18169,6 +18173,19 @@
               }
             );
           }, [_]),
+          _
+        );
+      }
+      function _(_) {
+        let _ = _.useRef(null);
+        return (
+          _.useEffect(() => {
+            _ &&
+              _.current &&
+              _.current.focus({
+                preventScroll: !0,
+              });
+          }, [_, _]),
           _
         );
       }
@@ -23003,10 +23020,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC";
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -23027,7 +23042,7 @@
                 ScrollSnapCarousel: !0,
                 SaleSectionCarousel: !0,
                 SaleSectionCarouselPadding: _,
-                [_.className]: !0,
+                ["" + _.className]: !!_.className,
               }),
             },
             _,
@@ -23045,14 +23060,22 @@
           : _;
       }
       var _,
-        _ = __webpack_require__("chunkid");
+        _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       !(function (_) {
         (_.k_ECutArrowStyle = "single"),
           (_.k_EDoubleArrowStyle = "double"),
           (_.k_EThickChevron = "chevron"),
           (_.k_EFilledArrow = "filled"),
           (_.k_EPointyArrow = "pointy");
-      })(_ || (_ = {}));
+      })(_ || (_ = {})),
+        (function (_) {
+          (_.k_EPillCrumb = "pill"),
+            (_.k_ECircularCrumb = "circle"),
+            (_.k_ESquareCrumb = "square");
+        })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -23102,8 +23125,33 @@
             });
         }
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            bIsActive: _,
+            breadcrumbActiveColor: __webpack_require__,
+            breadcrumbColor: _,
+            breadcrumbStyle: _,
+          } = _,
+          _ = _ ? __webpack_require__ || "#FFFFFF" : _ || "#606974";
+        switch (_) {
+          default:
+          case _.k_EPillCrumb:
+            return _.createElement(_.IGf, {
+              fill: _,
+              role: "presentation",
+            });
+          case _.k_ECircularCrumb:
+            return _.createElement(_.az8, {
+              fill: _,
+              role: "presentation",
+            });
+          case _.k_ESquareCrumb:
+            return _.createElement(_.koA, {
+              fill: _,
+              role: "presentation",
+            });
+        }
+      }
       class _ extends _.Component {
         render() {
           const {
@@ -23321,23 +23369,50 @@
                           _.className?.includes("template-carousel"),
                       }),
                     },
-                    ((_) =>
-                      _.Children.map(_.children, (_, _) =>
-                        _ % _ != 0
-                          ? null
-                          : _.createElement(
-                              _._,
-                              {
-                                slide: _,
-                                className: _.pip,
-                              },
-                              _.createElement("img", {
-                                src: _,
-                              }),
-                            ),
-                      ))(_),
+                    _.createElement(
+                      _,
+                      {
+                        ..._,
+                        nPageSize: _,
+                      },
+                      _.children,
+                    ),
                   )),
           ),
+        );
+      }
+      function _(_) {
+        const { nPageSize: _ } = _,
+          _ = _.useContext(_._),
+          [_, _] = _.useState(_.state.currentSlide);
+        return (
+          _.useEffect(
+            () =>
+              __webpack_require__.subscribe(() => {
+                _(_.state.currentSlide);
+              }),
+            [_],
+          ),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.Children.map(_.children, (_, _) => {
+              if (_ % _ != 0) return null;
+              const _ = _ >= _ && _ < _ + _;
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  slide: _,
+                  className: _.pip,
+                },
+                _.createElement(_, {
+                  ..._,
+                  bIsActive: _,
+                }),
+              );
+            }),
+          )
         );
       }
       function _(_) {
@@ -28141,15 +28216,6 @@
             }),
         );
       }
-      _.forwardRef(function (_, _) {
-        return _.createElement(_._, {
-          noFocusRing: !0,
-          ..._,
-          ref: _,
-          className: (0, _._)(_().BasicTextInput, _.className),
-          size: _.size ?? 1,
-        });
-      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -34042,6 +34108,7 @@
         GB9: () => _,
         Gkr: () => _,
         GrD: () => _,
+        IGf: () => _,
         IrQ: () => _,
         Jlk: () => _,
         KKS: () => _,
@@ -34084,6 +34151,7 @@
         aVR: () => _,
         agV: () => _,
         apU: () => _,
+        az8: () => _,
         b8_: () => _,
         bKN: () => _,
         bPr: () => _,
@@ -34109,6 +34177,7 @@
         jZl: () => _,
         jdP: () => _,
         kPc: () => _,
+        koA: () => _,
         l8x: () => _,
         lRD: () => _,
         nm_: () => _,
@@ -37059,6 +37128,69 @@
           }),
         );
       }
+      function _(_) {
+        const { fill: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 10 10",
+            width: "10",
+            height: "10",
+            fill: "none",
+            ...__webpack_require__,
+          },
+          _.createElement("circle", {
+            _: "5",
+            _: "5",
+            _: "4",
+            fill: _.fill || "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        const { fill: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 16 8",
+            width: "16",
+            height: "8",
+            fill: "none",
+            ...__webpack_require__,
+          },
+          _.createElement("rect", {
+            _: "0",
+            _: "0",
+            width: "16",
+            height: "8",
+            _: "4",
+            fill: _.fill || "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        const { fill: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 10 10",
+            width: "10",
+            height: "10",
+            fill: "none",
+            ...__webpack_require__,
+          },
+          _.createElement("rect", {
+            _: "1",
+            _: "1",
+            width: "8",
+            height: "8",
+            fill: _.fill || "currentColor",
+          }),
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -39795,6 +39927,12 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
+        PrintEnabledLogs() {
+          this.LogAsLogManager(
+            "Will print log messages for:",
+            Array.from(this.m_setEnabledDebugLogs),
+          );
+        }
         static Get() {
           return (
             null == _.s_Singleton && (_.s_Singleton = new _()), _.s_Singleton
@@ -39923,6 +40061,13 @@
         (window.DebugLogDisableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!1)),
         (window.DebugLogNames = _),
+        (window.DebugLogEnabled = (..._) => {
+          _.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            _.Get().PrintEnabledLogs();
+        }),
         (window.EnableSteamConsole = (_ = !0) =>
           _.Get().SetDebugLogEnabled("SteamClient", _));
     },

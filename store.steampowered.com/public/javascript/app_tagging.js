@@ -534,7 +534,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	};
 
 	var changeUrl = function(url, removeParam="", addParam="") {
-		
+
 		if(url.indexOf("?") === -1) return url;
 		var bits = url.split("?");
 		if(bits.length < 2) return url;
@@ -549,27 +549,27 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				params.push(nextBits[i]);
 			}
 		}
-		
+
 		var result = firstBit;
-		
+
 		for(var i = params.length-1; i >= 0; i--){
 			var param = params[i];
 			if(param === removeParam){
 				params.splice(i,1);
 			}
 		}
-		
+
 		if(addParam !== "" && addParam !== null && params.indexOf(addParam) === -1){
 			params.push(addParam);
 		}
-		
+
 		var extraBits = params.join("&");
 		if(extraBits === "&") extraBits = "";
-		
+
 		if(extraBits !== ""){
 			result += "?" + extraBits;
 		}
-		
+
 		return result;
 	}
 
@@ -597,9 +597,9 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				FlushApp( appid, bAppliedTagToChildren );
 			else if ( bBannedTag )
 				window.location.reload();
-			
+
 			window.history.pushState({}, document.title, changeUrl(window.location.href, "tags", ""));
-			
+
 		} );
 
 		// in the "you need to log in" case, we don't have a form to display
@@ -619,10 +619,10 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			// hack to size the input control correctly
 			$AppTagForm.find( '.gray_bevel').css( 'margin-right', ( $AppTagButton.width() + 12 ) + 'px' );
 		}
-		
+
 		//add "tags" param to the URL
 		window.history.pushState({}, document.title, changeUrl(window.location.href, "", "tags"));
-		
+
 	};
 
 
@@ -1022,22 +1022,6 @@ function InitTagBrowsePage( strTagLanguage, rgDefaultGetParams )
 	var strEvent = window.location.href.indexOf( 'test_mouse' ) == -1 ? 'click' : 'mouseenter';
 	$J('.tag_browse_tag').on( strEvent, function() {
 		fnSelectTag( $J(this) );
-	});
-
-	$J(window).on( 'scroll resize', function() {
-		var offsetTop = $J('.tag_browse_right_ctn').offset().top;
-		var $Ctn = $J('#tag_browse_games_ctn');
-
-		if ( offsetTop > window.scrollY )
-		{
-			$Ctn.css( 'position', 'relative' );
-			$Ctn.removeClass( 'sticky' );
-		}
-		else
-		{
-			$Ctn.css( 'position', 'fixed' );
-			$Ctn.addClass( 'sticky' );
-		}
 	});
 
 	var fnGoToHash = function() {

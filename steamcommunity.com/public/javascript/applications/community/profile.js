@@ -4957,6 +4957,7 @@
           null,
           d.createElement(ve.ZU, {
             strDropDownButtonClassName: "ProfilePrivacyDropDown",
+            bMatchWidth: !1,
             rgOptions: l,
             onChange: (e) => n(e.data),
             selectedOption: o,
@@ -5071,6 +5072,7 @@
             d.createElement(ve.ZU, {
               strDropDownButtonClassName: "ProfilePrivacyDropDown",
               rgOptions: i,
+              bMatchWidth: !1,
               onChange: (e) => this.OnSettingChanged(e.data),
               selectedOption: e,
             }),

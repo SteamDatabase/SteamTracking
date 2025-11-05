@@ -1,15 +1,11 @@
 body.SteamAwardsNominations {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: normal;
-}
-body.SteamAwardsNominations .responsive_page_frame {
-  background: linear-gradient(to bottom right, #232341, #67629c);
-}
-body.v6.SteamAwardsNominations #footer_spacer {
-  height: 183px;
+  background-color: #00006d;
 }
 .w8AKcU3i8ClK1UzQzqzI {
   width: 100%;
+  background-color: #173471;
 }
 ._20IkdxpCDwL8VLda92dq2Y {
   max-width: 1080px;
@@ -29,17 +25,23 @@ body.v6.SteamAwardsNominations #footer_spacer {
   display: flex;
 }
 ._1tIgRv45QmeUOQXrV9mdMq {
-  background: #111;
+  background: #00006d;
   box-sizing: border-box;
   padding: 1px;
 }
 ._1TnKc86XFqFWZThfWLgaRw {
   position: relative;
-  background: url("https://cdn.fastly.steamstatic.com/store/promo/steamawards2024/header_trophy.webp?v=2")
-    no-repeat;
+  background: url("https://cdn.fastly.steamstatic.com/store/promo/steamawards2025/header_w_trophy.webp?v=1")
+    no-repeat,
+    linear-gradient(
+      to right,
+      #030f66 0%,
+      #030f66 20%,
+      #00006d 80%,
+      #00006d 100%
+    );
   background-position: center;
   background-size: contain;
-  background-color: #111;
 }
 ._1TnKc86XFqFWZThfWLgaRw ._2Mwx1ICH6jNzJoeIPhhFDv {
   padding: 30px 3% 30px 3%;
@@ -80,9 +82,9 @@ body.v6.SteamAwardsNominations #footer_spacer {
 ._1TnKc86XFqFWZThfWLgaRw ._3s_6VHcgaXEyyUZ16zweVp {
   font-family: "Motiva Sans", Sans-serif;
   font-weight: 900;
-  font-size: 80px;
-  color: #ebf000;
-  line-height: 71px;
+  font-size: 90px;
+  color: #ee6c5d;
+  line-height: 80px;
   margin: 15px 0;
   text-shadow: 0 0 16px #22131b75;
 }
@@ -95,7 +97,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
 ._1TnKc86XFqFWZThfWLgaRw ._1cG2WETjKlQ8Z5EC0lw0i9 {
   text-transform: uppercase;
   font-size: 16px;
-  color: #f7f7f7;
+  color: #feeae6;
   letter-spacing: 1px;
   margin: 5px 0;
   text-shadow: 0 0 16px #22131b75;
@@ -112,7 +114,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   }
 }
 ._296AV5WTzSw4KsXXNtA2_x h3._1XIaoVZxTy-yIN4iv4QqL1 {
-  color: #ebf000;
+  color: #ee6c5d;
   font-family: "Motiva Sans", Sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -144,18 +146,18 @@ body.v6.SteamAwardsNominations #footer_spacer {
 ._296AV5WTzSw4KsXXNtA2_x ._3QrF1mai6HX6dr7jJijnTT ._3Mou7FjFlqrR-kKuTt9N8g {
   font-size: 18px;
   font-weight: 700;
-  color: #e3e0fe;
+  color: #feeae6;
 }
 ._296AV5WTzSw4KsXXNtA2_x ._3QrF1mai6HX6dr7jJijnTT .-K9ED0JWohLoxFufaRmWt {
   font-size: 14px;
   line-height: 18px;
   margin-top: 4px;
-  color: #e3e0fe;
+  color: #feeae6;
   margin-bottom: 12px;
 }
 ._296AV5WTzSw4KsXXNtA2_x ._3QrF1mai6HX6dr7jJijnTT .-K9ED0JWohLoxFufaRmWt a {
   text-decoration: underline;
-  color: #e3e0fe;
+  color: #feeae6;
 }
 ._3i1u-y7pjl-qc98gufdZUu {
   margin-top: 20px;
@@ -297,7 +299,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   ._1n-khJ_oWP9-ADtdauxmaP
   ._1HYrGX2M4CebVc7ClAyqi5
   ._3yYqk-nDDM0DcyB3Id8NjD {
-  background-color: #b0abe5;
+  background-color: #e87157;
   border-radius: 3px;
   width: fit-content;
   padding: 8px 16px;
@@ -310,7 +312,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   ._1n-khJ_oWP9-ADtdauxmaP
   ._1HYrGX2M4CebVc7ClAyqi5
   ._3yYqk-nDDM0DcyB3Id8NjD:hover {
-  background-color: #e5e3ff;
+  background-color: #fec4b7;
   cursor: pointer;
 }
 ._3i1u-y7pjl-qc98gufdZUu
@@ -412,7 +414,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   font-weight: 600;
 }
 ._2lMcC-ffwNaKEZXfHcIZ2R ._2y8n9AG3gE8R7p0vnCu11y {
-  background: #b0abe5;
+  background: #e87157;
   padding: 22px;
   margin-top: 20px;
   color: #111;
@@ -671,7 +673,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   top: -1px;
 }
 ._3G1iNhfSRJ9NLuaxjN8MRA {
-  color: #ebf000;
+  color: #ee6c5d;
   font-family: "Motiva Sans", Sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -683,7 +685,7 @@ button.DialogButton.CEmahjyiRmgWZlXL6XEpv {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #b0abe5;
+  background-color: #e87157;
   border-radius: 3px;
   width: fit-content;
   padding: 4px 8px;
@@ -706,7 +708,7 @@ button.DialogButton.CEmahjyiRmgWZlXL6XEpv._4GIBs4zFQvYzih0mbwMoB {
   opacity: 0.5;
 }
 button.DialogButton.CEmahjyiRmgWZlXL6XEpv._4GIBs4zFQvYzih0mbwMoB:hover {
-  background-color: #b0abe5;
+  background-color: #e87157;
 }
 button.DialogButton.CEmahjyiRmgWZlXL6XEpv:hover {
   background-color: #fff;
@@ -760,7 +762,7 @@ html.responsive.tablet .carousel__slider-tray-wrapper {
 }
 ._3FdxnzdLCLEUpdpoJJThYZ ._3x6HhTNw3LbAwygEgTzwDr {
   font-size: 20px;
-  color: #e3e0fe;
+  color: #feeae6;
 }
 ._3FdxnzdLCLEUpdpoJJThYZ ._1t4jW207kK9lq0dm7UwBIq {
   display: flex;
@@ -1637,5 +1639,46 @@ body.SteamAwardsVoting_2024 .responsive_page_frame {
   filter: opacity(1) drop-shadow(0px 0px 10px #773c6ccf);
 }
 ._1M-Tp2eIsHzDqKVdeyNwEE {
+  color: #ebf000;
+}
+body.SteamAwardsVoting_2024 .responsive_page_frame {
+  background: linear-gradient(to bottom right, #232341, #67629c);
+}
+._1LNVToRGS4KgtDmwChCdO- {
+  position: relative;
+  background: url("https://cdn.fastly.steamstatic.com/store/promo/steamawards2024/header_trophy.webp?v=2")
+    no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #111;
+}
+._1LNVToRGS4KgtDmwChCdO- .SHcWFaCZK_WUravI9p1Lm {
+  color: #ebf000;
+  text-shadow: 0 0 16px #22131b75;
+}
+._1LNVToRGS4KgtDmwChCdO- ._3Rnea2kVxFT3chmOmqisne {
+  color: #e3e0fe;
+  text-shadow: 0 0 16px #22131b75;
+}
+._1LNVToRGS4KgtDmwChCdO- ._3Rnea2kVxFT3chmOmqisne._2jbNvt46h0RqPVOeAwcb8o {
+  color: #fff;
+}
+._3UcPLvxpWKhkpPp5vuNZ4T ._3PJmH1yq33fNNGz3U9m-G0 {
+  color: yearThemeText;
+}
+._3UcPLvxpWKhkpPp5vuNZ4T ._2CZcny1e2NwmV-B3klLJiN {
+  color: yearThemeText;
+}
+._3UcPLvxpWKhkpPp5vuNZ4T ._2CZcny1e2NwmV-B3klLJiN a {
+  color: #fff;
+}
+._3NRXvKouZmkfv0SJaRwm3z {
+  background-color: #b0abe5;
+  box-shadow: 0 0 9px #000;
+}
+._3NRXvKouZmkfv0SJaRwm3z ._3aAMtCHlbBv9NIEZdV0q4E:hover .MofbE6cz8noD7aLG-RuYg {
+  filter: opacity(1) drop-shadow(0px 0px 10px #773c6ccf);
+}
+._1KImUETUAUTMVe-r0tBhbv {
   color: #ebf000;
 }

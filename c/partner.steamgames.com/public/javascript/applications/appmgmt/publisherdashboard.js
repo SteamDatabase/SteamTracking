@@ -4091,11 +4091,11 @@
           _ = (0, _._)(_?.due_date, !0);
         return _.createElement(_, {
           urgent: !0,
-          urlImage: __webpack_require__?.GetAssets().GetHeaderURL(),
-          strTitle: (0, _._)("#PartnerDeadline_DailyDeal_InviteExpiring_Title"),
-          strBody: (0, _._)("#PartnerDeadline_InviteExpiring_Body", _),
+          imageUrl: __webpack_require__?.GetAssets().GetHeaderURL(),
+          title: (0, _._)("#PartnerDeadline_DailyDeal_InviteExpiring_Title"),
+          body: (0, _._)("#PartnerDeadline_InviteExpiring_Body", _),
           url: _,
-          strImageTooltip: __webpack_require__?.GetName(),
+          imageTooltip: __webpack_require__?.GetName(),
           rightCol: _.createElement(
             _._,
             {
@@ -4118,13 +4118,11 @@
           _ = (0, _._)(_?.due_date, !0);
         return _.createElement(_, {
           urgent: !0,
-          urlImage: __webpack_require__?.GetAssets().GetHeaderURL(),
-          strTitle: (0, _._)(
-            "#PartnerDeadline_AssetRequest_InviteExpiring_Title",
-          ),
-          strBody: (0, _._)("#PartnerDeadline_InviteExpiring_Body", _),
+          imageUrl: __webpack_require__?.GetAssets().GetHeaderURL(),
+          title: (0, _._)("#PartnerDeadline_AssetRequest_InviteExpiring_Title"),
+          body: (0, _._)("#PartnerDeadline_InviteExpiring_Body", _),
           url: _,
-          strImageTooltip: __webpack_require__?.GetName(),
+          imageTooltip: __webpack_require__?.GetName(),
           rightCol: _.createElement(
             _._,
             {
@@ -4142,8 +4140,8 @@
           _ = `${_._.PARTNER_BASE_URL}optin/sale/${__webpack_require__.opt_in_name.replace("sale_", "")}`;
         return _
           ? _.createElement(_, {
-              strTitle: _.description.definition.event_title[_._.LANGUAGE],
-              strBody: (0, _._)("#PartnerDeadline_NextFest_PressPreview_Body"),
+              title: _.description.definition.event_title[_._.LANGUAGE],
+              body: (0, _._)("#PartnerDeadline_NextFest_PressPreview_Body"),
               rightCol: _.createElement(
                 _._,
                 {
@@ -4158,21 +4156,24 @@
         const { deadline: _, json: __webpack_require__ } = _,
           _ = _(__webpack_require__.opt_in_name),
           _ = `${_._.PARTNER_BASE_URL}optin/sale/${__webpack_require__.opt_in_name.replace("sale_", "")}`;
-        return _
-          ? _.createElement(_, {
-              strTitle: _.description.definition.event_title[_._.LANGUAGE],
-              strBody: (0, _._)(
-                "#PartnerDeadline_NextFest_DemoBuildReview_Body",
-              ),
-              rightCol: _.createElement(
-                _._,
-                {
-                  url: _,
-                },
-                (0, _._)("#PartnerDeadline_NextFest_View_Registration"),
-              ),
-            })
-          : null;
+        if (!_) return null;
+        const _ = `${_._.PARTNER_BASE_URL}doc/store/review_process`;
+        return _.createElement(_, {
+          title: _.description.definition.event_title[_._.LANGUAGE],
+          body: (0, _._)(
+            "#PartnerDeadline_NextFest_DemoBuildReview_Body",
+            _.createElement("a", {
+              href: _,
+            }),
+          ),
+          rightCol: _.createElement(
+            _._,
+            {
+              url: _,
+            },
+            (0, _._)("#PartnerDeadline_NextFest_View_Registration"),
+          ),
+        });
       }
       const _ = {
         include_assets: !0,
@@ -4186,12 +4187,12 @@
           _ = `${_._.PARTNER_BASE_URL}admin/game/editbyappid/${_.store_item_id}?activetab=tab_specialsettings#seasonpass`,
           _ = `${_._.PARTNER_BASE_URL}apps/landing/${_.store_item_id}`;
         return _.createElement(_, {
-          urlImage: _?.GetAssets().GetSmallCapsuleURL(),
-          strTitle: (0, _._)(
+          imageUrl: _?.GetAssets().GetSmallCapsuleURL(),
+          title: (0, _._)(
             "#PartnerDeadline_SeasonPass_DLC",
             _?.GetName() || "(" + _.store_item_id + ")",
           ),
-          strBody: (0, _._)("#PartnerDeadline_SeasonPass_Desc", _ || _.gid),
+          body: (0, _._)("#PartnerDeadline_SeasonPass_Desc", _ || _.gid),
           rightCol: _.createElement(
             _.Fragment,
             null,
@@ -4277,9 +4278,8 @@
                 "#PartnerDeadline_TaxRequirement_ActualAuthorityRequired",
               )),
           _.createElement(_, {
-            urlImage: null,
-            strTitle: _(__webpack_require__?.TemplateName),
-            strBody: _,
+            title: _(__webpack_require__?.TemplateName),
+            body: _,
             rightCol: _.createElement(
               _._,
               {
@@ -4292,10 +4292,10 @@
       }
       function _(_) {
         const {
-          urlImage: _,
-          strTitle: __webpack_require__,
-          strBody: _,
-          strImageTooltip: _,
+          imageUrl: _,
+          title: __webpack_require__,
+          body: _,
+          imageTooltip: _,
           url: _,
           rightCol: _,
           urgent: _,

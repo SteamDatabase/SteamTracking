@@ -452,6 +452,7 @@
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         Container: "_30v-6zb_axOypIUr5VRHE1",
+        SingleLine: "_2i9qH2AM6Wg5660Tkf_fTt",
         ToolbarRowOverflowContainer: "nXEH21nf47u2OH7BjQKei",
         ToolbarRow: "LCeIT0gmFTY8fdfaVgk4j",
         Gap: "_19z0fjj7o0n9vAjVjvYZNU",
@@ -1110,10 +1111,10 @@
           );
         const [W, V] = u.useState(0),
           [$, j] = u.useState(0),
-          Y = (0, R.wY)((e) =>
+          q = (0, R.wY)((e) =>
             V(e.target.offsetLeft + e.borderBoxSize[0].inlineSize),
           ),
-          q = (0, R.wY)((e) => j(e.borderBoxSize[0].inlineSize)),
+          Y = (0, R.wY)((e) => j(e.borderBoxSize[0].inlineSize)),
           X = $ + 16 >= W,
           Q = X ? W : void 0;
         return u.createElement(
@@ -1140,7 +1141,7 @@
           u.createElement(
             "div",
             {
-              ref: Y,
+              ref: q,
               className: (0, v.A)({
                 [I.ExtraAssetImgTag]: !0,
                 [I.ExtraAssetControlsContainer]: !0,
@@ -1154,7 +1155,7 @@
             u.createElement(
               "div",
               {
-                ref: q,
+                ref: Y,
                 className: (0, v.A)(I.ExtraAssetControls, X && I.SmallImage),
                 style: { left: Q },
                 ...k,
@@ -3713,7 +3714,7 @@
             },
           },
         }),
-        Y = {
+        q = {
           BBArgsToAttrs: (e) => {
             const t = {};
             return (
@@ -3734,7 +3735,7 @@
             );
           },
         },
-        q =
+        Y =
           (j.table,
           j.table_row,
           H("tr", O().TableRow),
@@ -3821,7 +3822,11 @@
           { view: u, pmState: t },
           f.createElement(N.Z, {
             key: `editordiv_${o}`,
-            className: (0, G.A)(n, J.Container),
+            className: (0, G.A)({
+              ["" + n]: !!n,
+              [J.Container]: !0,
+              [J.SingleLine]: !!l,
+            }),
             ref: E,
             spellCheck: o,
             focusable: !0,
@@ -3836,7 +3841,7 @@
             bSingleLine: l,
           }),
           f.createElement(te, { parser: C, schema: h.pm_schema }),
-          f.createElement(q, { schema: h.pm_schema }),
+          f.createElement(Y, { schema: h.pm_schema }),
           i,
         );
       });
@@ -7023,18 +7028,18 @@
             d = r ? r(i) : i,
             u = d.length - i.length,
             m = e.scrollTop;
-          Y(t, s + n + d + a + c, () => {
+          q(t, s + n + d + a + c, () => {
             e.focus(),
               (e.selectionStart = o + n.length),
               (e.selectionEnd = l + n.length + u),
               (e.scrollTop = m);
           });
-        } else Y(t, e.value + n + " " + a, () => e.focus());
+        } else q(t, e.value + n + " " + a, () => e.focus());
       }
-      function Y(e, t, n) {
+      function q(e, t, n) {
         e.Set(t), window.setTimeout(n, 1);
       }
-      var q = n(92503),
+      var Y = n(92503),
         X = n(47693),
         Q = n(84811),
         Z = n(22837),
@@ -7058,10 +7063,10 @@
             rctHiddenInputs: _,
           } = (0, F.KC)(c, n, o, l),
           g = (function () {
-            const e = (0, q.TQ)();
+            const e = (0, Y.TQ)();
             return e ? ee : z;
           })(),
-          E = (0, q.TQ)(),
+          E = (0, Y.TQ)(),
           h =
             "aboutthegame" == s
               ? a.createElement(
@@ -7100,8 +7105,8 @@
         );
       }
       function ne() {
-        const e = (0, q.TQ)(),
-          t = (0, q.gg)();
+        const e = (0, Y.TQ)(),
+          t = (0, Y.gg)();
         return a.createElement(k.Yh, {
           style: { width: "fit-content" },
           checked: e,
@@ -7807,10 +7812,10 @@
             },
           }),
           a.createElement(Xe, { rgDLCInfo: l, fnSetDLCInfo: s }),
-          a.createElement(Ye, { rgDLCInfo: l }),
+          a.createElement(qe, { rgDLCInfo: l }),
         );
       }
-      function Ye(e) {
+      function qe(e) {
         const { rgDLCInfo: t } = e,
           [n, r] = (0, a.useState)(() => t?.length || 0);
         (0, a.useEffect)(() => {
@@ -7851,7 +7856,7 @@
           o,
         );
       }
-      const qe = { include_assets: !0, include_release: !0 };
+      const Ye = { include_assets: !0, include_release: !0 };
       function Xe(e) {
         const { rgDLCInfo: t, fnSetDLCInfo: n } = e;
         return a.createElement(be.A, {
@@ -7935,7 +7940,7 @@
             });
             return n ? null : t;
           })(t),
-          c = (0, he.zX)(i, qe),
+          c = (0, he.zX)(i, Ye),
           d = (0, a.useMemo)(
             () =>
               1 != c && i
@@ -9270,11 +9275,11 @@
           }
         );
       }
-      function Yt(e) {
+      function qt(e) {
         const t = Math.floor(Date.now() / 1e3);
         return e.BIsReleased() && e.GetReleaseDateRTime() + 2592e3 > t;
       }
-      var qt = n(14358);
+      var Yt = n(14358);
       function Xt(e) {
         const { proposal: t, mapCurrentPrices: n, oGuideline: r } = e,
           { fnAcceptProposal: o } = bt(),
@@ -9293,7 +9298,7 @@
             )
           : a.createElement(
               "div",
-              { className: qt.ActionsCtn },
+              { className: Yt.ActionsCtn },
               a.createElement(
                 k.$n,
                 {
@@ -9328,7 +9333,7 @@
                     (s.rgAboveThreshold.length > 0 ||
                       s.rgBelowThreshold.length > 0) &&
                       o.push("out_of_guideline"),
-                      d && Yt(d) && o.push("within_30_days"),
+                      d && qt(d) && o.push("within_30_days"),
                       (0, nt.pg)(
                         a.createElement(Zt, { proposal: t, errors: o }),
                         (0, at.uX)(e),
@@ -9406,7 +9411,7 @@
               a.createElement("textarea", {
                 onChange: (e) => i(e.target.value),
                 value: s,
-                className: qt.NotesField,
+                className: Yt.NotesField,
               }),
             );
       }
@@ -10406,7 +10411,7 @@
       function Gn(e) {
         const { proposal: t } = e,
           [n] = (0, he.Gg)(t.packageid, Ht);
-        return n && Yt(n)
+        return n && qt(n)
           ? a.createElement(
               "div",
               { className: Jt.ReleaseDateCallout },
@@ -10529,8 +10534,8 @@
         );
       }
       var jn = n(26673),
-        Yn = n(67293);
-      const qn = "0",
+        qn = n(67293);
+      const Yn = "0",
         Xn = "1",
         Qn = "2",
         Zn = "3",
@@ -10540,7 +10545,7 @@
       }
       function ta(e) {
         switch (e.kind) {
-          case qn:
+          case Yn:
             return (0, r.we)(
               "#StoreAdmin_PurchaseOptionsOrder_InvalidKindError",
             );
@@ -10637,7 +10642,7 @@
                     return !1;
                   case Zn:
                     continue;
-                  case qn:
+                  case Yn:
                     return !1;
                   case Xn:
                     return t.includes(n.package_id);
@@ -10676,7 +10681,7 @@
           a.createElement(
             "div",
             { className: jn.PurchaseOptionsManualToggleCtn },
-            a.createElement(Yn._H, { value: i, onChange: (e) => d(e) }),
+            a.createElement(qn._H, { value: i, onChange: (e) => d(e) }),
             a.createElement(
               "div",
               { className: jn.Label },
@@ -10718,7 +10723,7 @@
                       "#StoreAdmin_PurchaseOptionsOrder_NoPurchaseOptionsPlaceholder",
                     ),
                   ),
-                  emptyItem: () => ({ kind: qn }),
+                  emptyItem: () => ({ kind: Yn }),
                   addText: (0, r.we)("#StoreAdmin_PurchaseOptionsOrder_Add"),
                 }),
               ),
@@ -10855,7 +10860,7 @@
                 }),
               ),
             );
-          case qn:
+          case Yn:
             return null;
         }
       }
@@ -10882,7 +10887,7 @@
           ];
         let c;
         switch (n.kind) {
-          case qn:
+          case Yn:
             c = a.createElement(ia, { item: n, index: t });
             break;
           case Xn:
@@ -10918,7 +10923,7 @@
                 },
                 value: n.kind,
               },
-              a.createElement("option", { hidden: !0, value: qn }),
+              a.createElement("option", { hidden: !0, value: Yn }),
               i.map((e, t) =>
                 a.createElement("option", { key: t, value: e.value }, e.label),
               ),
@@ -11969,7 +11974,7 @@
             );
       }
       var ja = n(13549);
-      function Ya(e) {
+      function qa(e) {
         const {
             hideModal: t,
             inputMilestone: n,
@@ -12045,7 +12050,7 @@
           ),
         );
       }
-      const qa = { include_release: !0, include_included_items: !0 };
+      const Ya = { include_release: !0, include_included_items: !0 };
       function Xa(e) {
         const {
             inputMilestone: t,
@@ -12055,7 +12060,7 @@
             index: s,
             rgShippedMilestoneIDs: i,
           } = e,
-          [c] = (0, he.t7)(t.completed_appid, qa),
+          [c] = (0, he.t7)(t.completed_appid, Ya),
           [u, m, p] = (0, G.uD)(),
           [_, g, E] = (0, G.uD)(),
           h = Boolean(i.includes(t.milestone_id)),
@@ -12129,7 +12134,7 @@
               a.Fragment,
               null,
               _ &&
-                a.createElement(Ya, {
+                a.createElement(qa, {
                   setCurrentMilestone: n,
                   inputMilestone: t,
                   hideModal: E,
@@ -12547,7 +12552,7 @@
             rgShippedMilestoneIDs: o,
           } = e,
           [l, s] = (0, a.useState)(n || { commitments: [] }),
-          { bAppHasSteamChinaToolsEnabled: i } = (0, q.aJ)(),
+          { bAppHasSteamChinaToolsEnabled: i } = (0, Y.aJ)(),
           [c, d] = (0, a.useState)(n?.commitments?.length || 0),
           u = (0, a.useMemo)(() => {
             let e = 0;
@@ -13632,7 +13637,7 @@
             a.createElement(
               "div",
               { className: Ar.ItemEditorRowVisibleToggle },
-              a.createElement(Yn._H, {
+              a.createElement(qn._H, {
                 value: "1" === n.visible,
                 onChange: (e) => {
                   (n.visible = e ? "1" : "0"), o(n);
@@ -14187,7 +14192,7 @@
           },
         });
       }
-      function Yr(e) {
+      function qr(e) {
         const [t, n, o] = (0, G.uD)();
         return a.createElement(
           a.Fragment,
@@ -14196,11 +14201,11 @@
           a.createElement(
             ba.E,
             { active: t },
-            a.createElement(qr, { ...e, closeModal: o }),
+            a.createElement(Yr, { ...e, closeModal: o }),
           ),
         );
       }
-      function qr(e) {
+      function Yr(e) {
         const { pageLink: t, clanAccountID: n, clanName: o, closeModal: l } = e,
           s = (function (e, t, n) {
             const a = jr();
@@ -14563,7 +14568,7 @@
               a.createElement(so, { clanAccountID: o, strURL: s, clanInfo: l }),
             ),
           ),
-          a.createElement(Yr, {
+          a.createElement(qr, {
             pageLink: t,
             clanAccountID: o,
             clanName: l?.group_name || "" + o,
@@ -14606,7 +14611,7 @@
             refetch: s,
             isFetching: i,
           } = (function (e) {
-            const t = (0, q.Z3)("screenshots"),
+            const t = (0, Y.Z3)("screenshots"),
               {
                 data: n,
                 refetch: a,
@@ -14628,7 +14633,7 @@
             return { rgScreenshots: n, refetch: a, isFetching: r };
           })(t),
           { mutateAsync: c, isPending: d } = (function () {
-            const e = (0, q.Z3)("quickupdateajax");
+            const e = (0, Y.Z3)("quickupdateajax");
             return (0, tn.n)({
               mutationFn: async ({ nIndex: t, mapAltText: n }) => {
                 if (null == t || !n) return !1;
@@ -14736,7 +14741,7 @@
         return a.createElement(
           "div",
           { className: mo().CreatorNameCtn },
-          a.createElement(Yr, {
+          a.createElement(qr, {
             pageLink: t,
             clanAccountID: n,
             clanName: o?.group_name || "" + n,
@@ -14765,7 +14770,7 @@
             ie.qh,
             { path: se.bI.GameEdit(`:action(${se.a3.join("|")})`, ":itemid") },
             a.createElement(
-              q._M,
+              Y._M,
               null,
               a.createElement(ce.X, {
                 config: {
@@ -15846,7 +15851,7 @@
             for (let e = G.length; e < t.length; e++)
               G.push(a.createRef()), H.push(a.createRef());
           }, [t.length, G, H]);
-        const Y = (e) => {
+        const q = (e) => {
             M(void 0);
             const t = O?.trim(),
               n = Number.parseInt(t);
@@ -15854,7 +15859,7 @@
             const a = n - 1;
             e != a && V(e, a);
           },
-          [q, X] = a.useState(void 0);
+          [Y, X] = a.useState(void 0);
         return a.createElement(
           "div",
           { className: c().WhitelistCtn, ref: U },
@@ -15895,7 +15900,7 @@
                     S,
                     k && c().DragActive,
                     r == P && c().BeingDragged,
-                    q == r && c().Dropped,
+                    Y == r && c().Dropped,
                   ),
                   onAnimationEnd: () => X(void 0),
                 },
@@ -15916,12 +15921,12 @@
                   onChange: (e) => F(e.target.value),
                   onKeyDown: (e) =>
                     ((e, t) => {
-                      "Enter" === e.key && (Y(t), e.currentTarget.blur());
+                      "Enter" === e.key && (q(t), e.currentTarget.blur());
                     })(e, r),
                   onFocus: (e) => {
                     M(r), F(e.target.value);
                   },
-                  onBlur: () => Y(r),
+                  onBlur: () => q(r),
                 }),
                 n(e, r),
                 Boolean(r != P) &&

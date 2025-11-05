@@ -136,6 +136,7 @@
         IgnoreButtonText: "_1gTs9_O1m2-Sibih5GJ43d",
         IgnoreLoadingText: "_2R3kegZfZASFduBjtw168d",
         WishlistButtonNotTop: "_3VcyYP_egkOaX_rJ1e_SQk",
+        FollowGameButtonNotTop: "_3BT5AfGR6BYqJdn9DbgwtX",
         BottomShelf: "oAqlZTgPU37Nb8gBT5eAM",
         BottomShelfOffScreen: "_36zpRzyxmtd8eBgf7p9Ewi",
         ShortDescription: "_1JiQcVD1LUE2KxWb_oOv-K",
@@ -2030,7 +2031,7 @@
         m_schFirstFrameThrottler = new d.LU();
         m_bookMarkAdapter = null;
         m_schBookmarkUpdater = new d.LU();
-        m_watchedIntervals = new Q();
+        m_watchedIntervals = new J();
         constructor(e) {
           (0, o.Gn)(this),
             (this.m_elVideo = e),
@@ -3273,7 +3274,7 @@
         ),
         (0, r.Cg)([p.o], Z.prototype, "ReportPlayerStats", null),
         (0, r.Cg)([o.XI.bound], Z.prototype, "CaptureStatsForDisplay", null);
-      class Q {
+      class J {
         m_bEnabled = !1;
         m_rgIntervals = [];
         m_nWatchStart = void 0;
@@ -10100,7 +10101,7 @@
               "#SteamOSCompatibility_Store_CompatSectionHeader_GamepadUI",
             )),
             (m = n.createElement(Z, { category: a.steamos_resolved_category })),
-            (d = n.createElement(Q, { category: a.steamos_resolved_category })))
+            (d = n.createElement(J, { category: a.steamos_resolved_category })))
           : ((l = s
               ? (0, w.we)(
                   "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
@@ -10343,7 +10344,7 @@
             (s = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
               (o = b().Unsupported);
         }
-        const l = n.createElement("span", { className: o }, (0, w.we)(J(a))),
+        const l = n.createElement("span", { className: o }, (0, w.we)(Q(a))),
           m = n.createElement(
             "span",
             { className: b().CompatibilityDetailRatingSummary },
@@ -10412,10 +10413,10 @@
         return n.createElement(
           "span",
           { className: b().CompatibilityDetailRatingDescription },
-          (0, w.we)(J(t)),
+          (0, w.we)(Q(t)),
         );
       }
-      function Q(e) {
+      function J(e) {
         const { category: t } = e;
         return n.createElement(
           "span",
@@ -10423,7 +10424,7 @@
           (0, w.we)(X(t)),
         );
       }
-      function J(e) {
+      function Q(e) {
         switch (e) {
           case 3:
             return "#SteamDeckVerified_Category_Verified";
@@ -10787,7 +10788,7 @@
     },
     47453: (e, t, a) => {
       "use strict";
-      a.d(t, { j: () => Q });
+      a.d(t, { j: () => J });
       var n = a(90626),
         r = a(82415),
         i = a(62792),
@@ -11132,7 +11133,7 @@
           ),
         );
       }
-      function Q(e) {
+      function J(e) {
         const { info: t, className: a } = e,
           c = (0, n.useRef)({ include_release: !0 }),
           [h] = (0, s.G6)(t?.id, (0, i.SW)(t?.type), c.current),
@@ -11422,196 +11423,197 @@
     },
     26101: (e, t, a) => {
       "use strict";
-      a.d(t, { EP: () => te, Jz: () => ee, Qf: () => oe });
+      a.d(t, { EP: () => ae, Jz: () => te, Qf: () => me, gi: () => re });
       var n = a(14947),
         r = a(75844),
-        i = a(90626),
-        s = a(72739),
-        o = a(61855),
-        l = a(6336),
-        m = a(85044),
-        d = a(55963),
-        c = a(4796),
-        u = a(8092),
-        p = a(30894),
-        h = a(82097),
-        _ = a(62792),
-        g = a(55263),
-        S = a(582),
-        f = a(84811),
-        C = a(48838),
-        w = a(3661),
-        y = a(72237),
-        b = a(94095),
-        v = a(99956),
-        B = a(90595),
-        E = a(47235),
-        D = a(12155),
-        I = a(32754),
-        T = a(81393),
-        k = a(6144),
-        A = a(52038),
-        G = a(61859),
-        R = a(84933),
-        M = a(78327),
-        L = a(47453),
-        V = a(83284),
-        H = a.n(V),
-        P = a(82477),
-        N = a(18654),
-        F = a.n(N),
-        U = a(4434),
-        O = a(60014),
-        x = a(10050),
-        W = a(10224),
-        z = a(38535),
-        q = a(49411);
-      const Z = "DEBUG_UseNewGameHover";
-      function j() {
-        return window.sessionStorage?.getItem(Z) || "default";
+        i = a(65946),
+        s = a(90626),
+        o = a(72739),
+        l = a(61855),
+        m = a(6336),
+        d = a(85044),
+        c = a(55963),
+        u = a(4796),
+        p = a(8092),
+        h = a(30894),
+        _ = a(82097),
+        g = a(62792),
+        S = a(55263),
+        f = a(582),
+        C = a(84811),
+        w = a(48838),
+        y = a(3661),
+        b = a(72237),
+        v = a(94095),
+        B = a(99956),
+        E = a(90595),
+        D = a(47235),
+        I = a(12155),
+        T = a(32754),
+        k = a(81393),
+        A = a(6144),
+        G = a(52038),
+        R = a(61859),
+        M = a(84933),
+        L = a(78327),
+        V = a(47453),
+        H = a(83284),
+        P = a.n(H),
+        N = a(82477),
+        F = a(18654),
+        U = a.n(F),
+        O = a(4434),
+        x = a(60014),
+        W = a(10050),
+        z = a(10224),
+        q = a(38535),
+        Z = a(49411);
+      const j = "DEBUG_UseNewGameHover";
+      function K() {
+        return window.sessionStorage?.getItem(j) || "default";
       }
       window.SetHoverPresentation = function (e) {
-        window.sessionStorage.setItem(Z, e);
+        window.sessionStorage.setItem(j, e);
       };
-      const K = 5500,
-        Y = 2e3,
+      const Y = 5500,
+        J = 2e3,
         Q = 10;
-      function J(e, t, a, r) {
-        const s = [];
+      function X(e, t, a, r) {
+        const i = [];
         if (1 == e.length) {
-          const t = h.A.Get().GetApp(e[0]);
+          const t = _.A.Get().GetApp(e[0]);
           t.GetMicroTrailer(r) &&
-            s.push({
-              rctImage: i.createElement(w.m, {
+            i.push({
+              rctImage: s.createElement(y.m, {
                 appInfo: { id: t.GetID(), type: "game" },
               }),
-              nDurationMs: K,
+              nDurationMs: Y,
             });
           t.GetScreenshots(r)
             .slice(0, Q)
             .forEach((e, t) => {
-              s.push({
-                rctImage: i.createElement("img", {
+              i.push({
+                rctImage: s.createElement("img", {
                   key: e,
-                  className: H().FullDivImage,
+                  className: P().FullDivImage,
                   loading: "lazy",
                   src: e,
                   alt: "screenshot " + (t + 1),
                 }),
-                nDurationMs: Y,
+                nDurationMs: J,
               });
             });
         }
-        if (0 == s.length)
+        if (0 == i.length)
           for (const t of e) {
-            const e = h.A.Get().GetApp(t),
+            const e = _.A.Get().GetApp(t),
               a = e?.GetAssets()?.GetMainCapsuleURL();
             a &&
-              s.push({
-                rctImage: i.createElement("img", {
+              i.push({
+                rctImage: s.createElement("img", {
                   key: "fallback",
-                  className: H().FullDivImage,
+                  className: P().FullDivImage,
                   loading: "lazy",
                   src: a,
                   alt: e.GetName(),
                 }),
-                nDurationMs: Y,
+                nDurationMs: J,
               });
           }
-        s.length > 0
-          ? (t(s), a(!0))
-          : ("dev" != M.TS.WEB_UNIVERSE && "beta" != M.TS.WEB_UNIVERSE) ||
+        i.length > 0
+          ? (t(i), a(!0))
+          : ("dev" != L.TS.WEB_UNIVERSE && "beta" != L.TS.WEB_UNIVERSE) ||
             console.error(
               "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
               (0, n.HO)(e),
             );
       }
-      function X(e) {
+      function $(e) {
         const { info: t } = e,
-          a = (0, i.useRef)({
+          a = (0, s.useRef)({
             include_assets: !0,
             include_trailers: !0,
             include_screenshots: !0,
           }),
-          [n, r] = (0, g.G6)(t.id, (0, _.SW)(t.type), a.current),
-          s = (0, i.useRef)(n),
-          [l, m] = (0, i.useState)([]),
-          d = (0, i.useRef)(0),
-          c = (0, R.CH)(),
-          [u] = i.useState(new k.LU()),
-          p = (0, z.dy)(),
-          S = (0, i.useCallback)(
+          [n, r] = (0, S.G6)(t.id, (0, g.SW)(t.type), a.current),
+          i = (0, s.useRef)(n),
+          [o, m] = (0, s.useState)([]),
+          d = (0, s.useRef)(0),
+          c = (0, M.CH)(),
+          [u] = s.useState(new A.LU()),
+          p = (0, q.dy)(),
+          h = (0, s.useCallback)(
             (e = !1) => {
-              if ((e && (d.current = 0), l?.length > 0)) {
-                const e = l[d.current].nDurationMs;
+              if ((e && (d.current = 0), o?.length > 0)) {
+                const e = o[d.current].nDurationMs;
                 u.Schedule(e, () => {
                   const e = d.current;
-                  (d.current = (d.current + 1) % l.length),
-                    e != d.current && (S(), c());
+                  (d.current = (d.current + 1) % o.length),
+                    e != d.current && (h(), c());
                 });
               }
             },
-            [l, u, c],
+            [o, u, c],
           );
         return (
-          (0, i.useEffect)(
+          (0, s.useEffect)(
             () => (
-              !n || (l && 0 != l.length && s.current === n)
-                ? 2 == r && 0 == l.length
+              !n || (o && 0 != o.length && i.current === n)
+                ? 2 == r && 0 == o.length
                   ? m([
                       {
-                        rctImage: i.createElement("img", {
+                        rctImage: s.createElement("img", {
                           key: "default",
-                          className: H().FullDivImage,
+                          className: P().FullDivImage,
                           loading: "lazy",
-                          src: o.A,
+                          src: l.A,
                           alt: "default",
                         }),
-                        nDurationMs: Y,
+                        nDurationMs: J,
                       },
                     ])
-                  : l?.length && S()
-                : ((s.current = n),
+                  : o?.length && h()
+                : ((i.current = n),
                   2 == n.GetStoreItemType() || 1 == n.GetStoreItemType()
-                    ? ((0, T.wT)(
+                    ? ((0, k.wT)(
                         n.GetIncludedAppIDs().length > 0,
                         "expected included apps " +
                           n.GetID() +
                           " " +
                           n.GetStoreItemType(),
                       ),
-                      h.A.Get()
+                      _.A.Get()
                         .QueueMultipleAppRequests(n.GetIncludedAppIDs(), {
                           include_assets: !0,
                         })
-                        .then(() => J(n.GetIncludedAppIDs(), m, S, p)))
+                        .then(() => X(n.GetIncludedAppIDs(), m, h, p)))
                     : 1 == n.GetAppType() &&
                         n.GetParentAppID() &&
                         !n.GetAllTrailers().BHasTrailers(p)
-                      ? h.A.Get()
+                      ? _.A.Get()
                           .QueueAppRequest(n.GetParentAppID(), a.current)
                           .then(() =>
                             (function (e, t, a, n, r) {
-                              const s = [],
-                                o = h.A.Get().GetApp(t);
+                              const i = [],
+                                o = _.A.Get().GetApp(t);
                               o.GetMicroTrailer(r) &&
-                                s.push({
-                                  rctImage: i.createElement(w.m, {
+                                i.push({
+                                  rctImage: s.createElement(y.m, {
                                     appInfo: { id: o.GetID(), type: "game" },
                                   }),
-                                  nDurationMs: K,
+                                  nDurationMs: Y,
                                 });
-                              const l = h.A.Get().GetApp(e).GetScreenshots(r);
+                              const l = _.A.Get().GetApp(e).GetScreenshots(r);
                               l.slice(0, Q).forEach((e, t) => {
-                                s.push({
-                                  rctImage: i.createElement("img", {
+                                i.push({
+                                  rctImage: s.createElement("img", {
                                     key: e,
-                                    className: H().FullDivImage,
+                                    className: P().FullDivImage,
                                     loading: "lazy",
                                     src: e,
                                     alt: "screenshot " + (t + 1),
                                   }),
-                                  nDurationMs: Y,
+                                  nDurationMs: J,
                                 });
                               }),
                                 Q - l.length > 0 &&
@@ -11619,44 +11621,44 @@
                                     .GetScreenshots(r)
                                     .slice(0, Q)
                                     .forEach((e, t) => {
-                                      s.push({
-                                        rctImage: i.createElement("img", {
+                                      i.push({
+                                        rctImage: s.createElement("img", {
                                           key: e,
-                                          className: H().FullDivImage,
+                                          className: P().FullDivImage,
                                           loading: "lazy",
                                           src: e,
                                           alt: "screenshot " + (t + 1),
                                         }),
-                                        nDurationMs: Y,
+                                        nDurationMs: J,
                                       });
                                     }),
-                                s.length > 0
-                                  ? (a(s), n(!0))
-                                  : ("dev" != M.TS.WEB_UNIVERSE &&
-                                      "beta" != M.TS.WEB_UNIVERSE) ||
+                                i.length > 0
+                                  ? (a(i), n(!0))
+                                  : ("dev" != L.TS.WEB_UNIVERSE &&
+                                      "beta" != L.TS.WEB_UNIVERSE) ||
                                     console.error(
                                       "DEV ONLY OUTPUT: Demo GameHoverImages for id/type no images: (might be not age safe screenshots)",
                                       e,
                                       t,
                                     );
-                            })(n.GetID(), n.GetParentAppID(), m, S, p),
+                            })(n.GetID(), n.GetParentAppID(), m, h, p),
                           )
-                      : J([n.GetID()], m, S, p)),
+                      : X([n.GetID()], m, h, p)),
               () => u.Cancel()
             ),
-            [l, n, r, u, S, s, p],
+            [o, n, r, u, h, i, p],
           ),
-          i.createElement(
+          s.createElement(
             "div",
-            { className: H().TrailerCtn },
-            l?.map((e, a) =>
-              i.createElement(
+            { className: P().TrailerCtn },
+            o?.map((e, a) =>
+              s.createElement(
                 "div",
                 {
                   key: "e-" + a + "-" + t.id + "_" + t.type,
-                  className: (0, A.A)(
-                    H().FullDivImage,
-                    a != d.current && H().Transparent,
+                  className: (0, G.A)(
+                    P().FullDivImage,
+                    a != d.current && P().Transparent,
                   ),
                 },
                 e.rctImage,
@@ -11665,38 +11667,38 @@
           )
         );
       }
-      function $(e) {
+      function ee(e) {
         const { rgTagIDs: t } = e;
-        return i.createElement(
+        return s.createElement(
           "div",
-          { className: H().TagRow },
-          i.createElement(
+          { className: P().TagRow },
+          s.createElement(
             "div",
-            { className: H().Tags },
+            { className: P().Tags },
             t.map((e) =>
-              i.createElement(v.p, {
+              s.createElement(B.p, {
                 key: "tag_" + e,
                 tagid: e,
-                className: H().Tag,
+                className: P().Tag,
               }),
             ),
           ),
         );
       }
-      function ee(e) {
+      function te(e) {
         const { appInfo: t, bTruncateTotalReviews: a, bShowTooltip: n } = e,
-          [r] = (0, g.G6)(t?.id, (0, _.SW)(t?.type), { include_reviews: !0 }),
-          [s] = (0, g.G6)(r?.GetParentAppID(), r?.GetStoreItemType(), {
+          [r] = (0, S.G6)(t?.id, (0, g.SW)(t?.type), { include_reviews: !0 }),
+          [i] = (0, S.G6)(r?.GetParentAppID(), r?.GetStoreItemType(), {
             include_basic_info: !0,
           });
         if (!r) return null;
-        if (1 == r.GetAppType() && !s?.HasDemoStandaloneStorePage()) return;
+        if (1 == r.GetAppType() && !i?.HasDemoStandaloneStorePage()) return;
         let o = r.GetUnfilteredReviewSummary(),
           l = "#ReviewScore_UserReviewScoreAria",
           m = !1;
-        const d = (0, G.we)("#Language_" + M.TS.LANGUAGE);
+        const d = (0, R.we)("#Language_" + L.TS.LANGUAGE);
         if (
-          (p.Fm.Get().BShowFilteredUserReviewScores() &&
+          (h.Fm.Get().BShowFilteredUserReviewScores() &&
             (r.GetFilteredReviewSummaryLanguage()
               ? ((m = !0),
                 (l = "#ReviewScore_UserReviewScoreAria_LanguageSpecific"),
@@ -11705,30 +11707,30 @@
           !o || 0 == o.review_score)
         )
           return null;
-        let c = H().ReviewScoreNone;
+        let c = P().ReviewScoreNone;
         c =
           o.review_score > 0 && o.review_score < 5
-            ? H().ReviewScoreLow
+            ? P().ReviewScoreLow
             : 5 == o.review_score
-              ? H().ReviewScoreMixed
-              : H().ReviewScoreHigh;
-        const u = `${M.TS.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
-          h = i.createElement(
+              ? P().ReviewScoreMixed
+              : P().ReviewScoreHigh;
+        const u = `${L.TS.STORE_BASE_URL}app/${t.id}/#app_reviews_hash`,
+          p = s.createElement(
             "div",
-            { className: (0, A.A)(H().ReviewScoreValue, c) },
-            i.createElement(
+            { className: (0, G.A)(P().ReviewScoreValue, c) },
+            s.createElement(
               "div",
               {
-                className: H().ReviewScoreLabel,
-                "aria-label": (0, G.we)(l, o.review_score_label, d),
+                className: P().ReviewScoreLabel,
+                "aria-label": (0, R.we)(l, o.review_score_label, d),
               },
               o.review_score_label,
             ),
-            i.createElement(
+            s.createElement(
               "div",
               {
-                className: H().ReviewScoreCount,
-                "aria-label": (0, G.we)(
+                className: P().ReviewScoreCount,
+                "aria-label": (0, R.we)(
                   "#GameHover_UserReviewCount",
                   o.review_count.toLocaleString(),
                 ),
@@ -11736,167 +11738,199 @@
               a
                 ? "(" + o.review_count.toLocaleString() + ")"
                 : m
-                  ? (0, G.we)(
+                  ? (0, R.we)(
                       "#GameHover_UserReviewCount_Lang",
                       o.review_count.toLocaleString(),
                       d,
                     )
-                  : (0, G.we)(
+                  : (0, R.we)(
                       "#GameHover_UserReviewCount",
                       o.review_count.toLocaleString(),
                     ),
             ),
             !a &&
-              i.createElement(
+              s.createElement(
                 "div",
-                { className: H().ReviewScoreHeader },
+                { className: P().ReviewScoreHeader },
                 " ",
-                (0, G.we)("#GameHover_UserReviewsHeader"),
+                (0, R.we)("#GameHover_UserReviewsHeader"),
               ),
           );
-        let S = "#ReviewScore_PercentPositive";
+        let _ = "#ReviewScore_PercentPositive";
         if (2 === r.GetStoreItemType())
-          S = "#ReviewScore_PercentPositive_bundle";
+          _ = "#ReviewScore_PercentPositive_bundle";
         else if (0 === r.GetStoreItemType())
           switch (r.GetAppType()) {
             case 6:
-              S = "#ReviewScore_PercentPositive_software";
+              _ = "#ReviewScore_PercentPositive_software";
               break;
             case 7:
-              S = "#ReviewScore_PercentPositive_video";
+              _ = "#ReviewScore_PercentPositive_video";
               break;
             case 10:
-              S = "#ReviewScore_PercentPositive_hardware";
+              _ = "#ReviewScore_PercentPositive_hardware";
               break;
             case 8:
-              S = "#ReviewScore_PercentPositive_series";
+              _ = "#ReviewScore_PercentPositive_series";
           }
-        return i.createElement(
-          B.q,
-          { url: u, className: (0, A.A)(H().ReviewScore, "ReviewScore") },
+        return s.createElement(
+          E.q,
+          { url: u, className: (0, G.A)(P().ReviewScore, "ReviewScore") },
           n &&
             null != o.percent_positive &&
             null != o.review_count &&
-            Boolean(S)
-            ? i.createElement(
-                I.he,
+            Boolean(_)
+            ? s.createElement(
+                T.he,
                 {
                   bTopmost: !0,
-                  toolTipContent: (0, G.we)(
-                    S,
+                  toolTipContent: (0, R.we)(
+                    _,
                     o.percent_positive,
                     o.review_count,
                   ),
                 },
-                h,
+                p,
               )
-            : h,
+            : p,
         );
       }
-      const te = (0, r.PA)(function (e) {
+      const ae = (0, r.PA)(function (e) {
           const { appID: t, snr: a, classOverride: n } = e,
-            [r] = (0, g.t7)(t, {}),
-            [s, o] = (0, i.useState)(() =>
+            [r] = (0, S.t7)(t, {}),
+            [i, o] = (0, s.useState)(() =>
               !r || (1 != r?.GetAppType() && 12 != r?.GetAppType())
                 ? t
                 : r.GetParentAppID() || t,
             ),
-            l = s && p.Fm.Get().BIsGameWishlisted(s),
-            m = s && p.Fm.Get().BOwnsApp(s),
-            [d, c] = (0, i.useState)(!1),
-            u = (0, U.m)("GameHoverWishlistButton");
+            l = i && h.Fm.Get().BIsGameWishlisted(i),
+            m = i && h.Fm.Get().BOwnsApp(i),
+            [d, c] = (0, s.useState)(!1),
+            u = (0, O.m)("GameHoverWishlistButton");
           if (
-            ((0, i.useEffect)(() => {
+            ((0, s.useEffect)(() => {
               (1 != r?.GetAppType() && 12 != r?.GetAppType()) ||
                 o(r.GetParentAppID() || t);
             }, [t, r]),
             m)
           )
             return null;
-          return i.createElement(
+          return s.createElement(
             "div",
             {
-              className: (0, A.A)(H().WishlistButton, n),
+              className: (0, G.A)(P().WishlistButton, n),
               onClick: async (e) => {
                 e.preventDefault(),
                   e.stopPropagation(),
-                  M.iA.logged_in
+                  L.iA.logged_in
                     ? (c(!0),
-                      await p.Fm.Get().UpdateGameWishlist(s, !l, a),
+                      await h.Fm.Get().UpdateGameWishlist(i, !l, a),
                       u.token.reason || c(!1))
-                    : (0, P.vg)();
+                    : (0, N.vg)();
               },
             },
-            l ? i.createElement(D.qnF, null) : i.createElement(D.T4m, null),
-            i.createElement(
+            l ? s.createElement(I.qnF, null) : s.createElement(I.T4m, null),
+            s.createElement(
               "div",
               {
-                className: (0, A.A)(
-                  H().WishlistButtonText,
-                  d && H().WishlistLoadingText,
+                className: (0, G.A)(
+                  P().WishlistButtonText,
+                  d && P().WishlistLoadingText,
                 ),
               },
-              (0, G.we)(l ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
+              (0, R.we)(l ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
             ),
           );
         }),
-        ae = (0, r.PA)(function (e) {
+        ne = (0, r.PA)(function (e) {
           const { appID: t, snr: a, classOverride: n } = e,
-            [r] = (0, g.t7)(t, {}),
-            [s, o] = (0, i.useState)(!1),
-            l = (0, U.m)("GameHoverIgnoreButton"),
-            m = t && p.Fm.Get().BIsGameWishlisted(t);
-          return i.createElement(
+            [r] = (0, S.t7)(t, {}),
+            [i, o] = (0, s.useState)(!1),
+            l = (0, O.m)("GameHoverIgnoreButton"),
+            m = t && h.Fm.Get().BIsGameIgnored(t);
+          return s.createElement(
             "div",
             {
-              className: (0, A.A)(H().IgnoreButton, n),
+              className: (0, G.A)(P().IgnoreButton, n),
               onClick: async (e) => {
                 e.preventDefault(),
                   e.stopPropagation(),
-                  M.iA.logged_in
+                  L.iA.logged_in
                     ? (o(!0),
-                      await p.Fm.Get().UpdateAppIgnore(t, !m, a),
+                      await h.Fm.Get().UpdateAppIgnore(t, !m, a),
                       l.token.reason || o(!1))
-                    : (0, P.vg)();
+                    : (0, N.vg)();
               },
             },
-            i.createElement(D.NtH, null),
-            i.createElement(
+            s.createElement(I.NtH, null),
+            s.createElement(
               "div",
               {
-                className: (0, A.A)(
-                  H().IgnoreButtonText,
-                  s && H().IgnoreLoadingText,
+                className: (0, G.A)(
+                  P().IgnoreButtonText,
+                  i && P().IgnoreLoadingText,
                 ),
               },
-              (0, G.we)(m ? "#Sale_RemoveFromIgnored" : "#Sale_Ignore"),
+              (0, R.we)(m ? "#Sale_RemoveFromIgnored" : "#Sale_Ignore"),
             ),
           );
         });
-      function ne(e) {
-        const { nCreatorAccountID: t } = e,
-          [a, n] = (0, c.TB)(t),
-          { creatorHome: r } = (0, u.FV)(t);
-        return i.createElement(
+      function re(e) {
+        const { appID: t, classOverride: a } = e,
+          [n, r] = (0, s.useState)(!1),
+          o = (0, O.m)("GameHoverIgnoreButton"),
+          l = (0, i.q3)(() => t && h.Fm.Get().BIsFollowingCurator(t));
+        return s.createElement(
           "div",
-          { className: H().GameHoverCreatorFollowButtonCtn },
-          i.createElement(
-            "a",
-            { href: r?.GetCreatorHomeURL("developer") },
-            i.createElement("img", {
-              src: a ? (0, m.t)(null, "medium") : n.avatar_medium_url,
-            }),
+          {
+            className: (0, G.A)(P().IgnoreButton, a),
+            onClick: async (e) => {
+              e.preventDefault(),
+                e.stopPropagation(),
+                L.iA.logged_in
+                  ? (r(!0),
+                    await h.Fm.Get().UpdateFollowingApp(t, !l),
+                    o.token.reason || r(!1))
+                  : (0, N.vg)();
+            },
+          },
+          l ? s.createElement(I.pPV, null) : s.createElement(I.c9e, null),
+          s.createElement(
+            "div",
+            {
+              className: (0, G.A)(
+                P().IgnoreButtonText,
+                n && P().IgnoreLoadingText,
+              ),
+            },
+            (0, R.we)(l ? "#Sale_StopFollowingGame" : "#Sale_FollowGame"),
           ),
-          i.createElement(C.of, { clanAccountID: t }),
         );
       }
-      function re(e) {
+      function ie(e) {
+        const { nCreatorAccountID: t } = e,
+          [a, n] = (0, u.TB)(t),
+          { creatorHome: r } = (0, p.FV)(t);
+        return s.createElement(
+          "div",
+          { className: P().GameHoverCreatorFollowButtonCtn },
+          s.createElement(
+            "a",
+            { href: r?.GetCreatorHomeURL("developer") },
+            s.createElement("img", {
+              src: a ? (0, d.t)(null, "medium") : n.avatar_medium_url,
+            }),
+          ),
+          s.createElement(w.of, { clanAccountID: t }),
+        );
+      }
+      function se(e) {
         const {
             info: t,
             displayInfo: a,
             name: n,
             strStoreUrl: r,
-            elElementToAppend: s,
+            elElementToAppend: i,
             bShowDemoButton: o,
             bHideBottomHalf: l,
             bHidePrice: m,
@@ -11906,227 +11940,229 @@
             bPreventNavigation: p,
             bShowDescription: h,
           } = e,
-          [f, C] = (0, i.useState)(!1),
-          [w, v] = (0, i.useState)(""),
-          [B] = (0, g.G6)(t.id, (0, _.SW)(t.type), {
+          [_, C] = (0, s.useState)(!1),
+          [w, y] = (0, s.useState)(""),
+          [B] = (0, S.G6)(t.id, (0, g.SW)(t.type), {
             include_release: !0,
             include_platforms: !0,
             include_reviews: !0,
             include_tag_count: 20,
           }),
-          [D] = (0, g.G6)(a.id, (0, _.SW)(a.type), { include_assets: !0 }),
-          I = !c && !o && !s,
+          [E] = (0, S.G6)(a.id, (0, g.SW)(a.type), { include_assets: !0 }),
+          I = !c && !o && !i,
           T = 0 == B?.GetStoreItemType();
-        return i.createElement(
+        return s.createElement(
           "div",
           {
-            className: H().BottomShelf,
-            style: { transform: l && f ? w : "" },
+            className: P().BottomShelf,
+            style: { transform: l && _ ? w : "" },
             onMouseEnter: () => C(!0),
             onFocus: () => C(!0),
             onMouseLeave: () => C(!1),
             onBlur: () => C(!1),
           },
-          i.createElement(
+          s.createElement(
             "a",
-            { href: p ? null : r, className: H().Midline },
-            Boolean(D) &&
-              i.createElement(
+            { href: p ? null : r, className: P().Midline },
+            Boolean(E) &&
+              s.createElement(
                 "div",
-                { className: H().CapsuleImageAnchorPoint },
-                i.createElement(
+                { className: P().CapsuleImageAnchorPoint },
+                s.createElement(
                   "div",
                   {
-                    className: (0, A.A)(
-                      H().CapsuleImageCtn,
-                      H().WithCornerShine,
+                    className: (0, G.A)(
+                      P().CapsuleImageCtn,
+                      P().WithCornerShine,
                     ),
                   },
-                  i.createElement("img", {
+                  s.createElement("img", {
                     loading: "lazy",
-                    src: D?.GetAssets().GetHeaderURL(),
+                    src: E?.GetAssets().GetHeaderURL(),
                     alt: B?.GetName(),
                   }),
                 ),
               ),
             Boolean(!m && !c) &&
-              i.createElement(
+              s.createElement(
                 "div",
-                { className: H().Price },
-                i.createElement(b.wc, { info: t, onlyOneDiscountPct: !0 }),
+                { className: P().Price },
+                s.createElement(v.wc, { info: t, onlyOneDiscountPct: !0 }),
               ),
           ),
-          i.createElement(
+          s.createElement(
             "div",
             {
-              className: H().BottomShelfOffScreen,
-              ref: (e) => v(`translateY( -${e?.clientHeight || 0}px )`),
+              className: P().BottomShelfOffScreen,
+              ref: (e) => y(`translateY( -${e?.clientHeight || 0}px )`),
             },
-            i.createElement(
+            s.createElement(
               "div",
-              { className: H().TextContent },
-              i.createElement(
+              { className: P().TextContent },
+              s.createElement(
                 "a",
                 { href: p ? null : r },
-                i.createElement(
+                s.createElement(
                   "div",
-                  { className: H().GameTitle },
+                  { className: P().GameTitle },
                   B?.GetName() || n,
                 ),
               ),
               h &&
-                i.createElement(
+                s.createElement(
                   "div",
-                  { className: H().ShortDescription },
+                  { className: P().ShortDescription },
                   B?.GetShortDescription(),
                 ),
-              Boolean(B) && i.createElement($, { rgTagIDs: B.GetTagIDs() }),
-              Boolean(!d && B) && i.createElement(ee, { appInfo: t }),
+              Boolean(B) && s.createElement(ee, { rgTagIDs: B.GetTagIDs() }),
+              Boolean(!d && B) && s.createElement(te, { appInfo: t }),
               Boolean(!d && I) &&
-                i.createElement(
+                s.createElement(
                   "div",
-                  { className: H().ReviewsAndRelease },
-                  i.createElement(y.Q, {
+                  { className: P().ReviewsAndRelease },
+                  s.createElement(b.Q, {
                     item: t,
-                    strClassName: H().PlatformDisplay,
+                    strClassName: P().PlatformDisplay,
                   }),
                   Boolean(B?.GetFormattedSteamReleaseDate()) &&
-                    i.createElement(
+                    s.createElement(
                       "div",
-                      { className: H().ReleaseDate },
+                      { className: P().ReleaseDate },
                       B?.GetFormattedSteamReleaseDate(),
                     ),
                 ),
-              o && i.createElement(L.j, { info: t, className: H().DemoButton }),
-              Boolean(d && T) && i.createElement(S.Q8, { storeItem: B }),
-              Boolean(s) && s,
+              o && s.createElement(V.j, { info: t, className: P().DemoButton }),
+              Boolean(d && T) && s.createElement(f.Q8, { storeItem: B }),
+              Boolean(i) && i,
               Boolean(c && T) &&
-                i.createElement(E.E, { appid: t.id, bIsMuted: !1 }),
-              u && i.createElement(ne, { nCreatorAccountID: u }),
+                s.createElement(D.E, { appid: t.id, bIsMuted: !1 }),
+              u && s.createElement(ie, { nCreatorAccountID: u }),
             ),
           ),
         );
       }
-      const ie = (0, r.PA)(function (e) {
-          i.useEffect(() => {
-            p.Fm.Get().HintLoad();
+      const oe = (0, r.PA)(function (e) {
+          s.useEffect(() => {
+            h.Fm.Get().HintLoad();
           }, []);
           const {
             info: t,
             displayInfo: a,
             strStoreUrl: n,
             bHideBottomHalf: r,
-            bShowDeckCompatibilityDialog: s,
+            bShowDeckCompatibilityDialog: i,
             bShowWishlistButton: o = !0,
             bShowIgnoreButton: l = !1,
           } = e;
           let m;
           return (
             t.overrideNavigation && (m = (e) => t.overrideNavigation()),
-            i.createElement(
+            s.createElement(
               "div",
               {
-                className: (0, A.A)(
-                  H().GameHoverCapsuleCtn,
-                  F().InGameHover,
-                  r && H().UseHidingBottomHalf,
+                className: (0, G.A)(
+                  P().GameHoverCapsuleCtn,
+                  U().InGameHover,
+                  r && P().UseHidingBottomHalf,
                 ),
                 onClick: m,
               },
-              i.createElement(
+              s.createElement(
                 "a",
-                { href: m ? null : n, className: H().TrailerAnchorStoreLink },
-                Boolean(o && !s && !m) &&
-                  i.createElement(te, { appID: a.id, snr: e.strSNR }),
-                Boolean(l && !s && !m) &&
-                  i.createElement(ae, { appID: a.id, snr: e.strSNR }),
-                i.createElement(X, { info: a }),
+                { href: m ? null : n, className: P().TrailerAnchorStoreLink },
+                Boolean(o && !i && !m) &&
+                  s.createElement(ae, { appID: a.id, snr: e.strSNR }),
+                Boolean(l && !i && !m) &&
+                  s.createElement(ne, { appID: a.id, snr: e.strSNR }),
+                s.createElement($, { info: a }),
               ),
-              i.createElement(re, { ...e, bPreventNavigation: Boolean(m) }),
+              s.createElement(se, { ...e, bPreventNavigation: Boolean(m) }),
             )
           );
         }),
-        se = 150;
-      function oe(e) {
+        le = 150;
+      function me(e) {
         const {
             item: t,
             name: a,
             bPreventNavigation: n,
             elElementToAppend: r,
-            bShowDemoButton: s,
+            bShowDemoButton: i,
             bPreferDemoStorePage: o,
             bHidePrice: l,
             bUseSubscriptionLayout: m,
-            strExtraParams: c,
-            nCreatorAccountID: u,
-            nWidthMultiplier: p,
-            bShowDeckCompatibilityDialog: h,
-            bShowWishlistButton: S = !0,
-            bShowIgnoreButton: f = !1,
-            bShowDescription: C = !1,
-            ...w
+            strExtraParams: d,
+            children: u,
+            nCreatorAccountID: p,
+            nWidthMultiplier: h,
+            bShowDeckCompatibilityDialog: _,
+            bShowWishlistButton: f = !0,
+            bShowIgnoreButton: C = !1,
+            bShowDescription: w = !1,
+            ...y
           } = e,
-          [y] = (0, g.G6)(t.id, (0, _.SW)(t.type), {}),
-          b = (0, O.n9)(),
-          v = (0, d.L3)(b),
-          B = (0, M.Qn)(),
-          E = (0, q.w)();
-        if (!y && !a) return null;
-        if (B) return i.createElement(i.Fragment, null, e.children);
-        let D = { id: t.id, type: t.type };
-        1 == y?.GetStoreItemType() &&
-          1 == y?.GetIncludedAppIDs().length &&
-          (D = { id: y.GetIncludedAppIDs()[0], type: "game" });
-        const I = "hiding" == j(),
-          T =
-            n || !y
+          [b] = (0, S.G6)(t.id, (0, g.SW)(t.type), {}),
+          v = (0, x.n9)(),
+          B = (0, c.L3)(v),
+          E = (0, L.Qn)(),
+          D = (0, Z.w)();
+        if (!b && !a) return null;
+        if (E) return s.createElement(s.Fragment, null, e.children);
+        let I = { id: t.id, type: t.type };
+        1 == b?.GetStoreItemType() &&
+          1 == b?.GetIncludedAppIDs().length &&
+          (I = { id: b.GetIncludedAppIDs()[0], type: "game" });
+        const T = "hiding" == K(),
+          k =
+            n || !b
               ? null
-              : (0, d.It)(`${y?.GetStorePageURL(o)}${c ? `?${c}` : ""}`, b, E),
-          k = {
+              : (0, c.It)(`${b?.GetStorePageURL(o)}${d ? `?${d}` : ""}`, v, D),
+          A = {
             info: t,
-            displayInfo: D,
+            displayInfo: I,
             name: a,
             bPreventNavigation: n,
-            strStoreUrl: T,
+            strStoreUrl: k,
             elElementToAppend: r,
-            bShowDemoButton: s,
-            bShowDeckCompatibilityDialog: h,
-            bHideBottomHalf: I,
+            bShowDemoButton: i,
+            bShowDeckCompatibilityDialog: _,
+            bHideBottomHalf: T,
             bHidePrice: l,
             bUseSubscriptionLayout: m,
-            strSNR: v,
-            nCreatorAccountID: u,
-            bShowWishlistButton: S,
-            bShowIgnoreButton: f,
-            bShowDescription: C,
+            strSNR: B,
+            nCreatorAccountID: p,
+            bShowWishlistButton: f,
+            bShowIgnoreButton: C,
+            bShowDescription: w,
           },
-          A = i.createElement(ie, { ...k });
-        return i.createElement(
-          me,
-          { hoverContent: A, strClickUrl: T, nWidthMultiplier: p, ...w },
-          e.children,
+          G = s.createElement(oe, { ...A }),
+          R = k ? s.createElement("a", { href: k }, u) : u;
+        return s.createElement(
+          ce,
+          { hoverContent: G, nWidthMultiplier: h, ...y },
+          R,
         );
       }
-      function le(e) {
+      function de(e) {
         const { hoverProps: t, children: a } = e,
-          n = i.useCallback((e) => e?.focus(), []);
-        return i.createElement(
-          l.g,
+          n = s.useCallback((e) => e?.focus(), []);
+        return s.createElement(
+          m.g,
           { ...t },
-          i.createElement(
-            x.M,
+          s.createElement(
+            W.M,
             {
               timeout: 500,
               in: !0,
               appear: !0,
-              classNames: { appearActive: H().Opening, enterDone: H().Open },
+              classNames: { appearActive: P().Opening, enterDone: P().Open },
             },
             (e) =>
-              i.createElement(
+              s.createElement(
                 "div",
                 {
-                  ref: (0, R.XB)(e, n),
-                  className: H().HoverContentTransition,
+                  ref: (0, M.XB)(e, n),
+                  className: P().HoverContentTransition,
                   tabIndex: -1,
                 },
                 a,
@@ -12134,74 +12170,71 @@
           ),
         );
       }
-      function me(e) {
+      function ce(e) {
         const {
             hoverContent: t,
             hoverProps: a,
             nDelayShowMs: n,
-            strClickUrl: r,
-            nWidthMultiplier: s,
-            children: o,
-            className: l,
+            nWidthMultiplier: r,
+            children: i,
+            className: o,
           } = e,
-          m = (0, M.Qn)(),
-          d = (0, W.zI)(),
-          c = !m && !d,
-          [u, p] = i.useState(!1),
-          [h, _] = i.useState(void 0),
-          g = r ? "a" : "div";
-        return i.createElement(
-          g,
+          l = (0, L.Qn)(),
+          m = (0, z.zI)(),
+          d = !l && !m,
+          [c, u] = s.useState(!1),
+          [p, h] = s.useState(void 0);
+        return s.createElement(
+          "div",
           {
             "data-key": "hover div",
-            className: (0, A.A)(H().ItemHoverSource, r && H().Selectable, l),
+            className: (0, G.A)(P().ItemHoverSource, o),
             onMouseEnter: (e) => {
-              p(!0), _(e.currentTarget);
+              u(!0), h(e.currentTarget);
             },
-            onMouseLeave: () => p(!1),
-            onTouchStart: () => p(!1),
+            onMouseLeave: () => u(!1),
+            onTouchStart: () => u(!1),
             onKeyDown: (e) => {
               27 == e.keyCode &&
-                (p(!1), e.preventDefault(), e.stopPropagation());
+                (u(!1), e.preventDefault(), e.stopPropagation());
             },
-            href: r,
           },
-          c &&
-            i.createElement(
-              de,
+          d &&
+            s.createElement(
+              ue,
               {
-                visible: u,
-                target: h,
+                visible: c,
+                target: p,
                 nDelayShowMs: n,
-                nWidthMultiplier: s,
+                nWidthMultiplier: r,
                 hoverProps: a,
               },
               t,
             ),
-          i.createElement(f.tH, null, o),
+          s.createElement(C.tH, null, i),
         );
       }
-      function de(e) {
+      function ue(e) {
         const {
             hoverProps: t,
-            nDelayShowMs: a = se,
+            nDelayShowMs: a = le,
             nWidthMultiplier: n = 1.15,
             target: r,
-            visible: o,
+            visible: i,
             children: l,
           } = e,
-          [m, d] = i.useState(o);
+          [m, d] = s.useState(i);
         if (
-          (i.useEffect(() => {
-            if (o) {
+          (s.useEffect(() => {
+            if (i) {
               if (a) {
                 const e = window.setTimeout(() => d(!0), a);
                 return () => window.clearTimeout(e);
               }
               d(!0);
             } else d(!1);
-          }, [o]),
-          i.useEffect(() => {
+          }, [i]),
+          s.useEffect(() => {
             if (!m) return;
             const e = r.ownerDocument.defaultView,
               t = e.scrollY,
@@ -12225,18 +12258,18 @@
               zIndex: 98,
               width: r.clientWidth * n,
               fontSize: c,
-              minHeight: "hiding" == j() ? void 0 : 300,
+              minHeight: "hiding" == K() ? void 0 : 300,
               height:
-                "hiding" == j() ? 1.15 * r.clientWidth * (125 / 184) : void 0,
+                "hiding" == K() ? 1.15 * r.clientWidth * (125 / 184) : void 0,
               ...t?.style,
             },
             target: r,
           };
-        return s.createPortal(
-          i.createElement(
-            le,
+        return o.createPortal(
+          s.createElement(
+            de,
             { hoverProps: u },
-            i.createElement(f.tH, null, l),
+            s.createElement(C.tH, null, l),
           ),
           r.ownerDocument.body,
         );
@@ -12530,7 +12563,7 @@
               bIsMarketingMessage: K,
             } = e,
             Y = (0, U.n9)(),
-            J = (0, q.w)(),
+            Q = (0, q.w)(),
             X = r.useMemo(() => n?.GetIncludedAppIDsOrSelf(), [n]),
             $ = (0, r.useRef)(null),
             [te, ae] = (0, r.useState)(!1),
@@ -12561,7 +12594,7 @@
             ue = 1 == n.GetStoreItemType() && 1 == ie,
             pe = 0 == n.GetStoreItemType() || ue,
             he = ue && p ? p.GetID() : u.id,
-            _e = (0, c.It)(me, Y, J),
+            _e = (0, c.It)(me, Y, Q),
             ge = (0, z.Ae)(),
             Se =
               D && n.HasDemoStandaloneStorePage()
@@ -12713,7 +12746,7 @@
                       r.createElement(V.Jz, { appInfo: u }),
                     ),
                   de &&
-                    r.createElement(Q, {
+                    r.createElement(J, {
                       info: u,
                       bHideInLibraryApps:
                         !oe && 2 == n.GetStoreItemType() && se < ie,
@@ -12784,7 +12817,7 @@
           );
         }),
         Y = 6;
-      function Q(e) {
+      function J(e) {
         const { info: t, bHideInLibraryApps: a } = e,
           [n] = (0, _.G6)(t.id, (0, h.SW)(t.type), {}),
           [i, s] = r.useState(null),
@@ -12834,7 +12867,7 @@
             i
               .slice(0, Y)
               .map((e) =>
-                r.createElement(J, {
+                r.createElement(Q, {
                   key: `preview${e.id}_${e.type}`,
                   info: e,
                 }),
@@ -12842,7 +12875,7 @@
           ),
         );
       }
-      function J(e) {
+      function Q(e) {
         const { info: t } = e,
           [a] = (0, _.mZ)(t.id, (0, h.SW)(t.type), { include_assets: !0 }),
           n = a?.GetAssets().GetSmallCapsuleURL();

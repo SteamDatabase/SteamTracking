@@ -94,6 +94,7 @@
         IgnoreButtonText: "_1gTs9_O1m2-Sibih5GJ43d",
         IgnoreLoadingText: "_2R3kegZfZASFduBjtw168d",
         WishlistButtonNotTop: "_3VcyYP_egkOaX_rJ1e_SQk",
+        FollowGameButtonNotTop: "_3BT5AfGR6BYqJdn9DbgwtX",
         BottomShelf: "oAqlZTgPU37Nb8gBT5eAM",
         BottomShelfOffScreen: "_36zpRzyxmtd8eBgf7p9Ewi",
         ShortDescription: "_1JiQcVD1LUE2KxWb_oOv-K",
@@ -441,6 +442,7 @@
           "calendarevent",
           "color",
           "bgcolor",
+          "userpolls",
         ],
         n = [
           "h1",
@@ -2552,9 +2554,10 @@
       }
       function H(e) {
         return (
-          "items" === e ||
-          "trailercarousel" === e ||
-          "crosspromotesalepage" == e
+          "items" == e ||
+          "trailercarousel" == e ||
+          "crosspromotesalepage" == e ||
+          "creator_list" == e
         );
       }
       !(function (e) {
@@ -8470,10 +8473,10 @@
           return null != e && "object" == typeof e && !Array.isArray(e);
         }
         GetListTitle(e) {
-          return this.LazyInit(), this.m_mapListToTitle.get(e);
+          return this.LazyInit(), e ? this.m_mapListToTitle.get(e) : void 0;
         }
         GetListSubtitle(e) {
-          return this.LazyInit(), this.m_mapListToSubtitle.get(e);
+          return this.LazyInit(), e ? this.m_mapListToSubtitle.get(e) : void 0;
         }
       }
       (0, n.Cg)([w.sH], A.prototype, "m_mapListToTitle", void 0),
@@ -8653,6 +8656,9 @@
         }
         BIsGameIgnored(e) {
           return this.m_mapIgnoredApps && this.m_mapIgnoredApps.has(e);
+        }
+        BIsGameFollowed(e) {
+          return this.m_setFollowedApps && this.m_setFollowedApps.has(e);
         }
         BIsPackageIgnored(e) {
           return this.m_mapIgnoredPackages?.has(e);
@@ -17993,7 +17999,7 @@
             [n] = (0, h.t7)(t, {}),
             [s, o] = (0, i.useState)(!1),
             l = (0, W.m)("GameHoverIgnoreButton"),
-            c = t && p.Fm.Get().BIsGameWishlisted(t);
+            c = t && p.Fm.Get().BIsGameIgnored(t);
           return i.createElement(
             "div",
             {
@@ -18206,53 +18212,55 @@
             bHidePrice: l,
             bUseSubscriptionLayout: c,
             strExtraParams: d,
-            nCreatorAccountID: u,
-            nWidthMultiplier: p,
-            bShowDeckCompatibilityDialog: _,
-            bShowWishlistButton: y = !0,
-            bShowIgnoreButton: S = !1,
-            bShowDescription: f = !1,
-            ...b
+            children: u,
+            nCreatorAccountID: p,
+            nWidthMultiplier: _,
+            bShowDeckCompatibilityDialog: y,
+            bShowWishlistButton: S = !0,
+            bShowIgnoreButton: f = !1,
+            bShowDescription: b = !1,
+            ...w
           } = e,
-          [w] = (0, h.G6)(t.id, (0, g.SW)(t.type), {}),
-          v = (0, N.n9)(),
-          B = (0, m.L3)(v),
-          I = (0, k.Qn)(),
-          C = (0, V.w)();
-        if (!w && !r) return null;
-        if (I) return i.createElement(i.Fragment, null, e.children);
-        let E = { id: t.id, type: t.type };
-        1 == w?.GetStoreItemType() &&
-          1 == w?.GetIncludedAppIDs().length &&
-          (E = { id: w.GetIncludedAppIDs()[0], type: "game" });
-        const T = "hiding" == K(),
-          A =
-            a || !w
+          [v] = (0, h.G6)(t.id, (0, g.SW)(t.type), {}),
+          B = (0, N.n9)(),
+          I = (0, m.L3)(B),
+          C = (0, k.Qn)(),
+          E = (0, V.w)();
+        if (!v && !r) return null;
+        if (C) return i.createElement(i.Fragment, null, e.children);
+        let T = { id: t.id, type: t.type };
+        1 == v?.GetStoreItemType() &&
+          1 == v?.GetIncludedAppIDs().length &&
+          (T = { id: v.GetIncludedAppIDs()[0], type: "game" });
+        const A = "hiding" == K(),
+          G =
+            a || !v
               ? null
-              : (0, m.It)(`${w?.GetStorePageURL(o)}${d ? `?${d}` : ""}`, v, C),
-          G = {
+              : (0, m.It)(`${v?.GetStorePageURL(o)}${d ? `?${d}` : ""}`, B, E),
+          M = {
             info: t,
-            displayInfo: E,
+            displayInfo: T,
             name: r,
             bPreventNavigation: a,
-            strStoreUrl: A,
+            strStoreUrl: G,
             elElementToAppend: n,
             bShowDemoButton: s,
-            bShowDeckCompatibilityDialog: _,
-            bHideBottomHalf: T,
+            bShowDeckCompatibilityDialog: y,
+            bHideBottomHalf: A,
             bHidePrice: l,
             bUseSubscriptionLayout: c,
-            strSNR: B,
-            nCreatorAccountID: u,
-            bShowWishlistButton: y,
-            bShowIgnoreButton: S,
-            bShowDescription: f,
+            strSNR: I,
+            nCreatorAccountID: p,
+            bShowWishlistButton: S,
+            bShowIgnoreButton: f,
+            bShowDescription: b,
           },
-          M = i.createElement(ie, { ...G });
+          D = i.createElement(ie, { ...M }),
+          R = G ? i.createElement("a", { href: G }, u) : u;
         return i.createElement(
           ce,
-          { hoverContent: M, strClickUrl: A, nWidthMultiplier: p, ...b },
-          e.children,
+          { hoverContent: D, nWidthMultiplier: _, ...w },
+          R,
         );
       }
       function le(e) {
@@ -18287,46 +18295,43 @@
             hoverContent: t,
             hoverProps: r,
             nDelayShowMs: a,
-            strClickUrl: n,
-            nWidthMultiplier: s,
-            children: o,
-            className: l,
+            nWidthMultiplier: n,
+            children: s,
+            className: o,
           } = e,
-          c = (0, k.Qn)(),
-          m = (0, H.zI)(),
-          d = !c && !m,
-          [u, p] = i.useState(!1),
-          [_, g] = i.useState(void 0),
-          h = n ? "a" : "div";
+          l = (0, k.Qn)(),
+          c = (0, H.zI)(),
+          m = !l && !c,
+          [d, u] = i.useState(!1),
+          [p, _] = i.useState(void 0);
         return i.createElement(
-          h,
+          "div",
           {
             "data-key": "hover div",
-            className: (0, M.A)(z().ItemHoverSource, n && z().Selectable, l),
+            className: (0, M.A)(z().ItemHoverSource, o),
             onMouseEnter: (e) => {
-              p(!0), g(e.currentTarget);
+              u(!0), _(e.currentTarget);
             },
-            onMouseLeave: () => p(!1),
-            onTouchStart: () => p(!1),
+            onMouseLeave: () => u(!1),
+            onTouchStart: () => u(!1),
             onKeyDown: (e) => {
               27 == e.keyCode &&
-                (p(!1), e.preventDefault(), e.stopPropagation());
+                (u(!1), e.preventDefault(), e.stopPropagation());
             },
-            href: n,
           },
-          d &&
+          m &&
             i.createElement(
               me,
               {
-                visible: u,
-                target: _,
+                visible: d,
+                target: p,
                 nDelayShowMs: a,
-                nWidthMultiplier: s,
+                nWidthMultiplier: n,
                 hoverProps: r,
               },
               t,
             ),
-          i.createElement(S.tH, null, o),
+          i.createElement(S.tH, null, s),
         );
       }
       function me(e) {

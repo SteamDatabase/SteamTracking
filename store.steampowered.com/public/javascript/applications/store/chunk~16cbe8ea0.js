@@ -265,7 +265,7 @@
       r.d(t, {
         RE: () => X,
         AD: () => Y,
-        YW: () => H,
+        Ri: () => H,
         Fq: () => K,
         _C: () => oe,
         Mn: () => me,
@@ -1825,7 +1825,7 @@
         P = r.n(x),
         j = r(90626),
         q = r(58222);
-      const H = 3334340,
+      const H = 4147080,
         K = 2215130;
       let Z;
       function X() {
@@ -2109,7 +2109,7 @@
         p = r(68451),
         _ = r(41841),
         g = r(42011),
-        S = r(92432),
+        S = r(89104),
         h = r(64940),
         B = r(90316),
         E = r.n(B),
@@ -4500,6 +4500,7 @@
                 c.createElement("img", {
                   className: D().SteamAwardHeaderImage,
                   src: this.m_awardEventDetails.strTrophyImg,
+                  role: "presentation",
                 }),
                 c.createElement(
                   "div",
@@ -4618,7 +4619,7 @@
       var n = r(82097),
         a = r(65946),
         i = r(90626),
-        s = r(92432),
+        s = r(89104),
         o = r(61859),
         l = r(66661),
         c = r.n(l);

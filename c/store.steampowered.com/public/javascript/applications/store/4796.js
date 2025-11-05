@@ -2093,10 +2093,10 @@
           return null != _ && "object" == typeof _ && !Array.isArray(_);
         }
         GetListTitle(_) {
-          return this.LazyInit(), this.m_mapListToTitle.get(_);
+          return this.LazyInit(), _ ? this.m_mapListToTitle.get(_) : void 0;
         }
         GetListSubtitle(_) {
-          return this.LazyInit(), this.m_mapListToSubtitle.get(_);
+          return this.LazyInit(), _ ? this.m_mapListToSubtitle.get(_) : void 0;
         }
       }
       (0, _._)([_._], _.prototype, "m_mapListToTitle", void 0),

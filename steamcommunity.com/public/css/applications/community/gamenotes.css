@@ -727,6 +727,9 @@ img.ProseMirror-separator {
 ._30v-6zb_axOypIUr5VRHE1 > .ProseMirror {
   padding: 12px;
 }
+._2i9qH2AM6Wg5660Tkf_fTt .ProseMirror {
+  min-height: unset !important;
+}
 p.pm_paragraph {
   min-height: 8px;
 }

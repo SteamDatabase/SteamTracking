@@ -12124,6 +12124,32 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = new (__webpack_require__("chunkid")._)("GR");
+      function _(_) {
+        return (..._) => {
+          const _ = `[${(performance.now() / 1e3).toFixed(3)}]`;
+          _(_, ..._);
+        };
+      }
+      const _ = _(_.Debug),
+        _ = _(_.Info),
+        _ = _(_.Warning),
+        _ = _(_.Error),
+        _ = _;
+      function _() {
+        return _.IsDebugEnabled();
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       var _, _;
       function _(_) {
         return "gamemode" === _.type;
@@ -12462,6 +12488,21 @@
                 .then(
                   (_) => {
                     if (200 == _.status && _.data) {
+                      !(function (_) {
+                        if (!Array.isArray(_.entries)) {
+                          let _ = [];
+                          _.entries &&
+                            "object" == typeof _.entries &&
+                            ((_ = Object.values(_.entries)),
+                            (_ = _.filter(
+                              (_) => _ && "object" == typeof _ && "time" in _,
+                            )),
+                            _.sort(
+                              (_, _) => parseInt(_.time) - parseInt(_.time),
+                            )),
+                            (_.entries = _);
+                        }
+                      })(_.data);
                       const _ = this.ProcessTimelineEntries(_.data);
                       this.m_mapTimelineData.set(_, _);
                     } else

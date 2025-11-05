@@ -5674,6 +5674,7 @@
           null,
           _.createElement(_._, {
             strDropDownButtonClassName: "ProfilePrivacyDropDown",
+            bMatchWidth: !1,
             rgOptions: _,
             onChange: (_) => _(_.data),
             selectedOption: _,
@@ -5810,6 +5811,7 @@
             _.createElement(_._, {
               strDropDownButtonClassName: "ProfilePrivacyDropDown",
               rgOptions: _,
+              bMatchWidth: !1,
               onChange: (_) => this.OnSettingChanged(_.data),
               selectedOption: _,
             }),

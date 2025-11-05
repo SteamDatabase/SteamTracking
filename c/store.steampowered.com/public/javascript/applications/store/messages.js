@@ -73,6 +73,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        TrailerTitle: "_3HELOo0qFfDrRZ9Sa1GXeF",
+        Category: "_2YhOhoyYNbue9fEPMYPiq2",
+        Visible: "_2cpBClyttSkWAsgMArc0BM",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         MarketingMessagePage: "_1HVoKfdcaouK3kHKX2kH5t",
         MessageListPage: "_1N7O3VXbkpN2z55HsSDZsi",
         MessageListScroll: "_2RW7G8Bi-8k-29anQh8Ie8",
@@ -169,6 +176,15 @@
         TextBottom: "_3-KPIEC01O5ncvCQdfuTum",
         ButtonContainer: "_10sC9pDV-gUZWLDMtbWFpZ",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(..._) {
+        return _.join(" ");
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3686,6 +3702,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4107,14 +4124,14 @@
             hideModal: _,
           } = _,
           _ = (0, _._)(),
-          _ = _?.GetAllTrailers().GetHighlightTrailers(_),
-          _ = _?.length > 0 && _[0],
+          _ = _?.GetAllTrailers()?.GetHighlightTrailers(_),
+          _ = _ && _.length > 0 ? _[0] : void 0,
           _ = _.useId(),
           _ = _.useId();
         if (!_) return null;
         const _ = _.GetTrailersDash(),
           _ = _.GetTrailerHls();
-        return 0 == _.length
+        return 0 == _?.length
           ? null
           : _.createElement(
               _._,
@@ -4135,8 +4152,8 @@
                     className: _().VideoPopupContainers,
                   },
                   _.createElement(_._, {
-                    dashManifests: _,
-                    hlsManifest: _,
+                    dashManifests: _ || [],
+                    hlsManifest: _ || "",
                     screenshot: "",
                     altText: "",
                     muteWhenAutoplayBlocked: !0,
@@ -4205,8 +4222,8 @@
           } = _,
           [_, _] = (0, _._)(),
           _ = _
-            ? _.GetAssetsWithoutOverrides().GetMainCapsuleURL()
-            : _.GetAssets().GetMainCapsuleURL();
+            ? _.GetAssetsWithoutOverrides()?.GetMainCapsuleURL()
+            : _.GetAssets()?.GetMainCapsuleURL();
         return _.createElement(
           _._,
           {
@@ -4631,6 +4648,64 @@
             [],
           ),
           null
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            name: _,
+            trailerCategory: __webpack_require__,
+            trailerDisplay: _,
+            mouseOver: _,
+          } = _,
+          [_, _] = _.useState(!1);
+        if (
+          (_.useEffect(() => {
+            0 != _ && _(!0);
+          }, [_]),
+          _.useEffect(() => {
+            if (_) return void _(!0);
+            if (!_) return;
+            const _ = setTimeout(() => _(!1), 3e3);
+            return () => clearTimeout(_);
+          }, [_, _]),
+          null == __webpack_require__ || 0 == _)
+        )
+          return;
+        const _ =
+          1 == _
+            ? (0, _._)("#StoreTrailer_Title_TrailerPreview")
+            : (0, _._)(__webpack_require__);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)({
+              [_().TrailerTitle]: !0,
+              [_().Visible]: _,
+            }),
+          },
+          (0, _._)(
+            "#StoreTrailer_Title_Combiner",
+            _.createElement(
+              "span",
+              {
+                className: _().Category,
+              },
+              _,
+            ),
+            _,
+          ),
         );
       }
     },
@@ -5936,10 +6011,9 @@
         );
       }
       const _ = _.lazy(() =>
-        Promise.all([
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
         const { message: _, active: __webpack_require__, preview: _ } = _,

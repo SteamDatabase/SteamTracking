@@ -105,6 +105,7 @@
           "calendarevent",
           "color",
           "bgcolor",
+          "userpolls",
         ],
         _ = [
           "h1",
@@ -416,6 +417,12 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
+          user_poll_background: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
+          },
           spotlight_art: {
             width: [306, 374],
             height: [260, 448],
@@ -543,6 +550,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -726,13 +734,16 @@
       }
       function _(_) {
         return (
-          "items" === _ ||
-          "trailercarousel" === _ ||
-          "crosspromotesalepage" == _
+          "items" == _ ||
+          "trailercarousel" == _ ||
+          "crosspromotesalepage" == _ ||
+          "creator_list" == _
         );
       }
       function _(_) {
-        return "items" === _ || "crosspromotesalepage" == _;
+        return (
+          "items" == _ || "crosspromotesalepage" == _ || "creator_list" == _
+        );
       }
       function _(_, _) {
         if (!_.BIsNextFest() || _(_.section_type) || _.smart_section) return !1;
@@ -803,6 +814,15 @@
         section_type: "unselected_empty",
       };
       var _;
+      function _(_) {
+        return {
+          arrowFill: _?.sale_carousel_arrow_color,
+          arrowStyle: _?.sale_carousel_arrow_style,
+          breadcrumbActiveColor: _?.sale_carousel_active_breadcrumb_color,
+          breadcrumbColor: _?.sale_carousel_breadcrumb_color,
+          breadcrumbStyle: _?.sale_carousel_breadcrumb_style,
+        };
+      }
       !(function (_) {
         (_[(_.k_ETaggedItems = 0)] = "k_ETaggedItems"),
           (_[(_.k_EContentHub = 1)] = "k_EContentHub");

@@ -404,6 +404,7 @@
           "calendarevent",
           "color",
           "bgcolor",
+          "userpolls",
         ],
         a = [
           "h1",
@@ -769,6 +770,12 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
+          user_poll_background: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: r,
+          },
           spotlight_art: {
             width: [306, 374],
             height: [260, 448],
@@ -982,51 +989,54 @@
       i.d(t, {
         A4: () => k,
         iy: () => T,
-        ZA: () => V,
+        ZA: () => q,
         g8: () => L,
-        Dn: () => W,
-        Ay: () => re,
-        ye: () => oe,
-        Fo: () => le,
-        G$: () => de,
-        DJ: () => pe,
-        G6: () => ce,
-        p6: () => me,
-        zv: () => q,
-        IS: () => Z,
-        GE: () => Q,
-        yX: () => X,
-        w: () => ue,
-        EE: () => K,
-        Zf: () => J,
-        jR: () => ee,
-        Ac: () => ye,
-        lh: () => we,
-        mz: () => ae,
-        qQ: () => ie,
-        MW: () => ne,
-        W2: () => te,
-        qR: () => se,
-        _B: () => $,
-        sj: () => he,
-        j3: () => Ae,
-        Yw: () => Y,
+        Dn: () => $,
+        Ay: () => de,
+        ye: () => le,
+        Fo: () => ce,
+        G$: () => me,
+        DJ: () => ve,
+        G6: () => ue,
+        p6: () => he,
+        zv: () => Y,
+        IS: () => ee,
+        GE: () => Z,
+        yX: () => J,
+        w: () => pe,
+        EE: () => X,
+        Zf: () => te,
+        jR: () => ie,
+        Ac: () => we,
+        lh: () => Ge,
+        Hc: () => _e,
+        mz: () => oe,
+        qQ: () => ae,
+        MW: () => se,
+        W2: () => ne,
+        qR: () => re,
+        _B: () => K,
+        sj: () => ge,
+        j3: () => Ce,
+        Yw: () => Q,
         zK: () => R,
-        WN: () => H,
-        Pd: () => ve,
-        p$: () => Ee,
-        dm: () => ge,
+        WN: () => z,
+        Pd: () => ye,
+        p$: () => Ie,
+        dm: () => fe,
         DU: () => B,
         qF: () => j,
-        mW: () => O,
-        wv: () => x,
-        GU: () => P,
-        bv: () => F,
-        Kd: () => U,
-        RZ: () => z,
-        Yj: () => M,
-        cB: () => _e,
-        Yz: () => Se,
+        mW: () => H,
+        wv: () => M,
+        Ro: () => O,
+        GU: () => F,
+        bv: () => U,
+        II: () => P,
+        Kd: () => x,
+        RZ: () => V,
+        Yj: () => N,
+        cB: () => Ee,
+        Yz: () => Te,
       });
       var n = i(34629),
         a = i(79821),
@@ -1093,19 +1103,21 @@
       const B = 593110,
         j = 1675200,
         R = [B, 766, 221410],
-        P = 39049601,
-        F = 41316928,
-        U = 4,
-        O = 20,
-        x = 45559995,
-        H = [4145017, 35143931, P, U, F],
-        M = 1e4,
-        z = 99999,
-        N = [12, 34];
-      function V(e) {
-        return !N.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
+        P = 4145017,
+        F = 39049601,
+        U = 41316928,
+        O = 4397053,
+        x = 4,
+        H = 20,
+        M = 45559995,
+        z = [P, 35143931, F, x, U],
+        N = 1e4,
+        V = 99999,
+        W = [12, 34];
+      function q(e) {
+        return !W.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
       }
-      function W(e) {
+      function $(e) {
         var t;
         const i = 60 * b.Kp.PerDay;
         return (
@@ -1120,8 +1132,8 @@
           })(e)
         );
       }
-      var q;
-      function $(e) {
+      var Y;
+      function K(e) {
         switch (e) {
           case "links":
           case "itemdef":
@@ -1137,19 +1149,19 @@
           (e[(e.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible"),
           (e[(e.k_EEventStateUnlisted = 3)] = "k_EEventStateUnlisted");
-      })(q || (q = {}));
-      const Y = "bordered";
-      var K, Q, X, Z, J, ee;
-      function te(e) {
+      })(Y || (Y = {}));
+      const Q = "bordered";
+      var X, Z, J, ee, te, ie;
+      function ne(e) {
         return e && !!e.show_as_carousel && !e.enable_faceted_browsing;
       }
-      function ie(e) {
+      function ae(e) {
         return e.carousel_rows || 1;
       }
-      function ne(e) {
+      function se(e) {
         return e.cap_item_count || 0;
       }
-      function ae(e) {
+      function oe(e) {
         return e.cap_section_row_count && e.cap_section_row_count > 0
           ? e.cap_section_row_count
           : "trailercarousel" == e.section_type
@@ -1158,24 +1170,27 @@
               ? 4
               : 0;
       }
-      function se(e) {
+      function re(e) {
         return Boolean(null == e ? void 0 : e.store_filter)
           ? JSON.stringify(e.store_filter)
           : void 0;
       }
-      function oe(e) {
+      function le(e) {
         return (
-          "items" === e ||
-          "trailercarousel" === e ||
-          "crosspromotesalepage" == e
+          "items" == e ||
+          "trailercarousel" == e ||
+          "crosspromotesalepage" == e ||
+          "creator_list" == e
         );
       }
-      function re(e) {
-        return "items" === e || "crosspromotesalepage" == e;
+      function de(e) {
+        return (
+          "items" == e || "crosspromotesalepage" == e || "creator_list" == e
+        );
       }
-      function le(e, t) {
+      function ce(e, t) {
         var i;
-        if (!e.BIsNextFest() || oe(t.section_type) || t.smart_section)
+        if (!e.BIsNextFest() || le(t.section_type) || t.smart_section)
           return !1;
         const n =
           e.jsondata.sale_ml_recommender_delay_hours &&
@@ -1184,8 +1199,8 @@
             new Date().getTime() / 1e3;
         return (null != n ? n : 0) > 0;
       }
-      function de(e, t) {
-        return !!t.use_random_order || !!le(e, t);
+      function me(e, t) {
+        return !!t.use_random_order || !!ce(e, t);
       }
       !(function (e) {
         (e[(e.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
@@ -1203,7 +1218,7 @@
             "k_EStoreFilterClauseTypePrice"),
           (e[(e.k_EStoreFilterClauseTypeAppType = 7)] =
             "k_EStoreFilterClauseTypeAppType");
-      })(K || (K = {})),
+      })(X || (X = {})),
         (function (e) {
           (e[(e.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),
             (e[(e.k_ELanguage = 1)] = "k_ELanguage"),
@@ -1211,29 +1226,29 @@
             (e[(e.k_EUserPreference = 3)] = "k_EUserPreference"),
             (e[(e.k_EPrice = 4)] = "k_EPrice"),
             (e[(e.k_EAppType = 5)] = "k_EAppType");
-        })(Q || (Q = {})),
+        })(Z || (Z = {})),
         (function (e) {
           (e[(e.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
             (e[(e.k_EHideWishlistedItems = 1)] = "k_EHideWishlistedItems"),
             (e[(e.k_EHideIgnoredItems = 2)] = "k_EHideIgnoredItems");
-        })(X || (X = {})),
+        })(J || (J = {})),
         (function (e) {
           (e[(e.k_ESortFacetsByName = 0)] = "k_ESortFacetsByName"),
             (e[(e.k_ESortFacetsByMatchCount = 1)] =
               "k_ESortFacetsByMatchCount"),
             (e[(e.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
-        })(Z || (Z = {})),
+        })(ee || (ee = {})),
         (function (e) {
           (e.Steam = "Steam"),
             (e.Facebook = "Facebook"),
             (e.Twitter = "Twitter"),
             (e.Reddit = "Reddit");
-        })(J || (J = {})),
+        })(te || (te = {})),
         (function (e) {
           (e.Summary = "summary"),
             (e.SummaryLargeImage = "summary_large_image");
-        })(ee || (ee = {}));
-      const ce = {
+        })(ie || (ie = {}));
+      const ue = {
           capsules: [],
           events: [],
           links: [],
@@ -1242,9 +1257,21 @@
           default_label: "#Sale_default_label",
           section_type: "unselected_empty",
         },
-        me = { internal_type: "subscription_pricing" };
-      var ue;
-      function he(e, t) {
+        he = { internal_type: "subscription_pricing" };
+      var pe;
+      function _e(e) {
+        return {
+          arrowFill: null == e ? void 0 : e.sale_carousel_arrow_color,
+          arrowStyle: null == e ? void 0 : e.sale_carousel_arrow_style,
+          breadcrumbActiveColor:
+            null == e ? void 0 : e.sale_carousel_active_breadcrumb_color,
+          breadcrumbColor:
+            null == e ? void 0 : e.sale_carousel_breadcrumb_color,
+          breadcrumbStyle:
+            null == e ? void 0 : e.sale_carousel_breadcrumb_style,
+        };
+      }
+      function ge(e, t) {
         (e.library_spotlight = void 0),
           e.email_setting &&
             ((e.email_setting.locked = void 0),
@@ -1279,8 +1306,8 @@
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
           (e[(e.k_EContentHub = 1)] = "k_EContentHub");
-      })(ue || (ue = {}));
-      const pe = {
+      })(pe || (pe = {}));
+      const ve = {
           localized_subtitle: new Array(31),
           localized_summary: new Array(31),
           localized_title_image: new Array(31),
@@ -1305,11 +1332,11 @@
           bScheduleEnabled: !1,
           scheduleEntries: [],
         },
-        _e = "old_announce_",
-        ge = 80,
-        ve = 120,
-        Ee = 180,
-        fe = [
+        Ee = "old_announce_",
+        fe = 80,
+        ye = 120,
+        Ie = 180,
+        be = [
           "workshop",
           "patchnotes",
           "contenthub",
@@ -1325,7 +1352,7 @@
           "betachannel",
           "previewchannel",
         ],
-        ye = [
+        we = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -1339,9 +1366,9 @@
           "curator_public",
           "audience_followers",
         ],
-        Ie = [20, 31, 34],
-        be = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
-      class we {
+        Se = [20, 31, 34],
+        Ae = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
+      class Ge {
         constructor() {
           (this.GID = void 0),
             (this.AnnouncementGID = void 0),
@@ -1359,9 +1386,9 @@
             (this.m_nBuildID = void 0),
             (this.m_strBuildBranch = void 0),
             (this.postTime = void 0),
-            (this.visibility_state = q.k_EEventStateUnpublished),
+            (this.visibility_state = Y.k_EEventStateUnpublished),
             (this.broadcaster = void 0),
-            (this.jsondata = pe),
+            (this.jsondata = ve),
             (this.nCommentCount = 0),
             (this.nVotesUp = 0),
             (this.nVotesDown = 0),
@@ -1385,7 +1412,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new we(),
+          let t = new Ge(),
             i = JSON.parse(e);
           return (
             Object.assign(t, i),
@@ -1421,7 +1448,7 @@
           );
         }
         clone(e = !1) {
-          let t = new we();
+          let t = new Ge();
           if (
             ((t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -1473,7 +1500,7 @@
                 (t.m_strBuildBranch = this.m_strBuildBranch),
                 this.vecTags.forEach((e) => t.vecTags.push(e)))
               : this.vecTags.forEach((e) => {
-                  fe.includes(e) && t.vecTags.push(e);
+                  be.includes(e) && t.vecTags.push(e);
                 }),
             t.jsondata.email_setting)
           ) {
@@ -1885,8 +1912,8 @@
           var e, t, i;
           let n = Math.floor(p.HD.GetTimeNowWithOverride());
           return (
-            this.visibility_state == q.k_EEventStateUnlisted ||
-            (this.visibility_state == q.k_EEventStateVisible &&
+            this.visibility_state == Y.k_EEventStateUnlisted ||
+            (this.visibility_state == Y.k_EEventStateVisible &&
               n >
                 (null !== (e = this.visibilityStartTime) && void 0 !== e
                   ? e
@@ -1900,10 +1927,10 @@
           );
         }
         BIsStagedEvent() {
-          return this.visibility_state == q.k_EEventStateStaged;
+          return this.visibility_state == Y.k_EEventStateStaged;
         }
         BIsUnlistedEvent() {
-          return this.visibility_state == q.k_EEventStateUnlisted;
+          return this.visibility_state == Y.k_EEventStateUnlisted;
         }
         GetStartTimeAndDateUnixSeconds() {
           var e;
@@ -1964,7 +1991,7 @@
                 ? void 0
                 : t.localized_subtitle,
               e,
-            ) || we.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            ) || Ge.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
@@ -1976,7 +2003,7 @@
                 : i.localized_summary,
               e,
             ) ||
-            we.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            Ge.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -2012,7 +2039,7 @@
               (e = (0, a.zV)(e, ["p"], " ")),
               (e = (0, a.zV)(e)),
               (e = (0, I.aX)(e)),
-              (0, I.bC)(e, t || Ee))
+              (0, I.bC)(e, t || Ie))
             : "";
         }
         BHasTag(e) {
@@ -2029,10 +2056,10 @@
         BShowLibrarySpotlight(e) {
           if (!e) return Boolean(this.jsondata.library_spotlight);
           if (!this.jsondata.library_spotlight) return !1;
-          if (Ie.includes(this.type)) return !1;
+          if (Se.includes(this.type)) return !1;
           const t = new Date().getTime() / 1e3;
           return (
-            !(be.includes(this.type) && this.endTime && t > this.endTime) &&
+            !(Ae.includes(this.type) && this.endTime && t > this.endTime) &&
             !(this.startTime && t > this.startTime + 60 * b.Kp.PerDay)
           );
         }
@@ -2219,7 +2246,7 @@
               localized_label: [],
               default_label: "",
             };
-          let o = z + 10;
+          let o = V + 10;
           return (
             e &&
               a.push({
@@ -2265,7 +2292,7 @@
         }
         GetSaleSectionByID(e) {
           var t;
-          if (e > z) {
+          if (e > V) {
             return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
               (t) => t.unique_id == e,
             );
@@ -2348,14 +2375,14 @@
             null === (i = this.jsondata.tagged_items) ||
               void 0 === i ||
               i.forEach((e) => {
-                we.AccumulateCapsuleListIDs([e.capsule], n, a, t);
+                Ge.AccumulateCapsuleListIDs([e.capsule], n, a, t);
               }),
             this.jsondata.sale_sections.forEach((e) => {
-              if (oe(e.section_type))
-                we.AccumulateCapsuleListIDs(e.capsules, n, a, t);
+              if (le(e.section_type))
+                Ge.AccumulateCapsuleListIDs(e.capsules, n, a, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const i of e.tabs)
-                  we.AccumulateCapsuleListIDs(i.capsules, n, a, t);
+                  Ge.AccumulateCapsuleListIDs(i.capsules, n, a, t);
             }),
             a
           );
@@ -2509,7 +2536,7 @@
         }
         BUsesContentHubForItemSource() {
           return (
-            this.jsondata.item_source_type === ue.k_EContentHub &&
+            this.jsondata.item_source_type === pe.k_EContentHub &&
             Boolean(this.jsondata.source_content_hub)
           );
         }
@@ -2614,7 +2641,7 @@
         BIsNextFest() {
           const e = this.jsondata.sale_vanity_id;
           return (
-            new l.b(this.clanSteamID).GetAccountID() == P &&
+            new l.b(this.clanSteamID).GetAccountID() == F &&
             e &&
             e.toLowerCase().startsWith("nextfest")
           );
@@ -2654,56 +2681,56 @@
           };
         }
       }
-      (0, n.Cg)([o.sH], we.prototype, "GID", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "AnnouncementGID", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "forumTopicGID", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "type", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "appid", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "name", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "description", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "timestamp_loc_updated", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "startTime", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "endTime", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "visibilityStartTime", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "visibilityEndTime", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "m_nBuildID", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "m_strBuildBranch", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "postTime", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "visibility_state", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "broadcaster", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "jsondata", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "nCommentCount", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "nVotesUp", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "nVotesDown", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "bOldAnnouncement", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "announcementClanSteamID", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "loadedAllLanguages", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "bLoaded", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "deleteInProgress", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "vecTags", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "last_update_steamid", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "rtime32_last_modified", void 0),
+      (0, n.Cg)([o.sH], Ge.prototype, "GID", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "AnnouncementGID", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "forumTopicGID", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "type", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "appid", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "name", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "description", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "timestamp_loc_updated", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "startTime", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "endTime", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "visibilityStartTime", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "visibilityEndTime", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "m_nBuildID", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "m_strBuildBranch", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "postTime", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "visibility_state", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "broadcaster", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "jsondata", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "nCommentCount", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "nVotesUp", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "nVotesDown", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "bOldAnnouncement", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "announcementClanSteamID", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "loadedAllLanguages", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "bLoaded", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "deleteInProgress", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "vecTags", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "last_update_steamid", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "rtime32_last_modified", void 0),
         (0, n.Cg)(
           [o.sH],
-          we.prototype,
+          Ge.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, n.Cg)(
           [o.sH],
-          we.prototype,
+          Ge.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, n.Cg)([o.sH], we.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "video_preview_type", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "video_preview_id", void 0),
-        (0, n.Cg)([o.sH], we.prototype, "m_overrideCurrentDay", void 0);
-      const Se = (e) => {
+        (0, n.Cg)([o.sH], Ge.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "video_preview_type", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "video_preview_id", void 0),
+        (0, n.Cg)([o.sH], Ge.prototype, "m_overrideCurrentDay", void 0);
+      const Te = (e) => {
         const t = (0, y.K)(e.appid);
         return e.appid ? t : w.UF.IS_ALLOWED_SC;
       };
-      function Ae(e) {
+      function Ce(e) {
         return null == e ? void 0 : e.replace(/[()]/g, "\\$&");
       }
     },
@@ -6379,11 +6406,12 @@
       "use strict";
       i.d(t, {
         PH: () => c,
-        tj: () => C,
+        tj: () => k,
         IQ: () => d,
-        Hx: () => T,
+        qT: () => G,
+        Hx: () => C,
         LJ: () => b,
-        OG: () => G,
+        OG: () => T,
         Bw: () => A,
         JP: () => E,
         T7: () => y,
@@ -6599,7 +6627,15 @@
           "forceAbsolute" === i || !v(t, e) ? "absolute" : "relative",
         );
       }
-      function G(e) {
+      function G(e, t, i, n) {
+        return S(
+          e,
+          t,
+          i,
+          "forceAbsolute" === n || !v(i, e) ? "absolute" : "relative",
+        );
+      }
+      function T(e) {
         const { eventModel: t, route: i } = e,
           s = v(i, t),
           o = w(t, i, s ? "relative" : "absolute");
@@ -6607,11 +6643,11 @@
           ? n.createElement(a.rd, { push: !0, to: o })
           : (window.open(o), null);
       }
-      function T(e, t, i) {
+      function C(e, t, i) {
         const n = I(e, t, !1);
         return "admin" === i ? n + "partnerevents" : "";
       }
-      function C(e) {
+      function k(e) {
         const { eventModel: t, preferredFocus: i } = e,
           { bCanUseLink: s } = n.useContext(d),
           r = (0, h.n9)(),

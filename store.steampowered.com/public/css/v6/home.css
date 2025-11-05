@@ -302,7 +302,7 @@ body:not(.no_home_gutter) .home_page_gutter {
 }
 
 .home_leftcol {
-	width: 618px;
+	width: 66%;
 	float: left;
 }
 .home_cluster_ctn .home_leftcol {
@@ -310,7 +310,7 @@ body:not(.no_home_gutter) .home_page_gutter {
 }
 
 .home_rightcol {
-	width: 308px;
+	width: 33%;
 	float: right;
 }
 
@@ -492,21 +492,26 @@ a.home_block_footer_btn:hover {
 }
 
 .home_specials_grid {
-
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 4px;
 }
 
 .home_specials_grid .special {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 	background: #2e3e4e;
 	background: rgba( 0, 0, 0, 0.2 );
 	border: 1px solid rgba( 139, 185, 224, 0 );
 
 	padding: 16px 17px 16px 16px;
-	margin-bottom: 2px;
-
-	float: left;
+	box-sizing: border-box;
+	flex-basis: calc(50% - 8px);
+	flex-grow: 1;
+	min-width: 170px;
 	position: relative;
-	width: 118px;
-	height: 58px;
 	overflow: hidden;
 }
 
@@ -515,16 +520,9 @@ a.home_block_footer_btn:hover {
 	border: 1px solid rgba( 139, 185, 224, 0.2 );
 }
 
-.home_specials_grid .special:nth-child(2n+1)
-{
-	margin-right: 2px;
-}
-
-.home_specials_grid .special .special_img_ctn {
-	display: block;
-	position: relative;
-	width: 120px;
-	height: 45px;
+.home_specials_grid .special img {
+	width: 100%;
+	height: auto;
 }
 
 .special_discount {
@@ -2946,11 +2944,8 @@ background: -webkit-linear-gradient( left, #bce2f7 5%,#b9e1f7 95%);
 	padding: 7px 7px 4px 7px;
 }
 
-.home_specials_ctn.sidebar_wide {
-	width: 308px;
-}
 .home_specials_ctn {
-	width: 291px;
+	width: 100%;
 }
 .home_specials_ctn .store_capsule {
 	width: 138px;
@@ -4679,10 +4674,10 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	position: absolute;
 	top: 9px;
 	left: 16px;
+	right: 16px;
 	opacity: 0;
 	transition: opacity 300ms;
 	pointer-events: none;
-	width: 292px;
 }
 
 .tab_item.focus .tab_item_details span.platform_img.steamplay {
@@ -4770,12 +4765,12 @@ body.v6 .home_rightcol .tab_preview .tab_title {
 }
 
 .tab_preview .screenshot {
-	width: 258px;
-	height: 134px;
+	width: 100%;
+	height: unset;
+	aspect-ratio: 16/9;
 	margin-top: 3px;
 	background-size: cover;
 	background-position: center center;
-	padding: 8px;
 
 }
 .tab_preview .screenshot.empty {

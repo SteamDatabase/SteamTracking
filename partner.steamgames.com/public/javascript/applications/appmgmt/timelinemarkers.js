@@ -2025,8 +2025,8 @@
         (0, p.Cg)([q.o], X.prototype, "DeleteAssetSet", null),
         (0, p.Cg)([q.o], X.prototype, "AddBranchToAssetSet", null),
         (0, p.Cg)([q.o], X.prototype, "RemoveBranchFromAssetSet", null);
-      var Y = r(41735),
-        $ = r.n(Y),
+      var $ = r(41735),
+        Y = r.n($),
         ee = null;
       var te = r(32754);
       function re(e) {
@@ -2213,7 +2213,7 @@
               s.append("imagedata", i),
               s.append("imagetype", "" + n);
             const l = `${U.TS.PARTNER_BASE_URL}timelinemarkers/ajaxcreatemarker`,
-              o = await $().post(l, s);
+              o = await Y().post(l, s);
             if (200 == o?.status && 1 == o.data.success) {
               const r = o.data.new_marker;
               return (
@@ -2266,7 +2266,7 @@
               l.append("imagetype", "" + a),
               l.append("timeline_marker_id", r);
             const c = `${U.TS.PARTNER_BASE_URL}timelinemarkers/ajaxupdatemarker`,
-              d = await $().post(c, l);
+              d = await Y().post(c, l);
             if (200 == d?.status && 1 == d.data.success) {
               const r = d.data.updated_marker;
               this.m_mapTimelineMarker.set(r.timeline_marker_id, r);
@@ -2323,7 +2323,7 @@
               s.append("asset_set_id", t),
               s.append("timeline_marker_id", r);
             const l = `${U.TS.PARTNER_BASE_URL}timelinemarkers/ajaxdeletemarker`,
-              o = await $().post(l, s);
+              o = await Y().post(l, s);
             if (200 == o?.status && 1 == o.data.success) {
               this.m_mapTimelineMarker.delete(r);
               const i = this.GetAppMarkers(t, a);
@@ -2381,7 +2381,7 @@
               n.append("asset_set_id", t),
               n.append("timeline_marker_id", r.join(","));
             const a = `${U.TS.PARTNER_BASE_URL}timelinemarkers/ajaxpublishmarkers`,
-              s = await $().post(a, n);
+              s = await Y().post(a, n);
             if (200 == s?.status && 1 == s.data.success) {
               for (let e = 0; e < r.length; ++e) {
                 const t = r[e],
@@ -2847,8 +2847,8 @@
         Qe = r(39393),
         Je = r(25489),
         Ke = r(4926),
-        Ye = r(62490),
-        $e = r(48333);
+        $e = r(62490),
+        Ye = r(48333);
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.DownloadFailed = 1)] = "DownloadFailed"),
@@ -2877,7 +2877,7 @@
         m_nVideoStartTime = 0;
         m_nVideoDuration = 0;
         m_nVolume = 1;
-        m_eSeekType = $e.lU.Absolute;
+        m_eSeekType = Ye.lU.Absolute;
         constructor(e) {
           (0, Pe.Gn)(this), (this.m_bAutoPlay = !!e);
         }
@@ -2900,12 +2900,12 @@
           return this.m_bUserInputNeeded;
         }
         GetPlaybackTime() {
-          return this.m_eSeekType === $e.lU.Absolute
+          return this.m_eSeekType === Ye.lU.Absolute
             ? this.m_nPlaybackTime
             : this.m_nPlaybackTime - this.m_nVideoStartTime;
         }
         GetTimelineDuration() {
-          return this.m_eSeekType === $e.lU.Absolute
+          return this.m_eSeekType === Ye.lU.Absolute
             ? this.m_nVideoDuration
             : this.m_nVideoDuration - this.m_nVideoStartTime;
         }
@@ -2936,7 +2936,7 @@
         GetLoadedMetadata() {
           return this.m_bLoadedMetadata;
         }
-        Start(e, t, r, i = $e.lU.Absolute) {
+        Start(e, t, r, i = Ye.lU.Absolute) {
           this.Stop(),
             (this.m_bAtEnd = !1),
             (this.m_elVideo = e),
@@ -3015,7 +3015,7 @@
               "loadedmetadata",
               this.OnLoadedMetadata,
             ),
-            (this.m_player = new $e.Zn(this.m_elVideo)),
+            (this.m_player = new Ye.Zn(this.m_elVideo)),
             this.m_player.SetUserPlayChoice(this.m_bAutoPlay),
             this.m_player.PlayMPD(t),
             (this.m_bMuted = it("muted")),
@@ -3090,7 +3090,7 @@
           this.m_bLoadedMetadata = !0;
         }
         async OnDownloadFailed(e) {
-          if ((e.detail || $e.N_.PlaybackError) == $e.N_.UnsupportedMediaType)
+          if ((e.detail || Ye.N_.PlaybackError) == Ye.N_.UnsupportedMediaType)
             return (
               (0, ke.ZI)("media type error"),
               void (this.m_ePlayerError = Ze.MediaTypeError)
@@ -3469,7 +3469,7 @@
             this.SetLoader(e);
         }
         AddEventListener(e) {
-          return this.m_rgListeners.push(e), () => Ye.x9(this.m_rgListeners, e);
+          return this.m_rgListeners.push(e), () => $e.x9(this.m_rgListeners, e);
         }
         FireEvent(e, ...t) {
           for (let r of this.m_rgListeners) {
@@ -3944,8 +3944,8 @@
           if (!this.m_videoRef) return void (this.m_nPendingSeekSec = t);
           const n = this.GetManifestFromRecordingID(e),
             a = this.m_timelineLoader.BRecordingHasZeroOffset(e)
-              ? $e.lU.Absolute
-              : $e.lU.FromAvailableStart;
+              ? Ye.lU.Absolute
+              : Ye.lU.FromAvailableStart;
           this.m_gameRecordingVideo.Start(this.m_videoRef, n, t, a),
             (r || i) && this.m_gameRecordingVideo.Pause();
         }
@@ -4966,7 +4966,7 @@
         }
         ConvertGlobalMSToGlobalPXOffset(e, t = -1) {
           t < 0 &&
-            (t = Ye.rJ(this.m_rgTimelineOffsets, (t) => e - t.globalOffsetMS));
+            (t = $e.rJ(this.m_rgTimelineOffsets, (t) => e - t.globalOffsetMS));
           const r = 10 * t;
           return this.ConvertDurationMSToDeltaPX(e) + r;
         }
@@ -4993,7 +4993,7 @@
           return this.m_rgTimelineOffsets[t];
         }
         FindIndexOfClosestTimelineEndForOffsetPX(e) {
-          return Ye.rJ(this.m_rgTimelineOffsets, (t) => {
+          return $e.rJ(this.m_rgTimelineOffsets, (t) => {
             const r =
               this.ConvertGlobalMSToGlobalPXOffset(t.globalOffsetMS) +
               this.ConvertDurationMSToDeltaPX(t.nDurationMS);
@@ -5001,7 +5001,7 @@
           });
         }
         FindIndexOfClosestTimelineStartForOffsetPX(e) {
-          return Ye.rJ(this.m_rgTimelineOffsets, (t) => {
+          return $e.rJ(this.m_rgTimelineOffsets, (t) => {
             const r = this.ConvertGlobalMSToGlobalPXOffset(t.globalOffsetMS);
             return e - r;
           });
@@ -5211,27 +5211,27 @@
         Qt = r(70692),
         Jt = r(30470);
       const Kt = "steam_";
-      var Yt;
-      function $t(e) {
+      var $t;
+      function Yt(e) {
         switch (e) {
           default:
-          case Yt.White:
+          case $t.White:
             return "#DCDEDF";
-          case Yt.Red:
+          case $t.Red:
             return "#FB7C7C";
-          case Yt.Orange:
+          case $t.Orange:
             return "#FBB17C";
-          case Yt.Yellow:
+          case $t.Yellow:
             return "#FBDF7C";
-          case Yt.Green:
+          case $t.Green:
             return "#9DFB7C";
-          case Yt.Blue:
+          case $t.Blue:
             return "#7CD5FB";
-          case Yt.Purple:
+          case $t.Purple:
             return "#A57CFB";
-          case Yt.Brown:
+          case $t.Brown:
             return "#C18C5B";
-          case Yt.Gray:
+          case $t.Gray:
             return "#B8BCBF";
         }
       }
@@ -5248,8 +5248,8 @@
           (e[(e.Purple = 6)] = "Purple"),
           (e[(e.Brown = 7)] = "Brown"),
           (e[(e.Gray = 8)] = "Gray");
-      })(Yt || (Yt = {}));
-      const tr = er(Yt).map((e) => Yt[e]);
+      })($t || ($t = {}));
+      const tr = er($t).map((e) => $t[e]);
       class rr {
         m_mapSteamTimelineMarkers = new Map();
         GetMarkerByID(e) {
@@ -5260,7 +5260,7 @@
             return this.m_mapSteamTimelineMarkers.get(t);
           const r = parseInt(t);
           return "number" == typeof r && r >= 0 && r <= 99
-            ? { func: (e) => mt.wN({ nNumber: r }), color: Yt.Gray }
+            ? { func: (e) => mt.wN({ nNumber: r }), color: $t.Gray }
             : nr();
         }
         GetAllUseableMarkerID() {
@@ -5280,70 +5280,70 @@
           );
         }
         AddMarker(e, t, r) {
-          const i = r ?? Yt.White;
+          const i = r ?? $t.White;
           this.m_mapSteamTimelineMarkers.set(e, { func: t, color: i });
           for (const r of tr) {
-            const i = `${e}_${Yt[r]}`.toLowerCase();
+            const i = `${e}_${$t[r]}`.toLowerCase();
             this.m_mapSteamTimelineMarkers.set(i, { func: t, color: r });
           }
         }
         Init() {
-          this.AddMarker("explosion", mt.Wq, Yt.Gray),
-            this.AddMarker("attack", mt.LB, Yt.Gray),
-            this.AddMarker("defend", mt.po, Yt.Gray),
-            this.AddMarker("combat", mt.t4, Yt.Gray),
-            this.AddMarker("chest", mt.k8, Yt.Gray),
-            this.AddMarker("view", mt.Ss, Yt.Gray),
+          this.AddMarker("explosion", mt.Wq, $t.Gray),
+            this.AddMarker("attack", mt.LB, $t.Gray),
+            this.AddMarker("defend", mt.po, $t.Gray),
+            this.AddMarker("combat", mt.t4, $t.Gray),
+            this.AddMarker("chest", mt.k8, $t.Gray),
+            this.AddMarker("view", mt.Ss, $t.Gray),
             (0, U.Y2)()
-              ? this.AddMarker("death", mt.X, Yt.Gray)
-              : this.AddMarker("death", mt.lQ, Yt.Gray),
-            this.AddMarker("x", mt.X, Yt.Gray),
-            this.AddMarker("plus", mt.FW, Yt.Gray),
-            this.AddMarker("minus", mt.Hs, Yt.Gray),
-            this.AddMarker("info", mt.R2, Yt.Gray),
-            this.AddMarker("bolt", mt.y$, Yt.Gray),
-            this.AddMarker("caution", mt.eT, Yt.Gray),
-            this.AddMarker("completed", mt.AY, Yt.Gray),
-            this.AddMarker("checkmark", mt.MG, Yt.Gray),
-            this.AddMarker("effect", mt.Mj, Yt.Gray),
-            this.AddMarker("purchase", mt.QY, Yt.Gray),
-            this.AddMarker("ribbon", mt.y4, Yt.Gray),
-            this.AddMarker("scroll", mt.OY, Yt.Gray),
-            this.AddMarker("crown", mt.Oe, Yt.Gray),
-            this.AddMarker("starburst", mt.bL, Yt.Gray),
-            this.AddMarker("flag", mt.lN, Yt.Gray),
-            this.AddMarker("cart", mt.Z3, Yt.Gray),
-            this.AddMarker("timer", mt.M4, Yt.Gray),
-            this.AddMarker("chat", mt.ry, Yt.Gray),
-            this.AddMarker("wrench", mt.Ml, Yt.Gray),
-            this.AddMarker("transfer", mt.mr, Yt.Gray),
-            this.AddMarker("edit", mt.ff, Yt.Gray),
-            this.AddMarker("bookmark", mt.Xh, Yt.Gray),
-            this.AddMarker("invalid", mt.WO, Yt.Gray),
-            this.AddMarker("star", mt.FE, Yt.Gray),
-            this.AddMarker("circle", mt.jl, Yt.Gray),
-            this.AddMarker("square", mt.M6, Yt.Gray),
-            this.AddMarker("triangle", mt.lM, Yt.Gray),
-            this.AddMarker("heart", mt.B1, Yt.Gray),
-            this.AddMarker("diamond", mt.JB, Yt.Gray),
-            this.AddMarker("gem", mt.gD, Yt.Gray),
-            this.AddMarker("group", mt.YJ, Yt.Gray),
-            this.AddMarker("pair", mt.Rm, Yt.Gray),
-            this.AddMarker("single", mt.KJ, Yt.Gray),
-            this.AddMarker("trophy", mt.Oi, Yt.Gray),
-            this.AddMarker("achievement", mt.Oi, Yt.Gray),
-            this.AddMarker("screenshot", mt.pw, Yt.Gray),
-            this.AddMarker("bug", mt.zP, Yt.Gray),
-            this.AddMarker("fix", mt.Ml, Yt.Gray),
-            this.AddMarker("person", mt.KJ, Yt.Gray),
-            this.AddMarker("question", mt.O_, Yt.Gray);
+              ? this.AddMarker("death", mt.X, $t.Gray)
+              : this.AddMarker("death", mt.lQ, $t.Gray),
+            this.AddMarker("x", mt.X, $t.Gray),
+            this.AddMarker("plus", mt.FW, $t.Gray),
+            this.AddMarker("minus", mt.Hs, $t.Gray),
+            this.AddMarker("info", mt.R2, $t.Gray),
+            this.AddMarker("bolt", mt.y$, $t.Gray),
+            this.AddMarker("caution", mt.eT, $t.Gray),
+            this.AddMarker("completed", mt.AY, $t.Gray),
+            this.AddMarker("checkmark", mt.MG, $t.Gray),
+            this.AddMarker("effect", mt.Mj, $t.Gray),
+            this.AddMarker("purchase", mt.QY, $t.Gray),
+            this.AddMarker("ribbon", mt.y4, $t.Gray),
+            this.AddMarker("scroll", mt.OY, $t.Gray),
+            this.AddMarker("crown", mt.Oe, $t.Gray),
+            this.AddMarker("starburst", mt.bL, $t.Gray),
+            this.AddMarker("flag", mt.lN, $t.Gray),
+            this.AddMarker("cart", mt.Z3, $t.Gray),
+            this.AddMarker("timer", mt.M4, $t.Gray),
+            this.AddMarker("chat", mt.ry, $t.Gray),
+            this.AddMarker("wrench", mt.Ml, $t.Gray),
+            this.AddMarker("transfer", mt.mr, $t.Gray),
+            this.AddMarker("edit", mt.ff, $t.Gray),
+            this.AddMarker("bookmark", mt.Xh, $t.Gray),
+            this.AddMarker("invalid", mt.WO, $t.Gray),
+            this.AddMarker("star", mt.FE, $t.Gray),
+            this.AddMarker("circle", mt.jl, $t.Gray),
+            this.AddMarker("square", mt.M6, $t.Gray),
+            this.AddMarker("triangle", mt.lM, $t.Gray),
+            this.AddMarker("heart", mt.B1, $t.Gray),
+            this.AddMarker("diamond", mt.JB, $t.Gray),
+            this.AddMarker("gem", mt.gD, $t.Gray),
+            this.AddMarker("group", mt.YJ, $t.Gray),
+            this.AddMarker("pair", mt.Rm, $t.Gray),
+            this.AddMarker("single", mt.KJ, $t.Gray),
+            this.AddMarker("trophy", mt.Oi, $t.Gray),
+            this.AddMarker("achievement", mt.Oi, $t.Gray),
+            this.AddMarker("screenshot", mt.pw, $t.Gray),
+            this.AddMarker("bug", mt.zP, $t.Gray),
+            this.AddMarker("fix", mt.Ml, $t.Gray),
+            this.AddMarker("person", mt.KJ, $t.Gray),
+            this.AddMarker("question", mt.O_, $t.Gray);
         }
       }
       function ir(e) {
         return rr.Get().GetMarkerByID(e);
       }
       function nr() {
-        return { func: mt.pH, color: Yt.Gray };
+        return { func: mt.pH, color: $t.Gray };
       }
       function ar(e) {
         return e && e.toLowerCase().startsWith(Kt);
@@ -5399,8 +5399,8 @@
         let a, s;
         if (i) (a = "white"), (s = n.createElement("img", { src: i.iconURL }));
         else {
-          const e = { func: mt.Oi, color: Yt.White };
-          (a = $t(e.color)), (s = e.func({}));
+          const e = { func: mt.Oi, color: $t.White };
+          (a = Yt(e.color)), (s = e.func({}));
         }
         return n.createElement(
           "div",
@@ -5412,9 +5412,9 @@
         const { entry: t, strMarkerIcon: r } = e;
         let i, a;
         (0, Qt.N$)(t)
-          ? ((i = { func: mt.pH, color: Yt.Blue }), (a = lr.CustomMarker))
+          ? ((i = { func: mt.pH, color: $t.Blue }), (a = lr.CustomMarker))
           : (i = ir(r));
-        const s = $t(i.color);
+        const s = Yt(i.color);
         return n.createElement(
           _r,
           { color: s },
@@ -5427,7 +5427,7 @@
       }
       function gr(e) {
         const t = ir("steam_invalid"),
-          r = $t(t.color);
+          r = Yt(t.color);
         return n.createElement(
           _r,
           { color: r },
@@ -5839,7 +5839,7 @@
             if (!e) return null;
             const n = t.GetLoader().GetTimelineData(e);
             if (!n) return null;
-            const a = Ye.rJ(n.m_rgPhases, (e) => r.valMS - parseInt(e.time));
+            const a = $e.rJ(n.m_rgPhases, (e) => r.valMS - parseInt(e.time));
             if (a < 0) return null;
             const s = n.m_rgPhases[a];
             return r.valMS >= parseInt(s.time) &&
@@ -6466,8 +6466,8 @@
             return "none";
         }
       }
-      var Yr = r(53298);
-      function $r(e) {
+      var $r = r(53298);
+      function Yr(e) {
         const {
             view: t,
             entry: r,
@@ -6489,17 +6489,17 @@
           c = !!s.GetClipID(),
           d = { transform: `translateX( ${o}px )`, width: m - o },
           u = (0, Me.A)({
-            [Yr.Unspecified]: r.mode === Qt.il.Invalid,
-            [Yr.Staging]: r.mode === Qt.il.Staging,
-            [Yr.Menus]: r.mode === Qt.il.Menus,
-            [Yr.Playing]: r.mode === Qt.il.Playing,
+            [$r.Unspecified]: r.mode === Qt.il.Invalid,
+            [$r.Staging]: r.mode === Qt.il.Staging,
+            [$r.Menus]: r.mode === Qt.il.Menus,
+            [$r.Playing]: r.mode === Qt.il.Playing,
           });
         return n.createElement("div", {
           key: r.id,
           className: (0, Me.A)(
-            Yr.GameModeMarker,
+            $r.GameModeMarker,
             u,
-            c && Yr.GameModeMarkerClip,
+            c && $r.GameModeMarkerClip,
           ),
           style: d,
         });
@@ -6543,7 +6543,7 @@
               e < s.length - 1 ? parseInt(s[e + 1].time) + o : l.valMS - 1,
             );
             m.push(
-              n.createElement($r, {
+              n.createElement(Yr, {
                 key: `gameMode_${t}_${e}`,
                 view: a,
                 entry: s[e],
@@ -8379,8 +8379,8 @@
           }),
         );
       }
-      var Yi = r(28361);
-      const $i = n.memo(function (e) {
+      var $i = r(28361);
+      const Yi = n.memo(function (e) {
         const t = Ut(),
           r = (0, Ne.q3)(() => t.GetVisibleWindowRelativeTimelines()),
           i = yt().GetRecordingMode();
@@ -8415,7 +8415,7 @@
         return n.createElement(
           "div",
           {
-            className: (0, Me.A)(Yi.TimelineRelativeDate, a && Yi.Overlay),
+            className: (0, Me.A)($i.TimelineRelativeDate, a && $i.Overlay),
             style: { transform: `translateX(${r}px)` },
           },
           t,
@@ -9216,7 +9216,7 @@
           n.createElement(
             Ln,
             { id: "date_decorators", className: Tt.DateDecorator },
-            n.createElement($i, null),
+            n.createElement(Yi, null),
           ),
           n.createElement(
             Ln,
@@ -9338,7 +9338,7 @@
         return /^[a-z0-9_-]{1,31}$/.test(e);
       }
       var Kn;
-      async function Yn(e) {
+      async function $n(e) {
         return new Promise((t, r) => {
           if (!e) return t((0, g.we)("#TimelineMarkers_Error_NotFound"));
           {
@@ -9383,7 +9383,7 @@
                             t({
                               image: e,
                               image_type: 2,
-                              strFilenameWithoutExtension: $n(n).substring(
+                              strFilenameWithoutExtension: Yn(n).substring(
                                 0,
                                 Qn,
                               ),
@@ -9392,7 +9392,7 @@
                         : t({
                             image: r.result,
                             image_type: 2,
-                            strFilenameWithoutExtension: $n(n).substring(0, Qn),
+                            strFilenameWithoutExtension: Yn(n).substring(0, Qn),
                           });
                 }),
                   (i.src = r.result);
@@ -9401,7 +9401,7 @@
                   ? t({
                       image: r.result,
                       image_type: 1,
-                      strFilenameWithoutExtension: $n(n).substring(0, Qn),
+                      strFilenameWithoutExtension: Yn(n).substring(0, Qn),
                     })
                   : (console.error("unknown content types: " + i),
                     t((0, g.we)("#TimelineMarkers_Error_UnknownFileType", i)));
@@ -9412,7 +9412,7 @@
           }
         });
       }
-      function $n(e) {
+      function Yn(e) {
         const t = e.lastIndexOf(".");
         return -1 !== t && t > e.lastIndexOf("/") ? e.slice(0, t) : e;
       }
@@ -9438,7 +9438,7 @@
                 r = e.length;
               for (let n = 0; n < e.length; ++n) {
                 const a = e[n],
-                  s = await Yn(a);
+                  s = await $n(a);
                 if ("string" == typeof s) {
                   f(s);
                   break;
@@ -9767,7 +9767,7 @@
         const B = (0, n.useCallback)(async (e) => {
             y(null);
             const t = e.currentTarget?.files?.[0],
-              r = await Yn(t);
+              r = await $n(t);
             "string" == typeof r
               ? y(r)
               : (p(r.image), _(r.image_type), S((e) => e + 1));
@@ -10851,6 +10851,32 @@
         );
       }
     },
+    86318: (e, t, r) => {
+      "use strict";
+      r.d(t, {
+        ZI: () => o,
+        fX: () => s,
+        q_: () => a,
+        tG: () => m,
+        tH: () => l,
+        xv: () => c,
+      });
+      const i = new (r(60778).wd)("GR");
+      function n(e) {
+        return (...t) => {
+          const r = `[${(performance.now() / 1e3).toFixed(3)}]`;
+          e(r, ...t);
+        };
+      }
+      const a = n(i.Debug),
+        s = n(i.Info),
+        l = n(i.Warning),
+        o = n(i.Error),
+        m = a;
+      function c() {
+        return i.IsDebugEnabled();
+      }
+    },
     70692: (e, t, r) => {
       "use strict";
       var i, n;
@@ -11157,6 +11183,21 @@
                 .then(
                   (t) => {
                     if (200 == t.status && t.data) {
+                      !(function (e) {
+                        if (!Array.isArray(e.entries)) {
+                          let t = [];
+                          e.entries &&
+                            "object" == typeof e.entries &&
+                            ((t = Object.values(e.entries)),
+                            (t = t.filter(
+                              (e) => e && "object" == typeof e && "time" in e,
+                            )),
+                            t.sort(
+                              (e, t) => parseInt(e.time) - parseInt(t.time),
+                            )),
+                            (e.entries = t);
+                        }
+                      })(t.data);
                       const r = this.ProcessTimelineEntries(t.data);
                       this.m_mapTimelineData.set(e, r);
                     } else
@@ -15026,55 +15067,55 @@
           return "CGameRecording_ExportClip_Request";
         }
       }
-      class Y extends n.Message {
+      class $ extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), n.Message.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return Y.toObject(e, this);
+          return $.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new Y();
+          return new $();
         }
         static deserializeBinary(e) {
           let t = new (a().BinaryReader)(e),
-            r = new Y();
-          return Y.deserializeBinaryFromReader(r, t);
+            r = new $();
+          return $.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new (a().BinaryWriter)();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return $.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new (a().BinaryWriter)();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_ExportClip_Response";
         }
       }
-      class $ extends n.Message {
+      class Y extends n.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            $.prototype.clip_id || s.Sg($.M()),
+            Y.prototype.clip_id || s.Sg(Y.M()),
             n.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            $.sm_m ||
-              ($.sm_m = {
-                proto: $,
+            Y.sm_m ||
+              (Y.sm_m = {
+                proto: Y,
                 fields: {
                   clip_id: { n: 1, br: s.qM.readString, bw: s.gp.writeString },
                   settings: { n: 2, c: J },
@@ -15085,39 +15126,39 @@
                   },
                 },
               }),
-            $.sm_m
+            Y.sm_m
           );
         }
         static MBF() {
-          return $.sm_mbf || ($.sm_mbf = s.w0($.M())), $.sm_mbf;
+          return Y.sm_mbf || (Y.sm_mbf = s.w0(Y.M())), Y.sm_mbf;
         }
         toObject(e = !1) {
-          return $.toObject(e, this);
+          return Y.toObject(e, this);
         }
         static toObject(e, t) {
-          return s.BT($.M(), e, t);
+          return s.BT(Y.M(), e, t);
         }
         static fromObject(e) {
-          return s.Uq($.M(), e);
+          return s.Uq(Y.M(), e);
         }
         static deserializeBinary(e) {
           let t = new (a().BinaryReader)(e),
-            r = new $();
-          return $.deserializeBinaryFromReader(r, t);
+            r = new Y();
+          return Y.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return s.zj($.MBF(), e, t);
+          return s.zj(Y.MBF(), e, t);
         }
         serializeBinary() {
           var e = new (a().BinaryWriter)();
-          return $.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          s.i0($.M(), e, t);
+          s.i0(Y.M(), e, t);
         }
         serializeBase64String() {
           var e = new (a().BinaryWriter)();
-          return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_ExportClipPreview_Request";
@@ -18042,7 +18083,7 @@
           (e.ExportClipHandler = {
             name: "GameRecording.ExportClip#1",
             request: K,
-            response: Y,
+            response: $,
           }),
           (e.ExportClip = function (e, t) {
             return null == (t = t || (0, o.OI)().GetDefaultTransport())
@@ -18052,7 +18093,7 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.ExportClip#1", (0, l.I8)(K, e), Y, {
+              : t.SendMsg("GameRecording.ExportClip#1", (0, l.I8)(K, e), $, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
@@ -18065,14 +18106,14 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.ExportClip#1", (0, l.I8)(K, e), Y, {
+              : t.SendMsg("GameRecording.ExportClip#1", (0, l.I8)(K, e), $, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
           }),
           (e.ExportClipPreviewHandler = {
             name: "GameRecording.ExportClipPreview#1",
-            request: $,
+            request: Y,
             response: ee,
           }),
           (e.ExportClipPreview = function (e, t) {
@@ -18085,7 +18126,7 @@
                 })
               : t.SendMsg(
                   "GameRecording.ExportClipPreview#1",
-                  (0, l.I8)($, e),
+                  (0, l.I8)(Y, e),
                   ee,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
@@ -18100,7 +18141,7 @@
                 })
               : t.SendMsg(
                   "GameRecording.ExportClipPreview#1",
-                  (0, l.I8)($, e),
+                  (0, l.I8)(Y, e),
                   ee,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );

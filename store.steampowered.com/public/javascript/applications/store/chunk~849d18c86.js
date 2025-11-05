@@ -97,7 +97,7 @@
     },
     2921: (e, t, a) => {
       "use strict";
-      a.d(t, { q: () => M, Y: () => B });
+      a.d(t, { PE: () => O, qP: () => M, Yg: () => B });
       var l = a(76217),
         r = a(86927),
         s = a(90626),
@@ -473,14 +473,14 @@
       function O(e) {
         const { storeItem: t, bShowModal: a, hideModal: l } = e,
           r = (0, G.dy)(),
-          n = t?.GetAllTrailers().GetHighlightTrailers(r),
-          c = n?.length > 0 && n[0],
+          n = t?.GetAllTrailers()?.GetHighlightTrailers(r),
+          c = n && n.length > 0 ? n[0] : void 0,
           o = s.useId(),
           i = s.useId();
         if (!c) return null;
         const m = c.GetTrailersDash(),
           d = c.GetTrailerHls();
-        return 0 == m.length
+        return 0 == m?.length
           ? null
           : s.createElement(
               p.EN,
@@ -497,8 +497,8 @@
                   "div",
                   { className: E().VideoPopupContainers },
                   s.createElement(I.P, {
-                    dashManifests: m,
-                    hlsManifest: d,
+                    dashManifests: m || [],
+                    hlsManifest: d || "",
                     screenshot: "",
                     altText: "",
                     muteWhenAutoplayBlocked: !0,
@@ -553,8 +553,8 @@
           } = e,
           [c, o] = (0, r.OP)(),
           i = n
-            ? t.GetAssetsWithoutOverrides().GetMainCapsuleURL()
-            : t.GetAssets().GetMainCapsuleURL();
+            ? t.GetAssetsWithoutOverrides()?.GetMainCapsuleURL()
+            : t.GetAssets()?.GetMainCapsuleURL();
         return s.createElement(
           l.Z,
           {
@@ -1079,7 +1079,7 @@
                   l.createElement(
                     "div",
                     { className: f().StoreSaleLibraryAssetWidgetRight },
-                    l.createElement(b.Y, {
+                    l.createElement(b.Yg, {
                       info: o,
                       bPopOutTrailerPlayback: !0,
                     }),

@@ -4,10 +4,15 @@
     chunkid: (module) => {
       module.exports = {
         SavedImage: "_1y3QVgsz4daj3E3S5wzwt-",
+        SaveButtonCtn: "_2Edwnbc-tjinTT_s7zIKTd",
         SaveButton: "_2hloqzkRkAWkw50l4XPN-N",
         HaventSavedInAShortTime: "_3xoBR2gVk2F0Bmejh20Yhl",
         HaventSavedInALongTime: "_1bg505mDp3agK0eHP0NoxI",
         Pulse: "_3oWE-wt1PQ7Rv2IJ0vCmO",
+        SaveSuccessNotification: "_1gabCN13JTZzv2A2fXqGve",
+        slideIn: "_2kGhkRiew8we__yyM1878e",
+        slideOut: "_2oAIIbl5uoREv1Es4TZkUQ",
+        SaveSuccessTitle: "_1d5GXYH4AY9WFkoszJVzsQ",
       };
     },
     chunkid: function (_, _) {

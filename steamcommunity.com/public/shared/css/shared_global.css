@@ -3240,3 +3240,42 @@ html.responsive .gpfocus .ds_steam_deck_compat {
 .private_app_indicator svg path {
 	stroke: rgb(110, 141, 80);
 }
+
+.shared_autocollapse_fade {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 79px;
+	z-index: 1;
+	background: -webkit-linear-gradient( top, rgba(16,25,35,0.0) 0%, rgba(16,25,35,1.0) 80%);
+	background: linear-gradient( to bottom, rgba(16,25,35,0.0) 0%, rgba(16,25,35,1.0) 80%);
+}
+
+.shared_autocollapse_readmore {
+	display: flex;
+	justify-content: center;
+	gap: 4px;
+	width: 100%;
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(37 63 96 / 50%) 33%, rgb(37 63 96 / 50%) 66%, rgba(0, 0, 0, 0) 100%);
+	line-height: 26px;
+	cursor: pointer;
+	color: #67c1f5;
+	font-size: 12px;
+	padding-right: 0px;
+	right: unset; /* remove for final */
+	bottom: unset; /* remove for final */
+	height: unset; /* remove for final */
+}
+
+.shared_autocollapse_readmore:hover {
+	color: #ffffff;
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(37 63 96 / 70%) 33%, rgb(37 63 96 / 70%) 66%, rgba(0, 0, 0, 0) 100%);
+}
+
+.shared_autocollapse_ctn.collapsed .shared_autocollapse_fade {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}

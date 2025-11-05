@@ -92,8 +92,12 @@
           if (_ in _.factories) break;
           _ = _.parent;
         }
-        const _ = (null !== (_ = _.factories[_]) && void 0 !== _ ? _ : _)();
-        return (_.instances[_] = _), _;
+        const _ = (
+          null !== (_ = null == _ ? void 0 : _.factories[_]) && void 0 !== _
+            ? _
+            : _
+        )();
+        return ((null != _ ? _ : _).instances[_] = _), _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

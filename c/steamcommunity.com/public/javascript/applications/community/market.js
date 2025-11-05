@@ -163,8 +163,10 @@
         AutoRows: "_3kyzvGnYVLT0DW6nzP9n18",
         Areas: "_1-yfCTWkj4tOFfb3EKXx6N",
         Flow: "_1yUwWGTk4IX0IhdJiKfFBf",
-        Align: "_2dFwIg9eekM-KkpBRjZGM6",
-        Justify: "_3II_oO-Sygh7edq108MBaN",
+        AlignContent: "_2Tglp6488nVBhU976Llfpe",
+        JustifyContent: "TT1_g1XWXbbLgxOPIpczV",
+        AlignItems: "_1ve3GjJA-d6MfYcIiXdqz0",
+        JustifyItems: "_2LsmJGVn3g0GHmBPNWVn5T",
         Gap: "c0C2uHpDLCegllhH1rM3M",
       };
     },
@@ -426,6 +428,15 @@
     },
     chunkid: (module) => {
       module.exports = {
+        TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
+        "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
+        "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
+        "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
       };
     },
@@ -435,6 +446,12 @@
         ItemDescription: "_2MixhMbHTxS0qJ2uAefnVy",
         GameImage: "_3LTPlbh1oIRZyLjujpw83H",
         GameImagePlaceholder: "_27u72fjp-gJgeD5k7NQ1Vf",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TradeProtectionIcon: "_2EE-ZampXjpepog8RdkfIJ",
+        TradeProtectionLabel: "_2rGNh4nOuEfSbNbyXrEMEz",
       };
     },
     chunkid: (module) => {
@@ -471,6 +488,9 @@
       const _ = _.createContext({
         steamidOwner: void 0,
       });
+      function _() {
+        return _.useContext(_).steamidOwner;
+      }
       function _(_) {
         const { steamidOwner: _, children: __webpack_require__ } = _,
           _ = _.useMemo(
@@ -856,16 +876,37 @@
           skipFollowingNewline: !0,
         },
       };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement("a", {
+          ...(0, _._)(
+            {
+              ..._,
+              className: _.TextLink,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "underline",
+          className: (_) => _[`Underline-${_}`],
+        },
+      ];
       function _(_) {
         var _;
         const _ =
           null !== (_ = _(_.args)) && void 0 !== _ ? _ : _(_.args, "href");
         return _ && __webpack_require__.match(/^https?:\/\//)
           ? _.createElement(
-              "a",
+              _,
               {
                 target: "_blank",
                 href: _,
+                underline: "auto",
               },
               _.children,
             )
@@ -999,7 +1040,8 @@
       function _() {
         return _.useContext(_).asset;
       }
-      var _ = __webpack_require__("chunkid");
+      var _,
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { actions: _ } = _;
         return _.createElement(
@@ -1017,9 +1059,23 @@
         );
       }
       function _(_) {
-        const { action: _ } = _,
-          _ = _.useContext(_).steamidOwner,
-          _ = (_(), _()),
+        const _ = _(),
+          _ = _(),
+          _ = _();
+        return _.createElement(_, {
+          ..._,
+          ownerSteamID: _,
+          description: _,
+          asset: _,
+        });
+      }
+      function _(_) {
+        const {
+            action: _,
+            description: __webpack_require__,
+            asset: _,
+            ownerSteamID: _,
+          } = _,
           _ = (function (_, _, _, _) {
             var _, _;
             return _.replace(
@@ -1059,8 +1115,156 @@
           _.name,
         );
       }
+      !(function (_) {
+        (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
+          (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
+          (_[(_.k_ECurrencyCodeGBP = 2)] = "k_ECurrencyCodeGBP"),
+          (_[(_.k_ECurrencyCodeEUR = 3)] = "k_ECurrencyCodeEUR"),
+          (_[(_.k_ECurrencyCodeCHF = 4)] = "k_ECurrencyCodeCHF"),
+          (_[(_.k_ECurrencyCodeRUB = 5)] = "k_ECurrencyCodeRUB"),
+          (_[(_.k_ECurrencyCodePLN = 6)] = "k_ECurrencyCodePLN"),
+          (_[(_.k_ECurrencyCodeBRL = 7)] = "k_ECurrencyCodeBRL"),
+          (_[(_.k_ECurrencyCodeJPY = 8)] = "k_ECurrencyCodeJPY"),
+          (_[(_.k_ECurrencyCodeNOK = 9)] = "k_ECurrencyCodeNOK"),
+          (_[(_.k_ECurrencyCodeIDR = 10)] = "k_ECurrencyCodeIDR"),
+          (_[(_.k_ECurrencyCodeMYR = 11)] = "k_ECurrencyCodeMYR"),
+          (_[(_.k_ECurrencyCodePHP = 12)] = "k_ECurrencyCodePHP"),
+          (_[(_.k_ECurrencyCodeSGD = 13)] = "k_ECurrencyCodeSGD"),
+          (_[(_.k_ECurrencyCodeTHB = 14)] = "k_ECurrencyCodeTHB"),
+          (_[(_.k_ECurrencyCodeVND = 15)] = "k_ECurrencyCodeVND"),
+          (_[(_.k_ECurrencyCodeKRW = 16)] = "k_ECurrencyCodeKRW"),
+          (_[(_.k_ECurrencyCodeTRY = 17)] = "k_ECurrencyCodeTRY"),
+          (_[(_.k_ECurrencyCodeUAH = 18)] = "k_ECurrencyCodeUAH"),
+          (_[(_.k_ECurrencyCodeMXN = 19)] = "k_ECurrencyCodeMXN"),
+          (_[(_.k_ECurrencyCodeCAD = 20)] = "k_ECurrencyCodeCAD"),
+          (_[(_.k_ECurrencyCodeAUD = 21)] = "k_ECurrencyCodeAUD"),
+          (_[(_.k_ECurrencyCodeNZD = 22)] = "k_ECurrencyCodeNZD"),
+          (_[(_.k_ECurrencyCodeCNY = 23)] = "k_ECurrencyCodeCNY"),
+          (_[(_.k_ECurrencyCodeINR = 24)] = "k_ECurrencyCodeINR"),
+          (_[(_.k_ECurrencyCodeCLP = 25)] = "k_ECurrencyCodeCLP"),
+          (_[(_.k_ECurrencyCodePEN = 26)] = "k_ECurrencyCodePEN"),
+          (_[(_.k_ECurrencyCodeCOP = 27)] = "k_ECurrencyCodeCOP"),
+          (_[(_.k_ECurrencyCodeZAR = 28)] = "k_ECurrencyCodeZAR"),
+          (_[(_.k_ECurrencyCodeHKD = 29)] = "k_ECurrencyCodeHKD"),
+          (_[(_.k_ECurrencyCodeTWD = 30)] = "k_ECurrencyCodeTWD"),
+          (_[(_.k_ECurrencyCodeSAR = 31)] = "k_ECurrencyCodeSAR"),
+          (_[(_.k_ECurrencyCodeAED = 32)] = "k_ECurrencyCodeAED"),
+          (_[(_.k_ECurrencyCodeSEK = 33)] = "k_ECurrencyCodeSEK"),
+          (_[(_.k_ECurrencyCodeARS = 34)] = "k_ECurrencyCodeARS"),
+          (_[(_.k_ECurrencyCodeILS = 35)] = "k_ECurrencyCodeILS"),
+          (_[(_.k_ECurrencyCodeBYN = 36)] = "k_ECurrencyCodeBYN"),
+          (_[(_.k_ECurrencyCodeKZT = 37)] = "k_ECurrencyCodeKZT"),
+          (_[(_.k_ECurrencyCodeKWD = 38)] = "k_ECurrencyCodeKWD"),
+          (_[(_.k_ECurrencyCodeQAR = 39)] = "k_ECurrencyCodeQAR"),
+          (_[(_.k_ECurrencyCodeCRC = 40)] = "k_ECurrencyCodeCRC"),
+          (_[(_.k_ECurrencyCodeUYU = 41)] = "k_ECurrencyCodeUYU"),
+          (_[(_.k_ECurrencyCodeBGN = 42)] = "k_ECurrencyCodeBGN"),
+          (_[(_.k_ECurrencyCodeHRK = 43)] = "k_ECurrencyCodeHRK"),
+          (_[(_.k_ECurrencyCodeCZK = 44)] = "k_ECurrencyCodeCZK"),
+          (_[(_.k_ECurrencyCodeDKK = 45)] = "k_ECurrencyCodeDKK"),
+          (_[(_.k_ECurrencyCodeHUF = 46)] = "k_ECurrencyCodeHUF"),
+          (_[(_.k_ECurrencyCodeRON = 47)] = "k_ECurrencyCodeRON"),
+          (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
+      })(_ || (_ = {}));
+      _.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS;
+      var _ = __webpack_require__("chunkid");
+      const _ = {};
+      _.english = () =>
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__._.bind(__webpack_require__, 73759, 19));
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      }).Localize;
+      function _(_) {
+        const { appid: _, hashName: __webpack_require__ } = _,
+          { data: _ } =
+            ((_ = _.k_ECurrencyCodeUSD),
+            (_ = _),
+            (_ = __webpack_require__),
+            (0, _._)(
+              (function (_, _, _) {
+                return {
+                  queryKey: ["MarketPriceOverview", _, _, _],
+                  queryFn: async () => {
+                    const _ = new URLSearchParams({
+                        country: _._.country_code,
+                        currency: _.toString(),
+                        appid: _.toString(),
+                        market_hash_name: _,
+                      }),
+                      _ = `${_._.COMMUNITY_BASE_URL}market/priceoverview/?${_.toString()}`,
+                      _ = await fetch(_, {
+                        method: "GET",
+                      });
+                    return await _.json();
+                  },
+                };
+              })(_, _, _),
+            ));
+        var _, _, _;
+        return _.createElement(
+          _._,
+          {
+            paddingStart: "3",
+          },
+          (null == _ ? void 0 : _.lowest_price) &&
+            _.createElement(
+              _._,
+              {
+                _: "div",
+              },
+              _("#SellOnMarket_LowestPrice", _.lowest_price),
+            ),
+          (null == _ ? void 0 : _.volume) &&
+            _.createElement(
+              _._,
+              {
+                _: "div",
+              },
+              _("#SellOnMarket_Volume", _.volume),
+            ),
+        );
+      }
+      function _() {
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(
+            _._,
+            {
+              color: "green",
+              onClick: () => window.SellCurrentSelection(),
+              size: "1",
+            },
+            _("#SellOnMarket_SellThisItem"),
+          ),
+        );
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return _.createElement(
+          _._,
+          {
+            position: "relative",
+            title: _("#ItemDescription_TradeProtectedTooltip"),
+          },
+          _.createElement(
+            _._,
+            {
+              className: _.TradeProtectionLabel,
+            },
+            _("#ItemDescription_TradeProtected"),
+          ),
+          _.createElement(_._, {
+            className: _.TradeProtectionIcon,
+            alt: _("#ItemDescription_TradeProtected"),
+            src: `${_._.COMMUNITY_CDN_URL}public/images/economy/protected_items_badge2.png`,
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1109,11 +1313,24 @@
               height: "196px",
               align: "center",
               justify: "start",
+              position: "relative",
             },
             _.createElement("img", {
               src: _,
               alt: _.name,
             }),
+            !!_.sealed &&
+              _.createElement(
+                _._,
+                {
+                  position: "absolute",
+                  style: {
+                    left: "0",
+                    bottom: "0",
+                  },
+                },
+                _.createElement(_, null),
+              ),
           );
         },
         Separator: function () {
@@ -1134,6 +1351,37 @@
               asset: _,
             }),
           );
+        },
+        FraudWarnings: function () {
+          const { fraudwarnings: _ } = _();
+          return _ && 0 != _.length
+            ? _.createElement(
+                _._,
+                {
+                  borderColor: "dull-6",
+                  padding: "2",
+                  background: "dull-4",
+                },
+                _.map((_, _) =>
+                  _.createElement(
+                    _._,
+                    {
+                      key: _,
+                      color: "red-9",
+                      _: "div",
+                    },
+                    _.createElement(_, {
+                      style: {
+                        height: "1.25em",
+                        verticalAlign: "text-bottom",
+                        marginInlineEnd: "4px",
+                      },
+                    }),
+                    _,
+                  ),
+                ),
+              )
+            : null;
         },
         GameInfo: function () {
           var _;
@@ -1191,11 +1439,15 @@
         },
         Descriptions: function () {
           const _ = _();
-          return _.createElement(_, {
-            description: _,
-            contrast: "description",
-            size: "3",
-          });
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_, {
+              description: _,
+              contrast: "description",
+              size: "3",
+            }),
+          );
         },
         Actions: function () {
           const _ = _(),
@@ -1242,9 +1494,48 @@
                   size: "3",
                   contrast: "note",
                 },
-                "Tags: ",
+                _("#ItemDescription_Tags"),
+                " ",
                 " ",
                 _.map((_) => _.localized_tag_name).join(", "),
+              )
+            : null;
+        },
+        SellOnMarket: function () {
+          const _ = _(),
+            _ = _();
+          if (!_.marketable || !_._.logged_in || !_ || _ != _._.steamid)
+            return null;
+          const _ = _.market_hash_name || _.market_name || _.name;
+          return _
+            ? _.createElement(
+                _._,
+                {
+                  background: "dull-3",
+                  padding: "2",
+                  gapY: "3",
+                  direction: "column",
+                },
+                _.createElement(
+                  _._,
+                  {
+                    _: "div",
+                  },
+                  _.createElement(
+                    _,
+                    {
+                      underline: "auto",
+                      color: "greyneutral-12",
+                      href: `${_._.COMMUNITY_BASE_URL}market/listings/${_.appid}/${encodeURIComponent(_)}`,
+                    },
+                    _("#SellOnMarket_View"),
+                  ),
+                ),
+                _.createElement(_, {
+                  appid: _.appid,
+                  hashName: _,
+                }),
+                _.createElement(_, null),
               )
             : null;
         },
@@ -1263,15 +1554,34 @@
             _.createElement(_.Image, null),
             _.createElement(_.Separator, null),
             _.createElement(_.Name, null),
+            _.createElement(_.FraudWarnings, null),
             _.createElement(_.GameInfo, null),
             _.createElement(_.Descriptions, null),
             _.createElement(_.Actions, null),
             _.createElement(_.OwnerDescriptions, null),
             _.createElement(_.OwnerActions, null),
             _.createElement(_.Tags, null),
+            _.createElement(_.SellOnMarket, null),
           ),
         );
       }, _);
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 20 20",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M5.37033 3.07108C6.74074 2.15541 8.35191 1.66666 10.0001 1.66666C11.0944 1.66666 12.1781 1.88221 13.1891 2.301C14.2002 2.71979 15.1188 3.33362 15.8926 4.10744C16.6665 4.88126 17.2803 5.79992 17.6991 6.81097C18.1179 7.82202 18.3334 8.90565 18.3334 10C18.3334 11.6482 17.8447 13.2593 16.929 14.6297C16.0133 16.0002 14.7118 17.0683 13.1891 17.699C11.6664 18.3297 9.99084 18.4948 8.37433 18.1732C6.75782 17.8517 5.27297 17.058 4.10753 15.8926C2.94209 14.7271 2.14842 13.2423 1.82687 11.6258C1.50533 10.0092 1.67036 8.33369 2.30109 6.81097C2.93182 5.28825 3.99992 3.98676 5.37033 3.07108ZM12.2223 5L11.389 10H8.61119L7.77786 5H12.2223ZM11.9445 13.0556C11.9445 14.1294 11.074 15 10.0001 15C8.92619 15 8.05564 14.1294 8.05564 13.0556C8.05564 11.9817 8.92619 11.1111 10.0001 11.1111C11.074 11.1111 11.9445 11.9817 11.9445 13.0556Z",
+          }),
+        );
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1584,6 +1894,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -1619,7 +1932,7 @@
               ..._,
               variant: _,
               size: __webpack_require__,
-              className: _.Button,
+              className: _()(_.Button, (0, _._)()),
             },
             _,
           ),
@@ -2444,6 +2757,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2534,6 +2848,16 @@
             className: (_) => _[`TextSize-${_}`],
           },
         ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _() {
+        return _.Reset;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2774,8 +3098,8 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             variant: _ = "default",
@@ -2877,7 +3201,7 @@
           ref: _,
           type: "text",
           ..._,
-          className: _()(_.Reset, _.TextInput, _),
+          className: _()((0, _._)(), _.TextInput, _),
           value: _ || "",
           onChange: (_) => {
             __webpack_require__(_.target.value), _ && _(_);
@@ -3571,16 +3895,28 @@
           cssProperty: "--grid-flow",
         },
         {
-          prop: "align",
+          prop: "alignContent",
           responsive: !0,
-          className: _.Align,
-          cssProperty: "--grid-align",
+          className: _.AlignContent,
+          cssProperty: "--grid-align-content",
         },
         {
-          prop: "justify",
+          prop: "justifyContent",
           responsive: !0,
-          className: _.Justify,
-          cssProperty: "--grid-justify",
+          className: _.JustifyContent,
+          cssProperty: "--grid-justify-content",
+        },
+        {
+          prop: "alignItems",
+          responsive: !0,
+          className: _.AlignItems,
+          cssProperty: "--grid-align-items",
+        },
+        {
+          prop: "justifyItems",
+          responsive: !0,
+          className: _.JustifyItems,
+          cssProperty: "--grid-justify-items",
         },
         {
           prop: "gap",
@@ -3608,13 +3944,21 @@
           className: _.Skeleton,
         });
       }
+      const _ = {
+        _: "rotate( 180, 10, 10 )",
+        left: "rotate( 90, 10, 10 )",
+        right: "rotate( 270, 10, 10 )",
+      };
       function _(_) {
+        const { direction: _ = "down" } = _,
+          _ = _[_];
         return _.createElement(
           _,
           {
             ..._,
           },
           _.createElement("path", {
+            transform: _,
             _: "M5.14541 6.89977L10.0063 12.2027L14.8671 6.89977C15.3557 6.36674 16.145 6.36674 16.6336 6.89977C17.1221 7.4328 17.1221 8.29385 16.6336 8.82688L10.8832 15.1002C10.3946 15.6333 9.60537 15.6333 9.11678 15.1002L3.36644 8.82688C2.87785 8.29385 2.87785 7.4328 3.36644 6.89977C3.85503 6.38041 4.65682 6.36674 5.14541 6.89977Z",
             fill: "currentColor",
           }),
@@ -8931,8 +9275,12 @@
           if (_ in _.factories) break;
           _ = _.parent;
         }
-        const _ = (null !== (_ = _.factories[_]) && void 0 !== _ ? _ : _)();
-        return (_.instances[_] = _), _;
+        const _ = (
+          null !== (_ = null == _ ? void 0 : _.factories[_]) && void 0 !== _
+            ? _
+            : _
+        )();
+        return ((null != _ ? _ : _).instances[_] = _), _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

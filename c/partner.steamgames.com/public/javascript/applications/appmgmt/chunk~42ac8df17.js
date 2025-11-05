@@ -92,6 +92,7 @@
         IgnoreButtonText: "_1gTs9_O1m2-Sibih5GJ43d",
         IgnoreLoadingText: "_2R3kegZfZASFduBjtw168d",
         WishlistButtonNotTop: "_3VcyYP_egkOaX_rJ1e_SQk",
+        FollowGameButtonNotTop: "_3BT5AfGR6BYqJdn9DbgwtX",
         BottomShelf: "oAqlZTgPU37Nb8gBT5eAM",
         BottomShelfOffScreen: "_36zpRzyxmtd8eBgf7p9Ewi",
         ShortDescription: "_1JiQcVD1LUE2KxWb_oOv-K",
@@ -452,6 +453,7 @@
           "calendarevent",
           "color",
           "bgcolor",
+          "userpolls",
         ],
         _ = [
           "h1",
@@ -3501,9 +3503,10 @@
       }
       function _(_) {
         return (
-          "items" === _ ||
-          "trailercarousel" === _ ||
-          "crosspromotesalepage" == _
+          "items" == _ ||
+          "trailercarousel" == _ ||
+          "crosspromotesalepage" == _ ||
+          "creator_list" == _
         );
       }
       !(function (_) {
@@ -9743,10 +9746,10 @@
           return null != _ && "object" == typeof _ && !Array.isArray(_);
         }
         GetListTitle(_) {
-          return this.LazyInit(), this.m_mapListToTitle.get(_);
+          return this.LazyInit(), _ ? this.m_mapListToTitle.get(_) : void 0;
         }
         GetListSubtitle(_) {
-          return this.LazyInit(), this.m_mapListToSubtitle.get(_);
+          return this.LazyInit(), _ ? this.m_mapListToSubtitle.get(_) : void 0;
         }
       }
       (0, _._)([_._], _.prototype, "m_mapListToTitle", void 0),
@@ -9938,6 +9941,9 @@
         }
         BIsGameIgnored(_) {
           return this.m_mapIgnoredApps && this.m_mapIgnoredApps.has(_);
+        }
+        BIsGameFollowed(_) {
+          return this.m_setFollowedApps && this.m_setFollowedApps.has(_);
         }
         BIsPackageIgnored(_) {
           return this.m_mapIgnoredPackages?.has(_);
@@ -19878,7 +19884,7 @@
             [_] = (0, _._)(_, {}),
             [_, _] = (0, _.useState)(!1),
             _ = (0, _._)("GameHoverIgnoreButton"),
-            _ = _ && _._.Get().BIsGameWishlisted(_);
+            _ = _ && _._.Get().BIsGameIgnored(_);
           return _.createElement(
             "div",
             {
@@ -20166,6 +20172,7 @@
             bHidePrice: _,
             bUseSubscriptionLayout: _,
             strExtraParams: _,
+            children: _,
             nCreatorAccountID: _,
             nWidthMultiplier: _,
             bShowDeckCompatibilityDialog: _,
@@ -20216,16 +20223,24 @@
           },
           _ = _.createElement(_, {
             ..._,
-          });
+          }),
+          _ = _
+            ? _.createElement(
+                "a",
+                {
+                  href: _,
+                },
+                _,
+              )
+            : _;
         return _.createElement(
           _,
           {
             hoverContent: _,
-            strClickUrl: _,
             nWidthMultiplier: _,
             ..._,
           },
-          _.children,
+          _,
         );
       }
       function _(_) {
@@ -20265,7 +20280,6 @@
             hoverContent: _,
             hoverProps: __webpack_require__,
             nDelayShowMs: _,
-            strClickUrl: _,
             nWidthMultiplier: _,
             children: _,
             className: _,
@@ -20274,13 +20288,12 @@
           _ = (0, _._)(),
           _ = !_ && !_,
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0),
-          _ = _ ? "a" : "div";
+          [_, _] = _.useState(void 0);
         return _.createElement(
-          _,
+          "div",
           {
             "data-key": "hover div",
-            className: (0, _._)(_().ItemHoverSource, _ && _().Selectable, _),
+            className: (0, _._)(_().ItemHoverSource, _),
             onMouseEnter: (_) => {
               _(!0), _(_.currentTarget);
             },
@@ -20290,7 +20303,6 @@
               27 == _.keyCode &&
                 (_(!1), _.preventDefault(), _.stopPropagation());
             },
-            href: _,
           },
           _ &&
             _.createElement(

@@ -134,6 +134,7 @@
         IgnoreButtonText: "_1gTs9_O1m2-Sibih5GJ43d",
         IgnoreLoadingText: "_2R3kegZfZASFduBjtw168d",
         WishlistButtonNotTop: "_3VcyYP_egkOaX_rJ1e_SQk",
+        FollowGameButtonNotTop: "_3BT5AfGR6BYqJdn9DbgwtX",
         BottomShelf: "oAqlZTgPU37Nb8gBT5eAM",
         BottomShelfOffScreen: "_36zpRzyxmtd8eBgf7p9Ewi",
         ShortDescription: "_1JiQcVD1LUE2KxWb_oOv-K",
@@ -12002,8 +12003,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12453,7 +12456,7 @@
             [_] = (0, _._)(_, {}),
             [_, _] = (0, _.useState)(!1),
             _ = (0, _._)("GameHoverIgnoreButton"),
-            _ = _ && _._.Get().BIsGameWishlisted(_);
+            _ = _ && _._.Get().BIsGameIgnored(_);
           return _.createElement(
             "div",
             {
@@ -12485,6 +12488,38 @@
             ),
           );
         });
+      function _(_) {
+        const { appID: _, classOverride: __webpack_require__ } = _,
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _._)("GameHoverIgnoreButton"),
+          _ = (0, _._)(() => _ && _._.Get().BIsFollowingCurator(_));
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().IgnoreButton, __webpack_require__),
+            onClick: async (_) => {
+              _.preventDefault(),
+                _.stopPropagation(),
+                _._.logged_in
+                  ? (_(!0),
+                    await _._.Get().UpdateFollowingApp(_, !_),
+                    _.token.reason || _(!1))
+                  : (0, _._)();
+            },
+          },
+          _ ? _.createElement(_.pPV, null) : _.createElement(_.c9e, null),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _().IgnoreButtonText,
+                _ && _().IgnoreLoadingText,
+              ),
+            },
+            (0, _._)(_ ? "#Sale_StopFollowingGame" : "#Sale_FollowGame"),
+          ),
+        );
+      }
       function _(_) {
         const { nCreatorAccountID: _ } = _,
           [__webpack_require__, _] = (0, _._)(_),
@@ -12741,6 +12776,7 @@
             bHidePrice: _,
             bUseSubscriptionLayout: _,
             strExtraParams: _,
+            children: _,
             nCreatorAccountID: _,
             nWidthMultiplier: _,
             bShowDeckCompatibilityDialog: _,
@@ -12791,16 +12827,24 @@
           },
           _ = _.createElement(_, {
             ..._,
-          });
+          }),
+          _ = _
+            ? _.createElement(
+                "a",
+                {
+                  href: _,
+                },
+                _,
+              )
+            : _;
         return _.createElement(
           _,
           {
             hoverContent: _,
-            strClickUrl: _,
             nWidthMultiplier: _,
             ..._,
           },
-          _.children,
+          _,
         );
       }
       function _(_) {
@@ -12840,7 +12884,6 @@
             hoverContent: _,
             hoverProps: __webpack_require__,
             nDelayShowMs: _,
-            strClickUrl: _,
             nWidthMultiplier: _,
             children: _,
             className: _,
@@ -12849,13 +12892,12 @@
           _ = (0, _._)(),
           _ = !_ && !_,
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0),
-          _ = _ ? "a" : "div";
+          [_, _] = _.useState(void 0);
         return _.createElement(
-          _,
+          "div",
           {
             "data-key": "hover div",
-            className: (0, _._)(_().ItemHoverSource, _ && _().Selectable, _),
+            className: (0, _._)(_().ItemHoverSource, _),
             onMouseEnter: (_) => {
               _(!0), _(_.currentTarget);
             },
@@ -12865,7 +12907,6 @@
               27 == _.keyCode &&
                 (_(!1), _.preventDefault(), _.stopPropagation());
             },
-            href: _,
           },
           _ &&
             _.createElement(

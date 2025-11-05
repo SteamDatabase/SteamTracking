@@ -155,6 +155,28 @@ body.v6 .game_area_purchase h2.package_group {
 	display: block;
 }
 
+.gamehighlight_desktopskeleton_itemview {
+	background-color: #000000;
+	background-color: rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	position: relative;
+
+	aspect-ratio: 600 / 338;
+}
+
+.gamehighlight_desktopskeleton_stripitems {
+	background-color: #000000;
+	background-color: rgba(0, 0, 0, 0.2);
+	height: 65px;
+	margin: 6px 0px;
+}
+
+.gamehighlight_desktopskeleton_stripscrollbar {
+	background-color: #000000;
+	background-color: rgba(0, 0, 0, 0.2);
+	height: 18px;
+}
+
 .highlight_player_item {
 	position: absolute;
 	top: 0;
@@ -2619,13 +2641,21 @@ a.friend_block_holder:hover {
 	padding-bottom: 1px;
 }
 
-.demo_area_button {
-
+/* wishlist */
+#add_to_wishlist_area,
+#add_to_wishlist_area_success,
+#add_to_wishlist_area_fail {
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	gap: 1px;
 }
-
-#add_to_wishlist_area, #add_to_wishlist_area_success, #add_to_wishlist_fail {
-    display: inline-block;
-    position: relative;
+#add_to_wishlist_area a,
+#add_to_wishlist_area_success a,
+#add_to_wishlist_area_fail a {
+	width: 100%;
+	text-align: center;
 }
 
 #add_to_wishlist_area_success .wishlist_added_temp_notice {
@@ -2727,9 +2757,7 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
 }
-.queue_btn_menu {
-	margin-left: -2px;
-}
+
 .queue_btn_menu .btn_medium > span {
 	padding: 0px;
 }
@@ -2738,15 +2766,24 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	border-bottom-right-radius: 0px;
 }
 .queue_btn_menu > .queue_menu_arrow {
+	height: 100%;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+
 	border-top-right-radius: 2px;
 	border-bottom-right-radius: 2px;
 	border: none;
 	padding: 1px;
-	display: inline-block;
 	cursor: pointer;
 	text-decoration: none !important;
 	color: #67c1f5 !important;
 	background: rgba(103, 193, 245, 0.2);
+}
+
+#ignoreBtn {
+	flex-direction: row;
+	gap: 1px;
 }
 
 .queue_btn_menu > .queue_menu_arrow.queue_btn_active {
@@ -3029,7 +3066,7 @@ img.package_header {
 }
 
 .queue_overflow_ctn {
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 
 .queue_ctn {
@@ -3042,6 +3079,21 @@ img.package_header {
 
 .queue_ctn .queue_actions_ctn {
 	padding: 16px;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 6px;
+}
+@media screen and (max-width: 1330px ) {
+	html.responsive .next_in_queue_area {
+		width: 177px;
+	}
+}
+
+.queue_ctn .queue_actions_ctn .expand_to_fill {
+	flex-grow: 1;
 }
 
 .queue_ctn.in_queue .queue_actions_ctn {
@@ -3050,32 +3102,19 @@ img.package_header {
     position: relative;
 }
 
-.queue_actions_ctn .btn_medium {
-	margin-bottom: 4px;
-}
-
 .next_in_queue_area {
-	float: right;
-}
-
-.queue_ctn .queue_settings_link_ctn.queue_reason_description {
-	text-align: right;
-	font-size: 12px;
-	margin-bottom: 0;
-	margin-right: -8px;
-	line-height: 15px;
+	position: relative;
+	width: 155px;
 }
 
 .btn_next_in_queue {
+	position: absolute;
 	background: url('/public/images/v6/app/queue_next_btn.png') top left no-repeat;
 	width: 205px;
 	height: 75px;
+	top: -10px;
 	cursor: pointer;
 	background-size: 100% 200%;
-	margin-bottom: -26px;
-	margin-right: -72px;
-	margin-top: -9px;
-	float: right;
 }
 
 .mature_content_notice {
@@ -3158,13 +3197,6 @@ img.package_header {
 	html.responsive .queue_ctn {
 		width: auto;
 	}
-	html.responsive .next_in_queue_area {
-		max-width: 40%;
-	}
-	html.responsive .btn_next_in_queue {
-		max-width: 100%;
-		margin-right: -26px;
-	}
 }
 @media screen and (max-width: 600px)
 {
@@ -3206,16 +3238,22 @@ img.package_header {
 .agegate_text_container .btn_next_in_queue span.finish_queue_text {
 	line-height: 13px;
 }
+.queue_ctn .queue_reason_description_row {
+	width: 100%;
+	padding: 6px 16px 0 16px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 
+}
 .queue_ctn .queue_reason_description {
-    margin-bottom: 9px;
     color: #61696d;
 	font-size: 13px;
 }
 @media screen and (max-width: 600px)
 {
-    html.responsive .queue_ctn .queue_reason_description,
-    html.responsive .queue_ctn .queue_settings_link_ctn.queue_reason_description{
+    html.responsive .queue_ctn .queue_reason_description_row {
         display: none;
     }
 }
@@ -3230,13 +3268,16 @@ img.package_header {
 .queue_controls_description {
 	color: #ffcc6a;
 	font-size: 12px;
-	padding: 6px; 16px;
+	padding: 6px 225px 6px 16px;
 	background: -webkit-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);
 	background: linear-gradient( to right, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);
 }
 
-.queue_control_button {
-	display: inline-block;
+.queue_ctn .queue_settings_link_ctn.queue_reason_description {
+	text-align: right;
+	font-size: 12px;
+	margin-bottom: 0;
+	line-height: 15px;
 }
 
 body.v6 .game_area_already_owned.page_content {
@@ -5225,6 +5266,12 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 		padding-right: 0;
 	}
 
+	html.responsive .game_page_background_ctn {
+		 width: 96vw;
+		 overflow: hidden;
+		 min-width: unset;
+	 }
+
 	html.responsive #game_highlights,
 	html.responsive #game_highlights .rightcol {
 		width: auto;
@@ -5243,6 +5290,12 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 		overflow: hidden;
 		padding-right: 0;
 	}
+
+	html.responsive.tablet .game_page_background_ctn {
+		 width: 96vw;
+		 overflow: hidden;
+		 min-width: unset;
+	 }
 
 	html.responsive.tablet #game_highlights,
 	html.responsive.tablet #game_highlights .rightcol {
@@ -6099,8 +6152,8 @@ p.reason.for:before {
 	vertical-align: top;
 	width: 16px;
 	height: 16px;
-	background-image: url(/public/images/v6/app/game_reasons_for.png);
-
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/icon_check.svg' );
+	background-size: 16px 16px;
 }
 
 p.reason.against:before {
@@ -6111,8 +6164,8 @@ p.reason.against:before {
 	vertical-align: top;
 	width: 16px;
 	height: 16px;
-	background-image: url(/public/images/v6/app/game_reasons_not.png);
-
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/icon_close.svg' );
+	background-size: 16px 16px;
 }
 
 p.reason.info:before {
@@ -6123,8 +6176,12 @@ p.reason.info:before {
 	vertical-align: top;
 	width: 16px;
 	height: 16px;
-	background-image: url(/public/images/v6/app/game_reasons_info.png);
+	background-image: url( 'https://cdn.fastly.steamstatic.com/store/icons/icon_information.svg' );
+	background-size: 16px 16px;
 
+	svg {
+		fill: #ffd43a;
+	}
 }
 
 
@@ -6616,14 +6673,6 @@ a.open_in_steam_body:hover {
 	padding-top: 40px;
 	padding-bottom: 20px;
 	margin-top: 20px;
-}
-
-
-@media screen and (min-width: 1200px ) and ( max-width: 1320px )
-{
-	body.v6.widestore .related_items_ctn .page_content {
-		width: calc( 100vw - 120px );
-	}
 }
 
 .editions_purchase_options_container {

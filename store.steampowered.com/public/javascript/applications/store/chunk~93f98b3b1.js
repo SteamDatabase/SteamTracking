@@ -1510,6 +1510,7 @@
                     pbr: n.qM.readPackedUint32,
                     bw: n.gp.writeRepeatedUint32,
                   },
+                  purchaseable: { n: 6, br: n.qM.readBool, bw: n.gp.writeBool },
                 },
               }),
             O.sm_m

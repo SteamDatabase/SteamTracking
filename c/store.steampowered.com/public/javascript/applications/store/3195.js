@@ -74,7 +74,7 @@
 	"Menu_Section_Browse_Discounts_PopularTitles": "Popüler Ürünler",
 	"Menu_Section_Browse_Discounts_SpecialOffers": "Özel Teklifler",
 	"Menu_Section_Recommendations": "Tavsiyeler",
-	"Menu_Section_Recommendations_NewReleasesQueue": "Yeni Yayınlananlar Kuyruğu",
+	"Menu_Section_Recommendations_NewReleasesQueue": "Yeni Çıkanlar Kuyruğu",
 	"Menu_Section_Recommendations_CommunityRecommendations": "Topluluk Tavsiyeleri",
 	"Menu_Section_Recommendations_InteractiveRecommender": "İnteraktif Tavsiye Sistemi",
 	"Menu_Section_Recommendations_PersonalCalendar": "Kişisel Takviminiz",

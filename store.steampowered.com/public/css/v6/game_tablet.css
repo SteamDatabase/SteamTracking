@@ -758,6 +758,7 @@ html.tablet #add_to_wishlist_area_success a,
 html.tablet #add_to_wishlist_area_fail a {
 	width: 100%;
 	text-align: center;
+	white-space: nowrap;
 }
 
 html.tablet #wishlistDropDown {
@@ -778,6 +779,7 @@ html.tablet #view_wishlist_btn.btnv6_blue_hoverfade {
 /* button row below wishlist */
 html.tablet .queue_actions_ctn {
 	padding: 15px 24px 0px !important;
+	flex-wrap: wrap;
 }
 html.tablet .queue_actions_ctn p {
 	margin-bottom: 10px;

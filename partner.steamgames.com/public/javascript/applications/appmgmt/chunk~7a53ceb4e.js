@@ -307,6 +307,12 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
+          user_poll_background: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: m,
+          },
           spotlight_art: {
             width: [306, 374],
             height: [260, 448],

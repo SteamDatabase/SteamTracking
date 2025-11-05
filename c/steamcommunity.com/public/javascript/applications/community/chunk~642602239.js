@@ -6488,6 +6488,8 @@
             bMuted: _,
             className: _,
             mediaScale: _,
+            onClick: _,
+            altText: _,
           } = _,
           _ = (0, _.useMemo)(() => {
             var _;
@@ -6550,6 +6552,8 @@
             },
             ref: _,
             className: _,
+            onClick: _,
+            "aria-label": _,
             style: {
               width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
             },

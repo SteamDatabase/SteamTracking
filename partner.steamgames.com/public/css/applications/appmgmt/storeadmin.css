@@ -568,6 +568,9 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 ._30v-6zb_axOypIUr5VRHE1 > .ProseMirror {
   padding: 12px;
 }
+._2i9qH2AM6Wg5660Tkf_fTt .ProseMirror {
+  min-height: unset !important;
+}
 p.pm_paragraph {
   min-height: 8px;
 }
@@ -2785,7 +2788,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   position: relative;
   flex-shrink: 0;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 910px) {
   ._78Qv2C95AM2DNCuLD5o8U {
     width: 100%;
   }
@@ -2800,6 +2803,7 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 1;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   background: rgba(255, 255, 255, 0.1);
   padding: 6px 12px;

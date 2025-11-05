@@ -6590,3 +6590,9 @@ body.v6.widestore #store_header {
 		width: 98%;
 	}
 }
+
+@media screen and (max-width: 1325px) and (min-width: 910px) {
+	body.v6.widestore .related_items_ctn .page_content {
+		width: calc(100vw - 144px);
+	}
+}

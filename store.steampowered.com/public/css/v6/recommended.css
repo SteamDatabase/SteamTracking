@@ -3546,6 +3546,7 @@ p.outliers_options {
 
 			display: flex;
 	flex-direction: column;
+	justify-content: center;
 	width: 40%;
 	height: -webkit-fill-available;
 	gap: 8px;
@@ -3553,7 +3554,7 @@ p.outliers_options {
 
 .outlier_totals {
 	width: 100%;
-	height: -webkit-fill-available;
+	height: 50%;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;

@@ -109,6 +109,16 @@
     },
     chunkid: (module) => {
       module.exports = {
+        PollBackground: "_1id2J6OtlRj0Ppiuep3ha",
+        PollContainer: "_3yFlyjtNdLP96hRQ92y9we",
+        PollQuestion: "_2ImZrvyKjXKlnNM6h_7qHT",
+        PollOptions: "_1-_aGrJzdFf8uYUfDKEn30",
+        PollOption: "_3hNd0q0tYO12nPDCPsT8sm",
+        Selected: "_3Nv8BLF6dRk932f5NhyNIH",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         sketchfab_play_overlay_image: "j_bDCIOMLFNOKaIFJzk2_",
         sketchfabmodelembedded: "_1hkVJ0EfOR3lTom2cDAN4w",
         dynamiclink_box: "_2OrALNR-dII7L3YP3pXWBG",
@@ -6670,10 +6680,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC";
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -6694,7 +6702,7 @@
                 ScrollSnapCarousel: !0,
                 SaleSectionCarousel: !0,
                 SaleSectionCarouselPadding: _,
-                [_.className]: !0,
+                ["" + _.className]: !!_.className,
               }),
             },
             _,
@@ -6713,8 +6721,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         render() {
           const {
@@ -6932,23 +6940,50 @@
                           _.className?.includes("template-carousel"),
                       }),
                     },
-                    ((_) =>
-                      _.Children.map(_.children, (_, _) =>
-                        _ % _ != 0
-                          ? null
-                          : _.createElement(
-                              _._,
-                              {
-                                slide: _,
-                                className: _.pip,
-                              },
-                              _.createElement("img", {
-                                src: _,
-                              }),
-                            ),
-                      ))(_),
+                    _.createElement(
+                      _,
+                      {
+                        ..._,
+                        nPageSize: _,
+                      },
+                      _.children,
+                    ),
                   )),
           ),
+        );
+      }
+      function _(_) {
+        const { nPageSize: _ } = _,
+          _ = _.useContext(_._),
+          [_, _] = _.useState(_.state.currentSlide);
+        return (
+          _.useEffect(
+            () =>
+              __webpack_require__.subscribe(() => {
+                _(_.state.currentSlide);
+              }),
+            [_],
+          ),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.Children.map(_.children, (_, _) => {
+              if (_ % _ != 0) return null;
+              const _ = _ >= _ && _ < _ + _;
+              return _.createElement(
+                _._,
+                {
+                  key: _,
+                  slide: _,
+                  className: _.pip,
+                },
+                _.createElement(_._, {
+                  ..._,
+                  bIsActive: _,
+                }),
+              );
+            }),
+          )
         );
       }
       function _(_) {
@@ -10171,11 +10206,12 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = (_) => {
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(!0),
-          [_, _] = (0, _.useState)(null);
+          [_, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(void 0);
         if (
           ((0, _.useEffect)(() => {
             if (0 == _.appid || 0 == _.trailerBaseID)
@@ -10187,10 +10223,9 @@
                 }),
                 _._.Get().BHasApp(_.appid))
               ) {
-                _._.Get()
-                  .GetApp(_.appid)
-                  .GetAllTrailers()
-                  .GetTrailerByID(_.trailerBaseID) ||
+                const _ = _._.Get().GetApp(_.appid),
+                  _ = _?.GetAllTrailers()?.GetTrailerByID(_.trailerBaseID);
+                _ ||
                   (console.error(
                     "Trailer " +
                       _.trailerBaseID +
@@ -10204,6 +10239,7 @@
                       _.trailerBaseID,
                     ),
                   )),
+                  _(_),
                   __webpack_require__(!1);
               } else
                 _(
@@ -10231,31 +10267,18 @@
             string: (0, _._)("#Loading"),
             size: "small",
           });
-        const _ = _._.Get()
-            .GetApp(_.appid)
-            .GetAllTrailers()
-            .GetTrailerByID(_.trailerBaseID),
-          _ = _.GetTrailerMax(),
-          _ = {
-            sPoster: _.GetScreenshot(),
-            rgVideoSources: [
-              {
-                sURL: _.strWebMURL,
-                sFormat: "video/webm",
-              },
-              {
-                sURL: _.strMP4URL,
-                sFormat: "video/mp4",
-              },
-            ],
-          };
+        if (!_) return null;
+        const _ = _.GetTrailersDash(),
+          _ = _.GetTrailerHls();
         return _.createElement(_._, {
-          bControls: !0,
-          bAutoPlay: !1,
-          bLoop: !1,
-          video: _,
+          dashManifests: _ || [],
+          hlsManifest: _ || "",
+          forcePause: !0,
+          screenshot: _.GetScreenshot() || "",
+          altText: _.GetName(),
+          muteWhenAutoplayBlocked: !0,
         });
-      };
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -10602,6 +10625,112 @@
               ),
             );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _.context.event,
+          _ = _.context.showErrorInfo,
+          _ = (0, _._)(_.args, "poll_id"),
+          _ = Number.parseInt(_),
+          _ = (0, _._)(() =>
+            (function (_, _) {
+              const _ = _?.jsondata?.user_polls || [];
+              return __webpack_require__?.find((_) => _.poll_id == _) || null;
+            })(_, _),
+          );
+        if (!_)
+          return _
+            ? _.createElement(
+                "div",
+                {
+                  className: _.ErrorStylesWithIcon,
+                },
+                (0, _._)("#UserPolls_Editor_FailToFindModel", _),
+              )
+            : null;
+        const _ = (0, _._)(_._.LANGUAGE);
+        return _.createElement(
+          _,
+          {
+            userPollDef: _,
+            lang: _,
+            clanAccountID: _.clanSteamID.GetAccountID(),
+          },
+          _.options?.map((_) =>
+            _.createElement(_, {
+              key: "polloption" + _.option_id,
+              lang: _,
+              pollOptionDef: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+            userPollDef: _,
+            lang: __webpack_require__,
+            clanAccountID: _,
+            children: _,
+          } = _,
+          [_, _] = (0, _._)(() => [
+            _._.GetWithFallback(
+              _.localized_poll_description,
+              __webpack_require__,
+            ),
+            _.user_poll_background,
+          ]);
+        let _ = null;
+        return (
+          Boolean(_) &&
+            (_ = {
+              backgroundImage: `url('${(0, _._)(_, _)}')`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }),
+          _.createElement(
+            "div",
+            {
+              className: _().PollBackground,
+              style: _,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().PollContainer,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().PollQuestion,
+                },
+                _,
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().PollOptions,
+                },
+                _,
+              ),
+            ),
+          )
+        );
+      }
+      function _(_) {
+        const { pollOptionDef: _, onClick: __webpack_require__, lang: _ } = _,
+          [_] = (0, _._)(() => [_._.GetWithFallback(_.localized_option, _)]);
+        return _.createElement(
+          "div",
+          {
+            className: _().PollOption,
+          },
+          _,
+        );
+      }
       let _ = null;
       function _() {
         return (
@@ -10794,6 +10923,13 @@
                 "meetsteamscheduleview",
                 {
                   Constructor: _._,
+                  autocloses: !1,
+                },
+              ],
+              [
+                "userpolls",
+                {
+                  Constructor: _,
                   autocloses: !1,
                 },
               ],
@@ -11799,7 +11935,23 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _
+          ? _.startsWith("https://") || _.startsWith("http://")
+            ? _
+            : `${_._.CLAN_CDN_ASSET_URL}images/clan/${_}/${_}`
+          : _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
       var _,
+        _,
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.k_ECutArrowStyle = "single"),
@@ -11807,7 +11959,12 @@
           (_.k_EThickChevron = "chevron"),
           (_.k_EFilledArrow = "filled"),
           (_.k_EPointyArrow = "pointy");
-      })(_ || (_ = {}));
+      })(_ || (_ = {})),
+        (function (_) {
+          (_.k_EPillCrumb = "pill"),
+            (_.k_ECircularCrumb = "circle"),
+            (_.k_ESquareCrumb = "square");
+        })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -11854,6 +12011,33 @@
               fill: _ || "white",
               role: "presentation",
               direction: _ || "left",
+            });
+        }
+      }
+      function _(_) {
+        const {
+            bIsActive: _,
+            breadcrumbActiveColor: __webpack_require__,
+            breadcrumbColor: _,
+            breadcrumbStyle: _,
+          } = _,
+          _ = _ ? __webpack_require__ || "#FFFFFF" : _ || "#606974";
+        switch (_) {
+          default:
+          case _.k_EPillCrumb:
+            return _.createElement(_.IGf, {
+              fill: _,
+              role: "presentation",
+            });
+          case _.k_ECircularCrumb:
+            return _.createElement(_.az8, {
+              fill: _,
+              role: "presentation",
+            });
+          case _.k_ESquareCrumb:
+            return _.createElement(_.koA, {
+              fill: _,
+              role: "presentation",
             });
         }
       }

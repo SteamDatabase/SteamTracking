@@ -5286,3 +5286,57 @@ function UpdateReactNativeClientHeaderData()
 	}
 }
 
+
+function InitAutoCollapseReadMore( elTargets )
+{
+	$J( elTargets ).each( function() {
+		var content = this;
+		var $Content = $J(content);
+		$Content.wrap( $J('<div/>', {'class': 'shared_autocollapse_ctn' } ) );
+
+		var $Container = $Content.parent();
+
+		var $ReadMore = $J('<div/>', {'class': 'shared_autocollapse_readmore' }).text( 'READ MORE' );
+		var $Fade = $J('<div/>', {'class': 'shared_autocollapse_fade' } ).append( $ReadMore );
+		$Container.append( $Fade );
+
+		var nInterval = 0;
+		var nMaxHeight = parseInt( $Content.css('max-height') );
+		var bMaxHeightSet = true;
+
+		$Content.on( 'shared_autocollapse_expand', function() {
+			if ( $Container.hasClass( 'collapsed' ) )
+			{
+				$Container.removeClass( 'collapsed' );
+				$Container.addClass( 'expanded' );
+
+				if ( bMaxHeightSet )
+				{
+					$Content.animate( {'max-height': content.scrollHeight + 20 + 'px'}, 'fast', null, function() { $Content.css('max-height', 'none' ); } );
+				}
+				window.clearInterval( nInterval );
+			}
+		});
+
+		$ReadMore.click( function() { $Content.trigger('shared_autocollapse_expand'); } );
+
+		var fnCheckHeight = function ()	{
+			if ( content.scrollHeight > nMaxHeight + 30 )
+			{
+				$Content.css( 'max-height', nMaxHeight + 'px' );
+				$Container.addClass( 'collapsed' );
+				window.clearInterval( nInterval );
+				bMaxHeightSet = true;
+			}
+			else if ( bMaxHeightSet )
+			{
+				$Content.css( 'max-height', 'none' );
+				bMaxHeightSet = false;
+			}
+		};
+
+		nInterval = window.setInterval( fnCheckHeight, 250 );
+		fnCheckHeight();
+	});
+}
+

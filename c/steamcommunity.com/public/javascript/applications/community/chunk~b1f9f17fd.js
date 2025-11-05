@@ -140,6 +140,182 @@
     },
     chunkid: (module) => {
       module.exports = {
+        LanguageHeader: "_3lQvIyPYpaHHXs7hQOWgDs",
+        CuratorInfoRow: "_3tR2dfU_Wenr_xcshy1wUY",
+        CuratorInfoImg: "_1BVHFIbcMgjId-0ciy-1ob",
+        CuratorInfoName: "_2X1CS5jZKk28-_m8wP08G8",
+        CuratorInfoTitleCtn: "_3odsmWB7MUrxxcucBMYcgN",
+        CuratorInfoActionCtn: "_2y3rSYHLpo0MERj2EMWQQ9",
+        CuratorInfoPreview: "_1EbwpNpOWS4nmsjolxyUhi",
+        CuratorInfoIcon: "_3Y0jFDFWk_msMNnvpgfjwB",
+        CuratorInfoFollow: "_1I_eQgAgorxHE60P5m2zqq",
+        CuratorHoverContainer: "_38fVPOADgxGJbfbw7jz_uG",
+        CuratorHoverToolTip: "rSTyUxh3-fZYKih45mKb1",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        FeedSuggestContainerBG: "_3ICp4Zk0uKS3wBOo3rcx-6",
+        FeedSuggestContainer: "_1420TVzKCePW589d4gqd4d",
+        FeedSuggestCaption: "_38Zh0nmnrxXlh3yhtCnIPn",
+        RowContainer: "_39bJZgNeIUX9mSWi0r8tNT",
+        ClanInfo: "_2gUTgIVt7XIFc01CxohM9B",
+        DismissButton: "_3YtGjvmV0WmN0i3sdMqGz2",
+        BrowseMore: "_2nWAPvq239PI0lGHmtFmgc",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        strMaxMobileWidth: "700px",
+        strMinMobileHeight: "360px",
+        strDesktopControlBarWidth: "300px",
+        strDesktopGlobalHeaderHeight: "104px",
+        strMobileGlobalHeaderHeight: "62px",
+        strDesktopHubBannerHeight: "80px",
+        strMobileHubBannerHeight: "80px",
+        strJumboHubBannerHeight: "150px",
+        strDesktopGroupHeaderHeight: "70px",
+        strMobileGroupHeaderHeight: "37px",
+        strMobileNavBannerHeight: "52px",
+        strLogInBannerLargeHeight: "239px",
+        strLogInBannerSmallHeight: "70px",
+        HubBanner: "_2zTu0OPJoqo1BXb1J9pDJ2",
+        LargeMode: "_3OnTrhLh97xov3GKenO-l_",
+        CloseFilterPage: "_3XZe_jfTYppPFYW0hZ0LRl",
+        ShowSettings: "_1qCUdL_PYKT0_bKFAFAWQa",
+        ControlPageContainer: "_2LztMgS2eI0MWKHJ3v-l0H",
+        FiltersTitle: "tQZ7I-5Bxpp4zpDf48imu",
+        FiltersDescription: "_17nuaBuSlylN8eWUkcLsAv",
+        SidebarContainer: "_15YLDKm80opUF5Tivo7UK-",
+        SidebarCollapsed: "_3x2Igmho_SeKqPI3_cnWfG",
+        CollapseButton: "_1RCioHSgo99b0iUemHy2OE",
+        DesktopButton: "_2vMIlVM2BeWTC0m5_Ys2WN",
+        SidebarBackground: "_1ZO60tnVO9UhZWFk1zLM4r",
+        Sidebar: "_1nf0vlWuKk9Qn7ncHC5uhq",
+        SidebarTitle: "_3uZE-tI5d1lF6NQwSrxauh",
+        FilterControlPage: "_uX0hAa1v6coYNh6Al4D6",
+        FilterOption: "_2LoObf7xShKZbZ1G71rR_3",
+        FilterSubOption: "_2ctVaeTDGGfjh-pOjQ4ktO",
+        SideBarFilterNavLinks: "fhYfjG7Ry-VB6uq75Ccbm",
+        FilterLink: "_1zyVyzldzUj085oNa8Y0r1",
+        NumberDisplay: "_23qmf5MYL9D2szWuV-txE2",
+        FilterSettingsCtn: "_3CSX8aqaZna9ZM6WLxhZC3",
+        OpenFilterSettings: "_3cMESjaODP5L2fXHzANkNT",
+        SidebarBackLink: "_2NQEg_ngTN4otkyy-9VfGQ",
+        MobileCloseButton: "_3Es2qlfJBkwe2Yqco9B1VL",
+        FilterSection: "_34HOA5NqMETdKvOv8I0QPz",
+        FilterSubSection: "_1Ko6oJ92gSqJKHJhVCi2Pc",
+        FilterSubSectionTitle: "MeJhm7ZvNEcgMNrj4YyRg",
+        ForceResponsiveLink: "_3dRqLQAbzE1yESy7-PmVZK",
+        SidebarLink: "_2VFTM7o6Mn2fvJXYr9mSVo",
+        SidebarManageMutedApps: "_2IWYfBr6LLolwVjYdZcBco",
+        MutedSourcesGroup: "_2B7QL2HvQhNvxTElRnADjb",
+        MutedSourcesCount: "_3nwCq_gduAro-qt7Kt3x6s",
+        SidebarFooter: "_3sXsgTKq8xa1K7EYzNNOBq",
+        FooterLegal: "_3YG_3Z8DhgeYtKBWrOkNAA",
+        MobileButton: "_3cMvc6AfC8k2OaILY81XXB",
+        BodyNoScroll: "_1d-cxT1sPNzIVcm8qsNT7o",
+        EventCalendarContainer: "_1e3WbBz7-mqMKmK8HnpzFF",
+        CollapsedMenu: "WXATz6O52NqxwM0VJR-rV",
+        ReserveControlSpace: "_18npkDI3gKg9S7EeTFOj-2",
+        WideLeftGutter: "ws9ANxmy2MKDDodGRGkqN",
+        LogInFeedRow: "nydHEEVdYQNQyocchG2Kr",
+        RowContainer: "_3yqpPRFLwr6ETVDgLGT37s",
+        Loading: "_2XF_gSfLb9JlFYAqd0PRA8",
+        LoadingProgress: "_2k5Q_MrQn9caFbIUp8eEdr",
+        AdjustFiltersText: "gM9YyLCnVPfTKfy2_Hsue",
+        Rows: "r3Dia2Yw2X-goqFn-_UPT",
+        FutureSection: "_290nkT9By-jIKGFyKBcIn3",
+        PastSection: "_3FpvGiwJqnukNOcrsKd_sN",
+        DarkerBackground: "_1U2BW9tpHKOVi_TG0XvjT",
+        EmptySectionText: "_3TwYr6FsLY9hGiZ2Ed5897",
+        CalendarEventListRow: "_3m6GW1eCeaSg9ypsv0JVD9",
+        CalendarEventListContainer: "_3QenzSfSDt0SQcUy8yeaD-",
+        CalendarRow: "_398u23KF15gxmeH741ZSyL",
+        EventListTitle: "_qpO2uX5bg1l7b0G2FbFI",
+        GroupHeader: "_3j2deAP85R6gftsIWiHe7n",
+        GroupHeaderTitle: "_2aVLRsz60HV81P8VKT3kQj",
+        GroupHeaderLine: "bcTEUtZM5us_nPhh-83J9",
+        SeeAllLink: "_28rp7N0KcAtfF3xtD0m2DZ",
+        SeeAllCount: "IOckOLV5f75IljZ0DqXdX",
+        HorizontalTileContainer: "muk0v4M7AjwCVox0Kk1Q6",
+        HorizontalTiles: "_1YVOyhzWrYyfeINbwhHVqc",
+        HeaderAtTop: "_2VZunYlTR5OcMdubo0AYh_",
+        EndOfRows: "_1lK7p5C13fouRsvpdUxeya",
+        BackToThePast: "_18uWsMJww9J9esJ56PvIGe",
+        MobileSeeAllink: "_3yeVNRj7J_UtR-fgIDVAMr",
+        NoCount: "_2qW89hLYPJtBAANjQ9kJR-",
+        LiveText: "_14EbBf2Uz8VI7xVl0RuDue",
+        UpdatePageBanner: "_1hWgY3UxRcdnjka_axlCxE",
+        LoginPrompt: "_1EXXCsUBCckCnFzBip-EwP",
+        LoginButton: "_1wuxXz1nGOaX_Hj3qnXchJ",
+        SpecialEventListGroup: "_5UEq9U_QY0YTaXXOsSIV2",
+        SpecialEventListTitle: "_2fFKiTlt1nFQb3dFvEaqWW",
+        SpecialEventList: "_3AESvlyhJ0vmRThgNB6Ebb",
+        SpecialEvent: "_2s-UQIMf5ZWwh4641BF6Vy",
+        SpecialEventTitle: "_3xq6Fl5_4RS4LYFK0NJGY1",
+        SpecialEventTime: "_3cGYpNuy_GrG8AK-OwuvIZ",
+        NewsChannelGroup: "_3U5MYaJE0i8UYZ_pUzyNk7",
+        NewsChannelListTitle: "_3X16Tg0OrHJJL36_8dwlHo",
+        NewsChannelList: "_19CIwB_GEUli1IquP3CIHn",
+        NewsChannel: "_1n4vpyqKJYF8lc1kW9fr8-",
+        NewsChannelText: "_2NbubYs7clHa8InE5qSifq",
+        NewsChannelCount: "_1HQl8PnDDWs3V4bob4bBNk",
+        NewsChannelOnPage: "kJoC7bJXT-uU6GorEljio",
+        NewsChannelTitle: "_11O61s8Pr7CrLbKxzm9VMK",
+        NewsChannelSubtitle: "_3_CIMpiaZYsgSD9rEIImZh",
+        DiscoverGroup: "kUY00QAjWvDLtDIbUN5A",
+        NewsChannelIcon: "_2NCtvce1qaFUggZ9OFpf8N",
+        SidePanelGameSearch: "_1LTVIwFRYJjiwzhWzSVOd4",
+        MobileNavBannerCtn: "_20PrZ-yvcNH561NUmAH7_Y",
+        SearchDismiss: "eIKAr3iSqLCgmFyiNryB2",
+        SearchBox: "_2i8gkeopkt1mSdGiNXYmd-",
+        SearchExpanded: "_3rn-PPTfKI7di5ILvkjVyy",
+        SettingsPanel: "tifiV2QTtklqCycSc8RpW",
+        MobileNavHScroll: "yps0ywc-By1zfTHujot5E",
+        MobileNavBannerList: "_3xi45UCnCWYdn3vwsjNkYD",
+        MobileNavButton: "_3kOf_98MdXe617YcQtkFO6",
+        MobileNavCount: "_3m7pyQzrfOHXYdheEaL0oM",
+        MobileNavButtonActive: "_2XXBax726YbJCKgIAAgPhM",
+        CalendarEventList: "_3Pm1aWPIBv2SjplauZbDnI",
+        LogInSmallMode: "_21ANYFXCED2fJk0gtzrBci",
+        LogInFeedText: "_3HgPBoJHm2b4URrMDxMeAs",
+        PromptCtn: "_19gywKI5KqBR4uSRoXMxmB",
+        LogInFeedTitle: "cmQc676wTF0GVI4iDpw_g",
+        LogInButton: "_35WTOIomH5SPesM-UbjHBB",
+        LazyCalendarSectionCtn: "_1_BP6N2tGh4484bcmYnZeX",
+        TimeEventRow: "_2JQL9twuHonw_iuvnsdVBi",
+        TimeEventLastPlayed: "_1QplXJ_L-d0BqrYdzD7uSN",
+        TimeEventWishlisted: "_3_HujJS7DVArS8dgqixpOJ",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        simpleTitleSmallHeight: "80",
+        simpleTitleLargeHeight: "200",
+        SimpleTitleHeaderCtn: "_3VhPz9bkSXYdTyrsNHyclF",
+        CollectionBannerGroup: "XKrAaB35oi_F1FfPvgMIe",
+        AppBannerLogoCtn: "_1Vrsgns9yWeU55IkUV47iw",
+        SimpleTitleCtn: "zWLw0Q_JjKfhgFgSDvBu1",
+        Title: "_1_MCH_a2eJssfIIs2ipZjw",
+        Subtitle: "_2Ym_jx4AIkRhj7T0qvKwhx",
+        LargeHeader: "_1Y7af9n7NgyJVP8OA1voO5",
+        NoHeaderImg: "_1wnpWYTPyd-qnyinYlNKwa",
+        AppBannerLogo: "QDuRwp2w0MLb6hWd0_HT8",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        EventTileCarousel: "_1mKD0MQ507t89Ii7mxDqSO",
+        HorizontalTiles: "_1mUGBQxkYbGPRBk1SDhMHi",
+        EventTileCarouselTitleContainer: "_3I_aGTx-KPOMeeyG7MAhPl",
+        EventTileCarouselTextTitle: "_1kQ9N4FGH5M9XE7WS_Tk4o",
+        EventTileCarouselTitle: "_3X3hCmDBBr2dKG-77H4TuQ",
+        EventTileCarouselFollow: "_1qgVA9sM06WHigo755qFWq",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         strWidescreenWidth: "1700px",
         strMidscreenWidth: "940px",
@@ -196,6 +372,19 @@
       module.exports = {
         TabCtn: "d43sj0ExWatSivXsOo2Qx",
         TabHeader: "_2CnSAWQAuZ56_k9CtX6wvO",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        LanguageFeedNoteBucket: "r8580cv-HTxYA6k0N1n-U",
+        LanguageFeedNoteCtn: "_3jTgs16YR8cjlIdBj-VfXM",
+        BodyFlow: "_1JI7CLvlOj0UNyivvhIaO4",
+        LeftColumn: "_3l03TsLKQ1kgJ9y9srfOtu",
+        RightColumn: "XKuYh_bCSCQcXf-hL_G3Y",
+        Title: "TzlhguvzJY0mbc-5KxGQW",
+        LanguageList: "_1VBz-c24qcoV4360Y5ZW2b",
+        Text: "_1SGbC-0D-qeX8p1wEKWHcN",
+        DismissButton: "_3zHKDN908qfKPXxxiQRS1A",
       };
     },
     chunkid: (module) => {
@@ -671,6 +860,7 @@
         _: "_3TKdKvs7o8kbqWUcJyPuyo",
         _: "_2BZyC-dmzrlUCPfHClu51J",
         _: "_2XQ2s4PGGXTf-33SoML_Nn",
+        HeaderFullWidth: "_3WVU7mb3nrrESqH-ziaueI",
         Left: "_3Bz6jMGpR_Vr3p7g3paBao",
         Right: "_3KumxdhZbtSA8tvxSUkIoq",
         Center: "woD-PhBCDg6E0eRDR9JaP",
@@ -678,6 +868,12 @@
         Description: "r3oaGi8Z4_MjYvdW_zsl5",
         TitleDescriptionCtn: "_1nqoF3NLNjaj2qxQrb7JgV",
         MediaLogo: "FFWRI2x0ufl_AF68kEPIq",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Ctn: "_2zk3LfMWvFtL0Z9LimKvRy",
+        Image: "LzAhsk1JkRt4GtvE6zR_m",
       };
     },
     chunkid: (module) => {
@@ -699,6 +895,25 @@
     },
     chunkid: () => {},
     chunkid: () => {},
+    chunkid: (module) => {
+      module.exports = {
+        LegalFooter: "_2XzXRucgCsdN2x7oRwSJu0",
+        FooterLegal: "_7TrXidlVTKkfcdujKCtM5",
+        mainmenu_socials_china: "sfMZciSGx86izSy_6vXjH",
+        mainmenu_social_box: "_1BGLVq8Z8sJY-fjcMuT2VP",
+        mainmenu_line: "ykCRRQsIcQBjAwGpnQFG7",
+        mainmenu_links_china: "_9ImS9D7NtBJGkHgcrwlUX",
+        mainmenu_legal_china: "_3hCum12eFRKC9ukPg3-305",
+        mainmenu_legal_pwlegal: "_3RFkMNbBZIBVARA4st-AjH",
+        mainmenu_logos_china: "_3D_5cMcjUFurdWptDxoP3y",
+        mainmenu_china_wechat_logo: "_2sDKMGZPUGhXYuJnr4RO2g",
+        mainmenu_china_weibo_logo: "E2dhWjYyH6xGs7zJ2KHC8",
+        mainmenu_china_pw_logo: "_2vnv_k5xmD37qKbr7I8pTr",
+        mainmenu_china_valve_logo: "Ig7VEoh78RH53WEJS3MKv",
+        mainmenu_footer_spacer: "_3w1gNL-euGEyq49PCOGvbQ",
+        china_spacer: "_16fnFsYrB3xAg2va_37FfV",
+      };
+    },
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
@@ -731,6 +946,18 @@
         ProgressDotActive: "_3z2pS3DFn3MEl5ZPw6lsa9",
         ProgressDotSelected: "_1qJVCZsv51RtfBGao-PV8V",
         ProgressDotClickable: "jKfeFH4S6YhaeZ7RCZ8BN",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SuggestContainer: "_2gBFqL_6eXiRN7TI_GDjzF",
+        Results: "_3eXNgAtnlHBfgWZbxO2n3h",
+        EmptyResults: "_3w0K5X735sKAZhhifZGs84",
+        ResultSectionHeader: "_1KK1sGDuxehec0lBB_4lpU",
+        ResultRow: "_16oSf0MiTpUTJe7YQpCV2A",
+        AvatarImage: "_3dr2A8wfoYU0kJtS9ACoR1",
+        GameName: "_3CWrph5moGF_F746uM5tdI",
+        Label: "I1zVikvORZt41zc-QTAsw",
       };
     },
     chunkid: (module) => {
@@ -1081,6 +1308,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1126,21 +1354,54 @@
               onCategoryChosen: __webpack_require__,
               bIsValveOnly: !(_.is_creator_home && !_.is_ogg),
             }),
-          _.valve_admin &&
-            _.is_creator_home &&
-            !_.is_ogg &&
+          Boolean(_.valve_admin && _.is_creator_home && !_.is_ogg) &&
             _.createElement(_._, {
               ..._._.creatorhome,
               onCategoryChosen: __webpack_require__,
               bIsValveOnly: !0,
-              initialSaleJSON: {
-                bSaleEnabled: !0,
-                sale_header_offset: 0,
-              },
+              initialSaleJSON: _(),
               autoSelect: "creatorhome" == _,
             }),
         );
       };
+      function _() {
+        const _ = () => ({
+          capsules: [],
+          events: [],
+          links: [],
+          localized_label: [],
+          localized_label_image: [],
+          default_label: "#Sale_default_label",
+          unique_id: _._.GenerateRandomID(),
+          internal_section_data: null,
+          capsules_per_row_array: [2, 3, 4, 3],
+          carousel_rows: 2,
+          show_as_carousel: !0,
+          smart_section: !0,
+        });
+        return {
+          bSaleEnabled: !0,
+          sale_header_offset: 0,
+          sale_sections: [
+            {
+              ..._(),
+              section_type: "items",
+              smart_section_type: "wishlist",
+            },
+            {
+              ..._(),
+              section_type: "items",
+              smart_section_type: "tag_recommender",
+            },
+            {
+              ..._(),
+              default_label: "#Sale_default_label_62",
+              section_type: "items",
+              smart_section_type: "popularpurchased",
+            },
+          ],
+        };
+      }
       function _(_) {
         const { onCategoryChosen: _ } = _;
         return _.createElement(
@@ -1700,6 +1961,7 @@
             editModel: __webpack_require__,
             bSkipChecks: _,
             OnSuccess: _,
+            showSuccessConfirm: _ = !0,
             elSuccessDisplayLinks: _,
             partnerEventEditorStore: _,
             bReplaceEventMode: _,
@@ -1758,6 +2020,9 @@
               });
             }
           }, [_, __webpack_require__, _, _, _, _, _, _]),
+          _.useEffect(() => {
+            "success" != _ || _ || (_(), _());
+          }, [_, _, _, _]),
           _)
         ) {
           case "prevalidateerror":
@@ -1836,26 +2101,28 @@
             );
           case "success":
             let _ = (0, _._)("#EventEdit_Saving_Successful");
-            return (
-              __webpack_require__.BPublished() &&
+            if (
+              (__webpack_require__.BPublished() &&
                 __webpack_require__.BVisible() &&
                 (_ += " " + (0, _._)("#EventEdit_Saving_Successful_Visible")),
-              _.createElement(
-                _._,
-                {
-                  strTitle: (0, _._)(
-                    _
-                      ? "#EventEdit_Replacing_Success_Title"
-                      : "#EventEdit_Saving_Success_Title",
-                  ),
-                  strDescription: _,
-                  onOK: _,
-                  onCancel: _,
-                  closeModal: _,
-                  bAlertDialog: !0,
-                },
-                _,
-              )
+              !_)
+            )
+              return;
+            return _.createElement(
+              _._,
+              {
+                strTitle: (0, _._)(
+                  _
+                    ? "#EventEdit_Replacing_Success_Title"
+                    : "#EventEdit_Saving_Success_Title",
+                ),
+                strDescription: _,
+                onOK: _,
+                onCancel: _,
+                closeModal: _,
+                bAlertDialog: !0,
+              },
+              _,
             );
           case "error":
             return _.createElement(
@@ -2031,10 +2298,12 @@
           const _ = _._.GetEditModel(),
             _ = (0, _._)(_._);
           if (!_) return null;
-          let _ = _()("2024-11-12T10:00:00-08:00").unix(),
-            _ = _()("2024-11-27T10:00:00-08:00").unix();
-          const _ = _()("2024-12-04T10:00:00-08:00").unix(),
-            _ = __webpack_require__.GetAppID();
+          let _ = _()("2025-11-06T10:00:00-08:00").unix(),
+            _ = _()("2025-11-24T10:00:00-08:00").unix();
+          const _ = _()("2025-12-01T10:00:00-08:00").unix();
+          "dev" == _._.WEB_UNIVERSE &&
+            (_ = _ = _()("2025-10-01T10:00:00-08:00").unix());
+          const _ = __webpack_require__.GetAppID();
           if (
             null === (_ = _.data) || void 0 === _
               ? void 0
@@ -2053,7 +2322,7 @@
                 _.createElement(_._, {
                   name: "#EventCategory_SteamAwardsNomination",
                   description: "#EventCategory_SteamAwardsNomination_Desc",
-                  icon: "trophy_2024",
+                  icon: "trophy_2025",
                   onCategoryChosen: _.fnOnCategoryChosen,
                   type: 28,
                   tags: [
@@ -2073,7 +2342,7 @@
           _ = (0, _._)(() => _.GetSteamAwardCategory()),
           _ = (0, _._)(() => _.GetAppReleaseDate()),
           _ = (0, _._)(() => _.GetPlatforms()),
-          _ = _()("2023-11-28T10:00:00-08:00").unix(),
+          _ = _()("2024-12-04T10:00:00-08:00").unix(),
           _ = _ && _ > _;
         let _ = [];
         return (
@@ -2187,7 +2456,7 @@
                   className: _.event_nomination_trophy,
                   src:
                     _._.MEDIA_CDN_URL +
-                    "store/promo/steamawards2023/trophy_2023.png?v=1",
+                    "store/promo/steamawards2025/trophy_220.png?v=1",
                 }),
                 _.createElement(
                   "div",
@@ -2212,7 +2481,7 @@
                         )
                       : (0, _._)(
                           "#EventEditor_Options_SteamAwardNominations_OldGame_Description",
-                          "2024",
+                          "2025",
                           (0, _._)(_),
                         ),
                   ),
@@ -2260,10 +2529,10 @@
       }
       const _ = (0, _._)((_) => {
           const _ = _._.GetEditModel();
-          let _ = _()("2024-12-19T10:00:00-08:00").unix();
+          let _ = _()("2025-12-18T10:00:00-08:00").unix();
           "dev" == _._.WEB_UNIVERSE &&
-            (_ = _()("2024-10-01T10:00:00-08:00").unix());
-          const _ = _()("2024-12-31T10:00:00-08:00").unix(),
+            (_ = _()("2025-10-01T10:00:00-08:00").unix());
+          const _ = _()("2026-01-03T10:00:00-08:00").unix(),
             _ = _._.GetTimeNowWithOverride();
           return !_ || !_.BIsAppReleased() || _ > _
             ? null
@@ -2295,7 +2564,7 @@
                   _.createElement(_._, {
                     name: "#EventCategory_SteamAwardsVoteRequest",
                     description: "#EventCategory_SteamAwardsVoteRequest_Desc",
-                    icon: "trophy_2024",
+                    icon: "trophy_2025",
                     onCategoryChosen: _.fnOnCategoryChosen,
                     steam_award_category_voteids: _,
                     type: 28,
@@ -5995,7 +6264,9 @@
           _ = _.GetEventModel().bOldAnnouncement,
           [_, _] = _.useState(!1),
           [_, _, _] = (0, _._)(),
-          _ = _.BIsDirty() || __webpack_require__(_.GetGID()),
+          [_, _] = _.useState(!1);
+        (0, _._)(3e3, () => _(!1), _);
+        const _ = _.BIsDirty() || __webpack_require__(_.GetGID()),
           _ = _(0.5 * _._.PerMinute * 1e3, _),
           _ = _(5 * _._.PerMinute * 1e3, _);
         if (_) {
@@ -6013,34 +6284,45 @@
           _.Fragment,
           null,
           _.createElement(
-            _._,
+            "div",
             {
-              onClick: _,
-              className: (0, _._)({
-                [_.SaveButton]: !0,
-                [_.HaventSavedInAShortTime]: _,
-                [_.HaventSavedInALongTime]: _,
-              }),
+              className: _.SaveButtonCtn,
             },
             _.createElement(
-              "span",
-              null,
-              !_ &&
-                _.createElement("img", {
-                  className: _.SavedImage,
-                  src: _._,
+              _._,
+              {
+                onClick: _,
+                className: (0, _._)({
+                  [_.SaveButton]: !0,
+                  [_.HaventSavedInAShortTime]: _,
+                  [_.HaventSavedInALongTime]: _,
                 }),
-              (0, _._)(_ ? "#Button_Save" : "#Button_Saved"),
-              _ &&
-                (_ || _) &&
-                _.createElement(_._, {
-                  tooltip: _
-                    ? (0, _._)("#EventEditor_Create_ttip")
-                    : _
-                      ? (0, _._)("#EventEditor_SaveLive_ttip")
-                      : "",
-                }),
+              },
+              _.createElement(
+                "span",
+                null,
+                !_ &&
+                  _.createElement("img", {
+                    className: _.SavedImage,
+                    src: _._,
+                  }),
+                (0, _._)(_ ? "#Button_Save" : "#Button_Saved"),
+                _ &&
+                  (_ || _) &&
+                  _.createElement(_._, {
+                    tooltip: _
+                      ? (0, _._)("#EventEditor_Create_ttip")
+                      : _
+                        ? (0, _._)("#EventEditor_SaveLive_ttip")
+                        : "",
+                  }),
+              ),
             ),
+            _ &&
+              _.createElement(_, {
+                editModel: _,
+                onClick: () => _(!1),
+              }),
           ),
           _ &&
             _.createElement(_._, {
@@ -6055,13 +6337,42 @@
               editModel: _,
               closeModal: _,
               OnSuccess: () => {
-                _.BHasGid() || _(!0);
+                _.BHasGid() ? _(!0) : _(!0);
               },
+              showSuccessConfirm: !_.BHasGid(),
               partnerEventEditorStore: _._,
             }),
           ),
         );
       });
+      function _(_) {
+        const { editModel: _, onClick: __webpack_require__ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _.SaveSuccessNotification,
+            onClick: __webpack_require__,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.SaveSuccessTitle,
+            },
+            (0, _._)("#EventEdit_Saving_Successful"),
+          ),
+          _.BPublished() &&
+            _.BVisible() &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                "div",
+                null,
+                (0, _._)("#EventEdit_Saving_Successful_Visible"),
+              ),
+            ),
+        );
+      }
       function _(_, _) {
         const [__webpack_require__, _] = _.useState(!1);
         return (
@@ -7779,6 +8090,94 @@
           );
         }
       })();
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        static Get() {
+          return (
+            _.s_newsCuratorStore ||
+              ((_.s_newsCuratorStore = new _()),
+              (_.s_newsCuratorStore.m_LoadingPromise =
+                _.s_newsCuratorStore.Init()),
+              (window.g_NewsCuratorStore = _.s_newsCuratorStore)),
+            _.s_newsCuratorStore
+          );
+        }
+        constructor() {
+          (this.m_mapNewsCurators = new Map()),
+            (this.m_bIsLoadComplete = !1),
+            (this.m_mapLangToNewsCurators = new Map()),
+            (this.m_LoadingPromise = null),
+            (0, _._)(this);
+        }
+        IsLoaded() {
+          return this.m_bIsLoadComplete;
+        }
+        WaitForInitialLoad() {
+          return this.m_LoadingPromise;
+        }
+        get allNewsCurators() {
+          return Array.from(this.m_mapNewsCurators.values());
+        }
+        GetCuratorsForLang(_) {
+          return this.m_mapLangToNewsCurators.get(_);
+        }
+        GetNewsCuratorForAccount(_) {
+          return this.m_mapNewsCurators.get(_);
+        }
+        BIsTrustedPressAccount(_) {
+          return void 0 !== this.GetNewsCuratorForAccount(_);
+        }
+        async Init() {
+          _._.GetLanguageListForRealms([_._.EREALM]).forEach((_) =>
+            this.m_mapLangToNewsCurators.set(_, []),
+          );
+          const _ = _._.STORE_BASE_URL + "events/ajaxgetnewscurators";
+          let _ = {
+            origin: self.origin,
+          };
+          const _ = await _().get(_, {
+            params: _,
+          });
+          (0, _._)(() => {
+            _.data && _.data.success && this.HandleCuratorResponse(_.data),
+              (this.m_bIsLoadComplete = !0);
+          });
+        }
+        HandleCuratorResponse(_) {
+          var _;
+          if (
+            (_.groupvanityinfo && _._.RegisterClanData(_.groupvanityinfo),
+            _.newscuratorinfo)
+          )
+            for (const _ of _.newscuratorinfo) {
+              if (this.m_mapNewsCurators.has(_.clanAccountID)) continue;
+              this.m_mapNewsCurators.set(_.clanAccountID, _);
+              const _ = _._.GetClanInfoByClanAccountID(_.clanAccountID);
+              _ &&
+                (null ===
+                  (_ = this.m_mapLangToNewsCurators.get(_.rss_language)) ||
+                  void 0 === _ ||
+                  _.push(_));
+            }
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_mapNewsCurators", void 0),
+        (0, _._)([_._], _.prototype, "m_bIsLoadComplete", void 0),
+        (0, _._)([_._], _.prototype, "m_mapLangToNewsCurators", void 0),
+        (0, _._)([_._], _.prototype, "allNewsCurators", null),
+        (0, _._)([_._], _.prototype, "HandleCuratorResponse", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -18264,16 +18663,7 @@
             null == _ ? void 0 : _.GetDayIndexFromEventStart(),
           ),
           [_, _] = _.useState(null),
-          [_, _] = _.useState((0, _._)()),
-          _ = _.useCallback(() => _((0, _._)()), []);
-        _.useEffect(
-          () => (
-            window.addEventListener("resize", _),
-            () => window.removeEventListener("resize", _)
-          ),
-          [_],
-        );
-        const _ = (0, _._)(() => _.jsondata.sale_header_disable_top_margin),
+          _ = (0, _._)(() => _.jsondata.sale_header_disable_top_margin),
           _ = (function (_, _) {
             const [__webpack_require__] = (0, _._)(_._, void 0);
             return _.useMemo(() => {
@@ -20230,6 +20620,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -22605,8 +22996,7 @@
             bShowAsCarousel: !0,
             bAutoAdvance: !1,
             bHideIfTooFewItems: !1,
-            arrowFill: _.jsondata.sale_carousel_arrow_color,
-            arrowStyle: _.jsondata.sale_carousel_arrow_style,
+            ...(0, _._)(_.jsondata),
           },
           _ = (0, _._)(
             __webpack_require__.unique_id,
@@ -23309,6 +23699,7 @@
                     ),
                   );
       };
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             strHubType: _,
@@ -23346,6 +23737,9 @@
               }
             );
           })(_, __webpack_require__, _, _, _, _, _, _),
+          _ = (0, _._)(_.smart_section_type)
+            ? _.smart_section_type
+            : "discounted",
           { bLoading: _, rgMatchingCapsules: _ } = (function (
             _,
             _,
@@ -23394,7 +23788,7 @@
           })(
             _,
             _,
-            _.smart_section_type || "discounted",
+            _,
             _.smart_section_max_apps || 10,
             _,
             __webpack_require__,
@@ -23548,8 +23942,7 @@
             bShowAsCarousel: !0,
             bAutoAdvance: !1,
             bHideIfTooFewItems: !0,
-            arrowFill: _.jsondata.sale_carousel_arrow_color,
-            arrowStyle: _.jsondata.sale_carousel_arrow_style,
+            ...(0, _._)(_.jsondata),
           },
           _ = (0, _._)(
             _.unique_id,
@@ -23694,7 +24087,6 @@
         return "unknown";
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -25120,6 +25512,32 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { tagid: _, language: __webpack_require__ = _._.LANGUAGE } = _;
+        return (0, _._)(_, __webpack_require__) || String(_);
+      }
+      function _(_) {
+        const { tagID: _, className: __webpack_require__ } = _,
+          _ = (0, _._)(
+            (function (_, _ = _._.LANGUAGE) {
+              const _ = (0, _._)(_, _);
+              return `${_._.STORE_BASE_URL}tags/${(0, _._)(_)}/${_}`;
+            })(_),
+          );
+        return _.createElement(
+          _._,
+          {
+            className: __webpack_require__,
+            href: _,
+            role: "listitem",
+          },
+          _.createElement(_, {
+            tagid: _,
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -25127,7 +25545,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -26744,7 +27161,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _ ? _.filter((_) => _.ShouldShowOnTab(_)) : _;
@@ -26943,16 +27359,7 @@
           const _ = await (async function (_, _) {
             const _ = _.clanSteamID.GetAccountID(),
               _ = await _._.fetchQuery((0, _._)(_));
-            if (!(null == _ ? void 0 : _.length)) return [];
-            const _ = await _._.LoadCreatorHome(_.clanSteamID),
-              _ = null,
-              _ = _.GetCreatorHomeURL(_);
-            return _.map((_) => ({
-              listid: _.listid(),
-              title: _.title(),
-              description: _.blurb(),
-              url: `${_}list/${_.listid()}`,
-            }));
+            return null != _ ? _ : [];
           })(_);
           return {
             rgCuratorLists: _,
@@ -27082,10 +27489,10 @@
                 }
               );
             }
-            if ("curator_list" == _) {
+            if ("creator_list" == _) {
               const _ = _.clanSteamID.GetAccountID(),
                 _ = await _._.fetchQuery(
-                  (0, _._)(_, _.smart_section_curator_listid),
+                  (0, _._)(_, _.smart_section_creator_listid),
                 );
               if (!_ || 0 == _.list_state() || !_.apps().length)
                 return {
@@ -27107,7 +27514,7 @@
                         _,
                         _,
                         _,
-                        "curator_list",
+                        "creator_list",
                         null == _ ? void 0 : _.GetActiveTabUniqueID(),
                       ),
                       _,
@@ -27626,31 +28033,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { tagid: _, language: __webpack_require__ = _._.LANGUAGE } = _;
-        return (0, _._)(_, __webpack_require__) || String(_);
-      }
-      function _(_) {
-        const { tagID: _, className: __webpack_require__ } = _,
-          _ = (0, _._)(
-            (function (_, _ = _._.LANGUAGE) {
-              const _ = (0, _._)(_, _);
-              return `${_._.STORE_BASE_URL}tags/${(0, _._)(_)}/${_}`;
-            })(_),
-          );
-        return _.createElement(
-          _._,
-          {
-            className: __webpack_require__,
-            href: _,
-            role: "listitem",
-          },
-          _.createElement(_, {
-            tagid: _,
-          }),
-        );
-      }
-      var _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "trailercarousel",
         _ = "trailercarousel_seen_intro_video",
@@ -27916,8 +28298,6 @@
             appCount: _,
             wrapAround: _,
             arrows: _ = !0,
-            arrowFill: _,
-            arrowStyle: _,
           } = _,
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
@@ -28077,8 +28457,7 @@
                         disabled: !_,
                       },
                       _.createElement(_._, {
-                        arrowFill: _,
-                        arrowStyle: _,
+                        ..._,
                         direction: "left",
                       }),
                     ),
@@ -28128,8 +28507,7 @@
                         disabled: !_,
                       },
                       _.createElement(_._, {
-                        arrowFill: _,
-                        arrowStyle: _,
+                        ..._,
                         direction: "right",
                       }),
                     ),
@@ -28426,10 +28804,8 @@
       function _(_) {
         const {
             rgCapsulesToShow: _,
-            arrowFill: __webpack_require__,
-            autoAdvance: _,
+            autoAdvance: __webpack_require__,
             hideAppBackground: _,
-            arrowStyle: _,
           } = _,
           _ = (0, _._)(),
           [_, _] = _.useState(0),
@@ -28473,17 +28849,16 @@
               className: _.TrailerCarouselApp,
             },
             _.createElement(_, {
+              ..._,
               appID: null == _ ? void 0 : _._,
-              autoAdvanceMsec: _ ? 1e4 : 0,
+              autoAdvanceMsec: __webpack_require__ ? 1e4 : 0,
               bStartVideoWhenHidden: !_,
               fnNavigate: _,
               appIndex: _,
               appCount: _,
               wrapAround: _,
               arrows: !_,
-              arrowFill: __webpack_require__,
               showDemoInfo: !0,
-              arrowStyle: _,
             }),
             (_ || (0, _._)() || _) &&
               _.createElement(_, {
@@ -28504,8 +28879,6 @@
             optin_tagid: _,
             optin_prune_tagid: _,
             optin_only: _,
-            arrowFill: _,
-            arrowStyle: _,
             autoAdvance: _,
             hideAppBackground: _,
           } = _,
@@ -28621,11 +28994,10 @@
                   feature: "large-cluster",
                 },
                 _.createElement(_, {
+                  ..._,
                   rgCapsulesToShow: _,
-                  arrowFill: _,
                   autoAdvance: _,
                   hideAppBackground: _,
-                  arrowStyle: _,
                 }),
               )
         );
@@ -29056,8 +29428,8 @@
             });
       }
       const _ = (0, _._)((_) => {
-        var _, _, _;
-        const { section: _, event: _ } = _,
+        var _;
+        const { section: __webpack_require__, event: _ } = _,
           [_, _] = _.useState(null);
         return (
           _.useEffect(() => {
@@ -29078,12 +29450,15 @@
                       _,
                     ))),
                   (null ===
-                    (_ = null == _ ? void 0 : _.featured_curator_list) ||
+                    (_ =
+                      null == __webpack_require__
+                        ? void 0
+                        : __webpack_require__.featured_curator_list) ||
                   void 0 === _
                     ? void 0
                     : _.length) > 0 &&
                     !_.token.reason &&
-                    _.featured_curator_list.forEach((_) => {
+                    __webpack_require__.featured_curator_list.forEach((_) => {
                       const _ = _._.InitFromClanID(_.clanAccountID);
                       _.push(_._.Get().LoadListDetails(_, _.listID, _));
                     });
@@ -29105,7 +29480,7 @@
                   );
                 [..._, ..._].forEach((_) => {
                   if (!_.has(_.listid)) {
-                    _.add(_.listid), __webpack_require__.push(_);
+                    _.add(_.listid), _.push(_);
                     const _ = _._.Get().GetClanAccountFromListID(_.listid);
                     if (!_.has(_)) {
                       _.add(_);
@@ -29125,8 +29500,9 @@
           }, [
             _.GID,
             _.clanSteamID,
-            _.featured_curator_list,
-            null === (_ = _.featured_curator_list) || void 0 === _
+            __webpack_require__.featured_curator_list,
+            null === (_ = __webpack_require__.featured_curator_list) ||
+            void 0 === _
               ? void 0
               : _.length,
           ]),
@@ -29139,6 +29515,7 @@
                 _.createElement(
                   _._,
                   {
+                    ...(0, _._)(_.jsondata),
                     hideArrows: !(0, _._)(),
                     visibleElements: 1,
                     useTestScrollbar: !0,
@@ -29151,14 +29528,6 @@
                     ),
                     padded: !0,
                     screenIsWide: (0, _._)(),
-                    arrowFill:
-                      null === (_ = _.jsondata) || void 0 === _
-                        ? void 0
-                        : _.sale_carousel_arrow_color,
-                    arrowStyle:
-                      null === (_ = _.jsondata) || void 0 === _
-                        ? void 0
-                        : _.sale_carousel_arrow_style,
                   },
                   _.map((_) =>
                     _.createElement(_, {
@@ -31503,8 +31872,7 @@
               bShowAsCarousel: (0, _._)(_),
               bAutoAdvance: _.carousel_auto_advance,
               bHideIfTooFewItems: _.hide_section_if_too_few_items,
-              arrowFill: _.jsondata.sale_carousel_arrow_color,
-              arrowStyle: _.jsondata.sale_carousel_arrow_style,
+              ...(0, _._)(_.jsondata),
             },
             _ = _(_, _.nShowAdditionalRows),
             _ = _((0, _._)(_, _), _, _.capsules.length);
@@ -32214,9 +32582,11 @@
           let _ = this.GetDefaultTab();
           if (this.props.section && this.props.browseInfo) {
             const _ = (0, _._)(this.props.history, "flavor");
-            (null === (_ = this.GetFlavorsForActiveTab()) || void 0 === _
-              ? void 0
-              : __webpack_require__.includes(_)) && (_ = _);
+            (0, _._)(_) &&
+              (null === (_ = this.GetFlavorsForActiveTab()) || void 0 === _
+                ? void 0
+                : __webpack_require__.includes(_)) &&
+              (_ = _);
           }
           if (
             this.props.browseInfo != _.browseInfo ||
@@ -32477,7 +32847,7 @@
           const _ = this.GetFlavorsForActiveTab();
           if (!_) return null;
           const _ = (0, _._)(this.props.history, "flavor");
-          if (_ && _.includes(_)) return _;
+          if ((0, _._)(_) && _.includes(_)) return _;
           return _.find((_) => _._.find((_) => _.flavor === _)) || null;
         }
         RenderTabHeaders() {
@@ -38013,8 +38383,7 @@
                       bShowAsCarousel: (0, _._)(_),
                       bAutoAdvance: _.carousel_auto_advance,
                       bHideIfTooFewItems: _.hide_section_if_too_few_items,
-                      arrowFill: _.jsondata.sale_carousel_arrow_color,
-                      arrowStyle: _.jsondata.sale_carousel_arrow_style,
+                      ...(0, _._)(_.jsondata),
                     },
                     (null == _
                       ? void 0
@@ -38857,6 +39226,3765 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = (_) =>
+          _.createElement(
+            _._,
+            {
+              onEscKeypress: _.closeModal,
+            },
+            _.createElement(
+              _._,
+              null,
+              _.createElement(
+                _._,
+                null,
+                _.createElement(
+                  _._,
+                  null,
+                  (0, _._)("#EventCurator_BrowseDialog_Title"),
+                ),
+                _.createElement(
+                  _._,
+                  null,
+                  _.createElement(
+                    "div",
+                    null,
+                    (0, _._)("#EventCurator_BrowseDialog_Desc"),
+                  ),
+                  _.createElement(_, null),
+                ),
+                _.createElement(
+                  _._,
+                  null,
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: _.closeModal,
+                    },
+                    (0, _._)("#Button_Dismiss"),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        _ = (_) =>
+          _.createElement(
+            _,
+            {
+              title: (0, _._)("#EventCurator_BrowseDialog_Title"),
+              description: (0, _._)("#EventCurator_BrowseDialog_Desc"),
+            },
+            _.createElement(_, null),
+          ),
+        _ = (_) => {
+          const [_, __webpack_require__] = _.useState(_._.Get().IsLoaded());
+          _.useEffect(() => {
+            if (!_) {
+              (async () => {
+                await _._.Get().WaitForInitialLoad(), __webpack_require__(!0);
+              })();
+            }
+          }, [_]);
+          let _ = new Array();
+          if (_) {
+            _._.GetELanguageFallbackOrder([_._.k_ESteamRealmGlobal]).forEach(
+              (_) =>
+                _.push(
+                  _.createElement(_, {
+                    key: "curlang" + _,
+                    lang: _,
+                  }),
+                ),
+            );
+          }
+          return _.createElement(
+            _.Fragment,
+            null,
+            _
+              ? _.createElement(_.Fragment, null, _)
+              : _.createElement(_._, {
+                  size: "medium",
+                  position: "center",
+                  string: (0, _._)("#Loading"),
+                }),
+          );
+        },
+        _ = (_) => {
+          const _ = _._.Get().GetCuratorsForLang(_.lang);
+          if (!_) return null;
+          const _ = _.map((_) =>
+            _._.GetClanInfoByClanAccountID(_.clanAccountID),
+          ).filter((_) => Boolean(_));
+          if (0 == _.length) return null;
+          __webpack_require__.sort((_, _) =>
+            _.group_name.localeCompare(_.group_name),
+          );
+          const _ = __webpack_require__.map((_) =>
+            _.createElement(_, {
+              clanInfo: _,
+              key: "curatorbrowse_" + _.clanAccountID,
+              layout: "row",
+            }),
+          );
+          return _.createElement(
+            "div",
+            null,
+            _.createElement(
+              "div",
+              {
+                className: _().LanguageHeader,
+              },
+              (0, _._)(
+                "#EventCurator_BrowseDialog_LangCurator",
+                (0, _._)("#Language_" + (0, _._)(_.lang)),
+              ),
+            ),
+            _,
+          );
+        },
+        _ = (0, _._)((_) => {
+          const _ = _._.GetClanInfoByClanAccountID(_.clanid);
+          if (!_) return _.createElement("div", null, _.children);
+          const _ = {
+              clan_account_id: _.clanAccountID,
+              name: _.group_name,
+              type: "developer",
+            },
+            _ = _.createElement(
+              "div",
+              {
+                className: _().CuratorHoverContainer,
+              },
+              _.createElement(_._, {
+                creatorID: _,
+                bSmallFormat: !0,
+                bHideCreatorType: !0,
+                bHideFollowButton: !0,
+              }),
+            );
+          return _.createElement(
+            _._,
+            {
+              toolTipContent: _,
+              bTopmost: !0,
+            },
+            _.children,
+          );
+        }),
+        _ = (_) => {
+          const [_, __webpack_require__] = _.useState(!1),
+            _ = () => {
+              (0, _._)(
+                _.createElement(_._, {
+                  strDescription: (0, _._)("#EventCurator_NoEventsFound_Body"),
+                  strTitle: (0, _._)("#EventCurator_NoEventsFound_Title"),
+                }),
+                window,
+              ),
+                __webpack_require__(!1);
+            },
+            { clanInfo: _, layout: _ } = _,
+            _ = "row" === _ ? _().CuratorInfoRow : _().CuratorInfoIcon,
+            _ = _.createElement(
+              _,
+              {
+                clanid: _.clanSteamID.GetAccountID(),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _().FlexRowContainer,
+                    _().CuratorInfoTitleCtn,
+                  ),
+                  onClick: () => __webpack_require__(!0),
+                },
+                _.createElement("img", {
+                  className: _().CuratorInfoImg,
+                  src: _.avatar_full_url,
+                  alt: _.group_name,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().CuratorInfoName,
+                  },
+                  _.group_name,
+                ),
+              ),
+            );
+          return _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().FlexRowWrapSpaceBetweenContainer, _),
+            },
+            _
+              ? _.createElement(
+                  _._,
+                  null,
+                  _.createElement(_._, {
+                    onEventNotFound: _,
+                    appid: 0,
+                    clanSteamID: _.clanInfo.clanSteamID,
+                    trackingLocation: 8,
+                    eventModel: void 0,
+                    announcementGID: void 0,
+                    partnerEventStore: _._,
+                    showAppHeader: !0,
+                    closeModal: () => __webpack_require__(!1),
+                  }),
+                )
+              : null,
+            _.createElement(
+              "div",
+              {
+                onClick: () => __webpack_require__(!0),
+              },
+              _,
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _().FlexRowContainer,
+                  _().CuratorInfoActionCtn,
+                ),
+              },
+              _.createElement(_._, {
+                clanAccountID: _.clanAccountID,
+                className: _().CuratorInfoFollow,
+              }),
+            ),
+          );
+        };
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ {
+        constructor() {
+          this.m_dateLoadTime = _._.GetTimeNowWithOverrideAsDate();
+        }
+        IsCurrentlyVisible(_) {
+          return (
+            (!_.startVisible || _.startVisible <= this.m_dateLoadTime) &&
+            (!_.endVisible || _.endVisible >= this.m_dateLoadTime)
+          );
+        }
+        static IsCurrentlyActive(_) {
+          const _ = _._.GetTimeNowWithOverrideAsDate();
+          return (
+            (!_.startEvent || _.startEvent <= _) &&
+            (!_.endEvent || _.endEvent >= _)
+          );
+        }
+        static LocalizeDateString(_) {
+          if (!_.startEvent) return null;
+          const _ = _.startEvent.toLocaleDateString(_._.GetPreferredLocales(), {
+            month: "long",
+            day: "numeric",
+          });
+          if (!_.endEvent) return _;
+          const _ = {
+            month:
+              _.startEvent.getMonth() != _.endEvent.getMonth()
+                ? "long"
+                : void 0,
+            day: "numeric",
+          };
+          return `${_} - ${_.endEvent.toLocaleDateString(_._.GetPreferredLocales(), _)}`;
+        }
+        GetVisibleSpecialEvents() {
+          return [
+            {
+              sLocToken: "#NewsHubSpecialEvent_GameFestival",
+              startVisible: new Date(
+                1e3 * _()("2020-06-16T14:00:00-07:00").unix(),
+              ),
+              endVisible: new Date(
+                1e3 * _()("2020-06-22T10:00:00-07:00").unix(),
+              ),
+              startEvent: new Date(
+                1e3 * _()("2020-06-16T10:00:00-07:00").unix(),
+              ),
+              endEvent: new Date(1e3 * _()("2020-06-22T10:00:00-07:00").unix()),
+              newshubUrl: "news/collection/GameFestival2020",
+            },
+          ].filter((_) => this.IsCurrentlyVisible(_));
+        }
+      }
+      const _ = new _();
+      class _ extends _.Component {
+        render() {
+          const { specialEvent: _ } = this.props,
+            _ = window.location.href === _._.STORE_BASE_URL + _.newshubUrl,
+            _ = _.IsCurrentlyActive(_),
+            _ = _.LocalizeDateString(_);
+          return _.createElement(
+            _._,
+            {
+              _: "/" + _.newshubUrl,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _().SpecialEvent,
+                  _ && _().SpecialEventOnPage,
+                  _ && _().SpecialEventActive,
+                ),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().SpecialEventTitle,
+                },
+                (0, _._)(_.sLocToken),
+              ),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().SpecialEventTime,
+                  },
+                  _,
+                ),
+            ),
+          );
+        }
+      }
+      class _ extends _.Component {
+        render() {
+          const _ = _.GetVisibleSpecialEvents();
+          return 0 === _.length
+            ? null
+            : _.createElement(
+                "div",
+                {
+                  className: _().SpecialEventListGroup,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().SpecialEventListTitle,
+                  },
+                  (0, _._)("#Events_SpecialEvents"),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().SpecialEventList,
+                  },
+                  _.map((_) =>
+                    _.createElement(_, {
+                      key: _.sLocToken,
+                      specialEvent: _,
+                    }),
+                  ),
+                ),
+              );
+        }
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _() {
+        return (0, _._)(new Date());
+      }
+      const _ = (_) => {
+          const _ = _._.PUBLIC_SHARED_URL + "images/";
+          return _.createElement(
+            "div",
+            {
+              className: _().LegalFooter,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().mainmenu_links_china,
+              },
+              _.createElement(
+                "a",
+                {
+                  href: _._.STORE_BASE_URL + "about",
+                },
+                "关于蒸汽平台",
+              ),
+              "  |  ",
+              _.createElement(
+                "a",
+                {
+                  href: _._.STORE_BASE_URL + "steam_refunds",
+                },
+                "退款政策",
+              ),
+              "  |  ",
+              _.createElement(
+                "a",
+                {
+                  href: _._.STORE_BASE_URL + "subscriber_agreement",
+                },
+                "软件许可服务协议",
+              ),
+              "  |  ",
+              _.createElement("br", null),
+              _.createElement(
+                "a",
+                {
+                  href: _._.STORE_BASE_URL + "privacy_agreement",
+                },
+                "个人信息保护政策",
+              ),
+              "  |  ",
+              _.createElement(
+                "a",
+                {
+                  href: "https://about.steamchina.com/content_report.html",
+                  target: "_blank",
+                  rel: "noreferrer",
+                },
+                "不良内容举报投诉",
+              ),
+              "  |  ",
+              _.createElement(
+                "a",
+                {
+                  href: "https://about.steamchina.com/infringement_report.html",
+                  target: "_blank",
+                  rel: "noreferrer",
+                },
+                "侵权投诉",
+              ),
+              "  |  ",
+              _.createElement(
+                "a",
+                {
+                  href: "https://about.steamchina.com/parentguardianship_agreement.html",
+                  target: "_blank",
+                  rel: "noreferrer",
+                },
+                "家长监护",
+              ),
+            ),
+            _.createElement("div", {
+              className: _().mainmenu_line,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _().mainmenu_logos_china,
+              },
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.wanmei.com/",
+                  target: "_blank",
+                  rel: "noreferrer",
+                },
+                _.createElement("img", {
+                  className: _().mainmenu_china_pw_logo,
+                  src: _ + "footer/pw_logo_gy.svg?v=1",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://valvesoftware.com",
+                  target: "_blank",
+                  rel: "noreferrer",
+                },
+                _.createElement("img", {
+                  className: _().mainmenu_china_valve_logo,
+                  src: _ + "footer/valve_logo_gy.svg?v=1",
+                }),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().mainmenu_legal_china,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().mainmenu_legal_valvelegal,
+                },
+                `© ${_()} Valve Corporation 版权所有，完美世界已获授权`,
+                _.createElement("br", null),
+                "所有商标均属于其在美国或其他国家的拥有者。",
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().mainmenu_legal_pwlegal,
+                },
+                "© 完美世界征奇(上海)多媒体科技有限公司 版权所有。",
+                _.createElement("br", null),
+                "增值电信业务经营许可证沪B2-20180406",
+              ),
+            ),
+          );
+        },
+        _ = (_) =>
+          _.createElement(
+            "div",
+            {
+              className: _().LegalFooter,
+            },
+            _.createElement("img", {
+              src: _._.STORE_CDN_URL + "public/images/footerLogo_valve_new.png",
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _().FooterLegal,
+              },
+              (0, _._)("#Legal_Footer_WithYear", _()),
+            ),
+          ),
+        _ = (_) =>
+          (0, _._)() ? _.createElement(_, null) : _.createElement(_, null);
+      class _ {
+        static Get() {
+          return (
+            _.s_GlobalStore || (_.s_GlobalStore = new _()), _.s_GlobalStore
+          );
+        }
+        constructor() {
+          (this.m_curDisplay = "desktop_navigation"),
+            (this.m_fnGetRouterHistory = void 0),
+            (0, _._)(this);
+        }
+        UpdateLocation(_, _) {
+          this.m_fnGetRouterHistory = _;
+          const _ = (0, _._)(_, "optionpane");
+          if (_)
+            switch (_) {
+              case "event_filter":
+              case "browse_curator":
+              case "desktop_navigation":
+                this.m_curDisplay != _ && (this.m_curDisplay = _);
+            }
+          else
+            "desktop_navigation" != this.m_curDisplay &&
+              (this.m_curDisplay = "desktop_navigation");
+          return this.m_curDisplay;
+        }
+        SetDisplay(_) {
+          (this.m_curDisplay = _),
+            this.m_fnGetRouterHistory &&
+              (0, _._)(
+                this.m_fnGetRouterHistory(),
+                "optionpane",
+                "desktop_navigation" == this.m_curDisplay
+                  ? void 0
+                  : this.m_curDisplay,
+              );
+        }
+        GetDisplay() {
+          return this.m_curDisplay;
+        }
+        ShowBrowseCurator(_) {
+          _()
+            ? _.Get().SetDisplay("browse_curator")
+            : (0, _._)(_.createElement(_, null), (0, _._)(_));
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_curDisplay", void 0);
+      let _ = class extends _.Component {
+        GetVisibilityStore() {
+          return (0, _._)().m_visibilityStore;
+        }
+        OnEventTypeChange(_, _) {
+          this.GetVisibilityStore().SetEventTypeGroupAllowed(_, _),
+            this.props.fnOnFilterChange();
+        }
+        RenderEventTypeCheckbox(_) {
+          const _ = this.GetVisibilityStore().BIsEventTypeGroupAllowed(_);
+          return _.createElement(
+            _._,
+            {
+              key: `group-${_}`,
+              toolTipContent: (0, _._)(
+                "#EventCalendar_EventTypeGroup_ttip_" + _,
+              ),
+              direction: "top",
+            },
+            _.createElement(_, {
+              label: (0, _._)("#EventCalendar_EventTypeGroup_" + _),
+              checked: _,
+              onChange: (_) => this.OnEventTypeChange(_, _),
+            }),
+          );
+        }
+        OnGameSourceChange(_, _) {
+          this.GetVisibilityStore().SetGameSourceAllowed(_, _),
+            this.props.fnOnFilterChange();
+        }
+        RenderGameSourceCheckbox(_, _) {
+          const _ =
+            this.GetVisibilityStore().BIsGameSourceAllowed(_) ||
+            (_ == _._.k_ELibrary &&
+              this.GetVisibilityStore().BIsGameSourceAllowed(_._.k_ERecent));
+          return _.createElement(
+            _._,
+            {
+              key: `gs-${_}`,
+              direction: "top",
+              toolTipContent: _
+                ? (0, _._)("#EventCalendar_DisabledFilter_LoginPrompt")
+                : (0, _._)("#EventCalendar_GameSource_ttip_" + _),
+            },
+            _.createElement(_, {
+              label: (0, _._)("#EventCalendar_GameSource_" + _),
+              checked: _,
+              disabled: _,
+              onChange: (_) => this.OnGameSourceChange(_, _),
+            }),
+          );
+        }
+        render() {
+          const { bUserIsLoggedIn: _ } = this.props,
+            _ = (0, _._)();
+          let _ = !0;
+          if (_.BIsSingleGroupCalendar()) {
+            let _ = _._.GetClanInfoByClanAccountID(_.GetSingleGroupID());
+            _ && _.has_rss_feed && (_ = !1);
+          } else
+            !_.BIsCollectionCalendar() ||
+              (_.GetKey().collectionid != _._.Press &&
+                _.GetKey().collectionid != _._.Dev_Sales &&
+                _.GetKey().collectionid != _._.Dev_AssociatedPress) ||
+              (_ = !1);
+          const _ = (function (_) {
+              return (
+                _.BIsCollectionCalendar() && "steam" === _.GetCollectionID()
+              );
+            })(_),
+            _ = _._.Get().GetMutedSourceCount(),
+            _ =
+              _.BIsSingleSourceMuted() ||
+              (!_.BIsSingleSourceCalendar() && _ > 0);
+          return _.createElement(
+            _,
+            {
+              title: (0, _._)("#EventCalendar_FiltersTitle"),
+              description: (0, _._)(
+                _.BIsGlobalCalendar()
+                  ? "#EventCalendar_FiltersDescription"
+                  : "#EventCalendar_FiltersDescription_NonPersonalized",
+              ),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().FilterSection,
+              },
+              _ &&
+                _.createElement(
+                  _,
+                  null,
+                  _.createElement(
+                    _,
+                    null,
+                    (0, _._)("#EventCalendar_FilterSubSection_EventTypeGroups"),
+                  ),
+                  this.RenderEventTypeCheckbox(_._.k_EEvents),
+                  this.RenderEventTypeCheckbox(_._.k_EStreaming),
+                  this.RenderEventTypeCheckbox(_._.k_EUpdates),
+                  this.RenderEventTypeCheckbox(_._.k_EReleases),
+                  this.RenderEventTypeCheckbox(_._.k_ESales),
+                  this.RenderEventTypeCheckbox(_._.k_ENews),
+                ),
+              Boolean(_.BIsGlobalCalendar()) &&
+                _.createElement(
+                  _,
+                  null,
+                  _.createElement(
+                    _,
+                    null,
+                    (0, _._)("#EventCalendar_FilterSubSection_GameSources"),
+                  ),
+                  this.RenderGameSourceCheckbox(_._.k_ELibrary, !_),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().FilterSubOption,
+                    },
+                    this.RenderGameSourceCheckbox(_._.k_ERecent, !_),
+                  ),
+                  this.RenderGameSourceCheckbox(_._.k_EWishlist, !_),
+                  _._.bIsFollowingEnabled &&
+                    this.RenderGameSourceCheckbox(_._.k_EFollowing, !_),
+                  this.RenderGameSourceCheckbox(_._.k_ERecommended, !_),
+                  this.RenderGameSourceCheckbox(_._.k_ESteam),
+                  _._.bIncludeFeaturedAsGameSource &&
+                    this.RenderGameSourceCheckbox(_._.k_EFeatured),
+                ),
+              Boolean(
+                _._.bIsCuratorsEnabled &&
+                  (_.BIsGlobalCalendar() || _.BIsSingleAppCalendar()),
+              ) &&
+                _.createElement(
+                  _,
+                  null,
+                  _.createElement(
+                    _,
+                    null,
+                    (0, _._)("#EventCalendar_FilterSubSection_CuratorSources"),
+                  ),
+                  this.RenderGameSourceCheckbox(_._.k_ECurator, !_),
+                  _.createElement(
+                    _,
+                    {
+                      onClick: _.Get().ShowBrowseCurator,
+                    },
+                    (0, _._)("#EventCalendar_BrowseCurators"),
+                  ),
+                ),
+              _ &&
+                _.createElement(_, {
+                  calendar: _,
+                  onFilterChange: this.props.fnOnFilterChange,
+                }),
+              Boolean(_.BIsSingleSourceMuted()) &&
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)(
+                    _.BIsSingleGroupCalendar()
+                      ? "#EventCalendar_SingleGroupIsMuted"
+                      : "#EventCalendar_SingleAppIsMuted",
+                  ),
+                ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().SideBarFilterNavLinks,
+              },
+              _ &&
+                _.createElement(
+                  _._,
+                  {
+                    className: _().MutedSourcesGroup,
+                    href: _._.STORE_BASE_URL + "account/emailoptout/app",
+                    bDisableContextMenu: !0,
+                  },
+                  _.createElement(
+                    _,
+                    null,
+                    _.createElement(_.fSs, {
+                      muted: !0,
+                    }),
+                    (0, _._)("#EventCalendar_ManageMutedSources"),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().NumberDisplay,
+                      },
+                      _,
+                    ),
+                  ),
+                ),
+              _.createElement(
+                _._,
+                {
+                  href: _._.STORE_BASE_URL + "account/preferences",
+                  bDisableContextMenu: !0,
+                },
+                _.createElement(
+                  _,
+                  null,
+                  _.createElement(_.nkJ, null),
+                  (0, _._)("#EventCalendar_ManageStorePref"),
+                ),
+              ),
+            ),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      const _ = (0, _._)(_().FilterSubSection),
+        _ = (0, _._)(_().FilterSubSectionTitle),
+        _ = (0, _._)(_().FilterLink);
+      function _(_) {
+        const { calendar: _, onFilterChange: __webpack_require__ } = _,
+          [_, _] = (0, _._)(() => [
+            _.GetAllClans().filter((_) => {
+              var _;
+              return null === (_ = _._.GetClanInfoByClanAccountID(_)) ||
+                void 0 === _
+                ? void 0
+                : _.group_name;
+            }),
+            _.GetAllApps().filter((_) => {
+              var _;
+              return null === (_ = _._.Get().GetApp(_)) || void 0 === _
+                ? void 0
+                : _.GetName();
+            }),
+          ]);
+        return (
+          (0, _._)(
+            _.BIsCollectionCalendar,
+            "Attempted to render collection source filters for a non collection calendar",
+          ),
+          _.BIsCollectionCalendar()
+            ? _.createElement(
+                _,
+                null,
+                _.createElement(
+                  _,
+                  null,
+                  (0, _._)("#EventCalendar_FilterSubSection_CollectionSources"),
+                ),
+                _.map((_) =>
+                  _.createElement(_, {
+                    calendar: _,
+                    clanid: _,
+                    key: _,
+                    onFilterChange: __webpack_require__,
+                  }),
+                ),
+                _.map((_) =>
+                  _.createElement(_, {
+                    calendar: _,
+                    appid: _,
+                    key: _,
+                    onFilterChange: __webpack_require__,
+                  }),
+                ),
+              )
+            : null
+        );
+      }
+      function _(_) {
+        var _;
+        const {
+            calendar: __webpack_require__,
+            clanid: _,
+            onFilterChange: _,
+          } = _,
+          _ = (0, _._)(() =>
+            __webpack_require__.m_visibilityStore.BIsClanVisible(_),
+          );
+        return _.createElement(_, {
+          label:
+            null === (_ = _._.GetClanInfoByClanAccountID(_)) || void 0 === _
+              ? void 0
+              : _.group_name,
+          checked: _,
+          onChange: (_) => {
+            __webpack_require__.m_visibilityStore.SetClanVisibility(_, _), _();
+          },
+        });
+      }
+      function _(_) {
+        var _;
+        const {
+            calendar: __webpack_require__,
+            appid: _,
+            onFilterChange: _,
+          } = _,
+          _ = __webpack_require__.m_visibilityStore.BIsAppVisible(_);
+        return _.createElement(_, {
+          label:
+            null === (_ = _._.Get().GetApp(_)) || void 0 === _
+              ? void 0
+              : _.GetName(),
+          checked: _,
+          onChange: (_) => {
+            __webpack_require__.m_visibilityStore.SetAppVisibility(_, _), _();
+          },
+        });
+      }
+      function _(_) {
+        return _.createElement(
+          "div",
+          {
+            className: _().FilterOption,
+          },
+          _.createElement(_._, {
+            ..._,
+          }),
+        );
+      }
+      const _ = (_) =>
+        _.createElement(
+          "div",
+          {
+            className: _().FilterControlPage,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().FiltersTitle,
+            },
+            _.title,
+          ),
+          Boolean(_.description) &&
+            _.createElement(
+              "div",
+              {
+                className: _().FiltersDescription,
+              },
+              _.description,
+            ),
+          _.children,
+        );
+      let _ = class extends _.Component {
+        OpenFilterSettings(_) {
+          _.Get().SetDisplay(_ ? "event_filter" : "desktop_navigation");
+        }
+        render() {
+          const {
+              bUserIsLoggedIn: _,
+              nDisappearingHeaderVisibleHeight: _,
+              bIsCollapsed: __webpack_require__,
+              fnToggleCollapsed: _,
+              fnOnFilterChange: _,
+            } = this.props,
+            _ = _(),
+            _ = _.createElement(
+              "div",
+              {
+                className: _().MobileCloseButton,
+                onClick: () => {
+                  this.OpenFilterSettings(!1), _();
+                },
+              },
+              _.createElement(_.i6V, null),
+            ),
+            _ = __webpack_require__ ? Math.max(0, _) : 0,
+            _ = _
+              ? null
+              : _.createElement(
+                  "div",
+                  {
+                    onClick: _,
+                    className: _().CollapseButton,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      style: {
+                        marginTop: `${_}px`,
+                      },
+                      className: _().DesktopButton,
+                    },
+                    _.createElement(_.F2T, {
+                      angle: __webpack_require__ ? 180 : 0,
+                    }),
+                  ),
+                ),
+            _ = _
+              ? null
+              : _.createElement(
+                  "div",
+                  {
+                    onClick: () => this.OpenFilterSettings(!1),
+                    className: _().CollapseButton,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      style: {
+                        marginTop: `${_}px`,
+                      },
+                      className: _().DesktopButton,
+                    },
+                    _.createElement(_.i6V, null),
+                  ),
+                ),
+            _ = "desktop_navigation" != _.Get().GetDisplay() ? _ : _,
+            _ = __webpack_require__
+              ? null
+              : {
+                  top: `${_}px`,
+                };
+          (0, _._)();
+          let _;
+          switch (_.Get().GetDisplay()) {
+            case "event_filter":
+              _ = _.createElement(_, {
+                bUserIsLoggedIn: _,
+                fnOnFilterChange: _,
+              });
+              break;
+            case "browse_curator":
+              _ = _.createElement(_, null);
+              break;
+            case "desktop_navigation":
+              _ = _.createElement(_, {
+                ...this.props,
+                fnOpenFilterSettings: this.OpenFilterSettings,
+              });
+          }
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _().SidebarContainer,
+                  __webpack_require__ && _().SidebarCollapsed,
+                ),
+                style: _,
+              },
+              __webpack_require__
+                ? _
+                : _.createElement(
+                    "div",
+                    {
+                      className: _().Sidebar,
+                    },
+                    _,
+                    _,
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().ControlPageContainer,
+                      },
+                      _,
+                    ),
+                  ),
+            ),
+          );
+        }
+      };
+      (0, _._)([_._], _.prototype, "OpenFilterSettings", null),
+        (_ = (0, _._)([_._], _));
+      const _ = (0, _._)((_) => {
+        const {
+            bShouldIncludeLegalFooter: _,
+            bShowUpcoming: __webpack_require__,
+          } = _,
+          _ =
+            "Responsive_RequestMobileView" in window &&
+            window.Responsive_RequestMobileView;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().SidebarBackground,
+            },
+            _.createElement(_.Qte, null),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().SidebarTitle,
+            },
+            (0, _._)("#EventCalendar_Title", _.createElement("br", null)),
+          ),
+          _.createElement(_, {
+            bIsUpcoming: __webpack_require__,
+          }),
+          _.createElement(_, null),
+          _.createElement(
+            "div",
+            {
+              className: _().SidePanelGameSearch,
+            },
+            _.createElement(_, {
+              label: (0, _._)("#EventCalendar_UniversalSearch"),
+            }),
+          ),
+          _.createElement(_, {
+            bIsUpcoming: __webpack_require__,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().FilterSettingsCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().FilterLink, _().OpenFilterSettings),
+                onClick: () => _.fnOpenFilterSettings(!0),
+              },
+              _.createElement(_.wB_, null),
+              (0, _._)("#EventCalendar_EditFilters"),
+            ),
+          ),
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().SidebarLink, _().ForceResponsiveLink),
+                onClick: _,
+              },
+              (0, _._)("#EventCalendar_ShowResponsiveView"),
+            ),
+          _ && _.createElement(_, null),
+        );
+      });
+      let _ = class extends _.Component {
+        DecorateSearchSuggestion(_, _) {
+          if (_ && _._) {
+            let _ = "";
+            return (
+              "curators" == _.corpus
+                ? (_ = "group/" + _._)
+                : "games" == _.corpus &&
+                  ((0, _._)((0, _._)(_.type), "Unexpected app type " + _.type),
+                  (_ = "app/" + _._)),
+              _.createElement(
+                _._,
+                {
+                  key: `suggestion-${_._}`,
+                  _: `/${(0, _._)()}/${_}/`,
+                },
+                _,
+              )
+            );
+          }
+          return _;
+        }
+        render() {
+          return _.createElement(_._, {
+            strLabel: this.props.label,
+            fnOnSelected: () => {},
+            fnDecorateSuggestion: this.DecorateSearchSuggestion,
+            rgCorporaToSearch: ["games", "curators"],
+            focusOnMount: this.props.focusOnMount,
+          });
+        }
+      };
+      _ = (0, _._)([_._], _);
+      function _(_, _) {
+        const _ = (0, _._)(_);
+        if (((0, _._)(!!_, "Must define collection " + _), !_)) return null;
+        let _,
+          _ = (0, _._)().GetCollectionID() == _;
+        switch (_) {
+          case _._.Default:
+            _ = (0, _._)().BIsGlobalCalendar() && !_;
+            break;
+          case _._.Upcoming:
+            (_ = (0, _._)().BIsGlobalCalendar() && _),
+              (_ = (function () {
+                if (!(0, _._)().BIsGlobalCalendar()) return;
+                if (!_._.logged_in) return;
+                const _ =
+                    (0, _._)().GetStoreInitializationTimestamp().getTime() /
+                    1e3,
+                  _ = (0, _._)().GetCurrentlyLoadedEventCount(_);
+                if (!_) return;
+                return (0, _._)().BHitEventHorizon("forward")
+                  ? String(_.nCount)
+                  : _.nCount + "+";
+              })());
+        }
+        return {
+          name: _.strName,
+          shortName: _.strShortName,
+          key: _,
+          url: _.strUrl,
+          subtitle: _.strSubtitle,
+          onPage: _,
+          count: _,
+          bValveOnly: _.bIsValveOnly,
+        };
+      }
+      function _(_, _) {
+        const _ = new Array();
+        return (
+          __webpack_require__.push(_(_._.Default, _)),
+          __webpack_require__.push(_(_._.Upcoming, _)),
+          _
+        );
+      }
+      function _(_, _) {
+        const _ = new Array();
+        return (
+          __webpack_require__.push(_(_._.Featured, _)),
+          __webpack_require__.push(_(_._.Steam, _)),
+          _._.GetTimeNowWithOverride() < 1668160800 &&
+            __webpack_require__.push(_(_._.Halloween, _)),
+          _
+        );
+      }
+      function _(_, _) {
+        (0, _._)().BIsCollectionCalendar(), (0, _._)();
+        const _ = new Array();
+        if (
+          (_._.bIsCuratorsEnabled && __webpack_require__.push(_(_._.Press, _)),
+          _)
+        )
+          for (const _ of _.GetVisibleSpecialEvents()) {
+            const _ = !1;
+            __webpack_require__.push({
+              name: (0, _._)(_.sLocToken),
+              url: _.newshubUrl,
+              onPage: _,
+              key: "event_" + _.sLocToken,
+            });
+          }
+        return (
+          __webpack_require__.push(_(_._.Dev_Sales, _)),
+          _._.is_support &&
+            (__webpack_require__.push(_(_._.Dev_All, _)),
+            __webpack_require__.push(_(_._.Dev_AssociatedPress, _))),
+          _
+        );
+      }
+      const _ = (_) => {
+        const {
+          shortName: _,
+          name: __webpack_require__,
+          url: _,
+          onPage: _,
+          count: _,
+          bValveOnly: _,
+        } = _.element;
+        return !_._.is_support && _
+          ? null
+          : _.createElement(
+              _._,
+              {
+                _: "/" + _,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _().MobileNavButton,
+                    _ && _().MobileNavButtonActive,
+                  ),
+                },
+                _ || __webpack_require__,
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().MobileNavCount,
+                    },
+                    _,
+                  ),
+              ),
+            );
+      };
+      let _ = class extends _.Component {
+        constructor() {
+          super(...arguments),
+            (this.state = {
+              bSearchExpanded: !1,
+            });
+        }
+        onExpandSearch(_) {
+          this.setState({
+            bSearchExpanded: _,
+          });
+        }
+        render() {
+          const { bSearchExpanded: _ } = this.state,
+            _ = [
+              ..._(this.props.bIsUpcoming),
+              ..._(this.props.bIsUpcoming),
+              ..._(this.props.bIsUpcoming, !1),
+            ];
+          return _.createElement(
+            "div",
+            {
+              style: {
+                transform: `translateY(${this.props.nTopOffset}px)`,
+              },
+              className: _().MobileNavBannerCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().SettingsPanel,
+                onClick: this.props.fnToggleCollapsed,
+              },
+              _.createElement(_.wB_, null),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().SettingsPanel, _ && _().SearchExpanded),
+                onClick: () => this.onExpandSearch(!_),
+              },
+              _.createElement(_.eSy, null),
+            ),
+            _ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.createElement("div", {
+                  className: _().SearchDismiss,
+                  onClick: () => this.onExpandSearch(!1),
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_().SearchBox, _ && _().SearchExpanded),
+                  },
+                  _.createElement(_, {
+                    focusOnMount: !0,
+                  }),
+                ),
+              ),
+            _.createElement(
+              _,
+              {
+                className: _().MobileNavHScroll,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().MobileNavBannerList,
+                },
+                _.map((_) =>
+                  _.createElement(_, {
+                    key: _.key,
+                    element: _,
+                  }),
+                ),
+              ),
+            ),
+          );
+        }
+      };
+      function _(_) {
+        const {
+          key: _,
+          name: __webpack_require__,
+          subtitle: _,
+          url: _,
+          onPage: _,
+          count: _,
+          bValveOnly: _,
+          icon: _,
+        } = _.element;
+        return !_._.is_support && _
+          ? null
+          : _.createElement(
+              _._,
+              {
+                _: "/" + _,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)({
+                    [_().NewsChannel]: !0,
+                    [_().NewsChannelOnPage]: _,
+                    [_().ValveOnlyBackground]: _,
+                  }),
+                },
+                Boolean(_) &&
+                  _.createElement("img", {
+                    className: (0, _._)(_().NewsChannelIcon),
+                    src: _,
+                  }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().NewsChannelText,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().NewsChannelTitle,
+                    },
+                    _ && "(VO) ",
+                    __webpack_require__,
+                  ),
+                  _ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().NewsChannelSubtitle,
+                      },
+                      _,
+                    ),
+                ),
+                Boolean(void 0 !== _) &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().NewsChannelCount,
+                    },
+                    _,
+                  ),
+              ),
+            );
+      }
+      (0, _._)([_._], _.prototype, "onExpandSearch", null),
+        (_ = (0, _._)([_._], _));
+      let _ = class extends _.Component {
+        render() {
+          const _ = _(this.props.bIsUpcoming),
+            _ = _(this.props.bIsUpcoming);
+          return _.createElement(
+            "div",
+            {
+              className: _().NewsChannelGroup,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().NewsChannelListTitle,
+              },
+              (0, _._)("#EventCalendar_NewsChannels"),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().NewsChannelList,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: _.key,
+                  element: _,
+                }),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().NewsChannelListTitle,
+              },
+              (0, _._)("#EventCalendar_NewsChannels_Global"),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().NewsChannelList,
+              },
+              _.map((_) =>
+                _.createElement(_, {
+                  key: _.key,
+                  element: _,
+                }),
+              ),
+            ),
+          );
+        }
+      };
+      function _(_) {
+        const { bIsUpcoming: _ } = _,
+          _ = _(_, !1);
+        return _ && _.length > 0
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().NewsChannelGroup, _().DiscoverGroup),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().NewsChannelListTitle,
+                },
+                (0, _._)("#EventCalendar_NewsChannels_Discover"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().NewsChannelList,
+                },
+                __webpack_require__.map((_) =>
+                  _.createElement(_, {
+                    key: _.key,
+                    element: _,
+                  }),
+                ),
+              ),
+            )
+          : null;
+      }
+      _ = (0, _._)([_._], _);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = {
+        include_assets: !0,
+        include_release: !0,
+        include_screenshots: !0,
+      };
+      const _ = (0, _._)((_) => {
+          const {
+              calendarEvent: _,
+              partnerEventStore: __webpack_require__,
+              mode: _,
+              forceParentUpdate: _,
+            } = _,
+            _ = "500px",
+            _ = _()[`EventType${_.event_type}`],
+            _ = (0, _._)(_().TileContainer, _),
+            _ = "carousel" === _,
+            _ = (0, _._)(
+              {
+                onEnter: () => {
+                  !(function (_, _, _) {
+                    const _ = Array();
+                    _.push(_.QueueLoadPartnerEvent(_.clanid, _.unique_id)),
+                      _.appid && _.push(_._.Get().QueueAppRequest(_.appid, _)),
+                      _.clanInfo &&
+                        _.push(
+                          _._.LoadClanInfoForClanAccountID(_.clanInfo.clanid),
+                        ),
+                      Promise.all(_).then(() => {
+                        const _ = _.GetClanEventModel(_.unique_id);
+                        _ &&
+                        _.appid &&
+                        _.appid != _.appid &&
+                        !_._.Get().BHasApp(_.appid, _)
+                          ? _._.Get().QueueAppRequest(_.appid, _).then(_)
+                          : __webpack_require__();
+                      });
+                  })(_, __webpack_require__, _);
+                },
+              },
+              {
+                rootMargin: `${_} 0px ${_} 0px`,
+              },
+            );
+          return _.createElement(
+            "div",
+            {
+              className: _,
+              ref: _,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().Tile, _().LoadingTile),
+              },
+              _ && _.createElement(_._, null),
+            ),
+            _.createElement("div", {
+              className: _().Footer,
+            }),
+          );
+        }),
+        _ = (0, _._)((_) => {
+          const {
+              partnerEventStore: _,
+              calendarEvent: __webpack_require__,
+              ..._
+            } = _,
+            _ = _.GetClanEventModel(__webpack_require__.unique_id),
+            _ = (function (_, _) {
+              const _ = _.GetClanEventModel(_.unique_id);
+              return !(
+                !_ ||
+                (_.appid && !_._.Get().BHasApp(_.appid, _)) ||
+                (_.appid &&
+                  _.appid != _.appid &&
+                  !_._.Get().BHasApp(_.appid, _)) ||
+                (_.clanInfo && !_._.HasLoadedClanAccountID(_.clanInfo.clanid))
+              );
+            })(__webpack_require__, _),
+            _ = (0, _._)();
+          return _
+            ? _.createElement(_._, {
+                eventModel: _,
+                calendarEvent: __webpack_require__,
+                ..._,
+              })
+            : _.createElement(_, {
+                calendarEvent: __webpack_require__,
+                partnerEventStore: _,
+                ..._,
+                forceParentUpdate: _,
+              });
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = "SteamNewsHub_SuggestCuratorsDismissed";
+      function _() {
+        const _ = _._.GetELanguageFallbackOrder();
+        void 0 === _.find((_) => 0 === _) && _.push(0);
+        const _ = new Array();
+        for (const _ of _) {
+          const _ = _._.Get().GetCuratorsForLang(_);
+          if (!_) continue;
+          const _ = _.filter(
+            (_) => !_._.Get().BIsIgnoringCurator(_.clanAccountID),
+          );
+          (0, _._)(_), _.push(..._);
+        }
+        return _;
+      }
+      function _(_) {
+        const { bCanDismiss: _ } = _,
+          [__webpack_require__, _] = (0, _.useState)(() =>
+            (function () {
+              const _ = JSON.parse(localStorage.getItem(_));
+              return _ && _.bDismissed;
+            })(),
+          ),
+          [_, _] = (0, _.useState)(0),
+          [_, _] = (0, _.useState)(null),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _._)("CuratorFeedSuggestRow"),
+          _ = (0, _.useCallback)(() => {
+            if (!_.token.reason)
+              if (_.current) {
+                const _ = 118,
+                  _ = Math.floor(
+                    Math.min(_.current.clientWidth, window.innerWidth) / _,
+                  );
+                _(Math.max(_ - 1, 0));
+              } else _(0);
+          }, [_.token.reason]);
+        if (
+          ((0, _.useEffect)(() => _(), [_]),
+          (0, _.useEffect)(() => {
+            if (null == _) {
+              (async () => {
+                await _._.Get().WaitForInitialLoad(), _.token.reason || _(_);
+              })();
+            }
+            return (
+              window.addEventListener("resize", _),
+              () => window.removeEventListener("resize", _)
+            );
+          }, [_.token.reason, _, _]),
+          __webpack_require__)
+        )
+          return null;
+        let _ =
+          null == _
+            ? void 0
+            : _.slice(0, _).map((_) => {
+                const _ = _._.GetClanInfoByClanAccountID(_.clanAccountID);
+                return _
+                  ? _.createElement(
+                      "div",
+                      {
+                        className: _().ClanInfo,
+                        key: _.clanAccountID,
+                      },
+                      _.createElement(_, {
+                        clanInfo: _,
+                        layout: "icon",
+                      }),
+                    )
+                  : null;
+              });
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().FeedSuggestContainerBG,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().FeedSuggestContainer,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().FeedSuggestCaption,
+                },
+                (0, _._)("#EventCurator_FeedCaption_Long"),
+              ),
+              _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().DismissButton,
+                    onClick: (_) => {
+                      (0, _._)(
+                        _.createElement(_._, {
+                          strTitle: (0, _._)("#EventCurator_DismissTitle"),
+                          strDescription: (0, _._)("#EventCurator_DismissBody"),
+                          onOK: () => {
+                            localStorage.setItem(
+                              _,
+                              JSON.stringify({
+                                bDismissed: !0,
+                              }),
+                            ),
+                              _.token.reason || _(!0);
+                          },
+                        }),
+                        (0, _._)(_),
+                      );
+                    },
+                  },
+                  _.createElement(_.i6V, null),
+                ),
+              _.createElement(
+                "div",
+                {
+                  className: _().RowContainer,
+                  ref: _,
+                },
+                _ || _.createElement(_._, null),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().BrowseMore,
+                    onClick: _.Get().ShowBrowseCurator,
+                  },
+                  (0, _._)("#EventCurator_BrowseMore"),
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = (_) => {
+        const {
+            titleToken: _,
+            subtitleToken: __webpack_require__,
+            backgroundImg: _,
+            headerImg: _,
+            headerURL: _,
+          } = _,
+          _ = _
+            ? {
+                backgroundImage: _,
+              }
+            : {};
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(
+              _().CommonHeaderStyles,
+              _().SimpleTitleHeaderCtn,
+              _.largeHeader && _().LargeHeader,
+            ),
+            style: _,
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _().CollectionBannerGroup,
+                _ ? _().HeaderImg : _().NoHeaderImg,
+              ),
+            },
+            Boolean(_ && _) &&
+              _.createElement(
+                "a",
+                {
+                  href: _,
+                  className: _().AppBannerLogoCtn,
+                },
+                _.createElement("img", {
+                  className: _().AppBannerLogo,
+                  src: _,
+                }),
+              ),
+            Boolean(_ && !_) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().AppBannerLogoCtn,
+                },
+                _.createElement("img", {
+                  className: _().AppBannerLogo,
+                  src: _,
+                }),
+              ),
+            _.createElement(
+              "div",
+              {
+                className: _().SimpleTitleCtn,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().Title,
+                },
+                _.startsWith("#") ? (0, _._)(_) : _,
+              ),
+              __webpack_require__ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().Subtitle,
+                  },
+                  __webpack_require__.startsWith("#")
+                    ? (0, _._)(__webpack_require__)
+                    : __webpack_require__,
+                ),
+            ),
+          ),
+        );
+      };
+      function _(_) {
+        const _ = (0, _._)(_);
+        return (
+          (0, _._)(!!_, "Must define collection " + _),
+          {
+            collection: _,
+            smallHeight: Number(_().simpleTitleSmallHeight),
+            largeHeight: Number(_().simpleTitleLargeHeight),
+            component: (_, _, _) =>
+              _.createElement(_, {
+                largeHeader: _,
+                titleToken: _.strHeaderTitle,
+                subtitleToken: _.strHeaderSubtitle,
+                headerImg: _,
+                headerURL: _,
+              }),
+          }
+        );
+      }
+      let _ = null;
+      function _() {
+        return (
+          _ ||
+            ((_ = new Array()), _.push(_(_._.Press)), _.push(_(_._.Halloween))),
+          _
+        );
+      }
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      let _ = class extends _.Component {
+        render() {
+          const {
+            rgCalendarItems: _,
+            bSuppressHoverEffects: _,
+            strMultipleSourceTitle: __webpack_require__,
+          } = this.props;
+          if (!_ || 0 == _.length) return null;
+          const _ = _[0];
+          if (!_.every((_) => _.appid === _.appid && _.clanid === _.clanid))
+            return __webpack_require__
+              ? _.createElement(
+                  "div",
+                  {
+                    className: _().EventTileCarouselTitleContainer,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().EventTileCarouselTextTitle,
+                    },
+                    __webpack_require__,
+                  ),
+                )
+              : null;
+          const _ = Boolean(0 === _.appid && _._.accountid);
+          return _.createElement(
+            "div",
+            {
+              className: _().EventTileCarouselTitleContainer,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().EventTileCarouselTitle,
+              },
+              _.createElement(_, {
+                calendarItem: _,
+                bSuppressHoverEffects: _,
+              }),
+            ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().EventTileCarouselFollow,
+                },
+                _.createElement(_._, {
+                  clanAccountID: _.clanid,
+                }),
+              ),
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      let _ = (_ = class extends _.Component {
+        constructor() {
+          super(...arguments),
+            (this.state = {
+              bScreenIsWide: _.IsWideScreen(),
+              nMaxCapsulesPerRow: this.GetMaxCapsulesPerRow(),
+            });
+        }
+        componentDidMount() {
+          window.addEventListener("resize", this.OnResize);
+        }
+        componentWillUnmount() {
+          window.removeEventListener("resize", this.OnResize);
+        }
+        static IsWideScreen() {
+          return window.innerWidth >= 910;
+        }
+        GetMaxCapsulesPerRow() {
+          return _.IsWideScreen() ? 3 : window.innerWidth > 700 ? 2 : 1;
+        }
+        OnResize() {
+          this.setState({
+            bScreenIsWide: _.IsWideScreen(),
+            nMaxCapsulesPerRow: this.GetMaxCapsulesPerRow(),
+          });
+        }
+        render() {
+          const {
+            rgCalendarItems: _,
+            fnOnEventClick: _,
+            bSuppressHoverEffects: __webpack_require__,
+            bHideGameTitle: _,
+            strMultipleSourceTitle: _,
+          } = this.props;
+          if (!_ || 0 == _.length) return null;
+          const _ = _.map((_) =>
+            _.createElement(_, {
+              key: "ht-" + _.unique_id,
+              calendarEvent: _,
+              partnerEventStore: _._,
+              fnOnClicked: _,
+              bSuppressHoverEffects: __webpack_require__,
+              mode: _.length > 1 ? "carousel" : "wide",
+              bHideGameTitle: _,
+            }),
+          );
+          return _.createElement(
+            "div",
+            {
+              className: _().CalendarRow,
+            },
+            _.createElement(_, {
+              rgCalendarItems: _,
+              bSuppressHoverEffects: __webpack_require__,
+              strMultipleSourceTitle: _,
+            }),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _().EventTileCarousel,
+                  "EventTileCarouselCtn",
+                ),
+              },
+              _.createElement(
+                _._,
+                {
+                  ...this.props,
+                  hideArrows: !0,
+                  visibleElements: Math.min(
+                    this.state.nMaxCapsulesPerRow,
+                    this.props.rgCalendarItems.length,
+                  ),
+                  className: _().HorizontalTiles,
+                  useTestScrollbar: !0,
+                  bLazyRenderChildren: !0,
+                  disableEdgeWrap: !0,
+                  screenIsWide: this.state.bScreenIsWide,
+                },
+                _,
+              ),
+            ),
+          );
+        }
+      });
+      (0, _._)([_._], _.prototype, "OnResize", null),
+        (_ = _ = (0, _._)([_._], _));
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = (_) => {
+          var _;
+          let _ = new Array();
+          return (
+            (
+              null === (_ = _._.SUPPORTED_LANGUAGES) || void 0 === _
+                ? void 0
+                : _.length
+            )
+              ? (_ = _._.SUPPORTED_LANGUAGES.map((_) => _.localizedName))
+              : __webpack_require__.push((0, _._)("#Language_" + _._.LANGUAGE)),
+            _.createElement(
+              "div",
+              {
+                className: _().LanguageList,
+              },
+              __webpack_require__.join(", "),
+            )
+          );
+        },
+        _ = (_) => {
+          const _ = "SteamNewsHub_LanguageDismissed",
+            [__webpack_require__, _] = _.useState(
+              (() => {
+                const _ = JSON.parse(localStorage.getItem(_));
+                return _ && _.bDismissed;
+              })(),
+            );
+          if (__webpack_require__) return null;
+          if ((0, _._)()) return null;
+          const _ = _._.STORE_BASE_URL + "account/languagepreferences/";
+          return _.createElement(
+            "div",
+            {
+              className: _().LanguageFeedNoteBucket,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().LanguageFeedNoteCtn,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().DismissButton,
+                  onClick: () => {
+                    _(!0),
+                      localStorage.setItem(
+                        _,
+                        JSON.stringify({
+                          bDismissed: !0,
+                        }),
+                      );
+                  },
+                },
+                _.createElement(_.i6V, null),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().BodyFlow,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().LeftColumn,
+                  },
+                  _.createElement(_.vCk, null),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().RightColumn,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Title,
+                    },
+                    (0, _._)("#EventCalendar_NewsLanguage_Title"),
+                  ),
+                  _.createElement(_, null),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Text,
+                    },
+                    (0, _._)(
+                      "#EventCalendar_NewsLanguage_Text",
+                      _.createElement(
+                        "a",
+                        {
+                          href: _,
+                        },
+                        (0, _._)("#EventCalendar_NewsLanguage_TextInHyperlink"),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          );
+        };
+      var _, _;
+      const _ = "global_header";
+      function _() {
+        const _ = document.getElementById(_);
+        if (_ && "none" != getComputedStyle(_).display) return _;
+        const _ = document.getElementsByClassName("responsive_header");
+        if (
+          ((0, _._)(_.length <= 1, "Must have at most one responsive_header"),
+          1 == _.length)
+        ) {
+          return _[0];
+        }
+        return null;
+      }
+      function _() {
+        const _ = _();
+        return (_ && _._ != _) || _._.IN_MOBILE_WEBVIEW;
+      }
+      function _() {
+        return (
+          _() ||
+          window.innerWidth <
+            parseInt(_().strDesktopControlBarWidth) +
+              parseInt(_().strMaxMobileWidth)
+        );
+      }
+      let _ = (_ = class extends _.Component {
+        constructor() {
+          super(...arguments),
+            (this.state = {
+              bUserIsLoggedIn: _._.logged_in,
+              nVisibleHeight: 0,
+              nScrollTop: 0,
+              bControlBarIsCollapsed: _(),
+              bControlBarWasOpenedByUser: !1,
+              nDisappearingHeaderTop: 0,
+              nSteamNavHeaderHeight: 0,
+              nMobileNavBannerHeight: 0,
+              nHubBannerHeight: 0,
+              nGroupHeaderHeight: 0,
+              nLogInBannerHeight: 0,
+              nAccumScrollUp: 0,
+              nAccumScrollDown: 0,
+            }),
+            (this.m_refControlBar = _.createRef()),
+            (this.m_cancelSignal = _().CancelToken.source());
+        }
+        componentDidMount() {
+          this.InitEventCalendarStore(),
+            this.UpdateDocumentUI(),
+            window.addEventListener("resize", this.OnResize),
+            window.addEventListener("scroll", this.OnScroll),
+            this.setState({
+              nVisibleHeight: window.innerHeight,
+            }),
+            window.scrollTo(0, 0),
+            this.UpdateEventControlLocationAndVisibility(),
+            _._.IN_MOBILE_WEBVIEW &&
+              this.props.location &&
+              0 == this.props.history.length &&
+              this.props.history.push(this.props.location);
+        }
+        componentDidUpdate(_, _) {
+          (_.bUserIsLoggedIn == this.state.bUserIsLoggedIn &&
+            JSON.stringify(_.filter_to_appids) ==
+              JSON.stringify(this.props.filter_to_appids) &&
+            JSON.stringify(_.filter_to_clanids) ==
+              JSON.stringify(this.props.filter_to_clanids) &&
+            _.filter_to_collection === this.props.filter_to_collection &&
+            _.filter_to_saleid === this.props.filter_to_saleid &&
+            _.filter_to_contenthub_hubtype ===
+              this.props.filter_to_contenthub_hubtype &&
+            _.filter_to_contenthub_category_or_language ===
+              this.props.filter_to_contenthub_category_or_language &&
+            _.filter_to_contenthub_tag_name ===
+              this.props.filter_to_contenthub_tag_name &&
+            _.section_by_day === this.props.section_by_day) ||
+            (window.scrollTo(0, 0), this.InitEventCalendarStore()),
+            this.UpdateDocumentUI(),
+            this.LoadEventToShowAsModal(),
+            this.UpdateEventControlLocationAndVisibility();
+        }
+        UpdateEventControlLocationAndVisibility() {
+          if (this.props.location) {
+            const _ = _.Get().UpdateLocation(
+              () => this.props.history,
+              this.props.location,
+            );
+            (("desktop_navigation" != _ && this.state.bControlBarIsCollapsed) ||
+              ("desktop_navigation" == _ &&
+                !this.state.bControlBarIsCollapsed &&
+                _())) &&
+              this.ToggleControlBarCollapsed();
+          }
+        }
+        componentWillUnmount() {
+          this.m_cancelSignal.cancel("component unmounted"),
+            window.removeEventListener("resize", this.OnResize),
+            window.removeEventListener("scroll", this.OnScroll),
+            this.UpdateBodyScrollState(!0);
+          const _ = _();
+          _ && (_.style.transform = "");
+        }
+        GetCurrentHubBannerHeight(_) {
+          const _ = _ && !(0, _._)();
+          return (0, _._)().GetCollectionID()
+            ? (function (_, _) {
+                if (!_) return 0;
+                const _ = _().find((_) => _.collection === _);
+                return _ ? (_ ? _.largeHeight : _.smallHeight) : 0;
+              })((0, _._)().GetCollectionID(), _)
+            : (0, _._)().BIsSaleCalendar()
+              ? ((__webpack_require__ = (0, _._)().GetSaleID()),
+                (_ = _),
+                __webpack_require__ &&
+                _._.GetClanEventModel(__webpack_require__)
+                  ? Number(
+                      _
+                        ? _().simpleTitleLargeHeight
+                        : _().simpleTitleSmallHeight,
+                    )
+                  : 0)
+              : (0, _._)().BIsSingleSourceCalendar()
+                ? parseInt(
+                    _
+                      ? _().strJumboHubBannerHeight
+                      : _().strDesktopHubBannerHeight,
+                  ) - 1
+                : 0;
+          var _, _;
+        }
+        BShowLogInBanner() {
+          return Boolean(
+            !this.state.bUserIsLoggedIn && (0, _._)().BIsGlobalCalendar(),
+          );
+        }
+        GetCurrentHeaderHeights(_) {
+          const _ = _(),
+            _ = (0, _._)();
+          let _ = 0;
+          _() &&
+            ((_ = parseInt(
+              _
+                ? _().strMobileGlobalHeaderHeight
+                : _().strDesktopGlobalHeaderHeight,
+            )),
+            (_ -= 1));
+          const _ =
+              parseInt(
+                _
+                  ? _().strMobileGroupHeaderHeight
+                  : _().strDesktopGroupHeaderHeight,
+              ) - 1,
+            _ = (_ ? parseInt(_().strMobileNavBannerHeight) : 0) - 1,
+            _ = this.GetCurrentHubBannerHeight(_);
+          let _ = 0;
+          return (
+            this.BShowLogInBanner() &&
+              (_ =
+                _ && !_
+                  ? parseInt(_().strLogInBannerLargeHeight)
+                  : parseInt(_().strLogInBannerSmallHeight)),
+            {
+              nSteamNavHeaderHeight: _,
+              nMobileNavBannerHeight: _,
+              nHubBannerHeight: _,
+              nGroupHeaderHeight: _,
+              nLogInBannerHeight: _,
+            }
+          );
+        }
+        async LoadEventToShowAsModal() {
+          const _ = (0, _._)(this.props.location, "megaphone");
+          if (!!_ && "0" !== _ && "false" !== _) {
+            (0, _._)(this.props.history, "megaphone", null);
+            const _ = {
+                exclude_tags: ["patchnotes", "skip_megaphone"],
+              },
+              _ = await _._.LoadAdjacentPartnerEvents(null, null, _._, 0, 1, _);
+            if (1 == (null == _ ? void 0 : _.length)) {
+              const _ = _[0];
+              (0, _._)(this.props.history, {
+                emclan: _.clanSteamID.ConvertTo64BitString(),
+                emgid: _.GID,
+              });
+            } else
+              console.error("Could not find the most recent Steam Blog post.");
+          }
+          const _ = (0, _._)(this.props.location, "clientpatchnotes");
+          if (!!_ && "0" !== _ && "false" !== _) {
+            (0, _._)(this.props.history, "clientpatchnotes", null);
+            const [_, __webpack_require__] =
+                "beta" === _ ? [null, _._] : [_._, null],
+              _ = {
+                require_tags: ["patchnotes"],
+              },
+              _ = await _._.LoadAdjacentPartnerEvents(
+                null,
+                _._.InitFromClanID(__webpack_require__),
+                _,
+                0,
+                1,
+                _,
+              );
+            if (1 == (null == _ ? void 0 : _.length)) {
+              const _ = _[0];
+              (0, _._)(this.props.history, {
+                emclan: _.clanSteamID.ConvertTo64BitString(),
+                emgid: _.GID,
+              });
+            } else
+              console.error(
+                "Could not find the most recent Steam client patch notes.",
+              );
+          }
+          const _ = (0, _._)(this.props.location, "emclan"),
+            _ = (0, _._)(this.props.location, "emgid");
+          if (_ && _) {
+            const _ = new _._(_);
+            if (
+              this.state.modalEvent &&
+              this.state.modalEvent.clanSteamID.ConvertTo64BitString() ==
+                _.ConvertTo64BitString() &&
+              this.state.modalEvent.GID == _
+            )
+              return;
+            const _ = await _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+              _,
+              _,
+              0,
+            );
+            this.setState({
+              modalEvent: _,
+            });
+          } else
+            this.state.modalEvent &&
+              this.setState({
+                modalEvent: null,
+              });
+        }
+        BShowFutureView() {
+          const _ = (0, _._)(this.props.location, "upcoming");
+          return _ && "false" != _;
+        }
+        BShowUpdatesOnly() {
+          return !(
+            !this.props.filter_to_appids ||
+            1 != this.props.filter_to_appids.length ||
+            "true" != (0, _._)(this.props.location, "updates")
+          );
+        }
+        UpdateDocumentUI() {
+          var _, _, _, _, _;
+          let _, _;
+          const _ = (0, _._)();
+          if (_.BIsGlobalCalendar()) {
+            const _ = (0, _._)(
+              this.BShowFutureView() ? _._.Upcoming : _._.Default,
+            );
+            _ =
+              null !== (_ = null == _ ? void 0 : _.strHeaderTitle) &&
+              void 0 !== _
+                ? _
+                : null == _
+                  ? void 0
+                  : _.strName;
+          } else if (_.BIsSingleAppCalendar()) {
+            const _ = _.GetSingleAppID();
+            _ =
+              null === (_ = _._.Get().GetApp(_)) || void 0 === _
+                ? void 0
+                : _.GetName();
+          } else if (_.BIsSingleGroupCalendar()) {
+            const _ = _.GetSingleGroupID(),
+              _ = _ && _._.GetClanInfoByClanAccountID(_);
+            _ = _ && _.group_name;
+          } else if (_.BIsCollectionCalendar()) {
+            const _ = _.GetCollectionID(),
+              _ = (0, _._)(_);
+            _ =
+              null !== (_ = null == _ ? void 0 : _.strHeaderTitle) &&
+              void 0 !== _
+                ? _
+                : null == _
+                  ? void 0
+                  : _.strName;
+          } else if (_.BIsSaleCalendar()) {
+            const _ = _._.GetClanEventModel(_.GetSaleID());
+            if (_) {
+              if (_.appid)
+                _ =
+                  null === (_ = _._.Get().GetApp(_.appid)) || void 0 === _
+                    ? void 0
+                    : _.GetName();
+              else {
+                const _ =
+                    null === (_ = _.clanSteamID) || void 0 === _
+                      ? void 0
+                      : _.GetAccountID(),
+                  _ = _ && _._.GetClanInfoByClanAccountID(_);
+                _ = _ && _.group_name;
+              }
+              _ = _ && _.GetNameWithFallback((0, _._)(_._.LANGUAGE));
+            }
+          }
+          let _ = (0, _._)("#EventCalendar_TabTitle_Global");
+          _ &&
+            (_ = _
+              ? (0, _._)(
+                  "#EventCalendar_TabTitle_GroupNameAndEventDetail",
+                  _,
+                  _,
+                )
+              : (0, _._)("#EventCalendar_TabTitle_GroupHub", _)),
+            document.title != _ && (document.title = _),
+            document.body.classList.contains("events_hub") ||
+              document.body.classList.add("events_hub");
+        }
+        OnResize() {
+          this.setState((_) => {
+            const _ = window.innerHeight,
+              _ = !_.bControlBarWasOpenedByUser && _(),
+              _ = this.GetCurrentHeaderHeights(this.state.nScrollTop <= 0);
+            return (
+              this.UpdateBodyScrollState(_),
+              {
+                nVisibleHeight: _,
+                bControlBarIsCollapsed: _,
+                ..._,
+              }
+            );
+          });
+        }
+        OnScroll() {
+          const _ = Math.round(window.scrollY);
+          this.setState((_) => {
+            const _ = _.nScrollTop <= 0,
+              _ = _ <= 0;
+            let { nHubBannerHeight: _, nLogInBannerHeight: _ } = _;
+            if (_ != _) {
+              const _ = this.GetCurrentHeaderHeights(_);
+              (_ = _.nHubBannerHeight), (_ = _.nLogInBannerHeight);
+            }
+            const _ = _ - _.nScrollTop;
+            let _ = Math.max(0, _.nAccumScrollUp - _),
+              _ = Math.max(0, _.nAccumScrollDown + _),
+              _ = _.nDisappearingHeaderTop;
+            let _ = _.nDisappearingHeaderTop < 0;
+            _ > 80 && ((_ = 0), (_ = 0), (_ = !0)),
+              (_ > 100 || _) && ((_ = 0), (_ = 0), (_ = !1)),
+              this.state.bControlBarIsCollapsed || (_ = !1),
+              _.modalEvent && (_ = !0);
+            const _ = _.nSteamNavHeaderHeight + _ + _.nMobileNavBannerHeight;
+            if (((_ = _ ? -1 * _ : 0), _ !== _.nDisappearingHeaderTop)) {
+              const _ = _();
+              _ && (_.style.transform = `translateY(${_}px)`);
+            }
+            return {
+              nScrollTop: _,
+              nAccumScrollUp: _,
+              nAccumScrollDown: _,
+              nDisappearingHeaderTop: _,
+              nHubBannerHeight: _,
+              nLogInBannerHeight: _,
+            };
+          });
+        }
+        async InitEventCalendarStore() {
+          const _ = {
+              appids: this.props.filter_to_appids,
+              clanaccountids: this.props.filter_to_clanids,
+              collectionid: this.props.filter_to_collection,
+              saleid: this.props.filter_to_saleid,
+              hubtype: this.props.filter_to_contenthub_hubtype,
+              category_or_language:
+                this.props.filter_to_contenthub_category_or_language,
+              tag_name: this.props.filter_to_contenthub_tag_name,
+              bSectionByDay: this.props.section_by_day,
+            },
+            _ = (0, _._)(_, this.props.initialFilters),
+            _ = (0, _._)(),
+            _ =
+              (_._.Get(), Boolean(this.state.bUserIsLoggedIn && _._.accountid)),
+            _ =
+              __webpack_require__.BIsGlobalCalendar() && _
+                ? "local"
+                : "session",
+            _ = __webpack_require__.BIsGlobalCalendar()
+              ? "U" + _._.accountid
+              : _;
+          _.m_visibilityStore.Init(
+            _,
+            this.BShowUpdatesOnly(),
+            __webpack_require__.BIsShowingFeaturedFeed(),
+            _,
+            _,
+          );
+          const _ = !__webpack_require__.BIsCollectionCalendar();
+          if (
+            (__webpack_require__.SetFilteredView(
+              (_) => _.m_visibilityStore.BShouldDisplayEvent(_),
+              _,
+            ),
+            _.m_bInitialLoad)
+          ) {
+            const _ = (0, _._)("metadatainfo", "application_config");
+            __webpack_require__.SetCollectionMetaData(
+              __webpack_require__.ValidateCollectionMetadata(_) ? _ : null,
+            );
+          }
+          const _ =
+            _.m_bInitialLoad && (0, _._)("initialEvents", "application_config");
+          _
+            ? (await __webpack_require__.RegisterCalendarEventsAndModels(_),
+              (_.m_bInitialLoad = !1))
+            : await __webpack_require__.RegisterCalendarEventsAndModels({
+                success: 1,
+              }),
+            __webpack_require__.BIsSingleSourceCalendar() &&
+              (__webpack_require__.BIsSingleAppCalendar()
+                ? _._.Get().QueueAppRequest(
+                    __webpack_require__.GetSingleAppID(),
+                    {
+                      include_assets: !0,
+                      include_platforms: !0,
+                      include_basic_info: !0,
+                      include_release: !0,
+                    },
+                  )
+                : _._.LoadClanInfoForClanSteamID(
+                    _._.InitFromClanID(__webpack_require__.GetSingleGroupID()),
+                  )),
+            this.OnResize();
+        }
+        UpdateBodyScrollState(_) {
+          const _ = !_ && _(),
+            _ = document.body;
+          _ &&
+            (_
+              ? _.classList.add(_().BodyNoScroll)
+              : _.classList.remove(_().BodyNoScroll));
+        }
+        MobileNavOpenSettings() {
+          this.ToggleControlBarCollapsed(),
+            this.m_refControlBar.current &&
+              this.m_refControlBar.current.OpenFilterSettings(!0);
+        }
+        ToggleControlBarCollapsed() {
+          this.setState((_) => {
+            const _ = !_.bControlBarIsCollapsed,
+              _ = _.bControlBarIsCollapsed,
+              _ = _ ? _.nDisappearingHeaderTop : 0,
+              _ = _();
+            return (
+              _ && (_.style.transform = `translateY(${_}px)`),
+              this.UpdateBodyScrollState(_),
+              {
+                bControlBarIsCollapsed: _,
+                bControlBarWasOpenedByUser: _,
+                nDisappearingHeaderTop: _,
+              }
+            );
+          });
+        }
+        OnControlBarChange() {
+          window.scrollTo(0, 0);
+        }
+        CloseEventModal() {
+          const _ = _();
+          _ &&
+            (_.style.transform = `translateY(${this.state.nDisappearingHeaderTop}px)`),
+            "PUSH" === this.props.history.action
+              ? this.props.history.goBack()
+              : (0, _._)(this.props.history, {
+                  emclan: void 0,
+                  emgid: void 0,
+                });
+        }
+        async OnEventClicked(_) {
+          _._.Get().RecordEventRead(_, 8);
+          const _ =
+              this.state.nSteamNavHeaderHeight +
+              this.state.nHubBannerHeight +
+              this.state.nMobileNavBannerHeight,
+            _ = _();
+          if (
+            (_ && (_.style.transform = `translateY(${-1 * _}px)`),
+            _._.bOpenEventLandingPage)
+          ) {
+            const _ =
+                _.appid &&
+                (await _._.Get().QueueAppRequest(_.appid, {
+                  include_basic_info: !0,
+                }))
+                  ? _._.Get().GetApp(_.appid)
+                  : void 0,
+              _ = (0, _._)(_, _, _._.k_eStoreView, "allowRelative");
+            this.props.history.push(_);
+          } else
+            (0, _._)(this.props.history, {
+              emclan: _.clanSteamID.ConvertTo64BitString(),
+              emgid: _.GID,
+            });
+        }
+        ToggleFutureView() {
+          (0, _._)(
+            this.props.history,
+            "upcoming",
+            this.BShowFutureView() ? "false" : "true",
+          );
+        }
+        ResetAllFilters() {
+          (0, _._)(this.props.history, "updates", void 0),
+            (0, _._)().m_visibilityStore.InitDefaultCheckboxes(
+              this.state.bUserIsLoggedIn,
+              !1,
+            );
+        }
+        render() {
+          const _ =
+              this.state.nSteamNavHeaderHeight +
+              this.state.nHubBannerHeight +
+              this.state.nMobileNavBannerHeight +
+              this.state.nLogInBannerHeight,
+            _ =
+              this.state.nDisappearingHeaderTop +
+              this.state.nSteamNavHeaderHeight,
+            _ = _ + this.state.nMobileNavBannerHeight,
+            _ = _ + this.state.nLogInBannerHeight,
+            _ = this.state.nVisibleHeight <= parseInt(_().strMinMobileHeight),
+            _ = _
+              ? 0
+              : this.state.nDisappearingHeaderTop +
+                this.state.nSteamNavHeaderHeight,
+            _ = _ ? 0 : this.state.nDisappearingHeaderTop + _,
+            _ = (0, _._)().m_visibilityStore.BAreAnyEventsFiltered(
+              this.state.bUserIsLoggedIn,
+            )
+              ? this.ResetAllFilters
+              : null;
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _().EventCalendarContainer,
+                  this.state.bControlBarIsCollapsed ? _().CollapsedMenu : "",
+                ),
+              },
+              _.createElement(
+                _._,
+                null,
+                this.state.modalEvent
+                  ? _.createElement(_._, {
+                      appid: this.state.modalEvent.appid,
+                      trackingLocation: 8,
+                      announcementGID:
+                        this.state.modalEvent.GetAnnouncementGID(),
+                      partnerEventStore: _._,
+                      eventModel: this.state.modalEvent,
+                      showAppHeader: !0,
+                      closeModal: this.CloseEventModal,
+                    })
+                  : null,
+              ),
+              _.createElement(
+                _._,
+                null,
+                _.createElement(_, {
+                  ref: this.m_refControlBar,
+                  bUserIsLoggedIn: this.state.bUserIsLoggedIn,
+                  nDisappearingHeaderVisibleHeight: _,
+                  bIsCollapsed: this.state.bControlBarIsCollapsed,
+                  bShowUpcoming: this.BShowFutureView(),
+                  bShouldIncludeLegalFooter: !_(),
+                  fnToggleCollapsed: this.ToggleControlBarCollapsed,
+                  fnOnFilterChange: this.OnControlBarChange,
+                }),
+              ),
+              _.createElement(
+                _._,
+                null,
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(
+                      _().ReserveControlSpace,
+                      !this.state.bControlBarIsCollapsed && _().WideLeftGutter,
+                    ),
+                  },
+                  _.createElement(
+                    _._,
+                    null,
+                    this.state.nLogInBannerHeight > 0 &&
+                      _.createElement(_, {
+                        nTopOffset: _,
+                        bLargeMode: this.state.nScrollTop <= 0 && !(0, _._)(),
+                      }),
+                  ),
+                  _.createElement(
+                    _._,
+                    null,
+                    this.state.nMobileNavBannerHeight > 0 &&
+                      _.createElement(_, {
+                        bIsUpcoming: this.BShowFutureView(),
+                        nTopOffset: _,
+                        fnToggleCollapsed: this.MobileNavOpenSettings,
+                      }),
+                    _.createElement(_, {
+                      nTopOffset: _,
+                      bLargeMode: this.state.nScrollTop <= 0 && !(0, _._)(),
+                    }),
+                  ),
+                  _.createElement(
+                    _._,
+                    null,
+                    _.createElement(_, {
+                      bShowFutureViewOnly: this.BShowFutureView(),
+                      bShowUpdatesOnly: this.BShowUpdatesOnly(),
+                      fnOnEventClick: this.OnEventClicked,
+                      fnToggleSeeFuture: this.ToggleFutureView,
+                      fnResetFilters: _,
+                      nVisibleHeight: this.state.nVisibleHeight,
+                      nScrollTop: this.state.nScrollTop,
+                      nDisappearingHeaderVisibleHeight: _,
+                      bUserIsLoggedIn: Boolean(
+                        this.state.bUserIsLoggedIn && _._.accountid,
+                      ),
+                    }),
+                  ),
+                ),
+              ),
+            ),
+          );
+        }
+      });
+      (_.m_bInitialLoad = !0),
+        (0, _._)([_._], _.prototype, "OnResize", null),
+        (0, _._)([_._], _.prototype, "OnScroll", null),
+        (0, _._)([_._], _.prototype, "MobileNavOpenSettings", null),
+        (0, _._)([_._], _.prototype, "ToggleControlBarCollapsed", null),
+        (0, _._)([_._], _.prototype, "OnControlBarChange", null),
+        (0, _._)([_._], _.prototype, "CloseEventModal", null),
+        (0, _._)([_._], _.prototype, "OnEventClicked", null),
+        (0, _._)([_._], _.prototype, "ToggleFutureView", null),
+        (0, _._)([_._], _.prototype, "ResetAllFilters", null),
+        (_ = _ = (0, _._)([_._], _));
+      (0, _._)(_);
+      function _(_) {
+        const _ = (0, _._)(() => (0, _._)()),
+          [__webpack_require__, _, _, _, _, _, _, _] = (0, _._)(() => {
+            var _;
+            return [
+              (null === (_ = _.GetCollectionMetaData()) || void 0 === _
+                ? void 0
+                : _.clan_event_gid) || void 0,
+              _.GetCollectionID(),
+              _.BHasCollectionMetaData(),
+              _.BIsSaleCalendar(),
+              _.GetSaleID(),
+              _.BIsSingleSourceCalendar(),
+              _.BIsSingleAppCalendar() ? _.GetSingleAppID() : void 0,
+              _.BIsSingleGroupCalendar() ? _.GetSingleGroupID() : void 0,
+            ];
+          }),
+          [_, _] = _.useState(!1),
+          _ = (0, _._)(_._.LANGUAGE);
+        if (
+          (_.useEffect(() => {
+            if (
+              _ &&
+              __webpack_require__ &&
+              !_._.GetClanEventModel(__webpack_require__)
+            ) {
+              _(!0);
+              (async () => {
+                const _ = _.GetCollectionMetaData(),
+                  _ = _._.InitFromClanID(_.clanid);
+                await _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                  _,
+                  _.clan_event_gid,
+                  0,
+                ),
+                  _(!1);
+              })();
+            }
+          }, [_, _, __webpack_require__]),
+          _)
+        ) {
+          let _, _;
+          if (_ && !_) {
+            const _ = _._.GetClanEventModel(__webpack_require__);
+            _ &&
+              ((_ = _.GetImageURLWithFallback("capsule", _, _._.capsule_main)),
+              (_ = _.GetSaleURL()));
+          }
+          const _ = (function (_, _, _, _) {
+            if (!_) return null;
+            const _ = _().find((_) => _.collection === _);
+            return _ ? _.component(_, _, _) : null;
+          })(_, _.bLargeMode, _, _);
+          if (!_) return null;
+          const _ = (0, _._)(_().HubBanner, _().WideBanner);
+          return _.createElement(
+            "div",
+            {
+              style: {
+                transform: `translateY(${_.nTopOffset}px)`,
+              },
+              className: _,
+            },
+            _,
+          );
+        }
+        if (_) {
+          const _ = (function (_, _) {
+            if (!_) return null;
+            let _ = _._.GetClanEventModel(_);
+            if (!_) return null;
+            let _ = (0, _._)(_._.LANGUAGE);
+            return _.createElement(_, {
+              largeHeader: _,
+              titleToken: __webpack_require__.GetNameWithFallback(_),
+              subtitleToken:
+                __webpack_require__.GetSubTitleWithSummaryFallback(_),
+              headerImg: __webpack_require__.GetImageURLWithFallback(
+                "capsule",
+                _,
+                _._.capsule_main,
+              ),
+            });
+          })(_, _.bLargeMode);
+          if (!_) return null;
+          const _ = (0, _._)(_().HubBanner, _().WideBanner);
+          return _.createElement(
+            "div",
+            {
+              style: {
+                transform: `translateY(${_.nTopOffset}px)`,
+              },
+              className: _,
+            },
+            _,
+          );
+        }
+        if (_) {
+          const _ = (0, _._)(
+            _().HubBanner,
+            _().WideBanner,
+            _.bLargeMode && _().LargeMode,
+            _.bLargeMode && _().TallBanner,
+          );
+          return _.createElement(
+            "div",
+            {
+              style: {
+                transform: `translateY(${_.nTopOffset}px)`,
+              },
+              className: _,
+            },
+            _.createElement(_._, {
+              appId: _,
+              clanId: _,
+              bShowRSSFeed: !0,
+            }),
+          );
+        }
+        return null;
+      }
+      let _ = class extends _.Component {
+        GetCurrentSectionLayout() {
+          let _ = 0;
+          return (0, _._)()
+            .GetCalendarSections(this.props.bShowFutureViewOnly)
+            .map((_) => {
+              const _ = Math.max(_, _.nTopOffset),
+                _ = _ + _.nRenderedHeight;
+              return (
+                (_ = _),
+                {
+                  section: _,
+                  nTopOfSection: _,
+                }
+              );
+            });
+        }
+        GetMergeEventsType() {
+          const _ = (0, _._)(),
+            _ = _.GetCollectionID();
+          return _.BIsSingleSourceCalendar() || _ === _._.Steam
+            ? "none"
+            : _.BIsShowingFeaturedFeed()
+              ? "full"
+              : _
+                ? "samesource"
+                : "full";
+        }
+        GetCuratorSuggestionSettings(_) {
+          if (_._.accountid && _._.bIsCuratorsEnabled)
+            if (_.BIsGlobalCalendar() && !this.props.bShowFutureViewOnly) {
+              if (_.m_visibilityStore.BIsGameSourceAllowed(_._.k_ECurator))
+                return {
+                  nInlineOffset: 1e3,
+                  bInlineDismissable: !0,
+                  bShowAtEnd: !0,
+                };
+            } else if (_.GetCollectionID() === _._.Press)
+              return {
+                nInlineOffset: 1e3,
+                bInlineDismissable: !1,
+                bShowAtEnd: !1,
+              };
+          return {
+            nInlineOffset: void 0,
+            bInlineDismissable: !1,
+            bShowAtEnd: !1,
+          };
+        }
+        render() {
+          const _ = (0, _._)(),
+            {
+              bShowFutureViewOnly: _,
+              bShowUpdatesOnly: __webpack_require__,
+              fnOnEventClick: _,
+              fnToggleSeeFuture: _,
+              fnResetFilters: _,
+              nScrollTop: _,
+              nDisappearingHeaderVisibleHeight: _,
+            } = this.props,
+            _ = _.GetCalendarSections(_);
+          if (0 == _.length) return null;
+          const _ = (0, _._)(),
+            _ = _.m_visibilityStore.BAreAllEventsHidden(),
+            _ = _;
+          let _ = !0;
+          const _ = this.GetCuratorSuggestionSettings(_);
+          let _;
+          const _ = _
+            ? []
+            : this.GetCurrentSectionLayout().map(
+                ({ section: _, nTopOfSection: __webpack_require__ }, _) => {
+                  const {
+                      strId: _,
+                      strSectionLabel: _,
+                      rtSectionStart: _,
+                      rtSectionEnd: _,
+                      bIsFutureSection: _,
+                      nRenderedHeight: _,
+                    } = _,
+                    _ = __webpack_require__ < _,
+                    _ = (0, _._)(_().PastSection, _ && _().DarkerBackground);
+                  _ > 0 &&
+                    ((_ = !_),
+                    void 0 !== _.nInlineOffset &&
+                      __webpack_require__ >= _.nInlineOffset &&
+                      void 0 === _ &&
+                      (_ = _));
+                  const _ = !_ && _;
+                  return _.createElement(
+                    _._,
+                    {
+                      key: _,
+                      className: _().LazyCalendarSectionCtn,
+                      placeholderHeight: _,
+                      rootMargin: "100% 0px 100% 0px",
+                    },
+                    _.createElement(_, {
+                      bRenderStickyHeader: _,
+                      strSectionLabel: _,
+                      rtSectionStart: _,
+                      rtSectionEnd: _,
+                      strSectionClassname: _,
+                      bUseHorizontalLayout: _,
+                      fnOnSeeFutureClick: _,
+                      bShowEarliestFirst: _ || _,
+                      section: _,
+                      fnOnEventClick: _,
+                      bSuppressHoverEffects: _,
+                      strMergeEvents: this.GetMergeEventsType(),
+                    }),
+                  );
+                },
+              );
+          void 0 !== _ &&
+            _.splice(
+              _,
+              0,
+              _.createElement(_, {
+                key: "CuratorSuggestions",
+                bCanDismiss: _.bInlineDismissable,
+              }),
+            ),
+            _.GetCollectionID() === _._.Press &&
+              _.splice(
+                0,
+                0,
+                _.createElement(_, {
+                  key: "LanguageFeedRow",
+                }),
+              );
+          const _ = _[0].rtSectionStart,
+            _ = (0, _._)().GetCurrentlyLoadedEventCount(0, _),
+            _ = (0, _._)().GetCurrentlyLoadedEventCount(_);
+          let _ =
+              _ &&
+              (_.nCount
+                ? "#EventCalendar_NoMorePastEvents"
+                : "#EventCalendar_NoPastEvents"),
+            _ =
+              _ &&
+              _.createElement(
+                _._,
+                {
+                  key: "link-back",
+                  toolTipContent: (0, _._)("#EventCalendar_ResetFilters_ttip"),
+                  className: (0, _._)(_().BackToThePast, _().NoCount),
+                  onClick: _,
+                },
+                (0, _._)("#EventCalendar_ResetFiltersButton"),
+              );
+          _ && this.props.fnResetFilters
+            ? (_ = "#EventCalendar_EmptyCalendar")
+            : _
+              ? ((_ =
+                  _ &&
+                  (_.nCount
+                    ? "#EventCalendar_NoMoreFutureEvents"
+                    : "#EventCalendar_NoFutureEvents")),
+                (_ =
+                  _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      key: "link-back",
+                      className: _().BackToThePast,
+                      onClick: _,
+                    },
+                    (0, _._)("#EventCalendar_PastEventsLink"),
+                    _.createElement(
+                      "span",
+                      {
+                        className: _().SeeAllCount,
+                      },
+                      _.nCount + (_.bIsComplete ? "" : "+"),
+                    ),
+                  )))
+              : __webpack_require__ &&
+                (_ =
+                  _ &&
+                  (_.nCount
+                    ? "#EventCalendar_NoMorePastUpdates"
+                    : "#EventCalendar_NoPastUpdates"));
+          let _ = null;
+          return (
+            (_ || _.BHitEventHorizon(_ ? "forward" : "backward")) &&
+              (_ = _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(
+                  "div",
+                  {
+                    key: "no-more-events",
+                    className: (0, _._)(_().EndOfRows, _().CalendarRow),
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().NoMoreRows,
+                    },
+                    " ",
+                    (0, _._)(_),
+                    " ",
+                  ),
+                ),
+                _.bShowAtEnd &&
+                  _.createElement(_, {
+                    key: "CuratorSuggestions",
+                    bCanDismiss: !1,
+                  }),
+                _,
+              )),
+            _.createElement(
+              "div",
+              {
+                className: _().RowContainer,
+                style: {
+                  transform: `translateY(${_ - 1}px)`,
+                },
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().Rows,
+                },
+                __webpack_require__ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().UpdatePageBanner,
+                    },
+                    (0, _._)("#EventCalendar_UpdatesViewHeader"),
+                  ),
+                _,
+                _,
+              ),
+            )
+          );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      let _ = class extends _.Component {
+        render() {
+          const _ = this.props.rgCalendarItems[0].start_time,
+            _ = (0, _._)().GetCurrentlyLoadedEventCount(_);
+          return this.props.rgCalendarItems.length <= 1
+            ? null
+            : _.createElement(
+                "div",
+                {
+                  key: "see-all-link",
+                  className: _().MobileSeeAllink,
+                  onClick: this.props.fnOnSeeFutureClick,
+                },
+                (0, _._)("#EventCalendar_FutureEventsLink"),
+                _.createElement(
+                  "span",
+                  {
+                    className: _().SeeAllCount,
+                  },
+                  _.nCount + (_.bIsComplete ? "" : "+"),
+                ),
+              );
+        }
+      };
+      _ = (0, _._)([_._], _);
+      let _ = class extends _.Component {
+        render() {
+          const {
+            rgCalendarItems: _,
+            fnOnEventClick: _,
+            fnOnSeeFutureClick: __webpack_require__,
+            bSuppressHoverEffects: _,
+          } = this.props;
+          return _ && 0 != _.length
+            ? _.createElement(
+                "div",
+                {
+                  className: _().CalendarRow,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(
+                      _().HorizontalTileContainer,
+                      "HorizontalTileCtn",
+                    ),
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().HorizontalTiles,
+                    },
+                    _.map((_) =>
+                      _.createElement(_, {
+                        key: "ht-" + _.unique_id,
+                        calendarEvent: _,
+                        partnerEventStore: _._,
+                        fnOnClicked: _,
+                        bSuppressHoverEffects: _,
+                        mode: _.length > 1 ? "upcoming" : "wide",
+                        bHideGameTitle:
+                          (0, _._)().BIsSingleSourceCalendar() &&
+                          (0, _._)().BEventMatchCalendarSingleSource(_),
+                      }),
+                    ),
+                  ),
+                  _.createElement(_, {
+                    rgCalendarItems: _,
+                    fnOnSeeFutureClick: __webpack_require__,
+                  }),
+                ),
+              )
+            : null;
+        }
+      };
+      _ = (0, _._)([_._], _);
+      const _ = (0, _._)((_) => {
+        const { calendarItem: _, bSuppressHoverEffects: __webpack_require__ } =
+            _,
+          _ = _._.GetClanEventModel(_.unique_id);
+        return _
+          ? _.createElement(
+              "div",
+              {
+                className: _().EventListTitle,
+              },
+              _.createElement(_._, {
+                eventModel: _,
+                calendarEvent: _,
+                bSuppressHoverEffects: __webpack_require__,
+              }),
+            )
+          : null;
+      });
+      var _;
+      !(function (_) {
+        _[(_.eCurators = 1)] = "eCurators";
+      })(_ || (_ = {}));
+      let _ = (_ = class extends _.Component {
+        constructor(_) {
+          super(_),
+            (this.m_ref = _.createRef()),
+            (this.rtSectionStart = void 0),
+            (this.rtSectionEnd = void 0),
+            (0, _._)(this),
+            (this.rtSectionStart = _.rtSectionStart),
+            (this.rtSectionEnd = _.rtSectionEnd);
+        }
+        componentDidMount() {
+          this.UpdatePositioning();
+        }
+        componentDidUpdate() {
+          this.UpdatePositioning(),
+            (this.rtSectionStart = this.props.rtSectionStart),
+            (this.rtSectionEnd = this.props.rtSectionEnd);
+        }
+        UpdatePositioning() {
+          this.m_ref.current &&
+            (0, _._)(() => {
+              const { section: _ } = this.props,
+                _ = this.m_ref.current.getBoundingClientRect().height;
+              _.nRenderedHeight != _ && (_.nRenderedHeight = _);
+              const _ = this.m_ref.current.offsetTop;
+              _.nTopOffset != _ && (_.nTopOffset = _);
+            });
+        }
+        get cachedCalendarItems() {
+          return (0, _._)().GetCalendarItemsInTimeRange(
+            (0, _._)(() => this.rtSectionStart),
+            (0, _._)(() => this.rtSectionEnd),
+          );
+        }
+        GetCarouselGroupTitle(_) {
+          return _.BIsShowingFeaturedFeed()
+            ? (0, _._)("#EventCalendar_GroupTitle_FeaturedCurators")
+            : _.BIsGlobalCalendar()
+              ? (0, _._)("#EventCalendar_GroupTitle_Curators")
+              : "";
+        }
+        GenerateKeyFromItem(_, _) {
+          return _.GetSource() & _._.k_eSteam || _.appid || "full" !== _
+            ? _.clanid
+            : _.eCurators;
+        }
+        static IsTimestampInRange(_, _, _) {
+          return Boolean(_) && _ < _ && _ <= _;
+        }
+        GetTimestampEvents(_) {
+          const _ = new Array();
+          return _;
+        }
+        AddTimestampEventsInInterval(_, _, _, _) {
+          for (const _ of _)
+            _.IsTimestampInRange(_.rtTime, _, _) && _.push(_.component);
+        }
+        RenderEventList(_) {
+          const {
+              fnOnEventClick: _,
+              bSuppressHoverEffects: __webpack_require__,
+              strMergeEvents: _,
+            } = this.props,
+            _ = (0, _._)();
+          let _ = null;
+          if ("none" !== _) {
+            _ = new Map();
+            for (const _ of _) {
+              const _ = this.GenerateKeyFromItem(_, _),
+                _ = _.get(_);
+              if (_) __webpack_require__.push(_);
+              else {
+                const _ = new Array();
+                __webpack_require__.push(_), _.set(_, _);
+              }
+            }
+          }
+          const _ = new Array(),
+            _ = new Array(),
+            _ = "full" === _ ? _ : _,
+            _ = this.GetTimestampEvents(_);
+          let _ = this.props.bShowEarliestFirst
+            ? this.props.rtSectionStart
+            : this.props.rtSectionEnd;
+          for (const _ of _) {
+            let _ = _;
+            if (_) {
+              const _ = this.GenerateKeyFromItem(_, _),
+                _ = _.get(_);
+              if (!_) continue;
+              if ((_ === _.eCurators && (_ = _), _.length >= 3)) {
+                const _ =
+                    _ === _.eCurators ? this.GetCarouselGroupTitle(_) : "",
+                  _ = !_.find((_) => _.clanid != _.clanid);
+                _.sort((_, _) =>
+                  _.score != _.score
+                    ? _.score - _.score
+                    : _.start_time - _.start_time,
+                ),
+                  _.push(
+                    _.createElement(
+                      "div",
+                      {
+                        key: _.unique_id,
+                        className: _().CalendarEventListRow,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().CalendarEventListContainer,
+                        },
+                        _.createElement(_, {
+                          key: _.unique_id,
+                          rgCalendarItems: _,
+                          bSuppressHoverEffects: _,
+                          fnOnEventClick: _,
+                          bHideGameTitle: _,
+                          strMultipleSourceTitle: _,
+                        }),
+                      ),
+                    ),
+                  ),
+                  _.delete(_);
+                continue;
+              }
+            }
+            _ === _ &&
+              (this.AddTimestampEventsInInterval(
+                _,
+                Math.min(_, _.start_time),
+                Math.max(_, _.start_time),
+                _,
+              ),
+              (_ = _.start_time)),
+              _.push(
+                _.createElement(
+                  "div",
+                  {
+                    key: _.unique_id,
+                    className: _().CalendarRow,
+                  },
+                  _.createElement(_, {
+                    calendarEvent: _,
+                    partnerEventStore: _._,
+                    mode: "wide",
+                    fnOnClicked: _,
+                    bSuppressHoverEffects: _,
+                    bHideGameTitle:
+                      _.BIsSingleSourceCalendar() &&
+                      _.BEventMatchCalendarSingleSource(_),
+                  }),
+                ),
+              );
+          }
+          return (
+            this.props.bShowEarliestFirst
+              ? this.AddTimestampEventsInInterval(
+                  _,
+                  _,
+                  this.props.rtSectionEnd,
+                  _,
+                )
+              : this.AddTimestampEventsInInterval(
+                  _,
+                  this.props.rtSectionStart,
+                  _,
+                  _,
+                ),
+            _.push(..._),
+            _
+          );
+        }
+        render() {
+          const {
+            bRenderStickyHeader: _,
+            strSectionLabel: _,
+            strSectionClassname: __webpack_require__,
+            bUseHorizontalLayout: _,
+            fnOnSeeFutureClick: _,
+            bShowEarliestFirst: _,
+            fnOnEventClick: _,
+            bSuppressHoverEffects: _,
+          } = this.props;
+          let { rgCalendarItems: _, bIsComplete: _ } = this.cachedCalendarItems;
+          if (0 == _.length && _)
+            return _.createElement("div", {
+              ref: this.m_ref,
+              className: __webpack_require__,
+            });
+          _.length && _ && (_ = _.slice().reverse());
+          let _ = null;
+          _.length > 0 &&
+            (_ = _.createElement(
+              "div",
+              {
+                className: (0, _._)(
+                  _().GroupHeader,
+                  _().CalendarRow,
+                  _ && _().HeaderAtTop,
+                ),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().GroupHeaderTitle,
+                },
+                _.createElement("span", null, _),
+                _.createElement("div", {
+                  className: _().GroupHeaderLine,
+                }),
+                _ &&
+                  _.length > 3 &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SeeAllLink,
+                      onClick: _,
+                    },
+                    (0, _._)("#EventCalendar_FutureEventsLink"),
+                    _.createElement(
+                      "span",
+                      {
+                        className: _().SeeAllCount,
+                      },
+                      _.length + (_ ? "" : "+"),
+                    ),
+                  ),
+              ),
+            ));
+          let _ = null;
+          return (
+            (!_._.bRequireAllEventsLoadedInTimeBlock ||
+              _ ||
+              (_ && _.length >= 3)) &&
+              (_ = _
+                ? _.createElement(_, {
+                    rgCalendarItems: _.slice(0, 3),
+                    fnOnEventClick: _,
+                    fnOnSeeFutureClick: _,
+                    bSuppressHoverEffects: _,
+                  })
+                : this.RenderEventList(_)),
+            _.createElement(
+              "div",
+              {
+                ref: this.m_ref,
+                className: __webpack_require__,
+              },
+              _,
+              _,
+              !_ &&
+                !_ &&
+                _.createElement(_, {
+                  bShowEarliestFirst: this.props.bShowEarliestFirst,
+                }),
+            )
+          );
+        }
+      });
+      (0, _._)([_._], _.prototype, "rtSectionStart", void 0),
+        (0, _._)([_._], _.prototype, "rtSectionEnd", void 0),
+        (0, _._)([_._], _.prototype, "cachedCalendarItems", null),
+        (_ = _ = (0, _._)([_._], _));
+      const _ = (_) => {
+          const _ = (0, _._)().GetTimeEdgeForDirection(
+            _.bShowEarliestFirst ? "forward" : "backward",
+            void 0,
+          );
+          return _.createElement(
+            "div",
+            {
+              className: _().Loading,
+            },
+            _.createElement(_._, {
+              size: "xlarge",
+              position: "center",
+            }),
+            _ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(
+                  "div",
+                  {
+                    className: _().LoadingProgress,
+                  },
+                  (0, _._)(
+                    "#EventCalendar_LoadEventsProgress",
+                    Number((0, _._)().GetNumEventsLoaded()).toLocaleString(),
+                    (0, _._)(_),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().AdjustFiltersText,
+                  },
+                  (0, _._)("#EventCalendar_LoadEventsFilters"),
+                ),
+              ),
+          );
+        },
+        _ = (_) =>
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _().LogInFeedRow,
+                !_.bLargeMode && _().LogInSmallMode,
+              ),
+              style: {
+                transform: `translateY(${_.nTopOffset}px)`,
+              },
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().PromptCtn,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().LogInFeedTitle,
+                },
+                (0, _._)("#EventCalendar_SignIn_Title"),
+              ),
+              _.createElement(
+                "button",
+                {
+                  onClick: _._,
+                  className: _().LogInButton,
+                },
+                (0, _._)("#Login_SignIn"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().LogInFeedText,
+                },
+                (0, _._)("#EventCalendar_SignIn_Text"),
+              ),
+            ),
+          );
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            media: _,
+            mediaType: __webpack_require__,
+            setImageSize: _,
+            maxWidthPx: _,
+          } = _,
+          _ = _.useCallback(
+            (_) => {
+              if (_) {
+                const _ = Array.isArray(_.borderBoxSize)
+                  ? _.borderBoxSize[0]
+                  : _.borderBoxSize;
+                _({
+                  inlineSize: _.inlineSize,
+                  blockSize: _.blockSize,
+                });
+              }
+            },
+            [_],
+          ),
+          _ = {
+            ...(_
+              ? {
+                  maxWidth: `${_}px`,
+                }
+              : {}),
+          };
+        return __webpack_require__ == _._.k_MediaTrailer
+          ? _.createElement(_, {
+              ..._,
+              containerStyle: _,
+              fnResizeObserver: _,
+            })
+          : _.video_webm_src
+            ? _.createElement(_, {
+                ..._,
+                containerStyle: _,
+                fnResizeObserver: _,
+              })
+            : _.createElement(_, {
+                ..._,
+                containerStyle: _,
+                fnResizeObserver: _,
+              });
+      }
+      const _ = {
+        include_trailers: !0,
+        include_assets: !0,
+      };
+      function _(_) {
+        const {
+            trailer_display: _,
+            trailer_appid: __webpack_require__,
+            trailer_base_id: _,
+          } = _,
+          [_, _] = (0, _._)(__webpack_require__, _),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useMemo)(() => {
+            var _, _, _;
+            let _ = {},
+              _ = {};
+            const _ =
+              null === (_ = null == _ ? void 0 : _.GetAllTrailers()) ||
+              void 0 === _
+                ? void 0
+                : _.GetTrailerByID(_ || 0);
+            return (
+              _ &&
+                ((_.image = _.GetScreenshot()),
+                (_.video_mp4_src =
+                  null === (_ = _.GetMicroTrailer()) || void 0 === _
+                    ? void 0
+                    : _.strMP4URL),
+                (_.video_webm_src =
+                  null === (_ = _.GetMicroTrailer()) || void 0 === _
+                    ? void 0
+                    : _.strWebMURL)),
+              [_, _]
+            );
+          }, [_, _]);
+        return _ && 3 == _
+          ? _.createElement(
+              _.Fragment,
+              null,
+              (_ == _._.k_EDisplayScreenshot || !_) &&
+                _.createElement(_, {
+                  ..._,
+                  media: _,
+                  onClick: () => _(!0),
+                }),
+              _ == _._.k_EDisplayMicrotrailer &&
+                _.createElement(_, {
+                  ..._,
+                  media: _,
+                  onClick: () => _(!0),
+                }),
+              _.createElement(_._, {
+                storeItem: _,
+                bShowModal: _,
+                hideModal: () => _(!1),
+              }),
+            )
+          : null;
+      }
+      function _(_) {
+        const {
+            media: _,
+            clanAccountID: __webpack_require__,
+            mediaScale: _,
+            fnResizeObserver: _,
+            className: _,
+            maxWidthPx: _,
+            onClick: _,
+            altText: _,
+          } = _,
+          _ = (0, _._)(_),
+          _ = {
+            ...(_
+              ? {
+                  maxWidth: `${_}px`,
+                }
+              : {}),
+          },
+          _ = [];
+        return (
+          _.video_webm_src &&
+            _.push({
+              sURL: (0, _._)(__webpack_require__, _.video_webm_src),
+              sFormat: "video/webm",
+            }),
+          _.video_mp4_src &&
+            _.push({
+              sURL: (0, _._)(__webpack_require__, _.video_mp4_src),
+              sFormat: "video/mp4",
+            }),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().Ctn, _),
+              style: _,
+            },
+            _.createElement(_._, {
+              ref: _,
+              video: {
+                sPoster: (0, _._)(__webpack_require__, _.image),
+                rgVideoSources: _,
+              },
+              bAutoPlay: !0,
+              bControls: !1,
+              bLoop: !0,
+              bMuted: !0,
+              mediaScale: _,
+              altText: _,
+            }),
+            _ &&
+              _.createElement(
+                _._,
+                {
+                  onClick: _,
+                },
+                (0, _._)("#DASHPlayerControls_ClickToPlay"),
+              ),
+          )
+        );
+      }
+      function _(_) {
+        const {
+            media: _,
+            clanAccountID: __webpack_require__,
+            onClick: _,
+            className: _,
+            containerStyle: _,
+            fnResizeObserver: _,
+            altText: _,
+          } = _,
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(null),
+          _ = _.useCallback(() => {
+            if (_.current && _.current.complete) {
+              const { naturalWidth: _, naturalHeight: _ } = _.current;
+              _({
+                width: _,
+                height: _,
+              });
+            }
+          }, []);
+        (0, _.useEffect)(_, [_]);
+        const _ = (0, _._)(_),
+          _ = (0, _._)(_, _);
+        return _.image && 0 !== _.image.trim().length
+          ? _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().Ctn, _),
+                style: _,
+              },
+              _.createElement("img", {
+                className: (0, _._)(_().Image),
+                ref: _,
+                onLoad: _,
+                src: (0, _._)(__webpack_require__, _.image),
+                alt: _,
+                style: {
+                  maxWidth: _ ? `${_.width}px` : "100%",
+                },
+              }),
+              _ &&
+                _.createElement(
+                  _._,
+                  {
+                    onClick: _,
+                  },
+                  (0, _._)("#DASHPlayerControls_ClickToPlay"),
+                ),
+            )
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
         let _;
@@ -38877,10 +43005,9 @@
           _
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
       function _(_) {
-        const { event: _, section: __webpack_require__, language: _ } = _,
+        var _;
+        const { event: __webpack_require__, section: _, language: _ } = _,
           _ = (0, _._)();
         return _.createElement(
           _._,
@@ -38898,18 +43025,23 @@
                 _().Container,
                 _.className,
               ),
-              style: (0, _._)(__webpack_require__, _, _),
+              style: (0, _._)(_, __webpack_require__, _),
             },
             _.createElement(_, {
-              section: __webpack_require__,
-              event: _,
+              section: _,
+              event: __webpack_require__,
               language: _,
             }),
             _.createElement(_, {
-              media_overlay: __webpack_require__.media_overlay,
+              media_overlay:
+                _() &&
+                null !== (_ = _.media_overlay_mobile_content_varient) &&
+                void 0 !== _
+                  ? _
+                  : _.media_overlay,
               language: _,
-              event: _,
-              section: __webpack_require__,
+              event: __webpack_require__,
+              section: _,
             }),
           ),
         );
@@ -38921,9 +43053,9 @@
             event: _,
             section: _,
           } = _,
-          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(
-            () => {
-              var _;
+          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] =
+            (0, _._)(() => {
+              var _, _, _, _, _, _, _;
               const _ = _._.GetELanguageFallback(__webpack_require__);
               return [
                 (_ && (null == _ ? void 0 : _.text_placement)) || _._.k_TopLeft,
@@ -38966,8 +43098,6 @@
                 null == _ ? void 0 : _.title_alignment,
                 null == _ ? void 0 : _.subtitle_alignment,
                 null == _ ? void 0 : _.description_alignment,
-                null == _ ? void 0 : _.media_horizontal_alignment,
-                null == _ ? void 0 : _.media_vertical_alignment,
                 (null == _ ? void 0 : _.is_title_as_image) &&
                 _ &&
                 _.title_media &&
@@ -39012,9 +43142,35 @@
                   ? void 0
                   : _.media_scale,
                 null == _ ? void 0 : _.text_scale,
+                null == _ ? void 0 : _.trailer_appid,
+                null == _ ? void 0 : _.trailer_base_id,
+                null == _ ? void 0 : _.trailer_display,
+                (null === (_ = null == _ ? void 0 : _.localized_alt_text) ||
+                void 0 === _
+                  ? void 0
+                  : _[__webpack_require__]) ||
+                  (null === (_ = null == _ ? void 0 : _.localized_alt_text) ||
+                  void 0 === _
+                    ? void 0
+                    : _[_]),
+                (null ===
+                  (_ =
+                    null === (_ = null == _ ? void 0 : _.title_media) ||
+                    void 0 === _
+                      ? void 0
+                      : _.localized_alt_text) || void 0 === _
+                  ? void 0
+                  : _[__webpack_require__]) ||
+                  (null ===
+                    (_ =
+                      null === (_ = null == _ ? void 0 : _.title_media) ||
+                      void 0 === _
+                        ? void 0
+                        : _.localized_alt_text) || void 0 === _
+                    ? void 0
+                    : _[_]),
               ];
-            },
-          );
+            });
         let _;
         if (_) {
           let _ = _._.k_Left;
@@ -39076,22 +43232,25 @@
               section: _,
               language: __webpack_require__,
               titleMediaScale: _,
+              titleAltText: _,
             }),
           ),
           _.createElement(_, {
             media: _,
+            trailer_appid: _,
+            trailer_base_id: _,
+            trailer_display: _,
             mediaType: _,
-            mediaHAlign: _,
-            mediaVAlign: _,
             className: _().MediaMax,
             clanAccountID: _.clanSteamID.GetAccountID(),
+            altText: _,
           }),
         );
       }
       function _(_) {
         var _, _;
         const { event: _, section: _, language: _ } = _,
-          [_, _, _, _, _, _, _] = (0, _._)(() => {
+          [_, _, _, _, _] = (0, _._)(() => {
             var _, _, _, _;
             return [
               _.cap_section_content && !_.show_as_carousel,
@@ -39115,8 +43274,6 @@
                 ? void 0
                 : _.length) || 0,
               Boolean(null == _ ? void 0 : _.carousel_auto_advance),
-              _.jsondata.sale_carousel_arrow_color,
-              _.jsondata.sale_carousel_arrow_style,
             ];
           }),
           _ = (0, _._)(),
@@ -39168,6 +43325,7 @@
               ? _.createElement(
                   _._,
                   {
+                    ...(0, _._)(_.jsondata),
                     hideArrows: !_,
                     hidePips: _,
                     useTestScrollbar: !1,
@@ -39175,8 +43333,6 @@
                     bLazyRenderChildren: !1,
                     screenIsWide: _,
                     bAutoAdvance: _,
-                    arrowFill: _,
-                    arrowStyle: _,
                     className: (0, _._)(
                       _().TemplateCarousel,
                       "template-carousel",
@@ -39208,16 +43364,17 @@
       }
       function _(_) {
         var _, _;
-        const { event: _, section: _, language: _, row: _ } = _,
+        const { section: _, row: _ } = _,
           [_, _] = (0, _._)(() => {
             var _;
             const _ =
-              (null === (_ = _.media_columns) || void 0 === _
-                ? void 0
-                : _.length) || 0;
+                (null === (_ = _.media_columns) || void 0 === _
+                  ? void 0
+                  : _.length) || 0,
+              _ = _ > 1 && _ < 4 && void 0 !== _.grow_index ? 4 : _;
             let _ = [];
             for (let _ = 0; _ < _; ++_) {
-              let _, _, _, _;
+              let _, _, _;
               _.media_columns &&
                 _ < _.media_columns.length &&
                 (_ >= 1 &&
@@ -39227,8 +43384,7 @@
                   _.media_columns[_].display_order == _._.k_HorizontalTextFirst)
                   ? (_ = _.media_columns[_].text_scale)
                   : _.media_columns[_].display_order == _._.k_TitleDescOnly &&
-                    ((_ = _.media_columns[_].display_order),
-                    (_ = _.media_columns[_].text_scale),
+                    ((_ = _.media_columns[_].text_scale),
                     (_ =
                       _.media_columns[_].text_scale_margin_alignment ||
                       _._.k_Left))),
@@ -39239,7 +43395,14 @@
                     : {
                         "--horiz-min-col": `${_}%`,
                       }),
-                __webpack_require__.push(_);
+                _ > 1 &&
+                  _ < 4 &&
+                  _.grow_index === _ &&
+                  (_ = {
+                    ..._,
+                    gridColumn: 2 == _ ? "span 3" : "span 2",
+                  }),
+                _.push(_);
             }
             return [_, _];
           }),
@@ -39282,19 +43445,26 @@
           },
           null === (_ = _.media_columns) || void 0 === _
             ? void 0
-            : __webpack_require__.map((_, _) =>
-                _.createElement(_, {
+            : __webpack_require__.map((_, _) => {
+                var _;
+                return _.createElement(_, {
                   key: "mc_" + _.unique_id + "_" + _.unique_id,
                   ..._,
-                  content: _,
+                  content:
+                    _() &&
+                    null !== (_ = _.mobile_content_varient) &&
+                    void 0 !== _
+                      ? _
+                      : _,
+                  contentUniqueID: _.unique_id,
                   mediaIndex: _,
                   mediaFirstHeight: _,
                   textFirstHeight: _,
                   mediaHeightChanged: _,
                   additionalStyle:
                     (null == _ ? void 0 : _.length) > _ ? _[_] : void 0,
-                }),
-              ),
+                });
+              }),
         );
       }
       function _(_) {
@@ -39307,65 +43477,98 @@
             mediaFirstHeight: _,
             textFirstHeight: _,
             mediaHeightChanged: _,
+            contentUniqueID: _,
             additionalStyle: _,
           } = _,
-          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
-            const _ = _._.GetELanguageFallback(_);
-            return [
-              _.display_order || _._.k_HorizontalMediaFirst,
-              _.media_type,
-              _.localized_media && _.localized_media.length > 0
-                ? _.localized_media[_] || _.localized_media[_] || {}
-                : void 0,
-              _.localized_media_title && _.localized_media_title.length > 0
-                ? _.localized_media_title[_] || _.localized_media_title[_] || ""
-                : void 0,
-              _.localized_media_subtitle &&
-              _.localized_media_subtitle.length > 0
-                ? _.localized_media_subtitle[_] ||
-                  _.localized_media_subtitle[_] ||
-                  ""
-                : void 0,
-              _.localized_media_description &&
-              _.localized_media_description.length > 0
-                ? _.localized_media_description[_] ||
-                  _.localized_media_description[_] ||
-                  ""
-                : void 0,
-              _.eTitleDisplaySize,
-              _.title_alignment,
-              _.subtitle_alignment,
-              _.description_alignment,
-              _.media_horizontal_alignment,
-              _.media_vertical_alignment,
-              _.is_title_as_image &&
-              _.title_media &&
-              _.title_media.localized_media &&
-              _.title_media.localized_media.length > 0
-                ? _.title_media.localized_media[_] ||
-                  _.title_media.localized_media[_] ||
-                  {}
-                : void 0,
-              _.is_title_as_image &&
-              _.title_media &&
-              _.title_media.localized_media &&
-              _.title_media.localized_media.length > 0
-                ? _.title_media.media_type
-                : void 0,
-              _.is_title_as_image &&
-              _.title_media &&
-              _.title_media.localized_media &&
-              _.title_media.localized_media.length > 0
-                ? _.title_media.media_vertical_alignment
-                : void 0,
-              _.is_title_as_image &&
-              _.title_media &&
-              _.title_media.localized_media &&
-              _.title_media.localized_media.length > 0
-                ? _.title_media.media_horizontal_alignment
-                : void 0,
-            ];
-          });
+          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] =
+            (0, _._)(() => {
+              var _, _, _, _, _, _;
+              const _ = _._.GetELanguageFallback(_);
+              return [
+                _.display_order || _._.k_HorizontalMediaFirst,
+                _.media_type,
+                _.localized_media && _.localized_media.length > 0
+                  ? _.localized_media[_] || _.localized_media[_] || {}
+                  : void 0,
+                _.localized_media_title && _.localized_media_title.length > 0
+                  ? _.localized_media_title[_] ||
+                    _.localized_media_title[_] ||
+                    ""
+                  : void 0,
+                _.localized_media_subtitle &&
+                _.localized_media_subtitle.length > 0
+                  ? _.localized_media_subtitle[_] ||
+                    _.localized_media_subtitle[_] ||
+                    ""
+                  : void 0,
+                _.localized_media_description &&
+                _.localized_media_description.length > 0
+                  ? _.localized_media_description[_] ||
+                    _.localized_media_description[_] ||
+                    ""
+                  : void 0,
+                _.eTitleDisplaySize,
+                _.title_alignment,
+                _.subtitle_alignment,
+                _.description_alignment,
+                _.media_horizontal_alignment,
+                _.media_vertical_alignment,
+                _.is_title_as_image &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? _.title_media.localized_media[_] ||
+                    _.title_media.localized_media[_] ||
+                    {}
+                  : void 0,
+                _.is_title_as_image &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? _.title_media.media_type
+                  : void 0,
+                _.is_title_as_image &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? _.title_media.media_vertical_alignment
+                  : void 0,
+                _.is_title_as_image &&
+                _.title_media &&
+                _.title_media.localized_media &&
+                _.title_media.localized_media.length > 0
+                  ? _.title_media.media_horizontal_alignment
+                  : void 0,
+                _.trailer_appid,
+                _.trailer_base_id,
+                _.trailer_display,
+                (null === (_ = null == _ ? void 0 : _.localized_alt_text) ||
+                void 0 === _
+                  ? void 0
+                  : _[_]) ||
+                  (null === (_ = null == _ ? void 0 : _.localized_alt_text) ||
+                  void 0 === _
+                    ? void 0
+                    : _[_]),
+                (null ===
+                  (_ =
+                    null === (_ = null == _ ? void 0 : _.title_media) ||
+                    void 0 === _
+                      ? void 0
+                      : _.localized_alt_text) || void 0 === _
+                  ? void 0
+                  : _[_]) ||
+                  (null ===
+                    (_ =
+                      null === (_ = null == _ ? void 0 : _.title_media) ||
+                      void 0 === _
+                        ? void 0
+                        : _.localized_alt_text) || void 0 === _
+                    ? void 0
+                    : _[_]),
+                null == _ ? void 0 : _.titlesubdesc_vertical_align,
+              ];
+            });
         return _.createElement(_, {
           displayOrder: _,
           event: _,
@@ -39374,6 +43577,7 @@
           subtitle: _,
           description: _,
           media: _,
+          contentUniqueID: _,
           mediaType: _,
           language: _,
           content: _,
@@ -39384,20 +43588,27 @@
           mediaHAlign: _,
           mediaVAlign: _,
           titleMedia: _,
+          titleAltText: _,
           titleMediaType: _,
           titleVAlign: _,
           titleHAlign: _,
+          titleSubDescVAlign: _,
           mediaIndex: _,
           mediaFirstHeight: _,
           textFirstHeight: _,
           mediaHeightChanged: _,
           additionalStyle: _,
+          trailer_appid: _,
+          trailer_base_id: _,
+          trailer_display: _,
+          altText: _ || "",
         });
       }
       function _(_) {
         const {
             displayOrder: _,
             content: __webpack_require__,
+            contentUniqueID: _,
             section: _,
             mediaIndex: _,
             mediaHeightChanged: _,
@@ -39419,14 +43630,16 @@
             return {
               bHighlighted: _ == _ && _ == _,
             };
-          })(_.unique_id, __webpack_require__.unique_id, _),
+          })(_.unique_id, _, _),
           [_, _] = _.useState(!1);
         (0, _._)((_, _) => {
           var _;
           return (
             _.unique_id == _ &&
-            __webpack_require__.unique_id == _ &&
-            (null === (_ = _.current) || void 0 === _ || _.scrollIntoView(),
+            _ == _ &&
+            (null === (_ = _.current) ||
+              void 0 === _ ||
+              __webpack_require__.scrollIntoView(),
             _(!0),
             !0)
           );
@@ -39511,6 +43724,10 @@
           event: _,
           mediaHeight: _,
           setImageSize: _,
+          trailer_appid: _,
+          trailer_base_id: _,
+          trailer_display: _,
+          altText: _,
         } = _;
         return _.createElement(
           _.Fragment,
@@ -39534,10 +43751,12 @@
             _.createElement(_, {
               media: _,
               mediaType: __webpack_require__,
-              mediaHAlign: _,
-              mediaVAlign: _,
+              trailer_appid: _,
+              trailer_base_id: _,
+              trailer_display: _,
               clanAccountID: _.clanSteamID.GetAccountID(),
               setImageSize: _,
+              altText: _,
             }),
           ),
           _.createElement(_, {
@@ -39554,6 +43773,10 @@
           event: _,
           mediaHeight: _,
           setImageSize: _,
+          trailer_appid: _,
+          trailer_base_id: _,
+          trailer_display: _,
+          altText: _,
         } = _;
         return _.createElement(
           _.Fragment,
@@ -39580,10 +43803,12 @@
             _.createElement(_, {
               media: _,
               mediaType: __webpack_require__,
-              mediaHAlign: _,
-              mediaVAlign: _,
+              trailer_appid: _,
+              trailer_base_id: _,
+              trailer_display: _,
               clanAccountID: _.clanSteamID.GetAccountID(),
               setImageSize: _,
+              altText: _,
             }),
           ),
         );
@@ -39602,6 +43827,7 @@
           titleHAlign: _,
           titleVAlign: _,
           titleMediaScale: _,
+          titleAltText: _,
         } = _;
         return _
           ? _.createElement(
@@ -39612,10 +43838,9 @@
               _.createElement(_, {
                 media: _,
                 mediaType: _,
-                mediaHAlign: _,
-                mediaVAlign: _,
                 mediaScale: _,
                 clanAccountID: _.clanSteamID.GetAccountID(),
+                altText: _,
               }),
             )
           : _.createElement(
@@ -39645,11 +43870,17 @@
           language: _,
           descAlign: _,
           eDescriptionDisplaySize: _,
+          titleSubDescVAlign: _,
         } = _;
         return _.createElement(
           "div",
           {
-            className: _().TitleDescriptionCtn,
+            className: (0, _._)({
+              [_().TitleDescriptionCtn]: !0,
+              [_().TitleSubDescVAlignTop]: _ == _._.k_Top,
+              [_().TitleSubDescVAlignCenter]: _ == _._.k_Center || !_,
+              [_().TitleSubDescVAlignBottom]: _ == _._.k_Bottom,
+            }),
           },
           _.createElement(_, {
             ..._,
@@ -39661,111 +43892,6 @@
             language: _,
             eDescriptionDisplaySize: _,
           }),
-        );
-      }
-      function _(_) {
-        const {
-            media: _,
-            mediaType: __webpack_require__,
-            mediaHAlign: _,
-            mediaVAlign: _,
-            clanAccountID: _,
-            mediaScale: _,
-            setImageSize: _,
-            className: _,
-            maxWidthPx: _,
-          } = _,
-          _ = (0, _.useRef)(null),
-          [_, _] = (0, _.useState)(null),
-          _ = _.useCallback(() => {
-            if (_.current && _.current.complete) {
-              const { naturalWidth: _, naturalHeight: _ } = _.current;
-              _({
-                width: _,
-                height: _,
-              });
-            }
-          }, []);
-        (0, _.useEffect)(_, [_]);
-        const _ = _.useCallback(
-            (_) => {
-              if (_) {
-                const _ = Array.isArray(_.borderBoxSize)
-                  ? _.borderBoxSize[0]
-                  : _.borderBoxSize;
-                _({
-                  inlineSize: _.inlineSize,
-                  blockSize: _.blockSize,
-                });
-              }
-            },
-            [_],
-          ),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_, _),
-          _ = {
-            display: "block",
-            ...(_
-              ? {
-                  maxWidth: `${_}px`,
-                }
-              : {}),
-          };
-        if (!_.video_webm_src)
-          return _.image && 0 !== _.image.trim().length
-            ? _.createElement(
-                "div",
-                {
-                  className: _,
-                  style: _,
-                },
-                _.createElement("img", {
-                  ref: _,
-                  onLoad: _,
-                  src: (0, _._)(_, _.image),
-                  alt: "",
-                  style: {
-                    width: "100%",
-                    height: "auto",
-                    display: "block",
-                    objectFit: "cover",
-                    maxWidth: _ ? `${_.width}px` : "100%",
-                  },
-                }),
-              )
-            : null;
-        const _ = [];
-        return (
-          _.video_webm_src &&
-            _.push({
-              sURL: (0, _._)(_, _.video_webm_src),
-              sFormat: "video/webm",
-            }),
-          _.video_mp4_src &&
-            _.push({
-              sURL: (0, _._)(_, _.video_mp4_src),
-              sFormat: "video/mp4",
-            }),
-          _.createElement(
-            "div",
-            {
-              className: _,
-              style: _,
-            },
-            _.createElement(_._, {
-              ref: _,
-              video: {
-                sPoster: (0, _._)(_, _.image),
-                rgVideoSources: _,
-              },
-              bAutoPlay: !0,
-              bControls: !1,
-              bLoop: !0,
-              bMuted: !0,
-              mediaScale: _,
-            }),
-          )
         );
       }
       function _(_) {
@@ -39829,6 +43955,7 @@
                   [_()._]: _ == _._.k_Header1,
                   [_()._]: _ == _._.k_Header2,
                   [_()._]: _ == _._.k_Header3,
+                  [_().HeaderFullWidth]: _ == _._.k_HeaderFullWidth,
                   [_().Left]: !_ || _ == _._.k_Left,
                   [_().Center]: _ == _._.k_Center,
                   [_().Right]: _ == _._.k_Right,
@@ -39951,8 +44078,8 @@
       function _(_) {
         const { event: _, language: __webpack_require__, titleSubDesc: _ } = _,
           _ = _._.GetELanguageFallback(__webpack_require__),
-          [_, _, _, _, _, _, _, _, _] = (0, _._)(() => {
-            var _, _, _, _, _, _;
+          [_, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
+            var _, _, _, _, _, _, _, _, _, _;
             return [
               (null === (_ = _.localized_media_title) || void 0 === _
                 ? void 0
@@ -39997,6 +44124,22 @@
                 : _.localized_media.length) > 0
                 ? _.title_media.media_horizontal_alignment
                 : void 0,
+              (null ===
+                (_ =
+                  null === (_ = null == _ ? void 0 : _.title_media) ||
+                  void 0 === _
+                    ? void 0
+                    : _.localized_alt_text) || void 0 === _
+                ? void 0
+                : _[__webpack_require__]) ||
+                (null ===
+                  (_ =
+                    null === (_ = null == _ ? void 0 : _.title_media) ||
+                    void 0 === _
+                      ? void 0
+                      : _.localized_alt_text) || void 0 === _
+                  ? void 0
+                  : _[_]),
             ];
           });
         return _.createElement(_, {
@@ -40011,10 +44154,11 @@
           titleMediaType: _,
           titleVAlign: _,
           titleHAlign: _,
+          titleAltText: _,
         });
       }
       function _(_) {
-        var _, _, _, _;
+        var _, _, _, _, _, _, _, _, _, _, _, _;
         const {
             question: _,
             language: _,
@@ -40025,10 +44169,18 @@
           } = _,
           _ = _._.GetELanguageFallback(_),
           _ =
-            (null === (_ = _.localized_question) || void 0 === _
+            (null === (_ = null == _ ? void 0 : _.localized_question) ||
+            void 0 === _
               ? void 0
               : _.length) > 0
-              ? _.localized_question[_] || _.localized_question[_] || ""
+              ? (null === (_ = null == _ ? void 0 : _.localized_question) ||
+                void 0 === _
+                  ? void 0
+                  : _[_]) ||
+                (null === (_ = _.localized_question) || void 0 === _
+                  ? void 0
+                  : _[_]) ||
+                ""
               : void 0,
           _ =
             (null ===
@@ -40041,8 +44193,28 @@
                   : _.localized_answer) || void 0 === _
               ? void 0
               : _.length) > 0
-              ? _.answers[0].localized_answer[_] ||
-                _.answers[0].localized_answer[_] ||
+              ? (null ===
+                  (_ =
+                    null ===
+                      (_ =
+                        null === (_ = _.answers) || void 0 === _
+                          ? void 0
+                          : _[0]) || void 0 === _
+                      ? void 0
+                      : _.localized_answer) || void 0 === _
+                  ? void 0
+                  : _[_]) ||
+                (null ===
+                  (_ =
+                    null ===
+                      (_ =
+                        null === (_ = _.answers) || void 0 === _
+                          ? void 0
+                          : _[0]) || void 0 === _
+                      ? void 0
+                      : _.localized_answer) || void 0 === _
+                  ? void 0
+                  : _[_]) ||
                 ""
               : void 0,
           [_, _] = (0, _._)(() => [
@@ -40071,7 +44243,7 @@
               }),
             },
             _.createElement(_._, {
-              text: _,
+              text: _ || "",
               partnerEventStore: _._,
               showErrorInfo: _,
               event: _,
@@ -40087,7 +44259,7 @@
               }),
             },
             _.createElement(_._, {
-              text: _,
+              text: _ || "",
               partnerEventStore: _._,
               showErrorInfo: _,
               event: _,
@@ -40248,6 +44420,7 @@
           case "links":
           case "title_image":
           case "crosspromotesalepage":
+          case "creator_list":
           case "creator_list_of_lists":
             return _.createElement(_, {
               ..._,
@@ -40645,6 +44818,352 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const _ = new Set();
+        return (
+          (_.indexOf("games") >= 0 || _.indexOf("dlc") >= 0) && _.add("apps"),
+          _.indexOf("curators") >= 0 && _.add("curators"),
+          _
+        );
+      }
+      class _ extends _.Component {
+        constructor() {
+          super(...arguments),
+            (this.state = {
+              strSearchString: "",
+              rgAppSuggestions: null,
+              rgCuratorSuggestions: null,
+            }),
+            (this.m_nHighestSentRequestID = 0),
+            (this.m_mapHighestReceivedRequestIDFromBackEnd = new Map([
+              ["apps", 0],
+              ["curators", 0],
+            ])),
+            (this.m_timerForChange = new _._());
+        }
+        componentWillUnmount() {
+          this.m_timerForChange.Cancel();
+        }
+        CloseSuggestions() {
+          this.setState({
+            rgCuratorSuggestions: null,
+            rgAppSuggestions: null,
+            strSearchString: "",
+          });
+        }
+        async GetSuggestionsFromServer(_) {
+          const _ = _(this.props.rgCorporaToSearch);
+          _.has("apps") && this.GetAppSuggestionsFromServer(_),
+            _.has("curators") && this.GetCuratorSuggestions(_);
+        }
+        async GetCuratorSuggestions(_) {
+          var _;
+          const _ = _._.Get().allNewsCurators,
+            _ = [];
+          for (const _ of _) {
+            const _ = _._.GetClanInfoByClanAccountID(_.clanAccountID),
+              _ = {
+                corpus: "curators",
+                _: _.clanAccountID,
+                name: null == _ ? void 0 : _.group_name,
+                img: null == _ ? void 0 : _.avatar_full_url,
+              };
+            if (
+              (
+                (null === (_ = null == _ ? void 0 : _.group_name) ||
+                void 0 === _
+                  ? void 0
+                  : _.toLocaleLowerCase()) || ""
+              ).indexOf(_) >= 0
+            ) {
+              if (
+                this.props.fnFilterSuggestion &&
+                !this.props.fnFilterSuggestion(_)
+              )
+                continue;
+              if (_._.Get().BIsIgnoringCurator(_.clanAccountID)) continue;
+              const _ = _._.Get().BIsFollowingCurator(_.clanAccountID),
+                _ = _.createElement(_, {
+                  key: "curatorsug_" + _._,
+                  suggestion: _,
+                  fnOnSelected: this.props.fnOnSelected,
+                  bShowFollowingLabel: _,
+                });
+              _.push(
+                this.props.fnDecorateSuggestion
+                  ? this.props.fnDecorateSuggestion(_, _)
+                  : _,
+              );
+            }
+          }
+          this.m_mapHighestReceivedRequestIDFromBackEnd.set(
+            "curators",
+            this.m_nHighestSentRequestID,
+          ),
+            this.setState({
+              rgCuratorSuggestions: _,
+            });
+        }
+        async GetAppSuggestionsFromServer(_) {
+          var _;
+          const _ = this.m_nHighestSentRequestID,
+            _ = [];
+          this.props.rgCorporaToSearch.indexOf("games") >= 0 &&
+            (_.push("game"), _.push("software")),
+            this.props.rgCorporaToSearch.indexOf("dlc") >= 0 &&
+              (_.push("dlc"), _.push("music"));
+          const _ = {
+              _: _._.COUNTRY,
+              _: _._.LANGUAGE,
+              realm: _._.k_ESteamRealmGlobal,
+              origin: self.origin,
+              _: "jsonfull",
+              term: _.replace(" ", "+"),
+              require_type: _.join(","),
+              excluded_tags: _._.Get().GetExcludedTagsSortedByID(),
+              excluded_content_descriptors: _._.Get().ExcludedContentDescriptor,
+            },
+            _ = `${_._.STORE_BASE_URL}search/suggest`,
+            _ = await _().get(_, {
+              params: _,
+              withCredentials: !0,
+            });
+          if (_ < this.m_mapHighestReceivedRequestIDFromBackEnd.get("apps"))
+            return;
+          let _;
+          this.m_mapHighestReceivedRequestIDFromBackEnd.set("apps", _),
+            (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+              ? void 0
+              : _.length) &&
+              (_ = _.data.map((_) => {
+                const _ = {
+                  corpus:
+                    ((_ = _.type),
+                    "game" == _ || "software" == _
+                      ? "games"
+                      : "dlc" == _ || "music" == _
+                        ? "dlc"
+                        : null),
+                  ..._,
+                  _: parseInt(_._),
+                };
+                var _;
+                if (
+                  this.props.fnFilterSuggestion &&
+                  !this.props.fnFilterSuggestion(_)
+                )
+                  return null;
+                const _ = _.createElement(_, {
+                  key: _.type + _._,
+                  suggestion: _,
+                  fnOnSelected: this.props.fnOnSelected,
+                });
+                return this.props.fnDecorateSuggestion
+                  ? this.props.fnDecorateSuggestion(_, _)
+                  : _;
+              })),
+            this.setState({
+              rgAppSuggestions: _,
+            });
+        }
+        async UpdateSuggestions(_) {
+          const _ = _.target.value && _.target.value.trim().toLocaleLowerCase();
+          if (
+            (this.m_nHighestSentRequestID++, !(null == _ ? void 0 : _.length))
+          )
+            return (
+              Array.from(_(this.props.rgCorporaToSearch)).forEach((_) =>
+                this.m_mapHighestReceivedRequestIDFromBackEnd.set(
+                  _,
+                  this.m_nHighestSentRequestID,
+                ),
+              ),
+              this.m_timerForChange.Cancel(),
+              this.setState({
+                strSearchString: "",
+              }),
+              void this.ResetSuggestions()
+            );
+          this.setState({
+            strSearchString: _,
+          }),
+            this.m_timerForChange.Schedule(300, () =>
+              this.GetSuggestionsFromServer(_),
+            );
+        }
+        ResetSuggestions() {
+          this.setState({
+            rgAppSuggestions: null,
+            rgCuratorSuggestions: null,
+          });
+        }
+        GetLimitedSuggestions() {
+          let { rgAppSuggestions: _, rgCuratorSuggestions: _ } = this.state;
+          let _ = _ ? _.length : 10,
+            _ = _ ? _.length : 10;
+          return (
+            _ + _ > 10 && (_ = 10 - Math.min(_, 2)),
+            (_ = 10 - _),
+            (_ = null == _ ? void 0 : _.slice(0, _)),
+            (_ = null == _ ? void 0 : _.slice(0, _)),
+            {
+              rgAppSuggestions: _,
+              rgCuratorSuggestions: _,
+            }
+          );
+        }
+        render() {
+          const {
+              strLabel: _,
+              focusOnMount: _,
+              rgCorporaToSearch: __webpack_require__,
+              strResultsClass: _,
+            } = this.props,
+            { strSearchString: _ } = this.state,
+            { rgAppSuggestions: _, rgCuratorSuggestions: _ } =
+              this.GetLimitedSuggestions(),
+            _ = (null == _ ? void 0 : _.length) > 0,
+            _ = (null == _ ? void 0 : _.length) > 0,
+            _ = (null == _ ? void 0 : _.length) > 0,
+            _ = _(__webpack_require__).size > 1,
+            _ =
+              _ &&
+              _ &&
+              (0, _._)(
+                __webpack_require__.indexOf("dlc") >= 0
+                  ? "#EventCalendar_SearchResultsHeader_GameAndDLCSection"
+                  : "#EventCalendar_SearchResultsHeader_GameSection",
+              ),
+            _ = Array.from(_(__webpack_require__)).some(
+              (_) =>
+                this.m_nHighestSentRequestID >
+                this.m_mapHighestReceivedRequestIDFromBackEnd.get(_),
+            ),
+            _ = !_ && !_ && !_;
+          return _.createElement(
+            "div",
+            {
+              className: _().SuggestContainer,
+            },
+            _.createElement(_._, {
+              type: "text",
+              label: _,
+              onChange: this.UpdateSuggestions,
+              bAlwaysShowClearAction: _,
+              focusOnMount: _,
+            }),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().Results, _),
+                },
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      key: "game-suggestions",
+                    },
+                    _ &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().ResultSectionHeader,
+                        },
+                        _,
+                      ),
+                    _,
+                  ),
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      key: "curator-suggestions",
+                    },
+                    _ &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().ResultSectionHeader,
+                        },
+                        (0, _._)(
+                          "#EventCalendar_SearchResultsHeader_CuratorSection",
+                        ),
+                      ),
+                    _,
+                  ),
+                _ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().EmptyResults,
+                      key: "empty-results",
+                    },
+                    (0, _._)("#EventCalendar_GameSearch_NoneFound"),
+                  ),
+                _ &&
+                  _.createElement(_._, {
+                    size: "small",
+                  }),
+              ),
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "UpdateSuggestions", null);
+      const _ = (_) =>
+        _.createElement(
+          "div",
+          {
+            className: _().ResultRow,
+            key: `suggestion-${_.suggestion._}`,
+            onClick: () => _.fnOnSelected(_.suggestion),
+          },
+          _.createElement("img", {
+            src: _.suggestion.img,
+            className: _().AvatarImage,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().GameName,
+            },
+            " ",
+            (0, _._)(_.suggestion.name),
+            " ",
+          ),
+          _.bShowFollowingLabel &&
+            _.createElement(
+              "div",
+              {
+                className: _().Label,
+              },
+              (0, _._)("#EventCalendar_FollowingCurator"),
+            ),
+        );
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid");
       function _(_, _ = "#Played_", __webpack_require__ = !1) {
         if (_ >= 120) {
@@ -40661,22 +45180,6 @@
           ? (0, _._)(_ + "Minute", _)
           : (0, _._)(_ + "Minutes", _);
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABApJREFUeNrsm2tIFUEUx2evRl5ISnugZuULIwoVtIykIIkgowdmERERUh9CqQ/Rh+gFCX4oKCIjyi8VQtETsoLoARViJEokRYlako9Iy4JKfLX9hz2CwXrv7t6ZvbvcPfDjwr3uzJ7/npk5c3ZUVFVlkWw+FuHmCeAJ4AngCeAJ4AkQwRbtgnucBzJALPgNPoJ28FdI6zwTdCDp4DToUvWtF1SDHIPtFUz0m5GLp9noeAw4BYZV43YFxOm05QNF4DmosirADNABMm1wPgE0qdasHWSAKJALKkAr/TYIUq0KcIAa4Y0lS3Q+HjSroVk/+Knz/eFAfQe7sfpxDckU4bYqx2opKsb6UcwIMElnLPLhsECw8xskOc9F9RPFoIaGyX/9B8oDknSWybmgHhQJXOaOSlg634AP4AH4Dm6Bh6DVzDKYE0ThSoqSUJ5+lmqPVUx0D4EioDeIygdBA8gL4UmtsiGROhcoygIJ8AUMBGk8G7wC1SDRws1lSXb+OCjngW5FgFHw0kAnCthF6ekZkGLiBhMlOT4ENoNjoW6GrpvoNAbsBW3gLtgKpgS5ZkCSAD3gpojdYA34ZmGHuQ5cpWtrSZilJNJ46w/3TksxUBbfDS4K6m+ElqdO0A3mg2WSlsFsUQLwMX4DbHLRNr/eqLCBhkAm2EgC7ABPXCRAr9E/DFQQ8YM7FK61FAUJYKELBGgTIUA3fSaDPS6rdBkWIFgm+M6lpb4mUUXRey50fhA0ihLgLBh2mQANlAkKEaCTNhNusvuiEyE/7QmyXCJAhqhJcHy+vtZMo2G0RrP3afTNEB8KBeCpwwUwnbIrJo/I8KxwJzgCUh3mfD/lLH9kRAC3eLCIabW1FWA/bTudYufNOm82AuJAF02KzIFPPw38MHuhz2Qnlxw69iutOG9lDuDDoAVMd5Dzb0EuZYBMZgRw4zV2XuoadYjz/BV5qVXnrQjA7THY7pAU+STTqtKWTQnhpCjPCy6D9DA5/wIUMq3MFhYBxtJkXncvY9pJDrusAywBX0NtSBF0VthHe4Xl9FnK5J0/6qPoaxF146Imo9dUQFkj2flCUc6LFIDvwK7RBDlbYtjzCGsW2Wiop8TyafxvA1ESx3wdKGHa+0oWTgGmgsVgNVjPtBcbMo1PUCdo8yVl2dUTYBY4BOYw7VxeLGWAKbTbUmya6d8z7aVrnVyJ9Q8ORINy0KPab31gn4DDF4YItgz66SmU2RDun0AVuAB+2ZVQGM0DeNivBFtAMZgpcBvLi5j8LfQjJur4q+REiM/2eSRIPiU+aQZzhc+UL/DS9TOmFVtHWBhNVCY4mWmnypJo2IwdjBikp8xTVl5XHGIOM8X7t7kIN08ATwBPAE8ATwBPgAi2fwIMABJGc33swO3GAAAAAElFTkSuQmCC";
     },
   },
 ]);

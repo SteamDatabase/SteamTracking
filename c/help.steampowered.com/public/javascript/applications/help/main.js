@@ -726,6 +726,7 @@
         FlexColumnContainer: "_1qhLqXcizfytm6omB4ywDD",
         FlexRowContainer: "Ke5f13IVZVzYSmQVJgVyd",
         Centered: "qy-9mgJyhfEb8Wt0gqzaF",
+        VCentered: "_2Ke6gF28pxI9dp-gD87LfB",
         FlexContainSpaceBetween: "_3nPGWNNLFjqXgZ6hjwUnkf",
         FlexRowWrapSpaceBetweenContainer: "_19CjIj6mAtlIoY_7_iyOlz",
         FlexRowWrapFlexStartContainer: "tyP_cnaOBcolou13sADst",
@@ -786,6 +787,7 @@
         maintitle: "vEk_z-3SSNZ_QNdilG5U8",
         AppTitle: "l-Ow7jLX9GkLm9eYHQVAP",
         subtitle: "_2mJfcOfmivoiCR4CW-GrjN",
+        ValveOnlyText: "_206saj_KMAibQF6XQ50lq0",
         ValveOnlyBackground: "JckrnbJXboKxpRp3fULfa",
         ValveOnlyAdminBackground: "_3HVu1O7B4zeCZWaOaUWPCo",
         Columns: "_1oVIRGhMwAB3uN9G3t8kZe",
@@ -13206,15 +13208,6 @@
             }),
         );
       }
-      _.forwardRef(function (_, _) {
-        return _.createElement(_._, {
-          noFocusRing: !0,
-          ..._,
-          ref: _,
-          className: (0, _._)(_().BasicTextInput, _.className),
-          size: _.size ?? 1,
-        });
-      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       _.forwardRef(function (_, _) {
@@ -16147,6 +16140,12 @@
             height: 0,
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
+          },
+          user_poll_background: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: _,
           },
           spotlight_art: {
             width: [306, 374],
@@ -20005,6 +20004,7 @@
           "calendarevent",
           "color",
           "bgcolor",
+          "userpolls",
         ],
         _ = [
           "img",
@@ -20259,9 +20259,10 @@
       var _, _, _, _, _, _;
       function _(_) {
         return (
-          "items" === _ ||
-          "trailercarousel" === _ ||
-          "crosspromotesalepage" == _
+          "items" == _ ||
+          "trailercarousel" == _ ||
+          "crosspromotesalepage" == _ ||
+          "creator_list" == _
         );
       }
       !(function (_) {
@@ -33169,6 +33170,8 @@
             bMuted: _,
             className: _,
             mediaScale: _,
+            onClick: _,
+            altText: _,
           } = _,
           _ = (0, _.useMemo)(
             () =>
@@ -33230,6 +33233,8 @@
             },
             ref: _,
             className: _,
+            onClick: _,
+            "aria-label": _,
             style: {
               width: _ && _ >= 1 && _ < 100 ? `${_}%` : void 0,
             },
@@ -67386,10 +67391,10 @@
           return null != _ && "object" == typeof _ && !Array.isArray(_);
         }
         GetListTitle(_) {
-          return this.LazyInit(), this.m_mapListToTitle.get(_);
+          return this.LazyInit(), _ ? this.m_mapListToTitle.get(_) : void 0;
         }
         GetListSubtitle(_) {
-          return this.LazyInit(), this.m_mapListToSubtitle.get(_);
+          return this.LazyInit(), _ ? this.m_mapListToSubtitle.get(_) : void 0;
         }
       }
       (0, _._)([_._], _.prototype, "m_mapListToTitle", void 0),
@@ -76983,6 +76988,12 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
+        PrintEnabledLogs() {
+          this.LogAsLogManager(
+            "Will print log messages for:",
+            Array.from(this.m_setEnabledDebugLogs),
+          );
+        }
         static Get() {
           return (
             null == _.s_Singleton && (_.s_Singleton = new _()), _.s_Singleton
@@ -77111,6 +77122,13 @@
         (window.DebugLogDisableBacktrace = () =>
           _.Get().SetIncludeBacktraceInLog(!1)),
         (window.DebugLogNames = _),
+        (window.DebugLogEnabled = (..._) => {
+          _.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${_.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            _.Get().PrintEnabledLogs();
+        }),
         (window.EnableSteamConsole = (_ = !0) =>
           _.Get().SetDebugLogEnabled("SteamClient", _));
     },

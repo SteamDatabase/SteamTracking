@@ -664,8 +664,89 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.classid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [3, 4, 5], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  classid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  instanceid: {
+                    _: 2,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  standalone_properties: {
+                    _: 3,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  parent_relationship_properties: {
+                    _: 4,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  nested_accessories: {
+                    _: 5,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CEconItem_AssetAccessory";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [4], null);
+            _.Message.initialize(this, _, 0, -1, [4, 5], null);
         }
         static M() {
           return (
@@ -690,6 +771,12 @@
                   },
                   asset_properties: {
                     _: 4,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  asset_accessories: {
+                    _: 5,
                     _: _,
                     _: !0,
                     _: !0,

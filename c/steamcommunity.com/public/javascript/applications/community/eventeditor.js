@@ -48,6 +48,8 @@
         ButtonIcon: "_21IZDNymOVDf4u4Ont7WVA",
         LivePreview: "_3ZR1lzEuaXh2XBVuVEh-0J",
         Connected: "_2ME4vnNY35SFhb8T9N3Bac",
+        Button: "K2C7UN0E4ll0EoPiSoSM9",
+        DeviceDropdown: "_1zrINKOr2-kktSCnf59Xt6",
       };
     },
     chunkid: (module) => {
@@ -105,6 +107,16 @@
         customTitleOptionsCtn: "zhH_Vr0LaMN9JLW17_6Sg",
         TitleRowCtn: "_96im4Pfj3wp5vXCaqhDwZ",
         AccountRow: "_2uIyvmr0xlWuKw0K7c5XEB",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        DisplayAdminPanel_Spacer: "_3TzVFi3VdHXUk1AerBpZc-",
+        EventEditorTopBarContainer: "_1Afx7wzva3-ghxcAy6EQhs",
+        EventEditorBottomBar: "_1noS58WsfHN3KuGVDzlv9r",
+        EventPublished: "_3zTXCKuKmaCdEoxSBTzPAa",
+        EventUnPublished: "pjxnm0P9LLWFXCwsaDKUa",
+        AdditionalContent: "_2fUl5vCnrlT9P7kskRIiWx",
       };
     },
     chunkid: (module) => {
@@ -275,6 +287,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ValveCrowdInSyncCtn: "_8MIrt7rQXkA0xE5sAjOee",
+        ValveCrowdInSyncLabel: "_22b0C1Xi03QNdTFKsYypHR",
+        SyncPanelError: "yn_yu2EaUigYFm9QQAD7o",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         countdownCtn: "GWWacIf04lQysYMFJma0A",
         Closed: "ATX_xEE69rX8wVxQvONEx",
         CountDownCtn: "_11RwPICMOmmvNXkOq9bjPc",
@@ -335,14 +354,10 @@
     },
     chunkid: (module) => {
       module.exports = {
-        SuggestContainer: "_2gBFqL_6eXiRN7TI_GDjzF",
-        Results: "_3eXNgAtnlHBfgWZbxO2n3h",
-        EmptyResults: "_3w0K5X735sKAZhhifZGs84",
-        ResultSectionHeader: "_1KK1sGDuxehec0lBB_4lpU",
-        ResultRow: "_16oSf0MiTpUTJe7YQpCV2A",
-        AvatarImage: "_3dr2A8wfoYU0kJtS9ACoR1",
-        GameName: "_3CWrph5moGF_F746uM5tdI",
-        Label: "I1zVikvORZt41zc-QTAsw",
+        Label: "_1LhItwhLHspVcQdfcbd2Sg",
+        ImportLocSampleButtonCtn: "D-1dlROLVuva-sb6tFgwU",
+        SampleTitle: "_9189ilzQ3YES-a-6DyBhR",
+        ImportButton: "WyfyxbGrKQq8cKMK5kfxE",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -584,9 +599,13 @@
         _ = "techspecblock_",
         _ = "_name_",
         _ = "_desc_",
-        _ = "submenu_";
+        _ = "submenu_",
+        _ = "mediacontent_alt_text_",
+        _ = "mediacontent_title_alt_text_",
+        _ = "userpoll_",
+        _ = "userpoll_option_";
       function _(_, _, _, _) {
-        var _, _, _, _;
+        var _, _, _, _, _;
         let _ = new _._();
         if (_) {
           let _ = _.GetEventModel();
@@ -676,7 +695,34 @@
               const _ = _.localized_broadcast_title[_];
               _.SetLocalization(_, _, _);
             }
-        if (_ && _.BHasSaleEnabled()) {
+        if (
+          (_ &&
+            (null === (_ = _.user_polls) || void 0 === _ ? void 0 : _.length) >
+              0 &&
+            _.user_polls.forEach((_) => {
+              var _;
+              for (let _ = 0; _ < 31; ++_)
+                _.localized_poll_description &&
+                  Boolean(_._.Get(_.localized_poll_description, _)) &&
+                  _.SetLocalization(
+                    _ + _.poll_id,
+                    _,
+                    _.localized_poll_description[_],
+                  ),
+                  null === (_ = null == _ ? void 0 : _.options) ||
+                    void 0 === _ ||
+                    _.forEach((_) => {
+                      _.localized_option &&
+                        Boolean(_._.Get(_.localized_option, _)) &&
+                        _.SetLocalization(
+                          _ + _.option_id,
+                          _,
+                          _.localized_option[_],
+                        );
+                    });
+            }),
+          _ && _.BHasSaleEnabled())
+        ) {
           if (
             null === (_ = null == _ ? void 0 : _.sale_presenters) ||
             void 0 === _
@@ -1105,36 +1151,46 @@
                           null === (_ = null == _ ? void 0 : _.media_columns) ||
                             void 0 === _ ||
                             _.forEach((_) => {
-                              let _ = _.localized_media_title;
-                              _ &&
-                                Boolean(_._.Get(_, _)) &&
-                                _.SetLocalization(
-                                  _ + _.unique_id + "_" + _.unique_id,
-                                  _,
-                                  _[_],
-                                ),
-                                (_ = _.localized_media_subtitle),
-                                _ &&
-                                  Boolean(_._.Get(_, _)) &&
-                                  _.SetLocalization(
-                                    _ + _.unique_id + "_" + _.unique_id,
+                              _(_, _, _.unique_id + "_" + _.unique_id, _),
+                                _.mobile_content_varient &&
+                                  _(
                                     _,
-                                    _[_],
-                                  ),
-                                (_ = _.localized_media_description),
-                                _ &&
-                                  Boolean(_._.Get(_, _)) &&
-                                  _.SetLocalization(
-                                    _ + _.unique_id + "_" + _.unique_id,
                                     _,
-                                    _[_],
+                                    _.unique_id + "_" + _.unique_id + "_mobile",
+                                    _.mobile_content_varient,
                                   );
                             });
-                        }));
+                        })),
+                    "template_media_overlay" == _.section_type &&
+                      _.media_overlay &&
+                      (_(_, _, _.unique_id + "_overlay", _.media_overlay),
+                      _.media_overlay_mobile_content_varient &&
+                        _(
+                          _,
+                          _,
+                          _.unique_id + "_overlay_mobile",
+                          _.media_overlay_mobile_content_varient,
+                        ));
                 }
               });
         }
         return _;
+      }
+      function _(_, _, _, _) {
+        var _;
+        let _ = _.localized_media_title;
+        _ && Boolean(_._.Get(_, _)) && _.SetLocalization(_ + _, _, _[_]),
+          (_ = _.localized_media_subtitle),
+          _ && Boolean(_._.Get(_, _)) && _.SetLocalization(_ + _, _, _[_]),
+          (_ = _.localized_media_description),
+          _ && Boolean(_._.Get(_, _)) && _.SetLocalization(_ + _, _, _[_]),
+          (_ = _.localized_alt_text),
+          _ && Boolean(_._.Get(_, _)) && _.SetLocalization(_ + _, _, _[_]),
+          (_ =
+            null === (_ = _.title_media) || void 0 === _
+              ? void 0
+              : _.localized_alt_text),
+          _ && Boolean(_._.Get(_, _)) && _.SetLocalization(_ + _, _, _[_]);
       }
       function _(_, _, _) {
         let _ = new Array();
@@ -1144,7 +1200,7 @@
             __webpack_require__.forEach((_) => {
               let _ = !1;
               _.forEach((_) => {
-                var _, _, _, _;
+                var _, _, _, _, _;
                 const _ = _.GetLocalization(_, _) || "";
                 if (
                   (_ === _ &&
@@ -1180,6 +1236,49 @@
                       _.SetDirty(_._.jsondata_sales),
                       (_ = !0));
                   }
+                }
+                if (_.startsWith(_)) {
+                  const _ = _.GetEventModel().jsondata;
+                  null === (_ = null == _ ? void 0 : _.user_polls) ||
+                    void 0 === _ ||
+                    _.forEach((_) => {
+                      var _;
+                      if (_.startsWith(_))
+                        null === (_ = _.options) ||
+                          void 0 === _ ||
+                          _.forEach((_) => {
+                            if (
+                              _ == _ + _.option_id &&
+                              (_ ||
+                                (_.localized_option &&
+                                  Boolean(_._.Get(_.localized_option, _))))
+                            ) {
+                              _._.Get(_.localized_option, _) !== _ &&
+                                ((_.localized_option = _._.Set(
+                                  _.localized_option || [],
+                                  _,
+                                  _,
+                                )),
+                                _.SetDirty(_._.description),
+                                (_ = !0));
+                            }
+                          });
+                      else if (
+                        _ == _ + _.poll_id &&
+                        (_ ||
+                          (_.localized_poll_description &&
+                            Boolean(_._.Get(_.localized_poll_description, _))))
+                      ) {
+                        _._.Get(_.localized_poll_description, _) !== _ &&
+                          ((_.localized_poll_description = _._.Set(
+                            _.localized_poll_description || [],
+                            _,
+                            _,
+                          )),
+                          _.SetDirty(_._.description),
+                          (_ = !0));
+                      }
+                    });
                 }
                 if (
                   _.startsWith(_) &&
@@ -1926,75 +2025,78 @@
                             _.SetDirty(_._.jsondata_sales),
                             (_ = !0));
                         }
-                        "social_share" == _.section_type &&
-                          (null === (_ = _.social_share.content_options) ||
-                            void 0 === _ ||
-                            _.forEach((_) => {
-                              const _ = _.localized_option_fields;
-                              if (
-                                _ === _ + _.unique_id + "_" + _.unique_id &&
-                                (_ ||
-                                  (_.localized_header &&
-                                    Boolean(_._.Get(_.localized_header, _))))
-                              ) {
-                                _._.Get(_.localized_header, _) !== _ &&
-                                  ((_.localized_header = _._.Set(
-                                    _.localized_header || [],
-                                    _,
-                                    _,
-                                  )),
-                                  _.SetDirty(_._.jsondata_sales),
-                                  (_ = !0));
-                              }
-                              if (
-                                _ === _ + _.unique_id + "_" + _.unique_id &&
-                                (_ || (_.title && Boolean(_._.Get(_.title, _))))
-                              ) {
-                                _._.Get(_.title, _) !== _ &&
-                                  ((_.title = _._.Set(_.title || [], _, _)),
-                                  _.SetDirty(_._.jsondata_sales),
-                                  (_ = !0));
-                              }
-                              if (
-                                _ === _ + _.unique_id + "_" + _.unique_id &&
-                                (_ ||
-                                  (_.description &&
-                                    Boolean(_._.Get(_.description, _))))
-                              ) {
-                                _._.Get(_.description, _) !== _ &&
-                                  ((_.description = _._.Set(
-                                    _.description || [],
-                                    _,
-                                    _,
-                                  )),
-                                  _.SetDirty(_._.jsondata_sales),
-                                  (_ = !0));
-                              }
-                              if (
-                                _ === _ + _.unique_id + "_" + _.unique_id &&
-                                (_ || (_.image && Boolean(_._.Get(_.image, _))))
-                              ) {
-                                _._.Get(_.image, _) !== _ &&
-                                  ((_.image = _._.Set(_.image || [], _, _)),
-                                  _.SetDirty(_._.jsondata_sales),
-                                  (_ = !0));
-                              }
-                              if (
-                                _ === _ + _.unique_id + "_" + _.unique_id &&
-                                (_ ||
-                                  (_.twitter_alt_text &&
-                                    Boolean(_._.Get(_.twitter_alt_text, _))))
-                              ) {
-                                _._.Get(_.twitter_alt_text, _) !== _ &&
-                                  ((_.twitter_alt_text = _._.Set(
-                                    _.twitter_alt_text || [],
-                                    _,
-                                    _,
-                                  )),
-                                  _.SetDirty(_._.jsondata_sales),
-                                  (_ = !0));
-                              }
-                            })),
+                        if (
+                          ("social_share" == _.section_type &&
+                            (null === (_ = _.social_share.content_options) ||
+                              void 0 === _ ||
+                              _.forEach((_) => {
+                                const _ = _.localized_option_fields;
+                                if (
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                  (_ ||
+                                    (_.localized_header &&
+                                      Boolean(_._.Get(_.localized_header, _))))
+                                ) {
+                                  _._.Get(_.localized_header, _) !== _ &&
+                                    ((_.localized_header = _._.Set(
+                                      _.localized_header || [],
+                                      _,
+                                      _,
+                                    )),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0));
+                                }
+                                if (
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                  (_ ||
+                                    (_.title && Boolean(_._.Get(_.title, _))))
+                                ) {
+                                  _._.Get(_.title, _) !== _ &&
+                                    ((_.title = _._.Set(_.title || [], _, _)),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0));
+                                }
+                                if (
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                  (_ ||
+                                    (_.description &&
+                                      Boolean(_._.Get(_.description, _))))
+                                ) {
+                                  _._.Get(_.description, _) !== _ &&
+                                    ((_.description = _._.Set(
+                                      _.description || [],
+                                      _,
+                                      _,
+                                    )),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0));
+                                }
+                                if (
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                  (_ ||
+                                    (_.image && Boolean(_._.Get(_.image, _))))
+                                ) {
+                                  _._.Get(_.image, _) !== _ &&
+                                    ((_.image = _._.Set(_.image || [], _, _)),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0));
+                                }
+                                if (
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                  (_ ||
+                                    (_.twitter_alt_text &&
+                                      Boolean(_._.Get(_.twitter_alt_text, _))))
+                                ) {
+                                  _._.Get(_.twitter_alt_text, _) !== _ &&
+                                    ((_.twitter_alt_text = _._.Set(
+                                      _.twitter_alt_text || [],
+                                      _,
+                                      _,
+                                    )),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0));
+                                }
+                              })),
                           "media_layout" == _.section_type &&
                             (null === (_ = _.media_layout.media_content) ||
                               void 0 === _ ||
@@ -2020,53 +2122,56 @@
                               _.forEach((_) => {
                                 null == _ ||
                                   _.media_columns.forEach((_) => {
-                                    if (
-                                      _ ===
-                                      _ + _.unique_id + "_" + _.unique_id
-                                    ) {
-                                      const _ = _.localized_media_title;
-                                      if (_ || (_ && Boolean(_._.Get(_, _)))) {
-                                        _._.Get(_, _) !== _ &&
-                                          ((_.localized_media_title = _._.Set(
-                                            _ || [],
-                                            _,
-                                            _,
-                                          )),
-                                          _.SetDirty(_._.jsondata_sales),
-                                          (_ = !0));
-                                      }
-                                    }
-                                    if (
-                                      _ ===
-                                      _ + _.unique_id + "_" + _.unique_id
-                                    ) {
-                                      const _ = _.localized_media_subtitle;
-                                      if (_ || (_ && Boolean(_._.Get(_, _)))) {
-                                        _._.Get(_, _) !== _ &&
-                                          ((_.localized_media_subtitle =
-                                            _._.Set(_ || [], _, _)),
-                                          _.SetDirty(_._.jsondata_sales),
-                                          (_ = !0));
-                                      }
-                                    }
-                                    if (
-                                      _ ===
-                                      _ + _.unique_id + "_" + _.unique_id
-                                    ) {
-                                      const _ = _.localized_media_description;
-                                      if (_ || (_ && Boolean(_._.Get(_, _)))) {
-                                        _._.Get(_, _) !== _ &&
-                                          ((_.localized_media_title = _._.Set(
-                                            _ || [],
-                                            _,
-                                            _,
-                                          )),
-                                          _.SetDirty(_._.jsondata_sales),
-                                          (_ = !0));
-                                      }
-                                    }
+                                    let _ = _(
+                                      _,
+                                      _,
+                                      _,
+                                      _.unique_id + "_" + _.unique_id,
+                                      _,
+                                      _,
+                                    );
+                                    _ || (_ = _),
+                                      _.mobile_content_varient &&
+                                        ((_ = _(
+                                          _,
+                                          _,
+                                          _,
+                                          _.unique_id +
+                                            "_" +
+                                            _.unique_id +
+                                            "_mobile",
+                                          _,
+                                          _.mobile_content_varient,
+                                        )),
+                                        _ || (_ = _));
                                   });
-                              }));
+                              })),
+                          "template_media_overlay" == _.section_type &&
+                            _.media_overlay)
+                        ) {
+                          let _ = _(
+                            _,
+                            _,
+                            _,
+                            _.unique_id + "_overlay",
+                            _,
+                            _.media_overlay,
+                          );
+                          if (
+                            (_ || (_ = _),
+                            _.media_overlay_mobile_content_varient)
+                          ) {
+                            let _ = _(
+                              _,
+                              _,
+                              _,
+                              _.unique_id + "_overlay_mobile",
+                              _,
+                              _.media_overlay,
+                            );
+                            _ || (_ = _);
+                          }
+                        }
                       });
                 }
               }),
@@ -2075,6 +2180,55 @@
           }),
           _
         );
+      }
+      function _(_, _, _, _, _, _) {
+        let _ = !1;
+        if (_ === _ + _) {
+          const _ = _.localized_media_title;
+          if (_ || (_ && Boolean(_._.Get(_, _)))) {
+            _._.Get(_, _) !== _ &&
+              ((_.localized_media_title = _._.Set(_ || [], _, _)),
+              _.SetDirty(_._.jsondata_sales),
+              (_ = !0));
+          }
+        }
+        if (_ === _ + _) {
+          const _ = _.localized_media_subtitle;
+          if (_ || (_ && Boolean(_._.Get(_, _)))) {
+            _._.Get(_, _) !== _ &&
+              ((_.localized_media_subtitle = _._.Set(_ || [], _, _)),
+              _.SetDirty(_._.jsondata_sales),
+              (_ = !0));
+          }
+        }
+        if (_ === _ + _) {
+          const _ = _.localized_media_description;
+          if (_ || (_ && Boolean(_._.Get(_, _)))) {
+            _._.Get(_, _) !== _ &&
+              ((_.localized_media_title = _._.Set(_ || [], _, _)),
+              _.SetDirty(_._.jsondata_sales),
+              (_ = !0));
+          }
+        }
+        if (_ === _ + _) {
+          const _ = _.localized_alt_text;
+          if (_ || (_ && Boolean(_._.Get(_, _)))) {
+            _._.Get(_, _) !== _ &&
+              ((_.localized_alt_text = _._.Set(_ || [], _, _)),
+              _.SetDirty(_._.jsondata_sales),
+              (_ = !0));
+          }
+        }
+        if (_ === _ + _) {
+          const _ = _.title_media.localized_alt_text;
+          if (_ || (_ && Boolean(_._.Get(_, _)))) {
+            _._.Get(_, _) !== _ &&
+              ((_.title_media.localized_alt_text = _._.Set(_ || [], _, _)),
+              _.SetDirty(_._.jsondata_sales),
+              (_ = !0));
+          }
+        }
+        return _;
       }
       function _(_) {
         return _.createElement(
@@ -3322,14 +3476,16 @@
                 !_ || _.every((_) => null != _),
                 "draftClanEvents has a null event",
               );
-              const _ = new Map();
+              const _ = (_) => 36 != _.GetEventType(),
+                _ = new Map();
               return (
                 null == _ ||
                   _.pages
                     .flatMap((_) => _)
                     .map((_) => (0, _._)(_, _))
+                    .filter(_)
                     .forEach((_) => _.set(_.GID, _)),
-                null == _ || _.forEach((_) => _.set(_.GID, _)),
+                null == _ || _.filter(_).forEach((_) => _.set(_.GID, _)),
                 Array.from(_.values())
               );
             }, [_, null == _ ? void 0 : _.pages, _]);
@@ -4924,7 +5080,68 @@
           ),
         );
       }
+      function _(_) {
+        const {
+          label: _,
+          fnUpdateColor: __webpack_require__,
+          strColorToChange: _,
+        } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              className: _().BackgroundColorBtn,
+              onClick: (_) => {
+                (0, _._)(
+                  _.createElement(_._, {
+                    color: _,
+                    onChange: __webpack_require__,
+                  }),
+                  _,
+                  {
+                    bDisablePopTop: !0,
+                  },
+                );
+              },
+            },
+            _,
+            _.createElement(_._, {
+              tooltip: (0, _._)("#EventEditor_BG_Arrow_Color_ttip"),
+            }),
+            _.createElement(_._, {
+              ..._,
+              bIsActive: !1,
+            }),
+            _.createElement(_._, {
+              ..._,
+              bIsActive: !0,
+            }),
+            _.createElement(_._, {
+              ..._,
+              bIsActive: !1,
+            }),
+            _.createElement(_._, {
+              ..._,
+              bIsActive: !1,
+            }),
+          ),
+        );
+      }
       var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            ..._,
+          }),
+          _.createElement(_, {
+            ..._,
+          }),
+        );
+      }
       function _(_) {
         const { editModel: _ } = _,
           [__webpack_require__, _] = (0, _._)(() => [
@@ -5001,6 +5218,109 @@
                 _.GetEventModel().jsondata.sale_carousel_arrow_style !=
                   _.data &&
                   ((_.GetEventModel().jsondata.sale_carousel_arrow_style =
+                    _.data),
+                  _.SetDirty(_._.jsondata_sales));
+              },
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
+              },
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__, _, _] = (0, _._)(() => [
+            _.GetEventModel().jsondata.sale_carousel_breadcrumb_color,
+            _.GetEventModel().jsondata.sale_carousel_active_breadcrumb_color,
+            _.GetEventModel().jsondata.sale_carousel_breadcrumb_style ||
+              _._.k_EPillCrumb,
+          ]),
+          _ = (0, _.useMemo)(() => {
+            const _ = [];
+            return (
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_BreadCrumb_PillStyles"),
+                data: _._.k_EPillCrumb,
+              }),
+              _.push({
+                label: (0, _._)(
+                  "#Sale_Section_Carousel_BreadCrumb_CircularStyles",
+                ),
+                data: _._.k_ECircularCrumb,
+              }),
+              _.push({
+                label: (0, _._)(
+                  "#Sale_Section_Carousel_BreadCrumb_SquareStyles",
+                ),
+                data: _._.k_ESquareCrumb,
+              }),
+              _
+            );
+          }, []);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().FlexRowContainer, _().BackgroundConfigCtn),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#Sale_Section_Carousel_BreadCrumb"),
+            ),
+            _.createElement(_, {
+              label: (0, _._)("#Sale_Section_Carousel_BreadCrumb_Color"),
+              strColorToChange: __webpack_require__,
+              breadcrumbColor: __webpack_require__,
+              breadcrumbActiveColor: _,
+              breadcrumbStyle: _,
+              fnUpdateColor: (_) => {
+                _.GetEventModel().jsondata.sale_carousel_breadcrumb_color !=
+                  _ &&
+                  ((_.GetEventModel().jsondata.sale_carousel_breadcrumb_color =
+                    _),
+                  _.SetDirty(_._.jsondata_sales));
+              },
+            }),
+            _.createElement(_, {
+              label: (0, _._)("#Sale_Section_Carousel_ActiveBreadCrumb_Color"),
+              strColorToChange: _,
+              breadcrumbColor: __webpack_require__,
+              breadcrumbActiveColor: _,
+              breadcrumbStyle: _,
+              fnUpdateColor: (_) => {
+                _.GetEventModel().jsondata
+                  .sale_carousel_active_breadcrumb_color != _ &&
+                  ((_.GetEventModel().jsondata.sale_carousel_active_breadcrumb_color =
+                    _),
+                  _.SetDirty(_._.jsondata_sales));
+              },
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#Sale_Section_Carousel_BreadCrumbStyles"),
+            ),
+            _.createElement(_._, {
+              strDropDownClassName: _().DropDownScroll,
+              rgOptions: _,
+              selectedOption: _,
+              onChange: (_) => {
+                _.GetEventModel().jsondata.sale_carousel_breadcrumb_style !=
+                  _.data &&
+                  ((_.GetEventModel().jsondata.sale_carousel_breadcrumb_style =
                     _.data),
                   _.SetDirty(_._.jsondata_sales));
               },
@@ -9322,15 +9642,7 @@
         };
       function _(_) {
         const _ = _._.GetEditModel(),
-          _ = _.GetEventModel(),
-          [_, _, _] = (0, _._)(),
-          _ =
-            _._.STORE_BASE_URL +
-            "curator/" +
-            _.clanSteamID.GetAccountID() +
-            "/sale/" +
-            _.jsondata.sale_vanity_id,
-          _ = (0, _._)(),
+          [__webpack_require__, _, _] = (0, _._)(),
           { bSoloMode: _, SetSoloMode: _ } = (0, _._)();
         return _.createElement(
           "div",
@@ -9345,15 +9657,9 @@
               {
                 toolTipContent: (0, _._)("#Sale_Debug_LivePreview_ttip"),
               },
-              _.createElement(
-                _._,
-                {
-                  className: (0, _._)(_().LivePreview, _ && _().Connected),
-                  onClick: () =>
-                    _._.Get().ShowPreviewWindow(_, _.ConstructJSONData()),
-                },
-                (0, _._)("#Sale_Debug_LivePreview"),
-              ),
+              _.createElement(_, {
+                editModel: _,
+              }),
             ),
           ),
           _.createElement(
@@ -9398,7 +9704,7 @@
             _.createElement(
               _._,
               {
-                active: _,
+                active: __webpack_require__,
               },
               _.createElement(_, {
                 editModel: _,
@@ -9454,6 +9760,89 @@
                 onChange: (_) => _(_),
               }),
             ),
+          ),
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _,
+          _ = _.GetEventModel(),
+          _ = [
+            {
+              label: (0, _._)("#Sale_Debug_LivePreview_Device_Desktop"),
+              data: "desktop",
+              size: {
+                width: 1500,
+                height: 1100,
+              },
+            },
+            {
+              label: (0, _._)("#Sale_Debug_LivePreview_Device_Mobile"),
+              data: "mobile",
+              size: {
+                width: 402,
+                height: 874,
+              },
+            },
+            {
+              label: (0, _._)("#Sale_Debug_LivePreview_Device_SteamDeck"),
+              data: "steamdeck",
+              size: {
+                width: 852,
+                height: 532,
+              },
+              queryParams: [
+                {
+                  key: "force_gamepad_client_view",
+                  value: "1",
+                },
+              ],
+            },
+          ],
+          _ = (_) => {
+            const _ = _.find((_) => _.data == _),
+              _ =
+                _._.STORE_BASE_URL +
+                "curator/" +
+                _.clanSteamID.GetAccountID() +
+                "/sale/" +
+                _.jsondata.sale_vanity_id;
+            _._.Get().ShowPreviewWindow(
+              _,
+              _.ConstructJSONData(),
+              null == _ ? void 0 : _.size,
+              null == _ ? void 0 : _.queryParams,
+            );
+          },
+          _ = (0, _._)();
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().LivePreview, _ && _().Connected),
+          },
+          _.createElement(
+            _._,
+            {
+              className: (0, _._)(_().Button),
+              onClick: () => _(void 0),
+            },
+            (0, _._)("#Sale_Debug_LivePreview"),
+          ),
+          _.createElement(
+            _._,
+            {
+              className: (0, _._)(_().DeviceDropdown),
+              onClick: (_) =>
+                ((_) => {
+                  const _ = _.createElement(_._, {
+                    rgOptions: _,
+                    onValueSelected: (_, _) => _(_.data),
+                  });
+                  (0, _._)(_, _, {
+                    bOverlapHorizontal: !0,
+                  });
+                })(_),
+            },
+            _.createElement(_.GB9, null),
           ),
         );
       }
@@ -10289,406 +10678,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        static Get() {
-          return (
-            _.s_newsCuratorStore ||
-              ((_.s_newsCuratorStore = new _()),
-              (_.s_newsCuratorStore.m_LoadingPromise =
-                _.s_newsCuratorStore.Init()),
-              (window.g_NewsCuratorStore = _.s_newsCuratorStore)),
-            _.s_newsCuratorStore
-          );
-        }
-        constructor() {
-          (this.m_mapNewsCurators = new Map()),
-            (this.m_bIsLoadComplete = !1),
-            (this.m_mapLangToNewsCurators = new Map()),
-            (this.m_LoadingPromise = null),
-            (0, _._)(this);
-        }
-        IsLoaded() {
-          return this.m_bIsLoadComplete;
-        }
-        WaitForInitialLoad() {
-          return this.m_LoadingPromise;
-        }
-        get allNewsCurators() {
-          return Array.from(this.m_mapNewsCurators.values());
-        }
-        GetCuratorsForLang(_) {
-          return this.m_mapLangToNewsCurators.get(_);
-        }
-        GetNewsCuratorForAccount(_) {
-          return this.m_mapNewsCurators.get(_);
-        }
-        BIsTrustedPressAccount(_) {
-          return void 0 !== this.GetNewsCuratorForAccount(_);
-        }
-        async Init() {
-          _._.GetLanguageListForRealms([_._.EREALM]).forEach((_) =>
-            this.m_mapLangToNewsCurators.set(_, []),
-          );
-          const _ = _._.STORE_BASE_URL + "events/ajaxgetnewscurators";
-          let _ = {
-            origin: self.origin,
-          };
-          const _ = await _().get(_, {
-            params: _,
-          });
-          (0, _._)(() => {
-            _.data && _.data.success && this.HandleCuratorResponse(_.data),
-              (this.m_bIsLoadComplete = !0);
-          });
-        }
-        HandleCuratorResponse(_) {
-          var _;
-          if (
-            (_.groupvanityinfo && _._.RegisterClanData(_.groupvanityinfo),
-            _.newscuratorinfo)
-          )
-            for (const _ of _.newscuratorinfo) {
-              if (this.m_mapNewsCurators.has(_.clanAccountID)) continue;
-              this.m_mapNewsCurators.set(_.clanAccountID, _);
-              const _ = _._.GetClanInfoByClanAccountID(_.clanAccountID);
-              _ &&
-                (null ===
-                  (_ = this.m_mapLangToNewsCurators.get(_.rss_language)) ||
-                  void 0 === _ ||
-                  _.push(_));
-            }
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapNewsCurators", void 0),
-        (0, _._)([_._], _.prototype, "m_bIsLoadComplete", void 0),
-        (0, _._)([_._], _.prototype, "m_mapLangToNewsCurators", void 0),
-        (0, _._)([_._], _.prototype, "allNewsCurators", null),
-        (0, _._)([_._], _.prototype, "HandleCuratorResponse", null);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const _ = new Set();
-        return (
-          (_.indexOf("games") >= 0 || _.indexOf("dlc") >= 0) && _.add("apps"),
-          _.indexOf("curators") >= 0 && _.add("curators"),
-          _
-        );
-      }
-      class _ extends _.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              strSearchString: "",
-              rgAppSuggestions: null,
-              rgCuratorSuggestions: null,
-            }),
-            (this.m_nHighestSentRequestID = 0),
-            (this.m_mapHighestReceivedRequestIDFromBackEnd = new Map([
-              ["apps", 0],
-              ["curators", 0],
-            ])),
-            (this.m_timerForChange = new _._());
-        }
-        componentWillUnmount() {
-          this.m_timerForChange.Cancel();
-        }
-        CloseSuggestions() {
-          this.setState({
-            rgCuratorSuggestions: null,
-            rgAppSuggestions: null,
-            strSearchString: "",
-          });
-        }
-        async GetSuggestionsFromServer(_) {
-          const _ = _(this.props.rgCorporaToSearch);
-          _.has("apps") && this.GetAppSuggestionsFromServer(_),
-            _.has("curators") && this.GetCuratorSuggestions(_);
-        }
-        async GetCuratorSuggestions(_) {
-          var _;
-          const _ = _.Get().allNewsCurators,
-            _ = [];
-          for (const _ of _) {
-            const _ = _._.GetClanInfoByClanAccountID(_.clanAccountID),
-              _ = {
-                corpus: "curators",
-                _: _.clanAccountID,
-                name: null == _ ? void 0 : _.group_name,
-                img: null == _ ? void 0 : _.avatar_full_url,
-              };
-            if (
-              (
-                (null === (_ = null == _ ? void 0 : _.group_name) ||
-                void 0 === _
-                  ? void 0
-                  : _.toLocaleLowerCase()) || ""
-              ).indexOf(_) >= 0
-            ) {
-              if (
-                this.props.fnFilterSuggestion &&
-                !this.props.fnFilterSuggestion(_)
-              )
-                continue;
-              if (_._.Get().BIsIgnoringCurator(_.clanAccountID)) continue;
-              const _ = _._.Get().BIsFollowingCurator(_.clanAccountID),
-                _ = _.createElement(_, {
-                  key: "curatorsug_" + _._,
-                  suggestion: _,
-                  fnOnSelected: this.props.fnOnSelected,
-                  bShowFollowingLabel: _,
-                });
-              _.push(
-                this.props.fnDecorateSuggestion
-                  ? this.props.fnDecorateSuggestion(_, _)
-                  : _,
-              );
-            }
-          }
-          this.m_mapHighestReceivedRequestIDFromBackEnd.set(
-            "curators",
-            this.m_nHighestSentRequestID,
-          ),
-            this.setState({
-              rgCuratorSuggestions: _,
-            });
-        }
-        async GetAppSuggestionsFromServer(_) {
-          var _;
-          const _ = this.m_nHighestSentRequestID,
-            _ = [];
-          this.props.rgCorporaToSearch.indexOf("games") >= 0 &&
-            (_.push("game"), _.push("software")),
-            this.props.rgCorporaToSearch.indexOf("dlc") >= 0 &&
-              (_.push("dlc"), _.push("music"));
-          const _ = {
-              _: _._.COUNTRY,
-              _: _._.LANGUAGE,
-              realm: _._.k_ESteamRealmGlobal,
-              origin: self.origin,
-              _: "jsonfull",
-              term: _.replace(" ", "+"),
-              require_type: _.join(","),
-              excluded_tags: _._.Get().GetExcludedTagsSortedByID(),
-              excluded_content_descriptors: _._.Get().ExcludedContentDescriptor,
-            },
-            _ = `${_._.STORE_BASE_URL}search/suggest`,
-            _ = await _().get(_, {
-              params: _,
-              withCredentials: !0,
-            });
-          if (_ < this.m_mapHighestReceivedRequestIDFromBackEnd.get("apps"))
-            return;
-          let _;
-          this.m_mapHighestReceivedRequestIDFromBackEnd.set("apps", _),
-            (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-              ? void 0
-              : _.length) &&
-              (_ = _.data.map((_) => {
-                const _ = {
-                  corpus:
-                    ((_ = _.type),
-                    "game" == _ || "software" == _
-                      ? "games"
-                      : "dlc" == _ || "music" == _
-                        ? "dlc"
-                        : null),
-                  ..._,
-                  _: parseInt(_._),
-                };
-                var _;
-                if (
-                  this.props.fnFilterSuggestion &&
-                  !this.props.fnFilterSuggestion(_)
-                )
-                  return null;
-                const _ = _.createElement(_, {
-                  key: _.type + _._,
-                  suggestion: _,
-                  fnOnSelected: this.props.fnOnSelected,
-                });
-                return this.props.fnDecorateSuggestion
-                  ? this.props.fnDecorateSuggestion(_, _)
-                  : _;
-              })),
-            this.setState({
-              rgAppSuggestions: _,
-            });
-        }
-        async UpdateSuggestions(_) {
-          const _ = _.target.value && _.target.value.trim().toLocaleLowerCase();
-          if (
-            (this.m_nHighestSentRequestID++, !(null == _ ? void 0 : _.length))
-          )
-            return (
-              Array.from(_(this.props.rgCorporaToSearch)).forEach((_) =>
-                this.m_mapHighestReceivedRequestIDFromBackEnd.set(
-                  _,
-                  this.m_nHighestSentRequestID,
-                ),
-              ),
-              this.m_timerForChange.Cancel(),
-              this.setState({
-                strSearchString: "",
-              }),
-              void this.ResetSuggestions()
-            );
-          this.setState({
-            strSearchString: _,
-          }),
-            this.m_timerForChange.Schedule(300, () =>
-              this.GetSuggestionsFromServer(_),
-            );
-        }
-        ResetSuggestions() {
-          this.setState({
-            rgAppSuggestions: null,
-            rgCuratorSuggestions: null,
-          });
-        }
-        GetLimitedSuggestions() {
-          let { rgAppSuggestions: _, rgCuratorSuggestions: _ } = this.state;
-          let _ = _ ? _.length : 10,
-            _ = _ ? _.length : 10;
-          return (
-            _ + _ > 10 && (_ = 10 - Math.min(_, 2)),
-            (_ = 10 - _),
-            (_ = null == _ ? void 0 : _.slice(0, _)),
-            (_ = null == _ ? void 0 : _.slice(0, _)),
-            {
-              rgAppSuggestions: _,
-              rgCuratorSuggestions: _,
-            }
-          );
-        }
-        render() {
-          const {
-              strLabel: _,
-              focusOnMount: _,
-              rgCorporaToSearch: __webpack_require__,
-              strResultsClass: _,
-            } = this.props,
-            { strSearchString: _ } = this.state,
-            { rgAppSuggestions: _, rgCuratorSuggestions: _ } =
-              this.GetLimitedSuggestions(),
-            _ = (null == _ ? void 0 : _.length) > 0,
-            _ = (null == _ ? void 0 : _.length) > 0,
-            _ = (null == _ ? void 0 : _.length) > 0,
-            _ = _(__webpack_require__).size > 1,
-            _ =
-              _ &&
-              _ &&
-              (0, _._)(
-                __webpack_require__.indexOf("dlc") >= 0
-                  ? "#EventCalendar_SearchResultsHeader_GameAndDLCSection"
-                  : "#EventCalendar_SearchResultsHeader_GameSection",
-              ),
-            _ = Array.from(_(__webpack_require__)).some(
-              (_) =>
-                this.m_nHighestSentRequestID >
-                this.m_mapHighestReceivedRequestIDFromBackEnd.get(_),
-            ),
-            _ = !_ && !_ && !_;
-          return _.createElement(
-            "div",
-            {
-              className: _().SuggestContainer,
-            },
-            _.createElement(_._, {
-              type: "text",
-              label: _,
-              onChange: this.UpdateSuggestions,
-              bAlwaysShowClearAction: _,
-              focusOnMount: _,
-            }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().Results, _),
-                },
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      key: "game-suggestions",
-                    },
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ResultSectionHeader,
-                        },
-                        _,
-                      ),
-                    _,
-                  ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      key: "curator-suggestions",
-                    },
-                    _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ResultSectionHeader,
-                        },
-                        (0, _._)(
-                          "#EventCalendar_SearchResultsHeader_CuratorSection",
-                        ),
-                      ),
-                    _,
-                  ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().EmptyResults,
-                      key: "empty-results",
-                    },
-                    (0, _._)("#EventCalendar_GameSearch_NoneFound"),
-                  ),
-                _ &&
-                  _.createElement(_._, {
-                    size: "small",
-                  }),
-              ),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "UpdateSuggestions", null);
-      const _ = (_) =>
-        _.createElement(
-          "div",
-          {
-            className: _().ResultRow,
-            key: `suggestion-${_.suggestion._}`,
-            onClick: () => _.fnOnSelected(_.suggestion),
-          },
-          _.createElement("img", {
-            src: _.suggestion.img,
-            className: _().AvatarImage,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _().GameName,
-            },
-            " ",
-            (0, _._)(_.suggestion.name),
-            " ",
-          ),
-          _.bShowFollowingLabel &&
-            _.createElement(
-              "div",
-              {
-                className: _().Label,
-              },
-              (0, _._)("#EventCalendar_FollowingCurator"),
-            ),
-        );
       function _(_) {
         const { editModel: _ } = _,
           _ = _.GetEventModel(),
@@ -11195,7 +11184,7 @@
             {
               className: _.SaleImportURL,
             },
-            _.createElement(_, {
+            _.createElement(_._, {
               strLabel: (0, _._)("#EventEditor_ReferencedAppIDs_SearchLabel"),
               fnFilterSuggestion: (_) =>
                 !_.GetReferencedAppIDArray().includes(Number(_._)),
@@ -12881,6 +12870,7 @@
         (0, _._)([_._], _.prototype, "SetWidePlayerSupportChat", null),
         (0, _._)([_._], _.prototype, "SetChatAnnouncementGiveawayGID", null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         GetFriendLiset() {
@@ -19799,7 +19789,129 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.Fragment;
+      function _(_) {
+        const {
+            reservationPackageID: _,
+            event: __webpack_require__,
+            depositPackageID: _,
+            bIsPreview: _,
+            psuLessPackageID: _,
+            strOutOfStockOverride: _,
+            strDeliveryOverride: _,
+            bDeliveryOverrideOnlyIfOutOfStock: _,
+          } = _,
+          _ = (0, _._)(_),
+          _ = (0, _._)(_),
+          _ = (0, _.useMemo)(
+            () => [
+              {
+                unique_id: "reservation_bbcode_" + _,
+                reservation_package: _,
+                deposit_package: _,
+                localized_reservation_desc: (0, _._)([], 31, null),
+                localized_out_of_stock_override: (0, _._)(
+                  [_ || null],
+                  31,
+                  null,
+                ),
+                localized_delivery_override_desc: (0, _._)(
+                  [_ || null],
+                  31,
+                  null,
+                ),
+                override_delivery_only_out_of_stock: Boolean(_),
+                psu_less_package: _,
+              },
+            ],
+            [_, _, _, _, _, _],
+          );
+        if (!_ || (_ && !_))
+          return _.createElement(_._, {
+            string: (0, _._)("#Loading"),
+            size: "small",
+            position: "center",
+          });
+        const _ = !_._.logged_in || !_.account_restricted_from_purchasing;
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(
+            _.Suspense,
+            {
+              fallback: null,
+            },
+            _.createElement(_, {
+              bIsPreview: _,
+              rgReservationDef: _,
+            }),
+          ),
+          Boolean(_.allow_purchase_in_country) &&
+            _.createElement(
+              "div",
+              {
+                className: _[0].unique_id,
+              },
+              _.createElement(_._, {
+                reservationDef: _[0],
+                hardwareDetail: _,
+                bPSULessModel: !1,
+              }),
+              _ &&
+                _.createElement(_._, {
+                  event: __webpack_require__,
+                  reservationDef: _[0],
+                  hardwareDetail: _,
+                }),
+              Boolean(null == _ ? void 0 : _.allow_purchase_in_country) &&
+                _.createElement(_._, {
+                  reservationDef: _[0],
+                  hardwareDetail: _,
+                  bPSULessModel: !0,
+                }),
+            ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = (0, _._)(_);
+        return _.createElement(_._, {
+          snr: _,
+          appID: _.appid,
+          classOverride: (0, _._)(_().WishlistButtonNotTop, "WishlistButton"),
+        });
+      }
+      function _(_) {
+        const _ = Number(_.args.appid);
+        return _
+          ? _.createElement(_, {
+              appid: _,
+            })
+          : null;
+      }
+      function _(_) {
+        (0, _._)();
+        return _.createElement(_._, {
+          appID: _.appid,
+          classOverride: (0, _._)(_().FollowGameButtonNotTop),
+        });
+      }
+      function _(_) {
+        const _ = Number(_.args.appid);
+        return _
+          ? _.createElement(_, {
+              appid: _,
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _ < 10 ? "0" + _ : _;
@@ -20069,113 +20181,6 @@
         }
         return null;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.Fragment;
-      function _(_) {
-        const {
-            reservationPackageID: _,
-            event: __webpack_require__,
-            depositPackageID: _,
-            bIsPreview: _,
-            psuLessPackageID: _,
-            strOutOfStockOverride: _,
-            strDeliveryOverride: _,
-            bDeliveryOverrideOnlyIfOutOfStock: _,
-          } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
-          _ = (0, _.useMemo)(
-            () => [
-              {
-                unique_id: "reservation_bbcode_" + _,
-                reservation_package: _,
-                deposit_package: _,
-                localized_reservation_desc: (0, _._)([], 31, null),
-                localized_out_of_stock_override: (0, _._)(
-                  [_ || null],
-                  31,
-                  null,
-                ),
-                localized_delivery_override_desc: (0, _._)(
-                  [_ || null],
-                  31,
-                  null,
-                ),
-                override_delivery_only_out_of_stock: Boolean(_),
-                psu_less_package: _,
-              },
-            ],
-            [_, _, _, _, _, _],
-          );
-        if (!_ || (_ && !_))
-          return _.createElement(_._, {
-            string: (0, _._)("#Loading"),
-            size: "small",
-            position: "center",
-          });
-        const _ = !_._.logged_in || !_.account_restricted_from_purchasing;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _.Suspense,
-            {
-              fallback: null,
-            },
-            _.createElement(_, {
-              bIsPreview: _,
-              rgReservationDef: _,
-            }),
-          ),
-          Boolean(_.allow_purchase_in_country) &&
-            _.createElement(
-              "div",
-              {
-                className: _[0].unique_id,
-              },
-              _.createElement(_._, {
-                reservationDef: _[0],
-                hardwareDetail: _,
-                bPSULessModel: !1,
-              }),
-              _ &&
-                _.createElement(_._, {
-                  event: __webpack_require__,
-                  reservationDef: _[0],
-                  hardwareDetail: _,
-                }),
-              Boolean(null == _ ? void 0 : _.allow_purchase_in_country) &&
-                _.createElement(_._, {
-                  reservationDef: _[0],
-                  hardwareDetail: _,
-                  bPSULessModel: !0,
-                }),
-            ),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = (0, _._)(_);
-        return _.createElement(_._, {
-          snr: _,
-          appID: _.appid,
-          classOverride: (0, _._)(_().WishlistButtonNotTop, "WishlistButton"),
-        });
-      }
-      function _(_) {
-        const _ = Number(_.args.appid);
-        return _
-          ? _.createElement(_, {
-              appid: _,
-            })
-          : null;
-      }
       let _ = null;
       function _(_) {
         const { event: _ } = _.context,
@@ -20400,6 +20405,13 @@
                     ],
                     [
                       "wishlist",
+                      {
+                        Constructor: _,
+                        autocloses: !1,
+                      },
+                    ],
+                    [
+                      "followgame",
                       {
                         Constructor: _,
                         autocloses: !1,
@@ -20668,6 +20680,177 @@
         );
       }
       _ = (0, _._)([_._], _);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        var _, _;
+        const { editModel: _ } = _,
+          [_, _] = _.useState(1),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(null),
+          _ = _.GetClanSteamID(),
+          _ = _.GetGID(),
+          _ = (0, _._)(_, _),
+          [, _] = _.useReducer((_) => _ + 1, 0),
+          _ =
+            _.isSuccess &&
+            (null === (_ = _.data) || void 0 === _
+              ? void 0
+              : _.crowdin_project_id) &&
+            (null === (_ = _.data) || void 0 === _ ? void 0 : _.crowdin_file_id)
+              ? `https://valve.crowdin.com/editor/${_.data.crowdin_project_id}/${_.data.crowdin_file_id}`
+              : null,
+          _ = (0, _._)(_.ConvertTo64BitString(), _, _);
+        return _.isLoading
+          ? null
+          : _.createElement(
+              _._,
+              {
+                clanSteamID: _.editModel.GetClanSteamID(),
+              },
+              _.createElement(
+                _._,
+                {
+                  active: _,
+                },
+                _.createElement(_._, null),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().ValveCrowdInSyncCtn,
+                },
+                _.createElement(_._, {
+                  value: _.BPushUpdatesToCrowdInAutomatically(),
+                  onChange: (_) => {
+                    _.SetPushSourceToCrowdInAutomatically(_), _();
+                  },
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().ValveCrowdInSyncLabel,
+                  },
+                  (0, _._)(
+                    "#EventEditor_Localization_AutomaticallyPushChangesToCrowdIn",
+                  ),
+                  " (",
+                  _
+                    ? _.createElement(
+                        "a",
+                        {
+                          href: _,
+                        },
+                        _,
+                      )
+                    : (0, _._)("#EventEditor_Localization_NotMappedToCrowdIn"),
+                  ")",
+                  _.createElement(_._, {
+                    tooltip: (0, _._)("#EventEditor_Localization_Tooltip"),
+                    className: _.tooltip_Ctn,
+                  }),
+                  _.createElement("br", null),
+                  _.createElement(
+                    "span",
+                    null,
+                    (0, _._)("#EventEditor_Localization_RememberToSave"),
+                  ),
+                ),
+                _.createElement(_, {
+                  onChange: (_) => {
+                    const _ = _.target.value;
+                    if ("all" === _) _(-1);
+                    else {
+                      const _ = (0, _._)(_);
+                      _(_);
+                    }
+                  },
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().EditPreviewButton,
+                    onClick: () => {
+                      _(!0),
+                        _.mutateAsync()
+                          .then(() => window.location.reload())
+                          .catch((_) => {
+                            _(_.toString()), _(!1);
+                          })
+                          .then(() => {
+                            _(null);
+                          });
+                    },
+                  },
+                  (0, _._)("#EventEditor_Localization_FetchLocalization"),
+                ),
+              ),
+              _ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().SyncPanelError,
+                    },
+                    _.createElement(_._, null),
+                    " ",
+                    _,
+                  ),
+                ),
+            );
+      }
+      function _(_) {
+        const _ = (0, _._)(!1);
+        let _ = Array.from(_.entries());
+        __webpack_require__.sort((_, _) => _[1].localeCompare(_[1]));
+        const _ = __webpack_require__.map(([_, _]) =>
+          "english" !== _
+            ? _.createElement(
+                "option",
+                {
+                  key: _,
+                  value: _,
+                },
+                _,
+              )
+            : "",
+        );
+        return _.createElement(
+          "select",
+          {
+            onChange: _.onChange,
+          },
+          _,
+          _.createElement(
+            "option",
+            {
+              value: "all",
+            },
+            (0, _._)("#EventEditor_Localization_AllLanguages"),
+          ),
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -21611,6 +21794,494 @@
             )
           : null;
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+          const _ = (_, _) => {
+            _.preventDefault();
+            const {
+                fnGetLocData: _,
+                closeModal: _,
+                strFileNamePrefix: _,
+                lang: _,
+              } = _,
+              _ = _(),
+              _ = new _._();
+            let _ = _ ? _ + "_localization" : "localization";
+            switch (_) {
+              case "csv_row":
+                _.WriteLocalizationData_CSV_LanguageRows(_, _ + ".csv");
+                break;
+              case "csv_column":
+                _.WriteLocalizationData_CSV_LanguageColumns(_, _ + ".csv");
+                break;
+              case "csv_token":
+                _.WriteLocalizationData_CSV_TokenAndLanguageColumns(
+                  _,
+                  _ + ".csv",
+                );
+                break;
+              case "xml":
+                _.WriteLocalizationData_XML_SingleLanguage(
+                  _,
+                  _,
+                  _ + "_" + (0, _._)((0, _._)(_)) + ".xml",
+                );
+            }
+            _ && _();
+          };
+          return _.createElement(
+            _.Fragment,
+            null,
+            Boolean(_.bShowCSV) &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(
+                  _._,
+                  {
+                    onClick: (_) => _(_, "csv_row"),
+                  },
+                  (0, _._)("#Localization_Export_Btn_RowLanguages"),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    onClick: (_) => _(_, "csv_column"),
+                  },
+                  (0, _._)("#Localization_Export_Btn_ColumnLanguages"),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    onClick: (_) => _(_, "csv_token"),
+                  },
+                  (0, _._)("#Localization_Export_Btn_TokenLanguages"),
+                ),
+              ),
+            Boolean(_.bShowXML) &&
+              _.createElement(
+                _._,
+                {
+                  onClick: (_) => _(_, "xml"),
+                },
+                (0, _._)("#Localization_Export_Btn_XML"),
+              ),
+          );
+        },
+        _ = (_) => {
+          const [_, __webpack_require__] = (0, _.useState)(!1),
+            _ = (_, _) => {
+              __webpack_require__(!1),
+                console.log(
+                  "ImportLocalizationAction: On Handle Parse error: " +
+                    _.message,
+                  _,
+                ),
+                (0, _._)(
+                  _.createElement(
+                    _._,
+                    null,
+                    _.createElement(
+                      "div",
+                      null,
+                      _.createElement(
+                        "p",
+                        null,
+                        (0, _._)("#Localization_Error_Input"),
+                      ),
+                      _.createElement("p", null, _.message),
+                    ),
+                  ),
+                  window,
+                );
+            },
+            _ = (_) => {
+              __webpack_require__(!1);
+              let _ = "";
+              _.forEach((_) => {
+                _.length > 0 && (_ += ", "),
+                  (_ += (0, _._)("#Language_" + (0, _._)(_)));
+              }),
+                (0, _._)(
+                  _.createElement(
+                    _._,
+                    {
+                      strTitle: (0, _._)("#EventDisplay_Share_Success"),
+                      bAlertDialog: !0,
+                    },
+                    _.createElement(
+                      "div",
+                      null,
+                      0 == _.length
+                        ? (0, _._)(
+                            "#Localization_Success_ImportComplete_NoChange",
+                          )
+                        : (0, _._)("#Localization_Success_ImportComplete", _),
+                    ),
+                  ),
+                  window,
+                );
+            },
+            _ = async (_) => {
+              let _ = _.target.files;
+              if (_ && _.length > 0) {
+                __webpack_require__(!0);
+                let _ = new Array(),
+                  _ = new _._();
+                for (let _ = 0; _ < _.length; ++_)
+                  if (_[_]) {
+                    if (_[_].name.toLocaleLowerCase().endsWith(".csv"))
+                      return void _().parse(_[0], {
+                        header: !0,
+                        complete: (_) => {
+                          let _ = new _._().DetectAndFormatCSV(_);
+                          if (!_)
+                            return void _({
+                              code: "",
+                              message: "",
+                              row: 0,
+                              type: "filenameerror",
+                            });
+                          const _ = _._.GetLanguageListForRealms([
+                              _._.k_ESteamRealmGlobal,
+                            ]),
+                            _ = _.fnOnImportLocData(_, _);
+                          _(_);
+                        },
+                        error: _,
+                      });
+                    if (_[_].name.toLocaleLowerCase().endsWith(".xml")) {
+                      let { language: _ } = (0, _._)(_[_].name, -1);
+                      if (null == _ || -1 == _)
+                        return void _({
+                          code: "",
+                          message: (0, _._)(
+                            "#Localization_Error_FileLangauage",
+                            _[_].name,
+                          ),
+                          row: 0,
+                          type: "filenameerror",
+                        });
+                      try {
+                        const _ =
+                          await _.ReadLocalizationData_XML_SingleLanguage(
+                            _[_],
+                            _,
+                          );
+                        _.fnOnImportLocData(_, [_]).forEach((_) => {
+                          -1 == _.indexOf(_) && _.push(_);
+                        });
+                      } catch (_) {
+                        let _ = (0, _._)(_);
+                        return void _({
+                          code: "",
+                          message: (0, _._)(
+                            "#Localization_Error_XMLParseError",
+                            _.strErrorMsg,
+                          ),
+                          row: 0,
+                          type: "parseerror",
+                        });
+                      }
+                    } else
+                      _({
+                        code: "",
+                        message: (0, _._)(
+                          "#Localization_Error_FileExtention",
+                          _[_].name,
+                        ),
+                        row: 0,
+                        type: "filenameerror",
+                      });
+                  }
+                _(_);
+              }
+            };
+          return _.createElement(
+            _._,
+            {
+              className: (0, _._)(
+                _.className ? _.className : _.EditPreviewButton,
+              ),
+              toolTipContent: _.strToolTip,
+            },
+            _.createElement(
+              "label",
+              {
+                className: _.ImportButton,
+                htmlFor: "importlocalization",
+              },
+              _ &&
+                _.createElement(_._, {
+                  size: "small",
+                }),
+              _.createElement(
+                "div",
+                {
+                  className: _.Label,
+                },
+                (0, _._)(_.strLabel ? _.strLabel : "#Localization_Import_Btn"),
+              ),
+              _.createElement("input", {
+                _: "importlocalization",
+                className: _.ImportButton,
+                style: {
+                  display: "none",
+                },
+                type: "file",
+                onSubmit: _,
+                onChange: _,
+                multiple: !0,
+              }),
+            ),
+          );
+        };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        constructor() {
+          this.m_mapTokens = new Map();
+        }
+        GetLocalization(_, _) {
+          const _ = this.m_mapTokens.get(_);
+          if (_ && _[_]) return _[_];
+        }
+        SetLocalization(_, _, _) {
+          let _ = this.m_mapTokens.get(_);
+          _ || ((_ = (0, _._)([], 31, null)), this.m_mapTokens.set(_, _)),
+            (_[_] = _);
+        }
+        GetSortedTokenList() {
+          let _ = [];
+          return (
+            this.m_mapTokens.forEach((_, _) => _.push(_)),
+            _.sort((_, _) => _.localeCompare(_)),
+            _
+          );
+        }
+        GetLanguagesWithTokens() {
+          let _ = new Map();
+          this.m_mapTokens.forEach((_) => {
+            for (let _ = 0; _ < _.length; ++_)
+              !_.has(_) &&
+                null !== _[_] &&
+                void 0 !== _[_] &&
+                _[_].trim().length > 0 &&
+                _.set(_, !0);
+          });
+          let _ = new Array();
+          return (
+            _.forEach((_, _) => {
+              _ && _.push(_);
+            }),
+            _
+          );
+        }
+        ClearLanguagesTokens(_) {
+          _.forEach((_) => {
+            this.m_mapTokens.forEach((_, _) => {
+              _ < _.length && null !== _[_] && (_[_] = null);
+            });
+          });
+        }
+        DebugPrintData() {
+          const _ = new Array();
+          return (
+            this.m_mapTokens.forEach((_, _) => _.push(`${_}=${_.join(",")}`)),
+            _.join("\n")
+          );
+        }
+      }
+      class _ {
+        DetectAndFormatCSV(_) {
+          var _, _, _, _, _, _;
+          let _ = null;
+          return (
+            (null ===
+              (_ =
+                null === (_ = null == _ ? void 0 : _.meta) || void 0 === _
+                  ? void 0
+                  : _.fields) || void 0 === _
+              ? void 0
+              : _.length) >= 3 &&
+            "field" === _.meta.fields[0] &&
+            "language" === _.meta.fields[1] &&
+            "value" === _.meta.fields[2]
+              ? (_ = this.ReadLocalizationData_CSV_TokenLanguageList(_))
+              : (null ===
+                    (_ =
+                      null === (_ = null == _ ? void 0 : _.meta) || void 0 === _
+                        ? void 0
+                        : _.fields) || void 0 === _
+                    ? void 0
+                    : _.length) >= 2 &&
+                  "field" === _.meta.fields[0] &&
+                  -1 != (0, _._)(_.meta.fields[1], -1)
+                ? (_ = this.ReadLocalizationData_CSV_LanguageColumns(_))
+                : (null ===
+                    (_ =
+                      null === (_ = null == _ ? void 0 : _.meta) || void 0 === _
+                        ? void 0
+                        : _.fields) || void 0 === _
+                    ? void 0
+                    : _.length) >= 2 &&
+                  "language" === _.meta.fields[0] &&
+                  (_ = this.ReadLocalizationData_CSV_LanguageRows(_)),
+            _
+          );
+        }
+        async ReadLocalizationData_XML_SingleLanguage(_, _) {
+          let _ = new _(),
+            _ = new DOMParser(),
+            _ = await _._.ReadFile(_),
+            _ = _.parseFromString(_.toString(), "application/xml");
+          for (let _ = 0; _ < _.documentElement.children.length; ++_) {
+            const _ = _.documentElement.children.item(_);
+            if (!_.getAttribute("id"))
+              throw "Can not find id for element. Probably malformed XML";
+            const _ = _.getAttribute("id").toLocaleLowerCase(),
+              _ = _.textContent;
+            __webpack_require__.SetLocalization(_, _, _);
+          }
+          return _;
+        }
+        ReadLocalizationData_CSV_TokenLanguageList(_) {
+          const _ = new _();
+          return (
+            _.data.forEach((_) => {
+              const _ = _.field,
+                _ = (0, _._)(_.language);
+              _.SetLocalization(_, _, _.value);
+            }),
+            _
+          );
+        }
+        ReadLocalizationData_CSV_LanguageColumns(_) {
+          const _ = new _();
+          return (
+            _.data.forEach((_) => {
+              const _ = _.field;
+              for (let _ = 0; _ < 31; ++_) {
+                const _ = (0, _._)((0, _._)(_));
+                _.SetLocalization(_, _, _[_]);
+              }
+            }),
+            _
+          );
+        }
+        ReadLocalizationData_CSV_LanguageRows(_) {
+          const _ = new _();
+          return (
+            _.data.forEach((_) => {
+              const _ = (0, _._)(_.language, 31);
+              if (31 !== _)
+                for (const [_, _] of Object.entries(_))
+                  "language" !== _ &&
+                    "string" == typeof _ &&
+                    _.SetLocalization(_, _, _);
+            }),
+            _
+          );
+        }
+        GetExportLanguages() {
+          return _._.GetLanguageListForRealms([_._.k_ESteamRealmGlobal]);
+        }
+        WriteLocalizationData_CSV_TokenAndLanguageColumns(_, _) {
+          let _ = new Array();
+          _.GetSortedTokenList().forEach((_) => {
+            for (const _ of this.GetExportLanguages()) {
+              let _ = {
+                field: _,
+              };
+              (_.language = (0, _._)((0, _._)(_))),
+                (_.value = _.GetLocalization(_, _)),
+                __webpack_require__.push(_);
+            }
+          }),
+            _._.WriteCSVToFile(_, _);
+        }
+        WriteLocalizationData_CSV_LanguageColumns(_, _) {
+          let _ = new Array();
+          _.GetSortedTokenList().forEach((_) => {
+            let _ = {
+              field: _,
+            };
+            for (const _ of this.GetExportLanguages())
+              _[(0, _._)((0, _._)(_))] = _.GetLocalization(_, _);
+            __webpack_require__.push(_);
+          }),
+            _._.WriteCSVToFile(_, _);
+        }
+        WriteLocalizationData_CSV_LanguageRows(_, _) {
+          let _ = new Array();
+          for (const _ of this.GetExportLanguages())
+            _.length <= _ - 1 &&
+              __webpack_require__.push({
+                language: "",
+              }),
+              __webpack_require__.push({
+                language: (0, _._)((0, _._)(_)),
+              });
+          _.GetSortedTokenList().forEach((_) => {
+            for (const _ of this.GetExportLanguages()) {
+              const _ = _.GetLocalization(_, _);
+              _[_][_] = _;
+            }
+          }),
+            _._.WriteCSVToFile(_, _);
+        }
+        WriteLocalizationData_XML_SingleLanguage(_, _, _) {
+          let _ = document.implementation.createDocument(null, "content", null);
+          _.GetSortedTokenList().forEach((_) => {
+            let _ = _.createElement("string");
+            _.setAttribute("id", _),
+              _.appendChild(_.createTextNode(_.GetLocalization(_, _) || "")),
+              _.documentElement.append(_);
+          }),
+            _._.WriteXMLToFile(_, _);
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      const _ =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzcyREYxMUExREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzcyREYxMUIxREVBMTFFOUJFQTREQjZGQTJEQ0UzOTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NzJERjExODFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3NzJERjExOTFERUExMUU5QkVBNERCNkZBMkRDRTM5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmk/vzIAAAFiSURBVHjaYnz79i0DCDAB8X8gVgUIIEaoSBmIIQRkvAMIIBADJMUIxBVArI0sAAYAAQTTAwNlTEgcXZDpLFDOHCC+A8Sd6FoEAAIIJBAOZKxAEoTZmAPEKSxQSZitFVCz10D5O1iQdE4AYgsouwOKBUBWvAEyRKF+RQa+QLwFIIDQHYUM/gAxC8hfb6C6QTgLKvkaiGtAikBuUAHiD0g6QZJzob5gYUEz9jXUPU+AWAYWETDwG+o9mGQGLLAFoFbcBGJFIGaDagDHCrIV6ti8ArLCFoc3wf4HCDB84YANVEC9HwPEU4B4EiycQKEqgAUjx+F3INYHYkOoZh6YC0CeEUQLS2Qbi4HYCYgvQ8P8AhC3QOMaJRjRNf4C4m3QcP8ODd4QqM0dyIGEDgKgCtmgUf8dypeBamSERoEALi8sAuUnID4AxIegbHQA18OCRTKOlGgBeSECmuH+E4nfQPWAXQwAHbJ3VkYR2TIAAAAASUVORK5CYII=";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

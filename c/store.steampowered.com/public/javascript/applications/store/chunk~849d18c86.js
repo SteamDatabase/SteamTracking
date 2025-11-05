@@ -110,6 +110,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -531,14 +532,14 @@
             hideModal: _,
           } = _,
           _ = (0, _._)(),
-          _ = _?.GetAllTrailers().GetHighlightTrailers(_),
-          _ = _?.length > 0 && _[0],
+          _ = _?.GetAllTrailers()?.GetHighlightTrailers(_),
+          _ = _ && _.length > 0 ? _[0] : void 0,
           _ = _.useId(),
           _ = _.useId();
         if (!_) return null;
         const _ = _.GetTrailersDash(),
           _ = _.GetTrailerHls();
-        return 0 == _.length
+        return 0 == _?.length
           ? null
           : _.createElement(
               _._,
@@ -559,8 +560,8 @@
                     className: _().VideoPopupContainers,
                   },
                   _.createElement(_._, {
-                    dashManifests: _,
-                    hlsManifest: _,
+                    dashManifests: _ || [],
+                    hlsManifest: _ || "",
                     screenshot: "",
                     altText: "",
                     muteWhenAutoplayBlocked: !0,
@@ -629,8 +630,8 @@
           } = _,
           [_, _] = (0, _._)(),
           _ = _
-            ? _.GetAssetsWithoutOverrides().GetMainCapsuleURL()
-            : _.GetAssets().GetMainCapsuleURL();
+            ? _.GetAssetsWithoutOverrides()?.GetMainCapsuleURL()
+            : _.GetAssets()?.GetMainCapsuleURL();
         return _.createElement(
           _._,
           {

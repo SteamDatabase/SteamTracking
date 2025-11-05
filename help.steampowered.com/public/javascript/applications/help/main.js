@@ -720,6 +720,7 @@
         FlexColumnContainer: "_1qhLqXcizfytm6omB4ywDD",
         FlexRowContainer: "Ke5f13IVZVzYSmQVJgVyd",
         Centered: "qy-9mgJyhfEb8Wt0gqzaF",
+        VCentered: "_2Ke6gF28pxI9dp-gD87LfB",
         FlexContainSpaceBetween: "_3nPGWNNLFjqXgZ6hjwUnkf",
         FlexRowWrapSpaceBetweenContainer: "_19CjIj6mAtlIoY_7_iyOlz",
         FlexRowWrapFlexStartContainer: "tyP_cnaOBcolou13sADst",
@@ -780,6 +781,7 @@
         maintitle: "vEk_z-3SSNZ_QNdilG5U8",
         AppTitle: "l-Ow7jLX9GkLm9eYHQVAP",
         subtitle: "_2mJfcOfmivoiCR4CW-GrjN",
+        ValveOnlyText: "_206saj_KMAibQF6XQ50lq0",
         ValveOnlyBackground: "JckrnbJXboKxpRp3fULfa",
         ValveOnlyAdminBackground: "_3HVu1O7B4zeCZWaOaUWPCo",
         Columns: "_1oVIRGhMwAB3uN9G3t8kZe",
@@ -12139,15 +12141,6 @@
             }),
         );
       }
-      i.forwardRef(function (e, t) {
-        return i.createElement(er.BA, {
-          noFocusRing: !0,
-          ...e,
-          ref: t,
-          className: (0, St.A)(Dn().BasicTextInput, e.className),
-          size: e.size ?? 1,
-        });
-      });
       var _s = r(3670),
         hs = r.n(_s);
       i.forwardRef(function (e, t) {
@@ -14810,6 +14803,12 @@
             height: 0,
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
+          },
+          user_poll_background: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: Na,
           },
           spotlight_art: {
             width: [306, 374],
@@ -18013,6 +18012,7 @@
           "calendarevent",
           "color",
           "bgcolor",
+          "userpolls",
         ],
         zl = [
           "img",
@@ -18260,9 +18260,10 @@
       var Vl, Ql, Kl, Yl, $l, Zl;
       function Xl(e) {
         return (
-          "items" === e ||
-          "trailercarousel" === e ||
-          "crosspromotesalepage" == e
+          "items" == e ||
+          "trailercarousel" == e ||
+          "crosspromotesalepage" == e ||
+          "creator_list" == e
         );
       }
       !(function (e) {
@@ -29973,8 +29974,10 @@
             bMuted: l,
             className: c,
             mediaScale: m,
+            onClick: u,
+            altText: d,
           } = e,
-          u = (0, i.useMemo)(
+          p = (0, i.useMemo)(
             () =>
               Boolean(
                 r.rgVideoTracks?.some(
@@ -29983,9 +29986,9 @@
               ),
             [r.rgVideoTracks],
           ),
-          [d, p] = i.useState(!1);
+          [g, _] = i.useState(!1);
         if (!r.rgVideoSources || !r.rgVideoSources.length) return null;
-        const g = (function (e) {
+        const h = (function (e) {
           return !(
             !(0, Vr.ZF)(e.sPoster) ||
             (e.rgVideoSources &&
@@ -29994,32 +29997,32 @@
               e.rgVideoTracks.some((e) => !(0, Vr.ZF)(e.sURL)))
           );
         })(r);
-        let _;
-        (!g || (u && "public" == s.TS.WEB_UNIVERSE)) && (_ = "anonymous");
-        const h = l || (n && pp.Get().BVolumePreferenceMuted()),
-          f = r.sPoster ? _p(r.sPoster) : "";
+        let f;
+        (!h || (p && "public" == s.TS.WEB_UNIVERSE)) && (f = "anonymous");
+        const b = l || (n && pp.Get().BVolumePreferenceMuted()),
+          y = r.sPoster ? _p(r.sPoster) : "";
         return i.createElement(
           "video",
           {
             width: "100%",
             height: "auto",
             autoPlay: n,
-            muted: h,
+            muted: b,
             playsInline: !0,
             controls: a,
-            poster: f,
+            poster: y,
             loop: o,
-            crossOrigin: _,
+            crossOrigin: f,
             onVolumeChange: (e) => {
               const t = e.target,
                 r = t.muted ? 0 : t.volume;
-              d && pp.Get().SetVolumePreference(r);
+              g && pp.Get().SetVolumePreference(r);
             },
             onPlay: (e) => {
               const t = e.target,
                 r = 0 == t.currentTime,
                 i = pp.Get().BUserHasVolumePreference();
-              if ((p(!0), r))
+              if ((_(!0), r))
                 if (i || n)
                   i &&
                     ((t.volume = pp.Get().GetVolumePreference()),
@@ -30031,6 +30034,8 @@
             },
             ref: t,
             className: c,
+            onClick: u,
+            "aria-label": d,
             style: { width: m && m >= 1 && m < 100 ? `${m}%` : void 0 },
           },
           i.createElement(hp, { rgVideoSources: r.rgVideoSources }),
@@ -60369,10 +60374,10 @@
           return null != e && "object" == typeof e && !Array.isArray(e);
         }
         GetListTitle(e) {
-          return this.LazyInit(), this.m_mapListToTitle.get(e);
+          return this.LazyInit(), e ? this.m_mapListToTitle.get(e) : void 0;
         }
         GetListSubtitle(e) {
-          return this.LazyInit(), this.m_mapListToSubtitle.get(e);
+          return this.LazyInit(), e ? this.m_mapListToSubtitle.get(e) : void 0;
         }
       }
       (0, n.Cg)([F.sH], j.prototype, "m_mapListToTitle", void 0),
@@ -69278,6 +69283,12 @@
               Array.from(this.m_setEnabledDebugLogs),
             );
         }
+        PrintEnabledLogs() {
+          this.LogAsLogManager(
+            "Will print log messages for:",
+            Array.from(this.m_setEnabledDebugLogs),
+          );
+        }
         static Get() {
           return (
             null == c.s_Singleton && (c.s_Singleton = new c()), c.s_Singleton
@@ -69406,6 +69417,13 @@
         (window.DebugLogDisableBacktrace = () =>
           c.Get().SetIncludeBacktraceInLog(!1)),
         (window.DebugLogNames = u),
+        (window.DebugLogEnabled = (...e) => {
+          e.length > 0 &&
+            console.warn(
+              `Use DebugLogEnable( '${e.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+            ),
+            c.Get().PrintEnabledLogs();
+        }),
         (window.EnableSteamConsole = (e = !0) =>
           c.Get().SetDebugLogEnabled("SteamClient", e));
     },

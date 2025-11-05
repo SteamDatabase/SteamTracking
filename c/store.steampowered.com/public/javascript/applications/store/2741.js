@@ -911,7 +911,7 @@
           {
             className: (0, _._)({
               [_.StoreSalePriceWidget]: !0,
-              [_.className]: Boolean(_.className),
+              ["" + _.className]: Boolean(_.className),
               [_.StoreSaleReservationPrice]: _,
             }),
           },

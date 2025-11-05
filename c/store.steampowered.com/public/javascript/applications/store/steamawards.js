@@ -167,6 +167,21 @@
     },
     chunkid: (module) => {
       module.exports = {
+        HeaderCtn: "_1LNVToRGS4KgtDmwChCdO-",
+        EventTitle: "SHcWFaCZK_WUravI9p1Lm",
+        InfoText: "_3Rnea2kVxFT3chmOmqisne",
+        Large: "_2jbNvt46h0RqPVOeAwcb8o",
+        FAQCtn: "_3UcPLvxpWKhkpPp5vuNZ4T",
+        FAQ_Q: "_3PJmH1yq33fNNGz3U9m-G0",
+        FAQ_A: "_2CZcny1e2NwmV-B3klLJiN",
+        ProgressCtn: "_3NRXvKouZmkfv0SJaRwm3z",
+        CategoryStickerCtn: "_3aAMtCHlbBv9NIEZdV0q4E",
+        CategoryStickerHover: "MofbE6cz8noD7aLG-RuYg",
+        FaqSectionTitle: "_1KImUETUAUTMVe-r0tBhbv",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         narrowWidth: "500px",
         "duration-app-launch": "800ms",
         VotingPageContent: "_1HBQ3phQnNEooQ3rlXJWEU",
@@ -1561,7 +1576,6 @@
                 useTestScrollbar: !0,
                 bLazyRenderChildren: !0,
                 hidePips: _,
-                innerClassName: _().GameCarousel,
                 screenIsWide: (0, _._)(),
               },
               _.map((_) =>
@@ -1783,7 +1797,7 @@
           [__webpack_require__, _] = _.useState(() => _._.IsInitialized()),
           [_] = (0, _._)("k", null),
           _ = Boolean((_ && _ != _._.steamid) || _),
-          _ = _()("2024-12-04T10:00:00-08:00").unix(),
+          _ = _()("2025-12-01T10:00:00-08:00").unix(),
           _ = _._.GetTimeNowWithOverride(),
           _ = !_ && _ <= _;
         return (
@@ -2260,7 +2274,7 @@
             _.createElement("img", {
               src:
                 _._.BASE_URL_STORE_CDN_ASSETS +
-                `promo/steamawards2024/level_0${_}.png`,
+                `promo/steamawards2025/level_0${_}.webp`,
             }),
           ),
           _.createElement(
@@ -2293,13 +2307,13 @@
             },
             (function (_) {
               switch (_) {
-                case 600:
+                case 610:
                   return (0, _._)("#Steamawards_Task1");
-                case 601:
+                case 611:
                   return (0, _._)("#Steamawards_Task2");
-                case 602:
+                case 612:
                   return (0, _._)("#Steamawards_Task3");
-                case 603:
+                case 613:
                   return (0, _._)("#Steamawards_Task4");
                 default:
                   return "Unknown Task";
@@ -2786,11 +2800,12 @@
                 {
                   className: _().VotingArea,
                 },
-                _.createElement(_, {
-                  unSaleAppID: _.config.appid,
-                  bIsVotingOpen: _.bVotingOpen,
-                  bIsVotingPast: _.bVotingPast,
-                }),
+                _.bHasStickerRewards &&
+                  _.createElement(_, {
+                    unSaleAppID: _.config.appid,
+                    bIsVotingOpen: _.bVotingOpen,
+                    bIsVotingPast: _.bVotingPast,
+                  }),
                 _.createElement(_, {
                   bIsVotingOpen: _.bVotingOpen,
                   bIsVotingPast: _.bVotingPast,
@@ -3502,27 +3517,34 @@
           _ = (0, _._)(),
           _ = _._.HELP_BASE_URL + "faqs/view/71D3-35C2-AD96-AA3A",
           _ = "#Steamawards_Voting_FAQ_6_Q" + (_.nYear >= 2024 ? "_2024" : ""),
-          _ = "#Steamawards_Voting_FAQ_6_A" + (_.nYear >= 2024 ? "_2024" : ""),
-          _ = [
-            _.createElement(_, {
-              key: "FAQ_1",
-              strQuestion: (0, _._)("#Steamawards_Voting_FAQ_1_Q"),
-              strAnswer: (0, _._)(
-                "#Steamawards_Voting_FAQ_1_A",
-                _.createElement(
-                  "a",
-                  {
-                    href: _,
-                  },
-                  ", ",
-                ),
+          _ = "#Steamawards_Voting_FAQ_6_A" + (_.nYear >= 2024 ? "_2024" : "");
+        let _ = [
+          _.createElement(_, {
+            key: "FAQ_1",
+            strQuestion: (0, _._)("#Steamawards_Voting_FAQ_1_Q"),
+            strAnswer: (0, _._)(
+              "#Steamawards_Voting_FAQ_1_A",
+              _.createElement(
+                "a",
+                {
+                  href: _,
+                },
+                ", ",
               ),
-            }),
-            _.createElement(_, {
-              key: "FAQ_2",
-              strQuestion: (0, _._)("#Steamawards_Voting_FAQ_2_Q"),
-              strAnswer: (0, _._)("#Steamawards_Voting_FAQ_2_A"),
-            }),
+            ),
+          }),
+        ];
+        return (
+          _.bHasStickerRewards &&
+            _.push(
+              _.createElement(_, {
+                key: "FAQ_2",
+                strQuestion: (0, _._)("#Steamawards_Voting_FAQ_2_Q"),
+                strAnswer: (0, _._)("#Steamawards_Voting_FAQ_2_A"),
+              }),
+            ),
+          (_ = [
+            ..._,
             _.createElement(_, {
               key: "FAQ_3",
               strQuestion: (0, _._)("#Steamawards_Voting_FAQ_3_Q"),
@@ -3560,26 +3582,27 @@
               strQuestion: (0, _._)(_),
               strAnswer: (0, _._)(_),
             }),
-          ];
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().FAQWrapper, _().SectionContent),
-          },
+          ]),
           _.createElement(
             "div",
             {
-              className: _().FaqSectionTitle,
+              className: (0, _._)(_().FAQWrapper, _().SectionContent),
             },
-            (0, _._)("#Steamawards_Voting_FAQ_Title"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().FAQCtn, _.FAQCtn),
-            },
-            _,
-          ),
+            _.createElement(
+              "div",
+              {
+                className: _().FaqSectionTitle,
+              },
+              (0, _._)("#Steamawards_Voting_FAQ_Title"),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().FAQCtn, _.FAQCtn),
+              },
+              _,
+            ),
+          )
         );
       }
       function _(_) {
@@ -3618,6 +3641,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { nYear: _ } = _,
@@ -3640,15 +3665,19 @@
           _ = _.useMemo(() => {
             if (!_ || !_.definitions?.votes?.length) return null;
             const _ = _.definitions.votes[0].start_time,
-              _ = _.definitions.votes[0].end_time;
+              _ = _.definitions.votes[0].end_time,
+              _ = _ >= _ && _ < _,
+              _ = _ >= _,
+              _ = _.definitions.votes.some((_) => Boolean(_.item_type));
             return {
               config: _,
-              bVotingOpen: _ >= _ && _ < _,
-              bVotingPast: _ >= _,
+              bVotingOpen: _,
+              bVotingPast: _,
               yearStyles: _,
               nYear: _,
               rtVoteStart: _,
               rtVoteEnd: _,
+              bHasStickerRewards: _,
             };
           }, [_, _, _, _]);
         return _
@@ -3670,6 +3699,7 @@
       const _ = {
           2023: _(),
           2024: _(),
+          2025: _(),
         },
         _ = Object.values(_).reduce(
           (_, _) => ({

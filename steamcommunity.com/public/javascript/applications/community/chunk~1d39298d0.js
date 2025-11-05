@@ -81,8 +81,12 @@
           if (o in _.factories) break;
           _ = _.parent;
         }
-        const m = (null !== (a = r.factories[o]) && void 0 !== a ? a : t)();
-        return (r.instances[o] = m), m;
+        const m = (
+          null !== (a = null == _ ? void 0 : _.factories[o]) && void 0 !== a
+            ? a
+            : t
+        )();
+        return ((null != _ ? _ : r).instances[o] = m), m;
       }
     },
     10622: (e, t, a) => {

@@ -316,7 +316,7 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 		var rgGlobalPopularTags = data.popular_tags;
 		var nSaleTaskCompleted = data.nSaleTaskCompleted;
 
-		var Modal = ShowConfirmDialog( 'Customize Your Discovery Queue', data.html );
+		var Modal = ShowConfirmDialog( data.title, data.html );
 		Modal.GetContent().css( 'width', '720px' );
 		Modal.AdjustSizing();
 
