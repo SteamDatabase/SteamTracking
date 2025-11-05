@@ -697,12 +697,16 @@
             };
           })(t, a);
         if (e?.enabled) {
-          const g = e.groups.length;
+          const g = e.groups?.length;
           if (
-            (e.groups.forEach((a, o) => {
+            (e.groups?.forEach((a, o) => {
               if (s >= t.length || "tabs" == t[s].section_type) return;
               const i = new Array();
-              for (let e = 0; e < a.num_sections && s < t.length; ++e, ++s) {
+              for (
+                let e = 0;
+                e < (a?.num_sections || 0) && s < t.length;
+                ++e, ++s
+              ) {
                 if ("tabs" == t[s].section_type) break;
                 const n = t[s].unique_id;
                 i.push(n),
@@ -4662,7 +4666,7 @@
                   Y,
                   { event: a, language: o, bIsPreview: r },
                   b && l.createElement(Ea.Sn, null),
-                  l.createElement(Aa, { eventModel: a }),
+                  l.createElement(Na, { eventModel: a }),
                   Boolean(c) &&
                     l.createElement(ia, {
                       backgroundImageEditModel: c,
@@ -4802,9 +4806,9 @@
               }));
           }
           Ca.TU.Get().BIsConnected() &&
-            (g = l.createElement(La, { nSectionID: n.unique_id }, g));
+            (g = l.createElement(Aa, { nSectionID: n.unique_id }, g));
           let _ = l.createElement(
-            Ta,
+            La,
             {
               key: "SaleSectionIndex_" + n.unique_id + "_" + r,
               section: n,
@@ -4880,7 +4884,17 @@
           ? null
           : l.createElement(l.Fragment, null, n);
       }
-      function Ta(e) {
+      function Ta({ children: e, onChange: t }) {
+        const a = l.useRef(null);
+        return (
+          (0, l.useEffect)(() => {
+            const e = a.current;
+            t(!!e && e.childNodes.length > 0);
+          }),
+          l.createElement("div", { ref: a }, e)
+        );
+      }
+      function La(e) {
         const {
             section: t,
             saleSectionIndex: a,
@@ -4892,70 +4906,79 @@
             children: u,
           } = e,
           d = i.mj + (t.unique_id || a),
-          p = "tabs" != t.section_type;
-        return l.createElement(
-          m.tH,
-          null,
-          l.createElement(
-            ya,
-            {
-              visibility_by_door_index_state: t.visibility_by_door_index_state,
-              door_index_visibility: t.door_index_visibility,
-            },
-            p
-              ? l.createElement(
-                  o.Z,
-                  {
-                    navKey: d,
-                    id: d,
-                    className: (0, U.A)({
-                      [k().SaleSectionCtn]: !0,
-                      SaleSectionCtn: !0,
-                      [t.section_type]: !0,
-                      [t.internal_section_data?.internal_type || ""]: !0,
-                      expanded: g,
-                      [t.single_item_style || ""]: !0,
-                      [k().SaleSectionBackgroundImageGroupEdit]:
-                        r == va.S.EPreviewMode_EditBackground,
-                      [k().NoTopPadding]: t.collapse_header_space,
-                    }),
-                  },
-                  u,
-                  Boolean(r === va.S.EPreviewMode_EditBackground) &&
-                    l.createElement(ma, {
-                      nSectionUniqueID: t.unique_id || a,
-                      nTabID: n,
-                      salePageBackgroundDerivedConfig: s,
-                      backgroundImageEditModel: c,
-                    }),
-                )
-              : l.createElement(
-                  l.Fragment,
-                  null,
-                  Boolean(r === va.S.EPreviewMode_EditBackground)
-                    ? l.createElement(
-                        "div",
-                        {
-                          id: d,
-                          className: (0, U.A)({
-                            [k().SaleSectionCtn]: !0,
-                            [k().SaleSectionBackgroundImageGroupEdit]: !0,
-                            [k().NoTopPadding]: t.collapse_header_space,
-                          }),
-                        },
-                        u,
-                        l.createElement(pa, {
-                          backgroundImageEditModel: c,
-                          nTabID: n,
-                          imgGroupDerivedMapping: s,
+          p = "tabs" != t.section_type,
+          [_, E] = (0, l.useState)(!0);
+        return _
+          ? l.createElement(
+              m.tH,
+              null,
+              l.createElement(
+                ya,
+                {
+                  visibility_by_door_index_state:
+                    t.visibility_by_door_index_state,
+                  door_index_visibility: t.door_index_visibility,
+                },
+                p
+                  ? l.createElement(
+                      o.Z,
+                      {
+                        navKey: d,
+                        id: d,
+                        className: (0, U.A)({
+                          [k().SaleSectionCtn]: !0,
+                          SaleSectionCtn: !0,
+                          [t.section_type]: !0,
+                          [t.internal_section_data?.internal_type || ""]: !0,
+                          expanded: g,
+                          [t.single_item_style || ""]: !0,
+                          [k().SaleSectionBackgroundImageGroupEdit]:
+                            r == va.S.EPreviewMode_EditBackground,
+                          [k().NoTopPadding]: t.collapse_header_space,
                         }),
-                      )
-                    : u,
-                ),
-          ),
-        );
+                      },
+                      Boolean(r === va.S.EPreviewMode_EditBackground)
+                        ? l.createElement(
+                            l.Fragment,
+                            null,
+                            u,
+                            l.createElement(ma, {
+                              nSectionUniqueID: t.unique_id || a,
+                              nTabID: n,
+                              salePageBackgroundDerivedConfig: s,
+                              backgroundImageEditModel: c,
+                            }),
+                          )
+                        : l.createElement(Ta, { onChange: E }, u),
+                    )
+                  : l.createElement(
+                      l.Fragment,
+                      null,
+                      Boolean(r === va.S.EPreviewMode_EditBackground)
+                        ? l.createElement(
+                            "div",
+                            {
+                              id: d,
+                              className: (0, U.A)({
+                                [k().SaleSectionCtn]: !0,
+                                [k().SaleSectionBackgroundImageGroupEdit]: !0,
+                                [k().NoTopPadding]: t.collapse_header_space,
+                              }),
+                            },
+                            u,
+                            l.createElement(pa, {
+                              backgroundImageEditModel: c,
+                              nTabID: n,
+                              imgGroupDerivedMapping: s,
+                            }),
+                          )
+                        : l.createElement(Ta, { onChange: E }, u),
+                    ),
+              ),
+            )
+          : null;
       }
-      function La(e) {
+      function Aa(e) {
         const { nSectionID: t, children: a } = e,
           [r, o] = l.useState(!1),
           [i, s] = l.useState(!1);
@@ -5000,7 +5023,7 @@
           )
         );
       }
-      function Aa(e) {
+      function Na(e) {
         const { eventModel: t } = e,
           a = (0, Ve.Ec)(t.clanSteamID.GetAccountID());
         if (!a || (!a.can_edit && !a.support_user) || "store" != (0, x.yK)())

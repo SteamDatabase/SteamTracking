@@ -1787,8 +1787,8 @@
           a = l ? r.createElement(u.nf, null) : r.createElement(u.tS, null),
           i = (0, h.we)(
             l
-              ? "#TrailerPlayer_EnterTheater_Tooltip"
-              : "#TrailerPlayer_ExitTheater_Tooltip",
+              ? "#TrailerPlayer_ExitTheater_Tooltip"
+              : "#TrailerPlayer_EnterTheater_Tooltip",
           );
         return r.createElement(M, { onActivate: n, tooltip: i }, a);
       }

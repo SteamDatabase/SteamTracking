@@ -32579,7 +32579,7 @@
         b$: () => d,
         l6: () => o,
         xA: () => a,
-        zO: () => _,
+        zO: () => h,
       });
       var i = r(90626),
         n = r(8871);
@@ -32700,46 +32700,73 @@
           },
         ];
       }
-      const g = 20;
-      function _(e) {
+      function g(e, t) {
+        if (!e || !e.changedTouches) return null;
+        let r = e.changedTouches;
+        for (let e = 0; e < r.length; e++)
+          if (r[e].identifier == t) return r[e];
+        return null;
+      }
+      const _ = 20;
+      function h(e) {
         let t = i.useRef(null);
         t.current = e;
         let r = i.useRef(null);
-        return {
-          onTouchStart: i.useCallback((e) => {
-            e.changedTouches && 0 != e.changedTouches.length
-              ? (r.current = e)
-              : (t.current = null);
-          }, []),
-          onTouchCancel: i.useCallback((e) => {
-            r.current = e;
-          }, []),
-          onTouchEnd: i.useCallback((e) => {
-            let i =
-              e.changedTouches && e.changedTouches.length > 0
-                ? e.changedTouches[0]
-                : null;
-            if (!i) return;
-            let n = (function (e, t) {
-              if (!e || !e.changedTouches) return null;
-              let r = e.changedTouches;
-              for (let e = 0; e < r.length; e++)
-                if (r[e].identifier == t) return r[e];
-              return null;
-            })(r.current, i.identifier);
-            if (!n) return;
-            r.current = null;
-            let s = n.screenX - i.screenX,
-              a = n.screenY - i.screenY;
-            if (!(Math.abs(s) < g || Math.abs(a) > Math.abs(s))) {
-              if (t.current) {
-                const e = s > 0 ? "left" : "right";
-                t.current(e);
+        return (0, n.QS)((e) => {
+          if (!e) return;
+          let i = (e) => {
+              e.changedTouches && 0 != e.changedTouches.length
+                ? (r.current = e)
+                : (r.current = null);
+            },
+            n = (e) => {
+              let t =
+                e.changedTouches && e.changedTouches.length > 0
+                  ? e.changedTouches[0]
+                  : null;
+              if (!t) return;
+              let i = g(r.current, t.identifier);
+              i &&
+                Math.abs(i.screenX - t.screenX) >
+                  Math.abs(i.screenY - t.screenY) &&
+                e.cancelable &&
+                e.preventDefault();
+            },
+            s = (e) => {
+              r.current = null;
+            },
+            a = (e) => {
+              let i =
+                e.changedTouches && e.changedTouches.length > 0
+                  ? e.changedTouches[0]
+                  : null;
+              if (!i) return;
+              let n = g(r.current, i.identifier);
+              if (!n) return;
+              r.current = null;
+              let s = n.screenX - i.screenX,
+                a = n.screenY - i.screenY;
+              if (!(Math.abs(s) < _ || Math.abs(a) > Math.abs(s))) {
+                if (t.current) {
+                  const e = s > 0 ? "left" : "right";
+                  t.current(e);
+                }
+                e.cancelable && e.preventDefault();
               }
-              e.preventDefault();
+            };
+          return (
+            e.addEventListener("touchstart", i, { passive: !0 }),
+            e.addEventListener("touchmove", n, { passive: !1 }),
+            e.addEventListener("touchcancel", s, { passive: !0 }),
+            e.addEventListener("touchend", a, { passive: !1 }),
+            () => {
+              e.removeEventListener("touchstart", i),
+                e.removeEventListener("touchmove", n),
+                e.removeEventListener("touchcancel", s),
+                e.removeEventListener("touchend", a);
             }
-          }, []),
-        };
+          );
+        }, []);
       }
     },
     64753: (e, t, r) => {

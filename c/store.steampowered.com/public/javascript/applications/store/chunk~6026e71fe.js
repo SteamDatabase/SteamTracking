@@ -28394,79 +28394,81 @@
             [_?.rgDLC],
           );
         return _
-          ? __webpack_require__.dlc_for_you_data?.group_by_parent_app
-            ? _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.SaleSection),
-                  style: (0, _._)(__webpack_require__, _, _),
-                },
-                __webpack_require__.dlc_for_you_data?.hide_dlc_grouping
-                  ? _.createElement(
+          ? 0 == _.length
+            ? null
+            : __webpack_require__.dlc_for_you_data?.group_by_parent_app
+              ? _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_.SaleSection),
+                    style: (0, _._)(__webpack_require__, _, _),
+                  },
+                  __webpack_require__.dlc_for_you_data?.hide_dlc_grouping
+                    ? _.createElement(
+                        "div",
+                        {
+                          className: _.SaleSectionTitleCtn,
+                        },
+                        _.createElement(_._, {
+                          ..._,
+                        }),
+                      )
+                    : _.createElement(_, {
+                        ..._,
+                        value: _,
+                        onChange: (_) => {
+                          _(_);
+                        },
+                      }),
+                  _.map((_) =>
+                    _.createElement(_, {
+                      ..._,
+                      key: "firstdlc_" + _[0]._,
+                      rgDLCCapsules: _,
+                      dlcForYouData: _,
+                      strParentAppSort: _,
+                    }),
+                  ),
+                  _?.bMoreAvailable &&
+                    _.createElement(
                       "div",
                       {
-                        className: _.SaleSectionTitleCtn,
+                        className: _.ShowMore,
                       },
-                      _.createElement(_._, {
-                        ..._,
-                      }),
-                    )
-                  : _.createElement(_, {
-                      ..._,
-                      value: _,
-                      onChange: (_) => {
-                        _(_);
-                      },
-                    }),
-                _.map((_) =>
-                  _.createElement(_, {
-                    ..._,
-                    key: "firstdlc_" + _[0]._,
-                    rgDLCCapsules: _,
-                    dlcForYouData: _,
-                    strParentAppSort: _,
-                  }),
-                ),
-                _?.bMoreAvailable &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.ShowMore,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        onClick: () => {
-                          _(
-                            _ +
-                              (__webpack_require__.dlc_for_you_data
-                                ?.parent_app_page_size || 1),
-                          );
+                      _.createElement(
+                        _._,
+                        {
+                          onClick: () => {
+                            _(
+                              _ +
+                                (__webpack_require__.dlc_for_you_data
+                                  ?.parent_app_page_size || 1),
+                            );
+                          },
                         },
-                      },
-                      (0, _._)("#Sale_ShowMore"),
+                        (0, _._)("#Sale_ShowMore"),
+                      ),
                     ),
-                  ),
-              )
-            : _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.SaleSection),
-                  style: (0, _._)(__webpack_require__, _, _),
-                },
-                !Boolean(
-                  __webpack_require__.dlc_for_you_data?.hide_dlc_stats,
-                ) &&
+                )
+              : _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_.SaleSection),
+                    style: (0, _._)(__webpack_require__, _, _),
+                  },
+                  !Boolean(
+                    __webpack_require__.dlc_for_you_data?.hide_dlc_stats,
+                  ) &&
+                    _.createElement(_, {
+                      ..._,
+                    }),
                   _.createElement(_, {
+                    capsules: _[0],
+                    bPreferDemoStorePage:
+                      __webpack_require__.prefer_demo_store_page,
                     ..._,
                   }),
-                _.createElement(_, {
-                  capsules: _[0],
-                  bPreferDemoStorePage:
-                    __webpack_require__.prefer_demo_store_page,
-                  ..._,
-                }),
-              )
+                )
           : _.createElement(
               "div",
               {

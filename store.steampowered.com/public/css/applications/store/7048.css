@@ -3891,6 +3891,12 @@ html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
   padding-left: 0;
   padding-right: 0;
 }
+._1cOoCFwafBlSkwllIMf3XM.OPH8r3-pnCjCM7T8GrpWo .CarouselBtnLeft {
+  transform: translateX(16px);
+}
+._1cOoCFwafBlSkwllIMf3XM.OPH8r3-pnCjCM7T8GrpWo .CarouselBtnRight {
+  transform: translateX(-16px);
+}
 ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg) {
   max-width: 1200px;
 }
@@ -3902,9 +3908,9 @@ html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
     width: calc(100% - 14px);
   }
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1330px) {
   ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg) {
-    max-width: calc(100vw - 114px);
+    max-width: calc(100vw - 118px);
   }
 }
 @media screen and (max-width: 940px) {

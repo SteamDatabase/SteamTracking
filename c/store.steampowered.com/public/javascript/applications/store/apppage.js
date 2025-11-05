@@ -4989,6 +4989,7 @@
             );
             return (0, _._)(_);
           })(_),
+          _ = (0, _._)(_.refTheater, _),
           _ = _.map((_) =>
             "screenshot" == _.type
               ? _.createElement(_, {
@@ -5015,9 +5016,8 @@
         return _.createElement(
           "dialog",
           {
-            ref: _.refTheater,
+            ref: _,
             className: _.TheaterDialog,
-            ..._,
             ..._,
           },
           _.createElement(

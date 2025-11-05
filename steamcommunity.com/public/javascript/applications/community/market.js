@@ -5014,17 +5014,9 @@
           "images/applications/community/knife_karambit.png?v=valveisgoodatcaching",
         jn =
           n.p +
-          "images/applications/community/bayonet.png?v=valveisgoodatcaching",
-        Hn = {
-          Knife: (0, r.YJ)(Mt),
-          MG: (0, r.YJ)(Yt),
-          Pistol: (0, r.YJ)(Dt),
-          Rifle: (0, r.YJ)(Ft),
-          Shotgun: (0, r.YJ)(Vt),
-          SMG: (0, r.YJ)(Gt),
-          Sniper: (0, r.YJ)(Wt),
-        },
-        Un = {
+          "images/applications/community/bayonet.png?v=valveisgoodatcaching";
+      function Hn() {
+        return {
           aug: (0, r.YJ)(jt),
           ak47: (0, r.YJ)(Ht),
           sg556: (0, r.YJ)(Ut),
@@ -5080,8 +5072,9 @@
           knife_karambit: (0, r.YJ)(Wn),
           bayonet: (0, r.YJ)(jn),
         };
-      var Bn = n(99483);
-      const $n = [
+      }
+      var Un = n(99483);
+      const Bn = [
           "weapon_knife_push",
           "weapon_knife_survival_bowie",
           "weapon_knife_gypsy_jackknife",
@@ -5103,11 +5096,11 @@
           "weapon_knife_karambit",
           "weapon_bayonet",
         ],
-        Jn = [
+        $n = [
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_Pistol" },
-            img: Hn.Pistol,
+            img: "Pistol",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -5129,7 +5122,7 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_SMG" },
-            img: Hn.SMG,
+            img: "SMG",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -5148,7 +5141,7 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_Rifle" },
-            img: Hn.Rifle,
+            img: "Rifle",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -5167,7 +5160,7 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_SniperRifle" },
-            img: Hn.Sniper,
+            img: "Sniper",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -5183,7 +5176,7 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_Shotgun" },
-            img: Hn.Shotgun,
+            img: "Shotgun",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -5199,7 +5192,7 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_Machinegun" },
-            img: Hn.MG,
+            img: "MG",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -5213,24 +5206,24 @@
           {
             type: "select",
             label: { facet: "Type", tag: "CSGO_Type_Knife" },
-            img: Hn.Knife,
+            img: "Knife",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
                 facet: "Type",
                 tag: "CSGO_Type_Knife",
               },
-              ...$n.map((e) => ({ facet: "Weapon", tag: e })),
+              ...Bn.map((e) => ({ facet: "Weapon", tag: e })),
             ],
           },
           { type: "facet", facet: "ItemSet" },
         ],
-        Kn = [
+        Jn = [
           { facet: "Type", tag: "CSGO_Type_WeaponCase" },
           { facet: "Type", tag: "CSGO_Tool_Sticker" },
           { facet: "Type", tag: "Type_Hands" },
         ],
-        Zn = [
+        Kn = [
           "CSGO_Type_Machinegun",
           "CSGO_Type_Pistol",
           "CSGO_Type_Rifle",
@@ -5238,13 +5231,13 @@
           "CSGO_Type_Shotgun",
           "CSGO_Type_SniperRifle",
         ],
-        qn = ["CSGO_Type_Knife", ...Zn],
-        Qn = [
+        Zn = ["CSGO_Type_Knife", ...Kn],
+        qn = [
           {
             facet: "Exterior",
             trigger: [
               { facet: "Weapon" },
-              { facet: "Type", tag: [...qn, "Type_Hands"] },
+              { facet: "Type", tag: [...Zn, "Type_Hands"] },
               { facet: "ItemSet" },
             ],
           },
@@ -5291,7 +5284,7 @@
               {
                 facet: "Type",
                 tag: [
-                  ...qn,
+                  ...Zn,
                   "CSGO_Tool_Keychain",
                   "CSGO_Tool_Sticker",
                   "Type_CustomPlayer",
@@ -5304,12 +5297,12 @@
             facet: "Quality",
             trigger: [
               { facet: "Weapon" },
-              { facet: "Type", tag: [...qn, "CSGO_Type_MusicKit"] },
+              { facet: "Type", tag: [...Zn, "CSGO_Type_MusicKit"] },
               { facet: "ItemSet" },
             ],
           },
         ],
-        Xn = {
+        Qn = {
           Exterior: [
             "WearCategory0",
             "WearCategory1",
@@ -5319,11 +5312,11 @@
             "WearCategoryNA",
           ],
         },
-        ea = [
+        Xn = [
           {
             items: [
-              { facet: "Weapon", exclude: $n },
-              { facet: "Type", tag: Zn },
+              { facet: "Weapon", exclude: Bn },
+              { facet: "Type", tag: Kn },
             ],
             rarities: [
               "Rarity_Common_Weapon",
@@ -5385,6 +5378,177 @@
             ],
           },
         ];
+      function ea(e) {
+        const t = {};
+        for (const [n, a] of Object.entries(e)) {
+          const e = n.indexOf("_"),
+            r = e > -1 ? n.slice(e + 1) : n;
+          t[r] = a;
+        }
+        const n = {},
+          a = (e, t) => {
+            n[e] || (n[e] = []), n[e].push(t);
+          },
+          o = {
+            Knife: (0, r.YJ)(Mt),
+            MG: (0, r.YJ)(Yt),
+            Pistol: (0, r.YJ)(Dt),
+            Rifle: (0, r.YJ)(Ft),
+            Shotgun: (0, r.YJ)(Vt),
+            SMG: (0, r.YJ)(Gt),
+            Sniper: (0, r.YJ)(Wt),
+          },
+          c = [];
+        for (const e of $n)
+          if ("select" === e.type) {
+            const n = {
+                fieldType: "select",
+                strLabel: na(e.label, t),
+                rgOptions: e.options.map(
+                  ({ facet: e, tag: n, label: r }) => (
+                    a(e, n),
+                    {
+                      facet: e,
+                      tag: n,
+                      strLabel: na(r || { facet: e, tag: n }, t),
+                    }
+                  ),
+                ),
+              },
+              r = new Intl.Collator();
+            n.rgOptions.sort((e, t) =>
+              "Type" === e.facet
+                ? -1
+                : "Type" === t.facet
+                  ? 1
+                  : r.compare(e.strLabel, t.strLabel),
+            );
+            const i = n.rgOptions.find((e) => "Type" === e.facet),
+              l = i ? { facet: i.facet, tag: i.tag } : void 0;
+            c.push({ facet: n, img: o[e.img], toggle: l });
+          } else {
+            const n = t[e.facet];
+            c.push({ facet: pt(n, "select"), img: "" });
+            for (const e of Object.keys(n.tags || {})) a(n.name, e);
+          }
+        const i = [];
+        for (const e of Jn) {
+          const { facet: n, tag: r } = e;
+          a(n, r),
+            i.push({
+              fieldType: "togglebutton",
+              facet: n,
+              tag: r,
+              strLabel: na({ facet: n, tag: r }, t),
+            });
+        }
+        const l = {
+            fieldType: "select",
+            rgOptions: [],
+            strLabel: Ke.Localize("#AdvancedSearch_CustomFilter_Other"),
+          },
+          s = { ...t };
+        for (const [e, a] of Object.entries(n)) {
+          const n = t[e];
+          for (const [t, r] of Object.entries(n.tags || []))
+            a.includes(t) ||
+              ("Type" === e && "CSGO_Type_Equipment" === t) ||
+              l.rgOptions.push({
+                strLabel: r.localized_name,
+                facet: e,
+                tag: t,
+              });
+          delete s[e];
+        }
+        return {
+          rgGroups: c,
+          rgToggles: i,
+          rgConditional: qn.flatMap((e) => {
+            const t = s[e.facet];
+            if ("Quality" === t.name) {
+              const n = t.tags && t.tags.strange,
+                a = t.tags && t.tags.tournament;
+              (0, A.wT)(n && a, "Could not find expected toggle tags");
+              const r = ta(e.trigger);
+              return {
+                facet: {
+                  strLabel: t.localized_name,
+                  fieldType: "togglegroup",
+                  rgToggles: [
+                    {
+                      facet: t.name,
+                      tag: "strange",
+                      strLabel: n.localized_name,
+                    },
+                    {
+                      facet: t.name,
+                      tag: "tournament",
+                      strLabel: a.localized_name,
+                      condition: ta([
+                        { facet: "Type", tag: Kn },
+                        { facet: "Weapon", exclude: Bn },
+                        { facet: "ItemSet" },
+                      ]),
+                    },
+                  ],
+                  computeNext: (e, n) => {
+                    if (
+                      n[t.name] &&
+                      n[t.name].strange &&
+                      n[t.name].tournament
+                    ) {
+                      let a = "tournament";
+                      e[t.name] && e[t.name].strange && (a = "strange");
+                      const r = { ...n, [t.name]: { ...n[t.name] } };
+                      return delete r[t.name][a], r;
+                    }
+                    return n;
+                  },
+                },
+                condition: r,
+              };
+            }
+            if ("Rarity" === t.name && t.tags) {
+              const e = [];
+              for (const n of Xn) {
+                const a = ta(n.items),
+                  r = [];
+                for (const e of n.rarities) {
+                  const n = t.tags[e];
+                  n && r.push(mt(t.name, e, n));
+                }
+                e.push({
+                  facet: {
+                    fieldType: "select",
+                    strLabel: t.localized_name,
+                    rgOptions: r,
+                  },
+                  condition: a,
+                });
+              }
+              return e;
+            }
+            let n;
+            if (Qn[t.name]) {
+              const e = Qn[t.name].reduce((e, t, n) => ((e[t] = n), e), {});
+              n = (t, n) => {
+                const a = e[t.tag],
+                  r = e[n.tag];
+                return void 0 === a && void 0 === r
+                  ? new Intl.Collator().compare(t.strLabel, n.strLabel)
+                  : void 0 === a
+                    ? 1
+                    : void 0 === r
+                      ? -1
+                      : a - r;
+              };
+            }
+            return { facet: pt(t, "select", n), condition: ta(e.trigger) };
+          }),
+          otherFacet: l,
+          rgFacetsWithCustomDisplay: Object.keys(n),
+        };
+      }
       function ta(e) {
         const t = Array.isArray(e) ? e : [e];
         return (e) =>
@@ -5432,178 +5596,7 @@
             rgConditional: s,
             otherFacet: u,
             rgFacetsWithCustomDisplay: p,
-          } = (0, a.useMemo)(
-            () =>
-              (function (e) {
-                const t = {};
-                for (const [n, a] of Object.entries(e)) {
-                  const e = n.indexOf("_"),
-                    r = e > -1 ? n.slice(e + 1) : n;
-                  t[r] = a;
-                }
-                const n = {},
-                  a = (e, t) => {
-                    n[e] || (n[e] = []), n[e].push(t);
-                  },
-                  r = [];
-                for (const e of Jn)
-                  if ("select" === e.type) {
-                    const n = {
-                        fieldType: "select",
-                        strLabel: na(e.label, t),
-                        rgOptions: e.options.map(
-                          ({ facet: e, tag: n, label: r }) => (
-                            a(e, n),
-                            {
-                              facet: e,
-                              tag: n,
-                              strLabel: na(r || { facet: e, tag: n }, t),
-                            }
-                          ),
-                        ),
-                      },
-                      o = new Intl.Collator();
-                    n.rgOptions.sort((e, t) =>
-                      "Type" === e.facet
-                        ? -1
-                        : "Type" === t.facet
-                          ? 1
-                          : o.compare(e.strLabel, t.strLabel),
-                    );
-                    const c = n.rgOptions.find((e) => "Type" === e.facet),
-                      i = c ? { facet: c.facet, tag: c.tag } : void 0;
-                    r.push({ facet: n, img: e.img, toggle: i });
-                  } else {
-                    const n = t[e.facet];
-                    r.push({ facet: pt(n, "select"), img: "" });
-                    for (const e of Object.keys(n.tags || {})) a(n.name, e);
-                  }
-                const o = [];
-                for (const e of Kn) {
-                  const { facet: n, tag: r } = e;
-                  a(n, r),
-                    o.push({
-                      fieldType: "togglebutton",
-                      facet: n,
-                      tag: r,
-                      strLabel: na({ facet: n, tag: r }, t),
-                    });
-                }
-                const c = {
-                    fieldType: "select",
-                    rgOptions: [],
-                    strLabel: Ke.Localize("#AdvancedSearch_CustomFilter_Other"),
-                  },
-                  i = { ...t };
-                for (const [e, a] of Object.entries(n)) {
-                  const n = t[e];
-                  for (const [t, r] of Object.entries(n.tags || []))
-                    a.includes(t) ||
-                      ("Type" === e && "CSGO_Type_Equipment" === t) ||
-                      c.rgOptions.push({
-                        strLabel: r.localized_name,
-                        facet: e,
-                        tag: t,
-                      });
-                  delete i[e];
-                }
-                return {
-                  rgGroups: r,
-                  rgToggles: o,
-                  rgConditional: Qn.flatMap((e) => {
-                    const t = i[e.facet];
-                    if ("Quality" === t.name) {
-                      const n = t.tags && t.tags.strange,
-                        a = t.tags && t.tags.tournament;
-                      (0, A.wT)(n && a, "Could not find expected toggle tags");
-                      const r = ta(e.trigger);
-                      return {
-                        facet: {
-                          strLabel: t.localized_name,
-                          fieldType: "togglegroup",
-                          rgToggles: [
-                            {
-                              facet: t.name,
-                              tag: "strange",
-                              strLabel: n.localized_name,
-                            },
-                            {
-                              facet: t.name,
-                              tag: "tournament",
-                              strLabel: a.localized_name,
-                              condition: ta([
-                                { facet: "Type", tag: Zn },
-                                { facet: "Weapon", exclude: $n },
-                                { facet: "ItemSet" },
-                              ]),
-                            },
-                          ],
-                          computeNext: (e, n) => {
-                            if (
-                              n[t.name] &&
-                              n[t.name].strange &&
-                              n[t.name].tournament
-                            ) {
-                              let a = "tournament";
-                              e[t.name] && e[t.name].strange && (a = "strange");
-                              const r = { ...n, [t.name]: { ...n[t.name] } };
-                              return delete r[t.name][a], r;
-                            }
-                            return n;
-                          },
-                        },
-                        condition: r,
-                      };
-                    }
-                    if ("Rarity" === t.name && t.tags) {
-                      const e = [];
-                      for (const n of ea) {
-                        const a = ta(n.items),
-                          r = [];
-                        for (const e of n.rarities) {
-                          const n = t.tags[e];
-                          n && r.push(mt(t.name, e, n));
-                        }
-                        e.push({
-                          facet: {
-                            fieldType: "select",
-                            strLabel: t.localized_name,
-                            rgOptions: r,
-                          },
-                          condition: a,
-                        });
-                      }
-                      return e;
-                    }
-                    let n;
-                    if (Xn[t.name]) {
-                      const e = Xn[t.name].reduce(
-                        (e, t, n) => ((e[t] = n), e),
-                        {},
-                      );
-                      n = (t, n) => {
-                        const a = e[t.tag],
-                          r = e[n.tag];
-                        return void 0 === a && void 0 === r
-                          ? new Intl.Collator().compare(t.strLabel, n.strLabel)
-                          : void 0 === a
-                            ? 1
-                            : void 0 === r
-                              ? -1
-                              : a - r;
-                      };
-                    }
-                    return {
-                      facet: pt(t, "select", n),
-                      condition: ta(e.trigger),
-                    };
-                  }),
-                  otherFacet: c,
-                  rgFacetsWithCustomDisplay: Object.keys(n),
-                };
-              })(e.facets),
-            [e.facets],
-          ),
+          } = (0, a.useMemo)(() => ea(e.facets), [e.facets]),
           [d, f] = (0, a.useState)(() => s.filter((e) => e.condition(r)));
         (0, a.useEffect)(() => {
           let e = null;
@@ -5755,7 +5748,7 @@
             ...i,
             "data-active": !!t,
             "data-muted": !!n,
-            className: Bn.ToggleButton,
+            className: Un.ToggleButton,
           },
           a.createElement(
             K.EY,
@@ -5792,7 +5785,7 @@
             paddingX: "3",
             paddingY: "2",
             gap: "2",
-            className: Bn.NoToggleTrigger,
+            className: Un.NoToggleTrigger,
             overflow: "hidden",
           },
           a.createElement(c.a, { flexGrow: "1", minWidth: "0" }, o),
@@ -5818,7 +5811,7 @@
                   paddingY: "1",
                   paddingX: "3",
                   flexGrow: "1",
-                  className: Bn.TriggerToggle,
+                  className: Un.TriggerToggle,
                   onClick: m,
                   position: "relative",
                   "data-active": !!r,
@@ -5830,7 +5823,7 @@
                   { overflow: "hidden", position: "absolute", inset: "0" },
                   n &&
                     a.createElement("div", {
-                      className: Bn.ImgBlur,
+                      className: Un.ImgBlur,
                       style: {
                         backgroundImage: `url("${n}")`,
                         pointerEvents: "none",
@@ -5863,7 +5856,7 @@
                   padding: "5",
                   "data-active": !!r,
                   "data-muted": !!i,
-                  className: Bn.TriggerSelect,
+                  className: Un.TriggerSelect,
                 },
                 a.createElement(ie, null),
               ),
@@ -5876,7 +5869,7 @@
               flexGrow: "1",
               ref: t,
               radius: "md",
-              className: Bn.Trigger,
+              className: Un.Trigger,
               position: "relative",
               "data-active": !!r,
               "data-muted": !!i,
@@ -5923,8 +5916,9 @@
         let m = c;
         const d = p[0];
         if ((null == d ? void 0 : d.tag) && d.tag.startsWith("weapon_")) {
-          const e = d.tag.slice(7);
-          e in Un && (m = Un[e]);
+          const e = d.tag.slice(7),
+            t = Hn();
+          e in t && (m = t[e]);
         }
         const f = ze({
             rgOptions: t,
@@ -6013,8 +6007,9 @@
         let m = c;
         const d = p ? [void 0, ...t] : t;
         if ((null == p ? void 0 : p.tag) && p.tag.startsWith("weapon_")) {
-          const e = p.tag.slice(7);
-          e in Un && (m = Un[e]);
+          const e = p.tag.slice(7),
+            t = Hn();
+          e in t && (m = t[e]);
         }
         const f = Pe({
             rgOptions: d,
@@ -6097,8 +6092,9 @@
         let m = c;
         const d = p[0];
         if ((null == d ? void 0 : d.tag) && d.tag.startsWith("weapon_")) {
-          const e = d.tag.slice(7);
-          e in Un && (m = Un[e]);
+          const e = d.tag.slice(7),
+            t = Hn();
+          e in t && (m = t[e]);
         }
         const f = ye({
             rgOptions: t,

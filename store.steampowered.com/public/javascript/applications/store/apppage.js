@@ -1344,28 +1344,28 @@
           : null;
       });
       var O = a(6813),
-        V = a(92406),
-        U = a(52038),
+        U = a(92406),
+        V = a(52038),
         z = a(27510),
         W = a.n(z),
         Z = a(4869);
-      new V.cE();
+      new U.cE();
       var q;
       function K(e) {
         return r.createElement(
           "div",
-          { className: (0, U.A)(W().PurchaseNoticeContainer) },
+          { className: (0, V.A)(W().PurchaseNoticeContainer) },
           r.createElement(
             "div",
-            { className: (0, U.A)(W().PurchaseNoticeImageContainer) },
+            { className: (0, V.A)(W().PurchaseNoticeImageContainer) },
             r.createElement(Z.xIk, {
               type: "xbox",
-              className: (0, U.A)(W().PurchaseNoticeImage, W().Tilt),
+              className: (0, V.A)(W().PurchaseNoticeImage, W().Tilt),
             }),
           ),
           r.createElement(
             "div",
-            { className: (0, U.A)(W().PurchaseNoticeLabel) },
+            { className: (0, V.A)(W().PurchaseNoticeLabel) },
             (0, E.we)("#PurchaseNotice_ControllerRequired"),
           ),
         );
@@ -1373,17 +1373,17 @@
       function X(e) {
         return r.createElement(
           "div",
-          { className: (0, U.A)(W().PurchaseNoticeContainer) },
+          { className: (0, V.A)(W().PurchaseNoticeContainer) },
           r.createElement(
             "div",
-            { className: (0, U.A)(W().PurchaseNoticeImageContainer) },
+            { className: (0, V.A)(W().PurchaseNoticeImageContainer) },
             r.createElement(Z.oqe, {
-              className: (0, U.A)(W().PurchaseNoticeImage, W().VROnly),
+              className: (0, V.A)(W().PurchaseNoticeImage, W().VROnly),
             }),
           ),
           r.createElement(
             "div",
-            { className: (0, U.A)(W().PurchaseNoticeLabel) },
+            { className: (0, V.A)(W().PurchaseNoticeLabel) },
             (0, E.we)("#PurchaseNotice_VRRequired"),
           ),
         );
@@ -1391,22 +1391,22 @@
       function Q(e) {
         return r.createElement(
           "div",
-          { className: (0, U.A)(W().PurchaseNoticeContainer) },
+          { className: (0, V.A)(W().PurchaseNoticeContainer) },
           r.createElement(
             "div",
             {
-              className: (0, U.A)(
+              className: (0, V.A)(
                 W().PurchaseNoticeImageContainer,
                 W().VRSupported,
               ),
             },
             r.createElement(Z.Kkn, {
-              className: (0, U.A)(W().PurchaseNoticeImage, W().VRSupported),
+              className: (0, V.A)(W().PurchaseNoticeImage, W().VRSupported),
             }),
           ),
           r.createElement(
             "div",
-            { className: (0, U.A)(W().PurchaseNoticeLabel) },
+            { className: (0, V.A)(W().PurchaseNoticeLabel) },
             (0, E.we)("#PurchaseNotice_VRSupported"),
           ),
         );
@@ -1507,7 +1507,7 @@
         return r.createElement(
           "div",
           {
-            className: (0, U.A)(
+            className: (0, V.A)(
               $().CreatorHomeWithItems,
               g ? $().WithFollowBtn : "",
             ),
@@ -1560,7 +1560,7 @@
           r.createElement(
             "div",
             {
-              className: (0, U.A)(
+              className: (0, V.A)(
                 $().CarouselContentsRow,
                 g && $().WithFollowSection,
               ),
@@ -1798,7 +1798,7 @@
           r.createElement(
             "div",
             {
-              className: (0, U.A)(
+              className: (0, V.A)(
                 ye.ImgSection,
                 e.bHightlightRow && ye.HighlightRow,
                 e.bHighlightGPRequired && ye.GamepadRequired,
@@ -1809,7 +1809,7 @@
           r.createElement(
             "div",
             {
-              className: (0, U.A)(
+              className: (0, V.A)(
                 ye.LocSection,
                 e.bHighlightText && ye.HighlightText,
                 e.bHightlightRow && ye.HighlightRow,
@@ -1819,7 +1819,7 @@
             r.createElement(
               "div",
               {
-                className: (0, U.A)(
+                className: (0, V.A)(
                   ye.LocString,
                   e.bHighlightText && ye.HighlightText,
                   e.bHightlightRow && ye.HighlightRow,
@@ -1844,7 +1844,7 @@
       function Se() {
         return r.createElement(Ae, {
           tagImage: r.createElement(Z.Moo, {
-            className: (0, U.A)(ye.Tilt, ye.SmallerSVG),
+            className: (0, V.A)(ye.Tilt, ye.SmallerSVG),
             role: "presentation",
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
@@ -1856,14 +1856,14 @@
       function Ie() {
         return r.createElement(
           "div",
-          { className: (0, U.A)(ye.PurchaseNoticeContainer) },
+          { className: (0, V.A)(ye.PurchaseNoticeContainer) },
           r.createElement(Z.Kz1, {
-            className: (0, U.A)(ye.PurchaseNoticeImage),
+            className: (0, V.A)(ye.PurchaseNoticeImage),
             role: "presentation",
           }),
           r.createElement(
             "div",
-            { className: (0, U.A)(ye.PurchaseNoticeLabel) },
+            { className: (0, V.A)(ye.PurchaseNoticeLabel) },
             (0, E.we)("#Store_ControllerSupport_GamepadPreferred"),
           ),
         );
@@ -1872,7 +1872,7 @@
         const { bNoKeyboardSupport: t, bGamepadPreferred: a } = e;
         return r.createElement(
           "div",
-          { className: (0, U.A)(ye.NoticeContainer) },
+          { className: (0, V.A)(ye.NoticeContainer) },
           t && r.createElement(Se, null),
           a && !t && r.createElement(Ie, null),
         );
@@ -2163,10 +2163,10 @@
         Fe = a(22797),
         He = a(72061),
         Oe = a(15799);
-      function Ve(e) {
+      function Ue(e) {
         return (0, E.we)(`#RewardsReaction_${e}`);
       }
-      var Ue,
+      var Ve,
         ze,
         We,
         Ze = a(31286);
@@ -2225,7 +2225,7 @@
         (0, o.Cg)([g.oI], Ke.prototype, "handleMouseOut", null);
       let Xe = class extends r.Component {
         static {
-          Ue = this;
+          Ve = this;
         }
         static s_LoyaltyAwardModalStore;
         static defaultProps = { targetType: 1 };
@@ -2246,8 +2246,8 @@
             (this.state = { bLoading: !0 });
         }
         async Init(e) {
-          if (Ue.s_LoyaltyAwardModalStore) return;
-          if (e) return void (Ue.s_LoyaltyAwardModalStore = new De(e));
+          if (Ve.s_LoyaltyAwardModalStore) return;
+          if (e) return void (Ve.s_LoyaltyAwardModalStore = new De(e));
           const t = {
               ...(0, f.Tc)("loyaltystore", "application_config"),
               ...(await (async function () {
@@ -2273,7 +2273,7 @@
               })()),
             },
             a = new Re.D(f.TS.WEBAPI_BASE_URL, t.webapi_token);
-          (Ue.s_LoyaltyAwardModalStore = new De(a.GetServiceTransport())),
+          (Ve.s_LoyaltyAwardModalStore = new De(a.GetServiceTransport())),
             this.setState({ bLoading: !1 });
         }
         render() {
@@ -2302,7 +2302,7 @@
                     { className: Oe.InitialLoading },
                     r.createElement(
                       "div",
-                      { className: (0, U.A)(Oe.LoadingContainer, Oe.Visible) },
+                      { className: (0, V.A)(Oe.LoadingContainer, Oe.Visible) },
                       r.createElement(at, null),
                     ),
                   ),
@@ -2315,13 +2315,13 @@
                   ugcType: o,
                   onDismiss: () => this.setState({ bShowModal: !1 }),
                   onSuccess: n,
-                  store: Ue.s_LoyaltyAwardModalStore,
+                  store: Ve.s_LoyaltyAwardModalStore,
                   initialSelectedReaction: s,
                 })
             : null;
         }
       };
-      Xe = Ue = (0, o.Cg)([L.PA], Xe);
+      Xe = Ve = (0, o.Cg)([L.PA], Xe);
       const Qe = Xe;
       let je = class extends r.Component {
         static {
@@ -2462,7 +2462,7 @@
                       r.createElement(
                         "div",
                         {
-                          className: (0, U.A)(Oe.LoadingContainer, Oe.Visible),
+                          className: (0, V.A)(Oe.LoadingContainer, Oe.Visible),
                         },
                         r.createElement(at, null),
                       ),
@@ -2537,7 +2537,7 @@
                   r.createElement(
                     "div",
                     {
-                      className: (0, U.A)(
+                      className: (0, V.A)(
                         Oe.ConfirmContainer,
                         i === We.CONFIRM && Oe.Visible,
                       ),
@@ -2558,7 +2558,7 @@
                           r.createElement(
                             "span",
                             { className: Oe.AwardName },
-                            Ve(o),
+                            Ue(o),
                           ),
                         ),
                       ),
@@ -2580,7 +2580,7 @@
                   r.createElement(
                     "div",
                     {
-                      className: (0, U.A)(
+                      className: (0, V.A)(
                         Oe.LoadingContainer,
                         i === We.SUBMITTING && Oe.Visible,
                       ),
@@ -2590,7 +2590,7 @@
                   r.createElement(
                     "div",
                     {
-                      className: (0, U.A)(
+                      className: (0, V.A)(
                         Oe.SuccessContainer,
                         i === We.DONE && Oe.Visible,
                       ),
@@ -2829,7 +2829,7 @@
               type: "button",
               onMouseEnter: this.handleMouseOver,
               onMouseLeave: this.handleMouseOut,
-              className: (0, U.A)(
+              className: (0, V.A)(
                 Oe.Button,
                 t && Oe.Selected,
                 a && Oe.Disabled,
@@ -2849,7 +2849,7 @@
             r.createElement(
               "div",
               { className: Oe.LabelCtn },
-              r.createElement("div", { className: Oe.Label }, Ve(e)),
+              r.createElement("div", { className: Oe.Label }, Ue(e)),
               r.createElement(rt, { className: Oe.Points }, n.toLocaleString()),
             ),
             a && r.createElement(qe, { className: Oe.IconCheckMark }),
@@ -2864,7 +2864,7 @@
           const { children: t, className: a, ...n } = e;
           return r.createElement(
             "span",
-            { ...n, className: (0, U.A)(a, Oe.PointsAmount) },
+            { ...n, className: (0, V.A)(a, Oe.PointsAmount) },
             r.createElement(h.vrn, { className: Oe.PointsAmountIcon }),
             t,
           );
@@ -3124,7 +3124,7 @@
                 "a",
                 {
                   href: s,
-                  className: (0, U.A)(lt().TopPlayedBannerCtn, l.className),
+                  className: (0, V.A)(lt().TopPlayedBannerCtn, l.className),
                 },
                 r.createElement(
                   "div",
@@ -3165,7 +3165,7 @@
           { focusable: !0, className: gt().ParentWidgetContainer },
           r.createElement(
             "div",
-            { className: (0, U.A)(gt().ParentCapsuleImageContainer) },
+            { className: (0, V.A)(gt().ParentCapsuleImageContainer) },
             r.createElement(
               "a",
               { href: l },
@@ -3180,7 +3180,7 @@
             { className: gt().AppDetails },
             r.createElement(
               "a",
-              { className: (0, U.A)(gt().GameName), href: l },
+              { className: (0, V.A)(gt().GameName), href: l },
               a.GetName(),
             ),
             r.createElement(
@@ -3266,7 +3266,7 @@
                 : null,
           ),
           g = l ? "" : "#TrailerPlayer_FullScreen_Tooltip",
-          f = (0, U.A)(yt.TheaterDialog, l && yt.Fullscreen);
+          f = (0, V.A)(yt.TheaterDialog, l && yt.Fullscreen);
         return r.createElement(
           "div",
           { ref: n.refTheater, className: f, popover: "manual" },
@@ -3316,7 +3316,7 @@
       }
       function kt(e) {
         let { screenshot: t } = e,
-          a = (0, U.A)(yt.CarouselItem, yt.Screenshot);
+          a = (0, V.A)(yt.CarouselItem, yt.Screenshot);
         return r.createElement(
           i.Z,
           { className: a, focusable: !0, onOKActionDescription: "" },
@@ -3425,7 +3425,7 @@
           f = n.bPaused
             ? "#TrailerPlayer_Play_Tooltip"
             : "#TrailerPlayer_Pause_Tooltip",
-          v = (0, U.A)(yt.CarouselItem, yt.SingleFileTrailer);
+          v = (0, V.A)(yt.CarouselItem, yt.SingleFileTrailer);
         return r.createElement(
           i.Z,
           {
@@ -3457,7 +3457,7 @@
         let { trailer: t } = e,
           [a, n] = (0, r.useState)(!1),
           [l, o] = (0, g.TP)(),
-          s = (0, U.A)(yt.CarouselItem, yt.DashTrailer);
+          s = (0, V.A)(yt.CarouselItem, yt.DashTrailer);
         return r.createElement(
           i.Z,
           { ref: o, className: s, onFocusWithin: n },
@@ -3488,14 +3488,14 @@
         );
         return !(e && "true" == e[2]);
       }
-      function Vt() {
+      function Ut() {
         let e = document.cookie.match(
             /(^|; )flGameHighlightPlayerVolume=([^;]*)/,
           ),
           t = e && e[2] ? parseFloat(e[2]) : 80;
         return t < 0 ? 0 : t > 100 ? 100 : t;
       }
-      function Ut() {
+      function Vt() {
         let e = document.cookie.match(
           /(^|; )bGameHighlightAudioEnabled=([^;]*)/,
         );
@@ -3513,7 +3513,7 @@
             })(e),
               n(e);
           }, []),
-          [o, s] = (0, r.useState)(Vt),
+          [o, s] = (0, r.useState)(Ut),
           i = (0, r.useCallback)((e) => {
             (function (e) {
               let t = new Date();
@@ -3522,7 +3522,7 @@
             })((e *= 100)),
               s(e);
           }, []),
-          [c, m] = (0, r.useState)(Ut),
+          [c, m] = (0, r.useState)(Vt),
           u = (0, r.useCallback)((e) => {
             !(function (e) {
               let t = new Date();
@@ -3763,7 +3763,7 @@
           o = t.key,
           s = (0, r.useCallback)((e) => a(o, e), [o, a]),
           i = t.data.thumbnail ? t.data.thumbnail : "",
-          c = (0, U.A)(Qt.Item, l && Qt.Active);
+          c = (0, V.A)(Qt.Item, l && Qt.Active);
         return r.createElement(
           "div",
           { ref: s, className: c, onClick: () => n.fnSetActive(t.key) },
@@ -4038,7 +4038,8 @@
             );
             return (0, la.zO)(t);
           })(a),
-          d = t.map((e) =>
+          d = (0, g.Ue)(l.refTheater, u),
+          p = t.map((e) =>
             "screenshot" == e.type
               ? r.createElement(pa, {
                   key: e.key,
@@ -4055,11 +4056,11 @@
                   })
                 : null,
           ),
-          p = a.strPreviousID ? () => a.fnSetActive(a.strPreviousID) : null,
-          h = a.strNextID ? () => a.fnSetActive(a.strNextID) : null;
+          h = a.strPreviousID ? () => a.fnSetActive(a.strPreviousID) : null,
+          E = a.strNextID ? () => a.fnSetActive(a.strNextID) : null;
         return r.createElement(
           "dialog",
-          { ref: l.refTheater, className: Gt.TheaterDialog, ...c, ...u },
+          { ref: d, className: Gt.TheaterDialog, ...c },
           r.createElement(
             "div",
             { className: Gt.TheaterModeFrame },
@@ -4073,16 +4074,16 @@
                 onKeyDown: n,
                 tabIndex: 0,
               },
-              d,
+              p,
               r.createElement(
                 "div",
                 {
-                  className: (0, U.A)(
+                  className: (0, V.A)(
                     Gt.FullscreenArrow,
                     o && Gt.Visible,
                     Gt.Previous,
                   ),
-                  onClick: p,
+                  onClick: h,
                   "data-keepcontrols": !0,
                 },
                 r.createElement(aa, { direction: "left" }),
@@ -4090,12 +4091,12 @@
               r.createElement(
                 "div",
                 {
-                  className: (0, U.A)(
+                  className: (0, V.A)(
                     Gt.FullscreenArrow,
                     o && Gt.Visible,
                     Gt.Next,
                   ),
-                  onClick: h,
+                  onClick: E,
                   "data-keepcontrols": !0,
                 },
                 r.createElement(aa, { direction: "right" }),
@@ -4142,7 +4143,7 @@
           m = "none" == i.strMode,
           u = (0, la.b$)(n);
         if (!s) return null;
-        let d = (0, U.A)(
+        let d = (0, V.A)(
             Gt.ViewedItem,
             l && Gt.Active,
             Gt.Screenshot,
@@ -4171,7 +4172,7 @@
           m = qt(),
           u = (0, r.useCallback)(() => m.fnSetActive(m.strNextID), [m]);
         if (!o) return null;
-        let d = (0, U.A)(Gt.ViewedItem, l && Gt.Active, Gt.Trailer);
+        let d = (0, V.A)(Gt.ViewedItem, l && Gt.Active, Gt.Trailer);
         return r.createElement(
           Nt.vG,
           { drop: !(0, B.tg)() },

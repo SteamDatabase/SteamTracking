@@ -596,12 +596,16 @@
             };
           })(t, a);
         if (e?.enabled) {
-          const m = e.groups.length;
+          const m = e.groups?.length;
           if (
-            (e.groups.forEach((a, o) => {
+            (e.groups?.forEach((a, o) => {
               if (s >= t.length || "tabs" == t[s].section_type) return;
               const i = new Array();
-              for (let e = 0; e < a.num_sections && s < t.length; ++e, ++s) {
+              for (
+                let e = 0;
+                e < (a?.num_sections || 0) && s < t.length;
+                ++e, ++s
+              ) {
                 if ("tabs" == t[s].section_type) break;
                 const n = t[s].unique_id;
                 i.push(n),
@@ -795,8 +799,8 @@
       }
       var A = a(77516),
         B = a(91382),
-        M = a(30756),
-        N = a(21529),
+        N = a(30756),
+        M = a(21529),
         U = a(52038),
         x = a(78327),
         R = a(73003),
@@ -863,7 +867,7 @@
             t.BEventCanShowBroadcastWidget() &&
               t.BSaleShowBroadcastAtTopOfPage(),
           ) &&
-            l.createElement(N.B, {
+            l.createElement(M.B, {
               event: t,
               broadcastEmbedContext: a,
               bWideBroadcastDisplay: n,
@@ -873,7 +877,7 @@
       }
       function V(e) {
         const { event: t, fnOnChangeDayIndex: a, addtionalAdminButtons: n } = e;
-        return l.createElement(M.g, {
+        return l.createElement(N.g, {
           eventModel: t,
           fnOnUpdateSaleDayIndex: a,
           addtionalAdminButtons: n,
@@ -1161,8 +1165,8 @@
         e.preventDefault();
       }
       var Be = a(71647),
-        Me = a.n(Be);
-      function Ne(e) {
+        Ne = a.n(Be);
+      function Me(e) {
         const {
             onDropFiles: t,
             renderDesciption: a,
@@ -1233,7 +1237,7 @@
           {
             ...o,
             className: (0, U.A)(
-              i ? Me().DragAndDropContainerDragging : Me().DragAndDropContainer,
+              i ? Ne().DragAndDropContainerDragging : Ne().DragAndDropContainer,
               "DragAndDropContainer",
             ),
           },
@@ -1245,7 +1249,7 @@
           ),
           l.createElement(
             "div",
-            { className: Me().ImageUploadBar },
+            { className: Ne().ImageUploadBar },
             s,
             l.createElement(
               "label",
@@ -1258,7 +1262,7 @@
               ),
               l.createElement(
                 "span",
-                { className: Me().SelectImageButton },
+                { className: Ne().SelectImageButton },
                 (0, p.we)("#selectimage_select_file"),
               ),
             ),
@@ -1348,7 +1352,7 @@
           c.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
         );
         return l.createElement(
-          Ne,
+          Me,
           {
             onDropFiles: m,
             elAdditonalButtons: u,
@@ -1947,7 +1951,7 @@
         const { clanSteamID: t, OnClanImageSelected: a } = e;
         return l.createElement(
           "div",
-          { className: Me().ImageUploadBar },
+          { className: Ne().ImageUploadBar },
           l.createElement(
             "label",
             { htmlFor: "clanimagedialog" },
@@ -1959,7 +1963,7 @@
             ),
             l.createElement(
               "span",
-              { className: Me().SelectImageButton },
+              { className: Ne().SelectImageButton },
               (0, p.we)("#ImagePicker_PreviousImages2"),
             ),
           ),
@@ -2340,7 +2344,7 @@
         Lt = a(10224),
         At = a(15496),
         Bt = a.n(At);
-      function Mt(e) {
+      function Nt(e) {
         const {
             event: t,
             spotlightURLOverride: a,
@@ -2456,8 +2460,8 @@
           ),
         );
       }
-      var Nt = a(79949),
-        Ut = a.n(Nt);
+      var Mt = a(79949),
+        Ut = a.n(Mt);
       function xt(e) {
         const {
             langOverride: t,
@@ -2732,7 +2736,7 @@
           return l.createElement(
             "div",
             { className: Ut().SpotlightExample },
-            l.createElement(Mt, {
+            l.createElement(Nt, {
               event: e.event,
               strDisplayName: a ?? "",
               gameIconUrl: n,
@@ -4561,7 +4565,7 @@
                   Y,
                   { event: a, language: o, bIsPreview: r },
                   v && l.createElement(Ea.Sn, null),
-                  l.createElement(Aa, { eventModel: a }),
+                  l.createElement(Ba, { eventModel: a }),
                   Boolean(c) &&
                     l.createElement(ia, {
                       backgroundImageEditModel: c,
@@ -4701,9 +4705,9 @@
               }));
           }
           fa.TU.Get().BIsConnected() &&
-            (m = l.createElement(La, { nSectionID: n.unique_id }, m));
+            (m = l.createElement(Aa, { nSectionID: n.unique_id }, m));
           let _ = l.createElement(
-            ya,
+            La,
             {
               key: "SaleSectionIndex_" + n.unique_id + "_" + r,
               section: n,
@@ -4779,7 +4783,17 @@
           ? null
           : l.createElement(l.Fragment, null, n);
       }
-      function ya(e) {
+      function ya({ children: e, onChange: t }) {
+        const a = l.useRef(null);
+        return (
+          (0, l.useEffect)(() => {
+            const e = a.current;
+            t(!!e && e.childNodes.length > 0);
+          }),
+          l.createElement("div", { ref: a }, e)
+        );
+      }
+      function La(e) {
         const {
             section: t,
             saleSectionIndex: a,
@@ -4791,70 +4805,79 @@
             children: u,
           } = e,
           d = i.mj + (t.unique_id || a),
-          p = "tabs" != t.section_type;
-        return l.createElement(
-          g.tH,
-          null,
-          l.createElement(
-            Ga,
-            {
-              visibility_by_door_index_state: t.visibility_by_door_index_state,
-              door_index_visibility: t.door_index_visibility,
-            },
-            p
-              ? l.createElement(
-                  o.Z,
-                  {
-                    navKey: d,
-                    id: d,
-                    className: (0, U.A)({
-                      [C().SaleSectionCtn]: !0,
-                      SaleSectionCtn: !0,
-                      [t.section_type]: !0,
-                      [t.internal_section_data?.internal_type || ""]: !0,
-                      expanded: m,
-                      [t.single_item_style || ""]: !0,
-                      [C().SaleSectionBackgroundImageGroupEdit]:
-                        r == ba.S.EPreviewMode_EditBackground,
-                      [C().NoTopPadding]: t.collapse_header_space,
-                    }),
-                  },
-                  u,
-                  Boolean(r === ba.S.EPreviewMode_EditBackground) &&
-                    l.createElement(ga, {
-                      nSectionUniqueID: t.unique_id || a,
-                      nTabID: n,
-                      salePageBackgroundDerivedConfig: s,
-                      backgroundImageEditModel: c,
-                    }),
-                )
-              : l.createElement(
-                  l.Fragment,
-                  null,
-                  Boolean(r === ba.S.EPreviewMode_EditBackground)
-                    ? l.createElement(
-                        "div",
-                        {
-                          id: d,
-                          className: (0, U.A)({
-                            [C().SaleSectionCtn]: !0,
-                            [C().SaleSectionBackgroundImageGroupEdit]: !0,
-                            [C().NoTopPadding]: t.collapse_header_space,
-                          }),
-                        },
-                        u,
-                        l.createElement(pa, {
-                          backgroundImageEditModel: c,
-                          nTabID: n,
-                          imgGroupDerivedMapping: s,
+          p = "tabs" != t.section_type,
+          [_, E] = (0, l.useState)(!0);
+        return _
+          ? l.createElement(
+              g.tH,
+              null,
+              l.createElement(
+                Ga,
+                {
+                  visibility_by_door_index_state:
+                    t.visibility_by_door_index_state,
+                  door_index_visibility: t.door_index_visibility,
+                },
+                p
+                  ? l.createElement(
+                      o.Z,
+                      {
+                        navKey: d,
+                        id: d,
+                        className: (0, U.A)({
+                          [C().SaleSectionCtn]: !0,
+                          SaleSectionCtn: !0,
+                          [t.section_type]: !0,
+                          [t.internal_section_data?.internal_type || ""]: !0,
+                          expanded: m,
+                          [t.single_item_style || ""]: !0,
+                          [C().SaleSectionBackgroundImageGroupEdit]:
+                            r == ba.S.EPreviewMode_EditBackground,
+                          [C().NoTopPadding]: t.collapse_header_space,
                         }),
-                      )
-                    : u,
-                ),
-          ),
-        );
+                      },
+                      Boolean(r === ba.S.EPreviewMode_EditBackground)
+                        ? l.createElement(
+                            l.Fragment,
+                            null,
+                            u,
+                            l.createElement(ga, {
+                              nSectionUniqueID: t.unique_id || a,
+                              nTabID: n,
+                              salePageBackgroundDerivedConfig: s,
+                              backgroundImageEditModel: c,
+                            }),
+                          )
+                        : l.createElement(ya, { onChange: E }, u),
+                    )
+                  : l.createElement(
+                      l.Fragment,
+                      null,
+                      Boolean(r === ba.S.EPreviewMode_EditBackground)
+                        ? l.createElement(
+                            "div",
+                            {
+                              id: d,
+                              className: (0, U.A)({
+                                [C().SaleSectionCtn]: !0,
+                                [C().SaleSectionBackgroundImageGroupEdit]: !0,
+                                [C().NoTopPadding]: t.collapse_header_space,
+                              }),
+                            },
+                            u,
+                            l.createElement(pa, {
+                              backgroundImageEditModel: c,
+                              nTabID: n,
+                              imgGroupDerivedMapping: s,
+                            }),
+                          )
+                        : l.createElement(ya, { onChange: E }, u),
+                    ),
+              ),
+            )
+          : null;
       }
-      function La(e) {
+      function Aa(e) {
         const { nSectionID: t, children: a } = e,
           [r, o] = l.useState(!1),
           [i, s] = l.useState(!1);
@@ -4899,7 +4922,7 @@
           )
         );
       }
-      function Aa(e) {
+      function Ba(e) {
         const { eventModel: t } = e,
           a = (0, Ve.Ec)(t.clanSteamID.GetAccountID());
         if (!a || (!a.can_edit && !a.support_user) || "store" != (0, x.yK)())

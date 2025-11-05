@@ -2081,8 +2081,8 @@
           _ = _ ? _.createElement(_._, null) : _.createElement(_._, null),
           _ = (0, _._)(
             _
-              ? "#TrailerPlayer_EnterTheater_Tooltip"
-              : "#TrailerPlayer_ExitTheater_Tooltip",
+              ? "#TrailerPlayer_ExitTheater_Tooltip"
+              : "#TrailerPlayer_EnterTheater_Tooltip",
           );
         return _.createElement(
           _,

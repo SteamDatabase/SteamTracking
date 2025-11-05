@@ -35922,46 +35922,81 @@
           },
         ];
       }
+      function _(_, _) {
+        if (!_ || !_.changedTouches) return null;
+        let _ = _.changedTouches;
+        for (let _ = 0; _ < _.length; _++)
+          if (_[_].identifier == _) return _[_];
+        return null;
+      }
       const _ = 20;
       function _(_) {
         let _ = _.useRef(null);
         _.current = _;
         let _ = _.useRef(null);
-        return {
-          onTouchStart: _.useCallback((_) => {
-            _.changedTouches && 0 != _.changedTouches.length
-              ? (_.current = _)
-              : (_.current = null);
-          }, []),
-          onTouchCancel: _.useCallback((_) => {
-            _.current = _;
-          }, []),
-          onTouchEnd: _.useCallback((_) => {
-            let _ =
-              _.changedTouches && _.changedTouches.length > 0
-                ? _.changedTouches[0]
-                : null;
-            if (!_) return;
-            let _ = (function (_, _) {
-              if (!_ || !_.changedTouches) return null;
-              let _ = _.changedTouches;
-              for (let _ = 0; _ < _.length; _++)
-                if (_[_].identifier == _) return _[_];
-              return null;
-            })(_.current, _.identifier);
-            if (!_) return;
-            _.current = null;
-            let _ = _.screenX - _.screenX,
-              _ = _.screenY - _.screenY;
-            if (!(Math.abs(_) < _ || Math.abs(_) > Math.abs(_))) {
-              if (_.current) {
-                const _ = _ > 0 ? "left" : "right";
-                _.current(_);
+        return (0, _._)((_) => {
+          if (!_) return;
+          let _ = (_) => {
+              _.changedTouches && 0 != _.changedTouches.length
+                ? (_.current = _)
+                : (_.current = null);
+            },
+            _ = (_) => {
+              let _ =
+                _.changedTouches && _.changedTouches.length > 0
+                  ? _.changedTouches[0]
+                  : null;
+              if (!_) return;
+              let _ = _(_.current, _.identifier);
+              _ &&
+                Math.abs(_.screenX - _.screenX) >
+                  Math.abs(_.screenY - _.screenY) &&
+                _.cancelable &&
+                _.preventDefault();
+            },
+            _ = (_) => {
+              _.current = null;
+            },
+            _ = (_) => {
+              let _ =
+                _.changedTouches && _.changedTouches.length > 0
+                  ? _.changedTouches[0]
+                  : null;
+              if (!_) return;
+              let _ = _(_.current, _.identifier);
+              if (!_) return;
+              _.current = null;
+              let _ = _.screenX - _.screenX,
+                _ = _.screenY - _.screenY;
+              if (!(Math.abs(_) < _ || Math.abs(_) > Math.abs(_))) {
+                if (_.current) {
+                  const _ = _ > 0 ? "left" : "right";
+                  _.current(_);
+                }
+                _.cancelable && _.preventDefault();
               }
-              _.preventDefault();
+            };
+          return (
+            _.addEventListener("touchstart", _, {
+              passive: !0,
+            }),
+            _.addEventListener("touchmove", _, {
+              passive: !1,
+            }),
+            _.addEventListener("touchcancel", _, {
+              passive: !0,
+            }),
+            _.addEventListener("touchend", _, {
+              passive: !1,
+            }),
+            () => {
+              _.removeEventListener("touchstart", _),
+                _.removeEventListener("touchmove", _),
+                _.removeEventListener("touchcancel", _),
+                _.removeEventListener("touchend", _);
             }
-          }, []),
-        };
+          );
+        }, []);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

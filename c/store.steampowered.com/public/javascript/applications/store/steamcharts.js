@@ -921,12 +921,16 @@
             };
           })(_, _);
         if (_?.enabled) {
-          const _ = _.groups.length;
+          const _ = _.groups?.length;
           if (
-            (_.groups.forEach((_, _) => {
+            (_.groups?.forEach((_, _) => {
               if (_ >= _.length || "tabs" == _[_].section_type) return;
               const _ = new Array();
-              for (let _ = 0; _ < _.num_sections && _ < _.length; ++_, ++_) {
+              for (
+                let _ = 0;
+                _ < (_?.num_sections || 0) && _ < _.length;
+                ++_, ++_
+              ) {
                 if ("tabs" == _[_].section_type) break;
                 const _ = _[_].unique_id;
                 _.push(_),
@@ -5728,6 +5732,22 @@
           ? null
           : _.createElement(_.Fragment, null, _);
       }
+      function _({ children: _, onChange: _ }) {
+        const _ = _.useRef(null);
+        return (
+          (0, _.useEffect)(() => {
+            const _ = _.current;
+            _(!!_ && _.childNodes.length > 0);
+          }),
+          _.createElement(
+            "div",
+            {
+              ref: _,
+            },
+            _,
+          )
+        );
+      }
       function _(_) {
         const {
             section: _,
@@ -5740,68 +5760,90 @@
             children: _,
           } = _,
           _ = _._ + (_.unique_id || __webpack_require__),
-          _ = "tabs" != _.section_type;
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _,
-            {
-              visibility_by_door_index_state: _.visibility_by_door_index_state,
-              door_index_visibility: _.door_index_visibility,
-            },
-            _
-              ? _.createElement(
-                  _._,
-                  {
-                    navKey: _,
-                    _: _,
-                    className: (0, _._)({
-                      [_().SaleSectionCtn]: !0,
-                      SaleSectionCtn: !0,
-                      [_.section_type]: !0,
-                      [_.internal_section_data?.internal_type || ""]: !0,
-                      expanded: _,
-                      [_.single_item_style || ""]: !0,
-                      [_().SaleSectionBackgroundImageGroupEdit]:
-                        _ == _._.EPreviewMode_EditBackground,
-                      [_().NoTopPadding]: _.collapse_header_space,
-                    }),
-                  },
-                  _,
-                  Boolean(_ === _._.EPreviewMode_EditBackground) &&
-                    _.createElement(_, {
-                      nSectionUniqueID: _.unique_id || __webpack_require__,
-                      nTabID: _,
-                      salePageBackgroundDerivedConfig: _,
-                      backgroundImageEditModel: _,
-                    }),
-                )
-              : _.createElement(
-                  _.Fragment,
-                  null,
-                  Boolean(_ === _._.EPreviewMode_EditBackground)
-                    ? _.createElement(
-                        "div",
-                        {
-                          _: _,
-                          className: (0, _._)({
-                            [_().SaleSectionCtn]: !0,
-                            [_().SaleSectionBackgroundImageGroupEdit]: !0,
-                            [_().NoTopPadding]: _.collapse_header_space,
-                          }),
-                        },
-                        _,
-                        _.createElement(_, {
-                          backgroundImageEditModel: _,
-                          nTabID: _,
-                          imgGroupDerivedMapping: _,
+          _ = "tabs" != _.section_type,
+          [_, _] = (0, _.useState)(!0);
+        return _
+          ? _.createElement(
+              _._,
+              null,
+              _.createElement(
+                _,
+                {
+                  visibility_by_door_index_state:
+                    _.visibility_by_door_index_state,
+                  door_index_visibility: _.door_index_visibility,
+                },
+                _
+                  ? _.createElement(
+                      _._,
+                      {
+                        navKey: _,
+                        _: _,
+                        className: (0, _._)({
+                          [_().SaleSectionCtn]: !0,
+                          SaleSectionCtn: !0,
+                          [_.section_type]: !0,
+                          [_.internal_section_data?.internal_type || ""]: !0,
+                          expanded: _,
+                          [_.single_item_style || ""]: !0,
+                          [_().SaleSectionBackgroundImageGroupEdit]:
+                            _ == _._.EPreviewMode_EditBackground,
+                          [_().NoTopPadding]: _.collapse_header_space,
                         }),
-                      )
-                    : _,
-                ),
-          ),
-        );
+                      },
+                      Boolean(_ === _._.EPreviewMode_EditBackground)
+                        ? _.createElement(
+                            _.Fragment,
+                            null,
+                            _,
+                            _.createElement(_, {
+                              nSectionUniqueID:
+                                _.unique_id || __webpack_require__,
+                              nTabID: _,
+                              salePageBackgroundDerivedConfig: _,
+                              backgroundImageEditModel: _,
+                            }),
+                          )
+                        : _.createElement(
+                            _,
+                            {
+                              onChange: _,
+                            },
+                            _,
+                          ),
+                    )
+                  : _.createElement(
+                      _.Fragment,
+                      null,
+                      Boolean(_ === _._.EPreviewMode_EditBackground)
+                        ? _.createElement(
+                            "div",
+                            {
+                              _: _,
+                              className: (0, _._)({
+                                [_().SaleSectionCtn]: !0,
+                                [_().SaleSectionBackgroundImageGroupEdit]: !0,
+                                [_().NoTopPadding]: _.collapse_header_space,
+                              }),
+                            },
+                            _,
+                            _.createElement(_, {
+                              backgroundImageEditModel: _,
+                              nTabID: _,
+                              imgGroupDerivedMapping: _,
+                            }),
+                          )
+                        : _.createElement(
+                            _,
+                            {
+                              onChange: _,
+                            },
+                            _,
+                          ),
+                    ),
+              ),
+            )
+          : null;
       }
       function _(_) {
         const { nSectionID: _, children: __webpack_require__ } = _,

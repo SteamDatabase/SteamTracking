@@ -25401,66 +25401,69 @@
             [h?.rgDLC],
           );
         return f
-          ? a.dlc_for_you_data?.group_by_parent_app
-            ? n.createElement(
-                "div",
-                {
-                  className: (0, v.A)(u.SaleSection),
-                  style: (0, m.Vb)(a, t, S),
-                },
-                a.dlc_for_you_data?.hide_dlc_grouping
-                  ? n.createElement(
-                      "div",
-                      { className: u.SaleSectionTitleCtn },
-                      n.createElement(W.jR, { ...e }),
-                    )
-                  : n.createElement(qi, {
-                      ...e,
-                      value: p,
-                      onChange: (e) => {
-                        g(e);
-                      },
-                    }),
-                f.map((t) =>
-                  n.createElement(zi, {
-                    ...e,
-                    key: "firstdlc_" + t[0].id,
-                    rgDLCCapsules: t,
-                    dlcForYouData: h,
-                    strParentAppSort: p,
-                  }),
-                ),
-                h?.bMoreAvailable &&
-                  n.createElement(
-                    "div",
-                    { className: Hi.ShowMore },
-                    n.createElement(
-                      Be.$n,
-                      {
-                        onClick: () => {
-                          d(
-                            c + (a.dlc_for_you_data?.parent_app_page_size || 1),
-                          );
+          ? 0 == f.length
+            ? null
+            : a.dlc_for_you_data?.group_by_parent_app
+              ? n.createElement(
+                  "div",
+                  {
+                    className: (0, v.A)(u.SaleSection),
+                    style: (0, m.Vb)(a, t, S),
+                  },
+                  a.dlc_for_you_data?.hide_dlc_grouping
+                    ? n.createElement(
+                        "div",
+                        { className: u.SaleSectionTitleCtn },
+                        n.createElement(W.jR, { ...e }),
+                      )
+                    : n.createElement(qi, {
+                        ...e,
+                        value: p,
+                        onChange: (e) => {
+                          g(e);
                         },
-                      },
-                      (0, B.we)("#Sale_ShowMore"),
-                    ),
+                      }),
+                  f.map((t) =>
+                    n.createElement(zi, {
+                      ...e,
+                      key: "firstdlc_" + t[0].id,
+                      rgDLCCapsules: t,
+                      dlcForYouData: h,
+                      strParentAppSort: p,
+                    }),
                   ),
-              )
-            : n.createElement(
-                "div",
-                {
-                  className: (0, v.A)(u.SaleSection),
-                  style: (0, m.Vb)(a, t, S),
-                },
-                !Boolean(a.dlc_for_you_data?.hide_dlc_stats) &&
-                  n.createElement(Vi, { ...e }),
-                n.createElement(Wi, {
-                  capsules: f[0],
-                  bPreferDemoStorePage: a.prefer_demo_store_page,
-                  ...e,
-                }),
-              )
+                  h?.bMoreAvailable &&
+                    n.createElement(
+                      "div",
+                      { className: Hi.ShowMore },
+                      n.createElement(
+                        Be.$n,
+                        {
+                          onClick: () => {
+                            d(
+                              c +
+                                (a.dlc_for_you_data?.parent_app_page_size || 1),
+                            );
+                          },
+                        },
+                        (0, B.we)("#Sale_ShowMore"),
+                      ),
+                    ),
+                )
+              : n.createElement(
+                  "div",
+                  {
+                    className: (0, v.A)(u.SaleSection),
+                    style: (0, m.Vb)(a, t, S),
+                  },
+                  !Boolean(a.dlc_for_you_data?.hide_dlc_stats) &&
+                    n.createElement(Vi, { ...e }),
+                  n.createElement(Wi, {
+                    capsules: f[0],
+                    bPreferDemoStorePage: a.prefer_demo_store_page,
+                    ...e,
+                  }),
+                )
           : n.createElement(
               "div",
               {

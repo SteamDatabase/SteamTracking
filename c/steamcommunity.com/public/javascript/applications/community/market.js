@@ -6122,17 +6122,9 @@
           "images/applications/community/knife_karambit.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/community/bayonet.png?v=valveisgoodatcaching",
-        _ = {
-          Knife: (0, _._)(_),
-          _: (0, _._)(_),
-          Pistol: (0, _._)(_),
-          Rifle: (0, _._)(_),
-          Shotgun: (0, _._)(_),
-          SMG: (0, _._)(_),
-          Sniper: (0, _._)(_),
-        },
-        _ = {
+          "images/applications/community/bayonet.png?v=valveisgoodatcaching";
+      function _() {
+        return {
           aug: (0, _._)(_),
           ak47: (0, _._)(_),
           sg556: (0, _._)(_),
@@ -6188,6 +6180,7 @@
           knife_karambit: (0, _._)(_),
           bayonet: (0, _._)(_),
         };
+      }
       var _ = __webpack_require__("chunkid");
       const _ = [
           "weapon_knife_push",
@@ -6218,7 +6211,7 @@
               facet: "Type",
               tag: "CSGO_Type_Pistol",
             },
-            img: _.Pistol,
+            img: "Pistol",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -6273,7 +6266,7 @@
               facet: "Type",
               tag: "CSGO_Type_SMG",
             },
-            img: _.SMG,
+            img: "SMG",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -6316,7 +6309,7 @@
               facet: "Type",
               tag: "CSGO_Type_Rifle",
             },
-            img: _.Rifle,
+            img: "Rifle",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -6359,7 +6352,7 @@
               facet: "Type",
               tag: "CSGO_Type_SniperRifle",
             },
-            img: _.Sniper,
+            img: "Sniper",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -6390,7 +6383,7 @@
               facet: "Type",
               tag: "CSGO_Type_Shotgun",
             },
-            img: _.Shotgun,
+            img: "Shotgun",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -6421,7 +6414,7 @@
               facet: "Type",
               tag: "CSGO_Type_Machinegun",
             },
-            img: _._,
+            img: "MG",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -6444,7 +6437,7 @@
               facet: "Type",
               tag: "CSGO_Type_Knife",
             },
-            img: _.Knife,
+            img: "Knife",
             options: [
               {
                 label: "#AdvancedSearch_CustomFilter_All",
@@ -6702,6 +6695,219 @@
           },
         ];
       function _(_) {
+        const _ = {};
+        for (const [__webpack_require__, _] of Object.entries(_)) {
+          const _ = __webpack_require__.indexOf("_"),
+            _ = _ > -1 ? __webpack_require__.slice(_ + 1) : __webpack_require__;
+          _[_] = _;
+        }
+        const _ = {},
+          _ = (_, _) => {
+            _[_] || (_[_] = []), _[_].push(_);
+          },
+          _ = {
+            Knife: (0, _._)(_),
+            _: (0, _._)(_),
+            Pistol: (0, _._)(_),
+            Rifle: (0, _._)(_),
+            Shotgun: (0, _._)(_),
+            SMG: (0, _._)(_),
+            Sniper: (0, _._)(_),
+          },
+          _ = [];
+        for (const _ of _)
+          if ("select" === _.type) {
+            const _ = {
+                fieldType: "select",
+                strLabel: _(_.label, _),
+                rgOptions: _.options.map(
+                  ({ facet: _, tag: _, label: _ }) => (
+                    _(_, _),
+                    {
+                      facet: _,
+                      tag: _,
+                      strLabel: _(
+                        _ || {
+                          facet: _,
+                          tag: _,
+                        },
+                        _,
+                      ),
+                    }
+                  ),
+                ),
+              },
+              _ = new Intl.Collator();
+            _.rgOptions.sort((_, _) =>
+              "Type" === _.facet
+                ? -1
+                : "Type" === _.facet
+                  ? 1
+                  : _.compare(_.strLabel, _.strLabel),
+            );
+            const _ = _.rgOptions.find((_) => "Type" === _.facet),
+              _ = _
+                ? {
+                    facet: _.facet,
+                    tag: _.tag,
+                  }
+                : void 0;
+            _.push({
+              facet: _,
+              img: _[_.img],
+              toggle: _,
+            });
+          } else {
+            const _ = _[_.facet];
+            _.push({
+              facet: _(_, "select"),
+              img: "",
+            });
+            for (const _ of Object.keys(_.tags || {})) _(_.name, _);
+          }
+        const _ = [];
+        for (const _ of _) {
+          const { facet: _, tag: _ } = _;
+          _(_, _),
+            _.push({
+              fieldType: "togglebutton",
+              facet: _,
+              tag: _,
+              strLabel: _(
+                {
+                  facet: _,
+                  tag: _,
+                },
+                _,
+              ),
+            });
+        }
+        const _ = {
+            fieldType: "select",
+            rgOptions: [],
+            strLabel: _.Localize("#AdvancedSearch_CustomFilter_Other"),
+          },
+          _ = {
+            ..._,
+          };
+        for (const [_, _] of Object.entries(_)) {
+          const _ = _[_];
+          for (const [_, _] of Object.entries(_.tags || []))
+            _.includes(_) ||
+              ("Type" === _ && "CSGO_Type_Equipment" === _) ||
+              _.rgOptions.push({
+                strLabel: _.localized_name,
+                facet: _,
+                tag: _,
+              });
+          delete _[_];
+        }
+        return {
+          rgGroups: _,
+          rgToggles: _,
+          rgConditional: _.flatMap((_) => {
+            const _ = _[_.facet];
+            if ("Quality" === _.name) {
+              const _ = _.tags && _.tags.strange,
+                _ = _.tags && _.tags.tournament;
+              (0, _._)(_ && _, "Could not find expected toggle tags");
+              const _ = _(_.trigger);
+              return {
+                facet: {
+                  strLabel: _.localized_name,
+                  fieldType: "togglegroup",
+                  rgToggles: [
+                    {
+                      facet: _.name,
+                      tag: "strange",
+                      strLabel: _.localized_name,
+                    },
+                    {
+                      facet: _.name,
+                      tag: "tournament",
+                      strLabel: _.localized_name,
+                      condition: _([
+                        {
+                          facet: "Type",
+                          tag: _,
+                        },
+                        {
+                          facet: "Weapon",
+                          exclude: _,
+                        },
+                        {
+                          facet: "ItemSet",
+                        },
+                      ]),
+                    },
+                  ],
+                  computeNext: (_, _) => {
+                    if (
+                      _[_.name] &&
+                      _[_.name].strange &&
+                      _[_.name].tournament
+                    ) {
+                      let _ = "tournament";
+                      _[_.name] && _[_.name].strange && (_ = "strange");
+                      const _ = {
+                        ..._,
+                        [_.name]: {
+                          ..._[_.name],
+                        },
+                      };
+                      return delete _[_.name][_], _;
+                    }
+                    return _;
+                  },
+                },
+                condition: _,
+              };
+            }
+            if ("Rarity" === _.name && _.tags) {
+              const _ = [];
+              for (const _ of _) {
+                const _ = _(_.items),
+                  _ = [];
+                for (const _ of _.rarities) {
+                  const _ = _.tags[_];
+                  _ && _.push(_(_.name, _, _));
+                }
+                _.push({
+                  facet: {
+                    fieldType: "select",
+                    strLabel: _.localized_name,
+                    rgOptions: _,
+                  },
+                  condition: _,
+                });
+              }
+              return _;
+            }
+            let _;
+            if (_[_.name]) {
+              const _ = _[_.name].reduce((_, _, _) => ((_[_] = _), _), {});
+              _ = (_, _) => {
+                const _ = _[_.tag],
+                  _ = _[_.tag];
+                return void 0 === _ && void 0 === _
+                  ? new Intl.Collator().compare(_.strLabel, _.strLabel)
+                  : void 0 === _
+                    ? 1
+                    : void 0 === _
+                      ? -1
+                      : _ - _;
+              };
+            }
+            return {
+              facet: _(_, "select", _),
+              condition: _(_.trigger),
+            };
+          }),
+          otherFacet: _,
+          rgFacetsWithCustomDisplay: Object.keys(_),
+        };
+      }
+      function _(_) {
         const _ = Array.isArray(_) ? _ : [_];
         return (_) =>
           _.some((_) =>
@@ -6748,220 +6954,7 @@
             rgConditional: _,
             otherFacet: _,
             rgFacetsWithCustomDisplay: _,
-          } = (0, _.useMemo)(
-            () =>
-              (function (_) {
-                const _ = {};
-                for (const [__webpack_require__, _] of Object.entries(_)) {
-                  const _ = __webpack_require__.indexOf("_"),
-                    _ =
-                      _ > -1
-                        ? __webpack_require__.slice(_ + 1)
-                        : __webpack_require__;
-                  _[_] = _;
-                }
-                const _ = {},
-                  _ = (_, _) => {
-                    _[_] || (_[_] = []), _[_].push(_);
-                  },
-                  _ = [];
-                for (const _ of _)
-                  if ("select" === _.type) {
-                    const _ = {
-                        fieldType: "select",
-                        strLabel: _(_.label, _),
-                        rgOptions: _.options.map(
-                          ({ facet: _, tag: _, label: _ }) => (
-                            _(_, _),
-                            {
-                              facet: _,
-                              tag: _,
-                              strLabel: _(
-                                _ || {
-                                  facet: _,
-                                  tag: _,
-                                },
-                                _,
-                              ),
-                            }
-                          ),
-                        ),
-                      },
-                      _ = new Intl.Collator();
-                    _.rgOptions.sort((_, _) =>
-                      "Type" === _.facet
-                        ? -1
-                        : "Type" === _.facet
-                          ? 1
-                          : _.compare(_.strLabel, _.strLabel),
-                    );
-                    const _ = _.rgOptions.find((_) => "Type" === _.facet),
-                      _ = _
-                        ? {
-                            facet: _.facet,
-                            tag: _.tag,
-                          }
-                        : void 0;
-                    _.push({
-                      facet: _,
-                      img: _.img,
-                      toggle: _,
-                    });
-                  } else {
-                    const _ = _[_.facet];
-                    _.push({
-                      facet: _(_, "select"),
-                      img: "",
-                    });
-                    for (const _ of Object.keys(_.tags || {})) _(_.name, _);
-                  }
-                const _ = [];
-                for (const _ of _) {
-                  const { facet: _, tag: _ } = _;
-                  _(_, _),
-                    _.push({
-                      fieldType: "togglebutton",
-                      facet: _,
-                      tag: _,
-                      strLabel: _(
-                        {
-                          facet: _,
-                          tag: _,
-                        },
-                        _,
-                      ),
-                    });
-                }
-                const _ = {
-                    fieldType: "select",
-                    rgOptions: [],
-                    strLabel: _.Localize("#AdvancedSearch_CustomFilter_Other"),
-                  },
-                  _ = {
-                    ..._,
-                  };
-                for (const [_, _] of Object.entries(_)) {
-                  const _ = _[_];
-                  for (const [_, _] of Object.entries(_.tags || []))
-                    _.includes(_) ||
-                      ("Type" === _ && "CSGO_Type_Equipment" === _) ||
-                      _.rgOptions.push({
-                        strLabel: _.localized_name,
-                        facet: _,
-                        tag: _,
-                      });
-                  delete _[_];
-                }
-                return {
-                  rgGroups: _,
-                  rgToggles: _,
-                  rgConditional: _.flatMap((_) => {
-                    const _ = _[_.facet];
-                    if ("Quality" === _.name) {
-                      const _ = _.tags && _.tags.strange,
-                        _ = _.tags && _.tags.tournament;
-                      (0, _._)(_ && _, "Could not find expected toggle tags");
-                      const _ = _(_.trigger);
-                      return {
-                        facet: {
-                          strLabel: _.localized_name,
-                          fieldType: "togglegroup",
-                          rgToggles: [
-                            {
-                              facet: _.name,
-                              tag: "strange",
-                              strLabel: _.localized_name,
-                            },
-                            {
-                              facet: _.name,
-                              tag: "tournament",
-                              strLabel: _.localized_name,
-                              condition: _([
-                                {
-                                  facet: "Type",
-                                  tag: _,
-                                },
-                                {
-                                  facet: "Weapon",
-                                  exclude: _,
-                                },
-                                {
-                                  facet: "ItemSet",
-                                },
-                              ]),
-                            },
-                          ],
-                          computeNext: (_, _) => {
-                            if (
-                              _[_.name] &&
-                              _[_.name].strange &&
-                              _[_.name].tournament
-                            ) {
-                              let _ = "tournament";
-                              _[_.name] && _[_.name].strange && (_ = "strange");
-                              const _ = {
-                                ..._,
-                                [_.name]: {
-                                  ..._[_.name],
-                                },
-                              };
-                              return delete _[_.name][_], _;
-                            }
-                            return _;
-                          },
-                        },
-                        condition: _,
-                      };
-                    }
-                    if ("Rarity" === _.name && _.tags) {
-                      const _ = [];
-                      for (const _ of _) {
-                        const _ = _(_.items),
-                          _ = [];
-                        for (const _ of _.rarities) {
-                          const _ = _.tags[_];
-                          _ && _.push(_(_.name, _, _));
-                        }
-                        _.push({
-                          facet: {
-                            fieldType: "select",
-                            strLabel: _.localized_name,
-                            rgOptions: _,
-                          },
-                          condition: _,
-                        });
-                      }
-                      return _;
-                    }
-                    let _;
-                    if (_[_.name]) {
-                      const _ = _[_.name].reduce(
-                        (_, _, _) => ((_[_] = _), _),
-                        {},
-                      );
-                      _ = (_, _) => {
-                        const _ = _[_.tag],
-                          _ = _[_.tag];
-                        return void 0 === _ && void 0 === _
-                          ? new Intl.Collator().compare(_.strLabel, _.strLabel)
-                          : void 0 === _
-                            ? 1
-                            : void 0 === _
-                              ? -1
-                              : _ - _;
-                      };
-                    }
-                    return {
-                      facet: _(_, "select", _),
-                      condition: _(_.trigger),
-                    };
-                  }),
-                  otherFacet: _,
-                  rgFacetsWithCustomDisplay: Object.keys(_),
-                };
-              })(_.facets),
-            [_.facets],
-          ),
+          } = (0, _.useMemo)(() => _(_.facets), [_.facets]),
           [_, _] = (0, _.useState)(() => _.filter((_) => _.condition(_)));
         (0, _.useEffect)(() => {
           let _ = null;
@@ -7354,7 +7347,8 @@
         let _ = _;
         const _ = _[0];
         if ((null == _ ? void 0 : _.tag) && _.tag.startsWith("weapon_")) {
-          const _ = _.tag.slice(7);
+          const _ = _.tag.slice(7),
+            _ = _();
           _ in _ && (_ = _[_]);
         }
         const _ = _({
@@ -7466,7 +7460,8 @@
         let _ = _;
         const _ = _ ? [void 0, ..._] : _;
         if ((null == _ ? void 0 : _.tag) && _.tag.startsWith("weapon_")) {
-          const _ = _.tag.slice(7);
+          const _ = _.tag.slice(7),
+            _ = _();
           _ in _ && (_ = _[_]);
         }
         const _ = _({
@@ -7566,7 +7561,8 @@
         let _ = _;
         const _ = _[0];
         if ((null == _ ? void 0 : _.tag) && _.tag.startsWith("weapon_")) {
-          const _ = _.tag.slice(7);
+          const _ = _.tag.slice(7),
+            _ = _();
           _ in _ && (_ = _[_]);
         }
         const _ = _({
