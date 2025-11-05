@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256">
+  <g id="hidechat" opacity="">
+    <polyline fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" points="156.001,189.834 116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 59.25,59.011"/>
+    <polyline fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" points="109.427,59.011 225.299,59.011 225.299,189.834 207,189.834"/>
+    <line fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" x1="49.786" y1="15.012" x2="214.409" y2="233.723"/>
+  </g>
+  <g id="showchat" opacity="">
+    <polygon fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" points="116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 225.299,59.011 225.299,189.834"/>
+  </g>
+  <g id="textlines" opacity="">
+    <line fill="none" stroke="#ffffff" stroke-width="10" stroke-miterlimit="10" x1="72.333" y1="124.75" x2="194.167" y2="124.75"/>
+    <line fill="none" stroke="#ffffff" stroke-width="10" stroke-miterlimit="10" x1="72.333" y1="155.75" x2="194.167" y2="155.75"/>
+    <line fill="none" stroke="#ffffff" stroke-width="10" stroke-miterlimit="10" x1="72.333" y1="93.75" x2="179.926" y2="93.75"/>
+    <polyline fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" points="156.001,189.834 116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 59.25,59.011 "/>
+    <polyline fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" points="109.427,59.011 225.299,59.011 225.299,189.834 207,189.834"/>
+  </g>
+</svg>

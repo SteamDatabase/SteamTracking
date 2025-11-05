@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256">
+  <g>
+    <path stroke="" stroke-width="16" stroke-linecap="round" stroke-miterlimit="10" d="M127.9,76.632"/>
+    <path fill="none" stroke="" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="5" d="M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254	C141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606"/>
+    <path fill="" d="M127.9,208.12"/>
+  </g>
+  <g>
+    <line fill="none" stroke="" stroke-width="16" stroke-linecap="round" stroke-miterlimit="10" x1="127.9" y1="76.632" x2="127.9" y2="160.07"/>
+    <path fill="" d="M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12"/>
+  </g>
+</svg>

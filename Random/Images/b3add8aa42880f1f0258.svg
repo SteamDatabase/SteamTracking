@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="" orient="auto" marker-width="3" marker-height="4" refX="0.1" refY="2">
+      <path d="M0,0 V4 L2,2 Z" fill=""/>
+    </marker>
+  </defs>
+  <path id="arrow-line" marker-end="" stroke-width="2" fill="none" stroke="" d=""/>
+</svg>

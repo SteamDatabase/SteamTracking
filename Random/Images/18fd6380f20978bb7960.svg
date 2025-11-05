@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256">
+  <polyline fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="85.5,149.167 128,128 128,55.167 "/>
+  <path fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M128,17.5c61.027,0,110.5,49.473,110.5,110.5S189.027,238.5,128,238.5S17.5,189.027,17.5,128"/>
+  <circle stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="26.448" cy="85.833" r="5.5"/>
+  <circle stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="50.167" cy="50.5" r="5.5"/>
+  <circle stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="86" cy="26.667" r="5.5"/>
+</svg>

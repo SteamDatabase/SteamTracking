@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256">
+  <g opacity="0">
+    <polygon points="127.817,4.403 4,128 127.817,251.598"/>
+  </g>
+  <g opacity="0">
+    <polygon points="127.816,4.403 251.633,128 127.816,251.598"/>
+  </g>
+  <g>
+    <polygon points="145.692,22.132 145.692,234.361 127.817,251.598 110.307,234.361 110.307,22.132 127.817,4.403"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <g>
+    <rect x="0" y="49" width="13" height="15" fill="currentColor"/>
+    <rect x="18.5" y="36" width="10" height="26.5" fill="" stroke-width="3" stroke="currentColor"/>
+    <rect x="35.5" y="22" width="10" height="40.5" fill="" stroke-width="3" stroke="currentColor"/>
+    <rect x="52.5" y="1.5" width="10" height="61" fill="" stroke-width="3" stroke="currentColor"/>
+  </g>
+</svg>

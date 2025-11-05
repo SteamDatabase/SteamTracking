@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 300 14">
+  <defs>
+    <linearGradient id="" x1="0" x2="0" y1="0" y2="100%" gradient-units="userSpaceOnUse">
+      <stop stop-color="#fff" offset="0%"/>
+      <stop stop-color="#fff" offset="20%"/>
+      <stop stop-color="#fff" offset="40%"/>
+      <stop stop-color="#eee" offset="60%"/>
+      <stop stop-color="#ddd" offset="80%"/>
+      <stop stop-color="#ccc" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <text x="-1" y="14" font-size="" text-anchor="bottom" font-weight="200" fill=""/>
+</svg>

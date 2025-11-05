@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <mask id="" mask-units="userSpaceOnUse" x="0" y="0" width="11" height="24">
+    <rect width="11" height="24" fill="#ffffff"/>
+  </mask>
+  <g mask="">
+    <circle cx="-1" cy="12" r="9" stroke="currentColor" stroke-width="3"/>
+  </g>
+</svg>

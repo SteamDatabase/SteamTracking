@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<svg width="80" height="50" viewBox="0 0 80 50" xmlns="http://www.w3.org/2000/svg" version="1.1" overflow="visible">
+  <rect x="6" y="8" width="68" height="34" fill="currentColor" opacity="0.35" rx="2" ry="2"/>
+  <polygon points="35,18 35,32 47,25" fill="currentColor" opacity="0.8"/>
+  <rect x="48" y="10" width="20" height="3" fill="currentColor"/>
+  <rect x="52" y="15" width="16" height="3" fill="currentColor"/>
+</svg>

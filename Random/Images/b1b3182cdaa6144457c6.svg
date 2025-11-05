@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256">
+  <g>
+    <circle fill="none" stroke-width="10" stroke-miterlimit="10" cx="91.735" cy="128.014" r="64"/>
+    <polyline fill="none" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" points="91.735,90.833 91.735,128.014 116.58,152.086 	"/>
+  </g>
+  <g>
+    <polyline fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="70.268,109.934 94.483,63.635 119.77,109.934"/>
+    <line fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="77.458" y1="97.861" x2="112.135" y2="97.861"/>
+    <polyline fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="70.045,145.379 119.547,145.379 70.045,192.032 119.547,192.032"/>
+  </g>
+  <g>
+    <polyline fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="199.735,63.66 199.735,192.366 171.207,163.675"/>
+    <polyline fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="199.735,63.66 199.735,192.366 228.266,163.675"/>
+  </g>
+</svg>

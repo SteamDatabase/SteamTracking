@@ -83,11 +83,7 @@ for await (const file of GetRecursiveFilesToParse()) {
 					if (calleeName === "createElement" && node.arguments?.[0]?.value === "svg") {
 						const svg = createSvgBody(node).end({ prettyPrint: true });
 						if (svg.length > 0) {
-							const content = Buffer.from(
-								`${svg}\n<!-- ${file.substring(rootDir.length + 1).replace(/\\/g, "/")} -->\n`,
-								"utf8",
-							);
-
+							const content = Buffer.from(`${svg}\n`, "utf8");
 							OutputToFile("svg", content);
 						}
 
@@ -98,7 +94,7 @@ for await (const file of GetRecursiveFilesToParse()) {
 					if ((calleeName === "jsx" || calleeName === "jsxs") && node.arguments?.[0]?.value === "svg") {
 						const svg = createSvgBody(node).end({ prettyPrint: true });
 						if (svg.length > 0) {
-							const content = Buffer.from(`${svg}\n`, "utf8"); // no path comment
+							const content = Buffer.from(`${svg}\n`, "utf8");
 
 							OutputToFile("svg", content);
 						}

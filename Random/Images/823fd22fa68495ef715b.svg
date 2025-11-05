@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4.5" y="6.5" width="27" height="24" stroke="currentColor" stroke-width="3"/>
+  <rect x="6" y="12" width="24" height="2" fill="currentColor"/>
+  <rect x="21" y="9" width="2" height="2" fill="currentColor"/>
+  <rect x="24" y="9" width="2" height="2" fill="currentColor"/>
+  <rect x="27" y="9" width="2" height="2" fill="currentColor"/>
+  <path d="M9.5 17.5L13 21L9.5 24.5" stroke="currentColor" stroke-width="2"/>
+  <rect x="15" y="23" width="8" height="2" fill="currentColor"/>
+</svg>

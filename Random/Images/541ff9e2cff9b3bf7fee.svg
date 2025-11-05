@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none">
+  <path d="M16 4H4V16H16V4Z" fill="currentColor"/>
+  <path d="M16 20H4V32H16V20Z" fill="currentColor"/>
+  <path d="M32 4H20V16H32V4Z" fill="currentColor"/>
+  <path d="M32 20H20V32H32V20Z" fill="currentColor"/>
+</svg>

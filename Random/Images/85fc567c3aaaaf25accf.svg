@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256" stroke="#000" stroke-width="10px">
+  <g>
+    <path fill="none" stroke-width="0" stroke-miterlimit="10" d="M179.751,40.994h14.869 c8.388,0,15.25,6.862,15.25,15.25v141.193c0,8.388-6.862,15.25-15.25,15.25H57.37c-8.388,0-15.25-6.862-15.25-15.25V56.244 c0-8.388,6.862-15.25,15.25-15.25h14.869H179.751z"/>
+    <line fill="none" stroke-width="0" stroke-linecap="round" stroke-miterlimit="10" x1="74.495" y1="27.313" x2="74.495" y2="54.063"/>
+    <line fill="none" stroke-width="0" stroke-linecap="round" stroke-miterlimit="10" x1="124.495" y1="27.313" x2="124.495" y2="54.063"/>
+    <line fill="none" stroke-width="0" stroke-linecap="round" stroke-miterlimit="10" x1="174.745" y1="27.313" x2="174.745" y2="54.063"/>
+  </g>
+  <line x1="71.6" y1="115.4" x2="179.4" y2="115.4"/>
+  <line x1="71.6" y1="145.8" x2="143.3" y2="145.8"/>
+  <line x1="71.6" y1="175.9" x2="179.4" y2="175.9"/>
+  <line x1="73.7" y1="82.7" x2="166.8" y2="82.7"/>
+</svg>

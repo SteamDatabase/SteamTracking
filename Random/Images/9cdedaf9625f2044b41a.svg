@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 23" fill="none">
+  <g clip-path="">
+    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z"/>
+  </g>
+  <defs>
+    <clipPath id="">
+      <rect fill="currentColor" width="15" height="23"/>
+    </clipPath>
+  </defs>
+</svg>

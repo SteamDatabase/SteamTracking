@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256">
+  <path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" d="M62.499,172.263 c-32.755-16.197-47.415-39.509-47.415-39.509"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" d="M177.948,85.392 c48.213,14.998,68.451,47.362,68.451,47.362s-36.393,54.737-115.689,54.737c-17.938,0-33.591-2.671-47.096-6.832"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" d="M15.084,132.754 c0,0,32.933-56.576,115.674-54.785c8.505,0.185,16.486,0.913,23.96,2.072"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" d="M93.981,141.131 c-0.475-2.385-0.725-4.852-0.725-7.377c0-20.711,16.789-37.5,37.5-37.5c2.42,0,4.787,0.229,7.08,0.668"/>
+  <path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" d="M156.528,106.512 c7.223,6.836,11.729,16.513,11.729,27.242c0,20.711-16.789,37.5-37.5,37.5c-10.609,0-20.189-4.405-27.012-11.487"/>
+  <line fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" x1="53.007" y1="210.504" x2="208.507" y2="55.004"/>
+</svg>

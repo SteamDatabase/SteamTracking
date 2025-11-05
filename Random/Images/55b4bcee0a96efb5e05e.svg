@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256">
+  <polyline fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="178.25,197.25 247,197.25 247,82.5 175,10.25 111.5,10.25 111.5,56 "/>
+  <polygon fill="none" stroke-width="12" stroke-linejoin="round" stroke-miterlimit="10" points="155,133 83,60.75 11,60.75 11,247.75 155,247.75 "/>
+  <polyline fill="none" stroke-width="12" stroke-linejoin="round" stroke-miterlimit="10" points="83,60.75 83,133 155,133 "/>
+  <polyline fill="none" stroke-width="12" stroke-linejoin="round" stroke-miterlimit="10" points="175,10.25 175,82.5 247,82.5 "/>
+</svg>

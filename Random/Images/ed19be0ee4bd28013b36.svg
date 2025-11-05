@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 120 100" preserveAspectRatio="none" style="">
+  <path d="M 0,0 L 120,0 L 120, 50 L 100,50 Z" fill="currentColor"/>
+  <path d="M 0,100 L 120,100 L 120,50 L 100,50 Z" fill="currentColor"/>
+</svg>

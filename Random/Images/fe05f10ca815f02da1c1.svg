@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<svg viewBox="0 0 382 382" width="100%" height="100%">
+  <rect width="382" height="382" fill="var(--edit-background)"/>
+  <rect width="382" height="382" fill="var(--gradient-background)" fill-opacity="0.23"/>
+  <rect width="382" height="382" fill=""/>
+  <rect width="382" height="382" fill=""/>
+  <defs>
+    <radialGradient id="" cx="0" cy="0" r="1" gradient-units="userSpaceOnUse" gradientTransform="translate(11 126) rotate(9.77175) scale(182.65 191.735)">
+      <stop stop-color="var(--gradient-left)"/>
+      <stop offset="1" stop-color="var(--gradient-background-left)" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="" cx="0" cy="0" r="1" gradient-units="userSpaceOnUse" gradientTransform="translate(385 148) rotate(-164.809) scale(312.935 328.499)">
+      <stop offset="0.348958" stop-color="var(--gradient-right)"/>
+      <stop offset="1" stop-color="var(--gradient-background-right)" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

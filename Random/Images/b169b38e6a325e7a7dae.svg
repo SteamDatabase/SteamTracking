@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<svg version="1.1" id="base" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="256px" height="256px" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color=""/>
+      <stop offset="100%" stop-color=""/>
+    </linearGradient>
+    <filter id="" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20"/>
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10"/>
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+    </filter>
+  </defs>
+  <path fill="none" stroke="" stroke-width="24" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="10" d="M206.5,45.25L95,210.75l-45.5-63" stroke-dasharray="365.19 365.19" stroke-dashoffset="0.00"/>
+  <path fill="none" opacity=".2" filter="" stroke="" stroke-width="24" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="10" d="M206.5,45.25L95,210.75l-45.5-63" stroke-dasharray="365.19 365.19" stroke-dashoffset="0.00"/>
+</svg>

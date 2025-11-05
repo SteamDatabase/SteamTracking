@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<svg width="" height="" viewBox="0 0 401 399" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect y="13" width="401" height="386" fill="#373C42"/>
+  <rect x="0.5" y="13.5" width="400" height="385" stroke="black" stroke-opacity="0.5"/>
+  <rect x="26" y="33" width="61" height="61" rx="10" fill="#272B30"/>
+  <path d="M57.0246 64.052C63.4696 64.052 68.6942 58.8273 68.6942 52.3823C68.6942 45.9373 63.4696 40.7126 57.0246 40.7126C50.5796 40.7126 45.3549 45.9373 45.3549 52.3823C45.3549 58.8273 50.5796 64.052 57.0246 64.052Z" fill="#444A51"/>
+  <path d="M77.4319 72.8873C76.6734 68.1167 70.0792 66.5175 65.3744 65.0024C63.1235 66.918 60.2118 68.0792 57.0246 68.0792C53.8374 68.0792 50.9262 66.918 48.6753 65.0024C43.97 66.5175 37.3763 68.1167 36.6172 72.8873C35.2667 81.3728 47.8848 86.2873 57.0246 86.2873C66.1648 86.2873 78.7825 81.3728 77.4319 72.8873Z" fill="#444A51"/>
+  <rect x="299" y="50" width="91" height="31.882" rx="3" fill="#272B30"/>
+  <rect x="299" y="87" width="44" height="10" rx="3" fill="#272B30"/>
+  <rect x="346" y="87" width="44" height="10" rx="3" fill="#272B30"/>
+  <rect x="299" y="104.091" width="91" height="240.254" rx="3" fill="#272B30"/>
+  <rect x="103" y="57" width="82" height="6" rx="3" fill="#444A51"/>
+  <rect x="103" y="67" width="82" height="6" rx="3" fill="#444A51"/>
+  <rect x="26" y="117.755" width="260" height="87.6755" rx="3" fill="#272B30"/>
+  <rect x="32" y="182.755" width="246" height="17" rx="3" fill="#262B31"/>
+  <rect x="37" y="185.755" width="21" height="4" rx="2" fill="#373C42"/>
+  <rect x="37" y="192.755" width="12" height="4" rx="2" fill="#373C42"/>
+  <rect x="71" y="185.755" width="21" height="4" rx="2" fill="#373C42"/>
+  <rect x="71" y="192.755" width="12" height="4" rx="2" fill="#373C42"/>
+  <path d="M26 120.755C26 119.098 27.3431 117.755 29 117.755H283C284.657 117.755 286 119.098 286 120.755V131.755H26V120.755Z" fill="#444A51"/>
+  <rect x="35" y="120.755" width="37" height="7" rx="3" fill="#373C42"/>
+  <rect x="103" y="38.0502" width="57" height="11.3864" rx="3" fill="#4F555C"/>
+  <rect x="299" y="32" width="35" height="11" rx="3" fill="#4F555C"/>
+  <rect x="26" y="214.54" width="260" height="167.381" rx="3" fill="#272B30"/>
+  <rect x="32" y="358.54" width="246" height="17" rx="3" fill="#262B31"/>
+  <rect x="37" y="361.54" width="21" height="4" rx="2" fill="#373C42"/>
+  <rect x="37" y="368.54" width="12" height="4" rx="2" fill="#373C42"/>
+  <rect x="71" y="361.54" width="21" height="4" rx="2" fill="#373C42"/>
+  <rect x="71" y="368.54" width="12" height="4" rx="2" fill="#373C42"/>
+  <path d="M26 217.54C26 215.883 27.3431 214.54 29 214.54H283C284.657 214.54 286 215.883 286 217.54V228.54H26V217.54Z" fill="#444A51"/>
+  <rect x="35" y="217.54" width="37" height="7" rx="3" fill="#373C42"/>
+  <circle cx="347.5" cy="37.5" r="8.5" stroke="#4F555C" stroke-width="2"/>
+  <rect x="41" y="144" width="31" height="31" rx="5" fill="#373C42"/>
+  <rect x="36" y="241" width="111" height="31" rx="5" fill="#373C42"/>
+  <rect x="36" y="283" width="111" height="31" rx="5" fill="#373C42"/>
+  <rect x="161" y="241" width="111" height="31" rx="5" fill="#373C42"/>
+  <rect x="161" y="283" width="111" height="31" rx="5" fill="#373C42"/>
+  <rect x="91" y="144" width="31" height="31" rx="5" fill="#373C42"/>
+  <rect x="141" y="144" width="31" height="31" rx="5" fill="#373C42"/>
+  <rect x="191" y="144" width="31" height="31" rx="5" fill="#373C42"/>
+  <rect x="241" y="144" width="31" height="31" rx="5" fill="#373C42"/>
+  <rect y="13" width="401" height="382" fill="var(--gradient-background)" fill-opacity="0.23"/>
+  <rect y="13" width="401" height="382" fill=""/>
+  <rect y="13" width="401" height="382" fill=""/>
+  <defs>
+    <radialGradient id="" cx="0" cy="0" r="1" gradient-units="userSpaceOnUse" gradientTransform="translate(11 126) rotate(9.77175) scale(182.65 191.735)">
+      <stop stop-color="var(--gradient-left)"/>
+      <stop offset="1" stop-color="var(--gradient-background-left)" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="" cx="0" cy="0" r="1" gradient-units="userSpaceOnUse" gradientTransform="translate(385 148) rotate(-164.809) scale(312.935 328.499)">
+      <stop offset="0.348958" stop-color="var(--gradient-right)"/>
+      <stop offset="1" stop-color="var(--gradient-background-right)" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

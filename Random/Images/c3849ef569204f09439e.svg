@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none">
+  <ellipse fill="currentColor" cx="18" cy="13.5" rx="18" ry="11.25"/>
+  <path fill="currentColor" d="M23 19H14V7H16.8149V16.7371H23V19Z"/>
+  <path fill="currentColor" d="M11 26V31.601C11 32.926 12.0446 34 13.3333 34H22.6667C23.9554 34 25 32.926 25 31.601V26C22.7984 26.523 20.4394 26.8029 18 26.8029C15.5606 26.8029 13.2016 26.523 11 26Z"/>
+</svg>

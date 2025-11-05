@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none">
+  <g>
+    <path fill="currentColor" d="M23.297 5.725 19.69 9.33l4.446 4.446 3.607-3.607-4.446-4.445ZM17.475 11.56 5.615 23.413l-1.312 5.76 5.76-1.312 11.852-11.859-4.44-4.44Z"/>
+    <g clip-path="">
+      <path fill="currentColor" d="M25.132 31.527V26.42h-5.109v-1.965h5.109v-5.108h1.965v5.108h5.108v1.965h-5.108v5.108h-1.965Z"/>
+    </g>
+  </g>
+  <defs>
+    <clipPath id="">
+      <path fill="currentColor" transform="translate(18.844 18.168)" d="M0 0h14.146v14.146H0z"/>
+    </clipPath>
+  </defs>
+</svg>

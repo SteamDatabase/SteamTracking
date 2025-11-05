@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <line x1="1" y1="30" x2="32" y2="30" stroke="white" stroke-width="2" stroke-dasharray="2 2"/>
+  <path d="M36 30L30.75 33.4641L30.75 26.5359L36 30Z" fill="white"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M36 4H12V20H21V24H28V20H36V4Z" fill="white"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 20V22V24H10H13H15V22H13H12H10V20V18H8H5H2V6H5H8H10V4H8H2H0V6V18V20H2H6H8Z" fill="white"/>
+</svg>

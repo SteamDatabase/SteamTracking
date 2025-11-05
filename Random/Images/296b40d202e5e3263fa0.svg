@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg fill="none" width="68" height="68" viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg">
+  <path d="M57.2981 10.8369L56.9021 9.61803C56.3034 7.77541 53.6966 7.77541 53.0979 9.61803L52.7019 10.8369H51.4203C49.4828 10.8369 48.6773 13.3161 50.2447 14.4549L51.2815 15.2082L50.8855 16.4271C50.2868 18.2697 52.3958 19.8019 53.9632 18.6631L55 17.9098L56.0368 18.6631C57.6042 19.8019 59.7132 18.2697 59.1145 16.4271L58.7185 15.2082L59.7553 14.4549C61.3227 13.3161 60.5172 10.8369 58.5797 10.8369L57.2981 10.8369Z" stroke="currentColor" fill="none" stroke-width="2"/>
+  <rect x="1" y="1" width="66" height="66" rx="9" stroke="currentColor" fill="none" stroke-width="2"/>
+  <rect x="7" y="7" width="14" height="14" rx="3" stroke="currentColor" fill="none" stroke-width="2"/>
+  <rect x="7" y="26" width="54" height="14" rx="3" stroke="currentColor" fill="none" stroke-width="2"/>
+  <rect x="7" y="46" width="54" height="14" rx="3" stroke="currentColor" fill="none" stroke-width="2"/>
+  <line x1="26" y1="17" x2="39" y2="17" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="12" x2="45" y2="12" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"/>
+</svg>
