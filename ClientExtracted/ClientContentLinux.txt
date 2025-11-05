@@ -12989,9 +12989,6 @@ b8796061 ubuntu12_64/locales/ur.pak
 18210bd7 ubuntu12_64/locales/zh-CN.pak
 f8d0ef5a ubuntu12_64/locales/zh-TW.pak
 419569b5 ubuntu12_64/resources.pak
-5034bf59 ubuntu12_64/steam-runtime-sniper.sh
-fa3b9500 ubuntu12_64/steam-runtime-sniper.tar.xz
-e68bee8a ubuntu12_64/steam-runtime-sniper.version.txt
 8d42d03e ubuntu12_64/steamoverlayvulkanlayer.so
 5af00a79 ubuntu12_64/steamwebhelper
 c890f002 ubuntu12_64/steamwebhelper.sh
