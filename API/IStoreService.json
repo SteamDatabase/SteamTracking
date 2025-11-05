@@ -2,6 +2,32 @@
     "name": "IStoreService",
     "methods": [
         {
+            "name": "GetGamesFollowed",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get the list of games a user is following",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "GetGamesFollowedCount",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get the number of games a user is following",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "GetAppList",
             "version": 1,
             "httpmethod": "GET",
