@@ -732,6 +732,7 @@ a.nohover, a.nohover:hover
 	min-height: 30px;
 	overflow: hidden;
 	word-wrap: break-word;
+	position: relative;
 }
 
 .blotter_group_announcement_content img
