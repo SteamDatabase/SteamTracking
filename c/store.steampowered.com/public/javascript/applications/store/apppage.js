@@ -194,6 +194,10 @@
         TheaterModeHeader: "_1i4ygMVdcBqF0ARYxp_tk5",
         TheaterModeFooter: "_3KpVJvYK0Kg4JlezHipbO-",
         TheaterModeFrame: "_3xAL780ykDyLO-xDuTgjHr",
+        Center: "_3KPRxtJAJXmOtkgDn495Ra",
+        Right: "_1-rpRk5iDBLQ9Yr8gAOLVg",
+        SkeletonViewArea: "_18mK2DQSWK6rhEoF3BiGlf",
+        TheaterMode: "_2M5VHVoDj7cEeG_Sq9Nfxp",
         ItemViewArea: "_7uoIsggaW3jDWxwMtlOy8",
         FullscreenArrow: "KkkFLdIE4YTPfdeoIQoo2",
         Visible: "_3q0hI5sbgcmpVuwBKatnhv",
@@ -208,6 +212,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        StripSkeleton: "_10CMdNEAjTNQ2B8FYmuDDv",
+        TheaterMode: "_2Cx8GckLIvEMflF7fc-JYz",
+        Items: "_3RaF9xdu3xYnya4v856Hd2",
+        Scrollbar: "_1KWgAv5EXrGMLZ7T77kOxk",
+        Strip: "_3iK8kx5bYvc5UXmW7XZh5V",
         StripItems: "_21pEuTVe17EOUzkHK8ZGnJ",
         Item: "deMuRscIE7upszCfACmbK",
         PlayIcon: "_3p2KFN7o1Z8EV4_sbV5b25",
@@ -4592,21 +4601,38 @@
               refThumb: _,
               fnRegisterItemElement: _,
             };
-          })();
+          })(),
+          _ = "theater" == (0, _._)().strMode;
         return _.createElement(
-          "div",
-          {
-            className: _.Strip,
-          },
-          _.createElement(_, {
-            refStrip: __webpack_require__,
-            items: _,
-            registerItemElement: _,
-          }),
-          _.createElement(_, {
-            refTrack: _,
-            refThumb: _,
-          }),
+          _.Fragment,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.StripSkeleton, _ && _.TheaterMode),
+            },
+            _.createElement("div", {
+              className: _.Items,
+            }),
+            _.createElement("div", {
+              className: _.Scrollbar,
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.Strip, _ && _.TheaterMode),
+            },
+            _.createElement(_, {
+              refStrip: __webpack_require__,
+              items: _,
+              registerItemElement: _,
+            }),
+            _.createElement(_, {
+              refTrack: _,
+              refThumb: _,
+            }),
+          ),
         );
       }
       function _(_) {
@@ -4757,11 +4783,11 @@
         _ = __webpack_require__("chunkid");
       const _ = 5e3;
       function _(_) {
-        let { trailers: _, screenshots: __webpack_require__ } = _,
+        let { appName: _, trailers: __webpack_require__, screenshots: _ } = _,
           _ =
             (0, _._)(`(max-width: ${_.storeNarrowResponsiveWidth})`) ||
             _._.IN_MOBILE_WEBVIEW,
-          _ = _(_, __webpack_require__);
+          _ = _(__webpack_require__, _);
         return (
           (function (_) {
             let _ = _.length;
@@ -4792,6 +4818,7 @@
                       _,
                       null,
                       _.createElement(_, {
+                        appName: _,
                         items: _,
                       }),
                       _.createElement(_, {
@@ -4892,7 +4919,7 @@
         );
       }
       function _(_) {
-        let { items: _ } = _,
+        let { appName: _, items: __webpack_require__ } = _,
           _ = _(),
           _ = (function () {
             let _ = _(),
@@ -4912,6 +4939,7 @@
             return _;
           })(),
           _ = (0, _._)(),
+          _ = "theater" == _.strMode,
           [_, _] = (function () {
             let [_, _] = (0, _._)(),
               _ = (0, _.useRef)({
@@ -4990,7 +5018,7 @@
             return (0, _._)(_);
           })(_),
           _ = (0, _._)(_.refTheater, _),
-          _ = _.map((_) =>
+          _ = __webpack_require__.map((_) =>
             "screenshot" == _.type
               ? _.createElement(_, {
                   key: _.key,
@@ -5007,84 +5035,137 @@
                   })
                 : null,
           ),
-          _ = _.strPreviousID
-            ? () => __webpack_require__.fnSetActive(_.strPreviousID)
-            : null,
-          _ = _.strNextID
-            ? () => __webpack_require__.fnSetActive(_.strNextID)
-            : null;
+          _ = _.strPreviousID ? () => _.fnSetActive(_.strPreviousID) : null,
+          _ = _.strNextID ? () => _.fnSetActive(_.strNextID) : null;
         return _.createElement(
-          "dialog",
-          {
-            ref: _,
-            className: _.TheaterDialog,
-            ..._,
-          },
+          _.Fragment,
+          null,
           _.createElement(
-            "div",
+            _,
             {
-              className: _.TheaterModeFrame,
+              ref: _,
+              className: _.TheaterDialog,
+              ..._,
             },
-            _.createElement(_, null),
             _.createElement(
               "div",
               {
-                ref: _.refFullscreen,
-                className: _.ItemViewArea,
-                ..._,
-                onKeyDown: _,
-                tabIndex: 0,
+                className: _.TheaterModeFrame,
               },
-              _,
+              _.createElement(_, {
+                appName: _,
+              }),
               _.createElement(
                 "div",
                 {
-                  className: (0, _._)(
-                    _.FullscreenArrow,
-                    _ && _.Visible,
-                    _.Previous,
-                  ),
-                  onClick: _,
-                  "data-keepcontrols": !0,
+                  ref: _.refFullscreen,
+                  className: _.ItemViewArea,
+                  ..._,
+                  onKeyDown: _,
+                  tabIndex: 0,
                 },
-                _.createElement(_, {
-                  direction: "left",
-                }),
+                _,
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(
+                      _.FullscreenArrow,
+                      _ && _.Visible,
+                      _.Previous,
+                    ),
+                    onClick: _,
+                    "data-keepcontrols": !0,
+                  },
+                  _.createElement(_, {
+                    direction: "left",
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(
+                      _.FullscreenArrow,
+                      _ && _.Visible,
+                      _.Next,
+                    ),
+                    onClick: _,
+                    "data-keepcontrols": !0,
+                  },
+                  _.createElement(_, {
+                    direction: "right",
+                  }),
+                ),
               ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _.FullscreenArrow,
-                    _ && _.Visible,
-                    _.Next,
-                  ),
-                  onClick: _,
-                  "data-keepcontrols": !0,
-                },
-                _.createElement(_, {
-                  direction: "right",
-                }),
-              ),
+              _.createElement(_, {
+                items: __webpack_require__,
+                activeItem: _.strActiveID,
+              }),
             ),
-            _.createElement(_, {
-              items: _,
-              activeItem: _.strActiveID,
-            }),
           ),
+          _.createElement("div", {
+            className: (0, _._)(_.SkeletonViewArea, _ && _.TheaterMode),
+          }),
         );
       }
       function _(_) {
-        let _ = (0, _._)(),
+        let { ref: _, children: __webpack_require__, ..._ } = _,
+          _ = (0, _._)(),
+          _ = _.strMode,
+          _ = (0, _._)(_, "none"),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.target === _.currentTarget && _();
+            },
+            [_],
+          );
+        return (
+          (0, _.useEffect)(() => {
+            if ("theater" != _) return;
+            let _ = (_) => {
+              "Escape" != _.key || _.repeat || _();
+            };
+            return (
+              window.addEventListener("keydown", _),
+              () => window.removeEventListener("keydown", _)
+            );
+          }, [_, _]),
+          _.createElement(
+            "div",
+            {
+              ref: _,
+              ..._,
+              popover: "manual",
+              onClick: _,
+            },
+            __webpack_require__,
+          )
+        );
+      }
+      function _(_) {
+        let { appName: _ } = _,
+          _ = (0, _._)(),
           _ = (0, _._)(_, "none");
         return _.createElement(
           "div",
           {
             className: _.TheaterModeHeader,
           },
-          _.createElement(_.tmm, {
-            onClick: _,
-          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Center,
+            },
+            (0, _._)("#GameHighlight_Theater_Header", _),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Right,
+            },
+            _.createElement(_.tmm, {
+              onClick: _,
+            }),
+          ),
         );
       }
       function _(_) {

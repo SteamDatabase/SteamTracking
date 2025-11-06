@@ -1988,35 +1988,43 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 ._1Aoum4NTlVVCFiiAiXQbkQ {
   position: relative;
 }
-._2LTQCvpGyFO806nkXurNE3:not([open]) {
+._2LTQCvpGyFO806nkXurNE3:not(:popover-open) {
   display: contents;
 }
-._2LTQCvpGyFO806nkXurNE3:not([open]) ._1i4ygMVdcBqF0ARYxp_tk5,
-._2LTQCvpGyFO806nkXurNE3:not([open]) ._3KpVJvYK0Kg4JlezHipbO- {
+._2LTQCvpGyFO806nkXurNE3:not(:popover-open) ._1i4ygMVdcBqF0ARYxp_tk5,
+._2LTQCvpGyFO806nkXurNE3:not(:popover-open) ._3KpVJvYK0Kg4JlezHipbO- {
   display: none;
 }
-._2LTQCvpGyFO806nkXurNE3[open] {
+._2LTQCvpGyFO806nkXurNE3:popover-open {
   inset: 0;
   background: transparent;
-  margin: auto;
   border: none;
   display: flex;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
 }
-._2LTQCvpGyFO806nkXurNE3[open] ._3xAL780ykDyLO-xDuTgjHr {
+._2LTQCvpGyFO806nkXurNE3:popover-open ._3xAL780ykDyLO-xDuTgjHr {
   width: min(95vw, (95vh - 34px - 34px) * 600 / 338);
   margin: 0 auto;
-}
-._2LTQCvpGyFO806nkXurNE3::backdrop {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 ._1i4ygMVdcBqF0ARYxp_tk5 {
   background-color: #25282e;
   height: 34px;
+  color: #8f98a0;
+  font-size: 13px;
   padding: 0px 6px;
   display: flex;
   align-items: center;
   justify-content: right;
+}
+._1i4ygMVdcBqF0ARYxp_tk5 ._3KPRxtJAJXmOtkgDn495Ra {
+  flex: 1;
+  text-align: center;
+}
+._1i4ygMVdcBqF0ARYxp_tk5 ._1-rpRk5iDBLQ9Yr8gAOLVg {
+  flex: 0;
 }
 ._1i4ygMVdcBqF0ARYxp_tk5 svg {
   width: 18px;
@@ -2029,12 +2037,20 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 ._3KpVJvYK0Kg4JlezHipbO- {
   background-color: #25282e;
   height: 34px;
-  color: #8f98a0ab;
+  color: #8f98a0;
   font-size: 13px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+._18mK2DQSWK6rhEoF3BiGlf {
+  display: none;
+  aspect-ratio: 600 / 338;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+._18mK2DQSWK6rhEoF3BiGlf._2M5VHVoDj7cEeG_Sq9Nfxp {
+  display: block;
 }
 ._7uoIsggaW3jDWxwMtlOy8 {
   overflow: hidden;
@@ -2108,6 +2124,24 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   display: flex;
   justify-content: flex-end;
   gap: 14px;
+}
+._10CMdNEAjTNQ2B8FYmuDDv {
+  display: none;
+}
+._10CMdNEAjTNQ2B8FYmuDDv._2Cx8GckLIvEMflF7fc-JYz {
+  display: block;
+}
+._10CMdNEAjTNQ2B8FYmuDDv ._3RaF9xdu3xYnya4v856Hd2 {
+  margin: 6px 0px;
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+._10CMdNEAjTNQ2B8FYmuDDv ._1KWgAv5EXrGMLZ7T77kOxk {
+  height: 18px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+._3iK8kx5bYvc5UXmW7XZh5V._2Cx8GckLIvEMflF7fc-JYz {
+  display: none;
 }
 ._21pEuTVe17EOUzkHK8ZGnJ {
   position: relative;
