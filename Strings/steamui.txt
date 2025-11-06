@@ -1050,6 +1050,7 @@
 #3CScs
 #:*S8,}gNzl
 #<20CJSMethodCallHandlerI23CSteamUIMusicControllerJEE
+#Authentication\RememberedMachineID
 #CInstallSteamServiceDialog
 #ControllerBinding_Incompatible_Save
 #ControllerBinding_Offline_Save
@@ -12020,7 +12021,6 @@ ${LANGUAGE}
 5Cloud
 5EPX_f
 5F16IX11EventHandler
-5H,K
 5Itc
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 5O Z
@@ -13951,7 +13951,6 @@ Authentication failed, disconnecting.\n
 AuthenticationFailed
 AuthenticationResult
 AuthenticationSupport
-Authentication\RememberedMachineID
 Authority Information Access
 Authorization
 Authorize
@@ -17706,8 +17705,9 @@ Compute and print SHA of file on disk
 ComputeCumulativeSumRow_C
 ComputeNextPowerState: active: %d < %d
 ComputeNextPowerState: active: %d < %d (%s)
-ComputeNextPowerState: finishing active downloads before sleep: %d
+ComputeNextPowerState: finishing active downloads before sleep
 ComputeNextPowerState: finishing downloads with screen on
+ComputeNextPowerState: going to sleep after downloads finished
 ComputeNextPowerState: idle low battery limit: %d / %s / %d
 ComputeNextPowerState: shutting down
 ComputeNextPowerState: skipping: suppressed: %d
@@ -25667,7 +25667,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov  4 2025 20:42:22
+Nov  5 2025 21:18:55
 November
 NrZl
 NullMetrics()
@@ -28429,6 +28429,7 @@ SetSortColumn
 SetSpeed
 SetState
 SetSteamDeckKeyboardSkin
+SetSteamID
 SetSteamInfo
 SetSteamTVUserSettings
 SetString
@@ -38963,7 +38964,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenn\rn
+ggenn
 ghost_
 gidlist
 gidparentcomment

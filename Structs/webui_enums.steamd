@@ -1997,15 +1997,6 @@ enum UnnamedEnum2c41fa064d91dbff
 	k_EPushToMute = 2;
 }
 
-enum UnnamedEnum2c4894a4e2bdb633
-{
-	AwaitingHostWindow = 0;
-	PendingRequest = 1;
-	Shown = 2;
-	Closed = 3;
-	Failed = 4;
-}
-
 enum UnnamedEnum2c763df13954ae16
 {
 	Unknown = 0;
@@ -2164,6 +2155,15 @@ enum UnnamedEnum3864c06f550e20d6
 	Ok = 2;
 	Good = 3;
 	Excellent = 4;
+}
+
+enum UnnamedEnum39f674ba4e63a642
+{
+	AwaitingHostWindow = 0;
+	PendingInitialRequest = 1;
+	Shown = 2;
+	Closed = 3;
+	Failed = 4;
 }
 
 enum UnnamedEnum3a1537825edcb481
