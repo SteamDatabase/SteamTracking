@@ -49707,6 +49707,11 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  reason: {
+                    _: 5,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m
