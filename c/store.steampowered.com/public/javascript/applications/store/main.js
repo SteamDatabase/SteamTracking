@@ -217,29 +217,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        storeMenuResponsiveModeWidth: "730px",
-        "duration-app-launch": "800ms",
-        SuppressScrollOnBody: "N96uqBvXFjiVSjfFxbWZf",
-        TopDestinations: "_2EiBN5hdmkWG6sxpKPI7h3",
-        BrowseLinkSection: "_3U3wemOcIDtrq9u0OXZK9_",
-        BrowseLinkMargin: "CVJ9YmKCl765zaUkK70rp",
-        BrowseContentGrid: "b9zZcpB33Xtueo9DrlQUu",
-        BrowseLinkGridLarge: "_2Y2XG62Y9H3lwtNEMo7_Xc",
-        BrowseLinkGridSmall: "_3u_CM80jtyanWpFn6InTD4",
-        BrowseLinkColumn: "_10JXIJf9oWVtqdLy_DgCTS",
-        MobileVisible: "_3a_Rx4hZXRE7PwvkxIwgoc",
-        BrowseLinkGrid: "ZASQBzr8famOwE57bX0Yx",
-        BrowseLinkButton: "l-PuR7PfJfVDEMzpGW78f",
-        Label: "_1ELX9bTITFJpYsMBCh_y7F",
-        ButtonLabel: "NdoJh7Azzkke9fp3Hbp5W",
-        SubLabel: "_1QASDCrIOh5w3XlgdJQWOc",
-        CapsuleGrid: "_1BL8JffKEwSMn-Zz6nDwMz",
-        CapsuleRow: "_2V-CuAswjlcKsyfPQ1-v3",
-        BrowseButtonGrid: "_2vZbFQSo3_g5s8Susyo1Wu",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         narrowWidth: "500px",
         "duration-app-launch": "800ms",
         storeMenuResponsiveModeWidth: "730px",
@@ -76926,50 +76903,26 @@
       }
       function _() {
         const _ = (0, _._)();
-        _();
-        return _
-          ? _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                null,
-                _.createElement(_, null),
-                _.createElement(_, null),
-              ),
-            )
-          : _.createElement(
-              _,
-              null,
-              _.createElement(
-                _,
-                null,
-                _.createElement(_, null),
-                _.createElement(_, null),
-              ),
-            );
+        return _.createElement(
+          _,
+          null,
+          _.createElement(
+            _,
+            null,
+            _.createElement(_, null),
+            _ ? _.createElement(_, null) : _.createElement(_, null),
+          ),
+        );
       }
       const _ = {
         include_assets: !0,
       };
       function _() {
-        const _ = (0, _._)(),
-          _ = _(),
-          _ = !_ && !_;
-        _._.EREALM, _._.k_ESteamRealmChina;
         return _.createElement(
           _,
           {
             className: _.BrowseLinkMargin,
           },
-          _ &&
-            _.createElement(
-              _,
-              {
-                href: `${_._.STORE_BASE_URL}/`,
-              },
-              _("#Menu_Popover_StoreHome"),
-            ),
           _.createElement(
             _,
             {
@@ -77021,7 +76974,7 @@
         const _ = (0, _._)(),
           _ = _(),
           _ = !_ && !_,
-          { data: _ } = (_._.EREALM, _._.k_ESteamRealmChina, _()),
+          { data: _ } = _(),
           _ = _?.get("freetoplay"),
           _ = _?.get("demos");
         return _.createElement(
@@ -77202,6 +77155,7 @@
             },
             _,
           ),
+          _(),
           _(),
           null
         );
@@ -77766,605 +77720,6 @@
         });
       var _ = __webpack_require__("chunkid");
       function _() {
-        return _.createElement(
-          _,
-          null,
-          _.createElement(
-            _,
-            null,
-            _.createElement(_, null),
-            _.createElement(_, null),
-          ),
-        );
-      }
-      const _ = {
-        include_assets: !0,
-      };
-      function _() {
-        const _ = (0, _._)(),
-          _ = _(),
-          _ = !_ && !_;
-        _._.EREALM, _._.k_ESteamRealmChina;
-        return _.createElement(
-          _,
-          {
-            className: _.BrowseLinkMargin,
-          },
-          _ &&
-            _.createElement(
-              _,
-              {
-                href: `${_._.STORE_BASE_URL}/`,
-              },
-              _("#Menu_Popover_StoreHome"),
-            ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}charts/`,
-              globalOnly: !0,
-            },
-            _("#Menu_Popover_SteamCharts"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}explore/upcoming`,
-            },
-            _("#Menu_Popover_Upcoming"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}points/`,
-              globalOnly: !0,
-            },
-            _("#Menu_Popover_PointsShop"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
-              globalOnly: !0,
-            },
-            _("#Menu_Popover_GiftCards"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}news/`,
-            },
-            _("#Menu_Popover_NewsAndUpdates"),
-          ),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}account/preferences/`,
-            },
-            _("#Menu_Popover_Preferences"),
-          ),
-        );
-      }
-      function _() {
-        return (
-          _(),
-          _(
-            {
-              count: 10,
-            },
-            _,
-          ),
-          _(
-            {
-              count: 10,
-            },
-            _,
-          ),
-          _(),
-          null
-        );
-      }
-      const _ = _._();
-      function _() {
-        const { data: _ } = _(),
-          _ = _?.get("freetoplay"),
-          _ = _?.get("demos"),
-          _ = (0, _._)(),
-          _ = _();
-        return _
-          ? _.createElement(
-              _,
-              {
-                className: _.TopDestinations,
-              },
-              _.createElement(_, null, _("#Menu_Section_Browse_BrowseTop")),
-              _.createElement(
-                _._,
-                {
-                  className: _.BrowseContentGrid,
-                },
-                _.createElement(
-                  _,
-                  null,
-                  _.createElement(
-                    _,
-                    {
-                      href: "",
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ButtonLabel,
-                      },
-                      _("#Menu_Popover_StoreHome"),
-                    ),
-                  ),
-                  _.createElement(
-                    _,
-                    {
-                      href: "greatondeck/",
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ButtonLabel,
-                      },
-                      _("#Menu_Popover_GreatonDeck"),
-                    ),
-                  ),
-                  _.createElement(
-                    _,
-                    {
-                      href: "explore/new/",
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ButtonLabel,
-                      },
-                      _("#Menu_Section_Browse_NewReleases"),
-                    ),
-                  ),
-                  _.createElement(_, null),
-                ),
-                _.createElement(
-                  _,
-                  null,
-                  _.createElement(_, null),
-                  _.createElement(_, null),
-                ),
-              ),
-            )
-          : _
-            ? _.createElement(
-                _,
-                {
-                  className: _.TopDestinations,
-                },
-                _.createElement(_, null, _("#Menu_Section_Browse_BrowseTop")),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.BrowseContentGrid,
-                  },
-                  _.createElement(
-                    _,
-                    null,
-                    _.createElement(
-                      _,
-                      {
-                        href: "",
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ButtonLabel,
-                        },
-                        _("#Menu_Popover_StoreHome"),
-                      ),
-                    ),
-                    _.createElement(
-                      _,
-                      {
-                        href: "explore/new/",
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ButtonLabel,
-                        },
-                        _("#Menu_Section_Browse_NewReleases"),
-                      ),
-                    ),
-                    _ &&
-                      _.createElement(
-                        _,
-                        {
-                          href: _.url_path,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.ButtonLabel,
-                          },
-                          _("#Menu_Section_Browse_FreeToPlay"),
-                        ),
-                      ),
-                    _ &&
-                      _.createElement(
-                        _,
-                        {
-                          href: _.url_path,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.ButtonLabel,
-                          },
-                          _.display_name,
-                        ),
-                      ),
-                  ),
-                  _.createElement(
-                    _,
-                    null,
-                    _.createElement(_, null),
-                    _.createElement(_, null),
-                  ),
-                ),
-              )
-            : _.createElement(
-                _,
-                {
-                  className: _.TopDestinations,
-                },
-                _.createElement(_, null, _("#Menu_Section_Browse_BrowseTop")),
-                _.createElement(
-                  _._,
-                  {
-                    className: _.BrowseContentGrid,
-                  },
-                  _.createElement(
-                    _,
-                    null,
-                    _.createElement(_, null),
-                    _.createElement(_, null),
-                  ),
-                  _.createElement(
-                    _,
-                    null,
-                    _.createElement(
-                      _,
-                      {
-                        href: "explore/new/",
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ButtonLabel,
-                        },
-                        _("#Menu_Section_Browse_NewReleases"),
-                      ),
-                    ),
-                    _.createElement(_, null),
-                    _ &&
-                      _.createElement(
-                        _,
-                        {
-                          href: _.url_path,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.ButtonLabel,
-                          },
-                          _("#Menu_Section_Browse_FreeToPlay"),
-                        ),
-                      ),
-                    _ &&
-                      _.createElement(
-                        _,
-                        {
-                          href: _.url_path,
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: _.ButtonLabel,
-                          },
-                          _.display_name,
-                        ),
-                      ),
-                  ),
-                ),
-              );
-      }
-      const _ = 3,
-        _ = 3;
-      function _(_) {
-        const { rgItemIDs: _ } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          { data: _ } = (0, _._)({
-            queryKey: ["CapsuleGrid", _],
-            queryFn: async () =>
-              (
-                await Promise.all(
-                  _.map((_) => __webpack_require__.fetchQuery((0, _._)(_, _))),
-                )
-              ).filter(Boolean),
-          }),
-          _ = _.useMemo(() => {
-            if (!_ || !_.length) return;
-            const _ = _.map((_) => (0, _._)(_, "header")).filter(Boolean),
-              _ = _ * _,
-              _ = [],
-              _ = _._(_);
-            for (; _.length < _; )
-              __webpack_require__.push(..._._(_.slice(0, _ - _.length), 0, _));
-            const _ = [];
-            for (let _ = 0; _ < _; _++)
-              _.push(__webpack_require__.slice(_ * _, (_ + 1) * _));
-            return _;
-          }, [_]);
-        return _
-          ? _.createElement(
-              "div",
-              {
-                className: _.CapsuleGrid,
-              },
-              _.map((_, _) =>
-                _.createElement(
-                  "div",
-                  {
-                    key: _,
-                    className: _.CapsuleRow,
-                  },
-                  _.map((_, _) =>
-                    _.createElement("img", {
-                      key: _,
-                      src: _,
-                      alt: "",
-                    }),
-                  ),
-                ),
-              ),
-            )
-          : null;
-      }
-      function _() {
-        const { data: _ } = _(
-          {
-            count: 10,
-          },
-          _,
-        );
-        let _ = "charts/topselling";
-        return (
-          _._.EREALM == _._.k_ESteamRealmChina &&
-            (_ = "search/?filter=topsellers"),
-          _.createElement(
-            _,
-            {
-              label: _("#Menu_Section_Browse_TopSellers"),
-              href: _,
-            },
-            _ &&
-              _.createElement(_, {
-                rgItemIDs: _.rgItemIDs,
-              }),
-          )
-        );
-      }
-      function _() {
-        const { data: _ } = _(
-          {
-            count: 10,
-          },
-          _,
-        );
-        return _.createElement(
-          _,
-          {
-            label: _("#Menu_Section_Browse_Discounts"),
-            href: "specials/",
-          },
-          _ &&
-            _.createElement(_, {
-              rgItemIDs: _.rgItemIDs,
-            }),
-        );
-      }
-      function _() {
-        const { data: _ } = _(),
-          _ = _ && _ > 0 ? "wishlist/?min_discount=any" : "wishlist/";
-        return _.createElement(
-          _,
-          {
-            href: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.ButtonLabel,
-            },
-            _.createElement(
-              "div",
-              null,
-              _("#Menu_Section_Browse_Discounts_YourWishlist"),
-              void 0 !== _ &&
-                _ > 0 &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SubLabel,
-                  },
-                  _(
-                    "#Menu_Section_Browse_Discounts_YourWishlist_Discounts",
-                    _.toLocaleString(),
-                  ),
-                ),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { children: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            "flow-children": "column",
-            navEntryPreferPosition: _._.MAINTAIN_Y,
-            className: _()(_.BrowseLinkGrid, _.BrowseLinkGridLarge),
-          },
-          _,
-        );
-      }
-      function _(_) {
-        const { children: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            "flow-children": "grid",
-            navEntryPreferPosition: _._.MAINTAIN_Y,
-            className: _()(
-              _.BrowseLinkGrid,
-              _.BrowseLinkGridSmall,
-              _.MobileVisible,
-            ),
-          },
-          _,
-        );
-      }
-      function _(_) {
-        const { label: _, href: __webpack_require__, children: _ } = _,
-          _ = (0, _._)(`${_._.STORE_BASE_URL}${__webpack_require__}`);
-        return _.createElement(
-          _._,
-          {
-            className: _.BrowseLinkButton,
-            href: _,
-          },
-          _,
-          _ &&
-            _.createElement(
-              "span",
-              {
-                className: _.Label,
-              },
-              _,
-            ),
-        );
-      }
-      function _(_) {
-        const { label: _, href: __webpack_require__, children: _ } = _,
-          { data: _ } = _(
-            {
-              count: 10,
-            },
-            _,
-          ),
-          _ = (0, _._)(`${_._.STORE_BASE_URL}${__webpack_require__}`);
-        return _.createElement(
-          _._,
-          {
-            className: _.BrowseLinkButton,
-            href: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.BrowseButtonGrid,
-            },
-            " ",
-            _ &&
-              _.createElement(_, {
-                rgItemIDs: _.rgItemIDs,
-              }),
-          ),
-          _,
-          _ &&
-            _.createElement(
-              "span",
-              {
-                className: _.Label,
-              },
-              _,
-            ),
-        );
-      }
-      _.memo(function (_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 31 30",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M11.8667 20.8749L14.0834 17.7416V28.3749H5.75004V20.8749H11.8667ZM19.6167 20.8749L17.4167 17.7416V28.3749H25.75V20.8749H19.6167ZM21.575 17.5416H29.9167L25.75 11.7083H17.4167L21.575 17.5416ZM14.075 11.7083H5.75004L1.58337 17.5416H9.91671L14.075 11.7083ZM16.9917 1.70825H14.4917V5.45825C14.4917 5.62311 14.5243 5.78634 14.5876 5.93854C14.651 6.09074 14.7438 6.22891 14.8608 6.3451C14.9777 6.46128 15.1165 6.55318 15.2691 6.6155C15.4217 6.67783 15.5852 6.70935 15.75 6.70825C16.0816 6.70825 16.3995 6.57656 16.6339 6.34214C16.8683 6.10772 17 5.78977 17 5.45825L16.9917 1.70825ZM23.825 5.38325L21.825 3.86659L19.975 6.31658C19.8744 6.44714 19.8005 6.59633 19.7577 6.75555C19.715 6.91477 19.7041 7.08088 19.7258 7.24431C19.7475 7.40774 19.8013 7.56527 19.8841 7.70782C19.9669 7.85037 20.0771 7.97513 20.2084 8.07492C20.4739 8.27518 20.8079 8.36218 21.1374 8.31689C21.4669 8.27161 21.765 8.09772 21.9667 7.83325L23.825 5.38325ZM11.5084 6.31658L9.65837 3.86659L7.65837 5.38325L9.51671 7.83325C9.71836 8.09772 10.0165 8.27161 10.346 8.31689C10.6755 8.36218 11.0095 8.27518 11.275 8.07492C11.4063 7.97513 11.5165 7.85037 11.5993 7.70782C11.6821 7.56527 11.7359 7.40774 11.7576 7.24431C11.7793 7.08088 11.7684 6.91477 11.7257 6.75555C11.6829 6.59633 11.609 6.44714 11.5084 6.31658Z",
-          }),
-        );
-      }),
-        _.memo(function (_) {
-          return _.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 30 30",
-              fill: "none",
-              ..._,
-            },
-            _.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M28.1504 16.0166L16.0166 28.1504L3.33301 15.4668V3.33301H15.4668L28.1504 16.0166ZM12.4023 11.1221L8.33301 11.6387L11.3105 14.4004L10.5605 18.333L14.167 16.4268L17.7734 18.333L17.0264 14.4004L20 11.6387L15.9307 11.1221L14.167 7.5L12.4023 11.1221Z",
-            }),
-          );
-        }),
-        _.memo(function (_) {
-          return _.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 30 30",
-              fill: "none",
-              ..._,
-            },
-            _.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M8.33332 26.5469C14.7106 30.2288 22.8651 28.0438 26.547 21.6665C30.2289 15.2893 28.0439 7.13476 21.6667 3.45286C15.2894 -0.229037 7.13488 1.95596 3.45298 8.3332C-0.228915 14.7104 1.95609 22.865 8.33332 26.5469ZM6.23348 21.3692C3.79844 18.0137 3.41122 13.4055 5.61805 9.5832C7.6228 6.11087 11.2595 4.16821 15 4.16473V9.99903C13.2736 10.0006 11.5951 10.8972 10.6699 12.4999C9.65132 14.264 9.83004 16.3909 10.9539 17.9396L6.23348 21.3692ZM15 25.835C18.7405 25.8315 22.3772 23.8888 24.3819 20.4165C26.5887 16.5942 26.2015 11.9861 23.7666 8.63065L19.0461 12.0602C20.1699 13.6089 20.3486 15.7357 19.3301 17.4999C18.4049 19.1025 16.7264 19.9991 15 20.0007L15 25.835ZM16.25 12.8348C17.4457 13.5252 17.8554 15.0541 17.1651 16.2499C16.4747 17.4456 14.9457 17.8553 13.75 17.1649C12.5543 16.4746 12.1446 14.9456 12.8349 13.7499C13.5253 12.5541 15.0543 12.1444 16.25 12.8348Z",
-            }),
-          );
-        }),
-        _.memo(function (_) {
-          return _.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 30 30",
-              fill: "none",
-              ..._,
-            },
-            _.createElement("path", {
-              fill: "currentColor",
-              _: "M21.725 15.0001L11.6666 20.8917V9.10841L21.725 15.0001Z",
-            }),
-            _.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              _: "M15 1.66675C12.3629 1.66675 9.78502 2.44873 7.59236 3.91382C5.39971 5.3789 3.69074 7.46129 2.68157 9.89763C1.6724 12.334 1.40836 15.0149 1.92283 17.6013C2.4373 20.1877 3.70717 22.5635 5.57187 24.4282C7.43657 26.2929 9.81235 27.5627 12.3988 28.0772C14.9852 28.5917 17.6661 28.3276 20.1024 27.3185C22.5388 26.3093 24.6211 24.6003 26.0862 22.4077C27.5513 20.215 28.3333 17.6372 28.3333 15.0001C28.3333 13.2491 27.9884 11.5153 27.3184 9.89763C26.6483 8.27996 25.6662 6.8101 24.4281 5.57199C23.1899 4.33388 21.7201 3.35175 20.1024 2.68169C18.4847 2.01162 16.7509 1.66675 15 1.66675ZM9.44426 6.68539C11.0888 5.58657 13.0222 5.00008 15 5.00008C16.3132 5.00008 17.6135 5.25874 18.8268 5.76129C20.0401 6.26383 21.1424 7.00043 22.071 7.92901C22.9996 8.8576 23.7362 9.95999 24.2388 11.1732C24.7413 12.3865 25 13.6869 25 15.0001C25 16.9779 24.4135 18.9113 23.3147 20.5558C22.2158 22.2003 20.6541 23.482 18.8268 24.2389C16.9995 24.9957 14.9889 25.1938 13.0491 24.8079C11.1093 24.4221 9.32742 23.4697 7.9289 22.0711C6.53037 20.6726 5.57796 18.8908 5.19211 16.951C4.80626 15.0112 5.00429 13.0005 5.76117 11.1732C6.51805 9.34599 7.79977 7.7842 9.44426 6.68539Z",
-            }),
-          );
-        });
-      var _ = __webpack_require__("chunkid");
-      function _() {
         const _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)();
@@ -78509,14 +77864,13 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
-        const _ = _._.is_valve_email || !1,
-          _ = (0, _._)(),
+        const _ = (0, _._)(),
           _ = _(),
-          _ = _ || _;
+          _ = !_ && !_;
         return _.createElement(
           _,
           null,
-          _ && !_
+          _
             ? _.createElement(
                 _,
                 null,
@@ -78536,7 +77890,7 @@
             _,
             null,
             _.createElement(_, null),
-            _ && !_ && _.createElement(_, null),
+            _ && _.createElement(_, null),
           ),
         );
       }
@@ -80196,9 +79550,7 @@
           (function (_, _) {
             switch (_) {
               case "browse":
-                return _._.is_valve_email
-                  ? _.createElement(_, null)
-                  : _.createElement(_, null);
+                return _.createElement(_, null);
               case "recommendations":
                 return _.createElement(_, null);
               case "categories":
@@ -80223,9 +79575,7 @@
         const { section: _ } = _;
         switch (_) {
           case "browse":
-            return _._.is_valve_email
-              ? _.createElement(_, null)
-              : _.createElement(_, null);
+            return _.createElement(_, null);
           case "recommendations":
             return _.createElement(_, null);
           case "categories":
@@ -83022,7 +82372,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 25417), _((_._ = _));
+      return (_ = 552), _((_._ = _));
       var _;
     });
     _._();

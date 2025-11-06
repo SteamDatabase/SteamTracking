@@ -1361,7 +1361,6 @@ ${STORE_BASE_URL}${}/${}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}${}/ajaxgetcontenthubdata
 ${STORE_BASE_URL}${}/download/${}/${}/${GID}?${}
 ${STORE_BASE_URL}${}/sale/${}?upcoming=true${_ ? _ : ""}
-${STORE_BASE_URL}/
 ${STORE_BASE_URL}/curator/${}/
 ${STORE_BASE_URL}/curator/${}/admin/ajaxdeletecreatorhomeevent
 ${STORE_BASE_URL}/curator/${}/admin/ajaxgetcreatorhomeevents

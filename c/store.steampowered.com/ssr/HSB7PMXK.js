@@ -1,33 +1,27 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
@@ -35,34 +29,40 @@ import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -3840,36 +3840,20 @@ function _() {
 }
 var _ = _(_(), 1);
 function _() {
-  let _ = _(),
-    _ = _();
-  return _
-    ? (0, _.jsx)(_, {
-        children: (0, _.jsxs)(_, {
-          children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
-        }),
-      })
-    : (0, _.jsx)(_, {
-        children: (0, _.jsxs)(_, {
-          children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
-        }),
-      });
+  let _ = _();
+  return (0, _.jsx)(_, {
+    children: (0, _.jsxs)(_, {
+      children: [(0, _.jsx)(_, {}), _ ? (0, _.jsx)(_, {}) : (0, _.jsx)(_, {})],
+    }),
+  });
 }
 var _ = {
   include_assets: !0,
 };
 function _() {
-  let _ = _(),
-    _ = _(),
-    _ = !_ && !_,
-    _ = _.EREALM == 2;
   return (0, _.jsxs)(_, {
     className: _,
     children: [
-      _ &&
-        (0, _.jsx)(_, {
-          href: `${_.STORE_BASE_URL}/`,
-          children: _("#Menu_Popover_StoreHome"),
-        }),
       (0, _.jsx)(_, {
         href: `${_.STORE_BASE_URL}charts/`,
         globalOnly: !0,
@@ -3904,7 +3888,6 @@ function _() {
   let _ = _(),
     _ = _(),
     _ = !_ && !_,
-    _ = _.EREALM == 2,
     { data: _ } = _(),
     _ = _?.get("freetoplay"),
     _ = _?.get("demos");
@@ -4028,6 +4011,7 @@ function _() {
       },
       _,
     ),
+    _(),
     _(),
     null
   );
@@ -4443,479 +4427,6 @@ var _ = _.memo(function (_) {
       ],
     });
   });
-var _ = _(_(), 1),
-  _ = _(_(), 1);
-var _ = "OBJTxlmzMxE-";
-var _ = "_-0aicZT7zNQ-";
-var _ = "h5qJ51MtgJg-";
-var _ = "HbmLyNhpWhg-";
-var _ = "XXDx52lfdqY-";
-var _ = "_8LBiPcZ1ZJ4-";
-var _ = "_4-kgUo8myZ4-";
-var _ = "_2xw6SdBGDQg-";
-var _ = "saA8OwvKQy8-";
-var _ = "Vheu5-rnvgE-";
-var _ = "WeEtgwjssU0-";
-var _ = "DhpOhcjBaFw-";
-var _ = "SOYyeuPaUn8-";
-var _ = "Wos1i7jG3c8-";
-var _ = _(_(), 1);
-function _() {
-  return (0, _.jsx)(_, {
-    children: (0, _.jsxs)(_, {
-      children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
-    }),
-  });
-}
-var _ = {
-  include_assets: !0,
-};
-function _() {
-  let _ = _(),
-    _ = _(),
-    _ = !_ && !_,
-    _ = _.EREALM == 2;
-  return (0, _.jsxs)(_, {
-    className: _,
-    children: [
-      _ &&
-        (0, _.jsx)(_, {
-          href: `${_.STORE_BASE_URL}/`,
-          children: _("#Menu_Popover_StoreHome"),
-        }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}charts/`,
-        globalOnly: !0,
-        children: _("#Menu_Popover_SteamCharts"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}explore/upcoming`,
-        children: _("#Menu_Popover_Upcoming"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}points/`,
-        globalOnly: !0,
-        children: _("#Menu_Popover_PointsShop"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}digitalgiftcards/`,
-        globalOnly: !0,
-        children: _("#Menu_Popover_GiftCards"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}news/`,
-        children: _("#Menu_Popover_NewsAndUpdates"),
-      }),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}account/preferences/`,
-        children: _("#Menu_Popover_Preferences"),
-      }),
-    ],
-  });
-}
-function _() {
-  return (
-    _(),
-    _(
-      {
-        count: 10,
-      },
-      _,
-    ),
-    _(
-      {
-        count: 10,
-      },
-      _,
-    ),
-    _(),
-    null
-  );
-}
-var _ = _.GenerateRandomSeed();
-function _() {
-  let { data: _ } = _(),
-    _ = _?.get("freetoplay"),
-    _ = _?.get("demos"),
-    _ = _(),
-    _ = _();
-  return _
-    ? (0, _.jsxs)(_, {
-        className: _,
-        children: [
-          (0, _.jsx)(_, {
-            children: _("#Menu_Section_Browse_BrowseTop"),
-          }),
-          (0, _.jsxs)(_, {
-            className: _,
-            children: [
-              (0, _.jsxs)(_, {
-                children: [
-                  (0, _.jsx)(_, {
-                    href: "",
-                    children: (0, _.jsx)("div", {
-                      className: _,
-                      children: _("#Menu_Popover_StoreHome"),
-                    }),
-                  }),
-                  (0, _.jsx)(_, {
-                    href: "greatondeck/",
-                    children: (0, _.jsx)("div", {
-                      className: _,
-                      children: _("#Menu_Popover_GreatonDeck"),
-                    }),
-                  }),
-                  (0, _.jsx)(_, {
-                    href: "explore/new/",
-                    children: (0, _.jsx)("div", {
-                      className: _,
-                      children: _("#Menu_Section_Browse_NewReleases"),
-                    }),
-                  }),
-                  (0, _.jsx)(_, {}),
-                ],
-              }),
-              (0, _.jsxs)(_, {
-                children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
-              }),
-            ],
-          }),
-        ],
-      })
-    : _
-      ? (0, _.jsxs)(_, {
-          className: _,
-          children: [
-            (0, _.jsx)(_, {
-              children: _("#Menu_Section_Browse_BrowseTop"),
-            }),
-            (0, _.jsxs)(_, {
-              className: _,
-              children: [
-                (0, _.jsxs)(_, {
-                  children: [
-                    (0, _.jsx)(_, {
-                      href: "",
-                      children: (0, _.jsx)("div", {
-                        className: _,
-                        children: _("#Menu_Popover_StoreHome"),
-                      }),
-                    }),
-                    (0, _.jsx)(_, {
-                      href: "explore/new/",
-                      children: (0, _.jsx)("div", {
-                        className: _,
-                        children: _("#Menu_Section_Browse_NewReleases"),
-                      }),
-                    }),
-                    _ &&
-                      (0, _.jsx)(_, {
-                        href: _.url_path,
-                        children: (0, _.jsx)("div", {
-                          className: _,
-                          children: _("#Menu_Section_Browse_FreeToPlay"),
-                        }),
-                      }),
-                    _ &&
-                      (0, _.jsx)(_, {
-                        href: _.url_path,
-                        children: (0, _.jsx)("div", {
-                          className: _,
-                          children: _.display_name,
-                        }),
-                      }),
-                  ],
-                }),
-                (0, _.jsxs)(_, {
-                  children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
-                }),
-              ],
-            }),
-          ],
-        })
-      : (0, _.jsxs)(_, {
-          className: _,
-          children: [
-            (0, _.jsx)(_, {
-              children: _("#Menu_Section_Browse_BrowseTop"),
-            }),
-            (0, _.jsxs)(_, {
-              className: _,
-              children: [
-                (0, _.jsxs)(_, {
-                  children: [(0, _.jsx)(_, {}), (0, _.jsx)(_, {})],
-                }),
-                (0, _.jsxs)(_, {
-                  children: [
-                    (0, _.jsx)(_, {
-                      href: "explore/new/",
-                      children: (0, _.jsx)("div", {
-                        className: _,
-                        children: _("#Menu_Section_Browse_NewReleases"),
-                      }),
-                    }),
-                    (0, _.jsx)(_, {}),
-                    _ &&
-                      (0, _.jsx)(_, {
-                        href: _.url_path,
-                        children: (0, _.jsx)("div", {
-                          className: _,
-                          children: _("#Menu_Section_Browse_FreeToPlay"),
-                        }),
-                      }),
-                    _ &&
-                      (0, _.jsx)(_, {
-                        href: _.url_path,
-                        children: (0, _.jsx)("div", {
-                          className: _,
-                          children: _.display_name,
-                        }),
-                      }),
-                  ],
-                }),
-              ],
-            }),
-          ],
-        });
-}
-var _ = 3,
-  _ = 3;
-function _(_) {
-  let { rgItemIDs: _ } = _,
-    _ = _(),
-    _ = _(),
-    { data: _ } = _({
-      queryKey: ["CapsuleGrid", _],
-      queryFn: async () =>
-        (await Promise.all(_.map((_) => _.fetchQuery(_(_, _))))).filter(
-          Boolean,
-        ),
-    }),
-    _ = _.useMemo(() => {
-      if (!_ || !_.length) return;
-      let _ = _.map((_) => _(_, "header")).filter(Boolean),
-        _ = _ * _,
-        _ = [],
-        _ = _.SeededRandom(_);
-      for (; _.length < _; )
-        _.push(..._.ShuffleArray(_.slice(0, _ - _.length), 0, _));
-      let _ = [];
-      for (let _ = 0; _ < _; _++) _.push(_.slice(_ * _, (_ + 1) * _));
-      return _;
-    }, [_]);
-  return _
-    ? (0, _.jsx)("div", {
-        className: _,
-        children: _.map((_, _) =>
-          (0, _.jsx)(
-            "div",
-            {
-              className: _,
-              children: _.map((_, _) =>
-                (0, _.jsx)(
-                  "img",
-                  {
-                    src: _,
-                    alt: "",
-                  },
-                  _,
-                ),
-              ),
-            },
-            _,
-          ),
-        ),
-      })
-    : null;
-}
-function _() {
-  let { data: _ } = _(
-      {
-        count: 10,
-      },
-      _,
-    ),
-    _ = "charts/topselling";
-  return (
-    _.EREALM == 2 && (_ = "search/?filter=topsellers"),
-    (0, _.jsx)(_, {
-      label: _("#Menu_Section_Browse_TopSellers"),
-      href: _,
-      children:
-        _ &&
-        (0, _.jsx)(_, {
-          rgItemIDs: _.rgItemIDs,
-        }),
-    })
-  );
-}
-function _() {
-  let { data: _ } = _(
-    {
-      count: 10,
-    },
-    _,
-  );
-  return (0, _.jsx)(_, {
-    label: _("#Menu_Section_Browse_Discounts"),
-    href: "specials/",
-    children:
-      _ &&
-      (0, _.jsx)(_, {
-        rgItemIDs: _.rgItemIDs,
-      }),
-  });
-}
-function _() {
-  let { data: _ } = _(),
-    _ = _ && _ > 0 ? "wishlist/?min_discount=any" : "wishlist/";
-  return (0, _.jsx)(_, {
-    href: _,
-    children: (0, _.jsx)("div", {
-      className: _,
-      children: (0, _.jsxs)("div", {
-        children: [
-          _("#Menu_Section_Browse_Discounts_YourWishlist"),
-          _ !== void 0 &&
-            _ > 0 &&
-            (0, _.jsx)("div", {
-              className: _,
-              children: _(
-                "#Menu_Section_Browse_Discounts_YourWishlist_Discounts",
-                _.toLocaleString(),
-              ),
-            }),
-        ],
-      }),
-    }),
-  });
-}
-function _(_) {
-  let { children: _ } = _;
-  return (0, _.jsx)(_, {
-    "flow-children": "column",
-    navEntryPreferPosition: 3,
-    className: (0, _.default)(_, _),
-    children: _,
-  });
-}
-function _(_) {
-  let { children: _ } = _;
-  return (0, _.jsx)(_, {
-    "flow-children": "grid",
-    navEntryPreferPosition: 3,
-    className: (0, _.default)(_, _, _),
-    children: _,
-  });
-}
-function _(_) {
-  let { label: _, href: _, children: _ } = _,
-    _ = _(`${_.STORE_BASE_URL}${_}`);
-  return (0, _.jsxs)(_, {
-    className: _,
-    href: _,
-    children: [
-      _,
-      _ &&
-        (0, _.jsx)("span", {
-          className: _,
-          children: _,
-        }),
-    ],
-  });
-}
-function _(_) {
-  let { label: _, href: _, children: _ } = _,
-    { data: _ } = _(
-      {
-        count: 10,
-      },
-      _,
-    ),
-    _ = _(`${_.STORE_BASE_URL}${_}`);
-  return (0, _.jsxs)(_, {
-    className: _,
-    href: _,
-    children: [
-      (0, _.jsxs)("div", {
-        className: _,
-        children: [
-          " ",
-          _ &&
-            (0, _.jsx)(_, {
-              rgItemIDs: _.rgItemIDs,
-            }),
-        ],
-      }),
-      _,
-      _ &&
-        (0, _.jsx)("span", {
-          className: _,
-          children: _,
-        }),
-    ],
-  });
-}
-var _ = _.memo(function (_) {
-    return (0, _.jsx)("svg", {
-      xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 31 30",
-      fill: "none",
-      ..._,
-      children: (0, _.jsx)("path", {
-        fill: "currentColor",
-        _: "M11.8667 20.8749L14.0834 17.7416V28.3749H5.75004V20.8749H11.8667ZM19.6167 20.8749L17.4167 17.7416V28.3749H25.75V20.8749H19.6167ZM21.575 17.5416H29.9167L25.75 11.7083H17.4167L21.575 17.5416ZM14.075 11.7083H5.75004L1.58337 17.5416H9.91671L14.075 11.7083ZM16.9917 1.70825H14.4917V5.45825C14.4917 5.62311 14.5243 5.78634 14.5876 5.93854C14.651 6.09074 14.7438 6.22891 14.8608 6.3451C14.9777 6.46128 15.1165 6.55318 15.2691 6.6155C15.4217 6.67783 15.5852 6.70935 15.75 6.70825C16.0816 6.70825 16.3995 6.57656 16.6339 6.34214C16.8683 6.10772 17 5.78977 17 5.45825L16.9917 1.70825ZM23.825 5.38325L21.825 3.86659L19.975 6.31658C19.8744 6.44714 19.8005 6.59633 19.7577 6.75555C19.715 6.91477 19.7041 7.08088 19.7258 7.24431C19.7475 7.40774 19.8013 7.56527 19.8841 7.70782C19.9669 7.85037 20.0771 7.97513 20.2084 8.07492C20.4739 8.27518 20.8079 8.36218 21.1374 8.31689C21.4669 8.27161 21.765 8.09772 21.9667 7.83325L23.825 5.38325ZM11.5084 6.31658L9.65837 3.86659L7.65837 5.38325L9.51671 7.83325C9.71836 8.09772 10.0165 8.27161 10.346 8.31689C10.6755 8.36218 11.0095 8.27518 11.275 8.07492C11.4063 7.97513 11.5165 7.85037 11.5993 7.70782C11.6821 7.56527 11.7359 7.40774 11.7576 7.24431C11.7793 7.08088 11.7684 6.91477 11.7257 6.75555C11.6829 6.59633 11.609 6.44714 11.5084 6.31658Z",
-      }),
-    });
-  }),
-  _ = _.memo(function (_) {
-    return (0, _.jsx)("svg", {
-      xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 30 30",
-      fill: "none",
-      ..._,
-      children: (0, _.jsx)("path", {
-        fill: "currentColor",
-        fillRule: "evenodd",
-        clipRule: "evenodd",
-        _: "M28.1504 16.0166L16.0166 28.1504L3.33301 15.4668V3.33301H15.4668L28.1504 16.0166ZM12.4023 11.1221L8.33301 11.6387L11.3105 14.4004L10.5605 18.333L14.167 16.4268L17.7734 18.333L17.0264 14.4004L20 11.6387L15.9307 11.1221L14.167 7.5L12.4023 11.1221Z",
-      }),
-    });
-  }),
-  _ = _.memo(function (_) {
-    return (0, _.jsx)("svg", {
-      xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 30 30",
-      fill: "none",
-      ..._,
-      children: (0, _.jsx)("path", {
-        fill: "currentColor",
-        fillRule: "evenodd",
-        clipRule: "evenodd",
-        _: "M8.33332 26.5469C14.7106 30.2288 22.8651 28.0438 26.547 21.6665C30.2289 15.2893 28.0439 7.13476 21.6667 3.45286C15.2894 -0.229037 7.13488 1.95596 3.45298 8.3332C-0.228915 14.7104 1.95609 22.865 8.33332 26.5469ZM6.23348 21.3692C3.79844 18.0137 3.41122 13.4055 5.61805 9.5832C7.6228 6.11087 11.2595 4.16821 15 4.16473V9.99903C13.2736 10.0006 11.5951 10.8972 10.6699 12.4999C9.65132 14.264 9.83004 16.3909 10.9539 17.9396L6.23348 21.3692ZM15 25.835C18.7405 25.8315 22.3772 23.8888 24.3819 20.4165C26.5887 16.5942 26.2015 11.9861 23.7666 8.63065L19.0461 12.0602C20.1699 13.6089 20.3486 15.7357 19.3301 17.4999C18.4049 19.1025 16.7264 19.9991 15 20.0007L15 25.835ZM16.25 12.8348C17.4457 13.5252 17.8554 15.0541 17.1651 16.2499C16.4747 17.4456 14.9457 17.8553 13.75 17.1649C12.5543 16.4746 12.1446 14.9456 12.8349 13.7499C13.5253 12.5541 15.0543 12.1444 16.25 12.8348Z",
-      }),
-    });
-  }),
-  _ = _.memo(function (_) {
-    return (0, _.jsxs)("svg", {
-      xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 30 30",
-      fill: "none",
-      ..._,
-      children: [
-        (0, _.jsx)("path", {
-          fill: "currentColor",
-          _: "M21.725 15.0001L11.6666 20.8917V9.10841L21.725 15.0001Z",
-        }),
-        (0, _.jsx)("path", {
-          fill: "currentColor",
-          fillRule: "evenodd",
-          clipRule: "evenodd",
-          _: "M15 1.66675C12.3629 1.66675 9.78502 2.44873 7.59236 3.91382C5.39971 5.3789 3.69074 7.46129 2.68157 9.89763C1.6724 12.334 1.40836 15.0149 1.92283 17.6013C2.4373 20.1877 3.70717 22.5635 5.57187 24.4282C7.43657 26.2929 9.81235 27.5627 12.3988 28.0772C14.9852 28.5917 17.6661 28.3276 20.1024 27.3185C22.5388 26.3093 24.6211 24.6003 26.0862 22.4077C27.5513 20.215 28.3333 17.6372 28.3333 15.0001C28.3333 13.2491 27.9884 11.5153 27.3184 9.89763C26.6483 8.27996 25.6662 6.8101 24.4281 5.57199C23.1899 4.33388 21.7201 3.35175 20.1024 2.68169C18.4847 2.01162 16.7509 1.66675 15 1.66675ZM9.44426 6.68539C11.0888 5.58657 13.0222 5.00008 15 5.00008C16.3132 5.00008 17.6135 5.25874 18.8268 5.76129C20.0401 6.26383 21.1424 7.00043 22.071 7.92901C22.9996 8.8576 23.7362 9.95999 24.2388 11.1732C24.7413 12.3865 25 13.6869 25 15.0001C25 16.9779 24.4135 18.9113 23.3147 20.5558C22.2158 22.2003 20.6541 23.482 18.8268 24.2389C16.9995 24.9957 14.9889 25.1938 13.0491 24.8079C11.1093 24.4221 9.32742 23.4697 7.9289 22.0711C6.53037 20.6726 5.57796 18.8908 5.19211 16.951C4.80626 15.0112 5.00429 13.0005 5.76117 11.1732C6.51805 9.34599 7.79977 7.7842 9.44426 6.68539Z",
-        }),
-      ],
-    });
-  });
 var _ = _(_(), 1);
 function _() {
   let _ = _(),
@@ -4969,13 +4480,12 @@ var _ = "QSiUFbyZqsY-";
 var _ = _(_(), 1);
 var _ = _(_(), 1);
 function _() {
-  let _ = _.is_valve_email || !1,
+  let _ = _(),
     _ = _(),
-    _ = _(),
-    _ = _ || _;
+    _ = !_ && !_;
   return (0, _.jsxs)(_, {
     children: [
-      _ && !_
+      _
         ? (0, _.jsx)(_, {
             children: _("#Menu_Section_Categories_YourTopCategories"),
           })
@@ -4987,7 +4497,7 @@ function _() {
             }),
           }),
       (0, _.jsxs)(_, {
-        children: [(0, _.jsx)(_, {}), _ && !_ && (0, _.jsx)(_, {})],
+        children: [(0, _.jsx)(_, {}), _ && (0, _.jsx)(_, {})],
       }),
     ],
   });
@@ -6701,7 +6211,7 @@ function _(_) {
 function _(_, _) {
   switch (_) {
     case "browse":
-      return _.is_valve_email ? (0, _.jsx)(_, {}) : (0, _.jsx)(_, {});
+      return (0, _.jsx)(_, {});
     case "recommendations":
       return (0, _.jsx)(_, {});
     case "categories":
@@ -6724,7 +6234,7 @@ function _(_) {
   let { section: _ } = _;
   switch (_) {
     case "browse":
-      return _.is_valve_email ? (0, _.jsx)(_, {}) : (0, _.jsx)(_, {});
+      return (0, _.jsx)(_, {});
     case "recommendations":
       return (0, _.jsx)(_, {});
     case "categories":
