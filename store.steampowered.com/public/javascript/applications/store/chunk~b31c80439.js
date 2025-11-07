@@ -180,13 +180,6 @@
         Disabled: "_3xyNp4rGNpDJtxvww4ZCOR",
       };
     },
-    828: (e) => {
-      e.exports = {
-        TrailerTitle: "_3HELOo0qFfDrRZ9Sa1GXeF",
-        Category: "_2YhOhoyYNbue9fEPMYPiq2",
-        Visible: "_2cpBClyttSkWAsgMArc0BM",
-      };
-    },
     20019: (e, t, s) => {
       "use strict";
       function n(e) {
@@ -337,9 +330,9 @@
         w = s(12155),
         D = s(51272),
         k = s(56011),
-        T = s(61859),
+        I = s(61859),
         P = s(82227),
-        I = s(25489),
+        T = s(25489),
         M = s(78327),
         A = s(3067),
         O = s(36064),
@@ -350,7 +343,7 @@
         return i.createElement(
           "div",
           { className: "STV_ReplayBanner" },
-          (0, T.we)("#DASHPlayerControls_IsReplay"),
+          (0, I.we)("#DASHPlayerControls_IsReplay"),
         );
       }
       const R = (0, a.PA)((e) => {
@@ -397,7 +390,7 @@
             i.createElement(
               "span",
               null,
-              (0, T.we)("#DASHPlayerControls_ClickToPlay"),
+              (0, I.we)("#DASHPlayerControls_ClickToPlay"),
             ),
           );
         }
@@ -423,7 +416,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_BufferingResolution"),
+              (0, I.we)("#DASHPlayerStats_BufferingResolution"),
               " ",
               i.createElement(
                 "span",
@@ -434,7 +427,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_PlaybackResolution"),
+              (0, I.we)("#DASHPlayerStats_PlaybackResolution"),
               " ",
               i.createElement(
                 "span",
@@ -445,7 +438,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_HtmlResolution"),
+              (0, I.we)("#DASHPlayerStats_HtmlResolution"),
               " ",
               i.createElement(
                 "span",
@@ -456,7 +449,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_ContentServer"),
+              (0, I.we)("#DASHPlayerStats_ContentServer"),
               " ",
               i.createElement(
                 "span",
@@ -467,7 +460,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_StallEvents"),
+              (0, I.we)("#DASHPlayerStats_StallEvents"),
               " ",
               i.createElement(
                 "span",
@@ -478,7 +471,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_FailedDownloads"),
+              (0, I.we)("#DASHPlayerStats_FailedDownloads"),
               " ",
               i.createElement(
                 "span",
@@ -489,7 +482,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_TimeToFirstFrame"),
+              (0, I.we)("#DASHPlayerStats_TimeToFirstFrame"),
               " ",
               i.createElement(
                 "span",
@@ -500,7 +493,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_PlaybackRate"),
+              (0, I.we)("#DASHPlayerStats_PlaybackRate"),
               " ",
               i.createElement(
                 "span",
@@ -527,7 +520,7 @@
               : t.GetNumBufferedAudioRanges();
           if (o > 0)
             for (let a = 0; a < o; ++a) {
-              let o = (0, T.we)(
+              let o = (0, I.we)(
                   e
                     ? "#DASHPlayerStats_VideoBufferRange"
                     : "#DASHPlayerStats_AudioBufferRange",
@@ -547,7 +540,7 @@
               );
             }
           else {
-            let t = (0, T.we)(
+            let t = (0, I.we)(
               e
                 ? "#DASHPlayerStats_VideoNoRangeInformation"
                 : "#DASHPlayerStats_AudioNoRangeInformation",
@@ -564,7 +557,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_BytesReceived"),
+              (0, I.we)("#DASHPlayerStats_BytesReceived"),
               " ",
               i.createElement(
                 "span",
@@ -576,7 +569,7 @@
               i.createElement(
                 "div",
                 null,
-                (0, T.we)("#DASHPlayerStats_DroppedFrames"),
+                (0, I.we)("#DASHPlayerStats_DroppedFrames"),
                 " ",
                 i.createElement(
                   "span",
@@ -587,7 +580,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_VideoBuffered"),
+              (0, I.we)("#DASHPlayerStats_VideoBuffered"),
               " ",
               i.createElement(
                 "span",
@@ -599,7 +592,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_AudioBuffered"),
+              (0, I.we)("#DASHPlayerStats_AudioBuffered"),
               " ",
               i.createElement(
                 "span",
@@ -613,7 +606,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_BandwidthRequired"),
+              (0, I.we)("#DASHPlayerStats_BandwidthRequired"),
               " ",
               i.createElement(
                 "span",
@@ -624,7 +617,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_BandwidthVideo"),
+              (0, I.we)("#DASHPlayerStats_BandwidthVideo"),
               " ",
               i.createElement(
                 "span",
@@ -635,7 +628,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_BandwidthNums"),
+              (0, I.we)("#DASHPlayerStats_BandwidthNums"),
               " ",
               i.createElement(
                 "span",
@@ -646,7 +639,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_DownloadNums"),
+              (0, I.we)("#DASHPlayerStats_DownloadNums"),
               " ",
               i.createElement(
                 "span",
@@ -657,7 +650,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_ActiveDownloads"),
+              (0, I.we)("#DASHPlayerStats_ActiveDownloads"),
               " ",
               i.createElement(
                 "span",
@@ -668,7 +661,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_VideoDownloadProgress"),
+              (0, I.we)("#DASHPlayerStats_VideoDownloadProgress"),
               " ",
               i.createElement(
                 "span",
@@ -679,7 +672,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_DroppingFrames"),
+              (0, I.we)("#DASHPlayerStats_DroppingFrames"),
               " ",
               i.createElement(
                 "span",
@@ -690,7 +683,7 @@
             i.createElement(
               "div",
               null,
-              (0, T.we)("#DASHPlayerStats_CurrentFPS"),
+              (0, I.we)("#DASHPlayerStats_CurrentFPS"),
               " ",
               i.createElement(
                 "span",
@@ -799,7 +792,7 @@
                 i.createElement(
                   F.D,
                   { key: "statsToggle", onClick: this.OnShowStats },
-                  (0, T.we)("#Broadcast_VideoContext_ToggleStats"),
+                  (0, I.we)("#Broadcast_VideoContext_ToggleStats"),
                   "\t",
                 ),
               ),
@@ -822,7 +815,7 @@
                     className: "NoSubtitles",
                     bChecked: !1,
                   },
-                  (0, T.we)("#Broadcast_None"),
+                  (0, I.we)("#Broadcast_None"),
                 ),
               );
             for (let e = 0; e < this.props.video.ListSubtitles().length; e++) {
@@ -1054,8 +1047,8 @@
         }
         SetVolumeWithCoord(e, t) {
           let s = e.getBoundingClientRect(),
-            n = I.Fu(t, s.left, s.right, 0, 1),
-            o = I.OQ(n, 0, 1),
+            n = T.Fu(t, s.left, s.right, 0, 1),
+            o = T.OQ(n, 0, 1),
             a = this.props.video;
           a.SetMute(n < 0.01), a.SetVolume(o);
         }
@@ -1303,7 +1296,7 @@
                     this.ToggleStatsView(e);
                   },
                 },
-                (0, T.we)("#Broadcast_VideoContext_ToggleStats"),
+                (0, I.we)("#Broadcast_VideoContext_ToggleStats"),
               ),
             ),
             s &&
@@ -1318,7 +1311,7 @@
                       this.ShowStorePage(e);
                     },
                   },
-                  (0, T.we)("#Broadcast_VideoContext_OpenStore"),
+                  (0, I.we)("#Broadcast_VideoContext_OpenStore"),
                 ),
               ),
             e
@@ -1374,14 +1367,14 @@
                 i.createElement("div", {
                   key: "ChatPosToggle ChatTheaterToggle",
                   onClick: this.props.onTheaterMode,
-                  title: (0, T.we)("#Broadcast_View_Theater"),
+                  title: (0, I.we)("#Broadcast_View_Theater"),
                   className: "BroadcastTheaterToggle",
                 }),
               ),
             c.push(
               i.createElement("div", {
                 key: "FullscreenToggle",
-                title: (0, T.we)("#Broadcast_View_Fullscreen"),
+                title: (0, I.we)("#Broadcast_View_Fullscreen"),
                 onClick: this.OnToggleFullscreen,
                 className: "BroadcastFullscreenToggle",
               }),
@@ -1504,8 +1497,8 @@
                 i.createElement("div", {
                   className: "videoControlsButtons LeftSpacer",
                 }),
-                i.createElement(Y, { video: e }),
                 i.createElement(Z, { video: e }),
+                i.createElement(Y, { video: e }),
                 i.createElement(U, {
                   video: e,
                   actions: this.props.actions,
@@ -1531,7 +1524,7 @@
             : null;
         }
       }
-      class Y extends i.Component {
+      class Z extends i.Component {
         OnJumpBackward() {
           this.props.video.JumpTime(-15);
         }
@@ -1580,9 +1573,9 @@
           );
         }
       }
-      (0, n.Cg)([d.oI], Y.prototype, "OnJumpBackward", null),
-        (0, n.Cg)([d.oI], Y.prototype, "OnJumpForward", null);
-      const Z = (0, a.PA)((e) => {
+      (0, n.Cg)([d.oI], Z.prototype, "OnJumpBackward", null),
+        (0, n.Cg)([d.oI], Z.prototype, "OnJumpForward", null);
+      const Y = (0, a.PA)((e) => {
         if (e.video.IsBroadcastClip() || e.video.IsBroadcastVOD()) return null;
         let t = e.video.IsOnLiveEdge();
         return i.createElement(
@@ -1608,7 +1601,7 @@
             i.createElement(
               "div",
               { className: "jumpGoLive" },
-              (0, T.we)(
+              (0, I.we)(
                 t ? "#DASHPlayerControls_IsLive" : "#DASHPlayerControls_GoLive",
               ),
             ),
@@ -1838,10 +1831,10 @@
             n = t.GetTimelineStartPos() + t.GetTimelineDuration(),
             o = t.GetTimeAtMousePosition(e, this.m_rectSlider, s, n);
           if (this.state.bStartMouseDown) {
-            const e = I.OQ(o, s, t.m_editorEndTime - 5);
+            const e = T.OQ(o, s, t.m_editorEndTime - 5);
             t.m_editorStartTime = e;
           } else if (this.state.bEndMouseDown) {
-            const e = I.OQ(o, t.m_editorStartTime + 5, n);
+            const e = T.OQ(o, t.m_editorStartTime + 5, n);
             t.m_editorEndTime = e;
           } else
             o != this.state.nGrabberMouseDownTime &&
@@ -1884,9 +1877,9 @@
               u.a0.Timeline,
             );
           o < 0.05 && (o = 0);
-          let a = I.OQ(s, 0, 100).toFixed(1) + "%",
-            r = I.OQ(n, 0, 100).toFixed(1) + "%",
-            l = I.OQ(o, 0, 100).toFixed(1) + "%",
+          let a = T.OQ(s, 0, 100).toFixed(1) + "%",
+            r = T.OQ(n, 0, 100).toFixed(1) + "%",
+            l = T.OQ(o, 0, 100).toFixed(1) + "%",
             c = {},
             d = {},
             m = {},
@@ -1946,7 +1939,7 @@
                   i.createElement(se, {
                     key: "start",
                     pos: y,
-                    label: (0, T.we)("#DASHPlayerControls_Start"),
+                    label: (0, I.we)("#DASHPlayerControls_Start"),
                     onMouseEnter: this.OnMarkerMouseEnter,
                     onMouseLeave: this.OnMarkerMouseLeave,
                     onMouseDown: (e) => this.OnMouseDown(e, "start"),
@@ -1954,7 +1947,7 @@
                   i.createElement(se, {
                     key: "end",
                     pos: b,
-                    label: (0, T.we)("#DASHPlayerControls_End"),
+                    label: (0, I.we)("#DASHPlayerControls_End"),
                     onMouseEnter: this.OnMarkerMouseEnter,
                     onMouseLeave: this.OnMarkerMouseLeave,
                     onMouseDown: (e) => this.OnMouseDown(e, "end"),
@@ -2148,7 +2141,7 @@
                       "div",
                       { className: "BroadcastDetailsHeader_ViewerCount" },
                       i.createElement(w.y_e, null),
-                      (0, T.Yp)("#Broadcast_ViewerCount", t),
+                      (0, I.Yp)("#Broadcast_ViewerCount", t),
                     ),
                 ),
               s &&
@@ -2189,7 +2182,7 @@
               i.createElement(
                 h.IK,
                 { key: e, onSelected: () => n(e), bChecked: e === s },
-                (0, T.we)(t[e]),
+                (0, I.we)(t[e]),
               ),
             );
           (0, r.lX)(i.createElement(h.tz, null, o), e);
@@ -2200,7 +2193,7 @@
           return i.createElement(
             "div",
             { className: "BroadcastLanguage", onClick: this.showContextMenu },
-            i.createElement("span", null, " - ", (0, T.we)(s)),
+            i.createElement("span", null, " - ", (0, I.we)(s)),
             i.createElement(
               "div",
               { className: "ContextMenuButton" },
@@ -2333,7 +2326,7 @@
                 i.createElement(
                   "div",
                   { className: "AddLinkRegion", onClick: this.AddLinkRegion },
-                  (0, T.we)("#SteamTV_AddLinkRegion"),
+                  (0, I.we)("#SteamTV_AddLinkRegion"),
                 ),
             ),
             i.createElement(
@@ -2342,7 +2335,7 @@
               i.createElement(
                 "div",
                 null,
-                (0, T.we)("#SteamTV_LinkRegionReserved"),
+                (0, I.we)("#SteamTV_LinkRegionReserved"),
               ),
             ),
           );
@@ -2354,13 +2347,6 @@
         (0, n.Cg)([d.oI], re.prototype, "DeleteRegion", null),
         (0, n.Cg)([d.oI], re.prototype, "UpdatePanel", null),
         (re = (0, n.Cg)([a.PA], re));
-    },
-    92834: (e, t, s) => {
-      "use strict";
-      function n(...e) {
-        return e.join(" ");
-      }
-      s.d(t, { q: () => n });
     },
     79359: (e, t, s) => {
       "use strict";
@@ -2812,8 +2798,8 @@
             return s && s.length > 0 ? s[0] : void 0;
           })(t, E),
           D = (h ?? !0) && w && !w.BIsAllAges() && "masked" == E,
-          T = (0, v.AS)(),
-          [P, I] = n.useState(!1),
+          I = (0, v.AS)(),
+          [P, T] = n.useState(!1),
           [A, O] = n.useState(0),
           V = n.useRef(void 0),
           B = n.useRef(void 0),
@@ -2837,8 +2823,8 @@
           s && L && (S || r) && !D && b(!0);
         }, [S, L, s, r, D]),
           n.useEffect(() => {
-            D && y && S && T();
-          }, [y, D, S, T]);
+            D && y && S && I();
+          }, [y, D, S, I]);
         const x = (function (e, t, s, o, a) {
           return n.useCallback(() => {
             0 == e
@@ -2863,8 +2849,8 @@
           o.Z,
           {
             className: i().AppCarouselTrailerCtn,
-            onMouseEnter: () => I(!0),
-            onMouseLeave: () => I(!1),
+            onMouseEnter: () => T(!0),
+            onMouseLeave: () => T(!1),
           },
           n.createElement("img", {
             className: (0, d.A)(i().AppMainCap, 0 != A && i().Hidden),
@@ -3067,7 +3053,7 @@
                   n.createElement(
                     "video",
                     {
-                      className: I(!0, h),
+                      className: T(!0, h),
                       ref: y,
                       preload: "auto",
                       playsInline: !0,
@@ -3086,7 +3072,7 @@
                   ),
                 s &&
                   !a &&
-                  n.createElement(T, {
+                  n.createElement(I, {
                     ref: _,
                     trailer: s,
                     eTrailerDisplay: h,
@@ -3096,7 +3082,7 @@
                   }),
                 a &&
                   n.createElement(g.default, {
-                    classes: I(!1, h),
+                    classes: T(!1, h),
                     nAppIDVOD: t.GetAppID(),
                     watchLocation: 15,
                     fnOnVideoEnd: m,
@@ -3109,7 +3095,7 @@
             : null
         );
       }
-      function T(e) {
+      function I(e) {
         let {
           ref: t,
           trailer: s,
@@ -3126,7 +3112,7 @@
           }
         }, [a, t]);
         let l = 2 != o,
-          u = I(!1, o);
+          u = T(!1, o);
         return n.createElement(
           P,
           null,
@@ -3162,7 +3148,7 @@
           t,
         );
       }
-      function I(e, t) {
+      function T(e, t) {
         return (0, d.A)({
           [i().AppVideo]: !0,
           [i().PlayFullTrailer]: 2 == t,
@@ -3351,11 +3337,11 @@
           ),
         );
       }
-      var T = s(90511);
+      var I = s(90511);
       function P(e) {
         return (0, l.G)()
           ? o.createElement(
-              I,
+              T,
               null,
               o.createElement(V, null),
               d.iA.logged_in
@@ -3364,7 +3350,7 @@
             )
           : null;
       }
-      function I(e) {
+      function T(e) {
         const [t, s] = (0, a.L2)();
         let i = (0, n.q3)(() => s.ExcludedContentDescriptor),
           l = o.useMemo(() => ({ content_descriptors_excluded: i }), [i]);
@@ -3378,7 +3364,7 @@
             strQueueDescriptionOverride: s,
             ...n
           } = e,
-          { showDiscoveryQueue: a, bQueueVisible: r } = (0, T.GV)(t, n),
+          { showDiscoveryQueue: a, bQueueVisible: r } = (0, I.GV)(t, n),
           [l, u] = (function (e, t) {
             const { data: s } = (0, C.I)({
               queryKey: ["DiscoveryQueueLoader", e, t],
@@ -3386,7 +3372,7 @@
                 const { appids: s, exhausted: n } = await m.aI
                   .Get()
                   .GetDiscoveryQueueAppsOfType(e, !1, t);
-                let o = { ...T.LB, include_screenshots: !0 };
+                let o = { ...I.LB, include_screenshots: !0 };
                 return (
                   await i.A.Get().QueueMultipleAppRequests(s ?? [], o),
                   { rgDiscoveryApps: s, exhausted: n }
@@ -3443,7 +3429,7 @@
                 count: 12,
                 filters: { type_filters: { include_games: !0 } },
               },
-              { ...T.LB, include_screenshots: !0 },
+              { ...I.LB, include_screenshots: !0 },
               { reactQuery: { enabled: e, staleTime: 1 / 0 } },
             );
             return (0, o.useMemo)(
@@ -3658,19 +3644,19 @@
           } = e,
           [D] = (0, p.t7)(t, v),
           { bIsIgnored: k } = y(t),
-          { bIsWishlisted: T } = f(t),
-          [P, I] = (0, c.FD)();
+          { bIsWishlisted: I } = f(t),
+          [P, T] = (0, c.FD)();
         return n.createElement(
           l.Z,
           { className: (0, i.A)(a().AppVideoCtn, "AppVideoCtn") },
           n.createElement(
             "div",
-            { className: (0, i.A)(a().WishlistBadge, T && a().Active) },
+            { className: (0, i.A)(a().WishlistBadge, I && a().Active) },
             (0, r.we)("#Sale_OnWishlist"),
           ),
           P &&
             n.createElement(c.Ff, {
-              eDisplay: I,
+              eDisplay: T,
               className: a().DeckVerifiedLogo,
               storeItem: D,
             }),
@@ -3768,51 +3754,6 @@
                       : o.get(e) - o.get(t),
               ),
           [o, s, e],
-        );
-      }
-    },
-    46253: (e, t, s) => {
-      "use strict";
-      s.d(t, { h: () => u });
-      var n = s(90626),
-        o = s(52038),
-        a = s(61859),
-        i = s(828),
-        r = s.n(i),
-        l = s(33917);
-      function u(e) {
-        const {
-            name: t,
-            trailerCategory: s,
-            trailerDisplay: i,
-            mouseOver: u,
-          } = e,
-          [c, d] = n.useState(!1);
-        if (
-          (n.useEffect(() => {
-            0 != i && d(!0);
-          }, [i]),
-          n.useEffect(() => {
-            if (u) return void d(!0);
-            if (!c) return;
-            const e = setTimeout(() => d(!1), 3e3);
-            return () => clearTimeout(e);
-          }, [c, u]),
-          null == s || 0 == i)
-        )
-          return;
-        const m =
-          1 == i
-            ? (0, a.we)("#StoreTrailer_Title_TrailerPreview")
-            : (0, l.e)(s);
-        return n.createElement(
-          "div",
-          { className: (0, o.A)({ [r().TrailerTitle]: !0, [r().Visible]: c }) },
-          (0, a.PP)(
-            "#StoreTrailer_Title_Combiner",
-            n.createElement("span", { className: r().Category }, m),
-            t,
-          ),
         );
       }
     },

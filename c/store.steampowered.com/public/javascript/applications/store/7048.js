@@ -12004,6 +12004,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -12401,7 +12402,12 @@
         );
       }
       const _ = (0, _._)(function (_) {
-          const { appID: _, snr: __webpack_require__, classOverride: _ } = _,
+          const {
+              appID: _,
+              snr: __webpack_require__,
+              classOverride: _,
+              styleOverride: _,
+            } = _,
             [_] = (0, _._)(_, {}),
             [_, _] = (0, _.useState)(() =>
               !_ || (1 != _?.GetAppType() && 12 != _?.GetAppType())
@@ -12437,6 +12443,7 @@
                       _.token.reason || _(!1))
                     : (0, _._)();
               },
+              style: _,
             },
             _ ? _.createElement(_.qnF, null) : _.createElement(_.T4m, null),
             _.createElement(
@@ -12445,6 +12452,7 @@
                 className: (0, _._)(
                   _().WishlistButtonText,
                   _ && _().WishlistLoadingText,
+                  "WishlistButtonText",
                 ),
               },
               (0, _._)(_ ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
@@ -12489,7 +12497,11 @@
           );
         });
       function _(_) {
-        const { appID: _, classOverride: __webpack_require__ } = _,
+        const {
+            appID: _,
+            classOverride: __webpack_require__,
+            styleOverride: _,
+          } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)("GameHoverIgnoreButton"),
           _ = (0, _._)(() => _ && _._.Get().BIsFollowingCurator(_));
@@ -12506,6 +12518,7 @@
                     _.token.reason || _(!1))
                   : (0, _._)();
             },
+            style: _,
           },
           _ ? _.createElement(_.pPV, null) : _.createElement(_.c9e, null),
           _.createElement(
@@ -12514,6 +12527,7 @@
               className: (0, _._)(
                 _().IgnoreButtonText,
                 _ && _().IgnoreLoadingText,
+                "FollowGameButton",
               ),
             },
             (0, _._)(_ ? "#Sale_StopFollowingGame" : "#Sale_FollowGame"),
@@ -12521,13 +12535,21 @@
         );
       }
       function _(_) {
-        const { nCreatorAccountID: _ } = _,
-          [__webpack_require__, _] = (0, _._)(_),
+        const {
+            nCreatorAccountID: _,
+            classOverride: __webpack_require__,
+            styleOverride: _,
+          } = _,
+          [_, _] = (0, _._)(_),
           { creatorHome: _ } = (0, _._)(_);
         return _.createElement(
           "div",
           {
-            className: _().GameHoverCreatorFollowButtonCtn,
+            className: (0, _._)(
+              _().GameHoverCreatorFollowButtonCtn,
+              __webpack_require__,
+            ),
+            style: _,
           },
           _.createElement(
             "a",
@@ -12535,9 +12557,7 @@
               href: _?.GetCreatorHomeURL("developer"),
             },
             _.createElement("img", {
-              src: __webpack_require__
-                ? (0, _._)(null, "medium")
-                : _.avatar_medium_url,
+              src: _ ? (0, _._)(null, "medium") : _.avatar_medium_url,
             }),
           ),
           _.createElement(_._, {

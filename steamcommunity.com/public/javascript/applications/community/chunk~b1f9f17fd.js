@@ -647,6 +647,8 @@
         RowSize2: "H7KOQjMVfmfUfoCuoJTNB",
         RowSize3: "xIqX_PvYjm1_rnxpXFAu5",
         RowSize4: "_3Q6EKKVEKVFpC_BW0FHOB_",
+        MobileCarouselSnap: "_2r_Q0QrLixR5SEstkW-vm4",
+        MobileCarouselFull: "_3-s3Pa7jvWHp_ro2xlx5m4",
         MediaCtn: "-BNnqulztTaTeP1QNeSBu",
         RowSize1: "_1O__hioeAf860tvMTF75fa",
         HorizontalTextFirst: "_1dmoVJbb-pQB030J1JNfcs",
@@ -35419,6 +35421,7 @@
                 u.SaleSection,
                 c().SaleSectionCtn,
                 Yl().Container,
+                "TemplateMediaOverlay",
                 e.className,
               ),
               style: (0, d.Vb)(r, a, s),
@@ -35678,6 +35681,7 @@
                     n.createElement(Xl, {
                       key: "templategrid_" + s.unique_id + "_" + a,
                       ...e,
+                      mobile_carousel_style: T && C ? S : void 0,
                       row: t,
                     }),
                   );
@@ -35703,8 +35707,6 @@
                   vr.F,
                   {
                     ...(0, i.Hc)(r.jsondata),
-                    bPreventSnapCarousel:
-                      S == El.wS.k_MobileCarousel_PagedCArousel,
                     hideArrows: !w,
                     hidePips: f,
                     useTestScrollbar: !1,
@@ -35715,8 +35717,6 @@
                     className: (0, y.A)({
                       [Ll().TemplateCarousel]: !0,
                       "template-carousel": !0,
-                      "template-mobile-snap-carousel":
-                        S == El.wS.k_MobileCarousel_SnapCarousel,
                     }),
                   },
                   D,
@@ -35742,20 +35742,20 @@
       }
       function Xl(e) {
         var t, a;
-        const { section: r, row: i } = e,
-          s = (0, ye.zI)(),
-          [o, l] = (0, Xe.q3)(() => {
+        const { section: r, row: i, mobile_carousel_style: s } = e,
+          o = (0, ye.zI)(),
+          [l, c] = (0, Xe.q3)(() => {
             var e, t, a, n;
             const r =
                 (null === (e = i.media_columns) || void 0 === e
                   ? void 0
                   : e.length) || 0,
-              o = r > 1 && r < 4 && void 0 !== i.grow_index ? 4 : r;
+              s = r > 1 && r < 4 && void 0 !== i.grow_index ? 4 : r;
             let l = [];
             for (let e = 0; e < r; ++e) {
-              let o = Nl(
+              let s = Nl(
                 r,
-                s
+                o
                   ? (null === (t = i.media_columns) || void 0 === t
                       ? void 0
                       : t[e].mobile_content_varient) ||
@@ -35767,42 +35767,48 @@
                     : n[e],
                 i.grow_index === e,
               );
-              l.push(o);
+              l.push(s);
             }
-            return [o, l];
+            return [s, l];
           }),
-          [c, d] = n.useState(void 0),
-          [u, m] = n.useState(void 0),
-          _ = (0, vs.YR)(() => []),
-          p =
+          [d, u] = n.useState(void 0),
+          [m, _] = n.useState(void 0),
+          p = (0, vs.YR)(() => []),
+          g =
             (null === (t = i.media_columns) || void 0 === t
               ? void 0
               : t.length) || 0,
-          g = n.useCallback(
+          v = n.useCallback(
             (e, t, a) => {
-              (_[t] = { bMediaFirst: e, nHeight: a }),
-                d(
-                  _.slice(0, p)
+              (p[t] = { bMediaFirst: e, nHeight: a }),
+                u(
+                  p
+                    .slice(0, g)
                     .filter((e) => e.bMediaFirst)
                     .reduce((e, t) => Math.max(e, t.nHeight), 0),
                 ),
-                m(
-                  _.slice(0, p)
+                _(
+                  p
+                    .slice(0, g)
                     .filter((e) => !e.bMediaFirst)
                     .reduce((e, t) => Math.max(e, t.nHeight), 0),
                 );
             },
-            [_, p],
+            [p, g],
           );
         return n.createElement(
           "div",
           {
             className: (0, y.A)({
               [Ll().MediaRow]: !0,
-              [Ll().RowSize1]: 1 == o,
-              [Ll().RowSize2]: 2 == o,
-              [Ll().RowSize3]: 3 == o,
-              [Ll().RowSize4]: 4 == o,
+              [Ll().RowSize1]: 1 == l,
+              [Ll().RowSize2]: 2 == l,
+              [Ll().RowSize3]: 3 == l,
+              [Ll().RowSize4]: 4 == l,
+              [Ll().MobileCarouselSnap]:
+                s == El.wS.k_MobileCarousel_SnapCarousel,
+              [Ll().MobileCarouselFull]:
+                s == El.wS.k_MobileCarousel_PagedCArousel,
             }),
           },
           null === (a = i.media_columns) || void 0 === a
@@ -35813,16 +35819,16 @@
                   key: "mc_" + r.unique_id + "_" + t.unique_id,
                   ...e,
                   content:
-                    s && null !== (i = t.mobile_content_varient) && void 0 !== i
+                    o && null !== (i = t.mobile_content_varient) && void 0 !== i
                       ? i
                       : t,
                   contentUniqueID: t.unique_id,
                   mediaIndex: a,
-                  mediaFirstHeight: c,
-                  textFirstHeight: u,
-                  mediaHeightChanged: g,
+                  mediaFirstHeight: d,
+                  textFirstHeight: m,
+                  mediaHeightChanged: v,
                   additionalStyle:
-                    (null == l ? void 0 : l.length) > a ? l[a] : void 0,
+                    (null == c ? void 0 : c.length) > a ? c[a] : void 0,
                 });
               }),
         );

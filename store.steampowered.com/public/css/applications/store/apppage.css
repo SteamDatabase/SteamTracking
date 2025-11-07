@@ -1746,6 +1746,48 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
     background-position: top;
   }
 }
+._1dm-6uzq_x5Gqo421G3a1r {
+  position: relative;
+  width: fit-content;
+  justify-self: center;
+  background: #fff;
+  max-height: 32px;
+  box-shadow: none;
+  border-radius: 28px;
+  padding: 3px 12px;
+  color: #0e141b;
+  right: unset;
+  transition: all .2s ease-out;
+}
+._1dm-6uzq_x5Gqo421G3a1r:hover {
+  box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
+}
+._1dm-6uzq_x5Gqo421G3a1r:hover .WishlistButtonText {
+  text-shadow: none;
+  font-size: 14px;
+  color: #0e141b;
+  font-weight: 600;
+}
+.NVuxjpTCUClP-4RsNDDvk {
+  position: relative;
+  width: fit-content;
+  justify-self: center;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 28px;
+  padding: 6px;
+  color: #0e141b;
+  right: unset;
+  transition: all .2s ease-out;
+}
+.NVuxjpTCUClP-4RsNDDvk:hover {
+  box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
+}
+.NVuxjpTCUClP-4RsNDDvk:hover .FollowGameButton {
+  text-shadow: none;
+  color: #0e141b;
+  font-weight: 600;
+}
 .GWWacIf04lQysYMFJma0A {
   background: radial-gradient(
     100% 80% at 64% 95%,
@@ -1858,6 +1900,26 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._1SnxJyZ5foWgNRCNLmKm6H {
   white-space: nowrap;
+}
+.BwHJdoHlv8wy5OypqL_b7 {
+  position: relative;
+  width: fit-content;
+  justify-self: center;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 28px;
+  padding: 6px;
+  color: #0e141b;
+  right: unset;
+  transition: all .2s ease-out;
+}
+.BwHJdoHlv8wy5OypqL_b7:hover {
+  box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
+}
+.BwHJdoHlv8wy5OypqL_b7:hover .FollowGameButton {
+  text-shadow: none;
+  color: #0e141b;
+  font-weight: 600;
 }
 ._2fynndXXlBKZiRaoG9GuDP {
   display: flex;

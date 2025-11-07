@@ -20632,21 +20632,24 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const { clanAccountID: _, color: __webpack_require__, bgcolor: _ } = _;
-        (0, _._)();
-        return _.createElement(_._, {
-          nCreatorAccountID: _,
-          classOverride: (0, _._)(
-            _().FollowGameButtonNotTop,
-            _().BBCodeFollowButton,
-          ),
-          styleOverride: {
-            color: __webpack_require__,
-            backgroundColor: _,
-          },
-        });
+        return (
+          (0, _._)(),
+          _.createElement(_._, {
+            nCreatorAccountID: _,
+            classOverride: (0, _._)(
+              _().FollowGameButtonNotTop,
+              _().BBCodeFollowButton,
+            ),
+            styleOverride: {
+              color: __webpack_require__,
+              backgroundColor: _,
+            },
+          })
+        );
       }
       function _(_) {
-        const _ = Number(_.args.groupid);
+        const { event: _ } = _.context,
+          _ = Number(_.args.groupid) || _.clanSteamID.GetAccountID();
         if (!_) return null;
         const _ = (0, _._)(_.args.color, "black"),
           _ = (0, _._)(_.args.bgcolor, "white");

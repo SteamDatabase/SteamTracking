@@ -3,6 +3,16 @@
   {
     chunkid: (module) => {
       module.exports = {
+        BBCodeFollowButton: "NVuxjpTCUClP-4RsNDDvk",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        BBCodeFollowButton: "BwHJdoHlv8wy5OypqL_b7",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         countdownCtn: "GWWacIf04lQysYMFJma0A",
         Closed: "ATX_xEE69rX8wVxQvONEx",
         CountDownCtn: "_11RwPICMOmmvNXkOq9bjPc",
@@ -13,6 +23,11 @@
         WinnerInfo: "_2LTFl4ZFuL1BeNbqYPExWv",
         WinnerCount: "Z7ScP-i1XHPQn4eeFdJ3g",
         WinnerText: "chkuqox_QD6U5ID_AHTLk",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -427,38 +442,66 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
-        const _ = (0, _._)(),
+        const { appid: _, color: __webpack_require__, bgcolor: _ } = _,
+          _ = (0, _._)(),
           _ = (0, _._)(_);
         return _.createElement(_._, {
           snr: _,
-          appID: _.appid,
-          classOverride: (0, _._)(_().WishlistButtonNotTop, "WishlistButton"),
+          appID: _,
+          classOverride: (0, _._)(
+            _().WishlistButtonNotTop,
+            _().BBCodeWishlistButton,
+            "WishlistButton",
+          ),
+          styleOverride: {
+            color: __webpack_require__,
+            backgroundColor: _,
+          },
         });
       }
       function _(_) {
         const _ = Number(_.args.appid);
-        return _
-          ? _.createElement(_, {
-              appid: _,
-            })
-          : null;
+        if (!_) return null;
+        const _ = (0, _._)(_.args.color, "black"),
+          _ = (0, _._)(_.args.bgcolor, "white");
+        return _.createElement(_, {
+          appid: _,
+          color: _,
+          bgcolor: _,
+        });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
+        const { appid: _, color: __webpack_require__, bgcolor: _ } = _;
         (0, _._)();
         return _.createElement(_._, {
-          appID: _.appid,
-          classOverride: (0, _._)(_().FollowGameButtonNotTop),
+          appID: _,
+          classOverride: (0, _._)(
+            _().FollowGameButtonNotTop,
+            _().BBCodeFollowButton,
+          ),
+          styleOverride: {
+            color: __webpack_require__,
+            backgroundColor: _,
+          },
         });
       }
       function _(_) {
         const _ = Number(_.args.appid);
-        return _
-          ? _.createElement(_, {
-              appid: _,
-            })
-          : null;
+        if (!_) return null;
+        const _ = (0, _._)(_.args.color, "black"),
+          _ = (0, _._)(_.args.bgcolor, "white");
+        return _.createElement(_, {
+          appid: _,
+          color: _,
+          bgcolor: _,
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -728,6 +771,38 @@
         }
         return null;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { clanAccountID: _, color: __webpack_require__, bgcolor: _ } = _;
+        return (
+          (0, _._)(),
+          _.createElement(_._, {
+            nCreatorAccountID: _,
+            classOverride: (0, _._)(
+              _().FollowGameButtonNotTop,
+              _().BBCodeFollowButton,
+            ),
+            styleOverride: {
+              color: __webpack_require__,
+              backgroundColor: _,
+            },
+          })
+        );
+      }
+      function _(_) {
+        const { event: _ } = _.context,
+          _ = Number(_.args.groupid) || _.clanSteamID.GetAccountID();
+        if (!_) return null;
+        const _ = (0, _._)(_.args.color, "black"),
+          _ = (0, _._)(_.args.bgcolor, "white");
+        return _.createElement(_, {
+          clanAccountID: _,
+          color: _,
+          bgcolor: _,
+        });
+      }
       let _ = null;
       function _(_) {
         const { event: _ } = _.context,
@@ -916,6 +991,13 @@
                       ],
                       [
                         "followgame",
+                        {
+                          Constructor: _,
+                          autocloses: !1,
+                        },
+                      ],
+                      [
+                        "followgroup",
                         {
                           Constructor: _,
                           autocloses: !1,

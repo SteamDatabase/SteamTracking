@@ -19,6 +19,56 @@
     },
     chunkid: (module) => {
       module.exports = {
+        GhostCtn: "_3Kh2xkNOxK9yAzjUL6Ivgx",
+        PlaceholderCap: "w8Jvjch8aFrIUAv0SH561",
+        GhostShine: "_2BHrUiVJgb5paKR9HDuFry",
+        PlaceholderBox: "_3xK5GjRYJTY1N5bjbocIm9",
+        ShineCtn: "cI9gcyxQOApga-GXz7_V4",
+        PlaceholderVideo: "_26iPLXluGpPw4W-coLs883",
+        CapsuleRow3: "_3K3QSflZnf6fPmoBKqoGjc",
+        CapsuleRow4: "_1gEPGVsJ0bb_BL9C4YvFNv",
+        CapsuleRowSuperCapsule: "_3zJewh51IljAQRz-6OMdOB",
+        ItemBrowserCapsule: "_2fHvxv3mZQin5_2wB2xfmg",
+        CapsuleRow23: "_3Zk9eQFgRurzIIkTvIMxHW",
+        CapRow: "dGk0hxulznq7MwRweW94h",
+        Caps2: "_1uECvRdcT_yaRni_AEsObF",
+        Caps3: "QU4kidgDKJx_jDfEquNmT",
+        CapsuleRow234: "_2V6zSuL6-efjUwNCdSspJk",
+        Caps4: "_3xqTH8e1tUBIai3kdvgahn",
+        SpotlightsRow: "_3_FBxHpnwok2YRFmtASM5I",
+        DailyDealsColumn: "_1Rudow4oFWhnDbqnzJ0nuM",
+        EventRow: "_1jEY56Mb_K-eNOlOZ2ayy0",
+        PlaceholderGroupImage: "_1RRbToD4zek6vvdq8pajSX",
+        DetailsPlaceholder: "_2SrANXbyCGZNaPRuc1diKT",
+        PlaceholderTitle: "BryzNsBYLnALstxxAzdwn",
+        PlaceholderSubtitle: "_1rI86EQqPtdjPy7CDjcWE3",
+        PlaceholderButtons: "aHFZOytk7I6xyF53cX0Iz",
+        TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
+        VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
+        ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
+        ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
+        CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
+        ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
+        MainCapRow: "_4USkr2F0D76zPrDAKe8tZ",
+        PlaceholderRelease: "_3kqq8V4VYQWX0MTcaWruTa",
+        PlaceholderReviews: "_1TQDb8Ui8AuVqTFeIQHC8J",
+        PlaceholderTags: "_2I6t8VQXDbATmaOzp9jRzk",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        Name: "_1e4No10_bpJEyqWGdzhAs9",
+        PurchaseOnlyShelf: "_3586BiTSYwaANmF1iHSK0f",
+        PurchaseOnlyCtn: "VvwZmAlF0uXfe__ZO0uX0",
+        PurchaseOnlyNamePlatformCtn: "_2se3YP407MZoUhOQNUq3iZ",
+        PurchaseOnlyActionCtn: "m8h0cksva38onSt9vDraW",
+        PurchaseAndPlatformCtn: "_3xpkvUfVoGX-QZFAF9bHX1",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         "duration-app-launch": "800ms",
         AppCarouselTrailerCtn: "_2DzJ9TSrYmyo1tY_R-1jym",
         AutoplayCheckbox: "ZZgGaqlJvV83f4CYl3O3N",
@@ -39,13 +89,6 @@
         AOWarning: "_19l-UjQZVVGNK5SKnOrmJB",
         Text: "VoAJhMdtQTylTg3G03nJo",
         "capsule-trans-out": "hckHU2LXCJNx0X37OqCsx",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        TrailerTitle: "_3HELOo0qFfDrRZ9Sa1GXeF",
-        Category: "_2YhOhoyYNbue9fEPMYPiq2",
-        Visible: "_2cpBClyttSkWAsgMArc0BM",
       };
     },
     chunkid: (module) => {
@@ -2534,15 +2577,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(..._) {
-        return _.join(" ");
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -2604,6 +2638,34 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            strImageToken: _,
+            language: __webpack_require__,
+            strAltText: _,
+          } = _,
+          _ = (0, _._)(_, __webpack_require__);
+        return _
+          ? "string" == typeof _
+            ? _.createElement("img", {
+                src: _,
+                alt: _,
+              })
+            : _.createElement(_._, {
+                rgSources: _,
+                strAltText: _,
+              })
+          : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2654,6 +2716,879 @@
             )
           : null;
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { _: _, type: __webpack_require__ } = _,
+          [_] = (0, _._)(_, (0, _._)(__webpack_require__), {});
+        return _.createElement(
+          "div",
+          {
+            className: _().SaleItemBrowserRow,
+          },
+          _.createElement(_._, {
+            ..._,
+            bLoadShortDescription: !0,
+            bShowReviewSummary: !0,
+            bShowDemoButton: _.bShowDemoButton || 1 == _?.GetAppType(),
+            bPreferDemoStorePage: _.bPreferDemoStorePage,
+          }),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+          capsules_per_row: _,
+          is_generic: __webpack_require__,
+          is_generic_trailer: _,
+          is_event_dash_row: _,
+          is_trailer_carousel: _,
+          is_spotlights: _,
+          is_item_browser: _,
+          is_maincap: _,
+          is_expanded_maincap: _,
+          is_expanded_display: _,
+        } = _;
+        if (!_) return null;
+        if (__webpack_require__)
+          return _.createElement(
+            "div",
+            {
+              className: _().GhostCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().PlaceholderBox,
+              },
+              _.createElement("div", {
+                className: _().ShineCtn,
+              }),
+            ),
+          );
+        if (_)
+          return _.createElement(
+            "div",
+            {
+              className: _().GhostCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().PlaceholderVideo,
+              },
+              _.createElement("div", {
+                className: _().ShineCtn,
+              }),
+            ),
+          );
+        if (_)
+          return _.createElement(
+            "div",
+            {
+              className: _().GhostCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().TrailerCarouselRow,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().VideoPlaceholder,
+                },
+                _.createElement("div", {
+                  className: _().ShineCtn,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().ItemDescPlaceholer,
+                },
+                _.createElement("div", {
+                  className: _().ShineCtn,
+                }),
+              ),
+            ),
+          );
+        if (_)
+          return _.createElement(
+            "div",
+            {
+              className: _().GhostCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().EventRow,
+              },
+              _.createElement("div", {
+                className: (0, _._)(
+                  _().PlaceholderGroupImage,
+                  _().PlaceholderCap,
+                ),
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().DetailsPlaceholder),
+                },
+                _.createElement("div", {
+                  className: (0, _._)(_().PlaceholderTitle, _().PlaceholderCap),
+                }),
+                _.createElement("div", {
+                  className: (0, _._)(
+                    _().PlaceholderSubtitle,
+                    _().PlaceholderCap,
+                  ),
+                }),
+                _.createElement("div", {
+                  className: (0, _._)(
+                    _().PlaceholderButtons,
+                    _().PlaceholderCap,
+                  ),
+                }),
+              ),
+            ),
+          );
+        if (_)
+          return _.createElement(
+            "div",
+            {
+              className: _().GhostCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().SpotlightsRow,
+              },
+              _.createElement("div", {
+                className: _().PlaceholderCap,
+              }),
+              _.createElement("div", {
+                className: _().PlaceholderCap,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _().DailyDealsColumn,
+                },
+                _.createElement("div", {
+                  className: _().PlaceholderCap,
+                }),
+                _.createElement("div", {
+                  className: _().PlaceholderCap,
+                }),
+              ),
+            ),
+          );
+        if (_)
+          return _.createElement(
+            "div",
+            {
+              className: _().GhostCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)({
+                  [_().MainCapRow]: !0,
+                  [_().MainCapRowExpanded]: _,
+                }),
+              },
+              _.createElement("div", {
+                className: _().PlaceholderCap,
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().DetailsPlaceholder),
+                },
+                _.createElement("div", {
+                  className: (0, _._)(_().PlaceholderTitle, _().PlaceholderCap),
+                }),
+                _.createElement("div", {
+                  className: (0, _._)(
+                    _().PlaceholderSubtitle,
+                    _().PlaceholderCap,
+                  ),
+                }),
+                _.createElement("div", {
+                  className: (0, _._)(
+                    _().PlaceholderRelease,
+                    _().PlaceholderCap,
+                  ),
+                }),
+                _.createElement("div", {
+                  className: (0, _._)(
+                    _().PlaceholderReviews,
+                    _().PlaceholderCap,
+                  ),
+                }),
+                _.createElement("div", {
+                  className: (0, _._)(_().PlaceholderTags, _().PlaceholderCap),
+                }),
+              ),
+            ),
+          );
+        if (_)
+          return _.createElement(
+            "div",
+            {
+              className: _().GhostCtn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().ExpandedItemRow,
+              },
+              _.createElement("div", {
+                className: (0, _._)(_().CapsulePlaceholder, _().PlaceholderCap),
+              }),
+              _.createElement("div", {
+                className: (0, _._)(_().ItemDefPlaceholder, _().PlaceholderCap),
+              }),
+            ),
+          );
+        if (_) {
+          const _ = [];
+          for (let _ = 0; _ < _[0]; _++)
+            _.push(
+              _.createElement(
+                "div",
+                {
+                  key: "item_browse_ghost_" + _,
+                  className: _().ItemBrowserCapsule,
+                },
+                _.createElement("div", {
+                  className: _().PlaceholderCap,
+                }),
+              ),
+            );
+          return _.createElement(
+            "div",
+            {
+              className: _().GhostCtn,
+            },
+            _,
+          );
+        }
+        return 1 == _?.length
+          ? 1 == _[0]
+            ? _.createElement(
+                "div",
+                {
+                  className: _().GhostCtn,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().CapsuleRowSuperCapsule,
+                  },
+                  _.createElement("div", {
+                    className: _().PlaceholderCap,
+                  }),
+                ),
+              )
+            : 4 == _[0]
+              ? _.createElement(
+                  "div",
+                  {
+                    className: _().GhostCtn,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().CapsuleRow4,
+                    },
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                  ),
+                )
+              : _.createElement(
+                  "div",
+                  {
+                    className: _().GhostCtn,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().CapsuleRow3,
+                    },
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                  ),
+                )
+          : 2 == _?.length
+            ? 3 == _[0] && 3 == _[1]
+              ? _.createElement(
+                  "div",
+                  {
+                    className: _().GhostCtn,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().CapsuleRow23,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                      },
+                      _.createElement("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      _.createElement("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      _.createElement("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                      },
+                      _.createElement("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      _.createElement("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      _.createElement("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                    ),
+                  ),
+                )
+              : _.createElement(
+                  "div",
+                  {
+                    className: _().GhostCtn,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().CapsuleRow23,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: (0, _._)(_().CapRow, _().Caps2),
+                      },
+                      _.createElement("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      _.createElement("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                      },
+                      _.createElement("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      _.createElement("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      _.createElement("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                    ),
+                  ),
+                )
+            : _.createElement(
+                "div",
+                {
+                  className: _().GhostCtn,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _().CapsuleRow234,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_().CapRow, _().Caps2),
+                    },
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_().CapRow, _().Caps3),
+                    },
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_().CapRow, _().Caps4),
+                    },
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    _.createElement("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                  ),
+                ),
+              );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _._)((_) => {
+        const {
+            myInstance: _,
+            setIsHovered: __webpack_require__,
+            displayStoreItem: _,
+            hoverType: _,
+            nHoverId: _,
+            displayInfo: _,
+          } = (0, _._)(_, {
+            include_all_purchase_options: !0,
+          }),
+          {
+            bHidePrice: _,
+            bShowDemoButton: _,
+            bPreferDemoStorePage: _,
+            bShowPurchaseOptionsButton: _,
+            bUseSubscriptionLayout: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          _ = () => _(!_),
+          _ = (0, _._)(),
+          _ = _.useMemo(() => _?.GetIncludedAppIDsOrSelf(), [_]);
+        if (!_)
+          return _.createElement(_._, {
+            capsules_per_row: [1],
+            is_expanded_display: !0,
+          });
+        const _ = (0, _._)(_),
+          _ =
+            ((0, _._)(_.GetStorePageURL(_)),
+            _.GetName()?.length > 0 && _.GetName(),
+            _ && _.HasDemoStandaloneStorePage()
+              ? _.GetDemoStandaloneStorePageAppIDs()[0]
+              : _),
+          _ = 0 == _.GetStoreItemType();
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(
+              _().StoreSaleWidgetContainer,
+              _().LibraryAssetExpandedDisplay,
+              "LibraryAssetExpandedDisplay",
+            ),
+          },
+          _.createElement(
+            _._,
+            {
+              appid: _ && _.GetAppID(),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().StoreSaleWidgetLibraryAssetExtendedTop,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().StoreSaleWidgetLeft),
+                },
+                _.createElement(
+                  _._,
+                  {
+                    type: _,
+                    _: _,
+                    fnHoverState: __webpack_require__,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().StoreSaleWidgetImage,
+                    },
+                    _.createElement(_._, {
+                      appids: _,
+                    }),
+                    _.createElement(_._, {
+                      info: _,
+                      imageType: "library",
+                    }),
+                    _.createElement(_._, {
+                      storeItem: _,
+                    }),
+                  ),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().StoreSaleWidgetCrossCenterRight,
+                },
+                _.createElement(_._, {
+                  appID: _ && _.GetAppID(),
+                  classOverride: (0, _._)(
+                    _().WishlistButtonNotTop,
+                    "WishlistButton",
+                  ),
+                  snr: _,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().StoreSaleWidgetContents,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().StoreSaleWidgetCenter,
+                    },
+                    _.GetShortDescription()?.length > 0 &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: (0, _._)(
+                            _().StoreSaleWidgetShortDesc,
+                            "StoreSaleWidgetShortDesc",
+                          ),
+                        },
+                        _.GetShortDescription(),
+                      ),
+                    _.createElement(_._, {
+                      rgTagIDs: _.GetTagIDs(),
+                      instanceNum: _,
+                    }),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().StoreMetaDataCtn,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().StoreSaleItemRelease,
+                        },
+                        (0, _._)(
+                          "#Sale_ReleaseDate",
+                          _.createElement(
+                            "span",
+                            null,
+                            _.GetFormattedSteamReleaseDate(),
+                          ),
+                        ),
+                      ),
+                      Boolean(_.GetDeveloperNames()?.length) &&
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().StoreSaleItemDev,
+                          },
+                          (0, _._)("#CreatorHome_DevelopedBy"),
+                          _.createElement(
+                            "span",
+                            null,
+                            _.GetDeveloperNames()[0],
+                          ),
+                        ),
+                      Boolean(_.GetPublisherNames()?.length) &&
+                        _.createElement(
+                          "div",
+                          {
+                            className: _().StoreSaleItemDev,
+                          },
+                          (0, _._)("#CreatorHome_PublishedBy"),
+                          _.createElement(
+                            "span",
+                            null,
+                            _.GetPublisherNames()[0],
+                          ),
+                        ),
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().StoreSaleLibraryAssetWidgetRight,
+                    },
+                    _.createElement(_._, {
+                      info: _,
+                      bPopOutTrailerPlayback: !0,
+                    }),
+                  ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().StoreSaleItemReview,
+                  },
+                  _.createElement(_._, {
+                    appInfo: _,
+                  }),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().CapsuleBottomBar,
+                  },
+                  Boolean(_ && _)
+                    ? _.createElement(_._, {
+                        appid: _.GetAppID(),
+                        bIsMuted: !1,
+                      })
+                    : _.createElement(
+                        _.Fragment,
+                        null,
+                        _.createElement(_._, {
+                          item: _,
+                        }),
+                        _.createElement(_._, {
+                          info: _,
+                          bShowDemoButton: _,
+                          bHidePrice: _,
+                          bShowPurchaseOptionsButton: _,
+                          fnOnPurchaseOptionsClick: _,
+                          bHideWishlistButton: !_.BIsComingSoon(),
+                        }),
+                      ),
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().StoreSaleWidgetBgTint,
+                  },
+                  _.createElement(_._, {
+                    info: _,
+                  }),
+                  _.createElement(_._, {
+                    storeItem: _,
+                  }),
+                ),
+              ),
+            ),
+            _.createElement(_._, {
+              storeItem: _,
+              bPurchaseOptionsExpanded: _,
+              fnCollapseOptions: _,
+            }),
+          ),
+        );
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { displayStoreItem: _, displayInfo: __webpack_require__ } = (0,
+          _._)(_),
+          {
+            bShowDemoButton: _,
+            bHidePrice: _,
+            bHidePlatforms: _,
+            bShowDeckCompatibilityDialog: _,
+            bAutoFocus: _,
+          } = _,
+          _ = 0 == _.GetStoreItemType();
+        return _.createElement(
+          _._,
+          {
+            appid: _ ? _.GetAppID() : void 0,
+          },
+          _.createElement(
+            _._,
+            {
+              "flow-children": "grid",
+              navEntryPreferPosition: _._.PREFERRED_CHILD,
+              autoFocus: _,
+              navKey: "purchase_only_" + _.GetID(),
+            },
+            "\t",
+            _.createElement(
+              "div",
+              {
+                className: _.PurchaseOnlyCtn,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.PurchaseOnlyNameCtn,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.Name,
+                  },
+                  _.GetName(),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.PurchaseAndPlatformCtn,
+                },
+                Boolean(!_ && 10 != _.GetAppType()) &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _._,
+                    },
+                    _.createElement(_._, {
+                      item: __webpack_require__,
+                    }),
+                    Boolean(
+                      _ && 0 == _?.GetStoreItemType() && _.GetPlatforms(),
+                    ) &&
+                      _.createElement(_._, {
+                        className: _.DeckCompatIcon,
+                        category: _.GetPlatforms().steam_deck_compat_category,
+                      }),
+                  ),
+                _.createElement(_._, {
+                  info: __webpack_require__,
+                  className: _.PurchaseOnlyActionCtn,
+                  bShowDemoButton: _,
+                  bShowCartButton: !0,
+                  bHidePrice: _,
+                  bHideWishlistButton: !0,
+                  bShowDeckCompatibilityDialog: _,
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      const _ = (_) => {
+        let { displayStyle: _ } = _,
+          _ = (0, _._)();
+        if ("purchaseonlydisplay" === _)
+          return _.createElement(_, {
+            ..._,
+          });
+        if ("bundle" == _.type || "sub" == _.type)
+          return _.createElement(_._, {
+            ..._,
+          });
+        if (_)
+          return _.createElement(_._, {
+            ..._,
+          });
+        switch (
+          (!(0, _._)() ||
+            ("library" != _ && "animated" != _) ||
+            (_ = "bordered"),
+          _)
+        ) {
+          case "library":
+          case "animated":
+            return _.createElement(_, {
+              ..._,
+            });
+          case "compactlist":
+            return _.createElement(_._, {
+              ..._,
+            });
+          default:
+            return _.createElement(_._, {
+              ..._,
+              bShowReviewSummary: !0,
+            });
+        }
+      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3183,64 +4118,6 @@
             label: (0, _._)("#StoreTrailer_AutoPlayVideos"),
             onChange: _,
           }),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            name: _,
-            trailerCategory: __webpack_require__,
-            trailerDisplay: _,
-            mouseOver: _,
-          } = _,
-          [_, _] = _.useState(!1);
-        if (
-          (_.useEffect(() => {
-            0 != _ && _(!0);
-          }, [_]),
-          _.useEffect(() => {
-            if (_) return void _(!0);
-            if (!_) return;
-            const _ = setTimeout(() => _(!1), 3e3);
-            return () => clearTimeout(_);
-          }, [_, _]),
-          null == __webpack_require__ || 0 == _)
-        )
-          return;
-        const _ =
-          1 == _
-            ? (0, _._)("#StoreTrailer_Title_TrailerPreview")
-            : (0, _._)(__webpack_require__);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              [_().TrailerTitle]: !0,
-              [_().Visible]: _,
-            }),
-          },
-          (0, _._)(
-            "#StoreTrailer_Title_Combiner",
-            _.createElement(
-              "span",
-              {
-                className: _().Category,
-              },
-              _,
-            ),
-            _,
-          ),
         );
       }
     },

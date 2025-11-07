@@ -18364,22 +18364,25 @@
         Zs = a.n(Ks);
       function Xs(e) {
         const { clanAccountID: t, color: a, bgcolor: n } = e;
-        (0, vs.n9)();
-        return d.createElement(bs.Q3, {
-          nCreatorAccountID: t,
-          classOverride: (0, L.A)(
-            Ss().FollowGameButtonNotTop,
-            Zs().BBCodeFollowButton,
-          ),
-          styleOverride: { color: a, backgroundColor: n },
-        });
+        return (
+          (0, lo.L2)(),
+          d.createElement(bs.Q3, {
+            nCreatorAccountID: t,
+            classOverride: (0, L.A)(
+              Ss().FollowGameButtonNotTop,
+              Zs().BBCodeFollowButton,
+            ),
+            styleOverride: { color: a, backgroundColor: n },
+          })
+        );
       }
       function $s(e) {
-        const t = Number(e.args.groupid);
-        if (!t) return null;
-        const a = (0, ws.O)(e.args.color, "black"),
-          n = (0, ws.O)(e.args.bgcolor, "white");
-        return d.createElement(Xs, { clanAccountID: t, color: a, bgcolor: n });
+        const { event: t } = e.context,
+          a = Number(e.args.groupid) || t.clanSteamID.GetAccountID();
+        if (!a) return null;
+        const n = (0, ws.O)(e.args.color, "black"),
+          l = (0, ws.O)(e.args.bgcolor, "white");
+        return d.createElement(Xs, { clanAccountID: a, color: n, bgcolor: l });
       }
       let ec = null;
       function tc(e) {

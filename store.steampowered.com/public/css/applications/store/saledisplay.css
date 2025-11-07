@@ -192,10 +192,57 @@
   object-fit: none;
   transform: scaleY(-1);
 }
-._1QP7mh3IZ6mkLZFarqOI6K {
+._2H6nBXGQnWeZJ_k8tK-qeO {
+  overflow: hidden !important;
+  scrollbar-gutter: stable;
+}
+@media screen and (max-width: 730px) {
+  ._2H6nBXGQnWeZJ_k8tK-qeO {
+    scrollbar-gutter: initial;
+  }
+}
+:root {
+  --store-page-width: 940px;
+  --store-menu-content-width: 1100px;
+}
+body.widestore {
+  --store-page-width: 1200px;
+  --store-menu-content-width: 1200px;
+}
+.XRxbVx8hEC64irIt5ETl6 {
+  top: var(--store-menu-floating-height, 0);
+  position: sticky;
+  z-index: 150;
+  width: 100%;
+  background-color: #1a9fff;
   display: flex;
-  gap: 30px;
-  padding: 20px;
+  justify-content: center;
+}
+._1QP7mh3IZ6mkLZFarqOI6K {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: calc(var(--store-menu-content-width) + 16px);
+  max-width: 100%;
+  min-width: 0;
+  flex-shrink: 0;
+}
+._3l8xeoR-wEUYEFOd8iTVOY {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  cursor: pointer;
+}
+._31NjlVCoc_kJqU4O6T3GaQ {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+._31NjlVCoc_kJqU4O6T3GaQ:hover {
+  text-decoration: underline;
 }
 ._1Un6hCqh2IuOm0WLmrrA7w {
   display: flex;
@@ -1462,6 +1509,48 @@ p a:hover {
 ._1RsiclQYbOWMcz3Hr6dVT9 .adrBtsY2w7IX8V81nMir1:hover {
   text-decoration: underline;
 }
+._1dm-6uzq_x5Gqo421G3a1r {
+  position: relative;
+  width: fit-content;
+  justify-self: center;
+  background: #fff;
+  max-height: 32px;
+  box-shadow: none;
+  border-radius: 28px;
+  padding: 3px 12px;
+  color: #0e141b;
+  right: unset;
+  transition: all .2s ease-out;
+}
+._1dm-6uzq_x5Gqo421G3a1r:hover {
+  box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
+}
+._1dm-6uzq_x5Gqo421G3a1r:hover .WishlistButtonText {
+  text-shadow: none;
+  font-size: 14px;
+  color: #0e141b;
+  font-weight: 600;
+}
+.NVuxjpTCUClP-4RsNDDvk {
+  position: relative;
+  width: fit-content;
+  justify-self: center;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 28px;
+  padding: 6px;
+  color: #0e141b;
+  right: unset;
+  transition: all .2s ease-out;
+}
+.NVuxjpTCUClP-4RsNDDvk:hover {
+  box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
+}
+.NVuxjpTCUClP-4RsNDDvk:hover .FollowGameButton {
+  text-shadow: none;
+  color: #0e141b;
+  font-weight: 600;
+}
 .GWWacIf04lQysYMFJma0A {
   background: radial-gradient(
     100% 80% at 64% 95%,
@@ -1521,4 +1610,24 @@ p a:hover {
 ._2LTFl4ZFuL1BeNbqYPExWv .chkuqox_QD6U5ID_AHTLk {
   display: inline;
   margin-left: 8px;
+}
+.BwHJdoHlv8wy5OypqL_b7 {
+  position: relative;
+  width: fit-content;
+  justify-self: center;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 28px;
+  padding: 6px;
+  color: #0e141b;
+  right: unset;
+  transition: all .2s ease-out;
+}
+.BwHJdoHlv8wy5OypqL_b7:hover {
+  box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
+}
+.BwHJdoHlv8wy5OypqL_b7:hover .FollowGameButton {
+  text-shadow: none;
+  color: #0e141b;
+  font-weight: 600;
 }

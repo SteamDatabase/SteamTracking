@@ -180,7 +180,14 @@
     },
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        storeMenuResponsiveModeWidth: "730px",
+        narrowWidth: "500px",
+        SuppressScrollOnBody: "_2H6nBXGQnWeZJ_k8tK-qeO",
+        SubMenuOuterCtn: "XRxbVx8hEC64irIt5ETl6",
         SubMenuCtn: "_1QP7mh3IZ6mkLZFarqOI6K",
+        SubMenuItemCtn: "_3l8xeoR-wEUYEFOd8iTVOY",
+        SubMenuItemText: "_31NjlVCoc_kJqU4O6T3GaQ",
       };
     },
     chunkid: (module) => {
@@ -893,18 +900,30 @@
         return _.createElement(
           "div",
           {
-            className: _().SubMenuCtn,
-            style: {
-              ...(0, _._)(__webpack_require__, _, _),
-            },
+            className: _().SubMenuOuterCtn,
           },
-          __webpack_require__.menu_items.map((_) =>
-            _.createElement(_, {
-              key: "submenuitem" + _.unique_id,
-              language: _,
-              mainItem: _,
-              subMenu: __webpack_require__,
-            }),
+          _.createElement(
+            "div",
+            {
+              className: _().SubMenuCtn,
+              style: {
+                ...(0, _._)(__webpack_require__, _, _),
+              },
+            },
+            __webpack_require__.menu_items.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: "submenuitem" + _.unique_id,
+                  className: _().SubMenuItemCtn,
+                },
+                _.createElement(_, {
+                  language: _,
+                  mainItem: _,
+                  subMenu: __webpack_require__,
+                }),
+              ),
+            ),
           ),
         );
       }
@@ -926,6 +945,7 @@
           _.createElement(
             _._,
             {
+              className: _().SubMenuItemText,
               style: {
                 color: _,
               },
@@ -938,10 +958,14 @@
         );
       }
       function _(_) {
-        return (
-          new URL(_ || "").pathname.toLowerCase() ===
-          window.location.pathname.toLowerCase()
-        );
+        try {
+          return (
+            new URL(_ || "").pathname.toLowerCase() ===
+            window.location.pathname.toLowerCase()
+          );
+        } catch {
+          return !1;
+        }
       }
       function _(_) {
         const { event: _, broadcastEmbedContext: __webpack_require__ } = _,

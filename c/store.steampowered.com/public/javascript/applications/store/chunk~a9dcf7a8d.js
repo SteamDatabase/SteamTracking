@@ -13,6 +13,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        TrailerTitle: "_3HELOo0qFfDrRZ9Sa1GXeF",
+        Category: "_2YhOhoyYNbue9fEPMYPiq2",
+        Visible: "_2cpBClyttSkWAsgMArc0BM",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         TrailerPlayer: "ByTa3bBdyJMzBnwuLJ64v",
         LoadingThrobber: "_36zgLKcKD8iDyluIpswf6L",
         FadeIn: "_3wB3kse3W5Hv1pyFlYyMTl",
@@ -104,6 +111,15 @@
         LeftGroup: "_2BJQLVbj-HFcit8hPPGlG_",
         RightGroup: "_2DMfXT39PNuEz5MAKitZ4m",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(..._) {
+        return _.join(" ");
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -201,6 +217,64 @@
             _: "M12 88H116V40H12V88ZM128 94C128 97.3137 125.314 100 122 100H6C2.78979 100 0.168429 97.4789 0.0078125 94.3086L0 94V34C0 30.6863 2.68629 28 6 28H122C125.314 28 128 30.6863 128 34V94Z",
             fill: "currentColor",
           }),
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            name: _,
+            trailerCategory: __webpack_require__,
+            trailerDisplay: _,
+            mouseOver: _,
+          } = _,
+          [_, _] = _.useState(!1);
+        if (
+          (_.useEffect(() => {
+            0 != _ && _(!0);
+          }, [_]),
+          _.useEffect(() => {
+            if (_) return void _(!0);
+            if (!_) return;
+            const _ = setTimeout(() => _(!1), 3e3);
+            return () => clearTimeout(_);
+          }, [_, _]),
+          null == __webpack_require__ || 0 == _)
+        )
+          return;
+        const _ =
+          1 == _
+            ? (0, _._)("#StoreTrailer_Title_TrailerPreview")
+            : (0, _._)(__webpack_require__);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)({
+              [_().TrailerTitle]: !0,
+              [_().Visible]: _,
+            }),
+          },
+          (0, _._)(
+            "#StoreTrailer_Title_Combiner",
+            _.createElement(
+              "span",
+              {
+                className: _().Category,
+              },
+              _,
+            ),
+            _,
+          ),
         );
       }
     },

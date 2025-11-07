@@ -655,6 +655,8 @@
         RowSize2: "H7KOQjMVfmfUfoCuoJTNB",
         RowSize3: "xIqX_PvYjm1_rnxpXFAu5",
         RowSize4: "_3Q6EKKVEKVFpC_BW0FHOB_",
+        MobileCarouselSnap: "_2r_Q0QrLixR5SEstkW-vm4",
+        MobileCarouselFull: "_3-s3Pa7jvWHp_ro2xlx5m4",
         MediaCtn: "-BNnqulztTaTeP1QNeSBu",
         RowSize1: "_1O__hioeAf860tvMTF75fa",
         HorizontalTextFirst: "_1dmoVJbb-pQB030J1JNfcs",
@@ -39301,6 +39303,7 @@
                 _.SaleSection,
                 _().SaleSectionCtn,
                 _().Container,
+                "TemplateMediaOverlay",
                 _.className,
               ),
               style: (0, _._)(_, __webpack_require__, _),
@@ -39583,6 +39586,7 @@
                     _.createElement(_, {
                       key: "templategrid_" + _.unique_id + "_" + _,
                       ..._,
+                      mobile_carousel_style: _ && _ ? _ : void 0,
                       row: _,
                     }),
                   );
@@ -39614,8 +39618,6 @@
                   _._,
                   {
                     ...(0, _._)(_.jsondata),
-                    bPreventSnapCarousel:
-                      _ == _._.k_MobileCarousel_PagedCArousel,
                     hideArrows: !_,
                     hidePips: _,
                     useTestScrollbar: !1,
@@ -39626,8 +39628,6 @@
                     className: (0, _._)({
                       [_().TemplateCarousel]: !0,
                       "template-carousel": !0,
-                      "template-mobile-snap-carousel":
-                        _ == _._.k_MobileCarousel_SnapCarousel,
                     }),
                   },
                   _,
@@ -39657,7 +39657,7 @@
       }
       function _(_) {
         var _, _;
-        const { section: _, row: _ } = _,
+        const { section: _, row: _, mobile_carousel_style: _ } = _,
           _ = (0, _._)(),
           [_, _] = (0, _._)(() => {
             var _, _, _, _;
@@ -39721,6 +39721,8 @@
               [_().RowSize2]: 2 == _,
               [_().RowSize3]: 3 == _,
               [_().RowSize4]: 4 == _,
+              [_().MobileCarouselSnap]: _ == _._.k_MobileCarousel_SnapCarousel,
+              [_().MobileCarouselFull]: _ == _._.k_MobileCarousel_PagedCArousel,
             }),
           },
           null === (_ = _.media_columns) || void 0 === _
