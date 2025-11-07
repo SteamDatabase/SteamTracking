@@ -8,6 +8,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
@@ -374,6 +375,65 @@
           return (
             void 0 === _ && (_ = {}),
             {
+              name: "shift",
+              options: _,
+              async _(_) {
+                const { _: __webpack_require__, _: _, placement: _ } = _,
+                  {
+                    mainAxis: _ = !0,
+                    crossAxis: _ = !1,
+                    limiter: _ = {
+                      _: (_) => {
+                        let { _: _, _: __webpack_require__ } = _;
+                        return {
+                          _: _,
+                          _: __webpack_require__,
+                        };
+                      },
+                    },
+                    ..._
+                  } = (0, _._)(_, _),
+                  _ = {
+                    _: __webpack_require__,
+                    _: _,
+                  },
+                  _ = await _(_, _),
+                  _ = (0, _._)((0, _._)(_)),
+                  _ = (0, _._)(_);
+                let _ = _[_],
+                  _ = _[_];
+                if (_) {
+                  const _ = "y" === _ ? "bottom" : "right",
+                    _ = _ + _["y" === _ ? "top" : "left"],
+                    _ = _ - _[_];
+                  _ = (0, _._)(_, _, _);
+                }
+                if (_) {
+                  const _ = "y" === _ ? "bottom" : "right",
+                    _ = _ + _["y" === _ ? "top" : "left"],
+                    _ = _ - _[_];
+                  _ = (0, _._)(_, _, _);
+                }
+                const _ = _._({
+                  ..._,
+                  [_]: _,
+                  [_]: _,
+                });
+                return {
+                  ..._,
+                  data: {
+                    _: _._ - _,
+                    _: _._ - _,
+                  },
+                };
+              },
+            }
+          );
+        },
+        _ = function (_) {
+          return (
+            void 0 === _ && (_ = {}),
+            {
               name: "size",
               options: _,
               async _(_) {
@@ -451,6 +511,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -924,6 +985,7 @@
       }
       const _ = _._,
         _ = _._,
+        _ = _._,
         _ = (_, _, _) => {
           const _ = new Map(),
             _ = {
@@ -1132,6 +1194,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       const _ = Math.min,
         _ = Math.max,
@@ -1151,6 +1215,9 @@
           start: "end",
           end: "start",
         };
+      function _(_, _, _) {
+        return _(_, _(_, _));
+      }
       function _(_, _) {
         return "function" == typeof _ ? _(_) : _;
       }
@@ -1161,13 +1228,16 @@
         return _.split("-")[1];
       }
       function _(_) {
+        return "x" === _ ? "y" : "x";
+      }
+      function _(_) {
         return "y" === _ ? "height" : "width";
       }
       function _(_) {
         return ["top", "bottom"].includes(_(_)) ? "y" : "x";
       }
       function _(_) {
-        return "x" === _(_) ? "y" : "x";
+        return _(_(_));
       }
       function _(_, _, _) {
         void 0 === _ && (_ = !1);

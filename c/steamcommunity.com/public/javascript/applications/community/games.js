@@ -9586,36 +9586,36 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = _.forwardRef(function (
-        {
-          imgURL: _,
-          glow: _,
-          pauseAnimation: __webpack_require__,
-          hidden: _,
-          alt: _,
-          className: _,
-        },
-        _,
-      ) {
-        const [_, _] = _.useState(!1);
+      function _(_) {
+        const {
+            imgURL: _,
+            glow: __webpack_require__,
+            pauseAnimation: _,
+            hidden: _,
+            alt: _,
+            className: _,
+            ..._
+          } = _,
+          [_, _] = _.useState(!1);
         if (_)
           return _.createElement(
             "div",
             {
               className: _().HiddenLabel,
+              ..._,
             },
             "?",
           );
-        const _ = _ && _;
+        const _ = _ && __webpack_require__;
         return _.createElement(
           "div",
           {
-            ref: _,
             className: (0, _._)(
               _().AchievementIconWrapper,
               _,
-              __webpack_require__ && _().RareAchievementNoAnimation,
+              _ && _().RareAchievementNoAnimation,
             ),
+            ..._,
           },
           _ &&
             _.createElement(
@@ -9641,7 +9641,7 @@
             onLoad: () => _(!0),
           }),
         );
-      });
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

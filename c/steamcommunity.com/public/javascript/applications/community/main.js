@@ -34496,7 +34496,13 @@
           _,
           {
             onMouseEnter: _.useCallback(() => _(!0), []),
-            onMouseLeave: _.useCallback(() => _(!1), []),
+            onMouseLeave: _.useCallback(
+              () =>
+                window.sessionStorage &&
+                "true" != window.sessionStorage.getItem("DEBUG_StickyHovers") &&
+                _(!1),
+              [],
+            ),
           },
         ];
       }

@@ -8739,32 +8739,35 @@
       var vr = r(79908),
         Fr = r(44533),
         qr = r.n(Fr);
-      const Ur = Wt.forwardRef(function (
-        {
-          imgURL: e,
-          glow: t,
-          pauseAnimation: r,
-          hidden: i,
-          alt: n,
-          className: a,
-        },
-        s,
-      ) {
-        const [l, o] = Wt.useState(!1);
-        if (i)
-          return Wt.createElement("div", { className: qr().HiddenLabel }, "?");
-        const c = l && t;
+      function Ur(e) {
+        const {
+            imgURL: t,
+            glow: r,
+            pauseAnimation: i,
+            hidden: n,
+            alt: a,
+            className: s,
+            ...l
+          } = e,
+          [o, c] = Wt.useState(!1);
+        if (n)
+          return Wt.createElement(
+            "div",
+            { className: qr().HiddenLabel, ...l },
+            "?",
+          );
+        const u = o && r;
         return Wt.createElement(
           "div",
           {
-            ref: s,
             className: (0, Nt.A)(
               qr().AchievementIconWrapper,
-              a,
-              r && qr().RareAchievementNoAnimation,
+              s,
+              i && qr().RareAchievementNoAnimation,
             ),
+            ...l,
           },
-          c &&
+          u &&
             Wt.createElement(
               "div",
               { className: qr().RareAchievementIconGlowContainerRoot },
@@ -8777,14 +8780,14 @@
               ),
             ),
           Wt.createElement("img", {
-            className: (0, Nt.A)(qr().Icon, c && qr().IconGlow),
-            src: e,
+            className: (0, Nt.A)(qr().Icon, u && qr().IconGlow),
+            src: t,
             loading: "lazy",
-            alt: n,
-            onLoad: () => o(!0),
+            alt: a,
+            onLoad: () => c(!0),
           }),
         );
-      });
+      }
       var Tr = r(60155),
         Wr = r(84811),
         jr = r(41751),

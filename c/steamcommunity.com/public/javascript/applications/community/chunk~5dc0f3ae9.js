@@ -9018,15 +9018,26 @@
       }
       class _ {
         constructor(_) {
+          var _, _, _, _, _;
           Object.assign(this, _.toObject()),
-            (this.bytes_to_download = parseInt(_.bytes_to_download()) || 0),
-            (this.bytes_downloaded = parseInt(_.bytes_downloaded()) || 0),
-            (this.bytes_staged = parseInt(_.bytes_staged()) || 0),
-            (this.bytes_to_stage = parseInt(_.bytes_to_stage()) || 0),
-            (this.bytes_required = parseInt(_.bytes_required()) || 0);
+            (this.bytes_to_download = parseInt(
+              null !== (_ = _.bytes_to_download()) && void 0 !== _ ? _ : "0",
+            )),
+            (this.bytes_downloaded = parseInt(
+              null !== (_ = _.bytes_downloaded()) && void 0 !== _ ? _ : "0",
+            )),
+            (this.bytes_staged = parseInt(
+              null !== (_ = _.bytes_staged()) && void 0 !== _ ? _ : "0",
+            )),
+            (this.bytes_to_stage = parseInt(
+              null !== (_ = _.bytes_to_stage()) && void 0 !== _ ? _ : "0",
+            )),
+            (this.bytes_required = parseInt(
+              null !== (_ = _.bytes_required()) && void 0 !== _ ? _ : "0",
+            ));
         }
         BIsDownloading() {
-          return this.num_downloading > 0;
+          return void 0 !== this.num_downloading && this.num_downloading > 0;
         }
         SetDownloading() {
           (this.num_downloading = 1), (this.download_paused = !1);
@@ -9039,7 +9050,7 @@
         }
         BIsPaused() {
           return (
-            this.download_paused &&
+            !!this.download_paused &&
             (this.bytes_downloaded < this.bytes_to_download ||
               this.bytes_staged < this.bytes_to_stage ||
               -1 != this.queue_position)
@@ -9064,6 +9075,7 @@
         }
       }
       async function _(_, _, _) {
+        var _;
         const _ = _.client_instanceid,
           _ = _._.Init(_);
         _.Body().set_fields("games"),
@@ -9091,7 +9103,10 @@
         return {
           session: _,
           mapApps: _,
-          clientInfo: _.Body().client_info().toObject(),
+          clientInfo:
+            null === (_ = _.Body().client_info()) || void 0 === _
+              ? void 0
+              : _.toObject(),
           refetchIntervals: {
             full: _.Body().refetch_interval_sec_full() || 3600,
             changing: _.Body().refetch_interval_sec_changing() || 60,
@@ -9134,8 +9149,16 @@
           }),
           _ = (0, _.useCallback)(
             (_) => {
+              var _;
               if (!_) return _;
-              const _ = new Map(Array.from(_.mapApps.entries()).filter(_));
+              const _ = new Map(
+                Array.from(
+                  null !== (_ = null == _ ? void 0 : _.mapApps.entries()) &&
+                    void 0 !== _
+                    ? _
+                    : [],
+                ).filter(_),
+              );
               return {
                 ..._,
                 mapApps: _,
@@ -9206,17 +9229,21 @@
         return (0, _._)({
           queryKey: _(_, _),
           queryFn: () => {
-            var _, _;
+            var _, _, _;
             const _ = new Map();
             for (const _ of _)
               if (_.isSuccess) {
                 const _ =
-                    null === (_ = _.data) || void 0 === _
+                    null ===
+                      (_ =
+                        null === (_ = _.data) || void 0 === _
+                          ? void 0
+                          : _.session) || void 0 === _
                       ? void 0
-                      : _.session.client_instanceid,
-                  _ = (
-                    null === (_ = _.data) || void 0 === _ ? void 0 : _.mapApps
-                  ).get(_);
+                      : _.client_instanceid,
+                  _ =
+                    null === (_ = _.data) || void 0 === _ ? void 0 : _.mapApps,
+                  _ = null == _ ? void 0 : _.get(_);
                 _ &&
                   _.set(_, {
                     session: _.data.session,
@@ -9323,13 +9350,14 @@
           _ = (0, _._)();
         return (0, _._)({
           mutationFn: async () => {
-            var _;
+            var _, _;
             const _ = null == _ ? void 0 : _.data,
               _ = _ && _.get(_);
             if (
               (null === (_ = null == _ ? void 0 : _.clientInfo) || void 0 === _
                 ? void 0
-                : _.clientcomm_version) >= 1
+                : _.clientcomm_version) &&
+              _.clientInfo.clientcomm_version >= 1
             ) {
               const _ = _._.Init(_);
               _.Body().set_client_instanceid(_), _.Body().set_enable(!_);
@@ -9361,7 +9389,8 @@
                   ))
                 );
             }
-            _ && _.get(_).app.SetPaused(_),
+            _ &&
+              (null === (_ = _.get(_)) || void 0 === _ || _.app.SetPaused(_)),
               _.setQueryData(_(_, _), _),
               _.refetch();
           },
@@ -23485,7 +23514,7 @@
             (_) => {
               (null == __webpack_require__
                 ? void 0
-                : __webpack_require__.length) > 0 &&
+                : __webpack_require__.length) &&
                 (0, _._)(
                   _.createElement(_, {
                     sessions: __webpack_require__,
@@ -23497,9 +23526,11 @@
             },
             [_, __webpack_require__],
           );
-        return (null == __webpack_require__
-          ? void 0
-          : __webpack_require__.length) > 1
+        return (
+          null == __webpack_require__
+            ? void 0
+            : __webpack_require__.length
+        )
           ? _.createElement(
               "button",
               {
@@ -23516,8 +23547,9 @@
           {
             className: _().ClientListDropdownMenu,
           },
-          _.map((_) =>
-            _.createElement(
+          _.map((_) => {
+            var _;
+            return _.createElement(
               _._,
               {
                 onSelected: () => {
@@ -23527,11 +23559,11 @@
               },
               (0, _._)(
                 "#GamesList_Client_Indicator",
-                _(_.device_type),
+                null !== (_ = _(_.device_type)) && void 0 !== _ ? _ : "",
                 _.machine_name,
               ),
-            ),
-          ),
+            );
+          }),
         );
       }
       function _(_) {
