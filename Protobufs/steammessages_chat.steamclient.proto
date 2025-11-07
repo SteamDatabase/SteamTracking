@@ -765,9 +765,20 @@ message CChatRoom_ReportMessage_Request {
 	optional .EContentReportReason report_reason = 6 [default = k_EContentReportReason_Invalid];
 	optional string report_text = 7;
 	optional string language = 8;
+	optional .EContentReportSubjectType subject_type = 9 [default = k_EContentReportSubjectType_Invalid];
 }
 
 message CChatRoom_ReportMessage_Response {
+}
+
+message CChatRoom_ResolveReport_Request {
+	optional uint64 subject_group_id = 1;
+	optional uint64 subject_id = 2;
+	optional .EContentReportResolution resolution = 3 [default = k_EContentReportResolution_Unresolved];
+	optional .EContentReportReason reason = 4 [default = k_EContentReportReason_Invalid];
+}
+
+message CChatRoom_ResolveReport_Response {
 }
 
 message CClanChatRooms_GetClanChatRoomInfo_Request {
@@ -1048,6 +1059,7 @@ service ChatRoom {
 	rpc UpdateMessageReaction (.CChatRoom_UpdateMessageReaction_Request) returns (.CChatRoom_UpdateMessageReaction_Response);
 	rpc GetMessageReactionReactors (.CChatRoom_GetMessageReactionReactors_Request) returns (.CChatRoom_GetMessageReactionReactors_Response);
 	rpc ReportMessage (.CChatRoom_ReportMessage_Request) returns (.CChatRoom_ReportMessage_Response);
+	rpc ResolveReport (.CChatRoom_ResolveReport_Request) returns (.CChatRoom_ResolveReport_Response);
 }
 
 service ClanChatRooms {

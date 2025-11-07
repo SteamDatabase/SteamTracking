@@ -97,7 +97,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-21:18:46
+17:19:10
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -324,7 +324,7 @@ Network
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-Nov  5 2025
+Nov  7 2025
 OUT OF MEMORY
 Object
 Only thread can stop self: Use a higher-level protocol
@@ -893,6 +893,7 @@ java resource
 kill
 lchown
 ld-linux.so.2
+lgkt
 libSDL3.so.0
 libc.so.6
 libdl.so.2

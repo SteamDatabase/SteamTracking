@@ -3113,22 +3113,6 @@ img.package_header {
 	cursor: pointer;
 	background-size: 100% 200%;
 }
-.btn_next_in_queue .next_in_queue_arrow {
-	left: 100%;
-	top: 0;
-	content: "";
-	height: 50px;
-	width: 25px;
-	position: absolute;
-	pointer-events: none;
-	fill: #90763F;
-	margin-top: 0;
-}
-
-.btn_next_in_queue:hover .next_in_queue_arrow {
-	fill: #EFC266;
-}
-
 .mature_content_notice {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */

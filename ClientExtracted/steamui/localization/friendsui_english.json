@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Delete Messages",
     "Chat_Actions_Select_Message": "Select Message",
     "Chat_Actions_Report": "Report",
+    "Chat_Actions_ReportGroup": "Report Group Chat",
     "Chat_Actions_React": "React",
     "Chat_Actions_Delete": "Delete",
     "Chat_Actions_DeleteChatMessages_Confirm": "Are you sure you want to delete these messages from %1$s?",

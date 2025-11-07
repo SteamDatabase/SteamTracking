@@ -190,6 +190,7 @@
  .CChatRoom_GetInviteList_Request
  .CChatRoom_JoinVoiceChat_Request
  .CChatRoom_ReportMessage_Request
+ .CChatRoom_ResolveReport_Request
  .CChatRoom_RevokeInvite_Response"
  .CChatRoom_SearchMembers_Request
  .CCloud_AppLaunchIntent_Response
@@ -432,6 +433,7 @@
 !.CChatRoom_LeaveVoiceChat_Request
 !.CChatRoom_RenameChatRoom_Request
 !.CChatRoom_ReportMessage_Response"
+!.CChatRoom_ResolveReport_Response"
 !.CChatRoom_SearchMembers_Response"
 !.CCloudGaming_CreateNonce_Request
 !.CCloud_AppSessionResume_Response
@@ -3709,7 +3711,6 @@ $steammessages_parental_objects.proto"
 (\r2`\n\fAchievements
 (\r2}\n\nEconMarket
 (\r:\n4294967295
-(\t""\n CChatRoom_ReportMessage_Response"W\n*CClanChatRooms_GetClanChatRoomInfo_Request
 (\t""\n CParental_ValidateToken_Response"g\n"CParental_ValidatePassword_Request
 (\t""\n CPlayer_SetProfileTheme_Response"Y\n%CPlayer_SetProfilePreferences_Request
 (\t"#\n!CChatRoom_RenameChatRoom_Response"g\n!CChatRoom_ReorderChatRoom_Request
@@ -4508,6 +4509,7 @@ $steammessages_parental_objects.proto"
 )\n%k_EContentReportResolution_Unresolved
 )\n%k_EContentReportSubjectAction_Invalid
 )\n%k_EContentReportSubjectAction_Updated
+)\n%k_EContentReportSubjectType_ChatGroup
 )\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
 )\n%k_EControllerElementTypeJoystickRight
@@ -6421,8 +6423,10 @@ $steammessages_parental_objects.proto"
 .EContentDescriptorID"M\n0CPublishedFile_UpdateContentDescriptors_Response
 .EContentHubDiscountFilterType
 .EContentReportReason
+.EContentReportReason""\n CChatRoom_ResolveReport_Response"W\n*CClanChatRooms_GetClanChatRoomInfo_Request
 .EContentReportReason"(\n&CFriendMessages_ResolveReport_Response"u\n1CFriendMessages_DismissSessionNotice_Notification
 .EContentReportResolution
+.EContentReportSubjectType""\n CChatRoom_ReportMessage_Response"
 .EControllerElementType
 .EDiskSpaceType">\n.CGameRecording_GetTotalDiskSpaceUsage_Response
 .EDisplayPowerState"
@@ -7649,12 +7653,17 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 0000000000000000
 00000001
+1000
+1024
 00003333
-01/01/00
+10000
+1000000
+10000000
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7723,6 +7732,7 @@ $steammessages_parental_objects.proto"
 0\n\fNameInstance
 0\n\fdescriptions
 0\n\fheader_state
+0\n\fsubject_type
 0\n\fupdate_state
 0\n\ncandidates
 0\n\nrouting_gc
@@ -7797,11 +7807,6 @@ $steammessages_parental_objects.proto"
 100 127.0.0.1 stale
 100-continue
 100.64.0.0/10
-1000
-1024
-10000
-1000000
-10000000
 10ByteReader
 10CClientJob
 10CClientUGC
@@ -10029,7 +10034,6 @@ $steammessages_parental_objects.proto"
 14StoreItem_Link
 14TwoFactor_Stub
 14VideoClip_Stub
-16.0
 1536
 15000
 15AccountHardware
@@ -10140,6 +10144,7 @@ $steammessages_parental_objects.proto"
 15TimedTrial_Stub
 15WebUINoResponse
 16 Mbps
+16.0
 16000
 162.254.192.71:27017
 162.254.192.74:27017
@@ -12903,6 +12908,7 @@ $steammessages_parental_objects.proto"
 31CChatRoom_GetInviteList_Request
 31CChatRoom_JoinVoiceChat_Request
 31CChatRoom_ReportMessage_Request
+31CChatRoom_ResolveReport_Request
 31CChatRoom_RevokeInvite_Response
 31CChatRoom_SearchMembers_Request
 31CClientJobBeginBroadcastSession
@@ -13025,6 +13031,7 @@ $steammessages_parental_objects.proto"
 32CChatRoom_LeaveVoiceChat_Request
 32CChatRoom_RenameChatRoom_Request
 32CChatRoom_ReportMessage_Response
+32CChatRoom_ResolveReport_Response
 32CChatRoom_SearchMembers_Response
 32CClientHTTPSaveResponseToDiskJob
 32CClientJobClientLogUploadRequest
@@ -18328,6 +18335,7 @@ CChatRoom_RenameRole_Response"X\n
 CChatRoom_ReorderRole_Request
 CChatRoom_ReorderRole_Response"F\n
 CChatRoom_ReportMessage_Request
+CChatRoom_ResolveReport_Request
 CChatRoom_RevokeInvite_Request
 CChatRoom_RevokeInvite_Response"C\n
 CChatRoom_SearchMembers_Request
@@ -36961,6 +36969,7 @@ V\n\rGetInviteInfo
 V\n\rGetInviteList
 V\n\rJoinVoiceChat
 V\n\rReportMessage
+V\n\rResolveReport
 V\n\rSearchMembers
 V\n\rSetBlurParams
 V\n\vCreateNonce
@@ -46213,7 +46222,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen.
 ghjkl
 gidlist
 gidparentcomment
@@ -57981,7 +57990,7 @@ stderr
 stdin
 stdout
 steam
-steam Nov  5 2025 21:19:53
+steam Nov  7 2025 17:21:27
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

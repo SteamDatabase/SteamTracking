@@ -80,6 +80,7 @@
  (Unicast/Multicast)
  (Unknown SAFI %u)
  (VPLS)
+ (capture)
  (convert)
  (decode)
  (display)
@@ -123,6 +124,7 @@
  .CChatRoom_GetInviteList_Request
  .CChatRoom_JoinVoiceChat_Request
  .CChatRoom_ReportMessage_Request
+ .CChatRoom_ResolveReport_Request
  .CChatRoom_RevokeInvite_Response"
  .CChatRoom_SearchMembers_Request
  .CCloud_AppLaunchIntent_Response
@@ -186,6 +188,7 @@
  Tokenizer::ParseFloat() passed text that could not have been tokenized as a float:
  Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
  Wireless Controller
+ XTEST
  [clone
  [default = $0
  \n\tdriver_id
@@ -317,6 +320,7 @@
 !.CChatRoom_LeaveVoiceChat_Request
 !.CChatRoom_RenameChatRoom_Request
 !.CChatRoom_ReportMessage_Response"
+!.CChatRoom_ResolveReport_Response"
 !.CChatRoom_SearchMembers_Response"
 !.CCloudGaming_CreateNonce_Request
 !.CCloud_AppSessionResume_Response
@@ -3244,7 +3248,6 @@ ${LANGUAGE}
 (\r2`\n\fAchievements
 (\r2}\n\nEconMarket
 (\r:\n4294967295
-(\t""\n CChatRoom_ReportMessage_Response"W\n*CClanChatRooms_GetClanChatRoomInfo_Request
 (\t""\n CParental_ValidateToken_Response"g\n"CParental_ValidatePassword_Request
 (\t""\n CPlayer_SetProfileTheme_Response"Y\n%CPlayer_SetProfilePreferences_Request
 (\t"#\n!CChatRoom_RenameChatRoom_Response"g\n!CChatRoom_ReorderChatRoom_Request
@@ -3942,6 +3945,7 @@ ${LANGUAGE}
 )\n%k_EContentReportResolution_Unresolved
 )\n%k_EContentReportSubjectAction_Invalid
 )\n%k_EContentReportSubjectAction_Updated
+)\n%k_EContentReportSubjectType_ChatGroup
 )\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
 )\n%k_EControllerElementTypeJoystickRight
@@ -5922,8 +5926,10 @@ ${LANGUAGE}
 .EContentDescriptorID"M\n0CPublishedFile_UpdateContentDescriptors_Response
 .EContentHubDiscountFilterType
 .EContentReportReason
+.EContentReportReason""\n CChatRoom_ResolveReport_Response"W\n*CClanChatRooms_GetClanChatRoomInfo_Request
 .EContentReportReason"(\n&CFriendMessages_ResolveReport_Response"u\n1CFriendMessages_DismissSessionNotice_Notification
 .EContentReportResolution
+.EContentReportSubjectType""\n CChatRoom_ReportMessage_Response"
 .EControllerElementType
 .EDiskSpaceType">\n.CGameRecording_GetTotalDiskSpaceUsage_Response
 .EDisplayPowerState"
@@ -6661,6 +6667,7 @@ ${LANGUAGE}
 /data/src/steamUI/gamerecordingcontroller.cpp:6438
 /data/src/steamUI/gamerecordingcontroller.cpp:6513
 /data/src/steamUI/gamescopecontroller_linux.cpp
+/data/src/steamUI/gamestream/../../common/callbacklist.h
 /data/src/steamUI/gamestream/audiorecorder.cpp
 /data/src/steamUI/gamestream/broadcastwebrtcencoder.cpp
 /data/src/steamUI/gamestream/cudawrapper.cpp
@@ -6965,7 +6972,6 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
-0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -7005,13 +7011,14 @@ ${LANGUAGE}
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
 0000
 0000000000000000000000000000000000000000
+0.15
 000000001532
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7094,6 +7101,7 @@ ${LANGUAGE}
 0\n,k_ESystemUpdateNotificationType_NeedsRestart
 0\n\fdescriptions
 0\n\fheader_state
+0\n\fsubject_type
 0\n\fupdate_state
 0\n\ncandidates
 0\n\nrouting_gc
@@ -10252,6 +10260,7 @@ ${LANGUAGE}
 31CChatRoom_GetInviteList_Request
 31CChatRoom_JoinVoiceChat_Request
 31CChatRoom_ReportMessage_Request
+31CChatRoom_ResolveReport_Request
 31CChatRoom_RevokeInvite_Response
 31CChatRoom_SearchMembers_Request
 31CClientNotificationFriendInGame
@@ -10334,6 +10343,7 @@ ${LANGUAGE}
 32CChatRoom_LeaveVoiceChat_Request
 32CChatRoom_RenameChatRoom_Request
 32CChatRoom_ReportMessage_Response
+32CChatRoom_ResolveReport_Response
 32CChatRoom_SearchMembers_Response
 32CClientNotificationFriendMessage
 32CCloudGaming_CreateNonce_Request
@@ -14726,6 +14736,7 @@ CChatRoom_RenameRole_Response"X\n
 CChatRoom_ReorderRole_Request
 CChatRoom_ReorderRole_Response"F\n
 CChatRoom_ReportMessage_Request
+CChatRoom_ResolveReport_Request
 CChatRoom_RevokeInvite_Request
 CChatRoom_RevokeInvite_Response"C\n
 CChatRoom_SearchMembers_Request
@@ -25667,7 +25678,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov  5 2025 21:18:55
+Nov  7 2025 17:21:57
 November
 NrZl
 NullMetrics()
@@ -29976,6 +29987,8 @@ The XFixes extension doesn't exist, disabling streaming cursor support\n
 The XFixes extension doesn't exist\n
 The XFixes extension is too old, disabling streaming cursor support\n
 The XFixes extension is too old\n
+The XInput extension doesn't exist, disabling local mouse detection\n
+The XInput extension is too old, disabling local mouse detection\n
 The XTest extension doesn't exist, using old style input simulation\n
 The [proto3_optional=true] option may only be set on proto3fields, not
 The current Steam realm does not match the requested resource
@@ -30820,6 +30833,7 @@ V\n\rGetInviteInfo
 V\n\rGetInviteList
 V\n\rJoinVoiceChat
 V\n\rReportMessage
+V\n\rResolveReport
 V\n\rSearchMembers
 V\n\rSetBlurParams
 V\n\vCreateNonce
@@ -31479,6 +31493,8 @@ XGetWindowAttributes
 XGetWindowProperty
 XGetXCBConnection
 XH1l
+XIFreeDeviceInfo
+XIQueryDevice
 XIQueryVersion
 XISelectEvents
 XInputExtension
@@ -31570,6 +31586,7 @@ XShmCreateImage
 XShmDetach
 XShmGetImage
 XShmQueryExtension
+XSync
 XTestFakeButtonEvent
 XTestFakeKeyEvent
 XTestFakeMotionEvent
@@ -38964,7 +38981,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenn
+ggen
 ghost_
 gidlist
 gidparentcomment

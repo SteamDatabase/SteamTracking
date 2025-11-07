@@ -4645,7 +4645,6 @@ numElements >= 0
 number
 oFFs
 oOKEY_O
-oTK4
 objc_class_prefix
 object
 odia

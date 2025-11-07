@@ -453,6 +453,7 @@ $\n k_SystemAudioPortDirection_Input
 )\n%k_EContentReportResolution_Unresolved
 )\n%k_EContentReportSubjectAction_Invalid
 )\n%k_EContentReportSubjectAction_Updated
+)\n%k_EContentReportSubjectType_ChatGroup
 )\n%k_EContentReportSubjectType_ForumPost
 )\n%k_EControlledLegalCategoryStatus_None
 )\n%k_EProfileCustomizationTypeCustomText
