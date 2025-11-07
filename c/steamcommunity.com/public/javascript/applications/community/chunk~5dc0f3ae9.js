@@ -12442,28 +12442,41 @@
         _: () => _,
         _: () => _,
       });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      !(function (_) {
+        (_.Default = "default"),
+          (_.Upcoming = "upcoming"),
+          (_.Featured = "featured"),
+          (_.Press = "press"),
+          (_.Steam = "steam"),
+          (_.Halloween = "halloween"),
+          (_.Dev_Sales = "sales"),
+          (_.Dev_All = "all"),
+          (_.Dev_AssociatedPress = "associated_press");
+      })(_ || (_ = {}));
+      new Map();
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         return {
@@ -12508,7 +12521,7 @@
         }
         BIsShowingFeaturedFeed() {
           return Boolean(
-            this.GetCollectionID() === _._.Featured ||
+            this.GetCollectionID() === _.Featured ||
               (this.BIsGlobalCalendar() && !_._.accountid),
           );
         }
@@ -13226,127 +13239,6 @@
         return null !== _.get();
       }
       window.g_EventCalendarMap = _;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.Default = "default"),
-          (_.Upcoming = "upcoming"),
-          (_.Featured = "featured"),
-          (_.Press = "press"),
-          (_.Steam = "steam"),
-          (_.Halloween = "halloween"),
-          (_.Dev_Sales = "sales"),
-          (_.Dev_All = "all"),
-          (_.Dev_AssociatedPress = "associated_press");
-      })(_ || (_ = {}));
-      const _ = new Map();
-      function _(_) {
-        return (
-          0 == _.size &&
-            (function () {
-              const _ = (0, _._)();
-              _.set(_.Default, {
-                _: _.Default,
-                strUrl: `${_}/`,
-                strName: (0, _._)("#EventCalendar_NewsChannel_YourNews"),
-                strSubtitle: (0, _._)(
-                  "#EventCalendar_NewsChannel_Personalized",
-                ),
-                strHeaderTitle: (0, _._)(
-                  "#EventCalendar_NewsChannel_YourNews_HeaderTitle",
-                ),
-              }),
-                _.set(_.Upcoming, {
-                  _: _.Upcoming,
-                  strUrl: `${_}/?upcoming=1`,
-                  strName: (0, _._)("#EventCalendar_NewsChannel_Upcoming"),
-                  strShortName: (0, _._)(
-                    "#EventCalendar_NewsChannel_UpcomingShort",
-                  ),
-                  strSubtitle: (0, _._)(
-                    "#EventCalendar_NewsChannel_Personalized",
-                  ),
-                }),
-                _.set(_.Featured, {
-                  _: _.Featured,
-                  strUrl: `${_}/collection/featured/`,
-                  strName: (0, _._)("#EventCalendar_NewsChannel_Featured"),
-                  strSubtitle: (0, _._)(
-                    "#EventCalendar_NewsChannel_TopSellers",
-                  ),
-                  strHeaderTitle: (0, _._)(
-                    "#EventCalendar_NewsChannel_Featured_HeaderTitle",
-                  ),
-                }),
-                _.set(_.Press, {
-                  _: _.Press,
-                  strUrl: `${_}/collection/press/`,
-                  strName: (0, _._)("#EventCalendar_NewsChannel_Press"),
-                  strHeaderTitle: (0, _._)(
-                    "#EventCalendar_Collection_News_Title",
-                  ),
-                  strHeaderSubtitle: (0, _._)(
-                    "#EventCalendar_Collection_News_Subtitle",
-                  ),
-                }),
-                _.set(_.Steam, {
-                  _: _.Steam,
-                  strUrl: `${_}/collection/steam/`,
-                  strName: (0, _._)("#EventCalendar_NewsChannel_Steam"),
-                  strSubtitle: (0, _._)(
-                    "#EventCalendar_NewsChannel_SteamSubtitle",
-                  ),
-                  strHeaderTitle: (0, _._)(
-                    "#EventCalendar_NewsChannel_Steam_HeaderTitle",
-                  ),
-                }),
-                _.set(_.Halloween, {
-                  _: _.Halloween,
-                  strUrl: `${_}/collection/halloween/`,
-                  strName: (0, _._)("#EventCalendar_NewsChannel_Halloween"),
-                  strSubtitle: (0, _._)(
-                    "#EventCalendar_NewsChannel_HalloweenSubtitle",
-                  ),
-                  strHeaderTitle: (0, _._)(
-                    "#EventCalendar_Collection_Halloween_Title",
-                  ),
-                  strHeaderSubtitle: (0, _._)(
-                    "#EventCalendar_Collection_Halloween_Subtitle",
-                  ),
-                }),
-                _.set(_.Dev_Sales, {
-                  _: _.Dev_Sales,
-                  strUrl: `${_}/collection/sales/`,
-                  strName: (0, _._)("#EventCalendar_NewsChannel_AllSales"),
-                }),
-                _._.is_support &&
-                  (_.set(_.Dev_All, {
-                    _: _.Dev_All,
-                    strUrl: `${_}/collection/all/`,
-                    strName: (0, _._)("#EventCalendar_NewsChannel_All"),
-                    bIsValveOnly: !0,
-                  }),
-                  _.set(_.Dev_AssociatedPress, {
-                    _: _.Dev_AssociatedPress,
-                    strUrl: `${_}/collection/associated_press/`,
-                    strName: (0, _._)(
-                      "#EventCalendar_NewsChannel_AssociatedPress",
-                    ),
-                    bIsValveOnly: !0,
-                  }));
-            })(),
-          _.get(_)
-        );
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -18024,6 +17916,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -18595,13 +18488,21 @@
         );
       }
       function _(_) {
-        const { nCreatorAccountID: _ } = _,
-          [__webpack_require__, _] = (0, _._)(_),
+        const {
+            nCreatorAccountID: _,
+            classOverride: __webpack_require__,
+            styleOverride: _,
+          } = _,
+          [_, _] = (0, _._)(_),
           { creatorHome: _ } = (0, _._)(_);
         return _.createElement(
           "div",
           {
-            className: _().GameHoverCreatorFollowButtonCtn,
+            className: (0, _._)(
+              _().GameHoverCreatorFollowButtonCtn,
+              __webpack_require__,
+            ),
+            style: _,
           },
           _.createElement(
             "a",
@@ -18609,9 +18510,7 @@
               href: null == _ ? void 0 : _.GetCreatorHomeURL("developer"),
             },
             _.createElement("img", {
-              src: __webpack_require__
-                ? (0, _._)(null, "medium")
-                : _.avatar_medium_url,
+              src: _ ? (0, _._)(null, "medium") : _.avatar_medium_url,
             }),
           ),
           _.createElement(_._, {

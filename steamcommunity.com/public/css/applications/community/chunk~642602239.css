@@ -439,16 +439,21 @@ a._2HnDgHQT_3ehcs4WgskKG5 span {
   padding-bottom: 6px;
 }
 a._3nRRZ1AKPWQnyWTcT1RDt9 {
-  background-color: hotpink;
-  color: #fff;
+  background-color: #fff;
+  color: #0e141b;
   font-size: 14px;
+  font-weight: 600;
   padding: 6px 20px;
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 28px;
   margin: 4px 0px;
+  transition: all .2s ease-out;
+}
+a._3nRRZ1AKPWQnyWTcT1RDt9:hover {
+  box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
 }
 a._3nRRZ1AKPWQnyWTcT1RDt9 span {
-  color: #fff;
+  color: #0e141b;
   padding-bottom: 6px;
 }
 ._2HnDgHQT_3ehcs4WgskKG5:hover {

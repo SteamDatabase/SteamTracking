@@ -673,32 +673,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
-        strMediumWidth: "800px",
-        strMaxMobileWidth: "600px",
-        MediaContainer: "-ap7mXqcxyhrxn5-5EaM8",
-        MediaContainerMM: "_1XVJzaNLt0tgl6Pq5QI2tK",
-        ScreenshotThumbnailRow: "COp9MkmgXCc5Y3ytJM70W",
-        HilightGrid: "_28DkEkOjvTWfq0sU8m_i32",
-        MainMediaCtn: "FATLceF4ncP8L8QnrQTXV",
-        VideoThumbnail: "h0pphNa_Fdu4JUevL5V9y",
-        ScreenshotDisplayCtn: "_20YpaGv3V_QArQyy15zAJc",
-        MainCapsuleWithHover: "_30BxsjSFrUWCBKntWK9hPg",
-        MainCapsule: "_2UuNsdHxhT9la27J_j3BFs",
-        AppDetails: "ETHkFxrlPF1znTFXFtjtK",
-        GameName: "udhKC-bUdlotRKphK3Fn2",
-        ShortDesc: "_2e5PhNJqb68XISttHxdVF2",
-        ThumbnialClickable: "_3B8X2c5pBF96hapgz03tC4",
-        ThumbnailCtn: "rE40TQ86G7cjVETvUYZm3",
-        videoPlaying: "_3D99vg3-OLr6XsvxrtzhZa",
-        VideoPlayButton: "_2sJlIVAVWZ2I2iA6IO4pOv",
-        VideoLargeContainer: "_3mzKCP4FLx7fUVeKrhZ1nn",
-        VideoPopupContainers: "_2LqAoKcZgpOtpoj5_URVNJ",
-        VideoLarge: "_3zPl6O67BYIiFOlq7FxlJP",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         QuanityAndPrice: "_2qN9u-PUuidOe8A6u2BLnB",
         PriceCtn: "_1UN_OM_UOz0xqO7EcRfKMv",
         dropdown: "_2uDosrOO-P5HteHs8r2DHF",
@@ -899,13 +873,6 @@
         SaleRewardsCtn: "u42zSEWdGrvBDimhV4QNI",
         RewardStatusCtn: "_2C1i6xEuF431h_KHPB53zS",
         SaleRewardAppTitle: "_1-pK3SWEOk30eo-q0EKyH7",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        TrailerTitle: "_3HELOo0qFfDrRZ9Sa1GXeF",
-        Category: "_2YhOhoyYNbue9fEPMYPiq2",
-        Visible: "_2cpBClyttSkWAsgMArc0BM",
       };
     },
     chunkid: (module) => {
@@ -6173,6 +6140,9 @@
               buttoncolor: {
                 default: null,
               },
+              labelcolor: {
+                default: null,
+              },
             },
             toDOM(_) {
               const {
@@ -6180,6 +6150,7 @@
                 title: __webpack_require__,
                 style: _,
                 buttoncolor: _,
+                labelcolor: _,
               } = _.attrs;
               return [
                 "a",
@@ -6187,7 +6158,7 @@
                   href: _,
                   title: __webpack_require__,
                   class: (0, _._)(_),
-                  style: (0, _._)(_, _),
+                  style: (0, _._)(_, _, _),
                 },
                 0,
               ];
@@ -6198,6 +6169,7 @@
                 href: _[""],
                 style: _.style,
                 buttoncolor: _.buttoncolor,
+                labelcolor: _.labelcolor,
               }),
               AttrsToBBArgs: (_) => {
                 let _ = {
@@ -6206,6 +6178,7 @@
                 return (
                   _.style && (_.style = _.style),
                   _.buttoncolor && (_.buttoncolor = _.buttoncolor),
+                  _.labelcolor && (_.buttoncolor = _.labelcolor),
                   {
                     args: _,
                   }
@@ -12441,6 +12414,673 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            saleSection: _,
+            bSmartSection: __webpack_require__,
+            editModel: _,
+          } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)((0, _._)(_).toString()),
+          [_, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => {
+            var _;
+            return [
+              _.section_type,
+              _.smart_section_type,
+              _.single_item_style,
+              (0, _._)(_, _),
+              _.smart_section,
+              (0, _._)(_),
+              (0, _._)(_),
+              _.enable_faceted_browsing,
+              (0, _._)(_.section_type) || "events" == _.section_type,
+              _.cap_section_content,
+              (null === (_ = _.media_container) || void 0 === _
+                ? void 0
+                : _.mobile_carousel_style) || _._.k_MobileCarousel_Disable,
+            ];
+          }),
+          _ = "trailercarousel" === _,
+          _ = "template_media_content" === _,
+          _ = _ && _ == _._.k_MobileCarousel_Disable,
+          _ =
+            __webpack_require__ &&
+            (0, _._)(_) &&
+            ("tag" === _ || "category" === _),
+          _ = (0, _._)(_),
+          _ = (0, _._)(_) || "events" === _ || "sale_events" === _,
+          _ = (0, _._)(_),
+          _ = "library" === _,
+          _ =
+            (0, _._)(_) &&
+            (!_ || (1 == (null == _ ? void 0 : _.length) && 1 == _[0])),
+          _ = (0, _._)(_) || "dlc_for_you" == _;
+        return "sale_item_browser" == _
+          ? _.createElement(_, {
+              editModel: _,
+              section: _,
+            })
+          : _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_, {
+                leftChildren: [
+                  !_ &&
+                    !_ &&
+                    _.createElement(_._, {
+                      key: "show_as_carousel",
+                      varName: "show_as_carousel",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_ShowAsCarousel",
+                      ttipToken: "#Sale_Section_ShowAsCarousel_Tooltip",
+                    }),
+                  !_ &&
+                    !_ &&
+                    _ &&
+                    _ &&
+                    _.createElement(_, {
+                      ..._,
+                    }),
+                  !_ &&
+                    _ &&
+                    !_ &&
+                    _.createElement(_._, {
+                      key: "Sale_Section_CarouselRows",
+                      label: (0, _._)("#Sale_Section_CarouselRows"),
+                      showValue: !0,
+                      min: 1,
+                      max: 3,
+                      value: _,
+                      onChange: (_) => {
+                        (_.carousel_rows = _), _.SetDirty(_._.jsondata_sales);
+                      },
+                      tooltip: (0, _._)("#Sale_Section_CarouselRows_Tooltip"),
+                    }),
+                  !_ &&
+                    _ &&
+                    _.createElement(_._, {
+                      key: "carousel_auto_advance",
+                      varName: "carousel_auto_advance",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_CarouselAutoAdvance",
+                      ttipToken: "#Sale_Section_CarouselAutoAdvance_Tooltip",
+                    }),
+                  !_ &&
+                    (!_ || _) &&
+                    _.createElement(_._, {
+                      key: "cap_section_content",
+                      varName: "cap_section_content",
+                      onChange: () => {
+                        _((0, _._)(_).toString());
+                      },
+                      editModel: _,
+                      section: _,
+                      textToken: _
+                        ? "#Sale_Section_CapSectionContent_Mobile"
+                        : "#Sale_Section_CapSectionContent",
+                      ttipToken: _
+                        ? "#Sale_Section_CapSectionContent_Mobile_Tooltip"
+                        : "#Sale_Section_CapSectionContent_Tooltip",
+                    }),
+                  !_ &&
+                    (!_ || _) &&
+                    _ &&
+                    _.createElement(
+                      "div",
+                      {
+                        key: "Sale_Section_CapSectionContentCount",
+                        className: _.InsetOption,
+                      },
+                      _.createElement(_._, {
+                        mustBeNumeric: !0,
+                        rangeMin: 1,
+                        label: (0, _._)("#Sale_Section_CapSectionContentCount"),
+                        tooltip: (0, _._)(
+                          "#Sale_Section_CapSectionContentCount_hint",
+                        ),
+                        onChange: (_) => {
+                          const _ = Number(_.currentTarget.value);
+                          _ > 0 &&
+                            ((_.cap_section_row_count = _),
+                            _.SetDirty(_._.jsondata_sales)),
+                            _(_.currentTarget.value);
+                        },
+                        value: _,
+                      }),
+                    ),
+                ],
+                rightChildren: [
+                  !_ &&
+                    !_ &&
+                    _.createElement(
+                      _.Fragment,
+                      {
+                        key: "CapsulesPerRowDropDown",
+                      },
+                      _.createElement(_, {
+                        ..._,
+                      }),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _.InsetOption,
+                        },
+                        _.createElement(_, {
+                          editModel: _,
+                          section: _,
+                          bDisabled: !_,
+                        }),
+                      ),
+                    ),
+                  !_ &&
+                    _.createElement(_, {
+                      key: "RandomizeItemControl",
+                      ..._,
+                      setMaxRowsString: _,
+                    }),
+                  _ &&
+                    _.createElement(_._, {
+                      key: "random_from_entire_set",
+                      varName: "random_from_entire_set",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_RandomFromSmartSet",
+                      ttipToken: "#Sale_Section_RandomFromSmartSet_hint",
+                    }),
+                  _ &&
+                    _.createElement(
+                      _.Fragment,
+                      {
+                        key: "DemoLayoutCheckBox",
+                      },
+                      _.createElement(_, {
+                        editModel: _,
+                        section: _,
+                      }),
+                      _.createElement(_, {
+                        editModel: _,
+                        section: _,
+                      }),
+                    ),
+                  _ &&
+                    _.createElement(_, {
+                      key: "ParentAppLayoutCheckbox",
+                      editModel: _,
+                      section: _,
+                    }),
+                  _ &&
+                    _.createElement(_._, {
+                      key: "show_purchase_options",
+                      varName: "show_purchase_options",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_ShowPurchaseOptions",
+                      ttipToken: "#Sale_Section_ShowPurchaseOptions_ttip",
+                    }),
+                ],
+              }),
+              _.createElement(_, {
+                leftChildren: [
+                  !_ &&
+                    _.createElement(_._, {
+                      key: "Sale_Section_HideIfTooFewItems",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_HideIfTooFewItems",
+                      ttipToken: "#Sale_Section_HideIfTooFewItems_ttip",
+                      varName: "hide_section_if_too_few_items",
+                    }),
+                  _ &&
+                    _.createElement(_._, {
+                      valveOnly: !0,
+                      key: "hide_prices",
+                      varName: "hide_prices",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_HidePrices",
+                      ttipToken: "#Sale_Section_HidePrices_ttip",
+                    }),
+                  _ &&
+                    _.createElement(_._, {
+                      valveOnly: !0,
+                      key: "show_deck_compability_details",
+                      varName: "show_deck_compability_details",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_ShowDeckCompatibility",
+                      ttipToken: "#Sale_Section_ShowDeckCompatibility_ttip",
+                    }),
+                ],
+                rightChildren: [
+                  _ &&
+                    _.createElement(_, {
+                      key: "dynamic_reveal",
+                      editModel: _,
+                      saleSection: _,
+                    }),
+                  "events" === _ &&
+                    _ &&
+                    _.createElement(_._, {
+                      key: "Sale_Section_HideDuplicateEvents",
+                      valveOnly: !0,
+                      editModel: _,
+                      section: _,
+                      varName: "hide_duplicate_events",
+                      textToken: "#Sale_Section_HideDuplicateEvents",
+                      ttipToken: "#Sale_Section_HideDuplicateEvents_ttip",
+                    }),
+                  ("sale_events" === _ || "events" === _) &&
+                    _.createElement(_._, {
+                      valveOnly: !0,
+                      key: "click_opens_event_directly",
+                      varName: "click_opens_event_directly",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_EventClickDirectOpen",
+                      ttipToken: "#Sale_Section_EventClickDirectOpen_ttip",
+                    }),
+                ],
+              }),
+            );
+      }
+      function _(_) {
+        const { saleSection: _, editModel: __webpack_require__ } = _,
+          [_] = (0, _._)(() => {
+            var _;
+            return [
+              (null === (_ = _.media_container) || void 0 === _
+                ? void 0
+                : _.mobile_carousel_style) || _._.k_MobileCarousel_Disable,
+            ];
+          }),
+          _ = (0, _.useMemo)(
+            () => [
+              {
+                data: _._.k_MobileCarousel_Disable,
+                label: (0, _._)("#Sale_Section_DisableCarouselOnMobile"),
+                tooltip: (0, _._)("#Sale_Section_DisableCarouselOnMobile_ttip"),
+              },
+              {
+                data: _._.k_MobileCarousel_SnapCarousel,
+                label: (0, _._)("#Sale_Section_PeekCarouselOnMobile"),
+                tooltip: (0, _._)("#Sale_Section_PeekCarouselOnMobile_ttip"),
+              },
+              {
+                data: _._.k_MobileCarousel_PagedCArousel,
+                label: (0, _._)("#Sale_Section_PagedCarouselOnMobile"),
+                tooltip: (0, _._)("#Sale_Section_PagedCarouselOnMobile_ttip"),
+              },
+            ],
+            [],
+          );
+        return _.createElement(_._, {
+          label: (0, _._)("#Sale_Secitno_CarouselOnMobile"),
+          tooltip: (0, _._)("#Sale_Secitno_CarouselOnMobile_ttip"),
+          strDropDownClassName: _.DropDownScroll,
+          rgOptions: _,
+          selectedOption: _,
+          onChange: (_) => {
+            _.media_container.mobile_carousel_style != _.data &&
+              ((_.media_container.mobile_carousel_style = _.data),
+              __webpack_require__.SetDirty(_._.jsondata_sales));
+          },
+          contextMenuPositionOptions: {
+            bDisablePopTop: !0,
+          },
+        });
+      }
+      function _(_) {
+        const { leftChildren: _, rightChildren: __webpack_require__ } = _,
+          _ = _.Children.toArray(_).filter(Boolean),
+          _ = _.Children.toArray(__webpack_require__).filter(Boolean);
+        if (0 == _.length && 0 == _.length) return null;
+        const _ = (_, _) =>
+          _.map((_, _) => {
+            var _;
+            return _.createElement(
+              _.Fragment,
+              {
+                key: null !== (_ = _.key) && void 0 !== _ ? _ : `${_}-${_}`,
+              },
+              _,
+            );
+          });
+        return _.createElement(
+          "div",
+          {
+            style: {
+              display: "flex",
+            },
+            className: _.EventDefaultRowContainer,
+          },
+          _.length > 0 &&
+            _.createElement(
+              "div",
+              {
+                className: _.HalfColumn,
+              },
+              _(_, "left"),
+            ),
+          _.length > 0 &&
+            _.createElement(
+              "div",
+              {
+                className: _.HalfColumn,
+              },
+              _(_, "right"),
+            ),
+        );
+      }
+      function _(_) {
+        const {
+            saleSection: _,
+            bSmartSection: __webpack_require__,
+            setMaxRowsString: _,
+            editModel: _,
+          } = _,
+          [_, _, _] = (0, _._)(() => [
+            _.use_random_order,
+            _.cap_item_count || 0,
+            _.random_order_top_x || 0,
+          ]);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_._, {
+            varName: "use_random_order",
+            onChange: (_, _) => {
+              _ || (_.cap_item_count = 0), _((0, _._)(_).toString());
+            },
+            editModel: _,
+            section: _,
+            textToken: "#Sale_Section_UseRandomOrder",
+            ttipToken: __webpack_require__
+              ? "#Sale_Section_UseRandomOrder_smart_hint"
+              : "#Sale_Section_UseRandomOrder_hint",
+          }),
+          _ &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _.InsetOption,
+                },
+                _.createElement(_._, {
+                  mustBeNumeric: !0,
+                  rangeMin: 0,
+                  label: (0, _._)("#Sale_Section_UseRandomOrder_TopN"),
+                  tooltip: (0, _._)("#Sale_Section_UseRandomOrder_TopN_hint"),
+                  onChange: (_) => {
+                    const _ = Number(_.target.value);
+                    _ >= 0 &&
+                      ((_.random_order_top_x = _),
+                      _.SetDirty(_._.jsondata_sales));
+                  },
+                  value: _,
+                }),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.InsetOption,
+                },
+                _.createElement(_._, {
+                  mustBeNumeric: !0,
+                  rangeMin: 0,
+                  label:
+                    "(VO) " + (0, _._)("#Sale_Section_CapSectionItemCount"),
+                  tooltip: (0, _._)("#Sale_Section_CapSectionItemCount_hint"),
+                  onChange: (_) => {
+                    const _ = Number(_.target.value);
+                    _ >= 0 &&
+                      ((_.cap_item_count = _), _.SetDirty(_._.jsondata_sales));
+                  },
+                  value: _,
+                }),
+              ),
+            ),
+        );
+      }
+      function _(_) {
+        return _.createElement(_._, {
+          varName: "show_as_demos",
+          editModel: _.editModel,
+          section: _.section,
+          textToken: "#Sale_Section_UseDemoLayout",
+          ttipToken: "#Sale_Section_UseDemoLayout_tooltip",
+        });
+      }
+      function _(_) {
+        const { section: _ } = _;
+        return _.createElement(_._, {
+          varName: "show_parent_app",
+          editModel: _.editModel,
+          section: _.section,
+          textToken: "#Sale_Section_UseHasParentLayout",
+          ttipToken: "#Sale_Section_UseHasParentLayout_tooltip",
+        });
+      }
+      function _(_) {
+        const { section: _ } = _;
+        return _.createElement(_._, {
+          varName: "prefer_demo_store_page",
+          editModel: _.editModel,
+          section: _.section,
+          textToken: "#Sale_Section_PreferDemoStorePage",
+          ttipToken: "#Sale_Section_PreferDemoStorePage_tooltip",
+        });
+      }
+      const _ = (0, _._)((_) => {
+          var _;
+          const { saleSection: __webpack_require__, editModel: _ } = _;
+          if (
+            !(0, _._)(__webpack_require__.section_type) &&
+            "events" !== __webpack_require__.section_type
+          )
+            return null;
+          let _ = !0;
+          null === (_ = _.GetDynamicRevealSections()) ||
+            void 0 === _ ||
+            _.forEach((_) => {
+              _.section_type == __webpack_require__.section_type &&
+                _.unique_id != __webpack_require__.unique_id &&
+                (_ = !1);
+            });
+          let _ = "#Sale_Section_RevealSetting_limit";
+          return (
+            _ &&
+              (_ =
+                "events" === __webpack_require__.section_type
+                  ? "#Sale_Section_RevealSetting_event_ttip"
+                  : "#Sale_Section_RevealSetting_ttip"),
+            (0, _._)(__webpack_require__.section_type) &&
+              Boolean(__webpack_require__.smart_section_type) &&
+              ((_ = !1), (_ = "#Sale_Section_RevealSetting_limit_smart")),
+            "events" === __webpack_require__.section_type &&
+              Boolean(__webpack_require__.smart_section_type) &&
+              "recent_tagged_events" !==
+                __webpack_require__.smart_section_type &&
+              ((_ = !1), (_ = "#Sale_Section_RevealSetting_limit_smart")),
+            _.createElement(_._, {
+              valveOnly: !0,
+              varName: "dynamic_reveal",
+              editModel: _,
+              section: __webpack_require__,
+              textToken: "#Sale_Section_RevealSetting",
+              ttipToken: _,
+              disabled: !_,
+            })
+          );
+        }),
+        _ = (0, _._)((_) => {
+          const {
+              editModel: _,
+              section: __webpack_require__,
+              bDisabled: _,
+            } = _,
+            [_, _] = (0, _._)(() => [
+              __webpack_require__.single_item_style,
+              __webpack_require__.section_type,
+            ]),
+            _ = "sale_item_browser" == _,
+            _ = _ ? "compactlist" : _._;
+          if (!(0, _._)(_) && !_) return null;
+          const _ = (0, _._)(_.GetClanSteamID(), !1),
+            _ = _._([
+              _
+                ? null
+                : {
+                    label: (0, _._)("#Sale_Section_SingleItemDisplay_bordered"),
+                    tooltip: (0, _._)(
+                      "#Sale_Section_SingleItemDisplay_bordered_ttip",
+                    ),
+                    data: "bordered",
+                  },
+              {
+                label: (0, _._)("#Sale_Section_SingleItemDisplay_library"),
+                tooltip: (0, _._)(
+                  "#Sale_Section_SingleItemDisplay_library_ttip",
+                ),
+                data: "library",
+              },
+              {
+                label: (0, _._)("#Sale_Section_SingleItemDisplay_compactlist"),
+                tooltip: (0, _._)(
+                  "#Sale_Section_SingleItemDisplay_compactlist_ttip",
+                ),
+                data: "compactlist",
+              },
+              (!_ && "purchaseonlydisplay" != _) || _
+                ? null
+                : {
+                    label:
+                      (_ ? "(VO) " : "") +
+                      (0, _._)("#Sale_Section_SingleItemDisplay_purchaseonly"),
+                    tooltip: (0, _._)(
+                      "#Sale_Section_SingleItemDisplay_purchaseonly_ttip",
+                    ),
+                    data: "purchaseonlydisplay",
+                  },
+            ]);
+          return _.createElement(_._, {
+            disabled: _,
+            rgOptions: _,
+            label: (0, _._)(
+              _
+                ? "#Sale_Section_SingleItemDisplay_disabled"
+                : "#Sale_Section_SingleItemDisplay",
+            ),
+            tooltip: (0, _._)(
+              _
+                ? "#Sale_Section_SingleItemDisplay_disabled_ttip"
+                : "#Sale_Section_SingleItemDisplay_ttip",
+            ),
+            strDropDownClassName: _.DropDownScroll,
+            selectedOption: _ || _,
+            onChange: (_) => {
+              __webpack_require__.single_item_style !== _.data &&
+                ((__webpack_require__.single_item_style = _.data),
+                _.SetDirty(_._.jsondata_sales));
+            },
+          });
+        });
+      function _(_, _) {
+        return JSON.stringify({
+          rows: _,
+          styles: _ || [],
+        });
+      }
+      function _(_) {
+        const { saleSection: _, editModel: __webpack_require__ } = _,
+          _ = (0, _._)(),
+          [_] = (0, _._)(() => [_.enable_faceted_browsing]),
+          _ = [
+            {
+              label: (0, _._)("#Sale_CapsulesPerRow_1"),
+              data: _([1]),
+            },
+            {
+              label: (0, _._)("#Sale_CapsulesPerRow_2"),
+              data: _([2]),
+            },
+            {
+              label: (0, _._)("#Sale_CapsulesPerRow_3"),
+              data: _([3]),
+            },
+            {
+              label: (0, _._)("#Sale_CapsulesPerRow_4"),
+              data: _([4]),
+            },
+            {
+              label: (0, _._)("#Sale_CapsulesPerRow_Pattern_2343"),
+              data: _([2, 3, 4, 3]),
+            },
+            {
+              label: (0, _._)("#Sale_CapsulesPerRow_Pattern_23"),
+              data: _([2, 3]),
+            },
+            {
+              label: (0, _._)("#Sale_CapsulesPerRow_Pattern_232"),
+              data: _([2, 3, 2]),
+            },
+          ];
+        "links" === _.section_type
+          ? _.push({
+              label: (0, _._)("#Sale_CapsulesPerRow_5"),
+              data: _([5]),
+            })
+          : (0, _._)(_.section_type) &&
+            _.push(
+              {
+                label: (0, _._)("#Sale_CapsulesPerRow_Pattern_3t23"),
+                data: _([3, 2, 3], ["tall", "grid", "grid"]),
+              },
+              {
+                label: (0, _._)("#Sale_CapsulesPerRow_Pattern_5t"),
+                data: _([5], ["tall"]),
+              },
+              {
+                label: (0, _._)("#Sale_CapsulesPerRow_Pattern_3t"),
+                data: _([3], ["tall"]),
+              },
+            );
+        const _ = _((0, _._)(_, _), _.capsule_style_per_row_array),
+          _ = _.useCallback(
+            (_, _) => {
+              const { rows: _, styles: _ } = ((_ = _), JSON.parse(_));
+              var _;
+              (_.capsules_per_row_array = _),
+                (_.capsule_style_per_row_array = _ && _.length ? _ : null),
+                __webpack_require__.SetDirty(_._.jsondata_sales);
+            },
+            [__webpack_require__],
+          ),
+          _ = (0, _._)(
+            _
+              ? "#Sale_Section_CapsulesPerRow_DisabledFaceting_Tooltip"
+              : "#Sale_Section_CapsulesPerRow_Tooltip",
+          );
+        return _.createElement(_._, {
+          rgOptions: _,
+          label: (0, _._)("#Sale_Section_CapsulesPerRow"),
+          tooltip: _,
+          strDropDownClassName: _.DropDownScroll,
+          selectedOption: _,
+          onChange: (_) => _(_, _.data),
+          contextMenuPositionOptions: {
+            bDisablePopTop: !0,
+          },
+          disabled: _,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
@@ -12567,49 +13207,48 @@
       }
       var _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) =>
-        _.createElement(
-          _._,
-          null,
           _.createElement(
             _._,
-            {
-              clanSteamID: _.editModel.GetClanSteamID(),
-            },
-            _.createElement(_._, {
-              showValue: !0,
-              min: 1,
-              max: 3,
-              label: (0, _._)("#Sale_Section_CarouselRows"),
-              tooltip: (0, _._)("#Sale_Section_CarouselRows_Tooltip"),
-              value: _.section.carousel_rows || 2,
-              onChange: (_) => {
-                (_.section.carousel_rows = _),
-                  _.editModel.SetDirty(_._.jsondata_sales);
+            null,
+            _.createElement(
+              _._,
+              {
+                clanSteamID: _.editModel.GetClanSteamID(),
               },
-            }),
+              _.createElement(_._, {
+                showValue: !0,
+                min: 1,
+                max: 3,
+                label: (0, _._)("#Sale_Section_CarouselRows"),
+                tooltip: (0, _._)("#Sale_Section_CarouselRows_Tooltip"),
+                value: _.section.carousel_rows || 2,
+                onChange: (_) => {
+                  (_.section.carousel_rows = _),
+                    _.editModel.SetDirty(_._.jsondata_sales);
+                },
+              }),
+            ),
           ),
         ),
-      );
-      var _ = __webpack_require__("chunkid");
-      const _ = (_) =>
-        _.createElement(
-          _._,
-          null,
-          _.createElement(_._, {
-            textToken: "#Sale_Section_CarouselAutoAdvance",
-            ttipToken: "#Sale_Section_CarouselAutoAdvance_Tooltip",
-            varName: "carousel_auto_advance",
-            valveOnly: !0,
-            ..._,
-          }),
-          _.createElement(_._, {
-            textToken: "#Sale_Section_CarouselHideAppBackground",
-            ttipToken: "#Sale_Section_CarouselHideAppBackground_Tooltip",
-            varName: "carousel_hide_app_background",
-            valveOnly: !0,
-            ..._,
-          }),
-        );
+        _ = (_) =>
+          _.createElement(
+            _._,
+            null,
+            _.createElement(_._, {
+              textToken: "#Sale_Section_CarouselAutoAdvance",
+              ttipToken: "#Sale_Section_CarouselAutoAdvance_Tooltip",
+              varName: "carousel_auto_advance",
+              valveOnly: !0,
+              ..._,
+            }),
+            _.createElement(_._, {
+              textToken: "#Sale_Section_CarouselHideAppBackground",
+              ttipToken: "#Sale_Section_CarouselHideAppBackground_Tooltip",
+              varName: "carousel_hide_app_background",
+              valveOnly: !0,
+              ..._,
+            }),
+          );
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -13729,7 +14368,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -17682,576 +18320,6 @@
             ),
           );
         });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            saleSection: _,
-            bSmartSection: __webpack_require__,
-            editModel: _,
-          } = _,
-          _ = (0, _._)(),
-          [_, _] = (0, _.useState)((0, _._)(_).toString()),
-          [_, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
-            _.section_type,
-            _.smart_section_type,
-            _.single_item_style,
-            (0, _._)(_, _),
-            _.smart_section,
-            (0, _._)(_),
-            (0, _._)(_),
-            _.enable_faceted_browsing,
-            (0, _._)(_.section_type) || "events" == _.section_type,
-            _.cap_section_content,
-          ]),
-          _ = "trailercarousel" === _,
-          _ = "template_media_content" === _,
-          _ =
-            __webpack_require__ &&
-            (0, _._)(_) &&
-            ("tag" === _ || "category" === _),
-          _ = (0, _._)(_),
-          _ = (0, _._)(_) || "events" === _ || "sale_events" === _,
-          _ = (0, _._)(_),
-          _ = "library" === _,
-          _ =
-            (0, _._)(_) &&
-            (!_ || (1 == (null == _ ? void 0 : _.length) && 1 == _[0])),
-          _ = (0, _._)(_) || "dlc_for_you" == _;
-        return "sale_item_browser" == _
-          ? _.createElement(_, {
-              editModel: _,
-              section: _,
-            })
-          : _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(_, {
-                leftChildren: [
-                  !_ &&
-                    !_ &&
-                    _.createElement(_._, {
-                      varName: "show_as_carousel",
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_ShowAsCarousel",
-                      ttipToken: "#Sale_Section_ShowAsCarousel_Tooltip",
-                    }),
-                  !_ &&
-                    _ &&
-                    !_ &&
-                    _.createElement(_._, {
-                      label: (0, _._)("#Sale_Section_CarouselRows"),
-                      showValue: !0,
-                      min: 1,
-                      max: 3,
-                      value: _,
-                      onChange: (_) => {
-                        (_.carousel_rows = _), _.SetDirty(_._.jsondata_sales);
-                      },
-                      tooltip: (0, _._)("#Sale_Section_CarouselRows_Tooltip"),
-                    }),
-                  !_ &&
-                    _ &&
-                    _.createElement(_._, {
-                      varName: "carousel_auto_advance",
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_CarouselAutoAdvance",
-                      ttipToken: "#Sale_Section_CarouselAutoAdvance_Tooltip",
-                    }),
-                  !_ &&
-                    !_ &&
-                    _.createElement(_._, {
-                      varName: "cap_section_content",
-                      onChange: () => {
-                        _((0, _._)(_).toString());
-                      },
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_CapSectionContent",
-                      ttipToken: "#Sale_Section_CapSectionContent_Tooltip",
-                    }),
-                  !_ &&
-                    _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.InsetOption,
-                      },
-                      _.createElement(_._, {
-                        mustBeNumeric: !0,
-                        rangeMin: 1,
-                        label: (0, _._)("#Sale_Section_CapSectionContentCount"),
-                        tooltip: (0, _._)(
-                          "#Sale_Section_CapSectionContentCount_hint",
-                        ),
-                        onChange: (_) => {
-                          const _ = Number(_.currentTarget.value);
-                          _ > 0 &&
-                            ((_.cap_section_row_count = _),
-                            _.SetDirty(_._.jsondata_sales)),
-                            _(_.currentTarget.value);
-                        },
-                        value: _,
-                      }),
-                    ),
-                ],
-                rightChildren: [
-                  !_ &&
-                    !_ &&
-                    _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(_, {
-                        ..._,
-                      }),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.InsetOption,
-                        },
-                        _.createElement(_, {
-                          editModel: _,
-                          section: _,
-                          bDisabled: !_,
-                        }),
-                      ),
-                    ),
-                  !_ &&
-                    _.createElement(_, {
-                      ..._,
-                      setMaxRowsString: _,
-                    }),
-                  _ &&
-                    _.createElement(_._, {
-                      varName: "random_from_entire_set",
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_RandomFromSmartSet",
-                      ttipToken: "#Sale_Section_RandomFromSmartSet_hint",
-                    }),
-                  _ &&
-                    _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(_, {
-                        editModel: _,
-                        section: _,
-                      }),
-                      _.createElement(_, {
-                        editModel: _,
-                        section: _,
-                      }),
-                    ),
-                  _ &&
-                    _.createElement(_, {
-                      editModel: _,
-                      section: _,
-                    }),
-                  _ &&
-                    _.createElement(_._, {
-                      varName: "show_purchase_options",
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_ShowPurchaseOptions",
-                      ttipToken: "#Sale_Section_ShowPurchaseOptions_ttip",
-                    }),
-                ],
-              }),
-              _.createElement(_, {
-                leftChildren: [
-                  !_ &&
-                    _.createElement(_._, {
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_HideIfTooFewItems",
-                      ttipToken: "#Sale_Section_HideIfTooFewItems_ttip",
-                      varName: "hide_section_if_too_few_items",
-                    }),
-                  _ &&
-                    _.createElement(_._, {
-                      valveOnly: !0,
-                      varName: "hide_prices",
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_HidePrices",
-                      ttipToken: "#Sale_Section_HidePrices_ttip",
-                    }),
-                  _ &&
-                    _.createElement(_._, {
-                      valveOnly: !0,
-                      varName: "show_deck_compability_details",
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_ShowDeckCompatibility",
-                      ttipToken: "#Sale_Section_ShowDeckCompatibility_ttip",
-                    }),
-                ],
-                rightChildren: [
-                  _ &&
-                    _.createElement(_, {
-                      editModel: _,
-                      saleSection: _,
-                    }),
-                  "events" === _ &&
-                    _ &&
-                    _.createElement(_._, {
-                      valveOnly: !0,
-                      editModel: _,
-                      section: _,
-                      varName: "hide_duplicate_events",
-                      textToken: "#Sale_Section_HideDuplicateEvents",
-                      ttipToken: "#Sale_Section_HideDuplicateEvents_ttip",
-                    }),
-                  ("sale_events" === _ || "events" === _) &&
-                    _.createElement(_._, {
-                      valveOnly: !0,
-                      varName: "click_opens_event_directly",
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_EventClickDirectOpen",
-                      ttipToken: "#Sale_Section_EventClickDirectOpen_ttip",
-                    }),
-                ],
-              }),
-            );
-      }
-      function _(_) {
-        const { leftChildren: _, rightChildren: __webpack_require__ } = _,
-          _ = _.Children.toArray(_).filter(Boolean),
-          _ = _.Children.toArray(__webpack_require__).filter(Boolean);
-        return 0 == _.length && 0 == _.length
-          ? null
-          : _.createElement(
-              "div",
-              {
-                style: {
-                  display: "flex",
-                },
-                className: _.EventDefaultRowContainer,
-              },
-              _.length > 0 &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.HalfColumn,
-                  },
-                  _,
-                ),
-              _.length > 0 &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _.HalfColumn,
-                  },
-                  _,
-                ),
-            );
-      }
-      function _(_) {
-        const {
-            saleSection: _,
-            bSmartSection: __webpack_require__,
-            setMaxRowsString: _,
-            editModel: _,
-          } = _,
-          [_, _, _] = (0, _._)(() => [
-            _.use_random_order,
-            _.cap_item_count || 0,
-            _.random_order_top_x || 0,
-          ]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, {
-            varName: "use_random_order",
-            onChange: (_, _) => {
-              _ || (_.cap_item_count = 0), _((0, _._)(_).toString());
-            },
-            editModel: _,
-            section: _,
-            textToken: "#Sale_Section_UseRandomOrder",
-            ttipToken: __webpack_require__
-              ? "#Sale_Section_UseRandomOrder_smart_hint"
-              : "#Sale_Section_UseRandomOrder_hint",
-          }),
-          _ &&
-            _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _.InsetOption,
-                },
-                _.createElement(_._, {
-                  mustBeNumeric: !0,
-                  rangeMin: 0,
-                  label: (0, _._)("#Sale_Section_UseRandomOrder_TopN"),
-                  tooltip: (0, _._)("#Sale_Section_UseRandomOrder_TopN_hint"),
-                  onChange: (_) => {
-                    const _ = Number(_.target.value);
-                    _ >= 0 &&
-                      ((_.random_order_top_x = _),
-                      _.SetDirty(_._.jsondata_sales));
-                  },
-                  value: _,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.InsetOption,
-                },
-                _.createElement(_._, {
-                  mustBeNumeric: !0,
-                  rangeMin: 0,
-                  label:
-                    "(VO) " + (0, _._)("#Sale_Section_CapSectionItemCount"),
-                  tooltip: (0, _._)("#Sale_Section_CapSectionItemCount_hint"),
-                  onChange: (_) => {
-                    const _ = Number(_.target.value);
-                    _ >= 0 &&
-                      ((_.cap_item_count = _), _.SetDirty(_._.jsondata_sales));
-                  },
-                  value: _,
-                }),
-              ),
-            ),
-        );
-      }
-      function _(_) {
-        return _.createElement(_._, {
-          varName: "show_as_demos",
-          editModel: _.editModel,
-          section: _.section,
-          textToken: "#Sale_Section_UseDemoLayout",
-          ttipToken: "#Sale_Section_UseDemoLayout_tooltip",
-        });
-      }
-      function _(_) {
-        const { section: _ } = _;
-        return _.createElement(_._, {
-          varName: "show_parent_app",
-          editModel: _.editModel,
-          section: _.section,
-          textToken: "#Sale_Section_UseHasParentLayout",
-          ttipToken: "#Sale_Section_UseHasParentLayout_tooltip",
-        });
-      }
-      function _(_) {
-        const { section: _ } = _;
-        return _.createElement(_._, {
-          varName: "prefer_demo_store_page",
-          editModel: _.editModel,
-          section: _.section,
-          textToken: "#Sale_Section_PreferDemoStorePage",
-          ttipToken: "#Sale_Section_PreferDemoStorePage_tooltip",
-        });
-      }
-      const _ = (0, _._)((_) => {
-          var _;
-          const { saleSection: __webpack_require__, editModel: _ } = _;
-          if (
-            !(0, _._)(__webpack_require__.section_type) &&
-            "events" !== __webpack_require__.section_type
-          )
-            return null;
-          let _ = !0;
-          null === (_ = _.GetDynamicRevealSections()) ||
-            void 0 === _ ||
-            _.forEach((_) => {
-              _.section_type == __webpack_require__.section_type &&
-                _.unique_id != __webpack_require__.unique_id &&
-                (_ = !1);
-            });
-          let _ = "#Sale_Section_RevealSetting_limit";
-          return (
-            _ &&
-              (_ =
-                "events" === __webpack_require__.section_type
-                  ? "#Sale_Section_RevealSetting_event_ttip"
-                  : "#Sale_Section_RevealSetting_ttip"),
-            (0, _._)(__webpack_require__.section_type) &&
-              Boolean(__webpack_require__.smart_section_type) &&
-              ((_ = !1), (_ = "#Sale_Section_RevealSetting_limit_smart")),
-            "events" === __webpack_require__.section_type &&
-              Boolean(__webpack_require__.smart_section_type) &&
-              "recent_tagged_events" !==
-                __webpack_require__.smart_section_type &&
-              ((_ = !1), (_ = "#Sale_Section_RevealSetting_limit_smart")),
-            _.createElement(_._, {
-              valveOnly: !0,
-              varName: "dynamic_reveal",
-              editModel: _,
-              section: __webpack_require__,
-              textToken: "#Sale_Section_RevealSetting",
-              ttipToken: _,
-              disabled: !_,
-            })
-          );
-        }),
-        _ = (0, _._)((_) => {
-          const {
-              editModel: _,
-              section: __webpack_require__,
-              bDisabled: _,
-            } = _,
-            [_, _] = (0, _._)(() => [
-              __webpack_require__.single_item_style,
-              __webpack_require__.section_type,
-            ]),
-            _ = "sale_item_browser" == _,
-            _ = _ ? "compactlist" : _._;
-          if (!(0, _._)(_) && !_) return null;
-          const _ = (0, _._)(_.GetClanSteamID(), !1),
-            _ = _._([
-              _
-                ? null
-                : {
-                    label: (0, _._)("#Sale_Section_SingleItemDisplay_bordered"),
-                    tooltip: (0, _._)(
-                      "#Sale_Section_SingleItemDisplay_bordered_ttip",
-                    ),
-                    data: "bordered",
-                  },
-              {
-                label: (0, _._)("#Sale_Section_SingleItemDisplay_library"),
-                tooltip: (0, _._)(
-                  "#Sale_Section_SingleItemDisplay_library_ttip",
-                ),
-                data: "library",
-              },
-              {
-                label: (0, _._)("#Sale_Section_SingleItemDisplay_compactlist"),
-                tooltip: (0, _._)(
-                  "#Sale_Section_SingleItemDisplay_compactlist_ttip",
-                ),
-                data: "compactlist",
-              },
-              (!_ && "purchaseonlydisplay" != _) || _
-                ? null
-                : {
-                    label:
-                      (_ ? "(VO) " : "") +
-                      (0, _._)("#Sale_Section_SingleItemDisplay_purchaseonly"),
-                    tooltip: (0, _._)(
-                      "#Sale_Section_SingleItemDisplay_purchaseonly_ttip",
-                    ),
-                    data: "purchaseonlydisplay",
-                  },
-            ]);
-          return _.createElement(_._, {
-            disabled: _,
-            rgOptions: _,
-            label: (0, _._)(
-              _
-                ? "#Sale_Section_SingleItemDisplay_disabled"
-                : "#Sale_Section_SingleItemDisplay",
-            ),
-            tooltip: (0, _._)(
-              _
-                ? "#Sale_Section_SingleItemDisplay_disabled_ttip"
-                : "#Sale_Section_SingleItemDisplay_ttip",
-            ),
-            strDropDownClassName: _.DropDownScroll,
-            selectedOption: _ || _,
-            onChange: (_) => {
-              __webpack_require__.single_item_style !== _.data &&
-                ((__webpack_require__.single_item_style = _.data),
-                _.SetDirty(_._.jsondata_sales));
-            },
-          });
-        });
-      function _(_, _) {
-        return JSON.stringify({
-          rows: _,
-          styles: _ || [],
-        });
-      }
-      function _(_) {
-        const { saleSection: _, editModel: __webpack_require__ } = _,
-          _ = (0, _._)(),
-          [_] = (0, _._)(() => [_.enable_faceted_browsing]),
-          _ = [
-            {
-              label: (0, _._)("#Sale_CapsulesPerRow_1"),
-              data: _([1]),
-            },
-            {
-              label: (0, _._)("#Sale_CapsulesPerRow_2"),
-              data: _([2]),
-            },
-            {
-              label: (0, _._)("#Sale_CapsulesPerRow_3"),
-              data: _([3]),
-            },
-            {
-              label: (0, _._)("#Sale_CapsulesPerRow_4"),
-              data: _([4]),
-            },
-            {
-              label: (0, _._)("#Sale_CapsulesPerRow_Pattern_2343"),
-              data: _([2, 3, 4, 3]),
-            },
-            {
-              label: (0, _._)("#Sale_CapsulesPerRow_Pattern_23"),
-              data: _([2, 3]),
-            },
-            {
-              label: (0, _._)("#Sale_CapsulesPerRow_Pattern_232"),
-              data: _([2, 3, 2]),
-            },
-          ];
-        "links" === _.section_type
-          ? _.push({
-              label: (0, _._)("#Sale_CapsulesPerRow_5"),
-              data: _([5]),
-            })
-          : (0, _._)(_.section_type) &&
-            _.push(
-              {
-                label: (0, _._)("#Sale_CapsulesPerRow_Pattern_3t23"),
-                data: _([3, 2, 3], ["tall", "grid", "grid"]),
-              },
-              {
-                label: (0, _._)("#Sale_CapsulesPerRow_Pattern_5t"),
-                data: _([5], ["tall"]),
-              },
-              {
-                label: (0, _._)("#Sale_CapsulesPerRow_Pattern_3t"),
-                data: _([3], ["tall"]),
-              },
-            );
-        const _ = _((0, _._)(_, _), _.capsule_style_per_row_array),
-          _ = _.useCallback(
-            (_, _) => {
-              const { rows: _, styles: _ } = ((_ = _), JSON.parse(_));
-              var _;
-              (_.capsules_per_row_array = _),
-                (_.capsule_style_per_row_array = _ && _.length ? _ : null),
-                __webpack_require__.SetDirty(_._.jsondata_sales);
-            },
-            [__webpack_require__],
-          ),
-          _ = (0, _._)(
-            _
-              ? "#Sale_Section_CapsulesPerRow_DisabledFaceting_Tooltip"
-              : "#Sale_Section_CapsulesPerRow_Tooltip",
-          );
-        return _.createElement(_._, {
-          rgOptions: _,
-          label: (0, _._)("#Sale_Section_CapsulesPerRow"),
-          tooltip: _,
-          strDropDownClassName: _.DropDownScroll,
-          selectedOption: _,
-          onChange: (_) => _(_, _.data),
-          contextMenuPositionOptions: {
-            bDisablePopTop: !0,
-          },
-          disabled: _,
-        });
-      }
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
           [_, _] = (0, _._)(() => [_.smart_section_type, _.smart_section]);
@@ -22625,7 +22693,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -23244,6 +23311,7 @@
                         uniqueID: "" + _.unique_id,
                         bAllowMediaAlignmentSettings: !0,
                         strOverrideBackgroundColor: _,
+                        bHideBackgroundEditor: !0,
                       }),
                     ),
                   ),
@@ -23798,7 +23866,7 @@
             uniqueID: _,
             bSupportHorizontal: _,
           }),
-          !!_ &&
+          !_ &&
             _.createElement(
               "div",
               {
@@ -26743,9 +26811,7 @@
           }),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
         const { obj: __webpack_require__, fnMarkDirty: _ } = _,
@@ -27056,6 +27122,8 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       var _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         return _.disable_background
@@ -27422,6 +27490,7 @@
                 name: (0, _._)("#Sale_Section_EditTab_Layout"),
                 key: "display",
                 contents: _.createElement(_, {
+                  key: "SaleSectionDisplayOptions",
                   ..._,
                   bSmartSection: _,
                 }),
@@ -32785,6 +32854,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      var _;
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -32796,7 +32866,13 @@
         _: () => _,
         _: () => _,
         _: () => _,
-      });
+        _: () => _,
+      }),
+        (function (_) {
+          (_.k_MobileCarousel_Disable = "disabled"),
+            (_.k_MobileCarousel_SnapCarousel = "peekaboo"),
+            (_.k_MobileCarousel_PagedCArousel = "paged");
+        })(_ || (_ = {}));
       const _ = "techspecblock_",
         _ = "techspec_",
         _ = "media_";
@@ -38166,431 +38242,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ =
-          (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"));
-      class _ {
-        constructor() {
-          this.m_rgCategories = (0, _._)(
-            "feature_categories",
-            "application_config",
-          );
-        }
-        static Get() {
-          return _.g_Self || (_.g_Self = new _()), _.g_Self;
-        }
-      }
-      _.g_Self = null;
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(..._) {
-        return _.join(" ");
-      }
-      var _ = __webpack_require__("chunkid");
-      const _ = {
-        include_trailers: !0,
-        include_screenshots: !0,
-      };
-      function _(_) {
-        var _;
-        const { info: __webpack_require__, bPopOutTrailerPlayback: _ } = _,
-          [_] = (0, _._)(
-            __webpack_require__._,
-            (0, _._)(__webpack_require__.type),
-            _,
-          ),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(!1),
-          _ = (0, _._)(),
-          _ = null == _ ? void 0 : _.GetAllTrailers().GetHighlightTrailers(_),
-          _ = (null == _ ? void 0 : _.length) > 0 && _[0],
-          _ = _.useCallback(() => {
-            _ && (_ ? _(!0) : _((_) => !_));
-          }, [_, _]),
-          _ = _
-            ? _.createElement(_, {
-                trailer: _,
-                bPlayVideo: _,
-                fnTogglePlayTrailer: _,
-              })
-            : null;
-        return _
-          ? _ ||
-            0 !==
-              (null === (_ = _.GetScreenshots(_)) || void 0 === _
-                ? void 0
-                : _.length)
-            ? _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().HilightGrid, _().MediaContainer),
-                },
-                _.createElement(_, {
-                  elFeaturedInCenter: _,
-                  storeItem: _,
-                }),
-                Boolean(_)
-                  ? _.createElement(_, {
-                      storeItem: _,
-                      bShowModal: _,
-                      hideModal: () => _(!1),
-                    })
-                  : _.createElement(_, {
-                      name: _.GetName(),
-                      trailer: _,
-                      bPlayVideo: _,
-                      fnTogglePlayTrailer: _,
-                      bControls: !0,
-                    }),
-              )
-            : (("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                console.log(
-                  "appCapsule for appid: " +
-                    (null == _ ? void 0 : _.GetAppID()),
-                  _.GetScreenshots(_),
-                ),
-              null)
-          : _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().HilightGrid, _().MediaContainer),
-              },
-              _.createElement(_._, {
-                size: "medium",
-              }),
-            );
-      }
-      function _(_) {
-        const {
-            elFeaturedInCenter: _,
-            storeItem: __webpack_require__,
-            featureElementclassName: _,
-            bUseTrailerAsFirstThumb: _,
-            bNoScreenShotModals: _,
-          } = _,
-          [_, _] = _.useState(void 0),
-          [_, _] = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _.useRef)(null),
-          [_, _] = (0, _.useState)(0),
-          _ = _ || (void 0 !== _ && -1 !== _) ? _ : 0,
-          _ = new Array(),
-          _ = new Array();
-        if (_) {
-          const _ =
-              null == __webpack_require__
-                ? void 0
-                : __webpack_require__.GetAllTrailers().GetHighlightTrailers(_),
-            _ = (null == _ ? void 0 : _.length) > 0 && _[0];
-          _ &&
-            (_.push(
-              _.createElement(_, {
-                key: "trail_thumb_",
-                trailer: _,
-                bPlayVideo: !1,
-                fnTogglePlayTrailer: () => {},
-                onMouseEnter: () => _(0),
-                onMouseLeave: () => {
-                  const _ = _.current;
-                  _ && _(_.currentTime);
-                },
-              }),
-            ),
-            _.push(
-              _.createElement(_, {
-                key: "trail_inline",
-                ref: _,
-                name: __webpack_require__.GetName(),
-                trailer: _,
-                bControls: !1,
-                bPlayVideo: !0,
-                startTime: _,
-                fnTogglePlayTrailer: () => {},
-              }),
-            ));
-        }
-        const _ = __webpack_require__.GetScreenshots(_);
-        if (
-          (_.forEach((_, _) => {
-            if ((_ || _ > 0) && _.length < 3) {
-              const _ = _(_, ".600x338").replace("http://", "https://"),
-                _ = _(_, ".800x600").replace("http://", "https://"),
-                _ = _.length;
-              _.push(
-                _.createElement(
-                  "div",
-                  {
-                    key: _ + "_small_" + _,
-                    className: (0, _._)({
-                      [_().ThumbnailCtn]: !0,
-                      [_().ThumbnialClickable]: !_,
-                    }),
-                  },
-                  _.createElement("img", {
-                    src: _,
-                    onClick: _
-                      ? void 0
-                      : () => {
-                          const _ = [..._];
-                          for (let _ = 0; _ < _; ++_) _.push(_.shift());
-                          _(_);
-                        },
-                    onMouseEnter: () => _(_),
-                  }),
-                ),
-              ),
-                _.push(
-                  _.createElement(
-                    "div",
-                    {
-                      key: _ + "_big_" + _,
-                      className: _().ScreenshotDisplayCtn,
-                    },
-                    _.createElement("img", {
-                      src: _,
-                    }),
-                  ),
-                );
-            }
-          }),
-          !(_ || (_ && 0 != _.length)))
-        )
-          return null;
-        const _ = _.slice(0, 3),
-          _ = Array.from({
-            length: Math.max(0, 3 - _.length),
-          });
-        return _.createElement(
-          _.Fragment,
-          null,
-          _,
-          _.createElement(
-            "div",
-            {
-              className: _ || _().MainMediaCtn,
-            },
-            Boolean(_ && (-1 === _ || void 0 === _))
-              ? _.createElement(_.Fragment, null, _)
-              : _.createElement(_.Fragment, null, _[_]),
-          ),
-          Boolean(_.length > 0) &&
-            _.createElement(
-              "div",
-              {
-                className: _().ScreenshotThumbnailRow,
-                onMouseLeave: () => _(-1),
-              },
-              _,
-              _.map((_, _) =>
-                _.createElement("div", {
-                  key: `app_${null == __webpack_require__ ? void 0 : __webpack_require__.GetAppID()}_${_}`,
-                  className: _().ThumbnailCtn,
-                }),
-              ),
-            ),
-        );
-      }
-      function _(_) {
-        const {
-          ref: _,
-          name: __webpack_require__,
-          trailer: _,
-          bControls: _,
-          bPlayVideo: _,
-          fnTogglePlayTrailer: _,
-          startTime: _,
-        } = _;
-        let _ = _.GetMicroTrailer();
-        (0, _.useEffect)(() => {
-          const _ = null == _ ? void 0 : _.current;
-          if (_ > 0 && _) {
-            const _ = () => {
-              _.currentTime = _;
-            };
-            return (
-              _.addEventListener("loadedmetadata", _),
-              () => {
-                _.removeEventListener("loadedmetadata", _);
-              }
-            );
-          }
-        }, [_, _]);
-        let _ = (0, _._)(_().VideoLargeContainer, _ && _().videoPlaying);
-        return _.createElement(
-          "div",
-          {
-            className: _,
-            onClick: _,
-          },
-          _.createElement(_._, {
-            name: __webpack_require__,
-            trailerCategory: _.GetTrailerCategory(),
-            trailerDisplay: 1,
-            mouseOver: !1,
-          }),
-          Boolean(_) &&
-            _.createElement(
-              "video",
-              {
-                className: _().VideoLarge,
-                ref: _,
-                controls: _,
-                autoPlay: !0,
-                loop: !0,
-                muted: !0,
-                poster: _ > 0 ? void 0 : _.GetScreenshot(),
-              },
-              _.createElement("source", {
-                src: _.strWebMURL,
-                type: "video/webm",
-              }),
-              Boolean(!_._.IN_CLIENT) &&
-                _.createElement("source", {
-                  src: _.strMP4URL,
-                  type: "video/mp4",
-                }),
-            ),
-          _ &&
-            _.createElement(
-              "div",
-              {
-                onClick: _,
-              },
-              _.createElement(_.sED, null),
-            ),
-        );
-      }
-      function _(_, _) {
-        const _ = _.replace(/\.[^\.]+$/g, "");
-        return _ + _ + _.slice(_.length);
-      }
-      function _(_) {
-        var _;
-        const {
-            storeItem: __webpack_require__,
-            bShowModal: _,
-            hideModal: _,
-          } = _,
-          _ = (0, _._)(),
-          _ =
-            null ===
-              (_ =
-                null == __webpack_require__
-                  ? void 0
-                  : __webpack_require__.GetAllTrailers()) || void 0 === _
-              ? void 0
-              : _.GetHighlightTrailers(_),
-          _ = _ && _.length > 0 ? _[0] : void 0,
-          _ = _.useId(),
-          _ = _.useId();
-        if (!_) return null;
-        const _ = _.GetTrailersDash(),
-          _ = _.GetTrailerHls();
-        return 0 == (null == _ ? void 0 : _.length)
-          ? null
-          : _.createElement(
-              _._,
-              {
-                active: _,
-              },
-              _.createElement(
-                _._,
-                {
-                  "aria-labelledby": _(_, _),
-                  bAllowFullSize: !0,
-                  bOKDisabled: !0,
-                  closeModal: _,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().VideoPopupContainers,
-                  },
-                  _.createElement(_._, {
-                    dashManifests: _ || [],
-                    hlsManifest: _ || "",
-                    screenshot: "",
-                    altText: "",
-                    muteWhenAutoplayBlocked: !0,
-                  }),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    _: _,
-                    style: {
-                      display: "none",
-                    },
-                  },
-                  __webpack_require__.GetName(),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    _: _,
-                    style: {
-                      display: "none",
-                    },
-                  },
-                  _.GetName(),
-                ),
-              ),
-            );
-      }
-      function _(_) {
-        const {
-          trailer: _,
-          fnTogglePlayTrailer: __webpack_require__,
-          bPlayVideo: _,
-          onMouseEnter: _,
-          onMouseLeave: _,
-        } = _;
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              [_().VideoThumbnail]: !_,
-              [_().videoPlaying]: _,
-              [_().ThumbnailCtn]: !0,
-            }),
-            onClick: __webpack_require__,
-            onMouseEnter: _,
-            onMouseLeave: _,
-          },
-          _.createElement("img", {
-            src: _.GetScreenshot(),
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _().VideoPlayButton,
-            },
-            _.createElement(_.jGG, null),
-          ),
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -42045,64 +41696,6 @@
             _ || (_._.Init(_), _(!0));
           }, [_, _]),
           _ && !__webpack_require__
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            name: _,
-            trailerCategory: __webpack_require__,
-            trailerDisplay: _,
-            mouseOver: _,
-          } = _,
-          [_, _] = _.useState(!1);
-        if (
-          (_.useEffect(() => {
-            0 != _ && _(!0);
-          }, [_]),
-          _.useEffect(() => {
-            if (_) return void _(!0);
-            if (!_) return;
-            const _ = setTimeout(() => _(!1), 3e3);
-            return () => clearTimeout(_);
-          }, [_, _]),
-          null == __webpack_require__ || 0 == _)
-        )
-          return;
-        const _ =
-          1 == _
-            ? (0, _._)("#StoreTrailer_Title_TrailerPreview")
-            : (0, _._)(__webpack_require__);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)({
-              [_().TrailerTitle]: !0,
-              [_().Visible]: _,
-            }),
-          },
-          (0, _._)(
-            "#StoreTrailer_Title_Combiner",
-            _.createElement(
-              "span",
-              {
-                className: _().Category,
-              },
-              _,
-            ),
-            _,
-          ),
         );
       }
     },

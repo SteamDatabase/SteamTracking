@@ -12769,16 +12769,21 @@ a.eventbbcodeparser_LinkButton_2HnDg span {
   padding-bottom: 6px;
 }
 a.eventbbcodeparser_LinkPill_3nRRZ {
-  background-color: hotpink;
-  color: #fff;
+  background-color: #fff;
+  color: #0e141b;
   font-size: 14px;
+  font-weight: 600;
   padding: 6px 20px;
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 28px;
   margin: 4px 0px;
+  transition: all .2s ease-out;
+}
+a.eventbbcodeparser_LinkPill_3nRRZ:hover {
+  box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
 }
 a.eventbbcodeparser_LinkPill_3nRRZ span {
-  color: #fff;
+  color: #0e141b;
   padding-bottom: 6px;
 }
 .eventbbcodeparser_LinkButton_2HnDg:hover {
