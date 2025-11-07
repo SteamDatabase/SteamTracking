@@ -14429,6 +14429,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return _.useMemo(
@@ -14468,9 +14469,9 @@
             label: (0, _._)("#EventEditor_InsertLink_Style_Default"),
           }),
           _.createElement(_._, {
-            checked: "button" == _,
-            onChange: (_) => _ && __webpack_require__("button"),
-            label: (0, _._)("#EventEditor_InsertLink_Style_Button"),
+            checked: "pill" == _,
+            onChange: (_) => _ && __webpack_require__("pill"),
+            label: (0, _._)("#EventEditor_InsertLink_Style_Pill"),
           }),
         );
       }
@@ -14500,9 +14501,14 @@
         );
       }
       function _(_) {
-        return "button" === _
-          ? (0, _._)(_.LinkButton, "LinkButton")
-          : (0, _._)(_.Link, "Link");
+        switch (_) {
+          case "button":
+            return (0, _._)(_.LinkButton, "LinkButton");
+          case "pill":
+            return (0, _._)(_.LinkPill, "LinkPill");
+          default:
+            return (0, _._)(_.Link, "Link");
+        }
       }
       function _(_, _) {
         if ("button" == _ && _) return `background-color: ${_};`;
@@ -14511,18 +14517,36 @@
         let _ = (0, _._)((0, _._)(_.args) || (0, _._)(_.args, "href"));
         const _ = (0, _._)(_.args, "style"),
           _ = (0, _._)(_.args, "id"),
-          _ = (0, _._)(_.args, "buttoncolor"),
+          _ = (0, _._)(
+            (0, _._)(_.args, "buttoncolor") || (0, _._)(_.args, "bgcolor"),
+            void 0,
+          ),
+          _ = (0, _._)(
+            (0, _._)(_.args, "labelcolor") || (0, _._)(_.args, "color"),
+            void 0,
+          ),
           _ = _(_),
           _ = _.context.event,
           _ = _._(_, _.language, null == _ ? void 0 : _.rtime32_last_modified);
         if (void 0 === _) return _.children || "";
         _ = "string" == typeof _ ? _ : _[1];
-        const _ = (function (_, _) {
-          if ("button" == _ && _)
-            return {
-              backgroundColor: _,
-            };
-        })(_, _);
+        const _ = (function (_, _, _) {
+          let _;
+          return (
+            ("button" != _ && "pill" != _) ||
+              !_ ||
+              (_ = {
+                backgroundColor: _,
+              }),
+            ("button" != _ && "pill" != _) ||
+              !_ ||
+              (_ = {
+                ...(null != _ ? _ : {}),
+                color: _,
+              }),
+            _
+          );
+        })(_, _, _);
         return (
           "dev" == _._.WEB_UNIVERSE &&
             "store" == (0, _._)() &&
@@ -14703,6 +14727,21 @@
           _,
         );
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_, _) {
+        return (function (_) {
+          if (!_) return !1;
+          const _ = new Option().style;
+          return (_.color = _), "" !== _.color;
+        })(_)
+          ? _
+          : _;
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

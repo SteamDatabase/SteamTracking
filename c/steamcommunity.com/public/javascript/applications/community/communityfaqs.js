@@ -3162,7 +3162,6 @@
           {
             onChange: _.onChange,
           },
-          _,
           _.createElement(
             "option",
             {
@@ -3170,6 +3169,7 @@
             },
             (0, _._)("#EventEditor_Localization_AllLanguages"),
           ),
+          _,
         );
       }
     },

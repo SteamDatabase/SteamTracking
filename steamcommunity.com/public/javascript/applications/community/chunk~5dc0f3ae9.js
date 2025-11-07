@@ -17095,26 +17095,26 @@
         );
       }
       const ie = (0, a.PA)(function (e) {
-          const { appID: t, snr: r, classOverride: i } = e,
-            [a] = (0, h.t7)(t, {}),
-            [n, o] = (0, s.useState)(() =>
-              !a ||
-              (1 != (null == a ? void 0 : a.GetAppType()) &&
-                12 != (null == a ? void 0 : a.GetAppType()))
+          const { appID: t, snr: r, classOverride: i, styleOverride: a } = e,
+            [n] = (0, h.t7)(t, {}),
+            [o, l] = (0, s.useState)(() =>
+              !n ||
+              (1 != (null == n ? void 0 : n.GetAppType()) &&
+                12 != (null == n ? void 0 : n.GetAppType()))
                 ? t
-                : a.GetParentAppID() || t,
+                : n.GetParentAppID() || t,
             ),
-            l = n && g.Fm.Get().BIsGameWishlisted(n),
-            c = n && g.Fm.Get().BOwnsApp(n),
-            [d, m] = (0, s.useState)(!1),
-            u = (0, H.m)("GameHoverWishlistButton");
+            c = o && g.Fm.Get().BIsGameWishlisted(o),
+            d = o && g.Fm.Get().BOwnsApp(o),
+            [m, u] = (0, s.useState)(!1),
+            p = (0, H.m)("GameHoverWishlistButton");
           if (
             ((0, s.useEffect)(() => {
-              (1 != (null == a ? void 0 : a.GetAppType()) &&
-                12 != (null == a ? void 0 : a.GetAppType())) ||
-                o(a.GetParentAppID() || t);
-            }, [t, a]),
-            c)
+              (1 != (null == n ? void 0 : n.GetAppType()) &&
+                12 != (null == n ? void 0 : n.GetAppType())) ||
+                l(n.GetParentAppID() || t);
+            }, [t, n]),
+            d)
           )
             return null;
           return s.createElement(
@@ -17125,22 +17125,24 @@
                 e.preventDefault(),
                   e.stopPropagation(),
                   D.iA.logged_in
-                    ? (m(!0),
-                      await g.Fm.Get().UpdateGameWishlist(n, !l, r),
-                      u.token.reason || m(!1))
+                    ? (u(!0),
+                      await g.Fm.Get().UpdateGameWishlist(o, !c, r),
+                      p.token.reason || u(!1))
                     : (0, N.vg)();
               },
+              style: a,
             },
-            l ? s.createElement(R.qnF, null) : s.createElement(R.T4m, null),
+            c ? s.createElement(R.qnF, null) : s.createElement(R.T4m, null),
             s.createElement(
               "div",
               {
                 className: (0, A.A)(
                   O().WishlistButtonText,
-                  d && O().WishlistLoadingText,
+                  m && O().WishlistLoadingText,
+                  "WishlistButtonText",
                 ),
               },
-              (0, k.we)(l ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
+              (0, k.we)(c ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
             ),
           );
         }),
@@ -17178,10 +17180,10 @@
           );
         });
       function ne(e) {
-        const { appID: t, classOverride: r } = e,
-          [i, a] = (0, s.useState)(!1),
-          o = (0, H.m)("GameHoverIgnoreButton"),
-          l = (0, n.q3)(() => t && g.Fm.Get().BIsFollowingCurator(t));
+        const { appID: t, classOverride: r, styleOverride: i } = e,
+          [a, o] = (0, s.useState)(!1),
+          l = (0, H.m)("GameHoverIgnoreButton"),
+          c = (0, n.q3)(() => t && g.Fm.Get().BIsFollowingCurator(t));
         return s.createElement(
           "div",
           {
@@ -17190,22 +17192,24 @@
               e.preventDefault(),
                 e.stopPropagation(),
                 D.iA.logged_in
-                  ? (a(!0),
-                    await g.Fm.Get().UpdateFollowingApp(t, !l),
-                    o.token.reason || a(!1))
+                  ? (o(!0),
+                    await g.Fm.Get().UpdateFollowingApp(t, !c),
+                    l.token.reason || o(!1))
                   : (0, N.vg)();
             },
+            style: i,
           },
-          l ? s.createElement(R.pPV, null) : s.createElement(R.c9e, null),
+          c ? s.createElement(R.pPV, null) : s.createElement(R.c9e, null),
           s.createElement(
             "div",
             {
               className: (0, A.A)(
                 O().IgnoreButtonText,
-                i && O().IgnoreLoadingText,
+                a && O().IgnoreLoadingText,
+                "FollowGameButton",
               ),
             },
-            (0, k.we)(l ? "#Sale_StopFollowingGame" : "#Sale_FollowGame"),
+            (0, k.we)(c ? "#Sale_StopFollowingGame" : "#Sale_FollowGame"),
           ),
         );
       }

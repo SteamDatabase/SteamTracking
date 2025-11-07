@@ -7335,9 +7335,17 @@ html.responsive.touch ._2jMLxod69Znt-d4pzECIaA {
   grid-template-rows: auto 1fr;
   gap: 1rem;
 }
+.-BNnqulztTaTeP1QNeSBu._2UqJLTFsqhBo09zeRKEtj8 ._1nqoF3NLNjaj2qxQrb7JgV {
+  margin-inline-start: var(--horiz-margin-start, 0%);
+  margin-inline-end: var(--horiz-margin-end, 0%);
+}
 .-BNnqulztTaTeP1QNeSBu._2H9EAWk-ECoLA4S_PGHkpE {
   grid-template-rows: 1fr auto;
   gap: 1rem;
+}
+.-BNnqulztTaTeP1QNeSBu._2H9EAWk-ECoLA4S_PGHkpE ._1nqoF3NLNjaj2qxQrb7JgV {
+  margin-inline-start: var(--horiz-margin-start, 0%);
+  margin-inline-end: var(--horiz-margin-end, 0%);
 }
 .-BNnqulztTaTeP1QNeSBu.dUvMvaolFV7cCSsIyUxMU {
   gap: 1rem;

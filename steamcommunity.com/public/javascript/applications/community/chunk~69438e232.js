@@ -13061,11 +13061,11 @@
     44832: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Ox: () => S,
-        V9: () => h,
-        Xe: () => B,
-        ew: () => b,
-        s0: () => w,
+        Ox: () => v,
+        V9: () => f,
+        Xe: () => b,
+        ew: () => w,
+        s0: () => S,
       });
       var i = r(90626),
         n = r(59952),
@@ -13079,27 +13079,28 @@
         d = r(78327),
         p = r(73560),
         g = r(91254),
-        _ = r(90622);
-      function h() {
+        _ = r(90622),
+        h = r(20446);
+      function f() {
         return i.useMemo(
           () => ({
             style: {
               defaultValue: null,
               fnReadValue: (e) => e.attrs.style || null,
               fnRenderEditor: (e, t) =>
-                i.createElement(f, { value: e, setValue: t }),
+                i.createElement(y, { value: e, setValue: t }),
             },
             buttoncolor: {
               defaultValue: null,
               fnReadValue: (e) => e.attrs.buttoncolor || null,
               fnRenderEditor: (e, t) =>
-                i.createElement(y, { value: e, setValue: t }),
+                i.createElement(B, { value: e, setValue: t }),
             },
           }),
           [],
         );
       }
-      function f(e) {
+      function y(e) {
         const { value: t, setValue: r } = e;
         return i.createElement(
           s.o1,
@@ -13110,13 +13111,13 @@
             label: (0, m.we)("#EventEditor_InsertLink_Style_Default"),
           }),
           i.createElement(s.Od, {
-            checked: "button" == t,
-            onChange: (e) => e && r("button"),
-            label: (0, m.we)("#EventEditor_InsertLink_Style_Button"),
+            checked: "pill" == t,
+            onChange: (e) => e && r("pill"),
+            label: (0, m.we)("#EventEditor_InsertLink_Style_Pill"),
           }),
         );
       }
-      function y(e) {
+      function B(e) {
         const { value: t, setValue: r } = e;
         return i.createElement(
           i.Fragment,
@@ -13141,27 +13142,48 @@
           }),
         );
       }
-      function B(e) {
-        return "button" === e
-          ? (0, c.A)(l.LinkButton, "LinkButton")
-          : (0, c.A)(l.Link, "Link");
+      function b(e) {
+        switch (e) {
+          case "button":
+            return (0, c.A)(l.LinkButton, "LinkButton");
+          case "pill":
+            return (0, c.A)(l.LinkPill, "LinkPill");
+          default:
+            return (0, c.A)(l.Link, "Link");
+        }
       }
-      function b(e, t) {
+      function w(e, t) {
         if ("button" == e && t) return `background-color: ${t};`;
       }
-      function w(e) {
+      function S(e) {
         let t = (0, _.J)((0, n.j$)(e.args) || (0, n.j$)(e.args, "href"));
         const r = (0, n.j$)(e.args, "style"),
           s = (0, n.j$)(e.args, "id"),
-          l = (0, n.j$)(e.args, "buttoncolor"),
-          c = B(r),
-          m = e.context.event,
-          p = n.z5(t, e.language, null == m ? void 0 : m.rtime32_last_modified);
-        if (void 0 === p) return e.children || "";
-        t = "string" == typeof p ? p : p[1];
-        const g = (function (e, t) {
-          if ("button" == e && t) return { backgroundColor: t };
-        })(r, l);
+          l = (0, h.O)(
+            (0, n.j$)(e.args, "buttoncolor") || (0, n.j$)(e.args, "bgcolor"),
+            void 0,
+          ),
+          c = (0, h.O)(
+            (0, n.j$)(e.args, "labelcolor") || (0, n.j$)(e.args, "color"),
+            void 0,
+          ),
+          m = b(r),
+          p = e.context.event,
+          g = n.z5(t, e.language, null == p ? void 0 : p.rtime32_last_modified);
+        if (void 0 === g) return e.children || "";
+        t = "string" == typeof g ? g : g[1];
+        const f = (function (e, t, r) {
+          let i;
+          return (
+            ("button" != e && "pill" != e) ||
+              !t ||
+              (i = { backgroundColor: t }),
+            ("button" != e && "pill" != e) ||
+              !r ||
+              (i = { ...(null != i ? i : {}), color: r }),
+            i
+          );
+        })(r, l, c);
         return (
           "dev" == d.TS.WEB_UNIVERSE &&
             "store" == (0, d.yK)() &&
@@ -13173,29 +13195,29 @@
           "string" == typeof t && t.length > 0 && "#" == t[0]
             ? i.createElement(
                 "a",
-                { className: c, href: t, style: g },
+                { className: m, href: t, style: f },
                 e.children,
               )
             : "steam://settings/account" == t
               ? i.createElement(
                   o.uU,
-                  { className: c, href: "steam://settings/account" },
+                  { className: m, href: "steam://settings/account" },
                   e.children,
                 )
               : i.createElement(
                   a.d$,
                   {
-                    className: c,
+                    className: m,
                     url: t,
                     event: e.context.event,
                     id: s,
-                    style: g,
+                    style: f,
                   },
                   e.children,
                 )
         );
       }
-      function S(e) {
+      function v(e) {
         const t = (0, n.j$)(e.args, "href"),
           r = (0, p.W7)(t);
         return r
@@ -13203,7 +13225,7 @@
               event: e.context.event,
               partnerEventStore: g.O3,
             })
-          : i.createElement(w, { ...e });
+          : i.createElement(S, { ...e });
       }
     },
     50929: (e, t, r) => {
@@ -13296,6 +13318,19 @@
           [s] = (0, n.q3)(() => [l.NT.GetWithFallback(t.localized_option, i)]);
         return a.createElement("div", { className: m().PollOption }, s);
       }
+    },
+    20446: (e, t, r) => {
+      "use strict";
+      function i(e, t) {
+        return (function (e) {
+          if (!e) return !1;
+          const t = new Option().style;
+          return (t.color = e), "" !== t.color;
+        })(e)
+          ? e
+          : t;
+      }
+      r.d(t, { O: () => i });
     },
     42011: (e, t, r) => {
       "use strict";

@@ -179,6 +179,7 @@
         Link: "_29bMZB6BOQfTQ_3za-w60I",
         LinkHost: "_16eO9LHnJuheylkB3Fdrpn",
         LinkButton: "_2HnDgHQT_3ehcs4WgskKG5",
+        LinkPill: "_3nRRZ1AKPWQnyWTcT1RDt9",
         UnorderedList: "_2FoSxA1yCqpvxdOJnu8N8Z",
         OrderedList: "vV4IwOV-RuzelptiRQ_ZS",
         StoreWidget: "_36Y-loIMvxDKY9RIVxecCp",

@@ -2673,12 +2673,12 @@
         return n.createElement(
           "select",
           { onChange: e.onChange },
-          l,
           n.createElement(
             "option",
             { value: "all" },
             (0, c.we)("#EventEditor_Localization_AllLanguages"),
           ),
+          l,
         );
       }
     },

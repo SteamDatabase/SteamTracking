@@ -842,6 +842,7 @@
         HorizontalTextFirst: "_1dmoVJbb-pQB030J1JNfcs",
         HorizontalMediaFirst: "Wmy8KeRvOfiwLViUN-MIe",
         VerticalMediaFirst: "_2UqJLTFsqhBo09zeRKEtj8",
+        TitleDescriptionCtn: "_1nqoF3NLNjaj2qxQrb7JgV",
         VerticalTextFirst: "_2H9EAWk-ECoLA4S_PGHkpE",
         TextOnlyDisplay: "dUvMvaolFV7cCSsIyUxMU",
         LivePreview: "_2WX2HLoszD567aFrCJKkYG",
@@ -866,7 +867,6 @@
         Center: "woD-PhBCDg6E0eRDR9JaP",
         Subtitle: "_2cbokCRMR_rzjYjDIlQERN",
         Description: "r3oaGi8Z4_MjYvdW_zsl5",
-        TitleDescriptionCtn: "_1nqoF3NLNjaj2qxQrb7JgV",
         MediaLogo: "FFWRI2x0ufl_AF68kEPIq",
       };
     },
@@ -39172,6 +39172,25 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      function _(_, _) {
+        let _;
+        return (
+          _ == _._.k_Left
+            ? (_ = {
+                "--horiz-margin-end": `${_}%`,
+              })
+            : _ == _._.k_Right
+              ? (_ = {
+                  "--horiz-margin-start": `${_}%`,
+                })
+              : _ == _._.k_Center &&
+                (_ = {
+                  "--horiz-margin-start": _ / 2 + "%",
+                  "--horiz-margin-end": _ / 2 + "%",
+                }),
+          _
+        );
+      }
       function _(_) {
         const {
             section: _,
@@ -39221,6 +39240,43 @@
                 _,
               ),
           ),
+        );
+      }
+      function _(_, _, _) {
+        let _, _, _;
+        if (_) {
+          const _ = _.display_order;
+          _ >= 1 &&
+          _ <= 2 &&
+          _ &&
+          [_._.k_HorizontalMediaFirst, _._.k_HorizontalTextFirst].includes(_)
+            ? (_ = _.text_scale)
+            : _ &&
+              [
+                _._.k_TitleDescOnly,
+                _._.k_TitleDescMedia,
+                _._.k_TitleMediaDesc,
+                _._.k_MediaTitleDesc,
+              ].includes(_) &&
+              ((_ = _.text_scale),
+              (_ = _.text_scale_margin_alignment || _._.k_Left));
+        }
+        return (
+          _ &&
+            _ > 0 &&
+            (_ = _
+              ? _(_, _)
+              : {
+                  "--horiz-min-col": `${_}%`,
+                }),
+          _ > 1 &&
+            _ < 4 &&
+            _ &&
+            (_ = {
+              ..._,
+              gridColumn: 2 == _ ? "span 3" : "span 2",
+            }),
+          _
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -42986,29 +43042,23 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      function _(_, _) {
-        let _;
-        return (
-          _ == _._.k_Left
-            ? (_ = {
-                "--horiz-margin-start": `${_}%`,
-              })
-            : _ == _._.k_Right
-              ? (_ = {
-                  "--horiz-margin-end": `${_}%`,
-                })
-              : _ == _._.k_Center &&
-                (_ = {
-                  "--horiz-margin-start": _ / 2 + "%",
-                  "--horiz-margin-end": _ / 2 + "%",
-                }),
-          _
-        );
-      }
       function _(_) {
         var _;
         const { event: __webpack_require__, section: _, language: _ } = _,
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          _ = _() && Boolean(_.media_overlay_mobile_content_varient),
+          _ = (0, _.useMemo)(() => {
+            if (_ && _.media_overlay_mobile_content_varient)
+              return {
+                unique_id: 0,
+                media_columns: [
+                  {
+                    ..._.media_overlay_mobile_content_varient,
+                    unique_id: "overlay",
+                  },
+                ],
+              };
+          }, [_, _.media_overlay_mobile_content_varient]);
         return _.createElement(
           _._,
           {
@@ -43032,17 +43082,22 @@
               event: __webpack_require__,
               language: _,
             }),
-            _.createElement(_, {
-              media_overlay:
-                _() &&
-                null !== (_ = _.media_overlay_mobile_content_varient) &&
-                void 0 !== _
-                  ? _
-                  : _.media_overlay,
-              language: _,
-              event: __webpack_require__,
-              section: _,
-            }),
+            _
+              ? _.createElement(_, {
+                  ..._,
+                  row: _,
+                })
+              : _.createElement(_, {
+                  media_overlay:
+                    _() &&
+                    null !== (_ = _.media_overlay_mobile_content_varient) &&
+                    void 0 !== _
+                      ? _
+                      : _.media_overlay,
+                  language: _,
+                  event: __webpack_require__,
+                  section: _,
+                }),
           ),
         );
       }
@@ -43179,12 +43234,12 @@
               case _._.k_TopLeft:
               case _._.k_LeftCenter:
               case _._.k_BottomLeft:
-                _ = _._.k_Right;
+                _ = _._.k_Left;
                 break;
               case _._.k_TopRight:
               case _._.k_RightCenter:
               case _._.k_BottomRight:
-                _ = _._.k_Left;
+                _ = _._.k_Right;
                 break;
               case _._.k_TopCenter:
               case _._.k_Center:
@@ -43365,8 +43420,9 @@
       function _(_) {
         var _, _;
         const { section: _, row: _ } = _,
+          _ = _(),
           [_, _] = (0, _._)(() => {
-            var _;
+            var _, _, _, _;
             const _ =
                 (null === (_ = _.media_columns) || void 0 === _
                   ? void 0
@@ -43374,35 +43430,21 @@
               _ = _ > 1 && _ < 4 && void 0 !== _.grow_index ? 4 : _;
             let _ = [];
             for (let _ = 0; _ < _; ++_) {
-              let _, _, _;
-              _.media_columns &&
-                _ < _.media_columns.length &&
-                (_ >= 1 &&
-                _ <= 2 &&
-                (_.media_columns[_].display_order ==
-                  _._.k_HorizontalMediaFirst ||
-                  _.media_columns[_].display_order == _._.k_HorizontalTextFirst)
-                  ? (_ = _.media_columns[_].text_scale)
-                  : _.media_columns[_].display_order == _._.k_TitleDescOnly &&
-                    ((_ = _.media_columns[_].text_scale),
-                    (_ =
-                      _.media_columns[_].text_scale_margin_alignment ||
-                      _._.k_Left))),
-                _ &&
-                  _ > 0 &&
-                  (_ = _
-                    ? _(_, _)
-                    : {
-                        "--horiz-min-col": `${_}%`,
-                      }),
-                _ > 1 &&
-                  _ < 4 &&
-                  _.grow_index === _ &&
-                  (_ = {
-                    ..._,
-                    gridColumn: 2 == _ ? "span 3" : "span 2",
-                  }),
-                _.push(_);
+              let _ = _(
+                _,
+                _
+                  ? (null === (_ = _.media_columns) || void 0 === _
+                      ? void 0
+                      : _[_].mobile_content_varient) ||
+                      (null === (_ = _.media_columns) || void 0 === _
+                        ? void 0
+                        : _[_])
+                  : null === (_ = _.media_columns) || void 0 === _
+                    ? void 0
+                    : _[_],
+                _.grow_index === _,
+              );
+              _.push(_);
             }
             return [_, _];
           }),
@@ -43451,9 +43493,7 @@
                   key: "mc_" + _.unique_id + "_" + _.unique_id,
                   ..._,
                   content:
-                    _() &&
-                    null !== (_ = _.mobile_content_varient) &&
-                    void 0 !== _
+                    _ && null !== (_ = _.mobile_content_varient) && void 0 !== _
                       ? _
                       : _,
                   contentUniqueID: _.unique_id,
@@ -44164,6 +44204,7 @@
             language: _,
             bIsPreview: _,
             iQuestionIndex: _,
+            strBorderColor: _,
             event: _,
             bDisplayBorder: _,
           } = _,
@@ -44232,6 +44273,7 @@
             }),
             style: {
               background: _,
+              borderColor: _ || "#707277",
             },
           },
           _.createElement(
@@ -44669,6 +44711,9 @@
             return _.createElement(_, {
               eventModel: _,
             });
+          case "reference_section":
+          case "contenthubsections":
+            return null;
           case "unselected_empty":
             break;
           case "template_faq":
@@ -44691,8 +44736,6 @@
             return _.createElement(_, {
               ..._,
             });
-          case "contenthubsections":
-            return null;
           default:
             ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
               console.error(

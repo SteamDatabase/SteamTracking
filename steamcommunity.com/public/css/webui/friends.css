@@ -12768,6 +12768,19 @@ a.eventbbcodeparser_LinkButton_2HnDg span {
   color: #fff;
   padding-bottom: 6px;
 }
+a.eventbbcodeparser_LinkPill_3nRRZ {
+  background-color: hotpink;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 20px;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 4px 0px;
+}
+a.eventbbcodeparser_LinkPill_3nRRZ span {
+  color: #fff;
+  padding-bottom: 6px;
+}
 .eventbbcodeparser_LinkButton_2HnDg:hover {
   background-color: #3691fa;
   color: #fff;

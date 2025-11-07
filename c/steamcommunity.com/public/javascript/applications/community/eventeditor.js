@@ -294,6 +294,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        BBCodeFollowButton: "NVuxjpTCUClP-4RsNDDvk",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         countdownCtn: "GWWacIf04lQysYMFJma0A",
         Closed: "ATX_xEE69rX8wVxQvONEx",
         CountDownCtn: "_11RwPICMOmmvNXkOq9bjPc",
@@ -325,6 +330,11 @@
         SocialMediaTooltip: "_2btfW5GjJOR2sOB-k94zp6",
         ValidationError: "_1vWmrCnLJP6y1vJRoWO6Qj",
         AddLinkDropDown: "naYpWkI1nnET_gXJrYEAw",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
       };
     },
     chunkid: (module) => {
@@ -5692,6 +5702,8 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -5703,6 +5715,7 @@
             valveOnly: _,
             valveOnlyClanSteamID: _,
             requireAdmin: _,
+            dataToCopy: _,
           } = _,
           _ = (0, _._)(() => __webpack_require__ && (0, _._)(_));
         if (_ && !(0, _._)(_, _)) return null;
@@ -5715,7 +5728,10 @@
             "div",
             {
               _: _,
-              className: (0, _._)(_.SettingCtn, (_ || !!_) && _.ValveOnly),
+              className: (0, _._)({
+                [_.SettingCtn]: !0,
+                [_.ValveOnly]: _ || !!_,
+              }),
             },
             _.createElement(
               "div",
@@ -5733,6 +5749,17 @@
                 _.createElement(_._, {
                   tooltip: _,
                 }),
+              Boolean(_) &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(_._, {
+                    dataToCopy: _._.k_EventData_SubMenu,
+                  }),
+                  _.createElement(_._, {
+                    dataToPaste: _._.k_EventData_SubMenu,
+                  }),
+                ),
               __webpack_require__ &&
                 _.createElement(_._, {
                   bIsMinimized: _,
@@ -11980,6 +12007,7 @@
                       hasMinimize: !0,
                       strTitle: "(VO) Sub Menu Editor",
                       valveOnlyClanSteamID: _.GetClanSteamID(),
+                      dataToCopy: _._.k_EventData_SubMenu,
                     },
                     _.createElement(_, {
                       editModel: _,
@@ -19878,38 +19906,66 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
-        const _ = (0, _._)(),
+        const { appid: _, color: __webpack_require__, bgcolor: _ } = _,
+          _ = (0, _._)(),
           _ = (0, _._)(_);
         return _.createElement(_._, {
           snr: _,
-          appID: _.appid,
-          classOverride: (0, _._)(_().WishlistButtonNotTop, "WishlistButton"),
+          appID: _,
+          classOverride: (0, _._)(
+            _().WishlistButtonNotTop,
+            _().BBCodeWishlistButton,
+            "WishlistButton",
+          ),
+          styleOverride: {
+            color: __webpack_require__,
+            backgroundColor: _,
+          },
         });
       }
       function _(_) {
         const _ = Number(_.args.appid);
-        return _
-          ? _.createElement(_, {
-              appid: _,
-            })
-          : null;
+        if (!_) return null;
+        const _ = (0, _._)(_.args.color, "black"),
+          _ = (0, _._)(_.args.bgcolor, "white");
+        return _.createElement(_, {
+          appid: _,
+          color: _,
+          bgcolor: _,
+        });
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
+        const { appid: _, color: __webpack_require__, bgcolor: _ } = _;
         (0, _._)();
         return _.createElement(_._, {
-          appID: _.appid,
-          classOverride: (0, _._)(_().FollowGameButtonNotTop),
+          appID: _,
+          classOverride: (0, _._)(
+            _().FollowGameButtonNotTop,
+            _().BBCodeFollowButton,
+          ),
+          styleOverride: {
+            color: __webpack_require__,
+            backgroundColor: _,
+          },
         });
       }
       function _(_) {
         const _ = Number(_.args.appid);
-        return _
-          ? _.createElement(_, {
-              appid: _,
-            })
-          : null;
+        if (!_) return null;
+        const _ = (0, _._)(_.args.color, "black"),
+          _ = (0, _._)(_.args.bgcolor, "white");
+        return _.createElement(_, {
+          appid: _,
+          color: _,
+          bgcolor: _,
+        });
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -20841,7 +20897,6 @@
           {
             onChange: _.onChange,
           },
-          _,
           _.createElement(
             "option",
             {
@@ -20849,6 +20904,7 @@
             },
             (0, _._)("#EventEditor_Localization_AllLanguages"),
           ),
+          _,
         );
       }
     },

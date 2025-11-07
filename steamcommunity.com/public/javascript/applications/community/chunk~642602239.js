@@ -181,6 +181,7 @@
         Link: "_29bMZB6BOQfTQ_3za-w60I",
         LinkHost: "_16eO9LHnJuheylkB3Fdrpn",
         LinkButton: "_2HnDgHQT_3ehcs4WgskKG5",
+        LinkPill: "_3nRRZ1AKPWQnyWTcT1RDt9",
         UnorderedList: "_2FoSxA1yCqpvxdOJnu8N8Z",
         OrderedList: "vV4IwOV-RuzelptiRQ_ZS",
         StoreWidget: "_36Y-loIMvxDKY9RIVxecCp",
@@ -2181,7 +2182,7 @@
                       n
                         .split(",")
                         .map((e, t) =>
-                          c.createElement(x, { key: t, width: e }),
+                          c.createElement(W, { key: t, width: e }),
                         ),
                     ),
                   c.createElement("tbody", null, e.children),
@@ -2210,7 +2211,7 @@
             "th",
             {
               Constructor: function (e) {
-                return W("th", e);
+                return x("th", e);
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -2221,7 +2222,7 @@
             "td",
             {
               Constructor: function (e) {
-                return W("td", e);
+                return x("td", e);
               },
               autocloses: !1,
               skipInternalNewline: !0,
@@ -2644,7 +2645,7 @@
           )
         );
       }
-      function x(e) {
+      function W(e) {
         const { width: t } = e;
         let r;
         return (
@@ -2652,7 +2653,7 @@
           c.createElement("col", { style: r })
         );
       }
-      function W(e, t) {
+      function x(e, t) {
         const r = I(t.args, "width"),
           n = I(t.args, "colspan"),
           a = I(t.args, "rowspan"),
@@ -3906,7 +3907,7 @@
                       s.createElement($, null),
                     ),
                   renderContent: () =>
-                    s.createElement(x, {
+                    s.createElement(W, {
                       store: t,
                       onItemSelect: (e) => a(e.name),
                       flairGroupID: n,
@@ -4016,7 +4017,7 @@
                         s.createElement($, null),
                       ),
                     renderContent: () =>
-                      s.createElement(x, {
+                      s.createElement(W, {
                         store: e,
                         onItemSelect: (e) => t(e.name),
                         flairGroupID: n,
@@ -4191,7 +4192,7 @@
           );
         }
       }
-      class x extends s.Component {
+      class W extends s.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
         }
@@ -4212,11 +4213,11 @@
             renderEmpty: () =>
               n
                 ? s.createElement(M, null, (0, u.we)("#AddonPicker_NoResults"))
-                : s.createElement(W, null),
+                : s.createElement(x, null),
           });
         }
       }
-      function W() {
+      function x() {
         return s.createElement(
           s.Fragment,
           null,
@@ -4392,7 +4393,7 @@
                           null,
                           (0, u.we)("#AddonPicker_NoResults"),
                         )
-                      : s.createElement(W, null),
+                      : s.createElement(x, null),
                 },
               ],
             })
@@ -4424,7 +4425,7 @@
                         null,
                         (0, u.we)("#AddonPicker_NoResults"),
                       )
-                    : s.createElement(W, null),
+                    : s.createElement(x, null),
               },
             ],
           });
@@ -4865,7 +4866,7 @@
               );
         }
         ShowMenu() {
-          let e = s.createElement(W, {
+          let e = s.createElement(x, {
               ...this.props,
               fnHasReminderSet: (e) => this.BHasSomeNotificationSetting(e),
               fnHidePanel: this.HideMenu,
@@ -4970,14 +4971,14 @@
         const a = (0, o.sf)(N.TS.LANGUAGE);
         return s.createElement(F, { lang: a, ...n, eventModel: i });
       }
-      function x(e) {
+      function W(e) {
         return a.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
       }
       (0, n.Cg)([M.oI], F.prototype, "ToggleMenu", null),
         (0, n.Cg)([M.oI], F.prototype, "ShowMenu", null),
         (0, n.Cg)([M.oI], F.prototype, "HideMenu", null),
         (F = (0, n.Cg)([i.PA], F));
-      const W = (0, i.PA)((e) => {
+      const x = (0, i.PA)((e) => {
         const {
             eventModel: t,
             bShowStartTime: r,
@@ -5045,7 +5046,7 @@
           },
           F = h.O.BHasValidatedEmail(),
           O = h.O.BHasPushNotification(),
-          W = r && t.GetStartTimeAndDateUnixSeconds();
+          x = r && t.GetStartTimeAndDateUnixSeconds();
         return s.createElement(
           "div",
           null,
@@ -5093,20 +5094,20 @@
                 size: "xlarge",
                 position: "center",
               }),
-            W &&
+            x &&
               s.createElement(
                 "div",
                 { className: P.FullStartTime },
                 (0, C.PP)(
                   "#EventDisplay_EventUpcoming_WithDateAndTime",
                   (0, C.TW)(
-                    W,
+                    x,
                     (0, T.Ct)(
-                      new Date(1e3 * W),
+                      new Date(1e3 * x),
                       p.HD.GetTimeNowWithOverrideAsDate(),
                     ),
                   ),
-                  (0, f.yi)(W, !0),
+                  (0, f.yi)(x, !0),
                 ),
               ),
             s.createElement(
@@ -5247,8 +5248,8 @@
                           })(),
                         ),
                         n = t.GetStartTimeAndDateUnixSeconds(),
-                        i = x(n),
-                        a = x(
+                        i = W(n),
+                        a = W(
                           t.GetEndTimeAndDateUnixSeconds() || n + T.Kp.PerHour,
                         ),
                         s =

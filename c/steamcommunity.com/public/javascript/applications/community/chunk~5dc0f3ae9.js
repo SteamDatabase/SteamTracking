@@ -18459,7 +18459,12 @@
         );
       }
       const _ = (0, _._)(function (_) {
-          const { appID: _, snr: __webpack_require__, classOverride: _ } = _,
+          const {
+              appID: _,
+              snr: __webpack_require__,
+              classOverride: _,
+              styleOverride: _,
+            } = _,
             [_] = (0, _._)(_, {}),
             [_, _] = (0, _.useState)(() =>
               !_ ||
@@ -18498,6 +18503,7 @@
                       _.token.reason || _(!1))
                     : (0, _._)();
               },
+              style: _,
             },
             _ ? _.createElement(_.qnF, null) : _.createElement(_.T4m, null),
             _.createElement(
@@ -18506,6 +18512,7 @@
                 className: (0, _._)(
                   _().WishlistButtonText,
                   _ && _().WishlistLoadingText,
+                  "WishlistButtonText",
                 ),
               },
               (0, _._)(_ ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
@@ -18550,7 +18557,11 @@
           );
         });
       function _(_) {
-        const { appID: _, classOverride: __webpack_require__ } = _,
+        const {
+            appID: _,
+            classOverride: __webpack_require__,
+            styleOverride: _,
+          } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)("GameHoverIgnoreButton"),
           _ = (0, _._)(() => _ && _._.Get().BIsFollowingCurator(_));
@@ -18567,6 +18578,7 @@
                     _.token.reason || _(!1))
                   : (0, _._)();
             },
+            style: _,
           },
           _ ? _.createElement(_.pPV, null) : _.createElement(_.c9e, null),
           _.createElement(
@@ -18575,6 +18587,7 @@
               className: (0, _._)(
                 _().IgnoreButtonText,
                 _ && _().IgnoreLoadingText,
+                "FollowGameButton",
               ),
             },
             (0, _._)(_ ? "#Sale_StopFollowingGame" : "#Sale_FollowGame"),

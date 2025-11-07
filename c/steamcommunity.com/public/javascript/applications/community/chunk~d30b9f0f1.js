@@ -1536,6 +1536,16 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      var _;
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      }),
+        (function (_) {
+          _.k_EventData_SubMenu = "submenu";
+        })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -1549,6 +1559,7 @@
         _,
         _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2451,7 +2462,15 @@
           this.RemoveNullCapsules(),
             this.PreSaveEventTimeAssignment(),
             this.FixupTabVisibilitySettings(),
+            this.FixupMediaRowUniqueID(),
             (0, _._)(this);
+        }
+        FixupMediaRowUniqueID() {
+          for (const _ of this.GetSaleSections())
+            "template_media_content" == _.section_type &&
+              _.media_container.media_rows.forEach((_) => {
+                _.unique_id || (_.unique_id = (0, _._)(this.GetEventModel()));
+              });
         }
         FixupTabVisibilitySettings() {
           let _ = null;
@@ -6254,6 +6273,81 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return _.some(
+          (_) =>
+            _.media_columns.findIndex(
+              (_) => (null == _ ? void 0 : _.unique_id) == _,
+            ) >= 0,
+        );
+      }
+      function _(_, _ = _._.k_HorizontalMediaFirst) {
+        let _ = _._ + Math.floor(1e6 * Math.random());
+        const _ = _.media_container.media_rows;
+        for (; _(_, _); ) _ = _._ + Math.floor(1e6 * Math.random());
+        return {
+          unique_id: _,
+          media_type: _._.k_MediaImage,
+          display_order: _,
+          localized_media: (0, _._)([], 31, null),
+          localized_media_title: (0, _._)([], 31, null),
+          localized_media_subtitle: (0, _._)([], 31, null),
+          localized_media_description: (0, _._)([], 31, null),
+        };
+      }
+      function _(_) {
+        const _ = _.jsondata.sale_sections.filter(
+            (_) => "template_media_content" == _.section_type,
+          ),
+          _ =
+            null == _
+              ? void 0
+              : _.reduce((_, _) => {
+                  var _, _;
+                  return _.concat(
+                    null !==
+                      (_ =
+                        null === (_ = _.media_container) || void 0 === _
+                          ? void 0
+                          : _.media_rows) && void 0 !== _
+                      ? _
+                      : [],
+                  );
+                }, []);
+        let _ = 0;
+        do {
+          _ = Math.floor(1e4 + 1e5 * Math.random());
+        } while (
+          _ &&
+          __webpack_require__.findIndex((_) => _.unique_id == _) >= 0
+        );
+        return _;
+      }
+      function _(_, _, _, _ = 1) {
+        const _ = {
+          unique_id: _(_.GetEventModel()),
+          media_columns: [],
+        };
+        for (let _ = 0; _ < _; ++_) {
+          const _ = _(
+            _,
+            _ > 1 ? _._.k_MediaTitleDesc : _._.k_HorizontalMediaFirst,
+          );
+          _.media_columns.push(_);
+        }
+        (_.media_container.media_rows = [..._.media_container.media_rows, _]),
+          __webpack_require__();
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -8860,6 +8954,434 @@
           selectedOption: _,
           onChange: (_) => __webpack_require__(_.data),
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            editModel: _,
+            saleSection: __webpack_require__,
+            SetIsExiting: _,
+            bMinimized: _,
+            fnToggleMinimized: _,
+          } = _,
+          [_, _] = _.useState(void 0);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_.CloseSectionTools),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.FlexRowContainer,
+            },
+            !_ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(
+                  _._,
+                  {
+                    toolTipContent: (0, _._)("#Button_CopyClipboard"),
+                  },
+                  _.createElement(
+                    _._,
+                    {
+                      className: _().CopyPasteButton,
+                      onClick: () =>
+                        (async function (_, _, _) {
+                          const _ = {
+                            type: "sale_section",
+                            version: 1,
+                            groupAccountID: _.GetClanAccountID(),
+                            universe: _._.EUNIVERSE,
+                            clan_cdn_asset_url: _._.CLAN_CDN_ASSET_URL,
+                            contents: _,
+                          };
+                          await _(_, _);
+                        })(_, __webpack_require__, (_) => _(_)),
+                    },
+                    _.createElement(_.cKB, null),
+                    "copied" == _ &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().CopyPasteButtonComplete,
+                        },
+                        (0, _._)("#Button_Copied"),
+                      ),
+                  ),
+                ),
+                _.createElement(_, {
+                  editModel: _,
+                  saleSection: __webpack_require__,
+                }),
+                _.createElement(
+                  _._,
+                  {
+                    toolTipContent: (0, _._)("#Button_Remove"),
+                  },
+                  _.createElement(
+                    _._,
+                    {
+                      className: _().CloseButton,
+                      onClick: () =>
+                        (function (_, _, _) {
+                          const _ = () => {
+                            __webpack_require__(),
+                              window.setTimeout(() => {
+                                const _ =
+                                  _.GetEventModel().jsondata.sale_sections.findIndex(
+                                    (_) => _ == _,
+                                  );
+                                _.GetEventModel().jsondata.sale_sections.splice(
+                                  _,
+                                  1,
+                                ),
+                                  _.SetDirty(_._.jsondata_sales);
+                              }, 500);
+                          };
+                          (0, _._)(
+                            _.createElement(_._, {
+                              strTitle: (0, _._)("#Button_Remove"),
+                              strDescription: (0, _._)(
+                                "#Sale_RemoveSectionConfirmation",
+                              ),
+                              onOK: () => _(),
+                            }),
+                            window,
+                          );
+                        })(_, __webpack_require__, () => _(!0)),
+                    },
+                    _.createElement(_._, null),
+                  ),
+                ),
+              ),
+            _.createElement(_._, {
+              bIsMinimized: _,
+              fnToggleMinimize: () => _(!0),
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { dataToCopy: _ } = _,
+          _ = (0, _._)(),
+          [_, _] = _.useState(void 0);
+        return _.createElement(
+          _._,
+          {
+            toolTipContent: (0, _._)("#Button_CopyClipboard"),
+          },
+          _.createElement(
+            _._,
+            {
+              className: _().CopyPasteButton,
+              onClick: () => {
+                if (_ === _._.k_EventData_SubMenu)
+                  !(async function (_, _) {
+                    const _ = {
+                      type: "sale_page_submenu",
+                      version: 1,
+                      groupAccountID: _.GetClanAccountID(),
+                      universe: _._.EUNIVERSE,
+                      clan_cdn_asset_url: _._.CLAN_CDN_ASSET_URL,
+                      contents: _.GetEventModel().jsondata.sale_sub_menu,
+                    };
+                    await _(_, _);
+                  })(_, (_) => _(_));
+              },
+            },
+            _.createElement(_.cKB, null),
+            "copied" == _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().CopyPasteButtonComplete,
+                },
+                (0, _._)("#Button_Copied"),
+              ),
+          ),
+        );
+      }
+      async function _(_, _) {
+        const _ = JSON.stringify(_),
+          _ = _._.from(_, "utf-8").toString("base64");
+        try {
+          await navigator.clipboard.writeText(_);
+        } catch (_) {
+          return void console.error("Failed to write to clipboard: ", _);
+        }
+        _((0, _._)("#EventEditor_Copied")),
+          await new Promise((_) => setTimeout(_, 1e3)),
+          _(void 0);
+      }
+      function _(_) {
+        const { dataToPaste: _ } = _,
+          _ = (0, _._)();
+        return _.createElement(_, {
+          editModel: _,
+          dataToPaste: _,
+        });
+      }
+      function _(_) {
+        const {
+            editModel: _,
+            saleSection: __webpack_require__,
+            dataToPaste: _,
+          } = _,
+          [_, _] = _.useState(void 0),
+          _ = (0, _.useCallback)(
+            async (_, _) => {
+              let _;
+              try {
+                _ = JSON.parse(
+                  _._.from(
+                    await navigator.clipboard.readText(),
+                    "base64",
+                  ).toString("utf-8"),
+                );
+              } catch (_) {
+                return void console.error("Failed to read from clipboard: ", _);
+              }
+              if (
+                _ &&
+                (_ = _) &&
+                  "object" == typeof _ &&
+                  "sale_section" === _.type &&
+                  "object" == typeof _.contents &&
+                  "number" == typeof _.version &&
+                  "number" == typeof _.groupAccountID &&
+                "string" == typeof _.clan_cdn_asset_url
+              ) {
+                const _ = _.GetEventModel().jsondata.sale_sections.findIndex(
+                    (_) => _ == _,
+                  ),
+                  _ = _.contents;
+                let _ = _ + 1;
+                for (; _.GetSaleSectionByID(_); ) _++;
+                if (
+                  ((_.unique_id = _),
+                  (_.GetEventModel().jsondata.sale_sections[_] = _),
+                  _.SetDirty(_._.jsondata_sales),
+                  (0, _._)((0, _._)(_), !1),
+                  _((0, _._)("#EventEditor_Pasted")),
+                  await new Promise((_) => setTimeout(_, 1e3)),
+                  _(void 0),
+                  _._.is_support &&
+                    _.groupAccountID != _.GetClanAccountID() &&
+                    (1 == _.universe || _.universe == _._.EUNIVERSE))
+                ) {
+                  const _ = (function (_) {
+                    const _ = new Set(),
+                      _ =
+                        /\b[a-f0-9]{16,}\.(avif|webm|webp|mp4|png|gif|apng)\b/i;
+                    return (
+                      (function _(_) {
+                        if ("string" == typeof _) {
+                          if (__webpack_require__.test(_)) {
+                            const _ = _.replace(/\.[^/.]+$/, "");
+                            _.add(_);
+                          }
+                        } else if (Array.isArray(_)) for (const _ of _) _(_);
+                        else if (_ && "object" == typeof _)
+                          for (const _ of Object.keys(_)) _(_[_]);
+                      })(_),
+                      Array.from(_)
+                    );
+                  })(_);
+                  if ((null == _ ? void 0 : _.length) > 0) {
+                    const _ = {
+                      rgAssetsToMigrate: _,
+                      sourceClanAccountID: _.groupAccountID,
+                      sourceCDN: _.clan_cdn_asset_url,
+                    };
+                    (0, _._)(
+                      _.createElement(_, {
+                        targetClanID: _.GetClanAccountID(),
+                        migrateInfo: _,
+                      }),
+                      window,
+                    );
+                  }
+                }
+              } else
+                _ == _._.k_EventData_SubMenu &&
+                  (function (_) {
+                    return (
+                      _ &&
+                      "object" == typeof _ &&
+                      "sale_page_submenu" === _.type &&
+                      "object" == typeof _.contents &&
+                      "number" == typeof _.version &&
+                      "number" == typeof _.groupAccountID &&
+                      "string" == typeof _.clan_cdn_asset_url
+                    );
+                  })(_) &&
+                  ((_.GetEventModel().jsondata.sale_sub_menu = _.contents),
+                  _.SetDirty(_._.jsondata_sales),
+                  _((0, _._)("#EventEditor_Pasted")),
+                  await new Promise((_) => setTimeout(_, 1e3)),
+                  _(void 0),
+                  (0, _._)("SalePageEdit_SubMenuEditor", !1));
+              var _;
+            },
+            [_],
+          );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              toolTipContent: (0, _._)("#Button_PasteClipboard"),
+            },
+            _.createElement(
+              _._,
+              {
+                className: _().CopyPasteButton,
+                onClick: () => _(_, __webpack_require__),
+              },
+              _.createElement(_.iDD, null),
+              "pasted" == _ &&
+                _.createElement(
+                  "div",
+                  {
+                    className: _().CopyPasteButtonComplete,
+                  },
+                  (0, _._)("#Button_Pasted"),
+                ),
+            ),
+          ),
+        );
+      }
+      async function _(_) {
+        try {
+          return (
+            await fetch(_, {
+              method: "HEAD",
+              credentials: "omit",
+            })
+          )._;
+        } catch {
+          return !1;
+        }
+      }
+      function _(_) {
+        const {
+            targetClanID: _,
+            migrateInfo: __webpack_require__,
+            closeModal: _,
+          } = _,
+          _ = (0, _.useMemo)(() => {
+            const _ = _._.InitFromClanID(_);
+            return (0, _._)(_);
+          }, [_]),
+          _ = (0, _._)(_, _._, !1, !0, !0),
+          _ = (0, _._)();
+        return _.bLoading
+          ? _.createElement(_._, {
+              state: _,
+              strDialogTitle: (0, _._)("#Button_Copy"),
+              closeModal: _,
+            })
+          : _.createElement(_._, {
+              strTitle: (0, _._)("#Button_Copy"),
+              strDescription: (0, _._)(
+                "#Template_Copy_Assets",
+                __webpack_require__.rgAssetsToMigrate.length,
+              ),
+              onCancel: _,
+              onOK: async () => {
+                _.fnSetLoading(!0);
+                const _ = [];
+                let _ = 0;
+                for (const _ of __webpack_require__.rgAssetsToMigrate) {
+                  _.fnSetThrobber(
+                    (0, _._)(
+                      "#Template_Copy_Assets_Existance",
+                      ++_,
+                      __webpack_require__.rgAssetsToMigrate.length,
+                    ),
+                  );
+                  const _ = _.replace(/\.[^/.]+$/, ""),
+                    _ = (0, _._)(_, _);
+                  (await _(_)) ||
+                    _.push(
+                      (0, _._)(__webpack_require__.sourceClanAccountID, _),
+                    );
+                }
+                if (_.length > 0) {
+                  _ = 0;
+                  try {
+                    for (const _ of _) {
+                      _.fnSetThrobber(
+                        (0, _._)(
+                          "#Template_Copy_Assets_Download",
+                          ++_,
+                          _.length,
+                        ),
+                      );
+                      const _ = await fetch(_);
+                      if (!_._)
+                        throw new Error(
+                          `Failed to fetch ${_}: ${_.status} ${_.statusText}`,
+                        );
+                      const _ = await __webpack_require__.blob(),
+                        _ = _.split("/").pop() || "tempfile.avif",
+                        _ = new File([_], _, {
+                          type: _.type,
+                        });
+                      _.fnSetThrobber(
+                        (0, _._)(
+                          "#Template_Copy_Assets_UploadConvert",
+                          _,
+                          _.length,
+                        ),
+                      ),
+                        await _.AddImageForLanguage(_, 0),
+                        await _.UploadAllImages(),
+                        _.fnSetLoading(!1),
+                        _.fnSetSuccess(!0);
+                    }
+                  } catch (_) {
+                    console.error("fail to upload assets ", _),
+                      _.fnSetLoading(!1),
+                      _.fnSetError(!0);
+                  }
+                } else _.fnSetSuccess(!0);
+              },
+            });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -11918,339 +12440,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            editModel: _,
-            saleSection: __webpack_require__,
-            SetIsExiting: _,
-            bMinimized: _,
-            fnToggleMinimized: _,
-          } = _,
-          [_, _] = _.useState(void 0);
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_.CloseSectionTools),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.FlexRowContainer,
-            },
-            !_ &&
-              _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#Button_CopyClipboard"),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      className: _().CopyPasteButton,
-                      onClick: () =>
-                        (async function (_, _, _) {
-                          const _ = {
-                              type: "sale_section",
-                              version: 1,
-                              groupAccountID: _.GetClanAccountID(),
-                              universe: _._.EUNIVERSE,
-                              clan_cdn_asset_url: _._.CLAN_CDN_ASSET_URL,
-                              contents: _,
-                            },
-                            _ = JSON.stringify(_),
-                            _ = _._.from(_, "utf-8").toString("base64");
-                          try {
-                            await navigator.clipboard.writeText(_);
-                          } catch (_) {
-                            return void console.error(
-                              "Failed to write to clipboard: ",
-                              _,
-                            );
-                          }
-                          __webpack_require__("copied"),
-                            await new Promise((_) => setTimeout(_, 1e3)),
-                            __webpack_require__(void 0);
-                        })(_, __webpack_require__, (_) => _(_)),
-                    },
-                    _.createElement(_.cKB, null),
-                    "copied" == _ &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().CopyPasteButtonComplete,
-                        },
-                        (0, _._)("#Button_Copied"),
-                      ),
-                  ),
-                ),
-                _.createElement(_, {
-                  editModel: _,
-                  saleSection: __webpack_require__,
-                }),
-                _.createElement(
-                  _._,
-                  {
-                    toolTipContent: (0, _._)("#Button_Remove"),
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      className: _().CloseButton,
-                      onClick: () =>
-                        (function (_, _, _) {
-                          const _ = () => {
-                            __webpack_require__(),
-                              window.setTimeout(() => {
-                                const _ =
-                                  _.GetEventModel().jsondata.sale_sections.findIndex(
-                                    (_) => _ == _,
-                                  );
-                                _.GetEventModel().jsondata.sale_sections.splice(
-                                  _,
-                                  1,
-                                ),
-                                  _.SetDirty(_._.jsondata_sales);
-                              }, 500);
-                          };
-                          (0, _._)(
-                            _.createElement(_._, {
-                              strTitle: (0, _._)("#Button_Remove"),
-                              strDescription: (0, _._)(
-                                "#Sale_RemoveSectionConfirmation",
-                              ),
-                              onOK: () => _(),
-                            }),
-                            window,
-                          );
-                        })(_, __webpack_require__, () => _(!0)),
-                    },
-                    _.createElement(_._, null),
-                  ),
-                ),
-              ),
-            _.createElement(_._, {
-              bIsMinimized: _,
-              fnToggleMinimize: () => _(!0),
-            }),
-          ),
-        );
-      }
-      function _(_) {
-        const { editModel: _, saleSection: __webpack_require__ } = _,
-          [_, _] = _.useState(void 0),
-          _ = (0, _.useCallback)(async (_, _) => {
-            let _;
-            try {
-              _ = JSON.parse(
-                _._.from(
-                  await navigator.clipboard.readText(),
-                  "base64",
-                ).toString("utf-8"),
-              );
-            } catch (_) {
-              return void console.error("Failed to read from clipboard: ", _);
-            }
-            if (
-              (_ = _) &&
-              "object" == typeof _ &&
-              "sale_section" === _.type &&
-              "object" == typeof _.contents &&
-              "number" == typeof _.version &&
-              "number" == typeof _.groupAccountID &&
-              "string" == typeof _.clan_cdn_asset_url
-            ) {
-              const _ = _.GetEventModel().jsondata.sale_sections.findIndex(
-                  (_) => _ == _,
-                ),
-                _ = _.contents;
-              let _ = _ + 1;
-              for (; _.GetSaleSectionByID(_); ) _++;
-              if (
-                ((_.unique_id = _),
-                (_.GetEventModel().jsondata.sale_sections[_] = _),
-                _.SetDirty(_._.jsondata_sales),
-                (0, _._)((0, _._)(_), !1),
-                _("pasted"),
-                await new Promise((_) => setTimeout(_, 1e3)),
-                _(void 0),
-                _._.is_support &&
-                  _.groupAccountID != _.GetClanAccountID() &&
-                  (1 == _.universe || _.universe == _._.EUNIVERSE))
-              ) {
-                const _ = (function (_) {
-                  const _ = new Set(),
-                    _ = /\b[a-f0-9]{16,}\.(avif|webm|webp|mp4|png|gif|apng)\b/i;
-                  return (
-                    (function _(_) {
-                      if ("string" == typeof _) {
-                        if (__webpack_require__.test(_)) {
-                          const _ = _.replace(/\.[^/.]+$/, "");
-                          _.add(_);
-                        }
-                      } else if (Array.isArray(_)) for (const _ of _) _(_);
-                      else if (_ && "object" == typeof _)
-                        for (const _ of Object.keys(_)) _(_[_]);
-                    })(_),
-                    Array.from(_)
-                  );
-                })(_);
-                if ((null == _ ? void 0 : _.length) > 0) {
-                  const _ = {
-                    rgAssetsToMigrate: _,
-                    sourceClanAccountID: _.groupAccountID,
-                    sourceCDN: _.clan_cdn_asset_url,
-                  };
-                  (0, _._)(
-                    _.createElement(_, {
-                      targetClanID: _.GetClanAccountID(),
-                      migrateInfo: _,
-                    }),
-                    window,
-                  );
-                }
-              }
-            }
-            var _;
-          }, []);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
-              toolTipContent: (0, _._)("#Button_PasteClipboard"),
-            },
-            _.createElement(
-              _._,
-              {
-                className: _().CopyPasteButton,
-                onClick: () => _(_, __webpack_require__),
-              },
-              _.createElement(_.iDD, null),
-              "pasted" == _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: _().CopyPasteButtonComplete,
-                  },
-                  (0, _._)("#Button_Pasted"),
-                ),
-            ),
-          ),
-        );
-      }
-      async function _(_) {
-        try {
-          return (
-            await fetch(_, {
-              method: "HEAD",
-              credentials: "omit",
-            })
-          )._;
-        } catch {
-          return !1;
-        }
-      }
-      function _(_) {
-        const {
-            targetClanID: _,
-            migrateInfo: __webpack_require__,
-            closeModal: _,
-          } = _,
-          _ = (0, _.useMemo)(() => {
-            const _ = _._.InitFromClanID(_);
-            return (0, _._)(_);
-          }, [_]),
-          _ = (0, _._)(_, _._, !1, !0, !0),
-          _ = (0, _._)();
-        return _.bLoading
-          ? _.createElement(_._, {
-              state: _,
-              strDialogTitle: (0, _._)("#Button_Copy"),
-              closeModal: _,
-            })
-          : _.createElement(_._, {
-              strTitle: (0, _._)("#Button_Copy"),
-              strDescription: (0, _._)(
-                "#Template_Copy_Assets",
-                __webpack_require__.rgAssetsToMigrate.length,
-              ),
-              onCancel: _,
-              onOK: async () => {
-                _.fnSetLoading(!0);
-                const _ = [];
-                let _ = 0;
-                for (const _ of __webpack_require__.rgAssetsToMigrate) {
-                  _.fnSetThrobber(
-                    (0, _._)(
-                      "#Template_Copy_Assets_Existance",
-                      ++_,
-                      __webpack_require__.rgAssetsToMigrate.length,
-                    ),
-                  );
-                  const _ = _.replace(/\.[^/.]+$/, ""),
-                    _ = (0, _._)(_, _);
-                  (await _(_)) ||
-                    _.push(
-                      (0, _._)(__webpack_require__.sourceClanAccountID, _),
-                    );
-                }
-                if ((console.log("adil1", _), _.length > 0)) {
-                  _ = 0;
-                  try {
-                    for (const _ of _) {
-                      _.fnSetThrobber(
-                        (0, _._)(
-                          "#Template_Copy_Assets_Download",
-                          ++_,
-                          _.length,
-                        ),
-                      );
-                      const _ = await fetch(_);
-                      if (!_._)
-                        throw new Error(
-                          `Failed to fetch ${_}: ${_.status} ${_.statusText}`,
-                        );
-                      const _ = await __webpack_require__.blob(),
-                        _ = _.split("/").pop() || "tempfile.avif",
-                        _ = new File([_], _, {
-                          type: _.type,
-                        });
-                      _.fnSetThrobber(
-                        (0, _._)(
-                          "#Template_Copy_Assets_UploadConvert",
-                          _,
-                          _.length,
-                        ),
-                      ),
-                        await _.AddImageForLanguage(_, 0),
-                        await _.UploadAllImages(),
-                        _.fnSetLoading(!1),
-                        _.fnSetSuccess(!0);
-                    }
-                  } catch (_) {
-                    console.error("fail to upload assets ", _),
-                      _.fnSetLoading(!1),
-                      _.fnSetError(!0);
-                  }
-                } else _.fnSetSuccess(!0);
-              },
-            });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
@@ -12422,6 +12612,7 @@
         );
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13949,6 +14140,7 @@
         return _ ? _[_] : "";
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -18768,7 +18960,8 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = [_._.k_Header1, _._.k_Header2, _._.k_Header3];
       function _(_) {
         const {
@@ -19952,6 +20145,7 @@
       (0, _._)([_._], _.prototype, "CreateNewVirtualItemRewardDef", null),
         (0, _._)([_._], _.prototype, "MarkVirtualItemRewardInactive", null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -22193,6 +22387,7 @@
           }),
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
           _ = (0, _._)(),
@@ -22425,46 +22620,9 @@
           _.createElement(_._, null),
         );
       }
-      var _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return _.some(
-          (_) =>
-            _.media_columns.findIndex(
-              (_) => (null == _ ? void 0 : _.unique_id) == _,
-            ) >= 0,
-        );
-      }
-      function _(_, _ = _._.k_HorizontalMediaFirst) {
-        let _ = _._ + Math.floor(1e6 * Math.random());
-        const _ = _.media_container.media_rows;
-        for (; _(_, _); ) _ = _._ + Math.floor(1e6 * Math.random());
-        return {
-          unique_id: _,
-          media_type: _._.k_MediaImage,
-          display_order: _,
-          localized_media: (0, _._)([], 31, null),
-          localized_media_title: (0, _._)([], 31, null),
-          localized_media_subtitle: (0, _._)([], 31, null),
-          localized_media_description: (0, _._)([], 31, null),
-        };
-      }
-      function _(_, _, __webpack_require__ = 1) {
-        const _ = {
-          media_columns: [],
-        };
-        for (let _ = 0; _ < __webpack_require__; ++_) {
-          const _ = _(
-            _,
-            __webpack_require__ > 1
-              ? _._.k_MediaTitleDesc
-              : _._.k_HorizontalMediaFirst,
-          );
-          _.media_columns.push(_);
-        }
-        (_.media_container.media_rows = [..._.media_container.media_rows, _]),
-          _();
-      }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -23017,12 +23175,17 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      const _ = {
+        col: 0,
+        row: 0,
+      };
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
           _ = (0, _.useCallback)(
             () => __webpack_require__.SetDirty(_._.jsondata_sales),
             [__webpack_require__],
-          );
+          ),
+          _ = (0, _._)();
         (0, _.useEffect)(() => {
           _.media_overlay ||
             (_.media_overlay = {
@@ -23034,14 +23197,18 @@
               text_placement: _._.k_Center,
             });
         }, [_]);
-        const [_, _, _, _, _] = (0, _._)(() => [
-            _.background_gradient_bottom,
-            _.background_gradient_top,
+        const [_, _, _] = (0, _._)(() => [
             _.media_overlay,
             _.media_overlay_mobile_content_varient,
             _.unique_id,
           ]),
-          _ = (0, _._)(_, _),
+          _ = (function (_) {
+            const [_, __webpack_require__] = (0, _._)(() => [
+              _.background_gradient_bottom,
+              _.background_gradient_top,
+            ]);
+            return (0, _._)(_, __webpack_require__);
+          })(_),
           _ = (0, _.useMemo)(() => {
             if (_) {
               return [
@@ -23069,9 +23236,13 @@
                       "div",
                       null,
                       _.createElement(_, {
-                        uniqueID: _,
-                        media_overlay: _,
+                        language: _,
+                        mediaContentData: _,
                         fnOnDirty: _,
+                        totalColumns: 1,
+                        position: _,
+                        uniqueID: "" + _.unique_id,
+                        bAllowMediaAlignmentSettings: !0,
                         strOverrideBackgroundColor: _,
                       }),
                     ),
@@ -23080,7 +23251,7 @@
               ];
             }
             return null;
-          }, [_, _, _, _, _]);
+          }, [_, _, _, _, _, _, _.unique_id]);
         return _.createElement(
           "div",
           null,
@@ -23097,6 +23268,8 @@
                 (_.media_overlay_mobile_content_varient = JSON.parse(
                   JSON.stringify(_),
                 )),
+                  (_.media_overlay_mobile_content_varient.display_order =
+                    _._.k_OverlayMedia),
                   _();
               },
             }),
@@ -23369,7 +23542,7 @@
                     ]),
                     _(null))
                   : (_.media_columns.forEach((_, _) => {
-                      _.media_columns[_] || (_.media_columns[_] = _(_));
+                      _.media_columns[_] || (_.media_columns[_] = (0, _._)(_));
                     }),
                     _ &&
                       _({
@@ -23412,7 +23585,8 @@
       function _(_) {
         const { saleSection: _, fnOnDirty: __webpack_require__ } = _,
           [_, _, _] = (0, _._)(!1),
-          [_, _] = (0, _.useState)(() => 1);
+          [_, _] = (0, _.useState)(() => 1),
+          _ = (0, _._)();
         return _.createElement(
           _.Fragment,
           null,
@@ -23432,7 +23606,7 @@
               _._,
               {
                 strTitle: (0, _._)("#Template_Section_MediaContent_add_row"),
-                onOK: () => _(_, __webpack_require__, _),
+                onOK: () => (0, _._)(_, _, __webpack_require__, _),
                 closeModal: _,
               },
               [1, 2, 3, 4].map((_) =>
@@ -23446,7 +23620,7 @@
                     }),
                     onClick: () => _(_),
                     onDoubleClick: () => {
-                      _(_, __webpack_require__, _), _();
+                      (0, _._)(_, _, __webpack_require__, _), _();
                     },
                   },
                   _.createElement(_, {
@@ -23608,6 +23782,7 @@
             fnOnDirty: __webpack_require__,
             uniqueID: _,
             totalColumns: _,
+            bHideBackgroundEditor: _,
           } = _,
           _ = _(_),
           [_] = (0, _._)(() => [_.display_order || _._.k_MediaTitleDesc]);
@@ -23623,19 +23798,20 @@
             uniqueID: _,
             bSupportHorizontal: _,
           }),
-          _.createElement(
-            "div",
-            {
-              className: _().BackgroundCtn,
-            },
-            _.createElement(_._, {
-              section: _,
-              fnOnSetDirty: __webpack_require__,
-              strSectionTitleOverrideToken:
-                "#Sale_Block_BackgroundColors_Title",
-              bHideLabelControls: !0,
-            }),
-          ),
+          !!_ &&
+            _.createElement(
+              "div",
+              {
+                className: _().BackgroundCtn,
+              },
+              _.createElement(_._, {
+                section: _,
+                fnOnSetDirty: __webpack_require__,
+                strSectionTitleOverrideToken:
+                  "#Sale_Block_BackgroundColors_Title",
+                bHideLabelControls: !0,
+              }),
+            ),
           _.createElement(_, {
             ..._,
           }),
@@ -23648,12 +23824,18 @@
             fnOnDirty: _,
           } = _,
           _ = _(__webpack_require__),
-          [_, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.display_order || _._.k_MediaTitleDesc,
             (_ &&
               (_.display_order == _._.k_HorizontalMediaFirst ||
                 _.display_order == _._.k_HorizontalTextFirst)) ||
               _.display_order == _._.k_TitleDescOnly,
+            Boolean(
+              _.display_order == _._.k_TitleDescOnly ||
+                _.display_order == _._.k_TitleDescMedia ||
+                _.display_order == _._.k_TitleMediaDesc ||
+                _.display_order == _._.k_MediaTitleDesc,
+            ),
           ]),
           _ = (0, _.useMemo)(
             () => ({
@@ -23685,9 +23867,9 @@
               _.createElement(_, {
                 ..._,
                 titleSubDesc: _,
-                bAllowScalingMedia: _,
-                bTextOnlyScaling: _ == _._.k_TitleDescOnly,
-                bInvertScalingValue: _ == _._.k_TitleDescOnly,
+                bAllowScalingMedia: _ || _,
+                bTextOnlyScaling: _,
+                bInvertScalingValue: _,
                 bAllowTextVerticalAlign: !0,
               }),
               _.createElement(_, {
@@ -26213,6 +26395,7 @@
               ..._,
             });
           case "tab_buttons":
+          case "reference_section":
           case "unselected_empty":
           default:
             return null;
@@ -27405,7 +27588,7 @@
                       ),
                     ),
                 ),
-                _.createElement(_, {
+                _.createElement(_._, {
                   editModel: _,
                   saleSection: _,
                   bMinimized: _,
