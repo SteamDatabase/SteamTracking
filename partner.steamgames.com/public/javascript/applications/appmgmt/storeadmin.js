@@ -2246,7 +2246,8 @@
                     o.delete(e.nRequestId);
                   }
                 } else
-                  (t.status = e.bSuccess ? "success" : "failed"),
+                  c.push({ bSuccess: !1, image: t, uploadResult: [] }),
+                    (t.status = e.bSuccess ? "success" : "failed"),
                     (t.message =
                       !e.bSuccess && e.elErrorMessage ? e.elErrorMessage : "");
               } finally {
@@ -2323,12 +2324,14 @@
             );
             if (!o.bSuccess) return o;
             a = o.data;
-            const l = { "Content-Type": "application/octet-stream" };
-            for (const e of a.headers_for_upload) l[e.name] = e.value;
-            const i = await h()
-              .put(a.upload_url, e.file, { headers: l, cancelToken: n })
-              .then((e) => 200 == e.status || 201 == e.status)
-              .catch(() => !1);
+            const l = (0, d.N1)(
+                { "Content-Type": "application/octet-stream" },
+                a.headers_for_upload,
+              ),
+              i = await h()
+                .put(a.upload_url, e.file, { headers: l, cancelToken: n })
+                .then((e) => 200 == e.status || 201 == e.status)
+                .catch(() => !1);
             if (!i)
               return (
                 console.warn(
@@ -5461,16 +5464,18 @@
                         ),
                       );
                     const a = (await E.UploadAllImages())[0];
-                    if (!a.bSuccess)
+                    if (!a || !a.bSuccess)
                       return void m(
-                        (0, p.PP)(
-                          "#StoreAdmin_UploadError_Generic",
-                          a.image.message,
-                        ),
+                        a?.image?.message
+                          ? (0, p.PP)(
+                              "#StoreAdmin_UploadError_Generic",
+                              a.image.message,
+                            )
+                          : (0, p.we)("#StoreAdmin_UploadError_Unknown"),
                       );
-                    h(a.uploadResult), t.onComplete((0, o.TQ)(e)), r();
+                    h(a.uploadResult), t.onComplete((0, o.TQ)(e));
                   } finally {
-                    g(!1);
+                    g(!1), r();
                   }
                 },
               })

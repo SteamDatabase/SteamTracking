@@ -38254,7 +38254,7 @@ Error generating stack: ` +
   var Bi,
     sd = V(() => {
       "use strict";
-      Bi = Y(Ae());
+      Bi = Y(Ae(), 1);
     });
   function OP(t) {
     let [n, o] = so.useState(document.documentElement[t]);

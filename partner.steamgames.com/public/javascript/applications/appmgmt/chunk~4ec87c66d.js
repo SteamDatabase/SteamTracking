@@ -94785,23 +94785,12 @@
             r.data.file_id &&
             r.data.upload_url
           ) {
-            const t = new Set([
-                "content-length",
-                "host",
-                "origin",
-                "referer",
-                "user-agent",
-                "cookie",
-                "set-cookie",
-                "connection",
-                "upgrade",
-              ]),
-              a = { "Content-Type": "application/octet-stream" };
-            if (r.data.headers_for_upload)
-              for (const e of r.data.headers_for_upload)
-                t.has(e.name.toLocaleLowerCase()) || (a[e.name] = e.value);
+            const t = (0, g.N1)(
+              { "Content-Type": "application/octet-stream" },
+              r.data.headers_for_upload,
+            );
             return (await l()
-              .put(r.data.upload_url, e.file, { headers: a })
+              .put(r.data.upload_url, e.file, { headers: t })
               .then((e) => 200 == e.status || 201 == e.status)
               .catch(() => !1))
               ? { temp_file_id: r.data.file_id }

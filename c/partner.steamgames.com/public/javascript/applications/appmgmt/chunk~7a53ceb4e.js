@@ -1142,6 +1142,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1280,6 +1281,24 @@
               width: 0,
               height: 0,
             };
+      }
+      function _(_, _) {
+        if (!_) return _;
+        const _ = new Set([
+          "content-length",
+          "host",
+          "origin",
+          "referer",
+          "user-agent",
+          "cookie",
+          "set-cookie",
+          "connection",
+          "upgrade",
+        ]);
+        for (const _ of _)
+          __webpack_require__.has(_.name.toLowerCase()) ||
+            (_[_.name] = _.value);
+        return _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

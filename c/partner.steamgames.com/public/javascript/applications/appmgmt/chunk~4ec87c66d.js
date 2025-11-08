@@ -106235,23 +106235,12 @@
             _.data.file_id &&
             _.data.upload_url
           ) {
-            const _ = new Set([
-                "content-length",
-                "host",
-                "origin",
-                "referer",
-                "user-agent",
-                "cookie",
-                "set-cookie",
-                "connection",
-                "upgrade",
-              ]),
-              _ = {
+            const _ = (0, _._)(
+              {
                 "Content-Type": "application/octet-stream",
-              };
-            if (_.data.headers_for_upload)
-              for (const _ of _.data.headers_for_upload)
-                _.has(_.name.toLocaleLowerCase()) || (_[_.name] = _.value);
+              },
+              _.data.headers_for_upload,
+            );
             return (await _()
               .put(_.data.upload_url, _.file, {
                 headers: _,

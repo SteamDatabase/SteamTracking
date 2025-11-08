@@ -1055,6 +1055,7 @@
       i.d(t, {
         EG: () => o,
         II: () => d,
+        N1: () => u,
         S2: () => p,
         Uz: () => h,
         aL: () => l,
@@ -1188,6 +1189,22 @@
             ? { width: e.videoWidth, height: e.videoHeight }
             : { width: e.width, height: e.height }
           : { width: 0, height: 0 };
+      }
+      function u(e, t) {
+        if (!t) return e;
+        const i = new Set([
+          "content-length",
+          "host",
+          "origin",
+          "referer",
+          "user-agent",
+          "cookie",
+          "set-cookie",
+          "connection",
+          "upgrade",
+        ]);
+        for (const s of t) i.has(s.name.toLowerCase()) || (e[s.name] = s.value);
+        return e;
       }
     },
     81416: (e, t, i) => {
