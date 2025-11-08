@@ -2312,10 +2312,6 @@ $ffn
 172.16
 172.16.3.31
 172.16.3.39
-17:19:05
-17:19:57
-17:19:58
-17:19:59
 17CBootstrapLogFile
 17CDebugStatsSystem
 17CDummyCnxCallback
@@ -2427,6 +2423,8 @@ $ffn
 21COpenSSLCachedSession
 21CScheduledFunctionMgr
 21CUtlCStringConversion
+22:59:34
+22:59:43
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -8757,7 +8755,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Nov  7 2025 17:19:56
+Startup - updater built Nov  7 2025 22:59:43
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

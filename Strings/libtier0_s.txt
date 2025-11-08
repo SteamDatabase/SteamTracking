@@ -97,7 +97,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-17:19:10
+22:59:38
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -893,7 +893,6 @@ java resource
 kill
 lchown
 ld-linux.so.2
-lgkt
 libSDL3.so.0
 libc.so.6
 libdl.so.2

@@ -4804,13 +4804,12 @@
           : l.createElement(l.Fragment, null, n);
       }
       function ya({ children: e, onChange: t }) {
-        const a = l.useRef(null);
+        l.useRef(null);
         return (
           (0, l.useEffect)(() => {
-            const e = a.current;
-            t(!!e && e.childNodes.length > 0);
-          }),
-          l.createElement("div", { ref: a }, e)
+            t(!!l.Children.toArray(e).filter(Boolean).length);
+          }, [e, t]),
+          e
         );
       }
       function La(e) {

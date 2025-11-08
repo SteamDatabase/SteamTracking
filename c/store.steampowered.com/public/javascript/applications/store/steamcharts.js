@@ -5912,19 +5912,12 @@
           : _.createElement(_.Fragment, null, _);
       }
       function _({ children: _, onChange: _ }) {
-        const _ = _.useRef(null);
+        _.useRef(null);
         return (
           (0, _.useEffect)(() => {
-            const _ = _.current;
-            _(!!_ && _.childNodes.length > 0);
-          }),
-          _.createElement(
-            "div",
-            {
-              ref: _,
-            },
-            _,
-          )
+            _(!!_.Children.toArray(_).filter(Boolean).length);
+          }, [_, _]),
+          _
         );
       }
       function _(_) {

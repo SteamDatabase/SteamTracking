@@ -5204,13 +5204,12 @@
           : r.createElement(r.Fragment, null, n);
       }
       function Na({ children: e, onChange: t }) {
-        const a = r.useRef(null);
+        r.useRef(null);
         return (
           (0, r.useEffect)(() => {
-            const e = a.current;
-            t(!!e && e.childNodes.length > 0);
-          }),
-          r.createElement("div", { ref: a }, e)
+            t(!!r.Children.toArray(e).filter(Boolean).length);
+          }, [e, t]),
+          e
         );
       }
       function Ga(e) {

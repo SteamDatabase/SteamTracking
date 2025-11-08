@@ -6972,6 +6972,7 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
+0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -7011,7 +7012,6 @@ ${LANGUAGE}
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
 0000
 0000000000000000000000000000000000000000
-0.15
 000000001532
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -12667,6 +12667,7 @@ ${LANGUAGE}
 :pat
 :path
 :protoco
+:qli
 :schem
 :scheme
 :statu
@@ -25678,7 +25679,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov  7 2025 17:21:57
+Nov  7 2025 22:59:51
 November
 NrZl
 NullMetrics()
@@ -29588,7 +29589,6 @@ System.UpdateSettings
 System.VideoRecordingDriverCheck
 System/Bluetooth/Enabled
 System/HardwareUpdater/Enabled
-SystemGoingIntoSuspend_t. Most likely external request.
 SystemReport: found debug wifi trace file. Saving to: %s
 SystemRestartMachine
 SystemResumingFromSuspend_t: resumed from sleep
