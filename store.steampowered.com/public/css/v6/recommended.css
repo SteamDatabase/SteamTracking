@@ -2077,6 +2077,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 
 	flex-shrink: 0;
 	padding: 8px;
+	box-sizing: border-box;
 	opacity: 0.6;
 }
 

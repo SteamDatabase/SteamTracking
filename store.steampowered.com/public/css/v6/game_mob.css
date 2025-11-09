@@ -778,7 +778,7 @@
 	html.responsive .queue_ctn {
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 7px;
+		margin-bottom: 24px;
 	}
 	html.responsive .queue_controls_description {
 		display: flex;
@@ -790,16 +790,8 @@
 	}
 	html.responsive .next_in_queue_area {
 		position: absolute;
-		bottom: 149px;
+		bottom: 28px;
 		top: unset;
-	}
-	html.responsive .btn_next_in_queue {
-		margin-top: -22px;
-		margin-bottom: -10px;
-		margin-right: unset;
-	}
-	html.responsive .next_in_queue_content {
-		padding-top: 20px;
 	}
 
 	/* Hide the "view all" button for recent events and announcements */
@@ -1161,19 +1153,11 @@
 		height: 26px;
 		padding-left: 5px;
 	}
-	/* Make the age gate 'Next in Queue' button smaller on mobile screens */
-	#app_agegate .btn_next_in_queue {
-		height: 50px;
-		margin-top: -9px;
-		width: 160px;
-		display: inline-block;
-	}
-	#app_agegate .btn_next_in_queue .next_in_queue_content span {
-		font-size: 14px;
-	}
-	#app_agegate .btn_next_in_queue .next_in_queue_content {
-		padding-left: 10px;
-		padding-top: 15px;
+
+	html.responsive .agegate_btn_ctn.in_queue {
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	/* new section for responsive UX called Links and Info
