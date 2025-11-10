@@ -8891,6 +8891,7 @@
     "IdleStatus_GameName": "Downloading %1$s",
     "IdleStatus_RemainingTime": "~ %1$s remaining",
     "IdleStatus_RemainingCount": "%1$s item remaining in queue",
+    "IdleStatus_RemainingCount_Plural": "%1$s items remaining in queue",
     "IdleStatus_WakeDevice": "Wake Device",
     "IdleStatus_PressMultipleTimes": "Press the same button four times to wake.",
     "Menu_Screenshots_New": "Recordings & Screenshots",

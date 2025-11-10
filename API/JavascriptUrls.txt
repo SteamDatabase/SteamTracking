@@ -498,9 +498,6 @@ ${IMG_URL}/heroes/stats/icon_projectile_speed.png
 ${IMG_URL}/heroes/stats/icon_turn_rate.png
 ${IMG_URL}/heroes/stats/icon_vision.png
 ${IMG_URL}/home/battle_mobile.jpg
-${IMG_URL}/home/dpc_ti9_1.jpg
-${IMG_URL}/home/dpc_ti9_2.jpg
-${IMG_URL}/home/dpc_ti9_3.jpg
 ${IMG_URL}/home/radiant_dire5.jpg
 ${IMG_URL}/home/workshop_images.png
 ${IMG_URL}/international2022/logos/cm_persona_logo_${LANGUAGE}.png
@@ -3238,26 +3235,37 @@ https://www.dota2.com/720
 https://www.dota2.com/aghanim
 https://www.dota2.com/battlepass2022
 https://www.dota2.com/bladeformlegacy
+https://www.dota2.com/crownfall
 https://www.dota2.com/dawnbreaker
+https://www.dota2.com/deadreckoning
 https://www.dota2.com/diretide
 https://www.dota2.com/diretide/2012
 https://www.dota2.com/disciplespath
 https://www.dota2.com/eminenceofristul
 https://www.dota2.com/flockheartsgamble
+https://www.dota2.com/frostivus2023
 https://www.dota2.com/grimstroke
 https://www.dota2.com/international/battlepass
 https://www.dota2.com/international2019/battlepass
+https://www.dota2.com/international2023
+https://www.dota2.com/international2024
+https://www.dota2.com/kez
 https://www.dota2.com/labyrinth
 https://www.dota2.com/marci
 https://www.dota2.com/mars
 https://www.dota2.com/mistwoods
 https://www.dota2.com/nemestice
+https://www.dota2.com/newfrontiers
 https://www.dota2.com/newsentry/2870472829293831072
 https://www.dota2.com/outlanders
+https://www.dota2.com/patches/7.36
 https://www.dota2.com/planetfall
 https://www.dota2.com/primalbeast
 https://www.dota2.com/risinggale
+https://www.dota2.com/springforward2025
+https://www.dota2.com/summer2023
 https://www.dota2.com/theonetrueking
+https://www.dota2.com/wanderingwaters
 https://www.dropbox.com/s/h9gjz...
 https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0
 https://www.example.com
@@ -3431,8 +3439,6 @@ url( ${IMG_URL}/arrow_left.png )
 url( ${IMG_URL}/global/arrow_left.png )
 url( ${IMG_URL}/global/cs2_icon_color_512x512.png )
 url( ${IMG_URL}/home/background4.png )
-url( ${IMG_URL}/home/dpc.jpg )
-url( ${IMG_URL}/icons/dpc.svg )
 url( ${IMG_URL}/icons/steam.svg )
 url( ${IMG_URL}/pastupdates/700_social.jpg )
 url( ${IMG_URL}/pastupdates/720_social.jpg )
@@ -3441,28 +3447,36 @@ url( ${IMG_URL}/pastupdates/aegis_social.jpg )
 url( ${IMG_URL}/pastupdates/aghs_share.png )
 url( ${IMG_URL}/pastupdates/am_social.png )
 url( ${IMG_URL}/pastupdates/balance_social.jpg )
+url( ${IMG_URL}/pastupdates/battlepass2022_social.png )
 url( ${IMG_URL}/pastupdates/beta_social.jpg )
 url( ${IMG_URL}/pastupdates/bladeform_social.jpg )
 url( ${IMG_URL}/pastupdates/cleaning_social.jpg )
 url( ${IMG_URL}/pastupdates/compendium_social.jpg )
+url( ${IMG_URL}/pastupdates/crownfall_social.png )
 url( ${IMG_URL}/pastupdates/darkrift_social.jpg )
 url( ${IMG_URL}/pastupdates/dawnbreaker_social.jpg )
+url( ${IMG_URL}/pastupdates/deadreckoning_social.png )
 url( ${IMG_URL}/pastupdates/diretide2012_social.jpg )
 url( ${IMG_URL}/pastupdates/diretide_twitter.png )
 url( ${IMG_URL}/pastupdates/duelingfates_social.jpg )
 url( ${IMG_URL}/pastupdates/firstblood_social.jpg )
 url( ${IMG_URL}/pastupdates/flockheart_img.jpg )
 url( ${IMG_URL}/pastupdates/frosthaven_social.jpg )
+url( ${IMG_URL}/pastupdates/frostivus_2023_social.png )
 url( ${IMG_URL}/pastupdates/greevling_social.jpg )
 url( ${IMG_URL}/pastupdates/grimstroke_social.jpg )
 url( ${IMG_URL}/pastupdates/heroes_social.jpg )
 url( ${IMG_URL}/pastupdates/hoodwink_social.jpg )
+url( ${IMG_URL}/pastupdates/innates_facets_social.png )
+url( ${IMG_URL}/pastupdates/international2023_social.png )
+url( ${IMG_URL}/pastupdates/kez_social.png )
 url( ${IMG_URL}/pastupdates/labyrinth_social.jpg )
 url( ${IMG_URL}/pastupdates/marci_social.jpg )
 url( ${IMG_URL}/pastupdates/mars_social.jpg )
 url( ${IMG_URL}/pastupdates/nemestice_social.jpg )
 url( ${IMG_URL}/pastupdates/newbloom2014_social.jpg )
 url( ${IMG_URL}/pastupdates/newbloom2015_social.jpg )
+url( ${IMG_URL}/pastupdates/newfrontiers_social.png )
 url( ${IMG_URL}/pastupdates/oracle_social.jpg )
 url( ${IMG_URL}/pastupdates/outlanders_social.jpg )
 url( ${IMG_URL}/pastupdates/planetfall_social.jpg )
@@ -3472,10 +3486,13 @@ url( ${IMG_URL}/pastupdates/pudge_social.jpg )
 url( ${IMG_URL}/pastupdates/qop_twitter.png )
 url( ${IMG_URL}/pastupdates/reborn_social.jpg )
 url( ${IMG_URL}/pastupdates/rekindling_social.jpg )
+url( ${IMG_URL}/pastupdates/ringmaster_social.png )
 url( ${IMG_URL}/pastupdates/shanghai_social.jpg )
 url( ${IMG_URL}/pastupdates/snows_social.jpg )
 url( ${IMG_URL}/pastupdates/spirits_social.jpg )
 url( ${IMG_URL}/pastupdates/spoils_social.jpg )
+url( ${IMG_URL}/pastupdates/spring_forward_social.png )
+url( ${IMG_URL}/pastupdates/summer_2023_social.png )
 url( ${IMG_URL}/pastupdates/techies_social.jpg )
 url( ${IMG_URL}/pastupdates/ti10_social.jpg )
 url( ${IMG_URL}/pastupdates/ti3_social.jpg )
@@ -3485,6 +3502,7 @@ url( ${IMG_URL}/pastupdates/ti6_social.jpg )
 url( ${IMG_URL}/pastupdates/ti7_social.jpg )
 url( ${IMG_URL}/pastupdates/ti8_social.jpg )
 url( ${IMG_URL}/pastupdates/ti9_social.jpg )
+url( ${IMG_URL}/pastupdates/wanderingwaters_social.png )
 url( ${IMG_URL}/pastupdates/winterbp_social.jpg )
 url( ${IMG_URL}/pastupdates/wk_social.jpg )
 url( ${IMG_URL}/pastupdates/wr_social.png )

@@ -66098,9 +66098,7 @@ a {
   background-size: cover;
   background-position: center bottom;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column-reverse;
   position: relative;
   text-align: center;
   margin: 10px;
@@ -66130,6 +66128,21 @@ a {
   ._2ao7wkEJAwaNiWk-uOfrvl:hover
   ._3AU7Dt_vwaLkaGmvtT6_Kt {
   opacity: 1;
+}
+._2NDSiJ44l02QkcwGltpQHL
+  .fJ31iRFFtbUs4O5PslgO5
+  ._2ao7wkEJAwaNiWk-uOfrvl
+  .r0VSTvmrIaWHscb1vfDSx {
+  margin: 0px 10px 24px 20px;
+  text-shadow: 0px 0px 10px #000;
+  font-family: "Reaver", serif;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: 0px;
+  font-size: 28px;
+  line-height: 115%;
+  color: #fff;
+  z-index: 2;
 }
 * {
   box-sizing: border-box;

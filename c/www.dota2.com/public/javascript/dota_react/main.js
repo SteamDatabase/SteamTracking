@@ -3686,6 +3686,7 @@
         UpdatesContainer: "fJ31iRFFtbUs4O5PslgO5",
         UpdateBlock: "_2ao7wkEJAwaNiWk-uOfrvl",
         Date: "_3AU7Dt_vwaLkaGmvtT6_Kt",
+        Title: "r0VSTvmrIaWHscb1vfDSx",
       };
     },
     chunkid: (module) => {
@@ -39472,63 +39473,6 @@
             _.createElement(
               "div",
               {
-                className: _().ProCircuitSection,
-                style: {
-                  backgroundImage: `url( ${_._.IMG_URL}/home/dpc.jpg )`,
-                },
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().DPCSmImgs,
-                },
-                _.createElement("img", {
-                  className: (0, _._)(_().DPCSmImg, _().Img1),
-                  src: `${_._.IMG_URL}/home/dpc_ti9_1.jpg`,
-                  "data-aos": "fade-up",
-                  "data-aos-delay": "300",
-                  "data-aos-duration": "2500",
-                }),
-                _.createElement("img", {
-                  className: (0, _._)(_().DPCSmImg, _().Img2),
-                  src: `${_._.IMG_URL}/home/dpc_ti9_2.jpg`,
-                  "data-aos": "fade-up",
-                  "data-aos-delay": "600",
-                  "data-aos-duration": "2500",
-                }),
-                _.createElement("img", {
-                  className: (0, _._)(_().DPCSmImg, _().Img3),
-                  src: `${_._.IMG_URL}/home/dpc_ti9_3.jpg`,
-                  "data-aos": "fade-up",
-                  "data-aos-delay": "1000",
-                  "data-aos-duration": "2500",
-                }),
-              ),
-              _.createElement("div", {
-                className: _().DPCIcon,
-                style: {
-                  backgroundImage: `url( ${_._.IMG_URL}/icons/dpc.svg )`,
-                },
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().HeaderText,
-                },
-                (0, _._)("#home_dpc_header"),
-              ),
-              _.createElement(_, null),
-              _.createElement(
-                "div",
-                {
-                  className: _().BodyText,
-                },
-                (0, _._)("#home_dpc_body"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
                 className: _().JoinBattleSection,
                 style: {
                   backgroundImage: `url( ${_._.IMG_URL}/home/background4.png )`,
@@ -41822,6 +41766,186 @@
               {
                 className: _().UpdatesContainer,
               },
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/springforward2025",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/spring_forward_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/wanderingwaters",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/wanderingwaters_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/kez",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/kez_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/international2024",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/ringmaster_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/patches/7.36",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/innates_facets_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/crownfall",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/crownfall_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/frostivus2023",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/frostivus_2023_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/international2023",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/international2023_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/summer2023",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/summer_2023_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/newfrontiers",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/newfrontiers_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/deadreckoning",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/deadreckoning_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
+              _.createElement(
+                "a",
+                {
+                  href: "https://www.dota2.com/battlepass2022",
+                  target: "_blank",
+                },
+                _.createElement("div", {
+                  className: _().UpdateBlock,
+                  style: {
+                    backgroundImage: `url( ${_._.IMG_URL}/pastupdates/battlepass2022_social.png )`,
+                  },
+                  "data-aos": "fade-up",
+                  "data-aos-duration": "1000",
+                }),
+              ),
               _.createElement(
                 "a",
                 {

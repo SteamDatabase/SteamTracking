@@ -2708,6 +2708,7 @@ ${LANGUAGE}
 '\n#k_EHDRVisualization_HeatmapExtended
 '\n#k_EMarketingMessageGenreAssociation
 '\n#k_EMarketingMessageTemplate_Unknown
+'\n#k_EMouseModeRelativeCursor_OBSOLETE
 '\n#k_EPersonaStateFlag_HasRichPresence
 '\n#k_EProfileCustomizationStyleDefault
 '\n#k_EProfileCustomizationTypeMyGuides
@@ -12627,6 +12628,7 @@ ${LANGUAGE}
 :.CSteamInputService_ControllerAxesStateChange_Notification
 :.CUserAccount_GetAvailableValveDiscountPromotions_Response"
 :.JlN
+:1gi
 :3(!V_DMr{`i
 :5ptI.T(
 :AhHa
@@ -12667,7 +12669,6 @@ ${LANGUAGE}
 :pat
 :path
 :protoco
-:qli
 :schem
 :scheme
 :statu
@@ -25679,7 +25680,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov  7 2025 22:59:51
+Nov 10 2025 19:30:51
 November
 NrZl
 NullMetrics()
@@ -26070,6 +26071,7 @@ OrderID
 Origin
 Oriya
 Osmanya
+OszK
 Other
 Other abortable transaction in progress
 Other session playing
@@ -43859,7 +43861,6 @@ k_EMessageReactionType_Sticker
 k_EMouseControl_Button_Backk_EMouseControl_Button_Forwardk_EMouseControl_Button_Leftk_EMouseControl_Button_Middlek_EMouseControl_Button_Rightk_EMouseControl_Countk_EMouseControl_Scroll_Downk_EMouseControl_Scroll_Up
 k_EMouseModeAbsoluteCursor
 k_EMouseModeRelative
-k_EMouseModeRelativeCursor
 k_EMouseModeTouch
 k_EMouseModeUnknown
 k_EMsgAIGetAppGCFlags

@@ -2148,6 +2148,7 @@ $ffn
 18IRegistryInterface
 18IUDPSocketCallback
 18IWorkThreadFactory
+19:28:09
 19CClientInstallUtils
 19CCuratorPreferences
 19CHTTPClientResponse
@@ -2222,7 +2223,6 @@ $ffn
 21CWorkThreadPoolSignal
 21IClientProcessMonitor
 21IWorkThreadPoolSignal
-22:59:34
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -4674,7 +4674,6 @@ Data transfer deferred
 Date
 Days
 DcO/lcK+hSK
-Dcld
 Debit Card (Nodwin)
 Debug
 December
@@ -6813,7 +6812,7 @@ Not supported.
 Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov  7 2025
+Nov 10 2025
 November
 NrZl
 NullMetrics()

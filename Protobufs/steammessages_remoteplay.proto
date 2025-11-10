@@ -612,6 +612,7 @@ message CSetFlashStateMsg {
 message CShowCursorMsg {
 	optional float x_normalized = 1;
 	optional float y_normalized = 2;
+	optional bool locked = 3;
 }
 
 message CHideCursorMsg {
