@@ -2818,7 +2818,8 @@
         lt = () => (C.UF.IS_OGG ? "games" : "groups"),
         ct = {
           DiagData: () => "/:anything*/diagdata",
-          Login: () => "/login/home",
+          Login: () => "/login",
+          LegacyLogin: () => "/login/home",
           OAuthLogin: () => "/oauth/loginform",
           OpenidLogin: () => "/openid/loginform",
           EventsInternal: () => "/(migrateevents|migrate)",
@@ -2888,14 +2889,14 @@
                   }),
                   n.createElement(
                     s.qh,
-                    { path: [ct.Login(), ct.OAuthLogin()] },
+                    { path: [ct.Login(), ct.LegacyLogin(), ct.OAuthLogin()] },
                     n.createElement(te.X, {
                       config: { login: (e) => n.createElement(Xe, { ...e }) },
                     }),
                   ),
                   n.createElement(
                     s.qh,
-                    { path: [ct.Login(), ct.OpenidLogin()] },
+                    { path: [ct.Login(), ct.LegacyLogin(), ct.OpenidLogin()] },
                     n.createElement(te.X, {
                       config: { login: (e) => n.createElement(Xe, { ...e }) },
                     }),

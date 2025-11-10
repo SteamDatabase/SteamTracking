@@ -2989,7 +2989,8 @@
         _ = () => (_._.IS_OGG ? "games" : "groups"),
         _ = {
           DiagData: () => "/:anything*/diagdata",
-          Login: () => "/login/home",
+          Login: () => "/login",
+          LegacyLogin: () => "/login/home",
           OAuthLogin: () => "/oauth/loginform",
           OpenidLogin: () => "/openid/loginform",
           EventsInternal: () => "/(migrateevents|migrate)",
@@ -3064,7 +3065,7 @@
                   _.createElement(
                     _._,
                     {
-                      path: [_.Login(), _.OAuthLogin()],
+                      path: [_.Login(), _.LegacyLogin(), _.OAuthLogin()],
                     },
                     _.createElement(_._, {
                       config: {
@@ -3078,7 +3079,7 @@
                   _.createElement(
                     _._,
                     {
-                      path: [_.Login(), _.OpenidLogin()],
+                      path: [_.Login(), _.LegacyLogin(), _.OpenidLogin()],
                     },
                     _.createElement(_._, {
                       config: {
