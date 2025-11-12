@@ -5804,7 +5804,7 @@
       const Xe = () => {
         const { data: e } = (0, Ee.Fv)(Ne.TS.LANGUAGE),
           [t, a] = r.useState(ke),
-          s = (0, Te.G)(t.selectedTag, 500),
+          s = (0, Te.G)(t.selectedTag, 500, 30, 60, !0),
           {
             maxResultCount: n,
             dayWeekTimestamps: i,

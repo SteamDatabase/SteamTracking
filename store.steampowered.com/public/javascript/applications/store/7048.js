@@ -11823,7 +11823,7 @@
               (1 != i?.GetAppType() && 12 != i?.GetAppType()) ||
                 l(i.GetParentAppID() || t);
             }, [t, i]),
-            d)
+            d && 10 != i?.GetAppType())
           )
             return null;
           return s.createElement(

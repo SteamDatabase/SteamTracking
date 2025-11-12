@@ -6726,7 +6726,7 @@
       const _ = () => {
         const { data: _ } = (0, _._)(_._.LANGUAGE),
           [_, __webpack_require__] = _.useState(_),
-          _ = (0, _._)(_.selectedTag, 500),
+          _ = (0, _._)(_.selectedTag, 500, 30, 60, !0),
           {
             maxResultCount: _,
             dayWeekTimestamps: _,

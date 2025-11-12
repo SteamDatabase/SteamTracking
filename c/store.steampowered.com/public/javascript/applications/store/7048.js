@@ -12429,7 +12429,7 @@
               (1 != _?.GetAppType() && 12 != _?.GetAppType()) ||
                 _(_.GetParentAppID() || _);
             }, [_, _]),
-            _)
+            _ && 10 != _?.GetAppType())
           )
             return null;
           return _.createElement(
