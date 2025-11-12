@@ -13124,9 +13124,10 @@
             color: i,
             bgcolor: a,
             children: n,
+            trailerBaseID: o,
           } = e,
-          [o, l] = (0, s.useState)(!1),
-          [c, m] = (0, R.t7)(r, et);
+          [l, c] = (0, s.useState)(!1),
+          [m, u] = (0, R.t7)(r, et);
         switch (t) {
           case He.k_TrailerAsButton:
           case He.k_TrailerAsPill:
@@ -13140,17 +13141,18 @@
                     [Je().Pill]: t == He.k_TrailerAsPill,
                     [Je().Button]: t == He.k_TrailerAsButton,
                   }),
-                  onClick: () => l(!0),
+                  onClick: () => c(!0),
                   style: { color: i, backgroundColor: a },
                 },
                 s.createElement(H.jGG, null),
                 n || (0, w.we)("#EventEmail_WatchNow"),
               ),
-              c &&
+              m &&
                 s.createElement(Ze.PE, {
-                  storeItem: c,
-                  bShowModal: o,
-                  hideModal: () => l(!1),
+                  storeItem: m,
+                  bShowModal: l,
+                  trailerBaseID: o,
+                  hideModal: () => c(!1),
                 }),
             );
           default:

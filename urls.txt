@@ -30,7 +30,6 @@ https://steamcommunity.com/public/css/community_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/friendsv2.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/friendsv2_tablet.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/globalv2.css?__TIME__&__CDN__
-https://steamcommunity.com/public/css/minigame/towerattack.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/mobile/styles_mobileconf.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/mobile/styles_profile.css?__TIME__&__CDN__
 https://steamcommunity.com/public/css/mobile/styles_steamguard.css?__TIME__&__CDN__
@@ -319,13 +318,6 @@ https://steamcommunity.com/public/javascript/login.js?__TIME__&l=english&__CDN__
 https://steamcommunity.com/public/javascript/market.js?__TIME__&l=english&__CDN__
 https://steamcommunity.com/public/javascript/market_multibuy.js?__TIME__&l=english&__CDN__
 https://steamcommunity.com/public/javascript/market_multisell.js?__TIME__&l=english&__CDN__
-https://steamcommunity.com/public/javascript/minigame/minigame.js?__TIME__&l=english&__CDN__
-https://steamcommunity.com/public/javascript/minigame/towerattack.js?__TIME__&l=english&__CDN__
-https://steamcommunity.com/public/javascript/minigame/towerattack/easing.js?__TIME__&l=english&__CDN__
-https://steamcommunity.com/public/javascript/minigame/towerattack/enemies.js?__TIME__&l=english&__CDN__
-https://steamcommunity.com/public/javascript/minigame/towerattack/network.js?__TIME__&l=english&__CDN__
-https://steamcommunity.com/public/javascript/minigame/towerattack/running.js?__TIME__&l=english&__CDN__
-https://steamcommunity.com/public/javascript/minigame/towerattack/ui.js?__TIME__&l=english&__CDN__
 https://steamcommunity.com/public/javascript/mobile/comment_utils.js?__TIME__&l=english&__CDN__
 https://steamcommunity.com/public/javascript/mobile/economy_utils.js?__TIME__&l=english&__CDN__
 https://steamcommunity.com/public/javascript/mobile/mobileconf.js?__TIME__&l=english&__CDN__

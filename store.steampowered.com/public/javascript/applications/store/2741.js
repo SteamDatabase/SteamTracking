@@ -19,10 +19,12 @@
         LineItemWrapper: "XjPmFc2t_i1DAuEXEbIX",
         LineItemCapsule: "_2Xz_WXO8PfREP4c9ZWAuNg",
         HeaderImg: "_37_1K2XQrVBwncWFXTcpMP",
+        HeaderImgBlurred: "_3hT2r7Sb_Yx9PdYSB0rjpl",
         LineItemPlaceholder: "_1_mV-2sC0r25eLrKyufPRK",
         AddRemoveLinks: "_2Agry3evdkG3gKPyhNf7Hz",
         RemoveLineItem: "_3YCgcpoCojlbS6DvkNsG2J",
         AddLineItem: "_2qvlyUCwtTBUslo1Z7-RlG",
+        VerifyLineItem: "_2HO_qGTXtEZz_EF60S6hfS",
         LineItemRightCol: "ysGS-IPPWEkwN-O5rr-0V",
         InnerLineItemCtn: "_3F0SnUeC_obtI4WyQtijAa",
         LineItemDetailsCtn: "_3GKl4T2MbvnGPvRzyXC5nQ",
@@ -1010,12 +1012,12 @@
         }
         k || !n || h || (z = g().unix(n));
         const V = g().tz.guess(),
-          Z = g().unix(k).tz(V),
-          H = !!p && V != p && g().unix(k).tz(p),
+          H = g().unix(k).tz(V),
+          Z = !!p && V != p && g().unix(k).tz(p),
           {
             fnOnInput: K,
-            fnOnInputBlur: q,
-            fnOnChange: Y,
+            fnOnInputBlur: Y,
+            fnOnChange: q,
           } = I(
             v,
             (e) => {
@@ -1084,7 +1086,7 @@
               "div",
               { className: (0, m.A)(c().InputBorder, _().TimeBlock) },
               a.createElement(i(), {
-                onChange: Y,
+                onChange: q,
                 timeFormat: !1,
                 value: null != M ? M : B,
                 isValidDate: (e) =>
@@ -1111,14 +1113,14 @@
                   ),
                   disabled: f,
                   onChange: (e) => K(e.currentTarget.value),
-                  onBlur: (e) => q(e.currentTarget.value),
+                  onBlur: (e) => Y(e.currentTarget.value),
                 },
               }),
-              !!H &&
+              !!Z &&
                 a.createElement(
                   "div",
                   { className: _().PacificTimeHint },
-                  H.format("L"),
+                  Z.format("L"),
                 ),
             ),
             a.createElement(
@@ -1142,11 +1144,11 @@
                   onBlur: (e) => J(e.currentTarget.value),
                 },
               }),
-              !!H &&
+              !!Z &&
                 a.createElement(
                   "div",
                   { className: _().PacificTimeHint },
-                  H.format("LT"),
+                  Z.format("LT"),
                 ),
             ),
             D &&
@@ -1156,13 +1158,13 @@
                 a.createElement(
                   "div",
                   { className: _().TimeZone },
-                  Z.zoneAbbr(),
+                  H.zoneAbbr(),
                 ),
-                !!H &&
+                !!Z &&
                   a.createElement(
                     "div",
                     { className: _().TimeZone },
-                    H.zoneAbbr(),
+                    Z.zoneAbbr(),
                   ),
               ),
           ),
@@ -1706,7 +1708,7 @@
       }
       function j(e) {
         const { lineItemID: t, validatedItem: n, storeItem: r } = e,
-          i = q(r),
+          i = Y(r),
           o = (0, a.t)(t),
           l = o.isPending;
         return h.createElement(
@@ -1775,7 +1777,7 @@
           },
           m = (0, a.t)(s),
           u = m.isPending || m.isSuccess,
-          d = q(n),
+          d = Y(n),
           p = t.GetIncludedAppIDsOrSelf(),
           { data: _, isLoading: E } = (0, I.Pt)(),
           C = p.filter((e) => _?.has(e)),
@@ -1783,10 +1785,11 @@
         if (E) return h.createElement(g.vF, null);
         const S = r.flags?.is_gift,
           w = C.length === p.length,
-          N = !S && C.length > 0 && !w;
-        let D = S ? "gift" : "myself";
+          N = !S && C.length > 0 && !w,
+          D = o.errors?.adult_content_restricted;
+        let b = S ? "gift" : "myself";
         return (
-          "myself" === D && w && (D = "private"),
+          "myself" === b && w && (b = "private"),
           h.createElement(
             l,
             { lineItem: r, storeItem: t, validatedItem: o },
@@ -1808,7 +1811,7 @@
                   L.p,
                   { item: n, feature: "cart-items", noImpressionTracking: !0 },
                   h.createElement("img", {
-                    className: f().HeaderImg,
+                    className: D ? f().HeaderImgBlurred : f().HeaderImg,
                     src: d,
                     alt: t.GetName(),
                   }),
@@ -1826,7 +1829,7 @@
                     t.GetName(),
                   ),
                 ),
-                t.BIsComingSoon() && h.createElement(Y, { storeItem: t }),
+                t.BIsComingSoon() && h.createElement(q, { storeItem: t }),
                 h.createElement(
                   Q,
                   { validatedItem: o },
@@ -1846,14 +1849,14 @@
                       strClassName: f().LineItemPlatforms,
                     }),
                   ),
-                  h.createElement(Z, { purchaseOption: i, validatedItem: o }),
+                  h.createElement(H, { purchaseOption: i, validatedItem: o }),
                 ),
-                h.createElement(H, {
+                h.createElement(Z, {
                   lineItem: r,
                   storeItem: t,
                   purchaseOption: i,
                   validatedItem: o,
-                  initialPurchaseOption: D,
+                  initialPurchaseOption: b,
                   fnRemoveLineItem: m.mutate,
                   accessibilityId: v,
                 }),
@@ -1869,7 +1872,7 @@
           h.createElement(g.Rz, null, e.children),
         );
       }
-      function Z(e) {
+      function H(e) {
         const { purchaseOption: t, validatedItem: n } = e;
         let a = t?.formatted_original_price,
           r = t?.formatted_final_price,
@@ -1895,7 +1898,7 @@
           )
         );
       }
-      function H(e) {
+      function Z(e) {
         const {
             lineItem: t,
             storeItem: n,
@@ -1910,7 +1913,8 @@
           N =
             y?.accountid_giftee || (w ? t.gift_info?.accountid_giftee : void 0),
           D = (0, E.ZB)() && !_?.restrict_add_additional_to_cart,
-          b = (function (e, t, n, a) {
+          b = _.errors?.adult_content_restricted,
+          T = (function (e, t, n, a) {
             const _ = (0, d.j4)(),
               f = (0, r.KV)(),
               g = (0, s.jE)(),
@@ -1963,8 +1967,8 @@
               },
             });
           })(t.packageid, t.bundleid, le(a), "cart-add-additional"),
-          T = h.useId(),
-          G = h.useId();
+          G = h.useId(),
+          A = h.useId();
         return h.createElement(
           g.UW,
           { className: f().LineItemSpaceBetween },
@@ -1990,11 +1994,11 @@
                 h.createElement(
                   v.Z,
                   {
-                    onActivate: () => !b.isPending && b.mutate(),
+                    onActivate: () => !T.isPending && T.mutate(),
                     className: f().AddLineItem,
                     title: (0, B.we)("#Cart_LineItem_Add_Tooltip"),
-                    id: T,
-                    "aria-labelledby": `${T} ${S}`,
+                    id: G,
+                    "aria-labelledby": `${G} ${S}`,
                   },
                   (0, B.we)("#Cart_Add"),
                 ),
@@ -2006,10 +2010,25 @@
                 {
                   onActivate: () => I(),
                   className: f().RemoveLineItem,
-                  id: G,
-                  "aria-labelledby": `${G} ${S}`,
+                  id: A,
+                  "aria-labelledby": `${A} ${S}`,
                 },
                 (0, B.we)("#Cart_Remove"),
+              ),
+            b &&
+              h.createElement(
+                h.Fragment,
+                null,
+                "| ",
+                h.createElement(
+                  "a",
+                  {
+                    href: `${x.TS.STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart`,
+                    className: f().VerifyLineItem,
+                  },
+                  (0, B.we)("#Cart_Verify"),
+                ),
+                " ",
               ),
           ),
         );
@@ -2031,7 +2050,7 @@
           ),
         );
       }
-      function q(e) {
+      function Y(e) {
         const t = `${x.TS.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
         if (!e) return t;
         const n = e.GetAssets();
@@ -2040,7 +2059,7 @@
           r = n.GetSmallCapsuleURL();
         return a || r || t;
       }
-      function Y(e) {
+      function q(e) {
         const { storeItem: t } = e;
         let n = (0, B.we)("#Cart_ComingSoon", t.GetFormattedSteamReleaseDate());
         return (
@@ -2830,7 +2849,7 @@
                   n.included_appids.every((t) => !e[t]))),
         );
       }
-      function Z(e) {
+      function H(e) {
         const { cart: t, validatedCart: n } = e,
           [a, r] = i.useState(void 0),
           o = (n?.cart_items || []).reduce(
@@ -2874,12 +2893,12 @@
             (0, S.we)("#Recommendations_Header"),
           ),
           c?.length > 3
-            ? i.createElement(H, {
+            ? i.createElement(Z, {
                 type: "recommended",
                 data: c,
                 isLoaded: !l.isLoading,
               })
-            : i.createElement(H, {
+            : i.createElement(Z, {
                 type: "specials",
                 data: m,
                 isLoaded: !l.isLoading,
@@ -2887,7 +2906,7 @@
           i.createElement(j, { cart: t, bMinimalDisplay: !1 }),
         );
       }
-      function H(e) {
+      function Z(e) {
         const { data: t, isLoaded: n, type: a } = e;
         return !t && n
           ? null
@@ -2895,7 +2914,7 @@
               h.Ay,
               { feature: `upsell-${a}` },
               i.createElement(
-                q,
+                Y,
                 { className: (0, y.A)(x.Specials) },
                 t
                   ?.slice(0, 3)
@@ -2917,7 +2936,7 @@
           onlyOneDiscountPct: !0,
         });
       }
-      function q(e) {
+      function Y(e) {
         const { className: t, children: n } = e;
         return i.createElement(
           d.Z,
@@ -2929,7 +2948,7 @@
           n,
         );
       }
-      var Y = n(99637),
+      var q = n(99637),
         Q = n(14771),
         J = n(78327),
         X = n(83934),
@@ -2990,7 +3009,7 @@
           });
         {
           const e = () => ne(t);
-          return i.createElement(Y.K, {
+          return i.createElement(q.K, {
             bShowTimeZone: !0,
             className: $().GiftDatePicker,
             nEarliestTime: Date.now() / 1e3,
@@ -3712,11 +3731,11 @@
             )
           : null;
       }
-      var Ze = n(79443),
-        He = n(30709),
+      var He = n(79443),
+        Ze = n(30709),
         Ke = n(70343),
-        qe = n(22837),
-        Ye = n(81393),
+        Ye = n(22837),
+        qe = n(81393),
         Qe = n(43527),
         Je = n(50829),
         Xe = n(97232);
@@ -3824,7 +3843,7 @@
           i.createElement(g.CB, {
             onCancel: n,
             onOK: () => {
-              n(), s(c || qe.kF);
+              n(), s(c || Ye.kF);
             },
             strOKText: (0, S.we)("#Button_Done"),
           }),
@@ -4170,9 +4189,9 @@
           l = (0, r.jY)(),
           s = (0, o.W6)(),
           [c, m] = (0, ft.Ez)(),
-          u = (0, He.j4)();
-        let d = qe.kF;
-        (0, Ze.kx)(u) && (d = u.gid);
+          u = (0, Ze.j4)();
+        let d = Ye.kF;
+        (0, He.kx)(u) && (d = u.gid);
         const p = (function (e) {
             return "login" == e
               ? (0, S.we)("#Cart_ContinueButton_Payment")
@@ -4180,7 +4199,7 @@
                 ? (0, S.we)("#Cart_ContinueButton_Gifts")
                 : "checkout" == e
                   ? (0, S.we)("#Cart_ContinueButton_Payment")
-                  : ((0, Ye.z_)(e, "unhandled step"), "");
+                  : ((0, qe.z_)(e, "unhandled step"), "");
           })(n),
           _ = (0, y.A)(
             ut().CartSummaryBtn,
@@ -4195,7 +4214,7 @@
             onClick: () => {
               switch (n) {
                 case "login":
-                  if (d != qe.kF && a) {
+                  if (d != Ye.kF && a) {
                     const e =
                       w.TS.STORE_CHECKOUT_BASE_URL +
                       "checkout?purchasetype=self&cart=" +
@@ -4210,7 +4229,7 @@
                   location.href = l;
                   break;
                 default:
-                  (0, Ye.z_)(n, "unhandled step");
+                  (0, qe.z_)(n, "unhandled step");
               }
             },
           },
@@ -4379,7 +4398,7 @@
               i.createElement(
                 E.tH,
                 null,
-                i.createElement(Z, { cart: e, validatedCart: t }),
+                i.createElement(H, { cart: e, validatedCart: t }),
               ),
             ),
         );

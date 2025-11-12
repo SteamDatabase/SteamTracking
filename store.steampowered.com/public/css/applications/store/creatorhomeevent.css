@@ -1534,7 +1534,7 @@ p a:hover {
   position: relative;
   align-items: center;
   width: fit-content;
-  justify-self: center;
+  display: inline-block;
   background: #fff;
   max-height: 32px;
   box-shadow: none;
@@ -1637,7 +1637,7 @@ p a:hover {
 .BwHJdoHlv8wy5OypqL_b7 {
   position: relative;
   width: fit-content;
-  justify-self: center;
+  display: inline-block;
   background: #fff;
   max-height: 32px;
   box-shadow: none;

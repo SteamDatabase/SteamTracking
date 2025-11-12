@@ -451,11 +451,20 @@
         const {
             storeItem: _,
             bShowModal: __webpack_require__,
+            trailerBaseID: _,
             hideModal: _,
           } = _,
           _ = (0, _._)(),
-          _ = _?.GetAllTrailers()?.GetHighlightTrailers(_),
-          _ = _ && _.length > 0 ? _[0] : void 0,
+          _ = (0, _.useMemo)(() => {
+            if (_) {
+              const _ = _?.GetAllTrailers()
+                ?.GetAllTrailers(_)
+                .find((_) => _.GetTrailerID() == _);
+              if (_) return _;
+            }
+            const _ = _?.GetAllTrailers()?.GetHighlightTrailers(_);
+            return _ && _.length > 0 ? _[0] : void 0;
+          }, [_, _, _]),
           _ = _.useId(),
           _ = _.useId();
         if (!_) return null;

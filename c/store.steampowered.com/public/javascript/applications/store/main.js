@@ -70089,12 +70089,14 @@
         AppStorePage: () => "/app/:appid(\\d+)/:gamename?",
         PackageStorePage: () => "/sub/:subid(\\d+)/:packagename?",
         BundleStorePage: () => "/bundle/:bundleid(\\d+)/:bundlename?",
-        SaleLandingPage: () => "/:prefix(sale|deckverified)/:salePageName",
+        SaleLandingPage: () =>
+          "/:prefix(sale|deckverified|hardware)/:salePageName",
         RemotePlay: () => "/remoteplay_hub/",
         VRHardware: () => "/vrhardware/",
         RemotePlayTogether: () => "/together/",
         SteamDeck: () => "/steamdeck/",
         SteamDeckDock: () => "/steamdeckdock/",
+        SteamHardware: () => "/hardware/",
         SteamOS: () => "/steamos/:catchAll*",
         GameRecording: () => "/gamerecording/",
         CreatorSaleLandingPage: () =>
@@ -81653,6 +81655,7 @@
                             _._.SteamOS(),
                             _._.SubscriptionPlanLandingPage(),
                             _._.GameRecording(),
+                            _._.SteamHardware(),
                           ],
                           render: (_) => _.createElement(_, null),
                         }),

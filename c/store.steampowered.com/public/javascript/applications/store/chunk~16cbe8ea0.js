@@ -14531,6 +14531,7 @@
             color: _,
             bgcolor: _,
             children: _,
+            trailerBaseID: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _._)(__webpack_require__, _);
@@ -14560,6 +14561,7 @@
                 _.createElement(_._, {
                   storeItem: _,
                   bShowModal: _,
+                  trailerBaseID: _,
                   hideModal: () => _(!1),
                 }),
             );

@@ -1522,6 +1522,11 @@ html.responsive.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
 ._2Xz_WXO8PfREP4c9ZWAuNg ._37_1K2XQrVBwncWFXTcpMP {
   max-width: 100%;
 }
+._2Xz_WXO8PfREP4c9ZWAuNg ._3hT2r7Sb_Yx9PdYSB0rjpl {
+  max-width: 100%;
+  filter: blur(30px);
+  clip-path: inset(0);
+}
 @media screen and (max-width: 600px) {
   ._2Xz_WXO8PfREP4c9ZWAuNg {
     flex-direction: column;
@@ -1538,15 +1543,18 @@ html.responsive.tablet ._2NgkNEEvdNAueuTkHH4V0S a img {
   font-size: 12px;
 }
 ._3YCgcpoCojlbS6DvkNsG2J,
-._2qvlyUCwtTBUslo1Z7-RlG {
+._2qvlyUCwtTBUslo1Z7-RlG,
+._2HO_qGTXtEZz_EF60S6hfS {
   color: #606f7f;
   text-decoration: underline;
   cursor: pointer;
   font-size: 12px;
 }
 ._3YCgcpoCojlbS6DvkNsG2J:hover,
-._2qvlyUCwtTBUslo1Z7-RlG:hover {
+._2qvlyUCwtTBUslo1Z7-RlG:hover,
+._2HO_qGTXtEZz_EF60S6hfS:hover {
   color: #fff;
+  text-decoration: underline;
 }
 .ysGS-IPPWEkwN-O5rr-0V {
   display: flex;

@@ -17,10 +17,12 @@
         LineItemWrapper: "XjPmFc2t_i1DAuEXEbIX",
         LineItemCapsule: "_2Xz_WXO8PfREP4c9ZWAuNg",
         HeaderImg: "_37_1K2XQrVBwncWFXTcpMP",
+        HeaderImgBlurred: "_3hT2r7Sb_Yx9PdYSB0rjpl",
         LineItemPlaceholder: "_1_mV-2sC0r25eLrKyufPRK",
         AddRemoveLinks: "_2Agry3evdkG3gKPyhNf7Hz",
         RemoveLineItem: "_3YCgcpoCojlbS6DvkNsG2J",
         AddLineItem: "_2qvlyUCwtTBUslo1Z7-RlG",
+        VerifyLineItem: "_2HO_qGTXtEZz_EF60S6hfS",
         LineItemRightCol: "ysGS-IPPWEkwN-O5rr-0V",
         InnerLineItemCtn: "_3F0SnUeC_obtI4WyQtijAa",
         LineItemDetailsCtn: "_3GKl4T2MbvnGPvRzyXC5nQ",
@@ -2050,7 +2052,8 @@
         if (_) return _.createElement(_._, null);
         const _ = _.flags?.is_gift,
           _ = _.length === _.length,
-          _ = !_ && _.length > 0 && !_;
+          _ = !_ && _.length > 0 && !_,
+          _ = _.errors?.adult_content_restricted;
         let _ = _ ? "gift" : "myself";
         return (
           "myself" === _ && _ && (_ = "private"),
@@ -2083,7 +2086,7 @@
                     noImpressionTracking: !0,
                   },
                   _.createElement("img", {
-                    className: _().HeaderImg,
+                    className: _ ? _().HeaderImgBlurred : _().HeaderImg,
                     src: _,
                     alt: _.GetName(),
                   }),
@@ -2217,6 +2220,7 @@
           _ =
             _?.accountid_giftee || (_ ? _.gift_info?.accountid_giftee : void 0),
           _ = (0, _._)() && !_?.restrict_add_additional_to_cart,
+          _ = _.errors?.adult_content_restricted,
           _ = (function (_, _, _, _) {
             const _ = (0, _._)(),
               _ = (0, _._)(),
@@ -2334,6 +2338,21 @@
                   "aria-labelledby": `${_} ${_}`,
                 },
                 (0, _._)("#Cart_Remove"),
+              ),
+            _ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                "| ",
+                _.createElement(
+                  "a",
+                  {
+                    href: `${_._.STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart`,
+                    className: _().VerifyLineItem,
+                  },
+                  (0, _._)("#Cart_Verify"),
+                ),
+                " ",
               ),
           ),
         );
