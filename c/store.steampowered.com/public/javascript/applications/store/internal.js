@@ -546,6 +546,68 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        static s_PersonalCalendarStore;
+        static Get() {
+          return (
+            _.s_PersonalCalendarStore ||
+              ((_.s_PersonalCalendarStore = new _()),
+              _.s_PersonalCalendarStore.Init(),
+              (window.g_SubscriptionStore = _.s_PersonalCalendarStore)),
+            _.s_PersonalCalendarStore
+          );
+        }
+        async GetCalendarRecommendations(_, _, _, _, _) {
+          return _._.fetchQuery(_(_, _, _, _, _));
+        }
+        Init() {}
+      }
+      function _(_, _, _, _, _) {
+        return (0, _._)(_(_, _, _, _, _));
+      }
+      function _(_, _, _, _, _) {
+        return {
+          queryKey: ["personalcalendar", _, _, _, _, _],
+          queryFn: async () => {
+            const _ = {
+                tag: _,
+                daysbackward: _,
+                daysforward: _,
+                weekaligned: _ ? 1 : 0,
+                maxresults: _,
+                sessionid: _._.SESSIONID,
+              },
+              _ = await _().get(
+                `${_._.STORE_BASE_URL}personalcalendar/getrecommendations`,
+                {
+                  params: _,
+                  timeout: 2e4,
+                },
+              );
+            return {
+              appReleasesByDay: _.data.appReleasesByDay,
+              dayWeekTimestamps: _.data.dayWeekTimestamps,
+              maxResultCount: _.data.maxResultCount,
+              userTags: _.data.userTags,
+              usesWishlists: _.data.usesWishlists,
+              resultMessage: _.data.resultMessage,
+            };
+          },
+          placeholderData: (_) => _,
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -5353,11 +5415,13 @@
         },
       );
       var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       (0, _.createContext)(null);
       function _(_) {
         const { gutter: _ = 0 } = _;
         return [
           (0, _._)(2),
+          (0, _._)(),
           (0, _._)(),
           (0, _._)({
             apply: (_) => {
@@ -5765,17 +5829,25 @@
       var _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
-        const { options: _, ...__webpack_require__ } = _;
+        const {
+          options: _,
+          getOptionLabel: __webpack_require__ = (_) => _,
+          ..._
+        } = _;
         return _.createElement(
           _.Root,
           {
-            ...__webpack_require__,
+            ..._,
           },
           _.map((_) =>
-            _.createElement(_.Item, {
-              value: _,
-              key: _,
-            }),
+            _.createElement(
+              _.Item,
+              {
+                value: _,
+                key: _,
+              },
+              __webpack_require__(_),
+            ),
           ),
         );
       }
@@ -5848,6 +5920,16 @@
                   return _[_] === _ && delete _[_], _;
                 }),
               [],
+            ),
+            _ = (0, _.useMemo)(
+              () => ({
+                value: _,
+                onValueChange: _,
+                register: _,
+                unregister: _,
+                radius: __webpack_require__,
+              }),
+              [_, _, _, _, __webpack_require__],
             );
           return _.createElement(
             _,
@@ -5871,15 +5953,19 @@
                     _ = -1;
                 }
                 if (_) {
-                  const _ = _[_],
-                    _ = Array.from(Object.values(_)).sort(_),
-                    _ = _.findIndex((_) => _ === _);
-                  (0, _._)(
-                    "number" == typeof _,
-                    "Could not find current segmented value position",
-                  );
-                  const _ = _ + _,
-                    _ = _[_ < 0 ? _.length + _ : _ % _.length],
+                  const _ = Array.from(Object.values(_)).sort(_);
+                  let _;
+                  if (null === _) _ = _ > 0 ? 0 : _.length - 1;
+                  else {
+                    const _ = _[_],
+                      _ = __webpack_require__.findIndex((_) => _ === _);
+                    (0, _._)(
+                      "number" == typeof _,
+                      "Could not find current segmented value position",
+                    ),
+                      (_ = _ + _);
+                  }
+                  const _ = _[_ < 0 ? _.length + _ : _ % _.length],
                     _ = Object.keys(_).find((_) => _[_] === _);
                   "string" != typeof _
                     ? console.error("Could not find next segmeneted value")
@@ -5890,16 +5976,7 @@
             _.createElement(
               _.Provider,
               {
-                value: (0, _.useMemo)(
-                  () => ({
-                    value: _,
-                    onValueChange: _,
-                    register: _,
-                    unregister: _,
-                    radius: __webpack_require__,
-                  }),
-                  [_, _, _, _, __webpack_require__],
-                ),
+                value: _,
               },
               _.createElement(
                 "div",
@@ -5907,16 +5984,15 @@
                   className: _.SegmentedControl,
                 },
                 _,
-                _.createElement(_, {
-                  radius: __webpack_require__,
-                }),
+                null !== _ &&
+                  _.createElement(_, {
+                    radius: __webpack_require__,
+                  }),
               ),
             ),
           );
         });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6650,39 +6726,7 @@
       const _ = () => {
         const { data: _ } = (0, _._)(_._.LANGUAGE),
           [_, __webpack_require__] = _.useState(_),
-          _ = (0, _._)({
-            queryKey: ["personalcalendar", _.selectedTag],
-            queryFn: async () => {
-              const _ = {
-                  tag: _.selectedTag,
-                  sessionid: _._.SESSIONID,
-                },
-                _ = await _().get(
-                  `${_._.STORE_BASE_URL}personalcalendar/getrecommendations`,
-                  {
-                    params: _,
-                    timeout: 2e4,
-                  },
-                ),
-                {
-                  appReleasesByDay: _,
-                  dayWeekTimestamps: _,
-                  maxResultCount: _,
-                  userTags: _,
-                  usesWishlists: _,
-                  result: _,
-                } = _.data;
-              return {
-                appReleasesByDay: _,
-                dayWeekTimestamps: _,
-                maxResultCount: _,
-                userTags: _,
-                usesWishlists: _,
-                resultMessage: _,
-              };
-            },
-            placeholderData: (_) => _,
-          }),
+          _ = (0, _._)(_.selectedTag, 500),
           {
             maxResultCount: _,
             dayWeekTimestamps: _,

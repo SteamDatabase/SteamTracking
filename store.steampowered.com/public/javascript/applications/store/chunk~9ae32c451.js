@@ -824,7 +824,7 @@
       }
     },
     77021: (e, t, n) => {
-      n.d(t, { PM: () => m, TU: () => u, lM: () => d });
+      n.d(t, { PM: () => h, TU: () => u, lM: () => m, ty: () => d });
       var o = n(34629),
         s = n(90626),
         i = n(78327),
@@ -869,9 +869,9 @@
               ));
         }
         BIsConnected() {
-          return !!window.opener && this.m_eventModelJson;
+          return !(!window.opener || !this.m_eventModelJson);
         }
-        GetEventModel() {
+        GetEventModelJson() {
           return this.m_eventModelJson;
         }
         GetMouseOverSectionID() {
@@ -983,14 +983,17 @@
             }
         }
       }
-      function d(e) {
+      function d() {
+        return (0, c.q3)(() => u.Get().BIsConnected());
+      }
+      function m(e) {
         const t = (0, c.q3)(() => u.Get().GetJumpToSectionID());
         s.useEffect(() => {
           if (!u.Get().BIsConnected() || !t) return;
           e(t) && u.Get().ClearJumpToSectionID();
         }, [e, t]);
       }
-      function m(e) {
+      function h(e) {
         const t = (0, c.q3)(() => u.Get().GetJumpToSubsectionIDs());
         s.useEffect(() => {
           if (!u.Get().BIsConnected() || !t) return;

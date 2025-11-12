@@ -129,6 +129,8 @@
         PollOptions: "_1-_aGrJzdFf8uYUfDKEn30",
         PollOption: "_3hNd0q0tYO12nPDCPsT8sm",
         Selected: "_3Nv8BLF6dRk932f5NhyNIH",
+        PollVoteIcon: "ziFphpM2Ie-orQ5ezpQqT",
+        PollStatus: "_3NDl2Pml7Uvse14r9SWJTD",
       };
     },
     39978: (e) => {
@@ -10788,6 +10790,20 @@
               { className: kt().PollContainer },
               s.createElement("div", { className: kt().PollQuestion }, i),
               s.createElement("div", { className: kt().PollOptions }, n),
+              s.createElement(
+                "div",
+                { className: kt().PollStatus },
+                s.createElement(
+                  "div",
+                  null,
+                  (0, v.PP)("#UserPolls_status_N_Votes", "XXX"),
+                ),
+                s.createElement(
+                  "div",
+                  null,
+                  (0, v.PP)("#UserPolls_status_N_TimeRemaining", "X Days"),
+                ),
+              ),
             ),
           )
         );
@@ -10795,7 +10811,14 @@
       function xt(e) {
         const { pollOptionDef: t, onClick: a, lang: r } = e,
           [n] = (0, _t.q3)(() => [v.NT.GetWithFallback(t.localized_option, r)]);
-        return s.createElement("div", { className: kt().PollOption }, n);
+        return s.createElement(
+          "div",
+          {
+            className: (0, U.A)({ [kt().PollOption]: !0, [kt().Selected]: !1 }),
+          },
+          s.createElement("div", { className: kt().PollVoteIcon }),
+          s.createElement("span", null, n),
+        );
       }
       let Lt = null;
       function Yt() {
@@ -17457,32 +17480,35 @@
         dr = a(1078),
         _r = a(44533),
         pr = a.n(_r);
-      const gr = r.forwardRef(function (
-        {
-          imgURL: e,
-          glow: t,
-          pauseAnimation: a,
-          hidden: n,
-          alt: i,
-          className: s,
-        },
-        l,
-      ) {
-        const [o, m] = r.useState(!1);
-        if (n)
-          return r.createElement("div", { className: pr().HiddenLabel }, "?");
-        const c = o && t;
+      function gr(e) {
+        const {
+            imgURL: t,
+            glow: a,
+            pauseAnimation: n,
+            hidden: i,
+            alt: s,
+            className: l,
+            ...o
+          } = e,
+          [m, c] = r.useState(!1);
+        if (i)
+          return r.createElement(
+            "div",
+            { className: pr().HiddenLabel, ...o },
+            "?",
+          );
+        const u = m && a;
         return r.createElement(
           "div",
           {
-            ref: l,
             className: (0, me.A)(
               pr().AchievementIconWrapper,
-              s,
-              a && pr().RareAchievementNoAnimation,
+              l,
+              n && pr().RareAchievementNoAnimation,
             ),
+            ...o,
           },
-          c &&
+          u &&
             r.createElement(
               "div",
               { className: pr().RareAchievementIconGlowContainerRoot },
@@ -17495,14 +17521,14 @@
               ),
             ),
           r.createElement("img", {
-            className: (0, me.A)(pr().Icon, c && pr().IconGlow),
-            src: e,
+            className: (0, me.A)(pr().Icon, u && pr().IconGlow),
+            src: t,
             loading: "lazy",
-            alt: i,
-            onLoad: () => m(!0),
+            alt: s,
+            onLoad: () => c(!0),
           }),
         );
-      });
+      }
       var yr = a(7077),
         hr = a.n(yr),
         fr = a(36626);

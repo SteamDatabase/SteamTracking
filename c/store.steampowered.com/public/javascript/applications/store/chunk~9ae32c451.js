@@ -881,6 +881,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -930,9 +931,9 @@
               ));
         }
         BIsConnected() {
-          return !!window.opener && this.m_eventModelJson;
+          return !(!window.opener || !this.m_eventModelJson);
         }
-        GetEventModel() {
+        GetEventModelJson() {
           return this.m_eventModelJson;
         }
         GetMouseOverSectionID() {
@@ -1043,6 +1044,9 @@
                 }
             }
         }
+      }
+      function _() {
+        return (0, _._)(() => _.Get().BIsConnected());
       }
       function _(_) {
         const _ = (0, _._)(() => _.Get().GetJumpToSectionID());

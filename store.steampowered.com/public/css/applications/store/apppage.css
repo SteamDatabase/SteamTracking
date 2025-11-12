@@ -1748,6 +1748,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._1dm-6uzq_x5Gqo421G3a1r {
   position: relative;
+  align-items: center;
   width: fit-content;
   justify-self: center;
   background: #fff;
@@ -1773,6 +1774,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   width: fit-content;
   justify-self: center;
   background: #fff;
+  max-height: 32px;
   box-shadow: none;
   border-radius: 28px;
   padding: 6px;
@@ -1869,6 +1871,9 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
     min-width: 250px;
   }
 }
+.BasicUI ._292IWiCTro5jiTmIxiDfyc {
+  min-width: 250px;
+}
 ._292IWiCTro5jiTmIxiDfyc._1mQ-hKJYGkL9gG76spf6uy {
   position: relative;
 }
@@ -1878,15 +1883,21 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   border-radius: 3px;
 }
-@media screen and (min-width: 910px) {
+@media screen and (max-width: 910px) {
   ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
     width: calc(200% + 12px);
   }
+}
+.BasicUI ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
+  width: calc(200% + 12px);
 }
 @media screen and (max-width: 910px) {
   ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U .TwoWidthSideInfo {
     display: none;
   }
+}
+.BasicUI ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U .TwoWidthSideInfo {
+  display: none;
 }
 ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U a {
   z-index: 1;
@@ -1906,20 +1917,35 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   width: fit-content;
   justify-self: center;
   background: #fff;
+  max-height: 32px;
   box-shadow: none;
   border-radius: 28px;
-  padding: 6px;
+  padding: 6px 12px;
   color: #0e141b;
   right: unset;
   transition: all .2s ease-out;
 }
-.BwHJdoHlv8wy5OypqL_b7:hover {
-  box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
-}
-.BwHJdoHlv8wy5OypqL_b7:hover .FollowGameButton {
+.BwHJdoHlv8wy5OypqL_b7 .FollowButton {
   text-shadow: none;
   color: #0e141b;
+  background: #fff;
+  box-shadow: none;
   font-weight: 600;
+}
+.BwHJdoHlv8wy5OypqL_b7 .FollowBtnText {
+  font-size: 14px;
+}
+.BwHJdoHlv8wy5OypqL_b7 .SVGIcon_Check {
+  stroke: #000;
+}
+.BwHJdoHlv8wy5OypqL_b7:hover .FollowButton {
+  background: none;
+  box-shadow: none;
+  color: #0e141b;
+}
+.BwHJdoHlv8wy5OypqL_b7._2EcgCb9lHfl7I_MlirYLZL {
+  box-shadow: 0 6px 12px rgba(11, 27, 41, 0.2);
+  transform: translateY(-1px);
 }
 ._2fynndXXlBKZiRaoG9GuDP {
   display: flex;

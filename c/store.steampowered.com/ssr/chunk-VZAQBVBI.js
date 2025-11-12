@@ -5,8 +5,8 @@ import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 var _ = _(_());
@@ -2180,6 +2180,11 @@ var _ = class _ extends _.Message {
                 _: _.readInt32,
                 pbr: _.readPackedInt32,
                 _: _.writeRepeatedInt32,
+              },
+              adult_content_restricted: {
+                _: 12,
+                _: _.readBool,
+                _: _.writeBool,
               },
             },
           }),

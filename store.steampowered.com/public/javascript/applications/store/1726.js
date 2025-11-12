@@ -494,8 +494,8 @@
       "use strict";
       a.d(t, {
         FZ: () => me,
-        A4: () => G,
-        iy: () => C,
+        A4: () => C,
+        iy: () => G,
         ZA: () => O,
         Dn: () => x,
         Ay: () => ae,
@@ -583,7 +583,7 @@
       );
       var S = a(61336);
       const A = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
-      function C(e) {
+      function G(e) {
         return (
           A.some((t) => t == e.GetEventType()) &&
           !e.BHasTag("steam_award_nomination_request") &&
@@ -591,7 +591,7 @@
         );
       }
       const T = [20, 31, 34];
-      function G(e) {
+      function C(e) {
         return !T.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
       }
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
@@ -667,7 +667,8 @@
           "items" == e ||
           "trailercarousel" == e ||
           "crosspromotesalepage" == e ||
-          "creator_list" == e
+          "creator_list" == e ||
+          "calendar" == e
         );
       }
       function ae(e) {
@@ -3276,7 +3277,7 @@
       function n(e) {
         return (
           e.indexOf("?") > 0 && (e = e.split("?")[0]),
-          e.endsWith(".jpg")
+          e.endsWith(".jpg") || e.endsWith(".jpeg")
             ? 1
             : e.endsWith(".png")
               ? 3
@@ -3298,7 +3299,7 @@
     },
     6379: (e, t, a) => {
       "use strict";
-      a.d(t, { ZQ: () => S, O3: () => A, MX: () => C, dB: () => T });
+      a.d(t, { ZQ: () => S, O3: () => A, MX: () => G, dB: () => T });
       var n = a(34629),
         i = a(41735),
         s = a.n(i),
@@ -4447,7 +4448,7 @@
         (0, n.Cg)([f.oI], S.prototype, "SavePartnerEventSaleAssets", null);
       const A = new S();
       window.g_PartnerEventStore = A;
-      const C = new S(!0);
+      const G = new S(!0);
       function T(e, t) {
         const [a, n] = (0, y.useState)(() => A.GetClanEventModel(t)),
           i = (0, y.useMemo)(() => d.b.InitFromClanID(e), [e]);
@@ -4467,7 +4468,7 @@
           a
         );
       }
-      window.g_PartnerEventSummaryStore = C;
+      window.g_PartnerEventSummaryStore = G;
     },
     55563: (e, t, a) => {
       "use strict";
@@ -4489,7 +4490,7 @@
       var n = a(3577);
       function i(e) {
         const t = e.toLowerCase();
-        return t.endsWith(".jpg")
+        return t.endsWith(".jpg") || t.endsWith(".jpeg")
           ? "image/jpeg"
           : t.endsWith(".png")
             ? "image/png"
@@ -4592,13 +4593,13 @@
       a.d(t, {
         Bw: () => A,
         EX: () => f,
-        Hx: () => G,
+        Hx: () => C,
         JP: () => y,
         LJ: () => b,
         OG: () => T,
         PH: () => n,
         T7: () => I,
-        qT: () => C,
+        qT: () => G,
         tj: () => D,
         yh: () => S,
       });
@@ -4643,29 +4644,31 @@
             return t?.[1];
           })(window.location.href),
           s = a && "news" == i,
-          r = "community" === (0, c.yK)(),
-          o = t.appid ? "games" : "groups",
-          d =
-            r &&
-            o == i &&
+          r = 36 == t.GetEventType(),
+          o = "community" === (0, c.yK)(),
+          d = t.appid ? "games" : "groups",
+          m =
+            o &&
+            d == i &&
             ((t.appid && t.appid === c.UF.APPID) ||
               (!t.appid &&
                 t.clanSteamID.GetAccountID() === c.UF.CLANACCOUNTID));
         switch (e) {
           case n.k_eView:
-            return d || s;
+            return m || s;
           case n.k_eCommunityView:
           case n.k_eCommunityEdit:
           case n.k_eCommunityEditBroadcast:
-          case n.k_eCommunityAdminPage:
           case n.k_eCommunityPublish:
           case n.k_eCommunityMigrate:
           case n.k_eCommunityPreview:
           case n.k_eCommunityPreviewSale:
           case n.k_eCommunityAnnouncementHub:
-            return d;
+            return m;
+          case n.k_eCommunityAdminPage:
+            return !r && m;
           case n.k_eViewWebSiteHub:
-            return d || s;
+            return m || s;
           case n.k_eStoreView:
           case n.k_eStoreNewsHub:
           case n.k_eStoreOwnerPage:
@@ -4726,7 +4729,8 @@
             e.BIsOGGEvent() &&
             e.appid &&
             t &&
-            e.BHasSaleUpdateLandingPageVanity();
+            e.BHasSaleUpdateLandingPageVanity(),
+          g = 36 == e.GetEventType();
         switch (a) {
           case n.k_eCommunityPublish:
             return (
@@ -4753,16 +4757,18 @@
           case n.k_eCommunityMigrate:
             return m + "partnerevents/migrate_announcement/" + h;
           case n.k_eCommunityPreview:
-            return (
-              m +
-              (e.bOldAnnouncement
-                ? "partnerevents/preview_old_announcement/" + h
-                : "partnerevents/preview/" + u)
-            );
+            return g
+              ? m + "partnerevents/previewsale/" + u
+              : m +
+                  (e.bOldAnnouncement
+                    ? "partnerevents/preview_old_announcement/" + h
+                    : "partnerevents/preview/" + u);
           case n.k_eCommunityPreviewSale:
             return m + "partnerevents/previewsale/" + u;
           case n.k_eCommunityAdminPage:
-            return m + "partnerevents";
+            return g
+              ? `${d}curator/${e.clanSteamID.GetAccountID()}/admin/creatorhome_link`
+              : m + "partnerevents";
           case n.k_eCommunityAnnouncementHub:
             return m + "announcements";
           case n.k_eStoreNewsHub:
@@ -4783,11 +4789,15 @@
                 ? `${d}charts/topnewreleases/${e.jsondata.sale_vanity_id}`
                 : _
                   ? `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`
-                  : d +
-                    (e.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                      ? "sale/"
-                      : "curator/" + e.clanSteamID.GetAccountID() + "/sale/") +
-                    e.jsondata.sale_vanity_id
+                  : g
+                    ? `${d}curator/${e.clanSteamID.GetAccountID()}`
+                    : d +
+                      (e.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
+                        ? "sale/"
+                        : "curator/" +
+                          e.clanSteamID.GetAccountID() +
+                          "/sale/") +
+                      e.jsondata.sale_vanity_id
               : d;
           case n.k_eCommunityView:
             return m + "announcements/detail/" + h;
@@ -4796,6 +4806,7 @@
               return `${c.TS.STORE_BASE_URL}meetsteam/${u}`;
             if (_)
               return `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`;
+            if (g) return `${d}curator/${e.clanSteamID.GetAccountID()}`;
             return `${d}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${h}` : `view/${u}`}`;
           case n.k_eStoreUsersNewsHub:
             return `${d}news/`;
@@ -4810,7 +4821,7 @@
           "forceAbsolute" === a || !v(t, e) ? "absolute" : "relative",
         );
       }
-      function C(e, t, a, n) {
+      function G(e, t, a, n) {
         return S(
           e,
           t,
@@ -4819,14 +4830,17 @@
         );
       }
       function T(e) {
-        const { eventModel: t, route: a } = e,
-          n = v(a, t),
-          r = w(t, a, n ? "relative" : "absolute");
-        return n
-          ? i.createElement(s.rd, { push: !0, to: r })
-          : (window.open(r), null);
+        const { eventModel: t, route: a, bPopup: n = !0 } = e,
+          r = v(a, t),
+          o = w(t, a, r ? "relative" : "absolute");
+        return (
+          i.useEffect(() => {
+            n ? window.open(o) : window.location.assign(o);
+          }, [n, o]),
+          r ? i.createElement(s.rd, { push: !0, to: o }) : null
+        );
       }
-      function G(e, t, a) {
+      function C(e, t, a) {
         const n = E(e, t, !1);
         return "admin" === a ? n + "partnerevents" : "";
       }

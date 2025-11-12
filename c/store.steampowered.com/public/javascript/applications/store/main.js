@@ -816,7 +816,6 @@
         OffIndicator: "w0I94_DnBuP6_sAy2jJOL",
         IconImage: "_2RY897Hy2yhwXPKZZIMbVc",
         RightColumnContainer: "_30-E9De2BTSA_LQAluUDUI",
-        EventPublishButton: "_3nIAe51MkJS4ZGO9CQ6xks",
         FloatRight: "_1bzHf_n9CdWgjfVlmRX68A",
         TTip: "_2aWukx6Wd2nw_kXZ1FP2NP",
         ValveSupportOnly: "wC6-UDN4iQob1NcD0Rpty",
@@ -9837,6 +9836,11 @@
                     _: _._.readInt32,
                     pbr: _._.readPackedInt32,
                     _: _._.writeRepeatedInt32,
+                  },
+                  adult_content_restricted: {
+                    _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -32559,7 +32563,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.hubcategoryid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [6, 7, 8, 9], null);
         }
         static sm_m;
         static sm_mbf;
@@ -32593,6 +32597,38 @@
                     _: 5,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  replaces_tags: {
+                    _: 6,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  must_have_tags: {
+                    _: 7,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  any_one_of_tags: {
+                    _: 8,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  must_not_have_tags: {
+                    _: 9,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
                   },
                 },
               }),
@@ -35716,24 +35752,25 @@
         let _ = _?.parentElement;
         for (; _; ) {
           if (_(_)) {
-            if (!_ || "x" == _) {
-              const _ = window.getComputedStyle(_);
-              if (
-                "scroll" == _.overflowX ||
-                "auto" == _.overflowX ||
-                "fixed" == _.position
+            const _ = window.getComputedStyle(_);
+            if (
+              !(
+                (_ && "x" != _) ||
+                ("scroll" != _.overflowX &&
+                  "auto" != _.overflowX &&
+                  "fixed" != _.position)
               )
-                break;
-            }
-            if (!_ || "y" == _) {
-              const _ = window.getComputedStyle(_);
-              if (
-                "scroll" == _.overflowY ||
-                "auto" == _.overflowY ||
-                "fixed" == _.position
+            )
+              break;
+            if (
+              !(
+                (_ && "y" != _) ||
+                ("scroll" != _.overflowY &&
+                  "auto" != _.overflowY &&
+                  "fixed" != _.position)
               )
-                break;
-            }
+            )
+              break;
           }
           _ = _.parentElement;
         }
@@ -35842,7 +35879,13 @@
           _,
           {
             onMouseEnter: _.useCallback(() => _(!0), []),
-            onMouseLeave: _.useCallback(() => _(!1), []),
+            onMouseLeave: _.useCallback(
+              () =>
+                window.sessionStorage &&
+                "true" != window.sessionStorage.getItem("DEBUG_StickyHovers") &&
+                _(!1),
+              [],
+            ),
           },
         ];
       }
@@ -36022,7 +36065,7 @@
             null != this.fnLatestCallback &&
               (this.fnLatestCallback(),
               (this.fnLatestCallback = null),
-              (this.flLastExecutionTimeMs = Date.now())),
+              (this.flLastExecutionTimeMs = performance.now())),
               window.clearTimeout(this.nTimeoutHandle),
               (this.nTimeoutHandle = 0);
           },
@@ -36036,7 +36079,7 @@
             (_) => {
               const _ = _.current;
               _.fnLatestCallback = _;
-              const _ = Date.now() - _.flLastExecutionTimeMs,
+              const _ = performance.now() - _.flLastExecutionTimeMs,
                 _ = Math.max(_ - _, 0);
               window.clearTimeout(_.nTimeoutHandle),
                 (_.nTimeoutHandle = window.setTimeout(
@@ -45122,11 +45165,12 @@
             _.matches(":dir(rtl)") &&
               ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
             let {
-              nLeft: _,
-              nTop: _,
-              nOverflow: _,
-              nLateralOverflow: _,
-            } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+                nLeft: _,
+                nTop: _,
+                nOverflow: _,
+                nLateralOverflow: _,
+              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight),
+              _ = _;
             if (_ > (_ ?? 10) && !_) {
               const _ = (function (_) {
                   switch (_) {
@@ -60084,12 +60128,14 @@
                 return _ instanceof _._
                   ? _.createElement(_, {
                       ..._,
+                      key: _.key,
                       modal: _,
                       Component: _ ?? _,
                     })
                   : _ instanceof _._
                     ? _.createElement(_, {
                         ..._,
+                        key: _.key,
                         modal: _,
                         bUseDialogElement: _,
                       })
@@ -60420,6 +60466,7 @@
             onCancel: _,
             closeModal: _,
             bOKDisabled: _,
+            bCloseAfterOK: _ = !0,
             onOK: _,
             bAllowFullSize: _,
             bDestructiveWarning: _,
@@ -60438,8 +60485,8 @@
             (_ && _()) || (_ && _());
           }, [_, _]),
           _ = _.useCallback(async () => {
-            _ || (_ && (await _()), _ && _());
-          }, [_, _, _]);
+            _ || (_ && (await _()), _ && _ && _());
+          }, [_, _, _, _]);
         return _.createElement(
           _._,
           {
@@ -74445,6 +74492,25 @@
           })(_, _, _, _._.excluded_content_descriptors),
         );
       }
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _, _, _) {
+            return {
+              queryKey: ["CategoryHubDefinitions", _.language, "MapByTagID"],
+              queryFn: async () => {
+                const _ = await _.fetchQuery(_(_, _, _)),
+                  _ = new Map();
+                for (const _ of _) _.replaces_tags?.forEach((_) => _.set(_, _));
+                return _;
+              },
+              staleTime: _,
+            };
+          })(_, _, _, _._.excluded_content_descriptors),
+        );
+      }
       function _(_, _, _) {
         return {
           queryKey: ["CategoryHubDefinitions", _.language, _],
@@ -76494,7 +76560,8 @@
             }),
           );
         });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _, _) {
         return {
@@ -76589,6 +76656,148 @@
           })(_, _),
         );
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CBilling_GetRecurringSubscriptionsCount_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.active_subscriptions_count || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  active_subscriptions_count: {
+                    _: 1,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  inactive_subscriptions_count: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CBilling_GetRecurringSubscriptionsCount_Response";
+        }
+      }
+      function _() {
+        const { data: _ } = (function () {
+          const _ = (0, _._)();
+          return (0, _._)(
+            (function (_) {
+              return {
+                queryKey: ["RecurringSubscriptionCount"],
+                queryFn: () =>
+                  (async function (_) {
+                    const _ = _._.Init(_),
+                      _ = await _.GetRecurringSubscriptionsCount(_, _);
+                    if (!__webpack_require__.BSuccess())
+                      throw `Error loading recurring subscription count: ${__webpack_require__.GetErrorMessage()}`;
+                    return {
+                      active_subscriptions_count:
+                        __webpack_require__
+                          .Body()
+                          .active_subscriptions_count() ?? 0,
+                      inactive_subscriptions_count:
+                        __webpack_require__
+                          .Body()
+                          .inactive_subscriptions_count() ?? 0,
+                    };
+                  })(_),
+                staleTime: 1 / 0,
+                enabled: _._.logged_in,
+              };
+            })(_),
+          );
+        })();
+        return (
+          !!_._.logged_in &&
+          (void 0 !== _
+            ? _.active_subscriptions_count > 0 ||
+              _.inactive_subscriptions_count > 0
+            : void 0)
+        );
+      }
       function _() {
         const _ = (0, _._)(),
           { storeBrowseContext: _ } = _({
@@ -76642,6 +76851,19 @@
           enabled: _._.logged_in,
         };
       }
+      !(function (_) {
+        _.GetRecurringSubscriptionsCount = function (_, _) {
+          return _.SendMsg(
+            "Billing.GetRecurringSubscriptionsCount#1",
+            (0, _._)(_, _),
+            _,
+            {
+              bConstMethod: !0,
+              ePrivilege: 1,
+            },
+          );
+        };
+      })(_ || (_ = {}));
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -77095,13 +77317,7 @@
             _("#Menu_Section_Browse_MyWishlist"),
           ),
           _.createElement(_, null),
-          _.createElement(
-            _,
-            {
-              href: `${_._.STORE_BASE_URL}account/subscriptions/`,
-            },
-            _("#Menu_Section_Browse_MySubscriptions"),
-          ),
+          _.createElement(_, null),
           _.createElement(
             _,
             {
@@ -77120,6 +77336,17 @@
                 href: `${_._.COMMUNITY_BASE_URL}my/followedgames`,
               },
               _("#Menu_Section_Browse_MyFollowedGames"),
+            )
+          : null;
+      }
+      function _() {
+        return _()
+          ? _.createElement(
+              _,
+              {
+                href: `${_._.STORE_BASE_URL}account/subscriptions/`,
+              },
+              _("#Menu_Section_Browse_MySubscriptions"),
             )
           : null;
       }
@@ -77155,6 +77382,7 @@
             },
             _,
           ),
+          _(),
           _(),
           _(),
           null
@@ -77903,6 +78131,7 @@
               { data: __webpack_require__, isError: _ } = _(),
               _ = _(_),
               { data: _ } = (0, _._)(_._.LANGUAGE),
+              { data: _ } = _(),
               _ = _.useMemo(() => _._(_().slice(), 0, _._(_)), []),
               _ = _(),
               _ = _ ? 6 : 4,
@@ -77910,7 +78139,7 @@
             return _.useMemo(() => {
               const _ = _ ?? (_ ? [] : void 0),
                 _ = __webpack_require__ ?? (_ ? [] : void 0);
-              if (null == _ || null == _ || !_ || !_) return [null, null];
+              if (null == _ || null == _ || !_ || !_ || !_) return [null, null];
               const _ = new Set(),
                 _ = new Set(),
                 _ = [],
@@ -77918,7 +78147,7 @@
                 _ =
                   _._.excluded_content_descriptors.includes(3) &&
                   _._.excluded_content_descriptors.includes(4);
-              for (const _ of (function* (_, _, _) {
+              for (let _ of (function* (_, _, _) {
                 const _ = _.slice(),
                   _ = _.slice(),
                   _ = __webpack_require__.slice();
@@ -77961,6 +78190,15 @@
                   if (!(_.length < _)) break;
                   _ = _;
                 }
+                if ("tag" == _.type && _.has(_.unTagID)) {
+                  const _ = _.get(_.unTagID);
+                  _ = {
+                    type: "hub",
+                    strHandle: _.handle,
+                    strName: _.display_name,
+                    strURLPath: _.url_path,
+                  };
+                }
                 "tag" != _.type || (_ && _._.includes(_.unTagID))
                   ? "hub" == _.type &&
                     (_.has(_.strHandle) || (_.add(_.strHandle), _.push(_)))
@@ -77969,7 +78207,7 @@
                     (_.add(_.unTagID), _.push(_));
               }
               return [_, _];
-            }, [_, _, _, _, __webpack_require__, _, _, _, _]);
+            }, [_, _, _, _, __webpack_require__, _, _, _, _, _]);
           })();
           return null === _ || null === _
             ? null
@@ -80542,6 +80780,7 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _(() =>
@@ -82364,7 +82603,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 552), _((_._ = _));
+      return (_ = 92), _((_._ = _));
       var _;
     });
     _._();

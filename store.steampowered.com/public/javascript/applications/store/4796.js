@@ -1932,20 +1932,25 @@
         const { data: t, isFetching: r, refetch: n } = (0, L.I)(W(e));
         return { creatorHome: t, isFetching: r, refetch: n };
       }
-      function k(e) {
+      function k(e, t) {
         return {
           queryKey: ["GetCreatorHomeGetAllListsQuery", e],
           queryFn: async () => {
-            const t = O.GetServiceTransport(),
-              r = i.w.Init(v);
-            r
+            const r = O.GetServiceTransport(),
+              n = i.w.Init(v);
+            n
               .Body()
               .set_steamid(
                 new E.b(e, R.TS.EUNIVERSE, 7, 0).ConvertTo64BitString(),
               ),
-              r.Body().set_count(100);
-            const n = await B.GetLists(t, r);
-            return n.BSuccess() ? n.Body().list_details() : null;
+              n.Body().set_count(100);
+            const a = await B.GetLists(r, n);
+            return a.BSuccess()
+              ? a
+                  .Body()
+                  .list_details()
+                  .filter((e) => t || 0 != e.list_state())
+              : null;
           },
           enabled: e > 0,
         };

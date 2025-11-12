@@ -4307,7 +4307,7 @@
       function _(_) {
         const { storeItem: _ } = _,
           _ = (0, _._)(
-            "https://clan.akamai.steamstatic.com/images//39049601/6d623258307ee751edb132215ffe83e9b31bba95.png",
+            "https://clan.akamai.steamstatic.com/images//39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png",
           ),
           _ = [
             ..._.GetAllTrailers().GetHighlightTrailers(!0),

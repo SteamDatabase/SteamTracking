@@ -3,8 +3,8 @@ import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 var _ = _((_, _) => {
   "use strict";
@@ -3394,14 +3394,12 @@ function _(_, _, _, _, _) {
     (window.SSR.clientAssets = _),
     (0, _.startTransition)(() => {
       window.SSR?.reactRoot?.render(
-        (0, _.jsx)(_.StrictMode, {
-          children: (0, _.jsx)(_, {
-            pageRoutes: _,
-            clientAssets: _,
-            loaderData: _,
-            metadata: _,
-            renderContext: _,
-          }),
+        (0, _.jsx)(_, {
+          pageRoutes: _,
+          clientAssets: _,
+          loaderData: _,
+          metadata: _,
+          renderContext: _,
         }),
       );
     }),

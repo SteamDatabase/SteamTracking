@@ -1,49 +1,49 @@
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -62,10 +62,10 @@ import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 var _ = _((_) => {
@@ -283,6 +283,26 @@ function _(_) {
     })
   );
 }
+function _() {
+  let _ = _(),
+    _ = _();
+  return _(_(_, _));
+}
+function _(_, _) {
+  let { country: _ } = _;
+  return {
+    queryKey: ["StoreBrowsePriceStops", _],
+    queryFn: async () => _(_, _),
+    staleTime: 1440 * 60 * 1e3,
+  };
+}
+async function _(_, _) {
+  let _ = _.Init(_);
+  _.Body().set_country_code(_);
+  let _ = await _.GetPriceStops(_, _);
+  if (!_.BSuccess()) throw `Error loading price stops: ${_.GetErrorMessage()}`;
+  return _.Body().toObject().price_stops || [];
+}
 var _ = _(_(), 1);
 function _(_) {
   return (
@@ -475,26 +495,6 @@ function _(_, _) {
     sort: _,
     filterParams: _,
   });
-}
-function _() {
-  let _ = _(),
-    _ = _();
-  return _(_(_, _));
-}
-function _(_, _) {
-  let { country: _ } = _;
-  return {
-    queryKey: ["StoreBrowsePriceStops", _],
-    queryFn: async () => _(_, _),
-    staleTime: 1440 * 60 * 1e3,
-  };
-}
-async function _(_, _) {
-  let _ = _.Init(_);
-  _.Body().set_country_code(_);
-  let _ = await _.GetPriceStops(_, _);
-  if (!_.BSuccess()) throw `Error loading price stops: ${_.GetErrorMessage()}`;
-  return _.Body().toObject().price_stops || [];
 }
 var _ = "a20CyZYbgnQ-";
 var _ = _(_(), 1);
@@ -8051,6 +8051,7 @@ var _ = "oVvbc-NOBF8-";
 var _ = "S4P-Tu6KIaQ-";
 var _ = "XAEHFx5bCT0-";
 var _ = "LhqQh5zRkIw-";
+var _ = "VHlaIZhzd28-";
 var _ = "TjfbNdRyip4-";
 var _ = "_0arfU0-7OcQ-";
 var _ = "pMrnNJp5sDA-";
@@ -8058,6 +8059,7 @@ var _ = "p2qp0XfBE8M-";
 var _ = "j7Wl8MzErkA-";
 var _ = "vdNOP82JYX8-";
 var _ = "xlAKnJ50oYQ-";
+var _ = "BQNre5l--Q8-";
 var _ = "DUS6KmDUKhc-";
 var _ = "yrG419d95pU-";
 var _ = "mOoPKvox-wE-";
@@ -8070,6 +8072,7 @@ var _ = "_7GG-Yb2cOxg-";
 var _ = "jHvUCZyctAM-";
 var _ = "Ypx0AcKkoSM-";
 var _ = "nK8lTB5HZ5o-";
+var _ = "fjTziiI61-M-";
 var _ = "_80azkrfBXSM-";
 var _ = "yO-tcJ7evNI-";
 var _ = _(_(), 1);
@@ -8131,7 +8134,15 @@ function _(_) {
       appid: _,
     });
   if (!_?.header && !_?.library_capsule_2x) return (0, _.jsx)("div", {});
-  let _ =
+  let {
+      error: _,
+      steamid: _,
+      sort: _,
+      filters: _,
+      bUseV7Menu: _,
+      bRestrictedFromAdultContent: _,
+    } = _.useLoaderData(),
+    _ =
       _.header &&
       _?.asset_url_format?.replace(
         "${FILENAME}",
@@ -8139,36 +8150,63 @@ function _(_) {
       ),
     _ = _.library_capsule_2x ?? _.library_capsule,
     _ = _ && _?.asset_url_format?.replace("${FILENAME}", _);
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      (0, _.jsx)("img", {
-        className: _,
-        src: `${_.STORE_ITEM_BASE_URL}${_}`,
-        alt: "",
-        role: "presentation",
-        loading: "lazy",
-      }),
-      (0, _.jsx)("img", {
-        className: _,
-        src: _ ? `${_.STORE_ITEM_BASE_URL}${_}` : _(_),
-        alt: "",
-        role: "presentation",
-        loading: "lazy",
-      }),
-      !_ &&
-        (0, _.jsx)("div", {
+  return _ &&
+    (_.content_descriptorids?.includes(3) ||
+      _.content_descriptorids?.includes(4)) &&
+    _
+    ? (0, _.jsx)(_.Fragment, {
+        children: (0, _.jsx)("img", {
           className: _,
-          children: _?.name,
+          src: `${_.STORE_ITEM_BASE_URL}${_}`,
+          alt: "",
+          role: "presentation",
+          loading: "lazy",
         }),
-    ],
-  });
+      })
+    : (0, _.jsxs)(_.Fragment, {
+        children: [
+          (0, _.jsx)("img", {
+            className: _,
+            src: `${_.STORE_ITEM_BASE_URL}${_}`,
+            alt: "",
+            role: "presentation",
+            loading: "lazy",
+          }),
+          (0, _.jsx)("img", {
+            className: _,
+            src: _ ? `${_.STORE_ITEM_BASE_URL}${_}` : _(_),
+            alt: "",
+            role: "presentation",
+            loading: "lazy",
+          }),
+          !_ &&
+            (0, _.jsx)("div", {
+              className: _,
+              children: _?.name,
+            }),
+        ],
+      });
 }
 function _(_) {
   let { item: _, appid: _ } = _,
+    {
+      error: _,
+      steamid: _,
+      sort: _,
+      filters: _,
+      bUseV7Menu: _,
+      bRestrictedFromAdultContent: _,
+    } = _.useLoaderData(),
     { data: _ } = _({
       appid: _,
     });
-  return !_ || !_.all_ages_screenshots || _.all_ages_screenshots.length < 4
+  return !_ ||
+    !_.all_ages_screenshots ||
+    _.all_ages_screenshots.length < 4 ||
+    (_ &&
+      (_.content_descriptorids?.includes(3) ||
+        _.content_descriptorids?.includes(4)) &&
+      _)
     ? null
     : (0, _.jsxs)("div", {
         className: _,
@@ -8353,6 +8391,11 @@ var _ = _(_(), 1);
 var _ = _(_()),
   _ = _(_());
 var _ = _(_());
+function _(_, _) {
+  return (_) => {
+    _?.(_), _?.(_);
+  };
+}
 function _(_) {
   let {
       direction: _,
@@ -8363,6 +8406,7 @@ function _(_) {
       menuTarget: _,
       className: _,
       children: _,
+      renderWhenClosed: _ = !0,
       ..._
     } = _,
     { isShowingMenu: _, triggerProps: _, menuProps: _, closeMenu: _ } = _(_),
@@ -8378,6 +8422,8 @@ function _(_) {
       children: [
         _.cloneElement(_, {
           ..._,
+          onMouseEnter: _(_.props.onMouseEnter, _.onMouseEnter),
+          onMouseLeave: _(_.props.onMouseLeave, _.onMouseLeave),
           navRef: _,
         }),
         (0, _.jsx)(_, {
@@ -8389,7 +8435,7 @@ function _(_) {
           onFocusWithin: (_) => !_ && _(),
           childFocusDisabled: !_,
           children: (0, _.jsx)(_, {
-            children: _,
+            children: (_ || _) && _,
           }),
         }),
       ],
@@ -9523,7 +9569,15 @@ function _(_, _, _) {
       };
 }
 function _(_) {
-  let { appid: _, item: _ } = _;
+  let { appid: _, item: _ } = _,
+    {
+      error: _,
+      steamid: _,
+      sort: _,
+      filters: _,
+      bUseV7Menu: _,
+      bRestrictedFromAdultContent: _,
+    } = _.useLoaderData();
   if (_ && !_.visible) {
     let _ = _.Localize("#wishlist_item_unavailable_retired");
     return (
@@ -9535,6 +9589,30 @@ function _(_) {
           className: _,
           children: _,
         }),
+      })
+    );
+  } else if (
+    _ &&
+    (_.content_descriptorids?.includes(3) ||
+      _.content_descriptorids?.includes(4)) &&
+    _
+  ) {
+    let _ = _.Localize("#mature_content_requires_creditcard");
+    return (
+      _.country_code === "GB" &&
+        (_ = _.Localize("#mature_content_requires_creditcard_gb")),
+      (0, _.jsxs)("div", {
+        className: (0, _.default)(_, _),
+        children: [
+          (0, _.jsx)("div", {
+            className: _,
+            children: _,
+          }),
+          (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsx)(_, {}),
+          }),
+        ],
       })
     );
   } else
@@ -9573,6 +9651,20 @@ function _(_) {
         ],
       }),
     ],
+  });
+}
+function _() {
+  return (0, _.jsx)("div", {
+    className: _,
+    children: (0, _.jsx)(_.Fragment, {
+      children: (0, _.jsx)("div", {
+        className: _,
+        children: (0, _.jsx)("a", {
+          href: `${_.STORE_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=wishlist`,
+          children: _.Localize("#wishlist_item_add_credit_card"),
+        }),
+      }),
+    }),
   });
 }
 function _(_) {
@@ -9981,6 +10073,7 @@ function _() {
     sort: _,
     filters: _,
     bUseV7Menu: _,
+    bRestrictedFromAdultContent: _,
   } = _.useLoaderData();
   return (0, _.jsx)(_, {
     error: _,
@@ -9988,6 +10081,7 @@ function _() {
     sort: _,
     filters: _,
     bUseV7Menu: _,
+    bRestrictedFromAdultContent: _,
   });
 }
 function _(_) {

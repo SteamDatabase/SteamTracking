@@ -4,18 +4,18 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -28,10 +28,10 @@ import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 function _() {
@@ -3054,6 +3054,202 @@ function _(_) {
     ],
   });
 }
+var _ = _(_(), 1);
+var _ = "/RDNVLABA.png";
+var _ = "/QQGETVBA.png";
+var _ = "/MVIQJMBA.png";
+var _ = "/62SHH2CA.png";
+var _ = "Ksy4XAVZlM0-";
+var _ = "n2wjqqfVgC4-";
+var _ = "osYYItlitxA-";
+var _ = "knntvUEkLRg-";
+var _ = "_1ToiOSH69g8-";
+var _ = "s6DTWBl90Rc-";
+var _ = "UnRkTYm5fo0-";
+var _ = "ftmxCcsknb4-";
+var _ = "byvXpNiaYrs-";
+var _ = "y9kERlobJ88-";
+var _ = "Hf0BSchKz6g-";
+var _ = _(_(), 1);
+function _() {
+  return (0, _.jsx)("span", {
+    "aria-hidden": "true",
+    className: _,
+    children: "|",
+  });
+}
+function _(_) {
+  return (0, _.jsx)("footer", {
+    className: (0, _.default)(_, _.className, !_.logged_in && _),
+    children: (0, _.jsxs)("div", {
+      className: _,
+      children: [
+        (0, _.jsx)("hr", {}),
+        (0, _.jsxs)("div", {
+          className: _,
+          children: [
+            (0, _.jsx)(_, {
+              className: _,
+              _: "https://www.valvesoftware.com",
+              openInNewWindow: !0,
+              children: (0, _.jsx)("img", {
+                src: _(_),
+                alt: "Valve Software",
+              }),
+            }),
+            (0, _.jsxs)("div", {
+              className: _,
+              children: [
+                (0, _.jsx)("div", {
+                  children: _.Localize(
+                    "#footer_legal_notice",
+                    new Date().getFullYear(),
+                  ),
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    _.Localize("#footer_vat_included"),
+                    "  ",
+                    (0, _.jsx)(_, {
+                      openInNewWindow: !0,
+                      _: _.STORE_BASE_URL + "privacy_agreement/",
+                      children: _.Localize("#footer_privacy_policy"),
+                    }),
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_, {
+                      openInNewWindow: !0,
+                      _: _.STORE_BASE_URL + "legal/",
+                      children: _.Localize("#footer_legal"),
+                    }),
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_, {
+                      openInNewWindow: !0,
+                      _: _.STORE_BASE_URL + "subscriber_agreement/",
+                      children: _.Localize("#footer_ssa"),
+                    }),
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_, {
+                      openInNewWindow: !0,
+                      _: _.STORE_BASE_URL + "steam_refunds/",
+                      children: _.Localize("#footer_refunds"),
+                    }),
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_, {
+                      openInNewWindow: !0,
+                      _: _.STORE_BASE_URL + "account/cookiepreferences/",
+                      children: _.Localize("#footer_cookies"),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              className: _,
+              children: (0, _.jsx)("img", {
+                src: _(_),
+                alt: "Valve Software",
+              }),
+            }),
+          ],
+        }),
+        _() &&
+          (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsx)("button", {
+              onClick: _,
+              children: _.Localize("#global_menu_view_mobile_website"),
+            }),
+          }),
+        (0, _.jsx)("hr", {}),
+        (0, _.jsxs)("div", {
+          className: _,
+          children: [
+            (0, _.jsx)(_, {
+              openInNewWindow: !0,
+              _: "https://www.valvesoftware.com/about",
+              children: _.Localize("#footer_about_valve"),
+            }),
+            (0, _.jsx)(_, {}),
+            (0, _.jsx)(_, {
+              openInNewWindow: !0,
+              _: "http://www.valvesoftware.com",
+              children: _.Localize("#footer_jobs"),
+            }),
+            (0, _.jsx)(_, {}),
+            (0, _.jsx)(_, {
+              openInNewWindow: !0,
+              _: "http://www.steampowered.com/steamworks/",
+              children: _.Localize("#footer_steamworks"),
+            }),
+            (0, _.jsx)(_, {}),
+            (0, _.jsx)(_, {
+              openInNewWindow: !0,
+              _: _.PARTNER_BASE_URL + "steamdirect",
+              children: _.Localize("#footer_steam_distribution"),
+            }),
+            (0, _.jsx)(_, {}),
+            (0, _.jsx)(_, {
+              external: !0,
+              _: _.HELP_BASE_URL + _().strISOCode + "/",
+              children: _.Localize("#footer_nav_help_support"),
+            }),
+            (0, _.jsx)(_, {}),
+            _.COUNTRY === "US" &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    snr: !0,
+                    external: !0,
+                    _: _.STORE_BASE_URL + "hardware_recycling/",
+                    children: _.Localize("#footer_recycling"),
+                  }),
+                  (0, _.jsx)(_, {}),
+                ],
+              }),
+            !_(_.EREALM) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    snr: !0,
+                    external: !0,
+                    _: _.STORE_BASE_URL + "digitalgiftcards/",
+                    children: _.Localize("#footer_walletcode"),
+                  }),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsxs)(_, {
+                    openInNewWindow: !0,
+                    _: "http://www.facebook.com/Steam",
+                    children: [
+                      (0, _.jsx)("img", {
+                        src: _(_),
+                        alt: "Facebook",
+                        className: _,
+                      }),
+                      " Steam",
+                    ],
+                  }),
+                  (0, _.jsx)(_, {}),
+                  (0, _.jsxs)(_, {
+                    openInNewWindow: !0,
+                    _: "http://twitter.com/steam",
+                    children: [
+                      (0, _.jsx)("img", {
+                        src: _(_),
+                        alt: "X",
+                        className: _,
+                      }),
+                      " @steam",
+                    ],
+                  }),
+                ],
+              }),
+          ],
+        }),
+        _.children,
+      ],
+    }),
+  });
+}
 var _ = _(_()),
   _ = _(_());
 var _ = _(_());
@@ -4827,7 +5023,8 @@ function _(_) {
     _ ?? _.ownerDocument.body,
   );
 }
-var _ = _(_());
+var _ = _(_()),
+  _ = _(_());
 function _(_) {
   _.useEffect(() => {
     if (_)
@@ -4882,14 +5079,16 @@ function _(_) {
               rctActiveContextMenus: _ && _ ? _ : void 0,
             };
           return _ instanceof _
-            ? (0, _.jsx)(_, {
+            ? (0, _.createElement)(_, {
                 ..._,
+                key: _.key,
                 modal: _,
                 Component: _ ?? _,
               })
             : _ instanceof _
-              ? (0, _.jsx)(_, {
+              ? (0, _.createElement)(_, {
                   ..._,
+                  key: _.key,
                   modal: _,
                   bUseDialogElement: _,
                 })
@@ -8235,6 +8434,7 @@ function _(_) {
       onCancel: _,
       closeModal: _,
       bOKDisabled: _,
+      bCloseAfterOK: _ = !0,
       onOK: _,
       bAllowFullSize: _,
       bDestructiveWarning: _,
@@ -8253,8 +8453,8 @@ function _(_) {
       (_ && _()) || (_ && _());
     }, [_, _]),
     _ = _.useCallback(async () => {
-      _ || (_ && (await _()), _ && _());
-    }, [_, _, _]);
+      _ || (_ && (await _()), _ && _ && _());
+    }, [_, _, _, _]);
   return (0, _.jsx)(_, {
     onEscKeypress: _,
     className: _,
@@ -10797,201 +10997,5 @@ function _(_) {
     : (0, _.jsx)(_, {
         ..._,
       });
-}
-var _ = _(_(), 1);
-var _ = "/RDNVLABA.png";
-var _ = "/QQGETVBA.png";
-var _ = "/MVIQJMBA.png";
-var _ = "/62SHH2CA.png";
-var _ = "Ksy4XAVZlM0-";
-var _ = "n2wjqqfVgC4-";
-var _ = "osYYItlitxA-";
-var _ = "knntvUEkLRg-";
-var _ = "_1ToiOSH69g8-";
-var _ = "s6DTWBl90Rc-";
-var _ = "UnRkTYm5fo0-";
-var _ = "ftmxCcsknb4-";
-var _ = "byvXpNiaYrs-";
-var _ = "y9kERlobJ88-";
-var _ = "Hf0BSchKz6g-";
-var _ = _(_(), 1);
-function _() {
-  return (0, _.jsx)("span", {
-    "aria-hidden": "true",
-    className: _,
-    children: "|",
-  });
-}
-function _(_) {
-  return (0, _.jsx)("footer", {
-    className: (0, _.default)(_, _.className, !_.logged_in && _),
-    children: (0, _.jsxs)("div", {
-      className: _,
-      children: [
-        (0, _.jsx)("hr", {}),
-        (0, _.jsxs)("div", {
-          className: _,
-          children: [
-            (0, _.jsx)(_, {
-              className: _,
-              _: "https://www.valvesoftware.com",
-              openInNewWindow: !0,
-              children: (0, _.jsx)("img", {
-                src: _(_),
-                alt: "Valve Software",
-              }),
-            }),
-            (0, _.jsxs)("div", {
-              className: _,
-              children: [
-                (0, _.jsx)("div", {
-                  children: _.Localize(
-                    "#footer_legal_notice",
-                    new Date().getFullYear(),
-                  ),
-                }),
-                (0, _.jsxs)("div", {
-                  children: [
-                    _.Localize("#footer_vat_included"),
-                    "  ",
-                    (0, _.jsx)(_, {
-                      openInNewWindow: !0,
-                      _: _.STORE_BASE_URL + "privacy_agreement/",
-                      children: _.Localize("#footer_privacy_policy"),
-                    }),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {
-                      openInNewWindow: !0,
-                      _: _.STORE_BASE_URL + "legal/",
-                      children: _.Localize("#footer_legal"),
-                    }),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {
-                      openInNewWindow: !0,
-                      _: _.STORE_BASE_URL + "subscriber_agreement/",
-                      children: _.Localize("#footer_ssa"),
-                    }),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {
-                      openInNewWindow: !0,
-                      _: _.STORE_BASE_URL + "steam_refunds/",
-                      children: _.Localize("#footer_refunds"),
-                    }),
-                    (0, _.jsx)(_, {}),
-                    (0, _.jsx)(_, {
-                      openInNewWindow: !0,
-                      _: _.STORE_BASE_URL + "account/cookiepreferences/",
-                      children: _.Localize("#footer_cookies"),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-            (0, _.jsx)("div", {
-              className: _,
-              children: (0, _.jsx)("img", {
-                src: _(_),
-                alt: "Valve Software",
-              }),
-            }),
-          ],
-        }),
-        _() &&
-          (0, _.jsx)("div", {
-            className: _,
-            children: (0, _.jsx)("button", {
-              onClick: _,
-              children: _.Localize("#global_menu_view_mobile_website"),
-            }),
-          }),
-        (0, _.jsx)("hr", {}),
-        (0, _.jsxs)("div", {
-          className: _,
-          children: [
-            (0, _.jsx)(_, {
-              openInNewWindow: !0,
-              _: "https://www.valvesoftware.com/about",
-              children: _.Localize("#footer_about_valve"),
-            }),
-            (0, _.jsx)(_, {}),
-            (0, _.jsx)(_, {
-              openInNewWindow: !0,
-              _: "http://www.valvesoftware.com",
-              children: _.Localize("#footer_jobs"),
-            }),
-            (0, _.jsx)(_, {}),
-            (0, _.jsx)(_, {
-              openInNewWindow: !0,
-              _: "http://www.steampowered.com/steamworks/",
-              children: _.Localize("#footer_steamworks"),
-            }),
-            (0, _.jsx)(_, {}),
-            (0, _.jsx)(_, {
-              openInNewWindow: !0,
-              _: _.PARTNER_BASE_URL + "steamdirect",
-              children: _.Localize("#footer_steam_distribution"),
-            }),
-            (0, _.jsx)(_, {}),
-            (0, _.jsx)(_, {
-              external: !0,
-              _: _.HELP_BASE_URL + _().strISOCode + "/",
-              children: _.Localize("#footer_nav_help_support"),
-            }),
-            (0, _.jsx)(_, {}),
-            _.COUNTRY === "US" &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(_, {
-                    snr: !0,
-                    external: !0,
-                    _: _.STORE_BASE_URL + "hardware_recycling/",
-                    children: _.Localize("#footer_recycling"),
-                  }),
-                  (0, _.jsx)(_, {}),
-                ],
-              }),
-            !_(_.EREALM) &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  (0, _.jsx)(_, {
-                    snr: !0,
-                    external: !0,
-                    _: _.STORE_BASE_URL + "digitalgiftcards/",
-                    children: _.Localize("#footer_walletcode"),
-                  }),
-                  (0, _.jsx)(_, {}),
-                  (0, _.jsxs)(_, {
-                    openInNewWindow: !0,
-                    _: "http://www.facebook.com/Steam",
-                    children: [
-                      (0, _.jsx)("img", {
-                        src: _(_),
-                        alt: "Facebook",
-                        className: _,
-                      }),
-                      " Steam",
-                    ],
-                  }),
-                  (0, _.jsx)(_, {}),
-                  (0, _.jsxs)(_, {
-                    openInNewWindow: !0,
-                    _: "http://twitter.com/steam",
-                    children: [
-                      (0, _.jsx)("img", {
-                        src: _(_),
-                        alt: "X",
-                        className: _,
-                      }),
-                      " @steam",
-                    ],
-                  }),
-                ],
-              }),
-          ],
-        }),
-        _.children,
-      ],
-    }),
-  });
 }
 export { _, _, _, _, _, _ };

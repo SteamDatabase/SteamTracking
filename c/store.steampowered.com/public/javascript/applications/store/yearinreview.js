@@ -129,6 +129,8 @@
         PollOptions: "_1-_aGrJzdFf8uYUfDKEn30",
         PollOption: "_3hNd0q0tYO12nPDCPsT8sm",
         Selected: "_3Nv8BLF6dRk932f5NhyNIH",
+        PollVoteIcon: "ziFphpM2Ie-orQ5ezpQqT",
+        PollStatus: "_3NDl2Pml7Uvse14r9SWJTD",
       };
     },
     chunkid: (module) => {
@@ -11933,6 +11935,22 @@
                 },
                 _,
               ),
+              _.createElement(
+                "div",
+                {
+                  className: _().PollStatus,
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#UserPolls_status_N_Votes", "XXX"),
+                ),
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#UserPolls_status_N_TimeRemaining", "X Days"),
+                ),
+              ),
             ),
           )
         );
@@ -11943,9 +11961,15 @@
         return _.createElement(
           "div",
           {
-            className: _().PollOption,
+            className: (0, _._)({
+              [_().PollOption]: !0,
+              [_().Selected]: !1,
+            }),
           },
-          _,
+          _.createElement("div", {
+            className: _().PollVoteIcon,
+          }),
+          _.createElement("span", null, _),
         );
       }
       let _ = null;
@@ -19841,36 +19865,36 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = _.forwardRef(function (
-        {
-          imgURL: _,
-          glow: _,
-          pauseAnimation: __webpack_require__,
-          hidden: _,
-          alt: _,
-          className: _,
-        },
-        _,
-      ) {
-        const [_, _] = _.useState(!1);
+      function _(_) {
+        const {
+            imgURL: _,
+            glow: __webpack_require__,
+            pauseAnimation: _,
+            hidden: _,
+            alt: _,
+            className: _,
+            ..._
+          } = _,
+          [_, _] = _.useState(!1);
         if (_)
           return _.createElement(
             "div",
             {
               className: _().HiddenLabel,
+              ..._,
             },
             "?",
           );
-        const _ = _ && _;
+        const _ = _ && __webpack_require__;
         return _.createElement(
           "div",
           {
-            ref: _,
             className: (0, _._)(
               _().AchievementIconWrapper,
               _,
-              __webpack_require__ && _().RareAchievementNoAnimation,
+              _ && _().RareAchievementNoAnimation,
             ),
+            ..._,
           },
           _ &&
             _.createElement(
@@ -19896,7 +19920,7 @@
             onLoad: () => _(!0),
           }),
         );
-      });
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");

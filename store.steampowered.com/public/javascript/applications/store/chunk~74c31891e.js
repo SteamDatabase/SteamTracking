@@ -1,13 +1,16 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [2062],
+  [2287],
   {
     10026: (e) => {
       e.exports = { BBCodeFollowButton: "NVuxjpTCUClP-4RsNDDvk" };
     },
     18657: (e) => {
-      e.exports = { BBCodeFollowButton: "BwHJdoHlv8wy5OypqL_b7" };
+      e.exports = {
+        BBCodeFollowButton: "BwHJdoHlv8wy5OypqL_b7",
+        isHovered: "_2EcgCb9lHfl7I_MlirYLZL",
+      };
     },
     29868: (e) => {
       e.exports = {
@@ -167,14 +170,14 @@
       }
       (0, o.Cg)([s.sH], g.prototype, "m_mapGiveawayIDToNextDrawInfo", void 0),
         (0, o.Cg)([s.XI], g.prototype, "CopyToGiveaway", null);
-      class w {
+      class v {
         m_intervalID;
         m_intervalCountDownID;
         static s_GlobalInstance = 0;
         m_myInstanceNumber = 0;
         constructor() {
-          (this.m_myInstanceNumber = w.s_GlobalInstance),
-            (w.s_GlobalInstance += 1);
+          (this.m_myInstanceNumber = v.s_GlobalInstance),
+            (v.s_GlobalInstance += 1);
         }
         ClearRefreshInterval() {
           this.m_intervalID &&
@@ -197,13 +200,13 @@
           e > 0 && (this.m_intervalCountDownID = window.setInterval(t, 1e3));
         }
       }
-      function v(e, t) {
+      function w(e, t) {
         const n = g.Get().GetInfoByInstance(e, t.m_myInstanceNumber);
         (n.seconds_until_drawing -= 1),
           0 == n.seconds_until_drawing && t.ClearCountDown();
       }
       function p(e) {
-        const [t] = (0, i.useState)(new w()),
+        const [t] = (0, i.useState)(new v()),
           n = (0, d.CH)();
         (0, i.useEffect)(
           () => (
@@ -226,12 +229,12 @@
                         .ReloadGiveaway(e, t.m_myInstanceNumber)
                         .then((n) => {
                           t.SetupCountDown(n.seconds_until_drawing, () =>
-                            v(e, t),
+                            w(e, t),
                           );
                         }));
                   })(e, t),
                 ),
-                  t.SetupCountDown(o.seconds_until_drawing, () => v(e, t)),
+                  t.SetupCountDown(o.seconds_until_drawing, () => w(e, t)),
                   n();
               }),
             () => {
@@ -254,10 +257,10 @@
           seconds_until_drawing: s,
         };
       }
-      (0, o.Cg)([c.o], w.prototype, "ClearRefreshInterval", null),
-        (0, o.Cg)([c.o], w.prototype, "ClearCountDown", null),
-        (0, o.Cg)([c.o], w.prototype, "SetupRefreshDataInterval", null),
-        (0, o.Cg)([c.o], w.prototype, "SetupCountDown", null);
+      (0, o.Cg)([c.o], v.prototype, "ClearRefreshInterval", null),
+        (0, o.Cg)([c.o], v.prototype, "ClearCountDown", null),
+        (0, o.Cg)([c.o], v.prototype, "SetupRefreshDataInterval", null),
+        (0, o.Cg)([c.o], v.prototype, "SetupCountDown", null);
     },
     63486: (e, t, n) => {
       "use strict";
@@ -274,7 +277,7 @@
         m = n(41735),
         _ = n.n(m),
         g = n(68797);
-      class w {
+      class v {
         m_counts = null;
         m_promise;
         GetCounts() {
@@ -309,17 +312,17 @@
         static s_globalSingletonStore;
         static Get() {
           return (
-            w.s_globalSingletonStore ||
-              ((w.s_globalSingletonStore = new w()),
+            v.s_globalSingletonStore ||
+              ((v.s_globalSingletonStore = new v()),
               ("dev" != u.TS.WEB_UNIVERSE && "beta" != u.TS.WEB_UNIVERSE) ||
-                (window.g_DeckCompatCountStores = w.s_globalSingletonStore)),
-            w.s_globalSingletonStore
+                (window.g_DeckCompatCountStores = v.s_globalSingletonStore)),
+            v.s_globalSingletonStore
           );
         }
         constructor() {
           if (document.getElementById("application_config")) {
             let e = (0, u.Tc)("deckcompatcount", "application_config");
-            w.ValidateListCompat(e) && (this.m_counts = e);
+            v.ValidateListCompat(e) && (this.m_counts = e);
           }
         }
         static ValidateListCompat(e) {
@@ -332,7 +335,7 @@
           );
         }
       }
-      var v = n(85320),
+      var w = n(85320),
         p = n(56631),
         I = n(35400),
         f = n(6878),
@@ -426,8 +429,8 @@
         L = n(52038),
         O = n(26101),
         A = n(20446),
-        j = n(9202),
-        M = n.n(j);
+        M = n(9202),
+        j = n.n(M);
       function R(e) {
         const { appid: t, color: n, bgcolor: o } = e,
           r = (0, k.n9)(),
@@ -437,7 +440,7 @@
           appID: t,
           classOverride: (0, L.A)(
             T().WishlistButtonNotTop,
-            M().BBCodeWishlistButton,
+            j().BBCodeWishlistButton,
             "WishlistButton",
           ),
           styleOverride: { color: n, backgroundColor: o },
@@ -558,7 +561,7 @@
         ne = n(7193),
         oe = n(39199),
         ae = n(96971),
-        re = n(11632),
+        re = n(50832),
         se = n(40353);
       function le(e) {
         const { eventModel: t, nEventBadgeID: n } = e,
@@ -693,20 +696,25 @@
         return null;
       }
       var ge = n(30894),
-        we = n(18657),
-        ve = n.n(we);
+        ve = n(18657),
+        we = n.n(ve);
       function pe(e) {
         const { clanAccountID: t, color: n, bgcolor: o } = e;
-        return (
-          (0, ge.L2)(),
+        (0, ge.L2)();
+        const [r, s] = a.useState(!1);
+        return a.createElement(
+          "div",
+          {
+            className: (0, L.A)(we().BBCodeFollowButton, r && we().isHovered),
+            onMouseEnter: () => s(!0),
+            onMouseLeave: () => s(!1),
+          },
           a.createElement(O.Q3, {
             nCreatorAccountID: t,
-            classOverride: (0, L.A)(
-              T().FollowGameButtonNotTop,
-              ve().BBCodeFollowButton,
-            ),
+            classOverride: T().FollowGameButtonNotTop,
             styleOverride: { color: n, backgroundColor: o },
-          })
+            followType: "group",
+          }),
         );
       }
       function Ie(e) {
@@ -739,10 +747,10 @@
       }
       function he(e) {
         const t = (function () {
-          const [e, t] = a.useState(w.Get().GetCounts());
+          const [e, t] = a.useState(v.Get().GetCounts());
           return (
             a.useEffect(() => {
-              e || w.Get().LoadCounts().then(t);
+              e || v.Get().LoadCounts().then(t);
             }, []),
             e
           );
@@ -760,7 +768,7 @@
         return a.createElement("span", null, Number(o).toLocaleString());
       }
       function Ce(e) {
-        const t = (0, v.j)("library");
+        const t = (0, w.j)("library");
         if (!t) return a.createElement(h.t, { size: "small" });
         const n = Number.parseInt((0, d.j$)(e.args));
         let o = t.verifiedList?.length || 0;

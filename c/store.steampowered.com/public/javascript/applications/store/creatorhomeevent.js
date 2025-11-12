@@ -185,9 +185,12 @@
         narrowWidth: "500px",
         SuppressScrollOnBody: "_2H6nBXGQnWeZJ_k8tK-qeO",
         SubMenuOuterCtn: "XRxbVx8hEC64irIt5ETl6",
+        isOpen: "H_vE_5qGWaDCAgxbzcWbG",
         SubMenuCtn: "_1QP7mh3IZ6mkLZFarqOI6K",
+        SubMenuImage: "LPOLldAKahIuzg0JArLRU",
         SubMenuItemCtn: "_3l8xeoR-wEUYEFOd8iTVOY",
         SubMenuItemText: "_31NjlVCoc_kJqU4O6T3GaQ",
+        ImageWrapper: "_1b0D6GwIr3uJX-bYaBWXuU",
       };
     },
     chunkid: (module) => {
@@ -229,6 +232,101 @@
         SectionTitleButtons: "RGHKm1_KeaBjdzuvisfYN",
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "FocusNavHistoryID",
+        _ = new _._("FocusHistory").Debug;
+      function _(_) {
+        const { children: _, timeoutMS: __webpack_require__, ..._ } = _,
+          _ = (function (_ = 2) {
+            const _ = (0, _._)(),
+              _ = _.useRef(void 0),
+              _ = (0, _._)(),
+              _ = (0, _._)(),
+              _ = _.state && _.state[_],
+              _ = _.useRef(void 0),
+              [_, _] = _.useState(_);
+            return (
+              _.useLayoutEffect(() => {
+                if (!_.current) return;
+                const _ = _.current;
+                return _.Node().Tree.WindowContext.FocusChangedCallbacks.Register(
+                  (_, _, _) => {
+                    const _ = _.location;
+                    let _ = _.state && _.state[_];
+                    _ ||
+                      ((_ = _ ? `State_${_.key}` : `State_${_.Node().Tree._}`),
+                      (_.current = _),
+                      _.replace({
+                        ..._.location,
+                        state: {
+                          ..._.state,
+                          [_]: _,
+                        },
+                      })),
+                      _.current == _ &&
+                        (_
+                          ? _.SaveState(_)
+                          : window.history.replaceState(
+                              {
+                                ...window.history.state,
+                                [_]: (0, _._)(_.Node()),
+                              },
+                              "",
+                            ));
+                  },
+                ).Unregister;
+              }, [_, _]),
+              _.useLayoutEffect(() => {
+                if (_.current && _.current != _) {
+                  if (!_) return void _(void 0);
+                  const _ = _.current.NavTree().DeferredFocus;
+                  _.SuppressFocus(),
+                    _(`Start restoring history for ${_}, suppressing focus`);
+                  const _ = window.setTimeout(() => {
+                    _(_);
+                  }, _);
+                  return () => {
+                    window.clearTimeout(_), _.ExecuteQueuedFocus();
+                  };
+                }
+              }, [_, _]),
+              _.useEffect(() => {
+                if (!_ || !_.current) return;
+                const _ = _ ? null : window.history.state?.[_],
+                  _ = _.current.NavTree().DeferredFocus;
+                let _ = !1;
+                _
+                  ? (_ = _.current.RestoreState(_, 1))
+                  : _ && ((0, _._)(_.current.Node(), _, 0), (_ = !0)),
+                  _(
+                    `Completed restoring history for state ${_} - ${_ ? "had history." : "no history for this state."}`,
+                  ),
+                  _ ? _.Reset() : _.ExecuteQueuedFocus(),
+                  (_.current = _);
+              }, [_, _, _]),
+              _
+            );
+          })(__webpack_require__);
+        return _.createElement(
+          _._,
+          {
+            ..._,
+            navRef: _,
+          },
+          _,
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -300,6 +398,81 @@
         (0, _._)([_._], _.prototype, "SetCurEditLanguage", null),
         (0, _._)([_._.bound], _.prototype, "SetHasLanguage", null),
         (0, _._)([_._], _.prototype, "BHasLanguageData", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = new _._();
+        return (
+          (_.clanSteamID = _._.InitFromClanID(_)),
+          (_.GID = "fakeevent_" + _++),
+          (_.visibility_state = _._.k_EEventStateUnlisted),
+          (_.visibilityStartTime = (0, _._)() - 1),
+          (_.jsondata.bSaleEnabled = !0),
+          (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath = !0),
+          (_.jsondata.sale_vanity_id = _),
+          (_.jsondata.sale_header_offset = 0),
+          (_.jsondata.sale_header_disable_top_margin = !1),
+          _
+        );
+      }
+      let _ = 1234;
+      function _(_, _) {
+        return {
+          unique_id: _++,
+          capsules: null,
+          events: null,
+          links: null,
+          section_type: _,
+          localized_label: [],
+          default_label: _,
+        };
+      }
+      const _ = "socialcontent_";
+      function _() {
+        return {
+          platforms: [
+            {
+              label: _._.Steam,
+              checked: !0,
+            },
+            {
+              label: _._.Facebook,
+              checked: !0,
+            },
+            {
+              label: _._.Twitter,
+              checked: !0,
+            },
+            {
+              label: _._.Reddit,
+              checked: !0,
+            },
+          ],
+          doorsEnabled: !1,
+          content_options: [
+            {
+              unique_id: _ + Math.floor(1e6 * Math.random()),
+              door: void 0,
+              twitter_card: _._.SummaryLargeImage,
+              localized_option_fields: {
+                localized_header: [],
+                title: [],
+                description: [],
+                image: [],
+              },
+            },
+          ],
+        };
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -891,16 +1064,29 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { event: _, subMenu: __webpack_require__, language: _ } = _,
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useRef)(null);
         return _.createElement(
           "div",
           {
-            className: _().SubMenuOuterCtn,
+            className: (0, _._)({
+              [_().SubMenuOuterCtn]: !0,
+              [_().isOpen]: _,
+            }),
+            onMouseEnter: () => {
+              _.current && window.clearTimeout(_.current), _(!0);
+            },
+            onMouseLeave: () => {
+              _.current && window.clearTimeout(_.current),
+                (_.current = window.setTimeout(() => _(!1), 180));
+            },
           },
           _.createElement(
             "div",
@@ -921,6 +1107,7 @@
                   language: _,
                   mainItem: _,
                   subMenu: __webpack_require__,
+                  clanAccountID: _.clanSteamID.GetAccountID(),
                 }),
               ),
             ),
@@ -928,14 +1115,22 @@
         );
       }
       function _(_) {
-        const { language: _, mainItem: __webpack_require__, subMenu: _ } = _,
+        const {
+            language: _,
+            mainItem: __webpack_require__,
+            subMenu: _,
+            clanAccountID: _,
+          } = _,
           [_, _] = (0, _.useState)(!1),
-          [_, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             __webpack_require__.sub_menu_url,
-            _(__webpack_require__.sub_menu_url),
+            _(__webpack_require__.sub_menu_url, _),
             __webpack_require__.localized_sub_menu_name?.[_] ||
               __webpack_require__.localized_sub_menu_name?.[0] ||
               "unknown",
+            __webpack_require__.sub_menu_icon?.localized_media?.[_]?.image ||
+              __webpack_require__.sub_menu_icon?.localized_media?.[0]?.image ||
+              void 0,
           ]);
         let _ = _.label_color || "#DBDFE2";
         return (
@@ -953,16 +1148,34 @@
               onMouseEnter: () => _(!0),
               onMouseLeave: () => _(!1),
             },
-            _,
+            _.createElement(
+              "div",
+              {
+                className: _().TextLabel,
+              },
+              _,
+            ),
+            Boolean(_) &&
+              _.createElement(
+                "span",
+                {
+                  className: _().ImageWrapper,
+                },
+                _.createElement("img", {
+                  src: (0, _._)(_, _),
+                  alt: _,
+                  className: _().SubMenuImage,
+                }),
+              ),
           )
         );
       }
-      function _(_) {
+      function _(_, _) {
         try {
-          return (
-            new URL(_ || "").pathname.toLowerCase() ===
-            window.location.pathname.toLowerCase()
-          );
+          const _ = window.location.pathname.toLowerCase(),
+            _ = new URL(_ || ""),
+            _ = `/curator/${_}/sale/${(_.pathname.split("/").filter(Boolean).pop() || "").toLocaleLowerCase()}`;
+          return _.pathname.toLocaleLowerCase() === _ || _ === _;
         } catch {
           return !1;
         }
@@ -5006,6 +5219,7 @@
             imgGroupDerivedMapping: __webpack_require__,
             nTabID: _,
           } = _,
+          [_, _] = (0, _.useState)(null),
           [_, _, _, _] = (0, _._)(() => [
             _.GetTabLastCoverSectionUntilEnd(_),
             _.BIsTabEnabled(_),
@@ -5019,7 +5233,7 @@
             label: (0, _._)("#BackgroundGroups_TaSetting"),
             checked: _,
             onChange: (_) => {
-              _.SetTabEnabled(_, _);
+              _(_.SetTabEnabled(_, _));
             },
           }),
           Boolean(_) &&
@@ -5035,7 +5249,7 @@
               _.createElement(_, {
                 backgroundImageEditModel: _,
                 groupIndex: 0,
-                imgGroup: _.groups[0],
+                imgGroup: (_ || _)?.groups[0],
                 imgGroupDerivedMapping: __webpack_require__,
                 eventModel: _,
                 nTabIndex: _,
@@ -5113,7 +5327,10 @@
           _._.GetWithFallback(_.localized_presenter_name, __webpack_require__),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             promotionName: _,
@@ -5368,7 +5585,8 @@
           },
         ];
         let _ = null;
-        const _ = (0, _._)();
+        const _ = (0, _._)(),
+          _ = (0, _._)();
         _.forEach((_, _) => {
           const _ = _[_.length - 1].activeTab;
           if (_ && !_.ShouldShowSection(_)) return;
@@ -5411,7 +5629,7 @@
                 setControllerCategory: _,
               }));
           }
-          _._.Get().BIsConnected() &&
+          _ &&
             (_ = _.createElement(
               _,
               {
@@ -5452,22 +5670,32 @@
             (_[_.length - 1].elements.push(_(_, _, _?.GetActiveTabUniqueID())),
             (_ = null));
         const _ = _.map((_, _) =>
-          _.createElement(
-            "div",
-            {
-              key: "TabSection_" + _,
-              className: (0, _._)(
-                _().SaleSectionTabListContainer,
-                "SaleSectionTabListContainer",
-              ),
-            },
-            _.elements,
+            _.createElement(
+              "div",
+              {
+                key: "TabSection_" + _,
+                className: (0, _._)(
+                  _().SaleSectionTabListContainer,
+                  "SaleSectionTabListContainer",
+                ),
+              },
+              _.elements,
+            ),
           ),
-        );
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useRef)(null);
+        (0, _.useEffect)(() => {
+          _.current &&
+            (_.current = (0, _._)(_.current, "y") ?? document.documentElement);
+        }, []);
+        const _ = (0, _._)(_, "smooth");
         return _.createElement(
           _._,
           {
+            ref: _,
             className: _().SaleSectionListContainer,
+            onGamepadDirection: _,
+            focusable: !0,
           },
           _,
         );
@@ -5819,23 +6047,153 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { clanAccountID: _, gidEvent: __webpack_require__ } = _,
-          [_, _] = _.useState(!0),
-          _ = (0, _._)(_, __webpack_require__),
-          _ = (0, _._)(_._.LANGUAGE);
+          [_, _] = _.useState(!0);
+        let _ = (0, _._)(_, __webpack_require__);
+        const _ = (0, _._)(_._.LANGUAGE),
+          [_] = (0, _._)("livepreview");
         return (
+          _ && (_ = (0, _._)(_, "creatorhome_fake")),
           _.useEffect(() => {
             _._.InitGlobal().then(() => _(!1));
           }),
           !_ || _
             ? _.createElement(_._, null)
-            : _.createElement(_._, {
+            : _.createElement(_.default, {
                 eventModel: _,
+                promotionName: `creatorhome_${__webpack_require__}`,
                 language: _,
-                bIsPreview: !1,
               })
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports),
+        __webpack_require__._(module_exports, {
+          default: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { eventModel: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            bSalePage: !0,
+          },
+          _.createElement(_, {
+            ..._,
+            overrideEventModel: _,
+          }),
+        );
+      }
+      function _(_) {
+        const {
+            promotionName: _,
+            language: __webpack_require__,
+            overrideEventModel: _,
+          } = _,
+          [_, _] = _.useState(
+            _ ?? _._.GetClanEventFromAnnouncementGID(_._.ANNOUNCEMENT_GID),
+          );
+        if (
+          (_.useEffect(() => {
+            if (!_ && _?.AnnouncementGID != _._.ANNOUNCEMENT_GID) {
+              const _ = new _._(_._.CLANSTEAMID);
+              _._.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+                _,
+                _._.ANNOUNCEMENT_GID,
+                null,
+              ).then(_);
+            }
+          }, [_, _]),
+          (function (_, _) {
+            const _ = (0, _._)(() => _._.Get().GetEventModelJson()),
+              [_, _] = _.useState();
+            _.useEffect(() => {
+              if (!_ || _ == _) return;
+              _(_);
+              const _ = _._.FromJSON(_);
+              (_.rtime32_last_modified = Math.floor(
+                new Date().getTime() / 1e3,
+              )),
+                _(_);
+            }, [_, _, _, _]);
+          })(_, _),
+          !_)
+        )
+          return _.createElement(
+            "div",
+            {
+              className: _().FlexCenter,
+              style: {
+                height: "500px",
+              },
+            },
+            _.createElement(_._, {
+              size: "medium",
+              string: (0, _._)("#Loading"),
+            }),
+          );
+        const _ = _.visibility_state !== _._.k_EEventStateVisible;
+        return _.createElement(
+          _._,
+          {
+            navID: "StoreSalePageRoot",
+          },
+          _.createElement(
+            _._,
+            {
+              timeoutMS: 1e3,
+            },
+            _.createElement(
+              _,
+              {
+                eventModel: _,
+              },
+              _.createElement(
+                _._,
+                null,
+                _.createElement(_._, {
+                  promotionName: _,
+                  language: __webpack_require__,
+                  eventModel: _,
+                  bIsPreview: _,
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { eventModel: _, children: __webpack_require__ } = _,
+          _ = "adultonly" == _.GetContentHubType();
+        return _.createElement(
+          _._,
+          {
+            eAdultOnlyMediaBehavior: _ ? "allowed" : "masked",
+          },
+          __webpack_require__,
         );
       }
     },

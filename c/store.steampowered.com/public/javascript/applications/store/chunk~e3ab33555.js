@@ -1260,7 +1260,15 @@
               include_release: !0,
             }),
             [_, _] = (0, _._)(_);
-          _.useEffect(() => window.scrollTo(0, 0), [_, _]);
+          if (
+            (_.useEffect(() => window.scrollTo(0, 0), [_, _]),
+            !_ && 36 == _.GetEventType())
+          )
+            return _.createElement(_._, {
+              eventModel: _,
+              route: _._.k_eStoreSalePage,
+              bPopup: !1,
+            });
           const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
             _ = (0, _._)(_, _._.k_eStoreUsersNewsHub, "allowRelative");
           if (!_.bLoaded || !_ || (_ && !_ && 2 !== _))

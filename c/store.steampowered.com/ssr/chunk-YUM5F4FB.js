@@ -18,6 +18,12 @@ function _() {
     _ = _();
   return _(_(_, _, _, _.excluded_content_descriptors));
 }
+function _() {
+  let _ = _(),
+    _ = _(),
+    _ = _();
+  return _(_(_, _, _, _.excluded_content_descriptors));
+}
 function _(_, _, _) {
   return {
     queryKey: ["CategoryHubDefinitions", _.language, _],
@@ -31,6 +37,18 @@ function _(_, _, _, _) {
     queryFn: async () => {
       let _ = await _.fetchQuery(_(_, _, _));
       return new Map(_.map((_) => [_.hubcategoryid, _]));
+    },
+    staleTime: _,
+  };
+}
+function _(_, _, _, _) {
+  return {
+    queryKey: ["CategoryHubDefinitions", _.language, "MapByTagID"],
+    queryFn: async () => {
+      let _ = await _.fetchQuery(_(_, _, _)),
+        _ = new Map();
+      for (let _ of _) _.replaces_tags?.forEach((_) => _.set(_, _));
+      return _;
     },
     staleTime: _,
   };
@@ -168,4 +186,4 @@ var _ = [
     ],
   },
 ];
-export { _, _, _, _ };
+export { _, _, _, _, _ };

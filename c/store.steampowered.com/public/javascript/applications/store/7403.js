@@ -604,6 +604,11 @@
                     _: _._.readFixed64String,
                     _: _._.writeFixed64String,
                   },
+                  delete_reason: {
+                    _: 14,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
                 },
               }),
             _.sm_m

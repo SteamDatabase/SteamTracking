@@ -171,6 +171,8 @@
         PollOptions: "_1-_aGrJzdFf8uYUfDKEn30",
         PollOption: "_3hNd0q0tYO12nPDCPsT8sm",
         Selected: "_3Nv8BLF6dRk932f5NhyNIH",
+        PollVoteIcon: "ziFphpM2Ie-orQ5ezpQqT",
+        PollStatus: "_3NDl2Pml7Uvse14r9SWJTD",
       };
     },
     chunkid: (module) => {
@@ -15076,6 +15078,22 @@
                 },
                 _,
               ),
+              _.createElement(
+                "div",
+                {
+                  className: _().PollStatus,
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#UserPolls_status_N_Votes", "XXX"),
+                ),
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#UserPolls_status_N_TimeRemaining", "X Days"),
+                ),
+              ),
             ),
           )
         );
@@ -15086,9 +15104,15 @@
         return _.createElement(
           "div",
           {
-            className: _().PollOption,
+            className: (0, _._)({
+              [_().PollOption]: !0,
+              [_().Selected]: !1,
+            }),
           },
-          _,
+          _.createElement("div", {
+            className: _().PollVoteIcon,
+          }),
+          _.createElement("span", null, _),
         );
       }
       let _ = null;

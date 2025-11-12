@@ -3517,7 +3517,7 @@ var _ = class _ extends _.Message {
     constructor(_ = null) {
       super(),
         _.prototype.hubcategoryid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, void 0, null);
+        _.Message.initialize(this, _, 0, -1, [6, 7, 8, 9], null);
     }
     static sm_m;
     static sm_mbf;
@@ -3551,6 +3551,38 @@ var _ = class _ extends _.Message {
                 _: 5,
                 _: _.readString,
                 _: _.writeString,
+              },
+              replaces_tags: {
+                _: 6,
+                _: !0,
+                _: !0,
+                _: _.readUint32,
+                pbr: _.readPackedUint32,
+                _: _.writeRepeatedUint32,
+              },
+              must_have_tags: {
+                _: 7,
+                _: !0,
+                _: !0,
+                _: _.readUint32,
+                pbr: _.readPackedUint32,
+                _: _.writeRepeatedUint32,
+              },
+              any_one_of_tags: {
+                _: 8,
+                _: !0,
+                _: !0,
+                _: _.readUint32,
+                pbr: _.readPackedUint32,
+                _: _.writeRepeatedUint32,
+              },
+              must_not_have_tags: {
+                _: 9,
+                _: !0,
+                _: !0,
+                _: _.readUint32,
+                pbr: _.readPackedUint32,
+                _: _.writeRepeatedUint32,
               },
             },
           }),

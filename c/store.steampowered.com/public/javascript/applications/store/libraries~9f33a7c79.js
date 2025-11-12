@@ -6,159 +6,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      _.Component;
-      _.Component;
-      var _ = function (_, _) {
-          return "function" == typeof _ ? _(_) : _;
-        },
-        _ = function (_, _) {
-          return "string" == typeof _ ? (0, _._)(_, null, null, _) : _;
-        },
-        _ = function (_) {
-          return _;
-        },
-        _ = _.forwardRef;
-      void 0 === _ && (_ = _);
-      var _ = _(function (_, _) {
-        var _ = _.innerRef,
-          _ = _.navigate,
-          _ = _.onClick,
-          _ = (0, _._)(_, ["innerRef", "navigate", "onClick"]),
-          _ = _.target,
-          _ = (0, _._)({}, _, {
-            onClick: function (_) {
-              try {
-                _ && _(_);
-              } catch (_) {
-                throw (_.preventDefault(), _);
-              }
-              _.defaultPrevented ||
-                0 !== _.button ||
-                (_ && "_self" !== _) ||
-                (function (_) {
-                  return !!(_.metaKey || _.altKey || _.ctrlKey || _.shiftKey);
-                })(_) ||
-                (_.preventDefault(), _());
-            },
-          });
-        return (_.ref = (_ !== _ && _) || _), _.createElement("a", _);
-      });
-      var _ = _(function (_, _) {
-          var _ = _.component,
-            _ = void 0 === _ ? _ : _,
-            _ = _.replace,
-            _ = _._,
-            _ = _.innerRef,
-            _ = (0, _._)(_, ["component", "replace", "to", "innerRef"]);
-          return _.createElement(_._.Consumer, null, function (_) {
-            _ || (0, _._)(!1);
-            var _ = _.history,
-              _ = _(_(_, _.location), _.location),
-              _ = _ ? __webpack_require__.createHref(_) : "",
-              _ = (0, _._)({}, _, {
-                href: _,
-                navigate: function () {
-                  var _ = _(_, _.location),
-                    _ = (0, _._)(_.location) === (0, _._)(_(_));
-                  (_ || _ ? _.replace : _.push)(_);
-                },
-              });
-            return (
-              _ !== _ ? (_.ref = _ || _) : (_.innerRef = _),
-              _.createElement(_, _)
-            );
-          });
-        }),
-        _ = function (_) {
-          return _;
-        },
-        _ = _.forwardRef;
-      void 0 === _ && (_ = _);
-      var _ = _(function (_, _) {
-        var _ = _["aria-current"],
-          _ = void 0 === _ ? "page" : _,
-          _ = _.activeClassName,
-          _ = void 0 === _ ? "active" : _,
-          _ = _.activeStyle,
-          _ = _.className,
-          _ = _.exact,
-          _ = _.isActive,
-          _ = _.location,
-          _ = _.sensitive,
-          _ = _.strict,
-          _ = _.style,
-          _ = _._,
-          _ = _.innerRef,
-          _ = (0, _._)(_, [
-            "aria-current",
-            "activeClassName",
-            "activeStyle",
-            "className",
-            "exact",
-            "isActive",
-            "location",
-            "sensitive",
-            "strict",
-            "style",
-            "to",
-            "innerRef",
-          ]);
-        return _.createElement(_._.Consumer, null, function (_) {
-          _ || (0, _._)(!1);
-          var _ = _ || _.location,
-            _ = _(_(_, _), _),
-            _ = _.pathname,
-            _ = _ && _.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
-            _ = _
-              ? (0, _._)(_.pathname, {
-                  path: _,
-                  exact: _,
-                  sensitive: _,
-                  strict: _,
-                })
-              : null,
-            _ = !!(_ ? _(_, _) : _),
-            _ = "function" == typeof _ ? _(_) : _,
-            _ = "function" == typeof _ ? _(_) : _;
-          _ &&
-            ((_ = (function () {
-              for (
-                var _ = arguments.length, _ = new Array(_), _ = 0;
-                _ < _;
-                _++
-              )
-                _[_] = arguments[_];
-              return _.filter(function (_) {
-                return _;
-              }).join(" ");
-            })(_, _)),
-            (_ = (0, _._)({}, _, _)));
-          var _ = (0, _._)(
-            {
-              "aria-current": (_ && _) || null,
-              className: _,
-              style: _,
-              _: _,
-            },
-            _,
-          );
-          return (
-            _ !== _ ? (_.ref = _ || _) : (_.innerRef = _), _.createElement(_, _)
-          );
-        });
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -346,6 +193,10 @@
         );
       }
       const _ = (_, _) => ({
+          ...(0, _._)(_),
+          options: [_, _],
+        }),
+        _ = (_, _) => ({
           ...(0, _._)(_),
           options: [_, _],
         }),

@@ -185,9 +185,12 @@
         narrowWidth: "500px",
         SuppressScrollOnBody: "_2H6nBXGQnWeZJ_k8tK-qeO",
         SubMenuOuterCtn: "XRxbVx8hEC64irIt5ETl6",
+        isOpen: "H_vE_5qGWaDCAgxbzcWbG",
         SubMenuCtn: "_1QP7mh3IZ6mkLZFarqOI6K",
+        SubMenuImage: "LPOLldAKahIuzg0JArLRU",
         SubMenuItemCtn: "_3l8xeoR-wEUYEFOd8iTVOY",
         SubMenuItemText: "_31NjlVCoc_kJqU4O6T3GaQ",
+        ImageWrapper: "_1b0D6GwIr3uJX-bYaBWXuU",
       };
     },
     chunkid: (module) => {
@@ -1000,16 +1003,29 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { event: _, subMenu: __webpack_require__, language: _ } = _,
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(!1),
+          _ = (0, _.useRef)(null);
         return _.createElement(
           "div",
           {
-            className: _().SubMenuOuterCtn,
+            className: (0, _._)({
+              [_().SubMenuOuterCtn]: !0,
+              [_().isOpen]: _,
+            }),
+            onMouseEnter: () => {
+              _.current && window.clearTimeout(_.current), _(!0);
+            },
+            onMouseLeave: () => {
+              _.current && window.clearTimeout(_.current),
+                (_.current = window.setTimeout(() => _(!1), 180));
+            },
           },
           _.createElement(
             "div",
@@ -1030,6 +1046,7 @@
                   language: _,
                   mainItem: _,
                   subMenu: __webpack_require__,
+                  clanAccountID: _.clanSteamID.GetAccountID(),
                 }),
               ),
             ),
@@ -1037,14 +1054,22 @@
         );
       }
       function _(_) {
-        const { language: _, mainItem: __webpack_require__, subMenu: _ } = _,
+        const {
+            language: _,
+            mainItem: __webpack_require__,
+            subMenu: _,
+            clanAccountID: _,
+          } = _,
           [_, _] = (0, _.useState)(!1),
-          [_, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             __webpack_require__.sub_menu_url,
-            _(__webpack_require__.sub_menu_url),
+            _(__webpack_require__.sub_menu_url, _),
             __webpack_require__.localized_sub_menu_name?.[_] ||
               __webpack_require__.localized_sub_menu_name?.[0] ||
               "unknown",
+            __webpack_require__.sub_menu_icon?.localized_media?.[_]?.image ||
+              __webpack_require__.sub_menu_icon?.localized_media?.[0]?.image ||
+              void 0,
           ]);
         let _ = _.label_color || "#DBDFE2";
         return (
@@ -1062,16 +1087,34 @@
               onMouseEnter: () => _(!0),
               onMouseLeave: () => _(!1),
             },
-            _,
+            _.createElement(
+              "div",
+              {
+                className: _().TextLabel,
+              },
+              _,
+            ),
+            Boolean(_) &&
+              _.createElement(
+                "span",
+                {
+                  className: _().ImageWrapper,
+                },
+                _.createElement("img", {
+                  src: (0, _._)(_, _),
+                  alt: _,
+                  className: _().SubMenuImage,
+                }),
+              ),
           )
         );
       }
-      function _(_) {
+      function _(_, _) {
         try {
-          return (
-            new URL(_ || "").pathname.toLowerCase() ===
-            window.location.pathname.toLowerCase()
-          );
+          const _ = window.location.pathname.toLowerCase(),
+            _ = new URL(_ || ""),
+            _ = `/curator/${_}/sale/${(_.pathname.split("/").filter(Boolean).pop() || "").toLocaleLowerCase()}`;
+          return _.pathname.toLocaleLowerCase() === _ || _ === _;
         } catch {
           return !1;
         }
@@ -5115,6 +5158,7 @@
             imgGroupDerivedMapping: __webpack_require__,
             nTabID: _,
           } = _,
+          [_, _] = (0, _.useState)(null),
           [_, _, _, _] = (0, _._)(() => [
             _.GetTabLastCoverSectionUntilEnd(_),
             _.BIsTabEnabled(_),
@@ -5128,7 +5172,7 @@
             label: (0, _._)("#BackgroundGroups_TaSetting"),
             checked: _,
             onChange: (_) => {
-              _.SetTabEnabled(_, _);
+              _(_.SetTabEnabled(_, _));
             },
           }),
           Boolean(_) &&
@@ -5144,7 +5188,7 @@
               _.createElement(_, {
                 backgroundImageEditModel: _,
                 groupIndex: 0,
-                imgGroup: _.groups[0],
+                imgGroup: (_ || _)?.groups[0],
                 imgGroupDerivedMapping: __webpack_require__,
                 eventModel: _,
                 nTabIndex: _,
@@ -5222,7 +5266,10 @@
           _._.GetWithFallback(_.localized_presenter_name, __webpack_require__),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             promotionName: _,
@@ -5477,7 +5524,8 @@
           },
         ];
         let _ = null;
-        const _ = (0, _._)();
+        const _ = (0, _._)(),
+          _ = (0, _._)();
         _.forEach((_, _) => {
           const _ = _[_.length - 1].activeTab;
           if (_ && !_.ShouldShowSection(_)) return;
@@ -5520,7 +5568,7 @@
                 setControllerCategory: _,
               }));
           }
-          _._.Get().BIsConnected() &&
+          _ &&
             (_ = _.createElement(
               _,
               {
@@ -5561,22 +5609,32 @@
             (_[_.length - 1].elements.push(_(_, _, _?.GetActiveTabUniqueID())),
             (_ = null));
         const _ = _.map((_, _) =>
-          _.createElement(
-            "div",
-            {
-              key: "TabSection_" + _,
-              className: (0, _._)(
-                _().SaleSectionTabListContainer,
-                "SaleSectionTabListContainer",
-              ),
-            },
-            _.elements,
+            _.createElement(
+              "div",
+              {
+                key: "TabSection_" + _,
+                className: (0, _._)(
+                  _().SaleSectionTabListContainer,
+                  "SaleSectionTabListContainer",
+                ),
+              },
+              _.elements,
+            ),
           ),
-        );
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useRef)(null);
+        (0, _.useEffect)(() => {
+          _.current &&
+            (_.current = (0, _._)(_.current, "y") ?? document.documentElement);
+        }, []);
+        const _ = (0, _._)(_, "smooth");
         return _.createElement(
           _._,
           {
+            ref: _,
             className: _().SaleSectionListContainer,
+            onGamepadDirection: _,
+            focusable: !0,
           },
           _,
         );
@@ -6104,6 +6162,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        const { eventModel: _ } = _;
         return _.createElement(
           _._,
           {
@@ -6111,17 +6170,22 @@
           },
           _.createElement(_, {
             ..._,
+            overrideEventModel: _,
           }),
         );
       }
       function _(_) {
-        const { promotionName: _, language: __webpack_require__ } = _,
+        const {
+            promotionName: _,
+            language: __webpack_require__,
+            overrideEventModel: _,
+          } = _,
           [_, _] = _.useState(
-            _._.GetClanEventFromAnnouncementGID(_._.ANNOUNCEMENT_GID),
+            _ ?? _._.GetClanEventFromAnnouncementGID(_._.ANNOUNCEMENT_GID),
           );
         if (
           (_.useEffect(() => {
-            if (_?.AnnouncementGID != _._.ANNOUNCEMENT_GID) {
+            if (!_ && _?.AnnouncementGID != _._.ANNOUNCEMENT_GID) {
               const _ = new _._(_._.CLANSTEAMID);
               _._.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
                 _,
@@ -6129,18 +6193,17 @@
                 null,
               ).then(_);
             }
-          }, [_]),
+          }, [_, _]),
           (function (_, _) {
-            const _ = (0, _._)(() => _._.Get().GetEventModel()),
+            const _ = (0, _._)(() => _._.Get().GetEventModelJson()),
               [_, _] = _.useState();
             _.useEffect(() => {
               if (!_ || _ == _) return;
               _(_);
-              const _ = _.clone();
-              (_.jsondata = JSON.parse(_)),
-                (_.rtime32_last_modified = Math.floor(
-                  new Date().getTime() / 1e3,
-                )),
+              const _ = _._.FromJSON(_);
+              (_.rtime32_last_modified = Math.floor(
+                new Date().getTime() / 1e3,
+              )),
                 _(_);
             }, [_, _, _, _]);
           })(_, _),

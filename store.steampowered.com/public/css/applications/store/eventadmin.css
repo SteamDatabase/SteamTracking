@@ -688,6 +688,7 @@ td.rdtYear:hover {
 }
 ._1dm-6uzq_x5Gqo421G3a1r {
   position: relative;
+  align-items: center;
   width: fit-content;
   justify-self: center;
   background: #fff;
@@ -713,6 +714,7 @@ td.rdtYear:hover {
   width: fit-content;
   justify-self: center;
   background: #fff;
+  max-height: 32px;
   box-shadow: none;
   border-radius: 28px;
   padding: 6px;
@@ -793,18 +795,33 @@ td.rdtYear:hover {
   width: fit-content;
   justify-self: center;
   background: #fff;
+  max-height: 32px;
   box-shadow: none;
   border-radius: 28px;
-  padding: 6px;
+  padding: 6px 12px;
   color: #0e141b;
   right: unset;
   transition: all .2s ease-out;
 }
-.BwHJdoHlv8wy5OypqL_b7:hover {
-  box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
-}
-.BwHJdoHlv8wy5OypqL_b7:hover .FollowGameButton {
+.BwHJdoHlv8wy5OypqL_b7 .FollowButton {
   text-shadow: none;
   color: #0e141b;
+  background: #fff;
+  box-shadow: none;
   font-weight: 600;
+}
+.BwHJdoHlv8wy5OypqL_b7 .FollowBtnText {
+  font-size: 14px;
+}
+.BwHJdoHlv8wy5OypqL_b7 .SVGIcon_Check {
+  stroke: #000;
+}
+.BwHJdoHlv8wy5OypqL_b7:hover .FollowButton {
+  background: none;
+  box-shadow: none;
+  color: #0e141b;
+}
+.BwHJdoHlv8wy5OypqL_b7._2EcgCb9lHfl7I_MlirYLZL {
+  box-shadow: 0 6px 12px rgba(11, 27, 41, 0.2);
+  transform: translateY(-1px);
 }

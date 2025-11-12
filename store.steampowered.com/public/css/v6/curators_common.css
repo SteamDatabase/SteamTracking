@@ -106,6 +106,12 @@ body.v6 #curator_popup_body .popup_body.popup_menu {
 	margin-left: 0px;
 }
 
+.adminNotice {
+	padding: 6px 8px;
+	background: black;
+	font-size: 15px;
+}
+
 /* lists background */
 .curator_list_ctn {
 background: -webkit-linear-gradient( top, rgba( 102, 192, 244, 0.2) 0px, rgba( 102, 192, 244, 0) 200px);

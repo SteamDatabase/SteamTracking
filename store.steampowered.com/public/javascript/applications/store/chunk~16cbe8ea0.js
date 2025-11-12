@@ -171,6 +171,8 @@
         PollOptions: "_1-_aGrJzdFf8uYUfDKEn30",
         PollOption: "_3hNd0q0tYO12nPDCPsT8sm",
         Selected: "_3Nv8BLF6dRk932f5NhyNIH",
+        PollVoteIcon: "ziFphpM2Ie-orQ5ezpQqT",
+        PollStatus: "_3NDl2Pml7Uvse14r9SWJTD",
       };
     },
     14256: (e) => {
@@ -13578,6 +13580,20 @@
               { className: Dt().PollContainer },
               s.createElement("div", { className: Dt().PollQuestion }, n),
               s.createElement("div", { className: Dt().PollOptions }, a),
+              s.createElement(
+                "div",
+                { className: Dt().PollStatus },
+                s.createElement(
+                  "div",
+                  null,
+                  (0, w.PP)("#UserPolls_status_N_Votes", "XXX"),
+                ),
+                s.createElement(
+                  "div",
+                  null,
+                  (0, w.PP)("#UserPolls_status_N_TimeRemaining", "X Days"),
+                ),
+              ),
             ),
           )
         );
@@ -13585,7 +13601,14 @@
       function Wt(e) {
         const { pollOptionDef: t, onClick: r, lang: i } = e,
           [a] = (0, pt.q3)(() => [w.NT.GetWithFallback(t.localized_option, i)]);
-        return s.createElement("div", { className: Dt().PollOption }, a);
+        return s.createElement(
+          "div",
+          {
+            className: (0, N.A)({ [Dt().PollOption]: !0, [Dt().Selected]: !1 }),
+          },
+          s.createElement("div", { className: Dt().PollVoteIcon }),
+          s.createElement("span", null, a),
+        );
       }
       let xt = null;
       function jt() {

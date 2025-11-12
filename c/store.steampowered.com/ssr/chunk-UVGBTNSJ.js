@@ -54,11 +54,12 @@ function _(_) {
       _.matches(":dir(rtl)") &&
         (_ === "left" ? (_ = "right") : _ === "right" && (_ = "left"));
       let {
-        nLeft: _,
-        nTop: _,
-        nOverflow: _,
-        nLateralOverflow: _,
-      } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+          nLeft: _,
+          nTop: _,
+          nOverflow: _,
+          nLateralOverflow: _,
+        } = _(_, _, _, _, _, _.innerWidth, _.innerHeight),
+        _ = _;
       if (_ > (_ ?? 10) && !_) {
         let _ = _(_),
           {

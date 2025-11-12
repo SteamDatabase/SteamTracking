@@ -3549,7 +3549,6 @@ p.outliers_options {
 	flex-direction: column;
 	justify-content: center;
 	width: 40%;
-	height: -webkit-fill-available;
 	gap: 8px;
 }
 

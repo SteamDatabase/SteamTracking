@@ -520,6 +520,9 @@
 		font-size: 14px;
 		line-height: 22px;
 	}
+	html.responsive .rightcol.game_meta_data .block.recommendation_reasons p.reason::before {
+		margin-top: 3px;
+	}
 	html.responsive	.ratings_title {
 		display: inline-block !important;
 		padding-bottom: 10px;

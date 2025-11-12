@@ -3639,7 +3639,7 @@
       function N(e) {
         const { storeItem: t } = e,
           a = (0, E.L$)(
-            "https://clan.akamai.steamstatic.com/images//39049601/6d623258307ee751edb132215ffe83e9b31bba95.png",
+            "https://clan.akamai.steamstatic.com/images//39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png",
           ),
           s = [
             ...t.GetAllTrailers().GetHighlightTrailers(!0),

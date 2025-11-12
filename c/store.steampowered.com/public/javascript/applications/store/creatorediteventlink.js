@@ -26,10 +26,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        ListsCtn: "tBftQdkNwMsCS3Jnef1UH",
         EntryList: "_2XXQSmtLL-udq2lLiHeB6Q",
         Entry: "_1Cd1TJ4SgK5DkDNbI-USUL",
+        Active: "bYXdHZaVexq93H1xDBGqm",
         Label: "dI3ijAItl10LuKeR9XCdK",
-        VisibilityState: "_2oDgGL0H43MaV3D4fTBH4t",
+        UnpublishedState: "_1tt9jL7Dj8I6_LezFi2Zgv",
+        PublishedAndNotSelectedState: "_2XhRaA3elALg0OQnynUZu4",
         SelectedSVG: "_3Niy5UbG2M3zTi6wUY2jda",
         HeaderRow: "_2PLSeE9RayjVbZKYqcszIq",
         ActionsRow: "_27NYV-vucABpZz6K_oGGgu",
@@ -168,9 +171,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { clanAccountID: _, page_config: __webpack_require__ } = _,
+        const { clanAccountID: _ } = _,
           _ = (0, _._)(() => new _._(_, _._.EUNIVERSE, 7, 0)),
           {
             bIsFetching: _,
@@ -179,7 +183,7 @@
           } = (function (_) {
             const {
               data: _,
-              isFetching: __webpack_require__,
+              isFetching: _,
               refetch: _,
             } = (0, _._)({
               queryKey: [
@@ -210,19 +214,25 @@
               },
             });
             return {
-              bIsFetching: __webpack_require__,
+              bIsFetching: _,
               rgEventModels: _,
               fnRefetch: _,
             };
           })(_),
-          _ = `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
+          _ = `${_._.COMMUNITY_BASE_URL}gid/${__webpack_require__.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
           { creatorHome: _, isFetching: _, refetch: _ } = (0, _._)(_),
           _ = _?.GetLinkedEventGID(),
           _ = _ && _?.some((_) => _ == _.GID),
           _ = _ || _,
           _ = () => {
             _(), _();
-          };
+          },
+          _ = _.useMemo(
+            () => [...(_ ?? [])].sort((_, _) => _.startTime - _.startTime),
+            [_],
+          ),
+          _ = _.filter((_) => _ && _ == _.GID),
+          _ = _.filter((_) => !_ || _ != _.GID);
         return _.createElement(
           _.Fragment,
           null,
@@ -238,7 +248,7 @@
             _.createElement(
               "p",
               null,
-              (0, _._)("#CreatorHome_EventLink_AdvancedActive"),
+              (0, _._)("#CreatorHome_EventLink_V2Active"),
             ),
           _.createElement(
             _._,
@@ -248,29 +258,70 @@
             _.createElement(
               _._,
               {
-                onClick: () => window.open(_, "_blank", "noopener"),
+                onClick: () => window.location.assign(_),
               },
               (0, _._)("#CreatorHome_EventLink_Create"),
             ),
           ),
           _.createElement("br", null),
-          _.createElement(
-            "div",
-            {
-              className: _().EntryList,
-            },
-            _ && _.createElement(_._, null),
-            !_ &&
-              _?.map((_) =>
-                _.createElement(_, {
-                  key: _.GID,
-                  creatorHome: _,
-                  clanSteamID: _,
-                  eventModel: _,
-                  refetch: _,
-                }),
-              ),
-          ),
+          _ && _.createElement(_._, null),
+          !_ &&
+            _.createElement(
+              "div",
+              {
+                className: _().ListsCtn,
+              },
+              _.length > 0 &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "h5",
+                    null,
+                    (0, _._)("#CreatorHome_EventLink_ActiveListTitle"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().EntryList,
+                    },
+                    _.map((_) =>
+                      _.createElement(_, {
+                        key: _.GID,
+                        creatorHome: _,
+                        clanSteamID: _,
+                        eventModel: _,
+                        refetch: _,
+                      }),
+                    ),
+                  ),
+                ),
+              _.length > 0 &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(
+                    "h5",
+                    null,
+                    (0, _._)("#CreatorHome_EventLink_InactiveListTitle"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().EntryList,
+                    },
+                    _.map((_) =>
+                      _.createElement(_, {
+                        key: _.GID,
+                        creatorHome: _,
+                        clanSteamID: _,
+                        eventModel: _,
+                        refetch: _,
+                      }),
+                    ),
+                  ),
+                ),
+            ),
         );
       }
       function _(_) {
@@ -372,7 +423,7 @@
           _.createElement(
             "div",
             {
-              className: _().Entry,
+              className: (0, _._)(_().Entry, _ && _().Active),
             },
             _.createElement(
               "div",
@@ -390,12 +441,24 @@
                 _.createElement(
                   _._,
                   {
-                    className: _().VisibilityState,
+                    className: _().UnpublishedState,
                     toolTipContent: (0, _._)(
                       "#CreatorHome_EventLink_Unpublished_ttip",
                     ),
                   },
                   (0, _._)("#CreatorHome_EventLink_Unpublished"),
+                ),
+              _.BIsVisibleEvent() &&
+                !_ &&
+                _.createElement(
+                  _._,
+                  {
+                    className: _().PublishedAndNotSelectedState,
+                    toolTipContent: (0, _._)(
+                      "#CreatorHome_EventLink_PublishedAndNotSelected_ttip",
+                    ),
+                  },
+                  (0, _._)("#CreatorHome_EventLink_PublishedAndNotSelected"),
                 ),
               _ &&
                 _.createElement(_, {
@@ -431,7 +494,7 @@
                 eventModel: _,
                 label: (0, _._)("#Button_Preview"),
                 icon: _.createElement(_.Exy, null),
-                route: _._.k_eCommunityPreview,
+                route: _._.k_eCommunityPreviewSale,
               }),
               _.createElement(_, {
                 eventModel: _,
@@ -500,7 +563,7 @@
           _ ||
           (() => {
             const _ = _ ? (0, _._)(_, null, _, "absolute") : void 0;
-            window.open(_, "_blank", "noopener");
+            window.location.assign(_);
           });
         return _.createElement(
           "div",

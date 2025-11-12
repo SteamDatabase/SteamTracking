@@ -2163,11 +2163,11 @@
       class X {
         constructor(e) {
           Object.assign(this, e.toObject()),
-            (this.bytes_to_download = parseInt(e.bytes_to_download()) || 0),
-            (this.bytes_downloaded = parseInt(e.bytes_downloaded()) || 0),
-            (this.bytes_staged = parseInt(e.bytes_staged()) || 0),
-            (this.bytes_to_stage = parseInt(e.bytes_to_stage()) || 0),
-            (this.bytes_required = parseInt(e.bytes_required()) || 0);
+            (this.bytes_to_download = parseInt(e.bytes_to_download() ?? "0")),
+            (this.bytes_downloaded = parseInt(e.bytes_downloaded() ?? "0")),
+            (this.bytes_staged = parseInt(e.bytes_staged() ?? "0")),
+            (this.bytes_to_stage = parseInt(e.bytes_to_stage() ?? "0")),
+            (this.bytes_required = parseInt(e.bytes_required() ?? "0"));
         }
         appid;
         app;
@@ -2194,7 +2194,7 @@
         rt_time_scheduled;
         update_percentage;
         BIsDownloading() {
-          return this.num_downloading > 0;
+          return void 0 !== this.num_downloading && this.num_downloading > 0;
         }
         SetDownloading() {
           (this.num_downloading = 1), (this.download_paused = !1);
@@ -2207,7 +2207,7 @@
         }
         BIsPaused() {
           return (
-            this.download_paused &&
+            !!this.download_paused &&
             (this.bytes_downloaded < this.bytes_to_download ||
               this.bytes_staged < this.bytes_to_stage ||
               -1 != this.queue_position)
@@ -2259,7 +2259,7 @@
         return {
           session: t,
           mapApps: l,
-          clientInfo: a.Body().client_info().toObject(),
+          clientInfo: a.Body().client_info()?.toObject(),
           refetchIntervals: {
             full: a.Body().refetch_interval_sec_full() || 3600,
             changing: a.Body().refetch_interval_sec_changing() || 60,
@@ -2292,7 +2292,9 @@
           m = (0, s.useCallback)(
             (t) => {
               if (!e) return t;
-              const r = new Map(Array.from(t.mapApps.entries()).filter(e));
+              const r = new Map(
+                Array.from(t?.mapApps.entries() ?? []).filter(e),
+              );
               return { ...t, mapApps: r };
             },
             [e],
@@ -2352,9 +2354,9 @@
             const t = new Map();
             for (const r of i)
               if (r.isSuccess) {
-                const i = r.data?.session.client_instanceid,
+                const i = r.data?.session?.client_instanceid,
                   n = r.data?.mapApps,
-                  s = n.get(e);
+                  s = n?.get(e);
                 s &&
                   t.set(i, {
                     session: r.data.session,

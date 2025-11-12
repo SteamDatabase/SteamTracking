@@ -1432,7 +1432,7 @@ Upon completing all of the stories, you'll get one of five unique badges reflect
   _ =
     "Fun fact: The amount of time %1$s spent playing Gloomhaven is only slightly longer than the time %1$s would have spent setting up and tearing down the physical version of Gloomhaven.",
   _ =
-    "%1$ will receive no OBJECTION! from us on the games they played in %2$s.",
+    "%1$s will receive no OBJECTION! from us on the games they played in %2$s.",
   _ =
     "%1$s and a lumberjack went down to Cheese Steak Jimmy’s when all the sudden Alfred the Alpaca walked up, and…",
   _ =
@@ -1445,7 +1445,7 @@ Upon completing all of the stories, you'll get one of five unique badges reflect
   _ =
     "No matter if %1$s were helping the Syndicate, the Covenant, or the Marauders, they probably chopped down a whooooole lot of trees.",
   _ =
-    "8 years ago it started with a wizard on a moon. Now they're battling Savathûn herself. Destiny… %1$ has come a long way.",
+    "8 years ago it started with a wizard on a moon. Now they're battling Savathûn herself. Destiny… %1$s has come a long way.",
   _ =
     "%1$s spent a lot of time in Night City. Possibly with Panam, River or Kerry, but likely with Judy.",
   _ = "%1$s went deep into the GameFuna rabbit hole in %2$s. RIP Kaycee Hobbes",

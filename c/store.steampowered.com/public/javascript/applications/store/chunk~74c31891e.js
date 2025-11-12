@@ -1,5 +1,5 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [2062],
+  [2287],
   {
     chunkid: (module) => {
       module.exports = {
@@ -9,6 +9,7 @@
     chunkid: (module) => {
       module.exports = {
         BBCodeFollowButton: "BwHJdoHlv8wy5OypqL_b7",
+        isHovered: "_2EcgCb9lHfl7I_MlirYLZL",
       };
     },
     chunkid: (module) => {
@@ -776,19 +777,24 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const { clanAccountID: _, color: __webpack_require__, bgcolor: _ } = _;
-        return (
-          (0, _._)(),
+        (0, _._)();
+        const [_, _] = _.useState(!1);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().BBCodeFollowButton, _ && _().isHovered),
+            onMouseEnter: () => _(!0),
+            onMouseLeave: () => _(!1),
+          },
           _.createElement(_._, {
             nCreatorAccountID: _,
-            classOverride: (0, _._)(
-              _().FollowGameButtonNotTop,
-              _().BBCodeFollowButton,
-            ),
+            classOverride: _().FollowGameButtonNotTop,
             styleOverride: {
               color: __webpack_require__,
               backgroundColor: _,
             },
-          })
+            followType: "group",
+          }),
         );
       }
       function _(_) {

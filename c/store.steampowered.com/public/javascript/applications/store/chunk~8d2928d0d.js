@@ -6170,6 +6170,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -6222,14 +6223,13 @@
               (0, _._)(_),
             );
           },
-          _ = (0, _._)(() => _._.Get().BIsConnected());
+          _ = (0, _._)(),
+          { creatorHome: _ } = (0, _._)(_);
         if (_)
           return _.createElement(_._, {
             eventModel: _,
             route: _._.k_eCommunityAdminPage,
           });
-        const _ = _ == _._.k_EEventStateVisible,
-          _ = _ == _._.k_EEventStateStaged;
         if ((_.can_edit || _.support_user) && !_ && !_) {
           const _ = [];
           if (void 0 !== _)
@@ -6242,7 +6242,14 @@
             _ = "community" == _,
             _ = "store" == _,
             _ = _._.is_support && _(_.clanSteamID, !0),
-            _ = _ && !_;
+            _ = _ && !_,
+            _ = 36 == _.GetEventType(),
+            _ = _ && _?.GetLinkedEventGID() == _.GID,
+            _ =
+              (_ == _._.k_EEventStateVisible ||
+                _ == _._.k_EEventStateUnlisted) &&
+              (!_ || _),
+            _ = _ == _._.k_EEventStateStaged;
           return _.createElement(
             _._,
             null,
@@ -6286,7 +6293,9 @@
                     route: _._.k_eCommunityEdit,
                     className: (0, _._)(_.Button, _.AdminButton),
                   },
-                  (0, _._)("#EventEditor_Edit"),
+                  _
+                    ? (0, _._)("#EventEditor_Edit_Page")
+                    : (0, _._)("#EventEditor_Edit"),
                 ),
                 Boolean(__webpack_require__ && "community" == (0, _._)()) &&
                   _.createElement(
@@ -6337,7 +6346,7 @@
                       bDisableMouseOverlay: !0,
                     },
                   }),
-                Boolean(_.jsondata.bSaleEnabled && _) &&
+                Boolean(_.jsondata.bSaleEnabled && _ && !_) &&
                   _.createElement(
                     _._,
                     {
@@ -6366,7 +6375,7 @@
                     },
                     (0, _._)("#EventDisplay_StatsPage"),
                   ),
-                Boolean(_ && _._.is_support && _) &&
+                Boolean(_ && _._.is_support && _ && !_) &&
                   _.createElement(
                     "a",
                     {
@@ -6404,7 +6413,7 @@
                     },
                     (0, _._)("#EventDisplay_CategoryEditor"),
                   ),
-                Boolean(_ && (_ || _)) &&
+                Boolean(_ && (_ || (_ && !_))) &&
                   _.createElement(
                     _._,
                     {

@@ -1397,9 +1397,6 @@ b {
   background-color: #2a2d34;
   padding: 15px;
 }
-._30-E9De2BTSA_LQAluUDUI button._3nIAe51MkJS4ZGO9CQ6xks {
-  margin-top: 20px;
-}
 ._1bzHf_n9CdWgjfVlmRX68A {
   float: right;
 }
@@ -5076,6 +5073,9 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
     scrollbar-gutter: initial;
   }
 }
+body {
+  --store-menu-content-width: max(1100px, var(--store-page-width, 0px));
+}
 ._2QlYKhF-leHfMXFSiSshZC,
 ._2MzjSFlY9PHeDbUgNhjlOa {
   display: contents;
@@ -5157,7 +5157,6 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   z-index: 1;
   transition: background-size 100ms ease-in-out, background-position-y 100ms
     ease-in;
-  --store-menu-content-width: max(1100px, var(--store-page-width, 0px));
 }
 @media screen and (max-width: 730px) {
   html.responsive ._16jZ3HEbtaJTl80pQINN2Y {

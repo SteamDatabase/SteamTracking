@@ -1437,6 +1437,7 @@ ${STORE_BASE_URL}category/${}
 ${STORE_BASE_URL}charts
 ${STORE_BASE_URL}charts/
 ${STORE_BASE_URL}charts/steamdecktopplayed
+${STORE_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=wishlist
 ${STORE_BASE_URL}communityrecommendations/
 ${STORE_BASE_URL}contenthub/ajaxcheckcontenthubsalepage
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
@@ -1579,6 +1580,7 @@ ${STORE_BASE_URL}notification/ajaxusersettings
 ${STORE_BASE_URL}online_conduct/
 ${STORE_BASE_URL}parental/ajaxunlock/
 ${STORE_BASE_URL}parental/requestrecovery
+${STORE_BASE_URL}personalcalendar
 ${STORE_BASE_URL}personalcalendar/
 ${STORE_BASE_URL}personalcalendar/getrecommendations
 ${STORE_BASE_URL}phone/add
@@ -2469,7 +2471,7 @@ https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transi
 https://checkout.steampowered.com/qiwi/launchauth
 https://checkout.steampowered.com/recurringsubscription/renewsubscription/
 https://checkout.steampowered.com/recurringsubscription/updatesubscription/
-https://clan.akamai.steamstatic.com/images//39049601/6d623258307ee751edb132215ffe83e9b31bba95.png
+https://clan.akamai.steamstatic.com/images//39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png
 https://clan.akamai.steamstatic.com/images/41316928/846f603df6057b070667f2741730c2038648955d.png
 https://community.fastly.steamstatic.com/${m_strURL}
 https://community.fastly.steamstatic.com/economy/boosterpack/${appid}?l=english&single=1&v=2

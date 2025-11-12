@@ -11384,7 +11384,7 @@
         const { setRemoteClientID: _, rgSessions: __webpack_require__ } = _,
           _ = (0, _.useCallback)(
             (_) => {
-              __webpack_require__?.length > 0 &&
+              __webpack_require__?.length &&
                 (0, _._)(
                   _.createElement(_, {
                     sessions: __webpack_require__,
@@ -11396,7 +11396,7 @@
             },
             [_, __webpack_require__],
           );
-        return __webpack_require__?.length > 1
+        return __webpack_require__?.length
           ? _.createElement(
               "button",
               {
@@ -11433,7 +11433,7 @@
                     default:
                       return;
                   }
-                })(_.device_type),
+                })(_.device_type) ?? "",
                 _.machine_name,
               ),
             ),
@@ -11872,6 +11872,9 @@
               break;
             case "steamcurator":
               _ = (0, _._)("#steam_curator_follow_ttip");
+              break;
+            case "group":
+              _ = (0, _._)("#steam_group_follow_ttip");
           }
           return _
             ? _.createElement(
@@ -11901,7 +11904,7 @@
                   _.createElement(
                     "div",
                     {
-                      className: _.FollowBtnText,
+                      className: (0, _._)(_.FollowBtnText, "FollowBtnText"),
                     },
                     !_ &&
                       (_
@@ -11915,7 +11918,8 @@
             : (console.error("CommonFollowButton unexpected type", _), null);
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1),
+          const { followType: _ } = _,
+            [__webpack_require__, _] = _.useState(!1),
             { clanAccountID: _, className: _ } = _,
             _ = _._.InitFromClanID(_),
             [_, _] = (0, _._)(_),
@@ -11925,31 +11929,32 @@
             className: _,
             bIgnored: _,
             bFollowing: _,
-            bApplyingFollowing: _,
+            bApplyingFollowing: __webpack_require__,
             onFollowClick: () => {
               const { clanAccountID: _ } = _;
               _() &&
                 _(_) &&
-                (__webpack_require__(!0),
+                (_(!0),
                 (() => {
-                  const { clanAccountID: _, creatorID: _ } = _,
+                  const { clanAccountID: _, creatorID: __webpack_require__ } =
+                      _,
                     _ = _._.InitFromClanID(_),
                     _ = _._.Get().BIsFollowingCurator(_),
                     _ = !_ && _._.Get().BIsIgnoringCurator(_);
                   _._.Get()
                     .UpdateFollowOrIgnoreCurator(_, !_, !(_ || _))
                     .then((_) => {
-                      if (_) {
-                        let _ = _._.GetCreatorHomeByID(_);
+                      if (__webpack_require__) {
+                        let _ = _._.GetCreatorHomeByID(__webpack_require__);
                         _ || _.AdjustFollower(_ ? -1 : 1);
                       }
-                      __webpack_require__(!1);
+                      _(!1);
                     })
                     .then(() => {
                       _(_);
                     })
                     .catch((_) => {
-                      __webpack_require__(!1);
+                      _(!1);
                       let _ = (0, _._)(_);
                       console.error(
                         "CuratorFollowButton hit error: " + _.strErrorMsg,
@@ -11958,7 +11963,8 @@
                     });
                 })());
             },
-            followType: _?.is_creator_home ? "creatorhome" : "steamcurator",
+            followType:
+              _ ?? (_?.is_creator_home ? "creatorhome" : "steamcurator"),
           });
         },
         _ = (_) => {
@@ -12539,6 +12545,7 @@
             nCreatorAccountID: _,
             classOverride: __webpack_require__,
             styleOverride: _,
+            followType: _,
           } = _,
           [_, _] = (0, _._)(_),
           { creatorHome: _ } = (0, _._)(_);
@@ -12562,6 +12569,7 @@
           ),
           _.createElement(_._, {
             clanAccountID: _,
+            followType: _,
           }),
         );
       }

@@ -191,9 +191,10 @@ function _(_) {
       className: _,
       children: _,
       _: _ = "div",
+      renderWhenClosed: _ = !0,
       ..._
     } = _,
-    { triggerProps: _, menuProps: _ } = _(_);
+    { triggerProps: _, menuProps: _, isShowingMenu: _ } = _(_);
   if (!_ || _.Children.toArray(_).length === 0) return _;
   let _ = _;
   return (0, _.jsxs)(_.Fragment, {
@@ -203,7 +204,7 @@ function _(_) {
         ..._,
         className: (0, _.default)(_.className, _),
         ..._,
-        children: _,
+        children: (_ || _) && _,
       }),
     ],
   });

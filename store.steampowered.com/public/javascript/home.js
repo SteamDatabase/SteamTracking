@@ -109,8 +109,6 @@ GHomepage = {
 
 		InitHorizontalAutoSliders();
 
-		InitTabListView();
-
 		if ( $J( '#load_addtl_scroll_target' ).length )
 			new CScrollOffsetWatcher( '#load_addtl_scroll_target', GHomepage.OnHomeActivate.bind(this) );
 
@@ -456,6 +454,7 @@ GHomepage = {
 			// select the first item in the tabbed lists area
 			window.setTimeout( function() {
 				$J('.tab_item:visible').first().trigger('mouseenter');
+				$J('.tab_row_item :visible').first().trigger('mouseenter');
 			}, 10 );
 
 		} catch( e ) { OnHomepageException(e); }
@@ -1587,6 +1586,141 @@ GHomepage = {
 
 	},
 
+	InstrumentTabbedSectionv2: function( $Items )
+	{
+		$Items.each(function(i, j){
+			var $el = $J(j);
+			var rgLookup = GStoreItemData.GetStoreItemDataForElement( $el );
+			var $elInfoDiv = null;
+
+			if( rgLookup.item )
+			{
+				$el.on('hover focus', function(){
+
+					var fnShowElement = function()
+					{
+						if ( GHomepage.m_iTabItemPreviewMountTimeout )
+						{
+							// we may have someone showing delayed.  clear them out if that's the case.
+							window.clearTimeout( GHomepage.m_iTabItemPreviewMountTimeout );
+							GHomepage.m_iTabItemPreviewMountTimeout = null;
+						}
+
+						$el.siblings().removeClass('focus');
+						$elInfoDiv.siblings().removeClass('focus');
+						$elInfoDiv.siblings().attr('inert', true);
+						$elInfoDiv.find( '.tab_preview_video' )[0]?.pause();
+
+						$el.addClass('focus');
+						$elInfoDiv.addClass('focus');
+						$elInfoDiv.removeAttr('inert');
+						$elInfoDiv.children( '.tab_preview_video' )[0]?.play();
+					};
+
+					if ( $elInfoDiv )
+					{
+						// we've already built the element, show immediately
+						fnShowElement();
+					}
+					else
+					{
+						var rgData = rgLookup.item;
+						$elInfoDiv = $J('<div>',{'class': 'tab_preview'});
+
+						let $elTopDetailsCtn = $J('<div>',{'class': 'tab_preview_details'});
+
+						$elTopDetailsCtn.append($J('<span>', {'class': 'tab_title'}).html( rgData.name ));
+
+						if ( rgData['review_summary'] )
+						{
+							var pref = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
+							var reviewSummary = pref != 1 ? rgData['review_summary_filtered'] : rgData['review_summary'];
+							var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-html": reviewSummary['sReviewScoreTooltip'] } );
+							var reviewSummaryText = rgData.appids ? 'Overall user reviews for items in this bundle:' : 'Overall User Reviews';
+							if ( reviewSummary['bLanguageOutlier'] && pref != 1 )
+							{
+								reviewSummaryText = 'English Reviews';
+							}
+							$elReviewData.append( $J('<div>', {'class': 'title'}).text( reviewSummaryText ) );
+							$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
+							if ( reviewSummary['reviewScore'] > 0 )
+							{
+								$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary['cReviews'] ) + ')') );
+							}
+							if ( rgData['review_anomaly'] )
+							{
+								$elReviewData.append( $J( '<span class="review_anomaly_icon">&nbsp;*</span>' ) );
+							}
+
+							$elTopDetailsCtn.append( $elReviewData );
+						}
+
+						if( rgData.tags )
+						{
+							var $elTagContainer = $J('<div>',{'class': 'tags'});
+
+							for( var i=0; i<rgData.tags.length; i++)
+							{
+								var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab_preview' );
+								$elTagContainer.append($J('<a>').attr('href',url).text( rgData.tags[i] ));
+							}
+							$elTopDetailsCtn.append( $elTagContainer );
+						}
+
+						$elInfoDiv.append( $elTopDetailsCtn );
+
+						if ( rgData.microtrailer )
+						{
+							const $Video = $J('<video/>', {
+								'class': 'tab_preview_video',
+								loop: true,
+								preload: 'none'
+							}).prop("muted", true).append($J("<source>", {src: rgData.microtrailer, type: "video/webm"}));
+
+							$elInfoDiv.append($Video);
+						}
+
+						let $elScreenshotsCtn =  $J('<div>',{'class': 'tab_screenshots_ctn'});
+
+						var rgScreenshots = rgData.screenshots;
+						// we show the "this screenshot may contain mature content" mask for missing screenshots.
+						// in the bundle case, we don't really know so we assume it contains mature apps.
+						// For apps, if they have no screenshots we assume mature, but if they have at least one then they probably aren't mature
+						var bMissingScreenshotsMayBeMature = true;
+						if ( !rgLookup.bundleid && !rgLookup.packageid && rgScreenshots && rgScreenshots.length > 0 )
+							bMissingScreenshotsMayBeMature = false;
+
+						// However, for SteamChina, we need to disable this functionality since we don't have 'mature' screenshots, so we'd rather not
+						// have images than show mature content blocks
+						
+						for( var i=0; i < 4; i++ )
+						{
+							if ( rgScreenshots && i < rgScreenshots.length )
+							{
+								var screenshot = rgScreenshots[i];
+								var unAppId = screenshot.appid || rgLookup.appid;
+								var $elScreenshot = $J('<div>', {'class': 'screenshot'}).attr( 'data-background-image-url', GetScreenshotURL( unAppId, screenshot.filename, '.600x338' ) );
+								$elScreenshotsCtn.append($elScreenshot);
+							}
+							else if ( bMissingScreenshotsMayBeMature )
+							{
+								var $elScreenshot = $J('<div>', {'class': 'screenshot empty'}).append("<div>").text("This screenshot may contain mature content.");
+								$elScreenshotsCtn.append($elScreenshot);
+							}
+						}
+						$elInfoDiv.append( $elScreenshotsCtn );
+
+						$J('#tab_preview_container').append( $elInfoDiv );
+						PreloadImages( $elInfoDiv );
+
+						GHomepage.m_iTabItemPreviewMountTimeout = window.setTimeout( fnShowElement, 1 );
+					}
+				});
+			}
+		});
+
+	},
+
 	RenderFriendsRecentlyPurchased: function()
 	{
 
@@ -2460,22 +2594,27 @@ GHomepage = {
 		if ( $elTabSection.children('.tab_content_items').length )
 			$elTabSection = $elTabSection.children('.tab_content_items');
 
-		let bVersion2 = false;
 		let nItems = 10;
 		let $elTabItems = $elTabSection.children('.tab_item');
-		if ( $elTabSection.children('.tab_row_item').length )
+
+		let bVersion2 = false;
+		if ( !$elTabItems.length )
 		{
 			$elTabItems = $elTabSection.children('.tab_row_item');
 			bVersion2 = true;
-			nItems = 15;
 		}
 
 		GDynamicStorePage.FilterCapsules( nItems, nItems, $elTabItems, $elTabSection, Settings );
-		GHomepage.AddMicrotrailersToStaticCaps( $elTabSection );
 
 		// the results of $elTabSection.children('.tab_item') will change after the call to FilterCapsules above
-		if ( !bVersion2 )
+		if ( bVersion2 )
+		{
+			GHomepage.InstrumentTabbedSectionv2( $elTabItems );
+		}
+		else
+		{
 			GHomepage.InstrumentTabbedSection( $elTabItems );
+		}
 	},
 
 	FillPagedCapsuleCarousel: function( rgCapsules, $elTarget, fnCapsule, strNavContext, nCapsules )
@@ -4730,9 +4869,6 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 			var $SeeMoreLinks = $J('#tab_topsellers_content').children('.tab_see_more').children('.topsellers_see_more');
 			$SeeMoreLinks.hide().filter('[data-searchid=' + strTargetSeeMore + ']').show();
 
-			if ( bVersion2 )
-				InitTabListView();
-
 			// lazy load images when switching back
 			if ( !bFirstRender )
 				LoadDelayedImages( 'home_tabs', true );
@@ -4770,49 +4906,6 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 		fnRenderTopGrossing();
 	});
 
-}
-
-function InitTabListView()
-{
-	let $TabControlsCtn = $J(  '.tab_controls_view' );
-	let $TabSections = $J( '.home_tabs_sections' );
-
-	const fnSetTabListView = function( strViewType )
-	{
-		if ( strViewType === 'grid'  )
-		{
-			$TabSections.find( '.tab_row_item' ).addClass( 'sale_capsule' );
-			$TabSections.removeClass( 'row_list_view' );
-			$TabSections.addClass( 'grid_list_view' );
-		}
-		else if ( strViewType === 'list' )
-		{
-			$TabSections.find( '.tab_row_item' ).removeClass( 'sale_capsule' );
-			$TabSections.removeClass( 'grid_list_view' );
-			$TabSections.addClass( 'row_list_view' );
-		}
-		else
-		{
-			console.error( `Invalid view requested.` );
-		}
-	}
-
-	if ( ( window.UseSmallScreenMode && window.UseSmallScreenMode() ) || ( window.UseTabletScreenMode && window.UseTabletScreenMode() ) )
-	{
-		$TabControlsCtn.hide();
-		fnSetTabListView( 'grid' );
-		return;
-	}
-
-	$J( '.tab_view_control' ).click( function() {
-		let $Control = $J( this );
-		$J( '.tab_view_control' ).removeClass( 'selected' );
-
-		const strView = $Control.data( 'view' );
-		fnSetTabListView( strView );
-
-		$Control.addClass( 'selected' );
-	} );
 }
 
 function HomeTabOnClick( elem, strTabSelectTarget, strDelayedImageGroup )

@@ -2,9 +2,9 @@ import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 var _ = class {
@@ -1879,24 +1879,18 @@ function _(_, _) {
   let _ = _?.parentElement;
   for (; _; ) {
     if (_(_)) {
-      if (!_ || _ == "x") {
-        let _ = window.getComputedStyle(_);
-        if (
-          _.overflowX == "scroll" ||
-          _.overflowX == "auto" ||
-          _.position == "fixed"
-        )
-          break;
-      }
-      if (!_ || _ == "y") {
-        let _ = window.getComputedStyle(_);
-        if (
-          _.overflowY == "scroll" ||
-          _.overflowY == "auto" ||
-          _.position == "fixed"
-        )
-          break;
-      }
+      let _ = window.getComputedStyle(_);
+      if (
+        ((!_ || _ == "x") &&
+          (_.overflowX == "scroll" ||
+            _.overflowX == "auto" ||
+            _.position == "fixed")) ||
+        ((!_ || _ == "y") &&
+          (_.overflowY == "scroll" ||
+            _.overflowY == "auto" ||
+            _.position == "fixed"))
+      )
+        break;
     }
     _ = _.parentElement;
   }

@@ -10871,7 +10871,7 @@
         const { setRemoteClientID: t, rgSessions: a } = e,
           r = (0, n.useCallback)(
             (e) => {
-              a?.length > 0 &&
+              a?.length &&
                 (0, A.lX)(
                   n.createElement(H, {
                     sessions: a,
@@ -10883,7 +10883,7 @@
             },
             [t, a],
           );
-        return a?.length > 1
+        return a?.length
           ? n.createElement(
               "button",
               { onClick: r, className: M().ClientSelectDropdown },
@@ -10915,7 +10915,7 @@
                     default:
                       return;
                   }
-                })(e.device_type),
+                })(e.device_type) ?? "",
                 e.machine_name,
               ),
             ),
@@ -11305,6 +11305,9 @@
               break;
             case "steamcurator":
               m = (0, f.we)("#steam_curator_follow_ttip");
+              break;
+            case "group":
+              m = (0, f.we)("#steam_group_follow_ttip");
           }
           return m
             ? s.createElement(
@@ -11326,7 +11329,7 @@
                   !r && (i || a) && s.createElement(_.Jlk, null),
                   s.createElement(
                     "div",
-                    { className: b.FollowBtnText },
+                    { className: (0, S.A)(b.FollowBtnText, "FollowBtnText") },
                     !r &&
                       (i
                         ? (0, f.we)("#Button_Followed")
@@ -11339,41 +11342,42 @@
             : (console.error("CommonFollowButton unexpected type", l), null);
         },
         M = (e) => {
-          const [t, a] = s.useState(!1),
-            { clanAccountID: n, className: r } = e,
-            d = o.b.InitFromClanID(n),
-            [c, u] = (0, D.TB)(n),
-            p = (0, i.q3)(() => m.Fm.Get().BIsFollowingCurator(d)),
-            h = (0, i.q3)(() => !p && m.Fm.Get().BIsIgnoringCurator(d));
+          const { followType: t } = e,
+            [a, n] = s.useState(!1),
+            { clanAccountID: r, className: d } = e,
+            c = o.b.InitFromClanID(r),
+            [u, p] = (0, D.TB)(r),
+            h = (0, i.q3)(() => m.Fm.Get().BIsFollowingCurator(c)),
+            _ = (0, i.q3)(() => !h && m.Fm.Get().BIsIgnoringCurator(c));
           return s.createElement(R, {
-            className: r,
-            bIgnored: h,
-            bFollowing: p,
-            bApplyingFollowing: t,
+            className: d,
+            bIgnored: _,
+            bFollowing: h,
+            bApplyingFollowing: a,
             onFollowClick: () => {
               const { clanAccountID: t } = e;
               k() &&
                 A(t) &&
-                (a(!0),
+                (n(!0),
                 (() => {
-                  const { clanAccountID: t, creatorID: n } = e,
+                  const { clanAccountID: t, creatorID: a } = e,
                     r = o.b.InitFromClanID(t),
                     i = m.Fm.Get().BIsFollowingCurator(r),
                     s = !i && m.Fm.Get().BIsIgnoringCurator(r);
                   m.Fm.Get()
                     .UpdateFollowOrIgnoreCurator(r, !s, !(s || i))
                     .then((e) => {
-                      if (n) {
-                        let e = l.pF.GetCreatorHomeByID(n);
+                      if (a) {
+                        let e = l.pF.GetCreatorHomeByID(a);
                         s || e.AdjustFollower(i ? -1 : 1);
                       }
-                      a(!1);
+                      n(!1);
                     })
                     .then(() => {
                       T(i);
                     })
                     .catch((e) => {
-                      a(!1);
+                      n(!1);
                       let t = (0, g.H)(e);
                       console.error(
                         "CuratorFollowButton hit error: " + t.strErrorMsg,
@@ -11382,7 +11386,8 @@
                     });
                 })());
             },
-            followType: u?.is_creator_home ? "creatorhome" : "steamcurator",
+            followType:
+              t ?? (p?.is_creator_home ? "creatorhome" : "steamcurator"),
           });
         },
         L = (e) => {
@@ -11918,9 +11923,14 @@
         );
       }
       function ie(e) {
-        const { nCreatorAccountID: t, classOverride: a, styleOverride: n } = e,
-          [r, i] = (0, u.TB)(t),
-          { creatorHome: o } = (0, p.FV)(t);
+        const {
+            nCreatorAccountID: t,
+            classOverride: a,
+            styleOverride: n,
+            followType: r,
+          } = e,
+          [i, o] = (0, u.TB)(t),
+          { creatorHome: l } = (0, p.FV)(t);
         return s.createElement(
           "div",
           {
@@ -11929,12 +11939,12 @@
           },
           s.createElement(
             "a",
-            { href: o?.GetCreatorHomeURL("developer") },
+            { href: l?.GetCreatorHomeURL("developer") },
             s.createElement("img", {
-              src: r ? (0, d.t)(null, "medium") : i.avatar_medium_url,
+              src: i ? (0, d.t)(null, "medium") : o.avatar_medium_url,
             }),
           ),
-          s.createElement(w.of, { clanAccountID: t }),
+          s.createElement(w.of, { clanAccountID: t, followType: r }),
         );
       }
       function se(e) {

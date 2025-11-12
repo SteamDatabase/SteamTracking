@@ -4,9 +4,7 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-var _ = _(_(), 1),
-  _ = _(_(), 1);
+var _ = _(_(), 1);
 function _() {
   let _ = document.querySelector("head meta[property='valve:snr']")?.content;
   return {
@@ -41,14 +39,12 @@ async function _() {
     throw "Missing SSR clientAssets";
   window.SSR.reactRoot = (0, _.hydrateRoot)(
     document,
-    (0, _.jsx)(_.StrictMode, {
-      children: (0, _.jsx)(_, {
-        pageRoutes: _,
-        clientAssets: window.SSR.clientAssets,
-        metadata: _(),
-        loaderData: _,
-        renderContext: window.SSR.renderContext ?? {},
-      }),
+    (0, _.jsx)(_, {
+      pageRoutes: _,
+      clientAssets: window.SSR.clientAssets,
+      metadata: _(),
+      loaderData: _,
+      renderContext: window.SSR.renderContext ?? {},
     }),
   );
 }

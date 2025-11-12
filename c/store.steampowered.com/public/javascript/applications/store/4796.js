@@ -2126,20 +2126,22 @@
           refetch: _,
         };
       }
-      function _(_) {
+      function _(_, _) {
         return {
           queryKey: ["GetCreatorHomeGetAllListsQuery", _],
           queryFn: async () => {
             const _ = _.GetServiceTransport(),
               _ = _._.Init(_);
-            __webpack_require__
-              .Body()
-              .set_steamid(
-                new _._(_, _._.EUNIVERSE, 7, 0).ConvertTo64BitString(),
-              ),
-              __webpack_require__.Body().set_count(100);
+            _.Body().set_steamid(
+              new _._(_, _._.EUNIVERSE, 7, 0).ConvertTo64BitString(),
+            ),
+              _.Body().set_count(100);
             const _ = await _.GetLists(_, _);
-            return _.BSuccess() ? _.Body().list_details() : null;
+            return _.BSuccess()
+              ? _.Body()
+                  .list_details()
+                  .filter((_) => _ || 0 != _.list_state())
+              : null;
           },
           enabled: _ > 0,
         };

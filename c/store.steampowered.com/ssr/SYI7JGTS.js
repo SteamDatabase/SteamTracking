@@ -2,8 +2,8 @@ import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -14,43 +14,43 @@ import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -69,10 +69,10 @@ import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 var _ = _(_(), 1);
@@ -1010,6 +1010,150 @@ async function _(_, _) {
   if (!_.BSuccess())
     throw `Error loading followed games count: ${_.GetErrorMessage()}`;
   return _.Body().toObject().followed_game_count ?? 0;
+}
+var _ = _(_());
+var _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _
+        ? {
+            $jspbMessageInstance: _,
+          }
+        : {};
+    }
+    static fromObject(_) {
+      return new _();
+    }
+    static deserializeBinary(_) {
+      let _ = new _.default.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _;
+    }
+    serializeBinary() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {}
+    serializeBase64String() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return "CBilling_GetRecurringSubscriptionsCount_Request";
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.active_subscriptions_count || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        _.sm_m ||
+          (_.sm_m = {
+            proto: _,
+            fields: {
+              active_subscriptions_count: {
+                _: 1,
+                _: _.readInt32,
+                _: _.writeInt32,
+              },
+              inactive_subscriptions_count: {
+                _: 2,
+                _: _.readInt32,
+                _: _.writeInt32,
+              },
+            },
+          }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.default.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return "CBilling_GetRecurringSubscriptionsCount_Response";
+    }
+  },
+  _;
+((_) => {
+  function _(_, _) {
+    return _.SendMsg("Billing.GetRecurringSubscriptionsCount#1", _(_, _), _, {
+      bConstMethod: !0,
+      ePrivilege: 1,
+    });
+  }
+  _.GetRecurringSubscriptionsCount = _;
+})((_ ||= {}));
+function _() {
+  let { data: _ } = _();
+  if (_.logged_in) {
+    if (_ === void 0) return;
+  } else return !1;
+  return _.active_subscriptions_count > 0 || _.inactive_subscriptions_count > 0;
+}
+function _() {
+  let _ = _();
+  return _(_(_));
+}
+function _(_) {
+  return {
+    queryKey: ["RecurringSubscriptionCount"],
+    queryFn: () => _(_),
+    staleTime: 1 / 0,
+    enabled: _.logged_in,
+  };
+}
+async function _(_) {
+  let _ = _.Init(_),
+    _ = await _.GetRecurringSubscriptionsCount(_, _);
+  if (!_.BSuccess())
+    throw `Error loading recurring subscription count: ${_.GetErrorMessage()}`;
+  return {
+    active_subscriptions_count: _.Body().active_subscriptions_count() ?? 0,
+    inactive_subscriptions_count: _.Body().inactive_subscriptions_count() ?? 0,
+  };
 }
 function _() {
   let _ = _(),
@@ -3966,10 +4110,7 @@ function _() {
         children: _("#Menu_Section_Browse_MyWishlist"),
       }),
       (0, _.jsx)(_, {}),
-      (0, _.jsx)(_, {
-        href: `${_.STORE_BASE_URL}account/subscriptions/`,
-        children: _("#Menu_Section_Browse_MySubscriptions"),
-      }),
+      (0, _.jsx)(_, {}),
       (0, _.jsx)(_, {
         href: `${_.STORE_BASE_URL}account/familymanagement/`,
         children: _("#Menu_Section_Browse_MyFamily"),
@@ -3983,6 +4124,14 @@ function _() {
     ? (0, _.jsx)(_, {
         href: `${_.COMMUNITY_BASE_URL}my/followedgames`,
         children: _("#Menu_Section_Browse_MyFollowedGames"),
+      })
+    : null;
+}
+function _() {
+  return _()
+    ? (0, _.jsx)(_, {
+        href: `${_.STORE_BASE_URL}account/subscriptions/`,
+        children: _("#Menu_Section_Browse_MySubscriptions"),
       })
     : null;
 }
@@ -4011,6 +4160,7 @@ function _() {
       },
       _,
     ),
+    _(),
     _(),
     _(),
     null
@@ -4576,6 +4726,7 @@ function _() {
     { data: _, isError: _ } = _(),
     _ = _(_),
     { data: _ } = _(_.LANGUAGE),
+    { data: _ } = _(),
     _ = _.default.useMemo(
       () => _.ShuffleArray(_().slice(), 0, _.SeededRandom(_)),
       [],
@@ -4586,7 +4737,7 @@ function _() {
   return _.default.useMemo(() => {
     let _ = _ ?? (_ ? [] : void 0),
       _ = _ ?? (_ ? [] : void 0);
-    if (_ == null || _ == null || !_ || !_) return [null, null];
+    if (_ == null || _ == null || !_ || !_ || !_) return [null, null];
     let _ = new Set(),
       _ = new Set(),
       _ = [],
@@ -4599,13 +4750,22 @@ function _() {
       if (_.length < _) _ = _;
       else if (_.length < _) _ = _;
       else break;
+      if (_.type == "tag" && _.has(_.unTagID)) {
+        let _ = _.get(_.unTagID);
+        _ = {
+          type: "hub",
+          strHandle: _.handle,
+          strName: _.display_name,
+          strURLPath: _.url_path,
+        };
+      }
       _.type == "tag" && (!_ || !_.includes(_.unTagID))
         ? !_.has(_.unTagID) && _.unTagID in _ && (_.add(_.unTagID), _.push(_))
         : _.type == "hub" &&
           (_.has(_.strHandle) || (_.add(_.strHandle), _.push(_)));
     }
     return [_, _];
-  }, [_, _, _, _, _, _, _, _, _]);
+  }, [_, _, _, _, _, _, _, _, _, _]);
 }
 function* _(_, _, _) {
   let _ = _.slice(),
