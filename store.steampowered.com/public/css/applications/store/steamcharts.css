@@ -1312,7 +1312,8 @@ body:not(.v7menu) div#global_header .content {
   );
   position: sticky;
   z-index: 150;
-  width: 100%;
+  width: auto;
+  box-sizing: border-box;
   background-color: #1a9fff;
   display: flex;
   justify-content: center;

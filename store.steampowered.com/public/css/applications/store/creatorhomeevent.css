@@ -31,7 +31,8 @@
   );
   position: sticky;
   z-index: 150;
-  width: 100%;
+  width: auto;
+  box-sizing: border-box;
   background-color: #1a9fff;
   display: flex;
   justify-content: center;
@@ -1534,7 +1535,7 @@ p a:hover {
   position: relative;
   align-items: center;
   width: fit-content;
-  display: inline-block;
+  display: inline-flex;
   background: #fff;
   max-height: 32px;
   box-shadow: none;
@@ -1637,7 +1638,7 @@ p a:hover {
 .BwHJdoHlv8wy5OypqL_b7 {
   position: relative;
   width: fit-content;
-  display: inline-block;
+  display: inline-flex;
   background: #fff;
   max-height: 32px;
   box-shadow: none;
