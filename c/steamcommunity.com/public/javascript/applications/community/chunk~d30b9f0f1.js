@@ -1123,7 +1123,7 @@
                 localized_label: [],
                 localized_label_image: [],
                 default_label: "#Sale_default_label",
-                unique_id: _._.GenerateRandomID(),
+                unique_id: (0, _._)(),
                 internal_section_data: null,
                 capsules_per_row_array: [2, 3, 4, 3],
                 carousel_rows: 2,
@@ -1574,6 +1574,7 @@
         _,
         _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3138,18 +3139,14 @@
           let _ = this.GetTabSaleSection();
           return _ && _.tabs.forEach((_) => _.capsules.forEach(_)), _;
         }
-        static GenerateRandomID() {
-          return Math.floor(_._ + Math.random() * (_._ - _._ + 1));
-        }
         GenerateBackgroundImageGroupUniqueID() {
-          let _ = _.GenerateRandomID();
-          for (; this.GetBackgroundImageGroupByID(_); )
-            _ = _.GenerateRandomID();
+          let _ = (0, _._)();
+          for (; this.GetBackgroundImageGroupByID(_); ) _ = (0, _._)();
           return _;
         }
         GenerateSaleSectionUniqueID() {
-          let _ = _.GenerateRandomID();
-          for (; this.GetSaleSectionByID(_); ) _ = _.GenerateRandomID();
+          let _ = (0, _._)();
+          for (; this.GetSaleSectionByID(_); ) _ = (0, _._)();
           return _;
         }
         GetFacetByID(_, _) {

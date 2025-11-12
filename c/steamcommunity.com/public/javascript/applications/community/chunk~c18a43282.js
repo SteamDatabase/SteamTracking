@@ -1101,8 +1101,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1148,7 +1146,8 @@
         "GetEventStartTime",
         null,
       );
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
       function _(_) {
         return (
@@ -1177,8 +1176,6 @@
         _ = 20,
         _ = 45559995,
         _ = [_, 35143931, _, _, _],
-        _ = 1e4,
-        _ = 99999,
         _ = [12, 34];
       function _(_) {
         return !_.some((_) => _ == _.GetEventType()) && !_.BHasTag("curator");
@@ -2325,7 +2322,7 @@
               localized_label: [],
               default_label: "",
             };
-          let _ = _ + 10;
+          let _ = _._ + 10;
           return (
             _ &&
               _.push({
@@ -2371,7 +2368,7 @@
         }
         GetSaleSectionByID(_) {
           var _;
-          if (_ > _) {
+          if (_ > _._) {
             return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
               (_) => _.unique_id == _,
             );
@@ -3241,6 +3238,19 @@
             : (_.visibility_state = _._.k_EEventStateUnpublished),
           _
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 1e4,
+        _ = 99999;
+      function _() {
+        return Math.floor(_ + Math.random() * (_ - _ + 1));
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

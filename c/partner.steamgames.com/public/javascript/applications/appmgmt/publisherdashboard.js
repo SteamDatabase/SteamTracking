@@ -3894,11 +3894,7 @@
               .reduce((_, [_, _]) => {
                 const _ = (0, _._)(new Date(1e3 * _.due_date)),
                   _ = (function (_) {
-                    switch (_) {
-                      case 4:
-                      case 5:
-                        return !0;
-                    }
+                    if (4 === _) return !0;
                     return !1;
                   })(_.type),
                   _ = _ ? "group" : _,
@@ -3920,11 +3916,7 @@
                 _
                   ? _.push(
                       (function (_, _) {
-                        switch (_[0].type) {
-                          case 4:
-                          case 5:
-                            return _(_, _[0]);
-                        }
+                        if (4 === _[0].type) return _(_, _[0]);
                         return;
                       })(_, _),
                     )
