@@ -7286,7 +7286,7 @@
                 (0, _._)(
                   "#Profile_Edit_Showcase_Instructions",
                   _.createElement("a", {
-                    href: _._.STORE_BASE_URL + "points/",
+                    href: _._.STORE_BASE_URL + "points/shop/profileshowcases",
                   }),
                 ),
               ),

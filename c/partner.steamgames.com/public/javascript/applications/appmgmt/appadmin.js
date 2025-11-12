@@ -1500,6 +1500,10 @@
                 label: "Floating point",
                 data: 1,
               },
+              {
+                label: "String",
+                data: 3,
+              },
             ],
             onChange: (_) => {
               __webpack_require__(_.data);

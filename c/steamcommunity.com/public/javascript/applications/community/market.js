@@ -12,6 +12,7 @@
         "Variant-outline": "_2LFuBuGcuX3UacjkjYrmqQ",
         "Variant-ghost": "_1xMDQOty4SbpGVgteEScKt",
         "Variant-vibrant": "_2nogTuAElArk4_ZwguHrj9",
+        Width: "_22QjLys3NNTF63myldvVj6",
       };
     },
     chunkid: (module) => {
@@ -511,7 +512,116 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _ = _._.LANGUAGE) {
+        const _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          ..._(_, _, _, _),
+          enabled: !!_,
+        });
+      }
+      function _(_, _, _, _) {
+        return {
+          queryKey: ["AssetPropertySchemaMap", _, _],
+          queryFn: async () => {
+            const _ = await _.fetchQuery(_(_, _, _)),
+              _ = new Map();
+            return _.property_schemas.forEach((_) => _.set(_._, _)), _;
+          },
+        };
+      }
+      function _(_, _, _) {
+        return {
+          queryKey: ["AssetPropertySchema", _, _],
+          queryFn: async () => {
+            var _;
+            const _ = await _._.GetAssetPropertySchema(_, {
+              appid: _,
+              language: _,
+            });
+            if (!_.BSuccess() && 42 != _.GetEResult())
+              throw `Error loading asset properties for ${_}: ${_.GetErrorMessage()}`;
+            return {
+              property_schemas:
+                null !== (_ = _.Body().toObject().property_schemas) &&
+                void 0 !== _
+                  ? _
+                  : [],
+            };
+          },
+        };
+      }
+      var _ = __webpack_require__("chunkid");
+      const _ = {};
+      _.english = () =>
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__._.bind(__webpack_require__, 73759, 19));
+      const _ = (0, _._)(async function (_) {
+          if (_[_]) return _[_]();
+        }),
+        _ = _.Localize;
+      var _ = __webpack_require__("chunkid");
+      const _ = {
+        Label: function (_) {
+          const { appid: _, property: __webpack_require__ } = _,
+            { data: _ } = _(_),
+            _ = null == _ ? void 0 : _.get(__webpack_require__.propertyid);
+          return _ ? _.localized_label : null;
+        },
+        Value: _,
+      };
+      const _ = Object.assign(function (_) {
+        const { appid: _, property: __webpack_require__, ..._ } = _,
+          { data: _ } = _(_),
+          _ = null == _ ? void 0 : _.get(__webpack_require__.propertyid);
+        return _
+          ? _.createElement(
+              _._,
+              {
+                _: "div",
+                ..._,
+              },
+              _.LocalizeReact(
+                "#ItemDescription_AssetPropertyLabelColonValue",
+                _.localized_label,
+                _.createElement(_, {
+                  property: __webpack_require__,
+                }),
+              ),
+            )
+          : null;
+      }, _);
+      function _(_) {
+        const { property: _ } = _;
+        if (void 0 !== _.float_value) {
+          const _ =
+            "string" == typeof _.float_value
+              ? parseFloat(_.float_value)
+              : _.float_value;
+          let _ = 9;
+          return (
+            _ > 0 &&
+              (_ < 1e-28
+                ? (_ = 47)
+                : _ < 1e-18
+                  ? (_ = 35)
+                  : _ < 1e-12
+                    ? (_ = 21)
+                    : _ < 1e-5 && (_ = 15)),
+            _.toLocaleString(void 0, {
+              maximumFractionDigits: _,
+            })
+          );
+        }
+        return void 0 !== _.int_value
+          ? _.int_value.toLocaleString()
+          : void 0 !== _.string_value
+            ? _.string_value
+            : null;
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -552,99 +662,106 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, asset: __webpack_require__, ..._ } = _,
+        const { children: _, ...__webpack_require__ } = _,
           [_, _] = (0, _._)(),
-          _ = _.useRef(null);
+          _ = _.useRef(null),
+          _ = !(0, _._)(!_, 250),
+          _ = _.useCallback(() => `${_}px`, []),
+          _ = _.useCallback((_) => {
+            const _ = _.current;
+            if (_ && 0 != _.deltaY) {
+              const _ = _.scrollTop;
+              _.scrollBy({
+                top: _.deltaY,
+              }),
+                _.scrollTop != _ && _.preventDefault();
+            }
+          }, []),
+          _ = (0, _._)("wheel", _, {
+            passive: !1,
+          });
         return _.createElement(
-          _.Fragment,
-          null,
-          _.cloneElement(_, {
-            ..._,
-            ref: _,
-          }),
-          _ &&
-            __webpack_require__ &&
-            _.createElement(_, {
-              asset: __webpack_require__,
+          _._.Root,
+          {
+            open: _ && _,
+            width: _,
+            placement: "right",
+          },
+          _.createElement(
+            _._.Anchor,
+            null,
+            _.cloneElement(_, {
               ..._,
-              refElement: _,
+              ref: _,
             }),
+          ),
+          _.createElement(
+            _._.Positioner,
+            null,
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                ...__webpack_require__,
+                refHover: _,
+              }),
+            ),
+          ),
         );
       }
       const _ = 346;
       function _(_) {
         var _;
         const {
-            description: __webpack_require__,
-            asset: _,
-            bHideImage: _ = !1,
-            refElement: _,
-          } = _,
-          [_, _] = _.useState(),
-          { data: _ } = _(_.appid, __webpack_require__ ? void 0 : _),
-          _ = _.useCallback(() => {
-            const _ = _.current;
-            if (!_) return void _(void 0);
-            const _ = _.getBoundingClientRect(),
-              _ = _.ownerDocument.defaultView.innerWidth;
-            _.right + 1.02 * _ > _ && _.left - 1.02 * _ > 0
-              ? _({
-                  right: _ - _.left + "px",
-                  top: `${_.top}px`,
-                })
-              : _({
-                  left: `${_.right}px`,
-                  top: `${_.top}px`,
-                });
-          }, [_]),
-          _ =
-            null === (_ = _.current) || void 0 === _
-              ? void 0
-              : _.ownerDocument.defaultView;
-        _.useLayoutEffect(() => _(), [_]),
-          (0, _._)(_, "resize", _),
-          (0, _._)(_, "scroll", _);
-        const _ = null != __webpack_require__ ? __webpack_require__ : _;
-        return _ && _
+          description: __webpack_require__,
+          asset: _,
+          bHideImage: _ = !1,
+          refHover: _,
+        } = _;
+        let _,
+          _ = null == __webpack_require__ ? void 0 : __webpack_require__.appid;
+        "identifiers" in _ &&
+          ((_ = _.identifiers),
+          (_ = null !== (_ = _.appid) && void 0 !== _ ? _ : _));
+        const { data: _ } = _(_, __webpack_require__ ? void 0 : _),
+          _ = null != __webpack_require__ ? __webpack_require__ : _;
+        return _
           ? _.createElement(
-              _._,
+              _.Root,
               {
-                style: {
-                  ..._,
-                  position: "fixed",
-                  zIndex: 1,
-                  width: `${_}px`,
-                },
+                description: _,
+                asset: _,
+                bInteractable: !1,
               },
               _.createElement(
-                _.Root,
+                _.Container,
                 {
-                  description: _,
-                  asset: _,
+                  maxHeight: "90vh",
+                  overflow: "auto",
+                  ref: _,
                 },
-                _.createElement(
-                  _.Container,
-                  null,
-                  !_ &&
-                    _.createElement(
-                      _.Fragment,
-                      null,
-                      _.createElement(_.Image, null),
-                      _.createElement(_.Separator, null),
-                    ),
-                  _.createElement(_.Name, null),
-                  _.createElement(_.GameInfo, null),
-                  _.createElement(_.Descriptions, null),
-                  _.createElement(_.OwnerDescriptions, null),
-                  _.createElement(_.Tags, null),
-                ),
+                !_ &&
+                  _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement(_.Image, null),
+                    _.createElement(_.Separator, null),
+                  ),
+                _.createElement(_.Name, null),
+                _.createElement(_.GameInfo, null),
+                _.createElement(_.Descriptions, null),
+                _.createElement(_.OwnerDescriptions, null),
+                _.createElement(_.Tags, null),
+                _.createElement(_.AssetProperties, null),
+                _.createElement(_.SellOnMarket, null),
               ),
             )
           : null;
       }
-      var _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _.name_color ? `#${_.name_color}` : _;
       }
@@ -708,7 +825,6 @@
           ? _.createElement(
               _,
               {
-                asset: __webpack_require__,
                 description: _,
               },
               _.createElement(
@@ -1040,6 +1156,9 @@
       function _() {
         return _.useContext(_).asset;
       }
+      function _() {
+        return _.useContext(_).bInteractable;
+      }
       var _,
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1167,15 +1286,6 @@
           (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
       })(_ || (_ = {}));
       _.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS;
-      var _ = __webpack_require__("chunkid");
-      const _ = {};
-      _.english = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 73759, 19));
-      const _ = (0, _._)(async function (_) {
-        if (_[_]) return _[_]();
-      }).Localize;
       function _(_) {
         const { appid: _, hashName: __webpack_require__ } = _,
           { data: _ } =
@@ -1227,19 +1337,22 @@
         );
       }
       function _() {
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _._,
-            {
-              color: "green",
-              onClick: () => window.SellCurrentSelection(),
-              size: "1",
-            },
-            _("#SellOnMarket_SellThisItem"),
-          ),
-        );
+        const _ = _();
+        return _._.logged_in && _ && _ == _._.steamid
+          ? _.createElement(
+              _._,
+              null,
+              _.createElement(
+                _._,
+                {
+                  color: "green",
+                  onClick: () => window.SellCurrentSelection(),
+                  size: "1",
+                },
+                _("#SellOnMarket_SellThisItem"),
+              ),
+            )
+          : null;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1270,13 +1383,19 @@
         _ = __webpack_require__("chunkid");
       const _ = {
         Root: function (_) {
-          const { description: _, asset: __webpack_require__, children: _ } = _,
+          const {
+              description: _,
+              asset: __webpack_require__,
+              bInteractable: _ = !0,
+              children: _,
+            } = _,
             _ = _.useMemo(
               () => ({
                 description: _,
                 asset: __webpack_require__,
+                bInteractable: _,
               }),
-              [_, __webpack_require__],
+              [_, __webpack_require__, _],
             );
           return _.createElement(
             _.Provider,
@@ -1287,7 +1406,7 @@
           );
         },
         Container: function (_) {
-          const { children: _ } = _,
+          const { children: _, ...__webpack_require__ } = _,
             _ = _();
           return _.createElement(
             _._,
@@ -1297,6 +1416,7 @@
               padding: "2",
               className: _.ItemDescription,
               gapY: "2",
+              ...__webpack_require__,
             },
             _,
           );
@@ -1451,13 +1571,14 @@
         },
         Actions: function () {
           const _ = _(),
-            { actions: _ } = _;
-          return (
-            _ &&
-            _.createElement(_, {
-              actions: _,
-            })
-          );
+            _ = _(),
+            { actions: __webpack_require__ } = _;
+          return _
+            ? __webpack_require__ &&
+                _.createElement(_, {
+                  actions: __webpack_require__,
+                })
+            : null;
         },
         OwnerDescriptions: function () {
           const _ = _();
@@ -1470,19 +1591,22 @@
         },
         OwnerActions: function () {
           const _ = _(),
-            { owner_actions: _, market_actions: __webpack_require__ } = _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            _ &&
-              _.createElement(_, {
-                actions: _,
-              }),
-            __webpack_require__ &&
-              _.createElement(_, {
-                actions: __webpack_require__,
-              }),
-          );
+            _ = _(),
+            { owner_actions: __webpack_require__, market_actions: _ } = _;
+          return _
+            ? _.createElement(
+                _.Fragment,
+                null,
+                __webpack_require__ &&
+                  _.createElement(_, {
+                    actions: __webpack_require__,
+                  }),
+                _ &&
+                  _.createElement(_, {
+                    actions: _,
+                  }),
+              )
+            : null;
         },
         Tags: function () {
           const _ = _(),
@@ -1501,11 +1625,30 @@
               )
             : null;
         },
+        AssetProperties: function () {
+          const _ = _();
+          return _ && _.asset_properties && 0 != _.asset_properties.length
+            ? _.createElement(
+                _._,
+                {
+                  direction: "column",
+                  gapY: "1",
+                },
+                _.asset_properties.map((_, _) =>
+                  _.createElement(_, {
+                    key: _,
+                    appid: _.appid,
+                    property: _,
+                    contrast: "note",
+                  }),
+                ),
+              )
+            : null;
+        },
         SellOnMarket: function () {
           const _ = _(),
             _ = _();
-          if (!_.marketable || !_._.logged_in || !_ || _ != _._.steamid)
-            return null;
+          if (!_.marketable) return null;
           const _ = _.market_hash_name || _.market_name || _.name;
           return _
             ? _.createElement(
@@ -1516,37 +1659,43 @@
                   gapY: "3",
                   direction: "column",
                 },
-                _.createElement(
-                  _._,
-                  {
-                    _: "div",
-                  },
+                _ &&
                   _.createElement(
-                    _,
+                    _._,
                     {
-                      underline: "auto",
-                      color: "greyneutral-12",
-                      href: `${_._.COMMUNITY_BASE_URL}market/listings/${_.appid}/${encodeURIComponent(_)}`,
+                      _: "div",
                     },
-                    _("#SellOnMarket_View"),
+                    _.createElement(
+                      _,
+                      {
+                        underline: "auto",
+                        color: "greyneutral-12",
+                        href: `${_._.COMMUNITY_BASE_URL}market/listings/${_.appid}/${encodeURIComponent(_)}`,
+                      },
+                      _("#SellOnMarket_View"),
+                    ),
                   ),
-                ),
                 _.createElement(_, {
                   appid: _.appid,
                   hashName: _,
                 }),
-                _.createElement(_, null),
+                _ && _.createElement(_, null),
               )
             : null;
         },
       };
       const _ = Object.assign(function (_) {
-        const { description: _, asset: __webpack_require__ } = _;
+        const {
+          description: _,
+          asset: __webpack_require__,
+          bInteractable: _ = !0,
+        } = _;
         return _.createElement(
           _.Root,
           {
             description: _,
             asset: __webpack_require__,
+            bInteractable: _,
           },
           _.createElement(
             _.Container,
@@ -1561,6 +1710,7 @@
             _.createElement(_.OwnerDescriptions, null),
             _.createElement(_.OwnerActions, null),
             _.createElement(_.Tags, null),
+            _.createElement(_.AssetProperties, null),
             _.createElement(_.SellOnMarket, null),
           ),
         );
@@ -1585,7 +1735,12 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { name: _, bIsMarket: __webpack_require__, steamidOwner: _ } = _,
+        const {
+            name: _,
+            bIsMarket: __webpack_require__,
+            bInteractable: _ = !0,
+            steamidOwner: _,
+          } = _,
           [_, _] = _.useState();
         return (
           (0, _.useEffect)(
@@ -1643,6 +1798,7 @@
                       : _.createElement(_, {
                           description: _.description,
                           asset: _.asset,
+                          bInteractable: _,
                         }),
                   ),
                 ),
@@ -1956,6 +2112,12 @@
           prop: "color",
           dataProperty: (_) => ["accent-color", `${_}`],
         },
+        {
+          prop: "width",
+          className: _.Width,
+          cssProperty: "--width",
+          responsive: !0,
+        },
       ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1992,6 +2154,139 @@
           cssProperty: "--object-position",
         },
       ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)(null);
+      function _(_) {
+        const { gutter: _ = 0 } = _;
+        return [
+          (0, _._)(2),
+          (0, _._)(),
+          (0, _._)(),
+          (0, _._)({
+            apply: (_) => {
+              const { rects: _, elements: _, availableHeight: _ } = _,
+                _ =
+                  "number" == typeof _
+                    ? _ - _ + "px"
+                    : `calc( ${_}px - var(--spacing-${_}) )`,
+                _ = {
+                  maxHeight: _,
+                  boxSizing: "border-box",
+                  zIndex: "1",
+                };
+              switch ((_.scroll && (_.overflowY = "auto"), _.width)) {
+                case "target":
+                  _.width = `${_.reference.width}px`;
+                  break;
+                case "content":
+                  _.width = `${_.floating.width}px`;
+                  break;
+                case "dropdown": {
+                  let _ = _.reference.width;
+                  _.floating.width > _ && _ < 200 && (_ = _.floating.width),
+                    (_.width = `${_}px`);
+                }
+              }
+              "function" == typeof _.width &&
+                (_.width = _.width({
+                  unContentWidth: _.floating.width,
+                  unTargetWidth: _.reference.width,
+                })),
+                Object.assign(_.floating.style, _),
+                _.floating.style.setProperty("--popover-max-height", _);
+            },
+          }),
+        ];
+      }
+      const _ = {
+        Root: function (_) {
+          const { children: _, ...__webpack_require__ } = _,
+            _ = (function (_) {
+              const {
+                open: _,
+                onOpenChange: __webpack_require__,
+                placement: _,
+              } = _;
+              let _ = _;
+              0;
+              const _ = (0, _._)({
+                  open: _,
+                  onOpenChange: __webpack_require__,
+                  middleware: _(_),
+                  whileElementsMounted: _._,
+                  placement: _,
+                }),
+                _ = (0, _._)(_.context),
+                _ = (0, _._)(_.context, {
+                  keyboardHandlers: !_,
+                }),
+                { getFloatingProps: _, getReferenceProps: _ } = (0, _._)([
+                  _,
+                  _,
+                ]);
+              return {
+                floating: _,
+                getFloatingProps: _,
+                getReferenceProps: _,
+                open: _,
+              };
+            })(__webpack_require__);
+          return _.createElement(
+            _.Provider,
+            {
+              value: _,
+            },
+            _,
+          );
+        },
+        Anchor: function (_) {
+          const { children: _ } = _,
+            _ = _.Children.only(_),
+            _ = (0, _.useContext)(_);
+          return _
+            ? _
+              ? (0, _.cloneElement)(_, {
+                  ..._.getReferenceProps(_.props),
+                  ref: (0, _._)(_.props.ref, _.floating.refs.setReference),
+                })
+              : (console.error(
+                  "<PopoverAnchor> must be a child of <PopoverRoot>.",
+                ),
+                null)
+            : null;
+        },
+        Positioner: function (_) {
+          const { children: _, className: __webpack_require__, ref: _ } = _,
+            _ = (0, _.useContext)(_),
+            _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]);
+          if (!_)
+            return (
+              console.error(
+                "<PopoverPositioner> must be a child of <PopoverRoot>.",
+              ),
+              null
+            );
+          if (!_.open) return null;
+          const _ = _.Children.only(_);
+          return (0, _.cloneElement)(_, {
+            ref: _,
+            style: _.floating.floatingStyles,
+            className: __webpack_require__,
+            ..._.getFloatingProps(),
+          });
+        },
+      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3267,50 +3562,6 @@
         },
       );
       var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      (0, _.createContext)(null);
-      function _(_) {
-        const { gutter: _ = 0 } = _;
-        return [
-          (0, _._)(2),
-          (0, _._)(),
-          (0, _._)(),
-          (0, _._)({
-            apply: (_) => {
-              const { rects: _, elements: _, availableHeight: _ } = _,
-                _ =
-                  "number" == typeof _
-                    ? _ - _ + "px"
-                    : `calc( ${_}px - var(--spacing-${_}) )`,
-                _ = {
-                  maxHeight: _,
-                  boxSizing: "border-box",
-                  zIndex: "1",
-                };
-              switch ((_.scroll && (_.overflowY = "auto"), _.width)) {
-                case "target":
-                  _.width = `${_.reference.width}px`;
-                  break;
-                case "content":
-                  _.width = `${_.floating.width}px`;
-                  break;
-                case "dropdown": {
-                  let _ = _.reference.width;
-                  _.floating.width > _ && _ < 200 && (_ = _.floating.width),
-                    (_.width = `${_}px`);
-                }
-              }
-              "function" == typeof _.width &&
-                (_.width = _.width({
-                  unContentWidth: _.floating.width,
-                  unTargetWidth: _.reference.width,
-                })),
-                Object.assign(_.floating.style, _),
-                _.floating.style.setProperty("--popover-max-height", _);
-            },
-          }),
-        ];
-      }
       const _ = (0, _.createContext)(null);
       function _(_) {
         const {
@@ -3328,7 +3579,7 @@
         const _ = (0, _._)({
             open: _,
             onOpenChange: __webpack_require__,
-            middleware: _(_),
+            middleware: (0, _._)(_),
             whileElementsMounted: _._,
             placement: _,
           }),
@@ -3690,17 +3941,25 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
-        const { options: _, ...__webpack_require__ } = _;
+        const {
+          options: _,
+          getOptionLabel: __webpack_require__ = (_) => _,
+          ..._
+        } = _;
         return _.createElement(
           _.Root,
           {
-            ...__webpack_require__,
+            ..._,
           },
           _.map((_) =>
-            _.createElement(_.Item, {
-              value: _,
-              key: _,
-            }),
+            _.createElement(
+              _.Item,
+              {
+                value: _,
+                key: _,
+              },
+              __webpack_require__(_),
+            ),
           ),
         );
       }
@@ -3773,6 +4032,16 @@
                   return _[_] === _ && delete _[_], _;
                 }),
               [],
+            ),
+            _ = (0, _.useMemo)(
+              () => ({
+                value: _,
+                onValueChange: _,
+                register: _,
+                unregister: _,
+                radius: __webpack_require__,
+              }),
+              [_, _, _, _, __webpack_require__],
             );
           return _.createElement(
             _,
@@ -3796,15 +4065,19 @@
                     _ = -1;
                 }
                 if (_) {
-                  const _ = _[_],
-                    _ = Array.from(Object.values(_)).sort(_),
-                    _ = _.findIndex((_) => _ === _);
-                  (0, _._)(
-                    "number" == typeof _,
-                    "Could not find current segmented value position",
-                  );
-                  const _ = _ + _,
-                    _ = _[_ < 0 ? _.length + _ : _ % _.length],
+                  const _ = Array.from(Object.values(_)).sort(_);
+                  let _;
+                  if (null === _) _ = _ > 0 ? 0 : _.length - 1;
+                  else {
+                    const _ = _[_],
+                      _ = __webpack_require__.findIndex((_) => _ === _);
+                    (0, _._)(
+                      "number" == typeof _,
+                      "Could not find current segmented value position",
+                    ),
+                      (_ = _ + _);
+                  }
+                  const _ = _[_ < 0 ? _.length + _ : _ % _.length],
                     _ = Object.keys(_).find((_) => _[_] === _);
                   "string" != typeof _
                     ? console.error("Could not find next segmeneted value")
@@ -3815,16 +4088,7 @@
             _.createElement(
               _.Provider,
               {
-                value: (0, _.useMemo)(
-                  () => ({
-                    value: _,
-                    onValueChange: _,
-                    register: _,
-                    unregister: _,
-                    radius: __webpack_require__,
-                  }),
-                  [_, _, _, _, __webpack_require__],
-                ),
+                value: _,
               },
               _.createElement(
                 "div",
@@ -3832,9 +4096,10 @@
                   className: _.SegmentedControl,
                 },
                 _,
-                _.createElement(_, {
-                  radius: __webpack_require__,
-                }),
+                null !== _ &&
+                  _.createElement(_, {
+                    radius: __webpack_require__,
+                  }),
               ),
             ),
           );

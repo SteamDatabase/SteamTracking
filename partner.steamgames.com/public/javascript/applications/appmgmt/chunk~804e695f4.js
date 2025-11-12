@@ -526,6 +526,11 @@
                     br: n.qM.readFixed64String,
                     bw: n.gp.writeFixed64String,
                   },
+                  delete_reason: {
+                    n: 14,
+                    br: n.qM.readEnum,
+                    bw: n.gp.writeEnum,
+                  },
                 },
               }),
             y.sm_m

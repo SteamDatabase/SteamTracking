@@ -579,13 +579,6 @@
 ._3DB3VqbQwlwEgIobz3qnQM ._3Xqeg3LLYGoiKT-U9piY6E {
   margin-top: 20px;
   padding: 12px;
-  background: #4d6245;
-  font-size: 14px;
-  color: #f5f5f5;
-  gap: 6px;
-}
-._3DB3VqbQwlwEgIobz3qnQM ._3Xqeg3LLYGoiKT-U9piY6E._1YobMWi3HWE0jIVIrAR_bB {
-  background: #4f4732;
 }
 ._3DB3VqbQwlwEgIobz3qnQM ._3urQXqeQ2IIwm1n4vl7qGi {
   display: flex;
@@ -624,6 +617,22 @@
   font-size: 14px;
   color: #f5f5f5;
   gap: 6px;
+}
+._3Xqeg3LLYGoiKT-U9piY6E {
+  padding: 12px 8px;
+  background: #4d6245;
+  font-size: 14px;
+  color: #f5f5f5;
+  gap: 6px;
+}
+._3Xqeg3LLYGoiKT-U9piY6E._1YobMWi3HWE0jIVIrAR_bB {
+  background: #4f4732;
+}
+._3Xqeg3LLYGoiKT-U9piY6E a {
+  text-decoration: underline;
+}
+._3Xqeg3LLYGoiKT-U9piY6E b {
+  font-weight: 600;
 }
 ._26iJ3c5EI_arYCNqRvcLNX {
   overflow: scroll;
@@ -850,77 +859,6 @@
 }
 .naYpWkI1nnET_gXJrYEAw {
   max-width: fit-content;
-}
-._2gBFqL_6eXiRN7TI_GDjzF ._DialogLayout {
-  margin-bottom: 2px;
-}
-._2gBFqL_6eXiRN7TI_GDjzF ._DialogLayout input {
-  font-size: 16px;
-}
-._2gBFqL_6eXiRN7TI_GDjzF ._3eXNgAtnlHBfgWZbxO2n3h {
-  overflow-y: auto;
-  background: #3a404a;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 4px;
-  border-radius: 0px 0px 4px 4px;
-}
-._2gBFqL_6eXiRN7TI_GDjzF ._3eXNgAtnlHBfgWZbxO2n3h ._3w0K5X735sKAZhhifZGs84 {
-  padding: 2px;
-  text-align: center;
-}
-._2gBFqL_6eXiRN7TI_GDjzF ._3eXNgAtnlHBfgWZbxO2n3h ._1KK1sGDuxehec0lBB_4lpU {
-  padding: 2px;
-  text-align: center;
-  color: #fff;
-  background-color: gray;
-}
-._2gBFqL_6eXiRN7TI_GDjzF ._3eXNgAtnlHBfgWZbxO2n3h ._16oSf0MiTpUTJe7YQpCV2A {
-  display: flex;
-  align-items: center;
-  padding: 6px;
-  border-bottom: 1px solid #474e59;
-  position: relative;
-}
-._2gBFqL_6eXiRN7TI_GDjzF
-  ._3eXNgAtnlHBfgWZbxO2n3h
-  ._16oSf0MiTpUTJe7YQpCV2A:hover {
-  cursor: pointer;
-  background: #5c6472;
-}
-._2gBFqL_6eXiRN7TI_GDjzF
-  ._3eXNgAtnlHBfgWZbxO2n3h
-  ._16oSf0MiTpUTJe7YQpCV2A:last-child {
-  border-bottom: none;
-}
-._2gBFqL_6eXiRN7TI_GDjzF
-  ._3eXNgAtnlHBfgWZbxO2n3h
-  ._16oSf0MiTpUTJe7YQpCV2A
-  ._3dr2A8wfoYU0kJtS9ACoR1 {
-  width: auto;
-  height: 30px;
-  flex-shrink: 0;
-}
-._2gBFqL_6eXiRN7TI_GDjzF
-  ._3eXNgAtnlHBfgWZbxO2n3h
-  ._16oSf0MiTpUTJe7YQpCV2A
-  ._3CWrph5moGF_F746uM5tdI {
-  padding: 0px 8px;
-  letter-spacing: 0px;
-  font-size: 14px;
-  text-transform: none;
-}
-._2gBFqL_6eXiRN7TI_GDjzF
-  ._3eXNgAtnlHBfgWZbxO2n3h
-  ._16oSf0MiTpUTJe7YQpCV2A
-  .I1zVikvORZt41zc-QTAsw {
-  position: absolute;
-  top: 4px;
-  right: 0;
-  font-size: 10px;
-  background: #add8e6;
-  color: #000;
-  padding: 0 10px;
 }
 ._8MIrt7rQXkA0xE5sAjOee {
   display: flex;
@@ -1664,6 +1602,25 @@ input._2lHX9aoh5vq8UVFZpoUXLi::placeholder {
   display: block;
   margin-right: 101px;
 }
+._6BF_4hDIQb4IUVMnPGyOc {
+  flex-grow: 1;
+}
+._6BF_4hDIQb4IUVMnPGyOc ._1zX1bcfpvl3eDzOofaa0Ld {
+  color: #b2b5ba;
+}
+._6BF_4hDIQb4IUVMnPGyOc ._3DS9nFmljPIAzK4YYNyJ7M {
+  width: 220px;
+}
+.dwVDG_w5nz5NZkVrF3Ymt {
+  display: flex;
+  flex-direction: column;
+  background-color: #2a2d34;
+  padding: 15px;
+  gap: 20px;
+}
+.dwVDG_w5nz5NZkVrF3Ymt ._eYd_33i0Tu425frNF-D0 {
+  margin-top: 10px;
+}
 ._12a_LkNOoLjY4U8GJXGiJr,
 .H_jRCccfsQh7wJDqpSFW {
   padding: 10px;
@@ -1752,6 +1709,7 @@ input._2lHX9aoh5vq8UVFZpoUXLi::placeholder {
 }
 ._1dm-6uzq_x5Gqo421G3a1r {
   position: relative;
+  align-items: center;
   width: fit-content;
   justify-self: center;
   background: #fff;
@@ -1777,6 +1735,7 @@ input._2lHX9aoh5vq8UVFZpoUXLi::placeholder {
   width: fit-content;
   justify-self: center;
   background: #fff;
+  max-height: 32px;
   box-shadow: none;
   border-radius: 28px;
   padding: 6px;
@@ -1857,18 +1816,33 @@ input._2lHX9aoh5vq8UVFZpoUXLi::placeholder {
   width: fit-content;
   justify-self: center;
   background: #fff;
+  max-height: 32px;
   box-shadow: none;
   border-radius: 28px;
-  padding: 6px;
+  padding: 6px 12px;
   color: #0e141b;
   right: unset;
   transition: all .2s ease-out;
 }
-.BwHJdoHlv8wy5OypqL_b7:hover {
-  box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
-}
-.BwHJdoHlv8wy5OypqL_b7:hover .FollowGameButton {
+.BwHJdoHlv8wy5OypqL_b7 .FollowButton {
   text-shadow: none;
   color: #0e141b;
+  background: #fff;
+  box-shadow: none;
   font-weight: 600;
+}
+.BwHJdoHlv8wy5OypqL_b7 .FollowBtnText {
+  font-size: 14px;
+}
+.BwHJdoHlv8wy5OypqL_b7 .SVGIcon_Check {
+  stroke: #000;
+}
+.BwHJdoHlv8wy5OypqL_b7:hover .FollowButton {
+  background: none;
+  box-shadow: none;
+  color: #0e141b;
+}
+.BwHJdoHlv8wy5OypqL_b7._2EcgCb9lHfl7I_MlirYLZL {
+  box-shadow: 0 6px 12px rgba(11, 27, 41, 0.2);
+  transform: translateY(-1px);
 }

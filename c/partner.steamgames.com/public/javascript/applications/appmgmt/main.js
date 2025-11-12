@@ -204,6 +204,7 @@
         slideTrayCustomize: "_2VUpHDtxN8lR1LDahY_cI2",
         breadcrumbContainer: "_3HjnEmKg66o82ah74EIvmq",
         breadcrumbContainerTemplate: "_3dMffY_iRZXHjZmXN9aLej",
+        pip: "_3Byg6Wc4TX36gkUptUIk72",
         pipList: "LY1m24ODS7AFRuzclt0Sl",
         pipScrollerContainer: "_3SyN-YtXsML6ado0q-Gdve",
         pipScrollButton: "qE43Jfzl0qJX_a6XrMgSr",
@@ -213,7 +214,6 @@
         scrollBackground: "WUHeTNYGQDQQg_jQe-78W",
         scrollForeground: "PQzkJfi8IxzjcFEDG-yv-",
         pipContainer: "_3TKX37FakYHikXh3Wtg2BU",
-        pip: "_3Byg6Wc4TX36gkUptUIk72",
         pipNumber: "_1u4YJiW1cdufpC_wssM8Us",
         innerSlide: "_3Cc2bMRML2lEkSyi2IAZ9G",
         DisableSliderMotion: "_3J8-bW87K3pb8EpRNYq0JG",
@@ -588,7 +588,6 @@
         OffIndicator: "w0I94_DnBuP6_sAy2jJOL",
         IconImage: "_2RY897Hy2yhwXPKZZIMbVc",
         RightColumnContainer: "_30-E9De2BTSA_LQAluUDUI",
-        EventPublishButton: "_3nIAe51MkJS4ZGO9CQ6xks",
         FloatRight: "_1bzHf_n9CdWgjfVlmRX68A",
         TTip: "_2aWukx6Wd2nw_kXZ1FP2NP",
         ValveSupportOnly: "wC6-UDN4iQob1NcD0Rpty",
@@ -14910,7 +14909,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.hubcategoryid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [6, 7, 8, 9], null);
         }
         static sm_m;
         static sm_mbf;
@@ -14944,6 +14943,38 @@
                     _: 5,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  replaces_tags: {
+                    _: 6,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  must_have_tags: {
+                    _: 7,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  any_one_of_tags: {
+                    _: 8,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  must_not_have_tags: {
+                    _: 9,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
                   },
                 },
               }),
@@ -18059,24 +18090,25 @@
         let _ = _?.parentElement;
         for (; _; ) {
           if (_(_)) {
-            if (!_ || "x" == _) {
-              const _ = window.getComputedStyle(_);
-              if (
-                "scroll" == _.overflowX ||
-                "auto" == _.overflowX ||
-                "fixed" == _.position
+            const _ = window.getComputedStyle(_);
+            if (
+              !(
+                (_ && "x" != _) ||
+                ("scroll" != _.overflowX &&
+                  "auto" != _.overflowX &&
+                  "fixed" != _.position)
               )
-                break;
-            }
-            if (!_ || "y" == _) {
-              const _ = window.getComputedStyle(_);
-              if (
-                "scroll" == _.overflowY ||
-                "auto" == _.overflowY ||
-                "fixed" == _.position
+            )
+              break;
+            if (
+              !(
+                (_ && "y" != _) ||
+                ("scroll" != _.overflowY &&
+                  "auto" != _.overflowY &&
+                  "fixed" != _.position)
               )
-                break;
-            }
+            )
+              break;
           }
           _ = _.parentElement;
         }
@@ -18146,7 +18178,13 @@
           _,
           {
             onMouseEnter: _.useCallback(() => _(!0), []),
-            onMouseLeave: _.useCallback(() => _(!1), []),
+            onMouseLeave: _.useCallback(
+              () =>
+                window.sessionStorage &&
+                "true" != window.sessionStorage.getItem("DEBUG_StickyHovers") &&
+                _(!1),
+              [],
+            ),
           },
         ];
       }
@@ -18235,7 +18273,7 @@
             null != this.fnLatestCallback &&
               (this.fnLatestCallback(),
               (this.fnLatestCallback = null),
-              (this.flLastExecutionTimeMs = Date.now())),
+              (this.flLastExecutionTimeMs = performance.now())),
               window.clearTimeout(this.nTimeoutHandle),
               (this.nTimeoutHandle = 0);
           },
@@ -18249,7 +18287,7 @@
             (_) => {
               const _ = _.current;
               _.fnLatestCallback = _;
-              const _ = Date.now() - _.flLastExecutionTimeMs,
+              const _ = performance.now() - _.flLastExecutionTimeMs,
                 _ = Math.max(_ - _, 0);
               window.clearTimeout(_.nTimeoutHandle),
                 (_.nTimeoutHandle = window.setTimeout(
@@ -22118,11 +22156,12 @@
             _.matches(":dir(rtl)") &&
               ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
             let {
-              nLeft: _,
-              nTop: _,
-              nOverflow: _,
-              nLateralOverflow: _,
-            } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+                nLeft: _,
+                nTop: _,
+                nOverflow: _,
+                nLateralOverflow: _,
+              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight),
+              _ = _;
             if (_ > (_ ?? 10) && !_) {
               const _ = (function (_) {
                   switch (_) {
@@ -23266,8 +23305,9 @@
         visibleSlides: _.visibleSlides,
       }));
       function _(_) {
-        const _ = (0, _._)();
-        return (!_.screenIsWide && !_) || _.bForceSimpleCarousel
+        const { bPreventSnapCarousel: _ } = _,
+          _ = (0, _._)();
+        return _ || ((_.screenIsWide || _) && !_.bForceSimpleCarousel)
           ? _.createElement(
               _,
               {
@@ -32635,12 +32675,14 @@
                 return _ instanceof _._
                   ? _.createElement(_, {
                       ..._,
+                      key: _.key,
                       modal: _,
                       Component: _ ?? _,
                     })
                   : _ instanceof _._
                     ? _.createElement(_, {
                         ..._,
+                        key: _.key,
                         modal: _,
                         bUseDialogElement: _,
                       })
@@ -32962,6 +33004,7 @@
             onCancel: _,
             closeModal: _,
             bOKDisabled: _,
+            bCloseAfterOK: _ = !0,
             onOK: _,
             bAllowFullSize: _,
             bDestructiveWarning: _,
@@ -32980,8 +33023,8 @@
             (_ && _()) || (_ && _());
           }, [_, _]),
           _ = _.useCallback(async () => {
-            _ || (_ && (await _()), _ && _());
-          }, [_, _, _]);
+            _ || (_ && (await _()), _ && _ && _());
+          }, [_, _, _, _]);
         return _.createElement(
           _._,
           {

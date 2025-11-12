@@ -215,7 +215,7 @@ button.DialogButton.JBYdBhACB7UzXP4l_tpF2 svg {
   min-width: 500px;
 }
 ._1h-JdwvtVK38j8M4EXeUah {
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #4d5560;
   padding: 8px;
   border-radius: 3px;
   margin-bottom: 12px;
@@ -229,4 +229,17 @@ button.DialogButton.JBYdBhACB7UzXP4l_tpF2 svg {
 }
 ._5o_Ifm1O6jf-4Iq4Kv07F .DialogInput_Wrapper {
   max-width: 25%;
+}
+._1Kt8VfgLBvg0tD86og8ps7 {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
+}
+._1Kt8VfgLBvg0tD86og8ps7 button.DialogButton {
+  padding: 3px 6px;
+  text-align: left;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.425);
 }

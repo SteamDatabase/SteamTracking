@@ -49,6 +49,7 @@
         DialogCtn: "_9JDWJYvoHTETKmebCO7iE",
         PollArea: "_1h-JdwvtVK38j8M4EXeUah",
         OptionInset: "_5o_Ifm1O6jf-4Iq4Kv07F",
+        AdminOptions: "_1Kt8VfgLBvg0tD86og8ps7",
       };
     },
     chunkid: (module) => {
@@ -2885,11 +2886,12 @@
             {
               strTitle: (0, _._)("#UserPolls_Edit_title"),
               onOK: () => {
-                _(_), _();
+                _(_);
               },
               onCancel: () => {
-                _(_(!1, __webpack_require__)), _();
+                _(_(!1, __webpack_require__));
               },
+              closeModal: _,
             },
             _.createElement(
               "div",
@@ -2897,7 +2899,7 @@
                 className: _().DialogCtn,
               },
               _.createElement(_, {
-                userPollDef: __webpack_require__,
+                userPollDef: _,
                 clanAccountID: _,
                 fnSetDef: _,
               }),
@@ -2953,23 +2955,29 @@
           _.createElement(_, {
             ..._,
           }),
-          _.createElement(_._, {
-            strDropDownClassName: _.DropDownScroll,
-            label: (0, _._)("#UserPolls_Visibility"),
-            rgOptions: _,
-            selectedOption: _,
-            onChange: (_) => {
-              _.data != _.results_visibility_settings &&
-                __webpack_require__({
-                  ..._,
-                  results_visibility_settings: _.data,
-                });
+          _.createElement(_._, null, (0, _._)("#UserPolls_Visibility")),
+          _.createElement(
+            "div",
+            {
+              className: _().PollArea,
             },
-            bDisableMouseOverlay: !0,
-            contextMenuPositionOptions: {
+            _.createElement(_._, {
+              strDropDownClassName: _.DropDownScroll,
+              rgOptions: _,
+              selectedOption: _,
+              onChange: (_) => {
+                _.data != _.results_visibility_settings &&
+                  __webpack_require__({
+                    ..._,
+                    results_visibility_settings: _.data,
+                  });
+              },
               bDisableMouseOverlay: !0,
-            },
-          }),
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
+              },
+            }),
+          ),
           _.createElement(_, {
             ..._,
           }),
@@ -3090,58 +3098,64 @@
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(_._, {
-            strDropDownClassName: _.DropDownScroll,
-            label: (0, _._)("#UserPolls_Voters"),
-            rgOptions: _,
-            selectedOption: _,
-            onChange: (_) => {
-              if (_.data != __webpack_require__.voter_eligibility) {
-                let _ = {
-                  ...__webpack_require__,
-                  voter_eligibility: _.data,
-                };
-                _.data == _.k_EPollVoter_MinPlayTime &&
-                  (_.voter_min_playtime_seconds = 5 * _),
-                  _(_);
-              }
+          _.createElement(_._, null, (0, _._)("#UserPolls_Voters")),
+          _.createElement(
+            "div",
+            {
+              className: _().PollArea,
             },
-            bDisableMouseOverlay: !0,
-            contextMenuPositionOptions: {
-              bDisableMouseOverlay: !0,
-            },
-          }),
-          Boolean(_ == _.k_EPollVoter_MinPlayTime) &&
-            _.createElement(
-              "div",
-              {
-                className: _().OptionInset,
+            _.createElement(_._, {
+              strDropDownClassName: _.DropDownScroll,
+              rgOptions: _,
+              selectedOption: _,
+              onChange: (_) => {
+                if (_.data != __webpack_require__.voter_eligibility) {
+                  let _ = {
+                    ...__webpack_require__,
+                    voter_eligibility: _.data,
+                  };
+                  _.data == _.k_EPollVoter_MinPlayTime &&
+                    (_.voter_min_playtime_seconds = 5 * _),
+                    _(_);
+                }
               },
-              _.createElement(_._, {
-                type: "number",
-                label: (0, _._)("#UserPolls_MinPlayTime"),
-                value: _ / _,
-                min: 5,
-                onChange: (_) => {
-                  var _, _;
-                  const _ =
-                    (null !==
-                      (_ = Number.parseInt(
-                        null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                          void 0 === _
-                          ? void 0
-                          : _.value,
-                      )) && void 0 !== _
-                      ? _
-                      : 5) * _;
-                  __webpack_require__.voter_min_playtime_seconds != _ &&
-                    _({
-                      ...__webpack_require__,
-                      voter_min_playtime_seconds: _,
-                    });
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
+              },
+            }),
+            Boolean(_ == _.k_EPollVoter_MinPlayTime) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().OptionInset,
                 },
-              }),
-            ),
+                _.createElement(_._, {
+                  type: "number",
+                  label: (0, _._)("#UserPolls_MinPlayTime"),
+                  value: _ / _,
+                  min: 5,
+                  onChange: (_) => {
+                    var _, _;
+                    const _ =
+                      (null !==
+                        (_ = Number.parseInt(
+                          null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                            void 0 === _
+                            ? void 0
+                            : _.value,
+                        )) && void 0 !== _
+                        ? _
+                        : 5) * _;
+                    __webpack_require__.voter_min_playtime_seconds != _ &&
+                      _({
+                        ...__webpack_require__,
+                        voter_min_playtime_seconds: _,
+                      });
+                  },
+                }),
+              ),
+          ),
         );
       }
       function _(_) {
@@ -3151,125 +3165,135 @@
             _.poll_end_days_since_start,
           ]);
         return _.createElement(
-          "div",
-          {
-            className: _().PollArea,
-          },
+          _.Fragment,
+          null,
+          _.createElement(_._, null, (0, _._)("#UserPolls_Starts")),
           _.createElement(
             "div",
             {
-              className: (0, _._)(_.FlexRowContainer, _.RadioOption),
+              className: _().PollArea,
             },
-            _.createElement("input", {
-              type: "radio",
-              name: "StartDateRadio",
-              _: "UserPollDialog_Days",
-              checked: Boolean(_),
-              onChange: () => {
-                _.poll_end_days_since_start ||
-                  __webpack_require__({
-                    ..._,
-                    poll_end_time: void 0,
-                    poll_end_days_since_start: _ * _,
-                  });
-              },
-            }),
-            _.createElement(
-              "label",
-              {
-                htmlFor: "UserPollDialog_Days",
-              },
-              _.createElement(
-                "span",
-                null,
-                (0, _._)("#UserPolls_EndTime_In_Days"),
-              ),
-            ),
-          ),
-          Boolean(_) &&
             _.createElement(
               "div",
               {
-                className: _().OptionInset,
+                className: (0, _._)(_.FlexRowContainer, _.RadioOption),
               },
-              _.createElement(_._, {
-                type: "number",
-                value: _ / _,
-                min: 1,
-                onChange: (_) => {
-                  var _, _;
-                  const _ =
-                    (null !==
-                      (_ = Number.parseInt(
-                        null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                          void 0 === _
-                          ? void 0
-                          : _.value,
-                      )) && void 0 !== _
-                      ? _
-                      : 1) * _;
-                  _.poll_end_days_since_start != _ &&
+              _.createElement("input", {
+                type: "radio",
+                name: "StartDateRadio",
+                _: "UserPollDialog_Days",
+                checked: Boolean(_),
+                onChange: () => {
+                  _.poll_end_days_since_start ||
                     __webpack_require__({
                       ..._,
                       poll_end_time: void 0,
-                      poll_end_days_since_start: _,
+                      poll_end_days_since_start: _ * _,
                     });
                 },
               }),
-            ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.FlexRowContainer, _.RadioOption),
-            },
-            _.createElement("input", {
-              type: "radio",
-              name: "StartDateRadio",
-              _: "UserPollDialog_SpecificTime",
-              checked: Boolean(_),
-              onChange: () => {
-                _.poll_end_time ||
-                  __webpack_require__({
-                    ..._,
-                    poll_end_days_since_start: void 0,
-                    poll_end_time: Math.floor(Date.now() / 1e3) + _ * _,
-                  });
-              },
-            }),
-            _.createElement(
-              "label",
-              {
-                htmlFor: "UserPollDialog_SpecificTime",
-              },
               _.createElement(
-                "span",
-                null,
-                (0, _._)("#UserPolls_EndTime_Specific"),
+                "label",
+                {
+                  htmlFor: "UserPollDialog_Days",
+                },
+                _.createElement(
+                  "span",
+                  null,
+                  (0, _._)("#UserPolls_EndTime_In_Days"),
+                ),
               ),
             ),
-          ),
-          Boolean(_) &&
+            Boolean(_) &&
+              _.createElement(
+                "div",
+                {
+                  className: _().OptionInset,
+                },
+                _.createElement(_._, {
+                  type: "number",
+                  value: _ / _,
+                  min: 1,
+                  onChange: (_) => {
+                    var _, _;
+                    const _ =
+                      (null !==
+                        (_ = Number.parseInt(
+                          null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                            void 0 === _
+                            ? void 0
+                            : _.value,
+                        )) && void 0 !== _
+                        ? _
+                        : 1) * _;
+                    _.poll_end_days_since_start != _ &&
+                      __webpack_require__({
+                        ..._,
+                        poll_end_time: void 0,
+                        poll_end_days_since_start: _,
+                      });
+                  },
+                }),
+              ),
             _.createElement(
               "div",
               {
-                className: _().OptionInset,
+                className: (0, _._)(_.FlexRowContainer, _.RadioOption),
               },
-              _.createElement(_._, {
-                strDescription: "",
-                nEarliestTime: Math.floor(Date.now() / 1e3) + 3600,
-                fnGetTimeToUpdate: () => _,
-                fnSetTimeToUpdate: (_) => {
-                  _.poll_end_time != _ &&
+              _.createElement("input", {
+                type: "radio",
+                name: "StartDateRadio",
+                _: "UserPollDialog_SpecificTime",
+                checked: Boolean(_),
+                onChange: () => {
+                  _.poll_end_time ||
                     __webpack_require__({
                       ..._,
                       poll_end_days_since_start: void 0,
-                      poll_end_time: _,
+                      poll_end_time: Math.floor(Date.now() / 1e3) + _ * _,
                     });
                 },
-                fnIsValidDateTime: () =>
-                  _ > Math.floor(Date.now() / 1e3) + 3600,
               }),
+              _.createElement(
+                "label",
+                {
+                  htmlFor: "UserPollDialog_SpecificTime",
+                },
+                _.createElement(
+                  "span",
+                  null,
+                  (0, _._)("#UserPolls_EndTime_Specific"),
+                ),
+              ),
             ),
+            Boolean(_) &&
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().OptionInset, _.FlexRowContainer),
+                },
+                _.createElement(_._, {
+                  strDescription: "",
+                  nEarliestTime: Math.floor(Date.now() / 1e3) + 3600,
+                  fnGetTimeToUpdate: () => _,
+                  fnSetTimeToUpdate: (_) => {
+                    _.poll_end_time != _ &&
+                      __webpack_require__({
+                        ..._,
+                        poll_end_days_since_start: void 0,
+                        poll_end_time: _,
+                      });
+                  },
+                  fnIsValidDateTime: () =>
+                    _ > Math.floor(Date.now() / 1e3) + 3600,
+                }),
+                _.createElement(
+                  "span",
+                  null,
+                  (0, _._)("#UserPolls_EndTime_Zone"),
+                ),
+              ),
+          ),
         );
       }
       const _ = 7,
@@ -3344,11 +3368,12 @@
                   const _ = {
                     ..._,
                   };
-                  (_.localized_option = _._.Set(
-                    _.localized_option,
-                    _,
-                    _.currentTarget.value,
-                  )),
+                  (_.localized_option = [..._.localized_option]),
+                    (_.localized_option = _._.Set(
+                      _.localized_option,
+                      _,
+                      _.currentTarget.value,
+                    )),
                     _(_);
                 },
               }),
@@ -3381,6 +3406,7 @@
             null);
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.GetEditModel();
@@ -3407,6 +3433,7 @@
         }
         return null;
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { focusView: _, removeNode: __webpack_require__, poll_id: _ } = _,
           _ = (0, _._)(),
@@ -3519,9 +3546,13 @@
       }
       function _(_) {
         const { userPollDef: _, focusView: __webpack_require__ } = _,
-          _ = (0, _._)(() => _.options || []),
+          [_, _] = (0, _._)(() => [_.options || [], _.randomize_option_order]),
           _ = (0, _._)(),
           _ = (0, _._)(),
+          [_, _, _] = (0, _._)(),
+          _ = _.useCallback(() => {
+            __webpack_require__(), _();
+          }, [__webpack_require__, _]),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             __webpack_require__(), _();
@@ -3542,13 +3573,26 @@
                 }),
               ),
               _.createElement(
-                _._,
+                "div",
                 {
-                  className: _().AddNew,
-                  onClick: _,
-                  tooltip: (0, _._)("#UserPolls_Option_Add"),
+                  className: _().AdminOptions,
                 },
-                _.createElement(_.OMN, null),
+                _.createElement(
+                  _._,
+                  {
+                    className: "",
+                    onClick: _,
+                  },
+                  (0, _._)("#UserPolls_Option_Add"),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    className: "",
+                    onClick: _,
+                  },
+                  (0, _._)("#UserPolls_Option_Reorder"),
+                ),
               ),
               _ &&
                 _.createElement(_, {
@@ -3561,8 +3605,71 @@
                       __webpack_require__.SetDirty(_._.description);
                   },
                 }),
+              _ &&
+                _.createElement(_, {
+                  hideModal: _,
+                  options: _,
+                  bRandomize: _,
+                  fnUpdateOptions: (_, _) => {
+                    (_.randomize_option_order = _), (_.options = _);
+                  },
+                }),
             )
           : null;
+      }
+      function _(_) {
+        const {
+            options: _,
+            bRandomize: __webpack_require__,
+            fnUpdateOptions: _,
+            hideModal: _,
+          } = _,
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(__webpack_require__),
+          [_, _] = (0, _.useState)(_);
+        return _.createElement(
+          _._,
+          {
+            active: !0,
+          },
+          _.createElement(
+            _._,
+            {
+              strTitle: (0, _._)("#UserPolls_Option_Reorder"),
+              strDescription: (0, _._)("#UserPolls_Option_Reorder_desc"),
+              onCancel: () => {
+                _(__webpack_require__), _(_);
+              },
+              onOK: () => {
+                _([..._], _);
+              },
+              closeModal: _,
+            },
+            _.createElement(_._, {
+              label: (0, _._)("#UserPolls_Option_Randomize"),
+              checked: _,
+              onChange: _,
+            }),
+            _.createElement(_._, {
+              items: _,
+              render: (_) => {
+                var _, _;
+                return _.createElement(
+                  "div",
+                  null,
+                  (null === (_ = _.localized_option) || void 0 === _
+                    ? void 0
+                    : _[_]) ||
+                    (null === (_ = _.localized_option) || void 0 === _
+                      ? void 0
+                      : _[0]) ||
+                    "",
+                );
+              },
+              onReorder: (_) => _(_),
+            }),
+          ),
+        );
       }
       function _(_) {
         const { optionID: _, focusView: __webpack_require__ } = _,

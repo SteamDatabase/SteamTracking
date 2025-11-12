@@ -4155,13 +4155,20 @@
       function _(_) {
         const { deadline: _, json: __webpack_require__ } = _,
           _ = _(__webpack_require__.opt_in_name),
-          _ = `${_._.PARTNER_BASE_URL}optin/sale/${__webpack_require__.opt_in_name.replace("sale_", "")}`;
-        if (!_) return null;
-        const _ = `${_._.PARTNER_BASE_URL}doc/store/review_process`;
+          [_] = (0, _._)(_?.store_item_id, _?.store_item_type, {
+            include_assets: !0,
+          });
+        if (!_ || !_?.store_item_id) return null;
+        const _ = `${_._.PARTNER_BASE_URL}apps/demo/${_.store_item_id}`,
+          _ = `${_._.PARTNER_BASE_URL}doc/store/review_process`;
         return _.createElement(_, {
+          imageUrl: _?.GetAssets().GetHeaderURL(),
           title: _.description.definition.event_title[_._.LANGUAGE],
           body: (0, _._)(
-            "#PartnerDeadline_NextFest_DemoBuildReview_Body",
+            (0, _._)(
+              "#PartnerDeadline_NextFest_DemoBuildReview_Body",
+              _?.GetName() || "(" + _.store_item_id + ")",
+            ),
             _.createElement("a", {
               href: _,
             }),
@@ -5496,23 +5503,29 @@
                     saleDesc: _,
                   }),
                 passesFilter: (_) => 1 == _,
-              });
+              }),
+              _ = (_) => 36 != _.eEventType;
             return [
-              ..._.map((_) =>
+              ..._.filter(_).map((_) =>
                 _(
                   _,
                   (0, _._)("#Dashboard_UpcomingEvents_PartnerEvents_Active"),
                 ),
               ),
-              ..._.map((_) =>
+              ..._.filter(_).map((_) =>
                 _(
                   _,
                   (0, _._)("#Dashboard_UpcomingEvents_PartnerEvents_Upcoming"),
                 ),
               ),
-              ...__webpack_require__.map((_) =>
-                _(_, (0, _._)("#Dashboard_UpcomingEvents_PartnerEvents_Draft")),
-              ),
+              ...__webpack_require__
+                .filter(_)
+                .map((_) =>
+                  _(
+                    _,
+                    (0, _._)("#Dashboard_UpcomingEvents_PartnerEvents_Draft"),
+                  ),
+                ),
             ].filter((_) => !!_);
           }, []),
           _ =

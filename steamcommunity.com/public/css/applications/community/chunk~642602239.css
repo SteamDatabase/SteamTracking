@@ -451,6 +451,7 @@ a._3nRRZ1AKPWQnyWTcT1RDt9 {
 }
 a._3nRRZ1AKPWQnyWTcT1RDt9:hover {
   box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
+  transform: translateY(-1px);
 }
 a._3nRRZ1AKPWQnyWTcT1RDt9 span {
   color: #0e141b;
@@ -498,7 +499,7 @@ iframe._1j2vixiqbbe8GqxA-cmlhA {
 .SaleSectionCtn.text_section ._39HWXhhjsbML7K9sme9ItV,
 .SaleSectionCtn.text_section ._2Tqq0UDtuHw6otaE2Ww46g {
   color: #c3c4d9;
-  font-size: 14px;
+  font-size: clamp(13px, 1.3vw, 16px);
 }
 .SaleSectionCtn.text_section ._39HWXhhjsbML7K9sme9ItV ._25AZkxZYa3ROp8PHchCq-k,
 .SaleSectionCtn.text_section ._2Tqq0UDtuHw6otaE2Ww46g ._25AZkxZYa3ROp8PHchCq-k {

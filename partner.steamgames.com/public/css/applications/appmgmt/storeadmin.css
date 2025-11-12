@@ -2022,16 +2022,17 @@ a._3TN0uESBGJ-kUDPWWX2YWz:hover {
   background-color: #1b2838;
   font-family: "Motiva Sans", Sans-serif;
   font-weight: normal;
+  position: relative;
   width: fit-content;
 }
 ._3EAE8BxFPnb_g0Ct5b4QzW .ProseMirror {
   max-height: 782px;
-  width: 780px;
+  width: 794px;
   outline: none;
 }
 ._3EAE8BxFPnb_g0Ct5b4QzW._26nsky_SK1122q1xYQ0VZu .ProseMirror {
   max-height: 400px;
-  width: 414px;
+  width: 378px;
   background: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.2) 0%,
@@ -2070,7 +2071,7 @@ a._3TN0uESBGJ-kUDPWWX2YWz:hover {
 }
 ._2m49NX6vFS6SVkkvgmwGY0._3EAE8BxFPnb_g0Ct5b4QzW .ProseMirror {
   max-height: 494px;
-  width: 465px;
+  width: 479px;
 }
 ._2m49NX6vFS6SVkkvgmwGY0._3EAE8BxFPnb_g0Ct5b4QzW h2._1aQY7Yz23XDN0N4IVctriG {
   font-family: "Motiva Sans", Arial, Sans-serif;
@@ -2144,7 +2145,7 @@ h2._1aQY7Yz23XDN0N4IVctriG {
   font-size: 14px;
   text-transform: uppercase;
   color: #fff;
-  margin: 2px 12px 0 12px;
+  margin: 2px 16px 0 16px;
   letter-spacing: .03em;
   font-weight: normal;
   line-height: 26px;

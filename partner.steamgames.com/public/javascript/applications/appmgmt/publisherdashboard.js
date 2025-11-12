@@ -3622,18 +3622,25 @@
       function rt(e) {
         const { deadline: t, json: a } = e,
           s = we(a.opt_in_name),
-          i = `${r.TS.PARTNER_BASE_URL}optin/sale/${a.opt_in_name.replace("sale_", "")}`;
-        if (!s) return null;
-        const l = `${r.TS.PARTNER_BASE_URL}doc/store/review_process`;
+          [i] = (0, ee.G6)(t?.store_item_id, t?.store_item_type, {
+            include_assets: !0,
+          });
+        if (!s || !t?.store_item_id) return null;
+        const l = `${r.TS.PARTNER_BASE_URL}apps/demo/${t.store_item_id}`,
+          c = `${r.TS.PARTNER_BASE_URL}doc/store/review_process`;
         return n.createElement(ot, {
+          imageUrl: i?.GetAssets().GetHeaderURL(),
           title: s.description.definition.event_title[r.TS.LANGUAGE],
           body: (0, o.oW)(
-            "#PartnerDeadline_NextFest_DemoBuildReview_Body",
-            n.createElement("a", { href: l }),
+            (0, o.we)(
+              "#PartnerDeadline_NextFest_DemoBuildReview_Body",
+              i?.GetName() || "(" + t.store_item_id + ")",
+            ),
+            n.createElement("a", { href: c }),
           ),
           rightCol: n.createElement(
             ne.z9,
-            { url: i },
+            { url: l },
             (0, o.we)("#PartnerDeadline_NextFest_View_Registration"),
           ),
         });
@@ -4102,7 +4109,7 @@
         );
       }
       var St = a(4130),
-        Ct = a(20221),
+        Ct = a(92448),
         Mt = a(20587);
       function At(e) {
         const { saleDesc: t } = e;
@@ -4782,26 +4789,35 @@
                 getElement: () => n.createElement(At, { saleDesc: e }),
                 getCapsuleElement: () => n.createElement(Bt, { saleDesc: e }),
                 passesFilter: (e) => 1 == e,
-              });
+              }),
+              s = (e) => 36 != e.eEventType;
             return [
-              ...e.map((e) =>
-                r(
-                  e,
-                  (0, o.we)("#Dashboard_UpcomingEvents_PartnerEvents_Active"),
+              ...e
+                .filter(s)
+                .map((e) =>
+                  r(
+                    e,
+                    (0, o.we)("#Dashboard_UpcomingEvents_PartnerEvents_Active"),
+                  ),
                 ),
-              ),
-              ...t.map((e) =>
-                r(
-                  e,
-                  (0, o.we)("#Dashboard_UpcomingEvents_PartnerEvents_Upcoming"),
+              ...t
+                .filter(s)
+                .map((e) =>
+                  r(
+                    e,
+                    (0, o.we)(
+                      "#Dashboard_UpcomingEvents_PartnerEvents_Upcoming",
+                    ),
+                  ),
                 ),
-              ),
-              ...a.map((e) =>
-                r(
-                  e,
-                  (0, o.we)("#Dashboard_UpcomingEvents_PartnerEvents_Draft"),
+              ...a
+                .filter(s)
+                .map((e) =>
+                  r(
+                    e,
+                    (0, o.we)("#Dashboard_UpcomingEvents_PartnerEvents_Draft"),
+                  ),
                 ),
-              ),
             ].filter((e) => !!e);
           }, []),
           D =

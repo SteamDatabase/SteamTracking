@@ -671,6 +671,7 @@
         Link: "_29bMZB6BOQfTQ_3za-w60I",
         LinkHost: "_16eO9LHnJuheylkB3Fdrpn",
         LinkButton: "_2HnDgHQT_3ehcs4WgskKG5",
+        LinkPill: "_3nRRZ1AKPWQnyWTcT1RDt9",
         UnorderedList: "_2FoSxA1yCqpvxdOJnu8N8Z",
         OrderedList: "vV4IwOV-RuzelptiRQ_ZS",
         StoreWidget: "_36Y-loIMvxDKY9RIVxecCp",
@@ -773,7 +774,6 @@
         OffIndicator: "w0I94_DnBuP6_sAy2jJOL",
         IconImage: "_2RY897Hy2yhwXPKZZIMbVc",
         RightColumnContainer: "_30-E9De2BTSA_LQAluUDUI",
-        EventPublishButton: "_3nIAe51MkJS4ZGO9CQ6xks",
         FloatRight: "_1bzHf_n9CdWgjfVlmRX68A",
         TTip: "_2aWukx6Wd2nw_kXZ1FP2NP",
         ValveSupportOnly: "wC6-UDN4iQob1NcD0Rpty",
@@ -4998,6 +4998,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  steamid: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
                 },
               }),
             _.sm_m
@@ -5096,6 +5101,11 @@
                     _: 1,
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
+                  },
+                  steamid: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
                   },
                 },
               }),
@@ -8256,11 +8266,12 @@
             _.matches(":dir(rtl)") &&
               ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
             let {
-              nLeft: _,
-              nTop: _,
-              nOverflow: _,
-              nLateralOverflow: _,
-            } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+                nLeft: _,
+                nTop: _,
+                nOverflow: _,
+                nLateralOverflow: _,
+              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight),
+              _ = _;
             if (_ > (_ ?? 10) && !_) {
               const _ = (function (_) {
                   switch (_) {
@@ -8662,12 +8673,14 @@
                 return _ instanceof _
                   ? _.createElement(_, {
                       ..._,
+                      key: _.key,
                       modal: _,
                       Component: _ ?? _,
                     })
                   : _ instanceof _
                     ? _.createElement(_, {
                         ..._,
+                        key: _.key,
                         modal: _,
                         bUseDialogElement: _,
                       })
@@ -12393,6 +12406,7 @@
             onCancel: _,
             closeModal: _,
             bOKDisabled: _,
+            bCloseAfterOK: _ = !0,
             onOK: _,
             bAllowFullSize: _,
             bDestructiveWarning: _,
@@ -12411,8 +12425,8 @@
             (_ && _()) || (_ && _());
           }, [_, _]),
           _ = _.useCallback(async () => {
-            _ || (_ && (await _()), _ && _());
-          }, [_, _, _]);
+            _ || (_ && (await _()), _ && _ && _());
+          }, [_, _, _, _]);
         return _.createElement(
           _,
           {
@@ -16544,7 +16558,7 @@
             (this.filename = _),
             (this.fileType =
               ((_ = _).indexOf("?") > 0 && (_ = _.split("?")[0]),
-              (_.endsWith(".jpg")
+              (_.endsWith(".jpg") || _.endsWith(".jpeg")
                 ? 1
                 : _.endsWith(".png")
                   ? 3
@@ -17932,7 +17946,7 @@
         GetMimeType: (_) =>
           (function (_) {
             const _ = _.toLowerCase();
-            return _.endsWith(".jpg")
+            return _.endsWith(".jpg") || _.endsWith(".jpeg")
               ? "image/jpeg"
               : _.endsWith(".png")
                 ? "image/png"
@@ -20262,7 +20276,8 @@
           "items" == _ ||
           "trailercarousel" == _ ||
           "crosspromotesalepage" == _ ||
-          "creator_list" == _
+          "creator_list" == _ ||
+          "calendar" == _
         );
       }
       !(function (_) {
@@ -23634,6 +23649,7 @@
             return _?.[1];
           })(window.location.href),
           _ = _ && "news" == _,
+          _ = 36 == _.GetEventType(),
           _ = "community" === (0, _._)(),
           _ = _.appid ? "games" : "groups",
           _ =
@@ -23647,13 +23663,14 @@
           case _.k_eCommunityView:
           case _.k_eCommunityEdit:
           case _.k_eCommunityEditBroadcast:
-          case _.k_eCommunityAdminPage:
           case _.k_eCommunityPublish:
           case _.k_eCommunityMigrate:
           case _.k_eCommunityPreview:
           case _.k_eCommunityPreviewSale:
           case _.k_eCommunityAnnouncementHub:
             return _;
+          case _.k_eCommunityAdminPage:
+            return !_ && _;
           case _.k_eViewWebSiteHub:
             return _ || _;
           case _.k_eStoreView:
@@ -23696,7 +23713,8 @@
             _.BIsOGGEvent() &&
             _.appid &&
             _ &&
-            _.BHasSaleUpdateLandingPageVanity();
+            _.BHasSaleUpdateLandingPageVanity(),
+          _ = 36 == _.GetEventType();
         switch (_) {
           case _.k_eCommunityPublish:
             return (
@@ -23723,16 +23741,18 @@
           case _.k_eCommunityMigrate:
             return _ + "partnerevents/migrate_announcement/" + _;
           case _.k_eCommunityPreview:
-            return (
-              _ +
-              (_.bOldAnnouncement
-                ? "partnerevents/preview_old_announcement/" + _
-                : "partnerevents/preview/" + _)
-            );
+            return _
+              ? _ + "partnerevents/previewsale/" + _
+              : _ +
+                  (_.bOldAnnouncement
+                    ? "partnerevents/preview_old_announcement/" + _
+                    : "partnerevents/preview/" + _);
           case _.k_eCommunityPreviewSale:
             return _ + "partnerevents/previewsale/" + _;
           case _.k_eCommunityAdminPage:
-            return _ + "partnerevents";
+            return _
+              ? `${_}curator/${_.clanSteamID.GetAccountID()}/admin/creatorhome_link`
+              : _ + "partnerevents";
           case _.k_eCommunityAnnouncementHub:
             return _ + "announcements";
           case _.k_eStoreNewsHub:
@@ -23753,11 +23773,15 @@
                 ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
                 : _
                   ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
-                  : _ +
-                    (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                      ? "sale/"
-                      : "curator/" + _.clanSteamID.GetAccountID() + "/sale/") +
-                    _.jsondata.sale_vanity_id
+                  : _
+                    ? `${_}curator/${_.clanSteamID.GetAccountID()}`
+                    : _ +
+                      (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
+                        ? "sale/"
+                        : "curator/" +
+                          _.clanSteamID.GetAccountID() +
+                          "/sale/") +
+                      _.jsondata.sale_vanity_id
               : _;
           case _.k_eCommunityView:
             return _ + "announcements/detail/" + _;
@@ -23766,6 +23790,7 @@
               return `${_._.STORE_BASE_URL}meetsteam/${_}`;
             if (_)
               return `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`;
+            if (_) return `${_}curator/${_.clanSteamID.GetAccountID()}`;
             return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `view/${_}`}`;
           case _.k_eStoreUsersNewsHub:
             return `${_}news/`;
@@ -33946,7 +33971,7 @@
                         ),
                         href: _,
                         onClick: _,
-                        download: "steam_deck_white_release.ics",
+                        download: "calendar.ics",
                       },
                       "Apple",
                     ),
@@ -33971,7 +33996,7 @@
                         ),
                         href: _,
                         onClick: _,
-                        download: "steam_deck_white_release.ics",
+                        download: "calendar.ics",
                       },
                       "Outlook",
                     ),
@@ -37584,24 +37609,25 @@
         let _ = _?.parentElement;
         for (; _; ) {
           if (_(_)) {
-            if (!_ || "x" == _) {
-              const _ = window.getComputedStyle(_);
-              if (
-                "scroll" == _.overflowX ||
-                "auto" == _.overflowX ||
-                "fixed" == _.position
+            const _ = window.getComputedStyle(_);
+            if (
+              !(
+                (_ && "x" != _) ||
+                ("scroll" != _.overflowX &&
+                  "auto" != _.overflowX &&
+                  "fixed" != _.position)
               )
-                break;
-            }
-            if (!_ || "y" == _) {
-              const _ = window.getComputedStyle(_);
-              if (
-                "scroll" == _.overflowY ||
-                "auto" == _.overflowY ||
-                "fixed" == _.position
+            )
+              break;
+            if (
+              !(
+                (_ && "y" != _) ||
+                ("scroll" != _.overflowY &&
+                  "auto" != _.overflowY &&
+                  "fixed" != _.position)
               )
-                break;
-            }
+            )
+              break;
           }
           _ = _.parentElement;
         }
@@ -41472,6 +41498,11 @@
                     _: 13,
                     _: _._.readFixed64String,
                     _: _._.writeFixed64String,
+                  },
+                  delete_reason: {
+                    _: 14,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
                   },
                 },
               }),
@@ -58940,7 +58971,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.hubcategoryid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [6, 7, 8, 9], null);
         }
         static sm_m;
         static sm_mbf;
@@ -58974,6 +59005,38 @@
                     _: 5,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  replaces_tags: {
+                    _: 6,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  must_have_tags: {
+                    _: 7,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  any_one_of_tags: {
+                    _: 8,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
+                  },
+                  must_not_have_tags: {
+                    _: 9,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
                   },
                 },
               }),

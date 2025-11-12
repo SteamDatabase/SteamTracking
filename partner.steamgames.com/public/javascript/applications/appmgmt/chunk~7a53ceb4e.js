@@ -840,7 +840,7 @@
       function s(e) {
         return (
           e.indexOf("?") > 0 && (e = e.split("?")[0]),
-          e.endsWith(".jpg")
+          e.endsWith(".jpg") || e.endsWith(".jpeg")
             ? 1
             : e.endsWith(".png")
               ? 3
@@ -1066,7 +1066,7 @@
       var s = i(3577);
       function n(e) {
         const t = e.toLowerCase();
-        return t.endsWith(".jpg")
+        return t.endsWith(".jpg") || t.endsWith(".jpeg")
           ? "image/jpeg"
           : t.endsWith(".png")
             ? "image/png"

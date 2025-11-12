@@ -12442,41 +12442,28 @@
         _: () => _,
         _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      !(function (_) {
-        (_.Default = "default"),
-          (_.Upcoming = "upcoming"),
-          (_.Featured = "featured"),
-          (_.Press = "press"),
-          (_.Steam = "steam"),
-          (_.Halloween = "halloween"),
-          (_.Dev_Sales = "sales"),
-          (_.Dev_All = "all"),
-          (_.Dev_AssociatedPress = "associated_press");
-      })(_ || (_ = {}));
-      new Map();
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _, _) {
         return {
@@ -12521,7 +12508,7 @@
         }
         BIsShowingFeaturedFeed() {
           return Boolean(
-            this.GetCollectionID() === _.Featured ||
+            this.GetCollectionID() === _._.Featured ||
               (this.BIsGlobalCalendar() && !_._.accountid),
           );
         }
@@ -13239,6 +13226,127 @@
         return null !== _.get();
       }
       window.g_EventCalendarMap = _;
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.Default = "default"),
+          (_.Upcoming = "upcoming"),
+          (_.Featured = "featured"),
+          (_.Press = "press"),
+          (_.Steam = "steam"),
+          (_.Halloween = "halloween"),
+          (_.Dev_Sales = "sales"),
+          (_.Dev_All = "all"),
+          (_.Dev_AssociatedPress = "associated_press");
+      })(_ || (_ = {}));
+      const _ = new Map();
+      function _(_) {
+        return (
+          0 == _.size &&
+            (function () {
+              const _ = (0, _._)();
+              _.set(_.Default, {
+                _: _.Default,
+                strUrl: `${_}/`,
+                strName: (0, _._)("#EventCalendar_NewsChannel_YourNews"),
+                strSubtitle: (0, _._)(
+                  "#EventCalendar_NewsChannel_Personalized",
+                ),
+                strHeaderTitle: (0, _._)(
+                  "#EventCalendar_NewsChannel_YourNews_HeaderTitle",
+                ),
+              }),
+                _.set(_.Upcoming, {
+                  _: _.Upcoming,
+                  strUrl: `${_}/?upcoming=1`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_Upcoming"),
+                  strShortName: (0, _._)(
+                    "#EventCalendar_NewsChannel_UpcomingShort",
+                  ),
+                  strSubtitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_Personalized",
+                  ),
+                }),
+                _.set(_.Featured, {
+                  _: _.Featured,
+                  strUrl: `${_}/collection/featured/`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_Featured"),
+                  strSubtitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_TopSellers",
+                  ),
+                  strHeaderTitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_Featured_HeaderTitle",
+                  ),
+                }),
+                _.set(_.Press, {
+                  _: _.Press,
+                  strUrl: `${_}/collection/press/`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_Press"),
+                  strHeaderTitle: (0, _._)(
+                    "#EventCalendar_Collection_News_Title",
+                  ),
+                  strHeaderSubtitle: (0, _._)(
+                    "#EventCalendar_Collection_News_Subtitle",
+                  ),
+                }),
+                _.set(_.Steam, {
+                  _: _.Steam,
+                  strUrl: `${_}/collection/steam/`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_Steam"),
+                  strSubtitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_SteamSubtitle",
+                  ),
+                  strHeaderTitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_Steam_HeaderTitle",
+                  ),
+                }),
+                _.set(_.Halloween, {
+                  _: _.Halloween,
+                  strUrl: `${_}/collection/halloween/`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_Halloween"),
+                  strSubtitle: (0, _._)(
+                    "#EventCalendar_NewsChannel_HalloweenSubtitle",
+                  ),
+                  strHeaderTitle: (0, _._)(
+                    "#EventCalendar_Collection_Halloween_Title",
+                  ),
+                  strHeaderSubtitle: (0, _._)(
+                    "#EventCalendar_Collection_Halloween_Subtitle",
+                  ),
+                }),
+                _.set(_.Dev_Sales, {
+                  _: _.Dev_Sales,
+                  strUrl: `${_}/collection/sales/`,
+                  strName: (0, _._)("#EventCalendar_NewsChannel_AllSales"),
+                }),
+                _._.is_support &&
+                  (_.set(_.Dev_All, {
+                    _: _.Dev_All,
+                    strUrl: `${_}/collection/all/`,
+                    strName: (0, _._)("#EventCalendar_NewsChannel_All"),
+                    bIsValveOnly: !0,
+                  }),
+                  _.set(_.Dev_AssociatedPress, {
+                    _: _.Dev_AssociatedPress,
+                    strUrl: `${_}/collection/associated_press/`,
+                    strName: (0, _._)(
+                      "#EventCalendar_NewsChannel_AssociatedPress",
+                    ),
+                    bIsValveOnly: !0,
+                  }));
+            })(),
+          _.get(_)
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -16374,6 +16482,11 @@
                     pbr: _._.readPackedInt32,
                     _: _._.writeRepeatedInt32,
                   },
+                  adult_content_restricted: {
+                    _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -17781,6 +17894,9 @@
               break;
             case "steamcurator":
               _ = (0, _._)("#steam_curator_follow_ttip");
+              break;
+            case "group":
+              _ = (0, _._)("#steam_group_follow_ttip");
           }
           return _
             ? _.createElement(
@@ -17810,7 +17926,7 @@
                   _.createElement(
                     "div",
                     {
-                      className: _.FollowBtnText,
+                      className: (0, _._)(_.FollowBtnText, "FollowBtnText"),
                     },
                     !_ &&
                       (_
@@ -17824,7 +17940,8 @@
             : (console.error("CommonFollowButton unexpected type", _), null);
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1),
+          const { followType: _ } = _,
+            [__webpack_require__, _] = _.useState(!1),
             { clanAccountID: _, className: _ } = _,
             _ = _._.InitFromClanID(_),
             [_, _] = (0, _._)(_),
@@ -17834,31 +17951,32 @@
             className: _,
             bIgnored: _,
             bFollowing: _,
-            bApplyingFollowing: _,
+            bApplyingFollowing: __webpack_require__,
             onFollowClick: () => {
               const { clanAccountID: _ } = _;
               _() &&
                 _(_) &&
-                (__webpack_require__(!0),
+                (_(!0),
                 (() => {
-                  const { clanAccountID: _, creatorID: _ } = _,
+                  const { clanAccountID: _, creatorID: __webpack_require__ } =
+                      _,
                     _ = _._.InitFromClanID(_),
                     _ = _._.Get().BIsFollowingCurator(_),
                     _ = !_ && _._.Get().BIsIgnoringCurator(_);
                   _._.Get()
                     .UpdateFollowOrIgnoreCurator(_, !_, !(_ || _))
                     .then((_) => {
-                      if (_) {
-                        let _ = _._.GetCreatorHomeByID(_);
+                      if (__webpack_require__) {
+                        let _ = _._.GetCreatorHomeByID(__webpack_require__);
                         _ || _.AdjustFollower(_ ? -1 : 1);
                       }
-                      __webpack_require__(!1);
+                      _(!1);
                     })
                     .then(() => {
                       _(_);
                     })
                     .catch((_) => {
-                      __webpack_require__(!1);
+                      _(!1);
                       let _ = (0, _._)(_);
                       console.error(
                         "CuratorFollowButton hit error: " + _.strErrorMsg,
@@ -17867,9 +17985,12 @@
                     });
                 })());
             },
-            followType: (null == _ ? void 0 : _.is_creator_home)
-              ? "creatorhome"
-              : "steamcurator",
+            followType:
+              null != _
+                ? _
+                : (null == _ ? void 0 : _.is_creator_home)
+                  ? "creatorhome"
+                  : "steamcurator",
           });
         },
         _ = (_) => {
@@ -18492,6 +18613,7 @@
             nCreatorAccountID: _,
             classOverride: __webpack_require__,
             styleOverride: _,
+            followType: _,
           } = _,
           [_, _] = (0, _._)(_),
           { creatorHome: _ } = (0, _._)(_);
@@ -18515,6 +18637,7 @@
           ),
           _.createElement(_._, {
             clanAccountID: _,
+            followType: _,
           }),
         );
       }

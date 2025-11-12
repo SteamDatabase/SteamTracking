@@ -3506,7 +3506,8 @@
           "items" == _ ||
           "trailercarousel" == _ ||
           "crosspromotesalepage" == _ ||
-          "creator_list" == _
+          "creator_list" == _ ||
+          "calendar" == _
         );
       }
       !(function (_) {
@@ -15584,6 +15585,11 @@
                     pbr: _._.readPackedInt32,
                     _: _._.writeRepeatedInt32,
                   },
+                  adult_content_restricted: {
+                    _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -18081,11 +18087,11 @@
       class _ {
         constructor(_) {
           Object.assign(this, _.toObject()),
-            (this.bytes_to_download = parseInt(_.bytes_to_download()) || 0),
-            (this.bytes_downloaded = parseInt(_.bytes_downloaded()) || 0),
-            (this.bytes_staged = parseInt(_.bytes_staged()) || 0),
-            (this.bytes_to_stage = parseInt(_.bytes_to_stage()) || 0),
-            (this.bytes_required = parseInt(_.bytes_required()) || 0);
+            (this.bytes_to_download = parseInt(_.bytes_to_download() ?? "0")),
+            (this.bytes_downloaded = parseInt(_.bytes_downloaded() ?? "0")),
+            (this.bytes_staged = parseInt(_.bytes_staged() ?? "0")),
+            (this.bytes_to_stage = parseInt(_.bytes_to_stage() ?? "0")),
+            (this.bytes_required = parseInt(_.bytes_required() ?? "0"));
         }
         appid;
         app;
@@ -18112,7 +18118,7 @@
         rt_time_scheduled;
         update_percentage;
         BIsDownloading() {
-          return this.num_downloading > 0;
+          return void 0 !== this.num_downloading && this.num_downloading > 0;
         }
         SetDownloading() {
           (this.num_downloading = 1), (this.download_paused = !1);
@@ -18125,7 +18131,7 @@
         }
         BIsPaused() {
           return (
-            this.download_paused &&
+            !!this.download_paused &&
             (this.bytes_downloaded < this.bytes_to_download ||
               this.bytes_staged < this.bytes_to_stage ||
               -1 != this.queue_position)
@@ -18177,7 +18183,7 @@
         return {
           session: _,
           mapApps: _,
-          clientInfo: _.Body().client_info().toObject(),
+          clientInfo: _.Body().client_info()?.toObject(),
           refetchIntervals: {
             full: _.Body().refetch_interval_sec_full() || 3600,
             changing: _.Body().refetch_interval_sec_changing() || 60,
@@ -18212,7 +18218,9 @@
           _ = (0, _.useCallback)(
             (_) => {
               if (!_) return _;
-              const _ = new Map(Array.from(_.mapApps.entries()).filter(_));
+              const _ = new Map(
+                Array.from(_?.mapApps.entries() ?? []).filter(_),
+              );
               return {
                 ..._,
                 mapApps: _,
@@ -18280,9 +18288,9 @@
             const _ = new Map();
             for (const _ of _)
               if (_.isSuccess) {
-                const _ = _.data?.session.client_instanceid,
+                const _ = _.data?.session?.client_instanceid,
                   _ = _.data?.mapApps,
-                  _ = _.get(_);
+                  _ = _?.get(_);
                 _ &&
                   _.set(_, {
                     session: _.data.session,
@@ -18313,7 +18321,7 @@
         const { setRemoteClientID: _, rgSessions: __webpack_require__ } = _,
           _ = (0, _.useCallback)(
             (_) => {
-              __webpack_require__?.length > 0 &&
+              __webpack_require__?.length &&
                 (0, _._)(
                   _.createElement(_, {
                     sessions: __webpack_require__,
@@ -18325,7 +18333,7 @@
             },
             [_, __webpack_require__],
           );
-        return __webpack_require__?.length > 1
+        return __webpack_require__?.length
           ? _.createElement(
               "button",
               {
@@ -18362,7 +18370,7 @@
                     default:
                       return;
                   }
-                })(_.device_type),
+                })(_.device_type) ?? "",
                 _.machine_name,
               ),
             ),
@@ -18973,6 +18981,7 @@
             return _?.[1];
           })(window.location.href),
           _ = _ && "news" == _,
+          _ = 36 == _.GetEventType(),
           _ = "community" === (0, _._)(),
           _ = _.appid ? "games" : "groups",
           _ =
@@ -18986,13 +18995,14 @@
           case _.k_eCommunityView:
           case _.k_eCommunityEdit:
           case _.k_eCommunityEditBroadcast:
-          case _.k_eCommunityAdminPage:
           case _.k_eCommunityPublish:
           case _.k_eCommunityMigrate:
           case _.k_eCommunityPreview:
           case _.k_eCommunityPreviewSale:
           case _.k_eCommunityAnnouncementHub:
             return _;
+          case _.k_eCommunityAdminPage:
+            return !_ && _;
           case _.k_eViewWebSiteHub:
             return _ || _;
           case _.k_eStoreView:
@@ -19054,7 +19064,8 @@
             _.BIsOGGEvent() &&
             _.appid &&
             _ &&
-            _.BHasSaleUpdateLandingPageVanity();
+            _.BHasSaleUpdateLandingPageVanity(),
+          _ = 36 == _.GetEventType();
         switch (_) {
           case _.k_eCommunityPublish:
             return (
@@ -19081,16 +19092,18 @@
           case _.k_eCommunityMigrate:
             return _ + "partnerevents/migrate_announcement/" + _;
           case _.k_eCommunityPreview:
-            return (
-              _ +
-              (_.bOldAnnouncement
-                ? "partnerevents/preview_old_announcement/" + _
-                : "partnerevents/preview/" + _)
-            );
+            return _
+              ? _ + "partnerevents/previewsale/" + _
+              : _ +
+                  (_.bOldAnnouncement
+                    ? "partnerevents/preview_old_announcement/" + _
+                    : "partnerevents/preview/" + _);
           case _.k_eCommunityPreviewSale:
             return _ + "partnerevents/previewsale/" + _;
           case _.k_eCommunityAdminPage:
-            return _ + "partnerevents";
+            return _
+              ? `${_}curator/${_.clanSteamID.GetAccountID()}/admin/creatorhome_link`
+              : _ + "partnerevents";
           case _.k_eCommunityAnnouncementHub:
             return _ + "announcements";
           case _.k_eStoreNewsHub:
@@ -19111,11 +19124,15 @@
                 ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
                 : _
                   ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
-                  : _ +
-                    (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                      ? "sale/"
-                      : "curator/" + _.clanSteamID.GetAccountID() + "/sale/") +
-                    _.jsondata.sale_vanity_id
+                  : _
+                    ? `${_}curator/${_.clanSteamID.GetAccountID()}`
+                    : _ +
+                      (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
+                        ? "sale/"
+                        : "curator/" +
+                          _.clanSteamID.GetAccountID() +
+                          "/sale/") +
+                      _.jsondata.sale_vanity_id
               : _;
           case _.k_eCommunityView:
             return _ + "announcements/detail/" + _;
@@ -19124,6 +19141,7 @@
               return `${_._.STORE_BASE_URL}meetsteam/${_}`;
             if (_)
               return `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`;
+            if (_) return `${_}curator/${_.clanSteamID.GetAccountID()}`;
             return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `view/${_}`}`;
           case _.k_eStoreUsersNewsHub:
             return `${_}news/`;
@@ -19299,6 +19317,9 @@
               break;
             case "steamcurator":
               _ = (0, _._)("#steam_curator_follow_ttip");
+              break;
+            case "group":
+              _ = (0, _._)("#steam_group_follow_ttip");
           }
           return _
             ? _.createElement(
@@ -19328,7 +19349,7 @@
                   _.createElement(
                     "div",
                     {
-                      className: _.FollowBtnText,
+                      className: (0, _._)(_.FollowBtnText, "FollowBtnText"),
                     },
                     !_ &&
                       (_
@@ -19342,7 +19363,8 @@
             : (console.error("CommonFollowButton unexpected type", _), null);
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1),
+          const { followType: _ } = _,
+            [__webpack_require__, _] = _.useState(!1),
             { clanAccountID: _, className: _ } = _,
             _ = _._.InitFromClanID(_),
             [_, _] = (0, _._)(_),
@@ -19352,31 +19374,32 @@
             className: _,
             bIgnored: _,
             bFollowing: _,
-            bApplyingFollowing: _,
+            bApplyingFollowing: __webpack_require__,
             onFollowClick: () => {
               const { clanAccountID: _ } = _;
               _() &&
                 _(_) &&
-                (__webpack_require__(!0),
+                (_(!0),
                 (() => {
-                  const { clanAccountID: _, creatorID: _ } = _,
+                  const { clanAccountID: _, creatorID: __webpack_require__ } =
+                      _,
                     _ = _._.InitFromClanID(_),
                     _ = _._.Get().BIsFollowingCurator(_),
                     _ = !_ && _._.Get().BIsIgnoringCurator(_);
                   _._.Get()
                     .UpdateFollowOrIgnoreCurator(_, !_, !(_ || _))
                     .then((_) => {
-                      if (_) {
-                        let _ = _._.GetCreatorHomeByID(_);
+                      if (__webpack_require__) {
+                        let _ = _._.GetCreatorHomeByID(__webpack_require__);
                         _ || _.AdjustFollower(_ ? -1 : 1);
                       }
-                      __webpack_require__(!1);
+                      _(!1);
                     })
                     .then(() => {
                       _(_);
                     })
                     .catch((_) => {
-                      __webpack_require__(!1);
+                      _(!1);
                       let _ = (0, _._)(_);
                       console.error(
                         "CuratorFollowButton hit error: " + _.strErrorMsg,
@@ -19385,7 +19408,8 @@
                     });
                 })());
             },
-            followType: _?.is_creator_home ? "creatorhome" : "steamcurator",
+            followType:
+              _ ?? (_?.is_creator_home ? "creatorhome" : "steamcurator"),
           });
         },
         _ = (_) => {
@@ -19829,7 +19853,12 @@
         );
       }
       const _ = (0, _._)(function (_) {
-          const { appID: _, snr: __webpack_require__, classOverride: _ } = _,
+          const {
+              appID: _,
+              snr: __webpack_require__,
+              classOverride: _,
+              styleOverride: _,
+            } = _,
             [_] = (0, _._)(_, {}),
             [_, _] = (0, _.useState)(() =>
               !_ || (1 != _?.GetAppType() && 12 != _?.GetAppType())
@@ -19865,6 +19894,7 @@
                       _.token.reason || _(!1))
                     : (0, _._)();
               },
+              style: _,
             },
             _ ? _.createElement(_.qnF, null) : _.createElement(_.T4m, null),
             _.createElement(
@@ -19873,6 +19903,7 @@
                 className: (0, _._)(
                   _().WishlistButtonText,
                   _ && _().WishlistLoadingText,
+                  "WishlistButtonText",
                 ),
               },
               (0, _._)(_ ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
@@ -19917,13 +19948,22 @@
           );
         });
       function _(_) {
-        const { nCreatorAccountID: _ } = _,
-          [__webpack_require__, _] = (0, _._)(_),
+        const {
+            nCreatorAccountID: _,
+            classOverride: __webpack_require__,
+            styleOverride: _,
+            followType: _,
+          } = _,
+          [_, _] = (0, _._)(_),
           { creatorHome: _ } = (0, _._)(_);
         return _.createElement(
           "div",
           {
-            className: _().GameHoverCreatorFollowButtonCtn,
+            className: (0, _._)(
+              _().GameHoverCreatorFollowButtonCtn,
+              __webpack_require__,
+            ),
+            style: _,
           },
           _.createElement(
             "a",
@@ -19931,13 +19971,12 @@
               href: _?.GetCreatorHomeURL("developer"),
             },
             _.createElement("img", {
-              src: __webpack_require__
-                ? (0, _._)(null, "medium")
-                : _.avatar_medium_url,
+              src: _ ? (0, _._)(null, "medium") : _.avatar_medium_url,
             }),
           ),
           _.createElement(_._, {
             clanAccountID: _,
+            followType: _,
           }),
         );
       }

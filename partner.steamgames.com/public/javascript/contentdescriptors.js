@@ -193,7 +193,7 @@ function HandleRelatedContentDescriptors( descid, bAnimate )
 		if ( parentDescID )
 		{
 			var $parentElem = $J( '#descriptor_' + parentDescID );
-			$parentElem.prop( 'checked', true );
+			$parentElem.prop( 'checked', true ).trigger('change');
 			HandleRelatedContentDescriptors( parentDescID, bAnimate );
 		}
 
@@ -211,7 +211,7 @@ function HandleRelatedContentDescriptors( descid, bAnimate )
 		childrenDescriptors.each( function( ) {
 			var child = $J( this );
 			child.find( 'input[type="checkbox"]' ).each( function() {
-				$J( this ).prop( 'checked', false );
+				$J( this ).prop( 'checked', false ).trigger('change');
 				HandleRelatedContentDescriptors( $J( this ).data( 'descid' ), bAnimate );
 			} );
 		} );

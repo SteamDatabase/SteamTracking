@@ -2023,6 +2023,9 @@ CUserYou = Class.create( CUser, {
 		if ( typeof(g_bIsInMarketplace) != 'undefined' && g_bIsInMarketplace )
 			params.market = 1;
 
+		if ( window.g_bReactRenderedItemDescriptions && g_bReactRenderedItemDescriptions )
+			params.preserve_bbcode = 1;
+
 		RequestFullInventory(
 				g_strInventoryLoadURL + appid + '/' + contextid + '/',
 				params,
@@ -2454,13 +2457,43 @@ function MouseOverItem( event, owner, elItem, rgItem )
 	else if ( ( !hover.visible() || hover.target != elItem ) && !elItem.timer )
 	{
 		elItem.wants_hover = true;
+
 		// if the hover is visible, wait a bit to give it a chacne to disappear
 		if ( hover.visible() )
-			window.setTimeout( function() { if ( elItem.wants_hover ) BuildHover( 'hover', rgItem, owner ); }, Math.min( 250, ITEM_HOVER_DELAY - 50 ) );
+			window.setTimeout( function() { if ( elItem.wants_hover ) RenderHover( rgItem, owner ); }, Math.min( 250, ITEM_HOVER_DELAY - 50 ) );
 		else
-			BuildHover( 'hover', rgItem, owner );
+			RenderHover( rgItem, owner );
 
 		elItem.timer = window.setTimeout( function() { elItem.timer = false; if ( elItem.wants_hover ) ShowHover( elItem, rgItem ); elItem.wants_hover = false; }, ITEM_HOVER_DELAY );
+	}
+}
+
+function RenderHover( rgItem, owner )
+{
+	if ( window.g_bReactRenderedItemDescriptions && g_bReactRenderedItemDescriptions )
+	{
+		const asset = {
+			appid: rgItem.appid,
+			contextid: rgItem.contextid,
+			assetid: rgItem.assetid,
+			classid: rgItem.classid,
+			instanceid: rgItem.instanceid,
+			amount: rgItem.amount,
+			missing: rgItem.missing,
+			est_usd: rgItem.est_usd,
+			asset_properties: rgItem.asset_properties,
+		};
+		if ( typeof rgItem.descriptions == 'string' )
+			rgItem.descriptions = [];
+		if ( typeof rgItem.owner_descriptions == 'string' )
+			rgItem.owner_descriptions = [];
+		if ( rgItem.tags )
+			rgItem.tags.forEach( function ( tag ) { tag.localized_tag_name = tag.name; } );
+		RenderItemInfo( 'hover_content', rgItem, asset );
+	}
+	else
+	{
+		BuildHover('hover', rgItem, owner);
 	}
 }
 
@@ -3714,6 +3747,30 @@ SellItemDialog = {
 	}
 };
 
+// taken from domutils.ts, see there for more information
+function ComputeZoomForElement( element )
+{
+	let fCumulativeZoom = 1;
+
+	let cursor = element;
+	while ( cursor != null && cursor.tagName != "HTML" )
+	{
+		const style = getComputedStyle( cursor );
+		if ( style.zoom )
+		{
+			const fElemZoom = Number.parseFloat( style.zoom );
+			if ( !isNaN( fElemZoom ) )
+			{
+				fCumulativeZoom *= fElemZoom;
+			}
+		}
+
+		cursor = cursor.parentElement;
+	}
+
+	return fCumulativeZoom;
+}
+
 function ShowHover( elem, item )
 {
 	var hover = $('hover');
@@ -3722,16 +3779,20 @@ function ShowHover( elem, item )
 		if ( hover.target )
 			hover.target.removeClassName('hover');
 
-		BuildHover( 'hover', item );
+		RenderHover( item );
 		hover.target = elem;
 	}
 
 	var divHoverContents = hover.down( '.hover_box' );
 
-	hover.style.visibility = 'hidden';
+	hover.style.visibility = 'visible';
 	hover.show();
 
-	hover.clonePosition( elem, {setWidth: false, setHeight: false} );
+	var boundingRect = elem.getBoundingClientRect();
+	var zoom = ComputeZoomForElement( elem );
+	hover.style.left = ( boundingRect.left / zoom ) + 'px';
+	hover.style.top = ( boundingRect.top / zoom ) + 'px';
+
 	var hover_box = hover.down( '.hover_box' );
 	var hover_arrow_left = hover.down( '.hover_arrow_left' );
 	var hover_arrow_right = hover.down( '.hover_arrow_right' );
@@ -3739,7 +3800,7 @@ function ShowHover( elem, item )
 
 	var hover_arrow = hover_arrow_left;
 
-	var nHoverHorizontalPadding = (hover_arrow ? -4 : 8);
+	var nHoverHorizontalPadding = (hover_arrow ? -4 : 0);
 	var boxRightViewport = elem.viewportOffset().left + parseInt( elem.getDimensions().width ) + hover_box.getWidth() + ( 24 - nHoverHorizontalPadding );
 	var nSpaceRight = document.viewport.getWidth() - boxRightViewport;
 	var nSpaceLeft = parseInt( hover.style.left ) - hover.getWidth();

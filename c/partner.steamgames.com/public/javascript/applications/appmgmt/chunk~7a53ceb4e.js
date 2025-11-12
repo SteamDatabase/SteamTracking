@@ -921,7 +921,7 @@
       function _(_) {
         return (
           _.indexOf("?") > 0 && (_ = _.split("?")[0]),
-          _.endsWith(".jpg")
+          _.endsWith(".jpg") || _.endsWith(".jpeg")
             ? 1
             : _.endsWith(".png")
               ? 3
@@ -1147,7 +1147,7 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _.toLowerCase();
-        return _.endsWith(".jpg")
+        return _.endsWith(".jpg") || _.endsWith(".jpeg")
           ? "image/jpeg"
           : _.endsWith(".png")
             ? "image/png"

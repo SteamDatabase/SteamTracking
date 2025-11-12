@@ -576,10 +576,20 @@ select.hourselect,  select.minuteselect {
 .newformrow.widelabel.EarlyAccess {
 	border-top: 1px solid #444;
 	padding-top: 12px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 24px;
 }
 .newformrow.widelabel.EarlyAccess .formlabel {
 	margin-top: 42px;
-    width: 50%;
+	width: unset;
+	position: relative;
+}
+
+.newformrow.widelabel.EarlyAccess .formlabel .ea_question {
+	font-size: 14px;
+	color: white;
 }
 
 .newformrow .formdata {
@@ -591,7 +601,7 @@ select.hourselect,  select.minuteselect {
 	margin-left: 256px;
 }
 .newformrow.widelabel.EarlyAccess .formdata {
-	margin-left: 50%;
+	margin-left: unset;
 }
 
 .localized_image_picker_ctn {

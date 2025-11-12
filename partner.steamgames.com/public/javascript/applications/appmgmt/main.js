@@ -202,6 +202,7 @@
         slideTrayCustomize: "_2VUpHDtxN8lR1LDahY_cI2",
         breadcrumbContainer: "_3HjnEmKg66o82ah74EIvmq",
         breadcrumbContainerTemplate: "_3dMffY_iRZXHjZmXN9aLej",
+        pip: "_3Byg6Wc4TX36gkUptUIk72",
         pipList: "LY1m24ODS7AFRuzclt0Sl",
         pipScrollerContainer: "_3SyN-YtXsML6ado0q-Gdve",
         pipScrollButton: "qE43Jfzl0qJX_a6XrMgSr",
@@ -211,7 +212,6 @@
         scrollBackground: "WUHeTNYGQDQQg_jQe-78W",
         scrollForeground: "PQzkJfi8IxzjcFEDG-yv-",
         pipContainer: "_3TKX37FakYHikXh3Wtg2BU",
-        pip: "_3Byg6Wc4TX36gkUptUIk72",
         pipNumber: "_1u4YJiW1cdufpC_wssM8Us",
         innerSlide: "_3Cc2bMRML2lEkSyi2IAZ9G",
         DisableSliderMotion: "_3J8-bW87K3pb8EpRNYq0JG",
@@ -586,7 +586,6 @@
         OffIndicator: "w0I94_DnBuP6_sAy2jJOL",
         IconImage: "_2RY897Hy2yhwXPKZZIMbVc",
         RightColumnContainer: "_30-E9De2BTSA_LQAluUDUI",
-        EventPublishButton: "_3nIAe51MkJS4ZGO9CQ6xks",
         FloatRight: "_1bzHf_n9CdWgjfVlmRX68A",
         TTip: "_2aWukx6Wd2nw_kXZ1FP2NP",
         ValveSupportOnly: "wC6-UDN4iQob1NcD0Rpty",
@@ -1304,7 +1303,7 @@
         U = r(738),
         H = r(56011),
         V = r(71298);
-      function j(e, t, r, n, i) {
+      function q(e, t, r, n, i) {
         return (0, x.n)({
           mutationFn: () =>
             (async function (e, t) {
@@ -1333,7 +1332,7 @@
           onError: () => i(!1, (0, h.we)("#Error_Generic")),
         });
       }
-      function q(e) {
+      function j(e) {
         const t = (0, u.useMemo)(() => Number.parseInt(e.appId), [e.appId]),
           r = (function () {
             const [e] = (0, u.useState)(() =>
@@ -1420,7 +1419,7 @@
             closeModal: s,
           } = e,
           a = (0, V.vs)(),
-          o = j(t, r.packageid, n, i, (e, t) => {
+          o = q(t, r.packageid, n, i, (e, t) => {
             e
               ? (a.fnSetSuccess(!0), a.fnSetStrSuccess(t))
               : (a.fnSetError(!0), a.fnSetStrError(t));
@@ -2330,7 +2329,7 @@
                             u.createElement(I.X, {
                               config: {
                                 "key-wizard": () =>
-                                  u.createElement(q, {
+                                  u.createElement(j, {
                                     appId: e.match.params.appid,
                                   }),
                               },
@@ -4876,7 +4875,7 @@
             (e[(e.FORWARD = 1)] = "FORWARD"),
             (e[(e.BACKWARD = 2)] = "BACKWARD");
         })(V || (V = {}));
-      class j {
+      class q {
         m_Tree;
         m_Parent;
         m_rgChildren = [];
@@ -5695,7 +5694,7 @@
           );
         }
         SetActiveChild(e) {
-          e instanceof j
+          e instanceof q
             ? (this.EnsureChildrenSorted(),
               (this.m_ActiveChild = e),
               (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(e)))
@@ -5798,9 +5797,9 @@
             })(this, t);
         }
       }
-      (0, n.Cg)([l.o], j.prototype, "OnDOMFocus", null),
-        (0, n.Cg)([l.o], j.prototype, "OnDOMBlur", null),
-        (0, n.Cg)([l.o], j.prototype, "OnNavigationEvent", null);
+      (0, n.Cg)([l.o], q.prototype, "OnDOMFocus", null),
+        (0, n.Cg)([l.o], q.prototype, "OnDOMBlur", null),
+        (0, n.Cg)([l.o], q.prototype, "OnNavigationEvent", null);
     },
     7745: (e, t, r) => {
       "use strict";
@@ -13392,20 +13391,20 @@
           return "CStoreBrowse_GetStoreCategories_Response_Category";
         }
       }
-      class j extends i.Message {
+      class q extends i.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            j.prototype.context || a.Sg(j.M()),
+            q.prototype.context || a.Sg(q.M()),
             i.Message.initialize(this, e, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            j.sm_m ||
-              (j.sm_m = {
-                proto: j,
+            q.sm_m ||
+              (q.sm_m = {
+                proto: q,
                 fields: {
                   context: { n: 1, c: A },
                   excluded_content_descriptorids: {
@@ -13417,60 +13416,6 @@
                     bw: a.gp.writeRepeatedEnum,
                   },
                 },
-              }),
-            j.sm_m
-          );
-        }
-        static MBF() {
-          return j.sm_mbf || (j.sm_mbf = a.w0(j.M())), j.sm_mbf;
-        }
-        toObject(e = !1) {
-          return j.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return a.BT(j.M(), e, t);
-        }
-        static fromObject(e) {
-          return a.Uq(j.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new j();
-          return j.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return a.zj(j.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          a.i0(j.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreBrowse_GetContentHubConfig_Request";
-        }
-      }
-      class q extends i.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            q.prototype.hubconfigs || a.Sg(q.M()),
-            i.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            q.sm_m ||
-              (q.sm_m = {
-                proto: q,
-                fields: { hubconfigs: { n: 1, c: G, r: !0, q: !0 } },
               }),
             q.sm_m
           );
@@ -13507,6 +13452,60 @@
           return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CStoreBrowse_GetContentHubConfig_Request";
+        }
+      }
+      class j extends i.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            j.prototype.hubconfigs || a.Sg(j.M()),
+            i.Message.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            j.sm_m ||
+              (j.sm_m = {
+                proto: j,
+                fields: { hubconfigs: { n: 1, c: G, r: !0, q: !0 } },
+              }),
+            j.sm_m
+          );
+        }
+        static MBF() {
+          return j.sm_mbf || (j.sm_mbf = a.w0(j.M())), j.sm_mbf;
+        }
+        toObject(e = !1) {
+          return j.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return a.BT(j.M(), e, t);
+        }
+        static fromObject(e) {
+          return a.Uq(j.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (s().BinaryReader)(e),
+            r = new j();
+          return j.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return a.zj(j.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          a.i0(j.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CStoreBrowse_GetContentHubConfig_Response";
         }
       }
@@ -13515,7 +13514,7 @@
         constructor(e = null) {
           super(),
             G.prototype.hubcategoryid || a.Sg(G.M()),
-            i.Message.initialize(this, e, 0, -1, void 0, null);
+            i.Message.initialize(this, e, 0, -1, [6, 7, 8, 9], null);
         }
         static sm_m;
         static sm_mbf;
@@ -13538,6 +13537,38 @@
                     bw: a.gp.writeString,
                   },
                   url_path: { n: 5, br: a.qM.readString, bw: a.gp.writeString },
+                  replaces_tags: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: a.qM.readUint32,
+                    pbr: a.qM.readPackedUint32,
+                    bw: a.gp.writeRepeatedUint32,
+                  },
+                  must_have_tags: {
+                    n: 7,
+                    r: !0,
+                    q: !0,
+                    br: a.qM.readUint32,
+                    pbr: a.qM.readPackedUint32,
+                    bw: a.gp.writeRepeatedUint32,
+                  },
+                  any_one_of_tags: {
+                    n: 8,
+                    r: !0,
+                    q: !0,
+                    br: a.qM.readUint32,
+                    pbr: a.qM.readPackedUint32,
+                    bw: a.gp.writeRepeatedUint32,
+                  },
+                  must_not_have_tags: {
+                    n: 9,
+                    r: !0,
+                    q: !0,
+                    br: a.qM.readUint32,
+                    pbr: a.qM.readPackedUint32,
+                    bw: a.gp.writeRepeatedUint32,
+                  },
                 },
               }),
             G.sm_m
@@ -14591,8 +14622,8 @@
           (e.GetContentHubConfig = function (e, t) {
             return e.SendMsg(
               "StoreBrowse.GetContentHubConfig#1",
-              (0, o.I8)(j, t),
-              q,
+              (0, o.I8)(q, t),
+              j,
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
@@ -16330,24 +16361,25 @@
         let r = e?.parentElement;
         for (; r; ) {
           if (n(r)) {
-            if (!t || "x" == t) {
-              const e = window.getComputedStyle(r);
-              if (
-                "scroll" == e.overflowX ||
-                "auto" == e.overflowX ||
-                "fixed" == e.position
+            const e = window.getComputedStyle(r);
+            if (
+              !(
+                (t && "x" != t) ||
+                ("scroll" != e.overflowX &&
+                  "auto" != e.overflowX &&
+                  "fixed" != e.position)
               )
-                break;
-            }
-            if (!t || "y" == t) {
-              const e = window.getComputedStyle(r);
-              if (
-                "scroll" == e.overflowY ||
-                "auto" == e.overflowY ||
-                "fixed" == e.position
+            )
+              break;
+            if (
+              !(
+                (t && "y" != t) ||
+                ("scroll" != e.overflowY &&
+                  "auto" != e.overflowY &&
+                  "fixed" != e.position)
               )
-                break;
-            }
+            )
+              break;
           }
           r = r.parentElement;
         }
@@ -16417,7 +16449,13 @@
           e,
           {
             onMouseEnter: n.useCallback(() => t(!0), []),
-            onMouseLeave: n.useCallback(() => t(!1), []),
+            onMouseLeave: n.useCallback(
+              () =>
+                window.sessionStorage &&
+                "true" != window.sessionStorage.getItem("DEBUG_StickyHovers") &&
+                t(!1),
+              [],
+            ),
           },
         ];
       }
@@ -16502,7 +16540,7 @@
             null != this.fnLatestCallback &&
               (this.fnLatestCallback(),
               (this.fnLatestCallback = null),
-              (this.flLastExecutionTimeMs = Date.now())),
+              (this.flLastExecutionTimeMs = performance.now())),
               window.clearTimeout(this.nTimeoutHandle),
               (this.nTimeoutHandle = 0);
           },
@@ -16516,7 +16554,7 @@
             (r) => {
               const n = t.current;
               n.fnLatestCallback = r;
-              const i = Date.now() - n.flLastExecutionTimeMs,
+              const i = performance.now() - n.flLastExecutionTimeMs,
                 s = Math.max(e - i, 0);
               window.clearTimeout(n.nTimeoutHandle),
                 (n.nTimeoutHandle = window.setTimeout(
@@ -20102,11 +20140,12 @@
             e.matches(":dir(rtl)") &&
               ("left" === w ? (w = "right") : "right" === w && (w = "left"));
             let {
-              nLeft: B,
-              nTop: I,
-              nOverflow: T,
-              nLateralOverflow: D,
-            } = l(w, m, d, c, _, n.innerWidth, n.innerHeight);
+                nLeft: B,
+                nTop: I,
+                nOverflow: T,
+                nLateralOverflow: D,
+              } = l(w, m, d, c, _, n.innerWidth, n.innerHeight),
+              L = u;
             if (T > (p ?? 10) && !f) {
               const e = (function (e) {
                   switch (e) {
@@ -20123,7 +20162,7 @@
                     case "overlay-center":
                       return "overlay-center";
                   }
-                })(w),
+                })(L),
                 {
                   nLeft: t,
                   nTop: r,
@@ -20131,7 +20170,7 @@
                   nLateralOverflow: s,
                 } = l(e, m, d, c, _, n.innerWidth, n.innerHeight);
               if (
-                (i < T && ((w = e), (B = t), (I = r), (T = i), (D = s)),
+                (i < T && ((L = e), (B = t), (I = r), (T = i), (D = s)),
                 T > (p ?? 10))
               )
                 return (
@@ -20153,21 +20192,21 @@
                 "left" === r || "right" === r ? (n += a) : (i += a);
                 return [n, i];
               })(h, D, w, I, B));
-            let L = null;
-            switch (w) {
+            let k = null;
+            switch (L) {
               case "left":
-                L = s;
+                k = s;
                 break;
               case "right":
-                L = i;
+                k = i;
                 break;
               case "top":
-                L = o;
+                k = o;
                 break;
               case "bottom":
-                L = a;
+                k = a;
             }
-            L && L.setAttribute("style", ""),
+            k && k.setAttribute("style", ""),
               B != b && C(B),
               I != M && S(I),
               v || y(!0);
@@ -21152,10 +21191,11 @@
         visibleSlides: e.visibleSlides,
       }));
       function y(e) {
-        const t = (0, c.Qn)();
-        return (!e.screenIsWide && !t) || e.bForceSimpleCarousel
-          ? a.createElement(p, { ...e }, e.children)
-          : a.createElement(B, { ...e }, e.children);
+        const { bPreventSnapCarousel: t } = e,
+          r = (0, c.Qn)();
+        return t || ((e.screenIsWide || r) && !e.bForceSimpleCarousel)
+          ? a.createElement(B, { ...e }, e.children)
+          : a.createElement(p, { ...e }, e.children);
       }
       function B(e) {
         const t = (0, c.Qn)(),
@@ -22305,7 +22345,7 @@
         G5: () => y,
         JU: () => C,
         Od: () => V,
-        RF: () => j,
+        RF: () => q,
         U9: () => k,
         UC: () => T,
         VP: () => I,
@@ -22762,11 +22802,11 @@
           );
         }
       }
-      const j = i.forwardRef(function (e, t) {
-        const r = (0, p.Zt)("ToggleField", q);
+      const q = i.forwardRef(function (e, t) {
+        const r = (0, p.Zt)("ToggleField", j);
         return i.createElement(r, { ref: t, ...e });
       });
-      class q extends U {
+      class j extends U {
         OnOffKeyDown(e) {
           (37 == e.keyCode && this.checked) ||
           (39 == e.keyCode && !this.checked)
@@ -22852,8 +22892,8 @@
           );
         }
       }
-      (0, n.Cg)([c.o], q.prototype, "OnOffKeyDown", null),
-        (0, n.Cg)([c.o], q.prototype, "OnNewUIToggle", null);
+      (0, n.Cg)([c.o], j.prototype, "OnOffKeyDown", null),
+        (0, n.Cg)([c.o], j.prototype, "OnNewUIToggle", null);
     },
     16676: (e, t, r) => {
       "use strict";
@@ -23775,7 +23815,7 @@
             },
             r = this.props.contextMenuPositionOptions?.onCancel;
           (this.m_iMenuInstance = (0, T.lX)(
-            s.createElement(j, {
+            s.createElement(q, {
               rgOptions: this.props.rgOptions,
               onValueSelected: this.OnValueSelected,
               onCancel: r,
@@ -23804,7 +23844,7 @@
             this.setState({ bOpened: !1 }, () => this.m_elInput.focus());
         }
         OnKeyDown(e) {
-          q(e, this.props.rgOptions.filter(O), this.value?.data, (e) =>
+          j(e, this.props.rgOptions.filter(O), this.value?.data, (e) =>
             this.OnValueSelected(void 0, e),
           );
         }
@@ -23849,7 +23889,7 @@
         (0, i.Cg)([d.oI], H.prototype, "HideMenu", null),
         (0, i.Cg)([d.oI], H.prototype, "OnKeyDown", null);
       const V = s.createContext(null);
-      function j(e) {
+      function q(e) {
         const t = (0, f.Zt)("DropDownMenu", G);
         return s.createElement(
           V.Provider,
@@ -23857,7 +23897,7 @@
           s.createElement(t, { ...e }),
         );
       }
-      function q(e, t, r, n) {
+      function j(e, t, r, n) {
         let i;
         if ("ArrowDown" === e.key) {
           i = (t.findIndex((e) => e.data === r) + 1) % t.length;
@@ -23878,7 +23918,7 @@
           l = s.useMemo(() => t.filter(O), [t]),
           c = s.useCallback(
             (e) => {
-              q(e, l, a, (e) => o(e.data));
+              j(e, l, a, (e) => o(e.data));
             },
             [a, l],
           );
@@ -25073,8 +25113,8 @@
           U = f ?? "standard",
           H = b ?? "standard",
           V = M ?? !0,
-          j = S ?? 0,
-          q = v ?? "center",
+          q = S ?? 0,
+          j = v ?? "center",
           G = (function (e, t) {
             const r = (0, De.R7)(),
               n = s.useCallback(() => {
@@ -25111,7 +25151,7 @@
               N && Ie().WithFirstRow,
               F && Ie().WithChildrenInline,
               x && Ie().WithChildrenBelow,
-              "center" == q && Ie().VerticalAlignCenter,
+              "center" == j && Ie().VerticalAlignCenter,
               "shift-children-below" == z && Ie().InlineWrapShiftsChildrenBelow,
               !!i && Ie().WithDescription,
               "standard" == H && Ie().WithBottomSeparatorStandard,
@@ -25124,7 +25164,7 @@
               A && Ie().Clickable,
               V && Ie().HighlightOnFocus,
             ),
-            style: { "--indent-level": j },
+            style: { "--indent-level": q },
           },
           N &&
             s.createElement(
@@ -25318,10 +25358,10 @@
         return s.createElement(
           Ue.A,
           { className: l, appear: !1, enter: a, exit: a },
-          s.createElement(je, { key: t, childrenClasses: r, sizeClass: o }, n),
+          s.createElement(qe, { key: t, childrenClasses: r, sizeClass: o }, n),
         );
       }
-      function je(e) {
+      function qe(e) {
         const {
             sizeClass: t,
             children: r,
@@ -25411,7 +25451,7 @@
               ),
             );
       }
-      function qe(e, t) {
+      function je(e, t) {
         return {
           base: t,
           enterStart: e.Enter,
@@ -25533,7 +25573,7 @@
           Ve,
           {
             childrenKey: r?.identifier,
-            childrenClasses: qe(Ze(), Ze().ContentTransition),
+            childrenClasses: je(Ze(), Ze().ContentTransition),
             directionClass: l,
             animate: a != Ne.None,
           },
@@ -26603,10 +26643,10 @@
                   { notchIndex: 1, label: `${t}` },
                 ]
               : C,
-            j = h ?? !0,
-            q = this.normalizedDefaultValue,
+            q = h ?? !0,
+            j = this.normalizedDefaultValue,
             G = this.normalizedSliderOrigin,
-            Z = null != q,
+            Z = null != j,
             K = "top-caret" == T,
             X = !K,
             Y = R || M,
@@ -26645,8 +26685,8 @@
               onOKActionDescription: l
                 ? null
                 : (0, m.we)("#Slider_AdjustSlider"),
-              focusable: j,
-              childFocusDisabled: l || !j,
+              focusable: q,
+              childFocusDisabled: l || !q,
               onContextMenu: this.OnContextMenu,
               onOKButton: l
                 ? () => me.eZ.PlayNavSound(me.PN.FailedNav)
@@ -26684,7 +26724,7 @@
                 onBlur: this.OnInnerSliderBlur,
                 style: {
                   "--normalized-slider-value": this.normalizedClampedValue,
-                  "--normalized-slider-default-value": q,
+                  "--normalized-slider-default-value": j,
                   "--normalized-slider-origin": G,
                   "--default-value-track-color": X
                     ? T.trackForegroundColor
@@ -27336,7 +27376,7 @@
         iYj: () => te,
         jE0: () => P,
         jRw: () => U,
-        jXA: () => q,
+        jXA: () => j,
         jvG: () => F,
         kdM: () => ie,
         l4n: () => A,
@@ -27346,7 +27386,7 @@
         pcV: () => m,
         q8c: () => J,
         qOW: () => H,
-        qzO: () => j,
+        qzO: () => q,
         r7n: () => G,
         rxV: () => D,
         tI4: () => re,
@@ -28708,7 +28748,7 @@
           ),
         );
       }
-      function j() {
+      function q() {
         return n.createElement(
           "svg",
           {
@@ -28727,7 +28767,7 @@
           ),
         );
       }
-      function q() {
+      function j() {
         return n.createElement(
           "svg",
           {
@@ -29664,10 +29704,16 @@
                     rctActiveContextMenus: t && l ? o : void 0,
                   };
                 return e instanceof C._F
-                  ? n.createElement(R, { ...r, modal: e, Component: a ?? I })
+                  ? n.createElement(R, {
+                      ...r,
+                      key: r.key,
+                      modal: e,
+                      Component: a ?? I,
+                    })
                   : e instanceof C.$9
                     ? n.createElement(E, {
                         ...r,
+                        key: r.key,
                         modal: e,
                         bUseDialogElement: l,
                       })
@@ -29932,51 +29978,52 @@
             onCancel: c,
             closeModal: u,
             bOKDisabled: m,
-            onOK: d,
-            bAllowFullSize: p,
-            bDestructiveWarning: h,
-            bDisableBackgroundDismiss: g,
-            bHideCloseIcon: _,
-            children: f,
-            "aria-labelledby": w,
-            ...b
+            bCloseAfterOK: d = !0,
+            onOK: p,
+            bAllowFullSize: h,
+            bDestructiveWarning: g,
+            bDisableBackgroundDismiss: _,
+            bHideCloseIcon: f,
+            children: w,
+            "aria-labelledby": b,
+            ...C
           } = e,
-          C = (0, o.Qn)();
+          M = (0, o.Qn)();
         (0, s.wT)(
           u || c,
           `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${t} ${r}`,
         );
-        const M = n.useCallback(() => {
+        const S = n.useCallback(() => {
             (c && c()) || (u && u());
           }, [c, u]),
-          S = n.useCallback(async () => {
-            m || (d && (await d()), u && u());
-          }, [m, d, u]);
+          v = n.useCallback(async () => {
+            m || (p && (await p()), d && u && u());
+          }, [m, d, p, u]);
         return n.createElement(
           l.x_,
           {
-            onEscKeypress: M,
+            onEscKeypress: S,
             className: r,
-            bDestructiveWarning: h,
-            bDisableBackgroundDismiss: g,
-            bHideCloseIcon: _,
+            bDestructiveWarning: g,
+            bDisableBackgroundDismiss: _,
+            bHideCloseIcon: f,
           },
           n.createElement(
             i.U9,
             {
               role: "dialog",
-              "aria-labelledby": w || void 0,
-              ...b,
+              "aria-labelledby": b || void 0,
+              ...C,
               classNameContent: (0, a.A)(
                 "GenericDialogBase",
                 "GenericConfirmDialog",
-                p && "DialogContentFullSize",
+                h && "DialogContentFullSize",
                 t,
               ),
-              onSubmit: S,
-              bCenterVertically: !C,
+              onSubmit: v,
+              bCenterVertically: !M,
             },
-            f,
+            w,
           ),
         );
       }
@@ -30908,9 +30955,9 @@
       r.d(t, {
         $$j: () => ce,
         $4X: () => Se,
-        $vK: () => qe,
+        $vK: () => je,
         Aj0: () => U,
-        BQz: () => je,
+        BQz: () => qe,
         Bki: () => Ue,
         CeX: () => I,
         DK4: () => p,
@@ -30939,7 +30986,7 @@
         Q38: () => u,
         Qte: () => V,
         R2D: () => J,
-        ROZ: () => q,
+        ROZ: () => j,
         SYj: () => Re,
         T4m: () => Ce,
         V5W: () => W,
@@ -31013,7 +31060,7 @@
         wVV: () => _e,
         xv8: () => M,
         yCC: () => xe,
-        y_e: () => j,
+        y_e: () => q,
         zD7: () => g,
       });
       var n = r(90626),
@@ -32104,7 +32151,7 @@
           }),
         );
       }
-      function j() {
+      function q() {
         return n.createElement(
           "svg",
           {
@@ -32130,7 +32177,7 @@
           }),
         );
       }
-      function q(e) {
+      function j(e) {
         return n.createElement(
           "svg",
           {
@@ -33438,7 +33485,7 @@
           }),
         );
       }
-      function je(e) {
+      function qe(e) {
         return n.createElement(
           "svg",
           {
@@ -33452,7 +33499,7 @@
           }),
         );
       }
-      function qe(e) {
+      function je(e) {
         return n.createElement(
           "svg",
           {

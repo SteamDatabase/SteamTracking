@@ -2727,6 +2727,11 @@
                           )),
                     _.errors?.unavailable_in_country &&
                       _(8, (0, _._)("#Cart_Error_UnavailableCountry_FootNote")),
+                    _.errors?.adult_content_restricted &&
+                      _(
+                        17,
+                        (0, _._)("#Cart_Error_AdultContentRestricted_FootNote"),
+                      ),
                     _.errors?.missing_must_own_appids &&
                       _(
                         16,
@@ -2877,6 +2882,13 @@
                       purchase_state: 8,
                       notice_text: (0, _._)(
                         "#Cart_Error_UnavailableCountry_LineItem",
+                      ),
+                    });
+                  _.errors?.adult_content_restricted &&
+                    _.push({
+                      purchase_state: 17,
+                      notice_text: (0, _._)(
+                        "#Cart_Error_AdultContentRestricted_LineItem",
                       ),
                     });
                   _.errors?.coupon_exclusive_promo &&

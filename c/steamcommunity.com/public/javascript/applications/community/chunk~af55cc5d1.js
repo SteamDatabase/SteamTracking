@@ -422,8 +422,8 @@
             };
       }
       function _(_) {
-        const _ = _.BIsOGGEvent(),
-          _ = _._.Get().GetPartnerEventPermissions(_.clanSteamID).valve_admin;
+        const _ = _.BIsOGGEvent();
+        _._.Get().GetPartnerEventPermissions(_.clanSteamID).valve_admin;
         return _ || 36 != _.GetEventType()
           ? {
               bVisible: !1,
@@ -432,18 +432,11 @@
             ? {
                 bVisible: !0,
               }
-            : _.clanSteamID.GetAccountID() == (0, _._)()
-              ? {
-                  bVisible: !1,
-                }
-              : _
-                ? {
-                    bVisible: !0,
-                    bValveOnly: !0,
-                  }
-                : {
-                    bVisible: !1,
-                  };
+            : (_.clanSteamID.GetAccountID(),
+              (0, _._)(),
+              {
+                bVisible: !1,
+              });
       }
       window.g_ClanStore = _;
     },
@@ -2214,33 +2207,35 @@
           refetch: _,
         };
       }
-      function _(_) {
+      function _(_, _) {
         return {
           queryKey: ["GetCreatorHomeGetAllListsQuery", _],
           queryFn: async () => {
             const _ = _.GetServiceTransport(),
               _ = _._.Init(_);
-            __webpack_require__
-              .Body()
-              .set_steamid(
-                new _._(_, _._.EUNIVERSE, 7, 0).ConvertTo64BitString(),
-              ),
-              __webpack_require__.Body().set_count(100);
+            _.Body().set_steamid(
+              new _._(_, _._.EUNIVERSE, 7, 0).ConvertTo64BitString(),
+            ),
+              _.Body().set_count(100);
             const _ = await _.GetLists(_, _);
-            return _.BSuccess() ? _.Body().list_details() : null;
+            return _.BSuccess()
+              ? _.Body()
+                  .list_details()
+                  .filter((_) => _ || 0 != _.list_state())
+              : null;
           },
           enabled: _ > 0,
         };
       }
-      function _(_) {
+      function _(_, _) {
         const {
-          data: _,
-          isFetching: __webpack_require__,
+          data: __webpack_require__,
+          isFetching: _,
           refetch: _,
-        } = (0, _._)(_(_));
+        } = (0, _._)(_(_, _));
         return {
-          lists: _,
-          isFetching: __webpack_require__,
+          lists: __webpack_require__,
+          isFetching: _,
           refetch: _,
         };
       }

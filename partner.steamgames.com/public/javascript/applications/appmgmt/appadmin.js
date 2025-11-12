@@ -1208,6 +1208,7 @@
             rgOptions: [
               { label: "Integer", data: 2 },
               { label: "Floating point", data: 1 },
+              { label: "String", data: 3 },
             ],
             onChange: (e) => {
               a(e.data);

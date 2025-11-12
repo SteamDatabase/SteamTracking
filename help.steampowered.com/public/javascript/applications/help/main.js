@@ -665,6 +665,7 @@
         Link: "_29bMZB6BOQfTQ_3za-w60I",
         LinkHost: "_16eO9LHnJuheylkB3Fdrpn",
         LinkButton: "_2HnDgHQT_3ehcs4WgskKG5",
+        LinkPill: "_3nRRZ1AKPWQnyWTcT1RDt9",
         UnorderedList: "_2FoSxA1yCqpvxdOJnu8N8Z",
         OrderedList: "vV4IwOV-RuzelptiRQ_ZS",
         StoreWidget: "_36Y-loIMvxDKY9RIVxecCp",
@@ -767,7 +768,6 @@
         OffIndicator: "w0I94_DnBuP6_sAy2jJOL",
         IconImage: "_2RY897Hy2yhwXPKZZIMbVc",
         RightColumnContainer: "_30-E9De2BTSA_LQAluUDUI",
-        EventPublishButton: "_3nIAe51MkJS4ZGO9CQ6xks",
         FloatRight: "_1bzHf_n9CdWgjfVlmRX68A",
         TTip: "_2aWukx6Wd2nw_kXZ1FP2NP",
         ValveSupportOnly: "wC6-UDN4iQob1NcD0Rpty",
@@ -4825,6 +4825,11 @@
                     bw: F.gp.writeUint64String,
                   },
                   language: { n: 2, br: F.qM.readUint32, bw: F.gp.writeUint32 },
+                  steamid: {
+                    n: 3,
+                    br: F.qM.readFixed64String,
+                    bw: F.gp.writeFixed64String,
+                  },
                 },
               }),
             de.sm_m
@@ -4919,6 +4924,11 @@
                     n: 1,
                     br: F.qM.readUint64String,
                     bw: F.gp.writeUint64String,
+                  },
+                  steamid: {
+                    n: 2,
+                    br: F.qM.readFixed64String,
+                    bw: F.gp.writeFixed64String,
                   },
                 },
               }),
@@ -7784,11 +7794,12 @@
             e.matches(":dir(rtl)") &&
               ("left" === C ? (C = "right") : "right" === C && (C = "left"));
             let {
-              nLeft: R,
-              nTop: I,
-              nOverflow: T,
-              nLateralOverflow: z,
-            } = nr(C, l, c, g, _, i.innerWidth, i.innerHeight);
+                nLeft: R,
+                nTop: I,
+                nOverflow: T,
+                nLateralOverflow: z,
+              } = nr(C, l, c, g, _, i.innerWidth, i.innerHeight),
+              E = o;
             if (T > (m ?? 10) && !M) {
               const e = (function (e) {
                   switch (e) {
@@ -7805,7 +7816,7 @@
                     case "overlay-center":
                       return "overlay-center";
                   }
-                })(C),
+                })(E),
                 {
                   nLeft: t,
                   nTop: r,
@@ -7813,7 +7824,7 @@
                   nLateralOverflow: s,
                 } = nr(e, l, c, g, _, i.innerWidth, i.innerHeight);
               if (
-                (n < T && ((C = e), (R = t), (I = r), (T = n), (z = s)),
+                (n < T && ((E = e), (R = t), (I = r), (T = n), (z = s)),
                 T > (m ?? 10))
               )
                 return (
@@ -7835,21 +7846,21 @@
                 "left" === r || "right" === r ? (i += a) : (n += a);
                 return [i, n];
               })(u, z, C, I, R));
-            let E = null;
-            switch (C) {
+            let F = null;
+            switch (E) {
               case "left":
-                E = s;
+                F = s;
                 break;
               case "right":
-                E = n;
+                F = n;
                 break;
               case "top":
-                E = p;
+                F = p;
                 break;
               case "bottom":
-                E = a;
+                F = a;
             }
-            E && E.setAttribute("style", ""),
+            F && F.setAttribute("style", ""),
               R != h && f(R),
               I != b && y(I),
               B || w(!0);
@@ -8142,10 +8153,16 @@
                     rctActiveContextMenus: t && a ? s : void 0,
                   };
                 return e instanceof Qt
-                  ? i.createElement(wr, { ...r, modal: e, Component: n ?? Mr })
+                  ? i.createElement(wr, {
+                      ...r,
+                      key: r.key,
+                      modal: e,
+                      Component: n ?? Mr,
+                    })
                   : e instanceof Kt
                     ? i.createElement(Br, {
                         ...r,
+                        key: r.key,
                         modal: e,
                         bUseDialogElement: a,
                       })
@@ -11452,51 +11469,52 @@
             onCancel: n,
             closeModal: a,
             bOKDisabled: o,
-            onOK: l,
-            bAllowFullSize: c,
-            bDestructiveWarning: m,
-            bDisableBackgroundDismiss: u,
-            bHideCloseIcon: d,
-            children: p,
-            "aria-labelledby": g,
-            ..._
+            bCloseAfterOK: l = !0,
+            onOK: c,
+            bAllowFullSize: m,
+            bDestructiveWarning: u,
+            bDisableBackgroundDismiss: d,
+            bHideCloseIcon: p,
+            children: g,
+            "aria-labelledby": _,
+            ...h
           } = e,
-          h = (0, s.Qn)();
+          f = (0, s.Qn)();
         (0, v.wT)(
           a || n,
           `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${t} ${r}`,
         );
-        const f = i.useCallback(() => {
+        const b = i.useCallback(() => {
             (n && n()) || (a && a());
           }, [n, a]),
-          b = i.useCallback(async () => {
-            o || (l && (await l()), a && a());
-          }, [o, l, a]);
+          y = i.useCallback(async () => {
+            o || (c && (await c()), l && a && a());
+          }, [o, l, c, a]);
         return i.createElement(
           Un,
           {
-            onEscKeypress: f,
+            onEscKeypress: b,
             className: r,
-            bDestructiveWarning: m,
-            bDisableBackgroundDismiss: u,
-            bHideCloseIcon: d,
+            bDestructiveWarning: u,
+            bDisableBackgroundDismiss: d,
+            bHideCloseIcon: p,
           },
           i.createElement(
             bi,
             {
               role: "dialog",
-              "aria-labelledby": g || void 0,
-              ..._,
+              "aria-labelledby": _ || void 0,
+              ...h,
               classNameContent: (0, St.A)(
                 "GenericDialogBase",
                 "GenericConfirmDialog",
-                c && "DialogContentFullSize",
+                m && "DialogContentFullSize",
                 t,
               ),
-              onSubmit: b,
-              bCenterVertically: !h,
+              onSubmit: y,
+              bCenterVertically: !f,
             },
-            p,
+            g,
           ),
         );
       }
@@ -15178,7 +15196,7 @@
             (this.filename = t),
             (this.fileType =
               ((s = t).indexOf("?") > 0 && (s = s.split("?")[0]),
-              (s.endsWith(".jpg")
+              (s.endsWith(".jpg") || s.endsWith(".jpeg")
                 ? 1
                 : s.endsWith(".png")
                   ? 3
@@ -16469,7 +16487,7 @@
         GetMimeType: (e) =>
           (function (e) {
             const t = e.toLowerCase();
-            return t.endsWith(".jpg")
+            return t.endsWith(".jpg") || t.endsWith(".jpeg")
               ? "image/jpeg"
               : t.endsWith(".png")
                 ? "image/png"
@@ -18263,7 +18281,8 @@
           "items" == e ||
           "trailercarousel" == e ||
           "crosspromotesalepage" == e ||
-          "creator_list" == e
+          "creator_list" == e ||
+          "calendar" == e
         );
       }
       !(function (e) {
@@ -21488,29 +21507,31 @@
             return t?.[1];
           })(window.location.href),
           n = r && "news" == i,
-          a = "community" === (0, s.yK)(),
-          o = t.appid ? "games" : "groups",
-          l =
-            a &&
-            o == i &&
+          a = 36 == t.GetEventType(),
+          o = "community" === (0, s.yK)(),
+          l = t.appid ? "games" : "groups",
+          c =
+            o &&
+            l == i &&
             ((t.appid && t.appid === s.UF.APPID) ||
               (!t.appid &&
                 t.clanSteamID.GetAccountID() === s.UF.CLANACCOUNTID));
         switch (e) {
           case jc.k_eView:
-            return l || n;
+            return c || n;
           case jc.k_eCommunityView:
           case jc.k_eCommunityEdit:
           case jc.k_eCommunityEditBroadcast:
-          case jc.k_eCommunityAdminPage:
           case jc.k_eCommunityPublish:
           case jc.k_eCommunityMigrate:
           case jc.k_eCommunityPreview:
           case jc.k_eCommunityPreviewSale:
           case jc.k_eCommunityAnnouncementHub:
-            return l;
+            return c;
+          case jc.k_eCommunityAdminPage:
+            return !a && c;
           case jc.k_eViewWebSiteHub:
-            return l || n;
+            return c || n;
           case jc.k_eStoreView:
           case jc.k_eStoreNewsHub:
           case jc.k_eStoreOwnerPage:
@@ -21549,7 +21570,8 @@
             e.BIsOGGEvent() &&
             e.appid &&
             t &&
-            e.BHasSaleUpdateLandingPageVanity();
+            e.BHasSaleUpdateLandingPageVanity(),
+          d = 36 == e.GetEventType();
         switch (r) {
           case jc.k_eCommunityPublish:
             return (
@@ -21576,16 +21598,18 @@
           case jc.k_eCommunityMigrate:
             return l + "partnerevents/migrate_announcement/" + m;
           case jc.k_eCommunityPreview:
-            return (
-              l +
-              (e.bOldAnnouncement
-                ? "partnerevents/preview_old_announcement/" + m
-                : "partnerevents/preview/" + c)
-            );
+            return d
+              ? l + "partnerevents/previewsale/" + c
+              : l +
+                  (e.bOldAnnouncement
+                    ? "partnerevents/preview_old_announcement/" + m
+                    : "partnerevents/preview/" + c);
           case jc.k_eCommunityPreviewSale:
             return l + "partnerevents/previewsale/" + c;
           case jc.k_eCommunityAdminPage:
-            return l + "partnerevents";
+            return d
+              ? `${o}curator/${e.clanSteamID.GetAccountID()}/admin/creatorhome_link`
+              : l + "partnerevents";
           case jc.k_eCommunityAnnouncementHub:
             return l + "announcements";
           case jc.k_eStoreNewsHub:
@@ -21606,11 +21630,15 @@
                 ? `${o}charts/topnewreleases/${e.jsondata.sale_vanity_id}`
                 : u
                   ? `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`
-                  : o +
-                    (e.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                      ? "sale/"
-                      : "curator/" + e.clanSteamID.GetAccountID() + "/sale/") +
-                    e.jsondata.sale_vanity_id
+                  : d
+                    ? `${o}curator/${e.clanSteamID.GetAccountID()}`
+                    : o +
+                      (e.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
+                        ? "sale/"
+                        : "curator/" +
+                          e.clanSteamID.GetAccountID() +
+                          "/sale/") +
+                      e.jsondata.sale_vanity_id
               : o;
           case jc.k_eCommunityView:
             return l + "announcements/detail/" + m;
@@ -21619,6 +21647,7 @@
               return `${s.TS.STORE_BASE_URL}meetsteam/${c}`;
             if (u)
               return `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`;
+            if (d) return `${o}curator/${e.clanSteamID.GetAccountID()}`;
             return `${o}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${m}` : `view/${c}`}`;
           case jc.k_eStoreUsersNewsHub:
             return `${o}news/`;
@@ -30683,7 +30712,7 @@
                         ),
                         href: M,
                         onClick: v,
-                        download: "steam_deck_white_release.ics",
+                        download: "calendar.ics",
                       },
                       "Apple",
                     ),
@@ -30708,7 +30737,7 @@
                         ),
                         href: M,
                         onClick: v,
-                        download: "steam_deck_white_release.ics",
+                        download: "calendar.ics",
                       },
                       "Outlook",
                     ),
@@ -33883,24 +33912,25 @@
         let r = e?.parentElement;
         for (; r; ) {
           if (y(r)) {
-            if (!t || "x" == t) {
-              const e = window.getComputedStyle(r);
-              if (
-                "scroll" == e.overflowX ||
-                "auto" == e.overflowX ||
-                "fixed" == e.position
+            const e = window.getComputedStyle(r);
+            if (
+              !(
+                (t && "x" != t) ||
+                ("scroll" != e.overflowX &&
+                  "auto" != e.overflowX &&
+                  "fixed" != e.position)
               )
-                break;
-            }
-            if (!t || "y" == t) {
-              const e = window.getComputedStyle(r);
-              if (
-                "scroll" == e.overflowY ||
-                "auto" == e.overflowY ||
-                "fixed" == e.position
+            )
+              break;
+            if (
+              !(
+                (t && "y" != t) ||
+                ("scroll" != e.overflowY &&
+                  "auto" != e.overflowY &&
+                  "fixed" != e.position)
               )
-                break;
-            }
+            )
+              break;
           }
           r = r.parentElement;
         }
@@ -37464,6 +37494,11 @@
                     n: 13,
                     br: a.qM.readFixed64String,
                     bw: a.gp.writeFixed64String,
+                  },
+                  delete_reason: {
+                    n: 14,
+                    br: a.qM.readEnum,
+                    bw: a.gp.writeEnum,
                   },
                 },
               }),
@@ -53296,7 +53331,7 @@
         constructor(e = null) {
           super(),
             V.prototype.hubcategoryid || a.Sg(V.M()),
-            n.Message.initialize(this, e, 0, -1, void 0, null);
+            n.Message.initialize(this, e, 0, -1, [6, 7, 8, 9], null);
         }
         static sm_m;
         static sm_mbf;
@@ -53319,6 +53354,38 @@
                     bw: a.gp.writeString,
                   },
                   url_path: { n: 5, br: a.qM.readString, bw: a.gp.writeString },
+                  replaces_tags: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: a.qM.readUint32,
+                    pbr: a.qM.readPackedUint32,
+                    bw: a.gp.writeRepeatedUint32,
+                  },
+                  must_have_tags: {
+                    n: 7,
+                    r: !0,
+                    q: !0,
+                    br: a.qM.readUint32,
+                    pbr: a.qM.readPackedUint32,
+                    bw: a.gp.writeRepeatedUint32,
+                  },
+                  any_one_of_tags: {
+                    n: 8,
+                    r: !0,
+                    q: !0,
+                    br: a.qM.readUint32,
+                    pbr: a.qM.readPackedUint32,
+                    bw: a.gp.writeRepeatedUint32,
+                  },
+                  must_not_have_tags: {
+                    n: 9,
+                    r: !0,
+                    q: !0,
+                    br: a.qM.readUint32,
+                    pbr: a.qM.readPackedUint32,
+                    bw: a.gp.writeRepeatedUint32,
+                  },
                 },
               }),
             V.sm_m

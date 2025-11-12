@@ -999,7 +999,10 @@ CInventory.prototype.LoadMoreAssets = function( count )
 		params.market = 1;
 
 	if ( window.g_bReactRenderedItemDescriptions && g_bReactRenderedItemDescriptions )
+	{
 		params.preserve_bbcode = 1;
+		params.raw_asset_properties = 1;
+	}
 
 	if ( this.m_ulLastAssetID )
 		params.start_assetid = this.m_ulLastAssetID;
@@ -1908,6 +1911,7 @@ CInventory.prototype.SelectItem = function( event, elItem, rgItem, bUserAction )
 			amount: rgItem.amount,
 			missing: rgItem.missing,
 			est_usd: rgItem.est_usd,
+			asset_properties: rgItem.asset_properties,
 		};
 		RenderItemInfo(sNewInfo, rgItem.description, asset );
 	}

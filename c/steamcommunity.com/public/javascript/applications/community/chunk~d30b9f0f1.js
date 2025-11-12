@@ -338,6 +338,7 @@
         TabContents: "_23WNqXb_8WsGkX2fRjOoDw",
         HeaderCtn: "DYYGp1K00m20-BkbVblaz",
         HeaderTitle: "_6erSL-Cistlp7anVYn0qe",
+        Hidden: "a9A-4dYKvmiHdwdAqLz2G",
         DefaultTitlePicker: "_1RgupBe41JHovPu8hL1aLU",
         CrossTabWarning: "_2iLl5xFrLWESiz5a2z7snn",
         CrossTabLink: "VkuQfaXsLkyakfVtZUFeQ",
@@ -683,7 +684,9 @@
     chunkid: (module) => {
       module.exports = {
         ItemCtn: "_30RNOxqk1P9UdZBI76xoIw",
-        Overlay: "_30pFVEJf_4ijNROy8-0d1w",
+        BackgroundImage: "_2wfKMgnSzEU61ZQaCLLRL6",
+        BackgroundAbsolute: "_3j-NrtjJGd7xvVoA5FlQBW",
+        BackgroundBlur: "_24uipS7FdN4R-fVRLMyM2t",
         Title: "_1lQ-aevm7UP_kMSNv9AKJf",
       };
     },
@@ -934,7 +937,8 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = [
           "small_update",
           "regular_update",
@@ -1111,6 +1115,50 @@
             description: "#PartnerEvent_36_Desc",
             icon: "36",
             type: 36,
+            initialSaleJSON: (function () {
+              const _ = () => ({
+                capsules: [],
+                events: [],
+                links: [],
+                localized_label: [],
+                localized_label_image: [],
+                default_label: "#Sale_default_label",
+                unique_id: _._.GenerateRandomID(),
+                internal_section_data: null,
+                capsules_per_row_array: [2, 3, 4, 3],
+                carousel_rows: 2,
+                show_as_carousel: !0,
+              });
+              return {
+                bSaleEnabled: !0,
+                sale_header_offset: 0,
+                sale_sections: [
+                  {
+                    ..._(),
+                    section_type: "items",
+                    smart_section: !0,
+                    smart_section_type: "wishlist",
+                  },
+                  {
+                    ..._(),
+                    section_type: "items",
+                    smart_section: !0,
+                    smart_section_type: "tag_recommender",
+                  },
+                  {
+                    ..._(),
+                    default_label: "#Sale_default_label_62",
+                    section_type: "items",
+                    smart_section: !0,
+                    smart_section_type: "popularpurchased",
+                  },
+                  {
+                    ..._(),
+                    section_type: "creator_list_of_lists",
+                  },
+                ],
+              };
+            })(),
           },
         };
       _()("2022-02-21T10:00:00-08:00").unix(),
@@ -2371,7 +2419,7 @@
             (this.m_changes & _) != _ && (this.m_changes |= _),
             (this.m_curModel.rtime32_last_local_modification =
               Date.now() / 1e3),
-            _._.Get().UpdatePreview(this.ConstructJSONData());
+            _._.Get().UpdatePreview(this.GetEventModel());
         }
         GetChangeTypes() {
           return this.m_changes;
@@ -3334,15 +3382,19 @@
         }
         SetTabEnabled(_, _) {
           const _ = this.GetTabDefintionByID(_);
-          _ &&
-            (_.tab_background_img_groups ||
-              (_.tab_background_img_groups = {
-                enabled: _,
-                groups: [this.CreateAndReturnNewDefaultBackgroundImageGroup()],
-                last_group_until_cover_section_until_end: !1,
-              }),
-            (_.tab_background_img_groups.enabled = _),
-            this.SetDirty(_.jsondata_sales));
+          return _
+            ? (_.tab_background_img_groups ||
+                (_.tab_background_img_groups = (0, _._)({
+                  enabled: _,
+                  groups: [
+                    this.CreateAndReturnNewDefaultBackgroundImageGroup(),
+                  ],
+                  last_group_until_cover_section_until_end: !1,
+                })),
+              (_.tab_background_img_groups.enabled = _),
+              this.SetDirty(_.jsondata_sales),
+              _.tab_background_img_groups)
+            : null;
         }
         SetTabBackgroundGroup(_, _, _) {
           var _, _;
@@ -8410,10 +8462,10 @@
             { creatorHome: _ } = (0, _._)(
               __webpack_require__.GetClanSteamID().GetAccountID(),
             ),
-            _ = __webpack_require__.GetEventType(),
+            _ = 36 == __webpack_require__.GetEventType(),
             _ = _.useMemo(
               () =>
-                36 == _ &&
+                _ &&
                 (null == _
                   ? void 0
                   : _.GetAppIDList().map((_) => ({
@@ -8421,7 +8473,14 @@
                       _: _,
                     }))),
               [_, _],
-            );
+            ),
+            _ =
+              _ === _
+                ? _.capsules
+                : _.capsules.filter(
+                    (_) =>
+                      null == _.visibility_index || _.visibility_index == _,
+                  );
           return _.createElement(
             _._,
             null,
@@ -8549,88 +8608,93 @@
                       (0, _._)("#Sale_EditRaw"),
                     ),
                   ),
-                  _.createElement(
-                    _._,
-                    {
-                      requireAdmin: !0,
-                      clanSteamID: __webpack_require__.GetClanSteamID(),
-                    },
+                  !_ &&
                     _.createElement(
                       _._,
                       {
-                        className: _.SaleImportBarTooltip,
-                        toolTipContent: (0, _._)("#Sale_DiscountEvent_ttip"),
+                        requireAdmin: !0,
+                        clanSteamID: __webpack_require__.GetClanSteamID(),
                       },
                       _.createElement(
                         _._,
                         {
-                          className: _.SaleImportBarButton,
-                          onClick: (_) => {
-                            (0, _._)(
-                              _.createElement(_._, {
-                                onDiscountEventSelected: (_, _) => {
-                                  const _ = _ == _ ? void 0 : _;
-                                  _.forEach((_) => {
-                                    if (
-                                      !_.capsules.find(
-                                        (_) => _._ === _ && "sub" !== _.type,
-                                      )
-                                    ) {
-                                      const _ = _._.Get().GetApp(_),
-                                        _ = (0, _._)(
-                                          null == _
-                                            ? void 0
-                                            : __webpack_require__.GetStoreItemType(),
-                                          null == _
-                                            ? void 0
-                                            : __webpack_require__.GetAppType(),
-                                        );
-                                      _.capsules.push({
-                                        _: _,
-                                        type: _,
-                                        visibility_index: _,
-                                      });
-                                    }
-                                  }),
+                          className: _.SaleImportBarTooltip,
+                          toolTipContent: (0, _._)("#Sale_DiscountEvent_ttip"),
+                        },
+                        _.createElement(
+                          _._,
+                          {
+                            className: _.SaleImportBarButton,
+                            onClick: (_) => {
+                              (0, _._)(
+                                _.createElement(_._, {
+                                  onDiscountEventSelected: (_, _) => {
+                                    const _ = _ == _ ? void 0 : _;
                                     _.forEach((_) => {
-                                      _.capsules.find(
-                                        (_) => _._ === _ && "sub" === _.type,
-                                      ) ||
+                                      if (
+                                        !_.capsules.find(
+                                          (_) => _._ === _ && "sub" !== _.type,
+                                        )
+                                      ) {
+                                        const _ = _._.Get().GetApp(_),
+                                          _ = (0, _._)(
+                                            null == _
+                                              ? void 0
+                                              : __webpack_require__.GetStoreItemType(),
+                                            null == _
+                                              ? void 0
+                                              : __webpack_require__.GetAppType(),
+                                          );
                                         _.capsules.push({
                                           _: _,
-                                          type: "sub",
+                                          type: _,
                                           visibility_index: _,
                                         });
+                                      }
                                     }),
-                                    __webpack_require__.SetDirty(
-                                      _._.jsondata_sales,
-                                    );
-                                },
-                              }),
-                              (0, _._)(_),
-                            );
+                                      _.forEach((_) => {
+                                        _.capsules.find(
+                                          (_) => _._ === _ && "sub" === _.type,
+                                        ) ||
+                                          _.capsules.push({
+                                            _: _,
+                                            type: "sub",
+                                            visibility_index: _,
+                                          });
+                                      }),
+                                      __webpack_require__.SetDirty(
+                                        _._.jsondata_sales,
+                                      );
+                                  },
+                                }),
+                                (0, _._)(_),
+                              );
+                            },
                           },
-                        },
-                        (0, _._)("#Sale_DiscountEvent_Add"),
+                          (0, _._)("#Sale_DiscountEvent_Add"),
+                        ),
                       ),
                     ),
-                  ),
                 ),
-                _.createElement(_._, {
-                  bDisabled: _ != _,
-                  items:
-                    _ === _
-                      ? _.capsules
-                      : _.capsules.filter(
-                          (_) =>
-                            null == _.visibility_index ||
-                            _.visibility_index == _,
-                        ),
-                  onDelete: (_) => {
-                    var _, _, _, _, _, _;
-                    (0, _._)(
-                      _ >= 0 &&
-                        _ <
+                !!(null == _ ? void 0 : _.length) &&
+                  _.createElement(_._, {
+                    bDisabled: _ != _,
+                    items: _,
+                    onDelete: (_) => {
+                      var _, _, _, _, _, _;
+                      (0, _._)(
+                        _ >= 0 &&
+                          _ <
+                            (null !==
+                              (_ =
+                                null === (_ = _.capsules) || void 0 === _
+                                  ? void 0
+                                  : _.length) && void 0 !== _
+                              ? _
+                              : 0),
+                        "Remove capsule called outside of range: " +
+                          _ +
+                          " len: " +
                           (null !==
                             (_ =
                               null === (_ = _.capsules) || void 0 === _
@@ -8638,39 +8702,29 @@
                                 : _.length) && void 0 !== _
                             ? _
                             : 0),
-                      "Remove capsule called outside of range: " +
-                        _ +
-                        " len: " +
-                        (null !==
-                          (_ =
-                            null === (_ = _.capsules) || void 0 === _
-                              ? void 0
-                              : _.length) && void 0 !== _
-                          ? _
-                          : 0),
-                    ),
-                      _ >= 0 &&
-                        _ <
-                          (null !==
-                            (_ =
-                              null === (_ = _.capsules) || void 0 === _
-                                ? void 0
-                                : _.length) && void 0 !== _
-                            ? _
-                            : 0) &&
-                        (_.capsules.splice(_, 1),
-                        __webpack_require__.SetDirty(_._.jsondata_sales));
-                  },
-                  onReorder: () =>
-                    __webpack_require__.SetDirty(_._.jsondata_sales),
-                  render: (_) =>
-                    _.createElement(_._, {
-                      capsule: _,
-                      capsuleContainer: _,
-                      allowedApps: _,
-                      warning: null == _ ? void 0 : _(_),
-                    }),
-                }),
+                      ),
+                        _ >= 0 &&
+                          _ <
+                            (null !==
+                              (_ =
+                                null === (_ = _.capsules) || void 0 === _
+                                  ? void 0
+                                  : _.length) && void 0 !== _
+                              ? _
+                              : 0) &&
+                          (_.capsules.splice(_, 1),
+                          __webpack_require__.SetDirty(_._.jsondata_sales));
+                    },
+                    onReorder: () =>
+                      __webpack_require__.SetDirty(_._.jsondata_sales),
+                    render: (_) =>
+                      _.createElement(_._, {
+                        capsule: _,
+                        capsuleContainer: _,
+                        allowedApps: _,
+                        warning: null == _ ? void 0 : _(_),
+                      }),
+                  }),
                 _.length > 1 &&
                   _.createElement(_._, {
                     strDropDownClassName: _.DropDownScroll,
@@ -9288,73 +9342,98 @@
               strDialogTitle: (0, _._)("#Button_Copy"),
               closeModal: _,
             })
-          : _.createElement(_._, {
-              strTitle: (0, _._)("#Button_Copy"),
-              strDescription: (0, _._)(
-                "#Template_Copy_Assets",
-                __webpack_require__.rgAssetsToMigrate.length,
-              ),
-              onCancel: _,
-              onOK: async () => {
-                _.fnSetLoading(!0);
-                const _ = [];
-                let _ = 0;
-                for (const _ of __webpack_require__.rgAssetsToMigrate) {
-                  _.fnSetThrobber(
-                    (0, _._)(
-                      "#Template_Copy_Assets_Existance",
-                      ++_,
-                      __webpack_require__.rgAssetsToMigrate.length,
-                    ),
-                  );
-                  const _ = _.replace(/\.[^/.]+$/, ""),
-                    _ = (0, _._)(_, _);
-                  (await _(_)) ||
-                    _.push(
-                      (0, _._)(__webpack_require__.sourceClanAccountID, _),
-                    );
-                }
-                if (_.length > 0) {
-                  _ = 0;
-                  try {
-                    for (const _ of _) {
-                      _.fnSetThrobber(
-                        (0, _._)(
-                          "#Template_Copy_Assets_Download",
-                          ++_,
-                          _.length,
-                        ),
-                      );
-                      const _ = await fetch(_);
-                      if (!_._)
-                        throw new Error(
-                          `Failed to fetch ${_}: ${_.status} ${_.statusText}`,
-                        );
-                      const _ = await __webpack_require__.blob(),
-                        _ = _.split("/").pop() || "tempfile.avif",
-                        _ = new File([_], _, {
-                          type: _.type,
-                        });
-                      _.fnSetThrobber(
-                        (0, _._)(
-                          "#Template_Copy_Assets_UploadConvert",
-                          _,
-                          _.length,
-                        ),
+          : _.createElement(
+              _._,
+              {
+                strTitle: (0, _._)("#Button_Copy"),
+                strDescription: (0, _._)(
+                  "#Template_Copy_Assets",
+                  __webpack_require__.rgAssetsToMigrate.length,
+                ),
+                onCancel: _,
+                onOK: async () => {
+                  _.fnSetLoading(!0);
+                  const _ = [];
+                  let _ = 0;
+                  for (const _ of __webpack_require__.rgAssetsToMigrate) {
+                    _.fnSetThrobber(
+                      (0, _._)(
+                        "#Template_Copy_Assets_Existance",
+                        ++_,
+                        __webpack_require__.rgAssetsToMigrate.length,
                       ),
-                        await _.AddImageForLanguage(_, 0),
-                        await _.UploadAllImages(),
-                        _.fnSetLoading(!1),
-                        _.fnSetSuccess(!0);
-                    }
-                  } catch (_) {
-                    console.error("fail to upload assets ", _),
-                      _.fnSetLoading(!1),
-                      _.fnSetError(!0);
+                    );
+                    const _ = _.replace(/\.[^/.]+$/, ""),
+                      _ = (0, _._)(_, _);
+                    (await _(_)) ||
+                      _.push(
+                        (0, _._)(__webpack_require__.sourceClanAccountID, _),
+                      );
                   }
-                } else _.fnSetSuccess(!0);
+                  if (_.length > 0) {
+                    _ = 0;
+                    try {
+                      for (const _ of _) {
+                        _.fnSetThrobber(
+                          (0, _._)(
+                            "#Template_Copy_Assets_Download",
+                            ++_,
+                            _.length,
+                          ),
+                        );
+                        const _ = await fetch(_);
+                        if (!_._)
+                          throw new Error(
+                            `Failed to fetch ${_}: ${_.status} ${_.statusText}`,
+                          );
+                        const _ = await __webpack_require__.blob(),
+                          _ = _.split("/").pop() || "tempfile.avif",
+                          _ = new File([_], _, {
+                            type: _.type,
+                          });
+                        _.fnSetThrobber(
+                          (0, _._)(
+                            "#Template_Copy_Assets_UploadConvert",
+                            _,
+                            _.length,
+                          ),
+                        ),
+                          await _.AddImageForLanguage(_, 0),
+                          await _.UploadAllImages(),
+                          _.fnSetLoading(!1),
+                          _.fnSetSuccess(!0);
+                      }
+                    } catch (_) {
+                      console.error("fail to upload assets ", _),
+                        _.fnSetLoading(!1),
+                        _.fnSetError(!0);
+                    }
+                  } else _.fnSetSuccess(!0);
+                },
               },
-            });
+              __webpack_require__.rgAssetsToMigrate.map((_) => {
+                const _ = _.replace(/\.[^/.]+$/, "");
+                return _.createElement(
+                  _.Fragment,
+                  {
+                    key: _,
+                  },
+                  _.createElement(
+                    "a",
+                    {
+                      href: (0, _._)(
+                        __webpack_require__.sourceClanAccountID,
+                        _,
+                        __webpack_require__.sourceCDN,
+                      ),
+                    },
+                    "Download: ",
+                    _,
+                  ),
+                  _.createElement("br", null),
+                );
+              }),
+            );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -13043,6 +13122,14 @@
                 data: _([3, 2, 3], ["tall", "grid", "grid"]),
               },
               {
+                label: (0, _._)("#Sale_CapsulesPerRow_Pattern_5t32"),
+                data: _([5, 3, 2], ["tall", "grid", "grid"]),
+              },
+              {
+                label: (0, _._)("#Sale_CapsulesPerRow_Pattern_4t44"),
+                data: _([4, 4, 4], ["tall", "grid", "grid"]),
+              },
+              {
                 label: (0, _._)("#Sale_CapsulesPerRow_Pattern_5t"),
                 data: _([5], ["tall"]),
               },
@@ -13302,7 +13389,7 @@
       }
       function _(_) {
         const { editModel: _, saleSection: __webpack_require__ } = _,
-          { lists: _ } = (0, _._)(_.GetClanAccountID()),
+          { lists: _ } = (0, _._)(_.GetClanAccountID(), !0),
           [_] = (0, _._)(() => [
             __webpack_require__.smart_section_creator_listid,
           ]),
@@ -13338,14 +13425,20 @@
       }
       function _(_) {
         const { editModel: _, saleSection: __webpack_require__ } = _,
-          [_] = (0, _._)(() => [__webpack_require__.smart_section_type]),
+          [_, _] = (0, _._)(() => [
+            _.GetEventType(),
+            __webpack_require__.smart_section_type,
+          ]),
           { nSectionIndex: _ } = (0, _._)(
             __webpack_require__,
             _.GetEventModel(),
           ),
-          _ = Boolean("personalized_carousel" !== _ || 0 == _),
-          _ = Boolean("personalized_carousel" !== _ || 0 == _),
-          _ = Boolean("personalized_carousel" !== _);
+          _ = 36 == _,
+          _ = Boolean(!_ && ("personalized_carousel" !== _ || 0 == _)),
+          _ = Boolean(!_ && ("personalized_carousel" !== _ || 0 == _)),
+          _ = Boolean(
+            !_ && "personalized_carousel" !== _ && "nearby_recommended" !== _,
+          );
         return _.createElement(
           _._,
           null,
@@ -13695,6 +13788,12 @@
               data: "deck_topplayed",
               label: "Show Deck Top 100 Carousel",
               tooltip: "Shows the Steam Deck's top games in a carousel",
+            },
+            {
+              data: "nearby_recommended",
+              label: "Nearby Recommended Games",
+              tooltip:
+                "Generates ML recommended and wishlistsed games for the previous month and next two months",
             },
             __webpack_require__
               .GetEventModel()
@@ -17790,6 +17889,266 @@
             value: _,
             label: (0, _._)("#Sale_ClaimItem_ButtonName"),
             tooltip: (0, _._)("#Sale_ClaimItem_ButtonName_ttip"),
+            onChange: (_) => _(_.currentTarget.value),
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { editModel: _, saleSection: __webpack_require__ } = _,
+          [_, _, _, _, _, _, _] = (0, _._)(() => [
+            _.GetEventType(),
+            __webpack_require__.store_item_filter_require_discount,
+            __webpack_require__.store_item_filter_require_coming_soon,
+            __webpack_require__.store_item_filter_require_released,
+            __webpack_require__.store_item_filter_require_free,
+            __webpack_require__.store_item_filter_require_demo,
+            __webpack_require__.store_item_filter_require_playtest,
+          ]),
+          [_, _] = (0, _.useState)(() => Boolean(_ || _ || _ || _ || _ || _));
+        if (36 != _)
+          return _.createElement(
+            _.Fragment,
+            null,
+            _
+              ? _.createElement(
+                  "div",
+                  {
+                    className: _().Ctn,
+                  },
+                  _.createElement(
+                    _._,
+                    null,
+                    (0, _._)("#Sale_FilterStore_Title"),
+                  ),
+                  _.createElement(_, {
+                    ..._,
+                    filter: "store_item_filter_require_discount",
+                    token: "#Sale_FilterStore_RequireDiscount",
+                  }),
+                  _.createElement(_, {
+                    ..._,
+                    filter: "store_item_filter_require_free",
+                    token: "#Sale_FilterStore_RequireFree",
+                  }),
+                  _.createElement(_, {
+                    ..._,
+                    filter: "store_item_filter_require_demo",
+                    token: "#Sale_FilterStore_RequireDemo",
+                  }),
+                  _.createElement(
+                    _._,
+                    {
+                      label: (0, _._)("#Sale_FilterStore_ReleaseState"),
+                    },
+                    _.createElement(_._, {
+                      checked: !_ && !_,
+                      onChange: (_) => {
+                        _ &&
+                          ((__webpack_require__.store_item_filter_require_coming_soon =
+                            !1),
+                          (__webpack_require__.store_item_filter_require_released =
+                            !1),
+                          _.SetDirty(_._.jsondata_sales));
+                      },
+                      label: (0, _._)("#Sale_FilterStore_ReleaseState_None"),
+                    }),
+                    _.createElement(_._, {
+                      checked: _,
+                      onChange: (_) => {
+                        _ &&
+                          ((__webpack_require__.store_item_filter_require_coming_soon =
+                            !0),
+                          (__webpack_require__.store_item_filter_require_released =
+                            !1),
+                          _.SetDirty(_._.jsondata_sales));
+                      },
+                      label: (0, _._)(
+                        "#Sale_FilterStore_ReleaseState_ComingSoon",
+                      ),
+                      tooltip: (0, _._)(
+                        "#Sale_FilterStore_ReleaseState_ComingSoon_ttip",
+                      ),
+                    }),
+                    _.createElement(_._, {
+                      checked: _,
+                      onChange: (_) => {
+                        _ &&
+                          ((__webpack_require__.store_item_filter_require_coming_soon =
+                            !1),
+                          (__webpack_require__.store_item_filter_require_released =
+                            !0),
+                          _.SetDirty(_._.jsondata_sales));
+                      },
+                      label: (0, _._)(
+                        "#Sale_FilterStore_ReleaseState_Released",
+                      ),
+                      tooltip: (0, _._)(
+                        "#Sale_FilterStore_ReleaseState_Released_ttip",
+                      ),
+                    }),
+                  ),
+                )
+              : _.createElement(_._, {
+                  onChange: _,
+                  label: (0, _._)("#Sale_FilterStore_Settings"),
+                  tooltip: (0, _._)("#Sale_FilterStore_Settings_ttip"),
+                  checked: _,
+                }),
+          );
+      }
+      function _(_) {
+        const {
+          filter: _,
+          token: __webpack_require__,
+          editModel: _,
+          saleSection: _,
+        } = _;
+        return _.createElement(_._, {
+          onChange: (_) => {
+            _[_] != _ && ((_[_] = _), _.SetDirty(_._.jsondata_sales));
+          },
+          label: (0, _._)(__webpack_require__),
+          tooltip: (0, _._)(__webpack_require__ + "_ttip"),
+          checked: _[_],
+        });
+      }
+      function _(_) {
+        var _, _, _, _, _, _, _, _;
+        const { saleSection: _, editModel: _ } = _,
+          [_, _] = _.useState(
+            null !==
+              (_ =
+                null ===
+                  (_ =
+                    null === (_ = _.calendar_section_data) || void 0 === _
+                      ? void 0
+                      : _.day_count) || void 0 === _
+                  ? void 0
+                  : __webpack_require__.toString()) && void 0 !== _
+              ? _
+              : "7",
+          ),
+          [_, _] = _.useState(
+            null ===
+              (_ =
+                null === (_ = _.calendar_section_data) || void 0 === _
+                  ? void 0
+                  : _.forward) ||
+              void 0 === _ ||
+              _,
+          ),
+          [_, _] = _.useState(
+            null !==
+              (_ =
+                null ===
+                  (_ =
+                    null === (_ = _.calendar_section_data) || void 0 === _
+                      ? void 0
+                      : _.height) || void 0 === _
+                  ? void 0
+                  : _.toString()) && void 0 !== _
+              ? _
+              : "4",
+          ),
+          [_, _] = (0, _._)(() => [_.smart_section, _.unique_id]),
+          _ = (0, _.useCallback)(() => _.SetDirty(_._.jsondata_sales), [_]),
+          _ = (0, _.useCallback)(() => {
+            _.calendar_section_data ||
+              ((_.calendar_section_data = {
+                forward: !0,
+                day_count: 7,
+                height: 4,
+              }),
+              _());
+          }, [_, _]);
+        _.useEffect(() => {
+          _();
+        }, [_]);
+        const _ = (0, _.useCallback)(
+            (_) => {
+              _(), _(_), (_.calendar_section_data.day_count = parseInt(_)), _();
+            },
+            [_, _, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _(), _(_), (_.calendar_section_data.height = parseInt(_)), _();
+            },
+            [_, _, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _(), _(_), (_.calendar_section_data.forward = _), _();
+            },
+            [_, _, _, _],
+          ),
+          _ = [
+            {
+              data: !0,
+              label: (0, _._)("#Sale_Calendar_Direction_Forward"),
+            },
+            {
+              data: !1,
+              label: (0, _._)("#Sale_Calendar_Direction_Backward"),
+            },
+          ];
+        return _.createElement(
+          "div",
+          null,
+          _.createElement("h1", null, (0, _._)("#Sale_SectionType_Calendar")),
+          _.createElement(_._, {
+            onChange: (_) => {
+              (_.smart_section = _),
+                (_.smart_section_type = _ ? "wishlist" : void 0),
+                _.SetDirty(_._.jsondata_sales);
+            },
+            label: (0, _._)("#Sale_SmartSection"),
+            description: (0, _._)("#Sale_SmartSectionDescription"),
+            checked: _,
+          }),
+          Boolean(_) &&
+            _.createElement(_, {
+              saleSection: _,
+              editModel: _,
+            }),
+          _.createElement(_, {
+            ..._,
+          }),
+          Boolean(!_) &&
+            _.createElement(
+              _.Fragment,
+              null,
+              _.createElement(_._, {
+                uniqueKey: "Section" + _,
+                capsuleContainer: _,
+                editModel: _,
+              }),
+            ),
+          _.createElement(_._, {
+            label: (0, _._)("#Sale_Calendar_Direction"),
+            tooltip: (0, _._)("#Sale_Calendar_Direction_ttip"),
+            rgOptions: _,
+            selectedOption: _,
+            onChange: (_) => _(_.data),
+            contextMenuPositionOptions: {
+              bDisablePopTop: !0,
+            },
+          }),
+          _.createElement(_._, {
+            type: "text",
+            value: _,
+            label: (0, _._)("#Sale_Calendar_Days"),
+            tooltip: (0, _._)("#Sale_Calendar_Days_ttip"),
+            onChange: (_) => _(_.currentTarget.value),
+          }),
+          _.createElement(_._, {
+            type: "text",
+            value: _,
+            label: (0, _._)("#Sale_Calendar_Height"),
+            tooltip: (0, _._)("#Sale_Calendar_Height_ttip"),
             onChange: (_) => _(_.currentTarget.value),
           }),
         );
@@ -25006,123 +25365,14 @@
             ),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
       function _(_) {
-        const { editModel: _, saleSection: __webpack_require__ } = _,
-          [_, _, _, _, _, _] = (0, _._)(() => [
-            __webpack_require__.store_item_filter_require_discount,
-            __webpack_require__.store_item_filter_require_coming_soon,
-            __webpack_require__.store_item_filter_require_released,
-            __webpack_require__.store_item_filter_require_free,
-            __webpack_require__.store_item_filter_require_demo,
-            __webpack_require__.store_item_filter_require_playtest,
+        const { saleSection: _, editModel: __webpack_require__ } = _,
+          [_, _, _] = (0, _._)(() => [
+            __webpack_require__.GetEventType(),
+            _.smart_section,
+            _.unique_id,
           ]),
-          [_, _] = (0, _.useState)(() => Boolean(_ || _ || _ || _ || _ || _));
-        return _.createElement(
-          _.Fragment,
-          null,
-          _
-            ? _.createElement(
-                "div",
-                {
-                  className: _().Ctn,
-                },
-                _.createElement(_._, null, (0, _._)("#Sale_FilterStore_Title")),
-                _.createElement(_, {
-                  ..._,
-                  filter: "store_item_filter_require_discount",
-                  token: "#Sale_FilterStore_RequireDiscount",
-                }),
-                _.createElement(_, {
-                  ..._,
-                  filter: "store_item_filter_require_free",
-                  token: "#Sale_FilterStore_RequireFree",
-                }),
-                _.createElement(_, {
-                  ..._,
-                  filter: "store_item_filter_require_demo",
-                  token: "#Sale_FilterStore_RequireDemo",
-                }),
-                _.createElement(
-                  _._,
-                  {
-                    label: (0, _._)("#Sale_FilterStore_ReleaseState"),
-                  },
-                  _.createElement(_._, {
-                    checked: !_ && !_,
-                    onChange: (_) => {
-                      _ &&
-                        ((__webpack_require__.store_item_filter_require_coming_soon =
-                          !1),
-                        (__webpack_require__.store_item_filter_require_released =
-                          !1),
-                        _.SetDirty(_._.jsondata_sales));
-                    },
-                    label: (0, _._)("#Sale_FilterStore_ReleaseState_None"),
-                  }),
-                  _.createElement(_._, {
-                    checked: _,
-                    onChange: (_) => {
-                      _ &&
-                        ((__webpack_require__.store_item_filter_require_coming_soon =
-                          !0),
-                        (__webpack_require__.store_item_filter_require_released =
-                          !1),
-                        _.SetDirty(_._.jsondata_sales));
-                    },
-                    label: (0, _._)(
-                      "#Sale_FilterStore_ReleaseState_ComingSoon",
-                    ),
-                    tooltip: (0, _._)(
-                      "#Sale_FilterStore_ReleaseState_ComingSoon_ttip",
-                    ),
-                  }),
-                  _.createElement(_._, {
-                    checked: _,
-                    onChange: (_) => {
-                      _ &&
-                        ((__webpack_require__.store_item_filter_require_coming_soon =
-                          !1),
-                        (__webpack_require__.store_item_filter_require_released =
-                          !0),
-                        _.SetDirty(_._.jsondata_sales));
-                    },
-                    label: (0, _._)("#Sale_FilterStore_ReleaseState_Released"),
-                    tooltip: (0, _._)(
-                      "#Sale_FilterStore_ReleaseState_Released_ttip",
-                    ),
-                  }),
-                ),
-              )
-            : _.createElement(_._, {
-                onChange: _,
-                label: (0, _._)("#Sale_FilterStore_Settings"),
-                tooltip: (0, _._)("#Sale_FilterStore_Settings_ttip"),
-                checked: _,
-              }),
-        );
-      }
-      function _(_) {
-        const {
-          filter: _,
-          token: __webpack_require__,
-          editModel: _,
-          saleSection: _,
-        } = _;
-        return _.createElement(_._, {
-          onChange: (_) => {
-            _[_] != _ && ((_[_] = _), _.SetDirty(_._.jsondata_sales));
-          },
-          label: (0, _._)(__webpack_require__),
-          tooltip: (0, _._)(__webpack_require__ + "_ttip"),
-          checked: _[_],
-        });
-      }
-      function _(_) {
-        const { saleSection: _, editModel: __webpack_require__, index: _ } = _,
-          [_, _] = (0, _._)(() => [_.smart_section, _.unique_id]);
+          _ = 36 == _;
         return _.createElement(
           _.Fragment,
           null,
@@ -25153,12 +25403,13 @@
                 capsuleContainer: _,
                 editModel: __webpack_require__,
               }),
-              _.createElement(_._, {
-                section: _,
-                capsuleContainer: _,
-                editModel: __webpack_require__,
-                bAllowPruneFacets: !0,
-              }),
+              !_ &&
+                _.createElement(_._, {
+                  section: _,
+                  capsuleContainer: _,
+                  editModel: __webpack_require__,
+                  bAllowPruneFacets: !0,
+                }),
             ),
         );
       }
@@ -26331,10 +26582,10 @@
         );
       }
       function _(_) {
-        const { editModel: _, saleSection: __webpack_require__ } = _,
+        const { editModel: _ } = _,
           _ = (0, _._)(() => _.GetClanAccountID()),
           { creatorHome: _, isFetching: _ } = (0, _._)(_),
-          { lists: _ } = (0, _._)(_.GetClanAccountID());
+          { lists: _ } = (0, _._)(_.GetClanAccountID(), !0);
         if (_) return _.createElement(_._, null);
         if (!_) return null;
         const _ = _.GetCreatorHomeURL(null) + "admin/lists_manage",
@@ -26361,6 +26612,13 @@
             _.createElement(
               _.Fragment,
               null,
+              _.createElement(
+                "div",
+                {
+                  className: _.ListOfListsHeader,
+                },
+                (0, _._)("#Sale_CreatorListOfLists_Hidden"),
+              ),
               _.createElement(
                 "div",
                 {
@@ -26545,6 +26803,10 @@
               ..._,
             });
           case "claim_item":
+            return _.createElement(_, {
+              ..._,
+            });
+          case "calendar":
             return _.createElement(_, {
               ..._,
             });
@@ -27226,6 +27488,12 @@
                       _ ? "#Sale_Items_Apps_ttip" : "#Sale_Items_ttip",
                     ),
                   },
+                  {
+                    label: (0, _._)("#Sale_TrailerCarousel"),
+                    data: "trailercarousel",
+                    tooltip: (0, _._)("#Sale_TrailerCarousel_ttip"),
+                    warning: (0, _._)("#Sale_TrailerCarousel_warning"),
+                  },
                   _ && {
                     label: (0, _._)("#Sale_CreatorList"),
                     data: "creator_list",
@@ -27262,6 +27530,11 @@
                     tooltip: (0, _._)("#Sale_Links_ttip"),
                   },
                   {
+                    label: (0, _._)("#Sale_DiscoveryQueue"),
+                    data: "discoveryqueue",
+                    tooltip: (0, _._)("#Sale_DiscoveryQueue_ttip"),
+                  },
+                  {
                     label: (0, _._)("#Sale_BroadcastPlayerSection"),
                     data: "broadcast",
                     tooltip: (0, _._)("#Sale_BroadcastPlayerSection_ttip"),
@@ -27270,16 +27543,6 @@
                     label: (0, _._)("#Sale_SectionType_EventSchedule"),
                     data: "event_schedule",
                     tooltip: (0, _._)("#Sale_SectionType_EventSchedule_ttip"),
-                  },
-                  {
-                    label: (0, _._)("#Sale_DiscoveryQueue"),
-                    data: "discoveryqueue",
-                    tooltip: (0, _._)("#Sale_DiscoveryQueue_ttip"),
-                  },
-                  {
-                    label: (0, _._)("#Sale_TabButtons"),
-                    data: "tab_buttons",
-                    tooltip: (0, _._)("#Sale_TabButtons_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_Events"),
@@ -27292,37 +27555,12 @@
                     tooltip: (0, _._)("#Sale_CuratorSection_ttip"),
                   },
                   {
-                    label: (0, _._)("#Sale_TrailerCarousel"),
-                    data: "trailercarousel",
-                    tooltip: (0, _._)("#Sale_TrailerCarousel_ttip"),
-                    warning: (0, _._)("#Sale_TrailerCarousel_warning"),
-                  },
-                ],
-                _ = [
-                  {
-                    label: (0, _._)("#Sale_SectionType_FAQ"),
-                    data: "template_faq",
-                    tooltip: (0, _._)("#Sale_SectionType_FAQ_ttip"),
-                  },
-                  {
-                    label: (0, _._)("#Sale_SectionType_TechSpecs"),
-                    data: "template_techspec",
-                    tooltip: (0, _._)("#Sale_SectionType_TechSpecs_ttip"),
-                  },
-                  {
-                    label: (0, _._)("#Sale_SectionType_MediaContentGrid"),
-                    data: "template_media_content",
-                    tooltip: (0, _._)(
-                      "#Sale_SectionType_MediaContentGrid_ttip",
-                    ),
-                  },
-                  {
-                    label: (0, _._)("#Sale_SectionType_MediaOverlay"),
-                    data: "template_media_overlay",
-                    tooltip: (0, _._)("#Sale_SectionType_MediaOverlay_ttip"),
+                    label: (0, _._)("#Sale_TabButtons"),
+                    data: "tab_buttons",
+                    tooltip: (0, _._)("#Sale_TabButtons_ttip"),
                   },
                 ];
-              if ((_ && (_.push(..._), (_.length = 0)), (0, _._)(_))) {
+              if ((0, _._)(_)) {
                 const _ = [
                   {
                     label: (0, _._)("#Sale_VOInternalSection_SaleItemBrowser"),
@@ -27418,10 +27656,36 @@
                     tooltip: (0, _._)("#Sale_SectionType_ClaimItem_ttip"),
                   },
                   {
+                    label: (0, _._)("#Sale_SectionType_Calendar"),
+                    data: "calendar",
+                    tooltip: (0, _._)("#Sale_SectionType_Calendar_ttip"),
+                  },
+                  {
                     label: "Controller Type",
                     data: "controller_type",
                   },
-                  ..._,
+                  {
+                    label: (0, _._)("#Sale_SectionType_FAQ"),
+                    data: "template_faq",
+                    tooltip: (0, _._)("#Sale_SectionType_FAQ_ttip"),
+                  },
+                  {
+                    label: (0, _._)("#Sale_SectionType_TechSpecs"),
+                    data: "template_techspec",
+                    tooltip: (0, _._)("#Sale_SectionType_TechSpecs_ttip"),
+                  },
+                  {
+                    label: (0, _._)("#Sale_SectionType_MediaContentGrid"),
+                    data: "template_media_content",
+                    tooltip: (0, _._)(
+                      "#Sale_SectionType_MediaContentGrid_ttip",
+                    ),
+                  },
+                  {
+                    label: (0, _._)("#Sale_SectionType_MediaOverlay"),
+                    data: "template_media_overlay",
+                    tooltip: (0, _._)("#Sale_SectionType_MediaOverlay_ttip"),
+                  },
                 ];
                 _.push(
                   ..._.map((_) => ({
@@ -27623,7 +27887,10 @@
                   _.createElement(
                     "div",
                     {
-                      className: _.HeaderTitle,
+                      className: (0, _._)(
+                        _.HeaderTitle,
+                        _.hide_section && _.Hidden,
+                      ),
                     },
                     _.createElement(_._, {
                       saleSection: _,
@@ -28544,60 +28811,71 @@
           { creatorHome: _ } = (0, _._)(_.GetAccountID()),
           _ = null == _ ? void 0 : _.GetAppIDList();
         let _ = [];
-        return (
-          3 == (0, _._)(_, _._) &&
-            _ &&
-            (_ = _._(_.map((_) => _._.Get().GetApp(_)))
-              .filter((_) => {
-                const _ = _.GetName() || "",
-                  _ = String(_.GetAppID() || "");
-                return !(
-                  __webpack_require__ &&
-                  _.toLocaleLowerCase().search(__webpack_require__) < 0 &&
-                  _.search(__webpack_require__) < 0
-                );
-              })
-              .sort((_, _) => {
-                const _ = _.GetAppType() - _.GetAppType();
-                return 0 != _ ? _ : _.GetName().localeCompare(_.GetName());
-              })),
+        3 == (0, _._)(_, _._) &&
+          _ &&
+          (_ = _._(_.map((_) => _._.Get().GetApp(_)))
+            .filter((_) => {
+              const _ = _.GetName() || "",
+                _ = String(_.GetAppID() || "");
+              return !(
+                __webpack_require__ &&
+                _.toLocaleLowerCase().search(__webpack_require__) < 0 &&
+                _.search(__webpack_require__) < 0
+              );
+            })
+            .sort((_, _) => {
+              const _ = _.GetAppType() - _.GetAppType();
+              return 0 != _ ? _ : _.GetName().localeCompare(_.GetName());
+            }));
+        const _ = `${_._.PARTNER_BASE_URL}creatorhome/setup`;
+        return _.createElement(
+          _.Fragment,
+          null,
           _.createElement(
-            _.Fragment,
-            null,
+            "div",
+            {
+              className: _.TagItemEditorCtn,
+            },
             _.createElement(
               "div",
               {
-                className: _.TagItemEditorCtn,
+                className: _.ItemEditDescription,
               },
-              _.createElement(
-                "div",
-                {
-                  className: _.ItemEditDescription,
-                },
-                (0, _._)("#Sale_EditTags_EnableItemEditing_CreatorHome_Desc"),
+              (0, _._)("#Sale_EditTags_EnableItemEditing_CreatorHome_Desc"),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.ItemEditDescription,
+              },
+              (0, _._)(
+                "#Sale_EditTags_EnableItemEditing_CreatorHome_Desc2",
+                _.createElement("a", {
+                  href: _,
+                }),
               ),
             ),
-            _.createElement(_._, {
-              type: "text",
-              placeholder: (0, _._)("#Sale_TaggedItemsFilter"),
-              onChange: (_) => _(_.target.value.toLowerCase()),
-            }),
-            _.map((_) =>
-              _.createElement(_, {
-                key: _.GetAppID(),
-                item: {
-                  capsule: {
-                    _: _.GetAppID(),
-                    type: (0, _._)(_.GetStoreItemType(), _.GetAppType()),
-                  },
-                  tags: [],
+          ),
+          _.createElement(_._, {
+            type: "text",
+            placeholder: (0, _._)("#Sale_TaggedItemsFilter"),
+            onChange: (_) => _(_.target.value.toLowerCase()),
+          }),
+          _.map((_) =>
+            _.createElement(_, {
+              key: _.GetAppID(),
+              item: {
+                capsule: {
+                  _: _.GetAppID(),
+                  type: (0, _._)(_.GetStoreItemType(), _.GetAppType()),
                 },
-                strSearchFilter: __webpack_require__,
-                editModel: _,
-                showTagInfo: !1,
-              }),
-            ),
-          )
+                tags: [],
+              },
+              strSearchFilter: __webpack_require__,
+              editModel: _,
+              showTagInfo: !1,
+            }),
+          ),
         );
       }
       function _(_) {
@@ -33235,23 +33513,12 @@
             _.data.file_id &&
             _.data.upload_url
           ) {
-            const _ = new Set([
-                "content-length",
-                "host",
-                "origin",
-                "referer",
-                "user-agent",
-                "cookie",
-                "set-cookie",
-                "connection",
-                "upgrade",
-              ]),
-              _ = {
+            const _ = (0, _._)(
+              {
                 "Content-Type": "application/octet-stream",
-              };
-            if (_.data.headers_for_upload)
-              for (const _ of _.data.headers_for_upload)
-                _.has(_.name.toLocaleLowerCase()) || (_[_.name] = _.value);
+              },
+              _.data.headers_for_upload,
+            );
             return (await _()
               .put(_.data.upload_url, _.file, {
                 headers: _,
@@ -37374,33 +37641,41 @@
             void 0 !== _ &&
             _;
         }
-        async ShowPreviewWindow(_, _, _, _) {
+        async ShowPreviewWindow(_, _, _, _, _) {
           this.m_previewWindow &&
             (this.m_previewWindow.close(),
             (this.m_bReceivedClientReady = !1),
             this.UpdateConnectedState()),
-            (this.m_sLastEventModelJson = _);
+            this.ExtractLastEventModelData(_);
           const _ = new URL(_);
-          _.searchParams.set("parentOrigin", window.location.origin),
+          if (
+            (_.searchParams.set("livepreview", "1"),
+            _.searchParams.set("parentOrigin", window.location.origin),
+            _)
+          ) {
             null == _ || _.forEach((_) => _.searchParams.set(_.key, _.value)),
-            (_ =
-              null != _
-                ? _
-                : {
-                    width: 1500,
-                    height: 1100,
-                  }),
-            (this.m_previewWindow = window.open(
-              _,
-              "_blank",
-              `toolbar=yes,location=yes,resizable=yes,scrollbars=yes,width=${_.width},height=${_.height}`,
-            )),
-            (this.m_sPreviewWindowOrigin = _.origin),
-            await this.WaitForLoad(this.m_previewWindow);
-          const _ = this.m_previewWindow,
-            _ = _.width + (_.outerWidth - _.innerWidth),
-            _ = _.height + (_.outerHeight - _.innerHeight);
-          _.resizeTo(Math.round(_), Math.round(_));
+              (_ =
+                null != _
+                  ? _
+                  : {
+                      width: 1500,
+                      height: 1100,
+                    }),
+              (this.m_previewWindow = window.open(
+                _,
+                "_blank",
+                `toolbar=yes,location=yes,resizable=yes,scrollbars=yes,width=${_.width},height=${_.height}`,
+              )),
+              (this.m_sPreviewWindowOrigin = _.origin),
+              await this.WaitForLoad(this.m_previewWindow);
+            const _ = this.m_previewWindow,
+              _ = _.width + (_.outerWidth - _.innerWidth),
+              _ = _.height + (_.outerHeight - _.innerHeight);
+            _.resizeTo(Math.round(_), Math.round(_));
+          } else
+            (this.m_previewWindow = window.open(_, "_blank")),
+              (this.m_sPreviewWindowOrigin = _.origin),
+              await this.WaitForLoad(this.m_previewWindow);
         }
         WaitForLoad(_) {
           var _, _;
@@ -37463,14 +37738,17 @@
             this.m_previewWindow.postMessage(_, this.m_sPreviewWindowOrigin);
         }
         UpdatePreview(_) {
-          if (
-            (this.m_previewWindow && (this.m_sLastEventModelJson = _),
-            !this.BIsConnected())
-          )
-            return;
+          this.m_previewWindow && this.ExtractLastEventModelData(_),
+            this.UpdatePreviewInternal();
+        }
+        ExtractLastEventModelData(_) {
+          this.m_sLastEventModelJson = JSON.stringify(_.toJSON());
+        }
+        UpdatePreviewInternal() {
+          if (!this.BIsConnected()) return;
           const _ = {
             message: "PartnerEventEditor_Update",
-            eventModelJson: _,
+            eventModelJson: this.m_sLastEventModelJson,
           };
           this.PostMessage(_);
         }
@@ -37521,8 +37799,7 @@
               case "PartnerEventEditor_ClientReady":
                 (this.m_bReceivedClientReady = !0),
                   this.UpdateConnectedState(),
-                  this.m_sLastEventModelJson &&
-                    this.UpdatePreview(this.m_sLastEventModelJson);
+                  this.m_sLastEventModelJson && this.UpdatePreviewInternal();
                 break;
               case "PartnerEventEditor_ClientUnready":
                 (this.m_bReceivedClientReady = !1), this.UpdateConnectedState();
@@ -37616,6 +37893,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -37631,36 +37910,44 @@
               : _.recommended_app().appid(),
           [_] = (0, _._)(_, {
             include_screenshots: !0,
+            include_assets: !0,
           }),
-          _ = null == _ ? void 0 : _.GetScreenshots(!0)[0];
+          _ = null == _ ? void 0 : _.GetScreenshots(!0)[0],
+          _ = null == _ ? void 0 : _.GetAssets().GetLibraryHeroURL();
         return _.createElement(
-          "div",
+          _._,
           {
-            className: _.ItemCtn,
-            style: {
-              backgroundImage: `url("${_}")`,
-            },
+            condition: !!_,
+            wrap: (_) =>
+              _.createElement(
+                "a",
+                {
+                  href: _,
+                },
+                _,
+              ),
           },
-          _.createElement("div", {
-            className: _.Overlay,
-          }),
           _.createElement(
             "div",
             {
-              className: _.Title,
+              className: _.ItemCtn,
             },
+            _.createElement("div", {
+              className: _()(_.BackgroundBlur, _.BackgroundAbsolute),
+              style: {
+                backgroundImage: `url("${_ || _}")`,
+              },
+            }),
+            _.createElement("div", {
+              className: _()(_.BackgroundImage, _.BackgroundAbsolute),
+              style: {
+                backgroundImage: `url("${_ || _}")`,
+              },
+            }),
             _.createElement(
-              _._,
+              "div",
               {
-                condition: !!_,
-                wrap: (_) =>
-                  _.createElement(
-                    "a",
-                    {
-                      href: _,
-                    },
-                    _,
-                  ),
+                className: _.Title,
               },
               _.title(),
             ),
@@ -37964,7 +38251,7 @@
                           (function (_, _) {
                             const { saleEvent: _, section: _ } = _;
                             return _.createElement(_, {
-                              key: _.unique_id + "_" + _.listid,
+                              key: _.unique_id + "_" + _.listid(),
                               saleEvent: _,
                               section: _,
                               curatorList: _,
@@ -38563,6 +38850,8 @@
             return "#DiscoveryQueue_Title";
           if ("sale_events" === _.section_type)
             return "#Sale_SaleEvent_Section";
+          if ("calendar" === _.section_type)
+            return "#Sale_SectionType_Calendar";
           if ("crosspromotesalepage" === _.section_type && 1 == _)
             return "#Sale_CrossPromoSale_DefaultSectionTitle";
           if ("creator_list" === _.section_type) return _();

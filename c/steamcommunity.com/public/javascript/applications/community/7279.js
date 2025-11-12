@@ -193,6 +193,8 @@
 	"moderationaction_reset_content": "Reset author's content",
 	"moderationaction_escalated_for_csam": "Escalated to Valve for CSAM",
 	"moderationaction_escalated_for_terrorism": "Escalated to Valve for terrorism",
+	"moderationaction_claimed": "Claimed",
+	"moderationaction_released": "Released",
 	"moderationaction_unknown": "Unknown action",
 	"moderatormessage_count_note": "Notes: %1$s",
 	"moderatormessage_count_warning": "Warnings: %1$s",

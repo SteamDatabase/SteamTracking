@@ -3977,7 +3977,7 @@
               t,
             )
           : d.createElement(d.Fragment, null, t);
-      var gt = a(84143);
+      var gt = a(23310);
       class ft extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -6271,7 +6271,7 @@
                 (0, p.oW)(
                   "#Profile_Edit_Showcase_Instructions",
                   d.createElement("a", {
-                    href: C.TS.STORE_BASE_URL + "points/",
+                    href: C.TS.STORE_BASE_URL + "points/shop/profileshowcases",
                   }),
                 ),
               ),

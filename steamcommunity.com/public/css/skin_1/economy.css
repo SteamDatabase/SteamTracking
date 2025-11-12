@@ -260,8 +260,12 @@ a.item_action:hover {
 	color: inherit;
 }
 
-#trade_hover {
+.legacy_trade_hover {
 	width: 500px;
+}
+
+.react_trade_hover {
+	width: 346px;
 }
 
 .item_desc_content {

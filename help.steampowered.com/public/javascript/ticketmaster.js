@@ -823,10 +823,15 @@ function PerformTicketAction( elSelect )
 
 		});
 	}
-	else if ( strSelected == 'issuecooldown' )
+	else if ( strSelected == 'issuecooldown' || strSelected == 'issuecooldownlong' )
 	{
-		var strIssueCooldown = 'Issue Cooldown';
-		var strConfirm = 'Are you sure you want to prevent this user submitting new help requests (excluding refunds) for 30 days?';
+		var bLong = false;
+		if ( strSelected == 'issuecooldownlong' )
+			bLong = true;
+
+		var strIssueCooldown = bLong ? 'Issue Cooldown (90d)' : 'Issue Cooldown (30d)';
+		var strConfirm = bLong ? 'Are you sure you want to prevent this user submitting new help requests (excluding refunds) for 90 days?' : 'Are you sure you want to prevent this user submitting new help requests (excluding refunds) for 30 days?';
+
 		var strIssueCooldownAndClose = 'Issue and close ticket';
 		var strCloseSendMessage = '';
 		if ( $J('[contenteditable]').text() )

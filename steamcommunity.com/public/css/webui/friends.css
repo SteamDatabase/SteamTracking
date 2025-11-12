@@ -2443,10 +2443,6 @@ b {
   background-color: #2a2d34;
   padding: 15px;
 }
-.partnereventshared_RightColumnContainer_30-E9
-  button.partnereventshared_EventPublishButton_3nIAe {
-  margin-top: 20px;
-}
 .partnereventshared_FloatRight_1bzHf {
   float: right;
 }
@@ -12781,6 +12777,7 @@ a.eventbbcodeparser_LinkPill_3nRRZ {
 }
 a.eventbbcodeparser_LinkPill_3nRRZ:hover {
   box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
+  transform: translateY(-1px);
 }
 a.eventbbcodeparser_LinkPill_3nRRZ span {
   color: #0e141b;
@@ -12828,7 +12825,7 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
 .SaleSectionCtn.text_section .eventbbcodeparser_SaleSectionCtn_39HWX,
 .SaleSectionCtn.text_section .eventbbcodeparser_SaleTextCtn_2Tqq0 {
   color: #c3c4d9;
-  font-size: 14px;
+  font-size: clamp(13px, 1.3vw, 16px);
 }
 .SaleSectionCtn.text_section
   .eventbbcodeparser_SaleSectionCtn_39HWX
@@ -46304,9 +46301,6 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 .NotAFriendOrApproved .BBCodeYouTubeComponent_Sizer,
 .NotAFriendOrApproved .chatImageFull {
   filter: blur(8px);
-}
-.NotAFriendOrApproved .ChatHistoryContainer {
-  filter: blur(3px) saturate(0.5) brightness(0.5);
 }
 .interactionBlocker {
   cursor: default;

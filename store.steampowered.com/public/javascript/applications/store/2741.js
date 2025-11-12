@@ -2349,6 +2349,13 @@
                         8,
                         (0, r.we)("#Cart_Error_UnavailableCountry_FootNote"),
                       ),
+                    e.errors?.adult_content_restricted &&
+                      i(
+                        17,
+                        (0, r.we)(
+                          "#Cart_Error_AdultContentRestricted_FootNote",
+                        ),
+                      ),
                     e.errors?.missing_must_own_appids &&
                       i(
                         16,
@@ -2474,6 +2481,13 @@
                       purchase_state: 8,
                       notice_text: (0, r.we)(
                         "#Cart_Error_UnavailableCountry_LineItem",
+                      ),
+                    });
+                  e.errors?.adult_content_restricted &&
+                    t.push({
+                      purchase_state: 17,
+                      notice_text: (0, r.we)(
+                        "#Cart_Error_AdultContentRestricted_LineItem",
                       ),
                     });
                   e.errors?.coupon_exclusive_promo &&

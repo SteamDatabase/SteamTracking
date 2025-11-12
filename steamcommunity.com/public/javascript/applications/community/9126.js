@@ -51,6 +51,7 @@
         DialogCtn: "_9JDWJYvoHTETKmebCO7iE",
         PollArea: "_1h-JdwvtVK38j8M4EXeUah",
         OptionInset: "_5o_Ifm1O6jf-4Iq4Kv07F",
+        AdminOptions: "_1Kt8VfgLBvg0tD86og8ps7",
       };
     },
     6941: (e) => {
@@ -67,7 +68,7 @@
     },
     52032: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Mn });
+      n.r(t), n.d(t, { default: () => Dn });
       var l = n(90286),
         o = n(26555),
         a = n(22145),
@@ -81,29 +82,29 @@
         _ = n(28954),
         p = n(27666),
         E = n(86355),
-        f = n(68255),
-        v = n(2805),
+        v = n(68255),
+        f = n(2805),
         g = n(36509),
         h = n(83882),
         b = n(71696),
         C = n(61859),
         w = n(27650),
         k = n(73745),
-        I = n(30470),
-        M = n(21134),
+        M = n(30470),
+        I = n(21134),
         S = n(94429),
         y = n(6941),
         D = n(30175),
         T = n(4869),
         N = n(86927);
-      function G(e) {
+      function P(e) {
         const { className: t, ...n } = e;
         return m.createElement("div", {
           className: d()(t, y.EditableComponentToolbarContainer),
           ...n,
         });
       }
-      function P(e) {
+      function U(e) {
         const {
             toolbar: t,
             top: n,
@@ -135,7 +136,7 @@
           )
         );
       }
-      function U(e) {
+      function G(e) {
         const { className: t, toolbar: n, children: l } = e,
           [o, a] = (0, N.OP)(),
           [r, s] = m.useState({ top: 0, left: 0, width: 0, height: 0 }),
@@ -162,7 +163,7 @@
                 className: d()(t, y.EditableComponentInlineContainer),
                 ...a,
               },
-              m.createElement(P, {
+              m.createElement(U, {
                 ...r,
                 toolbar: n,
                 visible: o && r.width > 0,
@@ -254,10 +255,10 @@
               e
             );
           }, [n, l, t]),
-          f = m.useCallback((e) => i((0, r.M)(e)), [i]),
-          v = "true" === t.attrs.autoadvance,
-          [g, h] = Q(f, {
-            autoAdvance: v,
+          v = m.useCallback((e) => i((0, r.M)(e)), [i]),
+          f = "true" === t.attrs.autoadvance,
+          [g, h] = Q(v, {
+            autoAdvance: f,
             clanSteamID: p,
             imageNodeType: n,
             videoNodeType: l,
@@ -271,7 +272,7 @@
           null,
           h,
           m.createElement(
-            G,
+            P,
             null,
             m.createElement(A, {
               onDeleteClick: s,
@@ -380,7 +381,7 @@
             e.destination &&
               c((t) => j.yY(t.slice(), e.source.index, e.destination.index));
           }, []),
-          { showInsertImageModal: v, imageModal: g } = ae({
+          { showInsertImageModal: f, imageModal: g } = ae({
             clanSteamID: a,
             imageNodeType: r,
             videoNodeType: s,
@@ -394,14 +395,14 @@
             L.mt,
             { active: !0, onDismiss: n },
             m.createElement(
-              f.Y9,
+              v.Y9,
               null,
               (0, C.we)("#EventEditor_CarouselEditor_EditCarousel"),
             ),
             m.createElement(
-              f.nB,
+              v.nB,
               null,
-              m.createElement(f.RF, {
+              m.createElement(v.RF, {
                 label: (0, C.we)("#EventEditor_CarouselEditor_AutoAdvance"),
                 checked: d,
                 onChange: u,
@@ -443,22 +444,22 @@
                 ),
               ),
               m.createElement(
-                f.xh,
+                v.xh,
                 {
                   bottomSeparator: "none",
                   label: (0, C.we)(
                     "#EventEditor_CarouselEditor_AddAnotherItem",
                   ),
                   className: z.AddButton,
-                  onClick: v,
+                  onClick: f,
                 },
                 m.createElement(T.OMN, { className: z.PlusIcon }),
               ),
             ),
             m.createElement(
-              f.wi,
+              v.wi,
               null,
-              m.createElement(f.CB, { onCancel: n, onOK: p }),
+              m.createElement(v.CB, { onCancel: n, onOK: p }),
             ),
           ),
         );
@@ -519,7 +520,7 @@
             update: p,
             selected: E,
           } = e,
-          [f, v, g] = (0, k.uD)(),
+          [v, f, g] = (0, k.uD)(),
           h = te(n);
         let b = m.createElement(le, {
           schemaConfig: t,
@@ -531,21 +532,21 @@
             u(), g();
           }, [u, g]),
           w = m.useCallback((e) => p((0, r.M)(e)), [p]),
-          [I, S] = Q(w, {
+          [M, S] = Q(w, {
             clanSteamID: i,
             imageNodeType: o,
             videoNodeType: a,
             carouselNodeType: s,
           }),
           y = m.useCallback(() => {
-            I([n]);
-          }, [n, I]),
+            M([n]);
+          }, [n, M]),
           D = { createCarousel: s ? y : void 0, src: ne(h) };
-        let T = d()(M.ClanImageContainer, E && M.Selected);
+        let T = d()(I.ClanImageContainer, E && I.Selected);
         return m.createElement(
           m.Fragment,
           null,
-          f &&
+          v &&
             m.createElement(re, {
               bIsEdit: !0,
               nodeAttrs: h,
@@ -557,11 +558,11 @@
             }),
           S,
           m.createElement(
-            U,
+            G,
             {
               className: T,
               toolbar: m.createElement(Z, {
-                showModal: v,
+                showModal: f,
                 removeNode: _,
                 contextMenuProps: D,
               }),
@@ -727,7 +728,7 @@
               ? "uploaded"
               : "hotlink",
           ),
-          v = m.useCallback(
+          f = m.useCallback(
             (e) => {
               a({ src: e }, r), l();
             },
@@ -747,7 +748,7 @@
             active: "hotlink" == p,
             bIsEdit: t,
             hideModal: l,
-            onImageSelected: v,
+            onImageSelected: f,
             src: u.src,
           })),
             (w = t
@@ -766,23 +767,23 @@
         }
         return m.createElement(
           h.mt,
-          { active: !0, onDismiss: l, className: M.ClanImageModalContent },
-          m.createElement(f.Y9, { id: b }, w),
+          { active: !0, onDismiss: l, className: I.ClanImageModalContent },
+          m.createElement(v.Y9, { id: b }, w),
           m.createElement(
-            f.zW,
+            v.zW,
             { labelId: b, value: p, onChange: (e) => E(e) },
-            m.createElement(f.a, { value: "uploaded" }, "Uploaded"),
-            m.createElement(f.a, { value: "hotlink" }, "Enter URL"),
+            m.createElement(v.a, { value: "uploaded" }, "Uploaded"),
+            m.createElement(v.a, { value: "hotlink" }, "Enter URL"),
           ),
           m.createElement(
             "div",
             {
-              className: d()(M.ClanImageModalMode, "uploaded" == p && M.Active),
+              className: d()(I.ClanImageModalMode, "uploaded" == p && I.Active),
             },
             m.createElement(ce, {
               bIsEdit: t,
               hideModal: l,
-              onImageSelected: v,
+              onImageSelected: f,
               onVideoSelected: s && g,
               clanSteamID: o,
               selectedImage: _,
@@ -791,7 +792,7 @@
           m.createElement(
             "div",
             {
-              className: d()(M.ClanImageModalMode, "hotlink" == p && M.Active),
+              className: d()(I.ClanImageModalMode, "hotlink" == p && I.Active),
             },
             k,
           ),
@@ -816,19 +817,19 @@
             t && d.current.Focus();
           }, [t]),
           m.createElement(
-            f.lV,
+            v.lV,
             { onSubmit: () => o(r) },
             m.createElement(
-              f.nB,
+              v.nB,
               null,
-              m.createElement(f.pd, {
+              m.createElement(v.pd, {
                 ref: d,
                 value: r,
                 onChange: i,
                 label: (0, C.we)("#EventEditor_InsertImage_URL"),
               }),
             ),
-            m.createElement(f.CB, {
+            m.createElement(v.CB, {
               onCancel: l,
               strOKText: c,
               bOKDisabled: !r || r == a,
@@ -848,13 +849,13 @@
           [i, c] = m.useState(o.webm),
           [d, u] = m.useState(o.poster),
           [_, p] = m.useState(!!o.autoplay),
-          [E, v] = m.useState(!!o.controls),
+          [E, f] = m.useState(!!o.controls),
           g = m.useRef(void 0);
         m.useEffect(() => {
           t && g.current.Focus();
         }, [t]);
         return m.createElement(
-          f.lV,
+          v.lV,
           {
             onSubmit: (e) => {
               a({
@@ -869,36 +870,36 @@
             },
           },
           m.createElement(
-            f.nB,
+            v.nB,
             null,
-            m.createElement(f.pd, {
+            m.createElement(v.pd, {
               ref: g,
               value: r,
               onChange: (e) => s(e.currentTarget.value),
               label: (0, C.we)("#EventEditor_InsertVideo_InputMP4"),
             }),
-            m.createElement(f.pd, {
+            m.createElement(v.pd, {
               value: i,
               onChange: (e) => c(e.currentTarget.value),
               label: (0, C.we)("#EventEditor_InsertVideo_InputWebM"),
             }),
-            m.createElement(f.pd, {
+            m.createElement(v.pd, {
               value: d,
               onChange: (e) => u(e.currentTarget.value),
               label: (0, C.we)("#EventEditor_InsertVideo_InputPoster"),
             }),
-            m.createElement(f.Yh, {
+            m.createElement(v.Yh, {
               checked: _,
               onChange: p,
               label: (0, C.we)("#EventEditor_InsertVideo_InputAutoplay"),
             }),
-            m.createElement(f.Yh, {
+            m.createElement(v.Yh, {
               checked: E,
-              onChange: v,
+              onChange: f,
               label: (0, C.we)("#EventEditor_InsertVideo_InputShowControls"),
             }),
           ),
-          m.createElement(f.CB, {
+          m.createElement(v.CB, {
             onCancel: l,
             strOKText: (0, C.we)("#EventEditor_EditVideo_Title"),
             bOKDisabled: !r && !i,
@@ -943,13 +944,13 @@
           m.Fragment,
           null,
           m.createElement(
-            f.lV,
-            { onSubmit: () => i && _(i), className: M.ClanImageGridForm },
+            v.lV,
+            { onSubmit: () => i && _(i), className: I.ClanImageGridForm },
             m.createElement(g.g, { fnSetImageSearch: s }),
             m.createElement(
               "div",
-              { className: M.ClanImageGridContainer },
-              m.createElement(v.ge, {
+              { className: I.ClanImageGridContainer },
+              m.createElement(f.ge, {
                 clanAccountID: a.GetAccountID(),
                 fileNameSearch: r,
                 onImageSelected: p,
@@ -957,9 +958,9 @@
               }),
             ),
             m.createElement(
-              f.wi,
+              v.wi,
               null,
-              m.createElement(f.CB, {
+              m.createElement(v.CB, {
                 onCancel: n,
                 strOKText: d,
                 bOKDisabled: !i || i == e.selectedImage,
@@ -1022,8 +1023,8 @@
         _e = n(79216);
       var pe = n(70995),
         Ee = n(74410),
-        fe = n(72421),
-        ve = n(52038),
+        ve = n(72421),
+        fe = n(52038),
         ge = n(63226);
       function he(e) {
         const {
@@ -1056,8 +1057,8 @@
               onSave: u,
             }),
           m.createElement(
-            G,
-            { className: (0, ve.A)(ge.PreviewYoutubeEditor, o && ge.Selected) },
+            P,
+            { className: (0, fe.A)(ge.PreviewYoutubeEditor, o && ge.Selected) },
             m.createElement(A, {
               onEditClick: i,
               onDeleteClick: e.removeNode,
@@ -1098,7 +1099,7 @@
           L.EN,
           { active: !0 },
           m.createElement(
-            fe._,
+            ve._,
             {
               strTitle: (0, C.we)("#EventEditor_InsertYouTube"),
               closeModal: o,
@@ -1108,7 +1109,7 @@
               onOK: _,
             },
             d && m.createElement("div", { className: ge.Error }, d),
-            m.createElement(f.pd, {
+            m.createElement(v.pd, {
               label: (0, C.we)("#EventEditor_InsertYouTube_URL"),
               placeholder: (0, C.we)("#EventEditor_InsertYouTube_Placholder"),
               value: i,
@@ -1116,19 +1117,19 @@
               onChange: (e) => c(e.currentTarget.value),
             }),
             m.createElement(
-              f.o1,
+              v.o1,
               { label: (0, C.we)("#EventEditor_InsertYouTube_Position") },
-              m.createElement(f.Od, {
+              m.createElement(v.Od, {
                 checked: r == Ee.V2.left,
                 onChange: (e) => e && s(Ee.V2.left),
                 label: (0, C.we)("#EventEditor_InsertYouTube_Left"),
               }),
-              m.createElement(f.Od, {
+              m.createElement(v.Od, {
                 checked: r == Ee.V2.right,
                 onChange: (e) => e && s(Ee.V2.right),
                 label: (0, C.we)("#EventEditor_InsertYouTube_Right"),
               }),
-              m.createElement(f.Od, {
+              m.createElement(v.Od, {
                 checked: r == Ee.V2.full,
                 onChange: (e) => e && s(Ee.V2.full),
                 label: (0, C.we)("#EventEditor_InsertYouTube_Full"),
@@ -1140,16 +1141,16 @@
       var Ce = n(69001),
         we = n(25918),
         ke = n(65946),
-        Ie = n(26161),
-        Me = n(74718),
+        Me = n(26161),
+        Ie = n(74718),
         Se = n(78395),
         ye = n(21869),
         De = n(1397),
         Te = n.n(De),
         Ne = n(63556),
-        Ge = n(44165),
-        Pe = n(95695),
-        Ue = n(99637),
+        Pe = n(44165),
+        Ue = n(95695),
+        Ge = n(99637),
         Ae = n(91675),
         Oe = n(14771),
         xe = n(87937),
@@ -1251,7 +1252,7 @@
         return m.createElement(
           m.Fragment,
           null,
-          m.createElement(f.pd, {
+          m.createElement(v.pd, {
             type: "text",
             label: (0, C.we)("#MeetSteam_edit_session_name"),
             value: C.NT.Get(t.localized_session_title, l),
@@ -1266,12 +1267,12 @@
             },
           }),
           m.createElement(
-            f.JU,
+            v.JU,
             null,
             (0, C.we)("#MeetSteam_edit_session_desc"),
           ),
           m.createElement("textarea", {
-            className: (0, ve.A)(
+            className: (0, fe.A)(
               "DialogTextInputBase",
               Te().EventDescriptionField,
             ),
@@ -1287,7 +1288,7 @@
                 n(o);
             },
           }),
-          m.createElement(f.pd, {
+          m.createElement(v.pd, {
             type: "text",
             label: "Intended Audience",
             tooltip:
@@ -1304,7 +1305,7 @@
             },
           }),
           m.createElement(
-            f.JU,
+            v.JU,
             null,
             "FAQ ",
             m.createElement(Le.o, {
@@ -1313,7 +1314,7 @@
             }),
           ),
           m.createElement("textarea", {
-            className: (0, ve.A)(
+            className: (0, fe.A)(
               "DialogTextInputBase",
               Te().EventDescriptionField,
             ),
@@ -1329,7 +1330,7 @@
                 n(o);
             },
           }),
-          m.createElement(f.Yh, {
+          m.createElement(v.Yh, {
             checked: t.ask_registration_question,
             onChange: (e) => {
               const l = { ...t };
@@ -1359,7 +1360,7 @@
                 "By default, all sessions are visibility to any partner wiht a list. We can limit visibility to users by adding tokens below. Multiple Meet Steam sections can be visible together if they share the same token. To make the tokens appears most friendly, we are limiting them to exactly 5 digits. Only one token can be set on the URL.",
               ),
               n.group_visibility_tokens.map((e, t) =>
-                m.createElement(f.pd, {
+                m.createElement(v.pd, {
                   key: "token" + e + "_" + t,
                   type: "number",
                   min: "10000",
@@ -1376,7 +1377,7 @@
                 }),
               ),
               m.createElement(
-                f.$n,
+                v.$n,
                 {
                   onClick: () => {
                     const e = { ...n };
@@ -1391,7 +1392,7 @@
               ),
               Boolean(n.group_visibility_tokens.length > 0) &&
                 m.createElement(
-                  f.$n,
+                  v.$n,
                   {
                     onClick: () => {
                       const e = { ...n };
@@ -1403,7 +1404,7 @@
                   "Remove Last Token",
                 ),
             )
-          : m.createElement(f.Yh, {
+          : m.createElement(v.Yh, {
               checked: !1,
               onChange: a,
               label: "Change Visibility Options",
@@ -1423,7 +1424,7 @@
         for (let e = 0; e < 4; ++e) c.push({ data: e, label: e });
         const d = Math.max(0, Math.floor((o - l) / 60)),
           u = Intl.DateTimeFormat().resolvedOptions().timeZone,
-          _ = "in_person" === s ? (null != i ? i : Me.hh) : u;
+          _ = "in_person" === s ? (null != i ? i : Ie.hh) : u;
         return m.createElement(
           m.Fragment,
           null,
@@ -1435,7 +1436,7 @@
             in_person_time_zone: i,
           }),
           m.createElement("br", null),
-          m.createElement(Ue.K, {
+          m.createElement(Ge.K, {
             strDescription: (0, C.we)("#MeetSteam_edit_start"),
             nEarliestTime: 0,
             fnGetTimeToUpdate: () => l,
@@ -1445,7 +1446,7 @@
             bShowTimeZone: !0,
           }),
           m.createElement("br", null),
-          m.createElement(f.pd, {
+          m.createElement(v.pd, {
             type: "number",
             min: 0,
             label: (0, C.we)("#MeetSteam_edit_duration"),
@@ -1465,7 +1466,7 @@
           m.createElement(
             "div",
             { className: Te().ParticipantRow },
-            m.createElement(f.pd, {
+            m.createElement(v.pd, {
               type: "number",
               value: a,
               label: (0, C.we)("#MeetSteam_edit_max_capacity"),
@@ -1476,7 +1477,7 @@
                   max_capacity: Number.parseInt(e.currentTarget.value),
                 }),
             }),
-            m.createElement(f.m, {
+            m.createElement(v.m, {
               controlled: !0,
               label: (0, C.we)("#MeetSteam_edit_guest_count"),
               tooltip: (0, C.we)("#MeetSteam_edit_guest_count_ttip"),
@@ -1489,10 +1490,10 @@
       }
       function $e(e) {
         const { rtime_start: t, rtime_end: n, sDisplayTimeZone: l } = e,
-          o = xe.unix(t).tz(Me.hh),
+          o = xe.unix(t).tz(Ie.hh),
           a = xe.unix(t).tz(l),
           r = a.utcOffset() - o.utcOffset(),
-          s = xe.unix(n).tz(Me.hh),
+          s = xe.unix(n).tz(Ie.hh),
           i = xe.unix(n).tz(l),
           c = i.utcOffset() - s.utcOffset();
         return m.createElement(
@@ -1550,16 +1551,16 @@
           null,
           m.createElement(
             "div",
-            { id: i, className: Pe.EventEditorTextTitle },
+            { id: i, className: Ue.EventEditorTextTitle },
             (0, C.we)("#MeetSteam_edit_date_display_title"),
           ),
           m.createElement(
             "div",
-            { id: c, className: Pe.EventEditorTextSubTitle },
+            { id: c, className: Ue.EventEditorTextSubTitle },
             (0, C.we)("#MeetSteam_edit_date_display_desc"),
           ),
           m.createElement(
-            f.zW,
+            v.zW,
             {
               labelId: i,
               descriptionId: c,
@@ -1567,12 +1568,12 @@
               onChange: (e) => l(e, o),
             },
             m.createElement(
-              f.a,
+              v.a,
               { value: "in_person" },
               (0, C.we)("#MeetSteam_edit_date_display_in_person"),
             ),
             m.createElement(
-              f.a,
+              v.a,
               { value: "virtual" },
               (0, C.we)("#MeetSteam_edit_date_display_virtual"),
             ),
@@ -1589,7 +1590,7 @@
               defaultMenuIsOpen: !1,
               value: o
                 ? { label: s(o), value: o }
-                : { label: s(Me.hh), value: Me.hh },
+                : { label: s(Ie.hh), value: Ie.hh },
               onChange: (e) => l(n, e.value),
             }),
         );
@@ -1635,7 +1636,7 @@
       }
       function Xe(e, t) {
         if (e) {
-          const e = Ge.HD.GetTimeNowWithOverride(),
+          const e = Pe.HD.GetTimeNowWithOverride(),
             t = we.mh.GetEditModel().GetEventModel().jsondata.meet_steam_groups,
             n =
               null == t ? void 0 : t.reduce((e, t) => e.concat(t.sessions), []);
@@ -1697,7 +1698,7 @@
           if (l.schedule_id == e) return { schedule: l, scheduleIndex: n };
         }
         return (
-          "dev" == I.TS.WEB_UNIVERSE &&
+          "dev" == M.TS.WEB_UNIVERSE &&
             console.log(`Error: HelperFindMeetSteamSchedule ${e} is missing`),
           null
         );
@@ -1722,7 +1723,7 @@
           E = m.useCallback(() => {
             n(), p();
           }, [n, p]);
-        return r && a.GetClanAccountID() == (0, Ie.H)()
+        return r && a.GetClanAccountID() == (0, Me.H)()
           ? m.createElement(
               "div",
               { className: Te().EditorCtn },
@@ -1811,7 +1812,7 @@
           }, [n, r]);
         return t
           ? m.createElement(
-              Me.jr,
+              Ie.jr,
               { groupData: t },
               l.map((e, o) =>
                 m.createElement(at, {
@@ -1867,7 +1868,7 @@
           m.createElement(
             "div",
             { className: Te().Column, ...a },
-            m.createElement(Me.Tn, { sessionData: r }),
+            m.createElement(Ie.Tn, { sessionData: r }),
             Boolean(o) &&
               m.createElement(
                 "div",
@@ -1927,7 +1928,7 @@
                 }),
               ),
           ),
-          n && m.createElement(Me.w3, null),
+          n && m.createElement(Ie.w3, null),
         );
       }
       var rt = n(36969),
@@ -2096,7 +2097,7 @@
         _t = n(44832),
         pt = n(28516),
         Et = n.n(pt);
-      function ft(e, t) {
+      function vt(e, t) {
         if (e) {
           const e = we.mh.GetEditModel().GetEventModel()
             .jsondata.meet_steam_schedules;
@@ -2114,11 +2115,11 @@
             ),
             null);
       }
-      function vt(e) {
+      function ft(e) {
         const { hideModal: t, fnUpdateSession: n, inputScheduleModel: l } = e,
-          o = (0, Ge.f1)(),
+          o = (0, Pe.f1)(),
           a = (0, nt.LU)(),
-          [r, s] = (0, m.useState)(() => ft(!Boolean(l), l)),
+          [r, s] = (0, m.useState)(() => vt(!Boolean(l), l)),
           [i, c, d] = (0, ke.q3)(() => [
             r.location_type,
             r.in_person_time_zone,
@@ -2139,7 +2140,7 @@
                 : "Create Meet Steam Schedule View",
               onOK: () => n(r),
               closeModal: () => {
-                s(ft(!Boolean(l), l)), t();
+                s(vt(!Boolean(l), l)), t();
               },
             },
             m.createElement(
@@ -2169,7 +2170,7 @@
           } = e,
           [o, a] = (0, ke.q3)(() => [
             n.session_breaks || [],
-            n.in_person_time_zone || Me.hh,
+            n.in_person_time_zone || Ie.hh,
           ]),
           r = (0, m.useCallback)(
             (e, l) => {
@@ -2200,7 +2201,7 @@
               }),
             ),
           m.createElement(
-            f.$n,
+            v.$n,
             {
               onClick: () => {
                 var e;
@@ -2244,7 +2245,7 @@
           null,
           m.createElement("div", null, "Break # ", l + 1),
           m.createElement("br", null),
-          m.createElement(Ue.K, {
+          m.createElement(Ge.K, {
             strDescription: "Break Start Time",
             nEarliestTime: 0,
             fnGetTimeToUpdate: () => r,
@@ -2254,7 +2255,7 @@
             bShowTimeZone: !0,
           }),
           m.createElement("br", null),
-          m.createElement(f.pd, {
+          m.createElement(v.pd, {
             type: "number",
             min: 0,
             label: "Break duration in minutes",
@@ -2264,7 +2265,7 @@
             },
             value: c,
           }),
-          m.createElement(f.pd, {
+          m.createElement(v.pd, {
             type: "text",
             label: "Break Description",
             value: i,
@@ -2299,11 +2300,11 @@
           p = m.useCallback(() => {
             t(), _();
           }, [t, _]);
-        return a && o.GetClanAccountID() == (0, Ie.H)()
+        return a && o.GetClanAccountID() == (0, Me.H)()
           ? m.createElement(
               "div",
               { className: Et().EditorCtn },
-              m.createElement(Me.fs, {
+              m.createElement(Ie.fs, {
                 eventModel: o.GetEventModel(),
                 scheduleData: a,
               }),
@@ -2322,7 +2323,7 @@
                 ),
               ),
               Boolean(r) &&
-                m.createElement(vt, {
+                m.createElement(ft, {
                   hideModal: c,
                   inputScheduleModel: a,
                   fnUpdateSession: (e) => {
@@ -2362,8 +2363,8 @@
       var Ct = n(10820),
         wt = n(68033),
         kt = n(30193),
-        It = n(14947);
-      function Mt(e) {
+        Mt = n(14947);
+      function It(e) {
         const { schema: t } = e,
           { callbacks: n, view: l } = (0, D.wU)(),
           [o, a] = m.useState(!1),
@@ -2385,7 +2386,7 @@
               const t = (0, B.lX)(m.createElement(St, { OnSelected: r }), e, {
                 bOverlapHorizontal: !0,
               });
-              (0, It.z7)(
+              (0, Mt.z7)(
                 () => !t.visible,
                 () => a(!1),
               );
@@ -2423,9 +2424,9 @@
             (e.k_EPollVoter_MinPlayTime = "min_play_time"),
             (e.k_EPollVoter_MemberOfGroup = "member_of_group");
         })(Nt || (Nt = {}));
-      var Gt = n(4796),
-        Pt = n(63287),
-        Ut = n.n(Pt),
+      var Pt = n(4796),
+        Ut = n(63287),
+        Gt = n.n(Ut),
         At = n(7913),
         Ot = n(82102),
         xt = n(69484);
@@ -2446,7 +2447,7 @@
             },
             m.createElement(
               "div",
-              { className: Ut().DialogCtn },
+              { className: Gt().DialogCtn },
               m.createElement(zt, {
                 clanAccountID: l,
                 userPollDef: o,
@@ -2472,19 +2473,20 @@
             {
               strTitle: (0, C.we)("#UserPolls_Edit_title"),
               onOK: () => {
-                o(a), t();
+                o(a);
               },
               onCancel: () => {
-                r(Qt(!1, n)), t();
+                r(Qt(!1, n));
               },
+              closeModal: t,
             },
             m.createElement(
               "div",
-              { className: Ut().DialogCtn },
+              { className: Gt().DialogCtn },
               m.createElement(zt, {
-                userPollDef: n,
+                userPollDef: a,
                 clanAccountID: l,
-                fnSetDef: o,
+                fnSetDef: r,
               }),
             ),
           ),
@@ -2513,7 +2515,7 @@
         return m.createElement(
           m.Fragment,
           null,
-          m.createElement(f.pd, {
+          m.createElement(v.pd, {
             type: "text",
             label: (0, C.we)("#UserPolls_Description"),
             value: C.NT.Get(t.localized_poll_description, l),
@@ -2529,18 +2531,22 @@
           }),
           m.createElement(Ht, { ...e }),
           m.createElement(jt, { ...e }),
-          m.createElement(f.m, {
-            strDropDownClassName: Pe.DropDownScroll,
-            label: (0, C.we)("#UserPolls_Visibility"),
-            rgOptions: a,
-            selectedOption: o,
-            onChange: (e) => {
-              e.data != t.results_visibility_settings &&
-                n({ ...t, results_visibility_settings: e.data });
-            },
-            bDisableMouseOverlay: !0,
-            contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
-          }),
+          m.createElement(v.JU, null, (0, C.we)("#UserPolls_Visibility")),
+          m.createElement(
+            "div",
+            { className: Gt().PollArea },
+            m.createElement(v.m, {
+              strDropDownClassName: Ue.DropDownScroll,
+              rgOptions: a,
+              selectedOption: o,
+              onChange: (e) => {
+                e.data != t.results_visibility_settings &&
+                  n({ ...t, results_visibility_settings: e.data });
+              },
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
+            }),
+          ),
           m.createElement(Ft, { ...e }),
         );
       }
@@ -2549,7 +2555,7 @@
           o = (0, nt.LU)(),
           a =
             ((r = o.GetClanSteamID()),
-            `${I.TS.COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${r.ConvertTo64BitString()}`);
+            `${M.TS.COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${r.ConvertTo64BitString()}`);
         var r;
         const [s] = (0, ke.q3)(() => [n.user_poll_background]),
           c = (0, m.useCallback)(
@@ -2570,10 +2576,10 @@
         return m.createElement(
           m.Fragment,
           null,
-          m.createElement(f.JU, null, (0, C.we)("#UserPolls_BackgroundImage")),
+          m.createElement(v.JU, null, (0, C.we)("#UserPolls_BackgroundImage")),
           m.createElement(
             "div",
-            { className: Ut().PollArea },
+            { className: Gt().PollArea },
             m.createElement(
               "p",
               null,
@@ -2608,7 +2614,7 @@
       }
       function jt(e) {
         const { clanAccountID: t, userPollDef: n, fnSetDef: l } = e,
-          [o, a] = (0, Gt.TB)(t),
+          [o, a] = (0, Pt.TB)(t),
           [r, s] = (0, ke.q3)(() => [
             n.voter_min_playtime_seconds,
             n.voter_eligibility,
@@ -2642,48 +2648,52 @@
         return m.createElement(
           m.Fragment,
           null,
-          m.createElement(f.m, {
-            strDropDownClassName: Pe.DropDownScroll,
-            label: (0, C.we)("#UserPolls_Voters"),
-            rgOptions: i,
-            selectedOption: s,
-            onChange: (e) => {
-              if (e.data != n.voter_eligibility) {
-                let t = { ...n, voter_eligibility: e.data };
-                e.data == Nt.k_EPollVoter_MinPlayTime &&
-                  (t.voter_min_playtime_seconds = 5 * Yt),
-                  l(t);
-              }
-            },
-            bDisableMouseOverlay: !0,
-            contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
-          }),
-          Boolean(s == Nt.k_EPollVoter_MinPlayTime) &&
-            m.createElement(
-              "div",
-              { className: Ut().OptionInset },
-              m.createElement(f.pd, {
-                type: "number",
-                label: (0, C.we)("#UserPolls_MinPlayTime"),
-                value: r / Yt,
-                min: 5,
-                onChange: (e) => {
-                  var t, o;
-                  const a =
-                    (null !==
-                      (o = Number.parseInt(
-                        null === (t = null == e ? void 0 : e.currentTarget) ||
-                          void 0 === t
-                          ? void 0
-                          : t.value,
-                      )) && void 0 !== o
-                      ? o
-                      : 5) * Yt;
-                  n.voter_min_playtime_seconds != a &&
-                    l({ ...n, voter_min_playtime_seconds: a });
-                },
-              }),
-            ),
+          m.createElement(v.JU, null, (0, C.we)("#UserPolls_Voters")),
+          m.createElement(
+            "div",
+            { className: Gt().PollArea },
+            m.createElement(v.m, {
+              strDropDownClassName: Ue.DropDownScroll,
+              rgOptions: i,
+              selectedOption: s,
+              onChange: (e) => {
+                if (e.data != n.voter_eligibility) {
+                  let t = { ...n, voter_eligibility: e.data };
+                  e.data == Nt.k_EPollVoter_MinPlayTime &&
+                    (t.voter_min_playtime_seconds = 5 * Yt),
+                    l(t);
+                }
+              },
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
+            }),
+            Boolean(s == Nt.k_EPollVoter_MinPlayTime) &&
+              m.createElement(
+                "div",
+                { className: Gt().OptionInset },
+                m.createElement(v.pd, {
+                  type: "number",
+                  label: (0, C.we)("#UserPolls_MinPlayTime"),
+                  value: r / Yt,
+                  min: 5,
+                  onChange: (e) => {
+                    var t, o;
+                    const a =
+                      (null !==
+                        (o = Number.parseInt(
+                          null === (t = null == e ? void 0 : e.currentTarget) ||
+                            void 0 === t
+                            ? void 0
+                            : t.value,
+                        )) && void 0 !== o
+                        ? o
+                        : 5) * Yt;
+                    n.voter_min_playtime_seconds != a &&
+                      l({ ...n, voter_min_playtime_seconds: a });
+                  },
+                }),
+              ),
+          ),
         );
       }
       function Ht(e) {
@@ -2693,111 +2703,121 @@
             t.poll_end_days_since_start,
           ]);
         return m.createElement(
-          "div",
-          { className: Ut().PollArea },
+          m.Fragment,
+          null,
+          m.createElement(v.JU, null, (0, C.we)("#UserPolls_Starts")),
           m.createElement(
             "div",
-            { className: (0, ve.A)(Pe.FlexRowContainer, Pe.RadioOption) },
-            m.createElement("input", {
-              type: "radio",
-              name: "StartDateRadio",
-              id: "UserPollDialog_Days",
-              checked: Boolean(o),
-              onChange: () => {
-                t.poll_end_days_since_start ||
-                  n({
-                    ...t,
-                    poll_end_time: void 0,
-                    poll_end_days_since_start: Kt * qt,
-                  });
-              },
-            }),
-            m.createElement(
-              "label",
-              { htmlFor: "UserPollDialog_Days" },
-              m.createElement(
-                "span",
-                null,
-                (0, C.we)("#UserPolls_EndTime_In_Days"),
-              ),
-            ),
-          ),
-          Boolean(o) &&
+            { className: Gt().PollArea },
             m.createElement(
               "div",
-              { className: Ut().OptionInset },
-              m.createElement(f.pd, {
-                type: "number",
-                value: o / qt,
-                min: 1,
-                onChange: (e) => {
-                  var l, o;
-                  const a =
-                    (null !==
-                      (o = Number.parseInt(
-                        null === (l = null == e ? void 0 : e.currentTarget) ||
-                          void 0 === l
-                          ? void 0
-                          : l.value,
-                      )) && void 0 !== o
-                      ? o
-                      : 1) * qt;
-                  t.poll_end_days_since_start != a &&
+              { className: (0, fe.A)(Ue.FlexRowContainer, Ue.RadioOption) },
+              m.createElement("input", {
+                type: "radio",
+                name: "StartDateRadio",
+                id: "UserPollDialog_Days",
+                checked: Boolean(o),
+                onChange: () => {
+                  t.poll_end_days_since_start ||
                     n({
                       ...t,
                       poll_end_time: void 0,
-                      poll_end_days_since_start: a,
+                      poll_end_days_since_start: Kt * qt,
                     });
                 },
               }),
-            ),
-          m.createElement(
-            "div",
-            { className: (0, ve.A)(Pe.FlexRowContainer, Pe.RadioOption) },
-            m.createElement("input", {
-              type: "radio",
-              name: "StartDateRadio",
-              id: "UserPollDialog_SpecificTime",
-              checked: Boolean(l),
-              onChange: () => {
-                t.poll_end_time ||
-                  n({
-                    ...t,
-                    poll_end_days_since_start: void 0,
-                    poll_end_time: Math.floor(Date.now() / 1e3) + Kt * qt,
-                  });
-              },
-            }),
-            m.createElement(
-              "label",
-              { htmlFor: "UserPollDialog_SpecificTime" },
               m.createElement(
-                "span",
-                null,
-                (0, C.we)("#UserPolls_EndTime_Specific"),
+                "label",
+                { htmlFor: "UserPollDialog_Days" },
+                m.createElement(
+                  "span",
+                  null,
+                  (0, C.we)("#UserPolls_EndTime_In_Days"),
+                ),
               ),
             ),
-          ),
-          Boolean(l) &&
+            Boolean(o) &&
+              m.createElement(
+                "div",
+                { className: Gt().OptionInset },
+                m.createElement(v.pd, {
+                  type: "number",
+                  value: o / qt,
+                  min: 1,
+                  onChange: (e) => {
+                    var l, o;
+                    const a =
+                      (null !==
+                        (o = Number.parseInt(
+                          null === (l = null == e ? void 0 : e.currentTarget) ||
+                            void 0 === l
+                            ? void 0
+                            : l.value,
+                        )) && void 0 !== o
+                        ? o
+                        : 1) * qt;
+                    t.poll_end_days_since_start != a &&
+                      n({
+                        ...t,
+                        poll_end_time: void 0,
+                        poll_end_days_since_start: a,
+                      });
+                  },
+                }),
+              ),
             m.createElement(
               "div",
-              { className: Ut().OptionInset },
-              m.createElement(Ue.K, {
-                strDescription: "",
-                nEarliestTime: Math.floor(Date.now() / 1e3) + 3600,
-                fnGetTimeToUpdate: () => l,
-                fnSetTimeToUpdate: (e) => {
-                  t.poll_end_time != e &&
+              { className: (0, fe.A)(Ue.FlexRowContainer, Ue.RadioOption) },
+              m.createElement("input", {
+                type: "radio",
+                name: "StartDateRadio",
+                id: "UserPollDialog_SpecificTime",
+                checked: Boolean(l),
+                onChange: () => {
+                  t.poll_end_time ||
                     n({
                       ...t,
                       poll_end_days_since_start: void 0,
-                      poll_end_time: e,
+                      poll_end_time: Math.floor(Date.now() / 1e3) + Kt * qt,
                     });
                 },
-                fnIsValidDateTime: () =>
-                  l > Math.floor(Date.now() / 1e3) + 3600,
               }),
+              m.createElement(
+                "label",
+                { htmlFor: "UserPollDialog_SpecificTime" },
+                m.createElement(
+                  "span",
+                  null,
+                  (0, C.we)("#UserPolls_EndTime_Specific"),
+                ),
+              ),
             ),
+            Boolean(l) &&
+              m.createElement(
+                "div",
+                { className: (0, fe.A)(Gt().OptionInset, Ue.FlexRowContainer) },
+                m.createElement(Ge.K, {
+                  strDescription: "",
+                  nEarliestTime: Math.floor(Date.now() / 1e3) + 3600,
+                  fnGetTimeToUpdate: () => l,
+                  fnSetTimeToUpdate: (e) => {
+                    t.poll_end_time != e &&
+                      n({
+                        ...t,
+                        poll_end_days_since_start: void 0,
+                        poll_end_time: e,
+                      });
+                  },
+                  fnIsValidDateTime: () =>
+                    l > Math.floor(Date.now() / 1e3) + 3600,
+                }),
+                m.createElement(
+                  "span",
+                  null,
+                  (0, C.we)("#UserPolls_EndTime_Zone"),
+                ),
+              ),
+          ),
         );
       }
       const Kt = 7,
@@ -2859,18 +2879,19 @@
             },
             m.createElement(
               "div",
-              { className: Ut().DialogCtn },
-              m.createElement(f.pd, {
+              { className: Gt().DialogCtn },
+              m.createElement(v.pd, {
                 type: "text",
                 label: (0, C.we)("#UserPolls_Option_Title"),
                 value: C.NT.Get(a.localized_option, s),
                 onChange: (e) => {
                   const t = { ...a };
-                  (t.localized_option = C.NT.Set(
-                    t.localized_option,
-                    s,
-                    e.currentTarget.value,
-                  )),
+                  (t.localized_option = [...t.localized_option]),
+                    (t.localized_option = C.NT.Set(
+                      t.localized_option,
+                      s,
+                      e.currentTarget.value,
+                    )),
                     r(t);
                 },
               }),
@@ -2897,9 +2918,10 @@
             ),
             null);
       }
-      var Jt = n(56330),
-        Xt = n(50929);
-      function Zt(e) {
+      var Jt = n(69818),
+        Xt = n(56330),
+        Zt = n(50929);
+      function en(e) {
         const t = we.mh.GetEditModel();
         for (let n = 0; n < t.GetEventModel().jsondata.user_polls.length; ++n) {
           const l = t.GetEventModel().jsondata.user_polls[n];
@@ -2909,7 +2931,7 @@
         }
         return null;
       }
-      function en(e) {
+      function tn(e) {
         const t = we.mh.GetEditModel();
         for (let n = 0; n < t.GetEventModel().jsondata.user_polls.length; ++n) {
           const l = t.GetEventModel().jsondata.user_polls[n];
@@ -2917,7 +2939,8 @@
         }
         return null;
       }
-      function tn(e) {
+      var nn = n(56654);
+      function ln(e) {
         const { focusView: t, removeNode: n, poll_id: l } = e,
           o = (0, nt.LU)(),
           a = (0, ke.q3)(() => {
@@ -2939,7 +2962,7 @@
           ? m.createElement(
               "div",
               { className: Te().EditorCtn },
-              m.createElement(nn, { userPollDef: a, focusView: t }),
+              m.createElement(on, { userPollDef: a, focusView: t }),
               m.createElement(
                 "div",
                 { className: Te().controls },
@@ -2973,7 +2996,7 @@
                   userPollDef: a,
                   clanAccountID: o.GetClanAccountID(),
                   fnUpdateUserPollDef: (e) => {
-                    const { pollIndex: t } = en(e.poll_id),
+                    const { pollIndex: t } = tn(e.poll_id),
                       n = we.mh.GetEditModel();
                     (n.GetEventModel().jsondata.user_polls[t] = e),
                       n.SetDirty(Ce.IQ.description);
@@ -2987,7 +3010,7 @@
                     strTitle: (0, C.we)("#Button_Delete"),
                     strDescription: (0, C.we)("#Dialog_AreYouSure"),
                     onOK: () => {
-                      const { pollIndex: e } = en(a.poll_id),
+                      const { pollIndex: e } = tn(a.poll_id),
                         t = we.mh.GetEditModel(),
                         l = [...t.GetEventModel().jsondata.user_polls];
                       l.splice(e, 1),
@@ -3001,43 +3024,55 @@
             )
           : m.createElement(
               "div",
-              { className: Jt.ErrorStylesWithIcon },
+              { className: Xt.ErrorStylesWithIcon },
               (0, C.we)("#UserPolls_Editor_FailToFindModel", l),
             );
       }
-      function nn(e) {
+      function on(e) {
         const { userPollDef: t, focusView: n } = e,
-          l = (0, ke.q3)(() => t.options || []),
-          o = (0, nt.LU)(),
-          a = (0, Ne.E)(),
-          [r, s, i] = (0, k.uD)(),
-          c = m.useCallback(() => {
-            n(), i();
-          }, [n, i]);
+          [l, o] = (0, ke.q3)(() => [
+            t.options || [],
+            t.randomize_option_order,
+          ]),
+          a = (0, nt.LU)(),
+          r = (0, Ne.E)(),
+          [s, i, c] = (0, k.uD)(),
+          d = m.useCallback(() => {
+            n(), c();
+          }, [n, c]),
+          [u, _, p] = (0, k.uD)(),
+          E = m.useCallback(() => {
+            n(), p();
+          }, [n, p]);
         return t
           ? m.createElement(
-              Xt.W6,
-              { userPollDef: t, clanAccountID: o.GetClanAccountID(), lang: a },
+              Zt.W6,
+              { userPollDef: t, clanAccountID: a.GetClanAccountID(), lang: r },
               l.map((e) =>
-                m.createElement(ln, {
+                m.createElement(rn, {
                   key: "polloption" + t.poll_id + "_" + e.option_id,
                   focusView: n,
                   optionID: e.option_id,
                 }),
               ),
               m.createElement(
-                D.ff,
-                {
-                  className: Te().AddNew,
-                  onClick: s,
-                  tooltip: (0, C.we)("#UserPolls_Option_Add"),
-                },
-                m.createElement(T.OMN, null),
+                "div",
+                { className: Gt().AdminOptions },
+                m.createElement(
+                  Jt.wl,
+                  { className: "", onClick: i },
+                  (0, C.we)("#UserPolls_Option_Add"),
+                ),
+                m.createElement(
+                  Jt.wl,
+                  { className: "", onClick: _ },
+                  (0, C.we)("#UserPolls_Option_Reorder"),
+                ),
               ),
-              r &&
+              s &&
                 m.createElement($t, {
                   bCreate: !0,
-                  hideModal: c,
+                  hideModal: d,
                   fnUpdatePollOption: (e) => {
                     const n = we.mh.GetEditModel();
                     t.options || (t.options = []),
@@ -3045,14 +3080,75 @@
                       n.SetDirty(Ce.IQ.description);
                   },
                 }),
+              u &&
+                m.createElement(an, {
+                  hideModal: E,
+                  options: l,
+                  bRandomize: o,
+                  fnUpdateOptions: (e, n) => {
+                    (t.randomize_option_order = n), (t.options = e);
+                  },
+                }),
             )
           : null;
       }
-      function ln(e) {
+      function an(e) {
+        const {
+            options: t,
+            bRandomize: n,
+            fnUpdateOptions: l,
+            hideModal: o,
+          } = e,
+          a = (0, Ne.E)(),
+          [r, s] = (0, m.useState)(n),
+          [i, c] = (0, m.useState)(t);
+        return m.createElement(
+          ye.E,
+          { active: !0 },
+          m.createElement(
+            Se.o0,
+            {
+              strTitle: (0, C.we)("#UserPolls_Option_Reorder"),
+              strDescription: (0, C.we)("#UserPolls_Option_Reorder_desc"),
+              onCancel: () => {
+                s(n), c(t);
+              },
+              onOK: () => {
+                l([...i], r);
+              },
+              closeModal: o,
+            },
+            m.createElement(v.Yh, {
+              label: (0, C.we)("#UserPolls_Option_Randomize"),
+              checked: r,
+              onChange: s,
+            }),
+            m.createElement(nn.A, {
+              items: i,
+              render: (e) => {
+                var t, n;
+                return m.createElement(
+                  "div",
+                  null,
+                  (null === (t = e.localized_option) || void 0 === t
+                    ? void 0
+                    : t[a]) ||
+                    (null === (n = e.localized_option) || void 0 === n
+                      ? void 0
+                      : n[0]) ||
+                    "",
+                );
+              },
+              onReorder: (e) => c(e),
+            }),
+          ),
+        );
+      }
+      function rn(e) {
         const { optionID: t, focusView: n } = e,
           [l, o] = (0, k.OP)(),
           a = (0, ke.q3)(() => {
-            const { optionIndex: e, pollIndex: n } = Zt(t);
+            const { optionIndex: e, pollIndex: n } = en(t);
             return we.mh.GetEditModel().GetEventModel().jsondata.user_polls[n]
               .options[e];
           }),
@@ -3068,7 +3164,7 @@
         return m.createElement(
           "div",
           { className: Te().Column, ...o },
-          m.createElement(Xt.s3, { pollOptionDef: a, lang: r }),
+          m.createElement(Zt.s3, { pollOptionDef: a, lang: r }),
           Boolean(l) &&
             m.createElement(
               "div",
@@ -3091,7 +3187,7 @@
               pollOptionsInput: a,
               fnUpdatePollOption: (e) => {
                 const n = we.mh.GetEditModel(),
-                  { optionIndex: l, pollIndex: o } = Zt(t),
+                  { optionIndex: l, pollIndex: o } = en(t),
                   a = [...n.GetEventModel().jsondata.user_polls[o].options];
                 (a[l] = e),
                   (n.GetEventModel().jsondata.user_polls[o].options = a),
@@ -3107,7 +3203,7 @@
                 strDescription: (0, C.we)("#Dialog_AreYouSure"),
                 onOK: () => {
                   const e = we.mh.GetEditModel(),
-                    { optionIndex: n, pollIndex: l } = Zt(t),
+                    { optionIndex: n, pollIndex: l } = en(t),
                     o = [...e.GetEventModel().jsondata.user_polls[l].options];
                   o.splice(n, 1),
                     (e.GetEventModel().jsondata.user_polls[l].options = o),
@@ -3118,7 +3214,7 @@
             ),
         );
       }
-      const on = m.memo(function (e) {
+      const sn = m.memo(function (e) {
         const {
           view: t,
           schema: n,
@@ -3141,13 +3237,13 @@
               m.createElement(D.XQ, null),
               m.createElement(rt.Km, { schema: n }),
               m.createElement(D.XQ, null),
-              n.marks.link && m.createElement(an, { schema: n }),
+              n.marks.link && m.createElement(cn, { schema: n }),
               m.createElement(D.XQ, null),
               m.createElement(rt.Hz, { schema: n }),
               m.createElement(rt.WJ, { schema: n, levels: 3 }),
               m.createElement(D.XQ, null),
-              m.createElement(Mt, { schema: n }),
-              m.createElement(sn, { schema: n, clanSteamID: a }),
+              m.createElement(It, { schema: n }),
+              m.createElement(mn, { schema: n, clanSteamID: a }),
               m.createElement(ct, { schema: n }),
               m.createElement(rt.C$, {
                 schema: n,
@@ -3160,22 +3256,22 @@
                   setSpellcheckEnabled: s,
                 }),
               n.nodes.meetsteamsessiongroup &&
-                m.createElement(dn, { schema: n }),
+                m.createElement(_n, { schema: n }),
               n.nodes.meetsteamscheduleview &&
-                m.createElement(mn, { schema: n }),
+                m.createElement(pn, { schema: n }),
               n.nodes.userpolls &&
-                I.iA.is_support &&
-                m.createElement(rn, { schema: n }),
+                M.iA.is_support &&
+                m.createElement(dn, { schema: n }),
             ),
             m.createElement(dt, { className: e.className, schema: n }),
           ),
         );
       });
-      function an(e) {
+      function cn(e) {
         const t = (0, _t.V9)();
         return m.createElement(rt.z9, { schema: e.schema, addtlAttrs: t });
       }
-      function rn(e) {
+      function dn(e) {
         const { schema: t } = e,
           { callbacks: n, view: l } = (0, D.wU)(),
           o = (0, nt.LU)(),
@@ -3216,7 +3312,7 @@
           ),
         );
       }
-      function sn(e) {
+      function mn(e) {
         const { schema: t, clanSteamID: n } = e,
           { callbacks: l, view: o } = (0, D.wU)(),
           { image: a, video: r, previewyoutube: s } = t.nodes,
@@ -3263,11 +3359,11 @@
               },
               m.createElement(T.CeX, null),
             ),
-          s && m.createElement(cn, { schema: t }),
+          s && m.createElement(un, { schema: t }),
           (a || r || s) && m.createElement(D.XQ, null),
         );
       }
-      function cn(e) {
+      function un(e) {
         const { schema: t } = e,
           { callbacks: n, view: l } = (0, D.wU)(),
           [o, a, r] = (0, F.uD)(),
@@ -3299,7 +3395,7 @@
           ),
         );
       }
-      function dn(e) {
+      function _n(e) {
         const { schema: t } = e,
           { callbacks: n, view: l } = (0, D.wU)(),
           o = (0, nt.LU)(),
@@ -3326,7 +3422,7 @@
             },
             [t, l, i, o],
           );
-        if ((null == o ? void 0 : o.GetClanAccountID()) == (0, Ie.H)())
+        if ((null == o ? void 0 : o.GetClanAccountID()) == (0, Me.H)())
           return m.createElement(
             m.Fragment,
             null,
@@ -3338,7 +3434,7 @@
             ),
           );
       }
-      function mn(e) {
+      function pn(e) {
         const { schema: t } = e,
           { callbacks: n, view: l } = (0, D.wU)(),
           o = (0, nt.LU)(),
@@ -3363,12 +3459,12 @@
             },
             [t, l, i, o],
           );
-        if ((null == o ? void 0 : o.GetClanAccountID()) == (0, Ie.H)())
+        if ((null == o ? void 0 : o.GetClanAccountID()) == (0, Me.H)())
           return m.createElement(
             m.Fragment,
             null,
             a &&
-              m.createElement(vt, {
+              m.createElement(ft, {
                 hideModal: i,
                 inputScheduleModel: null,
                 fnUpdateSession: c,
@@ -3384,18 +3480,18 @@
             ),
           );
       }
-      var un = n(75844),
-        _n = n(90316),
-        pn = n.n(_n),
-        En = n(1805),
-        fn = n(81962);
-      function vn(e) {
+      var En = n(75844),
+        vn = n(90316),
+        fn = n.n(vn),
+        gn = n(1805),
+        hn = n(81962);
+      function bn(e) {
         const { schema: t, emoticonStore: n } = e,
           l = t.nodes.emoticon;
         (0, kt.k3)(n),
           (0, a.c$)(
             m.useMemo(
-              () => (0, _e.sM)({ rules: [hn(/:([a-zA-Z0-9_]+):$/, l, n)] }),
+              () => (0, _e.sM)({ rules: [wn(/:([a-zA-Z0-9_]+):$/, l, n)] }),
               [l, n],
             ),
           );
@@ -3403,7 +3499,7 @@
           () => [
             {
               type: l,
-              component: gn,
+              component: Cn,
               readProps: (e) => ({ emoticonStore: n, emoticon: e.textContent }),
             },
           ],
@@ -3411,7 +3507,7 @@
         );
         return m.createElement(r.U, { specs: o });
       }
-      function gn(e) {
+      function Cn(e) {
         const { selected: t, emoticonStore: n, emoticon: l } = e;
         (0, kt.k3)(n);
         if (n.BHasEmoticon(l)) {
@@ -3421,12 +3517,12 @@
           return m.createElement(
             "span",
             { style: e },
-            m.createElement(fn.n, { emoticon: l }),
+            m.createElement(hn.n, { emoticon: l }),
           );
         }
         return `:${l}:`;
       }
-      function hn(e, t, n) {
+      function wn(e, t, n) {
         return new _e.fV(e, (e, l, o, a) => {
           const r = l[1];
           if (!n.BHasEmoticon(r)) return null;
@@ -3434,20 +3530,20 @@
           return e.tr.replaceWith(o, a, s);
         });
       }
-      var bn = n(73560),
-        Cn = n(91254);
-      function wn(e) {
+      var kn = n(73560),
+        Mn = n(91254);
+      function In(e) {
         const { editModel: t, href: n } = e,
-          l = (0, bn.W7)(n);
+          l = (0, kn.W7)(n);
         if (l) {
           const o = l.fnBBComponent(n, {
-            partnerEventStore: Cn.O3,
+            partnerEventStore: Mn.O3,
             event: t.GetEventModel(),
           });
           return m.createElement(
-            U,
+            G,
             {
-              toolbar: m.createElement(kn, {
+              toolbar: m.createElement(Sn, {
                 href: n,
                 removeNode: e.removeNode,
                 update: e.update,
@@ -3459,7 +3555,7 @@
         }
         return m.createElement("a", { href: n }, n);
       }
-      function kn(e) {
+      function Sn(e) {
         const { href: t, removeNode: n, update: l, schema: o } = e;
         return m.createElement(
           A,
@@ -3485,8 +3581,8 @@
           ),
         );
       }
-      var In = n(42714);
-      const Mn = (0, un.PA)(function (e) {
+      var yn = n(42714);
+      const Dn = (0, En.PA)(function (e) {
         const { editModel: t } = e,
           n = t.GetEventModel().loadedAllLanguages,
           l = t.GetCurEditLanguage();
@@ -3494,11 +3590,11 @@
           ? m.createElement(
               H.tH,
               null,
-              m.createElement(Sn, { ...e, eCurrentEditLanguage: l }),
+              m.createElement(Tn, { ...e, eCurrentEditLanguage: l }),
             )
           : null;
       });
-      const Sn = m.memo(function (e) {
+      const Tn = m.memo(function (e) {
         const {
             editModel: t,
             refOnInsertImage: n,
@@ -3508,12 +3604,12 @@
           [s, c] = m.useState(),
           d = m.useMemo(() => (0, ue.u)(a), [a]),
           [_, p] = m.useState(),
-          f = (function (e, t) {
+          v = (function (e, t) {
             const { nodes: n } = t.pm_schema,
               l = (function (e, t, n) {
                 const l = m.useCallback(
                   (l) => {
-                    const o = `^https?://${I.TS.CLAN_CDN_ASSET_URL.replace(/^http[^\/]*\/\//, "")}images/(?<clanid>[0-9]+)/(?<filename>.*)(?<extension>\\.[^\\.]*)$`,
+                    const o = `^https?://${M.TS.CLAN_CDN_ASSET_URL.replace(/^http[^\/]*\/\//, "")}images/(?<clanid>[0-9]+)/(?<filename>.*)(?<extension>\\.[^\\.]*)$`,
                       a = l.match(o);
                     if (
                       a &&
@@ -3534,7 +3630,7 @@
               })(e, n.image, n.video),
               o = (function (e, t) {
                 const n = m.useCallback(
-                  (e) => ((0, bn.yO)(e) ? t.create({ href: e }) : "default"),
+                  (e) => ((0, kn.yO)(e) ? t.create({ href: e }) : "default"),
                   [t],
                 );
                 return t ? n : void 0;
@@ -3564,14 +3660,14 @@
                 new l.n(e, a, (e) => t.SetDescription(n, e), {
                   parser: {
                     fnProcessText: (t) =>
-                      (0, In.F)(e.pm_schema, t, e.pm_schema.marks.link, o),
+                      (0, yn.F)(e.pm_schema, t, e.pm_schema.marks.link, o),
                   },
                 })
               );
-            })(d, t, r, f),
+            })(d, t, r, v),
           );
-        }, [d, f, t, r]);
-        const v = m.useRef(void 0);
+        }, [d, v, t, r]);
+        const f = m.useRef(void 0);
         (0, o.i)(_, { msAutosaveTimeout: 1e3 });
         const { nodes: g, marks: h } = d.pm_schema;
         return (
@@ -3619,33 +3715,33 @@
             { editModel: t, imageNode: g.image, videoNode: g.video },
             m.createElement(
               "div",
-              { className: pn().EventDescriptionContainer },
-              m.createElement(on, {
+              { className: fn().EventDescriptionContainer },
+              m.createElement(sn, {
                 view: s,
                 schema: d.pm_schema,
-                refUpdateToolbar: v,
-                className: pn().ToolBar,
+                refUpdateToolbar: f,
+                className: fn().ToolBar,
                 clanSteamID: t.GetClanSteamID(),
               }),
               m.createElement(
                 "div",
-                { className: pn().EventDescriptionArea },
+                { className: fn().EventDescriptionArea },
                 m.createElement(
-                  En.l,
+                  gn.l,
                   {
                     pmState: _,
-                    className: (0, ve.A)(
-                      pn().EventDescriptionRichField,
-                      pn().EventDetailsBody,
+                    className: (0, fe.A)(
+                      fn().EventDescriptionRichField,
+                      fn().EventDetailsBody,
                     ),
-                    refOnUpdate: v,
+                    refOnUpdate: f,
                     refView: c,
                     panelProps: { onBlur: () => _.CommitChanges() },
                   },
-                  m.createElement(yn, {
+                  m.createElement(Nn, {
                     eventSchemaConfig: d,
                     editModel: t,
-                    onURLPasted: f,
+                    onURLPasted: v,
                   }),
                 ),
               ),
@@ -3653,7 +3749,7 @@
           )
         );
       });
-      const yn = m.memo(function (e) {
+      const Nn = m.memo(function (e) {
         const { eventSchemaConfig: t, editModel: n, onURLPasted: l } = e,
           { marks: o, nodes: a } = t.pm_schema;
         return m.createElement(
@@ -3665,15 +3761,15 @@
             schema: t.pm_schema,
           }),
           a.image && m.createElement(b.pw, { nodeType: a.image }),
-          m.createElement(Dn, {
+          m.createElement(Pn, {
             schemaConfig: t,
             editModel: n,
             clanSteamID: n.GetClanSteamID(),
           }),
-          m.createElement(vn, { emoticonStore: wt.A, schema: t.pm_schema }),
+          m.createElement(bn, { emoticonStore: wt.A, schema: t.pm_schema }),
         );
       });
-      function Dn(e) {
+      function Pn(e) {
         const { schemaConfig: t, editModel: n, clanSteamID: l } = e,
           o = t.pm_schema,
           s = m.useMemo(
@@ -3725,12 +3821,12 @@
               },
               i.userpolls && {
                 type: i.userpolls,
-                component: tn,
+                component: ln,
                 readProps: (e) => ({ poll_id: e.attrs.poll_id }),
               },
               i.dynamiclink && {
                 type: i.dynamiclink,
-                component: wn,
+                component: In,
                 readProps: (e) => ({
                   editModel: n,
                   href: e.attrs.href,

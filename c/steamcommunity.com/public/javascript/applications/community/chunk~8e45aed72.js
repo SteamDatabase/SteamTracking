@@ -2205,6 +2205,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  steamid: {
+                    _: 3,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
                 },
               }),
             _.sm_m
@@ -2301,6 +2306,11 @@
                     _: 1,
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
+                  },
+                  steamid: {
+                    _: 2,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
                   },
                 },
               }),

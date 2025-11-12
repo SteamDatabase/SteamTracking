@@ -1035,6 +1035,7 @@ ${PARTNER_BASE_URL}apps/ajaxcreatenewapp/
 ${PARTNER_BASE_URL}apps/ajaxgetdlc
 ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/communityitems/${}
+${PARTNER_BASE_URL}apps/demo/${store_item_id}
 ${PARTNER_BASE_URL}apps/demo/${}
 ${PARTNER_BASE_URL}apps/landing/${appid}
 ${PARTNER_BASE_URL}apps/landing/${id}
@@ -1059,6 +1060,7 @@ ${PARTNER_BASE_URL}cluster/ajaxuploadasset?clusterid=${}&clustertype=spotlights
 ${PARTNER_BASE_URL}communityitems/ajaxgetcommunityitemdef/${}/${}
 ${PARTNER_BASE_URL}communityitems/ajaxuploadasset/${}/${}
 ${PARTNER_BASE_URL}creatorhome/ajaxgetgroupsforuser
+${PARTNER_BASE_URL}creatorhome/setup
 ${PARTNER_BASE_URL}dashboard/${partner_id}?eventids=${}
 ${PARTNER_BASE_URL}dashboard/${}?eventids=${}
 ${PARTNER_BASE_URL}deadlines/ajaxgetdeadlines
@@ -1454,6 +1456,7 @@ ${STORE_BASE_URL}curator/${clanAccountID}/list/${listid}
 ${STORE_BASE_URL}curator/${clanAccountID}/sale/${strVanity}
 ${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxcheckfornews
 ${STORE_BASE_URL}curator/${m_clanAccountID}/admin/ajaxmanagerssfeed
+${STORE_BASE_URL}curator/${}
 ${STORE_BASE_URL}curator/${}${_ ? `?${}` : ""}
 ${STORE_BASE_URL}curator/${}/
 ${STORE_BASE_URL}curator/${}/admin/ajaxgetlistdetails
@@ -1595,6 +1598,7 @@ ${STORE_BASE_URL}points/shop/c/emoticons
 ${STORE_BASE_URL}points/shop/c/stickers
 ${STORE_BASE_URL}points/shop/event/${}
 ${STORE_BASE_URL}points/shop/event/${}/reward/${defid}
+${STORE_BASE_URL}points/shop/profileshowcases
 ${STORE_BASE_URL}pointssummary/
 ${STORE_BASE_URL}privacy_agreement
 ${STORE_BASE_URL}privacy_agreement/

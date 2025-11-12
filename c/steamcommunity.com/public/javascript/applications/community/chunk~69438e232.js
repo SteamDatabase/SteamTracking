@@ -195,6 +195,8 @@
         PollOptions: "_1-_aGrJzdFf8uYUfDKEn30",
         PollOption: "_3hNd0q0tYO12nPDCPsT8sm",
         Selected: "_3Nv8BLF6dRk932f5NhyNIH",
+        PollVoteIcon: "ziFphpM2Ie-orQ5ezpQqT",
+        PollStatus: "_3NDl2Pml7Uvse14r9SWJTD",
       };
     },
     chunkid: (module) => {
@@ -5968,6 +5970,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5978,305 +5989,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        var _;
-        const [_, _] = (0, _.useState)({}),
-          _ = (0, _._)("useEventHeaderData");
-        return (
-          (0, _.useEffect)(() => {
-            if (_)
-              _._.Get()
-                .QueueAppRequest(_, {
-                  include_assets: !0,
-                  include_screenshots: !0,
-                })
-                .then(() => {
-                  var _;
-                  const _ = _._.Get().GetApp(_);
-                  _ &&
-                    !(null === (_ = null == _ ? void 0 : _.token) ||
-                    void 0 === _
-                      ? void 0
-                      : _.reason) &&
-                    _({
-                      strCapsuleUrl: __webpack_require__
-                        .GetAssets()
-                        .GetHeaderURL(),
-                      strGroupTitle: __webpack_require__.GetName(),
-                      _: _,
-                      strStoreURL:
-                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
-                        __webpack_require__.GetStorePageURL(),
-                      strCommunityURL:
-                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
-                        __webpack_require__.GetCommunityPageURL(),
-                      strForumURL:
-                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
-                        __webpack_require__.GetCommunityDiscussionForumsURL(),
-                    });
-                });
-            else if (_) {
-              const _ = _._.InitFromClanID(_);
-              _._.LoadClanInfoForClanSteamID(_).then((_) => {
-                var _;
-                (null === (_ = null == _ ? void 0 : _.token) || void 0 === _
-                  ? void 0
-                  : _.reason) ||
-                  _({
-                    strCapsuleUrl: _.avatar_full_url,
-                    strGroupTitle: _.group_name,
-                    _: _,
-                    strStoreURL:
-                      (_._.IN_CLIENT ? "steam://openurl/" : "") +
-                      _._.STORE_BASE_URL +
-                      "curator/" +
-                      _ +
-                      "/",
-                    strCommunityURL:
-                      (_._.IN_CLIENT ? "steam://openurl/" : "") +
-                      _._.COMMUNITY_BASE_URL +
-                      "gid/" +
-                      _.ConvertTo64BitString(),
-                    strExtraBannerGroupStyle: _().ClanBanner,
-                  });
-              });
-            }
-          }, [
-            _,
-            null === (_ = null == _ ? void 0 : _.token) || void 0 === _
-              ? void 0
-              : _.reason,
-            _,
-          ]),
-          _
-        );
-      }
-      const _ = {};
-      function _(_) {
-        const { appId: _, clanId: __webpack_require__, bShowRSSFeed: _ } = _,
-          {
-            strStoreURL: _,
-            strCommunityURL: _,
-            strForumURL: _,
-          } = _(_, __webpack_require__),
-          _ = (0, _._)(),
-          _ =
-            _._.STORE_BASE_URL +
-            "feeds/" +
-            (0, _._)() +
-            (_ ? "/app/" + _ : "/group/" + __webpack_require__) +
-            "/?cc=" +
-            _._.COUNTRY +
-            "&l=" +
-            _._.LANGUAGE,
-          _ = _._.Get().GetPartnerEventPermissions(
-            _._.InitFromClanID(__webpack_require__),
-          ),
-          _ = _ && (_.can_edit || _.support_user),
-          _ = _._.Get().BOwnsApp(_),
-          _ = (0, _.useMemo)(() => {
-            const _ = [];
-            return (
-              _._.IN_CLIENT &&
-                _ &&
-                _.push({
-                  label: (0, _._)("#EventDisplay_ViewInLibrary_ExtraShort"),
-                  data: "steam://nav/games/details/" + _,
-                }),
-              _.push({
-                label: (0, _._)("#EventDisplay_ViewStorePage_ExtraShort"),
-                data: (0, _._)(_),
-              }),
-              _ ||
-                (_.push({
-                  label: (0, _._)("#EventDisplay_ViewCommunityPage_ExtraShort"),
-                  data: (0, _._)(_),
-                }),
-                _ &&
-                  _.push({
-                    label: (0, _._)("#EventDisplay_ViewForum_ExtraShort"),
-                    data: (0, _._)(_),
-                  }),
-                _ &&
-                  _.push({
-                    label: _.createElement(
-                      "div",
-                      {
-                        className: _().RssRow,
-                      },
-                      _.createElement(_.ZPc, null),
-                      (0, _._)("#EventDisplay_RSSFeed_ExtraShort"),
-                    ),
-                    data: _,
-                  })),
-              _ &&
-                _.push({
-                  label: (0, _._)("#EventDisplay_Admin_ExtraShort"),
-                  data: (0, _._)(
-                    _,
-                    _._.InitFromClanID(__webpack_require__),
-                    "admin",
-                  ),
-                }),
-              _
-            );
-          }, [_, _, _, _, _, _, _, _, _, __webpack_require__]);
-        return _.createElement(_._, {
-          strDefaultLabel: (0, _._)("#EventDisplay_LinksDropDown_ExtraShort"),
-          strClassName: _().AppBannerLinkDD,
-          strDropDownButtonClassName: _().AppBannerLinkDDButton,
-          strDropDownMenuCtnClass: _().AppBannerLinkDDContainer,
-          contextMenuPositionOptions: {
-            bMatchWidth: !1,
-          },
-          arrowClassName: _().DDButtonArrow,
-          rgOptions: _,
-          onChange: (_, _, _) => (0, _._)(_, _.data),
-        });
-      }
-      const _ = (0, _._)((_) => {
-        const { appId: _, clanId: __webpack_require__ } = _,
-          {
-            strCapsuleUrl: _,
-            strGroupTitle: _,
-            _: _,
-            strExtraBannerGroupStyle: _,
-          } = _(_, __webpack_require__),
-          [_] = (0, _._)(_, _),
-          _ = _._.Get().BOwnsApp(_);
-        let _ = Boolean(_ !== _._);
-        const _ = _.createElement("img", {
-          className: _().AppBannerLogo,
-          src: _,
-        });
-        return _.createElement(
-          "div",
-          {
-            className: _().AppBannerCtn,
-          },
-          _.createElement("div", {
-            className: _().AppBannerBackground,
-            style: {
-              backgroundImage: `url(${_})`,
-            },
-          }),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().AppBannerGroup, _),
-            },
-            _
-              ? Boolean(_)
-                ? _.createElement(
-                    _._,
-                    {
-                      item: {
-                        _: _,
-                        type: "game",
-                      },
-                      className: _().AppBannerLogoCtn,
-                      hoverProps: {
-                        direction: "overlay",
-                        style: {
-                          minWidth: "320px",
-                        },
-                      },
-                    },
-                    _,
-                  )
-                : _.createElement(
-                    _._,
-                    {
-                      type: _.appId ? "app" : "clan",
-                      _: _,
-                      hoverClassName: _().AppBannerLogoCtn,
-                    },
-                    _,
-                  )
-              : _.createElement(
-                  "div",
-                  {
-                    className: _().AppBannerLogoCtn,
-                  },
-                  _,
-                  " ",
-                ),
-            _.createElement(
-              "div",
-              {
-                className: _().AppBannerTitle,
-              },
-              _,
-              _.createElement(
-                "div",
-                {
-                  className: _().NewsHubSubTitle,
-                },
-                (0, _._)("#EventDisplay_NewsHubSubtitle"),
-              ),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().AppBannerLinks,
-                },
-                Boolean(!_ && _) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().HeaderWishlistButton,
-                    },
-                    _.createElement(_._, {
-                      appid: _,
-                      bIsFree: null == _ ? void 0 : _.BIsFree(),
-                      bIsComingSoon: null == _ ? void 0 : _.BIsComingSoon(),
-                      className: (0, _._)(
-                        _().ActionButton,
-                        _().WishlistBtnShort,
-                      ),
-                    }),
-                  ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().HeaderFollowButton,
-                  },
-                  Boolean(_)
-                    ? _.createElement(_._, {
-                        appid: _,
-                        className: _().HeaderButtonDark,
-                      })
-                    : _.createElement(_._, {
-                        clanAccountID: __webpack_require__,
-                        className: _().HeaderButtonDark,
-                      }),
-                ),
-                _.createElement(_, {
-                  ..._,
-                }),
-              ),
-          ),
-        );
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7157,11 +6869,322 @@
               "AppPartnerEventsBanner",
             ),
           },
-          _.createElement(_, {
+          _.createElement(_._, {
             ..._,
           }),
         ),
       );
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        var _;
+        const [_, _] = (0, _.useState)({}),
+          _ = (0, _._)("useEventHeaderData");
+        return (
+          (0, _.useEffect)(() => {
+            if (_)
+              _._.Get()
+                .QueueAppRequest(_, {
+                  include_assets: !0,
+                  include_screenshots: !0,
+                })
+                .then(() => {
+                  var _;
+                  const _ = _._.Get().GetApp(_);
+                  _ &&
+                    !(null === (_ = null == _ ? void 0 : _.token) ||
+                    void 0 === _
+                      ? void 0
+                      : _.reason) &&
+                    _({
+                      strCapsuleUrl: __webpack_require__
+                        .GetAssets()
+                        .GetHeaderURL(),
+                      strGroupTitle: __webpack_require__.GetName(),
+                      _: _,
+                      strStoreURL:
+                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
+                        __webpack_require__.GetStorePageURL(),
+                      strCommunityURL:
+                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
+                        __webpack_require__.GetCommunityPageURL(),
+                      strForumURL:
+                        (_._.IN_CLIENT ? "steam://openurl/" : "") +
+                        __webpack_require__.GetCommunityDiscussionForumsURL(),
+                    });
+                });
+            else if (_) {
+              const _ = _._.InitFromClanID(_);
+              _._.LoadClanInfoForClanSteamID(_).then((_) => {
+                var _;
+                (null === (_ = null == _ ? void 0 : _.token) || void 0 === _
+                  ? void 0
+                  : _.reason) ||
+                  _({
+                    strCapsuleUrl: _.avatar_full_url,
+                    strGroupTitle: _.group_name,
+                    _: _,
+                    strStoreURL:
+                      (_._.IN_CLIENT ? "steam://openurl/" : "") +
+                      _._.STORE_BASE_URL +
+                      "curator/" +
+                      _ +
+                      "/",
+                    strCommunityURL:
+                      (_._.IN_CLIENT ? "steam://openurl/" : "") +
+                      _._.COMMUNITY_BASE_URL +
+                      "gid/" +
+                      _.ConvertTo64BitString(),
+                    strExtraBannerGroupStyle: _().ClanBanner,
+                  });
+              });
+            }
+          }, [
+            _,
+            null === (_ = null == _ ? void 0 : _.token) || void 0 === _
+              ? void 0
+              : _.reason,
+            _,
+          ]),
+          _
+        );
+      }
+      const _ = {};
+      function _(_) {
+        const { appId: _, clanId: __webpack_require__, bShowRSSFeed: _ } = _,
+          {
+            strStoreURL: _,
+            strCommunityURL: _,
+            strForumURL: _,
+          } = _(_, __webpack_require__),
+          _ = (0, _._)(),
+          _ =
+            _._.STORE_BASE_URL +
+            "feeds/" +
+            (0, _._)() +
+            (_ ? "/app/" + _ : "/group/" + __webpack_require__) +
+            "/?cc=" +
+            _._.COUNTRY +
+            "&l=" +
+            _._.LANGUAGE,
+          _ = _._.Get().GetPartnerEventPermissions(
+            _._.InitFromClanID(__webpack_require__),
+          ),
+          _ = _ && (_.can_edit || _.support_user),
+          _ = _._.Get().BOwnsApp(_),
+          _ = (0, _.useMemo)(() => {
+            const _ = [];
+            return (
+              _._.IN_CLIENT &&
+                _ &&
+                _.push({
+                  label: (0, _._)("#EventDisplay_ViewInLibrary_ExtraShort"),
+                  data: "steam://nav/games/details/" + _,
+                }),
+              _.push({
+                label: (0, _._)("#EventDisplay_ViewStorePage_ExtraShort"),
+                data: (0, _._)(_),
+              }),
+              _ ||
+                (_.push({
+                  label: (0, _._)("#EventDisplay_ViewCommunityPage_ExtraShort"),
+                  data: (0, _._)(_),
+                }),
+                _ &&
+                  _.push({
+                    label: (0, _._)("#EventDisplay_ViewForum_ExtraShort"),
+                    data: (0, _._)(_),
+                  }),
+                _ &&
+                  _.push({
+                    label: _.createElement(
+                      "div",
+                      {
+                        className: _().RssRow,
+                      },
+                      _.createElement(_.ZPc, null),
+                      (0, _._)("#EventDisplay_RSSFeed_ExtraShort"),
+                    ),
+                    data: _,
+                  })),
+              _ &&
+                _.push({
+                  label: (0, _._)("#EventDisplay_Admin_ExtraShort"),
+                  data: (0, _._)(
+                    _,
+                    _._.InitFromClanID(__webpack_require__),
+                    "admin",
+                  ),
+                }),
+              _
+            );
+          }, [_, _, _, _, _, _, _, _, _, __webpack_require__]);
+        return _.createElement(_._, {
+          strDefaultLabel: (0, _._)("#EventDisplay_LinksDropDown_ExtraShort"),
+          strClassName: _().AppBannerLinkDD,
+          strDropDownButtonClassName: _().AppBannerLinkDDButton,
+          strDropDownMenuCtnClass: _().AppBannerLinkDDContainer,
+          contextMenuPositionOptions: {
+            bMatchWidth: !1,
+          },
+          arrowClassName: _().DDButtonArrow,
+          rgOptions: _,
+          onChange: (_, _, _) => (0, _._)(_, _.data),
+        });
+      }
+      const _ = (0, _._)((_) => {
+        const { appId: _, clanId: __webpack_require__ } = _,
+          {
+            strCapsuleUrl: _,
+            strGroupTitle: _,
+            _: _,
+            strExtraBannerGroupStyle: _,
+          } = _(_, __webpack_require__),
+          [_] = (0, _._)(_, _),
+          _ = _._.Get().BOwnsApp(_);
+        let _ = Boolean(_ !== _._);
+        const _ = _.createElement("img", {
+          className: _().AppBannerLogo,
+          src: _,
+        });
+        return _.createElement(
+          "div",
+          {
+            className: _().AppBannerCtn,
+          },
+          _.createElement("div", {
+            className: _().AppBannerBackground,
+            style: {
+              backgroundImage: `url(${_})`,
+            },
+          }),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_().AppBannerGroup, _),
+            },
+            _
+              ? Boolean(_)
+                ? _.createElement(
+                    _._,
+                    {
+                      item: {
+                        _: _,
+                        type: "game",
+                      },
+                      className: _().AppBannerLogoCtn,
+                      hoverProps: {
+                        direction: "overlay",
+                        style: {
+                          minWidth: "320px",
+                        },
+                      },
+                    },
+                    _,
+                  )
+                : _.createElement(
+                    _._,
+                    {
+                      type: _.appId ? "app" : "clan",
+                      _: _,
+                      hoverClassName: _().AppBannerLogoCtn,
+                    },
+                    _,
+                  )
+              : _.createElement(
+                  "div",
+                  {
+                    className: _().AppBannerLogoCtn,
+                  },
+                  _,
+                  " ",
+                ),
+            _.createElement(
+              "div",
+              {
+                className: _().AppBannerTitle,
+              },
+              _,
+              _.createElement(
+                "div",
+                {
+                  className: _().NewsHubSubTitle,
+                },
+                (0, _._)("#EventDisplay_NewsHubSubtitle"),
+              ),
+            ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().AppBannerLinks,
+                },
+                Boolean(!_ && _) &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().HeaderWishlistButton,
+                    },
+                    _.createElement(_._, {
+                      appid: _,
+                      bIsFree: null == _ ? void 0 : _.BIsFree(),
+                      bIsComingSoon: null == _ ? void 0 : _.BIsComingSoon(),
+                      className: (0, _._)(
+                        _().ActionButton,
+                        _().WishlistBtnShort,
+                      ),
+                    }),
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().HeaderFollowButton,
+                  },
+                  Boolean(_)
+                    ? _.createElement(_._, {
+                        appid: _,
+                        className: _().HeaderButtonDark,
+                      })
+                    : _.createElement(_._, {
+                        clanAccountID: __webpack_require__,
+                        className: _().HeaderButtonDark,
+                      }),
+                ),
+                _.createElement(_, {
+                  ..._,
+                }),
+              ),
+          ),
+        );
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -14638,6 +14661,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -14736,6 +14760,22 @@
                 },
                 _,
               ),
+              _.createElement(
+                "div",
+                {
+                  className: _().PollStatus,
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#UserPolls_status_N_Votes", "XXX"),
+                ),
+                _.createElement(
+                  "div",
+                  null,
+                  (0, _._)("#UserPolls_status_N_TimeRemaining", "X Days"),
+                ),
+              ),
             ),
           )
         );
@@ -14746,9 +14786,15 @@
         return _.createElement(
           "div",
           {
-            className: _().PollOption,
+            className: (0, _._)({
+              [_().PollOption]: !0,
+              [_().Selected]: !1,
+            }),
           },
-          _,
+          _.createElement("div", {
+            className: _().PollVoteIcon,
+          }),
+          _.createElement("span", null, _),
         );
       }
     },
@@ -20448,6 +20494,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -20455,6 +20502,13 @@
           ? _.startsWith("https://") || _.startsWith("http://")
             ? _
             : `${_._.CLAN_CDN_ASSET_URL}images/clan/${_}/${_}`
+          : _;
+      }
+      function _(_, _, _) {
+        return _
+          ? _.startsWith("https://") || _.startsWith("http://")
+            ? _
+            : `${_}images/clan/${_}/${_}`
           : _;
       }
     },
@@ -21449,8 +21503,8 @@
           _ = _ ? _.createElement(_._, null) : _.createElement(_._, null),
           _ = (0, _._)(
             _
-              ? "#TrailerPlayer_EnterTheater_Tooltip"
-              : "#TrailerPlayer_ExitTheater_Tooltip",
+              ? "#TrailerPlayer_ExitTheater_Tooltip"
+              : "#TrailerPlayer_EnterTheater_Tooltip",
           );
         return _.createElement(
           _,

@@ -11,7 +11,8 @@
 	"SellOnMarket_SellThisItem": "Sell",
 	"ItemDescription_Tags": "Tags: ",
 	"ItemDescription_TradeProtected": "Trade Protected",
-	"ItemDescription_TradeProtectedTooltip": "Trade protected items cannot be modified, consumed, or transferred."
+	"ItemDescription_TradeProtectedTooltip": "Trade protected items cannot be modified, consumed, or transferred.",
+	"ItemDescription_AssetPropertyLabelColonValue": "%1$s: %2$s"
 }`);
     },
   },

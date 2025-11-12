@@ -1102,6 +1102,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1171,6 +1172,7 @@
         _ = 4145017,
         _ = 39049601,
         _ = 41316928,
+        _ = 4397053,
         _ = 4,
         _ = 20,
         _ = 45559995,
@@ -1253,7 +1255,8 @@
           "items" == _ ||
           "trailercarousel" == _ ||
           "crosspromotesalepage" == _ ||
-          "creator_list" == _
+          "creator_list" == _ ||
+          "calendar" == _
         );
       }
       function _(_) {
@@ -4632,7 +4635,7 @@
       function _(_) {
         return (
           _.indexOf("?") > 0 && (_ = _.split("?")[0]),
-          _.endsWith(".jpg")
+          _.endsWith(".jpg") || _.endsWith(".jpeg")
             ? 1
             : _.endsWith(".png")
               ? 3
@@ -6570,11 +6573,12 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _.toLowerCase();
-        return _.endsWith(".jpg")
+        return _.endsWith(".jpg") || _.endsWith(".jpeg")
           ? "image/jpeg"
           : _.endsWith(".png")
             ? "image/png"
@@ -6687,10 +6691,29 @@
               height: 0,
             };
       }
+      function _(_, _) {
+        if (!_) return _;
+        const _ = new Set([
+          "content-length",
+          "host",
+          "origin",
+          "referer",
+          "user-agent",
+          "cookie",
+          "set-cookie",
+          "connection",
+          "upgrade",
+        ]);
+        for (const _ of _)
+          __webpack_require__.has(_.name.toLowerCase()) ||
+            (_[_.name] = _.value);
+        return _;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -6745,6 +6768,7 @@
             return null == _ ? void 0 : _[1];
           })(window.location.href),
           _ = _ && "news" == _,
+          _ = 36 == _.GetEventType(),
           _ = "community" === (0, _._)(),
           _ = _.appid ? "games" : "groups",
           _ =
@@ -6758,13 +6782,14 @@
           case _.k_eCommunityView:
           case _.k_eCommunityEdit:
           case _.k_eCommunityEditBroadcast:
-          case _.k_eCommunityAdminPage:
           case _.k_eCommunityPublish:
           case _.k_eCommunityMigrate:
           case _.k_eCommunityPreview:
           case _.k_eCommunityPreviewSale:
           case _.k_eCommunityAnnouncementHub:
             return _;
+          case _.k_eCommunityAdminPage:
+            return !_ && _;
           case _.k_eViewWebSiteHub:
             return _ || _;
           case _.k_eStoreView:
@@ -6829,7 +6854,8 @@
             _.BIsOGGEvent() &&
             _.appid &&
             _ &&
-            _.BHasSaleUpdateLandingPageVanity();
+            _.BHasSaleUpdateLandingPageVanity(),
+          _ = 36 == _.GetEventType();
         switch (_) {
           case _.k_eCommunityPublish:
             return (
@@ -6856,16 +6882,18 @@
           case _.k_eCommunityMigrate:
             return _ + "partnerevents/migrate_announcement/" + _;
           case _.k_eCommunityPreview:
-            return (
-              _ +
-              (_.bOldAnnouncement
-                ? "partnerevents/preview_old_announcement/" + _
-                : "partnerevents/preview/" + _)
-            );
+            return _
+              ? _ + "partnerevents/previewsale/" + _
+              : _ +
+                  (_.bOldAnnouncement
+                    ? "partnerevents/preview_old_announcement/" + _
+                    : "partnerevents/preview/" + _);
           case _.k_eCommunityPreviewSale:
             return _ + "partnerevents/previewsale/" + _;
           case _.k_eCommunityAdminPage:
-            return _ + "partnerevents";
+            return _
+              ? `${_}curator/${_.clanSteamID.GetAccountID()}/admin/creatorhome_link`
+              : _ + "partnerevents";
           case _.k_eCommunityAnnouncementHub:
             return _ + "announcements";
           case _.k_eStoreNewsHub:
@@ -6886,11 +6914,15 @@
                 ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
                 : _
                   ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
-                  : _ +
-                    (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                      ? "sale/"
-                      : "curator/" + _.clanSteamID.GetAccountID() + "/sale/") +
-                    _.jsondata.sale_vanity_id
+                  : _
+                    ? `${_}curator/${_.clanSteamID.GetAccountID()}`
+                    : _ +
+                      (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
+                        ? "sale/"
+                        : "curator/" +
+                          _.clanSteamID.GetAccountID() +
+                          "/sale/") +
+                      _.jsondata.sale_vanity_id
               : _;
           case _.k_eCommunityView:
             return _ + "announcements/detail/" + _;
@@ -6899,6 +6931,7 @@
               return `${_._.STORE_BASE_URL}meetsteam/${_}`;
             if (_)
               return `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`;
+            if (_) return `${_}curator/${_.clanSteamID.GetAccountID()}`;
             return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `view/${_}`}`;
           case _.k_eStoreUsersNewsHub:
             return `${_}news/`;
@@ -6913,16 +6946,29 @@
           "forceAbsolute" === _ || !_(_, _) ? "absolute" : "relative",
         );
       }
+      function _(_, _, _, _) {
+        return _(
+          _,
+          _,
+          _,
+          "forceAbsolute" === _ || !_(_, _) ? "absolute" : "relative",
+        );
+      }
       function _(_) {
-        const { eventModel: _, route: __webpack_require__ } = _,
+        const { eventModel: _, route: __webpack_require__, bPopup: _ = !0 } = _,
           _ = _(__webpack_require__, _),
           _ = _(_, __webpack_require__, _ ? "relative" : "absolute");
-        return _
-          ? _.createElement(_._, {
-              push: !0,
-              _: _,
-            })
-          : (window.open(_), null);
+        return (
+          _.useEffect(() => {
+            _ ? window.open(_) : window.location.assign(_);
+          }, [_, _]),
+          _
+            ? _.createElement(_._, {
+                push: !0,
+                _: _,
+              })
+            : null
+        );
       }
       function _(_, _, _) {
         const _ = _(_, _, !1);
