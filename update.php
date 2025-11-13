@@ -228,11 +228,15 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					'__KEY__',
 					'__TIME__',
 					'__CDN__',
+					'https://steamcommunity.com/',
+					'https://store.steampowered.com/',
 				],
 				[
 					'key=' . $this->APIKey,
 					'_=' . $this->CurrentTime,
 					'_cdn=fastly',
+					'https://community.fastly.steamstatic.com/',
+					'https://store.fastly.steamstatic.com/',
 				],
 				$URL
 			);
@@ -693,7 +697,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						$LengthExpected = curl_getinfo( $Handle, CURLINFO_CONTENT_LENGTH_DOWNLOAD_T );
 						$LengthDownload = curl_getinfo( $Handle, CURLINFO_SIZE_DOWNLOAD_T );
 
-						if( $LengthExpected !== $LengthDownload && !$IsSSR )
+						if( $LengthExpected !== $LengthDownload && !$IsSSR && $Request !== 'store.steampowered.com/mobile' )
 						{
 							$this->Log( '{lightred}Wrong Length {normal}(' . $LengthDownload . ' != ' . $LengthExpected . '){normal} - ' . $URL );
 

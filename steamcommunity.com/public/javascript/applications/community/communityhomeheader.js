@@ -51,8 +51,8 @@
       var _ = a(52038),
         h = a(13952),
         S = a(95034),
-        H = a(92757),
-        f = a(76217),
+        f = a(92757),
+        H = a(76217),
         C = a(12447);
       function b() {
         const e = (0, n.useRef)(void 0);
@@ -64,7 +64,7 @@
             C.u,
             { navID: "CommunityHomeHeader" },
             n.createElement(
-              f.Z,
+              H.Z,
               { navRef: e, className: i().CommunityHomeHeader },
               n.createElement(
                 "div",
@@ -127,7 +127,7 @@
           "div",
           { className: i().CommunityHomeHeaderContent },
           n.createElement(
-            f.Z,
+            H.Z,
             { className: i().AppHubsCtn },
             n.createElement(E, {
               appShortcuts: h.data.personalAppIds,
@@ -142,7 +142,7 @@
             }),
           ),
           n.createElement(
-            f.Z,
+            H.Z,
             {
               onFocus: () => _(!0),
               onBlur: (e) => {
@@ -151,7 +151,7 @@
               className: i().Search,
             },
             n.createElement(
-              f.Z,
+              H.Z,
               { className: i().SearchBar },
               n.createElement(
                 "div",
@@ -180,7 +180,7 @@
             ),
             u &&
               n.createElement(
-                f.Z,
+                H.Z,
                 { className: i().SearchResultsCtn },
                 a.map((e) =>
                   n.createElement(
@@ -237,7 +237,7 @@
       const T = "subsection",
         w = "browsefilter";
       function A() {
-        const e = (0, H.W6)(),
+        const e = (0, f.W6)(),
           t = (0, S.f3)(e, T),
           a = (0, S.f3)(e, w);
         return n.createElement(
@@ -259,7 +259,7 @@
           }
         }, [null == o ? void 0 : o.current]);
         return n.createElement(
-          f.Z,
+          H.Z,
           { "flow-children": "row", className: i().TabContainer, ref: o },
           [
             { label: "#Community_Home_Header_Filter_All", id: "" },
@@ -298,7 +298,7 @@
       function I(e) {
         const { activeTab: t, activeSort: a } = e;
         return n.createElement(
-          f.Z,
+          H.Z,
           { "flow-children": "row", className: i().SortContainer },
           n.createElement(
             "div",
@@ -359,7 +359,14 @@
     },
     95034: (e, t, a) => {
       "use strict";
-      a.d(t, { Bm: () => c, QD: () => s, f3: () => o, ip: () => l });
+      a.d(t, {
+        Bm: () => c,
+        QD: () => l,
+        f3: () => o,
+        iV: () => u,
+        ip: () => m,
+        le: () => s,
+      });
       var n = a(90626),
         r = a(92757);
       function o(e, t) {
@@ -389,7 +396,10 @@
           ? e.replace(`?${r.toString()}`, { ...e.location.state })
           : e.push(`?${r.toString()}`);
       }
-      function s(e, t) {
+      function s(e, t, a) {
+        c(e, t, a, !0);
+      }
+      function l(e, t) {
         const a = (0, r.W6)(),
           s = (0, r.zy)(),
           l = (0, n.useMemo)(() => {
@@ -410,7 +420,7 @@
           );
         return [l, m];
       }
-      function l(e, t, a = !1) {
+      function m(e, t, a = !1) {
         const n = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
@@ -420,6 +430,9 @@
         a
           ? e.replace(`?${n.toString()}`, { ...e.location.state })
           : e.push(`?${n.toString()}`);
+      }
+      function u(e, t) {
+        m(e, t, !0);
       }
     },
   },
