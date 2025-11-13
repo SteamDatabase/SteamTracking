@@ -2,21 +2,21 @@ import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import {
   _,
@@ -59,8 +59,8 @@ import {
   _,
   _,
 } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -26155,17 +26155,22 @@ var _ = class {
   constructor() {
     _(this);
   }
-  m_mapListToTitle = new Map();
-  m_mapListToSubtitle = new Map();
+  m_mapListInfo = new Map();
   m_bLoadedFromConfig = !1;
   LazyInit() {
     if (!this.m_bLoadedFromConfig) {
-      let _ = _("creator_home_list_titles", "application_config");
+      let _ = _("creator_home_list_info", "application_config");
       if (this.ValidateCreatorHomeTitles(_))
-        for (let [_, { title: _, description: _ }] of Object.entries(_ ?? {}))
+        for (let [
+          _,
+          { title: _, description: _, listtileimage: _ },
+        ] of Object.entries(_ ?? {}))
           _ &&
-            (this.m_mapListToTitle.set(_, _),
-            _ && this.m_mapListToSubtitle.set(_, _));
+            this.m_mapListInfo.set(_, {
+              title: _ ?? "",
+              description: _?.length ? _ : void 0,
+              imageUrl: _?.length ? _ : void 0,
+            });
       this.m_bLoadedFromConfig = !0;
     }
   }
@@ -26173,17 +26178,18 @@ var _ = class {
     return !(_ == null || typeof _ != "object" || Array.isArray(_));
   }
   GetListTitle(_) {
-    return this.LazyInit(), _ ? this.m_mapListToTitle.get(_) : void 0;
+    return this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.title : void 0;
   }
   GetListSubtitle(_) {
-    return this.LazyInit(), _ ? this.m_mapListToSubtitle.get(_) : void 0;
+    return this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.description : void 0;
+  }
+  GetListtileImage(_) {
+    return this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.imageUrl : void 0;
   }
 };
-_([_], _.prototype, "m_mapListToTitle", 2),
-  _([_], _.prototype, "m_mapListToSubtitle", 2),
-  _([_], _.prototype, "LazyInit", 1);
+_([_], _.prototype, "m_mapListInfo", 2), _([_], _.prototype, "LazyInit", 1);
 var _ = new _();
-window.g_CreatorHomeListTitleStore = _;
+window.g_CreatorHomeListInfoStore = _;
 var _ = () => (_.EUNIVERSE === 2 ? 2581 : 45267781);
 var _ = _(_());
 var _ = _(_());

@@ -398,7 +398,7 @@
         mD: () => H,
         ie: () => N,
         A2: () => W,
-        zt: () => q,
+        R7: () => q,
         pF: () => O,
         FV: () => V,
         $$: () => k,
@@ -1611,7 +1611,7 @@
         L = r.n(D),
         z = r(14947),
         R = r(78327);
-      class F {
+      class U {
         constructor(e) {
           (this.m_appidList = new Array()),
             (this.m_strName = ""),
@@ -1763,10 +1763,10 @@
             (this.m_clanAccountFlags = n);
         }
       }
-      (0, i.Cg)([z.sH], F.prototype, "m_appidList", void 0),
-        (0, i.Cg)([z.sH], F.prototype, "m_nFollowers", void 0),
-        (0, i.Cg)([z.sH], F.prototype, "m_clanAccountFlags", void 0);
-      var U = r(96059),
+      (0, i.Cg)([z.sH], U.prototype, "m_appidList", void 0),
+        (0, i.Cg)([z.sH], U.prototype, "m_nFollowers", void 0),
+        (0, i.Cg)([z.sH], U.prototype, "m_clanAccountFlags", void 0);
+      var F = r(96059),
         E = r(17720);
       class P {
         constructor() {
@@ -1783,7 +1783,7 @@
               e.forEach((e) => {
                 const t = Number(e.creator_clan_id),
                   r = E.b.InitFromClanID(t),
-                  n = new F(r);
+                  n = new U(r);
                 n.Initialize(e),
                   (n.m_promise = P.GetAsPromise(n)),
                   this.m_mapClanToCreatorHome.set(t, n);
@@ -1802,7 +1802,7 @@
         GetServiceTransport() {
           if (!this.m_serviceTransport) {
             const e = (0, R.Tc)("loyalty_webapi_token", "application_config"),
-              t = new U.D(R.TS.WEBAPI_BASE_URL, e || void 0);
+              t = new F.D(R.TS.WEBAPI_BASE_URL, e || void 0);
             this.m_serviceTransport = t.GetServiceTransport();
           }
           return this.m_serviceTransport;
@@ -1856,7 +1856,7 @@
             (this.LazyInit(),
             t || !this.m_mapClanToCreatorHome.has(e.GetAccountID()))
           ) {
-            let t = new F(e);
+            let t = new U(e);
             (t.m_promise = this.InternalCreatorHome(t, r)),
               await t.m_promise,
               this.m_mapClanToCreatorHome.set(e.GetAccountID(), t);
@@ -1903,7 +1903,7 @@
                 s.data.curators.forEach((e) => {
                   if (!this.m_mapClanToCreatorHome.has(e.creator_clan_id)) {
                     let t = E.b.InitFromClanID(e.creator_clan_id),
-                      r = new F(t);
+                      r = new U(t);
                     r.Initialize(e),
                       this.m_mapClanToCreatorHome.set(e.creator_clan_id, r);
                   }
@@ -1926,24 +1926,24 @@
       window.g_CreatorHomeStore = O;
       class j {
         constructor() {
-          (this.m_mapListToTitle = new Map()),
-            (this.m_mapListToSubtitle = new Map()),
+          (this.m_mapListInfo = new Map()),
             (this.m_bLoadedFromConfig = !1),
             (0, z.Gn)(this);
         }
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
-            const e = (0, R.Tc)(
-              "creator_home_list_titles",
-              "application_config",
-            );
+            const e = (0, R.Tc)("creator_home_list_info", "application_config");
             if (this.ValidateCreatorHomeTitles(e))
-              for (const [t, { title: r, description: n }] of Object.entries(
-                null != e ? e : {},
-              ))
+              for (const [
+                t,
+                { title: r, description: n, listtileimage: i },
+              ] of Object.entries(null != e ? e : {}))
                 r &&
-                  (this.m_mapListToTitle.set(t, r),
-                  n && this.m_mapListToSubtitle.set(t, n));
+                  this.m_mapListInfo.set(t, {
+                    title: null != r ? r : "",
+                    description: (null == n ? void 0 : n.length) ? n : void 0,
+                    imageUrl: (null == i ? void 0 : i.length) ? i : void 0,
+                  });
             this.m_bLoadedFromConfig = !0;
           }
         }
@@ -1951,14 +1951,40 @@
           return null != e && "object" == typeof e && !Array.isArray(e);
         }
         GetListTitle(e) {
-          return this.LazyInit(), e ? this.m_mapListToTitle.get(e) : void 0;
+          var t;
+          return (
+            this.LazyInit(),
+            e
+              ? null === (t = this.m_mapListInfo.get(e)) || void 0 === t
+                ? void 0
+                : t.title
+              : void 0
+          );
         }
         GetListSubtitle(e) {
-          return this.LazyInit(), e ? this.m_mapListToSubtitle.get(e) : void 0;
+          var t;
+          return (
+            this.LazyInit(),
+            e
+              ? null === (t = this.m_mapListInfo.get(e)) || void 0 === t
+                ? void 0
+                : t.description
+              : void 0
+          );
+        }
+        GetListtileImage(e) {
+          var t;
+          return (
+            this.LazyInit(),
+            e
+              ? null === (t = this.m_mapListInfo.get(e)) || void 0 === t
+                ? void 0
+                : t.imageUrl
+              : void 0
+          );
         }
       }
-      (0, i.Cg)([z.sH], j.prototype, "m_mapListToTitle", void 0),
-        (0, i.Cg)([z.sH], j.prototype, "m_mapListToSubtitle", void 0),
+      (0, i.Cg)([z.sH], j.prototype, "m_mapListInfo", void 0),
         (0, i.Cg)([z.XI], j.prototype, "LazyInit", null);
       const q = new j();
       function W(e) {
@@ -2026,7 +2052,7 @@
           enabled: e > 0,
         };
       }
-      window.g_CreatorHomeListTitleStore = q;
+      window.g_CreatorHomeListInfoStore = q;
     },
     60746: (e, t, r) => {
       r.d(t, { KN: () => B, Nh: () => _, Ec: () => b });

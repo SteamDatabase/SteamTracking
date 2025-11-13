@@ -495,7 +495,7 @@
       a.d(t, {
         FZ: () => me,
         A4: () => C,
-        iy: () => G,
+        iy: () => T,
         ZA: () => O,
         Dn: () => x,
         Ay: () => ae,
@@ -583,16 +583,16 @@
       );
       var S = a(61336);
       const A = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
-      function G(e) {
+      function T(e) {
         return (
           A.some((t) => t == e.GetEventType()) &&
           !e.BHasTag("steam_award_nomination_request") &&
           !e.BHasTag("curator")
         );
       }
-      const T = [20, 31, 34];
+      const G = [20, 31, 34];
       function C(e) {
-        return !T.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
+        return !G.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
       }
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const D = 593110,
@@ -1956,6 +1956,7 @@
                     "#AppTypeLabel_demo",
                     "#AppTypeLabel_music",
                   ],
+                  initially_selected_values: ["#AppTypeLabel_game"],
                 },
               ],
             },
@@ -3299,7 +3300,7 @@
     },
     6379: (e, t, a) => {
       "use strict";
-      a.d(t, { ZQ: () => S, O3: () => A, MX: () => G, dB: () => T });
+      a.d(t, { ZQ: () => S, O3: () => A, MX: () => T, dB: () => G });
       var n = a(34629),
         i = a(41735),
         s = a.n(i),
@@ -4448,8 +4449,8 @@
         (0, n.Cg)([f.oI], S.prototype, "SavePartnerEventSaleAssets", null);
       const A = new S();
       window.g_PartnerEventStore = A;
-      const G = new S(!0);
-      function T(e, t) {
+      const T = new S(!0);
+      function G(e, t) {
         const [a, n] = (0, y.useState)(() => A.GetClanEventModel(t)),
           i = (0, y.useMemo)(() => d.b.InitFromClanID(e), [e]);
         return (
@@ -4468,7 +4469,7 @@
           a
         );
       }
-      window.g_PartnerEventSummaryStore = G;
+      window.g_PartnerEventSummaryStore = T;
     },
     55563: (e, t, a) => {
       "use strict";
@@ -4596,10 +4597,10 @@
         Hx: () => C,
         JP: () => y,
         LJ: () => b,
-        OG: () => T,
+        OG: () => G,
         PH: () => n,
         T7: () => I,
-        qT: () => G,
+        qT: () => T,
         tj: () => D,
         yh: () => S,
       });
@@ -4821,7 +4822,7 @@
           "forceAbsolute" === a || !v(t, e) ? "absolute" : "relative",
         );
       }
-      function G(e, t, a, n) {
+      function T(e, t, a, n) {
         return S(
           e,
           t,
@@ -4829,7 +4830,7 @@
           "forceAbsolute" === n || !v(a, e) ? "absolute" : "relative",
         );
       }
-      function T(e) {
+      function G(e) {
         const { eventModel: t, route: a, bPopup: n = !0 } = e,
           r = v(a, t),
           o = w(t, a, r ? "relative" : "absolute");

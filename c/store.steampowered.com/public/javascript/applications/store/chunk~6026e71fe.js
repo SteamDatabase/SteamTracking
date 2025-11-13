@@ -5275,7 +5275,13 @@
           _.only_facets)
         ) {
           const _ = new Map(
-              _.only_facets.map((_) => [_.loc_token, _.only_values]),
+              _.only_facets.map((_) => [
+                _.loc_token,
+                _.only_values?.map((_) => ({
+                  value: _,
+                  selected: _.initially_selected_values?.includes(_) ?? !1,
+                })),
+              ]),
             ),
             _ = _._(
               _.map((_) => {
@@ -5290,9 +5296,18 @@
             );
           for (const _ of _)
             if (_.values) {
-              const _ = new Set(_.values);
+              const _ = new Set(_.values.map((_) => _.value));
               _.facet.facetValues = _.facet.facetValues.filter((_) =>
                 _.name.some((_) => _.has(_)),
+              );
+              const _ = new Set(
+                _.values.filter((_) => _.selected).map((_) => _.value),
+              );
+              _.facet.facetValues.forEach(
+                (_) =>
+                  (_.bEnabledByDefault = _.name.some((_) =>
+                    __webpack_require__.has(_),
+                  )),
               );
             }
           _ = _.map((_) => _.facet);
@@ -12010,7 +12025,8 @@
             include_assets: !0,
           }),
           _ = _?.GetScreenshots(!0)[0],
-          _ = _?.GetAssets().GetLibraryHeroURL();
+          _ = _?.GetAssets().GetLibraryHeroURL(),
+          _ = _._.GetListtileImage(__webpack_require__.listid()) ?? _ ?? _;
         return _.createElement(
           _._,
           {
@@ -12032,13 +12048,13 @@
             _.createElement("div", {
               className: _()(_.BackgroundBlur, _.BackgroundAbsolute),
               style: {
-                backgroundImage: `url("${_ || _}")`,
+                backgroundImage: `url("${_}")`,
               },
             }),
             _.createElement("div", {
               className: _()(_.BackgroundImage, _.BackgroundAbsolute),
               style: {
-                backgroundImage: `url("${_ || _}")`,
+                backgroundImage: `url("${_}")`,
               },
             }),
             _.createElement(
@@ -13952,25 +13968,34 @@
       function _(_) {
         return "sub" !== _.type && "bundle" !== _.type;
       }
-      function _(_, _, _) {
+      async function _(_, _, _) {
         const _ = new Set(_.GetTabAppIDs());
-        return (
-          _.filter((_) => (0, _._)(_.section_type)).forEach((_) => {
-            _.ShouldShowSection(_) &&
-              _.capsules.forEach((_) => {
-                !_(_) ||
-                  (!_.diable_tab_id_filtering && _.BIsTabFilteringEnabled()) ||
-                  _.add(_._);
-              });
-          }),
+        if (
+          (_.GetSaleSections()
+            .filter((_) => (0, _._)(_.section_type))
+            .forEach((_) => {
+              _.ShouldShowSection(_) &&
+                _.capsules.forEach((_) => {
+                  !_(_) ||
+                    (!_.diable_tab_id_filtering &&
+                      _.BIsTabFilteringEnabled()) ||
+                    _.add(_._);
+                });
+            }),
           __webpack_require__?.forEach((_) => {
             const _ = _.capsule;
             !_(_) ||
               (_.BIsTabFilteringEnabled() && !_.ShouldShowCapsule(_)) ||
               _.add(_._);
           }),
-          _
-        );
+          36 == _.GetEventType())
+        ) {
+          const _ = await _._.fetchQuery(
+            (0, _._)(_.clanSteamID.GetAccountID()),
+          );
+          _?.GetAppIDList().forEach((_) => _.add(_));
+        }
+        return _;
       }
       function _(_) {
         const { event: _, section: __webpack_require__ } = _,
@@ -18331,7 +18356,6 @@
               highlightedFacetColor: __webpack_require__,
               linkColor: _,
               facetValue: _,
-              facetFilterState: _,
               styleOverrides: _,
               fnOnUpdateFilter: _,
               showMatchCounts: _,
@@ -20170,8 +20194,8 @@
                         bMoreRemaining: !1,
                       };
                   }
-                const _ = (0, _._)(
-                    __webpack_require__.GetSaleSections(),
+                const _ = await (0, _._)(
+                    _,
                     _,
                     __webpack_require__.GetTaggedItems(),
                   ),
@@ -24845,7 +24869,14 @@
             _ = [];
           for (let _ = _; _ <= _; ++_)
             _.push(this.GetItems(_, _, _, _ * _, _, _, _, _));
-          const _ = await Promise.all(_);
+          let _ = await Promise.all(_);
+          if (((_ = _._(_)), !_.length))
+            return {
+              rgItems: [],
+              nMatchCount: 0,
+              bMoreAvailable: !1,
+              nNextSolrIndex: 0,
+            };
           let _ = {
               ..._[_.length - 1],
               rgItems: [],
@@ -31273,6 +31304,23 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
+        return _.href
+          ? _.createElement(
+              _._,
+              {
+                ..._,
+              },
+              _.children,
+            )
+          : _.createElement(
+              "div",
+              {
+                ..._,
+              },
+              _.children,
+            );
+      }
+      function _(_) {
         const {
             media: _,
             mediaType: __webpack_require__,
@@ -31378,6 +31426,7 @@
             maxWidthPx: _,
             onClick: _,
             altText: _,
+            optionalURL: _,
           } = _,
           _ = (0, _._)(_),
           _ = {
@@ -31400,8 +31449,9 @@
               sFormat: "video/mp4",
             }),
           _.createElement(
-            "div",
+            _,
             {
+              href: _ ? void 0 : _,
               className: (0, _._)(_().Ctn, _),
               style: _,
             },
@@ -31438,6 +31488,7 @@
             containerStyle: _,
             fnResizeObserver: _,
             altText: _,
+            optionalURL: _,
           } = _,
           _ = (0, _.useRef)(null),
           [_, _] = (0, _.useState)(null),
@@ -31455,10 +31506,11 @@
           _ = (0, _._)(_, _);
         return _.image && 0 !== _.image.trim().length
           ? _.createElement(
-              "div",
+              _,
               {
                 className: (0, _._)(_().Ctn, _),
                 style: _,
+                href: _ ? void 0 : _,
               },
               _.createElement("img", {
                 className: (0, _._)(_().Image),
@@ -31549,84 +31601,108 @@
             event: _,
             section: _,
           } = _,
-          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] =
-            (0, _._)(() => {
-              const _ = _._.GetELanguageFallback(__webpack_require__);
-              return [
-                (_ && _?.text_placement) || _.k_TopLeft,
-                _?.media_type,
-                _ && _.localized_media && _.localized_media.length > 0
-                  ? _?.localized_media[__webpack_require__] ||
-                    _?.localized_media[_] ||
-                    {}
-                  : void 0,
-                _ &&
-                _.localized_media_title &&
-                _.localized_media_title.length > 0
-                  ? _?.localized_media_title[__webpack_require__] ||
-                    _?.localized_media_title[_] ||
-                    ""
-                  : void 0,
-                _ &&
-                _.localized_media_subtitle &&
-                _.localized_media_subtitle.length > 0
-                  ? _?.localized_media_subtitle[__webpack_require__] ||
-                    _?.localized_media_subtitle[_] ||
-                    ""
-                  : void 0,
-                _ &&
-                _.localized_media_description &&
-                _.localized_media_description.length > 0
-                  ? _?.localized_media_description[__webpack_require__] ||
-                    _?.localized_media_description[_] ||
-                    ""
-                  : void 0,
-                _?.eTitleDisplaySize,
-                _?.title_alignment,
-                _?.subtitle_alignment,
-                _?.description_alignment,
-                _?.is_title_as_image &&
-                _ &&
-                _.title_media &&
-                _.title_media.localized_media &&
-                _.title_media.localized_media.length > 0
-                  ? _?.title_media.localized_media[__webpack_require__] ||
-                    _?.title_media.localized_media[_] ||
-                    {}
-                  : void 0,
-                _?.is_title_as_image &&
-                _ &&
-                _.title_media &&
-                _.title_media.localized_media &&
-                _.title_media.localized_media.length > 0
-                  ? _?.title_media.media_type
-                  : void 0,
-                _?.is_title_as_image &&
-                _ &&
-                _.title_media &&
-                _.title_media.localized_media &&
-                _.title_media.localized_media.length > 0
-                  ? _?.title_media.media_vertical_alignment
-                  : void 0,
-                _?.is_title_as_image &&
-                _ &&
-                _.title_media &&
-                _.title_media.localized_media &&
-                _.title_media.localized_media.length > 0
-                  ? _?.title_media.media_horizontal_alignment
-                  : void 0,
-                _?.eDescriptionDisplaySize,
-                _?.title_media?.media_scale,
-                _?.text_scale,
-                _?.trailer_appid,
-                _?.trailer_base_id,
-                _?.trailer_display,
-                _?.localized_alt_text?.[__webpack_require__] ||
-                  _?.localized_alt_text?.[_],
-                _?.title_media?.localized_alt_text?.[__webpack_require__] ||
-                  _?.title_media?.localized_alt_text?.[_],
-              ];
-            });
+          [
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+          ] = (0, _._)(() => {
+            const _ = _._.GetELanguageFallback(__webpack_require__);
+            return [
+              (_ && _?.text_placement) || _.k_TopLeft,
+              _?.media_type,
+              _ && _.localized_media && _.localized_media.length > 0
+                ? _?.localized_media[__webpack_require__] ||
+                  _?.localized_media[_] ||
+                  {}
+                : void 0,
+              _ && _.localized_media_title && _.localized_media_title.length > 0
+                ? _?.localized_media_title[__webpack_require__] ||
+                  _?.localized_media_title[_] ||
+                  ""
+                : void 0,
+              _ &&
+              _.localized_media_subtitle &&
+              _.localized_media_subtitle.length > 0
+                ? _?.localized_media_subtitle[__webpack_require__] ||
+                  _?.localized_media_subtitle[_] ||
+                  ""
+                : void 0,
+              _ &&
+              _.localized_media_description &&
+              _.localized_media_description.length > 0
+                ? _?.localized_media_description[__webpack_require__] ||
+                  _?.localized_media_description[_] ||
+                  ""
+                : void 0,
+              _?.eTitleDisplaySize,
+              _?.title_alignment,
+              _?.subtitle_alignment,
+              _?.description_alignment,
+              _?.is_title_as_image &&
+              _ &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
+                ? _?.title_media.localized_media[__webpack_require__] ||
+                  _?.title_media.localized_media[_] ||
+                  {}
+                : void 0,
+              _?.is_title_as_image &&
+              _ &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
+                ? _?.title_media.media_type
+                : void 0,
+              _?.is_title_as_image &&
+              _ &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
+                ? _?.title_media.media_vertical_alignment
+                : void 0,
+              _?.is_title_as_image &&
+              _ &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
+                ? _?.title_media.media_horizontal_alignment
+                : void 0,
+              _?.eDescriptionDisplaySize,
+              _?.title_media?.media_scale,
+              _?.text_scale,
+              _?.trailer_appid,
+              _?.trailer_base_id,
+              _?.trailer_display,
+              _?.localized_alt_text?.[__webpack_require__] ||
+                _?.localized_alt_text?.[_],
+              _?.title_media?.localized_alt_text?.[__webpack_require__] ||
+                _?.title_media?.localized_alt_text?.[_],
+              _?.optional_url,
+              _?.title_media?.optional_url,
+            ];
+          });
         let _;
         if (_) {
           let _ = _.k_Left;
@@ -31689,6 +31765,7 @@
               language: __webpack_require__,
               titleMediaScale: _,
               titleAltText: _,
+              titleOptionalURL: _,
             }),
           ),
           _.createElement(_, {
@@ -31700,6 +31777,7 @@
             className: _().MediaMax,
             clanAccountID: _.clanSteamID.GetAccountID(),
             altText: _,
+            optionalURL: _,
           }),
         );
       }
@@ -31888,73 +31966,97 @@
             contentUniqueID: _,
             additionalStyle: _,
           } = _,
-          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] =
-            (0, _._)(() => {
-              const _ = _._.GetELanguageFallback(_);
-              return [
-                _.display_order || _.k_HorizontalMediaFirst,
-                _.media_type,
-                _.localized_media && _.localized_media.length > 0
-                  ? _.localized_media[_] || _.localized_media[_] || {}
-                  : void 0,
-                _.localized_media_title && _.localized_media_title.length > 0
-                  ? _.localized_media_title[_] ||
-                    _.localized_media_title[_] ||
-                    ""
-                  : void 0,
-                _.localized_media_subtitle &&
-                _.localized_media_subtitle.length > 0
-                  ? _.localized_media_subtitle[_] ||
-                    _.localized_media_subtitle[_] ||
-                    ""
-                  : void 0,
-                _.localized_media_description &&
-                _.localized_media_description.length > 0
-                  ? _.localized_media_description[_] ||
-                    _.localized_media_description[_] ||
-                    ""
-                  : void 0,
-                _.eTitleDisplaySize,
-                _.title_alignment,
-                _.subtitle_alignment,
-                _.description_alignment,
-                _.media_horizontal_alignment,
-                _.media_vertical_alignment,
-                _.is_title_as_image &&
-                _.title_media &&
-                _.title_media.localized_media &&
-                _.title_media.localized_media.length > 0
-                  ? _.title_media.localized_media[_] ||
-                    _.title_media.localized_media[_] ||
-                    {}
-                  : void 0,
-                _.is_title_as_image &&
-                _.title_media &&
-                _.title_media.localized_media &&
-                _.title_media.localized_media.length > 0
-                  ? _.title_media.media_type
-                  : void 0,
-                _.is_title_as_image &&
-                _.title_media &&
-                _.title_media.localized_media &&
-                _.title_media.localized_media.length > 0
-                  ? _.title_media.media_vertical_alignment
-                  : void 0,
-                _.is_title_as_image &&
-                _.title_media &&
-                _.title_media.localized_media &&
-                _.title_media.localized_media.length > 0
-                  ? _.title_media.media_horizontal_alignment
-                  : void 0,
-                _.trailer_appid,
-                _.trailer_base_id,
-                _.trailer_display,
-                _?.localized_alt_text?.[_] || _?.localized_alt_text?.[_],
-                _?.title_media?.localized_alt_text?.[_] ||
-                  _?.title_media?.localized_alt_text?.[_],
-                _?.titlesubdesc_vertical_align,
-              ];
-            });
+          [
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+            _,
+          ] = (0, _._)(() => {
+            const _ = _._.GetELanguageFallback(_);
+            return [
+              _.display_order || _.k_HorizontalMediaFirst,
+              _.media_type,
+              _.localized_media && _.localized_media.length > 0
+                ? _.localized_media[_] || _.localized_media[_] || {}
+                : void 0,
+              _.localized_media_title && _.localized_media_title.length > 0
+                ? _.localized_media_title[_] || _.localized_media_title[_] || ""
+                : void 0,
+              _.localized_media_subtitle &&
+              _.localized_media_subtitle.length > 0
+                ? _.localized_media_subtitle[_] ||
+                  _.localized_media_subtitle[_] ||
+                  ""
+                : void 0,
+              _.localized_media_description &&
+              _.localized_media_description.length > 0
+                ? _.localized_media_description[_] ||
+                  _.localized_media_description[_] ||
+                  ""
+                : void 0,
+              _.eTitleDisplaySize,
+              _.title_alignment,
+              _.subtitle_alignment,
+              _.description_alignment,
+              _.media_horizontal_alignment,
+              _.media_vertical_alignment,
+              _.is_title_as_image &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
+                ? _.title_media.localized_media[_] ||
+                  _.title_media.localized_media[_] ||
+                  {}
+                : void 0,
+              _.is_title_as_image &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
+                ? _.title_media.media_type
+                : void 0,
+              _.is_title_as_image &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
+                ? _.title_media.media_vertical_alignment
+                : void 0,
+              _.is_title_as_image &&
+              _.title_media &&
+              _.title_media.localized_media &&
+              _.title_media.localized_media.length > 0
+                ? _.title_media.media_horizontal_alignment
+                : void 0,
+              _.trailer_appid,
+              _.trailer_base_id,
+              _.trailer_display,
+              _?.localized_alt_text?.[_] || _?.localized_alt_text?.[_],
+              _?.title_media?.localized_alt_text?.[_] ||
+                _?.title_media?.localized_alt_text?.[_],
+              _?.titlesubdesc_vertical_align,
+              _?.title_media?.optional_url,
+              _?.optional_url,
+            ];
+          });
         return _.createElement(_, {
           displayOrder: _,
           event: _,
@@ -31988,6 +32090,8 @@
           trailer_base_id: _,
           trailer_display: _,
           altText: _ || "",
+          titleOptionalURL: _,
+          mediaOptionalURL: _,
         });
       }
       function _(_) {
@@ -32097,7 +32201,8 @@
       function _(_) {
         const {
           media: _,
-          mediaType: __webpack_require__,
+          mediaOptionalURL: __webpack_require__,
+          mediaType: _,
           mediaHAlign: _,
           mediaVAlign: _,
           event: _,
@@ -32129,13 +32234,14 @@
             },
             _.createElement(_, {
               media: _,
-              mediaType: __webpack_require__,
+              mediaType: _,
               trailer_appid: _,
               trailer_base_id: _,
               trailer_display: _,
               clanAccountID: _.clanSteamID.GetAccountID(),
               setImageSize: _,
               altText: _,
+              optionalURL: __webpack_require__,
             }),
           ),
           _.createElement(_, {
@@ -32147,6 +32253,7 @@
         const {
           media: _,
           mediaType: __webpack_require__,
+          mediaOptionalURL: _,
           mediaHAlign: _,
           mediaVAlign: _,
           event: _,
@@ -32188,6 +32295,7 @@
               clanAccountID: _.clanSteamID.GetAccountID(),
               setImageSize: _,
               altText: _,
+              optionalURL: _,
             }),
           ),
         );
@@ -32207,6 +32315,7 @@
           titleVAlign: _,
           titleMediaScale: _,
           titleAltText: _,
+          titleOptionalURL: _,
         } = _;
         return _
           ? _.createElement(
@@ -32220,6 +32329,7 @@
                 mediaScale: _,
                 clanAccountID: _.clanSteamID.GetAccountID(),
                 altText: _,
+                optionalURL: _,
               }),
             )
           : _.createElement(
@@ -32443,7 +32553,7 @@
       function _(_) {
         const { event: _, language: __webpack_require__, titleSubDesc: _ } = _,
           _ = _._.GetELanguageFallback(__webpack_require__),
-          [_, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.localized_media_title?.length > 0
               ? _.localized_media_title[__webpack_require__] ||
                 _.localized_media_title[_] ||
@@ -32473,6 +32583,7 @@
               : void 0,
             _?.title_media?.localized_alt_text?.[__webpack_require__] ||
               _?.title_media?.localized_alt_text?.[_],
+            _?.title_media?.optional_url,
           ]);
         return _.createElement(_, {
           event: _,
@@ -32487,6 +32598,7 @@
           titleVAlign: _,
           titleHAlign: _,
           titleAltText: _,
+          titleOptionalURL: _,
         });
       }
       function _(_) {

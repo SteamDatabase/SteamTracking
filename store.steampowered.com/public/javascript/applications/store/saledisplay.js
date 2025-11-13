@@ -5411,7 +5411,9 @@
               string: (0, d.we)("#Loading"),
             }),
           );
-        const S = _.visibility_state !== o.zv.k_EEventStateVisible;
+        const S =
+          _.visibility_state !== o.zv.k_EEventStateVisible &&
+          _.visibility_state !== o.zv.k_EEventStateUnlisted;
         return n.createElement(
           l.u,
           { navID: "StoreSalePageRoot" },

@@ -22280,13 +22280,14 @@
       function _(_) {
         const { localizedMedia: _, fnOnDirty: __webpack_require__ } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _._)(() => {
+          [_, _, _] = (0, _._)(() => {
             var _;
             return [
               _.media_type,
               (null === (_ = _.localized_alt_text) || void 0 === _
                 ? void 0
                 : _[_]) || "",
+              _.optional_url || "",
             ];
           });
         return _.createElement(
@@ -22306,6 +22307,22 @@
                 _.createElement(_._, {
                   fnOnDirty: __webpack_require__,
                   localizedMedia: _,
+                }),
+                _.createElement(_._, {
+                  type: "url",
+                  label: (0, _._)("#Template_Section_OptionalURL"),
+                  tooltip: (0, _._)("#Template_Section_OptionalURL_ttip"),
+                  value: _,
+                  bShowClearAction: !0,
+                  bShowCopyAction: !0,
+                  placeholder: (0, _._)(
+                    "#Template_Section_OptionalURL_placeholder",
+                  ),
+                  onChange: (_) => {
+                    _.optional_url != _.currentTarget.value &&
+                      ((_.optional_url = _.currentTarget.value),
+                      __webpack_require__());
+                  },
                 }),
                 _.createElement(_._, {
                   type: "text",
@@ -35465,7 +35482,29 @@
           _.only_facets)
         ) {
           const _ = new Map(
-              _.only_facets.map((_) => [_.loc_token, _.only_values]),
+              _.only_facets.map((_) => {
+                var _;
+                return [
+                  _.loc_token,
+                  null === (_ = _.only_values) || void 0 === _
+                    ? void 0
+                    : _.map((_) => {
+                        var _, _;
+                        return {
+                          value: _,
+                          selected:
+                            null !==
+                              (_ =
+                                null === (_ = _.initially_selected_values) ||
+                                void 0 === _
+                                  ? void 0
+                                  : __webpack_require__.includes(_)) &&
+                            void 0 !== _ &&
+                            _,
+                        };
+                      }),
+                ];
+              }),
             ),
             _ = _._(
               _.map((_) => {
@@ -35480,9 +35519,18 @@
             );
           for (const _ of _)
             if (_.values) {
-              const _ = new Set(_.values);
+              const _ = new Set(_.values.map((_) => _.value));
               _.facet.facetValues = _.facet.facetValues.filter((_) =>
                 _.name.some((_) => _.has(_)),
+              );
+              const _ = new Set(
+                _.values.filter((_) => _.selected).map((_) => _.value),
+              );
+              _.facet.facetValues.forEach(
+                (_) =>
+                  (_.bEnabledByDefault = _.name.some((_) =>
+                    __webpack_require__.has(_),
+                  )),
               );
             }
           _ = _.map((_) => _.facet);
@@ -37894,11 +37942,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        var _;
-        const { saleEvent: __webpack_require__, curatorList: _ } = _,
-          { creatorHome: _ } = (0, _._)(
-            __webpack_require__.clanSteamID.GetAccountID(),
-          ),
+        var _, _;
+        const { saleEvent: _, curatorList: _ } = _,
+          { creatorHome: _ } = (0, _._)(_.clanSteamID.GetAccountID()),
           _ = null == _ ? void 0 : _.GetCreatorHomeURL(null),
           _ = _ ? `${_}list/${_.listid()}` : void 0,
           _ =
@@ -37910,7 +37956,9 @@
             include_assets: !0,
           }),
           _ = null == _ ? void 0 : _.GetScreenshots(!0)[0],
-          _ = null == _ ? void 0 : _.GetAssets().GetLibraryHeroURL();
+          _ = null == _ ? void 0 : _.GetAssets().GetLibraryHeroURL(),
+          _ = _._.GetListtileImage(_.listid()),
+          _ = null !== (_ = null != _ ? _ : _) && void 0 !== _ ? _ : _;
         return _.createElement(
           _._,
           {
@@ -37932,13 +37980,13 @@
             _.createElement("div", {
               className: _()(_.BackgroundBlur, _.BackgroundAbsolute),
               style: {
-                backgroundImage: `url("${_ || _}")`,
+                backgroundImage: `url("${_}")`,
               },
             }),
             _.createElement("div", {
               className: _()(_.BackgroundImage, _.BackgroundAbsolute),
               style: {
-                backgroundImage: `url("${_ || _}")`,
+                backgroundImage: `url("${_}")`,
               },
             }),
             _.createElement(

@@ -2758,6 +2758,7 @@
                     "#AppTypeLabel_demo",
                     "#AppTypeLabel_music",
                   ],
+                  initially_selected_values: ["#AppTypeLabel_game"],
                 },
               ],
             },

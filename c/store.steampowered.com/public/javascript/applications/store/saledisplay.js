@@ -6222,7 +6222,9 @@
               string: (0, _._)("#Loading"),
             }),
           );
-        const _ = _.visibility_state !== _._.k_EEventStateVisible;
+        const _ =
+          _.visibility_state !== _._.k_EEventStateVisible &&
+          _.visibility_state !== _._.k_EEventStateUnlisted;
         return _.createElement(
           _._,
           {

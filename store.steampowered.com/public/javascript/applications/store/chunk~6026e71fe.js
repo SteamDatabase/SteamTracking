@@ -4957,7 +4957,13 @@
           e.only_facets)
         ) {
           const a = new Map(
-              e.only_facets.map((e) => [e.loc_token, e.only_values]),
+              e.only_facets.map((e) => [
+                e.loc_token,
+                e.only_values?.map((t) => ({
+                  value: t,
+                  selected: e.initially_selected_values?.includes(t) ?? !1,
+                })),
+              ]),
             ),
             n = u.Nv(
               t.map((e) => {
@@ -4967,9 +4973,15 @@
             );
           for (const e of n)
             if (e.values) {
-              const t = new Set(e.values);
+              const t = new Set(e.values.map((e) => e.value));
               e.facet.facetValues = e.facet.facetValues.filter((e) =>
                 e.name.some((e) => t.has(e)),
+              );
+              const a = new Set(
+                e.values.filter((e) => e.selected).map((e) => e.value),
+              );
+              e.facet.facetValues.forEach(
+                (e) => (e.bEnabledByDefault = e.name.some((e) => a.has(e))),
               );
             }
           t = n.map((e) => e.facet);
@@ -10824,7 +10836,8 @@
           o = a.apps()[0]?.recommended_app().appid(),
           [l] = (0, M.t7)(o, { include_screenshots: !0, include_assets: !0 }),
           c = l?.GetScreenshots(!0)[0],
-          m = l?.GetAssets().GetLibraryHeroURL();
+          m = l?.GetAssets().GetLibraryHeroURL(),
+          u = F.R7.GetListtileImage(a.listid()) ?? m ?? c;
         return n.createElement(
           O.e7,
           { condition: !!i, wrap: (e) => n.createElement("a", { href: i }, e) },
@@ -10833,11 +10846,11 @@
             { className: L.ItemCtn },
             n.createElement("div", {
               className: R()(L.BackgroundBlur, L.BackgroundAbsolute),
-              style: { backgroundImage: `url("${m || c}")` },
+              style: { backgroundImage: `url("${u}")` },
             }),
             n.createElement("div", {
               className: R()(L.BackgroundImage, L.BackgroundAbsolute),
-              style: { backgroundImage: `url("${m || c}")` },
+              style: { backgroundImage: `url("${u}")` },
             }),
             n.createElement("div", { className: L.Title }, a.title()),
           ),
@@ -12037,7 +12050,7 @@
         const n = (function (e, t, a) {
           const n = 1 == a || 3 == a || 4 == a,
             l = () => {
-              const t = s.zt.GetListTitle(e.smart_section_creator_listid);
+              const t = s.R7.GetListTitle(e.smart_section_creator_listid);
               return t
                 ? n
                   ? (0, i.we)("#Sale_CreatorList_Section_Editor_title", t)
@@ -12177,7 +12190,7 @@
                   : null;
               case "creator_list":
                 return (
-                  s.zt.GetListSubtitle(e.smart_section_creator_listid) ?? null
+                  s.R7.GetListSubtitle(e.smart_section_creator_listid) ?? null
                 );
             }
           return null;
@@ -12473,10 +12486,11 @@
       function I(e) {
         return "sub" !== e.type && "bundle" !== e.type;
       }
-      function A(e, t, a) {
+      async function A(e, t, a) {
         const n = new Set(t.GetTabAppIDs());
-        return (
-          e
+        if (
+          (e
+            .GetSaleSections()
             .filter((e) => (0, s.ye)(e.section_type))
             .forEach((e) => {
               t.ShouldShowSection(e) &&
@@ -12493,8 +12507,14 @@
               (t.BIsTabFilteringEnabled() && !t.ShouldShowCapsule(a)) ||
               n.add(a.id);
           }),
-          n
-        );
+          36 == e.GetEventType())
+        ) {
+          const t = await S.L.fetchQuery(
+            (0, f.A2)(e.clanSteamID.GetAccountID()),
+          );
+          t?.GetAppIDList().forEach((e) => n.add(e));
+        }
+        return n;
       }
       function T(e) {
         const { event: t, section: a } = e,
@@ -13717,7 +13737,7 @@
     },
     50832: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => Al });
+      a.d(t, { H: () => Tl });
       var n = a(90626),
         r = a(57876),
         s = a(77516),
@@ -16310,43 +16330,42 @@
               highlightedFacetColor: a,
               linkColor: r,
               facetValue: i,
-              facetFilterState: o,
-              styleOverrides: l,
-              fnOnUpdateFilter: c,
-              showMatchCounts: m,
+              styleOverrides: o,
+              fnOnUpdateFilter: l,
+              showMatchCounts: c,
             } = e,
-            u = Re(i.facetValue, t);
+            m = Re(i.facetValue, t);
           if (i.facetValue.type === s.GE.k_EPrice && 0 == Ae().length)
             return null;
           if (i.bHiddenBySearch) return null;
-          const d = i.bEnabled,
-            _ = i.bDeactivated,
-            p = {
+          const u = i.bEnabled,
+            d = i.bDeactivated,
+            _ = {
               color: a || "darkorange",
               borderLeft: "4px solid " + (a || "darkorange"),
             };
-          let g, h;
-          l?.facetValue || (g = d ? p : {}),
-            l?.facetValueName || (h = { color: r || "white" });
-          const S = (e) => {
+          let p, g;
+          o?.facetValue || (p = u ? _ : {}),
+            o?.facetValueName || (g = { color: r || "white" });
+          const h = (e) => {
               e.preventDefault(),
                 (0, ve.h5)(() => {
-                  _ || ((i.bEnabled = !i.bEnabled), c());
+                  d || ((i.bEnabled = !i.bEnabled), l());
                 });
             },
-            f = (e) => {
+            S = (e) => {
               (0, ve.h5)(() => {
                 i.nPriceStopIndex = Math.floor(e);
               });
             },
-            v = () => {
+            f = () => {
               (0, ve.h5)(() => {
                 (i.bEnabled = Boolean(i.nPriceStopIndex !== Ae().length - 1)),
-                  c();
+                  l();
               });
             },
-            E = u,
-            y = Boolean(i.facetValue.subtitle)
+            v = m,
+            E = Boolean(i.facetValue.subtitle)
               ? D.NT.GetWithFallback(i.facetValue.subtitle, t)
               : null;
           if (i.facetValue.type === s.GE.k_EPrice) {
@@ -16360,36 +16379,36 @@
               max: Ae().length - 1,
               value: e,
               label: Ae()[e].label,
-              onChange: f,
-              onChangeComplete: v,
+              onChange: S,
+              onChangeComplete: f,
             });
           }
           {
-            const e = l?.facetValue || Be.FacetValue,
-              t = l?.facetValueEnabled || Be.FacetValueEnabled,
-              a = l?.facetValueDeactivated || Be.FacetValueDeactivated,
-              r = l?.facetValueName || Be.FacetValueName;
+            const e = o?.facetValue || Be.FacetValue,
+              t = o?.facetValueEnabled || Be.FacetValueEnabled,
+              a = o?.facetValueDeactivated || Be.FacetValueDeactivated,
+              r = o?.facetValueName || Be.FacetValueName;
             return n.createElement(
               "div",
-              { className: d ? t : _ ? a : e, style: g },
+              { className: u ? t : d ? a : e, style: p },
               n.createElement(
                 "a",
-                { className: r, style: h, onClick: S, href: "" },
-                E,
+                { className: r, style: g, onClick: h, href: "" },
+                v,
               ),
-              m &&
+              c &&
                 !i.bDeactivated &&
                 Boolean(i.nMatchingFilteredCapsules) &&
                 n.createElement(
                   "div",
-                  { className: l?.facetValueDesc || Be.FacetValueDescription },
+                  { className: o?.facetValueDesc || Be.FacetValueDescription },
                   i.nMatchingFilteredCapsules,
                 ),
-              Boolean(y) &&
+              Boolean(E) &&
                 n.createElement(
                   "div",
-                  { className: l?.facetValueDesc || Be.FacetValueDescription },
-                  y,
+                  { className: o?.facetValueDesc || Be.FacetValueDescription },
+                  E,
                 ),
             );
           }
@@ -17984,11 +18003,7 @@
                     default:
                       return { capsules: [], bMoreRemaining: !1 };
                   }
-                const e = (0, ca.SN)(
-                    a.GetSaleSections(),
-                    t,
-                    a.GetTaggedItems(),
-                  ),
+                const e = await (0, ca.SN)(a, t, a.GetTaggedItems()),
                   n = new Array();
                 let r = [];
                 switch (d) {
@@ -22045,7 +22060,14 @@
             m = [];
           for (let n = l; n <= c; ++n)
             m.push(this.GetItems(e, t, a, n * Nr, Nr, s, i, o));
-          const u = await Promise.all(m);
+          let u = await Promise.all(m);
+          if (((u = Tt.Nv(u)), !u.length))
+            return {
+              rgItems: [],
+              nMatchCount: 0,
+              bMoreAvailable: !1,
+              nNextSolrIndex: 0,
+            };
           let d = { ...u[u.length - 1], rgItems: [] },
             _ = [];
           for (const e of u) _ = _.concat(e.rgItems);
@@ -27742,6 +27764,11 @@
         Ko = a(78468),
         Yo = a.n(Ko);
       function Jo(e) {
+        return e.href
+          ? n.createElement(Ei.d$, { ...e }, e.children)
+          : n.createElement("div", { ...e }, e.children);
+      }
+      function Xo(e) {
         const { media: t, mediaType: a, setImageSize: r, maxWidthPx: s } = e,
           i = n.useCallback(
             (e) => {
@@ -27756,27 +27783,27 @@
           ),
           o = { ...(s ? { maxWidth: `${s}px` } : {}) };
         return a == vo.k_MediaTrailer
-          ? n.createElement(Zo, {
+          ? n.createElement($o, {
               ...e,
               containerStyle: o,
               fnResizeObserver: i,
             })
           : t.video_webm_src
-            ? n.createElement($o, {
+            ? n.createElement(el, {
                 ...e,
                 containerStyle: o,
                 fnResizeObserver: i,
               })
-            : n.createElement(el, {
+            : n.createElement(tl, {
                 ...e,
                 containerStyle: o,
                 fnResizeObserver: i,
               });
       }
-      const Xo = { include_trailers: !0, include_assets: !0 };
-      function Zo(e) {
+      const Zo = { include_trailers: !0, include_assets: !0 };
+      function $o(e) {
         const { trailer_display: t, trailer_appid: a, trailer_base_id: r } = e,
-          [s, i] = (0, o.t7)(a, Xo),
+          [s, i] = (0, o.t7)(a, Zo),
           [l, c] = (0, n.useState)(!1),
           [m, u] = (0, n.useMemo)(() => {
             let e = {},
@@ -27795,9 +27822,9 @@
               n.Fragment,
               null,
               (t == Co.k_EDisplayScreenshot || !t) &&
-                n.createElement(el, { ...e, media: m, onClick: () => c(!0) }),
+                n.createElement(tl, { ...e, media: m, onClick: () => c(!0) }),
               t == Co.k_EDisplayMicrotrailer &&
-                n.createElement($o, { ...e, media: u, onClick: () => c(!0) }),
+                n.createElement(el, { ...e, media: u, onClick: () => c(!0) }),
               n.createElement(ti.PE, {
                 storeItem: s,
                 bShowModal: l,
@@ -27806,7 +27833,7 @@
             )
           : null;
       }
-      function $o(e) {
+      function el(e) {
         const {
             media: t,
             clanAccountID: a,
@@ -27816,27 +27843,32 @@
             maxWidthPx: o,
             onClick: l,
             altText: c,
+            optionalURL: m,
           } = e,
-          m = (0, Ct.wY)(s),
-          u = { ...(o ? { maxWidth: `${o}px` } : {}) },
-          d = [];
+          u = (0, Ct.wY)(s),
+          d = { ...(o ? { maxWidth: `${o}px` } : {}) },
+          _ = [];
         return (
           t.video_webm_src &&
-            d.push({
+            _.push({
               sURL: (0, Qo.F)(a, t.video_webm_src),
               sFormat: "video/webm",
             }),
           t.video_mp4_src &&
-            d.push({
+            _.push({
               sURL: (0, Qo.F)(a, t.video_mp4_src),
               sFormat: "video/mp4",
             }),
           n.createElement(
-            "div",
-            { className: (0, v.A)(Yo().Ctn, i), style: u },
+            Jo,
+            {
+              href: l ? void 0 : m,
+              className: (0, v.A)(Yo().Ctn, i),
+              style: d,
+            },
             n.createElement(ra.L, {
-              ref: m,
-              video: { sPoster: (0, Qo.F)(a, t.image), rgVideoSources: d },
+              ref: u,
+              video: { sPoster: (0, Qo.F)(a, t.image), rgVideoSources: _ },
               bAutoPlay: !0,
               bControls: !1,
               bLoop: !0,
@@ -27853,7 +27885,7 @@
           )
         );
       }
-      function el(e) {
+      function tl(e) {
         const {
             media: t,
             clanAccountID: a,
@@ -27862,29 +27894,34 @@
             containerStyle: i,
             fnResizeObserver: o,
             altText: l,
+            optionalURL: c,
           } = e,
-          c = (0, n.useRef)(null),
-          [m, u] = (0, n.useState)(null),
-          d = n.useCallback(() => {
-            if (c.current && c.current.complete) {
-              const { naturalWidth: e, naturalHeight: t } = c.current;
-              u({ width: e, height: t });
+          m = (0, n.useRef)(null),
+          [u, d] = (0, n.useState)(null),
+          _ = n.useCallback(() => {
+            if (m.current && m.current.complete) {
+              const { naturalWidth: e, naturalHeight: t } = m.current;
+              d({ width: e, height: t });
             }
           }, []);
-        (0, n.useEffect)(d, [d]);
-        const _ = (0, Ct.wY)(o),
-          p = (0, Ct.Ue)(c, _);
+        (0, n.useEffect)(_, [_]);
+        const p = (0, Ct.wY)(o),
+          g = (0, Ct.Ue)(m, p);
         return t.image && 0 !== t.image.trim().length
           ? n.createElement(
-              "div",
-              { className: (0, v.A)(Yo().Ctn, s), style: i },
+              Jo,
+              {
+                className: (0, v.A)(Yo().Ctn, s),
+                style: i,
+                href: r ? void 0 : c,
+              },
               n.createElement("img", {
                 className: (0, v.A)(Yo().Image),
-                ref: p,
-                onLoad: d,
+                ref: g,
+                onLoad: _,
                 src: (0, Qo.F)(a, t.image),
                 alt: l,
-                style: { maxWidth: m ? `${m.width}px` : "100%" },
+                style: { maxWidth: u ? `${u.width}px` : "100%" },
               }),
               r &&
                 n.createElement(
@@ -27895,9 +27932,9 @@
             )
           : null;
       }
-      var tl = a(67634),
-        al = a.n(tl);
-      function nl(e) {
+      var al = a(67634),
+        nl = a.n(al);
+      function rl(e) {
         const { event: t, section: a, language: r } = e,
           s = (0, E.Qn)(),
           i = Uo() && Boolean(a.media_overlay_mobile_content_varient),
@@ -27924,7 +27961,7 @@
               className: (0, v.A)(
                 u.SaleSection,
                 c().SaleSectionCtn,
-                al().Container,
+                nl().Container,
                 "TemplateMediaOverlay",
                 e.className,
               ),
@@ -27932,8 +27969,8 @@
             },
             n.createElement(zo, { section: a, event: t, language: r }),
             i
-              ? n.createElement(il, { ...e, row: o })
-              : n.createElement(rl, {
+              ? n.createElement(ol, { ...e, row: o })
+              : n.createElement(sl, {
                   media_overlay: i
                     ? (a.media_overlay_mobile_content_varient ??
                       a.media_overlay)
@@ -27945,84 +27982,108 @@
           ),
         );
       }
-      function rl(e) {
+      function sl(e) {
         const { media_overlay: t, language: a, event: r, section: s } = e,
-          [i, o, l, c, m, u, d, _, p, g, h, S, f, E, y, b, C, w, I, A, T, B] =
-            (0, ye.q3)(() => {
-              const e = D.A0.GetELanguageFallback(a);
-              return [
-                (t && t?.text_placement) || wo.k_TopLeft,
-                t?.media_type,
-                t && t.localized_media && t.localized_media.length > 0
-                  ? t?.localized_media[a] || t?.localized_media[e] || {}
-                  : void 0,
-                t &&
-                t.localized_media_title &&
-                t.localized_media_title.length > 0
-                  ? t?.localized_media_title[a] ||
-                    t?.localized_media_title[e] ||
-                    ""
-                  : void 0,
-                t &&
-                t.localized_media_subtitle &&
-                t.localized_media_subtitle.length > 0
-                  ? t?.localized_media_subtitle[a] ||
-                    t?.localized_media_subtitle[e] ||
-                    ""
-                  : void 0,
-                t &&
-                t.localized_media_description &&
-                t.localized_media_description.length > 0
-                  ? t?.localized_media_description[a] ||
-                    t?.localized_media_description[e] ||
-                    ""
-                  : void 0,
-                t?.eTitleDisplaySize,
-                t?.title_alignment,
-                t?.subtitle_alignment,
-                t?.description_alignment,
-                t?.is_title_as_image &&
-                t &&
-                t.title_media &&
-                t.title_media.localized_media &&
-                t.title_media.localized_media.length > 0
-                  ? t?.title_media.localized_media[a] ||
-                    t?.title_media.localized_media[e] ||
-                    {}
-                  : void 0,
-                t?.is_title_as_image &&
-                t &&
-                t.title_media &&
-                t.title_media.localized_media &&
-                t.title_media.localized_media.length > 0
-                  ? t?.title_media.media_type
-                  : void 0,
-                t?.is_title_as_image &&
-                t &&
-                t.title_media &&
-                t.title_media.localized_media &&
-                t.title_media.localized_media.length > 0
-                  ? t?.title_media.media_vertical_alignment
-                  : void 0,
-                t?.is_title_as_image &&
-                t &&
-                t.title_media &&
-                t.title_media.localized_media &&
-                t.title_media.localized_media.length > 0
-                  ? t?.title_media.media_horizontal_alignment
-                  : void 0,
-                t?.eDescriptionDisplaySize,
-                t?.title_media?.media_scale,
-                t?.text_scale,
-                t?.trailer_appid,
-                t?.trailer_base_id,
-                t?.trailer_display,
-                t?.localized_alt_text?.[a] || t?.localized_alt_text?.[e],
-                t?.title_media?.localized_alt_text?.[a] ||
-                  t?.title_media?.localized_alt_text?.[e],
-              ];
-            });
-        let G;
+          [
+            i,
+            o,
+            l,
+            c,
+            m,
+            u,
+            d,
+            _,
+            p,
+            g,
+            h,
+            S,
+            f,
+            E,
+            y,
+            b,
+            C,
+            w,
+            I,
+            A,
+            T,
+            B,
+            G,
+            k,
+          ] = (0, ye.q3)(() => {
+            const e = D.A0.GetELanguageFallback(a);
+            return [
+              (t && t?.text_placement) || wo.k_TopLeft,
+              t?.media_type,
+              t && t.localized_media && t.localized_media.length > 0
+                ? t?.localized_media[a] || t?.localized_media[e] || {}
+                : void 0,
+              t && t.localized_media_title && t.localized_media_title.length > 0
+                ? t?.localized_media_title[a] ||
+                  t?.localized_media_title[e] ||
+                  ""
+                : void 0,
+              t &&
+              t.localized_media_subtitle &&
+              t.localized_media_subtitle.length > 0
+                ? t?.localized_media_subtitle[a] ||
+                  t?.localized_media_subtitle[e] ||
+                  ""
+                : void 0,
+              t &&
+              t.localized_media_description &&
+              t.localized_media_description.length > 0
+                ? t?.localized_media_description[a] ||
+                  t?.localized_media_description[e] ||
+                  ""
+                : void 0,
+              t?.eTitleDisplaySize,
+              t?.title_alignment,
+              t?.subtitle_alignment,
+              t?.description_alignment,
+              t?.is_title_as_image &&
+              t &&
+              t.title_media &&
+              t.title_media.localized_media &&
+              t.title_media.localized_media.length > 0
+                ? t?.title_media.localized_media[a] ||
+                  t?.title_media.localized_media[e] ||
+                  {}
+                : void 0,
+              t?.is_title_as_image &&
+              t &&
+              t.title_media &&
+              t.title_media.localized_media &&
+              t.title_media.localized_media.length > 0
+                ? t?.title_media.media_type
+                : void 0,
+              t?.is_title_as_image &&
+              t &&
+              t.title_media &&
+              t.title_media.localized_media &&
+              t.title_media.localized_media.length > 0
+                ? t?.title_media.media_vertical_alignment
+                : void 0,
+              t?.is_title_as_image &&
+              t &&
+              t.title_media &&
+              t.title_media.localized_media &&
+              t.title_media.localized_media.length > 0
+                ? t?.title_media.media_horizontal_alignment
+                : void 0,
+              t?.eDescriptionDisplaySize,
+              t?.title_media?.media_scale,
+              t?.text_scale,
+              t?.trailer_appid,
+              t?.trailer_base_id,
+              t?.trailer_display,
+              t?.localized_alt_text?.[a] || t?.localized_alt_text?.[e],
+              t?.title_media?.localized_alt_text?.[a] ||
+                t?.title_media?.localized_alt_text?.[e],
+              t?.optional_url,
+              t?.title_media?.optional_url,
+            ];
+          });
+        let N;
         if (C) {
           let e = bo.k_Left;
           if (i)
@@ -28042,29 +28103,29 @@
               case wo.k_BottomCenter:
                 e = bo.k_Center;
             }
-          G = xo(C, e);
+          N = xo(C, e);
         }
         return n.createElement(
           "div",
-          { className: (0, v.A)(al().MediaOverlayCtn, e.className) },
+          { className: (0, v.A)(nl().MediaOverlayCtn, e.className) },
           n.createElement(
             "div",
             {
               className: (0, v.A)({
-                [al().TopLeft]: !i || i == wo.k_TopLeft,
-                [al().TopCenter]: i == wo.k_TopCenter,
-                [al().TopRight]: i == wo.k_TopRight,
-                [al().LeftCenter]: i == wo.k_LeftCenter,
-                [al().Center]: i == wo.k_Center,
-                [al().RightCenter]: i == wo.k_RightCenter,
-                [al().BottomLeft]: i == wo.k_BottomLeft,
-                [al().BottomCenter]: i == wo.k_BottomCenter,
-                [al().BottomRight]: i == wo.k_BottomRight,
-                [al().TextSectionScaling]: !0,
+                [nl().TopLeft]: !i || i == wo.k_TopLeft,
+                [nl().TopCenter]: i == wo.k_TopCenter,
+                [nl().TopRight]: i == wo.k_TopRight,
+                [nl().LeftCenter]: i == wo.k_LeftCenter,
+                [nl().Center]: i == wo.k_Center,
+                [nl().RightCenter]: i == wo.k_RightCenter,
+                [nl().BottomLeft]: i == wo.k_BottomLeft,
+                [nl().BottomCenter]: i == wo.k_BottomCenter,
+                [nl().BottomRight]: i == wo.k_BottomRight,
+                [nl().TextSectionScaling]: !0,
               }),
-              style: G,
+              style: N,
             },
-            n.createElement(dl, {
+            n.createElement(_l, {
               title: c,
               titleAlign: _,
               subtitle: m,
@@ -28082,21 +28143,23 @@
               language: a,
               titleMediaScale: b,
               titleAltText: B,
+              titleOptionalURL: k,
             }),
           ),
-          n.createElement(Jo, {
+          n.createElement(Xo, {
             media: l,
             trailer_appid: w,
             trailer_base_id: I,
             trailer_display: A,
             mediaType: o,
-            className: al().MediaMax,
+            className: nl().MediaMax,
             clanAccountID: r.clanSteamID.GetAccountID(),
             altText: T,
+            optionalURL: G,
           }),
         );
       }
-      function sl(e) {
+      function il(e) {
         const { event: t, section: a, language: r } = e,
           [i, o, l, d, _, p] = (0, ye.q3)(() => [
             a.cap_section_content,
@@ -28118,7 +28181,7 @@
           T = a?.media_container?.media_rows
             ?.filter((e, t) => !I || t < l)
             .map((t, r) =>
-              n.createElement(il, {
+              n.createElement(ol, {
                 key: "templategrid_" + a.unique_id + "_" + r,
                 ...e,
                 mobile_carousel_style: w && b ? p : void 0,
@@ -28180,7 +28243,7 @@
           ),
         );
       }
-      function il(e) {
+      function ol(e) {
         const { section: t, row: a, mobile_carousel_style: r } = e,
           s = Uo(),
           [i, o] = (0, ye.q3)(() => {
@@ -28234,7 +28297,7 @@
             }),
           },
           a.media_columns?.map((a, r) =>
-            n.createElement(ol, {
+            n.createElement(ll, {
               key: "mc_" + t.unique_id + "_" + a.unique_id,
               ...e,
               content: s ? (a.mobile_content_varient ?? a) : a,
@@ -28248,7 +28311,7 @@
           ),
         );
       }
-      function ol(e) {
+      function ll(e) {
         const {
             event: t,
             section: a,
@@ -28261,74 +28324,98 @@
             contentUniqueID: m,
             additionalStyle: u,
           } = e,
-          [d, _, p, g, h, S, f, v, E, y, b, C, w, I, A, T, B, G, k, N, L, F] =
-            (0, ye.q3)(() => {
-              const e = D.A0.GetELanguageFallback(r);
-              return [
-                s.display_order || Eo.k_HorizontalMediaFirst,
-                s.media_type,
-                s.localized_media && s.localized_media.length > 0
-                  ? s.localized_media[r] || s.localized_media[e] || {}
-                  : void 0,
-                s.localized_media_title && s.localized_media_title.length > 0
-                  ? s.localized_media_title[r] ||
-                    s.localized_media_title[e] ||
-                    ""
-                  : void 0,
-                s.localized_media_subtitle &&
-                s.localized_media_subtitle.length > 0
-                  ? s.localized_media_subtitle[r] ||
-                    s.localized_media_subtitle[e] ||
-                    ""
-                  : void 0,
-                s.localized_media_description &&
-                s.localized_media_description.length > 0
-                  ? s.localized_media_description[r] ||
-                    s.localized_media_description[e] ||
-                    ""
-                  : void 0,
-                s.eTitleDisplaySize,
-                s.title_alignment,
-                s.subtitle_alignment,
-                s.description_alignment,
-                s.media_horizontal_alignment,
-                s.media_vertical_alignment,
-                s.is_title_as_image &&
-                s.title_media &&
-                s.title_media.localized_media &&
-                s.title_media.localized_media.length > 0
-                  ? s.title_media.localized_media[r] ||
-                    s.title_media.localized_media[e] ||
-                    {}
-                  : void 0,
-                s.is_title_as_image &&
-                s.title_media &&
-                s.title_media.localized_media &&
-                s.title_media.localized_media.length > 0
-                  ? s.title_media.media_type
-                  : void 0,
-                s.is_title_as_image &&
-                s.title_media &&
-                s.title_media.localized_media &&
-                s.title_media.localized_media.length > 0
-                  ? s.title_media.media_vertical_alignment
-                  : void 0,
-                s.is_title_as_image &&
-                s.title_media &&
-                s.title_media.localized_media &&
-                s.title_media.localized_media.length > 0
-                  ? s.title_media.media_horizontal_alignment
-                  : void 0,
-                s.trailer_appid,
-                s.trailer_base_id,
-                s.trailer_display,
-                s?.localized_alt_text?.[r] || s?.localized_alt_text?.[e],
-                s?.title_media?.localized_alt_text?.[r] ||
-                  s?.title_media?.localized_alt_text?.[e],
-                s?.titlesubdesc_vertical_align,
-              ];
-            });
-        return n.createElement(ll, {
+          [
+            d,
+            _,
+            p,
+            g,
+            h,
+            S,
+            f,
+            v,
+            E,
+            y,
+            b,
+            C,
+            w,
+            I,
+            A,
+            T,
+            B,
+            G,
+            k,
+            N,
+            L,
+            F,
+            P,
+            R,
+          ] = (0, ye.q3)(() => {
+            const e = D.A0.GetELanguageFallback(r);
+            return [
+              s.display_order || Eo.k_HorizontalMediaFirst,
+              s.media_type,
+              s.localized_media && s.localized_media.length > 0
+                ? s.localized_media[r] || s.localized_media[e] || {}
+                : void 0,
+              s.localized_media_title && s.localized_media_title.length > 0
+                ? s.localized_media_title[r] || s.localized_media_title[e] || ""
+                : void 0,
+              s.localized_media_subtitle &&
+              s.localized_media_subtitle.length > 0
+                ? s.localized_media_subtitle[r] ||
+                  s.localized_media_subtitle[e] ||
+                  ""
+                : void 0,
+              s.localized_media_description &&
+              s.localized_media_description.length > 0
+                ? s.localized_media_description[r] ||
+                  s.localized_media_description[e] ||
+                  ""
+                : void 0,
+              s.eTitleDisplaySize,
+              s.title_alignment,
+              s.subtitle_alignment,
+              s.description_alignment,
+              s.media_horizontal_alignment,
+              s.media_vertical_alignment,
+              s.is_title_as_image &&
+              s.title_media &&
+              s.title_media.localized_media &&
+              s.title_media.localized_media.length > 0
+                ? s.title_media.localized_media[r] ||
+                  s.title_media.localized_media[e] ||
+                  {}
+                : void 0,
+              s.is_title_as_image &&
+              s.title_media &&
+              s.title_media.localized_media &&
+              s.title_media.localized_media.length > 0
+                ? s.title_media.media_type
+                : void 0,
+              s.is_title_as_image &&
+              s.title_media &&
+              s.title_media.localized_media &&
+              s.title_media.localized_media.length > 0
+                ? s.title_media.media_vertical_alignment
+                : void 0,
+              s.is_title_as_image &&
+              s.title_media &&
+              s.title_media.localized_media &&
+              s.title_media.localized_media.length > 0
+                ? s.title_media.media_horizontal_alignment
+                : void 0,
+              s.trailer_appid,
+              s.trailer_base_id,
+              s.trailer_display,
+              s?.localized_alt_text?.[r] || s?.localized_alt_text?.[e],
+              s?.title_media?.localized_alt_text?.[r] ||
+                s?.title_media?.localized_alt_text?.[e],
+              s?.titlesubdesc_vertical_align,
+              s?.title_media?.optional_url,
+              s?.optional_url,
+            ];
+          });
+        return n.createElement(cl, {
           displayOrder: d,
           event: t,
           section: a,
@@ -28361,9 +28448,11 @@
           trailer_base_id: G,
           trailer_display: k,
           altText: N || "",
+          titleOptionalURL: P,
+          mediaOptionalURL: R,
         });
       }
-      function ll(e) {
+      function cl(e) {
         const {
             displayOrder: t,
             content: a,
@@ -28431,12 +28520,12 @@
               style: { ...(0, m.vU)(a, d), ...(u ?? {}) },
             },
             t == Eo.k_TitleDescOnly
-              ? n.createElement(dl, { ...e })
+              ? n.createElement(_l, { ...e })
               : n.createElement(
                   n.Fragment,
                   null,
                   t == Eo.k_OverlayMedia
-                    ? n.createElement(rl, {
+                    ? n.createElement(sl, {
                         ...e,
                         className: jo().GridTemplateOverlay,
                         media_overlay: a,
@@ -28445,13 +28534,13 @@
                         n.Fragment,
                         null,
                         f &&
-                          n.createElement(cl, {
+                          n.createElement(ml, {
                             ...e,
                             mediaHeight: l,
                             setImageSize: b,
                           }),
                         !f &&
-                          n.createElement(ml, {
+                          n.createElement(ul, {
                             ...e,
                             mediaHeight: c,
                             setImageSize: b,
@@ -28461,97 +28550,101 @@
           )
         );
       }
-      function cl(e) {
-        const {
-          media: t,
-          mediaType: a,
-          mediaHAlign: r,
-          mediaVAlign: s,
-          event: i,
-          mediaHeight: o,
-          setImageSize: l,
-          trailer_appid: c,
-          trailer_base_id: m,
-          trailer_display: u,
-          altText: d,
-        } = e;
-        return n.createElement(
-          n.Fragment,
-          null,
-          n.createElement(
-            "div",
-            {
-              className: (0, v.A)({
-                [jo().Media]: !0,
-                [jo().HorizLeft]: r == bo.k_Left,
-                [jo().HorizCenter]: !r || r == bo.k_Center,
-                [jo().HorizRight]: r == bo.k_Right,
-                [jo().VertTop]: s == bo.k_Top,
-                [jo().VertCenter]: !s || s == bo.k_Center,
-                [jo().VertBottom]: s == bo.k_Bottom,
-              }),
-              style: { height: o },
-            },
-            n.createElement(Jo, {
-              media: t,
-              mediaType: a,
-              trailer_appid: c,
-              trailer_base_id: m,
-              trailer_display: u,
-              clanAccountID: i.clanSteamID.GetAccountID(),
-              setImageSize: l,
-              altText: d,
-            }),
-          ),
-          n.createElement(dl, { ...e }),
-        );
-      }
       function ml(e) {
         const {
           media: t,
-          mediaType: a,
-          mediaHAlign: r,
-          mediaVAlign: s,
-          event: i,
-          mediaHeight: o,
-          setImageSize: l,
-          trailer_appid: c,
-          trailer_base_id: m,
-          trailer_display: u,
-          altText: d,
+          mediaOptionalURL: a,
+          mediaType: r,
+          mediaHAlign: s,
+          mediaVAlign: i,
+          event: o,
+          mediaHeight: l,
+          setImageSize: c,
+          trailer_appid: m,
+          trailer_base_id: u,
+          trailer_display: d,
+          altText: _,
         } = e;
         return n.createElement(
           n.Fragment,
           null,
-          n.createElement(dl, { ...e }),
           n.createElement(
             "div",
             {
               className: (0, v.A)({
                 [jo().Media]: !0,
-                [jo().HorizLeft]: r == bo.k_Left,
-                [jo().HorizCenter]: !r || r == bo.k_Center,
-                [jo().HorizRight]: r == bo.k_Right,
-                [jo().VertTop]: s == bo.k_Top,
-                [jo().VertCenter]: !s || s == bo.k_Center,
-                [jo().VertBottom]: s == bo.k_Bottom,
+                [jo().HorizLeft]: s == bo.k_Left,
+                [jo().HorizCenter]: !s || s == bo.k_Center,
+                [jo().HorizRight]: s == bo.k_Right,
+                [jo().VertTop]: i == bo.k_Top,
+                [jo().VertCenter]: !i || i == bo.k_Center,
+                [jo().VertBottom]: i == bo.k_Bottom,
               }),
-              style: { height: o },
+              style: { height: l },
             },
-            n.createElement(Jo, {
+            n.createElement(Xo, {
+              media: t,
+              mediaType: r,
+              trailer_appid: m,
+              trailer_base_id: u,
+              trailer_display: d,
+              clanAccountID: o.clanSteamID.GetAccountID(),
+              setImageSize: c,
+              altText: _,
+              optionalURL: a,
+            }),
+          ),
+          n.createElement(_l, { ...e }),
+        );
+      }
+      function ul(e) {
+        const {
+          media: t,
+          mediaType: a,
+          mediaOptionalURL: r,
+          mediaHAlign: s,
+          mediaVAlign: i,
+          event: o,
+          mediaHeight: l,
+          setImageSize: c,
+          trailer_appid: m,
+          trailer_base_id: u,
+          trailer_display: d,
+          altText: _,
+        } = e;
+        return n.createElement(
+          n.Fragment,
+          null,
+          n.createElement(_l, { ...e }),
+          n.createElement(
+            "div",
+            {
+              className: (0, v.A)({
+                [jo().Media]: !0,
+                [jo().HorizLeft]: s == bo.k_Left,
+                [jo().HorizCenter]: !s || s == bo.k_Center,
+                [jo().HorizRight]: s == bo.k_Right,
+                [jo().VertTop]: i == bo.k_Top,
+                [jo().VertCenter]: !i || i == bo.k_Center,
+                [jo().VertBottom]: i == bo.k_Bottom,
+              }),
+              style: { height: l },
+            },
+            n.createElement(Xo, {
               media: t,
               mediaType: a,
-              trailer_appid: c,
-              trailer_base_id: m,
-              trailer_display: u,
-              clanAccountID: i.clanSteamID.GetAccountID(),
-              setImageSize: l,
-              altText: d,
+              trailer_appid: m,
+              trailer_base_id: u,
+              trailer_display: d,
+              clanAccountID: o.clanSteamID.GetAccountID(),
+              setImageSize: c,
+              altText: _,
+              optionalURL: r,
             }),
           ),
         );
       }
-      function ul(e) {
+      function dl(e) {
         const {
           title: t,
           subtitle: a,
@@ -28566,23 +28659,25 @@
           titleVAlign: d,
           titleMediaScale: _,
           titleAltText: p,
+          titleOptionalURL: g,
         } = e;
         return c
           ? n.createElement(
               "div",
               { className: jo().MediaLogo },
-              n.createElement(Jo, {
+              n.createElement(Xo, {
                 media: c,
                 mediaType: m,
                 mediaScale: _,
                 clanAccountID: i.clanSteamID.GetAccountID(),
                 altText: p,
+                optionalURL: g,
               }),
             )
           : n.createElement(
               n.Fragment,
               null,
-              n.createElement(hl, {
+              n.createElement(Sl, {
                 event: i,
                 className: jo().TextFirstTitle,
                 title: t,
@@ -28590,7 +28685,7 @@
                 eTextAlign: s,
                 language: o,
               }),
-              n.createElement(_l, {
+              n.createElement(pl, {
                 event: i,
                 className: jo().TextFirstTitle,
                 subtitle: a,
@@ -28599,7 +28694,7 @@
               }),
             );
       }
-      function dl(e) {
+      function _l(e) {
         const {
           description: t,
           event: a,
@@ -28618,8 +28713,8 @@
               [jo().TitleSubDescVAlignBottom]: o == bo.k_Bottom,
             }),
           },
-          n.createElement(ul, { ...e }),
-          n.createElement(Sl, {
+          n.createElement(dl, { ...e }),
+          n.createElement(fl, {
             event: a,
             description: t,
             eTextAlign: s,
@@ -28628,7 +28723,7 @@
           }),
         );
       }
-      function _l(e) {
+      function pl(e) {
         const {
             event: t,
             subtitle: a,
@@ -28637,7 +28732,7 @@
             eTextAlign: i,
           } = e,
           o = (0, Et.MU)();
-        return gl(a)
+        return hl(a)
           ? null
           : n.createElement(
               "div",
@@ -28660,11 +28755,11 @@
               }),
             );
       }
-      const pl = "[p][/p]";
-      function gl(e) {
-        return !e || 0 == e.length || (e.length == pl.length && e == pl);
-      }
+      const gl = "[p][/p]";
       function hl(e) {
+        return !e || 0 == e.length || (e.length == gl.length && e == gl);
+      }
+      function Sl(e) {
         const {
             event: t,
             title: a,
@@ -28674,7 +28769,7 @@
             eTextAlign: o,
           } = e,
           l = (0, Et.MU)();
-        return gl(a)
+        return hl(a)
           ? null
           : n.createElement(
               "div",
@@ -28701,7 +28796,7 @@
               }),
             );
       }
-      function Sl(e) {
+      function fl(e) {
         const {
             event: t,
             description: a,
@@ -28710,7 +28805,7 @@
             eDescriptionDisplaySize: i,
           } = e,
           o = (0, Et.MU)();
-        return gl(a)
+        return hl(a)
           ? null
           : n.createElement(
               "div",
@@ -28735,7 +28830,7 @@
               }),
             );
       }
-      function fl(e) {
+      function vl(e) {
         const { event: t, section: a, language: r } = e,
           s = (0, Et.MU)(),
           i = (0, E.Qn)(),
@@ -28764,13 +28859,13 @@
             },
             n.createElement(zo, { section: a, event: t, language: r }),
             Boolean(a.quiz?.titleSubDesc) &&
-              n.createElement(vl, {
+              n.createElement(El, {
                 titleSubDesc: a.quiz.titleSubDesc,
                 event: t,
                 language: r,
               }),
             c.map((e, a) =>
-              n.createElement(El, {
+              n.createElement(yl, {
                 key: e.unique_id,
                 iQuestionIndex: a,
                 question: e,
@@ -28784,10 +28879,10 @@
           ),
         );
       }
-      function vl(e) {
+      function El(e) {
         const { event: t, language: a, titleSubDesc: r } = e,
           s = D.A0.GetELanguageFallback(a),
-          [i, o, l, c, m, u, d, _, p, g] = (0, ye.q3)(() => [
+          [i, o, l, c, m, u, d, _, p, g, h] = (0, ye.q3)(() => [
             r.localized_media_title?.length > 0
               ? r.localized_media_title[a] || r.localized_media_title[s] || ""
               : void 0,
@@ -28815,8 +28910,9 @@
               : void 0,
             r?.title_media?.localized_alt_text?.[a] ||
               r?.title_media?.localized_alt_text?.[s],
+            r?.title_media?.optional_url,
           ]);
-        return n.createElement(ul, {
+        return n.createElement(dl, {
           event: t,
           language: a,
           title: i,
@@ -28829,9 +28925,10 @@
           titleVAlign: _,
           titleHAlign: p,
           titleAltText: g,
+          titleOptionalURL: h,
         });
       }
-      function El(e) {
+      function yl(e) {
         const {
             question: t,
             language: a,
@@ -28893,9 +28990,9 @@
           ),
         );
       }
-      var yl = a(94581),
-        bl = a.n(yl);
-      function Cl(e) {
+      var bl = a(94581),
+        Cl = a.n(bl);
+      function wl(e) {
         const { event: t, section: a, language: r } = e,
           s = (0, Et.MU)(),
           i = (0, E.Qn)(),
@@ -28923,7 +29020,7 @@
             Boolean(l) &&
               n.createElement(
                 "div",
-                { className: bl().description },
+                { className: Cl().description },
                 n.createElement(Ya.fh, {
                   text: l,
                   partnerEventStore: Dt.O3,
@@ -28933,7 +29030,7 @@
                 }),
               ),
             a.tech_specs?.tech_spec_block_list?.map((e) =>
-              n.createElement(wl, {
+              n.createElement(Il, {
                 key: "tsblock_" + e.unique_id,
                 block: e,
                 language: r,
@@ -28943,7 +29040,7 @@
           ),
         );
       }
-      function wl(e) {
+      function Il(e) {
         const { block: t, language: a, fallbackLanguage: r } = e,
           s =
             t.localized_block_title?.length > 0
@@ -28952,9 +29049,9 @@
         return n.createElement(
           "div",
           null,
-          n.createElement("div", { className: bl().BlockTitle }, s),
+          n.createElement("div", { className: Cl().BlockTitle }, s),
           t.spec_list.map((e) =>
-            n.createElement(Il, {
+            n.createElement(Al, {
               key: "tsitem_" + e.unique_id + "_" + t.unique_id,
               item: e,
               language: a,
@@ -28963,7 +29060,7 @@
           ),
         );
       }
-      function Il(e) {
+      function Al(e) {
         const { item: t, language: a, fallbackLanguage: r } = e,
           s =
             t.localized_spec_name?.length > 0
@@ -28993,7 +29090,7 @@
           ),
         );
       }
-      function Al(e) {
+      function Tl(e) {
         const { event: t, section: a, activeTab: r, language: s } = e,
           i = (0, E.Qn)();
         switch (a.section_type) {
@@ -29193,13 +29290,13 @@
           case "unselected_empty":
             break;
           case "template_faq":
-            return n.createElement(fl, { ...e });
+            return n.createElement(vl, { ...e });
           case "template_techspec":
-            return n.createElement(Cl, { ...e });
+            return n.createElement(wl, { ...e });
           case "template_media_content":
-            return n.createElement(sl, { ...e });
+            return n.createElement(il, { ...e });
           case "template_media_overlay":
-            return n.createElement(nl, { ...e });
+            return n.createElement(rl, { ...e });
           case "media_layout":
             return n.createElement(Ao, { ...e });
           default:

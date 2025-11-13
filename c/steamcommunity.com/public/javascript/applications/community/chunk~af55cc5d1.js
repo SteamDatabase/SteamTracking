@@ -2148,25 +2148,29 @@
       window.g_CreatorHomeStore = _;
       class _ {
         constructor() {
-          (this.m_mapListToTitle = new Map()),
-            (this.m_mapListToSubtitle = new Map()),
+          (this.m_mapListInfo = new Map()),
             (this.m_bLoadedFromConfig = !1),
             (0, _._)(this);
         }
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
-            const _ = (0, _._)(
-              "creator_home_list_titles",
-              "application_config",
-            );
+            const _ = (0, _._)("creator_home_list_info", "application_config");
             if (this.ValidateCreatorHomeTitles(_))
               for (const [
                 _,
-                { title: __webpack_require__, description: _ },
+                {
+                  title: __webpack_require__,
+                  description: _,
+                  listtileimage: _,
+                },
               ] of Object.entries(null != _ ? _ : {}))
                 __webpack_require__ &&
-                  (this.m_mapListToTitle.set(_, __webpack_require__),
-                  _ && this.m_mapListToSubtitle.set(_, _));
+                  this.m_mapListInfo.set(_, {
+                    title:
+                      null != __webpack_require__ ? __webpack_require__ : "",
+                    description: (null == _ ? void 0 : _.length) ? _ : void 0,
+                    imageUrl: (null == _ ? void 0 : _.length) ? _ : void 0,
+                  });
             this.m_bLoadedFromConfig = !0;
           }
         }
@@ -2174,14 +2178,40 @@
           return null != _ && "object" == typeof _ && !Array.isArray(_);
         }
         GetListTitle(_) {
-          return this.LazyInit(), _ ? this.m_mapListToTitle.get(_) : void 0;
+          var _;
+          return (
+            this.LazyInit(),
+            _
+              ? null === (_ = this.m_mapListInfo.get(_)) || void 0 === _
+                ? void 0
+                : _.title
+              : void 0
+          );
         }
         GetListSubtitle(_) {
-          return this.LazyInit(), _ ? this.m_mapListToSubtitle.get(_) : void 0;
+          var _;
+          return (
+            this.LazyInit(),
+            _
+              ? null === (_ = this.m_mapListInfo.get(_)) || void 0 === _
+                ? void 0
+                : _.description
+              : void 0
+          );
+        }
+        GetListtileImage(_) {
+          var _;
+          return (
+            this.LazyInit(),
+            _
+              ? null === (_ = this.m_mapListInfo.get(_)) || void 0 === _
+                ? void 0
+                : _.imageUrl
+              : void 0
+          );
         }
       }
-      (0, _._)([_._], _.prototype, "m_mapListToTitle", void 0),
-        (0, _._)([_._], _.prototype, "m_mapListToSubtitle", void 0),
+      (0, _._)([_._], _.prototype, "m_mapListInfo", void 0),
         (0, _._)([_._], _.prototype, "LazyInit", null);
       const _ = new _();
       function _(_) {
@@ -2260,7 +2290,7 @@
           enabled: _ > 0,
         };
       }
-      window.g_CreatorHomeListTitleStore = _;
+      window.g_CreatorHomeListInfoStore = _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
