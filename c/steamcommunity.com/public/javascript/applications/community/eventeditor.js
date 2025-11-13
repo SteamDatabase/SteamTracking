@@ -2230,7 +2230,7 @@
           const _ = _.localized_media_description;
           if (_ || (_ && Boolean(_._.Get(_, _)))) {
             _._.Get(_, _) !== _ &&
-              ((_.localized_media_title = _._.Set(_ || [], _, _)),
+              ((_.localized_media_description = _._.Set(_ || [], _, _)),
               _.SetDirty(_._.jsondata_sales),
               (_ = !0));
           }

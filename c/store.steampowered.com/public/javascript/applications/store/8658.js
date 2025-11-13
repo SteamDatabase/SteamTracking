@@ -99,6 +99,7 @@
 	"Menu_Section_Hardware": "Устройства",
 	"Menu_Section_Hardware_VRHardware": "VR-устройства",
 	"Menu_Section_Hardware_SteamDeckDock": "Док-станция",
+	"Menu_Section_Hardware_Family": "New Steam Hardware",
 	"Menu_Section_WaysToPlay": "Способы играть",
 	"Menu_Section_SpecialSections": "Особые разделы",
 	"Menu_Section_SpecialSections_NextFest": "Фестиваль «Играм быть»",

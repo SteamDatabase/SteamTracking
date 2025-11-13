@@ -99,6 +99,7 @@
 	"Menu_Section_Hardware": "硬件",
 	"Menu_Section_Hardware_VRHardware": "VR 硬件",
 	"Menu_Section_Hardware_SteamDeckDock": "基座",
+	"Menu_Section_Hardware_Family": "全新 Steam 硬件",
 	"Menu_Section_WaysToPlay": "畅玩游戏的方式",
 	"Menu_Section_SpecialSections": "特别栏目",
 	"Menu_Section_SpecialSections_NextFest": "Steam 新品节",

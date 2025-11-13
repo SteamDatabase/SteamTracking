@@ -20559,7 +20559,14 @@
             bSingleLine: !0,
             nTitleCharLimit: zl,
             language: n,
-            fnGetContent: () => a.localized_media_title[n] || "",
+            fnGetContent: () => {
+              var e;
+              return (
+                (null === (e = a.localized_media_title) || void 0 === e
+                  ? void 0
+                  : e[n]) || ""
+              );
+            },
             eTextAlignment: r,
             eTitleDisplaySize: o,
             strOverrideBackgroundColor: i,
@@ -20567,8 +20574,11 @@
               "#Template_Seciton_MediaContent_Option_Title",
             ),
             fnUpdateContent: (e) => {
-              a.localized_media_title[n] != e &&
-                ((a.localized_media_title[n] = e), l());
+              var t;
+              (null !== (t = a.localized_media_title) && void 0 !== t) ||
+                (a.localized_media_title = O.$Y([], 31, null)),
+                a.localized_media_title[n] != e &&
+                  ((a.localized_media_title[n] = e), l());
             },
             label: (0, k.we)("#Sale_Section_Social_Share_Option_Title"),
             rctToolbarControls: c.createElement(
@@ -20624,12 +20634,12 @@
               "#Template_Seciton_MediaContent_Option_Subtitle",
             ),
             fnUpdateContent: (e) => {
-              var l;
-              t.localized_media_subtitle ||
-                (t.localized_media_subtitle = (0, O.$Y)([], 31, null)),
-                (null === (l = t.localized_media_subtitle) || void 0 === l
+              var l, i;
+              (null !== (l = t.localized_media_subtitle) && void 0 !== l) ||
+                (t.localized_media_subtitle = O.$Y([], 31, null)),
+                (null === (i = t.localized_media_subtitle) || void 0 === i
                   ? void 0
-                  : l[a]) != e && ((t.localized_media_subtitle[a] = e), n());
+                  : i[a]) != e && ((t.localized_media_subtitle[a] = e), n());
             },
             rctToolbarControls: c.createElement(Sn, {
               uniqueID: "sub_horiz_" + l,
@@ -21250,20 +21260,30 @@
               {
                 className: (0, A.A)(ei().Icon, ei().RemoveButton),
                 onClick: (e) => {
-                  var a, l;
+                  var a, l, i, r, c;
                   e.preventDefault(),
                     e.stopPropagation(),
                     (a = n.media_columns[t]) &&
-                    (a.localized_media_title.some((e) => Boolean(e)) ||
-                      (null === (l = a.localized_media_subtitle) || void 0 === l
+                    ((null === (l = a.localized_media_title) || void 0 === l
+                      ? void 0
+                      : l.some((e) => Boolean(e))) ||
+                      (null === (i = a.localized_media_subtitle) || void 0 === i
                         ? void 0
-                        : l.some((e) => Boolean(e))) ||
-                      a.localized_media_description.some((e) => Boolean(e)) ||
-                      a.localized_media.some((e) =>
-                        Boolean(
-                          e && (e.image || e.video_mp4_src || e.video_webm_src),
-                        ),
-                      ))
+                        : i.some((e) => Boolean(e))) ||
+                      (null === (r = a.localized_media_description) ||
+                      void 0 === r
+                        ? void 0
+                        : r.some((e) => Boolean(e))) ||
+                      (null === (c = a.localized_media) || void 0 === c
+                        ? void 0
+                        : c.some((e) =>
+                            Boolean(
+                              e &&
+                                (e.image ||
+                                  e.video_mp4_src ||
+                                  e.video_webm_src),
+                            ),
+                          )))
                       ? o()
                       : s();
                 },
@@ -22101,12 +22121,22 @@
           ]);
         return c.createElement(ln, {
           language: a,
-          fnGetContent: () => t.localized_media_description[a] || "",
+          fnGetContent: () => {
+            var e;
+            return (
+              (null === (e = t.localized_media_description) || void 0 === e
+                ? void 0
+                : e[a]) || ""
+            );
+          },
           eTextAlignment: r,
           strOverrideBackgroundColor: i,
           fnUpdateContent: (e) => {
-            t.localized_media_description[a] != e &&
-              ((t.localized_media_description[a] = e), n());
+            var l;
+            (null !== (l = t.localized_media_description) && void 0 !== l) ||
+              (t.localized_media_description = O.$Y([], 31, null)),
+              t.localized_media_description[a] != e &&
+                ((t.localized_media_description[a] = e), n());
           },
           label: (0, k.we)("#Sale_Section_Type_event_description"),
           rctToolbarControls: c.createElement(

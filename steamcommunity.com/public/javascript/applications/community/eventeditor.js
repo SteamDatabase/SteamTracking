@@ -2226,7 +2226,7 @@
           const t = o.localized_media_description;
           if (a || (t && Boolean(R.NT.Get(t, l)))) {
             R.NT.Get(t, l) !== a &&
-              ((o.localized_media_title = R.NT.Set(t || [], l, a)),
+              ((o.localized_media_description = R.NT.Set(t || [], l, a)),
               e.SetDirty(ne.IQ.jsondata_sales),
               (i = !0));
           }

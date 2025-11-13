@@ -99,6 +99,7 @@
 	"Menu_Section_Hardware": "ハードウェア",
 	"Menu_Section_Hardware_VRHardware": "VRハードウェア",
 	"Menu_Section_Hardware_SteamDeckDock": "ドッキングステーション",
+	"Menu_Section_Hardware_Family": "New Steam Hardware",
 	"Menu_Section_WaysToPlay": "ゲームのプレイ方法",
 	"Menu_Section_SpecialSections": "スペシャルセクション",
 	"Menu_Section_SpecialSections_NextFest": "Steam Nextフェス",

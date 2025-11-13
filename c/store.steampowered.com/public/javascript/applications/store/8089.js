@@ -99,6 +99,7 @@
 	"Menu_Section_Hardware": "Hardware",
 	"Menu_Section_Hardware_VRHardware": "Hardware VR",
 	"Menu_Section_Hardware_SteamDeckDock": "Stasiun Docking",
+	"Menu_Section_Hardware_Family": "New Steam Hardware",
 	"Menu_Section_WaysToPlay": "Cara memainkan game",
 	"Menu_Section_SpecialSections": "Bagian Spesial",
 	"Menu_Section_SpecialSections_NextFest": "Steam Next Fest",

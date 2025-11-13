@@ -99,6 +99,7 @@
 	"Menu_Section_Hardware": "Donanım",
 	"Menu_Section_Hardware_VRHardware": "VR Donanımı",
 	"Menu_Section_Hardware_SteamDeckDock": "Bağlantı İstasyonu",
+	"Menu_Section_Hardware_Family": "New Steam Hardware",
 	"Menu_Section_WaysToPlay": "Oyun oynamanın yolları",
 	"Menu_Section_SpecialSections": "Özel kısımlar",
 	"Menu_Section_SpecialSections_NextFest": "Steam Next Fest",

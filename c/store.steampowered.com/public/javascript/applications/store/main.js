@@ -78529,12 +78529,15 @@
           "images/applications/store/steam_deck.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/dockingstation02.png?v=valveisgoodatcaching",
+          "images/applications/store/hwFamilyMenu.png?v=valveisgoodatcaching",
         _ = {
           appid: 1675200,
         },
         _ = {
           appid: 1696780,
+        },
+        _ = {
+          appid: 377490,
         },
         _ = {
           packageid: 354231,
@@ -78595,7 +78598,7 @@
         );
       }
       function _() {
-        return (0, _._)(_), (0, _._)(_), (0, _._)(_), _(), null;
+        return (0, _._)(_), (0, _._)(_), (0, _._)(_), (0, _._)(_), _(), null;
       }
       function _() {
         const { data: _ } = (0, _._)(_),
@@ -78610,7 +78613,7 @@
             {
               storeItem: _ ? _ : void 0,
               image: (0, _._)(_),
-              name: _("#Menu_Section_Hardware_SteamDeckDock"),
+              name: _("#Menu_Section_Hardware_Family"),
             },
             {
               storeItem: __webpack_require__,
@@ -82606,7 +82609,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 92), _((_._ = _));
+      return (_ = 20699), _((_._ = _));
       var _;
     });
     _._();

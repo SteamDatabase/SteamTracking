@@ -99,6 +99,7 @@
 	"Menu_Section_Hardware": "Hardver",
 	"Menu_Section_Hardware_VRHardware": "VR-hardver",
 	"Menu_Section_Hardware_SteamDeckDock": "Dokkolóállomás",
+	"Menu_Section_Hardware_Family": "Új Steam hardver",
 	"Menu_Section_WaysToPlay": "Játékok játszási módjai",
 	"Menu_Section_SpecialSections": "Speciális szakaszok",
 	"Menu_Section_SpecialSections_NextFest": "Steam Jövő Feszt",

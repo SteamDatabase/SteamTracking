@@ -99,6 +99,7 @@
 	"Menu_Section_Hardware": "Phần cứng",
 	"Menu_Section_Hardware_VRHardware": "Thiết bị VR",
 	"Menu_Section_Hardware_SteamDeckDock": "Đế cắm",
+	"Menu_Section_Hardware_Family": "New Steam Hardware",
 	"Menu_Section_WaysToPlay": "Nhiều cách để chơi trò chơi",
 	"Menu_Section_SpecialSections": "Mục đặc biệt",
 	"Menu_Section_SpecialSections_NextFest": "Steam Next Fest",

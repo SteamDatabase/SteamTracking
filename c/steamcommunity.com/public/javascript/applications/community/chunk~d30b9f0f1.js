@@ -22738,8 +22738,15 @@
             bSingleLine: !0,
             nTitleCharLimit: _,
             language: _,
-            fnGetContent: () =>
-              __webpack_require__.localized_media_title[_] || "",
+            fnGetContent: () => {
+              var _;
+              return (
+                (null === (_ = __webpack_require__.localized_media_title) ||
+                void 0 === _
+                  ? void 0
+                  : _[_]) || ""
+              );
+            },
             eTextAlignment: _,
             eTitleDisplaySize: _,
             strOverrideBackgroundColor: _,
@@ -22747,8 +22754,12 @@
               "#Template_Seciton_MediaContent_Option_Title",
             ),
             fnUpdateContent: (_) => {
-              __webpack_require__.localized_media_title[_] != _ &&
-                ((__webpack_require__.localized_media_title[_] = _), _());
+              var _;
+              (null !== (_ = __webpack_require__.localized_media_title) &&
+                void 0 !== _) ||
+                (__webpack_require__.localized_media_title = _._([], 31, null)),
+                __webpack_require__.localized_media_title[_] != _ &&
+                  ((__webpack_require__.localized_media_title[_] = _), _());
             },
             label: (0, _._)("#Sale_Section_Social_Share_Option_Title"),
             rctToolbarControls: _.createElement(
@@ -22808,9 +22819,9 @@
               "#Template_Seciton_MediaContent_Option_Subtitle",
             ),
             fnUpdateContent: (_) => {
-              var _;
-              _.localized_media_subtitle ||
-                (_.localized_media_subtitle = (0, _._)([], 31, null)),
+              var _, _;
+              (null !== (_ = _.localized_media_subtitle) && void 0 !== _) ||
+                (_.localized_media_subtitle = _._([], 31, null)),
                 (null === (_ = _.localized_media_subtitle) || void 0 === _
                   ? void 0
                   : _[__webpack_require__]) != _ &&
@@ -23515,20 +23526,30 @@
               {
                 className: (0, _._)(_().Icon, _().RemoveButton),
                 onClick: (_) => {
-                  var _, _;
+                  var _, _, _, _, _;
                   _.preventDefault(),
                     _.stopPropagation(),
                     (_ = _.media_columns[_]) &&
-                    (_.localized_media_title.some((_) => Boolean(_)) ||
+                    ((null === (_ = _.localized_media_title) || void 0 === _
+                      ? void 0
+                      : _.some((_) => Boolean(_))) ||
                       (null === (_ = _.localized_media_subtitle) || void 0 === _
                         ? void 0
                         : _.some((_) => Boolean(_))) ||
-                      _.localized_media_description.some((_) => Boolean(_)) ||
-                      _.localized_media.some((_) =>
-                        Boolean(
-                          _ && (_.image || _.video_mp4_src || _.video_webm_src),
-                        ),
-                      ))
+                      (null === (_ = _.localized_media_description) ||
+                      void 0 === _
+                        ? void 0
+                        : _.some((_) => Boolean(_))) ||
+                      (null === (_ = _.localized_media) || void 0 === _
+                        ? void 0
+                        : _.some((_) =>
+                            Boolean(
+                              _ &&
+                                (_.image ||
+                                  _.video_mp4_src ||
+                                  _.video_webm_src),
+                            ),
+                          )))
                       ? _()
                       : _();
                 },
@@ -24487,13 +24508,22 @@
           ]);
         return _.createElement(_, {
           language: __webpack_require__,
-          fnGetContent: () =>
-            _.localized_media_description[__webpack_require__] || "",
+          fnGetContent: () => {
+            var _;
+            return (
+              (null === (_ = _.localized_media_description) || void 0 === _
+                ? void 0
+                : _[__webpack_require__]) || ""
+            );
+          },
           eTextAlignment: _,
           strOverrideBackgroundColor: _,
           fnUpdateContent: (_) => {
-            _.localized_media_description[__webpack_require__] != _ &&
-              ((_.localized_media_description[__webpack_require__] = _), _());
+            var _;
+            (null !== (_ = _.localized_media_description) && void 0 !== _) ||
+              (_.localized_media_description = _._([], 31, null)),
+              _.localized_media_description[__webpack_require__] != _ &&
+                ((_.localized_media_description[__webpack_require__] = _), _());
           },
           label: (0, _._)("#Sale_Section_Type_event_description"),
           rctToolbarControls: _.createElement(

@@ -99,6 +99,7 @@
 	"Menu_Section_Hardware": "Обладнання",
 	"Menu_Section_Hardware_VRHardware": "Обладнання ВР",
 	"Menu_Section_Hardware_SteamDeckDock": "Док-станція",
+	"Menu_Section_Hardware_Family": "New Steam Hardware",
 	"Menu_Section_WaysToPlay": "Способи гри",
 	"Menu_Section_SpecialSections": "Спеціальні розділи",
 	"Menu_Section_SpecialSections_NextFest": "Фестиваль новинок Steam",

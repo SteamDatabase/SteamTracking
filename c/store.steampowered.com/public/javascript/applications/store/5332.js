@@ -99,6 +99,7 @@
 	"Menu_Section_Hardware": "Laitteistot",
 	"Menu_Section_Hardware_VRHardware": "VR-laitteistot",
 	"Menu_Section_Hardware_SteamDeckDock": "Telakka",
+	"Menu_Section_Hardware_Family": "New Steam Hardware",
 	"Menu_Section_WaysToPlay": "Tapoja pelien pelaamiseen",
 	"Menu_Section_SpecialSections": "Erityisosiot",
 	"Menu_Section_SpecialSections_NextFest": "Steam Next Fest",
