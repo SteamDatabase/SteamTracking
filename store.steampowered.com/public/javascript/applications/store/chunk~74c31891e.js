@@ -27,7 +27,11 @@
       };
     },
     9202: (e) => {
-      e.exports = { BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r" };
+      e.exports = {
+        narrowWidth: "500px",
+        WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
+        BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
+      };
     },
     94057: (e, t, n) => {
       "use strict";
@@ -422,8 +426,8 @@
         );
       }
       var G = n(28188),
-        k = n(60014),
-        B = n(55963),
+        B = n(60014),
+        k = n(55963),
         x = n(83284),
         T = n.n(x),
         L = n(52038),
@@ -433,36 +437,40 @@
         j = n.n(M);
       function R(e) {
         const { appid: t, color: n, bgcolor: o } = e,
-          r = (0, k.n9)(),
-          s = (0, B.L3)(r);
-        return a.createElement(O.EP, {
-          snr: s,
-          appID: t,
-          classOverride: (0, L.A)(
-            T().WishlistButtonNotTop,
-            j().BBCodeWishlistButton,
-            "WishlistButton",
-          ),
-          styleOverride: { color: n, backgroundColor: o },
-        });
+          r = (0, B.n9)(),
+          s = (0, k.L3)(r);
+        return a.createElement(
+          "div",
+          { className: j().WishlistHoverCtn },
+          a.createElement(O.EP, {
+            snr: s,
+            appID: t,
+            classOverride: (0, L.A)(
+              T().WishlistButtonNotTop,
+              j().BBCodeWishlistButton,
+              "WishlistButton",
+            ),
+            styleOverride: { color: n, backgroundColor: o },
+          }),
+        );
       }
-      function F(e) {
+      function W(e) {
         const t = Number(e.args.appid);
         if (!t) return null;
         const n = (0, A.O)(e.args.color, "black"),
           o = (0, A.O)(e.args.bgcolor, "white");
         return a.createElement(R, { appid: t, color: n, bgcolor: o });
       }
-      var P = n(10026),
-        $ = n.n(P);
-      function W(e) {
+      var F = n(10026),
+        P = n.n(F);
+      function $(e) {
         const { appid: t, color: n, bgcolor: o } = e;
-        (0, k.n9)();
+        (0, B.n9)();
         return a.createElement(O.gi, {
           appID: t,
           classOverride: (0, L.A)(
             T().FollowGameButtonNotTop,
-            $().BBCodeFollowButton,
+            P().BBCodeFollowButton,
           ),
           styleOverride: { color: n, backgroundColor: o },
         });
@@ -472,7 +480,7 @@
         if (!t) return null;
         const n = (0, A.O)(e.args.color, "black"),
           o = (0, A.O)(e.args.bgcolor, "white");
-        return a.createElement(W, { appid: t, color: n, bgcolor: o });
+        return a.createElement($, { appid: t, color: n, bgcolor: o });
       }
       var q = n(94057),
         z = n(29868);
@@ -835,7 +843,7 @@
           ? a.createElement(V, { giveawayid: t })
           : a.createElement(a.Fragment, null);
       }
-      function ke(e) {
+      function Be(e) {
         const { event: t, showErrorInfo: n } = e.context,
           o = Number.parseInt((0, d.j$)(e.args));
         if (o) {
@@ -856,7 +864,7 @@
         }
         return a.createElement(a.Fragment, null);
       }
-      var Be = n(89104);
+      var ke = n(89104);
       function xe(e) {
         const { bSalePage: t } = e,
           [n, d] = a.useState(l.KN.IsInitialized());
@@ -865,7 +873,7 @@
             s.Vw.Init(new r.D(u.TS.WEBAPI_BASE_URL)),
               i.O3.Init(),
               t &&
-                Be.us.AddDictionary(
+                ke.us.AddDictionary(
                   (null == fe &&
                     (fe = new Map([
                       [
@@ -877,7 +885,7 @@
                           allowWrapTextForCopying: !0,
                         },
                       ],
-                      ["wishlist", { Constructor: F, autocloses: !1 }],
+                      ["wishlist", { Constructor: W, autocloses: !1 }],
                       ["followgame", { Constructor: H, autocloses: !1 }],
                       ["followgroup", { Constructor: Ie, autocloses: !1 }],
                       ["deckcompatcount", { Constructor: he, autocloses: !1 }],
@@ -903,7 +911,7 @@
                       ["salesection", { Constructor: _e, autocloses: !1 }],
                       [
                         "reservationbutton",
-                        { Constructor: ke, autocloses: !1 },
+                        { Constructor: Be, autocloses: !1 },
                       ],
                     ])),
                   fe),

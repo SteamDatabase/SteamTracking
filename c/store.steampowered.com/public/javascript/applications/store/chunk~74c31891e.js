@@ -28,6 +28,8 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
+        WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
         BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
       };
     },
@@ -451,19 +453,25 @@
         const { appid: _, color: __webpack_require__, bgcolor: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(_);
-        return _.createElement(_._, {
-          snr: _,
-          appID: _,
-          classOverride: (0, _._)(
-            _().WishlistButtonNotTop,
-            _().BBCodeWishlistButton,
-            "WishlistButton",
-          ),
-          styleOverride: {
-            color: __webpack_require__,
-            backgroundColor: _,
+        return _.createElement(
+          "div",
+          {
+            className: _().WishlistHoverCtn,
           },
-        });
+          _.createElement(_._, {
+            snr: _,
+            appID: _,
+            classOverride: (0, _._)(
+              _().WishlistButtonNotTop,
+              _().BBCodeWishlistButton,
+              "WishlistButton",
+            ),
+            styleOverride: {
+              color: __webpack_require__,
+              backgroundColor: _,
+            },
+          }),
+        );
       }
       function _(_) {
         const _ = Number(_.args.appid);

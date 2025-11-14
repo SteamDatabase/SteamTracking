@@ -1531,28 +1531,56 @@ p a:hover {
 ._1RsiclQYbOWMcz3Hr6dVT9 .adrBtsY2w7IX8V81nMir1:hover {
   text-decoration: underline;
 }
+.GXjJQihysg6S5INBKClED {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
 ._1dm-6uzq_x5Gqo421G3a1r {
   position: relative;
-  align-items: center;
-  width: fit-content;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #fff;
-  max-height: 32px;
-  box-shadow: none;
-  border-radius: 28px;
-  padding: 3px 12px;
   color: #0e141b;
+  border-radius: 28px;
+  max-height: 34px;
+  padding: 3px 12px;
+  box-shadow: none;
   right: unset;
-  transition: all .2s ease-out;
+  overflow: hidden;
 }
-._1dm-6uzq_x5Gqo421G3a1r:hover {
+.GXjJQihysg6S5INBKClED:hover ._1dm-6uzq_x5Gqo421G3a1r {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: 10;
+  width: max-content;
+  overflow: visible;
   box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
 }
-._1dm-6uzq_x5Gqo421G3a1r:hover .WishlistButtonText {
+html.responsive.touch .GXjJQihysg6S5INBKClED:hover ._1dm-6uzq_x5Gqo421G3a1r {
+  position: relative;
+  left: unset;
+  transform: unset;
+}
+@media screen and (max-width: 910px) {
+  html.responsive .GXjJQihysg6S5INBKClED:hover ._1dm-6uzq_x5Gqo421G3a1r {
+    position: relative;
+    left: unset;
+    transform: unset;
+  }
+}
+.GXjJQihysg6S5INBKClED:hover ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
   text-shadow: none;
+  text-wrap: nowrap;
+  white-space: nowrap;
   font-size: 14px;
   color: #0e141b;
   font-weight: 600;
+  line-height: 16px;
 }
 .NVuxjpTCUClP-4RsNDDvk {
   position: relative;
@@ -1562,7 +1590,7 @@ p a:hover {
   max-height: 32px;
   box-shadow: none;
   border-radius: 28px;
-  padding: 6px;
+  padding: 8px 12px;
   color: #0e141b;
   right: unset;
   transition: all .2s ease-out;
@@ -1643,7 +1671,7 @@ p a:hover {
   max-height: 32px;
   box-shadow: none;
   border-radius: 28px;
-  padding: 6px 12px;
+  padding: 8px 12px;
   color: #0e141b;
   right: unset;
   transition: all .2s ease-out;
