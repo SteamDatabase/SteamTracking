@@ -440,6 +440,7 @@
 !.CCloud_AppSessionSuspend_Request
 !.CCloud_ClientDeleteFile_Response
 !.CCloud_CommitHTTPUpload_Response
+!.CCloud_GetSingleFileInfo_Request
 !.CEcon_GetAssetClassInfo_Response"
 !.CGameRecording_GetClips_Response
 !.CGameRecording_SaveClip_Response
@@ -878,6 +879,7 @@
 ".CCloud_AppSessionSuspend_Response
 ".CCloud_ClientFileDownload_Request
 ".CCloud_EnumerateUserFiles_Request
+".CCloud_GetSingleFileInfo_Response
 ".CGameRecording_DeleteClip_Request
 ".CGameRecording_ExportClip_Request
 ".CGamescope_SetBlurParams_Response
@@ -3786,6 +3788,7 @@ $steammessages_parental_objects.proto"
 (\t"C\n*CCredentials_ValidateEmailAddress_Response
 (\t"C\n-CEcon_ClientGetItemShopOverlayAuthURL_Request
 (\t"C\n-CSteamEngine_GetTextFilterDictionary_Response
+(\t"E\n CCloud_GetSingleFileInfo_Request
 (\t"E\n,CTransportValidation_AppendToString_Response
 (\t"G\n#CMsgClientRequestEncryptedAppTicket
 (\t"H\n(CSteamTV_CreateBroadcastChannel_Response
@@ -6040,8 +6043,9 @@ $steammessages_parental_objects.proto"
 .CCloud_GetFileDetails_Response"
 .CCloud_PendingRemoteOperation"
 .CCloud_PendingRemoteOperation"|\n#CCloud_AppExitSyncDone_Notification
+.CCloud_ShareFile_Request
+.CCloud_ShareFile_Response
 .CCloud_UserFile
-.CCloud_UserFile"p\n!CCloud_EnumerateUserFiles_Request
 .CCommunity_ClanLocGroupImage"Y\n#CCommunity_GetAvatarHistory_Request
 .CCommunity_Comment
 .CCommunity_Comment.Reaction
@@ -7655,11 +7659,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
+0123456789.
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -9390,7 +9394,6 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI22CMsgClientMMSLobbyDataE
 12CProtoBufMsgI22CMsgClientPersonaStateE
 12CProtoBufMsgI22CMsgClientStatsUpdatedE
-12CProtoBufMsgI22CMsgClientUFSShareFileE
 12CProtoBufMsgI22CMsgFSGetFollowerCountE
 12CProtoBufMsgI22CMsgGSDisconnectNoticeE
 12CProtoBufMsgI22CMsgRemoteClientStatusE
@@ -9401,11 +9404,13 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI23CMsgDRMDownloadResponseE
 12CProtoBufMsgI23CMsgGSAssociateWithClanE
 12CProtoBufMsgI23CMsgGameServerOutOfDateE
+12CProtoBufMsgI24CCloud_ShareFile_RequestE
 12CProtoBufMsgI24CMsgAMUnlockH264ResponseE
 12CProtoBufMsgI24CMsgClientGMSServerQueryE
 12CProtoBufMsgI24CMsgClientMMSCreateLobbyE
 12CProtoBufMsgI24CMsgClientUCMPublishFileE
 12CProtoBufMsgI24CMsgTrading_StartSessionE
+12CProtoBufMsgI25CCloud_ShareFile_ResponseE
 12CProtoBufMsgI25CMsgClientConnectionStatsE
 12CProtoBufMsgI25CMsgClientGetEmoticonListE
 12CProtoBufMsgI25CMsgClientLBSGetLBEntriesE
@@ -9433,7 +9438,6 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI26CMsgClientRichPresenceInfoE
 12CProtoBufMsgI26CMsgClientServersAvailableE
 12CProtoBufMsgI26CMsgClientUCMAddScreenshotE
-12CProtoBufMsgI26CMsgClientUFSGetUGCDetailsE
 12CProtoBufMsgI26CMsgClientWalletInfoUpdateE
 12CProtoBufMsgI26CMsgGameServerPolicyUpdateE
 12CProtoBufMsgI26CMsgRemoteClientAcceptEULAE
@@ -9480,6 +9484,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI28SiteServerUI_Logout_ResponseE
 12CProtoBufMsgI28SiteServerUI_Status_ResponseE
 12CProtoBufMsgI29CCloud_BeginUGCUpload_RequestE
+12CProtoBufMsgI29CCloud_GetFileDetails_RequestE
 12CProtoBufMsgI29CMsgClientLANP2PRequestChunksE
 12CProtoBufMsgI29CMsgClientLBSSetScoreResponseE
 12CProtoBufMsgI29CMsgClientMMSSendLobbyChatMsgE
@@ -9493,6 +9498,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI30CCloud_AppLaunchIntent_RequestE
 12CProtoBufMsgI30CCloud_BeginUGCUpload_ResponseE
 12CProtoBufMsgI30CCloud_CommitUGCUpload_RequestE
+12CProtoBufMsgI30CCloud_GetFileDetails_ResponseE
 12CProtoBufMsgI30CMsgCREItemVoteSummaryResponseE
 12CProtoBufMsgI30CMsgClientCheckAppBetaPasswordE
 12CProtoBufMsgI30CMsgClientCommentNotificationsE
@@ -9501,8 +9507,6 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI30CMsgClientGetUserStatsResponseE
 12CProtoBufMsgI30CMsgClientMMSJoinLobbyResponseE
 12CProtoBufMsgI30CMsgClientUDSP2PSessionStartedE
-12CProtoBufMsgI30CMsgClientUFSGetSingleFileInfoE
-12CProtoBufMsgI30CMsgClientUFSShareFileResponseE
 12CProtoBufMsgI30CMsgFSGetFollowerCountResponseE
 12CProtoBufMsgI30CMsgTrading_CancelTradeRequestE
 12CProtoBufMsgI31CCloud_AppLaunchIntent_ResponseE
@@ -9522,6 +9526,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI31CMsgGSAssociateWithClanResponseE
 12CProtoBufMsgI32CCloud_AppSessionResume_ResponseE
 12CProtoBufMsgI32CCloud_AppSessionSuspend_RequestE
+12CProtoBufMsgI32CCloud_GetSingleFileInfo_RequestE
 12CProtoBufMsgI32CMsgClientMMSCreateLobbyResponseE
 12CProtoBufMsgI32CMsgClientPICSAccessTokenRequestE
 12CProtoBufMsgI32CMsgClientPICSPrivateBetaRequestE
@@ -9538,6 +9543,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI32CVideo_UnlockedH264_NotificationE
 12CProtoBufMsgI32SiteServerUI_SetLanguage_RequestE
 12CProtoBufMsgI33CCloud_AppSessionSuspend_ResponseE
+12CProtoBufMsgI33CCloud_GetSingleFileInfo_ResponseE
 12CProtoBufMsgI33CMsgClientAMGetPersonaNameHistoryE
 12CProtoBufMsgI33CMsgClientFSGetFriendsSteamLevelsE
 12CProtoBufMsgI33CMsgClientLBSGetLBEntriesResponseE
@@ -9567,7 +9573,6 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI34CMsgClientRequestItemAnnouncementsE
 12CProtoBufMsgI34CMsgClientSharedLibraryStopPlayingE
 12CProtoBufMsgI34CMsgClientUCMAddScreenshotResponseE
-12CProtoBufMsgI34CMsgClientUFSGetUGCDetailsResponseE
 12CProtoBufMsgI34CPlayer_GetLastPlayedTimes_RequestE
 12CProtoBufMsgI34SiteServerUI_ClientStatus_ResponseE
 12CProtoBufMsgI35CBroadcast_WebRTCStart_NotificationE
@@ -9626,7 +9631,6 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI38CMsgClientCheckAppBetaPasswordResponseE
 12CProtoBufMsgI38CMsgClientDPCheckSpecialSurveyResponseE
 12CProtoBufMsgI38CMsgClientSiteLicenseGetAvailableSeatsE
-12CProtoBufMsgI38CMsgClientUFSGetSingleFileInfoResponseE
 12CProtoBufMsgI38CMsgClientVanityURLChangedNotificationE
 12CProtoBufMsgI38CMsgRemoteDeviceAuthorizationConfirmedE
 12CProtoBufMsgI38CRemoteClient_MarkTaskComplete_RequestE
@@ -10652,9 +10656,8 @@ $steammessages_parental_objects.proto"
 1800
 18000000
 18446744073709551615
-18446744073709551615"
 18446744073709551615";\n%CMsgClientUCMDeleteScreenshotResponse
-18446744073709551615B
+18446744073709551615"p\n!CCloud_EnumerateUserFiles_Request
 18BasicRequestInfo_t
 18CAPIJobDownloadUGC
 18CAPIJobIsFollowing
@@ -11116,11 +11119,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+20000
+2000000
 200M
 2019
 2048
-20000
-2000000
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -11478,7 +11481,6 @@ $steammessages_parental_objects.proto"
 22CMsgClientRemoveFriend
 22CMsgClientSessionToken
 22CMsgClientStatsUpdated
-22CMsgClientUFSShareFile
 22CMsgFSGetFollowerCount
 22CMsgGSDisconnectNotice
 22CMsgICERendezvous_Auth
@@ -11766,6 +11768,7 @@ $steammessages_parental_objects.proto"
 24CClientJobWatchBroadcast
 24CClientServiceMethodList
 24CClientTimedTrialManager
+24CCloud_ShareFile_Request
 24CControllerActionBinding
 24CControllerActivatorImpl
 24CCryptoKeyBase_RawBuffer
@@ -11896,6 +11899,7 @@ $steammessages_parental_objects.proto"
 25CClientJobSetIgnoreFriend
 25CClientJobUploadBroadcast
 25CClientJobWriteScreenshot
+25CCloud_ShareFile_Response
 25CDisableHighResCaptureMsg
 25CDisplayManagerSetModeJob
 25CEconItem_AssetProperties
@@ -12107,7 +12111,6 @@ $steammessages_parental_objects.proto"
 26CMsgClientServersAvailable
 26CMsgClientStat2_StatDetail
 26CMsgClientUCMAddScreenshot
-26CMsgClientUFSGetUGCDetails
 26CMsgClientWalletInfoUpdate
 26CMsgControllerInputBinding
 26CMsgFileLoadDialogResponse
@@ -12823,8 +12826,6 @@ $steammessages_parental_objects.proto"
 30CMsgClientRequestedClientStats
 30CMsgClientUCMAddScreenshot_Tag
 30CMsgClientUDSP2PSessionStarted
-30CMsgClientUFSGetSingleFileInfo
-30CMsgClientUFSShareFileResponse
 30CMsgFSGetFollowerCountResponse
 30CMsgGameServerPlayersQueryData
 30CMsgImeCompositionRangeChanged
@@ -13048,6 +13049,7 @@ $steammessages_parental_objects.proto"
 32CCloud_AppSessionSuspend_Request
 32CCloud_ClientDeleteFile_Response
 32CCloud_CommitHTTPUpload_Response
+32CCloud_GetSingleFileInfo_Request
 32CControllerActionSetLayerChanged
 32CEcon_GetAssetClassInfo_Response
 32CGameNotifications_LocalizedText
@@ -13184,6 +13186,7 @@ $steammessages_parental_objects.proto"
 33CCloud_AppSessionSuspend_Response
 33CCloud_ClientFileDownload_Request
 33CCloud_EnumerateUserFiles_Request
+33CCloud_GetSingleFileInfo_Response
 33CDepotLocalContentServerInterface
 33CDisplayManagerRebuildStateJobX11
 33CGameNetworkingUI_ConnectionState
@@ -13348,7 +13351,6 @@ $steammessages_parental_objects.proto"
 34CMsgClientRequestItemAnnouncements
 34CMsgClientSharedLibraryStopPlaying
 34CMsgClientUCMAddScreenshotResponse
-34CMsgClientUFSGetUGCDetailsResponse
 34CMsgRemoteClientBroadcastDiscovery
 34CMsgSteamDatagramCertificateSigned
 34CMsgSteamDatagramConnectionQuality
@@ -13798,7 +13800,6 @@ $steammessages_parental_objects.proto"
 38CMsgClientLANP2PRequestChunks_ChunkKey
 38CMsgClientPersonaState_Friend_ClanData
 38CMsgClientSiteLicenseGetAvailableSeats
-38CMsgClientUFSGetSingleFileInfoResponse
 38CMsgClientUseLocalDeviceAuthorizations
 38CMsgClientVanityURLChangedNotification
 38CMsgNetworkDevicesData_Device_Wireless
@@ -17685,6 +17686,7 @@ B\n\nquery_type
 B\n\rgroup_summary
 B\n\rstats_to_send
 B\n\tQueryTime
+B\n\tShareFile
 B\n\vapp_changes
 BackUp() can only be called after a successful Next().
 Backend
@@ -18711,6 +18713,8 @@ CCloud_Delete_Response"'\n%CCloud_GetClientEncryptionKey_Request"B\n&CCloud_GetC
 CCloud_GetFileDetails_Request
 CCloud_GetFileDetails_Response
 CCloud_PendingRemoteOperation
+CCloud_ShareFile_Request
+CCloud_ShareFile_Response
 CCloud_UserFile
 CCommunity_ClanAnnouncementInfo
 CCommunity_ClanLocGroupImage
@@ -19755,10 +19759,6 @@ CMsgClientUCMDeleteScreenshot
 CMsgClientUCMPublishFile
 CMsgClientUDSP2PSessionEnded
 CMsgClientUDSP2PSessionStarted
-CMsgClientUFSGetSingleFileInfo
-CMsgClientUFSGetUGCDetails
-CMsgClientUFSShareFile
-CMsgClientUFSShareFileResponse
 CMsgClientUGSGetGlobalStats
 CMsgClientUIMode
 CMsgClientUninstallClientApp
@@ -21684,7 +21684,10 @@ Cloud.CompleteAppUploadBatchBlocking#1
 Cloud.ExternalStorageTransferReport#1
 Cloud.GetAppFileChangelist#1
 Cloud.GetClientEncryptionKey#1
+Cloud.GetFileDetails#1
+Cloud.GetSingleFileInfo#1
 Cloud.ResumeAppSession#1
+Cloud.ShareFile#1
 Cloud.SignalAppExitSyncDone#1
 Cloud.SignalAppLaunchIntent#1
 Cloud.SuspendAppSession#1
@@ -22075,6 +22078,8 @@ Couldn't initialize virtual gamepad: Couldn't create device\n
 Couldn't initialize virtual gamepad: Couldn't open /dev/uinput for writing\n
 Couldn't initialize virtual gamepad: Couldn't write device description\n
 Couldn't join game, couldn't unlock streaming feature\n
+Couldn't join game, invalid auth token: '%s'\n
+Couldn't join game, invalid relay server: '%s'\n
 Couldn't join game, it is blocked by parental settings\n
 Couldn't join game, it is not available in your country\n
 Couldn't open SDL controller %u: %s\n
@@ -25960,6 +25965,7 @@ GetShortcutDisplayName
 GetShortcutInfoByAppID
 GetShortcutInfos
 GetSignedParentalSettings
+GetSingleFileInfo
 GetSingleSharedClip
 GetSizeInCloud
 GetSizeOfSerializedChatRoomDlg
@@ -28825,6 +28831,7 @@ Method GetSessionDetails() not implemented.
 Method GetShaderReportingCadence() not implemented.
 Method GetSharedLibraryApps() not implemented.
 Method GetSignedParentalSettings() not implemented.
+Method GetSingleFileInfo() not implemented.
 Method GetSingleSharedClip() not implemented.
 Method GetStaleBucket() not implemented.
 Method GetState() not implemented.
@@ -29168,6 +29175,7 @@ Method SetUserChatGroupPreferences() not implemented.
 Method SetVRDeviceInfoAggregationReference() not implemented.
 Method SetVideoBookmark() not implemented.
 Method SetWakeAllowed() not implemented.
+Method ShareFile() not implemented.
 Method ShouldPromptForCompatibilityFeedback() not implemented.
 Method SignInstallScript() not implemented.
 Method SignalAppExitSyncDone() not implemented.
@@ -38775,6 +38783,7 @@ Zulu
 \n!CBroadcast_SetClipDetails_Request
 \n!CBroadcast_StartBuildClip_Request
 \n!CBroadcast_WatchBroadcast_Request
+\n!CCloud_GetSingleFileInfo_Response
 \n!CGameNetworkingUI_ConnectionState
 \n!CGameRecording_ExportClip_Request
 \n!CMsgBluetoothManagerDeviceDetails
@@ -38832,7 +38841,6 @@ Zulu
 \n"CMsgClientGetClientDetailsResponse
 \n"CMsgClientPICSChangesSinceResponse
 \n"CMsgClientSharedLibraryStopPlaying
-\n"CMsgClientUFSGetUGCDetailsResponse
 \n"CMsgSteamDatagramConnectionQuality
 \n"CMsgSteamDatagramP2PRoutingSummary
 \n"CPublishedFile_GetItemInfo_Request
@@ -38917,7 +38925,6 @@ Zulu
 \n$steammessages_clientserver_mms.proto
 \n$steammessages_clientserver_ucm.proto
 \n$steammessages_clientserver_uds.proto
-\n$steammessages_clientserver_ufs.proto
 \n$steammessages_econ.steamclient.proto
 \n$steammessages_gamenetworkingui.proto
 \n$steammessages_parental_objects.proto
@@ -38974,7 +38981,6 @@ Zulu
 \n&CMsgClientCheckAppBetaPasswordResponse
 \n&CMsgClientDPCheckSpecialSurveyResponse
 \n&CMsgClientGetAuthorizedDevicesResponse
-\n&CMsgClientUFSGetSingleFileInfoResponse
 \n&CMsgClientUseLocalDeviceAuthorizations
 \n&CMsgSteamDatagramClientPingSampleReply
 \n&CMsgSteamDatagramClientSwitchedPrimary
@@ -45473,7 +45479,6 @@ fileReader.GetUnbufferedIOSectorSize()
 file_committed
 file_ctrl
 file_description
-file_encoded_sha1
 file_extension
 file_find
 file_get_pass
@@ -46223,7 +46228,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenn
+ggenv
 ghjkl
 gidlist
 gidparentcomment
@@ -50698,7 +50703,7 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:436
 low-pri yield - /data/src/clientdll/clientjob.cpp:467
 low-pri yield - /data/src/clientdll/clientjob.cpp:776
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - /data/src/clientdll/clientugc.cpp:6850
+low-pri yield - /data/src/clientdll/clientugc.cpp:6854
 low-pri yield - /data/src/clientdll/compatmanager.cpp:1953
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2226
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2497
@@ -57991,7 +57996,7 @@ stderr
 stdin
 stdout
 steam
-steam Nov 10 2025 19:30:46
+steam Nov 14 2025 19:18:30
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -58145,7 +58150,6 @@ steammessages_auth.steamclient.proto
 steammessages_base.proto
 steammessages_base.proto"
 steammessages_base.proto")\n
-steammessages_base.proto"D\n
 steammessages_base.proto"G\n
 steammessages_base.proto"M\n
 steammessages_base.proto"Z\n
@@ -58168,7 +58172,6 @@ steammessages_clientserver_login.proto
 steammessages_clientserver_mms.proto
 steammessages_clientserver_ucm.proto
 steammessages_clientserver_uds.proto
-steammessages_clientserver_ufs.proto
 steammessages_clientserver_userstats.proto
 steammessages_clientserver_video.proto
 steammessages_cloud.steamclient.proto

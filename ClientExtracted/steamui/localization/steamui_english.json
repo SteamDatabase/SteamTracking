@@ -2686,6 +2686,7 @@
     "Power": "Power",
     "StartStreamingFrom": "Connect",
     "StopStreamingFrom": "Disconnect",
+    "StopStreaming": "Stop Streaming",
     "StopStreamingTo": "Stop Streaming To %1$s",
     "StopStreamingAndSuspendDevice": "Turn Off %1$s",
     "StartStreamingVRFrom": "Stream VR From %1$s",

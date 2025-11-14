@@ -327,6 +327,7 @@
 !.CCloud_AppSessionSuspend_Request
 !.CCloud_ClientDeleteFile_Response
 !.CCloud_CommitHTTPUpload_Response
+!.CCloud_GetSingleFileInfo_Request
 !.CEcon_GetAssetClassInfo_Response"
 !.CGameRecording_GetClips_Response
 !.CGameRecording_SaveClip_Response
@@ -638,6 +639,7 @@
 ".CCloud_AppSessionSuspend_Response
 ".CCloud_ClientFileDownload_Request
 ".CCloud_EnumerateUserFiles_Request
+".CCloud_GetSingleFileInfo_Response
 ".CGameRecording_DeleteClip_Request
 ".CGameRecording_ExportClip_Request
 ".CGamescope_SetBlurParams_Response
@@ -3321,6 +3323,7 @@ ${LANGUAGE}
 (\t"C\n*CCredentials_ValidateEmailAddress_Response
 (\t"C\n-CEcon_ClientGetItemShopOverlayAuthURL_Request
 (\t"C\n-CSteamEngine_GetTextFilterDictionary_Response
+(\t"E\n CCloud_GetSingleFileInfo_Request
 (\t"E\n,CTransportValidation_AppendToString_Response
 (\t"H\n$CClientNotificationDownloadCompleted
 (\t"H\n(CSteamTV_CreateBroadcastChannel_Response
@@ -5563,8 +5566,9 @@ ${LANGUAGE}
 .CCloud_GetFileDetails_Response"
 .CCloud_PendingRemoteOperation"
 .CCloud_PendingRemoteOperation"|\n#CCloud_AppExitSyncDone_Notification
+.CCloud_ShareFile_Request
+.CCloud_ShareFile_Response
 .CCloud_UserFile
-.CCloud_UserFile"p\n!CCloud_EnumerateUserFiles_Request
 .CCommunity_ClanLocGroupImage"Y\n#CCommunity_GetAvatarHistory_Request
 .CCommunity_Comment
 .CCommunity_Comment.Reaction
@@ -8637,6 +8641,7 @@ ${LANGUAGE}
 17StoreItem_Reviews
 18000000
 18446744073709551615
+18446744073709551615"p\n!CCloud_EnumerateUserFiles_Request
 18BasicRequestInfo_t
 18CAlignedBufferBase
 18CAlignedNV12Buffer
@@ -9639,6 +9644,7 @@ ${LANGUAGE}
 23SteamNotificationClient
 23StoreItem_IncludedItems
 24 Mbps
+24CCloud_ShareFile_Request
 24CControllerDeviceSupport
 24CCryptoKeyBase_RawBuffer
 24CDirWatcherPollingThread
@@ -9712,6 +9718,7 @@ ${LANGUAGE}
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 25CAuthenticationRequestMsg
 25CChatRoomGroupHeaderState
+25CCloud_ShareFile_Response
 25CDisableHighResCaptureMsg
 25CEconItem_AssetProperties
 25CEconItem_DescriptionLine
@@ -10352,6 +10359,7 @@ ${LANGUAGE}
 32CCloud_AppSessionSuspend_Request
 32CCloud_ClientDeleteFile_Response
 32CCloud_CommitHTTPUpload_Response
+32CCloud_GetSingleFileInfo_Request
 32CDeleteScreenshotsPromiseBatcher
 32CEcon_GetAssetClassInfo_Response
 32CGameNotifications_LocalizedText
@@ -10434,6 +10442,7 @@ ${LANGUAGE}
 33CCloud_AppSessionSuspend_Response
 33CCloud_ClientFileDownload_Request
 33CCloud_EnumerateUserFiles_Request
+33CCloud_GetSingleFileInfo_Response
 33CControllerWorkshopBindingHandler
 33CGameRecording_DeleteClip_Request
 33CGameRecording_ExportClip_Request
@@ -11994,6 +12003,7 @@ ${LANGUAGE}
 57CSteamInputService_ControllerAccessibilityStrings_Request
 57CSteamInputService_ControllerAxesStateChange_Notification
 57CUserAccount_GetAvailableValveDiscountPromotions_Response
+58 K
 58CAccountHardware_SteamControllerGetConfig_ControllerConfig
 58CAccountHardware_SteamControllerSetConfig_ControllerConfig
 58CAuthenticationSupport_QueryRefreshTokensByAccount_Request
@@ -12628,7 +12638,6 @@ ${LANGUAGE}
 :.CSteamInputService_ControllerAxesStateChange_Notification
 :.CUserAccount_GetAvailableValveDiscountPromotions_Response"
 :.JlN
-:1gi
 :3(!V_DMr{`i
 :5ptI.T(
 :AhHa
@@ -14243,6 +14252,7 @@ B\nYY
 B\n\nquery_type
 B\n\rgroup_summary
 B\n\tQueryTime
+B\n\tShareFile
 B_xe
 BackButton
 BackUp() can only be called after a successful Next().
@@ -14911,6 +14921,8 @@ CCloud_Delete_Response"'\n%CCloud_GetClientEncryptionKey_Request"B\n&CCloud_GetC
 CCloud_GetFileDetails_Request
 CCloud_GetFileDetails_Response
 CCloud_PendingRemoteOperation
+CCloud_ShareFile_Request
+CCloud_ShareFile_Response
 CCloud_UserFile
 CCommunity_ClanAnnouncementInfo
 CCommunity_ClanLocGroupImage
@@ -21343,6 +21355,7 @@ GetShaderReportingCadence
 GetSharedLibraryApps
 GetShortcutDataForPath
 GetSignedParentalSettings
+GetSingleFileInfo
 GetSingleSharedClip
 GetSizeOnDisk
 GetSpewOutputFunc
@@ -23820,6 +23833,7 @@ Method GetSessionDetails() not implemented.
 Method GetShaderReportingCadence() not implemented.
 Method GetSharedLibraryApps() not implemented.
 Method GetSignedParentalSettings() not implemented.
+Method GetSingleFileInfo() not implemented.
 Method GetSingleSharedClip() not implemented.
 Method GetStaleBucket() not implemented.
 Method GetState() not implemented.
@@ -24163,6 +24177,7 @@ Method SetUserChatGroupPreferences() not implemented.
 Method SetVRDeviceInfoAggregationReference() not implemented.
 Method SetVideoBookmark() not implemented.
 Method SetWakeAllowed() not implemented.
+Method ShareFile() not implemented.
 Method ShouldPromptForCompatibilityFeedback() not implemented.
 Method SignInstallScript() not implemented.
 Method SignalAppExitSyncDone() not implemented.
@@ -25680,7 +25695,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov 10 2025 19:30:51
+Nov 14 2025 19:18:37
 November
 NrZl
 NullMetrics()
@@ -26071,7 +26086,6 @@ OrderID
 Origin
 Oriya
 Osmanya
-OszK
 Other
 Other abortable transaction in progress
 Other session playing
@@ -31943,6 +31957,7 @@ Zulu
 \n!CBroadcast_SetClipDetails_Request
 \n!CBroadcast_StartBuildClip_Request
 \n!CBroadcast_WatchBroadcast_Request
+\n!CCloud_GetSingleFileInfo_Response
 \n!CGameRecording_ExportClip_Request
 \n!CMsgBluetoothManagerDeviceDetails
 \n!CMsgRemoteDeviceStreamingResponse
@@ -36142,6 +36157,7 @@ component_type
 compressed data too long
 compressed length too long
 compressed-data
+compressed_file_size
 compression disabled
 compression failed in mz_zip_writer_add_mem
 compression failed in mz_zip_writer_finalize_heap_archive
@@ -38983,7 +38999,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenn
 ghost_
 gidlist
 gidparentcomment
@@ -42028,6 +42044,7 @@ hashes
 hashlen <= 32
 hausa
 have_version_hash
+hcontent
 hcontent_preview
 hd_ringbuf_get
 hd_ringbuf_pop_back
@@ -49820,6 +49837,7 @@ range
 range out of order in character class
 range_duration
 range_possible_clip
+rangecheck_host
 rangeid
 rank
 rapidshare.com
