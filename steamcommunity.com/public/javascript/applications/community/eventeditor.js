@@ -3602,6 +3602,7 @@
                   }),
                 ),
               !v &&
+                b > 0 &&
                 d.createElement(
                   "div",
                   { className: (0, B.A)(q().EventDashboardCtn, "maincontent") },

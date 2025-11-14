@@ -12595,6 +12595,7 @@
             className: (0, _._)(
               _().SaleSectionContainer,
               _().SaleSectionContainer,
+              "SaleSectionContainer",
               "center_row_trgt",
               "ItemCount_" + _,
             ),

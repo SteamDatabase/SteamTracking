@@ -1991,7 +1991,7 @@
     "Sale_BrowserSortOption_ContentHub_Upcoming_ttip": "Popular games releasing soon",
     "Sale_BrowserSortOption_ContentHub_All": "All",
     "Sale_BrowserSortOption_ContentHub_All_ttip": "All matching items, sorted by sales rank",
-    "Sale_BrowserSortOption_AllReleased": "New Releases",
+    "Sale_BrowserSortOption_AllReleased": "Most Recent",
     "Sale_BrowserSortOption_AllReleased_ttip": "All released games ordered by descending Steam release date",
     "Sale_BrowserSortOption_AllUpcoming": "Upcoming",
     "Sale_BrowserSortOption_AllUpcoming_ttip": "All upcoming games ordered by ascending Steam release date",

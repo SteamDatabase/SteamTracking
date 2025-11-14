@@ -4450,23 +4450,20 @@
       const A = new S();
       window.g_PartnerEventStore = A;
       const T = new S(!0);
-      function G(e, t) {
-        const [a, n] = (0, y.useState)(() => A.GetClanEventModel(t)),
-          i = (0, y.useMemo)(() => d.b.InitFromClanID(e), [e]);
+      function G(e, t, a = !1) {
+        const [n, i] = (0, y.useState)(() => A.GetClanEventModel(t)),
+          s = (0, y.useMemo)(() => d.b.InitFromClanID(e), [e]);
         return (
           (0, y.useEffect)(() => {
-            !a &&
+            !n &&
               e > 0 &&
               (A.Init(),
-              A.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+              A.LoadPartnerEventFromClanEventGIDAndClanSteamID(s, t, 0, a).then(
                 i,
-                t,
-                0,
-                !0,
-              ).then(n));
-          }, [i, t, a, e]),
-          (0, f.hL)(A.GetPartnerEventChangeCallback(t), n),
-          a
+              ));
+          }, [s, t, n, e, a]),
+          (0, f.hL)(a ? A.GetPartnerEventChangeCallback(t) : void 0, i),
+          n
         );
       }
       window.g_PartnerEventSummaryStore = T;

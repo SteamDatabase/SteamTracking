@@ -244,16 +244,13 @@
               null,
               (0, _._)("#CreatorHome_EventLink_BasicActive"),
             ),
-          _ &&
-            _.createElement(
-              "p",
-              null,
-              (0, _._)("#CreatorHome_EventLink_V2Active"),
-            ),
           _.createElement(
             _._,
             {
               toolTipContent: (0, _._)("#CreatorHome_EventLink_Create_ttip"),
+              style: {
+                width: "25%",
+              },
             },
             _.createElement(
               _._,
@@ -566,23 +563,23 @@
             window.location.assign(_);
           });
         return _.createElement(
-          "div",
+          _._,
           {
-            className: _().ManageButton,
-            onClick: _,
+            toolTipContent: _,
           },
           _.createElement(
             "div",
             {
-              className: _().SVGIcon,
+              className: _().ManageButton,
+              onClick: _,
             },
-            _,
-          ),
-          _.createElement(
-            _._,
-            {
-              toolTipContent: _,
-            },
+            _.createElement(
+              "div",
+              {
+                className: _().SVGIcon,
+              },
+              _,
+            ),
             __webpack_require__,
           ),
         );

@@ -11327,6 +11327,7 @@
             className: (0, g.A)(
               d().SaleSectionContainer,
               b().SaleSectionContainer,
+              "SaleSectionContainer",
               "center_row_trgt",
               "ItemCount_" + t,
             ),

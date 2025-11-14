@@ -878,7 +878,7 @@ html.responsive.touch ._3xpkvUfVoGX-QZFAF9bHX1 {
 }
 ._30RNOxqk1P9UdZBI76xoIw {
   position: relative;
-  padding: 10px;
+  margin: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -890,6 +890,15 @@ html.responsive.touch ._3xpkvUfVoGX-QZFAF9bHX1 {
   aspect-ratio: 1.6;
   overflow: hidden;
   border-radius: 4px;
+}
+.ItemCount_2 ._30RNOxqk1P9UdZBI76xoIw {
+  aspect-ratio: 1.8;
+}
+.ItemCount_3 ._30RNOxqk1P9UdZBI76xoIw {
+  aspect-ratio: 1.5;
+}
+.SaleSectionContainer ._30RNOxqk1P9UdZBI76xoIw {
+  margin: 0;
 }
 ._30RNOxqk1P9UdZBI76xoIw:hover ._2wfKMgnSzEU61ZQaCLLRL6 {
   transform: scale(1.1);

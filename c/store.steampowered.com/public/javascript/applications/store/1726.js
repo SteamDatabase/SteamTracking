@@ -4695,25 +4695,26 @@
       const _ = new _();
       window.g_PartnerEventStore = _;
       const _ = new _(!0);
-      function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(() =>
-            _.GetClanEventModel(_),
-          ),
+      function _(_, _, __webpack_require__ = !1) {
+        const [_, _] = (0, _.useState)(() => _.GetClanEventModel(_)),
           _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]);
         return (
           (0, _.useEffect)(() => {
-            !__webpack_require__ &&
+            !_ &&
               _ > 0 &&
               (_.Init(),
               _.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                 _,
                 _,
                 0,
-                !0,
+                __webpack_require__,
               ).then(_));
-          }, [_, _, __webpack_require__, _]),
-          (0, _._)(_.GetPartnerEventChangeCallback(_), _),
-          __webpack_require__
+          }, [_, _, _, _, __webpack_require__]),
+          (0, _._)(
+            __webpack_require__ ? _.GetPartnerEventChangeCallback(_) : void 0,
+            _,
+          ),
+          _
         );
       }
       window.g_PartnerEventSummaryStore = _;
