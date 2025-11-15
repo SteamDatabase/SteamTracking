@@ -696,7 +696,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 						$LengthExpected = curl_getinfo( $Handle, CURLINFO_CONTENT_LENGTH_DOWNLOAD_T );
 						$LengthDownload = curl_getinfo( $Handle, CURLINFO_SIZE_DOWNLOAD_T );
 
-						if( $LengthExpected !== $LengthDownload && !$IsSSR && $Request !== 'store.steampowered.com/mobile' )
+						if( $LengthExpected !== $LengthDownload && !$IsSSR && $Request !== 'Random/SteamMobileApks.txt' )
 						{
 							$this->Log( '{lightred}Wrong Length {normal}(' . $LengthDownload . ' != ' . $LengthExpected . '){normal} - ' . $URL );
 
