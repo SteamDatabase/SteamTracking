@@ -16,7 +16,6 @@ const pathsToRecurse = [
 	pathResolve(__dirname, "store.steampowered.com/"),
 	pathResolve(__dirname, "checkout.steampowered.com/"),
 	pathResolve(__dirname, "www.dota2.com/"),
-	pathResolve(__dirname, "www.underlords.com/"),
 	pathResolve(__dirname, "www.counter-strike.net/"),
 ];
 
@@ -33,7 +32,6 @@ const paths = [
 	pathResolve(__dirname, "store.steampowered.com/public/shared/javascript/legacy_web/"),
 	pathResolve(__dirname, "www.dota2.com/public/javascript/applications/dpc/"),
 	pathResolve(__dirname, "www.dota2.com/public/javascript/dota_react/"),
-	pathResolve(__dirname, "www.underlords.com/public/javascript/"),
 	pathResolve(__dirname, "www.counter-strike.net/public/javascript/csgo_react/"),
 ];
 

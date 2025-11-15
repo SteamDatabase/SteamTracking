@@ -449,10 +449,6 @@ https://www.dota2.com/public/javascript/dota_react/main.js?__TIME__&l=english&__
 https://www.dota2.com/public/javascript/dota_react/manifest.js?__TIME__&__CDN__
 https://www.dota2.com/public/javascript/dota_react/shared_english-json.js?__TIME__&__CDN__
 https://www.dota2.com/public/javascript/dota_react/AdminPages.js?__TIME__&__CDN__
-https://www.underlords.com/public/javascript/localization/items_english.js?__TIME__&l=english&__CDN__
-https://www.underlords.com/public/javascript/localization/main_english.js?__TIME__&l=english&__CDN__
-https://www.underlords.com/public/javascript/localization/shared_english.js?__TIME__&l=english&__CDN__
-https://www.underlords.com/public/javascript/underlords.js?__TIME__&l=english&__CDN__
 https://www.counter-strike.net/public/javascript/csgo_react/manifest.js?__TIME__&l=english&__CDN__
 https://www.counter-strike.net/public/javascript/csgo_react/main.js?__TIME__&l=english&__CDN__
 https://www.counter-strike.net/public/javascript/csgo_react/main_english-json.js?__TIME__&__CDN__

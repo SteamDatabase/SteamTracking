@@ -554,7 +554,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			if(
 				$IsSSR ||
 				str_ends_with( $File, 'english-json.js' ) ||
-				str_starts_with( $OriginalFile, 'www.underlords.com/' ) ||
 				str_starts_with( $OriginalFile, 'www.dota2.com/' ) ||
 				str_starts_with( $OriginalFile, 'www.counter-strike.net/' ) ||
 				str_contains( $OriginalFile, '/webui/' ) ||

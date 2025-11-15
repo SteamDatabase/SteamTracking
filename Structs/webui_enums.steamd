@@ -6,22 +6,6 @@ enum AudioPlayback
 	AudioPlayback_Idle = 3;
 }
 
-enum BluetoothDeviceType
-{
-	k_BluetoothDeviceType_Invalid = 0;
-	k_BluetoothDeviceType_Unknown = 1;
-	k_BluetoothDeviceType_Phone = 2;
-	k_BluetoothDeviceType_Computer = 3;
-	k_BluetoothDeviceType_Headset = 4;
-	k_BluetoothDeviceType_Headphones = 5;
-	k_BluetoothDeviceType_Speakers = 6;
-	k_BluetoothDeviceType_OtherAudio = 7;
-	k_BluetoothDeviceType_Mouse = 8;
-	k_BluetoothDeviceType_Joystick = 9;
-	k_BluetoothDeviceType_Gamepad = 10;
-	k_BluetoothDeviceType_Keyboard = 11;
-}
-
 enum BundleSort
 {
 	k_BundleSort_Name = 1;
@@ -318,15 +302,6 @@ enum EConnectivityTestResult
 	k_EConnectivityTestResult_Failed = 4;
 	k_EConnectivityTestResult_WifiDisabled = 5;
 	k_EConnectivityTestResult_NoLAN = 6;
-}
-
-enum EConnectivityTestSimulation
-{
-	k_EConnectivityTestSimulation_None = 0;
-	k_EConnectivityTestSimulation_CaptivePortal_Redirected = 1;
-	k_EConnectivityTestSimulation_CaptivePortal_InPlace = 2;
-	k_EConnectivityTestSimulation_TimeOut = 3;
-	k_EConnectivityTestSimulation_Fail = 4;
 }
 
 enum EContentModerationAction
@@ -1292,13 +1267,6 @@ enum UnnamedEnum01e0af9000abb618
 	Error = 2;
 }
 
-enum UnnamedEnum0417760694451931
-{
-	Standard = 1;
-	Knockout = 2;
-	Duos = 3;
-}
-
 enum UnnamedEnum042d5c64b27947e9
 {
 	INVALID = 0;
@@ -1905,15 +1873,6 @@ enum UnnamedEnum24822a7e69ba9ab7
 	k_ERejected = 2;
 }
 
-enum UnnamedEnum258cde65fc9c0016
-{
-	Invalid = 0;
-	Casual = 1;
-	PrivateLobby = 2;
-	SoloBot = 3;
-	Ranked = 4;
-}
-
 enum UnnamedEnum258d6841bf5f8ea0
 {
 	Hidden = 0;
@@ -1927,14 +1886,6 @@ enum UnnamedEnum25bb92eddba41afe
 	Preprocessing = 2;
 	Keras = 3;
 	Train = 4;
-}
-
-enum UnnamedEnum2603c05e3f1b8c52
-{
-	NOT_TRACKING = -1;
-	UP_TO_DATE = 0;
-	POSSIBLY_STALE = 1;
-	STALE = 2;
 }
 
 enum UnnamedEnum26b26332fa565251
@@ -2008,20 +1959,6 @@ enum UnnamedEnum2c763df13954ae16
 	DealLive = 6;
 	DealCompleted = 7;
 	DealFailed = 8;
-}
-
-enum UnnamedEnum2cb9b3e31468ae28
-{
-	Invalid = 0;
-	Normal = 1;
-	Turbo = 2;
-	Duos = 3;
-	TechPrototypeA = 4;
-	Sandbox = 5;
-	Puzzle = 6;
-	Tutorial = 7;
-	Streetfight = 8;
-	Onslaught = 9;
 }
 
 enum UnnamedEnum2de1caa33e895f3d
@@ -2925,21 +2862,6 @@ enum UnnamedEnum7396c7f5b0045fc8
 	Right = 3;
 }
 
-enum UnnamedEnum73fab2eb67048082
-{
-	Error = -2;
-	Invalid = -1;
-	UpToDate = 0;
-	Checking = 1;
-	Available = 2;
-	Downloading = 3;
-	Downloaded = 4;
-	Applying = 5;
-	Applied = 6;
-	ClientRestartPending = 7;
-	SystemRestartPending = 8;
-}
-
 enum UnnamedEnum749b0879535720e9
 {
 	Text = 0;
@@ -3454,14 +3376,6 @@ enum UnnamedEnum95c6d1aa56bc1dce
 	ClickThrough = 1;
 	AddToWishlist = 2;
 	AddToCart = 3;
-}
-
-enum UnnamedEnum961ee65102a01e04
-{
-	Unit = 0;
-	Item = 1;
-	Synergy = 2;
-	Talent = 3;
 }
 
 enum UnnamedEnum9744fddc6b9fcf31
@@ -4210,18 +4124,6 @@ enum UnnamedEnume6093c05096df8e2
 	INVALID = 0;
 	FORWARD = 1;
 	BACKWARD = 2;
-}
-
-enum UnnamedEnume91934d732c052f5
-{
-	None = 0;
-	StaticWep = 1;
-	DynamicWep = 2;
-	Wpa = 4;
-	WpaEnterprise = 8;
-	Wpa2 = 16;
-	Wpa2Enterprise = 32;
-	Unsupported = 32768;
 }
 
 enum UnnamedEnume99001381424a13a
