@@ -6782,7 +6782,7 @@
               _ = _.filter((_, _) => _ % 7 == 6);
             let _ = 0;
             for (const _ of _) _ += _[_]?.length ?? 0;
-            const _ = _ >= 5;
+            const _ = _ >= 3;
             for (let _ = 0; _ < _.length; _ += 1) {
               if (_ % 7 == 0 && _[_[_]]?.length > 0) {
                 const _ = _[_ + 1];
