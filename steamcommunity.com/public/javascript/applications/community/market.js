@@ -7136,7 +7136,11 @@
         return a.createElement(
           c.a,
           { marginTop: Ea },
-          a.createElement($.EY, { weight: "medium", size: "3" }, t),
+          a.createElement(
+            $.EY,
+            { weight: "medium", size: "3" },
+            $e.Localize("#AdvancedSearch_SteamItems_TypeLabel"),
+          ),
           a.createElement(
             te,
             {

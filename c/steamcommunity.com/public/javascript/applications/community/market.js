@@ -8864,7 +8864,7 @@
               weight: "medium",
               size: "3",
             },
-            _,
+            _.Localize("#AdvancedSearch_SteamItems_TypeLabel"),
           ),
           _.createElement(
             _,

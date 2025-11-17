@@ -15,6 +15,7 @@
 	"AdvancedSearch_TextSearch_PlaceholderWithApp": "Search in %1$s...",
 	"AdvancedSearch_TypeSwitch_InGame": "In Game Items",
 	"AdvancedSearch_TypeSwitch_SteamItems": "Steam Items",
+	"AdvancedSearch_SteamItems_TypeLabel": "Item Type",
 	"AdvancedSearch_NoFacets": "This game has no Market filters.",
 	"AdvancedSearch_NoFacetsSearch": "Click \"Search\" to view available items.",
 	"AdvancedSearch_FacetLoadError": "Something went wrong while loading the filters for this game.",
