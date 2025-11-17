@@ -93,7 +93,7 @@
     "RemotePlay_Explainer_HowWorks_2": "<1>2</1> - 打开 <2>蒸汽平台流式应用</2>并安全地连接到您的计算机。",
     "RemotePlay_Explainer_GetApp_Desc": "扫描此二维码以在 %1$s 查看蒸汽平台手机应用的所有选项。",
     "Steam_AppUpdateError_47": "蒸汽平台客户端版本过旧",
-    "AppLaunchError_BlockedArguments": "由于存在潜在的不安全启动选项，因此蒸汽平台阻止启动此游戏",
+    "AppLaunchError_BlockedArguments": "由于存在潜在的不安全启动选项，因此蒸汽平台阻止了此游戏的启动。",
     "ShareUploadScreenshot_Description": "将此截图上传至您的蒸汽平台个人资料及动态推送公告。",
     "ShareUploadScreenshot_Uploading": "正在上传至蒸汽平台",
     "ShareUploadScreenshot_PermissionDenied": "蒸汽平台无法上传此截图。您的帐户处于封禁中，因此无法上传内容。",
@@ -305,7 +305,7 @@
     "Settings_UpdateChannel_Beta_Description": "测试蒸汽平台的新功能，更新频繁。",
     "Settings_UpdateChannel_Preview_Description": "测试新的蒸汽平台功能和系统级功能，更新频繁。您可能会遇到问题。",
     "Settings_SteamPlay_NeedsRestart": "您必须重启蒸汽平台才能应用 Steam Play 设置。",
-    "Settings_Account_ClientBeta_Desc": "您可以选择在最新的蒸汽平台客户端广泛发布之前参与测试",
+    "Settings_Account_ClientBeta_Desc": "您可以选择在最新的蒸汽平台客户端大范围发布之前参与测试",
     "Settings_Account_SteamGuard": "蒸汽平台令牌",
     "Settings_Account_ManageSteamGuard": "管理蒸汽平台令牌",
     "Settings_Account_Security_Status_State_1": "受蒸汽平台令牌保护中",
@@ -313,7 +313,7 @@
     "Settings_Account_Security_Status_State_4": "蒸汽平台令牌未启用",
     "Settings_Account_Security_Status_State_1_WithTime": "自 %1$s 起受到蒸汽平台令牌保护",
     "Settings_Account_Security_Status_TwoFactor": "双因素验证保护已通过蒸汽平台手机应用开启",
-    "Settings_Account_Security_Status_TwoFactor_WithTime": "双因素验证保护已自 %1$s 起通过蒸汽平台手机应用开启",
+    "Settings_Account_Security_Status_TwoFactor_WithTime": "双因素验证保护已自 %1$s 起通过蒸汽平台手机应用启用。",
     "Settings_Account_SteamGuard_LearnMore": "了解通过蒸汽平台手机应用进行双因素验证",
     "Settings_Account_SteamGuard_Status": "蒸汽平台令牌状态：",
     "Settings_Account_BackupCodes": "备用蒸汽平台令牌验证码",
@@ -488,5 +488,6 @@
     "ShareSheet_ShareOnSteam_PartialUploaded": "%1$s 张截图已分享至蒸汽平台，因此将跳过。",
     "ShareSheet_ShareOnSteam_PartialUploaded_Plural": "%1$s 张截图已分享至蒸汽平台，因此将跳过。",
     "Overlay_ClipHint_1": "您的剪辑已保存至您的“蒸汽平台录像及截图”中",
-    "Overlay_ClipHint_2": "要管理/编辑/分享您所有的录像，请从客户端菜单转至%1$s，或在下方的蒸汽平台叠加界面菜单中选择 %2$s。"
+    "Overlay_ClipHint_2": "要管理/编辑/分享您所有的录像，请从客户端菜单转至%1$s，或在下方的蒸汽平台叠加界面菜单中选择 %2$s。",
+    "FamilyGroup_QueryFailed": "无法获取关于您的蒸汽平台家庭“%1$s”的信息。请稍后重试。（%2$s）"
 }

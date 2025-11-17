@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "Specialpris: %1$s",
     "Generic_More_Info": "Mere information",
     "Account_Safety_Header": "Hold din konto sikker",
-    "Account_Safety_Notice_Prefix": "BEMÆRK: %1$s",
-    "Account_Safety_Notice": "Repræsentanter fra Valve eller Steam vil ALDRIG kontakte dig via chat. Vær ekstremt forsigtig, når du åbner links, især hvis de kræver, at du logger på Steam. Hvis det er mistænkeligt, uventet, presserende eller generøst, er det sandsynligvis svindel.",
+    "Account_Safety_Notice": "BEMÆRK: Repræsentanter fra Valve eller Steam vil ALDRIG kontakte dig via chat. Vær ekstremt forsigtig, når du åbner links, især hvis de kræver, at du logger på Steam. Hvis det er mistænkeligt, uventet, presserende eller generøst, er det sandsynligvis svindel.",
     "OverlayButtonHeader_Timeline": "Spiloptagelse",
     "ChatEntry_UploadLastClip": "Upload sidste klip",
     "GameRecording_OverlayShowVideo": "Vis video",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "En byttehandel blev tilbageført",
     "SteamNotifications_TradeReversal_Body_Short": "En byttehandel blev tilbageført",
     "SteamNotifications_TradeReversal_Description": "En af dine seneste byttehandler blev tilbageført af din byttepartner.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "Må vi indsamle anonymiserede data om billedhastighed i spil for at forbedre SteamOS-enheder for alle spillere? Du kan ændre dette senere i \"Indstillinger\".",
+    "GameFrameRateReporting_Response_Yes": "Ja",
+    "GameFrameRateReporting_Response_No": "Nej tak",
+    "Account_Safety_Notice_Report": "Repræsentanter fra Valve eller Steam vil ALDRIG kontakte dig via chat."
 }

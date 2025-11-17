@@ -175,5 +175,8 @@
     "moderationaction_updated": "Dettagli aggiornati",
     "moderationaction_locked": "Bloccata",
     "moderationaction_unlocked": "Sbloccata",
-    "moderationaction_unknown": "Azione sconosciuta"
+    "moderationaction_unknown": "Azione sconosciuta",
+    "ContentReportReasonCategoryDesc_Suspicious": "Phishing, truffe, impersonificazione di amici o Assistenza di Steam",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Molestia, spam, immagini inappropriate",
+    "ContentReportSubmitted_Chat_Description": "Grazie per aver inviato la tua segnalazione. Abbiamo raccolto una piccola parte del registro di chat e l'abbiamo sottoposta a moderazione. Non devi intraprendere ulteriori azioni."
 }

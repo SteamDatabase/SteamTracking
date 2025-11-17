@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Bericht van een gebruiker waar je niet mee bevriend bent",
     "NonFriendAction_Block": "Communicatie blokkeren",
     "NonFriendAction_Allow": "Communicatie toestaan",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Verdachte chat",
+    "SuspiciousMessage_Explanation": "Deze chat ziet er verdacht uit. Meld je niet aan bij je accounts via links die je van deze persoon krijgt, ook niet bij Steam. Steam-medewerkers nemen NOOIT contact met je op via chat of externe programma's. Links zijn uitgeschakeld tot dit bericht wordt gesloten.",
     "Friend_Menu_Open": "Opties",
     "Friend_Menu_AddNickname": "Bijnaam toevoegen",
     "Friend_Menu_AddToQuickAccess": "Aan favorieten toevoegen",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Opgelost dat vrienden- en chatvensters niet in de overlay in het spel werden weergegeven op Linux en macOS.",
     "BBCode_Loading": "Laden",
     "BBCode_Failed": "Laden mislukt",
-    "broadcastDetails_Playing": "Speelt"
+    "broadcastDetails_Playing": "Speelt",
+    "Chat_Actions_ReportGroup": "Groepschat rapporteren"
 }

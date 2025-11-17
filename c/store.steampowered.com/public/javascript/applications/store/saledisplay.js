@@ -5634,7 +5634,8 @@
             ref: _,
             className: _().SaleSectionListContainer,
             onGamepadDirection: _,
-            focusable: !0,
+            focusable: !1,
+            focusableIfEmpty: !0,
           },
           _,
         );

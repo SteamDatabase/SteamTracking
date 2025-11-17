@@ -175,5 +175,8 @@
     "moderationaction_updated": "問題の詳細が更新されました",
     "moderationaction_locked": "ロック済み",
     "moderationaction_unlocked": "ロック解除済み",
-    "moderationaction_unknown": "不明なアクション"
+    "moderationaction_unknown": "不明なアクション",
+    "ContentReportReasonCategoryDesc_Suspicious": "フィッシング、詐欺、友人やSteamサポート担当者へのなりすまし",
+    "ContentReportReasonCategoryDesc_Inappropriate": "嫌がらせ、スパム、不適切な画像",
+    "ContentReportSubmitted_Chat_Description": "ご報告いただきありがとうございます。チャットログの一部を収集し、モデレーターに送信しました。追加のアクションは不要です。"
 }

@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "フレンドではないユーザーからのメッセージ",
     "NonFriendAction_Block": "コミュニケーションをブロックする",
     "NonFriendAction_Allow": "コミュニケーションを許可する",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "疑わしいチャット",
+    "SuspiciousMessage_Explanation": "このチャットには疑わしい要素が見受けられます。このユーザーが提供するリンクからは、Steamを含むいずれのアカウントにもサインインしないでください。Steamの担当者がチャットや外部プログラムを介して連絡を取ることは「絶対に」ありません。このメッセージを閉じるまで、リンクは無効になります。",
     "Friend_Menu_Open": "オプション",
     "Friend_Menu_AddNickname": "ニックネームを追加",
     "Friend_Menu_AddToQuickAccess": "お気に入りに追加",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Linux および macOS のゲーム内オーバーレイで、フレンドとチャットウィンドウが表示されない問題を修正。",
     "BBCode_Loading": "読み込み中",
     "BBCode_Failed": "読み込みに失敗しました",
-    "broadcastDetails_Playing": "プレイ中"
+    "broadcastDetails_Playing": "プレイ中",
+    "Chat_Actions_ReportGroup": "グループチャットを報告"
 }

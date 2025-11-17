@@ -175,5 +175,8 @@
     "moderationaction_updated": "Podrobnosti předmětu byly aktualizovány",
     "moderationaction_locked": "Uzamčeno",
     "moderationaction_unlocked": "Odemčeno",
-    "moderationaction_unknown": "Neznámé opatření"
+    "moderationaction_unknown": "Neznámé opatření",
+    "ContentReportReasonCategoryDesc_Suspicious": "Phishing, podvody, napodobování přátel nebo podpory služby Steam",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Obtěžování, spam, nevhodné obrázky",
+    "ContentReportSubmitted_Chat_Description": "Děkujeme Vám za odeslání nahlášení. Společně s nahlášením jsme odebrali malou část konverzace a přeposlali ji k moderaci. Od Vás není vyžadována žádná další akce."
 }

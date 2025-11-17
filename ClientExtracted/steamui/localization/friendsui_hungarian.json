@@ -634,7 +634,7 @@
     "NonFriendAction_Block": "Kommunikáció blokkolása",
     "NonFriendAction_Allow": "Kommunikáció engedélyezése",
     "SuspiciousMessage_Header": "Gyanús csevegés",
-    "SuspiciousMessage_Explanation": "Ez a csevegés gyanúsnak tűnik. Ne jelentkezz be semmilyen fiókodba, a Steamet is beleértve, az ettől a személytől kapott hivatkozásokon keresztül. A Steam képviselői SOHA nem fognak veled kapcsolatba lépni csevegésen vagy külső programokon keresztül. Ha váratlan, sürgős vagy nagylelkű kérés, akkor valószínűleg átverés.",
+    "SuspiciousMessage_Explanation": "Ez a csevegés gyanúsnak tűnik. Ne jelentkezz be semmilyen fiókodba, a Steamet is beleértve, az ettől a személytől kapott hivatkozásokon keresztül. A Steam képviselői SOHA nem fognak veled kapcsolatba lépni csevegésen vagy külső programokon keresztül. Ezen üzenet bezárásáig a hivatkozások le lesznek tiltva.",
     "Friend_Menu_Open": "Beállítások",
     "Friend_Menu_AddNickname": "Becenév hozzáadása",
     "Friend_Menu_AddToQuickAccess": "Kedvencekhez adás",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Javítottuk, hogy a barát- és csevegésablakok Linuxon és macOS-en nem jelentek meg a játékbeli átfedésen.",
     "BBCode_Loading": "Betöltés",
     "BBCode_Failed": "Nem sikerült betölteni",
-    "broadcastDetails_Playing": "Ezzel játszik:"
+    "broadcastDetails_Playing": "Ezzel játszik:",
+    "Chat_Actions_ReportGroup": "Csoportos csevegés jelentése"
 }

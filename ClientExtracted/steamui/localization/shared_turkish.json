@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "%1$s özel fiyatıyla",
     "Generic_More_Info": "Daha Fazla Bilgi",
     "Account_Safety_Header": "Hesabınızın Güvenliğini Sağlayın",
-    "Account_Safety_Notice_Prefix": "NOT: %1$s",
-    "Account_Safety_Notice": "Valve veya Steam temsilcileri, sizinle sohbet aracılığıyla ASLA irtibata geçmez. Bağlantıları açarken, özellikle de bu bağlantı Steam'e giriş yapmanızı istiyorsa, çok dikkatli olun. Şüpheli, beklenmeyen, acil veya çok cömert bir teklif durumu söz konusuysa, bu yüksek ihtimalle bir dolandırıcılık girişimidir.",
+    "Account_Safety_Notice": "NOT: Valve veya Steam temsilcileri, sizinle sohbet aracılığıyla ASLA irtibata geçmez. Bağlantıları açarken, özellikle de bu bağlantı Steam'e giriş yapmanızı istiyorsa, çok dikkatli olun. Şüpheli, beklenmeyen, acil veya çok cömert bir teklif durumu söz konusuysa, bu yüksek ihtimalle bir dolandırıcılık girişimidir.",
     "OverlayButtonHeader_Timeline": "Oyun Kaydı",
     "ChatEntry_UploadLastClip": "Son klibi yükle",
     "GameRecording_OverlayShowVideo": "Videoyu Göster",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "Bir takas iptal edildi",
     "SteamNotifications_TradeReversal_Body_Short": "Bir takas iptal edildi",
     "SteamNotifications_TradeReversal_Description": "Son takaslarınızdan biri takas yaptığınız kişi tarafından iptal edildi.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "SteamOS aygıtlarını tüm oyuncular için daha iyi hâle getirmek amacıyla, oyunların anonim kare hızı verilerini toplamamıza izin veriyor musunuz? Bu tercihi daha sonra ayarlardan değiştirebilirsiniz.",
+    "GameFrameRateReporting_Response_Yes": "Evet",
+    "GameFrameRateReporting_Response_No": "Hayır, teşekkürler",
+    "Account_Safety_Notice_Report": "Valve veya Steam temsilcileri, sizinle sohbet aracılığıyla ASLA irtibata geçmez."
 }

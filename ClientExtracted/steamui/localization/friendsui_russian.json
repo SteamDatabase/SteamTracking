@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Сообщение от пользователя, который не является вашим другом",
     "NonFriendAction_Block": "Заблокировать",
     "NonFriendAction_Allow": "Разблокировать",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Подозрительная переписка в чате",
+    "SuspiciousMessage_Explanation": "Эта переписка выглядит подозрительно. Не входите в свой аккаунт Steam и учётные записи в других сервисах по ссылкам от этого пользователя. Представители Steam НИКОГДА не свяжутся с вами через чат или сторонние программы. Ссылки не будут работать, пока вы не закроете это сообщение.",
     "Friend_Menu_Open": "Опции",
     "Friend_Menu_AddNickname": "Добавить ник",
     "Friend_Menu_AddToQuickAccess": "Добавить в избранные",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Исправлена ошибка, из-за которой окна друзей и чата не отображались во внутриигровом оверлее на Linux и macOS.",
     "BBCode_Loading": "Загрузка",
     "BBCode_Failed": "Ошибка загрузки",
-    "broadcastDetails_Playing": "Воспроизведение"
+    "broadcastDetails_Playing": "Воспроизведение",
+    "Chat_Actions_ReportGroup": "Пожаловаться на групповой чат"
 }

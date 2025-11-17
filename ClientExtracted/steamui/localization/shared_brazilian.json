@@ -2458,7 +2458,7 @@
     "SteamDeckVerified_TestResult_AuxFunctionalityNotAccessible_MapEditor": "Algumas funcionalidades complementares não estão acessíveis no Steam Deck: editor de mapas",
     "SteamDeckVerified_TestResult_MultiWindowAppAutomaticallySetsFocus": "O jogo usa múltiplas janelas e pode ser necessário trocar para a janela apropriada manualmente usando o Painel Steam.",
     "SteamDeckVerified_TestResult_DisplayOutputNotCorrectlyScaled": "O jogo não usa as dimensões corretas no Steam Deck e pode ser necessário configurar a resolução de exibição manualmente.",
-    "SteamDeckVerified_TestResult_ResumeFromSleepNotFunctional": "O jogo pode sofrer problemas temporários após o Steam Deck entrar no modo de suspensão.",
+    "SteamDeckVerified_TestResult_ResumeFromSleepNotFunctional": "O jogo pode sofrer problemas temporários após o Steam Deck entrar em repouso.",
     "SteamDeckVerified_TestResult_GamepadNotEnabledByDefault": "O jogo exige que a compatibilidade com controles seja ativada manualmente nas configurações do jogo.",
     "SteamDeckVerified_TestResult_CloudSavesNotEnabledByDefault": "O jogo exige que a compatibilidade com a Nuvem Steam para salvamentos seja ativada manualmente nas configurações do jogo.",
     "SteamDeckVerified_TestResult_NotFullyFunctionalWithoutExternalKeyboard": "Partes do jogo se beneficiam do uso de um teclado externo.",
@@ -2496,7 +2496,7 @@
     "SteamOS_TestResult_AuxFunctionalityNotAccessible_MapEditor": "Algumas funcionalidades complementares não estão acessíveis no SteamOS: editor de mapas.",
     "SteamOS_TestResult_MultiWindowAppAutomaticallySetsFocus": "O jogo usa múltiplas janelas e pode ser necessário trocar para a janela apropriada manualmente usando o Painel Steam.",
     "SteamOS_TestResult_DisplayOutputNotCorrectlyScaled": "O jogo não usa as dimensões corretas no SteamOS e pode ser necessário configurar a resolução de exibição manualmente.",
-    "SteamOS_TestResult_ResumeFromSleepNotFunctional": "O jogo pode sofrer problemas temporários após o SteamOS entrar no modo de suspensão.",
+    "SteamOS_TestResult_ResumeFromSleepNotFunctional": "O jogo pode sofrer problemas temporários após o SteamOS entrar em repouso.",
     "SteamOS_TestResult_GamepadNotEnabledByDefault": "O jogo exige que a compatibilidade com controles seja ativada manualmente nas configurações do jogo.",
     "SteamOS_TestResult_CloudSavesNotEnabledByDefault": "O jogo exige que a compatibilidade com a Nuvem Steam para salvamentos seja ativada manualmente nas configurações do jogo.",
     "SteamOS_TestResult_NotFullyFunctionalWithoutExternalKeyboard": "Partes do jogo se beneficiam do uso de um teclado externo.",
@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "Preço especial: %1$s.",
     "Generic_More_Info": "Mais informações",
     "Account_Safety_Header": "Mantenha a sua conta segura",
-    "Account_Safety_Notice_Prefix": "AVISO: %1$s",
-    "Account_Safety_Notice": "representantes da Valve ou do Steam NUNCA entrarão em contato com você por uma conversa. Exerça extrema cautela ao abrir links, especialmente se solicitarem que inicie a sessão no Steam. Caso a mensagem seja suspeita, inesperada, generosa demais ou exija urgência, é provável que seja um golpe.",
+    "Account_Safety_Notice": "AVISO: representantes da Valve ou do Steam NUNCA entrarão em contato com você por uma conversa. Exerça extrema cautela ao abrir links, especialmente se solicitarem que inicie a sessão no Steam. Caso a mensagem seja suspeita, inesperada, generosa demais ou exija urgência, é provável que seja um golpe.",
     "OverlayButtonHeader_Timeline": "Gravação de jogos",
     "ChatEntry_UploadLastClip": "Enviar último clipe",
     "GameRecording_OverlayShowVideo": "Exibir vídeo",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "Uma troca foi revertida",
     "SteamNotifications_TradeReversal_Body_Short": "Uma troca foi revertida",
     "SteamNotifications_TradeReversal_Description": "Uma das suas trocas recentes foi revertida pela contraparte.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "Podemos coletar dados anonimizados sobre a taxa de quadros do jogo para melhorar os dispositivos SteamOS para todos os usuários? Você pode alterar isso posteriormente em Configurações.",
+    "GameFrameRateReporting_Response_Yes": "Sim",
+    "GameFrameRateReporting_Response_No": "Não",
+    "Account_Safety_Notice_Report": "Representantes da Valve ou do Steam NUNCA entrarão em contato com você por uma conversa."
 }

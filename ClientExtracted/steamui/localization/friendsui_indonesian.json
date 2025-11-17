@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Pesan dari pengguna yang bukan temanmu",
     "NonFriendAction_Block": "Blokir Komunikasi",
     "NonFriendAction_Allow": "Izinkan Komunikasi",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Obrolan Mencurigakan",
+    "SuspiciousMessage_Explanation": "Obrolan ini terlihat mencurigakan. Jangan login ke semua akunmu, termasuk Steam, dari tautan yang disediakan oleh orang ini. Perwakilan Steam TIDAK AKAN PERNAH menghubungimu via obrolan atau program eksternal. Tautan dinonaktifkan sampai pesan ini ditutup.",
     "Friend_Menu_Open": "Opsi",
     "Friend_Menu_AddNickname": "Tambahkan Nama Panggilan",
     "Friend_Menu_AddToQuickAccess": "Tambahkan ke Favorit",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Memperbaiki jendela Teman dan Obrolan yang tidak tampil di overlay dalam game pada Linux dan macOS.",
     "BBCode_Loading": "Memuat",
     "BBCode_Failed": "Gagal memuat",
-    "broadcastDetails_Playing": "Bermain"
+    "broadcastDetails_Playing": "Bermain",
+    "Chat_Actions_ReportGroup": "Laporkan Obrolan Grup"
 }

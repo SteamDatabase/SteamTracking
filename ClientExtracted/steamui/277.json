@@ -175,5 +175,8 @@
     "moderationaction_updated": "Rincian pembahasan diperbarui",
     "moderationaction_locked": "Terkunci",
     "moderationaction_unlocked": "Dibuka pada",
-    "moderationaction_unknown": "Tindakan Tidak Diketahui"
+    "moderationaction_unknown": "Tindakan Tidak Diketahui",
+    "ContentReportReasonCategoryDesc_Suspicious": "Phishing, penipuan, menyamar sebagai teman atau Bantuan Steam",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Pelecehan, spam, gambar tidak pantas",
+    "ContentReportSubmitted_Chat_Description": "Terima kasih telah mengirimkan laporanmu. Kami telah mengumpulkan sebagian kecil dari log obrolan dan mengirimkannya untuk diperiksa. Kamu tidak perlu melakukan tindakan lainnya."
 }

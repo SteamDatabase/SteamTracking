@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Message d'une personne qui n'est pas dans votre liste de contacts",
     "NonFriendAction_Block": "Bloquer les communications",
     "NonFriendAction_Allow": "Autoriser les communications",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Discussion par chat suspecte",
+    "SuspiciousMessage_Explanation": "Cette conversation semble suspecte. Ne cliquez sur aucun lien envoyé par la personne en question pour vous connecter aux comptes qui vous appartiennent, y compris vos comptes Steam. Les représentant(e)s de Steam ne vous contacteront JAMAIS par chat ou par un programme externe. Les liens seront désactivés jusqu'à la fermeture de ce message.",
     "Friend_Menu_Open": "Options",
     "Friend_Menu_AddNickname": "Ajouter un surnom",
     "Friend_Menu_AddToQuickAccess": "Ajouter aux favoris",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Correction du problème suivant : les fenêtres de contacts et de chat ne s'affichaient pas dans l'overlay en jeu sur Linux et macOS.",
     "BBCode_Loading": "Chargement",
     "BBCode_Failed": "Échec du chargement",
-    "broadcastDetails_Playing": "Joue à"
+    "broadcastDetails_Playing": "Joue à",
+    "Chat_Actions_ReportGroup": "Signaler le chat de groupe"
 }

@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Повідомлення від користувача, який не є вашим другом",
     "NonFriendAction_Block": "Заблокувати спілкування",
     "NonFriendAction_Allow": "Дозволити спілкування",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Підозрілий чат",
+    "SuspiciousMessage_Explanation": "Цей чат виглядає підозріло. Не входьте до жодного зі своїх облікових записів, зокрема й акаунта Steam, через надані цією особою посилання. Представники Steam НІКОЛИ не зв’язуватимуться з вами через чат або сторонні програми. Посилання залишаться прихованими, доки ви не закриєте це повідомлення.",
     "Friend_Menu_Open": "Параметри",
     "Friend_Menu_AddNickname": "Додати псевдонім",
     "Friend_Menu_AddToQuickAccess": "Додати до вибраних",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Виправлено помилку, внаслідок якої вікна списку друзів і чату не зображувалися в оверлеї Linux і macOS.",
     "BBCode_Loading": "Завантаження",
     "BBCode_Failed": "Не вдалося завантажити",
-    "broadcastDetails_Playing": "Відтворення"
+    "broadcastDetails_Playing": "Відтворення",
+    "Chat_Actions_ReportGroup": "Поскаржитися на груповий чат"
 }

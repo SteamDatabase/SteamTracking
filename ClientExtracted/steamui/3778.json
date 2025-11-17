@@ -175,5 +175,8 @@
     "moderationaction_updated": "Detaliile subiectului au fost actualizate",
     "moderationaction_locked": "Blocat",
     "moderationaction_unlocked": "Deblocat",
-    "moderationaction_unknown": "Acțiune necunoscută"
+    "moderationaction_unknown": "Acțiune necunoscută",
+    "ContentReportReasonCategoryDesc_Suspicious": "Phishing, înșelătorii, uzurparea identității prietenilor sau a asistenței Steam",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Hărțuire, spam, imagini neadecvate",
+    "ContentReportSubmitted_Chat_Description": "Îți mulțumim pentru raportare. Am colectat o mică parte din jurnalul de chat și am trimis-o pentru moderare. Nu este necesară nicio altă acțiune din partea ta."
 }

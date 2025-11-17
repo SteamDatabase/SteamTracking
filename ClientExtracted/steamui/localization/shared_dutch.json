@@ -258,7 +258,7 @@
     "EventCalendar_MuteApp_Title": "%1$s dempen",
     "EventCalendar_Ignore": "Negeren",
     "EventCalendar_IgnoreApp": "%1$s negeren",
-    "EventCalendar_IgnoreApp_ttip": "Titels die je negeert, worden je niet aanbevolen en zullen ook niet in uitgelichte secties verschijnen.",
+    "EventCalendar_IgnoreApp_ttip": "Genegeerde titels worden niet aanbevolen en verschijnen niet in secties met uitgelichte spellen.",
     "EventCalendar_IgnoreApp_newhub": "De nieuwshub neemt je instellingen met betrekking tot wat je negeert over en zorgt ervoor dat spellen die je negeert in de winkel niet in je nieuwshub worden getoond. Je kunt hier beheren welke spellen je negeert:",
     "EventCalendar_FollowCurator": "Steam-curator %1$s volgen",
     "EventCalendar_FollowCurator_ttip": "Als je deze curator volgt, worden zijn of haar berichten in je persoonlijke nieuwshub getoond. Spelaanbevelingen van deze curator verschijnen in je Steam-winkel.",
@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "Speciale prijs van %1$s",
     "Generic_More_Info": "Meer informatie",
     "Account_Safety_Header": "Beveilig je account",
-    "Account_Safety_Notice_Prefix": "LET OP: %1$s",
-    "Account_Safety_Notice": "Valve- of Steam-medewerkers nemen NOOIT contact met je op via chat. Wees heel voorzichtig met het openen van links, vooral als er wordt gevraagd om je aan te melden bij Steam. Als iets verdacht, onverwacht, urgent of erg gul is, is het waarschijnlijk een scam.",
+    "Account_Safety_Notice": "LET OP: Valve- of Steam-medewerkers nemen NOOIT contact met je op via chat. Wees heel voorzichtig met het openen van links, vooral als er wordt gevraagd om je aan te melden bij Steam. Als iets verdacht, onverwacht, urgent of erg gul is, is het waarschijnlijk een scam.",
     "OverlayButtonHeader_Timeline": "Spelopname",
     "ChatEntry_UploadLastClip": "Laatste clip uploaden",
     "GameRecording_OverlayShowVideo": "Video tonen",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "Er is een ruilactie teruggedraaid",
     "SteamNotifications_TradeReversal_Body_Short": "Er is een ruilactie teruggedraaid",
     "SteamNotifications_TradeReversal_Description": "Een van je recente ruilacties is teruggedraaid door je ruilpartner.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "Mogen we geanonimiseerde informatie over je framesnelheid tijdens het spelen verzamelen om SteamOS-apparaten voor alle spelers te verbeteren? Je kunt deze instelling altijd wijzigen in de instellingen.",
+    "GameFrameRateReporting_Response_Yes": "Ja",
+    "GameFrameRateReporting_Response_No": "Nee, liever niet",
+    "Account_Safety_Notice_Report": "Valve or Steam representatives will NEVER contact you via chat."
 }

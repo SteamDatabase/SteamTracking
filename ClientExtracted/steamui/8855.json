@@ -175,5 +175,8 @@
     "moderationaction_updated": "Οι λεπτομέρειες του θέματος ενημερώθηκαν",
     "moderationaction_locked": "Κλειδώθηκε",
     "moderationaction_unlocked": "Ξεκλειδώθηκε",
-    "moderationaction_unknown": "Άγνωστη ενέργεια"
+    "moderationaction_unknown": "Άγνωστη ενέργεια",
+    "ContentReportReasonCategoryDesc_Suspicious": "Ηλεκτρονικό ψάρεμα, απάτες, πλαστοπροσωπία φίλων ή Υποστήριξης Steam",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Παρενόχληση, ανεπιθύμητα μηνύματα, ακατάλληλες εικόνες",
+    "ContentReportSubmitted_Chat_Description": "Ευχαριστούμε που υποβάλατε την αναφορά σας. Έχουμε συλλέξει ένα μικρό μέρος του αρχείου καταγραφής της συνομιλίας και το στείλαμε στους επιτηρητές. Δεν χρειάζεται να προβείτε σε περαιτέρω ενέργειες."
 }

@@ -522,7 +522,7 @@
     "EventEmail_Button_ClickForMoreDetails": "อ่านเพิ่มเติม",
     "Event_Button_VisitSalePage": "การเยี่ยมชมหน้าร้านค้า",
     "EventEmail_Button_PrepurchaseNow": "สั่งซื้อล่วงหน้าได้แล้วตอนนี้!",
-    "EventEmail_Button_BuyNow": "ซื้อเดี๋ยวนี้!",
+    "EventEmail_Button_BuyNow": "ซื้อเลย!",
     "EventEmail_Button_PlayNow": "เล่นเดี๋ยวนี้!",
     "EventEmail_Button_WishlistNow": "เพิ่มไปยังสิ่งที่อยากได้ทันที!",
     "EventEmail_WatchNow": "รับชมเดี๋ยวนี้",
@@ -582,7 +582,7 @@
     "EventEditor_SaleValveApproval_Desc_Pending": "หากมีการเปลี่ยนแปลงใด ๆ ที่จำเป็นต่อหน้าเว็บของคุณ ทีมงาน Steam จะติดต่อคุณผ่านทางตั๋วฝ่ายสนับสนุน Steamworks คุณสามารถดูตั๋วฝ่ายสนับสนุน Steamworks และกรอกความคิดเห็นเพิ่มได้หากจำเป็น โดยคลิกปุ่มทางด้านขวา",
     "EventEditor_SaleValveApproval_Admin_Tooltip": "การทำเครื่องหมายระบุว่าหน้านี้ได้รับการอนุมัติแล้วจะทำให้พันธมิตรสามารถประกาศและเริ่มต้นลดราคาได้",
     "EventEditor_SaleValveApproval_Request_Button": "ขอให้ตรวจสอบ...",
-    "EventEditor_SaleValveApproval_Request_Approval": "ขอให้ตรวจสอบ",
+    "EventEditor_SaleValveApproval_Request_Approval": "ขอรับการตรวจสอบ",
     "EventEditor_SaleValveApproval_Request_Approval_ttip": "สร้างตั๋วเพื่อขอให้ตรวจสอบการอนุมัติให้เผยแพร่หน้าการลดราคา โปรดดำเนินการดังกล่าวนี้เมื่อหน้าการลดราคาของคุณมีอาร์ตเวิร์กขั้นสุดท้ายและเกมทั้งหมดที่คุณต้องการนำเสนอแล้ว",
     "EventEditor_SaleValveApproval_Request_Desc": "คำขอนี้จะสร้างตั๋วฝ่ายสนับสนุน Steamworks เพื่อขอให้ Valve ตรวจสอบหน้าการลดราคาของคุณ โดยควรดำเนินการดังกล่าวเฉพาะเมื่ออาร์ตเวิร์กและข้อความของคุณเสร็จเรียบร้อย และรายชื่อเกมเสร็จสมบูรณ์แล้วเท่านั้น",
     "EventEditor_SaleValveApproval_Request_Desc2": "โปรดตรวจสอบให้แน่ใจว่าชื่อกิจกรรมและวัตถุประสงค์ของคุณมีคำอธิบายที่ชัดเจนใกล้กับด้านบนสุดของหน้า ในกรณีที่เป็นกล่องแสดงผลงาน คุณอาจจำเป็นต้องมีส่วนข้อความที่ด้านบนสุดของหน้าเว็บของคุณ เพื่ออธิบายว่ากล่องแสดงผลงานของคุณคืออะไรและทำงานอย่างไร",
@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "ราคาพิเศษ %1$s",
     "Generic_More_Info": "ข้อมูลเพิ่มเติม",
     "Account_Safety_Header": "รักษาบัญชีของคุณให้ปลอดภัย",
-    "Account_Safety_Notice_Prefix": "หมายเหตุ: %1$s",
-    "Account_Safety_Notice": "ตัวแทนของ Valve หรือ Steam จะไม่ติดต่อคุณผ่านทางการแช็ตเป็นอันขาด โปรดใช้ความระมัดระวังเมื่อเปิดลิงก์ โดยเฉพาะอย่างยิ่งหากลิงก์นั้นต้องการให้คุณเข้าสู่ระบบ Steam ในกรณีที่ลิงก์นั้นน่าสงสัย ไม่คาดคิด มีข้อความแบบเร่งด่วน หรือมอบสิทธิพิเศษหรือผลประโยชน์ให้ ก็มีความเป็นไปได้สูงว่าเป็นการหลอกลวง",
+    "Account_Safety_Notice": "หมายเหตุ: ตัวแทนของ Valve หรือ Steam จะไม่ติดต่อคุณผ่านทางการแช็ตเป็นอันขาด โปรดใช้ความระมัดระวังเมื่อเปิดลิงก์ โดยเฉพาะอย่างยิ่งหากลิงก์นั้นต้องการให้คุณเข้าสู่ระบบ Steam ในกรณีที่ลิงก์นั้นน่าสงสัย ไม่คาดคิด มีข้อความแบบเร่งด่วน หรือมอบสิทธิพิเศษหรือผลประโยชน์ให้ ก็มีความเป็นไปได้สูงว่าเป็นการหลอกลวง",
     "OverlayButtonHeader_Timeline": "การบันทึกเกม",
     "ChatEntry_UploadLastClip": "อัปโหลดคลิปล่าสุด",
     "GameRecording_OverlayShowVideo": "แสดงวิดีโอ",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "การแลกเปลี่ยนได้รับการคืนค่าแล้ว",
     "SteamNotifications_TradeReversal_Body_Short": "การแลกเปลี่ยนได้รับการคืนค่าแล้ว",
     "SteamNotifications_TradeReversal_Description": "คู่แลกเปลี่ยนของคุณได้คืนค่าให้หนึ่งในการแลกเปลี่ยนล่าสุดของคุณแล้ว",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "เราขออนุญาตเก็บข้อมูลอัตราเฟรมเรตการเล่นเกมแบบนิรนามเพื่อปรับปรุงอุปกรณ์ SteamOS สำหรับผู้เล่นทุกคนได้หรือไม่? คุณสามารถเปลี่ยนแปลงสิ่งนี้ในภายหลังได้ในการตั้งค่า",
+    "GameFrameRateReporting_Response_Yes": "ได้",
+    "GameFrameRateReporting_Response_No": "ไม่ได้ ขอบคุณ",
+    "Account_Safety_Notice_Report": "ตัวแทนของ Valve หรือ Steam จะไม่ติดต่อคุณผ่านทางการแช็ตเป็นอันขาด"
 }

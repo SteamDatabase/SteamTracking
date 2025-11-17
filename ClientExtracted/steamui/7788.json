@@ -175,5 +175,8 @@
     "moderationaction_updated": "Emneoplysninger opdateret",
     "moderationaction_locked": "Låst",
     "moderationaction_unlocked": "Låst op",
-    "moderationaction_unknown": "Ukendt handling"
+    "moderationaction_unknown": "Ukendt handling",
+    "ContentReportReasonCategoryDesc_Suspicious": "Phishing, svindel, udgiver sig for at være en ven eller Steam Support",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Chikane, spam, upassende billeder",
+    "ContentReportSubmitted_Chat_Description": "Tak for rapporteringen. Vi har taget en lille del af chatloggen og sendt den til vores moderatorer. Du behøver ikke at gøre yderligere."
 }

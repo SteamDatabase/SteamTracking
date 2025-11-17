@@ -175,5 +175,8 @@
     "moderationaction_updated": "Eset részletei frissítve",
     "moderationaction_locked": "Zárolva",
     "moderationaction_unlocked": "Feloldva",
-    "moderationaction_unknown": "Ismeretlen művelet"
+    "moderationaction_unknown": "Ismeretlen művelet",
+    "ContentReportReasonCategoryDesc_Suspicious": "Adathalászat, átverések, barátok vagy a Steam Támogatás megszemélyesítése",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Zaklatás, spammelés, nem helyénvaló képek",
+    "ContentReportSubmitted_Chat_Description": "Köszönjük, hogy beküldted a jelentésedet. Összegyűjtöttük a csevegésnapló egy kis részét, és elküldtük moderálásra. Nem kell semmilyen további lépést tenned."
 }

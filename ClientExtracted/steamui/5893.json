@@ -175,5 +175,8 @@
     "moderationaction_updated": "Nouveaux éléments sur le sujet ajoutés",
     "moderationaction_locked": "Bloqué",
     "moderationaction_unlocked": "Débloqué",
-    "moderationaction_unknown": "Action inconnue"
+    "moderationaction_unknown": "Action inconnue",
+    "ContentReportReasonCategoryDesc_Suspicious": "Hameçonnage, arnaques, usurpation d'identité de contacts ou du Support Steam",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Harcèlement, spam, images inappropriées",
+    "ContentReportSubmitted_Chat_Description": "Merci de nous avoir signalé cet abus. Nous avons envoyé un échantillon de l'historique du chat au groupe de modération. Aucune autre action de votre part n'est nécessaire."
 }

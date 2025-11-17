@@ -175,5 +175,8 @@
     "moderationaction_updated": "Информация по теме была обновлена",
     "moderationaction_locked": "Заблокировано",
     "moderationaction_unlocked": "Разблокировано",
-    "moderationaction_unknown": "Неизвестное действие"
+    "moderationaction_unknown": "Неизвестное действие",
+    "ContentReportReasonCategoryDesc_Suspicious": "Фишинг, мошенничество, выдача себя за друзей или представителей службы поддержки Steam",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Нападки, спам, неуместные изображения",
+    "ContentReportSubmitted_Chat_Description": "Спасибо за отправку жалобы. Мы сохранили некоторые сообщения в журнале чата и отправили его на модерацию. Дополнительных действий с вашей стороны не требуется."
 }

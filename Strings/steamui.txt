@@ -5309,6 +5309,7 @@ ${LANGUAGE}
 -autoconfig
 -bigpicture
 -buildid
+-cef-disable-chrome-runtime
 -chromeosdiskmanagement
 -chromeosnopreallocate
 -chromeosverbose
@@ -7019,11 +7020,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -12003,7 +12004,6 @@ ${LANGUAGE}
 57CSteamInputService_ControllerAccessibilityStrings_Request
 57CSteamInputService_ControllerAxesStateChange_Notification
 57CUserAccount_GetAvailableValveDiscountPromotions_Response
-58 K
 58CAccountHardware_SteamControllerGetConfig_ControllerConfig
 58CAccountHardware_SteamControllerSetConfig_ControllerConfig
 58CAuthenticationSupport_QueryRefreshTokensByAccount_Request
@@ -25695,7 +25695,7 @@ NotifyWebRTCHaveTURNServer
 NotifyWebRTCNeedTURNServer
 NotifyWebRTCSetAnswer
 NotifyWebRTCStart
-Nov 14 2025 19:18:37
+Nov 17 2025 19:49:03
 November
 NrZl
 NullMetrics()
@@ -30686,6 +30686,7 @@ Usage: library_asset_cache_recheck <appid> [force]
 Usage: set_var <name> <value>
 Usage:\n\tfind <keyword>\n
 UsbOverCurrent
+Use CEF alloy runtime
 Use Proxy
 Use local dev websites
 Use longest string for each localization token
@@ -38999,7 +39000,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenn
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -42169,6 +42170,7 @@ htc_vive
 html
 html-findbar
 htmlcache
+htmlcache/Default
 htmlmessages.proto
 htmlpopupchild
 htonl

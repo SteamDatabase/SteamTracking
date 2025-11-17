@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Meddelande från en användare som inte är din vän",
     "NonFriendAction_Block": "Blockera kommunikation",
     "NonFriendAction_Allow": "Tillåt kommunikation",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Misstänkt chatt",
+    "SuspiciousMessage_Explanation": "Den här chatten ser misstänkt ut. Logga inte in på något av dina konton, inklusive Steam, via länkar som du får av den här personen. Steam-representanter kommer ALDRIG att kontakta dig via chatt eller externa program. Länkar är inaktiverade tills detta meddelande avfärdas.",
     "Friend_Menu_Open": "Alternativ",
     "Friend_Menu_AddNickname": "Lägg till smeknamn",
     "Friend_Menu_AddToQuickAccess": "Lägg i Favoriter",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Fixade att vän- och chattfönster inte visades i spelövertoningen på Linux och macOS.",
     "BBCode_Loading": "Läser in",
     "BBCode_Failed": "Inläsning misslyckades",
-    "broadcastDetails_Playing": "Spelar"
+    "broadcastDetails_Playing": "Spelar",
+    "Chat_Actions_ReportGroup": "Anmäl gruppchatt"
 }

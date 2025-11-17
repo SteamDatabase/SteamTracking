@@ -425,7 +425,7 @@
     "EventDisplay_Reminder_ViaEmail": "par e-mail",
     "EventDisplay_Reminder_ViaMobileApp": "depuis l'application mobile",
     "EventDisplay_Reminder_FollowEvent": "Suivre l'évènement",
-    "EventDisplay_Reminder_FollowEvent_ttip": "Suivez un évènement pour être averti quand il commencera.",
+    "EventDisplay_Reminder_FollowEvent_ttip": "Suivez un évènement pour être averti(e) quand il commencera.",
     "EventDisplay_Reminder_RemindAtStart": "Quand l'évènement commencera",
     "EventDisplay_Reminder_RemindAtStart_ttip": "Steam vous enverra une notification quand l'évènement commencera.",
     "EventDisplay_Reminder_IgnoreEvent": "Ignorer cet évènement",
@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "Prix après remise : %1$s",
     "Generic_More_Info": "Plus d'informations",
     "Account_Safety_Header": "Protégez votre compte",
-    "Account_Safety_Notice_Prefix": "REMARQUE : %1$s",
-    "Account_Safety_Notice": "les représentants de Valve ou de Steam ne vous contacteront JAMAIS par chat. Faites preuve de prudence lorsque vous ouvrez des liens, surtout s'ils nécessitent une connexion à Steam. Si le message parait suspects, inattendu, urgent ou trop beau pour être vrai, il s'agit probablement d'une arnaque.",
+    "Account_Safety_Notice": "REMARQUE : les représentants de Valve ou de Steam ne vous contacteront JAMAIS par chat. Faites preuve de prudence lorsque vous ouvrez des liens, surtout s'ils nécessitent une connexion à Steam. Si le message parait suspect, inattendu, urgent ou trop beau pour être vrai, il s'agit probablement d'une arnaque.",
     "OverlayButtonHeader_Timeline": "Enregistrement de parties",
     "ChatEntry_UploadLastClip": "Mettre en ligne le dernier extrait",
     "GameRecording_OverlayShowVideo": "Afficher la vidéo",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "Un échange a été annulé",
     "SteamNotifications_TradeReversal_Body_Short": "Un échange a été annulé",
     "SteamNotifications_TradeReversal_Description": "Un de vos échanges récents a été annulé par l'autre partie.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "Autorisez-vous la collecte de données anonymisées sur le taux de rafraichissement en jeu ? Ces données seront utilisées pour améliorer les appareils SteamOS. Vous pouvez changer d'avis à tout moment depuis les paramètres.",
+    "GameFrameRateReporting_Response_Yes": "Oui",
+    "GameFrameRateReporting_Response_No": "Non merci",
+    "Account_Safety_Notice_Report": "Les représentants de Valve ou de Steam ne vous contacteront JAMAIS par chat."
 }

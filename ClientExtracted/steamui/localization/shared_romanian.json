@@ -258,7 +258,7 @@
     "EventCalendar_MuteApp_Title": "Oprește notificările pentru %1$s",
     "EventCalendar_Ignore": "Ignoră",
     "EventCalendar_IgnoreApp": "Ignoră %1$s",
-    "EventCalendar_IgnoreApp_ttip": "Titlurile ignorate nu iți vor fi recomandate și nu vor apărea în spațiile evidențiate.",
+    "EventCalendar_IgnoreApp_ttip": "Titlurile ignorate nu iți vor fi recomandate și nu vor apărea în zonele evidențiate.",
     "EventCalendar_IgnoreApp_newhub": "Centrul de știri va ține cont de setările tale pentru titlurile pe care le-ai ignorat în cadrul magazinului și nu va afișa jocurile în centrul tău de știri. Poți gestiona jocurile ignorate aici:",
     "EventCalendar_FollowCurator": "Urmarește curatorul Steam: %1$s",
     "EventCalendar_FollowCurator_ttip": "Urmărindu-l pe acest curator, articolele sale vor apărea în centrul tău personalizat de știri, iar recomandările lui pentru jocuri vor apărea în magazinul tău Steam.",
@@ -1381,7 +1381,7 @@
     "Sale_RegisterNow_noteligible": "Ne pare rău, dar nu poți participa",
     "Sale_Registration": "Înregistrare",
     "Sale_BundleSave": "Include %1$s articole.",
-    "Sale_BundleSave_WithDiscount": "Cumpără acest set și economisește %1$s% la toate %2$s articole!",
+    "Sale_BundleSave_WithDiscount": "Cumpără acest set pentru a economisi %1$s% la toate cele %2$s articole!",
     "Sale_PackageSave": "Include %1$s articole.",
     "Sale_ShowContents": "Arată conținuturile",
     "Sale_ShowBundleContent": "Arată toate cele %1$s articole din set",
@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "Preț special: %1$s",
     "Generic_More_Info": "Mai multe informații",
     "Account_Safety_Header": "Protejează-ți contul",
-    "Account_Safety_Notice_Prefix": "NOTĂ: %1$s",
-    "Account_Safety_Notice": "reprezentanții Valve sau Steam nu te vor contacta NICIODATĂ prin chat. Fii prudent atunci când accesezi linkuri, mai ales dacă acestea îți solicită să te conectezi la Steam. În cazul în care ceva pare suspect, neașteptat, urgent sau generos, atunci cel mai probabil este vorba despre o înșelătorie.",
+    "Account_Safety_Notice": "NOTĂ: reprezentanții Valve sau Steam nu te vor contacta NICIODATĂ prin chat. Fii prudent atunci când accesezi linkuri, mai ales dacă acestea îți solicită să te conectezi la Steam. În cazul în care ceva pare suspect, neașteptat, urgent sau generos, atunci cel mai probabil este vorba despre o înșelătorie.",
     "OverlayButtonHeader_Timeline": "Înregistrarea jocurilor",
     "ChatEntry_UploadLastClip": "Încarcă ultimul clip",
     "GameRecording_OverlayShowVideo": "Arată videoclipul",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "Un schimb a fost anulat",
     "SteamNotifications_TradeReversal_Body_Short": "Un schimb a fost anulat",
     "SteamNotifications_TradeReversal_Description": "Unul dintre schimburile tale recente a fost anulat de partenerul tău de schimb.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "Putem colecta date anonime despre frecvența de cadre pentru a îmbunătăți dispozitivele SteamOS pentru toți jucătorii? Poți modifica această setare mai târziu în setări.",
+    "GameFrameRateReporting_Response_Yes": "Da",
+    "GameFrameRateReporting_Response_No": "Nu, mulțumesc",
+    "Account_Safety_Notice_Report": "Reprezentanții Valve sau Steam nu te vor contacta NICIODATĂ prin chat."
 }

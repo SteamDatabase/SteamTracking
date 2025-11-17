@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Wiadomość od użytkownika, który nie jest twoim znajomym",
     "NonFriendAction_Block": "Zablokuj komunikację",
     "NonFriendAction_Allow": "Zezwól na komunikację",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Podejrzana rozmowa",
+    "SuspiciousMessage_Explanation": "Ta rozmowa wygląda podejrzanie. Nie loguj się do żadnego ze swoich kont (włączając w to Steam) za pomocą linków przesłanych przez tę osobę. Przedstawiciele Steam NIGDY nie skontaktują się z tobą za pośrednictwem czatu ani programów zewnętrznych. Linki są zdezaktywowane do momentu zamknięcia tej wiadomości.",
     "Friend_Menu_Open": "Opcje",
     "Friend_Menu_AddNickname": "Dodaj pseudonim",
     "Friend_Menu_AddToQuickAccess": "Dodaj do ulubionych",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Naprawiono błąd powodujący, że okna czatu i znajomych nie wyświetlały się w nakładce w systemach Linux i macOS.",
     "BBCode_Loading": "Wczytywanie",
     "BBCode_Failed": "Nie udało się wczytać",
-    "broadcastDetails_Playing": "Gra w"
+    "broadcastDetails_Playing": "Gra w",
+    "Chat_Actions_ReportGroup": "Zgłoś czat grupowy"
 }

@@ -5841,9 +5841,9 @@
                       (n = n.filter((e) => {
                         switch (s) {
                           case Oe.Hide:
-                            return !Pe.Fm.Get().BIsGameWishlisted(e.appid);
+                            return !e.wishlisted;
                           case Oe.Only:
-                            return Pe.Fm.Get().BIsGameWishlisted(e.appid);
+                            return e.wishlisted;
                         }
                       })),
                     [e, n]
@@ -5859,7 +5859,7 @@
               ),
               r = e.filter((e, t) => t % 7 == 6);
             let s = 0;
-            for (const e of r) s += a[e]?.length ?? 0;
+            for (const e of r) e < p || (s += a[e]?.length ?? 0);
             const n = s >= 3;
             for (let t = 0; t < e.length; t += 1) {
               if (t % 7 == 0 && a[e[t]]?.length > 0) {

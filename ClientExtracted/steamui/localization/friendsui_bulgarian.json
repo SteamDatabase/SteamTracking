@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Съобщение от потребител, който не Ви е приятел",
     "NonFriendAction_Block": "Блокиране на комуникациите",
     "NonFriendAction_Allow": "Позволяване на комуникациите",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Подозрителен чат",
+    "SuspiciousMessage_Explanation": "Този чат изглежда подозрителен. Не се вписвайте в никой от Вашите акаунти, включително Steam, при връзки, предоставени от това лице. Представители на Steam НИКОГА няма да се свържат с Вас чрез чата или външни програми. Връзките са преустановени, докато това съобщение е отхвърлено.",
     "Friend_Menu_Open": "Опции",
     "Friend_Menu_AddNickname": "Добавяне на прякор",
     "Friend_Menu_AddToQuickAccess": "Добавяне към любими",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Поправено е, че списъкът с приятели и чат прозорците не се изобразяваха в игралния Steam слой под Linux и macOS.",
     "BBCode_Loading": "Зареждане",
     "BBCode_Failed": "Неуспешно зареждане",
-    "broadcastDetails_Playing": "Играе"
+    "broadcastDetails_Playing": "Играе",
+    "Chat_Actions_ReportGroup": "Докладване на групов чат"
 }

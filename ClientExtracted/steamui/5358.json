@@ -175,5 +175,8 @@
     "moderationaction_updated": "Ärendeinformation uppdaterad",
     "moderationaction_locked": "Låst",
     "moderationaction_unlocked": "Upplåst",
-    "moderationaction_unknown": "Okänd handling"
+    "moderationaction_unknown": "Okänd handling",
+    "ContentReportReasonCategoryDesc_Suspicious": "Nätfiske (phishing), bedrägeri, att utge sig för att vara en vän eller Steam Support",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Trakasserier, spam, olämpliga bilder",
+    "ContentReportSubmitted_Chat_Description": "Tack för din rapport. Vi har samlat en liten del av chattloggen och skickat iväg den för moderering. Du behöver inte vidta några ytterligare åtgärder."
 }

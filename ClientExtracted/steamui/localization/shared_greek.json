@@ -1056,7 +1056,7 @@
     "WriteReview_Dialog_Delay": "Ίσως αργότερα",
     "Broadcast_View_Stack_H": "Οριζόντια προβολή",
     "Broadcast_View_Stack_V": "Κατακόρυφη προβολή",
-    "Broadcast_View_Theater": "Λειτουργία θεάτρου",
+    "Broadcast_View_Theater": "Λειτουργία κινηματογράφου",
     "Broadcast_View_Fullscreen": "Πλήρης οθόνη",
     "Broadcast_View_HideChat": "Απόκρυψη συνομιλίας",
     "Broadcast_View_ShowBothChats": "Εμφάνιση και των δύο συνομιλιών",
@@ -3285,7 +3285,7 @@
     "ControllerButton_DpadUp": "Σταυρός κατεύθυνσης πάνω",
     "ControllerButton_DpadDown": "Σταυρός κατεύθυνσης κάτω",
     "ControllerButton_Steam": "Κουμπί Steam",
-    "ControllerButton_QAM": "Κουμπί Μενού Γρήγορης Πρόσβασης",
+    "ControllerButton_QAM": "Κουμπί μενού γρήγορης πρόσβασης",
     "ControllerButton_View": "Κουμπί Προβολής",
     "ControllerButton_Menu": "Κουμπί Μενού",
     "ControllerButton_L1": "Κουμπί L1",
@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "Ειδική τιμή: %1$s",
     "Generic_More_Info": "Περισσότερες πληροφορίες",
     "Account_Safety_Header": "Διατηρήστε τον λογαριασμό σας ασφαλή",
-    "Account_Safety_Notice_Prefix": "ΣΗΜΕΙΩΣΗ: %1$s",
-    "Account_Safety_Notice": "Οι εκπρόσωποι της Valve ή του Steam δεν θα επικοινωνήσουν ΠΟΤΕ μαζί σας μέσω της συνομιλίας. Απαιτείται ιδιαίτερη προσοχή όταν ανοίγετε συνδέσμους, ειδικά αν σας ζητούν να συνδεθείτε στο Steam. Αν πρόκειται για κάτι ύποπτο, απρόσμενο, επείγον ή γενναιόδωρο, πιθανόν είναι απάτη.",
+    "Account_Safety_Notice": "ΣΗΜΕΙΩΣΗ: Οι εκπρόσωποι της Valve ή του Steam δεν θα επικοινωνήσουν ΠΟΤΕ μαζί σας μέσω της συνομιλίας. Απαιτείται ιδιαίτερη προσοχή όταν ανοίγετε συνδέσμους, ειδικά αν σας ζητούν να συνδεθείτε στο Steam. Αν πρόκειται για κάτι ύποπτο, απρόσμενο, επείγον ή γενναιόδωρο, πιθανόν είναι απάτη.",
     "OverlayButtonHeader_Timeline": "Καταγραφή παιχνιδιού",
     "ChatEntry_UploadLastClip": "Μεταφόρτωση τελευταίου αποσπάσματος",
     "GameRecording_OverlayShowVideo": "Εμφάνιση βίντεο",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "Μια ανταλλαγή αντιστράφηκε",
     "SteamNotifications_TradeReversal_Body_Short": "Μια ανταλλαγή αντιστράφηκε",
     "SteamNotifications_TradeReversal_Description": "Μία από τις πρόσφατες ανταλλαγές σας αντιστράφηκε από τον χρήστη με τον οποίο κάνατε την ανταλλαγή.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "Μπορούμε να συλλέξουμε ανώνυμα δεδομένα για τον ρυθμό καρέ παιχνιδιού, ώστε να βελτιώσουμε τις συσκευές SteamOS για όλους τους παίκτες; Μπορείτε να το αλλάξετε αυτό αργότερα στις Ρυθμίσεις.",
+    "GameFrameRateReporting_Response_Yes": "Ναι",
+    "GameFrameRateReporting_Response_No": "Όχι, ευχαριστώ",
+    "Account_Safety_Notice_Report": "Οι εκπρόσωποι της Valve ή του Steam δεν θα επικοινωνήσουν ΠΟΤΕ μαζί σας μέσω της συνομιλίας."
 }

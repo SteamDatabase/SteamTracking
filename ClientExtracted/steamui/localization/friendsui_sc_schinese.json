@@ -54,5 +54,6 @@
     "InviteLanding_OpenInSteam_Help": "我们尝试在蒸汽平台客户端打开邀请链接。您的浏览器也许会提示您允许启动蒸汽平台客户端。",
     "Search_NonFriend02": "在蒸汽平台上添加好友的最佳方式是使用%1$s。",
     "InviteLanding_AccountMismatch": "我们检测到，您正在运行的蒸汽平台客户端的登录帐户，与您要登录此网页版所使用的帐户不一致。",
-    "GiveFeedbackToSteam_Desc": "向蒸汽平台提供%1$s"
+    "GiveFeedbackToSteam_Desc": "向蒸汽平台提供%1$s",
+    "SuspiciousMessage_Explanation": "此聊天看起来很可疑。请勿使用此人提供的链接登录您的任何帐户（包括蒸汽平台帐户）。蒸汽平台的代表绝不会通过聊天或外部程序联系您。在关闭此消息前，链接将会被禁用。"
 }

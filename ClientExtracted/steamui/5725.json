@@ -175,5 +175,8 @@
     "moderationaction_updated": "Подробиці скарги оновлено",
     "moderationaction_locked": "Заблоковано",
     "moderationaction_unlocked": " Розблоковано",
-    "moderationaction_unknown": "Невідома дія"
+    "moderationaction_unknown": "Невідома дія",
+    "ContentReportReasonCategoryDesc_Suspicious": "Фішинг, шахрайство, видавання себе за друзів або агентів служби підтримки Steam",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Домагання, спам, неприйнятні зображення",
+    "ContentReportSubmitted_Chat_Description": "Дякуємо за вашу скаргу. Ми відібрали невелику частину листування в чаті й надіслали її на модерацію. Вам більше не потрібно нічого робити."
 }

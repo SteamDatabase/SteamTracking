@@ -2148,7 +2148,7 @@ $ffn
 18IRegistryInterface
 18IUDPSocketCallback
 18IWorkThreadFactory
-19:18:13
+19:48:22
 19CClientInstallUtils
 19CCuratorPreferences
 19CHTTPClientResponse
@@ -2376,7 +2376,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-524288
 52F*
 55Ly
 55j_WW
@@ -2401,6 +2400,7 @@ $ffn
 6144
 64CK\vH
 65536
+524288
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -6812,7 +6812,7 @@ Not supported.
 Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov 14 2025
+Nov 17 2025
 November
 NrZl
 NullMetrics()

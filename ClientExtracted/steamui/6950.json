@@ -175,5 +175,8 @@
     "moderationaction_updated": "Подробностите на тематиката са обновени",
     "moderationaction_locked": "Заключено",
     "moderationaction_unlocked": "Отключено",
-    "moderationaction_unknown": "Неизвестно действие"
+    "moderationaction_unknown": "Неизвестно действие",
+    "ContentReportReasonCategoryDesc_Suspicious": "„Фишинг“, измами, представяне под самоличност на приятел или Steam поддръжката",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Тормоз, спам, неподходящи изображения",
+    "ContentReportSubmitted_Chat_Description": "Благодарим Ви, че подадохте Вашия доклад. Събрахме малка част от чат хронологията и го изпратихме за модерация. Няма нужда да предприемате никакви допълнителни действия."
 }

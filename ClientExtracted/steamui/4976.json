@@ -175,5 +175,8 @@
     "moderationaction_updated": "Aiheen tiedot päivitettiin",
     "moderationaction_locked": "Lukittu",
     "moderationaction_unlocked": "Lukitus poistettu",
-    "moderationaction_unknown": "Tuntematon toimi"
+    "moderationaction_unknown": "Tuntematon toimi",
+    "ContentReportReasonCategoryDesc_Suspicious": "Tietojenkalastelu, huijaukset, kaverina tai Steamin tuen edustajana esiintyminen",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Häirintä, roskapostin lähettäminen, sopimattomat kuvat",
+    "ContentReportSubmitted_Chat_Description": "Kiitos tekemästäsi ilmiannosta. Lähetimme osan keskusteluhistoriasta valvojille moderointia varten. Sinun ei tarvitse ryhtyä lisätoimiin."
 }

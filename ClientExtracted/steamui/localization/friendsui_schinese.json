@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "来自非好友的消息",
     "NonFriendAction_Block": "屏蔽通信",
     "NonFriendAction_Allow": "允许通信",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "可疑聊天",
+    "SuspiciousMessage_Explanation": "此聊天看起来很可疑。请勿使用此人提供的链接登录您的任何帐户（包括 Steam 帐户）。 Steam 的代表绝不会通过聊天或外部程序联系您。在关闭此消息前，链接将会被禁用。",
     "Friend_Menu_Open": "选项",
     "Friend_Menu_AddNickname": "添加昵称",
     "Friend_Menu_AddToQuickAccess": "添加至收藏",
@@ -972,7 +972,7 @@
     "FriendSettings_Notification_Table_Play": "播放声音",
     "FriendSettings_Notification_FriendJoins": "好友加入游戏时",
     "FriendSettings_Notification_FriendOnline": "好友上线时",
-    "FriendSettings_Notification_ChatMessage": "收到直接聊天信息时",
+    "FriendSettings_Notification_ChatMessage": "收到直接聊天消息时",
     "FriendSettings_Notification_DirectChat": "收到直接聊天消息时通知我",
     "FriendSettings_Notification_DirectChatDescOn": "除非我针对该好友有特定设置",
     "FriendSettings_Notification_DirectChatDescOff": "只有您特别允许的好友发消息时您才会收到通知",
@@ -984,7 +984,7 @@
     "FriendSettings_Notification_GroupEvent": "组活动与公告",
     "FriendSettings_Notification_ChatRoomNotification": "收到聊天室通知时",
     "FriendSettings_Notification_Explanation": "我们会尽量在您于其他地方使用 Steam 时，不向您发送通知。",
-    "FriendSettings_Flash_Header": "收到聊天信息时窗口闪烁：",
+    "FriendSettings_Flash_Header": "收到聊天消息时窗口闪烁：",
     "FriendSettings_Flash_Always": "始终",
     "FriendSettings_Flash_Minimized": "仅在最小化时",
     "FriendSettings_Flash_Never": "从不",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "修复了好友和聊天窗口在 Linux 及 macOS 上的游戏内叠加界面中不显示的问题。",
     "BBCode_Loading": "正在载入",
     "BBCode_Failed": "载入失败",
-    "broadcastDetails_Playing": "正在播放"
+    "broadcastDetails_Playing": "正在播放",
+    "Chat_Actions_ReportGroup": "举报组聊天"
 }

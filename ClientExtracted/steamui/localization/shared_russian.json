@@ -258,7 +258,7 @@
     "EventCalendar_MuteApp_Title": "Заглушить %1$s",
     "EventCalendar_Ignore": "Игнорировать",
     "EventCalendar_IgnoreApp": "Игнорировать %1$s",
-    "EventCalendar_IgnoreApp_ttip": "Игнорируемые продукты не будут вам предлагаться и не будут появляться в соответствующих разделах.",
+    "EventCalendar_IgnoreApp_ttip": "Игнорируемые продукты не будут вам предлагаться и не будут появляться в разделах для избранных товаров.",
     "EventCalendar_IgnoreApp_newhub": "Новостной центр использует ваши настройки игнорирования и не показывает игры, проигнорированные в магазине. Настройки игнорирования находятся здесь:",
     "EventCalendar_FollowCurator": "Подписка на куратора Steam: %1$s",
     "EventCalendar_FollowCurator_ttip": "Если вы подпишетесь на этого куратора, его публикации будут появляться в вашем личном новостном центре, а его рекомендации — в магазине Steam.",
@@ -2909,7 +2909,7 @@
     "ServerBrowser_NoGamesFound": "Не найдено серверов с таким адресом",
     "ServerBrowser_NoGamesFoundNoPort": "Не найдено серверов с таким адресом. Если вы знаете порт, используемый сервером, попробуйте указать его.",
     "ServerBrowser_AnyGame": "(любая игра)",
-    "ServerBrowser_SelectGame": "-- Выбрать игру --",
+    "ServerBrowser_SelectGame": "-- Выберите игру --",
     "ServerBrowser_AntiCheat": "Античит",
     "ServerBrowser_SecureOnly": "Включён",
     "ServerBrowser_InsecureOnly": "Выключен",
@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "Специальная цена: %1$s",
     "Generic_More_Info": "Подробнее",
     "Account_Safety_Header": "Защитите свой аккаунт",
-    "Account_Safety_Notice_Prefix": "ОБРАТИТЕ ВНИМАНИЕ: %1$s",
-    "Account_Safety_Notice": "Представители Valve или Steam НИКОГДА не свяжутся с вами через чат. Будьте очень осторожны при переходе по ссылкам, особенно если требуется, чтобы вы вошли в свой аккаунт Steam. Если сообщение кажется вам подозрительным, неожиданным, срочным или слишком щедрым, скорее всего, вас пытаются обмануть.",
+    "Account_Safety_Notice": "ОБРАТИТЕ ВНИМАНИЕ: представители Valve или Steam НИКОГДА не свяжутся с вами через чат. Будьте очень осторожны при переходе по ссылкам, особенно если требуется, чтобы вы вошли в свой аккаунт Steam. Если сообщение кажется вам подозрительным, неожиданным, срочным или слишком щедрым, скорее всего, вас пытаются обмануть.",
     "OverlayButtonHeader_Timeline": "Запись игры",
     "ChatEntry_UploadLastClip": "Загрузить последний ролик",
     "GameRecording_OverlayShowVideo": "Показать видео",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "Операция отменена",
     "SteamNotifications_TradeReversal_Body_Short": "Операция отменена",
     "SteamNotifications_TradeReversal_Description": "Одна из ваших недавних операций обмена была отменена другим участником.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "Разрешаете ли вы собирать анонимные данные о кадровой частоте во время игры, чтобы улучшить устройства со SteamOS для всех игроков? Это можно изменить позже в настройках.",
+    "GameFrameRateReporting_Response_Yes": "Да",
+    "GameFrameRateReporting_Response_No": "Нет",
+    "Account_Safety_Notice_Report": "Представители Valve или Steam НИКОГДА не свяжутся с вами через чат."
 }

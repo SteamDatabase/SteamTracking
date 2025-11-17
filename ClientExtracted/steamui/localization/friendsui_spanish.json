@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Mensaje de un usuario que no es tu amigo",
     "NonFriendAction_Block": "Bloquear comunicación",
     "NonFriendAction_Allow": "Permitir comunicación",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Chat sospechoso",
+    "SuspiciousMessage_Explanation": "Este chat parece sospechoso. No utilices enlaces que te proporcione esta persona para iniciar sesión en ninguna de tus cuentas, incluida la de Steam. Los representantes de Steam NUNCA se pondrán en contacto contigo a través del chat ni de programas externos. Los enlaces permanecerán desactivados hasta que se descarte este mensaje.",
     "Friend_Menu_Open": "Opciones",
     "Friend_Menu_AddNickname": "Añadir alias",
     "Friend_Menu_AddToQuickAccess": "Añadir a Favoritos",
@@ -646,7 +646,7 @@
     "Friend_Menu_InviteToWatch": "Invitar a ver",
     "Friend_Menu_InviteToRemotePlay": "Remote Play Together",
     "Friend_Menu_CancelRemotePlay": "Cancelar Remote Play",
-    "Friend_Menu_CancelAllRemotePlay": "Finalizar retransmisiones en Remote Play",
+    "Friend_Menu_CancelAllRemotePlay": "Finalizar transmisiones de Remote Play",
     "Friend_Menu_KickFromChatRoom": "Expulsar",
     "Friend_Menu_LaunchGame": "Iniciar ",
     "Friend_Menu_HasLeftChat": "Ya no está en el chat",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Se corrigió un problema por el que las ventanas de amigos y de chat no se mostraban en la interfaz en la partida en Linux y macOS.",
     "BBCode_Loading": "Cargando",
     "BBCode_Failed": "Error al cargar",
-    "broadcastDetails_Playing": "Reproduciendo"
+    "broadcastDetails_Playing": "Reproduciendo",
+    "Chat_Actions_ReportGroup": "Denunciar chat de grupo"
 }

@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "特惠價 %1$s",
     "Generic_More_Info": "更多資訊",
     "Account_Safety_Header": "保護您的帳戶安全",
-    "Account_Safety_Notice_Prefix": "請注意：%1$s",
-    "Account_Safety_Notice": "Valve 或 Steam 客服絕對不會透過聊天與您聯絡。打開連結時請格外小心，特別是要求您登入 Steam 的連結。如果連結看起來可疑、不尋常、感覺很緊急或提供很大的好處，那很有可能是詐騙。",
+    "Account_Safety_Notice": "請注意：Valve 或 Steam 客服絕對不會透過聊天與您聯絡。打開連結時請格外小心，特別是要求您登入 Steam 的連結。如果連結看起來可疑、不尋常、感覺很緊急或提供很大的好處，很有可能是詐騙。",
     "OverlayButtonHeader_Timeline": "遊戲錄影",
     "ChatEntry_UploadLastClip": "上傳最後錄製的短片",
     "GameRecording_OverlayShowVideo": "顯示影片",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "一筆交易已撤銷",
     "SteamNotifications_TradeReversal_Body_Short": "一筆交易已撤銷",
     "SteamNotifications_TradeReversal_Description": "您有一筆近期交易已被您的交易夥伴撤銷。",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "我們可以蒐集匿名的遊戲幀率資料，以用來為所有玩家改善 SteamOS 裝置嗎？您之後可以在設定中變更這項選擇。",
+    "GameFrameRateReporting_Response_Yes": "可以",
+    "GameFrameRateReporting_Response_No": "不，謝謝",
+    "Account_Safety_Notice_Report": "Valve 或 Steam 人員「絕對」不會透過聊天與您聯絡。"
 }

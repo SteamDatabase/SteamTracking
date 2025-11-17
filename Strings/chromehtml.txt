@@ -606,7 +606,6 @@ $\n k_SystemAudioPortDirection_Input
 -cachedir=%s
 -cef-allow-browser-underlay
 -cef-disable-breakpad
--cef-disable-chrome-runtime
 -cef-disable-gpu
 -cef-disable-gpu-compositing
 -cef-disable-gpu-sandbox
@@ -622,7 +621,6 @@ $\n k_SystemAudioPortDirection_Input
 -cef-disable-site-isolation
 -cef-disable-touch-focus-workaround
 -cef-disable-xcomposite-workaround
--cef-enable-chrome-runtime
 -cef-enable-debugging
 -cef-enable-gpu-debugging
 -cef-enable-low-delay-live-stream
@@ -660,7 +658,6 @@ $\n k_SystemAudioPortDirection_Input
 -disablerendererrestart
 -disabletouchfocusworkaround
 -enable-keyring
--enable_chrome_runtime
 -force-opaque-background
 -force-sandbox
 -forcebrowserviewunderlay
@@ -3807,8 +3804,6 @@ Upload Disconnected
 Upload Timeout
 Urdu
 UsableInGame
-Use CEF alloy runtime
-Use CEF chrome runtime
 Use Proxy
 Use other funding source
 Use other payment method

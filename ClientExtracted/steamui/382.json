@@ -175,5 +175,8 @@
     "moderationaction_updated": "主題詳情已更新",
     "moderationaction_locked": "已鎖定",
     "moderationaction_unlocked": "已解鎖",
-    "moderationaction_unknown": "未知行動"
+    "moderationaction_unknown": "未知行動",
+    "ContentReportReasonCategoryDesc_Suspicious": "網路釣魚、詐騙、冒充好友或 Steam 客服",
+    "ContentReportReasonCategoryDesc_Inappropriate": "騷擾、垃圾訊息、不當圖像",
+    "ContentReportSubmitted_Chat_Description": "感謝您提出檢舉。我們收集了小部分的聊天紀記錄並將其寄給管理團隊。您不需要採取任何其它動作。"
 }

@@ -175,5 +175,8 @@
     "moderationaction_updated": "Konu detayları güncellendi",
     "moderationaction_locked": "Kilitlendi",
     "moderationaction_unlocked": "Açıldı",
-    "moderationaction_unknown": "Bilinmeyen eylem"
+    "moderationaction_unknown": "Bilinmeyen eylem",
+    "ContentReportReasonCategoryDesc_Suspicious": "Kimlik avı, dolandırıcılık, arkadaşları ve Steam Destek çalışanlarını taklit etme",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Taciz, spam, uygunsuz görseller",
+    "ContentReportSubmitted_Chat_Description": "Şikayetinizi gönderdiğiniz için teşekkür ederiz. Sohbet kaydının küçük bir bölümünü denetlenmesi için gönderdik. Başka bir işlem yapmanıza gerek yoktur."
 }

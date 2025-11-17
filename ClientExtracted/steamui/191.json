@@ -175,5 +175,8 @@
     "moderationaction_updated": "รายละเอียดหัวข้อได้รับการอัปเดต",
     "moderationaction_locked": "ถูกล็อก",
     "moderationaction_unlocked": "ถูกปลดล็อก",
-    "moderationaction_unknown": "การดำเนินการที่ไม่รู้จัก"
+    "moderationaction_unknown": "การดำเนินการที่ไม่รู้จัก",
+    "ContentReportReasonCategoryDesc_Suspicious": "การฟิชชิง การหลอกลวง การสวมรอยเป็นเพื่อนหรือฝ่ายสนับสนุน Steam",
+    "ContentReportReasonCategoryDesc_Inappropriate": "การก่อกวน สแปม ภาพที่ไม่เหมาะสม",
+    "ContentReportSubmitted_Chat_Description": "ขอบคุณสำหรับการส่งรายงานของคุณ เราได้รวบรวมบันทึกแช็ตบางส่วนและส่งไปเพื่อรับการตรวจสอบจากผู้ช่วยดูแลแล้ว คุณไม่จำเป็นต้องดำเนินการใด ๆ เพิ่มเติม"
 }

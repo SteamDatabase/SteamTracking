@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Zpráva od uživatele, který není Váš přítel",
     "NonFriendAction_Block": "Blokovat komunikaci",
     "NonFriendAction_Allow": "Povolit komunikaci",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Podezřelá konverzace",
+    "SuspiciousMessage_Explanation": "Tato konverzace vypadá podezřele. Na odkazech sdílených touto osobou se nepřihlašujte k žádným účtům, a to ani k účtu služby Steam. Zástupci služby Steam Vás NIKDY nebudou kontaktovat prostřednictvím konverzace nebo externích programů. Odkazy jsou deaktivovány, dokud nezavřete toto upozornění.",
     "Friend_Menu_Open": "Možnosti",
     "Friend_Menu_AddNickname": "Přidat přezdívku",
     "Friend_Menu_AddToQuickAccess": "Přidat do oblíbených",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Byl opraven seznam přátel a okna konverzací, která se v systémech Linux a macOS nezobrazovala v překrytí služby Steam.",
     "BBCode_Loading": "Načítání",
     "BBCode_Failed": "Načítání se nezdařilo",
-    "broadcastDetails_Playing": "Hraje"
+    "broadcastDetails_Playing": "Hraje",
+    "Chat_Actions_ReportGroup": "Nahlásit místnost"
 }

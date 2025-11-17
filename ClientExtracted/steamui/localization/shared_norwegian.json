@@ -599,7 +599,7 @@
     "EventEditor_SaleValveApproval_Approved_Desc_OnPublish": "Sørg for at du dobbeltsjekker synlighetsinnstillingene nedenfor før du publiserer.",
     "StoreCapsule_App_Excluded": "Spillet er utelukket fra visning basert på <1>butikkinnstillingene</1> dine.",
     "StoreCapsule_Package_Excluded": "Pakken er utelukket fra visning basert på <1>butikkinnstillingene</1> dine.",
-    "StoreCapsule_Bundle_Excluded": "Bunten er utelukket fra visning basert på <1>butikkinnstillingene</1> dine.",
+    "StoreCapsule_Bundle_Excluded": "Pakken er utelukket fra visning basert på <1>butikkinnstillingene</1> dine.",
     "AddToWishlist_short": "+ på ønskeliste",
     "Wishlisted": "På ønskelisten",
     "Wishlisted_short": "På ønskeliste",
@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "Spesialpris på %1$s",
     "Generic_More_Info": "Mer informasjon",
     "Account_Safety_Header": "Hold kontoen trygg",
-    "Account_Safety_Notice_Prefix": "MERK: %1$s",
-    "Account_Safety_Notice": "Representanter fra Valve eller Steam tar ALDRI kontakt med deg gjennom samtalen. Vis varsomhet når du åpner lenker – særlig hvis de krever at du logger inn på Steam. Hvis det er mistenkelig, uventet, gavmildt eller noe som haster, er det sannsynligvis svindel.",
+    "Account_Safety_Notice": "MERK: Representanter fra Valve eller Steam tar ALDRI kontakt med deg gjennom samtalen. Vis varsomhet når du åpner lenker – særlig hvis de krever at du logger inn på Steam. Hvis det er mistenkelig, uventet, noe som haster eller er veldig gavmildt, er det sannsynligvis svindel.",
     "OverlayButtonHeader_Timeline": "Spillopptak",
     "ChatEntry_UploadLastClip": "Last opp siste klipp",
     "GameRecording_OverlayShowVideo": "Vis video",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "En byttehandel ble omgjort",
     "SteamNotifications_TradeReversal_Body_Short": "En byttehandel ble omgjort",
     "SteamNotifications_TradeReversal_Description": "En nylig byttehandel ble omgjort av den andre parten.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "Kan vi samle anonymiserte data om bildefrekvens i spill for å forbedre SteamOS-enheter for alle spillere? Du kan endre dette senere i innstillingene.",
+    "GameFrameRateReporting_Response_Yes": "Ja",
+    "GameFrameRateReporting_Response_No": "Nei takk",
+    "Account_Safety_Notice_Report": "Representanter fra Valve eller Steam tar ALDRI kontakt med deg gjennom samtalen."
 }

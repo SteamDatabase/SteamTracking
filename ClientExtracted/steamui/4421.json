@@ -171,9 +171,12 @@
     "moderationaction_escalated": "已转交上级处理",
     "moderationaction_sanctioned": "已处罚",
     "moderationaction_sustainedondispute": "争议已驳回",
-    "moderationaction_unresolved": "举报变为未解决",
-    "moderationaction_updated": "举报相关详情已更新",
+    "moderationaction_unresolved": "该对象相关的举报变为未解决",
+    "moderationaction_updated": "该举报对象相关详情已更新",
     "moderationaction_locked": "已锁定",
     "moderationaction_unlocked": "已取消锁定",
-    "moderationaction_unknown": "未知操作"
+    "moderationaction_unknown": "未知操作",
+    "ContentReportReasonCategoryDesc_Suspicious": "钓鱼、欺诈、冒充好友或 Steam 客服",
+    "ContentReportReasonCategoryDesc_Inappropriate": "骚扰、垃圾信息、不当图片",
+    "ContentReportSubmitted_Chat_Description": "感谢您提交的举报。我们已收集了一小部分聊天日志，并将其发给版主处理。您无需进行任何其他操作。"
 }

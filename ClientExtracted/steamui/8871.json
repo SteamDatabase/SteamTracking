@@ -175,5 +175,8 @@
     "moderationaction_updated": "Themendetails aktualisiert",
     "moderationaction_locked": "Gesperrt",
     "moderationaction_unlocked": "Entsperrt",
-    "moderationaction_unknown": "Unbekannte Aktion"
+    "moderationaction_unknown": "Unbekannte Aktion",
+    "ContentReportReasonCategoryDesc_Suspicious": "Phishing, Betrug, jemand gibt sich als Freund oder Steam-Support aus",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Belästigung, Spam, unangemessene Bilder",
+    "ContentReportSubmitted_Chat_Description": "Vielen Dank für Ihre Meldung. Wir haben einen kleinen Teil des Chatprotokolls erfasst und zur Überprüfung weitergeleitet. Sie müssen keine weiteren Maßnahmen ergreifen."
 }

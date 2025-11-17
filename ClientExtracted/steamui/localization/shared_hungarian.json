@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "Akciós ár: %1$s",
     "Generic_More_Info": "További információ",
     "Account_Safety_Header": "Tartsd biztonságban fiókodat",
-    "Account_Safety_Notice_Prefix": "MEGJEGYZÉS: %1$s",
-    "Account_Safety_Notice": "A Valve vagy a Steam képviselői SOHA nem fognak kapcsolatba lépni veled csevegésen keresztül. Járj el rendkívüli óvatossággal hivatkozások megnyitásakor, különösen, ha a Steambe való bejelentkezést kérik. Ha gyanús, váratlan, sürgető vagy nagylelkű, akkor valószínűleg átverés.",
+    "Account_Safety_Notice": "MEGJEGYZÉS: A Valve vagy a Steam képviselői SOHA nem fognak kapcsolatba lépni veled csevegésen keresztül. Járj el rendkívüli óvatossággal hivatkozások megnyitásakor, különösen, ha a Steambe való bejelentkezést kérik. Ha gyanús, váratlan, sürgető vagy nagylelkű, akkor valószínűleg átverés.",
     "OverlayButtonHeader_Timeline": "Játékfelvétel",
     "ChatEntry_UploadLastClip": "Legutóbbi klip feltöltése",
     "GameRecording_OverlayShowVideo": "Videó mutatása",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "Egy csere vissza lett vonva.",
     "SteamNotifications_TradeReversal_Body_Short": "Egy csere vissza lett vonva.",
     "SteamNotifications_TradeReversal_Description": "A cserepartnered visszavonta egy közelmúltbeli cserédet.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "Gyűjthetünk névtelenített játékmeneti képkockaszámadatokat a SteamOS-eszközök jobbá tételére minden játékosnak? Ezt később meg tudod változtatni a Beállításokban.",
+    "GameFrameRateReporting_Response_Yes": "Igen",
+    "GameFrameRateReporting_Response_No": "Nem, köszönöm",
+    "Account_Safety_Notice_Report": "A Valve vagy a Steam képviselői SOHA nem fognak kapcsolatba lépni veled csevegésen keresztül."
 }

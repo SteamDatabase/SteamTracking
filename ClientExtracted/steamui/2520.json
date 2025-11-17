@@ -175,5 +175,8 @@
     "moderationaction_updated": "Szczegóły sprawy zaktualizowane",
     "moderationaction_locked": "Zablokowano",
     "moderationaction_unlocked": "Odblokowano",
-    "moderationaction_unknown": "Nieznane działanie"
+    "moderationaction_unknown": "Nieznane działanie",
+    "ContentReportReasonCategoryDesc_Suspicious": "Wyłudzanie danych, oszustwa, podszywanie się pod znajomych lub Pomoc techniczną Steam.",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Nękanie, spam, nieodpowiednie obrazy",
+    "ContentReportSubmitted_Chat_Description": "Dziękujemy za przesłanie zgłoszenia. Zebraliśmy niewielką część rejestru czatu i przesłaliśmy ją do moderacji. Nie musisz podejmować żadnych dalszych działań."
 }

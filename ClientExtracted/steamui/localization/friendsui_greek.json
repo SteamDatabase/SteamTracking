@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Μήνυμα από ένα χρήστη που δεν είναι φίλος σας",
     "NonFriendAction_Block": "Αποκλεισμός επικοινωνιών",
     "NonFriendAction_Allow": "Να επιτρέπονται επικοινωνίες",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Ύποπτη συνομιλία",
+    "SuspiciousMessage_Explanation": "Αυτή η συνομιλία φαίνεται ύποπτη. Μην συνδεθείτε σε κανέναν από τους λογαριασμούς σας, συμπεριλαμβανομένου του Steam, μέσω συνδέσμων που παρέχονται από αυτό το άτομο. Οι εκπρόσωποι του Steam δεν θα επικοινωνήσουν ΠΟΤΕ μαζί σας μέσω συνομιλίας ή εξωτερικών προγραμμάτων. Οι σύνδεσμοι έχουν απενεργοποιηθεί μέχρι να κλείσετε αυτό το μήνυμα.",
     "Friend_Menu_Open": "Επιλογές",
     "Friend_Menu_AddNickname": "Προσθήκη ψευδώνυμου",
     "Friend_Menu_AddToQuickAccess": "Προσθήκη στα αγαπημένα",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Διορθώθηκαν τα παράθυρα φίλων και συνομιλίας να μην εμφανίζουν την επικάλυψη εντός παιχνιδιού σε Linux και macOS.",
     "BBCode_Loading": "Φόρτωση",
     "BBCode_Failed": "Αποτυχία φόρτωσης",
-    "broadcastDetails_Playing": "Παίζει"
+    "broadcastDetails_Playing": "Παίζει",
+    "Chat_Actions_ReportGroup": "Αναφορά συνομιλίας ομάδας"
 }

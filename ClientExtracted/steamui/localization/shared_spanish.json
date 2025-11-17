@@ -200,8 +200,8 @@
     "EventCalendar_GroupTitle_Curators": "De mentores a los que sigues",
     "EventCalendar_GroupTitle_FeaturedCurators": "Historias de mentores destacados",
     "EventCalendar_NewsLanguage_Title": "Mostrando fuentes de noticias disponibles en tus idiomas",
-    "EventCalendar_NewsLanguage_Text": "Actualiza tus preferencias de idioma para permitir contenido y fuentes en más idiomas visitando tu %1$s",
-    "EventCalendar_NewsLanguage_TextInHyperlink": "guardar preferencias de idioma",
+    "EventCalendar_NewsLanguage_Text": "Actualiza tus preferencias de idioma para permitir contenido y fuentes en más idiomas visitando tus %1$s",
+    "EventCalendar_NewsLanguage_TextInHyperlink": "preferencias de idioma de la tienda",
     "EventCalendar_TimeEventLastPlayed": "Último jugado: %1$s",
     "EventCalendar_TimeEventWishlisted": "En lista de deseados %1$s",
     "EventCalendar_GlobalCalendar_Action": "Volver al Centro de noticias",
@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "Precio especial de %1$s",
     "Generic_More_Info": "Más información",
     "Account_Safety_Header": "Mantén segura tu cuenta",
-    "Account_Safety_Notice_Prefix": "NOTA: %1$s",
-    "Account_Safety_Notice": "Los representantes de Valve o Steam NUNCA se pondrán en contacto contigo a través del chat. Ten mucha precaución al abrir enlaces, especialmente si requieren iniciar sesión en Steam. Si es sospechoso, inesperado, urgente o demasiado generoso, es probable que se trate de una estafa.",
+    "Account_Safety_Notice": "NOTA: Los representantes de Valve o Steam NUNCA se pondrán en contacto contigo a través del chat. Ten mucha precaución al abrir enlaces, especialmente si requieren iniciar sesión en Steam. Si es sospechoso, inesperado, urgente o demasiado generoso, es probable que se trate de una estafa.",
     "OverlayButtonHeader_Timeline": "Grabación de partidas",
     "ChatEntry_UploadLastClip": "Cargar el último clip",
     "GameRecording_OverlayShowVideo": "Mostrar vídeo",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "Se revirtió un intercambio",
     "SteamNotifications_TradeReversal_Body_Short": "Se revirtió un intercambio",
     "SteamNotifications_TradeReversal_Description": "La persona con la que realizaste intercambios revirtió uno de tus intercambios recientes.",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "¿Podemos recopilar datos anonimizados sobre la velocidad de fotogramas durante las partidas para mejorar los dispositivos con SteamOS para todos los jugadores? Puedes cambiarlo más adelante en «Parámetros».",
+    "GameFrameRateReporting_Response_Yes": "Sí",
+    "GameFrameRateReporting_Response_No": "No, gracias",
+    "Account_Safety_Notice_Report": "Los representantes de Valve o Steam NUNCA se pondrán en contacto contigo a través del chat."
 }

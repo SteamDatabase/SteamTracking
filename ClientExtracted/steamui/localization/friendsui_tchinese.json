@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "非好友傳來的訊息",
     "NonFriendAction_Block": "封鎖通訊",
     "NonFriendAction_Allow": "允許通訊",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "可疑聊天",
+    "SuspiciousMessage_Explanation": "此聊天看起來很可疑。請勿透過此人提供的連結登入包括 Steam 在內的任何帳戶。Steam 客服絕對不會透過聊天或外部程式與您聯絡。連結已停用，直到此訊息被關閉為止。",
     "Friend_Menu_Open": "選項",
     "Friend_Menu_AddNickname": "新增暱稱",
     "Friend_Menu_AddToQuickAccess": "新增至最愛",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "修正在 Linux 和 macOS 中，好友與聊天視窗無法顯示於遊戲內嵌介面中的問題",
     "BBCode_Loading": "載入中",
     "BBCode_Failed": "載入失敗",
-    "broadcastDetails_Playing": "正在遊玩"
+    "broadcastDetails_Playing": "正在遊玩",
+    "Chat_Actions_ReportGroup": "檢舉群組聊天"
 }

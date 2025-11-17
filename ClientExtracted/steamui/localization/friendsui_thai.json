@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "ข้อความจากผู้ใช้ที่ไม่ใช่เพื่อนของคุณ",
     "NonFriendAction_Block": "บล็อกการติดต่อ",
     "NonFriendAction_Allow": "อนุญาตการติดต่อ",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "แช็ตที่น่าสงสัย",
+    "SuspiciousMessage_Explanation": "แช็ตนี้มีลักษณะน่าสงสัย โปรดอย่าเข้าสู่ระบบบัญชีใด ๆ ของคุณ รวมถึง Steam โดยใช้ลิงก์ที่มาจากบุคคลนี้ ตัวแทนของ Steam จะไม่ติดต่อคุณผ่านทางแช็ตหรือโปรแกรมภายนอกเป็นอันขาด ลิงก์ดังกล่าวจะใช้งานไม่ได้จนถึงเวลาที่ลบข้อความนี้ทิ้ง",
     "Friend_Menu_Open": "ตัวเลือก",
     "Friend_Menu_AddNickname": "เพิ่มชื่อเล่น",
     "Friend_Menu_AddToQuickAccess": "เพิ่มในรายชื่อโปรด",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "แก้ไขหน้าต่างเพื่อนและแช็ตที่ไม่แสดงในโอเวอร์เลย์ภายในเกมบน Linux และ macOS",
     "BBCode_Loading": "กำลังโหลด",
     "BBCode_Failed": "ล้มเหลวในการโหลด",
-    "broadcastDetails_Playing": "กำลังเล่น"
+    "broadcastDetails_Playing": "กำลังเล่น",
+    "Chat_Actions_ReportGroup": "รายงานการแช็ตแบบกลุ่ม"
 }

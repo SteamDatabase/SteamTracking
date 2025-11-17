@@ -634,7 +634,7 @@
     "NonFriendAction_Block": "Bloquear comunicações",
     "NonFriendAction_Allow": "Permitir comunicações",
     "SuspiciousMessage_Header": "Chat suspeito",
-    "SuspiciousMessage_Explanation": "Este chat parece suspeito. Não inicies sessão em nenhuma das tuas contas, incluindo a do Steam, a partir de links enviados por esta pessoa. Representantes do Steam NUNCA entrarão em contacto contigo através do chat ou de programas externos. Se o conteúdo é inesperado, urgente ou generoso, então é provavelmente uma burla.",
+    "SuspiciousMessage_Explanation": "Este chat parece suspeito. Não inicies sessão em nenhuma das tuas contas, incluindo a do Steam, a partir de links enviados por esta pessoa. Representantes do Steam NUNCA entrarão em contacto contigo através do chat ou de programas externos. Os links estarão desativados até que esta mensagem seja descartada.",
     "Friend_Menu_Open": "Opções",
     "Friend_Menu_AddNickname": "Adicionar alcunha",
     "Friend_Menu_AddToQuickAccess": "Adicionar aos favoritos",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Foi resolvido um problema em que as janelas do chat e dos amigos não apareciam no Painel Steam durante jogos no Linux e no macOS.",
     "BBCode_Loading": "A carregar",
     "BBCode_Failed": "Erro ao carregar",
-    "broadcastDetails_Playing": "A jogar"
+    "broadcastDetails_Playing": "A jogar",
+    "Chat_Actions_ReportGroup": "Denunciar sala de chat"
 }

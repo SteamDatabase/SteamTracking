@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Mensagem de um usuário que não está na sua lista de amigos",
     "NonFriendAction_Block": "Bloquear comunicação",
     "NonFriendAction_Allow": "Permitir comunicação",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Conversa suspeita",
+    "SuspiciousMessage_Explanation": "Essa conversa parece suspeita. Não inicie a sessão com nenhuma das suas contas, incluindo a sua conta Steam, a partir de links fornecidos por essa pessoa. Os representantes do Steam NUNCA entrarão em contato com você pela Conversa Steam nem por programas externos. Os links permanecerão desativados até que esta mensagem seja descartada.",
     "Friend_Menu_Open": "Opções",
     "Friend_Menu_AddNickname": "Adicionar apelido",
     "Friend_Menu_AddToQuickAccess": "Adicionar aos favoritos",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Correção de erro que impedia a exibição da lista de amigos e janelas de conversa no Painel Steam no Linux e macOS.",
     "BBCode_Loading": "Carregando",
     "BBCode_Failed": "Erro ao carregar",
-    "broadcastDetails_Playing": "Jogando"
+    "broadcastDetails_Playing": "Jogando",
+    "Chat_Actions_ReportGroup": "Denunciar sala de conversa"
 }

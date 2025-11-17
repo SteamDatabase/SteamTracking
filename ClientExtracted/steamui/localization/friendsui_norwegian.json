@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Melding fra en bruker som ikke er en venn",
     "NonFriendAction_Block": "Blokker kommunikasjon",
     "NonFriendAction_Allow": "Tillat kommunikasjon",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Mistenkelig samtale",
+    "SuspiciousMessage_Explanation": "Denne samtalen ser mistenkelig ut. Ikke logg inn på noen kontoer, deriblant Steam, gjennom lenker gitt av denne personen. Representanter fra Steam tar ALDRI kontakt med deg gjennom samtalen eller eksterne programmer. Lenker er deaktiverte inntil denne meldingen avvises.",
     "Friend_Menu_Open": "Innstillinger",
     "Friend_Menu_AddNickname": "Legg til kallenavn",
     "Friend_Menu_AddToQuickAccess": "Legg til i favoritter",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "Fikset at venne- og samtalevinduer ikke ble vist i spilloverlegget på Linux og macOS.",
     "BBCode_Loading": "Laster",
     "BBCode_Failed": "Kunne ikke laste inn",
-    "broadcastDetails_Playing": "Spiller"
+    "broadcastDetails_Playing": "Spiller",
+    "Chat_Actions_ReportGroup": "Rapporter gruppesamtale"
 }

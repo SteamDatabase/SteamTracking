@@ -810,7 +810,7 @@
     "language_selection_tchinese": "繁體中文（繁体字中国語）",
     "language_selection_russian": "Русский（ロシア語）",
     "language_selection_thai": "ไทย（タイ語）",
-    "language_selection_japanese": "日本語（日本語）",
+    "language_selection_japanese": "日本語",
     "language_selection_portuguese": "Português - Portugal（ポルトガル語－ポルトガル）",
     "language_selection_brazilian": "Português - Brasil（ブラジルポルトガル語）",
     "language_selection_polish": "Polski（ポーランド語）",
@@ -3315,8 +3315,7 @@
     "Discount_ARIA_Label_SpecialPrice": "特別価格の%1$s",
     "Generic_More_Info": "詳細情報",
     "Account_Safety_Header": "アカウントを安全に保つには",
-    "Account_Safety_Notice_Prefix": "注意：%1$s",
-    "Account_Safety_Notice": "ValveまたはSteamの担当者がチャットで連絡を取ることは「絶対に」ありません。リンクを開く際、特にSteamへのサインインを必要とする場合は、細心の注意を払ってください。内容が疑わしい場合や、予想外である場合、緊急性を伴う場合、条件が良すぎる場合は、詐欺の可能性があります。",
+    "Account_Safety_Notice": "注意：ValveまたはSteamの担当者がチャットで連絡を取ることは決してありません。リンクを開く際、特にSteamへのサインインを必要とする場合は、細心の注意を払ってください。内容が疑わしい場合や、予想外である場合、緊急性を伴う場合、条件が良すぎる場合は、詐欺の可能性があります。",
     "OverlayButtonHeader_Timeline": "ゲームレコーディング",
     "ChatEntry_UploadLastClip": "最後のクリップをアップロード",
     "GameRecording_OverlayShowVideo": "動画を表示",
@@ -3750,5 +3749,9 @@
     "SteamNotifications_TradeReversal_Body": "トレードが取り消されました",
     "SteamNotifications_TradeReversal_Body_Short": "トレードが取り消されました",
     "SteamNotifications_TradeReversal_Description": "最近のトレードの1つがトレード相手によって取り消されました。",
-    "shared_dummy": "dont translate"
+    "shared_dummy": "dont translate",
+    "GameFrameRateReporting_Question": "すべてのプレイヤーのためにSteamOSデバイスを改善するため、匿名化されたゲームプレイフレームレートデータを収集してもよいですか？これは後で「設定」で変更できます。",
+    "GameFrameRateReporting_Response_Yes": "はい",
+    "GameFrameRateReporting_Response_No": "いいえ",
+    "Account_Safety_Notice_Report": "ValveまたはSteamの担当者がチャットで連絡を取ることは決してありません。"
 }

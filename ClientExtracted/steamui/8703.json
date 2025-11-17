@@ -175,5 +175,8 @@
     "moderationaction_updated": "Saksopplysninger oppdatert",
     "moderationaction_locked": "Låst",
     "moderationaction_unlocked": "Låst opp",
-    "moderationaction_unknown": "Ukjent handling"
+    "moderationaction_unknown": "Ukjent handling",
+    "ContentReportReasonCategoryDesc_Suspicious": "Nettfiske (phishing), svindel, å utgi seg for å være venner eller Steams kundestøtte",
+    "ContentReportReasonCategoryDesc_Inappropriate": "Trakassering, søppelpost, upassende bilder",
+    "ContentReportSubmitted_Chat_Description": "Takk for rapporten. Vi har samlet en liten del av samtaleloggen og sendt den inn for moderering. Du behøver ikke å gjøre noe mer."
 }

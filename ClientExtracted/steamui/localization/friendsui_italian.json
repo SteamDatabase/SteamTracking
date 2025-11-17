@@ -633,8 +633,8 @@
     "DirectMessageFromNonFriend": "Messaggio da un utente che non è nella tua lista amici",
     "NonFriendAction_Block": "Blocca tutte le comunicazioni",
     "NonFriendAction_Allow": "Riattiva le comunicazioni",
-    "SuspiciousMessage_Header": "Suspicious Chat",
-    "SuspiciousMessage_Explanation": "This chat looks suspicious. Do not sign into any of your accounts, including Steam, from links provided by this person. Steam representatives will NEVER contact you via chat or external programs. If it is unexpected, urgent, or generous then it is likely a scam.",
+    "SuspiciousMessage_Header": "Chat sospetta",
+    "SuspiciousMessage_Explanation": "Questa chat sembra sospetta. Non accedere a nessuno dei tuoi account, incluso quello di Steam, tramite i link forniti da questa persona. I rappresentanti di Steam non ti contatteranno MAI tramite chat o programmi esterni. I link saranno disabilitati finché questo messaggio non verrà chiuso.",
     "Friend_Menu_Open": "Opzioni",
     "Friend_Menu_AddNickname": "Assegna un soprannome",
     "Friend_Menu_AddToQuickAccess": "Aggiungi ai preferiti",
@@ -992,7 +992,7 @@
     "FriendSettings_Mobile_FavoritesDesc": "Mostra questa persona in cima alla mia lista amici, così sarà più facile trovarla",
     "FriendSettings_Mobile_BlockDesc": "Ti vedranno offline e non riceverai alcun messaggio di chat da loro",
     "FriendSettings_Mobile_Notifications": "Notifiche per dispositivi mobili",
-    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Incorporare immagini e altri media solo quando si utilizza il wifi",
+    "FriendSettings_Mobile_InlineEmbedOnWifiOnly": "Incorporare immagini e altri media solo quando si utilizza il Wi-Fi",
     "FriendSettings_Mobile_UploadCurrentLogs": "Carica i registri della sessione attuale",
     "FriendSettings_Mobile_UploadPreviousLogs": "Carica i registri della sessione precedente",
     "FriendSettings_Mobile_SaveImageCaptures": "Salva screenshot",
@@ -1195,5 +1195,6 @@
     "changeLog_UpdateItem57": "È stato risolto un problema con le finestre degli amici e delle chat che non comparivano nell'overlay in gioco su Linux e macOS.",
     "BBCode_Loading": "Caricamento",
     "BBCode_Failed": "Caricamento non riuscito",
-    "broadcastDetails_Playing": "Riproduzione"
+    "broadcastDetails_Playing": "Riproduzione",
+    "Chat_Actions_ReportGroup": "Segnala chat di gruppo"
 }
