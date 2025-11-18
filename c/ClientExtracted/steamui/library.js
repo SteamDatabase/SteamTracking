@@ -4361,6 +4361,12 @@ var CLSTAMP = "steamdb";
         function _(_, _, _) {
           return null == _ || isNaN(_) ? _ : Math.max(_, Math.min(_, _));
         }
+        function _(_, _, _) {
+          return null != _ && !isNaN(_) && _ >= _ && _ <= _;
+        }
+        function _(_, _) {
+          return null != _ && !isNaN(_) && null != _ && _ >= 0 && _ < _.length;
+        }
         function _(_, _, _, _, _) {
           return _ + ((_ - _) * (_ - _)) / (_ - _);
         }
@@ -4377,7 +4383,16 @@ var CLSTAMP = "steamdb";
             if (_[_] < "0" || _[_] > "9") return !1;
           return !0;
         }
+        function _(_, _, _, _) {
+          let _ = _ / _,
+            _ = _ / _,
+            _ = Math.min(_, _);
+          return [_ * _, _ * _];
+        }
         __webpack_require__._(_, {
+          _: () => _,
+          _: () => _,
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -4417,6 +4432,7 @@ var CLSTAMP = "steamdb";
       chunkid: (module, module_exports, __webpack_require__) => {
         "use strict";
         __webpack_require__._(_, {
+          _: () => _,
           _: () => _,
           _: () => _,
           _: () => _,
@@ -4494,6 +4510,9 @@ var CLSTAMP = "steamdb";
         ]);
         const _ = new Map();
         for (const [_, _] of _.entries()) _.set(_, _);
+        function _(_) {
+          return _.get(_);
+        }
         function _(_) {
           if ("english" !== _)
             return "sc_schinese" === _ ? "schinese" : "english";
@@ -11705,6 +11724,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__("chunkid"),
@@ -11776,6 +11796,14 @@ var CLSTAMP = "steamdb";
             _,
           );
           return _._.AddNavParamToURL(_, _);
+        }
+        function _(_) {
+          const { href: _, ..._ } = _,
+            _ = _(_);
+          return _.createElement("a", {
+            ..._,
+            href: _,
+          });
         }
       },
       chunkid: (module, module_exports, __webpack_require__) => {
@@ -12838,9 +12866,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Nov 17 2025 : 11:44:39",
-                BUILD_TIME_UTC: "Nov 17 2025 : 19:44:39",
-                BUILD_RTIME_UTC: 1763408679,
+                BUILD_TIME_LOCAL: "Nov 17 2025 : 15:24:52",
+                BUILD_TIME_UTC: "Nov 17 2025 : 23:24:52",
+                BUILD_RTIME_UTC: 1763421892,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -16732,6 +16760,7 @@ var CLSTAMP = "steamdb";
         "use strict";
         __webpack_require__._(_, {
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid");
         function _(_) {
@@ -17632,6 +17661,7 @@ var CLSTAMP = "steamdb";
           GrD: () => _,
           Gv$: () => _,
           IFd: () => _,
+          IOc: () => _,
           IrQ: () => _,
           Jlk: () => _,
           K7s: () => _,
@@ -17646,6 +17676,7 @@ var CLSTAMP = "steamdb";
           MxO: () => _,
           N8C: () => _,
           NCC: () => _,
+          NtH: () => _,
           OSJ: () => _,
           OWN: () => _,
           OeC: () => _,
@@ -17740,6 +17771,7 @@ var CLSTAMP = "steamdb";
           jdP: () => _,
           jlt: () => _,
           kPc: () => _,
+          l8x: () => _,
           lMJ: () => _,
           lRD: () => _,
           m59: () => _,
@@ -19351,6 +19383,19 @@ var CLSTAMP = "steamdb";
           return _.createElement(
             "svg",
             {
+              width: "50px",
+              height: "25px",
+              viewBox: "0 0 50 25",
+            },
+            _.createElement("path", {
+              _: "M46 0H4C1.8 0 0 1.8 0 4v17c0 2.2 1.8 4 4 4h42c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zM21 18.916V5.084L32.805 12 21 18.916z",
+            }),
+          );
+        }
+        function _() {
+          return _.createElement(
+            "svg",
+            {
               version: "1.1",
               _: "Layer_1",
               xmlns: "http://www.w3.org/2000/svg",
@@ -19981,6 +20026,28 @@ var CLSTAMP = "steamdb";
                 strokeMiterlimit: "10",
                 points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
               }),
+          );
+        }
+        function _(_) {
+          const { angle: _, ..._ } = _;
+          return _.createElement(
+            "svg",
+            {
+              style: {
+                transform: `rotate(${_.angle}deg)`,
+              },
+              xmlns: "http://www.w3.org/2000/svg",
+              className: _().HasHorizontalDirection,
+              viewBox: "0 0 32 32",
+              fill: "none",
+              ..._,
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              _: "M16.0855 15.5837L8.88892 8.38708L12.0316 5.24438L22.3709 15.5837L12.0316 25.923L8.88892 22.7803L16.0855 15.5837Z",
+            }),
           );
         }
         function _() {
@@ -22632,6 +22699,21 @@ var CLSTAMP = "steamdb";
             },
             _.createElement("path", {
               _: "m600 1086 449.68-447.79c120.42-119.95 120.42-314.34 0-434.26-120.37-119.95-315.61-119.95-436.03 0l-13.641 13.547-13.641-13.547c-120.42-119.95-315.66-119.95-436.03 0-120.42 119.91-120.42 314.29 0 434.26z",
+            }),
+          );
+        }
+        function _(_) {
+          return _.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 1200 1200",
+              ..._,
+            },
+            _.createElement("path", {
+              fill: "currentColor",
+              _: "M600,96c-277.2,0-504,226.8-504,504s226.8,504,504,504,504-226.8,504-504S877.2,96,600,96ZM600,222c83.2,0,158.8,26.5,220.5,70.6L292.6,820.5c-44.1-61.7-70.6-137.3-70.6-220.5,0-209.2,168.8-378,378-378ZM907.4,379.5c44.1,61.7,70.6,137.3,70.6,220.5,0,209.2-168.8,378-378,378s-158.8-26.5-220.5-70.6L907.4,379.5Z",
+              strokeWidth: "0",
             }),
           );
         }
@@ -27137,9 +27219,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 17 2025 : 11:44:39",
-                    BUILD_TIME_UTC: "Nov 17 2025 : 19:44:39",
-                    BUILD_RTIME_UTC: 1763408679,
+                    BUILD_TIME_LOCAL: "Nov 17 2025 : 15:24:52",
+                    BUILD_TIME_UTC: "Nov 17 2025 : 23:24:52",
+                    BUILD_RTIME_UTC: 1763421892,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27683,7 +27765,6 @@ var CLSTAMP = "steamdb";
         3583: "localization/steampops_indonesian-json",
         3594: "localization/shared_brazilian-json",
         3714: "sp",
-        3834: "chunk~1a96cdf59",
         3869: "localization/steamui_indonesian-json",
         4026: "localization/friendsui_ukrainian-json",
         4102: "localization/shared_arabic-json",
@@ -27757,9 +27838,11 @@ var CLSTAMP = "steamdb";
         9368: "localization/steamui_danish-json",
         9418: "localization/steampops_bulgarian-json",
         9462: "localization/friendsui_dutch-json",
+        9672: "discoveryqueue",
         9711: "localization/steampops_norwegian-json",
         9858: "chunk~2dcc5aaf7",
         9869: "localization/shared_vietnamese-json",
+        9882: "chunk~87fd721f7",
         9887: "localization/steamui_german-json",
       })[_] || _) +
       ".js?contenthash=" +
@@ -27830,7 +27913,6 @@ var CLSTAMP = "steamdb";
         3594: "e8c12438e25f4b794f2e",
         3714: "ab7010eec823473536d8",
         3778: "9ebb42e1184bcfb392a1",
-        3834: "e7e252595ae5778f7604",
         3869: "1bfed28dc4f7a6c5558e",
         4006: "6edb17eb44717c856f9a",
         4026: "224915394ed4a402ce7b",
@@ -27924,22 +28006,25 @@ var CLSTAMP = "steamdb";
         9418: "29e9fa15a9fc8e62a893",
         9457: "8156acbe4fd435f12ae5",
         9462: "626d3617c341d4587db1",
+        9672: "e0cfaf3309ff6bcd9d00",
         9711: "2ed989ee7251a5d19c6f",
         9746: "445d5d4419f565cb1ea4",
-        9858: "851e35682cf05fd992e8",
+        9858: "d7d898731ea6f6080907",
         9869: "68999f12e1dfcc1cbb22",
+        9882: "499f31ccf435fd972880",
         9887: "d519e4d5a6c2fa8c0272",
       }[_]),
     (_.miniCssF = (_) =>
       "css/" +
       ({
         1220: "gamenotes",
-        3834: "chunk~1a96cdf59",
         7462: "gamerecording",
         7653: "broadcastapp",
         8396: "broadcast",
         9129: "awardicon",
+        9672: "discoveryqueue",
         9858: "chunk~2dcc5aaf7",
+        9882: "chunk~87fd721f7",
       }[_] || _) +
       ".css"),
     (_._ = (function () {
@@ -28090,12 +28175,13 @@ var CLSTAMP = "steamdb";
               {
                 674: 1,
                 1220: 1,
-                3834: 1,
                 7462: 1,
                 7653: 1,
                 8396: 1,
                 9129: 1,
+                9672: 1,
                 9858: 1,
+                9882: 1,
               }[_] &&
               _.push(
                 (_[_] = _(_).then(
