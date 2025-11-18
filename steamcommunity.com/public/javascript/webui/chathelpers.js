@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10239276";
+var CLSTAMP = "10243195";
 (() => {
   var e,
     t,
@@ -12,7 +12,7 @@ var CLSTAMP = "10239276";
         var s = {
           "./friendsui_arabic.json": [83784, 6518],
           "./friendsui_brazilian.json": [18522, 4154],
-          "./friendsui_bulgarian.json": [19118, 6385],
+          "./friendsui_bulgarian.json": [96737, 6385],
           "./friendsui_czech.json": [60347, 7487],
           "./friendsui_danish.json": [78365, 4787],
           "./friendsui_dutch.json": [46350, 4302],
@@ -58,7 +58,7 @@ var CLSTAMP = "10239276";
         var s = {
           "./friendsui_arabic.json": [83784, 6518],
           "./friendsui_brazilian.json": [18522, 4154],
-          "./friendsui_bulgarian.json": [19118, 6385],
+          "./friendsui_bulgarian.json": [96737, 6385],
           "./friendsui_czech.json": [60347, 7487],
           "./friendsui_danish.json": [78365, 4787],
           "./friendsui_dutch.json": [46350, 4302],
@@ -100,9 +100,9 @@ var CLSTAMP = "10239276";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      72422: (e, t, n) => {
+      26949: (e, t, n) => {
         "use strict";
-        n(9793);
+        n(102);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -1721,7 +1721,7 @@ var CLSTAMP = "10239276";
               })();
           });
       },
-      9793: (e, t, n) => {
+      102: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1735,7 +1735,7 @@ var CLSTAMP = "10239276";
         var s = {
           "./shared_arabic.json": [23287, 3710],
           "./shared_brazilian.json": [1451, 6562],
-          "./shared_bulgarian.json": [99908, 1449],
+          "./shared_bulgarian.json": [77527, 1449],
           "./shared_czech.json": [84066, 7591],
           "./shared_danish.json": [59414, 6523],
           "./shared_dutch.json": [35211, 5110],
@@ -1781,7 +1781,7 @@ var CLSTAMP = "10239276";
         var s = {
           "./shared_arabic.json": [23287, 3710],
           "./shared_brazilian.json": [1451, 6562],
-          "./shared_bulgarian.json": [99908, 1449],
+          "./shared_bulgarian.json": [77527, 1449],
           "./shared_czech.json": [84066, 7591],
           "./shared_danish.json": [59414, 6523],
           "./shared_dutch.json": [35211, 5110],
@@ -1956,7 +1956,7 @@ var CLSTAMP = "10239276";
         762: "b220df99a189bfcd110c",
         976: "2e9a3a224c3b2cb5ef25",
         1225: "75151f599e0259a42525",
-        1449: "986a8e65e639a19deebc",
+        1449: "59f974a4dee610c7f9b8",
         1499: "6658dd1dbea0bb432a3b",
         1973: "17bf4627ac6ec0806b0d",
         2256: "3e02e8d4cd1b318b2ac4",
@@ -1991,7 +1991,7 @@ var CLSTAMP = "10239276";
         6165: "3e5a25459f7a0b09dead",
         6208: "ebf9687f75dcf90d1fba",
         6239: "edea131e12681ea1bf4d",
-        6385: "4f54b3391cde2e7a2f83",
+        6385: "33b125d17c30c5ebb20c",
         6518: "7fe5f05b9fed4ee70450",
         6523: "af167b77a559b6d0c503",
         6562: "31c3551bb7dce3731bf3",
@@ -2150,6 +2150,6 @@ var CLSTAMP = "10239276";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(72422));
+  var c = o.O(void 0, [1068], () => o(26949));
   c = o.O(c);
 })();

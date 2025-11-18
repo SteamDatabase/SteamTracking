@@ -33366,7 +33366,7 @@
           var _, _, _;
           const _ = new FormData();
           _.append("sessionid", _._.SESSIONID),
-            _.append("elangauge", "" + _),
+            _.append("elanguage", "" + _),
             _.append("originalname", _);
           const _ = _.GetCurrentImageOption();
           (null == _ ? void 0 : _.artworkType) &&
