@@ -713,8 +713,9 @@
       var Y = n(11526),
         F = n(50122);
       function D(e) {
+        const { underline: t = "auto", ...n } = e;
         return o.createElement("a", {
-          ...(0, Y.mz)({ ...e, className: F.TextLink }, G),
+          ...(0, Y.mz)({ ...n, underline: t, className: F.TextLink }, G),
         });
       }
       const G = [
@@ -866,7 +867,7 @@
         if (!c && i) return null;
         const l = J(c, r);
         return o.createElement(
-          "a",
+          D,
           { href: l, "data-miniprofile": a },
           c ? c.public_data.persona_name : a,
         );
@@ -953,7 +954,12 @@
         return n && n.match(/^https?:\/\//)
           ? o.createElement(
               D,
-              { target: "_blank", href: n, underline: "auto" },
+              {
+                target: "_blank",
+                href: n,
+                underline: "auto",
+                contrast: "title",
+              },
               e.children,
             )
           : e.children;
@@ -1641,7 +1647,7 @@
           return e && e.asset_properties && 0 != e.asset_properties.length
             ? o.createElement(
                 r.s,
-                { direction: "column", gapY: "1" },
+                { direction: "column" },
                 e.asset_properties.map((t, n) =>
                   o.createElement(S, {
                     key: n,

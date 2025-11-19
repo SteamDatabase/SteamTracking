@@ -773,10 +773,12 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        const { underline: _ = "auto", ...__webpack_require__ } = _;
         return _.createElement("a", {
           ...(0, _._)(
             {
-              ..._,
+              ...__webpack_require__,
+              underline: _,
               className: _.TextLink,
             },
             _,
@@ -960,7 +962,7 @@
         if (!_ && _) return null;
         const _ = _(_, _);
         return _.createElement(
-          "a",
+          _,
           {
             href: _,
             "data-miniprofile": _,
@@ -1060,6 +1062,7 @@
                 target: "_blank",
                 href: _,
                 underline: "auto",
+                contrast: "title",
               },
               _.children,
             )
@@ -1942,7 +1945,6 @@
                 _._,
                 {
                   direction: "column",
-                  gapY: "1",
                 },
                 _.asset_properties.map((_, _) =>
                   _.createElement(_, {
