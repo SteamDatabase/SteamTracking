@@ -64061,10 +64061,12 @@
         return !!_ && "value" in _;
       }
       !(function (_) {
-        (_[(_.k_EContentModerationAction_None = 1)] =
+        (_[(_.k_EContentModerationAction_None = 0)] =
           "k_EContentModerationAction_None"),
-          (_[(_.k_EContentModerationAction_Sustain = 2)] =
-            "k_EContentModerationAction_Sustain");
+          (_[(_.k_EContentModerationAction_Sustain = 1)] =
+            "k_EContentModerationAction_Sustain"),
+          (_[(_.k_EContentModerationAction_MarkSuspicious = 2)] =
+            "k_EContentModerationAction_MarkSuspicious");
       })(_ || (_ = {}));
       const _ = [
         {

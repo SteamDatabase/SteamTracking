@@ -22463,14 +22463,8 @@
             facetFilterState: m,
           } = this.state;
           const u = this.m_loadCapsulesDebugGeneration + 1;
-          if (
-            (Hr.Debug(`LoadCapsules[${u}]: starting`),
-            a.enable_faceted_browsing && !m)
-          )
-            return void Hr.Debug(
-              `LoadCapsules[${u}]: Faceted browse enabled but no state yet`,
-            );
-          this.m_cancelSignal.cancel();
+          Hr.Debug(`LoadCapsules[${u}]: starting`),
+            this.m_cancelSignal.cancel();
           const d = w().CancelToken.source();
           (this.m_cancelSignal = d),
             this.m_loadCapsulesDebugGeneration++,

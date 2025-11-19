@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10246517";
+var CLSTAMP = "10248155";
 (() => {
   var e,
     t,
@@ -40,7 +40,7 @@ var CLSTAMP = "10246517";
           "./friendsui_thai.json": [47194, 6888],
           "./friendsui_turkish.json": [37468, 3e3],
           "./friendsui_ukrainian.json": [6922, 4434],
-          "./friendsui_vietnamese.json": [53179, 3789],
+          "./friendsui_vietnamese.json": [75560, 3789],
         };
         function i(e) {
           if (!n.o(s, e))
@@ -86,7 +86,7 @@ var CLSTAMP = "10246517";
           "./friendsui_thai.json": [47194, 6888],
           "./friendsui_turkish.json": [37468, 3e3],
           "./friendsui_ukrainian.json": [6922, 4434],
-          "./friendsui_vietnamese.json": [53179, 3789],
+          "./friendsui_vietnamese.json": [75560, 3789],
         };
         function i(e) {
           if (!n.o(s, e))
@@ -100,9 +100,9 @@ var CLSTAMP = "10246517";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      7967: (e, t, n) => {
+      55481: (e, t, n) => {
         "use strict";
-        n(86296);
+        n(8140);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -170,13 +170,13 @@ var CLSTAMP = "10246517";
           const l = m("event", e);
           return (
             l && (Object.assign(S, l), (t.eventConfig = !0)),
-            (u = !0),
-            d.forEach((e) => e()),
+            (d = !0),
+            u.forEach((e) => e()),
             t
           );
         }
-        let d = new Set(),
-          u = !1;
+        let u = new Set(),
+          d = !1;
         function m(e, t = o) {
           return h(e, t, !0);
         }
@@ -1469,13 +1469,13 @@ var CLSTAMP = "10246517";
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? s.createElement(de, { controller: this.props.controller })
-                : s.createElement(ue, { controller: this.props.controller }),
+                ? s.createElement(ue, { controller: this.props.controller })
+                : s.createElement(de, { controller: this.props.controller }),
             );
           }
         };
         _e = z([se.PA], _e);
-        let de = class extends s.Component {
+        let ue = class extends s.Component {
           constructor(e) {
             super(e), (0, ne.Gn)(this);
           }
@@ -1634,12 +1634,12 @@ var CLSTAMP = "10246517";
             );
           }
         };
-        z([ne.sH], de.prototype, "m_bTriedToLaunchSteam", void 0),
-          z([Y], de.prototype, "LaunchWebChat", null),
-          z([Y], de.prototype, "OpenInSteamIgnoreAccount", null),
-          z([Y], de.prototype, "LaunchSteamClient", null),
-          (de = z([se.PA], de));
-        class ue extends s.Component {
+        z([ne.sH], ue.prototype, "m_bTriedToLaunchSteam", void 0),
+          z([Y], ue.prototype, "LaunchWebChat", null),
+          z([Y], ue.prototype, "OpenInSteamIgnoreAccount", null),
+          z([Y], ue.prototype, "LaunchSteamClient", null),
+          (ue = z([se.PA], ue));
+        class de extends s.Component {
           render() {
             return s.createElement(
               "div",
@@ -1721,7 +1721,7 @@ var CLSTAMP = "10246517";
               })();
           });
       },
-      86296: (e, t, n) => {
+      8140: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1972,7 +1972,7 @@ var CLSTAMP = "10246517";
         3415: "6a56dce9127ce66675a7",
         3485: "90fdc9c835f8a0c46b90",
         3710: "3cb52c7679b48e8e00c6",
-        3789: "6ee5f2196605f69d0d41",
+        3789: "0f39b012dd9c8ab729c1",
         3912: "ebf872aa1e6156dee7bd",
         4154: "3eaac0384373505793bc",
         4302: "1bf1b2ebd1754c1607ec",
@@ -2037,12 +2037,12 @@ var CLSTAMP = "10246517";
             _ < l.length;
             _++
           ) {
-            var d = l[_];
+            var u = l[_];
             if (
-              d.getAttribute("src") == e ||
-              d.getAttribute("data-webpack") == i + n
+              u.getAttribute("src") == e ||
+              u.getAttribute("data-webpack") == i + n
             ) {
-              a = d;
+              a = u;
               break;
             }
           }
@@ -2054,7 +2054,7 @@ var CLSTAMP = "10246517";
           a.setAttribute("data-webpack", i + n),
           (a.src = e)),
           (s[e] = [t]);
-        var u = (t, n) => {
+        var d = (t, n) => {
             (a.onerror = a.onload = null), clearTimeout(m);
             var i = s[e];
             if (
@@ -2066,11 +2066,11 @@ var CLSTAMP = "10246517";
               return t(n);
           },
           m = setTimeout(
-            u.bind(null, void 0, { type: "timeout", target: a }),
+            d.bind(null, void 0, { type: "timeout", target: a }),
             12e4,
           );
-        (a.onerror = u.bind(null, a.onerror)),
-          (a.onload = u.bind(null, a.onload)),
+        (a.onerror = d.bind(null, a.onerror)),
+          (a.onload = d.bind(null, a.onload)),
           c && document.head.appendChild(a);
       }
     }),
@@ -2150,6 +2150,6 @@ var CLSTAMP = "10246517";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(7967));
+  var c = o.O(void 0, [1068], () => o(55481));
   c = o.O(c);
 })();
