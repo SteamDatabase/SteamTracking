@@ -3614,8 +3614,10 @@ function PopulateAssetProperties( elAssetProperties, elAssetPropertiesContent, a
 		if ( sAssetProperties != "" )
 			sAssetProperties += "<BR>";
 
-		sAssetProperties += property.name;
-		sAssetProperties += ": ";
+		var sAssetProperty = "";
+
+		sAssetProperty += property.name;
+		sAssetProperty += ": ";
 
 		if ( Object.hasOwn( property, 'float_value' ) )
 		{
@@ -3634,11 +3636,18 @@ function PopulateAssetProperties( elAssetProperties, elAssetPropertiesContent, a
 					maxFractionDigits = 15;
 			}
 
-			sAssetProperties += floatValue.toLocaleString( undefined, { maximumFractionDigits: maxFractionDigits, } );
+			sAssetProperty += floatValue.toLocaleString( undefined, { maximumFractionDigits: maxFractionDigits, } );
 		}
 
 		if ( Object.hasOwn( property, 'int_value' ) )
-			sAssetProperties += property.int_value;
+			sAssetProperty += property.int_value;
+
+		if ( Object.hasOwn( property, 'string_value' ) )
+		{
+			continue;
+		}
+
+		sAssetProperties += sAssetProperty;
 	}
 
 	if ( sAssetProperties != "" )
