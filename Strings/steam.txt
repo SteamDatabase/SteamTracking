@@ -1896,15 +1896,17 @@ $ffn
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 00003333
-0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+05:42:02
+05:42:09
 08bX
 0?0L
 0A/8
@@ -2352,9 +2354,6 @@ $ffn
 18CUtlCharConversion
 18IUDPSocketCallback
 18IWorkThreadFactory
-19:48:22
-19:48:30
-19:48:31
 19CCuratorPreferences
 19CECSigningPublicKey
 19CHTTPClientResponse
@@ -2595,7 +2594,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-524288
 52F*
 55Ly
 55j_WW
@@ -2619,8 +2617,6 @@ $ffn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
-65536
-666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
 6ConVar
@@ -2669,6 +2665,9 @@ $ffn
 8/A0
 8000
 8192
+65536
+524288
+666666666666666666666666666666666666666666666666
 82\n:XPH
 88n|
 88pH
@@ -6731,6 +6730,7 @@ M;;va
 MAIN
 MASK:
 MAX_ALLOC_CHUNK is wrong, please fix
+MBZ$U
 MBb!\v
 MD5-SHA1
 MDC2
@@ -7285,7 +7285,7 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
-Nov 17 2025
+Nov 19 2025
 November
 NrZl
 NullMetrics()
@@ -8756,7 +8756,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Nov 17 2025 19:48:30
+Startup - updater built Nov 19 2025 05:42:09
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher

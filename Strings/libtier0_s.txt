@@ -95,9 +95,9 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 0123456789ABCDEF
+05:42:05
 12CStdMemAlloc
 16CAdHocValidation
-19:48:26
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -324,7 +324,7 @@ Network
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-Nov 17 2025
+Nov 19 2025
 OUT OF MEMORY
 Object
 Only thread can stop self: Use a higher-level protocol

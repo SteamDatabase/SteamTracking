@@ -317,6 +317,7 @@ $ORIGIN
 0123456789
 0123456789ABCDEF
 0123456789abcdef
+05:42:02
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
@@ -339,7 +340,6 @@ $ORIGIN
 17CFileWriterThread
 17CStreamReaderBase
 18CUtlCharConversion
-19:48:22
 19CUtlNoEscConversion
 20CUniformRandomStream
 20IUniformRandomStream
@@ -577,7 +577,7 @@ No Error
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-Nov 17 2025
+Nov 19 2025
 November
 OUT OF MEMORY
 Object
