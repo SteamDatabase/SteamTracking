@@ -99,7 +99,7 @@
 	"Menu_Section_Hardware": "Hardware",
 	"Menu_Section_Hardware_VRHardware": "Hardware de RV",
 	"Menu_Section_Hardware_SteamDeckDock": "Estación base",
-	"Menu_Section_Hardware_Family": "New Steam Hardware",
+	"Menu_Section_Hardware_Family": "Nuevo hardware de Steam",
 	"Menu_Section_WaysToPlay": "Formas de jugar",
 	"Menu_Section_SpecialSections": "Secciones especiales",
 	"Menu_Section_SpecialSections_NextFest": "Next Fest de Steam",

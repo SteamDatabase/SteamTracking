@@ -11110,7 +11110,7 @@
     75933: (e, t, r) => {
       "use strict";
       r.d(t, { Wn: () => a, a4: () => n });
-      r(87007);
+      r(4807);
       var i = r(90626);
       const a = 940;
       function n(e = a) {
@@ -24286,7 +24286,7 @@
           ),
         );
       }
-      var Kr = r(9827),
+      var Kr = r(97740),
         Yr = r(20194),
         $r = r(41735),
         Jr = r.n($r);
@@ -25142,9 +25142,9 @@
       }
       r.d(t, { J: () => i });
     },
-    9827: (e, t, r) => {
+    97740: (e, t, r) => {
       "use strict";
-      r.d(t, { fh: () => zr });
+      r.d(t, { fh: () => Cr });
       var i = r(52967),
         a = r(42780),
         n = r(8527),
@@ -25232,7 +25232,7 @@
             super.AppendText(r, t);
         }
       }
-      var _ = r(87007),
+      var _ = r(4807),
         y = r(34629),
         B = r(41735),
         b = r.n(B),
@@ -26514,9 +26514,10 @@
             color: i,
             bgcolor: a,
             children: n,
+            trailerBaseID: l,
           } = e,
-          [l, o] = (0, s.useState)(!1),
-          [m, c] = (0, C.t7)(r, st);
+          [o, m] = (0, s.useState)(!1),
+          [c, u] = (0, C.t7)(r, st);
         switch (t) {
           case Ze.k_TrailerAsButton:
           case Ze.k_TrailerAsPill:
@@ -26530,17 +26531,18 @@
                     [nt().Pill]: t == Ze.k_TrailerAsPill,
                     [nt().Button]: t == Ze.k_TrailerAsButton,
                   }),
-                  onClick: () => o(!0),
+                  onClick: () => m(!0),
                   style: { color: i, backgroundColor: a },
                 },
                 s.createElement(H.jGG, null),
                 n || (0, w.we)("#EventEmail_WatchNow"),
               ),
-              m &&
+              c &&
                 s.createElement(it.PE, {
-                  storeItem: m,
-                  bShowModal: l,
-                  hideModal: () => o(!1),
+                  storeItem: c,
+                  bShowModal: o,
+                  trailerBaseID: l,
+                  hideModal: () => m(!1),
                 }),
             );
           default:
@@ -27363,16 +27365,23 @@
               ),
             );
       }
-      var rr = r(33280),
-        ir = r.n(rr);
+      var rr = r(20194);
+      function ir(e, t) {
+        return ["usePartnerEventUserPoll", e.ConvertTo64BitString(), t];
+      }
       function ar(e, t) {
+        return `${"store" == (0, h.yK)() ? h.TS.STORE_BASE_URL : h.TS.COMMUNITY_BASE_URL}partnerevents/${e.ConvertTo64BitString()}/userpoll/${t}/ajaxloaddata/`;
+      }
+      function nr(e, t) {
         return t
           ? t.startsWith("https://") || t.startsWith("http://")
             ? t
             : `${pe.TS.CLAN_CDN_ASSET_URL}images/clan/${e}/${t}`
           : t;
       }
-      function nr(e) {
+      var sr = r(33280),
+        lr = r.n(sr);
+      function or(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
           i = (0, l.j$)(e.args, "poll_id"),
@@ -27392,48 +27401,72 @@
               )
             : null;
         const o = (0, K.sf)(pe.TS.LANGUAGE);
+        return s.createElement(mr, {
+          userPollDef: n,
+          lang: o,
+          clanAccountID: t.clanSteamID.GetAccountID(),
+          eventModel: t,
+        });
+      }
+      function mr(e) {
+        const { eventModel: t, userPollDef: r, lang: i } = e,
+          a =
+            ((n = t.clanSteamID),
+            (l = t.GID || "0"),
+            (0, rr.I)({
+              queryKey: ir(n, l),
+              queryFn: async () => {
+                const e = new FormData();
+                e.set("sessionid", (0, h.KC)());
+                const t = await fetch(ar(n, l), {
+                  method: "POST",
+                  body: e,
+                  credentials: "include",
+                });
+                return await t.json();
+              },
+              placeholderData: { results: [], bLoading: !0 },
+            }).data ?? { results: [], bLoading: !0 });
+        var n, l;
         return s.createElement(
-          sr,
-          {
-            userPollDef: n,
-            lang: o,
-            clanAccountID: t.clanSteamID.GetAccountID(),
-          },
-          n.options?.map((e) =>
-            s.createElement(lr, {
+          cr,
+          { ...e },
+          r.options?.map((e) =>
+            s.createElement(ur, {
               key: "polloption" + e.option_id,
-              lang: o,
+              lang: i,
               pollOptionDef: e,
+              bDisableSelection: a.bLoading,
             }),
           ),
         );
       }
-      function sr(e) {
+      function cr(e) {
         const { userPollDef: t, lang: r, clanAccountID: i, children: a } = e,
           [n, l] = (0, ft.q3)(() => [
             w.NT.GetWithFallback(t.localized_poll_description, r),
             t.user_poll_background,
           ]);
-        let o = null;
+        let o;
         return (
           Boolean(l) &&
             (o = {
-              backgroundImage: `url('${ar(i, l)}')`,
+              backgroundImage: `url('${nr(i, l)}')`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }),
           s.createElement(
             "div",
-            { className: ir().PollBackground, style: o },
+            { className: lr().PollBackground, style: o },
             s.createElement(
               "div",
-              { className: ir().PollContainer },
-              s.createElement("div", { className: ir().PollQuestion }, n),
-              s.createElement("div", { className: ir().PollOptions }, a),
+              { className: lr().PollContainer },
+              s.createElement("div", { className: lr().PollQuestion }, n),
+              s.createElement("div", { className: lr().PollOptions }, a),
               s.createElement(
                 "div",
-                { className: ir().PollStatus },
+                { className: lr().PollStatus },
                 s.createElement(
                   "div",
                   null,
@@ -27449,23 +27482,29 @@
           )
         );
       }
-      function lr(e) {
-        const { pollOptionDef: t, onClick: r, lang: i } = e,
-          [a] = (0, ft.q3)(() => [w.NT.GetWithFallback(t.localized_option, i)]);
+      function ur(e) {
+        const {
+            pollOptionDef: t,
+            onClick: r,
+            lang: i,
+            bDisableSelection: a,
+          } = e,
+          [n] = (0, ft.q3)(() => [w.NT.GetWithFallback(t.localized_option, i)]);
         return s.createElement(
           "div",
           {
-            className: (0, O.A)({ [ir().PollOption]: !0, [ir().Selected]: !1 }),
+            className: (0, O.A)({ [lr().PollOption]: !0, [lr().Selected]: !1 }),
+            onClick: a ? void 0 : r,
           },
-          s.createElement("div", { className: ir().PollVoteIcon }),
-          s.createElement("span", null, a),
+          s.createElement("div", { className: lr().PollVoteIcon }),
+          s.createElement("span", null, n),
         );
       }
-      let or = null;
-      function mr() {
+      let dr = null;
+      function gr() {
         return (
-          null == or &&
-            (or = new Map([
+          null == dr &&
+            (dr = new Map([
               ["url", { Constructor: $e, autocloses: !1 }],
               ["dynamiclink", { Constructor: Je, autocloses: !1 }],
               [
@@ -27508,37 +27547,37 @@
                 "*",
                 { Constructor: l.ck, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: cr, autocloses: !1 }],
+              ["img", { Constructor: pr, autocloses: !1 }],
               ["previewyoutube", { Constructor: F.gH, autocloses: !1 }],
               ["looping_media", { Constructor: l.$A, autocloses: !1 }],
               ["video", { Constructor: l.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: F.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: dr, autocloses: !1 }],
-              ["vod", { Constructor: gr, autocloses: !1 }],
+              ["trailer", { Constructor: yr, autocloses: !1 }],
+              ["vod", { Constructor: Br, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: pr,
+                  Constructor: br,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: yr, autocloses: !1 }],
-              ["claimitem", { Constructor: Br, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: br, autocloses: !1 }],
-              ["actiondialog", { Constructor: Mr, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: hr, autocloses: !0 }],
-              ["docimg", { Constructor: ur, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: Mr, autocloses: !1 }],
+              ["claimitem", { Constructor: wr, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: hr, autocloses: !1 }],
+              ["actiondialog", { Constructor: zr, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: vr, autocloses: !0 }],
+              ["docimg", { Constructor: _r, autocloses: !1 }],
               ["carousel", { Constructor: It, autocloses: !1 }],
               ["meetsteamsessiongroup", { Constructor: E.ac, autocloses: !1 }],
               ["meetsteamscheduleview", { Constructor: E.Xk, autocloses: !1 }],
-              ["userpolls", { Constructor: nr, autocloses: !1 }],
+              ["userpolls", { Constructor: or, autocloses: !1 }],
             ])),
-          or
+          dr
         );
       }
-      function cr(e) {
+      function pr(e) {
         const { showErrorInfo: t, event: r } = e.context;
         let i = (0, l.j$)(e.args, "src") || e.children?.toString();
         i || (i = (0, l.j$)(e.args));
@@ -27572,7 +27611,7 @@
           s.createElement(X.c, { rgSources: a }),
         );
       }
-      function ur(e) {
+      function _r(e) {
         const t = (0, l.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const r = e && e.children && e.children.toString(),
@@ -27588,13 +27627,13 @@
           s.createElement(X.c, { rgSources: i, alt: r })
         );
       }
-      function dr(e) {
-        const t = _r(
+      function yr(e) {
+        const t = fr(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          r = _r(e.args, "trailerid", 0);
+          r = fr(e.args, "trailerid", 0);
         let i =
           (0, l.j$)(e.args, "style")?.toLocaleLowerCase() ?? Ze.k_TrailerAsFull;
         i = Object.values(Ze).includes(i) ? i : Ze.k_TrailerAsFull;
@@ -27610,14 +27649,14 @@
           children: e.children,
         });
       }
-      function gr(e) {
-        const t = _r(e.args, "appid", 0);
+      function Br(e) {
+        const t = fr(e.args, "appid", 0);
         return s.createElement(gt, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function pr(e) {
+      function br(e) {
         const t = (0, l.j$)(e.args, "name"),
           r = (0, l.j$)(e.args, "title"),
           i = (0, l.j$)(e.args, "company"),
@@ -27638,11 +27677,11 @@
               bio: e.children,
             });
       }
-      function _r(e, t, r) {
+      function fr(e, t, r) {
         const i = (0, l.j$)(e, t);
         return void 0 === i || null == i ? r : Number.parseInt(i);
       }
-      function yr(e) {
+      function Mr(e) {
         const t = (0, l.j$)(e.args, "name"),
           r =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -27656,7 +27695,7 @@
           ? e.children
           : null;
       }
-      function Br(e) {
+      function wr(e) {
         const t = e.context.showErrorInfo;
         if (!h.iA.logged_in)
           return s.createElement(
@@ -27676,7 +27715,7 @@
           }
         return s.createElement(Ht, { bPreviewMode: t, rewardType: i });
       }
-      function br(e) {
+      function hr(e) {
         const t = Number.parseInt((0, l.j$)(e.args, "id")) || 0,
           r =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -27694,7 +27733,7 @@
           (!o && !r) || (o && r) ? e.children : null
         );
       }
-      function fr(e) {
+      function Sr(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, v.h)(e),
             r = (0, v.Q)();
@@ -27720,12 +27759,12 @@
         }
         return { bInitialState: !0 };
       }
-      function Mr(e) {
+      function zr(e) {
         const t = (0, l.j$)(e.args, "action"),
           r = (0, l.j$)(e.args, "initialToken"),
           i = (0, l.j$)(e.args, "successToken"),
           a = (0, l.j$)(e.args, "failToken"),
-          n = fr(t);
+          n = Sr(t);
         if (!(t && r && i && a)) {
           return e.context.showErrorInfo
             ? s.createElement(
@@ -27743,7 +27782,7 @@
                 onClick: (n) => {
                   (0, Tt.pg)(
                     s.createElement(
-                      wr,
+                      Rr,
                       {
                         strAction: t,
                         strInitialToken: r,
@@ -27766,7 +27805,7 @@
               (0, w.we)("#Login_SignIn"),
             );
       }
-      function wr(e) {
+      function Rr(e) {
         const {
             strAction: t,
             children: r,
@@ -27775,7 +27814,7 @@
             strSuccessToken: n,
             strFailToken: l,
           } = e,
-          o = fr(t),
+          o = Sr(t),
           [m, c] = s.useState(Boolean(o.fnAction));
         s.useEffect(() => {
           o.fnAction && (c(!0), o.fnAction().finally(() => c(!1)));
@@ -27814,7 +27853,7 @@
           ),
         );
       }
-      function hr(e) {
+      function vr(e) {
         const { showErrorInfo: t, event: r } = e.context,
           i = r.clanSteamID.GetAccountID(),
           [a] = s.useState(
@@ -27854,19 +27893,19 @@
             ? s.createElement("div", null, (0, w.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      class Sr {
+      class Tr {
         static sm_BBCodeDictionary = new Map([
           ...Array.from(l.W4.entries()),
-          ...Array.from(mr().entries()),
+          ...Array.from(gr().entries()),
         ]);
         static AddDictionary(e) {
-          Sr.sm_BBCodeDictionary = new Map([
-            ...Array.from(Sr.sm_BBCodeDictionary.entries()),
+          Tr.sm_BBCodeDictionary = new Map([
+            ...Array.from(Tr.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
       }
-      function zr(e) {
+      function Cr(e) {
         const {
             text: t,
             partnerEventStore: r,
@@ -27890,7 +27929,7 @@
           );
         return s
           .useMemo(
-            () => new i.B(Sr.sm_BBCodeDictionary, u, l || n.TS.LANGUAGE),
+            () => new i.B(Tr.sm_BBCodeDictionary, u, l || n.TS.LANGUAGE),
             [u, l],
           )
           .ParseBBCode(t, {
@@ -28985,10 +29024,24 @@
         return r + t + e.slice(r.length);
       }
       function T(e) {
-        const { storeItem: t, bShowModal: r, hideModal: a } = e,
-          n = (0, f.dy)(),
-          s = t?.GetAllTrailers()?.GetHighlightTrailers(n),
-          l = s && s.length > 0 ? s[0] : void 0,
+        const {
+            storeItem: t,
+            bShowModal: r,
+            trailerBaseID: a,
+            hideModal: n,
+          } = e,
+          s = (0, f.dy)(),
+          l = (0, i.useMemo)(() => {
+            if (a) {
+              const e = t
+                ?.GetAllTrailers()
+                ?.GetAllTrailers(s)
+                .find((e) => e.GetTrailerID() == a);
+              if (e) return e;
+            }
+            const e = t?.GetAllTrailers()?.GetHighlightTrailers(s);
+            return e && e.length > 0 ? e[0] : void 0;
+          }, [s, t, a]),
           o = i.useId(),
           m = i.useId();
         if (!l) return null;
@@ -29005,7 +29058,7 @@
                   "aria-labelledby": M(o, m),
                   bAllowFullSize: !0,
                   bOKDisabled: !0,
-                  closeModal: a,
+                  closeModal: n,
                 },
                 i.createElement(
                   "div",
@@ -29629,11 +29682,14 @@
       class s extends a.Component {
         m_refImage = a.createRef();
         constructor(e) {
-          super(e), (this.state = { nImage: 0 });
+          super(e), (this.state = { nImage: 0, nPropChangeCounter: 0 });
         }
-        componentDidUpdate(e) {
+        componentDidUpdate(e, t) {
           JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
-            this.setState({ nImage: 0 });
+            this.setState({
+              nImage: 0,
+              nPropChangeCounter: t.nPropChangeCounter + 1,
+            });
         }
         get src() {
           let e = "";
@@ -29676,8 +29732,10 @@
               strAltText: i,
               ...n
             } = this.props,
-            s = this.src;
+            s = this.src,
+            l = this.state.nPropChangeCounter;
           return a.createElement("img", {
+            key: l,
             ref: this.m_refImage,
             ...n,
             src: s,

@@ -1887,22 +1887,7 @@ CInventory.prototype.SelectItem = function( event, elItem, rgItem, bUserAction )
 
 	if ( window.g_bReactRenderedItemDescriptions && g_bReactRenderedItemDescriptions )
 	{
-		// PHP merges the assetinfo with the description, unmerge it here
-		/*
-
-	export interface CEcon_Asset_t
-	{
-		appid?: number;
-		contextid?: string;
-		assetid?: string;
-		classid?: string;
-		instanceid?: string;
-		amount?: string;
-		missing?: boolean;
-		est_usd?: string;
-	}
-		 */
-		const asset = {
+				const asset = {
 			appid: rgItem.appid,
 			contextid: rgItem.contextid,
 			assetid: rgItem.assetid,
@@ -1913,7 +1898,7 @@ CInventory.prototype.SelectItem = function( event, elItem, rgItem, bUserAction )
 			est_usd: rgItem.est_usd,
 			asset_properties: rgItem.asset_properties,
 		};
-		RenderItemInfo(sNewInfo, rgItem.description, asset );
+		RenderItemInfo( sNewInfo, rgItem.description, asset );
 	}
 	else
 		BuildHover( sNewInfo, rgItem, UserYou );

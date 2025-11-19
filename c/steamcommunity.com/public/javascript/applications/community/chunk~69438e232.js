@@ -14656,17 +14656,24 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return ["usePartnerEventUserPoll", _.ConvertTo64BitString(), _];
+      }
+      function _(_, _) {
+        return `${"store" == (0, _._)() ? _._.STORE_BASE_URL : _._.COMMUNITY_BASE_URL}partnerevents/${_.ConvertTo64BitString()}/userpoll/${_}/ajaxloaddata/`;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
-        var _;
         const _ = _.context.event,
           _ = _.context.showErrorInfo,
           _ = (0, _._)(_.args, "poll_id"),
@@ -14694,12 +14701,46 @@
               )
             : null;
         const _ = (0, _._)(_._.LANGUAGE);
+        return _.createElement(_, {
+          userPollDef: _,
+          lang: _,
+          clanAccountID: _.clanSteamID.GetAccountID(),
+          eventModel: _,
+        });
+      }
+      function _(_) {
+        var _;
+        const { eventModel: __webpack_require__, userPollDef: _, lang: _ } = _,
+          _ = (function (_, _) {
+            var _;
+            return null !==
+              (_ = (0, _._)({
+                queryKey: _(_, _),
+                queryFn: async () => {
+                  const _ = new FormData();
+                  __webpack_require__.set("sessionid", (0, _._)());
+                  const _ = await fetch(_(_, _), {
+                    method: "POST",
+                    body: _,
+                    credentials: "include",
+                  });
+                  return await _.json();
+                },
+                placeholderData: {
+                  results: [],
+                  bLoading: !0,
+                },
+              }).data) && void 0 !== _
+              ? _
+              : {
+                  results: [],
+                  bLoading: !0,
+                };
+          })(__webpack_require__.clanSteamID, __webpack_require__.GID || "0");
         return _.createElement(
           _,
           {
-            userPollDef: _,
-            lang: _,
-            clanAccountID: _.clanSteamID.GetAccountID(),
+            ..._,
           },
           null === (_ = _.options) || void 0 === _
             ? void 0
@@ -14708,6 +14749,7 @@
                   key: "polloption" + _.option_id,
                   lang: _,
                   pollOptionDef: _,
+                  bDisableSelection: _.bLoading,
                 }),
               ),
         );
@@ -14726,7 +14768,7 @@
             ),
             _.user_poll_background,
           ]);
-        let _ = null;
+        let _;
         return (
           Boolean(_) &&
             (_ = {
@@ -14781,7 +14823,12 @@
         );
       }
       function _(_) {
-        const { pollOptionDef: _, onClick: __webpack_require__, lang: _ } = _,
+        const {
+            pollOptionDef: _,
+            onClick: __webpack_require__,
+            lang: _,
+            bDisableSelection: _,
+          } = _,
           [_] = (0, _._)(() => [_._.GetWithFallback(_.localized_option, _)]);
         return _.createElement(
           "div",
@@ -14790,6 +14837,7 @@
               [_().PollOption]: !0,
               [_().Selected]: !1,
             }),
+            onClick: _ ? void 0 : __webpack_require__,
           },
           _.createElement("div", {
             className: _().PollVoteIcon,
@@ -16131,6 +16179,7 @@
             color: _,
             bgcolor: _,
             children: _,
+            trailerBaseID: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _._)(__webpack_require__, _);
@@ -16160,6 +16209,7 @@
                 _.createElement(_._, {
                   storeItem: _,
                   bShowModal: _,
+                  trailerBaseID: _,
                   hideModal: () => _(!1),
                 }),
             );
@@ -19898,22 +19948,30 @@
         return _ + _ + _.slice(_.length);
       }
       function _(_) {
-        var _;
         const {
-            storeItem: __webpack_require__,
-            bShowModal: _,
+            storeItem: _,
+            bShowModal: __webpack_require__,
+            trailerBaseID: _,
             hideModal: _,
           } = _,
           _ = (0, _._)(),
-          _ =
-            null ===
-              (_ =
-                null == __webpack_require__
+          _ = (0, _.useMemo)(() => {
+            var _, _;
+            if (_) {
+              const _ =
+                null === (_ = null == _ ? void 0 : _.GetAllTrailers()) ||
+                void 0 === _
                   ? void 0
-                  : __webpack_require__.GetAllTrailers()) || void 0 === _
-              ? void 0
-              : _.GetHighlightTrailers(_),
-          _ = _ && _.length > 0 ? _[0] : void 0,
+                  : _.GetAllTrailers(_).find((_) => _.GetTrailerID() == _);
+              if (_) return _;
+            }
+            const _ =
+              null === (_ = null == _ ? void 0 : _.GetAllTrailers()) ||
+              void 0 === _
+                ? void 0
+                : __webpack_require__.GetHighlightTrailers(_);
+            return _ && _.length > 0 ? _[0] : void 0;
+          }, [_, _, _]),
           _ = _.useId(),
           _ = _.useId();
         if (!_) return null;
@@ -19924,7 +19982,7 @@
           : _.createElement(
               _._,
               {
-                active: _,
+                active: __webpack_require__,
               },
               _.createElement(
                 _._,
@@ -19955,7 +20013,7 @@
                       display: "none",
                     },
                   },
-                  __webpack_require__.GetName(),
+                  _.GetName(),
                 ),
                 _.createElement(
                   "div",

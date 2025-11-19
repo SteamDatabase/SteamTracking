@@ -7,6 +7,8 @@
         EditLink: "i_CIp-5596IR0nTy_CGmS",
         ListOfListsHeader: "_1WWwSBpHbpQUq03Z4xb2CC",
         ListOfLists: "_3Hez7MwQxTE1FQR0UVuGSH",
+        ListItem: "_1Z9GpTT077CLWEAHRQbjFh",
+        Hidden: "WmPhZq3dKhEAyUKEyXUzL",
         ListEmptyText: "_3gHCyZMaqF2EFaOe0upv3u",
       };
     },
@@ -353,6 +355,7 @@
         SectionTypeRow: "_1PZsvBA3EZLClwvzyBo6i0",
         SectionTypePrompt: "_2yqihSDGXFT0ELXNIQLI9U",
         SectionTypeSelector: "_NW49CxcH5JoUR1KZ7qPh",
+        SectionTypeDesc: "wMGAdsXUrFnf4I3CoRkfL",
         SectionTypeWarning: "W0UAarNyer48TwtPDmNlk",
         LivePreview: "_3EHlA2_PMZTycmv8WHtbUg",
         JumpedTo: "_1EbrI7ej6mSeKcullY10yu",
@@ -688,6 +691,7 @@
         BackgroundAbsolute: "_3j-NrtjJGd7xvVoA5FlQBW",
         BackgroundBlur: "_24uipS7FdN4R-fVRLMyM2t",
         Title: "_1lQ-aevm7UP_kMSNv9AKJf",
+        Count: "_2mQ7KlByQfige-eSdZ7h3j",
       };
     },
     chunkid: (module) => {
@@ -2025,11 +2029,15 @@
               ? ((_.capsules_per_row_array = [2, 3, 4, 3]),
                 (_.carousel_rows = 2),
                 (_.show_as_carousel = !0))
-              : "links" == _ &&
-                null == _.capsules_per_row_array &&
-                ((_.capsules_per_row_array = [1]),
-                (_.carousel_rows = 1),
-                (_.show_as_carousel = !0)),
+              : "links" == _ && null == _.capsules_per_row_array
+                ? ((_.capsules_per_row_array = [1]),
+                  (_.carousel_rows = 1),
+                  (_.show_as_carousel = !0))
+                : "creator_list_of_lists" == _ &&
+                  null == _.capsules_per_row_array &&
+                  ((_.capsules_per_row_array = [4]),
+                  (_.carousel_rows = 1),
+                  (_.show_as_carousel = !0)),
             "creator_list" == _ &&
               ((_.smart_section = !0),
               (_.smart_section_type = "creator_list")));
@@ -4235,6 +4243,7 @@
         const _ = [];
         return (
           _.push(
+            "SalePageEdit_CreatorHomeTutorial",
             "SalePageEdit_Config",
             "SalePageEdit_TaggedItems",
             "SalePageEdit_AllArtworkCtn",
@@ -12491,7 +12500,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -12653,6 +12661,43 @@
                         }),
                       ),
                     ),
+                ],
+              }),
+              _.createElement("br", null),
+              _.createElement("p", null, "Advanced settings"),
+              _.createElement(_, {
+                leftChildren: [
+                  !_ &&
+                    _.createElement(_._, {
+                      key: "Sale_Section_HideIfTooFewItems",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_HideIfTooFewItems",
+                      ttipToken: "#Sale_Section_HideIfTooFewItems_ttip",
+                      varName: "hide_section_if_too_few_items",
+                    }),
+                  _ &&
+                    _.createElement(_._, {
+                      valveOnly: !0,
+                      key: "hide_prices",
+                      varName: "hide_prices",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_HidePrices",
+                      ttipToken: "#Sale_Section_HidePrices_ttip",
+                    }),
+                  _ &&
+                    _.createElement(_._, {
+                      valveOnly: !0,
+                      key: "show_deck_compability_details",
+                      varName: "show_deck_compability_details",
+                      editModel: _,
+                      section: _,
+                      textToken: "#Sale_Section_ShowDeckCompatibility",
+                      ttipToken: "#Sale_Section_ShowDeckCompatibility_ttip",
+                    }),
+                ],
+                rightChildren: [
                   !_ &&
                     _.createElement(_, {
                       key: "RandomizeItemControl",
@@ -12698,41 +12743,6 @@
                       textToken: "#Sale_Section_ShowPurchaseOptions",
                       ttipToken: "#Sale_Section_ShowPurchaseOptions_ttip",
                     }),
-                ],
-              }),
-              _.createElement(_, {
-                leftChildren: [
-                  !_ &&
-                    _.createElement(_._, {
-                      key: "Sale_Section_HideIfTooFewItems",
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_HideIfTooFewItems",
-                      ttipToken: "#Sale_Section_HideIfTooFewItems_ttip",
-                      varName: "hide_section_if_too_few_items",
-                    }),
-                  _ &&
-                    _.createElement(_._, {
-                      valveOnly: !0,
-                      key: "hide_prices",
-                      varName: "hide_prices",
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_HidePrices",
-                      ttipToken: "#Sale_Section_HidePrices_ttip",
-                    }),
-                  _ &&
-                    _.createElement(_._, {
-                      valveOnly: !0,
-                      key: "show_deck_compability_details",
-                      varName: "show_deck_compability_details",
-                      editModel: _,
-                      section: _,
-                      textToken: "#Sale_Section_ShowDeckCompatibility",
-                      ttipToken: "#Sale_Section_ShowDeckCompatibility_ttip",
-                    }),
-                ],
-                rightChildren: [
                   _ &&
                     _.createElement(_, {
                       key: "dynamic_reveal",
@@ -13365,7 +13375,7 @@
           _.createElement(
             "div",
             {
-              className: _.EditLink,
+              className: (0, _._)(_.EditLink, _.InstructionText),
             },
             (0, _._)(
               "#Sale_CreatorList_Manage",
@@ -13408,6 +13418,7 @@
           );
         return _.createElement(_._, {
           label: (0, _._)("#Sale_SmartSection_CreatorList"),
+          strDefaultLabel: (0, _._)("#Sale_SmartSection_CreatorList_Default"),
           strDropDownClassName: _.DropDownScroll,
           rgOptions: null != _ ? _ : [],
           selectedOption: _,
@@ -13420,6 +13431,7 @@
           },
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _, saleSection: __webpack_require__ } = _,
           [_, _] = (0, _._)(() => [
@@ -13813,7 +13825,7 @@
                   },
                   "(VO)",
                 ),
-                " ",
+                " ",
                 _.label,
               )),
           );
@@ -13826,10 +13838,20 @@
             return null === (_ = _.tooltip) || void 0 === _
               ? void 0
               : _.trim().length;
-          }).forEach(
-            (_) =>
-              (_.label = _.createElement(_.Fragment, null, _.label, " (?)")),
-          ),
+          }).forEach((_) => {
+            _.tooltip &&
+              ((_.label = _.createElement(
+                _._,
+                {
+                  toolTipContent: _.tooltip,
+                  className: _.DropDownOptionHelpLabel,
+                },
+                _.label,
+                " ",
+                _.createElement(_._VW, null),
+              )),
+              (_.tooltip = void 0));
+          }),
           _.createElement(_._, {
             strClassName: _.SmartSelType,
             label: (0, _._)("#Sale_SmartSectionType"),
@@ -14874,6 +14896,7 @@
         return _ ? _[_] : "";
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19384,8 +19407,7 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       const _ = [_._.k_Header1, _._.k_Header2, _._.k_Header3];
       function _(_) {
         const {
@@ -19727,9 +19749,11 @@
           }),
           [_, _, _] = (0, _._)(!1),
           _ = (0, _._)(),
-          _ = _._.GetWithFallback(
-            null == _ ? void 0 : _.localized_link_capsule,
-            _,
+          _ = (0, _._)(() =>
+            _._.GetWithFallback(
+              null == _ ? void 0 : _.localized_link_capsule,
+              _,
+            ),
           );
         if (
           ((0, _.useEffect)(() => {
@@ -19826,27 +19850,29 @@
       }
       function _(_) {
         const { link: _, editModel: __webpack_require__, closeModal: _ } = _,
-          [_, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _] = (0, _._)(() => [
             __webpack_require__.GetEventModel(),
             __webpack_require__.GetIncludedRealmList(),
             __webpack_require__.GetClanSteamID(),
             __webpack_require__.GetAppID(),
+            _.localized_link_capsule,
           ]);
         return _.createElement(_._, {
           partnerEventStore: _._,
-          loc_images: _.localized_link_capsule,
+          loc_images: _,
           appid: _,
           eventModel: _,
           clanSteamID: _,
           fnSetImageURL: (_, _, _ = 0) => {
             const _ = _._.GetHashAndExt(_);
-            _.localized_link_capsule = _._.Set(
+            (_.localized_link_capsule = _._.Set(
               _.localized_link_capsule || [],
               _,
               _,
-            );
+            )),
+              __webpack_require__.SetDirty(_._.jsondata_sales);
           },
-          fnLangHasData: __webpack_require__.BHasTitleImage,
+          fnLangHasData: (_) => _._.BHas(_.localized_link_capsule || [], _),
           fnGetImageHash: (_, _) => {
             var _;
             return null === (_ = _.localized_link_capsule) || void 0 === _
@@ -26507,46 +26533,14 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
-          [_, _, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.smart_section,
             _.unique_id,
-            _.trailer_carousel_auto_advance_msec || 1e4,
             _.trailer_carousel_intro_video_appid,
           ]);
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(_._, {
-            type: "number",
-            mustBeNumeric: !0,
-            rangeMin: 0,
-            label: (0, _._)("#Sale_TrailerCarouselType_AutoAdvanceMsec"),
-            tooltip: (0, _._)("#Sale_TrailerCarouselType_AutoAdvanceMsec_ttip"),
-            onChange: (_) => {
-              (_.trailer_carousel_auto_advance_msec = Number(_.target.value)),
-                __webpack_require__.SetDirty(_._.jsondata_sales);
-            },
-            placeholder: String(1e4),
-            value: _,
-          }),
-          _.createElement(
-            _._,
-            {
-              requireAdmin: !0,
-              clanSteamID: __webpack_require__.GetClanSteamID(),
-              className: (0, _._)(_().ValveOnlyBackground),
-            },
-            _.createElement(_._, {
-              mustBeNumeric: !0,
-              label: (0, _._)("#Sale_TrailerCarouselType_IntroVideo"),
-              tooltip: (0, _._)("#Sale_TrailerCarouselType_IntroVideo_ttip"),
-              onChange: (_) => {
-                (_.trailer_carousel_intro_video_appid = _.target.value),
-                  __webpack_require__.SetDirty(_._.jsondata_sales);
-              },
-              value: _ || "",
-            }),
-          ),
           _.createElement(_._, {
             onChange: (_) => {
               (_.smart_section = _),
@@ -26575,6 +26569,24 @@
                   capsule: _,
                 }),
             }),
+          _.createElement(
+            _._,
+            {
+              requireAdmin: !0,
+              clanSteamID: __webpack_require__.GetClanSteamID(),
+              className: (0, _._)(_().ValveOnlyBackground),
+            },
+            _.createElement(_._, {
+              mustBeNumeric: !0,
+              label: (0, _._)("#Sale_TrailerCarouselType_IntroVideo"),
+              tooltip: (0, _._)("#Sale_TrailerCarouselType_IntroVideo_ttip"),
+              onChange: (_) => {
+                (_.trailer_carousel_intro_video_appid = _.target.value),
+                  __webpack_require__.SetDirty(_._.jsondata_sales);
+              },
+              value: _ || "",
+            }),
+          ),
         );
       }
       function _(_) {
@@ -26595,34 +26607,12 @@
         });
       }
       function _(_) {
-        const { saleSection: _, editModel: __webpack_require__ } = _,
-          _ = __webpack_require__
-            .GetSaleSections()
-            .filter((_) => "trailercarousel" == _.section_type),
-          _ = _[0].unique_id == _.unique_id,
-          _ = (0, _._)(
-            () =>
-              _ &&
-              _.length > 1 &&
-              _.some(
-                (_) =>
-                  _.trailer_carousel_intro_video_appid !=
-                  _.trailer_carousel_intro_video_appid,
-              ),
-          );
         return _.createElement(
-          _.Fragment,
-          null,
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().IntroVideoAppMismatchWarning,
-              },
-              (0, _._)(
-                "#Sale_TrailerCarouselType_IntroVideoAppMismatchWarning",
-              ),
-            ),
+          "div",
+          {
+            className: _().IntroVideoAppMismatchWarning,
+          },
+          (0, _._)("#Sale_TrailerCarouselType_IntroVideoAppMismatchWarning"),
         );
       }
       function _(_) {
@@ -26642,7 +26632,7 @@
           _.createElement(
             "div",
             {
-              className: _.EditLink,
+              className: (0, _._)(_.EditLink, _().InstructionText),
             },
             (0, _._)(
               "#Sale_CreatorListOfLists_Manage",
@@ -26696,27 +26686,17 @@
         );
       }
       function _(_) {
-        var _;
-        const { list: __webpack_require__ } = _,
-          _ =
-            0 == __webpack_require__.list_state()
-              ? (0, _._)(
-                  "#Sale_SmartSection_CreatorList_ListHidden",
-                  __webpack_require__.title(),
-                )
-              : __webpack_require__.title();
+        const { list: _ } = _,
+          _ = 0 == _.list_state(),
+          _ = _
+            ? (0, _._)("#Sale_SmartSection_CreatorList_ListHidden", _.title())
+            : _.title();
         return _.createElement(
           "li",
           {
-            className: _.ListItem,
+            className: (0, _._)(_.ListItem, _ ? _.Hidden : ""),
           },
           _,
-          (null === (_ = __webpack_require__.blurb()) || void 0 === _
-            ? void 0
-            : _.trim().length) > 0 &&
-            _.createElement(_._, {
-              tooltip: __webpack_require__.blurb(),
-            }),
         );
       }
       const _ = (0, _._)((_) => {
@@ -26924,6 +26904,13 @@
           : _.createElement(
               _.Fragment,
               null,
+              _.createElement(
+                "p",
+                {
+                  className: _().InstructionText,
+                },
+                (0, _._)("#EventEditor_Event_SectionTitle_Helper"),
+              ),
               _.createElement(
                 _._,
                 null,
@@ -27453,7 +27440,7 @@
         ].includes(_);
       }
       const _ = (0, _._)((_) => {
-        var _, _;
+        var _, _, _;
         const {
             saleSection: _,
             editModel: _,
@@ -27528,80 +27515,82 @@
                   {
                     label: (0, _._)(_ ? "#Sale_Items_Apps" : "#Sale_Items"),
                     data: "items",
-                    tooltip: (0, _._)(
+                    description: (0, _._)(
                       _ ? "#Sale_Items_Apps_ttip" : "#Sale_Items_ttip",
                     ),
                   },
                   {
                     label: (0, _._)("#Sale_TrailerCarousel"),
                     data: "trailercarousel",
-                    tooltip: (0, _._)("#Sale_TrailerCarousel_ttip"),
+                    description: (0, _._)("#Sale_TrailerCarousel_ttip"),
                     warning: (0, _._)("#Sale_TrailerCarousel_warning"),
                   },
                   _ && {
                     label: (0, _._)("#Sale_CreatorList"),
                     data: "creator_list",
-                    tooltip: (0, _._)("#Sale_CreatorList_ttip"),
+                    description: (0, _._)("#Sale_CreatorList_ttip"),
                   },
                   _ && {
                     label: (0, _._)("#Sale_CreatorListOfLists"),
                     data: "creator_list_of_lists",
-                    tooltip: (0, _._)("#Sale_CreatorListOfLists_ttip"),
+                    description: (0, _._)("#Sale_CreatorListOfLists_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_TitleImage"),
                     data: "title_image",
-                    tooltip: (0, _._)("#Sale_TitleImage_ttip"),
+                    description: (0, _._)("#Sale_TitleImage_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_TextSection"),
                     data: "text_section",
-                    tooltip: (0, _._)("#Sale_TextSection_ttip"),
+                    description: (0, _._)("#Sale_TextSection_ttip"),
                   },
-                  {
+                  !_ && {
                     label: (0, _._)("#Sale_Tabs"),
                     data: "tabs",
-                    tooltip: (0, _._)("#Sale_Tabs_ttip"),
+                    description: (0, _._)("#Sale_Tabs_ttip"),
                   },
                   !_ && {
                     label: (0, _._)("#Sale_CrossPromoteSalePage"),
                     data: "crosspromotesalepage",
-                    tooltip: (0, _._)("#Sale_CrossPromoteSalePage_ttip"),
+                    description: (0, _._)("#Sale_CrossPromoteSalePage_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_Links"),
                     data: "links",
-                    tooltip: (0, _._)("#Sale_Links_ttip"),
+                    description: (0, _._)("#Sale_Links_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_DiscoveryQueue"),
                     data: "discoveryqueue",
-                    tooltip: (0, _._)("#Sale_DiscoveryQueue_ttip"),
+                    description: (0, _._)("#Sale_DiscoveryQueue_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_BroadcastPlayerSection"),
                     data: "broadcast",
-                    tooltip: (0, _._)("#Sale_BroadcastPlayerSection_ttip"),
+                    description: (0, _._)("#Sale_BroadcastPlayerSection_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_SectionType_EventSchedule"),
                     data: "event_schedule",
-                    tooltip: (0, _._)("#Sale_SectionType_EventSchedule_ttip"),
+                    description: (0, _._)(
+                      "#Sale_SectionType_EventSchedule_ttip",
+                    ),
                   },
                   {
                     label: (0, _._)("#Sale_Events"),
                     data: "events",
-                    tooltip: (0, _._)("#Sale_Events_ttip"),
+                    description: (0, _._)("#Sale_Events_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_CuratorSection"),
                     data: "curator",
-                    tooltip: (0, _._)("#Sale_CuratorSection_ttip"),
+                    description: (0, _._)("#Sale_CuratorSection_ttip"),
                   },
-                  {
+                  !_ && {
                     label: (0, _._)("#Sale_TabButtons"),
                     data: "tab_buttons",
-                    tooltip: (0, _._)("#Sale_TabButtons_ttip"),
+                    description: (0, _._)("#Sale_TabButtons_ttip"),
                   },
                 ];
               if ((0, _._)(_)) {
@@ -27613,12 +27602,12 @@
                   {
                     label: (0, _._)("#Sale_Section_Media_Layout_Header"),
                     data: "media_layout",
-                    tooltip: (0, _._)("#Sale_Section_Media_Layout_Desc"),
+                    description: (0, _._)("#Sale_Section_Media_Layout_Desc"),
                   },
                   {
                     label: (0, _._)("#Sale_CuratorRecommendation"),
                     data: "curator_recommendation",
-                    tooltip: (0, _._)("#Sale_CuratorRecommendation_ttip"),
+                    description: (0, _._)("#Sale_CuratorRecommendation_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_AdventCalendarDoorSection"),
@@ -27651,58 +27640,58 @@
                   {
                     label: (0, _._)("#Sale_SectionType_ItemDef"),
                     data: "itemdef",
-                    tooltip: (0, _._)("#Sale_SectionType_ItemDef_ttip"),
+                    description: (0, _._)("#Sale_SectionType_ItemDef_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_MultipleChoice"),
                     data: "quiz",
-                    tooltip: (0, _._)("#Sale_MultipleChoice_ttip"),
+                    description: (0, _._)("#Sale_MultipleChoice_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_BadgeProgress"),
                     data: "badge_progress",
-                    tooltip: (0, _._)("#Sale_BadgeProgress_ttip"),
+                    description: (0, _._)("#Sale_BadgeProgress_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_Section_Quest"),
                     data: "quest",
-                    tooltip: (0, _._)("#Sale_Section_Quest_Desc"),
+                    description: (0, _._)("#Sale_Section_Quest_Desc"),
                   },
                   {
                     label: (0, _._)("#Sale_Section_RewardShelf"),
                     data: "rewards",
-                    tooltip: (0, _._)("#Sale_Section_RewardShelf_Desc"),
+                    description: (0, _._)("#Sale_Section_RewardShelf_Desc"),
                   },
                   {
                     label: "Sale Event Only",
                     data: "sale_events",
-                    tooltip:
+                    description:
                       "Surface all of the sale events that are not from the Valve special groups. Built for the specials content hub.",
                   },
                   {
                     label: (0, _._)("#Sale_Section_Social_Share"),
                     data: "social_share",
-                    tooltip: (0, _._)("#Sale_Section_Social_Share_Desc"),
+                    description: (0, _._)("#Sale_Section_Social_Share_Desc"),
                   },
                   {
                     label: (0, _._)("#Sale_Section_PointShop"),
                     data: "point_shop_smart",
-                    tooltip: (0, _._)("#Sale_Section_PointShop_ttip"),
+                    description: (0, _._)("#Sale_Section_PointShop_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_SectionType_DLCForYou"),
                     data: "dlc_for_you",
-                    tooltip: (0, _._)("#Sale_SectionType_DLCForYou_ttip"),
+                    description: (0, _._)("#Sale_SectionType_DLCForYou_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_SectionType_ClaimItem"),
                     data: "claim_item",
-                    tooltip: (0, _._)("#Sale_SectionType_ClaimItem_ttip"),
+                    description: (0, _._)("#Sale_SectionType_ClaimItem_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_SectionType_Calendar"),
                     data: "calendar",
-                    tooltip: (0, _._)("#Sale_SectionType_Calendar_ttip"),
+                    description: (0, _._)("#Sale_SectionType_Calendar_ttip"),
                   },
                   {
                     label: "Controller Type",
@@ -27711,34 +27700,66 @@
                   {
                     label: (0, _._)("#Sale_SectionType_FAQ"),
                     data: "template_faq",
-                    tooltip: (0, _._)("#Sale_SectionType_FAQ_ttip"),
+                    description: (0, _._)("#Sale_SectionType_FAQ_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_SectionType_TechSpecs"),
                     data: "template_techspec",
-                    tooltip: (0, _._)("#Sale_SectionType_TechSpecs_ttip"),
+                    description: (0, _._)("#Sale_SectionType_TechSpecs_ttip"),
                   },
                   {
                     label: (0, _._)("#Sale_SectionType_MediaContentGrid"),
                     data: "template_media_content",
-                    tooltip: (0, _._)(
+                    description: (0, _._)(
                       "#Sale_SectionType_MediaContentGrid_ttip",
                     ),
                   },
                   {
                     label: (0, _._)("#Sale_SectionType_MediaOverlay"),
                     data: "template_media_overlay",
-                    tooltip: (0, _._)("#Sale_SectionType_MediaOverlay_ttip"),
+                    description: (0, _._)(
+                      "#Sale_SectionType_MediaOverlay_ttip",
+                    ),
                   },
                 ];
                 _.push(
                   ..._.map((_) => ({
                     ..._,
-                    label: "(VO) " + _.label,
+                    label: _.createElement(
+                      _.Fragment,
+                      null,
+                      _.createElement(
+                        "span",
+                        {
+                          className: _.ValveOnlyText,
+                        },
+                        "(VO)",
+                      ),
+                      " ",
+                      _.label,
+                    ),
                   })),
                 );
               }
-              return _.filter(Boolean);
+              const _ = _.filter(Boolean);
+              return (
+                __webpack_require__.forEach(
+                  (_) =>
+                    (_.label = _.description
+                      ? _.createElement(
+                          _._,
+                          {
+                            toolTipContent: _.description,
+                            className: _.DropDownOptionHelpLabel,
+                          },
+                          _.label,
+                          " ",
+                          _.createElement(_._VW, null),
+                        )
+                      : _.label),
+                ),
+                _
+              );
             }, [_, _]));
         var _, _;
         const {
@@ -28058,15 +28079,23 @@
                           },
                         }),
                       ),
-                      _.createElement(_._, {
-                        tooltip: (0, _._)("#Sale_SectionTypeTTip_" + _),
-                      }),
                     ),
-                    "unselected_empty" !== _ &&
-                      (null === (_ = _.find((_) => _.data === _)) ||
-                      void 0 === _
-                        ? void 0
-                        : _.warning) &&
+                    (null === (_ = _.find((_) => _.data === _)) || void 0 === _
+                      ? void 0
+                      : _.description) &&
+                      _.createElement(
+                        "div",
+                        {
+                          className: (0, _._)(
+                            _.SectionTypeDesc,
+                            _.InstructionText,
+                          ),
+                        },
+                        _.find((_) => _.data === _).description,
+                      ),
+                    (null === (_ = _.find((_) => _.data === _)) || void 0 === _
+                      ? void 0
+                      : _.warning) &&
                       _.createElement(
                         "div",
                         {
@@ -28163,7 +28192,23 @@
                       _ && " - ",
                       _,
                     )
-                  : "trailercarousel" === __webpack_require__.section_type
+                  : "trailercarousel" === __webpack_require__.section_type &&
+                      (function (_, _) {
+                        const _ = _.GetSaleSections().filter(
+                            (_) => "trailercarousel" == _.section_type,
+                          ),
+                          _ = _[0].unique_id == _.unique_id;
+                        return (0, _._)(
+                          () =>
+                            _ &&
+                            _.length > 1 &&
+                            __webpack_require__.some(
+                              (_) =>
+                                _.trailer_carousel_intro_video_appid !=
+                                _.trailer_carousel_intro_video_appid,
+                            ),
+                        );
+                      })(_, __webpack_require__)
                     ? _.createElement(
                         _.Fragment,
                         null,
@@ -28175,10 +28220,7 @@
                             _.createElement("br", null),
                             _.createElement("br", null),
                           ),
-                        _.createElement(_, {
-                          editModel: _,
-                          saleSection: __webpack_require__,
-                        }),
+                        _.createElement(_, null),
                       )
                     : _),
             _ &&
@@ -35286,7 +35328,7 @@
             for (const _ of _)
               _.facetValues.push({
                 name: ["#AppTypeLabel_" + _],
-                type: _._.k_ESaleTagFilter,
+                type: _._.k_EAppType,
                 filter: {
                   clauses: [
                     {
@@ -35564,6 +35606,32 @@
               );
             }
           _ = _.map((_) => _.facet);
+        }
+        if (_.initially_expanded_facets) {
+          const _ = new Set(_.initially_expanded_facets);
+          for (const _ of _)
+            _.bInitiallyExpanded ||
+              (_.bInitiallyExpanded = _.name.some((_) =>
+                __webpack_require__.has(_),
+              ));
+        }
+        if (_.prioritized_facets) {
+          const _ = new Map(_.prioritized_facets.map((_, _) => [_, _])),
+            _ = _.map((_) => {
+              const _ = _.name.find((_) => __webpack_require__.has(_));
+              return {
+                facet: _,
+                pri: _ ? __webpack_require__.get(_) : void 0,
+              };
+            });
+          _.sort((_, _) => {
+            var _, _;
+            return (
+              (null !== (_ = _.pri) && void 0 !== _ ? _ : Number.MAX_VALUE) -
+              (null !== (_ = _.pri) && void 0 !== _ ? _ : Number.MAX_VALUE)
+            );
+          }),
+            (_ = _.map((_) => _.facet));
         }
         return _;
       }
@@ -37013,8 +37081,9 @@
             [_],
           ),
           _ = (0, _.useCallback)((_, _) => {
-            const _ = _._.GetLocalizedImageGroupForEdit();
-            return null == _ ? void 0 : _.localized_images[_];
+            const _ = _._.GetLocalizedImageGroupForEdit(),
+              _ = null == _ ? void 0 : _.localized_images[_];
+            return _ ? _.split("/").pop() : _;
           }, []);
         return _.createElement(
           _._,
@@ -37028,11 +37097,12 @@
             strDescription: _.strLocalizedDescription,
             bOKDisabled: _ > 0,
             onOK: () => {
-              _._.GetAllLocalizedGroupImages().forEach((_, _) => {
-                var _;
+              var _;
+              const _ = _._.GetLocalizedImageGroupForEdit();
+              for (let _ = 0; _ < 31; ++_) {
+                const _ = null == _ ? void 0 : _.localized_images[_];
                 if (_) {
-                  let _ = _.lastIndexOf("/");
-                  const _ = _.substring(_ + 1);
+                  const _ = _.split("/").pop() || "";
                   _(
                     _,
                     {
@@ -37044,10 +37114,9 @@
                     },
                     _,
                   );
-                }
-              }),
-                _._.ClearImageGroup(),
-                _.onOK ? _.onOK() : null == _ || _();
+                } else _(_, null, _);
+              }
+              _._.ClearImageGroup(), _.onOK ? _.onOK() : null == _ || _();
             },
             strOKButtonText:
               _ > 0 ? (0, _._)("#ImagePickerLoc_DismissWarning") : void 0,
@@ -37076,6 +37145,7 @@
                   title: null,
                   appid: __webpack_require__,
                   realms: _,
+                  fnRemoveAllArtwork: () => _._.ClearImageGroup(),
                   fnSetImageURL: _,
                   fnGetImageHashAndExt: _,
                   fnLangHasData: _,
@@ -37968,6 +38038,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -38024,7 +38095,14 @@
               {
                 className: _.Title,
               },
-              _.title(),
+              _.createElement("div", null, _.title()),
+              _.createElement(
+                "div",
+                {
+                  className: _.Count,
+                },
+                (0, _._)("#Sale_Creator_ListCount", _.apps().length),
+              ),
             ),
           ),
         );
@@ -38506,13 +38584,14 @@
           activeTab: _,
         } = _;
         __webpack_require__.carousel_rows > 1 &&
-          (_ ||
-            (!__webpack_require__.smart_section &&
-              __webpack_require__.capsules_per_row_array &&
-              __webpack_require__.capsules_per_row_array.length > 0 &&
-              __webpack_require__.capsules_per_row_array[0] >=
-                __webpack_require__.capsules.length)) &&
-          (__webpack_require__.carousel_rows = 1);
+          (_ && (__webpack_require__.carousel_rows = 1),
+          (0, _._)(__webpack_require__.section_type) &&
+            !__webpack_require__.smart_section &&
+            __webpack_require__.capsules_per_row_array &&
+            __webpack_require__.capsules_per_row_array.length > 0 &&
+            __webpack_require__.capsules_per_row_array[0] >=
+              __webpack_require__.capsules.length &&
+            (__webpack_require__.carousel_rows = 1));
         const _ = _(
           __webpack_require__,
           _.capsules,
@@ -38578,6 +38657,7 @@
             className: (0, _._)(
               _().SaleSectionContainer,
               _().SaleSectionContainer,
+              "SaleSectionContainer",
               "center_row_trgt",
               "ItemCount_" + _,
             ),

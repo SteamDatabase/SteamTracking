@@ -790,6 +790,7 @@
         ValveOnlyText: "_206saj_KMAibQF6XQ50lq0",
         ValveOnlyBackground: "JckrnbJXboKxpRp3fULfa",
         ValveOnlyAdminBackground: "_3HVu1O7B4zeCZWaOaUWPCo",
+        DropDownOptionHelpLabel: "_2O-Yi5SNKU3AinaDygrO9y",
         Columns: "_1oVIRGhMwAB3uN9G3t8kZe",
         LeftCol: "_3PPz-6LrUAum0x5iKTRxzc",
         RightCol: "_25xelN-JQnAHv3pp9qVrpl",
@@ -801,6 +802,7 @@
         InsetOption: "PKGX85T0vHviq8Tm_2GeT",
         tooltip_Ctn: "_3nqxIgL0a0DbPZHRZRzWsp",
         SaleEditorSpacing: "_2ZGwd2fru49CK-m22nkFg3",
+        InstructionText: "ktxW5d8M1ectIDhxxa1M5",
         BackgroundImage: "_2wlqOo3XXW1wCAxwfudaL8",
         InEditor: "_1qfNCm-vmBy2gW4vlcWfgD",
         Blur: "_1rJkktMMsrzAultu2NgHkZ",
@@ -6611,8 +6613,9 @@
             _.stopPropagation();
         }
         OnMessage(_) {
-          "window_resized" == _.data && this.OnResize(),
-            "popup-created" == _.data && this.OnCreateInternal();
+          "window_moved" === _.data && this.OnMove(),
+            "window_resized" === _.data && this.OnResize(),
+            "popup-created" === _.data && this.OnCreateInternal();
         }
         Show(_ = _._.k_EWindowBringToFrontAndForceOS) {
           let _;
@@ -6851,6 +6854,7 @@
         ReleasePopup() {
           this.OnClose(), (this.m_popup = null);
         }
+        OnMove() {}
         OnResize() {
           this.IsMaximized().then((_) => {
             _
@@ -6916,6 +6920,9 @@
             this.GetWindowRestoreDetails().then((_) => {
               (this.m_strInitialRestoreDetails = _), this.OnResizeComplete(_);
             });
+          }
+          OnMove() {
+            super.OnMove(), this.QueryAndStoreWindowPosition();
           }
           OnResize() {
             super.OnResize(), this.QueryAndStoreWindowPosition();
@@ -7328,6 +7335,9 @@
         }
         OnLoad() {
           this.DoCallback("onLoad");
+        }
+        OnMove() {
+          this.DoCallback("onMove");
         }
         OnResize() {
           this.DoCallback("onResize");
@@ -8814,10 +8824,12 @@
           _ = _.useRef(null),
           [_, _] = _.useState(!1);
         return (
-          _.useEffect(() => {
-            const _ = _.current;
-            _ && (_ && !_ ? (_.showModal(), _(!0)) : !_ && _ && _.close());
+          _.useLayoutEffect(() => {
+            _ && !_ ? _(!0) : !_ && _ && _.current?.close();
           }, [_, _]),
+          _.useLayoutEffect(() => {
+            _ && _.current.showModal();
+          }, [_]),
           _.createElement(
             "dialog",
             {
@@ -8826,7 +8838,7 @@
               onClose: () => _(!1),
               onCancel: (_) => _.preventDefault(),
             },
-            _.children,
+            __webpack_require__,
           )
         );
       }
@@ -9313,7 +9325,9 @@
       }
       class _ extends _.Component {
         OnSubmit(_) {
-          _.preventDefault(), this.props.onSubmit && this.props.onSubmit(_);
+          _.preventDefault(),
+            _.stopPropagation(),
+            this.props.onSubmit && this.props.onSubmit(_);
         }
         render() {
           return _.createElement("form", {
@@ -11768,6 +11782,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      const _ = "separator",
+        _ = "spacer";
       class _ {
         constructor() {
           (0, _._)(this);
@@ -11797,41 +11813,53 @@
             PageListSeparatorComponent: _ = _,
           } = _,
           _ = _.useContext(_);
-        return __webpack_require__.map((_, _) => {
-          const _ = _ === _;
-          if ("separator" === _) {
-            const _ = _ === _ + 1 || _ === _ - 1;
-            return _.createElement(_, {
-              role: "separator",
-              key: _,
-              bTransparent: _,
-            });
-          }
-          if ("spacer" === _)
-            return _.createElement("div", {
-              key: _,
-              className: _().PageListSpacer,
-            });
-          {
-            if (!1 === _.visible) return null;
-            const _ = _.identifier || _.title || __webpack_require__.toString(),
-              _ = () => _(_, _);
-            return _.createElement(_, {
-              className: (0, _._)(_.PagedSettingsDialog_PageListItem, {
-                [_.Active]: _,
-              }),
-              key: _,
-              onClick: _,
-              title: _.title,
-              icon: _.icon,
-              active: _,
-              _: _ + _.identifier,
-              role: "tab",
-              "aria-selected": _,
-              "aria-controls": _ + _.identifier + "_Content",
-            });
-          }
-        });
+        return __webpack_require__
+          .filter((_, _) => {
+            if (_ === _ || _ === _) {
+              for (let _ = _ + 1; _ < __webpack_require__.length; _++) {
+                const _ = __webpack_require__[_];
+                if (_ !== _ && _ !== _ && _.visible) return !0;
+              }
+              return !1;
+            }
+            return !0;
+          })
+          .map((_, _) => {
+            const _ = _ === _;
+            if (_ === _) {
+              const _ = _ === _ + 1 || _ === _ - 1;
+              return _.createElement(_, {
+                role: "separator",
+                key: _,
+                bTransparent: _,
+              });
+            }
+            if (_ === _)
+              return _.createElement("div", {
+                key: _,
+                className: _().PageListSpacer,
+              });
+            {
+              if (!1 === _.visible) return null;
+              const _ =
+                  _.identifier || _.title || __webpack_require__.toString(),
+                _ = () => _(_, _);
+              return _.createElement(_, {
+                className: (0, _._)(_.PagedSettingsDialog_PageListItem, {
+                  [_.Active]: _,
+                }),
+                key: _,
+                onClick: _,
+                title: _.title,
+                icon: _.icon,
+                active: _,
+                _: _ + _.identifier,
+                role: "tab",
+                "aria-selected": _,
+                "aria-controls": _ + _.identifier + "_Content",
+              });
+            }
+          });
       }
       function _(_) {
         const {
@@ -12251,12 +12279,12 @@
         _.onEscKeypress &&
           ((_.tabIndex = 0),
           (_.onKeyDown = (_) => {
-            27 == _.keyCode && _.onEscKeypress();
+            27 == _.keyCode && (_.onEscKeypress(), _.stopPropagation());
           }),
           (_.onMouseDown = (_) => {
             _.currentTarget !== _.target ||
               _.bDisableBackgroundDismiss ||
-              _.onEscKeypress();
+              (_.onEscKeypress(), _.stopPropagation());
           }),
           (_ = (_) => {
             _ && (_._(_, _.ownerDocument.activeElement) || _.focus());
@@ -15514,12 +15542,14 @@
           super(_),
             (this.state = {
               nImage: 0,
+              nPropChangeCounter: 0,
             });
         }
-        componentDidUpdate(_) {
+        componentDidUpdate(_, _) {
           JSON.stringify(this.props.rgSources) != JSON.stringify(_.rgSources) &&
             this.setState({
               nImage: 0,
+              nPropChangeCounter: _.nPropChangeCounter + 1,
             });
         }
         get src() {
@@ -15566,8 +15596,10 @@
               strAltText: _,
               ..._
             } = this.props,
-            _ = this.src;
+            _ = this.src,
+            _ = this.state.nPropChangeCounter;
           return _.createElement("img", {
+            key: _,
             ref: this.m_refImage,
             ..._,
             src: _,
@@ -17833,21 +17865,23 @@
               headers: {
                 "Content-Type": "multipart/form-data",
               },
-            };
+            },
+            _ = !0;
           try {
             (_ = await _().post(_, _, _)), this.m_filesCompleted.push(_);
           } catch (_) {
-            (this.m_lastError = {
-              file: _,
-              status: _.response ? _.response.status : 500,
-              message: (0, _._)(_).strErrorMsg,
-            }),
+            (_ = !1),
+              (this.m_lastError = {
+                file: _,
+                status: _.response ? _.response.status : 500,
+                message: (0, _._)(_).strErrorMsg,
+              }),
               (_ = _.response);
           }
           return (
             _ || (await this.handleUploadRefresh(_)),
             {
-              bSuccess: !0,
+              bSuccess: _,
               result: _.data,
             }
           );
@@ -20260,6 +20294,7 @@
         "GetEventStartTime",
         null,
       );
+      const _ = 99999;
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const _ = 39049601,
         _ = 45559995;
@@ -20272,13 +20307,15 @@
       })(_ || (_ = {}));
       var _, _, _, _, _, _;
       function _(_) {
-        return (
-          "items" == _ ||
-          "trailercarousel" == _ ||
-          "crosspromotesalepage" == _ ||
-          "creator_list" == _ ||
-          "calendar" == _
-        );
+        switch (_) {
+          case "items":
+          case "trailercarousel":
+          case "crosspromotesalepage":
+          case "creator_list":
+          case "calendar":
+            return !0;
+        }
+        return !1;
       }
       !(function (_) {
         (_[(_.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
@@ -20819,7 +20856,7 @@
               _ = _?.GetScreenshots(_.BHasAgeSafeScreenshots());
             return _ && _.length > 1 ? ((_ %= _.length), _[_]) : "";
           }
-          if (this.clanSteamID) {
+          if (this.clanSteamID && 36 != this.GetEventType()) {
             const _ = _._.GetClanInfoByClanAccountID(
               this.clanSteamID.GetAccountID(),
             );
@@ -21191,7 +21228,7 @@
             : this.GetSaleSections();
         }
         GetSaleSectionByID(_) {
-          if (_ > 99999) {
+          if (_ > _) {
             return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
               (_) => _.unique_id == _,
             );
@@ -21507,7 +21544,16 @@
                     "#AppTypeLabel_demo",
                     "#AppTypeLabel_music",
                   ],
+                  initially_selected_values: ["#AppTypeLabel_game"],
                 },
+              ],
+              initially_expanded_facets: [
+                "#AppTypeLabelTitle",
+                "#App_Taxonomy_Survey_QSuperGenreTitle",
+              ],
+              prioritized_facets: [
+                "#AppTypeLabelTitle",
+                "#App_Taxonomy_Survey_QSuperGenreTitle",
               ],
             },
           };
@@ -42400,6 +42446,137 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  steamids_verifymembership: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint64String,
+                    pbr: _._.readPackedUint64String,
+                    _: _._.writeRepeatedUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_VerifyClanMembership_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamids_nonmembers || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamids_nonmembers: {
+                    _: 1,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint64String,
+                    pbr: _._.readPackedUint64String,
+                    _: _._.writeRepeatedUint64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_VerifyClanMembership_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.announcementid || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -45188,6 +45365,18 @@
               _,
               {
                 ePrivilege: 2,
+              },
+            );
+          }),
+          (_.VerifyClanMembership = function (_, _) {
+            return _.SendMsg(
+              "Community.VerifyClanMembership#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 0,
+                eWebAPIKeyRequirement: 2,
               },
             );
           }),
@@ -67430,23 +67619,26 @@
         constructor() {
           (0, _._)(this);
         }
-        m_mapListToTitle = new Map();
-        m_mapListToSubtitle = new Map();
+        m_mapListInfo = new Map();
         m_bLoadedFromConfig = !1;
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
-            const _ = (0, _._)(
-              "creator_home_list_titles",
-              "application_config",
-            );
+            const _ = (0, _._)("creator_home_list_info", "application_config");
             if (this.ValidateCreatorHomeTitles(_))
               for (const [
                 _,
-                { title: __webpack_require__, description: _ },
+                {
+                  title: __webpack_require__,
+                  description: _,
+                  listtileimage: _,
+                },
               ] of Object.entries(_ ?? {}))
                 __webpack_require__ &&
-                  (this.m_mapListToTitle.set(_, __webpack_require__),
-                  _ && this.m_mapListToSubtitle.set(_, _));
+                  this.m_mapListInfo.set(_, {
+                    title: __webpack_require__ ?? "",
+                    description: _?.length ? _ : void 0,
+                    imageUrl: _?.length ? _ : void 0,
+                  });
             this.m_bLoadedFromConfig = !0;
           }
         }
@@ -67454,17 +67646,23 @@
           return null != _ && "object" == typeof _ && !Array.isArray(_);
         }
         GetListTitle(_) {
-          return this.LazyInit(), _ ? this.m_mapListToTitle.get(_) : void 0;
+          return this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.title : void 0;
         }
         GetListSubtitle(_) {
-          return this.LazyInit(), _ ? this.m_mapListToSubtitle.get(_) : void 0;
+          return (
+            this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.description : void 0
+          );
+        }
+        GetListtileImage(_) {
+          return (
+            this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.imageUrl : void 0
+          );
         }
       }
-      (0, _._)([_._], _.prototype, "m_mapListToTitle", void 0),
-        (0, _._)([_._], _.prototype, "m_mapListToSubtitle", void 0),
+      (0, _._)([_._], _.prototype, "m_mapListInfo", void 0),
         (0, _._)([_._], _.prototype, "LazyInit", null);
       const _ = new _();
-      window.g_CreatorHomeListTitleStore = _;
+      window.g_CreatorHomeListInfoStore = _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -76653,6 +76851,9 @@
           }
           return null;
         }
+        static BHas(_, _) {
+          return Boolean(_ && _.length > _ && _[_]);
+        }
       }
       const _ = {
         english: "en",
@@ -77816,7 +78017,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 6920), _((_._ = _));
+      return (_ = 6806), _((_._ = _));
       var _;
     });
     _._();

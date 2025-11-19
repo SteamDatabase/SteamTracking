@@ -1793,8 +1793,8 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { steamID: _ } = _,
-          [__webpack_require__, _] = _.useState(() => _._.IsInitialized()),
+        const { steamID: _, nYear: __webpack_require__ } = _,
+          [_, _] = _.useState(() => _._.IsInitialized()),
           [_] = (0, _._)("k", null),
           _ = Boolean((_ && _ != _._.steamid) || _),
           _ = _()("2025-12-01T10:00:00-08:00").unix(),
@@ -1830,9 +1830,11 @@
                     ),
                   },
                   _.createElement(_, null),
-                  _.createElement(_, null),
+                  _.createElement(_, {
+                    nYear: __webpack_require__,
+                  }),
                 ),
-              __webpack_require__ &&
+              _ &&
                 _.createElement(_, {
                   bEnableNominating: _,
                 }),
@@ -2182,7 +2184,7 @@
         );
       }
       function _() {
-        const _ = (0, _._)(67);
+        const _ = (0, _._)(70);
         let _ = 0;
         const _ = _.data?.quests?.map(
           (_) => (
@@ -2634,7 +2636,7 @@
         );
       }
       function _(_) {
-        const { closeModal: _ } = _,
+        const { closeModal: _, nYear: __webpack_require__ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!1);
@@ -2644,7 +2646,7 @@
         _.code &&
           (_ =
             _._.STORE_BASE_URL +
-            "steamawards/nominations/" +
+            `steamawards/nominations/${__webpack_require__}/` +
             _._.steamid +
             "?k=" +
             _.code);
@@ -2728,8 +2730,9 @@
           ),
         );
       }
-      function _() {
-        const _ = (0, _._)();
+      function _(_) {
+        const { nYear: _ } = _,
+          _ = (0, _._)();
         return _._.logged_in && _.data && 0 != _.data.length
           ? _.createElement(
               "div",
@@ -2741,11 +2744,16 @@
                 {
                   className: _().ShareBtn,
                   onClick: (_) => {
-                    var _;
                     _.preventDefault(),
                       _.stopPropagation(),
-                      (_ = (0, _._)(_)),
-                      (0, _._)(_.createElement(_, null), _);
+                      (function (_, _) {
+                        (0, _._)(
+                          _.createElement(_, {
+                            nYear: _,
+                          }),
+                          _,
+                        );
+                      })(_, (0, _._)(_));
                   },
                 },
                 _.createElement(_.SYj, null),
@@ -3722,6 +3730,7 @@
               path: _._.SteamAwardNominations(),
               render: (_) =>
                 _.createElement(_, {
+                  nYear: parseInt(_.match.params.year),
                   steamID: _.match.params.steamid,
                   ..._,
                 }),

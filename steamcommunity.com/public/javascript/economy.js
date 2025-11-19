@@ -2470,7 +2470,8 @@ function MouseOverItem( event, owner, elItem, rgItem )
 
 function RenderHover( rgItem, owner )
 {
-	if ( window.g_bReactRenderedItemDescriptions && g_bReactRenderedItemDescriptions )
+	var elHover = $('hover_content');
+	if ( elHover.hasAttribute( 'data-featuretarget' ) )
 	{
 		const asset = {
 			appid: rgItem.appid,
@@ -2495,6 +2496,8 @@ function RenderHover( rgItem, owner )
 	{
 		BuildHover('hover', rgItem, owner);
 	}
+
+	ApplyHoverArrowColors( 'hover', rgItem );
 }
 
 function MouseOutItem( event, owner, elItem, rgItem )
@@ -2577,6 +2580,23 @@ function RenderItemInfo( name, description, asset )
 	}
 }
 
+function ApplyHoverArrowColors( prefix, item )
+{
+	var elArrowLeft = $(prefix+'_arrow_left');
+	var elArrowRight = $(prefix+'_arrow_right');
+
+	if ( item.name_color )
+	{
+		if ( elArrowLeft ) elArrowLeft.style.borderRightColor = '#' + item.name_color;
+		if ( elArrowRight ) elArrowRight.style.borderLeftColor = '#' + item.name_color;
+	}
+	else
+	{
+		if ( elArrowLeft ) elArrowLeft.style.borderRightColor = '';
+		if ( elArrowRight ) elArrowRight.style.borderLeftColor = '';
+	}
+}
+
 /* We allow owner to be a CUser or string ( steamid ) */
 function BuildHover( prefix, item, owner )
 {
@@ -2600,21 +2620,15 @@ function BuildHover( prefix, item, owner )
 	var strName = GetNameForItem( item );
 	$(prefix+'_item_name').update( strName.escapeHTML() );
 
-	var elArrowLeft = $(prefix+'_arrow_left');
-	var elArrowRight = $(prefix+'_arrow_right');
 	if ( item.name_color )
 	{
 		$(prefix+'_item_name').style.color = '#' + item.name_color;
 		$(prefix+'_content').parentNode.style.borderColor = '#' + item.name_color;
-		if ( elArrowLeft ) elArrowLeft.style.borderRightColor = '#' + item.name_color;
-		if ( elArrowRight ) elArrowRight.style.borderLeftColor = '#' + item.name_color;
 	}
 	else
 	{
 		$(prefix+'_item_name').style.color = '';
 		$(prefix+'_content').parentNode.style.borderColor = '';
-		if ( elArrowLeft ) elArrowLeft.style.borderRightColor = '';
-		if ( elArrowRight ) elArrowRight.style.borderLeftColor = '';
 	}
 
 	var elFraudWarnings = $J('#'+prefix+'_fraud_warnings');
@@ -3789,9 +3803,9 @@ function ShowHover( elem, item )
 	hover.show();
 
 	var boundingRect = elem.getBoundingClientRect();
-	var zoom = ComputeZoomForElement( elem );
-	hover.style.left = ( boundingRect.left / zoom ) + 'px';
-	hover.style.top = ( boundingRect.top / zoom ) + 'px';
+	var zoom = ComputeZoomForElement( hover );
+	hover.style.left = ( ( boundingRect.left + window.scrollX ) / zoom ) + 'px';
+	hover.style.top = ( ( boundingRect.top + window.scrollY ) / zoom ) + 'px';
 
 	var hover_box = hover.down( '.hover_box' );
 	var hover_arrow_left = hover.down( '.hover_arrow_left' );

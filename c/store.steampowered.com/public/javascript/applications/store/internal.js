@@ -295,6 +295,9 @@
         Border: "_2lajVjbyrA4lq9xF0X4NQW",
         BorderColor: "_1x6gylcu6acqj_bRoqrFHf",
         Outline: "_2UkNTTzKtJJdhYEnuwtVRd",
+        AlignSelf: "Rrxq_LH_m0cYEls4MuNtG",
+        JustifySelf: "_1i4Rlxj2r-2r2Co6jSOYRL",
+        TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
       };
     },
     chunkid: (module) => {
@@ -5005,6 +5008,18 @@
             cssProperty: "--grid-area",
           },
           {
+            prop: "alignSelf",
+            responsive: !0,
+            className: _.AlignSelf,
+            cssProperty: "--align-self",
+          },
+          {
+            prop: "justifySelf",
+            responsive: !0,
+            className: _.JustifySelf,
+            cssProperty: "--justify-self",
+          },
+          {
             prop: "background",
             responsive: !0,
             className: _.Background,
@@ -5051,6 +5066,12 @@
             responsive: !0,
             className: _.Outline,
             cssProperty: (_) => ["--outline-color", _(_)],
+          },
+          {
+            prop: "textAlign",
+            responsive: !0,
+            className: _.TextAlign,
+            cssProperty: "--text-align",
           },
         ];
       var _ = __webpack_require__("chunkid");

@@ -1400,9 +1400,11 @@ html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
 }
 .oAqlZTgPU37Nb8gBT5eAM ._2VvFLg2irh9gPAhhxE4Kpo ._1HFUCM8Np78V7DkzDIZp6z {
   display: flex;
+  flex-direction: row;
   justify-content: left;
   align-items: center;
-  font-size: 1.4em;
+  gap: 6px;
+  font-size: 13px;
   margin-left: -4px;
   margin-bottom: 3px;
 }
@@ -1410,7 +1412,7 @@ html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
   ._2VvFLg2irh9gPAhhxE4Kpo
   ._1HFUCM8Np78V7DkzDIZp6z
   ._35ByaFjy9tZD1dLFAeHccQ {
-  padding: 0 0 3px 4px;
+  padding: 0;
   font-size: 1em;
   color: #6b8aaa;
 }
@@ -1424,6 +1426,8 @@ html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
 ._3qvppfM_u0yn2jrpoUo8RM {
   font-size: 1em;
   display: inline-flex;
+  margin-left: 4px;
+  margin-bottom: 3px;
 }
 .BasicUI ._3qvppfM_u0yn2jrpoUo8RM {
   font: var(--gpText-BodyLarge);
@@ -1445,6 +1449,7 @@ html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  font-size: 13px;
 }
 @container text-content-ctn (width < 320px) {
   ._3qvppfM_u0yn2jrpoUo8RM ._3ZWs0kB-1tuqQtie9KK-E7 {
@@ -1458,13 +1463,13 @@ html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
   color: gray;
 }
 ._3qvppfM_u0yn2jrpoUo8RM ._3ZWs0kB-1tuqQtie9KK-E7._3nU5IeDnKKFQIHt8jU2TmG {
-  color: #a34c25;
+  color: #c85e2d;
 }
 ._3qvppfM_u0yn2jrpoUo8RM ._3ZWs0kB-1tuqQtie9KK-E7._11Q2_X4_JfqoRwRqmzQakb {
-  color: #d8d81e;
+  color: #b9a074;
 }
 ._3qvppfM_u0yn2jrpoUo8RM ._3ZWs0kB-1tuqQtie9KK-E7._3wXHCs-9DWCgZO2nS1_Ib2 {
-  color: #32ad32;
+  color: #66c0f4;
 }
 ._3qvppfM_u0yn2jrpoUo8RM ._3ZWs0kB-1tuqQtie9KK-E7 ._38dPaeqXJsBbnlLDtNr-of {
   margin-right: 4px;
@@ -2369,7 +2374,8 @@ html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
   margin: unset;
   column-gap: 6px;
   padding-right: 8px;
-  height: 100%;
+  height: auto;
+  flex-wrap: wrap;
 }
 .kW6m4Sjqacp5hykrj5LEo {
   display: flex;
@@ -4389,28 +4395,31 @@ html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
 ._1cOoCFwafBlSkwllIMf3XM.OPH8r3-pnCjCM7T8GrpWo .CarouselBtnRight {
   transform: translateX(-16px);
 }
-._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg) {
+._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
   max-width: 1200px;
 }
-.SteamChartsShell ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg) {
+.SteamChartsShell
+  ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
   width: 100%;
 }
 @media screen and (max-width: 851px) {
-  .SteamChartsShell ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg) {
+  .SteamChartsShell
+    ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
     width: calc(100% - 14px);
   }
 }
 @media screen and (max-width: 1330px) {
-  ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg) {
+  ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
     max-width: calc(100vw - 118px);
   }
 }
 @media screen and (max-width: 940px) {
-  ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg) {
+  ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
     max-width: 98vw;
   }
 }
-.BasicUI ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg) {
+.BasicUI
+  ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
   max-width: unset;
 }
 .BasicUI ._1cOoCFwafBlSkwllIMf3XM.mntHD0WiARnsfz_kMYssq .carousel__slider {
@@ -4634,7 +4643,7 @@ html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
 }
 .BasicUI ._150kddWk8JgylTvh_eC20b {
   padding: 0px 0px var(--gpSpace-Gutter) 0px;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 @media screen and (max-width: 1100px) {
   ._150kddWk8JgylTvh_eC20b._1v-BVc2xZoBmJV2CPwNpq0:not(.JxIGHUxdTjFyWl1KO_tkn) {
@@ -4703,8 +4712,13 @@ span._1P__hyqsgd049GH0Bn007_ {
   font-size: 11px;
 }
 ._3QLsjvek1OeH0pVbeOTBJj {
-  font-weight: bold;
-  font-size: 24px;
+  width: 100%;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
 }
 .SaleSectionCarousel ._2zVSaxkr0mGLlJ4ivF37dx {
   padding: 10px;

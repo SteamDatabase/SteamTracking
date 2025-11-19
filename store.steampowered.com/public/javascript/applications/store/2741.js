@@ -974,8 +974,8 @@
             ? C
             : E;
         const k = r(),
-          [B, x] = a.useState(k > 0 ? g()(1e3 * k) : null),
-          [R, F] = a.useState(),
+          [B, R] = a.useState(k > 0 ? g()(1e3 * k) : null),
+          [x, F] = a.useState(),
           [M, O] = a.useState(),
           U = (function (e, t, n, r, i) {
             const o = r && r(),
@@ -997,7 +997,7 @@
               }, [c, i]),
               c
             );
-          })(R, M, b, T, s),
+          })(x, M, b, T, s),
           W = !s && U;
         let j, z;
         if (t && n && t == n && n > l.HD.GetTimeNowWithOverride()) {
@@ -1029,7 +1029,7 @@
                 e.minute(n.minute()),
                 e.second(0),
                 A(e.unix()),
-                x(e);
+                R(e);
             },
             O,
           ),
@@ -1056,7 +1056,7 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              A(a), x(g().unix(a));
+              A(a), R(g().unix(a));
             },
             F,
           );
@@ -1131,7 +1131,7 @@
                 dateFormat: !1,
                 timeFormat: L,
                 timeConstraints: j,
-                value: null != R ? R : B,
+                value: null != x ? x : B,
                 inputProps: {
                   placeholder: (0, u.we)("#DateTimePicker_Enter_Time"),
                   className: (0, m.A)(
@@ -1312,12 +1312,12 @@
     43830: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Mn: () => x,
+        Mn: () => R,
         Vh: () => w,
         lP: () => b,
         xz: () => T,
         ZB: () => y,
-        S0: () => R,
+        S0: () => x,
         uQ: () => A,
         EJ: () => N,
         sI: () => B,
@@ -1518,23 +1518,23 @@
         const e = (0, d.j4)();
         return (0, a.uU)(e) ? e.requestID : null;
       }
-      var x;
-      function R() {
+      var R;
+      function x() {
         const e = (0, d.j4)(),
           t = (0, I.vo)(),
           n = G(),
           r = t.isSuccess && 2 == t.data.role(),
           i = n.data?.cart_items.some((e) => !e.can_purchase_as_gift);
-        let o = x.k_ECanRequest;
+        let o = R.k_ECanRequest;
         return (
           r
             ? !(function (e) {
                 return (0, a.c2)(e) || (0, a.kx)(e);
               })(e)
-              ? (o = x.k_EInvalidCartType)
-              : i && (o = x.k_ENonGiftableItemPresent)
-            : (o = x.k_EIsNotChild),
-          [o === x.k_ECanRequest, o]
+              ? (o = R.k_EInvalidCartType)
+              : i && (o = R.k_ENonGiftableItemPresent)
+            : (o = R.k_EIsNotChild),
+          [o === R.k_ECanRequest, o]
         );
       }
       function F() {
@@ -1547,7 +1547,7 @@
           (e[(e.k_EIsNotChild = 1)] = "k_EIsNotChild"),
           (e[(e.k_EInvalidCartType = 2)] = "k_EInvalidCartType"),
           (e[(e.k_ENonGiftableItemPresent = 3)] = "k_ENonGiftableItemPresent");
-      })(x || (x = {}));
+      })(R || (R = {}));
     },
     7151: (e, t, n) => {
       "use strict";
@@ -1584,8 +1584,8 @@
         L = n(43595),
         k = n(52038),
         B = n(61859),
-        x = n(30470),
-        R = n(10247);
+        R = n(30470),
+        x = n(10247);
       function F(e) {
         const {
           lineItems: t = [],
@@ -1909,7 +1909,7 @@
             accessibilityId: S,
           } = e,
           w = (0, E.EJ)(),
-          [y] = (0, R.fg)(),
+          [y] = (0, x.fg)(),
           N =
             y?.accountid_giftee || (w ? t.gift_info?.accountid_giftee : void 0),
           D = (0, E.ZB)() && !_?.restrict_add_additional_to_cart,
@@ -2023,7 +2023,7 @@
                 h.createElement(
                   "a",
                   {
-                    href: `${x.TS.STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart`,
+                    href: `${R.TS.STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart`,
                     className: f().VerifyLineItem,
                   },
                   (0, B.we)("#Cart_Verify"),
@@ -2051,7 +2051,7 @@
         );
       }
       function Y(e) {
-        const t = `${x.TS.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
+        const t = `${R.TS.STORE_BASE_URL}public/images/checkout/Cart_generic_header_logo.png`;
         if (!e) return t;
         const n = e.GetAssets();
         if (!n) return t;
@@ -2375,6 +2375,13 @@
                           "#Cart_Error_AdultContentRestricted_FootNote",
                         ),
                       ),
+                    e.errors?.commercial_license_restricted &&
+                      i(
+                        18,
+                        (0, r.we)(
+                          "#Cart_Error_CommercialLicenseRestricted_FootNote",
+                        ),
+                      ),
                     e.errors?.missing_must_own_appids &&
                       i(
                         16,
@@ -2507,6 +2514,13 @@
                       purchase_state: 17,
                       notice_text: (0, r.we)(
                         "#Cart_Error_AdultContentRestricted_LineItem",
+                      ),
+                    });
+                  e.errors?.commercial_license_restricted &&
+                    t.push({
+                      purchase_state: 18,
+                      notice_text: (0, r.we)(
+                        "#Cart_Error_CommercialLicenseRestricted_LineItem",
                       ),
                     });
                   e.errors?.coupon_exclusive_promo &&
@@ -2745,9 +2759,9 @@
         L = n(62792),
         k = (n(31335), n(46416)),
         B = n(10386);
-      var x = n(50169),
-        R = n(45803),
-        F = n.n(R),
+      var R = n(50169),
+        x = n(45803),
+        F = n.n(x),
         M = n(39777),
         O = n(32541),
         U = n(84933);
@@ -2886,10 +2900,10 @@
         V(s, l.data?.daily_deals), V(s, l.data?.spotlights);
         return i.createElement(
           "div",
-          { className: x.CartUpsellArea },
+          { className: R.CartUpsellArea },
           i.createElement(
             "div",
-            { className: x.CartUpsellTitle },
+            { className: R.CartUpsellTitle },
             (0, S.we)("#Recommendations_Header"),
           ),
           c?.length > 3
@@ -2915,7 +2929,7 @@
               { feature: `upsell-${a}` },
               i.createElement(
                 Y,
-                { className: (0, y.A)(x.Specials) },
+                { className: (0, y.A)(R.Specials) },
                 t
                   ?.slice(0, 3)
                   .map(({ item_id: e, item: t }) =>
@@ -2943,7 +2957,7 @@
           {
             "flow-children": "row",
             navEntryPreferPosition: P.iU.MAINTAIN_X,
-            className: (0, y.A)(x.UpsellRow, t),
+            className: (0, y.A)(R.UpsellRow, t),
           },
           n,
         );
@@ -3442,7 +3456,7 @@
                 ),
                 a.data.m_strPlayerName,
               ),
-              i.createElement(xe, { giftInfo: t, onChange: n }),
+              i.createElement(Re, { giftInfo: t, onChange: n }),
             )
           : null;
       }
@@ -3571,7 +3585,7 @@
           })
         );
       }
-      function xe(e) {
+      function Re(e) {
         const { giftInfo: t, onChange: n } = e;
         return i.createElement(Fe, {
           id: "cart",
@@ -3585,7 +3599,7 @@
           onScheduledTimeChange: (e) => n({ ...t, time_scheduled_send: e }),
         });
       }
-      const Re = 160;
+      const xe = 160;
       function Fe(e) {
         const {
             id: t,
@@ -3597,7 +3611,7 @@
             onScheduledTimeChange: s,
             onBlur: c,
           } = e,
-          m = Re - n.length,
+          m = xe - n.length,
           [u, d] = i.useState(!1),
           { data: p } = (0, me.js)(w.iA.accountid);
         return i.createElement(
@@ -3664,7 +3678,7 @@
                 className: $().GiftSignatureInput,
                 onChange: (e) => o(e.target.value),
                 onBlur: c,
-                maxChars: Re,
+                maxChars: xe,
               }),
             ),
           i.createElement(ee, { scheduledTime: l, onScheduledTimeChange: s }),
@@ -4556,11 +4570,11 @@
               ),
               i.createElement(vt, { bCartIncludesGifts: a }),
             ),
-            !t && i.createElement(xt, null),
+            !t && i.createElement(Rt, null),
           ),
         );
       }
-      function xt() {
+      function Rt() {
         const e = (0, a.Z)();
         return i.createElement(
           ze,

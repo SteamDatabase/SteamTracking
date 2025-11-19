@@ -361,7 +361,6 @@ img.game_header_image_full {
 }
 
 .game_description_snippet {
-	max-height: 111px;
 	overflow: hidden;
     font-size: 13px;
     line-height: 18px;
@@ -6932,7 +6931,6 @@ a.open_in_steam_body:hover {
 }
 
 .widestore .game_description_snippet {
-	max-height: 111px;
 	overflow: hidden;
     font-size: 14px;
     line-height: 19px;

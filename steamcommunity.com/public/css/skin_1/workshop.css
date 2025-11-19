@@ -184,7 +184,6 @@ html.responsive #profileBlock {
 	width: auto;
 	max-width: 638px;
 	float: none;
-	overflow: hidden;
 }
 
 #profileBlock p {

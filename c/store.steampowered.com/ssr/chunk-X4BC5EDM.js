@@ -4,13 +4,12 @@ import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -3211,8 +3210,9 @@ var _ = class {
       _.stopPropagation();
   }
   OnMessage(_) {
-    _.data == "window_resized" && this.OnResize(),
-      _.data == "popup-created" && this.OnCreateInternal();
+    _.data === "window_moved" && this.OnMove(),
+      _.data === "window_resized" && this.OnResize(),
+      _.data === "popup-created" && this.OnCreateInternal();
   }
   Show(_ = 1) {
     let _;
@@ -3402,6 +3402,7 @@ var _ = class {
   ReleasePopup() {
     this.OnClose(), (this.m_popup = null);
   }
+  OnMove() {}
   OnResize() {
     this.IsMaximized().then((_) => {
       _
@@ -3463,6 +3464,9 @@ var _ = class extends _ {
     this.GetWindowRestoreDetails().then((_) => {
       (this.m_strInitialRestoreDetails = _), this.OnResizeComplete(_);
     });
+  }
+  OnMove() {
+    super.OnMove(), this.QueryAndStoreWindowPosition();
   }
   OnResize() {
     super.OnResize(), this.QueryAndStoreWindowPosition();
@@ -3841,6 +3845,9 @@ var _ = class extends _ {
   }
   OnLoad() {
     this.DoCallback("onLoad");
+  }
+  OnMove() {
+    this.DoCallback("onMove");
   }
   OnResize() {
     this.DoCallback("onResize");
@@ -4997,16 +5004,18 @@ function _(_) {
     _ = _.useRef(null),
     [_, _] = _.useState(!1);
   return (
-    _.useEffect(() => {
-      let _ = _.current;
-      _ && (_ && !_ ? (_.showModal(), _(!0)) : !_ && _ && _.close());
+    _.useLayoutEffect(() => {
+      _ && !_ ? _(!0) : !_ && _ && _.current?.close();
     }, [_, _]),
+    _.useLayoutEffect(() => {
+      _ && _.current.showModal();
+    }, [_]),
     (0, _.jsx)("dialog", {
       ref: _,
       className: _,
       onClose: () => _(!1),
       onCancel: (_) => _.preventDefault(),
-      children: _.children,
+      children: _,
     })
   );
 }
@@ -5116,12 +5125,12 @@ function _(_) {
   _.onEscKeypress &&
     ((_.tabIndex = 0),
     (_.onKeyDown = (_) => {
-      _.keyCode == 27 && _.onEscKeypress();
+      _.keyCode == 27 && (_.onEscKeypress(), _.stopPropagation());
     }),
     (_.onMouseDown = (_) => {
       _.currentTarget === _.target &&
         !_.bDisableBackgroundDismiss &&
-        _.onEscKeypress();
+        (_.onEscKeypress(), _.stopPropagation());
     }),
     (_ = (_) => {
       _ && (_(_, _.ownerDocument.activeElement) || _.focus());
@@ -5502,7 +5511,9 @@ function _(_) {
 }
 var _ = class extends _.Component {
   OnSubmit(_) {
-    _.preventDefault(), this.props.onSubmit && this.props.onSubmit(_);
+    _.preventDefault(),
+      _.stopPropagation(),
+      this.props.onSubmit && this.props.onSubmit(_);
   }
   render() {
     return (0, _.jsx)("form", {
@@ -7653,7 +7664,16 @@ function _(_) {
       PageListSeparatorComponent: _ = _,
     } = _,
     _ = _.useContext(_);
-  return _.map((_, _) => {
+  return _.filter((_, _) => {
+    if (_ === _ || _ === _) {
+      for (let _ = _ + 1; _ < _.length; _++) {
+        let _ = _[_];
+        if (_ !== _ && _ !== _ && _.visible) return !0;
+      }
+      return !1;
+    }
+    return !0;
+  }).map((_, _) => {
     let _ = _ === _;
     if (_ === _) {
       let _ = _ === _ + 1 || _ === _ - 1;
@@ -10868,6 +10888,12 @@ function _(_) {
                       openInNewWindow: !0,
                       _: _.STORE_BASE_URL + "legal/",
                       children: _.Localize("#footer_legal"),
+                    }),
+                    (0, _.jsx)(_, {}),
+                    (0, _.jsx)(_, {
+                      openInNewWindow: !0,
+                      _: "https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436",
+                      children: _.Localize("#footer_accessibility"),
                     }),
                     (0, _.jsx)(_, {}),
                     (0, _.jsx)(_, {

@@ -7,6 +7,7 @@ _(_, {
   ArrayWithoutFalsyValues: () => _,
   BInsertBeforeElement: () => _,
   CountMatches: () => _,
+  DiffArrays: () => _,
   FilterInPlace: () => _,
   FilterNonNull: () => _,
   FilterNonNullOrFalse: () => _,
@@ -189,6 +190,18 @@ function _(_) {
 }
 function _(_) {
   return _.filter((_) => _ != null && _ !== !1);
+}
+function _(_, _) {
+  let _ = new Set(_),
+    _ = new Set(_),
+    _ = [..._].filter((_) => _.has(_)),
+    _ = [..._].filter((_) => !_.has(_)),
+    _ = [..._].filter((_) => !_.has(_));
+  return {
+    intersection: _,
+    removed: _,
+    added: _,
+  };
 }
 var _ = {};
 _(_, {

@@ -256,7 +256,7 @@
         r = a.n(n),
         s = a(78327),
         o = a(6379),
-        i = a(77516);
+        i = a(89128);
       class l extends o.ZQ {
         async DeleteOldAnnouncement(e, t) {
           let a = new URLSearchParams();
@@ -623,7 +623,7 @@
         c = a(57876),
         m = a(76217),
         d = a(23310),
-        _ = a(77516),
+        _ = a(89128),
         u = a(17720),
         E = a(86355),
         p = a(4796),
@@ -1057,7 +1057,7 @@
     },
     5136: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => je });
+      a.r(t), a.d(t, { default: () => Ye });
       var n = a(43527),
         r = a(90626),
         s = a(92757),
@@ -1198,7 +1198,7 @@
                 { className: i().RecommendationRowTitle },
                 (0, S.we)("#Steamawards_Nominate_Events"),
               ),
-              r.createElement(j, { rgEvents: a.data.suggested_events }),
+              r.createElement(Y, { rgEvents: a.data.suggested_events }),
             ),
           r.createElement(
             "div",
@@ -1460,7 +1460,7 @@
           )
         );
       }
-      function j(e) {
+      function Y(e) {
         const { rgEvents: t } = e,
           [a, n] = r.useState(!1),
           s = (0, P.R7)(),
@@ -1521,7 +1521,7 @@
                         screenIsWide: (0, y.rp)(),
                       },
                       t.map((e) =>
-                        r.createElement(Y, {
+                        r.createElement(j, {
                           gidEvent: e.event_gid,
                           key: e.event_gid,
                         }),
@@ -1537,7 +1537,7 @@
             : null
         );
       }
-      function Y(e) {
+      function j(e) {
         const { gidEvent: t } = e,
           a = I.O3.GetClanEventModel(t);
         if (!a) return null;
@@ -1559,16 +1559,16 @@
         J = a.n(X),
         $ = a(44165);
       function ee(e) {
-        const { steamID: t } = e,
-          [a, n] = r.useState(() => B.KN.IsInitialized()),
-          [s] = (0, K.QD)("k", null),
-          o = Boolean((t && t != u.iA.steamid) || s),
-          l = J()("2025-12-01T10:00:00-08:00").unix(),
-          m = $.HD.GetTimeNowWithOverride(),
-          d = !o && m <= l;
+        const { steamID: t, nYear: a } = e,
+          [n, s] = r.useState(() => B.KN.IsInitialized()),
+          [o] = (0, K.QD)("k", null),
+          l = Boolean((t && t != u.iA.steamid) || o),
+          m = J()("2025-12-01T10:00:00-08:00").unix(),
+          d = $.HD.GetTimeNowWithOverride(),
+          _ = !l && d <= m;
         return (
           r.useEffect(() => {
-            I.O3.Init(), B.KN.InitGlobal().then(() => n(!0));
+            I.O3.Init(), B.KN.InitGlobal().then(() => s(!0));
           }, []),
           r.createElement(
             f.Ay,
@@ -1576,10 +1576,10 @@
             r.createElement(
               c.Z,
               { className: i().NominationsPageContent },
-              o
-                ? r.createElement(ae, { bEnableNominating: d, steamid: t })
+              l
+                ? r.createElement(ae, { bEnableNominating: _, steamid: t })
                 : r.createElement(te, null),
-              !o &&
+              !l &&
                 r.createElement(
                   "div",
                   {
@@ -1589,13 +1589,13 @@
                     ),
                   },
                   r.createElement(ne, null),
-                  r.createElement(Ee, null),
+                  r.createElement(Ee, { nYear: a }),
                 ),
-              a && r.createElement(re, { bEnableNominating: d }),
+              n && r.createElement(re, { bEnableNominating: _ }),
               r.createElement(
                 "div",
                 { className: i().BackgroundDark },
-                !o && r.createElement(ce, null),
+                !l && r.createElement(ce, null),
                 r.createElement(_e, null),
               ),
             ),
@@ -1865,7 +1865,7 @@
         );
       }
       function ce() {
-        const e = (0, d.ed)(67);
+        const e = (0, d.ed)(70);
         let t = 0;
         const a = e.data?.quests?.map(
           (e) => (
@@ -2188,20 +2188,20 @@
         );
       }
       function ue(e) {
-        const { closeModal: t } = e,
-          a = (0, d.np)(),
-          n = (0, d._C)(),
-          [s, o] = (0, r.useState)(!1);
-        if (!a.data) return null;
-        const [l, m] = a.data;
-        let _ = "";
-        m.code &&
-          (_ =
+        const { closeModal: t, nYear: a } = e,
+          n = (0, d.np)(),
+          s = (0, d._C)(),
+          [o, l] = (0, r.useState)(!1);
+        if (!n.data) return null;
+        const [m, _] = n.data;
+        let E = "";
+        _.code &&
+          (E =
             p.TS.STORE_BASE_URL +
-            "steamawards/nominations/" +
+            `steamawards/nominations/${a}/` +
             u.iA.steamid +
             "?k=" +
-            m.code);
+            _.code);
         return r.createElement(
           w.o0,
           {
@@ -2218,7 +2218,7 @@
               { className: (0, A.A)(i().ShareModalText, i().IntroText) },
               (0, S.we)("#Steamawards_ShareModal_Description"),
             ),
-            _ &&
+            E &&
               r.createElement(
                 r.Fragment,
                 null,
@@ -2230,17 +2230,17 @@
                 r.createElement(
                   "div",
                   { className: i().UrlContainer },
-                  r.createElement("div", { className: i().Url }, _),
+                  r.createElement("div", { className: i().Url }, E),
                   r.createElement(
                     g.jn,
                     {
                       className: i().Button,
                       onClick: () => {
-                        navigator.clipboard.writeText(_), o(!0);
+                        navigator.clipboard.writeText(E), l(!0);
                       },
                     },
                     (0, S.we)(
-                      s
+                      o
                         ? "#YIR_ShareModal_CopyLink_Success"
                         : "#YIR_ShareModal_CopyLink",
                     ),
@@ -2256,10 +2256,10 @@
               g.$n,
               {
                 className: i().GenerateShareLinkBtn,
-                onClick: () => n.mutate(),
+                onClick: () => s.mutate(),
               },
               (0, S.we)(
-                _
+                E
                   ? "#Steamawards_GenerateLink_Btn_Renew"
                   : "#Steamawards_GenerateLink_Btn",
               ),
@@ -2267,9 +2267,10 @@
           ),
         );
       }
-      function Ee() {
-        const e = (0, d.cO)();
-        return u.iA.logged_in && e.data && 0 != e.data.length
+      function Ee(e) {
+        const { nYear: t } = e,
+          a = (0, d.cO)();
+        return u.iA.logged_in && a.data && 0 != a.data.length
           ? r.createElement(
               "div",
               { className: i().ShareLinkCtn },
@@ -2278,11 +2279,11 @@
                 {
                   className: i().ShareBtn,
                   onClick: (e) => {
-                    var t;
                     e.preventDefault(),
                       e.stopPropagation(),
-                      (t = (0, E.uX)(e)),
-                      (0, C.pg)(r.createElement(ue, null), t);
+                      (function (e, t) {
+                        (0, C.pg)(r.createElement(ue, { nYear: e }), t);
+                      })(t, (0, E.uX)(e));
                   },
                 },
                 r.createElement(v.SYj, null),
@@ -2641,11 +2642,11 @@
               fnOnVideoEnd: M,
             }),
           );
-        let j = r.createElement(r.Fragment, null, z);
+        let Y = r.createElement(r.Fragment, null, z);
         return (
           t.winner_appid && s
-            ? (j = r.createElement(Be, { unAppID: t.winner_appid }))
-            : i && (j = r.createElement(Te, { unAppID: i })),
+            ? (Y = r.createElement(Be, { unAppID: t.winner_appid }))
+            : i && (Y = r.createElement(Te, { unAppID: i })),
           r.createElement(
             Ae.tH,
             null,
@@ -2722,7 +2723,7 @@
                     r.createElement(
                       "div",
                       { className: ge().CapsuleContainer },
-                      j,
+                      Y,
                       r.createElement("img", { src: L }),
                     ),
                   ),
@@ -3073,7 +3074,7 @@
       const Ue = { 2023: Oe(), 2024: He(), 2025: xe() },
         qe = Object.values(Ue).reduce((e, t) => ({ ...e, ...t }), {}),
         ze = 2023;
-      const je = () =>
+      const Ye = () =>
         r.createElement(
           f.Ay,
           { controller: "steamawards" },
@@ -3083,7 +3084,11 @@
             r.createElement(s.qh, {
               path: n.B.SteamAwardNominations(),
               render: (e) =>
-                r.createElement(ee, { steamID: e.match.params.steamid, ...e }),
+                r.createElement(ee, {
+                  nYear: parseInt(e.match.params.year),
+                  steamID: e.match.params.steamid,
+                  ...e,
+                }),
             }),
             r.createElement(s.qh, {
               path: n.B.SteamAwards(),

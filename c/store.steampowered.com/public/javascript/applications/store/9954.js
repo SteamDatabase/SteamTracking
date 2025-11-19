@@ -99,7 +99,7 @@
 	"Menu_Section_Hardware": "Maskinvara",
 	"Menu_Section_Hardware_VRHardware": "VR-maskinvara",
 	"Menu_Section_Hardware_SteamDeckDock": "Dockningsstation",
-	"Menu_Section_Hardware_Family": "New Steam Hardware",
+	"Menu_Section_Hardware_Family": "Ny Steam-maskinvara",
 	"Menu_Section_WaysToPlay": "Sätt att spela",
 	"Menu_Section_SpecialSections": "Specialsektioner",
 	"Menu_Section_SpecialSections_NextFest": "Steams förfestival",

@@ -2026,8 +2026,8 @@
         (0, p.Cg)([q.o], X.prototype, "AddBranchToAssetSet", null),
         (0, p.Cg)([q.o], X.prototype, "RemoveBranchFromAssetSet", null);
       var $ = r(41735),
-        Y = r.n($),
-        ee = null;
+        Y = r.n($);
+      let ee = null;
       var te = r(32754);
       function re(e) {
         const { assetSetID: t, className: r, appid: i } = e,

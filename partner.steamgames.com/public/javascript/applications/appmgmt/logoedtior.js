@@ -175,8 +175,8 @@
         P = o.n(L),
         f = o(48077),
         E = o.n(f),
-        _ = o(51272),
-        C = o(97875),
+        C = o(51272),
+        _ = o(97875),
         B = o(10050),
         I = o(25489);
       const v = {
@@ -187,7 +187,7 @@
           enterDone: P().FullscreenEnterDone,
           enterActive: P().FullscreenEnterActive,
         },
-        S = (0, _.i_)(E()["duration-app-launch"]),
+        S = (0, C.i_)(E()["duration-app-launch"]),
         b = { pinnedPosition: "BottomLeft", nWidthPct: 50, nHeightPct: 50 },
         N = s.createContext({ bFullscreen: !1 });
       class O extends s.Component {
@@ -310,18 +310,20 @@
             });
         }
         componentDidUpdate(e) {
+          let t = null;
           (JSON.stringify(e.rgHeaderImages) ==
             JSON.stringify(this.props.rgHeaderImages) &&
-            JSON.stringify(e.rgLogoImages) ==
-              JSON.stringify(this.props.rgLogoImages) &&
             JSON.stringify(e.rgBlurImages) ==
               JSON.stringify(this.props.rgBlurImages)) ||
-            this.setState({
-              bFallbackHeader: 1 == this.props.rgHeaderImages.length,
-              bHasHeaderImage: this.props.rgHeaderImages.length > 0,
-              bHasLogoImage: this.props.rgLogoImages.length > 0,
-              bLogoLoaded: !1,
-            });
+            ((t = t || {}),
+            (t.bFallbackHeader = 1 == this.props.rgHeaderImages.length),
+            (t.bHasHeaderImage = this.props.rgHeaderImages.length > 0)),
+            JSON.stringify(e.rgLogoImages) !=
+              JSON.stringify(this.props.rgLogoImages) &&
+              ((t = t || {}),
+              (t.bHasLogoImage = this.props.rgLogoImages.length > 0),
+              (t.bLogoLoaded = !1)),
+            t && this.setState(t);
         }
         OnHeaderError() {
           this.setState({ bHasHeaderImage: !1 }),
@@ -1059,7 +1061,7 @@
         const { title: t, className: o } = e;
         let n = 26;
         t.length > 8 && (n = Math.max(n - (t.length - 5) / 2, 5.8));
-        const [r, i] = (0, C.l)();
+        const [r, i] = (0, _.l)();
         return s.createElement(
           "svg",
           { className: (0, d.A)(P().SVGTitle, o), viewBox: "0 0 300 14" },
@@ -1098,7 +1100,7 @@
           ),
         );
       };
-      function H(e) {
+      function k(e) {
         const { title: t, children: o } = e,
           n = s.useContext(N),
           r = s.useRef(null);
@@ -1126,7 +1128,7 @@
           ),
         );
       }
-      var k = o(14947);
+      var H = o(14947);
       class w {
         m_strLibraryLogoURL;
         m_strLibraryHeroURL;
@@ -1135,7 +1137,7 @@
         m_logoPosition = void 0;
         m_strSaveURL;
         constructor(e) {
-          (0, k.Gn)(this),
+          (0, H.Gn)(this),
             (this.m_strLibraryHeroURL = e.strLibraryHeroURL),
             (this.m_strLibraryLogoURL = e.strLibraryLogoURL),
             (this.m_unAppID = e.unAppID),
@@ -1171,7 +1173,7 @@
           return this.m_strSaveURL;
         }
       }
-      (0, n.Cg)([k.sH], w.prototype, "m_logoPosition", void 0);
+      (0, n.Cg)([H.sH], w.prototype, "m_logoPosition", void 0);
       var U = o(41983),
         G = o.n(U),
         F = o(17221),
@@ -1416,7 +1418,7 @@
             } else
               window.opener &&
                 window.opener.postMessage(
-                  { appid: e.GetAppID(), ...(0, k.HO)(e.GetLogoPosition()) },
+                  { appid: e.GetAppID(), ...(0, H.HO)(e.GetLogoPosition()) },
                   "*",
                 ),
                 this.OnCancel();
@@ -1530,7 +1532,7 @@
                     fnOnPositionChanged: this.OnPositionChanged,
                     logoPosition: e.GetLogoPosition(),
                   },
-                  s.createElement(H, {
+                  s.createElement(k, {
                     title: e.GetLogoURL() ? "" : e.GetAppName(),
                   }),
                 ),
@@ -1657,11 +1659,14 @@
       class i extends s.Component {
         m_refImage = s.createRef();
         constructor(e) {
-          super(e), (this.state = { nImage: 0 });
+          super(e), (this.state = { nImage: 0, nPropChangeCounter: 0 });
         }
-        componentDidUpdate(e) {
+        componentDidUpdate(e, t) {
           JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
-            this.setState({ nImage: 0 });
+            this.setState({
+              nImage: 0,
+              nPropChangeCounter: t.nPropChangeCounter + 1,
+            });
         }
         get src() {
           let e = "";
@@ -1704,8 +1709,10 @@
               strAltText: n,
               ...r
             } = this.props,
-            i = this.src;
+            i = this.src,
+            a = this.state.nPropChangeCounter;
           return s.createElement("img", {
+            key: a,
             ref: this.m_refImage,
             ...r,
             src: i,

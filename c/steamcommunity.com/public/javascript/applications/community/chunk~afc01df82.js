@@ -3066,7 +3066,7 @@
                 (0, _._)("#EventEditor_ArtworkType_" + _),
                 `${_.width} X ${_.height}`,
               ),
-            [_],
+            [_.height, _.width, _],
           );
         return _.createElement(_, {
           lang: __webpack_require__,
@@ -4169,18 +4169,19 @@
               }),
             ),
           ),
-          _.createElement(
-            _._,
-            {
-              onClick: () => {
-                for (let _ = 0; _ < 31; _++) _(_) && _(_);
+          !!_ &&
+            _.createElement(
+              _._,
+              {
+                onClick: () => {
+                  for (let _ = 0; _ < 31; _++) _(_) && _(_);
+                },
               },
-            },
-            (0, _._)("#Sale_RemoveAll"),
-            _.createElement(_._, {
-              tooltip: (0, _._)("#Sale_RemoveAll_Tooltip"),
-            }),
-          ),
+              (0, _._)("#Sale_RemoveAll"),
+              _.createElement(_._, {
+                tooltip: (0, _._)("#Sale_RemoveAll_Tooltip"),
+              }),
+            ),
         );
       }
       function _(_) {
@@ -4190,9 +4191,6 @@
             langOverride: _,
             fnOnLanguagePreviewChange: _,
             fnOnArtworkLangChange: _,
-            fnGetImageHash: _,
-            fnLangHasData: _,
-            realms: _,
             fnOnRemoveImage: _,
           } = _,
           [_, _] = (0, _._)(() => {
@@ -4254,11 +4252,11 @@
                   _.YNO(),
                 ),
               ),
-            _ &&
+            !!_ &&
               _.createElement(_, {
                 ..._,
               }),
-            _ &&
+            !!_ &&
               _.createElement(_, {
                 fnOnRemoveImage: _,
                 langData: __webpack_require__,

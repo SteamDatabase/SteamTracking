@@ -2175,8 +2175,8 @@
         (0, _._)([_._], _.prototype, "AddBranchToAssetSet", null),
         (0, _._)([_._], _.prototype, "RemoveBranchFromAssetSet", null);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = null;
+        _ = __webpack_require__._(_);
+      let _ = null;
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { assetSetID: _, className: __webpack_require__, appid: _ } = _,

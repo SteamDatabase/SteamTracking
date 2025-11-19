@@ -19190,7 +19190,8 @@
             ref: _,
             className: _().SaleSectionListContainer,
             onGamepadDirection: _,
-            focusable: !0,
+            focusable: !1,
+            focusableIfEmpty: !0,
           },
           _,
         );
@@ -24677,30 +24678,7 @@
           });
         }
         GetMatchCountForFacetValue(_) {
-          var _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _;
+          var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
           if (this.m_mapMultiFacetCounts) {
             const _ = "402",
               _ = "401",
@@ -24712,35 +24690,32 @@
               _ = "43",
               _ = "44",
               _ = "61",
-              _ = "37";
+              _ = "37",
+              _ = this.CollapseFilter(_.facetValue.rgStoreTagFilter);
             switch (_.facetValue.type) {
               case _._.k_ESaleTagFilter:
               case void 0:
                 if (
-                  (null === (_ = _.facetValue.rgStoreTagFilter) || void 0 === _
-                    ? void 0
-                    : _.type) === _._.k_EStoreFilterClauseTypeStoreTag &&
+                  (null == _ ? void 0 : _.type) ===
+                    _._.k_EStoreFilterClauseTypeStoreTag &&
                   _.facetValue.nAtomicStoreTagID
                 )
                   return null ===
                     (_ = this.m_mapMultiFacetCounts.get("tagidset")) ||
                     void 0 === _
                     ? void 0
-                    : __webpack_require__.get(
-                        _.facetValue.nAtomicStoreTagID.toString(),
-                      );
+                    : _.get(_.facetValue.nAtomicStoreTagID.toString());
                 if (
-                  (null === (_ = _.facetValue.rgStoreTagFilter) || void 0 === _
-                    ? void 0
-                    : _.type) === _._.k_EStoreFilterClauseTypeFeatureTag
+                  (null == _ ? void 0 : _.type) ===
+                  _._.k_EStoreFilterClauseTypeFeatureTag
                 )
-                  switch (_.facetValue.rgStoreTagFilter.value) {
+                  switch (_.value) {
                     case "windows":
                       return null ===
                         (_ = this.m_mapMultiFacetCounts.get("platform_win")) ||
                         void 0 === _
                         ? void 0
-                        : _.get("true");
+                        : __webpack_require__.get("true");
                     case "linux":
                       return null ===
                         (_ =
@@ -24841,10 +24816,18 @@
                   }
                 break;
               case _._.k_EAppType:
-                return null === (_ = this.m_mapMultiFacetCounts.get("type")) ||
+                let _ = _.facetValue.appType;
+                return (
+                  !_ &&
+                    _.type == _._.k_EStoreFilterClauseTypeAppType &&
+                    "string" == typeof _.value &&
+                    _.value.length &&
+                    (_ = _.value),
+                  null === (_ = this.m_mapMultiFacetCounts.get("type")) ||
                   void 0 === _
-                  ? void 0
-                  : _.get(_.facetValue.appType);
+                    ? void 0
+                    : _.get(_)
+                );
               case _._.k_ELanguage:
                 const _ = (0, _._)(_.facetValue.language);
                 return null ===
@@ -24864,6 +24847,22 @@
               ? void 0
               : _.get(_.facetValue.nAtomicStoreTagID);
           return null;
+        }
+        CollapseFilter(_) {
+          var _;
+          if (!_) return _;
+          let _ = _;
+          for (
+            ;
+            (_.type == _._.k_EStoreFilterClauseTypeOr ||
+              _.type == _._.k_EStoreFilterClauseTypeAnd) &&
+            1 ==
+              (null === (_ = _.rgSubexpressions) || void 0 === _
+                ? void 0
+                : _.length);
+          )
+            _ = _.rgSubexpressions[0];
+          return _;
         }
         DeactivateFacetValues() {
           this.m_prunedFacets.forEach((_) => {
@@ -25108,6 +25107,8 @@
                             fnOnUpdateFilter: _,
                             styleOverrides: _,
                             bSearching: (null == _ ? void 0 : _.length) > 0,
+                            bInitiallyExpanded:
+                              _.facet.facet.bInitiallyExpanded,
                           }),
                         ),
                   ),
@@ -25204,8 +25205,9 @@
               nFacetIndex: _,
               styleOverrides: _,
               bSearching: _,
+              bInitiallyExpanded: _,
             } = _,
-            [_, _] = (0, _.useState)(Boolean(0 !== _)),
+            [_, _] = (0, _.useState)(Boolean(0 === _ || _)),
             [_, _] = (0, _.useState)(!1);
           if (_.facetValues.every((_) => _.bHiddenBySearch)) return null;
           let _;
@@ -25230,7 +25232,7 @@
           _ = Math.max(_, _ + (_ ? 1 : 0));
           const _ = _.facetValues.length > _;
           let _ = !_ || _ || _ ? _.facetValues : _.facetValues.slice(0, _);
-          _ && !_ && (_ = _.filter((_) => _.bEnabled));
+          _ || _ || (_ = _.filter((_) => _.bEnabled));
           const _ = _.every((_) => {
             var _;
             return (
@@ -25261,7 +25263,7 @@
                 _,
               ),
               _.createElement(_.DK4, {
-                angle: _ ? 270 : 0,
+                angle: _ ? 0 : 270,
               }),
             ),
             _.map((_, _) =>
@@ -25273,7 +25275,7 @@
                 ..._,
               }),
             ),
-            !_ &&
+            _ &&
               _ &&
               !_ &&
               _.createElement(
@@ -33294,6 +33296,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = new _._("SaleItemBrowser");
       let _ = class extends _.Component {
         constructor(_) {
           super(_),
@@ -33313,7 +33316,8 @@
               results: null,
             }),
             (this.m_timerForChange = new _._()),
-            (this.m_cancelSignal = _().CancelToken.source());
+            (this.m_cancelSignal = _().CancelToken.source()),
+            (this.m_loadCapsulesDebugGeneration = 0);
         }
         componentDidMount() {
           window.addEventListener("resize", this.OnResize), this.LoadCapsules();
@@ -33334,9 +33338,10 @@
           this.m_timerForChange.Cancel(),
             this.state.fnUnregisterCallback &&
               this.state.fnUnregisterCallback(),
-            this.m_cancelSignal.cancel("SaleItemBrowser component unmounted");
+            this.m_cancelSignal.cancel("SaleItemBrowser component unmounted"),
+            _.Debug("componentWillUnmount: Cancelled");
         }
-        componentDidUpdate(_) {
+        componentDidUpdate(_, _) {
           var _, _, _, _, _, _;
           const _ = this.props.section
             ? (0, _._)(
@@ -33353,7 +33358,7 @@
             (0, _._)(_) &&
               (null === (_ = this.GetFlavorsForActiveTab()) || void 0 === _
                 ? void 0
-                : __webpack_require__.includes(_)) &&
+                : _.includes(_)) &&
               (_ = _);
           }
           if (
@@ -33368,7 +33373,8 @@
                 : _.GetActiveTabUniqueID()) ||
             this.state.strFacetUrlParam !== _ ||
             this.state.currentFlavor !== _ ||
-            this.props.controllerCategory !== _.controllerCategory
+            this.props.controllerCategory !== _.controllerCategory ||
+            this.state.facetFilterState !== _.facetFilterState
           ) {
             (null === (_ = this.props.section) || void 0 === _
               ? void 0
@@ -33494,10 +33500,10 @@
           );
         }
         async LoadCapsules() {
-          var _;
+          var _, _;
           const {
-            event: _,
-            activeTab: __webpack_require__,
+            event: __webpack_require__,
+            activeTab: _,
             section: _,
             controllerCategory: _,
           } = this.props;
@@ -33508,9 +33514,30 @@
             strSearchQuery: _,
             facetFilterState: _,
           } = this.state;
+          const _ = this.m_loadCapsulesDebugGeneration + 1;
+          if (
+            (_.Debug(`LoadCapsules[${_}]: starting`),
+            _.enable_faceted_browsing && !_)
+          )
+            return void _.Debug(
+              `LoadCapsules[${_}]: Faceted browse enabled but no state yet`,
+            );
+          this.m_cancelSignal.cancel();
+          const _ = _().CancelToken.source();
+          (this.m_cancelSignal = _),
+            this.m_loadCapsulesDebugGeneration++,
+            _.Debug(
+              `LoadCapsules[${_}]: now in generation ${this.m_loadCapsulesDebugGeneration}`,
+            );
           const _ = 2 == this.context.eLocation;
-          await Promise.all([_._.Get().HintLoad(), (0, _._)(_, _._)]),
-            _.enable_faceted_browsing && _ && (0, _._)(() => _.PruneFacets());
+          if (
+            (await Promise.all([_._.Get().HintLoad(), (0, _._)(_, _._)]),
+            _.token.reason)
+          )
+            return void _.Debug(
+              `LoadCapsules[${_}]: Cancellation flipped after precache`,
+            );
+          _.enable_faceted_browsing && _ && (0, _._)(() => _.PruneFacets());
           const _ = parseInt((0, _._)(this.props.history, "offset")) || 0;
           let _,
             _ = !0;
@@ -33519,16 +33546,13 @@
                 nSectionUniqueID: _.unique_id,
                 strSectionFilter: (0, _._)(_),
                 nTabUniqueID:
-                  Boolean(_) || null == __webpack_require__
-                    ? void 0
-                    : __webpack_require__.GetActiveTabUniqueID(),
+                  Boolean(_) || null == _ ? void 0 : _.GetActiveTabUniqueID(),
                 strTabFilter:
-                  Boolean(_) || null == __webpack_require__
-                    ? void 0
-                    : __webpack_require__.GetStoreFilter(),
+                  Boolean(_) || null == _ ? void 0 : _.GetStoreFilter(),
                 facetFilter: _,
-                contentHub: _.GetContentHub(),
-                bContentHubDiscountedOnly: _.BContentHubDiscountedOnly(),
+                contentHub: __webpack_require__.GetContentHub(),
+                bContentHubDiscountedOnly:
+                  __webpack_require__.BContentHubDiscountedOnly(),
                 strSearch: _,
                 bRequestFacetCounts: _.enable_faceted_browsing,
                 eControllerCategory: _,
@@ -33538,14 +33562,14 @@
             const _ = _.cap_item_count > 12 ? _.cap_item_count : 12;
             (_ = await _.Get().GetItemsSoFar(
               this.state.results,
-              _,
+              __webpack_require__,
               _,
               _,
               this.FilterItems,
               _,
               _,
               _,
-              this.m_cancelSignal,
+              void 0,
               _,
             )),
               (_ =
@@ -33558,20 +33582,23 @@
               (_ = _.bMoreAvailable);
           } catch (_) {
             return void (
-              this.m_cancelSignal.token.reason ||
-              (console.error("Failed to load games for browser;" + _.message),
+              _.token.reason ||
+              (_.Info(
+                `LoadCapsules[${_}]: Failed to load games for browser: ${_.message}`,
+              ),
               this.setState({
                 bInitialLoadComplete: !0,
                 bAwaitingMoreRowsLoading: !1,
               }))
             );
           }
-          if (this.m_cancelSignal.token.reason) return;
+          if (_.token.reason)
+            return void _.Debug(
+              `LoadCapsules[${_}]: Cancellation flipped after GetItems`,
+            );
           const _ = (0, _._)(
             _.unique_id,
-            null == __webpack_require__
-              ? void 0
-              : __webpack_require__.GetActiveTabUniqueID(),
+            null == _ ? void 0 : _.GetActiveTabUniqueID(),
           );
           _ && _(_, _, 2 == this.context.eLocation),
             this.setState({
@@ -33585,7 +33612,10 @@
               bAwaitingMoreRowsLoading: !1,
               nHiddenCapsules: _,
               results: _,
-            });
+            }),
+            _.Debug(
+              `LoadCapsules[${_}]: complete with rgCapsules.length=${null == _ ? void 0 : _.length}, resulst.length=${null === (_ = null == _ ? void 0 : _.rgItems) || void 0 === _ ? void 0 : _.length}`,
+            );
         }
         OnFlavorLabelClick(_) {
           this.m_timerForChange.Cancel(),
@@ -33870,14 +33900,18 @@
                   fnOnUpdateFilter: this.OnUpdateFacetFilter,
                   onInitFilter: async () => {
                     let _ = this.props.section.facets;
-                    !_ &&
-                      this.props.section.facet_auto_generate_options &&
-                      (_ = await (0, _._)(
-                        this.props.section.facet_auto_generate_options,
-                      )),
+                    _.Debug("FacetedSaleSection.onInitFilter', rgFacet"),
+                      !_ &&
+                        this.props.section.facet_auto_generate_options &&
+                        ((_ = await (0, _._)(
+                          this.props.section.facet_auto_generate_options,
+                        )),
+                        _.Debug(
+                          "FacetedSaleSection.onInitFilter autogen completed', rgFacet",
+                        )),
                       this.setState({
                         facetFilterState: new _(
-                          _,
+                          null != _ ? _ : [],
                           this.props.section.facet_sort_order ||
                             _._.k_ESortFacetsByMatchCount,
                           this.props.language,

@@ -99,7 +99,7 @@
 	"Menu_Section_Hardware": "ฮาร์ดแวร์",
 	"Menu_Section_Hardware_VRHardware": "ฮาร์ดแวร์ VR",
 	"Menu_Section_Hardware_SteamDeckDock": "แท่นเชื่อมต่อ",
-	"Menu_Section_Hardware_Family": "New Steam Hardware",
+	"Menu_Section_Hardware_Family": "ฮาร์ดแวร์ Steam ใหม่",
 	"Menu_Section_WaysToPlay": "วิธีเล่นเกม",
 	"Menu_Section_SpecialSections": "หมวดพิเศษ",
 	"Menu_Section_SpecialSections_NextFest": "มหกรรมเนกซ์บน Steam",

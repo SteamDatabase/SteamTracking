@@ -13,27 +13,27 @@ import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -10154,29 +10154,31 @@ function _(_) {
 function _(_) {
   let { steamid: _ } = _,
     _ = _(_);
-  return _.data
-    ? (0, _.jsxs)("div", {
-        className: _,
-        children: [
-          (0, _.jsx)(_, {
-            playerLinkDetails: _.data,
-            statusPosition: "border",
-            alt: "",
-            role: "presentation",
-            size: "FillArea",
-            className: _,
-          }),
-          (0, _.jsx)("h2", {
-            children: _.Localize(
-              "#wishlist_header",
-              _.data.public_data?.persona_name?.toLocaleUpperCase(
-                _().strISOCode,
-              ) ?? "",
-            ),
-          }),
-        ],
-      })
-    : null;
+  if (!_.data) return null;
+  let _ = _(_.data);
+  return (0, _.jsxs)("div", {
+    className: _,
+    children: [
+      (0, _.jsx)("a", {
+        href: _,
+        children: (0, _.jsx)(_, {
+          playerLinkDetails: _.data,
+          statusPosition: "border",
+          alt: "",
+          role: "presentation",
+          size: "FillArea",
+          className: _,
+        }),
+      }),
+      (0, _.jsx)("h2", {
+        children: _.Localize(
+          "#wishlist_header",
+          _.data.public_data?.persona_name?.toLocaleUpperCase(_().strISOCode) ??
+            "",
+        ),
+      }),
+    ],
+  });
 }
 function _(_, _, _) {
   let _ = _(),

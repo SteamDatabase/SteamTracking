@@ -321,8 +321,8 @@
         p =
           a.p +
           "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var c = a(43047),
-        h = a.n(c),
+      var h = a(43047),
+        c = a.n(h),
         _ = a(81393);
       const u = s.memo(function (e) {
         const {
@@ -332,7 +332,7 @@
             statusStyle: i,
             statusPosition: n,
             children: m,
-            ...c
+            ...h
           } = e,
           u = s.useMemo(() => {
             const e = [];
@@ -363,20 +363,20 @@
           "div",
           {
             className: (0, o.A)(
-              h().avatarHolder,
+              c().avatarHolder,
               "avatarHolder",
               "no-drag",
               a,
               r,
             ),
-            ...c,
+            ...h,
           },
           s.createElement("div", {
-            className: (0, o.A)(h().avatarStatus, "avatarStatus", n),
+            className: (0, o.A)(c().avatarStatus, "avatarStatus", n),
             style: i,
           }),
           s.createElement(A.c, {
-            className: (0, o.A)(h().avatar, "avatar"),
+            className: (0, o.A)(c().avatar, "avatar"),
             rgSources: u,
             draggable: !1,
           }),
@@ -424,8 +424,8 @@
             (n = m.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + n),
           s.createElement(
             "div",
-            { className: (0, o.A)(h().avatarFrame, a, "avatarFrame"), ...i },
-            s.createElement("img", { className: h().avatarFrameImg, src: n }),
+            { className: (0, o.A)(c().avatarFrame, a, "avatarFrame"), ...i },
+            s.createElement("img", { className: c().avatarFrameImg, src: n }),
           )
         );
       });
@@ -526,11 +526,14 @@
       class n extends s.Component {
         m_refImage = s.createRef();
         constructor(e) {
-          super(e), (this.state = { nImage: 0 });
+          super(e), (this.state = { nImage: 0, nPropChangeCounter: 0 });
         }
-        componentDidUpdate(e) {
+        componentDidUpdate(e, t) {
           JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
-            this.setState({ nImage: 0 });
+            this.setState({
+              nImage: 0,
+              nPropChangeCounter: t.nPropChangeCounter + 1,
+            });
         }
         get src() {
           let e = "";
@@ -573,8 +576,10 @@
               strAltText: r,
               ...i
             } = this.props,
-            n = this.src;
+            n = this.src,
+            o = this.state.nPropChangeCounter;
           return s.createElement("img", {
+            key: o,
             ref: this.m_refImage,
             ...i,
             src: n,

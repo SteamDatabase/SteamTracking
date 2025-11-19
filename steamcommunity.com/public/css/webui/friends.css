@@ -2532,6 +2532,18 @@ b {
   padding: 4px;
   margin-bottom: 8px;
 }
+.partnereventshared_DropDownOptionHelpLabel_2O-Yi {
+  display: inline-flex;
+  line-height: unset;
+}
+.partnereventshared_DropDownOptionHelpLabel_2O-Yi > svg {
+  width: 16px;
+  fill: #aaa;
+  margin-left: 4px;
+}
+.partnereventshared_DropDownOptionHelpLabel_2O-Yi > svg:hover {
+  fill: #fff;
+}
 .partnereventshared_Columns_1oVIR {
   display: flex;
   flex-direction: row;
@@ -2623,6 +2635,10 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   margin-top: 8px;
   margin-bottom: 8px;
 }
+.partnereventshared_InstructionText_ktxW5 {
+  font-size: 15px;
+  color: #ac966a;
+}
 .partnereventshared_BackgroundImage_2wlqO {
   position: absolute;
   top: 0;
@@ -2630,6 +2646,7 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   bottom: 0;
   left: 0;
   z-index: -1;
+  background-repeat: no-repeat;
 }
 .partnereventshared_InEditor_1qfNC .partnereventshared_BackgroundImage_2wlqO {
   z-index: 0;
@@ -7976,6 +7993,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   background: rgba(119, 119, 119, 0.6);
   transition: background-color 150ms ease-in;
 }
+.contentmoderationreportdialog_BlockListItem_2tqpD
+  .contentmoderationreportdialog_BlockListDesc_1Wd-o {
+  font-size: 12px;
+  color: #dcdedf;
+}
 .contentmoderationreportdialog_BottomButtons_2g3Wv {
   display: flex;
   flex-direction: row;
@@ -8033,7 +8055,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .contentmoderationreportdialog_AccountSafetyCtn_3BVlf
   .contentmoderationreportdialog_Icon_29JC6 {
   color: #ffc82c;
-  width: 48px;
+  width: 30px;
   margin: 13px 8px;
 }
 .contentmoderationreportdialog_AccountSafetyCtn_3BVlf
@@ -12769,10 +12791,9 @@ a.eventbbcodeparser_LinkPill_3nRRZ {
   color: #0e141b;
   font-size: 14px;
   font-weight: 600;
-  padding: 6px 20px;
+  padding: 8px 20px;
   display: inline-block;
   border-radius: 28px;
-  margin: 4px 0px;
   transition: all .2s ease-out;
 }
 a.eventbbcodeparser_LinkPill_3nRRZ:hover {

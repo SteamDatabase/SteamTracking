@@ -1059,6 +1059,9 @@
   overflow: hidden;
   padding: 0px 8px;
 }
+.BroadcastDetailsSection .BroadcastDetails .StoreSaleWidgetOuterContainer {
+  min-width: 520px;
+}
 .BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader {
   height: 60px;
   font-size: 16px;

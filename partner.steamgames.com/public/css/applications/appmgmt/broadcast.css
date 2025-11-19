@@ -3353,6 +3353,9 @@ div._1MrTWpNan4htXK4Kql6ms8._2xKaMJn0nexa3MMJvN6yq- {
   overflow: hidden;
   padding: 0px 8px;
 }
+.BroadcastDetailsSection .BroadcastDetails .StoreSaleWidgetOuterContainer {
+  min-width: 520px;
+}
 .BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader {
   height: 60px;
   font-size: 16px;

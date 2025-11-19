@@ -2186,6 +2186,11 @@ var _ = class _ extends _.Message {
                 _: _.readBool,
                 _: _.writeBool,
               },
+              commercial_license_restricted: {
+                _: 13,
+                _: _.readBool,
+                _: _.writeBool,
+              },
             },
           }),
         _.sm_m

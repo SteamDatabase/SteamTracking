@@ -2702,18 +2702,19 @@
               }),
             ),
           ),
-          _.createElement(
-            _._,
-            {
-              onClick: () => {
-                for (let _ = 0; _ < 31; _++) _(_) && _(_);
+          !!_ &&
+            _.createElement(
+              _._,
+              {
+                onClick: () => {
+                  for (let _ = 0; _ < 31; _++) _(_) && _(_);
+                },
               },
-            },
-            (0, _._)("#Sale_RemoveAll"),
-            _.createElement(_._, {
-              tooltip: (0, _._)("#Sale_RemoveAll_Tooltip"),
-            }),
-          ),
+              (0, _._)("#Sale_RemoveAll"),
+              _.createElement(_._, {
+                tooltip: (0, _._)("#Sale_RemoveAll_Tooltip"),
+              }),
+            ),
         );
       }
       function _(_) {
@@ -2723,9 +2724,6 @@
             langOverride: _,
             fnOnLanguagePreviewChange: _,
             fnOnArtworkLangChange: _,
-            fnGetImageHash: _,
-            fnLangHasData: _,
-            realms: _,
             fnOnRemoveImage: _,
           } = _,
           [_, _] = (0, _._)(() => {
@@ -2787,11 +2785,11 @@
                   _.YNO(),
                 ),
               ),
-            _ &&
+            !!_ &&
               _.createElement(_, {
                 ..._,
               }),
-            _ &&
+            !!_ &&
               _.createElement(_, {
                 fnOnRemoveImage: _,
                 langData: __webpack_require__,
@@ -3228,7 +3226,7 @@
                 (0, _._)("#EventEditor_ArtworkType_" + _),
                 `${_.width} X ${_.height}`,
               ),
-            [_],
+            [_.height, _.width, _],
           );
         return _.createElement(_, {
           lang: __webpack_require__,
@@ -4274,8 +4272,9 @@
             [_],
           ),
           _ = (0, _.useCallback)((_, _) => {
-            const _ = _._.GetLocalizedImageGroupForEdit();
-            return _?.localized_images[_];
+            const _ = _._.GetLocalizedImageGroupForEdit(),
+              _ = _?.localized_images[_];
+            return _ ? _.split("/").pop() : _;
           }, []);
         return _.createElement(
           _._,
@@ -4289,10 +4288,11 @@
             strDescription: _.strLocalizedDescription,
             bOKDisabled: _ > 0,
             onOK: () => {
-              _._.GetAllLocalizedGroupImages().forEach((_, _) => {
+              const _ = _._.GetLocalizedImageGroupForEdit();
+              for (let _ = 0; _ < 31; ++_) {
+                const _ = _?.localized_images[_];
                 if (_) {
-                  let _ = _.lastIndexOf("/");
-                  const _ = _.substring(_ + 1);
+                  const _ = __webpack_require__.split("/").pop() || "";
                   _(
                     _,
                     {
@@ -4303,10 +4303,9 @@
                     },
                     _,
                   );
-                }
-              }),
-                _._.ClearImageGroup(),
-                _.onOK ? _.onOK() : _?.();
+                } else _(_, null, _);
+              }
+              _._.ClearImageGroup(), _.onOK ? _.onOK() : _?.();
             },
             strOKButtonText:
               _ > 0 ? (0, _._)("#ImagePickerLoc_DismissWarning") : void 0,
@@ -4335,6 +4334,7 @@
                   title: null,
                   appid: __webpack_require__,
                   realms: _,
+                  fnRemoveAllArtwork: () => _._.ClearImageGroup(),
                   fnSetImageURL: _,
                   fnGetImageHashAndExt: _,
                   fnLangHasData: _,

@@ -337,18 +337,20 @@
             });
         }
         componentDidUpdate(_) {
+          let _ = null;
           (JSON.stringify(_.rgHeaderImages) ==
             JSON.stringify(this.props.rgHeaderImages) &&
-            JSON.stringify(_.rgLogoImages) ==
-              JSON.stringify(this.props.rgLogoImages) &&
             JSON.stringify(_.rgBlurImages) ==
               JSON.stringify(this.props.rgBlurImages)) ||
-            this.setState({
-              bFallbackHeader: 1 == this.props.rgHeaderImages.length,
-              bHasHeaderImage: this.props.rgHeaderImages.length > 0,
-              bHasLogoImage: this.props.rgLogoImages.length > 0,
-              bLogoLoaded: !1,
-            });
+            ((_ = _ || {}),
+            (_.bFallbackHeader = 1 == this.props.rgHeaderImages.length),
+            (_.bHasHeaderImage = this.props.rgHeaderImages.length > 0)),
+            JSON.stringify(_.rgLogoImages) !=
+              JSON.stringify(this.props.rgLogoImages) &&
+              ((_ = _ || {}),
+              (_.bHasLogoImage = this.props.rgLogoImages.length > 0),
+              (_.bLogoLoaded = !1)),
+            _ && this.setState(_);
         }
         OnHeaderError() {
           this.setState({
@@ -2016,12 +2018,14 @@
           super(_),
             (this.state = {
               nImage: 0,
+              nPropChangeCounter: 0,
             });
         }
-        componentDidUpdate(_) {
+        componentDidUpdate(_, _) {
           JSON.stringify(this.props.rgSources) != JSON.stringify(_.rgSources) &&
             this.setState({
               nImage: 0,
+              nPropChangeCounter: _.nPropChangeCounter + 1,
             });
         }
         get src() {
@@ -2068,8 +2072,10 @@
               strAltText: _,
               ..._
             } = this.props,
-            _ = this.src;
+            _ = this.src,
+            _ = this.state.nPropChangeCounter;
           return _.createElement("img", {
+            key: _,
             ref: this.m_refImage,
             ..._,
             src: _,

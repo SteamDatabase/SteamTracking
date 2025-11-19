@@ -12632,8 +12632,24 @@
           "div",
           { className: n },
           d.createElement(
+            "a",
+            { href: m, target: Tr.TS.IN_CLIENT ? void 0 : "_blank" },
+            d.createElement(
+              fi.j,
+              { type: "app", id: t },
+              d.createElement(
+                "div",
+                { className: o },
+                d.createElement("img", {
+                  className: l,
+                  src: a.GetAssets().GetSmallCapsuleURL(),
+                }),
+              ),
+            ),
+          ),
+          d.createElement(
             "div",
-            { className: yi.Actions },
+            { className: yi.StoreSaleBroadcastWidgetRight },
             d.createElement(
               "a",
               { href: m, target: Tr.TS.IN_CLIENT ? void 0 : "_blank" },
@@ -12642,37 +12658,13 @@
                 { type: "app", id: t },
                 d.createElement(
                   "div",
-                  { className: o },
-                  d.createElement("img", {
-                    className: l,
-                    src: a.GetAssets().GetSmallCapsuleURL(),
-                  }),
-                ),
-              ),
-            ),
-          ),
-          d.createElement(
-            "div",
-            { className: yi.StoreSaleBroadcastWidgetRight },
-            d.createElement(
-              "div",
-              { className: yi.Actions },
-              d.createElement(
-                "a",
-                { href: m, target: Tr.TS.IN_CLIENT ? void 0 : "_blank" },
-                d.createElement(
-                  fi.j,
-                  { type: "app", id: t },
-                  d.createElement(
-                    "div",
-                    {
-                      className: (0, Hr.A)(
-                        yi.StoreSaleWidgetTitle,
-                        "StoreSaleWidgetTitle",
-                      ),
-                    },
-                    a.GetName(),
-                  ),
+                  {
+                    className: (0, Hr.A)(
+                      yi.StoreSaleWidgetTitle,
+                      "StoreSaleWidgetTitle",
+                    ),
+                  },
+                  a.GetName(),
                 ),
               ),
             ),
@@ -12936,7 +12928,7 @@
           {
             appid: 730,
             url: "https://steam.tv/csgo",
-            broadcasterAccountID: 1532096361,
+            broadcasterAccountID: 911609735,
           },
         ],
       };

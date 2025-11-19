@@ -1529,7 +1529,7 @@
       function z(e) {
         const { asset_mtime: t, assets_list: n } = e,
           a = new Map(n),
-          o = (0, d.FD)(),
+          o = [...(0, d.FD)()].reverse(),
           m = u.useMemo(() => r.WD(o.filter(c.pN), c.K7), [o]),
           p = u.useMemo(
             () =>
@@ -1622,7 +1622,7 @@
             u.createElement(
               "div",
               { className: I.ExtraAssetsGrid },
-              o.map((e) =>
+              [...o].map((e) =>
                 u.createElement($, {
                   key: (0, c.q3)(e),
                   extraAsset: e,
@@ -1721,15 +1721,15 @@
             primaryLanguage: r,
             mapAssetsList: s,
           } = e,
-          d = u.useRef(void 0),
-          m = (0, o.BZ)(d),
-          [p, _, g] = (0, l.uD)(),
-          E = (0, i.Un)(),
-          C = (0, c.q3)(t);
-        let f;
+          m = u.useRef(void 0),
+          p = (0, o.BZ)(m),
+          [_, g, E] = (0, l.uD)(),
+          C = (0, i.Un)(),
+          f = (0, c.q3)(t);
+        let S;
         if ((0, c.i$)(t)) {
           const e = (0, c.IP)(t, !1);
-          f = e ? [e] : [];
+          S = e ? [e] : [];
         } else {
           const e = 29 == r ? 6 : 0,
             n = (0, c.wN)(t).sort((t, n) =>
@@ -1743,93 +1743,95 @@
                 return n - a;
               })(r, e, t, n),
             );
-          f = Array.from({ length: Math.min(3, n.length) }).map((e, a) =>
+          S = Array.from({ length: Math.min(3, n.length) }).map((e, a) =>
             (0, c.IP)(t, 0 == a, n[a]),
           );
         }
-        const S = () => {
-            window.open((0, i.cn)(f[0]?.url, E));
+        const k = () => {
+            window.open((0, i.cn)(S[0]?.url, C));
           },
-          { elLocalizedImageGroupDialog: k, elLocalizedImageGroupControl: w } =
+          w = (0, d.TQ)(),
+          { elLocalizedImageGroupDialog: y, elLocalizedImageGroupControl: T } =
             M(t, null, null),
-          y = (e) => {
+          N = (e) => {
             const t = e.currentTarget;
             t.paused ? t.play() : t.pause();
           },
-          T = s
+          x = s
             ? Array.from(s).reduce(
-                (e, [t, n]) => (n.includes(C) ? [...e, t] : e),
+                (e, [t, n]) => (n.includes(f) ? [...e, t] : e),
                 [],
               )
             : [],
-          N = new Intl.ListFormat(D.pf.GetPreferredLocales(), {
+          L = new Intl.ListFormat(D.pf.GetPreferredLocales(), {
             style: "long",
             type: "conjunction",
           }),
-          x = T.map((e) => (0, D.we)("#Language_" + e)),
-          L =
-            T.length <= 3
-              ? N.format(x)
-              : N.format([
-                  ...x.slice(0, 2),
+          R = x.map((e) => (0, D.we)("#Language_" + e)),
+          B =
+            x.length <= 3
+              ? L.format(R)
+              : L.format([
+                  ...R.slice(0, 2),
                   (0, D.we)(
                     "#StoreAdmin_GameDescription_AssetsInUseOthers",
-                    T.length - 3 + 1,
+                    x.length - 3 + 1,
                   ),
                 ]);
         return u.createElement(
           u.Fragment,
           null,
-          k,
+          y,
           u.createElement(
             "div",
             {
-              ref: d,
+              ref: m,
               className: (0, v.A)(
                 I.ExtraAssetStack,
                 I.ExtraAssetControlsContainer,
-                m && I.Hovered,
+                p && I.Hovered,
               ),
-              title: C,
+              title: f,
             },
-            p && u.createElement(j, { extraAsset: t, hideModal: g }),
+            _ && u.createElement(j, { extraAsset: t, hideModal: E }),
             a &&
               u.createElement(
                 "div",
                 { className: I.ExtraAssetControls, title: "" },
-                w,
+                T,
                 u.createElement(
                   b.ff,
                   {
-                    onClick: S,
+                    onClick: k,
                     tooltip: (0, D.we)(
                       "#StoreAdmin_GameDescription_OpenInNewWindow",
                     ),
                   },
                   u.createElement(h.glU, null),
                 ),
-                u.createElement(
-                  b.ff,
-                  {
-                    onClick: () => (0, P.OG)(C),
-                    tooltip: (0, D.we)(
-                      "#StoreAdmin_GameDescription_CopyNameToClipboard",
-                    ),
-                  },
-                  u.createElement(h.QRo, null),
-                ),
-                0 == T.length &&
+                !w &&
                   u.createElement(
                     b.ff,
                     {
-                      onClick: _,
+                      onClick: () => (0, P.OG)(f),
+                      tooltip: (0, D.we)(
+                        "#StoreAdmin_GameDescription_CopyNameToClipboard",
+                      ),
+                    },
+                    u.createElement(h.QRo, null),
+                  ),
+                0 == x.length &&
+                  u.createElement(
+                    b.ff,
+                    {
+                      onClick: g,
                       tooltip: (0, D.we)(
                         "#StoreAdmin_GameDescription_DeleteAsset",
                       ),
                     },
                     u.createElement(A.X, null),
                   ),
-                T.length > 0 &&
+                x.length > 0 &&
                   u.createElement(
                     b.ff,
                     {
@@ -1839,37 +1841,37 @@
                         null,
                         (0, D.we)(
                           "#StoreAdmin_GameDescription_AssetsInUse1",
-                          L,
+                          B,
                         ),
                         u.createElement("br", null),
                         u.createElement("br", null),
                         (0, D.we)("#StoreAdmin_GameDescription_AssetsInUse2"),
                       ),
                     },
-                    T.length,
+                    x.length,
                   ),
               ),
             u.createElement(
               "div",
               { className: I.StackedImageCtn },
-              f.map((e, t) =>
+              S.map((e, t) =>
                 1 == e.usage
                   ? u.createElement("video", {
                       key: e.url + t,
                       className: (0, v.A)(I.StackedImage, I[`Image-${t}`]),
-                      src: e.url + "?t=" + E,
-                      onDoubleClick: a ? S : void 0,
+                      src: e.url + "?t=" + C,
+                      onDoubleClick: a ? k : void 0,
                       muted: !0,
                       loop: !0,
                       playsInline: !0,
                       autoPlay: !0,
-                      onClick: y,
+                      onClick: N,
                     })
                   : u.createElement("img", {
                       key: e.url + t,
                       className: (0, v.A)(I.StackedImage, I[`Image-${t}`]),
-                      src: e.url + "?t=" + E,
-                      onDoubleClick: a ? S : void 0,
+                      src: e.url + "?t=" + C,
+                      onDoubleClick: a ? k : void 0,
                     }),
               ),
             ),
@@ -4037,7 +4039,7 @@
         const { attrName: t, fnRender: n, value: a, setValues: r } = e;
         return n(
           a,
-          f.useCallback((e) => r((n) => ({ ...n, [t]: e })), [t]),
+          f.useCallback((e) => r((n) => ({ ...n, [t]: e })), [t, r]),
         );
       });
       var de = n(30175);
@@ -5750,7 +5752,7 @@
             }),
             [a, s, u, n, c],
           );
-        return a ? l.createElement(U.Provider, { value: m }, t) : null;
+        return a ? l.createElement(U, { value: m }, t) : null;
       }
       function I() {
         return l.useContext(U).rgExtraAssetsData.rgExtraAssets;

@@ -2660,7 +2660,7 @@
                 (0, k.we)("#EventEditor_ArtworkType_" + t),
                 `${l.width} X ${l.height}`,
               ),
-            [t],
+            [l.height, l.width, t],
           );
         return c.createElement(J, { lang: a, imgURL: r, event: n });
       }
@@ -3622,18 +3622,19 @@
               }),
             ),
           ),
-          c.createElement(
-            C.$n,
-            {
-              onClick: () => {
-                for (let e = 0; e < 31; e++) r(e) && o(e);
+          !!o &&
+            c.createElement(
+              C.$n,
+              {
+                onClick: () => {
+                  for (let e = 0; e < 31; e++) r(e) && o(e);
+                },
               },
-            },
-            (0, w.we)("#Sale_RemoveAll"),
-            c.createElement(f.o, {
-              tooltip: (0, w.we)("#Sale_RemoveAll_Tooltip"),
-            }),
-          ),
+              (0, w.we)("#Sale_RemoveAll"),
+              c.createElement(f.o, {
+                tooltip: (0, w.we)("#Sale_RemoveAll_Tooltip"),
+              }),
+            ),
         );
       }
       function S(e) {
@@ -3643,12 +3644,9 @@
             langOverride: n,
             fnOnLanguagePreviewChange: r,
             fnOnArtworkLangChange: o,
-            fnGetImageHash: s,
-            fnLangHasData: m,
-            realms: u,
-            fnOnRemoveImage: p,
+            fnOnRemoveImage: s,
           } = e,
-          [v, h] = (0, i.q3)(() => {
+          [m, u] = (0, i.q3)(() => {
             const e = d.pU.GetClanImageByImageHash(t, a.imgHash);
             let l = "";
             e &&
@@ -3677,22 +3675,22 @@
               r(t);
             },
           },
-          c.createElement("div", { className: h }, a.locLang),
+          c.createElement("div", { className: u }, a.locLang),
           c.createElement(
             "span",
             { className: E().LanguageOptions },
-            Boolean(v) &&
+            Boolean(m) &&
               c.createElement(
                 "a",
-                { href: v, target: "_blank" },
+                { href: m, target: "_blank" },
                 c.createElement(
                   I.he,
                   { toolTipContent: (0, w.we)("#selectimage_viewimage_ttip") },
                   _.YNO(),
                 ),
               ),
-            o && c.createElement(k, { ...e }),
-            p && c.createElement(b, { fnOnRemoveImage: p, langData: a }),
+            !!o && c.createElement(k, { ...e }),
+            !!s && c.createElement(b, { fnOnRemoveImage: s, langData: a }),
           ),
         );
       }

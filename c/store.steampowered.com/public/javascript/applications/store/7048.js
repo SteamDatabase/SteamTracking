@@ -12342,6 +12342,7 @@
                   _.review_count.toLocaleString(),
                 ),
               },
+              "(",
               __webpack_require__
                 ? "(" + _.review_count.toLocaleString() + ")"
                 : _
@@ -12354,6 +12355,7 @@
                       "#GameHover_UserReviewCount",
                       _.review_count.toLocaleString(),
                     ),
+              ")",
             ),
             !__webpack_require__ &&
               _.createElement(

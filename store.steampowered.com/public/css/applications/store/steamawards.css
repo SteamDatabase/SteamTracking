@@ -8,7 +8,7 @@ body.SteamAwardsNominations {
   background-color: #173471;
 }
 ._20IkdxpCDwL8VLda92dq2Y {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2%;
 }
@@ -52,7 +52,7 @@ body.SteamAwardsNominations {
   justify-content: center;
   position: relative;
   z-index: 100;
-  max-width: 970px;
+  max-width: 1200px;
   line-height: 20px;
 }
 @media screen and (max-width: 910px) {
@@ -77,7 +77,7 @@ body.SteamAwardsNominations {
   }
 }
 ._1TnKc86XFqFWZThfWLgaRw ._2Mwx1ICH6jNzJoeIPhhFDv._27LlNtlWucjFwSNWY-Sbyb {
-  min-height: 300px;
+  min-height: 350px;
 }
 ._1TnKc86XFqFWZThfWLgaRw ._3s_6VHcgaXEyyUZ16zweVp {
   font-family: "Motiva Sans", Sans-serif;
@@ -161,7 +161,7 @@ body.SteamAwardsNominations {
 }
 ._3i1u-y7pjl-qc98gufdZUu {
   margin-top: 20px;
-  padding: 25px;
+  padding: 25px 40px;
   background: #191639;
   box-shadow: 0 0 16px #000;
   color: #fff;
@@ -743,6 +743,7 @@ html.responsive.tablet .carousel__slider-tray-wrapper {
 }
 ._1T9FWlr19WP72HpE5wYup8 ._3we3-2_E8Qgoj9vpaFu9JG {
   margin-left: 20px;
+  max-width: 40%;
 }
 ._1T9FWlr19WP72HpE5wYup8 .oaA8CcFGe_Kz-3D-qR28Z {
   font-weight: 600;

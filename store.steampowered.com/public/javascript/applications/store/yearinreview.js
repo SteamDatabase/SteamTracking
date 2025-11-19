@@ -6146,7 +6146,7 @@
         mj: () => l,
         rp: () => m,
       });
-      var r = a(77516),
+      var r = a(89128),
         n = a(90626);
       const i = "0px 0px 100% 0px",
         s = "tab",
@@ -8176,7 +8176,7 @@
           ),
         );
       }
-      var O = a(89104),
+      var O = a(40463),
         W = a(20194),
         j = a(41735),
         q = a.n(j);
@@ -9021,9 +9021,9 @@
       }
       a.d(t, { O: () => r });
     },
-    89104: (e, t, a) => {
+    40463: (e, t, a) => {
       "use strict";
-      a.d(t, { us: () => ta, fh: () => aa });
+      a.d(t, { us: () => ia, fh: () => sa });
       var r = a(93980),
         n = a(42780),
         i = a(8527),
@@ -9111,7 +9111,7 @@
             super.AppendText(a, t);
         }
       }
-      var g = a(77516),
+      var g = a(89128),
         y = a(34629),
         h = a(41735),
         f = a.n(h),
@@ -10728,12 +10728,19 @@
               ),
             );
       }
-      var Gt = a(30470),
-        Ft = a(33280),
-        kt = a.n(Ft),
-        Ut = a(56330),
-        Pt = a(69484);
-      function Dt(e) {
+      var Gt = a(20194);
+      function Ft(e, t) {
+        return ["usePartnerEventUserPoll", e.ConvertTo64BitString(), t];
+      }
+      function kt(e, t) {
+        return `${"store" == (0, b.yK)() ? b.TS.STORE_BASE_URL : b.TS.COMMUNITY_BASE_URL}partnerevents/${e.ConvertTo64BitString()}/userpoll/${t}/ajaxloaddata/`;
+      }
+      var Ut = a(56330),
+        Pt = a(30470),
+        Dt = a(69484),
+        zt = a(33280),
+        xt = a.n(zt);
+      function Lt(e) {
         const t = e.context.event,
           a = e.context.showErrorInfo,
           r = (0, l.j$)(e.args, "poll_id"),
@@ -10752,49 +10759,73 @@
                 (0, v.we)("#UserPolls_Editor_FailToFindModel", n),
               )
             : null;
-        const o = (0, K.sf)(Gt.TS.LANGUAGE);
+        const o = (0, K.sf)(Pt.TS.LANGUAGE);
+        return s.createElement(Yt, {
+          userPollDef: i,
+          lang: o,
+          clanAccountID: t.clanSteamID.GetAccountID(),
+          eventModel: t,
+        });
+      }
+      function Yt(e) {
+        const { eventModel: t, userPollDef: a, lang: r } = e,
+          n =
+            ((i = t.clanSteamID),
+            (l = t.GID || "0"),
+            (0, Gt.I)({
+              queryKey: Ft(i, l),
+              queryFn: async () => {
+                const e = new FormData();
+                e.set("sessionid", (0, b.KC)());
+                const t = await fetch(kt(i, l), {
+                  method: "POST",
+                  body: e,
+                  credentials: "include",
+                });
+                return await t.json();
+              },
+              placeholderData: { results: [], bLoading: !0 },
+            }).data ?? { results: [], bLoading: !0 });
+        var i, l;
         return s.createElement(
-          zt,
-          {
-            userPollDef: i,
-            lang: o,
-            clanAccountID: t.clanSteamID.GetAccountID(),
-          },
-          i.options?.map((e) =>
-            s.createElement(xt, {
+          Ot,
+          { ...e },
+          a.options?.map((e) =>
+            s.createElement(Wt, {
               key: "polloption" + e.option_id,
-              lang: o,
+              lang: r,
               pollOptionDef: e,
+              bDisableSelection: n.bLoading,
             }),
           ),
         );
       }
-      function zt(e) {
+      function Ot(e) {
         const { userPollDef: t, lang: a, clanAccountID: r, children: n } = e,
           [i, l] = (0, _t.q3)(() => [
             v.NT.GetWithFallback(t.localized_poll_description, a),
             t.user_poll_background,
           ]);
-        let o = null;
+        let o;
         return (
           Boolean(l) &&
             (o = {
-              backgroundImage: `url('${(0, Pt.F)(r, l)}')`,
+              backgroundImage: `url('${(0, Dt.F)(r, l)}')`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }),
           s.createElement(
             "div",
-            { className: kt().PollBackground, style: o },
+            { className: xt().PollBackground, style: o },
             s.createElement(
               "div",
-              { className: kt().PollContainer },
-              s.createElement("div", { className: kt().PollQuestion }, i),
-              s.createElement("div", { className: kt().PollOptions }, n),
+              { className: xt().PollContainer },
+              s.createElement("div", { className: xt().PollQuestion }, i),
+              s.createElement("div", { className: xt().PollOptions }, n),
               s.createElement(
                 "div",
-                { className: kt().PollStatus },
+                { className: xt().PollStatus },
                 s.createElement(
                   "div",
                   null,
@@ -10810,23 +10841,29 @@
           )
         );
       }
-      function xt(e) {
-        const { pollOptionDef: t, onClick: a, lang: r } = e,
-          [n] = (0, _t.q3)(() => [v.NT.GetWithFallback(t.localized_option, r)]);
+      function Wt(e) {
+        const {
+            pollOptionDef: t,
+            onClick: a,
+            lang: r,
+            bDisableSelection: n,
+          } = e,
+          [i] = (0, _t.q3)(() => [v.NT.GetWithFallback(t.localized_option, r)]);
         return s.createElement(
           "div",
           {
-            className: (0, U.A)({ [kt().PollOption]: !0, [kt().Selected]: !1 }),
+            className: (0, U.A)({ [xt().PollOption]: !0, [xt().Selected]: !1 }),
+            onClick: n ? void 0 : a,
           },
-          s.createElement("div", { className: kt().PollVoteIcon }),
-          s.createElement("span", null, n),
+          s.createElement("div", { className: xt().PollVoteIcon }),
+          s.createElement("span", null, i),
         );
       }
-      let Lt = null;
-      function Yt() {
+      let jt = null;
+      function qt() {
         return (
-          null == Lt &&
-            (Lt = new Map([
+          null == jt &&
+            (jt = new Map([
               ["url", { Constructor: je, autocloses: !1 }],
               ["dynamiclink", { Constructor: qe, autocloses: !1 }],
               [
@@ -10869,37 +10906,37 @@
                 "*",
                 { Constructor: l.ck, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: Ot, autocloses: !1 }],
+              ["img", { Constructor: Ht, autocloses: !1 }],
               ["previewyoutube", { Constructor: T.gH, autocloses: !1 }],
               ["looping_media", { Constructor: l.$A, autocloses: !1 }],
               ["video", { Constructor: l.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: T.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: jt, autocloses: !1 }],
-              ["vod", { Constructor: qt, autocloses: !1 }],
+              ["trailer", { Constructor: Kt, autocloses: !1 }],
+              ["vod", { Constructor: Qt, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: Ht,
+                  Constructor: Xt,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: Kt, autocloses: !1 }],
-              ["claimitem", { Constructor: Qt, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: Xt, autocloses: !1 }],
-              ["actiondialog", { Constructor: Jt, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: ea, autocloses: !0 }],
-              ["docimg", { Constructor: Wt, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: Jt, autocloses: !1 }],
+              ["claimitem", { Constructor: $t, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: ea, autocloses: !1 }],
+              ["actiondialog", { Constructor: aa, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: na, autocloses: !0 }],
+              ["docimg", { Constructor: Vt, autocloses: !1 }],
               ["carousel", { Constructor: Et, autocloses: !1 }],
               ["meetsteamsessiongroup", { Constructor: N.ac, autocloses: !1 }],
               ["meetsteamscheduleview", { Constructor: N.Xk, autocloses: !1 }],
-              ["userpolls", { Constructor: Dt, autocloses: !1 }],
+              ["userpolls", { Constructor: Lt, autocloses: !1 }],
             ])),
-          Lt
+          jt
         );
       }
-      function Ot(e) {
+      function Ht(e) {
         const { showErrorInfo: t, event: a } = e.context;
         let r = (0, l.j$)(e.args, "src") || e.children?.toString();
         r || (r = (0, l.j$)(e.args));
@@ -10933,7 +10970,7 @@
           s.createElement($.c, { rgSources: n }),
         );
       }
-      function Wt(e) {
+      function Vt(e) {
         const t = (0, l.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const a = e && e.children && e.children.toString(),
@@ -10949,13 +10986,13 @@
           s.createElement($.c, { rgSources: r, alt: a })
         );
       }
-      function jt(e) {
-        const t = Vt(
+      function Kt(e) {
+        const t = Zt(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          a = Vt(e.args, "trailerid", 0);
+          a = Zt(e.args, "trailerid", 0);
         let r =
           (0, l.j$)(e.args, "style")?.toLocaleLowerCase() ?? He.k_TrailerAsFull;
         r = Object.values(He).includes(r) ? r : He.k_TrailerAsFull;
@@ -10971,14 +11008,14 @@
           children: e.children,
         });
       }
-      function qt(e) {
-        const t = Vt(e.args, "appid", 0);
+      function Qt(e) {
+        const t = Zt(e.args, "appid", 0);
         return s.createElement(lt, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Ht(e) {
+      function Xt(e) {
         const t = (0, l.j$)(e.args, "name"),
           a = (0, l.j$)(e.args, "title"),
           r = (0, l.j$)(e.args, "company"),
@@ -10999,11 +11036,11 @@
               bio: e.children,
             });
       }
-      function Vt(e, t, a) {
+      function Zt(e, t, a) {
         const r = (0, l.j$)(e, t);
         return void 0 === r || null == r ? a : Number.parseInt(r);
       }
-      function Kt(e) {
+      function Jt(e) {
         const t = (0, l.j$)(e.args, "name"),
           a =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -11017,7 +11054,7 @@
           ? e.children
           : null;
       }
-      function Qt(e) {
+      function $t(e) {
         const t = e.context.showErrorInfo;
         if (!b.iA.logged_in)
           return s.createElement(
@@ -11037,7 +11074,7 @@
           }
         return s.createElement(It.m, { bPreviewMode: t, rewardType: r });
       }
-      function Xt(e) {
+      function ea(e) {
         const t = Number.parseInt((0, l.j$)(e.args, "id")) || 0,
           a =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -11055,7 +11092,7 @@
           (!o && !a) || (o && a) ? e.children : null
         );
       }
-      function Zt(e) {
+      function ta(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, I.h)(e),
             a = (0, I.Q)();
@@ -11081,12 +11118,12 @@
         }
         return { bInitialState: !0 };
       }
-      function Jt(e) {
+      function aa(e) {
         const t = (0, l.j$)(e.args, "action"),
           a = (0, l.j$)(e.args, "initialToken"),
           r = (0, l.j$)(e.args, "successToken"),
           n = (0, l.j$)(e.args, "failToken"),
-          i = Zt(t);
+          i = ta(t);
         if (!(t && a && r && n)) {
           return e.context.showErrorInfo
             ? s.createElement(
@@ -11104,7 +11141,7 @@
                 onClick: (i) => {
                   (0, vt.pg)(
                     s.createElement(
-                      $t,
+                      ra,
                       {
                         strAction: t,
                         strInitialToken: a,
@@ -11127,7 +11164,7 @@
               (0, v.we)("#Login_SignIn"),
             );
       }
-      function $t(e) {
+      function ra(e) {
         const {
             strAction: t,
             children: a,
@@ -11136,7 +11173,7 @@
             strSuccessToken: i,
             strFailToken: l,
           } = e,
-          o = Zt(t),
+          o = ta(t),
           [m, c] = s.useState(Boolean(o.fnAction));
         s.useEffect(() => {
           o.fnAction && (c(!0), o.fnAction().finally(() => c(!1)));
@@ -11175,7 +11212,7 @@
           ),
         );
       }
-      function ea(e) {
+      function na(e) {
         const { showErrorInfo: t, event: a } = e.context,
           r = a.clanSteamID.GetAccountID(),
           [n] = s.useState(
@@ -11215,19 +11252,19 @@
             ? s.createElement("div", null, (0, v.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      class ta {
+      class ia {
         static sm_BBCodeDictionary = new Map([
           ...Array.from(l.W4.entries()),
-          ...Array.from(Yt().entries()),
+          ...Array.from(qt().entries()),
         ]);
         static AddDictionary(e) {
-          ta.sm_BBCodeDictionary = new Map([
-            ...Array.from(ta.sm_BBCodeDictionary.entries()),
+          ia.sm_BBCodeDictionary = new Map([
+            ...Array.from(ia.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
       }
-      function aa(e) {
+      function sa(e) {
         const {
             text: t,
             partnerEventStore: a,
@@ -11251,7 +11288,7 @@
           );
         return s
           .useMemo(
-            () => new r.B(ta.sm_BBCodeDictionary, u, l || i.TS.LANGUAGE),
+            () => new r.B(ia.sm_BBCodeDictionary, u, l || i.TS.LANGUAGE),
             [u, l],
           )
           .ParseBBCode(t, {

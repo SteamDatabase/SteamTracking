@@ -99,7 +99,7 @@
 	"Menu_Section_Hardware": "Hardware",
 	"Menu_Section_Hardware_VRHardware": "VR hardware",
 	"Menu_Section_Hardware_SteamDeckDock": "Dokovací stanice",
-	"Menu_Section_Hardware_Family": "New Steam Hardware",
+	"Menu_Section_Hardware_Family": "Nový hardware služby Steam",
 	"Menu_Section_WaysToPlay": "Způsoby hraní",
 	"Menu_Section_SpecialSections": "Různé sekce",
 	"Menu_Section_SpecialSections_NextFest": "Festival Steam Next",

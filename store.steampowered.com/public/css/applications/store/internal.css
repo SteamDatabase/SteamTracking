@@ -4538,6 +4538,15 @@ a:link {
 :where(._2UkNTTzKtJJdhYEnuwtVRd) {
   outline: 1px solid var(--outline-color);
 }
+:where(.Rrxq_LH_m0cYEls4MuNtG) {
+  align-self: var(--align-self);
+}
+:where(._1i4Rlxj2r-2r2Co6jSOYRL) {
+  justify-self: var(--justify-self);
+}
+:where(._1xbvB3MqxnugiXxR02dPOx) {
+  text-align: var(--text-align);
+}
 ._3nHL7awgK1Qei1XivGvHMK {
   box-sizing: border-box;
   display: flex;

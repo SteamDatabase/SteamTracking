@@ -99,7 +99,7 @@
 	"Menu_Section_Hardware": "Υλισμικό",
 	"Menu_Section_Hardware_VRHardware": "Υλισμικό VR",
 	"Menu_Section_Hardware_SteamDeckDock": "Βάση",
-	"Menu_Section_Hardware_Family": "New Steam Hardware",
+	"Menu_Section_Hardware_Family": "Νέο υλισμικό Steam",
 	"Menu_Section_WaysToPlay": "Τρόποι να παίξετε",
 	"Menu_Section_SpecialSections": "Ειδικές ενότητες",
 	"Menu_Section_SpecialSections_NextFest": "Γιορτή Επερχόμενων Steam",

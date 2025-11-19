@@ -172,6 +172,7 @@ ${COMMUNITY_BASE_URL}app/${appid}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}app/${unAppID}
 ${COMMUNITY_BASE_URL}app/${}
 ${COMMUNITY_BASE_URL}app/${}/discussions/
+${COMMUNITY_BASE_URL}auction/ajaxgetgoovalueforitemtype/?${}
 ${COMMUNITY_BASE_URL}broadcast/broadcastdebuginfo
 ${COMMUNITY_BASE_URL}broadcast/chatonly/${}
 ${COMMUNITY_BASE_URL}broadcast/report
@@ -256,9 +257,9 @@ ${COMMUNITY_BASE_URL}invites/ajaxgetall
 ${COMMUNITY_BASE_URL}linkfilter/?u=${}
 ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/appfilters/${}
-${COMMUNITY_BASE_URL}market/listings/${appid}/${}
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
 ${COMMUNITY_BASE_URL}market/priceoverview/?${}
+${COMMUNITY_BASE_URL}market/search?appid=${_ ? _ : 0}
 ${COMMUNITY_BASE_URL}market/steamitemfiltersicon/${}
 ${COMMUNITY_BASE_URL}market/suggestedapps
 ${COMMUNITY_BASE_URL}mediaconvert/ajaxgroupconvert/${}
@@ -369,6 +370,7 @@ ${COMMUNITY_BASE_URL}tradeoffer/${}/
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&for_items[]=${}_${}_${}
 ${COMMUNITY_BASE_URL}tradeoffer/new/?partner=${}&token=${}
+${COMMUNITY_BASE_URL}tradingcards/boostercreator/
 ${COMMUNITY_BASE_URL}vtt/video/${}
 ${COMMUNITY_CDN_ASSET_URL}${imgHeadshot}
 ${COMMUNITY_CDN_ASSET_URL}${screenshot}
@@ -1557,9 +1559,10 @@ ${STORE_BASE_URL}steamawards/
 ${STORE_BASE_URL}steamawards/ajaxgetsteamawardeventdetails
 ${STORE_BASE_URL}steamawards/ajaxgetuservotes
 ${STORE_BASE_URL}steamawards/ajaxvoteforgame
+${STORE_BASE_URL}steamawards/archive
 ${STORE_BASE_URL}steamawards/nominations
 ${STORE_BASE_URL}steamawards/nominations/
-${STORE_BASE_URL}steamawards/nominations/${steamid}?k=${code}
+${STORE_BASE_URL}steamawards/nominations/${}/${steamid}?k=${code}
 ${STORE_BASE_URL}steamdeck?utm_source=verifiedpage
 ${STORE_BASE_URL}sub/${id}
 ${STORE_BASE_URL}sub/${packageid}
@@ -2291,6 +2294,7 @@ https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938
 https://help.steampowered.com/en/wizard/HelpWithPublishingEvent
 https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409
+https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436
 https://help.steampowered.com/faqs/view/17DA-EC4C-7D5B-8266
 https://help.steampowered.com/faqs/view/1E45-57ED-9153-7EF4
 https://help.steampowered.com/faqs/view/2EA8-4D75-DA21-31EB

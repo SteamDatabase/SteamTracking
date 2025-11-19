@@ -1663,7 +1663,7 @@
       function _(_) {
         const { asset_mtime: _, assets_list: __webpack_require__ } = _,
           _ = new Map(__webpack_require__),
-          _ = (0, _._)(),
+          _ = [...(0, _._)()].reverse(),
           _ = _.useMemo(() => _._(_.filter(_._), _._), [_]),
           _ = _.useMemo(
             () =>
@@ -1774,7 +1774,7 @@
               {
                 className: _.ExtraAssetsGrid,
               },
-              _.map((_) =>
+              [..._].map((_) =>
                 _.createElement(_, {
                   key: (0, _._)(_),
                   extraAsset: _,
@@ -1904,6 +1904,7 @@
         const _ = () => {
             window.open((0, _._)(_[0]?.url, _));
           },
+          _ = (0, _._)(),
           { elLocalizedImageGroupDialog: _, elLocalizedImageGroupControl: _ } =
             _(_, null, null),
           _ = (_) => {
@@ -1970,16 +1971,17 @@
                   },
                   _.createElement(_.glU, null),
                 ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => (0, _._)(_),
-                    tooltip: (0, _._)(
-                      "#StoreAdmin_GameDescription_CopyNameToClipboard",
-                    ),
-                  },
-                  _.createElement(_.QRo, null),
-                ),
+                !_ &&
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: () => (0, _._)(_),
+                      tooltip: (0, _._)(
+                        "#StoreAdmin_GameDescription_CopyNameToClipboard",
+                      ),
+                    },
+                    _.createElement(_.QRo, null),
+                  ),
                 0 == _.length &&
                   _.createElement(
                     _._,
@@ -4594,7 +4596,7 @@
                 ..._,
                 [_]: _,
               })),
-            [_],
+            [_, _],
           ),
         );
       });
@@ -6546,7 +6548,7 @@
           );
         return _
           ? _.createElement(
-              _.Provider,
+              _,
               {
                 value: _,
               },

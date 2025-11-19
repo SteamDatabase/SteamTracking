@@ -2321,7 +2321,10 @@
         return (
           (0, _._)(
             _,
-            _.useCallback((_) => _(!!_.nodes.table && _._(_.state)), []),
+            _.useCallback(
+              (_) => _(!!_.nodes.table && _._(_.state)),
+              [_.nodes.table],
+            ),
           ),
           _.createElement(
             _._,

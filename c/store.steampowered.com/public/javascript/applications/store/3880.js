@@ -99,7 +99,7 @@
 	"Menu_Section_Hardware": "하드웨어",
 	"Menu_Section_Hardware_VRHardware": "VR 하드웨어",
 	"Menu_Section_Hardware_SteamDeckDock": "도킹 스테이션",
-	"Menu_Section_Hardware_Family": "New Steam Hardware",
+	"Menu_Section_Hardware_Family": "새로운 Steam 하드웨어",
 	"Menu_Section_WaysToPlay": "게임 플레이 모드",
 	"Menu_Section_SpecialSections": "특별 섹션",
 	"Menu_Section_SpecialSections_NextFest": "Steam Next Fest",

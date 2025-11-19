@@ -2751,6 +2751,13 @@
                         17,
                         (0, _._)("#Cart_Error_AdultContentRestricted_FootNote"),
                       ),
+                    _.errors?.commercial_license_restricted &&
+                      _(
+                        18,
+                        (0, _._)(
+                          "#Cart_Error_CommercialLicenseRestricted_FootNote",
+                        ),
+                      ),
                     _.errors?.missing_must_own_appids &&
                       _(
                         16,
@@ -2908,6 +2915,13 @@
                       purchase_state: 17,
                       notice_text: (0, _._)(
                         "#Cart_Error_AdultContentRestricted_LineItem",
+                      ),
+                    });
+                  _.errors?.commercial_license_restricted &&
+                    _.push({
+                      purchase_state: 18,
+                      notice_text: (0, _._)(
+                        "#Cart_Error_CommercialLicenseRestricted_LineItem",
                       ),
                     });
                   _.errors?.coupon_exclusive_promo &&

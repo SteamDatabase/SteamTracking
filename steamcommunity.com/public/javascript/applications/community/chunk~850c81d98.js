@@ -705,6 +705,11 @@
                     br: s.qM.readString,
                     bw: s.gp.writeString,
                   },
+                  hide_from_description: {
+                    n: 9,
+                    br: s.qM.readBool,
+                    bw: s.gp.writeBool,
+                  },
                 },
               }),
             w.sm_m

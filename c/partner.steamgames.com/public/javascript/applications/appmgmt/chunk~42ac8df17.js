@@ -3481,6 +3481,7 @@
         null,
       );
       var _ = __webpack_require__("chunkid");
+      const _ = 99999;
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const _ = 593110,
         _ = 39049601,
@@ -3502,13 +3503,15 @@
           : void 0;
       }
       function _(_) {
-        return (
-          "items" == _ ||
-          "trailercarousel" == _ ||
-          "crosspromotesalepage" == _ ||
-          "creator_list" == _ ||
-          "calendar" == _
-        );
+        switch (_) {
+          case "items":
+          case "trailercarousel":
+          case "crosspromotesalepage":
+          case "creator_list":
+          case "calendar":
+            return !0;
+        }
+        return !1;
       }
       !(function (_) {
         (_[(_.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
@@ -4050,7 +4053,7 @@
               _ = _?.GetScreenshots(_.BHasAgeSafeScreenshots());
             return _ && _.length > 1 ? ((_ %= _.length), _[_]) : "";
           }
-          if (this.clanSteamID) {
+          if (this.clanSteamID && 36 != this.GetEventType()) {
             const _ = _._.GetClanInfoByClanAccountID(
               this.clanSteamID.GetAccountID(),
             );
@@ -4413,7 +4416,7 @@
             : this.GetSaleSections();
         }
         GetSaleSectionByID(_) {
-          if (_ > 99999) {
+          if (_ > _) {
             return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
               (_) => _.unique_id == _,
             );
@@ -4725,7 +4728,16 @@
                     "#AppTypeLabel_demo",
                     "#AppTypeLabel_music",
                   ],
+                  initially_selected_values: ["#AppTypeLabel_game"],
                 },
+              ],
+              initially_expanded_facets: [
+                "#AppTypeLabelTitle",
+                "#App_Taxonomy_Survey_QSuperGenreTitle",
+              ],
+              prioritized_facets: [
+                "#AppTypeLabelTitle",
+                "#App_Taxonomy_Survey_QSuperGenreTitle",
               ],
             },
           };
@@ -7832,21 +7844,23 @@
               headers: {
                 "Content-Type": "multipart/form-data",
               },
-            };
+            },
+            _ = !0;
           try {
             (_ = await _().post(_, _, _)), this.m_filesCompleted.push(_);
           } catch (_) {
-            (this.m_lastError = {
-              file: _,
-              status: _.response ? _.response.status : 500,
-              message: (0, _._)(_).strErrorMsg,
-            }),
+            (_ = !1),
+              (this.m_lastError = {
+                file: _,
+                status: _.response ? _.response.status : 500,
+                message: (0, _._)(_).strErrorMsg,
+              }),
               (_ = _.response);
           }
           return (
             _ || (await this.handleUploadRefresh(_)),
             {
-              bSuccess: !0,
+              bSuccess: _,
               result: _.data,
             }
           );
@@ -9723,23 +9737,26 @@
         constructor() {
           (0, _._)(this);
         }
-        m_mapListToTitle = new Map();
-        m_mapListToSubtitle = new Map();
+        m_mapListInfo = new Map();
         m_bLoadedFromConfig = !1;
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
-            const _ = (0, _._)(
-              "creator_home_list_titles",
-              "application_config",
-            );
+            const _ = (0, _._)("creator_home_list_info", "application_config");
             if (this.ValidateCreatorHomeTitles(_))
               for (const [
                 _,
-                { title: __webpack_require__, description: _ },
+                {
+                  title: __webpack_require__,
+                  description: _,
+                  listtileimage: _,
+                },
               ] of Object.entries(_ ?? {}))
                 __webpack_require__ &&
-                  (this.m_mapListToTitle.set(_, __webpack_require__),
-                  _ && this.m_mapListToSubtitle.set(_, _));
+                  this.m_mapListInfo.set(_, {
+                    title: __webpack_require__ ?? "",
+                    description: _?.length ? _ : void 0,
+                    imageUrl: _?.length ? _ : void 0,
+                  });
             this.m_bLoadedFromConfig = !0;
           }
         }
@@ -9747,14 +9764,20 @@
           return null != _ && "object" == typeof _ && !Array.isArray(_);
         }
         GetListTitle(_) {
-          return this.LazyInit(), _ ? this.m_mapListToTitle.get(_) : void 0;
+          return this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.title : void 0;
         }
         GetListSubtitle(_) {
-          return this.LazyInit(), _ ? this.m_mapListToSubtitle.get(_) : void 0;
+          return (
+            this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.description : void 0
+          );
+        }
+        GetListtileImage(_) {
+          return (
+            this.LazyInit(), _ ? this.m_mapListInfo.get(_)?.imageUrl : void 0
+          );
         }
       }
-      (0, _._)([_._], _.prototype, "m_mapListToTitle", void 0),
-        (0, _._)([_._], _.prototype, "m_mapListToSubtitle", void 0),
+      (0, _._)([_._], _.prototype, "m_mapListInfo", void 0),
         (0, _._)([_._], _.prototype, "LazyInit", null);
       const _ = new _();
       function _(_) {
@@ -9799,7 +9822,7 @@
         });
         return _?.isLoading ? null : _.data;
       }
-      window.g_CreatorHomeListTitleStore = _;
+      window.g_CreatorHomeListInfoStore = _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -13574,25 +13597,26 @@
       const _ = new _();
       window.g_PartnerEventStore = _;
       const _ = new _(!0);
-      function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(() =>
-            _.GetClanEventModel(_),
-          ),
+      function _(_, _, __webpack_require__ = !1) {
+        const [_, _] = (0, _.useState)(() => _.GetClanEventModel(_)),
           _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]);
         return (
           (0, _.useEffect)(() => {
-            !__webpack_require__ &&
+            !_ &&
               _ > 0 &&
               (_.Init(),
               _.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                 _,
                 _,
                 0,
-                !0,
+                __webpack_require__,
               ).then(_));
-          }, [_, _, __webpack_require__, _]),
-          (0, _._)(_.GetPartnerEventChangeCallback(_), _),
-          __webpack_require__
+          }, [_, _, _, _, __webpack_require__]),
+          (0, _._)(
+            __webpack_require__ ? _.GetPartnerEventChangeCallback(_) : void 0,
+            _,
+          ),
+          _
         );
       }
       function _() {
@@ -15587,6 +15611,11 @@
                   },
                   adult_content_restricted: {
                     _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  commercial_license_restricted: {
+                    _: 13,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -19787,6 +19816,7 @@
                   _.review_count.toLocaleString(),
                 ),
               },
+              "(",
               __webpack_require__
                 ? "(" + _.review_count.toLocaleString() + ")"
                 : _
@@ -19799,6 +19829,7 @@
                       "#GameHover_UserReviewCount",
                       _.review_count.toLocaleString(),
                     ),
+              ")",
             ),
             !__webpack_require__ &&
               _.createElement(
@@ -19874,7 +19905,7 @@
               (1 != _?.GetAppType() && 12 != _?.GetAppType()) ||
                 _(_.GetParentAppID() || _);
             }, [_, _]),
-            _)
+            _ && 10 != _?.GetAppType())
           )
             return null;
           return _.createElement(

@@ -389,7 +389,7 @@
     96859: (e, t, a) => {
       "use strict";
       a.d(t, { Sm: () => s, U: () => o, r3: () => m });
-      var n = a(77516),
+      var n = a(89128),
         l = a(17720),
         r = a(44165);
       function o(e, t) {
@@ -955,7 +955,7 @@
             )
           : null;
       }
-      var A = a(77516),
+      var A = a(89128),
         B = a(91382),
         N = a(30756),
         M = a(21529),
@@ -2323,7 +2323,7 @@
       }
       var bt = a(68033),
         vt = a(41550),
-        It = a(89104),
+        It = a(40463),
         ht = a(35685),
         St = a(9709),
         wt = a(64753),
@@ -2379,18 +2379,19 @@
               }),
             ),
           ),
-          l.createElement(
-            le.$n,
-            {
-              onClick: () => {
-                for (let e = 0; e < 31; e++) n(e) && r(e);
+          !!r &&
+            l.createElement(
+              le.$n,
+              {
+                onClick: () => {
+                  for (let e = 0; e < 31; e++) n(e) && r(e);
+                },
               },
-            },
-            (0, p.we)("#Sale_RemoveAll"),
-            l.createElement(Ct.o, {
-              tooltip: (0, p.we)("#Sale_RemoveAll_Tooltip"),
-            }),
-          ),
+              (0, p.we)("#Sale_RemoveAll"),
+              l.createElement(Ct.o, {
+                tooltip: (0, p.we)("#Sale_RemoveAll_Tooltip"),
+              }),
+            ),
         );
       }
       function Gt(e) {
@@ -2400,12 +2401,9 @@
             langOverride: r,
             fnOnLanguagePreviewChange: o,
             fnOnArtworkLangChange: i,
-            fnGetImageHash: s,
-            fnLangHasData: c,
-            realms: m,
-            fnOnRemoveImage: u,
+            fnOnRemoveImage: s,
           } = e,
-          [d, _] = (0, n.q3)(() => {
+          [c, m] = (0, n.q3)(() => {
             const e = ke.pU.GetClanImageByImageHash(t, a.imgHash);
             let n = "";
             e &&
@@ -2434,22 +2432,22 @@
               o(t);
             },
           },
-          l.createElement("div", { className: _ }, a.locLang),
+          l.createElement("div", { className: m }, a.locLang),
           l.createElement(
             "span",
             { className: gt().LanguageOptions },
-            Boolean(d) &&
+            Boolean(c) &&
               l.createElement(
                 "a",
-                { href: d, target: "_blank" },
+                { href: c, target: "_blank" },
                 l.createElement(
                   y.he,
                   { toolTipContent: (0, p.we)("#selectimage_viewimage_ttip") },
                   f.YNO(),
                 ),
               ),
-            i && l.createElement(yt, { ...e }),
-            u && l.createElement(Tt, { fnOnRemoveImage: u, langData: a }),
+            !!i && l.createElement(yt, { ...e }),
+            !!s && l.createElement(Tt, { fnOnRemoveImage: s, langData: a }),
           ),
         );
       }
@@ -2815,7 +2813,7 @@
                 (0, p.we)("#EventEditor_ArtworkType_" + t),
                 `${r.width} X ${r.height}`,
               ),
-            [t],
+            [r.height, r.width, t],
           );
         return l.createElement(Ht, { lang: a, imgURL: o, event: n });
       }
@@ -3735,8 +3733,9 @@
             [b],
           ),
           S = (0, l.useCallback)((e, t) => {
-            const a = Ce.R.GetLocalizedImageGroupForEdit();
-            return a?.localized_images[t];
+            const a = Ce.R.GetLocalizedImageGroupForEdit(),
+              n = a?.localized_images[t];
+            return n ? n.split("/").pop() : n;
           }, []);
         return l.createElement(
           re.o0,
@@ -3750,24 +3749,24 @@
             strDescription: e.strLocalizedDescription,
             bOKDisabled: v > 0,
             onOK: () => {
-              Ce.R.GetAllLocalizedGroupImages().forEach((e, t) => {
-                if (e) {
-                  let a = e.lastIndexOf("/");
-                  const n = e.substring(a + 1);
+              const t = Ce.R.GetLocalizedImageGroupForEdit();
+              for (let e = 0; e < 31; ++e) {
+                const a = t?.localized_images[e];
+                if (a) {
+                  const t = a.split("/").pop() || "";
                   u(
                     s,
                     {
-                      image_hash: Et(n),
+                      image_hash: Et(t),
                       clanAccountID: b,
-                      file_type: (0, $t.yh)(e) ?? 0,
+                      file_type: (0, $t.yh)(t) ?? 0,
                       imageid: 0,
                     },
-                    t,
+                    e,
                   );
-                }
-              }),
-                Ce.R.ClearImageGroup(),
-                e.onOK ? e.onOK() : m?.();
+                } else u(s, null, e);
+              }
+              Ce.R.ClearImageGroup(), e.onOK ? e.onOK() : m?.();
             },
             strOKButtonText:
               v > 0 ? (0, p.we)("#ImagePickerLoc_DismissWarning") : void 0,
@@ -3796,6 +3795,7 @@
                   title: null,
                   appid: a,
                   realms: o,
+                  fnRemoveAllArtwork: () => Ce.R.ClearImageGroup(),
                   fnSetImageURL: h,
                   fnGetImageHashAndExt: S,
                   fnLangHasData: c,
@@ -5301,7 +5301,7 @@
       var n = a(90626),
         l = a(12447),
         r = a(84746),
-        o = a(77516),
+        o = a(89128),
         i = a(17720),
         s = a(6379),
         c = a(5719),

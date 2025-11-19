@@ -99,7 +99,7 @@
 	"Menu_Section_Hardware": "Хардуер",
 	"Menu_Section_Hardware_VRHardware": "ВР хардуер",
 	"Menu_Section_Hardware_SteamDeckDock": "Док станция",
-	"Menu_Section_Hardware_Family": "New Steam Hardware",
+	"Menu_Section_Hardware_Family": "Нов Steam хардуер",
 	"Menu_Section_WaysToPlay": "Начини за пускане игри",
 	"Menu_Section_SpecialSections": "Специални секции",
 	"Menu_Section_SpecialSections_NextFest": "Steam фестивал на предстоящите игри",

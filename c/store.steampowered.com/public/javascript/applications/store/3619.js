@@ -99,7 +99,7 @@
 	"Menu_Section_Hardware": "Hardware",
 	"Menu_Section_Hardware_VRHardware": "Hardware VR",
 	"Menu_Section_Hardware_SteamDeckDock": "Dock",
-	"Menu_Section_Hardware_Family": "New Steam Hardware",
+	"Menu_Section_Hardware_Family": "Nuovo hardware di Steam",
 	"Menu_Section_WaysToPlay": "Modi per giocare",
 	"Menu_Section_SpecialSections": "Sezioni speciali",
 	"Menu_Section_SpecialSections_NextFest": "Next Fest di Steam",

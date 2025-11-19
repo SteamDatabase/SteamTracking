@@ -590,6 +590,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -643,6 +644,7 @@
         null,
       );
       var _ = __webpack_require__("chunkid");
+      const _ = 99999;
       const _ = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
       function _(_) {
         return (
@@ -733,18 +735,38 @@
           : void 0;
       }
       function _(_) {
-        return (
-          "items" == _ ||
-          "trailercarousel" == _ ||
-          "crosspromotesalepage" == _ ||
-          "creator_list" == _ ||
-          "calendar" == _
-        );
+        switch (_) {
+          case "items":
+          case "trailercarousel":
+          case "crosspromotesalepage":
+          case "creator_list":
+          case "calendar":
+            return !0;
+        }
+        return !1;
       }
       function _(_) {
-        return (
-          "items" == _ || "crosspromotesalepage" == _ || "creator_list" == _
-        );
+        switch (_) {
+          case "items":
+          case "crosspromotesalepage":
+          case "creator_list":
+            return !0;
+        }
+        return !1;
+      }
+      function _(_) {
+        switch (_) {
+          case "items":
+          case "trailercarousel":
+          case "crosspromotesalepage":
+          case "creator_list":
+          case "calendar":
+          case "events":
+          case "sale_events":
+          case "contenthubspecials":
+            return !0;
+        }
+        return !1;
       }
       function _(_, _) {
         if (!_.BIsNextFest() || _(_.section_type) || _.smart_section) return !1;
@@ -1363,7 +1385,7 @@
               _ = _?.GetScreenshots(_.BHasAgeSafeScreenshots());
             return _ && _.length > 1 ? ((_ %= _.length), _[_]) : "";
           }
-          if (this.clanSteamID) {
+          if (this.clanSteamID && 36 != this.GetEventType()) {
             const _ = _._.GetClanInfoByClanAccountID(
               this.clanSteamID.GetAccountID(),
             );
@@ -1726,7 +1748,7 @@
             : this.GetSaleSections();
         }
         GetSaleSectionByID(_) {
-          if (_ > 99999) {
+          if (_ > _) {
             return this.GenerateDynamicSaleSections(!0, !0, !0, !0).find(
               (_) => _.unique_id == _,
             );
@@ -2040,6 +2062,14 @@
                   ],
                   initially_selected_values: ["#AppTypeLabel_game"],
                 },
+              ],
+              initially_expanded_facets: [
+                "#AppTypeLabelTitle",
+                "#App_Taxonomy_Survey_QSuperGenreTitle",
+              ],
+              prioritized_facets: [
+                "#AppTypeLabelTitle",
+                "#App_Taxonomy_Survey_QSuperGenreTitle",
               ],
             },
           };
@@ -2463,21 +2493,23 @@
               headers: {
                 "Content-Type": "multipart/form-data",
               },
-            };
+            },
+            _ = !0;
           try {
             (_ = await _().post(_, _, _)), this.m_filesCompleted.push(_);
           } catch (_) {
-            (this.m_lastError = {
-              file: _,
-              status: _.response ? _.response.status : 500,
-              message: (0, _._)(_).strErrorMsg,
-            }),
+            (_ = !1),
+              (this.m_lastError = {
+                file: _,
+                status: _.response ? _.response.status : 500,
+                message: (0, _._)(_).strErrorMsg,
+              }),
               (_ = _.response);
           }
           return (
             _ || (await this.handleUploadRefresh(_)),
             {
-              bSuccess: !0,
+              bSuccess: _,
               result: _.data,
             }
           );

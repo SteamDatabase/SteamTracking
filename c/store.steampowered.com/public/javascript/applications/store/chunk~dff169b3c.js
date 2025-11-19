@@ -1890,6 +1890,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  hide_from_description: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m

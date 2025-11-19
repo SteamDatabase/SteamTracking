@@ -67,8 +67,8 @@
         PropertyID: "_3cw2JVquWr2I-c2of7tNua",
         PropertyName: "Ti0we0Ib-BYRdW0E0nKCD",
         PropertyType: "_3pMsDNbrX-VHmOENbalkBi",
-        PropertyRangeMin: "_1JXzVqQ8QwMOiMJomHGzHM",
-        PropertyRangeMax: "_2jhFnoXeCTwQKCxubAYRMa",
+        PropertyRange: "_26JPX8Ws9PoLYfaeG4y9iT",
+        HideFromDescription: "_34NC2WwZsVuN2n-OnfXjd9",
         RemoveButton: "_1YTgFZBFg12u3CY2ZIDc5T",
         AddPropertyButton: "_2h4abqe3IOx7s2LPKUlQl3",
         SaveButton: "_3ZpekvHN1FCWYHIBN4NnS-",
@@ -1248,6 +1248,8 @@
                     type: Number(_.type),
                     min: _.min ? Number(_.min) : 0,
                     max: _.max ? Number(_.max) : 0,
+                    hide_from_description:
+                      1 === Number(_.hide_from_description),
                   }))
                 : [];
             })(_),
@@ -1262,68 +1264,9 @@
               _.createElement(_, {
                 schema: _,
                 index: _,
-                onUpdateID: (_) => {
+                onUpdate: (_) => {
                   ((_, _) => {
-                    const _ = _.map((_, _) =>
-                      _ === _
-                        ? {
-                            ..._,
-                            _: _,
-                          }
-                        : _,
-                    );
-                    _(_);
-                  })(_, _);
-                },
-                onUpdateName: (_) => {
-                  ((_, _) => {
-                    const _ = _.map((_, _) =>
-                      _ === _
-                        ? {
-                            ..._,
-                            name: _,
-                          }
-                        : _,
-                    );
-                    _(_);
-                  })(_, _);
-                },
-                onUpdateType: (_) => {
-                  ((_, _) => {
-                    const _ = _.map((_, _) =>
-                      _ === _
-                        ? {
-                            ..._,
-                            type: _,
-                          }
-                        : _,
-                    );
-                    _(_);
-                  })(_, _);
-                },
-                onUpdateRangeMin: (_) => {
-                  ((_, _) => {
-                    const _ = _.map((_, _) =>
-                      _ === _
-                        ? {
-                            ..._,
-                            min: _,
-                          }
-                        : _,
-                    );
-                    _(_);
-                  })(_, _);
-                },
-                onUpdateRangeMax: (_) => {
-                  ((_, _) => {
-                    const _ = _.map((_, _) =>
-                      _ === _
-                        ? {
-                            ..._,
-                            max: _,
-                          }
-                        : _,
-                    );
+                    const _ = _.map((_, _) => (_ === _ ? _ : _));
                     _(_);
                   })(_, _);
                 },
@@ -1352,6 +1295,7 @@
                     type: 0,
                     min: null,
                     max: null,
+                    hide_from_description: !1,
                   }),
                     _(_);
                 },
@@ -1402,11 +1346,7 @@
         const {
           schema: _,
           index: __webpack_require__,
-          onUpdateID: _,
-          onUpdateName: _,
-          onUpdateType: _,
-          onUpdateRangeMin: _,
-          onUpdateRangeMax: _,
+          onUpdate: _,
           onRemove: _,
         } = _;
         return _.createElement(
@@ -1421,7 +1361,10 @@
             value: 0 !== _._ ? _._ : "",
             placeholder: "Property id",
             onChange: (_) => {
-              _(_.target.valueAsNumber);
+              _({
+                ..._,
+                _: _.target.valueAsNumber,
+              });
             },
           }),
           _.createElement("div", null, "Name"),
@@ -1431,44 +1374,58 @@
             value: _.name,
             placeholder: "Property name",
             onChange: (_) => {
-              _(_.target.value);
+              _({
+                ..._,
+                name: _.target.value,
+              });
             },
           }),
           _.createElement("div", null, "Type"),
           _.createElement(_, {
             propertyType: _.type,
-            onUpdateType: _,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _.PropertyRangeMinLabel,
+            onUpdateType: (_) => {
+              _({
+                ..._,
+                type: _,
+              });
             },
-            "Min",
-          ),
+          }),
+          _.createElement("div", null, "Min"),
           _.createElement(_._, {
-            className: _.PropertyRangeMin,
+            className: _.PropertyRange,
             type: "number",
             value: _.min ?? "",
             placeholder: "Min value",
             onChange: (_) => {
-              _(_.target.valueAsNumber);
+              _({
+                ..._,
+                min: _.target.valueAsNumber,
+              });
             },
           }),
-          _.createElement(
-            "div",
-            {
-              className: _.PropertyRangeMaxLabel,
-            },
-            "Max",
-          ),
+          _.createElement("div", null, "Max"),
           _.createElement(_._, {
-            className: _.PropertyRangeMax,
+            className: _.PropertyRange,
             type: "number",
             value: _.max ?? "",
             placeholder: "Max value",
             onChange: (_) => {
-              _(_.target.valueAsNumber);
+              _({
+                ..._,
+                max: _.target.valueAsNumber,
+              });
+            },
+          }),
+          _.createElement("div", null, "Hide"),
+          _.createElement(_._, {
+            className: _.HideFromDescription,
+            type: "checkbox",
+            checked: _.hide_from_description,
+            onChange: (_) => {
+              _({
+                ..._,
+                hide_from_description: _.target.checked,
+              });
             },
           }),
           _.createElement(
@@ -2084,6 +2041,9 @@
                   (0, _._)(
                     "#CommunityItems_StartupMovie_GuidelineVideo_BulletPoint_3",
                   ),
+                  (0, _._)(
+                    "#CommunityItems_StartupMovie_GuidelineVideo_BulletPoint_4",
+                  ),
                 ],
               },
               {
@@ -2122,6 +2082,12 @@
                   "#CommunityItems_StartupMovie_GuidelineImage_Intro",
                 ),
                 rgBulletPoints: [
+                  (0, _._)(
+                    "#CommunityItems_StartupMovie_GuidelineImage_BulletPoint_2",
+                  ),
+                  (0, _._)(
+                    "#CommunityItems_StartupMovie_GuidelineImage_BulletPoint_3",
+                  ),
                   (0, _._)(
                     "#CommunityItems_StartupMovie_GuidelineImage_BulletPoint_1",
                   ),

@@ -5853,11 +5853,14 @@
         constructor(e) {
           super(e),
             (this.m_refImage = i.createRef()),
-            (this.state = { nImage: 0 });
+            (this.state = { nImage: 0, nPropChangeCounter: 0 });
         }
-        componentDidUpdate(e) {
+        componentDidUpdate(e, t) {
           JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
-            this.setState({ nImage: 0 });
+            this.setState({
+              nImage: 0,
+              nPropChangeCounter: t.nPropChangeCounter + 1,
+            });
         }
         get src() {
           let e = "";
@@ -5900,8 +5903,10 @@
               strAltText: n,
               ...a
             } = this.props,
-            s = this.src;
+            s = this.src,
+            o = this.state.nPropChangeCounter;
           return i.createElement("img", {
+            key: o,
             ref: this.m_refImage,
             ...a,
             src: s,

@@ -293,6 +293,9 @@
         Border: "_2lajVjbyrA4lq9xF0X4NQW",
         BorderColor: "_1x6gylcu6acqj_bRoqrFHf",
         Outline: "_2UkNTTzKtJJdhYEnuwtVRd",
+        AlignSelf: "Rrxq_LH_m0cYEls4MuNtG",
+        JustifySelf: "_1i4Rlxj2r-2r2Co6jSOYRL",
+        TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
       };
     },
     13857: (e) => {
@@ -4373,6 +4376,18 @@
             cssProperty: "--grid-area",
           },
           {
+            prop: "alignSelf",
+            responsive: !0,
+            className: x.AlignSelf,
+            cssProperty: "--align-self",
+          },
+          {
+            prop: "justifySelf",
+            responsive: !0,
+            className: x.JustifySelf,
+            cssProperty: "--justify-self",
+          },
+          {
             prop: "background",
             responsive: !0,
             className: x.Background,
@@ -4419,6 +4434,12 @@
             responsive: !0,
             className: x.Outline,
             cssProperty: (e) => ["--outline-color", N(e)],
+          },
+          {
+            prop: "textAlign",
+            responsive: !0,
+            className: x.TextAlign,
+            cssProperty: "--text-align",
           },
         ];
       var D = a(68875);

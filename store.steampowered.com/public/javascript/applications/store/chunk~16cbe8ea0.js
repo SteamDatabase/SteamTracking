@@ -5551,7 +5551,7 @@
         mj: () => o,
         rp: () => c,
       });
-      var i = r(77516),
+      var i = r(89128),
         a = r(90626);
       const n = "0px 0px 100% 0px",
         s = "tab",
@@ -8688,7 +8688,7 @@
         p = r(68451),
         _ = r(41841),
         g = r(42011),
-        f = r(89104),
+        f = r(40463),
         y = r(64940),
         B = r(90316),
         S = r.n(B),
@@ -9539,7 +9539,7 @@
       r.d(t, { W: () => z });
       var i = r(75844),
         a = r(90626),
-        n = r(77516),
+        n = r(89128),
         s = r(17720),
         o = r(4796),
         l = r(30894),
@@ -10302,7 +10302,7 @@
           ),
         );
       }
-      var q = r(89104),
+      var q = r(40463),
         P = r(20194),
         L = r(41735),
         V = r.n(L);
@@ -11811,9 +11811,9 @@
         (0, i.Cg)([C.oI], P.prototype, "OpenRepostDialogs", null),
         (P = (0, i.Cg)([l.PA], P));
     },
-    89104: (e, t, r) => {
+    40463: (e, t, r) => {
       "use strict";
-      r.d(t, { us: () => tr, fh: () => rr });
+      r.d(t, { us: () => nr, fh: () => sr });
       var i = r(93980),
         a = r(42780),
         n = r(8527),
@@ -11901,7 +11901,7 @@
             super.AppendText(r, t);
         }
       }
-      var g = r(77516),
+      var g = r(89128),
         f = r(34629),
         y = r(41735),
         B = r.n(y),
@@ -13518,12 +13518,19 @@
               ),
             );
       }
-      var Ft = r(30470),
-        At = r(33280),
-        Dt = r.n(At),
-        Nt = r(56330),
-        Ot = r(69484);
-      function kt(e) {
+      var Ft = r(20194);
+      function At(e, t) {
+        return ["usePartnerEventUserPoll", e.ConvertTo64BitString(), t];
+      }
+      function Dt(e, t) {
+        return `${"store" == (0, h.yK)() ? h.TS.STORE_BASE_URL : h.TS.COMMUNITY_BASE_URL}partnerevents/${e.ConvertTo64BitString()}/userpoll/${t}/ajaxloaddata/`;
+      }
+      var Nt = r(56330),
+        Ot = r(30470),
+        kt = r(69484),
+        Gt = r(33280),
+        Wt = r.n(Gt);
+      function xt(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
           i = (0, o.j$)(e.args, "poll_id"),
@@ -13542,49 +13549,73 @@
                 (0, w.we)("#UserPolls_Editor_FailToFindModel", a),
               )
             : null;
-        const l = (0, Y.sf)(Ft.TS.LANGUAGE);
+        const l = (0, Y.sf)(Ot.TS.LANGUAGE);
+        return s.createElement(jt, {
+          userPollDef: n,
+          lang: l,
+          clanAccountID: t.clanSteamID.GetAccountID(),
+          eventModel: t,
+        });
+      }
+      function jt(e) {
+        const { eventModel: t, userPollDef: r, lang: i } = e,
+          a =
+            ((n = t.clanSteamID),
+            (o = t.GID || "0"),
+            (0, Ft.I)({
+              queryKey: At(n, o),
+              queryFn: async () => {
+                const e = new FormData();
+                e.set("sessionid", (0, h.KC)());
+                const t = await fetch(Dt(n, o), {
+                  method: "POST",
+                  body: e,
+                  credentials: "include",
+                });
+                return await t.json();
+              },
+              placeholderData: { results: [], bLoading: !0 },
+            }).data ?? { results: [], bLoading: !0 });
+        var n, o;
         return s.createElement(
-          Gt,
-          {
-            userPollDef: n,
-            lang: l,
-            clanAccountID: t.clanSteamID.GetAccountID(),
-          },
-          n.options?.map((e) =>
-            s.createElement(Wt, {
+          qt,
+          { ...e },
+          r.options?.map((e) =>
+            s.createElement(Pt, {
               key: "polloption" + e.option_id,
-              lang: l,
+              lang: i,
               pollOptionDef: e,
+              bDisableSelection: a.bLoading,
             }),
           ),
         );
       }
-      function Gt(e) {
+      function qt(e) {
         const { userPollDef: t, lang: r, clanAccountID: i, children: a } = e,
           [n, o] = (0, pt.q3)(() => [
             w.NT.GetWithFallback(t.localized_poll_description, r),
             t.user_poll_background,
           ]);
-        let l = null;
+        let l;
         return (
           Boolean(o) &&
             (l = {
-              backgroundImage: `url('${(0, Ot.F)(i, o)}')`,
+              backgroundImage: `url('${(0, kt.F)(i, o)}')`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }),
           s.createElement(
             "div",
-            { className: Dt().PollBackground, style: l },
+            { className: Wt().PollBackground, style: l },
             s.createElement(
               "div",
-              { className: Dt().PollContainer },
-              s.createElement("div", { className: Dt().PollQuestion }, n),
-              s.createElement("div", { className: Dt().PollOptions }, a),
+              { className: Wt().PollContainer },
+              s.createElement("div", { className: Wt().PollQuestion }, n),
+              s.createElement("div", { className: Wt().PollOptions }, a),
               s.createElement(
                 "div",
-                { className: Dt().PollStatus },
+                { className: Wt().PollStatus },
                 s.createElement(
                   "div",
                   null,
@@ -13600,23 +13631,29 @@
           )
         );
       }
-      function Wt(e) {
-        const { pollOptionDef: t, onClick: r, lang: i } = e,
-          [a] = (0, pt.q3)(() => [w.NT.GetWithFallback(t.localized_option, i)]);
+      function Pt(e) {
+        const {
+            pollOptionDef: t,
+            onClick: r,
+            lang: i,
+            bDisableSelection: a,
+          } = e,
+          [n] = (0, pt.q3)(() => [w.NT.GetWithFallback(t.localized_option, i)]);
         return s.createElement(
           "div",
           {
-            className: (0, N.A)({ [Dt().PollOption]: !0, [Dt().Selected]: !1 }),
+            className: (0, N.A)({ [Wt().PollOption]: !0, [Wt().Selected]: !1 }),
+            onClick: a ? void 0 : r,
           },
-          s.createElement("div", { className: Dt().PollVoteIcon }),
-          s.createElement("span", null, a),
+          s.createElement("div", { className: Wt().PollVoteIcon }),
+          s.createElement("span", null, n),
         );
       }
-      let xt = null;
-      function jt() {
+      let Lt = null;
+      function Vt() {
         return (
-          null == xt &&
-            (xt = new Map([
+          null == Lt &&
+            (Lt = new Map([
               ["url", { Constructor: Le, autocloses: !1 }],
               ["dynamiclink", { Constructor: Ve, autocloses: !1 }],
               [
@@ -13659,37 +13696,37 @@
                 "*",
                 { Constructor: o.ck, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: qt, autocloses: !1 }],
+              ["img", { Constructor: Ht, autocloses: !1 }],
               ["previewyoutube", { Constructor: T.gH, autocloses: !1 }],
               ["looping_media", { Constructor: o.$A, autocloses: !1 }],
               ["video", { Constructor: o.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: T.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: Lt, autocloses: !1 }],
-              ["vod", { Constructor: Vt, autocloses: !1 }],
+              ["trailer", { Constructor: Yt, autocloses: !1 }],
+              ["vod", { Constructor: Xt, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: Ht,
+                  Constructor: Qt,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: Yt, autocloses: !1 }],
-              ["claimitem", { Constructor: Xt, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: Qt, autocloses: !1 }],
-              ["actiondialog", { Constructor: $t, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: er, autocloses: !0 }],
-              ["docimg", { Constructor: Pt, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: $t, autocloses: !1 }],
+              ["claimitem", { Constructor: Jt, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: er, autocloses: !1 }],
+              ["actiondialog", { Constructor: rr, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: ar, autocloses: !0 }],
+              ["docimg", { Constructor: Kt, autocloses: !1 }],
               ["carousel", { Constructor: vt, autocloses: !1 }],
               ["meetsteamsessiongroup", { Constructor: U.ac, autocloses: !1 }],
               ["meetsteamscheduleview", { Constructor: U.Xk, autocloses: !1 }],
-              ["userpolls", { Constructor: kt, autocloses: !1 }],
+              ["userpolls", { Constructor: xt, autocloses: !1 }],
             ])),
-          xt
+          Lt
         );
       }
-      function qt(e) {
+      function Ht(e) {
         const { showErrorInfo: t, event: r } = e.context;
         let i = (0, o.j$)(e.args, "src") || e.children?.toString();
         i || (i = (0, o.j$)(e.args));
@@ -13723,7 +13760,7 @@
           s.createElement(J.c, { rgSources: a }),
         );
       }
-      function Pt(e) {
+      function Kt(e) {
         const t = (0, o.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const r = e && e.children && e.children.toString(),
@@ -13739,13 +13776,13 @@
           s.createElement(J.c, { rgSources: i, alt: r })
         );
       }
-      function Lt(e) {
-        const t = Kt(
+      function Yt(e) {
+        const t = Zt(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          r = Kt(e.args, "trailerid", 0);
+          r = Zt(e.args, "trailerid", 0);
         let i =
           (0, o.j$)(e.args, "style")?.toLocaleLowerCase() ?? He.k_TrailerAsFull;
         i = Object.values(He).includes(i) ? i : He.k_TrailerAsFull;
@@ -13761,14 +13798,14 @@
           children: e.children,
         });
       }
-      function Vt(e) {
-        const t = Kt(e.args, "appid", 0);
+      function Xt(e) {
+        const t = Zt(e.args, "appid", 0);
         return s.createElement(ot, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Ht(e) {
+      function Qt(e) {
         const t = (0, o.j$)(e.args, "name"),
           r = (0, o.j$)(e.args, "title"),
           i = (0, o.j$)(e.args, "company"),
@@ -13789,11 +13826,11 @@
               bio: e.children,
             });
       }
-      function Kt(e, t, r) {
+      function Zt(e, t, r) {
         const i = (0, o.j$)(e, t);
         return void 0 === i || null == i ? r : Number.parseInt(i);
       }
-      function Yt(e) {
+      function $t(e) {
         const t = (0, o.j$)(e.args, "name"),
           r =
             "true" === ((0, o.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -13807,7 +13844,7 @@
           ? e.children
           : null;
       }
-      function Xt(e) {
+      function Jt(e) {
         const t = e.context.showErrorInfo;
         if (!h.iA.logged_in)
           return s.createElement(
@@ -13827,7 +13864,7 @@
           }
         return s.createElement(Ct.m, { bPreviewMode: t, rewardType: i });
       }
-      function Qt(e) {
+      function er(e) {
         const t = Number.parseInt((0, o.j$)(e.args, "id")) || 0,
           r =
             "true" === ((0, o.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -13845,7 +13882,7 @@
           (!l && !r) || (l && r) ? e.children : null
         );
       }
-      function Zt(e) {
+      function tr(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, C.h)(e),
             r = (0, C.Q)();
@@ -13871,12 +13908,12 @@
         }
         return { bInitialState: !0 };
       }
-      function $t(e) {
+      function rr(e) {
         const t = (0, o.j$)(e.args, "action"),
           r = (0, o.j$)(e.args, "initialToken"),
           i = (0, o.j$)(e.args, "successToken"),
           a = (0, o.j$)(e.args, "failToken"),
-          n = Zt(t);
+          n = tr(t);
         if (!(t && r && i && a)) {
           return e.context.showErrorInfo
             ? s.createElement(
@@ -13894,7 +13931,7 @@
                 onClick: (n) => {
                   (0, wt.pg)(
                     s.createElement(
-                      Jt,
+                      ir,
                       {
                         strAction: t,
                         strInitialToken: r,
@@ -13917,7 +13954,7 @@
               (0, w.we)("#Login_SignIn"),
             );
       }
-      function Jt(e) {
+      function ir(e) {
         const {
             strAction: t,
             children: r,
@@ -13926,7 +13963,7 @@
             strSuccessToken: n,
             strFailToken: o,
           } = e,
-          l = Zt(t),
+          l = tr(t),
           [c, m] = s.useState(Boolean(l.fnAction));
         s.useEffect(() => {
           l.fnAction && (m(!0), l.fnAction().finally(() => m(!1)));
@@ -13965,7 +14002,7 @@
           ),
         );
       }
-      function er(e) {
+      function ar(e) {
         const { showErrorInfo: t, event: r } = e.context,
           i = r.clanSteamID.GetAccountID(),
           [a] = s.useState(
@@ -14005,19 +14042,19 @@
             ? s.createElement("div", null, (0, w.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      class tr {
+      class nr {
         static sm_BBCodeDictionary = new Map([
           ...Array.from(o.W4.entries()),
-          ...Array.from(jt().entries()),
+          ...Array.from(Vt().entries()),
         ]);
         static AddDictionary(e) {
-          tr.sm_BBCodeDictionary = new Map([
-            ...Array.from(tr.sm_BBCodeDictionary.entries()),
+          nr.sm_BBCodeDictionary = new Map([
+            ...Array.from(nr.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
       }
-      function rr(e) {
+      function sr(e) {
         const {
             text: t,
             partnerEventStore: r,
@@ -14041,7 +14078,7 @@
           );
         return s
           .useMemo(
-            () => new i.B(tr.sm_BBCodeDictionary, u, o || n.TS.LANGUAGE),
+            () => new i.B(nr.sm_BBCodeDictionary, u, o || n.TS.LANGUAGE),
             [u, o],
           )
           .ParseBBCode(t, {
@@ -14884,7 +14921,7 @@
       var i = r(82097),
         a = r(65946),
         n = r(90626),
-        s = r(89104),
+        s = r(40463),
         o = r(61859),
         l = r(66661),
         c = r.n(l);

@@ -832,6 +832,7 @@
         ValveOnlyText: "_206saj_KMAibQF6XQ50lq0",
         ValveOnlyBackground: "JckrnbJXboKxpRp3fULfa",
         ValveOnlyAdminBackground: "_3HVu1O7B4zeCZWaOaUWPCo",
+        DropDownOptionHelpLabel: "_2O-Yi5SNKU3AinaDygrO9y",
         Columns: "_1oVIRGhMwAB3uN9G3t8kZe",
         LeftCol: "_3PPz-6LrUAum0x5iKTRxzc",
         RightCol: "_25xelN-JQnAHv3pp9qVrpl",
@@ -843,6 +844,7 @@
         InsetOption: "PKGX85T0vHviq8Tm_2GeT",
         tooltip_Ctn: "_3nqxIgL0a0DbPZHRZRzWsp",
         SaleEditorSpacing: "_2ZGwd2fru49CK-m22nkFg3",
+        InstructionText: "ktxW5d8M1ectIDhxxa1M5",
         BackgroundImage: "_2wlqOo3XXW1wCAxwfudaL8",
         InEditor: "_1qfNCm-vmBy2gW4vlcWfgD",
         Blur: "_1rJkktMMsrzAultu2NgHkZ",
@@ -9839,6 +9841,11 @@
                   },
                   adult_content_restricted: {
                     _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  commercial_license_restricted: {
+                    _: 13,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -44143,8 +44150,9 @@
             _.stopPropagation();
         }
         OnMessage(_) {
-          "window_resized" == _.data && this.OnResize(),
-            "popup-created" == _.data && this.OnCreateInternal();
+          "window_moved" === _.data && this.OnMove(),
+            "window_resized" === _.data && this.OnResize(),
+            "popup-created" === _.data && this.OnCreateInternal();
         }
         Show(_ = _._.k_EWindowBringToFrontAndForceOS) {
           let _;
@@ -44383,6 +44391,7 @@
         ReleasePopup() {
           this.OnClose(), (this.m_popup = null);
         }
+        OnMove() {}
         OnResize() {
           this.IsMaximized().then((_) => {
             _
@@ -44448,6 +44457,9 @@
             this.GetWindowRestoreDetails().then((_) => {
               (this.m_strInitialRestoreDetails = _), this.OnResizeComplete(_);
             });
+          }
+          OnMove() {
+            super.OnMove(), this.QueryAndStoreWindowPosition();
           }
           OnResize() {
             super.OnResize(), this.QueryAndStoreWindowPosition();
@@ -44837,6 +44849,9 @@
         }
         OnLoad() {
           this.DoCallback("onLoad");
+        }
+        OnMove() {
+          this.DoCallback("onMove");
         }
         OnResize() {
           this.DoCallback("onResize");
@@ -53061,7 +53076,9 @@
       }
       class _ extends _.Component {
         OnSubmit(_) {
-          _.preventDefault(), this.props.onSubmit && this.props.onSubmit(_);
+          _.preventDefault(),
+            _.stopPropagation(),
+            this.props.onSubmit && this.props.onSubmit(_);
         }
         render() {
           return _.createElement("form", {
@@ -55540,6 +55557,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      const _ = "separator",
+        _ = "spacer";
       class _ {
         constructor() {
           (0, _._)(this);
@@ -55569,41 +55588,53 @@
             PageListSeparatorComponent: _ = _,
           } = _,
           _ = _.useContext(_);
-        return __webpack_require__.map((_, _) => {
-          const _ = _ === _;
-          if ("separator" === _) {
-            const _ = _ === _ + 1 || _ === _ - 1;
-            return _.createElement(_, {
-              role: "separator",
-              key: _,
-              bTransparent: _,
-            });
-          }
-          if ("spacer" === _)
-            return _.createElement("div", {
-              key: _,
-              className: _().PageListSpacer,
-            });
-          {
-            if (!1 === _.visible) return null;
-            const _ = _.identifier || _.title || __webpack_require__.toString(),
-              _ = () => _(_, _);
-            return _.createElement(_, {
-              className: (0, _._)(_.PagedSettingsDialog_PageListItem, {
-                [_.Active]: _,
-              }),
-              key: _,
-              onClick: _,
-              title: _.title,
-              icon: _.icon,
-              active: _,
-              _: _ + _.identifier,
-              role: "tab",
-              "aria-selected": _,
-              "aria-controls": _ + _.identifier + "_Content",
-            });
-          }
-        });
+        return __webpack_require__
+          .filter((_, _) => {
+            if (_ === _ || _ === _) {
+              for (let _ = _ + 1; _ < __webpack_require__.length; _++) {
+                const _ = __webpack_require__[_];
+                if (_ !== _ && _ !== _ && _.visible) return !0;
+              }
+              return !1;
+            }
+            return !0;
+          })
+          .map((_, _) => {
+            const _ = _ === _;
+            if (_ === _) {
+              const _ = _ === _ + 1 || _ === _ - 1;
+              return _.createElement(_, {
+                role: "separator",
+                key: _,
+                bTransparent: _,
+              });
+            }
+            if (_ === _)
+              return _.createElement("div", {
+                key: _,
+                className: _().PageListSpacer,
+              });
+            {
+              if (!1 === _.visible) return null;
+              const _ =
+                  _.identifier || _.title || __webpack_require__.toString(),
+                _ = () => _(_, _);
+              return _.createElement(_, {
+                className: (0, _._)(_.PagedSettingsDialog_PageListItem, {
+                  [_.Active]: _,
+                }),
+                key: _,
+                onClick: _,
+                title: _.title,
+                icon: _.icon,
+                active: _,
+                _: _ + _.identifier,
+                role: "tab",
+                "aria-selected": _,
+                "aria-controls": _ + _.identifier + "_Content",
+              });
+            }
+          });
       }
       function _(_) {
         const {
@@ -60269,10 +60300,12 @@
           _ = _.useRef(null),
           [_, _] = _.useState(!1);
         return (
-          _.useEffect(() => {
-            const _ = _.current;
-            _ && (_ && !_ ? (_.showModal(), _(!0)) : !_ && _ && _.close());
+          _.useLayoutEffect(() => {
+            _ && !_ ? _(!0) : !_ && _ && _.current?.close();
           }, [_, _]),
+          _.useLayoutEffect(() => {
+            _ && _.current.showModal();
+          }, [_]),
           _.createElement(
             "dialog",
             {
@@ -60281,7 +60314,7 @@
               onClose: () => _(!1),
               onCancel: (_) => _.preventDefault(),
             },
-            _.children,
+            __webpack_require__,
           )
         );
       }
@@ -61151,12 +61184,12 @@
         _.onEscKeypress &&
           ((_.tabIndex = 0),
           (_.onKeyDown = (_) => {
-            27 == _.keyCode && _.onEscKeypress();
+            27 == _.keyCode && (_.onEscKeypress(), _.stopPropagation());
           }),
           (_.onMouseDown = (_) => {
             _.currentTarget !== _.target ||
               _.bDisableBackgroundDismiss ||
-              _.onEscKeypress();
+              (_.onEscKeypress(), _.stopPropagation());
           }),
           (_ = (_) => {
             _ && (_._(_, _.ownerDocument.activeElement) || _.focus());
@@ -68089,6 +68122,9 @@
           }
           return null;
         }
+        static BHas(_, _) {
+          return Boolean(_ && _.length > _ && _[_]);
+        }
       }
       const _ = {
           english: "en",
@@ -69633,6 +69669,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _,
+        _: () => _._,
         _: () => _,
         _: () => _._,
         _: () => _,
@@ -70099,6 +70136,7 @@
         SteamHardware: () => "/hardware/",
         SteamOS: () => "/steamos/:catchAll*",
         GameRecording: () => "/gamerecording/",
+        SteamAwardsArchive: () => "/steamawards/archive",
         CreatorSaleLandingPage: () =>
           "/:prefix(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/(sale|unlisted)/:salePageName?",
         SubscriptionPlanLandingPage: () => "/subscriptions/:salePageName",
@@ -70156,7 +70194,8 @@
         VerifiedProgram: () => "/verified/:appid(\\d+)/",
         BundleListForApp: () => "/bundlelist/:appid(\\d+)/",
         SteamCharts: () => "/charts/",
-        SteamAwardNominations: () => "/steamawards/nominations/:steamid(\\d+)?",
+        SteamAwardNominations: () =>
+          "/steamawards/nominations/:year(\\d+)?/:steamid(\\d+)?",
         SteamAwards: () => "/steamawards/:year(\\d+)?",
         Loyalty: () => "/points",
         LoyaltyStore: () => "/points/shop",
@@ -79361,7 +79400,7 @@
               _.createElement(
                 _,
                 {
-                  href: `${_._.STORE_BASE_URL}steamawards/`,
+                  href: `${_._.STORE_BASE_URL}steamawards/archive`,
                 },
                 _("#Menu_Section_SpecialSections_SteamAwards"),
               ),
@@ -81659,6 +81698,7 @@
                             _._.SubscriptionPlanLandingPage(),
                             _._.GameRecording(),
                             _._.SteamHardware(),
+                            _._.SteamAwardsArchive(),
                           ],
                           render: (_) => _.createElement(_, null),
                         }),

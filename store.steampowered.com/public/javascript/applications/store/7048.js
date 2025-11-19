@@ -11746,6 +11746,7 @@
                   o.review_count.toLocaleString(),
                 ),
               },
+              "(",
               a
                 ? "(" + o.review_count.toLocaleString() + ")"
                 : m
@@ -11758,6 +11759,7 @@
                       "#GameHover_UserReviewCount",
                       o.review_count.toLocaleString(),
                     ),
+              ")",
             ),
             !a &&
               s.createElement(

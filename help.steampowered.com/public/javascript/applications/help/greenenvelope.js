@@ -4464,6 +4464,11 @@
                     br: _.qM.readString,
                     bw: _.gp.writeString,
                   },
+                  hide_from_description: {
+                    n: 9,
+                    br: _.qM.readBool,
+                    bw: _.gp.writeBool,
+                  },
                 },
               }),
             Le.sm_m

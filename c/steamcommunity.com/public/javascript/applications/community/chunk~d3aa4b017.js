@@ -73,9 +73,33 @@
             className: _,
           },
           _.createElement(
+            "a",
+            {
+              href: _,
+              target: _._.IN_CLIENT ? void 0 : "_blank",
+            },
+            _.createElement(
+              _._,
+              {
+                type: "app",
+                _: _,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _,
+                },
+                _.createElement("img", {
+                  className: _,
+                  src: _.GetAssets().GetSmallCapsuleURL(),
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
             "div",
             {
-              className: _.Actions,
+              className: _.StoreSaleBroadcastWidgetRight,
             },
             _.createElement(
               "a",
@@ -92,48 +116,12 @@
                 _.createElement(
                   "div",
                   {
-                    className: _,
+                    className: (0, _._)(
+                      _.StoreSaleWidgetTitle,
+                      "StoreSaleWidgetTitle",
+                    ),
                   },
-                  _.createElement("img", {
-                    className: _,
-                    src: _.GetAssets().GetSmallCapsuleURL(),
-                  }),
-                ),
-              ),
-            ),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.StoreSaleBroadcastWidgetRight,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.Actions,
-              },
-              _.createElement(
-                "a",
-                {
-                  href: _,
-                  target: _._.IN_CLIENT ? void 0 : "_blank",
-                },
-                _.createElement(
-                  _._,
-                  {
-                    type: "app",
-                    _: _,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _.StoreSaleWidgetTitle,
-                        "StoreSaleWidgetTitle",
-                      ),
-                    },
-                    _.GetName(),
-                  ),
+                  _.GetName(),
                 ),
               ),
             ),

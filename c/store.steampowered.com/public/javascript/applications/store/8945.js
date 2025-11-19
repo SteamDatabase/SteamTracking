@@ -99,7 +99,7 @@
 	"Menu_Section_Hardware": "Matériel",
 	"Menu_Section_Hardware_VRHardware": "Matériel de VR",
 	"Menu_Section_Hardware_SteamDeckDock": "Station d'accueil",
-	"Menu_Section_Hardware_Family": "New Steam Hardware",
+	"Menu_Section_Hardware_Family": "Nouveau matériel Steam",
 	"Menu_Section_WaysToPlay": "Modalités de jeu",
 	"Menu_Section_SpecialSections": "Sections spéciales",
 	"Menu_Section_SpecialSections_NextFest": "Steam Néo Fest",

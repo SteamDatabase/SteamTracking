@@ -13275,27 +13275,34 @@
           : i.createElement(w, { ...e });
       }
     },
-    50929: (e, t, r) => {
+    5726: (e, t, r) => {
       "use strict";
-      r.d(t, { W6: () => _, YU: () => g, s3: () => h });
+      r.d(t, { YU: () => y, W6: () => b, s3: () => S });
       var i = r(22837),
-        n = r(65946),
-        a = r(90626),
-        s = r(59952),
-        l = r(52038),
-        o = r(61859),
-        c = r(30470),
-        m = r(33280),
-        u = r.n(m),
-        d = r(56330),
-        p = r(69484);
-      function g(e) {
-        var t;
-        const r = e.context.event,
-          l = e.context.showErrorInfo,
-          m = (0, s.j$)(e.args, "poll_id"),
-          u = Number.parseInt(m),
-          p = (0, n.q3)(() =>
+        n = r(88942),
+        a = r(78327);
+      function s(e, t) {
+        return ["usePartnerEventUserPoll", e.ConvertTo64BitString(), t];
+      }
+      function l(e, t) {
+        return `${"store" == (0, a.yK)() ? a.TS.STORE_BASE_URL : a.TS.COMMUNITY_BASE_URL}partnerevents/${e.ConvertTo64BitString()}/userpoll/${t}/ajaxloaddata/`;
+      }
+      var o = r(65946),
+        c = r(90626),
+        m = r(59952),
+        u = r(56330),
+        d = r(52038),
+        p = r(61859),
+        g = r(30470),
+        _ = r(69484),
+        h = r(33280),
+        f = r.n(h);
+      function y(e) {
+        const t = e.context.event,
+          r = e.context.showErrorInfo,
+          n = (0, m.j$)(e.args, "poll_id"),
+          a = Number.parseInt(n),
+          s = (0, o.q3)(() =>
             (function (e, t) {
               var r;
               const i =
@@ -13305,84 +13312,119 @@
               return (
                 (null == i ? void 0 : i.find((e) => e.poll_id == t)) || null
               );
-            })(r, u),
+            })(t, a),
           );
-        if (!p)
-          return l
-            ? a.createElement(
+        if (!s)
+          return r
+            ? c.createElement(
                 "div",
-                { className: d.ErrorStylesWithIcon },
-                (0, o.we)("#UserPolls_Editor_FailToFindModel", u),
+                { className: u.ErrorStylesWithIcon },
+                (0, p.we)("#UserPolls_Editor_FailToFindModel", a),
               )
             : null;
-        const g = (0, i.sf)(c.TS.LANGUAGE);
-        return a.createElement(
-          _,
-          {
-            userPollDef: p,
-            lang: g,
-            clanAccountID: r.clanSteamID.GetAccountID(),
-          },
-          null === (t = p.options) || void 0 === t
+        const l = (0, i.sf)(g.TS.LANGUAGE);
+        return c.createElement(B, {
+          userPollDef: s,
+          lang: l,
+          clanAccountID: t.clanSteamID.GetAccountID(),
+          eventModel: t,
+        });
+      }
+      function B(e) {
+        var t;
+        const { eventModel: r, userPollDef: i, lang: o } = e,
+          m = (function (e, t) {
+            var r;
+            return null !==
+              (r = (0, n.I)({
+                queryKey: s(e, t),
+                queryFn: async () => {
+                  const r = new FormData();
+                  r.set("sessionid", (0, a.KC)());
+                  const i = await fetch(l(e, t), {
+                    method: "POST",
+                    body: r,
+                    credentials: "include",
+                  });
+                  return await i.json();
+                },
+                placeholderData: { results: [], bLoading: !0 },
+              }).data) && void 0 !== r
+              ? r
+              : { results: [], bLoading: !0 };
+          })(r.clanSteamID, r.GID || "0");
+        return c.createElement(
+          b,
+          { ...e },
+          null === (t = i.options) || void 0 === t
             ? void 0
             : t.map((e) =>
-                a.createElement(h, {
+                c.createElement(S, {
                   key: "polloption" + e.option_id,
-                  lang: g,
+                  lang: o,
                   pollOptionDef: e,
+                  bDisableSelection: m.bLoading,
                 }),
               ),
         );
       }
-      function _(e) {
-        const { userPollDef: t, lang: r, clanAccountID: i, children: s } = e,
-          [l, c] = (0, n.q3)(() => [
-            o.NT.GetWithFallback(t.localized_poll_description, r),
+      function b(e) {
+        const { userPollDef: t, lang: r, clanAccountID: i, children: n } = e,
+          [a, s] = (0, o.q3)(() => [
+            p.NT.GetWithFallback(t.localized_poll_description, r),
             t.user_poll_background,
           ]);
-        let m = null;
+        let l;
         return (
-          Boolean(c) &&
-            (m = {
-              backgroundImage: `url('${(0, p.F)(i, c)}')`,
+          Boolean(s) &&
+            (l = {
+              backgroundImage: `url('${(0, _.F)(i, s)}')`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }),
-          a.createElement(
+          c.createElement(
             "div",
-            { className: u().PollBackground, style: m },
-            a.createElement(
+            { className: f().PollBackground, style: l },
+            c.createElement(
               "div",
-              { className: u().PollContainer },
-              a.createElement("div", { className: u().PollQuestion }, l),
-              a.createElement("div", { className: u().PollOptions }, s),
-              a.createElement(
+              { className: f().PollContainer },
+              c.createElement("div", { className: f().PollQuestion }, a),
+              c.createElement("div", { className: f().PollOptions }, n),
+              c.createElement(
                 "div",
-                { className: u().PollStatus },
-                a.createElement(
+                { className: f().PollStatus },
+                c.createElement(
                   "div",
                   null,
-                  (0, o.PP)("#UserPolls_status_N_Votes", "XXX"),
+                  (0, p.PP)("#UserPolls_status_N_Votes", "XXX"),
                 ),
-                a.createElement(
+                c.createElement(
                   "div",
                   null,
-                  (0, o.PP)("#UserPolls_status_N_TimeRemaining", "X Days"),
+                  (0, p.PP)("#UserPolls_status_N_TimeRemaining", "X Days"),
                 ),
               ),
             ),
           )
         );
       }
-      function h(e) {
-        const { pollOptionDef: t, onClick: r, lang: i } = e,
-          [s] = (0, n.q3)(() => [o.NT.GetWithFallback(t.localized_option, i)]);
-        return a.createElement(
+      function S(e) {
+        const {
+            pollOptionDef: t,
+            onClick: r,
+            lang: i,
+            bDisableSelection: n,
+          } = e,
+          [a] = (0, o.q3)(() => [p.NT.GetWithFallback(t.localized_option, i)]);
+        return c.createElement(
           "div",
-          { className: (0, l.A)({ [u().PollOption]: !0, [u().Selected]: !1 }) },
-          a.createElement("div", { className: u().PollVoteIcon }),
-          a.createElement("span", null, s),
+          {
+            className: (0, d.A)({ [f().PollOption]: !0, [f().Selected]: !1 }),
+            onClick: n ? void 0 : r,
+          },
+          c.createElement("div", { className: f().PollVoteIcon }),
+          c.createElement("span", null, a),
         );
       }
     },
@@ -14603,9 +14645,10 @@
             color: i,
             bgcolor: n,
             children: a,
+            trailerBaseID: s,
           } = e,
-          [s, o] = (0, l.useState)(!1),
-          [c, m] = (0, M.t7)(r, j);
+          [o, c] = (0, l.useState)(!1),
+          [m, u] = (0, M.t7)(r, j);
         switch (t) {
           case S.k_TrailerAsButton:
           case S.k_TrailerAsPill:
@@ -14619,17 +14662,18 @@
                     [P().Pill]: t == S.k_TrailerAsPill,
                     [P().Button]: t == S.k_TrailerAsButton,
                   }),
-                  onClick: () => o(!0),
+                  onClick: () => c(!0),
                   style: { color: i, backgroundColor: n },
                 },
                 l.createElement(G.jGG, null),
                 a || (0, h.we)("#EventEmail_WatchNow"),
               ),
-              c &&
+              m &&
                 l.createElement(O.PE, {
-                  storeItem: c,
-                  bShowModal: s,
-                  hideModal: () => o(!1),
+                  storeItem: m,
+                  bShowModal: o,
+                  trailerBaseID: s,
+                  hideModal: () => c(!1),
                 }),
             );
           default:
@@ -14995,7 +15039,7 @@
               ),
             );
       }
-      var Se = r(50929),
+      var Se = r(5726),
         we = r(20446);
       let ve = null;
       function Me(e) {
@@ -17750,29 +17794,44 @@
         return r + t + e.slice(r.length);
       }
       function E(e) {
-        var t;
-        const { storeItem: r, bShowModal: n, hideModal: a } = e,
+        const {
+            storeItem: t,
+            bShowModal: r,
+            trailerBaseID: n,
+            hideModal: a,
+          } = e,
           s = (0, f.dy)(),
-          l =
-            null === (t = null == r ? void 0 : r.GetAllTrailers()) ||
-            void 0 === t
-              ? void 0
-              : t.GetHighlightTrailers(s),
-          o = l && l.length > 0 ? l[0] : void 0,
-          c = i.useId(),
-          u = i.useId();
-        if (!o) return null;
-        const d = o.GetTrailersDash(),
-          g = o.GetTrailerHls();
-        return 0 == (null == d ? void 0 : d.length)
+          l = (0, i.useMemo)(() => {
+            var e, r;
+            if (n) {
+              const r =
+                null === (e = null == t ? void 0 : t.GetAllTrailers()) ||
+                void 0 === e
+                  ? void 0
+                  : e.GetAllTrailers(s).find((e) => e.GetTrailerID() == n);
+              if (r) return r;
+            }
+            const i =
+              null === (r = null == t ? void 0 : t.GetAllTrailers()) ||
+              void 0 === r
+                ? void 0
+                : r.GetHighlightTrailers(s);
+            return i && i.length > 0 ? i[0] : void 0;
+          }, [s, t, n]),
+          o = i.useId(),
+          c = i.useId();
+        if (!l) return null;
+        const u = l.GetTrailersDash(),
+          d = l.GetTrailerHls();
+        return 0 == (null == u ? void 0 : u.length)
           ? null
           : i.createElement(
               m.EN,
-              { active: n },
+              { active: r },
               i.createElement(
                 m.eV,
                 {
-                  "aria-labelledby": y(c, u),
+                  "aria-labelledby": y(o, c),
                   bAllowFullSize: !0,
                   bOKDisabled: !0,
                   closeModal: a,
@@ -17781,8 +17840,8 @@
                   "div",
                   { className: p().VideoPopupContainers },
                   i.createElement(B.P, {
-                    dashManifests: d || [],
-                    hlsManifest: g || "",
+                    dashManifests: u || [],
+                    hlsManifest: d || "",
                     screenshot: "",
                     altText: "",
                     muteWhenAutoplayBlocked: !0,
@@ -17790,13 +17849,13 @@
                 ),
                 i.createElement(
                   "div",
-                  { id: c, style: { display: "none" } },
-                  r.GetName(),
+                  { id: o, style: { display: "none" } },
+                  t.GetName(),
                 ),
                 i.createElement(
                   "div",
-                  { id: u, style: { display: "none" } },
-                  o.GetName(),
+                  { id: c, style: { display: "none" } },
+                  l.GetName(),
                 ),
               ),
             );

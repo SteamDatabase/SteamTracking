@@ -14989,11 +14989,18 @@
               ),
             );
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return ["usePartnerEventUserPoll", _.ConvertTo64BitString(), _];
+      }
+      function _(_, _) {
+        return `${"store" == (0, _._)() ? _._.STORE_BASE_URL : _._.COMMUNITY_BASE_URL}partnerevents/${_.ConvertTo64BitString()}/userpoll/${_}/ajaxloaddata/`;
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const _ = _.context.event,
           _ = _.context.showErrorInfo,
@@ -15016,18 +15023,50 @@
               )
             : null;
         const _ = (0, _._)(_._.LANGUAGE);
+        return _.createElement(_, {
+          userPollDef: _,
+          lang: _,
+          clanAccountID: _.clanSteamID.GetAccountID(),
+          eventModel: _,
+        });
+      }
+      function _(_) {
+        const { eventModel: _, userPollDef: __webpack_require__, lang: _ } = _,
+          _ =
+            ((_ = _.clanSteamID),
+            (_ = _.GID || "0"),
+            (0, _._)({
+              queryKey: _(_, _),
+              queryFn: async () => {
+                const _ = new FormData();
+                _.set("sessionid", (0, _._)());
+                const _ = await fetch(_(_, _), {
+                  method: "POST",
+                  body: _,
+                  credentials: "include",
+                });
+                return await _.json();
+              },
+              placeholderData: {
+                results: [],
+                bLoading: !0,
+              },
+            }).data ?? {
+              results: [],
+              bLoading: !0,
+            });
+        var _, _;
         return _.createElement(
           _,
           {
-            userPollDef: _,
-            lang: _,
-            clanAccountID: _.clanSteamID.GetAccountID(),
+            ..._,
           },
-          _.options?.map((_) =>
+          __webpack_require__.options?.map((_) =>
             _.createElement(_, {
               key: "polloption" + _.option_id,
               lang: _,
               pollOptionDef: _,
+              bDisableSelection: _.bLoading,
             }),
           ),
         );
@@ -15046,7 +15085,7 @@
             ),
             _.user_poll_background,
           ]);
-        let _ = null;
+        let _;
         return (
           Boolean(_) &&
             (_ = {
@@ -15101,7 +15140,12 @@
         );
       }
       function _(_) {
-        const { pollOptionDef: _, onClick: __webpack_require__, lang: _ } = _,
+        const {
+            pollOptionDef: _,
+            onClick: __webpack_require__,
+            lang: _,
+            bDisableSelection: _,
+          } = _,
           [_] = (0, _._)(() => [_._.GetWithFallback(_.localized_option, _)]);
         return _.createElement(
           "div",
@@ -15110,6 +15154,7 @@
               [_().PollOption]: !0,
               [_().Selected]: !1,
             }),
+            onClick: _ ? void 0 : __webpack_require__,
           },
           _.createElement("div", {
             className: _().PollVoteIcon,

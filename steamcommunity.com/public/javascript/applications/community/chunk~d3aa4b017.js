@@ -66,8 +66,24 @@
           "div",
           { className: o },
           l.createElement(
+            "a",
+            { href: b, target: g.TS.IN_CLIENT ? void 0 : "_blank" },
+            l.createElement(
+              _.j,
+              { type: "app", id: t },
+              l.createElement(
+                "div",
+                { className: i },
+                l.createElement("img", {
+                  className: c,
+                  src: s.GetAssets().GetSmallCapsuleURL(),
+                }),
+              ),
+            ),
+          ),
+          l.createElement(
             "div",
-            { className: u.Actions },
+            { className: u.StoreSaleBroadcastWidgetRight },
             l.createElement(
               "a",
               { href: b, target: g.TS.IN_CLIENT ? void 0 : "_blank" },
@@ -76,37 +92,13 @@
                 { type: "app", id: t },
                 l.createElement(
                   "div",
-                  { className: i },
-                  l.createElement("img", {
-                    className: c,
-                    src: s.GetAssets().GetSmallCapsuleURL(),
-                  }),
-                ),
-              ),
-            ),
-          ),
-          l.createElement(
-            "div",
-            { className: u.StoreSaleBroadcastWidgetRight },
-            l.createElement(
-              "div",
-              { className: u.Actions },
-              l.createElement(
-                "a",
-                { href: b, target: g.TS.IN_CLIENT ? void 0 : "_blank" },
-                l.createElement(
-                  _.j,
-                  { type: "app", id: t },
-                  l.createElement(
-                    "div",
-                    {
-                      className: (0, S.A)(
-                        u.StoreSaleWidgetTitle,
-                        "StoreSaleWidgetTitle",
-                      ),
-                    },
-                    s.GetName(),
-                  ),
+                  {
+                    className: (0, S.A)(
+                      u.StoreSaleWidgetTitle,
+                      "StoreSaleWidgetTitle",
+                    ),
+                  },
+                  s.GetName(),
                 ),
               ),
             ),

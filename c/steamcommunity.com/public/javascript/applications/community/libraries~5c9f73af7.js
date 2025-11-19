@@ -3161,7 +3161,7 @@
       function _(_, _, _) {
         let _,
           _ = _.initialDeps ?? [];
-        return () => {
+        function _() {
           var _, _, _, _;
           let _;
           _.key &&
@@ -3195,7 +3195,13 @@
           return (
             null == (_ = null == _ ? void 0 : _.onChange) || _.call(_, _), _
           );
-        };
+        }
+        return (
+          (_.updateDeps = (_) => {
+            _ = _;
+          }),
+          _
+        );
       }
       function _(_, _) {
         if (void 0 === _)
@@ -3206,6 +3212,13 @@
           let _;
           return function (..._) {
             _.clearTimeout(_), (_ = _.setTimeout(() => _.apply(this, _), _));
+          };
+        },
+        _ = (_) => {
+          const { offsetWidth: _, offsetHeight: __webpack_require__ } = _;
+          return {
+            width: _,
+            height: __webpack_require__,
           };
         },
         _ = (_) => _,
@@ -3228,21 +3241,23 @@
               height: Math.round(_),
             });
           };
-          if (
-            (_(__webpack_require__.getBoundingClientRect()), !_.ResizeObserver)
-          )
-            return () => {};
+          if ((_(_(_)), !_.ResizeObserver)) return () => {};
           const _ = new _.ResizeObserver((_) => {
-            const _ = _[0];
-            if (null == _ ? void 0 : _.borderBoxSize) {
-              const _ = _.borderBoxSize[0];
-              if (_)
-                return void _({
-                  width: _.inlineSize,
-                  height: _.blockSize,
-                });
-            }
-            _(__webpack_require__.getBoundingClientRect());
+            const _ = () => {
+              const _ = _[0];
+              if (null == _ ? void 0 : _.borderBoxSize) {
+                const _ = _.borderBoxSize[0];
+                if (_)
+                  return void _({
+                    width: _.inlineSize,
+                    height: _.blockSize,
+                  });
+              }
+              _(_(_));
+            };
+            _.options.useAnimationFrameWithResizeObserver
+              ? requestAnimationFrame(_)
+              : _();
           });
           return (
             _.observe(_, {
@@ -3263,28 +3278,29 @@
           const _ = _.targetWindow;
           if (!_) return;
           let _ = 0;
-          const _ = _
-              ? () => {}
-              : _(
-                  _,
-                  () => {
-                    _(_, !1);
-                  },
-                  _.options.isScrollingResetDelay,
-                ),
+          const _ =
+              _.options.useScrollendEvent && _
+                ? () => {}
+                : _(
+                    _,
+                    () => {
+                      _(_, !1);
+                    },
+                    _.options.isScrollingResetDelay,
+                  ),
             _ = (_) => () => {
               const { horizontal: _, isRtl: _ } = _.options;
               (_ = _ ? _.scrollLeft * (_ ? -1 : 1) : _.scrollTop), _(), _(_, _);
             },
             _ = _(!0),
             _ = _(!1);
+          _(), __webpack_require__.addEventListener("scroll", _, _);
+          const _ = _.options.useScrollendEvent && _;
           return (
-            _(),
-            __webpack_require__.addEventListener("scroll", _, _),
-            __webpack_require__.addEventListener("scrollend", _, _),
+            _ && __webpack_require__.addEventListener("scrollend", _, _),
             () => {
               __webpack_require__.removeEventListener("scroll", _),
-                __webpack_require__.removeEventListener("scrollend", _);
+                _ && __webpack_require__.removeEventListener("scrollend", _);
             }
           );
         },
@@ -3297,11 +3313,7 @@
               );
             }
           }
-          return Math.round(
-            _.getBoundingClientRect()[
-              _.options.horizontal ? "width" : "height"
-            ],
-          );
+          return _[_.options.horizontal ? "offsetWidth" : "offsetHeight"];
         },
         _ = (_, { adjustments: _ = 0, behavior: __webpack_require__ }, _) => {
           var _, _;
@@ -3318,7 +3330,6 @@
             (this.scrollElement = null),
             (this.targetWindow = null),
             (this.isScrolling = !1),
-            (this.scrollToIndexTimeoutId = null),
             (this.measurementsCache = []),
             (this.itemSizeCache = new Map()),
             (this.pendingMeasuredCacheIndexes = []),
@@ -3334,14 +3345,20 @@
                 (this.targetWindow && this.targetWindow.ResizeObserver
                   ? (_ = new this.targetWindow.ResizeObserver((_) => {
                       _.forEach((_) => {
-                        this._measureElement(_.target, _);
+                        const _ = () => {
+                          this._measureElement(_.target, _);
+                        };
+                        this.options.useAnimationFrameWithResizeObserver
+                          ? requestAnimationFrame(_)
+                          : _();
                       });
                     }))
                   : null);
               return {
                 disconnect: () => {
                   var _;
-                  return null == (_ = _()) ? void 0 : _.disconnect();
+                  null == (_ = _()) || __webpack_require__.disconnect(),
+                    (_ = null);
                 },
                 observe: (_) => {
                   var _;
@@ -3389,6 +3406,8 @@
                   isScrollingResetDelay: 150,
                   enabled: !0,
                   isRtl: !1,
+                  useScrollendEvent: !1,
+                  useAnimationFrameWithResizeObserver: !1,
                   ..._,
                 });
             }),
@@ -3422,10 +3441,9 @@
             (this.cleanup = () => {
               this.unsubs.filter(Boolean).forEach((_) => _()),
                 (this.unsubs = []),
-                (this.scrollElement = null),
-                (this.targetWindow = null),
                 this.observer.disconnect(),
-                this.elementsCache.clear();
+                (this.scrollElement = null),
+                (this.targetWindow = null);
             }),
             (this._didMount = () => () => {
               this.cleanup();
@@ -3445,6 +3463,9 @@
                         (null == (_ = this.scrollElement)
                           ? void 0
                           : _.window) ?? null),
+                  this.elementsCache.forEach((_) => {
+                    this.observer.observe(_);
+                  }),
                   this._scrollToOffset(this.getScrollOffset(), {
                     adjustments: void 0,
                     behavior: void 0,
@@ -3589,20 +3610,41 @@
                 this.getMeasurements(),
                 this.getSize(),
                 this.getScrollOffset(),
+                this.options.lanes,
               ],
-              (_, _, _) =>
+              (_, _, _, _) =>
                 (this.range =
                   _.length > 0 && _ > 0
                     ? (function ({
                         measurements: _,
                         outerSize: _,
                         scrollOffset: _,
+                        lanes: _,
                       }) {
                         const _ = _.length - 1,
-                          _ = (_) => _[_].start,
-                          _ = _(0, _, _, _);
-                        let _ = _;
-                        for (; _ < _ && _[_].end < _ + _; ) _++;
+                          _ = (_) => _[_].start;
+                        if (_.length <= _)
+                          return {
+                            startIndex: 0,
+                            endIndex: _,
+                          };
+                        let _ = _(0, _, _, _),
+                          _ = _;
+                        if (1 === _) for (; _ < _ && _[_].end < _ + _; ) _++;
+                        else if (_ > 1) {
+                          const _ = Array(_).fill(0);
+                          for (; _ < _ && _.some((_) => _ < _ + _); ) {
+                            const _ = _[_];
+                            (_[_.lane] = _.end), _++;
+                          }
+                          const _ = Array(_).fill(_ + _);
+                          for (; _ >= 0 && _.some((_) => _ >= _); ) {
+                            const _ = _[_];
+                            (_[_.lane] = _.start), _--;
+                          }
+                          (_ = Math.max(0, _ - (_ % _))),
+                            (_ = Math.min(_, _ + (_ - 1 - (_ % _))));
+                        }
                         return {
                           startIndex: _,
                           endIndex: _,
@@ -3611,6 +3653,7 @@
                         measurements: _,
                         outerSize: _,
                         scrollOffset: _,
+                        lanes: _,
                       })
                     : null),
               {
@@ -3618,19 +3661,29 @@
                 debug: () => this.options.debug,
               },
             )),
-            (this.getIndexes = _(
-              () => [
-                this.options.rangeExtractor,
-                this.calculateRange(),
-                this.options.overscan,
-                this.options.count,
-              ],
-              (_, _, _, _) =>
-                null === _
+            (this.getVirtualIndexes = _(
+              () => {
+                let _ = null,
+                  _ = null;
+                const _ = this.calculateRange();
+                return (
+                  _ && ((_ = _.startIndex), (_ = _.endIndex)),
+                  this.maybeNotify.updateDeps([this.isScrolling, _, _]),
+                  [
+                    this.options.rangeExtractor,
+                    this.options.overscan,
+                    this.options.count,
+                    _,
+                    _,
+                  ]
+                );
+              },
+              (_, _, _, _, _) =>
+                null === _ || null === _
                   ? []
                   : _({
-                      startIndex: _.startIndex,
-                      endIndex: _.endIndex,
+                      startIndex: _,
+                      endIndex: _,
                       overscan: _,
                       count: _,
                     }),
@@ -3691,7 +3744,7 @@
                   });
             }),
             (this.getVirtualItems = _(
-              () => [this.getIndexes(), this.getMeasurements()],
+              () => [this.getVirtualIndexes(), this.getMeasurements()],
               (_, _) => {
                 const _ = [];
                 for (let _ = 0, _ = _.length; _ < _; _++) {
@@ -3710,22 +3763,14 @@
               if (0 !== _.length)
                 return _(_[_(0, _.length - 1, (_) => _(_[_]).start, _)]);
             }),
-            (this.getOffsetForAlignment = (_, _) => {
+            (this.getOffsetForAlignment = (_, _, __webpack_require__ = 0) => {
               const _ = this.getSize(),
                 _ = this.getScrollOffset();
-              "auto" === _ &&
-                (_ = _ <= _ ? "start" : _ >= _ + _ ? "end" : "start"),
-                "start" === _ ||
-                  ("end" === _ ? (_ -= _) : "center" === _ && (_ -= _ / 2));
-              const _ = this.options.horizontal
-                  ? "scrollWidth"
-                  : "scrollHeight",
-                _ =
-                  (this.scrollElement
-                    ? "document" in this.scrollElement
-                      ? this.scrollElement.document.documentElement[_]
-                      : this.scrollElement[_]
-                    : 0) - _;
+              "auto" === _ && (_ = _ >= _ + _ ? "end" : "start"),
+                "center" === _
+                  ? (_ += (__webpack_require__ - _) / 2)
+                  : "end" === _ && (_ -= _);
+              const _ = this.getTotalSize() + this.options.scrollMargin - _;
               return Math.max(Math.min(_, _), 0);
             }),
             (this.getOffsetForIndex = (_, _ = "auto") => {
@@ -3745,25 +3790,18 @@
                 "end" === _
                   ? _.end + this.options.scrollPaddingEnd
                   : _.start - this.options.scrollPaddingStart;
-              return [this.getOffsetForAlignment(_, _), _];
+              return [this.getOffsetForAlignment(_, _, _.size), _];
             }),
             (this.isDynamicMode = () => this.elementsCache.size > 0),
-            (this.cancelScrollToIndex = () => {
-              null !== this.scrollToIndexTimeoutId &&
-                this.targetWindow &&
-                (this.targetWindow.clearTimeout(this.scrollToIndexTimeoutId),
-                (this.scrollToIndexTimeoutId = null));
-            }),
             (this.scrollToOffset = (
               _,
               { align: _ = "start", behavior: __webpack_require__ } = {},
             ) => {
-              this.cancelScrollToIndex(),
-                "smooth" === __webpack_require__ &&
-                  this.isDynamicMode() &&
-                  console.warn(
-                    "The `smooth` scroll behavior is not fully supported with dynamic size.",
-                  ),
+              "smooth" === __webpack_require__ &&
+                this.isDynamicMode() &&
+                console.warn(
+                  "The `smooth` scroll behavior is not fully supported with dynamic size.",
+                ),
                 this._scrollToOffset(this.getOffsetForAlignment(_, _), {
                   adjustments: void 0,
                   behavior: __webpack_require__,
@@ -3773,51 +3811,52 @@
               _,
               { align: _ = "auto", behavior: __webpack_require__ } = {},
             ) => {
-              (_ = Math.max(0, Math.min(_, this.options.count - 1))),
-                this.cancelScrollToIndex(),
-                "smooth" === __webpack_require__ &&
-                  this.isDynamicMode() &&
-                  console.warn(
-                    "The `smooth` scroll behavior is not fully supported with dynamic size.",
-                  );
-              const _ = this.getOffsetForIndex(_, _);
-              if (!_) return;
-              const [_, _] = _;
-              this._scrollToOffset(_, {
-                adjustments: void 0,
-                behavior: __webpack_require__,
-              }),
-                "smooth" !== __webpack_require__ &&
-                  this.isDynamicMode() &&
-                  this.targetWindow &&
-                  (this.scrollToIndexTimeoutId = this.targetWindow.setTimeout(
-                    () => {
-                      this.scrollToIndexTimeoutId = null;
-                      if (this.elementsCache.has(this.options.getItemKey(_))) {
-                        const [_] = _(this.getOffsetForIndex(_, _));
-                        (_ = _),
-                          (_ = this.getScrollOffset()),
-                          Math.abs(_ - _) < 1 ||
-                            this.scrollToIndex(_, {
-                              align: _,
-                              behavior: __webpack_require__,
-                            });
-                      } else
-                        this.scrollToIndex(_, {
-                          align: _,
-                          behavior: __webpack_require__,
-                        });
+              "smooth" === __webpack_require__ &&
+                this.isDynamicMode() &&
+                console.warn(
+                  "The `smooth` scroll behavior is not fully supported with dynamic size.",
+                ),
+                (_ = Math.max(0, Math.min(_, this.options.count - 1)));
+              let _ = 0;
+              const _ = (_) => {
+                  if (!this.targetWindow) return;
+                  const _ = this.getOffsetForIndex(_, _);
+                  if (!_)
+                    return void console.warn(
+                      "Failed to get offset for index:",
+                      _,
+                    );
+                  const [_, _] = _;
+                  this._scrollToOffset(_, {
+                    adjustments: void 0,
+                    behavior: __webpack_require__,
+                  }),
+                    this.targetWindow.requestAnimationFrame(() => {
+                      const _ = this.getScrollOffset(),
+                        _ = this.getOffsetForIndex(_, _);
                       var _, _;
-                    },
-                  ));
+                      _
+                        ? ((_ = _[0]), (_ = _), Math.abs(_ - _) < 1.01 || _(_))
+                        : console.warn("Failed to get offset for index:", _);
+                    });
+                },
+                _ = (_) => {
+                  this.targetWindow &&
+                    (_++,
+                    _ < 10
+                      ? this.targetWindow.requestAnimationFrame(() => _(_))
+                      : console.warn(
+                          `Failed to scroll to index ${_} after 10 attempts.`,
+                        ));
+                };
+              _(_);
             }),
             (this.scrollBy = (_, { behavior: _ } = {}) => {
-              this.cancelScrollToIndex(),
-                "smooth" === _ &&
-                  this.isDynamicMode() &&
-                  console.warn(
-                    "The `smooth` scroll behavior is not fully supported with dynamic size.",
-                  ),
+              "smooth" === _ &&
+                this.isDynamicMode() &&
+                console.warn(
+                  "The `smooth` scroll behavior is not fully supported with dynamic size.",
+                ),
                 this._scrollToOffset(this.getScrollOffset() + _, {
                   adjustments: void 0,
                   behavior: _,
@@ -3827,16 +3866,21 @@
               var _;
               const _ = this.getMeasurements();
               let _;
-              return (
-                (_ =
-                  0 === _.length
-                    ? this.options.paddingStart
-                    : 1 === this.options.lanes
-                      ? ((null == (_ = _[_.length - 1]) ? void 0 : _.end) ?? 0)
-                      : Math.max(
-                          ..._.slice(-this.options.lanes).map((_) => _.end),
-                        )),
-                _ - this.options.scrollMargin + this.options.paddingEnd
+              if (0 === _.length) _ = this.options.paddingStart;
+              else if (1 === this.options.lanes)
+                _ = (null == (_ = _[_.length - 1]) ? void 0 : _.end) ?? 0;
+              else {
+                const _ = Array(this.options.lanes).fill(null);
+                let _ = _.length - 1;
+                for (; _ >= 0 && _.some((_) => null === _); ) {
+                  const _ = _[_];
+                  null === _[_.lane] && (_[_.lane] = _.end), _--;
+                }
+                _ = Math.max(..._.filter((_) => null !== _));
+              }
+              return Math.max(
+                _ - this.options.scrollMargin + this.options.paddingEnd,
+                0,
               );
             }),
             (this._scrollToOffset = (
@@ -3885,7 +3929,7 @@
           [_] = _.useState(() => new _(_));
         return (
           _.setOptions(_),
-          _.useEffect(() => _._didMount(), []),
+          _(() => _._didMount(), []),
           _(() => _._willUpdate()),
           _
         );

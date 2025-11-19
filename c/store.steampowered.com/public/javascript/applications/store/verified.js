@@ -3604,12 +3604,14 @@
           super(_),
             (this.state = {
               nImage: 0,
+              nPropChangeCounter: 0,
             });
         }
-        componentDidUpdate(_) {
+        componentDidUpdate(_, _) {
           JSON.stringify(this.props.rgSources) != JSON.stringify(_.rgSources) &&
             this.setState({
               nImage: 0,
+              nPropChangeCounter: _.nPropChangeCounter + 1,
             });
         }
         get src() {
@@ -3656,8 +3658,10 @@
               strAltText: _,
               ..._
             } = this.props,
-            _ = this.src;
+            _ = this.src,
+            _ = this.state.nPropChangeCounter;
           return _.createElement("img", {
+            key: _,
             ref: this.m_refImage,
             ..._,
             src: _,

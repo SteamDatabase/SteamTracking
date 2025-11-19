@@ -853,16 +853,6 @@ body.login .loginbox {
 	height: 48px;
 }
 
-body.v6.steamtv
-{
-	background: transparent;
-}
-
-html.responsive body.v6.steamtv .responsive_page_template_content
-{
-	padding-bottom: 0;
-}
-
 .login_bottom_row {
 	display: flex;
 	flex-direction: row;

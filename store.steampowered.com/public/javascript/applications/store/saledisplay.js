@@ -910,12 +910,12 @@
             )
           : null;
       }
-      var A = a(77516),
+      var A = a(89128),
         N = a(91382),
         B = a(30756),
         M = a(21529),
-        x = a(52038),
-        U = a(78327),
+        U = a(52038),
+        x = a(78327),
         R = a(45699),
         O = a(69484),
         P = a(1276),
@@ -923,13 +923,13 @@
         H = a.n(F);
       function z(e) {
         const { event: t, subMenu: a, language: n } = e,
-          r = (0, U.Qn)(),
+          r = (0, x.Qn)(),
           [o, i] = (0, l.useState)(!1),
           s = (0, l.useRef)(null);
         return l.createElement(
           "div",
           {
-            className: (0, x.A)({ [H().SubMenuOuterCtn]: !0, [H().isOpen]: o }),
+            className: (0, U.A)({ [H().SubMenuOuterCtn]: !0, [H().isOpen]: o }),
             onMouseEnter: () => {
               s.current && window.clearTimeout(s.current), i(!0);
             },
@@ -1057,7 +1057,7 @@
                     muted: !0,
                     autoPlay: !0,
                     playsInline: !0,
-                    className: (0, x.A)(
+                    className: (0, U.A)(
                       k().SaleBackground,
                       k()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
                       "SaleBackground",
@@ -1072,7 +1072,7 @@
                   n &&
                     l.createElement("source", { src: n, type: "video/webm" }),
                   r &&
-                    !U.TS.IN_CLIENT &&
+                    !x.TS.IN_CLIENT &&
                     l.createElement("source", { src: r, type: "video/mp4" }),
                 ),
               )
@@ -1121,7 +1121,7 @@
           l.createElement(
             "div",
             {
-              className: (0, x.A)({
+              className: (0, U.A)({
                 SaleBackgroundCtn: !0,
                 ContentHubSalePage: d,
               }),
@@ -1129,7 +1129,7 @@
             l.createElement(
               "div",
               {
-                className: (0, x.A)(
+                className: (0, U.A)(
                   k()[`CustomStyle_${t.jsondata.sale_vanity_id}`],
                   "SaleCustomCSS",
                   k().SaleBackground,
@@ -1166,7 +1166,7 @@
                 "a",
                 {
                   className: J().SalePageLogoCtn,
-                  href: U.TS.STORE_BASE_URL + r,
+                  href: x.TS.STORE_BASE_URL + r,
                 },
                 l.createElement("img", {
                   src: t.GetImageURLWithFallback("sale_logo", a),
@@ -1174,7 +1174,7 @@
               )
             : l.createElement(
                 "div",
-                { className: (0, x.A)(J().SalePageLogoCtn, "SalePageLogoCtn") },
+                { className: (0, U.A)(J().SalePageLogoCtn, "SalePageLogoCtn") },
                 l.createElement("img", {
                   src: t.GetImageURLWithFallback("sale_logo", a),
                 }),
@@ -1320,7 +1320,7 @@
       }
       var Be = a(71647),
         Me = a.n(Be);
-      function xe(e) {
+      function Ue(e) {
         const {
             onDropFiles: t,
             renderDesciption: a,
@@ -1390,7 +1390,7 @@
           "div",
           {
             ...o,
-            className: (0, x.A)(
+            className: (0, U.A)(
               i ? Me().DragAndDropContainerDragging : Me().DragAndDropContainer,
               "DragAndDropContainer",
             ),
@@ -1425,7 +1425,7 @@
           e.children,
         );
       }
-      var Ue = a(66331),
+      var xe = a(66331),
         Re = a(27344),
         Oe = a.n(Re),
         Pe = a(78511);
@@ -1506,7 +1506,7 @@
           c.map((e) => ({ a: e.GetCurrentImageOption(), b: e.language })),
         );
         return l.createElement(
-          xe,
+          Ue,
           {
             onDropFiles: g,
             elAdditonalButtons: u,
@@ -1665,7 +1665,7 @@
           l.createElement(
             "div",
             {
-              className: (0, x.A)({
+              className: (0, U.A)({
                 [ve().FlexColumnContainer]: !0,
                 [Oe().UploadPreviewError]: "failed" == t.status,
               }),
@@ -1700,7 +1700,7 @@
                     if (t instanceof Le.M7) {
                       t.ResetImage();
                       const a = window,
-                        n = l.createElement(Ue.q, {
+                        n = l.createElement(xe.q, {
                           ownerWin: a,
                           uploadFile: t,
                           forceResolution: e.forceResolution,
@@ -2055,7 +2055,7 @@
           : l.createElement(
               "span",
               {
-                className: (0, x.A)(Ke().Localized, ve().ValveOnlyBackground),
+                className: (0, U.A)(Ke().Localized, ve().ValveOnlyBackground),
                 onClick: () => a?.(t),
               },
               "(VO) " + (0, p.we)("#ImagePicker_Localized"),
@@ -2252,7 +2252,7 @@
           },
           l.createElement(
             "div",
-            { className: (0, x.A)(ve().FlexColumnContainer, ut().ReassignCtn) },
+            { className: (0, U.A)(ve().FlexColumnContainer, ut().ReassignCtn) },
             l.createElement(
               "div",
               { className: ut().ImagePreviewContainer },
@@ -2278,7 +2278,7 @@
       }
       var vt = a(68033),
         bt = a(41550),
-        It = a(89104),
+        It = a(40463),
         St = a(35685),
         ht = a(9709),
         wt = a(64753),
@@ -2334,18 +2334,19 @@
               }),
             ),
           ),
-          l.createElement(
-            le.$n,
-            {
-              onClick: () => {
-                for (let e = 0; e < 31; e++) n(e) && r(e);
+          !!r &&
+            l.createElement(
+              le.$n,
+              {
+                onClick: () => {
+                  for (let e = 0; e < 31; e++) n(e) && r(e);
+                },
               },
-            },
-            (0, p.we)("#Sale_RemoveAll"),
-            l.createElement(kt.o, {
-              tooltip: (0, p.we)("#Sale_RemoveAll_Tooltip"),
-            }),
-          ),
+              (0, p.we)("#Sale_RemoveAll"),
+              l.createElement(kt.o, {
+                tooltip: (0, p.we)("#Sale_RemoveAll_Tooltip"),
+              }),
+            ),
         );
       }
       function yt(e) {
@@ -2355,12 +2356,9 @@
             langOverride: r,
             fnOnLanguagePreviewChange: o,
             fnOnArtworkLangChange: i,
-            fnGetImageHash: s,
-            fnLangHasData: c,
-            realms: m,
-            fnOnRemoveImage: g,
+            fnOnRemoveImage: s,
           } = e,
-          [d, _] = (0, n.q3)(() => {
+          [c, m] = (0, n.q3)(() => {
             const e = Ce.pU.GetClanImageByImageHash(t, a.imgHash);
             let n = "";
             e &&
@@ -2389,22 +2387,22 @@
               o(t);
             },
           },
-          l.createElement("div", { className: _ }, a.locLang),
+          l.createElement("div", { className: m }, a.locLang),
           l.createElement(
             "span",
             { className: ut().LanguageOptions },
-            Boolean(d) &&
+            Boolean(c) &&
               l.createElement(
                 "a",
-                { href: d, target: "_blank" },
+                { href: c, target: "_blank" },
                 l.createElement(
                   G.he,
                   { toolTipContent: (0, p.we)("#selectimage_viewimage_ttip") },
                   f.YNO(),
                 ),
               ),
-            i && l.createElement(Gt, { ...e }),
-            g && l.createElement(Tt, { fnOnRemoveImage: g, langData: a }),
+            !!i && l.createElement(Gt, { ...e }),
+            !!s && l.createElement(Tt, { fnOnRemoveImage: s, langData: a }),
           ),
         );
       }
@@ -2514,7 +2512,7 @@
             },
             [t, r],
           ),
-          d = c || (0, u.sf)(U.TS.LANGUAGE),
+          d = c || (0, u.sf)(x.TS.LANGUAGE),
           [p, _, E, v] = (0, n.q3)(() => [
             t.GetSummaryWithFallback(d),
             t.GetNameWithFallback(d),
@@ -2525,7 +2523,7 @@
         (b =
           void 0 !== a
             ? [a]
-            : 2434320 == t.appid || 2 == U.TS.EUNIVERSE
+            : 2434320 == t.appid || 2 == x.TS.EUNIVERSE
               ? m
                 ? t.GetImageForSizeAsArrayWithFallback(
                     "localized_store_app_spotlight_mobile",
@@ -2553,7 +2551,7 @@
             l.createElement(
               o.Z,
               {
-                className: (0, x.A)(
+                className: (0, U.A)(
                   Bt().AppDetailsSpotlightContainer,
                   Bt().MajorEventContainer,
                 ),
@@ -2614,8 +2612,8 @@
           ),
         );
       }
-      var xt = a(79949),
-        Ut = a.n(xt);
+      var Ut = a(79949),
+        xt = a.n(Ut);
       function Rt(e) {
         const {
             langOverride: t,
@@ -2642,13 +2640,13 @@
               "capsule" === a &&
                 l.createElement(Pt, {
                   imgURL:
-                    U.TS.IMG_URL + "events/defaults/default_img_cover.jpg",
+                    x.TS.IMG_URL + "events/defaults/default_img_cover.jpg",
                   eventModel: i,
                 }),
               "background" === a &&
                 l.createElement(Ft, {
                   imgURL:
-                    U.TS.IMG_URL + "events/defaults/default_img_header.jpg",
+                    x.TS.IMG_URL + "events/defaults/default_img_header.jpg",
                   lang: t,
                   eventModel: i,
                   partnerEventStore: s,
@@ -2770,7 +2768,7 @@
                 (0, p.we)("#EventEditor_ArtworkType_" + t),
                 `${r.width} X ${r.height}`,
               ),
-            [t],
+            [r.height, r.width, t],
           );
         return l.createElement(Ht, { lang: a, imgURL: o, event: n });
       }
@@ -2807,42 +2805,42 @@
           : (0, p.we)("#selectimage_display_event_body");
         return l.createElement(
           "div",
-          { className: Ut().MultipleExampleContainer },
+          { className: xt().MultipleExampleContainer },
           l.createElement(
             "div",
-            { className: Ut().ExampleSectionTitle },
+            { className: xt().ExampleSectionTitle },
             (0, p.we)("#selectimage_preview_title_1"),
           ),
           l.createElement(
             "div",
             {
-              className: (0, x.A)(Ut().DetailPageExample, "DetailPageExample"),
+              className: (0, U.A)(xt().DetailPageExample, "DetailPageExample"),
             },
             l.createElement(
               "div",
-              { className: Ut().DetailExample },
+              { className: xt().DetailExample },
               l.createElement(
                 "div",
-                { className: Ut().MainImageCtn },
+                { className: xt().MainImageCtn },
                 l.createElement("img", { src: e.imgURL }),
               ),
               l.createElement(
                 "div",
-                { className: Ut().ExampleBodyPosition },
+                { className: xt().ExampleBodyPosition },
                 l.createElement(
                   "div",
-                  { className: Ut().ExampleContentCtn },
+                  { className: xt().ExampleContentCtn },
                   l.createElement(
                     "div",
-                    { className: Ut().TextTitle },
+                    { className: xt().TextTitle },
                     o || (0, p.we)("#selectimage_display_event_title"),
                   ),
                   l.createElement(
                     "div",
-                    { className: Ut().TextSubTitle },
+                    { className: xt().TextSubTitle },
                     s || (0, p.we)("#selectimage_display_event_subtitle"),
                   ),
-                  l.createElement("div", { className: Ut().TextBody }, g),
+                  l.createElement("div", { className: xt().TextBody }, g),
                 ),
               ),
             ),
@@ -2851,23 +2849,23 @@
             l.createElement(
               l.Fragment,
               null,
-              l.createElement("div", { className: Ut().ExampleSpacer }),
+              l.createElement("div", { className: xt().ExampleSpacer }),
               l.createElement(
                 "div",
-                { className: Ut().ExampleSectionTitle },
+                { className: xt().ExampleSectionTitle },
                 (0, p.we)("#selectimage_preview_title_2"),
               ),
               l.createElement(
                 "div",
                 {
-                  className: (0, x.A)(
-                    Ut().DetailPageExample,
+                  className: (0, U.A)(
+                    xt().DetailPageExample,
                     "DetailPageExample",
                   ),
                 },
                 l.createElement(
                   "div",
-                  { className: Ut().DetailExample2 },
+                  { className: xt().DetailExample2 },
                   l.createElement(bt.He, {
                     key: m,
                     event: a,
@@ -2889,7 +2887,7 @@
             n = t.GetAssets()?.GetCommunityIconURL();
           return l.createElement(
             "div",
-            { className: Ut().SpotlightExample },
+            { className: xt().SpotlightExample },
             l.createElement(Mt, {
               event: e.event,
               strDisplayName: a ?? "",
@@ -2911,7 +2909,7 @@
             "right" === e.side && t.reverse(),
             l.createElement(
               "div",
-              { className: Ut().BroadcastPreviewContainer },
+              { className: xt().BroadcastPreviewContainer },
               t,
             )
           );
@@ -2919,19 +2917,19 @@
         jt = (e) =>
           l.createElement(
             "div",
-            { className: Ut().SaleHeaderPreviewContainer },
+            { className: xt().SaleHeaderPreviewContainer },
             l.createElement("img", { style: { width: "100%" }, src: e.imgURL }),
           ),
         Wt = (e) =>
           l.createElement(
             "div",
-            { className: Ut().SaleHeaderPreviewContainer },
+            { className: xt().SaleHeaderPreviewContainer },
             l.createElement("img", { style: { width: "100%" }, src: e.imgURL }),
           ),
         qt = (e) =>
           l.createElement(
             "div",
-            { className: Ut().SaleHeaderPreviewContainer },
+            { className: xt().SaleHeaderPreviewContainer },
             l.createElement("img", { style: { width: "100%" }, src: e.imgURL }),
           );
       function Vt(e, t) {
@@ -3027,7 +3025,7 @@
                         l.createElement(
                           "a",
                           {
-                            href: `${U.TS.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
+                            href: `${x.TS.PARTNER_BASE_URL}doc/store/assets/promos#popup_update`,
                           },
                           (0, p.we)("#PartnerEvent_MM_LearnMore"),
                         ),
@@ -3211,7 +3209,7 @@
                                       "a",
                                       {
                                         href: Yt,
-                                        target: U.TS.IN_CLIENT
+                                        target: x.TS.IN_CLIENT
                                           ? void 0
                                           : "_blank",
                                       },
@@ -3411,7 +3409,7 @@
           !e.bIsMinimized &&
             l.createElement(
               "div",
-              { className: (0, x.A)(ut().SelectImageBlock, ut().Tips) },
+              { className: (0, U.A)(ut().SelectImageBlock, ut().Tips) },
               I,
               Boolean(S && h) &&
                 l.createElement(
@@ -3530,7 +3528,7 @@
                   style: { textTransform: "uppercase", width: "200px" },
                   onClick: () =>
                     window.open(
-                      `${U.TS.PARTNER_BASE_URL}admin/game/editbyappid/${c}?activetab=tab_graphicalassets`,
+                      `${x.TS.PARTNER_BASE_URL}admin/game/editbyappid/${c}?activetab=tab_graphicalassets`,
                     ),
                 },
                 (0, p.we)("#ImageUpload_EditHeroImage"),
@@ -3551,7 +3549,7 @@
                 l.createElement(
                   "div",
                   {
-                    className: (0, x.A)(
+                    className: (0, U.A)(
                       ut().SelectImageBlock,
                       ut().MainPreviewBlock,
                     ),
@@ -3690,8 +3688,9 @@
             [v],
           ),
           h = (0, l.useCallback)((e, t) => {
-            const a = ke.R.GetLocalizedImageGroupForEdit();
-            return a?.localized_images[t];
+            const a = ke.R.GetLocalizedImageGroupForEdit(),
+              n = a?.localized_images[t];
+            return n ? n.split("/").pop() : n;
           }, []);
         return l.createElement(
           re.o0,
@@ -3700,29 +3699,29 @@
             closeModal: m,
             bDisableBackgroundDismiss: !0,
             bAllowFullSize: !0,
-            className: (0, x.A)(_t.NotTooWideModal, _t.ImageManageDialog),
+            className: (0, U.A)(_t.NotTooWideModal, _t.ImageManageDialog),
             strTitle: e.strLocalizedTitle || (0, p.we)("#ImagePickerLoc_Title"),
             strDescription: e.strLocalizedDescription,
             bOKDisabled: b > 0,
             onOK: () => {
-              ke.R.GetAllLocalizedGroupImages().forEach((e, t) => {
-                if (e) {
-                  let a = e.lastIndexOf("/");
-                  const n = e.substring(a + 1);
+              const t = ke.R.GetLocalizedImageGroupForEdit();
+              for (let e = 0; e < 31; ++e) {
+                const a = t?.localized_images[e];
+                if (a) {
+                  const t = a.split("/").pop() || "";
                   g(
                     s,
                     {
-                      image_hash: Et(n),
+                      image_hash: Et(t),
                       clanAccountID: v,
-                      file_type: (0, $t.yh)(e) ?? 0,
+                      file_type: (0, $t.yh)(t) ?? 0,
                       imageid: 0,
                     },
-                    t,
+                    e,
                   );
-                }
-              }),
-                ke.R.ClearImageGroup(),
-                e.onOK ? e.onOK() : m?.();
+                } else g(s, null, e);
+              }
+              ke.R.ClearImageGroup(), e.onOK ? e.onOK() : m?.();
             },
             strOKButtonText:
               b > 0 ? (0, p.we)("#ImagePickerLoc_DismissWarning") : void 0,
@@ -3751,6 +3750,7 @@
                   title: null,
                   appid: a,
                   realms: o,
+                  fnRemoveAllArtwork: () => ke.R.ClearImageGroup(),
                   fnSetImageURL: S,
                   fnGetImageHashAndExt: h,
                   fnLangHasData: c,
@@ -4494,7 +4494,7 @@
           m = (0, _.w6)(c);
         return l.createElement(
           "div",
-          { className: (0, x.A)(Ie().CtnEditor, pa().TabCtn), ref: m },
+          { className: (0, U.A)(Ie().CtnEditor, pa().TabCtn), ref: m },
           Boolean(o && i && i > o) &&
             l.createElement(
               le.$n,
@@ -4558,12 +4558,12 @@
       function fa(e) {
         const { rgPresenters: t } = e;
         if (!t || 0 == t.length) return null;
-        const a = (0, u.sf)(U.TS.LANGUAGE);
+        const a = (0, u.sf)(x.TS.LANGUAGE);
         return 1 == t.length
           ? l.createElement(
               "div",
               {
-                className: (0, x.A)(
+                className: (0, U.A)(
                   ha().PresenterDisclaimer,
                   "PresenterDisclaimer",
                 ),
@@ -4576,7 +4576,7 @@
           : l.createElement(
               "div",
               {
-                className: (0, x.A)(
+                className: (0, U.A)(
                   ha().PresenterDisclaimer,
                   "PresenterDisclaimer",
                 ),
@@ -4648,7 +4648,7 @@
             Boolean(
               a.jsondata.sale_vanity_id_valve_approved_for_sale_subpath,
             ) &&
-            "community" == (0, U.yK)()
+            "community" == (0, x.yK)()
           ) {
             const e = document.getElementsByTagName("HEAD")[0],
               t = document.createElement("style");
@@ -4672,7 +4672,7 @@
           D = l.useMemo(
             () => ({
               promotionName: t,
-              clanid: Number(U.UF.CLANACCOUNTID),
+              clanid: Number(x.UF.CLANACCOUNTID),
               nAppIDVOD: Number(C?.broadcast_preroll_vod_appid),
               event: a,
               bIsPreview: r,
@@ -4723,7 +4723,7 @@
                   Q,
                   { event: a, language: o, bIsPreview: r },
                   b && l.createElement(va.Sn, null),
-                  l.createElement(Ua, { eventModel: a }),
+                  l.createElement(xa, { eventModel: a }),
                   Boolean(c) &&
                     l.createElement(sa, {
                       backgroundImageEditModel: c,
@@ -4733,7 +4733,7 @@
                   l.createElement(
                     "div",
                     {
-                      className: (0, x.A)({
+                      className: (0, U.A)({
                         [k().SaleOuterContainer]: !0,
                         [k().SaleOuterTopMargin]: I,
                         [k().SaleNewSizing]: p,
@@ -4820,7 +4820,7 @@
         let D = !1;
         const y = [{ elements: [], activeTab: new $.y(null, o) }];
         let G = null;
-        const T = (0, U.Qn)(),
+        const T = (0, x.Qn)(),
           L = (0, ka.ty)();
         C.forEach((n, r) => {
           const o = y[y.length - 1].activeTab;
@@ -4836,7 +4836,7 @@
           let p = (0, ba.I)(n, c, t, a, T);
           if (void 0 === p) return;
           if (p);
-          else if ((0, Z.su)(n) && !U.iA.logged_in)
+          else if ((0, Z.su)(n) && !x.iA.logged_in)
             D ||
               ((p = l.createElement(Z.CC, {
                 section: n,
@@ -4863,7 +4863,7 @@
                 setControllerCategory: w,
               }));
           }
-          L && (p = l.createElement(xa, { nSectionID: n.unique_id }, p));
+          L && (p = l.createElement(Ua, { nSectionID: n.unique_id }, p));
           let E = l.createElement(
             Ma,
             {
@@ -4901,7 +4901,7 @@
               "div",
               {
                 key: "TabSection_" + t,
-                className: (0, x.A)(
+                className: (0, U.A)(
                   k().SaleSectionTabListContainer,
                   "SaleSectionTabListContainer",
                 ),
@@ -4995,7 +4995,7 @@
                       {
                         navKey: d,
                         id: d,
-                        className: (0, x.A)({
+                        className: (0, U.A)({
                           [k().SaleSectionCtn]: !0,
                           SaleSectionCtn: !0,
                           [t.section_type]: !0,
@@ -5029,7 +5029,7 @@
                             "div",
                             {
                               id: d,
-                              className: (0, x.A)({
+                              className: (0, U.A)({
                                 [k().SaleSectionCtn]: !0,
                                 [k().SaleSectionBackgroundImageGroupEdit]: !0,
                                 [k().NoTopPadding]: t.collapse_header_space,
@@ -5048,7 +5048,7 @@
             )
           : null;
       }
-      function xa(e) {
+      function Ua(e) {
         const { nSectionID: t, children: a } = e,
           [r, o] = l.useState(!1),
           [i, s] = l.useState(!1);
@@ -5064,7 +5064,7 @@
             "div",
             {
               ref: g,
-              className: (0, x.A)(
+              className: (0, U.A)(
                 k().SaleSectionLivePreview,
                 m && k().Hover,
                 i && k().JumpedTo,
@@ -5093,10 +5093,10 @@
           )
         );
       }
-      function Ua(e) {
+      function xa(e) {
         const { eventModel: t } = e,
           a = (0, Ve.Ec)(t.clanSteamID.GetAccountID());
-        if (!a || (!a.can_edit && !a.support_user) || "store" != (0, U.yK)())
+        if (!a || (!a.can_edit && !a.support_user) || "store" != (0, x.yK)())
           return;
         const n = t.GetAllTags(),
           r = [];
@@ -5351,7 +5351,7 @@
       var n = a(90626),
         l = a(12447),
         r = a(84746),
-        o = a(77516),
+        o = a(89128),
         i = a(17720),
         s = a(6379),
         c = a(5719),

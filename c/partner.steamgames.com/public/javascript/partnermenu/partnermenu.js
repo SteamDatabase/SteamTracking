@@ -77,6 +77,7 @@
     ArrayWithoutFalsyValues: () => _,
     BInsertBeforeElement: () => _,
     CountMatches: () => _,
+    DiffArrays: () => _,
     FilterInPlace: () => _,
     FilterNonNull: () => _,
     FilterNonNullOrFalse: () => _,
@@ -249,6 +250,18 @@
   }
   function _(_) {
     return _.filter((_) => _ != null && _ !== !1);
+  }
+  function _(_, _) {
+    let _ = new Set(_),
+      _ = new Set(_),
+      _ = [..._].filter((_) => _.has(_)),
+      _ = [..._].filter((_) => !_.has(_)),
+      _ = [..._].filter((_) => !_.has(_));
+    return {
+      intersection: _,
+      removed: _,
+      added: _,
+    };
   }
   var _ = _(() => {
     "use strict";
@@ -41655,7 +41668,7 @@ Error generating stack: ` +
   }
   _();
   _();
-  var _ = _(_());
+  var _ = _(_(), 1);
   var _ = [
       "sc_schinese",
       "schinese",
@@ -44987,7 +45000,7 @@ Error generating stack: ` +
   var _ = "./partner_menu_french-AXK2QXCA.json";
   var _ = "./partner_menu_german-TSCDK2DA.json";
   var _ = "./partner_menu_greek-AWZ5LODA.json";
-  var _ = "./partner_menu_hungarian-NDKQNEAA.json";
+  var _ = "./partner_menu_hungarian-TGHYGNBA.json";
   var _ = "./partner_menu_indonesian-TO3VFUDA.json";
   var _ = "./partner_menu_italian-TBE3TUDA.json";
   var _ = "./partner_menu_japanese-CYCGCTBA.json";

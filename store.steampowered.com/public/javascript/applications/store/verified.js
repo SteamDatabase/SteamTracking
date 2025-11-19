@@ -230,8 +230,8 @@
       }
       var f = a(45359),
         _ = a(69409),
-        y = a(81416),
-        P = a(12155),
+        P = a(81416),
+        y = a(12155),
         w = a(51272),
         D = a(56011),
         N = a(61859),
@@ -290,7 +290,7 @@
               className: "BroadcastVideoUserInputNeeded",
               onClick: this.OnClick,
             },
-            o.createElement(P.jGG, null),
+            o.createElement(y.jGG, null),
             o.createElement(
               "span",
               null,
@@ -315,7 +315,7 @@
             o.createElement(
               "button",
               { className: "dash_stat_close_button", onClick: this.HideStats },
-              o.createElement(P.sED, null),
+              o.createElement(y.sED, null),
             ),
             o.createElement(
               "div",
@@ -757,7 +757,7 @@
                   onClick: this.OnSubtitlesClick,
                   ref: this.m_elSubtitlesButton,
                 },
-                o.createElement(P.N8C, null),
+                o.createElement(y.N8C, null),
               ),
             o.createElement(
               "div",
@@ -768,7 +768,7 @@
                 onClick: this.OnVideoControlClick,
                 ref: this.bindSettingsButton,
               },
-              o.createElement(P.wB_, null),
+              o.createElement(y.wB_, null),
             ),
             o.createElement(W, { video: a }),
             s &&
@@ -893,7 +893,7 @@
                 o.createElement(
                   "div",
                   { className: s, onClick: this.ToggleMute },
-                  o.createElement(P.fSs, null),
+                  o.createElement(y.fSs, null),
                 ),
                 o.createElement(z, { video: e, onDrag: this.OnChildDrag }),
               ),
@@ -1423,7 +1423,7 @@
                   className: "STV_BroadcastClose",
                   onClick: this.props.onClick,
                 },
-                o.createElement(P.sED, null),
+                o.createElement(y.sED, null),
               )
             : null;
         }
@@ -1449,7 +1449,7 @@
                   className: "videoControlButton videoControlJump controlFlip",
                   onClick: this.OnJumpBackward,
                 },
-                o.createElement(P.tID, {
+                o.createElement(y.tID, {
                   bHidePostArrow: !0,
                   bHidePreArrow: !0,
                   bShowJumpAheadBox: !0,
@@ -1465,7 +1465,7 @@
                   className: "videoControlButton videoControlJump",
                   onClick: this.OnJumpForward,
                 },
-                o.createElement(P.tID, {
+                o.createElement(y.tID, {
                   bHidePostArrow: !0,
                   bHidePreArrow: !0,
                   bShowJumpAheadBox: !0,
@@ -1497,7 +1497,7 @@
                     e.video.JumpToLiveEdge();
                   },
             },
-            o.createElement(P.tID, {
+            o.createElement(y.tID, {
               bHidePreArrow: !0,
               bHidePostArrow: !0,
               bFlipHorizontal: !1,
@@ -1524,7 +1524,7 @@
               className: "videoControlButton buttonPlayPause",
               onClick: this.OnTogglePlayPause,
             },
-            e ? o.createElement(P.jGG, null) : o.createElement(P.vRz, null),
+            e ? o.createElement(y.jGG, null) : o.createElement(y.vRz, null),
           );
         }
       };
@@ -1563,7 +1563,7 @@
                 (this.has_previous_marker ? "" : " noMarkersInDirection"),
               onClick: this.OnJumpToPreviousMarkerClicked,
             },
-            o.createElement(P.tID, { bHidePostArrow: !0, bFlipHorizontal: !0 }),
+            o.createElement(y.tID, { bHidePostArrow: !0, bFlipHorizontal: !0 }),
           );
         }
       };
@@ -1604,7 +1604,7 @@
                 (this.has_next_marker ? "" : " noMarkersInDirection"),
               onClick: this.OnJumpToNextMarkerClicked,
             },
-            o.createElement(P.tID, { bHidePostArrow: !0, bFlipHorizontal: !1 }),
+            o.createElement(y.tID, { bHidePostArrow: !0, bFlipHorizontal: !1 }),
           );
         }
       };
@@ -1626,7 +1626,7 @@
           o.createElement(
             "div",
             { className: "timelineMarkerIcon" },
-            o.createElement(P.Dp6, null),
+            o.createElement(y.Dp6, null),
           ),
         );
       function se(e) {
@@ -1943,7 +1943,7 @@
                       o.createElement(
                         "div",
                         { className: "STV_timelineGrabberArrow" },
-                        o.createElement(P.apU, null),
+                        o.createElement(y.apU, null),
                       ),
                     ),
                   ),
@@ -2044,7 +2044,7 @@
                     o.createElement(
                       "div",
                       { className: "BroadcastDetailsHeader_ViewerCount" },
-                      o.createElement(P.y_e, null),
+                      o.createElement(y.y_e, null),
                       (0, N.Yp)("#Broadcast_ViewerCount", t),
                     ),
                 ),
@@ -2101,7 +2101,7 @@
             o.createElement(
               "div",
               { className: "ContextMenuButton" },
-              o.createElement(P.GB9, null),
+              o.createElement(y.GB9, null),
             ),
           );
         }
@@ -2213,7 +2213,7 @@
                 : null,
               this.props.editMode &&
                 this.state.sizableRegion.map((e, t) =>
-                  o.createElement(y.I, {
+                  o.createElement(P.I, {
                     key: 100 * t + e.xPosPct,
                     index: t,
                     deleteFn: this.DeleteRegion,
@@ -2715,9 +2715,9 @@
         b = a(61859),
         f = a(26101),
         _ = a(47235),
-        y = a(2921),
-        P = a(18654),
-        w = a.n(P),
+        P = a(2921),
+        y = a(18654),
+        w = a.n(y),
         D = a(84842),
         N = a(37076),
         k = a(72237),
@@ -2734,7 +2734,7 @@
           } = (0, h.u)(e, { include_all_purchase_options: !0 }),
           {
             bHidePrice: d,
-            bShowDemoButton: P,
+            bShowDemoButton: y,
             bPreferDemoStorePage: M,
             bShowPurchaseOptionsButton: A,
             bUseSubscriptionLayout: O,
@@ -2860,7 +2860,7 @@
                   s.createElement(
                     "div",
                     { className: w().StoreSaleLibraryAssetWidgetRight },
-                    s.createElement(y.Yg, {
+                    s.createElement(P.Yg, {
                       info: i,
                       bPopOutTrailerPlayback: !0,
                     }),
@@ -2885,7 +2885,7 @@
                         s.createElement(k.Q, { item: i }),
                         s.createElement(S.wD, {
                           info: i,
-                          bShowDemoButton: P,
+                          bShowDemoButton: y,
                           bHidePrice: d,
                           bShowPurchaseOptionsButton: A,
                           fnOnPurchaseOptionsClick: R,
@@ -3005,11 +3005,14 @@
       class o extends l.Component {
         m_refImage = l.createRef();
         constructor(e) {
-          super(e), (this.state = { nImage: 0 });
+          super(e), (this.state = { nImage: 0, nPropChangeCounter: 0 });
         }
-        componentDidUpdate(e) {
+        componentDidUpdate(e, t) {
           JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
-            this.setState({ nImage: 0 });
+            this.setState({
+              nImage: 0,
+              nPropChangeCounter: t.nPropChangeCounter + 1,
+            });
         }
         get src() {
           let e = "";
@@ -3052,8 +3055,10 @@
               strAltText: s,
               ...n
             } = this.props,
-            o = this.src;
+            o = this.src,
+            r = this.state.nPropChangeCounter;
           return l.createElement("img", {
+            key: r,
             ref: this.m_refImage,
             ...n,
             src: o,
@@ -3087,8 +3092,8 @@
         b = a(31963);
       const f = new h.wd("TrailerAppVideo"),
         _ = "bGameHighlightAutoplayDisabled",
-        y = "discovery-queue-volume",
-        P = "discovery-queue-mute";
+        P = "discovery-queue-volume",
+        y = "discovery-queue-mute";
       function w(e) {
         const {
             storeItem: t,
@@ -3103,12 +3108,12 @@
           } = e,
           [v, E] = s.useState(!1),
           [b, f] = s.useState(!1),
-          y = (0, C.$9)(),
-          P = (function (e, t) {
+          P = (0, C.$9)(),
+          y = (function (e, t) {
             const a = e?.GetAllTrailers().GetAllTrailers("blocked" == t);
             return a && a.length > 0 ? a[0] : void 0;
-          })(t, y),
-          w = (h ?? !0) && P && !P.BIsAllAges() && "masked" == y,
+          })(t, P),
+          w = (h ?? !0) && y && !y.BIsAllAges() && "masked" == P,
           N = (0, C.AS)(),
           [k, I] = s.useState(!1),
           [M, A] = s.useState(0),
@@ -3154,7 +3159,7 @@
         s.useEffect(() => {
           p && (p.current = H);
         }, [H, p]);
-        const x = t.GetScreenshots("allowed" != y),
+        const x = t.GetScreenshots("allowed" != P),
           F = m && x.length > 0 ? x[0] : t.GetAssets().GetMainCapsuleURL();
         return s.createElement(
           l.Z,
@@ -3179,14 +3184,14 @@
             }),
           s.createElement(g.h, {
             name: t.GetName(),
-            trailerCategory: P?.GetTrailerCategory(),
+            trailerCategory: y?.GetTrailerCategory(),
             trailerDisplay: M,
             mouseOver: k,
           }),
           s.createElement(D, {
             eTrailerDisplay: M,
             setTrailerDisplay: A,
-            featuredTrailer: P,
+            featuredTrailer: y,
             refMicroTrailer: O,
             refMainTrailer: V,
             loadedAndActive: L && a,
@@ -3234,8 +3239,8 @@
             refMainTrailer: E,
             refMicroTrailer: b,
             loadedAndActive: _,
-            setVideoShouldStart: y,
-            broadcastVideo: P,
+            setVideoShouldStart: P,
+            broadcastVideo: y,
             fnSetBroadcastVideo: w,
             fnTogglePlayPause: D,
             bAutoplayVideos: k,
@@ -3305,10 +3310,10 @@
                         a(), f.Warning(`Failed to play ${t}: `, e);
                       }));
                 } else
-                  P && (f.Debug("Starting broadcast player"), g(2), P.Play());
+                  y && (f.Debug("Starting broadcast player"), g(2), y.Play());
               else f.Debug("Showing image");
             var e, t, a;
-          }, [_, h, i, T, u, P, g, E, b]),
+          }, [_, h, i, T, u, y, g, E, b]),
           (function (e, t) {
             s.useEffect(() => {
               if (!t.current || !t.current.onended) return;
@@ -3321,14 +3326,14 @@
             }, [e, t]);
           })(G, b),
           s.useEffect(() => {
-            _ || y(!1);
-          }, [_, y]),
+            _ || P(!1);
+          }, [_, P]),
           s.useEffect(() => {
             const e = (0, v.fm)(() => {
-              V(P?.GetUserInputNeeded()), x(!P?.IsPaused());
+              V(y?.GetUserInputNeeded()), x(!y?.IsPaused());
             });
             return () => e();
-          }, [P]),
+          }, [y]),
           (function (e, t, a, l, n, o, r) {
             const [i, c] = s.useState(!1);
             s.useEffect(() => {
@@ -3347,7 +3352,7 @@
                       : 2 == t && r && r.IsPaused() && r.Play(),
                   c(!1));
             }, [r, t, e, i, l, o, a, n]);
-          })(d, h, b.current, G, E.current, H, P),
+          })(d, h, b.current, G, E.current, H, y),
           t && t.BIsVisible()
             ? (a || n) &&
               s.createElement(
@@ -3446,8 +3451,8 @@
       }
       function k(e) {
         let { children: t } = e;
-        const [a, l] = (0, u.M)(y, 0.8),
-          [n, o] = (0, u.M)(P, !0);
+        const [a, l] = (0, u.M)(P, 0.8),
+          [n, o] = (0, u.M)(y, !0);
         return s.createElement(
           b.v,
           {
@@ -3538,11 +3543,11 @@
           r.createElement(
             h.Ay,
             { method: "verifiedprogram" },
-            r.createElement(m.tH, null, r.createElement(P, { storeItem: s })),
+            r.createElement(m.tH, null, r.createElement(y, { storeItem: s })),
           )
         );
       }
-      function y(e) {
+      function P(e) {
         const { storeItem: t } = e,
           a = (0, E.L$)(
             "https://clan.akamai.steamstatic.com/images/41316928/846f603df6057b070667f2741730c2038648955d.png",
@@ -3580,7 +3585,7 @@
           ),
         );
       }
-      function P(e) {
+      function y(e) {
         const { storeItem: t } = e;
         if (!t) return null;
         const a =
@@ -3602,7 +3607,7 @@
           r.createElement(
             "div",
             { className: (0, g.A)("page_content") },
-            r.createElement(y, { storeItem: t }),
+            r.createElement(P, { storeItem: t }),
             r.createElement(N, { storeItem: t }),
             r.createElement(w, { storeItem: t }),
             r.createElement(D, { storeItem: t }),

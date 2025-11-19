@@ -1906,23 +1906,21 @@ html.responsive.touch .GXjJQihysg6S5INBKClED:hover ._1dm-6uzq_x5Gqo421G3a1r {
   position: relative;
 }
 ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
-  width: 250px;
+  width: calc(200% + 12px);
   height: 100%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   border-radius: 3px;
 }
 @media screen and (max-width: 910px) {
   ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
-    width: calc(200% + 12px);
+    width: 250px;
   }
-}
-.BasicUI ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
-  width: calc(200% + 12px);
-}
-@media screen and (max-width: 910px) {
   ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U .TwoWidthSideInfo {
     display: none;
   }
+}
+.BasicUI ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U {
+  width: 250px;
 }
 .BasicUI ._292IWiCTro5jiTmIxiDfyc._25IMXSN3XeXOPiu-sYHV1U .TwoWidthSideInfo {
   display: none;

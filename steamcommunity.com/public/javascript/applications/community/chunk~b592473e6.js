@@ -1854,7 +1854,7 @@
         const { attrName: t, fnRender: o, value: r, setValues: n } = e;
         return o(
           r,
-          a.useCallback((e) => n((o) => ({ ...o, [t]: e })), [t]),
+          a.useCallback((e) => n((o) => ({ ...o, [t]: e })), [t, n]),
         );
       });
     },

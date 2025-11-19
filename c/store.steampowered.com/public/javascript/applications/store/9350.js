@@ -99,7 +99,7 @@
 	"Menu_Section_Hardware": "Hardware",
 	"Menu_Section_Hardware_VRHardware": "Hardware pentru RV",
 	"Menu_Section_Hardware_SteamDeckDock": "Stație de andocare",
-	"Menu_Section_Hardware_Family": "New Steam Hardware",
+	"Menu_Section_Hardware_Family": "Noul Hardware Steam",
 	"Menu_Section_WaysToPlay": "Modalități de joc",
 	"Menu_Section_SpecialSections": "Secțiuni speciale",
 	"Menu_Section_SpecialSections_NextFest": "Festivalul Steam Next",

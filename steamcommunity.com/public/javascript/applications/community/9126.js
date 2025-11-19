@@ -1981,7 +1981,10 @@
         return (
           (0, k.hL)(
             l,
-            m.useCallback((e) => r(!!t.nodes.table && st.aH(e.state)), []),
+            m.useCallback(
+              (e) => r(!!t.nodes.table && st.aH(e.state)),
+              [t.nodes.table],
+            ),
           ),
           m.createElement(
             it.R,
@@ -2920,7 +2923,7 @@
       }
       var Jt = n(69818),
         Xt = n(56330),
-        Zt = n(50929);
+        Zt = n(5726);
       function en(e) {
         const t = we.mh.GetEditModel();
         for (let n = 0; n < t.GetEventModel().jsondata.user_polls.length; ++n) {

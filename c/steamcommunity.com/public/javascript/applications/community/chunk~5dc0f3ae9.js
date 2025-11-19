@@ -16487,6 +16487,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  commercial_license_restricted: {
+                    _: 13,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -18407,6 +18412,7 @@
                   _.review_count.toLocaleString(),
                 ),
               },
+              "(",
               __webpack_require__
                 ? "(" + _.review_count.toLocaleString() + ")"
                 : _
@@ -18419,6 +18425,7 @@
                       "#GameHover_UserReviewCount",
                       _.review_count.toLocaleString(),
                     ),
+              ")",
             ),
             !__webpack_require__ &&
               _.createElement(
@@ -18497,7 +18504,7 @@
                 12 != (null == _ ? void 0 : _.GetAppType())) ||
                 _(_.GetParentAppID() || _);
             }, [_, _]),
-            _)
+            _ && 10 != (null == _ ? void 0 : _.GetAppType()))
           )
             return null;
           return _.createElement(

@@ -504,7 +504,7 @@
   margin: 2px 0 2px -4px;
   padding: 0;
   flex-wrap: wrap;
-  max-height: 39px;
+  max-height: 20px;
   -webkit-mask-image: none;
   mask-image: none;
 }
@@ -2441,6 +2441,9 @@
   align-items: center;
   overflow: hidden;
   padding: 0px 8px;
+}
+.BroadcastDetailsSection .BroadcastDetails .StoreSaleWidgetOuterContainer {
+  min-width: 520px;
 }
 .BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader {
   height: 60px;
