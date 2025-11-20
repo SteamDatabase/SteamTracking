@@ -176,6 +176,8 @@ a:hover {
 	width:638px;
 	margin: 5px 0px 0px 0px;
 	float: left;
+	display: flex;
+	flex-direction: column;
 	padding-bottom: 7px;
 }
 
