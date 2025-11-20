@@ -3239,7 +3239,7 @@
           { navID: "GameHighlightGamepadCarousel" },
           r.createElement(
             It.QY,
-            { supportsFullscreen: !0, supportsTheater: !1 },
+            { supportsFullscreen: !1, supportsTheater: !0 },
             r.createElement(
               Pt,
               null,

@@ -4048,8 +4048,8 @@
           _.createElement(
             _._,
             {
-              supportsFullscreen: !0,
-              supportsTheater: !1,
+              supportsFullscreen: !1,
+              supportsTheater: !0,
             },
             _.createElement(
               _,
