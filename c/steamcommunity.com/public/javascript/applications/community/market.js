@@ -489,6 +489,8 @@
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         steamidOwner: void 0,
@@ -666,7 +668,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -1216,8 +1217,6 @@
       function _() {
         return _.useContext(_).bInteractable;
       }
-      var _,
-        _ = __webpack_require__("chunkid");
       function _(_) {
         const { action: _ } = _,
           _ = _();
@@ -1438,6 +1437,7 @@
           _.name,
         );
       }
+      var _;
       !(function (_) {
         (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
           (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
@@ -1491,11 +1491,16 @@
       })(_ || (_ = {}));
       _.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS;
       function _(_) {
-        const { appid: _, hashName: __webpack_require__, bCanInteract: _ } = _,
+        const {
+            eWalletCurrency: _,
+            appid: __webpack_require__,
+            hashName: _,
+            bCanInteract: _,
+          } = _,
           { data: _, isLoading: _ } =
-            ((_ = _.k_ECurrencyCodeUSD),
-            (_ = _),
+            ((_ = _),
             (_ = __webpack_require__),
+            (_ = _),
             (0, _._)(
               (function (_, _, _) {
                 return {
@@ -1540,7 +1545,7 @@
                     {
                       underline: "auto",
                       color: "greyneutral-12",
-                      href: `${_._.COMMUNITY_BASE_URL}market/listings/${_}/${encodeURIComponent(__webpack_require__)}`,
+                      href: `${_._.COMMUNITY_BASE_URL}market/listings/${__webpack_require__}/${encodeURIComponent(_)}`,
                     },
                     _("#SellOnMarket_View"),
                   ),
@@ -1959,11 +1964,115 @@
         },
         SellOnMarket: function () {
           const _ = _(),
-            _ = _();
+            _ = _(),
+            _ = (function (_) {
+              switch (null == _ ? void 0 : _.toUpperCase()) {
+                case "US":
+                default:
+                  return _.k_ECurrencyCodeUSD;
+                case "AU":
+                  return _.k_ECurrencyCodeAUD;
+                case "AE":
+                  return _.k_ECurrencyCodeAED;
+                case "BR":
+                  return _.k_ECurrencyCodeBRL;
+                case "CA":
+                  return _.k_ECurrencyCodeCAD;
+                case "CH":
+                  return _.k_ECurrencyCodeCHF;
+                case "CL":
+                  return _.k_ECurrencyCodeCLP;
+                case "CN":
+                  return _.k_ECurrencyCodeCNY;
+                case "CO":
+                  return _.k_ECurrencyCodeCOP;
+                case "CR":
+                  return _.k_ECurrencyCodeCRC;
+                case "GB":
+                  return _.k_ECurrencyCodeGBP;
+                case "AT":
+                case "BE":
+                case "CY":
+                case "EE":
+                case "FI":
+                case "FR":
+                case "DE":
+                case "GR":
+                case "IE":
+                case "IT":
+                case "LV":
+                case "LT":
+                case "LU":
+                case "MT":
+                case "NL":
+                case "PT":
+                case "SK":
+                case "SI":
+                case "ES":
+                case "AD":
+                case "XK":
+                case "MC":
+                case "ME":
+                case "SM":
+                case "VA":
+                  return _.k_ECurrencyCodeEUR;
+                case "HK":
+                  return _.k_ECurrencyCodeHKD;
+                case "IL":
+                  return _.k_ECurrencyCodeILS;
+                case "ID":
+                  return _.k_ECurrencyCodeIDR;
+                case "IN":
+                  return _.k_ECurrencyCodeINR;
+                case "JP":
+                  return _.k_ECurrencyCodeJPY;
+                case "KR":
+                  return _.k_ECurrencyCodeKRW;
+                case "KW":
+                  return _.k_ECurrencyCodeKWD;
+                case "KZ":
+                  return _.k_ECurrencyCodeKZT;
+                case "MX":
+                  return _.k_ECurrencyCodeMXN;
+                case "MY":
+                  return _.k_ECurrencyCodeMYR;
+                case "NO":
+                  return _.k_ECurrencyCodeNOK;
+                case "NZ":
+                  return _.k_ECurrencyCodeNZD;
+                case "PE":
+                  return _.k_ECurrencyCodePEN;
+                case "PH":
+                  return _.k_ECurrencyCodePHP;
+                case "PL":
+                  return _.k_ECurrencyCodePLN;
+                case "QA":
+                  return _.k_ECurrencyCodeQAR;
+                case "RU":
+                  return _.k_ECurrencyCodeRUB;
+                case "SA":
+                  return _.k_ECurrencyCodeSAR;
+                case "SG":
+                  return _.k_ECurrencyCodeSGD;
+                case "TH":
+                  return _.k_ECurrencyCodeTHB;
+                case "TW":
+                  return _.k_ECurrencyCodeTWD;
+                case "UA":
+                  return _.k_ECurrencyCodeUAH;
+                case "UY":
+                  return _.k_ECurrencyCodeUYU;
+                case "VN":
+                  return _.k_ECurrencyCodeVND;
+                case "ZA":
+                  return _.k_ECurrencyCodeZAR;
+              }
+            })(_._.country_code);
           if (!_.marketable) return null;
           const _ = _.market_hash_name || _.market_name || _.name;
           return _
             ? _.createElement(_, {
+                eWalletCurrency: _,
                 appid: _.appid,
                 hashName: _,
                 bCanInteract: _,
@@ -2045,6 +2154,7 @@
             bInteractable: _ = !0,
             bIncludeMarketInfo: _ = !0,
             steamidOwner: _,
+            strSelectItemAction: _,
           } = _,
           [_, _] = _.useState();
         return (
@@ -2105,11 +2215,78 @@
                           asset: _.asset,
                           bInteractable: _,
                           bIncludeMarketInfo: _,
+                          strSelectItemAction: _,
                         }),
                   ),
                 ),
               )
             : null
+        );
+      }
+      function _(_) {
+        const {
+          description: _,
+          asset: __webpack_require__,
+          bInteractable: _,
+          bIncludeMarketInfo: _,
+          strSelectItemAction: _,
+        } = _;
+        return _.createElement(
+          _.Root,
+          {
+            description: _,
+            asset: __webpack_require__,
+            bInteractable: _,
+          },
+          _.createElement(
+            _.Container,
+            null,
+            _.createElement(
+              _.Content,
+              null,
+              _.createElement(_.Image, null),
+              _.createElement(_.Separator, null),
+              _.createElement(_.Name, null),
+              _.createElement(_.FraudWarnings, null),
+              _.createElement(_.GameInfo, null),
+              _.createElement(_.Descriptions, null),
+              _.createElement(_.Actions, null),
+              _.createElement(_.OwnerDescriptions, null),
+              _.createElement(_.OwnerActions, null),
+              _.createElement(_.Tags, null),
+              _.createElement(_.AssetProperties, null),
+            ),
+            _ && !_ && _.createElement(_.SellOnMarket, null),
+            !!_ &&
+              _.createElement(_, {
+                strLabel: _,
+              }),
+          ),
+        );
+      }
+      function _(_) {
+        const { strLabel: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            background: "greyneutral-3",
+            padding: "4",
+            gapY: "3",
+            direction: "column",
+          },
+          _.createElement(
+            _._,
+            null,
+            _.createElement(
+              _._,
+              {
+                color: "green",
+                onClick: () => window.SelectItemDialogOnSelect(),
+                size: "1",
+              },
+              _,
+            ),
+          ),
         );
       }
       function _(_) {
