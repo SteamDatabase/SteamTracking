@@ -156,7 +156,6 @@ body.v6 .game_area_purchase h2.package_group {
 }
 
 .gamehighlight_desktopskeleton_itemview {
-	background-color: #000000;
 	background-color: rgba(0, 0, 0, 0.2);
 	overflow: hidden;
 	position: relative;
@@ -165,16 +164,46 @@ body.v6 .game_area_purchase h2.package_group {
 }
 
 .gamehighlight_desktopskeleton_stripitems {
-	background-color: #000000;
 	background-color: rgba(0, 0, 0, 0.2);
 	height: 65px;
 	margin: 6px 0px;
 }
 
 .gamehighlight_desktopskeleton_stripscrollbar {
-	background-color: #000000;
 	background-color: rgba(0, 0, 0, 0.2);
 	height: 18px;
+}
+
+
+.gamehighlight_gamepadskeleton {
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	max-height: unset;
+	width: calc( 100% + var(--gpSpace-Gutter) + 8px );
+	margin-left: calc( var(--gpSpace-Gutter)* -1 );
+	padding: 10px 0px 8px 0px;
+}
+
+.gamehighlight_gamepadskeleton_inner {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	padding-left: var(--gpSpace-Gutter);
+	margin-right: 8px;
+}
+
+.gamehighlight_gamepadskeleton_item {
+	width: 94%;
+	min-width: 94%;
+	scroll-snap-align: center;
+	aspect-ratio: 16 / 9;
+
+	background-color: rgba( 0, 0, 0, 0.2 );
 }
 
 .highlight_player_item {

@@ -3266,7 +3266,19 @@
             return [n, a];
           })(l, s),
           p = Nt(t, a);
-        if (0 == p.length) return null;
+        if (
+          ((function (e) {
+            let t = e.length;
+            (0, r.useLayoutEffect)(() => {
+              if (t < 1) return;
+              document
+                .querySelectorAll(".gamehighlight_gamepadskeleton")
+                .forEach((e) => e.remove());
+            }, [t]);
+          })(p),
+          0 == p.length)
+        )
+          return null;
         let h = p.map((e) =>
             "screenshot" == e.type
               ? r.createElement(kt, { key: e.key, screenshot: e.data })

@@ -4080,7 +4080,19 @@
             return [_, _];
           })(_, _),
           _ = _(_, __webpack_require__);
-        if (0 == _.length) return null;
+        if (
+          ((function (_) {
+            let _ = _.length;
+            (0, _.useLayoutEffect)(() => {
+              if (_ < 1) return;
+              document
+                .querySelectorAll(".gamehighlight_gamepadskeleton")
+                .forEach((_) => _.remove());
+            }, [_]);
+          })(_),
+          0 == _.length)
+        )
+          return null;
         let _ = _.map((_) =>
             "screenshot" == _.type
               ? _.createElement(_, {
