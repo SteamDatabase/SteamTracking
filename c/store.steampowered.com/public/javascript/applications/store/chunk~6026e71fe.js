@@ -17581,6 +17581,8 @@
         (0, _._)([_._], _.prototype, "LoadPriceStops", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_facets = [];
@@ -17594,6 +17596,7 @@
         m_matchingReferencedCapsules;
         m_strQuery;
         m_strURLParam;
+        m_strFacetDefinitionHash;
         m_nSelectedOptions;
         m_userPreferences;
         m_prunedFacets;
@@ -17631,6 +17634,7 @@
                 });
             }),
             this.PruneFacets(),
+            this.UpdateFacetDefinitionHash(_),
             this.UpdateFilter(),
             (this.m_bHasHideIgnoredItemsFacetValue = _.some((_) =>
               _.facetValues.some(
@@ -17652,6 +17656,9 @@
         }
         GetURLParam() {
           return this.m_strURLParam;
+        }
+        GetFacetDefinitionHash() {
+          return this.m_strFacetDefinitionHash;
         }
         GetSelectedOptionsCount() {
           return this.m_nSelectedOptions;
@@ -17744,6 +17751,9 @@
             this.UpdateURLParam(),
             this.UpdateSelectedOptionsCount(),
             this.UpdateUserPreferenceFilters();
+        }
+        UpdateFacetDefinitionHash(_) {
+          this.m_strFacetDefinitionHash = String((0, _._)((0, _._)(_)));
         }
         static BFacetHasEnabledOptTags(_) {
           for (const _ of _.facetValues)
@@ -18803,7 +18813,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -25108,6 +25117,7 @@
                 ? (_ += "_" + _.contentHub.category)
                 : "tags" === _.contentHub.type &&
                   (_ += "_" + _.contentHub.tagid)),
+            (_ += "_" + _.facetFilter?.GetFacetDefinitionHash()),
             _
           );
         }

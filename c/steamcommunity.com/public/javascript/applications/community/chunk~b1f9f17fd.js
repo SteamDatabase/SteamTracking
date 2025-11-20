@@ -24394,6 +24394,8 @@
         (0, _._)([_._], _.prototype, "LoadPriceStops", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor(_, _, _, _) {
@@ -24432,6 +24434,7 @@
                 });
             }),
             this.PruneFacets(),
+            this.UpdateFacetDefinitionHash(_),
             this.UpdateFilter(),
             (this.m_bHasHideIgnoredItemsFacetValue = _.some((_) =>
               _.facetValues.some(
@@ -24453,6 +24456,9 @@
         }
         GetURLParam() {
           return this.m_strURLParam;
+        }
+        GetFacetDefinitionHash() {
+          return this.m_strFacetDefinitionHash;
         }
         GetSelectedOptionsCount() {
           return this.m_nSelectedOptions;
@@ -24548,6 +24554,9 @@
             this.UpdateURLParam(),
             this.UpdateSelectedOptionsCount(),
             this.UpdateUserPreferenceFilters();
+        }
+        UpdateFacetDefinitionHash(_) {
+          this.m_strFacetDefinitionHash = String((0, _._)((0, _._)(_)));
         }
         static BFacetHasEnabledOptTags(_) {
           for (const _ of _.facetValues)
@@ -26349,7 +26358,6 @@
         };
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -33200,6 +33208,7 @@
           return `browser_${_}_${_}_${_}_${_.nSectionUniqueID || "*"}_${_.nTabUniqueID || "*"}_${(null === (_ = _.facetFilter) || void 0 === _ ? void 0 : _.GetURLParam()) || "*"}_${_.strSearch || "*"}_${_.eControllerCategory || "*"}`;
         }
         GetItemBrowserQueryKey(_, _, _, _) {
+          var _;
           let _ = this.GetItemBrowserQueryKeyForConfig(_, _, _, _);
           return (
             _.contentHub &&
@@ -33208,6 +33217,11 @@
                 ? (_ += "_" + _.contentHub.category)
                 : "tags" === _.contentHub.type &&
                   (_ += "_" + _.contentHub.tagid)),
+            (_ +=
+              "_" +
+              (null === (_ = _.facetFilter) || void 0 === _
+                ? void 0
+                : _.GetFacetDefinitionHash())),
             _
           );
         }
