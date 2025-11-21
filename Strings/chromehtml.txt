@@ -567,6 +567,7 @@ $\n k_SystemAudioPortDirection_Input
 --force-device-scale-factor=1
 --force-renderer-accessibility
 --full-memory-crash-report
+--gaia-url=http://disabled.invalid
 --gpu-launcher='%s'
 --ignore-gpu-blocklist
 --log-file=%s
@@ -3286,6 +3287,7 @@ QIWI
 QkkXa
 Qualcomm
 Quechua
+R nk
 RESOURCE_EXHAUSTED
 RackSystem
 Raid
