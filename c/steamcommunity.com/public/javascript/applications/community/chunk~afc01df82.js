@@ -334,7 +334,6 @@
         const {
             closeModal: _,
             appid: __webpack_require__,
-            eventModel: _,
             partnerEventStore: _,
             primaryLocalizedImage: _,
             clanSteamID: _,
@@ -453,7 +452,7 @@
                     },
                     _.createElement(_._, {
                       clanSteamID: _,
-                      eventModel: _,
+                      eventModel: void 0,
                       artworkType: "localized_image_group",
                       title: (0, _._)("#ImagePickerLoc_Title"),
                       realms: _,
@@ -703,7 +702,6 @@
                   _.createElement(_, {
                     primaryLocalizedImage: _,
                     appid: __webpack_require__,
-                    eventModel: void 0,
                     clanSteamID: _,
                     fnSetImageURL: _,
                     rgRealmList: _,
@@ -3343,8 +3341,8 @@
             include_assets: !0,
           }),
           [_, _] = (0, _._)(() => [
-            _.GetEventType(),
-            _.BHasTag("vo_marketing_message"),
+            null == _ ? void 0 : _.GetEventType(),
+            null == _ ? void 0 : _.BHasTag("vo_marketing_message"),
           ]),
           _ = 36 == _;
         let _ = null;

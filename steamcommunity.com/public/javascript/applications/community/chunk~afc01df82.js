@@ -308,58 +308,57 @@
         const {
             closeModal: t,
             appid: a,
-            eventModel: n,
-            partnerEventStore: r,
-            primaryLocalizedImage: o,
-            clanSteamID: s,
-            fnSetImageURL: m,
-            rgRealmList: g,
-            fnLangHasData: d,
-            fnGetImageHash: u,
+            partnerEventStore: n,
+            primaryLocalizedImage: r,
+            clanSteamID: o,
+            fnSetImageURL: s,
+            rgRealmList: m,
+            fnLangHasData: g,
+            fnGetImageHash: d,
           } = e,
-          [E, p] = i.useState(),
-          [v, _] = i.useState(!0),
-          h = (0, k.YR)(() => l().CancelToken.source());
+          [u, E] = i.useState(),
+          [p, v] = i.useState(!0),
+          _ = (0, k.YR)(() => l().CancelToken.source());
         i.useEffect(
-          () => () => h.cancel("LocalizedImageDialog component unmounted"),
-          [h],
+          () => () => _.cancel("LocalizedImageDialog component unmounted"),
+          [_],
         );
-        const A = i.useCallback(async () => {
+        const h = i.useCallback(async () => {
             try {
-              const e = b.b.InitFromClanID(o.clanAccountID),
+              const e = b.b.InitFromClanID(r.clanAccountID),
                 t = await U.z.AsyncGetImageResolution(
                   e,
-                  o.image_hash,
-                  o.file_type,
-                  h,
+                  r.image_hash,
+                  r.file_type,
+                  _,
                   !1,
                 );
-              h.token.reason || p(t);
+              _.token.reason || E(t);
             } catch (e) {
               let t = (0, f.H)(e);
               console.error("LocalizedImageDialog : " + t.strErrorMsg, t);
             }
-          }, [h, o.clanAccountID, o.file_type, o.image_hash]),
-          G = i.useCallback(async () => {
+          }, [_, r.clanAccountID, r.file_type, r.image_hash]),
+          A = i.useCallback(async () => {
             try {
-              await D.R.DetermineAvailableLocalizationForGroup(h),
-                h.token.reason || _(!1);
+              await D.R.DetermineAvailableLocalizationForGroup(_),
+                _.token.reason || v(!1);
             } catch (e) {
               let t = (0, f.H)(e);
               console.error("LocalizedImageDialog : " + t.strErrorMsg, t);
             }
-          }, [h]);
+          }, [_]);
         i.useEffect(() => {
           t &&
-            (D.R.SetPrimaryImageForImageGroup(o, "localized_image_group"),
-            A(),
-            G());
-        }, [t, G, A, o]);
-        const B = !v && E,
-          x = E ? ` - ${E.width}x${E.height}` : "",
-          M = (0, T.EG)(o.file_type).slice(1),
-          O = E && { width: E.width, height: E.height },
-          P = U.z.GenerateURLFromHashAndExt(s, U.z.GetHashAndExt(o));
+            (D.R.SetPrimaryImageForImageGroup(r, "localized_image_group"),
+            h(),
+            A());
+        }, [t, A, h, r]);
+        const G = !p && u,
+          B = u ? ` - ${u.width}x${u.height}` : "",
+          x = (0, T.EG)(r.file_type).slice(1),
+          M = u && { width: u.width, height: u.height },
+          O = U.z.GenerateURLFromHashAndExt(o, U.z.GetHashAndExt(r));
         return i.createElement(
           w.eV,
           {
@@ -388,42 +387,42 @@
                       tooltip: (0, S.we)("#ImagePickerLoc_Default_Hint"),
                     }),
                   ),
-                  i.createElement("img", { className: L.TitleImg, src: P }),
-                  i.createElement("div", null, o.file_name + x + " - " + M),
+                  i.createElement("img", { className: L.TitleImg, src: O }),
+                  i.createElement("div", null, r.file_name + B + " - " + x),
                 ),
               ),
-              !B &&
+              !G &&
                 i.createElement(C.t, {
                   position: "center",
                   string: (0, S.we)("#Loading"),
                 }),
-              B &&
+              G &&
                 i.createElement(
                   i.Fragment,
                   null,
                   i.createElement(N.t, {
-                    clanSteamID: s,
+                    clanSteamID: o,
                     rgSupportArtwork: [],
-                    localizedPrimaryImage: o,
-                    forceResolution: O,
+                    localizedPrimaryImage: r,
+                    forceResolution: M,
                     bAllowPreviousClanImageSelection: !0,
-                    fnSetImageURL: m,
-                    rgRealmList: g,
+                    fnSetImageURL: s,
+                    rgRealmList: m,
                   }),
                   i.createElement(
                     "div",
                     { className: L.ArtworkBar },
                     i.createElement(y.it, {
-                      clanSteamID: s,
-                      eventModel: n,
+                      clanSteamID: o,
+                      eventModel: void 0,
                       artworkType: "localized_image_group",
                       title: (0, S.we)("#ImagePickerLoc_Title"),
-                      realms: g,
-                      fnLangHasData: d,
+                      realms: m,
+                      fnLangHasData: g,
                       appid: a,
-                      fnGetImageHashAndExt: u,
-                      fnSetImageURL: m,
-                      partnerEventStore: r,
+                      fnGetImageHashAndExt: d,
+                      fnSetImageURL: s,
+                      partnerEventStore: n,
                     }),
                   ),
                 ),
@@ -641,7 +640,6 @@
                   i.createElement(G, {
                     primaryLocalizedImage: e,
                     appid: a,
-                    eventModel: void 0,
                     clanSteamID: t,
                     fnSetImageURL: u,
                     rgRealmList: _,
@@ -2856,8 +2854,8 @@
           } = e,
           [L] = (0, g.t7)(r, { include_assets: !0 }),
           [N, y] = (0, o.q3)(() => [
-            u.GetEventType(),
-            u.BHasTag("vo_marketing_message"),
+            null == u ? void 0 : u.GetEventType(),
+            null == u ? void 0 : u.BHasTag("vo_marketing_message"),
           ]),
           R = 36 == N;
         let T = null;
