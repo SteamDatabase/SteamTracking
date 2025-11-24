@@ -800,9 +800,6 @@ html.responsive.tablet .carousel__slider-tray-wrapper {
 ._1ggzska8h4zQPvkSiT3642 {
   min-height: 340px;
 }
-._3gj5bE9dm_7GXn87PPWJ7q {
-  width: fit-content;
-}
 ._3gj5bE9dm_7GXn87PPWJ7q .DialogTextInputBase:read-only {
   color: #fff;
 }
@@ -827,6 +824,8 @@ html.responsive.tablet .carousel__slider-tray-wrapper {
   background: rgba(0, 0, 0, 0.4);
   padding: 8px 8px;
   box-sizing: border-box;
+  overflow-wrap: break-word;
+  margin-bottom: 10px;
 }
 ._3gj5bE9dm_7GXn87PPWJ7q ._23i3vxhJO5yZFZ8UkYUHfq {
   display: inline-block;
