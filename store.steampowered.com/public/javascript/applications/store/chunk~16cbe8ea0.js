@@ -8022,9 +8022,9 @@
           staleTime: 1 / 0,
         });
       }
-      function ie(e, t, r, i) {
-        const n = (0, G.KV)(),
-          o = (0, O.jE)();
+      function ie(e, t, r, i, n) {
+        const o = (0, G.KV)(),
+          l = (0, O.jE)();
         return (0, k.n)({
           mutationFn: () =>
             (async function (e, t, r, i) {
@@ -8038,7 +8038,7 @@
                   console.warn(`Failed to nominate app: ${o.GetEResult()}`),
                 [o.GetEResult(), o.Body().toObject()]
               );
-            })(n, e, t, r),
+            })(o, e, t, r),
           onSuccess: ([e, t]) => {
             1 == e
               ? (!(function (e, t) {
@@ -8046,11 +8046,12 @@
                     [`SteamAwardNominations_${W.iA.accountid}`],
                     t,
                   );
-                })(o, t.nominations),
+                })(l, t.nominations),
                 window.setTimeout(
-                  () => o.invalidateQueries({ queryKey: ee() }),
+                  () => l.invalidateQueries({ queryKey: ee() }),
                   1e3,
-                ))
+                ),
+                n && n())
               : i && i(e);
           },
           onError: () => {

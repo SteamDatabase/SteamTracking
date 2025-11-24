@@ -1307,6 +1307,7 @@
                 })
               : _.createElement(_, {
                   category: _,
+                  fnShowPicker: __webpack_require__,
                 }),
             _.createElement(
               "div",
@@ -1317,13 +1318,14 @@
                 unAppID: _._,
                 eSteamAwardCategoryID: _.voteid,
                 eNominatonSource: 0,
+                fnShowPicker: __webpack_require__,
               }),
             ),
           )
         );
       }
       function _(_) {
-        const { category: _ } = _,
+        const { category: _, fnShowPicker: __webpack_require__ } = _,
           _ = (0, _._)(_.voteid),
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -1368,6 +1370,7 @@
               )
             : _.createElement(_, {
                 eSteamAwardCategoryID: _.voteid,
+                fnShowPicker: __webpack_require__,
               }),
           Boolean(!_) &&
             _.data?.suggested_events?.length > 0 &&
@@ -1411,7 +1414,8 @@
         );
       }
       function _(_) {
-        const { eSteamAwardCategoryID: _ } = _;
+        const { eSteamAwardCategoryID: _, fnShowPicker: __webpack_require__ } =
+          _;
         return _.createElement(
           "div",
           {
@@ -1435,6 +1439,7 @@
             unAppID: _._,
             eSteamAwardCategoryID: _,
             eNominatonSource: 0,
+            fnShowPicker: __webpack_require__,
           }),
         );
       }
@@ -1640,6 +1645,7 @@
             unAppID: _,
             eSteamAwardCategoryID: __webpack_require__,
             eNominatonSource: _,
+            fnShowPicker: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -1662,7 +1668,10 @@
             },
             [_, _],
           ),
-          _ = (0, _._)(_, __webpack_require__, _, _);
+          _ = _.useCallback(() => {
+            _ === _._ && _ && _(!1);
+          }, [_, _]),
+          _ = (0, _._)(_, __webpack_require__, _, _, _);
         let _ = (0, _._)("#Steamawards_Nominate"),
           _ = null;
         return (
@@ -1819,7 +1828,9 @@
                     bEnableNominating: _,
                     steamid: _,
                   })
-                : _.createElement(_, null),
+                : _.createElement(_, {
+                    year: __webpack_require__,
+                  }),
               !_ &&
                 _.createElement(
                   "div",
@@ -1883,6 +1894,13 @@
                   className: _().FAQComingsoon,
                 },
                 (0, _._)("#Steamawards_NominateNow"),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _().FAQComingsoon,
+                },
+                (0, _._)("#Steamawards_LevelUpNow", _.year),
               ),
               _.createElement(
                 "div",
