@@ -686,6 +686,15 @@ td.rdtYear:hover {
 .rdtTime td {
   cursor: default;
 }
+._1FFwlWIoDrtb0qdN9YUwHs {
+  overflow: hidden !important;
+  scrollbar-gutter: stable;
+}
+@media screen and (max-width: 730px) {
+  ._1FFwlWIoDrtb0qdN9YUwHs {
+    scrollbar-gutter: initial;
+  }
+}
 .GXjJQihysg6S5INBKClED {
   position: relative;
   display: inline-block;
@@ -705,6 +714,9 @@ td.rdtYear:hover {
   box-shadow: none;
   right: unset;
   overflow: hidden;
+}
+.BasicUI ._1dm-6uzq_x5Gqo421G3a1r {
+  display: inline-flex;
 }
 .GXjJQihysg6S5INBKClED:hover ._1dm-6uzq_x5Gqo421G3a1r {
   position: absolute;
@@ -734,6 +746,15 @@ html.responsive.touch .GXjJQihysg6S5INBKClED:hover ._1dm-6uzq_x5Gqo421G3a1r {
   white-space: nowrap;
   font-size: 14px;
   color: #0e141b;
+  font-weight: 600;
+  line-height: 16px;
+}
+.BasicUI ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
+  text-shadow: none !important;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #0e141b !important;
   font-weight: 600;
   line-height: 16px;
 }

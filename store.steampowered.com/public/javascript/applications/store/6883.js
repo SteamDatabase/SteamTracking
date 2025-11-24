@@ -26,6 +26,7 @@
       e.exports = {
         strMaxMobileWidth: "700px",
         strMaxResponsiveWidth: "910px",
+        strMaxTabletWidth: "1080px",
       };
     },
     31258: (e, r, t) => {

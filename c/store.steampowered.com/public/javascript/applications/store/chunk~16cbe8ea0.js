@@ -6068,6 +6068,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -6078,24 +6079,23 @@
       function _() {
         return window.innerWidth >= _;
       }
-      function _(_ = _) {
+      function _() {
+        const [_, _] = (0, _.useState)(window.innerWidth);
         return (
-          (function () {
-            const [_, _] = (0, _.useState)(window.innerWidth);
+          (0, _.useEffect)(() => {
+            const _ = () => {
+              _(window.innerWidth);
+            };
             return (
-              (0, _.useEffect)(() => {
-                const _ = () => {
-                  _(window.innerWidth);
-                };
-                return (
-                  window.addEventListener("resize", _),
-                  () => window.removeEventListener("resize", _)
-                );
-              }, []),
-              _
+              window.addEventListener("resize", _),
+              () => window.removeEventListener("resize", _)
             );
-          })() >= _
+          }, []),
+          _
         );
+      }
+      function _(_ = _) {
+        return _() >= _;
       }
       function _(_) {
         const _ = _(_),

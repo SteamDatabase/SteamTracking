@@ -6136,13 +6136,14 @@
       "use strict";
       a.d(t, {
         $m: () => i,
-        Sn: () => d,
+        ML: () => c,
+        Sn: () => _,
         Wn: () => o,
-        ZI: () => p,
-        a4: () => c,
-        f_: () => u,
+        ZI: () => g,
+        a4: () => u,
+        f_: () => d,
         jD: () => s,
-        jn: () => _,
+        jn: () => p,
         mj: () => l,
         rp: () => m,
       });
@@ -6155,27 +6156,26 @@
       function m() {
         return window.innerWidth >= o;
       }
-      function c(e = o) {
+      function c() {
+        const [e, t] = (0, n.useState)(window.innerWidth);
         return (
-          (function () {
-            const [e, t] = (0, n.useState)(window.innerWidth);
+          (0, n.useEffect)(() => {
+            const e = () => {
+              t(window.innerWidth);
+            };
             return (
-              (0, n.useEffect)(() => {
-                const e = () => {
-                  t(window.innerWidth);
-                };
-                return (
-                  window.addEventListener("resize", e),
-                  () => window.removeEventListener("resize", e)
-                );
-              }, []),
-              e
+              window.addEventListener("resize", e),
+              () => window.removeEventListener("resize", e)
             );
-          })() >= e
+          }, []),
+          e
         );
       }
-      function u(e) {
-        const t = c(o),
+      function u(e = o) {
+        return c() >= e;
+      }
+      function d(e) {
+        const t = u(o),
           a = (0, r._B)(e);
         return t
           ? { nMaxCapsulesPerRow: a.nMaxItemsPerRow, bScreenIsWide: t }
@@ -6190,7 +6190,7 @@
               bScreenIsWide: t,
             };
       }
-      function d(e) {
+      function _(e) {
         const t = (0, r._B)(e);
         return m()
           ? t.nMaxItemsPerRow
@@ -6199,7 +6199,7 @@
               t.nMaxItemsPerRow,
             );
       }
-      function _(e) {
+      function p(e) {
         switch (e) {
           case 32:
             return 28;
@@ -6213,7 +6213,7 @@
             return;
         }
       }
-      function p(e) {
+      function g(e) {
         switch (e) {
           case 28:
             return 32;

@@ -28,7 +28,10 @@
     },
     9202: (e) => {
       e.exports = {
+        "duration-app-launch": "800ms",
+        storeMenuResponsiveModeWidth: "730px",
         narrowWidth: "500px",
+        SuppressScrollOnBody: "_1FFwlWIoDrtb0qdN9YUwHs",
         WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
         BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
       };
@@ -432,9 +435,9 @@
         T = n.n(x),
         L = n(52038),
         O = n(26101),
-        A = n(20446),
-        M = n(9202),
-        j = n.n(M);
+        M = n(20446),
+        A = n(9202),
+        j = n.n(A);
       function R(e) {
         const { appid: t, color: n, bgcolor: o } = e,
           r = (0, B.n9)(),
@@ -457,34 +460,34 @@
       function W(e) {
         const t = Number(e.args.appid);
         if (!t) return null;
-        const n = (0, A.O)(e.args.color, "black"),
-          o = (0, A.O)(e.args.bgcolor, "white");
+        const n = (0, M.O)(e.args.color, "black"),
+          o = (0, M.O)(e.args.bgcolor, "white");
         return a.createElement(R, { appid: t, color: n, bgcolor: o });
       }
       var F = n(10026),
-        P = n.n(F);
-      function $(e) {
+        H = n.n(F);
+      function P(e) {
         const { appid: t, color: n, bgcolor: o } = e;
         (0, B.n9)();
         return a.createElement(O.gi, {
           appID: t,
           classOverride: (0, L.A)(
             T().FollowGameButtonNotTop,
-            P().BBCodeFollowButton,
+            H().BBCodeFollowButton,
           ),
           styleOverride: { color: n, backgroundColor: o },
         });
       }
-      function H(e) {
+      function $(e) {
         const t = Number(e.args.appid);
         if (!t) return null;
-        const n = (0, A.O)(e.args.color, "black"),
-          o = (0, A.O)(e.args.bgcolor, "white");
-        return a.createElement($, { appid: t, color: n, bgcolor: o });
+        const n = (0, M.O)(e.args.color, "black"),
+          o = (0, M.O)(e.args.bgcolor, "white");
+        return a.createElement(P, { appid: t, color: n, bgcolor: o });
       }
       var q = n(94057),
-        z = n(29868);
-      function U(e) {
+        U = n(29868);
+      function z(e) {
         return e < 10 ? "0" + e : e;
       }
       function V(e) {
@@ -500,11 +503,11 @@
           ? null
           : a.createElement(
               "div",
-              { className: z.countdownCtn },
+              { className: U.countdownCtn },
               Boolean(s) &&
                 a.createElement(
                   "div",
-                  { className: z.Closed },
+                  { className: U.Closed },
                   r > 0
                     ? (0, c.we)("#Giveaway_Closed", r.toLocaleString())
                     : (0, c.we)("#Giveaway_Closed_NoWinnerInfo"),
@@ -516,7 +519,7 @@
                   Boolean(l <= 0)
                     ? a.createElement(
                         "div",
-                        { className: z.Throbber },
+                        { className: U.Throbber },
                         a.createElement(h.t, { size: "small" }),
                         a.createElement(
                           "div",
@@ -526,15 +529,15 @@
                       )
                     : a.createElement(
                         "div",
-                        { className: z.CountDownCtn },
+                        { className: U.CountDownCtn },
                         a.createElement(
                           "div",
-                          { className: z.CountDownTime },
-                          U(Math.floor(l / 60)) + ":" + U(l % 60),
+                          { className: U.CountDownTime },
+                          z(Math.floor(l / 60)) + ":" + z(l % 60),
                         ),
                         a.createElement(
                           "div",
-                          { className: z.CountDownText },
+                          { className: U.CountDownText },
                           (0, c.we)("#Giveaway_CountDown2"),
                           " ",
                           (0, c.we)("#Giveaway_KeepWatching"),
@@ -543,15 +546,15 @@
                   Boolean(r > 0) &&
                     a.createElement(
                       "div",
-                      { className: z.WinnerInfo },
+                      { className: U.WinnerInfo },
                       a.createElement(
                         "div",
-                        { className: z.WinnerCount },
+                        { className: U.WinnerCount },
                         r.toLocaleString(),
                       ),
                       a.createElement(
                         "div",
-                        { className: z.WinnerText },
+                        { className: U.WinnerText },
                         (0, c.we)("#Giveaway_Congratulation"),
                       ),
                     ),
@@ -729,8 +732,8 @@
         const { event: t } = e.context,
           n = Number(e.args.groupid) || t.clanSteamID.GetAccountID();
         if (!n) return null;
-        const o = (0, A.O)(e.args.color, "black"),
-          r = (0, A.O)(e.args.bgcolor, "white");
+        const o = (0, M.O)(e.args.color, "black"),
+          r = (0, M.O)(e.args.bgcolor, "white");
         return a.createElement(pe, { clanAccountID: n, color: o, bgcolor: r });
       }
       let fe = null;
@@ -886,7 +889,7 @@
                         },
                       ],
                       ["wishlist", { Constructor: W, autocloses: !1 }],
-                      ["followgame", { Constructor: H, autocloses: !1 }],
+                      ["followgame", { Constructor: $, autocloses: !1 }],
                       ["followgroup", { Constructor: Ie, autocloses: !1 }],
                       ["deckcompatcount", { Constructor: he, autocloses: !1 }],
                       [

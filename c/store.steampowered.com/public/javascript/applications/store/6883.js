@@ -26,6 +26,7 @@
       module.exports = {
         strMaxMobileWidth: "700px",
         strMaxResponsiveWidth: "910px",
+        strMaxTabletWidth: "1080px",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
