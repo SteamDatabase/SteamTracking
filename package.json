@@ -9,7 +9,7 @@
   "dependencies": {
     "@biomejs/biome": "^1.9.2",
     "astring": "^1.9.0",
-    "espree": "^10.0.1",
+    "espree": "^11.0.0",
     "estraverse": "^5.3.0",
     "xmlbuilder2": "^4.0.0"
   }
