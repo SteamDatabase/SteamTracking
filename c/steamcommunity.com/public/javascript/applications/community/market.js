@@ -1967,61 +1967,84 @@
             _ = _(),
             _ = (function (_) {
               switch (null == _ ? void 0 : _.toUpperCase()) {
-                case "US":
-                default:
-                  return _.k_ECurrencyCodeUSD;
-                case "AU":
-                  return _.k_ECurrencyCodeAUD;
                 case "AE":
                   return _.k_ECurrencyCodeAED;
+                case "AU":
+                  return _.k_ECurrencyCodeAUD;
                 case "BR":
                   return _.k_ECurrencyCodeBRL;
                 case "CA":
                   return _.k_ECurrencyCodeCAD;
                 case "CH":
+                case "LI":
                   return _.k_ECurrencyCodeCHF;
                 case "CL":
                   return _.k_ECurrencyCodeCLP;
                 case "CN":
+                case "XC":
                   return _.k_ECurrencyCodeCNY;
                 case "CO":
                   return _.k_ECurrencyCodeCOP;
                 case "CR":
                   return _.k_ECurrencyCodeCRC;
-                case "GB":
-                  return _.k_ECurrencyCodeGBP;
+                case "AD":
+                case "AL":
                 case "AT":
+                case "AX":
+                case "BA":
                 case "BE":
+                case "BG":
                 case "CY":
-                case "EE":
-                case "FI":
-                case "FR":
+                case "CZ":
                 case "DE":
+                case "DK":
+                case "EE":
+                case "ES":
+                case "FI":
+                case "FO":
+                case "FR":
+                case "GF":
+                case "GI":
+                case "GP":
                 case "GR":
+                case "HR":
+                case "HU":
                 case "IE":
                 case "IT":
-                case "LV":
                 case "LT":
                 case "LU":
-                case "MT":
-                case "NL":
-                case "PT":
-                case "SK":
-                case "SI":
-                case "ES":
-                case "AD":
-                case "XK":
+                case "LV":
                 case "MC":
                 case "ME":
+                case "MK":
+                case "MQ":
+                case "MT":
+                case "NC":
+                case "NL":
+                case "PF":
+                case "PT":
+                case "RE":
+                case "RO":
+                case "RS":
+                case "SE":
+                case "SI":
+                case "SJ":
+                case "SK":
                 case "SM":
                 case "VA":
                   return _.k_ECurrencyCodeEUR;
+                case "GB":
+                case "GG":
+                case "GS":
+                case "IM":
+                case "JE":
+                  return _.k_ECurrencyCodeGBP;
                 case "HK":
                   return _.k_ECurrencyCodeHKD;
-                case "IL":
-                  return _.k_ECurrencyCodeILS;
                 case "ID":
                   return _.k_ECurrencyCodeIDR;
+                case "IL":
+                  return _.k_ECurrencyCodeILS;
                 case "IN":
                   return _.k_ECurrencyCodeINR;
                 case "JP":
@@ -2060,12 +2083,174 @@
                   return _.k_ECurrencyCodeTWD;
                 case "UA":
                   return _.k_ECurrencyCodeUAH;
+                case "AF":
+                case "AG":
+                case "AI":
+                case "AM":
+                case "AN":
+                case "AO":
+                case "AQ":
+                case "AR":
+                case "AS":
+                case "AW":
+                case "AZ":
+                case "BB":
+                case "BD":
+                case "BF":
+                case "BH":
+                case "BI":
+                case "BJ":
+                case "BM":
+                case "BN":
+                case "BO":
+                case "BS":
+                case "BT":
+                case "BV":
+                case "BW":
+                case "BY":
+                case "BZ":
+                case "CC":
+                case "CD":
+                case "CF":
+                case "CG":
+                case "CI":
+                case "CK":
+                case "CM":
+                case "CV":
+                case "CX":
+                case "DJ":
+                case "DM":
+                case "DO":
+                case "DZ":
+                case "EC":
+                case "EG":
+                case "EH":
+                case "ER":
+                case "ET":
+                case "FJ":
+                case "FK":
+                case "FM":
+                case "GA":
+                case "GD":
+                case "GE":
+                case "GH":
+                case "GL":
+                case "GM":
+                case "GN":
+                case "GQ":
+                case "GT":
+                case "GU":
+                case "GW":
+                case "GY":
+                case "HM":
+                case "HN":
+                case "HT":
+                case "IO":
+                case "IQ":
+                case "IS":
+                case "JM":
+                case "JO":
+                case "KE":
+                case "KG":
+                case "KH":
+                case "KI":
+                case "KM":
+                case "KN":
+                case "KY":
+                case "LA":
+                case "LB":
+                case "LC":
+                case "LK":
+                case "LR":
+                case "LS":
+                case "LY":
+                case "MA":
+                case "MD":
+                case "MG":
+                case "MH":
+                case "ML":
+                case "MM":
+                case "MN":
+                case "MO":
+                case "MP":
+                case "MR":
+                case "MS":
+                case "MU":
+                case "MV":
+                case "MW":
+                case "MZ":
+                case "NA":
+                case "NE":
+                case "NF":
+                case "NG":
+                case "NI":
+                case "NP":
+                case "NR":
+                case "NU":
+                case "OM":
+                case "PA":
+                case "PG":
+                case "PK":
+                case "PM":
+                case "PN":
+                case "PR":
+                case "PS":
+                case "PW":
+                case "PY":
+                case "RW":
+                case "SB":
+                case "SC":
+                case "SD":
+                case "SH":
+                case "SL":
+                case "SN":
+                case "SO":
+                case "SR":
+                case "ST":
+                case "SV":
+                case "SY":
+                case "SZ":
+                case "TC":
+                case "TD":
+                case "TF":
+                case "TG":
+                case "TJ":
+                case "TK":
+                case "TL":
+                case "TM":
+                case "TN":
+                case "TO":
+                case "TR":
+                case "TT":
+                case "TV":
+                case "TZ":
+                case "UG":
+                case "UM":
+                case "US":
+                case "UZ":
+                case "VC":
+                case "VE":
+                case "VG":
+                case "VI":
+                case "VU":
+                case "WF":
+                case "WS":
+                case "YE":
+                case "YT":
+                case "ZM":
+                case "ZW":
+                  return _.k_ECurrencyCodeUSD;
                 case "UY":
                   return _.k_ECurrencyCodeUYU;
                 case "VN":
                   return _.k_ECurrencyCodeVND;
                 case "ZA":
                   return _.k_ECurrencyCodeZAR;
+                default:
+                  return (
+                    console.assert(!1, `Unhandled country code: ${_}`),
+                    _.k_ECurrencyCodeUSD
+                  );
               }
             })(_._.country_code);
           if (!_.marketable) return null;
