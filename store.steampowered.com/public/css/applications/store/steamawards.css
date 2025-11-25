@@ -308,11 +308,12 @@ body.SteamAwardsNominations {
   background-color: #e87157;
   border-radius: 3px;
   width: fit-content;
-  padding: 8px 16px;
+  padding: 4px 20px;
   font-size: 18px;
   font-weight: 600;
   color: #000;
   transition: background-color .3s ease-in-out;
+  z-index: 2;
 }
 ._3i1u-y7pjl-qc98gufdZUu
   ._1n-khJ_oWP9-ADtdauxmaP
@@ -348,7 +349,6 @@ body.SteamAwardsNominations {
   bottom: -20px;
   font-size: 13px;
   font-weight: 400;
-  padding: 4px 8px;
 }
 ._3i1u-y7pjl-qc98gufdZUu
   ._1n-khJ_oWP9-ADtdauxmaP
@@ -361,6 +361,8 @@ body.SteamAwardsNominations {
   height: 150px;
   background: #000;
   box-shadow: 0 0 10px #000;
+  position: relative;
+  z-index: 1;
 }
 ._3i1u-y7pjl-qc98gufdZUu ._1fSqpH3qLOnMPsLvsocjDD a {
   display: block;
