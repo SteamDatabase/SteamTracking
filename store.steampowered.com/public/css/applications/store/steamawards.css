@@ -238,6 +238,7 @@ body.SteamAwardsNominations {
   flex-direction: column;
   justify-content: center;
   margin-right: 20px;
+  flex-grow: 1;
 }
 ._3i1u-y7pjl-qc98gufdZUu
   ._1n-khJ_oWP9-ADtdauxmaP
