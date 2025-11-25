@@ -872,6 +872,77 @@
 ._2Kz-YjmWq9XV50Bq3pKfJd b {
   font-weight: 600;
 }
+._2gBFqL_6eXiRN7TI_GDjzF ._DialogLayout {
+  margin-bottom: 2px;
+}
+._2gBFqL_6eXiRN7TI_GDjzF ._DialogLayout input {
+  font-size: 16px;
+}
+._2gBFqL_6eXiRN7TI_GDjzF ._3eXNgAtnlHBfgWZbxO2n3h {
+  overflow-y: auto;
+  background: #3a404a;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 4px;
+  border-radius: 0px 0px 4px 4px;
+}
+._2gBFqL_6eXiRN7TI_GDjzF ._3eXNgAtnlHBfgWZbxO2n3h ._3w0K5X735sKAZhhifZGs84 {
+  padding: 2px;
+  text-align: center;
+}
+._2gBFqL_6eXiRN7TI_GDjzF ._3eXNgAtnlHBfgWZbxO2n3h ._1KK1sGDuxehec0lBB_4lpU {
+  padding: 2px;
+  text-align: center;
+  color: #fff;
+  background-color: gray;
+}
+._2gBFqL_6eXiRN7TI_GDjzF ._3eXNgAtnlHBfgWZbxO2n3h ._16oSf0MiTpUTJe7YQpCV2A {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border-bottom: 1px solid #474e59;
+  position: relative;
+}
+._2gBFqL_6eXiRN7TI_GDjzF
+  ._3eXNgAtnlHBfgWZbxO2n3h
+  ._16oSf0MiTpUTJe7YQpCV2A:hover {
+  cursor: pointer;
+  background: #5c6472;
+}
+._2gBFqL_6eXiRN7TI_GDjzF
+  ._3eXNgAtnlHBfgWZbxO2n3h
+  ._16oSf0MiTpUTJe7YQpCV2A:last-child {
+  border-bottom: none;
+}
+._2gBFqL_6eXiRN7TI_GDjzF
+  ._3eXNgAtnlHBfgWZbxO2n3h
+  ._16oSf0MiTpUTJe7YQpCV2A
+  ._3dr2A8wfoYU0kJtS9ACoR1 {
+  width: auto;
+  height: 30px;
+  flex-shrink: 0;
+}
+._2gBFqL_6eXiRN7TI_GDjzF
+  ._3eXNgAtnlHBfgWZbxO2n3h
+  ._16oSf0MiTpUTJe7YQpCV2A
+  ._3CWrph5moGF_F746uM5tdI {
+  padding: 0px 8px;
+  letter-spacing: 0px;
+  font-size: 14px;
+  text-transform: none;
+}
+._2gBFqL_6eXiRN7TI_GDjzF
+  ._3eXNgAtnlHBfgWZbxO2n3h
+  ._16oSf0MiTpUTJe7YQpCV2A
+  .I1zVikvORZt41zc-QTAsw {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  font-size: 10px;
+  background: #add8e6;
+  color: #000;
+  padding: 0 10px;
+}
 ._8MIrt7rQXkA0xE5sAjOee {
   display: flex;
   flex-direction: row;
@@ -1711,6 +1782,15 @@ input._2lHX9aoh5vq8UVFZpoUXLi::placeholder {
   border: 1px solid orange;
   box-sizing: border-box;
 }
+._1FFwlWIoDrtb0qdN9YUwHs {
+  overflow: hidden !important;
+  scrollbar-gutter: stable;
+}
+@media screen and (max-width: 730px) {
+  ._1FFwlWIoDrtb0qdN9YUwHs {
+    scrollbar-gutter: initial;
+  }
+}
 .GXjJQihysg6S5INBKClED {
   position: relative;
   display: inline-block;
@@ -1730,6 +1810,9 @@ input._2lHX9aoh5vq8UVFZpoUXLi::placeholder {
   box-shadow: none;
   right: unset;
   overflow: hidden;
+}
+.BasicUI ._1dm-6uzq_x5Gqo421G3a1r {
+  display: inline-flex;
 }
 .GXjJQihysg6S5INBKClED:hover ._1dm-6uzq_x5Gqo421G3a1r {
   position: absolute;
@@ -1759,6 +1842,15 @@ html.responsive.touch .GXjJQihysg6S5INBKClED:hover ._1dm-6uzq_x5Gqo421G3a1r {
   white-space: nowrap;
   font-size: 14px;
   color: #0e141b;
+  font-weight: 600;
+  line-height: 16px;
+}
+.BasicUI ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
+  text-shadow: none !important;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #0e141b !important;
   font-weight: 600;
   line-height: 16px;
 }

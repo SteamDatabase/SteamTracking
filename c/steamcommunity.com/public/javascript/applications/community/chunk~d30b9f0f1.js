@@ -23684,9 +23684,10 @@
               text_placement: _._.k_Center,
             });
         }, [_]);
-        const [_, _, _] = (0, _._)(() => [
+        const [_, _, _, _] = (0, _._)(() => [
             _.media_overlay,
             _.media_overlay_mobile_content_varient,
+            _.media_overlay_tablet_content_varient,
             _.unique_id,
           ]),
           _ = (function (_) {
@@ -23697,8 +23698,8 @@
             return (0, _._)(_, __webpack_require__);
           })(_),
           _ = (0, _.useMemo)(() => {
-            if (_) {
-              return [
+            if (_ || _) {
+              const _ = [
                 {
                   name: (0, _._)("#Template_Section_DesktopDisplay"),
                   key: "overlay_default",
@@ -23713,33 +23714,61 @@
                     }),
                   ),
                 },
-                {
-                  name: (0, _._)("#Template_Section_MobileDisplay"),
-                  key: "overlay_mobile",
-                  contents: _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      "div",
-                      null,
-                      _.createElement(_, {
-                        language: _,
-                        mediaContentData: _,
-                        fnOnDirty: _,
-                        totalColumns: 1,
-                        position: _,
-                        uniqueID: "" + _.unique_id,
-                        bAllowMediaAlignmentSettings: !0,
-                        strOverrideBackgroundColor: _,
-                        bHideBackgroundEditor: !0,
-                      }),
-                    ),
-                  ),
-                },
               ];
+              return (
+                _ &&
+                  _.push({
+                    name: (0, _._)("#Template_Section_MobileDisplay"),
+                    key: "overlay_mobile",
+                    contents: _.createElement(
+                      _._,
+                      null,
+                      _.createElement(
+                        "div",
+                        null,
+                        _.createElement(_, {
+                          language: _,
+                          mediaContentData: _,
+                          fnOnDirty: _,
+                          totalColumns: 1,
+                          position: _,
+                          uniqueID: "" + _.unique_id,
+                          bAllowMediaAlignmentSettings: !0,
+                          strOverrideBackgroundColor: _,
+                          bHideBackgroundEditor: !0,
+                        }),
+                      ),
+                    ),
+                  }),
+                _ &&
+                  _.push({
+                    name: (0, _._)("#Template_Section_TabletDisplay"),
+                    key: "overlay_tablet",
+                    contents: _.createElement(
+                      _._,
+                      null,
+                      _.createElement(
+                        "div",
+                        null,
+                        _.createElement(_, {
+                          language: _,
+                          mediaContentData: _,
+                          fnOnDirty: _,
+                          totalColumns: 1,
+                          position: _,
+                          uniqueID: "" + _.unique_id,
+                          bAllowMediaAlignmentSettings: !0,
+                          strOverrideBackgroundColor: _,
+                          bHideBackgroundEditor: !0,
+                        }),
+                      ),
+                    ),
+                  }),
+                _
+              );
             }
             return null;
-          }, [_, _, _, _, _, _, _.unique_id]);
+          }, [_, _, _, _, _, _, _, _.unique_id]);
         return _.createElement(
           "div",
           null,
@@ -23748,11 +23777,11 @@
             null,
             (0, _._)("#Template_Section_MediaOverlay"),
             _.createElement(_, {
-              bHasMobileVersion: Boolean(_),
-              fnOnDeleteMobile: () => {
+              bHasMobileOrTabletVersion: Boolean(_),
+              fnOnDeleteMobileOrTablet: () => {
                 (_.media_overlay_mobile_content_varient = void 0), _();
               },
-              fnOnCreateMobile: () => {
+              fnOnCreateMobileOrTablet: () => {
                 (_.media_overlay_mobile_content_varient = JSON.parse(
                   JSON.stringify(_),
                 )),
@@ -23760,6 +23789,22 @@
                     _._.k_OverlayMedia),
                   _();
               },
+              bIsMobile: !0,
+            }),
+            _.createElement(_, {
+              bHasMobileOrTabletVersion: Boolean(_),
+              fnOnDeleteMobileOrTablet: () => {
+                (_.media_overlay_tablet_content_varient = void 0), _();
+              },
+              fnOnCreateMobileOrTablet: () => {
+                (_.media_overlay_tablet_content_varient = JSON.parse(
+                  JSON.stringify(_),
+                )),
+                  (_.media_overlay_tablet_content_varient.display_order =
+                    _._.k_OverlayMedia),
+                  _();
+              },
+              bIsMobile: !1,
             }),
           ),
           _.createElement(
@@ -23767,7 +23812,7 @@
             null,
             (0, _._)("#Template_Section_MediaOverlay_desc"),
           ),
-          Boolean(_)
+          Boolean(_ || _)
             ? _.createElement(_._, {
                 tabs: _,
                 bDisableRouting: !0,
@@ -24127,7 +24172,7 @@
             fnOnDirty: __webpack_require__,
             position: _,
           } = _,
-          [_, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             _.internal_name,
             _.internal_name ||
               (0, _._)(
@@ -24136,10 +24181,11 @@
                 _.col + 1,
               ),
             _.mobile_content_varient,
+            _.tablet_content_varient,
           ]),
           _ = (0, _.useMemo)(() => {
-            if (_) {
-              return [
+            if (_ || _) {
+              const _ = [
                 {
                   name: (0, _._)("#Template_Section_DesktopDisplay"),
                   key: "default",
@@ -24153,29 +24199,53 @@
                     }),
                   ),
                 },
-                {
-                  name: (0, _._)("#Template_Section_MobileDisplay"),
-                  key: "mobile",
-                  contents: _.createElement(
-                    _._,
-                    null,
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().MobileEditor,
-                      },
-                      _.createElement(_, {
-                        ..._,
-                        mediaContentData: _,
-                        uniqueID: _.unique_id,
-                      }),
-                    ),
-                  ),
-                },
               ];
+              return (
+                _ &&
+                  __webpack_require__.push({
+                    name: (0, _._)("#Template_Section_MobileDisplay"),
+                    key: "mobile",
+                    contents: _.createElement(
+                      _._,
+                      null,
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().MobileEditor,
+                        },
+                        _.createElement(_, {
+                          ..._,
+                          mediaContentData: _,
+                          uniqueID: _.unique_id,
+                        }),
+                      ),
+                    ),
+                  }),
+                _ &&
+                  __webpack_require__.push({
+                    name: (0, _._)("#Template_Section_TabletDisplay"),
+                    key: "tablet",
+                    contents: _.createElement(
+                      _._,
+                      null,
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().MobileEditor,
+                        },
+                        _.createElement(_, {
+                          ..._,
+                          mediaContentData: _,
+                          uniqueID: _.unique_id,
+                        }),
+                      ),
+                    ),
+                  }),
+                _
+              );
             }
             return null;
-          }, [_, _, _]);
+          }, [_, _, _, _]);
         return _.createElement(
           "div",
           null,
@@ -24193,25 +24263,37 @@
               },
             }),
             _.createElement(_, {
-              bHasMobileVersion: Boolean(_),
-              fnOnCreateMobile: () => {
-                (_.mobile_content_varient = (function (_, _) {
-                  const _ = JSON.parse(JSON.stringify(_));
-                  for (const _ of _) delete _[_];
-                  return _;
-                })(_, [
+              bHasMobileOrTabletVersion: Boolean(_),
+              fnOnCreateMobileOrTablet: () => {
+                (_.mobile_content_varient = _(_, [
                   "unique_id",
                   "mobile_content_varient",
                   "internal_name",
                 ])),
                   __webpack_require__();
               },
-              fnOnDeleteMobile: () => {
+              fnOnDeleteMobileOrTablet: () => {
                 (_.mobile_content_varient = void 0), __webpack_require__();
               },
+              bIsMobile: !0,
+            }),
+            _.createElement(_, {
+              bHasMobileOrTabletVersion: Boolean(_),
+              fnOnCreateMobileOrTablet: () => {
+                (_.tablet_content_varient = _(_, [
+                  "unique_id",
+                  "tablet_content_varient",
+                  "internal_name",
+                ])),
+                  __webpack_require__();
+              },
+              fnOnDeleteMobileOrTablet: () => {
+                (_.tablet_content_varient = void 0), __webpack_require__();
+              },
+              bIsMobile: !1,
             }),
           ),
-          Boolean(_)
+          Boolean(_ || _)
             ? _.createElement(_._, {
                 tabs: _,
                 bDisableRouting: !0,
@@ -24223,13 +24305,26 @@
               }),
         );
       }
+      function _(_, _) {
+        const _ = JSON.parse(JSON.stringify(_));
+        for (const _ of _) delete _[_];
+        return _;
+      }
       function _(_) {
         const {
-            bHasMobileVersion: _,
-            fnOnCreateMobile: __webpack_require__,
-            fnOnDeleteMobile: _,
+            bHasMobileOrTabletVersion: _,
+            fnOnCreateMobileOrTablet: __webpack_require__,
+            fnOnDeleteMobileOrTablet: _,
+            bIsMobile: _,
           } = _,
           [_, _, _] = (0, _._)(!1);
+        let _ = _
+          ? _
+            ? "#Template_Section_MobileToggle_On_ttip"
+            : "#Template_Section_MobileToggle_Off_ttip"
+          : _
+            ? "#Template_Section_TabletToggle_On_ttip"
+            : "#Template_Section_TabletToggle_Off_ttip";
         return _.createElement(
           _.Fragment,
           null,
@@ -24237,16 +24332,12 @@
             _._,
             {
               toggled: _,
-              tooltip: (0, _._)(
-                _
-                  ? "#Template_Section_MobileToggle_On_ttip"
-                  : "#Template_Section_MobileToggle_Off_ttip",
-              ),
+              tooltip: (0, _._)(_),
               onClick: () => {
                 _ ? _() : __webpack_require__();
               },
             },
-            _.createElement(_.EOr, null),
+            _ ? _.createElement(_.EOr, null) : _.createElement(_.krz, null),
           ),
           _.createElement(
             _._,
@@ -24256,7 +24347,9 @@
             _.createElement(_._, {
               strTitle: (0, _._)("#Dialog_AreYouSure"),
               strDescription: (0, _._)(
-                "#Template_Section_MobileToggle_Confirm",
+                _
+                  ? "#Template_Section_MobileToggle_Confirm"
+                  : "#Template_Section_TabletToggle_Confirm",
               ),
               closeModal: _,
               onOK: _,
