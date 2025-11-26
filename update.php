@@ -211,11 +211,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				$this->Log( '{lightblue}Syncing protobufs' );
 
 				system( 'bash ../ValveProtobufs/update.sh' );
-
-				if( file_exists( '../update_webapis.sh' ) )
-				{
-					proc_close( proc_open( 'bash ../update_webapis.sh &', [], $pipes ) );
-				}
 			}
 
 			$this->Log( '{lightblue}Done' );

@@ -21,6 +21,7 @@ function _(_, _) {
           delete _?.public_data?.account_flags,
           delete _?.public_data?.ban_expires_time,
           delete _?.public_data?.privacy_state,
+          _?.public_data?.profile_state !== 1 && delete _?.private_data,
           _
         );
       }
