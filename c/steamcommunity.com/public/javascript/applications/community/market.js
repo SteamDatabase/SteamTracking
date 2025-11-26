@@ -789,7 +789,7 @@
             return {
               queryKey: _(_),
               queryFn: async () => {
-                var _, _, _, _;
+                var _, _, _, _, _;
                 if (_) {
                   const _ = await _.load(_);
                   return (
@@ -805,6 +805,12 @@
                     null === (_ = null == _ ? void 0 : _.public_data) ||
                       void 0 === _ ||
                       delete _.privacy_state,
+                    1 !==
+                      (null === (_ = null == _ ? void 0 : _.public_data) ||
+                      void 0 === _
+                        ? void 0
+                        : _.profile_state) &&
+                      (null == _ || delete _.private_data),
                     _
                   );
                 }
