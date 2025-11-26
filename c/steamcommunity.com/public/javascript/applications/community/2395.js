@@ -54,6 +54,8 @@
 	"Button_Buy": "Buy",
 	"Button_Sell": "Sell",
 	"Button_BuyNow": "Buy Now",
+	"Button_BuyOrder": "Place buy order...",
+	"BuyOrder_PlaceOrderHeader": "Place an order:",
 	"Button_Close": "Close",
 	"Search_ListingQuantity": "Quantity for sale: %1$s",
 	"Bucket_PriceFrom": "From %1$s",
@@ -148,6 +150,8 @@
 	"OrderBook_Graph_BuyTooltip_Plural": "%1$s buy orders at %2$s or higher",
 	"OrderBook_Graph_SellTooltip": "%1$s sell order at %2$s or lower",
 	"OrderBook_Graph_SellTooltip_Plural": "%1$s sell orders at %2$s or lower",
+	"OrderBook_PlaceOrder_BuyRequests": "%1$s request to buy at <1>%2%s</1>",
+	"OrderBook_PlaceOrder_BuyRequests_Plural": "%1$s requests to buy at <1>%2$s or lower</1>",
 	"MedianSalePrice_Graph_Title": "Median Sale Prices",
 	"Graph_TimeScale_Week": "Week",
 	"Graph_TimeScale_Month": "Month",
@@ -177,7 +181,12 @@
 	"CancelListing_Dialog_Yes": "Yes, remove this listing",
 	"CancelListing_Dialog_No": "No",
 	"CancelListing_Dialog_Success": "Your listing has been successfully removed",
-	"SellDialog_Frame_Title": "Choose an item from your inventory"
+	"SellDialog_Frame_Title": "Choose an item from your inventory",
+	"UniqueBuyOrder_Explanation_Header": "What's a buy order?",
+	"UniqueBuyOrder_Explanation_1": "Set your preferred price and your purchase is made automatically when the item becomes available at that price.",
+	"UniqueBuyOrder_Explanation_2": "Steam will ensure you get the best price available.",
+	"UniqueBuyOrder_Explanation_3": "For this item, buy orders will be matched with the cheapest option to buy regardless of any unique characteristics.",
+	"Container_ContentsLabel": "Possible Contents:"
 }`);
     },
   },

@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Slet beskeder",
     "Chat_Actions_Select_Message": "Vælg besked",
     "Chat_Actions_Report": "Rapportér",
+    "Chat_Actions_ReportGroup": "Rapportér gruppechat",
     "Chat_Actions_React": "Reager",
     "Chat_Actions_Delete": "Slet",
     "Chat_Actions_DeleteChatMessages_Confirm": "Er du sikker på, at du vil slette disse beskeder fra %1$s?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Rettelse af venne- og chatvinduer, som ikke blev vist i overlayet i spil i Linux og macOS.",
     "BBCode_Loading": "Indlæser",
     "BBCode_Failed": "Indlæsningen mislykkedes",
-    "broadcastDetails_Playing": "Spiller",
-    "Chat_Actions_ReportGroup": "Rapportér gruppechat"
+    "broadcastDetails_Playing": "Spiller"
 }

@@ -67,14 +67,3 @@ message CMsgClientStatsUpdated {
 	optional uint32 crc_stats = 3;
 	repeated .CMsgClientStatsUpdated.Updated_Stats updated_stats = 4;
 }
-
-message CMsgClientStoreUserStats {
-	message Stats_To_Store {
-		optional uint32 stat_id = 1;
-		optional uint32 stat_value = 2;
-	}
-
-	optional fixed64 game_id = 1;
-	optional bool explicit_reset = 2;
-	repeated .CMsgClientStoreUserStats.Stats_To_Store stats_to_store = 3;
-}

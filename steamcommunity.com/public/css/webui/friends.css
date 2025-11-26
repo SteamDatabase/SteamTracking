@@ -2679,6 +2679,9 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   padding: 0;
 }
+.partnereventshared_SaleSectionHeader_2WMiQ:hover {
+  background-color: #34383f;
+}
 .BasicUI .partnereventshared_SaleSectionHeader_2WMiQ {
   font: var(--gpText-HeadingSmall);
   font-weight: 500;
@@ -12762,7 +12765,6 @@ h3.eventbbcodeparser_Header3_3s7cU {
 }
 .eventbbcodeparser_Link_29bMZ {
   color: #969696;
-  text-decoration: underline;
 }
 .eventbbcodeparser_Link_29bMZ:hover {
   color: #fff;

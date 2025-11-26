@@ -306,10 +306,9 @@ enum EConnectivityTestResult
 
 enum EContentModerationAction
 {
-	k_EContentModerationAction_None = 1;
-	k_EContentModerationAction_LockThread = 2;
-	k_EContentModerationAction_UnlockThread = 3;
-	k_EContentModerationAction_Sustain = 4;
+	k_EContentModerationAction_None = 0;
+	k_EContentModerationAction_Sustain = 1;
+	k_EContentModerationAction_MarkSuspicious = 2;
 }
 
 enum EControllerBindingType
@@ -329,38 +328,6 @@ enum EControllerOutputAxis
 	k_EControllerOutputAxisOmitX = 0;
 	k_EControllerOutputAxisOmitY = 1;
 	k_EControllerOutputAxisBoth = 2;
-}
-
-enum EControllerTypeFlags
-{
-	k_EControllerTypeFlags_SteamController = 1;
-	k_EControllerTypeFlags_SteamControllerV2 = 2;
-	k_EControllerTypeFlags_SteamControllerNeptune = 4;
-	k_EControllerTypeFlags_PS3Controller = 8;
-	k_EControllerTypeFlags_PS4Controller = 16;
-	k_EControllerTypeFlags_PS5Controller = 32;
-	k_EControllerTypeFlags_XBox360 = 64;
-	k_EControllerTypeFlags_XBoxOne = 128;
-	k_EControllerTypeFlags_XBoxElite = 256;
-	k_EControllerTypeFlags_SwitchPro = 512;
-	k_EControllerTypeFlags_XInputSwitch = 1024;
-	k_EControllerTypeFlags_GenericGamepad = 2048;
-	k_EControllerTypeFlags_SingleJoycon = 4096;
-	k_EControllerTypeFlags_SwitchJoyconPair = 8192;
-	k_EControllerTypeFlags_MobileTouchController = 16384;
-	k_EControllerTypeFlags_PS5EdgeController = 32768;
-	k_EControllerTypeFlags_HoriController = 65536;
-	k_EControllerTypeFlags_LegionGoS = 131072;
-	k_EControllerTypeFlags_DualStickHandheld = 262144;
-	k_EControllerTypeFlags_AllControllers = -1;
-	k_EControllerTypeFlags_AllSteamControllers = 7;
-	k_EControllerTypeFlags_AllPlaystationControllers = 32824;
-	k_EControllerTypeFlags_AllXBoxControllers = 448;
-	k_EControllerTypeFlags_AllNintendoControllers = 13824;
-	k_EControllerTypeFlags_LeftTrackpad = 49207;
-	k_EControllerTypeFlags_RightTrackpad = 180279;
-	k_EControllerTypeFlags_CenterTrackpad = 49200;
-	k_EControllerTypeFlags_HapticSupport = 7;
 }
 
 enum ECountryTarget
@@ -1888,6 +1855,17 @@ enum UnnamedEnum25bb92eddba41afe
 	Train = 4;
 }
 
+enum UnnamedEnum264a8e743f04edb5
+{
+	PlugInInputScreen = 1;
+	LanguageScreen = 2;
+	TimezoneScreen = 3;
+	NetworkSetupScreen = 4;
+	UpdateScreen = 5;
+	Complete = 6;
+	ScreenReaderConfirmScreen = 7;
+}
+
 enum UnnamedEnum26b26332fa565251
 {
 	BackSpace = 65288;
@@ -2806,13 +2784,6 @@ enum UnnamedEnum6dc1117c55eed9d3
 	k_EDisplayList = 4;
 }
 
-enum UnnamedEnum6ffd890a446c4435
-{
-	None = 0;
-	Forward = 1;
-	Backward = 2;
-}
-
 enum UnnamedEnum702e80796a2bbcdf
 {
 	PRESERVE = 0;
@@ -3084,6 +3055,33 @@ enum UnnamedEnum84f925970b2abf75
 	Down = 1;
 }
 
+enum UnnamedEnum8503d00003b63fbe
+{
+	Unknown = 0;
+	Aux = 1;
+	Speaker = 2;
+	Headphones = 3;
+	Line = 4;
+	Mic = 5;
+	Headset = 6;
+	Handset = 7;
+	Earpiece = 8;
+	Spdif = 9;
+	Hdmi = 10;
+	Tv = 11;
+	Radio = 12;
+	Video = 13;
+	Usb = 14;
+	Bluetooth = 15;
+	Portable = 16;
+	Handsfree = 17;
+	Car = 18;
+	Hifi = 19;
+	Phone = 20;
+	Network = 21;
+	Analog = 22;
+}
+
 enum UnnamedEnum8668c3344a2974ee
 {
 	First = 1;
@@ -3320,6 +3318,13 @@ enum UnnamedEnum8d8fc0d389db8608
 	VendorSpecific_Reserved_Start = 10000;
 	VendorSpecific_Reserved_End = 10999;
 	TrackedDeviceProperty_Max = 1000000;
+}
+
+enum UnnamedEnum8de37d1397462929
+{
+	CachedUsersPanel = 0;
+	SignInPanel = 1;
+	PromptForPinPanel = 2;
 }
 
 enum UnnamedEnum8eccbf4cda33fab9
@@ -3937,17 +3942,6 @@ enum UnnamedEnumcf102e4532afeb1d
 	CountDown = 0;
 	Calibrating = 1;
 	Complete_Success = 2;
-}
-
-enum UnnamedEnumd1e37656646622cd
-{
-	LanguageScreen = 0;
-	TimezoneScreen = 1;
-	NetworkSetupScreen = 2;
-	UpdateScreen = 3;
-	CachedUsersPanel = 4;
-	SignInPanel = 5;
-	PromptForPinPanel = 6;
 }
 
 enum UnnamedEnumd2a1463c68084b87

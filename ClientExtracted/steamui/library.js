@@ -1,4 +1,4 @@
-var CLSTAMP = "10260012";
+var CLSTAMP = "10265914";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -66,6 +66,11 @@ var CLSTAMP = "10260012";
           SteamDeckCompatUnknown: "xBqU_GerRwzHIs8N9ratU",
           SteamOSCompatInformation: "_1Gr-Q9sFTdr7XhK5-j_qux",
           SteamOSCompatCompatible: "_1IeRz_QzfsACNiXS4gXHIT",
+          SteamTVIcon: "_15p32SPTbcOsOrlb8o1MdF",
+          SteamTVLogo: "fX8M83YDC9--4QLgVAEir",
+          SteamTVSteam: "_1GjVGP2qdwSOEBKimtRG0k",
+          SteamTVTV: "_12AVA1wr7SWXg9INaLfBzD",
+          FlipInRTL: "AMU5Zvf1pJLZGVqbpGcUC",
         };
       },
       11804: (e) => {
@@ -181,7 +186,7 @@ var CLSTAMP = "10260012";
           S$: () => r,
           SS: () => U,
           Sx: () => V,
-          TQ: () => x,
+          TQ: () => L,
           U5: () => h,
           WU: () => Z,
           aP: () => i,
@@ -210,7 +215,7 @@ var CLSTAMP = "10260012";
           w1: () => a,
           wK: () => _,
           wr: () => y,
-          ww: () => L,
+          ww: () => x,
           x6: () => k,
           y4: () => c,
         });
@@ -240,8 +245,8 @@ var CLSTAMP = "10260012";
         }
         const E = "18446744073709551615",
           B = 0,
-          x = 2147483647;
-        function L(e, t = "en") {
+          L = 2147483647;
+        function x(e, t = "en") {
           switch (e) {
             case 0:
               return "en";
@@ -916,7 +921,7 @@ var CLSTAMP = "10260012";
               ...S
             } = e,
             { elemProps: y, navOptions: E, gamepadEvents: B } = (0, o.sl)(S),
-            { refDiv: x, tree: L } = (function (e) {
+            { refDiv: L, tree: x } = (function (e) {
               const {
                   navID: t,
                   virtualFocus: n,
@@ -969,20 +974,20 @@ var CLSTAMP = "10260012";
               onGlobalButtonDown: b,
               navTreeRef: d,
             });
-          (0, r.hL)(L.OnActivateCallbacks, n),
-            (0, r.hL)(L.OnDeactivateCallbacks, m),
-            (0, u.KF)(B, x, L),
+          (0, r.hL)(x.OnActivateCallbacks, n),
+            (0, r.hL)(x.OnDeactivateCallbacks, m),
+            (0, u.KF)(B, L, x),
             s.useLayoutEffect(() => {
               const e = (0, a.O)(M);
-              L.Root.SetProperties({ ...E, layout: e });
+              x.Root.SetProperties({ ...E, layout: e });
             });
-          const k = (0, i.Ue)(x, _.props.ref);
+          const k = (0, i.Ue)(L, _.props.ref);
           return s.createElement(
             p,
-            { tree: v ? null : L, disableFocusClasses: C || v },
+            { tree: v ? null : x, disableFocusClasses: C || v },
             s.createElement(
               o.TJ.Provider,
-              { value: v ? null : L.Root },
+              { value: v ? null : x.Root },
               s.cloneElement(_, { id: t, "data-react-nav-root": t, ref: k }),
             ),
           );
@@ -1091,7 +1096,7 @@ var CLSTAMP = "10260012";
           D0: () => S,
           Mg: () => B,
           sQ: () => w,
-          HR: () => L,
+          HR: () => x,
           v0: () => k,
           TJ: () => _,
           qp: () => b,
@@ -1287,7 +1292,7 @@ var CLSTAMP = "10260012";
         }
         const E = a.createContext(void 0),
           B = E.Provider;
-        function x(e, t, n, r, s) {
+        function L(e, t, n, r, s) {
           const {
               elemProps: {
                 focusClassName: c,
@@ -1313,15 +1318,15 @@ var CLSTAMP = "10260012";
               ? (d.tabIndex = d.tabIndex || 0)
               : !h.focusable && C && (d.tabIndex = d.tabIndex ?? -1),
             (0, m.Ui)(g, S);
-          const x = (0, i.Ue)(r, S),
-            L = (0, a.useContext)(E)?.Component;
+          const L = (0, i.Ue)(r, S),
+            x = (0, a.useContext)(E)?.Component;
           let k = { ...d };
           return (
             "onClick" in d && (k.role ??= "button"),
             B
               ? ((k = {
                   ...k,
-                  divRef: x,
+                  divRef: L,
                   node: B,
                   focusClassName: o()(c, "gpfocus"),
                   focusWithinClassName: "gpfocuswithin",
@@ -1331,8 +1336,8 @@ var CLSTAMP = "10260012";
                 a.createElement(
                   _.Provider,
                   { value: B },
-                  L
-                    ? a.createElement(L, { ...k, Component: t }, l)
+                  x
+                    ? a.createElement(x, { ...k, Component: t }, l)
                     : a.createElement(t, k, l),
                 ))
               : a.createElement(
@@ -1342,10 +1347,10 @@ var CLSTAMP = "10260012";
                 )
           );
         }
-        function L(e, t) {
+        function x(e, t) {
           const n = M(e);
           return a.forwardRef(function (r, i) {
-            return x(e, n, r, i, t);
+            return L(e, n, r, i, t);
           });
         }
         function k(e) {
@@ -1380,7 +1385,7 @@ var CLSTAMP = "10260012";
               })(n),
               c = (0, g.Cz)(s, o),
               l = (0, i.Ue)(r, c);
-            return x(e, t, a, l);
+            return L(e, t, a, l);
           });
         }
       },
@@ -2173,7 +2178,7 @@ var CLSTAMP = "10260012";
       4690: (e, t, n) => {
         "use strict";
         n.d(t, {
-          Bp: () => x,
+          Bp: () => L,
           $C: () => B,
           xj: () => S,
           iU: () => y,
@@ -2330,7 +2335,7 @@ var CLSTAMP = "10260012";
               (e[(e.FORWARD = 1)] = "FORWARD"),
               (e[(e.BACKWARD = 2)] = "BACKWARD");
           })(B || (B = {}));
-        class x {
+        class L {
           m_Tree;
           m_Parent;
           m_rgChildren = [];
@@ -3164,7 +3169,7 @@ var CLSTAMP = "10260012";
             );
           }
           SetActiveChild(e) {
-            e instanceof x
+            e instanceof L
               ? (this.EnsureChildrenSorted(),
                 (this.m_ActiveChild = e),
                 (this.m_iLastActiveChildIndex = this.m_rgChildren.indexOf(e)))
@@ -3205,9 +3210,9 @@ var CLSTAMP = "10260012";
               (0, b.ZQ)(this, t);
           }
         }
-        (0, r.Cg)([c.o], x.prototype, "OnDOMFocus", null),
-          (0, r.Cg)([c.o], x.prototype, "OnDOMBlur", null),
-          (0, r.Cg)([c.o], x.prototype, "OnNavigationEvent", null);
+        (0, r.Cg)([c.o], L.prototype, "OnDOMFocus", null),
+          (0, r.Cg)([c.o], L.prototype, "OnDOMBlur", null),
+          (0, r.Cg)([c.o], L.prototype, "OnNavigationEvent", null);
       },
       79734: (e, t, n) => {
         "use strict";
@@ -3531,7 +3536,7 @@ var CLSTAMP = "10260012";
             e || (e = (0, o.qf)(c));
             let t = M(c),
               n = S(e, w(e)),
-              m = L(e),
+              m = x(e),
               h = { element: e, left: 0, top: 0 };
             if (
               (d(
@@ -3586,7 +3591,7 @@ var CLSTAMP = "10260012";
           let m = !1;
           for (let e of a) {
             if (y(e.left) && y(e.top)) continue;
-            let t = L(e.element),
+            let t = x(e.element),
               r = t.scrollTop + e.top,
               s = t.scrollLeft + e.left;
             (s = i.OQ(s, 0, t.MaxScrollLeft())),
@@ -3711,13 +3716,13 @@ var CLSTAMP = "10260012";
           }
         }
         (0, r.Cg)([s.o], B.prototype, "ResetScrollState", null);
-        const x = new WeakMap();
-        function L(e) {
-          let t = x.get(e);
-          return t || ((t = new B(e)), x.set(e, t)), t;
+        const L = new WeakMap();
+        function x(e) {
+          let t = L.get(e);
+          return t || ((t = new B(e)), L.set(e, t)), t;
         }
         function k(e) {
-          const t = x.get(e);
+          const t = L.get(e);
           return t
             ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
             : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
@@ -4111,7 +4116,10 @@ var CLSTAMP = "10260012";
             reject: t,
           };
         }
-        n.d(t, { x0: () => r });
+        function i(e) {
+          return new Promise((t) => setTimeout(t, e));
+        }
+        n.d(t, { x0: () => r, yI: () => i });
       },
       17372: (e, t, n) => {
         "use strict";
@@ -4568,13 +4576,14 @@ var CLSTAMP = "10260012";
         "use strict";
         n.d(t, {
           LH: () => c,
+          O2: () => d,
           TT: () => u,
           WV: () => m,
           gF: () => l,
-          h2: () => h,
+          h2: () => p,
           kK: () => o,
-          ke: () => p,
-          u2: () => g,
+          ke: () => g,
+          u2: () => f,
         });
         var r = n(58663),
           i = n.n(r),
@@ -5224,12 +5233,11 @@ var CLSTAMP = "10260012";
         }
         r.Message;
         r.Message;
-        r.Message;
         class d extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              d.prototype.clanid || s.Sg(d.M()),
+              d.prototype.language || s.Sg(d.M()),
               r.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static sm_m;
@@ -5239,6 +5247,73 @@ var CLSTAMP = "10260012";
               d.sm_m ||
                 (d.sm_m = {
                   proto: d,
+                  fields: {
+                    language: {
+                      n: 1,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    localized_string: {
+                      n: 2,
+                      br: s.qM.readString,
+                      bw: s.gp.writeString,
+                    },
+                  },
+                }),
+              d.sm_m
+            );
+          }
+          static MBF() {
+            return d.sm_mbf || (d.sm_mbf = s.w0(d.M())), d.sm_mbf;
+          }
+          toObject(e = !1) {
+            return d.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return s.BT(d.M(), e, t);
+          }
+          static fromObject(e) {
+            return s.Uq(d.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new d();
+            return d.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return s.zj(d.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            s.i0(d.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              d.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CLocalizationToken";
+          }
+        }
+        class h extends r.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              h.prototype.clanid || s.Sg(h.M()),
+              r.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              h.sm_m ||
+                (h.sm_m = {
+                  proto: h,
                   fields: {
                     clanid: { n: 1, br: s.qM.readUint32, bw: s.gp.writeUint32 },
                     event_gid: {
@@ -5280,79 +5355,6 @@ var CLSTAMP = "10260012";
                     },
                   },
                 }),
-              d.sm_m
-            );
-          }
-          static MBF() {
-            return d.sm_mbf || (d.sm_mbf = s.w0(d.M())), d.sm_mbf;
-          }
-          toObject(e = !1) {
-            return d.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return s.BT(d.M(), e, t);
-          }
-          static fromObject(e) {
-            return s.Uq(d.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new (i().BinaryReader)(e),
-              n = new d();
-            return d.deserializeBinaryFromReader(n, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return s.zj(d.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new (i().BinaryWriter)();
-            return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            s.i0(d.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new (i().BinaryWriter)();
-            return (
-              d.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CClanEventUserNewsTuple";
-          }
-        }
-        class h extends r.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              h.prototype.rtime_before || s.Sg(h.M()),
-              r.Message.initialize(this, e, 0, -1, [4], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              h.sm_m ||
-                (h.sm_m = {
-                  proto: h,
-                  fields: {
-                    rtime_before: {
-                      n: 1,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    rtime_after: {
-                      n: 2,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    qualified: {
-                      n: 3,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    events: { n: 4, c: d, r: !0, q: !0 },
-                  },
-                }),
               h.sm_m
             );
           }
@@ -5390,18 +5392,15 @@ var CLSTAMP = "10260012";
             );
           }
           getClassName() {
-            return "CClanMatchEventByRange";
+            return "CClanEventUserNewsTuple";
           }
         }
-        r.Message;
-        r.Message;
-        r.Message;
         class p extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              p.prototype.packageid || s.Sg(p.M()),
-              r.Message.initialize(this, e, 0, -1, void 0, null);
+              p.prototype.rtime_before || s.Sg(p.M()),
+              r.Message.initialize(this, e, 0, -1, [4], null);
           }
           static sm_m;
           static sm_mbf;
@@ -5410,6 +5409,82 @@ var CLSTAMP = "10260012";
               p.sm_m ||
                 (p.sm_m = {
                   proto: p,
+                  fields: {
+                    rtime_before: {
+                      n: 1,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    rtime_after: {
+                      n: 2,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    qualified: {
+                      n: 3,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    events: { n: 4, c: h, r: !0, q: !0 },
+                  },
+                }),
+              p.sm_m
+            );
+          }
+          static MBF() {
+            return p.sm_mbf || (p.sm_mbf = s.w0(p.M())), p.sm_mbf;
+          }
+          toObject(e = !1) {
+            return p.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return s.BT(p.M(), e, t);
+          }
+          static fromObject(e) {
+            return s.Uq(p.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new p();
+            return p.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return s.zj(p.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            s.i0(p.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              p.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CClanMatchEventByRange";
+          }
+        }
+        r.Message;
+        r.Message;
+        r.Message;
+        class g extends r.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              g.prototype.packageid || s.Sg(g.M()),
+              r.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              g.sm_m ||
+                (g.sm_m = {
+                  proto: g,
                   fields: {
                     packageid: {
                       n: 1,
@@ -5457,70 +5532,15 @@ var CLSTAMP = "10260012";
                       br: s.qM.readString,
                       bw: s.gp.writeString,
                     },
-                  },
-                }),
-              p.sm_m
-            );
-          }
-          static MBF() {
-            return p.sm_mbf || (p.sm_mbf = s.w0(p.M())), p.sm_mbf;
-          }
-          toObject(e = !1) {
-            return p.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return s.BT(p.M(), e, t);
-          }
-          static fromObject(e) {
-            return s.Uq(p.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new (i().BinaryReader)(e),
-              n = new p();
-            return p.deserializeBinaryFromReader(n, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return s.zj(p.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new (i().BinaryWriter)();
-            return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            s.i0(p.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new (i().BinaryWriter)();
-            return (
-              p.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CPackageReservationStatus";
-          }
-        }
-        r.Message;
-        r.Message;
-        class g extends r.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              g.prototype.content_descriptors_to_exclude || s.Sg(g.M()),
-              r.Message.initialize(this, e, 0, -1, [1], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              g.sm_m ||
-                (g.sm_m = {
-                  proto: g,
-                  fields: {
-                    content_descriptors_to_exclude: {
-                      n: 1,
-                      c: f,
-                      r: !0,
-                      q: !0,
+                    queue_head_position_at_reservation: {
+                      n: 11,
+                      br: s.qM.readInt32,
+                      bw: s.gp.writeInt32,
+                    },
+                    queue_head_position_now: {
+                      n: 12,
+                      br: s.qM.readInt32,
+                      bw: s.gp.writeInt32,
                     },
                   },
                 }),
@@ -5561,15 +5581,17 @@ var CLSTAMP = "10260012";
             );
           }
           getClassName() {
-            return "UserContentDescriptorPreferences";
+            return "CPackageReservationStatus";
           }
         }
+        r.Message;
+        r.Message;
         class f extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              f.prototype.content_descriptorid || s.Sg(f.M()),
-              r.Message.initialize(this, e, 0, -1, void 0, null);
+              f.prototype.content_descriptors_to_exclude || s.Sg(f.M()),
+              r.Message.initialize(this, e, 0, -1, [1], null);
           }
           static sm_m;
           static sm_mbf;
@@ -5579,15 +5601,11 @@ var CLSTAMP = "10260012";
                 (f.sm_m = {
                   proto: f,
                   fields: {
-                    content_descriptorid: {
+                    content_descriptors_to_exclude: {
                       n: 1,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    timestamp_added: {
-                      n: 2,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
+                      c: _,
+                      r: !0,
+                      q: !0,
                     },
                   },
                 }),
@@ -5625,6 +5643,73 @@ var CLSTAMP = "10260012";
             var e = new (i().BinaryWriter)();
             return (
               f.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "UserContentDescriptorPreferences";
+          }
+        }
+        class _ extends r.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              _.prototype.content_descriptorid || s.Sg(_.M()),
+              r.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    content_descriptorid: {
+                      n: 1,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    timestamp_added: {
+                      n: 2,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = s.w0(_.M())), _.sm_mbf;
+          }
+          toObject(e = !1) {
+            return _.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return s.BT(_.M(), e, t);
+          }
+          static fromObject(e) {
+            return s.Uq(_.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new _();
+            return _.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return s.zj(_.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            s.i0(_.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -7158,8 +7243,8 @@ var CLSTAMP = "10260012";
                 (B.sm_m = {
                   proto: B,
                   fields: {
-                    emoticons: { n: 1, c: x, r: !0, q: !0 },
-                    stickers: { n: 2, c: L, r: !0, q: !0 },
+                    emoticons: { n: 1, c: L, r: !0, q: !0 },
+                    stickers: { n: 2, c: x, r: !0, q: !0 },
                     effects: { n: 3, c: k, r: !0, q: !0 },
                   },
                 }),
@@ -7203,20 +7288,20 @@ var CLSTAMP = "10260012";
             return "CMsgClientEmoticonList";
           }
         }
-        class x extends r.Message {
+        class L extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              x.prototype.name || s.Sg(x.M()),
+              L.prototype.name || s.Sg(L.M()),
               r.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              x.sm_m ||
-                (x.sm_m = {
-                  proto: x,
+              L.sm_m ||
+                (L.sm_m = {
+                  proto: L,
                   fields: {
                     name: { n: 1, br: s.qM.readString, bw: s.gp.writeString },
                     count: { n: 2, br: s.qM.readInt32, bw: s.gp.writeInt32 },
@@ -7236,81 +7321,6 @@ var CLSTAMP = "10260012";
                       bw: s.gp.writeUint32,
                     },
                     appid: { n: 6, br: s.qM.readUint32, bw: s.gp.writeUint32 },
-                  },
-                }),
-              x.sm_m
-            );
-          }
-          static MBF() {
-            return x.sm_mbf || (x.sm_mbf = s.w0(x.M())), x.sm_mbf;
-          }
-          toObject(e = !1) {
-            return x.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return s.BT(x.M(), e, t);
-          }
-          static fromObject(e) {
-            return s.Uq(x.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new (i().BinaryReader)(e),
-              n = new x();
-            return x.deserializeBinaryFromReader(n, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return s.zj(x.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new (i().BinaryWriter)();
-            return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            s.i0(x.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new (i().BinaryWriter)();
-            return (
-              x.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientEmoticonList_Emoticon";
-          }
-        }
-        class L extends r.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              L.prototype.name || s.Sg(L.M()),
-              r.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              L.sm_m ||
-                (L.sm_m = {
-                  proto: L,
-                  fields: {
-                    name: { n: 1, br: s.qM.readString, bw: s.gp.writeString },
-                    count: { n: 2, br: s.qM.readInt32, bw: s.gp.writeInt32 },
-                    time_received: {
-                      n: 3,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    appid: { n: 4, br: s.qM.readUint32, bw: s.gp.writeUint32 },
-                    time_last_used: {
-                      n: 5,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    use_count: {
-                      n: 6,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
                   },
                 }),
               L.sm_m
@@ -7347,6 +7357,81 @@ var CLSTAMP = "10260012";
             var e = new (i().BinaryWriter)();
             return (
               L.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientEmoticonList_Emoticon";
+          }
+        }
+        class x extends r.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              x.prototype.name || s.Sg(x.M()),
+              r.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              x.sm_m ||
+                (x.sm_m = {
+                  proto: x,
+                  fields: {
+                    name: { n: 1, br: s.qM.readString, bw: s.gp.writeString },
+                    count: { n: 2, br: s.qM.readInt32, bw: s.gp.writeInt32 },
+                    time_received: {
+                      n: 3,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    appid: { n: 4, br: s.qM.readUint32, bw: s.gp.writeUint32 },
+                    time_last_used: {
+                      n: 5,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    use_count: {
+                      n: 6,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                  },
+                }),
+              x.sm_m
+            );
+          }
+          static MBF() {
+            return x.sm_mbf || (x.sm_mbf = s.w0(x.M())), x.sm_mbf;
+          }
+          toObject(e = !1) {
+            return x.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return s.BT(x.M(), e, t);
+          }
+          static fromObject(e) {
+            return s.Uq(x.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new x();
+            return x.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return s.zj(x.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            s.i0(x.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              x.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -8333,16 +8418,6 @@ var CLSTAMP = "10260012";
                       n: 7,
                       br: s.qM.readUint32,
                       bw: s.gp.writeUint32,
-                    },
-                    facebook_id: {
-                      n: 8,
-                      br: s.qM.readUint64String,
-                      bw: s.gp.writeUint64String,
-                    },
-                    facebook_name: {
-                      n: 9,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
                     },
                     steamguard_machine_name_user_chosen: {
                       n: 15,
@@ -9415,24 +9490,25 @@ var CLSTAMP = "10260012";
           let n = e?.parentElement;
           for (; n; ) {
             if (r(n)) {
-              if (!t || "x" == t) {
-                const e = window.getComputedStyle(n);
-                if (
-                  "scroll" == e.overflowX ||
-                  "auto" == e.overflowX ||
-                  "fixed" == e.position
+              const e = window.getComputedStyle(n);
+              if (
+                !(
+                  (t && "x" != t) ||
+                  ("scroll" != e.overflowX &&
+                    "auto" != e.overflowX &&
+                    "fixed" != e.position)
                 )
-                  break;
-              }
-              if (!t || "y" == t) {
-                const e = window.getComputedStyle(n);
-                if (
-                  "scroll" == e.overflowY ||
-                  "auto" == e.overflowY ||
-                  "fixed" == e.position
+              )
+                break;
+              if (
+                !(
+                  (t && "y" != t) ||
+                  ("scroll" != e.overflowY &&
+                    "auto" != e.overflowY &&
+                    "fixed" != e.position)
                 )
-                  break;
-              }
+              )
+                break;
             }
             n = n.parentElement;
           }
@@ -9453,6 +9529,7 @@ var CLSTAMP = "10260012";
           OP: () => m,
           Qi: () => c,
           aA: () => d,
+          b$: () => h,
           l6: () => a,
           o4: () => l,
           xA: () => o,
@@ -9522,18 +9599,20 @@ var CLSTAMP = "10260012";
             c = [o("mousedown", s), o("touchstart", a)];
           return (0, i.Ue)(...c);
         }
-        function m(e) {
-          const [t, n] = r.useState(!1),
-            i = r.useRef(void 0);
+        function m() {
+          const [e, t] = r.useState(!1);
           return [
-            t,
+            e,
             {
-              onMouseEnter: r.useCallback(() => {
-                n(!0), clearTimeout(i.current);
-              }, []),
-              onMouseLeave: r.useCallback(() => {
-                e ? (i.current = setTimeout(() => n(!1), e)) : n(!1);
-              }, [e]),
+              onMouseEnter: r.useCallback(() => t(!0), []),
+              onMouseLeave: r.useCallback(
+                () =>
+                  window.sessionStorage &&
+                  "true" !=
+                    window.sessionStorage.getItem("DEBUG_StickyHovers") &&
+                  t(!1),
+                [],
+              ),
             },
           ];
         }
@@ -9577,6 +9656,15 @@ var CLSTAMP = "10260012";
             ref: (0, i.Ue)(w, d, g),
           };
         }
+        function h(e) {
+          let t = r.useRef(null);
+          return (
+            r.useEffect(() => {
+              e && t.current && t.current.focus({ preventScroll: !0 });
+            }, [e, t]),
+            t
+          );
+        }
       },
       42898: (e, t, n) => {
         "use strict";
@@ -9590,29 +9678,27 @@ var CLSTAMP = "10260012";
           Qi: () => s.Qi,
           SK: () => d,
           Sz: () => y,
-          YR: () => k,
           Z3: () => a,
           _g: () => f,
           aA: () => s.aA,
           bB: () => u,
-          bs: () => L,
+          bs: () => x,
           dh: () => w,
           eV: () => c,
           gc: () => v,
           hL: () => _,
           l6: () => s.l6,
           o4: () => s.o4,
-          ob: () => R,
-          uD: () => x,
+          ob: () => k,
+          uD: () => L,
           uH: () => E,
           uN: () => S,
           vJ: () => h,
-          wm: () => T,
+          wm: () => I,
           x2: () => M,
           xA: () => s.xA,
           xM: () => g,
           xP: () => o,
-          xx: () => I,
         });
         var r = n(63696),
           i = n(51396),
@@ -9726,7 +9812,7 @@ var CLSTAMP = "10260012";
               null != this.fnLatestCallback &&
                 (this.fnLatestCallback(),
                 (this.fnLatestCallback = null),
-                (this.flLastExecutionTimeMs = Date.now())),
+                (this.flLastExecutionTimeMs = performance.now())),
                 window.clearTimeout(this.nTimeoutHandle),
                 (this.nTimeoutHandle = 0);
             },
@@ -9740,7 +9826,7 @@ var CLSTAMP = "10260012";
               (n) => {
                 const r = t.current;
                 r.fnLatestCallback = n;
-                const i = Date.now() - r.flLastExecutionTimeMs,
+                const i = performance.now() - r.flLastExecutionTimeMs,
                   s = Math.max(e - i, 0);
                 window.clearTimeout(r.nTimeoutHandle),
                   (r.nTimeoutHandle = window.setTimeout(
@@ -9820,7 +9906,7 @@ var CLSTAMP = "10260012";
         function B(e, t) {
           return E(e, t) || e;
         }
-        function x(e = !1) {
+        function L(e = !1) {
           const [t, n] = r.useState(e);
           return [
             t,
@@ -9828,7 +9914,7 @@ var CLSTAMP = "10260012";
             r.useCallback(() => n(!1), []),
           ];
         }
-        function L(e) {
+        function x(e) {
           const t = r.useRef(void 0);
           return r.useCallback(
             () => (
@@ -9839,24 +9925,7 @@ var CLSTAMP = "10260012";
             [e],
           );
         }
-        function k(e) {
-          const t = r.useRef({ value: void 0, bConstructed: !1 });
-          return (
-            t.current.bConstructed ||
-              (t.current = { value: e(), bConstructed: !0 }),
-            t.current.value
-          );
-        }
-        function I(e, t) {
-          const n = r.useRef(void 0);
-          return null == e
-            ? ((n.current = e), e)
-            : ((null == n.current || isNaN(n.current)) && (n.current = e),
-              (n.current = Math.min(n.current, e + t)),
-              (n.current = Math.max(n.current, e - t)),
-              n.current);
-        }
-        function R() {
+        function k() {
           const [e, t] = r.useState(() => (0, i.x0)());
           return {
             ...e,
@@ -9866,7 +9935,7 @@ var CLSTAMP = "10260012";
             }, []),
           };
         }
-        function T(e) {
+        function I(e) {
           const t = r.useRef(e);
           return (
             (t.current.length !== e.length ||
@@ -10296,7 +10365,7 @@ var CLSTAMP = "10260012";
         n.d(t, { A: () => s });
         var r = n(17372);
         const i = JSON.parse(
-          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"stats":26,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"recommendations":70,"categories":71,"hardware":72,"waystoplay":73,"specialsections":74,"more":75,"big-category-link":76,"small-category-link":77,"package-purchase-recommendations":78,"popular":79,"recent":80,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"monthlytopreleases":7011,"bestofyear":7012,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751,"salebrowsetrendingfree":100752,"trendingfree":100753}',
+          '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"stats":26,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"recommendations":70,"categories":71,"hardware":72,"waystoplay":73,"specialsections":74,"more":75,"big-category-link":76,"small-category-link":77,"package-purchase-recommendations":78,"popular":79,"recent":80,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"monthlytopreleases":7011,"bestofyear":7012,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751,"salebrowsetrendingfree":100752,"trendingfree":100753,"reactroot":100754,"bundlelist":100755,"verifiedprogram":100756}',
         );
         class s {
           static InstrumentLink(e, t, n = null) {
@@ -10905,13 +10974,13 @@ var CLSTAMP = "10260012";
           Dr: () => i,
           K9: () => I,
           Of: () => T,
-          R7: () => x,
+          R7: () => L,
           VR: () => F,
           Wf: () => r,
           c4: () => E,
           gs: () => B,
           k5: () => y,
-          kc: () => L,
+          kc: () => x,
           yq: () => S,
         });
         var r,
@@ -10988,12 +11057,12 @@ var CLSTAMP = "10260012";
           }
         }
         function y() {
-          const { ownerWindow: e } = x(),
+          const { ownerWindow: e } = L(),
             t = T.GetPopupForWindow(e);
           return t?.browser_info || u.m;
         }
         function E() {
-          const e = x(),
+          const e = L(),
             t = l.useCallback(
               () => e.ownerWindow.SteamClient.Window.GetWindowDetails(),
               [e],
@@ -11044,8 +11113,8 @@ var CLSTAMP = "10260012";
               (e[(e.StandaloneContextMenu = 4)] = "StandaloneContextMenu");
           })(i || (i = {}));
         const B = l.createContext({ ownerWindow: window }),
-          x = () => l.useContext(B);
-        function L(e) {
+          L = () => l.useContext(B);
+        function x(e) {
           const { ownerWindow: t, children: n } = e,
             r = l.useMemo(() => ({ ownerWindow: t }), [t]);
           return l.createElement(B.Provider, { value: r }, n);
@@ -11420,9 +11489,9 @@ var CLSTAMP = "10260012";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Nov 21 2025 : 22:35:28",
-                BUILD_TIME_UTC: "Nov 22 2025 : 06:35:28",
-                BUILD_RTIME_UTC: 1763793328,
+                BUILD_TIME_LOCAL: "Nov 25 2025 : 10:12:16",
+                BUILD_TIME_UTC: "Nov 25 2025 : 18:12:16",
+                BUILD_RTIME_UTC: 1764094336,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -11988,19 +12057,19 @@ var CLSTAMP = "10260012";
             [v, M] = r.useState(void 0),
             [S, y] = r.useState(!1),
             [E, B] = r.useState(!1),
-            [x, L] = r.useState(null),
+            [L, x] = r.useState(null),
             k = r.useCallback(() => {
               let e = t;
-              if (!x || !e) return;
+              if (!L || !e) return;
               if (S && n && !n.visible) return;
               let r = e.ownerDocument.defaultView;
               if (!r || r.closed) return;
-              const i = x.querySelector(".hover_arrow.left"),
-                s = x.querySelector(".hover_arrow.right"),
-                o = x.querySelector(".hover_arrow.top"),
-                a = x.querySelector(".hover_arrow.bottom"),
+              const i = L.querySelector(".hover_arrow.left"),
+                s = L.querySelector(".hover_arrow.right"),
+                o = L.querySelector(".hover_arrow.top"),
+                a = L.querySelector(".hover_arrow.bottom"),
                 l = e.getBoundingClientRect(),
-                f = x.getBoundingClientRect(),
+                f = L.getBoundingClientRect(),
                 _ = "overlay" == u || "overlay-center" == u;
               i && i.setAttribute("style", "display: none;"),
                 s && s.setAttribute("style", "display: none;"),
@@ -12010,11 +12079,12 @@ var CLSTAMP = "10260012";
               e.matches(":dir(rtl)") &&
                 ("left" === w ? (w = "right") : "right" === w && (w = "left"));
               let {
-                nLeft: E,
-                nTop: L,
-                nOverflow: k,
-                nLateralOverflow: I,
-              } = c(w, m, d, l, f, r.innerWidth, r.innerHeight);
+                  nLeft: E,
+                  nTop: x,
+                  nOverflow: k,
+                  nLateralOverflow: I,
+                } = c(w, m, d, l, f, r.innerWidth, r.innerHeight),
+                R = u;
               if (k > (h ?? 10) && !_) {
                 const e = (function (e) {
                     switch (e) {
@@ -12031,7 +12101,7 @@ var CLSTAMP = "10260012";
                       case "overlay-center":
                         return "overlay-center";
                     }
-                  })(w),
+                  })(R),
                   {
                     nLeft: t,
                     nTop: n,
@@ -12039,47 +12109,47 @@ var CLSTAMP = "10260012";
                     nLateralOverflow: s,
                   } = c(e, m, d, l, f, r.innerWidth, r.innerHeight);
                 if (
-                  (i < k && ((w = e), (E = t), (L = n), (k = i), (I = s)),
+                  (i < k && ((R = e), (E = t), (x = n), (k = i), (I = s)),
                   k > (h ?? 10))
                 )
                   return (
                     console.log(
                       "Not showing hover because it didn't fit in the main or alt direction",
                     ),
-                    x.setAttribute("style", "display: none;"),
+                    L.setAttribute("style", "display: none;"),
                     B(!0),
                     void g?.()
                   );
               }
               0 === p ||
                 _ ||
-                ([L, E] = (function (e, t, n, r, i) {
+                ([x, E] = (function (e, t, n, r, i) {
                   let s = Math.max(t[0], t[1]);
                   void 0 !== e && (s = Math.min(e, s));
                   s = Math.max(0, s);
                   const o = t[0] > t[1] ? s : -s;
                   "left" === n || "right" === n ? (r += o) : (i += o);
                   return [r, i];
-                })(p, I, w, L, E));
-              let R = null;
-              switch (w) {
+                })(p, I, w, x, E));
+              let T = null;
+              switch (R) {
                 case "left":
-                  R = s;
+                  T = s;
                   break;
                 case "right":
-                  R = i;
+                  T = i;
                   break;
                 case "top":
-                  R = a;
+                  T = a;
                   break;
                 case "bottom":
-                  R = o;
+                  T = o;
               }
-              R && R.setAttribute("style", ""),
+              T && T.setAttribute("style", ""),
                 E != b && C(E),
-                L != v && M(L),
+                x != v && M(x),
                 S || y(!0);
-            }, [t, x, S, n, u, m, d, h, p, b, v, g]);
+            }, [t, L, S, n, u, m, d, h, p, b, v, g]);
           r.useEffect(() => k(), [k]);
           let I = Object.assign({ left: b, top: v }, a),
             R = !n || n.visible;
@@ -12103,7 +12173,7 @@ var CLSTAMP = "10260012";
                   s,
                 ),
                 style: I,
-                ref: L,
+                ref: x,
               },
               _,
             ),
@@ -13035,7 +13105,7 @@ var CLSTAMP = "10260012";
           y = n(44846),
           E = n(83957),
           B = n.n(E);
-        class x {
+        class L {
           m_CMList = { rgCMList: [], rtLastLoaded: 0 };
           m_Storage;
           m_InitPromise;
@@ -13100,7 +13170,7 @@ var CLSTAMP = "10260012";
           }
           async GetCMListFromWebAPI() {
             try {
-              const n = await ((e = L),
+              const n = await ((e = x),
                 (t = 1e4),
                 () =>
                   new Promise((n, r) => {
@@ -13261,7 +13331,7 @@ var CLSTAMP = "10260012";
             return (e.rtLastCheck = new Date().getTime() / 1e3), e.msPing;
           }
         }
-        async function L() {
+        async function x() {
           const e = `${s.TS.WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets&origin=${self.origin}`,
             t = (await B().get(e)).data,
             n = (t && t.response && t.response.serverlist) || [];
@@ -13286,7 +13356,7 @@ var CLSTAMP = "10260012";
           m_iIntervalHeartbeat;
           m_iCallSeq = 1;
           m_mapWaitingCallbacks = new Map();
-          m_CMList = new x();
+          m_CMList = new L();
           constructor(e) {
             super(), (0, u.Gn)(this), this.m_CMList.Init(e);
           }
@@ -13791,9 +13861,9 @@ var CLSTAMP = "10260012";
         n.d(t, {
           $b: () => P,
           Dy: () => A,
-          Fd: () => x,
+          Fd: () => L,
           IK: () => B,
-          K5: () => L,
+          K5: () => x,
           P: () => M,
           Vs: () => k,
           Y8: () => z,
@@ -13928,7 +13998,7 @@ var CLSTAMP = "10260012";
                     l.createElement(
                       l.Fragment,
                       null,
-                      l.createElement(L, null),
+                      l.createElement(x, null),
                       l.createElement(
                         E,
                         { className: b.Cancel, onSelected: i },
@@ -14053,7 +14123,7 @@ var CLSTAMP = "10260012";
             );
           }
         }
-        class x extends l.PureComponent {
+        class L extends l.PureComponent {
           render() {
             const { icon: e, children: t, ...n } = this.props;
             return l.createElement(
@@ -14064,7 +14134,7 @@ var CLSTAMP = "10260012";
             );
           }
         }
-        function L(e) {
+        function x(e) {
           const t = l.useContext(M).styles ?? v();
           return l.createElement("div", {
             className: t.ContextMenuSeparator,
@@ -14338,11 +14408,11 @@ var CLSTAMP = "10260012";
                 : (p.menuLeft = t.bOverlapHorizontal ? g : _);
             let E = a ?? d.top,
               B = a ?? d.bottom,
-              x = n.scrollHeight;
-            t.bMatchHeight && ((x = B - E), (p.menuHeight = x));
-            let L = (t.bOverlapVertical ? B : E) - l - x,
-              k = L > 0,
-              I = l + m - (t.bOverlapVertical ? E : B) - x,
+              L = n.scrollHeight;
+            t.bMatchHeight && ((L = B - E), (p.menuHeight = L));
+            let x = (t.bOverlapVertical ? B : E) - l - L,
+              k = x > 0,
+              I = l + m - (t.bOverlapVertical ? E : B) - L,
               R = I > 0,
               T = (t.bPreferPopTop || !R) && k && !t.bDisablePopTop;
             if (!k && !R) {
@@ -14350,11 +14420,11 @@ var CLSTAMP = "10260012";
                 void 0 !== t.bShiftToFitWindow
                   ? t.bShiftToFitWindow
                   : !!t.bFitToWindow && !t.bOverlapHorizontal;
-              (T = L > I && !t.bDisablePopTop),
+              (T = x > I && !t.bDisablePopTop),
                 e && (T ? (p.menuTop = 4) : (p.menuBottom = 4)),
                 t.bFitToWindow &&
-                  (e ? (x = Math.min(x, m - 8)) : (x += T ? L : I),
-                  (p.menuHeight = x - 8));
+                  (e ? (L = Math.min(L, m - 8)) : (L += T ? x : I),
+                  (p.menuHeight = L - 8));
             }
             void 0 === p.menuBottom &&
               void 0 === p.menuTop &&
@@ -14627,7 +14697,7 @@ var CLSTAMP = "10260012";
                   ),
                 ),
               e.length > 0 &&
-                (t.push(l.createElement(L, { key: "devtools-separator" })),
+                (t.push(l.createElement(x, { key: "devtools-separator" })),
                 t.push(...e));
           }
           if (t.length)
@@ -15325,10 +15395,16 @@ var CLSTAMP = "10260012";
                       rctActiveContextMenus: t && c ? a : void 0,
                     };
                   return e instanceof C._F
-                    ? r.createElement(x, { ...n, modal: e, Component: o ?? L })
+                    ? r.createElement(L, {
+                        ...n,
+                        key: n.key,
+                        modal: e,
+                        Component: o ?? x,
+                      })
                     : e instanceof C.$9
                       ? r.createElement(B, {
                           ...n,
+                          key: n.key,
                           modal: e,
                           bUseDialogElement: c,
                         })
@@ -15391,7 +15467,7 @@ var CLSTAMP = "10260012";
           );
           return s ? r.createElement(k, { active: i }, a) : a;
         }
-        function x(e) {
+        function L(e) {
           const {
               modal: t,
               active: n,
@@ -15420,7 +15496,7 @@ var CLSTAMP = "10260012";
             )
           );
         }
-        function L(e) {
+        function x(e) {
           const { className: t, active: n, children: i } = e;
           return r.createElement(
             k,
@@ -15437,10 +15513,12 @@ var CLSTAMP = "10260012";
             i = r.useRef(null),
             [s, o] = r.useState(!1);
           return (
-            r.useEffect(() => {
-              const e = i.current;
-              e && (t && !s ? (e.showModal(), o(!0)) : !t && s && e.close());
+            r.useLayoutEffect(() => {
+              t && !s ? o(!0) : !t && s && i.current?.close();
             }, [t, s]),
+            r.useLayoutEffect(() => {
+              s && i.current.showModal();
+            }, [s]),
             r.createElement(
               "dialog",
               {
@@ -15449,7 +15527,7 @@ var CLSTAMP = "10260012";
                 onClose: () => o(!1),
                 onCancel: (e) => e.preventDefault(),
               },
-              e.children,
+              n,
             )
           );
         }
@@ -15872,7 +15950,7 @@ var CLSTAMP = "10260012";
           BeN: () => P,
           Bir: () => on,
           Bki: () => hn,
-          CE1: () => Lt,
+          CE1: () => xt,
           CeX: () => me,
           Cip: () => ft,
           Cv4: () => m,
@@ -15891,6 +15969,7 @@ var CLSTAMP = "10260012";
           GrD: () => Ct,
           Gv$: () => K,
           IFd: () => sn,
+          IGf: () => Dn,
           IOc: () => ne,
           IrQ: () => he,
           Jlk: () => ae,
@@ -15928,7 +16007,7 @@ var CLSTAMP = "10260012";
           T4m: () => At,
           UTF: () => kt,
           U_V: () => ct,
-          V5W: () => Le,
+          V5W: () => xe,
           VR: () => je,
           VSd: () => Mn,
           Vgk: () => gn,
@@ -15936,14 +16015,14 @@ var CLSTAMP = "10260012";
           WOg: () => bt,
           WX$: () => Qt,
           Wy0: () => ht,
-          X: () => L,
+          X: () => x,
           X4B: () => ce,
           XH_: () => nn,
           XTb: () => E,
           Xjb: () => ve,
           Xz0: () => pt,
           YJl: () => U,
-          YNO: () => x,
+          YNO: () => L,
           Yb3: () => rn,
           Yoo: () => Fn,
           YuU: () => $e,
@@ -15960,8 +16039,9 @@ var CLSTAMP = "10260012";
           aPd: () => F,
           aVR: () => Yt,
           aeP: () => be,
-          agV: () => Ln,
+          agV: () => xn,
           apU: () => Pe,
+          az8: () => On,
           b8_: () => cn,
           bKN: () => kn,
           bPr: () => Ve,
@@ -16001,6 +16081,7 @@ var CLSTAMP = "10260012";
           jdP: () => Bn,
           jlt: () => tn,
           kPc: () => mt,
+          koA: () => An,
           l8x: () => we,
           lMJ: () => Be,
           lRD: () => qt,
@@ -16022,7 +16103,7 @@ var CLSTAMP = "10260012";
           sdo: () => Z,
           t$Q: () => H,
           tID: () => Te,
-          tIO: () => xn,
+          tIO: () => Ln,
           tcj: () => N,
           tmR: () => S,
           twC: () => Bt,
@@ -16040,9 +16121,9 @@ var CLSTAMP = "10260012";
           yFA: () => G,
           yUp: () => j,
           y_e: () => De,
-          ypD: () => xt,
+          ypD: () => Lt,
           zD7: () => M,
-          zHo: () => xe,
+          zHo: () => Le,
         });
         var r = n(63696),
           i = n(90765),
@@ -16225,7 +16306,10 @@ var CLSTAMP = "10260012";
                 "svg",
                 {
                   xmlns: "http://www.w3.org/2000/svg",
-                  className: "SVGIcon_Button SVGIcon_ChatSettings",
+                  className: (0, i.A)(
+                    "SVGIcon_Button SVGIcon_ChatSettings",
+                    a().FlipInRTL,
+                  ),
                   version: "1.1",
                   x: "0px",
                   y: "0px",
@@ -16554,7 +16638,10 @@ var CLSTAMP = "10260012";
               viewBox: "0 0 36 36",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Submit",
+              className: (0, i.A)(
+                "SVGIcon_Button SVGIcon_Submit",
+                a().FlipInRTL,
+              ),
               ...e,
             },
             r.createElement("path", {
@@ -16594,7 +16681,7 @@ var CLSTAMP = "10260012";
             ),
           );
         }
-        function x() {
+        function L() {
           return r.createElement(
             "svg",
             {
@@ -16610,7 +16697,7 @@ var CLSTAMP = "10260012";
             }),
           );
         }
-        function L(e) {
+        function x(e) {
           return r.createElement(
             "svg",
             {
@@ -16809,6 +16896,7 @@ var CLSTAMP = "10260012";
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 26 26",
               fill: "none",
+              className: a().FlipInRTL,
             },
             r.createElement("path", {
               fill: "currentColor",
@@ -16828,7 +16916,10 @@ var CLSTAMP = "10260012";
             {
               version: "1.1",
               xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_ExitIcon",
+              className: (0, i.A)(
+                "SVGIcon_Button SVGIcon_ExitIcon",
+                a().FlipInRTL,
+              ),
               x: "0px",
               y: "0px",
               width: "64px",
@@ -16878,7 +16969,10 @@ var CLSTAMP = "10260012";
               version: "1.1",
               id: "Layer_1",
               xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_TextRoom",
+              className: (0, i.A)(
+                "SVGIcon_Button SVGIcon_TextRoom",
+                a().FlipInRTL,
+              ),
               x: "0px",
               y: "0px",
               width: "256px",
@@ -17349,7 +17443,10 @@ var CLSTAMP = "10260012";
                   version: "1.1",
                   id: "Layer_5",
                   xmlns: "http://www.w3.org/2000/svg",
-                  className: "SVGIcon_Button SVGIcon_Invite",
+                  className: (0, i.A)(
+                    "SVGIcon_Button SVGIcon_Invite",
+                    a().FlipInRTL,
+                  ),
                   x: "0px",
                   y: "0px",
                   width: "256px",
@@ -17500,7 +17597,10 @@ var CLSTAMP = "10260012";
             {
               version: "1.1",
               xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_NewChatGroup",
+              className: (0, i.A)(
+                "SVGIcon_Button SVGIcon_NewChatGroup",
+                a().FlipInRTL,
+              ),
               x: "0px",
               y: "0px",
               viewBox: "0 0 256 256",
@@ -18067,7 +18167,7 @@ var CLSTAMP = "10260012";
                 },
                 r.createElement("path", {
                   d: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
-                  fill: "currentColor",
+                  fill: e.fill || "currentColor",
                 }),
               );
             case "down":
@@ -18083,7 +18183,7 @@ var CLSTAMP = "10260012";
                 },
                 r.createElement("path", {
                   d: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
-                  fill: "currentColor",
+                  fill: e.fill || "currentColor",
                 }),
               );
             case "left":
@@ -18099,7 +18199,7 @@ var CLSTAMP = "10260012";
                 },
                 r.createElement("path", {
                   d: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
-                  fill: "currentColor",
+                  fill: e.fill || "currentColor",
                 }),
               );
             case "right":
@@ -18115,26 +18215,31 @@ var CLSTAMP = "10260012";
                 },
                 r.createElement("path", {
                   d: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
-                  fill: "currentColor",
+                  fill: e.fill || "currentColor",
                 }),
               );
           }
         }
         function fe(e) {
+          const { angle: t, ...n } = e;
           return r.createElement(
             "svg",
             {
               version: "1.1",
               id: "Layer_1",
               xmlns: "http://www.w3.org/2000/svg",
-              className: a().HasHorizontalDirection,
+              className: (0, i.A)(
+                "SVGIcon_CutArrow",
+                a().HasHorizontalDirection,
+              ),
+              style: { transform: `rotate(${t || 0}deg)` },
               x: "0px",
               y: "0px",
               width: "50px",
               height: "100px",
               viewBox: "0 0 50 100",
               fill: e.fill || "#ffffff",
-              ...e,
+              ...n,
             },
             r.createElement("polygon", {
               points:
@@ -18143,10 +18248,11 @@ var CLSTAMP = "10260012";
           );
         }
         function _e(e) {
+          const { angle: t, singlearrow: n, ...s } = e;
           return r.createElement(
             "svg",
             {
-              style: { transform: `rotate(${e.angle}deg)` },
+              style: { transform: `rotate(${t}deg)` },
               version: "1.1",
               id: "arrowBase",
               xmlns: "http://www.w3.org/2000/svg",
@@ -18159,21 +18265,22 @@ var CLSTAMP = "10260012";
               width: "256px",
               height: "256px",
               viewBox: "0 0 256 256",
+              ...s,
             },
             r.createElement("polyline", {
               className: "Arrow1",
               fill: "none",
-              stroke: "#ffffff",
+              stroke: e.fill || "#ffffff",
               strokeWidth: "23",
               strokeLinecap: "round",
               strokeMiterlimit: "10",
               points: "135.65,21.667 30.081,127.235 137.18,234.333 ",
             }),
-            !e.singlearrow &&
+            !n &&
               r.createElement("polyline", {
                 className: "Arrow2",
                 fill: "none",
-                stroke: "#ffffff",
+                stroke: e.fill || "#ffffff",
                 strokeWidth: "23",
                 strokeLinecap: "round",
                 strokeMiterlimit: "10",
@@ -18186,7 +18293,7 @@ var CLSTAMP = "10260012";
           return r.createElement(
             "svg",
             {
-              style: { transform: `rotate(${e.angle}deg)` },
+              style: { transform: `rotate(${t}deg)` },
               xmlns: "http://www.w3.org/2000/svg",
               className: a().HasHorizontalDirection,
               viewBox: "0 0 32 32",
@@ -18194,7 +18301,7 @@ var CLSTAMP = "10260012";
               ...n,
             },
             r.createElement("path", {
-              fill: "currentColor",
+              fill: e.fill || "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M16.0855 15.5837L8.88892 8.38708L12.0316 5.24438L22.3709 15.5837L12.0316 25.923L8.88892 22.7803L16.0855 15.5837Z",
@@ -18474,7 +18581,7 @@ var CLSTAMP = "10260012";
             ),
           );
         }
-        function xe() {
+        function Le() {
           return r.createElement(
             "svg",
             {
@@ -18551,7 +18658,8 @@ var CLSTAMP = "10260012";
             ),
           );
         }
-        function Le(e) {
+        function xe(e) {
+          const { angle: t, ...n } = e;
           return r.createElement(
             "svg",
             {
@@ -18565,10 +18673,11 @@ var CLSTAMP = "10260012";
               width: "256px",
               height: "256px",
               viewBox: "0 0 256 256",
+              ...n,
             },
             r.createElement("polygon", {
               points: "13.913,141 128,59 242.087,141 ",
-              fill: "#ffffff",
+              fill: e.fill || "#ffffff",
             }),
           );
         }
@@ -18765,14 +18874,14 @@ var CLSTAMP = "10260012";
         }
         function Fe() {
           const [e, t] = (0, l.l)(),
-            [n, i] = (0, l.l)();
+            [n, s] = (0, l.l)();
           return r.createElement(
             "svg",
             {
               version: "1.1",
               id: "Layer_1",
               xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_SteamTV",
+              className: (0, i.A)("SVGIcon_SteamTV", a().SteamTVIcon),
               x: "0px",
               y: "0px",
               width: "1024px",
@@ -18807,17 +18916,17 @@ var CLSTAMP = "10260012";
                 }),
               ),
             ),
-            r.createElement("circle", {
-              className: "logoBG",
-              opacity: "0",
-              fill: "#000000",
-              cx: "156.586",
-              cy: "128",
-              r: "125.914",
-            }),
             r.createElement(
               "g",
-              { id: "logo" },
+              { id: "logo", className: a().SteamTVLogo },
+              r.createElement("circle", {
+                className: "logoBG",
+                opacity: "0",
+                fill: "#000000",
+                cx: "156.586",
+                cy: "128",
+                r: "125.914",
+              }),
               r.createElement("path", {
                 fill: t,
                 d: "M156.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.016,1.934,0.051l29.226-42.355c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.239,20.745,46.239,46.241c0,25.494-20.741,46.241-46.239,46.241 c-0.352,0-0.698-0.01-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.14-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.991-34.026-27.87l-46.993-19.429c14.55,51.464,61.831,89.19,117.957,89.19 c67.713,0,122.605-54.893,122.605-122.604C278.978,60.244,224.086,5.355,156.374,5.355",
@@ -18833,7 +18942,7 @@ var CLSTAMP = "10260012";
             ),
             r.createElement(
               "g",
-              { id: "steam" },
+              { id: "steam", className: a().SteamTVSteam },
               r.createElement("path", {
                 fill: "rgb(92, 106, 218)",
                 d: "M404.52,91.9l-7.968,14.006c-6.138-4.287-14.455-6.862-21.717-6.862c-8.299,0-13.437,3.43-13.437,9.586 c0,7.473,9.124,9.212,22.682,14.082c14.574,5.149,22.948,11.21,22.948,24.558c0,18.264-14.359,28.519-34.998,28.519 c-10.063,0-22.195-2.595-31.53-8.265l5.815-15.539c7.579,4.008,16.644,6.381,24.722,6.381c10.897,0,16.071-4.021,16.071-9.96 c0-6.802-7.893-8.843-20.641-13.06c-14.521-4.856-24.586-11.213-24.586-25.992c0-16.658,13.34-26.225,32.538-26.225 C387.797,83.128,398.551,87.367,404.52,91.9",
@@ -18860,7 +18969,7 @@ var CLSTAMP = "10260012";
             ),
             r.createElement(
               "g",
-              { id: "tv" },
+              { id: "tv", className: a().SteamTVTV },
               r.createElement("polygon", {
                 fill: "rgb(125, 110, 188)",
                 points:
@@ -18939,7 +19048,10 @@ var CLSTAMP = "10260012";
             {
               version: "1.1",
               id: "Layer_5",
-              className: "SVGIcon_Button SVGIcon_ChatBubble",
+              className: (0, i.A)(
+                "SVGIcon_Button SVGIcon_ChatBubble",
+                a().FlipInRTL,
+              ),
               xmlns: "http://www.w3.org/2000/svg",
               x: "0px",
               y: "0px",
@@ -20325,7 +20437,7 @@ var CLSTAMP = "10260012";
             }),
           );
         }
-        function xt(e) {
+        function Lt(e) {
           return r.createElement(
             "svg",
             {
@@ -20348,7 +20460,7 @@ var CLSTAMP = "10260012";
             }),
           );
         }
-        function Lt(e) {
+        function xt(e) {
           return r.createElement(
             "svg",
             {
@@ -21551,7 +21663,7 @@ var CLSTAMP = "10260012";
             }),
           );
         }
-        function xn(e) {
+        function Ln(e) {
           return r.createElement(
             "svg",
             {
@@ -21565,7 +21677,7 @@ var CLSTAMP = "10260012";
             }),
           );
         }
-        function Ln(e) {
+        function xn(e) {
           return r.createElement(
             "svg",
             {
@@ -21680,6 +21792,69 @@ var CLSTAMP = "10260012";
                 ),
               ),
             ),
+          );
+        }
+        function On(e) {
+          const { fill: t, ...n } = e;
+          return r.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 10 10",
+              width: "10",
+              height: "10",
+              fill: "none",
+              ...n,
+            },
+            r.createElement("circle", {
+              cx: "5",
+              cy: "5",
+              r: "4",
+              fill: e.fill || "currentColor",
+            }),
+          );
+        }
+        function Dn(e) {
+          const { fill: t, ...n } = e;
+          return r.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 16 8",
+              width: "16",
+              height: "8",
+              fill: "none",
+              ...n,
+            },
+            r.createElement("rect", {
+              x: "0",
+              y: "0",
+              width: "16",
+              height: "8",
+              rx: "4",
+              fill: e.fill || "currentColor",
+            }),
+          );
+        }
+        function An(e) {
+          const { fill: t, ...n } = e;
+          return r.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 10 10",
+              width: "10",
+              height: "10",
+              fill: "none",
+              ...n,
+            },
+            r.createElement("rect", {
+              x: "1",
+              y: "1",
+              width: "8",
+              height: "8",
+              fill: e.fill || "currentColor",
+            }),
           );
         }
       },
@@ -22207,7 +22382,7 @@ var CLSTAMP = "10260012";
           Gq: () => w,
           I2: () => E,
           MA: () => y,
-          Vr: () => L,
+          Vr: () => x,
           ep: () => h,
           fS: () => v,
           he: () => g,
@@ -22424,11 +22599,11 @@ var CLSTAMP = "10260012";
             h ?? n.ownerDocument.body,
           );
         }
-        const x = "DEBUG_StickyHovers";
-        function L(e) {
+        const L = "DEBUG_StickyHovers";
+        function x(e) {
           e
-            ? window.sessionStorage.setItem(x, "true")
-            : window.sessionStorage.removeItem(x);
+            ? window.sessionStorage.setItem(L, "true")
+            : window.sessionStorage.removeItem(L);
         }
       },
       34742: (e, t, n) => {
@@ -22684,7 +22859,7 @@ var CLSTAMP = "10260012";
       54644: (e, t, n) => {
         "use strict";
         n.d(t, {
-          $e: () => L,
+          $e: () => x,
           BA: () => F,
           IB: () => y,
           Kf: () => k,
@@ -22699,7 +22874,7 @@ var CLSTAMP = "10260012";
           UQ: () => l,
           WC: () => c,
           YQ: () => b,
-          _f: () => x,
+          _f: () => L,
           a_: () => p,
           bZ: () => u,
           ew: () => _,
@@ -22933,7 +23108,7 @@ var CLSTAMP = "10260012";
             e
           );
         }
-        function x(e, t) {
+        function L(e, t) {
           let n = e?.parentElement;
           for (; n; ) {
             if (i(n)) {
@@ -22960,10 +23135,10 @@ var CLSTAMP = "10260012";
           }
           return i(n) ? n : null;
         }
-        function L(e, t) {
+        function x(e, t) {
           const n = [];
           let r = e;
-          for (; (r = x(r, t)); ) n.push(r);
+          for (; (r = L(r, t)); ) n.push(r);
           return n;
         }
         function k(e, t) {
@@ -23036,7 +23211,7 @@ var CLSTAMP = "10260012";
           lQ: () => u.lQ,
           oW: () => _,
           pN: () => B,
-          pf: () => x,
+          pf: () => L,
           um: () => w,
           vl: () => u.vl,
           wW: () => h,
@@ -23181,18 +23356,18 @@ var CLSTAMP = "10260012";
           }
         }
         function d(e) {
-          return null != x.LocalizeString(e, !0);
+          return null != L.LocalizeString(e, !0);
         }
         function h(e, ...t) {
-          let n = x.LocalizeString(e, !0);
+          let n = L.LocalizeString(e, !0);
           return void 0 === n ? e : v(n, ...t);
         }
         function p(e, ...t) {
-          let n = x.LocalizeString(e);
+          let n = L.LocalizeString(e);
           return void 0 === n ? e : v(n, ...t);
         }
         function g(e, ...t) {
-          let n = x.LocalizeString(e);
+          let n = L.LocalizeString(e);
           if (void 0 === n) return e;
           let i,
             s = [],
@@ -23211,7 +23386,7 @@ var CLSTAMP = "10260012";
             : g(e + "_Plural", t.toLocaleString(), ...n);
         }
         function _(e, ...t) {
-          let n = x.LocalizeIfToken(e);
+          let n = L.LocalizeIfToken(e);
           return void 0 === n ? e : b(n, ...t);
         }
         function w(e, t, ...n) {
@@ -23270,6 +23445,9 @@ var CLSTAMP = "10260012";
               return M.Get(e, t) || M.Get(e, m.GetELanguageFallback(t));
             }
             return null;
+          }
+          static BHas(e, t) {
+            return Boolean(e && e.length > t && e[t]);
           }
         }
         const S = {
@@ -23362,8 +23540,8 @@ var CLSTAMP = "10260012";
             n
           );
         }
-        const x = new m();
-        window.LocalizationManager = x;
+        const L = new m();
+        window.LocalizationManager = L;
       },
       11010: (e, t, n) => {
         "use strict";
@@ -23381,7 +23559,7 @@ var CLSTAMP = "10260012";
           _9: () => E,
           _l: () => f,
           a8: () => r,
-          cc: () => x,
+          cc: () => L,
           dt: () => D,
           gR: () => b,
           lQ: () => w,
@@ -23609,7 +23787,7 @@ var CLSTAMP = "10260012";
             if (!a.bGranularFutureTime)
               return (
                 i.tB(n.getTime() - r.getTime()),
-                n.getFullYear() == r.getFullYear() ? L(n) : I(n)
+                n.getFullYear() == r.getFullYear() ? x(n) : I(n)
               );
             i.tB(new Date().setHours(24, 0, 0, 0) - r.getTime());
             let e = new Date();
@@ -23622,7 +23800,7 @@ var CLSTAMP = "10260012";
                   n < e
                     ? (0, s.we)("#Time_Tomorrow")
                     : (e.setDate(e.getDate() + 5),
-                      n < e ? x(n) : B(n, !0, a.bAbbreviateDayOfWeek)))
+                      n < e ? L(n) : B(n, !0, a.bAbbreviateDayOfWeek)))
             );
           }
           i.tB(new Date().setHours(24, 0, 0, 0) - r.getTime());
@@ -23665,7 +23843,7 @@ var CLSTAMP = "10260012";
               ? (0, s.we)("#TimeSince_1Week")
               : (0, s.we)("#TimeSince_XWeeks", e);
           }
-          return n.getFullYear() == r.getFullYear() ? L(n) : I(n);
+          return n.getFullYear() == r.getFullYear() ? x(n) : I(n);
         }
         function b(e) {
           const t = new Date(1e3 * e),
@@ -23678,7 +23856,7 @@ var CLSTAMP = "10260012";
             t >= r
               ? (0, s.we)("#Time_Recent")
               : t.getFullYear() == n.getFullYear()
-                ? L(t)
+                ? x(t)
                 : n.getMonth() < 6 && t.getFullYear() == n.getFullYear() - 1
                   ? I(t)
                   : k(t)
@@ -23721,7 +23899,7 @@ var CLSTAMP = "10260012";
             o)
           );
         }
-        function x(e) {
+        function L(e) {
           let t = C.get(e.getDay());
           return (
             t ||
@@ -23732,7 +23910,7 @@ var CLSTAMP = "10260012";
             t)
           );
         }
-        function L(e) {
+        function x(e) {
           let t = v.get(e.getMonth());
           return (
             t ||
@@ -24036,6 +24214,12 @@ var CLSTAMP = "10260012";
                 Array.from(this.m_setEnabledDebugLogs),
               );
           }
+          PrintEnabledLogs() {
+            this.LogAsLogManager(
+              "Will print log messages for:",
+              Array.from(this.m_setEnabledDebugLogs),
+            );
+          }
           static Get() {
             return (
               null == l.s_Singleton && (l.s_Singleton = new l()), l.s_Singleton
@@ -24168,6 +24352,13 @@ var CLSTAMP = "10260012";
           (window.DebugLogDisableBacktrace = () =>
             l.Get().SetIncludeBacktraceInLog(!1)),
           (window.DebugLogNames = m),
+          (window.DebugLogEnabled = (...e) => {
+            e.length > 0 &&
+              console.warn(
+                `Use DebugLogEnable( '${e.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+              ),
+              l.Get().PrintEnabledLogs();
+          }),
           (window.EnableSteamConsole = (e = !0) =>
             l.Get().SetDebugLogEnabled("SteamClient", e));
       },
@@ -24207,7 +24398,6 @@ var CLSTAMP = "10260012";
           Qi: () => r.Qi,
           SK: () => r.SK,
           OP: () => r.OP,
-          xx: () => r.xx,
           $$: () => r.$$,
           xM: () => r.xM,
           bs: () => r.bs,
@@ -24224,7 +24414,6 @@ var CLSTAMP = "10260012";
           wY: () => s.wY,
           aA: () => r.aA,
           D5: () => i.D5,
-          YR: () => r.YR,
           gc: () => r.gc,
           x2: () => r.x2,
           _g: () => r._g,
@@ -24673,7 +24862,7 @@ var CLSTAMP = "10260012";
           GP: () => o.GP,
           Hn: () => S,
           IW: () => y,
-          NQ: () => x,
+          NQ: () => L,
           On: () => B,
           Pr: () => v,
           QO: () => l,
@@ -24694,7 +24883,7 @@ var CLSTAMP = "10260012";
           ss: () => m,
           td: () => C,
           uI: () => f,
-          xv: () => L,
+          xv: () => x,
           yK: () => k,
         });
         var r = n(63696),
@@ -24781,10 +24970,10 @@ var CLSTAMP = "10260012";
         function B(e, t) {
           return 0 != t.length && e.startsWith(t);
         }
-        const x = "unknown";
-        function L() {
+        const L = "unknown";
+        function x() {
           if (!window || !window.location || !window.location.href)
-            return console.warn("Unable to determine base url!"), x;
+            return console.warn("Unable to determine base url!"), L;
           const e = window.location.href;
           return B(e, o.TS.STORE_BASE_URL)
             ? o.TS.STORE_BASE_URL
@@ -24831,75 +25020,76 @@ var CLSTAMP = "10260012";
         n.d(t, { GP: () => o, TS: () => i, UF: () => a, iA: () => s });
         var r = n(9731);
         const i = {
-          EUNIVERSE: 0,
-          WEB_UNIVERSE: "",
-          LANGUAGE: "english",
-          SUPPORTED_LANGUAGES: [],
-          COUNTRY: "",
-          AVATAR_BASE_URL: "",
-          MEDIA_CDN_COMMUNITY_URL: "",
-          MEDIA_CDN_URL: "",
-          CLAN_CDN_ASSET_URL: "",
-          COMMUNITY_ASSETS_BASE_URL: "",
-          VIDEO_CDN_URL: "",
-          COMMUNITY_CDN_URL: "",
-          COMMUNITY_CDN_ASSET_URL: "",
-          BASE_URL_SHARED_CDN: "",
-          STORE_CDN_URL: "",
-          PUBLIC_SHARED_URL: "",
-          COMMUNITY_BASE_URL: "",
-          CHAT_BASE_URL: "",
-          STORE_BASE_URL: "",
-          STORE_CHECKOUT_BASE_URL: "",
-          LOGIN_BASE_URL: "",
-          SUPPORT_BASE_URL: "",
-          STORE_ICON_BASE_URL: "",
-          STORE_ITEM_BASE_URL: "",
-          IMG_URL: "",
-          STEAMTV_BASE_URL: "",
-          HELP_BASE_URL: "",
-          PARTNER_BASE_URL: "",
-          STATS_BASE_URL: "",
-          INTERNAL_STATS_BASE_URL: "",
-          BASE_URL_STORE_CDN_ASSETS: "",
-          IN_CLIENT: !1,
-          USE_POPUPS: !1,
-          IN_MOBILE: !1,
-          IN_MOBILE_WEBVIEW: !1,
-          IN_TENFOOT: !1,
-          PLATFORM: "",
-          SNR: "",
-          LAUNCHER_TYPE: 0,
-          EREALM: 0,
-          IN_CHROMEOS: !1,
-          TESLA: !1,
-          LOCAL_HOSTNAME: "",
-          WEBAPI_BASE_URL: "",
-          TOKEN_URL: "",
-          BUILD_TIMESTAMP: 0,
-          PAGE_TIMESTAMP: 0,
-          FROM_WEB: !1,
-          WEBSITE_ID: "Unknown",
-          get SESSIONID() {
-            return (0, r.KC)();
+            EUNIVERSE: 0,
+            WEB_UNIVERSE: "",
+            LANGUAGE: "english",
+            SUPPORTED_LANGUAGES: [],
+            COUNTRY: "",
+            AVATAR_BASE_URL: "",
+            MEDIA_CDN_COMMUNITY_URL: "",
+            MEDIA_CDN_URL: "",
+            CLAN_CDN_ASSET_URL: "",
+            COMMUNITY_ASSETS_BASE_URL: "",
+            VIDEO_CDN_URL: "",
+            COMMUNITY_CDN_URL: "",
+            COMMUNITY_CDN_ASSET_URL: "",
+            BASE_URL_SHARED_CDN: "",
+            STORE_CDN_URL: "",
+            PUBLIC_SHARED_URL: "",
+            COMMUNITY_BASE_URL: "",
+            CHAT_BASE_URL: "",
+            STORE_BASE_URL: "",
+            STORE_CHECKOUT_BASE_URL: "",
+            LOGIN_BASE_URL: "",
+            SUPPORT_BASE_URL: "",
+            STORE_ICON_BASE_URL: "",
+            STORE_ITEM_BASE_URL: "",
+            IMG_URL: "",
+            STEAMTV_BASE_URL: "",
+            HELP_BASE_URL: "",
+            PARTNER_BASE_URL: "",
+            STATS_BASE_URL: "",
+            INTERNAL_STATS_BASE_URL: "",
+            BASE_URL_STORE_CDN_ASSETS: "",
+            IN_CLIENT: !1,
+            USE_POPUPS: !1,
+            IN_MOBILE: !1,
+            IN_MOBILE_WEBVIEW: !1,
+            IN_TENFOOT: !1,
+            PLATFORM: "",
+            SNR: "",
+            LAUNCHER_TYPE: 0,
+            EREALM: 0,
+            IN_CHROMEOS: !1,
+            TESLA: !1,
+            LOCAL_HOSTNAME: "",
+            WEBAPI_BASE_URL: "",
+            TOKEN_URL: "",
+            BUILD_TIMESTAMP: 0,
+            PAGE_TIMESTAMP: 0,
+            FROM_WEB: !1,
+            WEBSITE_ID: "Unknown",
+            get SESSIONID() {
+              return (0, r.KC)();
+            },
+            FRIENDSUI_BETA: !1,
+            STEAM_TV: !1,
+            DEV_MODE: !1,
+            IN_STEAMUI: !1,
+            IN_GAMEPADUI: !1,
+            IN_STEAMUI_SHARED_CONTEXT: !1,
+            DECK_DISPLAY_MODE: !1,
+            ON_DECK: !1,
+            ON_FRAME: !1,
+            ON_STEAMOS: !1,
+            IN_GAMESCOPE: !1,
+            IN_LOGIN: !1,
+            IN_LOGIN_REFRESH: !1,
+            USE_LONGEST_LOC_STRING: !1,
+            SILENT_STARTUP: !1,
+            CLIENT_SESSION: 0,
           },
-          FRIENDSUI_BETA: !1,
-          STEAM_TV: !1,
-          DEV_MODE: !1,
-          IN_STEAMUI: !1,
-          IN_GAMEPADUI: !1,
-          IN_STEAMUI_SHARED_CONTEXT: !1,
-          DECK_DISPLAY_MODE: !1,
-          ON_DECK: !1,
-          ON_STEAMOS: !1,
-          IN_GAMESCOPE: !1,
-          IN_LOGIN: !1,
-          IN_LOGIN_REFRESH: !1,
-          USE_LONGEST_LOC_STRING: !1,
-          SILENT_STARTUP: !1,
-          CLIENT_SESSION: 0,
-        };
-        const s = {
+          s = {
             logged_in: !1,
             steamid: "",
             accountid: 0,
@@ -24911,6 +25101,7 @@ var CLSTAMP = "10260012";
             is_support: !1,
             is_limited: !1,
             is_partner_member: !1,
+            is_valve_email: !1,
             short_url: "",
             country_code: "",
             excluded_content_descriptors: [3, 4, 1],
@@ -24984,9 +25175,9 @@ var CLSTAMP = "10260012";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 21 2025 : 22:35:28",
-                    BUILD_TIME_UTC: "Nov 22 2025 : 06:35:28",
-                    BUILD_RTIME_UTC: 1763793328,
+                    BUILD_TIME_LOCAL: "Nov 25 2025 : 10:12:16",
+                    BUILD_TIME_UTC: "Nov 25 2025 : 18:12:16",
+                    BUILD_RTIME_UTC: 1764094336,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25189,8 +25380,8 @@ var CLSTAMP = "10260012";
           y = n(85688),
           E = n(91435),
           B = n(24295),
-          x = n(72905);
-        const L = r.lazy(() =>
+          L = n(72905);
+        const x = r.lazy(() =>
             Promise.all([n.e(8732), n.e(9858)]).then(n.bind(n, 26326)),
           ),
           k = r.lazy(() =>
@@ -25234,7 +25425,7 @@ var CLSTAMP = "10260012";
                     C.tH,
                     null,
                     r.createElement(
-                      x.Ay,
+                      L.Ay,
                       { domain: "steamclient" },
                       r.createElement(
                         u.ss,
@@ -25242,7 +25433,7 @@ var CLSTAMP = "10260012";
                         r.createElement(
                           E.EO,
                           null,
-                          r.createElement(L, { cm: t }),
+                          r.createElement(x, { cm: t }),
                         ),
                       ),
                     ),
@@ -25530,172 +25721,202 @@ var CLSTAMP = "10260012";
       })[e] || e) +
       ".js?contenthash=" +
       {
-        48: "f581f13623d884a64458",
-        89: "23394441142bbe5a1c37",
-        106: "b46fe973fd9e2a609f38",
-        129: "b11aff76ff7f60947ce4",
-        139: "f3416816df0abdd818d1",
-        191: "e56b5a33ebb1dd877f62",
-        277: "bfea48626e9452fd2b19",
-        297: "a9b2dcf57335815f45b8",
-        382: "5215a5374ba7e495faa0",
-        674: "14f541c0fc3ae3f172d2",
-        740: "bce403badcdce83e9652",
-        786: "3343887ace62de21d346",
-        823: "8e775904ffe054a971e7",
-        901: "8d1050e0d332acd374e8",
-        1005: "c252b6b275cbfb2d0807",
+        48: "ce167b210b82da21fb29",
+        89: "c4e3d254d27dfec6baae",
+        106: "e91647b42d7e89d3467f",
+        129: "31d6cb991a285ba756cb",
+        139: "eeb550dc273f7f389ccb",
+        191: "486c82cf10cfa0e0d645",
+        195: "2c9adc0759f4541d3fb3",
+        277: "2fe93a627239991dc71f",
+        297: "3a85228e2048ef56f083",
+        382: "183b3b9a3c2adf379859",
+        674: "7d7ee420c866e2486e62",
+        716: "666de33917d80425274c",
+        740: "2a664f227e18582fc6cf",
+        786: "bd242c8d395fa92c64d4",
+        823: "90f4f047394ab6557059",
+        876: "25eede417d42c0cd26d1",
+        901: "9b95636beeb3fda50c76",
+        1005: "a30e8c966f4cdd970fbd",
         1012: "ebbaa97b86764aacb98f",
-        1087: "cc17001e7241937bb799",
-        1093: "37ca63fe58811c79029e",
-        1220: "74dcad8ee31647b56765",
+        1087: "27611c75b39e1e9721f1",
+        1093: "e71fd9a96f6f48506dbc",
+        1220: "e4438f17b7ca0167731a",
         1275: "11e4a8e286f3edd19d2b",
-        1316: "e5372e8e768c0d8673de",
-        1389: "9aec435c8a49dd3e730d",
-        1423: "e9493fa296c6c44a75be",
-        1463: "3e28b34ad09849120b76",
-        1478: "755efe2e05de4250ce94",
-        1511: "5252f3f03c9fea2ebe48",
-        1573: "f45af8747f32951382a0",
-        1648: "5ca45f77677b16aff856",
-        1822: "8ef29079c6a7eec2d86a",
+        1316: "27bf145f17ced582e30f",
+        1389: "915de97d87ca9cfdc259",
+        1391: "0e40d57987ac9fbef65e",
+        1423: "a923f2d72db5ca728847",
+        1463: "b02ef415e9f5527e720a",
+        1478: "c40d3fe4cd8e86475d12",
+        1511: "ca56e12ff1e66f8b0d6d",
+        1573: "5a6a7394b20364fa1093",
+        1648: "aca570608c91a13ab603",
+        1663: "69583c6318b737ea4d67",
+        1822: "50a97715acfd96453aa1",
         1879: "62d6403013b08cb655c3",
-        1954: "6bc0345f7f53821c7500",
-        2021: "50a787070d64700e1515",
-        2056: "b369bf7dd2c1287d58ac",
-        2199: "cf4644181fea3f2a1d8d",
+        1954: "e6badcbc6bf3560ef8cb",
+        2021: "4dd529c59d58b00418e7",
+        2056: "67dfd222f8b2d1a11edc",
+        2101: "432742a8a4f0cce8eb12",
+        2199: "2aa2f5a01360d05c6691",
         2225: "dc3d09d21b6992daad2e",
-        2263: "38432a0cfdbf11fec573",
-        2266: "d359e11f4c32a69bd686",
+        2263: "448c57096ba62885d19d",
+        2266: "8f712369cbaa8fa43010",
         2320: "50358e9afd61a54a2781",
-        2438: "a8bba50b4a7db9bf14fe",
+        2438: "89b6fefa7b099a44a5a7",
         2448: "c1f0b015f00cac957233",
-        2481: "ca9c374e71f11e13f521",
+        2481: "1488a2cf222abe7a55fe",
         2515: "9a062cc85cb096b00e67",
-        2520: "33420688bf7744fda52e",
-        2611: "d92f3ac0fdf22456bf19",
-        2640: "d8a159ac9e178f0be5f8",
-        2646: "fa0078864a7d0b6bf66c",
-        2664: "e2f82ae47de13bb2d08e",
-        2687: "2b77e802b8d8f1ff304f",
-        2761: "6dcfa1ee4fbf609cfa28",
-        2783: "fdc3c20e9fc51205c872",
+        2520: "6dfe3ef26dd425cfe02c",
+        2539: "0f9b65120876cd1969bc",
+        2611: "086a95d80b9798256c52",
+        2640: "03a1cee39499de413dfb",
+        2646: "83034ccab2d4b53992de",
+        2664: "ec6636110448d91421e4",
+        2687: "d2ef0674bb5f48547ff1",
+        2761: "fb4c885157c09e0da19d",
+        2783: "403da024ec9d90eecfb2",
         2862: "6d6dfd8b8af302f8846e",
-        2867: "208880b84bd8ce7445a9",
-        2880: "f9d3f63f3d5f2cff089e",
-        2889: "ba6af65e0775d0921542",
+        2867: "4becfe682fc8c087c3fb",
+        2880: "9032f709351b69fdb862",
+        2889: "41526d9f58484d0cf5d8",
+        2916: "6b458913ab8eb2e37889",
         2952: "5cc53fdb04ed91186e12",
-        2959: "f27de5df1b12145b3b55",
+        2959: "f1dca1d7846cdf243327",
         2984: "cdb6f5e43526a559784c",
-        3087: "dd67793ce38c532d029e",
+        3087: "e16e95f7c153bb229815",
         3180: "8e8aa27ac0cac69a5efc",
         3350: "25be1c0cde58ecd53fec",
-        3366: "4a5b3840f5a719703165",
-        3569: "d56faf06c3b89004578d",
+        3366: "049be15e2923de61326d",
+        3473: "aa2e2c813e7588319881",
+        3569: "dab8cffba209315ecf87",
         3583: "f831ab7edbd9ffa591ac",
-        3594: "e8c12438e25f4b794f2e",
-        3714: "bb58124d63774b826f4d",
-        3778: "9ebb42e1184bcfb392a1",
-        3869: "1bfed28dc4f7a6c5558e",
-        4006: "6edb17eb44717c856f9a",
-        4026: "224915394ed4a402ce7b",
-        4102: "3051d7991cedc9d7defc",
+        3594: "5b4965f610445e371c26",
+        3714: "db56225508719a6234fc",
+        3744: "775ac7cdb21bac1fe37c",
+        3778: "7646b073446db430253a",
+        3869: "196c4bfafaa5098c3735",
+        3899: "5ffcf512ba617d848f61",
+        4006: "d6a0a3410be52170b54d",
+        4026: "ad7b4f34545ba23637aa",
+        4102: "13d69be2288a3c56a107",
         4139: "712b259cac8237357271",
         4175: "92d7ba0916b98d8e27c3",
-        4224: "6180f75180b07e288a8f",
-        4321: "ff8b441d72e87dd8e2d2",
-        4421: "0ea6cc98b5366733c964",
-        4473: "3756f1448d9cf11c19a5",
-        4481: "8417397b21f59b72c686",
+        4224: "70875e373dcbe738067b",
+        4259: "aa37b751e98aeca3b305",
+        4321: "a65071ad603c8fa8800c",
+        4421: "9d8da1dabf442a794b1e",
+        4473: "2bb4abf30763e87568be",
+        4475: "125e6435ae309d0db57e",
+        4481: "b1e44c38b51229f239f8",
+        4768: "17a7d7c4e34e0266ba4b",
         4839: "b1ca14b72a083777a78d",
-        4842: "5adf3109e2463f88adcb",
-        4952: "1fef29b50710e8e0658d",
-        4976: "7190d9deca831743d50f",
+        4842: "c10eecc508471085246c",
+        4925: "4c150fa4ec391a837db0",
+        4933: "696e5de7324513db0a18",
+        4952: "cb5b4520b076e47e85b7",
+        4976: "e3af3be2a97e00cdbf0c",
         5173: "976ad1b3dcd79bb87b9c",
-        5358: "8f0552b4737eccf5ae2f",
-        5553: "5af99d01af3b1c49b13a",
-        5592: "1eed4f4ae9f031e83b9a",
+        5181: "c49352f8e35656f9e939",
+        5269: "60207428bd2868248c3a",
+        5358: "428b2d7accf77bd95152",
+        5553: "fbe0922ba7bfa9253f3e",
+        5592: "0a083dace9e23a224a3c",
         5704: "379467b643925dea1061",
-        5716: "f9dd17d2e66d017f78e7",
-        5725: "05234df64b2715804bab",
-        5803: "a062111203df1fb9b7c2",
-        5864: "2f98c2d84c11cd5ddec9",
-        5893: "ac5b41203cd9e32641d1",
-        6120: "e3866bf4973d481c5dd5",
-        6196: "3804de18c4c826e77950",
-        6197: "b9ca884fc1d5499367ce",
-        6345: "830514785868bf51c5db",
-        6409: "ae7f5b72c4b288cf4aee",
-        6430: "1af67dc3cd7097e69f13",
-        6447: "23310b862744c847e58c",
-        6472: "225f9594373c9f999734",
-        6577: "36f57dc40d985950f153",
-        6752: "f81a5e1839b39a555b54",
+        5716: "544b1d92cbcbc1aba043",
+        5725: "b5a178445a5c0d6b0eba",
+        5803: "6c3e44fdbeeb2c0b0de1",
+        5864: "2b467b4877d0c38137f7",
+        5893: "67ceb34a0f5e6433f877",
+        6120: "781c7284a76ed778e350",
+        6196: "d9b8c35168579407c30d",
+        6197: "86191e7a2ac0579924a4",
+        6345: "cb745ba516b113cb3f4d",
+        6409: "959483c0c328c3a3a1ac",
+        6430: "2752394a5f21bb2ce646",
+        6447: "2ae960643cea4e320e59",
+        6472: "682401a0525c49781ccc",
+        6577: "70af9d4b63ed1211c079",
+        6696: "aa3651f32fddca6c18ee",
+        6752: "272f0d367eaa3c5f8504",
         6785: "69a9f0b91f21affb7342",
-        6888: "496a0cb2a87ca20c7c69",
-        6890: "fba57b9fd210e939ab83",
-        6896: "b361b364784ae05d9036",
-        6920: "1444c0efd9fa566a750c",
-        6950: "e2bf7948cc1520b5a66d",
+        6810: "891c059117c6b984347f",
+        6865: "b48073424ca49ee76f2a",
+        6884: "0f06d2665dc521b8f26a",
+        6888: "224b9a24d0a89161634e",
+        6890: "bd12709b654a904bc7ff",
+        6896: "4739744691c3a63856b2",
+        6920: "86b5550c98031e9a7085",
+        6950: "d2e27e8463be7a581084",
         7151: "45f70eb6851f2ac45f0d",
-        7155: "ab885e4a29aeeb0cce92",
-        7279: "0f1fcb119d29cd6bbff7",
-        7314: "d5e4569abb67b1ee7c5a",
+        7155: "3849878142627e199846",
+        7279: "eb13e44676dcc1b45cb0",
+        7306: "94d65d257f8b7e645038",
+        7314: "516bab67501eef173b19",
         7316: "18e5e6b118a1b52fddc2",
         7376: "1a70f0da1467e92dd08f",
-        7442: "0c713d89501d8da1877c",
-        7462: "1eb939af6a8376cbb25f",
-        7464: "6446337b765ff72a2208",
-        7533: "0a48ec90dc8b5c5a353c",
+        7442: "5e69500eb778b8803de0",
+        7462: "52ace9199689821be1eb",
+        7464: "33aacf1dcf504dc1b95b",
+        7533: "6237f9dc18a40660066a",
         7569: "5c6a8bfaf01e13e9762b",
-        7653: "30856eeca2e534a65432",
-        7696: "617a081891051a6c1a02",
+        7653: "d6fdb1639cc9e3e6269b",
+        7696: "8fbdc1aeb553478b8f51",
         7770: "aceefbb364a30f3f02c4",
-        7788: "5fa8e7cd5d266c65be3e",
+        7788: "e2307ede64c4af732544",
         7824: "bc3d4917fa38d194e03f",
-        7836: "8add41b2f3f03fbbf6b8",
-        7993: "bbd4cd11b72a01760cf9",
+        7836: "a7315634bfe9bfdb77d5",
+        7993: "ef3148d7d24f27b9e786",
+        7996: "4a4ce77e9c751bf1a989",
         8054: "cffb972d0ae14c9266f8",
-        8106: "90075a9bc36c5a93ab2c",
-        8159: "11d663866be3dea19ad0",
-        8263: "b4341a934c0b173797b4",
-        8280: "d6e979d7b0b06693a9dc",
+        8106: "9516165aeb13f7238b72",
+        8159: "1c7b7dd00c9a7fd55c39",
+        8263: "9f224234f2d3bf0acb23",
+        8280: "fd3ed168535c1fd8a671",
         8286: "1f5be36130bf4017cada",
-        8291: "e8f5612640cbeadff231",
-        8396: "537c75ceef105ce745ad",
-        8443: "c4ba9d09849ce9382fee",
-        8445: "1cd781e4964a54c3735f",
+        8291: "d3c8eadc8ee7610f706b",
+        8396: "acc2bb63c9be7007f07f",
+        8443: "7e1d52ca4df9d4aedaa5",
+        8445: "fa42a64cb512deb63f77",
         8478: "89707ac0ffb085fd89be",
+        8484: "90cf9e56abd4e4060277",
         8495: "1ef294d92fa8f7a899f7",
-        8522: "c35b005ec958b33607f6",
-        8534: "9849e0866e05a0dedf17",
+        8522: "7e226067de7eef6fe881",
+        8534: "1bcb6806c0dc0fa67c7a",
         8545: "1aa2273a0a3161924d55",
-        8674: "d571ad805fc90c3abb22",
-        8699: "11f370e9f027d766cc92",
-        8703: "f486f58a0f8edefc664f",
-        8732: "9e2f4c24c59bad3dfcb2",
-        8830: "b50b7cf7132d85b24f45",
-        8855: "0f5a027ee4a1dd5f401b",
-        8871: "bf40782923474b507edf",
-        8872: "70c925becf09f7987d36",
-        8930: "9b412c6de78b7c89bc76",
-        9053: "cebd71063c9ec57cbbe1",
+        8674: "67e17e82ba70c904d86b",
+        8699: "da03235d3cc5bd1a808f",
+        8703: "e67ab5c32b64b2fd7207",
+        8732: "d033c9d6ffdf8af8bbd7",
+        8830: "f88759fcc48d3ba78d18",
+        8855: "d6438dce8e078603082e",
+        8871: "0f7b5a4a2760a3a30386",
+        8872: "96b8e64edcfe98b829d8",
+        8906: "12513bcd136de3092c2a",
+        8930: "acdbb26f464a0951b9b0",
+        8948: "79956ac4e87cfd5cf067",
+        8970: "c432673605747d241ec4",
+        9053: "0babd42a598ae03e573f",
         9063: "77f0c9977cc1aecd1944",
-        9129: "9ffb50003c4f871667b0",
+        9129: "e54edd0ab2832321c5a4",
         9134: "370830da314eb8247bf6",
-        9171: "99b0dc54ce84ab63a1b5",
-        9298: "f90b545f03bb6d396866",
-        9368: "69a9c7883ea3dd10f3e7",
+        9171: "27ad38a58d0f9a60231a",
+        9298: "cc699106d96f307da910",
+        9368: "75061bdc2a1905b62627",
         9418: "29e9fa15a9fc8e62a893",
-        9457: "8156acbe4fd435f12ae5",
-        9462: "626d3617c341d4587db1",
-        9672: "f6013cd40c97f3a540b5",
+        9457: "a65a96f3755d7e6eb893",
+        9462: "474cfc8667131dcf38db",
+        9672: "ff8c38972e44fdae4add",
         9711: "2ed989ee7251a5d19c6f",
-        9746: "445d5d4419f565cb1ea4",
-        9858: "eae634a41b23972fcb93",
-        9869: "68999f12e1dfcc1cbb22",
-        9882: "3aa4eb23afffa251be3d",
-        9887: "d519e4d5a6c2fa8c0272",
+        9746: "50d67482dc2ddd4a5770",
+        9779: "59ef76674166d4b9e52e",
+        9858: "20cca33f38499c4bae60",
+        9869: "83ea0038b1f24f363e13",
+        9882: "499f31ccf435fd972880",
+        9887: "fb55f7516aef1bf8a3bf",
+        9902: "687ccd0d6e13cf864303",
       }[e]),
     (a.miniCssF = (e) =>
       "css/" +
@@ -25919,4 +26140,4 @@ var CLSTAMP = "10260012";
     })();
   var c = a.O(void 0, [41], () => a(69823));
   c = a.O(c);
-})(); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/library.js.map
+})(); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/library.js.map

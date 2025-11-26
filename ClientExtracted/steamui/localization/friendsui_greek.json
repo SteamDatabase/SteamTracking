@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Διαγραφή μηνυμάτων",
     "Chat_Actions_Select_Message": "Επιλογή μηνύματος",
     "Chat_Actions_Report": "Αναφορά",
+    "Chat_Actions_ReportGroup": "Αναφορά συνομιλίας ομάδας",
     "Chat_Actions_React": "Αντίδραση",
     "Chat_Actions_Delete": "Διαγραφή",
     "Chat_Actions_DeleteChatMessages_Confirm": "Θέλετε σίγουρα να διαγράψετε αυτά τα μηνύματα από %1$s;",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Διορθώθηκαν τα παράθυρα φίλων και συνομιλίας να μην εμφανίζουν την επικάλυψη εντός παιχνιδιού σε Linux και macOS.",
     "BBCode_Loading": "Φόρτωση",
     "BBCode_Failed": "Αποτυχία φόρτωσης",
-    "broadcastDetails_Playing": "Παίζει",
-    "Chat_Actions_ReportGroup": "Αναφορά συνομιλίας ομάδας"
+    "broadcastDetails_Playing": "Παίζει"
 }

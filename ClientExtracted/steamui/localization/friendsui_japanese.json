@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "メッセージを削除",
     "Chat_Actions_Select_Message": "メッセージを選択",
     "Chat_Actions_Report": "報告",
+    "Chat_Actions_ReportGroup": "グループチャットを報告",
     "Chat_Actions_React": "反応する",
     "Chat_Actions_Delete": "削除",
     "Chat_Actions_DeleteChatMessages_Confirm": "%1$s からのこれらのメッセージを本当に削除しますか?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Linux および macOS のゲーム内オーバーレイで、フレンドとチャットウィンドウが表示されない問題を修正。",
     "BBCode_Loading": "読み込み中",
     "BBCode_Failed": "読み込みに失敗しました",
-    "broadcastDetails_Playing": "プレイ中",
-    "Chat_Actions_ReportGroup": "グループチャットを報告"
+    "broadcastDetails_Playing": "プレイ中"
 }

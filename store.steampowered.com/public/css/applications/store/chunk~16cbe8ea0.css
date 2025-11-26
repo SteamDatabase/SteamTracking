@@ -111,7 +111,7 @@ html:not(.client) .events_listing ._1XLRr8eh1ip-E17C8Jzrmc {
   grid-template-columns: 136px 1fr;
 }
 ._1hl09rgUVOJUMhgC33L7eo .qexk-JocS7jjDM31IcGZn {
-  max-width: 1012px;
+  max-width: 1200px;
   padding: 7px 16px;
 }
 @media screen and (max-width: 700px) {
@@ -3229,12 +3229,10 @@ html.responsive.tablet ._20f2sKS2M7PlPSnPCinT26 {
 }
 .A_A2B6fTn_MPLlGCmsLtd a:not(.LinkButton, .WidgetTag) {
   color: #80bcd2;
-  text-decoration: none;
   padding-bottom: 0px;
 }
 .A_A2B6fTn_MPLlGCmsLtd a:hover {
   color: #fff;
-  text-decoration: none;
 }
 ._2Ptras-ZC31rwdT6pD-t0a._2oAxPvOHyVkOcOFbH-ROOn .A_A2B6fTn_MPLlGCmsLtd b,
 ._2Ptras-ZC31rwdT6pD-t0a._36n2d0WrYP7qNfJaBDPBzE .A_A2B6fTn_MPLlGCmsLtd b,
@@ -3872,6 +3870,7 @@ html.responsive.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   margin-bottom: 12px;
 }
 ._3hNd0q0tYO12nPDCPsT8sm {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3900,6 +3899,51 @@ html.responsive.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
 ._3hNd0q0tYO12nPDCPsT8sm:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.3);
+}
+._3hNd0q0tYO12nPDCPsT8sm._1bO8azG0-IqxQ3AQbWtCxx {
+  cursor: default;
+}
+._3hNd0q0tYO12nPDCPsT8sm._1bO8azG0-IqxQ3AQbWtCxx:hover {
+  background-color: transparent;
+  cursor: default;
+}
+._3Yb8eVHtZWf1AWt7VV3P-z {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+._30b_e8W4Z94Lwn8x2U9TYH {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+._3PFkx8XNigPW6CoYfHH5Yi {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: width .25s ease;
+  pointer-events: none;
+}
+._1RNbjKcBRtD4pseH6hyggg {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  min-width: 35px;
+  text-align: right;
+}
+._1qUCIT-7ueBBoNjoCvGfbP {
+  color: #fff;
+  font-size: 14px;
+}
+._3Nv8BLF6dRk932f5NhyNIH ._3PFkx8XNigPW6CoYfHH5Yi {
+  background: rgba(255, 255, 255, 0.25);
 }
 ._3NDl2Pml7Uvse14r9SWJTD {
   display: flex;

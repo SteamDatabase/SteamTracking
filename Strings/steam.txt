@@ -779,7 +779,7 @@ $ffn
 %s:%d: OpenSSL internal error: %s\n
 %s://%s/%s%s
 %s:443
-%s;%s;%d;%d
+%s;%s;%d;%d;%d
 %sToday
 %sTomorrow
 %sYesterday
@@ -822,7 +822,6 @@ $ffn
 &Uuml;
 &Yacute;
 &\n!k_EClientPersonaStateFlagClanData
-&\n!k_EClientPersonaStateFlagFacebook
 &\n!k_EClientPersonaStateGameDataBlob
 &\n!k_EMsgAMCancelEasyCollectResponse
 &\n!k_EMsgAMClientChatMemberInfoRelay
@@ -1251,6 +1250,7 @@ $ffn
 )\n$k_EMsgGCGetAccountDetails_DEPRECATED
 )\n$k_EMsgGCHAccountTradeBanStatusChange
 )\n$k_EMsgGMShellAndServerAddressUpdates
+)\n$k_EMsgRemoteClientPairWifiAPResponse
 )\n$k_EMsgUCMPublishedFileContentUpdated
 )\n$k_EMsgUCMUpdatePublishedFileResponse
 )\n$k_EMsgUFSHttpUploadFileFinishRequest
@@ -1278,8 +1278,9 @@ $ffn
 *N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
 *ZN4CNet26CallbackDeleteOnCompletionEvE39CUnbufferedSendCallbackDeleteOnComplete
-*ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
-*ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
+*ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
+*ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
+*\n"queue_head_position_at_reservation
 *\n%k_EClientPersonaStateFlagRichPresence
 *\n%k_EClientPersonaStateFlagUserClanRank
 *\n%k_EMsgAMAcctAllowedToPurchaseResponse
@@ -1503,6 +1504,7 @@ $ffn
 -console
 -debugbreak
 -debugoutputlogs
+-deckard
 -dev
 -devsites
 -devsiteshost
@@ -1560,6 +1562,7 @@ $ffn
 -steamconsole
 -steamdeck
 -steamdeckdisplay
+-steamframe
 -steamos
 -steamrow
 -tesla
@@ -1688,6 +1691,7 @@ $ffn
 /bin/sh
 /client/
 /data/src/common/clientdirectories.h
+/data/src/common/clientregkeys.cpp
 /data/src/common/clientupdatehostscache.cpp
 /data/src/common/completionportmanager.cpp
 /data/src/common/completionportmanager_posix.cpp
@@ -1722,6 +1726,7 @@ $ffn
 /data/src/common/linux_setenvwrapper.h
 /data/src/common/logfile.cpp
 /data/src/common/logger.cpp
+/data/src/common/messageobjects.cpp
 /data/src/common/metrics/metrics.cpp
 /data/src/common/msg.cpp
 /data/src/common/msgbase.h
@@ -1853,6 +1858,8 @@ $ffn
 /proc/self/fd
 /proc/version
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
+/sys/devices/virtual/dmi/id/product_name
+/sys/devices/virtual/dmi/id/sys_vendor
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tenfoot/resource/images/bootstrapper.jpg
@@ -1896,17 +1903,15 @@ $ffn
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-07:00:18
-07:00:25
 08bX
 0?0L
 0A/8
@@ -1954,24 +1959,24 @@ $ffn
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
-10CUtlMemoryI10CUtlSymbolE
 10CUtlMemoryI12RangeEntry_tI11IPV4Range_tvEE
 10CUtlMemoryI12RangeEntry_tI8CNetMaskvEE
 10CUtlMemoryI13ModuleCount_tE
+10CUtlMemoryI14CBaseUtlSymbolItEE
 10CUtlMemoryI14TLSTicketKey_tE
 10CUtlMemoryI17CHTTPRequestParamE
 10CUtlMemoryI20ModuleAddressRange_tE
 10CUtlMemoryI9CSmartPtrI13IMsgNetPacketEE
 10CUtlMemoryI9CSmartPtrI16IMetricsReporterEE
-10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexIiEiN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoES_IS5_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN11CHTTPClient18SSLContextLookup_tEP15COpenSSLContexti8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
@@ -1982,7 +1987,6 @@ $ffn
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiP25CHTTPClientNetworkRequesti8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyji8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_tS_IS2_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E6Node_tEE
@@ -1994,6 +1998,7 @@ $ffn
 10CUtlMemoryIN10CUtlRBTreeIP9JobType_ti17CJobTypeByMsgLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP9JobType_ti18CJobTypeByNameLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIjt8CDefLess25CDefRBTreeBalanceListenerItEjE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_S1_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_S1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_S1_E12HashBucket_tEE
@@ -2076,7 +2081,7 @@ $ffn
 10CUtlMemoryIPK11CFileWriterE
 10CUtlMemoryIPN15CBaseFileSystem11CFileHandleEE
 10CUtlMemoryIPN15CBaseFileSystem11CPathIDInfoEE
-10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
+10CUtlMemoryIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tEE
 10CUtlMemoryIPN19CBaseUtlSymbolTableI14CMetricsSymbolE12StringPool_tEE
 10CUtlMemoryIPcE
 10CUtlMemoryIPiE
@@ -2088,15 +2093,15 @@ $ffn
 10CUtlMemoryIiE
 10CUtlMemoryIjE
 10CUtlMemoryIwE
-10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
-10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeI16CStringPoolIndexIiEiN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerIiES1_E
+10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES1_E
 10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS4_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapIN11CHTTPClient18SSLContextLookup_tEP15COpenSSLContexti8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -2107,7 +2112,6 @@ $ffn
 10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapIiP25CHTTPClientNetworkRequesti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
-10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIyii8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIyji8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS1_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E
@@ -2119,12 +2123,13 @@ $ffn
 10CUtlRBTreeIP9JobType_ti17CJobTypeByMsgLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIP9JobType_ti18CJobTypeByNameLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIjt8CDefLess25CDefRBTreeBalanceListenerItEjE
+10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 10CUtlString
 10CUtlVectorI10CIPAddress10CUtlMemoryIS0_EE
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
-10CUtlVectorI10CUtlSymbol10CUtlMemoryIS0_EE
 10CUtlVectorI12RangeEntry_tI11IPV4Range_tvE10CUtlMemoryIS2_EE
 10CUtlVectorI12RangeEntry_tI8CNetMaskvE10CUtlMemoryIS2_EE
+10CUtlVectorI14CBaseUtlSymbolItE10CUtlMemoryIS1_EE
 10CUtlVectorI14TLSTicketKey_t10CUtlMemoryIS0_EE
 10CUtlVectorI17CHTTPRequestParam10CUtlMemoryIS0_EE
 10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
@@ -2174,7 +2179,7 @@ $ffn
 10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
 10CUtlVectorIPN15CBaseFileSystem11CFileHandleE10CUtlMemoryIS2_EE
 10CUtlVectorIPN15CBaseFileSystem11CPathIDInfoE10CUtlMemoryIS2_EE
-10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
+10CUtlVectorIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tE10CUtlMemoryIS5_EE
 10CUtlVectorIPN19CBaseUtlSymbolTableI14CMetricsSymbolE12StringPool_tE10CUtlMemoryIS4_EE
 10CUtlVectorIPc10CUtlMemoryIS0_EE
 10CUtlVectorIPi10CUtlMemoryIS0_EE
@@ -2220,6 +2225,7 @@ $ffn
 11M|
 123456789
 127.0.0.1
+12CAddressInfo
 12CAutoReleaseI14CMetricsStringE
 12CAutoReleaseI15CMetricsPayloadE
 12CAutoReleaseI16CCookieContainerE
@@ -2230,6 +2236,7 @@ $ffn
 12CGlxUpdateUI
 12CHTTPRequest
 12CIPRangeList
+12CLicenseInfo
 12CLogInstance
 12CMessageList
 12CProtoBufMsgIvE
@@ -2243,14 +2250,19 @@ $ffn
 13IStreamParser
 13MetricValue_t
 14 (default)
+14CCBAccountInfo
 14CClanEventData
+14CClanEventInfo
 14CCryptoKeyBase
 14CFrameFunctionI11CHTTPClientE
 14CFrameFunctionI19CQueuedLambdaRunnerE
 14CFrameFunctionI21CScheduledFunctionMgrE
 14CFrameFunctionI7CJobMgrE
+14CGuestPassInfo
 14CHTTPClientMgr
 14CJobFutureBase
+14CMachineIDInfo
+14CMessageObject
 14CMetricsString
 14CMsgAuthTicket
 14CNetConnection
@@ -2287,6 +2299,7 @@ $ffn
 1536
 15000
 15CBaseFileSystem
+15CChatMemberInfo
 15CEC25519KeyBase
 15CJobPromiseBase
 15CMetricsFactory
@@ -2315,6 +2328,7 @@ $ffn
 172.16.3.31
 172.16.3.39
 17CBootstrapLogFile
+17CClientWalletInfo
 17CDebugStatsSystem
 17CDummyCnxCallback
 17CFileSystem_Stdio
@@ -2323,6 +2337,7 @@ $ffn
 17CHTTPRequestCache
 17CHTTPRequestParam
 17CMsgKubeRPCPacket
+17CPurchaseGiftInfo
 17CStreamReaderBase
 17CUtlPriorityQueueIN21CScheduledFunctionMgr15ScheduledItem_tEPFbRKS1_S3_E32CDefUtlPriorityQueueSetIndexFuncIS1_EE
 17CUtlPriorityQueueIN7CJobMgr12JobTimeout_tEPFbRKS1_S3_ENS0_15TimeoutSetIndexEE
@@ -2354,6 +2369,8 @@ $ffn
 18CUtlCharConversion
 18IUDPSocketCallback
 18IWorkThreadFactory
+19CActivationCodeInfo
+19CClientMicroTxnInfo
 19CCuratorPreferences
 19CECSigningPublicKey
 19CHTTPClientResponse
@@ -2405,6 +2422,7 @@ $ffn
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
+20CPurchaseReceiptInfo
 20CRefCountServiceBaseILb1E6CRefMTE
 20CRefCountServiceBaseILb1E6CRefSTE
 20CStaticFrameFunction
@@ -2415,6 +2433,9 @@ $ffn
 20CWorkItemSetFileSize
 20IHTTPRedirectHandler
 20IUniformRandomStream
+21:17:51
+21:17:58
+21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -2423,6 +2444,7 @@ $ffn
 21CMetricsReporterChain
 21CMsgKubeRPCPacket_Hdr
 21COpenSSLCachedSession
+21CPurchaseLineItemInfo
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 22CBaseScheduledFunction
@@ -2432,6 +2454,7 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
+23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -2450,6 +2473,7 @@ $ffn
 25CWorkItemRunSSLConnection
 25CWorkItemSaveBufferToFile
 25INetSSLConnectionCallback
+26CActivationCodePackageInfo
 26CHTTPCacheInitializeThread
 26CWorkItemHTTPClientRequest
 26CWorkItemZeroAndFreeBuffer
@@ -2589,6 +2613,7 @@ $ffn
 4f$H
 4h\4
 4i5U6B738%9
+4nV'
 4tpD
 5-535;5A5Q5e5o5q5w5{5}5
 5000
@@ -2639,7 +2664,6 @@ $ffn
 7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS3_EEi22CDefCaselessStringLessE
-7CUtlMapI10CUtlStringbi8CDefLessE
 7CUtlMapI10CUtlStringji8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
 7CUtlMapIN11CHTTPClient18SSLContextLookup_tEP15COpenSSLContexti8CDefLessE
@@ -2650,9 +2674,10 @@ $ffn
 7CUtlMapIPvii8CDefLessE
 7CUtlMapIiP25CHTTPClientNetworkRequesti8CDefLessE
 7CUtlMapIjbi8CDefLessE
-7CUtlMapIybi8CDefLessE
 7CUtlMapIyii8CDefLessE
 7CUtlMapIyji8CDefLessE
+7CUtlSetI10CUtlStringi8CDefLessE
+7CUtlSetIyi8CDefLessE
 7E\vy
 7XRJ
 7\n2k_EMsgAMGameServerPlayerCompatibilityCheckResponse
@@ -2669,12 +2694,16 @@ $ffn
 8000
 8192
 82\n:XPH
+83L3
+83N6
+83Q2
+83Q3
 88n|
 88pH
 8A6j
 8CAutoPtrI15IMetricsFactoryE
-8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
-8CAutoPtrI7CUtlMapIybi8CDefLessEE
+8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
+8CAutoPtrI7CUtlSetIyi8CDefLessEE
 8CLogFile
 8CMetrics
 8CNetHost
@@ -2702,6 +2731,7 @@ $ffn
 99Ov
 99rKJJ
 9<n\nM
+9CCardInfo
 9CMsgMulti
 9CUtlQueueI8WSABUF_SE
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
@@ -3119,6 +3149,7 @@ Acceptable OCSP Responses
 Accepted
 AcceptedForGameRankedByAcceptanceDate
 Access Denied
+AccessToken
 Account Disabled
 Account Locked Down
 Account Logon Denied
@@ -3132,9 +3163,13 @@ Account has an existing user cancelled license
 Account has been deleted
 Account is blocked
 Account is not allowed
+Account is restricted from purchasing adult content
 Account locked
 Account logon denied, need two-factor code
 Account not verified
+AccountIDCreator
+AccountIDLastUpdated
+AccountNum
 Accounts not friends
 AchievementUnlocked
 Active
@@ -3156,6 +3191,8 @@ AddedGameToWishlist
 Adding connection back to pool, but not found in in use list or waiting list
 Address is invalid or contains invalid characters
 Address too small!
+Address1
+Address2
 Admin
 Administrator OK
 Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
@@ -3201,6 +3238,8 @@ Any Extended Key Usage
 Any Purpose
 Any language
 App Running
+AppID
+AppIDToRedirect
 AppendedSHA
 Application built with libpng-
 Application jmp_buf size changed
@@ -3489,6 +3528,7 @@ Bangla
 Bank Asya
 Bank Transfer (Degica)
 Banned
+BasePrice
 Basic %s
 Basic OCSP Response
 Basis Type: %s\n
@@ -3500,6 +3540,8 @@ Beta
 Bh;+j
 Billing agreement cancelled
 Billing name is invalid because it looks like it contains credit card data
+BillingCurrency
+BillingTotal
 Biometric Info
 BitCash
 Bitcoin
@@ -3513,6 +3555,7 @@ Blocked by U.S. government regulations
 Blocks
 Bnl1l
 BoaCompra Gold
+Body
 Bogus DAC index %d
 Bogus DAC value 0x%x
 Bogus DHT index %d
@@ -4274,6 +4317,7 @@ CProtoBufMsgBase::SerializeWriteBytes
 CProtoBufNetPacket::RebuildPacketIfNeeded (needed)
 CQueuedLambdaRunner::BFrameFuncRunQueuedFunctions
 CRC error
+CRC32_ProcessBuffer
 CRL Sign
 CRL has expired
 CRL is not yet valid
@@ -4293,6 +4337,7 @@ CRYPTO_new_ex_data
 CRYPTO_ocb128_copy_ctx
 CRYPTO_ocb128_init
 CRYPTO_set_ex_data
+CSHA1::Update
 CSPAuth
 CSPName
 CScheduledFunctionMgr::BFrameFuncRun
@@ -4429,7 +4474,6 @@ CUtlString::VFormat
 CUtlStringBuilder::Data::MoveToHeap
 CUtlStringBuilder::InternalPrepareBuffer
 CUtlStringBuilder::ReplaceInternal
-CUtlSymbol::ValidateGlobals
 CUtlSymbolTable
 CVProfNode
 CValidator
@@ -4597,6 +4641,14 @@ Captive portal simulation: blocking '%s'\n
 CaptivePortal
 CaptivePortal_InPlace
 CaptivePortal_Redirected
+CardBinID
+CardExpMonth
+CardExpYear
+CardHolderFirstName
+CardHolderLastName
+CardID
+CardLast4Digits
+CardNumber
 Carnet
 Cart is not valid for purchase
 Carte Bleue
@@ -4638,7 +4690,10 @@ China
 Chromium
 CipherString
 Ciphersuites
+City
 Clan
+ClanID
+Class
 Cleaning up...
 ClearField
 Clearing HTTP cache, deleting all files under %s\n
@@ -4676,6 +4731,7 @@ Comma separated list of metrics operations that are disabled.  This setting has 
 Comma separated list of metrics operations.  Overrides disabled catalogs
 Command line options:\n
 CommandLine
+CommentCount
 Comments by user
 Committing
 Community
@@ -4771,6 +4827,7 @@ Couldn't create cache directory %s, got error %d
 Couldn't open .bsp %s for embedded pack file check\n
 Couldn't parse default value "
 Couldn't write %s: %s\n
+CountryCode
 Coupon has expired
 Create process failed
 Create window
@@ -4790,6 +4847,7 @@ Credit Card (Nodwin)
 Credit card number is invalid (does not pass LUHN checksum)
 Credit card number provided does not match the credit card type
 Credit would exceed max allowed wallet balance
+CreditCardType
 Critical
 CrlID
 Croatian
@@ -4798,8 +4856,10 @@ Ctrl/Provision WAP Termination
 Ctrl/provision WAP Access
 Culture Voucher
 CuratorRecommendedGame
+Currency
 Currency Conversion
 Currency of purchase does not match currency of wallet
+CurrencyCode
 Curves
 Custom CSS
 Cw!K
@@ -5014,6 +5074,7 @@ Debit Card (Nodwin)
 Debug
 December
 Decipher Only
+Deckard
 Default
 Default initial allocation size for PB arena
 Default value for an enum field must be an identifier.
@@ -5040,6 +5101,7 @@ Destination
 Destination buffer is too small
 Destination buffer is wrong
 Destroy window
+Details
 Device Corrupt
 Device Error
 Device Not Found
@@ -5570,10 +5632,19 @@ Error: failed to forward message to bootstrap log: %s\n
 Error: invalid command: %d
 Error: parent failed to provide a valid IPC socket\n
 Error: unknown command: %d
+ErrorAppID
+ErrorHeadline
+ErrorLinkText
+ErrorLinkURL
 ErrorSerial
+ErrorString
 Estonian
 EtL?
 Event Text
+EventName
+EventNotes
+EventTime
+EventType
 Exception validating current work item
 Excluded
 Execute: %s\n
@@ -5628,6 +5699,7 @@ External
 External Account is not linked to a Steam account
 External Account linked to another Steam account
 External sequences are not valid
+ExternalValidation
 Extra compressed data
 Extracting package...
 F6tr
@@ -5812,7 +5884,9 @@ Finansbank
 Finnish
 First argument to Swap() (of type "
 First argument to SwapFields() (of type "
+FirstName
 FiveHours
+Flags
 Flooding was detected in this HTTP/2 session, and it must be closed
 Flow control error
 FoCLcx
@@ -5840,6 +5914,7 @@ Free disk space for %s would overflow
 FreeDeletedPackets
 Freed EMS handle %u
 Freed XMS handle %u
+Fremont
 French
 FrenemyFilter
 Friday
@@ -5952,6 +6027,9 @@ Game Managed Item
 Game Release
 Game Server
 Game Voucher
+GameCode
+GameCodeFromKey
+GameItemID
 GameManagedItems
 GameServer
 GameStop
@@ -6025,6 +6103,11 @@ GetUInt32
 GetUInt64
 GetUint64FromString() did not get correct peCS parameter
 Gift
+GiftMessage
+GiftTemplate
+GifteeAccountID
+GifteeEmail
+GifteeName
 Giropay
 Global Collect unknown error
 Global Moderator
@@ -6125,10 +6208,12 @@ Hardware Promo
 Hardware not capable of IPT
 Has not logged in on PS3 with required app
 HasField
+HasWallet
 Hash Algorithm:
 Hausa
 Header compression/decompression error
 Header of Literals' block doesn't respect format specification
+Headline
 Headphones
 Headset
 Hebrew
@@ -6303,12 +6388,15 @@ Inhibit Policy Mapping
 Init
 Init Failed
 Initial packet in multi-packet UDP message is too large and would exceed initially allocated buffer
+InitialPeriod
+InitialTimeUnit
 Initialized SSL context with certificate %s\n
 Input file read error
 Insane net sends -  %u jobs sent over %d threshold and spew was rate limited since last output\n
 Insane net sends - %s job has made %u net sends so far:
 Install path removed
 Installing update...
+InstanceName
 Insufficient Funds
 Insufficient Privilege
 Insufficient Storage
@@ -6476,6 +6564,7 @@ IsClientUpdateAvailable
 IsClientUpdateAvailable: %p\n
 IsClientUpdateOutOfDiskSpace
 IsClientUpdateOutOfDiskSpace: %p\n
+IsGift
 IsInList(after)
 IsInList(before)
 IsPowerOfTwo( nNewCapacity )
@@ -6491,6 +6580,9 @@ Issuer certificate lookup error
 Italian
 Itau Online
 Item or entry has been deleted
+ItemAppId
+ItemCount
+ItemDescription
 Items
 Items_Mtx
 Items_ReadyToUse
@@ -6568,6 +6660,7 @@ Key in map fields cannot be float/double, bytes or message types.
 Key not initialized, cannot generate signature
 Key not initialized, cannot verify signature
 Key type %d doesn't know how to load from buffer
+KeyRangeID
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
@@ -6586,6 +6679,7 @@ KeyValues::ReadAsBinary() stack depth > 100
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
+KeyValues::RemoveSubKey
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
@@ -6637,17 +6731,20 @@ Language
 Laser
 Last Message Repeated %d times.\n%s
 Last-Modified
+LastName
 Latam_Spanish
 Latvian
 Leaked KeyValues (%u):\n
 Leaked mem: %s %s\n
 Legacy Free Sub
+LegacyKey
 LegionGoS
 Length Required
 Libpng jmp_buf still allocated
 Library
 License Imported From Steam2
 License expired
+LicenseType
 Licensed Site
 Lider
 Limit exceeded
@@ -6656,6 +6753,7 @@ Limited User (forced)
 Limited use, delayed activation
 Limited user account
 LimitedLocal
+LineItemCount
 LinePay
 Linkaja
 Linux
@@ -6828,11 +6926,13 @@ Mask Algorithm:
 Master App Editor
 Master Subscription
 MasterCard
+MasterPackageID
 Mastercard (BoaCompra)
 Matched '%s' -> '%s'\n
 Max block allocation size for PB arena
 MaxProtocol
 MaxResults
+MaxUseCount
 Maximum family size exceeded
 Maximum supported image dimension is %u pixels
 MaybeAllocateAligned cannot fail here.
@@ -6861,6 +6961,7 @@ Message of type "
 Message type "
 Message type %d wasn't declared, but we registered job %s to handle it?\n
 MessageLite at 0x
+MessageObject
 MessageOptions
 MessageSet is not supported in proto3.
 MessageSets cannot have fields, only extensions.
@@ -6897,7 +6998,9 @@ Minidumps written:\n
 Minimum
 MinorCode
 Minute
+MinuteLimit
 Minutes
+MinutesUsed
 Mirror
 MirroredNotStriped
 Miscellaneous marker 0x%02x, length %u
@@ -7284,7 +7387,7 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
-Nov 22 2025
+Nov 25 2025
 November
 NrZl
 NullMetrics()
@@ -7487,6 +7590,7 @@ Option2
 Option3
 Options
 Order:
+OrderID
 Origin
 Other
 Other abortable transaction in progress
@@ -7507,6 +7611,7 @@ Overrides Steam client beta for single session
 Overriding client beta for this session from '%s' to '%s' (clientbeta flag)
 Overwriting on-disk registry with newly created registry.
 Owner
+OwnerID
 P-192
 P-224
 P-256
@@ -7734,6 +7839,8 @@ PUT
 Package file %s missing or incorrect size, not installing update\n
 Package file %s missing or incorrect size\n
 Package requires an invitation for a reservation to purchase
+PackageCount
+PackageID
 Packet has illegal total message size of %d
 Pago Facil
 PagoEfectivo
@@ -7775,7 +7882,9 @@ Payment method allows multiple pending transactions, but there is an overlap of 
 Payment method is disabled
 Payment method is not allowed for this purchase
 Payment requires additional authentication step
+PaymentID
 PaymentInfo
+PaymentMethod
 Payshop
 Pe6^
 Peak %.2f ms frame\n
@@ -7794,6 +7903,7 @@ Performing requested proxy system config re-discovery on a HTTP client work thre
 Permanent
 Permanent Identifier
 Permanent Redirect
+Permissions
 PermitDownloadClientUpdates
 PermitDownloadClientUpdates: %p\n
 Permitted
@@ -7823,8 +7933,11 @@ Poly1305
 Polynomial:
 Portuguese
 Post DNS resolve
+PostCode
 PostRecv
+PostTime
 PostedAnnouncement
+PosterID
 Potential overflow in png_zalloc()
 Pragma
 Preallocating
@@ -7894,6 +8007,8 @@ Punjabi (Shahmukhi)
 Purchase
 Purchase not yet settled
 Purchase pending
+PurchaseCountryCode
+PurchaseStatus
 Q$By5
 Q/xtJ2
 Q2XXR
@@ -8094,6 +8209,7 @@ Received bad client magic byte string
 Received large message over websocket, payload size %llu
 ReceivedNewGame
 ReceivesGroupComment
+RecipientAddress
 RecommendedGame
 Reconfiguring
 RecordPadding
@@ -8118,6 +8234,7 @@ RecvMsgDirect
 RecvPlaintext
 Red Pagos
 RedCompra
+Refundable
 Refunded
 Refunded to wallet
 Region Locked
@@ -8144,6 +8261,8 @@ Removing now closed connection (%p) for %s\n
 RenderFrameMark
 Renew failed
 Renew next period
+RenewalPeriod
+RenewalTimeUnit
 Repeated fields can't have default values.
 Repeatedly failed to download packages, giving up
 Request
@@ -8183,6 +8302,7 @@ Require Explicit Policy
 RequirePostHandshake
 Required fields are not allowed in proto3.
 Requires 64bit operating system
+RequiresCachedPmtMethod
 Reserved bit set in GID system
 Reserved bits set
 Reserved numbers must be positive integers.
@@ -8199,6 +8319,7 @@ ResponseHeaders
 Restored data doesn't match checksum
 Restricted country
 Restricted device
+ResultDetail
 Retail
 Retired
 Retry later
@@ -8512,8 +8633,11 @@ S\vQN
 S_gO
 SafeMode
 SafetyPay
+SalesTerritoryCode
+SalesTerritoryCodeFromKey
 Same as previous value
 Sampling factors too large for interleaved scan
+Sandbox
 Santander Rio
 Saturday
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
@@ -8524,6 +8648,7 @@ SbEwd
 Sberbank
 Scan script does not transmit all data
 ScheduledEvent
+ScheduledSendOnDate
 Scots
 Screenshot
 ScreenshotPublished
@@ -8555,18 +8680,24 @@ Send Owner
 Send Proxied Owner
 Send Proxied Router
 Send Router
+SenderAddress
+SenderName
 Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
 Sent message: %s - %u bytes\n
+Sentiment
 September
 Serbian
+SerialNumber
 Server
 Server Busy
 Server Shutdown
 Server push is disabled by peer
+ServerAddress
 ServerInfoFile
 ServerList
+ServerPassword
 ServerPreference
 Service Read Only
 Service Unavailable
@@ -8609,6 +8740,7 @@ Setup Error
 Shader
 Shared Only
 Shared library locked
+Shipping
 Shipping address failed validation
 ShopeePay
 Shopping Cart Not Found
@@ -8616,6 +8748,7 @@ Should not reach here.
 Shouldn't be re-submitting a request we have body data for
 Show window
 Shutdown
+Signature
 Signature check failed
 SignatureAlgorithms
 Signing KDC Response
@@ -8646,6 +8779,7 @@ SocketFail
 Sofort
 Software
 Software\Valve\Steam
+Software\Valve\SteamService
 Solo
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
 Someone called ClearWritingMinidump without holding the minidump lock.
@@ -8755,7 +8889,8 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Nov 22 2025 07:00:25
+Startup - updater built Nov 25 2025 21:17:58
+State
 StaticFileWriterThread()
 Steam
 Steam - DirWatcher
@@ -8792,6 +8927,7 @@ SteamCallbacks
 SteamChina_SChinese
 SteamDeck
 SteamDllMainEx
+SteamID
 SteamOSGeneric
 SteamPID
 SteamRealm
@@ -8856,7 +8992,7 @@ Swish
 Switch
 Switching Protocols
 Symbol name "
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 Synthetic oneofs must be after all other oneofs
 System
 System OS is not compatible with manifest OS type
@@ -9156,6 +9292,7 @@ TempAppCmdLine
 Temporary Redirect
 Tenpay
 Terminating
+TerritoryCode
 Tesla
 Test
 Test CD-Key
@@ -9201,6 +9338,13 @@ Tigrinya
 Time Stamp signing
 Time Stamping
 Time is out of sync
+TimeAcked
+TimeCreated
+TimeExpiration
+TimeLastUpdated
+TimeNextProcess
+TimeRedeemed
+TimeSent
 Timed Trial
 TimedOut
 Timeout
@@ -9225,10 +9369,12 @@ Too many logon attempts
 Too many pending
 Too much image data
 Toss
+Total
 Total bytes allocated (os heap reported): %s\n
 Total bytes allocated counted: %s\n
 Total number of strings %u, longest string size %u, avg size %u\n
 Total of %u buckets with %u hash collisions\n
+TotalDiscount
 Touch'n Go
 TracerPid:
 Tracked allocs currently in use. %d Total %d\n
@@ -9239,7 +9385,10 @@ Trade Scam Old
 Trading
 Traditional_Chinese
 Trailer Field: 0x
+TransID
 Transaction expired
+TransactionID
+TransactionTime
 Transcode Behind
 Transfer-Encoding
 TransmitFile
@@ -9435,6 +9584,7 @@ Update Running
 Update Started
 Update complete, launching...
 Update required
+UpdateTime
 UpdateUI CreateGlContext failed
 UpdateUI CreateGlFont light failed
 UpdateUI CreateGlFont regular failed
@@ -9627,6 +9777,8 @@ Waiting on workitem
 Waiting on workitem %s
 Wallet
 Wallet (Nodwin)
+WalletAmt
+WalletCur
 Warning
 Warning parsing text-format
 Warning: %s
@@ -10527,6 +10679,7 @@ address1
 address2
 addressFamily
 address_of_request_url
+addressinfo
 addrinfo addr is not af inet
 addrinfo_wrap
 admin_request_spoofing_steamid
@@ -10625,6 +10778,11 @@ amazon
 ambiguous content type
 ambiguous host or service
 amharic
+amount
+amt.GetCurrencyCode() == GetCurrency()
+amtInitial.GetCurrencyCode() == GetCurrency()
+amtRecurring.GetCurrencyCode() == GetCurrency()
+amtrecurring
 android
 android32
 android6
@@ -11211,6 +11369,7 @@ cant check dh key
 cant pack structure
 capwapAC
 capwapWTP
+cardinfo
 caseIgnoreIA5StringSyntax
 cast5-cbc
 cast5-cfb
@@ -11615,6 +11774,7 @@ controller_switch_joycon_pair
 controller_switch_joycon_right
 controller_switch_pro
 controller_switch_pro_generic
+controller_triton
 controller_ui
 controller_unknown
 controller_wii
@@ -12179,7 +12339,7 @@ demoted from officer
 dep_stream
 depend on itself
 depotdeltapatch
-depotonly
+depotingest
 depots
 deprecated client msg %s, SteamID %s
 depth exceeded
@@ -12434,6 +12594,8 @@ e+ZQT
 eConnectionMode == k_EConnectionModeClient
 eContent
 eContentType
+eCurrencyCode
+eCurrencyCodeDelayed
 eFrameType < k_EFrameTypeMax
 eGroup < VPROF_BUDGETGROUP_MAX
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
@@ -12594,6 +12756,7 @@ encrypted_font_files
 encryption
 encryption ctrl failure
 encryption not supported for this key type
+enddate
 endmntent
 engine routines
 english
@@ -12893,8 +13056,10 @@ fread
 free
 freeaddrinfo
 freeifaddrs
+fremont
 french
 freopen
+frequency
 freshestCRL
 frexp
 friendlyCountry
@@ -12956,8 +13121,10 @@ g_vecTempTextBuffer
 ga-alpha color-map: too few entries
 gai_strerror
 galician
+galileo
 game
 gameid
+gameitemid
 gameoverlayrenderer.so
 gamepad+mouse.vdf
 gamepad_flickstick.vdf
@@ -13023,7 +13190,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen:
+ggen.
 givenName
 glBegin
 glBindTexture
@@ -14042,6 +14209,8 @@ is_visible_in_steam_china
 is_websocket_connect
 isalnum
 isalpha
+isbundle
+isinbundle
 isspace
 issuer
 issuer capabilities
@@ -14056,6 +14225,7 @@ issuerSignTool
 issuerUID
 issuer_and_serial
 issuingDistributionPoint
+istypegame
 iswalnum
 iswalpha
 iswspace
@@ -14098,6 +14268,7 @@ json_name = "
 jsondata
 jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
+jupiter
 jurisdictionC
 jurisdictionCountryName
 jurisdictionL
@@ -14188,7 +14359,6 @@ k_EMsgAIGetAppList
 k_EMsgAIGetAppListResponse
 k_EMsgAISGetCouponDefinition
 k_EMsgAISGetPackageChangeNumber
-k_EMsgAISTestEnableGC
 k_EMsgAMAccountPS3Unlink
 k_EMsgAMAcctAllowedToPurchase
 k_EMsgAMAddFounderToClan
@@ -15167,6 +15337,7 @@ k_EMsgRemoteClientAuthorizationResponse
 k_EMsgRemoteClientBase
 k_EMsgRemoteClientGetControllerConfig
 k_EMsgRemoteClientGetControllerConfigResponse
+k_EMsgRemoteClientPairWifiAP
 k_EMsgRemoteClientPing
 k_EMsgRemoteClientPingResponse
 k_EMsgRemoteClientProofRequest
@@ -15407,6 +15578,7 @@ length too short
 lengthToEncodePriv > 0 && lengthToEncodePriv < 1024*1024
 lengthToEncodePub > 0 && lengthToEncodePub < 1024*1024
 length_ >= n
+lenovo
 level3
 level_add_node
 lib(%lu)
@@ -15435,6 +15607,7 @@ like
 line
 linebuffer_ctrl
 linebuffer_new
+lineitems
 link
 linux
 linux22
@@ -15728,6 +15901,7 @@ m_pHTTPRequest
 m_pHeader->ip_v6().length() == 16
 m_pInitializationThread
 m_pJobFuncsData->m_listActiveJobs.Count()
+m_pKeyValues
 m_pListQueuedSSLRecvsPostHandshake
 m_pListWaitingRequestsForAddress
 m_pLogInstance
@@ -15762,6 +15936,8 @@ m_pSSLConnectionData != NULL
 m_pSSLConnectionData && m_pSSLConnectionData->m_pSSLCallback
 m_pSSLContext
 m_pSavedStack
+m_pSetIntValue
+m_pSetStringValue
 m_pSibling
 m_pStackHigh
 m_pTicketKeyMgr
@@ -15769,8 +15945,6 @@ m_pTicketKeyMgr == NULL
 m_pTreeInUseConnections
 m_pTreeWaitingConnections
 m_pValObjects != NULL
-m_pVecStringValue
-m_pVecUlValue
 m_pWaitingOnLock == NULL
 m_pWaitingOnWorkItem == NULL
 m_pWebSocketConnectionCallback
@@ -15838,6 +16012,7 @@ m_strTargetHostName
 m_strURL
 m_strValue
 m_strWatchPath
+m_tree
 m_treeDisconnectingConnections
 m_treePostParamNameHashes
 m_unInCounter == m_unOutCounter
@@ -16152,6 +16327,8 @@ n)M5
 n6j/
 n:2C[
 n<!TH+9
+nAmount
+nAmountDelayed
 nBarrierNumber < m_vecBarriers.Count()
 nBarrierNumber >= 0
 nBufferCount > %d not supported in %s
@@ -16836,6 +17013,7 @@ package
 package $0;\n\n
 package_requests
 package_version
+packages
 packed
 packet length too long
 packfile.m_bIsPackFile
@@ -16926,6 +17104,7 @@ pem name too short
 pending
 percent
 perfectworld
+period
 permissions changed
 permitted
 permitted subtree violation
@@ -17221,6 +17400,7 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pstrValue
 pszName
 pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
 pszThreadName != NULL
@@ -17291,6 +17471,7 @@ public_key
 publish
 publisher_group_id
 pulContext
+punValue
 punct
 purchase
 pure virtual method called\n
@@ -17324,8 +17505,10 @@ qsort
 qualifiers
 qualityLabelledData
 quantil
+quantity
 quechua
 queue
+queue_head_position_now
 queue_position
 qwest
 qwilt
@@ -18279,6 +18462,7 @@ stable_get
 stackLevel >= 0 && stackLevel < m_errorIndex
 stackpath
 start
+startdate
 starting
 startup
 stat
@@ -18334,6 +18518,7 @@ steam://openurl_external/
 steam://vr_connection_ready/
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 steamIDClan.GetEAccountType() == k_EAccountTypeClan
+steamRealm
 steam_client_
 steambeta
 steamchina

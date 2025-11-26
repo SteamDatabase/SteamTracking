@@ -3534,7 +3534,7 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 "SteamUI_ManageSecurity_InfoLabel2" "Asta înseamnă că va trebui să accesezi adresa de e-mail pentru a te putea conecta la Steam de pe un PC sau browser neautorizat."
 "SteamUI_ManageSecurity_InfoLabel3" "Prima dată când încerci să te conectezi de pe un PC sau browser neautorizat, Steam va trimite un mesaj pe adresa ta de e-mail de contact. Mesajul va include un cod special necesar pentru a-ți putea accesa contul Steam."
 "SteamUI_ManageSecurity_NothingRadio" "Securizează contul folosind Steam Guard"
-"SteamUI_ManageSecurity_UnlockRadio" "Dezactivează Steam Guard (Nerecomandat)"
+"SteamUI_ManageSecurity_UnlockRadio" "Dezactivează Steam Guard (nerecomandat)"
 "SteamUI_ManageSecurity_UnlockWarning" "Notă: schimburile de pe Steam și piața comunitară Steam nu vor fi disponibile cât timp Steam Guard este dezactivat și vor continua să fie indisponibile timp de 15 zile după ce Steam Guard este reactivat."
 
 "SteamUI_ManageSecurity_RemoveOtherComputersButton" "Revocă acum accesul pentru toate celelalte dispozitive"

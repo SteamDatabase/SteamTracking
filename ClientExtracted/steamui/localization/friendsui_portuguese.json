@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Eliminar mensagens",
     "Chat_Actions_Select_Message": "Selecionar mensagem",
     "Chat_Actions_Report": "Denunciar",
+    "Chat_Actions_ReportGroup": "Denunciar sala de chat",
     "Chat_Actions_React": "Reagir",
     "Chat_Actions_Delete": "Eliminar",
     "Chat_Actions_DeleteChatMessages_Confirm": "Tens a certeza de que queres eliminar estas mensagens de %1$s?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Foi resolvido um problema em que as janelas do chat e dos amigos não apareciam no Painel Steam durante jogos no Linux e no macOS.",
     "BBCode_Loading": "A carregar",
     "BBCode_Failed": "Erro ao carregar",
-    "broadcastDetails_Playing": "A jogar",
-    "Chat_Actions_ReportGroup": "Denunciar sala de chat"
+    "broadcastDetails_Playing": "A jogar"
 }

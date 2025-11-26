@@ -3541,7 +3541,7 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "SteamUI_ManageSecurity_InfoLabel2" "Tämä tarkoittaa sitä, että tarvitset pääsyn sähköpostiisi, että pääset Steam-tilillesi tunnistamattomalta tietokoneelta tai selaimelta."
 "SteamUI_ManageSecurity_InfoLabel3" "Steam lähettää viestin yhteyssähköpostiosoitteesesi kun yrität ensimmäistä kertaa kirjautua Steam-tiliisi tunnistamattomasta tietokoneesta tai selaimesta. Kyseinen viesti sisältää pääsykoodin, joka vaaditaan pääsyyn Steam-tilillesi."
 "SteamUI_ManageSecurity_NothingRadio" "Pidä tilini suojattuna Steam Guardilla"
-"SteamUI_ManageSecurity_UnlockRadio" "Kytke Steam Guard pois päältä (Ei suositella)"
+"SteamUI_ManageSecurity_UnlockRadio" "Kytke Steam Guard pois päältä (ei suositella)"
 "SteamUI_ManageSecurity_UnlockWarning" "Huomautus: Steam-vaihtaminen ja Steam-yhteisön kauppapaikka eivät ole käytössä kun Steam Guard on poissa päältä, eivätkä ne ole käytössä viiteentoista päivään Steam Guardin uudelleen aktivoinnin jälkeen."
 
 "SteamUI_ManageSecurity_RemoveOtherComputersButton" "Poista kaikkien muiden tietokoneiden valtuudet nyt"
@@ -3785,7 +3785,7 @@ Saat uuden Steam-kaverin lähettämällä sähköpostitse lahjan jollekin tutull
 "steam_details_streamfromname" "%stream_from%"
 "steam_details_totalplaytimeheader_video" "Olet katsonut"
 "steam_details_lastplayedheader_video" "Viimeksi katsottu"
-"steam_details_lockedheader" "Ei lisenssejä"
+"steam_details_lockedheader" "Lisenssi puuttuu"
 "steam_details_lockedreason" "Kaikki lisenssit ovat käytössä. Yritä myöhemmin uudelleen."
 
 "steam_details_achievementsheader" "%achieved_achievements%/%available_achievements% saavutuksia"

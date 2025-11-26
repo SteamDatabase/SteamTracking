@@ -131,7 +131,8 @@ message CMsgRemoteClientBroadcastStatus {
 	optional uint64 steam_version = 25;
 	optional .EVRLinkCaps vr_link_caps = 26 [default = k_EVRLinkCapsUnknown];
 	optional fixed64 vr_link_invite_client_id = 27;
-	optional fixed64 connected_wifi_ap_client_id = 28;
+	optional fixed64 connected_paired_network_hash = 28;
+	optional bool wifi_dongle_present = 29;
 }
 
 message CMsgRemoteClientBroadcastDiscovery {

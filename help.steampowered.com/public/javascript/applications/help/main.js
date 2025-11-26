@@ -1072,6 +1072,7 @@
       e.exports = {
         strMaxMobileWidth: "700px",
         strMaxResponsiveWidth: "910px",
+        strMaxTabletWidth: "1080px",
       };
     },
     3812: (e) => {
@@ -27711,6 +27712,9 @@
         GetChallengeURL() {
           return this.m_strChallengeURL;
         }
+        GetClientID() {
+          return this.m_strClientID;
+        }
         GetStatus() {
           return this.m_eStatus;
         }
@@ -27730,9 +27734,10 @@
           {
             eStatus: c,
             strChallengeURL: m,
-            bHadRemoteInteraction: u,
-            reset: d,
-            setTokenToRevoke: p,
+            strClientID: u,
+            bHadRemoteInteraction: d,
+            reset: p,
+            setTokenToRevoke: g,
           } = (function (e) {
             const [t, r] = (0, i.useState)(new Qu(e));
             return (
@@ -27747,6 +27752,7 @@
               ),
               (0, gu.q3)(() => ({
                 strChallengeURL: t.GetChallengeURL(),
+                strClientID: t.GetClientID(),
                 eFailureState: t.GetFailureState(),
                 eStatus: t.GetStatus(),
                 bHadRemoteInteraction: t.BHadRemoteInteraction(),
@@ -27756,22 +27762,22 @@
             );
           })({ transport: t, onComplete: r, onDeviceDetails: l });
         (0, i.useEffect)(() => n && n(c), [n, c]);
-        const g = 2 === c ? m : s.TS.STORE_BASE_URL,
-          _ = 0 === c || 1 === c || u,
-          h = 4 === c,
-          f = 3 === c,
-          b = f
+        const _ = 2 === c ? m : s.TS.STORE_BASE_URL,
+          h = 0 === c || 1 === c || d,
+          f = 4 === c,
+          b = 3 === c,
+          y = b
             ? i.createElement(td, null)
-            : h
-              ? i.createElement(Ju, { reset: d })
-              : _
+            : f
+              ? i.createElement(Ju, { reset: p })
+              : h
                 ? i.createElement(Xu, { size: "small" })
                 : null,
-          y = _ || h || f;
+          B = h || f || b;
         (0, i.useEffect)(() => {
-          e.refreshInfo?.login_token_id && p(e.refreshInfo.login_token_id);
-        }, [e.refreshInfo, p]);
-        const B = 1 !== s.TS.EUNIVERSE;
+          e.refreshInfo?.login_token_id && g(e.refreshInfo.login_token_id);
+        }, [e.refreshInfo, g]);
+        const w = 1 !== s.TS.EUNIVERSE;
         return i.createElement(
           "div",
           { className: Yu().Column },
@@ -27783,22 +27789,22 @@
               {
                 borderWidth: 0,
                 activeBitColor: [21, 23, 28],
-                inactiveBitColor: B ? [255, 0, 255] : [255, 255, 255],
-                quality: Zu(g),
+                inactiveBitColor: w ? [255, 0, 255] : [255, 255, 255],
+                quality: Zu(_),
                 className: (0, St.A)(
                   Yu().LoginQR,
                   o && Yu().QRLoginDeck,
-                  y && Yu().Blur,
-                  B && Yu().NonPublic,
+                  B && Yu().Blur,
+                  w && Yu().NonPublic,
                 ),
               },
-              g,
+              _,
             ),
-            y &&
+            B &&
               i.createElement(
                 "div",
                 { className: Yu().Overlay },
-                i.createElement("div", { className: Yu().Box }, b),
+                i.createElement("div", { className: Yu().Box }, y),
               ),
           ),
         );
@@ -70060,75 +70066,76 @@
       });
       var i = r(4484);
       const n = {
-        EUNIVERSE: 0,
-        WEB_UNIVERSE: "",
-        LANGUAGE: "english",
-        SUPPORTED_LANGUAGES: [],
-        COUNTRY: "",
-        AVATAR_BASE_URL: "",
-        MEDIA_CDN_COMMUNITY_URL: "",
-        MEDIA_CDN_URL: "",
-        CLAN_CDN_ASSET_URL: "",
-        COMMUNITY_ASSETS_BASE_URL: "",
-        VIDEO_CDN_URL: "",
-        COMMUNITY_CDN_URL: "",
-        COMMUNITY_CDN_ASSET_URL: "",
-        BASE_URL_SHARED_CDN: "",
-        STORE_CDN_URL: "",
-        PUBLIC_SHARED_URL: "",
-        COMMUNITY_BASE_URL: "",
-        CHAT_BASE_URL: "",
-        STORE_BASE_URL: "",
-        STORE_CHECKOUT_BASE_URL: "",
-        LOGIN_BASE_URL: "",
-        SUPPORT_BASE_URL: "",
-        STORE_ICON_BASE_URL: "",
-        STORE_ITEM_BASE_URL: "",
-        IMG_URL: "",
-        STEAMTV_BASE_URL: "",
-        HELP_BASE_URL: "",
-        PARTNER_BASE_URL: "",
-        STATS_BASE_URL: "",
-        INTERNAL_STATS_BASE_URL: "",
-        BASE_URL_STORE_CDN_ASSETS: "",
-        IN_CLIENT: !1,
-        USE_POPUPS: !1,
-        IN_MOBILE: !1,
-        IN_MOBILE_WEBVIEW: !1,
-        IN_TENFOOT: !1,
-        PLATFORM: "",
-        SNR: "",
-        LAUNCHER_TYPE: 0,
-        EREALM: 0,
-        IN_CHROMEOS: !1,
-        TESLA: !1,
-        LOCAL_HOSTNAME: "",
-        WEBAPI_BASE_URL: "",
-        TOKEN_URL: "",
-        BUILD_TIMESTAMP: 0,
-        PAGE_TIMESTAMP: 0,
-        FROM_WEB: !1,
-        WEBSITE_ID: "Unknown",
-        get SESSIONID() {
-          return (0, i.KC)();
+          EUNIVERSE: 0,
+          WEB_UNIVERSE: "",
+          LANGUAGE: "english",
+          SUPPORTED_LANGUAGES: [],
+          COUNTRY: "",
+          AVATAR_BASE_URL: "",
+          MEDIA_CDN_COMMUNITY_URL: "",
+          MEDIA_CDN_URL: "",
+          CLAN_CDN_ASSET_URL: "",
+          COMMUNITY_ASSETS_BASE_URL: "",
+          VIDEO_CDN_URL: "",
+          COMMUNITY_CDN_URL: "",
+          COMMUNITY_CDN_ASSET_URL: "",
+          BASE_URL_SHARED_CDN: "",
+          STORE_CDN_URL: "",
+          PUBLIC_SHARED_URL: "",
+          COMMUNITY_BASE_URL: "",
+          CHAT_BASE_URL: "",
+          STORE_BASE_URL: "",
+          STORE_CHECKOUT_BASE_URL: "",
+          LOGIN_BASE_URL: "",
+          SUPPORT_BASE_URL: "",
+          STORE_ICON_BASE_URL: "",
+          STORE_ITEM_BASE_URL: "",
+          IMG_URL: "",
+          STEAMTV_BASE_URL: "",
+          HELP_BASE_URL: "",
+          PARTNER_BASE_URL: "",
+          STATS_BASE_URL: "",
+          INTERNAL_STATS_BASE_URL: "",
+          BASE_URL_STORE_CDN_ASSETS: "",
+          IN_CLIENT: !1,
+          USE_POPUPS: !1,
+          IN_MOBILE: !1,
+          IN_MOBILE_WEBVIEW: !1,
+          IN_TENFOOT: !1,
+          PLATFORM: "",
+          SNR: "",
+          LAUNCHER_TYPE: 0,
+          EREALM: 0,
+          IN_CHROMEOS: !1,
+          TESLA: !1,
+          LOCAL_HOSTNAME: "",
+          WEBAPI_BASE_URL: "",
+          TOKEN_URL: "",
+          BUILD_TIMESTAMP: 0,
+          PAGE_TIMESTAMP: 0,
+          FROM_WEB: !1,
+          WEBSITE_ID: "Unknown",
+          get SESSIONID() {
+            return (0, i.KC)();
+          },
+          FRIENDSUI_BETA: !1,
+          STEAM_TV: !1,
+          DEV_MODE: !1,
+          IN_STEAMUI: !1,
+          IN_GAMEPADUI: !1,
+          IN_STEAMUI_SHARED_CONTEXT: !1,
+          DECK_DISPLAY_MODE: !1,
+          ON_DECK: !1,
+          ON_FRAME: !1,
+          ON_STEAMOS: !1,
+          IN_GAMESCOPE: !1,
+          IN_LOGIN: !1,
+          IN_LOGIN_REFRESH: !1,
+          USE_LONGEST_LOC_STRING: !1,
+          SILENT_STARTUP: !1,
+          CLIENT_SESSION: 0,
         },
-        FRIENDSUI_BETA: !1,
-        STEAM_TV: !1,
-        DEV_MODE: !1,
-        IN_STEAMUI: !1,
-        IN_GAMEPADUI: !1,
-        IN_STEAMUI_SHARED_CONTEXT: !1,
-        DECK_DISPLAY_MODE: !1,
-        ON_DECK: !1,
-        ON_STEAMOS: !1,
-        IN_GAMESCOPE: !1,
-        IN_LOGIN: !1,
-        IN_LOGIN_REFRESH: !1,
-        USE_LONGEST_LOC_STRING: !1,
-        SILENT_STARTUP: !1,
-        CLIENT_SESSION: 0,
-      };
-      const s = {
+        s = {
           logged_in: !1,
           steamid: "",
           accountid: 0,

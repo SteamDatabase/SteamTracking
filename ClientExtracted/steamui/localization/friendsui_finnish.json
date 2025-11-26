@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Poista viestit",
     "Chat_Actions_Select_Message": "Valitse viesti",
     "Chat_Actions_Report": "Ilmianna",
+    "Chat_Actions_ReportGroup": "Ilmianna ryhmächat",
     "Chat_Actions_React": "Reagoi",
     "Chat_Actions_Delete": "Poista",
     "Chat_Actions_DeleteChatMessages_Confirm": "Haluatko varmasti poistaa nämä viestit käyttäjältä %1$s?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Korjattiin kaveri- ja chat-ikkunoiden piiloutuminen yhteisönäkymässä Linux- ja macOS -käyttöjärjestelmissä.",
     "BBCode_Loading": "Lataa",
     "BBCode_Failed": "Lataus epäonnistui",
-    "broadcastDetails_Playing": "Pelissä",
-    "Chat_Actions_ReportGroup": "Ilmianna ryhmächat"
+    "broadcastDetails_Playing": "Pelissä"
 }

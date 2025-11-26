@@ -6257,6 +6257,91 @@
         kf: () => c,
       });
     },
+    96762: (e, t, r) => {
+      "use strict";
+      r.d(t, { Lg: () => l, VD: () => i, mR: () => o, yc: () => a });
+      const n = new Set([
+        "sc_schinese",
+        "schinese",
+        "tchinese",
+        "japanese",
+        "koreana",
+        "thai",
+        "arabic",
+        "bulgarian",
+        "czech",
+        "danish",
+        "german",
+        "english",
+        "spanish",
+        "latam",
+        "greek",
+        "french",
+        "italian",
+        "indonesian",
+        "hungarian",
+        "dutch",
+        "norwegian",
+        "polish",
+        "portuguese",
+        "brazilian",
+        "romanian",
+        "russian",
+        "finnish",
+        "swedish",
+        "turkish",
+        "vietnamese",
+        "ukrainian",
+      ]);
+      function i(e) {
+        return n.has(e);
+      }
+      const s = new Map([
+        ["en", "english"],
+        ["de", "german"],
+        ["fr", "french"],
+        ["it", "italian"],
+        ["ko", "koreana"],
+        ["es-419", "latam"],
+        ["es", "spanish"],
+        ["zh", "schinese"],
+        ["zh-cn", "schinese"],
+        ["zh-tw", "tchinese"],
+        ["ru", "russian"],
+        ["ar", "arabic"],
+        ["th", "thai"],
+        ["ja", "japanese"],
+        ["pt-br", "brazilian"],
+        ["pt", "portuguese"],
+        ["pl", "polish"],
+        ["da", "danish"],
+        ["nl", "dutch"],
+        ["fi", "finnish"],
+        ["nb", "norwegian"],
+        ["no", "norwegian"],
+        ["sv", "swedish"],
+        ["hu", "hungarian"],
+        ["cs", "czech"],
+        ["ro", "romanian"],
+        ["tr", "turkish"],
+        ["bg", "bulgarian"],
+        ["el", "greek"],
+        ["uk", "ukrainian"],
+        ["vn", "vietnamese"],
+        ["id", "indonesian"],
+      ]);
+      const a = new Map();
+      for (const [e, t] of s.entries()) a.set(t, e);
+      function o(e) {
+        if ("english" !== e)
+          return "sc_schinese" === e ? "schinese" : "english";
+      }
+      function l(e) {
+        return "arabic" === e;
+      }
+      a.set("sc_schinese", a.get("schinese")),
+        a.set("korean", a.get("koreana"));
+    },
     56545: (e, t, r) => {
       "use strict";
       r.d(t, { I8: () => l, lI: () => a, w: () => o });
@@ -16691,15 +16776,15 @@
     },
     8527: (e, t, r) => {
       "use strict";
-      r.d(t, { YJ: () => s, TS: () => a, iA: () => o });
+      r.d(t, { YJ: () => s, TS: () => a, iA: () => o, Ki: () => l });
       var n = r(30470),
         i = r(24484);
       function s(e) {
         return e;
       }
       const a = window.Config ?? n.TS,
-        o = window.UserConfig ?? n.iA;
-      window.Config || i.bd;
+        o = window.UserConfig ?? n.iA,
+        l = window.Config ? () => Promise.resolve() : i.bd;
       window.Config && Object.assign(n.TS, window.Config),
         window.UserConfig && Object.assign(n.iA, window.UserConfig);
     },
@@ -18871,16 +18956,16 @@
         }
       }
     },
-    30720: (e, t, r) => {
+    13871: (e, t, r) => {
       "use strict";
       r.d(t, {
-        kc: () => L,
-        Ad: () => k,
-        Wf: () => y,
-        Dr: () => B,
-        yq: () => R,
-        R7: () => D,
-        k5: () => I,
+        kc: () => D,
+        Ad: () => L,
+        Wf: () => M,
+        Dr: () => S,
+        yq: () => E,
+        R7: () => T,
+        k5: () => R,
       });
       var n = r(34629),
         i = r(22837);
@@ -18975,184 +19060,115 @@
         }
       }
       (0, n.Cg)([w.o], C.prototype, "OnLinkLoad", null);
-      var M = r(91986);
-      new Set([
-        "sc_schinese",
-        "schinese",
-        "tchinese",
-        "japanese",
-        "koreana",
-        "thai",
-        "arabic",
-        "bulgarian",
-        "czech",
-        "danish",
-        "german",
-        "english",
-        "spanish",
-        "latam",
-        "greek",
-        "french",
-        "italian",
-        "indonesian",
-        "hungarian",
-        "dutch",
-        "norwegian",
-        "polish",
-        "portuguese",
-        "brazilian",
-        "romanian",
-        "russian",
-        "finnish",
-        "swedish",
-        "turkish",
-        "vietnamese",
-        "ukrainian",
-      ]);
-      const S = new Map([
-        ["en", "english"],
-        ["de", "german"],
-        ["fr", "french"],
-        ["it", "italian"],
-        ["ko", "koreana"],
-        ["es-419", "latam"],
-        ["es", "spanish"],
-        ["zh", "schinese"],
-        ["zh-cn", "schinese"],
-        ["zh-tw", "tchinese"],
-        ["ru", "russian"],
-        ["ar", "arabic"],
-        ["th", "thai"],
-        ["ja", "japanese"],
-        ["pt-br", "brazilian"],
-        ["pt", "portuguese"],
-        ["pl", "polish"],
-        ["da", "danish"],
-        ["nl", "dutch"],
-        ["fi", "finnish"],
-        ["nb", "norwegian"],
-        ["no", "norwegian"],
-        ["sv", "swedish"],
-        ["hu", "hungarian"],
-        ["cs", "czech"],
-        ["ro", "romanian"],
-        ["tr", "turkish"],
-        ["bg", "bulgarian"],
-        ["el", "greek"],
-        ["uk", "ukrainian"],
-        ["vn", "vietnamese"],
-        ["id", "indonesian"],
-      ]);
-      const v = new Map();
-      for (const [e, t] of S.entries()) v.set(t, e);
-      var y, B;
-      function E() {
-        return (0, f.td)() ? y.Composited : y.None;
+      var M,
+        S,
+        v = r(91986),
+        y = r(96762);
+      function B() {
+        return (0, f.td)() ? M.Composited : M.None;
       }
-      function R(e) {
-        let t = y.None;
+      function E(e) {
+        let t = M.None;
         switch (e) {
-          case B.Overlay:
+          case S.Overlay:
             return (
-              (t |= y.AlwaysOnTop),
-              (t |= y.NoTaskbarIcon),
-              (t |= y.NotFocusable),
-              (t |= y.TransparentParentWindow),
+              (t |= M.AlwaysOnTop),
+              (t |= M.NoTaskbarIcon),
+              (t |= M.NotFocusable),
+              (t |= M.TransparentParentWindow),
               t
             );
-          case B.Notification:
+          case S.Notification:
             return (
-              (t |= R(B.Overlay)),
-              (t |= y.NoWindowShadow),
-              (t |= y.NoRoundedCorners),
-              (t |= y.OverrideRedirect),
-              (t |= y.ForceBrowserVisible),
+              (t |= E(S.Overlay)),
+              (t |= M.NoWindowShadow),
+              (t |= M.NoRoundedCorners),
+              (t |= M.OverrideRedirect),
+              (t |= M.ForceBrowserVisible),
               t
             );
-          case B.Tooltip:
+          case S.Tooltip:
             return (
-              (t |= R(B.Overlay)),
-              (t |= y.NoRoundedCorners),
-              (t |= y.NoWindowShadow),
-              (t |= y.TooltipHint),
-              (t |= E()),
+              (t |= E(S.Overlay)),
+              (t |= M.NoRoundedCorners),
+              (t |= M.NoWindowShadow),
+              (t |= M.TooltipHint),
+              (t |= B()),
               t
             );
-          case B.PopupContextMenu:
+          case S.PopupContextMenu:
             return (
-              (t |= y.NoTaskbarIcon),
-              (t |= y.NoRoundedCorners),
-              (t |= y.NoWindowShadow),
-              (t |= y.PopUpMenuHint),
-              (t |= y.TransparentParentWindow),
-              (t |= E()),
+              (t |= M.NoTaskbarIcon),
+              (t |= M.NoRoundedCorners),
+              (t |= M.NoWindowShadow),
+              (t |= M.PopUpMenuHint),
+              (t |= M.TransparentParentWindow),
+              (t |= B()),
               t
             );
-          case B.StandaloneContextMenu:
+          case S.StandaloneContextMenu:
             return (
-              (t = y.NoTaskbarIcon),
-              (t |= y.NoRoundedCorners),
-              (t |= y.NoWindowShadow),
-              (t |= y.OverrideRedirect),
-              (t |= y.TransparentParentWindow),
-              (t |= E()),
+              (t = M.NoTaskbarIcon),
+              (t |= M.NoRoundedCorners),
+              (t |= M.NoWindowShadow),
+              (t |= M.OverrideRedirect),
+              (t |= M.TransparentParentWindow),
+              (t |= B()),
               t
             );
         }
       }
-      function I() {
-        const { ownerWindow: e } = D(),
-          t = F.GetPopupForWindow(e);
+      function R() {
+        const { ownerWindow: e } = T(),
+          t = O.GetPopupForWindow(e);
         return t?.browser_info || m;
       }
-      v.set("sc_schinese", v.get("schinese")),
-        v.set("korean", v.get("koreana")),
-        (function (e) {
-          (e[(e.None = 0)] = "None"),
-            (e[(e.Minimized = 1)] = "Minimized"),
-            (e[(e.Hidden = 2)] = "Hidden"),
-            (e[(e.TooltipHint = 4)] = "TooltipHint"),
-            (e[(e.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
-            (e[(e.Resizable = 16)] = "Resizable"),
-            (e[(e.ScalePosition = 32)] = "ScalePosition"),
-            (e[(e.ScaleSize = 64)] = "ScaleSize"),
-            (e[(e.Maximized = 128)] = "Maximized"),
-            (e[(e.Composited = 256)] = "Composited"),
-            (e[(e.NotFocusable = 512)] = "NotFocusable"),
-            (e[(e.FullScreen = 1024)] = "FullScreen"),
-            (e[(e.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
-            (e[(e.ApplyBrowserScaleToDimensions = 4096)] =
-              "ApplyBrowserScaleToDimensions"),
-            (e[(e.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
-            (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
-            (e[(e.NoMinimize = 32768)] = "NoMinimize"),
-            (e[(e.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
-            (e[(e.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
-            (e[(e.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
-            (e[(e.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
-            (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect"),
-            (e[(e.IgnoreSteamDisplayScale = 2097152)] =
-              "IgnoreSteamDisplayScale"),
-            (e[(e.TransparentParentWindow = 4194304)] =
-              "TransparentParentWindow"),
-            (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale"),
-            (e[(e.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
-        })(y || (y = {})),
+      !(function (e) {
+        (e[(e.None = 0)] = "None"),
+          (e[(e.Minimized = 1)] = "Minimized"),
+          (e[(e.Hidden = 2)] = "Hidden"),
+          (e[(e.TooltipHint = 4)] = "TooltipHint"),
+          (e[(e.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
+          (e[(e.Resizable = 16)] = "Resizable"),
+          (e[(e.ScalePosition = 32)] = "ScalePosition"),
+          (e[(e.ScaleSize = 64)] = "ScaleSize"),
+          (e[(e.Maximized = 128)] = "Maximized"),
+          (e[(e.Composited = 256)] = "Composited"),
+          (e[(e.NotFocusable = 512)] = "NotFocusable"),
+          (e[(e.FullScreen = 1024)] = "FullScreen"),
+          (e[(e.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
+          (e[(e.ApplyBrowserScaleToDimensions = 4096)] =
+            "ApplyBrowserScaleToDimensions"),
+          (e[(e.AlwaysOnTop = 8192)] = "AlwaysOnTop"),
+          (e[(e.NoWindowShadow = 16384)] = "NoWindowShadow"),
+          (e[(e.NoMinimize = 32768)] = "NoMinimize"),
+          (e[(e.PopUpMenuHint = 65536)] = "PopUpMenuHint"),
+          (e[(e.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
+          (e[(e.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
+          (e[(e.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
+          (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect"),
+          (e[(e.IgnoreSteamDisplayScale = 2097152)] =
+            "IgnoreSteamDisplayScale"),
+          (e[(e.TransparentParentWindow = 4194304)] =
+            "TransparentParentWindow"),
+          (e[(e.DisableDPIScale = 8388608)] = "DisableDPIScale"),
+          (e[(e.ForceBrowserVisible = 16777216)] = "ForceBrowserVisible");
+      })(M || (M = {})),
         (function (e) {
           (e[(e.Overlay = 0)] = "Overlay"),
             (e[(e.Notification = 1)] = "Notification"),
             (e[(e.Tooltip = 2)] = "Tooltip"),
             (e[(e.PopupContextMenu = 3)] = "PopupContextMenu"),
             (e[(e.StandaloneContextMenu = 4)] = "StandaloneContextMenu");
-        })(B || (B = {}));
-      const T = u.createContext({ ownerWindow: window }),
-        D = () => u.useContext(T);
-      function L(e) {
+        })(S || (S = {}));
+      const I = u.createContext({ ownerWindow: window }),
+        T = () => u.useContext(I);
+      function D(e) {
         const { ownerWindow: t, children: r } = e,
           n = u.useMemo(() => ({ ownerWindow: t }), [t]);
-        return u.createElement(T.Provider, { value: n }, r);
+        return u.createElement(I.Provider, { value: n }, r);
       }
-      class k {
+      class L {
         m_strName;
         m_strTitle;
         m_rgParams;
@@ -19176,7 +19192,7 @@
               (this.m_strName +=
                 "_uid" + this.m_rgParams.target_browser.m_unPID),
             (this.m_bCreateHidden = !!(
-              this.m_rgParams.eCreationFlags & y.Hidden
+              this.m_rgParams.eCreationFlags & M.Hidden
             )),
             (this.m_strTitle = r);
         }
@@ -19206,8 +19222,8 @@
                 ? i.iE.k_EWindowBringToFrontAndForceOS
                 : i.iE.k_EWindowBringToFrontInvalid
               : e),
-            window.SteamClient && (this.m_rgParams.eCreationFlags |= y.Hidden),
-            this.m_rgParams.eCreationFlags & y.NotFocusable &&
+            window.SteamClient && (this.m_rgParams.eCreationFlags |= M.Hidden),
+            this.m_rgParams.eCreationFlags & M.NotFocusable &&
               (t = i.iE.k_EWindowBringToFrontInvalid),
             this.BIsValid() &&
               (this.BIsClosed()
@@ -19216,14 +19232,14 @@
           let r,
             n,
             s,
-            a = F.GetExistingPopup(this.m_strName);
+            a = O.GetExistingPopup(this.m_strName);
           (a && !this.m_rgParams.replace_existing_popup) ||
             ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
             a
               ? ((n = a.m_element),
                 (r = a.m_popup),
                 (s = a.m_renderWhenReady),
-                F.RemoveTrackedPopup(a),
+                O.RemoveTrackedPopup(a),
                 a.ReleasePopup(),
                 r?.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
                 r?.removeEventListener("unload", a.OnUnload),
@@ -19233,7 +19249,7 @@
                 r?.removeEventListener("drop", a.OnDrop),
                 r?.removeEventListener("dragover", a.OnDragOver),
                 r?.removeEventListener("message", this.OnMessage))
-              : (({ popup: r, element: n } = O.CreatePopup(this.m_strName, {
+              : (({ popup: r, element: n } = k.CreatePopup(this.m_strName, {
                   ...this.m_rgParams,
                   title: this.m_strTitle,
                 })),
@@ -19254,7 +19270,7 @@
                   "lang",
                   (0, _.l4)() ?? "",
                 ),
-                "arabic" === f.TS.LANGUAGE &&
+                (0, y.Lg)(f.TS.LANGUAGE) &&
                   r.document.documentElement.setAttribute("dir", "rtl")),
               (this.m_popup = r),
               (this.m_element = n),
@@ -19264,7 +19280,7 @@
                   this.m_element &&
                   this.RenderInternal(this.m_popup, this.m_element, t);
               })),
-            F.AddTrackedPopup(this),
+            O.AddTrackedPopup(this),
             a &&
               (this.OnCreateInternal(),
               t != i.iE.k_EWindowBringToFrontInvalid && this.Focus(t)));
@@ -19316,7 +19332,7 @@
         }
         OnUnload(e) {
           this.RemoveEventListeners(),
-            F.RemoveTrackedPopup(this),
+            O.RemoveTrackedPopup(this),
             this.OnClose(),
             (this.m_popup = void 0);
         }
@@ -19420,18 +19436,18 @@
         OnFocus() {}
         OnBlur() {}
       }
-      (0, n.Cg)([c.sH], k.prototype, "m_bFocused", void 0),
-        (0, n.Cg)([w.o], k.prototype, "OnMessage", null),
-        (0, n.Cg)([w.o], k.prototype, "RenderInternal", null),
-        (0, n.Cg)([w.o], k.prototype, "OnCreateInternal", null),
-        (0, n.Cg)([w.o], k.prototype, "OnResizeEvent", null),
-        (0, n.Cg)([w.o], k.prototype, "OnBeforeUnloadEvent", null),
-        (0, n.Cg)([w.o], k.prototype, "OnUnload", null),
-        (0, n.Cg)([w.o], k.prototype, "OnFocusInternal", null),
-        (0, n.Cg)([w.o], k.prototype, "OnBlurInternal", null);
+      (0, n.Cg)([c.sH], L.prototype, "m_bFocused", void 0),
+        (0, n.Cg)([w.o], L.prototype, "OnMessage", null),
+        (0, n.Cg)([w.o], L.prototype, "RenderInternal", null),
+        (0, n.Cg)([w.o], L.prototype, "OnCreateInternal", null),
+        (0, n.Cg)([w.o], L.prototype, "OnResizeEvent", null),
+        (0, n.Cg)([w.o], L.prototype, "OnBeforeUnloadEvent", null),
+        (0, n.Cg)([w.o], L.prototype, "OnUnload", null),
+        (0, n.Cg)([w.o], L.prototype, "OnFocusInternal", null),
+        (0, n.Cg)([w.o], L.prototype, "OnBlurInternal", null);
       (0, n.Cg)(
         [w.o],
-        class extends k {
+        class extends L {
           m_strSavedDimensionsKey;
           m_strInitialSavedDimensionsKey;
           m_strInitialRestoreDetails;
@@ -19457,14 +19473,14 @@
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  F.SetRestoreDetails(
+                  O.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires,
                   ))
                 : ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = F.GetRestoreDetails(
+                  (e.strRestoreDetails = O.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                   ))),
               e
@@ -19494,7 +19510,7 @@
                     this.m_strSavedDimensionsKey &&
                     t &&
                     !r &&
-                    (F.SetRestoreDetails(e, t, this.m_bExpires),
+                    (O.SetRestoreDetails(e, t, this.m_bExpires),
                     (this.m_rgParams.strRestoreDetails = t),
                     (this.m_strInitialSavedDimensionsKey = e),
                     this.OnResizeComplete(t));
@@ -19507,19 +19523,19 @@
           }
           OnClose() {}
           SaveWindowPosition(e) {
-            F.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            O.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }
         }.prototype,
         "QueryAndStoreWindowPosition",
         null,
       );
-      class O {
+      class k {
         m_bShuttingDown = !1;
         m_mapPopups = c.sH.map([], { deep: !1 });
         m_rgShutdownCallbacks = [];
-        m_rgPopupCreatedCallbacks = new M.l();
-        m_rgPopupDestroyedCallbacks = new M.l();
+        m_rgPopupCreatedCallbacks = new v.l();
+        m_rgPopupDestroyedCallbacks = new v.l();
         m_unCurrentAccountID = 0;
         m_mapRestoreDetails = new Map();
         m_bSaveRequired = !1;
@@ -19566,7 +19582,7 @@
         }
         BAnyMenuHasFocus() {
           for (const e of this.m_mapPopups.values())
-            if (e.focused && (e.params.eCreationFlags ?? 0) & y.NoTaskbarIcon)
+            if (e.focused && (e.params.eCreationFlags ?? 0) & M.NoTaskbarIcon)
               return !0;
           return !1;
         }
@@ -19763,18 +19779,18 @@
       }
       (0, n.Cg)(
         [w.o, (0, h.s)(100)],
-        O.prototype,
+        k.prototype,
         "DebouncedSaveSavedDimensionStore",
         null,
       );
-      const F = new O();
-      window.g_PopupManager = F;
+      const O = new k();
+      window.g_PopupManager = O;
     },
     48902: (e, t, r) => {
       "use strict";
       r.d(t, { OJ: () => c });
       var n = r(90626),
-        i = r(30720);
+        i = r(13871);
       const s = n.createContext({ body_class: "" });
       function a() {
         return n.useContext(s);
@@ -25084,7 +25100,7 @@
       var Te = r(28055),
         De = r.n(Te),
         Le = r(78327),
-        ke = r(30720),
+        ke = r(13871),
         Oe = r(78395);
       function Fe(e) {
         return e ? e + "_Label" : void 0;
@@ -29431,7 +29447,7 @@
         r(25118),
         r(73745),
         r(97348),
-        r(30720),
+        r(13871),
         r(78327),
         r(28460);
       function o(e) {
@@ -29494,7 +29510,7 @@
           t ? e.children : (e.fallback ?? null)
         );
       }
-      var s = r(30720),
+      var s = r(13871),
         a = r(84811),
         o = r(72739),
         l = r(86927),
@@ -30192,7 +30208,7 @@
         s = r(72739),
         a = r(88997),
         o = r(29636),
-        l = r(30720),
+        l = r(13871),
         c = r(73745);
       const u = i.createContext(null);
       function m(e) {
@@ -37036,7 +37052,6 @@
         CI: () => _,
         Fd: () => l.Fd,
         Hn: () => f,
-        KC: () => l.KC,
         NQ: () => C,
         P9: () => a.P9,
         Pr: () => g,
@@ -37166,75 +37181,76 @@
       });
       var n = r(24484);
       const i = {
-        EUNIVERSE: 0,
-        WEB_UNIVERSE: "",
-        LANGUAGE: "english",
-        SUPPORTED_LANGUAGES: [],
-        COUNTRY: "",
-        AVATAR_BASE_URL: "",
-        MEDIA_CDN_COMMUNITY_URL: "",
-        MEDIA_CDN_URL: "",
-        CLAN_CDN_ASSET_URL: "",
-        COMMUNITY_ASSETS_BASE_URL: "",
-        VIDEO_CDN_URL: "",
-        COMMUNITY_CDN_URL: "",
-        COMMUNITY_CDN_ASSET_URL: "",
-        BASE_URL_SHARED_CDN: "",
-        STORE_CDN_URL: "",
-        PUBLIC_SHARED_URL: "",
-        COMMUNITY_BASE_URL: "",
-        CHAT_BASE_URL: "",
-        STORE_BASE_URL: "",
-        STORE_CHECKOUT_BASE_URL: "",
-        LOGIN_BASE_URL: "",
-        SUPPORT_BASE_URL: "",
-        STORE_ICON_BASE_URL: "",
-        STORE_ITEM_BASE_URL: "",
-        IMG_URL: "",
-        STEAMTV_BASE_URL: "",
-        HELP_BASE_URL: "",
-        PARTNER_BASE_URL: "",
-        STATS_BASE_URL: "",
-        INTERNAL_STATS_BASE_URL: "",
-        BASE_URL_STORE_CDN_ASSETS: "",
-        IN_CLIENT: !1,
-        USE_POPUPS: !1,
-        IN_MOBILE: !1,
-        IN_MOBILE_WEBVIEW: !1,
-        IN_TENFOOT: !1,
-        PLATFORM: "",
-        SNR: "",
-        LAUNCHER_TYPE: 0,
-        EREALM: 0,
-        IN_CHROMEOS: !1,
-        TESLA: !1,
-        LOCAL_HOSTNAME: "",
-        WEBAPI_BASE_URL: "",
-        TOKEN_URL: "",
-        BUILD_TIMESTAMP: 0,
-        PAGE_TIMESTAMP: 0,
-        FROM_WEB: !1,
-        WEBSITE_ID: "Unknown",
-        get SESSIONID() {
-          return (0, n.KC)();
+          EUNIVERSE: 0,
+          WEB_UNIVERSE: "",
+          LANGUAGE: "english",
+          SUPPORTED_LANGUAGES: [],
+          COUNTRY: "",
+          AVATAR_BASE_URL: "",
+          MEDIA_CDN_COMMUNITY_URL: "",
+          MEDIA_CDN_URL: "",
+          CLAN_CDN_ASSET_URL: "",
+          COMMUNITY_ASSETS_BASE_URL: "",
+          VIDEO_CDN_URL: "",
+          COMMUNITY_CDN_URL: "",
+          COMMUNITY_CDN_ASSET_URL: "",
+          BASE_URL_SHARED_CDN: "",
+          STORE_CDN_URL: "",
+          PUBLIC_SHARED_URL: "",
+          COMMUNITY_BASE_URL: "",
+          CHAT_BASE_URL: "",
+          STORE_BASE_URL: "",
+          STORE_CHECKOUT_BASE_URL: "",
+          LOGIN_BASE_URL: "",
+          SUPPORT_BASE_URL: "",
+          STORE_ICON_BASE_URL: "",
+          STORE_ITEM_BASE_URL: "",
+          IMG_URL: "",
+          STEAMTV_BASE_URL: "",
+          HELP_BASE_URL: "",
+          PARTNER_BASE_URL: "",
+          STATS_BASE_URL: "",
+          INTERNAL_STATS_BASE_URL: "",
+          BASE_URL_STORE_CDN_ASSETS: "",
+          IN_CLIENT: !1,
+          USE_POPUPS: !1,
+          IN_MOBILE: !1,
+          IN_MOBILE_WEBVIEW: !1,
+          IN_TENFOOT: !1,
+          PLATFORM: "",
+          SNR: "",
+          LAUNCHER_TYPE: 0,
+          EREALM: 0,
+          IN_CHROMEOS: !1,
+          TESLA: !1,
+          LOCAL_HOSTNAME: "",
+          WEBAPI_BASE_URL: "",
+          TOKEN_URL: "",
+          BUILD_TIMESTAMP: 0,
+          PAGE_TIMESTAMP: 0,
+          FROM_WEB: !1,
+          WEBSITE_ID: "Unknown",
+          get SESSIONID() {
+            return (0, n.KC)();
+          },
+          FRIENDSUI_BETA: !1,
+          STEAM_TV: !1,
+          DEV_MODE: !1,
+          IN_STEAMUI: !1,
+          IN_GAMEPADUI: !1,
+          IN_STEAMUI_SHARED_CONTEXT: !1,
+          DECK_DISPLAY_MODE: !1,
+          ON_DECK: !1,
+          ON_FRAME: !1,
+          ON_STEAMOS: !1,
+          IN_GAMESCOPE: !1,
+          IN_LOGIN: !1,
+          IN_LOGIN_REFRESH: !1,
+          USE_LONGEST_LOC_STRING: !1,
+          SILENT_STARTUP: !1,
+          CLIENT_SESSION: 0,
         },
-        FRIENDSUI_BETA: !1,
-        STEAM_TV: !1,
-        DEV_MODE: !1,
-        IN_STEAMUI: !1,
-        IN_GAMEPADUI: !1,
-        IN_STEAMUI_SHARED_CONTEXT: !1,
-        DECK_DISPLAY_MODE: !1,
-        ON_DECK: !1,
-        ON_STEAMOS: !1,
-        IN_GAMESCOPE: !1,
-        IN_LOGIN: !1,
-        IN_LOGIN_REFRESH: !1,
-        USE_LONGEST_LOC_STRING: !1,
-        SILENT_STARTUP: !1,
-        CLIENT_SESSION: 0,
-      };
-      const s = {
+        s = {
           logged_in: !1,
           steamid: "",
           accountid: 0,

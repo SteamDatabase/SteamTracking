@@ -933,6 +933,7 @@
           "clear_library_demo_detail",
           "repost_source_possible",
           "autocreate_promotools",
+          "vo_marketing_message",
         ],
         _ = [
           "patchnotes",

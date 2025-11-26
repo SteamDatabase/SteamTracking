@@ -297,7 +297,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action SHOW_KEYBOARD"
+							"binding"		"controller_action sr_enable"
 						}
 					}
 				}

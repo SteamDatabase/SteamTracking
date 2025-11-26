@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Mesajları Sil",
     "Chat_Actions_Select_Message": "Mesajı Seç",
     "Chat_Actions_Report": "Şikâyet Et",
+    "Chat_Actions_ReportGroup": "Grup Sohbetini Şikâyet Et",
     "Chat_Actions_React": "Reaksiyon",
     "Chat_Actions_Delete": "Sil",
     "Chat_Actions_DeleteChatMessages_Confirm": "%1$s kullanıcısının gönderdiği bu mesajları silmek istediğinize emin misiniz?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Linux ve macOS'teki oyun içi arayüzlerde arkadaşlar ve sohbet pencerelerinin görünmemesi hatası giderildi.",
     "BBCode_Loading": "Yükleniyor",
     "BBCode_Failed": "Yüklenemedi",
-    "broadcastDetails_Playing": "Oynuyor:",
-    "Chat_Actions_ReportGroup": "Grup Sohbetini Şikâyet Et"
+    "broadcastDetails_Playing": "Oynuyor:"
 }

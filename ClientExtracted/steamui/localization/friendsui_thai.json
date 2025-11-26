@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "ลบข้อความ",
     "Chat_Actions_Select_Message": "เลือกข้อความ",
     "Chat_Actions_Report": "รายงาน",
+    "Chat_Actions_ReportGroup": "รายงานการแช็ตแบบกลุ่ม",
     "Chat_Actions_React": "โต้ตอบ",
     "Chat_Actions_Delete": "ลบ",
     "Chat_Actions_DeleteChatMessages_Confirm": "คุณแน่ใจหรือไม่ว่าคุณต้องการลบข้อความเหล่านี้ออกจาก '%1$s'?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "แก้ไขหน้าต่างเพื่อนและแช็ตที่ไม่แสดงในโอเวอร์เลย์ภายในเกมบน Linux และ macOS",
     "BBCode_Loading": "กำลังโหลด",
     "BBCode_Failed": "ล้มเหลวในการโหลด",
-    "broadcastDetails_Playing": "กำลังเล่น",
-    "Chat_Actions_ReportGroup": "รายงานการแช็ตแบบกลุ่ม"
+    "broadcastDetails_Playing": "กำลังเล่น"
 }

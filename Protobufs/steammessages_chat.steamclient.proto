@@ -171,6 +171,7 @@ message CUserChatRoomGroupState {
 	optional .EChatRoomNotificationLevel mobile_notification_level = 5 [default = k_EChatroomNotificationLevel_Invalid];
 	optional uint32 time_last_group_ack = 6;
 	optional bool unread_indicator_muted = 7 [default = false];
+	optional bool direct_messages_allowed = 8;
 }
 
 message CChatRoom_CreateChatRoomGroup_Response {
@@ -669,6 +670,7 @@ message CChatRoom_SetUserChatGroupPreferences_Request {
 		optional .EChatRoomNotificationLevel desktop_notification_level = 1 [default = k_EChatroomNotificationLevel_Invalid];
 		optional .EChatRoomNotificationLevel mobile_notification_level = 2 [default = k_EChatroomNotificationLevel_Invalid];
 		optional bool unread_indicator_muted = 3;
+		optional bool direct_messages_allowed = 4;
 	}
 
 	message ChatRoomPreferences {

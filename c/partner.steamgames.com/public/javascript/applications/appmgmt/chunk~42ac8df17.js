@@ -386,6 +386,7 @@
       module.exports = {
         strMaxMobileWidth: "700px",
         strMaxResponsiveWidth: "910px",
+        strMaxTabletWidth: "1080px",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -21009,6 +21010,7 @@
                         _,
                       ),
                     !_ &&
+                      _ &&
                       _.createElement(
                         _.Fragment,
                         null,
@@ -21027,6 +21029,7 @@
                       ),
                   ),
                   _ &&
+                    _ &&
                     _.createElement(
                       "div",
                       {
@@ -21037,6 +21040,7 @@
                       }),
                     ),
                   _ &&
+                    _ &&
                     _.createElement(_, {
                       info: _,
                       bHideInLibraryApps:
@@ -21214,124 +21218,129 @@
         );
       }
       const _ = (_) => {
-          const {
-              info: _,
-              bShowAsMuted: __webpack_require__,
-              bHidePrice: _,
-              bShowInLibraryInsteadOfPrice: _,
-              bHidePlatforms: _,
-              strClassName: _,
-              creatorAccountID: _,
-              bShowName: _,
-              onlyOneDiscountPct: _,
-              bShowAddToCart: _,
-              bShowWishlistButton: _,
-            } = _,
-            _ = (0, _.useRef)(null),
-            [_, _] = (0, _.useState)(!1),
-            _ = (0, _.useMemo)(
-              () => _ && _._.Get().GetApp(_._)?.GetName(),
-              [_, _._],
-            );
-          (0, _.useEffect)(() => {
-            _.current && _(_.current.offsetWidth < 370);
-          }, [_]);
-          const _ = Boolean(_ && "sub" != _.type && "bundle" != _.type),
-            _ = !_ && !_ && !_ && _ && _;
-          return _.createElement(
-            _.Fragment,
-            null,
-            !_ &&
-              _.createElement(
-                "div",
-                {
-                  ref: _,
+        const {
+            info: _,
+            bShowAsMuted: __webpack_require__,
+            bHidePrice: _,
+            bShowInLibraryInsteadOfPrice: _,
+            bHidePlatforms: _,
+            strClassName: _,
+            creatorAccountID: _,
+            bShowName: _,
+            onlyOneDiscountPct: _,
+            bShowAddToCart: _,
+            bShowWishlistButton: _,
+          } = _,
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(!1);
+        (0, _.useEffect)(() => {
+          _.current && _(_.current.offsetWidth < 370);
+        }, [_]);
+        const _ = Boolean(_ && "sub" != _.type && "bundle" != _.type),
+          _ = Boolean(!_ && !_ && !_ && _ && _);
+        return _.createElement(
+          _.Fragment,
+          null,
+          !_ &&
+            _.createElement(
+              "div",
+              {
+                ref: _,
+                className: (0, _._)(
+                  _().CapsuleBottomBar,
+                  "CapsuleBottomBar",
+                  __webpack_require__ && _().Muted,
+                  _,
+                ),
+              },
+              _ &&
+                _.createElement(_, {
+                  creatorAccountID: _,
+                  ..._,
+                }),
+              _ &&
+                _.createElement(_._, {
+                  info: _,
                   className: (0, _._)(
-                    _().CapsuleBottomBar,
-                    "CapsuleBottomBar",
-                    __webpack_require__ && _().Muted,
-                    _,
+                    _().MaxActionButtonWidth,
+                    _().AddToCartButton,
                   ),
-                },
-                _ &&
-                  _.createElement(_, {
-                    creatorAccountID: _,
-                    ..._,
-                  }),
-                _ &&
+                }),
+              _ &&
+                _.createElement(_._, {
+                  appid: _._,
+                  className: (0, _._)(
+                    _().MaxActionButtonWidth,
+                    _().AddToWishlistButton,
+                  ),
+                }),
+              !_ &&
+                _.createElement(_._, {
+                  item: _,
+                  bMinimizePlatforms: _,
+                }),
+              !_ &&
+                _.createElement(
+                  "span",
+                  {
+                    className: _().BottomBarPriceInfo,
+                  },
                   _.createElement(_._, {
                     info: _,
-                    className: (0, _._)(
-                      _().MaxActionButtonWidth,
-                      _().AddToCartButton,
-                    ),
+                    bShowInLibrary: _,
+                    onlyOneDiscountPct: _,
                   }),
-                _ &&
-                  _.createElement(_._, {
-                    appid: _._,
-                    className: (0, _._)(
-                      _().MaxActionButtonWidth,
-                      _().AddToWishlistButton,
-                    ),
-                  }),
-                !_ &&
-                  _.createElement(_._, {
-                    item: _,
-                    bMinimizePlatforms: _,
-                  }),
-                !_ &&
-                  _.createElement(
-                    "span",
-                    {
-                      className: _().BottomBarPriceInfo,
-                    },
-                    _.createElement(_._, {
-                      info: _,
-                      bShowInLibrary: _,
-                      onlyOneDiscountPct: _,
-                    }),
-                  ),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: _().CapsuleName,
-                },
-                _,
-              ),
-          );
-        },
-        _ = (_) => {
-          const {
-              creatorAccountID: _,
-              bShowAsMuted: __webpack_require__,
-              strClassName: _,
-            } = _,
-            [_, _] = (0, _._)(_),
-            _ = _ || !_ ? (0, _._)(null, "medium") : _.avatar_medium_url;
-          return _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().BottomCreatorRow,
-                __webpack_require__ && _().Muted,
-                _,
-              ),
-            },
-            _.createElement("img", {
-              className: (0, _._)(_().CreatorLogo),
-              src: _,
-            }),
-            _.createElement(
-              "span",
-              {
-                className: _().CreatorName,
-              },
-              _?.group_name,
+                ),
             ),
-          );
-        };
+          _ &&
+            _.createElement(_, {
+              appid: _._,
+            }),
+        );
+      };
+      function _(_) {
+        const { appid: _ } = _,
+          _ = (0, _.useMemo)(() => _._.Get().GetApp(_)?.GetName(), [_]);
+        return _
+          ? _.createElement(
+              "div",
+              {
+                className: _().CapsuleName,
+              },
+              _,
+            )
+          : null;
+      }
+      const _ = (_) => {
+        const {
+            creatorAccountID: _,
+            bShowAsMuted: __webpack_require__,
+            strClassName: _,
+          } = _,
+          [_, _] = (0, _._)(_),
+          _ = _ || !_ ? (0, _._)(void 0, "medium") : _.avatar_medium_url;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(
+              _().BottomCreatorRow,
+              __webpack_require__ && _().Muted,
+              _,
+            ),
+          },
+          _.createElement("img", {
+            className: (0, _._)(_().CreatorLogo),
+            src: _,
+          }),
+          _.createElement(
+            "span",
+            {
+              className: _().CreatorName,
+            },
+            _?.group_name,
+          ),
+        );
+      };
       function _(_) {
         const { info: _, imageType: __webpack_require__ } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), {
@@ -21405,7 +21414,7 @@
             _.link.localized_link_capsule,
             _.language,
           ),
-          _ = _._.GenerateURLFromHashAndExt(_.clanAccountID, _),
+          _ = _ ? _._.GenerateURLFromHashAndExt(_.clanAccountID, _) : void 0,
           _ = (0, _._)();
         return _.createElement(
           _._,
@@ -21422,7 +21431,7 @@
                 _.link.url ? _().Linked : "",
               ),
             },
-            Boolean(_.link.localized_link_capsule) &&
+            Boolean(_.link.localized_link_capsule && _) &&
               _.createElement(_._, {
                 className: _().LinkCapsuleImage,
                 src: _,
@@ -22996,6 +23005,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -23059,19 +23069,20 @@
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ =
+          _ = (0, _._)(
             _ ||
-            ("clan" == __webpack_require__
-              ? (0, _._)(
-                  `${_._.STORE_BASE_URL}curator/${_}${_ ? `?${_}` : ""}`,
-                  _,
-                  _,
-                )
-              : (0, _._)(
-                  `${_._.STORE_BASE_URL}${__webpack_require__}/${_}${_ ? `?${_}` : ""}`,
-                  _,
-                  _,
-                ));
+              ("clan" == __webpack_require__
+                ? (0, _._)(
+                    `${_._.STORE_BASE_URL}curator/${_}${_ ? `?${_}` : ""}`,
+                    _,
+                    _,
+                  )
+                : (0, _._)(
+                    `${_._.STORE_BASE_URL}${__webpack_require__}/${_}${_ ? `?${_}` : ""}`,
+                    _,
+                    _,
+                  )),
+          );
         return _.createElement(
           _,
           {

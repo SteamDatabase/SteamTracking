@@ -3517,6 +3517,13 @@
             },
           ],
           [
+            1030300,
+            {
+              strInternalAppName: "HollowKnightSilksong",
+              strBannerType: "knight",
+            },
+          ],
+          [
             2767030,
             {
               strInternalAppName: "MarvelRivals",
@@ -3731,6 +3738,83 @@
             {
               strInternalAppName: "EuroTruckSimulator2",
               strBannerType: "car",
+            },
+          ],
+          [
+            3405340,
+            {
+              strInternalAppName: "Megabonk",
+              strBannerType: "zombies",
+            },
+          ],
+          [
+            2062430,
+            {
+              strInternalAppName: "BallxPit",
+              strBannerType: "city",
+            },
+          ],
+          [
+            2592160,
+            {
+              strInternalAppName: "Dispatch",
+              strBannerType: "superhero",
+            },
+          ],
+          [
+            1771300,
+            {
+              strInternalAppName: "KingdomComeDeliverance2",
+              strBannerType: "knight",
+            },
+          ],
+          [
+            3241660,
+            {
+              strInternalAppName: "REPO",
+              strBannerType: "porch",
+            },
+          ],
+          [
+            1984270,
+            {
+              strInternalAppName: "DigimonStoryTimeStranger",
+              strBannerType: "anime",
+            },
+          ],
+          [
+            2878980,
+            {
+              strInternalAppName: "NBA2K25",
+              strBannerType: "city",
+            },
+          ],
+          [
+            108600,
+            {
+              strInternalAppName: "ProjectZomboid",
+              strBannerType: "zombies",
+            },
+          ],
+          [
+            381210,
+            {
+              strInternalAppName: "DeadByDaylight",
+              strBannerType: "zombies",
+            },
+          ],
+          [
+            1401590,
+            {
+              strInternalAppName: "DisneyDreamlightValley",
+              strBannerType: "family",
+            },
+          ],
+          [
+            892970,
+            {
+              strInternalAppName: "Valheim",
+              strBannerType: "knight",
             },
           ],
         ]),

@@ -301,6 +301,7 @@ ${COMMUNITY_BASE_URL}partnereventdata/ajaxgetprivatedata
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxrequestmarketingmessagemajorupdatereview
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxrequestsalepagereview
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxsetprivatedata
+${COMMUNITY_BASE_URL}partnerevents/${}/userpoll/${}/${_ ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${}
 ${COMMUNITY_BASE_URL}profiles/${STEAM_ID}/wishlist
 ${COMMUNITY_BASE_URL}profiles/${steamid64}/
 ${COMMUNITY_BASE_URL}profiles/${steamid}
@@ -1386,6 +1387,7 @@ ${STORE_BASE_URL}events/ajaxgettodayboundedevents
 ${STORE_BASE_URL}events/ajaxgetusereventcalendarrange/
 ${STORE_BASE_URL}events/ajaxreportnewshubstats/
 ${STORE_BASE_URL}events/ajaxrepostevent
+${STORE_BASE_URL}events_admin/?selectedTags=vo_marketing_message&excludedTags=mod_reviewed&excludedTags=auto_migrated
 ${STORE_BASE_URL}events_admin/ajaxflushandreindexrss
 ${STORE_BASE_URL}events_admin/ajaxgetlatestpartnerevents
 ${STORE_BASE_URL}events_admin/ajaxgetmoderationspecificpartnerevents
@@ -1439,6 +1441,8 @@ ${STORE_BASE_URL}legal/
 ${STORE_BASE_URL}login/${_ ? `?redir=${}` : ""}
 ${STORE_BASE_URL}login/?steamtv
 ${STORE_BASE_URL}login?redir=${}
+${STORE_BASE_URL}login?steamtv=1
+${STORE_BASE_URL}login?steamtv=1&allow_password=1
 ${STORE_BASE_URL}logout
 ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
@@ -2547,6 +2551,7 @@ https://react.dev/errors/${}
 https://reactflow.dev
 https://s.team/deck
 https://s.team/join
+https://s.team/machine
 https://s.team/remoteplay/connect/${}?appid=${}&${}
 https://s.team/steamos
 https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${appid}/${filename}

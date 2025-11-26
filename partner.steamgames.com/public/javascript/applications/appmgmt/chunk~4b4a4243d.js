@@ -477,7 +477,7 @@
     },
     13549: (e, t, a) => {
       "use strict";
-      a.d(t, { i: () => v, q: () => A });
+      a.d(t, { i: () => D, q: () => P });
       var n = a(23910),
         r = a(65946),
         s = a(90626),
@@ -496,19 +496,20 @@
         E = a(22797),
         I = a(61859),
         b = a(30470),
-        S = a(26408);
-      function v(e) {
+        v = a(26408),
+        S = a(32754);
+      function D(e) {
         const { oEditableMessage: t } = e,
           [a] = (0, r.q3)(() => [t.GetStoreItemKey()]);
         return a && "app" == a.item_type
-          ? s.createElement(D, { oEditableMessage: t, idKey: a })
+          ? s.createElement(A, { oEditableMessage: t, idKey: a })
           : s.createElement(
               "div",
               { className: f.ErrorStylesWithIcon },
               "Error: Major Update does not support anything but targeting app",
             );
       }
-      function D(e) {
+      function A(e) {
         const { oEditableMessage: t, idKey: a } = e,
           [l, i] = (0, r.q3)(() => [
             t.GetUpdateEventClanAccountID(),
@@ -520,7 +521,7 @@
         return s.createElement(
           "div",
           null,
-          s.createElement(A, {
+          s.createElement(P, {
             appid: u || a.id,
             selectedEventGID: i,
             fnSetUpdateEvent: t.SetUpdateEvent,
@@ -541,12 +542,28 @@
                 },
                 "open event for edit",
               ),
+              "   ",
+              s.createElement(
+                S.Gq,
+                {
+                  toolTipContent:
+                    "Once the event is published, go here to verify it is not awaiting moderation review. Games in the moderator review queue are not visible in the library",
+                },
+                s.createElement(
+                  "a",
+                  {
+                    href: `${b.TS.STORE_BASE_URL}events_admin/?selectedTags=vo_marketing_message&excludedTags=mod_reviewed&excludedTags=auto_migrated`,
+                    target: "_blank",
+                  },
+                  "open event moderation tool",
+                ),
+              ),
               s.createElement("br", null),
               s.createElement("br", null),
             ),
         );
       }
-      function A(e) {
+      function P(e) {
         const {
             appid: t,
             selectedEventGID: a,
@@ -554,7 +571,7 @@
             label: r,
             tooltip: p,
             strUrlLearnMore: g,
-            bFilterOutDrafts: v,
+            bFilterOutDrafts: S,
           } = e,
           D = (0, d.f1)(),
           { clanInfo: A, bLoadingClanInfo: P } = (0, l.vF)(t),
@@ -597,8 +614,8 @@
             );
           })(A?.clanAccountID, D - 2592e3),
           y = (0, s.useMemo)(
-            () => (v ? w?.filter((e) => !e.hidden) : w),
-            [w, v],
+            () => (S ? w?.filter((e) => !e.hidden) : w),
+            [w, S],
           ),
           C = (0, s.useMemo)(
             () =>
@@ -659,7 +676,7 @@
                     null,
                     r,
                     " ",
-                    s.createElement(S.o, { tooltip: p }),
+                    s.createElement(v.o, { tooltip: p }),
                   ),
                   s.createElement(
                     "div",
@@ -708,14 +725,14 @@
             bShowDLCToggle: E,
             bOnlyDLC: I,
             bRunQueryOnLoad: b,
-            rgParentAppIDs: S,
+            rgParentAppIDs: v,
           } = e,
-          [v, D] = s.useState(""),
+          [S, D] = s.useState(""),
           [A, P] = s.useState(!1),
           [w, y] = s.useState(!1),
           [C] = s.useState(new i.LU()),
-          [T, L] = s.useState(new Array()),
-          [k, N] = s.useState(new Array()),
+          [T, k] = s.useState(new Array()),
+          [L, N] = s.useState(new Array()),
           [M, F] = s.useState(new Array()),
           B = s.createRef(),
           G = s.createRef();
@@ -733,14 +750,14 @@
                   break;
                 default:
                   I ? (a.includedlc = !0) : !1 === t && (a.includedlc = !1),
-                    S &&
+                    v &&
                       ((a.bfilterappids = !0),
-                      (a.rgParentAppIds = JSON.stringify(S)));
+                      (a.rgParentAppIds = JSON.stringify(v)));
               }
               const l = await r().get(s, { params: a, withCredentials: !0 });
               200 == l?.status && 1 == l.data?.success
                 ? o
-                  ? (L(l.data.matches?.filter((e) => o(e.id)) || []),
+                  ? (k(l.data.matches?.filter((e) => o(e.id)) || []),
                     N(
                       l.data.package_matches?.filter((e) => o(e.packageid)) ||
                         [],
@@ -748,13 +765,13 @@
                     F(
                       l.data.bundle_matches?.filter((e) => o(e.bundleid)) || [],
                     ))
-                  : (L(l.data.matches || []),
+                  : (k(l.data.matches || []),
                     N(l.data.package_matches || []),
                     F(l.data.bundle_matches || []))
-                : (L([]), N([]), F([])),
+                : (k([]), N([]), F([])),
                 y(!1);
             },
-            [o, n, f, I, S],
+            [o, n, f, I, v],
           ),
           U = (0, s.useCallback)(
             (e) => {
@@ -774,7 +791,7 @@
         let x;
         switch (
           (s.useEffect(() => {
-            b && R(v);
+            b && R(S);
           }, []),
           n)
         ) {
@@ -802,8 +819,8 @@
               tooltip: g,
               placeholder: x,
               onChange: H,
-              value: v,
-              bAlwaysShowClearAction: v.length > 0,
+              value: S,
+              bAlwaysShowClearAction: S.length > 0,
               focusOnMount: h,
             }),
             O &&
@@ -833,12 +850,12 @@
                   is_visible: !0,
                   type: 0,
                   fnSetItemID: () => {
-                    L([]), t(e.id, e.itemid);
+                    k([]), t(e.id, e.itemid);
                   },
                 }),
               ),
-            Boolean(k?.length > 0) &&
-              k.map((e) =>
+            Boolean(L?.length > 0) &&
+              L.map((e) =>
                 s.createElement(_, {
                   key: e.packageid,
                   name: e.name,
@@ -946,7 +963,7 @@
     },
     71725: (e, t, a) => {
       "use strict";
-      a.d(t, { z: () => S });
+      a.d(t, { z: () => v });
       var n = a(41735),
         r = a.n(n),
         s = a(90626),
@@ -1026,7 +1043,7 @@
             (a.src = e);
         });
       }
-      function S(e) {
+      function v(e) {
         const {
             rgAssetLangs: t,
             initialLang: a,
@@ -1069,7 +1086,7 @@
                 "div",
                 { className: u().LangSelectCtn },
                 I.map((e) =>
-                  s.createElement(v, {
+                  s.createElement(S, {
                     key: e,
                     language: e,
                     selectedLanguage: g,
@@ -1097,7 +1114,7 @@
           ),
         );
       }
-      function v(e) {
+      function S(e) {
         const {
             language: t,
             selectedLanguage: a,
@@ -1227,7 +1244,7 @@
     },
     24655: (e, t, a) => {
       "use strict";
-      a.d(t, { hA: () => S, ux: () => v });
+      a.d(t, { hA: () => v, ux: () => S });
       var n = a(90626),
         r = a(76217),
         s = a(13773),
@@ -1253,14 +1270,14 @@
         E = a(56524),
         I = a(48838),
         b = a(95695);
-      function S(e) {
+      function v(e) {
         const {
             creatorID: t,
             bShowTagline: a,
             bHideCreatorType: l,
             bSmallFormat: m,
-            bHideFollowButton: S,
-            bAddLinkToMemberList: v,
+            bHideFollowButton: v,
+            bAddLinkToMemberList: S,
             bMinimalDisplay: D,
           } = e,
           { creatorHome: A } = (0, s.FV)(t.clan_account_id),
@@ -1373,7 +1390,7 @@
                         n.createElement(
                           "div",
                           { className: (0, u.A)(E.FollowBtnCtn) },
-                          Boolean(!S) &&
+                          Boolean(!v) &&
                             n.createElement(I.of, {
                               clanAccountID: t.clan_account_id,
                               creatorID: t,
@@ -1396,7 +1413,7 @@
                       ),
                     ),
                   ),
-                  Boolean(v) &&
+                  Boolean(S) &&
                     n.createElement(
                       "a",
                       {
@@ -1416,7 +1433,7 @@
           ),
         );
       }
-      function v(e) {
+      function S(e) {
         const { clanInfo: t, bAddLinkToMemberList: a } = e;
         if (
           ((0, m.wT)(
@@ -1434,7 +1451,7 @@
         return n.createElement(
           "div",
           { className: E.CuratorHoverCtn },
-          n.createElement(S, {
+          n.createElement(v, {
             creatorID: r,
             bSmallFormat: !0,
             bShowTagline: !0,
@@ -1465,8 +1482,8 @@
         E = a(37346),
         I = a(72860),
         b = a(70300),
-        S = a(47235),
-        v = a(37076),
+        v = a(47235),
+        S = a(37076),
         D = a(54492),
         A = a(60014),
         P = a(52038),
@@ -1474,8 +1491,8 @@
         y = a(61336),
         C = a(78327),
         T = a(91291),
-        L = a.n(T),
-        k = a(99956),
+        k = a.n(T),
+        L = a(99956),
         N = a(49411);
       const M = "capsule_index_";
       function F(e) {
@@ -1491,10 +1508,10 @@
             bShowEarlyAccessBanner: f,
           } = e,
           [E, I] = n.useState(!1),
-          [S] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          [v] = (0, u.t7)(a && S?.GetParentAppID(), r.Xh);
-        if (!S) return null;
-        const D = Boolean(v),
+          [v] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
+          [S] = (0, u.t7)(a && v?.GetParentAppID(), r.Xh);
+        if (!v) return null;
+        const D = Boolean(S),
           A = n.createElement(G, {
             ...e,
             strExtraParams: e.strExtraParams,
@@ -1516,7 +1533,7 @@
           },
           n.createElement(
             b.oj,
-            { appid: S.GetAppID() },
+            { appid: v.GetAppID() },
             Boolean(d)
               ? n.createElement(
                   "div",
@@ -1548,8 +1565,8 @@
           D &&
             n.createElement(B, {
               strExtraParams: e.strExtraParams,
-              parentStoreItem: v,
-              childAppType: S.GetAppType(),
+              parentStoreItem: S,
+              childAppType: v.GetAppType(),
               bPreferDemoStorePage: _,
             }),
         );
@@ -1579,7 +1596,7 @@
               ),
             ),
             n.createElement(
-              v.u,
+              S.u,
               { type: "app", id: a.GetAppID(), strExtraParams: t },
               n.createElement("img", {
                 loading: "lazy",
@@ -1606,12 +1623,12 @@
             bShowEarlyAccessBanner: I,
           } = e,
           [b] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          S = (0, A.n9)(),
-          v = (0, N.w)(),
+          v = (0, A.n9)(),
+          S = (0, N.w)(),
           w = (0, n.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
         if (!b) return null;
         const C = (0, y.NT)(
-          (0, i.It)(`${b.GetStorePageURL(h)}${o ? `?${o}` : ""}`, S, v),
+          (0, i.It)(`${b.GetStorePageURL(h)}${o ? `?${o}` : ""}`, v, S),
         );
         let T;
         "overrideNavigation" in t &&
@@ -1624,13 +1641,13 @@
           null,
           n.createElement(
             "div",
-            { className: (0, P.A)({ [L().TwoWidthCtn]: M }) },
+            { className: (0, P.A)({ [k().TwoWidthCtn]: M }) },
             n.createElement(
               s.Ii,
               {
                 href: T ? null : C,
                 style: { display: "block", cursor: "pointer" },
-                className: (0, P.A)({ [L().TwoWidthCapsule]: M }),
+                className: (0, P.A)({ [k().TwoWidthCapsule]: M }),
                 preferredFocus: d,
                 onClick: T,
               },
@@ -1647,19 +1664,19 @@
               n.createElement(
                 "div",
                 {
-                  className: (0, P.A)(L().TwoWidthSideInfo, "TwoWidthSideInfo"),
+                  className: (0, P.A)(k().TwoWidthSideInfo, "TwoWidthSideInfo"),
                 },
-                n.createElement("div", { className: L().Reason }, _),
+                n.createElement("div", { className: k().Reason }, _),
                 n.createElement(
                   "div",
-                  { className: L().StoreSaleItemRelease },
+                  { className: k().StoreSaleItemRelease },
                   n.createElement(
                     "span",
                     null,
                     b.GetFormattedSteamReleaseDate(),
                   ),
                 ),
-                n.createElement(k.n, {
+                n.createElement(L.n, {
                   bHideTitle: !0,
                   rgTagIDs: b.GetTagIDs(),
                   instanceNum: l,
@@ -1690,15 +1707,15 @@
             E?.GetIncludedAppIDsOrSelf().every((e) => c.Fm.Get().BOwnsApp(e)),
           b = I && !s;
         if (o && 0 == E?.GetStoreItemType())
-          return n.createElement(S.E, { appid: E.GetAppID(), bIsMuted: _ });
+          return n.createElement(v.E, { appid: E.GetAppID(), bIsMuted: _ });
         if (l) return null;
-        const v = I && a,
+        const S = I && a,
           D = b;
         return n.createElement(g.qn, {
           info: t,
           bShowAsMuted: D,
           bHidePrice: i,
-          bShowInLibraryInsteadOfPrice: v,
+          bShowInLibraryInsteadOfPrice: S,
           bHidePlatforms: d,
           creatorAccountID: p,
           bShowName: e.bShowName,

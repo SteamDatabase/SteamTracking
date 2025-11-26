@@ -79,6 +79,15 @@ message CBluetoothManager_SetDiscovering_Request {
 message CBluetoothManager_SetDiscovering_Response {
 }
 
+message CBluetoothManager_SetLoginAdvertising_Request {
+	optional bool enabled = 1;
+	optional uint64 client_id = 2;
+	optional uint32 device_id = 3;
+}
+
+message CBluetoothManager_SetLoginAdvertising_Response {
+}
+
 message CBluetoothManager_Pair_Request {
 	optional uint32 device = 1;
 }
@@ -138,6 +147,7 @@ service BluetoothManager {
 	rpc GetDeviceDetails (.CBluetoothManager_GetDeviceDetails_Request) returns (.CBluetoothManager_GetDeviceDetails_Response);
 	rpc NotifyStateChanged (.CBluetoothManager_StateChanged_Notification) returns (.WebUINoResponse);
 	rpc SetDiscovering (.CBluetoothManager_SetDiscovering_Request) returns (.CBluetoothManager_SetDiscovering_Response);
+	rpc SetLoginAdvertising (.CBluetoothManager_SetLoginAdvertising_Request) returns (.CBluetoothManager_SetLoginAdvertising_Response);
 	rpc Pair (.CBluetoothManager_Pair_Request) returns (.CBluetoothManager_Pair_Response);
 	rpc CancelPair (.CBluetoothManager_CancelPair_Request) returns (.CBluetoothManager_CancelPair_Response);
 	rpc Forget (.CBluetoothManager_Forget_Request) returns (.CBluetoothManager_Forget_Response);

@@ -204,6 +204,12 @@
         PollOption: "_3hNd0q0tYO12nPDCPsT8sm",
         Selected: "_3Nv8BLF6dRk932f5NhyNIH",
         PollVoteIcon: "ziFphpM2Ie-orQ5ezpQqT",
+        Disabled: "_1bO8azG0-IqxQ3AQbWtCxx",
+        ContentRow: "_3Yb8eVHtZWf1AWt7VV3P-z",
+        BackgroundBar: "_30b_e8W4Z94Lwn8x2U9TYH",
+        ForegroundBar: "_3PFkx8XNigPW6CoYfHH5Yi",
+        PctText: "_1RNbjKcBRtD4pseH6hyggg",
+        OptionText: "_1qUCIT-7ueBBoNjoCvGfbP",
         PollStatus: "_3NDl2Pml7Uvse14r9SWJTD",
       };
     },
@@ -30502,13 +30508,81 @@
               ),
             );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        const _ = (function (_, _) {
+          const _ = (0, _._)({
+            queryKey: _(_, _),
+            queryFn: async () => {
+              const _ = await fetch(_(_, _, !1), {
+                method: "GET",
+                credentials: "include",
+              });
+              return _(await __webpack_require__.json());
+            },
+            placeholderData: {
+              results: [],
+              success: 10,
+              bLoading: !0,
+              userPollSubmitData: {
+                user_poll_option_votes: [],
+              },
+            },
+          });
+          return _.data
+            ? _.data
+            : {
+                results: [],
+                success: 10,
+                bLoading: !0,
+                userPollSubmitData: {
+                  user_poll_option_votes: [],
+                },
+              };
+        })(_, _);
+        return (0, _.useMemo)(() => {
+          const _ = _.results.find((_) => _ == _.unique_id);
+          return {
+            bLoading: _.bLoading,
+            success: _.success,
+            userPollData: _,
+            error_message: _.error_message,
+            userPollSubmitData: _.userPollSubmitData,
+          };
+        }, [_, _]);
+      }
+      function _(_) {
+        return {
+          ..._,
+          bLoading: !1,
+          userPollSubmitData: {
+            user_poll_option_votes: _.results
+              .map((_) => _.voted_option_id)
+              .reduce((_, _) => _.concat(_), []),
+          },
+        };
+      }
       function _(_, _) {
         return ["usePartnerEventUserPoll", _.ConvertTo64BitString(), _];
       }
-      function _(_, _) {
-        return `${"store" == (0, _._)() ? _._.STORE_BASE_URL : _._.COMMUNITY_BASE_URL}partnerevents/${_.ConvertTo64BitString()}/userpoll/${_}/ajaxloaddata/`;
+      function _(_, _, _) {
+        const _ = `${_._.COMMUNITY_BASE_URL}partnerevents/${_.ConvertTo64BitString()}/userpoll/${_}/${_ ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${(0, _._)()}`;
+        return "dev" == _._.WEB_UNIVERSE ? _ + "&debug=1" : _;
       }
+      const _ = 86400;
+      function _(_, _) {
+        let _ = 0;
+        if (_.poll_end_time) _ = _.poll_end_time;
+        else {
+          _ =
+            (_.rtime32_visibility_start ?? _.rtime32_start_time ?? 0) +
+            (_.poll_end_days_since_start || _);
+        }
+        return _;
+      }
+      var _, _;
       function _(_, _) {
         return _
           ? _.startsWith("https://") || _.startsWith("http://")
@@ -30516,8 +30590,253 @@
             : `${_._.CLAN_CDN_ASSET_URL}images/clan/${_}/${_}`
           : _;
       }
+      !(function (_) {
+        (_.k_EPollResult_NotVisible = "not_visible"),
+          (_.k_EPollResult_Visible_After_Vote = "after_vote"),
+          (_.k_EPollResult_Visible_After_End = "after_end"),
+          (_.k_EPollResult_Visible_After_Vote_Or_End = "after_vote_or_end"),
+          (_.k_EPollResult_Visible_On_Demand = "on_demand");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_.k_EPollVoter_AnyUser = "any_user"),
+            (_.k_EPollVoter_UserGameInLibrary = "user_game_in_library"),
+            (_.k_EPollVoter_MinPlayTime = "min_play_time"),
+            (_.k_EPollVoter_MemberOfGroup = "member_of_group");
+        })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__._.bind(__webpack_require__, 6696, 19))),
+        (_.brazilian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 58906, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 53473, 19))),
+        (_.czech = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 83899, 19))),
+        (_.danish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 84925, 19))),
+        (_.dutch = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 69902, 19))),
+        (_.english = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 80716, 19))),
+        (_.finnish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 81663, 19))),
+        (_.french = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 48484, 19))),
+        (_.german = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 66810, 19))),
+        (_.greek = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 13744, 19))),
+        (_.hungarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 62101, 19))),
+        (_.indonesian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 68948, 19))),
+        (_.italian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 2916, 19))),
+        (_.japanese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 40195, 19))),
+        (_.koreana = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 84259, 19))),
+        (_.latam = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 24475, 19))),
+        (_.norwegian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 36884, 19))),
+        (_.polish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 15269, 19))),
+        (_.portuguese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 96865, 19))),
+        (_.romanian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 71391, 19))),
+        (_.russian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 64933, 19))),
+        (_.schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 44768, 19))),
+        (_.spanish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 20876, 19))),
+        (_.swedish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 75181, 19))),
+        (_.tchinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 89779, 19))),
+        (_.thai = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 98970, 19))),
+        (_.turkish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 87996, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 47306, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 72539, 19)));
+      var _ = __webpack_require__("chunkid");
+      function _(_, ..._) {
+        return 0 == _.length
+          ? _
+          : (_ = _.replace(/%(?:(\d+)\$)?s/g, function (_, _) {
+              if (_ <= _.length && _ >= 1) {
+                const _ = _[_ - 1];
+                return String(null == _ ? "" : _);
+              }
+              return _;
+            }));
+      }
+      let _;
+      _ ??= new Set();
+      function _() {
+        if (!(0, _._)(_._.LANGUAGE)) throw `unknown language ${_._.LANGUAGE}`;
+        return {
+          languages: [
+            {
+              strLanguage: _._.LANGUAGE,
+              strISOCode: _._.get(_._.LANGUAGE),
+              eSource: 5,
+            },
+          ],
+        };
+      }
+      const _ = (function (_) {
+          const _ = new Map(),
+            _ = (async function () {
+              await (0, _._)();
+              const _ = _(),
+                _ = new Set([]);
+              for (const _ of _.languages) {
+                _.add(_.strLanguage);
+                const _ = (0, _._)(_.strLanguage);
+                _ && _.add(_);
+              }
+              return Promise.all(
+                Array.from(_).map((_) =>
+                  _(_).then((_) => {
+                    if (!_) return;
+                    const _ = new Map();
+                    for (const [_, _] of Object.entries(_)) _.set("#" + _, _);
+                    _.set(_, _);
+                  }),
+                ),
+              );
+            })();
+          let _ = !1;
+          var _;
+          function _(_, _) {
+            const [_, ..._] = _,
+              _ =
+                _.get(_.strLanguage)?.get(_) ??
+                _.get((0, _._)(_.strLanguage) ?? "english")?.get(_);
+            return (
+              _ ||
+              (0 === _.length
+                ? (console.error("Couldn't find localization key", _), _)
+                : _(_, _))
+            );
+          }
+          function _(_, ..._) {
+            return _(_(_, _().languages), ..._);
+          }
+          return (
+            __webpack_require__.then(() => (_ = !0)),
+            (_ = _),
+            (_ ??= new Set()),
+            _.add(_),
+            {
+              Localize: (_, ..._) => _(_, ..._),
+              LocalizeReact(_, ..._) {
+                const _ = this.Localize(_);
+                if (_ === _) return _;
+                const _ = [],
+                  _ = /(.*?)%(\d+)\$s/g;
+                let _,
+                  _ = 0;
+                for (; (_ = _.exec(_)); ) {
+                  (_ += _[0].length), _.push(_[1]);
+                  const _ = parseInt(_[2]);
+                  _ >= 1 && _ <= _.length && _.push(_[_ - 1]);
+                }
+                return (
+                  _.push(__webpack_require__.slice(_)),
+                  _.createElement(_.Fragment, null, ..._)
+                );
+              },
+              LocalizePlural: (_, _, ..._) =>
+                1 === _ || "1" === _
+                  ? _(_, _, ..._)
+                  : _(_ + "_Plural", _, ..._),
+              LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
+              Ready: () => _,
+              IsReady: () => _,
+            }
+          );
+        })(async function (_) {
+          if (_[_]) return _[_]();
+        }),
+        _ = {
+          PerYear: 31536e3,
+          PerMonth: 2628e3,
+          PerWeek: 604800,
+          PerDay: 86400,
+          PerHour: 3600,
+          PerMinute: 60,
+        };
+      var _;
       function _(_) {
         const _ = _.context.event,
           _ = _.context.showErrorInfo,
@@ -30540,61 +30859,176 @@
               )
             : null;
         const _ = (0, _._)(_._.LANGUAGE);
-        return _.createElement(_, {
-          userPollDef: _,
-          lang: _,
-          clanAccountID: _.clanSteamID.GetAccountID(),
-          eventModel: _,
-        });
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(_, {
+            userPollDef: _,
+            lang: _,
+            eventModel: _,
+          }),
+        );
       }
       function _(_) {
         const { eventModel: _, userPollDef: __webpack_require__, lang: _ } = _,
-          _ =
-            ((_ = _.clanSteamID),
-            (_ = _.GID || "0"),
-            (0, _._)({
-              queryKey: _(_, _),
-              queryFn: async () => {
-                const _ = new FormData();
-                _.set("sessionid", (0, _._)());
-                const _ = await fetch(_(_, _), {
-                  method: "POST",
-                  body: _,
-                  credentials: "include",
-                });
+          { userPollData: _, ..._ } = _(
+            _.clanSteamID,
+            _.GID || "0",
+            __webpack_require__.poll_id,
+          ),
+          _ = Boolean(_.error_message && _.error_message?.length > 0),
+          _ = (function (_, _) {
+            const _ = (0, _._)();
+            return (0, _._)({
+              mutationKey: [
+                "useSetPartnerEventCastVoteUserPoll",
+                _.GetAccountID(),
+                _,
+              ],
+              mutationFn: async (_) => {
+                const _ = {
+                    votes: _.votes,
+                  },
+                  _ = await fetch(_(_, _, !0), {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(_),
+                    credentials: "include",
+                  });
+                if (!_._) throw new Error(`Server returned ${_.status}`);
                 return await _.json();
               },
-              placeholderData: {
-                results: [],
-                bLoading: !0,
+              onSuccess: (_, _) => {
+                if (1 == _.success)
+                  __webpack_require__.setQueryData(_(_, _), () => _(_));
+                else {
+                  const _ = __webpack_require__.getQueryData(_(_, _));
+                  if (_) {
+                    const _ = {
+                      ..._,
+                      success: _.success,
+                      error_message: _.error_message,
+                    };
+                    __webpack_require__.setQueryData(_(_, _), () => _);
+                  }
+                }
               },
-            }).data ?? {
-              results: [],
-              bLoading: !0,
             });
-        var _, _;
-        return _.createElement(
-          _,
-          {
-            ..._,
-          },
-          __webpack_require__.options?.map((_) =>
-            _.createElement(_, {
-              key: "polloption" + _.option_id,
-              lang: _,
-              pollOptionDef: _,
-              bDisableSelection: _.bLoading,
+          })(_.clanSteamID, _.GID || "0"),
+          [_, _] = (0, _.useState)(void 0),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
+          _ = _?.option_results && _?.option_results.length > 0,
+          _ = ((_ && _.voted_option_id?.length) || 0) > 0;
+        return (
+          (0, _.useEffect)(() => {
+            if (
+              !_ &&
+              __webpack_require__.results_visibility_settings !=
+                _.k_EPollResult_NotVisible &&
+              _
+            ) {
+              const _ = (function (_, _) {
+                return _(_, _) < Math.floor(Date.now() / 1e3);
+              })(
+                {
+                  rtime32_visibility_start:
+                    _.GetVisibilityStartTimeAndDateUnixSeconds(),
+                  rtime32_start_time: _.GetStartTimeAndDateUnixSeconds(),
+                },
+                __webpack_require__,
+              );
+              (_ || _) && _(!0);
+            }
+          }, [_, _, _, _, __webpack_require__]),
+          _.createElement(
+            _,
+            {
+              ..._,
+            },
+            __webpack_require__.options?.map((_) => {
+              const _ = _?.option_results.find(
+                  (_) => _.unique_id == _.option_id,
+                ),
+                _ =
+                  _?.voted_option_id.includes(_.option_id || 0) ||
+                  _ === _.option_id;
+              return _.createElement(_, {
+                key: "polloption" + _.option_id,
+                lang: _,
+                pollOptionDef: _,
+                bSelected: _,
+                nPercentage: _ ? _?.percent : void 0,
+                onClick: () => _(_.option_id),
+                bDisableSelection:
+                  _.bLoading || !_?.vote_permitted || _ || _ || _,
+              });
             }),
-          ),
+            !!_ &&
+              _.createElement(
+                _._,
+                {
+                  onClick: async () => {
+                    if (
+                      !_.userPollSubmitData.user_poll_option_votes.includes(_)
+                    ) {
+                      _(!0);
+                      const _ = {
+                        user_poll_option_votes: [
+                          ..._.userPollSubmitData.user_poll_option_votes,
+                        ],
+                      };
+                      _.user_poll_option_votes.push(_),
+                        await _.mutateAsync({
+                          votes: _,
+                        }),
+                        _(void 0),
+                        _(!1);
+                    }
+                  },
+                },
+                (0, _._)("#Button_Submit"),
+              ),
+            (_ || _.bLoading) &&
+              _.createElement(_._, {
+                size: "small",
+                position: "center",
+                string: _.bLoading ? (0, _._)("#Loading") : void 0,
+              }),
+            _ &&
+              !_ &&
+              !_ &&
+              _.createElement(
+                "a",
+                {
+                  href: "#",
+                  onClick: (_) => {
+                    _.preventDefault(), _(!0);
+                  },
+                },
+                (0, _._)("#UserPolls_JustSeeResults"),
+              ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _.ErrorStylesWithIcon,
+                },
+                _.error_message,
+              ),
+          )
         );
       }
       function _(_) {
         const {
             userPollDef: _,
             lang: __webpack_require__,
-            clanAccountID: _,
+            eventModel: _,
             children: _,
           } = _,
+          _ = (0, _._)(),
           [_, _] = (0, _._)(() => [
             _._.GetWithFallback(
               _.localized_poll_description,
@@ -30603,57 +31037,106 @@
             _.user_poll_background,
           ]);
         let _;
-        return (
-          Boolean(_) &&
-            (_ = {
-              backgroundImage: `url('${_(_, _)}')`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }),
+        const _ = _.clanSteamID.GetAccountID();
+        Boolean(_) &&
+          (_ = {
+            backgroundImage: `url('${_(_, _)}')`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          });
+        const _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
+          { userPollData: _ } = _(_, _.GID || "0", _.poll_id),
+          _ = _(
+            {
+              rtime32_visibility_start:
+                _.GetVisibilityStartTimeAndDateUnixSeconds(),
+              rtime32_start_time: _.GetStartTimeAndDateUnixSeconds(),
+            },
+            _,
+          );
+        return _.createElement(
+          "div",
+          {
+            className: _().PollBackground,
+            style: _,
+          },
           _.createElement(
             "div",
             {
-              className: _().PollBackground,
-              style: _,
+              className: _().PollContainer,
             },
             _.createElement(
               "div",
               {
-                className: _().PollContainer,
+                className: _().PollQuestion,
+              },
+              _,
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().PollOptions,
+              },
+              _,
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().PollStatus,
               },
               _.createElement(
                 "div",
-                {
-                  className: _().PollQuestion,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().PollOptions,
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().PollStatus,
-                },
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#UserPolls_status_N_Votes", "XXX"),
-                ),
-                _.createElement(
-                  "div",
-                  null,
-                  (0, _._)("#UserPolls_status_N_TimeRemaining", "X Days"),
+                null,
+                (0, _._)(
+                  "#UserPolls_status_N_Votes",
+                  (_?.total_votes || 0).toLocaleString(),
                 ),
               ),
+              _?.display_message
+                ? _.createElement("div", null, _?.display_message)
+                : _.createElement(
+                    "div",
+                    null,
+                    (0, _._)(
+                      "#UserPolls_status_N_TimeRemaining",
+                      (function (_) {
+                        const _ = Math.floor(_ / _.PerYear),
+                          _ = Math.floor(_ / _.PerMonth),
+                          _ = Math.floor((_ % _.PerMonth) / _.PerDay),
+                          _ = Math.floor((_ % _.PerDay) / _.PerHour),
+                          _ = Math.floor((_ % _.PerHour) / _.PerMinute);
+                        return (
+                          (_ %= _.PerMinute),
+                          _ > 0
+                            ? _.Localize("#TimeRemaining_MoreThanOneYear")
+                            : _ > 0
+                              ? _.Localize("#TimeRemaining_MonthsDays", _, _)
+                              : _ > 0
+                                ? _.Localize(
+                                    "#TimeRemaining_DaysHoursMinutes",
+                                    _,
+                                    _.toString().padStart(2, "0"),
+                                    _.toString().padStart(2, "0"),
+                                  )
+                                : _ > 0
+                                  ? _.Localize(
+                                      "#TimeRemaining_HoursMinutesSeconds",
+                                      _.toString().padStart(2, "0"),
+                                      _.toString().padStart(2, "0"),
+                                      _.toString().padStart(2, "0"),
+                                    )
+                                  : _.Localize(
+                                      "#TimeRemaining_MinutesSeconds",
+                                      _.toString().padStart(2, "0"),
+                                      _.toString().padStart(2, "0"),
+                                    )
+                        );
+                      })(_ - _),
+                    ),
+                  ),
             ),
-          )
+          ),
         );
       }
       function _(_) {
@@ -30662,23 +31145,62 @@
             onClick: __webpack_require__,
             lang: _,
             bDisableSelection: _,
+            bSelected: _,
+            nPercentage: _,
           } = _,
-          [_] = (0, _._)(() => [_._.GetWithFallback(_.localized_option, _)]);
+          [_] = (0, _._)(() => [_._.GetWithFallback(_.localized_option, _)]),
+          _ = Math.round(100 * (_ ?? 0));
         return _.createElement(
           "div",
           {
             className: (0, _._)({
               [_().PollOption]: !0,
-              [_().Selected]: !1,
+              [_().Selected]: _,
+              [_().Disabled]: _,
             }),
             onClick: _ ? void 0 : __webpack_require__,
           },
           _.createElement("div", {
-            className: _().PollVoteIcon,
+            className: _().BackgroundBar,
           }),
-          _.createElement("span", null, _),
+          _.createElement("div", {
+            className: _().ForegroundBar,
+            style: {
+              width: `${_}%`,
+            },
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _().ContentRow,
+            },
+            _.createElement("div", {
+              className: _().PollVoteIcon,
+            }),
+            void 0 !== _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().PctText,
+                },
+                _,
+                "%",
+              ),
+            _.createElement(
+              "span",
+              {
+                className: _().OptionText,
+              },
+              _,
+            ),
+          ),
         );
       }
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.Ago = 1)] = "Ago"),
+          (_[(_.Remaining = 2)] = "Remaining");
+      })(_ || (_ = {}));
       let _ = null;
       function _() {
         return (

@@ -6804,7 +6804,7 @@
         C = a(78327),
         w = a(51706),
         A = a(738),
-        I = a(40463),
+        I = a(95377),
         T = a(96971),
         D = a(82477),
         B = a(78603),
@@ -7561,8 +7561,6 @@
       }
       function p(e, t, a, n, r, i) {
         if (!e) return "";
-        const o = _(e, t, r);
-        if (null !== o) return o;
         if ("crosspromotesalepage" === e.section_type) {
           const t = e.sale_page_cross_promo_event_gid
             ? l.O3.GetClanEventModel(e.sale_page_cross_promo_event_gid)
@@ -7574,50 +7572,53 @@
               )
             : (0, s.we)("#Sale_CrossPromoSale_DefaultSectionTitle");
         }
-        const d =
-            s.NT.GetWithFallback(e.localized_label, a) ||
+        const o = _(e, t, r),
+          d = s.NT.GetWithFallback(e.localized_label, a),
+          p =
+            o ||
+            d ||
             ("#Sale_default_label" === e.default_label
               ? ""
               : (0, s.we)(e.default_label)),
-          p = e.internal_section_title?.trim();
-        if ((p?.length ?? 0) > 0) {
+          g = e.internal_section_title?.trim();
+        if ((g?.length ?? 0) > 0) {
           if (3 == r || 4 == r)
-            return 0 == d?.trim().length
-              ? p
+            return 0 == p?.trim().length
+              ? g
               : c.createElement(
                   c.Fragment,
                   null,
-                  p,
+                  g,
                   " ",
                   c.createElement(m.o, {
                     tooltip: (0, s.PP)(
                       "#Sale_Section_InternalTitle_Note",
                       c.createElement("br", null),
-                      d,
+                      p,
                     ),
                   }),
                 );
           if (1 == r)
-            return 0 == d?.trim().length
-              ? p
+            return 0 == p?.trim().length
+              ? g
               : c.createElement(
                   c.Fragment,
                   null,
-                  p,
+                  g,
                   " ",
                   c.createElement(
                     "span",
                     null,
-                    (0, s.PP)("#Sale_Section_InternalTitle_Actual", d),
+                    (0, s.PP)("#Sale_Section_InternalTitle_Actual", p),
                   ),
                 );
         }
-        const g = s.NT.GetWithFallback(e.localized_label_image, a);
-        if (!i && g) {
-          const e = u.z.GenerateURLFromHashAndExt(n, g);
-          return c.createElement("img", { loading: "lazy", src: e, alt: d });
+        const h = s.NT.GetWithFallback(e.localized_label_image, a);
+        if (!i && h) {
+          const e = u.z.GenerateURLFromHashAndExt(n, h);
+          return c.createElement("img", { loading: "lazy", src: e, alt: p });
         }
-        return d;
+        return p;
       }
       function g(e, t, a) {
         const r = (function (e, t) {
@@ -14658,7 +14659,7 @@
         Qa = a(19267),
         Ka = a(83284),
         Ya = a.n(Ka),
-        Za = a(40463),
+        Za = a(95377),
         Ja = a(77291),
         Xa = a(44165),
         $a = a(78603);

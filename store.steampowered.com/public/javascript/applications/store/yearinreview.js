@@ -130,6 +130,12 @@
         PollOption: "_3hNd0q0tYO12nPDCPsT8sm",
         Selected: "_3Nv8BLF6dRk932f5NhyNIH",
         PollVoteIcon: "ziFphpM2Ie-orQ5ezpQqT",
+        Disabled: "_1bO8azG0-IqxQ3AQbWtCxx",
+        ContentRow: "_3Yb8eVHtZWf1AWt7VV3P-z",
+        BackgroundBar: "_30b_e8W4Z94Lwn8x2U9TYH",
+        ForegroundBar: "_3PFkx8XNigPW6CoYfHH5Yi",
+        PctText: "_1RNbjKcBRtD4pseH6hyggg",
+        OptionText: "_1qUCIT-7ueBBoNjoCvGfbP",
         PollStatus: "_3NDl2Pml7Uvse14r9SWJTD",
       };
     },
@@ -8176,7 +8182,7 @@
           ),
         );
       }
-      var O = a(40463),
+      var O = a(95377),
         W = a(20194),
         j = a(41735),
         q = a.n(j);
@@ -9021,9 +9027,9 @@
       }
       a.d(t, { O: () => r });
     },
-    40463: (e, t, a) => {
+    95377: (e, t, a) => {
       "use strict";
-      a.d(t, { us: () => ia, fh: () => sa });
+      a.d(t, { us: () => fa, fh: () => Sa });
       var r = a(93980),
         n = a(42780),
         i = a(8527),
@@ -10728,19 +10734,140 @@
               ),
             );
       }
-      var Gt = a(20194);
-      function Ft(e, t) {
+      var Gt = a(20194),
+        Ft = a(75233),
+        kt = a(51614);
+      function Ut(e, t, a) {
+        const r = (function (e, t) {
+          const a = (0, Gt.I)({
+            queryKey: Dt(e, t),
+            queryFn: async () => {
+              const a = await fetch(zt(e, t, !1), {
+                method: "GET",
+                credentials: "include",
+              });
+              return Pt(await a.json());
+            },
+            placeholderData: {
+              results: [],
+              success: 10,
+              bLoading: !0,
+              userPollSubmitData: { user_poll_option_votes: [] },
+            },
+          });
+          return a.data
+            ? a.data
+            : {
+                results: [],
+                success: 10,
+                bLoading: !0,
+                userPollSubmitData: { user_poll_option_votes: [] },
+              };
+        })(e, t);
+        return (0, s.useMemo)(() => {
+          const e = r.results.find((e) => a == e.unique_id);
+          return {
+            bLoading: r.bLoading,
+            success: r.success,
+            userPollData: e,
+            error_message: r.error_message,
+            userPollSubmitData: r.userPollSubmitData,
+          };
+        }, [r, a]);
+      }
+      function Pt(e) {
+        return {
+          ...e,
+          bLoading: !1,
+          userPollSubmitData: {
+            user_poll_option_votes: e.results
+              .map((e) => e.voted_option_id)
+              .reduce((e, t) => e.concat(t), []),
+          },
+        };
+      }
+      function Dt(e, t) {
         return ["usePartnerEventUserPoll", e.ConvertTo64BitString(), t];
       }
-      function kt(e, t) {
-        return `${"store" == (0, b.yK)() ? b.TS.STORE_BASE_URL : b.TS.COMMUNITY_BASE_URL}partnerevents/${e.ConvertTo64BitString()}/userpoll/${t}/ajaxloaddata/`;
+      function zt(e, t, a) {
+        const r = `${b.TS.COMMUNITY_BASE_URL}partnerevents/${e.ConvertTo64BitString()}/userpoll/${t}/${a ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${(0, b.yK)()}`;
+        return "dev" == b.TS.WEB_UNIVERSE ? r + "&debug=1" : r;
       }
-      var Ut = a(56330),
-        Pt = a(30470),
-        Dt = a(69484),
-        zt = a(33280),
-        xt = a.n(zt);
-      function Lt(e) {
+      const xt = 86400;
+      function Lt(e, t) {
+        let a = 0;
+        if (t.poll_end_time) a = t.poll_end_time;
+        else {
+          a =
+            (e.rtime32_visibility_start ?? e.rtime32_start_time ?? 0) +
+            (t.poll_end_days_since_start || xt);
+        }
+        return a;
+      }
+      var Yt = a(30470);
+      var Ot, Wt;
+      !(function (e) {
+        (e.k_EPollResult_NotVisible = "not_visible"),
+          (e.k_EPollResult_Visible_After_Vote = "after_vote"),
+          (e.k_EPollResult_Visible_After_End = "after_end"),
+          (e.k_EPollResult_Visible_After_Vote_Or_End = "after_vote_or_end"),
+          (e.k_EPollResult_Visible_On_Demand = "on_demand");
+      })(Ot || (Ot = {})),
+        (function (e) {
+          (e.k_EPollVoter_AnyUser = "any_user"),
+            (e.k_EPollVoter_UserGameInLibrary = "user_game_in_library"),
+            (e.k_EPollVoter_MinPlayTime = "min_play_time"),
+            (e.k_EPollVoter_MemberOfGroup = "member_of_group");
+        })(Wt || (Wt = {}));
+      var jt = a(56330),
+        qt = a(69484),
+        Ht = a(33280),
+        Vt = a.n(Ht),
+        Kt = a(44165);
+      const Qt = {};
+      (Qt.arabic = () => a.e(6696).then(a.t.bind(a, 6696, 19))),
+        (Qt.brazilian = () => a.e(8906).then(a.t.bind(a, 58906, 19))),
+        (Qt.bulgarian = () => a.e(3473).then(a.t.bind(a, 53473, 19))),
+        (Qt.czech = () => a.e(3899).then(a.t.bind(a, 83899, 19))),
+        (Qt.danish = () => a.e(4925).then(a.t.bind(a, 84925, 19))),
+        (Qt.dutch = () => a.e(9902).then(a.t.bind(a, 69902, 19))),
+        (Qt.english = () => a.e(8335).then(a.t.bind(a, 80716, 19))),
+        (Qt.finnish = () => a.e(1663).then(a.t.bind(a, 81663, 19))),
+        (Qt.french = () => a.e(8484).then(a.t.bind(a, 48484, 19))),
+        (Qt.german = () => a.e(6810).then(a.t.bind(a, 66810, 19))),
+        (Qt.greek = () => a.e(3744).then(a.t.bind(a, 13744, 19))),
+        (Qt.hungarian = () => a.e(2101).then(a.t.bind(a, 62101, 19))),
+        (Qt.indonesian = () => a.e(8948).then(a.t.bind(a, 68948, 19))),
+        (Qt.italian = () => a.e(2916).then(a.t.bind(a, 2916, 19))),
+        (Qt.japanese = () => a.e(195).then(a.t.bind(a, 40195, 19))),
+        (Qt.koreana = () => a.e(4259).then(a.t.bind(a, 84259, 19))),
+        (Qt.latam = () => a.e(4475).then(a.t.bind(a, 24475, 19))),
+        (Qt.norwegian = () => a.e(6884).then(a.t.bind(a, 36884, 19))),
+        (Qt.polish = () => a.e(5269).then(a.t.bind(a, 15269, 19))),
+        (Qt.portuguese = () => a.e(6865).then(a.t.bind(a, 96865, 19))),
+        (Qt.romanian = () => a.e(1391).then(a.t.bind(a, 71391, 19))),
+        (Qt.russian = () => a.e(4933).then(a.t.bind(a, 64933, 19))),
+        (Qt.schinese = () => a.e(4768).then(a.t.bind(a, 44768, 19))),
+        (Qt.spanish = () => a.e(876).then(a.t.bind(a, 20876, 19))),
+        (Qt.swedish = () => a.e(5181).then(a.t.bind(a, 75181, 19))),
+        (Qt.tchinese = () => a.e(9779).then(a.t.bind(a, 89779, 19))),
+        (Qt.thai = () => a.e(3732).then(a.t.bind(a, 98970, 19))),
+        (Qt.turkish = () => a.e(7996).then(a.t.bind(a, 87996, 19))),
+        (Qt.ukrainian = () => a.e(7306).then(a.t.bind(a, 47306, 19))),
+        (Qt.vietnamese = () => a.e(2539).then(a.t.bind(a, 72539, 19)));
+      const Xt = (0, a(42475).l)(async function (e) {
+          if (Qt[e]) return Qt[e]();
+        }),
+        Zt = {
+          PerYear: 31536e3,
+          PerMonth: 2628e3,
+          PerWeek: 604800,
+          PerDay: 86400,
+          PerHour: 3600,
+          PerMinute: 60,
+        };
+      var Jt;
+      function $t(e) {
         const t = e.context.event,
           a = e.context.showErrorInfo,
           r = (0, l.j$)(e.args, "poll_id"),
@@ -10755,115 +10882,294 @@
           return a
             ? s.createElement(
                 "div",
-                { className: Ut.ErrorStylesWithIcon },
+                { className: jt.ErrorStylesWithIcon },
                 (0, v.we)("#UserPolls_Editor_FailToFindModel", n),
               )
             : null;
-        const o = (0, K.sf)(Pt.TS.LANGUAGE);
-        return s.createElement(Yt, {
-          userPollDef: i,
-          lang: o,
-          clanAccountID: t.clanSteamID.GetAccountID(),
-          eventModel: t,
-        });
-      }
-      function Yt(e) {
-        const { eventModel: t, userPollDef: a, lang: r } = e,
-          n =
-            ((i = t.clanSteamID),
-            (l = t.GID || "0"),
-            (0, Gt.I)({
-              queryKey: Ft(i, l),
-              queryFn: async () => {
-                const e = new FormData();
-                e.set("sessionid", (0, b.KC)());
-                const t = await fetch(kt(i, l), {
-                  method: "POST",
-                  body: e,
-                  credentials: "include",
-                });
-                return await t.json();
-              },
-              placeholderData: { results: [], bLoading: !0 },
-            }).data ?? { results: [], bLoading: !0 });
-        var i, l;
+        const o = (0, K.sf)(Yt.TS.LANGUAGE);
         return s.createElement(
-          Ot,
-          { ...e },
-          a.options?.map((e) =>
-            s.createElement(Wt, {
-              key: "polloption" + e.option_id,
-              lang: r,
-              pollOptionDef: e,
-              bDisableSelection: n.bLoading,
-            }),
-          ),
+          it.tH,
+          null,
+          s.createElement(ea, { userPollDef: i, lang: o, eventModel: t }),
         );
       }
-      function Ot(e) {
-        const { userPollDef: t, lang: a, clanAccountID: r, children: n } = e,
-          [i, l] = (0, _t.q3)(() => [
-            v.NT.GetWithFallback(t.localized_poll_description, a),
-            t.user_poll_background,
-          ]);
-        let o;
+      function ea(e) {
+        const { eventModel: t, userPollDef: a, lang: r } = e,
+          { userPollData: n, ...i } = Ut(
+            t.clanSteamID,
+            t.GID || "0",
+            a.poll_id,
+          ),
+          l = Boolean(i.error_message && i.error_message?.length > 0),
+          o = (function (e, t) {
+            const a = (0, Ft.jE)();
+            return (0, kt.n)({
+              mutationKey: [
+                "useSetPartnerEventCastVoteUserPoll",
+                e.GetAccountID(),
+                t,
+              ],
+              mutationFn: async (a) => {
+                const r = { votes: a.votes },
+                  n = await fetch(zt(e, t, !0), {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(r),
+                    credentials: "include",
+                  });
+                if (!n.ok) throw new Error(`Server returned ${n.status}`);
+                return await n.json();
+              },
+              onSuccess: (r, n) => {
+                if (1 == r.success) a.setQueryData(Dt(e, t), () => Pt(r));
+                else {
+                  const n = a.getQueryData(Dt(e, t));
+                  if (n) {
+                    const i = {
+                      ...n,
+                      success: r.success,
+                      error_message: r.error_message,
+                    };
+                    a.setQueryData(Dt(e, t), () => i);
+                  }
+                }
+              },
+            });
+          })(t.clanSteamID, t.GID || "0"),
+          [m, c] = (0, s.useState)(void 0),
+          [u, d] = (0, s.useState)(!1),
+          [_, p] = (0, s.useState)(!1),
+          g = n?.option_results && n?.option_results.length > 0,
+          y = ((n && n.voted_option_id?.length) || 0) > 0;
         return (
-          Boolean(l) &&
-            (o = {
-              backgroundImage: `url('${(0, Dt.F)(r, l)}')`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }),
+          (0, s.useEffect)(() => {
+            if (
+              !_ &&
+              a.results_visibility_settings != Ot.k_EPollResult_NotVisible &&
+              g
+            ) {
+              const e = (function (e, t) {
+                return Lt(e, t) < Math.floor(Date.now() / 1e3);
+              })(
+                {
+                  rtime32_visibility_start:
+                    t.GetVisibilityStartTimeAndDateUnixSeconds(),
+                  rtime32_start_time: t.GetStartTimeAndDateUnixSeconds(),
+                },
+                a,
+              );
+              (e || y) && p(!0);
+            }
+          }, [g, y, _, t, a]),
           s.createElement(
-            "div",
-            { className: xt().PollBackground, style: o },
-            s.createElement(
-              "div",
-              { className: xt().PollContainer },
-              s.createElement("div", { className: xt().PollQuestion }, i),
-              s.createElement("div", { className: xt().PollOptions }, n),
+            ta,
+            { ...e },
+            a.options?.map((e) => {
+              const t = n?.option_results.find(
+                  (t) => t.unique_id == e.option_id,
+                ),
+                a =
+                  n?.voted_option_id.includes(e.option_id || 0) ||
+                  m === e.option_id;
+              return s.createElement(aa, {
+                key: "polloption" + e.option_id,
+                lang: r,
+                pollOptionDef: e,
+                bSelected: a,
+                nPercentage: _ ? t?.percent : void 0,
+                onClick: () => c(e.option_id),
+                bDisableSelection:
+                  i.bLoading || !n?.vote_permitted || l || u || y,
+              });
+            }),
+            !!m &&
+              s.createElement(
+                A.$n,
+                {
+                  onClick: async () => {
+                    if (
+                      !i.userPollSubmitData.user_poll_option_votes.includes(m)
+                    ) {
+                      d(!0);
+                      const e = {
+                        user_poll_option_votes: [
+                          ...i.userPollSubmitData.user_poll_option_votes,
+                        ],
+                      };
+                      e.user_poll_option_votes.push(m),
+                        await o.mutateAsync({ votes: e }),
+                        c(void 0),
+                        d(!1);
+                    }
+                  },
+                },
+                (0, v.we)("#Button_Submit"),
+              ),
+            (u || i.bLoading) &&
+              s.createElement(J.t, {
+                size: "small",
+                position: "center",
+                string: i.bLoading ? (0, v.we)("#Loading") : void 0,
+              }),
+            g &&
+              !y &&
+              !_ &&
+              s.createElement(
+                "a",
+                {
+                  href: "#",
+                  onClick: (e) => {
+                    e.preventDefault(), p(!0);
+                  },
+                },
+                (0, v.we)("#UserPolls_JustSeeResults"),
+              ),
+            l &&
               s.createElement(
                 "div",
-                { className: xt().PollStatus },
-                s.createElement(
-                  "div",
-                  null,
-                  (0, v.PP)("#UserPolls_status_N_Votes", "XXX"),
-                ),
-                s.createElement(
-                  "div",
-                  null,
-                  (0, v.PP)("#UserPolls_status_N_TimeRemaining", "X Days"),
-                ),
+                { className: jt.ErrorStylesWithIcon },
+                i.error_message,
               ),
-            ),
           )
         );
       }
-      function Wt(e) {
+      function ta(e) {
+        const { userPollDef: t, lang: a, eventModel: r, children: n } = e,
+          i = (0, Kt.f1)(),
+          [l, o] = (0, _t.q3)(() => [
+            v.NT.GetWithFallback(t.localized_poll_description, a),
+            t.user_poll_background,
+          ]);
+        let m;
+        const c = r.clanSteamID.GetAccountID();
+        Boolean(o) &&
+          (m = {
+            backgroundImage: `url('${(0, qt.F)(c, o)}')`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          });
+        const u = (0, s.useMemo)(() => D.b.InitFromClanID(c), [c]),
+          { userPollData: d } = Ut(u, r.GID || "0", t.poll_id),
+          _ = Lt(
+            {
+              rtime32_visibility_start:
+                r.GetVisibilityStartTimeAndDateUnixSeconds(),
+              rtime32_start_time: r.GetStartTimeAndDateUnixSeconds(),
+            },
+            t,
+          );
+        return s.createElement(
+          "div",
+          { className: Vt().PollBackground, style: m },
+          s.createElement(
+            "div",
+            { className: Vt().PollContainer },
+            s.createElement("div", { className: Vt().PollQuestion }, l),
+            s.createElement("div", { className: Vt().PollOptions }, n),
+            s.createElement(
+              "div",
+              { className: Vt().PollStatus },
+              s.createElement(
+                "div",
+                null,
+                (0, v.Yp)(
+                  "#UserPolls_status_N_Votes",
+                  (d?.total_votes || 0).toLocaleString(),
+                ),
+              ),
+              d?.display_message
+                ? s.createElement("div", null, d?.display_message)
+                : s.createElement(
+                    "div",
+                    null,
+                    (0, v.PP)(
+                      "#UserPolls_status_N_TimeRemaining",
+                      (function (e) {
+                        const t = Math.floor(e / Zt.PerYear),
+                          a = Math.floor(e / Zt.PerMonth),
+                          r = Math.floor((e % Zt.PerMonth) / Zt.PerDay),
+                          n = Math.floor((e % Zt.PerDay) / Zt.PerHour),
+                          i = Math.floor((e % Zt.PerHour) / Zt.PerMinute);
+                        return (
+                          (e %= Zt.PerMinute),
+                          t > 0
+                            ? Xt.Localize("#TimeRemaining_MoreThanOneYear")
+                            : a > 0
+                              ? Xt.Localize("#TimeRemaining_MonthsDays", a, r)
+                              : r > 0
+                                ? Xt.Localize(
+                                    "#TimeRemaining_DaysHoursMinutes",
+                                    r,
+                                    n.toString().padStart(2, "0"),
+                                    i.toString().padStart(2, "0"),
+                                  )
+                                : n > 0
+                                  ? Xt.Localize(
+                                      "#TimeRemaining_HoursMinutesSeconds",
+                                      n.toString().padStart(2, "0"),
+                                      i.toString().padStart(2, "0"),
+                                      e.toString().padStart(2, "0"),
+                                    )
+                                  : Xt.Localize(
+                                      "#TimeRemaining_MinutesSeconds",
+                                      i.toString().padStart(2, "0"),
+                                      e.toString().padStart(2, "0"),
+                                    )
+                        );
+                      })(_ - i),
+                    ),
+                  ),
+            ),
+          ),
+        );
+      }
+      function aa(e) {
         const {
             pollOptionDef: t,
             onClick: a,
             lang: r,
             bDisableSelection: n,
+            bSelected: i,
+            nPercentage: l,
           } = e,
-          [i] = (0, _t.q3)(() => [v.NT.GetWithFallback(t.localized_option, r)]);
+          [o] = (0, _t.q3)(() => [v.NT.GetWithFallback(t.localized_option, r)]),
+          m = Math.round(100 * (l ?? 0));
         return s.createElement(
           "div",
           {
-            className: (0, U.A)({ [xt().PollOption]: !0, [xt().Selected]: !1 }),
+            className: (0, U.A)({
+              [Vt().PollOption]: !0,
+              [Vt().Selected]: i,
+              [Vt().Disabled]: n,
+            }),
             onClick: n ? void 0 : a,
           },
-          s.createElement("div", { className: xt().PollVoteIcon }),
-          s.createElement("span", null, i),
+          s.createElement("div", { className: Vt().BackgroundBar }),
+          s.createElement("div", {
+            className: Vt().ForegroundBar,
+            style: { width: `${m}%` },
+          }),
+          s.createElement(
+            "div",
+            { className: Vt().ContentRow },
+            s.createElement("div", { className: Vt().PollVoteIcon }),
+            void 0 !== l &&
+              s.createElement("div", { className: Vt().PctText }, m, "%"),
+            s.createElement("span", { className: Vt().OptionText }, o),
+          ),
         );
       }
-      let jt = null;
-      function qt() {
+      !(function (e) {
+        (e[(e.None = 0)] = "None"),
+          (e[(e.Ago = 1)] = "Ago"),
+          (e[(e.Remaining = 2)] = "Remaining");
+      })(Jt || (Jt = {}));
+      let ra = null;
+      function na() {
         return (
-          null == jt &&
-            (jt = new Map([
+          null == ra &&
+            (ra = new Map([
               ["url", { Constructor: je, autocloses: !1 }],
               ["dynamiclink", { Constructor: qe, autocloses: !1 }],
               [
@@ -10906,37 +11212,37 @@
                 "*",
                 { Constructor: l.ck, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: Ht, autocloses: !1 }],
+              ["img", { Constructor: ia, autocloses: !1 }],
               ["previewyoutube", { Constructor: T.gH, autocloses: !1 }],
               ["looping_media", { Constructor: l.$A, autocloses: !1 }],
               ["video", { Constructor: l.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: T.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: Kt, autocloses: !1 }],
-              ["vod", { Constructor: Qt, autocloses: !1 }],
+              ["trailer", { Constructor: la, autocloses: !1 }],
+              ["vod", { Constructor: oa, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: Xt,
+                  Constructor: ma,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: Jt, autocloses: !1 }],
-              ["claimitem", { Constructor: $t, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: ea, autocloses: !1 }],
-              ["actiondialog", { Constructor: aa, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: na, autocloses: !0 }],
-              ["docimg", { Constructor: Vt, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: ua, autocloses: !1 }],
+              ["claimitem", { Constructor: da, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: _a, autocloses: !1 }],
+              ["actiondialog", { Constructor: ga, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: ha, autocloses: !0 }],
+              ["docimg", { Constructor: sa, autocloses: !1 }],
               ["carousel", { Constructor: Et, autocloses: !1 }],
               ["meetsteamsessiongroup", { Constructor: N.ac, autocloses: !1 }],
               ["meetsteamscheduleview", { Constructor: N.Xk, autocloses: !1 }],
-              ["userpolls", { Constructor: Lt, autocloses: !1 }],
+              ["userpolls", { Constructor: $t, autocloses: !1 }],
             ])),
-          jt
+          ra
         );
       }
-      function Ht(e) {
+      function ia(e) {
         const { showErrorInfo: t, event: a } = e.context;
         let r = (0, l.j$)(e.args, "src") || e.children?.toString();
         r || (r = (0, l.j$)(e.args));
@@ -10970,7 +11276,7 @@
           s.createElement($.c, { rgSources: n }),
         );
       }
-      function Vt(e) {
+      function sa(e) {
         const t = (0, l.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const a = e && e.children && e.children.toString(),
@@ -10986,13 +11292,13 @@
           s.createElement($.c, { rgSources: r, alt: a })
         );
       }
-      function Kt(e) {
-        const t = Zt(
+      function la(e) {
+        const t = ca(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          a = Zt(e.args, "trailerid", 0);
+          a = ca(e.args, "trailerid", 0);
         let r =
           (0, l.j$)(e.args, "style")?.toLocaleLowerCase() ?? He.k_TrailerAsFull;
         r = Object.values(He).includes(r) ? r : He.k_TrailerAsFull;
@@ -11008,14 +11314,14 @@
           children: e.children,
         });
       }
-      function Qt(e) {
-        const t = Zt(e.args, "appid", 0);
+      function oa(e) {
+        const t = ca(e.args, "appid", 0);
         return s.createElement(lt, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Xt(e) {
+      function ma(e) {
         const t = (0, l.j$)(e.args, "name"),
           a = (0, l.j$)(e.args, "title"),
           r = (0, l.j$)(e.args, "company"),
@@ -11036,11 +11342,11 @@
               bio: e.children,
             });
       }
-      function Zt(e, t, a) {
+      function ca(e, t, a) {
         const r = (0, l.j$)(e, t);
         return void 0 === r || null == r ? a : Number.parseInt(r);
       }
-      function Jt(e) {
+      function ua(e) {
         const t = (0, l.j$)(e.args, "name"),
           a =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -11054,7 +11360,7 @@
           ? e.children
           : null;
       }
-      function $t(e) {
+      function da(e) {
         const t = e.context.showErrorInfo;
         if (!b.iA.logged_in)
           return s.createElement(
@@ -11074,7 +11380,7 @@
           }
         return s.createElement(It.m, { bPreviewMode: t, rewardType: r });
       }
-      function ea(e) {
+      function _a(e) {
         const t = Number.parseInt((0, l.j$)(e.args, "id")) || 0,
           a =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -11092,7 +11398,7 @@
           (!o && !a) || (o && a) ? e.children : null
         );
       }
-      function ta(e) {
+      function pa(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, I.h)(e),
             a = (0, I.Q)();
@@ -11118,12 +11424,12 @@
         }
         return { bInitialState: !0 };
       }
-      function aa(e) {
+      function ga(e) {
         const t = (0, l.j$)(e.args, "action"),
           a = (0, l.j$)(e.args, "initialToken"),
           r = (0, l.j$)(e.args, "successToken"),
           n = (0, l.j$)(e.args, "failToken"),
-          i = ta(t);
+          i = pa(t);
         if (!(t && a && r && n)) {
           return e.context.showErrorInfo
             ? s.createElement(
@@ -11141,7 +11447,7 @@
                 onClick: (i) => {
                   (0, vt.pg)(
                     s.createElement(
-                      ra,
+                      ya,
                       {
                         strAction: t,
                         strInitialToken: a,
@@ -11164,7 +11470,7 @@
               (0, v.we)("#Login_SignIn"),
             );
       }
-      function ra(e) {
+      function ya(e) {
         const {
             strAction: t,
             children: a,
@@ -11173,7 +11479,7 @@
             strSuccessToken: i,
             strFailToken: l,
           } = e,
-          o = ta(t),
+          o = pa(t),
           [m, c] = s.useState(Boolean(o.fnAction));
         s.useEffect(() => {
           o.fnAction && (c(!0), o.fnAction().finally(() => c(!1)));
@@ -11212,7 +11518,7 @@
           ),
         );
       }
-      function na(e) {
+      function ha(e) {
         const { showErrorInfo: t, event: a } = e.context,
           r = a.clanSteamID.GetAccountID(),
           [n] = s.useState(
@@ -11252,19 +11558,19 @@
             ? s.createElement("div", null, (0, v.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      class ia {
+      class fa {
         static sm_BBCodeDictionary = new Map([
           ...Array.from(l.W4.entries()),
-          ...Array.from(qt().entries()),
+          ...Array.from(na().entries()),
         ]);
         static AddDictionary(e) {
-          ia.sm_BBCodeDictionary = new Map([
-            ...Array.from(ia.sm_BBCodeDictionary.entries()),
+          fa.sm_BBCodeDictionary = new Map([
+            ...Array.from(fa.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
       }
-      function sa(e) {
+      function Sa(e) {
         const {
             text: t,
             partnerEventStore: a,
@@ -11288,7 +11594,7 @@
           );
         return s
           .useMemo(
-            () => new r.B(ia.sm_BBCodeDictionary, u, l || i.TS.LANGUAGE),
+            () => new r.B(fa.sm_BBCodeDictionary, u, l || i.TS.LANGUAGE),
             [u, l],
           )
           .ParseBBCode(t, {

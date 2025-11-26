@@ -5,6 +5,104 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        return new (_())(
+          async (_) => {
+            const _ = [..._],
+              _ = await _._.GetPlayerLinkDetails(_, {
+                steamids: _,
+              }),
+              _ = new Map();
+            return (
+              _.Body()
+                .accounts()
+                .forEach((_) => {
+                  const _ = _.toObject();
+                  _.set(_.public_data.steamid, _);
+                }),
+              __webpack_require__.map((_) => {
+                var _;
+                return null !== (_ = _.get(_)) && void 0 !== _ ? _ : null;
+              })
+            );
+          },
+          {
+            maxBatchSize: 100,
+            cache: !1,
+            ..._,
+          },
+        );
+      }
+      function _(_) {
+        return (0, _._)("PlayerLinkDetails", () => _(_));
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      function _(_) {
+        return "[object Object]" === Object.prototype.toString.call(_);
+      }
+      function _(..._) {
+        return JSON.stringify(_, (_, _) => {
+          if (
+            (function (_) {
+              if (!_(_)) return !1;
+              const _ = _.constructor;
+              if (void 0 === _) return !0;
+              const _ = _.prototype;
+              return (
+                !!_(_) &&
+                !!Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
+              );
+            })(_)
+          ) {
+            const _ = {};
+            return (
+              Object.keys(_)
+                .sort()
+                .forEach((_) => {
+                  _[_] = _[_];
+                }),
+              _
+            );
+          }
+          return _;
+        });
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)({
+        instances: {},
+        factories: {},
+      });
+      function _(_, _) {
+        var _;
+        const _ = (0, _.useContext)(_),
+          _ = "string" == typeof _ ? _ : _(..._);
+        let _ = _;
+        for (; _; ) {
+          if (_ in _.instances) return _.instances[_];
+          if (_ in _.factories) break;
+          _ = _.parent;
+        }
+        const _ = (
+          null !== (_ = null == _ ? void 0 : _.factories[_]) && void 0 !== _
+            ? _
+            : _
+        )();
+        return ((null != _ ? _ : _).instances[_] = _), _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _,
         _,
@@ -6341,6 +6439,91 @@
       function _(_, _) {
         return `${_._.STORE_BASE_URL}cart/purchaserequest/${_}/${_}`;
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = _.useContext(_);
+        return (0, _._)(_(_, _, _));
+      }
+      function _(_) {
+        const _ = _.useRef(void 0),
+          _ = _(_);
+        return _.data
+          ? _
+          : (_.current ||
+              (_.current = new _._(
+                "string" == typeof _ ? new _._(_) : _._.InitFromAccountID(_),
+              )),
+            {
+              ..._,
+              data: _.current,
+            });
+      }
+      const _ = _.createContext({
+        loadPersonaState: async (_, _) => {
+          if (null == _) return null;
+          const _ = await (function (_) {
+            return null != _ ? _ : (_ = (0, _._)(_));
+          })(_).load(_._.InitFromAccountID(_).ConvertTo64BitString());
+          return (function (_, _) {
+            var _, _;
+            let _ = new _._(_);
+            const _ = null == _ ? void 0 : _.public_data,
+              _ = null == _ ? void 0 : _.private_data;
+            (_.m_bInitialized = !!_),
+              (_.m_ePersonaState =
+                null !== (_ = null == _ ? void 0 : _.persona_state) &&
+                void 0 !== _
+                  ? _
+                  : 0),
+              (_.m_strAvatarHash = (null == _ ? void 0 : _.sha_digest_avatar)
+                ? (0, _._)(_.sha_digest_avatar)
+                : _._),
+              (_.m_strPlayerName =
+                null !== (_ = null == _ ? void 0 : _.persona_name) &&
+                void 0 !== _
+                  ? _
+                  : _.ConvertTo64BitString()),
+              (_.m_strAccountName = null == _ ? void 0 : _.account_name),
+              (null == _ ? void 0 : _.persona_state_flags) &&
+                (_.m_unPersonaStateFlags =
+                  null == _ ? void 0 : _.persona_state_flags);
+            (null == _ ? void 0 : _.game_id) &&
+              (_.m_gameid = null == _ ? void 0 : _.game_id);
+            (null == _ ? void 0 : _.game_server_ip_address) &&
+              (_.m_unGameServerIP =
+                null == _ ? void 0 : _.game_server_ip_address);
+            (null == _ ? void 0 : _.lobby_steam_id) &&
+              (_.m_game_lobby_id = null == _ ? void 0 : _.lobby_steam_id);
+            (null == _ ? void 0 : _.game_extra_info) &&
+              (_.m_strGameExtraInfo = null == _ ? void 0 : _.game_extra_info);
+            (null == _ ? void 0 : _.profile_url) &&
+              (_.m_strProfileURL = _.profile_url);
+            return _;
+          })(_._.InitFromAccountID(_), _);
+        },
+      });
+      function _(_, _, _) {
+        const _ = "string" == typeof _ ? new _._(_).GetAccountID() : _;
+        return {
+          queryKey: ["PlayerSummary", _],
+          queryFn: () => _.loadPersonaState(_, _),
+          enabled: !!_,
+        };
+      }
+      let _;
     },
   },
 ]);

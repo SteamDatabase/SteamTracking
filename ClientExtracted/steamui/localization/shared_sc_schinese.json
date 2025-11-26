@@ -4,6 +4,7 @@
     "CreatorHome_Follow_tooltip": "关注此创作者，以在其发行新游戏时通过电子邮件并在蒸汽平台商店中收到通知。电子邮件通知可随时关闭。",
     "EventCurator_BrowseDialog_Title": "来自蒸汽平台鉴赏家的新闻",
     "EventCurator_BrowseDialog_Desc": "关注您最喜爱的蒸汽平台鉴赏家，在您的蒸汽平台新闻中心即可获取游戏新闻！",
+    "EventCurator_BrowseDialog_LangCurator": "%1$s蒸汽平台鉴赏家",
     "EventCurator_FeedCaption_Long": "关注以下部分蒸汽平台鉴赏家，在您的蒸汽平台新闻中心即可获取游戏新闻！",
     "EventCurator_DismissBody": "此操作将隐藏此设备上的新闻建议。您仍然可以前往新闻中心的蒸汽平台鉴赏家选项卡查找新闻。",
     "EventCalendar_Title": "蒸汽平台%1$s新闻中心",
@@ -114,7 +115,10 @@
     "Sale_BrowserSortOption_TopWishlisted_ttip": "按加入愿望单总数（迄今为止）排序的即将推出游戏。仅包括尚未在蒸汽平台上发行的游戏。",
     "Sale_BrowserSortOption_TrendingWishlisted_ttip": "按近期愿望单添加量排序的即将推出的游戏。仅包括尚未在蒸汽平台上发行的游戏。",
     "Sale_BrowserSortOption_PopularComingSoon_ttip": "愿望单热门游戏，按发行日期排序。仅包括尚未在蒸汽平台上发行的游戏。",
-    "Sale_BrowserSortOption_RecentlyReleased_ttip": "最近发行的游戏；按蒸汽平台上发行日期的先后排序。",
+    "Sale_BrowserSortOption_RecentlyReleased_ttip": "近期发行的游戏，按蒸汽平台上发行日期的先后排序。",
+    "Sale_BrowserSortOption_All_ttip": "本次特卖中展示的所有游戏，按蒸汽平台上发行日期的先后排序。",
+    "Sale_BrowserSortOption_AllReleased_ttip": "所有已发行的游戏，按蒸汽平台上发行日期降序排列。",
+    "Sale_BrowserSortOption_AllUpcoming_ttip": "所有即将推出的游戏，按蒸汽平台发行日期升序排列。",
     "SteamAwards_EventMainTitle": "蒸汽平台大奖",
     "SteamAwards_EventMainTitleCombined": "蒸汽平台大奖提名作品",
     "SteamAwards_ExpiredEvent": "此活动的蒸汽平台大奖已结束。请于今年秋季和冬季特卖期间返回，了解年度蒸汽平台大奖！",
@@ -180,6 +184,7 @@
     "ControllerButton_Steam": "蒸汽平台键",
     "steam_curator_follow_ttip": "关注此蒸汽平台鉴赏家，以在未来有新评测时得到通知。评测将在您蒸汽平台主页的精选栏及社区动态推送通知中显示。",
     "Account_Safety_Notice": "注意：Valve 或蒸汽平台的代表绝不会通过聊天联系您。在打开链接时请务必格外小心，尤其是那些要求您登录蒸汽平台的链接。如果情况可疑、反常、带有紧急要求或给予过多好处，那很可能是骗局。",
+    "Account_Safety_Notice_Report": "Valve 或蒸汽平台的代表绝不会通过聊天联系您。",
     "ClipDialog_ShareOnCommunity": "在蒸汽平台上分享…",
     "ClipExport_NoResolutionOptions": "蒸汽平台不支持缩放到低于原始录制尺寸的分辨率。",
     "ShareClip_SaveToRecordings": "在蒸汽平台中保存",
@@ -205,7 +210,5 @@
     "Settings_GameRecording_Length_Modal_NeverExplainer": "蒸汽平台将永远不会录制此游戏。录制热键已禁用。",
     "Settings_VideoRecording_NvidiaDriverUpdate": "您的 NVIDIA 驱动程序已过期。要想用您的显卡来加速视频编码，请从 NVIDIA 网站更新至最新的驱动程序版本（%1$s 或更新），然后重启蒸汽平台。",
     "Settings_GameRecording_BitRate_Modal_Auto_Explainer": "蒸汽平台用游戏的视频分辨率来选择适合每个录像的比特率。选择更高的质量水平可以获得观感更好的录像，但会消耗更多磁盘空间。",
-    "MediaManager_AppHeader_NonSteamGame": "非蒸汽平台游戏",
-    "EventCurator_BrowseDialog_LangCurator": "%1$s蒸汽平台鉴赏家",
-    "Account_Safety_Notice_Report": "Valve 或蒸汽平台的代表绝不会通过聊天联系您。"
+    "MediaManager_AppHeader_NonSteamGame": "非蒸汽平台游戏"
 }

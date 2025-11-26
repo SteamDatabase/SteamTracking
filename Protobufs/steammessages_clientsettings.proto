@@ -173,7 +173,7 @@ message CMsgClientSettings {
 	optional bool download_throttle_while_streaming = 8011 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 download_throttle_rate = 8012 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 default_app_update_behavior = 8013 [(setting_store) = k_EClientSettingStore_CustomFunc];
-	optional bool cloud_enabled = 10000 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool cloud_enabled = 10000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "Software\\Valve\\Steam\\CloudEnabled", (setting_default_bool) = true];
 	optional bool show_screenshot_manager = 10001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "Software\\Valve\\Steam\\ShowScreenshotManager"];
 	optional int32 music_volume = 11000 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool music_pause_on_app_start = 11001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Music\\PauseOnAppStartedProcess"];
@@ -304,4 +304,13 @@ message CMsgClientSettings {
 	optional string accessibility_color_filter_name = 26009 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ColorFilterName", (setting_default_string) = ""];
 	optional float accessibility_desktop_ui_scale = 26010 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/DesktopUIScale", (setting_default_float) = 1];
 	optional string accessibility_screen_reader_locale = 26011 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ScreenReaderLocale", (setting_default_string) = "auto"];
+	optional bool remote_play_wifi_ap_enabled = 27000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPEnabled", (setting_default_bool) = true];
+	optional int32 remote_play_wifi_ap_channel_5ghz = 27001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPChannel5GHz", (setting_default_int) = 0];
+	optional int32 remote_play_wifi_ap_channel_6ghz = 27002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPChannel6GHz", (setting_default_int) = 0];
+	optional int32 remote_play_wifi_ap_channel_width = 27003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPChannelWidth", (setting_default_int) = 0];
+	optional bool remote_play_wifi_ap_hotspot_mode = 27004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPHotspotMode", (setting_default_bool) = false];
+	optional string remote_play_wifi_ap_hotspot_ssid = 27005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPHotspotSSID", (setting_default_string) = ""];
+	optional string remote_play_wifi_ap_hotspot_password = 27006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPHotspotPassword", (setting_default_string) = ""];
+	optional string remote_play_wifi_ap_hotspot_routing = 27007 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPHotspotRouting", (setting_default_string) = "noroute"];
+	optional bool remote_play_wifi_ap_show_advanced = 27008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "streaming_v2/WifiAPShowAdvanced", (setting_default_bool) = false];
 }

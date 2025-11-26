@@ -183,7 +183,7 @@
 "Friends_Friendlist_AllFriends"			"친구 전체"
 "Friends_FriendList_Pendings"			"초대"
 "Friends_FriendList_InvitesReceived"	"초대"
-"Friends_Friendlist_Members"			"회원"
+"Friends_Friendlist_Members"			"멤버"
 "Friends_Friendlist_Guests"			"게스트"
 "Friends_Friendlist_Chat"				"채팅"
 "Friends_ViewSteamIDPage"				"SteamID 페이지 보기"
@@ -250,7 +250,7 @@
 "Friends_Chat_ActionResultBanSuccess"     "%user_name% 님을 차단했습니다."
 "Friends_Chat_ActionResultUnBanSuccess"   "%user_name% 님을 더 이상 차단하지 않습니다."
 
-"Friends_Chat_ActionResultLockChatSuccess"	"채팅이 현재 잠겼습니다(그룹 회원 또는 초대받은 사용자만 입장 가능).\n"
+"Friends_Chat_ActionResultLockChatSuccess"	"채팅이 현재 잠겼습니다(그룹 멤버 또는 초대받은 사용자만 입장 가능).\n"
 "Friends_Chat_ActionResultUnlockChatSuccess"	"이제 채팅방이 공개되었습니다. (모든 사용자에게 개방)\n"
 
 "Friends_Chat_ActionResultTitleFailed"    "액션 실패"
@@ -264,7 +264,7 @@
 
 "Friends_Chat_ActionResultError"						"알 수 없는 오류"
 "Friends_Chat_ActionResultNotPermitted"				"이 액션을 수행할 권한이 없습니다."
-"Friends_Chat_ActionResultNotAllowedOnClanMember"     "상위 등급이 아닌 경우 클랜 회원에게 액션을 사용할 수 없습니다."
+"Friends_Chat_ActionResultNotAllowedOnClanMember"     "상위 등급이 아닌 경우 클랜 멤버에게 액션을 사용할 수 없습니다."
 "Friends_Chat_ActionResultNotAllowedOnBannedUser"     "차단된 사용자에게는 액션을 사용할 수 없습니다."
 "Friends_Chat_ActionResultManageBans"					"채팅방 차단 목록 관리"
 "Friends_Chat_ActionResultNotAllowedOnChatOwner"      "방장에게는 액션을 사용할 수 없습니다."
@@ -458,9 +458,9 @@
 "Steam_VoiceReceiveVolume"	"수신 볼륨"
 "Steam_VoiceMicVolume"	"마이크 볼륨"
 
-"Friends_ViewGroupMembersLink"			"모든 회원 보기"
-"Friends_GroupCollapsedTooManyMembers"	"(표시할 회원이 너무 많음)"
-"Friends_GroupCollapsedNoOtherMembers"	"(더 이상 표시할 회원 없음)"
+"Friends_ViewGroupMembersLink"			"모든 멤버 보기"
+"Friends_GroupCollapsedTooManyMembers"	"(표시할 멤버가 너무 많음)"
+"Friends_GroupCollapsedNoOtherMembers"	"(더 이상 표시할 멤버 없음)"
 
 "Friends_ControlPanelLink"		"커뮤니티 홈"
 
@@ -630,7 +630,7 @@
 "friends_trade_you_recently_changed_email_days"	"최근 귀하의 Steam 계정에 연결된 이메일 주소를 변경하셨습니다. 보관함 안의 아이템들을 보호하기 위해, %days%일간 더 거래가 불가능합니다."
 "friends_trade_you_recently_changed_email_oneday" "최근 귀하의 Steam 계정에 연결된 이메일 주소를 변경하셨습니다. 보관함 안의 아이템들을 보호하기 위해, 1일간 더 거래가 불가능합니다."
 "friends_trade_their_account_cannot_trade"	"현재 %friend%님과 거래할 수 없습니다. %friend%님이 거래를 요청하면 자세한 정보가 표시됩니다."
-"friends_trade_trade_hold_for_cleared_trades_initiator"		"최근 자신의 거래 제안을 모두 취소했기 때문에 %friend% 님과 거래할 수 없습니다."
+"friends_trade_trade_hold_for_cleared_trades_initiator"		"최근 자신의 교환 제안을 모두 취소했기 때문에 %friend% 님과 거래할 수 없습니다."
 "friends_trade_would_exceed_max_asset_count"		"귀하의 보관함에 빈 공간이 충분하지 않아 거래가 완료되지 않았습니다."
 
 "friends_trade_they_are_trading"	"%friend% 친구는 이미 다른 사람과 거래 중이므로 지금 거래하실 수 없습니다."

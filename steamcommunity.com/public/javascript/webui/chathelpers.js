@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10264007";
+var CLSTAMP = "10267426";
 (() => {
   var e,
     t,
@@ -13,12 +13,12 @@ var CLSTAMP = "10264007";
           "./friendsui_arabic.json": [83784, 6518],
           "./friendsui_brazilian.json": [18522, 4154],
           "./friendsui_bulgarian.json": [96737, 6385],
-          "./friendsui_czech.json": [60347, 7487],
+          "./friendsui_czech.json": [82728, 7487],
           "./friendsui_danish.json": [78365, 4787],
           "./friendsui_dutch.json": [46350, 4302],
           "./friendsui_english.json": [30188, 3016],
           "./friendsui_finnish.json": [47487, 8759],
-          "./friendsui_french.json": [25572, 8194],
+          "./friendsui_french.json": [3191, 8194],
           "./friendsui_german.json": [43898, 5480],
           "./friendsui_greek.json": [90192, 4488],
           "./friendsui_hungarian.json": [5365, 5341],
@@ -59,12 +59,12 @@ var CLSTAMP = "10264007";
           "./friendsui_arabic.json": [83784, 6518],
           "./friendsui_brazilian.json": [18522, 4154],
           "./friendsui_bulgarian.json": [96737, 6385],
-          "./friendsui_czech.json": [60347, 7487],
+          "./friendsui_czech.json": [82728, 7487],
           "./friendsui_danish.json": [78365, 4787],
           "./friendsui_dutch.json": [46350, 4302],
           "./friendsui_english.json": [30188, 3016],
           "./friendsui_finnish.json": [47487, 8759],
-          "./friendsui_french.json": [25572, 8194],
+          "./friendsui_french.json": [3191, 8194],
           "./friendsui_german.json": [43898, 5480],
           "./friendsui_greek.json": [90192, 4488],
           "./friendsui_hungarian.json": [5365, 5341],
@@ -100,9 +100,9 @@ var CLSTAMP = "10264007";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      90925: (e, t, n) => {
+      54392: (e, t, n) => {
         "use strict";
-        n(64174);
+        n(4734);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -151,18 +151,18 @@ var CLSTAMP = "10264007";
         function _(e = o) {
           const t = {},
             n = m("config", e);
-          n && (delete n.SESSIONID, Object.assign(g, n), (t.config = !0));
+          n && (delete n.SESSIONID, Object.assign(f, n), (t.config = !0));
           const s = m("userinfo", e);
           s &&
-            (Object.assign(f, s),
+            (Object.assign(g, s),
             (t.userConfig = !0),
-            f.is_support &&
+            g.is_support &&
               (function () {
                 let e = null;
                 a() && (e = r(p));
                 return Boolean(e && 1 === Number.parseInt(e));
               })() &&
-              (f.is_support = !1));
+              (g.is_support = !1));
           const i = m("broadcast", e);
           i && (Object.assign(E, i), (t.broadcastConfig = !0));
           const c = m("community", e);
@@ -170,13 +170,13 @@ var CLSTAMP = "10264007";
           const l = m("event", e);
           return (
             l && (Object.assign(S, l), (t.eventConfig = !0)),
-            (u = !0),
-            d.forEach((e) => e()),
+            (d = !0),
+            u.forEach((e) => e()),
             t
           );
         }
-        let d = new Set(),
-          u = !1;
+        let u = new Set(),
+          d = !1;
         function m(e, t = o) {
           return h(e, t, !0);
         }
@@ -203,7 +203,7 @@ var CLSTAMP = "10264007";
             } catch (e) {
               console.error(
                 "Failed to parse config for " +
-                  f.steamid +
+                  g.steamid +
                   " (" +
                   window.location.href +
                   ")",
@@ -213,80 +213,81 @@ var CLSTAMP = "10264007";
           else n && console.error("Missing config element #", t);
         }
         const p = "presentation_mode";
-        const g = {
-          EUNIVERSE: 0,
-          WEB_UNIVERSE: "",
-          LANGUAGE: "english",
-          SUPPORTED_LANGUAGES: [],
-          COUNTRY: "",
-          AVATAR_BASE_URL: "",
-          MEDIA_CDN_COMMUNITY_URL: "",
-          MEDIA_CDN_URL: "",
-          CLAN_CDN_ASSET_URL: "",
-          COMMUNITY_ASSETS_BASE_URL: "",
-          VIDEO_CDN_URL: "",
-          COMMUNITY_CDN_URL: "",
-          COMMUNITY_CDN_ASSET_URL: "",
-          BASE_URL_SHARED_CDN: "",
-          STORE_CDN_URL: "",
-          PUBLIC_SHARED_URL: "",
-          COMMUNITY_BASE_URL: "",
-          CHAT_BASE_URL: "",
-          STORE_BASE_URL: "",
-          STORE_CHECKOUT_BASE_URL: "",
-          LOGIN_BASE_URL: "",
-          SUPPORT_BASE_URL: "",
-          STORE_ICON_BASE_URL: "",
-          STORE_ITEM_BASE_URL: "",
-          IMG_URL: "",
-          STEAMTV_BASE_URL: "",
-          HELP_BASE_URL: "",
-          PARTNER_BASE_URL: "",
-          STATS_BASE_URL: "",
-          INTERNAL_STATS_BASE_URL: "",
-          BASE_URL_STORE_CDN_ASSETS: "",
-          IN_CLIENT: !1,
-          USE_POPUPS: !1,
-          IN_MOBILE: !1,
-          IN_MOBILE_WEBVIEW: !1,
-          IN_TENFOOT: !1,
-          PLATFORM: "",
-          SNR: "",
-          LAUNCHER_TYPE: 0,
-          EREALM: 0,
-          IN_CHROMEOS: !1,
-          TESLA: !1,
-          LOCAL_HOSTNAME: "",
-          WEBAPI_BASE_URL: "",
-          TOKEN_URL: "",
-          BUILD_TIMESTAMP: 0,
-          PAGE_TIMESTAMP: 0,
-          FROM_WEB: !1,
-          WEBSITE_ID: "Unknown",
-          get SESSIONID() {
-            return (function () {
-              if (!a()) return c || (c = l()), c;
-              let e = r("sessionid");
-              return e || (e = l()), e;
-            })();
-          },
-          FRIENDSUI_BETA: !1,
-          STEAM_TV: !1,
-          DEV_MODE: !1,
-          IN_STEAMUI: !1,
-          IN_GAMEPADUI: !1,
-          IN_STEAMUI_SHARED_CONTEXT: !1,
-          DECK_DISPLAY_MODE: !1,
-          ON_DECK: !1,
-          ON_STEAMOS: !1,
-          IN_GAMESCOPE: !1,
-          IN_LOGIN: !1,
-          IN_LOGIN_REFRESH: !1,
-          USE_LONGEST_LOC_STRING: !1,
-          SILENT_STARTUP: !1,
-          CLIENT_SESSION: 0,
-        };
         const f = {
+            EUNIVERSE: 0,
+            WEB_UNIVERSE: "",
+            LANGUAGE: "english",
+            SUPPORTED_LANGUAGES: [],
+            COUNTRY: "",
+            AVATAR_BASE_URL: "",
+            MEDIA_CDN_COMMUNITY_URL: "",
+            MEDIA_CDN_URL: "",
+            CLAN_CDN_ASSET_URL: "",
+            COMMUNITY_ASSETS_BASE_URL: "",
+            VIDEO_CDN_URL: "",
+            COMMUNITY_CDN_URL: "",
+            COMMUNITY_CDN_ASSET_URL: "",
+            BASE_URL_SHARED_CDN: "",
+            STORE_CDN_URL: "",
+            PUBLIC_SHARED_URL: "",
+            COMMUNITY_BASE_URL: "",
+            CHAT_BASE_URL: "",
+            STORE_BASE_URL: "",
+            STORE_CHECKOUT_BASE_URL: "",
+            LOGIN_BASE_URL: "",
+            SUPPORT_BASE_URL: "",
+            STORE_ICON_BASE_URL: "",
+            STORE_ITEM_BASE_URL: "",
+            IMG_URL: "",
+            STEAMTV_BASE_URL: "",
+            HELP_BASE_URL: "",
+            PARTNER_BASE_URL: "",
+            STATS_BASE_URL: "",
+            INTERNAL_STATS_BASE_URL: "",
+            BASE_URL_STORE_CDN_ASSETS: "",
+            IN_CLIENT: !1,
+            USE_POPUPS: !1,
+            IN_MOBILE: !1,
+            IN_MOBILE_WEBVIEW: !1,
+            IN_TENFOOT: !1,
+            PLATFORM: "",
+            SNR: "",
+            LAUNCHER_TYPE: 0,
+            EREALM: 0,
+            IN_CHROMEOS: !1,
+            TESLA: !1,
+            LOCAL_HOSTNAME: "",
+            WEBAPI_BASE_URL: "",
+            TOKEN_URL: "",
+            BUILD_TIMESTAMP: 0,
+            PAGE_TIMESTAMP: 0,
+            FROM_WEB: !1,
+            WEBSITE_ID: "Unknown",
+            get SESSIONID() {
+              return (function () {
+                if (!a()) return c || (c = l()), c;
+                let e = r("sessionid");
+                return e || (e = l()), e;
+              })();
+            },
+            FRIENDSUI_BETA: !1,
+            STEAM_TV: !1,
+            DEV_MODE: !1,
+            IN_STEAMUI: !1,
+            IN_GAMEPADUI: !1,
+            IN_STEAMUI_SHARED_CONTEXT: !1,
+            DECK_DISPLAY_MODE: !1,
+            ON_DECK: !1,
+            ON_FRAME: !1,
+            ON_STEAMOS: !1,
+            IN_GAMESCOPE: !1,
+            IN_LOGIN: !1,
+            IN_LOGIN_REFRESH: !1,
+            USE_LONGEST_LOC_STRING: !1,
+            SILENT_STARTUP: !1,
+            CLIENT_SESSION: 0,
+          },
+          g = {
             logged_in: !1,
             steamid: "",
             accountid: 0,
@@ -387,8 +388,8 @@ var CLSTAMP = "10264007";
           }
           BClientAccountMatches() {
             return (
-              !f.logged_in ||
-              f.accountid == this.m_connection.ClientInfo.unAccountID
+              !g.logged_in ||
+              g.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }
           GenericEResultCall(e, t = !1) {
@@ -451,8 +452,8 @@ var CLSTAMP = "10264007";
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
             let n = Object.assign({}, e, {
-              universe: g.EUNIVERSE,
-              accountid: f.accountid,
+              universe: f.EUNIVERSE,
+              accountid: g.accountid,
             });
             void 0 !== t && (n.sequenceid = t);
             try {
@@ -1020,9 +1021,9 @@ var CLSTAMP = "10264007";
           GetELanguageFallbackOrder(e = null) {
             let t = new Array();
             if (
-              (t.push(T(g.LANGUAGE)),
-              (g.SUPPORTED_LANGUAGES || []).forEach((e) => {
-                e.value != g.LANGUAGE && t.push(T(e.value));
+              (t.push(T(f.LANGUAGE)),
+              (f.SUPPORTED_LANGUAGES || []).forEach((e) => {
+                e.value != f.LANGUAGE && t.push(T(e.value));
               }),
               e)
             ) {
@@ -1059,7 +1060,7 @@ var CLSTAMP = "10264007";
               this.m_bReportIndividualMissingTokens &&
               X.sm_ErrorReportingStore.ReportError(
                 new Error(
-                  `Unable to find localization token '${e}' for language '${g.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                  `Unable to find localization token '${e}' for language '${f.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
                 ),
                 { bIncludeMessageInIdentifier: !0 },
               );
@@ -1071,7 +1072,7 @@ var CLSTAMP = "10264007";
           }
           static GetTokenWithFallback(e) {
             if (!e) return "";
-            const t = T(g.LANGUAGE),
+            const t = T(f.LANGUAGE),
               n = e.find((e) => e.language == t);
             if (n) return n.localized_string;
             const s = X.GetELanguageFallback(t),
@@ -1155,9 +1156,9 @@ var CLSTAMP = "10264007";
           GetURL() {
             return this.m_strInviteCode
               ? ((e = this.m_strInviteCode),
-                "public" == g.WEB_UNIVERSE
+                "public" == f.WEB_UNIVERSE
                   ? `https://s.team/chat/${e}`
-                  : `${g.COMMUNITY_BASE_URL}chat/invite/${e}`)
+                  : `${f.COMMUNITY_BASE_URL}chat/invite/${e}`)
               : null;
             var e;
           }
@@ -1201,10 +1202,10 @@ var CLSTAMP = "10264007";
                       : re.A.UZERO);
           }
           static InitFromAccountID(e) {
-            return new ae(Number(e), g.EUNIVERSE, 1, 1);
+            return new ae(Number(e), f.EUNIVERSE, 1, 1);
           }
           static InitFromClanID(e) {
-            return new ae(Number(e), g.EUNIVERSE, 7, 0);
+            return new ae(Number(e), f.EUNIVERSE, 7, 0);
           }
           GetAccountID() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -1421,20 +1422,20 @@ var CLSTAMP = "10264007";
               if (n) {
                 if (e) {
                   let n = function (s) {
-                    let i = g.COMMUNITY_BASE_URL.replace(
+                    let i = f.COMMUNITY_BASE_URL.replace(
                       /(https?:\/\/[^/]*).*$/,
                       "$1",
                     );
                     s.source == t &&
                       "FriendsUIReady" == s.data &&
                       s.origin == i &&
-                      (t.postMessage(e, g.COMMUNITY_BASE_URL),
+                      (t.postMessage(e, f.COMMUNITY_BASE_URL),
                       window.removeEventListener("message", n));
                   };
                   window.addEventListener("message", n);
                 }
-                t.location.href = g.COMMUNITY_BASE_URL + "chat/";
-              } else e && t.postMessage(e, g.COMMUNITY_BASE_URL);
+                t.location.href = f.COMMUNITY_BASE_URL + "chat/";
+              } else e && t.postMessage(e, f.COMMUNITY_BASE_URL);
               t.focus();
             })({
               command: "ShowChatRoomGroupInvite",
@@ -1469,13 +1470,13 @@ var CLSTAMP = "10264007";
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? s.createElement(de, { controller: this.props.controller })
-                : s.createElement(ue, { controller: this.props.controller }),
+                ? s.createElement(ue, { controller: this.props.controller })
+                : s.createElement(de, { controller: this.props.controller }),
             );
           }
         };
         _e = z([se.PA], _e);
-        let de = class extends s.Component {
+        let ue = class extends s.Component {
           constructor(e) {
             super(e), (0, ne.Gn)(this);
           }
@@ -1514,7 +1515,7 @@ var CLSTAMP = "10264007";
               );
             let e = this.props.controller.GetConnectResults(),
               t = this.props.controller.GetInvite(),
-              n = (g.COMMUNITY_BASE_URL, this.IsMobileDevice()),
+              n = (f.COMMUNITY_BASE_URL, this.IsMobileDevice()),
               i = "inviteButton inviteButtonJoinChat";
             return (
               t.BIsVoiceChatInvite() && (i += " inviteButtonJoinVoice"),
@@ -1634,12 +1635,12 @@ var CLSTAMP = "10264007";
             );
           }
         };
-        z([ne.sH], de.prototype, "m_bTriedToLaunchSteam", void 0),
-          z([Y], de.prototype, "LaunchWebChat", null),
-          z([Y], de.prototype, "OpenInSteamIgnoreAccount", null),
-          z([Y], de.prototype, "LaunchSteamClient", null),
-          (de = z([se.PA], de));
-        class ue extends s.Component {
+        z([ne.sH], ue.prototype, "m_bTriedToLaunchSteam", void 0),
+          z([Y], ue.prototype, "LaunchWebChat", null),
+          z([Y], ue.prototype, "OpenInSteamIgnoreAccount", null),
+          z([Y], ue.prototype, "LaunchSteamClient", null),
+          (ue = z([se.PA], ue));
+        class de extends s.Component {
           render() {
             return s.createElement(
               "div",
@@ -1708,7 +1709,7 @@ var CLSTAMP = "10264007";
                     s ? {} : n(48516)(`./friendsui_${t}.json`),
                   ]);
                 te.AddTokens({ ...i, ...r }, { ...a, ...o });
-              })(g.LANGUAGE),
+              })(f.LANGUAGE),
               (function () {
                 let e = document.querySelectorAll(".ChatReactRoot");
                 for (let t = 0; t < e.length; t++) {
@@ -1721,7 +1722,7 @@ var CLSTAMP = "10264007";
               })();
           });
       },
-      64174: (e, t, n) => {
+      4734: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1756,7 +1757,7 @@ var CLSTAMP = "10264007";
           "./shared_romanian.json": [50692, 2749],
           "./shared_russian.json": [60868, 8025],
           "./shared_sc_schinese.json": [86078, 9027],
-          "./shared_schinese.json": [66231, 7786],
+          "./shared_schinese.json": [88612, 7786],
           "./shared_spanish.json": [99185, 2632],
           "./shared_swedish.json": [59456, 1225],
           "./shared_tchinese.json": [99260, 5241],
@@ -1802,7 +1803,7 @@ var CLSTAMP = "10264007";
           "./shared_romanian.json": [50692, 2749],
           "./shared_russian.json": [60868, 8025],
           "./shared_sc_schinese.json": [86078, 9027],
-          "./shared_schinese.json": [66231, 7786],
+          "./shared_schinese.json": [88612, 7786],
           "./shared_spanish.json": [99185, 2632],
           "./shared_swedish.json": [59456, 1225],
           "./shared_tchinese.json": [99260, 5241],
@@ -1954,65 +1955,65 @@ var CLSTAMP = "10264007";
       {
         43: "34789ff863ce95895f63",
         762: "b220df99a189bfcd110c",
-        976: "13d422713d08193753b6",
-        1225: "35de7cce91fa12c4b285",
-        1449: "3c7c008b630605270364",
+        976: "e0e994fe47bd63feb5b0",
+        1225: "1bf7cd46e00d77bf1316",
+        1449: "7455cf0a6d9eb2ed4f7a",
         1499: "6658dd1dbea0bb432a3b",
-        1973: "1f1aef44924af71928c7",
-        2256: "8599f4e5b18193dd61ba",
-        2320: "b9a5a69265c868b8629b",
-        2435: "d62a1be6c39b73c38f66",
-        2632: "ba3119d3100d6a0cc305",
-        2749: "5915b23c24b761ea9561",
+        1973: "18731c311b2471cb43d0",
+        2256: "b4e43e5c550f0e9dcf1e",
+        2320: "39f567e6b3f4dbceb956",
+        2435: "3de0a171fdd6714a4ae6",
+        2632: "0ed85d12bb3ad5e75fad",
+        2749: "e9767176f1670ad9c8c9",
         2945: "4d7c2b325ffc0b66a467",
-        2954: "5a2ec68f8769d168e0b2",
+        2954: "88c62aac5decf897a200",
         3e3: "fdcaa37619217053425d",
         3016: "30903b5058513fdf125a",
         3232: "d1572dbcc3c0d0a2c565",
         3415: "6a56dce9127ce66675a7",
         3485: "90fdc9c835f8a0c46b90",
-        3710: "3cb52c7679b48e8e00c6",
+        3710: "56ddd6ed21e5d1dc1ab8",
         3789: "6ee5f2196605f69d0d41",
-        3912: "ebf872aa1e6156dee7bd",
+        3912: "4ef1390335e3c41faf86",
         4154: "3eaac0384373505793bc",
         4302: "1bf1b2ebd1754c1607ec",
         4434: "72a264043bac2e3b8cbc",
         4488: "7db991ecb1dcc5e7cf57",
         4776: "32b5cc1ae497de443a07",
         4787: "6d0f10e69226276eefc9",
-        5018: "11190f74057a31794c31",
-        5110: "421992af81a4ce126b6f",
-        5241: "ef78f5f339819cc0c3fc",
+        5018: "80a8b055144c79ffe8a8",
+        5110: "cedca4f79f6e7ccbfea2",
+        5241: "64fb69a321ce91f3e684",
         5341: "5208f4a5c5f1f7783bd5",
         5480: "ae3ca678b1812b71bf84",
-        6031: "8a0ff124f9adf560e612",
+        6031: "9ff46a1aaaba8db471ba",
         6127: "5c14fb3410b491756350",
-        6149: "e3eb79e767fd1876218b",
-        6165: "e60dd9e494c6f869d377",
-        6208: "d07305bad5255a1e2715",
-        6239: "c6bad0a2a70c14746a4b",
+        6149: "26b32f6e42c998fd63a1",
+        6165: "0d73fed69c1a98e4a644",
+        6208: "d972caa9f5cf0e04c586",
+        6239: "83f5482079c8a6dc8344",
         6385: "33b125d17c30c5ebb20c",
         6518: "7fe5f05b9fed4ee70450",
-        6523: "848df65c358087b6b58a",
-        6562: "9382ca0e24dd76ee3508",
+        6523: "acdd1adda9284b456d8e",
+        6562: "e3a8b7131564535cc40d",
         6609: "84f3670c985cc0ee592b",
         6888: "6d555ab02ecd6390d879",
         6971: "1fa4b5946dc3fcb41898",
-        7487: "7f941eade270e91e7bec",
-        7539: "9bc6c0dfedbb1b78de12",
-        7591: "6f92e6f35fff7824612a",
-        7786: "936f5068c1da6811c1b2",
+        7487: "1dc961b272929ece24eb",
+        7539: "52aa084d0a29d2b24184",
+        7591: "2ff5363fe5a1b884b9e6",
+        7786: "5c4f7784765e320e25ad",
         7861: "8dcc1668ab84e45ec20d",
-        8025: "237a20558e8deffac91f",
-        8194: "4b84749f694c7861d2c0",
-        8306: "9ec0587518942e22a9aa",
+        8025: "57fc345015cdb0602e83",
+        8194: "f6fb97beafe65b98ffa0",
+        8306: "93703cf58382de64bc03",
         8759: "45561fc7b9693e96a978",
         8766: "0a9aa425d47f221064c9",
-        8967: "f9b06ec09f8883407490",
+        8967: "2f3c415718737ed20419",
         9027: "2361a090f9bbb43d8197",
-        9152: "32a7ae473d889fd8746f",
-        9712: "b503bed0088905d8a776",
-        9746: "225c66de8e14d66faee8",
+        9152: "6c5eb84ac46f5dbf61ff",
+        9712: "97a63b447372535c7e9e",
+        9746: "31a714a4630899e864fd",
         9808: "dead02bbd8c46b47e4ee",
       }[e]),
     (o.miniCssF = (e) => {}),
@@ -2037,12 +2038,12 @@ var CLSTAMP = "10264007";
             _ < l.length;
             _++
           ) {
-            var d = l[_];
+            var u = l[_];
             if (
-              d.getAttribute("src") == e ||
-              d.getAttribute("data-webpack") == i + n
+              u.getAttribute("src") == e ||
+              u.getAttribute("data-webpack") == i + n
             ) {
-              a = d;
+              a = u;
               break;
             }
           }
@@ -2054,7 +2055,7 @@ var CLSTAMP = "10264007";
           a.setAttribute("data-webpack", i + n),
           (a.src = e)),
           (s[e] = [t]);
-        var u = (t, n) => {
+        var d = (t, n) => {
             (a.onerror = a.onload = null), clearTimeout(m);
             var i = s[e];
             if (
@@ -2066,11 +2067,11 @@ var CLSTAMP = "10264007";
               return t(n);
           },
           m = setTimeout(
-            u.bind(null, void 0, { type: "timeout", target: a }),
+            d.bind(null, void 0, { type: "timeout", target: a }),
             12e4,
           );
-        (a.onerror = u.bind(null, a.onerror)),
-          (a.onload = u.bind(null, a.onload)),
+        (a.onerror = d.bind(null, a.onerror)),
+          (a.onload = d.bind(null, a.onload)),
           c && document.head.appendChild(a);
       }
     }),
@@ -2150,6 +2151,6 @@ var CLSTAMP = "10264007";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(90925));
+  var c = o.O(void 0, [1068], () => o(54392));
   c = o.O(c);
 })();

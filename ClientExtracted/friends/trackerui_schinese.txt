@@ -479,7 +479,7 @@
 "Friends_ChatPasswordWarning_Title"		"警告：帐户安全风险"
 "Friends_ChatPasswordWarning_Info"			"警告：您即将共享您的密码。"
 "Friends_ChatPasswordWarning_Info2"		"Steam 客服永远不会出于任何原因向您索要密码。如果共享您的密码，您可能会丢失您的 Steam 帐户和所有游戏！\n\n是否确定要共享此信息？"
-"Friends_ChatPasswordWarning_Continue"		"是，发送我的聊天信息"
+"Friends_ChatPasswordWarning_Continue"		"是，发送我的聊天消息"
 "Friends_ChatPasswordWarning_DontSend"		"否，不要发送"
 
 "Friends_BlockCommunicationWarning_Title"	"屏蔽与 %username% 的所有互动"
@@ -630,7 +630,7 @@
 "friends_trade_you_recently_changed_email_days"	"您最近更改了与 Steam 帐户关联的电子邮件地址。为了保护您库存中的物品，在接下来的 %days% 天内您将无法交易物品。"
 "friends_trade_you_recently_changed_email_oneday" "您最近更改了与 Steam 帐户关联的电子邮件地址。为了保护您库存中的物品，在接下来的一天内您将无法交易物品。"
 "friends_trade_their_account_cannot_trade"	"%friend% 无法进行交易。%friend% 将在邀请您交易时看到更多信息。"
-"friends_trade_trade_hold_for_cleared_trades_initiator"		"您无法与 %friend% 进行交易，因为您最近取消了所有的交易报价。"
+"friends_trade_trade_hold_for_cleared_trades_initiator"		"You cannot trade with %friend% because you recently had all your trade offers canceled."
 "friends_trade_would_exceed_max_asset_count"		"这笔交易无法完成，因为它超过了您库存中允许的最大物品数。"
 
 "friends_trade_they_are_trading"	"由于 %friend% 正在和其他人进行交易，您无法与之交易。"

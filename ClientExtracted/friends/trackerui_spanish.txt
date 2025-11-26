@@ -683,7 +683,7 @@
 "Friends_BroadcastInviteNotification" "te ha invitado a ver su retransmisión"
 "Friends_Chat_InviteToBroadcast" "Invitar a ver"
 "Friends_BroadcastApproveNotification" "le gustaría ver tu retransmisión"
-"Friends_BroadcastCantStart_Streaming" "no puede verte mientras se utiliza la retransmisión en casa"
+"Friends_BroadcastCantStart_Streaming" "no puede verte mientras se utiliza Remote Play"
 "Friends_BroadcastApprove" "A %friend% le gustaría ver tu retransmisión"
 "Friends_BroadcastApprove_Approve" "ACEPTAR"
 "Friends_BroadcastApprove_Or" "o"

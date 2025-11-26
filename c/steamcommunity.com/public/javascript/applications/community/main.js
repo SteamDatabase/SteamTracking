@@ -2667,48 +2667,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2766,6 +2728,34 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -2781,9 +2771,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2848,10 +2835,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2877,10 +2860,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2893,24 +2872,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2937,23 +2902,12 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2967,6 +2921,15 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -2977,10 +2940,12 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -3223,21 +3188,6 @@
                       _.createElement(_._, {
                         config: {
                           "manage-friends": () => _.createElement(_, null),
-                        },
-                      }),
-                  }),
-                  _.createElement(_._, {
-                    path: [
-                      _.ProfileVanityGamesList(":vanity_url"),
-                      _.ProfileSteamIDGamesList(":steamid"),
-                    ],
-                    render: (_) =>
-                      _.createElement(_._, {
-                        config: {
-                          "gameslist-root": () =>
-                            _.createElement(_, {
-                              ..._,
-                            }),
                         },
                       }),
                   }),
@@ -18502,10 +18452,6 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -35686,7 +35632,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -35708,23 +35653,8 @@
           })(_, _),
         );
       }
-      function _(_, _ = {}) {
-        const _ = (0, _._)();
-        return (0, _._)({
-          ..._(_, _),
-          ..._,
-        });
-      }
       function _(_, _) {
         return _(_, _, "include_assets", "assets");
-      }
-      function _(_, _) {
-        return _(
-          _,
-          _,
-          "include_assets_without_overrides",
-          "assets_without_overrides",
-        );
       }
       function _(_) {
         return (
@@ -49398,6 +49328,11 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  skip_lock: {
+                    _: 8,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -51285,6 +51220,292 @@
           return "CContentModeration_ClaimSubject_Response";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.steamid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  steamid: {
+                    _: 1,
+                    _: _._.readFixed64String,
+                    _: _._.writeFixed64String,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_GetModeratorPreferences_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.preferred_level || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  preferred_level: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  enabled_subject_types: {
+                    _: 2,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_GetModeratorPreferences_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.preferred_level || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  preferred_level: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  enabled_subject_types: {
+                    _: 2,
+                    _: _,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_SetModeratorPreferences_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.subject_types || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  subject_types: {
+                    _: 1,
+                    _: !0,
+                    _: !0,
+                    _: _._.readEnum,
+                    pbr: _._.readPackedEnum,
+                    _: _._.writeRepeatedEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_SetModeratorPreferences_Request_SubjectTypeList";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CContentModeration_SetModeratorPreferences_Response";
+        }
+      }
       !(function (_) {
         (_.CreateContentReport = function (_, _) {
           return _.SendMsg(
@@ -51492,6 +51713,27 @@
           (_.ClaimSubject = function (_, _) {
             return _.SendMsg(
               "ContentModeration.ClaimSubject#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 5,
+              },
+            );
+          }),
+          (_.GetModeratorPreferences = function (_, _) {
+            return _.SendMsg(
+              "ContentModeration.GetModeratorPreferences#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 5,
+              },
+            );
+          }),
+          (_.SetModeratorPreferences = function (_, _) {
+            return _.SendMsg(
+              "ContentModeration.SetModeratorPreferences#1",
               (0, _._)(_, _),
               _,
               {
@@ -52936,6 +53178,11 @@
                     _: 6,
                     _: _._.readEnum,
                     _: _._.writeEnum,
+                  },
+                  skip_lock: {
+                    _: 7,
+                    _: _._.readBool,
+                    _: _._.writeBool,
                   },
                 },
               }),
@@ -56920,6 +57167,11 @@
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
+                  direct_messages_allowed: {
+                    _: 8,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -60698,6 +60950,11 @@
                   },
                   unread_indicator_muted: {
                     _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  direct_messages_allowed: {
+                    _: 4,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -66565,11 +66822,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
         _: () => _._,
         _: () => _,
         _: () => _,
@@ -69704,7 +69956,7 @@
           ..._,
         });
       }
-      const _ = _.forwardRef(function (_, _) {
+      _.forwardRef(function (_, _) {
         const {
             page: __webpack_require__,
             bAutoFocusPageContent: _,
@@ -69825,104 +70077,9 @@
             }),
         );
       }
-      function _(_) {
-        var _;
-        return _.createElement(_._, {
-          noFocusRing: !0,
-          ..._,
-          className: (0, _._)(_().BasicTextInput, _.className),
-          size: null !== (_ = _.size) && void 0 !== _ ? _ : 1,
-        });
-      }
-      function _(_) {
-        return _.createElement(_, {
-          layout: "below",
-          ..._,
-        });
-      }
-      function _(_) {
-        return _.createElement(
-          _._.Provider,
-          {
-            value: {
-              PagedSettings: _,
-              Content: _,
-              DropDownControlButton: _,
-              DropDownField: _,
-              DropDownMenu: _,
-              ToggleField: _,
-              ToggleControl: _,
-              InputElement: _,
-              SliderField: _,
-              strButtonClassName: _().Button,
-            },
-          },
-          _.children,
-        );
-      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            label: _,
-            icon: __webpack_require__,
-            tooltip: _,
-            explainer: _,
-            explainerTitle: _,
-            disabled: _,
-            strClassName: _,
-            dropDownControlRef: _,
-            description: _,
-            layout: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            autoFocus: _,
-            indentLevel: _,
-            childrenContainerWidth: _ = "fixed",
-            onContextMenu: _,
-            onActivate: _,
-            padding: _,
-            ..._
-          } = _,
-          { actionDescriptions: _, gamepadEvents: _, props: _ } = (0, _._)(_),
-          _ = _.useId(),
-          _ = {
-            label: _,
-            description: null != _ ? _ : _,
-          };
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            ..._,
-            className: _,
-            disabled: _,
-            onActivate: _,
-            icon: __webpack_require__,
-            childrenLayout: null != _ ? _ : "inline",
-            childrenContainerWidth: _,
-            bottomSeparator: _,
-            highlightOnFocus: _,
-            autoFocus: _,
-            indentLevel: _,
-            onContextMenu: _,
-            actionDescriptionMap: _,
-            explainer: _,
-            explainerTitle: _,
-            padding: _,
-            ..._,
-          },
-          _.createElement(_, {
-            ..._(_, _),
-            menuLabel: _,
-            disabled: _,
-            ..._,
-            ref: _,
-          }),
-        );
-      }
       function _(_, _) {
         for (const _ of _.options) {
           if (_(_) && _.data === _) return !0;
@@ -69972,7 +70129,7 @@
           _(_.rgOptions),
         );
       }
-      const _ = _.forwardRef(function (_, _) {
+      _.forwardRef(function (_, _) {
         const {
             className: __webpack_require__,
             opened: _,
@@ -70530,8 +70687,8 @@
               "Notification_BeginInteraction"),
             (_[(_.Notification_Destroyed = 603)] = "Notification_Destroyed");
         })(_ || (_ = {}));
-      const _ = 1,
-        _ = (0, _._)(_()["error-shake-duration"]);
+      const _ = 1;
+      (0, _._)(_()["error-shake-duration"]);
       function _(_, _) {
         return _ < 0 ? 0 : _ > 1 ? 1 : 0 == _ ? _ : Math.round(_ / _) * _;
       }
@@ -71309,334 +71466,6 @@
             ),
         );
       }
-      function _(_) {
-        const {
-            label: _,
-            description: __webpack_require__,
-            tabIndex: _,
-            className: _,
-            showValue: _,
-            renderValue: _,
-            valueSuffix: _,
-            tooltip: _,
-            layout: _,
-            padding: _,
-            bottomSeparator: _,
-            notchCount: _,
-            indentLevel: _,
-            editableValue: _,
-            highlightOnFocus: _,
-            parentSliderRef: _,
-            onOptionsButton: _,
-            onOptionsActionDescription: _,
-            iconLocation: _,
-            childrenContainerWidth: _,
-            explainer: _,
-            explainerTitle: _,
-            onActivate: _,
-            disabled: _,
-            ..._
-          } = _,
-          { icon: _, ..._ } = _,
-          _ = _.useRef(null),
-          _ = _.useRef(null),
-          _ = _.useRef(null),
-          _ = (null != _ ? _ : _)(_.value, _.valueSuffix),
-          _ = (function (_) {
-            var _, _;
-            const { min: _, max: _ } = _,
-              _ = null !== (_ = _.validValues) && void 0 !== _ ? _ : "steps",
-              _ = null !== (_ = _.step) && void 0 !== _ ? _ : _,
-              _ = _.useCallback(
-                (_) => "number" == typeof _ && !Number.isNaN(_),
-                [],
-              ),
-              _ = _.useCallback((_) => !!_(_) && _ >= _ && _ <= _, [_, _, _]),
-              _ = _.useCallback(
-                (_) => !!_(_) && (0 == _ || ((_ - _) / _) % 1 == 0),
-                [_, _, _],
-              ),
-              _ = _.useCallback(
-                (_) => !(!_(_) || "function" != typeof _) && _(_),
-                [_, _],
-              );
-            switch (_) {
-              case "all":
-                return _;
-              case "range":
-                return _;
-              case "steps":
-                return _;
-              default:
-                return _;
-            }
-          })(_),
-          [_, _] = _.useState(!1),
-          _ = () => {
-            _.onChangeStart && _.onChangeStart(3), _(!0);
-          },
-          _ = (_) => {
-            _(_) &&
-              (_.onChange && _.onChange(_, 3),
-              _.onChangeComplete && _.onChangeComplete(_, 3)),
-              _(!1);
-          };
-        _.useEffect(() => {
-          var _, _;
-          !_ &&
-            (null === (_ = _.current) || void 0 === _
-              ? void 0
-              : _.BHasFocus()) &&
-            (null === (_ = _.current) || void 0 === _ || _.TakeFocus());
-        }, [_, _, _]);
-        let _ = _;
-        _
-          ? (_ = _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().LabelText,
-                },
-                _.label,
-              ),
-              _.createElement(_, {
-                navRef: _,
-                editing: _,
-                renderedValue: _,
-                valueSuffix: _.valueSuffix,
-                onClick: _,
-                onChangeComplete: _,
-                validator: _,
-              }),
-            ))
-          : _ &&
-            (_ = _.createElement(
-              _.Fragment,
-              null,
-              _.createElement(
-                "div",
-                {
-                  className: _().LabelText,
-                },
-                _.label,
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().DescriptionValue,
-                  "aria-hidden": !0,
-                },
-                _,
-              ),
-            ));
-        const _ = _.useRef(null),
-          _ = _.useCallback(
-            (_) => {
-              var _;
-              null === (_ = _.current) ||
-                void 0 === _ ||
-                _.OnTouchStart(_.nativeEvent);
-            },
-            [_],
-          ),
-          _ = _.useCallback(
-            (_) => {
-              var _;
-              null === (_ = _.current) || void 0 === _ || _.OnContextMenu(_);
-            },
-            [_],
-          ),
-          _ = (0, _._)(_, _),
-          _ = _ ? _ : void 0,
-          _ = _ ? (0, _._)("#Slider_EditValue") : void 0;
-        let _ = _ || _,
-          _ = _ ? _ : _,
-          _ = _ ? _ : void 0,
-          _ = _ ? _ : void 0;
-        const _ = _.useId(),
-          _ = {
-            label: _,
-            description: __webpack_require__,
-          };
-        return _.createElement(
-          _,
-          {
-            accessibilityId: _,
-            ..._,
-            disabled: _,
-            childrenLayout: null != _ ? _ : "below",
-            padding: _,
-            bottomSeparator: _,
-            childrenContainerWidth: null != _ ? _ : "fixed",
-            ref: _,
-            className: _,
-            onTouchStart: _,
-            onContextMenu: _,
-            indentLevel: _,
-            onMenuActionDescription: _,
-            onMenuButton: _,
-            onActivate: _,
-            highlightOnFocus: _,
-            onOptionsButton: _,
-            onOptionsActionDescription: _,
-            icon: _,
-            iconLocation: null != _ ? _ : "before-children",
-            explainer: _,
-            explainerTitle: _,
-          },
-          _.createElement(_, {
-            ref: _,
-            ..._(_, _),
-            disabled: _,
-            notchCount: _,
-            focusable: !_,
-            navRef: _,
-            renderValue: _,
-            strValueSuffix: _,
-            ..._,
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            editing: _,
-            renderedValue: __webpack_require__,
-            valueSuffix: _,
-            onClick: _,
-            onChangeComplete: _,
-            navRef: _,
-            validator: _,
-          } = _,
-          _ = _.useRef(null),
-          _ = _.useRef(null),
-          _ = _.useRef(null),
-          _ = (0, _._)(_, _),
-          { fnTriggerErrorShake: _, bPlayingErrorShake: _ } = (function (_) {
-            const [_, __webpack_require__] = _.useState(!1),
-              _ = _.useRef(void 0),
-              _ = _.useRef(void 0),
-              _ = _.useCallback(() => {
-                window.clearTimeout(_.current),
-                  (_.current = window.setTimeout(() => {
-                    var _, _, _;
-                    null === (_ = _.current) ||
-                      void 0 === _ ||
-                      _.classList.remove(_().ErrorShake),
-                      null === (_ = _.current) ||
-                        void 0 === _ ||
-                        __webpack_require__.getBoundingClientRect(),
-                      null === (_ = _.current) ||
-                        void 0 === _ ||
-                        _.classList.add(_().ErrorShake);
-                  }, 0)),
-                  __webpack_require__(!0),
-                  window.clearTimeout(_.current),
-                  (_.current = window.setTimeout(
-                    () => __webpack_require__(!1),
-                    _,
-                  ));
-              }, [_]);
-            return (
-              _.useEffect(
-                () => () => {
-                  window.clearTimeout(_.current),
-                    window.clearTimeout(_.current);
-                },
-                [],
-              ),
-              {
-                fnTriggerErrorShake: _,
-                bPlayingErrorShake: _,
-              }
-            );
-          })(_),
-          _ = _ || _,
-          [_, _] = _.useState("");
-        _.useEffect(() => {
-          _ || _("");
-        }, [_]);
-        const _ = _(Number.parseFloat(_)),
-          _ = _.useRef(!1),
-          _ = _.useCallback(
-            (_) => {
-              !_ && _.length > 0 && _(),
-                _.current ||
-                  ((_ || _) && (_(Number.parseFloat(_)), (_.current = !0)));
-            },
-            [_, _, _, _],
-          ),
-          _ = _.useCallback(() => {
-            var _;
-            return null === (_ = _.current) || void 0 === _
-              ? void 0
-              : _.TakeFocusAndShowKeyboard();
-          }, [_]),
-          _ = _.useRef(!1);
-        _.useEffect(() => {
-          _ && !_.current && _(), (_.current = _);
-        }, [_, _, _]);
-        const _ = _ || (_ && !_ && _.length > 0 && "-" != _),
-          _ = (0, _._)(_().DescriptionValue, _ && _().RedBorder),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(0),
-          _ = _.useRef(void 0),
-          _ = _.useCallback(() => {
-            const _ = _.current.clientWidth;
-            _ ? _(_) : _(_);
-          }, [_]);
-        _.useLayoutEffect(_, [_]);
-        const _ = (0, _._)(_),
-          _ = (0, _._)(_, _);
-        _.useEffect(() => {
-          var _, _;
-          (null === (_ = _.current) || void 0 === _ ? void 0 : _.BHasFocus()) &&
-            (null === (_ = _.current) ||
-              void 0 === _ ||
-              _.Node().ForceMeasureFocusRing());
-        }, [_]);
-        const _ = _ ? _ : __webpack_require__,
-          _ = _ ? Math.max(_, _) : _;
-        return _.createElement(
-          "div",
-          {
-            className: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().FakeEditableValue,
-              ref: _,
-            },
-            _,
-          ),
-          _.createElement(_._, {
-            refKeyboardHandle: _,
-            navRef: _,
-            ref: _,
-            focusable: _,
-            className: _().EditableValue,
-            style: {
-              width: _,
-            },
-            onEnterKeyPress: () => _(!1),
-            strEnterKeyLabel: (0, _._)("#ActionButtonLabelDone"),
-            onClick: _,
-            onFocus: () => (_.current = !1),
-            onBlur: () => _(!0),
-            value: _,
-            placeholder: __webpack_require__,
-            onChange: (_) => _(_.target.value.trim()),
-            onCancelButton: () => _(!0),
-            onCancelActionDescription: (0, _._)("#ActionButtonLabelDone"),
-            onOKButton: _,
-            onOKActionDescription: (0, _._)("#Slider_EditValue"),
-            onOptionsActionDescription: void 0,
-            onOptionsButton: _,
-          }),
-        );
-      }
       (0, _._)([_._], _.prototype, "RecomputeSliderBounds", null),
         (0, _._)([_._], _.prototype, "SetDragMode", null),
         (0, _._)([_._], _.prototype, "OnGamepadDirection", null),
@@ -71693,6 +71522,7 @@
           ),
         );
       });
+      var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const {
           value: __webpack_require__,
@@ -72443,7 +72273,6 @@
         lMJ: () => _,
         mLi: () => _,
         _: () => _,
-        nvX: () => _,
         o5t: () => _,
         p71: () => _,
         pcV: () => _,
@@ -72463,7 +72292,6 @@
         vB9: () => _,
         vIU: () => _,
         vbm: () => _,
-        vji: () => _,
         vsW: () => _,
         wB_: () => _,
         x7X: () => _,
@@ -72517,21 +72345,6 @@
           },
           _.createElement("path", {
             _: "M33 20.38V15.62L29.07 14.9C28.8121 14.015 28.453 13.1628 28 12.36L30.27 9.08L26.92 5.71L23.64 8C22.8372 7.54696 21.985 7.18793 21.1 6.93L20.38 3H15.62L14.9 6.93C14.015 7.18793 13.1628 7.54696 12.36 8L9.08 5.71L5.71 9.08L8 12.36C7.54696 13.1628 7.18793 14.015 6.93 14.9L3 15.62V20.38L6.93 21.1C7.18793 21.985 7.54696 22.8372 8 23.64L5.71 26.92L9.08 30.29L12.36 28C13.1637 28.4461 14.0159 28.7984 14.9 29.05L15.62 33H20.38L21.1 29.07C21.985 28.8121 22.8372 28.453 23.64 28L26.92 30.27L30.29 26.9L28 23.64C28.4461 22.8363 28.7984 21.9841 29.05 21.1L33 20.38ZM18 23C17.0111 23 16.0444 22.7068 15.2221 22.1573C14.3999 21.6079 13.759 20.827 13.3806 19.9134C13.0022 18.9998 12.9031 17.9945 13.0961 17.0245C13.289 16.0546 13.7652 15.1637 14.4645 14.4645C15.1637 13.7652 16.0546 13.289 17.0245 13.0961C17.9945 12.9031 18.9998 13.0022 19.9134 13.3806C20.827 13.759 21.6079 14.3999 22.1573 15.2221C22.7068 16.0444 23 17.0111 23 18C23 18.6566 22.8707 19.3068 22.6194 19.9134C22.3681 20.52 21.9998 21.0712 21.5355 21.5355C21.0712 21.9998 20.52 22.3681 19.9134 22.6194C19.3068 22.8707 18.6566 23 18 23Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M27.5 24C29.4972 21.1283 30.3471 17.6129 29.8823 14.146C29.4174 10.679 27.6716 7.5117 24.9884 5.26751C22.3052 3.02332 18.8792 1.86488 15.3846 2.02023C11.8901 2.17559 8.58036 3.63349 6.10692 6.10692C3.63349 8.58036 2.17559 11.8901 2.02023 15.3846C1.86488 18.8792 3.02332 22.3052 5.26751 24.9884C7.5117 27.6716 10.679 29.4174 14.146 29.8823C17.6129 30.3471 21.1283 29.4972 24 27.5L30.26 33.77L30.62 33.41L33.44 30.59L33.8 30.23L27.5 24ZM16 25C14.22 25 12.4799 24.4722 10.9999 23.4832C9.51983 22.4943 8.36628 21.0887 7.68509 19.4442C7.0039 17.7996 6.82567 15.99 7.17294 14.2442C7.52021 12.4984 8.37737 10.8947 9.63605 9.63605C10.8947 8.37737 12.4984 7.52021 14.2442 7.17294C15.99 6.82567 17.7996 7.0039 19.4442 7.68509C21.0887 8.36628 22.4943 9.51983 23.4832 10.9999C24.4722 12.4799 25 14.22 25 16C25 18.387 24.0518 20.6761 22.364 22.364C20.6761 24.0518 18.387 25 16 25Z",
             fill: "currentColor",
           }),
         );
@@ -73503,21 +73316,6 @@
           }),
           _.createElement("path", {
             _: "M20.76 9.58999L5.67 24.67L4 32L11.33 30.33L26.41 15.24L20.76 9.58999Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function _(_) {
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 36 36",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            _: "M21.75 18C21.75 18.7417 21.5301 19.4667 21.118 20.0834C20.706 20.7001 20.1203 21.1807 19.4351 21.4645C18.7498 21.7484 17.9958 21.8226 17.2684 21.6779C16.541 21.5332 15.8728 21.1761 15.3484 20.6517C14.8239 20.1272 14.4668 19.459 14.3221 18.7316C14.1774 18.0042 14.2516 17.2502 14.5355 16.5649C14.8193 15.8797 15.2999 15.294 15.9166 14.882C16.5333 14.4699 17.2583 14.25 18 14.25C18.9946 14.25 19.9484 14.6451 20.6517 15.3483C21.3549 16.0516 21.75 17.0054 21.75 18ZM6 14.25C5.25832 14.25 4.5333 14.4699 3.91661 14.882C3.29993 15.294 2.81928 15.8797 2.53545 16.5649C2.25162 17.2502 2.17736 18.0042 2.32206 18.7316C2.46675 19.459 2.8239 20.1272 3.34835 20.6517C3.8728 21.1761 4.54098 21.5332 5.26841 21.6779C5.99584 21.8226 6.74984 21.7484 7.43506 21.4645C8.12029 21.1807 8.70596 20.7001 9.11801 20.0834C9.53007 19.4667 9.75 18.7417 9.75 18C9.75 17.0054 9.35491 16.0516 8.65165 15.3483C7.94839 14.6451 6.99456 14.25 6 14.25ZM30 14.25C29.2583 14.25 28.5333 14.4699 27.9166 14.882C27.2999 15.294 26.8193 15.8797 26.5355 16.5649C26.2516 17.2502 26.1774 18.0042 26.3221 18.7316C26.4668 19.459 26.8239 20.1272 27.3484 20.6517C27.8728 21.1761 28.541 21.5332 29.2684 21.6779C29.9958 21.8226 30.7498 21.7484 31.4351 21.4645C32.1203 21.1807 32.706 20.7001 33.118 20.0834C33.5301 19.4667 33.75 18.7417 33.75 18C33.75 17.0054 33.3549 16.0516 32.6517 15.3483C31.9484 14.6451 30.9946 14.25 30 14.25Z",
             fill: "currentColor",
           }),
         );
@@ -77583,8 +77381,8 @@
         NCC: () => _,
         NtH: () => _,
         OSJ: () => _,
-        OiG: () => _,
         P7r: () => _,
+        PZP: () => _,
         Q38: () => _,
         QPu: () => _,
         QQ4: () => _,
@@ -77601,6 +77399,7 @@
         Vt2: () => _,
         VvS: () => _,
         WLA: () => _,
+        WUv: () => _,
         WX$: () => _,
         _: () => _,
         X4B: () => _,
@@ -78066,6 +77865,40 @@
             _: "73.335",
             _: "128.333",
             _: "183.333",
+          }),
+        );
+      }
+      function _(_) {
+        const { className: _ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 10 10",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "M6.29032 3.75H10V6.25H6.29032V10H3.70968V6.25H0V3.75H3.70968V0H6.29032V3.75Z",
+          }),
+        );
+      }
+      function _(_) {
+        const { className: _ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 12 12",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            _: "M1 0C0.447715 0 0 0.447715 0 1V11C0 11.5523 0.447715 12 1 12H11C11.5523 12 12 11.5523 12 11V1C12 0.447715 11.5523 0 11 0H1ZM8.85703 6.95227H6.95227V8.85703H5.0475V6.95227H3.14274V5.0475H5.0475V3.14274H6.95227V5.0475H8.85703V6.95227Z",
           }),
         );
       }
@@ -79879,97 +79712,6 @@
             }),
           ),
         );
-      }
-      function _(_) {
-        const { fullcolor: _, ...__webpack_require__ } = _,
-          [_, _] = (0, _._)(),
-          [_, _] = (0, _._)();
-        return _
-          ? _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
-                stroke: _,
-                fill: _,
-                _: "M10.1777 10.0258L10.3929 9.80693V9.49999V5.52777H14.2857H14.6001L14.8205 5.30358L18 2.06976L21.1795 5.30358L21.3999 5.52777H21.7143H25.6071V9.50001V9.80696L25.8223 10.0258L28.5553 12.8055L25.8223 15.5853L25.6071 15.8041V16.1111V20.0833H21.7143H21.3999L21.1795 20.3075L18 23.5413L14.8205 20.3075L14.6001 20.0833H14.2857H10.3929V16.1111V15.8042L10.1777 15.5853L7.44464 12.8055L10.1777 10.0258ZM14.7399 28.0317L11.56 33.4221L9.85164 29.9469L9.6456 29.5278H9.17857H6.29474L8.68445 25.3611H12.1142L14.7399 28.0317ZM26.8214 29.5278H26.3544L26.1484 29.9469L24.44 33.4221L21.2601 28.0317L23.8858 25.3611H27.3155L29.7053 29.5278H26.8214Z",
-                strokeWidth: "1.5",
-              }),
-              _.createElement("circle", {
-                stroke: "#FFAB2C",
-                fill: "#FFC82C",
-                _: "18",
-                _: "13",
-                _: "5.5",
-              }),
-              _.createElement(
-                "defs",
-                null,
-                _.createElement(
-                  "linearGradient",
-                  {
-                    _: _,
-                    _: "7.08",
-                    _: "3.72",
-                    _: "33.6694",
-                    _: "25.0697",
-                    gradientUnits: "userSpaceOnUse",
-                  },
-                  _.createElement("stop", {
-                    stopColor: "#0056D6",
-                  }),
-                  _.createElement("stop", {
-                    offset: "1",
-                    stopColor: "#1A9FFF",
-                  }),
-                ),
-                _.createElement(
-                  "linearGradient",
-                  {
-                    _: _,
-                    _: "7.08",
-                    _: "3.72",
-                    _: "33.6694",
-                    _: "25.0697",
-                    gradientUnits: "userSpaceOnUse",
-                  },
-                  _.createElement("stop", {
-                    stopColor: "#0056D6",
-                  }),
-                  _.createElement("stop", {
-                    offset: "1",
-                    stopColor: "#1A9FFF",
-                  }),
-                ),
-              ),
-            )
-          : _.createElement(
-              "svg",
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-                ...__webpack_require__,
-              },
-              _.createElement("path", {
-                fill: "currentColor",
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                _: "M9.64304 9.49988L6.39294 12.8055L9.64304 16.1112V20.8333H14.2858L18.0001 24.6111L21.7143 20.8333H26.3573V16.111L29.6072 12.8055L26.3573 9.50012V4.77777H21.7143L18.0001 1L14.2858 4.77777H9.64304V9.49988ZM22.6432 12.8056C22.6432 15.4136 20.5645 17.5278 18.0004 17.5278C15.4362 17.5278 13.3575 15.4136 13.3575 12.8056C13.3575 10.1976 15.4362 8.08334 18.0004 8.08334C20.5645 8.08334 22.6432 10.1976 22.6432 12.8056Z",
-              }),
-              _.createElement("path", {
-                fill: "currentColor",
-                _: "M5 30.2778L8.25 24.6111H12.4286L15.6786 27.9167L11.5 35L9.17857 30.2778H5Z",
-              }),
-              _.createElement("path", {
-                fill: "currentColor",
-                _: "M30.9999 30.2778L27.7499 24.6111H23.5713L20.3213 27.9167L24.4999 35L26.8213 30.2778H30.9999Z",
-              }),
-            );
       }
       function _() {
         return _.createElement(
@@ -84432,7 +84174,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -84862,39 +84603,6 @@
               _.getUTCFullYear(),
             );
         }
-      }
-      function _(_) {
-        const _ = Math.floor(_ / _._.PerYear),
-          _ = Math.floor(_ / _._.PerMonth),
-          _ = Math.floor((_ % _._.PerMonth) / _._.PerDay),
-          _ = Math.floor((_ % _._.PerDay) / _._.PerHour),
-          _ = Math.floor((_ % _._.PerHour) / _._.PerMinute);
-        return (
-          (_ %= _._.PerMinute),
-          _ > 0
-            ? (0, _._)("#TimeRemaining_MoreThanOneYear")
-            : _ > 0
-              ? (0, _._)("#TimeRemaining_MonthsDays", _, _)
-              : _ > 0
-                ? (0, _._)(
-                    "#TimeRemaining_DaysHoursMinutes",
-                    _,
-                    _.toString().padStart(2, "0"),
-                    _.toString().padStart(2, "0"),
-                  )
-                : _ > 0
-                  ? (0, _._)(
-                      "#TimeRemaining_HoursMinutesSeconds",
-                      _.toString().padStart(2, "0"),
-                      _.toString().padStart(2, "0"),
-                      _.toString().padStart(2, "0"),
-                    )
-                  : (0, _._)(
-                      "#TimeRemaining_MinutesSeconds",
-                      _.toString().padStart(2, "0"),
-                      _.toString().padStart(2, "0"),
-                    )
-        );
       }
       function _(_, _, _) {
         for (; _.length < _; ) _ = _ + _;
@@ -85781,7 +85489,6 @@
         _: () => _,
         _: () => _._,
         _: () => _,
-        _: () => _._,
         _: () => _,
         _: () => _._,
         _: () => _,
@@ -85947,75 +85654,76 @@
       });
       var _ = __webpack_require__("chunkid");
       const _ = {
-        EUNIVERSE: 0,
-        WEB_UNIVERSE: "",
-        LANGUAGE: "english",
-        SUPPORTED_LANGUAGES: [],
-        COUNTRY: "",
-        AVATAR_BASE_URL: "",
-        MEDIA_CDN_COMMUNITY_URL: "",
-        MEDIA_CDN_URL: "",
-        CLAN_CDN_ASSET_URL: "",
-        COMMUNITY_ASSETS_BASE_URL: "",
-        VIDEO_CDN_URL: "",
-        COMMUNITY_CDN_URL: "",
-        COMMUNITY_CDN_ASSET_URL: "",
-        BASE_URL_SHARED_CDN: "",
-        STORE_CDN_URL: "",
-        PUBLIC_SHARED_URL: "",
-        COMMUNITY_BASE_URL: "",
-        CHAT_BASE_URL: "",
-        STORE_BASE_URL: "",
-        STORE_CHECKOUT_BASE_URL: "",
-        LOGIN_BASE_URL: "",
-        SUPPORT_BASE_URL: "",
-        STORE_ICON_BASE_URL: "",
-        STORE_ITEM_BASE_URL: "",
-        IMG_URL: "",
-        STEAMTV_BASE_URL: "",
-        HELP_BASE_URL: "",
-        PARTNER_BASE_URL: "",
-        STATS_BASE_URL: "",
-        INTERNAL_STATS_BASE_URL: "",
-        BASE_URL_STORE_CDN_ASSETS: "",
-        IN_CLIENT: !1,
-        USE_POPUPS: !1,
-        IN_MOBILE: !1,
-        IN_MOBILE_WEBVIEW: !1,
-        IN_TENFOOT: !1,
-        PLATFORM: "",
-        SNR: "",
-        LAUNCHER_TYPE: 0,
-        EREALM: 0,
-        IN_CHROMEOS: !1,
-        TESLA: !1,
-        LOCAL_HOSTNAME: "",
-        WEBAPI_BASE_URL: "",
-        TOKEN_URL: "",
-        BUILD_TIMESTAMP: 0,
-        PAGE_TIMESTAMP: 0,
-        FROM_WEB: !1,
-        WEBSITE_ID: "Unknown",
-        get SESSIONID() {
-          return (0, _._)();
+          EUNIVERSE: 0,
+          WEB_UNIVERSE: "",
+          LANGUAGE: "english",
+          SUPPORTED_LANGUAGES: [],
+          COUNTRY: "",
+          AVATAR_BASE_URL: "",
+          MEDIA_CDN_COMMUNITY_URL: "",
+          MEDIA_CDN_URL: "",
+          CLAN_CDN_ASSET_URL: "",
+          COMMUNITY_ASSETS_BASE_URL: "",
+          VIDEO_CDN_URL: "",
+          COMMUNITY_CDN_URL: "",
+          COMMUNITY_CDN_ASSET_URL: "",
+          BASE_URL_SHARED_CDN: "",
+          STORE_CDN_URL: "",
+          PUBLIC_SHARED_URL: "",
+          COMMUNITY_BASE_URL: "",
+          CHAT_BASE_URL: "",
+          STORE_BASE_URL: "",
+          STORE_CHECKOUT_BASE_URL: "",
+          LOGIN_BASE_URL: "",
+          SUPPORT_BASE_URL: "",
+          STORE_ICON_BASE_URL: "",
+          STORE_ITEM_BASE_URL: "",
+          IMG_URL: "",
+          STEAMTV_BASE_URL: "",
+          HELP_BASE_URL: "",
+          PARTNER_BASE_URL: "",
+          STATS_BASE_URL: "",
+          INTERNAL_STATS_BASE_URL: "",
+          BASE_URL_STORE_CDN_ASSETS: "",
+          IN_CLIENT: !1,
+          USE_POPUPS: !1,
+          IN_MOBILE: !1,
+          IN_MOBILE_WEBVIEW: !1,
+          IN_TENFOOT: !1,
+          PLATFORM: "",
+          SNR: "",
+          LAUNCHER_TYPE: 0,
+          EREALM: 0,
+          IN_CHROMEOS: !1,
+          TESLA: !1,
+          LOCAL_HOSTNAME: "",
+          WEBAPI_BASE_URL: "",
+          TOKEN_URL: "",
+          BUILD_TIMESTAMP: 0,
+          PAGE_TIMESTAMP: 0,
+          FROM_WEB: !1,
+          WEBSITE_ID: "Unknown",
+          get SESSIONID() {
+            return (0, _._)();
+          },
+          FRIENDSUI_BETA: !1,
+          STEAM_TV: !1,
+          DEV_MODE: !1,
+          IN_STEAMUI: !1,
+          IN_GAMEPADUI: !1,
+          IN_STEAMUI_SHARED_CONTEXT: !1,
+          DECK_DISPLAY_MODE: !1,
+          ON_DECK: !1,
+          ON_FRAME: !1,
+          ON_STEAMOS: !1,
+          IN_GAMESCOPE: !1,
+          IN_LOGIN: !1,
+          IN_LOGIN_REFRESH: !1,
+          USE_LONGEST_LOC_STRING: !1,
+          SILENT_STARTUP: !1,
+          CLIENT_SESSION: 0,
         },
-        FRIENDSUI_BETA: !1,
-        STEAM_TV: !1,
-        DEV_MODE: !1,
-        IN_STEAMUI: !1,
-        IN_GAMEPADUI: !1,
-        IN_STEAMUI_SHARED_CONTEXT: !1,
-        DECK_DISPLAY_MODE: !1,
-        ON_DECK: !1,
-        ON_STEAMOS: !1,
-        IN_GAMESCOPE: !1,
-        IN_LOGIN: !1,
-        IN_LOGIN_REFRESH: !1,
-        USE_LONGEST_LOC_STRING: !1,
-        SILENT_STARTUP: !1,
-        CLIENT_SESSION: 0,
-      };
-      const _ = {
+        _ = {
           logged_in: !1,
           steamid: "",
           accountid: 0,

@@ -128,6 +128,7 @@ message CFriendMessages_ResolveReport_Request {
 	optional uint64 subject_id = 4;
 	optional .EContentReportResolution resolution = 5 [default = k_EContentReportResolution_Unresolved];
 	optional .EContentReportReason reason = 6 [default = k_EContentReportReason_Invalid];
+	optional bool skip_lock = 7;
 }
 
 message CFriendMessages_ResolveReport_Response {

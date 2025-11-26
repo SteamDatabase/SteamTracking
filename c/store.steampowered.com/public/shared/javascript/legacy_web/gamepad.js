@@ -1323,6 +1323,7 @@
         IN_STEAMUI_SHARED_CONTEXT: !1,
         DECK_DISPLAY_MODE: !1,
         ON_DECK: !1,
+        ON_FRAME: !1,
         ON_STEAMOS: !1,
         IN_GAMESCOPE: !1,
         IN_LOGIN: !1,

@@ -3492,8 +3492,8 @@
             include_assets: !0,
           }),
           [_, _] = (0, _._)(() => [
-            _.GetEventType(),
-            _.BHasTag("vo_marketing_message"),
+            _?.GetEventType(),
+            _?.BHasTag("vo_marketing_message"),
           ]),
           _ = 36 == _;
         let _ = null;

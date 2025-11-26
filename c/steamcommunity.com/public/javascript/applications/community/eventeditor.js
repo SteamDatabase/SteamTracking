@@ -9579,6 +9579,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
@@ -9711,7 +9712,8 @@
         }),
         _ = (_) => {
           const { editModel: _ } = _,
-            _ = (0, _._)(() => {
+            [__webpack_require__, _, _] = (0, _._)(),
+            _ = (0, _._)((_) => {
               const _ = {
                   ..._._,
                   unique_id: _.GenerateSaleSectionUniqueID(),
@@ -9723,23 +9725,69 @@
                 (_.background_gradient_top = _.background_gradient_top),
                 (_.border_color = _.border_color),
                 (_.border_width = _.border_width)),
+                _._.SetSaleSectionType(_, _),
                 _.GetEventModel().jsondata.sale_sections.push(_),
                 _.SetDirty(_._.jsondata_sales),
-                (0, _._)((0, _._)(_), !0);
-              const _ = document.getElementById(
-                "sale_editor_button_after_all_sections",
-              );
-              _ && _.scrollIntoView();
+                (0, _._)((0, _._)(_), !0),
+                _();
             });
           return _.createElement(
-            _._,
-            {
-              onClick: _,
-              className: _.AddSectionButton,
-            },
-            (0, _._)("#Sale_AddNewSection"),
+            _.Fragment,
+            null,
+            _.createElement(
+              _._,
+              null,
+              _.createElement(
+                _._,
+                {
+                  active: __webpack_require__,
+                },
+                _.createElement(_, {
+                  clanSteamID: _.GetClanSteamID(),
+                  eventType: _.GetEventType(),
+                  fnSectionTypeChosen: _,
+                  closeModal: _,
+                }),
+              ),
+            ),
+            _.createElement(
+              _._,
+              {
+                onClick: _,
+                className: _.AddSectionButton,
+              },
+              (0, _._)("#Sale_AddNewSection"),
+            ),
           );
         };
+      function _(_) {
+        const {
+            clanSteamID: _,
+            eventType: __webpack_require__,
+            fnSectionTypeChosen: _,
+            closeModal: _,
+          } = _,
+          [_, _] = _.useState("unselected_empty"),
+          _ = (0, _._)(_, __webpack_require__);
+        return _.createElement(
+          _._,
+          {
+            strTitle: (0, _._)("#Sale_AddNewSection_Title"),
+            strDescription: (0, _._)("#Sale_AddNewSection_Desc"),
+            onOK: () => _(_),
+            onCancel: _,
+            closeModal: _,
+          },
+          _.createElement(_._, {
+            rgSectionTypeInfos: _,
+            sectionType: _,
+            fnSetSectionType: (_) => _(_),
+          }),
+          _.createElement("div", {
+            className: (0, _._)(_.FlexColumnContainer, _().ReassignCtn),
+          }),
+        );
+      }
       function _(_) {
         const _ = _._.GetEditModel(),
           [__webpack_require__, _, _] = (0, _._)(),
@@ -12784,7 +12832,24 @@
                 const _ = (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), 1);
                 return "string" == typeof _ && _.toLowerCase().includes(_);
               })(_),
-          );
+          ),
+          _ = (function (_) {
+            const _ = _.map((_) => _.unique_id).join(","),
+              [__webpack_require__, _] = _.useState(_);
+            _.useEffect(() => {
+              _(_);
+            }, [_]);
+            const _ = (_, _) => {
+              if (!_) return;
+              ((0 == __webpack_require__.length && _ > 0) ||
+                __webpack_require__ + "," + _ == _) &&
+                _.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+            };
+            return _;
+          })(_);
         return _.createElement(
           _.Fragment,
           null,
@@ -12839,6 +12904,10 @@
                       strSectionId: _,
                     },
                     _.createElement(_._, {
+                      ref:
+                        _ == _.length - 1
+                          ? (_) => _(_, _[_].unique_id)
+                          : void 0,
                       index: _,
                       saleSection: _,
                       isDuplicateSingleton: _,
@@ -17661,7 +17730,8 @@
         const { editModel: _ } = _,
           _ = _._.Get().GetPartnerEventPermissions(_.GetClanSteamID());
         let _ = _.useRef(void 0);
-        const _ = _.BHasSaleEnabled();
+        const _ = _.BHasSaleEnabled(),
+          _ = _.GetEventType();
         if (!_.valve_admin) return null;
         return _.createElement(
           _.Fragment,
@@ -17811,9 +17881,14 @@
                     _.SetTag("vo_marketing_message", _);
                 },
                 label: "(VO) Marketing Message Major Update",
+                disabled:
+                  !_.GetEventModel().BHasTag("vo_marketing_message") && 14 != _,
                 checked: _.GetEventModel().BHasTag("vo_marketing_message"),
                 description:
-                  "This will surface on the event editor the rules and requirements behind being featured in a marketing message to better align them with customer information",
+                  "This will surface on the event editor the rules and requirements behind being featured in a marketing message to better align them with customer information." +
+                  (14 != _
+                    ? " This can only be enable for Major Update Type."
+                    : ""),
               }),
             _.createElement(_._, {
               onChange: (_) => _.SetTag("vo_prevent_delete", _),

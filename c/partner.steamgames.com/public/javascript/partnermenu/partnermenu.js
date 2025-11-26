@@ -32065,6 +32065,7 @@ Error generating stack: ` +
         IN_STEAMUI_SHARED_CONTEXT: !1,
         DECK_DISPLAY_MODE: !1,
         ON_DECK: !1,
+        ON_FRAME: !1,
         ON_STEAMOS: !1,
         IN_GAMESCOPE: !1,
         IN_LOGIN: !1,
@@ -41583,7 +41584,7 @@ Error generating stack: ` +
       httpOnly: !0,
       path: "/",
       sameSite: "none",
-      maxAge: 60 * 1e3,
+      maxAge: 5 * 1e3,
     },
     preferenceControls: {
       isTechnicallyNecessary: !0,

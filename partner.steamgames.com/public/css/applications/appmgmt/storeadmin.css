@@ -547,7 +547,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   color: #dedede;
 }
 ._3oZ2A8CpTx8VWK_eJhZYh {
-  width: 870px;
+  width: 840px;
   max-width: 100%;
   margin-bottom: 64px;
 }
@@ -1444,12 +1444,15 @@ video._1W2-3_i4cuGzBmocT-ZAk5.QRTy6qng-IEOMiXMxwVtY {
   padding: 16px 8px;
   background: rgba(0, 0, 0, 0.35);
 }
+._2Uzyt8kZcr-0KU1aoTkiuj ._3LTnCSzSad_SJbC1nruDT8 {
+  right: -8px;
+}
 ._39FaN2oioTXV-lkAOG0jfE {
   overflow: auto;
-  max-height: 480px;
+  max-height: 680px;
 }
 ._39FaN2oioTXV-lkAOG0jfE ._2Uzyt8kZcr-0KU1aoTkiuj {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 ._12hVxV1z_asvDHFqo9ScMk
   ._13xCWTST4J-cgOyz6kwfIJ.QRTy6qng-IEOMiXMxwVtY
@@ -2040,7 +2043,7 @@ a._3TN0uESBGJ-kUDPWWX2YWz:hover {
   );
 }
 ._3bpOE-B9MDag6KQR0eBkuM {
-  cursor: pointer;
+  cursor: auto;
 }
 ._2WpGoEdbqT778yiAcOF1LI._3EAE8BxFPnb_g0Ct5b4QzW {
   background: #121a24;
@@ -2070,7 +2073,7 @@ a._3TN0uESBGJ-kUDPWWX2YWz:hover {
   background: #0e141bcc;
 }
 ._2m49NX6vFS6SVkkvgmwGY0._3EAE8BxFPnb_g0Ct5b4QzW .ProseMirror {
-  max-height: 494px;
+  height: 494px;
   width: 479px;
 }
 ._2m49NX6vFS6SVkkvgmwGY0._3EAE8BxFPnb_g0Ct5b4QzW h2._1aQY7Yz23XDN0N4IVctriG {

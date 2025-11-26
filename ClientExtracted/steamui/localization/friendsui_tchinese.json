@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "刪除訊息",
     "Chat_Actions_Select_Message": "選擇訊息",
     "Chat_Actions_Report": "檢舉",
+    "Chat_Actions_ReportGroup": "檢舉群組聊天",
     "Chat_Actions_React": "反應",
     "Chat_Actions_Delete": "刪除",
     "Chat_Actions_DeleteChatMessages_Confirm": "您確定要刪除來自 %1$s 的訊息嗎？",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "修正在 Linux 和 macOS 中，好友與聊天視窗無法顯示於遊戲內嵌介面中的問題",
     "BBCode_Loading": "載入中",
     "BBCode_Failed": "載入失敗",
-    "broadcastDetails_Playing": "正在遊玩",
-    "Chat_Actions_ReportGroup": "檢舉群組聊天"
+    "broadcastDetails_Playing": "正在遊玩"
 }

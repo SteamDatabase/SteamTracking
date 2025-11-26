@@ -158,6 +158,7 @@
 "^\n\fOneofOptions
 "ctrl"\t"1"\n
 "e" must be followed by exponent.
+"k\n\vCMsgPostURL
 "keycode"\t"%s"\n
 "shift"\t"1"\n
 "t\n\rCMsgAddHeader
@@ -461,12 +462,9 @@ $\nY8O
 %s/.local/share/applications
 %s/.steam/%s
 %s/.steam/steam
-%s/chromehtml
 %s/config
-%s/filesystem_%s
 %s/skins/%s
 %s/steamXXXXXX
-%s/vgui2_s
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: command exited unexpectedly: %s\n
 %s: command exited unexpectedly\n
@@ -561,6 +559,7 @@ $\nY8O
 (\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
 (\n$k_EContentReportSubjectAction_Locked
+(\n$k_EContentReportSubjectAction_Warned
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -583,7 +582,6 @@ $\nY8O
 (\r"P\n\rCMsgMouseMove
 (\r"Y\n\rCMsgSizePopup
 (\r"^\n#CMsgZoomToElementAtPositionResponse
-(\r"k\n\vCMsgPostURL
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
@@ -642,6 +640,8 @@ $\nY8O
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
+)\n%k_EContentReportSubjectAction_Claimed
+)\n%k_EContentReportSubjectAction_Deleted
 )\n%k_EContentReportSubjectAction_Invalid
 )\n%k_EContentReportSubjectAction_Updated
 )\n%k_EContentReportSubjectType_ChatGroup
@@ -667,8 +667,8 @@ $\nY8O
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN17CScreenshotThread3RunEvEUlP10CUtlBufferiiE_
-*ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
-*ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
+*ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
+*ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
 *\\n\fEExportCodec
 *\n%k_EPersonaStateFlag_ClientTypeTenfoot
 *\n%k_EPersonaStateFlag_LaunchTypeGamepad
@@ -681,6 +681,7 @@ $\nY8O
 *\n&k_EContentReportReason_OtherDisruptive
 *\n&k_EContentReportReason_OtherHarassment
 *\n&k_EContentReportSubjectAction_Disputed
+*\n&k_EContentReportSubjectAction_Released
 *\n&k_EContentReportSubjectAction_Unlocked
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
@@ -698,6 +699,7 @@ $\nY8O
 +\n'k_ECompromiseDetectionType_TicketAction
 +\n'k_EContentReportReason_GenderedStalking
 +\n'k_EContentReportReason_NamingAndShaming
++\n'k_EContentReportResolution_RemoveAndBan
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
@@ -735,6 +737,7 @@ $\nY8O
 ,\n(k_EContentReportReason_AttemptedScamming
 ,\n(k_EContentReportReason_CSAMSexualContent
 ,\n(k_EContentReportReason_InauthenticReview
+,\n(k_EContentReportResolution_RemoveAndWarn
 ,\n(k_EContentReportSubjectAction_Sanctioned
 ,\n(k_EContentReportSubjectAction_Unresolved
 ,\n(k_EControlledLegalCategoryStatus_Accused
@@ -767,6 +770,7 @@ $\nY8O
 -\n)k_EContentReportReason_EncouragingSuicide
 -\n)k_EContentReportReason_GenderedHarassment
 -\n)k_EContentReportReason_OtherScamsAndTheft
+-\n)k_EContentReportSubjectAction_TradeBanned
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EProfileCustomizationTypeRecommendation
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
@@ -836,6 +840,7 @@ $\nY8O
 .\n*k_EContentReportReason_EncouragingSelfHarm
 .\n*k_EContentReportReason_EncouragingViolence
 .\n*k_EContentReportReason_OrganizingTerrorism
+.\n*k_EContentReportSubjectAction_ResetContent
 .\n*k_EControlledLegalCategoryStatus_Acquitted
 .\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EProfileCustomizationTypeArtworkShowcase
@@ -879,6 +884,7 @@ $\nY8O
 /\n+k_ECommunityItemClass_SteamDeckStartupMovie
 /\n+k_EContentReportReason_EncouragingTerrorism
 /\n+k_EContentReportResolution_HarassmentStrike
+/\n+k_EContentReportSubjectAction_BannedFromHub
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
@@ -1028,7 +1034,6 @@ $\nY8O
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-07:00:29
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
@@ -1055,11 +1060,11 @@ $\nY8O
 10CUtlMemoryI20ModuleAddressRange_tE
 10CUtlMemoryI22PanelAnimationMapEntryE
 10CUtlMemoryI9CSmartPtrI15CJSCallbackFuncEE
-10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
@@ -1070,7 +1075,6 @@ $\nY8O
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcbi22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIiPN4vgui5PanelEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_tS_IS2_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
@@ -1122,7 +1126,7 @@ $\nY8O
 10CUtlMemoryIP9KeyValuesE
 10CUtlMemoryIPK11CFileWriterE
 10CUtlMemoryIPK9KeyValuesE
-10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
+10CUtlMemoryIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tEE
 10CUtlMemoryIPN4vgui10ClickPanelEE
 10CUtlMemoryIPN4vgui10MenuButtonEE
 10CUtlMemoryIPN4vgui13MenuSeparatorEE
@@ -1138,11 +1142,11 @@ $\nY8O
 10CUtlMemoryImE
 10CUtlMemoryIsE
 10CUtlMemoryIwE
-10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES1_E
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -1153,7 +1157,6 @@ $\nY8O
 10CUtlRBTreeIN7CUtlMapIPKcbi22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIiPN4vgui5PanelEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
 10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
-10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS1_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E
 10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
 10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
@@ -1193,7 +1196,7 @@ $\nY8O
 10CUtlVectorIP9KeyValues10CUtlMemoryIS1_EE
 10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
 10CUtlVectorIPK9KeyValues10CUtlMemoryIS2_EE
-10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
+10CUtlVectorIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tE10CUtlMemoryIS5_EE
 10CUtlVectorIPN4vgui10ClickPanelE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui10MenuButtonE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui13MenuSeparatorE10CUtlMemoryIS2_EE
@@ -1456,6 +1459,7 @@ $\nY8O
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
+1\n-k_EContentReportReason_QuotesModeratedContent
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
 1\n-k_EPublishedFileInappropriateProvider_Invalid
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
@@ -1486,6 +1490,7 @@ $\nY8O
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
+21:18:08
 21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
 21CMsgBrowserSetMinSize
@@ -1572,6 +1577,7 @@ $\nY8O
 2\n.k_EContentReportReason_OtherCommercialActivity
 2\n.k_EContentReportReason_OtherViolenceOrSelfHarm
 2\n.k_EContentReportResolution_DisconnectedFromApp
+2\n.k_EContentReportSubjectAction_EscalatedForCSAM
 2\n.k_EPublishedFileInappropriateResult_NotScanned
 2\n.k_EPublishedFileInappropriateResult_VeryLikely
 2\n.k_EWindowsUpdateRebootBehavior_MightNeedReboot
@@ -1600,6 +1606,7 @@ $\nY8O
 4\n'k_EChildProcessQueryExitCode_ErrorOther
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
+4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
 4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
@@ -1611,6 +1618,7 @@ $\nY8O
 52F*
 5T&w&
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
+5\n1k_EContentReportSubjectAction_BannedFromCommunity
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
 5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
@@ -1627,9 +1635,8 @@ $\nY8O
 6\n\fmessage_type
 7CCookie
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
-7CUtlMapI10CUtlStringbi8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
-7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessE
+7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE
 7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE
 7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE
 7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE
@@ -1640,10 +1647,12 @@ $\nY8O
 7CUtlMapIPKcbi22CDefCaselessStringLessE
 7CUtlMapIiPN4vgui5PanelEi8CDefLessE
 7CUtlMapIjbs8CDefLessE
-7CUtlMapIybi8CDefLessE
+7CUtlSetI10CUtlStringi8CDefLessE
+7CUtlSetIyi8CDefLessE
 7IHTMLJS
 7\n*k_EChildProcessQueryExitCode_ErrorFileSave
 7\n*k_EWindowsUpdateInstallationImpact_Unknown
+7\n3k_EContentReportSubjectAction_EscalatedForTerrorism
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
@@ -1653,8 +1662,8 @@ $\nY8O
 83N6
 83Q2
 83Q3
-8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
-8CAutoPtrI7CUtlMapIybi8CDefLessEE
+8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
+8CAutoPtrI7CUtlSetIyi8CDefLessEE
 8CJSArray
 8CMsgCopy
 8CMsgFind
@@ -1774,6 +1783,7 @@ Account has an existing user cancelled license
 Account has been deleted
 Account is blocked
 Account is not allowed
+Account is restricted from purchasing adult content
 Account locked
 Account logon denied, need two-factor code
 Account not verified
@@ -2446,7 +2456,9 @@ CPUUtilizationSep
 CPanelKeyBindingMapDictionary
 CPathString
 CPerfLabel
+CRC32_ProcessBuffer
 CRLF)
+CSHA1::Update
 CSPAuth
 CScreenshotThread::Run - Error reading screenshot stream. Clearing any remaining data.\n
 CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
@@ -2471,7 +2483,6 @@ CUtlString::VFormat
 CUtlStringBuilder::Data::MoveToHeap
 CUtlStringBuilder::InternalPrepareBuffer
 CUtlStringBuilder::ReplaceInternal
-CUtlSymbol
 CUtlSymbolTable
 CVProfile_ExitScope
 CValidator::ClaimArrayMemory(void const*, bool)
@@ -2792,6 +2803,7 @@ Deaccel
 Debit Card (Nodwin)
 Debug
 December
+Deckard
 Default
 Default value for an enum field must be an identifier.
 DefaultFixed
@@ -3005,6 +3017,7 @@ EPersonaState
 EPersonaStateFlag
 EPersonalQuestion
 EPlatformType
+EPressOutletAction
 EProfileCustomizationType
 EProvideDeckFeedbackPreference
 EPublishedFileInfoMatchingFileType
@@ -3382,6 +3395,7 @@ Fraud Check Failed
 Free
 Free Weekend
 Free disk space for %s would overflow
+Fremont
 French
 FrenemyFilter
 Friday
@@ -3814,6 +3828,7 @@ Joystick
 July
 June
 K'iche'
+K<\t71a*
 KEY_0
 KEY_1
 KEY_2
@@ -4009,6 +4024,7 @@ KeyValues::ReadAsBinary() stack depth > 100
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
+KeyValues::RemoveSubKey
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
@@ -4667,7 +4683,7 @@ Not supported.
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 NotificationClickPanel
-Nov 22 2025
+Nov 25 2025
 November
 Num Lock
 Num Lock Toggle
@@ -4900,6 +4916,7 @@ Plat_IsChromeOS
 Plat_IsGamescope
 Plat_IsInDebugSession
 Plat_IsSteamDeck_DoNotUse
+Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
 Plat_IsTesla
@@ -5503,7 +5520,7 @@ SwitchToUser
 Switching Protocols
 Syloti_Nagri
 Symbol name "
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 Synthetic oneofs must be after all other oneofs
 Syriac
 System
@@ -6682,6 +6699,7 @@ chinatelecom
 chmod
 choose_directory
 chown
+chromehtml
 chromeos_public_88ac3843c888c7adb9cd406fbac4ff7a7d2cde9b
 className
 clearbutton
@@ -6772,6 +6790,7 @@ controller_switch_joycon_pair
 controller_switch_joycon_right
 controller_switch_pro
 controller_switch_pro_generic
+controller_triton
 controller_ui
 controller_unknown
 controller_wii
@@ -6854,7 +6873,7 @@ demo
 demoted from moderator
 demoted from officer
 depotdeltapatch
-depotonly
+depotingest
 depots
 derive
 description
@@ -7012,6 +7031,7 @@ files
 filesize
 filesize64
 filesystem
+filesystem_%s
 filetx
 fileurl
 filipino
@@ -7071,6 +7091,7 @@ franchise
 fread
 free
 freeaddrinfo
+fremont
 french
 freopen
 frequency
@@ -7647,6 +7668,14 @@ k_EOSBranch_ReleaseCandidate
 k_EOSBranch_Staging
 k_EOSBranch_Unknown
 k_EPersonaStateFlag_Golden
+k_EPressOutletAction_Created
+k_EPressOutletAction_Deleted
+k_EPressOutletAction_Granted
+k_EPressOutletAction_Invalid
+k_EPressOutletAction_MAX
+k_EPressOutletAction_Removed
+k_EPressOutletAction_Undeleted
+k_EPressOutletAction_Updated
 k_EResolutionAutomation_MAX
 k_EResolutionAutomation_Manual
 k_ESDCardFormatStage_Finalizing
@@ -7991,6 +8020,8 @@ m_pOverlaySurface
 m_pParent == this
 m_pParent->IsDraggableTab()
 m_pRootNode == NULL
+m_pSetIntValue
+m_pSetStringValue
 m_pSpaceAvail
 m_pStream->BWaitForDataToGet()
 m_pTextImage
@@ -7998,8 +8029,6 @@ m_pTooltips
 m_pTreeView->IsLabelEditingAllowed()
 m_pTreeView->m_pFilter
 m_pUserData
-m_pVecStringValue
-m_pVecUlValue
 m_pkv
 m_pkvCommand
 m_pkvData
@@ -8040,6 +8069,7 @@ m_strFileNamePrevious
 m_strLogLine
 m_strResourceName
 m_strWatchPath
+m_tree
 m_unInCounter == m_unOutCounter
 m_unused
 m_usType == k_EIPTypeV6
@@ -8867,7 +8897,6 @@ stop using I64/I32, use lld or d respectively
 stopanimation
 stopevent
 store
-stpcpy
 strFileTypeName
 strInitialFile
 strOut.BEndsWith( "/" )
@@ -9128,6 +9157,7 @@ vertical-align
 vfat
 vgui editor - "%s"
 vgui layout debugger
+vgui2_s
 vgui::
 vgui::AppRootPanel
 vgui::BuildGroup

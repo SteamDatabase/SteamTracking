@@ -249,7 +249,6 @@
         m_fnLaunchChat;
         m_iTimeoutLogin = void 0;
         m_eLogonState = 0;
-        m_bLogonDialogVisisible = !1;
         m_steamID = void 0;
         m_reactRoot;
         Init(_) {
@@ -281,17 +280,8 @@
         BIsPerformingLogonCheck() {
           return 0 == this.m_eLogonState || 1 == this.m_eLogonState;
         }
-        BIsLogonDialogVisible() {
-          return this.m_bLogonDialogVisisible;
-        }
-        ShowLogonDialog() {
-          this.m_bLogonDialogVisisible = !0;
-        }
         BReadyToRender() {
           return 0 != this.m_eLogonState;
-        }
-        DismissLogonDialog() {
-          this.m_bLogonDialogVisisible = !1;
         }
         GetSteamIDWatched() {
           return this.m_steamID;
@@ -310,15 +300,13 @@
           let _ = _.data;
           if (_)
             if ("OnLoginButtonClicked" == _.msg)
-              console.log("Login button clicked"),
-                (this.m_bLogonDialogVisisible = !0);
+              console.log("Login button clicked"), (window.location.href = _());
             else if ("LoginNeeded" == _.command) this.m_eLogonState = 2;
             else if ("LogonComplete" == _.command)
               return void this.LaunchChat();
         }
       }
       (0, _._)([_._], _.prototype, "m_eLogonState", void 0),
-        (0, _._)([_._], _.prototype, "m_bLogonDialogVisisible", void 0),
         (0, _._)([_._], _.prototype, "m_steamID", void 0),
         (0, _._)([_._], _.prototype, "LaunchChat", null),
         (0, _._)([_._.bound], _.prototype, "HandlePostMessage", null);
@@ -338,9 +326,6 @@
           this.m_broadcastInfo &&
             (_.BroadcastWatchStore.StopInfo(this.m_broadcastInfo),
             (this.m_broadcastInfo = null));
-        }
-        OnShowLogin() {
-          this.props.app.ShowLogonDialog();
         }
         ToggleChat() {
           this.setState({
@@ -398,7 +383,7 @@
                           (this.state.bChatCollapsed ? " ChatCollapsed" : ""),
                       },
                       _.createElement(_, {
-                        onClick: this.OnShowLogin,
+                        onClick: () => (window.location.href = _()),
                       }),
                       _.createElement(_, {
                         onClick: this.ToggleChat,
@@ -406,18 +391,12 @@
                       }),
                     ),
                   ),
-                  _.createElement(
-                    _,
-                    {
-                      steamID: _.GetSteamIDWatched(),
-                      watchLocation: _,
-                      bHideChat: this.state.bChatCollapsed,
-                      onTheaterMode: this.ToggleTheaterMode,
-                    },
-                    _.createElement(_, {
-                      app: _,
-                    }),
-                  ),
+                  _.createElement(_, {
+                    steamID: _.GetSteamIDWatched(),
+                    watchLocation: _,
+                    bHideChat: this.state.bChatCollapsed,
+                    onTheaterMode: this.ToggleTheaterMode,
+                  }),
                 ),
               ),
             _.createElement(_, {
@@ -441,28 +420,31 @@
           _.createElement(
             _._,
             null,
-            _._.logged_in
-              ? _.createElement(
-                  _._,
-                  {
-                    useActiveCMInterface: _,
-                    useStorage: _,
-                  },
-                  _,
-                )
-              : _.createElement(
-                  _._,
-                  {
-                    useActiveSteamInterface: _,
-                    useStorage: _,
-                  },
-                  _,
-                ),
+            _.createElement(
+              _._,
+              null,
+              _._.logged_in
+                ? _.createElement(
+                    _._,
+                    {
+                      useActiveCMInterface: _,
+                      useStorage: _,
+                    },
+                    _,
+                  )
+                : _.createElement(
+                    _._,
+                    {
+                      useActiveSteamInterface: _,
+                      useStorage: _,
+                    },
+                    _,
+                  ),
+            ),
           ),
         );
       }
-      (0, _._)([_._], _.prototype, "OnShowLogin", null),
-        (0, _._)([_._], _.prototype, "ToggleChat", null),
+      (0, _._)([_._], _.prototype, "ToggleChat", null),
         (0, _._)([_._], _.prototype, "ToggleTheaterMode", null),
         (_ = (0, _._)([_._], _));
       let _ = (0, _._)(({ app: _ }) =>
@@ -705,8 +687,7 @@
               (_ = _.createElement(_, {
                 info: _._,
               }));
-          const _ = new _(),
-            _ = _.createElement(
+          const _ = _.createElement(
               "div",
               {
                 className: "LoginDiv",
@@ -714,15 +695,11 @@
               _.createElement(
                 "a",
                 {
-                  onClick: () => _.ShowLogonDialog(),
                   className: _().ChatLoginButton,
-                  href: "#",
+                  href: `${_._.STORE_BASE_URL}login?steamtv=1&allow_password=1`,
                 },
                 (0, _._)("#BroadcastChat_Login"),
               ),
-              _.createElement(_, {
-                app: _,
-              }),
             ),
             _ = _.BroadcastWatchStore.GetBroadcast(_)
               ? _.BroadcastWatchStore.GetBroadcast(_).m_ulBroadcastID
@@ -806,6 +783,9 @@
           className: "BroadcastOffline",
         });
       }
+      function _() {
+        return `${_._.STORE_BASE_URL}login?steamtv=1`;
+      }
       (0, _._)([_._], _.prototype, "m_strLocalSteamID", void 0),
         (0, _._)([_._], _.prototype, "OnLocalStreamChange", null),
         (0, _._)([_._], _.prototype, "SetMainContentRef", null),
@@ -813,55 +793,6 @@
         (0, _._)([_._], _.prototype, "HandleMouseMove", null),
         (0, _._)([_._], _.prototype, "UnregisterDragEvents", null),
         (_ = (0, _._)([_._], _));
-      class _ extends _.Component {
-        Dismiss() {
-          this.props.app.DismissLogonDialog();
-        }
-        render() {
-          return _.createElement(
-            _._,
-            {
-              onEscKeypress: this.Dismiss,
-            },
-            _.createElement(
-              _._,
-              {
-                className: "SteamTVLoginDialog",
-              },
-              _.createElement("iframe", {
-                className: "steamTVLogin",
-                src: this.props.app.GetLoginURL(),
-              }),
-            ),
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "Dismiss", null);
-      let _ = class extends _.Component {
-        render() {
-          if (!this.props.app.BIsLogonDialogVisible()) return null;
-          let _ = _.createElement(_, {
-            app: this.props.app,
-          });
-          return _.createElement(
-            "div",
-            {
-              className: "FullModalOverlay",
-            },
-            _.createElement("div", {
-              className: "ModalOverlayContent ModalOverlayBackground",
-            }),
-            _.createElement(
-              "div",
-              {
-                className: "ModalOverlayContent active",
-              },
-              _,
-            ),
-          );
-        }
-      };
-      _ = (0, _._)([_._], _);
       var _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         render() {

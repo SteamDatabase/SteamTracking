@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Elimina i messaggi",
     "Chat_Actions_Select_Message": "Seleziona messaggio",
     "Chat_Actions_Report": "Segnala",
+    "Chat_Actions_ReportGroup": "Segnala chat di gruppo",
     "Chat_Actions_React": "Reazione",
     "Chat_Actions_Delete": "Elimina",
     "Chat_Actions_DeleteChatMessages_Confirm": "Sei sicuro di voler eliminare questi messaggi di %1$s?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "È stato risolto un problema con le finestre degli amici e delle chat che non comparivano nell'overlay in gioco su Linux e macOS.",
     "BBCode_Loading": "Caricamento",
     "BBCode_Failed": "Caricamento non riuscito",
-    "broadcastDetails_Playing": "Riproduzione",
-    "Chat_Actions_ReportGroup": "Segnala chat di gruppo"
+    "broadcastDetails_Playing": "Riproduzione"
 }

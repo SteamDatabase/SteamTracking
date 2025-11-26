@@ -8414,8 +8414,6 @@
       }
       function _(_, _, _, _, _, _) {
         if (!_) return "";
-        const _ = _(_, _, _);
-        if (null !== _) return _;
         if ("crosspromotesalepage" === _.section_type) {
           const _ = _.sale_page_cross_promo_event_gid
             ? _._.GetClanEventModel(_.sale_page_cross_promo_event_gid)
@@ -8427,8 +8425,11 @@
               )
             : (0, _._)("#Sale_CrossPromoSale_DefaultSectionTitle");
         }
-        const _ =
-            _._.GetWithFallback(_.localized_label, _) ||
+        const _ = _(_, _, _),
+          _ = _._.GetWithFallback(_.localized_label, _),
+          _ =
+            _ ||
+            _ ||
             ("#Sale_default_label" === _.default_label
               ? ""
               : (0, _._)(_.default_label)),

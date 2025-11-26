@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Üzenetek törlése",
     "Chat_Actions_Select_Message": "Válassz üzenetet",
     "Chat_Actions_Report": "Jelentés",
+    "Chat_Actions_ReportGroup": "Csoportos csevegés jelentése",
     "Chat_Actions_React": "Reagálás",
     "Chat_Actions_Delete": "Törlés",
     "Chat_Actions_DeleteChatMessages_Confirm": "Biztosan törölni szeretnéd ezeket az üzenetek a(z) %1$s csatornából?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Javítottuk, hogy a barát- és csevegésablakok Linuxon és macOS-en nem jelentek meg a játékbeli átfedésen.",
     "BBCode_Loading": "Betöltés",
     "BBCode_Failed": "Nem sikerült betölteni",
-    "broadcastDetails_Playing": "Ezzel játszik:",
-    "Chat_Actions_ReportGroup": "Csoportos csevegés jelentése"
+    "broadcastDetails_Playing": "Ezzel játszik:"
 }

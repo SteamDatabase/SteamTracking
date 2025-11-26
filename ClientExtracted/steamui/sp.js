@@ -4,7 +4,7 @@
   {
     58616: (e, t, n) => {
       n.r(t), n.d(t, { default: () => k });
-      var o = n(89748),
+      var o = n(74315),
         u = n(35560),
         c = n(46422),
         r = n(10501),
@@ -122,4 +122,4 @@
       };
     },
   },
-]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/sp.js.map
+]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/sp.js.map

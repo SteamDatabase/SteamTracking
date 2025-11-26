@@ -1773,7 +1773,7 @@
 "steam_menu_view_recommendations" "Моите рецензии"
 "steam_menu_view_workshop" "Моята работилница"
 
-"steam_menu_account_details" "За акаунта"
+"steam_menu_account_details" "Подробности за акаунта"
 "steam_menu_account_view_profile" "Преглед на профила ми"
 "steam_menu_account_preferences" "Предпочитания за магазина"
 "steam_menu_account_wallet" "Преглед на портфейла ми"

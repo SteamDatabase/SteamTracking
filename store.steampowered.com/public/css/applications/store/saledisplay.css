@@ -864,8 +864,8 @@ input.z7qI4Gjuleb-g6osRQpw2 {
 }
 p a {
   color: #b0e9ff;
-  text-decoration: none;
-  border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 p a:hover {
   color: #fff;
@@ -1243,6 +1243,7 @@ p a:hover {
 ._2COOlV_DzUDN3N0P3ToybN {
   max-height: 400px;
   max-width: calc(100% - 400px);
+  height: 100%;
 }
 ._3OWH-tupjKqql_tcQsLYIp {
   width: 1050px;

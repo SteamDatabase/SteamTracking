@@ -310,6 +310,12 @@ h1 span.titletext, h2 span.titletext {
 	margin-bottom: 20px;
 }
 
+.descriptionRow {
+	display: flex;
+	flex-direction: row;
+	margin-top: 40px;
+}
+
 div.rightcol {
 	float: right;
 	width: 300px;
@@ -3430,13 +3436,49 @@ div.image_all_ages_appropriate
 }
 
 .launchOptionArea {
-	background-color: #1c2022;
+	background: -webkit-linear-gradient(315deg, rgba(114, 118, 133, 0.1) 5%, rgba(114, 118, 133, 0.3) 95%);
+	background: linear-gradient(135deg, rgba(114, 118, 133, 0.1) 5%, rgba(114, 118, 133, 0.3) 95%);
 	padding: 12px;
+	font-size: 13px;
+	color: #b8bfc6;
+}
+
+.launchOptionArea .Flexrow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 4px;
+}
+
+.launchOptionArea .LocTextArea {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.launchOptionArea .LocTextArea select {
+	margin-left: 0;
+	margin-bottom: 4px;
+}
+
+.launchOptionArea tr:first-child td {
+	background: radial-gradient(62.67% 62.67% at 62.67% 100%, #565a61 0%, #474e57 100%);
+}
+
+.launchOptionArea tr td:first-child {
+	font-weight: 500;
+	font-size: 14px;
+	color: white;
+	min-width: 175px;
 }
 
 .launchOptionArea input:not(.btn_small_thin), .launchOptionArea select {
     width: 300px;
     box-sizing: border-box;
+}
+
+.launchOptionArea tr td {
+	background: rgba(0,0,0,0.2);
 }
 
 .appMappingsArea {

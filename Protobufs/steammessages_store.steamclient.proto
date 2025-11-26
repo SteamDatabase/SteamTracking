@@ -253,6 +253,22 @@ message CStore_GetUserGameInterestState_Response {
 	optional .EPlaytestStatus beta_status = 12 [default = k_ETesterStatusNone];
 }
 
+message CStore_GetGamesFollowed_Request {
+	optional fixed64 steamid = 1;
+}
+
+message CStore_GetGamesFollowed_Response {
+	repeated uint32 appids = 1;
+}
+
+message CStore_GetGamesFollowedCount_Request {
+	optional fixed64 steamid = 1;
+}
+
+message CStore_GetGamesFollowedCount_Response {
+	optional uint32 followed_game_count = 1;
+}
+
 message CStore_GetDiscoveryQueueSkippedApps_Request {
 	optional fixed64 steamid = 1;
 	optional .EStoreDiscoveryQueueType queue_type = 2 [default = k_EStoreDiscoveryQueueTypeNew];
@@ -428,6 +444,8 @@ service Store {
 	rpc GetDiscoveryQueueSettings (.CStore_GetDiscoveryQueueSettings_Request) returns (.CStore_GetDiscoveryQueueSettings_Response);
 	rpc SkipDiscoveryQueueItem (.CStore_SkipDiscoveryQueueItem_Request) returns (.CStore_SkipDiscoveryQueueItem_Response);
 	rpc GetUserGameInterestState (.CStore_GetUserGameInterestState_Request) returns (.CStore_GetUserGameInterestState_Response);
+	rpc GetGamesFollowed (.CStore_GetGamesFollowed_Request) returns (.CStore_GetGamesFollowed_Response);
+	rpc GetGamesFollowedCount (.CStore_GetGamesFollowedCount_Request) returns (.CStore_GetGamesFollowedCount_Response);
 	rpc GetDiscoveryQueueSkippedApps (.CStore_GetDiscoveryQueueSkippedApps_Request) returns (.CStore_GetDiscoveryQueueSkippedApps_Response);
 	rpc ReportApp (.CStore_ReportApp_Request) returns (.CStore_ReportApp_Response);
 	rpc GetStorePreferences (.CStore_GetStorePreferences_Request) returns (.CStore_GetStorePreferences_Response);

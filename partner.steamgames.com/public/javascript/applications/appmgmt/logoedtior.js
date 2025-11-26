@@ -303,7 +303,6 @@
               "Can't use multiple logo images in edit mode",
             ),
             (this.state = {
-              bFallbackHeader: 1 == e.rgHeaderImages.length,
               bHasHeaderImage: e.rgHeaderImages.length > 0,
               bHasLogoImage: e.rgLogoImages.length > 0,
               bLogoLoaded: !1,
@@ -316,7 +315,6 @@
             JSON.stringify(e.rgBlurImages) ==
               JSON.stringify(this.props.rgBlurImages)) ||
             ((t = t || {}),
-            (t.bFallbackHeader = 1 == this.props.rgHeaderImages.length),
             (t.bHasHeaderImage = this.props.rgHeaderImages.length > 0)),
             JSON.stringify(e.rgLogoImages) !=
               JSON.stringify(this.props.rgLogoImages) &&
@@ -371,13 +369,14 @@
               fnOnPositionChanged: i,
               height: a,
             } = this.props,
-            { bFallbackHeader: l, bHasLogoImage: c } = this.state,
+            { bHasLogoImage: l } = this.state,
+            c = 1 == this.props.rgHeaderImages.length,
             m = (0, d.A)(
               P().TopCapsule,
               n,
               !this.state.bHasHeaderImage && P().NoArt,
-              (!this.props.hasHeroImage || l) && P().FallbackArt,
-              !c && r,
+              (!this.props.hasHeroImage || c) && P().FallbackArt,
+              !l && r,
             ),
             g = { "--header-height": null == a ? void 0 : a + "px" };
           return s.createElement(
@@ -402,7 +401,7 @@
                   onError: this.OnHeaderError,
                   onLoad: this.OnLoaded,
                 }),
-                c &&
+                l &&
                   null !== o &&
                   s.createElement(
                     A,
@@ -1128,8 +1127,8 @@
           ),
         );
       }
-      var H = o(14947);
-      class w {
+      var w = o(14947);
+      class H {
         m_strLibraryLogoURL;
         m_strLibraryHeroURL;
         m_unAppID;
@@ -1137,7 +1136,7 @@
         m_logoPosition = void 0;
         m_strSaveURL;
         constructor(e) {
-          (0, H.Gn)(this),
+          (0, w.Gn)(this),
             (this.m_strLibraryHeroURL = e.strLibraryHeroURL),
             (this.m_strLibraryLogoURL = e.strLibraryLogoURL),
             (this.m_unAppID = e.unAppID),
@@ -1173,7 +1172,7 @@
           return this.m_strSaveURL;
         }
       }
-      (0, n.Cg)([H.sH], w.prototype, "m_logoPosition", void 0);
+      (0, n.Cg)([w.sH], H.prototype, "m_logoPosition", void 0);
       var U = o(41983),
         G = o.n(U),
         F = o(17221),
@@ -1364,7 +1363,7 @@
         oe = o(16676);
       function ne(e, t) {
         const o = (0, ee.Tc)("editorconfig", t);
-        let n = new w(o);
+        let n = new H(o);
         r.createRoot(t).render(
           s.createElement(e ? se : re, { LogoEditorStore: n }),
         );
@@ -1418,7 +1417,7 @@
             } else
               window.opener &&
                 window.opener.postMessage(
-                  { appid: e.GetAppID(), ...(0, H.HO)(e.GetLogoPosition()) },
+                  { appid: e.GetAppID(), ...(0, w.HO)(e.GetLogoPosition()) },
                   "*",
                 ),
                 this.OnCancel();

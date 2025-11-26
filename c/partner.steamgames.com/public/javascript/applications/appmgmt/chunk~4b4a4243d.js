@@ -522,6 +522,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { oEditableMessage: _ } = _,
@@ -575,6 +576,22 @@
                   target: "_blank",
                 },
                 "open event for edit",
+              ),
+              "   ",
+              _.createElement(
+                _._,
+                {
+                  toolTipContent:
+                    "Once the event is published, go here to verify it is not awaiting moderation review. Games in the moderator review queue are not visible in the library",
+                },
+                _.createElement(
+                  "a",
+                  {
+                    href: `${_._.STORE_BASE_URL}events_admin/?selectedTags=vo_marketing_message&excludedTags=mod_reviewed&excludedTags=auto_migrated`,
+                    target: "_blank",
+                  },
+                  "open event moderation tool",
+                ),
               ),
               _.createElement("br", null),
               _.createElement("br", null),

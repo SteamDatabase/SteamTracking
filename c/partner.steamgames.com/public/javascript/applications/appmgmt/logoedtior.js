@@ -330,7 +330,6 @@
               "Can't use multiple logo images in edit mode",
             ),
             (this.state = {
-              bFallbackHeader: 1 == _.rgHeaderImages.length,
               bHasHeaderImage: _.rgHeaderImages.length > 0,
               bHasLogoImage: _.rgLogoImages.length > 0,
               bLogoLoaded: !1,
@@ -343,7 +342,6 @@
             JSON.stringify(_.rgBlurImages) ==
               JSON.stringify(this.props.rgBlurImages)) ||
             ((_ = _ || {}),
-            (_.bFallbackHeader = 1 == this.props.rgHeaderImages.length),
             (_.bHasHeaderImage = this.props.rgHeaderImages.length > 0)),
             JSON.stringify(_.rgLogoImages) !=
               JSON.stringify(this.props.rgLogoImages) &&
@@ -410,7 +408,8 @@
               fnOnPositionChanged: _,
               height: _,
             } = this.props,
-            { bFallbackHeader: _, bHasLogoImage: _ } = this.state,
+            { bHasLogoImage: _ } = this.state,
+            _ = 1 == this.props.rgHeaderImages.length,
             _ = (0, _._)(
               _().TopCapsule,
               _,

@@ -202,6 +202,12 @@
         PollOption: "_3hNd0q0tYO12nPDCPsT8sm",
         Selected: "_3Nv8BLF6dRk932f5NhyNIH",
         PollVoteIcon: "ziFphpM2Ie-orQ5ezpQqT",
+        Disabled: "_1bO8azG0-IqxQ3AQbWtCxx",
+        ContentRow: "_3Yb8eVHtZWf1AWt7VV3P-z",
+        BackgroundBar: "_30b_e8W4Z94Lwn8x2U9TYH",
+        ForegroundBar: "_3PFkx8XNigPW6CoYfHH5Yi",
+        PctText: "_1RNbjKcBRtD4pseH6hyggg",
+        OptionText: "_1qUCIT-7ueBBoNjoCvGfbP",
         PollStatus: "_3NDl2Pml7Uvse14r9SWJTD",
       };
     },
@@ -24286,7 +24292,7 @@
           ),
         );
       }
-      var Kr = r(97740),
+      var Kr = r(35212),
         Yr = r(20194),
         $r = r(41735),
         Jr = r.n($r);
@@ -25142,9 +25148,9 @@
       }
       r.d(t, { J: () => i });
     },
-    97740: (e, t, r) => {
+    35212: (e, t, r) => {
       "use strict";
-      r.d(t, { fh: () => Cr });
+      r.d(t, { fh: () => Vr });
       var i = r(52967),
         a = r(42780),
         n = r(8527),
@@ -27365,23 +27371,242 @@
               ),
             );
       }
-      var rr = r(20194);
-      function ir(e, t) {
+      var rr = r(20194),
+        ir = r(75233),
+        ar = r(51614);
+      function nr(e, t, r) {
+        const i = (function (e, t) {
+          const r = (0, rr.I)({
+            queryKey: lr(e, t),
+            queryFn: async () => {
+              const r = await fetch(or(e, t, !1), {
+                method: "GET",
+                credentials: "include",
+              });
+              return sr(await r.json());
+            },
+            placeholderData: {
+              results: [],
+              success: 10,
+              bLoading: !0,
+              userPollSubmitData: { user_poll_option_votes: [] },
+            },
+          });
+          return r.data
+            ? r.data
+            : {
+                results: [],
+                success: 10,
+                bLoading: !0,
+                userPollSubmitData: { user_poll_option_votes: [] },
+              };
+        })(e, t);
+        return (0, s.useMemo)(() => {
+          const e = i.results.find((e) => r == e.unique_id);
+          return {
+            bLoading: i.bLoading,
+            success: i.success,
+            userPollData: e,
+            error_message: i.error_message,
+            userPollSubmitData: i.userPollSubmitData,
+          };
+        }, [i, r]);
+      }
+      function sr(e) {
+        return {
+          ...e,
+          bLoading: !1,
+          userPollSubmitData: {
+            user_poll_option_votes: e.results
+              .map((e) => e.voted_option_id)
+              .reduce((e, t) => e.concat(t), []),
+          },
+        };
+      }
+      function lr(e, t) {
         return ["usePartnerEventUserPoll", e.ConvertTo64BitString(), t];
       }
-      function ar(e, t) {
-        return `${"store" == (0, h.yK)() ? h.TS.STORE_BASE_URL : h.TS.COMMUNITY_BASE_URL}partnerevents/${e.ConvertTo64BitString()}/userpoll/${t}/ajaxloaddata/`;
+      function or(e, t, r) {
+        const i = `${h.TS.COMMUNITY_BASE_URL}partnerevents/${e.ConvertTo64BitString()}/userpoll/${t}/${r ? "ajaxcastvote" : "ajaxloaddata"}/?origin=${(0, h.yK)()}`;
+        return "dev" == h.TS.WEB_UNIVERSE ? i + "&debug=1" : i;
       }
-      function nr(e, t) {
+      const mr = 86400;
+      function cr(e, t) {
+        let r = 0;
+        if (t.poll_end_time) r = t.poll_end_time;
+        else {
+          r =
+            (e.rtime32_visibility_start ?? e.rtime32_start_time ?? 0) +
+            (t.poll_end_days_since_start || mr);
+        }
+        return r;
+      }
+      var ur, dr;
+      function gr(e, t) {
         return t
           ? t.startsWith("https://") || t.startsWith("http://")
             ? t
             : `${pe.TS.CLAN_CDN_ASSET_URL}images/clan/${e}/${t}`
           : t;
       }
-      var sr = r(33280),
-        lr = r.n(sr);
-      function or(e) {
+      !(function (e) {
+        (e.k_EPollResult_NotVisible = "not_visible"),
+          (e.k_EPollResult_Visible_After_Vote = "after_vote"),
+          (e.k_EPollResult_Visible_After_End = "after_end"),
+          (e.k_EPollResult_Visible_After_Vote_Or_End = "after_vote_or_end"),
+          (e.k_EPollResult_Visible_On_Demand = "on_demand");
+      })(ur || (ur = {})),
+        (function (e) {
+          (e.k_EPollVoter_AnyUser = "any_user"),
+            (e.k_EPollVoter_UserGameInLibrary = "user_game_in_library"),
+            (e.k_EPollVoter_MinPlayTime = "min_play_time"),
+            (e.k_EPollVoter_MemberOfGroup = "member_of_group");
+        })(dr || (dr = {}));
+      var pr = r(33280),
+        _r = r.n(pr),
+        yr = r(44165);
+      const Br = {};
+      (Br.arabic = () => r.e(6696).then(r.t.bind(r, 6696, 19))),
+        (Br.brazilian = () => r.e(8906).then(r.t.bind(r, 58906, 19))),
+        (Br.bulgarian = () => r.e(3473).then(r.t.bind(r, 53473, 19))),
+        (Br.czech = () => r.e(3899).then(r.t.bind(r, 83899, 19))),
+        (Br.danish = () => r.e(4925).then(r.t.bind(r, 84925, 19))),
+        (Br.dutch = () => r.e(9902).then(r.t.bind(r, 69902, 19))),
+        (Br.english = () => r.e(716).then(r.t.bind(r, 80716, 19))),
+        (Br.finnish = () => r.e(1663).then(r.t.bind(r, 81663, 19))),
+        (Br.french = () => r.e(8484).then(r.t.bind(r, 48484, 19))),
+        (Br.german = () => r.e(6810).then(r.t.bind(r, 66810, 19))),
+        (Br.greek = () => r.e(3744).then(r.t.bind(r, 13744, 19))),
+        (Br.hungarian = () => r.e(2101).then(r.t.bind(r, 62101, 19))),
+        (Br.indonesian = () => r.e(8948).then(r.t.bind(r, 68948, 19))),
+        (Br.italian = () => r.e(2916).then(r.t.bind(r, 2916, 19))),
+        (Br.japanese = () => r.e(195).then(r.t.bind(r, 40195, 19))),
+        (Br.koreana = () => r.e(4259).then(r.t.bind(r, 84259, 19))),
+        (Br.latam = () => r.e(4475).then(r.t.bind(r, 24475, 19))),
+        (Br.norwegian = () => r.e(6884).then(r.t.bind(r, 36884, 19))),
+        (Br.polish = () => r.e(5269).then(r.t.bind(r, 15269, 19))),
+        (Br.portuguese = () => r.e(6865).then(r.t.bind(r, 96865, 19))),
+        (Br.romanian = () => r.e(1391).then(r.t.bind(r, 71391, 19))),
+        (Br.russian = () => r.e(4933).then(r.t.bind(r, 64933, 19))),
+        (Br.schinese = () => r.e(4768).then(r.t.bind(r, 44768, 19))),
+        (Br.spanish = () => r.e(876).then(r.t.bind(r, 20876, 19))),
+        (Br.swedish = () => r.e(5181).then(r.t.bind(r, 75181, 19))),
+        (Br.tchinese = () => r.e(9779).then(r.t.bind(r, 89779, 19))),
+        (Br.thai = () => r.e(8970).then(r.t.bind(r, 98970, 19))),
+        (Br.turkish = () => r.e(7996).then(r.t.bind(r, 87996, 19))),
+        (Br.ukrainian = () => r.e(7306).then(r.t.bind(r, 47306, 19))),
+        (Br.vietnamese = () => r.e(2539).then(r.t.bind(r, 72539, 19)));
+      var br = r(96762);
+      function fr(e, ...t) {
+        return 0 == t.length
+          ? e
+          : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, r) {
+              if (r <= t.length && r >= 1) {
+                const e = t[r - 1];
+                return String(null == e ? "" : e);
+              }
+              return e;
+            }));
+      }
+      let Mr;
+      Mr ??= new Set();
+      function wr() {
+        if (!(0, br.VD)(n.TS.LANGUAGE))
+          throw `unknown language ${n.TS.LANGUAGE}`;
+        return {
+          languages: [
+            {
+              strLanguage: n.TS.LANGUAGE,
+              strISOCode: br.yc.get(n.TS.LANGUAGE),
+              eSource: 5,
+            },
+          ],
+        };
+      }
+      const hr = (function (e) {
+          const t = new Map(),
+            r = (async function () {
+              await (0, n.Ki)();
+              const r = wr(),
+                i = new Set([]);
+              for (const e of r.languages) {
+                i.add(e.strLanguage);
+                const t = (0, br.mR)(e.strLanguage);
+                t && i.add(t);
+              }
+              return Promise.all(
+                Array.from(i).map((r) =>
+                  e(r).then((e) => {
+                    if (!e) return;
+                    const i = new Map();
+                    for (const [t, r] of Object.entries(e)) i.set("#" + t, r);
+                    t.set(r, i);
+                  }),
+                ),
+              );
+            })();
+          let i = !1;
+          var a;
+          function l(e, r) {
+            const [i, ...a] = r,
+              n =
+                t.get(i.strLanguage)?.get(e) ??
+                t.get((0, br.mR)(i.strLanguage) ?? "english")?.get(e);
+            return (
+              n ||
+              (0 === a.length
+                ? (console.error("Couldn't find localization key", e), e)
+                : l(e, a))
+            );
+          }
+          function o(e, ...t) {
+            return fr(l(e, wr().languages), ...t);
+          }
+          return (
+            r.then(() => (i = !0)),
+            (a = r),
+            (Mr ??= new Set()),
+            Mr.add(a),
+            {
+              Localize: (e, ...t) => o(e, ...t),
+              LocalizeReact(e, ...t) {
+                const r = this.Localize(e);
+                if (r === e) return r;
+                const i = [],
+                  a = /(.*?)%(\d+)\$s/g;
+                let n,
+                  l = 0;
+                for (; (n = a.exec(r)); ) {
+                  (l += n[0].length), i.push(n[1]);
+                  const e = parseInt(n[2]);
+                  e >= 1 && e <= t.length && i.push(t[e - 1]);
+                }
+                return (
+                  i.push(r.slice(l)), s.createElement(s.Fragment, null, ...i)
+                );
+              },
+              LocalizePlural: (e, t, ...r) =>
+                1 === t || "1" === t
+                  ? o(e, t, ...r)
+                  : o(e + "_Plural", t, ...r),
+              LocalizeInSpecificLang: (e, t, ...r) => fr(l(t, [e]), ...r),
+              Ready: () => r,
+              IsReady: () => i,
+            }
+          );
+        })(async function (e) {
+          if (Br[e]) return Br[e]();
+        }),
+        Sr = {
+          PerYear: 31536e3,
+          PerMonth: 2628e3,
+          PerWeek: 604800,
+          PerDay: 86400,
+          PerHour: 3600,
+          PerMinute: 60,
+        };
+      var zr;
+      function Rr(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
           i = (0, l.j$)(e.args, "poll_id"),
@@ -27401,110 +27626,289 @@
               )
             : null;
         const o = (0, K.sf)(pe.TS.LANGUAGE);
-        return s.createElement(mr, {
-          userPollDef: n,
-          lang: o,
-          clanAccountID: t.clanSteamID.GetAccountID(),
-          eventModel: t,
-        });
-      }
-      function mr(e) {
-        const { eventModel: t, userPollDef: r, lang: i } = e,
-          a =
-            ((n = t.clanSteamID),
-            (l = t.GID || "0"),
-            (0, rr.I)({
-              queryKey: ir(n, l),
-              queryFn: async () => {
-                const e = new FormData();
-                e.set("sessionid", (0, h.KC)());
-                const t = await fetch(ar(n, l), {
-                  method: "POST",
-                  body: e,
-                  credentials: "include",
-                });
-                return await t.json();
-              },
-              placeholderData: { results: [], bLoading: !0 },
-            }).data ?? { results: [], bLoading: !0 });
-        var n, l;
         return s.createElement(
-          cr,
-          { ...e },
-          r.options?.map((e) =>
-            s.createElement(ur, {
-              key: "polloption" + e.option_id,
-              lang: i,
-              pollOptionDef: e,
-              bDisableSelection: a.bLoading,
-            }),
-          ),
+          ut.tH,
+          null,
+          s.createElement(vr, { userPollDef: n, lang: o, eventModel: t }),
         );
       }
-      function cr(e) {
-        const { userPollDef: t, lang: r, clanAccountID: i, children: a } = e,
-          [n, l] = (0, ft.q3)(() => [
-            w.NT.GetWithFallback(t.localized_poll_description, r),
-            t.user_poll_background,
-          ]);
-        let o;
+      function vr(e) {
+        const { eventModel: t, userPollDef: r, lang: i } = e,
+          { userPollData: a, ...n } = nr(
+            t.clanSteamID,
+            t.GID || "0",
+            r.poll_id,
+          ),
+          l = Boolean(n.error_message && n.error_message?.length > 0),
+          o = (function (e, t) {
+            const r = (0, ir.jE)();
+            return (0, ar.n)({
+              mutationKey: [
+                "useSetPartnerEventCastVoteUserPoll",
+                e.GetAccountID(),
+                t,
+              ],
+              mutationFn: async (r) => {
+                const i = { votes: r.votes },
+                  a = await fetch(or(e, t, !0), {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(i),
+                    credentials: "include",
+                  });
+                if (!a.ok) throw new Error(`Server returned ${a.status}`);
+                return await a.json();
+              },
+              onSuccess: (i, a) => {
+                if (1 == i.success) r.setQueryData(lr(e, t), () => sr(i));
+                else {
+                  const a = r.getQueryData(lr(e, t));
+                  if (a) {
+                    const n = {
+                      ...a,
+                      success: i.success,
+                      error_message: i.error_message,
+                    };
+                    r.setQueryData(lr(e, t), () => n);
+                  }
+                }
+              },
+            });
+          })(t.clanSteamID, t.GID || "0"),
+          [m, c] = (0, s.useState)(void 0),
+          [u, d] = (0, s.useState)(!1),
+          [g, p] = (0, s.useState)(!1),
+          _ = a?.option_results && a?.option_results.length > 0,
+          y = ((a && a.voted_option_id?.length) || 0) > 0;
         return (
-          Boolean(l) &&
-            (o = {
-              backgroundImage: `url('${nr(i, l)}')`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }),
+          (0, s.useEffect)(() => {
+            if (
+              !g &&
+              r.results_visibility_settings != ur.k_EPollResult_NotVisible &&
+              _
+            ) {
+              const e = (function (e, t) {
+                return cr(e, t) < Math.floor(Date.now() / 1e3);
+              })(
+                {
+                  rtime32_visibility_start:
+                    t.GetVisibilityStartTimeAndDateUnixSeconds(),
+                  rtime32_start_time: t.GetStartTimeAndDateUnixSeconds(),
+                },
+                r,
+              );
+              (e || y) && p(!0);
+            }
+          }, [_, y, g, t, r]),
           s.createElement(
-            "div",
-            { className: lr().PollBackground, style: o },
-            s.createElement(
-              "div",
-              { className: lr().PollContainer },
-              s.createElement("div", { className: lr().PollQuestion }, n),
-              s.createElement("div", { className: lr().PollOptions }, a),
+            Tr,
+            { ...e },
+            r.options?.map((e) => {
+              const t = a?.option_results.find(
+                  (t) => t.unique_id == e.option_id,
+                ),
+                r =
+                  a?.voted_option_id.includes(e.option_id || 0) ||
+                  m === e.option_id;
+              return s.createElement(Cr, {
+                key: "polloption" + e.option_id,
+                lang: i,
+                pollOptionDef: e,
+                bSelected: r,
+                nPercentage: g ? t?.percent : void 0,
+                onClick: () => c(e.option_id),
+                bDisableSelection:
+                  n.bLoading || !a?.vote_permitted || l || u || y,
+              });
+            }),
+            !!m &&
+              s.createElement(
+                I.$n,
+                {
+                  onClick: async () => {
+                    if (
+                      !n.userPollSubmitData.user_poll_option_votes.includes(m)
+                    ) {
+                      d(!0);
+                      const e = {
+                        user_poll_option_votes: [
+                          ...n.userPollSubmitData.user_poll_option_votes,
+                        ],
+                      };
+                      e.user_poll_option_votes.push(m),
+                        await o.mutateAsync({ votes: e }),
+                        c(void 0),
+                        d(!1);
+                    }
+                  },
+                },
+                (0, w.we)("#Button_Submit"),
+              ),
+            (u || n.bLoading) &&
+              s.createElement(Z.t, {
+                size: "small",
+                position: "center",
+                string: n.bLoading ? (0, w.we)("#Loading") : void 0,
+              }),
+            _ &&
+              !y &&
+              !g &&
+              s.createElement(
+                "a",
+                {
+                  href: "#",
+                  onClick: (e) => {
+                    e.preventDefault(), p(!0);
+                  },
+                },
+                (0, w.we)("#UserPolls_JustSeeResults"),
+              ),
+            l &&
               s.createElement(
                 "div",
-                { className: lr().PollStatus },
-                s.createElement(
-                  "div",
-                  null,
-                  (0, w.PP)("#UserPolls_status_N_Votes", "XXX"),
-                ),
-                s.createElement(
-                  "div",
-                  null,
-                  (0, w.PP)("#UserPolls_status_N_TimeRemaining", "X Days"),
-                ),
+                { className: Dt.ErrorStylesWithIcon },
+                n.error_message,
               ),
-            ),
           )
         );
       }
-      function ur(e) {
+      function Tr(e) {
+        const { userPollDef: t, lang: r, eventModel: i, children: a } = e,
+          n = (0, yr.f1)(),
+          [l, o] = (0, ft.q3)(() => [
+            w.NT.GetWithFallback(t.localized_poll_description, r),
+            t.user_poll_background,
+          ]);
+        let m;
+        const c = i.clanSteamID.GetAccountID();
+        Boolean(o) &&
+          (m = {
+            backgroundImage: `url('${gr(c, o)}')`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          });
+        const u = (0, s.useMemo)(() => P.b.InitFromClanID(c), [c]),
+          { userPollData: d } = nr(u, i.GID || "0", t.poll_id),
+          g = cr(
+            {
+              rtime32_visibility_start:
+                i.GetVisibilityStartTimeAndDateUnixSeconds(),
+              rtime32_start_time: i.GetStartTimeAndDateUnixSeconds(),
+            },
+            t,
+          );
+        return s.createElement(
+          "div",
+          { className: _r().PollBackground, style: m },
+          s.createElement(
+            "div",
+            { className: _r().PollContainer },
+            s.createElement("div", { className: _r().PollQuestion }, l),
+            s.createElement("div", { className: _r().PollOptions }, a),
+            s.createElement(
+              "div",
+              { className: _r().PollStatus },
+              s.createElement(
+                "div",
+                null,
+                (0, w.Yp)(
+                  "#UserPolls_status_N_Votes",
+                  (d?.total_votes || 0).toLocaleString(),
+                ),
+              ),
+              d?.display_message
+                ? s.createElement("div", null, d?.display_message)
+                : s.createElement(
+                    "div",
+                    null,
+                    (0, w.PP)(
+                      "#UserPolls_status_N_TimeRemaining",
+                      (function (e) {
+                        const t = Math.floor(e / Sr.PerYear),
+                          r = Math.floor(e / Sr.PerMonth),
+                          i = Math.floor((e % Sr.PerMonth) / Sr.PerDay),
+                          a = Math.floor((e % Sr.PerDay) / Sr.PerHour),
+                          n = Math.floor((e % Sr.PerHour) / Sr.PerMinute);
+                        return (
+                          (e %= Sr.PerMinute),
+                          t > 0
+                            ? hr.Localize("#TimeRemaining_MoreThanOneYear")
+                            : r > 0
+                              ? hr.Localize("#TimeRemaining_MonthsDays", r, i)
+                              : i > 0
+                                ? hr.Localize(
+                                    "#TimeRemaining_DaysHoursMinutes",
+                                    i,
+                                    a.toString().padStart(2, "0"),
+                                    n.toString().padStart(2, "0"),
+                                  )
+                                : a > 0
+                                  ? hr.Localize(
+                                      "#TimeRemaining_HoursMinutesSeconds",
+                                      a.toString().padStart(2, "0"),
+                                      n.toString().padStart(2, "0"),
+                                      e.toString().padStart(2, "0"),
+                                    )
+                                  : hr.Localize(
+                                      "#TimeRemaining_MinutesSeconds",
+                                      n.toString().padStart(2, "0"),
+                                      e.toString().padStart(2, "0"),
+                                    )
+                        );
+                      })(g - n),
+                    ),
+                  ),
+            ),
+          ),
+        );
+      }
+      function Cr(e) {
         const {
             pollOptionDef: t,
             onClick: r,
             lang: i,
             bDisableSelection: a,
+            bSelected: n,
+            nPercentage: l,
           } = e,
-          [n] = (0, ft.q3)(() => [w.NT.GetWithFallback(t.localized_option, i)]);
+          [o] = (0, ft.q3)(() => [w.NT.GetWithFallback(t.localized_option, i)]),
+          m = Math.round(100 * (l ?? 0));
         return s.createElement(
           "div",
           {
-            className: (0, O.A)({ [lr().PollOption]: !0, [lr().Selected]: !1 }),
+            className: (0, O.A)({
+              [_r().PollOption]: !0,
+              [_r().Selected]: n,
+              [_r().Disabled]: a,
+            }),
             onClick: a ? void 0 : r,
           },
-          s.createElement("div", { className: lr().PollVoteIcon }),
-          s.createElement("span", null, n),
+          s.createElement("div", { className: _r().BackgroundBar }),
+          s.createElement("div", {
+            className: _r().ForegroundBar,
+            style: { width: `${m}%` },
+          }),
+          s.createElement(
+            "div",
+            { className: _r().ContentRow },
+            s.createElement("div", { className: _r().PollVoteIcon }),
+            void 0 !== l &&
+              s.createElement("div", { className: _r().PctText }, m, "%"),
+            s.createElement("span", { className: _r().OptionText }, o),
+          ),
         );
       }
-      let dr = null;
-      function gr() {
+      !(function (e) {
+        (e[(e.None = 0)] = "None"),
+          (e[(e.Ago = 1)] = "Ago"),
+          (e[(e.Remaining = 2)] = "Remaining");
+      })(zr || (zr = {}));
+      let Fr = null;
+      function Ir() {
         return (
-          null == dr &&
-            (dr = new Map([
+          null == Fr &&
+            (Fr = new Map([
               ["url", { Constructor: $e, autocloses: !1 }],
               ["dynamiclink", { Constructor: Je, autocloses: !1 }],
               [
@@ -27547,37 +27951,37 @@
                 "*",
                 { Constructor: l.ck, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: pr, autocloses: !1 }],
+              ["img", { Constructor: Er, autocloses: !1 }],
               ["previewyoutube", { Constructor: F.gH, autocloses: !1 }],
               ["looping_media", { Constructor: l.$A, autocloses: !1 }],
               ["video", { Constructor: l.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: F.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: yr, autocloses: !1 }],
-              ["vod", { Constructor: Br, autocloses: !1 }],
+              ["trailer", { Constructor: Wr, autocloses: !1 }],
+              ["vod", { Constructor: jr, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: br,
+                  Constructor: Or,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: Mr, autocloses: !1 }],
-              ["claimitem", { Constructor: wr, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: hr, autocloses: !1 }],
-              ["actiondialog", { Constructor: zr, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: vr, autocloses: !0 }],
-              ["docimg", { Constructor: _r, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: Pr, autocloses: !1 }],
+              ["claimitem", { Constructor: Nr, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: Ar, autocloses: !1 }],
+              ["actiondialog", { Constructor: xr, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: Dr, autocloses: !0 }],
+              ["docimg", { Constructor: Ur, autocloses: !1 }],
               ["carousel", { Constructor: It, autocloses: !1 }],
               ["meetsteamsessiongroup", { Constructor: E.ac, autocloses: !1 }],
               ["meetsteamscheduleview", { Constructor: E.Xk, autocloses: !1 }],
-              ["userpolls", { Constructor: or, autocloses: !1 }],
+              ["userpolls", { Constructor: Rr, autocloses: !1 }],
             ])),
-          dr
+          Fr
         );
       }
-      function pr(e) {
+      function Er(e) {
         const { showErrorInfo: t, event: r } = e.context;
         let i = (0, l.j$)(e.args, "src") || e.children?.toString();
         i || (i = (0, l.j$)(e.args));
@@ -27611,7 +28015,7 @@
           s.createElement(X.c, { rgSources: a }),
         );
       }
-      function _r(e) {
+      function Ur(e) {
         const t = (0, l.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const r = e && e.children && e.children.toString(),
@@ -27627,13 +28031,13 @@
           s.createElement(X.c, { rgSources: i, alt: r })
         );
       }
-      function yr(e) {
-        const t = fr(
+      function Wr(e) {
+        const t = qr(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          r = fr(e.args, "trailerid", 0);
+          r = qr(e.args, "trailerid", 0);
         let i =
           (0, l.j$)(e.args, "style")?.toLocaleLowerCase() ?? Ze.k_TrailerAsFull;
         i = Object.values(Ze).includes(i) ? i : Ze.k_TrailerAsFull;
@@ -27649,14 +28053,14 @@
           children: e.children,
         });
       }
-      function Br(e) {
-        const t = fr(e.args, "appid", 0);
+      function jr(e) {
+        const t = qr(e.args, "appid", 0);
         return s.createElement(gt, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function br(e) {
+      function Or(e) {
         const t = (0, l.j$)(e.args, "name"),
           r = (0, l.j$)(e.args, "title"),
           i = (0, l.j$)(e.args, "company"),
@@ -27677,11 +28081,11 @@
               bio: e.children,
             });
       }
-      function fr(e, t, r) {
+      function qr(e, t, r) {
         const i = (0, l.j$)(e, t);
         return void 0 === i || null == i ? r : Number.parseInt(i);
       }
-      function Mr(e) {
+      function Pr(e) {
         const t = (0, l.j$)(e.args, "name"),
           r =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -27695,7 +28099,7 @@
           ? e.children
           : null;
       }
-      function wr(e) {
+      function Nr(e) {
         const t = e.context.showErrorInfo;
         if (!h.iA.logged_in)
           return s.createElement(
@@ -27715,7 +28119,7 @@
           }
         return s.createElement(Ht, { bPreviewMode: t, rewardType: i });
       }
-      function hr(e) {
+      function Ar(e) {
         const t = Number.parseInt((0, l.j$)(e.args, "id")) || 0,
           r =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -27733,7 +28137,7 @@
           (!o && !r) || (o && r) ? e.children : null
         );
       }
-      function Sr(e) {
+      function kr(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, v.h)(e),
             r = (0, v.Q)();
@@ -27759,12 +28163,12 @@
         }
         return { bInitialState: !0 };
       }
-      function zr(e) {
+      function xr(e) {
         const t = (0, l.j$)(e.args, "action"),
           r = (0, l.j$)(e.args, "initialToken"),
           i = (0, l.j$)(e.args, "successToken"),
           a = (0, l.j$)(e.args, "failToken"),
-          n = Sr(t);
+          n = kr(t);
         if (!(t && r && i && a)) {
           return e.context.showErrorInfo
             ? s.createElement(
@@ -27782,7 +28186,7 @@
                 onClick: (n) => {
                   (0, Tt.pg)(
                     s.createElement(
-                      Rr,
+                      Gr,
                       {
                         strAction: t,
                         strInitialToken: r,
@@ -27805,7 +28209,7 @@
               (0, w.we)("#Login_SignIn"),
             );
       }
-      function Rr(e) {
+      function Gr(e) {
         const {
             strAction: t,
             children: r,
@@ -27814,7 +28218,7 @@
             strSuccessToken: n,
             strFailToken: l,
           } = e,
-          o = Sr(t),
+          o = kr(t),
           [m, c] = s.useState(Boolean(o.fnAction));
         s.useEffect(() => {
           o.fnAction && (c(!0), o.fnAction().finally(() => c(!1)));
@@ -27853,7 +28257,7 @@
           ),
         );
       }
-      function vr(e) {
+      function Dr(e) {
         const { showErrorInfo: t, event: r } = e.context,
           i = r.clanSteamID.GetAccountID(),
           [a] = s.useState(
@@ -27893,19 +28297,19 @@
             ? s.createElement("div", null, (0, w.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      class Tr {
+      class Lr {
         static sm_BBCodeDictionary = new Map([
           ...Array.from(l.W4.entries()),
-          ...Array.from(gr().entries()),
+          ...Array.from(Ir().entries()),
         ]);
         static AddDictionary(e) {
-          Tr.sm_BBCodeDictionary = new Map([
-            ...Array.from(Tr.sm_BBCodeDictionary.entries()),
+          Lr.sm_BBCodeDictionary = new Map([
+            ...Array.from(Lr.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
       }
-      function Cr(e) {
+      function Vr(e) {
         const {
             text: t,
             partnerEventStore: r,
@@ -27929,7 +28333,7 @@
           );
         return s
           .useMemo(
-            () => new i.B(Tr.sm_BBCodeDictionary, u, l || n.TS.LANGUAGE),
+            () => new i.B(Lr.sm_BBCodeDictionary, u, l || n.TS.LANGUAGE),
             [u, l],
           )
           .ParseBBCode(t, {

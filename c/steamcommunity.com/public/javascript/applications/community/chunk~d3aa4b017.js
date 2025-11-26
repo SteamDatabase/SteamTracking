@@ -1276,7 +1276,10 @@
             _.createElement(
               _._,
               {
-                className: _().stream_icon_container,
+                className: (0, _._)(
+                  _().stream_icon_container,
+                  _ && _().stream_selected,
+                ),
                 onClick: () => __webpack_require__ && __webpack_require__(_),
                 rootMargin: "100px 0px 100px 0px",
               },
@@ -1285,10 +1288,6 @@
                 bSelected: _,
                 strCapsuleArtURL: _,
               }),
-              _ &&
-                _.createElement("div", {
-                  className: _().stream_icon_arrow,
-                }),
             ),
           ),
           _.createElement(

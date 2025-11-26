@@ -94,22 +94,22 @@ $ORIGIN
 0123456789abcdef
 1.0.0
 10CUtlMemoryI13ModuleCount_tE
-10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPvi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPvi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIP11IAudioSoundE
 10CUtlMemoryIP17CMilesAudioDeviceE
 10CUtlMemoryIP18IAudioOutputStreamE
 10CUtlMemoryIP20IAudioDeviceListenerE
 10CUtlMemoryIPK11CFileWriterE
-10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
+10CUtlMemoryIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tEE
 10CUtlMemoryIhE
-10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES1_E
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPvi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPvi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlString
 10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 10CUtlVectorIP11IAudioSound10CUtlMemoryIS1_EE
@@ -117,7 +117,7 @@ $ORIGIN
 10CUtlVectorIP18IAudioOutputStream10CUtlMemoryIS1_EE
 10CUtlVectorIP20IAudioDeviceListener10CUtlMemoryIS1_EE
 10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
-10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
+10CUtlVectorIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tE10CUtlMemoryIS5_EE
 11CDirWatcher
 11CFileWriter
 11CPathString
@@ -181,7 +181,7 @@ $ORIGIN
 24CDirWatcherPollingThread
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
-7CUtlMapI10CUtlSymbolPvi8CDefLessE
+7CUtlMapI14CBaseUtlSymbolItEPvi8CDefLessE
 9IValidate
 AIL_allocate_sample_handle
 AIL_close_digital_driver
@@ -259,6 +259,7 @@ CFileWriter::FlushInternal
 CFileWriter::Write
 CFileWriterThread
 CPathString
+CSHA1::Update
 CUtlBuffer
 CUtlBuffer::GetStringFast: binary buffers only
 CUtlString::ReplaceInternal
@@ -268,7 +269,6 @@ CUtlString::VFormat
 CUtlStringBuilder::Data::MoveToHeap
 CUtlStringBuilder::InternalPrepareBuffer
 CUtlStringBuilder::ReplaceInternal
-CUtlSymbol
 CUtlSymbolTable
 CVProfile_ExitScope
 CValidator::ClaimArrayMemory(void const*, bool)
@@ -511,7 +511,7 @@ SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 StringAfterPrefix
 StringAfterPrefixCaseSensitive
 Sunday
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 TLS init function for
 TLS wrapper function for
 TMPDIR
@@ -705,6 +705,7 @@ alnum
 alpha
 alphasort64
 alse
+analog
 application.icon_name
 application.id
 application.name
@@ -731,12 +732,14 @@ bin32
 bind_textdomain_codeset
 bindtextdomain
 blank
+bluetooth
 bool
 boolean
 btowc
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
 byte
 cActualReplacements == cReplacements
+card.profile.port
 cbActual < (uint32)nBufSizeWithTerminator
 cbToRead <= 1024 * 1024 * 1024
 char
@@ -780,6 +783,7 @@ dlopen
 dlsym
 double
 dynamic_cast
+earpiece
 endmntent
 error
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
@@ -839,8 +843,13 @@ global destructors keyed to
 graph
 guard variable for
 half
+handset
+handsfree
 hdmi
+headphones
+headset
 hidden alias for
+hifi
 iconv
 iconv_close
 iconv_open
@@ -863,6 +872,7 @@ libpulse.so.0
 librt.so.1
 libtier0_s.so
 libvstdlib_s.so
+line
 link
 locale::facet::_S_create_c_locale name not valid
 localeconv
@@ -935,6 +945,7 @@ nPut + nPutDelta <= outBuf.TellMaxPut()
 nSize != 0
 nSize >= 0
 nSuccess >= 0
+network
 new
 new[]
 non-transaction clone for
@@ -953,6 +964,7 @@ opendir
 operator
 operator""
 org.valvesoftware.steam
+output:hdmi-
 pConv && pConv->GetDelimiterLength() > 0
 pEndingDelim && pEndingDelim[0]
 pFile->m_hFileDest != INVALID_OSFILEHANDLE
@@ -1018,8 +1030,11 @@ pa_threaded_mainloop_start
 pa_threaded_mainloop_stop
 pa_threaded_mainloop_unlock
 pclose
+phone
 poll
 popen
+port.type
+portable
 posix_fadvise
 pread64
 print
@@ -1035,6 +1050,7 @@ pure virtual method called\n
 putc
 putwc
 pwrite64
+radio
 read
 readdir64
 readlink
@@ -1064,6 +1080,8 @@ sizeof...
 space
 spaceGranted
 spaceReleased
+spdif
+speaker
 sscanf
 statfs
 statfs64
@@ -1162,6 +1180,7 @@ usleep
 utime
 utimes
 vector::_M_realloc_insert
+video
 virtual thunk to
 void
 vsnprintf

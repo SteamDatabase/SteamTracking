@@ -744,7 +744,6 @@ $ffn
 &Uuml;
 &Yacute;
 &\n!k_EClientPersonaStateFlagClanData
-&\n!k_EClientPersonaStateFlagFacebook
 &\n!k_EClientPersonaStateGameDataBlob
 &\n!k_EMsgAMCancelEasyCollectResponse
 &\n!k_EMsgAMClientChatMemberInfoRelay
@@ -1164,6 +1163,7 @@ $ffn
 )\n$k_EMsgGCGetAccountDetails_DEPRECATED
 )\n$k_EMsgGCHAccountTradeBanStatusChange
 )\n$k_EMsgGMShellAndServerAddressUpdates
+)\n$k_EMsgRemoteClientPairWifiAPResponse
 )\n$k_EMsgUCMPublishedFileContentUpdated
 )\n$k_EMsgUCMUpdatePublishedFileResponse
 )\n$k_EMsgUFSHttpUploadFileFinishRequest
@@ -1189,8 +1189,9 @@ $ffn
 *N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
 *ZN4CNet26CallbackDeleteOnCompletionEvE39CUnbufferedSendCallbackDeleteOnComplete
-*ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
-*ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
+*ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
+*ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
+*\n"queue_head_position_at_reservation
 *\n%k_EClientPersonaStateFlagRichPresence
 *\n%k_EClientPersonaStateFlagUserClanRank
 *\n%k_EMsgAMAcctAllowedToPurchaseResponse
@@ -1502,6 +1503,7 @@ $ffn
 /data/src/SteamServiceClient/servicemodulemanagerasync.cpp
 /data/src/SteamServiceClient/servicemodulemanagerbase.cpp
 /data/src/SteamServiceClient/serviceprocessmonitor.cpp
+/data/src/common/clientregkeys.cpp
 /data/src/common/completionportmanager.cpp
 /data/src/common/completionportmanager_posix.cpp
 /data/src/common/cookiecontainer.cpp
@@ -1701,7 +1703,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-07:00:18
 08bX
 0?0L
 0A/8
@@ -1759,13 +1760,13 @@ $ffn
 10CUtlMemoryI21AllowRegistryAccess_sE
 10CUtlMemoryI9CSmartPtrI13IMsgNetPacketEE
 10CUtlMemoryI9CSmartPtrI16IMetricsReporterEE
-10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexIiEiN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN13CIPCLogCounts14IPCLogCounts_tEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoES_IS5_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN11CHTTPClient18SSLContextLookup_tEP15COpenSSLContexti8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
@@ -1778,7 +1779,6 @@ $ffn
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjN17VacProcessMonitor19ActiveProcessData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP15DynamicModule_si8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyji8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_tS_IS2_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E6Node_tEE
@@ -1790,6 +1790,7 @@ $ffn
 10CUtlMemoryIN10CUtlRBTreeIP9JobType_ti17CJobTypeByMsgLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP9JobType_ti18CJobTypeByNameLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIjt8CDefLess25CDefRBTreeBalanceListenerItEjE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_S1_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_S1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_S1_E12HashBucket_tEE
@@ -1883,13 +1884,13 @@ $ffn
 10CUtlMemoryIhE
 10CUtlMemoryIiE
 10CUtlMemoryIjE
-10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeI16CStringPoolIndexIiEiN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN13CIPCLogCounts14IPCLogCounts_tEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS4_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapIN11CHTTPClient18SSLContextLookup_tEP15COpenSSLContexti8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -1902,7 +1903,6 @@ $ffn
 10CUtlRBTreeIN7CUtlMapIjN17VacProcessMonitor19ActiveProcessData_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjP15DynamicModule_si8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
-10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIyii8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIN7CUtlMapIyji8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS1_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E
@@ -1914,6 +1914,7 @@ $ffn
 10CUtlRBTreeIP9JobType_ti17CJobTypeByMsgLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIP9JobType_ti18CJobTypeByNameLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIjt8CDefLess25CDefRBTreeBalanceListenerItEjE
+10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 10CUtlString
 10CUtlVectorI10CIPAddress10CUtlMemoryIS0_EE
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
@@ -2211,6 +2212,7 @@ $ffn
 20IClientSecureDesktop
 20IHTTPRedirectHandler
 20IUniformRandomStream
+21:17:51
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
@@ -2422,7 +2424,6 @@ $ffn
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS3_EEi22CDefCaselessStringLessE
 7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE
-7CUtlMapI10CUtlStringbi8CDefLessE
 7CUtlMapI10CUtlStringji8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
 7CUtlMapIN11CHTTPClient18SSLContextLookup_tEP15COpenSSLContexti8CDefLessE
@@ -2435,9 +2436,10 @@ $ffn
 7CUtlMapIjN17VacProcessMonitor19ActiveProcessData_tEi8CDefLessE
 7CUtlMapIjP15DynamicModule_si8CDefLessE
 7CUtlMapIjbi8CDefLessE
-7CUtlMapIybi8CDefLessE
 7CUtlMapIyii8CDefLessE
 7CUtlMapIyji8CDefLessE
+7CUtlSetI10CUtlStringi8CDefLessE
+7CUtlSetIyi8CDefLessE
 7E\vy
 7XRJ
 7\n2k_EMsgAMGameServerPlayerCompatibilityCheckResponse
@@ -2458,8 +2460,8 @@ $ffn
 88pH
 8A6j
 8CAutoPtrI15IMetricsFactoryE
-8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
-8CAutoPtrI7CUtlMapIybi8CDefLessEE
+8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
+8CAutoPtrI7CUtlSetIyi8CDefLessEE
 8CMetrics
 8CNetHost
 8CTCPHost
@@ -2909,6 +2911,7 @@ Account has an existing user cancelled license
 Account has been deleted
 Account is blocked
 Account is not allowed
+Account is restricted from purchasing adult content
 Account locked
 Account logon denied, need two-factor code
 Account not verified
@@ -3076,6 +3079,7 @@ BGetSubKeys
 BGetValueBin
 BGetValueStr
 BGetValueUint
+BGetValueUint64
 BGetValues
 BHandleTCPMessageData - buffered
 BHandleTCPMessageData - unbuffered
@@ -3189,6 +3193,7 @@ BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result i
 BSetValueBin
 BSetValueStr
 BSetValueUint
+BSetValueUint64
 BStartStreaming
 BStarted()
 BTcq
@@ -3688,7 +3693,6 @@ CHTTPUtil::BStatusCodeIsRedirect( eRedirectStatusCode )
 CH\f1
 CIPAndPort::GetIPv4 called on IPv6 address
 CIPCServer
-CIPCServer::BMainLoop
 CIPCServer::Run
 CIPCServer::Thread_MainLoop
 CIPCServer::Thread_MainLoop() -- Sleep
@@ -3986,6 +3990,7 @@ CProtoBufMsgBase::ExpectingReply
 CProtoBufMsgBase::SerializeWriteBytes
 CProtoBufNetPacket::RebuildPacketIfNeeded (needed)
 CQueuedLambdaRunner::BFrameFuncRunQueuedFunctions
+CRC32_ProcessBuffer
 CRL Sign
 CRL has expired
 CRL is not yet valid
@@ -4006,6 +4011,7 @@ CRYPTO_new_ex_data
 CRYPTO_ocb128_copy_ctx
 CRYPTO_ocb128_init
 CRYPTO_set_ex_data
+CSHA1::Update
 CSPAuth
 CSPName
 CScheduledFunctionMgr::BFrameFuncRun
@@ -4678,6 +4684,7 @@ Debit Card (Nodwin)
 Debug
 December
 Decipher Only
+Deckard
 Default
 Default initial allocation size for PB arena
 Default value for an enum field must be an identifier.
@@ -5434,6 +5441,7 @@ Free
 Free Weekend
 Free disk space for %s would overflow
 FreeDeletedPackets
+Fremont
 French
 FrenemyFilter
 Friday
@@ -6143,6 +6151,7 @@ KeyValues::ReadAsBinary() stack depth > 100
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
+KeyValues::RemoveSubKey
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
@@ -6812,7 +6821,7 @@ Not supported.
 Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
-Nov 22 2025
+Nov 25 2025
 November
 NrZl
 NullMetrics()
@@ -8109,6 +8118,7 @@ SocketFail
 Sofort
 Software
 Software\Valve\Steam
+Software\Valve\SteamService
 Solo
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
 Someone called ClearWritingMinidump without holding the minidump lock.
@@ -8302,7 +8312,7 @@ Swish
 Switch
 Switching Protocols
 Symbol name "
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 Synthetic oneofs must be after all other oneofs
 System
 T*8U
@@ -10853,6 +10863,7 @@ controller_switch_joycon_pair
 controller_switch_joycon_right
 controller_switch_pro
 controller_switch_pro_generic
+controller_triton
 controller_ui
 controller_unknown
 controller_wii
@@ -11391,7 +11402,7 @@ demoted from officer
 dep_stream
 depend on itself
 depotdeltapatch
-depotonly
+depotingest
 depots
 deprecated client msg %s, SteamID %s
 depth exceeded
@@ -13247,7 +13258,6 @@ k_EMsgAIGetAppList
 k_EMsgAIGetAppListResponse
 k_EMsgAISGetCouponDefinition
 k_EMsgAISGetPackageChangeNumber
-k_EMsgAISTestEnableGC
 k_EMsgAMAccountPS3Unlink
 k_EMsgAMAcctAllowedToPurchase
 k_EMsgAMAddFounderToClan
@@ -14226,6 +14236,7 @@ k_EMsgRemoteClientAuthorizationResponse
 k_EMsgRemoteClientBase
 k_EMsgRemoteClientGetControllerConfig
 k_EMsgRemoteClientGetControllerConfigResponse
+k_EMsgRemoteClientPairWifiAP
 k_EMsgRemoteClientPing
 k_EMsgRemoteClientPingResponse
 k_EMsgRemoteClientProofRequest
@@ -14818,6 +14829,8 @@ m_pSSLConnectionData != NULL
 m_pSSLConnectionData && m_pSSLConnectionData->m_pSSLCallback
 m_pSSLContext
 m_pSavedStack
+m_pSetIntValue
+m_pSetStringValue
 m_pSibling
 m_pSingleProcessPipe
 m_pSingleProcessPipe == NULL
@@ -14829,8 +14842,6 @@ m_pTicketKeyMgr == NULL
 m_pTreeInUseConnections
 m_pTreeWaitingConnections
 m_pValObjects != NULL
-m_pVecStringValue
-m_pVecUlValue
 m_pWaiter
 m_pWaiter->Count()
 m_pWaitingOnLock == NULL
@@ -14899,6 +14910,7 @@ m_strTargetHostName
 m_strURL
 m_strValue
 m_strWatchPath
+m_tree
 m_treeDisconnectingConnections
 m_treeIPCLogCounts
 m_treeIPCLogCounts.Element( i ).m_strMethod
@@ -16322,6 +16334,7 @@ pstrFormat != NULL
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pstrValue
 pszName
 pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
 pszThreadName != NULL
@@ -16393,6 +16406,7 @@ public_key
 publish
 publisher_group_id
 pulContext
+punValue
 punct
 purchase
 pure virtual method called\n
@@ -16425,6 +16439,7 @@ qualityLabelledData
 quantil
 quechua
 queue
+queue_head_position_now
 queue_position
 qwest
 qwilt

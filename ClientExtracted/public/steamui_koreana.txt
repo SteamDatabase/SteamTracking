@@ -22,9 +22,9 @@
 "SteamUI_ConversionCompleteInfo" "Steam 미리 받기가 완료되었습니다."
 
 "SteamUI_ConversionCompleteInfoFailed" " "
-"SteamUI_ConvertExistingStatus1" "%s1 파일 미리받는 중"
-"SteamUI_ConvertExistingStatus2" "%s1 개의 파일을 미리받는 중.."
-"SteamUI_ConvertExistingStatus3" "%s1 개의 파일을 미리받는 중..."
+"SteamUI_ConvertExistingStatus1" "%s1 파일 미리 받는 중"
+"SteamUI_ConvertExistingStatus2" "%s1 개의 파일을 미리 받는 중.."
+"SteamUI_ConvertExistingStatus3" "%s1 개의 파일을 미리 받는 중..."
 
 "WelcomeToSteamNameLabel" "이름"
 "WelcomeToSteamEmailLabel1" "메일 주소"
@@ -157,7 +157,7 @@
 "SteamUI_CreatingAccount"	"계정을 만드는 중..."
 
 "SteamUI_InstallServiceTitle" "Steam 서비스 오류"
-"SteamUI_InstallServiceText" "사용 중인 기기의 Steam 서비스에 일부 유지 관리 작업이 필요합니다.\n이 서비스는 Steam 설치 또는 게임 업데이트를 지원하고, 일부 타이틀에서 안티 치트 감지 및 기타 시스템 레벨의 작업을 지원합니다.\nSteam 서비스를 다시 설치하려면 관리자 권한이 필요합니다."
+"SteamUI_InstallServiceText" "사용 중인 기기의 Steam 서비스에 일부 유지 관리 작업이 필요합니다.\n이 서비스는 Steam 설치 또는 게임 업데이트를 지원하고, 일부 게임에서 부정행위 감지 및 기타 시스템 레벨의 작업을 지원합니다.\nSteam 서비스를 다시 설치하려면 관리자 권한이 필요합니다."
 "SteamUI_InstallServiceOk" "서비스 설치"
 "SteamUI_InstallServiceCancel" "취소"
 
@@ -185,8 +185,8 @@
 "SteamUI_GamesDialog_RightClick_ViewGameHub" "커뮤니티 허브 보기"
 "SteamUI_GamesDialog_RightClick_ViewForumPage"	"포럼 보기"
 "SteamUI_GamesDialog_RightClick_ViewDLC" "다운로드 가능한 콘텐츠 보기"
-"SteamUI_GamesDialog_RightClick_SetCustomImage" "임의 사진 설정..."
-"SteamUI_GamesDialog_RightClick_RemoveCustomImage" "임의로 설정한 사진 삭제..."
+"SteamUI_GamesDialog_RightClick_SetCustomImage" "맞춤 이미지 설정..."
+"SteamUI_GamesDialog_RightClick_RemoveCustomImage" "맞춤 이미지 삭제..."
 "Steam_GamesDialog_RightClick_ViewGuide" "가이드 보기"
 "Steam_GamesDialog_RightClick_ViewSteamGuides" "커뮤니티 가이드 보기"
 "SteamUI_GamesDialog_RightClick_Recommend" "평가 작성하기"
@@ -252,17 +252,17 @@
 
 "SteamUI_JoinDialog_TimeLeftMinutes$appType"    "%minutes%분"
 
-"SteamUI_SetCustomImage_Title" "%gamename% - 사용자 임의 사진 설정"
+"SteamUI_SetCustomImage_Title" "%gamename% - 맞춤 이미지 설정"
 "SteamUI_SetCustomImage_ChooseImage" "Steam의 게임 목록에서 표시될 %gamename%의 사진을 선택해 주세요."
 "SteamUI_SetCustomImage_ImagePrescription" "해당 파일은 JPEG, PNG 또는 TGA 형식의 460x215 크기여야 합니다."
-"SteamUI_SetCustomImage_ThisFile" "사용자 임의 설정 사진 파일:"
+"SteamUI_SetCustomImage_ThisFile" "맞춤 이미지 파일:"
 "SteamUI_SetCustomImage_Browse" "찾아보기..."
 "SteamUI_SetCustomImage_TryAgain" "유효한 파일 이름을 입력해 주세요."
 "SteamUI_SetCustomImage_LocateImage" "등록할 사진을 선택해 주세요"
 "SteamUI_SetCustomImage_SetImage" "사진 등록"
 "SteamUI_SetCustomImage_Cancel" "취소"
-"SteamUI_DeleteCustomImage_Title" "%gamename% - 사용자 임의 사진 삭제"
-"SteamUI_DeleteCustomImage_Confirm" "%gamename% 게임에 적용했던 사용자 임의 사진을 삭제할까요?"
+"SteamUI_DeleteCustomImage_Title" "%gamename% - 맞춤 이미지 삭제"
+"SteamUI_DeleteCustomImage_Confirm" "%gamename% 게임에 적용했던 맞춤 이미지를 삭제할까요?"
 "SteamUI_DeleteCustomImage_Continue" "계속"
 "SteamUI_DeleteCustomImage_Cancel" "취소"
 
@@ -577,7 +577,7 @@
 "Steam_ErrorCouldNotConnect" 	"Steam 네트워크에 접속할 수 없습니다.\n현재 Steam 네트워크가 작동하고 있지 않거나 인터넷 연결에 문제가\n있는 것 같습니다. 자세한 정보는 www.steampowered.com을 참조하세요."
 
 "steam_preload_title"			"%game% 미리 받기"
-"steam_preloading_title"		"%game% 미리받는 중 (%preload_amount%%% 완료)"
+"steam_preloading_title"		"%game% 미리 받는 중 (%preload_amount%%% 완료)"
 "steam_sellpage_title"			"%subscription%"
 
 "Steam_GamesDialog_ComingSoon"	"출시 예정 게임"
@@ -593,7 +593,7 @@
 "Steam_PurchaseCDKeySuccess"		"축하합니다! %subscription% 복사본이 %account% 계정에 성공적으로 등록되었습니다.\n\n%game% 게임을 실행하려면 이 계정으로 Steam에 로그인해야 합니다."
 "Steam_PurchaseAccount"			"%account%"
 
-"Steam_PurchaseCDKeyIncomplete"		"%subscription% 요청이 너무 많아 가입 요청을 완전히 처리할 수 없습니다. 처리가 완료되는 동안 %game% 게임을 실행할 수 있습니다."
+"Steam_PurchaseCDKeyIncomplete"		"%subscription% 요청이 너무 많아 가입 신청을 완전히 처리할 수 없습니다. 처리가 완료되는 동안 %game% 게임을 실행할 수 있습니다."
 
 "Steam_PreLoadingDescription"	"game%의 예약 주문을 선택하셨습니다. 예약 주문은 다음과 같이 3 단계로 처리됩니다."
 "Steam_PreLoading1"				"1. 게임 콘텐츠 미리 받기"
@@ -610,10 +610,10 @@
 "Steam_PreloadContinue"		"계속"
 "Steam_PreloadCancel"		"미리 받기 취소를 선택하셨습니다. 취소하실 경우 지금까지 다운로드한 데이터가 모두 삭제됩니다.\n\n계속하시려면 \"확인\"을 선택하시고, 데이터를 보존하려면 \"취소\"를 클릭하세요."
 "Steam_CancelPreloading"		"미리 받기 취소"
-"Steam_PreloadProgressNotes"	"%game% 게임을 컴퓨터에 미리받고 있습니다.\n\n지금 게임을 예약 주문하면 공식 출시일에 잠금이 해제되어 바로 게임을 실행할 수 있습니다."
-"Steam_PreloadProgressNotesPayed"	"%game% 게임을 컴퓨터로 미리받고 있습니다.\n\n잠시 기다려 주세요. 미리 받기 작업은 오래 걸릴 수 있습니다."
-"Steam_PreloadProgressNotesStart"	"%game% 게임을 컴퓨터로 미리받을 준비가 되었습니다.\n\n지금 게임을 예약 주문하면 공식 출시일에 잠금이 해제되어 바로 게임을 실행할 수 있습니다."
-"Steam_PreloadProgressNotesStartPayed"	"%game% 게임을 컴퓨터로 미리받을 준비가 되었습니다."
+"Steam_PreloadProgressNotes"	"%game% 게임을 컴퓨터에 미리 받고 있습니다.\n\n지금 게임을 예약 주문하면 공식 출시일에 잠금이 해제되어 바로 게임을 실행할 수 있습니다."
+"Steam_PreloadProgressNotesPayed"	"%game% 게임을 컴퓨터로 미리 받고 있습니다.\n\n잠시 기다려 주세요. 미리 받기 작업은 오래 걸릴 수 있습니다."
+"Steam_PreloadProgressNotesStart"	"%game% 게임을 컴퓨터로 미리 받을 준비가 되었습니다.\n\n지금 게임을 예약 주문하면 공식 출시일에 잠금이 해제되어 바로 게임을 실행할 수 있습니다."
+"Steam_PreloadProgressNotesStartPayed"	"%game% 게임을 컴퓨터로 미리 받을 준비가 되었습니다."
 
 "Steam_PreloadDescription"		"공지: %subscription% 게임은 예약 주문 상품입니다. 공식 출시일에 잠금해제되어 실행 할 수 있습니다."
 
@@ -882,7 +882,7 @@
 "SteamUI_ValveSurvey_Summary_Audio"							"사운드 카드:"
 "SteamUI_ValveSurvey_Summary_Storage"						"저장 공간:"
 
-"SteamUI_ValveSurvey_ResultsLabel"							"설문 조사가 끝났습니다. 참여해 주셔서 다시 한 번 감사를 드립니다.\n\n현재 사용 중이신 컴퓨터를 다른 Steam 회원들과 비교하려면 아래 링크를 클릭하여 설문 조사의 정리된 결과를 볼 수 있습니다.\n\n (그렇지 않은 경우 '마침'을 클릭하여 이 창을 닫을 수 있습니다)."
+"SteamUI_ValveSurvey_ResultsLabel"							"설문 조사가 끝났습니다. 참여해 주셔서 다시 한 번 감사를 드립니다.\n\n현재 사용 중이신 컴퓨터를 다른 Steam 멤버들과 비교하려면 아래 링크를 클릭하여 설문 조사의 정리된 결과를 볼 수 있습니다.\n\n (그렇지 않은 경우 '마침'을 클릭하여 이 창을 닫을 수 있습니다)."
 "SteamUI_ValveSurvey_ResultsButton"							"설문 조사 결과 페이지로 이동합니다."
 
 "SteamUI_ValveSurvey_Summary_HardwareModel"					"모델:  %s1"
@@ -1106,7 +1106,7 @@
 "SteamUI_ValveSurvey_Summary_UploadProgress"	"업로드 진행율:"
 "SteamUI_ValveSurvey_Summary_NoCSERServers"	"현재 통계 표시 서버를 찾을 수 없습니다.  나중에 다시 시도하세요."
 
-"Steam_UnableToPreload_NotSubscribed" "사용자가 가입되어 있지 않아 이 응용 프로그램을 미리받을 수 없습니다."
+"Steam_UnableToPreload_NotSubscribed" "사용자가 가입되어 있지 않아 이 응용 프로그램을 미리 받을 수 없습니다."
 
 "SteamUI_ValveSurvey_Summary_Misc"		"기타:"
 "SteamUI_ValveSurvey_Summary_LanguageId"	"UI 언어:  %s1"
@@ -1392,7 +1392,7 @@
 "Steam_PurchaseFraudWarning" "신용 카드 사기는 명백한 범죄입니다. Valve는 사법당국과 적극 협조하여 불법 행위를 철저하게 고발할 것입니다."
 
 "Steam_CacheValidation_Title"		"Steam 파일 확인 중 - %progress%%% 완료"
-"Steam_ValidatingSteamCaches"		"%cache_name% 파일 확인 중(%cache_number% / %cache_total%)"
+"Steam_ValidatingSteamCaches"		"%cache_name% 파일 확인 중(%cache_number%/%cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"Steam 캐시 파일을 검사하는 중 (%cache_number%개 중 %cache_total%개)"
 
 "Steam_CacheDecryption_Title"		"Steam 파일 암호 해제 중 - %progress%%% 완료"
@@ -1819,7 +1819,7 @@
 "Steam_GamePreorderReady" "미리 받기 완료, 미출시"
 "steam_gamepurchaseready" "미리 받기 완료"
 "Steam_ThirdPartyGameReady"	"모드 플레이 준비 완료"
-"Steam_GamePreloading"	"미리받는 중"
+"Steam_GamePreloading"	"미리 받는 중"
 "Steam_GameUpdating"	"업데이트 중"
 "Steam_GameDownloading"	"다운로드 중"
 "Steam_GameDownloadStarting"	"공간을 미리 배정하는 중"
@@ -1852,7 +1852,7 @@
 "Steam_MiniGamesList_PreloadPaused"		"(미리 받기 일시 중지됨)"
 "Steam_MiniGamesList_PreloadStarting"	"미리 받기 시작 중..."
 "Steam_MiniGamesList_Unreleased"		"(미출시)"
-"Steam_MiniGamesList_Preloaded"			"(미리받음)"
+"Steam_MiniGamesList_Preloaded"			"(미리 받음)"
 "Steam_MiniGamesList_Synchronizing"		"(동기화)"
 
 "Steam_RightClick_PauseUpdating"		"업데이트 일시 중지"
@@ -2127,7 +2127,7 @@
 "Steam_GameProperties_BPMOverlay_PerGameOptIn_Global"	"글로벌 설정 또는 개발자 설정을 사용합니다"
 "Steam_GameProperties_BPMOverlay_PerGameOptIn_ForcedOn" "강제로 켜기"
 
-"Steam_GameProperties_SteamPlaySettings_Override" "강제로 특정 Steam 플레이 호환 도구 사용하기"
+"Steam_GameProperties_SteamPlaySettings_Override" "강제로 특정 Steam Play 호환 도구 사용하기"
 
 "Steam_Controller_Support_PS4" "PS"
 "Steam_Controller_Support_XBox" "Xbox"
@@ -3545,7 +3545,7 @@ Windows에 관리자로 로그인해야 합니다.
 "SteamUI_ManageSecurity_InfoLabel2" "즉, 한 번도 귀하의 Steam 계정으로 로그인하신 적이 없는 컴퓨터나 웹 브라우저에서 계정에 접근하시려면, 계정에 등록하신 귀하의 연락용 이메일을 확인하셔야 합니다."
 "SteamUI_ManageSecurity_InfoLabel3" "귀하의 Steam 계정으로 로그인한 적이 없는 컴퓨터나 웹 브라우저에서 로그인을 시도하시면, Steam에서 귀하의 연락용 이메일로 메시지를 보냅니다. 이 메시지에는 로그인 과정을 계속 진행하기 위한 특별 승인 코드가 적혀있습니다."
 "SteamUI_ManageSecurity_NothingRadio" "계속 Steam Guard의 보호를 받겠습니다"
-"SteamUI_ManageSecurity_UnlockRadio" "Steam Guard 비활성화 (권장하지 않음)"
+"SteamUI_ManageSecurity_UnlockRadio" "Steam Guard 비활성화(권장하지 않음)"
 "SteamUI_ManageSecurity_UnlockWarning" "참고: Steam Guard가 꺼진 상태에서는 Steam 거래와 Steam 장터를 이용할 수 없으며 Steam Guard를 다시 켜도 15일간 이용이 제한됩니다."
 
 "SteamUI_ManageSecurity_RemoveOtherComputersButton" "다른 모든 컴퓨터의 인증을 철회"
@@ -3608,7 +3608,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_RecoverLocked_StartRecovery3" "문제를 해결하기 위해 Steam 고객지원으로 문의하세요. 저희는 고객님의 계정 접속에 관련된 정당한 요청에 대하여 도움을 드리는 것을 최우선순위로 여기고 있습니다."
 "Steam_RecoverLocked_RecoverySupportLink" "Steam 고객지원에 문의"
 "Steam_RecoverLocked_RecoverySupportLink_URL" "https://support.steampowered.com"
-"Steam_RecoverLocked_LearnMore" "Intel® Identity Protection Technology에 대해 더 알아보기"
+"Steam_RecoverLocked_LearnMore" "Intel® Identity Protection Technology에 관해 자세히 알아보기"
 "Steam_RecoverLocked_LearnMore_URL" "https://support.steampowered.com/kb_article.php?ref=9400-IPAX-9398&auth=e39b5c227cffc8ae65414aba013e5fef"
 "Steam_RecoverLocked_CannotAccess" "죄송합니다, 해당 계정은 인증되지 않은 컴퓨터에서는 사용할 수 없습니다."
 "Steam_RecoverLocked_Success" "성공!"
@@ -3671,7 +3671,7 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_library_filter_applications" "소프트웨어"
 "steam_library_filter_allplatform_linux"	"SteamOS + Linux"
 "steam_library_filter_allplatform"	"Mac"
-"steam_library_filter_recentgames"	"최근에 플레이"
+"steam_library_filter_recentgames"	"최근 플레이"
 "steam_library_filter_installedgames"	"설치됨"
 "steam_library_filter_favorites"	"즐겨찾기"
 "steam_library_filter_installedlocallygames"	"로컬"
@@ -4324,8 +4324,8 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_TimedTrial_Minutes" "플레이 시간이 %minutes%분 남았습니다"
 "Steam_TimedTrial_Hours" "플레이 시간이 %hours%시간 %minutes%분 남았습니다"
 
-"steam_inbox_tradeoffer"	"1개의 거래 제안 대기 중"
-"steam_inbox_tradeoffers"	"%count%개의 거래 제안 대기 중"
+"steam_inbox_tradeoffer"	"1개의 교환 제안 대기 중"
+"steam_inbox_tradeoffers"	"%count%개의 교환 제안 대기 중"
 
 "steam_inbox_moderatormessage"	"커뮤니티 메시지 1개"
 "steam_inbox_moderatormessages"	"커뮤니티 메시지 %count%개"
@@ -4567,20 +4567,20 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Settings_ShaderCache_BGProcessing_Enable"		"백그라운드에서 Vulkan 셰이더 처리 허용"
 "Steam_Settings_ShaderCache_CurrentlyProcessing"		"%shaderapp% 처리 중... (%shaderpercent%%)"
 
-"Steam_Settings_Compat"				        "Steam 플레이"
-"Steam_Settings_Compat_Title"			    "Steam 플레이 설정"
-"Steam_Settings_Compat_Info"			    "Steam 플레이는 호환 도구를 자동으로 설치해, 라이브러리에 있는 게임 중 다른 운영 체제를 위해 제작된 게임을 플레이할 수 있도록 해줍니다."
-"Steam_Settings_Compat_Enable"			    "지원되는 타이틀에 대해 Steam 플레이 활성화"
+"Steam_Settings_Compat"				        "Steam Play"
+"Steam_Settings_Compat_Title"			    "Steam Play 설정"
+"Steam_Settings_Compat_Info"			    "Steam Play는 호환 도구를 자동으로 설치해, 라이브러리에 있는 게임 중 다른 운영 체제를 위해 제작된 게임을 플레이할 수 있도록 해줍니다."
+"Steam_Settings_Compat_Enable"			    "지원되는 타이틀에 대해 Steam Play 활성화"
 "Steam_Settings_Compat_Advanced_Title"		"고급"
-"Steam_Settings_Compat_Forced_Info"		    "Steam 플레이를 사용하면, 라이브러리에 있는 게임 중 호환 도구로 아직 확인하지 않은 게임을 먼저 테스트할 수 있습니다."
-"Steam_Settings_Compat_Forced_Enable"		"다른 모든 타이틀에 Steam 플레이를 활성화합니다"
+"Steam_Settings_Compat_Forced_Info"		    "Steam Play를 사용하면, 라이브러리에 있는 게임 중 호환 도구로 아직 확인하지 않은 게임을 먼저 테스트할 수 있습니다."
+"Steam_Settings_Compat_Forced_Enable"		"다른 모든 타이틀에 Steam Play를 활성화합니다"
 "Steam_Settings_Compat_Advanced_Info"		"호환 도구를 선택해 이 플랫폼에서 작동 여부가 테스트되거나 확인되지 않은 게임에 사용할 수 있습니다.\n\n예상대로 작동하지 않을 수도 있으며, 크래시 및 저장 게임 손상 등 게임에 문제를 일으킬 수 있습니다."
 "Steam_Settings_Compat_Default_Tool"		"다음 도구로 다른 타이틀 실행:"
-"Steam_Settings_Compat_Info_Link"		    "Steam 플레이 FAQ"
+"Steam_Settings_Compat_Info_Link"		    "Steam Play FAQ"
 "Steam_Settings_Compat_No_Default"		    "선택된 항목 없음"
 
 "Steam_Settings_Compat_Launch_Prefix"   "다음을 통해 이 컴퓨터에서 실행:  "
-"Steam_Settings_Compat_Launch_Name"     "Steam 플레이"
+"Steam_Settings_Compat_Launch_Name"     "Steam Play"
 
 "Steam_Settings_Compat_Launch_Whitelisted"     "Valve 테스트가 선택"
 "Steam_Settings_Compat_Launch_Wildcard"     "모든 게임에 대해 직접 선택"

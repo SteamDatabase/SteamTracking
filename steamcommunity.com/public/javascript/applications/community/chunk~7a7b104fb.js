@@ -6,7 +6,7 @@
     53120: (e) => {
       e.exports = {
         strStreamIconCapsuleArtHeight: "58px",
-        strStreamIconScreenshotArtHeight: "82px",
+        strStreamIconScreenshotArtHeight: "58px",
         bordered_container: "_3zXpFCyX2IiaD-MNF5KJFf",
         WidePlayer: "_3zjvrmOCIh31clDHjpLE2a",
         store_chat_ctn: "_21N-VV6Gvjjc1FqzOMJQfi",
@@ -44,7 +44,6 @@
         multistream: "_1DS-WZoUJyBitKOZoq7u3n",
         MultiStreamCtn: "_1K6j5rrGvLPb8aT2L7CBAA",
         scrollingstreams: "_3aYWlUqW6-SosI72nizpP4",
-        stream_icon_arrow: "_2Qpu-LNderkIBi_DTPhT30",
         clear_div: "_1oCVbTJqa4Av40NuPdztIv",
         NoSelect: "_3Zm9dcDmIQkcWVzEq0IB-E",
         broadcast_floating: "_2WNxa8Qii8HrG8e0th6oB8",

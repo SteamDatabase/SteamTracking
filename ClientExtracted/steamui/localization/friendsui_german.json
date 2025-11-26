@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Nachrichten löschen",
     "Chat_Actions_Select_Message": "Nachricht auswählen",
     "Chat_Actions_Report": "Melden",
+    "Chat_Actions_ReportGroup": "Gruppenchat melden",
     "Chat_Actions_React": "Reagieren",
     "Chat_Actions_Delete": "Löschen",
     "Chat_Actions_DeleteChatMessages_Confirm": "Möchten Sie diese Nachrichten von „%1$s“ wirklich löschen?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Fehler behoben, durch den Freunde- und Chatfenster im In-Game-Overlay unter Linux und macOS nicht angezeigt wurden.",
     "BBCode_Loading": "Ladevorgang läuft",
     "BBCode_Failed": "Konnte nicht geladen werden",
-    "broadcastDetails_Playing": "Spielt",
-    "Chat_Actions_ReportGroup": "Gruppenchat melden"
+    "broadcastDetails_Playing": "Spielt"
 }

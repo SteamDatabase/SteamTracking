@@ -152,5 +152,6 @@
     "moderation_resolutionstatus_removed": "أُزيل المحتوى",
     "moderation_resolutionstatus_relabelled": "أُعيدت تسمية المحتوى",
     "moderation_resolutionstatus_suspicious": "الحساب مقفل لوجود محتوى مشبوه",
-    "moderation_resolutionstatus_unknown": "غير معروف"
+    "moderation_resolutionstatus_unknown": "غير معروف",
+    "moderationaction_released": "تم الإصدار"
 }

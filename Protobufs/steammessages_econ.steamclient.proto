@@ -3,6 +3,14 @@ import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
+enum EAssetPropertyType {
+	k_EAssetPropertyType_Unknown = 0;
+	k_EAssetPropertyType_Float = 1;
+	k_EAssetPropertyType_Int = 2;
+	k_EAssetPropertyType_String = 3;
+	k_EAssetPropertyType_MAX = 4;
+}
+
 message CEcon_GetInventoryItemsWithDescriptions_Request {
 	message FilterOptions {
 		repeated uint64 assetids = 1;
@@ -106,6 +114,15 @@ message CEconItem_AssetProperty {
 	optional uint32 propertyid = 1;
 	optional int64 int_value = 2;
 	optional float float_value = 3;
+	optional string string_value = 4;
+}
+
+message CEconItem_AssetAccessory {
+	optional uint64 classid = 1;
+	optional uint64 instanceid = 2;
+	repeated .CEconItem_AssetProperty standalone_properties = 3;
+	repeated .CEconItem_AssetProperty parent_relationship_properties = 4;
+	repeated .CEconItem_AssetAccessory nested_accessories = 5;
 }
 
 message CEconItem_AssetProperties {
@@ -113,6 +130,7 @@ message CEconItem_AssetProperties {
 	optional uint64 contextid = 2;
 	optional uint64 assetid = 3;
 	repeated .CEconItem_AssetProperty asset_properties = 4;
+	repeated .CEconItem_AssetAccessory asset_accessories = 5;
 }
 
 message CEcon_GetInventoryItemsWithDescriptions_Response {
@@ -152,9 +170,31 @@ message CEcon_GetAssetClassInfo_Response {
 	repeated .CEconItem_Description descriptions = 1;
 }
 
+message CEcon_GetAssetPropertySchema_Request {
+	optional uint32 appid = 1;
+	optional string language = 2;
+}
+
+message CEconItem_AssetPropertySchema {
+	optional uint32 id = 1;
+	optional string name = 2;
+	optional .EAssetPropertyType type = 3 [default = k_EAssetPropertyType_Unknown];
+	optional float float_min = 4;
+	optional float float_max = 5;
+	optional int64 int_min = 6;
+	optional int64 int_max = 7;
+	optional string localized_label = 8;
+	optional bool hide_from_description = 9;
+}
+
+message CEcon_GetAssetPropertySchema_Response {
+	repeated .CEconItem_AssetPropertySchema property_schemas = 1;
+}
+
 service Econ {
 	rpc GetInventoryItemsWithDescriptions (.CEcon_GetInventoryItemsWithDescriptions_Request) returns (.CEcon_GetInventoryItemsWithDescriptions_Response);
 	rpc GetTradeOfferAccessToken (.CEcon_GetTradeOfferAccessToken_Request) returns (.CEcon_GetTradeOfferAccessToken_Response);
 	rpc ClientGetItemShopOverlayAuthURL (.CEcon_ClientGetItemShopOverlayAuthURL_Request) returns (.CEcon_ClientGetItemShopOverlayAuthURL_Response);
 	rpc GetAssetClassInfo (.CEcon_GetAssetClassInfo_Request) returns (.CEcon_GetAssetClassInfo_Response);
+	rpc GetAssetPropertySchema (.CEcon_GetAssetPropertySchema_Request) returns (.CEcon_GetAssetPropertySchema_Response);
 }

@@ -3539,7 +3539,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "SteamUI_ManageSecurity_InfoLabel2" "Isso significa que você precisará ter acesso a sua conta de e-mail para acessar sua conta Steam de um computador ou navegador desconhecidos."
 "SteamUI_ManageSecurity_InfoLabel3" "O Steam enviará uma mensagem ao seu endereço de e-mail na primeira vez que tentar acessar a sua conta Steam de um computador ou navegador desconhecido. Essa mensagem incluirá um código especial de acesso, que é necessário para acessar a sua conta Steam."
 "SteamUI_ManageSecurity_NothingRadio" "Manter a minha conta protegida pelo Steam Guard"
-"SteamUI_ManageSecurity_UnlockRadio" "Desativar Steam Guard (Não recomendado)"
+"SteamUI_ManageSecurity_UnlockRadio" "Desativar Steam Guard (não recomendado)"
 "SteamUI_ManageSecurity_UnlockWarning" "Observação: Os recursos de troca e Mercado da Comunidade Steam estarão indisponíveis enquanto o Steam Guard estiver desativado e até 15 dias após a sua reativação."
 
 "SteamUI_ManageSecurity_RemoveOtherComputersButton" "Desautorizar todos os outros computadores agora"

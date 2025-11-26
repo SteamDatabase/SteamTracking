@@ -267,6 +267,7 @@
     "Settings_Controller_GenericGamepadSupport": "为通用控制器启用蒸汽平台输入",
     "Settings_Controller_SCPairing": "配对蒸汽平台控制器",
     "Settings_ControllerCalibration_HapticsEnable": "蒸汽平台触感",
+    "Settings_ControllerCalibration_Grip_Sensor_Desc": "蒸汽平台控制器的握持传感器可检测您的手与控制器握把之间的距离。您可以在蒸汽平台输入中将其用作普通按键，或用作陀螺仪激活按键。请使用下方设置调整手部识别的灵敏度。",
     "Settings_Customization_StartupVideo_Desc": "选择启动蒸汽平台时要播放的自定义影片，个性化您的蒸汽平台体验。此设置按设备生效，而非按用户生效。",
     "Settings_Customization_StartupVideo_Shuffle_Desc": "每次蒸汽平台启动时随机选择一个影片",
     "Settings_Customization_StartupVideo_Type_PointsShop": "来自蒸汽平台点数商店",
@@ -475,6 +476,7 @@
     "FamilyGroup_TrySteamFamilies": "使用 <1>蒸汽平台家庭</1>功能，为您的家人启用库共享、家长控制和购买请求功能。",
     "FamilyGroup_TrySteamFamilies_Button": "创建或加入蒸汽平台家庭",
     "FamilyGroup_OldSharingWarning": "此旧版库共享功能将于 2025 年初停用。创建或加入 <1>蒸汽平台家庭</1>以继续共享您的游戏。",
+    "FamilyGroup_QueryFailed": "无法获取关于您的蒸汽平台家庭“%1$s”的信息。请稍后重试。（%2$s）",
     "FamilyGroup_ChoosePreferredLender_Text": "您的蒸汽平台家庭中有此游戏的多个副本，且副本中含有不同的 DLC。请选择您的偏好版本。",
     "FamilyGroup_ChoosePreferredLender_DLCInCommon": "+ %1$s 个蒸汽平台家庭中所有副本共有的 DLC。",
     "FamilyView_RequestPlaytime_Description_Offline": "您目前已与蒸汽平台断开连接。上线向家庭中的成年人请求给予更多游戏时间。",
@@ -488,6 +490,5 @@
     "ShareSheet_ShareOnSteam_PartialUploaded": "%1$s 张截图已分享至蒸汽平台，因此将跳过。",
     "ShareSheet_ShareOnSteam_PartialUploaded_Plural": "%1$s 张截图已分享至蒸汽平台，因此将跳过。",
     "Overlay_ClipHint_1": "您的剪辑已保存至您的“蒸汽平台录像及截图”中",
-    "Overlay_ClipHint_2": "要管理/编辑/分享您所有的录像，请从客户端菜单转至%1$s，或在下方的蒸汽平台叠加界面菜单中选择 %2$s。",
-    "FamilyGroup_QueryFailed": "无法获取关于您的蒸汽平台家庭“%1$s”的信息。请稍后重试。（%2$s）"
+    "Overlay_ClipHint_2": "要管理/编辑/分享您所有的录像，请从客户端菜单转至%1$s，或在下方的蒸汽平台叠加界面菜单中选择 %2$s。"
 }

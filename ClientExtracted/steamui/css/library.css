@@ -1009,7 +1009,7 @@ button.TextButton.gpfocus {
 }
 .DialogSlider_Value {
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   top: 0;
   bottom: 0;
   background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
@@ -1020,6 +1020,7 @@ button.TextButton.gpfocus {
   position: absolute;
   top: -1px;
   bottom: -3px;
+  inset-inline-start: var(--position);
   margin-inline-start: -6px;
   width: 12px;
   height: 12px;
@@ -1041,8 +1042,8 @@ button.TextButton.gpfocus {
 .DialogProgressBar_Value {
   height: 100%;
   background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-start-start-radius: 5px;
+  border-end-start-radius: 5px;
   width: 0px;
   transition: width .2s linear;
 }
@@ -2647,6 +2648,16 @@ html._14wqdluDeDnnEcg3OSLEmd body {
 ._1IeRz_QzfsACNiXS4gXHIT {
   color: #199fff;
 }
+._15p32SPTbcOsOrlb8o1MdF:dir(rtl) .fX8M83YDC9--4QLgVAEir {
+  transform: translateX(730px);
+}
+._15p32SPTbcOsOrlb8o1MdF:dir(rtl) ._1GjVGP2qdwSOEBKimtRG0k,
+._15p32SPTbcOsOrlb8o1MdF:dir(rtl) ._12AVA1wr7SWXg9INaLfBzD {
+  transform: translateX(-300px);
+}
+.AMU5Zvf1pJLZGVqbpGcUC:dir(rtl) {
+  scale: -1 1;
+}
 body._1Xs5dtPK2K37sd1U9BLX3S {
   overflow-y: hidden;
   height: 100vh;
@@ -2768,4 +2779,4 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
     border: 1px solid #fff;
   }
 }
-/*# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/css/library.css.map*/
+/*# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/css/library.css.map*/

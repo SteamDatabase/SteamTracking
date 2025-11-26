@@ -8874,7 +8874,7 @@
         });
       }
       var Mn = r(88006),
-        yn = (r(2596), r(30720), r(72739), r(23809));
+        yn = (r(2596), r(13871), r(72739), r(23809));
       class Tn {
         m_tours = {};
         m_strActiveTour = "";
@@ -9141,7 +9141,8 @@
           } = e,
           l = (0, Ne.q3)(() => t.BInitialized()),
           o = yt();
-        l || n.createElement("div", { className: Tt.LoadingTimeline });
+        if (!l)
+          return n.createElement("div", { className: Tt.LoadingTimeline });
         let m = (0, Me.A)(
           Tt.ScrollAndControlsCtn,
           o.GetGamepadMode() && Tt.GamepadMode,

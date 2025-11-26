@@ -170,6 +170,7 @@
 "ctrl"\t"1"\n
 "e" must be followed by exponent.
 "f\n+CClientNotificationGameRecordingInstantClip
+"k\n\vCMsgPostURL
 "keycode"\t"%s"\n
 "p\n+CClientNotificationFamilySharingStopPlaying
 "shift"\t"1"\n
@@ -394,6 +395,7 @@ $\n k_EStreamControlVideoDecoderInfo
 $\n k_EStreamControlVideoEncoderInfo
 $\n k_EStreamControlVirtualHereReady
 $\n k_EStreamFrameResultDroppedReset
+$\n k_EStreamingNeptuneData_OBSOLETE
 $\n k_SystemAudioChannel_FrontCenter
 $\n k_SystemAudioPortDirection_Input
 $\nY8O
@@ -414,7 +416,6 @@ $\nY8O
 %Y-%m-%dT%H:%M:%S+00:00
 %Y-%m-%dT%H:%M:%SZ
 %\n k_EPersonaStateFlag_ClientTypeVR
-%\n k_EStreamControlStartNeptuneData
 %\n!k_EBroadcastPermissionSubscribers
 %\n!k_EBrowserFeatureStatus_EnabledOn
 %\n!k_EClientNotificationType_Comment
@@ -483,7 +484,6 @@ $\nY8O
 %s_url
 &6FVfv
 &\n!k_EPersonaStateFlag_ClientTypeWeb
-&\n!k_EStreamControlEnableNeptuneData
 &\n!k_EStreamControlVRConnectionReady
 &\n"k_EBroadcastEncoderBestPerformance
 &\n"k_EClientNotificationType_Wishlist
@@ -521,7 +521,6 @@ $\nY8O
 &\n\tdata_type
 &bzi
 '7GWgw
-'\n"k_EStreamControlDisableNeptuneData
 '\n"k_EStreamControlSetBitrateOverride
 '\n"k_EStreamControlSetQualityOverride
 '\n#k_EBrowserContrastMode_NoPreference
@@ -574,6 +573,7 @@ $\nY8O
 (\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
 (\n$k_EContentReportSubjectAction_Locked
+(\n$k_EContentReportSubjectAction_Warned
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -610,7 +610,6 @@ $\nY8O
 (\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"f\n%CClientNotificationGameRecordingError
 (\r"i\n:CClientNotificationFamilySharingDeviceAuthorizationChanged
-(\r"k\n\vCMsgPostURL
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
@@ -693,6 +692,8 @@ $\nY8O
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
+)\n%k_EContentReportSubjectAction_Claimed
+)\n%k_EContentReportSubjectAction_Deleted
 )\n%k_EContentReportSubjectAction_Invalid
 )\n%k_EContentReportSubjectAction_Updated
 )\n%k_EContentReportSubjectType_ChatGroup
@@ -729,8 +730,8 @@ $\nY8O
 *N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
 *W\n\fEVideoFormat
-*ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
-*ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
+*ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
+*ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
 *\\n\fEExportCodec
 *\n"excluded_store_content_descriptors
 *\n"rtime_temporary_feature_expiration
@@ -756,6 +757,7 @@ $\nY8O
 *\n&k_EContentReportReason_OtherDisruptive
 *\n&k_EContentReportReason_OtherHarassment
 *\n&k_EContentReportSubjectAction_Disputed
+*\n&k_EContentReportSubjectAction_Released
 *\n&k_EContentReportSubjectAction_Unlocked
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
@@ -786,6 +788,7 @@ $\nY8O
 +\n'k_ECompromiseDetectionType_TicketAction
 +\n'k_EContentReportReason_GenderedStalking
 +\n'k_EContentReportReason_NamingAndShaming
++\n'k_EContentReportResolution_RemoveAndBan
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
@@ -828,6 +831,7 @@ $\nY8O
 ,\n(k_EContentReportReason_AttemptedScamming
 ,\n(k_EContentReportReason_CSAMSexualContent
 ,\n(k_EContentReportReason_InauthenticReview
+,\n(k_EContentReportResolution_RemoveAndWarn
 ,\n(k_EContentReportSubjectAction_Sanctioned
 ,\n(k_EContentReportSubjectAction_Unresolved
 ,\n(k_EControlledLegalCategoryStatus_Accused
@@ -857,6 +861,7 @@ $\nY8O
 -0123456789
 -\n%enable_hardware_encoding_amd_OBSOLETE
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
+-\n(k_EStreamControlStopNeptuneData_OBSOLETE
 -\n(k_EStreamControlTouchActionSetLayerAdded
 -\n)k_EBrowserGPUStatus_DisabledRuntimeDetect
 -\n)k_EClientNotificationType_PlaytimeWarning
@@ -865,6 +870,7 @@ $\nY8O
 -\n)k_EContentReportReason_EncouragingSuicide
 -\n)k_EContentReportReason_GenderedHarassment
 -\n)k_EContentReportReason_OtherScamsAndTheft
+-\n)k_EContentReportSubjectAction_TradeBanned
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EProfileCustomizationTypeRecommendation
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
@@ -977,6 +983,7 @@ $\nY8O
 .Too many IDATs found
 .\n&dynamically_adjust_resolution_OBSOLETE
 .\n&excluded_community_content_descriptors
+.\n)k_EStreamControlStartNeptuneData_OBSOLETE
 .\n*k_EAsyncGameSessionUserStateReadyForAction
 .\n*k_EAsyncGameSessionUserVisibilityDismissed
 .\n*k_EClientNotificationType_CloudSyncFailure
@@ -987,6 +994,7 @@ $\nY8O
 .\n*k_EContentReportReason_EncouragingSelfHarm
 .\n*k_EContentReportReason_EncouragingViolence
 .\n*k_EContentReportReason_OrganizingTerrorism
+.\n*k_EContentReportSubjectAction_ResetContent
 .\n*k_EControlledLegalCategoryStatus_Acquitted
 .\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EProfileCustomizationTypeArtworkShowcase
@@ -1028,6 +1036,7 @@ $\nY8O
 /ValveIPCSHM_%d
 /\n enable_touch_controller_OBSOLETE
 /\n'enable_hardware_encoding_intel_OBSOLETE
+/\n*k_EStreamControlEnableNeptuneData_OBSOLETE
 /\n*k_EStreamControlTouchActionSetLayerRemoved
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
 /\n+k_EClientNotificationType_CloudSyncConflict
@@ -1041,6 +1050,7 @@ $\nY8O
 /\n+k_ECommunityItemClass_SteamDeckStartupMovie
 /\n+k_EContentReportReason_EncouragingTerrorism
 /\n+k_EContentReportResolution_HarassmentStrike
+/\n+k_EContentReportSubjectAction_BannedFromHub
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EStreamControlTriggerHapticPulse_OBSOLETE
@@ -1140,15 +1150,16 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
 00003333
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789ABCDEF
 0123456789abcdef
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n(enable_hardware_encoding_nvidia_OBSOLETE
+0\n+k_EStreamControlDisableNeptuneData_OBSOLETE
 0\n+k_EStreamControlSetInputTemporarilyDisabled
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EBrowserGPUStatus_DisabledChildCommandLine
@@ -1182,11 +1193,11 @@ $\nY8O
 10CUtlMemoryI20ModuleAddressRange_tE
 10CUtlMemoryI22PanelAnimationMapEntryE
 10CUtlMemoryI9CSmartPtrI15CJSCallbackFuncEE
-10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
@@ -1198,11 +1209,11 @@ $\nY8O
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI15CJSCallbackFuncEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_tS_IS2_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIP11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyEi8CDefLess25CDefRBTreeBalanceListenerIiES7_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN27CSteamUIMessagingController17ChannelCallback_tE10CDefEqualsIS1_E11HashFunctorIS1_E10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIN16CMsgSpewThrottle14SpewLocation_tENS1_19SpewThrottleEntry_tE10CDefEqualsIS2_ENS1_23SpewLocationHashFunctorES2_E12HashBucket_tEE
@@ -1255,7 +1266,7 @@ $\nY8O
 10CUtlMemoryIP9KeyValuesE
 10CUtlMemoryIPK11CFileWriterE
 10CUtlMemoryIPK9KeyValuesE
-10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
+10CUtlMemoryIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tEE
 10CUtlMemoryIPN4vgui10ClickPanelEE
 10CUtlMemoryIPN4vgui10MenuButtonEE
 10CUtlMemoryIPN4vgui10ToolWindowEE
@@ -1272,11 +1283,11 @@ $\nY8O
 10CUtlMemoryImE
 10CUtlMemoryIsE
 10CUtlMemoryIwE
-10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES1_E
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+10CUtlRBTreeIN7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -1288,11 +1299,11 @@ $\nY8O
 10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI15CJSCallbackFuncEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlRBTreeIN7CUtlMapIjbs8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
-10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
 10CUtlRBTreeIP10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS1_EEi8CDefLess25CDefRBTreeBalanceListenerIiES5_E
 10CUtlRBTreeIP11CUtlHashMapIji10CDefEqualsIjE11HashFunctorIjEjEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
 10CUtlRBTreeIP11CUtlHashMapIti10CDefEqualsItE11HashFunctorItEtEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
 10CUtlRBTreeIP11CUtlHashMapIyi10CDefEqualsIyE11HashFunctorIyEyEi8CDefLess25CDefRBTreeBalanceListenerIiES6_E
+10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 10CUtlString
 10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
 10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
@@ -1330,7 +1341,7 @@ $\nY8O
 10CUtlVectorIP9KeyValues10CUtlMemoryIS1_EE
 10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
 10CUtlVectorIPK9KeyValues10CUtlMemoryIS2_EE
-10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
+10CUtlVectorIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tE10CUtlMemoryIS5_EE
 10CUtlVectorIPN4vgui10ClickPanelE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui10MenuButtonE10CUtlMemoryIS2_EE
 10CUtlVectorIPN4vgui10ToolWindowE10CUtlMemoryIS2_EE
@@ -1610,7 +1621,6 @@ $\nY8O
 19CMsgSteamAuthNeeded
 19CNegotiationInitMsg
 19CServerHandshakeMsg
-19CStopNeptuneDataMsg
 19CTransportSignalMsg
 19CUtlNoEscConversion
 19CUtlQueueDeprecatedIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EE
@@ -1622,6 +1632,7 @@ $\nY8O
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
+1\n-k_EContentReportReason_QuotesModeratedContent
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
 1\n-k_EPublishedFileInappropriateProvider_Invalid
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
@@ -1695,7 +1706,6 @@ $\nY8O
 20CSetSpectatorModeMsg
 20CSetTargetBitrateMsg
 20CSetTouchIconDataMsg
-20CStartNeptuneDataMsg
 20CStartNetworkTestMsg
 20CStreamingClientCaps
 20CVideoDecoderInfoMsg
@@ -1703,7 +1713,6 @@ $\nY8O
 20CVirtualHereReadyMsg
 20IJSMethodCallHandler
 21CDiscoveryPingRequest
-21CEnableNeptuneDataMsg
 21CHTMLPageSecurityInfo
 21CMsgBrowserSetMinSize
 21CMsgExecuteJavaScript
@@ -1719,7 +1728,6 @@ $\nY8O
 21CTouchConfigActiveMsg
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22CDisableNeptuneDataMsg
 22CDiscoveryPingResponse
 22CFrameEventPerfTracker
 22CGetTouchConfigDataMsg
@@ -1827,6 +1835,7 @@ $\nY8O
 2\n.k_EContentReportReason_OtherCommercialActivity
 2\n.k_EContentReportReason_OtherViolenceOrSelfHarm
 2\n.k_EContentReportResolution_DisconnectedFromApp
+2\n.k_EContentReportSubjectAction_EscalatedForCSAM
 2\n.k_EPublishedFileInappropriateResult_NotScanned
 2\n.k_EPublishedFileInappropriateResult_VeryLikely
 2\n.k_EStreamControlSetControllerSettings_OBSOLETE
@@ -1915,6 +1924,7 @@ $\nY8O
 4\n0k_EClientNotificationType_ParentalFeatureRequest
 4\n0k_EClientNotificationType_RemoteClientConnection
 4\n0k_EContentReportReason_LinkingToMaliciousContent
+4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
 4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
@@ -1941,6 +1951,7 @@ $\nY8O
 5\n1k_EClientNotificationType_ParentalPlaytimeRequest
 5\n1k_EClientNotificationType_RemoteClientStartStream
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
+5\n1k_EContentReportSubjectAction_BannedFromCommunity
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
 5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
@@ -1962,9 +1973,8 @@ $\nY8O
 7CCookie
 7CLogMsg
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
-7CUtlMapI10CUtlStringbi8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
-7CUtlMapI10CUtlSymbolPK9KeyValuesi8CDefLessE
+7CUtlMapI14CBaseUtlSymbolItEPK9KeyValuesi8CDefLessE
 7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE
 7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE
 7CUtlMapIPKcN29CPanelKeyBindingMapDictionary33PanelKeyBindingMapDictionaryEntryEi22CDefCaselessStringLessE
@@ -1976,21 +1986,24 @@ $\nY8O
 7CUtlMapIj9CSmartPtrI15CJSCallbackFuncEi8CDefLessE
 7CUtlMapIj9CSmartPtrI18CJSCallbackPromiseEi8CDefLessE
 7CUtlMapIjbs8CDefLessE
-7CUtlMapIybi8CDefLessE
 7CUtlPtrIN27CSharedConnectionController22SharedConnectionInfo_tEE
+7CUtlSetI10CUtlStringi8CDefLessE
+7CUtlSetIyi8CDefLessE
 7IHTMLJS
+7Mk<,
 7\n*k_EChildProcessQueryExitCode_ErrorFileSave
 7\n*k_EWindowsUpdateInstallationImpact_Unknown
 7\n3k_EClientNotificationType_BroadcastAvailableToWatch
 7\n3k_EClientNotificationType_StreamingClientConnection
+7\n3k_EContentReportSubjectAction_EscalatedForTerrorism
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
 7\n3k_EStreamControlSetControllerPairingResult_OBSOLETE
 7\n\tenum_type
 7~8A
-8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
-8CAutoPtrI7CUtlMapIybi8CDefLessEE
+8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
+8CAutoPtrI7CUtlSetIyi8CDefLessEE
 8CJSArray
 8CMsgCopy
 8CMsgFind
@@ -2238,11 +2251,9 @@ CCrypto::HexDecode: insufficient output buffer (input length %u, output size %u)
 CCrypto::HexEncode
 CDeleteCursorMsg
 CDisableHighResCaptureMsg"
-CDisableNeptuneDataMsg"
 CDiscoveryPingRequest
 CDiscoveryPingResponse
 CEnableHighResCaptureMsg"
-CEnableNeptuneDataMsg"
 CFileOpenListPanel
 CFileReader
 CFileReader::BOpenFile - %s
@@ -2700,10 +2711,12 @@ CParentalCache::OnParentalLockChangeBegin
 CPathString
 CPauseControllerInputMsg"
 CRC error
+CRC32_ProcessBuffer
 CRYPTO_memcmp
 CRecordedInput
 CRecordedInputStream
 CResumeControllerInputMsg"
+CSHA1::Update
 CSaveTouchConfigLayoutMsg
 CServerHandshakeMsg
 CSetActivityMsg
@@ -2729,7 +2742,6 @@ CSharedConnectionController::OnServersDisconnected
 CShowCursorMsg
 CShowOnScreenKeyboardMsg"~\n#CControllerPersonalizationUpdateMsg
 CStartAudioDataMsg
-CStartNeptuneDataMsg
 CStartNetworkTestMsg
 CStartVideoDataMsg
 CSteamParentalController::OnParentalLockChangeBegin
@@ -2739,8 +2751,7 @@ CSteamParentalController::OnParentalPlaytimeWarning
 CSteamParentalController::OnParentalWebTokenChanged
 CSteamUIMessagingController::OnClientPostMessage
 CStopAudioDataMsg"{\n
-CStopNeptuneDataMsg"
-CStopVideoDataMsg"'\n
+CStopVideoDataMsg"
 CStreamDataLostMsg
 CStreamVideoLimit
 CStreamVideoMode
@@ -2776,8 +2787,6 @@ CUtlString::VFormat
 CUtlStringBuilder::Data::MoveToHeap
 CUtlStringBuilder::InternalPrepareBuffer
 CUtlStringBuilder::ReplaceInternal
-CUtlSymbol
-CUtlSymbol::ValidateGlobals
 CUtlSymbolTable
 CVProfile_ExitScope
 CVRConnectionReady
@@ -3052,6 +3061,7 @@ EHDRVisualization
 EJSRegisterMethodType
 ENewSteamAnnouncementState
 EPersonaStateFlag
+EPressOutletAction
 EProfileCustomizationType
 EProvideDeckFeedbackPreference
 EPublishedFileQueryType
@@ -3747,6 +3757,7 @@ KeyValues::ReadAsBinary() stack depth > 100
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
+KeyValues::RemoveSubKey
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
@@ -4685,7 +4696,7 @@ Swahili
 Swap
 Swedish
 Symbol name "
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 Synthetic oneofs must be after all other oneofs
 TLS init function for
 TLS wrapper function for
@@ -6645,6 +6656,14 @@ k_EOSBranch_ReleaseCandidate
 k_EOSBranch_Staging
 k_EOSBranch_Unknown
 k_EPersonaStateFlag_Golden
+k_EPressOutletAction_Created
+k_EPressOutletAction_Deleted
+k_EPressOutletAction_Granted
+k_EPressOutletAction_Invalid
+k_EPressOutletAction_MAX
+k_EPressOutletAction_Removed
+k_EPressOutletAction_Undeleted
+k_EPressOutletAction_Updated
 k_EResolutionAutomation_MAX
 k_EResolutionAutomation_Manual
 k_ESDCardFormatStage_Finalizing
@@ -6739,7 +6758,6 @@ k_EStreamControlShowCursor
 k_EStreamControlStartAudioData
 k_EStreamControlStartVideoData
 k_EStreamControlStopAudioData
-k_EStreamControlStopNeptuneData
 k_EStreamControlStopRequest
 k_EStreamControlStopVideoData
 k_EStreamControlSystemSuspend
@@ -6816,7 +6834,6 @@ k_EStreamVideoCodecVP8
 k_EStreamVideoCodecVP9
 k_EStreamingAudioData
 k_EStreamingMicrophoneData
-k_EStreamingNeptuneData
 k_EStreamingVideoData
 k_ESystemServiceState_Disabled
 k_ESystemServiceState_Enabled
@@ -7105,13 +7122,13 @@ m_pObj == NULL
 m_pParent == this
 m_pRef->m_pT
 m_pRootNode == NULL
+m_pSetIntValue
+m_pSetStringValue
 m_pTextImage
 m_pTooltips
 m_pTreeView->IsLabelEditingAllowed()
 m_pTreeView->m_pFilter
 m_pUserData
-m_pVecStringValue
-m_pVecUlValue
 m_pWebChat
 m_pfnOnLogonInfoChanged
 m_pfnOnMessageReceived
@@ -7158,6 +7175,7 @@ m_strParentalPasswordPlaintext
 m_strParentalWebToken
 m_strResourceName
 m_strWatchPath
+m_tree
 m_unInCounter == m_unOutCounter
 m_unPID
 m_unused

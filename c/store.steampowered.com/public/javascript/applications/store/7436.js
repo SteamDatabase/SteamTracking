@@ -7924,6 +7924,9 @@
         GetChallengeURL() {
           return this.m_strChallengeURL;
         }
+        GetClientID() {
+          return this.m_strClientID;
+        }
         GetStatus() {
           return this.m_eStatus;
         }
@@ -7944,6 +7947,7 @@
           {
             eStatus: _,
             strChallengeURL: _,
+            strClientID: _,
             bHadRemoteInteraction: _,
             reset: _,
             setTokenToRevoke: _,
@@ -7961,6 +7965,7 @@
               ),
               (0, _._)(() => ({
                 strChallengeURL: _.GetChallengeURL(),
+                strClientID: _.GetClientID(),
                 eFailureState: _.GetFailureState(),
                 eStatus: _.GetStatus(),
                 bHadRemoteInteraction: _.BHadRemoteInteraction(),

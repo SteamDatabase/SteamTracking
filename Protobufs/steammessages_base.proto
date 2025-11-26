@@ -327,6 +327,8 @@ message CPackageReservationStatus {
 	optional uint32 time_reserved = 8;
 	optional uint32 rtime_estimated_notification = 9;
 	optional string notificaton_token = 10;
+	optional int32 queue_head_position_at_reservation = 11;
+	optional int32 queue_head_position_now = 12;
 }
 
 message CMsgKeyValuePair {

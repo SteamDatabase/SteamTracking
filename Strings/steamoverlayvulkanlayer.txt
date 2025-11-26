@@ -17,6 +17,7 @@
 -+xX0123456789abcdefABCDEF
 -0123456789
 0123456789
+17CPooledBufferData
 18CVulkanSharedImage
 26CVulkanAsyncReadbackThread
 27CVulkanSharedResourceDevice

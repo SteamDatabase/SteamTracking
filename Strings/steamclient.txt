@@ -67,6 +67,7 @@
   %22s%25s%12s%12s%12.1f\n
   %s: %d (est)
   %s: %d (est, opt %d  pess %d)
+  %s=0x%02x[DSCP%d ECN%d]
   (No valid certs)
   (use "jobs <field>" or "jobs hdr.<field>" to show top jobs grouped by request message fields)\n
   ---------------------- ------------------------ ----------- ----------- -----------\n
@@ -134,6 +135,7 @@
  (Update delayed for %d secs)
  (VPLS)
  (expecting
+ (first measurement to %s, estimate was %d)
  (flags 0x%x)
  (pipe is disconnected)
  (recursive)
@@ -171,6 +173,7 @@
  --fullscreen
  --label '%s'
  --nohwaccel
+ --openvr
  --performance-icons
  --performance-overlay
  --quality %d
@@ -225,6 +228,7 @@
  .CShader_RegisterShader_Response"
  .CSleepManager_GetState_Response
  .CSteamOSSLS_SetEnabled_Response
+ .CStore_GetGamesFollowed_Request
  .CWorkshop_GetEULAStatus_Request
  /extractguids
  2>/dev/null
@@ -463,6 +467,7 @@
 !.CRemotePlayTogether_Notification
 !.CSteamOSManager_GetState_Request
 !.CStore_GetDiscoveryQueue_Request
+!.CStore_GetGamesFollowed_Response"
 !.CSystemManager_Hibernate_Request
 !.CSystemManager_WriteFile_Request
 !.CVideo_ClientGetVideoURL_Request
@@ -809,6 +814,7 @@
 "'\n\rCMsgShowPopup
 "(\n&CBroadcast_GetBuildClipStatus_Response"
 "(\n&CBroadcast_RemoveUserChatText_Response"U\n,CBroadcast_GetBroadcastChatUserNames_Request
+"(\n&CFriendMessages_ResolveReport_Response"u\n1CFriendMessages_DismissSessionNotice_Notification
 "(\n&CGameRecording_StartRecording_Response"7\n$CGameRecording_StopRecording_Request
 "(\n&CParental_SetParentalSettings_Response"7\n
 "(\n&CStorageDeviceManager_GetState_Request"U\n'CStorageDeviceManager_GetState_Response
@@ -824,7 +830,7 @@
 "*\n(CGameRecording_LowDiskSpace_Notification"H\n5CGameRecording_PostGameHighlightsChanged_Notification
 "*\n(CSteamTV_SetSteamTVUserSettings_Response")\n'CSteamTV_GetMyBroadcastChannels_Request"V\n(CSteamTV_GetMyBroadcastChannels_Response
 "*\n(CTransportValidation_DataRequest_Request"9\n)CTransportValidation_DataRequest_Response
-"+\n)CBluetoothManager_SetDiscovering_Response"0\n
+"+\n)CBluetoothManager_SetDiscovering_Response"f\n-CBluetoothManager_SetLoginAdvertising_Request
 "+\n)CBluetoothManager_SetWakeAllowed_Response"G\n$CBluetoothManager_SetTrusted_Request
 "+\n)CBroadcast_MuteBroadcastChatUser_Response"N\n%CBroadcast_RemoveUserChatText_Request
 "+\n)CCredentials_GetAccountAuthSecret_Request"O\n*CCredentials_GetAccountAuthSecret_Response
@@ -931,12 +937,13 @@
 "0x" must be followed by hex digits.
 "10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 "1\n/CCommunity_FetchTranslationFromCrowdIn_Response"
-"1\n/CHardwareUpdate_UpdateStateChanged_Notification2
+"1\n/CHardwareUpdate_UpdateStateChanged_Notification">\n%CHardwareUpdate_PrepForUpdate_Request
 "1\n/CTransportValidation_RequestInvalidBool_Request"a\n0CTransportValidation_RequestInvalidBool_Response
 "1\n/CTransportValidation_TriggerDataRequest_Request"@\n0CTransportValidation_TriggerDataRequest_Response
 "2BRbr
 "2CScs
 "2\n CMsgTest_TestClientCall_Response
+"2\n CStore_GetGamesFollowed_Response
 "2\n!CInventory_GetItemDefMeta_Request
 "2\n#CRemoteClient_StartPairing_Response
 "2\n0CSteamOSManager_OptOutOfSideloadedClient_Request"3\n1CSteamOSManager_OptOutOfSideloadedClient_Response".\n,CSteamOSManager_ApplyMandatoryUpdate_Request"/\n-CSteamOSManager_ApplyMandatoryUpdate_Response"Q\n$CSteamOSManager_FactoryReset_Request
@@ -961,7 +968,7 @@
 "6\n%CCloud_ClientGetAppQuotaUsage_Request
 "6\n4CAuthenticationSupport_MarkTokenCompromised_Response"C\n CCloudGaming_CreateNonce_Request
 "6\n4CChatRoom_SetChatRoomGroupWatchingBroadcast_Response"X\n.CChatRoom_JoinMiniGameForChatRoomGroup_Request
-"6\n4CCommunity_SetRecommendationBotReviewStatus_Response*p\n
+"6\n4CCommunity_SetRecommendationBotReviewStatus_Response*
 "6\n4CFamilyGroups_ResendInvitationToFamilyGroup_Response"N\n%CFamilyGroups_JoinFamilyGroup_Request
 "6\n4CTransportValidation_TriggerSyntheticEvents_Response"J\n6CTransportValidation_NotifySyntheticEvent_Notification
 "7?NWlv
@@ -1022,6 +1029,7 @@
 "C\n)CSiteLicense_InitiateAssociation_Response
 "D\n CMsgClientServerTimestampRequest
 "D\n$CMsgClientGetPeerContentInfoResponse
+"D\n%CStore_GetGamesFollowedCount_Response
 "D\n+CSteamTV_SubscribeBroadcastChannel_Response
 "D\n.CInventory_GetEligiblePromoItemDefIDs_Response
 "D\n3CTransportValidation_TriggerSyntheticEvents_Request
@@ -1040,6 +1048,7 @@
 "G\n!CChatRoom_CreateChatRoom_Response
 "G\n!CChatRoom_GetRoleActions_Response
 "G\n%CMsgRemoteDeviceStreamTransportSignal
+"G\n(CCommunity_VerifyClanMembership_Response
 "G\n.CTransportValidation_CountOrderedBytes_Request
 "G\n4CGameRecording_SwitchBackgroundRecordingGame_Request
 "GetMapData"
@@ -1139,6 +1148,7 @@
 "`\n2CSharedJSContext_GetDesiredSteamUIWindows_Response
 "`bB303
 "a\n#CMsgClientFriendUserStatusPublished
+"a\n%CEcon_GetAssetPropertySchema_Response
 "a\n(CFamilyGroups_CreateFamilyGroup_Response
 "a\n+CBluetoothManager_GetDeviceDetails_Response
 "a\n,CAuthentication_MigrateMobileSession_Request
@@ -1166,7 +1176,9 @@
 "game_action
 "game_action_analog
 "h\n!CCloud_ClientFileDownload_Request
+"j\n'CCommunity_RateClanAnnouncement_Request
 "j\n0CGameRecording_TimelineEntryRemoved_Notification
+"k\n\vCMsgPostURL
 "l\n(CGameRecording_UploadClipToSteam_Request
 "l\n-CChatRoom_EndMiniGameForChatRoomGroup_Request
 "lbN.
@@ -1797,6 +1809,7 @@ $\n k_EChatRoomGroupRank_TestInvalid
 $\n k_EChatRoomJoinState_TestInvalid
 $\n k_EClanInGameContentReleaseEvent
 $\n k_ECodecUsageReasonGameRecording
+$\n k_ECommentDeleteReason_Moderator
 $\n k_ECommentThreadTypeQAndASession
 $\n k_ECommunityItemClass_ChatEffect
 $\n k_ECommunityItemClass_Consumable
@@ -1823,6 +1836,7 @@ $\n k_EProtoExecutionSiteSteamClient
 $\n k_EProtoServiceTypeSteamMessages
 $\n k_EPublishedFileRevision_Default
 $\n k_EPurchaseRequestAction_Decline
+$\n k_ERemoteClientPairWifiAPTimeout
 $\n k_ERemoteDeviceAuthorizationBusy
 $\n k_ERemoteDeviceStreamingCanceled
 $\n k_ERemoteDeviceStreamingDisabled
@@ -1860,6 +1874,7 @@ $\n k_EStreamControlVideoEncoderInfo
 $\n k_EStreamControlVirtualHereReady
 $\n k_EStreamDeviceFormFactorUnknown
 $\n k_EStreamFrameResultDroppedReset
+$\n k_EStreamingNeptuneData_OBSOLETE
 $\n k_ETimelineEntryType_Achievement
 $\n k_ETwoFactorStatusFieldFlag_None
 $\n k_FamilyCooldownOverridesChanged
@@ -1961,6 +1976,7 @@ $steammessages_parental_objects.proto"
 %.CCommunity_GetAvatarHistory_Response"
 %.CCommunity_GetCommentThread_Response"
 %.CCommunity_RateCommentThread_Request
+%.CEcon_GetAssetPropertySchema_Request
 %.CFamilyGroups_GetFamilyGroup_Request
 %.CFriendMessages_SendMessage_Response"
 %.CGameRecording_GetThumbnails_Request
@@ -1989,6 +2005,7 @@ $steammessages_parental_objects.proto"
 %.CStorageDeviceManager_Adopt_Response
 %.CStorageDeviceManager_Eject_Response
 %.CStorageDeviceManager_Format_Request
+%.CStore_GetGamesFollowedCount_Request
 %.CTimedTrial_GetTimeRemaining_Request
 %.CTransportAuth_Authenticate_Response
 %.CTwoFactor_AddAuthenticator_Response
@@ -2013,6 +2030,7 @@ $steammessages_parental_objects.proto"
 %08llx
 %08lx
 %08u %s:%02u > %s::%s(
+%08x
 %09u
 %0@Thv
 %0nV4
@@ -2114,7 +2132,6 @@ $steammessages_parental_objects.proto"
 %\n k_EMsgUFSUpdateFileFlagsResponse
 %\n k_EMsgWebAPIRegisterGCInterfaces
 %\n k_EPersonaStateFlag_ClientTypeVR
-%\n k_EStreamControlStartNeptuneData
 %\n!k_EAppReportType_ExploitsChildren
 %\n!k_EAuthSessionGuardType_EmailCode
 %\n!k_EBanContentCheckResult_Possible
@@ -2147,6 +2164,7 @@ $steammessages_parental_objects.proto"
 %\n!k_EProfileCustomizationTypeReplay
 %\n!k_EProfileCustomizationTypeSalien
 %\n!k_ERemoteClientBroadcastMsgStatus
+%\n!k_ERemoteClientPairWifiAPCanceled
 %\n!k_ERemoteClientServiceSiteLicense
 %\n!k_ERemoteDeviceStreamingInvisible
 %\n!k_EStartupMovieVariant_DeckOrange
@@ -2577,7 +2595,7 @@ $steammessages_parental_objects.proto"
 %s: name too long (%u) for file "%s", depotID %u
 %s: name: %d
 %s: no context
-%s: post progress: %f
+%s: post progress: stage: %f total: %f
 %s: read failed: %s\n
 %s: request declined
 %s: requesting update check
@@ -2594,6 +2612,7 @@ $steammessages_parental_objects.proto"
 %s: skip glxMakeCurrent to avoid mesa/xcb hang: https://gitlab.freedesktop.org/xorg/lib/libxcb/-/issues/38\n
 %s: skipping BIOS update for non-steamos platforms
 %s: skipping OS update for non-steamos platforms
+%s: skipping: no update is available
 %s: ssid: %s
 %s: starting apply
 %s: starting check
@@ -2653,8 +2672,6 @@ $steammessages_parental_objects.proto"
 %s\%s\LastLoadValue
 %s\%s\LastPingTimestamp
 %s\%s\LastPingValue
-%s\%s\selected
-%s\%s\template
 %s\%u\Config
 %s\%u\Name
 %s\%u\Priority
@@ -2755,6 +2772,7 @@ $steammessages_parental_objects.proto"
 &.CCloud_CompleteAppUploadBatch_Request
 &.CCloud_GetClientEncryptionKey_Request
 &.CCommunity_RateCommentThread_Response"
+&.CEcon_GetAssetPropertySchema_Response"
 &.CFamilyGroups_GetFamilyGroup_Response"
 &.CFamilyGroups_JoinFamilyGroup_Request
 &.CFamilyGroups_RequestPurchase_Request
@@ -2766,6 +2784,7 @@ $steammessages_parental_objects.proto"
 &.CGameRecording_TakeScreenshot_Request
 &.CGameServers_GameServerQuery_Response"
 &.CGameServers_IPsWithSteamIDs_Response"
+&.CHardwareUpdate_PrepForUpdate_Request
 &.CLEDManager_StateChanged_Notification
 &.CParental_GetParentalSettings_Request
 &.CParental_ParentalUnlock_Notification
@@ -2790,6 +2809,7 @@ $steammessages_parental_objects.proto"
 &.CStorageDeviceManager_TrimAll_Request
 &.CStorageDeviceManager_Unmount_Request
 &.CStoreBrowse_GetHardwareItems_Request
+&.CStore_GetGamesFollowedCount_Response"
 &.CStore_SkipDiscoveryQueueItem_Request
 &.CTimedTrial_GetTimeRemaining_Response"
 &.CTwoFactor_UpdateTokenVersion_Request
@@ -2801,7 +2821,6 @@ $steammessages_parental_objects.proto"
 &Lj&6lZ6?~A?
 &OzJ
 &\n!k_EClientPersonaStateFlagClanData
-&\n!k_EClientPersonaStateFlagFacebook
 &\n!k_EClientPersonaStateGameDataBlob
 &\n!k_EMsgAMCancelEasyCollectResponse
 &\n!k_EMsgAMClientChatMemberInfoRelay
@@ -2870,9 +2889,7 @@ $steammessages_parental_objects.proto"
 &\n!k_EMsgUGSGetUserGameStatsResponse
 &\n!k_EMsgWGConnectionLegacyWGRequest
 &\n!k_EPersonaStateFlag_ClientTypeWeb
-&\n!k_EStreamControlEnableNeptuneData
 &\n!k_EStreamControlVRConnectionReady
-&\n"k_EAppAntiCheatTypeAntiCheatExpert
 &\n"k_EAuthSessionGuardType_DeviceCode
 &\n"k_EAuthTokenAppType_Mobile_ChatApp
 &\n"k_EAuthTokenPlatformType_MobileApp
@@ -2886,6 +2903,7 @@ $steammessages_parental_objects.proto"
 &\n"k_EClipRangeMethod_BeginEndButtons
 &\n"k_ECloudPendingRemoteOperationNone
 &\n"k_ECloudStoragePersistStateDeleted
+&\n"k_ECommentDeleteReason_ThreadOwner
 &\n"k_ECommentThreadTypeClanCuratedApp
 &\n"k_ECommentThreadTypeRecommendation
 &\n"k_ECompromiseDetectionType_Move2FA
@@ -3019,6 +3037,7 @@ $steammessages_parental_objects.proto"
 '.CGameRecording_CreateShareClip_Request
 '.CGameRecording_StartRecording_Response
 '.CGameRecording_TakeScreenshot_Response
+'.CHardwareUpdate_PrepForUpdate_Response
 '.CInventoryClient_NewItems_Notification
 '.CInventory_GetUserPurchaseInfo_Request
 '.COffline_GetOfflineLogonTicket_Request
@@ -3101,7 +3120,6 @@ $steammessages_parental_objects.proto"
 '\n"k_EMsgSecretsRequestCredentialPair
 '\n"k_EMsgUCMPublishedFileUnsubscribed
 '\n"k_EMsgWGConnectionLegacyWGResponse
-'\n"k_EStreamControlDisableNeptuneData
 '\n"k_EStreamControlSetBitrateOverride
 '\n"k_EStreamControlSetQualityOverride
 '\n#k_EAppReportType_CopyrightViolation
@@ -3262,6 +3280,7 @@ $steammessages_parental_objects.proto"
 (.CCommunity_HideAndReportComment_Request
 (.CCommunity_PostCommentToThread_Response"
 (.CCommunity_RateClanAnnouncement_Request
+(.CCommunity_VerifyClanMembership_Request
 (.CContentBuilder_CommitAppBuild_Response
 (.CContentBuilder_InitDepotBuild_Response
 (.CDataPublisher_AddVRDeviceInfo_Response"
@@ -3459,6 +3478,7 @@ $steammessages_parental_objects.proto"
 (\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
 (\n$k_EContentReportSubjectAction_Locked
+(\n$k_EContentReportSubjectAction_Warned
 (\n$k_EControllerElementTypeButtonMacro0
 (\n$k_EControllerElementTypeButtonMacro1
 (\n$k_EControllerElementTypeButtonMacro2
@@ -3559,6 +3579,7 @@ $steammessages_parental_objects.proto"
 (\r".\n\fPlayerResult
 (\r"/\n-CPublishedFile_RemoveAppRelationship_Response"E\n*CPublishedFile_GetAppRelationships_Request
 (\r"/\n\fProfileTheme
+(\r"0\n.CBluetoothManager_SetLoginAdvertising_Response"0\n
 (\r"1\n/CCommunity_PartnerEventsShowLessForApp_Response"8\n6CCommunity_ClearUserPartnerEventsAppPriorities_Request"9\n7CCommunity_ClearUserPartnerEventsAppPriorities_Response"6\n4CCommunity_GetUserPartnerEventsAppPriorities_Request"O\n#CCommunity_PartnerEventsAppPriority
 (\r"1\n/CCommunity_PartnerEventsShowMoreForApp_Response"?\n.CCommunity_PartnerEventsShowLessForApp_Request
 (\r"1\n/CSteamInputService_ControllerStateFlow_Response"\\n2CSteamInputService_GyroSoftwareCalibration_Request
@@ -3576,6 +3597,7 @@ $steammessages_parental_objects.proto"
 (\r"5\n3CAccountHardware_DeRegisterSteamController_Response"t\n/CAccountHardware_SetPersonalizationFile_Request
 (\r"6\n$CMsgClientUninstallClientAppResponse
 (\r"6\n\rCInputTextMsg
+(\r"7\n$CStore_GetGamesFollowedCount_Request
 (\r"7\n%CSteamEngine_GetGameIDForPID_Response
 (\r"7\n&CPlayer_GetFriendsGameplayInfo_Request
 (\r"7\n\rCMsgWasHidden
@@ -3636,6 +3658,7 @@ $steammessages_parental_objects.proto"
 (\r"P\n0CSteamTV_GetBroadcastChannelBroadcasters_Request
 (\r"P\n\rCMsgMouseDown
 (\r"P\n\rCMsgMouseMove
+(\r"Q\n"CStoreBrowse_GetPriceStops_Request
 (\r"Q\n)CFovasVideo_ClientGetOPFSettings_Response
 (\r"Q\n.CCommunity_GetClanEventCrowdInMetadata_Request
 (\r"R\n'CFamilyGroups_ForceAcceptInvite_Request
@@ -3658,6 +3681,7 @@ $steammessages_parental_objects.proto"
 (\r"[\n.CPublishedFile_FileDeleted_Client_Notification
 (\r"\\n\fCMsgCellList
 (\r"]\n&CClientMetrics_IPv6Connectivity_Result
+(\r"]\n'CCommunity_VerifyClanMembership_Request
 (\r"]\n'CMsgClientGetAppOwnershipTicketResponse
 (\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"^\n$CRemoteClient_SetPairingInfo_Request
@@ -3686,13 +3710,11 @@ $steammessages_parental_objects.proto"
 (\r"h\n,CFamilyGroups_ConfirmJoinFamilyGroup_Request
 (\r"h\n\rServerMessage
 (\r"i\n(CFamilyGroups_SetPreferredLender_Request
-(\r"j\n'CCommunity_RateClanAnnouncement_Request
 (\r"j\n1CPublishedFile_GetAppRelationshipsBatched_Request
 (\r"j\n:CMarketingMessages_GetMarketingMessageViewerStats_Response
 (\r"k\n$CMsgClientWorkshopItemChangesRequest
 (\r"k\n+CStore_QueueWishlistDemoEmailToFire_Request
 (\r"k\n<CMarketingMessages_GetPartnerReadyToPublishMessages_Response
-(\r"k\n\vCMsgPostURL
 (\r"l\n-CBroadcast_StopWatchingBroadcast_Notification
 (\r"m\n'CMsgClientGetDepotDecryptionKeyResponse
 (\r"m\n9CChatRoom_SetAppChatRoomGroupStopForceActive_Notification
@@ -3729,6 +3751,7 @@ $steammessages_parental_objects.proto"
 (\t"&\n$CSteamTV_GetFollowedChannels_Request"
 (\t"&\n$CTransportAuth_Authenticate_Response"+\n)CTransportAuth_StartShutdown_Notification2
 (\t"(\n&CFriendMessages_ReportMessage_Response"
+(\t"(\n&CHardwareUpdate_PrepForUpdate_Response2
 (\t"(\n&CInventory_GetUserPurchaseInfo_Request"<\n'CInventory_GetUserPurchaseInfo_Response
 (\t"(\n&CSiteLicense_LCSAssociateUser_Response"]\n'CSiteLicense_ClientSeatCheckout_Request
 (\t")\n'CPlayer_GetPerFriendPreferences_Request"
@@ -3802,7 +3825,6 @@ $steammessages_parental_objects.proto"
 (\t"O\n#CSteamTV_GetChatModerators_Response
 (\t"P\n#CParental_PlaytimeUsed_Notification
 (\t"P\n.CAuthentication_RefreshToken_Enumerate_Request
-(\t"Q\n"CStoreBrowse_GetPriceStops_Request
 (\t"Q\n%CPlayer_GetProfileBackground_Response
 (\t"S\n)CChatRoom_SetChatRoomGroupTagline_Request
 (\t"S\n8CRemoteClient_DeleteRemotePlayTogetherInvitation_Request
@@ -3824,6 +3846,7 @@ $steammessages_parental_objects.proto"
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
 (\t"]\n"CShader_GetBucketManifest_Response
 (\t"^\n CMsgClientMMSCreateLobbyResponse
+(\t"^\n"CMsgRemoteClientPairWifiAPResponse
 (\t"^\n1CMarketingMessages_FindMarketingMessages_Response
 (\t"_\n!CMsgClientMMSSetLobbyDataResponse
 (\t"_\n/CMsgClientRequestForgottenPasswordEmailResponse
@@ -4009,7 +4032,6 @@ $steammessages_parental_objects.proto"
 (\v2(.CMsgClientLBSGetLBEntriesResponse.Entry
 (\v2(.CMsgClientMMSGetLobbyListResponse.Lobby
 (\v2(.CMsgClientRichPresenceInfo.RichPresence
-(\v2(.CMsgClientStoreUserStats.Stats_To_Store
 (\v2(.CMsgClientUGSGetGlobalStatsResponse.Day
 (\v2(.CMsgGMSClientServerQueryResponse.Server
 (\v2(.CMsgRemoteClientAppStatus.AppUpdateInfo
@@ -4364,6 +4386,7 @@ $steammessages_parental_objects.proto"
 ).CCommunity_GetClanLocGroupImages_Request
 ).CCommunity_HideAndReportComment_Response"
 ).CCommunity_RateClanAnnouncement_Response"
+).CCommunity_VerifyClanMembership_Response"
 ).CContentBuilder_StartDepotUpload_Request
 ).CEconMarket_IsMarketplaceAllowed_Request
 ).CEmbeddedClient_AuthorizeDevice_Response"
@@ -4484,6 +4507,7 @@ $steammessages_parental_objects.proto"
 )\n$k_EMsgGCGetAccountDetails_DEPRECATED
 )\n$k_EMsgGCHAccountTradeBanStatusChange
 )\n$k_EMsgGMShellAndServerAddressUpdates
+)\n$k_EMsgRemoteClientPairWifiAPResponse
 )\n$k_EMsgUCMPublishedFileContentUpdated
 )\n$k_EMsgUCMUpdatePublishedFileResponse
 )\n$k_EMsgUFSHttpUploadFileFinishRequest
@@ -4511,6 +4535,8 @@ $steammessages_parental_objects.proto"
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
+)\n%k_EContentReportSubjectAction_Claimed
+)\n%k_EContentReportSubjectAction_Deleted
 )\n%k_EContentReportSubjectAction_Invalid
 )\n%k_EContentReportSubjectAction_Updated
 )\n%k_EContentReportSubjectType_ChatGroup
@@ -4524,6 +4550,8 @@ $steammessages_parental_objects.proto"
 )\n%k_EProfileCustomizationTypeGreenlight
 )\n%k_EProfileCustomizationTypeMyWorkshop
 )\n%k_EPublishedFileStorageSystemUGCCloud
+)\n%k_ERemoteClientPairWifiAPNetworkError
+)\n%k_ERemoteClientPairWifiAPUnauthorized
 )\n%k_ERemoteDeviceAuthorizationConfirmed
 )\n%k_ERemoteDeviceStreamingCancelRequest
 )\n%k_ESteamDatagramMsg_P2PSessionRequest
@@ -4705,6 +4733,7 @@ $steammessages_parental_objects.proto"
 *23CInternalLambdaWorkItemIZN19CAppWorkshopContent13BReadAppStateEbEUlvE_vE
 *23CInternalLambdaWorkItemIZN19CRemoteClientDongle17YldRunDongleCheckEvEUlvE0_vE
 *23CInternalLambdaWorkItemIZN19CRemoteClientDongle17YldRunDongleCheckEvEUlvE_vE
+*23CInternalLambdaWorkItemIZN19CRemoteClientSoftAP21YieldingSendSoftAPCmdERK10CUtlStringEUlvE_S1_E
 *23CInternalLambdaWorkItemIZN20CBatteryStateManager21BYldQueryBatteryStateEP27SystemBatteryStateChanged_tEUlvE_bE
 *23CInternalLambdaWorkItemIZN20CDepotReconstructCtx30BYieldingInitializeDeltaChunksEPKcEUlvE_vE
 *23CInternalLambdaWorkItemIZN21CContentUpdateContext25YieldingCommitStagedFilesEvEUlvE0_vE
@@ -4756,6 +4785,7 @@ $steammessages_parental_objects.proto"
 *ZL18timed_trial_statusPvR9ConParamsR10ConCommandEUlvE_
 *ZL19http_cache_clearallPvR9ConParamsR10ConCommandEUlvE_
 *ZL21set_download_throttlePvR9ConParamsR10ConCommandEUlvE_
+*ZL23remote_client_softapcmdPvR9ConParamsR10ConCommandEUlvE_
 *ZL24dump_scheduled_functionsPvR9ConParamsR10ConCommandEUlvE_
 *ZL24timed_trial_add_playtimePvR9ConParamsR10ConCommandEUlvE_
 *ZL26peer_content_server_statusPvR9ConParamsR10ConCommandEUlvE_
@@ -4845,6 +4875,11 @@ $steammessages_parental_objects.proto"
 *ZN18CSiteLicenseClient36YldStartConnectToSiteLicenseProviderERK10CIPAndPortRK8CSteamIDyE17RawSocketCallback
 *ZN18CSystemPerfManager27OnSystemDisplayStateChangedEP34SystemDisplayManagerStateUpdated_tEUlvE_
 *ZN19CRemoteClientDongle14RunDongleCheckEvEUlvE_
+*ZN19CRemoteClientSoftAP15OnVRModeChangedEP15VRModeChanged_tEUlvE_
+*ZN19CRemoteClientSoftAP19ScheduledStateCheckEvEUlvE_
+*ZN19CRemoteClientSoftAP21NotifySettingsChangedERK10CUtlStringEUlvE_
+*ZN19CRemoteClientSoftAP24SetPairedSSIDAndPasswordERK10CUtlStringS2_EUlvE_
+*ZN19CRemoteClientSoftAP4InitEvEUlvE_
 *ZN21CNetworkManagerClient23RequestUpdateDeviceDataEjEUlvE_
 *ZN21CNetworkManagerClient28TriggerGalileoWifiWorkaroundEvEUlvE_
 *ZN21CNetworkManagerDevice19OnWifiSignalChangedEP14_NMAccessPointEUlvE_
@@ -4876,8 +4911,9 @@ $steammessages_parental_objects.proto"
 *ZN31CSteamEngineHTTPResponseHandler5ResetEvEUlP18CHTTPRequestHandleE_
 *ZN4CNet26CallbackDeleteOnCompletionEvE39CUnbufferedSendCallbackDeleteOnComplete
 *ZNK24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
-*ZNK6ConVar12GetMapStringEvEUlRK10CUtlStringE_
-*ZNK6ConVar19GetMapUnsignedInt64EvEUlRK10CUtlStringE_
+*ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
+*ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
+*ZZL23remote_client_softapcmdPvR9ConParamsR10ConCommandENKUlvE_clEvEUlvE_
 *\\n\fEExportCodec
 *\n"account_restricted_from_purchasing
 *\n"categorize_in_game_friends_by_game
@@ -4899,6 +4935,7 @@ $steammessages_parental_objects.proto"
 *\n"library_low_bandwidth_mode_enabled
 *\n"offset_detection_blast_radius_post
 *\n"offset_detection_max_distance_post
+*\n"queue_head_position_at_reservation
 *\n"rtime_temporary_feature_expiration
 *\n"session_remote_play_together_appid
 *\n"sounds_play_chat_room_notification
@@ -4950,12 +4987,14 @@ $steammessages_parental_objects.proto"
 *\n&k_EChatRoomMessageReactionType_Invalid
 *\n&k_EChatRoomMessageReactionType_Sticker
 *\n&k_EChatroomNotificationLevel_MentionMe
+*\n&k_ECommentDeleteReason_AccountDeletion
 *\n&k_ECompromiseDetectionType_ApiCallRate
 *\n&k_EContentCheckProvider_GoogleVertexAI
 *\n&k_EContentReportReason_GenderedDoxxing
 *\n&k_EContentReportReason_OtherDisruptive
 *\n&k_EContentReportReason_OtherHarassment
 *\n&k_EContentReportSubjectAction_Disputed
+*\n&k_EContentReportSubjectAction_Released
 *\n&k_EContentReportSubjectAction_Unlocked
 *\n&k_EControllerElementTypeTrackpadCenter
 *\n&k_EDeviceDisconnectMethodFeatureReport
@@ -5159,6 +5198,7 @@ $steammessages_parental_objects.proto"
 +\n'k_ECompromiseDetectionType_TicketAction
 +\n'k_EContentReportReason_GenderedStalking
 +\n'k_EContentReportReason_NamingAndShaming
++\n'k_EContentReportResolution_RemoveAndBan
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
@@ -5354,6 +5394,7 @@ $steammessages_parental_objects.proto"
 ,\n(k_EContentReportReason_AttemptedScamming
 ,\n(k_EContentReportReason_CSAMSexualContent
 ,\n(k_EContentReportReason_InauthenticReview
+,\n(k_EContentReportResolution_RemoveAndWarn
 ,\n(k_EContentReportSubjectAction_Sanctioned
 ,\n(k_EContentReportSubjectAction_Unresolved
 ,\n(k_EControlledLegalCategoryStatus_Accused
@@ -5369,6 +5410,7 @@ $steammessages_parental_objects.proto"
 ,\n(k_EProfileCustomizationTypeTradeShowcase
 ,\n(k_EProfileCustomizationTypeVideoShowcase
 ,\n(k_EPublishedFileStorageSystemLegacyCloud
+,\n(k_ERemoteClientPairWifiAPNoDonglePresent
 ,\n(k_ERemoteDeviceStreamingGameLaunchFailed
 ,\n(k_ESharedLibrary_LicenseExcluded_FreeSub
 ,\n(k_ESharedLibrary_PackageExcluded_Invalid
@@ -5392,6 +5434,7 @@ $steammessages_parental_objects.proto"
 ,\n\fmessage_type
 ,\n\fvideo_decode
 ,\n\fvideo_encode
+,\n\rdelete_reason
 ,\n\rreaction_type
 ,\n\rreport_reason
 ,\n\tbroadcast
@@ -5673,6 +5716,7 @@ $steammessages_parental_objects.proto"
 -\n(k_EMsgRemoteClientAuthorizationConfirmed
 -\n(k_EMsgUCMPublishedFilePreviewAddResponse
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
+-\n(k_EStreamControlStopNeptuneData_OBSOLETE
 -\n(k_EStreamControlTouchActionSetLayerAdded
 -\n)k_EAuthSessionGuardType_EmailConfirmation
 -\n)k_EAuthSessionGuardType_LegacyMachineAuth
@@ -5685,6 +5729,7 @@ $steammessages_parental_objects.proto"
 -\n)k_EContentReportReason_EncouragingSuicide
 -\n)k_EContentReportReason_GenderedHarassment
 -\n)k_EContentReportReason_OtherScamsAndTheft
+-\n)k_EContentReportSubjectAction_TradeBanned
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EControllerElementTypeButtonBumperRight
 -\n)k_EControllerElementTypeButtonTriggerLeft
@@ -5724,7 +5769,6 @@ $steammessages_parental_objects.proto"
 -\n\rrasterization
 -\n\rsecurity_info
 -\n\rskia_graphite
--\n\tStoreItem
 -\n\tvideo_def
 -\n\vVideoSource
 -\n\vform_factor
@@ -5854,6 +5898,7 @@ $steammessages_parental_objects.proto"
 -startcount=%d
 -steamdeck
 -steamdeckdisplaynosizescale
+-steamframe
 -steamid=%llu
 -steamos3
 -steampath=%s
@@ -5905,6 +5950,7 @@ $steammessages_parental_objects.proto"
 ..CAuthentication_BeginAuthSessionViaQR_Request
 ..CAuthentication_MigrateMobileSession_Response"
 ..CAuthentication_PollAuthSessionStatus_Request
+..CBluetoothManager_SetLoginAdvertising_Request
 ..CBroadcast_GetBroadcastChatUserNames_Response"
 ..CBroadcast_SendBroadcastStateToServer_Request
 ..CBroadcast_StopWatchingBroadcast_Notification
@@ -6050,21 +6096,23 @@ $steammessages_parental_objects.proto"
 .CCommunity_GetApps_Request
 .CCommunity_GetApps_Response"
 .CCommunity_PartnerEventResult"
-.CControllerAccessibilityString2
+.CControllerAccessibilityString"B\n3CSteamInputService_ControllerPowerMenu_Notification
 .CControllerOriginKey
 .CCookie"
 .CDisplayMarketingMessage"
 .CDisplayMarketingMessage"R\n0CMarketingMessages_PartnerPublishMessage_Request
 .CEconItem_Action
+.CEconItem_AssetAccessory"
 .CEconItem_AssetProperties
-.CEconItem_AssetProperty"
+.CEconItem_AssetProperty
+.CEconItem_AssetPropertySchema*
 .CEconItem_ClassIdentifiers
 .CEconItem_ContainerProperties"
 .CEconItem_Description
-.CEconItem_Description2
+.CEconItem_Description"G\n$CEcon_GetAssetPropertySchema_Request
 .CEconItem_DescriptionLine
 .CEconItem_Tag
-.CEconItem_Tag"U\n
+.CEconItem_Tag"k\n
 .CEmbeddedClient_Token2
 .CFamilyGroups_PlaytimeEntry
 .CFamilyGroups_PlaytimeEntry"
@@ -6370,13 +6418,12 @@ $steammessages_parental_objects.proto"
 .ControllerVector2
 .ControllerVector3
 .ControllerVector3"
-.DetectedAppContent"K\n:CDepotContentDetection_GetDetectedContentSingleApp_Request
+.DetectedAppContent*
 .EAccessibilityContrastMode
 .EAgreementType
-.EAppAntiCheatType
 .EAppContentDetectionType"P\n
-.EAppGameEngineType*
 .EAppReportType
+.EAssetPropertyType
 .EAuthSessionGuardType
 .EAuthSessionGuardType"]\n<CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 .EAuthSessionSecurityHistory
@@ -6417,6 +6464,7 @@ $steammessages_parental_objects.proto"
 .ECloudPendingRemoteOperation
 .ECloudStoragePersistState
 .EColorGamutLabelSet
+.ECommentDeleteReason
 .ECommentThreadType
 .ECommunityItemClass"
 .EContentDeltaChunkDataLocation
@@ -6427,7 +6475,6 @@ $steammessages_parental_objects.proto"
 .EContentHubDiscountFilterType
 .EContentReportReason
 .EContentReportReason""\n CChatRoom_ResolveReport_Response"W\n*CClanChatRooms_GetClanChatRoomInfo_Request
-.EContentReportReason"(\n&CFriendMessages_ResolveReport_Response"u\n1CFriendMessages_DismissSessionNotice_Notification
 .EContentReportResolution
 .EContentReportSubjectType""\n CChatRoom_ReportMessage_Response"
 .EControllerElementType
@@ -6670,6 +6717,7 @@ $steammessages_parental_objects.proto"
 .\n)k_EMsgUCMPublishedFileChildRemoveResponse
 .\n)k_EMsgUGSGetUserAchievementStatusResponse
 .\n)k_EMsgUpdateScheduledTaskEnableState_TEST
+.\n)k_EStreamControlStartNeptuneData_OBSOLETE
 .\n*k_EAsyncGameSessionUserStateReadyForAction
 .\n*k_EAsyncGameSessionUserVisibilityDismissed
 .\n*k_EAuthSessionGuardType_DeviceConfirmation
@@ -6681,6 +6729,7 @@ $steammessages_parental_objects.proto"
 .\n*k_EContentReportReason_EncouragingSelfHarm
 .\n*k_EContentReportReason_EncouragingViolence
 .\n*k_EContentReportReason_OrganizingTerrorism
+.\n*k_EContentReportSubjectAction_ResetContent
 .\n*k_EControlledLegalCategoryStatus_Acquitted
 .\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EControllerElementTypeButtonJoystickLeft
@@ -6712,6 +6761,7 @@ $steammessages_parental_objects.proto"
 .\n\nedirection
 .\n\rplatform_type
 .\n\rrelated_items
+.\n\tStoreItem
 .\n\tdirection
 .\n\vaccessories
 .\steamapps\workshop
@@ -6767,6 +6817,7 @@ $steammessages_parental_objects.proto"
 /.CAuthentication_GetAuthSessionRiskInfo_Request
 /.CAuthentication_PollAuthSessionStatus_Response"
 /.CAuthentication_RefreshToken_Enumerate_Request
+/.CBluetoothManager_SetLoginAdvertising_Response
 /.CBroadcast_BroadcastUploadStarted_Notification
 /.CBroadcast_SendBroadcastStateToServer_Response"
 /.CBroadcast_WaitingBroadcastViewer_Notification
@@ -6843,6 +6894,7 @@ $steammessages_parental_objects.proto"
 /\n*k_EMsgDRMWorkerProcessValidateFileResponse
 /\n*k_EMsgGCHRecurringSubscriptionStatusChange
 /\n*k_EMsgServiceMethodCallFromClientNonAuthed
+/\n*k_EStreamControlEnableNeptuneData_OBSOLETE
 /\n*k_EStreamControlTouchActionSetLayerRemoved
 /\n+k_EBroadcastWatchLocation_DesktopUI_Overlay
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
@@ -6856,6 +6908,7 @@ $steammessages_parental_objects.proto"
 /\n+k_EContentDescriptor_FrequentViolenceOrGore
 /\n+k_EContentReportReason_EncouragingTerrorism
 /\n+k_EContentReportResolution_HarassmentStrike
+/\n+k_EContentReportSubjectAction_BannedFromHub
 /\n+k_EControllerElementTypeButtonJoystickRight
 /\n+k_EMarketingMessageClickLocation_DlcCapsule
 /\n+k_EMarketingMessageClickLocation_HeaderArea
@@ -7011,8 +7064,8 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/music/playbackcontroller.cpp
 /data/src/clientdll/networkdevicemanager.cpp
 /data/src/clientdll/networkdevicemanager_linux.cpp
-/data/src/clientdll/networkdevicemanager_linux.cpp:2490
-/data/src/clientdll/networkdevicemanager_linux.cpp:2755
+/data/src/clientdll/networkdevicemanager_linux.cpp:2496
+/data/src/clientdll/networkdevicemanager_linux.cpp:2761
 /data/src/clientdll/p2pnetworkingsession.cpp
 /data/src/clientdll/peercontentserver.cpp
 /data/src/clientdll/pipewirecontext.cpp
@@ -7049,15 +7102,15 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/systemdockmanager_linux.cpp:564
 /data/src/clientdll/systemlogcollector.cpp
 /data/src/clientdll/systemmanager.cpp
-/data/src/clientdll/systemmanager.cpp:2657
-/data/src/clientdll/systemmanager.cpp:3146
-/data/src/clientdll/systemmanager.cpp:4670
-/data/src/clientdll/systemmanager.cpp:5276
+/data/src/clientdll/systemmanager.cpp:2649
+/data/src/clientdll/systemmanager.cpp:3137
+/data/src/clientdll/systemmanager.cpp:4755
+/data/src/clientdll/systemmanager.cpp:5350
 /data/src/clientdll/systemperfmanager.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp
-/data/src/clientdll/systemperfmanager_linux.cpp:1340
-/data/src/clientdll/systemperfmanager_linux.cpp:1396
-/data/src/clientdll/systemperfmanager_linux.cpp:1522
+/data/src/clientdll/systemperfmanager_linux.cpp:1338
+/data/src/clientdll/systemperfmanager_linux.cpp:1394
+/data/src/clientdll/systemperfmanager_linux.cpp:1520
 /data/src/clientdll/systemperfmanager_linux.cpp:303
 /data/src/clientdll/udevcontext.cpp
 /data/src/clientdll/ugcmanager.cpp
@@ -7411,6 +7464,7 @@ $steammessages_parental_objects.proto"
 /index.html
 /legacycompat/Steam.dll
 /manifestupload
+/media0
 /music
 /name
 /nvidiav1/GLCache/%s/%s
@@ -7610,8 +7664,6 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
-0000000000000000000000000000000000000000
-0000000000000000
 0.0333
 0.050
 0.13.15.106
@@ -7655,6 +7707,8 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
+0000000000000000000000000000000000000000
+0000000000000000
 00000001
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -7702,6 +7756,7 @@ $steammessages_parental_objects.proto"
 0\n+k_EMsgFSGetPendingNotificationCountResponse
 0\n+k_EMsgUCMPublishedFilePreviewRemoveResponse
 0\n+k_EMsgWGConnectionValidateUserTokenResponse
+0\n+k_EStreamControlDisableNeptuneData_OBSOLETE
 0\n+k_EStreamControlSetInputTemporarilyDisabled
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EAuthSessionSecurityHistory_NoPriorHistory
@@ -7916,8 +7971,8 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryI9CandidateE
 10CUtlMemoryIN10CUserStats19DownloadedLBEntry_tEE
 10CUtlMemoryIN10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexIiEiN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeI17ChunkRequestKey_ti8CDefLess25CDefRBTreeBalanceListenerIiES1_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeI18DownloadPeerInfo_ti8CDefLess25CDefRBTreeBalanceListenerIiES1_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeI26EContentDownloadSourceTypei8CDefLess25CDefRBTreeBalanceListenerIiES1_E6Node_tEE
@@ -7936,7 +7991,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringS2_i22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringS2_i8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI15AdapterMapKey_tPvi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
@@ -8459,7 +8513,7 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIPN12CSteamEngine14QueuedFunctionEE
 10CUtlMemoryIPN12CVoiceClient11Reflected_tEE
 10CUtlMemoryIPN18FileRootOverride_t15PathTransform_tEE
-10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
+10CUtlMemoryIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tEE
 10CUtlMemoryIPN19CBaseUtlSymbolTableI14CMetricsSymbolE12StringPool_tEE
 10CUtlMemoryIPN20CRemoteClientManager18StreamingSession_tEE
 10CUtlMemoryIPN22CBannedWordsDictionary11MatchNode_tEE
@@ -8482,8 +8536,8 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIwE
 10CUtlMemoryIyE
 10CUtlRBTreeI10CUtlStringi8CDefLess25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
-10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+10CUtlRBTreeI16CStringPoolIndexIiEiN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerIiES1_E
+10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES1_E
 10CUtlRBTreeI17ChunkRequestKey_ti8CDefLess25CDefRBTreeBalanceListenerIiES0_E
 10CUtlRBTreeI18DownloadPeerInfo_ti8CDefLess25CDefRBTreeBalanceListenerIiES0_E
 10CUtlRBTreeI26EContentDownloadSourceTypei8CDefLess25CDefRBTreeBalanceListenerIiES0_E
@@ -8502,7 +8556,6 @@ $steammessages_parental_objects.proto"
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringS1_i22CDefCaselessStringLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringS1_i8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringji8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI15AdapterMapKey_tPvi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
@@ -8969,7 +9022,7 @@ $steammessages_parental_objects.proto"
 10CUtlVectorIPN12CSteamEngine14QueuedFunctionE10CUtlMemoryIS2_EE
 10CUtlVectorIPN12CVoiceClient11Reflected_tE10CUtlMemoryIS2_EE
 10CUtlVectorIPN18FileRootOverride_t15PathTransform_tE10CUtlMemoryIS2_EE
-10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
+10CUtlVectorIPN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE12StringPool_tE10CUtlMemoryIS5_EE
 10CUtlVectorIPN19CBaseUtlSymbolTableI14CMetricsSymbolE12StringPool_tE10CUtlMemoryIS4_EE
 10CUtlVectorIPN20CRemoteClientManager18StreamingSession_tE10CUtlMemoryIS2_EE
 10CUtlVectorIPN22CBannedWordsDictionary11MatchNode_tE10CUtlMemoryIS2_EE
@@ -9439,6 +9492,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI26CMsgClientWalletInfoUpdateE
 12CProtoBufMsgI26CMsgGameServerPolicyUpdateE
 12CProtoBufMsgI26CMsgRemoteClientAcceptEULAE
+12CProtoBufMsgI26CMsgRemoteClientPairWifiAPE
 12CProtoBufMsgI26SiteServerUI_Login_RequestE
 12CProtoBufMsgI26SiteServerUI_Quit_ResponseE
 12CProtoBufMsgI27CMsgClientAMGetClanOfficersE
@@ -9454,7 +9508,6 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI27CMsgClientMMSSetLobbyLinkedE
 12CProtoBufMsgI27CMsgClientP2PConnectionInfoE
 12CProtoBufMsgI27CMsgClientPeerChunkResponseE
-12CProtoBufMsgI27CMsgClientPendingGameLaunchE
 12CProtoBufMsgI27CMsgClientRequestFriendDataE
 12CProtoBufMsgI27CMsgClientSetPlayerNicknameE
 12CProtoBufMsgI27CMsgClientUGSGetGlobalStatsE
@@ -9571,6 +9624,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI34CMsgClientRequestItemAnnouncementsE
 12CProtoBufMsgI34CMsgClientSharedLibraryStopPlayingE
 12CProtoBufMsgI34CMsgClientUCMAddScreenshotResponseE
+12CProtoBufMsgI34CMsgRemoteClientPairWifiAPResponseE
 12CProtoBufMsgI34CPlayer_GetLastPlayedTimes_RequestE
 12CProtoBufMsgI34SiteServerUI_ClientStatus_ResponseE
 12CProtoBufMsgI35CBroadcast_WebRTCStart_NotificationE
@@ -9583,7 +9637,6 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI35CMsgClientLBSFindOrCreateLBResponseE
 12CProtoBufMsgI35CMsgClientMMSGetLobbyStatusResponseE
 12CProtoBufMsgI35CMsgClientNetworkingMobileCertReplyE
-12CProtoBufMsgI35CMsgClientPendingGameLaunchResponseE
 12CProtoBufMsgI35CMsgClientRequestEncryptedAppTicketE
 12CProtoBufMsgI35CMsgClientSetPlayerNicknameResponseE
 12CProtoBufMsgI35CMsgClientUGSGetGlobalStatsResponseE
@@ -10511,6 +10564,7 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI19CRemoteClientDongle21AppEventStateChange_tE
 17CInternalCallbackI19CRemoteClientDongle23VRHMDHardwareDetected_tE
 17CInternalCallbackI19CRemoteClientDongle24ControllerHotplugEvent_tE
+17CInternalCallbackI19CRemoteClientSoftAP15VRModeChanged_tE
 17CInternalCallbackI20CClientNetworkingAPI41ClientNetworking_GotSDRPingLocationStringE
 17CInternalCallbackI20CRemoteClientManager15VRModeChanged_tE
 17CInternalCallbackI20CRemoteClientManager16AppInfoChanged_tE
@@ -10520,6 +10574,8 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI20CRemoteClientManager27FocusedSteamWindowChanged_tE
 17CInternalCallbackI20CRemoteClientManager28LoadControllerConfigResult_tE
 17CInternalCallbackI20CRemoteClientManager29RemoteClientDongleConnected_tE
+17CInternalCallbackI20CRemoteClientManager29RemoteClientDonglePlugEvent_tE
+17CInternalCallbackI20CRemoteClientManager31RemoteClientSoftAPStateChange_tE
 17CInternalCallbackI20CRemoteClientManager32RemoteClientDongleDisconnected_tE
 17CInternalCallbackI20CRemoteClientManager33RemoteClientDongleMonitorResult_tE
 17CInternalCallbackI20CRemoteClientManager34RemoteClientDongleConnectTimeout_tE
@@ -10749,6 +10805,7 @@ $steammessages_parental_objects.proto"
 18CScheduledFunctionI18CSiteLicenseClientE
 18CScheduledFunctionI19AppNetworkSummary_tE
 18CScheduledFunctionI19CRemoteClientDongleE
+18CScheduledFunctionI19CRemoteClientSoftAPE
 18CScheduledFunctionI20CBatteryStateManagerE
 18CScheduledFunctionI20COfflineMessageCacheE
 18CScheduledFunctionI20CReliablePacketQueueE
@@ -10922,12 +10979,12 @@ $steammessages_parental_objects.proto"
 19CPlaybackController
 19CPowerFunctionCurve
 19CRemoteClientDongle
+19CRemoteClientSoftAP
 19CServerHandshakeMsg
 19CSetAPSetOptionsJob
 19CShaderCacheImplAMD
 19CSoftPressActivator
 19CSteam3StreamParser
-19CStopNeptuneDataMsg
 19CSystemAudioManager
 19CSystemNotifierBase
 19CTransportSignalMsg
@@ -11016,6 +11073,7 @@ $steammessages_parental_objects.proto"
 1\n-k_EContentHubDiscountFilterType_DiscountsOnly
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
+1\n-k_EContentReportReason_QuotesModeratedContent
 1\n-k_EMarketingMessageClickLocation_PartnerEvent
 1\n-k_EPartnerEventDisplayLocation_StoreFrontPage
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
@@ -11117,11 +11175,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-2019
 2048
 20000
 2000000
 200M
+2019
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -11203,7 +11261,6 @@ $steammessages_parental_objects.proto"
 20CSiteServerConfigMgr
 20CSiteServerUIBaseJob
 20CSiteServerUIQuitJob
-20CStartNeptuneDataMsg
 20CStartNetworkTestMsg
 20CStartPressActivator
 20CStaticFrameFunction
@@ -11300,7 +11357,6 @@ $steammessages_parental_objects.proto"
 21CEC25519PublicKeyBase
 21CEconItem_Description
 21CEmbeddedClient_Token
-21CEnableNeptuneDataMsg
 21CFindCurrentBucketJob
 21CGSClientJobGSApprove
 21CGamepadButtonBinding
@@ -11452,7 +11508,6 @@ $steammessages_parental_objects.proto"
 22CCompletionPortManager
 22CCompressChunkWorkItem
 22CDepotLANPeerInterface
-22CDisableNeptuneDataMsg
 22CDiscoveryPingResponse
 22CEC25519PrivateKeyBase
 22CFlashFirmwareWorkItem
@@ -11687,6 +11742,7 @@ $steammessages_parental_objects.proto"
 23CParties_BeaconLocation
 23CPlayer_TextFilterWords
 23CProtoBufMsgMultiBuffer
+23CRemoteClientPairWifiAP
 23CRemoteFileCacheDataMap
 23CReportExternalBuildJob
 23CSaveMusicQueueAsyncJob
@@ -11773,6 +11829,7 @@ $steammessages_parental_objects.proto"
 24CDirWatcherPollingThread
 24CDisplayMarketingMessage
 24CECKeyExchangePrivateKey
+24CEconItem_AssetAccessory
 24CEnableHighResCaptureMsg
 24CInputTouchFingerDownMsg
 24CInternalCallbackManager
@@ -11784,7 +11841,6 @@ $steammessages_parental_objects.proto"
 24CMsgClientGMSServerQuery
 24CMsgClientMMSCreateLobby
 24CMsgClientShaderHitCache
-24CMsgClientStoreUserStats
 24CMsgClientUCMPublishFile
 24CMsgImeCancelComposition
 24CMsgNetworkDeviceConnect
@@ -12117,6 +12173,7 @@ $steammessages_parental_objects.proto"
 26CMsgNetworkDeviceIP4Config
 26CMsgNetworkDeviceIP6Config
 26CMsgRemoteClientAcceptEULA
+26CMsgRemoteClientPairWifiAP
 26CMsgSavePageToJPEGResponse
 26CMsgSetControllerActionSet
 26CMsgSetWindowStackingOrder
@@ -12234,6 +12291,7 @@ $steammessages_parental_objects.proto"
 27CGameNotifications_Variable
 27CGameRecordingTimelineEvent
 27CGamescope_GetState_Request
+27CGetPuckPairingInfoWorkItem
 27CGetShaderBucketManifestJob
 27CHTTPServerClientConnection
 27CHTTPServerFlushResponseJob
@@ -12523,11 +12581,14 @@ $steammessages_parental_objects.proto"
 29CCloud_GetFileDetails_Request
 29CCloud_PendingRemoteOperation
 29CCommunity_PartnerEventResult
+29CEconItem_AssetPropertySchema
 29CEconItem_ContainerProperties
 29CGameNetworkingUI_GlobalState
 29CGameNotifications_UserStatus
 29CGameRecordingPostGameSummary
 29CGetControllerConnectionState
+29CGetDonglePairingInfoWorkItem
+29CGetTritonPairingInfoWorkItem
 29CGyroToJoystickDeflectionMode
 29CHIDDevicePipeSharedMemStream
 29CHTTPServerSend100ContinueJob
@@ -12642,6 +12703,7 @@ $steammessages_parental_objects.proto"
 2\n.k_EContentReportReason_OtherCommercialActivity
 2\n.k_EContentReportReason_OtherViolenceOrSelfHarm
 2\n.k_EContentReportResolution_DisconnectedFromApp
+2\n.k_EContentReportSubjectAction_EscalatedForCSAM
 2\n.k_EPartnerEventDisplayLocation_LibraryOverview
 2\n.k_EPublishedFileInappropriateResult_NotScanned
 2\n.k_EPublishedFileInappropriateResult_VeryLikely
@@ -12770,6 +12832,7 @@ $steammessages_parental_objects.proto"
 30CAdapterSteamSteamVRPrivate001
 30CAdapterSteamSteamVRPrivate002
 30CAdapterSteamStreamLauncher001
+30CBaseRemoteAuthorizedClientJob
 30CBluetoothManager_Pair_Request
 30CBroadcast_GetRTMPInfo_Request
 30CBroadcast_SetRTMPInfo_Request
@@ -12983,6 +13046,7 @@ $steammessages_parental_objects.proto"
 31CPublishedFile_AddChild_Request
 31CPublishedFile_Publish_Response
 31CRegisterValveIndexComponentJob
+31CRemoteClientPairWifiAPResponse
 31CRemoteDeviceJobAuthorizeDevice
 31CSetInputTemporarilyDisabledMsg
 31CShader_GetStaleBucket_Response
@@ -12993,6 +13057,7 @@ $steammessages_parental_objects.proto"
 31CSteamOSSLS_SetEnabled_Response
 31CSteamTV_HomePageTemplate_Event
 31CStorePageFilter_SalePageFilter
+31CStore_GetGamesFollowed_Request
 31CSupportRefreshTokenDescription
 31CSystemManagerCheckForUpdateJob
 31CSystemManagerSelectOSBranchJob
@@ -13106,6 +13171,7 @@ $steammessages_parental_objects.proto"
 32CSteamOSManager_GetState_Request
 32CStorageDeviceManagerBlockDevice
 32CStore_GetDiscoveryQueue_Request
+32CStore_GetGamesFollowed_Response
 32CSystemManagerGetOSBranchListJob
 32CSystemManager_Hibernate_Request
 32CSystemManager_WriteFile_Request
@@ -13350,6 +13416,7 @@ $steammessages_parental_objects.proto"
 34CMsgClientSharedLibraryStopPlaying
 34CMsgClientUCMAddScreenshotResponse
 34CMsgRemoteClientBroadcastDiscovery
+34CMsgRemoteClientPairWifiAPResponse
 34CMsgSteamDatagramCertificateSigned
 34CMsgSteamDatagramConnectionQuality
 34CMsgSteamDatagramLinkLifetimeStats
@@ -13559,6 +13626,7 @@ $steammessages_parental_objects.proto"
 36CCommunity_GetCommentThread_Response
 36CCommunity_RateCommentThread_Request
 36CConsumedSubscribedFilePersistThread
+36CEcon_GetAssetPropertySchema_Request
 36CFamilyGroups_GetFamilyGroup_Request
 36CFriendMessages_SendMessage_Response
 36CGSClientJobGetUserAchievementStatus
@@ -13621,6 +13689,7 @@ $steammessages_parental_objects.proto"
 36CStorageDeviceManager_Adopt_Response
 36CStorageDeviceManager_Eject_Response
 36CStorageDeviceManager_Format_Request
+36CStore_GetGamesFollowedCount_Request
 36CTimedTrial_GetTimeRemaining_Request
 36CTransportAuth_Authenticate_Response
 36CTwoFactor_AddAuthenticator_Response
@@ -13666,6 +13735,7 @@ $steammessages_parental_objects.proto"
 37CCloud_GetClientEncryptionKey_Request
 37CCommunity_RateCommentThread_Response
 37CDisplayManagerRebuildStateJobWayland
+37CEcon_GetAssetPropertySchema_Response
 37CFamilyGroups_GetFamilyGroup_Response
 37CFamilyGroups_JoinFamilyGroup_Request
 37CFamilyGroups_RequestPurchase_Request
@@ -13680,6 +13750,7 @@ $steammessages_parental_objects.proto"
 37CHIDDevicePipeSharedMemStreamToRemote
 37CHIDMessageFromRemote_CloseAllDevices
 37CHIDMessageFromRemote_RequestResponse
+37CHardwareUpdate_PrepForUpdate_Request
 37CLEDManager_StateChanged_Notification
 37CMsgClientAuthorizeLocalDeviceRequest
 37CMsgClientChatGetFriendMessageHistory
@@ -13730,6 +13801,7 @@ $steammessages_parental_objects.proto"
 37CStorageDeviceManager_TrimAll_Request
 37CStorageDeviceManager_Unmount_Request
 37CStoreBrowse_GetHardwareItems_Request
+37CStore_GetGamesFollowedCount_Response
 37CStore_SkipDiscoveryQueueItem_Request
 37CTimedTrial_GetTimeRemaining_Response
 37CTwoFactor_UpdateTokenVersion_Request
@@ -13785,6 +13857,7 @@ $steammessages_parental_objects.proto"
 38CGameRecording_StartRecording_Response
 38CGameRecording_TakeScreenshot_Response
 38CHIDMessageFromRemote_UpdateDeviceList
+38CHardwareUpdate_PrepForUpdate_Response
 38CInventoryClient_NewItems_Notification
 38CInventory_GetUserPurchaseInfo_Request
 38CLoadLocalCompatibilityToolManifestJob
@@ -13867,6 +13940,7 @@ $steammessages_parental_objects.proto"
 39CCommunity_HideAndReportComment_Request
 39CCommunity_PostCommentToThread_Response
 39CCommunity_RateClanAnnouncement_Request
+39CCommunity_VerifyClanMembership_Request
 39CContentBuilder_CommitAppBuild_Response
 39CContentBuilder_InitDepotBuild_Response
 39CDataPublisher_AddVRDeviceInfo_Response
@@ -13899,7 +13973,6 @@ $steammessages_parental_objects.proto"
 39CMsgClientRemoveFriendFromGroupResponse
 39CMsgClientRequestForgottenPasswordEmail
 39CMsgClientRichPresenceInfo_RichPresence
-39CMsgClientStoreUserStats_Stats_To_Store
 39CMsgClientUCMSetUserPublishedFileAction
 39CMsgClientUGSGetGlobalStatsResponse_Day
 39CMsgClientVoiceCallPreAuthorizeResponse
@@ -14008,6 +14081,7 @@ $steammessages_parental_objects.proto"
 4.CMarketingMessages_GetPastMarketingMessages_Request
 4.CPlayer_GetMutualFriendsForIncomingInvites_Response"
 4.CQueuedMatchmakingGameHost_SearchForPlayers_Request
+4.CSteamInputService_ControllerPowerMenu_Notification
 4.CSteamInputService_GyroSoftwareCalibration_Response
 4.CTransportValidation_TriggerSyntheticEvents_Request
 40 Mbps
@@ -14038,6 +14112,7 @@ $steammessages_parental_objects.proto"
 40CCommunity_GetClanLocGroupImages_Request
 40CCommunity_HideAndReportComment_Response
 40CCommunity_RateClanAnnouncement_Response
+40CCommunity_VerifyClanMembership_Response
 40CContentBuilder_StartDepotUpload_Request
 40CEconMarket_IsMarketplaceAllowed_Request
 40CEmbeddedClient_AuthorizeDevice_Response
@@ -14357,7 +14432,6 @@ $steammessages_parental_objects.proto"
 43CBroadcast_WebRTCGetHostCandidates_Response
 43CChatRoom_UpdateMemberListView_Notification
 43CClanChatRooms_GetClanChatRoomInfo_Response
-43CClientJobAskForSteamStreamingEncoderConfig
 43CClientJobChatRoomSendSubscribedChatMessage
 43CClientJobNotifyCommunityPreferencesChanged
 43CClientJobNotifyPerFriendPreferencesChanged
@@ -14513,6 +14587,7 @@ $steammessages_parental_objects.proto"
 45CAuthentication_BeginAuthSessionViaQR_Request
 45CAuthentication_MigrateMobileSession_Response
 45CAuthentication_PollAuthSessionStatus_Request
+45CBluetoothManager_SetLoginAdvertising_Request
 45CBroadcastClient_WebRTCAddViewerCandidate_Job
 45CBroadcast_GetBroadcastChatUserNames_Response
 45CBroadcast_SendBroadcastStateToServer_Request
@@ -14585,6 +14660,7 @@ $steammessages_parental_objects.proto"
 46CAuthentication_GetAuthSessionRiskInfo_Request
 46CAuthentication_PollAuthSessionStatus_Response
 46CAuthentication_RefreshToken_Enumerate_Request
+46CBluetoothManager_SetLoginAdvertising_Response
 46CBroadcast_BroadcastUploadStarted_Notification
 46CBroadcast_SendBroadcastStateToServer_Response
 46CBroadcast_WaitingBroadcastViewer_Notification
@@ -14816,6 +14892,7 @@ $steammessages_parental_objects.proto"
 4\n/k_EStreamControlControllerPersonalizationUpdate
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
+4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
 4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
@@ -14935,6 +15012,7 @@ $steammessages_parental_objects.proto"
 51CMsgSteamNetworkingP2PRendezvous_ApplicationMessage
 51CPlayer_GetMutualFriendsForIncomingInvites_Response
 51CQueuedMatchmakingGameHost_SearchForPlayers_Request
+51CSteamInputService_ControllerPowerMenu_Notification
 51CSteamInputService_GyroSoftwareCalibration_Response
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
@@ -15093,7 +15171,6 @@ $steammessages_parental_objects.proto"
 58CClientMetrics_ContentDownloadResponse_Counts_Notification
 58CClientMetrics_ReportReactUsage_Notification_ComponentData
 58CDataPublisher_SetVRDeviceInfoAggregationReference_Request
-58CDepotContentDetection_GetDetectedContentSingleApp_Request
 58CHIDMessageFromRemote_DeviceInputReports_DeviceInputReport
 58CMarketingMessages_GetMarketingMessageClickedStats_Request
 58CMarketingMessages_GetMarketingMessageViewerStats_Response
@@ -15109,7 +15186,6 @@ $steammessages_parental_objects.proto"
 59CChatUsability_ClientUsabilityMetrics_Notification_Settings
 59CClientMetrics_GamePerformance_Notification_FrameRateReport
 59CDataPublisher_SetVRDeviceInfoAggregationReference_Response
-59CDepotContentDetection_GetDetectedContentSingleApp_Response
 59CMarketingMessages_GetMarketingMessageClickedStats_Response
 59CMarketingMessages_GetPartnerReadyToPublishMessages_Request
 59CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance
@@ -15134,6 +15210,7 @@ $steammessages_parental_objects.proto"
 5\n0k_EMsgTestWorkerProcessServiceModuleCallResponse
 5\n1k_ECloudPendingRemoteOperationAppSessionSuspended
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
+5\n1k_EContentReportSubjectAction_BannedFromCommunity
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EPartnerEventDisplayLocation_AppDetailsActivity
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
@@ -15336,7 +15413,6 @@ $steammessages_parental_objects.proto"
 7CUtlMapI10CUtlStringP10IIPCServeri8CDefLessE
 7CUtlMapI10CUtlStringS0_i22CDefCaselessStringLessE
 7CUtlMapI10CUtlStringS0_i8CDefLessE
-7CUtlMapI10CUtlStringbi8CDefLessE
 7CUtlMapI10CUtlStringji8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
 7CUtlMapI15AdapterMapKey_tPvi8CDefLessE
@@ -15539,6 +15615,8 @@ $steammessages_parental_objects.proto"
 7CUtlPtrIN18CUserRemoteStorage20AppLocalFileChange_tEE
 7CUtlPtrIN23CClientSharedConnection18SharedConnection_t11QueuedMsg_tEE
 7CUtlPtrIN23CClientSharedConnection18SharedConnection_tEE
+7CUtlSetI10CUtlStringi8CDefLessE
+7CUtlSetIyi8CDefLessE
 7E\vy
 7K[iu
 7Offline
@@ -15557,6 +15635,7 @@ $steammessages_parental_objects.proto"
 7\n2k_EMsgClientUCMEnumeratePublishedFilesByUserAction
 7\n2k_EMsgDRMWorkerProcessInstallProcessedFilesRequest
 7\n3k_EContentHubDiscountFilterType_PrioritizeDiscounts
+7\n3k_EContentReportSubjectAction_EscalatedForTerrorism
 7\n3k_ESharedLibrary_LicenseExcluded_PaymentFamilyGroup
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
@@ -15640,8 +15719,8 @@ $steammessages_parental_objects.proto"
 8CAutoPtrI33CGameNetworkingUI_ConnectionStateE
 8CAutoPtrI41CDockUnsupportedFirmwareWorkaroundManagerE
 8CAutoPtrI59CClientMetrics_GamePerformance_Notification_FrameRateReportE
-8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
-8CAutoPtrI7CUtlMapIybi8CDefLessEE
+8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
+8CAutoPtrI7CUtlSetIyi8CDefLessEE
 8CFunctor
 8CLogFile
 8CMetrics
@@ -15781,7 +15860,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9HxR]
 9IClientVR
 9IGv
 9ISteamUGC
@@ -15885,7 +15963,6 @@ $steammessages_parental_objects.proto"
 ;.CChatRoom_NotifyShouldRejoinChatRoomVoiceChat_Notification
 ;.CClientMetrics_ContentDownloadResponse_Counts_Notification
 ;.CDataPublisher_SetVRDeviceInfoAggregationReference_Request
-;.CDepotContentDetection_GetDetectedContentSingleApp_Request
 ;.CMarketingMessages_GetMarketingMessageClickedStats_Request
 ;.CMarketingMessages_GetMarketingMessageViewerStats_Response"
 ;.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response"
@@ -15921,7 +15998,6 @@ $steammessages_parental_objects.proto"
 <.CAuthenticationSupport_QueryRefreshTokensByAccount_Response"
 <.CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request
 <.CDataPublisher_SetVRDeviceInfoAggregationReference_Response"
-<.CDepotContentDetection_GetDetectedContentSingleApp_Response"
 <.CMarketingMessages_GetMarketingMessageClickedStats_Response"
 <.CMarketingMessages_GetPartnerReadyToPublishMessages_Request
 <.CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response"
@@ -16669,13 +16745,12 @@ Account has an existing user cancelled license
 Account has been deleted
 Account is blocked
 Account is not allowed
+Account is restricted from purchasing adult content
 Account locked
 Account logon denied, need two-factor code
 Account not verified
 AccountHardware
 AccountHardware.CompleteSteamControllerRegistration#1
-AccountHardware.GetControllerPersonalizationFile#1
-AccountHardware.GetDesiredControllerConfigForApp#1
 AccountHardware.QueryAccountsRegisteredToController#1
 AccountHardware.RegisterSteamController#1
 AccountHardware.RegisterValveIndexComponent#1
@@ -17237,6 +17312,7 @@ BB^Eq
 BBindingMajorRevisionMismatch
 BC (default)
 BCallerDeadlineTriggered()
+BCanPairViaWifiAP
 BCanReceive
 BCanRemotePlayTogether
 BCanSend
@@ -17327,6 +17403,7 @@ BGetUserScreenshotDirectory
 BGetValueBin
 BGetValueStr
 BGetValueUint
+BGetValueUint64
 BGetValues
 BGetWalletBalance
 BHandleKeyExchangeAuthorization: couldn't use client public key\n
@@ -17546,6 +17623,7 @@ BREAKPAD_DUMP_LOCATION
 BReceiveFile
 BRecvCryptoHandshake
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
+BRemoteClientCanPairViaWifiAP
 BRemoteClientCanSteamVR
 BRemoteClientConnectedToWifiAP
 BRemoteClientHasLocalConnection
@@ -17579,7 +17657,7 @@ BSetStreamingClientConfig
 BSetValueBin
 BSetValueStr
 BSetValueUint
-BShouldWaitForSteamStreamingEncoderConfig
+BSetValueUint64
 BStartStreaming
 BStartUpdateDepotsJob: %u missing required app %u
 BStarted()
@@ -17882,7 +17960,6 @@ Braille
 Brazilian
 Break
 Breaking '%s' in '%s'\n
-Breakpad_SetSteamID
 Breakpad_SteamMiniDumpInit
 Breakpad_SteamSendMiniDump
 Breakpad_SteamSetAppID
@@ -18405,7 +18482,6 @@ CClientJobAcceptSSA
 CClientJobAckGuestPass
 CClientJobActivateOEMTicket
 CClientJobAddFriendToGroup
-CClientJobAskForSteamStreamingEncoderConfig
 CClientJobAuthorizeEmbeddedClient
 CClientJobAuthorizeLocalDeviceRequest
 CClientJobBeginBroadcastSession
@@ -18438,11 +18514,7 @@ CClientJobFetchConfigSets
 CClientJobFetchLoginToken
 CClientJobFetchPersonalizationFileID
 CClientJobFetchPersonalizationFileID - AutoCloud\n
-CClientJobFetchPersonalizationFileID - Server response empty, writing out initial AutoCloud value\n
 CClientJobFetchPersonalizationFileID - Writing out initial AutoCloud value\n
-CClientJobFetchPersonalizationFileID - connected controller changed during yield\n
-CClientJobFetchPersonalizationFileID - server unavailable, checking local cache\n
-CClientJobFetchPersonalizationFileID\n
 CClientJobFetchSDRNetworkConfigJSON
 CClientJobFindScreenshots::ThreadedFindGameIDs
 CClientJobFindScreenshots::ThreadedFindJpegs
@@ -18878,7 +18950,6 @@ CDepotReconstructCtx::BInitializeDeltaChunks
 CDepotReconstructCtx::ThreadedClosePatchFile
 CDepotReconstructCtx::ThreadedFlushPatchFile
 CDisableHighResCaptureMsg"
-CDisableNeptuneDataMsg"
 CDisconnectDeviceJob
 CDisconnectDeviceJob::ThreadedDisconnectDevice
 CDiscoveryPingRequest
@@ -18893,8 +18964,10 @@ CERTIFICATE
 CERTIFICATE REQUEST
 CERTIFICATEPOLICIES
 CEconItem_Action
+CEconItem_AssetAccessory
 CEconItem_AssetProperties
 CEconItem_AssetProperty
+CEconItem_AssetPropertySchema
 CEconItem_ClassIdentifiers
 CEconItem_ContainerProperties
 CEconItem_Description
@@ -18903,7 +18976,6 @@ CEcon_GetAssetClassInfo_Request
 CEmbeddedClient_Token
 CEnableDeckEchoCancellationJob
 CEnableHighResCaptureMsg"
-CEnableNeptuneDataMsg"
 CFakeUDPPort::BHandleNewIncomingConnection
 CFakeUDPPort::FreeResources
 CFamilyGroups_PlaytimeEntry
@@ -19328,7 +19400,6 @@ CIPAndPort::GetIPv4 called on IPv6 address
 CIPCClient::CreateIPCPipe: unexpected connect reply
 CIPCClient::FreeFuncCallReturnBuffer called incorrectly
 CIPCServer
-CIPCServer::BMainLoop
 CIPCServer::Run
 CIPCServer::Thread_MainLoop
 CIPCServer::Thread_MainLoop() -- Sleep
@@ -19757,7 +19828,6 @@ CMsgClientSiteInfo
 CMsgClientSiteLicenseCheckout
 CMsgClientStat2
 CMsgClientStatsUpdated
-CMsgClientStoreUserStats
 CMsgClientStoreUserStats2
 CMsgClientTicketAuthComplete
 CMsgClientUCMAddScreenshot
@@ -19916,6 +19986,7 @@ CMsgRemoteClientAcceptEULA
 CMsgRemoteClientAppStatus
 CMsgRemoteClientBroadcastHeader
 CMsgRemoteClientBroadcastStatus
+CMsgRemoteClientPairWifiAP
 CMsgRemoteClientPing"
 CMsgRemoteClientPingResponse"S\n
 CMsgRemoteClientStartStream
@@ -20324,6 +20395,7 @@ CQueuedLambdaRunner::BFrameFuncRunQueuedFunctions
 CRC check failed for chunk %s - converting to 404
 CRC error
 CRC raw / encrypted    : 0x%X / 0x%X \n
+CRC32_ProcessBuffer
 CRL Sign
 CRL has expired
 CRL is not yet valid
@@ -20407,6 +20479,7 @@ CRemoteClientManager::GetRemoteClientNameByIndex
 CRemoteClientManager::OnAppEventStateChange
 CRemoteClientManager::OnAppLifetimeNotification
 CRemoteClientManager::OnUpdateInfoChange
+CRemoteClientManager::PairWifiAP failed: not %s
 CRemoteClientManager::RecvMsgAppStatus
 CRemoteClientManager::RecvPkt
 CRemoteClientManager::SendAppStatusToClient
@@ -20422,6 +20495,17 @@ CRemoteClientManager_CloudGamingNVIDIAUpdateGameList
 CRemoteClientManager_PurgeDeadStreamClients
 CRemoteClientManager_SendQueuedBroadcastMessagesIfNecessary
 CRemoteClientManager_WaitForUITimeout
+CRemoteClientPairWifiAP
+CRemoteClientPairWifiAP received e_pair_result %d
+CRemoteClientPairWifiAP timed out waiting for reply (extend client timeout?)
+CRemoteClientPairWifiAP::BYieldingRunClientJob pairing with %llu (%s)
+CRemoteClientPairWifiAPResponse
+CRemoteClientPairWifiAPResponse got unexepected auth failure
+CRemoteClientPairWifiAPResponse sent ssid %s
+CRemoteClientSoftAP settings updated, enabled = %d, hotspot = %d, ssid = "%s"
+CRemoteClientSoftAP::Init
+CRemoteClientSoftAP::ScheduledStateCheck
+CRemoteClientSoftAP::ThreadedSendSoftAPCmd
 CRemoteClient_ClientDetails
 CRemoteClient_ClientLogin
 CRemoteClient_DeviceDetails
@@ -20467,6 +20551,7 @@ CSDRHTTPRequest::Cancel
 CSDRHTTPRequest::Think
 CSDRServerPhysicalSocket::BInit
 CSDRServerPhysicalSocket::Think
+CSHA1::Update
 CSPAuth
 CSPName
 CSaveBufferToDiskWorkItem
@@ -20550,7 +20635,6 @@ CSleepManager_GetState_Request"H\n
 CSleepManager_GetState_Response
 CSocket discarding incoming packets
 CStartAudioDataMsg
-CStartNeptuneDataMsg
 CStartNetworkTestMsg
 CStartVideoDataMsg
 CStatT<T>::Update: called on class that was not initialized.\n
@@ -20649,14 +20733,14 @@ CSteamTV_JoinChat_Response
 CSteamTV_Search_Request
 CSteamTV_Search_Response
 CStopAudioDataMsg"{\n
-CStopNeptuneDataMsg"
-CStopVideoDataMsg"'\n
+CStopVideoDataMsg"
 CStorageDeviceManagerDrive
 CStorageDeviceManagerState
 CStoreBrowse_GetItems_Request
 CStoreBrowse_GetItems_Response
 CStoreDiscoveryQueueSettings
 CStorePageFilter
+CStore_GetGamesFollowed_Request
 CStore_GetTagList_Request
 CStore_GetTagList_Response
 CStore_PurchaseReceiptInfo
@@ -20975,7 +21059,6 @@ CUtlString::VFormat
 CUtlStringBuilder::Data::MoveToHeap
 CUtlStringBuilder::InternalPrepareBuffer
 CUtlStringBuilder::ReplaceInternal
-CUtlSymbol
 CUtlSymbolTable
 CVProfile_ExitScope
 CVRConnectionReady
@@ -21807,6 +21890,7 @@ Config fetch is in progess, but network config avail is %d?
 Config store has m_bDisableDiskSave on beta or public!
 ConfigSet - failed to find config set file on-disk: %s
 ConfigSet - found config set file on-disk: %s
+ConfigSet - found deck config set file on-disk: %s
 ConfigSet Failed to Resolve Path: %s
 ConfigStore (%s) is dirty, and being destroyed, we're discarding data
 Configure: %s (clientid %llu) from monitor
@@ -21986,10 +22070,12 @@ Controller Info Msg garbled\n
 Controller PollState Changed from %d to %d\n
 Controller Serial# invalid\n
 Controller Work Item Thread
+Controller detected on wireless receiver\n
 Controller device closed after hid_read failure\n
 Controller has an Invalid or missing unit serial number %s, setting to '%s'\n
 Controller has an Invalid or missing unit serial number, setting to '%s'\n
 Controller mapping mismatch
+Controller no longer detected  on wireless receiver\n
 Controller slots reset\n
 Controller uses V1 HID protocol via BLE\n
 Controller uses V1 HID protocol via Dongle\n
@@ -22291,6 +22377,7 @@ DD5z
 DDDDUUUU
 DDli
 DEADLINE_EXCEEDED
+DEBUG: adding FEX dependency to %s %u
 DEFAULT
 DEFAULT_FOR_TYPE
 DEFINE
@@ -22540,6 +22627,7 @@ December
 Decipher Only
 Deck Controller PCB Serial# invalid: %s\n
 DeckResolutionOverride
+Deckard
 DecoderDescriptionID
 DecompressVoice
 DecreaseVolume
@@ -22820,6 +22908,7 @@ DlcDownloads
 Do Not Revive
 Do not reconnect
 DoNotDisturb
+DoOneTimeConversionFromSteamVRManagementOfSoftAP
 Dock device notification: %d
 Docked
 Does not own required app
@@ -22966,12 +23055,10 @@ EAccountServed
 EAccountType
 EActivationCodeClass
 EAgreementType
-EAppAntiCheatType
 EAppAutoUpdateBehavior
 EAppContentDetectionType
 EAppControllerSupport
 EAppDownloadQueuePlacement
-EAppGameEngineType
 EAppInfoSection
 EAppInfoSectionPropagationType
 EAppOwnershipFlags
@@ -22982,6 +23069,7 @@ EAppType
 EAppUpdateError
 EAppUpdateProgressType
 EAppUpdateState
+EAssetPropertyType
 EAsyncGameSessionUserState
 EAsyncGameSessionUserVisibility
 EAuthSessionGuardType
@@ -23167,6 +23255,7 @@ EClub Points
 ECodecUsagePlatform
 ECodecUsageReason
 EColorGamutLabelSet
+ECommentDeleteReason
 ECommentThreadType
 ECommunityContentType
 ECommunityItemClass
@@ -23330,6 +23419,7 @@ EPersonalQuestion
 EPhaseResultType
 EPlatformType
 EPlaytestStatus
+EPressOutletAction
 EProfileCustomizationStyle
 EProfileCustomizationType
 EProtoClanEventType
@@ -23363,6 +23453,7 @@ ERR_getErrorString
 ERegKeyRoot
 ERemoteClientBroadcastMsg
 ERemoteClientLaunchResult
+ERemoteClientPairWifiAPResult
 ERemoteClientService
 ERemoteDeviceStreamingResult
 ERemoteStorageFileRoot
@@ -23784,6 +23875,7 @@ Error on Release(): Not the lock owner\n
 Error parsing text-format
 Error pipe( stdin ) for %s\n
 Error pipe( stdout ) for %s\n
+Error querying screen resolution, using architecture default %dx%d
 Error rebooting controller after firmware upgrade.
 Error reporting not implemented.
 Error result: %d (%s - %s)\n
@@ -23868,7 +23960,6 @@ Error: %s: invalid perf overlay level: %d
 Error: %s: invalid polling time
 Error: %s: invalid query mode
 Error: %s: no primary display
-Error: %s: no update is available
 Error: %s: perf mode must be manual: %d
 Error: %s: popen failed
 Error: %s: process exit code %u: %s
@@ -24284,7 +24375,6 @@ Failed to encrypt hosted server address!?
 Failed to encrypt outgoing data
 Failed to ever get Chip ID - shutting down.\n
 Failed to execute process: %d (%s)\n
-Failed to fetch config sets, falling back to local cache\n
 Failed to fetch settings for %u, rescheduling
 Failed to finalize manifest
 Failed to find all chunks for %s (%llu/%llu, flags %u)
@@ -24667,6 +24757,7 @@ FindMapping: Invalid unAppID == k_nAppIdAll, use GetWildcardMapping().
 FindMarketingMessages
 FindOrCreateLeaderboard
 FindRichPresenceMap called for non-cached user %s\n
+FindServerDataForCluster
 FindSessionForStanza
 FindToolForTargetApp matched with itself - ignoring: %u %s
 Finding AMD cache files, base directory: %s.
@@ -24785,6 +24876,7 @@ Found %u files (%u MB) for depot %u
 Found %u files for mapping: %s %s -> %s
 Found %u pre-existing matching files for depot %u (%llu bytes)
 Found App Manifest for appid %d - specified path : %s - os path : %s \n
+Found SteamVR internet/enableSoftAP=true, doing one-time settings conversion to hotspot mode.
 Found an action set without a name.
 Found existing connection [%s].  Only one symmetric connection can be active at a time.
 Found invalid proto option data for:
@@ -24812,6 +24904,7 @@ Freed EMS handle %u
 Freed XMS handle %u
 Freeing update lock while already not locked
 Freestyle
+Fremont
 French
 FrenemyFilter
 Friday
@@ -25095,7 +25188,6 @@ GeneralDirectoryServer_FindServerIPAddrPorts
 GeneralNames
 GeneralString
 GenerateAccessTokenForApp
-GenerateCEFLogDir in unknown process
 GenerateItems
 GenerateSupportSystemReport
 Generated client id: %llu
@@ -25199,6 +25291,7 @@ GetAppsInGuestPassesToRedeem
 GetAppsInPackage
 GetAppsWithBackgroundVideo
 GetAssetClassInfo
+GetAssetPropertySchema
 GetAssociatedSiteName
 GetAuthSessionInfo
 GetAuthSessionRiskInfo
@@ -25453,7 +25546,6 @@ GetDepotPatchInfo
 GetDesiredNetQOSLevel
 GetDesiredSteamUIWindows
 GetDetailedConnectionStatus
-GetDetectedContentSingleApp
 GetDeviceDetails
 GetDevkitAppIDByDevkitGameID
 GetDiagnosticInfo
@@ -25584,6 +25676,8 @@ GetGamepadIndexForHandle
 GetGamepadIndexForXInputIndex
 GetGameplayStats
 GetGames
+GetGamesFollowed
+GetGamesFollowedCount
 GetGlobalAppUpdateBehavior
 GetGlobalStat
 GetGlobalStatHistory
@@ -26060,6 +26154,7 @@ GetUint64
 GetUint64FromString() did not get correct peCS parameter
 GetUniqueLocalAppId
 GetUnsignedOfflineLogonTicket
+GetUpdateApplyPriority:unknown updater type
 GetUpdateInfo
 GetUpdateMemorySize() == 0
 GetUpdateProfileItemsLock
@@ -26104,6 +26199,7 @@ GetVolume
 GetWatchBroadcastMPD
 GetWebSecret
 GetWebUITransportInfo
+GetWifiAPStateJSONString
 GetWildcardMapping: Invalid unAppID k_nAppIdAll
 GetWin32Stats
 GetWishlistDemoEmailStatus
@@ -26378,6 +26474,7 @@ Hangul
 Hanunoo
 Happymoney Voucher
 Haptics error %d\n
+Haptics update action set error %i\n
 Harassment
 Hard Rock
 Hardcore
@@ -27799,6 +27896,7 @@ KeyValues::ReadAsBinary() stack depth > 100
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
+KeyValues::RemoveSubKey
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
@@ -28670,6 +28768,7 @@ Method GetAppRichPresenceLocalization() not implemented.
 Method GetApps() not implemented.
 Method GetAppsWithBackgroundVideo() not implemented.
 Method GetAssetClassInfo() not implemented.
+Method GetAssetPropertySchema() not implemented.
 Method GetAuthSessionInfo() not implemented.
 Method GetAuthSessionRiskInfo() not implemented.
 Method GetAuthSessionsForAccount() not implemented.
@@ -28730,7 +28829,6 @@ Method GetDepotPatchInfo() not implemented.
 Method GetDesiredControllerConfigForApp() not implemented.
 Method GetDesiredSteamUIWindows() not implemented.
 Method GetDetails() not implemented.
-Method GetDetectedContentSingleApp() not implemented.
 Method GetDeviceDetails() not implemented.
 Method GetDiscoveryQueue() not implemented.
 Method GetDiscoveryQueueSettings() not implemented.
@@ -28754,6 +28852,8 @@ Method GetGameAchievements() not implemented.
 Method GetGameBadgeLevels() not implemented.
 Method GetGameIDForPID() not implemented.
 Method GetGames() not implemented.
+Method GetGamesFollowed() not implemented.
+Method GetGamesFollowedCount() not implemented.
 Method GetHardwareItems() not implemented.
 Method GetHomePageContents() not implemented.
 Method GetInfo() not implemented.
@@ -28945,6 +29045,7 @@ Method NotifyClientUsabilityMetrics() not implemented.
 Method NotifyClipCreated() not implemented.
 Method NotifyClipDeleted() not implemented.
 Method NotifyCommunityPreferencesChanged() not implemented.
+Method NotifyControllerPowerMenu() not implemented.
 Method NotifyCount() not implemented.
 Method NotifyExportProgress() not implemented.
 Method NotifyFileDeleted() not implemented.
@@ -29032,6 +29133,7 @@ Method PostChatMessage() not implemented.
 Method PostCommentToThread() not implemented.
 Method PostStatusToFriends() not implemented.
 Method PreferencesUpdated() not implemented.
+Method PrepForUpdate() not implemented.
 Method Publish() not implemented.
 Method PublishPartnerMessage() not implemented.
 Method PurchaseFinalize() not implemented.
@@ -29156,6 +29258,7 @@ Method SetEnabled() not implemented.
 Method SetEquippedProfileItemFlags() not implemented.
 Method SetFamilyCooldownOverrides() not implemented.
 Method SetFavoriteBadge() not implemented.
+Method SetLoginAdvertising() not implemented.
 Method SetMiniProfileBackground() not implemented.
 Method SetOverlayEscapeKeyHandling() not implemented.
 Method SetParentalSettings() not implemented.
@@ -29243,6 +29346,7 @@ Method VRCompatibilityCheck() not implemented.
 Method ValidateEmailAddress() not implemented.
 Method ValidatePassword() not implemented.
 Method ValidateToken() not implemented.
+Method VerifyClanMembership() not implemented.
 Method ViewFriendInviteToken() not implemented.
 Method Vote() not implemented.
 Method WatchBroadcast() not implemented.
@@ -30611,6 +30715,7 @@ NotifyClientUsabilityMetrics
 NotifyClipCreated
 NotifyClipDeleted
 NotifyClock
+NotifyControllerPowerMenu
 NotifyDriveAdded
 NotifyDriveRemoved
 NotifyExportProgress
@@ -30639,7 +30744,6 @@ NotifyOpenOverlayToGamePhase
 NotifyOverlaySettingsChanged
 NotifyPacket
 NotifyPendingCompatToolRegistrations
-NotifyPendingGameLaunch_FetchSteamStreamingEncoderConfig
 NotifyPhaseListChanged
 NotifyPlaytimeUsed
 NotifyPostGameHighlightsChanged
@@ -30656,6 +30760,7 @@ NotifyRiskQuizResults
 NotifyRunningApps
 NotifySessionClosed
 NotifySettingsChange
+NotifySettingsChanged
 NotifyShowPowerMenu
 NotifyStartShutdown
 NotifyStateChanged
@@ -31545,6 +31650,7 @@ Pago Facil
 PagoEfectivo
 Pagseguro
 Pair
+PairViaWifiAP
 Palette is NULL in indexed image
 Parameter is out of bound
 Parameters
@@ -31720,7 +31826,7 @@ PingWebSocketCM() (%s) starting...
 PingWebSocketCM() stopping after %1.2fms timeout and using good enough host (%s)
 PingWebSocketCM() stopping after %1.2fms timeout and using sort of ok host (%s)
 PingWebSocketCM() stopping early for good host (%s)
-Pinging %s (%s).
+Pinging %s (%s).  ECN%d  reply_tos=0x%02x[DSCP%d ECN%d]
 Pipe IO error connecting to global user
 PipeWire:Interface:Device
 PipeWire:Interface:Link
@@ -31740,6 +31846,7 @@ Plat_IsGamescope
 Plat_IsInDebugSession
 Plat_IsSteamConsoleMode
 Plat_IsSteamDeck_DoNotUse
+Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
 Plat_IsTesla
@@ -31805,7 +31912,7 @@ Playtime2wks
 PlaytimeDisconnected
 PlaytimeForApp
 PlaytimeSession
-Please confirm the login in the Steam Mobile app on your phone.
+Please confirm the login in the Steam Mobile app on your phone.\n
 Please set the game install path to something other than the Steam install folder\n
 PmNk
 Point
@@ -32431,7 +32538,6 @@ Received client message from %s using RelaySessionID %u for %s connection #%u.  
 Received connection nack from %s, connection attempt denied
 Received content-type: application/x-www-form-urlencoded with unsupported charset, %s\n
 Received corrupt deprecated logon message from IP %u (PublicIP %u)
-Received discovery message from client %llu at %s
 Received error on call:
 Received large message over websocket, payload size %llu
 Received likely STUN packet with no username
@@ -32464,6 +32570,7 @@ ReceivesGroupComment
 Recipient did not respond
 RecipientAddress
 RecommendedGame
+ReconfigureSoftAP
 Reconfiguring
 Reconnect
 Reconnect after using test_failnextconnect&test_dropcon
@@ -32652,6 +32759,7 @@ RemoteClientJobGetControllerConfig
 RemoteClientJobPing
 RemoteClientJobStartStream
 RemoteClientLaunchFailed_t
+RemoteClientPairWifiAP
 RemoteClientSteamClient
 RemoteClientSteamClient.NotifyRegisterStatusUpdate#1
 RemoteClientSteamClient.NotifyRemotePacket#1
@@ -33026,7 +33134,6 @@ Router network: %s\n
 RouterPingReply
 RouterPingReply from %s latency lists not the same length.  %d vs %d.  Ignoring message
 RouterPingReply from %s, %dms
-RouterPingReply from %s, %dms (first measurement to %s, estimate was %d)
 RouterPingReply from %s; dropping due to override
 Routing Domain Identifiers
 Row has too many bytes to allocate in memory
@@ -33209,6 +33316,7 @@ SDR shared socket listening on local address %s\n
 SDRClient_ConsecutitivePingTimeoutsFail
 SDRClient_ConsecutitivePingTimeoutsFailInitial
 SDRClient_DevTicket
+SDRClient_EnableTOSProbes
 SDRClient_FakeClusterPing
 SDRClient_ForceProxyAddr
 SDRClient_ForceRelayCluster
@@ -34160,6 +34268,7 @@ SetDonglePairingResult without anyone listening
 SetDouble
 SetDownloadThrottleRateKbps
 SetDownloadingEnabled
+SetEditingTritonCapSenseSettings
 SetEmail
 SetEncryptionKey called with length < 1
 SetEnum
@@ -34252,6 +34361,7 @@ SetLocalScreenshotCaption
 SetLocalScreenshotPrivacy
 SetLocalScreenshotSpoiler
 SetLocation
+SetLoginAdvertising
 SetLoginInformation
 SetLoginToken
 SetMapName
@@ -34610,6 +34720,7 @@ SocketFail
 SocketThread
 Sockets
 Sofort
+SoftAP: %s
 Software
 Software\Valve\Steam
 Software\Valve\SteamService
@@ -34926,7 +35037,6 @@ Stats Session Created %llu
 Stats sending didn't clear stats need to send reason %s!
 StatsP2PRouterToClient
 Stats_Failed_Validation
-Stats_To_Store
 Status code: %d (%s)\n
 Status: %s\n
 Status: Can Connect
@@ -35102,6 +35212,7 @@ SteamInputManager.EndControllerStateFlow#1
 SteamInputManager.GetControllerAccessibilityStrings#1
 SteamInputManager.NotifyAxesStateChanged#1
 SteamInputManager.NotifyButtonStateChanged#1
+SteamInputManager.NotifyControllerPowerMenu#1
 SteamInputManager.NotifyGyroAccelerometerStateChanged#1
 SteamInputManager.NotifyGyroCalibrationStateChanged#1
 SteamInputManager.NotifyGyroQuaternionStateChanged#1
@@ -35111,6 +35222,7 @@ SteamInputManager.StartGyroSoftwareCalibration#1
 SteamInstallPath
 SteamLibrary
 SteamLinuxRuntime
+SteamLinuxRuntime_
 SteamLinuxRuntime_sniper
 SteamLinuxRuntime_soldier
 SteamMasterServerUpdater001
@@ -35206,7 +35318,6 @@ SteamStreamLauncher001
 SteamStreaming
 SteamStreamingAllowGameVsync
 SteamStreamingAudio
-SteamStreamingEncoderConfig
 SteamStreamingForceWindowedD3D9
 SteamStreamingInput
 SteamStreamingMaximumResolution
@@ -35498,7 +35609,7 @@ SwitchToUser
 Switching Protocols
 Syloti_Nagri
 Symbol name "
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 Symmetric NAT
 Symmetric UDP Firewall
 Symmetric connections with connection IDs!  Odds are 1:2e32!
@@ -36018,7 +36129,7 @@ ThinkPingProbes
 ThinkSelectServer
 This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
 This account is currently logged in at another location. You will need to log the other location out before this one can log in.\n
-This account is protected by a Steam Guard mobile authenticator.
+This account is protected by a Steam Guard mobile authenticator.\n
 This could be a misconfiguration or intentional - forcing linux as a supported platform.\n
 This is an S/MIME signed message%s%s
 This program requires version
@@ -36145,7 +36256,7 @@ Timed out connecting
 Timed out downloading %s
 Timed out waiting for available space in CSharedMemStream::BLockMemoryForWrite()\n
 Timed out waiting for confirmation
-Timed out waiting for confirmation.
+Timed out waiting for confirmation.\n
 Timed out waiting for game mapping!\n
 Timed out waiting for lock in CSharedMemStream::BLockMemoryForWrite
 Timed out waiting for mutex in GetInternal()\n
@@ -36336,6 +36447,7 @@ Tuesday
 Turkish
 Turkmen
 Turn on/off software gyro anti-drift correction.
+TurnOffAllWirelessControllers
 TurnOffController
 Turning off HORI device before suspending\n
 Turning on early CRC checks for all received data.
@@ -36916,6 +37028,7 @@ Using mangoapp presets: %d
 Using mangoapp: %d
 Using maximum game resolution: override: %dx%d
 Using maximum game resolution: screen resolution: %dx%d
+Using queried screen resolution %dx%d
 Ut]<E
 Utils
 UtlThreadSafeQueue
@@ -37166,6 +37279,7 @@ Verify failure\n
 VerifyCAFile
 VerifyCAPath
 VerifyChunkStore
+VerifyClanMembership
 VerifyMode
 VerifySignedFiles
 VerifyUpdates
@@ -37882,6 +37996,7 @@ YieldingEnablePerfOverlay
 YieldingGetAvailableDrives
 YieldingGetFileSystemStableId
 YieldingPostProgress
+YieldingReconfigureSoftAP: %s -> %s
 YieldingRefreshItemDefs
 YieldingRefreshLibraryFolders
 YieldingRequestAppsViaHTTP
@@ -37920,6 +38035,7 @@ YieldingWaitForUpdateLock
 YieldingWritePendingAppStateChanges
 YieldingWritePerfOverlayConfig
 YieldingWriteToDisk
+YldCheckForClientUpdate
 YldCreateEmptyFilesAndFolders
 YldDoesGamePhaseRecordingExist
 YldFileDeleteInternal
@@ -37939,6 +38055,7 @@ YldSetMode
 YldStartRequestProcessorIfNeeded
 YldUpdateDownloadSourceList
 YldUpdateFPSLimitIfNecessary
+YldUpdateUsageReportIfNecessary
 YldWriteCacheDirectoryToFile
 YnFpW
 YooMoney
@@ -38177,7 +38294,7 @@ Zulu
 [%s] Peer acked our routes for revision %u, but our latest revision is %u!
 [%s] Peer appears to be using '%s' transport as primary\n
 [%s] Peer sent hosted_server_ticket.  Switching to SDR client transport\n
-[%s] Pinging %s (%s).
+[%s] Pinging %s (%s).  ECN%d  reply_tos=0x%02x[DSCP%d ECN%d]
 [%s] Posting SteamNetworkingMessagesSessionFailed_t\n
 [%s] Primary router %s going offline in %d seconds; seeking replacement
 [%s] Processed remote Ice Candidate '%s' (type %d)\n
@@ -39316,7 +39433,6 @@ Zulu
 \n:CRemoveAuthenticatorViaChallengeContinue_Replacement_Token
 \n;CAuthenticationSupport_QueryRefreshTokensByAccount_Response
 \n;CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request
-\n;CDepotContentDetection_GetDetectedContentSingleApp_Response
 \n;CTwoFactor_RemoveAuthenticatorViaChallengeContinue_Response
 \n;ChatRoomClient_NotifyChatGroupUserStateChanged_Notification
 \n<CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse
@@ -39901,6 +40017,7 @@ Zulu
 \n\nvr_content
 \n\nvrhmd_only
 \n\nweak_token
+\n\nweb_upload
 \n\nwebsite_id
 \n\nwindows_mr
 \n\nx_position
@@ -39990,13 +40107,13 @@ Zulu
 \n\rdownload_host
 \n\rdup_pkts_recv
 \n\rdx_video_card
+\n\re_pair_result
 \n\recho_sent_tos
 \n\remail_address
 \n\renable_replay
 \n\rerror_details
 \n\rerror_message
 \n\rexcluded_tags
-\n\rfacebook_name
 \n\rfile_hcontent
 \n\rfiles_deleted
 \n\rfiles_managed
@@ -40129,6 +40246,7 @@ Zulu
 \n\rreliable_data
 \n\rrendered_text
 \n\rreplace_entry
+\n\rreplaces_tags
 \n\rreply_address
 \n\rreport_number
 \n\rreserved_name
@@ -40311,6 +40429,8 @@ Zulu
 \n\tfile_name
 \n\tfile_size
 \n\tfile_type
+\n\tfloat_max
+\n\tfloat_min
 \n\tflow_mode
 \n\tfollowers
 \n\tfollowing
@@ -40420,6 +40540,7 @@ Zulu
 \n\tsessionid
 \n\tsignature
 \n\tsite_name
+\n\tskip_lock
 \n\tsome_text
 \n\tsortorder
 \n\tsource_id
@@ -40561,7 +40682,6 @@ Zulu
 \n\veservertype
 \n\vevent_notes
 \n\vexclude_dlc
-\n\vfacebook_id
 \n\vfile_prefix
 \n\vfilter_json
 \n\vfilter_text
@@ -40797,6 +40917,11 @@ Zulu
 \t#\t%\t+\t/\t5\tC\tI\tM\tO\tU\tY\t_\tk\tq\tw\t
 \t(%zu) comparing %s with %s\n
 \t*** %s - %s - (had more work last frame!!) ***\n
+\t--channel56\t%d\t%d
+\t--channel5\t%d
+\t--channel6\t%d
+\t--hidden
+\t--width\t%d
 \t-f3F2
 \t3l0
 \t6trF
@@ -41107,6 +41232,7 @@ _xU`u
 `URp
 `VX:H
 `\n#NotifyPrivacyPrivacySettingsChanged
+`\n\rPrepForUpdate
 `\n\vVoteSummary
 `fPw.\vM
 `tun%
@@ -41252,6 +41378,7 @@ activation_button
 activation_code
 activation_threshold
 activation_type
+activator_invert_input
 activator_output_axis
 activators
 active
@@ -41523,6 +41650,7 @@ antidrift_enabled_sw
 antidrift_set
 anyExtendedKeyUsage
 anyPolicy
+any_one_of_tags
 ap_id
 ap_info"
 ap_known
@@ -41747,6 +41875,7 @@ assertion failed: size > 0
 assertion failed: temp != sh.freelist[slist]
 assertion failed: temp-(sh.arena_size >> slist) == sh_find_my_buddy(temp, slist)
 assertion failed: temp->next == NULL || WITHIN_ARENA(temp->next)
+asset_accessories
 asset_id
 asset_properties
 asset_url_format
@@ -41847,6 +41976,8 @@ automatic
 automatic gain control level for microphone input
 autosave
 aux error
+aux_capsense_hysteresis
+aux_capsense_threshold
 availableSpace
 available_on_platform
 available_revisions
@@ -42086,6 +42217,7 @@ baseIP.GetType() == k_EIPTypeV4
 baseIP.GetType() == k_EIPTypeV6
 base_url
 baseline
+baseline_manifest_id
 baseline_manifestid
 baselinemanifest
 basic
@@ -42821,6 +42953,7 @@ cef_log.previous.txt
 cef_log.txt
 cegpublickey
 ceil
+ceilf
 cell_id
 cell_id_ping_threshold
 cellid
@@ -43358,8 +43491,8 @@ connect_requested_
 connect_string
 connect_successes
 connected
+connected_paired_network_hash
 connected_seconds
-connected_wifi_ap_client_id
 connecting
 connectio
 connection
@@ -43493,7 +43626,6 @@ controller_caps
 controller_categoryids
 controller_code
 controller_config
-controller_config\%u\%s\%s
 controller_config\autosave
 controller_config_usage
 controller_configuration.vdf
@@ -43555,6 +43687,7 @@ controller_switch_joycon_pair
 controller_switch_joycon_right
 controller_switch_pro
 controller_switch_pro_generic
+controller_triton
 controller_type
 controller_ui
 controller_unknown
@@ -43638,6 +43771,7 @@ crashhandler004
 crc_encryptedticket
 crc_header_mismatch
 create != transport->HasChannel(iter->first)
+create\t%s\t%s\thbs6\t%s
 create_if_not_found
 create_input_method
 create_session_request
@@ -44284,7 +44418,7 @@ depotdeltapatch
 depotfromapp
 depotid
 depotids
-depotonly
+depotingest
 depots
 depots_beta
 depots_dev
@@ -44351,10 +44485,8 @@ desx-cbc
 detached content
 details
 detect_self_dependency
-detected_anticheat
 detected_app_content
 detected_content
-detected_gameengine
 detection_type
 dev_client_cert
 dev_gameserver_identity
@@ -44458,6 +44590,7 @@ digitalSignature
 dinfo
 dirName
 dir_ctrl
+direct_messages_allowed
 directory
 directory services (X.500)
 directory services - algorithms
@@ -45010,6 +45143,7 @@ en_US
 en_us
 enable
 enable-wall-messages
+enableSoftAP
 enable_audio_streaming
 enable_audio_uncompressed
 enable_capture_nvfbc
@@ -45188,6 +45322,8 @@ errors
 es-419
 es_419
 es_ES
+esb/bond
+esb/bond_2
 esds
 esecurity_supported
 esignatureresult
@@ -45424,6 +45560,7 @@ family_groupid
 fan_control_mode
 fastly
 fatal
+fauxdroid-stable
 favor_rarer_tags
 favorite
 favorites
@@ -45615,6 +45752,7 @@ fmt
 fnmatch
 focus
 focused
+followed_game_count
 follower_count
 foo%c%s
 fopen
@@ -45713,6 +45851,7 @@ free
 free_to_keep_ends
 freeaddrinfo
 freeifaddrs
+fremont
 french
 freopen
 frequency
@@ -46233,7 +46372,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen2
 ghjkl
 gidlist
 gidparentcomment
@@ -46499,6 +46638,7 @@ gyro_mode
 gyro_mouse_sample_angle_offset
 gyro_natural_sensitivity
 gyro_neutral
+gyro_on_off_haptic_intensity
 gyro_pitch
 gyro_pointer_mode
 gyro_precision_speed
@@ -46507,6 +46647,7 @@ gyro_prediction_correction_speed_max
 gyro_prediction_correction_speed_min
 gyro_prediction_enabled
 gyro_ratchet_button_mask
+gyro_ratchet_button_requireany_or_all
 gyro_raw_deadzone
 gyro_raw_quaternion
 gyro_raw_speed
@@ -46716,6 +46857,7 @@ hidden alias for
 hidden_by_user
 hide
 hide_categorized_friends
+hide_from_description
 hide_from_library
 hide_from_watch_history
 hide_profile_awards
@@ -47607,6 +47749,8 @@ int64
 int_ctx_new
 int_dhvparams
 int_dhx942_dh
+int_max
+int_min
 int_rsa_verify
 int_ts_RESP_verify_token
 integer not ascii format
@@ -47646,6 +47790,7 @@ internal_file_name
 internal_result
 international-organizations
 internationaliSDNNumber
+internet
 internode
 interruptable
 interval
@@ -47829,6 +47974,7 @@ invalid-id
 invalid-mechanism
 invalid-namespace
 invalid-xml
+invalid_purchase_options
 invalidityDate
 inventory
 inventory_available
@@ -47958,6 +48104,7 @@ is_muted
 is_not_member_of_any_group
 is_notification
 is_openxr
+is_pairing_capable
 is_partner_chat_only
 is_phone_identifying
 is_phone_needing_reverify
@@ -48195,20 +48342,7 @@ k_EACState_Unknown
 k_EAgreementType_ChinaSSA
 k_EAgreementType_GlobalSSA
 k_EAgreementType_Invalid
-k_EAppAntiCheatTypeBattlEye
-k_EAppAntiCheatTypeDenuvo
-k_EAppAntiCheatTypeEasyAC
-k_EAppAntiCheatTypeGameGuard
-k_EAppAntiCheatTypeHackShield
-k_EAppAntiCheatTypeNone
-k_EAppAntiCheatTypeOther
-k_EAppAntiCheatTypePunkBuster
-k_EAppAntiCheatTypeVAC
-k_EAppAntiCheatTypeXignCode
 k_EAppContentDetectionType_None
-k_EAppGameEngineTypeNone
-k_EAppGameEngineTypeUnity
-k_EAppGameEngineTypeUnreal
 k_EAppReportType_Broken
 k_EAppReportType_HateSpeech
 k_EAppReportType_Invalid
@@ -48238,6 +48372,11 @@ k_EAppTypeSeries
 k_EAppTypeShortcut
 k_EAppTypeTool
 k_EAppTypeVideo
+k_EAssetPropertyType_Float
+k_EAssetPropertyType_Int
+k_EAssetPropertyType_MAX
+k_EAssetPropertyType_String
+k_EAssetPropertyType_Unknown
 k_EAudioFormat16BitLittleEndian
 k_EAudioFormatFloat
 k_EAudioFormatNone
@@ -48387,6 +48526,10 @@ k_ECodecUsageReasonBroadcasting
 k_ECodecUsageReasonGameVideo
 k_ECodecUsageReasonRemotePlay
 k_ECodecUsageReasonUnknown
+k_ECommentDeleteReason_Invalid
+k_ECommentDeleteReason_Spam
+k_ECommentDeleteReason_Support
+k_ECommentDeleteReason_User
 k_ECommentThreadTypeClan
 k_ECommentThreadTypeClanEvent
 k_ECommentThreadTypeForumTopic
@@ -48445,7 +48588,7 @@ k_EControllerElementTypeThumb
 k_EControllerLEDSettingCustomk_EControllerLEDSettingDefaultk_EControllerLEDSettingType_Countk_EControllerLEDSettingXinputSlot
 k_EControllerModeInput_Button_Ak_EControllerModeInput_Button_Bk_EControllerModeInput_Button_Xk_EControllerModeInput_Button_Yk_EControllerModeInput_Clickk_EControllerModeInput_Clockwisek_EControllerModeInput_Countk_EControllerModeInput_CounterClockwisek_EControllerModeInput_DoubleTapk_EControllerModeInput_Dpad_Ek_EControllerModeInput_Dpad_Nk_EControllerModeInput_Dpad_NEk_EControllerModeInput_Dpad_NWk_EControllerModeInput_Dpad_Sk_EControllerModeInput_Dpad_SEk_EControllerModeInput_Dpad_SWk_EControllerModeInput_Dpad_Wk_EControllerModeInput_Edgek_EControllerModeInput_Nonek_EControllerModeInput_ScrollWheel_List0k_EControllerModeInput_ScrollWheel_List1k_EControllerModeInput_ScrollWheel_List2k_EControllerModeInput_ScrollWheel_List3k_EControllerModeInput_ScrollWheel_List4k_EControllerModeInput_ScrollWheel_List5k_EControllerModeInput_ScrollWheel_List6k_EControllerModeInput_ScrollWheel_List7k_EControllerModeInput_ScrollWheel_List8k_EControllerModeInput_ScrollWheel_List9k_EControllerModeInput_Switch_ActionSetAlwaysOnk_EControllerModeInput_Switch_CaptureButtonk_EControllerModeInput_Switch_LeftAuxCapSensek_EControllerModeInput_Switch_LeftBumperk_EControllerModeInput_Switch_LeftGripk_EControllerModeInput_Switch_LeftGrip_Upperk_EControllerModeInput_Switch_LeftJoystickClickk_EControllerModeInput_Switch_LeftTrackPadClickk_EControllerModeInput_Switch_LeftTrackPadTouchk_EControllerModeInput_Switch_LeftTriggerk_EControllerModeInput_Switch_LeftTriggerThresholdk_EControllerModeInput_Switch_Macro0k_EControllerModeInput_Switch_Macro1k_EControllerModeInput_Switch_Macro1Fingerk_EControllerModeInput_Switch_Macro2k_EControllerModeInput_Switch_Macro2Fingerk_EControllerModeInput_Switch_Macro3k_EControllerModeInput_Switch_Macro4k_EControllerModeInput_Switch_Macro5k_EControllerModeInput_Switch_Macro6k_EControllerModeInput_Switch_Macro7k_EControllerModeInput_Switch_RightAuxCapSensek_EControllerModeInput_Switch_RightBumperk_EControllerModeInput_Switch_RightGripk_EControllerModeInput_Switch_RightGrip_Upperk_EControllerModeInput_Switch_RightJoystickClickk_EControllerModeInput_Switch_RightTrackPadClickk_EControllerModeInput_Switch_RightTrackPadTouchk_EControllerModeInput_Switch_RightTriggerk_EControllerModeInput_Switch_RightTriggerThresholdk_EControllerModeInput_Switch_Selectk_EControllerModeInput_Switch_Startk_EControllerModeInput_Switch_Steamk_EControllerModeInput_Touchk_EControllerModeInput_TouchMenu_Button0k_EControllerModeInput_TouchMenu_Button1k_EControllerModeInput_TouchMenu_Button10k_EControllerModeInput_TouchMenu_Button11k_EControllerModeInput_TouchMenu_Button12k_EControllerModeInput_TouchMenu_Button13k_EControllerModeInput_TouchMenu_Button14k_EControllerModeInput_TouchMenu_Button15k_EControllerModeInput_TouchMenu_Button16k_EControllerModeInput_TouchMenu_Button17k_EControllerModeInput_TouchMenu_Button18k_EControllerModeInput_TouchMenu_Button19k_EControllerModeInput_TouchMenu_Button2k_EControllerModeInput_TouchMenu_Button20k_EControllerModeInput_TouchMenu_Button3k_EControllerModeInput_TouchMenu_Button4k_EControllerModeInput_TouchMenu_Button5k_EControllerModeInput_TouchMenu_Button6k_EControllerModeInput_TouchMenu_Button7k_EControllerModeInput_TouchMenu_Button8k_EControllerModeInput_TouchMenu_Button9k_EControllerModeInput_TriggerAnalog
 k_EControllerPresetType_Nextk_EControllerPresetType_Nonek_EControllerPresetType_Previous
-k_EControllerSettingAccelerationk_EControllerSettingActionSetTriggerCursorHidek_EControllerSettingActionSetTriggerCursorShowk_EControllerSettingActivatorActivateStickOrTrackpadk_EControllerSettingActivatorAnalogOutputValuek_EControllerSettingActivatorChordk_EControllerSettingActivatorCyclek_EControllerSettingActivatorDoubleTapTimek_EControllerSettingActivatorEndDelayk_EControllerSettingActivatorInterruptablek_EControllerSettingActivatorLongPressTimek_EControllerSettingActivatorMouseWarpXk_EControllerSettingActivatorMouseWarpYk_EControllerSettingActivatorOutputAxisk_EControllerSettingActivatorRepeatRatek_EControllerSettingActivatorSoftPressStylek_EControllerSettingActivatorStartDelayk_EControllerSettingActivatorThresholdk_EControllerSettingActivatorTogglek_EControllerSettingAdaptiveCenteringk_EControllerSettingAdaptiveThresholdk_EControllerSettingAnalogEmulationDutyCyclePctk_EControllerSettingAnalogEmulationPeriodk_EControllerSettingAntiDeadZonek_EControllerSettingAntiDeadZoneBufferk_EControllerSettingCountk_EControllerSettingCurveExponentk_EControllerSettingCustomCurveExponentk_EControllerSettingDeadZoneEnabledk_EControllerSettingDeadZoneInnerRadiusk_EControllerSettingDeadZoneOuterRadiusk_EControllerSettingDeadZoneShapek_EControllerSettingDeadzonek_EControllerSettingDeadzoneAdvancedSettingsk_EControllerSettingDotsPer360k_EControllerSettingDoubleTapk_EControllerSettingDoubleTapBeepk_EControllerSettingDoubleTapMaxDistk_EControllerSettingDoubleTapMaxDurationk_EControllerSettingDoubleTapMinDurationk_EControllerSettingDynamicModek_EControllerSettingEdgeBindingInvertk_EControllerSettingEdgeBindingRadiusk_EControllerSettingEdgeSpinRadiusk_EControllerSettingEdgeSpinVelocityk_EControllerSettingFlickStickAllowFlickOnAwakek_EControllerSettingFlickStickDepressionSpeedk_EControllerSettingFlickStickEdgeBindingRadiusk_EControllerSettingFlickStickForwardDeadZonek_EControllerSettingFlickStickFrameTimek_EControllerSettingFlickStickHapticBumpPerAnglek_EControllerSettingFlickStickSnapModek_EControllerSettingFlickStickSnapTightnessk_EControllerSettingFlickStickSweepSensitivityk_EControllerSettingFlickStickSweepTightnessk_EControllerSettingFlickStickTransitionTimek_EControllerSettingFourButtonDistk_EControllerSettingFourButtonSizek_EControllerSettingFrictionk_EControllerSettingFrictionVertScalek_EControllerSettingGyroAxisk_EControllerSettingGyroButtonk_EControllerSettingGyroButtonHapticEffectk_EControllerSettingGyroButtonInvertk_EControllerSettingGyroButtonMaskk_EControllerSettingGyroDeflectionAngleMaxk_EControllerSettingGyroDeflectionAngleMink_EControllerSettingGyroDeflectionNeutralAnglek_EControllerSettingGyroDeflectionUseGravityk_EControllerSettingGyroEnableAngleCatchUpk_EControllerSettingGyroJoystickOutputMaxk_EControllerSettingGyroJoystickOutputMink_EControllerSettingGyroJoystickPowerCurvek_EControllerSettingGyroLockExtentsk_EControllerSettingGyroModek_EControllerSettingGyroNaturalSensitivityk_EControllerSettingGyroNeutralAnglek_EControllerSettingGyroPointerk_EControllerSettingGyroPrecisionSpeedk_EControllerSettingGyroRollScalek_EControllerSettingGyroSampleAngleOffsetXk_EControllerSettingGyroSensitivityScalek_EControllerSettingGyroSpeedDeadzonek_EControllerSettingGyroSpeedMaxAnglePerSecondk_EControllerSettingGyroSpeedMinAnglePerSecondk_EControllerSettingGyroTo2DConversionStylek_EControllerSettingGyroUsePerControllerGyroPreferencesk_EControllerSettingGyroXYRatiok_EControllerSettingGyroYawScalek_EControllerSettingHapticIntensityk_EControllerSettingHapticIntensityOverridek_EControllerSettingHoldRepeatIntervalk_EControllerSettingHoldRepeatsk_EControllerSettingInvertXk_EControllerSettingInvertYk_EControllerSettingLayerModek_EControllerSettingLayoutk_EControllerSettingLeftTrackpadModek_EControllerSettingMouseMoveThresholdk_EControllerSettingMouseRegionPositionXk_EControllerSettingMouseRegionPositionYk_EControllerSettingMouseRegionScalek_EControllerSettingMouseSmoothingk_EControllerSettingOutputAxisk_EControllerSettingOutputJoystickk_EControllerSettingOutputToJoystickk_EControllerSettingOutputToJoystickDeadzoneXk_EControllerSettingOutputToJoystickDeadzoneYk_EControllerSettingOutputToJoystickPrecisionk_EControllerSettingOutputTriggerk_EControllerSettingOverlapRegionk_EControllerSettingPressureJoystickEnablek_EControllerSettingPressureJoystickMaxPressurek_EControllerSettingPressureJoystickMinPressurek_EControllerSettingReferencedModek_EControllerSettingRequiresClickk_EControllerSettingRightTrackpadModek_EControllerSettingRotationk_EControllerSettingRotationOldk_EControllerSettingRumbleIntensityk_EControllerSettingRumbleTypek_EControllerSettingScrollAnglek_EControllerSettingScrollInvertk_EControllerSettingScrollMomentumk_EControllerSettingScrollTypek_EControllerSettingScrollWrapk_EControllerSettingSensitivityk_EControllerSettingSensitivityHorizScalek_EControllerSettingSensitivityVertScalek_EControllerSettingSmoothJoystickk_EControllerSettingSwipeDurationk_EControllerSettingTeleportMouseStartk_EControllerSettingTeleportMouseStopk_EControllerSettingTestParam0k_EControllerSettingTestParam1k_EControllerSettingTestParam2k_EControllerSettingTestParam3k_EControllerSettingTestParam4k_EControllerSettingTestParam5k_EControllerSettingTestParam6k_EControllerSettingTestParam7k_EControllerSettingTestParam8k_EControllerSettingTestParam9k_EControllerSettingTouchMenuActivateButtonk_EControllerSettingTouchMenuButtonCountk_EControllerSettingTouchMenuButtonTypek_EControllerSettingTouchMenuInnerDeadzonek_EControllerSettingTouchMenuLabelsk_EControllerSettingTouchMenuOpacityk_EControllerSettingTouchMenuOuterDeadzonek_EControllerSettingTouchMenuPosXk_EControllerSettingTouchMenuPosYk_EControllerSettingTouchMenuScalek_EControllerSettingTrackballk_EControllerSettingTrackpadTriggerDatak_EControllerSettingTriggerMouseClampingk_EControllerSettingTriggerMouseClampingAmountk_EControllerSettingVirtualCapSizek_EControllerSettingVirtualMenuCenterBoundk_EControllerSettingVirtualModek_EControllerSettingVirtualStickThrow
+k_EControllerSettingAccelerationk_EControllerSettingActionSetTriggerCursorHidek_EControllerSettingActionSetTriggerCursorShowk_EControllerSettingActivatorActivateStickOrTrackpadk_EControllerSettingActivatorAnalogOutputValuek_EControllerSettingActivatorChordk_EControllerSettingActivatorCyclek_EControllerSettingActivatorDoubleTapTimek_EControllerSettingActivatorEndDelayk_EControllerSettingActivatorInterruptablek_EControllerSettingActivatorInvertInputk_EControllerSettingActivatorLongPressTimek_EControllerSettingActivatorMouseWarpXk_EControllerSettingActivatorMouseWarpYk_EControllerSettingActivatorOutputAxisk_EControllerSettingActivatorRepeatRatek_EControllerSettingActivatorSoftPressStylek_EControllerSettingActivatorStartDelayk_EControllerSettingActivatorThresholdk_EControllerSettingActivatorTogglek_EControllerSettingAdaptiveCenteringk_EControllerSettingAdaptiveThresholdk_EControllerSettingAnalogEmulationDutyCyclePctk_EControllerSettingAnalogEmulationPeriodk_EControllerSettingAntiDeadZonek_EControllerSettingAntiDeadZoneBufferk_EControllerSettingCountk_EControllerSettingCurveExponentk_EControllerSettingCustomCurveExponentk_EControllerSettingDeadZoneEnabledk_EControllerSettingDeadZoneInnerRadiusk_EControllerSettingDeadZoneOuterRadiusk_EControllerSettingDeadZoneShapek_EControllerSettingDeadzonek_EControllerSettingDeadzoneAdvancedSettingsk_EControllerSettingDotsPer360k_EControllerSettingDoubleTapk_EControllerSettingDoubleTapBeepk_EControllerSettingDoubleTapMaxDistk_EControllerSettingDoubleTapMaxDurationk_EControllerSettingDoubleTapMinDurationk_EControllerSettingDynamicModek_EControllerSettingEdgeBindingInvertk_EControllerSettingEdgeBindingRadiusk_EControllerSettingEdgeSpinRadiusk_EControllerSettingEdgeSpinVelocityk_EControllerSettingFlickStickAllowFlickOnAwakek_EControllerSettingFlickStickDepressionSpeedk_EControllerSettingFlickStickEdgeBindingRadiusk_EControllerSettingFlickStickForwardDeadZonek_EControllerSettingFlickStickFrameTimek_EControllerSettingFlickStickHapticBumpPerAnglek_EControllerSettingFlickStickSnapModek_EControllerSettingFlickStickSnapTightnessk_EControllerSettingFlickStickSweepSensitivityk_EControllerSettingFlickStickSweepTightnessk_EControllerSettingFlickStickTransitionTimek_EControllerSettingFourButtonDistk_EControllerSettingFourButtonSizek_EControllerSettingFrictionk_EControllerSettingFrictionVertScalek_EControllerSettingGyroAxisk_EControllerSettingGyroButtonk_EControllerSettingGyroButtonHapticEffectk_EControllerSettingGyroButtonInvertk_EControllerSettingGyroButtonMaskk_EControllerSettingGyroButtonRequireAnyOrAllk_EControllerSettingGyroDeflectionAngleMaxk_EControllerSettingGyroDeflectionAngleMink_EControllerSettingGyroDeflectionNeutralAnglek_EControllerSettingGyroDeflectionUseGravityk_EControllerSettingGyroEnableAngleCatchUpk_EControllerSettingGyroJoystickOutputMaxk_EControllerSettingGyroJoystickOutputMink_EControllerSettingGyroJoystickPowerCurvek_EControllerSettingGyroLockExtentsk_EControllerSettingGyroModek_EControllerSettingGyroNaturalSensitivityk_EControllerSettingGyroNeutralAnglek_EControllerSettingGyroOnOffHapticIntensityk_EControllerSettingGyroPointerk_EControllerSettingGyroPrecisionSpeedk_EControllerSettingGyroRollScalek_EControllerSettingGyroSampleAngleOffsetXk_EControllerSettingGyroSensitivityScalek_EControllerSettingGyroSpeedDeadzonek_EControllerSettingGyroSpeedMaxAnglePerSecondk_EControllerSettingGyroSpeedMinAnglePerSecondk_EControllerSettingGyroTo2DConversionStylek_EControllerSettingGyroUsePerControllerGyroPreferencesk_EControllerSettingGyroXYRatiok_EControllerSettingGyroYawScalek_EControllerSettingHapticIntensityk_EControllerSettingHapticIntensityOverridek_EControllerSettingHoldRepeatIntervalk_EControllerSettingHoldRepeatsk_EControllerSettingInvertXk_EControllerSettingInvertYk_EControllerSettingLayerModek_EControllerSettingLayoutk_EControllerSettingLeftTrackpadModek_EControllerSettingMouseMoveThresholdk_EControllerSettingMouseRegionPositionXk_EControllerSettingMouseRegionPositionYk_EControllerSettingMouseRegionScalek_EControllerSettingMouseSmoothingk_EControllerSettingOutputAxisk_EControllerSettingOutputJoystickk_EControllerSettingOutputToJoystickk_EControllerSettingOutputToJoystickDeadzoneXk_EControllerSettingOutputToJoystickDeadzoneYk_EControllerSettingOutputToJoystickPrecisionk_EControllerSettingOutputTriggerk_EControllerSettingOverlapRegionk_EControllerSettingPressureJoystickEnablek_EControllerSettingPressureJoystickMaxPressurek_EControllerSettingPressureJoystickMinPressurek_EControllerSettingReferencedModek_EControllerSettingRequiresClickk_EControllerSettingRightTrackpadModek_EControllerSettingRotationk_EControllerSettingRotationOldk_EControllerSettingRumbleIntensityk_EControllerSettingRumbleTypek_EControllerSettingScrollAnglek_EControllerSettingScrollInvertk_EControllerSettingScrollMomentumk_EControllerSettingScrollTypek_EControllerSettingScrollWrapk_EControllerSettingSensitivityk_EControllerSettingSensitivityHorizScalek_EControllerSettingSensitivityVertScalek_EControllerSettingSmoothJoystickk_EControllerSettingSwipeDurationk_EControllerSettingTeleportMouseStartk_EControllerSettingTeleportMouseStopk_EControllerSettingTestParam0k_EControllerSettingTestParam1k_EControllerSettingTestParam2k_EControllerSettingTestParam3k_EControllerSettingTestParam4k_EControllerSettingTestParam5k_EControllerSettingTestParam6k_EControllerSettingTestParam7k_EControllerSettingTestParam8k_EControllerSettingTestParam9k_EControllerSettingTouchMenuActivateButtonk_EControllerSettingTouchMenuButtonCountk_EControllerSettingTouchMenuButtonTypek_EControllerSettingTouchMenuInnerDeadzonek_EControllerSettingTouchMenuLabelsk_EControllerSettingTouchMenuOpacityk_EControllerSettingTouchMenuOuterDeadzonek_EControllerSettingTouchMenuPosXk_EControllerSettingTouchMenuPosYk_EControllerSettingTouchMenuScalek_EControllerSettingTrackballk_EControllerSettingTrackpadTriggerDatak_EControllerSettingTriggerMouseClampingk_EControllerSettingTriggerMouseClampingAmountk_EControllerSettingVirtualCapSizek_EControllerSettingVirtualMenuCenterBoundk_EControllerSettingVirtualModek_EControllerSettingVirtualStickThrow
 k_EControllerSourceMode_2DScrollwheelk_EControllerSourceMode_AbsoluteMousek_EControllerSourceMode_Buttonsk_EControllerSourceMode_CameraAnglesk_EControllerSourceMode_Countk_EControllerSourceMode_Disabledk_EControllerSourceMode_Dpadk_EControllerSourceMode_FlickStickk_EControllerSourceMode_FlickStickToCameraAnglesk_EControllerSourceMode_FourButtonsk_EControllerSourceMode_GyroToCameraAnglesk_EControllerSourceMode_GyroToJoystickCamerak_EControllerSourceMode_GyroToJoystickDeflectionk_EControllerSourceMode_GyroToMousek_EControllerSourceMode_Hotbark_EControllerSourceMode_JoystickCamerak_EControllerSourceMode_JoystickMousek_EControllerSourceMode_JoystickMovek_EControllerSourceMode_JoystickToCameraAnglesk_EControllerSourceMode_MouseJoystickk_EControllerSourceMode_MouseRegionk_EControllerSourceMode_Nonek_EControllerSourceMode_RadialMenuk_EControllerSourceMode_Referencek_EControllerSourceMode_RelativeMousek_EControllerSourceMode_ScrollWheelk_EControllerSourceMode_SingleButtonk_EControllerSourceMode_Switchesk_EControllerSourceMode_TouchMenuk_EControllerSourceMode_TrackPadToCameraAnglesk_EControllerSourceMode_Trigger
 k_EControllerSource_ABXYk_EControllerSource_CapJoystickLeftk_EControllerSource_CapJoystickRightk_EControllerSource_CenterTrackpadk_EControllerSource_Countk_EControllerSource_DPadk_EControllerSource_Gyrok_EControllerSource_Joystickk_EControllerSource_Keyk_EControllerSource_LeftBumperk_EControllerSource_LeftGyrok_EControllerSource_LeftTrackpadk_EControllerSource_LeftTriggerk_EControllerSource_Mousek_EControllerSource_Nonek_EControllerSource_RightBumperk_EControllerSource_RightJoystickk_EControllerSource_RightTrackpadk_EControllerSource_RightTriggerk_EControllerSource_Switch
 k_EDeviceLocationAny
@@ -48605,7 +48748,6 @@ k_EMsgAIGetAppList
 k_EMsgAIGetAppListResponse
 k_EMsgAISGetCouponDefinition
 k_EMsgAISGetPackageChangeNumber
-k_EMsgAISTestEnableGC
 k_EMsgAMAccountPS3Unlink
 k_EMsgAMAcctAllowedToPurchase
 k_EMsgAMAddFounderToClan
@@ -49584,6 +49726,7 @@ k_EMsgRemoteClientAuthorizationResponse
 k_EMsgRemoteClientBase
 k_EMsgRemoteClientGetControllerConfig
 k_EMsgRemoteClientGetControllerConfigResponse
+k_EMsgRemoteClientPairWifiAP
 k_EMsgRemoteClientPing
 k_EMsgRemoteClientPingResponse
 k_EMsgRemoteClientProofRequest
@@ -49708,6 +49851,14 @@ k_EPersonaStateFlag_Golden
 k_EPhaseResultType_API
 k_EPhaseResultType_Automatic
 k_EPhaseResultType_Blank
+k_EPressOutletAction_Created
+k_EPressOutletAction_Deleted
+k_EPressOutletAction_Granted
+k_EPressOutletAction_Invalid
+k_EPressOutletAction_MAX
+k_EPressOutletAction_Removed
+k_EPressOutletAction_Undeleted
+k_EPressOutletAction_Updated
 k_EProtoExecutionSiteUnknown
 k_EProtoExecutionSiteUnknown:m\n\fservice_type
 k_EPublishedFileRevision_Latest
@@ -49715,6 +49866,8 @@ k_EPublishedFileStorageSystemLegacyCloud == eStorage
 k_EPurchaseRequestAction_Cancel
 k_EPurchaseRequestAction_MAX
 k_EPurchaseRequestAction_None
+k_ERemoteClientPairWifiAPFail
+k_ERemoteClientPairWifiAPOK
 k_ERemoteClientServiceNone
 k_ERemoteDeviceProofRequest
 k_ERemoteDeviceProofResponse
@@ -49896,7 +50049,6 @@ k_EStreamControlShowCursor
 k_EStreamControlStartAudioData
 k_EStreamControlStartVideoData
 k_EStreamControlStopAudioData
-k_EStreamControlStopNeptuneData
 k_EStreamControlStopRequest
 k_EStreamControlStopVideoData
 k_EStreamControlSystemSuspend
@@ -49987,7 +50139,6 @@ k_EStreamVideoCodecVP8
 k_EStreamVideoCodecVP9
 k_EStreamingAudioData
 k_EStreamingMicrophoneData
-k_EStreamingNeptuneData
 k_EStreamingVideoData
 k_ESystemPowerState_Invalid
 k_ESystemPowerState_Normal
@@ -50643,6 +50794,7 @@ localization_path
 localization_token
 localized_category_name
 localized_desc
+localized_label
 localized_name
 localized_name_token
 localized_string
@@ -50699,7 +50851,7 @@ lost/gained channels
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1609
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1759
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1964
-low-pri yield - /data/src/clientdll/appdatacache.cpp:882
+low-pri yield - /data/src/clientdll/appdatacache.cpp:885
 low-pri yield - /data/src/clientdll/autocloud.cpp:566
 low-pri yield - /data/src/clientdll/autocloud.cpp:645
 low-pri yield - /data/src/clientdll/autocloud.cpp:820
@@ -50709,14 +50861,14 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:467
 low-pri yield - /data/src/clientdll/clientjob.cpp:776
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6854
-low-pri yield - /data/src/clientdll/compatmanager.cpp:1953
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2226
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2497
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3163
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3195
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3208
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3260
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3867
+low-pri yield - /data/src/clientdll/compatmanager.cpp:1949
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2220
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2491
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3157
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3189
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3202
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3254
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3861
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3071
@@ -50963,6 +51115,7 @@ m_RefreshListSDRLocationString
 m_RefreshListUDP
 m_ReleaseState
 m_RemoteClientDongle
+m_RemoteClientSoftAP
 m_Reporters
 m_RequestMap
 m_RequestMap.InvalidIndex() == m_RequestMap.Find( pRequest )
@@ -51136,6 +51289,7 @@ m_bufSRTPRecvKey
 m_bufSRTPSendKey
 m_bufSSLRecv
 m_bufSerializedAndCompressed
+m_bufStateJSON
 m_bufStdOut
 m_bufSteamRuntimeReport
 m_bufStreamingPSK
@@ -52009,6 +52163,8 @@ m_pSSLContext
 m_pSchema != NULL || clientMsg.Body().has_schema()
 m_pServer->m_nReplyTimeoutsSinceLastRecv == 0
 m_pSessionData
+m_pSetIntValue
+m_pSetStringValue
 m_pSettings
 m_pShaderManager->m_nOutstandingPruningJobs > 0
 m_pShaderSerializer
@@ -52097,8 +52253,6 @@ m_pUser->UserFriends().GetFriendRelationship( friendID ) == k_EFriendRelationshi
 m_pVecBucketKeys
 m_pVecRowIDs
 m_pVecRowIDs != NULL
-m_pVecStringValue
-m_pVecUlValue
 m_pVisualizationDataStream
 m_pVoiceAudioOutputStream
 m_pVoiceSystem
@@ -52129,6 +52283,7 @@ m_pkvLastKeyAdded != NULL
 m_pkvRequestHeaders
 m_pkvResponseHeaders
 m_pkvSchema
+m_pkvState
 m_player
 m_pmapAdrToClientSessionLRU
 m_pmapAdrToClientSessionLRU->Peek(i).Get()
@@ -52269,7 +52424,6 @@ m_sShortcutFilePath
 m_sSortAs
 m_sStartDir
 m_sSteamLibraryPaths
-m_sSteamStreamingEncoderConfig
 m_sSystemInfo
 m_sTURNServer
 m_sToOS
@@ -52481,6 +52635,7 @@ m_strOriginalFileName
 m_strParentalPasswordPlaintext
 m_strParentalWebToken
 m_strPass
+m_strPassword
 m_strPatchStateFile
 m_strPath
 m_strPathCertPEMFile
@@ -52571,6 +52726,7 @@ m_targetBucketManifest.unBucketID != 0 && m_targetBucketManifest.unManifestID !=
 m_threadInfo
 m_timeCreated
 m_timeUpdated
+m_tree
 m_treeBypassProxyTypes
 m_treeCorruptChunks
 m_treeDisconnectingConnections
@@ -53470,10 +53626,13 @@ musiclogging
 must not undeclare prefix
 must-revalidate
 must_have_launched_appid
+must_have_tags
+must_not_have_tags
 must_not_own_appid
 must_not_own_packageid
 must_own_appid
 must_own_packageid
+must_purchase_as_set
 mustownapp
 muted
 mutual_friend_account_ids
@@ -53677,6 +53836,7 @@ nSubkeys == 0
 nSubscribedAutoDownloadMaxSimultaneous
 nSw}Z\tu
 nTargetFrameRate
+nTotal > 0
 nTotalPenalty >= 0
 nTotalWeightActiveLanes == 0
 nUpper3Bits <= 4
@@ -53740,6 +53900,7 @@ nepali
 nested asn1 error
 nested asn1 string
 nested too deep
+nested_accessories
 net_fake_state
 net_incomingcheck
 net_maxresendsperframe
@@ -54225,6 +54386,7 @@ nopqrs(
 normal disconnect
 normal_keycode
 normalized_name
+noroute
 norwegian
 not
 not XOF or invalid length
@@ -54358,6 +54520,7 @@ numbers
 numbers out of order in {} quantifier
 numchunks
 numfiles
+numfolders
 nv->name->len > 0
 nvwC
 nytimes.com
@@ -55132,6 +55295,7 @@ page_background_path
 page_url
 pagerTelephoneNumber
 pairInsertResult.second
+paired_network_hash
 pairs
 palette color-map: too few entries
 panels
@@ -55148,6 +55312,7 @@ parent strength too weak
 parent_is_steam
 parent_popup_index
 parent_preset
+parent_relationship_properties
 parent_set
 parent_set_name
 parent_window_handle
@@ -55866,6 +56031,7 @@ promotional_discount_type
 prompt
 prop_id != 0 && prop_id - 1 < 40
 properties
+property_schemas
 property_value_bool
 property_value_float
 property_value_int
@@ -55927,6 +56093,7 @@ pstrFormat != NULL
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pstrValue
 pszCode[3] == '\0' || pszCode[4] == '\0'
 pszFmt && *pszFmt
 pszThreadName != NULL
@@ -56115,6 +56282,7 @@ query
 questid
 quests
 queue
+queue_head_position_now
 queue_items_next_appid
 queue_items_remaining
 queue_position
@@ -56371,14 +56539,18 @@ remoteStorageConfig
 remote_address
 remote_candidate_types
 remote_client_dongle
-remote_client_dongle [[connect|monitor] clientid ssid password isWPA2]|[[disconnect|status|disable|enable|checkon] clientid]|remonitor
-remote_client_dongle [[connect|monitor] clientid ssid password isWPA2|disconnect|status|checkon clientid]
+remote_client_dongle [[connect|monitor] clientid ssid password]|[[disconnect|status|disable|enable|checkon] clientid]|remonitor
+remote_client_dongle [[connect|monitor] clientid ssid password|disconnect|status|checkon clientid]
 remote_client_id
+remote_client_softapcmd
+remote_client_softapcmd <softapcmd args>
 remote_clients
 remote_connections
 remote_host
 remote_launch_available
 remote_play_together
+remote_play_wifi_ap_
+remote_play_wifi_ap_enabled
 remote_steamcmd
 remote_user
 remotedeletescheduled
@@ -56429,6 +56601,8 @@ representation_name
 representations
 reqCert
 req_info
+req_recv_tos
+req_sent_tos
 request
 request HEADERS is not allowed
 request HEADERS: client received request
@@ -56648,6 +56822,9 @@ routing_secret
 row_stride == (int)( nImageWidth * jpegInfo.output_components )
 row_stride_out >= row_stride
 rows
+rpl_echo_req_tos
+rpl_recv_tos
+rpl_sent_tos
 rq7x;P
 rsa operations not supported
 rsa routines
@@ -57669,6 +57846,9 @@ socketpair
 socketpair() call failed.  Error code 0x%08x.
 sockopt(IPPROTO_IP, IP_RECVTOS, 1) failed (0x%x), will not be able to read TOS\n
 soco
+softAPChannel5
+softAPChannel6
+softAPChannelWidth
 soft_press
 soft_press_sytle
 software_encoding_threads
@@ -57902,6 +58082,7 @@ stamp
 standalone
 standalone_demo_appid
 standalone_installscript_progress_%u.vdf
+standalone_properties
 stanza->Attr(buzz::QN_TYPE) == buzz::STR_SET
 stanza->Name() == buzz::QN_IQ
 start
@@ -57959,7 +58140,6 @@ stats_failed_validation
 stats_log
 stats_machine_id
 stats_out_of_date
-stats_to_store
 status
 status expired
 status not yet valid
@@ -58001,7 +58181,7 @@ stderr
 stdin
 stdout
 steam
-steam Nov 22 2025 07:00:29
+steam Nov 25 2025 21:19:07
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -58147,9 +58327,12 @@ steamid_to_add
 steamid_to_cancel
 steamid_to_remove
 steamids
+steamids_nonmembers
 steamids_top_friends
+steamids_verifymembership
 steaminputmanifestpath
 steamlink://
+steamlinuxruntime_sniper-arm64
 steammessages_accounthardware.steamclient.proto
 steammessages_auth.steamclient.proto
 steammessages_base.proto
@@ -58289,7 +58472,6 @@ store_country_code
 store_page_filter
 store_url_path
 store_url_path_override
-stpcpy
 str:
 str:%s
 strCacheFilePath
@@ -58347,8 +58529,16 @@ streaming_client_config
 streaming_provider_id
 streaming_steamdesktop.vdf
 streaming_v2
-streamingencoderconfig
-streamingencoderconfig_wait
+streaming_v2\WifiAPChannel5GHz
+streaming_v2\WifiAPChannel6GHz
+streaming_v2\WifiAPChannelWidth
+streaming_v2\WifiAPEnabled
+streaming_v2\WifiAPHotspotMode
+streaming_v2\WifiAPHotspotPassword
+streaming_v2\WifiAPHotspotRouting
+streaming_v2\WifiAPHotspotSSID
+streaming_v2\WifiAPPairedPassword
+streaming_v2\WifiAPPairedSSID
 street
 streetAddress
 strerror
@@ -58593,6 +58783,7 @@ tcpssl
 tcsetattr
 tdXn
 teamfortress.com
+teardown
 telephoneNumber
 teleport_start
 teleport_stop
@@ -60403,6 +60594,7 @@ watching_broadcast_appid
 watching_broadcast_channel_id
 watching_broadcast_title
 watching_broadcast_viewers
+waydroid
 wayland: Error: %s: failed to register wayland registry listener
 wayland: context initialized in %f ms
 wayland: failed to acquire display fd
@@ -60510,6 +60702,7 @@ width
 width=40\n
 width_mm
 wifi power management: %d
+wifi_dongle_present
 wikipedia.org
 win10
 win11
@@ -60620,7 +60813,7 @@ workshopdepot
 workshopfiletype
 wpa-eap
 wpa-psk
-wpa2
+wpa2_deprecated
 wpacket_intern_init_len
 wpctl clear-default
 wpctl clear-default 0

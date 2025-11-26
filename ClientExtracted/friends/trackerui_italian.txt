@@ -478,7 +478,7 @@
 
 "Friends_ChatPasswordWarning_Title"		"Avviso: la sicurezza dell'account è a rischio"
 "Friends_ChatPasswordWarning_Info"			"Attenzione: stai per condividere la password."
-"Friends_ChatPasswordWarning_Info2"		"L'assistenza di Steam non ti chiederà mai la tua password. Condividendo la password, potresti perdere il tuo profilo Steam e tutti i tuoi giochi!\n\nDesideri condividere queste informazioni?"
+"Friends_ChatPasswordWarning_Info2"		"L'Assistenza di Steam non ti chiederà mai la tua password. Condividendo la password, potresti perdere il tuo account di Steam e tutti i tuoi giochi!\n\nDesideri condividere queste informazioni?"
 "Friends_ChatPasswordWarning_Continue"		"Sì, invia il mio messaggio in chat"
 "Friends_ChatPasswordWarning_DontSend"		"No, non inviarlo"
 
@@ -505,7 +505,7 @@
 "Friends_ChatIntro_Request"	"Desideri accettare questa richiesta di chat?"		
 "Friends_ChatIntro_DontShowCheckBox" "Accetta sempre le richieste di chat da questo utente."
 
-"Friends_ChatIntro_WarningInfo" "Promemoria: l'assistenza di Steam non ti chiederà mai la tua password. Ignora tutte le richieste di password che ricevi."
+"Friends_ChatIntro_WarningInfo" "Promemoria: l'Assistenza di Steam non ti chiederà mai la tua password. Ignora tutte le richieste di password che ricevi."
 
 "Friends_Voice_MicrophoneDeviceLabel"	"Dispositivo di registrazione (ingresso audio)"
 "Friends_Voice_ChangeDevice"			"Cambia dispositivo..."

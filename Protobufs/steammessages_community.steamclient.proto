@@ -4,6 +4,16 @@ import "enums.proto";
 
 option cc_generic_services = true;
 
+enum ECommentDeleteReason {
+	k_ECommentDeleteReason_Invalid = 0;
+	k_ECommentDeleteReason_User = 1;
+	k_ECommentDeleteReason_ThreadOwner = 2;
+	k_ECommentDeleteReason_Moderator = 3;
+	k_ECommentDeleteReason_Support = 4;
+	k_ECommentDeleteReason_Spam = 5;
+	k_ECommentDeleteReason_AccountDeletion = 6;
+}
+
 enum EClanImageGroup {
 	k_EClanImageGroup_None = 0;
 	k_EClanImageGroup_Announcement = 1;
@@ -101,6 +111,7 @@ message CCommunity_Comment {
 	optional bool upvoted_by_user = 11;
 	repeated .CCommunity_Comment.Reaction reactions = 12;
 	optional fixed64 gidparentcomment = 13;
+	optional .ECommentDeleteReason delete_reason = 14 [default = k_ECommentDeleteReason_Invalid];
 }
 
 message CCommunity_GetCommentThread_Response {
@@ -188,6 +199,15 @@ message CCommunity_GetCommentThreadRatings_Response {
 	optional uint32 upvotes = 3;
 	optional bool has_upvoted = 4;
 	repeated uint32 upvoter_accountids = 5;
+}
+
+message CCommunity_VerifyClanMembership_Request {
+	optional uint64 steamid = 1;
+	repeated uint64 steamids_verifymembership = 2;
+}
+
+message CCommunity_VerifyClanMembership_Response {
+	repeated uint64 steamids_nonmembers = 1;
 }
 
 message CCommunity_RateClanAnnouncement_Request {
@@ -421,6 +441,7 @@ service Community {
 	rpc DeleteCommentFromThread (.CCommunity_DeleteCommentFromThread_Request) returns (.CCommunity_DeleteCommentFromThread_Response);
 	rpc RateCommentThread (.CCommunity_RateCommentThread_Request) returns (.CCommunity_RateCommentThread_Response);
 	rpc GetCommentThreadRatings (.CCommunity_GetCommentThreadRatings_Request) returns (.CCommunity_GetCommentThreadRatings_Response);
+	rpc VerifyClanMembership (.CCommunity_VerifyClanMembership_Request) returns (.CCommunity_VerifyClanMembership_Response);
 	rpc RateClanAnnouncement (.CCommunity_RateClanAnnouncement_Request) returns (.CCommunity_RateClanAnnouncement_Response);
 	rpc GetClanAnnouncementVoteForUser (.CCommunity_GetClanAnnouncementVoteForUser_Request) returns (.CCommunity_GetClanAnnouncementVoteForUser_Response);
 	rpc GetClanLocGroupImages (.CCommunity_GetClanLocGroupImages_Request) returns (.CCommunity_GetClanLocGroupImages_Response);

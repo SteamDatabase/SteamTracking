@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Supprimer les messages",
     "Chat_Actions_Select_Message": "Sélectionner un message",
     "Chat_Actions_Report": "Signaler",
+    "Chat_Actions_ReportGroup": "Signaler le chat de groupe",
     "Chat_Actions_React": "Réagir",
     "Chat_Actions_Delete": "Supprimer",
     "Chat_Actions_DeleteChatMessages_Confirm": "Voulez-vous vraiment supprimer ces messages de %1$s ?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Correction du problème suivant : les fenêtres de contacts et de chat ne s'affichaient pas dans l'overlay en jeu sur Linux et macOS.",
     "BBCode_Loading": "Chargement",
     "BBCode_Failed": "Échec du chargement",
-    "broadcastDetails_Playing": "Joue à",
-    "Chat_Actions_ReportGroup": "Signaler le chat de groupe"
+    "broadcastDetails_Playing": "Joue à"
 }

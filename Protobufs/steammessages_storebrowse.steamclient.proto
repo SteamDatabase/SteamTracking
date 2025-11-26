@@ -286,6 +286,7 @@ message StoreItem {
 		optional bool requires_shipping = 45;
 		optional .StoreItem.PurchaseOption.RecurrenceInfo recurrence_info = 46;
 		optional uint32 free_to_keep_ends = 47;
+		optional bool must_purchase_as_set = 48 [default = false];
 	}
 
 	message Screenshots {
@@ -377,6 +378,7 @@ message StoreItem {
 	repeated .StoreItem.PurchaseOption purchase_options = 41;
 	repeated .StoreItem.PurchaseOption accessories = 42;
 	optional .StoreItem.PurchaseOption self_purchase_option = 43;
+	repeated .StoreItem.PurchaseOption invalid_purchase_options = 44;
 	optional .StoreItem.Screenshots screenshots = 50;
 	optional .StoreItem.Trailers trailers = 51;
 	repeated .StoreItem.SupportedLanguage supported_languages = 52;
@@ -454,6 +456,10 @@ message CStoreBrowse_GetContentHubConfig_Response {
 		optional string handle = 3;
 		optional string display_name = 4;
 		optional string url_path = 5;
+		repeated uint32 replaces_tags = 6;
+		repeated uint32 must_have_tags = 7;
+		repeated uint32 any_one_of_tags = 8;
+		repeated uint32 must_not_have_tags = 9;
 	}
 
 	repeated .CStoreBrowse_GetContentHubConfig_Response.ContentHubConfig hubconfigs = 1;

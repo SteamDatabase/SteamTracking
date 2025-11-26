@@ -1260,7 +1260,7 @@ L'operazione dovrebbe richiedere meno di un minuto."
 "Steam_SubscriptionCancelled_ServerFailed" "La tua sottoscrizione a %subscription% non è stata completata. I server di Steam al momento sono sovraccarichi e non possono elaborare la tua richiesta. \n\nCi scusiamo per il disagio. Riprova tra qualche ora."
 
 "Steam_Subscription_ContactSupport_Headline" "Errore nell'acquisto"
-"Steam_Subscription_ContactSupport" "Si è verificato un errore inaspettato. La tua sottoscrizione a %subscription% non è stata completata. \n\nContatta l'assistenza di Steam cliccando sul collegamento sottostante."
+"Steam_Subscription_ContactSupport" "Si è verificato un errore inaspettato. La tua sottoscrizione a %subscription% non è stata completata. \n\nContatta l'Assistenza di Steam cliccando sul collegamento sottostante."
 
 "Steam_SubscriptionFailure_Timeout_Headline" "Sottoscrizione in sospeso"
 "Steam_SubscriptionFailure_Timeout" "La tua sottoscrizione a %subscription% non è stata completata perché i server di Steam al momento sono sovraccarichi e non possono elaborare la transazione. \n\nNell'attesa, puoi giocare a %subscription%. Ti contatteremo non appena la transazione verrà elaborata."
@@ -3404,7 +3404,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_Subscription_Success_WithShippingCart$purchasetype=gift"	"Il tuo dono dei seguenti oggetti è stato inviato a %giftee%. Riceverai un'e-mail di conferma non appena gli articoli del tuo ordine verranno spediti. Grazie per il tuo ordine!"
 "Steam_Subscription_Success_WithShippingCart$purchasetype=unknown"	"Il tuo acquisto dei seguenti oggetti è stato completato. Riceverai un'e-mail di conferma non appena gli articoli del tuo ordine verranno spediti. Grazie per il tuo ordine!"
 "Steam_SubscriptionCancelled_PaymentCardUseLimitHit_InfoCart" 	"Questa transazione non è stata elaborata a causa di un uso eccessivo su Steam della carta di credito riportata di seguito.\n\nQuesta procedura garantisce la tutela dei nostri clienti da possibili frodi fiscali. È nel nostro interesse perseguire a norma di legge eventuali azioni fraudolente."
-"Steam_Subscription_ContactSupportCart" "Si è verificato un errore inaspettato. La tua sottoscrizione ai seguenti oggetti non è stata completata. \n\nContatta l'assistenza di Steam cliccando sul collegamento sottostante."
+"Steam_Subscription_ContactSupportCart" "Si è verificato un errore inaspettato. La tua sottoscrizione ai seguenti oggetti non è stata completata. \n\nContatta l'Assistenza di Steam cliccando sul collegamento sottostante."
 "Steam_SubscriptionCancelled_PayPalDeclinedCart" "L'acquisto dei seguenti oggetti non è stato completato.\n\n%provider% ha rilevato un problema di autorizzazione non riuscita. Prova di nuovo a effettuare l'acquisto con un metodo di pagamento diverso."
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddressCart"	"L'acquisto dei seguenti oggetti non è stato completato.\n\n%provider% ha rilevato un problema con l'indirizzo associato al tuo conto %provider%. Puoi correggere il problema tramite %provider%, o provare di nuovo a effettuare l'acquisto con un metodo di pagamento diverso."
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSourceCart"	"L'acquisto dei seguenti oggetti non è stato completato.\n\n%provider% ha rilevato un problema con la banca associata al tuo conto %provider%. Puoi correggere il problema tramite %provider%, o provare di nuovo a effettuare l'acquisto con un metodo di pagamento diverso."
@@ -4393,7 +4393,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "SteamUI_StreamLaunch_TransportUnavailable"	"Al momento non è possibile trasmettere all'esterno della casa, riprova più tardi."
 
 "Steam_OtherSessionPlaying_Title" "Errore - Steam"
-"Steam_OtherSessionPlaying_Text" "Stai già eseguendo \"%existing_app%\" da un altro dispositivo.\nAvviare \"%launching_app%\" da qui comporterà la disconnessione dell'altra sessione di Steam."
+"Steam_OtherSessionPlaying_Text" "Stai già eseguendo \"%existing_app%\" su un altro dispositivo.\nAvviare \"%launching_app%\" da qui comporterà la disconnessione dell'altra sessione di Steam."
 
 "Steam_SystemRequirementWarning_Title" "Avviso sulle prestazioni"
 "Steam_SystemRequirementWarning_Text" "Il tuo sistema non soddisfa i requisiti minimi di sistema consigliati per %game%."

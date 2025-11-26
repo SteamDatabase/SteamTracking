@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Hapus Pesan",
     "Chat_Actions_Select_Message": "Pilih Pesan",
     "Chat_Actions_Report": "Laporkan",
+    "Chat_Actions_ReportGroup": "Laporkan Obrolan Grup",
     "Chat_Actions_React": "Beri Reaksi",
     "Chat_Actions_Delete": "Hapus",
     "Chat_Actions_DeleteChatMessages_Confirm": "Apa kamu yakin ingin menghapus pesan-pesan dari %1$s ini?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Memperbaiki jendela Teman dan Obrolan yang tidak tampil di overlay dalam game pada Linux dan macOS.",
     "BBCode_Loading": "Memuat",
     "BBCode_Failed": "Gagal memuat",
-    "broadcastDetails_Playing": "Bermain",
-    "Chat_Actions_ReportGroup": "Laporkan Obrolan Grup"
+    "broadcastDetails_Playing": "Bermain"
 }

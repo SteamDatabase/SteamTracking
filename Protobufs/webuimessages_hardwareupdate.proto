@@ -45,12 +45,20 @@ message CHardwareUpdate_UpdateProgress_Notification {
 message CHardwareUpdate_UpdateStateChanged_Notification {
 }
 
+message CHardwareUpdate_PrepForUpdate_Request {
+	optional string serial_number = 1;
+}
+
+message CHardwareUpdate_PrepForUpdate_Response {
+}
+
 service HardwareUpdate {
 	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
 
 	rpc GetState (.CHardwareUpdate_GetState_Request) returns (.CHardwareUpdate_GetState_Response);
 	rpc NotifyStateChanged (.CHardwareUpdate_StateChanged_Notification) returns (.WebUINoResponse);
 	rpc CheckForUpdates (.CHardwareUpdate_CheckForUpdates_Request) returns (.CHardwareUpdate_CheckForUpdates_Response);
+	rpc PrepForUpdate (.CHardwareUpdate_PrepForUpdate_Request) returns (.CHardwareUpdate_PrepForUpdate_Response);
 	rpc Update (.CHardwareUpdate_Update_Request) returns (.CHardwareUpdate_Update_Response);
 	rpc NotifyUpdateProgress (.CHardwareUpdate_UpdateProgress_Notification) returns (.WebUINoResponse);
 	rpc NotifyUpdateStateChanged (.CHardwareUpdate_UpdateStateChanged_Notification) returns (.WebUINoResponse);

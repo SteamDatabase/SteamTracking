@@ -9945,8 +9945,8 @@
           } = _,
           _ = (0, _._)(() => _.BInitialized()),
           _ = _();
-        _ ||
-          _.createElement("div", {
+        if (!_)
+          return _.createElement("div", {
             className: _.LoadingTimeline,
           });
         let _ = (0, _._)(

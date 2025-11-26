@@ -10,6 +10,7 @@ message CContentBuilder_InitDepotBuild_Request {
 	optional bool for_local_cs = 4;
 	optional string target_branch = 5;
 	optional bool shader_depot = 6;
+	optional uint64 baseline_manifest_id = 7;
 }
 
 message CContentBuilder_InitDepotBuild_Response {
@@ -81,6 +82,7 @@ message CContentBuilder_CommitAppBuild_Request {
 	optional string build_notes = 4;
 	optional string live_branch = 5;
 	optional bool for_local_cs = 6;
+	optional bool web_upload = 7;
 }
 
 message CContentBuilder_CommitAppBuild_Response {

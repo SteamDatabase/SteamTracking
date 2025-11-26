@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Berichten verwijderen",
     "Chat_Actions_Select_Message": "Bericht selecteren",
     "Chat_Actions_Report": "Rapporteren",
+    "Chat_Actions_ReportGroup": "Groepschat rapporteren",
     "Chat_Actions_React": "Reageren",
     "Chat_Actions_Delete": "Verwijderen",
     "Chat_Actions_DeleteChatMessages_Confirm": "Weet je zeker dat je deze berichten van %1$s wilt verwijderen?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Opgelost dat vrienden- en chatvensters niet in de overlay in het spel werden weergegeven op Linux en macOS.",
     "BBCode_Loading": "Laden",
     "BBCode_Failed": "Laden mislukt",
-    "broadcastDetails_Playing": "Speelt",
-    "Chat_Actions_ReportGroup": "Groepschat rapporteren"
+    "broadcastDetails_Playing": "Speelt"
 }

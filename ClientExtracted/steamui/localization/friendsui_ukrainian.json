@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Видалити повідомлення",
     "Chat_Actions_Select_Message": "Виділити повідомлення",
     "Chat_Actions_Report": "Поскаржитись",
+    "Chat_Actions_ReportGroup": "Поскаржитися на груповий чат",
     "Chat_Actions_React": "Відреагувати",
     "Chat_Actions_Delete": "Видалити",
     "Chat_Actions_DeleteChatMessages_Confirm": "Ви дійсно бажаєте видалити ці повідомлення від користувача %1$s?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Виправлено помилку, внаслідок якої вікна списку друзів і чату не зображувалися в оверлеї Linux і macOS.",
     "BBCode_Loading": "Завантаження",
     "BBCode_Failed": "Не вдалося завантажити",
-    "broadcastDetails_Playing": "Відтворення",
-    "Chat_Actions_ReportGroup": "Поскаржитися на груповий чат"
+    "broadcastDetails_Playing": "Відтворення"
 }

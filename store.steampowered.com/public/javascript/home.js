@@ -1693,7 +1693,7 @@ GHomepage = {
 						// However, for SteamChina, we need to disable this functionality since we don't have 'mature' screenshots, so we'd rather not
 						// have images than show mature content blocks
 						
-						for( var i=0; i < 4; i++ )
+						for( var i=0; i < 3; i++ )
 						{
 							if ( rgScreenshots && i < rgScreenshots.length )
 							{
@@ -4863,8 +4863,6 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 			$TabItems.html( TopSellersCache[ fnTopSellersKey( nTimeValue, bHideF2P ) ] );
 			GHomepage.FilterTab( '#tab_topsellers_content', { games_already_in_library: !bFilterLibraryItems, dlc_for_you: true } );
 
-			GHomepage.AddMicrotrailersToStaticCaps( $TabItems );
-
 			var strTargetSeeMore = bHideF2P ? 'hidef2p' : 'default';
 			var $SeeMoreLinks = $J('#tab_topsellers_content').children('.tab_see_more').children('.topsellers_see_more');
 			$SeeMoreLinks.hide().filter('[data-searchid=' + strTargetSeeMore + ']').show();
@@ -4919,5 +4917,8 @@ function HomeTabOnClick( elem, strTabSelectTarget, strDelayedImageGroup )
 		elTopSellersControls.show();
 
 	TabSelect( elem, strTabSelectTarget );
+	let $List = $JFromIDOrElement( strTabSelectTarget );
+	$List.find('.tab_row_item').first().trigger('mouseenter');
+	GDynamicStoreHelpers.AddSNRDepthParamsToCapsuleList( $List.find('.tab_row_item') );
 }
 

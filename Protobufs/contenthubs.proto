@@ -9,6 +9,7 @@ enum EContentHubDiscountFilterType {
 message CStorePageFilter {
 	message SalePageFilter {
 		optional uint32 sale_tagid = 1;
+		optional uint32 creator_clan_account_id = 2;
 	}
 
 	message ContentHubFilter {

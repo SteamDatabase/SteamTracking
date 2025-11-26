@@ -15,7 +15,7 @@
         u = n(67808),
         s = n(73259),
         c = n(45264),
-        i = n(14095),
+        i = n(38134),
         m = n(64608),
         d = n(10606),
         E = n(46108),
@@ -183,4 +183,4 @@
       }
     },
   },
-]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/gamenotes.js.map
+]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/gamenotes.js.map

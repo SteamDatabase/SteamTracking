@@ -62,6 +62,7 @@ $ORIGIN
 -- Summary --\n
 -chromeos
 -debugbreak
+-deckard
 -holo
 -hometest
 -noassert
@@ -69,6 +70,7 @@ $ORIGIN
 -stack=
 -steamconsole
 -steamdeck
+-steamframe
 -steamos
 -steamos3
 -tesla
@@ -95,9 +97,9 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 0123456789ABCDEF
-07:00:20
 12CStdMemAlloc
 16CAdHocValidation
+21:17:55
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -279,7 +281,6 @@ GetStackTrackingFilter
 HOME
 HasStackTrackingFilters
 IVALIDATE001
-If=k
 Ignoring resume of count %d\n
 Illegal termination of worker thread '%s'
 InitPME
@@ -325,7 +326,7 @@ Network
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 No samples during profile period.\n
 No tracked allocs currently in use. Total %d\n
-Nov 22 2025
+Nov 25 2025
 OUT OF MEMORY
 Object
 Only thread can stop self: Use a higher-level protocol
@@ -363,6 +364,7 @@ Plat_IsGamescope
 Plat_IsInDebugSession
 Plat_IsSteamConsoleMode
 Plat_IsSteamDeck_DoNotUse
+Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
 Plat_IsTesla
@@ -405,6 +407,7 @@ SDL_SetCurrentThreadPriority
 SecureRandomBytes
 Semaphore name (%s) is longer than POSIX can handle, truncating.
 ServerMain
+SetAssertDialogsShown
 SetAssertDumpStack
 SetAssertFailedNotifyFunc
 SetFlushLogFunc
@@ -416,6 +419,7 @@ SetMiniDumpBuildID
 SetMiniDumpCustomInfo
 SetMiniDumpProcessNameOverride
 SetMiniDumpSteamID
+SetMiniDumpUniverse
 SetStackTrackingFilter
 ShouldUseNewAssertDialog
 ShutdownPME

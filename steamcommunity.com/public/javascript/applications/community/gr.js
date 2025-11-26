@@ -9153,7 +9153,8 @@
           } = e,
           o = (0, k.q3)(() => t.BInitialized()),
           l = we();
-        o || a.createElement("div", { className: dr.LoadingTimeline });
+        if (!o)
+          return a.createElement("div", { className: dr.LoadingTimeline });
         let m = (0, de.A)(
           dr.ScrollAndControlsCtn,
           l.GetGamepadMode() && dr.GamepadMode,

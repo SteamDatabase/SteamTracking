@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Изтриване на съобщенията",
     "Chat_Actions_Select_Message": "Избиране на съобщение",
     "Chat_Actions_Report": "Докладване",
+    "Chat_Actions_ReportGroup": "Докладване на групов чат",
     "Chat_Actions_React": "Реакция",
     "Chat_Actions_Delete": "Изтриване",
     "Chat_Actions_DeleteChatMessages_Confirm": "Сигурни ли сте, че искате да изтриете тези съобщения от %1$s?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Поправено е, че списъкът с приятели и чат прозорците не се изобразяваха в игралния Steam слой под Linux и macOS.",
     "BBCode_Loading": "Зареждане",
     "BBCode_Failed": "Неуспешно зареждане",
-    "broadcastDetails_Playing": "Играе",
-    "Chat_Actions_ReportGroup": "Докладване на групов чат"
+    "broadcastDetails_Playing": "Играе"
 }

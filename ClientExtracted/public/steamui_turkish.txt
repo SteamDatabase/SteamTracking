@@ -1331,7 +1331,7 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "Steam_UpdateNews_Title"	"Steam - Haberler"
 "Steam_SettingsNotification_Info"	"Ekleme ve değişiklikleri bana (anlık Steam iletileriyle) bildir:"
 "Steam_SettingsNotification_MyGames"	"Oyunlarım"
-"Steam_SettingsNotification_UpcomingReleases"	"Yayınlanmak üzere olan ve yeni yayınlananlar"
+"Steam_SettingsNotification_UpcomingReleases"	"Yeni ve yakında çıkacak oyunlar"
 "Steam_PurchaseError_HardwarePromoAlreadyOwned" "Daha önce bu Steam hesabını kullanarak %subscription% teklifinin ödemesini yapmışsınız."
 
 "Steam_GamesDialog_RightClick_UpdateNews"	"Haberlere Bak"

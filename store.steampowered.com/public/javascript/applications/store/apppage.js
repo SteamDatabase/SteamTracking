@@ -323,7 +323,7 @@
     },
     88965: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => _, _: () => v });
+      a.d(t, { H: () => y, _: () => v });
       var r = a(90626),
         n = a(57876),
         l = a(75933),
@@ -348,10 +348,10 @@
             scorePenaltyIfOwned: p,
             capsuleSize: h,
             maxItemCount: v,
-            shrinkToFitItems: _,
-            mapAppToCreatorClan: y,
-            strFeatureFirstAppMsg: w,
-            setNumberVisibleItems: A,
+            shrinkToFitItems: y,
+            mapAppToCreatorClan: _,
+            strFeatureFirstAppMsg: A,
+            setNumberVisibleItems: w,
           } = e,
           S = (0, l.a4)(910),
           N = (0, g.Qn)(),
@@ -361,20 +361,20 @@
         r.useEffect(() => {
           if (1 == b) return;
           const e = i.filter((e) => !s.A.Get().BIsStoreItemMissing(e, 0));
-          if (w && S && !N && e.length > 0 && e[0] == i[0]) {
+          if (A && S && !N && e.length > 0 && e[0] == i[0]) {
             const t = [e[0], f, ...e.slice(1)];
-            T(t), R(w), A?.(t.length);
-          } else T(e), A?.(e.length);
-        }, [i, N, S, b, A, w]);
-        const P = N;
+            T(t), R(A), w?.(t.length);
+          } else T(e), w?.(e.length);
+        }, [i, N, S, b, w, A]);
+        const k = N;
         return r.createElement(
           d.F,
           {
             className: (0, m.A)(a, {
               SaleSectionCarousel: !0,
               [E().Carousel]: !0,
-              [E().ItemCount1]: _ && 1 == I.length,
-              [E().ItemCount2]: _ && 2 == I.length,
+              [E().ItemCount1]: y && 1 == I.length,
+              [E().ItemCount2]: y && 2 == I.length,
             }),
             visibleElements: v,
             useTestScrollbar: !0,
@@ -383,7 +383,7 @@
             hideArrows: !1,
             screenIsWide: S,
             navKey: t,
-            bForceSimpleCarousel: P,
+            bForceSimpleCarousel: k,
           },
           (function (e, t, a) {
             const n = o.Fm.Get(),
@@ -420,7 +420,7 @@
               key: e,
               appID: e,
               size: h,
-              creatorClanAccountID: y?.get(e),
+              creatorClanAccountID: _?.get(e),
               strFeaturingMsg: 0 == t && L ? L : void 0,
             }),
           ),
@@ -467,7 +467,7 @@
           }),
         );
       }
-      function _(e) {
+      function y(e) {
         const { url: t } = e;
         return t
           ? r.createElement(
@@ -678,8 +678,8 @@
           });
         },
         g = ({ style: e }) => {
-          const [t] = (0, r.useState)(Math.floor(Math.random() * _.length)),
-            a = _[t];
+          const [t] = (0, r.useState)(Math.floor(Math.random() * y.length)),
+            a = y[t];
           return r.createElement(a, {
             style: { ...u, ...e, backgroundColor: void 0 },
           });
@@ -866,7 +866,7 @@
               }),
             ),
         ],
-        _ = [
+        y = [
           ({ style: e }) =>
             r.createElement(
               n.CS.svg,
@@ -920,7 +920,7 @@
     },
     72256: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => wa });
+      a.r(t), a.d(t, { default: () => Aa });
       var r = a(90626),
         n = a(44165),
         l = a(73964),
@@ -938,8 +938,8 @@
         f = a(78327),
         v = a(8107),
         C = a(75113),
-        _ = a(12037);
-      class y extends r.Component {
+        y = a(12037);
+      class _ extends r.Component {
         static contextType = f.QO;
         state = {
           events: null,
@@ -1059,7 +1059,7 @@
             s.ml,
             { className: o },
             this.state.bShowModal &&
-              r.createElement(w, {
+              r.createElement(A, {
                 ...this.props,
                 announcementGID:
                   this.state.announcementGID ||
@@ -1079,12 +1079,12 @@
                 !this.context?.IN_GAMEPADUI &&
                   r.createElement(
                     "div",
-                    { className: _.SectionButtonCtn },
+                    { className: y.SectionButtonCtn },
                     this.props.bViewAllShowInfiniteScroll
                       ? r.createElement(
                           s.ml,
                           {
-                            className: _.SectionButton,
+                            className: y.SectionButton,
                             onClick: () => this.ShowModal(e[0]),
                           },
                           (0, E.we)("#EventBrowse_MoreEventsBtn"),
@@ -1094,14 +1094,14 @@
                           {
                             eventModel: e[0],
                             route: C.PH.k_eViewWebSiteHub,
-                            className: _.SectionButton,
+                            className: y.SectionButton,
                           },
                           (0, E.we)("#EventBrowse_MoreEventsBtn"),
                         ),
                   ),
                 r.createElement(
                   "div",
-                  { className: _.EventsSummariesCtn },
+                  { className: y.EventsSummariesCtn },
                   e.slice(0, t).map((t) => {
                     const a =
                       1 === e.length && window.screen.width > 500 ? p.kH : p.uY;
@@ -1124,14 +1124,14 @@
                 onClick: this.ShowLatestUpdateModal,
               }),
             Boolean(n && !l && !this.context?.IN_GAMEPADUI) &&
-              r.createElement(A, {
+              r.createElement(w, {
                 nUpdateTime: this.state.last_update_event.rtime,
                 onClick: this.ShowLatestUpdateModal,
               }),
           );
         }
       }
-      function w(e) {
+      function A(e) {
         const {
             appid: t,
             partnerEventStore: a,
@@ -1142,8 +1142,8 @@
           } = e,
           i = (0, f.Qn)();
         return r.createElement(v.N, {
-          className: i ? void 0 : _.StoreHeaderAdjust,
-          eventClassName: i ? _.GamePadUIWidthAdjust : void 0,
+          className: i ? void 0 : y.StoreHeaderAdjust,
+          eventClassName: i ? y.GamePadUIWidthAdjust : void 0,
           appid: t,
           trackingLocation: n,
           announcementGID: l,
@@ -1152,18 +1152,18 @@
           closeModal: s,
         });
       }
-      function A(e) {
+      function w(e) {
         return r.createElement(
           "div",
-          { className: _.LatestUpdateButtonCtn },
+          { className: y.LatestUpdateButtonCtn },
           r.createElement(
             "div",
-            { className: _.LatestUpdateIcon },
+            { className: y.LatestUpdateIcon },
             r.createElement(h.UTF, { role: "presentation" }),
           ),
           r.createElement(
             s.ml,
-            { className: _.LatestUpdateButton, onClick: e.onClick },
+            { className: y.LatestUpdateButton, onClick: e.onClick },
             (0, E.we)(
               "#EventBrowse_LatestUpdateTime_Button",
               (0, E._l)(e.nUpdateTime),
@@ -1188,10 +1188,10 @@
           ),
           r.createElement(
             "div",
-            { className: _.SectionButtonCtn },
+            { className: y.SectionButtonCtn },
             r.createElement(
               "div",
-              { className: _.SectionButton, onClick: o },
+              { className: y.SectionButton, onClick: o },
               (0, E.we)("#EventBrowse_ViewLatestUpdate"),
             ),
           ),
@@ -1199,7 +1199,7 @@
             r.createElement(
               i.Z,
               {
-                className: _.EventsSummariesCtn,
+                className: y.EventsSummariesCtn,
                 "flow-children": "column",
                 navEntryPreferPosition: c.iU.PREFERRED_CHILD,
               },
@@ -1212,7 +1212,7 @@
           a = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
           o = Math.floor(a.getTime() / 1e3),
           { appid: s } = e;
-        return r.createElement(y, {
+        return r.createElement(_, {
           appid: s,
           partnerEventStore: l.$.Get(),
           event_customization: {
@@ -1224,16 +1224,16 @@
           trackingLocation: 3,
         });
       }
-      (0, o.Cg)([g.oI], y.prototype, "ShowModal", null),
-        (0, o.Cg)([g.oI], y.prototype, "ShowLatestUpdateModal", null),
-        (0, o.Cg)([g.oI], y.prototype, "CloseModal", null);
+      (0, o.Cg)([g.oI], _.prototype, "ShowModal", null),
+        (0, o.Cg)([g.oI], _.prototype, "ShowLatestUpdateModal", null),
+        (0, o.Cg)([g.oI], _.prototype, "CloseModal", null);
       var I = a(55263),
         T = a(41735),
         b = a.n(T),
         L = a(75844),
         R = a(22837),
-        P = a(68033),
-        k = a(41550),
+        k = a(68033),
+        P = a(41550),
         B = a(56011),
         M = a(76684),
         D = a(738),
@@ -1321,11 +1321,11 @@
                           className: G.TileActionInner,
                           onClick: (e) => {
                             (0, D.pg)(
-                              r.createElement(k.AD, {
+                              r.createElement(P.AD, {
                                 initialEvent: o,
                                 bShowOnlyInitialEvent: !1,
                                 partnerEventStore: u.O3,
-                                emoticonStore: P.A,
+                                emoticonStore: k.A,
                                 showAppHeader: !0,
                               }),
                               B.uX(e),
@@ -1359,8 +1359,8 @@
         W = a.n(z),
         Z = a(4869);
       new V.cE();
-      var q;
-      function K(e) {
+      var K;
+      function q(e) {
         return r.createElement(
           "div",
           { className: (0, U.A)(W().PurchaseNoticeContainer) },
@@ -1427,15 +1427,15 @@
             "EPurchaseNoticeType_VRRequired"),
           (e[(e.EPurchaseNoticeType_VRSupported = 2)] =
             "EPurchaseNoticeType_VRSupported");
-      })(q || (q = {}));
+      })(K || (K = {}));
       const Y = function (e) {
         const { appid: t, type: a } = e;
         switch (a) {
-          case q.EPurchaseNoticeType_ControllerRequired:
-            return r.createElement(K, { appid: t, controllerType: 32 });
-          case q.EPurchaseNoticeType_VRRequired:
+          case K.EPurchaseNoticeType_ControllerRequired:
+            return r.createElement(q, { appid: t, controllerType: 32 });
+          case K.EPurchaseNoticeType_VRRequired:
             return r.createElement(X, null);
-          case q.EPurchaseNoticeType_VRSupported:
+          case K.EPurchaseNoticeType_VRSupported:
           default:
             return r.createElement(Q, null);
         }
@@ -1794,23 +1794,23 @@
       let fe = null;
       var ve = a(24484),
         Ce = a(32630),
-        _e = a(582),
-        ye = a(17479),
-        we = a(32754);
-      function Ae(e) {
+        ye = a(582),
+        _e = a(17479),
+        Ae = a(32754);
+      function we(e) {
         return r.createElement(
           "a",
           {
             href: `${f.TS.STORE_BASE_URL}search/?controllersupport=${e.strCategory}`,
-            className: ye.InfoRow,
+            className: _e.InfoRow,
           },
           r.createElement(
             "div",
             {
               className: (0, U.A)(
-                ye.ImgSection,
-                e.bHightlightRow && ye.HighlightRow,
-                e.bHighlightGPRequired && ye.GamepadRequired,
+                _e.ImgSection,
+                e.bHightlightRow && _e.HighlightRow,
+                e.bHighlightGPRequired && _e.GamepadRequired,
               ),
             },
             e.tagImage,
@@ -1819,41 +1819,41 @@
             "div",
             {
               className: (0, U.A)(
-                ye.LocSection,
-                e.bHighlightText && ye.HighlightText,
-                e.bHightlightRow && ye.HighlightRow,
-                e.bHighlightGPRequired && ye.GamepadRequired,
+                _e.LocSection,
+                e.bHighlightText && _e.HighlightText,
+                e.bHightlightRow && _e.HighlightRow,
+                e.bHighlightGPRequired && _e.GamepadRequired,
               ),
             },
             r.createElement(
               "div",
               {
                 className: (0, U.A)(
-                  ye.LocString,
-                  e.bHighlightText && ye.HighlightText,
-                  e.bHightlightRow && ye.HighlightRow,
-                  e.bHighlightGPRequired && ye.GamepadRequired,
-                  e.bPersonalized && ye.Personalized,
+                  _e.LocString,
+                  e.bHighlightText && _e.HighlightText,
+                  e.bHightlightRow && _e.HighlightRow,
+                  e.bHighlightGPRequired && _e.GamepadRequired,
+                  e.bPersonalized && _e.Personalized,
                 ),
               },
               (0, E.we)(e.strLocalizationToken),
             ),
             e.strTooltipString &&
               r.createElement(
-                we.he,
+                Ae.he,
                 {
                   toolTipContent: (0, E.we)(e.strTooltipString),
-                  className: ye.ToolTipContainer,
+                  className: _e.ToolTipContainer,
                 },
-                r.createElement("span", { className: ye.ToolTipControl }, "?"),
+                r.createElement("span", { className: _e.ToolTipControl }, "?"),
               ),
           ),
         );
       }
       function Se() {
-        return r.createElement(Ae, {
+        return r.createElement(we, {
           tagImage: r.createElement(Z.Moo, {
-            className: (0, U.A)(ye.Tilt, ye.SmallerSVG),
+            className: (0, U.A)(_e.Tilt, _e.SmallerSVG),
             role: "presentation",
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
@@ -1865,14 +1865,14 @@
       function Ne() {
         return r.createElement(
           "div",
-          { className: (0, U.A)(ye.PurchaseNoticeContainer) },
+          { className: (0, U.A)(_e.PurchaseNoticeContainer) },
           r.createElement(Z.Kz1, {
-            className: (0, U.A)(ye.PurchaseNoticeImage),
+            className: (0, U.A)(_e.PurchaseNoticeImage),
             role: "presentation",
           }),
           r.createElement(
             "div",
-            { className: (0, U.A)(ye.PurchaseNoticeLabel) },
+            { className: (0, U.A)(_e.PurchaseNoticeLabel) },
             (0, E.we)("#Store_ControllerSupport_GamepadPreferred"),
           ),
         );
@@ -1881,7 +1881,7 @@
         const { bNoKeyboardSupport: t, bGamepadPreferred: a } = e;
         return r.createElement(
           "div",
-          { className: (0, U.A)(ye.NoticeContainer) },
+          { className: (0, U.A)(_e.NoticeContainer) },
           t && r.createElement(Se, null),
           a && !t && r.createElement(Ne, null),
         );
@@ -1905,14 +1905,14 @@
         let g = [];
         if (a && n && l && o) {
           const e = r.createElement(Z.pcV, {
-              className: ye.SmallerSVG,
+              className: _e.SmallerSVG,
               controllerType: 34,
               partial: !s,
               role: "presentation",
             }),
             t = u || d;
           g.push(
-            r.createElement(Ae, {
+            r.createElement(we, {
               key: "1",
               tagImage: e,
               strLocalizationToken: t
@@ -1924,14 +1924,14 @@
         } else {
           if (a) {
             const e = r.createElement(Z.pcV, {
-              className: ye.SmallerSVG,
+              className: _e.SmallerSVG,
               controllerType: 34,
               partial: !s,
               role: "presentation",
             });
             l
               ? g.push(
-                  r.createElement(Ae, {
+                  r.createElement(we, {
                     key: "2",
                     tagImage: e,
                     strLocalizationToken: u
@@ -1942,7 +1942,7 @@
                   }),
                 )
               : g.push(
-                  r.createElement(Ae, {
+                  r.createElement(we, {
                     key: "3",
                     tagImage: e,
                     strLocalizationToken: u
@@ -1955,14 +1955,14 @@
           }
           if (n) {
             const e = r.createElement(Z.pcV, {
-              className: ye.SmallerSVG,
+              className: _e.SmallerSVG,
               controllerType: 45,
               partial: !s,
               role: "presentation",
             });
             o
               ? g.push(
-                  r.createElement(Ae, {
+                  r.createElement(we, {
                     key: "4",
                     tagImage: e,
                     strLocalizationToken: d
@@ -1973,7 +1973,7 @@
                   }),
                 )
               : g.push(
-                  r.createElement(Ae, {
+                  r.createElement(we, {
                     key: "5",
                     tagImage: e,
                     strLocalizationToken: d
@@ -1994,16 +1994,16 @@
               null,
               r.createElement(
                 "div",
-                { className: ye.ControllerSupportLevelString },
+                { className: _e.ControllerSupportLevelString },
                 (0, E.we)(
                   s
                     ? "#Store_ControllerSupport_FullController"
                     : "#Store_ControllerSupport_PartialController",
                 ),
               ),
-              r.createElement(Ae, {
+              r.createElement(we, {
                 tagImage: r.createElement(Z.pcV, {
-                  className: ye.SmallerSVG,
+                  className: _e.SmallerSVG,
                   controllerType: 32,
                   partial: !s,
                   role: "presentation",
@@ -2016,9 +2016,9 @@
               }),
               g,
               c &&
-                r.createElement(Ae, {
+                r.createElement(we, {
                   tagImage: r.createElement(Z.kdM, {
-                    className: ye.BiggerSVG,
+                    className: _e.BiggerSVG,
                     bGreyOutRightSide: !s,
                     role: "presentation",
                   }),
@@ -2027,9 +2027,9 @@
                   strCategory: "59",
                 }),
               ((!h && !t) || (!c && m && !p)) &&
-                r.createElement(Ae, {
+                r.createElement(we, {
                   tagImage: r.createElement(Z.vet, {
-                    className: ye.BiggerSVG,
+                    className: _e.BiggerSVG,
                     role: "presentation",
                   }),
                   strLocalizationToken:
@@ -2049,15 +2049,15 @@
           (e.bPartialXboxControllerSupport || e.bFullXboxControllerSupport) &&
             r.createElement(
               "div",
-              { className: ye.StoreSidebarContainer },
+              { className: _e.StoreSidebarContainer },
               r.createElement(Te, { ...e }),
             ),
         );
       };
       var Le = a(87669),
         Re = a(75204),
-        Pe = a(72034),
-        ke = a(38506),
+        ke = a(72034),
+        Pe = a(38506),
         Be = a(56545),
         Me = a(83935);
       class De {
@@ -2112,7 +2112,7 @@
           e.SetBodyFields({ steamid: f.iA.steamid });
           let t = await Me.a9.GetSummary(this.m_transport, e);
           1 == t.GetEResult()
-            ? (this.m_lPointsAvailable = ke.A.fromString(
+            ? (this.m_lPointsAvailable = Pe.A.fromString(
                 t.Body().summary().points(),
               ))
             : console.error(
@@ -2188,7 +2188,7 @@
           (e[(e.ERROR = 5)] = "ERROR"),
           (e[(e.LOADING_ERROR = 6)] = "LOADING_ERROR");
       })(We || (We = {}));
-      const qe = (e) =>
+      const Ke = (e) =>
         r.createElement(
           "svg",
           {
@@ -2204,7 +2204,7 @@
             d: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
           }),
         );
-      class Ke extends r.PureComponent {
+      class qe extends r.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
         }
@@ -2230,8 +2230,8 @@
           });
         }
       }
-      (0, o.Cg)([g.oI], Ke.prototype, "handleMouseOver", null),
-        (0, o.Cg)([g.oI], Ke.prototype, "handleMouseOut", null);
+      (0, o.Cg)([g.oI], qe.prototype, "handleMouseOver", null),
+        (0, o.Cg)([g.oI], qe.prototype, "handleMouseOut", null);
       let Xe = class extends r.Component {
         static {
           Ue = this;
@@ -2281,7 +2281,7 @@
                 }
               })()),
             },
-            a = new Pe.D(f.TS.WEBAPI_BASE_URL, t.webapi_token);
+            a = new ke.D(f.TS.WEBAPI_BASE_URL, t.webapi_token);
           (Ue.s_LoyaltyAwardModalStore = new De(a.GetServiceTransport())),
             this.setState({ bLoading: !1 });
         }
@@ -2420,22 +2420,22 @@
             g = h ? h.points_cost : 0,
             v = h ? h.points_transferred : 0;
           let C,
-            _ = "";
+            y = "";
           switch (t) {
             case 1:
-              _ = (0, E.we)("#GrantAwardDescription_Review");
+              y = (0, E.we)("#GrantAwardDescription_Review");
               break;
             case 2:
-              _ = (0, E.we)("#GrantAwardDescription_UGC");
+              y = (0, E.we)("#GrantAwardDescription_UGC");
               break;
             case 3:
-              _ = (0, E.we)("#GrantAwardDescription_Profile");
+              y = (0, E.we)("#GrantAwardDescription_Profile");
               break;
             case 4:
-              _ = (0, E.we)("#GrantAwardDescription_ForumTopic");
+              y = (0, E.we)("#GrantAwardDescription_ForumTopic");
               break;
             case 5:
-              _ = (0, E.we)("#GrantAwardDescription_Comment");
+              y = (0, E.we)("#GrantAwardDescription_Comment");
           }
           switch (i) {
             case We.LOADING:
@@ -2462,7 +2462,7 @@
                 C = r.createElement(
                   r.Fragment,
                   null,
-                  r.createElement(Je, { description: _ }),
+                  r.createElement(Je, { description: y }),
                   r.createElement(et, null),
                   0 === p.length &&
                     r.createElement(
@@ -2538,7 +2538,7 @@
               C = r.createElement(
                 r.Fragment,
                 null,
-                r.createElement(Je, { description: _ }),
+                r.createElement(Je, { description: y }),
                 r.createElement(et, null),
                 r.createElement(
                   "div",
@@ -2551,7 +2551,7 @@
                         i === We.CONFIRM && Oe.Visible,
                       ),
                     },
-                    r.createElement(Ke, {
+                    r.createElement(qe, {
                       className: Oe.ConfirmAwardImage,
                       reactionType: o,
                     }),
@@ -2604,7 +2604,7 @@
                         i === We.DONE && Oe.Visible,
                       ),
                     },
-                    r.createElement(Ke, {
+                    r.createElement(qe, {
                       className: Oe.ConfirmAwardImage,
                       reactionType: o,
                     }),
@@ -2673,7 +2673,7 @@
                 C = r.createElement(
                   r.Fragment,
                   null,
-                  r.createElement(Je, { description: _ }),
+                  r.createElement(Je, { description: y }),
                   r.createElement(et, null),
                   r.createElement(
                     "div",
@@ -2714,7 +2714,7 @@
               C = r.createElement(
                 r.Fragment,
                 null,
-                r.createElement(Je, { description: _ }),
+                r.createElement(Je, { description: y }),
                 r.createElement(et, null),
                 r.createElement(
                   "div",
@@ -2849,7 +2849,7 @@
             r.createElement(
               "div",
               { className: Oe.IconCtn },
-              r.createElement(Ke, {
+              r.createElement(qe, {
                 reactionType: e,
                 bForceAnimated: this.state.bHovered,
                 bDisableAnimation: a,
@@ -2861,7 +2861,7 @@
               r.createElement("div", { className: Oe.Label }, Ve(e)),
               r.createElement(rt, { className: Oe.Points }, n.toLocaleString()),
             ),
-            a && r.createElement(qe, { className: Oe.IconCheckMark }),
+            a && r.createElement(Ke, { className: Oe.IconCheckMark }),
           );
         }
       }
@@ -2960,6 +2960,13 @@
           [
             367520,
             { strInternalAppName: "HollowKnight", strBannerType: "miner" },
+          ],
+          [
+            1030300,
+            {
+              strInternalAppName: "HollowKnightSilksong",
+              strBannerType: "knight",
+            },
           ],
           [
             2767030,
@@ -3079,6 +3086,47 @@
             227300,
             { strInternalAppName: "EuroTruckSimulator2", strBannerType: "car" },
           ],
+          [
+            3405340,
+            { strInternalAppName: "Megabonk", strBannerType: "zombies" },
+          ],
+          [2062430, { strInternalAppName: "BallxPit", strBannerType: "city" }],
+          [
+            2592160,
+            { strInternalAppName: "Dispatch", strBannerType: "superhero" },
+          ],
+          [
+            1771300,
+            {
+              strInternalAppName: "KingdomComeDeliverance2",
+              strBannerType: "knight",
+            },
+          ],
+          [3241660, { strInternalAppName: "REPO", strBannerType: "porch" }],
+          [
+            1984270,
+            {
+              strInternalAppName: "DigimonStoryTimeStranger",
+              strBannerType: "anime",
+            },
+          ],
+          [2878980, { strInternalAppName: "NBA2K25", strBannerType: "city" }],
+          [
+            108600,
+            { strInternalAppName: "ProjectZomboid", strBannerType: "zombies" },
+          ],
+          [
+            381210,
+            { strInternalAppName: "DeadByDaylight", strBannerType: "zombies" },
+          ],
+          [
+            1401590,
+            {
+              strInternalAppName: "DisneyDreamlightValley",
+              strBannerType: "family",
+            },
+          ],
+          [892970, { strInternalAppName: "Valheim", strBannerType: "knight" }],
         ]),
         mt = new Map([
           ["adventurer", { className: lt().Adventurer }],
@@ -3163,7 +3211,7 @@
         ft = a(94095),
         vt = a(55963),
         Ct = a(14326);
-      function _t(e) {
+      function yt(e) {
         const { appid: t } = e,
           [a] = (0, I.t7)(t, { include_assets: !0 }),
           n = (0, it.n9)();
@@ -3205,9 +3253,9 @@
           ),
         );
       }
-      var yt = a(70600),
-        wt = a(7445),
-        At = a(88006),
+      var _t = a(70600),
+        At = a(7445),
+        wt = a(88006),
         St = a(96236);
       function Nt(e, t) {
         return (0, r.useMemo)(() => {
@@ -3241,7 +3289,7 @@
             It.QY,
             { supportsFullscreen: !1, supportsTheater: !0 },
             r.createElement(
-              Pt,
+              kt,
               null,
               r.createElement(Rt, { trailers: t, screenshots: a }),
             ),
@@ -3281,21 +3329,21 @@
           return null;
         let h = p.map((e) =>
             "screenshot" == e.type
-              ? r.createElement(kt, { key: e.key, screenshot: e.data })
+              ? r.createElement(Pt, { key: e.key, screenshot: e.data })
               : "trailer" == e.type
                 ? r.createElement(Bt, { key: e.key, trailer: e.data })
                 : null,
           ),
           g = l ? "" : "#TrailerPlayer_FullScreen_Tooltip",
-          f = (0, U.A)(yt.TheaterDialog, l && yt.Fullscreen);
+          f = (0, U.A)(_t.TheaterDialog, l && _t.Fullscreen);
         return r.createElement(
           "div",
           { ref: n.refTheater, className: f, popover: "manual" },
           r.createElement(
             "div",
-            { className: yt.FocusRingClip },
+            { className: _t.FocusRingClip },
             r.createElement(
-              wt.q,
+              At.q,
               { disableFocusRing: l },
               r.createElement(
                 i.Z,
@@ -3303,7 +3351,7 @@
                   autoFocus: !0,
                   ref: m.ref,
                   navRef: m.navRef,
-                  className: yt.GamepadCarousel,
+                  className: _t.GamepadCarousel,
                   "flow-children": "row",
                   navEntryPreferPosition: c.iU.MAINTAIN_X,
                   onOptionsActionDescription: (0, E.we)(g),
@@ -3318,7 +3366,7 @@
           ),
         );
       }
-      function Pt(e) {
+      function kt(e) {
         let { children: t } = e,
           a = (0, r.useCallback)(() => {}, []),
           [n, l] = (0, r.useState)(!0);
@@ -3335,9 +3383,9 @@
           t,
         );
       }
-      function kt(e) {
+      function Pt(e) {
         let { screenshot: t } = e,
-          a = (0, U.A)(yt.CarouselItem, yt.Screenshot);
+          a = (0, U.A)(_t.CarouselItem, _t.Screenshot);
         return r.createElement(
           i.Z,
           { className: a, focusable: !0, onOKActionDescription: "" },
@@ -3426,11 +3474,11 @@
           d = (0, r.useCallback)(
             (e) => {
               let t = a.current;
-              return e.detail.button == At.pR.TRIGGER_LEFT && t
+              return e.detail.button == wt.pR.TRIGGER_LEFT && t
                 ? ((t.currentTime = Math.max(0, t.currentTime - 10)),
                   e.preventDefault(),
                   void e.stopPropagation())
-                : e.detail.button == At.pR.TRIGGER_RIGHT && t
+                : e.detail.button == wt.pR.TRIGGER_RIGHT && t
                   ? ((t.currentTime = Math.min(t.duration, t.currentTime + 10)),
                     e.preventDefault(),
                     void e.stopPropagation())
@@ -3446,7 +3494,7 @@
           f = n.bPaused
             ? "#TrailerPlayer_Play_Tooltip"
             : "#TrailerPlayer_Pause_Tooltip",
-          v = (0, U.A)(yt.CarouselItem, yt.SingleFileTrailer);
+          v = (0, U.A)(_t.CarouselItem, _t.SingleFileTrailer);
         return r.createElement(
           i.Z,
           {
@@ -3478,7 +3526,7 @@
         let { trailer: t } = e,
           [a, n] = (0, r.useState)(!1),
           [l, o] = (0, g.TP)(),
-          s = (0, U.A)(yt.CarouselItem, yt.DashTrailer);
+          s = (0, U.A)(_t.CarouselItem, _t.DashTrailer);
         return r.createElement(
           i.Z,
           { ref: o, className: s, onFocusWithin: n },
@@ -3602,11 +3650,11 @@
           }, [l, o, t, n]);
         return r.createElement(Wt.Provider, { value: s }, a);
       }
-      function qt() {
+      function Kt() {
         return (0, r.useContext)(Wt);
       }
-      function Kt(e) {
-        return e == qt().strActiveID;
+      function qt(e) {
+        return e == Kt().strActiveID;
       }
       function Xt(e, t, a, r) {
         (0, Ht.wT)(t.length > 0, "Unexpected length");
@@ -3632,7 +3680,7 @@
             refThumb: l,
             fnRegisterItemElement: o,
           } = (function () {
-            let e = qt(),
+            let e = Kt(),
               t = (0, r.useRef)(null),
               a = (0, r.useRef)(null),
               n = (0, r.useRef)(null),
@@ -3760,7 +3808,7 @@
       function $t(e) {
         let { refStrip: t, items: a, registerItemElement: n } = e,
           l = (function () {
-            let e = qt(),
+            let e = Kt(),
               t = (0, r.useCallback)(
                 (t) => {
                   t.repeat ||
@@ -3790,7 +3838,7 @@
       }
       function ea(e) {
         let { item: t, registerItemElement: a } = e,
-          n = qt(),
+          n = Kt(),
           l = t.key == n.strActiveID,
           o = t.key,
           s = (0, r.useCallback)((e) => a(o, e), [o, a]),
@@ -3810,7 +3858,7 @@
       }
       function ta(e) {
         let { refTrack: t, refThumb: a } = e,
-          n = qt(),
+          n = Kt(),
           l = n.strPreviousID ? () => n.fnSetActive(n.strPreviousID) : null,
           o = n.strNextID ? () => n.fnSetActive(n.strNextID) : null;
         return r.createElement(
@@ -3914,7 +3962,7 @@
               a = (0, r.useRef)(0),
               n = (0, r.useRef)(!1),
               l = (0, r.useRef)(e),
-              o = qt(),
+              o = Kt(),
               s = (0, r.useRef)(o);
             s.current = o;
             let i = "none" != (0, It.ri)().strMode,
@@ -3983,9 +4031,9 @@
       }
       function ma(e) {
         let { appName: t, items: a } = e,
-          n = qt(),
+          n = Kt(),
           l = (function () {
-            let e = qt(),
+            let e = Kt(),
               t = (0, r.useCallback)(
                 (t) => {
                   t.repeat ||
@@ -4214,8 +4262,8 @@
       }
       function ha(e) {
         let { id: t, screenshot: a, focus: n } = e,
-          l = Kt(t),
-          o = t == qt().strNextID;
+          l = qt(t),
+          o = t == Kt().strNextID;
         let s = ga(l || o),
           i = (0, It.ri)(),
           c = (0, It.Dy)(i, "theater"),
@@ -4244,11 +4292,11 @@
       }
       function Ea(e) {
         let { id: t, trailer: a, focus: n } = e,
-          l = Kt(t),
+          l = qt(t),
           o = ga(l),
           [s, i] = (0, g.TP)(),
           c = (0, r.useContext)(ia),
-          m = qt(),
+          m = Kt(),
           u = (0, r.useCallback)(() => m.fnSetActive(m.strNextID), [m]);
         if (!o) return null;
         let d = (0, U.A)(Gt.ViewedItem, l && Gt.Active, Gt.Trailer);
@@ -4331,7 +4379,7 @@
             a.e(9672),
           ]).then(a.bind(a, 47554)),
         ),
-        _a = r.lazy(() =>
+        ya = r.lazy(() =>
           Promise.all([
             a.e(8970),
             a.e(6597),
@@ -4354,11 +4402,11 @@
             a.e(8396),
           ]).then(a.bind(a, 74968)),
         ),
-        ya = r.lazy(async () => ({
+        _a = r.lazy(async () => ({
           default: (await a.e(445).then(a.bind(a, 13229)))
             .AccessibilityFeatureDisplay,
         }));
-      function wa(e) {
+      function Aa(e) {
         const { appid: t } = e;
         return r.createElement(
           ht.QA,
@@ -4371,11 +4419,11 @@
               "deck-topplayed-banner": (e) => r.createElement(ut, { ...e }),
               "steamawardsvote-embed": () => r.createElement(va, { appID: t }),
               "broadcast-embed": (t) =>
-                r.createElement(_a, { ...e, appid: t.appid }),
+                r.createElement(ya, { ...e, appid: t.appid }),
               "demo-and-quick-pitch": () =>
                 r.createElement(pt.d, null, r.createElement(H, { appID: t })),
               "deck-verified-results": (e) =>
-                r.createElement(_e.q6, {
+                r.createElement(ye.q6, {
                   appID: t,
                   results: (0, ve.Tc)(
                     "deckcompatibility",
@@ -4394,16 +4442,16 @@
               "game-notice-controller-required": () =>
                 r.createElement(Y, {
                   appid: t,
-                  type: q.EPurchaseNoticeType_ControllerRequired,
+                  type: K.EPurchaseNoticeType_ControllerRequired,
                 }),
               "game-notice-vr-required": () =>
-                r.createElement(Y, { type: q.EPurchaseNoticeType_VRRequired }),
+                r.createElement(Y, { type: K.EPurchaseNoticeType_VRRequired }),
               "game-notice-vr-supported": () =>
-                r.createElement(Y, { type: q.EPurchaseNoticeType_VRSupported }),
+                r.createElement(Y, { type: K.EPurchaseNoticeType_VRSupported }),
               "store-sidebar-controller-support-info": (e) =>
                 r.createElement(be, { ...e }),
               "store-sidebar-accessibility-info": (e) =>
-                r.createElement(ya, { features: e }),
+                r.createElement(_a, { features: e }),
               "season-pass-display": (e) => r.createElement(fa, { ...e }),
               "storeitems-carousel": (e) =>
                 r.createElement(
@@ -4427,7 +4475,7 @@
                 r.createElement(
                   Ce.Ay,
                   { feature: e.feature },
-                  r.createElement(_t, { appid: e.appid }),
+                  r.createElement(yt, { appid: e.appid }),
                 ),
             },
           }),

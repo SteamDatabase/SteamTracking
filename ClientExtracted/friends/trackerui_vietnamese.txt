@@ -10,7 +10,7 @@
 
 
 "Friends_Chat_Title"				"%tabtitle% - Trò chuyện"
-"Friends_Chat_Group_Title"			"%tabtitle% - Trò chuyện nhóm"
+"Friends_Chat_Group_Title"			"%tabtitle% - Nhóm trò chuyện"
 "Friends_Chat_Room_Headline"		"%friend%"
 "Friends_ChatTo"					"Tới: %friend%"
 "Friends_ChatToPlusStatus"			"Tới: %friend% (%status%)"
@@ -660,7 +660,7 @@
 "friends_group_edittags_title"		"%friend% - Nhãn"
 
 "friends_insertitem"			"Trưng bày một món đồ trong kho..."
-"group_enterchatroom"			"Tham gia trò chuyện nhóm"
+"group_enterchatroom"			"Tham gia nhóm trò chuyện"
 
 "friends_giftreceived_info"		"đã gửi bạn một món quà"
 "friends_itemreceived_info"		"Có 1 vật phẩm mới trong kho đồ"

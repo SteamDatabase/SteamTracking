@@ -110,7 +110,6 @@ enum EMsg {
 	k_EMsgAISGetCouponDefinitionResponse = 430;
 	k_EMsgAISUpdateSubordinateContentDescription = 431;
 	k_EMsgAISUpdateSubordinateContentDescriptionResponse = 432;
-	k_EMsgAISTestEnableGC = 433;
 	k_EMsgAISBroadcastSubordinateContentDescription = 434;
 	k_EMsgBaseAM = 500;
 	k_EMsgAMUpdateUserBanRequest = 504;
@@ -1387,6 +1386,8 @@ enum EMsg {
 	k_EMsgRemoteClientProofRequest = 9521;
 	k_EMsgRemoteClientProofResponse = 9522;
 	k_EMsgRemoteClientWifiAPStatus = 9523;
+	k_EMsgRemoteClientPairWifiAP = 9524;
+	k_EMsgRemoteClientPairWifiAPResponse = 9525;
 	k_EMsgClientConcurrentSessionsBase = 9600;
 	k_EMsgClientPlayingSessionState = 9600;
 	k_EMsgClientKickPlayingSession = 9601;
@@ -1447,7 +1448,6 @@ enum EClientPersonaStateFlag {
 	k_EClientPersonaStateGameExtraInfo = 256;
 	k_EClientPersonaStateGameDataBlob = 512;
 	k_EClientPersonaStateFlagClanData = 1024;
-	k_EClientPersonaStateFlagFacebook = 2048;
 	k_EClientPersonaStateFlagRichPresence = 4096;
 	k_EClientPersonaStateFlagBroadcast = 8192;
 	k_EClientPersonaStateFlagWatching = 16384;

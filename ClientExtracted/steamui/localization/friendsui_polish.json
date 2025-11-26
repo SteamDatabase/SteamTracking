@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Usuń wiadomości",
     "Chat_Actions_Select_Message": "Wybierz wiadomość",
     "Chat_Actions_Report": "Zgłoś",
+    "Chat_Actions_ReportGroup": "Zgłoś czat grupowy",
     "Chat_Actions_React": "Zareaguj",
     "Chat_Actions_Delete": "Usuń",
     "Chat_Actions_DeleteChatMessages_Confirm": "Czy na pewno chcesz usunąć te wiadomości od użytkownika %1$s?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Naprawiono błąd powodujący, że okna czatu i znajomych nie wyświetlały się w nakładce w systemach Linux i macOS.",
     "BBCode_Loading": "Wczytywanie",
     "BBCode_Failed": "Nie udało się wczytać",
-    "broadcastDetails_Playing": "Gra w",
-    "Chat_Actions_ReportGroup": "Zgłoś czat grupowy"
+    "broadcastDetails_Playing": "Gra w"
 }

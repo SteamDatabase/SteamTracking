@@ -13,7 +13,7 @@
 
 .workshop_home_content
 {
-	margin: 0 auto 8px auto;
+	margin: 30px auto 8px auto;
 	width: 948px;
 	text-align: left;
 }
@@ -63,7 +63,7 @@
 	margin-top: 27px;
 }
 .primary_panel_border.panel_margin_small {
-	margin-top: 47px;
+	margin-top: 33px;
 }
 .primary_panel_border.panel_margin_none {
 	margin-top: 27px;
@@ -332,7 +332,8 @@
 .workshop_item_link
 {
 	position: relative;
-	display: block;
+	display: flex;
+	flex-direction: column;
 }
 .workshop_item_link.landscape.with_rating
 {

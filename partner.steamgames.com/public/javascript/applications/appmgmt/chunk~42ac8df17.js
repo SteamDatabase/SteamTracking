@@ -380,6 +380,7 @@
       e.exports = {
         strMaxMobileWidth: "700px",
         strMaxResponsiveWidth: "910px",
+        strMaxTabletWidth: "1080px",
       };
     },
     79821: (e, t, r) => {
@@ -18716,7 +18717,7 @@
     },
     45359: (e, t, r) => {
       "use strict";
-      r.d(t, { aU: () => ee, pb: () => Y, qn: () => Z });
+      r.d(t, { aU: () => te, pb: () => Y, qn: () => Z });
       var a = r(75844),
         n = r(90626),
         i = r(6866),
@@ -18791,7 +18792,7 @@
             X = (0, V.w)(),
             Z = n.useMemo(() => a?.GetIncludedAppIDsOrSelf(), [a]),
             $ = (0, n.useRef)(null),
-            [te, re] = (0, n.useState)(!1),
+            [ee, re] = (0, n.useState)(!1),
             ae = (0, k.Qn)();
           if (
             ((0, n.useEffect)(() => {
@@ -18880,7 +18881,7 @@
                       "div",
                       { className: O().StoreSaleWidgetImage },
                       n.createElement(b.V, { appids: Z }),
-                      n.createElement(ee, { info: u, imageType: "header" }),
+                      n.createElement(te, { info: u, imageType: "header" }),
                       n.createElement(G.J, { storeItem: a }),
                       Boolean(u && t) && n.createElement(f.m, { appInfo: u }),
                     ),
@@ -18947,12 +18948,13 @@
                         Se,
                       ),
                     !L &&
+                      u &&
                       n.createElement(
                         n.Fragment,
                         null,
                         n.createElement(S.Q, {
                           item: u,
-                          bMinimizePlatforms: te,
+                          bMinimizePlatforms: ee,
                         }),
                         Boolean(
                           j && 0 == a?.GetStoreItemType() && a.GetPlatforms(),
@@ -18965,12 +18967,14 @@
                       ),
                   ),
                   N &&
+                    u &&
                     n.createElement(
                       "div",
                       { className: O().ReviewScores },
                       n.createElement(F.Jz, { appInfo: u }),
                     ),
                   me &&
+                    u &&
                     n.createElement(J, {
                       info: u,
                       bHideInLibraryApps:
@@ -19027,7 +19031,7 @@
                   n.createElement(
                     "div",
                     { className: O().StoreSaleWidgetBgTint },
-                    n.createElement(ee, { info: u, imageType: "header" }),
+                    n.createElement(te, { info: u, imageType: "header" }),
                   ),
                 ),
               ),
@@ -19120,96 +19124,99 @@
         );
       }
       const Z = (e) => {
-          const {
-              info: t,
-              bShowAsMuted: r,
-              bHidePrice: a,
-              bShowInLibraryInsteadOfPrice: i,
-              bHidePlatforms: s,
-              strClassName: o,
-              creatorAccountID: l,
-              bShowName: c,
-              onlyOneDiscountPct: m,
-              bShowAddToCart: d,
-              bShowWishlistButton: u,
-            } = e,
-            _ = (0, n.useRef)(null),
-            [g, h] = (0, n.useState)(!1),
-            y = (0, n.useMemo)(
-              () => c && p.A.Get().GetApp(t.id)?.GetName(),
-              [c, t.id],
-            );
-          (0, n.useEffect)(() => {
-            _.current && h(_.current.offsetWidth < 370);
-          }, [_]);
-          const f = Boolean(u && "sub" != t.type && "bundle" != t.type),
-            b = !l && !d && !f && s && a;
-          return n.createElement(
-            n.Fragment,
-            null,
-            !b &&
-              n.createElement(
-                "div",
-                {
-                  ref: _,
-                  className: (0, D.A)(
-                    O().CapsuleBottomBar,
-                    "CapsuleBottomBar",
-                    r && O().Muted,
-                    o,
-                  ),
-                },
-                l && n.createElement($, { creatorAccountID: l, ...e }),
-                d &&
-                  n.createElement(N.h, {
-                    info: t,
-                    className: (0, D.A)(
-                      O().MaxActionButtonWidth,
-                      O().AddToCartButton,
-                    ),
-                  }),
-                f &&
-                  n.createElement(j.r, {
-                    appid: t.id,
-                    className: (0, D.A)(
-                      O().MaxActionButtonWidth,
-                      O().AddToWishlistButton,
-                    ),
-                  }),
-                !s && n.createElement(S.Q, { item: t, bMinimizePlatforms: g }),
-                !a &&
-                  n.createElement(
-                    "span",
-                    { className: O().BottomBarPriceInfo },
-                    n.createElement(v.wc, {
-                      info: t,
-                      bShowInLibrary: i,
-                      onlyOneDiscountPct: m,
-                    }),
-                  ),
-              ),
-            c && n.createElement("div", { className: O().CapsuleName }, y),
-          );
-        },
-        $ = (e) => {
-          const { creatorAccountID: t, bShowAsMuted: r, strClassName: a } = e,
-            [i, s] = (0, u.TB)(t),
-            o = i || !s ? (0, c.t)(null, "medium") : s.avatar_medium_url;
-          return n.createElement(
-            "div",
-            { className: (0, D.A)(O().BottomCreatorRow, r && O().Muted, a) },
-            n.createElement("img", {
-              className: (0, D.A)(O().CreatorLogo),
-              src: o,
-            }),
+        const {
+            info: t,
+            bShowAsMuted: r,
+            bHidePrice: a,
+            bShowInLibraryInsteadOfPrice: i,
+            bHidePlatforms: s,
+            strClassName: o,
+            creatorAccountID: l,
+            bShowName: c,
+            onlyOneDiscountPct: m,
+            bShowAddToCart: d,
+            bShowWishlistButton: u,
+          } = e,
+          p = (0, n.useRef)(null),
+          [_, g] = (0, n.useState)(!1);
+        (0, n.useEffect)(() => {
+          p.current && g(p.current.offsetWidth < 370);
+        }, [p]);
+        const h = Boolean(u && "sub" != t.type && "bundle" != t.type),
+          y = Boolean(!l && !d && !h && s && a);
+        return n.createElement(
+          n.Fragment,
+          null,
+          !y &&
             n.createElement(
-              "span",
-              { className: O().CreatorName },
-              s?.group_name,
+              "div",
+              {
+                ref: p,
+                className: (0, D.A)(
+                  O().CapsuleBottomBar,
+                  "CapsuleBottomBar",
+                  r && O().Muted,
+                  o,
+                ),
+              },
+              l && n.createElement(ee, { creatorAccountID: l, ...e }),
+              d &&
+                n.createElement(N.h, {
+                  info: t,
+                  className: (0, D.A)(
+                    O().MaxActionButtonWidth,
+                    O().AddToCartButton,
+                  ),
+                }),
+              h &&
+                n.createElement(j.r, {
+                  appid: t.id,
+                  className: (0, D.A)(
+                    O().MaxActionButtonWidth,
+                    O().AddToWishlistButton,
+                  ),
+                }),
+              !s && n.createElement(S.Q, { item: t, bMinimizePlatforms: _ }),
+              !a &&
+                n.createElement(
+                  "span",
+                  { className: O().BottomBarPriceInfo },
+                  n.createElement(v.wc, {
+                    info: t,
+                    bShowInLibrary: i,
+                    onlyOneDiscountPct: m,
+                  }),
+                ),
             ),
-          );
-        };
-      function ee(e) {
+          c && n.createElement($, { appid: t.id }),
+        );
+      };
+      function $(e) {
+        const { appid: t } = e,
+          r = (0, n.useMemo)(() => p.A.Get().GetApp(t)?.GetName(), [t]);
+        return r
+          ? n.createElement("div", { className: O().CapsuleName }, r)
+          : null;
+      }
+      const ee = (e) => {
+        const { creatorAccountID: t, bShowAsMuted: r, strClassName: a } = e,
+          [i, s] = (0, u.TB)(t),
+          o = i || !s ? (0, c.t)(void 0, "medium") : s.avatar_medium_url;
+        return n.createElement(
+          "div",
+          { className: (0, D.A)(O().BottomCreatorRow, r && O().Muted, a) },
+          n.createElement("img", {
+            className: (0, D.A)(O().CreatorLogo),
+            src: o,
+          }),
+          n.createElement(
+            "span",
+            { className: O().CreatorName },
+            s?.group_name,
+          ),
+        );
+      };
+      function te(e) {
         const { info: t, imageType: r } = e,
           [a] = (0, g.G6)(t.id, (0, _.SW)(t.type), { include_assets: !0 });
         let i;
@@ -19270,7 +19277,7 @@
             e.link.localized_link_capsule,
             e.language,
           ),
-          r = q.z.GenerateURLFromHashAndExt(e.clanAccountID, t),
+          r = t ? q.z.GenerateURLFromHashAndExt(e.clanAccountID, t) : void 0,
           a = (0, k.Y2)();
         return n.createElement(
           E.q,
@@ -19287,7 +19294,7 @@
                 e.link.url ? O().Linked : "",
               ),
             },
-            Boolean(e.link.localized_link_capsule) &&
+            Boolean(e.link.localized_link_capsule && r) &&
               n.createElement(P.o, { className: O().LinkCapsuleImage, src: r }),
             Boolean(e.link.materialized_link_capsule) &&
               n.createElement("img", {
@@ -20443,7 +20450,7 @@
       var a = r(90626),
         n = r(12155),
         i = r(52038);
-      r(30720);
+      r(13871);
       function s(e, t, r, n) {
         a.useEffect(() => {
           const a = (a) => {
@@ -20562,15 +20569,16 @@
     },
     37076: (e, t, r) => {
       "use strict";
-      r.d(t, { j: () => m, u: () => d });
+      r.d(t, { j: () => d, u: () => u });
       var a = r(90626),
         n = r(45699),
         i = r(55963),
         s = r(60014),
         o = r(81393),
         l = r(78327),
-        c = r(49411);
-      function m(e) {
+        c = r(49411),
+        m = r(61336);
+      function d(e) {
         const {
             type: t,
             id: r,
@@ -20622,40 +20630,41 @@
           )
         );
       }
-      function d(e) {
+      function u(e) {
         const {
             id: t,
             type: r,
             strExtraParams: o,
-            fnOnClickOverride: d,
-            strOverrideURL: u,
+            fnOnClickOverride: u,
+            strOverrideURL: p,
           } = e,
-          p = (0, s.n9)(),
-          _ = (0, c.w)(),
-          g =
-            u ||
-            ("clan" == r
-              ? (0, i.It)(
-                  `${l.TS.STORE_BASE_URL}curator/${t}${o ? `?${o}` : ""}`,
-                  p,
-                  _,
-                )
-              : (0, i.It)(
-                  `${l.TS.STORE_BASE_URL}${r}/${t}${o ? `?${o}` : ""}`,
-                  p,
-                  _,
-                ));
+          _ = (0, s.n9)(),
+          g = (0, c.w)(),
+          h = (0, m.NT)(
+            p ||
+              ("clan" == r
+                ? (0, i.It)(
+                    `${l.TS.STORE_BASE_URL}curator/${t}${o ? `?${o}` : ""}`,
+                    _,
+                    g,
+                  )
+                : (0, i.It)(
+                    `${l.TS.STORE_BASE_URL}${r}/${t}${o ? `?${o}` : ""}`,
+                    _,
+                    g,
+                  )),
+          );
         return a.createElement(
-          m,
+          d,
           { ...e },
           a.createElement(
             n.Ii,
             {
               className: e.className,
-              href: d ? void 0 : g,
-              target: l.TS.IN_CLIENT || d ? void 0 : "_blank",
+              href: u ? void 0 : h,
+              target: l.TS.IN_CLIENT || u ? void 0 : "_blank",
               rel: "noopener noreferrer",
-              onClick: d,
+              onClick: u,
             },
             e.children,
           ),

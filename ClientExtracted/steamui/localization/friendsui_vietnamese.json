@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Xóa tin nhắn",
     "Chat_Actions_Select_Message": "Chọn tin nhắn",
     "Chat_Actions_Report": "Tố cáo",
+    "Chat_Actions_ReportGroup": "Tố cáo nhóm trò chuyện",
     "Chat_Actions_React": "Phản ứng",
     "Chat_Actions_Delete": "Xóa",
     "Chat_Actions_DeleteChatMessages_Confirm": "Bạn có chắc mình muốn xóa tin nhắn từ %1$s?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Sửa lỗi cửa sổ bạn bè và trò chuyện không hiển thị bên trong lớp phủ của trò chơi trên Linux và macOS.",
     "BBCode_Loading": "Đang tải",
     "BBCode_Failed": "Tải thất bại",
-    "broadcastDetails_Playing": "Đang chơi",
-    "Chat_Actions_ReportGroup": "Tố cáo nhóm trò chuyện"
+    "broadcastDetails_Playing": "Đang chơi"
 }

@@ -2636,7 +2636,7 @@
       }
       var ht = a(68033),
         St = a(41550),
-        Ct = a(40463),
+        Ct = a(95377),
         vt = a(35685),
         bt = a(9709),
         ft = a(64753),
@@ -3313,8 +3313,8 @@
           } = e,
           [g] = (0, mt.t7)(l, { include_assets: !0 }),
           [_, E] = (0, n.q3)(() => [
-            i.GetEventType(),
-            i.BHasTag("vo_marketing_message"),
+            i?.GetEventType(),
+            i?.BHasTag("vo_marketing_message"),
           ]),
           h = 36 == _;
         let S = null;

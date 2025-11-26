@@ -137,6 +137,7 @@
 "\n\farray_values
 "^\n\fOneofOptions
 "e" must be followed by exponent.
+"k\n\vCMsgPostURL
 "t\n\rCMsgAddHeader
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
@@ -375,6 +376,7 @@ $\n k_SystemAudioPortDirection_Input
 (\n$k_EContentReportReason_TargetedAbuse
 (\n$k_EContentReportResolution_Acquitted
 (\n$k_EContentReportSubjectAction_Locked
+(\n$k_EContentReportSubjectAction_Warned
 (\n$k_EGameRecordingType_ManualRecording
 (\n$k_ENewSteamAnnouncementState_AllRead
 (\n$k_ENewSteamAnnouncementState_Invalid
@@ -397,7 +399,6 @@ $\n k_SystemAudioPortDirection_Input
 (\r"P\n\rCMsgMouseMove
 (\r"Y\n\rCMsgSizePopup
 (\r"^\n#CMsgZoomToElementAtPositionResponse
-(\r"k\n\vCMsgPostURL
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
 (\r"z\n)CMsgBrowserViewPostMessageToParentRequest
@@ -451,6 +452,8 @@ $\n k_SystemAudioPortDirection_Input
 )\n%k_EContentReportResolution_Relabelled
 )\n%k_EContentReportResolution_Suspicious
 )\n%k_EContentReportResolution_Unresolved
+)\n%k_EContentReportSubjectAction_Claimed
+)\n%k_EContentReportSubjectAction_Deleted
 )\n%k_EContentReportSubjectAction_Invalid
 )\n%k_EContentReportSubjectAction_Updated
 )\n%k_EContentReportSubjectType_ChatGroup
@@ -485,6 +488,7 @@ $\n k_SystemAudioPortDirection_Input
 *\n&k_EContentReportReason_OtherDisruptive
 *\n&k_EContentReportReason_OtherHarassment
 *\n&k_EContentReportSubjectAction_Disputed
+*\n&k_EContentReportSubjectAction_Released
 *\n&k_EContentReportSubjectAction_Unlocked
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
@@ -502,6 +506,7 @@ $\n k_SystemAudioPortDirection_Input
 +\n'k_ECompromiseDetectionType_TicketAction
 +\n'k_EContentReportReason_GenderedStalking
 +\n'k_EContentReportReason_NamingAndShaming
++\n'k_EContentReportResolution_RemoveAndBan
 +\n'k_EContentReportSubjectAction_Acquitted
 +\n'k_EContentReportSubjectAction_Cancelled
 +\n'k_EContentReportSubjectAction_Escalated
@@ -525,6 +530,7 @@ $\n k_SystemAudioPortDirection_Input
 ,\n(k_EContentReportReason_AttemptedScamming
 ,\n(k_EContentReportReason_CSAMSexualContent
 ,\n(k_EContentReportReason_InauthenticReview
+,\n(k_EContentReportResolution_RemoveAndWarn
 ,\n(k_EContentReportSubjectAction_Sanctioned
 ,\n(k_EContentReportSubjectAction_Unresolved
 ,\n(k_EControlledLegalCategoryStatus_Accused
@@ -593,6 +599,7 @@ $\n k_SystemAudioPortDirection_Input
 -\n)k_EContentReportReason_EncouragingSuicide
 -\n)k_EContentReportReason_GenderedHarassment
 -\n)k_EContentReportReason_OtherScamsAndTheft
+-\n)k_EContentReportSubjectAction_TradeBanned
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EProfileCustomizationTypeRecommendation
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
@@ -679,6 +686,7 @@ $\n k_SystemAudioPortDirection_Input
 -startcount=%d
 -steamdeck
 -steamdeckdisplaynosizescale
+-steamframe
 -steamid=%llu
 -steamos3
 -steampath=%s
@@ -731,6 +739,7 @@ $\n k_SystemAudioPortDirection_Input
 .\n*k_EContentReportReason_EncouragingSelfHarm
 .\n*k_EContentReportReason_EncouragingViolence
 .\n*k_EContentReportReason_OrganizingTerrorism
+.\n*k_EContentReportSubjectAction_ResetContent
 .\n*k_EControlledLegalCategoryStatus_Acquitted
 .\n*k_EControlledLegalCategoryStatus_Convicted
 .\n*k_EProfileCustomizationTypeArtworkShowcase
@@ -762,6 +771,7 @@ $\n k_SystemAudioPortDirection_Input
 /\n+k_ECommunityItemClass_SteamDeckStartupMovie
 /\n+k_EContentReportReason_EncouragingTerrorism
 /\n+k_EContentReportResolution_HarassmentStrike
+/\n+k_EContentReportSubjectAction_BannedFromHub
 /\n+k_ESteamDeckCompatibilityTestResult_Invalid
 /\n+k_ESteamOSCompatibilityCategory_Unsupported
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
@@ -1020,6 +1030,7 @@ $\n k_SystemAudioPortDirection_Input
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
+1\n-k_EContentReportReason_QuotesModeratedContent
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
 1\n-k_EPublishedFileInappropriateProvider_Invalid
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
@@ -1108,6 +1119,7 @@ $\n k_SystemAudioPortDirection_Input
 2\n.k_EContentReportReason_OtherCommercialActivity
 2\n.k_EContentReportReason_OtherViolenceOrSelfHarm
 2\n.k_EContentReportResolution_DisconnectedFromApp
+2\n.k_EContentReportSubjectAction_EscalatedForCSAM
 2\n.k_EPublishedFileInappropriateResult_NotScanned
 2\n.k_EPublishedFileInappropriateResult_VeryLikely
 2\n.k_EWindowsUpdateRebootBehavior_MightNeedReboot
@@ -1134,6 +1146,7 @@ $\n k_SystemAudioPortDirection_Input
 4\n'k_EChildProcessQueryExitCode_ErrorOther
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
 4\n0k_EContentReportReason_LinkingToMaliciousContent
+4\n0k_EContentReportSubjectAction_MarkedAsSuspicious
 4\n0k_EContentReportSubjectAction_SustainedOnDispute
 4\n0k_EProfileCustomizationTypeSingleArtworkShowcase
 4\n0k_EPublishedFileInappropriateResult_VeryUnlikely
@@ -1142,6 +1155,7 @@ $\n k_SystemAudioPortDirection_Input
 4\n0k_PublishedFileQueryType_RankedByLastUpdatedDate
 4\n0k_PublishedFileQueryType_RankedByPublicationDate
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
+5\n1k_EContentReportSubjectAction_BannedFromCommunity
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
 5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
@@ -1160,6 +1174,7 @@ $\n k_SystemAudioPortDirection_Input
 7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE
 7\n*k_EChildProcessQueryExitCode_ErrorFileSave
 7\n*k_EWindowsUpdateInstallationImpact_Unknown
+7\n3k_EContentReportSubjectAction_EscalatedForTerrorism
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Playable
 7\n3k_ESteamDeckCompatibilityResultDisplayType_Verified
 7\n3k_ESteamOSCompatibilityResultDisplayType_Compatible
@@ -1242,6 +1257,7 @@ Account has an existing user cancelled license
 Account has been deleted
 Account is blocked
 Account is not allowed
+Account is restricted from purchasing adult content
 Account locked
 Account logon denied, need two-factor code
 Account not verified
@@ -1795,6 +1811,7 @@ CProcessEnvironmentManager::InitFromDll trying to initialize twice
 CProcessEnvironmentManager::InitFromMain trying to initialize twice
 CProcessEnvironmentManager::setenv called with no value
 CProcessEnvironmentManager::setenv invalid index %d\n
+CSHA1::Update
 CSPAuth
 CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
 CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory\n
@@ -1975,6 +1992,7 @@ DcheckIsFatal
 Debit Card (Nodwin)
 Debug
 December
+Deckard
 Default
 Default value for an enum field must be an identifier.
 DefaultANGLEVulkan
@@ -2158,6 +2176,7 @@ EPersonaState
 EPersonaStateFlag
 EPersonalQuestion
 EPlatformType
+EPressOutletAction
 EProfileCustomizationType
 EProvideDeckFeedbackPreference
 EPublishedFileInfoMatchingFileType
@@ -2418,6 +2437,7 @@ Fraud Check Failed
 Free
 Free Weekend
 Free disk space for %s would overflow
+Fremont
 French
 FrenemyFilter
 Friday
@@ -2463,7 +2483,6 @@ Gameserver login token expired
 Gameserver login token owner denied
 Garanti
 Gateway Time-out
-GenerateCEFLogDir in unknown process
 GeneratedCodeInfo
 Georgian
 German
@@ -3229,6 +3248,7 @@ Plat_GetExecutablePathUTF8
 Plat_IsChromeOS
 Plat_IsInDebugSession
 Plat_IsSteamDeck_DoNotUse
+Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS3
 Plat_MSTime
 Plat_OutputDebugString
@@ -3287,7 +3307,6 @@ QIWI
 QkkXa
 Qualcomm
 Quechua
-R nk
 RESOURCE_EXHAUSTED
 RackSystem
 Raid
@@ -3575,7 +3594,6 @@ Steam/Press Master
 Steam2 Migration Complete
 Steam2010 CD-Key
 Steam3Master
-SteamBootstrapper_GetLoggingDir
 SteamBox
 SteamCache
 SteamChina_SChinese
@@ -4530,6 +4548,7 @@ controller_switch_joycon_pair
 controller_switch_joycon_right
 controller_switch_pro
 controller_switch_pro_generic
+controller_triton
 controller_unknown
 controller_wii
 controller_xbox360
@@ -4581,7 +4600,7 @@ demo
 demoted from moderator
 demoted from officer
 depotdeltapatch
-depotonly
+depotingest
 depots
 derive
 dfxp
@@ -5139,6 +5158,14 @@ k_EOSBranch_ReleaseCandidate
 k_EOSBranch_Staging
 k_EOSBranch_Unknown
 k_EPersonaStateFlag_Golden
+k_EPressOutletAction_Created
+k_EPressOutletAction_Deleted
+k_EPressOutletAction_Granted
+k_EPressOutletAction_Invalid
+k_EPressOutletAction_MAX
+k_EPressOutletAction_Removed
+k_EPressOutletAction_Undeleted
+k_EPressOutletAction_Updated
 k_EResolutionAutomation_MAX
 k_EResolutionAutomation_Manual
 k_ESDCardFormatStage_Finalizing

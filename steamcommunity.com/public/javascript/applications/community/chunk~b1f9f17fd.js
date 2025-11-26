@@ -1421,16 +1421,20 @@
             ),
           null === (t = e.tags) ||
             void 0 === t ||
-            t.forEach((e) => a.ToggleTag(e));
+            t.forEach((e) => a.ToggleTag(e)),
+          a.SetStartTimeEditChoice(n.z8.k_ENow),
+          a.SetEventStartTime(void 0),
+          a.SetVisibilityStartTime(void 0),
+          a.SetVisibilityPublishingSetup(n.Fl.immediate),
+          a.SetEarliestAllowedStartTime(void 0);
         const c = i.HD.GetTimeNowWithOverride();
-        e.earliestAllowedStartTime
-          ? (a.SetEarliestAllowedStartTime(e.earliestAllowedStartTime),
-            e.earliestAllowedStartTime > c &&
-              (a.SetStartTimeEditChoice(n.z8.k_ESpecified),
-              a.SetEventStartTime(e.earliestAllowedStartTime),
-              a.SetVisibilityStartTime(e.earliestAllowedStartTime),
-              a.SetVisibilityPublishingSetup(n.Fl.event_start)))
-          : a.SetEarliestAllowedStartTime(void 0),
+        e.earliestAllowedStartTime &&
+          (a.SetEarliestAllowedStartTime(e.earliestAllowedStartTime),
+          e.earliestAllowedStartTime > c &&
+            (a.SetStartTimeEditChoice(n.z8.k_ESpecified),
+            a.SetEventStartTime(e.earliestAllowedStartTime),
+            a.SetVisibilityStartTime(e.earliestAllowedStartTime),
+            a.SetVisibilityPublishingSetup(n.Fl.event_start))),
           e.initialSaleJSON &&
             (a.GetEventModel().jsondata = {
               ...a.GetEventModel().jsondata,
@@ -4448,7 +4452,7 @@
             return [t, t && i.BIsBackgroundImageEnabled()];
           }),
           k = (0, F.m)(o, D),
-          N = (0, s.useMemo)(
+          P = (0, s.useMemo)(
             () =>
               G
                 ? [
@@ -4463,7 +4467,7 @@
         if (B || k)
           return s.createElement(I.t, { string: (0, A.we)("#Loading") });
         if (D) {
-          const t = 36 == i.GetEventType();
+          i.GetEventType();
           return s.createElement(
             v.tH,
             null,
@@ -4482,18 +4486,12 @@
               s.createElement(
                 "div",
                 { style: { position: "relative" } },
-                !t &&
-                  s.createElement(
-                    "div",
-                    { className: P().StoreNavigationPlaceholder },
-                    (0, A.we)("#Sale_ReservedStoreNavigation"),
-                  ),
                 s.createElement(C._, {
                   eventModel: M,
                   bIsPreview: !0,
                   language: n,
                   backgroundImageEditModel: i,
-                  addtionalAdminButtons: N,
+                  addtionalAdminButtons: P,
                 }),
               ),
             ),
@@ -16803,7 +16801,7 @@
       }
       var Re = a(84603),
         Ne = a(40353),
-        Fe = a(2847),
+        Fe = a(57822),
         Oe = a(84174),
         Le = a(77021),
         ze = a(60746),
@@ -18581,9 +18579,9 @@
         );
       }
     },
-    2847: (e, t, a) => {
+    57822: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => Nc });
+      a.d(t, { H: () => Rc });
       var n = a(90626),
         r = a(57876),
         i = a(70078),
@@ -23561,7 +23559,7 @@
       var fa = a(25489),
         wa = a(30600),
         Ca = a(79613),
-        Ba = a(36188),
+        Ba = a(37122),
         Ta = a(96971),
         Ia = a(51428),
         Ma = a.n(Ia);
@@ -34545,9 +34543,8 @@
           return ol.s_singleton || (ol.s_singleton = new ol()), ol.s_singleton;
         }
       }
-      var ll = a(25809),
-        cl = a(72872);
-      function dl(e) {
+      var ll = a(72872);
+      function cl(e) {
         var t, a, s, o, c, m, p, g;
         const { event: v, section: h, activeTab: S } = e,
           b = (function (e) {
@@ -34724,7 +34721,7 @@
                         { className: u.SaleSectionTitleCtn },
                         n.createElement(me.jR, { ...e }),
                       )
-                    : n.createElement(gl, {
+                    : n.createElement(pl, {
                         ...e,
                         value: C,
                         onChange: (e) => {
@@ -34732,7 +34729,7 @@
                         },
                       }),
                   D.map((t) =>
-                    n.createElement(ml, {
+                    n.createElement(ul, {
                       ...e,
                       key: "firstdlc_" + t[0].id,
                       rgDLCCapsules: t,
@@ -34743,7 +34740,7 @@
                   (null == I ? void 0 : I.bMoreAvailable) &&
                     n.createElement(
                       "div",
-                      { className: cl.ShowMore },
+                      { className: ll.ShowMore },
                       n.createElement(
                         rt.$n,
                         {
@@ -34772,8 +34769,8 @@
                     null === (g = h.dlc_for_you_data) || void 0 === g
                       ? void 0
                       : g.hide_dlc_stats,
-                  ) && n.createElement(_l, { ...e }),
-                  n.createElement(pl, {
+                  ) && n.createElement(ml, { ...e }),
+                  n.createElement(_l, {
                     capsules: D[0],
                     bPreferDemoStorePage: h.prefer_demo_store_page,
                     ...e,
@@ -34793,7 +34790,7 @@
               n.createElement(_e.h, { capsules_per_row: (0, _.vB)(h, A) }),
             );
       }
-      function ul(e) {
+      function dl(e) {
         let t = null;
         return (
           e.some(
@@ -34806,7 +34803,7 @@
           t
         );
       }
-      function ml(e) {
+      function ul(e) {
         var t, a, i, s, c;
         const {
             rgDLCCapsules: m,
@@ -34817,10 +34814,10 @@
           } = e,
           S = (0, n.useMemo)(() => m.map((e) => e.id), [m]),
           b = (0, o.zX)(S, r.Xh),
-          [f, w] = (0, n.useState)(() => ul(S)),
+          [f, w] = (0, n.useState)(() => dl(S)),
           C = (0, E.Qn)();
         (0, n.useEffect)(() => {
-          f || 1 == b || w(ul(S));
+          f || 1 == b || w(dl(S));
         }, [b, f, S]);
         const [B] = (0, o.t7)(f, r.Xh);
         if (!B)
@@ -34860,8 +34857,23 @@
           D =
             Boolean(A) &&
             A > 0 &&
-            (0, M.we)("#DLCForYou_ParentApp_Playtime") + (0, ll.l)(A);
-        return n.createElement(pl, {
+            (0, M.we)("#DLCForYou_ParentApp_Playtime") +
+              (function (e, t = "#Played_", a = !1) {
+                if (e >= 120) {
+                  let a = e / 60;
+                  a = Math.round(10 * a) / 10;
+                  let n = M.pf.GetPreferredLocales(),
+                    r = a.toLocaleString(n, {
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 1,
+                    });
+                  return (0, M.we)(t + "Hours", r);
+                }
+                return a && 1 == e
+                  ? (0, M.we)(t + "Minute", e)
+                  : (0, M.we)(t + "Minutes", e);
+              })(A);
+        return n.createElement(_l, {
           ...e,
           capsules: m,
           title: B.GetName(),
@@ -34874,7 +34886,7 @@
           bPreferDemoStorePage: p.prefer_demo_store_page,
         });
       }
-      function _l(e) {
+      function ml(e) {
         const { bLoading: t, dlcStats: a } = (function () {
           const [e, t] = (0, n.useState)();
           return (
@@ -34892,7 +34904,7 @@
           "div",
           {
             className: (0, y.A)(
-              cl.DLCStatsCtn,
+              ll.DLCStatsCtn,
               u.SaleSection,
               u.CarouselDisplay,
               l.SaleSectionCtn,
@@ -34902,53 +34914,53 @@
           !t &&
             n.createElement(
               "div",
-              { className: cl.DLCStatsInnerCtn },
+              { className: ll.DLCStatsInnerCtn },
               n.createElement(
                 "div",
-                { className: cl.DLCStatColumn },
+                { className: ll.DLCStatColumn },
                 n.createElement(
                   "div",
-                  { className: cl.DLCStatNumber },
+                  { className: ll.DLCStatNumber },
                   a.nGamesOwned,
                 ),
                 n.createElement(
                   "div",
-                  { className: cl.DLCStatDesc },
+                  { className: ll.DLCStatDesc },
                   (0, M.we)("#DLCForYou_GamesInLibrary"),
                 ),
               ),
               n.createElement(
                 "div",
-                { className: cl.DLCStatColumn },
+                { className: ll.DLCStatColumn },
                 n.createElement(
                   "div",
-                  { className: cl.DLCStatNumber },
+                  { className: ll.DLCStatNumber },
                   a.nDLCOwned,
                 ),
                 n.createElement(
                   "div",
-                  { className: cl.DLCStatDesc },
+                  { className: ll.DLCStatDesc },
                   (0, M.we)("#DLCForYou_DLCInLibrary"),
                 ),
               ),
               n.createElement(
                 "div",
-                { className: cl.DLCStatColumn },
+                { className: ll.DLCStatColumn },
                 n.createElement(
                   "div",
-                  { className: cl.DLCStatNumber },
+                  { className: ll.DLCStatNumber },
                   a.nDLCNotOwned,
                 ),
                 n.createElement(
                   "div",
-                  { className: cl.DLCStatDesc },
+                  { className: ll.DLCStatDesc },
                   (0, M.we)("#DLCForYou_DLCAvailable"),
                 ),
               ),
             ),
         );
       }
-      function pl(e) {
+      function _l(e) {
         var t, a, s;
         const {
             event: o,
@@ -35029,9 +35041,9 @@
                   [u.SaleSection]: !0,
                   [u.CarouselDisplay]: !0,
                   [l.SaleSectionCtn]: !0,
-                  [cl.GameCtn]: !0,
+                  [ll.GameCtn]: !0,
                   SaleSectionForCustomCSS: !0,
-                  [cl.GameCtnNoBackground]: !Boolean(
+                  [ll.GameCtnNoBackground]: !Boolean(
                     null === (t = c.dlc_for_you_data) || void 0 === t
                       ? void 0
                       : t.group_by_parent_app,
@@ -35039,7 +35051,7 @@
                 }),
               },
               n.createElement("div", {
-                className: cl.BackgroundImage,
+                className: ll.BackgroundImage,
                 style: { backgroundImage: `url(${S})` },
               }),
               n.createElement(
@@ -35048,7 +35060,7 @@
                   "flow-children": "row",
                   className: (0, y.A)({
                     [u.SaleSectionTitleCtn]: !0,
-                    [cl.DLCSectionTitle]:
+                    [ll.DLCSectionTitle]:
                       null === (a = c.dlc_for_you_data) || void 0 === a
                         ? void 0
                         : a.group_by_parent_app,
@@ -35059,7 +35071,7 @@
                   : s.group_by_parent_app) &&
                   n.createElement(
                     "div",
-                    { className: cl.BaseGameCapsuleCtn },
+                    { className: ll.BaseGameCapsuleCtn },
                     n.createElement(
                       Ee.oj,
                       { appid: D },
@@ -35073,7 +35085,7 @@
                           he.Ii,
                           { href: k },
                           n.createElement("img", {
-                            className: cl.FullGameArtwork,
+                            className: ll.FullGameArtwork,
                             src: G,
                           }),
                         ),
@@ -35084,7 +35096,7 @@
                 Boolean(h) &&
                   n.createElement(
                     "div",
-                    { className: cl.SectionTitle },
+                    { className: ll.SectionTitle },
                     n.createElement(
                       Ii.q,
                       { url: h },
@@ -35127,7 +35139,7 @@
                               "div",
                               {
                                 key: "dlc_" + e.id,
-                                className: cl.CarouselDlcCapsule,
+                                className: ll.CarouselDlcCapsule,
                               },
                               n.createElement(Ae.W, {
                                 capsule: e,
@@ -35162,7 +35174,7 @@
               ),
             );
       }
-      function gl(e) {
+      function pl(e) {
         var t, a;
         const { event: r, section: i, value: s, onChange: o } = e,
           c = (0, E.Qn)(),
@@ -35179,7 +35191,7 @@
           "div",
           {
             className: (0, y.A)(
-              cl.ParentAppSortTabsCtn,
+              ll.ParentAppSortTabsCtn,
               u.SaleSection,
               u.CarouselDisplay,
               l.SaleSectionCtn,
@@ -35189,10 +35201,10 @@
           },
           n.createElement(
             "div",
-            { className: cl.ParentAppSortTabScrollCtn },
+            { className: ll.ParentAppSortTabScrollCtn },
             n.createElement(
               "div",
-              { className: cl.ParentAppSortTabHeader },
+              { className: ll.ParentAppSortTabHeader },
               (0, M.we)("#DLCForYou_SortTabs_Show"),
             ),
             (null ===
@@ -35212,8 +35224,8 @@
                       {
                         key: e.value,
                         className: (0, y.A)({
-                          [cl.ParentAppSortTab]: !0,
-                          [cl.ParentAppSortTabActive]: s === e.value,
+                          [ll.ParentAppSortTab]: !0,
+                          [ll.ParentAppSortTabActive]: s === e.value,
                         }),
                         onClick: () => o && o(e.value),
                       },
@@ -35228,8 +35240,8 @@
                     he.ml,
                     {
                       className: (0, y.A)({
-                        [cl.ParentAppSortTab]: !0,
-                        [cl.ParentAppSortTabActive]: "last_played" === s,
+                        [ll.ParentAppSortTab]: !0,
+                        [ll.ParentAppSortTabActive]: "last_played" === s,
                       }),
                       onClick: () => o && o("last_played"),
                     },
@@ -35239,8 +35251,8 @@
                     he.ml,
                     {
                       className: (0, y.A)({
-                        [cl.ParentAppSortTab]: !0,
-                        [cl.ParentAppSortTabActive]: "playtime" === s,
+                        [ll.ParentAppSortTab]: !0,
+                        [ll.ParentAppSortTabActive]: "playtime" === s,
                       }),
                       onClick: () => o && o("playtime"),
                     },
@@ -35250,14 +35262,14 @@
           ),
         );
       }
-      var vl = a(93973);
-      function hl(e) {
+      var gl = a(93973);
+      function vl(e) {
         const { countDownUntil: t, fnCallbackOnZero: a, ...r } = e,
           [i, s] = (0, n.useState)(
             Math.floor(Math.max(0, t.getTime() - Mi.tB()) / 1e3),
           ),
           o = n.useRef(null);
-        n.useEffect(() => (El(o, t, s), () => yl(o)), [t]),
+        n.useEffect(() => (yl(o, t, s), () => Sl(o)), [t]),
           n.useEffect(() => {
             0 == i && a && a();
           }, [a, i]);
@@ -35267,39 +35279,39 @@
         return n.createElement(
           "span",
           { style: { fontFamily: "monospace" }, ...r },
-          Sl(l),
+          hl(l),
           ":",
-          Sl(c),
+          hl(c),
           ":",
-          Sl(d),
+          hl(d),
         );
       }
-      function Sl(e) {
+      function hl(e) {
         return e.toString().padStart(2, "0");
       }
-      function yl(e) {
+      function Sl(e) {
         (null == e ? void 0 : e.current) &&
           (window.clearTimeout(e.current), (e.current = null));
       }
-      function El(e, t, a) {
-        yl(e);
+      function yl(e, t, a) {
+        Sl(e);
         const n = Mi.tB(),
           r = Math.floor(Math.max(0, t.getTime() - n) / 1e3);
         a(r),
           r >= 0 &&
             e &&
-            (e.current = window.setTimeout(() => El(e, t, a), 1e3));
+            (e.current = window.setTimeout(() => yl(e, t, a), 1e3));
       }
-      var bl,
-        fl = a(90874),
-        wl = a(85637);
-      function Cl(e) {
+      var El,
+        bl = a(90874),
+        fl = a(85637);
+      function wl(e) {
         var t, a, r, i;
         const { event: s, section: o, language: l } = e,
           m = (0, E.Qn)(),
           _ = (0, Ta.MU)(),
           [p] = (0, En.QD)("beta", !1),
-          v = (0, vl.Oz)(),
+          v = (0, gl.Oz)(),
           f =
             !v.bLoading &&
             (_ || p) &&
@@ -35322,7 +35334,7 @@
                 className: (0, y.A)(
                   u.SaleSection,
                   c().SaleSectionCtn,
-                  wl.ClaimSaleSection,
+                  fl.ClaimSaleSection,
                   "SaleClaimItemCSS",
                 ),
                 style: (0, d.Vb)(o, s, m),
@@ -35330,11 +35342,11 @@
               n.createElement(me.jR, { section: o, event: s, language: l }),
               n.createElement(
                 "div",
-                { className: wl.ClaimCtn },
+                { className: fl.ClaimCtn },
                 n.createElement(
                   "div",
                   {
-                    className: (0, y.A)(wl.ClaimTitle, "ClaimTitle"),
+                    className: (0, y.A)(fl.ClaimTitle, "ClaimTitle"),
                     style: (0, me.EB)(o, s, l),
                   },
                   (0, M.we)("#Sale_Section_Redeem_Message"),
@@ -35349,14 +35361,14 @@
                   n.createElement(
                     "div",
                     {
-                      className: (0, y.A)(wl.NextStop, "ClaimNextStop"),
+                      className: (0, y.A)(fl.NextStop, "ClaimNextStop"),
                       style: (0, me.EB)(o, s, l),
                     },
                     (0, M.we)("#Sale_Section_Redeem_NoItem"),
                   ),
                 Boolean(v.bCanClaimNewItem) &&
-                  n.createElement(fl.m, {
-                    className: (0, y.A)(wl.ClaimButton, "ClaimButton"),
+                  n.createElement(bl.m, {
+                    className: (0, y.A)(fl.ClaimButton, "ClaimButton"),
                     bPreviewMode: _,
                     rewardType: 0,
                     strButtonOverride:
@@ -35381,17 +35393,17 @@
                 Boolean(v.rtNextClaimTime && !v.bCanClaimNewItem) &&
                   n.createElement(
                     "div",
-                    { className: wl.NextStop },
+                    { className: fl.NextStop },
                     n.createElement(
                       "span",
                       {
                         style: (0, me.EB)(o, s, l),
-                        className: (0, y.A)(wl.Title, "ClaimTimerTitle"),
+                        className: (0, y.A)(fl.Title, "ClaimTimerTitle"),
                       },
                       (0, M.we)("#Sale_Section_Redeem_Countdown"),
                     ),
-                    n.createElement(hl, {
-                      className: (0, y.A)(wl.Timer, "ClaimTimer"),
+                    n.createElement(vl, {
+                      className: (0, y.A)(fl.Timer, "ClaimTimer"),
                       countDownUntil: new Date(1e3 * v.rtNextClaimTime),
                     }),
                   ),
@@ -35403,7 +35415,7 @@
                   n.createElement(
                     "div",
                     {
-                      className: (0, y.A)(wl.NextStop, "ClaimNextStop"),
+                      className: (0, y.A)(fl.NextStop, "ClaimNextStop"),
                       style: (0, me.EB)(o, s, l),
                     },
                     (0, M.we)("#Sale_Section_Redeem_AlreadyRedeemed"),
@@ -35417,28 +35429,28 @@
               {
                 style: { backgroundColor: "hotpink" },
                 onClick: (e) =>
-                  (0, mn.pg)(n.createElement(Bl, null), (0, Fr.uX)(e)),
+                  (0, mn.pg)(n.createElement(Cl, null), (0, Fr.uX)(e)),
               },
               "Test: Change Claim Item State",
             ),
         );
       }
-      function Bl(e) {
+      function Cl(e) {
         const { closeModal: t } = e,
-          a = (0, vl.Oz)(),
-          { fnSetClaimState: r } = (0, vl.lu)(),
-          [i, s] = (0, n.useState)(bl.k_ClaimState_None);
+          a = (0, gl.Oz)(),
+          { fnSetClaimState: r } = (0, gl.lu)(),
+          [i, s] = (0, n.useState)(El.k_ClaimState_None);
         (0, n.useEffect)(() => {
           a.bLoading ||
             (a.bCanClaimNewItem || a.bAlreadyClaimedCurrentItem
               ? a.bCanClaimNewItem
-                ? s(bl.k_ClaimState_Now)
+                ? s(El.k_ClaimState_Now)
                 : a.rtNextClaimTime
-                  ? s(bl.k_ClaimState_Next)
+                  ? s(El.k_ClaimState_Next)
                   : !a.bCanClaimNewItem &&
                     a.bAlreadyClaimedCurrentItem &&
-                    s(bl.k_ClaimState_NoMoreClaimsLeft)
-              : s(bl.k_ClaimState_None));
+                    s(El.k_ClaimState_NoMoreClaimsLeft)
+              : s(El.k_ClaimState_None));
         }, [
           a.bAlreadyClaimedCurrentItem,
           a.bCanClaimNewItem,
@@ -35453,20 +35465,20 @@
             closeModal: t,
             onOK: () => {
               switch (i) {
-                case bl.k_ClaimState_None:
+                case El.k_ClaimState_None:
                   r({ bAlreadyClaimedCurrentItem: !1, bCanClaimNewItem: !1 });
                   break;
-                case bl.k_ClaimState_Now:
+                case El.k_ClaimState_Now:
                   r({ bCanClaimNewItem: !0, bAlreadyClaimedCurrentItem: !1 });
                   break;
-                case bl.k_ClaimState_Next:
+                case El.k_ClaimState_Next:
                   r({
                     bCanClaimNewItem: !1,
                     bAlreadyClaimedCurrentItem: !0,
                     rtNextClaimTime: Math.floor(Date.now() / 1e3) + 120,
                   });
                   break;
-                case bl.k_ClaimState_NoMoreClaimsLeft:
+                case El.k_ClaimState_NoMoreClaimsLeft:
                   r({ bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !0 });
               }
               t && t();
@@ -35483,18 +35495,18 @@
             },
             n.createElement(
               rt.a,
-              { value: bl.k_ClaimState_None },
+              { value: El.k_ClaimState_None },
               "No Claimable item",
             ),
-            n.createElement(rt.a, { value: bl.k_ClaimState_Now }, "Claim Now"),
+            n.createElement(rt.a, { value: El.k_ClaimState_Now }, "Claim Now"),
             n.createElement(
               rt.a,
-              { value: bl.k_ClaimState_Next },
+              { value: El.k_ClaimState_Next },
               "Claimed, Next Available...",
             ),
             n.createElement(
               rt.a,
-              { value: bl.k_ClaimState_NoMoreClaimsLeft },
+              { value: El.k_ClaimState_NoMoreClaimsLeft },
               "Claimed, No more Claimable item",
             ),
           ),
@@ -35505,10 +35517,10 @@
           (e.k_ClaimState_Now = "claimnow"),
           (e.k_ClaimState_Next = "nextclaim"),
           (e.k_ClaimState_NoMoreClaimsLeft = "nomoreclaims");
-      })(bl || (bl = {}));
-      var Tl = a(38886),
-        Il = a(70809);
-      function Ml(e) {
+      })(El || (El = {}));
+      var Bl = a(38886),
+        Tl = a(70809);
+      function Il(e) {
         var t, a;
         const { section: r, language: i, event: s } = e,
           o = (0, n.useMemo)(() => {
@@ -35570,7 +35582,7 @@
                         : t.while_supplies_last_option) || void 0 === a
                     ? void 0
                     : a.map((t) =>
-                        n.createElement(Al, {
+                        n.createElement(Ml, {
                           key: "supply" + t.unique_id,
                           ...e,
                           supplyInfo: t,
@@ -35597,7 +35609,7 @@
           ),
         );
       }
-      function Al(e) {
+      function Ml(e) {
         const { supplyInfo: t, language: a, event: r } = e,
           i = (0, ir.DR)(t.supply_package),
           s = (0, Ta.MU)(),
@@ -35662,7 +35674,7 @@
                     },
                     (0, M.we)("#Sale_Reservation_ExpectedDeliveryDate"),
                   ),
-                  (0, Il.x)(i),
+                  (0, Tl.x)(i),
                 ),
             )
           : n.createElement(S.t, {
@@ -35671,14 +35683,14 @@
               size: "medium",
             });
       }
-      var Dl = a(81057),
-        Gl = a.n(Dl),
-        kl = a(41388);
-      function Pl(e) {
+      var Al = a(81057),
+        Dl = a.n(Al),
+        Gl = a(41388);
+      function kl(e) {
         const { event: t, section: a, language: r } = e,
           i = (0, E.Qn)();
         return a.media_layout
-          ? a.media_layout.layout_type !== kl.RQ.QuadMedia
+          ? a.media_layout.layout_type !== Gl.RQ.QuadMedia
             ? null
             : n.createElement(
                 h.Ay,
@@ -35691,7 +35703,7 @@
                     className: (0, y.A)(u.SaleSection, c().SaleSectionCtn),
                     style: (0, d.Vb)(a, t, i),
                   },
-                  n.createElement(Rl, {
+                  n.createElement(Pl, {
                     event: t,
                     contents: a.media_layout.media_content,
                     language: r,
@@ -35700,7 +35712,7 @@
               )
           : null;
       }
-      function Rl(e) {
+      function Pl(e) {
         const { event: t, contents: a, language: r } = e,
           [i, s] = (0, n.useState)(0),
           o = (0, n.useRef)([!1, !1, !1, !1]),
@@ -35708,12 +35720,12 @@
           c = M.A0.GetELanguageFallback(r);
         return n.createElement(
           "div",
-          { className: Gl().QuadLayout },
+          { className: Dl().QuadLayout },
           a.map((e, a) =>
             n.createElement(
               "div",
               { key: `media_${a}` },
-              n.createElement(Nl, {
+              n.createElement(Rl, {
                 content: e,
                 IsTargetVideo: i === a,
                 onVisiblityChange: (e) => {
@@ -35736,7 +35748,7 @@
           ),
         );
       }
-      function Nl(e) {
+      function Rl(e) {
         const {
             content: t,
             IsTargetVideo: a,
@@ -35787,7 +35799,7 @@
           n.createElement(
             "div",
             {
-              className: (0, y.A)(Gl().VideoPlayerContainer, a && Gl().Focused),
+              className: (0, y.A)(Dl().VideoPlayerContainer, a && Dl().Focused),
               ref: d,
               onClick: _,
             },
@@ -35802,25 +35814,25 @@
           )
         );
       }
-      var Fl = a(88494),
-        Ol = a(40353),
-        Ll = a(65350),
-        zl = a(33645),
-        xl = a.n(zl),
-        Ul = a(76846),
-        Wl = a.n(Ul),
-        Hl = a(17224),
-        ql = a.n(Hl),
-        jl = a(45387),
-        Vl = a.n(jl);
-      function Ql(e, t) {
+      var Nl = a(88494),
+        Fl = a(40353),
+        Ol = a(65350),
+        Ll = a(33645),
+        zl = a.n(Ll),
+        xl = a(76846),
+        Ul = a.n(xl),
+        Wl = a(17224),
+        Hl = a.n(Wl),
+        ql = a(45387),
+        jl = a.n(ql);
+      function Vl(e, t) {
         let a;
         return (
-          t == kl.YI.k_Left
+          t == Gl.YI.k_Left
             ? (a = { "--horiz-margin-end": `${e}%` })
-            : t == kl.YI.k_Right
+            : t == Gl.YI.k_Right
               ? (a = { "--horiz-margin-start": `${e}%` })
-              : t == kl.YI.k_Center &&
+              : t == Gl.YI.k_Center &&
                 (a = {
                   "--horiz-margin-start": e / 2 + "%",
                   "--horiz-margin-end": e / 2 + "%",
@@ -35828,15 +35840,15 @@
           a
         );
       }
-      function Yl() {
+      function Ql() {
         const e = (0, b.ML)();
-        return e > parseInt(Vl().strMaxTabletWidth)
+        return e > parseInt(jl().strMaxTabletWidth)
           ? "desktop"
-          : e > parseInt(Vl().strMaxMobileWidth)
+          : e > parseInt(jl().strMaxMobileWidth)
             ? "tablet"
             : "mobile";
       }
-      function Kl(e) {
+      function Yl(e) {
         const { section: t, event: a, language: r, title: i, subtitle: s } = e,
           o = (0, Ta.yD)(),
           l =
@@ -35845,13 +35857,13 @@
         const c = s || (0, La.CP)(t, a, r);
         return n.createElement(
           "div",
-          { className: (0, y.A)(ql().TemplateLabelCtn) },
+          { className: (0, y.A)(Hl().TemplateLabelCtn) },
           n.createElement(
             "div",
-            { className: ql().SectionTitleInnerCtn },
+            { className: Hl().SectionTitleInnerCtn },
             n.createElement(
               "div",
-              { className: (0, y.A)(ql().SaleSectionHeader) },
+              { className: (0, y.A)(Hl().SaleSectionHeader) },
               l,
             ),
             Boolean(c) &&
@@ -35859,8 +35871,8 @@
                 "div",
                 {
                   className: (0, y.A)(
-                    ql().SaleSectionHeader,
-                    ql().SaleSectionSubtitle,
+                    Hl().SaleSectionHeader,
+                    Hl().SaleSectionSubtitle,
                   ),
                 },
                 c,
@@ -35868,29 +35880,29 @@
           ),
         );
       }
-      function Jl(e, t, a) {
+      function Kl(e, t, a) {
         let n, r, i;
         if (t) {
           const a = t.display_order;
           e >= 1 &&
           e <= 2 &&
           a &&
-          [kl.dv.k_HorizontalMediaFirst, kl.dv.k_HorizontalTextFirst].includes(
+          [Gl.dv.k_HorizontalMediaFirst, Gl.dv.k_HorizontalTextFirst].includes(
             a,
           )
             ? (n = t.text_scale)
             : a &&
               [
-                kl.dv.k_TitleDescOnly,
-                kl.dv.k_TitleDescMedia,
-                kl.dv.k_TitleMediaDesc,
-                kl.dv.k_MediaTitleDesc,
+                Gl.dv.k_TitleDescOnly,
+                Gl.dv.k_TitleDescMedia,
+                Gl.dv.k_TitleMediaDesc,
+                Gl.dv.k_MediaTitleDesc,
               ].includes(a) &&
               ((n = t.text_scale),
-              (r = t.text_scale_margin_alignment || kl.YI.k_Left));
+              (r = t.text_scale_margin_alignment || Gl.YI.k_Left));
         }
         return (
-          n && n > 0 && (i = r ? Ql(n, r) : { "--horiz-min-col": `${n}%` }),
+          n && n > 0 && (i = r ? Vl(n, r) : { "--horiz-min-col": `${n}%` }),
           e > 1 &&
             e < 4 &&
             a &&
@@ -35898,18 +35910,18 @@
           i
         );
       }
-      var Zl = a(86927),
-        Xl = a(94960),
-        $l = a.n(Xl),
-        ec = a(69484),
-        tc = a(78468),
-        ac = a.n(tc);
-      function nc(e) {
+      var Jl = a(86927),
+        Zl = a(94960),
+        Xl = a.n(Zl),
+        $l = a(69484),
+        ec = a(78468),
+        tc = a.n(ec);
+      function ac(e) {
         return e.href
           ? n.createElement(ko.d$, { ...e }, e.children)
           : n.createElement("div", { ...e }, e.children);
       }
-      function rc(e) {
+      function nc(e) {
         const { media: t, mediaType: a, setImageSize: r, maxWidthPx: i } = e,
           s = n.useCallback(
             (e) => {
@@ -35923,28 +35935,28 @@
             [r],
           ),
           o = { ...(i ? { maxWidth: `${i}px` } : {}) };
-        return a == kl.Cu.k_MediaTrailer
-          ? n.createElement(sc, {
+        return a == Gl.Cu.k_MediaTrailer
+          ? n.createElement(ic, {
               ...e,
               containerStyle: o,
               fnResizeObserver: s,
             })
           : t.video_webm_src
-            ? n.createElement(oc, {
+            ? n.createElement(sc, {
                 ...e,
                 containerStyle: o,
                 fnResizeObserver: s,
               })
-            : n.createElement(lc, {
+            : n.createElement(oc, {
                 ...e,
                 containerStyle: o,
                 fnResizeObserver: s,
               });
       }
-      const ic = { include_trailers: !0, include_assets: !0 };
-      function sc(e) {
+      const rc = { include_trailers: !0, include_assets: !0 };
+      function ic(e) {
         const { trailer_display: t, trailer_appid: a, trailer_base_id: r } = e,
-          [i, s] = (0, o.t7)(a, ic),
+          [i, s] = (0, o.t7)(a, rc),
           [l, c] = (0, n.useState)(!1),
           [d, u] = (0, n.useMemo)(() => {
             var e, t, a;
@@ -35973,10 +35985,10 @@
           ? n.createElement(
               n.Fragment,
               null,
-              (t == kl.XE.k_EDisplayScreenshot || !t) &&
-                n.createElement(lc, { ...e, media: d, onClick: () => c(!0) }),
-              t == kl.XE.k_EDisplayMicrotrailer &&
-                n.createElement(oc, { ...e, media: u, onClick: () => c(!0) }),
+              (t == Gl.XE.k_EDisplayScreenshot || !t) &&
+                n.createElement(oc, { ...e, media: d, onClick: () => c(!0) }),
+              t == Gl.XE.k_EDisplayMicrotrailer &&
+                n.createElement(sc, { ...e, media: u, onClick: () => c(!0) }),
               n.createElement(go.PE, {
                 storeItem: i,
                 bShowModal: l,
@@ -35985,7 +35997,7 @@
             )
           : null;
       }
-      function oc(e) {
+      function sc(e) {
         const {
             media: t,
             clanAccountID: a,
@@ -36003,24 +36015,24 @@
         return (
           t.video_webm_src &&
             _.push({
-              sURL: (0, ec.F)(a, t.video_webm_src),
+              sURL: (0, $l.F)(a, t.video_webm_src),
               sFormat: "video/webm",
             }),
           t.video_mp4_src &&
             _.push({
-              sURL: (0, ec.F)(a, t.video_mp4_src),
+              sURL: (0, $l.F)(a, t.video_mp4_src),
               sFormat: "video/mp4",
             }),
           n.createElement(
-            nc,
+            ac,
             {
               href: l ? void 0 : d,
-              className: (0, y.A)(ac().Ctn, s),
+              className: (0, y.A)(tc().Ctn, s),
               style: m,
             },
             n.createElement(dn.L, {
               ref: u,
-              video: { sPoster: (0, ec.F)(a, t.image), rgVideoSources: _ },
+              video: { sPoster: (0, $l.F)(a, t.image), rgVideoSources: _ },
               bAutoPlay: !0,
               bControls: !1,
               bLoop: !0,
@@ -36037,7 +36049,7 @@
           )
         );
       }
-      function lc(e) {
+      function oc(e) {
         const {
             media: t,
             clanAccountID: a,
@@ -36061,17 +36073,17 @@
           g = (0, fe.Ue)(d, p);
         return t.image && 0 !== t.image.trim().length
           ? n.createElement(
-              nc,
+              ac,
               {
-                className: (0, y.A)(ac().Ctn, i),
+                className: (0, y.A)(tc().Ctn, i),
                 style: s,
                 href: r ? void 0 : c,
               },
               n.createElement("img", {
-                className: (0, y.A)(ac().Image),
+                className: (0, y.A)(tc().Image),
                 ref: g,
                 onLoad: _,
-                src: (0, ec.F)(a, t.image),
+                src: (0, $l.F)(a, t.image),
                 alt: l,
                 style: { maxWidth: u ? `${u.width}px` : "100%" },
               }),
@@ -36084,12 +36096,12 @@
             )
           : null;
       }
-      var cc = a(67634),
-        dc = a.n(cc);
-      function uc(e) {
+      var lc = a(67634),
+        cc = a.n(lc);
+      function dc(e) {
         const { event: t, section: a, language: r } = e,
           i = (0, E.Qn)(),
-          s = Yl(),
+          s = Ql(),
           o =
             ("mobile" == s &&
               Boolean(a.media_overlay_mobile_content_varient)) ||
@@ -36111,7 +36123,7 @@
                               ? void 0
                               : e.media_type) && void 0 !== t
                           ? t
-                          : kl.Cu.k_MediaImage,
+                          : Gl.Cu.k_MediaImage,
                       unique_id: "overlay",
                     },
                   ],
@@ -36130,7 +36142,7 @@
                               ? void 0
                               : n.media_type) && void 0 !== r
                           ? r
-                          : kl.Cu.k_MediaImage,
+                          : Gl.Cu.k_MediaImage,
                       unique_id: "overlay",
                     },
                   ],
@@ -36151,16 +36163,16 @@
               className: (0, y.A)(
                 u.SaleSection,
                 c().SaleSectionCtn,
-                dc().Container,
+                cc().Container,
                 "TemplateMediaOverlay",
                 e.className,
               ),
               style: (0, d.Vb)(a, t, i),
             },
-            n.createElement(Kl, { section: a, event: t, language: r }),
+            n.createElement(Yl, { section: a, event: t, language: r }),
             o
-              ? n.createElement(gc, { ...e, row: l })
-              : n.createElement(mc, {
+              ? n.createElement(pc, { ...e, row: l })
+              : n.createElement(uc, {
                   media_overlay: a.media_overlay,
                   language: r,
                   event: t,
@@ -36169,7 +36181,7 @@
           ),
         );
       }
-      function mc(e) {
+      function uc(e) {
         const { media_overlay: t, language: a, event: r, section: i } = e,
           [
             s,
@@ -36200,7 +36212,7 @@
             var e, n, r, i, s, o, l, c;
             const d = M.A0.GetELanguageFallback(a);
             return [
-              (t && (null == t ? void 0 : t.text_placement)) || kl.HG.k_TopLeft,
+              (t && (null == t ? void 0 : t.text_placement)) || Gl.HG.k_TopLeft,
               null == t ? void 0 : t.media_type,
               t && t.localized_media && t.localized_media.length > 0
                 ? (null == t ? void 0 : t.localized_media[a]) ||
@@ -36306,47 +36318,47 @@
           });
         let k;
         if (w) {
-          let e = kl.YI.k_Left;
+          let e = Gl.YI.k_Left;
           if (s)
             switch (s) {
-              case kl.HG.k_TopLeft:
-              case kl.HG.k_LeftCenter:
-              case kl.HG.k_BottomLeft:
-                e = kl.YI.k_Left;
+              case Gl.HG.k_TopLeft:
+              case Gl.HG.k_LeftCenter:
+              case Gl.HG.k_BottomLeft:
+                e = Gl.YI.k_Left;
                 break;
-              case kl.HG.k_TopRight:
-              case kl.HG.k_RightCenter:
-              case kl.HG.k_BottomRight:
-                e = kl.YI.k_Right;
+              case Gl.HG.k_TopRight:
+              case Gl.HG.k_RightCenter:
+              case Gl.HG.k_BottomRight:
+                e = Gl.YI.k_Right;
                 break;
-              case kl.HG.k_TopCenter:
-              case kl.HG.k_Center:
-              case kl.HG.k_BottomCenter:
-                e = kl.YI.k_Center;
+              case Gl.HG.k_TopCenter:
+              case Gl.HG.k_Center:
+              case Gl.HG.k_BottomCenter:
+                e = Gl.YI.k_Center;
             }
-          k = Ql(w, e);
+          k = Vl(w, e);
         }
         return n.createElement(
           "div",
-          { className: (0, y.A)(dc().MediaOverlayCtn, e.className) },
+          { className: (0, y.A)(cc().MediaOverlayCtn, e.className) },
           n.createElement(
             "div",
             {
               className: (0, y.A)({
-                [dc().TopLeft]: !s || s == kl.HG.k_TopLeft,
-                [dc().TopCenter]: s == kl.HG.k_TopCenter,
-                [dc().TopRight]: s == kl.HG.k_TopRight,
-                [dc().LeftCenter]: s == kl.HG.k_LeftCenter,
-                [dc().Center]: s == kl.HG.k_Center,
-                [dc().RightCenter]: s == kl.HG.k_RightCenter,
-                [dc().BottomLeft]: s == kl.HG.k_BottomLeft,
-                [dc().BottomCenter]: s == kl.HG.k_BottomCenter,
-                [dc().BottomRight]: s == kl.HG.k_BottomRight,
-                [dc().TextSectionScaling]: !0,
+                [cc().TopLeft]: !s || s == Gl.HG.k_TopLeft,
+                [cc().TopCenter]: s == Gl.HG.k_TopCenter,
+                [cc().TopRight]: s == Gl.HG.k_TopRight,
+                [cc().LeftCenter]: s == Gl.HG.k_LeftCenter,
+                [cc().Center]: s == Gl.HG.k_Center,
+                [cc().RightCenter]: s == Gl.HG.k_RightCenter,
+                [cc().BottomLeft]: s == Gl.HG.k_BottomLeft,
+                [cc().BottomCenter]: s == Gl.HG.k_BottomCenter,
+                [cc().BottomRight]: s == Gl.HG.k_BottomRight,
+                [cc().TextSectionScaling]: !0,
               }),
               style: k,
             },
-            n.createElement(bc, {
+            n.createElement(Ec, {
               title: c,
               titleAlign: _,
               subtitle: d,
@@ -36367,20 +36379,20 @@
               titleOptionalURL: G,
             }),
           ),
-          n.createElement(rc, {
+          n.createElement(nc, {
             media: l,
             trailer_appid: C,
             trailer_base_id: B,
             trailer_display: T,
             mediaType: o,
-            className: dc().MediaMax,
+            className: cc().MediaMax,
             clanAccountID: r.clanSteamID.GetAccountID(),
             altText: I,
             optionalURL: D,
           }),
         );
       }
-      function _c(e) {
+      function mc(e) {
         var t, a;
         const { event: r, section: s, language: o } = e,
           [l, m, _, p, v, S] = (0, Xe.q3)(() => {
@@ -36410,14 +36422,14 @@
               (null === (r = null == s ? void 0 : s.media_container) ||
               void 0 === r
                 ? void 0
-                : r.mobile_carousel_style) || kl.wS.k_MobileCarousel_Disable,
+                : r.mobile_carousel_style) || Gl.wS.k_MobileCarousel_Disable,
             ];
           }),
           f = (0, E.Qn)(),
           w = (0, b.a4)(b.Wn),
-          C = Yl(),
+          C = Ql(),
           B = "mobile" == C || "tablet" == C,
-          T = S == kl.wS.k_MobileCarousel_Disable,
+          T = S == Gl.wS.k_MobileCarousel_Disable,
           I = m && (!B || !T),
           [A, D] = (0, n.useState)(() => Boolean(!I && l && _ < p)),
           G =
@@ -36431,7 +36443,7 @@
               : a
                   .filter((e, t) => !A || t < _)
                   .map((t, a) =>
-                    n.createElement(gc, {
+                    n.createElement(pc, {
                       key: "templategrid_" + s.unique_id + "_" + a,
                       ...e,
                       mobile_carousel_style: I && B ? S : void 0,
@@ -36449,12 +36461,12 @@
               className: (0, y.A)({
                 [u.SaleSection]: !0,
                 [c().SaleSectionCtn]: !0,
-                [$l().Container]: !0,
-                [$l().ContainerCarousel]: I,
+                [Xl().Container]: !0,
+                [Xl().ContainerCarousel]: I,
               }),
               style: (0, d.Vb)(s, r, f),
             },
-            n.createElement(Kl, { section: s, event: r, language: o }),
+            n.createElement(Yl, { section: s, event: r, language: o }),
             I
               ? n.createElement(
                   Er.F,
@@ -36468,7 +36480,7 @@
                     screenIsWide: w,
                     bAutoAdvance: v,
                     className: (0, y.A)({
-                      [$l().TemplateCarousel]: !0,
+                      [Xl().TemplateCarousel]: !0,
                       "template-carousel": !0,
                     }),
                   },
@@ -36493,17 +36505,17 @@
           ),
         );
       }
-      function pc(e, t) {
+      function _c(e, t) {
         return "mobile" == e && (null == t ? void 0 : t.mobile_content_varient)
           ? t.mobile_content_varient
           : "tablet" == e && (null == t ? void 0 : t.tablet_content_varient)
             ? t.tablet_content_varient
             : t;
       }
-      function gc(e) {
+      function pc(e) {
         var t, a;
         const { section: r, row: i, mobile_carousel_style: s } = e,
-          o = Yl(),
+          o = Ql(),
           [l, c] = (0, Xe.q3)(() => {
             var e, t;
             const a =
@@ -36513,9 +36525,9 @@
               n = a > 1 && a < 4 && void 0 !== i.grow_index ? 4 : a;
             let r = [];
             for (let e = 0; e < a; ++e) {
-              let n = Jl(
+              let n = Kl(
                 a,
-                pc(
+                _c(
                   o,
                   null === (t = i.media_columns) || void 0 === t
                     ? void 0
@@ -36556,22 +36568,22 @@
           "div",
           {
             className: (0, y.A)({
-              [$l().MediaRow]: !0,
-              [$l().RowSize1]: 1 == l,
-              [$l().RowSize2]: 2 == l,
-              [$l().RowSize3]: 3 == l,
-              [$l().RowSize4]: 4 == l,
-              [$l().MobileCarouselSnap]:
-                s == kl.wS.k_MobileCarousel_SnapCarousel,
-              [$l().MobileCarouselFull]:
-                s == kl.wS.k_MobileCarousel_PagedCArousel,
+              [Xl().MediaRow]: !0,
+              [Xl().RowSize1]: 1 == l,
+              [Xl().RowSize2]: 2 == l,
+              [Xl().RowSize3]: 3 == l,
+              [Xl().RowSize4]: 4 == l,
+              [Xl().MobileCarouselSnap]:
+                s == Gl.wS.k_MobileCarousel_SnapCarousel,
+              [Xl().MobileCarouselFull]:
+                s == Gl.wS.k_MobileCarousel_PagedCArousel,
             }),
           },
           null === (a = i.media_columns) || void 0 === a
             ? void 0
             : a.map((t, a) => {
-                let i = pc(o, t);
-                return n.createElement(vc, {
+                let i = _c(o, t);
+                return n.createElement(gc, {
                   key: "mc_" + r.unique_id + "_" + t.unique_id,
                   ...e,
                   content: i,
@@ -36586,7 +36598,7 @@
               }),
         );
       }
-      function vc(e) {
+      function gc(e) {
         const {
             event: t,
             section: a,
@@ -36628,7 +36640,7 @@
             var e, t, a, n, s, o, l;
             const c = M.A0.GetELanguageFallback(r);
             return [
-              i.display_order || kl.dv.k_HorizontalMediaFirst,
+              i.display_order || Gl.dv.k_HorizontalMediaFirst,
               i.media_type,
               i.localized_media && i.localized_media.length > 0
                 ? i.localized_media[r] || i.localized_media[c] || {}
@@ -36714,7 +36726,7 @@
               null == i ? void 0 : i.optional_url,
             ];
           });
-        return n.createElement(hc, {
+        return n.createElement(vc, {
           displayOrder: m,
           event: t,
           section: a,
@@ -36751,7 +36763,7 @@
           mediaOptionalURL: F,
         });
       }
-      function hc(e) {
+      function vc(e) {
         const {
             displayOrder: t,
             content: a,
@@ -36765,7 +36777,7 @@
           } = e,
           m = (0, E.Qn)(),
           _ = n.useRef(void 0),
-          p = (0, Zl.BZ)(_),
+          p = (0, Jl.BZ)(_),
           { bHighlighted: g } = (function (e, t, a) {
             n.useEffect(() => {
               ps.TU.Get().SetMouseOverSubsection(t, a);
@@ -36789,13 +36801,13 @@
         });
         const S =
             !t ||
-            t == kl.dv.k_HorizontalMediaFirst ||
-            t == kl.dv.k_MediaTitleDesc,
+            t == Gl.dv.k_HorizontalMediaFirst ||
+            t == Gl.dv.k_MediaTitleDesc,
           b = n.useRef(void 0),
           f = n.useCallback(
             (e) => {
               const a =
-                !t || t == kl.dv.k_TitleMediaDesc || kl.dv.k_TitleDescMedia
+                !t || t == Gl.dv.k_TitleMediaDesc || Gl.dv.k_TitleDescMedia
                   ? e.blockSize
                   : e.inlineSize;
               (b.current = a), null == o || o(S, s, a);
@@ -36811,41 +36823,41 @@
             {
               ref: _,
               className: (0, y.A)({
-                [$l().MediaCtn]: !0,
-                [$l().LivePreview]: g,
-                [$l().JumpedTo]: v,
-                [$l().HorizontalMediaFirst]:
-                  !t || t == kl.dv.k_HorizontalMediaFirst,
-                [$l().HorizontalTextFirst]: t == kl.dv.k_HorizontalTextFirst,
-                [$l().VerticalMediaFirst]: t == kl.dv.k_MediaTitleDesc,
-                [$l().VerticalTextFirst]: t == kl.dv.k_TitleDescMedia,
-                [$l().TextOnlyDisplay]: t == kl.dv.k_TitleDescOnly,
-                [$l().OverlayMedia]: t == kl.dv.k_OverlayMedia,
+                [Xl().MediaCtn]: !0,
+                [Xl().LivePreview]: g,
+                [Xl().JumpedTo]: v,
+                [Xl().HorizontalMediaFirst]:
+                  !t || t == Gl.dv.k_HorizontalMediaFirst,
+                [Xl().HorizontalTextFirst]: t == Gl.dv.k_HorizontalTextFirst,
+                [Xl().VerticalMediaFirst]: t == Gl.dv.k_MediaTitleDesc,
+                [Xl().VerticalTextFirst]: t == Gl.dv.k_TitleDescMedia,
+                [Xl().TextOnlyDisplay]: t == Gl.dv.k_TitleDescOnly,
+                [Xl().OverlayMedia]: t == Gl.dv.k_OverlayMedia,
               }),
               style: { ...(0, d.vU)(a, m), ...(null != u ? u : {}) },
             },
-            t == kl.dv.k_TitleDescOnly
-              ? n.createElement(bc, { ...e })
+            t == Gl.dv.k_TitleDescOnly
+              ? n.createElement(Ec, { ...e })
               : n.createElement(
                   n.Fragment,
                   null,
-                  t == kl.dv.k_OverlayMedia
-                    ? n.createElement(mc, {
+                  t == Gl.dv.k_OverlayMedia
+                    ? n.createElement(uc, {
                         ...e,
-                        className: $l().GridTemplateOverlay,
+                        className: Xl().GridTemplateOverlay,
                         media_overlay: a,
                       })
                     : n.createElement(
                         n.Fragment,
                         null,
                         S &&
-                          n.createElement(Sc, {
+                          n.createElement(hc, {
                             ...e,
                             mediaHeight: l,
                             setImageSize: f,
                           }),
                         !S &&
-                          n.createElement(yc, {
+                          n.createElement(Sc, {
                             ...e,
                             mediaHeight: c,
                             setImageSize: f,
@@ -36855,7 +36867,7 @@
           )
         );
       }
-      function Sc(e) {
+      function hc(e) {
         const {
           media: t,
           mediaOptionalURL: a,
@@ -36877,17 +36889,17 @@
             "div",
             {
               className: (0, y.A)({
-                [$l().Media]: !0,
-                [$l().HorizLeft]: i == kl.YI.k_Left,
-                [$l().HorizCenter]: !i || i == kl.YI.k_Center,
-                [$l().HorizRight]: i == kl.YI.k_Right,
-                [$l().VertTop]: s == kl.YI.k_Top,
-                [$l().VertCenter]: !s || s == kl.YI.k_Center,
-                [$l().VertBottom]: s == kl.YI.k_Bottom,
+                [Xl().Media]: !0,
+                [Xl().HorizLeft]: i == Gl.YI.k_Left,
+                [Xl().HorizCenter]: !i || i == Gl.YI.k_Center,
+                [Xl().HorizRight]: i == Gl.YI.k_Right,
+                [Xl().VertTop]: s == Gl.YI.k_Top,
+                [Xl().VertCenter]: !s || s == Gl.YI.k_Center,
+                [Xl().VertBottom]: s == Gl.YI.k_Bottom,
               }),
               style: { height: l },
             },
-            n.createElement(rc, {
+            n.createElement(nc, {
               media: t,
               mediaType: r,
               trailer_appid: d,
@@ -36899,10 +36911,10 @@
               optionalURL: a,
             }),
           ),
-          n.createElement(bc, { ...e }),
+          n.createElement(Ec, { ...e }),
         );
       }
-      function yc(e) {
+      function Sc(e) {
         const {
           media: t,
           mediaType: a,
@@ -36920,22 +36932,22 @@
         return n.createElement(
           n.Fragment,
           null,
-          n.createElement(bc, { ...e }),
+          n.createElement(Ec, { ...e }),
           n.createElement(
             "div",
             {
               className: (0, y.A)({
-                [$l().Media]: !0,
-                [$l().HorizLeft]: i == kl.YI.k_Left,
-                [$l().HorizCenter]: !i || i == kl.YI.k_Center,
-                [$l().HorizRight]: i == kl.YI.k_Right,
-                [$l().VertTop]: s == kl.YI.k_Top,
-                [$l().VertCenter]: !s || s == kl.YI.k_Center,
-                [$l().VertBottom]: s == kl.YI.k_Bottom,
+                [Xl().Media]: !0,
+                [Xl().HorizLeft]: i == Gl.YI.k_Left,
+                [Xl().HorizCenter]: !i || i == Gl.YI.k_Center,
+                [Xl().HorizRight]: i == Gl.YI.k_Right,
+                [Xl().VertTop]: s == Gl.YI.k_Top,
+                [Xl().VertCenter]: !s || s == Gl.YI.k_Center,
+                [Xl().VertBottom]: s == Gl.YI.k_Bottom,
               }),
               style: { height: l },
             },
-            n.createElement(rc, {
+            n.createElement(nc, {
               media: t,
               mediaType: a,
               trailer_appid: d,
@@ -36949,7 +36961,7 @@
           ),
         );
       }
-      function Ec(e) {
+      function yc(e) {
         const {
           title: t,
           subtitle: a,
@@ -36969,8 +36981,8 @@
         return c
           ? n.createElement(
               "div",
-              { className: $l().MediaLogo },
-              n.createElement(rc, {
+              { className: Xl().MediaLogo },
+              n.createElement(nc, {
                 media: c,
                 mediaType: d,
                 mediaScale: _,
@@ -36982,24 +36994,24 @@
           : n.createElement(
               n.Fragment,
               null,
-              n.createElement(Bc, {
+              n.createElement(Cc, {
                 event: s,
-                className: $l().TextFirstTitle,
+                className: Xl().TextFirstTitle,
                 title: t,
                 eTitleDisplaySize: r,
                 eTextAlign: i,
                 language: o,
               }),
-              n.createElement(fc, {
+              n.createElement(bc, {
                 event: s,
-                className: $l().TextFirstTitle,
+                className: Xl().TextFirstTitle,
                 subtitle: a,
                 eTextAlign: l,
                 language: o,
               }),
             );
       }
-      function bc(e) {
+      function Ec(e) {
         const {
           description: t,
           event: a,
@@ -37012,14 +37024,14 @@
           "div",
           {
             className: (0, y.A)({
-              [$l().TitleDescriptionCtn]: !0,
-              [$l().TitleSubDescVAlignTop]: o == kl.YI.k_Top,
-              [$l().TitleSubDescVAlignCenter]: o == kl.YI.k_Center || !o,
-              [$l().TitleSubDescVAlignBottom]: o == kl.YI.k_Bottom,
+              [Xl().TitleDescriptionCtn]: !0,
+              [Xl().TitleSubDescVAlignTop]: o == Gl.YI.k_Top,
+              [Xl().TitleSubDescVAlignCenter]: o == Gl.YI.k_Center || !o,
+              [Xl().TitleSubDescVAlignBottom]: o == Gl.YI.k_Bottom,
             }),
           },
-          n.createElement(Ec, { ...e }),
-          n.createElement(Tc, {
+          n.createElement(yc, { ...e }),
+          n.createElement(Bc, {
             event: a,
             description: t,
             eTextAlign: i,
@@ -37028,7 +37040,7 @@
           }),
         );
       }
-      function fc(e) {
+      function bc(e) {
         const {
             event: t,
             subtitle: a,
@@ -37037,18 +37049,18 @@
             eTextAlign: s,
           } = e,
           o = (0, Ta.MU)();
-        return Cc(a)
+        return wc(a)
           ? null
           : n.createElement(
               "div",
               {
                 className: (0, y.A)({
-                  [$l().Subtitle]: !0,
+                  [Xl().Subtitle]: !0,
                   ...(r && { [r]: !0 }),
-                  [$l().Left]: !s || s == kl.YI.k_Left,
-                  [$l().Center]: s == kl.YI.k_Center,
-                  [$l().Right]: s == kl.YI.k_Right,
-                  [xl().TemplateMediaTitle]: !0,
+                  [Xl().Left]: !s || s == Gl.YI.k_Left,
+                  [Xl().Center]: s == Gl.YI.k_Center,
+                  [Xl().Right]: s == Gl.YI.k_Right,
+                  [zl().TemplateMediaTitle]: !0,
                 }),
               },
               n.createElement(lr.fh, {
@@ -37060,11 +37072,11 @@
               }),
             );
       }
-      const wc = "[p][/p]";
-      function Cc(e) {
-        return !e || 0 == e.length || (e.length == wc.length && e == wc);
+      const fc = "[p][/p]";
+      function wc(e) {
+        return !e || 0 == e.length || (e.length == fc.length && e == fc);
       }
-      function Bc(e) {
+      function Cc(e) {
         const {
             event: t,
             title: a,
@@ -37074,22 +37086,22 @@
             eTextAlign: o,
           } = e,
           l = (0, Ta.MU)();
-        return Cc(a)
+        return wc(a)
           ? null
           : n.createElement(
               "div",
               {
                 className: (0, y.A)({
-                  [$l().Title]: !0,
+                  [Xl().Title]: !0,
                   ...(r && { [r]: !0 }),
-                  [$l().H1]: i == kl.V8.k_Header1,
-                  [$l().H2]: i == kl.V8.k_Header2,
-                  [$l().H3]: i == kl.V8.k_Header3,
-                  [$l().HeaderFullWidth]: i == kl.V8.k_HeaderFullWidth,
-                  [$l().Left]: !o || o == kl.YI.k_Left,
-                  [$l().Center]: o == kl.YI.k_Center,
-                  [$l().Right]: o == kl.YI.k_Right,
-                  [xl().TemplateMediaTitle]: !0,
+                  [Xl().H1]: i == Gl.V8.k_Header1,
+                  [Xl().H2]: i == Gl.V8.k_Header2,
+                  [Xl().H3]: i == Gl.V8.k_Header3,
+                  [Xl().HeaderFullWidth]: i == Gl.V8.k_HeaderFullWidth,
+                  [Xl().Left]: !o || o == Gl.YI.k_Left,
+                  [Xl().Center]: o == Gl.YI.k_Center,
+                  [Xl().Right]: o == Gl.YI.k_Right,
+                  [zl().TemplateMediaTitle]: !0,
                 }),
               },
               n.createElement(lr.fh, {
@@ -37101,7 +37113,7 @@
               }),
             );
       }
-      function Tc(e) {
+      function Bc(e) {
         const {
             event: t,
             description: a,
@@ -37110,20 +37122,20 @@
             eDescriptionDisplaySize: s,
           } = e,
           o = (0, Ta.MU)();
-        return Cc(a)
+        return wc(a)
           ? null
           : n.createElement(
               "div",
               {
                 className: (0, y.A)({
-                  [$l().Description]: !0,
-                  [$l().Left]: !i || i == kl.YI.k_Left,
-                  [$l().Center]: i == kl.YI.k_Center,
-                  [$l().Right]: i == kl.YI.k_Right,
-                  [$l().H1]: s == kl.V8.k_Header1,
-                  [$l().H2]: s == kl.V8.k_Header2,
-                  [$l().H3]: s == kl.V8.k_Header3,
-                  [xl().TemplateMediaDescription]: !0,
+                  [Xl().Description]: !0,
+                  [Xl().Left]: !i || i == Gl.YI.k_Left,
+                  [Xl().Center]: i == Gl.YI.k_Center,
+                  [Xl().Right]: i == Gl.YI.k_Right,
+                  [Xl().H1]: s == Gl.V8.k_Header1,
+                  [Xl().H2]: s == Gl.V8.k_Header2,
+                  [Xl().H3]: s == Gl.V8.k_Header3,
+                  [zl().TemplateMediaDescription]: !0,
                 }),
               },
               n.createElement(lr.fh, {
@@ -37135,7 +37147,7 @@
               }),
             );
       }
-      function Ic(e) {
+      function Tc(e) {
         var t;
         const { event: a, section: r, language: i } = e,
           s = (0, Ta.MU)(),
@@ -37170,22 +37182,22 @@
               rootMargin: b.$m,
               className: (0, y.A)({
                 [u.SaleSection]: !0,
-                [Wl().ColumnFormatCtn]: _ == ni.nx.TemplateFAQDisplayColumn,
-                [Wl().SimpleRowCtn]: _ == ni.nx.TemplateFAQDisplaySimpleRow,
+                [Ul().ColumnFormatCtn]: _ == ni.nx.TemplateFAQDisplayColumn,
+                [Ul().SimpleRowCtn]: _ == ni.nx.TemplateFAQDisplaySimpleRow,
               }),
               style: (0, d.Vb)(r, a, o),
             },
-            n.createElement(Kl, { section: r, event: a, language: i }),
+            n.createElement(Yl, { section: r, event: a, language: i }),
             Boolean(
               null === (t = r.quiz) || void 0 === t ? void 0 : t.titleSubDesc,
             ) &&
-              n.createElement(Mc, {
+              n.createElement(Ic, {
                 titleSubDesc: r.quiz.titleSubDesc,
                 event: a,
                 language: i,
               }),
             m.map((e, t) =>
-              n.createElement(Ac, {
+              n.createElement(Mc, {
                 key: e.unique_id,
                 iQuestionIndex: t,
                 question: e,
@@ -37199,7 +37211,7 @@
           ),
         );
       }
-      function Mc(e) {
+      function Ic(e) {
         const { event: t, language: a, titleSubDesc: r } = e,
           i = M.A0.GetELanguageFallback(a),
           [s, o, l, c, d, u, m, _, p, g, v] = (0, Xe.q3)(() => {
@@ -37267,7 +37279,7 @@
                 : _.optional_url,
             ];
           });
-        return n.createElement(Ec, {
+        return n.createElement(yc, {
           event: t,
           language: a,
           title: s,
@@ -37283,7 +37295,7 @@
           titleOptionalURL: v,
         });
       }
-      function Ac(e) {
+      function Mc(e) {
         var t, a, r, i, s, o, l, c, d, u, m, _;
         const {
             question: p,
@@ -37353,16 +37365,16 @@
           "div",
           {
             className: (0, y.A)({
-              [Wl().QuestionCtn]: !0,
+              [Ul().QuestionCtn]: !0,
               QuestionCtn: !0,
-              [Wl().DisplayBorder]: b,
+              [Ul().DisplayBorder]: b,
             }),
             style: { background: I, borderColor: S || "#707277" },
           },
           n.createElement(
             "div",
             {
-              className: (0, y.A)({ [Wl().Question]: !0, [xl().Question]: !0 }),
+              className: (0, y.A)({ [Ul().Question]: !0, [zl().Question]: !0 }),
             },
             n.createElement(lr.fh, {
               text: w || "",
@@ -37374,7 +37386,7 @@
           ),
           n.createElement(
             "div",
-            { className: (0, y.A)({ [Wl().Answer]: !0, [xl().Answer]: !0 }) },
+            { className: (0, y.A)({ [Ul().Answer]: !0, [zl().Answer]: !0 }) },
             n.createElement(lr.fh, {
               text: C || "",
               partnerEventStore: ka.O3,
@@ -37385,9 +37397,9 @@
           ),
         );
       }
-      var Dc = a(94581),
-        Gc = a.n(Dc);
-      function kc(e) {
+      var Ac = a(94581),
+        Dc = a.n(Ac);
+      function Gc(e) {
         var t, a, r;
         const { event: i, section: s, language: o } = e,
           l = (0, Ta.MU)(),
@@ -37414,11 +37426,11 @@
               ),
               style: (0, d.Vb)(s, i, m),
             },
-            n.createElement(Kl, { section: s, event: i, language: o }),
+            n.createElement(Yl, { section: s, event: i, language: o }),
             Boolean(p) &&
               n.createElement(
                 "div",
-                { className: Gc().description },
+                { className: Dc().description },
                 n.createElement(lr.fh, {
                   text: p,
                   partnerEventStore: ka.O3,
@@ -37434,7 +37446,7 @@
                   : a.tech_spec_block_list) || void 0 === r
               ? void 0
               : r.map((e) =>
-                  n.createElement(Pc, {
+                  n.createElement(kc, {
                     key: "tsblock_" + e.unique_id,
                     block: e,
                     language: o,
@@ -37444,7 +37456,7 @@
           ),
         );
       }
-      function Pc(e) {
+      function kc(e) {
         var t;
         const { block: a, language: r, fallbackLanguage: i } = e,
           s =
@@ -37456,9 +37468,9 @@
         return n.createElement(
           "div",
           null,
-          n.createElement("div", { className: Gc().BlockTitle }, s),
+          n.createElement("div", { className: Dc().BlockTitle }, s),
           a.spec_list.map((e) =>
-            n.createElement(Rc, {
+            n.createElement(Pc, {
               key: "tsitem_" + e.unique_id + "_" + a.unique_id,
               item: e,
               language: r,
@@ -37467,7 +37479,7 @@
           ),
         );
       }
-      function Rc(e) {
+      function Pc(e) {
         var t, a;
         const { item: r, language: i, fallbackLanguage: s } = e,
           o =
@@ -37502,7 +37514,7 @@
           ),
         );
       }
-      function Nc(e) {
+      function Rc(e) {
         var t, a, r, i;
         const { event: s, section: o, activeTab: l, language: c } = e,
           d = (0, E.Qn)();
@@ -37519,7 +37531,7 @@
           case "itemdef":
             return n.createElement(Ar.r, { ...e });
           case "point_shop_smart":
-            return n.createElement(Tl.M, { ...e });
+            return n.createElement(Bl.M, { ...e });
           case "broadcast":
             if (s.BEventCanShowBroadcastWidget()) {
               const r = s.jsondata.sale_sections.find(
@@ -37604,7 +37616,7 @@
                 case "reservation_widget":
                   return n.createElement(pr, { ...e });
                 case "while_supplies_last":
-                  return n.createElement(Ml, { ...e });
+                  return n.createElement(Il, { ...e });
                 case "cyoa_story":
                   return n.createElement(Xo, { ...e });
                 case "greatondeck_librarygrid":
@@ -37700,13 +37712,13 @@
           case "social_share":
             return n.createElement(Ds, { ...e });
           case "dlc_for_you":
-            return n.createElement(dl, { ...e });
+            return n.createElement(cl, { ...e });
           case "claim_item":
-            return n.createElement(Cl, { ...e });
+            return n.createElement(wl, { ...e });
           case "controller_type":
             return n.createElement(il, { ...e });
           case "footer_browse_more":
-            return n.createElement(Fl.z, { event: s });
+            return n.createElement(Nl.z, { event: s });
           case "footer_default_social_share":
             return n.createElement(Fs, { eventModel: s });
           case "reference_section":
@@ -37717,15 +37729,15 @@
           case "unselected_empty":
             break;
           case "template_faq":
-            return n.createElement(Ic, { ...e });
+            return n.createElement(Tc, { ...e });
           case "template_techspec":
-            return n.createElement(kc, { ...e });
+            return n.createElement(Gc, { ...e });
           case "template_media_content":
-            return n.createElement(_c, { ...e });
+            return n.createElement(mc, { ...e });
           case "template_media_overlay":
-            return n.createElement(uc, { ...e });
+            return n.createElement(dc, { ...e });
           case "media_layout":
-            return n.createElement(Pl, { ...e });
+            return n.createElement(kl, { ...e });
           default:
             ("dev" != E.TS.WEB_UNIVERSE && "beta" != E.TS.WEB_UNIVERSE) ||
               console.error(
@@ -37733,12 +37745,12 @@
                   o.section_type,
               );
         }
-        return e.ePreviewMode === Ol.S.EPreviewMode_EditBackground
+        return e.ePreviewMode === Fl.S.EPreviewMode_EditBackground
           ? ("dev" == E.TS.WEB_UNIVERSE &&
               console.log(
                 "Dev Debug: not rendering section type: " + o.section_type,
               ),
-            n.createElement(Ll.E, {
+            n.createElement(Ol.E, {
               section: o,
               event: s,
               language: c,
@@ -37828,26 +37840,6 @@
           e.estimated_delivery_soonest_business_days,
           e.estimated_delivery_latest_business_days,
         );
-      }
-    },
-    25809: (e, t, a) => {
-      "use strict";
-      a.d(t, { l: () => r });
-      var n = a(61859);
-      function r(e, t = "#Played_", a = !1) {
-        if (e >= 120) {
-          let a = e / 60;
-          a = Math.round(10 * a) / 10;
-          let r = n.pf.GetPreferredLocales(),
-            i = a.toLocaleString(r, {
-              minimumFractionDigits: 0,
-              maximumFractionDigits: 1,
-            });
-          return (0, n.we)(t + "Hours", i);
-        }
-        return a && 1 == e
-          ? (0, n.we)(t + "Minute", e)
-          : (0, n.we)(t + "Minutes", e);
       }
     },
     10886: (e, t, a) => {

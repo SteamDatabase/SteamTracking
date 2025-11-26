@@ -266,6 +266,7 @@
     "Chat_Actions_DeleteChatMessages": "Smazat zprávy",
     "Chat_Actions_Select_Message": "Vybrat zprávu",
     "Chat_Actions_Report": "Nahlásit",
+    "Chat_Actions_ReportGroup": "Nahlásit místnost",
     "Chat_Actions_React": "Reagovat",
     "Chat_Actions_Delete": "Smazat",
     "Chat_Actions_DeleteChatMessages_Confirm": "Opravdu chcete smazat tyto zprávy uživatele %1$s?",
@@ -1195,6 +1196,5 @@
     "changeLog_UpdateItem57": "Byl opraven seznam přátel a okna konverzací, která se v systémech Linux a macOS nezobrazovala v překrytí služby Steam.",
     "BBCode_Loading": "Načítání",
     "BBCode_Failed": "Načítání se nezdařilo",
-    "broadcastDetails_Playing": "Hraje",
-    "Chat_Actions_ReportGroup": "Nahlásit místnost"
+    "broadcastDetails_Playing": "Hraje"
 }

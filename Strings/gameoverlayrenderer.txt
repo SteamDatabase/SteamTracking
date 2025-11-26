@@ -490,7 +490,6 @@ __register_atfork
 __snprintf_chk
 __sprintf_chk
 __stack_chk_fail
-__stpcpy_chk
 __strcat_chk
 __vfprintf_chk
 __vsnprintf_chk

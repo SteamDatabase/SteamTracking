@@ -1527,22 +1527,24 @@
             ),
           null === (_ = _.tags) ||
             void 0 === _ ||
-            _.forEach((_) => __webpack_require__.ToggleTag(_));
+            _.forEach((_) => __webpack_require__.ToggleTag(_)),
+          __webpack_require__.SetStartTimeEditChoice(_._.k_ENow),
+          __webpack_require__.SetEventStartTime(void 0),
+          __webpack_require__.SetVisibilityStartTime(void 0),
+          __webpack_require__.SetVisibilityPublishingSetup(_._.immediate),
+          __webpack_require__.SetEarliestAllowedStartTime(void 0);
         const _ = _._.GetTimeNowWithOverride();
-        _.earliestAllowedStartTime
-          ? (__webpack_require__.SetEarliestAllowedStartTime(
+        _.earliestAllowedStartTime &&
+          (__webpack_require__.SetEarliestAllowedStartTime(
+            _.earliestAllowedStartTime,
+          ),
+          _.earliestAllowedStartTime > _ &&
+            (__webpack_require__.SetStartTimeEditChoice(_._.k_ESpecified),
+            __webpack_require__.SetEventStartTime(_.earliestAllowedStartTime),
+            __webpack_require__.SetVisibilityStartTime(
               _.earliestAllowedStartTime,
             ),
-            _.earliestAllowedStartTime > _ &&
-              (__webpack_require__.SetStartTimeEditChoice(_._.k_ESpecified),
-              __webpack_require__.SetEventStartTime(_.earliestAllowedStartTime),
-              __webpack_require__.SetVisibilityStartTime(
-                _.earliestAllowedStartTime,
-              ),
-              __webpack_require__.SetVisibilityPublishingSetup(
-                _._.event_start,
-              )))
-          : __webpack_require__.SetEarliestAllowedStartTime(void 0),
+            __webpack_require__.SetVisibilityPublishingSetup(_._.event_start))),
           _.initialSaleJSON &&
             (__webpack_require__.GetEventModel().jsondata = {
               ...__webpack_require__.GetEventModel().jsondata,
@@ -4907,7 +4909,7 @@
             string: (0, _._)("#Loading"),
           });
         if (_) {
-          const _ = 36 == _.GetEventType();
+          _.GetEventType();
           return _.createElement(
             _._,
             null,
@@ -4932,14 +4934,6 @@
                     position: "relative",
                   },
                 },
-                !_ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().StoreNavigationPlaceholder,
-                    },
-                    (0, _._)("#Sale_ReservedStoreNavigation"),
-                  ),
                 _.createElement(_._, {
                   eventModel: _,
                   bIsPreview: !0,
@@ -38246,8 +38240,7 @@
           return _.s_singleton || (_.s_singleton = new _()), _.s_singleton;
         }
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         var _, _, _, _, _, _, _, _;
         const { event: _, section: _, activeTab: _ } = _,
@@ -38587,7 +38580,22 @@
           _ =
             Boolean(_) &&
             _ > 0 &&
-            (0, _._)("#DLCForYou_ParentApp_Playtime") + (0, _._)(_);
+            (0, _._)("#DLCForYou_ParentApp_Playtime") +
+              (function (_, _ = "#Played_", _ = !1) {
+                if (_ >= 120) {
+                  let _ = _ / 60;
+                  _ = Math.round(10 * _) / 10;
+                  let _ = _._.GetPreferredLocales(),
+                    _ = __webpack_require__.toLocaleString(_, {
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 1,
+                    });
+                  return (0, _._)(_ + "Hours", _);
+                }
+                return _ && 1 == _
+                  ? (0, _._)(_ + "Minute", _)
+                  : (0, _._)(_ + "Minutes", _);
+              })(_);
         return _.createElement(_, {
           ..._,
           capsules: _,
@@ -41974,28 +41982,6 @@
           _.estimated_delivery_soonest_business_days,
           _.estimated_delivery_latest_business_days,
         );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_, _ = "#Played_", __webpack_require__ = !1) {
-        if (_ >= 120) {
-          let _ = _ / 60;
-          _ = Math.round(10 * _) / 10;
-          let _ = _._.GetPreferredLocales(),
-            _ = __webpack_require__.toLocaleString(_, {
-              minimumFractionDigits: 0,
-              maximumFractionDigits: 1,
-            });
-          return (0, _._)(_ + "Hours", _);
-        }
-        return _ && 1 == _
-          ? (0, _._)(_ + "Minute", _)
-          : (0, _._)(_ + "Minutes", _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -22548,6 +22548,12 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  language_override: {
+                    _: 4,
+                    _: 0,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -24458,10 +24464,10 @@
             }
           );
         }
-        async TestFireEmailToSelf(_, _ = 220) {
+        async TestFireEmailToSelf(_, _ = 220, _) {
           const _ = _._.Init(_);
-          __webpack_require__.Body().set_email_def_id(_.GetServerEmailDefID()),
-            __webpack_require__.Body().set_appid(_);
+          _.Body().set_email_def_id(_.GetServerEmailDefID()),
+            _.Body().set_appid(_);
           let _ = 2;
           try {
             const _ = await _.TestFirePartnerAppOptInEmail(
@@ -31531,6 +31537,7 @@
         "images/applications/appmgmt/Logo_Steamworks.png?v=valveisgoodatcaching";
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const {
@@ -33352,14 +33359,19 @@
       function _(_) {
         const { emailDef: _ } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _._)(() => [_.GetOwningOptInName(), _.GetEmailImage(_)]);
+          _ = (0, _._)(_._.GetLanguageFallback((0, _._)(_))),
+          [_, _, _] = (0, _._)(() => [
+            _.GetOwningOptInName(),
+            _.GetEmailImage(_),
+            _.GetEmailImage(_),
+          ]);
         return _.createElement(
           "div",
           {
             className: _().SectionBody,
           },
-          _.createElement("img", {
-            src: (0, _._)(_, _, _),
+          _.createElement(_._, {
+            rgSources: [(0, _._)(_, _, _), (0, _._)(_, _, _)],
           }),
         );
       }
@@ -35839,6 +35851,7 @@
       }
       const _ = (_) => {
         const { closeModal: _, emailDef: __webpack_require__ } = _,
+          _ = (0, _._)(),
           _ = (0, _._)();
         return _.bLoading
           ? _.createElement(_._, {
@@ -35865,7 +35878,7 @@
                     _ = _[Math.floor(Math.random() * _.length)];
                   }
                   _.Get()
-                    .TestFireEmailToSelf(__webpack_require__, _)
+                    .TestFireEmailToSelf(__webpack_require__, _, _)
                     .then((_) => {
                       1 != _
                         ? (_.fnSetError(!0),
@@ -35884,6 +35897,11 @@
                 "div",
                 null,
                 "With a saved and published OptIn state, we can manually test fire this to myself, as verification of the final emails look and feel and content.\tOnce you click send, it may take a little while to process, so be patient.",
+              ),
+              _.createElement(
+                "p",
+                null,
+                "We use the currently selected language to localize the email to, with appropriate fallbacks.",
               ),
             );
       };
@@ -62891,7 +62909,7 @@
         const { fnResetDirtyPlan: _ } = (0, _._)(),
           { fnResetDirtyPlanInputPipeline: __webpack_require__ } = (0, _._)(),
           [_, _] = (0, _._)("tab", "current"),
-          [_, _] = (0, _.useState)(""),
+          [_, _] = (0, _._)("search", ""),
           [_, _] = (0, _._)("filter_account", 0),
           [_, _] = (0, _.useState)(() => !_(_._, _._).has("dailydeal")),
           _ = (0, _._)();
@@ -62922,8 +62940,9 @@
                 : _,
             [_, _],
           ),
-          [_, _, _, _, _, _, _, _, _] = (0, _.useMemo)(() => {
+          [_, _, _, _, _, _, _, _, _, _] = (0, _.useMemo)(() => {
             const _ = new Array(),
+              _ = new Array(),
               _ = new Array(),
               _ = new Array(),
               _ = new Array(),
@@ -62971,19 +62990,20 @@
                       ? _.push(_._)
                       : Boolean(_.delivery_review_time)
                         ? _.push(_._)
-                        : Boolean(
-                              _?.submitting_accountid ||
-                                _?.submitting_rtime ||
-                                _.associated_asset_url,
-                            )
-                          ? __webpack_require__.push(_._)
-                          : Boolean(_?.art_requests?.length > 0)
-                            ? _.push(_._)
-                            : _.push(_._);
+                        : (Boolean(
+                            _?.submitting_accountid ||
+                              _?.submitting_rtime ||
+                              _.associated_asset_url,
+                          )
+                            ? __webpack_require__.push(_._)
+                            : Boolean(_?.art_requests?.length > 0)
+                              ? _.push(_._)
+                              : _.push(_._),
+                          _.artwork_owner_account_id && _.push(_._));
                   }
                 }
               }),
-              [_, _, _, _, _, _, _, _, _]
+              [_, _, _, _, _, _, _, _, _, _]
             );
           }, [_, _]),
           _ = (0, _.useCallback)(
@@ -63064,13 +63084,14 @@
               onClick: _,
             },
             {
-              name: `Awaiting Design (${_?.length || 0})`,
+              name: `Awaiting Design (${_?.length || 0})${_?.length ? " +(" + _?.length + ")" : ""}`,
               key: "await_artteam",
               contents: _.createElement(
                 _._,
                 null,
                 _.createElement(_._, {
                   planIDs: _,
+                  shadowPlanIDs: _,
                   sortByUnclaimedField: "artwork_owner_account_id",
                   bAllowAutoRefresh: !0,
                   nUrgentWindowInSeconds: 1 * _._.PerDay,
@@ -63182,6 +63203,7 @@
                   tooltip:
                     "Only an in-memory search of plan name, admin notes and store item id",
                   value: _,
+                  bAlwaysShowClearAction: !0,
                   onChange: (_) => {
                     _(_?.currentTarget?.value || ""),
                       _?.currentTarget?.value.trim().length > 0
@@ -80323,14 +80345,13 @@
       function _(_) {
         const {
             planIDs: _,
-            fnDisplayDueDate: __webpack_require__,
+            shadowPlanIDs: __webpack_require__,
+            fnDisplayDueDate: _,
             bExcludeHideButton: _,
             bHideTypeField: _,
-            bShowProgress: _,
             sortByUnclaimedField: _,
             bHideDoneByDefault: _,
             bAllowAutoRefresh: _,
-            nUrgentWindowInSeconds: _,
           } = _,
           [_, _] = (0, _.useState)(!0),
           [_, _] = (0, _.useState)(_),
@@ -80344,124 +80365,164 @@
               _
             );
           }, [_]);
-        if (0 == _?.length)
-          return _.createElement(
-            "div",
-            {
-              className: _.NoResults,
-            },
-            "No Items to Show",
-          );
-        const _ = _._.GetTimeNowWithOverride();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: _().FlexRowContainer,
-            },
-            !_ &&
-              _.createElement(_._, {
-                label: "Hide Past Events",
-                checked: _,
-                onChange: _,
-              }),
-            _.createElement(_._, {
-              label: `Hide Fully Reviewed (${_})`,
-              checked: _,
-              onChange: _,
-            }),
-            Boolean(_) &&
-              _.createElement(_._, {
-                label: "Sort Unclaimed First",
-                checked: _,
-                onChange: _,
-              }),
-            Boolean(_) && _.createElement(_, null),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_.Row, _.Primary, _.HeaderRow),
-            },
-            _.createElement(
+        return 0 == _?.length
+          ? _.createElement(
               "div",
               {
-                className: (0, _._)(_.Col, _.ItemName),
+                className: _.NoResults,
               },
-              "Plan Name",
-            ),
-            !_ &&
+              "No Items to Show",
+            )
+          : _.createElement(
+              _.Fragment,
+              null,
               _.createElement(
                 "div",
                 {
-                  className: (0, _._)(_.Col, _.Type),
+                  className: _().FlexRowContainer,
                 },
-                "Promo Type",
-              ),
-            Boolean(__webpack_require__) &&
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_.Col, _.Date),
-                },
-                "Due Date",
-              ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.Col, _.Date),
-              },
-              "Date Range",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.Col, _.Creator),
-              },
-              "Plan Owner",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.Col, _.Creator),
-              },
-              "Operator",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.Col, _.Creator),
-              },
-              "Production Designer",
-            ),
-          ),
-          _.createElement(
-            "div",
-            null,
-            _.filter((_) => !_ || (0, _._)(_)?.end_date > _)
-              .filter((_) => !_ || !(0, _._)(_)?.reviewed_by_account)
-              .sort((_, _) => {
-                const _ = (0, _._)(_),
-                  _ = (0, _._)(_);
-                if (_ && _) {
-                  if (!_[_]) return -1;
-                  if (!_[_]) return 1;
-                }
-                return _?.start_date - _?.start_date;
-              })
-              .map((_) =>
-                _.createElement(_, {
-                  key: _,
-                  planID: _,
-                  bHideTypeField: _,
-                  bShowProgress: _,
-                  nUrgentWindowInSeconds: _,
-                  fnDisplayDueDate: __webpack_require__,
+                !_ &&
+                  _.createElement(_._, {
+                    label: "Hide Past Events",
+                    checked: _,
+                    onChange: _,
+                  }),
+                _.createElement(_._, {
+                  label: `Hide Fully Reviewed (${_})`,
+                  checked: _,
+                  onChange: _,
                 }),
+                Boolean(_) &&
+                  _.createElement(_._, {
+                    label: "Sort Unclaimed First",
+                    checked: _,
+                    onChange: _,
+                  }),
+                Boolean(_) && _.createElement(_, null),
               ),
-          ),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_.Row, _.Primary, _.HeaderRow),
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_.Col, _.ItemName),
+                  },
+                  "Plan Name",
+                ),
+                !_ &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_.Col, _.Type),
+                    },
+                    "Promo Type",
+                  ),
+                Boolean(_) &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: (0, _._)(_.Col, _.Date),
+                    },
+                    "Due Date",
+                  ),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_.Col, _.Date),
+                  },
+                  "Date Range",
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_.Col, _.Creator),
+                  },
+                  "Plan Owner",
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_.Col, _.Creator),
+                  },
+                  "Operator",
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_.Col, _.Creator),
+                  },
+                  "Production Designer",
+                ),
+              ),
+              _.createElement(_, {
+                ..._,
+                bHidePastEvents: _,
+                bHideFullyReviewedEvents: _,
+                bSortUnclaimedFirst: _,
+              }),
+              __webpack_require__ &&
+                __webpack_require__?.length > 0 &&
+                _.createElement(
+                  "div",
+                  null,
+                  _.createElement("br", null),
+                  _.createElement("hr", null),
+                  _.createElement(
+                    "p",
+                    null,
+                    "These plans have moved to an earlier phase in the operations pipeline. Showing here for completeness.",
+                  ),
+                  _.createElement("hr", null),
+                  _.createElement(_, {
+                    ..._,
+                    planIDs: __webpack_require__,
+                    bHidePastEvents: _,
+                    bHideFullyReviewedEvents: _,
+                    bSortUnclaimedFirst: _,
+                  }),
+                ),
+            );
+      }
+      function _(_) {
+        const {
+            planIDs: _,
+            bHidePastEvents: __webpack_require__,
+            bHideFullyReviewedEvents: _,
+            bHideTypeField: _,
+            bShowProgress: _,
+            nUrgentWindowInSeconds: _,
+            fnDisplayDueDate: _,
+            bSortUnclaimedFirst: _,
+            sortByUnclaimedField: _,
+          } = _,
+          _ = _._.GetTimeNowWithOverride();
+        return _.createElement(
+          "div",
+          null,
+          _.filter((_) => !__webpack_require__ || (0, _._)(_)?.end_date > _)
+            .filter((_) => !_ || !(0, _._)(_)?.reviewed_by_account)
+            .sort((_, _) => {
+              const _ = (0, _._)(_),
+                _ = (0, _._)(_);
+              if (_ && _) {
+                if (!_[_]) return -1;
+                if (!_[_]) return 1;
+              }
+              return _?.start_date - _?.start_date;
+            })
+            .map((_) =>
+              _.createElement(_, {
+                key: _,
+                planID: _,
+                bHideTypeField: _,
+                bShowProgress: _,
+                nUrgentWindowInSeconds: _,
+                fnDisplayDueDate: _,
+              }),
+            ),
         );
       }
       function _(_) {
@@ -84485,6 +84546,7 @@
                 ? (_ += "_" + _.contentHub.category)
                 : "tags" === _.contentHub.type &&
                   (_ += "_" + _.contentHub.tagid)),
+            (_ += "_" + _.facetFilter?.GetFacetDefinitionHash()),
             _
           );
         }
@@ -85038,6 +85100,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_facets = [];
@@ -85051,6 +85115,7 @@
         m_matchingReferencedCapsules;
         m_strQuery;
         m_strURLParam;
+        m_strFacetDefinitionHash;
         m_nSelectedOptions;
         m_userPreferences;
         m_prunedFacets;
@@ -85088,6 +85153,7 @@
                 });
             }),
             this.PruneFacets(),
+            this.UpdateFacetDefinitionHash(_),
             this.UpdateFilter(),
             (this.m_bHasHideIgnoredItemsFacetValue = _.some((_) =>
               _.facetValues.some(
@@ -85109,6 +85175,9 @@
         }
         GetURLParam() {
           return this.m_strURLParam;
+        }
+        GetFacetDefinitionHash() {
+          return this.m_strFacetDefinitionHash;
         }
         GetSelectedOptionsCount() {
           return this.m_nSelectedOptions;
@@ -85201,6 +85270,9 @@
             this.UpdateURLParam(),
             this.UpdateSelectedOptionsCount(),
             this.UpdateUserPreferenceFilters();
+        }
+        UpdateFacetDefinitionHash(_) {
+          this.m_strFacetDefinitionHash = String((0, _._)((0, _._)(_)));
         }
         static BFacetHasEnabledOptTags(_) {
           for (const _ of _.facetValues)
@@ -88920,14 +88992,7 @@
             facetFilterState: _,
           } = this.state;
           const _ = this.m_loadCapsulesDebugGeneration + 1;
-          if (
-            (_.Debug(`LoadCapsules[${_}]: starting`),
-            __webpack_require__.enable_faceted_browsing && !_)
-          )
-            return void _.Debug(
-              `LoadCapsules[${_}]: Faceted browse enabled but no state yet`,
-            );
-          this.m_cancelSignal.cancel();
+          _.Debug(`LoadCapsules[${_}]: starting`), this.m_cancelSignal.cancel();
           const _ = _().CancelToken.source();
           (this.m_cancelSignal = _),
             this.m_loadCapsulesDebugGeneration++,
@@ -103086,7 +103151,7 @@
       function _() {
         return [`SteamAwardBadgeProgress_${_._.accountid}`];
       }
-      function _(_, _, _, _) {
+      function _(_, _, _, _, _) {
         const _ = (0, _._)(),
           _ = (0, _._)();
         return (0, _._)({
@@ -103114,7 +103179,8 @@
                       queryKey: _(),
                     }),
                   1e3,
-                ))
+                ),
+                _ && _())
               : _ && _(_);
           },
           onError: () => {
@@ -110872,8 +110938,6 @@
       }
       function _(_, _, _, _, _, _) {
         if (!_) return "";
-        const _ = _(_, _, _);
-        if (null !== _) return _;
         if ("crosspromotesalepage" === _.section_type) {
           const _ = _.sale_page_cross_promo_event_gid
             ? _._.GetClanEventModel(_.sale_page_cross_promo_event_gid)
@@ -110885,8 +110949,11 @@
               )
             : (0, _._)("#Sale_CrossPromoSale_DefaultSectionTitle");
         }
-        const _ =
-            _._.GetWithFallback(_.localized_label, _) ||
+        const _ = _(_, _, _),
+          _ = _._.GetWithFallback(_.localized_label, _),
+          _ =
+            _ ||
+            _ ||
             ("#Sale_default_label" === _.default_label
               ? ""
               : (0, _._)(_.default_label)),

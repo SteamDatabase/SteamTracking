@@ -4,6 +4,16 @@ import "steammessages_remoteclient_discovery.proto";
 option optimize_for = SPEED;
 option cc_generic_services = false;
 
+enum ERemoteClientPairWifiAPResult {
+	k_ERemoteClientPairWifiAPOK = 1;
+	k_ERemoteClientPairWifiAPFail = 2;
+	k_ERemoteClientPairWifiAPNetworkError = 3;
+	k_ERemoteClientPairWifiAPUnauthorized = 4;
+	k_ERemoteClientPairWifiAPNoDonglePresent = 5;
+	k_ERemoteClientPairWifiAPTimeout = 6;
+	k_ERemoteClientPairWifiAPCanceled = 7;
+}
+
 message CMsgRemoteClientStatus {
 	optional uint64 client_id = 1;
 	optional uint64 instance_id = 2;
@@ -102,5 +112,18 @@ message CMsgRemoteClientStreamingEnabled {
 message CMsgRemoteClientWifiAPStatus {
 	optional string ssid = 1;
 	optional string password = 2;
-	optional bool wpa2 = 3;
+	optional bool wpa2_deprecated = 3;
+	optional bool is_pairing_capable = 4;
+	optional fixed64 paired_network_hash = 5;
+}
+
+message CMsgRemoteClientPairWifiAP {
+	optional string ssid = 1;
+	optional string password = 2;
+}
+
+message CMsgRemoteClientPairWifiAPResponse {
+	optional int32 e_pair_result = 1 [default = 2];
+	optional string ssid = 2;
+	optional string password = 3;
 }
