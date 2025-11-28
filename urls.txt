@@ -464,38 +464,38 @@ ClientManifest/steam_client_ubuntu12            @ https://client-update.fastly.s
 ClientManifest/steam_client_win64               @ https://client-update.fastly.steamstatic.com/steam_client_win64?__TIME__
 ClientManifest/steam_client_osx                 @ https://client-update.fastly.steamstatic.com/steam_client_osx?__TIME__
 ClientManifest/steamdeck_stable                 @ https://client-update.fastly.steamstatic.com/steam_client_steamdeck_stable_ubuntu12?__TIME__
-ClientManifest/csgo_launcher_win32              @ https://client-update.fastly.steamstatic.com/csgo_launcher_win32?__TIME__
-ClientManifest/dota2_launcher_win32             @ https://client-update.fastly.steamstatic.com/dota2_launcher_win32?__TIME__
-ClientManifest/dota2_launcher_nexon_win32       @ https://client-update.fastly.steamstatic.com/dota2_launcher_nexon_win32?__TIME__
+ClientManifest/csgo_launcher_win64              @ https://client-update.fastly.steamstatic.com/csgo_launcher_win64?__TIME__
+ClientManifest/dota2_launcher_win64             @ https://client-update.fastly.steamstatic.com/dota2_launcher_win64?__TIME__
+ClientManifest/dota2_launcher_nexon_win64       @ https://client-update.fastly.steamstatic.com/dota2_launcher_nexon_win64?__TIME__
 
 //
 // Beta Client Manifests
 //
 ClientManifest/steam_client_publicbeta_ubuntu12 @ https://client-update.fastly.steamstatic.com/steam_client_publicbeta_ubuntu12?__TIME__
-ClientManifest/steam_client_publicbeta_win32    @ https://client-update.fastly.steamstatic.com/steam_client_publicbeta_win32?__TIME__
+ClientManifest/steam_client_publicbeta_win64    @ https://client-update.fastly.steamstatic.com/steam_client_publicbeta_win64?__TIME__
 ClientManifest/steam_client_publicbeta_osx      @ https://client-update.fastly.steamstatic.com/steam_client_publicbeta_osx?__TIME__
 ClientManifest/steamdeck_publicbeta             @ https://client-update.fastly.steamstatic.com/steam_client_steamdeck_publicbeta_ubuntu12?__TIME__
 
 //
 // Steam China Manifests
 //
-ClientManifest/steamchina_win32                 @ https://client-update.fastly.steamstatic.com/steamchina_win32
+ClientManifest/steamchina_win64                 @ https://client-update.fastly.steamstatic.com/steamchina_win64
 ClientManifest/steamchina_publicbeta_ubuntu12   @ https://client-update.fastly.steamstatic.com/steamchina_publicbeta_ubuntu12?__TIME__
-ClientManifest/steamchina_publicbeta_win32      @ https://client-update.fastly.steamstatic.com/steamchina_publicbeta_win32?__TIME__
+ClientManifest/steamchina_publicbeta_win64      @ https://client-update.fastly.steamstatic.com/steamchina_publicbeta_win64?__TIME__
 ClientManifest/steamchina_publicbeta_osx        @ https://client-update.fastly.steamstatic.com/steamchina_publicbeta_osx?__TIME__
 
 //
 // SteamCMD Manifests
 //
 ClientManifest/steam_cmd_linux                  @ https://client-update.fastly.steamstatic.com/steam_cmd_linux?__TIME__
-ClientManifest/steam_cmd_win32                  @ https://client-update.fastly.steamstatic.com/steam_cmd_win32?__TIME__
+ClientManifest/steam_cmd_win64                  @ https://client-update.fastly.steamstatic.com/steam_cmd_win64?__TIME__
 ClientManifest/steam_cmd_osx                    @ https://client-update.fastly.steamstatic.com/steam_cmd_osx?__TIME__
 
 //
 // Beta SteamCMD Manifests
 //
 ClientManifest/steam_cmd_publicbeta_linux       @ https://client-update.fastly.steamstatic.com/steam_cmd_publicbeta_linux?__TIME__
-ClientManifest/steam_cmd_publicbeta_win32       @ https://client-update.fastly.steamstatic.com/steam_cmd_publicbeta_win32?__TIME__
+ClientManifest/steam_cmd_publicbeta_win64       @ https://client-update.fastly.steamstatic.com/steam_cmd_publicbeta_win64?__TIME__
 ClientManifest/steam_cmd_publicbeta_osx         @ https://client-update.fastly.steamstatic.com/steam_cmd_publicbeta_osx?__TIME__
 
 //
