@@ -1184,6 +1184,7 @@
 "lbN.
 "legacy_set"\t\t"1"
 "m\n8CDepotContentDetection_GetAllDetectedAppContent_Response
+"nMq
 "n\n"CMsgClientDeauthorizeDeviceRequest
 "q\n CMsgClientPICSPrivateBetaRequest
 "q\n5CAuthenticationSupport_QueryRefreshTokenByID_Response
@@ -7711,11 +7712,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11175,11 +11176,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-2048
 20000
 2000000
 200M
 2019
+2048
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -58181,7 +58182,7 @@ stderr
 stdin
 stdout
 steam
-steam Nov 25 2025 21:19:07
+steam Nov 28 2025 21:42:16
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

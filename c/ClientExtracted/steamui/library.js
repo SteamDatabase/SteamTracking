@@ -12935,9 +12935,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Nov 25 2025 : 10:12:16",
-                BUILD_TIME_UTC: "Nov 25 2025 : 18:12:16",
-                BUILD_RTIME_UTC: 1764094336,
+                BUILD_TIME_LOCAL: "Nov 28 2025 : 13:43:38",
+                BUILD_TIME_UTC: "Nov 28 2025 : 21:43:38",
+                BUILD_RTIME_UTC: 1764366218,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -27412,9 +27412,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 25 2025 : 10:12:16",
-                    BUILD_TIME_UTC: "Nov 25 2025 : 18:12:16",
-                    BUILD_RTIME_UTC: 1764094336,
+                    BUILD_TIME_LOCAL: "Nov 28 2025 : 13:43:38",
+                    BUILD_TIME_UTC: "Nov 28 2025 : 21:43:38",
+                    BUILD_RTIME_UTC: 1764366218,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -28110,7 +28110,7 @@ var CLSTAMP = "steamdb";
         3350: "25be1c0cde58ecd53fec",
         3366: "049be15e2923de61326d",
         3473: "aa2e2c813e7588319881",
-        3569: "dab8cffba209315ecf87",
+        3569: "765ebc08849f5d57e071",
         3583: "f831ab7edbd9ffa591ac",
         3594: "5b4965f610445e371c26",
         3714: "db56225508719a6234fc",
@@ -28231,7 +28231,7 @@ var CLSTAMP = "steamdb";
         9711: "2ed989ee7251a5d19c6f",
         9746: "50d67482dc2ddd4a5770",
         9779: "59ef76674166d4b9e52e",
-        9858: "20cca33f38499c4bae60",
+        9858: "1ceca5577fdd963e4674",
         9869: "83ea0038b1f24f363e13",
         9882: "499f31ccf435fd972880",
         9887: "fb55f7516aef1bf8a3bf",

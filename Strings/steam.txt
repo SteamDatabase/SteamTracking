@@ -2433,8 +2433,9 @@ $ffn
 20CWorkItemSetFileSize
 20IHTTPRedirectHandler
 20IUniformRandomStream
-21:17:51
-21:17:58
+21:41:56
+21:42:06
+21:42:07
 21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
@@ -2613,8 +2614,8 @@ $ffn
 4f$H
 4h\4
 4i5U6B738%9
-4nV'
 4tpD
+4zV'
 5-535;5A5Q5e5o5q5w5{5}5
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
@@ -7387,7 +7388,7 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
-Nov 25 2025
+Nov 28 2025
 November
 NrZl
 NullMetrics()
@@ -8889,7 +8890,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Nov 25 2025 21:17:58
+Startup - updater built Nov 28 2025 21:42:07
 State
 StaticFileWriterThread()
 Steam
@@ -12910,6 +12911,7 @@ externaltests.so
 extra compressed data
 extra data in message
 f&dy
+f,Ws
 f.N%H
 f17b6178030a3149805d92b9ce0f681b1d37f7085a66e7f60acf31bc892f2f86
 f;\fu8
