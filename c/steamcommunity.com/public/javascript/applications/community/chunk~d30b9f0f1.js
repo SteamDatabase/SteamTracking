@@ -372,6 +372,7 @@
         JumpedTo: "_1EbrI7ej6mSeKcullY10yu",
         JumpToSection: "WBkP3c4uG58uH1mLeFA7f",
         SaleSectionPlaceholder: "_39ZKskX-jDFgpbClOzks_X",
+        ToggleCtn: "_1SSUuc_v0Bs7haVY9ysiii",
         SmartSectionOptions: "_1nZkvNqG1wQoWd070E9OW5",
         SmallText: "_1SKHfhG6qFv6dlqFNsTVzE",
         FlexContainer: "_23PZF0LZhYJnI1J7QKg1vG",
@@ -12520,9 +12521,286 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { arrows: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 173 57",
+            fill: "none",
+            ..._,
+          },
+          _ &&
+            _.createElement("path", {
+              fill: "#D9D9D9",
+              _: "M172.373 27.2705L168.187 32.3242V29.874L170.344 27.2705L168.187 24.666V22.2168L172.373 27.2705Z",
+              fillOpacity: "0.3",
+            }),
+          _ &&
+            _.createElement("path", {
+              fill: "#D9D9D9",
+              _: "M4.41809e-07 27.2705L4.18652 22.2168L4.18652 24.667L2.0293 27.2705L4.18652 29.875L4.18652 32.3242L4.41809e-07 27.2705Z",
+              fillOpacity: "0.3",
+            }),
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "9.18652",
+            width: "154",
+            height: "57",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#888D9A",
+            _: "11.2263",
+            _: "2",
+            width: "46.9139",
+            height: "53",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#888D9A",
+            _: "104.034",
+            _: "2",
+            width: "57.1126",
+            height: "33",
+            _: "1",
+          }),
+          _.createElement("rect", {
+            fill: "#888D9A",
+            _: "142.789",
+            _: "36",
+            width: "18.3576",
+            height: "10",
+            _: "1",
+          }),
+          _.createElement("rect", {
+            fill: "#888D9A",
+            _: "123.412",
+            _: "36",
+            width: "18.3576",
+            height: "10",
+            _: "1",
+          }),
+          _.createElement("rect", {
+            fill: "#888D9A",
+            _: "104.034",
+            _: "36",
+            width: "18.3576",
+            height: "10",
+            _: "1",
+          }),
+          _.createElement("rect", {
+            fill: "#636978",
+            _: "60.1799",
+            _: "6",
+            width: "35.6954",
+            height: "4",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#636978",
+            _: "60.1799",
+            _: "11",
+            width: "29.5762",
+            height: "4",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#636978",
+            _: "60.1799",
+            _: "27",
+            width: "29.5762",
+            height: "4",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#636978",
+            _: "60.1799",
+            _: "16",
+            width: "38.755",
+            height: "4",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#636978",
+            _: "60.1799",
+            _: "32",
+            width: "38.755",
+            height: "4",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#636978",
+            _: "60.1799",
+            _: "51",
+            width: "38.755",
+            height: "4",
+            _: "2",
+          }),
+        );
+      }
+      function _(_) {
+        const { arrows: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 173 57",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "9.18652",
+            width: "49",
+            height: "57",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "60.1865",
+            width: "52",
+            height: "57",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "114.187",
+            width: "49",
+            height: "57",
+            _: "2",
+          }),
+          _ &&
+            _.createElement("path", {
+              fill: "#D9D9D9",
+              _: "M172.373 28.2705L168.187 33.3242V30.874L170.344 28.2705L168.187 25.666V23.2168L172.373 28.2705Z",
+              fillOpacity: "0.3",
+            }),
+          _ &&
+            _.createElement("path", {
+              fill: "#D9D9D9",
+              _: "M4.41809e-07 28.2705L4.18652 23.2168L4.18652 25.667L2.0293 28.2705L4.18652 30.875L4.18652 33.3242L4.41809e-07 28.2705Z",
+              fillOpacity: "0.3",
+            }),
+        );
+      }
+      function _(_) {
+        const { arrows: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 173 70",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "9.18652",
+            _: "43",
+            width: "50",
+            height: "27",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "61.1865",
+            _: "43",
+            width: "50",
+            height: "27",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "113.187",
+            _: "43",
+            width: "50",
+            height: "27",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "87.1865",
+            width: "76",
+            height: "41",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "9.18652",
+            width: "76",
+            height: "41",
+            _: "2",
+          }),
+          _ &&
+            _.createElement("path", {
+              fill: "#D9D9D9",
+              _: "M172.373 34.0537L168.187 39.1074V36.6572L170.344 34.0537L168.187 31.4492V29L172.373 34.0537Z",
+              fillOpacity: "0.3",
+            }),
+          _ &&
+            _.createElement("path", {
+              fill: "#D9D9D9",
+              _: "M4.41809e-07 34.0537L4.18652 29L4.18652 31.4502L2.0293 34.0537L4.18652 36.6582L4.18652 39.1074L4.41809e-07 34.0537Z",
+              fillOpacity: "0.3",
+            }),
+        );
+      }
+      function _(_) {
+        const { arrows: _, ...__webpack_require__ } = _;
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 173 20",
+            fill: "none",
+            ..._,
+          },
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "9.18652",
+            width: "37",
+            height: "20",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "48.1865",
+            width: "37",
+            height: "20",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "87.1865",
+            width: "37",
+            height: "20",
+            _: "2",
+          }),
+          _.createElement("rect", {
+            fill: "#555B67",
+            _: "126.187",
+            width: "37",
+            height: "20",
+            _: "2",
+          }),
+          _ &&
+            _.createElement("path", {
+              fill: "#D9D9D9",
+              _: "M172.373 10.2705L168.187 15.3242V12.874L170.344 10.2705L168.187 7.66602V5.2168L172.373 10.2705Z",
+              fillOpacity: "0.3",
+            }),
+          _ &&
+            _.createElement("path", {
+              fill: "#D9D9D9",
+              _: "M4.41809e-07 10.2705L4.18652 5.2168L4.18652 7.66699L2.0293 10.2705L4.18652 12.875L4.18652 15.3242L4.41809e-07 10.2705Z",
+              fillOpacity: "0.3",
+            }),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             saleSection: _,
@@ -12815,7 +13093,107 @@
         );
       }
       function _(_) {
-        const { saleSection: _, editModel: __webpack_require__ } = _;
+        const { saleSection: _, editModel: __webpack_require__ } = _,
+          _ = [
+            {
+              label: (0, _._)("#Sale_Section_Layout_Preset_Detailed"),
+              image: _.createElement(_, {
+                arrows: !0,
+              }),
+              action: () => {
+                (_.show_as_carousel = !1),
+                  (_.capsules_per_row_array = [1]),
+                  (_.single_item_style = "library");
+              },
+            },
+            {
+              label: (0, _._)("#Sale_Section_Layout_Preset_Carousel3Tall"),
+              image: _.createElement(_, {
+                arrows: !0,
+              }),
+              action: () => {
+                (_.capsules_per_row_array = [3]),
+                  (_.capsule_style_per_row_array = ["tall"]),
+                  (_.carousel_rows = 1);
+              },
+            },
+            {
+              label: (0, _._)("#Sale_Section_Layout_Preset_Carousel4"),
+              image: _.createElement(_, {
+                arrows: !0,
+              }),
+              action: () => {
+                (_.capsules_per_row_array = [4]), (_.carousel_rows = 1);
+              },
+            },
+            {
+              label: (0, _._)("#Sale_Section_Layout_Preset_GridVarying"),
+              image: _.createElement(_, {
+                arrows: !0,
+              }),
+              action: () => {},
+            },
+          ];
+        return _.createElement(
+          "div",
+          {
+            className: _.Presets,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.InstructionText,
+            },
+            (0, _._)("#Sale_Section_Layout_Instructions"),
+          ),
+          _.createElement(
+            "p",
+            null,
+            (0, _._)("#Sale_Section_Layout_Preset", _.createElement("b", null)),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.PresetCtn,
+            },
+            _.map((_) =>
+              _.createElement(
+                "button",
+                {
+                  key: _.label,
+                  className: _.PresetButton,
+                  onClick: () => {
+                    return (
+                      (_ = _.action),
+                      (_.show_as_carousel = !0),
+                      (_.capsules_per_row_array = [2, 3, 4, 3]),
+                      (_.carousel_rows = 2),
+                      (_.single_item_style = void 0),
+                      (_.capsule_style_per_row_array = null),
+                      _(),
+                      void __webpack_require__.SetDirty(_._.jsondata_sales)
+                    );
+                    var _;
+                  },
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.PresetImage,
+                  },
+                  _.image,
+                ),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.PresetLabel,
+                  },
+                  _.label,
+                ),
+              ),
+            ),
+          ),
+        );
       }
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
@@ -13483,8 +13861,9 @@
           },
         });
       }
-      __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _, saleSection: __webpack_require__ } = _,
           [_, _] = (0, _._)(() => [
@@ -14319,20 +14698,61 @@
             saleSection: __webpack_require__,
             defaultType: _ = "wishlist",
           } = _,
-          [_] = (0, _._)(() => [__webpack_require__.smart_section]),
-          _ = (_) => {
-            (0, _._)(() => {
-              (__webpack_require__.smart_section = _),
-                (__webpack_require__.smart_section_type = _ ? _ : void 0),
-                _.SetDirty(_._.jsondata_sales);
-            });
-          };
-        return _.createElement(_._, {
-          onChange: _,
-          label: (0, _._)("#Sale_SmartSection"),
-          description: (0, _._)("#Sale_SmartSectionDescription"),
-          checked: _,
-        });
+          [_] = (0, _._)(() => [__webpack_require__.smart_section]);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "div",
+            null,
+            (0, _._)("#Sale_SmartSectionDescription"),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.ToggleCtn,
+            },
+            _.createElement(
+              _._,
+              null,
+              _.createElement(
+                _._.Root,
+                {
+                  value: __webpack_require__.smart_section ? "on" : "off",
+                  onValueChange: (_) => {
+                    return (
+                      (_ = "on" === _),
+                      void (0, _._)(() => {
+                        (__webpack_require__.smart_section = _),
+                          (__webpack_require__.smart_section_type = _
+                            ? _
+                            : void 0),
+                          _.SetDirty(_._.jsondata_sales);
+                      })
+                    );
+                    var _;
+                  },
+                  variant: "default",
+                  radius: "sm",
+                },
+                _.createElement(
+                  _._.Item,
+                  {
+                    value: "off",
+                  },
+                  (0, _._)("#Sale_SmartSection_ToggleOff"),
+                ),
+                _.createElement(
+                  _._.Item,
+                  {
+                    value: "on",
+                  },
+                  (0, _._)("#Sale_SmartSection_ToggleOn"),
+                ),
+              ),
+            ),
+          ),
+        );
       }
       const _ = (0, _._)((_) => {
         const { section: _ } = _;
@@ -19456,7 +19876,8 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = [_._.k_Header1, _._.k_Header2, _._.k_Header3];
       function _(_) {
         const {
@@ -28017,7 +28438,7 @@
             _.createElement(
               "div",
               {
-                className: _.SectionTypePrompt,
+                className: _.EventEditorTextTitle,
               },
               " ",
               (0, _._)("#Sale_SectionContents"),

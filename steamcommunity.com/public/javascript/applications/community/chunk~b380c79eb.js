@@ -264,112 +264,119 @@
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
       };
     },
-    61023: (e, r, s) => {
+    13857: (e) => {
+      e.exports = {
+        Root: "_2KPA3I9eXE9r251_-GX_iv",
+        DataAttributes: "_1tmKnx6V_8Ez9jIC5eMgat",
+        AfterDataAttributes: "_3BGADF5vKbdAji-Xj65xxm",
+      };
+    },
+    61023: (e, r, t) => {
       "use strict";
-      s.d(r, { j: () => c });
-      var t = s(90626),
-        n = s(64238),
-        a = s.n(n),
-        o = s(90534),
-        i = s(83392),
-        p = s(38878);
-      function c(e) {
+      t.d(r, { j: () => l });
+      var s = t(90626),
+        n = t(64238),
+        a = t.n(n),
+        o = t(90534),
+        i = t(83392),
+        p = t(38878);
+      function l(e) {
         const {
             variant: r = "default",
-            size: s = "2",
+            size: t = "2",
             radius: n,
-            focusable: c = !0,
-            hoverable: l = !0,
+            focusable: l = !0,
+            hoverable: c = !0,
             clickable: m = !0,
-            className: _,
-            children: u,
-            beforeContent: d,
+            className: u,
+            children: d,
+            beforeContent: _,
             afterContent: f,
             hasValue: g,
             ...v
           } = e,
           y = "underline" === r ? "none" : n;
-        return t.createElement(
+        return s.createElement(
           i.s,
           {
             ...v,
             radius: y,
             className: a()(
               p.ControlBox,
-              c && p.Focusable,
-              l && p.Hoverable,
+              l && p.Focusable,
+              c && p.Hoverable,
               m && p.Clickable,
               p[`Variant-${r}`],
-              p[`Size-${s}`],
-              _,
+              p[`Size-${t}`],
+              u,
             ),
             align: "center",
             "data-has-value": !!g,
           },
-          d && t.createElement(i.s, { paddingRight: "2" }, d),
-          t.createElement(o.a, { flexGrow: "1", minWidth: "0" }, u),
-          f && t.createElement(i.s, { paddingLeft: "2" }, f),
+          _ && s.createElement(i.s, { paddingRight: "2" }, _),
+          s.createElement(o.a, { flexGrow: "1", minWidth: "0" }, d),
+          f && s.createElement(i.s, { paddingLeft: "2" }, f),
         );
       }
     },
-    86632: (e, r, s) => {
+    86632: (e, r, t) => {
       "use strict";
-      s.d(r, { I: () => m });
-      var t = s(90626),
-        n = s(61023),
-        a = s(90534),
-        o = s(81393),
-        i = s(64238),
-        p = s.n(i),
-        c = s(53011);
-      const l = (0, t.createContext)(null);
+      t.d(r, { I: () => m });
+      var s = t(90626),
+        n = t(61023),
+        a = t(90534),
+        o = t(81393),
+        i = t(64238),
+        p = t.n(i),
+        l = t(53011);
+      const c = (0, s.createContext)(null);
       function m(e) {
-        const { options: r, getOptionLabel: s = (e) => e, ...n } = e;
-        return t.createElement(
+        const { options: r, getOptionLabel: t = (e) => e, ...n } = e;
+        return s.createElement(
           m.Root,
           { ...n },
-          r.map((e) => t.createElement(m.Item, { value: e, key: e }, s(e))),
+          r.map((e) => s.createElement(m.Item, { value: e, key: e }, t(e))),
         );
       }
-      function _(e) {
-        return t.createElement(a.a, {
-          className: c.Indicator,
+      function u(e) {
+        return s.createElement(a.a, {
+          className: l.Indicator,
           radius: e.radius,
         });
       }
-      function u(e, r) {
-        const s = e.compareDocumentPosition(r);
-        return s & Node.DOCUMENT_POSITION_FOLLOWING
+      function d(e, r) {
+        const t = e.compareDocumentPosition(r);
+        return t & Node.DOCUMENT_POSITION_FOLLOWING
           ? -1
-          : s & Node.DOCUMENT_POSITION_PRECEDING
+          : t & Node.DOCUMENT_POSITION_PRECEDING
             ? 1
             : 0;
       }
       (m.Item = function (e) {
-        const { value: r, children: s } = e,
-          n = (0, t.useContext)(l),
-          [o, i] = (0, t.useState)(),
+        const { value: r, children: t } = e,
+          n = (0, s.useContext)(c),
+          [o, i] = (0, s.useState)(),
           { register: p, unregister: m } = n || {};
         if (
-          ((0, t.useEffect)(
+          ((0, s.useEffect)(
             () => (o && p && m ? (p(o, r), () => m(o, r)) : () => {}),
             [p, m, r, o],
           ),
           !n)
         )
           return null;
-        const { value: _, onValueChange: u } = n,
-          d = r === _,
-          f = d ? void 0 : () => u(r),
-          g = void 0 === s ? r : s;
-        return t.createElement(
+        const { value: u, onValueChange: d } = n,
+          _ = r === u,
+          f = _ ? void 0 : () => d(r),
+          g = void 0 === t ? r : t;
+        return s.createElement(
           a.a,
           {
             radius: n.radius,
             ref: i,
             onClick: f,
-            "data-selected": d ? "true" : "false",
-            className: c.Item,
+            "data-selected": _ ? "true" : "false",
+            className: l.Item,
           },
           g,
         );
@@ -377,40 +384,40 @@
         (m.Root = function (e) {
           const {
               variant: r = "default",
-              radius: s,
+              radius: t,
               children: a,
               value: i,
               onValueChange: m,
             } = e,
-            [d, f] = (0, t.useState)({}),
-            g = (0, t.useCallback)((e, r) => f((s) => ({ ...s, [r]: e })), []),
-            v = (0, t.useCallback)(
+            [_, f] = (0, s.useState)({}),
+            g = (0, s.useCallback)((e, r) => f((t) => ({ ...t, [r]: e })), []),
+            v = (0, s.useCallback)(
               (e, r) =>
-                f((s) => {
-                  const t = { ...s };
-                  return t[r] === e && delete t[r], t;
+                f((t) => {
+                  const s = { ...t };
+                  return s[r] === e && delete s[r], s;
                 }),
               [],
             ),
-            y = (0, t.useMemo)(
+            y = (0, s.useMemo)(
               () => ({
                 value: i,
                 onValueChange: m,
                 register: g,
                 unregister: v,
-                radius: s,
+                radius: t,
               }),
-              [i, m, g, v, s],
+              [i, m, g, v, t],
             );
-          return t.createElement(
+          return s.createElement(
             n.j,
             {
               clickable: !1,
               hoverable: !1,
               focusable: !1,
               variant: r,
-              radius: s,
-              className: p()(c.SegmentedControlBox, c[`Variant-${r}`]),
+              radius: t,
+              className: p()(l.SegmentedControlBox, l[`Variant-${r}`]),
               tabIndex: 0,
               onKeyDown: (e) => {
                 let r = 0;
@@ -424,71 +431,71 @@
                     r = -1;
                 }
                 if (r) {
-                  const s = Array.from(Object.values(d)).sort(u);
-                  let t;
-                  if (null === i) t = r > 0 ? 0 : s.length - 1;
+                  const t = Array.from(Object.values(_)).sort(d);
+                  let s;
+                  if (null === i) s = r > 0 ? 0 : t.length - 1;
                   else {
-                    const e = d[i],
-                      n = s.findIndex((r) => r === e);
+                    const e = _[i],
+                      n = t.findIndex((r) => r === e);
                     (0, o.wT)(
                       "number" == typeof n,
                       "Could not find current segmented value position",
                     ),
-                      (t = n + r);
+                      (s = n + r);
                   }
-                  const n = s[t < 0 ? s.length + t : t % s.length],
-                    a = Object.keys(d).find((e) => d[e] === n);
+                  const n = t[s < 0 ? t.length + s : s % t.length],
+                    a = Object.keys(_).find((e) => _[e] === n);
                   "string" != typeof a
                     ? console.error("Could not find next segmeneted value")
                     : (m(a), e.stopPropagation(), e.preventDefault());
                 }
               },
             },
-            t.createElement(
-              l.Provider,
+            s.createElement(
+              c.Provider,
               { value: y },
-              t.createElement(
+              s.createElement(
                 "div",
-                { className: c.SegmentedControl },
+                { className: l.SegmentedControl },
                 a,
-                null !== i && t.createElement(_, { radius: s }),
+                null !== i && s.createElement(u, { radius: t }),
               ),
             ),
           );
         });
     },
-    90534: (e, r, s) => {
+    90534: (e, r, t) => {
       "use strict";
-      s.d(r, { A: () => m, a: () => c });
-      var t = s(90626),
-        n = s(64238),
-        a = s.n(n),
-        o = s(11526),
-        i = s(75659),
-        p = s(44041);
-      function c(e) {
-        const r = (0, o.mz)({ ...e, className: a()(p.Box, e.className) }, l);
-        return t.createElement("div", { ...r });
+      t.d(r, { A: () => m, a: () => l });
+      var s = t(90626),
+        n = t(64238),
+        a = t.n(n),
+        o = t(11526),
+        i = t(75659),
+        p = t(44041);
+      function l(e) {
+        const r = (0, o.mz)({ ...e, className: a()(p.Box, e.className) }, c);
+        return s.createElement("div", { ...r });
       }
-      const l = i.h;
+      const c = i.h;
       function m(e) {
         return (0, o.Ef)(e, i.h);
       }
     },
-    83392: (e, r, s) => {
+    83392: (e, r, t) => {
       "use strict";
-      s.d(r, { s: () => c });
-      var t = s(90626),
-        n = s(11526),
-        a = s(75659),
-        o = s(64238),
-        i = s.n(o),
-        p = s(68875);
-      function c(e) {
-        const r = (0, n.mz)({ ...e, className: i()(e.className, p.Flex) }, l);
-        return t.createElement("div", { ...r });
+      t.d(r, { s: () => l });
+      var s = t(90626),
+        n = t(11526),
+        a = t(75659),
+        o = t(64238),
+        i = t.n(o),
+        p = t(68875);
+      function l(e) {
+        const r = (0, n.mz)({ ...e, className: i()(e.className, p.Flex) }, c);
+        return s.createElement("div", { ...r });
       }
-      const l = [
+      const c = [
         ...a.h,
         {
           prop: "direction",
@@ -538,11 +545,11 @@
         return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
       }
     },
-    75659: (e, r, s) => {
+    75659: (e, r, t) => {
       "use strict";
-      s.d(r, { L: () => a, h: () => o });
-      var t = s(11526),
-        n = s(88122);
+      t.d(r, { L: () => a, h: () => o });
+      var s = t(11526),
+        n = t(88122);
       const a = [
           { prop: "margin", responsive: !0, className: (e) => n[`m-${e}`] },
           { prop: "marginX", responsive: !0, className: (e) => n[`mx-${e}`] },
@@ -680,7 +687,7 @@
             prop: "inset",
             responsive: !0,
             className: n.Inset,
-            cssProperty: (e) => ["--inset", (0, t.ti)(e)],
+            cssProperty: (e) => ["--inset", (0, s.ti)(e)],
           },
           {
             prop: "gridColumn",
@@ -740,7 +747,7 @@
             prop: "background",
             responsive: !0,
             className: n.Background,
-            cssProperty: (e) => ["--background", (0, t.Fd)(e)],
+            cssProperty: (e) => ["--background", (0, s.Fd)(e)],
           },
           {
             prop: "overflow",
@@ -776,13 +783,13 @@
             prop: "borderColor",
             responsive: !0,
             className: [n.Border, n.BorderColor].join(" "),
-            cssProperty: (e) => ["--border-color", (0, t.Fd)(e)],
+            cssProperty: (e) => ["--border-color", (0, s.Fd)(e)],
           },
           {
             prop: "outline",
             responsive: !0,
             className: n.Outline,
-            cssProperty: (e) => ["--outline-color", (0, t.Fd)(e)],
+            cssProperty: (e) => ["--outline-color", (0, s.Fd)(e)],
           },
           {
             prop: "textAlign",
@@ -792,17 +799,17 @@
           },
         ];
     },
-    11526: (e, r, s) => {
+    11526: (e, r, t) => {
       "use strict";
-      s.d(r, {
+      t.d(r, {
         Ef: () => o,
-        Fd: () => c,
+        Fd: () => l,
         ti: () => p,
-        To: () => l,
+        To: () => c,
         mz: () => i,
       });
-      var t = s(43186),
-        n = s(55348);
+      var s = t(43186),
+        n = t(55348);
       const a = {
         0: !0,
         1: !0,
@@ -816,26 +823,26 @@
         9: !0,
       };
       function o(e, r) {
-        const s = { remaining: { ...e }, extracted: {} };
+        const t = { remaining: { ...e }, extracted: {} };
         for (const e of r) {
           const r = e.prop;
-          r in s.remaining &&
-            ((s.extracted[r] = s.remaining[r]), delete s.remaining[r]);
+          r in t.remaining &&
+            ((t.extracted[r] = t.remaining[r]), delete t.remaining[r]);
         }
-        return s;
+        return t;
       }
       function i(e, r) {
-        return (function (e, r, s) {
-          const t = [],
+        return (function (e, r, t) {
+          const s = [],
             a = {},
             i = {},
-            { extracted: p, remaining: c } = o(e, r);
+            { extracted: p, remaining: l } = o(e, r);
           for (const o of r) {
             if (!(o.prop in p)) continue;
             let r = p[o.prop];
             if (void 0 !== r) {
               if (
-                (o.responsive && (r = (0, n.I)(r, s.formFactor)), o.className)
+                (o.responsive && (r = (0, n.I)(r, t.formFactor)), o.className)
               ) {
                 if (
                   !o.cssProperty &&
@@ -848,36 +855,36 @@
                   "function" == typeof o.className
                     ? o.className(r)
                     : o.className;
-                t.push(e);
+                s.push(e);
               }
               if (o.cssProperty)
                 if ("function" == typeof o.cssProperty) {
-                  const s = o.cssProperty(r, e);
-                  if (s.length && Array.isArray(s[0]))
-                    s.forEach(([e, r]) => (a[e] = r));
+                  const t = o.cssProperty(r, e);
+                  if (t.length && Array.isArray(t[0]))
+                    t.forEach(([e, r]) => (a[e] = r));
                   else {
-                    const e = s;
+                    const e = t;
                     a[e[0]] = e[1];
                   }
                 } else a[o.cssProperty] = r;
               if (o.dataProperty)
                 if ("function" == typeof o.dataProperty) {
-                  const [e, s] = o.dataProperty(r);
-                  i[`data-${e}`] = s;
+                  const [e, t] = o.dataProperty(r);
+                  i[`data-${e}`] = t;
                 } else i[`data-${o.dataProperty}`] = r;
             }
           }
           return (
-            "className" in c &&
-              "string" == typeof c.className &&
-              t.push(c.className),
-            "style" in c &&
-              c.style &&
-              "object" == typeof c.style &&
-              Object.assign(a, c.style),
-            { ...i, ...c, className: t.join(" "), style: a }
+            "className" in l &&
+              "string" == typeof l.className &&
+              s.push(l.className),
+            "style" in l &&
+              l.style &&
+              "object" == typeof l.style &&
+              Object.assign(a, l.style),
+            { ...i, ...l, className: s.join(" "), style: a }
           );
-        })(e, r, { formFactor: (0, t.xC)() });
+        })(e, r, { formFactor: (0, s.xC)() });
       }
       function p(e) {
         return (function (e) {
@@ -886,41 +893,41 @@
           ? `var(--spacing-${e})`
           : e;
       }
-      function c(e) {
+      function l(e) {
         if (!("%" == e[e.length - 1])) return `var(--color-${e})`;
-        const [r, s] = e.split(" ");
-        return `rgb( from ${`var(--color-${r})`} r g b / ${s} )`;
+        const [r, t] = e.split(" ");
+        return `rgb( from ${`var(--color-${r})`} r g b / ${t} )`;
       }
-      function l(e, r) {
-        return e.startsWith("text") ? `var(--color-${e}-${r})` : c(e);
+      function c(e, r) {
+        return e.startsWith("text") ? `var(--color-${e}-${r})` : l(e);
       }
     },
-    43186: (e, r, s) => {
+    43186: (e, r, t) => {
       "use strict";
-      s.d(r, {
+      t.d(r, {
         cW: () => p,
-        cr: () => c,
+        cr: () => l,
         IE: () => o,
-        xC: () => l,
-        LT: () => _,
+        xC: () => c,
+        LT: () => u,
       });
-      var t = s(90626);
+      var s = t(90626);
       function n(e) {
         const r = "function" == typeof matchMedia ? matchMedia : a,
-          s = (0, t.useMemo)(() => r(e), [e, r]),
-          [n, o] = (0, t.useState)(!!s && s.matches);
+          t = (0, s.useMemo)(() => r(e), [e, r]),
+          [n, o] = (0, s.useState)(!!t && t.matches);
         return (
-          (0, t.useEffect)(() => {
-            if (!s) return () => {};
+          (0, s.useEffect)(() => {
+            if (!t) return () => {};
             function e(e) {
               o(e.matches);
             }
             return (
-              o(s.matches),
-              s.addEventListener("change", e),
-              () => s.removeEventListener("change", e)
+              o(t.matches),
+              t.addEventListener("change", e),
+              () => t.removeEventListener("change", e)
             );
-          }, [s]),
+          }, [t]),
           n
         );
       }
@@ -928,117 +935,236 @@
         return null;
       }
       const o = ["initial", "sm", "md", "lg"],
-        i = (0, t.createContext)("lg");
+        i = (0, s.createContext)("lg");
       function p(e) {
-        const { children: r, breakpoints: s = { sm: 768, md: 940, lg: 1240 } } =
+        const { children: r, breakpoints: t = { sm: 768, md: 940, lg: 1240 } } =
             e,
           a = (function (e) {
             const r = n(`(min-width: ${e.sm}px)`),
-              s = n(`(min-width: ${e.md}px)`),
+              t = n(`(min-width: ${e.md}px)`),
               a = n(`(min-width: ${e.lg}px)`),
-              [o, i] = (0, t.useState)(!0);
+              [o, i] = (0, s.useState)(!0);
             return (
-              (0, t.useEffect)(() => i(!0), []),
-              o ? (a ? "lg" : s ? "md" : r ? "sm" : "initial") : "lg"
+              (0, s.useEffect)(() => i(!0), []),
+              o ? (a ? "lg" : t ? "md" : r ? "sm" : "initial") : "lg"
             );
-          })(s);
-        return t.createElement(i.Provider, { value: a }, r);
+          })(t);
+        return s.createElement(i.Provider, { value: a }, r);
       }
-      function c(e) {
-        const { formFactor: r, children: s } = e;
+      function l(e) {
+        const { formFactor: r, children: t } = e;
         return r
-          ? t.createElement(i.Provider, { value: r }, s)
-          : t.createElement(t.Fragment, null, s);
+          ? s.createElement(i.Provider, { value: r }, t)
+          : s.createElement(s.Fragment, null, t);
       }
-      function l() {
-        return (0, t.useContext)(i);
+      function c() {
+        return (0, s.useContext)(i);
       }
-      const m = o.reduce((e, r, s) => ((e[r] = s), e), {});
-      function _(e) {
-        const r = l();
+      const m = o.reduce((e, r, t) => ((e[r] = t), e), {});
+      function u(e) {
+        const r = c();
         return m[r] >= m[e];
       }
     },
-    55348: (e, r, s) => {
+    55348: (e, r, t) => {
       "use strict";
-      s.d(r, { I: () => a, n: () => o });
-      var t = s(43186);
-      const n = t.IE.reduce((e, r, s) => ((e[r] = s), e), {});
+      t.d(r, { I: () => a, n: () => o });
+      var s = t(43186);
+      const n = s.IE.reduce((e, r, t) => ((e[r] = t), e), {});
       function a(e, r) {
         if ("object" != typeof e) return e;
-        for (let s = n[r]; s >= 0; s--) if (t.IE[s] in e) return e[t.IE[s]];
+        for (let t = n[r]; t >= 0; t--) if (s.IE[t] in e) return e[s.IE[t]];
         return e.initial;
       }
       function o(e) {
-        return a(e, (0, t.xC)());
+        return a(e, (0, s.xC)());
       }
     },
-    42834: (e, r, s) => {
+    17304: (e, r, t) => {
       "use strict";
-      s.d(r, { DT: () => c, b0: () => i, bu: () => p, pd: () => l });
-      var t = s(8527),
-        n = s(39777),
-        a = s(81393),
-        o = s(38535);
+      t.d(r, { Y: () => d });
+      var s = t(90626);
+      const n = [
+        "greyneutral",
+        "mauve",
+        "slate",
+        "sage",
+        "olive",
+        "sand",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "bronze",
+        "gold",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "orange",
+      ];
+      var a = t(43186);
+      const o = (0, s.createContext)({}),
+        i = (0, s.createContext)(() => {});
+      function p(e) {
+        const [r, t] = (0, s.useState)({});
+        return s.createElement(
+          o.Provider,
+          { value: r },
+          s.createElement(i.Provider, { value: t }, e.children),
+        );
+      }
+      function l() {
+        return (0, s.useContext)(o);
+      }
+      var c = t(64238),
+        m = t.n(c),
+        u = t(13857);
+      const d = s.memo(function (e) {
+        const {
+            defaultTextSize: r = "3",
+            accentColor: t = "blue",
+            dullColor: o = "greyneutral",
+            bodyTextColor: i = "text-light",
+            breakpoints: l,
+            children: c,
+            zoo: d,
+          } = e,
+          [f, g] = s.useState(o),
+          [v, y] = s.useState(t),
+          x = window,
+          N = (e) => (r) => {
+            n.includes(r) ? e(r) : console.error("Unknown color!");
+          };
+        (x.setAccent = N(y)), (x.setDull = N(g));
+        const h = {
+          "--default-font-size": `var(--text-size-${r})`,
+          "--default-line-height": `var(--line-height-${r})`,
+          "--default-letter-spacing": `var(--letter-spacing-${r})`,
+          "--color-debug": "hotpink",
+          "--color-accent-contrast": "white",
+        };
+        return s.createElement(
+          p,
+          null,
+          s.createElement(
+            a.cW,
+            { breakpoints: l },
+            s.createElement(
+              _,
+              null,
+              s.createElement(
+                "div",
+                {
+                  className: m()(u.Root, "noOpinionatedGlobalStyles"),
+                  style: h,
+                },
+                s.createElement(
+                  "div",
+                  {
+                    "data-accent-color": v,
+                    "data-dull-color": f,
+                    "data-body-text-color": i,
+                    className: u.DataAttributes,
+                  },
+                  s.createElement(
+                    "div",
+                    { className: u.AfterDataAttributes },
+                    c,
+                    !1,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      });
+      function _(e) {
+        const { children: r } = e,
+          { formFactorOverride: t } = l();
+        return s.createElement(a.cr, { formFactor: t }, r);
+      }
+    },
+    42834: (e, r, t) => {
+      "use strict";
+      t.d(r, { DT: () => l, b0: () => i, bu: () => p, pd: () => c });
+      var s = t(8527),
+        n = t(39777),
+        a = t(81393),
+        o = t(38535);
       function i(e, r) {
         if (e[r]) {
           if ("community_icon" == r) {
-            const s = e.asset_url_format
+            const t = e.asset_url_format
               .replace(/^steam\//, "images/")
               .replace("${FILENAME}", `${e[r]}.jpg`)
               .replace(/\?.*$/, "");
-            return `${t.TS.MEDIA_CDN_COMMUNITY_URL}${s}`;
+            return `${s.TS.MEDIA_CDN_COMMUNITY_URL}${t}`;
           }
           {
-            const s = e.asset_url_format.replace("${FILENAME}", e[r]);
-            return `${t.TS.STORE_ITEM_BASE_URL}${s}`;
+            const t = e.asset_url_format.replace("${FILENAME}", e[r]);
+            return `${s.TS.STORE_ITEM_BASE_URL}${t}`;
           }
         }
       }
       function p(e, r = "full") {
-        let s = "";
+        let t = "";
         switch (r) {
           case "thumb":
-            s = ".116x65";
+            t = ".116x65";
             break;
           case "600x338":
-            s = ".600x338";
+            t = ".600x338";
             break;
           case "1920x1080":
-            s = ".1920x1080";
+            t = ".1920x1080";
             break;
           case "full":
-            s = "";
+            t = "";
             break;
           default:
             (0, a.z_)(r, `Invalid size: ${r}`);
         }
         return (
-          t.TS.STORE_ITEM_BASE_URL + e.filename.replace(/\.[^.*]$/, `${s}$&`)
+          s.TS.STORE_ITEM_BASE_URL + e.filename.replace(/\.[^.*]$/, `${t}$&`)
         );
       }
-      function c(e) {
+      function l(e) {
         const { data: r } = (0, n.j4)(e),
-          s = (0, o.dy)();
+          t = (0, o.dy)();
         if (r)
           return [
             ...(r.all_ages_screenshots || []),
-            ...(!s && r.mature_content_screenshots
+            ...(!t && r.mature_content_screenshots
               ? r.mature_content_screenshots
               : []),
           ].sort((e, r) => e.ordinal - r.ordinal);
       }
-      function l(e, r = !1) {
-        const { data: s } = (0, n.lv)({ appid: e });
-        return void 0 === s
+      function c(e, r = !1) {
+        const { data: t } = (0, n.lv)({ appid: e });
+        return void 0 === t
           ? void 0
-          : null === s
+          : null === t
             ? null
-            : r && s.library_capsule_2x
-              ? i(s, "library_capsule_2x")
-              : s.library_capsule
-                ? i(s, "library_capsule")
-                : `${t.TS.STORE_ITEM_BASE_URL}steam/apps/${e}/portrait.png`;
+            : r && t.library_capsule_2x
+              ? i(t, "library_capsule_2x")
+              : t.library_capsule
+                ? i(t, "library_capsule")
+                : `${s.TS.STORE_ITEM_BASE_URL}steam/apps/${e}/portrait.png`;
       }
     },
   },

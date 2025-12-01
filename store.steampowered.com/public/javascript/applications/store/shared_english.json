@@ -1472,7 +1472,7 @@
     "Sale_PlaceHolder": "Preview Mode: This section has no capsules. Will not appear on user page if it is empty.",
     "Sale_EventSchedulePlaceHolder": "Preview Mode: There are currently no events associated with this schedule, this will not appear in the current state on the sale",
     "Sale_EventSchedulePlaceHolder_Tab": "Preview Mode: For the currently selected TAB there are no events associated with this schedule. Other tabs may show events in the schedule. This will not appear in the current state on the sale",
-    "Sale_SmartPlaceHolder": "Preview Mode: This smart section has no apps for you. This entire section and title would not appear on user's page if it is empty.",
+    "Sale_SmartPlaceHolder": "Preview Mode: This automatically-populated section has no apps for you. This entire section and title would not appear on user's page if it is empty.",
     "Sale_SectionDisabled": "We are experiencing some technical difficulties. Please come back later.",
     "Sale_PersonalizedCarousel_Section_title": "%1$s Games",
     "Sale_PersonalizedCarousel_Section_subtitle": "Because you've played games tagged with %1$s",

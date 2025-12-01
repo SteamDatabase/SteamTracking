@@ -264,6 +264,13 @@
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        Root: "_2KPA3I9eXE9r251_-GX_iv",
+        DataAttributes: "_1tmKnx6V_8Ez9jIC5eMgat",
+        AfterDataAttributes: "_3BGADF5vKbdAji-Xj65xxm",
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
@@ -1120,6 +1127,145 @@
       }
       function _(_) {
         return _(_, (0, _._)());
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = [
+        "greyneutral",
+        "mauve",
+        "slate",
+        "sage",
+        "olive",
+        "sand",
+        "tomato",
+        "red",
+        "ruby",
+        "crimson",
+        "pink",
+        "plum",
+        "purple",
+        "violet",
+        "iris",
+        "indigo",
+        "blue",
+        "cyan",
+        "teal",
+        "jade",
+        "green",
+        "grass",
+        "brown",
+        "bronze",
+        "gold",
+        "sky",
+        "mint",
+        "lime",
+        "yellow",
+        "amber",
+        "orange",
+      ];
+      var _ = __webpack_require__("chunkid");
+      const _ = (0, _.createContext)({}),
+        _ = (0, _.createContext)(() => {});
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)({});
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.createElement(
+            _.Provider,
+            {
+              value: __webpack_require__,
+            },
+            _.children,
+          ),
+        );
+      }
+      function _() {
+        return (0, _.useContext)(_);
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      const _ = _.memo(function (_) {
+        const {
+            defaultTextSize: _ = "3",
+            accentColor: __webpack_require__ = "blue",
+            dullColor: _ = "greyneutral",
+            bodyTextColor: _ = "text-light",
+            breakpoints: _,
+            children: _,
+            zoo: _,
+          } = _,
+          [_, _] = _.useState(_),
+          [_, _] = _.useState(__webpack_require__),
+          _ = window,
+          _ = (_) => (_) => {
+            _.includes(_) ? _(_) : console.error("Unknown color!");
+          };
+        (_.setAccent = _(_)), (_.setDull = _(_));
+        const _ = {
+          "--default-font-size": `var(--text-size-${_})`,
+          "--default-line-height": `var(--line-height-${_})`,
+          "--default-letter-spacing": `var(--letter-spacing-${_})`,
+          "--color-debug": "hotpink",
+          "--color-accent-contrast": "white",
+        };
+        return _.createElement(
+          _,
+          null,
+          _.createElement(
+            _._,
+            {
+              breakpoints: _,
+            },
+            _.createElement(
+              _,
+              null,
+              _.createElement(
+                "div",
+                {
+                  className: _()(_.Root, "noOpinionatedGlobalStyles"),
+                  style: _,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    "data-accent-color": _,
+                    "data-dull-color": _,
+                    "data-body-text-color": _,
+                    className: _.DataAttributes,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.AfterDataAttributes,
+                    },
+                    _,
+                    !1,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+      });
+      function _(_) {
+        const { children: _ } = _,
+          { formFactorOverride: __webpack_require__ } = _();
+        return _.createElement(
+          _._,
+          {
+            formFactor: __webpack_require__,
+          },
+          _,
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

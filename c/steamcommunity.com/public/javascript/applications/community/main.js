@@ -77382,7 +77382,6 @@
         NtH: () => _,
         OSJ: () => _,
         P7r: () => _,
-        PZP: () => _,
         Q38: () => _,
         QPu: () => _,
         QQ4: () => _,
@@ -77399,7 +77398,6 @@
         Vt2: () => _,
         VvS: () => _,
         WLA: () => _,
-        WUv: () => _,
         WX$: () => _,
         _: () => _,
         X4B: () => _,
@@ -77865,40 +77863,6 @@
             _: "73.335",
             _: "128.333",
             _: "183.333",
-          }),
-        );
-      }
-      function _(_) {
-        const { className: _ } = _;
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 10 10",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            _: "M6.29032 3.75H10V6.25H6.29032V10H3.70968V6.25H0V3.75H3.70968V0H6.29032V3.75Z",
-          }),
-        );
-      }
-      function _(_) {
-        const { className: _ } = _;
-        return _.createElement(
-          "svg",
-          {
-            xmlns: "http://www.w3.org/2000/svg",
-            viewBox: "0 0 12 12",
-            fill: "none",
-            ..._,
-          },
-          _.createElement("path", {
-            fill: "currentColor",
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            _: "M1 0C0.447715 0 0 0.447715 0 1V11C0 11.5523 0.447715 12 1 12H11C11.5523 12 12 11.5523 12 11V1C12 0.447715 11.5523 0 11 0H1ZM8.85703 6.95227H6.95227V8.85703H5.0475V6.95227H3.14274V5.0475H5.0475V3.14274H6.95227V5.0475H8.85703V6.95227Z",
           }),
         );
       }
