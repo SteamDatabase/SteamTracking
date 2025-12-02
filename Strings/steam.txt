@@ -2433,9 +2433,6 @@ $ffn
 20CWorkItemSetFileSize
 20IHTTPRedirectHandler
 20IUniformRandomStream
-21:41:56
-21:42:06
-21:42:07
 21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
@@ -2448,6 +2445,8 @@ $ffn
 21CPurchaseLineItemInfo
 21CScheduledFunctionMgr
 21CUtlCStringConversion
+22:19:02
+22:19:13
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2614,8 +2613,8 @@ $ffn
 4f$H
 4h\4
 4i5U6B738%9
+4rV'
 4tpD
-4zV'
 5-535;5A5Q5e5o5q5w5{5}5
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
@@ -2829,6 +2828,7 @@ $ffn
 >#>)>/>3>A>W>c>e>w>
 >0PFJ
 >= or is NULL
+>Dw-.e2
 >I{TrEX
 >ZF9
 >\n9k_EMsgClientChatGetFriendMessageHistoryForOfflineMessages
@@ -5073,6 +5073,7 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
+Dec  1 2025
 December
 Decipher Only
 Deckard
@@ -7388,7 +7389,6 @@ Not yet started
 NotYetRated
 Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
 Nothing to do
-Nov 28 2025
 November
 NrZl
 NullMetrics()
@@ -8890,7 +8890,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Nov 28 2025 21:42:07
+Startup - updater built Dec  1 2025 22:19:13
 State
 StaticFileWriterThread()
 Steam
@@ -12911,7 +12911,6 @@ externaltests.so
 extra compressed data
 extra data in message
 f&dy
-f,Ws
 f.N%H
 f17b6178030a3149805d92b9ce0f681b1d37f7085a66e7f60acf31bc892f2f86
 f;\fu8
@@ -19620,6 +19619,7 @@ xxJo%%\r..8$
 xzxv
 y9*O
 yU\n2`
+ydF~
 ye"Y
 year
 yielding
