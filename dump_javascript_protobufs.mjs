@@ -1903,11 +1903,9 @@ function EvaluateConstant(node) {
 		return -node.argument.value;
 	} else if (node.type === Syntax.Literal) {
 		return node.value;
-	} else if (node.type === Syntax.BinaryExpression) {
-		return "BinaryExpression";
 	}
 
-	throw new Error("Unexpected constant");
+	return node.type;
 }
 
 /**
