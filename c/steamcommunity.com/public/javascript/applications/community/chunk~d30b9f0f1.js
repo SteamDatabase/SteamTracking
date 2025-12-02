@@ -8554,7 +8554,9 @@
                   ),
                 _.createElement(_._, {
                   onAddItem: _,
-                  limitToApps: _,
+                  creatorClanId: _
+                    ? __webpack_require__.GetClanSteamID().GetAccountID()
+                    : void 0,
                 }),
                 _.createElement(
                   "div",
@@ -29154,7 +29156,7 @@
       function _(_) {
         const {
             onAddItem: _,
-            limitToApps: __webpack_require__,
+            creatorClanId: __webpack_require__,
             trailerOnly: _,
           } = _,
           _ = _.useRef(void 0),
@@ -29179,7 +29181,7 @@
                 0 != _.length &&
                 (window.clearTimeout(_.current),
                 (_.current = window.setTimeout(async () => {
-                  let _ = new Array();
+                  const _ = new Array();
                   if (0 === _.indexOf("https://")) {
                     const _ = _.split("/"),
                       _ = _.indexOf("app"),
@@ -29212,7 +29214,8 @@
                         term: _.replace(" ", "+"),
                         _: _._.COUNTRY,
                         _: _._.LANGUAGE,
-                        count: (null == _ ? void 0 : _.length) ? 30 : 10,
+                        creator_clan_id: _,
+                        count: 10,
                         trailer_only: Boolean(_),
                       },
                       _ = await _().get(_, {
@@ -29220,13 +29223,6 @@
                         withCredentials: !0,
                       });
                     _.data && _.push(..._.data);
-                  }
-                  if (null == _ ? void 0 : _.length) {
-                    const _ = (_, _) => `${(0, _._)(_)}_${_}`,
-                      _ = new Set(
-                        __webpack_require__.map(({ _: _, type: _ }) => _(_, _)),
-                      );
-                    _ = _.filter(({ _: _, type: _ }) => _.has(_(_, _)));
                   }
                   _.length &&
                     (_.current = (0, _._)(

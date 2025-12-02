@@ -7877,7 +7877,12 @@
                     ),
                     Y,
                   ),
-                _.createElement(d.Io, { onAddItem: X, limitToApps: te }),
+                _.createElement(d.Io, {
+                  onAddItem: X,
+                  creatorClanId: ee
+                    ? a.GetClanSteamID().GetAccountID()
+                    : void 0,
+                }),
                 _.createElement(
                   "div",
                   { className: O.SaleImportBar },
@@ -26264,7 +26269,7 @@
           : null;
       });
       function ce(e) {
-        const { onAddItem: t, limitToApps: a, trailerOnly: n } = e,
+        const { onAddItem: t, creatorClanId: a, trailerOnly: n } = e,
           l = p.useRef(void 0),
           o = p.useRef(0),
           r = p.useRef(void 0);
@@ -26285,7 +26290,7 @@
                 0 != d.length &&
                 (window.clearTimeout(o.current),
                 (o.current = window.setTimeout(async () => {
-                  let e = new Array();
+                  const e = new Array();
                   if (0 === d.indexOf("https://")) {
                     const t = d.split("/"),
                       a = t.indexOf("app"),
@@ -26303,16 +26308,12 @@
                         term: d.replace(" ", "+"),
                         cc: q.TS.COUNTRY,
                         l: q.TS.LANGUAGE,
-                        count: (null == a ? void 0 : a.length) ? 30 : 10,
+                        creator_clan_id: a,
+                        count: 10,
                         trailer_only: Boolean(n),
                       },
                       o = await i().get(t, { params: l, withCredentials: !0 });
                     o.data && e.push(...o.data);
-                  }
-                  if (null == a ? void 0 : a.length) {
-                    const t = (e, t) => `${(0, f.SW)(t)}_${e}`,
-                      n = new Set(a.map(({ id: e, type: a }) => t(e, a)));
-                    e = e.filter(({ id: e, type: a }) => n.has(t(e, a)));
                   }
                   e.length &&
                     (l.current = (0, v.lX)(
