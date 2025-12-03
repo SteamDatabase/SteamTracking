@@ -1205,15 +1205,193 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _,
         _,
         _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_ECaptchaAnnotationNone = 0)] = "k_ECaptchaAnnotationNone"),
+          (_[(_.k_ECaptchaAnnotationLegitimate = 1)] =
+            "k_ECaptchaAnnotationLegitimate"),
+          (_[(_.k_ECaptchaAnnotationFraudulent = 2)] =
+            "k_ECaptchaAnnotationFraudulent"),
+          (_[(_.k_ECaptchaAnnotationUnspecified = 3)] =
+            "k_ECaptchaAnnotationUnspecified");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAuthSessionSecurityHistory_Invalid = 0)] =
+            "k_EAuthSessionSecurityHistory_Invalid"),
+            (_[(_.k_EAuthSessionSecurityHistory_UsedPreviously = 1)] =
+              "k_EAuthSessionSecurityHistory_UsedPreviously"),
+            (_[(_.k_EAuthSessionSecurityHistory_NoPriorHistory = 2)] =
+              "k_EAuthSessionSecurityHistory_NoPriorHistory");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAuthenticationType_Unknown = 0)] =
+            "k_EAuthenticationType_Unknown"),
+            (_[(_.k_EAuthenticationType_Password = 1)] =
+              "k_EAuthenticationType_Password"),
+            (_[(_.k_EAuthenticationType_QR = 2)] = "k_EAuthenticationType_QR"),
+            (_[(_.k_EAuthenticationType_AccountCreation = 3)] =
+              "k_EAuthenticationType_AccountCreation"),
+            (_[(_.k_EAuthenticationType_GuestAccount = 4)] =
+              "k_EAuthenticationType_GuestAccount");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAuthSessionGuardType_Unknown = 0)] =
+            "k_EAuthSessionGuardType_Unknown"),
+            (_[(_.k_EAuthSessionGuardType_None = 1)] =
+              "k_EAuthSessionGuardType_None"),
+            (_[(_.k_EAuthSessionGuardType_EmailCode = 2)] =
+              "k_EAuthSessionGuardType_EmailCode"),
+            (_[(_.k_EAuthSessionGuardType_DeviceCode = 3)] =
+              "k_EAuthSessionGuardType_DeviceCode"),
+            (_[(_.k_EAuthSessionGuardType_DeviceConfirmation = 4)] =
+              "k_EAuthSessionGuardType_DeviceConfirmation"),
+            (_[(_.k_EAuthSessionGuardType_EmailConfirmation = 5)] =
+              "k_EAuthSessionGuardType_EmailConfirmation"),
+            (_[(_.k_EAuthSessionGuardType_MachineToken = 6)] =
+              "k_EAuthSessionGuardType_MachineToken"),
+            (_[(_.k_EAuthSessionGuardType_LegacyMachineAuth = 7)] =
+              "k_EAuthSessionGuardType_LegacyMachineAuth");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAuthTokenPlatformType_Unknown = 0)] =
+            "k_EAuthTokenPlatformType_Unknown"),
+            (_[(_.k_EAuthTokenPlatformType_SteamClient = 1)] =
+              "k_EAuthTokenPlatformType_SteamClient"),
+            (_[(_.k_EAuthTokenPlatformType_WebBrowser = 2)] =
+              "k_EAuthTokenPlatformType_WebBrowser"),
+            (_[(_.k_EAuthTokenPlatformType_MobileApp = 3)] =
+              "k_EAuthTokenPlatformType_MobileApp");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAuthTokenAppType_Unknown = 0)] =
+            "k_EAuthTokenAppType_Unknown"),
+            (_[(_.k_EAuthTokenAppType_Mobile_SteamApp = 1)] =
+              "k_EAuthTokenAppType_Mobile_SteamApp"),
+            (_[(_.k_EAuthTokenAppType_Mobile_ChatApp = 2)] =
+              "k_EAuthTokenAppType_Mobile_ChatApp");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_ETokenRenewalType_None = 0)] = "k_ETokenRenewalType_None"),
+            (_[(_.k_ETokenRenewalType_Allow = 1)] =
+              "k_ETokenRenewalType_Allow");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAuthTokenRevokeLogout = 0)] = "k_EAuthTokenRevokeLogout"),
+            (_[(_.k_EAuthTokenRevokePermanent = 1)] =
+              "k_EAuthTokenRevokePermanent"),
+            (_[(_.k_EAuthTokenRevokeReplaced = 2)] =
+              "k_EAuthTokenRevokeReplaced"),
+            (_[(_.k_EAuthTokenRevokeSupport = 3)] =
+              "k_EAuthTokenRevokeSupport"),
+            (_[(_.k_EAuthTokenRevokeConsume = 4)] =
+              "k_EAuthTokenRevokeConsume"),
+            (_[(_.k_EAuthTokenRevokeNonRememberedLogout = 5)] =
+              "k_EAuthTokenRevokeNonRememberedLogout"),
+            (_[(_.k_EAuthTokenRevokeNonRememberedPermanent = 6)] =
+              "k_EAuthTokenRevokeNonRememberedPermanent"),
+            (_[(_.k_EAuthTokenRevokeAutomatic = 7)] =
+              "k_EAuthTokenRevokeAutomatic");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAuthTokenState_Invalid = 0)] = "k_EAuthTokenState_Invalid"),
+            (_[(_.k_EAuthTokenState_New = 1)] = "k_EAuthTokenState_New"),
+            (_[(_.k_EAuthTokenState_Confirmed = 2)] =
+              "k_EAuthTokenState_Confirmed"),
+            (_[(_.k_EAuthTokenState_Issued = 3)] = "k_EAuthTokenState_Issued"),
+            (_[(_.k_EAuthTokenState_Denied = 4)] = "k_EAuthTokenState_Denied"),
+            (_[(_.k_EAuthTokenState_LoggedOut = 5)] =
+              "k_EAuthTokenState_LoggedOut"),
+            (_[(_.k_EAuthTokenState_Consumed = 6)] =
+              "k_EAuthTokenState_Consumed"),
+            (_[(_.k_EAuthTokenState_Revoked = 99)] =
+              "k_EAuthTokenState_Revoked");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_ECaptchaUsageNone = 0)] = "k_ECaptchaUsageNone"),
+            (_[(_.k_ECaptchaUsageGeneric = 1)] = "k_ECaptchaUsageGeneric"),
+            (_[(_.k_ECaptchaUsageAccountCreation = 2)] =
+              "k_ECaptchaUsageAccountCreation"),
+            (_[(_.k_ECaptchaUsageHelpRequest = 3)] =
+              "k_ECaptchaUsageHelpRequest"),
+            (_[(_.k_ECaptchaUsageLogon = 4)] = "k_ECaptchaUsageLogon"),
+            (_[(_.k_ECaptchaUsageChina = 5)] = "k_ECaptchaUsageChina"),
+            (_[(_.k_ECaptchaUsageContactForm = 6)] =
+              "k_ECaptchaUsageContactForm"),
+            (_[(_.k_ECaptchaUsageRedeemGiftCard = 7)] =
+              "k_ECaptchaUsageRedeemGiftCard"),
+            (_[(_.k_ECaptchaUsageMax = 8)] = "k_ECaptchaUsageMax");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_ECaptchaTypeNone = 0)] = "k_ECaptchaTypeNone"),
+            (_[(_.k_ECaptchaTypeLegacy = 1)] = "k_ECaptchaTypeLegacy"),
+            (_[(_.k_ECaptchaTypeReCaptcha = 2)] = "k_ECaptchaTypeReCaptcha"),
+            (_[(_.k_ECaptchaTypeHCaptcha = 3)] = "k_ECaptchaTypeHCaptcha"),
+            (_[(_.k_ECaptchaTypeMax = 4)] = "k_ECaptchaTypeMax");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_ECaptchaDifficultyDefault = 0)] =
+            "k_ECaptchaDifficultyDefault"),
+            (_[(_.k_ECaptchaDifficultyLow = 1)] = "k_ECaptchaDifficultyLow"),
+            (_[(_.k_ECaptchaDifficultyMedium = 2)] =
+              "k_ECaptchaDifficultyMedium"),
+            (_[(_.k_ECaptchaDifficultyHigh = 3)] = "k_ECaptchaDifficultyHigh");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_ERiskUnknown = 1)] = "k_ERiskUnknown"),
+            (_[(_.k_ERiskMedium = 2)] = "k_ERiskMedium"),
+            (_[(_.k_ERiskHigh = 3)] = "k_ERiskHigh");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_ETokenRisk_ConfirmDistance = 1)] =
+            "k_ETokenRisk_ConfirmDistance"),
+            (_[(_.k_ETokenRisk_TokenLocation = 2)] =
+              "k_ETokenRisk_TokenLocation"),
+            (_[(_.k_ETokenRisk_FlaggedIP = 4)] = "k_ETokenRisk_FlaggedIP"),
+            (_[(_.k_ETokenRisk_APICalls = 8)] = "k_ETokenRisk_APICalls");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EConfirmation_Unknown = 0)] = "k_EConfirmation_Unknown"),
+            (_[(_.k_EConfirmation_Pending = 1)] = "k_EConfirmation_Pending"),
+            (_[(_.k_EConfirmation_Approved = 2)] = "k_EConfirmation_Approved"),
+            (_[(_.k_EConfirmation_Denied = 3)] = "k_EConfirmation_Denied"),
+            (_[(_.k_EConfirmation_Expired = 4)] = "k_EConfirmation_Expired"),
+            (_[(_.k_EConfirmation_Error = 5)] = "k_EConfirmation_Error");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EConfirmationRequest_None = 0)] =
+            "k_EConfirmationRequest_None"),
+            (_[(_.k_EConfirmationRequest_Email = 1)] =
+              "k_EConfirmationRequest_Email"),
+            (_[(_.k_EConfirmationRequest_Mobile = 2)] =
+              "k_EConfirmationRequest_Mobile");
+        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -1707,7 +1885,7 @@
                   },
                   persistence: {
                     _: 7,
-                    _: 1,
+                    _: _._.k_ESessionPersistence_Persistent,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -2652,7 +2830,7 @@
                   },
                   persistence: {
                     _: 6,
-                    _: 1,
+                    _: _._.k_ESessionPersistence_Persistent,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -3356,7 +3534,7 @@
                   },
                   revoke_action: {
                     _: 2,
-                    _: 1,
+                    _: _.k_EAuthTokenRevokePermanent,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -3466,7 +3644,7 @@
                   },
                   revoke_action: {
                     _: 3,
-                    _: 1,
+                    _: _.k_EAuthTokenRevokePermanent,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -5117,6 +5295,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -5186,21 +5367,22 @@
         async PollForUpdate() {
           try {
             const _ = _._.Init(_._);
-            _.SetEMsg(9804),
+            _.SetEMsg(_._.k_EMsgServiceMethodCallFromClientNonAuthed),
               _.Body().set_client_id(this.m_strClientID),
               _.Body().set_request_id(this.m_rgRequestID),
               this.m_strTokenToRevoke &&
                 _.Body().set_token_to_revoke(this.m_strTokenToRevoke);
             const _ = await _._.PollAuthSessionStatus(this.m_transport, _),
               _ = _.GetEResult();
-            if (1 !== _) {
-              if (2 === _) {
+            if (_ !== _._.k_EResultOK) {
+              if (_ === _._.k_EResultFail) {
                 const _ = _.Hdr().transport_error();
                 if (
                   ((0, _._)(
                     `Failed to poll auth session. Result ${_}. Transport Error: ${_}`,
                   ),
-                  2 === _ || 3 === _)
+                  _ === _._.k_ETransportRequestNotSent ||
+                    _ === _._.k_ETransportResponseNotReceived)
                 )
                   return (
                     this.m_transport.MakeReady(),
@@ -5208,13 +5390,15 @@
                       this.PollForUpdate,
                       this.m_msPollInterval,
                     ),
-                    1
+                    _._.k_EResultOK
                   );
               }
-              if (9 === _ || 27 === _) this.m_eFailureState = _.Expired;
-              else if (84 === _) this.m_eFailureState = _.RateLimitExceeded;
+              if (_ === _._.k_EResultFileNotFound || _ === _._.k_EResultExpired)
+                this.m_eFailureState = _.Expired;
+              else if (_ === _._.k_EResultRateLimitExceeded)
+                this.m_eFailureState = _.RateLimitExceeded;
               else {
-                if (118 == _) {
+                if (_ == _._.k_EResultMustAgreeToSSA) {
                   if (this.m_onShowAgreement)
                     this.m_onShowAgreement(_.Body().agreement_session_url());
                   else {
@@ -5274,7 +5458,7 @@
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
-              2
+              _._.k_EResultFail
             );
           }
         }
@@ -5343,7 +5527,7 @@
                             `Transfer login to ${_.host} failed with status code: ${_.status}`,
                           ),
                           (_ = !1))
-                        : 1 !== _.data.result &&
+                        : _.data.result !== _._.k_EResultOK &&
                           ((0, _._)(
                             `Transfer login to ${_.host} failed with result: ${_.data.result}`,
                           ),
@@ -5424,6 +5608,9 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -5559,6 +5746,8 @@
         );
       }
       var _,
+        _,
+        _,
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
@@ -5576,6 +5765,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_ETwoFactorUsageType_Unknown = 0)] =
+          "k_ETwoFactorUsageType_Unknown"),
+          (_[(_.k_ETwoFactorUsageType_None = 1)] =
+            "k_ETwoFactorUsageType_None"),
+          (_[(_.k_ETwoFactorUsageType_MobileConfirmation = 2)] =
+            "k_ETwoFactorUsageType_MobileConfirmation"),
+          (_[(_.k_ETwoFactorUsageType_Login = 3)] =
+            "k_ETwoFactorUsageType_Login");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_ETwoFactorStatusFieldFlag_None = 0)] =
+            "k_ETwoFactorStatusFieldFlag_None"),
+            (_[(_.k_ETwoFactorStatusFieldFlag_LastUsage = 1)] =
+              "k_ETwoFactorStatusFieldFlag_LastUsage");
+        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -7054,8 +7259,30 @@
             );
           });
       })(_ || (_ = {}));
+      var _;
+      !(function (_) {
+        (_[(_.Unstarted = 0)] = "Unstarted"),
+          (_[(_.Starting = 1)] = "Starting"),
+          (_[(_.InvalidCredentials = 2)] = "InvalidCredentials"),
+          (_[(_.WaitingForEmailCode = 3)] = "WaitingForEmailCode"),
+          (_[(_.WaitingForEmailConfirmation = 4)] =
+            "WaitingForEmailConfirmation"),
+          (_[(_.WaitingForDeviceCode = 5)] = "WaitingForDeviceCode"),
+          (_[(_.WaitingForDeviceConfirmation = 6)] =
+            "WaitingForDeviceConfirmation"),
+          (_[(_.StartMoveAuthenticator = 7)] = "StartMoveAuthenticator"),
+          (_[(_.WaitingForMoveCode = 8)] = "WaitingForMoveCode"),
+          (_[(_.AuthenticatorMoved = 9)] = "AuthenticatorMoved"),
+          (_[(_.InvalidEmailCode = 10)] = "InvalidEmailCode"),
+          (_[(_.InvalidDeviceCode = 11)] = "InvalidDeviceCode"),
+          (_[(_.InvalidMoveCode = 12)] = "InvalidMoveCode"),
+          (_[(_.WaitingForToken = 13)] = "WaitingForToken"),
+          (_[(_.Success = 14)] = "Success"),
+          (_[(_.Failure = 15)] = "Failure"),
+          (_[(_.Stopped = 16)] = "Stopped");
+      })(_ || (_ = {}));
       class _ extends _._ {
-        m_eStatus = 0;
+        m_eStatus = _.Unstarted;
         m_steamid;
         m_strAccountName;
         m_strConfirmationAssociatedMessage = "";
@@ -7078,31 +7305,44 @@
             (this.m_onGetMachineAuth = _.onGetMachineAuth);
         }
         async Start(_, _, _) {
-          if (0 !== this.m_eStatus && 2 !== this.m_eStatus)
+          if (
+            this.m_eStatus !== _.Unstarted &&
+            this.m_eStatus !== _.InvalidCredentials
+          )
             return (
               (0, _._)(
                 "Cannot start an already started auth session. Create a new session instance.",
               ),
-              29
+              _._.k_EResultDuplicateRequest
             );
           const _ = _.replace(/[^\x00-\x7F]/g, ""),
             _ = _.replace(/[^\x00-\x7F]/g, "").slice(0, 64);
-          if (!_.length || !_.length) return 8;
+          if (!_.length || !_.length) return _._.k_EResultInvalidParam;
           if (
-            ((this.m_eStatus = 1),
+            ((this.m_eStatus = _.Starting),
             (this.m_bUsingCodeOverride = !1),
             "anonymous" == _)
           )
-            return this.SetFailureState(_._.AnonymousLogin, _.EResult(12)), 12;
+            return (
+              this.SetFailureState(
+                _._.AnonymousLogin,
+                _.EResult(_._.k_EResultInvalidName),
+              ),
+              _._.k_EResultInvalidName
+            );
           try {
             const _ = await (async function (_, _) {
               const _ = _._.Init(_._);
               __webpack_require__.Body().set_account_name(_),
-                __webpack_require__.SetEMsg("chunkid");
+                __webpack_require__.SetEMsg(
+                  _._.k_EMsgServiceMethodCallFromClientNonAuthed,
+                );
               try {
                 await _.MakeReady();
                 const _ = await _._.GetPasswordRSAPublicKey(_, _);
-                if ((_.DEBUG_LogToConsole(), 1 !== _.GetEResult()))
+                if (
+                  (_.DEBUG_LogToConsole(), _.GetEResult() !== _._.k_EResultOK)
+                )
                   return (
                     (0, _._)(
                       `Failed to get RSA key with EResult: ${_.GetEResult()}`,
@@ -7137,17 +7377,24 @@
             if (!_)
               return (
                 (0, _._)("Cannot start auth session without a valid RSA key"),
-                this.SetFailureState(_._.Network, _.EResult(20)),
-                20
+                this.SetFailureState(
+                  _._.Network,
+                  _.EResult(_._.k_EResultServiceUnavailable),
+                ),
+                _._.k_EResultServiceUnavailable
               );
             const _ = (0, _._)(_, _),
               _ = _._.Init(_._);
-            _.SetEMsg(9804),
+            _.SetEMsg(_._.k_EMsgServiceMethodCallFromClientNonAuthed),
               _.Body().set_account_name(_),
               _.Body().set_encrypted_password(_),
               _.Body().set_encryption_timestamp(_.timestamp),
               _.Body().set_remember_login(!!_),
-              _.Body().set_persistence(_ ? 1 : 0),
+              _.Body().set_persistence(
+                _
+                  ? _._.k_ESessionPersistence_Persistent
+                  : _._.k_ESessionPersistence_Ephemeral,
+              ),
               _.Body().set_website_id(_._.WEBSITE_ID);
             try {
               _.Body().set_device_details(await this.GetDeviceDetails());
@@ -7159,7 +7406,7 @@
               null != this.m_onGetMachineAuth)
             ) {
               const _ = await this.m_onGetMachineAuth(_);
-              1 == _.eresult && _.Body().set_guard_data(_.data);
+              _.eresult == _._.k_EResultOK && _.Body().set_guard_data(_.data);
             }
             await this.m_transport.MakeReady();
             const _ = await _._.BeginAuthSessionViaCredentials(
@@ -7171,16 +7418,20 @@
               (0, _._)(async () => {
                 const _ = _.GetEResult(),
                   _ = _.Hdr().transport_error();
-                if (1 !== _)
+                if (_ !== _._.k_EResultOK)
                   switch (_) {
-                    case 5:
-                      return (this.m_eStatus = 2), _;
-                    case 20:
-                    case 3:
+                    case _._.k_EResultInvalidPassword:
+                      return (this.m_eStatus = _.InvalidCredentials), _;
+                    case _._.k_EResultServiceUnavailable:
+                    case _._.k_EResultNoConnection:
                       return (
-                        this.SetFailureState(_._.Network, _.EResult(20)), _
+                        this.SetFailureState(
+                          _._.Network,
+                          _.EResult(_._.k_EResultServiceUnavailable),
+                        ),
+                        _
                       );
-                    case 84:
+                    case _._.k_EResultRateLimitExceeded:
                       return (
                         this.SetFailureState(
                           _._.RateLimitExceeded,
@@ -7188,7 +7439,7 @@
                         ),
                         _
                       );
-                    case 118:
+                    case _._.k_EResultMustAgreeToSSA:
                       if (this.m_onShowAgreement)
                         this.m_onShowAgreement(
                           _.Body().agreement_session_url(),
@@ -7202,9 +7453,10 @@
                         this.m_onCompleteCallback({
                           bSuccess: !1,
                         }),
-                        (this.m_eStatus = 0),
+                        (this.m_eStatus = _.Unstarted),
                         _
                       );
+                    case _._.k_EResultAccountDisabled:
                     default:
                       return (
                         (0, _._)(
@@ -7236,14 +7488,16 @@
                   (this.m_rgRequestID = _),
                   (this.m_steamid = _),
                   (this.m_strWeakAuthToken = _),
-                  _.find(({ confirmation_type: _ }) => 6 === _))
+                  _.find(
+                    ({ confirmation_type: _ }) =>
+                      _ === _._.k_EAuthSessionGuardType_MachineToken,
+                  ))
                 ) {
                   const _ = new FormData();
                   _.append("clientid", _), _.append("steamid", this.m_steamid);
                   const _ = `${_._.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
                   try {
                     if (
-                      1 ==
                       (
                         await _().post(_, _, {
                           headers: {
@@ -7251,9 +7505,13 @@
                           },
                           withCredentials: !0,
                         })
-                      ).data.result
+                      ).data.result == _._.k_EResultOK
                     )
-                      return (this.m_eStatus = 4), this.StartPolling(!0), 1;
+                      return (
+                        (this.m_eStatus = _.WaitingForEmailConfirmation),
+                        this.StartPolling(!0),
+                        _._.k_EResultOK
+                      );
                   } catch (_) {
                     if (
                       ((0, _._)(
@@ -7267,18 +7525,24 @@
                             _._.Network,
                             _.AjaxFailureWithCode(_.response.status),
                           ),
-                          20)
+                          _._.k_EResultServiceUnavailable)
                         : (this.SetFailureState(
                             _._.Network,
                             _.AjaxFailureNoCode(),
                           ),
-                          20);
+                          _._.k_EResultServiceUnavailable);
                     }
-                    return this.SetFailureState(_._.Network, _.EResult(79)), 79;
+                    return (
+                      this.SetFailureState(
+                        _._.Network,
+                        _.EResult(_._.k_EResultUnexpectedError),
+                      ),
+                      _._.k_EResultUnexpectedError
+                    );
                   }
                 }
                 const _ = (function (_) {
-                    let _ = _[0] || 0;
+                    let _ = _[0] || _._.k_EAuthSessionGuardType_Unknown;
                     _.length > 1 && (_ = _.sort((_, _) => _[_] - _[_])[0]);
                     return _;
                   })(_.map(({ confirmation_type: _ }) => _)),
@@ -7290,19 +7554,26 @@
                       _.associated_message),
                   _)
                 ) {
-                  case 1:
-                    return (this.m_eStatus = 13), this.StartPolling(), _;
-                  case 2:
-                    this.m_eStatus = 3;
+                  case _._.k_EAuthSessionGuardType_None:
+                    return (
+                      (this.m_eStatus = _.WaitingForToken),
+                      this.StartPolling(),
+                      _
+                    );
+                  case _._.k_EAuthSessionGuardType_EmailCode:
+                    this.m_eStatus = _.WaitingForEmailCode;
                     break;
-                  case 5:
-                    (this.m_eStatus = 4), this.StartPolling(!1);
+                  case _._.k_EAuthSessionGuardType_EmailConfirmation:
+                    (this.m_eStatus = _.WaitingForEmailConfirmation),
+                      this.StartPolling(!1);
                     break;
-                  case 3:
-                    (this.m_eStatus = 5), this.StartPolling(!1);
+                  case _._.k_EAuthSessionGuardType_DeviceCode:
+                    (this.m_eStatus = _.WaitingForDeviceCode),
+                      this.StartPolling(!1);
                     break;
-                  case 4:
-                    (this.m_eStatus = 6), this.StartPolling(!1);
+                  case _._.k_EAuthSessionGuardType_DeviceConfirmation:
+                    (this.m_eStatus = _.WaitingForDeviceConfirmation),
+                      this.StartPolling(!1);
                 }
                 return _;
               })
@@ -7317,12 +7588,12 @@
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
-              2
+              _._.k_EResultFail
             );
           }
         }
         Stop() {
-          this.StopPolling(), (this.m_eStatus = 16);
+          this.StopPolling(), (this.m_eStatus = _.Stopped);
         }
         GetStatus() {
           return this.m_eStatus;
@@ -7345,35 +7616,41 @@
         async SendSteamGuardCode(_, _ = !0) {
           if (0 == _.length) {
             switch (this.m_eStatus) {
-              case 10:
-                this.m_eStatus = 3;
+              case _.InvalidEmailCode:
+                this.m_eStatus = _.WaitingForEmailCode;
                 break;
-              case 11:
-                this.m_eStatus = 5;
+              case _.InvalidDeviceCode:
+                this.m_eStatus = _.WaitingForDeviceCode;
                 break;
-              case 5:
-              case 3:
+              case _.WaitingForDeviceCode:
+              case _.WaitingForEmailCode:
                 break;
               default:
                 throw new Error("Attempted to clear code in invalid state");
             }
-            return Promise.resolve(1);
+            return Promise.resolve(_._.k_EResultOK);
           }
           try {
             await this.m_transport.MakeReady();
-            const _ = 3 === this.m_eStatus || 10 === this.m_eStatus,
+            const _ =
+                this.m_eStatus === _.WaitingForEmailCode ||
+                this.m_eStatus === _.InvalidEmailCode,
               _ = _._.Init(_._);
-            _.SetEMsg(9804),
+            _.SetEMsg(_._.k_EMsgServiceMethodCallFromClientNonAuthed),
               _.Body().set_client_id(this.m_strClientID),
               _.Body().set_steamid(this.m_steamid),
               _.Body().set_code(_),
-              _.Body().set_code_type(_ ? 2 : 3);
+              _.Body().set_code_type(
+                _
+                  ? _._.k_EAuthSessionGuardType_EmailCode
+                  : _._.k_EAuthSessionGuardType_DeviceCode,
+              );
             const _ = await _._.UpdateAuthSessionWithSteamGuardCode(
                 this.m_transport,
                 _,
               ),
               _ = _.GetEResult();
-            if (1 !== _) {
+            if (_ !== _._.k_EResultOK) {
               if (!_)
                 return (
                   (0, _._)(
@@ -7382,10 +7659,15 @@
                   _
                 );
               switch (_) {
-                case 65:
-                case 88:
-                  return (this.m_eStatus = _ ? 10 : 11), _;
-                case 27:
+                case _._.k_EResultInvalidLoginAuthCode:
+                case _._.k_EResultTwoFactorCodeMismatch:
+                  return (
+                    (this.m_eStatus = _
+                      ? _.InvalidEmailCode
+                      : _.InvalidDeviceCode),
+                    _
+                  );
+                case _._.k_EResultExpired:
                   return (
                     this.SetFailureState(_._.Expired, _.EResult(_)),
                     this.m_onCompleteCallback({
@@ -7393,7 +7675,7 @@
                     }),
                     _
                   );
-                case 84:
+                case _._.k_EResultRateLimitExceeded:
                   return (
                     this.SetFailureState(_._.RateLimitExceeded, _.EResult(_)),
                     this.m_onCompleteCallback({
@@ -7401,7 +7683,7 @@
                     }),
                     _
                   );
-                case 118:
+                case _._.k_EResultMustAgreeToSSA:
                   if (this.m_onShowAgreement)
                     this.m_onShowAgreement(_.Body().agreement_session_url());
                   else {
@@ -7413,7 +7695,7 @@
                     this.m_onCompleteCallback({
                       bSuccess: !1,
                     }),
-                    (this.m_eStatus = 0),
+                    (this.m_eStatus = _.Unstarted),
                     _
                   );
                 default:
@@ -7429,7 +7711,7 @@
                   );
               }
             }
-            return (this.m_eStatus = 13), this.StartPolling(), _;
+            return (this.m_eStatus = _.WaitingForToken), this.StartPolling(), _;
           } catch (_) {
             return (
               (0, _._)(`Failed to update auth session with SG code. ${_}`),
@@ -7437,19 +7719,21 @@
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
-              2
+              _._.k_EResultFail
             );
           }
         }
         UseCodeOverride() {
           switch (this.m_eStatus) {
-            case 6:
+            case _.WaitingForDeviceConfirmation:
               return (
-                (this.m_bUsingCodeOverride = !0), void (this.m_eStatus = 5)
+                (this.m_bUsingCodeOverride = !0),
+                void (this.m_eStatus = _.WaitingForDeviceCode)
               );
-            case 4:
+            case _.WaitingForEmailConfirmation:
               return (
-                (this.m_bUsingCodeOverride = !0), void (this.m_eStatus = 3)
+                (this.m_bUsingCodeOverride = !0),
+                void (this.m_eStatus = _.WaitingForEmailCode)
               );
             default:
               return void (0, _._)(
@@ -7458,7 +7742,7 @@
           }
         }
         CantAccessCode() {
-          this.m_eStatus = 7;
+          this.m_eStatus = _.StartMoveAuthenticator;
         }
         async StartMoveAuthenticator() {
           this.m_weakAuthWebInterface = new _._(
@@ -7471,7 +7755,7 @@
                 this.m_weakAuthWebInterface.GetServiceTransport(),
                 _,
               );
-            1 != _.GetEResult()
+            _._.k_EResultOK != _.GetEResult()
               ? (_.DEBUG_LogToConsole(),
                 (0, _._)(
                   "An unexpected error occured while adding an authenticator",
@@ -7481,13 +7765,16 @@
                   _._.MoveAuthenticator,
                   _.EResult(_.GetEResult()),
                 ))
-              : (this.m_eStatus = 8);
+              : (this.m_eStatus = _.WaitingForMoveCode);
           } catch (_) {
             (0, _._)(
               "An unexpected error occured while moving an authenticator",
               _,
             ),
-              this.SetFailureState(_._.MoveAuthenticator, _.EResult(2));
+              this.SetFailureState(
+                _._.MoveAuthenticator,
+                _.EResult(_._.k_EResultFail),
+              );
           }
         }
         async ResendMoveCode() {
@@ -7496,13 +7783,13 @@
               this.m_weakAuthWebInterface.GetServiceTransport(),
               _,
             );
-          1 != _.GetEResult() &&
+          _._.k_EResultOK != _.GetEResult() &&
             (_.DEBUG_LogToConsole(),
             (0, _._)(
               "An unexpected error occured while adding an authenticator",
               _.GetEResult(),
             )),
-            (this.m_eStatus = 8);
+            (this.m_eStatus = _.WaitingForMoveCode);
         }
         async FinishMoveAuthenticator(_) {
           const _ = _._.Init(_);
@@ -7513,14 +7800,14 @@
             this.m_weakAuthWebInterface.GetServiceTransport(),
             _,
           );
-          94 == __webpack_require__.GetEResult()
-            ? (this.m_eStatus = 12)
+          _._.k_EResultSmsCodeFailed == __webpack_require__.GetEResult()
+            ? (this.m_eStatus = _.InvalidMoveCode)
             : __webpack_require__.Body().success()
               ? (__webpack_require__.DEBUG_LogToConsole(),
                 (this.m_replacementAuthenticator = (0, _._)(
                   __webpack_require__.Body().replacement_token().toObject(),
                 )),
-                (this.m_eStatus = 9),
+                (this.m_eStatus = _.AuthenticatorMoved),
                 (this.m_bUsingCodeOverride = !1))
               : (__webpack_require__.DEBUG_LogToConsole(),
                 (0, _._)(
@@ -7533,19 +7820,19 @@
                 ));
         }
         FinishMoveRecovery() {
-          this.m_eStatus = 5;
+          this.m_eStatus = _.WaitingForDeviceCode;
         }
         BCanGoBack() {
           switch (this.m_eStatus) {
-            case 5:
-            case 11:
-            case 3:
-            case 10:
-            case 6:
-            case 4:
-            case 7:
-            case 8:
-            case 12:
+            case _.WaitingForDeviceCode:
+            case _.InvalidDeviceCode:
+            case _.WaitingForEmailCode:
+            case _.InvalidEmailCode:
+            case _.WaitingForDeviceConfirmation:
+            case _.WaitingForEmailConfirmation:
+            case _.StartMoveAuthenticator:
+            case _.WaitingForMoveCode:
+            case _.InvalidMoveCode:
               return !0;
             default:
               return !1;
@@ -7553,22 +7840,27 @@
         }
         GoBack() {
           switch (this.m_eStatus) {
-            case 6:
-            case 4:
-              this.m_eStatus = 0;
+            case _.WaitingForDeviceConfirmation:
+            case _.WaitingForEmailConfirmation:
+              this.m_eStatus = _.Unstarted;
               break;
-            case 5:
-            case 11:
-              this.m_eStatus = this.m_bUsingCodeOverride ? 6 : 0;
+            case _.WaitingForDeviceCode:
+            case _.InvalidDeviceCode:
+              this.m_eStatus = this.m_bUsingCodeOverride
+                ? _.WaitingForDeviceConfirmation
+                : _.Unstarted;
               break;
-            case 7:
-            case 8:
-            case 12:
-              this.m_eStatus = (this.m_bUsingCodeOverride, 5);
+            case _.StartMoveAuthenticator:
+            case _.WaitingForMoveCode:
+            case _.InvalidMoveCode:
+              this.m_eStatus =
+                (this.m_bUsingCodeOverride, _.WaitingForDeviceCode);
               break;
-            case 3:
-            case 10:
-              this.m_eStatus = this.m_bUsingCodeOverride ? 4 : 0;
+            case _.WaitingForEmailCode:
+            case _.InvalidEmailCode:
+              this.m_eStatus = this.m_bUsingCodeOverride
+                ? _.WaitingForEmailConfirmation
+                : _.Unstarted;
               break;
             default:
               return void (0, _._)(
@@ -7577,13 +7869,13 @@
           }
         }
         SetFailureState(_, _, __webpack_require__ = "") {
-          (this.m_eStatus = 15),
+          (this.m_eStatus = _.Failure),
             (this.m_eFailureState = _),
             (this.m_strErrorReference = _),
             (this.m_strExtendedErrorMessage = __webpack_require__);
         }
         onAuthComplete = (_) => {
-          this.m_eStatus = _.bSuccess ? 14 : 15;
+          this.m_eStatus = _.bSuccess ? _.Success : _.Failure;
           const _ = _.bSuccess
             ? {
                 ..._,
@@ -7610,7 +7902,14 @@
         (0, _._)([_._], _.prototype, "GoBack", null),
         (0, _._)([_._], _.prototype, "SetFailureState", null),
         (0, _._)([_._], _.prototype, "SetOnLoginComplete", null);
-      const _ = [4, 3, 2, 1, 0, 5].reduce((_, _, _) => ((_[_] = _), _), {});
+      const _ = [
+        _._.k_EAuthSessionGuardType_DeviceConfirmation,
+        _._.k_EAuthSessionGuardType_DeviceCode,
+        _._.k_EAuthSessionGuardType_EmailCode,
+        _._.k_EAuthSessionGuardType_None,
+        _._.k_EAuthSessionGuardType_Unknown,
+        _._.k_EAuthSessionGuardType_EmailConfirmation,
+      ].reduce((_, _, _) => ((_[_] = _), _), {});
       function _(_) {
         return _ ? 7 : 5;
       }
@@ -7627,6 +7926,103 @@
         AjaxFailureNoCode: () => "af",
         AjaxFailureWithCode: (_) => `af-${_}`,
       };
+      var _;
+      !(function (_) {
+        (_[(_.Unstarted = 0)] = "Unstarted"),
+          (_[(_.Starting = 1)] = "Starting"),
+          (_[(_.Pending = 2)] = "Pending"),
+          (_[(_.Success = 3)] = "Success"),
+          (_[(_.Failure = 4)] = "Failure"),
+          (_[(_.Stopped = 5)] = "Stopped");
+      })(_ || (_ = {}));
+      class _ extends _._ {
+        m_eStatus = _.Unstarted;
+        constructor(_) {
+          super(
+            _.transport,
+            (_) => {
+              (this.m_eStatus = _.bSuccess ? _.Success : _.Failure),
+                _.onComplete(_);
+            },
+            _.onDeviceDetails,
+          ),
+            (0, _._)(this);
+        }
+        async Start() {
+          if (this.m_eStatus !== _.Unstarted)
+            return (
+              console.error(
+                "Cannot start an already started auth session. Create a new session instance.",
+              ),
+              _._.k_EResultFail
+            );
+          this.m_eStatus = _.Starting;
+          try {
+            await this.m_transport.MakeReady();
+            const _ = _._.Init(_._);
+            _.SetEMsg(_._.k_EMsgServiceMethodCallFromClientNonAuthed);
+            try {
+              _.Body().set_device_details(await this.GetDeviceDetails());
+            } catch (_) {
+              console.error("Failed to GetDeviceDetails"), console.log(_);
+            }
+            _.Body().set_website_id(_._.WEBSITE_ID);
+            const _ = await _._.BeginAuthSessionViaQR(this.m_transport, _),
+              _ = _.GetEResult(),
+              _ = _.Hdr().transport_error();
+            if (_ !== _._.k_EResultOK)
+              return (
+                console.error(
+                  `Failed to start auth session. Result: ${_} Transport: ${_}`,
+                ),
+                (this.m_eFailureState = _._.Generic),
+                this.m_onCompleteCallback({
+                  bSuccess: !1,
+                }),
+                _
+              );
+            const {
+              client_id: _,
+              challenge_url: _,
+              interval: _,
+              request_id: _,
+            } = _.Body().toObject();
+            return (
+              (this.m_strClientID = _),
+              (this.m_strChallengeURL = _),
+              (this.m_msPollInterval = 1e3 * _),
+              (this.m_rgRequestID = _),
+              (this.m_eStatus = _.Pending),
+              this.StartPolling(!1),
+              _
+            );
+          } catch (_) {
+            return (
+              console.error(
+                `Failed to start auth session: ${JSON.stringify(_)}`,
+              ),
+              (this.m_eFailureState = _._.Generic),
+              this.m_onCompleteCallback({
+                bSuccess: !1,
+              }),
+              _._.k_EResultFail
+            );
+          }
+        }
+        Stop() {
+          this.StopPolling(), (this.m_eStatus = _.Stopped);
+        }
+        GetChallengeURL() {
+          return this.m_strChallengeURL;
+        }
+        GetClientID() {
+          return this.m_strClientID;
+        }
+        GetStatus() {
+          return this.m_eStatus;
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_eStatus", void 0);
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -7736,93 +8132,6 @@
           (_[(_._ = 3)] = "Q"),
           (_[(_._ = 2)] = "H");
       })(_ || (_ = {}));
-      class _ extends _._ {
-        m_eStatus = 0;
-        constructor(_) {
-          super(
-            _.transport,
-            (_) => {
-              (this.m_eStatus = _.bSuccess ? 3 : 4), _.onComplete(_);
-            },
-            _.onDeviceDetails,
-          ),
-            (0, _._)(this);
-        }
-        async Start() {
-          if (0 !== this.m_eStatus)
-            return (
-              console.error(
-                "Cannot start an already started auth session. Create a new session instance.",
-              ),
-              2
-            );
-          this.m_eStatus = 1;
-          try {
-            await this.m_transport.MakeReady();
-            const _ = _._.Init(_._);
-            _.SetEMsg(9804);
-            try {
-              _.Body().set_device_details(await this.GetDeviceDetails());
-            } catch (_) {
-              console.error("Failed to GetDeviceDetails"), console.log(_);
-            }
-            _.Body().set_website_id(_._.WEBSITE_ID);
-            const _ = await _._.BeginAuthSessionViaQR(this.m_transport, _),
-              _ = _.GetEResult(),
-              _ = _.Hdr().transport_error();
-            if (1 !== _)
-              return (
-                console.error(
-                  `Failed to start auth session. Result: ${_} Transport: ${_}`,
-                ),
-                (this.m_eFailureState = _._.Generic),
-                this.m_onCompleteCallback({
-                  bSuccess: !1,
-                }),
-                _
-              );
-            const {
-              client_id: _,
-              challenge_url: _,
-              interval: _,
-              request_id: _,
-            } = _.Body().toObject();
-            return (
-              (this.m_strClientID = _),
-              (this.m_strChallengeURL = _),
-              (this.m_msPollInterval = 1e3 * _),
-              (this.m_rgRequestID = _),
-              (this.m_eStatus = 2),
-              this.StartPolling(!1),
-              _
-            );
-          } catch (_) {
-            return (
-              console.error(
-                `Failed to start auth session: ${JSON.stringify(_)}`,
-              ),
-              (this.m_eFailureState = _._.Generic),
-              this.m_onCompleteCallback({
-                bSuccess: !1,
-              }),
-              2
-            );
-          }
-        }
-        Stop() {
-          this.StopPolling(), (this.m_eStatus = 5);
-        }
-        GetChallengeURL() {
-          return this.m_strChallengeURL;
-        }
-        GetClientID() {
-          return this.m_strClientID;
-        }
-        GetStatus() {
-          return this.m_eStatus;
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_eStatus", void 0);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -7870,10 +8179,10 @@
             onDeviceDetails: _,
           });
         (0, _.useEffect)(() => _ && _(_), [_, _]);
-        const _ = 2 === _ ? _ : _._.STORE_BASE_URL,
-          _ = 0 === _ || 1 === _ || _,
-          _ = 4 === _,
-          _ = 3 === _,
+        const _ = _ === _.Pending ? _ : _._.STORE_BASE_URL,
+          _ = _ === _.Unstarted || _ === _.Starting || _,
+          _ = _ === _.Failure,
+          _ = _ === _.Success,
           _ = _
             ? _.createElement(_, null)
             : _
@@ -7889,7 +8198,7 @@
         (0, _.useEffect)(() => {
           _.refreshInfo?.login_token_id && _(_.refreshInfo.login_token_id);
         }, [_.refreshInfo, _]);
-        const _ = 1 !== _._.EUNIVERSE;
+        const _ = _._.EUNIVERSE !== _._.k_EUniversePublic;
         return _.createElement(
           "div",
           {
@@ -8062,7 +8371,8 @@
                         _ = new FormData();
                       Object.keys(_).forEach((_) => _.append(_, _[_]));
                       const _ = await _().post(_, _),
-                        _ = 200 === _.status && 1 === _.data.result;
+                        _ =
+                          200 === _.status && _.data.result === _._.k_EResultOK;
                       _ && window.location.assign(_);
                       return _;
                     })(_.current)
@@ -8179,7 +8489,7 @@
           variant: __webpack_require__,
           redirectUrl: _,
         } = _;
-        if (8 === _) return null;
+        if (_ === _._.k_ELauncherTypeSingleApp) return null;
         if ("none" == __webpack_require__) return null;
         const _ = void 0 !== _;
         let _;
@@ -8220,14 +8530,14 @@
           os_type: _,
           device_friendly_name: __webpack_require__,
           machine_id: _,
-          platform_type: 1,
+          platform_type: _._.k_EAuthTokenPlatformType_SteamClient,
           gaming_device_type: _.eGamingDeviceType,
         };
       }
       async function _() {
         return {
           device_friendly_name: window.navigator.userAgent,
-          platform_type: 2,
+          platform_type: _._.k_EAuthTokenPlatformType_WebBrowser,
         };
       }
       function _(_) {
@@ -8291,7 +8601,7 @@
             onGetMachineAuth: _.onGetMachineAuth,
             onShowAgreement: _.onShowAgreement,
           }),
-          [_, _] = (0, _.useState)(0),
+          [_, _] = (0, _.useState)(_.Unstarted),
           _ = "Login_RememberMeSetting",
           [_, _] = (0, _.useState)(
             _.refreshInfo?.account_name ?? _.defaultAccountName ?? "",
@@ -8300,7 +8610,11 @@
           [_, _] = (0, _.useState)(
             __webpack_require__ && !_ && "0" != localStorage?.getItem(_),
           ),
-          _ = !(0 === _.eStatus || 1 === _.eStatus || 2 === _.eStatus);
+          _ = !(
+            _.eStatus === _.Unstarted ||
+            _.eStatus === _.Starting ||
+            _.eStatus === _.InvalidCredentials
+          );
         (0, _.useEffect)(() => {
           _.refreshInfo?.login_token_id &&
             _.setTokenToRevoke(_.refreshInfo.login_token_id);
@@ -8319,7 +8633,9 @@
             _(_), localStorage?.setItem(_, _ ? "1" : "0");
           },
           onPasswordSubmit: () =>
-            _ && _ ? _.start(_, _, _) : Promise.resolve(8),
+            _ && _
+              ? _.start(_, _, _)
+              : Promise.resolve(_._.k_EResultInvalidParam),
           bInPasswordFlow: _,
           onTryOffline: () => {
             (0, _._)(`Logging in offline with username ${_}`),
@@ -8366,7 +8682,7 @@
             onShowAgreement: _,
           }),
           _ = _();
-        if (null != _ && 1 != _)
+        if (null != _ && _ != _._.k_EResultOK)
           return _.createElement(
             "div",
             {
@@ -8482,15 +8798,15 @@
         }
         const _ = _.password.eStatus;
         switch (_) {
-          case 13:
+          case _.WaitingForToken:
             return _.renderLoading
               ? _.createElement(_.Fragment, null, _.renderLoading())
               : _.createElement(_, null);
-          case 5:
-          case 11:
-          case 3:
-          case 10:
-            const _ = 5 === _ || 11 === _;
+          case _.WaitingForDeviceCode:
+          case _.InvalidDeviceCode:
+          case _.WaitingForEmailCode:
+          case _.InvalidEmailCode:
+            const _ = _ === _.WaitingForDeviceCode || _ === _.InvalidDeviceCode;
             return _.createElement(_, {
               type: _ ? "mobile" : "email",
               onSubmitCode: _.password.addCode,
@@ -8500,20 +8816,20 @@
               onBack: _.password.goBack,
               onCodeHelp: _.onCodeHelp,
             });
-          case 6:
-          case 4:
-            const _ = 6 === _;
+          case _.WaitingForDeviceConfirmation:
+          case _.WaitingForEmailConfirmation:
+            const _ = _ === _.WaitingForDeviceConfirmation;
             return _.createElement(_, {
               type: _ ? "mobile" : "email",
               accountName: _.password.strAccountName,
               onUseCodeOverride: _.password.useCodeOverride,
               onCodeHelp: _.onCodeHelp,
             });
-          case 16:
+          case _.Stopped:
             return _.createElement(_, {
               reset: _.password.reset,
             });
-          case 15:
+          case _.Failure:
             return _.createElement(_, {
               reset: _.password.reset,
               failure: _.password.eFailureState,
@@ -8521,7 +8837,7 @@
               errorReference: _.password.strErrorReference,
               extendedErrorMessage: _.password.strExtendedErrorMessage,
             });
-          case 14:
+          case _.Success:
             return _.createElement(
               _,
               {
@@ -8545,37 +8861,37 @@
       function _(_) {
         if (!_.refreshInfo) return null;
         let _;
-        switch (_.refreshInfo?.reason ?? 2) {
-          case 2:
-          case 7:
+        switch (_.refreshInfo?.reason ?? _._.k_EResultFail) {
+          case _._.k_EResultFail:
+          case _._.k_EResultInvalidProtocolVer:
           default:
             _ = "#Login_RefreshReason_Generic";
             break;
-          case 6:
+          case _._.k_EResultLoggedInElsewhere:
             _ = "#Login_RefreshReason_LoggedInElsewhere";
             break;
-          case 34:
+          case _._.k_EResultLogonSessionReplaced:
             _ = "#Login_RefreshReason_LogonSessionReplaced";
             break;
-          case 5:
+          case _._.k_EResultInvalidPassword:
             _ = "#Login_RefreshReason_InvalidPassword";
             break;
-          case 26:
+          case _._.k_EResultRevoked:
             _ = "#Login_RefreshReason_Revoked";
             break;
-          case 27:
+          case _._.k_EResultExpired:
             _ = "#Login_RefreshReason_Expired";
             break;
-          case 49:
+          case _._.k_EResultPasswordRequiredToKickSession:
             _ = "#Login_RefreshReason_PasswordRequiredToKickSession";
             break;
-          case 43:
+          case _._.k_EResultAccountDisabled:
             _ = "#Login_RefreshReason_AccountDisabled";
             break;
-          case 69:
+          case _._.k_EResultParentalControlRestricted:
             _ = "#Login_RefreshReason_ParentalControlRestricted";
             break;
-          case 84:
+          case _._.k_EResultRateLimitExceeded:
             _ = "#Login_RefreshReason_RateLimitExceeded";
         }
         return _.createElement(
@@ -8636,8 +8952,10 @@
               (0, _.useCallback)(() => _.current, [_])
             );
           })(),
-          _ = 1 === __webpack_require__ || 13 === __webpack_require__,
-          _ = 2 === __webpack_require__ && !_,
+          _ =
+            __webpack_require__ === _.Starting ||
+            __webpack_require__ === _.WaitingForToken,
+          _ = __webpack_require__ === _.InvalidCredentials && !_,
           _ = _
             ? _.createElement(_, null, (0, _._)("#Login_CheckCredentials"))
             : _.createElement(_, null, " "),
@@ -9344,7 +9662,7 @@
                 _(!1), _(!1);
               });
           },
-          _ = !_ && (11 === _ || 10 === _);
+          _ = !_ && (_ === _.InvalidDeviceCode || _ === _.InvalidEmailCode);
         let _, _;
         return (
           _
@@ -9899,7 +10217,7 @@
             : void 0,
           className: _ = _().HeaderLogo,
         } = _;
-        return 8 === __webpack_require__
+        return __webpack_require__ === _._.k_ELauncherTypeSingleApp
           ? _.createElement("div", {
               className: _,
             })

@@ -27,6 +27,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { _: _, type: __webpack_require__ } = _,
@@ -40,7 +41,8 @@
             ..._,
             bLoadShortDescription: !0,
             bShowReviewSummary: !0,
-            bShowDemoButton: _.bShowDemoButton || 1 == _?.GetAppType(),
+            bShowDemoButton:
+              _.bShowDemoButton || _?.GetAppType() == _._.k_EStoreAppType_Demo,
             bPreferDemoStorePage: _.bPreferDemoStorePage,
           }),
         );
@@ -111,11 +113,15 @@
               [__webpack_require__] = (0, _._)(),
               _ = (0, _._)(_, _._),
               _ = (0, _.useMemo)(() => {
-                if (3 != _ && 2 != _) return null;
+                if (
+                  _ != _._.k_EStoreItemCacheState_Found &&
+                  _ != _._.k_EStoreItemCacheState_Unavailable
+                )
+                  return null;
                 {
                   let _ = _;
                   switch (
-                    (2 == _ &&
+                    (_ == _._.k_EStoreItemCacheState_Unavailable &&
                       (_ = _.filter((_) => {
                         const _ = _._.Get().GetBundle(_);
                         return _?.BIsVisible();

@@ -908,7 +908,7 @@
               _.push(
                 _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
               ),
-                4 == _ &&
+                _ == _._.k_Lang_Korean &&
                   ((_ = (0, _._)((0, _._)(_))),
                   _.push(
                     _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
@@ -1100,9 +1100,9 @@
             });
         }
         const _ = (0, _._)(_._.LANGUAGE),
-          _ = 0 != _,
+          _ = _ != _._.k_Lang_English,
           _ = new Array();
-        for (let _ = 0; _ < 31; _++) {
+        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; _++) {
           const _ = _(_, "sub_" + (0, _._)(_));
           _ &&
             _.push({
@@ -1472,6 +1472,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       class _ {
         constructor() {
@@ -1514,11 +1515,11 @@
           return (
             this.LazyInit(),
             this.m_bIsLoaded
-              ? 1
+              ? _._.k_EResultOK
               : _._.logged_in
                 ? (this.m_promise || (this.m_promise = this.InternalLoad()),
                   this.m_promise)
-                : 1
+                : _._.k_EResultOK
           );
         }
         async InternalLoad() {
@@ -1527,7 +1528,7 @@
               withCredentials: !0,
             });
           return (
-            1 == _.data.success &&
+            _.data.success == _._.k_EResultOK &&
               (0, _._)(() => {
                 (this.m_bIsLoaded = !0),
                   (this.m_bValidatedEmail = _.data.email_validated),
@@ -1577,11 +1578,11 @@
                   console.error(
                     "EventReminderWidget load fail: " + (0, _._)(_).strErrorMsg,
                   ),
-                  2
+                  _._.k_EResultFail
                 ),
               )
               .then((_) => {
-                1 != _ ||
+                _ != _._.k_EResultOK ||
                   this.m_bLoadWasCancelled ||
                   this.setState({
                     bIsLoadingNotificationSettings: !1,
@@ -2232,7 +2233,7 @@
           if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
             _ = _._.GetELanguageFallback(_);
           else {
-            if (6 !== _) return null;
+            if (_ !== _._.k_Lang_Simplified_Chinese) return null;
             if (
               __webpack_require__.find(
                 (_) => _._.GetELanguageFallback(_.eLanguage) === _,

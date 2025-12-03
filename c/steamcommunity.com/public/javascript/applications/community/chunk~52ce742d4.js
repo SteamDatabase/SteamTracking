@@ -26,6 +26,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         constructor() {
@@ -1868,9 +1869,9 @@
               ));
         }
         OnKeyDown(_) {
-          37 == _.keyCode
+          _.keyCode == _._.LeftArrow
             ? (this.props.video.JumpTime(-15), _.preventDefault())
-            : 39 == _.keyCode &&
+            : _.keyCode == _._.RightArrow &&
               (this.props.video.JumpTime(15), _.preventDefault());
         }
         AdjustSliderForClientX(_) {

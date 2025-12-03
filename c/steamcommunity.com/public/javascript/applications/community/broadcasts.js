@@ -66,6 +66,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -102,7 +103,12 @@
               cancelToken: _ ? _.token : void 0,
             });
             if (_ && _.token.reason) return null;
-            if (_ && 200 == _.status && _.data && 1 == _.data.success)
+            if (
+              _ &&
+              200 == _.status &&
+              _.data &&
+              _.data.success == _._.k_EResultOK
+            )
               return (this.m_curDebugInfo = _.data), this.m_curDebugInfo;
           } catch (_) {
             let _ = (0, _._)(_);
@@ -125,7 +131,12 @@
               cancelToken: _ ? _.token : void 0,
             });
             if (_ && _.token.reason) return !1;
-            if (_ && 200 == _.status && _.data && 1 == _.data.success) {
+            if (
+              _ &&
+              200 == _.status &&
+              _.data &&
+              _.data.success == _._.k_EResultOK
+            ) {
               const _ = _._.GetOrCreateBroadcastInfo(
                 this.m_steamid.ConvertTo64BitString(),
               );
@@ -221,7 +232,12 @@
               cancelToken: _ ? _.token : void 0,
             });
             if (_ && _.token.reason) return !1;
-            if (_ && 200 == _.status && _.data && 1 == _.data.success)
+            if (
+              _ &&
+              200 == _.status &&
+              _.data &&
+              _.data.success == _._.k_EResultOK
+            )
               return !0;
           } catch (_) {
             let _ = (0, _._)(_);
@@ -255,6 +271,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -334,7 +352,7 @@
             },
             Boolean(
               __webpack_require__.last_error_result &&
-                1 != __webpack_require__.last_error_result,
+                __webpack_require__.last_error_result != _._.k_EResultOK,
             ) &&
               _.createElement(
                 "div",
@@ -1347,7 +1365,9 @@
           _ = null == _ ? void 0 : _.ConvertTo64BitString(),
           _ = (function () {
             const [_] = (0, _.useState)(
-              () => (0, _._)("ewatchlocation", "application_config") || 5,
+              () =>
+                (0, _._)("ewatchlocation", "application_config") ||
+                _._.k_EBroadcastWatchLocation_CommunityPage,
             );
             return _;
           })(),
@@ -1420,7 +1440,8 @@
                           null,
                           _.createElement(_._, {
                             emoticonStore: _._,
-                            watchLocation: 6,
+                            watchLocation:
+                              _._.k_EBroadcastWatchLocation_StoreAppPage,
                             steamID: _,
                             broadcastID: _ ? _.m_ulBroadcastID : void 0,
                           }),
@@ -1524,7 +1545,8 @@
                   },
                   _.createElement(_._, {
                     clanAccountID: _.clanAccountID,
-                    trackingLocation: 6,
+                    trackingLocation:
+                      _._.k_EPartnerEventDisplayLocation_CommunityHub,
                     partnerEventStore: _._,
                     bViewAllShowInfiniteScroll: !0,
                   }),

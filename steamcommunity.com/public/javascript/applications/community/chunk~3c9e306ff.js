@@ -1662,7 +1662,8 @@
                   (i.srclang = e.strLanguage),
                   (i.src = e.rgRepresentations[0].strClosedCaptionFile),
                   (this.m_nTimedText += 1),
-                  (!this.m_bAlwaysStartWithSubtitles && 0 == t) ||
+                  (!this.m_bAlwaysStartWithSubtitles &&
+                    t == l.gS.k_Lang_English) ||
                     h.bi[e.strLanguage] != t ||
                     ((i.default = !0),
                     (this.m_timedTextRepSelected = e.rgRepresentations[0])),
@@ -3519,13 +3520,14 @@
     },
     71298: (e, t, i) => {
       "use strict";
-      i.d(t, { Hh: () => d, vs: () => l, wB: () => m });
+      i.d(t, { Hh: () => h, vs: () => m, wB: () => d });
       var n = i(90626),
         r = i(9154),
         s = i(56330),
         o = i(61859),
-        a = i(22797);
-      function l(e) {
+        a = i(22797),
+        l = i(37085);
+      function m(e) {
         const [t, i] = (0, n.useState)(() => Boolean(e)),
           [r, s] = (0, n.useState)(!1),
           [o, a] = (0, n.useState)(!1),
@@ -3553,10 +3555,10 @@
           fnSetThrobber: p,
         };
       }
-      function m(e, t) {
-        1 != t ? e.fnSetError(!0) : e.fnSetSuccess(!0);
+      function d(e, t) {
+        t != l.d.k_EResultOK ? e.fnSetError(!0) : e.fnSetSuccess(!0);
       }
-      function d(e) {
+      function h(e) {
         const {
             strDialogTitle: t,
             state: i,

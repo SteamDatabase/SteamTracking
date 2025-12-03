@@ -132,6 +132,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
@@ -171,7 +172,7 @@
                   _._.CMInterface.GetServiceTransport(),
                   _,
                 );
-                if (1 != __webpack_require__.GetEResult()) {
+                if (__webpack_require__.GetEResult() != _._.k_EResultOK) {
                   const _ =
                     (0, _._)("#EventDisplay_Share_Failure") +
                     "\n\n" +
@@ -191,10 +192,9 @@
                 });
                 if (
                   200 != _.status ||
-                  1 !=
-                    (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                      ? void 0
-                      : _.success)
+                  (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                    ? void 0
+                    : _.success) != _._.k_EResultOK
                 ) {
                   const _ =
                     (0, _._)("#EventDisplay_Share_Failure") +

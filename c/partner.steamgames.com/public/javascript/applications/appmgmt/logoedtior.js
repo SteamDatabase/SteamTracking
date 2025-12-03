@@ -158,7 +158,13 @@
           LogoEditor: () => _,
           LogoEditorPopup: () => _,
         });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _,
+        _,
+        _,
+        _,
+        _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -171,6 +177,111 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.k_EAppActionPlayGame = "Play"),
+          (_.k_EAppActionLaunchApp = "Launch"),
+          (_.k_EAppActionCancelLaunch = "Cancel"),
+          (_.k_EAppActionShutdownApp = "Stop"),
+          (_.k_EAppActionPause = "Pause"),
+          (_.k_EAppActionResume = "Resume"),
+          (_.k_EAppActionDownload = "Download"),
+          (_.k_EAppActionUpdate = "Update"),
+          (_.k_EAppActionPreload = "PreLoad"),
+          (_.k_EAppActionInstall = "Install"),
+          (_.k_EAppActionUninstall = "Uninstall"),
+          (_.k_EAppActionRemoveShortcut = "RemoveShortcut"),
+          (_.k_EAppActionBorrowApp = "BorrowApp"),
+          (_.k_EAppActionShowStore = "PurchaseApp"),
+          (_.k_EAppActionShowProperties = "GameProperties"),
+          (_.k_EAppActionCreateDesktopShortcut = "CreateDesktopShortcut"),
+          (_.k_EAppActionBackUpFiles = "BackUpFiles"),
+          (_.k_EAppActionStreamGame = "Stream"),
+          (_.k_EAppActionConnectToGame = "Connect"),
+          (_.k_EAppActionPlayMusic = "PlayMusic"),
+          (_.k_EAppActionBrowseLocalFiles = "BrowseLocalFiles"),
+          (_.k_EAppActionLaunching = "Launching"),
+          (_.k_EAppActionTerminating = "Terminating"),
+          (_.k_EAppActionResumeGameInProgress = "ResumeGameInProgress");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_nAppMappingPriorityLow = 75)] = "k_nAppMappingPriorityLow"),
+            (_[(_.k_nAppMappingPriorityDefault = 100)] =
+              "k_nAppMappingPriorityDefault"),
+            (_[(_.k_nAppMappingPriorityUserSpecified = 250)] =
+              "k_nAppMappingPriorityUserSpecified");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAppAutoUpdateBehaviorUseGlobal = 0)] =
+            "k_EAppAutoUpdateBehaviorUseGlobal"),
+            (_[(_.k_EAppAutoUpdateBehaviorDoNotUpdate = 1)] =
+              "k_EAppAutoUpdateBehaviorDoNotUpdate"),
+            (_[(_.k_EAppAutoUpdateBehaviorHighPriority = 2)] =
+              "k_EAppAutoUpdateBehaviorHighPriority"),
+            (_[(_.k_EAppAutoUpdateBehaviorRegularPriority = 3)] =
+              "k_EAppAutoUpdateBehaviorRegularPriority");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAppAllowDownloadsWhileRunningBehaviorUseGlobal = 0)] =
+            "k_EAppAllowDownloadsWhileRunningBehaviorUseGlobal"),
+            (_[(_.k_EAppAllowDownloadsWhileRunningBehaviorAlwaysAllow = 1)] =
+              "k_EAppAllowDownloadsWhileRunningBehaviorAlwaysAllow"),
+            (_[(_.k_EAppAllowDownloadsWhileRunningBehaviorNeverAllow = 2)] =
+              "k_EAppAllowDownloadsWhileRunningBehaviorNeverAllow");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAppOwnershipFlags_None = 0)] = "k_EAppOwnershipFlags_None"),
+            (_[(_.k_EAppOwnershipFlags_OwnsLicense = 1)] =
+              "k_EAppOwnershipFlags_OwnsLicense"),
+            (_[(_.k_EAppOwnershipFlags_FreeLicense = 2)] =
+              "k_EAppOwnershipFlags_FreeLicense"),
+            (_[(_.k_EAppOwnershipFlags_RegionRestricted = 4)] =
+              "k_EAppOwnershipFlags_RegionRestricted"),
+            (_[(_.k_EAppOwnershipFlags_LowViolence = 8)] =
+              "k_EAppOwnershipFlags_LowViolence"),
+            (_[(_.k_EAppOwnershipFlags_InvalidPlatform = 16)] =
+              "k_EAppOwnershipFlags_InvalidPlatform"),
+            (_[(_.k_EAppOwnershipFlags_SharedLicense = 32)] =
+              "k_EAppOwnershipFlags_SharedLicense"),
+            (_[(_.k_EAppOwnershipFlags_FreeWeekend = 64)] =
+              "k_EAppOwnershipFlags_FreeWeekend"),
+            (_[(_.k_EAppOwnershipFlags_RetailLicense = 128)] =
+              "k_EAppOwnershipFlags_RetailLicense"),
+            (_[(_.k_EAppOwnershipFlags_LicenseLocked = 256)] =
+              "k_EAppOwnershipFlags_LicenseLocked"),
+            (_[(_.k_EAppOwnershipFlags_LicensePending = 512)] =
+              "k_EAppOwnershipFlags_LicensePending"),
+            (_[(_.k_EAppOwnershipFlags_LicenseExpired = 1024)] =
+              "k_EAppOwnershipFlags_LicenseExpired"),
+            (_[(_.k_EAppOwnershipFlags_LicensePermanent = 2048)] =
+              "k_EAppOwnershipFlags_LicensePermanent"),
+            (_[(_.k_EAppOwnershipFlags_LicenseRecurring = 4096)] =
+              "k_EAppOwnershipFlags_LicenseRecurring"),
+            (_[(_.k_EAppOwnershipFlags_LicenseCanceled = 8192)] =
+              "k_EAppOwnershipFlags_LicenseCanceled"),
+            (_[(_.k_EAppOwnershipFlags_AutoGrant = 16384)] =
+              "k_EAppOwnershipFlags_AutoGrant"),
+            (_[(_.k_EAppOwnershipFlags_PendingGift = 32768)] =
+              "k_EAppOwnershipFlags_PendingGift"),
+            (_[(_.k_EAppOwnershipFlags_RentalNotActivated = 65536)] =
+              "k_EAppOwnershipFlags_RentalNotActivated"),
+            (_[(_.k_EAppOwnershipFlags_Rental = 131072)] =
+              "k_EAppOwnershipFlags_Rental"),
+            (_[(_.k_EAppOwnershipFlags_SiteLicense = 262144)] =
+              "k_EAppOwnershipFlags_SiteLicense"),
+            (_[(_.k_EAppOwnershipFlags_LegacyFreeSub = 524288)] =
+              "k_EAppOwnershipFlags_LegacyFreeSub"),
+            (_[(_.k_EAppOwnershipFlags_InvalidOSType = 1048576)] =
+              "k_EAppOwnershipFlags_InvalidOSType"),
+            (_[(_.k_EAppOwnershipFlags_TimedTrial = 2097152)] =
+              "k_EAppOwnershipFlags_TimedTrial");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_.UpperLeft = "UpperLeft"),
+            (_.BottomLeft = "BottomLeft"),
+            (_.UpperCenter = "UpperCenter"),
+            (_.CenterCenter = "CenterCenter"),
+            (_.BottomCenter = "BottomCenter");
+        })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -189,7 +300,7 @@
         },
         _ = (0, _._)(_()["duration-app-launch"]),
         _ = {
-          pinnedPosition: "BottomLeft",
+          pinnedPosition: _.BottomLeft,
           nWidthPct: 50,
           nHeightPct: 50,
         },
@@ -294,22 +405,22 @@
               },
               _.createElement("div", {
                 className: `${_().PinBox} ${_().BottomLeft}`,
-                onClick: () => this.SetPinnedPosition("BottomLeft"),
+                onClick: () => this.SetPinnedPosition(_.BottomLeft),
                 title: "Pin to Bottom Left",
               }),
               _.createElement("div", {
                 className: `${_().PinBox} ${_().UpperCenter}`,
-                onClick: () => this.SetPinnedPosition("UpperCenter"),
+                onClick: () => this.SetPinnedPosition(_.UpperCenter),
                 title: "Pin to Top Center",
               }),
               _.createElement("div", {
                 className: `${_().PinBox} ${_().CenterCenter}`,
-                onClick: () => this.SetPinnedPosition("CenterCenter"),
+                onClick: () => this.SetPinnedPosition(_.CenterCenter),
                 title: "Pin to Center",
               }),
               _.createElement("div", {
                 className: `${_().PinBox} ${_().BottomCenter}`,
-                onClick: () => this.SetPinnedPosition("BottomCenter"),
+                onClick: () => this.SetPinnedPosition(_.BottomCenter),
                 title: "Pin to Bottom Center",
               }),
               _,
@@ -730,22 +841,22 @@
       function _(_, _, _) {
         let _, _, _, _;
         switch (_) {
-          case "BottomLeft":
+          case _.BottomLeft:
             (_ = 0), (_ = 100 - _), (_ = 0), (_ = 100 - _);
             break;
-          case "UpperLeft":
+          case _.UpperLeft:
             (_ = 100 - _), (_ = 0), (_ = 0), (_ = 100 - _);
             break;
-          case "CenterCenter":
+          case _.CenterCenter:
             (_ = (100 - _) / 2),
               (_ = (100 - _) / 2),
               (_ = (100 - _) / 2),
               (_ = (100 - _) / 2);
             break;
-          case "UpperCenter":
+          case _.UpperCenter:
             (_ = 100 - _), (_ = 0), (_ = (100 - _) / 2), (_ = (100 - _) / 2);
             break;
-          case "BottomCenter":
+          case _.BottomCenter:
             (_ = 0), (_ = 100 - _), (_ = (100 - _) / 2), (_ = (100 - _) / 2);
         }
         return {
@@ -891,14 +1002,14 @@
                   100 -
                 this.m_nLocalOffsetXPct;
               if (
-                "UpperLeft" == this.props.pinType ||
-                "BottomLeft" == this.props.pinType
+                this.props.pinType == _.UpperLeft ||
+                this.props.pinType == _.BottomLeft
               )
                 return 0;
               if (
-                "CenterCenter" == this.props.pinType ||
-                "BottomCenter" == this.props.pinType ||
-                "UpperCenter" == this.props.pinType
+                this.props.pinType == _.CenterCenter ||
+                this.props.pinType == _.BottomCenter ||
+                this.props.pinType == _.UpperCenter
               ) {
                 let _ = Math.min(Math.max(_, 0), 45);
                 return (_ = _), _;
@@ -913,9 +1024,9 @@
                   100 +
                   (this.state.curWidthPct - this.m_nLocalOffsetXPct));
               if (
-                "CenterCenter" == this.props.pinType ||
-                "BottomCenter" == this.props.pinType ||
-                "UpperCenter" == this.props.pinType
+                this.props.pinType == _.CenterCenter ||
+                this.props.pinType == _.BottomCenter ||
+                this.props.pinType == _.UpperCenter
               ) {
                 let _ = Math.min(Math.max(_, 0), 45);
                 return (_ = _), _;
@@ -929,11 +1040,11 @@
                   100 -
                 this.m_nLocalOffsetYPct;
               if (
-                "UpperCenter" == this.props.pinType ||
-                "UpperLeft" == this.props.pinType
+                this.props.pinType == _.UpperCenter ||
+                this.props.pinType == _.UpperLeft
               )
                 return 0;
-              if ("CenterCenter" == this.props.pinType) {
+              if (this.props.pinType == _.CenterCenter) {
                 let _ = Math.min(Math.max(_, 0), 45);
                 return (_ = _), _;
               }
@@ -947,11 +1058,11 @@
                   100 +
                   (this.state.curHeightPct - this.m_nLocalOffsetYPct));
               if (
-                "BottomLeft" == this.props.pinType ||
-                "BottomCenter" == this.props.pinType
+                this.props.pinType == _.BottomLeft ||
+                this.props.pinType == _.BottomCenter
               )
                 return 0;
-              if ("CenterCenter" == this.props.pinType) {
+              if (this.props.pinType == _.CenterCenter) {
                 let _ = Math.min(Math.max(_, 0), 45);
                 return (__webpack_require__ = _), _;
               }
@@ -1003,11 +1114,11 @@
             case _.middle:
               (_ = _(_.clientX)),
                 (_ = _(_.clientY)),
-                "CenterCenter" != this.state.pinType &&
+                this.state.pinType != _.CenterCenter &&
                   (__webpack_require__ = _(_.clientY)),
-                "CenterCenter" != this.state.pinType &&
-                  "BottomCenter" != this.state.pinType &&
-                  "UpperCenter" != this.state.pinType &&
+                this.state.pinType != _.CenterCenter &&
+                  this.state.pinType != _.BottomCenter &&
+                  this.state.pinType != _.UpperCenter &&
                   (_ = _(_.clientX)),
                 _(),
                 _(),

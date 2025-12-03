@@ -32,62 +32,63 @@
     },
     76483: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => I });
+      a.r(t), a.d(t, { default: () => k });
       var n = a(41735),
         i = a.n(n),
         l = a(90626),
         r = a(22837),
-        s = a(2160),
-        o = a(4807),
-        c = a(17720),
-        d = a(68033),
-        u = a(6205),
-        m = a(16676),
-        g = a(84811),
-        p = a(63232),
-        h = a(1909),
-        E = a(25228),
-        _ = a(9154),
-        S = a(738),
-        B = a(22797),
-        f = a(62490),
-        P = a(52038),
-        w = a(61859),
-        N = a(87669),
-        v = a(68797),
-        T = a(78327),
-        b = a(58962);
-      function L(e, t, a) {
-        const n = e && e.length > a ? [...e] : (0, f.$Y)(e || [], a + 1, "");
+        s = a(37085),
+        o = a(2160),
+        c = a(4807),
+        d = a(17720),
+        u = a(68033),
+        m = a(6205),
+        g = a(16676),
+        _ = a(84811),
+        h = a(63232),
+        S = a(1909),
+        p = a(25228),
+        E = a(9154),
+        B = a(738),
+        f = a(22797),
+        P = a(62490),
+        w = a(52038),
+        N = a(61859),
+        v = a(87669),
+        T = a(68797),
+        b = a(78327),
+        L = a(58962);
+      function C(e, t, a) {
+        const n = e && e.length > a ? [...e] : (0, P.$Y)(e || [], a + 1, "");
         return (n[a] = t), n;
       }
-      function C(e, t) {
+      function D(e, t) {
         return (e && e.length > t && e[t]) || "";
       }
-      function D(e, t) {
+      function G(e, t) {
         let a = !1,
           n = !1;
-        for (let i = 0; i < 31; i++) {
-          const l = C(e, i).trim(),
-            s = C(t, i).trim();
+        for (let i = r.gS.k_Lang_English; i < r.gS.k_Lang_MAX; i++) {
+          const l = D(e, i).trim(),
+            s = D(t, i).trim();
           if (!l && !s) continue;
-          const c = (0, w.we)("#Language_" + (0, r.Lg)(i));
+          const o = (0, N.we)("#Language_" + (0, r.Lg)(i));
           if (((a = !0), !l))
-            return (0, w.we)("#BuildNotes_Error_MissingTitle", c);
-          if (!s) return (0, w.we)("#BuildNotes_Error_MissingDescription", c);
-          if (l.length > o.dm)
-            return (0, w.we)("#BuildNotes_Error_TitleTooLong", c);
+            return (0, N.we)("#BuildNotes_Error_MissingTitle", o);
+          if (!s) return (0, N.we)("#BuildNotes_Error_MissingDescription", o);
+          if (l.length > c.dm)
+            return (0, N.we)("#BuildNotes_Error_TitleTooLong", o);
           if (s.length > 32768)
-            return (0, w.we)("#BuildNotes_Error_DescriptionTooLong", c);
-          0 === i && (n = !0);
+            return (0, N.we)("#BuildNotes_Error_DescriptionTooLong", o);
+          i === r.gS.k_Lang_English && (n = !0);
         }
         return a
           ? n
             ? null
-            : (0, w.we)("#BuildNotes_Error_NoEnglishProvided")
-          : (0, w.we)("#BuildNotes_Error_NoLanguagesProvided");
+            : (0, N.we)("#BuildNotes_Error_NoEnglishProvided")
+          : (0, N.we)("#BuildNotes_Error_NoLanguagesProvided");
       }
-      class G {
+      class I {
         m_nBuildVersion;
         m_bSteamChina;
         m_strBuildBranch;
@@ -95,12 +96,12 @@
         static Get() {
           return (
             this.s_Singleton ||
-              ((this.s_Singleton = new G()), this.s_Singleton.Init()),
+              ((this.s_Singleton = new I()), this.s_Singleton.Init()),
             this.s_Singleton
           );
         }
         Init() {
-          const e = (0, T.Tc)("build_notes", "application_config");
+          const e = (0, b.Tc)("build_notes", "application_config");
           (this.m_nBuildVersion = e?.build_version || 0),
             (this.m_bSteamChina = e?.steam_china || !1),
             (this.m_strBuildBranch = e?.build_branch || ""),
@@ -122,142 +123,148 @@
           return this.m_strBuildBranch;
         }
       }
-      function I(e) {
-        const [t, a] = l.useState(0),
-          [n, r] = l.useState(null),
-          [d, u] = l.useState(null),
-          [p, h] = l.useState(null),
-          [E, _] = l.useState("editing"),
-          [S, B] = l.useState(null);
-        if (!G.Get().BShouldShowPatchNotesEditor()) return null;
-        const f = (e) => a(e),
-          P = (e) => Boolean(C(n, e) || C(d, e)),
-          N = G.Get().BCanSubmitSteamChinaPatchNotes()
-            ? [s.TU.k_ESteamRealmChina, s.TU.k_ESteamRealmGlobal]
-            : [s.TU.k_ESteamRealmGlobal],
-          I = D(n, d),
-          U =
-            T.TS.COMMUNITY_BASE_URL +
+      function k(e) {
+        const [t, a] = l.useState(r.gS.k_Lang_English),
+          [n, u] = l.useState(null),
+          [m, h] = l.useState(null),
+          [S, p] = l.useState(null),
+          [E, B] = l.useState("editing"),
+          [f, P] = l.useState(null);
+        if (!I.Get().BShouldShowPatchNotesEditor()) return null;
+        const w = (e) => a(e),
+          v = (e) => Boolean(D(n, e) || D(m, e)),
+          k = I.Get().BCanSubmitSteamChinaPatchNotes()
+            ? [o.TU.k_ESteamRealmChina, o.TU.k_ESteamRealmGlobal]
+            : [o.TU.k_ESteamRealmGlobal],
+          U = G(n, m),
+          x =
+            b.TS.COMMUNITY_BASE_URL +
             "ogg/" +
             e.appId +
             "/partnerevents/create/";
         return l.createElement(
-          g.tH,
+          _.tH,
           null,
           l.createElement(
             "div",
-            { className: b.BuildNoteCtn },
+            { className: L.BuildNoteCtn },
             l.createElement(
               "div",
-              { className: b.BuildTitle },
-              (0, w.we)(
+              { className: L.BuildTitle },
+              (0, N.we)(
                 "#BuildNotes_Title",
-                G.Get().GetPostedBuildVersion(),
-                G.Get().GetBuildBranch() || "default",
+                I.Get().GetPostedBuildVersion(),
+                I.Get().GetBuildBranch() || "default",
               ),
             ),
             l.createElement(
               "div",
-              { className: b.SplitPanel },
+              { className: L.SplitPanel },
               l.createElement(
                 "div",
-                { className: b.DescriptionPanel },
+                { className: L.DescriptionPanel },
                 l.createElement(
                   "div",
-                  { className: b.BuildSubTitle },
-                  (0, w.we)("#BuildNotes_SubTitle"),
+                  { className: L.BuildSubTitle },
+                  (0, N.we)("#BuildNotes_SubTitle"),
                 ),
                 l.createElement(
                   "div",
-                  { className: b.InfoText },
-                  (0, w.we)("#BuildNotes_Desc1"),
+                  { className: L.InfoText },
+                  (0, N.we)("#BuildNotes_Desc1"),
                 ),
                 l.createElement(
                   "div",
-                  { className: b.InfoText },
-                  (0, w.PP)("#BuildNotes_Desc2"),
+                  { className: L.InfoText },
+                  (0, N.PP)("#BuildNotes_Desc2"),
                 ),
                 l.createElement(
                   "a",
-                  { href: U },
+                  { href: x },
                   l.createElement(
-                    m.$n,
+                    g.$n,
                     null,
-                    (0, w.we)("#BuildNotes_OpenFullEditor"),
+                    (0, N.we)("#BuildNotes_OpenFullEditor"),
                   ),
                 ),
               ),
               "editing" === E &&
                 l.createElement(y, {
-                  sError: I,
+                  sError: U,
                   eLanguage: t,
-                  realms: N,
-                  fnHasLanguage: P,
-                  fnSetLanguage: f,
-                  fnGetTitle: (e) => C(n, e),
-                  fnSetTitle: (e, t) => r(L(n, t, e)),
-                  fnGetDescription: (e) => C(d, e),
-                  fnSetDescription: (e, t) => u(L(d, t, e)),
+                  realms: k,
+                  fnHasLanguage: v,
+                  fnSetLanguage: w,
+                  fnGetTitle: (e) => D(n, e),
+                  fnSetTitle: (e, t) => u(C(n, t, e)),
+                  fnGetDescription: (e) => D(m, e),
+                  fnSetDescription: (e, t) => h(C(m, t, e)),
                   fnOnPreviewEvent: () =>
-                    h(
+                    p(
                       (function (e, t) {
-                        let a = new o.lh();
+                        let a = new c.lh();
                         (a.GID = "PreviewPartnerEventRow_0"),
-                          (a.clanSteamID = new c.b(T.iA.steamid)),
+                          (a.clanSteamID = new d.b(b.iA.steamid)),
                           (a.postTime = Date.now() / 1e3),
                           (a.startTime = Date.now() / 1e3),
-                          (a.type = 12);
-                        for (let n = 0; n < 31; n++)
-                          a.name.set(n, C(e, n)), a.description.set(n, C(t, n));
+                          (a.type = r.Mv.k_ESmallUpdateEvent);
+                        for (
+                          let n = r.gS.k_Lang_English;
+                          n < r.gS.k_Lang_MAX;
+                          n++
+                        )
+                          a.name.set(n, D(e, n)), a.description.set(n, D(t, n));
                         return a;
-                      })(n, d),
+                      })(n, m),
                     ),
                   fnApplyLoc: (e, t) => {
                     const a = new Array();
                     let i = n,
-                      l = d;
+                      l = m;
                     for (const n of t) {
                       const t = e.GetLocalization("Title", n) || "",
                         r = e.GetLocalization("Description", n) || "";
                       (t || r) && a.push(n),
-                        t && (i = L(i, t, n)),
-                        r && (l = L(l, r, n));
+                        t && (i = C(i, t, n)),
+                        r && (l = C(l, r, n));
                     }
-                    return r(i), u(l), a;
+                    return u(i), h(l), a;
                   },
                 }),
               "submitting" === E && l.createElement(R, null),
               "failed" === E &&
-                l.createElement(x, { fnOnReturnToEditor: () => _("editing") }),
+                l.createElement(A, { fnOnReturnToEditor: () => B("editing") }),
               "submitted" === E &&
-                l.createElement(A, { appId: e.appId, eventGid: S }),
+                l.createElement(M, { appId: e.appId, eventGid: f }),
             ),
           ),
-          Boolean(p && "editing" === E) &&
+          Boolean(S && "editing" === E) &&
             l.createElement(O, {
-              event: p,
+              event: S,
               eLanguage: t,
-              realms: N,
-              fnOnClose: () => h(null),
+              realms: k,
+              fnOnClose: () => p(null),
               fnOnSubmitEvent: async () => {
-                h(null), _("submitting");
+                p(null), B("submitting");
                 const t = await (async function (e, t, a) {
-                  if (D(t, a)) return null;
-                  const n = Boolean(C(t, 29).trim()),
+                  if (G(t, a)) return null;
+                  const n = Boolean(
+                      D(t, r.gS.k_Lang_SteamChina_SChinese).trim(),
+                    ),
                     l = new FormData();
-                  l.append("sessionid", T.TS.SESSIONID),
+                  l.append("sessionid", b.TS.SESSIONID),
                     l.append("appid", "" + e),
                     l.append("post_steam_china", "" + n),
                     l.append("titles", JSON.stringify(t)),
                     l.append("descriptions", JSON.stringify(a)),
-                    l.append("build_id", "" + G.Get().GetPostedBuildVersion()),
-                    l.append("build_branch", G.Get().GetBuildBranch());
-                  const r =
-                    T.TS.PARTNER_BASE_URL +
+                    l.append("build_id", "" + I.Get().GetPostedBuildVersion()),
+                    l.append("build_branch", I.Get().GetBuildBranch());
+                  const o =
+                    b.TS.PARTNER_BASE_URL +
                     "partnerevents/ajaxpublishpatchnotes";
                   try {
-                    const e = await i().post(r, l, { withCredentials: !0 });
-                    if (1 == e?.data?.success) return e.data;
+                    const e = await i().post(o, l, { withCredentials: !0 });
+                    if (e?.data?.success == s.d.k_EResultOK) return e.data;
                     console.error(
                       "buildpatchnotes: OnSubmitCreateEvent error code  " +
                         e?.data?.success +
@@ -265,16 +272,16 @@
                         e?.data?.msg,
                     );
                   } catch (e) {
-                    const t = (0, v.H)(e);
+                    const t = (0, T.H)(e);
                     console.error(
                       "buildpatchnotes: OnSubmitCreateEvent " + t.strErrorMsg,
                       t,
                     );
                   }
                   return null;
-                })(e.appId, n, d);
+                })(e.appId, n, m);
                 t
-                  ? (B(t.clan_event_gid),
+                  ? (P(t.clan_event_gid),
                     (function () {
                       const e = new URLSearchParams(window.location.search);
                       e.delete("submittedbuild"), e.delete("buildbranch");
@@ -286,11 +293,11 @@
                           window.location.hash;
                       window.history.replaceState({}, "", a);
                     })(),
-                    _("submitted"))
-                  : _("failed");
+                    B("submitted"))
+                  : B("failed");
               },
-              fnHasLanguage: P,
-              fnSetLanguage: f,
+              fnHasLanguage: v,
+              fnSetLanguage: w,
             }),
         );
       }
@@ -300,18 +307,18 @@
             eLanguage: a,
             realms: n,
             fnHasLanguage: i,
-            fnSetLanguage: r,
-            fnGetTitle: c,
-            fnSetTitle: g,
-            fnGetDescription: p,
-            fnSetDescription: _,
-            fnOnPreviewEvent: B,
-            fnApplyLoc: f,
+            fnSetLanguage: s,
+            fnGetTitle: d,
+            fnSetTitle: _,
+            fnGetDescription: h,
+            fnSetDescription: E,
+            fnOnPreviewEvent: f,
+            fnApplyLoc: P,
           } = e;
-          let P = "";
-          if (n.includes(s.TU.k_ESteamRealmChina)) {
-            const e = "" !== c(29).trim();
-            P = (0, w.we)(
+          let w = "";
+          if (n.includes(o.TU.k_ESteamRealmChina)) {
+            const e = "" !== d(r.gS.k_Lang_SteamChina_SChinese).trim();
+            w = (0, N.we)(
               e
                 ? "#BuildNotes_SteamChina_Provided"
                 : "#BuildNotes_SteamChina_NotProvided",
@@ -319,82 +326,86 @@
           }
           return l.createElement(
             "div",
-            { className: b.RightPanel },
+            { className: L.RightPanel },
             l.createElement(
               "div",
-              { className: b.EditTopBar },
+              { className: L.EditTopBar },
               l.createElement(
                 "div",
-                { className: b.EditTitle },
-                (0, w.we)("#BuildNotes_PatchnotesTitle"),
+                { className: L.EditTitle },
+                (0, N.we)("#BuildNotes_PatchnotesTitle"),
               ),
               l.createElement(
                 "div",
-                { className: b.LangPicker },
+                { className: L.LangPicker },
                 l.createElement(
-                  m.$n,
+                  g.$n,
                   {
                     onClick: () => {
-                      const e = new N.G(),
-                        t = (0, w.we)("#BuildNotes_SampleTitle"),
-                        a = (0, w.we)("#BuildNotes_SampleDescription");
-                      for (let n = 0; n < 31; n++)
+                      const e = new v.G(),
+                        t = (0, N.we)("#BuildNotes_SampleTitle"),
+                        a = (0, N.we)("#BuildNotes_SampleDescription");
+                      for (
+                        let n = r.gS.k_Lang_English;
+                        n < r.gS.k_Lang_MAX;
+                        n++
+                      )
                         e.SetLocalization("Title", n, t),
                           e.SetLocalization("Description", n, a);
-                      (0, S.pg)(
-                        l.createElement(E.zZ, {
+                      (0, B.pg)(
+                        l.createElement(p.zZ, {
                           sampleLocData: e,
                           sampleFilename: "patchnote_loc_sample",
-                          fnOnImportLocData: f,
+                          fnOnImportLocData: P,
                         }),
                         window,
                       );
                     },
                   },
-                  (0, w.we)("#BuildNotes_ImportLocalization"),
+                  (0, N.we)("#BuildNotes_ImportLocalization"),
                 ),
-                l.createElement(h.Ng, {
+                l.createElement(S.Ng, {
                   selectedLang: a,
-                  fnOnLanguageChanged: r,
+                  fnOnLanguageChanged: s,
                   fnLangHasData: i,
                   realms: n,
                 }),
               ),
             ),
-            l.createElement(m.pd, {
-              value: c(a),
-              placeholder: (0, w.we)("#BuildNotes_TitlePlaceholder"),
-              onChange: (e) => g(a, e.currentTarget.value),
-              maxLength: o.dm,
+            l.createElement(g.pd, {
+              value: d(a),
+              placeholder: (0, N.we)("#BuildNotes_TitlePlaceholder"),
+              onChange: (e) => _(a, e.currentTarget.value),
+              maxLength: c.dm,
             }),
             l.createElement(
               "div",
-              { className: b.EditTitle },
-              (0, w.we)("#BuildNotes_PatchnotesDesc"),
+              { className: L.EditTitle },
+              (0, N.we)("#BuildNotes_PatchnotesDesc"),
             ),
-            l.createElement(u.I, {
-              fnGetCurText: () => p(a),
-              fnOnTextChange: (e) => _(a, e.currentTarget.value),
-              fnSetText: (e) => _(a, e),
-              strPlaceholder: (0, w.we)("#BuildNotes_DescPlaceholder"),
-              emoticonStore: d.A,
+            l.createElement(m.I, {
+              fnGetCurText: () => h(a),
+              fnOnTextChange: (e) => E(a, e.currentTarget.value),
+              fnSetText: (e) => E(a, e),
+              strPlaceholder: (0, N.we)("#BuildNotes_DescPlaceholder"),
+              emoticonStore: u.A,
               bSupportHTMLImport: !0,
               showFormatHelp: "PartnerEvents",
-              classNameForTextArea: b.BBCodeEditor,
+              classNameForTextArea: L.BBCodeEditor,
             }),
             l.createElement(
               "div",
-              { className: b.SubmitButtonCtn },
+              { className: L.SubmitButtonCtn },
               !Boolean(t) &&
                 l.createElement(
-                  m.jn,
-                  { onClick: B },
-                  (0, w.we)("#BuildNotes_Preview"),
+                  g.jn,
+                  { onClick: f },
+                  (0, N.we)("#BuildNotes_Preview"),
                 ),
               Boolean(t) &&
-                l.createElement("div", { className: b.ErrorMsg }, t),
-              Boolean(!t && P) &&
-                l.createElement("div", { className: b.SteamChinaMsg }, P),
+                l.createElement("div", { className: L.ErrorMsg }, t),
+              Boolean(!t && w) &&
+                l.createElement("div", { className: L.SteamChinaMsg }, w),
             ),
           );
         },
@@ -409,12 +420,12 @@
             fnSetLanguage: o,
           } = e;
           return l.createElement(
-            _.of,
+            E.of,
             null,
             l.createElement(
               "div",
-              { className: b.PreviewHeader },
-              l.createElement(h.Ng, {
+              { className: L.PreviewHeader },
+              l.createElement(S.Ng, {
                 selectedLang: a,
                 fnOnLanguageChanged: o,
                 fnFilterLanguage: s,
@@ -422,23 +433,23 @@
               }),
               l.createElement(
                 "div",
-                { className: b.SubmitButtonCtn },
+                { className: L.SubmitButtonCtn },
                 l.createElement(
-                  m.$n,
+                  g.$n,
                   { onClick: i },
-                  (0, w.we)("#BuildNotes_Close"),
+                  (0, N.we)("#BuildNotes_Close"),
                 ),
                 l.createElement(
-                  m.jn,
+                  g.jn,
                   { onClick: r },
-                  (0, w.we)("#BuildNotes_PostNotes"),
+                  (0, N.we)("#BuildNotes_PostNotes"),
                 ),
               ),
             ),
             l.createElement(
               "div",
               null,
-              l.createElement(p.H, {
+              l.createElement(h.H, {
                 event: t,
                 fnClose: i,
                 langOverride: a,
@@ -450,51 +461,51 @@
         R = (e) =>
           l.createElement(
             "div",
-            { className: (0, P.A)(b.RightPanel, b.SubmitPanel) },
-            l.createElement(B.t, { className: b.SubmitThrobber }),
+            { className: (0, w.A)(L.RightPanel, L.SubmitPanel) },
+            l.createElement(f.t, { className: L.SubmitThrobber }),
             l.createElement(
               "div",
-              { className: b.SubmitText },
-              (0, w.we)("#BuildNotes_Submitting"),
+              { className: L.SubmitText },
+              (0, N.we)("#BuildNotes_Submitting"),
             ),
           ),
-        x = (e) =>
+        A = (e) =>
           l.createElement(
             "div",
-            { className: (0, P.A)(b.RightPanel, b.FailedPanel) },
+            { className: (0, w.A)(L.RightPanel, L.FailedPanel) },
             l.createElement(
               "div",
-              { className: b.FailedText },
-              (0, w.we)("#BuildNotes_FailedDescription"),
+              { className: L.FailedText },
+              (0, N.we)("#BuildNotes_FailedDescription"),
             ),
             l.createElement(
               "div",
-              { className: b.FailedButton },
+              { className: L.FailedButton },
               l.createElement(
-                m.$n,
+                g.$n,
                 { onClick: e.fnOnReturnToEditor },
-                (0, w.we)("#BuildNotes_ReturnToEditor"),
+                (0, N.we)("#BuildNotes_ReturnToEditor"),
               ),
             ),
           ),
-        A = (e) => {
+        M = (e) => {
           const { appId: t, eventGid: a } = e,
-            n = `${T.TS.STORE_BASE_URL}news/app/${t}/view/${a}`;
+            n = `${b.TS.STORE_BASE_URL}news/app/${t}/view/${a}`;
           return l.createElement(
             "div",
-            { className: (0, P.A)(b.RightPanel, b.SuccessPanel) },
+            { className: (0, w.A)(L.RightPanel, L.SuccessPanel) },
             l.createElement(
               "div",
-              { className: b.SuccessText },
-              (0, w.we)("#BuildNotes_Success"),
+              { className: L.SuccessText },
+              (0, N.we)("#BuildNotes_Success"),
             ),
             l.createElement(
               "a",
-              { href: n, className: b.ViewEventButton },
+              { href: n, className: L.ViewEventButton },
               l.createElement(
-                m.$n,
+                g.$n,
                 null,
-                (0, w.we)("#BuildNotes_ViewPublished"),
+                (0, N.we)("#BuildNotes_ViewPublished"),
               ),
             ),
           );
@@ -502,7 +513,7 @@
     },
     90197: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { SaleRoutes: () => S, default: () => B });
+      a.r(t), a.d(t, { SaleRoutes: () => E, default: () => B });
       var n = a(97058),
         i = a(43527),
         l = a(90626),
@@ -553,7 +564,7 @@
       var u = a(76684),
         m = a(22797),
         g = a(14446);
-      function p(e) {
+      function _(e) {
         return l.createElement(
           "div",
           null,
@@ -575,12 +586,12 @@
           l.createElement("div", null, t.pageid),
           l.createElement(
             r.N_,
-            { to: S.SaleMigrationPageDebug(t.pageid) },
+            { to: E.SaleMigrationPageDebug(t.pageid) },
             "Debug Data",
           ),
         );
       }
-      function E(e) {
+      function S(e) {
         const { pageid: t } = e,
           a = d.Get().GetPageByID(t),
           n = (0, g.gS)(a.accountid);
@@ -590,7 +601,7 @@
               null,
               l.createElement(
                 r.N_,
-                { to: S.SaleMigrationTool() },
+                { to: E.SaleMigrationTool() },
                 "< Return to Migration Toolset",
               ),
               l.createElement("h2", null, "Debug: ", e.pageid),
@@ -620,8 +631,8 @@
             )
           : l.createElement(m.t, { string: "Loading User Info" });
       }
-      var _ = a(34667);
-      const S = {
+      var p = a(34667);
+      const E = {
         SaleDashboardView: () => "/(dashboard)?/",
         SaleMigrationTool: () => "/migration/",
         SaleMigrationPageDebug: (e) => `/migration/debug/${e}/`,
@@ -644,19 +655,19 @@
             }),
             l.createElement(s.qh, {
               exact: !0,
-              path: S.SaleDashboardView(),
-              component: _.h,
+              path: E.SaleDashboardView(),
+              component: p.h,
             }),
             l.createElement(s.qh, {
               exact: !0,
-              path: S.SaleMigrationTool(),
-              component: p,
+              path: E.SaleMigrationTool(),
+              component: _,
             }),
             l.createElement(s.qh, {
               exact: !0,
-              path: S.SaleMigrationPageDebug(":pageid"),
+              path: E.SaleMigrationPageDebug(":pageid"),
               render: (e) =>
-                l.createElement(E, { pageid: e.match.params.pageid }),
+                l.createElement(S, { pageid: e.match.params.pageid }),
             }),
             l.createElement(s.qh, { component: n.a }),
           ),

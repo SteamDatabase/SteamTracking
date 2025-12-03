@@ -69,6 +69,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor(_) {
@@ -93,7 +94,7 @@
         async AddReaction(_) {
           if (!this.BIsLoggedIn())
             return {
-              eResult: 21,
+              eResult: _._.k_EResultNotLoggedOn,
               strMessage: "Not logged on",
             };
           let _ = _._.Init(_._);
@@ -105,7 +106,7 @@
             console.log("Target ID is..." + _.Body().targetid());
           let _ = await _._.AddReaction(this.m_transport, _);
           return (
-            1 == __webpack_require__.GetEResult() &&
+            __webpack_require__.GetEResult() == _._.k_EResultOK &&
               (this.m_bPointsBalanceLoadedOrInFlight = !1),
             {
               eResult: __webpack_require__.GetEResult(),
@@ -128,7 +129,7 @@
             steamid: _._.steamid,
           });
           let _ = await _._.GetSummary(this.m_transport, _);
-          1 == _.GetEResult()
+          _.GetEResult() == _._.k_EResultOK
             ? (this.m_lPointsAvailable = _._.fromString(
                 _.Body().summary().points(),
               ))
@@ -147,7 +148,7 @@
           this.m_bReactionConfigurationLoadedOrInFlight = !0;
           const _ = _._.Init(_._);
           let _ = await _._.GetReactionConfig(this.m_transport, _);
-          if (1 == _.GetEResult()) {
+          if (_.GetEResult() == _._.k_EResultOK) {
             let _ = _.Body().toObject().reactions;
             for (const _ of _)
               this.m_mapReactionConfiguration.set(_.reactionid, _);
@@ -160,14 +161,14 @@
           return this.m_mapExistingReactions;
         }
         async LoadExistingReactions() {
-          if (!this.BIsLoggedIn()) return 21;
+          if (!this.BIsLoggedIn()) return _._.k_EResultNotLoggedOn;
           this.m_mapExistingReactions.clear();
           const _ = _._.Init(_._);
           _.Body().set_target_type(this.m_eTargetType),
             _.Body().set_targetid(this.m_targetID);
           let _ = await _._.GetReactions(this.m_transport, _);
           return (
-            1 == _.GetEResult() &&
+            _.GetEResult() == _._.k_EResultOK &&
               _.Body()
                 .reactionids()
                 .map((_) => this.m_mapExistingReactions.set(_, !0)),
@@ -786,7 +787,7 @@
         constructor(_) {
           super(_),
             (window.fnLoyalty_ShowAwardModal = (_, _, _, _, _) => {
-              _ || (_ = 0),
+              _ || (_ = _._.k_ELoyaltyRewardReactionType_Invalid),
                 this.Init(_.serviceTransport),
                 this.setState({
                   bShowModal: !0,
@@ -814,7 +815,7 @@
                       withCredentials: !0,
                     },
                   );
-                  return 1 === _.data.success
+                  return _.data.success === _._.k_EResultOK
                     ? _.data.data
                     : (console.error(
                         `Failed to load async config: ${_.data.success}`,
@@ -894,7 +895,7 @@
         }
       });
       (_.defaultProps = {
-        targetType: 1,
+        targetType: _._.k_ELoyaltyRewardReactionTargetType_UserReview,
       }),
         (_ = _ = (0, _._)([_._], _));
       const _ = _;
@@ -933,7 +934,9 @@
         constructor(_) {
           super(_),
             (this.state = {
-              selectedReaction: _.initialSelectedReaction || 0,
+              selectedReaction:
+                _.initialSelectedReaction ||
+                _._.k_ELoyaltyRewardReactionType_Invalid,
               ePhase: _.LOADING,
             });
         }
@@ -942,7 +945,7 @@
             this.props.targetid,
             this.props.targetType,
           );
-          1 == _
+          _ == _._.k_EResultOK
             ? this.setState({
                 ePhase: _.SELECTING,
               })
@@ -970,45 +973,49 @@
                 _.forEach(function (_) {
                   if (_.valid_target_types.includes(_))
                     switch (_) {
-                      case 1:
-                      case 3:
-                      case 4:
-                      case 5:
+                      case _._.k_ELoyaltyRewardReactionTargetType_UserReview:
                         _.push(_.reactionid);
                         break;
-                      case 2:
+                      case _._.k_ELoyaltyRewardReactionTargetType_UGC:
                         _.valid_ugc_types.includes(_) && _.push(_.reactionid);
+                        break;
+                      case _._.k_ELoyaltyRewardReactionTargetType_Profile:
+                      case _._.k_ELoyaltyRewardReactionTargetType_ForumTopic:
+                      case _._.k_ELoyaltyRewardReactionTargetType_Comment:
+                        _.push(_.reactionid);
                     }
                 }),
                 _
               );
             })(_, _, __webpack_require__),
-            _ = 0 === _ ? null : _.get(_),
+            _ =
+              _ === _._.k_ELoyaltyRewardReactionType_Invalid ? null : _.get(_),
             _ = _ ? _.points_cost : 0,
             _ = _ ? _.points_transferred : 0;
           let _,
             _ = "";
           switch (_) {
-            case 1:
+            case _._.k_ELoyaltyRewardReactionTargetType_UserReview:
               _ = (0, _._)("#GrantAwardDescription_Review");
               break;
-            case 2:
+            case _._.k_ELoyaltyRewardReactionTargetType_UGC:
               _ = (0, _._)("#GrantAwardDescription_UGC");
               break;
-            case 3:
+            case _._.k_ELoyaltyRewardReactionTargetType_Profile:
               _ = (0, _._)("#GrantAwardDescription_Profile");
               break;
-            case 4:
+            case _._.k_ELoyaltyRewardReactionTargetType_ForumTopic:
               _ = (0, _._)("#GrantAwardDescription_ForumTopic");
               break;
-            case 5:
+            case _._.k_ELoyaltyRewardReactionTargetType_Comment:
               _ = (0, _._)("#GrantAwardDescription_Comment");
           }
           switch (_) {
             case _.LOADING:
             case _.SELECTING:
               {
-                const _ = 0 === _ || _.get(_),
+                const _ =
+                    _ === _._.k_ELoyaltyRewardReactionType_Invalid || _.get(_),
                   _ = !_ || _.greaterThanOrEqual(_),
                   _ = _.createElement(
                     _._,
@@ -1068,7 +1075,10 @@
                         onClick: () => {
                           _.get(_) ||
                             this.setState({
-                              selectedReaction: _ === _ ? 0 : _,
+                              selectedReaction:
+                                _ === _
+                                  ? _._.k_ELoyaltyRewardReactionType_Invalid
+                                  : _,
                             });
                         },
                       }),
@@ -1247,28 +1257,28 @@
               {
                 let _ = "";
                 switch (this.state.eResult) {
-                  case 10:
+                  case _._.k_EResultBusy:
                     _ = (0, _._)("#GrantAwardError_Busy");
                     break;
-                  case 32:
+                  case _._.k_EResultPersistFailed:
                     _ = (0, _._)("#GrantAwardError_PersistFailed");
                     break;
-                  case 8:
+                  case _._.k_EResultInvalidParam:
                     _ = (0, _._)("#GrantAwardError_InvalidParam");
                     break;
-                  case 42:
+                  case _._.k_EResultNoMatch:
                     _ = (0, _._)("#GrantAwardError_NoMatch");
                     break;
-                  case 107:
+                  case _._.k_EResultInsufficientFunds:
                     _ = (0, _._)("#GrantAwardError_InsufficientFunds");
                     break;
-                  case 15:
+                  case _._.k_EResultAccessDenied:
                     _ = (0, _._)("#GrantAwardError_AccessDenied");
                     break;
-                  case 21:
+                  case _._.k_EResultNotLoggedOn:
                     _ = (0, _._)("#GrantAwardError_NotLoggedOn");
                     break;
-                  case 29:
+                  case _._.k_EResultDuplicateRequest:
                     _ = (0, _._)("#GrantAwardError_DuplicateRequest");
                     break;
                   default:
@@ -1325,10 +1335,10 @@
             case _.LOADING_ERROR: {
               let _ = "";
               switch (this.state.eResult) {
-                case 10:
+                case _._.k_EResultBusy:
                   _ = (0, _._)("#GrantAwardError_Busy");
                   break;
-                case 21:
+                case _._.k_EResultNotLoggedOn:
                   _ = (0, _._)("#GrantAwardError_NotLoggedOn");
                   break;
                 default:
@@ -1395,12 +1405,12 @@
             } = this.props,
             { selectedReaction: _ } = this.state;
           null !== _ &&
-            0 != _ &&
+            _ != _._.k_ELoyaltyRewardReactionType_Invalid &&
             (this.setState({
               ePhase: _.SUBMITTING,
             }),
             _.AddReaction(_).then(({ eResult: _, strMessage: _ }) => {
-              1 == _
+              _ == _._.k_EResultOK
                 ? this.setState(
                     {
                       ePhase: _.DONE,

@@ -114,7 +114,9 @@
               a = [...e, ...t];
             if (a.length)
               return {
-                isLoading: 1 === (0, p.zX)(a, { include_assets: !0 }),
+                isLoading:
+                  (0, p.zX)(a, { include_assets: !0 }) ===
+                  p.N4.k_EStoreItemCacheState_Loading,
                 data: { personalAppIds: e, popularAppIds: t },
               };
             return {

@@ -150,6 +150,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.k_eView = "view"),
@@ -400,8 +401,13 @@
                           (function (_, _) {
                             var _, _;
                             let _ = new _._();
-                            for (let _ = 0; _ < 31; ++_)
-                              (_.BHasSomeTextForLanguage(_) || 0 == _) &&
+                            for (
+                              let _ = _._.k_Lang_English;
+                              _ < _._.k_Lang_MAX;
+                              ++_
+                            )
+                              (_.BHasSomeTextForLanguage(_) ||
+                                _._.k_Lang_English == _) &&
                                 (_.SetLocalization(
                                   _,
                                   _,
@@ -439,8 +445,34 @@
           19, 25, 18, 1, 10, 28, 26, 22, 27, 29, 30,
         ],
         _ = [
-          23, 6, 7, 19, 13, 14, 15, 2, 1, 24, 18, 3, 10, 4, 16, 12, 11, 22, 20,
-          8, 5, 27, 17, 9, 21, 26, 28, 30,
+          _._.k_Lang_Bulgarian,
+          _._.k_Lang_Simplified_Chinese,
+          _._.k_Lang_Traditional_Chinese,
+          _._.k_Lang_Czech,
+          _._.k_Lang_Danish,
+          _._.k_Lang_Dutch,
+          _._.k_Lang_Finnish,
+          _._.k_Lang_French,
+          _._.k_Lang_German,
+          _._.k_Lang_Greek,
+          _._.k_Lang_Hungarian,
+          _._.k_Lang_Italian,
+          _._.k_Lang_Japanese,
+          _._.k_Lang_Korean,
+          _._.k_Lang_Norwegian,
+          _._.k_Lang_Polish,
+          _._.k_Lang_Portuguese,
+          _._.k_Lang_Brazilian,
+          _._.k_Lang_Romanian,
+          _._.k_Lang_Russian,
+          _._.k_Lang_Spanish,
+          _._.k_Lang_Latam_Spanish,
+          _._.k_Lang_Swedish,
+          _._.k_Lang_Thai,
+          _._.k_Lang_Turkish,
+          _._.k_Lang_Ukrainian,
+          _._.k_Lang_Vietnamese,
+          _._.k_Lang_Indonesian,
         ],
         _ = (_) => {
           const {
@@ -666,7 +698,7 @@
                           _,
                         );
                         if (_.token.reason) return;
-                        if (1 != _)
+                        if (_ != _._.k_EResultOK)
                           return void _(
                             (0, _._)("#FAQDashboard_PublishFailed"),
                           );
@@ -778,36 +810,52 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) => {
-          const { rtTimestamp: _, bShowAsWarning: __webpack_require__ } = _;
-          if (!_)
-            return _.createElement(
-              "div",
-              {
-                className: _().Never,
-              },
-              (0, _._)("#FAQDashboard_TimeNever"),
-            );
-          const _ = Date.now() / 1e3 - _,
-            _ = _ < 86400 ? (0, _._)(_, !1, !0) : (0, _._)(_);
+        const { rtTimestamp: _, bShowAsWarning: __webpack_require__ } = _;
+        if (!_)
           return _.createElement(
-            _._,
+            "div",
             {
-              className: __webpack_require__ && _().Warning,
-              rtFullDate: _,
-              stylesmodule: _(),
+              className: _().Never,
             },
-            _,
+            (0, _._)("#FAQDashboard_TimeNever"),
           );
-        },
-        _ = (0, _._)((_) => {
+        const _ = Date.now() / 1e3 - _,
+          _ = _ < 86400 ? (0, _._)(_, !1, !0) : (0, _._)(_);
+        return _.createElement(
+          _._,
+          {
+            className: __webpack_require__ && _().Warning,
+            rtFullDate: _,
+            stylesmodule: _(),
+          },
+          _,
+        );
+      };
+      var _;
+      !(function (_) {
+        (_[(_.k_EFaqID = 0)] = "k_EFaqID"),
+          (_[(_.k_EName = 1)] = "k_EName"),
+          (_[(_.k_EDraftTimestamp = 2)] = "k_EDraftTimestamp"),
+          (_[(_.k_EUpdatedDrafts = 3)] = "k_EUpdatedDrafts"),
+          (_[(_.k_EStaleDrafts = 4)] = "k_EStaleDrafts"),
+          (_[(_.k_EPublished = 5)] = "k_EPublished"),
+          (_[(_.k_ENeedPublish = 6)] = "k_ENeedPublish"),
+          (_[(_.k_EGlobalVisible = 7)] = "k_EGlobalVisible"),
+          (_[(_.k_ESteamChinaVisible = 8)] = "k_ESteamChinaVisible");
+      })(_ || (_ = {}));
+      const _ = (0, _._)((_) => {
           const [_, __webpack_require__] = (0, _._)(),
-            [_, _] = _.useState(1),
+            [_, _] = _.useState(_.k_EName),
             _ = _.map((_) => {
-              const _ = _.per_language_info.find((_) => 0 == _.language),
+              const _ = _.per_language_info.find(
+                  (_) => _.language == _._.k_Lang_English,
+                ),
                 _ = (null == _ ? void 0 : _.last_update_timestamp) || 0,
                 _ = Array.from(
                   _.per_language_info.filter(
-                    (_) => 0 != _.language && _.last_update_timestamp >= _,
+                    (_) =>
+                      _.language != _._.k_Lang_English &&
+                      _.last_update_timestamp >= _,
                   ),
                 ).length,
                 _ = Array.from(
@@ -836,7 +884,11 @@
                 _.visible_in_global_realm,
                 _.visible_in_china_realm,
               ];
-            }).sort((_, _) => (1 == _ ? (0, _._)(_[1], _[1]) : _[_] - _[_]));
+            }).sort((_, _) =>
+              _ == _.k_EName
+                ? (0, _._)(_[_.k_EName], _[_.k_EName])
+                : _[_] - _[_],
+            );
           return (
             (0, _.useEffect)(() => {
               _._.Get().RemoveAllDirtyDrafts();
@@ -866,7 +918,7 @@
                   ),
                 _.map((_) =>
                   _.createElement(_, {
-                    key: _[0],
+                    key: _[_.k_EFaqID],
                     rgColumns: _,
                   }),
                 ),
@@ -980,42 +1032,42 @@
             _.createElement(_, {
               strLabelLocToken: "#FAQDashboard_NameColumn",
               bIsNameColumn: !0,
-              eThisColumn: 1,
+              eThisColumn: _.k_EName,
               ..._,
             }),
             _.createElement(_, {
               strLabelLocToken: "#FAQDashboard_DraftTimetampColumn",
-              eThisColumn: 2,
+              eThisColumn: _.k_EDraftTimestamp,
               ..._,
             }),
             _.createElement(_, {
               strLabelLocToken: "#FAQDashboard_UpdatedLanguagesColumn",
-              eThisColumn: 3,
+              eThisColumn: _.k_EUpdatedDrafts,
               ..._,
             }),
             _.createElement(_, {
               strLabelLocToken: "#FAQDashboard_StaleLanguagesColumn",
-              eThisColumn: 4,
+              eThisColumn: _.k_EStaleDrafts,
               ..._,
             }),
             _.createElement(_, {
               strLabelLocToken: "#FAQDashboard_PublishedLanguagesColumn",
-              eThisColumn: 5,
+              eThisColumn: _.k_EPublished,
               ..._,
             }),
             _.createElement(_, {
               strLabelLocToken: "#FAQDashboard_NeedPublishColumn",
-              eThisColumn: 6,
+              eThisColumn: _.k_ENeedPublish,
               ..._,
             }),
             _.createElement(_, {
               strLabelLocToken: "#FAQDashboard_VisibilityColumn",
-              eThisColumn: 7,
+              eThisColumn: _.k_EGlobalVisible,
               ..._,
             }),
             _.createElement(_, {
               strLabelLocToken: "#FAQDashboard_SteamChinaVisibilityColumn",
-              eThisColumn: 8,
+              eThisColumn: _.k_ESteamChinaVisible,
               ..._,
             }),
           ),
@@ -1307,7 +1359,7 @@
                           _._.Get()
                             .DeleteFAQ(_.GetFAQID())
                             .then((_) => {
-                              if (1 == _) {
+                              if (_ == _._.k_EResultOK) {
                                 const _ =
                                   _._.COMMUNITY_BASE_URL.substr(
                                     0,
@@ -1323,7 +1375,7 @@
                                 "FAQDeleteDialog: hit error: " + _.strErrorMsg,
                                 _,
                               ),
-                                _(2);
+                                _(_._.k_EResultFail);
                             })
                             .finally(() => _(!1));
                       },
@@ -1466,7 +1518,7 @@
                             _,
                           )
                           .then((_) => {
-                            1 == _ && _(!0), _(_);
+                            _ == _._.k_EResultOK && _(!0), _(_);
                           })
                           .catch((_) => {
                             const _ = (0, _._)(_);
@@ -1474,7 +1526,7 @@
                               "FAQPublishDialog: hit error: " + _.strErrorMsg,
                               _,
                             ),
-                              _(2);
+                              _(_._.k_EResultFail);
                           })
                           .finally(() => _(!1));
                     },
@@ -1590,7 +1642,7 @@
                           _._.Get()
                             .UpdateVisibility(_.GetFAQID(), _, _)
                             .then((_) => {
-                              1 == _ && _(!0), _(_);
+                              _ == _._.k_EResultOK && _(!0), _(_);
                             })
                             .catch((_) => {
                               const _ = (0, _._)(_);
@@ -1599,7 +1651,7 @@
                                   _.strErrorMsg,
                                 _,
                               ),
-                                _(2);
+                                _(_._.k_EResultFail);
                             })
                             .finally(() => _(!1));
                       },
@@ -1627,7 +1679,8 @@
                   null === (_ = null == _ ? void 0 : _.per_language_info) ||
                   void 0 === _
                     ? void 0
-                    : _.find((_) => 0 == _.language)) || void 0 === _
+                    : _.find((_) => _.language == _._.k_Lang_English)) ||
+              void 0 === _
                 ? void 0
                 : _.last_update_timestamp,
             _ =
@@ -1879,7 +1932,7 @@
                   },
                 });
               })(_.GetFAQID())),
-            [_, _] = (0, _.useState)(-1);
+            [_, _] = (0, _.useState)(_._.k_Lang_None);
           let _ = "";
           return (
             _.isSuccess &&
@@ -1964,7 +2017,7 @@
                 const _ = await _.SaveDrafts();
                 _(_);
               } catch (_) {
-                _(2),
+                _(_._.k_EResultFail),
                   console.log(
                     "FAQSaveProgressDialog hit exception " +
                       (0, _._)(_).strErrorMsg,
@@ -1994,7 +2047,7 @@
                     "div",
                     null,
                     (0, _._)(
-                      Boolean(1 == _)
+                      Boolean(_ == _._.k_EResultOK)
                         ? "#FAQSave_SaveSuccess"
                         : "#FAQSave_Error",
                     ),
@@ -2012,7 +2065,7 @@
                 : _.createElement(
                     "div",
                     null,
-                    Boolean(1 == _)
+                    Boolean(_ == _._.k_EResultOK)
                       ? _.createElement(
                           "div",
                           null,
@@ -2139,7 +2192,7 @@
           const { closeModal: _, draft: __webpack_require__ } = _,
             [_, _] = _.useState(__webpack_require__.GetFAQInternalName() || ""),
             [_, _] = _.useState(!1),
-            [_, _] = _.useState(1),
+            [_, _] = _.useState(_._.k_EResultOK),
             [_, _] = _.useState(!1);
           return _.createElement(
             _._,
@@ -2176,7 +2229,7 @@
                 _.createElement(
                   "span",
                   null,
-                  1 == _
+                  _ == _._.k_EResultOK
                     ? (0, _._)("#EventDisplay_Share_Success")
                     : (0, _._)(
                         "#Error_Description",

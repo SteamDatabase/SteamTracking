@@ -56,31 +56,32 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
-          case 0:
+          case _._.k_EStoreAppType_Game:
             return "game";
-          case 6:
+          case _._.k_EStoreAppType_Software:
             return "software";
-          case 1:
+          case _._.k_EStoreAppType_Demo:
             return "demo";
-          case 4:
+          case _._.k_EStoreAppType_DLC:
             return "dlc";
-          case 7:
-          case 3:
+          case _._.k_EStoreAppType_Video:
+          case _._.k_EStoreAppType_Movie:
             return "video";
-          case 11:
+          case _._.k_EStoreAppType_Music:
             return "music";
-          case 12:
+          case _._.k_EStoreAppType_Beta:
             return "beta";
-          case 2:
+          case _._.k_EStoreAppType_Mod:
             return "mod";
         }
         return "invalid";
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -93,6 +94,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -142,7 +144,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._.k_EResultOK ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -159,7 +161,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._.k_EResultOK ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -227,11 +229,13 @@
             accountID: _,
             bHideWhenNotAvailable: __webpack_require__,
             bHideName: _,
+            bLink: _ = !0,
           } = _,
           [_] = (0, _._)(_),
           _ = (0, _._)(_),
           _ = _.useMemo(() => _._.InitFromAccountID(_), [_]),
-          _ = `${_._.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`;
+          _ = `${_._.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`,
+          _ = _ ? "a" : "span";
         return _.createElement(
           _.Fragment,
           null,
@@ -243,9 +247,9 @@
                   _.createElement("span", null, _),
               )
             : _.createElement(
-                "a",
+                _,
                 {
-                  href: _,
+                  href: _ ? _ : void 0,
                 },
                 _.createElement("img", {
                   className: _.SmallAvatar,
@@ -420,6 +424,7 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -693,7 +698,7 @@
                   _ = await _().post(_, _, {
                     withCredentials: !0,
                   });
-                return 1 == _?.data?.success;
+                return _?.data?.success == _._.k_EResultOK;
               },
             }));
         var _, _, _, _;
@@ -897,7 +902,7 @@
                 {
                   className: _().SessionName,
                 },
-                __webpack_require__.localized_session_title[0],
+                __webpack_require__.localized_session_title[_._.k_Lang_English],
               ),
               _.createElement(
                 "div",
@@ -912,7 +917,7 @@
                 "div",
                 null,
                 _.createElement(_, {
-                  desc: `Description: ${__webpack_require__.localized_session_description[0] || ""}`,
+                  desc: `Description: ${__webpack_require__.localized_session_description[_._.k_Lang_English] || ""}`,
                 }),
               ),
               "dev" == _._.WEB_UNIVERSE &&
@@ -1253,7 +1258,7 @@
                   _ = await _().post(_, _, {
                     withCredentials: !0,
                   });
-                return 1 == _?.data?.success;
+                return _?.data?.success == _._.k_EResultOK;
               },
             }));
         var _, _, _;
@@ -1272,7 +1277,8 @@
               {
                 className: _().SessionName,
               },
-              _.localized_session_title[_] ?? _.localized_session_title[0],
+              _.localized_session_title[_] ??
+                _.localized_session_title[_._.k_Lang_English],
             ),
             _.createElement(
               "div",

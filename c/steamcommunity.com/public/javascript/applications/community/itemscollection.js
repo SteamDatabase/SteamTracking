@@ -83,6 +83,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -350,7 +351,7 @@
       }
       function _(_) {
         const { itemClass: _, nAppID: __webpack_require__ } = _;
-        return 2 !== _
+        return _ !== _._.k_ECommunityItemClass_GameCard
           ? null
           : _.createElement(
               _._,
@@ -367,7 +368,7 @@
           bViewingOwnProfile: _,
           bHideItemStore: _,
         } = _;
-        return 2 == _ && _
+        return _ == _._.k_ECommunityItemClass_GameCard && _
           ? _.createElement(
               _._,
               {
@@ -393,7 +394,10 @@
           _ = _.user_has_item || __webpack_require__,
           _ = !_,
           _ =
-            (!_ && 2 != _.item_class && 8 != _.item_class) || 4 == _.item_class
+            (!_ &&
+              _.item_class != _._.k_ECommunityItemClass_GameCard &&
+              _.item_class != _._.k_ECommunityItemClass_ProfileModifier) ||
+            _.item_class == _._.k_ECommunityItemClass_Emoticon
               ? void 0
               : _.item_image_small;
         return _.createElement(
@@ -498,7 +502,7 @@
                   _.active &&
                   !_.deleted &&
                   !_.has(_.item_type) &&
-                  1 != _.item_class,
+                  _.item_class != _._.k_ECommunityItemClass_Badge,
               )
                 .sort((_, _) => {
                   const _ = _.has(`${_.appid}_${_.item_type}`),
@@ -521,8 +525,10 @@
             );
           }, [_, _, _]),
           _ = (0, _.useMemo)(() => {
-            if (_.has(3)) {
-              const _ = _.get(3).filter((_) => {
+            if (_.has(_._.k_ECommunityItemClass_ProfileBackground)) {
+              const _ = _.get(
+                _._.k_ECommunityItemClass_ProfileBackground,
+              ).filter((_) => {
                 JSON.parse(_.item_key_values);
                 return _.item_movie_webm && _.item_movie_mp4;
               });
@@ -549,9 +555,17 @@
                   ? void 0
                   : _.filter((_) => {
                       const _ = _.get(_.item_type);
-                      return !_ || (2 != _.item_class && 1 != _.item_class);
+                      return (
+                        !_ ||
+                        (_.item_class != _._.k_ECommunityItemClass_GameCard &&
+                          _.item_class != _._.k_ECommunityItemClass_Badge)
+                      );
                     }),
-              _ = _.filter((_) => 2 != _.item_class && 1 != _.item_class),
+              _ = _.filter(
+                (_) =>
+                  _.item_class != _._.k_ECommunityItemClass_GameCard &&
+                  _.item_class != _._.k_ECommunityItemClass_Badge,
+              ),
               _ = _.length || 0,
               _ = _.length || 0;
             return [_ ? Math.floor((100 * _) / _) : 0, _, _];
@@ -663,7 +677,7 @@
                       itemClass: _,
                       rgItems: _.get(_),
                       bViewingOwnProfile: _,
-                      bHideItemStore: 2 == _,
+                      bHideItemStore: _ == _._.k_ECommunityItemClass_GameCard,
                     }),
                   ),
                 ),
@@ -782,6 +796,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         GetItemDefForAppID(_) {
@@ -800,7 +815,7 @@
         SetTestItemDefs(_, _) {
           this.m_mapAppToDefs.set(_, _),
             this.GetItemDefsChangeForEventID(_).Dispatch(_),
-            this.m_mapPromises.set(_, Promise.resolve(1));
+            this.m_mapPromises.set(_, Promise.resolve(_._.k_EResultOK));
         }
         async LoadAppCommunityItems(_, _) {
           return _
@@ -810,7 +825,7 @@
                   this.InternalLoadAppCommunityItems(_, _),
                 ),
               this.m_mapPromises.get(_))
-            : 2;
+            : _._.k_EResultFail;
         }
         async InternalLoadAppCommunityItems(_, _) {
           var _, _;
@@ -833,10 +848,9 @@
               });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success) &&
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) == _._.k_EResultOK &&
               (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
                 ? void 0
                 : _.item_definitions)
@@ -846,7 +860,7 @@
                 this.GetItemDefsChangeForEventID(_).Dispatch(
                   _.data.item_definitions,
                 ),
-                1
+                _._.k_EResultOK
               );
             _ = (0, _._)(_);
           } catch (_) {
@@ -862,7 +876,7 @@
                 (null == _ ? void 0 : _.strErrorMsg),
               _,
             ),
-            2
+            _._.k_EResultFail
           );
         }
         static Get() {
@@ -917,6 +931,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1022,21 +1037,21 @@
           });
         let _;
         switch (__webpack_require__.community_class) {
-          case 14:
-          case 15:
+          case _._.k_ECommunityItemClass_AvatarFrame:
+          case _._.k_ECommunityItemClass_AnimatedAvatar:
             _ = `${_._.COMMUNITY_BASE_URL}my/edit/avatar`;
             break;
-          case 1:
+          case _._.k_ECommunityItemClass_Badge:
             _ = `${_._.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
             break;
-          case 3:
-          case 8:
+          case _._.k_ECommunityItemClass_ProfileBackground:
+          case _._.k_ECommunityItemClass_ProfileModifier:
             _ = `${_._.COMMUNITY_BASE_URL}my/edit/background`;
             break;
-          case 13:
+          case _._.k_ECommunityItemClass_MiniProfileBackground:
             _ = `${_._.COMMUNITY_BASE_URL}my/edit/miniprofile`;
             break;
-          case 11:
+          case _._.k_ECommunityItemClass_Sticker:
             _ = `${_._.COMMUNITY_BASE_URL}chat`;
         }
         return _.createElement(

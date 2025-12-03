@@ -41,7 +41,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -493,11 +494,11 @@
                   _ = await _().get(_, {
                     params: _,
                   });
-                return 200 == _?.status && 1 == _.data?.success
+                return 200 == _?.status && _.data?.success == _._.k_EResultOK
                   ? _.data
                   : (console.error("useSocialMediaSupports:", _?.status),
                     {
-                      success: 2,
+                      success: _._.k_EResultFail,
                     });
               },
             });

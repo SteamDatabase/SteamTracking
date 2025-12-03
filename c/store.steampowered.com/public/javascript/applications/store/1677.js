@@ -125,17 +125,22 @@
       _ = (0, _._)([_._], _);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { persona: _, className: __webpack_require__, ..._ } = _;
         if (!_) return null;
         if (!_.is_online) return null;
-        const _ = _.HasStateFlag(512),
-          _ = _.HasStateFlag(2048),
-          _ = 544 == _.m_eGamingDeviceType,
-          _ = 545 == _.m_eGamingDeviceType,
-          _ = !_ && !_ && !_ && _.HasStateFlag(1024);
+        const _ = _.HasStateFlag(_._.k_EPersonaStateFlag_ClientTypeMobile),
+          _ = _.HasStateFlag(_._.k_EPersonaStateFlag_ClientTypeVR),
+          _ = _.m_eGamingDeviceType == _._.k_EGamingDeviceType_SteamDeck,
+          _ = _.m_eGamingDeviceType == _._.k_EGamingDeviceType_LegionGoS,
+          _ =
+            !_ &&
+            !_ &&
+            !_ &&
+            _.HasStateFlag(_._.k_EPersonaStateFlag_ClientTypeTenfoot);
         return _.createElement(
           _.Fragment,
           null,
@@ -1304,6 +1309,7 @@
           };
         })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
@@ -1367,8 +1373,9 @@
               ?.filter((_) => {
                 const _ = new _._(_.ulfriendid());
                 return (
-                  (3 == _.efriendrelationship() ||
-                    6 == _.efriendrelationship()) &&
+                  (_.efriendrelationship() == _._.k_EFriendRelationshipFriend ||
+                    _.efriendrelationship() ==
+                      _._.k_EFriendRelationshipIgnoredFriend) &&
                   _.BIsIndividualAccount()
                 );
               })
@@ -1391,8 +1398,10 @@
               ?.filter((_) => {
                 const _ = new _._(_.ulfriendid());
                 return (
-                  (5 == _.efriendrelationship() ||
-                    6 == _.efriendrelationship()) &&
+                  (_.efriendrelationship() ==
+                    _._.k_EFriendRelationshipIgnored ||
+                    _.efriendrelationship() ==
+                      _._.k_EFriendRelationshipIgnoredFriend) &&
                   _.BIsIndividualAccount()
                 );
               })

@@ -16,10 +16,11 @@
     },
     62381: (e, t, n) => {
       "use strict";
-      n.d(t, { W: () => r });
-      var s = n(30470);
-      let i = { success: !0, result: 1 };
-      class o {
+      n.d(t, { W: () => c });
+      var s = n(37085),
+        i = n(30470);
+      let o = { success: !0, result: s.d.k_EResultOK };
+      class r {
         m_mapWaitingCallbacks = new Map();
         m_socket;
         m_iCallSeq = 1;
@@ -62,8 +63,8 @@
           if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
             return !1;
           let n = Object.assign({}, e, {
-            universe: s.TS.EUNIVERSE,
-            accountid: s.iA.accountid,
+            universe: i.TS.EUNIVERSE,
+            accountid: i.iA.accountid,
           });
           void 0 !== t && (n.sequenceid = t);
           try {
@@ -106,7 +107,7 @@
               (this.m_socket.onopen = () => {
                 this.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
                   .then((n) => {
-                    1 == n.success
+                    n.success == s.d.k_EResultOK
                       ? ((this.m_ClientInfo.ulVersion = n.clientversion),
                         (this.m_ClientInfo.bFriendsUIEnabled = !!n.friendsui),
                         (this.m_ClientInfo.unAccountID = n.accountid),
@@ -133,9 +134,9 @@
           );
         }
       }
-      let r = new (class {
-        m_connection = new o();
-        FailureResult(e = 2) {
+      let c = new (class {
+        m_connection = new r();
+        FailureResult(e = s.d.k_EResultFail) {
           let t = { success: !1, result: e };
           return (
             this.m_connection &&
@@ -144,13 +145,13 @@
             this.m_connection &&
               !this.m_connection.connected_to_client &&
               (t.connect_failed = !0),
-            7 == e && (t.call_unsupported = !0),
+            e == s.d.k_EResultInvalidProtocolVer && (t.call_unsupported = !0),
             t
           );
         }
         BClientConnected() {
           return this.m_connection.Connect().then(
-            () => i,
+            () => o,
             () => this.FailureResult(),
           );
         }
@@ -187,7 +188,7 @@
           let t = { message: "IsSubscribedApp", appid: e };
           return this.GenericEResultCall(t, !0).then((t) => {
             if (t.connect_failed) return;
-            let n = 1 == t.result;
+            let n = t.result == s.d.k_EResultOK;
             return this.m_mapCacheSubscribedApp.set(e, n), n;
           });
         }
@@ -200,8 +201,8 @@
         }
         BClientAccountMatches() {
           return (
-            !s.iA.logged_in ||
-            s.iA.accountid == this.m_connection.ClientInfo.unAccountID
+            !i.iA.logged_in ||
+            i.iA.accountid == this.m_connection.ClientInfo.unAccountID
           );
         }
         GenericEResultCall(e, t = !1) {
@@ -209,86 +210,95 @@
             .Connect()
             .then(() =>
               t && !this.BClientAccountMatches()
-                ? { success: !1, result: 19, account_mismatch: !0 }
+                ? {
+                    success: !1,
+                    result: s.d.k_EResultInvalidSteamID,
+                    account_mismatch: !0,
+                  }
                 : this.m_connection
                     .SendMsgAndAwaitResponse(e)
                     .then((e) =>
-                      1 === e.success ? i : this.FailureResult(e.success),
+                      e.success === s.d.k_EResultOK
+                        ? o
+                        : this.FailureResult(e.success),
                     ),
             )
             .catch(() => this.FailureResult());
         }
       })();
-      window.ClientConnectionAPI = r;
+      window.ClientConnectionAPI = c;
     },
     71009: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { OpenInDesktopClient: () => m, default: () => p });
-      var s = n(90626),
-        i = n(30470),
-        o = n(84811),
-        r = n(62381),
-        c = n(97824),
-        a = n(78327),
-        l = n(2627),
-        u = n(61859);
-      const m = (0, o.Nr)(function (e) {
-          const [t, n] = s.useState(22);
-          s.useEffect(() => {
-            i.TS.IN_CLIENT ||
-              i.TS.IN_MOBILE ||
-              i.TS.IN_MOBILE_WEBVIEW ||
-              r.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then(
+      n.r(t), n.d(t, { OpenInDesktopClient: () => p, default: () => h });
+      var s = n(37085),
+        i = n(90626),
+        o = n(30470),
+        r = n(84811),
+        c = n(62381),
+        a = n(97824),
+        l = n(78327),
+        u = n(2627),
+        m = n(61859);
+      const p = (0, r.Nr)(function (e) {
+          const [t, n] = i.useState(s.d.k_EResultPending);
+          i.useEffect(() => {
+            o.TS.IN_CLIENT ||
+              o.TS.IN_MOBILE ||
+              o.TS.IN_MOBILE_WEBVIEW ||
+              c.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then(
                 (e) => {
-                  n(e ? 1 : 2);
+                  n(e ? s.d.k_EResultOK : s.d.k_EResultFail);
                 },
               );
           }, []);
-          const o = s.useCallback(() => {
-            let e = `${(0, a.yl)()}//openurl/`;
-            const n = (0, l.VY)("browserid");
+          const r = i.useCallback(() => {
+            let e = `${(0, l.yl)()}//openurl/`;
+            const n = (0, u.VY)("browserid");
             if (n) {
               const t = new URL(window.location.href),
                 s = new URLSearchParams(t.search);
               s.set("utm_bid", n),
                 (e += t.origin + t.pathname + "?" + s.toString() + t.hash);
             } else e += window.location.href;
-            1 == t ? r.W.OpenSteamURL(e) : (window.location.href = e);
+            t == s.d.k_EResultOK
+              ? c.W.OpenSteamURL(e)
+              : (window.location.href = e);
           }, [t]);
-          return s.createElement(
+          return i.createElement(
             "div",
-            { className: c.OpenInBannerContainer },
-            s.createElement(
+            { className: a.OpenInBannerContainer },
+            i.createElement(
               "div",
-              { className: c.OpenInBannerContent },
-              s.createElement(
+              { className: a.OpenInBannerContent },
+              i.createElement(
                 "div",
-                { className: c.BannerButtonContainer },
-                s.createElement(
+                { className: a.BannerButtonContainer },
+                i.createElement(
                   "div",
-                  { onClick: o, className: c.BannerButton },
-                  (0, u.we)("#OpenInDesktopAppBanner_OpenAppButton"),
+                  { onClick: r, className: a.BannerButton },
+                  (0, m.we)("#OpenInDesktopAppBanner_OpenAppButton"),
                 ),
               ),
-              s.createElement(
+              i.createElement(
                 "div",
-                { className: c.BannerMessage },
-                s.createElement(
+                { className: a.BannerMessage },
+                i.createElement(
                   "div",
-                  { className: c.BannerTitle },
-                  s.createElement(
+                  { className: a.BannerTitle },
+                  i.createElement(
                     "b",
                     null,
-                    (0, u.we)("#OpenInDesktopAppBanner_NotSignedIn"),
+                    (0, m.we)("#OpenInDesktopAppBanner_NotSignedIn"),
                   ),
-                  s.createElement("br", null),
-                  (0, u.we)("#OpenInDesktopAppBanner_Body"),
+                  i.createElement("br", null),
+                  (0, m.we)("#OpenInDesktopAppBanner_Body"),
                 ),
               ),
             ),
           );
         }),
-        p = m;
+        h = p;
     },
   },
 ]);

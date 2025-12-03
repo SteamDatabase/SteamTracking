@@ -365,7 +365,7 @@
     },
     27144: (e, a, t) => {
       "use strict";
-      t.d(a, { B3: () => k, KM: () => A, KT: () => h });
+      t.d(a, { B3: () => B, KM: () => f, KT: () => h });
       var o = t(41735),
         n = t.n(o),
         r = t(58632),
@@ -373,21 +373,22 @@
         _ = t(90626),
         i = t(20194),
         l = t(75233),
-        s = t(17720),
-        m = t(68797),
-        d = t(78327),
-        p = t(56545),
+        s = t(37085),
+        m = t(17720),
+        d = t(68797),
+        p = t(78327),
+        g = t(56545),
         C = t(37735),
-        g = t(23809);
-      const u = "nicknames";
-      function A(e) {
-        const a = (0, g.KV)(),
+        u = t(23809);
+      const A = "nicknames";
+      function f(e) {
+        const a = (0, u.KV)(),
           { data: t, isLoading: o } = (0, i.I)({
-            queryKey: [u],
+            queryKey: [A],
             queryFn: async () => {
               const e = new Map();
-              if (d.iA.logged_in) {
-                const t = p.w.Init(C.dN),
+              if (p.iA.logged_in) {
+                const t = g.w.Init(C.dN),
                   o = (await C.xt.GetNicknameList(a, t)).Body().toObject();
                 o?.nicknames &&
                   o.nicknames.length > 0 &&
@@ -400,14 +401,14 @@
           });
         return t ? t.get(e) : null;
       }
-      const f = new (c())(
+      const v = new (c())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const a =
-                "community" == (0, d.yK)()
-                  ? d.TS.COMMUNITY_BASE_URL
-                  : d.TS.STORE_BASE_URL;
+                "community" == (0, p.yK)()
+                  ? p.TS.COMMUNITY_BASE_URL
+                  : p.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const t = { accountid: e[0], origin: self.origin },
                   o = await n().get(`${a}actions/ajaxgetavatarpersona`, {
@@ -416,10 +417,10 @@
                 if (
                   !o ||
                   200 != o.status ||
-                  1 != o.data?.success ||
+                  o.data?.success != s.d.k_EResultOK ||
                   !o.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(o).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, d.H))(o).strErrorMsg}`;
                 return [o.data.userinfo];
               }
               {
@@ -430,14 +431,14 @@
                 if (
                   !o ||
                   200 != o.status ||
-                  1 != o.data?.success ||
+                  o.data?.success != s.d.k_EResultOK ||
                   !o.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(o).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, d.H))(o).strErrorMsg}`;
                 const r = new Map();
                 return (
                   o.data.userinfos.forEach((e) =>
-                    r.set(new s.b(e.steamid).GetAccountID(), e),
+                    r.set(new m.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => r.get(e))
                 );
@@ -445,23 +446,23 @@
             })(e),
           { cache: !1 },
         ),
-        v = "avatarandpersonas";
+        k = "avatarandpersonas";
       function h(e) {
         const { data: a, isLoading: t } = (0, i.I)({
-          queryKey: [v, e],
-          queryFn: () => f.load(e),
+          queryKey: [k, e],
+          queryFn: () => v.load(e),
         });
         return [a, t];
       }
-      function k(e) {
+      function B(e) {
         const a = (0, l.jE)(),
           { data: t, isLoading: o } = (0, i.I)({
-            queryKey: [v, e],
+            queryKey: [k, e],
             queryFn: async () => {
-              const t = await f.loadMany(e);
+              const t = await v.loadMany(e);
               return (
                 t.forEach((e) => {
-                  const t = [v, new s.b(e.steamid).GetAccountID()];
+                  const t = [k, new m.b(e.steamid).GetAccountID()];
                   a.setQueryData(t, e);
                 }),
                 t
@@ -483,7 +484,7 @@
     },
     79194: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => p });
+      t.r(a), t.d(a, { default: () => g });
       var o = t(80620),
         n = t(54926),
         r = t(90626),
@@ -493,8 +494,9 @@
         l = t(78327),
         s = t(32077),
         m = t(37220),
-        d = t(52038);
-      function p(e) {
+        d = t(52038),
+        p = t(5864);
+      function g(e) {
         const a = (0, m.b)(e.year),
           t = h();
         return r.createElement(
@@ -506,14 +508,14 @@
           r.createElement(
             "div",
             { className: s.HeaderCtn },
-            r.createElement(A, {
+            r.createElement(f, {
               baseClass: (0, d.A)(s.ReplayLogo, a.ReplayLogo),
               accentClass: (0, d.A)(s.ReplayLogoAccent, a.ReplayLogoAccent),
             }),
-            r.createElement(f, { year: e.year, theme: a }),
+            r.createElement(v, { year: e.year, theme: a }),
           ),
-          r.createElement(u, { className: (0, d.A)(s.SteamLogo, a.SteamLogo) }),
-          r.createElement(v, { theme: a }),
+          r.createElement(A, { className: (0, d.A)(s.SteamLogo, a.SteamLogo) }),
+          r.createElement(k, { theme: a }),
           r.createElement(
             "div",
             { className: (0, d.A)(s.Content, a.Content) },
@@ -523,7 +525,7 @@
               { className: (0, d.A)(s.Description, a.Description) },
               (0, i.we)("#YIR_MM_Generic_Desc"),
             ),
-            r.createElement(g, { theme: a }),
+            r.createElement(u, { theme: a }),
           ),
         );
       }
@@ -555,7 +557,7 @@
             )
           : null;
       }
-      function g(e) {
+      function u(e) {
         const { theme: a } = e,
           t = h();
         return r.createElement(
@@ -567,7 +569,7 @@
           (0, i.we)("#YIR_MM_Generic_Action"),
         );
       }
-      function u(e) {
+      function A(e) {
         return r.createElement(
           "svg",
           {
@@ -593,7 +595,7 @@
           }),
         );
       }
-      function A(e) {
+      function f(e) {
         const { baseClass: a, accentClass: t } = e;
         return r.createElement(
           "svg",
@@ -621,7 +623,7 @@
           }),
         );
       }
-      function f(e) {
+      function v(e) {
         const { year: a, theme: t } = e;
         return r.createElement(
           "div",
@@ -637,7 +639,7 @@
           ),
         );
       }
-      function v(e) {
+      function k(e) {
         return r.createElement(
           "div",
           { className: (0, d.A)(s.Hashtag, e.theme.Hashtag) },
@@ -646,7 +648,10 @@
       }
       function h() {
         const e = (0, n.J)().GetTemplateVars();
-        return (0, o.WN)(e.linkurl, 1);
+        return (0, o.WN)(
+          e.linkurl,
+          p.cU.k_EMarketingMessageClickLocation_Image,
+        );
       }
     },
     37220: (e, a, t) => {

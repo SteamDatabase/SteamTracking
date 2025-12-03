@@ -380,6 +380,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "nicknames";
       function _(_) {
@@ -421,7 +422,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._.k_EResultOK ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -438,7 +439,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._.k_EResultOK ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -498,6 +499,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -694,7 +696,7 @@
       }
       function _() {
         const _ = (0, _._)().GetTemplateVars();
-        return (0, _._)(_.linkurl, 1);
+        return (0, _._)(_.linkurl, _._.k_EMarketingMessageClickLocation_Image);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

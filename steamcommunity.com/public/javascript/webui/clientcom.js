@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10275826";
+var CLSTAMP = "10279862";
 (() => {
   "use strict";
   function e(e) {
@@ -75,7 +75,7 @@ var CLSTAMP = "10275826";
       IN_STEAMUI: !1,
       IN_GAMEPADUI: !1,
       IN_STEAMUI_SHARED_CONTEXT: !1,
-      DECK_DISPLAY_MODE: !1,
+      FORCED_DISPLAY_MODE: void 0,
       ON_DECK: !1,
       ON_FRAME: !1,
       ON_STEAMOS: !1,

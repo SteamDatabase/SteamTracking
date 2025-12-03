@@ -127,10 +127,9 @@
             if (_.length)
               return {
                 isLoading:
-                  1 ===
                   (0, _._)(_, {
                     include_assets: !0,
-                  }),
+                  }) === _._.k_EStoreItemCacheState_Loading,
                 data: {
                   personalAppIds: _,
                   popularAppIds: _,

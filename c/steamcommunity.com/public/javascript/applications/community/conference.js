@@ -252,6 +252,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { conferenceInfo: _ } = _,
@@ -261,7 +262,7 @@
           null,
           _.createElement(_.default, {
             steamIDBroadcast: _,
-            watchLocation: 5,
+            watchLocation: _._.k_EBroadcastWatchLocation_CommunityPage,
             bStartMuted: !0,
           }),
         );
@@ -282,7 +283,7 @@
             null,
             _.createElement(_._, {
               emoticonStore: _._,
-              watchLocation: 5,
+              watchLocation: _._.k_EBroadcastWatchLocation_CommunityPage,
               steamID: _,
               globalChat: !0,
               bPartnerMemberOnlyChat: _.bPartnerOnly,
@@ -369,6 +370,7 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -781,7 +783,9 @@
             _.GetSummaryWithFallback(_),
           ]),
           [_, _] = _.useState(() =>
-            (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
+            (0, _._)() && _ == _._.k_EMajorUpdateEvent
+              ? _._.full
+              : _._.capsule_main,
           ),
           _ = (0, _._)(),
           _ = (0, _._)(() =>
@@ -795,10 +799,13 @@
               const { video_preview_type: _, video_preview_id: _, type: _ } = _,
                 _ = _.appid;
               if (!_) return null;
-              if (12 === _) return null;
+              if (_ === _._.k_ESmallUpdateEvent) return null;
               if ("youtube" === _) {
                 const _ = (0, _._)(_._.LANGUAGE),
-                  _ = (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
+                  _ =
+                    (0, _._)() && _ == _._.k_EMajorUpdateEvent
+                      ? _._.full
+                      : _._.capsule_main,
                   _ = _.GetImageForSizeAsArrayWithFallback("capsule", _, _, !0);
                 if ("carousel" === _)
                   return _.createElement(_, {
@@ -853,13 +860,14 @@
             strCapsuleImgURLForBackground: _,
             fnSetCoverSize: _,
           }),
-          _ = _ && 14 != _ && !(_ && "carousel" !== _),
+          _ = _ && "carousel" !== _,
+          _ = _ && _ != _._.k_EMajorUpdateEvent && !_,
           _ = _ && _,
           _ = !_ && _,
           _ = "wide" !== _ || _,
           _ =
-            28 !== _ &&
-            12 !== _ &&
+            _ !== _._.k_ENewsEvent &&
+            _ !== _._.k_ESmallUpdateEvent &&
             _._.GetTimeNowWithOverride() < _ &&
             _.createElement(
               "div",
@@ -874,7 +882,7 @@
                 bExpandLeft: _,
               }),
             ),
-          _ = Boolean(12 !== _ && _),
+          _ = Boolean(_ !== _._.k_ESmallUpdateEvent && _),
           _ = Boolean(
             _ &&
               (!_ ||
@@ -913,7 +921,7 @@
                     _.preventDefault();
                 },
               },
-              14 === _ &&
+              _ === _._.k_EMajorUpdateEvent &&
                 _.createElement("div", {
                   className: (0, _._)(
                     _().TileBackgroundImage,
@@ -934,7 +942,7 @@
                   {
                     className: _().TileTextContainer,
                   },
-                  Boolean(12 == _) &&
+                  Boolean(_ == _._.k_ESmallUpdateEvent) &&
                     _.createElement(
                       "div",
                       {
@@ -1060,7 +1068,7 @@
               _.createElement(
                 _.Fragment,
                 null,
-                12 === _ &&
+                _ === _._.k_ESmallUpdateEvent &&
                   _.createElement(
                     _.Fragment,
                     null,
@@ -1088,7 +1096,7 @@
                       _,
                     ),
                   ),
-                12 !== _ &&
+                _ !== _._.k_ESmallUpdateEvent &&
                   _.createElement(
                     "div",
                     {
@@ -1502,7 +1510,8 @@
                 className: _.EventsScheduleCtn,
               },
               _.createElement(_, {
-                displayLocation: 6,
+                displayLocation:
+                  _._.k_EPartnerEventDisplayLocation_CommunityHub,
                 fnChangeModalEvent: _,
               }),
               _.createElement(_, {
@@ -1721,7 +1730,8 @@
                 className: _.PastEventsCtn,
               },
               _.createElement(_, {
-                displayLocation: 6,
+                displayLocation:
+                  _._.k_EPartnerEventDisplayLocation_CommunityHub,
                 fnChangeModalEvent: _,
               }),
               _.map((_) => {
@@ -2307,6 +2317,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         async DeleteOldAnnouncement(_, _) {
@@ -2319,7 +2330,7 @@
               "/announcements/ajaxdeleteannouncement/" +
               _,
             _ = await _().post(_, _);
-          if (1 != _.data.success) throw _.data;
+          if (_.data.success != _._.k_EResultOK) throw _.data;
           return this.RemoveGIDFromList(_, _._ + _), _.data;
         }
         static Get() {
@@ -2438,6 +2449,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -2470,7 +2482,10 @@
             _ && _.m_fnSubmit && (_.m_fnSubmit.Cancel(), (_.m_fnSubmit = null));
           }
           ReportImpression(_, _) {
-            _._.Get().RecordEventShown(_, 8),
+            _._.Get().RecordEventShown(
+              _,
+              _._.k_EPartnerEventDisplayLocation_NewsHub,
+            ),
               _ && _._.RecordViewedEvent((0, _._)(), _.GID);
             const _ = this.m_mapEvents.get(_.GID);
             _ &&

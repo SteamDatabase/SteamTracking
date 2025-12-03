@@ -271,7 +271,7 @@
     },
     63486: (e, t, n) => {
       "use strict";
-      n.d(t, { d: () => xe });
+      n.d(t, { d: () => Oe });
       var o = n(19367),
         a = n(90626),
         r = n(72034),
@@ -280,11 +280,13 @@
         i = n(6379),
         c = n(61859),
         u = n(78327),
-        d = n(59952),
-        m = n(41735),
-        _ = n.n(m),
-        g = n(68797);
-      class v {
+        d = n(95679),
+        m = n(59952),
+        _ = n(41735),
+        g = n.n(_),
+        v = n(37085),
+        w = n(68797);
+      class p {
         m_counts = null;
         m_promise;
         GetCounts() {
@@ -301,12 +303,16 @@
           try {
             const t =
                 u.TS.STORE_BASE_URL + "saleaction/ajaxgetuserdeckcompatcounts",
-              n = await _().get(t, {});
-            if (200 == n?.status && 1 == n.data?.success && n.data?.counts)
+              n = await g().get(t, {});
+            if (
+              200 == n?.status &&
+              n.data?.success == v.d.k_EResultOK &&
+              n.data?.counts
+            )
               return (this.m_counts = n.data.counts), this.m_counts;
-            e = (0, g.H)(n);
+            e = (0, w.H)(n);
           } catch (t) {
-            e = (0, g.H)(t);
+            e = (0, w.H)(t);
           }
           return (
             console.error(
@@ -319,17 +325,17 @@
         static s_globalSingletonStore;
         static Get() {
           return (
-            v.s_globalSingletonStore ||
-              ((v.s_globalSingletonStore = new v()),
+            p.s_globalSingletonStore ||
+              ((p.s_globalSingletonStore = new p()),
               ("dev" != u.TS.WEB_UNIVERSE && "beta" != u.TS.WEB_UNIVERSE) ||
-                (window.g_DeckCompatCountStores = v.s_globalSingletonStore)),
-            v.s_globalSingletonStore
+                (window.g_DeckCompatCountStores = p.s_globalSingletonStore)),
+            p.s_globalSingletonStore
           );
         }
         constructor() {
           if (document.getElementById("application_config")) {
             let e = (0, u.Tc)("deckcompatcount", "application_config");
-            v.ValidateListCompat(e) && (this.m_counts = e);
+            p.ValidateListCompat(e) && (this.m_counts = e);
           }
         }
         static ValidateListCompat(e) {
@@ -342,18 +348,19 @@
           );
         }
       }
-      var w = n(85320),
-        p = n(56631),
-        I = n(35400),
-        f = n(6878),
-        y = n(84811),
-        h = n(22797),
-        C = n(77291),
-        D = n(19267),
-        b = n(8527),
-        E = n(62490);
-      const N = a.Fragment;
-      function S(e) {
+      var I = n(85320),
+        y = n(56631),
+        f = n(35400),
+        C = n(6878),
+        h = n(22837),
+        D = n(84811),
+        b = n(22797),
+        E = n(77291),
+        S = n(19267),
+        N = n(8527),
+        k = n(62490);
+      const G = a.Fragment;
+      function B(e) {
         const {
             reservationPackageID: t,
             event: n,
@@ -364,23 +371,27 @@
             strDeliveryOverride: i,
             bDeliveryOverrideOnlyIfOutOfStock: u,
           } = e,
-          d = (0, D.DR)(t),
-          m = (0, D.DR)(s),
+          d = (0, S.DR)(t),
+          m = (0, S.DR)(s),
           _ = (0, a.useMemo)(
             () => [
               {
                 unique_id: "reservation_bbcode_" + t,
                 reservation_package: t,
                 deposit_package: o,
-                localized_reservation_desc: (0, E.$Y)([], 31, null),
-                localized_out_of_stock_override: (0, E.$Y)(
-                  [l || null],
-                  31,
+                localized_reservation_desc: (0, k.$Y)(
+                  [],
+                  h.gS.k_Lang_MAX,
                   null,
                 ),
-                localized_delivery_override_desc: (0, E.$Y)(
+                localized_out_of_stock_override: (0, k.$Y)(
+                  [l || null],
+                  h.gS.k_Lang_MAX,
+                  null,
+                ),
+                localized_delivery_override_desc: (0, k.$Y)(
                   [i || null],
-                  31,
+                  h.gS.k_Lang_MAX,
                   null,
                 ),
                 override_delivery_only_out_of_stock: Boolean(u),
@@ -390,37 +401,37 @@
             [t, o, l, i, u, s],
           );
         if (!d || (s && !m))
-          return a.createElement(h.t, {
+          return a.createElement(b.t, {
             string: (0, c.we)("#Loading"),
             size: "small",
             position: "center",
           });
-        const g = !b.iA.logged_in || !d.account_restricted_from_purchasing;
+        const g = !N.iA.logged_in || !d.account_restricted_from_purchasing;
         return a.createElement(
-          y.tH,
+          D.tH,
           null,
           a.createElement(
             a.Suspense,
             { fallback: null },
-            a.createElement(N, { bIsPreview: r, rgReservationDef: _ }),
+            a.createElement(G, { bIsPreview: r, rgReservationDef: _ }),
           ),
           Boolean(d.allow_purchase_in_country) &&
             a.createElement(
               "div",
               { className: _[0].unique_id },
-              a.createElement(C.bk, {
+              a.createElement(E.bk, {
                 reservationDef: _[0],
                 hardwareDetail: d,
                 bPSULessModel: !1,
               }),
               g &&
-                a.createElement(C.pc, {
+                a.createElement(E.pc, {
                   event: n,
                   reservationDef: _[0],
                   hardwareDetail: d,
                 }),
               Boolean(m?.allow_purchase_in_country) &&
-                a.createElement(C.bk, {
+                a.createElement(E.bk, {
                   reservationDef: _[0],
                   hardwareDetail: m,
                   bPSULessModel: !0,
@@ -428,71 +439,71 @@
             ),
         );
       }
-      var G = n(28188),
-        B = n(60014),
-        k = n(55963),
-        x = n(83284),
-        T = n.n(x),
-        L = n(52038),
-        O = n(26101),
-        M = n(20446),
-        A = n(9202),
-        j = n.n(A);
-      function R(e) {
+      var x = n(28188),
+        L = n(60014),
+        T = n(55963),
+        O = n(83284),
+        M = n.n(O),
+        A = n(52038),
+        F = n(26101),
+        j = n(20446),
+        R = n(9202),
+        P = n.n(R);
+      function W(e) {
         const { appid: t, color: n, bgcolor: o } = e,
-          r = (0, B.n9)(),
-          s = (0, k.L3)(r);
+          r = (0, L.n9)(),
+          s = (0, T.L3)(r);
         return a.createElement(
           "div",
-          { className: j().WishlistHoverCtn },
-          a.createElement(O.EP, {
+          { className: P().WishlistHoverCtn },
+          a.createElement(F.EP, {
             snr: s,
             appID: t,
-            classOverride: (0, L.A)(
-              T().WishlistButtonNotTop,
-              j().BBCodeWishlistButton,
+            classOverride: (0, A.A)(
+              M().WishlistButtonNotTop,
+              P().BBCodeWishlistButton,
               "WishlistButton",
             ),
             styleOverride: { color: n, backgroundColor: o },
           }),
         );
       }
-      function W(e) {
+      function H(e) {
         const t = Number(e.args.appid);
         if (!t) return null;
-        const n = (0, M.O)(e.args.color, "black"),
-          o = (0, M.O)(e.args.bgcolor, "white");
-        return a.createElement(R, { appid: t, color: n, bgcolor: o });
+        const n = (0, j.O)(e.args.color, "black"),
+          o = (0, j.O)(e.args.bgcolor, "white");
+        return a.createElement(W, { appid: t, color: n, bgcolor: o });
       }
-      var F = n(10026),
-        H = n.n(F);
-      function P(e) {
+      var $ = n(10026),
+        q = n.n($);
+      function U(e) {
         const { appid: t, color: n, bgcolor: o } = e;
-        (0, B.n9)();
-        return a.createElement(O.gi, {
+        (0, L.n9)();
+        return a.createElement(F.gi, {
           appID: t,
-          classOverride: (0, L.A)(
-            T().FollowGameButtonNotTop,
-            H().BBCodeFollowButton,
+          classOverride: (0, A.A)(
+            M().FollowGameButtonNotTop,
+            q().BBCodeFollowButton,
           ),
           styleOverride: { color: n, backgroundColor: o },
         });
       }
-      function $(e) {
+      function z(e) {
         const t = Number(e.args.appid);
         if (!t) return null;
-        const n = (0, M.O)(e.args.color, "black"),
-          o = (0, M.O)(e.args.bgcolor, "white");
-        return a.createElement(P, { appid: t, color: n, bgcolor: o });
+        const n = (0, j.O)(e.args.color, "black"),
+          o = (0, j.O)(e.args.bgcolor, "white");
+        return a.createElement(U, { appid: t, color: n, bgcolor: o });
       }
-      var q = n(94057),
-        U = n(29868);
-      function z(e) {
+      var V = n(94057),
+        X = n(29868);
+      function K(e) {
         return e < 10 ? "0" + e : e;
       }
-      function V(e) {
+      function Q(e) {
         const { giveawayid: t } = e,
-          n = (0, q.w)(t),
+          n = (0, V.w)(t),
           {
             bLoadingGiveawayInfo: o,
             winner_count: r,
@@ -503,11 +514,11 @@
           ? null
           : a.createElement(
               "div",
-              { className: U.countdownCtn },
+              { className: X.countdownCtn },
               Boolean(s) &&
                 a.createElement(
                   "div",
-                  { className: U.Closed },
+                  { className: X.Closed },
                   r > 0
                     ? (0, c.we)("#Giveaway_Closed", r.toLocaleString())
                     : (0, c.we)("#Giveaway_Closed_NoWinnerInfo"),
@@ -519,8 +530,8 @@
                   Boolean(l <= 0)
                     ? a.createElement(
                         "div",
-                        { className: U.Throbber },
-                        a.createElement(h.t, { size: "small" }),
+                        { className: X.Throbber },
+                        a.createElement(b.t, { size: "small" }),
                         a.createElement(
                           "div",
                           null,
@@ -529,15 +540,15 @@
                       )
                     : a.createElement(
                         "div",
-                        { className: U.CountDownCtn },
+                        { className: X.CountDownCtn },
                         a.createElement(
                           "div",
-                          { className: U.CountDownTime },
-                          z(Math.floor(l / 60)) + ":" + z(l % 60),
+                          { className: X.CountDownTime },
+                          K(Math.floor(l / 60)) + ":" + K(l % 60),
                         ),
                         a.createElement(
                           "div",
-                          { className: U.CountDownText },
+                          { className: X.CountDownText },
                           (0, c.we)("#Giveaway_CountDown2"),
                           " ",
                           (0, c.we)("#Giveaway_KeepWatching"),
@@ -546,37 +557,37 @@
                   Boolean(r > 0) &&
                     a.createElement(
                       "div",
-                      { className: U.WinnerInfo },
+                      { className: X.WinnerInfo },
                       a.createElement(
                         "div",
-                        { className: U.WinnerCount },
+                        { className: X.WinnerCount },
                         r.toLocaleString(),
                       ),
                       a.createElement(
                         "div",
-                        { className: U.WinnerText },
+                        { className: X.WinnerText },
                         (0, c.we)("#Giveaway_Congratulation"),
                       ),
                     ),
                 ),
             );
       }
-      var Q = n(10962),
-        K = n(39733),
-        X = n(53835),
-        Y = n(12155),
-        Z = n(82477),
-        J = n(92757),
-        ee = n(39256),
-        te = n(99487),
-        ne = n(7193),
-        oe = n(39199),
-        ae = n(96971),
-        re = n(50832),
-        se = n(40353);
-      function le(e) {
+      var Y = n(10962),
+        Z = n(39733),
+        J = n(53835),
+        ee = n(12155),
+        te = n(82477),
+        ne = n(92757),
+        oe = n(39256),
+        ae = n(99487),
+        re = n(7193),
+        se = n(39199),
+        le = n(96971),
+        ie = n(50832),
+        ce = n(40353);
+      function ue(e) {
         const { eventModel: t, nEventBadgeID: n } = e,
-          o = (0, K.fy)(n);
+          o = (0, Z.fy)(n);
         if (o?.level > 0) {
           let e = o.level;
           if (t?.BHasSaleEnabled()) {
@@ -585,7 +596,7 @@
               const r = o[0].badge_progress;
               if (r?.event_badgeid == n && r?.granted_by_discovery_queue) {
                 const n = r.levels[r.levels.length - 1].level;
-                return a.createElement(ie, {
+                return a.createElement(de, {
                   eventModel: t,
                   nBadgeLevel: e,
                   nMaxLevel: n,
@@ -601,7 +612,7 @@
         }
         return null;
       }
-      function ie(e) {
+      function de(e) {
         const { eventModel: t, nBadgeLevel: n, nMaxLevel: o } = e,
           r = a.useMemo(() => {
             const e = t
@@ -610,10 +621,10 @@
             return e?.length > 0 ? e[0] : null;
           }, [t]),
           { storePageFilter: s, eStoreDiscoveryQueueType: l } = a.useMemo(
-            () => (0, ne.lx)(t, r),
+            () => (0, re.lx)(t, r),
             [t, r],
           ),
-          i = (0, oe.Uf)(l, s),
+          i = (0, se.Uf)(l, s),
           c = Math.min(n + i, o);
         return a.createElement(
           "span",
@@ -621,21 +632,21 @@
           c.toLocaleString(),
         );
       }
-      function ce(e) {
+      function me(e) {
         const { event: t } = e.context,
-          n = Number.parseInt((0, d.j$)(e.args, "eventid"));
+          n = Number.parseInt((0, m.j$)(e.args, "eventid"));
         return u.iA.logged_in && n
-          ? a.createElement(le, { nEventBadgeID: n, eventModel: t })
+          ? a.createElement(ue, { nEventBadgeID: n, eventModel: t })
           : null;
       }
-      function ue(e) {
+      function _e(e) {
         const { nDoorIndex: t, children: n } = e,
-          o = (0, I.OM)(t),
-          { fnOpenDoor: r } = (0, I.OC)(),
+          o = (0, f.OM)(t),
+          { fnOpenDoor: r } = (0, f.OC)(),
           [s, l] = a.useState(!1),
           [i, d] = a.useState(!1);
         return a.createElement(
-          X.$n,
+          J.$n,
           {
             disabled: o,
             onClick: (e) => {
@@ -649,7 +660,7 @@
                       .catch(() => {
                         d(!0), l(!1);
                       }))
-                  : (0, Z.vg)());
+                  : (0, te.vg)());
             },
           },
           Boolean(i)
@@ -657,21 +668,21 @@
             : a.createElement(
                 a.Fragment,
                 null,
-                Boolean(s) && a.createElement(h.t, { size: "small" }),
-                Boolean(o) && a.createElement(Y.Jlk, null),
+                Boolean(s) && a.createElement(b.t, { size: "small" }),
+                Boolean(o) && a.createElement(ee.Jlk, null),
                 n,
               ),
         );
       }
-      function de(e) {
-        const t = Number.parseInt((0, d.j$)(e.args)) || 0;
+      function ge(e) {
+        const t = Number.parseInt((0, m.j$)(e.args)) || 0;
         return t >= 0 && t < 32
-          ? a.createElement(ue, { nDoorIndex: t }, e.children)
+          ? a.createElement(_e, { nDoorIndex: t }, e.children)
           : null;
       }
-      const me = (0, J.y)(re.H);
-      function _e(e) {
-        const t = Number.parseInt((0, d.j$)(e.args)),
+      const ve = (0, ne.y)(ie.H);
+      function we(e) {
+        const t = Number.parseInt((0, m.j$)(e.args)),
           { event: n, showErrorInfo: o } = e.context;
         if (t) {
           const r = n?.jsondata?.sale_sections?.findIndex(
@@ -680,157 +691,157 @@
           if (r >= 0) {
             const t = n.GetDayIndexFromEventStart();
             return a.createElement(
-              ae.Cs,
-              { location: o ? 2 : 0 },
-              a.createElement(me, {
+              le.Cs,
+              { location: o ? le.If.Previewing : le.If.Display },
+              a.createElement(ve, {
                 event: n,
                 section: n.jsondata.sale_sections[r],
-                activeTab: new te.y(null, t),
+                activeTab: new ae.y(null, t),
                 language: e.language,
                 nSaleDayIndex: t,
                 promotionName: "",
                 appVisibilityTracker: null,
                 ePreviewMode: o
-                  ? se.S.EPreviewMode_Enabled
-                  : se.S.EPreviewMode_Disabled,
+                  ? ce.S.EPreviewMode_Enabled
+                  : ce.S.EPreviewMode_Disabled,
               }),
             );
           }
           if (o)
             return a.createElement(
               "div",
-              { className: ee.ErrorDiv },
+              { className: oe.ErrorDiv },
               "Error could not find sale section ",
               t,
             );
         }
         return null;
       }
-      var ge = n(30894),
-        ve = n(18657),
-        we = n.n(ve);
-      function pe(e) {
+      var pe = n(30894),
+        Ie = n(18657),
+        ye = n.n(Ie);
+      function fe(e) {
         const { clanAccountID: t, color: n, bgcolor: o } = e;
-        (0, ge.L2)();
+        (0, pe.L2)();
         const [r, s] = a.useState(!1);
         return a.createElement(
           "div",
           {
-            className: (0, L.A)(we().BBCodeFollowButton, r && we().isHovered),
+            className: (0, A.A)(ye().BBCodeFollowButton, r && ye().isHovered),
             onMouseEnter: () => s(!0),
             onMouseLeave: () => s(!1),
           },
-          a.createElement(O.Q3, {
+          a.createElement(F.Q3, {
             nCreatorAccountID: t,
-            classOverride: T().FollowGameButtonNotTop,
+            classOverride: M().FollowGameButtonNotTop,
             styleOverride: { color: n, backgroundColor: o },
             followType: "group",
           }),
         );
       }
-      function Ie(e) {
+      function Ce(e) {
         const { event: t } = e.context,
           n = Number(e.args.groupid) || t.clanSteamID.GetAccountID();
         if (!n) return null;
-        const o = (0, M.O)(e.args.color, "black"),
-          r = (0, M.O)(e.args.bgcolor, "white");
-        return a.createElement(pe, { clanAccountID: n, color: o, bgcolor: r });
+        const o = (0, j.O)(e.args.color, "black"),
+          r = (0, j.O)(e.args.bgcolor, "white");
+        return a.createElement(fe, { clanAccountID: n, color: o, bgcolor: r });
       }
-      let fe = null;
-      function ye(e) {
+      let he = null;
+      function De(e) {
         const { event: t } = e.context,
-          n = Number.parseInt((0, d.j$)(e.args, "appid")),
-          o = Number.parseInt((0, d.j$)(e.args, "itemdefid")),
-          r = Number.parseInt((0, d.j$)(e.args, "maxquantity")),
-          s = (0, d.j$)(e.args, "calltoaction");
-        return (0, p.gS)(n, o)
-          ? a.createElement(G.f, {
+          n = Number.parseInt((0, m.j$)(e.args, "appid")),
+          o = Number.parseInt((0, m.j$)(e.args, "itemdefid")),
+          r = Number.parseInt((0, m.j$)(e.args, "maxquantity")),
+          s = (0, m.j$)(e.args, "calltoaction");
+        return (0, y.gS)(n, o)
+          ? a.createElement(x.f, {
               language: e.language,
               clanAccountID: t.clanSteamID.GetAccountID(),
               itemDefSetting: { nAppID: n, nItemDefID: o, max_quantity: r },
               strCallToAction: s,
             })
-          : a.createElement(h.t, {
+          : a.createElement(b.t, {
               size: "small",
               position: "center",
               string: (0, c.we)("#Loading"),
             });
       }
-      function he(e) {
+      function be(e) {
         const t = (function () {
-          const [e, t] = a.useState(v.Get().GetCounts());
+          const [e, t] = a.useState(p.Get().GetCounts());
           return (
             a.useEffect(() => {
-              e || v.Get().LoadCounts().then(t);
+              e || p.Get().LoadCounts().then(t);
             }, []),
             e
           );
         })();
-        if (!t) return a.createElement(h.t, { size: "small" });
-        const n = Number.parseInt((0, d.j$)(e.args));
+        if (!t) return a.createElement(b.t, { size: "small" });
+        const n = Number.parseInt((0, m.j$)(e.args));
         let o = t.verified;
         switch (n) {
-          case 2:
+          case d.Fl.k_ESteamDeckCompatibilityCategory_Playable:
             o = t.playable;
             break;
-          case 1:
+          case d.Fl.k_ESteamDeckCompatibilityCategory_Unsupported:
             o = t.unsupported;
         }
         return a.createElement("span", null, Number(o).toLocaleString());
       }
-      function Ce(e) {
-        const t = (0, w.j)("library");
-        if (!t) return a.createElement(h.t, { size: "small" });
-        const n = Number.parseInt((0, d.j$)(e.args));
+      function Ee(e) {
+        const t = (0, I.j)("library");
+        if (!t) return a.createElement(b.t, { size: "small" });
+        const n = Number.parseInt((0, m.j$)(e.args));
         let o = t.verifiedList?.length || 0;
         switch (n) {
-          case 2:
+          case d.Fl.k_ESteamDeckCompatibilityCategory_Playable:
             o = t.playableList?.length || 0;
             break;
-          case 1:
+          case d.Fl.k_ESteamDeckCompatibilityCategory_Unsupported:
             o = t.unsupportedList?.length || 0;
             break;
-          case 0:
+          case d.Fl.k_ESteamDeckCompatibilityCategory_Unknown:
             o = t.unknownList?.length || 0;
         }
         return a.createElement("span", null, Number(o).toLocaleString());
       }
-      function De(e) {
-        const t = Number.parseInt((0, d.j$)(e.args)),
+      function Se(e) {
+        const t = Number.parseInt((0, m.j$)(e.args)),
           n =
             "hide" in e.args &&
-            Boolean(Number.parseInt((0, d.j$)(e.args, "hide")));
+            Boolean(Number.parseInt((0, m.j$)(e.args, "hide")));
         return t >= 0
-          ? a.createElement(be, { nDoorIndex: t, bHide: n }, e.children)
+          ? a.createElement(Ne, { nDoorIndex: t, bHide: n }, e.children)
           : null;
       }
-      function be(e) {
+      function Ne(e) {
         const { nDoorIndex: t, bHide: n, children: o } = e,
-          r = (0, I.OM)(t);
+          r = (0, f.OM)(t);
         return null == r
           ? null
           : (r && !n) || (!r && n)
             ? a.createElement(a.Fragment, null, e.children)
             : null;
       }
-      function Ee(e) {
+      function ke(e) {
         if (u.iA.logged_in) {
-          const t = Number.parseInt((0, d.j$)(e.args)),
-            n = Number.parseInt((0, d.j$)(e.args, "mod"));
+          const t = Number.parseInt((0, m.j$)(e.args)),
+            n = Number.parseInt((0, m.j$)(e.args, "mod"));
           if (n > 0 && t < n && u.iA.accountid % n == t) return e.children;
         }
         return null;
       }
-      function Ne(e) {
-        const t = (0, d.j$)(e.args);
+      function Ge(e) {
+        const t = (0, m.j$)(e.args);
         return t?.trim().length > 0
           ? a.createElement("div", { className: t.trim() }, e.children)
           : a.createElement(a.Fragment, null, e.children);
       }
-      function Se(e) {
+      function Be(e) {
         return a.createElement(
           "span",
-          { className: f.LocalizeBlock },
+          { className: C.LocalizeBlock },
           (0, c.oW)(
             e.children,
             a.createElement("b", null),
@@ -840,22 +851,22 @@
           ),
         );
       }
-      function Ge(e) {
-        let t = (0, d.j$)(e.args);
+      function xe(e) {
+        let t = (0, m.j$)(e.args);
         return t
-          ? a.createElement(V, { giveawayid: t })
+          ? a.createElement(Q, { giveawayid: t })
           : a.createElement(a.Fragment, null);
       }
-      function Be(e) {
+      function Le(e) {
         const { event: t, showErrorInfo: n } = e.context,
-          o = Number.parseInt((0, d.j$)(e.args));
+          o = Number.parseInt((0, m.j$)(e.args));
         if (o) {
-          const n = Number.parseInt((0, d.j$)(e.args, "depositpackageid")),
-            r = Number.parseInt((0, d.j$)(e.args, "psulesspackageid")),
-            s = (0, d.j$)(e.args, "out_of_stock_override"),
-            l = (0, d.j$)(e.args, "delivery_override"),
-            i = (0, d.j$)(e.args, "delivery_override_out_of_stock");
-          return a.createElement(S, {
+          const n = Number.parseInt((0, m.j$)(e.args, "depositpackageid")),
+            r = Number.parseInt((0, m.j$)(e.args, "psulesspackageid")),
+            s = (0, m.j$)(e.args, "out_of_stock_override"),
+            l = (0, m.j$)(e.args, "delivery_override"),
+            i = (0, m.j$)(e.args, "delivery_override_out_of_stock");
+          return a.createElement(B, {
             reservationPackageID: o,
             event: t,
             depositPackageID: n,
@@ -867,8 +878,8 @@
         }
         return a.createElement(a.Fragment, null);
       }
-      var ke = n(95377);
-      function xe(e) {
+      var Te = n(95377);
+      function Oe(e) {
         const { bSalePage: t } = e,
           [n, d] = a.useState(l.KN.IsInitialized());
         return (
@@ -876,48 +887,48 @@
             s.Vw.Init(new r.D(u.TS.WEBAPI_BASE_URL)),
               i.O3.Init(),
               t &&
-                ke.us.AddDictionary(
-                  (null == fe &&
-                    (fe = new Map([
+                Te.us.AddDictionary(
+                  (null == he &&
+                    (he = new Map([
                       [
                         "itemdef",
                         {
-                          Constructor: ye,
+                          Constructor: De,
                           autocloses: !1,
                           skipInternalNewline: !0,
                           allowWrapTextForCopying: !0,
                         },
                       ],
-                      ["wishlist", { Constructor: W, autocloses: !1 }],
-                      ["followgame", { Constructor: $, autocloses: !1 }],
-                      ["followgroup", { Constructor: Ie, autocloses: !1 }],
-                      ["deckcompatcount", { Constructor: he, autocloses: !1 }],
+                      ["wishlist", { Constructor: H, autocloses: !1 }],
+                      ["followgame", { Constructor: z, autocloses: !1 }],
+                      ["followgroup", { Constructor: Ce, autocloses: !1 }],
+                      ["deckcompatcount", { Constructor: be, autocloses: !1 }],
                       [
                         "deckcompatuserlibrarycount",
-                        { Constructor: Ce, autocloses: !1 },
+                        { Constructor: Ee, autocloses: !1 },
                       ],
-                      ["giveawayinfo", { Constructor: Ge, autocloses: !1 }],
-                      ["price", { Constructor: Q.zD, autocloses: !1 }],
-                      ["pricesavings", { Constructor: Q.y7, autocloses: !1 }],
+                      ["giveawayinfo", { Constructor: xe, autocloses: !1 }],
+                      ["price", { Constructor: Y.zD, autocloses: !1 }],
+                      ["pricesavings", { Constructor: Y.y7, autocloses: !1 }],
                       [
                         "eventdoorvisibility",
-                        { Constructor: De, autocloses: !1 },
+                        { Constructor: Se, autocloses: !1 },
                       ],
-                      ["chooseaccount", { Constructor: Ee, autocloses: !1 }],
+                      ["chooseaccount", { Constructor: ke, autocloses: !1 }],
                       [
                         "badgecurrentlevel",
-                        { Constructor: ce, autocloses: !1 },
+                        { Constructor: me, autocloses: !1 },
                       ],
-                      ["optindoorquest", { Constructor: de, autocloses: !1 }],
-                      ["classname", { Constructor: Ne, autocloses: !1 }],
-                      ["localize", { Constructor: Se, autocloses: !1 }],
-                      ["salesection", { Constructor: _e, autocloses: !1 }],
+                      ["optindoorquest", { Constructor: ge, autocloses: !1 }],
+                      ["classname", { Constructor: Ge, autocloses: !1 }],
+                      ["localize", { Constructor: Be, autocloses: !1 }],
+                      ["salesection", { Constructor: we, autocloses: !1 }],
                       [
                         "reservationbutton",
-                        { Constructor: Be, autocloses: !1 },
+                        { Constructor: Le, autocloses: !1 },
                       ],
                     ])),
-                  fe),
+                  he),
                 ),
               l.KN.InitGlobal().then(() => d(!0));
           }, [t]),

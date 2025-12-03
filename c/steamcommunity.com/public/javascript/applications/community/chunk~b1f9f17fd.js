@@ -795,6 +795,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         BHasJSON(_, _, _) {
@@ -822,10 +823,9 @@
           try {
             const _ = await _().get(_, {});
             if (
-              1 ===
               (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
                 ? void 0
-                : _.success)
+                : _.success) === _._.k_EResultOK
             )
               return (
                 this.m_mapJSON.set(_, JSON.parse(_.data.jsondata)),
@@ -886,6 +886,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         GetAllRecords() {
@@ -925,10 +926,9 @@
             if (
               ((this.m_bLoadComplete = !0),
               200 == (null == _ ? void 0 : _.status) &&
-                1 ==
-                  (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                    ? void 0
-                    : _.success) &&
+                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                  ? void 0
+                  : _.success) == _._.k_EResultOK &&
                 (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
                   ? void 0
                   : _.data))
@@ -1127,6 +1127,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1474,7 +1475,7 @@
         const _ =
             _.GetEventModel().BIsOGGEvent() &&
             _.GetEventModel().BHasSaleEnabled(),
-          _ = 36 == _.GetEventModel().type,
+          _ = _.GetEventModel().type == _._.k_ECreatorHome,
           _ = _.BHasTag("vo_marketing_message"),
           _ = !_ && !_ && !_;
         let _;
@@ -1570,6 +1571,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1849,7 +1851,7 @@
             !_.strErrorMsg &&
               (0, _._)(`#EventEditor_Error_${_.errorCode}`) &&
               (_.strErrorMsg = (0, _._)(`#EventEditor_Error_${_.errorCode}`)),
-              27 == _.errorCode && (_ = "overwrite"),
+              _.errorCode == _._.k_EResultExpired && (_ = "overwrite"),
               _(_),
               _(_);
           }, []);
@@ -1874,7 +1876,7 @@
                     _(_)
                       ? _(_ || _.gid)
                           .then((_) => {
-                            1 == _ ? _("success") : _(_);
+                            _ == _._.k_EResultOK ? _("success") : _(_);
                           })
                           .catch(_)
                       : _("success");
@@ -2050,7 +2052,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2125,7 +2130,7 @@
               name: "#EventEditor_Category_DLC_Halloween",
               description: "#EventEditor_Category_DLC_Halloween_Desc",
               icon: "promo_02",
-              type: 15,
+              type: _._.k_EDLCReleaseEvent,
             }),
             _.createElement(_._, {
               ..._,
@@ -2187,7 +2192,7 @@
                   description: "#EventCategory_SteamAwardsNomination_Desc",
                   icon: "trophy_2025",
                   onCategoryChosen: _.fnOnCategoryChosen,
-                  type: 28,
+                  type: _._.k_ENewsEvent,
                   tags: [
                     "steam_award_nomination_request",
                     "mod_hide_library_overview",
@@ -2219,14 +2224,21 @@
                 var _;
                 return (
                   !(
-                    1 == _.flag &&
+                    _.flag == _._.k_EVoteDefinitionFlag_OnlyVR &&
                     !(null === (_ = _.vr_support) || void 0 === _
                       ? void 0
                       : _.vrhmd) &&
                     !_.vr_support.vrhmd_only
                   ) &&
-                  (2 != _.flag || 1 != _.steam_deck_compat_category) &&
-                    !(3 == _.flag && _ && _ > _.release_date_max) && _ &&
+                  (_.flag != _._.k_EVoteDefinitionFlag_SteamDeck ||
+                    _.steam_deck_compat_category !=
+                      _._.k_ESteamDeckCompatibilityCategory_Unsupported) &&
+                    !(
+                      _.flag == _._.k_EVoteDefinitionFlag_LaborOfLove &&
+                      _ &&
+                      _ > _.release_date_max
+                    ) &&
+                      _ &&
                   _ > _.release_date_min
                 );
               })
@@ -2430,7 +2442,7 @@
                     icon: "trophy_2025",
                     onCategoryChosen: _.fnOnCategoryChosen,
                     steam_award_category_voteids: _,
-                    type: 28,
+                    type: _._.k_ENewsEvent,
                     tags: [
                       "steam_award_vote_request",
                       "mod_hide_library_overview",
@@ -2661,6 +2673,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -2689,7 +2702,7 @@
           __webpack_require__.push({
             bCompleted: !!_.GetName(_),
           }),
-          36 != _.GetEventType() &&
+          _.GetEventType() != _._.k_ECreatorHome &&
             __webpack_require__.push({
               bCompleted: !!_.GetDescription(_),
             }),
@@ -2698,7 +2711,7 @@
       }
       function _() {
         const _ = _._.GetEditModel();
-        if (12 === _.GetEventType()) return null;
+        if (_.GetEventType() === _._.k_ESmallUpdateEvent) return null;
         if (_.BHasTag("curator")) return null;
         const _ = _._.Get().GetCurEditLanguage(),
           _ = [];
@@ -2808,6 +2821,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3069,7 +3083,15 @@
               ),
           );
         }),
-        _ = [12, 20, 21, 31, 34, 16, 15];
+        _ = [
+          _._.k_ESmallUpdateEvent,
+          _._.k_EGameSalesEvent,
+          _._.k_EGameItemSalesEvent,
+          _._.k_EFreeTrial,
+          _._.k_ECrosspostEvent,
+          _._.k_EFutureReleaseEvent,
+          _._.k_EDLCReleaseEvent,
+        ];
       function _(_) {
         var _;
         const _ = new Array(),
@@ -3086,7 +3108,7 @@
                 (0, _._)("#EventCategory_Visibility_GeneralWithException", _),
               ),
             ),
-              12 == _.type
+              _.type == _._.k_ESmallUpdateEvent
                 ? __webpack_require__.push(
                     _.createElement(
                       "div",
@@ -3097,7 +3119,7 @@
                       (0, _._)("#EventCategory_Visibility_SmallEventException"),
                     ),
                   )
-                : 34 == _.type
+                : _.type == _._.k_ECrosspostEvent
                   ? __webpack_require__.push(
                       _.createElement(
                         "div",
@@ -3110,7 +3132,7 @@
                         ),
                       ),
                     )
-                  : 16 == _.type
+                  : _.type == _._.k_EFutureReleaseEvent
                     ? __webpack_require__.push(
                         _.createElement(
                           "div",
@@ -3123,7 +3145,8 @@
                           ),
                         ),
                       )
-                    : 20 == _.type || 31 == _.type
+                    : _.type == _._.k_EGameSalesEvent ||
+                        _.type == _._.k_EFreeTrial
                       ? __webpack_require__.push(
                           _.createElement(
                             "div",
@@ -3136,7 +3159,7 @@
                             ),
                           ),
                         )
-                      : 21 == _.type
+                      : _.type == _._.k_EGameItemSalesEvent
                         ? __webpack_require__.push(
                             _.createElement(
                               "div",
@@ -3427,6 +3450,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3819,7 +3843,7 @@
               {
                 className: (0, _._)(_().EventEditorTextTitle, _().FlexGrow),
               },
-              28 == __webpack_require__
+              __webpack_require__ == _._.k_ENewsEvent
                 ? (0, _._)("#EventEditor_StartNewsTitle")
                 : (0, _._)("#EventEditor_StartEvemtTitle"),
             ),
@@ -3897,7 +3921,7 @@
                   _.createElement(
                     "span",
                     null,
-                    28 == __webpack_require__
+                    __webpack_require__ == _._.k_ENewsEvent
                       ? (0, _._)("#EventEditor_StartNews_Now")
                       : (0, _._)("#EventEditor_StartEvent_Now"),
                   ),
@@ -3924,7 +3948,7 @@
                   _.createElement(
                     "span",
                     null,
-                    28 == __webpack_require__
+                    __webpack_require__ == _._.k_ENewsEvent
                       ? (0, _._)("#EventEditor_StartNews_Specified")
                       : (0, _._)("#EventEditor_StartEvent_Specified"),
                   ),
@@ -4172,6 +4196,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       async function _(_, _, _, _, _) {
         if (_._.BHasEditModel() && _._.GetEditModel().GetAnnouncementGID() == _)
@@ -4338,7 +4363,7 @@
             otherEventRow: _.createElement(_._, {
               clanAccountID: _.clanSteamID.GetAccountID(),
               gidAnnouncement: _.GetAnnouncementGID(),
-              trackingLocation: 6,
+              trackingLocation: _._.k_EPartnerEventDisplayLocation_CommunityHub,
               partnerEventStore: _._,
               bViewAllShowInfiniteScroll: !_.BIsOGGEvent(),
             }),
@@ -4604,9 +4629,9 @@
           if ("sale_item_browser" === _.section_type) return !0;
           if ("tabs" === _.section_type) return !0;
           if ("events" === _.section_type) return !0;
-          if ((0, _._)(_.section_type) && _.smart_section && _.smart_section)
+          if ((0, _._)(_) && (0, _._)(_))
             return (
-              _.smart_section_type === _.smart_section_type &&
+              (0, _._)(_) === (0, _._)(_) &&
               (!_.smart_section_tag ||
                 !_.smart_section_tag ||
                 _.smart_section_tag === _.smart_section_tag) &&
@@ -4757,12 +4782,13 @@
           _ = _.GetCurEditLanguage(),
           _ = _.GetFallbackLanguageIfNeeded(),
           _ = _.GetEventModel().bOldAnnouncement,
-          _ = 36 == _;
+          _ = _ == _._.k_ECreatorHome;
         let _ = (0, _._)("#EventEditor_TitleAction");
         return (
-          28 == _
+          _ == _._.k_ENewsEvent
             ? (_ = (0, _._)("#EventEditor_TitleActionNews"))
-            : 36 == _ && (_ = (0, _._)("#EventEditor_TitleAction_Page")),
+            : _ == _._.k_ECreatorHome &&
+              (_ = (0, _._)("#EventEditor_TitleAction_Page")),
           _.createElement(
             "div",
             {
@@ -4909,7 +4935,7 @@
             string: (0, _._)("#Loading"),
           });
         if (_) {
-          _.GetEventType();
+          _.GetEventType(), _._.k_ECreatorHome;
           return _.createElement(
             _._,
             null,
@@ -4951,7 +4977,7 @@
           _.createElement(
             _._,
             {
-              location: 2,
+              location: _._.Previewing,
             },
             _.createElement(_._, {
               event: _,
@@ -4997,6 +5023,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5226,10 +5253,10 @@
               ),
             );
         }
-        if (36 != _.GetEventType()) {
+        if (_.GetEventType() != _._.k_ECreatorHome) {
           const _ = 128e3;
           let _ = 0;
-          for (let _ = 0; _ < 31; ++_) {
+          for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
             const _ = _.BIsLanguageValidForRealms(_),
               _ = (0, _._)("#Language_" + (0, _._)(_));
             if (_ && _.BHasLanguage(_) && !_.BHasLanguageRequired(_)) {
@@ -5319,7 +5346,7 @@
           const _ =
               _.BInRealmGlobal() &&
               !_.GetEventModel().BHasTag("contenthub") &&
-              !_(_, "capsule", 0),
+              !_(_, "capsule", _._.k_Lang_English),
             _ =
               _.BInRealmChina() &&
               !(function (_, _) {
@@ -5406,7 +5433,7 @@
               ),
             ),
           _.BHasSaleEnabled() &&
-            36 != _.GetEventType() &&
+            _.GetEventType() != _._.k_ECreatorHome &&
             (_.GetEventModel().BIsOGGEvent() ||
             _.GetEventModel().BHasSaleVanity()
               ? _.GetEventModel().BIsOGGEvent() &&
@@ -5475,10 +5502,12 @@
         }
         return _;
       }
-      function _(_, _, _, _ = -1) {
+      function _(_, _, _, _ = _._.k_Lang_None) {
         let _ = _.GetImageURL(_, _);
         return (
-          (_ && 0 != _.length) || -1 == _ || (_ = _.GetImageURL(_, _)),
+          (_ && 0 != _.length) ||
+            _ == _._.k_Lang_None ||
+            (_ = _.GetImageURL(_, _)),
           _ && _.length > 1
         );
       }
@@ -5486,9 +5515,9 @@
         let _ = new Array(),
           _ = _.BPublished(),
           _ = _.BHidden();
-        36 != _.GetEventType() &&
+        _.GetEventType() != _._.k_ECreatorHome &&
           _.BInRealmGlobal() &&
-          !_.BHasLanguageRequired(0) &&
+          !_.BHasLanguageRequired(_._.k_Lang_English) &&
           _.push(
             _.createElement(
               "li",
@@ -5504,7 +5533,7 @@
               ),
             ),
           ),
-          1 == _.GetEventType() &&
+          _.GetEventType() == _._.k_EOtherEvent &&
             _.push(
               _.createElement(
                 "li",
@@ -5524,7 +5553,7 @@
           _ = 0,
           _ = 0,
           _ = 0;
-        for (let _ = 0; _ < 31; ++_) {
+        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
           const _ = _._.IsELanguageValidInRealm(_, _._.k_ESteamRealmGlobal),
             _ = _._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina);
           if (!((_ && _.BInRealmGlobal()) || (_ && _.BInRealmChina())))
@@ -5537,7 +5566,7 @@
         }
         _._.CAN_UPLOAD_IMAGES &&
           0 == _ &&
-          36 != _.GetEventType() &&
+          _.GetEventType() != _._.k_ECreatorHome &&
           _.push(
             _.createElement(
               "li",
@@ -5677,7 +5706,7 @@
               params: _,
               withCredentials: !0,
             });
-          1 === (null == _ ? void 0 : _.data.success)
+          (null == _ ? void 0 : _.data.success) === _._.k_EResultOK
             ? _.data.duplicate_found &&
               (_.GetEventModel().jsondata.sale_defines_temporary_contenthub
                 ? _.GetEventModel().jsondata.sale_defines_specific_contenthub
@@ -5836,12 +5865,12 @@
           _ = new _._(_),
           _ = _._.IS_VALVE_GROUP,
           _ = __webpack_require__.GetSectionObj(_ ? 0 : 1);
-        for (let _ = 0; _ < 31; ++_) {
+        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
           let _ = 0;
           _.GetHeadline(_) && _.GetHeadline(_).trim().length > 0 && (_ += 1),
             _.GetBody(_) && _.GetBody(_).trim().length > 0 && (_ += 1),
             _ ||
-              (1 != _ && (2 == _ || 0 !== _)) ||
+              (1 != _ && (2 == _ || _ !== _._.k_Lang_English)) ||
               _.push(
                 _.createElement(
                   "li",
@@ -5867,7 +5896,9 @@
           __webpack_require__
             .GetSectionObjects()
             .filter(
-              (_) => _.BHasHeadlineInLanguage(0) || _.BHasBodyInLanguage(0),
+              (_) =>
+                _.BHasHeadlineInLanguage(_._.k_Lang_English) ||
+                _.BHasBodyInLanguage(_._.k_Lang_English),
             ).length > 0 ||
             _.push(
               _.createElement(
@@ -5904,7 +5935,7 @@
         } else
           __webpack_require__
             .GetSectionObj("chunkid")
-            .GetImageHashAndExtRaw(0) ||
+            .GetImageHashAndExtRaw(_._.k_Lang_English) ||
             _.push(
               _.createElement(
                 "li",
@@ -5980,13 +6011,13 @@
           _ = new _._(_),
           _ = _._.IS_VALVE_GROUP,
           _ = new Array();
-        for (let _ = 0; _ < 31; ++_) {
+        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
           let _ = 0,
             _ = __webpack_require__.GetSectionObj(_ ? 0 : 1);
           _.GetHeadline(_) && _.GetHeadline(_).trim().length > 0 && (_ += 1),
             _.GetBody(_) && _.GetBody(_).trim().length > 0 && (_ += 1),
             2 == _ &&
-              0 != _ &&
+              _ != _._.k_Lang_English &&
               void 0 ===
                 __webpack_require__
                   .GetSectionObj("chunkid")
@@ -6209,31 +6240,32 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
-          case 0:
+          case _._.k_EStoreAppType_Game:
             return "game";
-          case 6:
+          case _._.k_EStoreAppType_Software:
             return "software";
-          case 1:
+          case _._.k_EStoreAppType_Demo:
             return "demo";
-          case 4:
+          case _._.k_EStoreAppType_DLC:
             return "dlc";
-          case 7:
-          case 3:
+          case _._.k_EStoreAppType_Video:
+          case _._.k_EStoreAppType_Movie:
             return "video";
-          case 11:
+          case _._.k_EStoreAppType_Music:
             return "music";
-          case 12:
+          case _._.k_EStoreAppType_Beta:
             return "beta";
-          case 2:
+          case _._.k_EStoreAppType_Mod:
             return "mod";
         }
         return "invalid";
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -6270,6 +6302,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6478,10 +6511,9 @@
                 withCredentials: !0,
               });
             if (
-              1 ===
               (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
                 ? void 0
-                : _.success)
+                : _.success) === _._.k_EResultOK
             ) {
               if (
                 (_._.Get().SetHomeViewSetting(_.data.homeViewSetting),
@@ -6902,10 +6934,9 @@
               withCredentials: !0,
             });
             if (
-              1 ===
               (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
                 ? void 0
-                : _.success)
+                : _.success) === _._.k_EResultOK
             )
               return (
                 (_.discount_min = _.data.discount_min),
@@ -6950,6 +6981,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7021,8 +7053,8 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) &&
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._.k_EResultOK &&
               (null === (_ = _.data) || void 0 === _ ? void 0 : _.list)
             ) {
               switch (_) {
@@ -7140,6 +7172,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         GetDetail(_) {
@@ -7181,7 +7214,7 @@
             this.m_SteamInterface.GetServiceTransport(),
             _,
           );
-          return 1 == __webpack_require__.GetEResult()
+          return __webpack_require__.GetEResult() == _._.k_EResultOK
             ? (__webpack_require__
                 .Body()
                 .details()
@@ -7223,7 +7256,7 @@
             _,
           );
           if (
-            1 == _.GetEResult() &&
+            _.GetEResult() == _._.k_EResultOK &&
             1 == _.Body().reservation_status().length
           ) {
             let _ = _.Body().reservation_status()[0];
@@ -7548,6 +7581,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 7,
         _ = -1;
@@ -7685,10 +7719,9 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success)
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) == _._.k_EResultOK
             )
               return (
                 (this.m_userData[_].opened = _),
@@ -7767,10 +7800,9 @@
             });
             if (
               200 == _.status &&
-              1 ==
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success)
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) == _._.k_EResultOK
             ) {
               console.log("CDoorStore - closed " + _.data.count);
               for (let _ = 0; _ < _; ++_)
@@ -8366,9 +8398,8 @@
             if ("sale_item_browser" == _.section_type) return !0;
             if ((0, _._)(_.section_type))
               return (
-                !_.smart_section ||
-                ("wishlist" != _.smart_section_type &&
-                  "wishlist_onsale" != _.smart_section_type)
+                !(0, _._)(_) ||
+                ("wishlist" != (0, _._)(_) && "wishlist_onsale" != (0, _._)(_))
               );
           }
           return !1;
@@ -8522,7 +8553,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = new (class {
         async DeleteForumTopic(_, _, _, _, _) {
           let _ =
@@ -8539,7 +8571,7 @@
             withCredentials: !0,
             cancelToken: _.token,
           });
-          if (1 != _.data.success) throw _.data;
+          if (_.data.success != _._.k_EResultOK) throw _.data;
           return _.data;
         }
       })();
@@ -8743,8 +8775,14 @@
       var _,
         _,
         _,
+        _,
+        _,
+        _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8755,6 +8793,61 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_EPromoPlanAssociationType_Unknown = 0)] =
+          "k_EPromoPlanAssociationType_Unknown"),
+          (_[(_.k_EPromoPlanAssociationType_Spotlight = 1)] =
+            "k_EPromoPlanAssociationType_Spotlight"),
+          (_[(_.k_EPromoPlanAssociationType_MarketingMessage = 2)] =
+            "k_EPromoPlanAssociationType_MarketingMessage"),
+          (_[(_.k_EPromoPlanAssociationType_Takeover = 3)] =
+            "k_EPromoPlanAssociationType_Takeover"),
+          (_[(_.k_EPromoPlanAssociationType_Takeunder = 4)] =
+            "k_EPromoPlanAssociationType_Takeunder"),
+          (_[(_.k_EPromoPlanAssociationType_ContentHub_Takeover = 5)] =
+            "k_EPromoPlanAssociationType_ContentHub_Takeover"),
+          (_[(_.k_EPromoPlanAssociationType_DailyDeal = 6)] =
+            "k_EPromoPlanAssociationType_DailyDeal"),
+          (_[(_.k_EPromoPlanAssociationType_OptIn = 7)] =
+            "k_EPromoPlanAssociationType_OptIn"),
+          (_[(_.k_EPromoPlanAssociationType_Giveaway = 8)] =
+            "k_EPromoPlanAssociationType_Giveaway"),
+          (_[(_.k_EPromoPlanAssociationType_SteamChina_Takeover = 9)] =
+            "k_EPromoPlanAssociationType_SteamChina_Takeover"),
+          (_[(_.k_EPromoPlanAssociationType_DiscountEvent = 10)] =
+            "k_EPromoPlanAssociationType_DiscountEvent"),
+          (_[(_.k_EPromoPlanAssociationType_SaleEventGID = 11)] =
+            "k_EPromoPlanAssociationType_SaleEventGID"),
+          (_[
+            (_.k_EPromoPlanAssociationType_MarketingMessageMajorUpdateGID = 12)
+          ] = "k_EPromoPlanAssociationType_MarketingMessageMajorUpdateGID"),
+          (_[(_.k_EPromoPlanAssociationType_MAX = 13)] =
+            "k_EPromoPlanAssociationType_MAX");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EPromotionNotification_Unknown = 0)] =
+            "k_EPromotionNotification_Unknown"),
+            (_[(_.k_EPromotionNotification_AssetRequest = 1)] =
+              "k_EPromotionNotification_AssetRequest"),
+            (_[(_.k_EPromotionNotification_AssetRequest_Reminder = 2)] =
+              "k_EPromotionNotification_AssetRequest_Reminder"),
+            (_[(_.k_EPromotionNotification_AssetRequest_Submitted = 3)] =
+              "k_EPromotionNotification_AssetRequest_Submitted"),
+            (_[(_.k_EPromotionNotification_MAX = 4)] =
+              "k_EPromotionNotification_MAX");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EPromotionEventInvite_Invalid = 0)] =
+            "k_EPromotionEventInvite_Invalid"),
+            (_[(_.k_EPromotionEventInvite_DailyDeal = 1)] =
+              "k_EPromotionEventInvite_DailyDeal"),
+            (_[(_.k_EPromotionEventInvite_MidWeekDeal = 2)] =
+              "k_EPromotionEventInvite_MidWeekDeal"),
+            (_[(_.k_EPromotionEventInvite_WeekendDeal = 3)] =
+              "k_EPromotionEventInvite_WeekendDeal"),
+            (_[(_.k_EPromotionEventInvite_AssetAndActionRequest = 4)] =
+              "k_EPromotionEventInvite_AssetAndActionRequest");
+        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -14348,7 +14441,7 @@
               __webpack_require__,
               _,
             );
-            if (1 != _.GetEResult())
+            if (_.GetEResult() != _._.k_EResultOK)
               throw new Error(
                 `Error from PromotionPlanBySalePage: ${_.GetEResult()}`,
               );
@@ -14599,7 +14692,7 @@
                 (_.GetSaleSectionCount() > 0 &&
                   _.GetSaleSections().forEach((_) => {
                     (0, _._)(_.section_type) &&
-                      !_.smart_section &&
+                      !(0, _._)(_) &&
                       _.capsules.forEach((_) => {
                         void 0 !== _.visibility_index &&
                           (void 0 === _ || _ < _.visibility_index) &&
@@ -14652,7 +14745,7 @@
             _ = "store" == _,
             _ = _._.is_support && (0, _._)(_.clanSteamID, !0),
             _ = _ && !_,
-            _ = 36 == _.GetEventType(),
+            _ = _.GetEventType() == _._.k_ECreatorHome,
             _ = _ && (null == _ ? void 0 : _.GetLinkedEventGID()) == _.GID,
             _ =
               (_ == _._.k_EEventStateVisible ||
@@ -14980,7 +15073,10 @@
                           const _ = new FormData();
                           _.append("sessionid", _._.SESSIONID),
                             _.append("clan_accountid", "" + _._.CLANACCOUNTID),
-                            _.append("event_id", "15");
+                            _.append(
+                              "event_id",
+                              "" + _._.k_EVirtualItemRewardEvent_Summer2022,
+                            );
                           const _ = await _().post(
                             `${_._.STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards`,
                             _,
@@ -15224,7 +15320,10 @@
                         ? _.get(_).push(_.group_id)
                         : _.set(_, [_.group_id]);
                     }),
-                    _.set(_.group_id, _.localized_session_title[0]))
+                    _.set(
+                      _.group_id,
+                      _.localized_session_title[_._.k_Lang_English],
+                    ))
                   : (_ = !0);
               }),
               [_, _, _]
@@ -15318,7 +15417,7 @@
             [_, _] = (0, _._)(_);
           if (
             (_.useEffect(() => window.scrollTo(0, 0), [_, _]),
-            !_ && 36 == _.GetEventType())
+            !_ && _.GetEventType() == _._.k_ECreatorHome)
           )
             return _.createElement(_._, {
               eventModel: _,
@@ -15327,7 +15426,11 @@
             });
           const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
             _ = (0, _._)(_, _._.k_eStoreUsersNewsHub, "allowRelative");
-          if (!_.bLoaded || !_ || (_ && !_ && 2 !== _))
+          if (
+            !_.bLoaded ||
+            !_ ||
+            (_ && !_ && _ !== _._.k_EStoreItemCacheState_Unavailable)
+          )
             return _.createElement(
               "div",
               {
@@ -15744,7 +15847,7 @@
                     nOverrideEndTime: _,
                     nOverrideStartTime: _,
                   }),
-                  28 !== _ &&
+                  _ !== _._.k_ENewsEvent &&
                     _ < _ &&
                     _.createElement(
                       "div",
@@ -17138,7 +17241,7 @@
           [_, _] = (0, _.useState)(!1),
           _ = (0, _.useRef)(null);
         return _.createElement(
-          "div",
+          _._,
           {
             className: (0, _._)({
               [_().SubMenuOuterCtn]: !0,
@@ -17198,7 +17301,7 @@
                 (null === (_ = __webpack_require__.localized_sub_menu_name) ||
                 void 0 === _
                   ? void 0
-                  : _[0]) ||
+                  : _[_._.k_Lang_English]) ||
                 "unknown",
               (null ===
                 (_ =
@@ -17221,7 +17324,7 @@
                           ? void 0
                           : _.localized_media) || void 0 === _
                       ? void 0
-                      : _[0]) || void 0 === _
+                      : _[_._.k_Lang_English]) || void 0 === _
                   ? void 0
                   : _.image) ||
                 void 0,
@@ -17606,10 +17709,10 @@
           [_] = (0, _.useState)(() => {
             var _;
             return (function (_) {
-              const _ = _._([], 31, null);
+              const _ = _._([], _._.k_Lang_MAX, null);
               for (const _ in _) {
                 const _ = (0, _._)(_);
-                -1 != _ && (_[_] = _[_]);
+                _ != _._.k_Lang_None && (_[_] = _[_]);
               }
               return _;
             })(
@@ -18107,7 +18210,7 @@
         let _ = null;
         (null == _ ? void 0 : _.nUniqueIDNextSaleSection) &&
           (_ = (0, _._)(
-            2,
+            _._.Previewing,
             _.GetSaleSectionByID(
               null == _ ? void 0 : _.nUniqueIDNextSaleSection,
             ),
@@ -18119,7 +18222,7 @@
         if ((null == _ ? void 0 : _.length) > 1) {
           const _ = _[_.length - 1];
           _ = (0, _._)(
-            2,
+            _._.Previewing,
             _.GetSaleSectionByID(_),
             _,
             _,
@@ -18179,7 +18282,7 @@
                     key: "li_" + _,
                   },
                   (0, _._)(
-                    3,
+                    _._.TableOfContents,
                     _.GetSaleSectionByID(_),
                     _,
                     _,
@@ -18619,7 +18722,7 @@
               _.createElement(
                 _._,
                 {
-                  location: _ ? 2 : 0,
+                  location: _ ? _._.Previewing : _._.Display,
                 },
                 _.createElement(
                   _,
@@ -20042,7 +20145,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20057,22 +20162,22 @@
         return (_._.IN_CLIENT ? "library-" : (0, _._)() + "-") + _;
       }
       function _(_) {
+        const _ = (0, _._)(_);
         return Boolean(
           "discoveryqueue" == _.section_type ||
-            "dlc_for_you" === _.section_type ||
-            "claim_item" === _.section_type ||
+            "dlc_for_you" == _.section_type ||
+            "claim_item" == _.section_type ||
             ((0, _._)(_.section_type) &&
-              _.smart_section &&
-              ("wishlist" == _.smart_section_type ||
-                "interactive_recommender" == _.smart_section_type ||
-                "personalized_carousel" == _.smart_section_type ||
-                "dlc_music_onsale" == _.smart_section_type ||
-                "ir_subscription" == _.smart_section_type ||
-                "deck_compatibility" == _.smart_section_type ||
-                ("wishlist_onsale" == _.smart_section_type &&
-                  !_._.GetHideWishlist()) ||
-                ("dlc_onsale" == _.smart_section_type && !_._.GetHideDLC()) ||
-                ("interactive_recommender_onsale" == _.smart_section_type &&
+              (0, _._)(_) &&
+              ("wishlist" == _ ||
+                "interactive_recommender" == _ ||
+                "personalized_carousel" == _ ||
+                "dlc_music_onsale" == _ ||
+                "ir_subscription" == _ ||
+                "deck_compatibility" == _ ||
+                ("wishlist_onsale" == _ && !_._.GetHideWishlist()) ||
+                ("dlc_onsale" == _ && !_._.GetHideDLC()) ||
+                ("interactive_recommender_onsale" == _ &&
                   !_._.GetHideIRList()))),
         );
       }
@@ -20141,7 +20246,7 @@
                 (_.BIsTabFilteringEnabled() && !_.ShouldShowCapsule(_)) ||
                 _.add(_._);
             }),
-          36 == _.GetEventType())
+          _.GetEventType() == _._.k_ECreatorHome)
         ) {
           const _ = await _._.fetchQuery(
             (0, _._)(_.clanSteamID.GetAccountID()),
@@ -20161,7 +20266,7 @@
         if ("events" == __webpack_require__.section_type) {
           if (!_) return null;
           if (!_.BUsesContentHubForItemSource()) return null;
-          if (!__webpack_require__.smart_section) return null;
+          if (!(0, _._)(__webpack_require__)) return null;
           _ = _._.STORE_BASE_URL + "news/" + _;
         } else
           "sale_events" == __webpack_require__.section_type
@@ -20213,14 +20318,14 @@
       }
       async function _(_, _, _) {
         if (!(null == _ ? void 0 : _.length)) return _;
-        if (36 == _.GetEventType()) {
+        if (_.GetEventType() == _._.k_ECreatorHome) {
           const _ = await _._.fetchQuery(
             (0, _._)(_.clanSteamID.GetAccountID()),
           );
           if (!_) return [];
           const _ = new Set(_.GetAppIDList());
           _ = __webpack_require__.filter(
-            (_) => 0 == (0, _._)(_.type) && _.has(_._),
+            (_) => (0, _._)(_.type) == _._.k_EStoreItemType_App && _.has(_._),
           );
         }
         return _;
@@ -20551,6 +20656,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return "dev" === _._.WEB_UNIVERSE
@@ -20589,8 +20696,10 @@
           _ = null;
         if (
           Boolean(_) &&
-          0 === _.GetStoreItemType() &&
-          ((_ = _), 14 === _.GetAppType() && _.GetParentAppID())
+          _.GetStoreItemType() === _._.k_EStoreItemType_App &&
+          ((_ = _),
+          _.GetAppType() === _._.k_EStoreAppType_Advertising &&
+            _.GetParentAppID())
         ) {
           const _ = _._.Get().GetApp(_.GetParentAppID());
           _ && ((_ = _), (_ = _));
@@ -20806,10 +20915,9 @@
                 params: _,
                 withCredentials: !0,
               });
-            1 ===
-              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                ? void 0
-                : _.success) &&
+            (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+              ? void 0
+              : _.success) === _._.k_EResultOK &&
               (this.m_mapSpotlights.has(_) ||
                 (await _(_.data.spotlights),
                 this.m_mapSpotlights.set(_, _.data.spotlights)),
@@ -20852,11 +20960,45 @@
         }
       }
       var _,
+        _,
+        _,
+        _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_ETopPlayedPeriod_Invalid = 0)] = "k_ETopPlayedPeriod_Invalid"),
+          (_[(_.k_ETopPlayedPeriod_PastWeek = 1)] =
+            "k_ETopPlayedPeriod_PastWeek"),
+          (_[(_.k_ETopPlayedPeriod_PastMonth = 2)] =
+            "k_ETopPlayedPeriod_PastMonth"),
+          (_[(_.k_ETopPlayedPeriod_PastYear = 3)] =
+            "k_ETopPlayedPeriod_PastYear");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAppNewReleaseRank_Unknown = 0)] =
+            "k_EAppNewReleaseRank_Unknown"),
+            (_[(_.k_EAppNewReleaseRank_Gold = 1)] =
+              "k_EAppNewReleaseRank_Gold"),
+            (_[(_.k_EAppNewReleaseRank_Silver = 2)] =
+              "k_EAppNewReleaseRank_Silver"),
+            (_[(_.k_EAppNewReleaseRank_Bronze = 3)] =
+              "k_EAppNewReleaseRank_Bronze"),
+            (_[(_.k_EAppNewReleaseRank_Platinum = 4)] =
+              "k_EAppNewReleaseRank_Platinum");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAppTopType_Unknown = 0)] = "k_EAppTopType_Unknown"),
+            (_[(_.k_EAppTopType_Sellers = 1)] = "k_EAppTopType_Sellers"),
+            (_[(_.k_EAppTopType_Played = 2)] = "k_EAppTopType_Played"),
+            (_[(_.k_EAppTopType_SteamDeck_Played = 3)] =
+              "k_EAppTopType_SteamDeck_Played"),
+            (_[(_.k_EAppTopType_Controller_Played = 4)] =
+              "k_EAppTopType_Controller_Played"),
+            (_[(_.k_EAppTopType_VR_Played = 5)] = "k_EAppTopType_VR_Played");
+        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -22026,6 +22168,276 @@
           return "CSteamCharts_GetMonthTopAppReleases_Response_AppNewRelease";
         }
       }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.rtime_year || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  rtime_year: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  include_dlc: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamCharts_GetYearTopAppReleases_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.top_dlc_releases || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2, 3, 4], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  top_dlc_releases: {
+                    _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  top_combined_app_and_dlc_releases: {
+                    _: 3,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  top_app_list: {
+                    _: 4,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamCharts_GetYearTopAppReleases_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  rtime_release: {
+                    _: 2,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  app_release_rank: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamCharts_GetYearTopAppReleases_Response_AppNewRelease";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  app_release_rank: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  type: {
+                    _: 4,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamCharts_GetYearTopAppReleases_Response_TopApps";
+        }
+      }
       !(function (_) {
         (_.GetMostPlayedGames = function (_, _) {
           return _.SendMsg(
@@ -22090,6 +22502,18 @@
           (_.GetMonthTopAppReleases = function (_, _) {
             return _.SendMsg(
               "SteamCharts.GetMonthTopAppReleases#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+                eWebAPIKeyRequirement: 1,
+              },
+            );
+          }),
+          (_.GetYearTopAppReleases = function (_, _) {
+            return _.SendMsg(
+              "SteamCharts.GetYearTopAppReleases#1",
               (0, _._)(_, _),
               _,
               {
@@ -22474,7 +22898,7 @@
                 void 0,
               controller_category: Number(_) || void 0,
               bUseCreatorHomeApps:
-                36 == (null == _ ? void 0 : _.GetEventType()),
+                (null == _ ? void 0 : _.GetEventType()) == _._.k_ECreatorHome,
             };
             if (
               ((_ = await _().get(_, {
@@ -22483,10 +22907,8 @@
                 cancelToken: null == _ ? void 0 : _.token,
               })),
               200 != (null == _ ? void 0 : _.status) ||
-                1 !=
-                  (null === (_ = _.data) || void 0 === _
-                    ? void 0
-                    : _.success) ||
+                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) !=
+                  _._.k_EResultOK ||
                 !(null === (_ = _.data) || void 0 === _ ? void 0 : _.appids))
             )
               throw new Error(
@@ -22625,10 +23047,9 @@
                   params: _,
                   cancelToken: null == _ ? void 0 : _.token,
                 });
-              1 ===
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success) && (_ = _.data);
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) === _._.k_EResultOK && (_ = _.data);
             }
             if (!_) return [];
             const _ = new Set();
@@ -22680,10 +23101,9 @@
                   params: _,
                   cancelToken: null == _ ? void 0 : _.token,
                 });
-              1 ===
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success) && (_ = _.data);
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) === _._.k_EResultOK && (_ = _.data);
             }
             if (!_) return [];
             const _ = new Set();
@@ -22708,13 +23128,15 @@
             const _ = _._.Init(_);
             __webpack_require__.Body().set_context((0, _._)(!1)),
               __webpack_require__.Body().set_count(50),
-              __webpack_require__.Body().set_top_played_period(1),
+              __webpack_require__
+                .Body()
+                .set_top_played_period(_.k_ETopPlayedPeriod_PastWeek),
               _ && (0, _._)(_, _);
             const _ = await _.GetMostPlayedSteamDeckGames(
               this.m_serviceTransport,
               _,
             );
-            if (1 !== _.GetEResult())
+            if (_.GetEResult() !== _._.k_EResultOK)
               return (
                 console.error(
                   "GetTopPlayedGamesOnDeck failed: ",
@@ -22960,9 +23382,9 @@
             include_basic_info: !0,
             include_assets: !0,
           });
-        return 2 === _
+        return _ === _._.k_EStoreItemCacheState_Unavailable
           ? null
-          : 1 === _
+          : _ === _._.k_EStoreItemCacheState_Loading
             ? _.createElement(_._, {
                 size: "small",
                 position: "center",
@@ -23644,9 +24066,8 @@
               }
             );
           })(_, __webpack_require__, _, _, _, _, _, _),
-          _ = (0, _._)(_.smart_section_type)
-            ? _.smart_section_type
-            : "discounted",
+          _ = (0, _._)(_),
+          _ = (0, _._)(_) ? _ : "discounted",
           { bLoading: _, rgMatchingCapsules: _ } = (function (
             _,
             _,
@@ -23998,7 +24419,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         GetPriceStops() {
@@ -24024,10 +24444,9 @@
           try {
             if (
               ((_ = await _().get(_)),
-              1 !==
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success))
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) !== _._.k_EResultOK)
             )
               return (
                 console.error(
@@ -24088,7 +24507,7 @@
           (this.m_facets = []),
             (this.m_bUnboundedScope = !1),
             (this.m_facetSortKey = _._.k_ESortFacetsByMatchCount),
-            (this.m_language = -1),
+            (this.m_language = _._.k_Lang_None),
             (this.m_sortedFacets = []),
             (0, _._)(this),
             (this.m_facetSortKey = _),
@@ -24349,9 +24768,9 @@
                   )
                 : _.facetValue.type === _._.k_ELanguage
                   ? !_._.Get().BIsLoaded() ||
-                    0 === _.facetValue.language ||
+                    _.facetValue.language === _._.k_Lang_English ||
                     ((0 !== _._.Get().GetSecondaryLanguages().size ||
-                      0 !== _._.Get().GetPrimaryLanguage()) &&
+                      _._.Get().GetPrimaryLanguage() !== _._.k_Lang_English) &&
                       (_._.Get().GetPrimaryLanguage() ===
                         _.facetValue.language ||
                         _._.Get()
@@ -25308,7 +25727,7 @@
           _ = (0, _._)(_, {
             include_assets: !0,
           });
-        if (!_ || 0 == _.length || 3 != _)
+        if (!_ || 0 == _.length || _ != _._.k_EStoreItemCacheState_Found)
           return _.createElement(_._, {
             string: (0, _._)("#Loading"),
             position: "center",
@@ -25467,6 +25886,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "bGameHighlightAutoplayDisabled",
@@ -25497,7 +25917,7 @@
           _ = (null == _ || _) && _ && !_.BIsAllAges() && "masked" == _,
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(0),
+          [_, _] = _.useState(_._.Image),
           _ = _.useRef(void 0),
           _ = _.useRef(void 0),
           [_, _] = _.useState(),
@@ -25526,17 +25946,17 @@
           }, [_, _, _, _]);
         const _ = (function (_, _, _, _, _) {
           return _.useCallback(() => {
-            0 == _
+            _ == _._.Image
               ? _(!0)
-              : 1 == _ && _.current
+              : _ == _._.Micro && _.current
                 ? _.current.paused
                   ? _.current.play()
                   : _.current.pause()
-                : 2 == _ && _.current
+                : _ == _._.Full && _.current
                   ? _.current.IsPaused()
                     ? _.current.Play()
                     : _.current.Pause()
-                  : 2 == _ && _ && _.TogglePlayPause();
+                  : _ == _._.Full && _ && _.TogglePlayPause();
           }, [_, _, _, _, _]);
         })(_, _, _, _, _);
         _.useEffect(() => {
@@ -25552,7 +25972,7 @@
             onMouseLeave: () => _(!1),
           },
           _.createElement("img", {
-            className: (0, _._)(_().AppMainCap, 0 != _ && _().Hidden),
+            className: (0, _._)(_().AppMainCap, _ != _._.Image && _().Hidden),
             src: _,
             onClick: _,
           }),
@@ -25645,7 +26065,13 @@
           _ = !!_ || !!__webpack_require__;
         _.useEffect(() => {
           let _ = !1;
-          _ && _ && _ && (_ = 0 === _ || (1 === _ && !_) || (2 === _ && !_)),
+          _ &&
+            _ &&
+            _ &&
+            (_ =
+              _ === _._.Image ||
+              (_ === _._.Micro && !_) ||
+              (_ === _._.Full && !_)),
             _(_),
             null == _ || _(_ && _);
         }, [_, _, _, _, _, _, _, _]),
@@ -25667,7 +26093,7 @@
           })(_, _),
           _.useEffect(() => {
             _ ||
-              (_(0),
+              (_(_._.Image),
               _(!1),
               _(!1),
               _.current && (_.current.pause(), (_.current.currentTime = 0)),
@@ -25676,16 +26102,16 @@
         const _ = _.useRef(!1);
         return (
           _.useEffect(() => {
-            if (_ && 0 === _)
+            if (_ && _ === _._.Image)
               if ((_(!0), _))
                 if (_.current) {
-                  _.Debug("Starting microtrailer"), _(1);
+                  _.Debug("Starting microtrailer"), _(_._.Micro);
                   const _ = () =>
                     (function (_, _, _) {
                       if (_.current) return;
                       (_.current = !0),
                         _.Debug("Starting main trailer"),
-                        _(2),
+                        _(_._.Full),
                         __webpack_require__.Play();
                     })(_, _, _.current);
                   _ || !_.current
@@ -25700,7 +26126,10 @@
                           _.Warning(`Failed to play ${_}: `, _);
                       }));
                 } else
-                  _ && (_.Debug("Starting broadcast player"), _(2), _.Play());
+                  _ &&
+                    (_.Debug("Starting broadcast player"),
+                    _(_._.Full),
+                    _.Play());
               else _.Debug("Showing image");
             var _, _, _;
           }, [_, _, _, _, _, _, _, _, _]),
@@ -25729,18 +26158,18 @@
             const [_, _] = _.useState(!1);
             _.useEffect(() => {
               _ && !_
-                ? 1 == _ && _ && _
+                ? _ == _._.Micro && _ && _
                   ? (__webpack_require__.pause(), _(!0))
-                  : 2 == _ && _ && _
+                  : _ == _._.Full && _ && _
                     ? (_.Pause(), _(!0))
-                    : 2 == _ && _ && !_.IsPaused() && (_.Pause(), _(!0))
+                    : _ == _._.Full && _ && !_.IsPaused() && (_.Pause(), _(!0))
                 : !_ &&
                   _ &&
-                  (1 == _ && _
+                  (_ == _._.Micro && _
                     ? __webpack_require__.play()
-                    : 2 == _ && _
+                    : _ == _._.Full && _
                       ? _.Play()
-                      : 2 == _ && _ && _.IsPaused() && _.Play(),
+                      : _ == _._.Full && _ && _.IsPaused() && _.Play(),
                   _(!1));
             }, [_, _, _, _, _, _, _, _]);
           })(_, _, _.current, _, _.current, _, _),
@@ -25795,7 +26224,8 @@
                   _.createElement(_.default, {
                     classes: _(!1, _),
                     nAppIDVOD: _.GetAppID(),
-                    watchLocation: 15,
+                    watchLocation:
+                      _._.k_EBroadcastWatchLocation_TrailerCarousel,
                     fnOnVideoEnd: _,
                     fnVideoClick: _,
                     fnSetBroadcastVideo: _,
@@ -25822,7 +26252,7 @@
             _.current.SetVolume(_, _);
           }
         }, [_, _]);
-        let _ = 2 != _,
+        let _ = _ != _._.Full,
           _ = _(!1, _);
         return _.createElement(
           _,
@@ -25864,9 +26294,9 @@
       function _(_, _) {
         return (0, _._)({
           [_().AppVideo]: !0,
-          [_().PlayFullTrailer]: 2 == _,
-          [_().PlayMicrotrailer]: 1 == _,
-          [_().NoTrailer]: 0 == _,
+          [_().PlayFullTrailer]: _ == _._.Full,
+          [_().PlayMicrotrailer]: _ == _._.Micro,
+          [_().NoTrailer]: _ == _._.Image,
           [_().Microtrailer]: _,
           [_().Trailer]: !_,
         });
@@ -26051,6 +26481,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = "bTrailerCarouselAutoAdvance";
+      var _;
       function _(_) {
         const {
             className: _,
@@ -26070,9 +26501,9 @@
           _ = void 0 !== _,
           _ = (function (_) {
             switch (_) {
-              case 4:
+              case _.VideoPaused:
                 return (0, _._)("#SaleTrailerCarousel_AutoAdvanceVideoPaused");
-              case 3:
+              case _.MouseOverVideo:
                 return (0, _._)("#SaleTrailerCarousel_AutoAdvanceHover");
             }
             return;
@@ -26146,6 +26577,13 @@
           )
         );
       }
+      !(function (_) {
+        (_[(_.Fading = 0)] = "Fading"),
+          (_[(_.TabHidden = 1)] = "TabHidden"),
+          (_[(_.Offscreen = 2)] = "Offscreen"),
+          (_[(_.MouseOverVideo = 3)] = "MouseOverVideo"),
+          (_[(_.VideoPaused = 4)] = "VideoPaused");
+      })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -26352,10 +26790,9 @@
               });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success)
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) == _._.k_EResultOK
             )
               return (
                 (this.m_nExpirationTime = Math.max(
@@ -26416,11 +26853,11 @@
       function _(_, _ = null) {
         if (null == _ ? void 0 : _.BUsesContentHubForItemSource())
           switch (_.GetStoreItemType()) {
-            case 0:
+            case _._.k_EStoreItemType_App:
               if (_._.Get().BIsGameOwned(_.GetAppID())) return !0;
               break;
-            case 1:
-            case 2:
+            case _._.k_EStoreItemType_Package:
+            case _._.k_EStoreItemType_Bundle:
               if (_.GetIncludedAppIDs().every((_) => _._.Get().BIsGameOwned(_)))
                 return !0;
           }
@@ -26442,8 +26879,8 @@
           )
             return !0;
           if (
-            0 === _.GetStoreItemType() &&
-            1 === _.GetAppType() &&
+            _.GetStoreItemType() === _._.k_EStoreItemType_App &&
+            _.GetAppType() === _._.k_EStoreAppType_Demo &&
             _._.Get().BIsGameOwned(_.GetParentAppID())
           )
             return !0;
@@ -26776,7 +27213,7 @@
                 params: _,
                 withCredentials: !0,
               });
-              1 == _.data.success &&
+              _.data.success == _._.k_EResultOK &&
                 (0, _._)(() => {
                   if (
                     (this.AddAllRecentEvents(_, _.data.recent_events),
@@ -27000,6 +27437,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         static Get() {
@@ -27076,6 +27514,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         static Get() {
@@ -27144,20 +27583,21 @@
       }
       async function _(_, _, _, _, _, _, _, _, _, _ = 0, _ = void 0, _, _) {
         const _ = _(_, _, _);
-        if ((0, _._)(_.section_type) && "sale_tabhub" != _.smart_section_type)
+        if ((0, _._)(_.section_type) && "sale_tabhub" != (0, _._)(_))
           return await _(_, _, _, _, _, _, _, _, _, _, _, _, _);
         if ("events" === _.section_type || "sale_events" == _.section_type) {
           const _ = await (async function (_, _, _, _) {
             let _;
-            if (_.smart_section) {
+            if ((0, _._)(_)) {
+              const _ = (0, _._)(_);
               let _ = [];
-              "recent_events" === _.smart_section_type
+              "recent_events" === _
                 ? (_ = await _.Get().GetRecentEventsForSalesPage(
                     _,
                     _,
                     null == _ ? void 0 : _.GetTab(),
                   ))
-                : "recent_tagged_events" === _.smart_section_type
+                : "recent_tagged_events" === _
                   ? ((_ = await _.Get().GetRecentTaggedEventsForSalesPage(
                       _,
                       _,
@@ -27185,8 +27625,8 @@
                         let _ = [..._];
                         for (const _ of _.GetSaleSectionsByType("events")) {
                           if (_.unique_id === _.unique_id) break;
-                          if (_.smart_section) {
-                            if ("recent_tagged_events" === _.smart_section_type)
+                          if ((0, _._)(_)) {
+                            if ("recent_tagged_events" === (0, _._)(_))
                               if ("wishlist" === _.recent_tagged_events_source)
                                 _ = _.filter(
                                   (_) => !_._.Get().BIsGameWishlisted(_.appid),
@@ -27236,7 +27676,7 @@
                         }
                         return _;
                       })(_, _, _, null == _ ? void 0 : _.GetTab())))
-                  : "sale_events_only" === _.smart_section_type
+                  : "sale_events_only" === _
                     ? (_ = await _.Get().GetLiveSaleEvents(
                         _,
                         _,
@@ -27244,9 +27684,9 @@
                       ))
                     : console.log(
                         "SmaSaleSectionLoadItemEffect: Invalid Smart Section Type: " +
-                          _.smart_section_type,
+                          _,
                       );
-              const _ = __webpack_require__.map((_) => _.gid);
+              const _ = _.map((_) => _.gid);
               _ = await _._.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                 _,
                 void 0,
@@ -27290,8 +27730,7 @@
               );
             }
             !_.dynamic_reveal ||
-              (_.smart_section_type &&
-                "recent_tagged_events" !== _.smart_section_type) ||
+              ((0, _._)(_) && "recent_tagged_events" !== (0, _._)(_)) ||
               (_.Get().AddEvents(_.unique_id, _),
               _.Get().IncrementalSectionNeedingReveal(_.clanSteamID, _.GID, _));
             return _;
@@ -27303,11 +27742,11 @@
         if (
           "links" === _.section_type ||
           "title_image" === _.section_type ||
-          "sale_tabhub" === _.smart_section_type
+          "sale_tabhub" === (0, _._)(_)
         ) {
           const _ = await (async function (_, _, _, _) {
             let _ = _.links;
-            if ("sale_tabhub" === _.smart_section_type) {
+            if ("sale_tabhub" === (0, _._)(_)) {
               _ = (await _.Get().GetSaleTags()).map((_) => ({
                 url: _.url,
                 localized_link_capsule: void 0,
@@ -27363,11 +27802,11 @@
           ),
           _ = _(_, _),
           _ = (0, _._)(_, _, _);
-        if (_.smart_section) {
+        if ((0, _._)(_)) {
           const _ = await (async function (_, _, _, _, _, _, _, _, _, _ = 0) {
             var _, _, _, _, _, _;
-            const {
-                smart_section_type: _,
+            const _ = (0, _._)(_),
+              {
                 smart_section_max_apps: _,
                 smart_section_tag: _,
                 smart_section_category: _,
@@ -27444,10 +27883,13 @@
                 _.smart_section_filter_by_deck_compatibility &&
                   (_ = _.filter((_) => {
                     (0, _._)(
-                      _._.Get().BHasStoreItem(_, 0, _._),
+                      _._.Get().BHasStoreItem(_, _._.k_EStoreItemType_App, _._),
                       "Missing store item data for deck top 100 section",
                     );
-                    const _ = _._.Get().GetStoreItem(_, 0);
+                    const _ = _._.Get().GetStoreItem(
+                      _,
+                      _._.k_EStoreItemType_App,
+                    );
                     return _
                       ? _.GetPlatforms().steam_deck_compat_category ===
                           _.smart_section_deck_compatibility
@@ -27477,7 +27919,11 @@
                 _ = await _._.fetchQuery(
                   (0, _._)(_, _.smart_section_creator_listid),
                 );
-              if (!_ || 0 == _.list_state() || !_.apps().length)
+              if (
+                !_ ||
+                _.list_state() == _._.k_EStoreCuratorListState_Hidden ||
+                !_.apps().length
+              )
                 return {
                   capsules: [],
                   bMoreRemaining: !1,
@@ -27758,17 +28204,21 @@
                         ? _._.Get().GetUserLibraryCompatList()
                         : _._.Get().GetUserWishlistCompatList();
                     let _ = _.smart_section_deck_compatibility;
-                    switch (((null != _ && null != _) || (_ = 3), _)) {
-                      case 3:
+                    switch (
+                      ((null != _ && null != _) ||
+                        (_ = _._.k_ESteamDeckCompatibilityCategory_Verified),
+                      _)
+                    ) {
+                      case _._.k_ESteamDeckCompatibilityCategory_Verified:
                         _ = _.verifiedList;
                         break;
-                      case 2:
+                      case _._.k_ESteamDeckCompatibilityCategory_Playable:
                         _ = _.playableList;
                         break;
-                      case 1:
+                      case _._.k_ESteamDeckCompatibilityCategory_Unsupported:
                         _ = _.unsupportedList;
                         break;
-                      case 0:
+                      case _._.k_ESteamDeckCompatibilityCategory_Unknown:
                         _ = _.unknownList;
                         break;
                       default:
@@ -28021,7 +28471,7 @@
           _ = _.concat(_);
         }
         if (
-          (_.smart_section || _.sale_tag_filter) &&
+          ((0, _._)(_) || _.sale_tag_filter) &&
           !_.enable_faceted_browsing &&
           _
         ) {
@@ -28034,7 +28484,7 @@
           _ > 0 && _ < _.length && (_ = _.slice(0, _));
         }
         _.dynamic_reveal &&
-          !_.smart_section_type &&
+          !(0, _._)(_) &&
           (_.Get().AddSaleCapsules(_.unique_id, _.capsules),
           _.Get().IncrementalSectionNeedingReveal(_.clanSteamID, _.GID, _));
         return {
@@ -28051,6 +28501,7 @@
         _ = "trailercarousel",
         _ = "trailercarousel_seen_intro_video",
         _ = 3;
+      var _;
       function _(_) {
         var _, _;
         const {
@@ -28167,7 +28618,10 @@
                             : _.BHasTrailers(_);
                         }));
                     const _ = _.slice(_, _ + _).map((_) => _._);
-                    if (1 == (await _._.Get().QueueMultipleAppRequests(_, _))) {
+                    if (
+                      (await _._.Get().QueueMultipleAppRequests(_, _)) ==
+                      _._.k_EResultOK
+                    ) {
                       const _ = _.flatMap((_) =>
                         _._.Get().GetApp(_).GetDemoStandaloneStorePageAppIDs(),
                       );
@@ -28338,7 +28792,7 @@
           _ = (0, _._)(),
           _ = (null == _ ? void 0 : _.ownerWindow) || window,
           _ = _(_, _),
-          [_, _] = _.useState(0),
+          [_, _] = _.useState(_.None),
           [_, _] = _.useState(),
           _ = (0, _._)(),
           _ = _.useRef(void 0),
@@ -28351,7 +28805,7 @@
         _.useEffect(() => {
           void 0 !== _.current &&
             _.current !== _ &&
-            ((_.current = void 0), _(0));
+            ((_.current = void 0), _(_.None));
         }, [_]);
         const {
             bTabHidden: _,
@@ -28383,7 +28837,7 @@
           })(),
           _ = _.useCallback(async () => {
             if (_ || _) return void _(!0);
-            (_.current = _), _(1);
+            (_.current = _), _(_.FadeOut);
             const _ = new Date().getTime(),
               _ = window.setInterval(() => {
                 const _ = 1 - (new Date().getTime() - _) / 500;
@@ -28395,9 +28849,9 @@
               _.current == _ &&
                 ((_.current = void 0),
                 _(!0),
-                _(2),
+                _(_.FadeIn),
                 await new Promise((_) => setTimeout(_, 500))),
-              _(0);
+              _(_.None);
           }, [_, _, _, _]);
         _.useEffect(() => {
           _ || _ || !_ || (_(!1), _());
@@ -28408,16 +28862,16 @@
           (null == __webpack_require__ || __webpack_require__ > 0);
         let _;
         _
-          ? (_ = 4)
+          ? (_ = _.VideoPaused)
           : _ && !(0, _._)()
-            ? (_ = 3)
-            : 0 != _
-              ? (_ = 0)
+            ? (_ = _.MouseOverVideo)
+            : _ != _.None
+              ? (_ = _.Fading)
               : _
-                ? (_ = 1)
-                : _ && (_ = 2),
+                ? (_ = _.TabHidden)
+                : _ && (_ = _.Offscreen),
           _.useEffect(() => {
-            1 != _ && 2 != _ && _(!0);
+            _ != _.TabHidden && _ != _.Offscreen && _(!0);
           }, [_]);
         const _ = (
             null == _
@@ -28429,7 +28883,9 @@
           _ = _ ? _ > 1 : _ > 0,
           _ = _ ? _ > 1 : _ < _ - 1,
           _ = _ && (_ || _);
-        return _ && 1 != _ && 1 != _
+        return _ &&
+          _ != _._.k_EStoreItemCacheState_Loading &&
+          _ != _._.k_EStoreItemCacheState_Loading
           ? _.createElement(
               _._,
               {
@@ -28493,8 +28949,8 @@
                     _.createElement("div", {
                       className: (0, _._)(
                         _().Fade,
-                        1 === _ && _().FadeOut,
-                        2 === _ && _().FadeIn,
+                        _ === _.FadeOut && _().FadeOut,
+                        _ === _.FadeIn && _().FadeIn,
                       ),
                       style: {
                         "--fade-out-time": "0.5s",
@@ -28577,7 +29033,7 @@
               ? void 0
               : __webpack_require__.GetFormattedSteamReleaseDate(),
           _ =
-            1 != _.GetAppType() ||
+            _.GetAppType() != _._.k_EStoreAppType_Demo ||
             (null == _ ? void 0 : _.HasDemoStandaloneStorePage())
               ? {
                   _: _,
@@ -28694,7 +29150,8 @@
                 !_ &&
                   _ &&
                   !_ &&
-                  (_.BHasDemo() || 1 == _.GetAppType()) &&
+                  (_.BHasDemo() ||
+                    _.GetAppType() == _._.k_EStoreAppType_Demo) &&
                   _.createElement(_._, {
                     info: {
                       _: _.GetAppID(),
@@ -28793,6 +29250,11 @@
             });
         }, [_, _]);
       }
+      !(function (_) {
+        (_[(_.None = 0)] = "None"),
+          (_[(_.FadeOut = 1)] = "FadeOut"),
+          (_[(_.FadeIn = 2)] = "FadeIn");
+      })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
@@ -28958,7 +29420,7 @@
                     params: _,
                     withCredentials: !0,
                   });
-                if (200 !== _.status || 1 !== _.data.success)
+                if (200 !== _.status || _.data.success !== _._.k_EResultOK)
                   throw new Error(
                     `ajaxgetdlcforyoumaincapsule failed: status == ${_.status}, eresult == ${null === (_ = _.data) || void 0 === _ ? void 0 : _.success}, err_msg == ${null === (_ = _.data) || void 0 === _ ? void 0 : _.err_msg}`,
                   );
@@ -29110,14 +29572,17 @@
       };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      _._.EUNIVERSE;
+      _._.EUNIVERSE, _._.k_EUniverseBeta;
       const _ = ["HK", "JP", "KR", "TW"],
         _ =
-          2 == _._.EUNIVERSE
+          _._.EUNIVERSE == _._.k_EUniverseBeta
             ? [501556, 501557, 501558, 502103, 502106]
             : [595603, 595604, 595605, 946113, 946114];
       const _ = 1700157600,
-        _ = 2 == _._.EUNIVERSE ? [502103, 502106] : [946113, 946114, 946115];
+        _ =
+          _._.EUNIVERSE == _._.k_EUniverseBeta
+            ? [502103, 502106]
+            : [946113, 946114, 946115];
       function _(_) {
         if (_.includes(_)) {
           const _ = (0, _._)("server_rtime", "application_config");
@@ -31889,7 +32354,7 @@
             },
             _ = _(_, _.nShowAdditionalRows),
             _ = _((0, _._)(_, _), _, _.capsules.length);
-          _ < _ && _.smart_section && (_.nShowAdditionalRows -= _ - _);
+          _ < _ && (0, _._)(_) && (_.nShowAdditionalRows -= _ - _);
           let { content: _, bAdditionalContent: _ } = (0, _._)(_);
           if (((_ = _), (_ && _) || _)) {
             const _ = _(_, _),
@@ -31955,64 +32420,63 @@
                 depth: _,
               };
           }
-          if (
-            _.smart_section &&
-            _.smart_section_type &&
-            "crosspromotesalepage" != _.section_type
-          )
-            switch (_.smart_section_type) {
-              case "wishlist":
-                return {
-                  feature: "salesmartwishlist" + _,
-                };
-              case "wishlist_onsale":
-                return {
-                  feature: "salesmartwishlist_allsale" + _,
-                };
-              case "interactive_recommender":
-                return {
-                  feature: "salesmartir" + _,
-                };
-              case "interactive_recommender_onsale":
-                return {
-                  feature: "salesmartir_allsale" + _,
-                };
-              case "ml_wishlist_recommender":
-                return {
-                  feature: "salesmartwr" + _,
-                };
-              case "ml_playtime_recommender":
-                return {
-                  feature: "salesmartpr" + _,
-                };
-              case "dlc":
-              case "dlc_onsale":
-              case "dlc_music_onsale":
-                return {
-                  feature: "salesmartdlc" + _,
-                };
-              case "tag_recommender":
-                return {
-                  feature: "salesmarttagrec" + _,
-                };
-              case "personalized_carousel":
-                return {
-                  feature: "salesmartpersonalizedcarousel" + _,
-                  depth: (0, _._)(_, _).nSectionIndex,
-                };
-              case "tag":
-                return {
-                  feature: "autopopulatetag" + _,
-                };
-              case "category":
-                return {
-                  feature: "autopopulatecategory" + _,
-                };
-              default:
-                return {
-                  feature: "salesmart" + _.smart_section_type + _,
-                };
-            }
+          if ((0, _._)(_) && "crosspromotesalepage" != _.section_type) {
+            const _ = (0, _._)(_);
+            if (_)
+              switch (_) {
+                case "wishlist":
+                  return {
+                    feature: "salesmartwishlist" + _,
+                  };
+                case "wishlist_onsale":
+                  return {
+                    feature: "salesmartwishlist_allsale" + _,
+                  };
+                case "interactive_recommender":
+                  return {
+                    feature: "salesmartir" + _,
+                  };
+                case "interactive_recommender_onsale":
+                  return {
+                    feature: "salesmartir_allsale" + _,
+                  };
+                case "ml_wishlist_recommender":
+                  return {
+                    feature: "salesmartwr" + _,
+                  };
+                case "ml_playtime_recommender":
+                  return {
+                    feature: "salesmartpr" + _,
+                  };
+                case "dlc":
+                case "dlc_onsale":
+                case "dlc_music_onsale":
+                  return {
+                    feature: "salesmartdlc" + _,
+                  };
+                case "tag_recommender":
+                  return {
+                    feature: "salesmarttagrec" + _,
+                  };
+                case "personalized_carousel":
+                  return {
+                    feature: "salesmartpersonalizedcarousel" + _,
+                    depth: (0, _._)(_, _).nSectionIndex,
+                  };
+                case "tag":
+                  return {
+                    feature: "autopopulatetag" + _,
+                  };
+                case "category":
+                  return {
+                    feature: "autopopulatecategory" + _,
+                  };
+                default:
+                  return {
+                    feature: "salesmart" + _ + _,
+                  };
+              }
+          }
           switch (_.section_type) {
             case "sale_events":
             case "events":
@@ -32168,9 +32632,7 @@
                 className: _().preview_placeholder_section,
               },
               (0, _._)(
-                _.smart_section
-                  ? "#Sale_SmartPlaceHolder"
-                  : "#Sale_PlaceHolder",
+                (0, _._)(_) ? "#Sale_SmartPlaceHolder" : "#Sale_PlaceHolder",
               ),
             );
       }
@@ -32827,7 +33289,7 @@
                   : _.optin_only) || void 0,
               controller_category: Number(_.eControllerCategory) || void 0,
               bUseCreatorHomeApps:
-                36 == (null == _ ? void 0 : _.GetEventType()),
+                (null == _ ? void 0 : _.GetEventType()) == _._.k_ECreatorHome,
             };
           let _ = null;
           try {
@@ -32838,8 +33300,8 @@
             });
             if (
               200 === (null == _ ? void 0 : _.status) &&
-              1 ===
-                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) &&
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ===
+                _._.k_EResultOK &&
               _.data.store_item_keys
             ) {
               const _ = [];
@@ -33127,7 +33589,7 @@
             (null == _ ? void 0 : _.GetActiveTabUniqueID()) == _.tabID
           ) {
             const _ = this.state.rgCapsules ? [...this.state.rgCapsules] : [];
-            _(_, _, 2 == this.context.eLocation),
+            _(_, _, this.context.eLocation == _._.Previewing),
               this.setState({
                 rgCapsules: _,
               });
@@ -33178,7 +33640,8 @@
             { facetFilterState: _ } = this.state;
           let _ = _.map((_) => ({
             _: _._,
-            type: 0 === _.type ? "game" : (0, _._)(_.type),
+            type:
+              _.type === _._.k_EStoreItemType_App ? "game" : (0, _._)(_.type),
           }));
           await (0, _._)(_, _._),
             this.state.strSearchQuery ||
@@ -33222,7 +33685,7 @@
             _.Debug(
               `LoadCapsules[${_}]: now in generation ${this.m_loadCapsulesDebugGeneration}`,
             );
-          const _ = 2 == this.context.eLocation;
+          const _ = this.context.eLocation == _._.Previewing;
           if (
             (await Promise.all([_._.Get().HintLoad(), (0, _._)(_, _._)]),
             _.token.reason)
@@ -33270,7 +33733,10 @@
                   ? void 0
                   : _.map((_) => ({
                       _: _._,
-                      type: 0 === _.type ? "game" : (0, _._)(_.type),
+                      type:
+                        _.type === _._.k_EStoreItemType_App
+                          ? "game"
+                          : (0, _._)(_.type),
                     }))),
               (_ = _.bMoreAvailable);
           } catch (_) {
@@ -33293,7 +33759,7 @@
             _.unique_id,
             null == _ ? void 0 : _.GetActiveTabUniqueID(),
           );
-          _ && _(_, _, 2 == this.context.eLocation),
+          _ && _(_, _, this.context.eLocation == _._.Previewing),
             this.setState({
               bInitialLoadComplete: !0,
               rgCapsules: _,
@@ -33984,6 +34450,7 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) => {
         const {
@@ -34165,7 +34632,9 @@
                     (!_._.logged_in ||
                       (0, _._)() ||
                       _ ||
-                      _.BExcludesContentDescriptor([3]))
+                      _.BExcludesContentDescriptor([
+                        _._.k_EContentDescriptor_AdultOnlySexualContent,
+                      ]))
                   );
                 })(_, _, _, _),
               ),
@@ -35121,7 +35590,7 @@
               src:
                 _._.IMG_URL +
                 "events/types/type_" +
-                (11 == _.type ? "11" : "9") +
+                (_.type == _._.k_EBroadcastEvent ? "11" : "9") +
                 ".png",
             }),
           ),
@@ -35374,7 +35843,7 @@
                   ),
                 await _.RegisterCalendarEventsAndModels(_))
               : await _.RegisterCalendarEventsAndModels({
-                  success: 1,
+                  success: _._.k_EResultOK,
                 });
           }
           (_.m_bInitialLoad = !1),
@@ -35545,7 +36014,7 @@
               promotionName: _,
               activeTab: __webpack_require__,
             } = this.props,
-            _ = 2 == this.context.eLocation;
+            _ = this.context.eLocation == _._.Previewing;
           if (!this.state.bLoaded)
             return _.createElement(_._, {
               position: "center",
@@ -36247,7 +36716,7 @@
                   src:
                     _._.IMG_URL +
                     "events/types/type_" +
-                    (11 == _.type ? "11" : "9") +
+                    (_.type == _._.k_EBroadcastEvent ? "11" : "9") +
                     ".png",
                 }),
               ),
@@ -36361,7 +36830,8 @@
             (this.creator_clan_ids = _.creator_clan_ids),
             (this.localized_langs = _.localized_langs),
             (this.deck_compatibility_category =
-              _.deck_compatibility_category || 0);
+              _.deck_compatibility_category ||
+              _._.k_ESteamDeckCompatibilityCategory_Unknown);
         }
         GetHeaderImageDimension() {
           return this.header_image_url.includes("header_586x192")
@@ -36792,14 +37262,16 @@
         }
       };
       _ = (0, _._)([_._], _);
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ {
         static Get() {
           return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
         }
         constructor() {
           (this.m_mapGenreToStickerResponse = new Map()),
-            (this.m_eStoryBadgeGranted = 0),
+            (this.m_eStoryBadgeGranted = _._.k_EUserBadgeInvalid),
             (0, _._)(this),
             "dev" == _._.WEB_UNIVERSE && (window.g_SummerSale2021Store = this);
           const _ = (0, _._)("summerstory", "application_config");
@@ -36850,8 +37322,8 @@
             );
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) &&
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._.k_EResultOK &&
               (null === (_ = _.data) || void 0 === _ ? void 0 : _.results)
             ) {
               const _ = _.data.results;
@@ -36868,7 +37340,7 @@
         }
         async MakeClaimForGenre(_, _, _) {
           var _, _, _;
-          if (!_._.logged_in) return 21;
+          if (!_._.logged_in) return _._.k_EResultNotLoggedOn;
           const _ = new FormData();
           _.append("genre", _.toString()),
             _.append("choice", _.toString()),
@@ -36885,8 +37357,8 @@
             );
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) &&
+              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
+                _._.k_EResultOK &&
               (null === (_ = _.data) || void 0 === _ ? void 0 : _.results)
             ) {
               const _ = _.data.results,
@@ -36909,7 +37381,7 @@
             console.error("Could not make claim on genre", _, _.strErrorMsg, _),
             (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
               ? void 0
-              : _.success) || 2
+              : _.success) || _._.k_EResultFail
           );
         }
       }
@@ -36938,7 +37410,7 @@
       const _ = [
         null,
         {
-          eGenre: 1,
+          eGenre: _._.k_ESummerSale2021Genre_Action,
           strPageTitle: "#Summer21_Story_Action_Title",
           strPageNumber: "#Summer21_Story_Action_Pg",
           strPageText: "#Summer21_Story_Action_Intro",
@@ -36953,7 +37425,7 @@
           strGenreName: "#Summer21_Story_Action_Genre",
         },
         {
-          eGenre: 2,
+          eGenre: _._.k_ESummerSale2021Genre_AdventureAndCasual,
           strPageTitle: "#Summer21_Story_Adventure_Title",
           strPageNumber: "#Summer21_Story_Adventure_Pg",
           strPageText: "#Summer21_Story_Adventure_Intro",
@@ -36968,7 +37440,7 @@
           strGenreName: "#Summer21_Story_Adventure_Genre",
         },
         {
-          eGenre: 3,
+          eGenre: _._.k_ESummerSale2021Genre_RolePlaying,
           strPageTitle: "#Summer21_Story_RPG_Title",
           strPageNumber: "#Summer21_Story_RPG_Pg",
           strPageText: "#Summer21_Story_RPG_Intro",
@@ -36983,7 +37455,7 @@
           strGenreName: "#Summer21_Story_RPG_Genre",
         },
         {
-          eGenre: 4,
+          eGenre: _._.k_ESummerSale2021Genre_Strategy,
           strPageTitle: "#Summer21_Story_Strategy_Title",
           strPageNumber: "#Summer21_Story_Strategy_Pg",
           strPageText: "#Summer21_Story_Strategy_Intro",
@@ -36998,7 +37470,7 @@
           strGenreName: "#Summer21_Story_Strategy_Genre",
         },
         {
-          eGenre: 5,
+          eGenre: _._.k_ESummerSale2021Genre_Simulation,
           strPageTitle: "#Summer21_Story_Sim_Title",
           strPageNumber: "#Summer21_Story_Sim_Pg",
           strPageText: "#Summer21_Story_Sim_Intro",
@@ -37013,7 +37485,7 @@
           strGenreName: "#Summer21_Story_Sim_Genre",
         },
         {
-          eGenre: 6,
+          eGenre: _._.k_ESummerSale2021Genre_SportsAndRacing,
           strPageTitle: "#Summer21_Story_Sports_Title",
           strPageNumber: "#Summer21_Story_Sports_Pg",
           strPageText: "#Summer21_Story_Sports_Intro",
@@ -37028,7 +37500,7 @@
           strGenreName: "#Summer21_Story_Sports_Genre",
         },
         {
-          eGenre: 7,
+          eGenre: _._.k_ESummerSale2021Genre_Horror,
           strPageTitle: "#Summer21_Story_Horror_Title",
           strPageNumber: "#Summer21_Story_Horror_Pg",
           strPageText: "#Summer21_Story_Horror_Intro",
@@ -37043,7 +37515,7 @@
           strGenreName: "#Summer21_Story_Horror_Genre",
         },
         {
-          eGenre: 8,
+          eGenre: _._.k_ESummerSale2021Genre_Survival,
           strPageTitle: "#Summer21_Story_Survival_Title",
           strPageNumber: "#Summer21_Story_Survival_Pg",
           strPageText: "#Summer21_Story_Survival_Intro",
@@ -37058,7 +37530,7 @@
           strGenreName: "#Summer21_Story_Survival_Genre",
         },
         {
-          eGenre: 9,
+          eGenre: _._.k_ESummerSale2021Genre_OpenWorld,
           strPageTitle: "#Summer21_Story_Open_Title",
           strPageNumber: "#Summer21_Story_Open_Pg",
           strPageText: "#Summer21_Story_Open_Intro",
@@ -37073,7 +37545,7 @@
           strGenreName: "#Summer21_Story_Open_Genre",
         },
         {
-          eGenre: 10,
+          eGenre: _._.k_ESummerSale2021Genre_ScifiAndCyberpunk,
           strPageTitle: "#Summer21_Story_SciFi_Title",
           strPageNumber: "#Summer21_Story_SciFi_Pg",
           strPageText: "#Summer21_Story_SciFi_Intro",
@@ -37088,7 +37560,7 @@
           strGenreName: "#Summer21_Story_SciFi_Genre",
         },
         {
-          eGenre: 11,
+          eGenre: _._.k_ESummerSale2021Genre_MysteryAndDetective,
           strPageTitle: "#Summer21_Story_Mystery_Title",
           strPageNumber: "#Summer21_Story_Mystery_Pg",
           strPageText: "#Summer21_Story_Mystery_Intro",
@@ -37103,7 +37575,7 @@
           strGenreName: "#Summer21_Story_Mystery_Genre",
         },
         {
-          eGenre: 12,
+          eGenre: _._.k_ESummerSale2021Genre_Space,
           strPageTitle: "#Summer21_Story_Space_Title",
           strPageNumber: "#Summer21_Story_Space_Pg",
           strPageText: "#Summer21_Story_Space_Intro",
@@ -37118,7 +37590,7 @@
           strGenreName: "#Summer21_Story_Space_Genre",
         },
         {
-          eGenre: 13,
+          eGenre: _._.k_ESummerSale2021Genre_RogueLike,
           strPageTitle: "#Summer21_Story_Roguelike_Title",
           strPageNumber: "#Summer21_Story_Roguelike_Pg",
           strPageText: "#Summer21_Story_Roguelike_Intro",
@@ -37133,7 +37605,7 @@
           strGenreName: "#Summer21_Story_Roguelike_Genre",
         },
         {
-          eGenre: 14,
+          eGenre: _._.k_ESummerSale2021Genre_Anime,
           strPageTitle: "#Summer21_Story_Anime_Title",
           strPageNumber: "#Summer21_Story_Anime_Pg",
           strPageText: "#Summer21_Story_Anime_Intro",
@@ -37303,8 +37775,8 @@
             })(__webpack_require__),
             [_, _] = _(__webpack_require__),
             _ = null == _ ? void 0 : _.choice,
-            _ = 1 === _,
-            _ = 2 === _,
+            _ = _ === _._.k_ESummerSale2021StoryChoice_A,
+            _ = _ === _._.k_ESummerSale2021StoryChoice_B,
             [_, _] = _.useState(!1);
           if (!_)
             return (
@@ -37398,7 +37870,7 @@
                     "div",
                     {
                       className: (0, _._)(_().OptionText, _ && _().Disabled),
-                      onClick: () => _(1),
+                      onClick: () => _(_._.k_ESummerSale2021StoryChoice_A),
                     },
                     (0, _._)(_.strOptionA),
                   ),
@@ -37406,7 +37878,7 @@
                     "div",
                     {
                       className: (0, _._)(_().OptionText, _ && _().Disabled),
-                      onClick: () => _(2),
+                      onClick: () => _(_._.k_ESummerSale2021StoryChoice_B),
                     },
                     (0, _._)(_.strOptionB),
                   ),
@@ -37552,6 +38024,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -37575,16 +38048,17 @@
                     });
                   if (
                     200 === (null == _ ? void 0 : _.status) &&
-                    1 ===
-                      (null === (_ = null == _ ? void 0 : _.data) ||
-                      void 0 === _
-                        ? void 0
-                        : _.success)
+                    (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                      ? void 0
+                      : _.success) === _._.k_EResultOK
                   ) {
                     const _ = _.data.data;
-                    if (_.has_ps5_controller) return 45;
-                    if (_.has_ps4_controller) return 34;
-                    if (_.has_xbox_controller) return 32;
+                    if (_.has_ps5_controller)
+                      return _._.k_eControllerType_PS5Controller;
+                    if (_.has_ps4_controller)
+                      return _._.k_eControllerType_PS4Controller;
+                    if (_.has_xbox_controller)
+                      return _._.k_eControllerType_XBoxOneController;
                   } else _ = (0, _._)(_);
                 } catch (_) {
                   _ = (0, _._)(_);
@@ -37592,7 +38066,7 @@
                 return (
                   _ &&
                     console.error("useLastControllerUsedByPlayer failed:", _),
-                  0
+                  _._.k_eControllerType_Unknown
                 );
               },
               enabled: !!_._.accountid,
@@ -37603,23 +38077,23 @@
         }, [_, __webpack_require__]);
         const _ = [
           {
-            value: 28,
+            value: _._.k_EStoreCategoryFullController,
             label:
-              32 === _
+              _ === _._.k_eControllerType_XBoxOneController
                 ? "#Store_ControllerFilter_Your_Xbox"
                 : "#Store_ControllerFilter_Xbox",
           },
           {
-            value: 55,
+            value: _._.k_EStoreCategoryPS4Controller,
             label:
-              34 === _
+              _ === _._.k_eControllerType_PS4Controller
                 ? "#Store_ControllerFilter_Your_PS4"
                 : "#Store_ControllerFilter_PS4",
           },
           {
-            value: 57,
+            value: _._.k_EStoreCategoryPS5Controller,
             label:
-              45 === _
+              _ === _._.k_eControllerType_PS5Controller
                 ? "#Store_ControllerFilter_Your_PS5"
                 : "#Store_ControllerFilter_PS5",
           },
@@ -37714,7 +38188,7 @@
                 params: _,
                 withCredentials: !0,
               });
-            if (200 === _.status && 1 === _.data.success) {
+            if (200 === _.status && _.data.success === _._.k_EResultOK) {
               if (_.data.playtime)
                 for (const _ of _.data.playtime)
                   _.set(_.appid, {
@@ -37879,7 +38353,7 @@
                 params: _,
                 withCredentials: !0,
               });
-            if (200 === _.status && 1 === _.data.success) {
+            if (200 === _.status && _.data.success === _._.k_EResultOK) {
               if (_.data.dlc_appids)
                 for (const _ of _.data.dlc_appids)
                   _._.Get().BOwnsApp(_) || _.push(Number(_));
@@ -37904,19 +38378,19 @@
             let _ = null;
             switch (_.strFlavor) {
               case "discounted":
-                _ = 8;
+                _ = _._.k_EStoreDiscoveryQueueTypeDLCOnSale;
                 break;
               case "recently_released":
-                _ = 13;
+                _ = _._.k_EStoreDiscoveryQueueTypeDLCNewReleases;
                 break;
               case "popular":
-                _ = 14;
+                _ = _._.k_EStoreDiscoveryQueueTypeDLCTopSellers;
                 break;
               case "upcoming":
-                _ = 15;
+                _ = _._.k_EStoreDiscoveryQueueTypeDLCUpcoming;
                 break;
               default:
-                _ = 7;
+                _ = _._.k_EStoreDiscoveryQueueTypeDLC;
             }
             if (
               (_.Body().set_queue_type(_),
@@ -37960,7 +38434,7 @@
                   .sale_filter()
                   .set_sale_tagid(_.nSaleTagID);
             const _ = await _._.GetDiscoveryQueue(this.m_serviceTransport, _);
-            if (1 === _.GetEResult()) {
+            if (_.GetEResult() === _._.k_EResultOK) {
               if (
                 (null === (_ = _.Body().appids()) || void 0 === _
                   ? void 0
@@ -38064,7 +38538,7 @@
               this.m_anonymousServiceTransport,
               _,
             );
-            if (1 === _.GetEResult()) {
+            if (_.GetEResult() === _._.k_EResultOK) {
               if (_.Body().dlc_lists().length > 0)
                 for (const _ of _.Body().dlc_lists()) {
                   const _ = _.parent_appid();
@@ -38153,7 +38627,7 @@
                 params: _,
                 withCredentials: !0,
               });
-            if (200 === _.status && 1 === _.data.success) {
+            if (200 === _.status && _.data.success === _._.k_EResultOK) {
               if (_.data.dlc_appids && _.data.parent_appids)
                 for (const _ of _.data.parent_appids) {
                   const _ = Number(_);
@@ -38201,7 +38675,7 @@
                 params: _,
                 withCredentials: !0,
               });
-            200 === _.status && 1 === _.data.success
+            200 === _.status && _.data.success === _._.k_EResultOK
               ? ((_.nGamesOwned = Number(_.data.games_owned)),
                 (_.nDLCOwned = Number(_.data.dlc_owned)),
                 (_.nDLCNotOwned = Number(_.data.dlc_not_owned)))
@@ -38536,7 +39010,7 @@
           [_, _] = (0, _.useState)(() => _(_)),
           _ = (0, _._)();
         (0, _.useEffect)(() => {
-          _ || 1 == _ || _(_(_));
+          _ || _ == _._.k_EStoreItemCacheState_Loading || _(_(_));
         }, [_, _, _]);
         const [_] = (0, _._)(_, _._);
         if (!_)
@@ -39165,7 +39639,7 @@
                   _.createElement(_._, {
                     className: (0, _._)(_.ClaimButton, "ClaimButton"),
                     bPreviewMode: _,
-                    rewardType: 0,
+                    rewardType: _._.k_ECommunityItemClass_Invalid,
                     strButtonOverride:
                       (null ===
                         (_ =
@@ -39907,7 +40381,7 @@
               [_, _]
             );
           }, [_, _]);
-        return _ && 3 == _
+        return _ && _ == _._.k_EStoreItemCacheState_Found
           ? _.createElement(
               _.Fragment,
               null,
@@ -40562,7 +41036,7 @@
             [_, _],
           );
         return _.createElement(
-          "div",
+          _._,
           {
             className: (0, _._)({
               [_().MediaRow]: !0,
@@ -40816,7 +41290,7 @@
             null != _.current && _(_, _, _.current);
           }, [_, _, _]),
           _.createElement(
-            "div",
+            _._,
             {
               ref: _,
               className: (0, _._)({

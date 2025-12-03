@@ -61,29 +61,30 @@
     },
     98019: (e, t, n) => {
       "use strict";
-      n.d(t, { YA: () => l, p: () => c, qh: () => i });
-      var a = n(20194),
-        r = n(41735),
-        o = n.n(r),
-        s = n(78327);
-      function i() {
-        const e = (0, a.I)({
+      n.d(t, { YA: () => u, p: () => l, qh: () => c });
+      var a = n(37085),
+        r = n(20194),
+        o = n(41735),
+        s = n.n(o),
+        i = n(78327);
+      function c() {
+        const e = (0, r.I)({
           queryKey: ["useValveAccounts"],
           queryFn: async () => {
-            const e = `${s.TS.PARTNER_BASE_URL}actions/ajaxgetadminusers`,
-              t = await o().get(e);
-            return 200 == t?.status && 1 == t.data?.success
+            const e = `${i.TS.PARTNER_BASE_URL}actions/ajaxgetadminusers`,
+              t = await s().get(e);
+            return 200 == t?.status && t.data?.success == a.d.k_EResultOK
               ? t.data.admins
               : (console.error("ValveAccounts:", t?.status), []);
           },
         });
         return e.isLoading ? null : e.data;
       }
-      function c(e) {
-        const t = i();
+      function l(e) {
+        const t = c();
         return t?.find((t) => t.id == e);
       }
-      function l(e, t) {
+      function u(e, t) {
         const n = e.getQueryData(["useValveAccounts"]);
         return n?.find((e) => e.id === t);
       }
@@ -91,24 +92,26 @@
     32179: (e, t, n) => {
       "use strict";
       n.d(t, {
-        MY: () => u,
-        UA: () => d,
+        MY: () => g,
+        UA: () => m,
         Yd: () => f,
-        qG: () => _,
-        rN: () => m,
-        vh: () => g,
+        qG: () => h,
+        rN: () => E,
+        vh: () => _,
       });
       var a = n(34629),
         r = n(41735),
         o = n.n(r),
         s = n(90626),
-        i = n(68797),
-        c = n(78327),
-        l = n(6419);
-      function u() {
-        return 2 == c.TS.EUNIVERSE ? 12 : 1;
+        i = n(22837),
+        c = n(37085),
+        l = n(68797),
+        u = n(78327),
+        p = n(6419);
+      function g() {
+        return u.TS.EUNIVERSE == i.Bn.k_EUniverseBeta ? 12 : 1;
       }
-      class p {
+      class d {
         m_mapOptInToPartners = new Map();
         m_mapPromises = new Map();
         GetPartnerInfo(e) {
@@ -127,20 +130,20 @@
         async InternalFindPartnerByName(e) {
           const t = new Array();
           try {
-            const n = c.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
+            const n = u.TS.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
               a = {
-                sessionid: c.TS.SESSIONID,
+                sessionid: u.TS.SESSIONID,
                 searchtext: e,
                 origin: self.origin,
               },
               r = await o().get(n, { params: a });
-            200 == r?.status && 1 == r?.data?.success
+            200 == r?.status && r?.data?.success == c.d.k_EResultOK
               ? r.data.publishers.forEach((e) => {
                   const n = {
                     partnerid: e.publisherid,
                     name: e.publishername,
                     partner_url:
-                      c.TS.PARTNER_BASE_URL + `pub/publisher/${e.publisherid}/`,
+                      u.TS.PARTNER_BASE_URL + `pub/publisher/${e.publisherid}/`,
                     contacts: e.contacts,
                   };
                   this.m_mapOptInToPartners.set(e.publisherid, n), t.push(n);
@@ -149,7 +152,7 @@
                   `CPartnerInfoStore.FindPartnerByName failed with status ${r?.status} eresult ${r?.data?.success} and msg ${r?.data?.msg}`,
                 );
           } catch (e) {
-            const t = (0, i.H)(e);
+            const t = (0, l.H)(e);
             console.error(
               "CPartnerInfoStore.FindPartnerByName failed add: " +
                 t.strErrorMsg,
@@ -179,20 +182,20 @@
         static s_Singleton;
         static Get() {
           return (
-            p.s_Singleton ||
-              ((p.s_Singleton = new p()),
-              ("dev" != c.TS.WEB_UNIVERSE && "beta" != c.TS.WEB_UNIVERSE) ||
-                (window.g_PartnerInfoStore = p.s_Singleton)),
-            p.s_Singleton
+            d.s_Singleton ||
+              ((d.s_Singleton = new d()),
+              ("dev" != u.TS.WEB_UNIVERSE && "beta" != u.TS.WEB_UNIVERSE) ||
+                (window.g_PartnerInfoStore = d.s_Singleton)),
+            d.s_Singleton
           );
         }
         constructor() {
           let e = JSON.parse(
-            JSON.stringify((0, c.Tc)("partner_info", "application_config")),
+            JSON.stringify((0, u.Tc)("partner_info", "application_config")),
           );
           this.ValidateStoreDefault(e) &&
             (e.forEach((e) => this.m_mapOptInToPartners.set(e.partnerid, e)),
-            "dev" == c.TS.WEB_UNIVERSE &&
+            "dev" == u.TS.WEB_UNIVERSE &&
               console.log("DEV_DEUBG: CPartnerInfoStore::constructor", e));
         }
         ValidateStoreDefault(e) {
@@ -209,13 +212,13 @@
           );
         }
       }
-      function g(e) {
+      function _(e) {
         const [t, n] = (0, s.useState)(!1);
         return (
           (0, s.useEffect)(() => {
             !t &&
               e?.length > 0 &&
-              p
+              d
                 .Get()
                 .LoadMultiplePartnerInfo(e)
                 .then(() => n(!0));
@@ -223,37 +226,44 @@
           t
         );
       }
-      function d(e) {
-        const [t, n] = s.useState(() => p.Get().GetPartnerInfo(e));
+      function m(e) {
+        const [t, n] = s.useState(() => d.Get().GetPartnerInfo(e));
         return (
           s.useEffect(() => {
-            !p.Get().BHasPartnerInfoLoad(e) && e > 0
-              ? p
+            !d.Get().BHasPartnerInfoLoad(e) && e > 0
+              ? d
                   .Get()
                   .LoadPartnerInfo(e)
                   .then((e) => n(e))
-              : p.Get().BHasPartnerInfoLoad(e) &&
+              : d.Get().BHasPartnerInfoLoad(e) &&
                 t?.partnerid != e &&
-                n(p.Get().GetPartnerInfo(e));
+                n(d.Get().GetPartnerInfo(e));
           }, [e, t]),
           [t]
         );
       }
-      function m() {
-        return { fnFindPartnerByName: p.Get().FindPartnerByName };
+      function E() {
+        return { fnFindPartnerByName: d.Get().FindPartnerByName };
       }
       function f(e) {
-        return p.Get().GetPartnerInfo(e);
+        return d.Get().GetPartnerInfo(e);
       }
-      function _(e) {
-        return p.Get().LoadPartnerInfo(e);
+      function h(e) {
+        return d.Get().LoadPartnerInfo(e);
       }
-      (0, a.Cg)([l.o], p.prototype, "FindPartnerByName", null);
+      (0, a.Cg)([p.o], d.prototype, "FindPartnerByName", null);
     },
-    95742: (e, t, n) => {
+    49693: (e, t, n) => {
       "use strict";
-      n.d(t, { Al: () => a, CS: () => r, op: () => s, vE: () => i });
-      class a {
+      var a;
+      n.d(t, { op: () => i, CS: () => o, vE: () => c, Al: () => r }),
+        (function (e) {
+          (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
+            (e[(e.TEXT = 1)] = "TEXT"),
+            (e[(e.OPENTAG = 2)] = "OPENTAG"),
+            (e[(e.CLOSETAG = 3)] = "CLOSETAG");
+        })(a || (a = {}));
+      class r {
         m_fnAccumulatorFactory;
         m_dictComponents;
         constructor(e, t) {
@@ -263,225 +273,238 @@
             (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, n = !0) {
-          const a = (function (e, t) {
+          const r = (function (e, t) {
             const n = [];
-            let a = { type: 0, text: "" },
-              r = !1,
+            let r = { type: a.UNKNOWN, text: "" },
               o = !1,
-              s = !1;
-            for (let i = 0; i < e.length; i++) {
-              const u = e[i];
-              switch (a.type) {
-                case 0:
-                  "[" == u
-                    ? ((a.type = 2), (o = !0))
-                    : ((a.type = 1), "\\" == u && t ? (r = !r) : (a.text += u));
+              s = !1,
+              i = !1;
+            for (let c = 0; c < e.length; c++) {
+              const p = e[c];
+              switch (r.type) {
+                case a.UNKNOWN:
+                  "[" == p
+                    ? ((r.type = a.OPENTAG), (s = !0))
+                    : ((r.type = a.TEXT),
+                      "\\" == p && t ? (o = !o) : (r.text += p));
                   break;
-                case 2:
-                case 3:
-                  if ("/" == u && o) (a.type = 3), (a.text = ""), (o = !1);
-                  else if ("[" != u || r)
-                    if ("]" != u || r)
-                      "\\" == u && t
-                        ? ((a.text += u), (r = !r), (o = !1))
-                        : ((a.text += u), (r = !1), (o = !1));
+                case a.OPENTAG:
+                case a.CLOSETAG:
+                  if ("/" == p && s)
+                    (r.type = a.CLOSETAG), (r.text = ""), (s = !1);
+                  else if ("[" != p || o)
+                    if ("]" != p || o)
+                      "\\" == p && t
+                        ? ((r.text += p), (o = !o), (s = !1))
+                        : ((r.text += p), (o = !1), (s = !1));
                     else {
                       const e =
-                          2 == a.type &&
-                          "noparse" == a.text?.toLocaleLowerCase(),
+                          r.type == a.OPENTAG &&
+                          "noparse" == r.text?.toLocaleLowerCase(),
                         t =
-                          3 == a.type &&
-                          "noparse" == a.text?.toLocaleLowerCase();
-                      o || (s && !t)
-                        ? ((a = l(a)), (a.text += u))
+                          r.type == a.CLOSETAG &&
+                          "noparse" == r.text?.toLocaleLowerCase();
+                      s || (i && !t)
+                        ? ((r = u(r)), (r.text += p))
                         : e
-                          ? (s = !0)
-                          : t && (s = !1),
-                        (a = c(n, a)),
-                        (o = !1);
+                          ? (i = !0)
+                          : t && (i = !1),
+                        (r = l(n, r)),
+                        (s = !1);
                     }
-                  else (a = c(n, l(a), 2)), (o = !0);
+                  else (r = l(n, u(r), a.OPENTAG)), (s = !0);
                   break;
-                case 1:
-                  "[" != u || r
-                    ? "\\" == u && t
-                      ? (r && (a.text += u), (r = !r))
-                      : ((a.text += u), (r = !1))
-                    : ((a = c(n, a, 2)), (o = !0));
+                case a.TEXT:
+                  "[" != p || o
+                    ? "\\" == p && t
+                      ? (o && (r.text += p), (o = !o))
+                      : ((r.text += p), (o = !1))
+                    : ((r = l(n, r, a.OPENTAG)), (s = !0));
               }
             }
-            0 != a.type &&
-              (2 == a.type || 3 == a.type
-                ? n.push(l(a))
-                : n.push({ type: a.type, text: a.text ?? "" }));
+            r.type != a.UNKNOWN &&
+              (r.type == a.OPENTAG || r.type == a.CLOSETAG
+                ? n.push(u(r))
+                : n.push({ type: r.type, text: r.text ?? "" }));
             return n;
           })(e || "", n);
-          return this.Parse_BuildElements(a, t);
+          return this.Parse_BuildElements(r, t);
         }
         Parse_BuildElements(e, t) {
           let n = this.m_fnAccumulatorFactory(void 0);
-          const a = [],
-            r = () => (a.length < 1 ? void 0 : a[a.length - 1]),
-            o = this.m_dictComponents,
-            s = (e) => !(!e.tag || !o.get(e.tag)?.autocloses);
-          let i = !1,
-            c = !0;
-          const l = (e, a) => {
-            if (e && e.node.tag === a.text && o.get(e.node.tag)) {
-              const a = o.get(e.node.tag),
+          const r = [],
+            o = () => (r.length < 1 ? void 0 : r[r.length - 1]),
+            s = this.m_dictComponents,
+            i = (e) => !(!e.tag || !s.get(e.tag)?.autocloses);
+          let c = !1,
+            l = !0;
+          const u = (e, a) => {
+            if (e && e.node.tag === a.text && s.get(e.node.tag)) {
+              const a = s.get(e.node.tag),
                 r = {
                   tagname: e.node.tag,
                   args: e.node.args,
                   rawargs: e.node.rawargs,
                 },
-                s = t(a.Constructor, r, ...n.GetElements());
+                o = t(a.Constructor, r, ...n.GetElements());
               (n = e.accumulator),
-                Array.isArray(s)
-                  ? s.forEach((e) => n.AppendNode(e))
-                  : n.AppendNode(s),
-                (i = !!a.skipFollowingNewline),
-                (c = e.bWrapTextForCopying);
+                Array.isArray(o)
+                  ? o.forEach((e) => n.AppendNode(e))
+                  : n.AppendNode(o),
+                (c = !!a.skipFollowingNewline),
+                (l = e.bWrapTextForCopying);
             } else if (e) {
               const t = e.accumulator;
               t.AppendText("[" + e.node.text + "]", !1),
                 n.GetElements().forEach((e) => t.AppendNode(e)),
                 t.AppendText("[/" + a.text + "]", !1),
                 (n = t),
-                (c = e.bWrapTextForCopying);
+                (l = e.bWrapTextForCopying);
             }
           };
           for (
             e.forEach((e, t) => {
-              if (1 == e.type) {
-                const t = i ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                n.AppendText(t, c), (i = !1);
-              } else if (2 == e.type) {
-                const t = o.get(e.tag);
+              if (e.type == a.TEXT) {
+                const t = c ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                n.AppendText(t, l), (c = !1);
+              } else if (e.type == a.OPENTAG) {
+                const t = s.get(e.tag);
                 if (t) {
-                  const s = r();
-                  if (void 0 !== s) {
-                    const t = o.get(s.node.tag);
+                  const a = o();
+                  if (void 0 !== a) {
+                    const t = s.get(a.node.tag);
                     t &&
                       t.autocloses &&
-                      e.tag === s.node.tag &&
-                      l(a.pop(), s.node);
+                      e.tag === a.node.tag &&
+                      u(r.pop(), a.node);
                   }
-                  a.push({ accumulator: n, node: e, bWrapTextForCopying: c }),
+                  r.push({ accumulator: n, node: e, bWrapTextForCopying: l }),
                     (n = this.m_fnAccumulatorFactory(e)),
-                    (i = !!t.skipInternalNewline),
-                    (c = t.allowWrapTextForCopying ?? !1);
-                } else n.AppendText("[" + e.text + "]", 0 == a.length);
-              } else if (3 == e.type) {
-                for (; r() && r().node.tag !== e.text && s(r().node); ) {
-                  const e = a.pop();
-                  l(e, e.node);
+                    (c = !!t.skipInternalNewline),
+                    (l = t.allowWrapTextForCopying ?? !1);
+                } else n.AppendText("[" + e.text + "]", 0 == r.length);
+              } else if (e.type == a.CLOSETAG) {
+                for (; o() && o().node.tag !== e.text && i(o().node); ) {
+                  const e = r.pop();
+                  u(e, e.node);
                 }
-                if (r()?.node.tag == e.text) {
-                  const t = a.pop();
-                  l(t, e);
-                } else n.AppendText("[/" + e.text + "]", 0 == a.length);
+                if (o()?.node.tag == e.text) {
+                  const t = r.pop();
+                  u(t, e);
+                } else n.AppendText("[/" + e.text + "]", 0 == r.length);
               }
             });
-            a.length > 0;
+            r.length > 0;
           ) {
-            const e = a.pop();
-            l(e, e.node);
+            const e = r.pop();
+            u(e, e.node);
           }
           return n.GetElements();
         }
       }
-      function r(e, t) {
+      function o(e, t) {
         let n = "[" + e;
-        t?.[""] && (n += `=${o("" + t[""])}`);
+        t?.[""] && (n += `=${s("" + t[""])}`);
         for (const e in t)
           "" !== e &&
-            (n += ` ${((a = e), a.replace(/(\\| |\])/g, "\\$1"))}=${o("" + t[e])}`);
+            (n += ` ${((a = e), a.replace(/(\\| |\])/g, "\\$1"))}=${s("" + t[e])}`);
         var a;
         return (n += "]"), n;
       }
-      function o(e) {
+      function s(e) {
         return `"${e.replace(/(\\|"|\])/g, "\\$1")}"`;
       }
-      function s(e) {
+      function i(e) {
         return `[/${e}]`;
       }
-      function i(e) {
+      function c(e) {
         return e.replace(/(\\|\[)/g, "\\$1");
       }
-      function c(e, t, n = 0) {
-        const { type: a, text: r = "" } = t;
-        if (2 == a) {
-          let t = r.indexOf("=");
-          const n = r.indexOf(" ");
-          let o, s;
+      function l(e, t, n = a.UNKNOWN) {
+        const { type: r, text: o = "" } = t;
+        if (r == a.OPENTAG) {
+          let t = o.indexOf("=");
+          const n = o.indexOf(" ");
+          let a, s;
           -1 != n && (-1 == t || n < t) && (t = n);
           let i = "";
           t > 0
-            ? ((o = r.substr(0, t).toLocaleLowerCase()),
-              (i = r.substr(t)),
+            ? ((a = o.substr(0, t).toLocaleLowerCase()),
+              (i = o.substr(t)),
               (s = (function (e) {
                 if (!e || e.length < 1) return {};
                 const t = {};
-                let n = "",
+                let n,
                   a = "",
-                  r = 0,
-                  o = 0;
-                "=" == e[0] && (r = 2);
-                let s = !1;
-                for (o++; o < e.length; o++) {
-                  const i = e[o];
-                  let c = !0,
-                    l = !1;
-                  switch (r) {
-                    case 0:
-                      if ("=" == i) return {};
-                      if (" " == i) continue;
-                      r = 1;
+                  r = "";
+                !(function (e) {
+                  (e[(e.PRE_NAME = 0)] = "PRE_NAME"),
+                    (e[(e.IN_NAME = 1)] = "IN_NAME"),
+                    (e[(e.POST_NAME = 2)] = "POST_NAME"),
+                    (e[(e.IN_VALUE = 3)] = "IN_VALUE"),
+                    (e[(e.IN_QUOTED_VALUE = 4)] = "IN_QUOTED_VALUE");
+                })(n || (n = {}));
+                let o = n.PRE_NAME,
+                  s = 0;
+                "=" == e[0] && (o = n.POST_NAME);
+                let i = !1;
+                for (s++; s < e.length; s++) {
+                  const c = e[s];
+                  let l = !0,
+                    u = !1;
+                  switch (o) {
+                    case n.PRE_NAME:
+                      if ("=" == c) return {};
+                      if (" " == c) continue;
+                      o = n.IN_NAME;
                       break;
-                    case 1:
-                      ("=" != i && " " != i) ||
-                        s ||
-                        (" " == i ? ((r = 0), (l = !0)) : (r = 2), (c = !1));
+                    case n.IN_NAME:
+                      ("=" != c && " " != c) ||
+                        i ||
+                        (" " == c
+                          ? ((o = n.PRE_NAME), (u = !0))
+                          : (o = n.POST_NAME),
+                        (l = !1));
                       break;
-                    case 2:
-                      " " == i
-                        ? ((r = 0), (c = !1), (l = !0))
-                        : '"' == i
-                          ? ((r = 4), (c = !1))
-                          : (r = 3);
+                    case n.POST_NAME:
+                      " " == c
+                        ? ((o = n.PRE_NAME), (l = !1), (u = !0))
+                        : '"' == c
+                          ? ((o = n.IN_QUOTED_VALUE), (l = !1))
+                          : (o = n.IN_VALUE);
                       break;
-                    case 3:
-                    case 4:
-                      ((" " == i && 4 != r && !s) ||
-                        ('"' == i && 4 == r && !s)) &&
-                        ((r = 0), (c = !1), (l = !0));
+                    case n.IN_VALUE:
+                    case n.IN_QUOTED_VALUE:
+                      ((" " == c && o != n.IN_QUOTED_VALUE && !i) ||
+                        ('"' == c && o == n.IN_QUOTED_VALUE && !i)) &&
+                        ((o = n.PRE_NAME), (l = !1), (u = !0));
                   }
-                  if (c)
-                    if ("\\" != i || s)
-                      if (((s = !1), 1 == r)) n += i;
+                  if (l)
+                    if ("\\" != c || i)
+                      if (((i = !1), o == n.IN_NAME)) a += c;
                       else {
-                        if (3 != r && 4 != r)
+                        if (o != n.IN_VALUE && o != n.IN_QUOTED_VALUE)
                           throw new Error(
-                            "Not expecting to accumulate buffer in state " + r,
+                            "Not expecting to accumulate buffer in state " + o,
                           );
-                        a += i;
+                        r += c;
                       }
-                    else s = !0;
-                  l && ((t[n] = a), (n = ""), (a = ""));
+                    else i = !0;
+                  u && ((t[a] = r), (a = ""), (r = ""));
                 }
-                0 != r && (t[n] = a);
+                o != n.PRE_NAME && (t[a] = r);
                 return t;
               })(i)))
-            : ((s = {}), (o = r.toLocaleLowerCase())),
-            e.push({ type: a, text: r, tag: o, args: s, rawargs: i });
-        } else 0 != a && e.push({ type: a, text: r });
+            : ((s = {}), (a = o.toLocaleLowerCase())),
+            e.push({ type: r, text: o, tag: a, args: s, rawargs: i });
+        } else r != a.UNKNOWN && e.push({ type: r, text: o });
         return { type: n, text: "" };
       }
-      function l(e) {
+      function u(e) {
         let t = "";
         return (
-          3 == e.type ? (t = "[/") : 2 == e.type && (t = "["),
-          { type: 1, text: t + (e.text ?? "") }
+          e.type == a.CLOSETAG ? (t = "[/") : e.type == a.OPENTAG && (t = "["),
+          { type: a.TEXT, text: t + (e.text ?? "") }
         );
       }
     },
@@ -548,7 +571,7 @@
         u = n(91986);
       class p {
         m_eCurLang = (0, s.sf)(l.TS.LANGUAGE);
-        m_rgHasData = (0, i.$Y)([], 31, !1);
+        m_rgHasData = (0, i.$Y)([], s.gS.k_Lang_MAX, !1);
         m_bHasLocalizationContext = !1;
         m_callback = new u.l();
         GetCallback() {
@@ -637,7 +660,7 @@
     },
     27144: (e, t, n) => {
       "use strict";
-      n.d(t, { B3: () => C, CF: () => b, KM: () => L, KT: () => y });
+      n.d(t, { B3: () => A, CF: () => O, KM: () => L, KT: () => N });
       var a = n(41735),
         r = n.n(a),
         o = n(58632),
@@ -645,22 +668,23 @@
         i = n(90626),
         c = n(20194),
         l = n(75233),
-        u = n(17720),
-        p = n(68797),
-        g = n(78327),
-        d = n(56545),
+        u = n(37085),
+        p = n(17720),
+        g = n(68797),
+        d = n(78327),
+        _ = n(56545),
         m = n(37735),
-        f = n(23809),
-        _ = n(7860);
+        E = n(23809),
+        f = n(7860);
       const h = "nicknames";
       function L(e) {
-        const t = (0, f.KV)(),
+        const t = (0, E.KV)(),
           { data: n, isLoading: a } = (0, c.I)({
             queryKey: [h],
             queryFn: async () => {
               const e = new Map();
-              if (g.iA.logged_in) {
-                const n = d.w.Init(m.dN),
+              if (d.iA.logged_in) {
+                const n = _.w.Init(m.dN),
                   a = (await m.xt.GetNicknameList(t, n)).Body().toObject();
                 a?.nicknames &&
                   a.nicknames.length > 0 &&
@@ -678,9 +702,9 @@
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, g.yK)()
-                  ? g.TS.COMMUNITY_BASE_URL
-                  : g.TS.STORE_BASE_URL;
+                "community" == (0, d.yK)()
+                  ? d.TS.COMMUNITY_BASE_URL
+                  : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const n = { accountid: e[0], origin: self.origin },
                   a = await r().get(`${t}actions/ajaxgetavatarpersona`, {
@@ -689,10 +713,10 @@
                 if (
                   !a ||
                   200 != a.status ||
-                  1 != a.data?.success ||
+                  a.data?.success != u.d.k_EResultOK ||
                   !a.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, p.H))(a).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, g.H))(a).strErrorMsg}`;
                 return [a.data.userinfo];
               }
               {
@@ -703,14 +727,14 @@
                 if (
                   !a ||
                   200 != a.status ||
-                  1 != a.data?.success ||
+                  a.data?.success != u.d.k_EResultOK ||
                   !a.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, p.H))(a).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, g.H))(a).strErrorMsg}`;
                 const o = new Map();
                 return (
                   a.data.userinfos.forEach((e) =>
-                    o.set(new u.b(e.steamid).GetAccountID(), e),
+                    o.set(new p.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => o.get(e))
                 );
@@ -718,23 +742,23 @@
             })(e),
           { cache: !1 },
         ),
-        E = "avatarandpersonas";
-      function y(e) {
+        T = "avatarandpersonas";
+      function N(e) {
         const { data: t, isLoading: n } = (0, c.I)({
-          queryKey: [E, e],
+          queryKey: [T, e],
           queryFn: () => S.load(e),
         });
         return [t, n];
       }
-      function C(e) {
+      function A(e) {
         const t = (0, l.jE)(),
           { data: n, isLoading: a } = (0, c.I)({
-            queryKey: [E, e],
+            queryKey: [T, e],
             queryFn: async () => {
               const n = await S.loadMany(e);
               return (
                 n.forEach((e) => {
-                  const n = [E, new u.b(e.steamid).GetAccountID()];
+                  const n = [T, new p.b(e.steamid).GetAccountID()];
                   t.setQueryData(n, e);
                 }),
                 n
@@ -753,13 +777,13 @@
           }, [n]);
         return a ? null : r;
       }
-      function b(e) {
-        return _.L.getQueryData([E, e]);
+      function O(e) {
+        return f.L.getQueryData([T, e]);
       }
     },
     1909: (e, t, n) => {
       "use strict";
-      n.d(t, { Ng: () => h, iN: () => L, yk: () => S });
+      n.d(t, { Ng: () => f, iN: () => h, yk: () => L });
       var a = n(34629),
         r = n(75844),
         o = n(65946),
@@ -771,10 +795,10 @@
         p = n.n(u),
         g = n(52038),
         d = n(61859),
-        m = n(91675),
-        f = n(73745),
-        _ = n(32754);
-      let h = class extends s.Component {
+        _ = n(91675),
+        m = n(73745),
+        E = n(32754);
+      let f = class extends s.Component {
         GenerateLanguageOptions() {
           let e = [];
           const {
@@ -787,7 +811,7 @@
             e.push(
               s.createElement(
                 "option",
-                { key: "langpicker_unset", value: -1 },
+                { key: "langpicker_unset", value: i.gS.k_Lang_None },
                 (0, d.we)("#language_selection_none"),
               ),
             );
@@ -834,7 +858,7 @@
               ((i += " "),
               (i += (0, d.we)(
                 "#Language_Last_Update",
-                (0, d.$z)(o) + " @ " + (0, m.KC)(o, { bForce24HourClock: !1 }),
+                (0, d.$z)(o) + " @ " + (0, _.KC)(o, { bForce24HourClock: !1 }),
               ))),
               e.push(
                 s.createElement(
@@ -864,7 +888,7 @@
           const { selectedLang: e, bDisabled: t, strTooltip: n } = this.props;
           let a = this.GenerateLanguageOptions();
           return s.createElement(
-            _.he,
+            E.he,
             { toolTipContent: n },
             s.createElement(
               "select",
@@ -874,12 +898,12 @@
           );
         }
       };
-      function L(e) {
+      function h(e) {
         const [t, n] = (0, o.q3)(() => [
           l.O.Get().GetHasLocalizationContext(),
           l.O.Get().GetCurEditLanguage(),
         ]);
-        return s.createElement(h, {
+        return s.createElement(f, {
           selectedLang: n,
           fnLangHasData: l.O.Get().BHasLanguageData,
           fnOnLanguageChanged: l.O.Get().SetCurEditLanguage,
@@ -887,7 +911,7 @@
           strTooltip: t ? void 0 : (0, d.we)("#Localization_EditorNotInFocus"),
         });
       }
-      function S(e) {
+      function L(e) {
         const { fnLangHasData: t } = e;
         s.useEffect(
           () => (
@@ -898,7 +922,8 @@
         );
         const n = (0, o.q3)(() => {
           const e = [];
-          for (let n = 0; n < 31; ++n) e[n] = t && t(n);
+          for (let n = i.gS.k_Lang_English; n < i.gS.k_Lang_MAX; ++n)
+            e[n] = t && t(n);
           return e;
         });
         return (
@@ -906,12 +931,12 @@
           s.createElement(s.Fragment, null)
         );
       }
-      (0, a.Cg)([f.oI], h.prototype, "OnLanguageChange", null),
-        (h = (0, a.Cg)([r.PA], h));
+      (0, a.Cg)([m.oI], f.prototype, "OnLanguageChange", null),
+        (f = (0, a.Cg)([r.PA], f));
     },
     48479: (e, t, n) => {
       "use strict";
-      n.d(t, { AQ: () => d, pn: () => f, qx: () => m });
+      n.d(t, { AQ: () => d, pn: () => m, qx: () => _ });
       var a = n(16676),
         r = n(61859),
         o = n(12155),
@@ -930,9 +955,9 @@
             toggleMinimized: r,
             className: o,
             children: d,
-            elAdditionalButtons: m,
+            elAdditionalButtons: _,
           } = e,
-          _ = (0, p.q3)(() => a());
+          E = (0, p.q3)(() => a());
         return s.createElement(
           s.Fragment,
           null,
@@ -960,14 +985,14 @@
             s.createElement(
               "div",
               { className: u.SectionTitleButtons },
-              m,
-              s.createElement(f, { bIsMinimized: _, fnToggleMinimize: r }),
+              _,
+              s.createElement(m, { bIsMinimized: E, fnToggleMinimize: r }),
             ),
           ),
-          !_ && s.createElement(l.tH, null, d),
+          !E && s.createElement(l.tH, null, d),
         );
       }
-      function m(e) {
+      function _(e) {
         const [t, n] = s.useState(Boolean(e.bStartMinimized));
         return s.createElement(
           d,
@@ -975,7 +1000,7 @@
           e.children,
         );
       }
-      function f(e) {
+      function m(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
           i = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return s.createElement(

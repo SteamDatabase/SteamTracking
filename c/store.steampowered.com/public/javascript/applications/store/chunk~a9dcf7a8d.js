@@ -224,8 +224,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -241,7 +243,7 @@
           [_, _] = _.useState(!1);
         if (
           (_.useEffect(() => {
-            0 != _ && _(!0);
+            _ != _.Image && _(!0);
           }, [_]),
           _.useEffect(() => {
             if (_) return void _(!0);
@@ -249,11 +251,11 @@
             const _ = setTimeout(() => _(!1), 3e3);
             return () => clearTimeout(_);
           }, [_, _]),
-          null == __webpack_require__ || 0 == _)
+          null == __webpack_require__ || _ == _.Image)
         )
           return;
         const _ =
-          1 == _
+          _ == _.Micro
             ? (0, _._)("#StoreTrailer_Title_TrailerPreview")
             : (0, _._)(__webpack_require__);
         return _.createElement(
@@ -277,26 +279,32 @@
           ),
         );
       }
+      !(function (_) {
+        (_[(_.Image = 0)] = "Image"),
+          (_[(_.Micro = 1)] = "Micro"),
+          (_[(_.Full = 2)] = "Full");
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
-          case 1:
+          case _._.k_ETrailerCategory_Gameplay:
             return (0, _._)("#StoreTrailer_Title_Category_Gameplay");
-          case 2:
+          case _._.k_ETrailerCategory_Teaser:
             return (0, _._)("#StoreTrailer_Title_Category_Teaser");
-          case 3:
+          case _._.k_ETrailerCategory_Cinematic:
             return (0, _._)("#StoreTrailer_Title_Category_Cinematic");
-          case 4:
+          case _._.k_ETrailerCategory_Update:
             return (0, _._)("#StoreTrailer_Title_Category_Update");
-          case 5:
+          case _._.k_ETrailerCategory_Accolades:
             return (0, _._)("#StoreTrailer_Title_Category_Accolades");
-          case 6:
+          case _._.k_ETrailerCategory_Interview:
             return (0, _._)("#StoreTrailer_Title_Category_Interview");
         }
         return (0, _._)("#StoreTrailer_Title_Category_Unknown");
@@ -696,6 +704,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 200,
         _ = 5e3;
@@ -825,7 +834,7 @@
             title: _,
           } = _,
           _ = (0, _._)("once", _, __webpack_require__);
-        if (0 == _ || !_) return null;
+        if (_ == _._.k_ETrailerCategory_Invalid || !_) return null;
         let _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
         return _.createElement(
           "div",
@@ -1163,7 +1172,7 @@
             title: _,
           } = _,
           _ = (0, _._)("standard", _, __webpack_require__);
-        if (0 == _ || !_) return null;
+        if (_ == _._.k_ETrailerCategory_Invalid || !_) return null;
         let _ = (0, _._)(
           _().TitleRow,
           _ && !__webpack_require__ && _().FadeIn,
@@ -1402,7 +1411,7 @@
             title: _,
           } = _,
           _ = (0, _._)("standard", _, __webpack_require__);
-        if (0 == _ || !_) return null;
+        if (_ == _._.k_ETrailerCategory_Invalid || !_) return null;
         let _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
         return _.createElement(
           "div",
@@ -1468,7 +1477,7 @@
           localContext: _,
           focus: _,
         } = _;
-        (_ = _ || ""), (_ = _ || 0);
+        (_ = _ || ""), (_ = _ || _._.k_ETrailerCategory_Invalid);
         let [_, _] = (function (_, _, _, _, _, _) {
           let _ = (0, _._)(),
             _ = _.useRef(void 0);

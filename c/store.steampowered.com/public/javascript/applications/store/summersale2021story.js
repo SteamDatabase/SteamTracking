@@ -61,10 +61,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapGenreToStickerResponse = new Map();
-        m_eStoryBadgeGranted = 0;
+        m_eStoryBadgeGranted = _._.k_EUserBadgeInvalid;
         m_strLocalizedStoryHeader;
         m_strLocalizedStoryHeaderMobile;
         static s_Singleton;
@@ -119,7 +122,11 @@
                 cancelToken: _?.token,
               },
             );
-            if (200 == _?.status && 1 == _.data?.success && _.data?.results) {
+            if (
+              200 == _?.status &&
+              _.data?.success == _._.k_EResultOK &&
+              _.data?.results
+            ) {
               const _ = _.data.results;
               return void this.m_mapGenreToStickerResponse.set(_, _);
             }
@@ -133,7 +140,7 @@
           console.error("Could not check claim on genre", _, _.strErrorMsg, _);
         }
         async MakeClaimForGenre(_, _, _) {
-          if (!_._.logged_in) return 21;
+          if (!_._.logged_in) return _._.k_EResultNotLoggedOn;
           const _ = new FormData();
           _.append("genre", _.toString()),
             _.append("choice", _.toString()),
@@ -148,7 +155,11 @@
                 cancelToken: _?.token,
               },
             );
-            if (200 == _?.status && 1 == _.data?.success && _.data?.results) {
+            if (
+              200 == _?.status &&
+              _.data?.success == _._.k_EResultOK &&
+              _.data?.results
+            ) {
               const _ = _.data.results,
                 _ = this.m_mapGenreToStickerResponse.get(_);
               return (
@@ -167,7 +178,7 @@
           const _ = (0, _._)(_);
           return (
             console.error("Could not make claim on genre", _, _.strErrorMsg, _),
-            _?.data?.success || 2
+            _?.data?.success || _._.k_EResultFail
           );
         }
       }
@@ -215,7 +226,7 @@
       const _ = [
         null,
         {
-          eGenre: 1,
+          eGenre: _._.k_ESummerSale2021Genre_Action,
           strPageTitle: "#Summer21_Story_Action_Title",
           strPageNumber: "#Summer21_Story_Action_Pg",
           strPageText: "#Summer21_Story_Action_Intro",
@@ -230,7 +241,7 @@
           strGenreName: "#Summer21_Story_Action_Genre",
         },
         {
-          eGenre: 2,
+          eGenre: _._.k_ESummerSale2021Genre_AdventureAndCasual,
           strPageTitle: "#Summer21_Story_Adventure_Title",
           strPageNumber: "#Summer21_Story_Adventure_Pg",
           strPageText: "#Summer21_Story_Adventure_Intro",
@@ -245,7 +256,7 @@
           strGenreName: "#Summer21_Story_Adventure_Genre",
         },
         {
-          eGenre: 3,
+          eGenre: _._.k_ESummerSale2021Genre_RolePlaying,
           strPageTitle: "#Summer21_Story_RPG_Title",
           strPageNumber: "#Summer21_Story_RPG_Pg",
           strPageText: "#Summer21_Story_RPG_Intro",
@@ -260,7 +271,7 @@
           strGenreName: "#Summer21_Story_RPG_Genre",
         },
         {
-          eGenre: 4,
+          eGenre: _._.k_ESummerSale2021Genre_Strategy,
           strPageTitle: "#Summer21_Story_Strategy_Title",
           strPageNumber: "#Summer21_Story_Strategy_Pg",
           strPageText: "#Summer21_Story_Strategy_Intro",
@@ -275,7 +286,7 @@
           strGenreName: "#Summer21_Story_Strategy_Genre",
         },
         {
-          eGenre: 5,
+          eGenre: _._.k_ESummerSale2021Genre_Simulation,
           strPageTitle: "#Summer21_Story_Sim_Title",
           strPageNumber: "#Summer21_Story_Sim_Pg",
           strPageText: "#Summer21_Story_Sim_Intro",
@@ -290,7 +301,7 @@
           strGenreName: "#Summer21_Story_Sim_Genre",
         },
         {
-          eGenre: 6,
+          eGenre: _._.k_ESummerSale2021Genre_SportsAndRacing,
           strPageTitle: "#Summer21_Story_Sports_Title",
           strPageNumber: "#Summer21_Story_Sports_Pg",
           strPageText: "#Summer21_Story_Sports_Intro",
@@ -305,7 +316,7 @@
           strGenreName: "#Summer21_Story_Sports_Genre",
         },
         {
-          eGenre: 7,
+          eGenre: _._.k_ESummerSale2021Genre_Horror,
           strPageTitle: "#Summer21_Story_Horror_Title",
           strPageNumber: "#Summer21_Story_Horror_Pg",
           strPageText: "#Summer21_Story_Horror_Intro",
@@ -320,7 +331,7 @@
           strGenreName: "#Summer21_Story_Horror_Genre",
         },
         {
-          eGenre: 8,
+          eGenre: _._.k_ESummerSale2021Genre_Survival,
           strPageTitle: "#Summer21_Story_Survival_Title",
           strPageNumber: "#Summer21_Story_Survival_Pg",
           strPageText: "#Summer21_Story_Survival_Intro",
@@ -335,7 +346,7 @@
           strGenreName: "#Summer21_Story_Survival_Genre",
         },
         {
-          eGenre: 9,
+          eGenre: _._.k_ESummerSale2021Genre_OpenWorld,
           strPageTitle: "#Summer21_Story_Open_Title",
           strPageNumber: "#Summer21_Story_Open_Pg",
           strPageText: "#Summer21_Story_Open_Intro",
@@ -350,7 +361,7 @@
           strGenreName: "#Summer21_Story_Open_Genre",
         },
         {
-          eGenre: 10,
+          eGenre: _._.k_ESummerSale2021Genre_ScifiAndCyberpunk,
           strPageTitle: "#Summer21_Story_SciFi_Title",
           strPageNumber: "#Summer21_Story_SciFi_Pg",
           strPageText: "#Summer21_Story_SciFi_Intro",
@@ -365,7 +376,7 @@
           strGenreName: "#Summer21_Story_SciFi_Genre",
         },
         {
-          eGenre: 11,
+          eGenre: _._.k_ESummerSale2021Genre_MysteryAndDetective,
           strPageTitle: "#Summer21_Story_Mystery_Title",
           strPageNumber: "#Summer21_Story_Mystery_Pg",
           strPageText: "#Summer21_Story_Mystery_Intro",
@@ -380,7 +391,7 @@
           strGenreName: "#Summer21_Story_Mystery_Genre",
         },
         {
-          eGenre: 12,
+          eGenre: _._.k_ESummerSale2021Genre_Space,
           strPageTitle: "#Summer21_Story_Space_Title",
           strPageNumber: "#Summer21_Story_Space_Pg",
           strPageText: "#Summer21_Story_Space_Intro",
@@ -395,7 +406,7 @@
           strGenreName: "#Summer21_Story_Space_Genre",
         },
         {
-          eGenre: 13,
+          eGenre: _._.k_ESummerSale2021Genre_RogueLike,
           strPageTitle: "#Summer21_Story_Roguelike_Title",
           strPageNumber: "#Summer21_Story_Roguelike_Pg",
           strPageText: "#Summer21_Story_Roguelike_Intro",
@@ -410,7 +421,7 @@
           strGenreName: "#Summer21_Story_Roguelike_Genre",
         },
         {
-          eGenre: 14,
+          eGenre: _._.k_ESummerSale2021Genre_Anime,
           strPageTitle: "#Summer21_Story_Anime_Title",
           strPageNumber: "#Summer21_Story_Anime_Pg",
           strPageText: "#Summer21_Story_Anime_Intro",
@@ -446,6 +457,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = () => {
           (0, _._)();
@@ -464,9 +477,10 @@
             );
             if (_.has(_)) {
               let _ = "";
-              1 == _.get(_).choice
+              _.get(_).choice == _._.k_ESummerSale2021StoryChoice_A
                 ? (_ = _.strResultA + "_Summary")
-                : 2 == _.get(_).choice && (_ = _.strResultB + "_Summary"),
+                : _.get(_).choice == _._.k_ESummerSale2021StoryChoice_B &&
+                  (_ = _.strResultB + "_Summary"),
                 _.push(
                   _.createElement(_, {
                     key: _,
@@ -618,32 +632,32 @@
         _ = (_) => {
           const _ = (0, _._)();
           let _;
-          if (51 == _)
+          if (_ == _._.k_EUserBadgeSummerSale2021_MaskedAvenger)
             _ = {
               badge_name: "#Summer21_Badge_Outcome1_Title",
               badge_desc: "#Summer21_Badge_Outcome1_Description",
               badge_class: _.Badge_51,
             };
-          else if (52 == _)
+          else if (_ == _._.k_EUserBadgeSummerSale2021_TrailblazingExplorer)
             _ = {
               badge_name: "#Summer21_Badge_Outcome2_Title",
               badge_desc: "#Summer21_Badge_Outcome2_Description",
               badge_class: _.Badge_52,
             };
-          else if (53 == _)
+          else if (_ == _._.k_EUserBadgeSummerSale2021_GorillaScientist)
             _ = {
               badge_name: "#Summer21_Badge_Outcome3_Title",
               badge_desc: "#Summer21_Badge_Outcome3_Description",
               badge_class: _.Badge_53,
             };
-          else if (54 == _)
+          else if (_ == _._.k_EUserBadgeSummerSale2021_ParanormalProfessor)
             _ = {
               badge_name: "#Summer21_Badge_Outcome4_Title",
               badge_desc: "#Summer21_Badge_Outcome4_Description",
               badge_class: _.Badge_54,
             };
           else {
-            if (55 != _) return null;
+            if (_ != _._.k_EUserBadgeSummerSale2021_GhostDetective) return null;
             _ = {
               badge_name: "#Summer21_Badge_Outcome5_Title",
               badge_desc: "#Summer21_Badge_Outcome5_Description",

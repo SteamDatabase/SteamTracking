@@ -142,7 +142,7 @@
         }
         constructor() {
           (this.m_eCurLang = (0, _._)(_._.LANGUAGE)),
-            (this.m_rgHasData = (0, _._)([], 31, !1)),
+            (this.m_rgHasData = (0, _._)([], _._.k_Lang_MAX, !1)),
             (this.m_bHasLocalizationContext = !1),
             (this.m_callback = new _._()),
             (0, _._)(this);
@@ -180,6 +180,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
@@ -201,26 +202,26 @@
         }
         BHandleKeyPress(_) {
           switch (_) {
-            case 38:
+            case _._.UpArrow:
               this.SetSelectedIndexDelta(-1);
               break;
-            case 40:
+            case _._.DownArrow:
               this.SetSelectedIndexDelta(1);
               break;
-            case 36:
+            case _._.Home:
               this.SetSelectedIndex(0);
               break;
-            case 33:
+            case _._.PageUp:
               this.SetSelectedIndexDelta(-this.GetPageSize());
               break;
-            case 35:
+            case _._.End:
               this.SetSelectedIndex(-1);
               break;
-            case 34:
+            case _._.PageDown:
               this.SetSelectedIndexDelta(this.GetPageSize());
               break;
-            case 13:
-            case 9:
+            case _._.Enter:
+            case _._.Tab:
               if (void 0 === this.state.selectedIndex)
                 return (
                   this.props.onSuggestionSelected(this.props.strSearch), !1
@@ -229,7 +230,7 @@
                 this.m_rgCurrentMatches[this.state.selectedIndex],
               );
               break;
-            case 27:
+            case _._.Escape:
               this.props.onSuggestionSelected(this.props.strSearch);
               break;
             default:
@@ -554,7 +555,7 @@
           !_.ctrlKey &&
           this.m_MentionDialog.BHandleKeyPress(_.keyCode)
             ? _.preventDefault()
-            : (8 != _.keyCode && 46 != _.keyCode) ||
+            : (_.keyCode != _._.Backspace && _.keyCode != _._.Delete) ||
               (this.m_iMentionSearchCancelledOffset = void 0);
         }
         FindMatchOpener(_, _, _) {
@@ -735,6 +736,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const {
@@ -759,7 +762,8 @@
             async (_) => {
               if (
                 (_.ClearImages(),
-                _ && (_(!0), await _.AddExistingClanImage(_, 0)))
+                _ &&
+                  (_(!0), await _.AddExistingClanImage(_, _._.k_Lang_English)))
               ) {
                 _(_);
                 const _ = _.GetUploadImages()[0].IsValidAssetType(_);
@@ -817,7 +821,7 @@
                         width: _,
                         height: _,
                       },
-                      fileType: 3,
+                      fileType: _._.k_EClanImageFileType_PNG,
                     }),
                     _,
                   );
@@ -2682,7 +2686,7 @@
                 "option",
                 {
                   key: "langpicker_unset",
-                  value: -1,
+                  value: _._.k_Lang_None,
                 },
                 (0, _._)("#language_selection_none"),
               ),

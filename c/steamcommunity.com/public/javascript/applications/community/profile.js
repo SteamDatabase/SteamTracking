@@ -301,6 +301,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -708,7 +709,8 @@
                     persona: _,
                   }),
                 )),
-            2 == this.props.friend_relationship && (_ = !0),
+            this.props.friend_relationship ==
+              _._.k_EFriendRelationshipRequestRecipient && (_ = !0),
             _.createElement(
               _.Fragment,
               null,
@@ -946,7 +948,10 @@
                 _,
               );
         };
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -980,7 +985,7 @@
             _,
           );
           return (
-            1 == _.GetEResult()
+            _.GetEResult() == _._.k_EResultOK
               ? ((this.m_rgPreviousAvatars = []),
                 _.Body()
                   .toObject()
@@ -1001,7 +1006,7 @@
           for (let _ = 0; _ < this.m_rgPreviousAvatars.length; ++_)
             if (this.m_rgPreviousAvatars[_].avatar_hash == _)
               return this.SelectAvatar(_, _);
-          return 42;
+          return _._.k_EResultNoMatch;
         }
         async SelectAvatar(_, _) {
           let _ = new FormData();
@@ -1014,8 +1019,8 @@
                 `${_._.COMMUNITY_BASE_URL}actions/selectPreviousAvatar`,
                 _,
               )
-            ).data.success || 2;
-          return 1 == _ && _.CommitAvatarHash(), _;
+            ).data.success || _._.k_EResultFail;
+          return _ == _._.k_EResultOK && _.CommitAvatarHash(), _;
         }
       }
       (0, _._)([_._], _.prototype, "m_rgPreviousAvatars", void 0);
@@ -1069,7 +1074,7 @@
             let _ = _.avatars.find((_) => _.avatar_hash == _);
             if (_) return this.SelectGameAvatar(_, _.appid, _.ordinal);
           }
-          return 42;
+          return _._.k_EResultNoMatch;
         }
         async SelectGameAvatar(_, _, _) {
           let _ = new FormData();
@@ -1082,8 +1087,8 @@
                 `${_._.COMMUNITY_BASE_URL}ogg/${_}/selectAvatar`,
                 _,
               )
-            ).data.success || 2;
-          return 1 == _ && _.CommitAvatarHash(), _;
+            ).data.success || _._.k_EResultFail;
+          return _ == _._.k_EResultOK && _.CommitAvatarHash(), _;
         }
         UpdateAvatarsForGame(_, _) {
           const _ = ["rgRecentGames", "rgOwnedGames", "rgOtherGames"];
@@ -1101,11 +1106,11 @@
       }
       function _(_) {
         switch (_) {
-          case 1:
+          case _._.k_ECommunityPrivacyPrivate:
             return (0, _._)("#Privacy_Private");
-          case 2:
+          case _._.k_ECommunityPrivacyFriendsOnly:
             return (0, _._)("#Privacy_FriendsOnly");
-          case 3:
+          case _._.k_ECommunityPrivacyPublic:
             return (0, _._)("#Privacy_Public");
           default:
             return "";
@@ -1114,13 +1119,29 @@
       function _(_, _) {
         return _ < _ ? _ : _;
       }
-      (0, _._)([_._.shallow], _.prototype, "m_AvatarData", void 0);
+      (0, _._)([_._.shallow], _.prototype, "m_AvatarData", void 0),
+        (function (_) {
+          (_[(_.k_ECommentPermissionInvalid = -1)] =
+            "k_ECommentPermissionInvalid"),
+            (_[(_.k_ECommentPermissionFriendsOnly = 0)] =
+              "k_ECommentPermissionFriendsOnly"),
+            (_[(_.k_ECommentPermissionAnyone = 1)] =
+              "k_ECommentPermissionAnyone"),
+            (_[(_.k_ECommentPermissionSelfOnly = 2)] =
+              "k_ECommentPermissionSelfOnly");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.eStateNone = 0)] = "eStateNone"),
+            (_[(_.eStateSaving = 1)] = "eStateSaving"),
+            (_[(_.eStateSaved = 2)] = "eStateSaved"),
+            (_[(_.eStateError = 3)] = "eStateError");
+        })(_ || (_ = {}));
       class _ {
         constructor(_, _) {
           (this.m_PrivacySettings = void 0),
             (this.m_eCommentPermission = void 0),
             (this.m_eSaveStateByKey = new Map()),
-            (this.m_eCommentSaveState = 0),
+            (this.m_eCommentSaveState = _.eStateNone),
             (0, _._)(this),
             (this.m_PrivacySettings = _),
             (this.m_eCommentPermission = _);
@@ -1157,7 +1178,7 @@
           return this.m_eCommentPermission;
         }
         GetSaveState(_) {
-          return this.m_eSaveStateByKey.get(_) || 0;
+          return this.m_eSaveStateByKey.get(_) || _.eStateNone;
         }
         GetCommentSaveState() {
           return this.m_eCommentSaveState;
@@ -1168,24 +1189,24 @@
           let _ = this.SavePrivacy(),
             _ = _ || _;
           _
-            ? (this.m_eSaveStateByKey.set(_, 1),
+            ? (this.m_eSaveStateByKey.set(_, _.eStateSaving),
               _.then((_) => {
                 _
-                  ? this.m_eSaveStateByKey.set(_, 2)
-                  : this.m_eSaveStateByKey.set(_, 3);
+                  ? this.m_eSaveStateByKey.set(_, _.eStateSaved)
+                  : this.m_eSaveStateByKey.set(_, _.eStateError);
               }))
-            : this.m_eSaveStateByKey.set(_, 0);
+            : this.m_eSaveStateByKey.set(_, _.eStateNone);
         }
         ChangeCommentPermission(_) {
           if (this.m_eCommentPermission == _) return;
           this.m_eCommentPermission = _;
           let _ = this.SavePrivacy();
           _
-            ? ((this.m_eCommentSaveState = 1),
+            ? ((this.m_eCommentSaveState = _.eStateSaving),
               _.then((_) => {
-                this.m_eCommentSaveState = _ ? 2 : 3;
+                this.m_eCommentSaveState = _ ? _.eStateSaved : _.eStateError;
               }))
-            : (this.m_eCommentSaveState = 0);
+            : (this.m_eCommentSaveState = _.eStateNone);
         }
         SavePrivacy() {
           let _ = new FormData();
@@ -1200,7 +1221,7 @@
               .post(_.ProfileURL + "ajaxsetprivacy/", _)
               .then((_) => {
                 let _ = _.data;
-                if (1 != _.success)
+                if (_.success != _._.k_EResultOK)
                   return (
                     window.ShowAlertDialog(
                       (0, _._)("#Error_Error"),
@@ -1281,7 +1302,8 @@
           return this.m_FavoriteBadge != this.m_CommittedFavoriteBadge;
         }
         async CommitFavoriteBadgeChanges() {
-          if (this.m_FavoriteBadge == this.m_CommittedFavoriteBadge) return 1;
+          if (this.m_FavoriteBadge == this.m_CommittedFavoriteBadge)
+            return _._.k_EResultOK;
           let _ = this.FavoriteBadgeID,
             _ = _._.Init(_._);
           _.badgeid
@@ -1293,7 +1315,7 @@
             _,
           );
           return (
-            1 == __webpack_require__.GetEResult() &&
+            __webpack_require__.GetEResult() == _._.k_EResultOK &&
               (this.m_CommittedFavoriteBadge = this.m_FavoriteBadge),
             __webpack_require__.GetEResult()
           );
@@ -1478,7 +1500,7 @@
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               );
-              if (1 != _.GetEResult()) return _.GetEResult();
+              if (_.GetEResult() != _._.k_EResultOK) return _.GetEResult();
             }
             if (
               this.m_Backgrounds.m_EquippedItem &&
@@ -1493,13 +1515,13 @@
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               );
-              1 != _.GetEResult() &&
+              _.GetEResult() != _._.k_EResultOK &&
                 console.error(
                   `Error when calling PlayerService.SetEquippedProfileItemFlags: EResult=${_.GetEResult()}`,
                 );
             }
           }
-          return this.m_Backgrounds.SetComitted(), 1;
+          return this.m_Backgrounds.SetComitted(), _._.k_EResultOK;
         }
         RevertBackgroundChanges() {
           this.m_Backgrounds.Revert();
@@ -1543,12 +1565,12 @@
               this.m_SteamInterface.GetServiceTransport(),
               _,
             );
-            if (1 != _.GetEResult()) return _.GetEResult();
+            if (_.GetEResult() != _._.k_EResultOK) return _.GetEResult();
           }
           return (
             this.m_MiniProfileBackgrounds.SetComitted(),
             this.m_OnAvatarEquipmentChangedCallbacks.Dispatch(),
-            1
+            _._.k_EResultOK
           );
         }
         RevertMiniProfileBackgroundChanges() {
@@ -1585,14 +1607,15 @@
               ));
           }
           const [__webpack_require__, _] = await Promise.all([_, _]);
-          return __webpack_require__ && 1 != __webpack_require__.GetEResult()
+          return __webpack_require__ &&
+            __webpack_require__.GetEResult() != _._.k_EResultOK
             ? __webpack_require__.GetEResult()
-            : _ && 1 != _.GetEResult()
+            : _ && _.GetEResult() != _._.k_EResultOK
               ? _.GetEResult()
               : (this.m_Avatars.SetComitted(),
                 this.m_AvatarFrames.SetComitted(),
                 this.m_OnAvatarEquipmentChangedCallbacks.Dispatch(),
-                1);
+                _._.k_EResultOK);
         }
         RevertAvatarChanges() {
           this.m_Avatars.Revert(), this.m_AvatarFrames.Revert();
@@ -1749,7 +1772,7 @@
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               );
-              if (1 != __webpack_require__.GetEResult())
+              if (__webpack_require__.GetEResult() != _._.k_EResultOK)
                 return __webpack_require__.GetEResult();
               _ = !0;
             }
@@ -1766,7 +1789,7 @@
                 this.m_SteamInterface.GetServiceTransport(),
                 _,
               );
-              if (1 != __webpack_require__.GetEResult())
+              if (__webpack_require__.GetEResult() != _._.k_EResultOK)
                 return __webpack_require__.GetEResult();
               _ = !0;
             }
@@ -1776,7 +1799,7 @@
                   this.ReloadEquippedItems();
                 });
           }
-          return 1;
+          return _._.k_EResultOK;
         }
         BIsLegacyGoldenProfile(_) {
           return this.m_mapGoldenProfileConfigByAppID.has(_);
@@ -2123,7 +2146,7 @@
             _,
           );
           return (
-            1 == _.GetEResult() &&
+            _.GetEResult() == _._.k_EResultOK &&
               (this.m_ComittedActiveTheme = this.ActiveTheme),
             _.GetEResult()
           );
@@ -2152,7 +2175,7 @@
           };
         } catch (_) {
           return {
-            eResult: 35,
+            eResult: _._.k_EResultConnectFailed,
             strHTMLError: (0, _._)("#ConnectionTrouble_FailedToConnect"),
           };
         }
@@ -2220,7 +2243,7 @@
               .ConvertTo64BitString(),
           });
           return (
-            1 == _.eResult &&
+            _.eResult == _._.k_EResultOK &&
               (this.m_CommittedPrimaryGroup = this.m_PrimaryGroup),
             _
           );
@@ -2466,7 +2489,7 @@
         BuildPersonaStateObject() {
           (this.m_persona.m_strPlayerName = this.m_strPersonaName),
             (this.m_persona.m_strAvatarHash = this.m_strAvatarHash),
-            (this.m_persona.m_ePersonaState = 1);
+            (this.m_persona.m_ePersonaState = _._.k_EPersonaStateOnline);
         }
         async UploadAvatar(_) {
           let _ = new FormData();
@@ -3715,7 +3738,8 @@
               _.RefreshAvatarHistory(),
               this.setState({
                 bHTMLError:
-                  1 !== (await __webpack_require__.CommitAvatarChanges()),
+                  (await __webpack_require__.CommitAvatarChanges()) !==
+                  _._.k_EResultOK,
               }))
             : this.setState({
                 strUploadError: _.strError,
@@ -3732,13 +3756,15 @@
               _.CommitAvatarChanges(),
               _.BHasUncomittedAvatarChanges()
                 ? __webpack_require__.SetPlayerOGGAvatar(_)
-                : Promise.resolve(1),
+                : Promise.resolve(_._.k_EResultOK),
               _.BHasUncomittedAvatarChanges()
                 ? _.SetPreviousAvatar(_)
-                : Promise.resolve(1),
+                : Promise.resolve(_._.k_EResultOK),
             ]);
           this.setState({
-            bHTMLError: 1 !== _ || (1 !== _ && 1 !== _),
+            bHTMLError:
+              _ !== _._.k_EResultOK ||
+              (_ !== _._.k_EResultOK && _ !== _._.k_EResultOK),
           }),
             _.RefreshAvatarHistory();
         }
@@ -4816,7 +4842,7 @@
           this.setState({
             bSaving: !0,
           }),
-            1 != (await _.CommitFavoriteBadgeChanges())
+            (await _.CommitFavoriteBadgeChanges()) != _._.k_EResultOK
               ? this.setState({
                   strHTMLError: (0, _._)("#ConnectionTrouble_FailedToConnect"),
                 })
@@ -5427,7 +5453,7 @@
               {
                 PrivacyStore: _,
                 strLabel: (0, _._)("#ProfilePrivacy_BasicDetails"),
-                strReadOnlySetting: _(3),
+                strReadOnlySetting: _(_._.k_ECommunityPrivacyPublic),
               },
               (0, _._)("#ProfilePrivacy_BasicDetails_Desc"),
             ),
@@ -5466,7 +5492,8 @@
                   LimitPrivacyKey: "PrivacyProfile",
                 },
                 (0, _._)("#ProfilePrivacy_GameLibrary_Desc"),
-                1 != _.GetPrivacySetting("PrivacyOwnedGames") &&
+                _.GetPrivacySetting("PrivacyOwnedGames") !=
+                  _._.k_ECommunityPrivacyPrivate &&
                   _.createElement(
                     _,
                     {
@@ -5524,7 +5551,8 @@
                     ),
                   ),
                 ),
-                1 != _.GetPrivacySetting("PrivacyInventory") &&
+                _.GetPrivacySetting("PrivacyInventory") !=
+                  _._.k_ECommunityPrivacyPrivate &&
                   _.createElement(
                     _,
                     {
@@ -5648,18 +5676,18 @@
           const _ = [
               {
                 label: (0, _._)("#Privacy_Public"),
-                data: 3,
+                data: _._.k_ECommunityPrivacyPublic,
               },
               {
                 label: (0, _._)("#Privacy_FriendsOnly"),
-                data: 2,
+                data: _._.k_ECommunityPrivacyFriendsOnly,
               },
               {
                 label: (0, _._)("#Privacy_Private"),
-                data: 1,
+                data: _._.k_ECommunityPrivacyPrivate,
               },
             ],
-            _ = null != _ ? _ : 3;
+            _ = null != _ ? _ : _._.k_ECommunityPrivacyPublic;
           return _.filter((_) => _ >= _.data);
         })(_());
         return _.createElement(
@@ -5679,7 +5707,7 @@
       });
       function _(_) {
         switch (_.eSaveState) {
-          case 1:
+          case _.eStateSaving:
             return _.createElement(
               "div",
               {
@@ -5687,7 +5715,7 @@
               },
               (0, _._)("#Shared_Saving"),
             );
-          case 3:
+          case _.eStateError:
             return _.createElement(
               "div",
               {
@@ -5695,7 +5723,7 @@
               },
               (0, _._)("#Error_Error"),
             );
-          case 2:
+          case _.eStateSaved:
             return _.createElement(
               "div",
               {
@@ -5703,6 +5731,7 @@
               },
               (0, _._)("#Shared_Saved"),
             );
+          case _.eStateNone:
           default:
             return null;
         }
@@ -5716,12 +5745,16 @@
           } = _,
           _ = _.useCallback(
             (_) => {
-              let _ = _.currentTarget.checked ? 1 : 3;
+              let _ = _.currentTarget.checked
+                ? _._.k_ECommunityPrivacyPrivate
+                : _._.k_ECommunityPrivacyPublic;
               _.ChangePrivacySetting(__webpack_require__, _, _);
             },
             [_, __webpack_require__, _],
           );
-        let _ = 1 == (0, _._)(() => _.GetPrivacySetting(__webpack_require__));
+        let _ =
+          (0, _._)(() => _.GetPrivacySetting(__webpack_require__)) ==
+          _._.k_ECommunityPrivacyPrivate;
         return _.createElement(
           "div",
           {
@@ -5750,7 +5783,7 @@
         constructor(_) {
           super(_),
             (this.state = {
-              eSaveState: 0,
+              eSaveState: _.eStateNone,
             });
         }
         OnSettingChanged(_) {
@@ -5761,20 +5794,21 @@
             _ = this.props.PrivacyStore.GetPrivacySetting("PrivacyProfile");
           !(function (_) {
             switch (_) {
-              case 0:
+              case _.k_ECommentPermissionFriendsOnly:
                 return (0, _._)("#Privacy_FriendsOnly");
-              case 1:
+              case _.k_ECommentPermissionAnyone:
                 return (0, _._)("#Privacy_Public");
-              case 2:
+              case _.k_ECommentPermissionSelfOnly:
                 return (0, _._)("#Privacy_Private");
               default:
             }
           })(
             ((__webpack_require__ = _),
-            1 == (_ = _)
-              ? 2
-              : 2 == _ && 1 == __webpack_require__
-                ? 0
+            (_ = _) == _._.k_ECommunityPrivacyPrivate
+              ? _.k_ECommentPermissionSelfOnly
+              : _ == _._.k_ECommunityPrivacyFriendsOnly &&
+                  __webpack_require__ == _.k_ECommentPermissionAnyone
+                ? _.k_ECommentPermissionFriendsOnly
                 : __webpack_require__),
           );
           var _, _;
@@ -5782,20 +5816,20 @@
             const _ = [
                 {
                   label: (0, _._)("#Profile_CommentPermission_Public_Desc"),
-                  data: 1,
+                  data: _.k_ECommentPermissionAnyone,
                 },
                 {
                   label: (0, _._)(
                     "#Profile_CommentPermission_FriendsOnly_Desc",
                   ),
-                  data: 0,
+                  data: _.k_ECommentPermissionFriendsOnly,
                 },
                 {
                   label: (0, _._)("#Profile_CommentPermission_Private_Desc"),
-                  data: 2,
+                  data: _.k_ECommentPermissionSelfOnly,
                 },
               ],
-              _ = null != _ ? _ : 3;
+              _ = null != _ ? _ : _._.k_ECommunityPrivacyPublic;
             return _.filter((_) => _ >= _.data);
           })(_);
           return _.createElement(
@@ -6216,7 +6250,11 @@
             let _ = _ && _.movie_webm,
               _ = _ && _.tiled,
               _ = _ ? _(_) : _(null);
-            const _ = _ && !_ && 1 == _.GetEquippedBackgroundFlags();
+            const _ =
+              _ &&
+              !_ &&
+              _.GetEquippedBackgroundFlags() ==
+                _._.k_EProfileItemEquippedFlag_FullScreen;
             let _ = null;
             return (
               _ &&
@@ -6374,7 +6412,7 @@
           const _ = !_ || (null == _ ? void 0 : _.tiled),
             _ = _.GetEquippedBackgroundFlags();
           let _ = _.createElement(_, {
-              flag: 1,
+              flag: _._.k_EProfileItemEquippedFlag_FullScreen,
               currentFlag: _,
               onSelect: this.OnChange,
               label: (0, _._)("#Profile_Edit_BackgroundEquipFlag_FullScreen"),
@@ -6999,7 +7037,7 @@
             _.SetActiveTheme(_.theme_id);
           let _ = await _.CommitActiveTheme();
           return (
-            1 != _ &&
+            _ != _._.k_EResultOK &&
               this.setState({
                 strHTMLError: (0, _._)("#ConnectionTrouble_FailedToConnect"),
               }),
@@ -7485,6 +7523,7 @@
         (0, _._)([_._], _.prototype, "RevertChanges", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           ProfileEdit: () => "edit",
@@ -7509,7 +7548,7 @@
           "div",
           null,
           _.createElement(_._, {
-            targetType: 3,
+            targetType: _._.k_ELoyaltyRewardReactionTargetType_Profile,
           }),
         );
       }

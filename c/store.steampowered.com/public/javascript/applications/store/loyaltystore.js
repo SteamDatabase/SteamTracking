@@ -1293,8 +1293,10 @@
                   _ = _.current.NavTree().DeferredFocus;
                 let _ = !1;
                 _
-                  ? (_ = _.current.RestoreState(_, 1))
-                  : _ && ((0, _._)(_.current.Node(), _, 0), (_ = !0)),
+                  ? (_ = _.current.RestoreState(_, _._.eRestoreFocusAlways))
+                  : _ &&
+                    ((0, _._)(_.current.Node(), _, _._.eRestoreFocusIfHadFocus),
+                    (_ = !0)),
                   _(
                     `Completed restoring history for state ${_} - ${_ ? "had history." : "no history for this state."}`,
                   ),
@@ -1319,10 +1321,11 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       let _ = {
         success: !0,
-        result: 1,
+        result: _._.k_EResultOK,
       };
       class _ {
         m_mapWaitingCallbacks = new Map();
@@ -1413,7 +1416,7 @@
                   message: "GetClientInfo",
                 })
                   .then((_) => {
-                    1 == _.success
+                    _.success == _._.k_EResultOK
                       ? ((this.m_ClientInfo.ulVersion = _.clientversion),
                         (this.m_ClientInfo.bFriendsUIEnabled = !!_.friendsui),
                         (this.m_ClientInfo.unAccountID = _.accountid),
@@ -1442,7 +1445,7 @@
       }
       let _ = new (class {
         m_connection = new _();
-        FailureResult(_ = 2) {
+        FailureResult(_ = _._.k_EResultFail) {
           let _ = {
             success: !1,
             result: _,
@@ -1454,7 +1457,7 @@
             this.m_connection &&
               !this.m_connection.connected_to_client &&
               (_.connect_failed = !0),
-            7 == _ && (_.call_unsupported = !0),
+            _ == _._.k_EResultInvalidProtocolVer && (_.call_unsupported = !0),
             _
           );
         }
@@ -1509,7 +1512,7 @@
           };
           return this.GenericEResultCall(_, !0).then((_) => {
             if (_.connect_failed) return;
-            let _ = 1 == _.result;
+            let _ = _.result == _._.k_EResultOK;
             return this.m_mapCacheSubscribedApp.set(_, _), _;
           });
         }
@@ -1538,13 +1541,15 @@
               _ && !this.BClientAccountMatches()
                 ? {
                     success: !1,
-                    result: 19,
+                    result: _._.k_EResultInvalidSteamID,
                     account_mismatch: !0,
                   }
                 : this.m_connection
                     .SendMsgAndAwaitResponse(_)
                     .then((_) =>
-                      1 === _.success ? _ : this.FailureResult(_.success),
+                      _.success === _._.k_EResultOK
+                        ? _
+                        : this.FailureResult(_.success),
                     ),
             )
             .catch(() => this.FailureResult());
@@ -1652,6 +1657,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
@@ -1719,7 +1725,7 @@
                 {
                   autoFocus: !0,
                   transport: _,
-                  platform: 2,
+                  platform: _._.k_EAuthTokenPlatformType_WebBrowser,
                   onComplete: (_) => {
                     _ == _._.k_PrimaryDomainFail
                       ? _(!0)
@@ -2480,8 +2486,14 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _,
+        _,
+        _,
+        _,
+        _,
         _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2500,6 +2512,68 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_EUserLastReadFeed_Invalid = 0)] =
+          "k_EUserLastReadFeed_Invalid"),
+          (_[(_.k_EUserLastReadFeed_TradeOffers = 1)] =
+            "k_EUserLastReadFeed_TradeOffers"),
+          (_[(_.k_EUserLastReadFeed_AuctionWins = 2)] =
+            "k_EUserLastReadFeed_AuctionWins"),
+          (_[(_.k_EUserLastReadFeed_SteamAnnouncement = 3)] =
+            "k_EUserLastReadFeed_SteamAnnouncement");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EAccountCountryChangeSource_Invalid = 0)] =
+            "k_EAccountCountryChangeSource_Invalid"),
+            (_[(_.k_EAccountCountryChangeSource_InitialBackfill = 1)] =
+              "k_EAccountCountryChangeSource_InitialBackfill"),
+            (_[(_.k_EAccountCountryChangeSource_Purchase = 2)] =
+              "k_EAccountCountryChangeSource_Purchase"),
+            (_[(_.k_EAccountCountryChangeSource_ActivationCode = 3)] =
+              "k_EAccountCountryChangeSource_ActivationCode"),
+            (_[(_.k_EAccountCountryChangeSource_Support = 4)] =
+              "k_EAccountCountryChangeSource_Support"),
+            (_[(_.k_EAccountCountryChangeSource_WalletCreation = 5)] =
+              "k_EAccountCountryChangeSource_WalletCreation"),
+            (_[(_.k_EAccountCountryChangeSource_WalletMatch = 6)] =
+              "k_EAccountCountryChangeSource_WalletMatch"),
+            (_[(_.k_EAccountCountryChangeSource_UserSelected = 7)] =
+              "k_EAccountCountryChangeSource_UserSelected"),
+            (_[(_.k_EAccountCountryChangeSource_AccountCreation = 8)] =
+              "k_EAccountCountryChangeSource_AccountCreation"),
+            (_[(_.k_EAccountCountryChangeSource_RedeemedGift = 9)] =
+              "k_EAccountCountryChangeSource_RedeemedGift"),
+            (_[(_.k_EAccountCountryChangeSource_MatchFamily = 10)] =
+              "k_EAccountCountryChangeSource_MatchFamily");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_ESetUserCountryError_None = 0)] =
+            "k_ESetUserCountryError_None"),
+            (_[(_.k_ESetUserCountryError_NewCountryMustMatchWebIP = 1)] =
+              "k_ESetUserCountryError_NewCountryMustMatchWebIP"),
+            (_[(_.k_ESetUserCountryError_NewCountryMustMatchClientIP = 2)] =
+              "k_ESetUserCountryError_NewCountryMustMatchClientIP"),
+            (_[(_.k_ESetUserCountryError_MilitaryCountryMustBeUSA = 3)] =
+              "k_ESetUserCountryError_MilitaryCountryMustBeUSA"),
+            (_[(_.k_ESetUserCountryError_NoUSMilitaryBaseInIPCountry = 4)] =
+              "k_ESetUserCountryError_NoUSMilitaryBaseInIPCountry"),
+            (_[(_.k_ESetUserCountryError_InvalidMilitaryAddress = 5)] =
+              "k_ESetUserCountryError_InvalidMilitaryAddress"),
+            (_[(_.k_ESetUserCountryError_HasPendingPurchase = 6)] =
+              "k_ESetUserCountryError_HasPendingPurchase"),
+            (_[(_.k_ESetUserCountryError_HasRecentPurchase = 7)] =
+              "k_ESetUserCountryError_HasRecentPurchase"),
+            (_[(_.k_ESetUserCountryError_HasRecentCountryChange = 8)] =
+              "k_ESetUserCountryError_HasRecentCountryChange"),
+            (_[(_.k_ESetUserCountryError_WalletConversionFailed = 9)] =
+              "k_ESetUserCountryError_WalletConversionFailed");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EUserAccountHistoryCategory_Invalid = 0)] =
+            "k_EUserAccountHistoryCategory_Invalid"),
+            (_[(_.k_EUserAccountHistoryCategory_Inventory = 1)] =
+              "k_EUserAccountHistoryCategory_Inventory");
+        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -4307,6 +4381,9 @@
         })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ =
         __webpack_require__._ +
@@ -4316,35 +4393,35 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 2 === _._.EUNIVERSE ? 404860 : 1675200;
+      const _ = _._.EUNIVERSE === _._.k_EUniverseBeta ? 404860 : 1675200;
       function _(_, _ = !1) {
         const _ = (_) => (0, _._)(_ ? `${_}_Plural` : _);
         switch (_) {
-          case 4:
+          case _._.k_ECommunityItemClass_Emoticon:
             return __webpack_require__("#CommunityItemClass_Emoticon");
-          case 11:
+          case _._.k_ECommunityItemClass_Sticker:
             return __webpack_require__("#CommunityItemClass_Sticker");
-          case 13:
+          case _._.k_ECommunityItemClass_MiniProfileBackground:
             return __webpack_require__(
               "#CommunityItemClass_MiniProfileBackground",
             );
-          case 3:
+          case _._.k_ECommunityItemClass_ProfileBackground:
             return __webpack_require__("#CommunityItemClass_Background");
-          case 12:
+          case _._.k_ECommunityItemClass_ChatEffect:
             return __webpack_require__("#CommunityItemClass_ChatEffect");
-          case 14:
+          case _._.k_ECommunityItemClass_AvatarFrame:
             return __webpack_require__("#CommunityItemClass_AvatarFrame");
-          case 15:
+          case _._.k_ECommunityItemClass_AnimatedAvatar:
             return __webpack_require__("#CommunityItemClass_AnimatedAvatar");
-          case 1:
+          case _._.k_ECommunityItemClass_Badge:
             return __webpack_require__("#CommunityItemClass_Badge");
-          case 8:
+          case _._.k_ECommunityItemClass_ProfileModifier:
             return __webpack_require__("#CommunityItemClass_ProfileModifier");
-          case 16:
+          case _._.k_ECommunityItemClass_SteamDeckKeyboardSkin:
             return __webpack_require__(
               "#CommunityItemClass_SteamDeckKeyboardSkin",
             );
-          case 17:
+          case _._.k_ECommunityItemClass_SteamDeckStartupMovie:
             return __webpack_require__(
               "#CommunityItemClass_SteamDeckStartupMovie",
             );
@@ -4425,7 +4502,7 @@
             return _.Body().set_requests(_), _;
           },
           (_) =>
-            1 == _.GetEResult()
+            _.GetEResult() == _._.k_EResultOK
               ? _.Body()
                   .responses()
                   .map((_) => _.toObject())
@@ -4441,7 +4518,7 @@
             return _.Body().set_filter_appids(_), _;
           },
           (_, _) => {
-            if (1 == _.GetEResult()) {
+            if (_.GetEResult() == _._.k_EResultOK) {
               const { items: __webpack_require__ } = _.Body().toObject(),
                 _ = {};
               return (
@@ -4534,7 +4611,7 @@
             steamid: _._.steamid,
           });
           let _ = await _._.GetSummary(this.m_transport, _);
-          1 == _.GetEResult()
+          _.GetEResult() == _._.k_EResultOK
             ? (this.m_lPointsAvailable = _._.fromString(
                 _.Body().summary().points(),
               ))
@@ -4552,7 +4629,7 @@
           this.m_bLoadedAwardCost = !0;
           const _ = _._.Init(_._);
           let _ = await _._.GetReactionConfig(this.m_transport, _);
-          1 == _.GetEResult()
+          _.GetEResult() == _._.k_EResultOK
             ? ((this.m_unAwardPointsTransferred = 0),
               _.Body()
                 .reactions()
@@ -4672,7 +4749,7 @@
             _.set_include_direct_purchase_disabled(!0),
             _.forEach((_) => _.add_definitionids(_));
           const _ = await this.m_batchedRewardItemLoader.Load(_);
-          return 1 == _.eresult
+          return _.eresult == _._.k_EResultOK
             ? (_.response.count !== _.response.total_count &&
                 console.error(
                   "LoadRewardDefinitions did not receive all expected definitions (likely to due server-side limiting). The calling code should be paging/batching the request into multiple.",
@@ -4684,7 +4761,9 @@
               []);
         }
         QueryRewardDefinitions(_, _, _) {
-          const _ = _.rewardtype ?? [1],
+          const _ = _.rewardtype ?? [
+              _._.k_ELoyaltyRewardType_VirtualItemReward,
+            ],
             _ = _._.Get().ExcludedContentDescriptor,
             _ = _._.Get().GetExcludedTagsSortedByID();
           let _ = this.QueryLoyaltyRewardDefinitions(
@@ -4712,17 +4791,17 @@
         }
         EResultToErrorMessage(_) {
           switch (_) {
-            case 15:
+            case _._.k_EResultAccessDenied:
               return (0, _._)("#Redeem_Error_AccessDenied");
-            case 24:
+            case _._.k_EResultInsufficientPrivilege:
               return (0, _._)("#Redeem_Error_InsufficientPrivileges");
-            case 107:
+            case _._.k_EResultInsufficientFunds:
               return (0, _._)("#Redeem_Error_InsufficientFunds");
-            case 29:
+            case _._.k_EResultDuplicateRequest:
               return (0, _._)("#Redeem_Error_DuplicateRequest");
-            case 26:
+            case _._.k_EResultRevoked:
               return (0, _._)("#Redeem_Error_Revoked");
-            case 11:
+            case _._.k_EResultInvalidState:
               return (0, _._)("#Redeem_Error_PriceChange");
           }
           return "";
@@ -4783,7 +4862,11 @@
                     (_) =>
                       !(
                         (function (_) {
-                          if (5 === _.type || 6 === _.type)
+                          if (
+                            _.type === _._.k_ELoyaltyRewardType_Bundle ||
+                            _.type ===
+                              _._.k_ELoyaltyRewardType_AutoGeneratedBundle
+                          )
                             return _.bundle_defids &&
                               0 != _.bundle_defids.length
                               ? !_.bundle_discount &&
@@ -4797,19 +4880,23 @@
                                 !0);
                           const _ = _.community_item_data;
                           if (!_) return !0;
-                          if (1 === _.type) {
+                          if (
+                            _.type ===
+                            _._.k_ELoyaltyRewardType_VirtualItemReward
+                          ) {
                             let _ = !1;
                             switch (_.community_item_class) {
-                              case 11:
-                              case 14:
-                              case 15:
+                              case _._.k_ECommunityItemClass_Sticker:
+                              case _._.k_ECommunityItemClass_AvatarFrame:
+                              case _._.k_ECommunityItemClass_AnimatedAvatar:
                                 _ = !_.item_image_small;
                                 break;
-                              case 4:
-                              case 16:
+                              case _._.k_ECommunityItemClass_Emoticon:
+                              case _._
+                                .k_ECommunityItemClass_SteamDeckKeyboardSkin:
                                 _ = !_.item_image_large;
                                 break;
-                              case 3:
+                              case _._.k_ECommunityItemClass_ProfileBackground:
                                 _ = _.animated
                                   ? !(
                                       _.item_image_large ||
@@ -4820,7 +4907,8 @@
                                     )
                                   : !_.item_image_large;
                                 break;
-                              case 13:
+                              case _._
+                                .k_ECommunityItemClass_MiniProfileBackground:
                                 _ = !(
                                   _.item_image_large ||
                                   _.item_movie_mp4 ||
@@ -4829,7 +4917,8 @@
                                   _.item_movie_webm_small
                                 );
                                 break;
-                              case 17:
+                              case _._
+                                .k_ECommunityItemClass_SteamDeckStartupMovie:
                                 _ =
                                   !_.item_image_large &&
                                   !_.item_movie_webm &&
@@ -4844,7 +4933,8 @@
                               );
                           }
                           return !1;
-                        })(_) && 4 !== _.type
+                        })(_) &&
+                        _.type !== _._.k_ELoyaltyRewardType_CartDiscount
                       ),
                   ),
                   _ = this.m_mapAppRewards.get(_);
@@ -4904,7 +4994,7 @@
             _ && _.set_reward_types(_),
             _ && _.set_cursor(_);
           const _ = await this.m_batchedRewardItemLoader.Load(_);
-          return 1 == _.eresult
+          return _.eresult == _._.k_EResultOK
             ? _.response
             : (console.error(
                 `Error when loading reward definitions: EResult=${_.eresult}`,
@@ -4954,11 +5044,11 @@
         async LoadSeasonalBadgeDefinition() {
           const _ = new _._();
           _.set_appids([this.GetCurrentSeasonalAppID()]),
-            _.set_community_item_classes([1]),
+            _.set_community_item_classes([_._.k_ECommunityItemClass_Badge]),
             _.set_count(1),
             _.set_language(_._.LANGUAGE);
           let _ = await this.m_batchedRewardItemLoader.Load(_);
-          if (1 == _.eresult) {
+          if (_.eresult == _._.k_EResultOK) {
             return _.response.definitions[0] || null;
           }
           return (
@@ -4980,11 +5070,13 @@
         async LoadGoldenProfileDefinition() {
           const _ = new _._();
           _.set_appids([this.GetCurrentSeasonalAppID()]),
-            _.set_community_item_classes([8]),
+            _.set_community_item_classes([
+              _._.k_ECommunityItemClass_ProfileModifier,
+            ]),
             _.set_count(1),
             _.set_language(_._.LANGUAGE);
           let _ = await this.m_batchedRewardItemLoader.Load(_);
-          if (1 == _.eresult) {
+          if (_.eresult == _._.k_EResultOK) {
             if (0 != _.response.count) {
               return _.response.definitions[0] || null;
             }
@@ -5015,11 +5107,11 @@
         async LoadCouponDefinitions() {
           const _ = new _._();
           _.set_appids([this.GetCurrentSeasonalAppID()]),
-            _.set_reward_types([4]),
+            _.set_reward_types([_._.k_ELoyaltyRewardType_CartDiscount]),
             _.set_count(10),
             _.set_language(_._.LANGUAGE);
           let _ = await this.m_batchedRewardItemLoader.Load(_);
-          return 1 == _.eresult
+          return _.eresult == _._.k_EResultOK
             ? _.response.definitions
             : (console.error(
                 `Error when loading coupon definitions: EResult=${_.eresult}`,
@@ -5033,16 +5125,18 @@
             (_.point_cost = 0),
             (_.discount = _.bundle_discount),
             (_.items = this.GetRewardDefinitions(..._.bundle_defids)),
-            8 == _.community_item_class)
+            _.community_item_class == _._.k_ECommunityItemClass_ProfileModifier)
           ) {
             let _ = this.GetRewardDefinitions(_.defid);
             _.items = _.items.concat(_);
           }
           return (
             _.items.sort((_, _) =>
-              8 == _.community_item_class
+              _.community_item_class ==
+              _._.k_ECommunityItemClass_ProfileModifier
                 ? -1
-                : 8 == _.community_item_class
+                : _.community_item_class ==
+                    _._.k_ECommunityItemClass_ProfileModifier
                   ? 1
                   : _.community_item_class - _.community_item_class,
             ),
@@ -5068,7 +5162,10 @@
             ),
           );
           if ((_ || this.GetCommunityItemInventory(_.appid), !_)) return !1;
-          if (5 == _.type || 6 == _.type) {
+          if (
+            _.type == _._.k_ELoyaltyRewardType_Bundle ||
+            _.type == _._.k_ELoyaltyRewardType_AutoGeneratedBundle
+          ) {
             for (const _ of _.bundle_defids) {
               const _ = this.m_mapLoyaltyRewardDefs.get(_);
               if (_ && !this.BRewardOwnedByUser(_)) return !1;
@@ -5080,37 +5177,37 @@
         BRewardEquippedByUser(_) {
           if (!this.BRewardOwnedByUser(_)) return !1;
           switch (_.community_item_class) {
-            case 15:
+            case _._.k_ECommunityItemClass_AnimatedAvatar:
               return (
                 this.m_equippedItems.animated_avatar.appid == _.appid &&
                 this.m_equippedItems.animated_avatar.item_type ==
                   _.community_item_type
               );
-            case 14:
+            case _._.k_ECommunityItemClass_AvatarFrame:
               return (
                 this.m_equippedItems.avatar_frame.appid == _.appid &&
                 this.m_equippedItems.avatar_frame.item_type ==
                   _.community_item_type
               );
-            case 3:
+            case _._.k_ECommunityItemClass_ProfileBackground:
               return (
                 this.m_equippedItems.profile_background.appid == _.appid &&
                 this.m_equippedItems.profile_background.item_type ==
                   _.community_item_type
               );
-            case 13:
+            case _._.k_ECommunityItemClass_MiniProfileBackground:
               return (
                 this.m_equippedItems.mini_profile_background.appid == _.appid &&
                 this.m_equippedItems.mini_profile_background.item_type ==
                   _.community_item_type
               );
-            case 8:
+            case _._.k_ECommunityItemClass_ProfileModifier:
               return (
                 this.m_equippedItems.profile_modifier.appid == _.appid &&
                 this.m_equippedItems.profile_modifier.item_type ==
                   _.community_item_type
               );
-            case 16:
+            case _._.k_ECommunityItemClass_SteamDeckKeyboardSkin:
               return (
                 this.m_equippedItems.steam_deck_keyboard_skin.appid ==
                   _.appid &&
@@ -5171,7 +5268,7 @@
           this.m_bLoadedActiveBonuses = !0;
           const _ = _._.Init(_._),
             _ = await _._.GetActivePurchaseBonuses(this.m_transport, _);
-          1 == _.GetEResult()
+          _.GetEResult() == _._.k_EResultOK
             ? this.m_rgActiveBonuses.push(
                 ..._.Body()
                   .bonuses()
@@ -5183,13 +5280,13 @@
         }
         async SetProfileBackground(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: "Not logged on",
               }),
               _
@@ -5201,7 +5298,7 @@
           const _ = await _._.SetProfileBackground(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult() &&
+            _.GetEResult() != _._.k_EResultOK &&
               console.error(
                 `Error when calling PlayerService.SetProfileBackground: EResult=${_.GetEResult()}`,
               ),
@@ -5210,13 +5307,13 @@
         }
         async SetAvatarFrame(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: "Not logged on",
               }),
               _
@@ -5228,7 +5325,7 @@
           const _ = await _._.SetAvatarFrame(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult()
+            _.GetEResult() != _._.k_EResultOK
               ? console.error(
                   `Error when calling PlayerService.SetAvatarFrame: EResult=${_.GetEResult()}`,
                 )
@@ -5238,13 +5335,13 @@
         }
         async SetAnimatedAvatar(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: "Not logged on",
               }),
               _
@@ -5256,7 +5353,7 @@
           const _ = await _._.SetAnimatedAvatar(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult()
+            _.GetEResult() != _._.k_EResultOK
               ? console.error(
                   `Error when calling PlayerService.SetAnimatedAvatar: EResult=${_.GetEResult()}`,
                 )
@@ -5266,13 +5363,13 @@
         }
         async SetMiniProfileBackground(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: "Not logged on",
               }),
               _
@@ -5284,7 +5381,7 @@
           const _ = await _._.SetMiniProfileBackground(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult()
+            _.GetEResult() != _._.k_EResultOK
               ? console.error(
                   `Error when calling PlayerService.SetMiniProfileBackground: EResult=${_.GetEResult()}`,
                 )
@@ -5294,13 +5391,13 @@
         }
         async SetSteamDeckKeyboardSkin(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: "Not logged on",
               }),
               _
@@ -5312,7 +5409,7 @@
           const _ = await _._.SetSteamDeckKeyboardSkin(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult()
+            _.GetEResult() != _._.k_EResultOK
               ? console.error(
                   `Error when calling PlayerService.SetSteamDeckKeyboardSkin: EResult=${_.GetEResult()}`,
                 )
@@ -5322,13 +5419,13 @@
         }
         async ActivateProfileModifier(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: "Not logged on",
               }),
               _
@@ -5342,7 +5439,7 @@
           const _ = await _._.ActivateProfileModifierItem(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult()
+            _.GetEResult() != _._.k_EResultOK
               ? console.error(
                   `Error when calling QuestService.ActivateProfileModifierItem: EResult=${_.GetEResult()}`,
                 )
@@ -5352,13 +5449,13 @@
         }
         async RedeemPointsForItem(_, _, _) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: (0, _._)("#Redeem_SignIn"),
               }),
               _
@@ -5369,7 +5466,7 @@
           const _ = await _._.RedeemPoints(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._.k_EResultOK
               ? (this.GetCommunityItemInventory(_),
                 this.GetLoyaltyRewardsSummary())
               : ((_.strMessage = this.EResultToErrorMessage(_.GetEResult())),
@@ -5381,13 +5478,13 @@
         }
         async RedeemPointsForBadge(_, _) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: (0, _._)("#Redeem_SignIn"),
               }),
               _
@@ -5397,7 +5494,7 @@
           const _ = await _._.RedeemPointsForBadgeLevel(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._.k_EResultOK
               ? (this.GetCommunityItemInventory(this.GetCurrentSeasonalAppID()),
                 this.GetLoyaltyRewardsSummary())
               : ((_.strMessage = this.EResultToErrorMessage(_.GetEResult())),
@@ -5409,13 +5506,13 @@
         }
         async RedeemPointsForProfileShowcase(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: "Not logged on",
               }),
               _
@@ -5428,7 +5525,7 @@
           );
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._.k_EResultOK
               ? this.RefreshPurchasedProfileCustomizations()
               : ((_.strMessage = this.EResultToErrorMessage(_.GetEResult())),
                 console.error(
@@ -5439,13 +5536,13 @@
         }
         async RedeemPointsForProfileShowcaseUpgrade(_, _) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: (0, _._)("#Redeem_SignIn"),
               }),
               _
@@ -5461,7 +5558,7 @@
           );
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._.k_EResultOK
               ? this.RefreshPurchasedProfileCustomizations()
               : ((_.strMessage = this.EResultToErrorMessage(_.GetEResult())),
                 console.error(
@@ -5472,13 +5569,13 @@
         }
         async RedeemPointsForCoupon(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!this.BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: (0, _._)("#Redeem_SignIn"),
               }),
               _
@@ -5495,7 +5592,7 @@
               .then((_) => {
                 const _ = _.data;
                 (_.eResult = _.eresult),
-                  1 == _.eresult && _.redirect
+                  _.eresult == _._.k_EResultOK && _.redirect
                     ? (window.location.href = _.redirect)
                     : console.error(
                         `Error when calling ajaxredeemtokensforcartdiscount: ${_}`,
@@ -5535,7 +5632,7 @@
             this.m_transport,
             _,
           );
-          return 1 == _.GetEResult()
+          return _.GetEResult() == _._.k_EResultOK
             ? _.Body()
                 .promotions()
                 .map((_) => _.toObject())
@@ -5546,13 +5643,14 @@
         }
         BCanRedeemPointsForItem(_) {
           switch (_.type) {
-            case 1:
+            case _._.k_ELoyaltyRewardType_VirtualItemReward:
               switch (_.community_item_class) {
-                case 4:
-                case 3: {
+                case _._.k_ECommunityItemClass_Emoticon:
+                case _._.k_ECommunityItemClass_ProfileBackground: {
                   if (
                     _.community_item_data.animated &&
-                    3 == _.community_item_class
+                    _.community_item_class ==
+                      _._.k_ECommunityItemClass_ProfileBackground
                   )
                     return !0;
                   if (this.GetSortedGamesWithRewards().includes(_.appid))
@@ -5562,8 +5660,8 @@
                 }
               }
               break;
-            case 5:
-            case 6: {
+            case _._.k_ELoyaltyRewardType_Bundle:
+            case _._.k_ELoyaltyRewardType_AutoGeneratedBundle: {
               if (this.GetSortedGamesWithRewards().includes(_.appid)) return !0;
               let _ = this.m_mapEligibleApps.get(_.appid);
               return !(!_ || !_.event_app);
@@ -5646,7 +5744,7 @@
             _ = Math.floor(Date.now() / 1e3) - 14 * _._.PerDay;
           _.Body().set_min_last_played(_);
           const _ = await _._.ClientGetLastPlayedTimes(this.m_transport, _);
-          return 1 == __webpack_require__.GetEResult()
+          return __webpack_require__.GetEResult() == _._.k_EResultOK
             ? ((this.m_rgRecentlyPlayed = this.ProcessRecentlyPlayedApps(
                 __webpack_require__.Body().toObject().games,
               )),
@@ -5673,7 +5771,7 @@
             return [];
           const _ = _._.Init(_._),
             _ = await _._.GetEligibleApps(this.m_transport, _);
-          return 1 == _.GetEResult()
+          return _.GetEResult() == _._.k_EResultOK
             ? _.Body().toObject().apps
             : (console.error(
                 `Error when calling GetEligibleApps: EResult=${_.GetEResult()}`,
@@ -5687,7 +5785,7 @@
             steamid: _._.steamid,
           });
           const _ = await _._.GetProfileItemsEquipped(this.m_transport, _);
-          1 == _.GetEResult()
+          _.GetEResult() == _._.k_EResultOK
             ? (this.m_equippedItems = _.Body().toObject())
             : console.error(
                 `Error when calling GetProfileItemsEquipped: EResult=${_.GetEResult()}`,
@@ -5703,7 +5801,7 @@
             this.m_transport,
             _,
           );
-          if (1 == _.GetEResult()) {
+          if (_.GetEResult() == _._.k_EResultOK) {
             let _ = _.Body().toObject();
             (this.m_rgPurchasedCustomizations = _.purchased_customizations),
               (this.m_rgUpgradedCustomizations = _.upgraded_customizations);
@@ -5714,7 +5812,7 @@
         }
         async GetEquippedProfileItems(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
           };
           const _ = _._.Init(_._);
           __webpack_require__.Body().set_steamid(_),
@@ -5722,7 +5820,7 @@
           const _ = await _._.GetEquippedProfileItems(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 != _.GetEResult() &&
+            _.GetEResult() != _._.k_EResultOK &&
               console.error(
                 `Error when calling LoyaltyRewardsService.GetEquippedProfileItems: EResult=${_.GetEResult()}`,
               ),
@@ -5792,7 +5890,7 @@
             _.set_count(1),
             _.set_definitionids([_]);
           const _ = await this.m_batchedRewardItemLoader.Load(_);
-          return 1 == _.eresult
+          return _.eresult == _._.k_EResultOK
             ? _.response.count > 0
               ? _.response.definitions[0]
               : null
@@ -5848,7 +5946,7 @@
         HydrateCustomPages() {
           const _ = (_, _, _) => {
               const _ = new _(_, _, {
-                grouping: 2,
+                grouping: _.Popular,
                 maxToReturn: 0,
                 ..._,
               });
@@ -5863,7 +5961,7 @@
                 _,
                 _(
                   {
-                    grouping: 2,
+                    grouping: _.Popular,
                   },
                   _,
                 ),
@@ -5875,7 +5973,7 @@
             _ = (_, _, _, _) => {
               const _ = _(_, _ || "", _);
               return {
-                type: 2,
+                type: _.HERO,
                 cluster: _._,
                 get title() {
                   return (0, _._)("#HeroCluster_AppTitle", _.title);
@@ -5908,22 +6006,29 @@
               (0, _._)("#RewardCluster_Popular_Subtitle"),
             ),
             _ = _(
-              _(13, !0),
+              _(_._.k_ECommunityItemClass_MiniProfileBackground, !0),
               (0, _._)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               {
-                itemclass: [13],
+                itemclass: [_._.k_ECommunityItemClass_MiniProfileBackground],
               },
             ),
             _ = _(
               (0, _._)("#ShopPageTitle_Avatar"),
               (0, _._)("#RewardCluster_AvatarItems_Subtitle"),
               {
-                itemclass: [15, 14],
+                itemclass: [
+                  _._.k_ECommunityItemClass_AnimatedAvatar,
+                  _._.k_ECommunityItemClass_AvatarFrame,
+                ],
               },
             ),
-            _ = _(_(3, !0), (0, _._)("#RewardCluster_Backgrounds_Subtitle"), {
-              itemclass: [3],
-            }),
+            _ = _(
+              _(_._.k_ECommunityItemClass_ProfileBackground, !0),
+              (0, _._)("#RewardCluster_Backgrounds_Subtitle"),
+              {
+                itemclass: [_._.k_ECommunityItemClass_ProfileBackground],
+              },
+            ),
             _ = _(
               (0, _._)(
                 "#RewardCluster_Popular_Title",
@@ -5931,7 +6036,7 @@
               ),
               (0, _._)("#RewardCluster_ChatEffect_Subtitle"),
               {
-                itemclass: [12],
+                itemclass: [_._.k_ECommunityItemClass_ChatEffect],
               },
             ),
             _ = _(
@@ -5941,7 +6046,7 @@
               ),
               (0, _._)("#RewardCluster_Popular_Subtitle"),
               {
-                itemclass: [11],
+                itemclass: [_._.k_ECommunityItemClass_Sticker],
               },
             ),
             _ = _(
@@ -5951,41 +6056,60 @@
               ),
               (0, _._)("#RewardCluster_Popular_Subtitle"),
               {
-                itemclass: [4],
+                itemclass: [_._.k_ECommunityItemClass_Emoticon],
               },
             ),
             _ = _(
-              (0, _._)("#RewardCluster_All_Title", _(15, !0)),
+              (0, _._)(
+                "#RewardCluster_All_Title",
+                _(_._.k_ECommunityItemClass_AnimatedAvatar, !0),
+              ),
               (0, _._)("#RewardCluster_AnimatedAvatar_Subtitle"),
               {
-                itemclass: [15],
+                itemclass: [_._.k_ECommunityItemClass_AnimatedAvatar],
               },
             ),
             _ = _(
-              (0, _._)("#RewardCluster_All_Title", _(14, !0)),
+              (0, _._)(
+                "#RewardCluster_All_Title",
+                _(_._.k_ECommunityItemClass_AvatarFrame, !0),
+              ),
               (0, _._)("#RewardCluster_AvatarFrames_Subtitle"),
               {
-                itemclass: [14],
+                itemclass: [_._.k_ECommunityItemClass_AvatarFrame],
               },
             ),
             _ = _(
-              (0, _._)("#RewardCluster_All_Title", _(16, !0)),
+              (0, _._)(
+                "#RewardCluster_All_Title",
+                _(_._.k_ECommunityItemClass_SteamDeckKeyboardSkin, !0),
+              ),
               (0, _._)("#RewardCluster_SteamDeckKeyboardSkins_Subtitle"),
               {
-                itemclass: [16],
+                itemclass: [_._.k_ECommunityItemClass_SteamDeckKeyboardSkin],
               },
             ),
             _ = _(
-              (0, _._)("#RewardCluster_All_Title", _(17, !0)),
+              (0, _._)(
+                "#RewardCluster_All_Title",
+                _(_._.k_ECommunityItemClass_SteamDeckStartupMovie, !0),
+              ),
               (0, _._)("#RewardCluster_SteamDeckStartupMovies_Subtitle"),
               {
-                itemclass: [17],
+                itemclass: [_._.k_ECommunityItemClass_SteamDeckStartupMovie],
               },
             ),
-            _ = _((0, _._)("#RewardCluster_FromGames", _(17, !0)), void 0, {
-              itemclass: [17],
-              excludedAppIDs: [_],
-            }),
+            _ = _(
+              (0, _._)(
+                "#RewardCluster_FromGames",
+                _(_._.k_ECommunityItemClass_SteamDeckStartupMovie, !0),
+              ),
+              void 0,
+              {
+                itemclass: [_._.k_ECommunityItemClass_SteamDeckStartupMovie],
+                excludedAppIDs: [_],
+              },
+            ),
             _ = _(
               (0, _._)(
                 "#RewardCluster_All_Title",
@@ -5993,7 +6117,10 @@
               ),
               "",
               {
-                rewardtype: [5, 6],
+                rewardtype: [
+                  _._.k_ELoyaltyRewardType_Bundle,
+                  _._.k_ELoyaltyRewardType_AutoGeneratedBundle,
+                ],
               },
             ),
             _ = _(
@@ -6003,9 +6130,9 @@
               ),
               "",
               {
-                itemclass: [8],
-                queryFilter: [3],
-                grouping: 1,
+                itemclass: [_._.k_ECommunityItemClass_ProfileModifier],
+                queryFilter: [_._.k_ELoyaltyRewardQueryFilter_Bundle],
+                grouping: _.All,
               },
             ),
             _ = _(
@@ -6015,9 +6142,9 @@
               ),
               "",
               {
-                itemclass: [8],
-                queryFilter: [3],
-                grouping: 2,
+                itemclass: [_._.k_ECommunityItemClass_ProfileModifier],
+                queryFilter: [_._.k_ELoyaltyRewardQueryFilter_Bundle],
+                grouping: _.Popular,
               },
             ),
             _ = _(
@@ -6027,8 +6154,8 @@
               ),
               "",
               {
-                itemclass: [8],
-                queryFilter: [3],
+                itemclass: [_._.k_ECommunityItemClass_ProfileModifier],
+                queryFilter: [_._.k_ELoyaltyRewardQueryFilter_Bundle],
                 categoryTag: ["artist_profile"],
               },
             ),
@@ -6037,8 +6164,8 @@
                 (0, _._)("#RewardCluster_TabletopFest2021Profiles_Title"),
                 void 0,
                 {
-                  itemclass: [8],
-                  queryFilter: [3],
+                  itemclass: [_._.k_ECommunityItemClass_ProfileModifier],
+                  queryFilter: [_._.k_ELoyaltyRewardQueryFilter_Bundle],
                   categoryTag: ["tabletop_fest_2021"],
                 },
               ),
@@ -6046,18 +6173,18 @@
                 (0, _._)("#RewardCluster_TiledProfileBackgrounds_Title"),
                 (0, _._)("#RewardCluster_BackgroundsTiled_Subtitle"),
                 {
-                  itemclass: [3],
-                  queryFilter: [4],
+                  itemclass: [_._.k_ECommunityItemClass_ProfileBackground],
+                  queryFilter: [_._.k_ELoyaltyRewardQueryFilter_Tiled],
                 },
               )),
             _ = [
               {
                 cluster: _,
-                type: 1,
+                type: _.CAROUSEL,
               },
               {
                 cluster: _,
-                type: 1,
+                type: _.CAROUSEL,
                 linkedPage: {
                   type: "custom",
                   pageid: "steamdeck",
@@ -6066,7 +6193,7 @@
               },
               {
                 cluster: _,
-                type: 2,
+                type: _.HERO,
                 strImage: _,
                 bFullBleedImage: !0,
                 linkedPage: {
@@ -6076,13 +6203,13 @@
               },
               {
                 cluster: _,
-                type: 1,
+                type: _.CAROUSEL,
                 linkedPage: null,
                 bHideHiddenItemCount: !0,
               },
               {
                 cluster: _,
-                type: 1,
+                type: _.CAROUSEL,
                 linkedPage: {
                   type: "custom",
                   pageid: "stickers",
@@ -6090,15 +6217,15 @@
               },
               {
                 cluster: _,
-                type: 1,
+                type: _.CAROUSEL,
               },
               {
                 cluster: _,
-                type: 1,
+                type: _.CAROUSEL,
               },
               {
                 cluster: _,
-                type: 1,
+                type: _.CAROUSEL,
                 linkedPage: {
                   type: "custom",
                   pageid: "backgrounds",
@@ -6106,11 +6233,11 @@
               },
               {
                 cluster: _,
-                type: 1,
+                type: _.CAROUSEL,
               },
               {
                 cluster: _,
-                type: 1,
+                type: _.CAROUSEL,
                 linkedPage: {
                   type: "custom",
                   pageid: "emoticons",
@@ -6136,29 +6263,31 @@
                   view: _[1][_],
                 });
           _(new _(_, _));
+          const _ = [
+            {
+              cluster: _,
+              type: _.GRID,
+            },
+          ];
           _(
             new _(
               "stickers",
-              [
-                {
-                  cluster: _,
-                  type: 0,
-                },
-              ],
+              _,
               (0, _._)("#ShopPageTitle_Stickers"),
               void 0,
               (0, _._)("#SearchPlaceholder_Stickers"),
             ),
           );
+          const _ = [
+            {
+              cluster: _,
+              type: _.GRID,
+            },
+          ];
           _(
             new _(
               "emoticons",
-              [
-                {
-                  cluster: _,
-                  type: 0,
-                },
-              ],
+              _,
               (0, _._)("#ShopPageTitle_Emoticons"),
               void 0,
               (0, _._)("#SearchPlaceholder_Emoticons"),
@@ -6170,10 +6299,10 @@
                 [
                   {
                     cluster: _,
-                    type: 0,
+                    type: _.GRID,
                   },
                 ],
-                _(12, !0),
+                _(_._.k_ECommunityItemClass_ChatEffect, !0),
                 void 0,
                 (0, _._)("#SearchPlaceholder_ChatEffects"),
               ),
@@ -6182,59 +6311,60 @@
               (0, _._)("#RewardCluster_AnimatedProfileBackgrounds_Title"),
               (0, _._)("#RewardCluster_Backgrounds_Subtitle"),
               {
-                itemclass: [3],
-                queryFilter: [1],
+                itemclass: [_._.k_ECommunityItemClass_ProfileBackground],
+                queryFilter: [_._.k_ELoyaltyRewardQueryFilter_Animated],
               },
             ),
             _ = _(
               (0, _._)("#RewardCluster_AnimatedMiniProfileBackgrounds_Title"),
               (0, _._)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               {
-                itemclass: [13],
-                queryFilter: [1],
+                itemclass: [_._.k_ECommunityItemClass_MiniProfileBackground],
+                queryFilter: [_._.k_ELoyaltyRewardQueryFilter_Animated],
               },
             ),
             _ = _(
               (0, _._)("#RewardCluster_StillProfileBackgrounds_Title"),
               (0, _._)("#RewardCluster_Backgrounds_Subtitle"),
               {
-                itemclass: [3],
-                queryFilter: [2],
+                itemclass: [_._.k_ECommunityItemClass_ProfileBackground],
+                queryFilter: [_._.k_ELoyaltyRewardQueryFilter_NotAnimated],
               },
             ),
             _ = _(
               (0, _._)("#RewardCluster_StillMiniProfileBackgrounds_Title"),
               (0, _._)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               {
-                itemclass: [13],
-                queryFilter: [2],
+                itemclass: [_._.k_ECommunityItemClass_MiniProfileBackground],
+                queryFilter: [_._.k_ELoyaltyRewardQueryFilter_NotAnimated],
               },
-            );
+            ),
+            _ = [
+              {
+                cluster: _,
+                type: _.CAROUSEL,
+              },
+              {
+                cluster: _,
+                type: _.CAROUSEL,
+              },
+              {
+                cluster: _,
+                type: _.CAROUSEL,
+              },
+              {
+                cluster: _,
+                type: _.CAROUSEL,
+              },
+              {
+                cluster: _,
+                type: _.CAROUSEL,
+              },
+            ];
           _(
             new _(
               "backgrounds",
-              [
-                {
-                  cluster: _,
-                  type: 1,
-                },
-                {
-                  cluster: _,
-                  type: 1,
-                },
-                {
-                  cluster: _,
-                  type: 1,
-                },
-                {
-                  cluster: _,
-                  type: 1,
-                },
-                {
-                  cluster: _,
-                  type: 1,
-                },
-              ],
+              _,
               (0, _._)("#ShopPageTitle_Backgrounds"),
               void 0,
               (0, _._)("#SearchPlaceholder_Backgrounds"),
@@ -6246,11 +6376,11 @@
                 [
                   {
                     cluster: _,
-                    type: 1,
+                    type: _.CAROUSEL,
                   },
                   {
                     cluster: _,
-                    type: 1,
+                    type: _.CAROUSEL,
                   },
                 ],
                 (0, _._)("#ShopPageTitle_Avatar"),
@@ -6258,19 +6388,20 @@
                 (0, _._)("#SearchPlaceholder_Avatar"),
               ),
             );
+          const _ = [
+            {
+              cluster: _,
+              type: _.CAROUSEL,
+            },
+            {
+              cluster: _,
+              type: _.CAROUSEL,
+            },
+          ];
           _(
             new _(
               "steamdeck",
-              [
-                {
-                  cluster: _,
-                  type: 1,
-                },
-                {
-                  cluster: _,
-                  type: 1,
-                },
-              ],
+              _,
               (0, _._)("#ShopPageTitle_SteamDeckItems"),
               void 0,
               (0, _._)("#SearchPlaceholder_SteamDeckItems"),
@@ -6282,7 +6413,7 @@
                 [
                   {
                     cluster: _,
-                    type: 0,
+                    type: _.GRID,
                   },
                 ],
                 (0, _._)("#ShopPageTitle_SteamDeckKeyboardSkin"),
@@ -6296,11 +6427,11 @@
                 [
                   {
                     cluster: _,
-                    type: 1,
+                    type: _.CAROUSEL,
                   },
                   {
                     cluster: _,
-                    type: 0,
+                    type: _.GRID,
                   },
                 ],
                 (0, _._)("#ShopPageTitle_SteamDeckStartupMovie"),
@@ -6314,7 +6445,7 @@
                 [
                   {
                     cluster: _,
-                    type: 0,
+                    type: _.GRID,
                   },
                 ],
                 (0, _._)("#ShopPageTitle_ItemBundles"),
@@ -6322,38 +6453,40 @@
                 (0, _._)("#SearchPlaceholder_ItemBundles"),
               ),
             );
+          const _ = [
+            {
+              cluster: _,
+              type: _.CAROUSEL,
+            },
+            {
+              cluster: _,
+              type: _.CAROUSEL,
+            },
+            {
+              cluster: _,
+              type: _.GRID,
+            },
+          ];
           _(
             new _(
               "profilebundles",
-              [
-                {
-                  cluster: _,
-                  type: 1,
-                },
-                {
-                  cluster: _,
-                  type: 1,
-                },
-                {
-                  cluster: _,
-                  type: 0,
-                },
-              ],
+              _,
               (0, _._)("#ShopPageTitle_ProfileBundles"),
               (0, _._)("#ShopPageTitle_ProfileBundles_Subtitle"),
               (0, _._)("#SearchPlaceholder_ProfileBundles"),
             ),
           );
+          const _ = [
+            {
+              cluster: _,
+              type: _.GRID,
+              bHomogeneous: !0,
+            },
+          ];
           _(
             new _(
               "artistprofiles",
-              [
-                {
-                  cluster: _,
-                  type: 0,
-                  bHomogeneous: !0,
-                },
-              ],
+              _,
               (0, _._)("#ShopPageTitle_ArtistProfiles"),
               (0, _._)("#ShopPageTitle_ArtistProfiles_Subtitle"),
               (0, _._)("#SearchPlaceholder_ArtistProfiles"),
@@ -6370,12 +6503,12 @@
                     get appid() {
                       return _.Get().GetSortedMyGamesWithRewards().slice(0, 10);
                     },
-                    grouping: 2,
+                    grouping: _.Popular,
                   },
                 );
                 this.m_mapClusters.set(_._, _);
                 const _ = {
-                  type: 2,
+                  type: _.HERO,
                   linkedPage: {
                     type: "custom",
                     pageid: "games",
@@ -6475,18 +6608,21 @@
       }
       function _(_) {
         const _ = {
-          sort: 1,
+          sort: _._.k_ELoyaltyRewardsQuerySort_TimeCreated,
           sort_descending: !0,
         };
         switch (_) {
-          case 1:
-            (_.sort = 1), (_.sort_descending = !0);
+          case _.All:
+            (_.sort = _._.k_ELoyaltyRewardsQuerySort_TimeCreated),
+              (_.sort_descending = !0);
             break;
-          case 2:
-            (_.sort = 2), (_.sort_descending = !1);
+          case _.Popular:
+            (_.sort = _._.k_ELoyaltyRewardsQuerySort_RedemptionRank),
+              (_.sort_descending = !1);
         }
         return _;
       }
+      var _, _;
       (0, _._)([_._.ref], _.prototype, "m_lPointsAvailable", void 0),
         (0, _._)([_._], _.prototype, "m_mapCouponPromos", void 0),
         (0, _._)([_._], _.prototype, "m_nAppIDFiltersInUseCount", void 0),
@@ -6511,7 +6647,15 @@
         (0, _._)([_._], _.prototype, "m_rgPurchasedCustomizations", void 0),
         (0, _._)([_._], _.prototype, "m_rgUpgradedCustomizations", void 0),
         (0, _._)([_._], _.prototype, "m_unAwardPointsTransferred", void 0),
-        (0, _._)([_._], _.prototype, "ShowLoginDialog", null);
+        (0, _._)([_._], _.prototype, "ShowLoginDialog", null),
+        (function (_) {
+          (_[(_.All = 1)] = "All"), (_[(_.Popular = 2)] = "Popular");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.GRID = 0)] = "GRID"),
+            (_[(_.CAROUSEL = 1)] = "CAROUSEL"),
+            (_[(_.HERO = 2)] = "HERO");
+        })(_ || (_ = {}));
       class _ {
         m_strId;
         m_filter;
@@ -6595,11 +6739,22 @@
           return this.m_strEventName;
         }
         get items() {
+          const _ = [
+            _._.k_ECommunityItemClass_ProfileModifier,
+            _._.k_ECommunityItemClass_AnimatedAvatar,
+            _._.k_ECommunityItemClass_AvatarFrame,
+            _._.k_ECommunityItemClass_MiniProfileBackground,
+            _._.k_ECommunityItemClass_ProfileBackground,
+            _._.k_ECommunityItemClass_Sticker,
+            _._.k_ECommunityItemClass_Emoticon,
+            _._.k_ECommunityItemClass_SteamDeckKeyboardSkin,
+            _._.k_ECommunityItemClass_SteamDeckStartupMovie,
+          ];
           let _ = [];
           const _ = {
             type: "clusterview",
             view: {
-              type: 1,
+              type: _.CAROUSEL,
               linkedPage: null,
               cluster: {
                 _: _({
@@ -6612,7 +6767,7 @@
                   _.Get().QueryRewardDefinitions(
                     _(
                       {
-                        grouping: 2,
+                        grouping: _.Popular,
                         categoryTag: [this.m_strEventName],
                       },
                       _,
@@ -6625,10 +6780,10 @@
           };
           _.push(_);
           const _ = this.m_rgPriorityAppIDs?.concat(this.m_rgIncludedAppIDs),
-            _ = [8, 15, 14, 13, 3, 11, 4, 16, 17].map((_) => ({
+            _ = _.map((_) => ({
               type: "clusterview",
               view: {
-                type: 1,
+                type: _.CAROUSEL,
                 linkedPage: null,
                 cluster: {
                   _: _({
@@ -6644,7 +6799,7 @@
                     _.Get().QueryRewardDefinitions(
                       _(
                         {
-                          grouping: 2,
+                          grouping: _.Popular,
                           itemclass: [_],
                           appid: _,
                         },
@@ -6656,10 +6811,10 @@
                 },
               },
             })),
-            _ = __webpack_require__?.slice(0, this.m_cAppClusters).map((_) => ({
+            _ = _?.slice(0, this.m_cAppClusters).map((_) => ({
               type: "clusterview",
               view: {
-                type: 1,
+                type: _.CAROUSEL,
                 linkedPage: {
                   type: "app",
                   appid: _,
@@ -6691,15 +6846,26 @@
           return this.m_strSubtitle;
         }
         get items() {
+          const _ = [
+            _._.k_ECommunityItemClass_ProfileModifier,
+            _._.k_ECommunityItemClass_AnimatedAvatar,
+            _._.k_ECommunityItemClass_AvatarFrame,
+            _._.k_ECommunityItemClass_MiniProfileBackground,
+            _._.k_ECommunityItemClass_ProfileBackground,
+            _._.k_ECommunityItemClass_Sticker,
+            _._.k_ECommunityItemClass_Emoticon,
+            _._.k_ECommunityItemClass_SteamDeckKeyboardSkin,
+            _._.k_ECommunityItemClass_SteamDeckStartupMovie,
+          ];
           let _ = [];
           {
             let _ = {
               type: "clusterview",
               view: {
-                type: 1,
+                type: _.CAROUSEL,
                 cluster: {
                   _: _([this.m_appid], {
-                    rewardtype: [5],
+                    rewardtype: [_._.k_ELoyaltyRewardType_Bundle],
                   }),
                   title: (0, _._)("#RewardItemType_Bundle_plural"),
                   subtitle: "",
@@ -6708,7 +6874,10 @@
                       _(
                         {
                           appid: [this.m_appid],
-                          rewardtype: [5, 6],
+                          rewardtype: [
+                            _._.k_ELoyaltyRewardType_Bundle,
+                            _._.k_ELoyaltyRewardType_AutoGeneratedBundle,
+                          ],
                         },
                         _,
                       ),
@@ -6720,10 +6889,10 @@
             };
             _.push(_);
           }
-          let _ = [8, 15, 14, 13, 3, 11, 4, 16, 17].map((_) => ({
+          let _ = _.map((_) => ({
             type: "clusterview",
             view: {
-              type: 1,
+              type: _.CAROUSEL,
               cluster: {
                 _: _([this.m_appid], {
                   itemclass: [_],
@@ -6978,7 +7147,7 @@
           if (!_.Get().BIsLoggedIn()) return;
           const _ = _._.Init(_._);
           let _ = await _._.CanClaimItem(_.Get().GetServiceTransport(), _);
-          1 == _.GetEResult()
+          _.GetEResult() == _._.k_EResultOK
             ? this.InitFreeItemReward(_.Body().toObject())
             : console.error(
                 "Error when calling SaleItemRewardsService.CanClaimItem: EResult=${msgResponse.GetEResult()}",
@@ -6986,13 +7155,13 @@
         }
         async ClaimFreeSaleItem() {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!_.Get().BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: (0, _._)("#Redeem_SignIn"),
               }),
               _
@@ -7001,7 +7170,7 @@
             _ = await _._.ClaimItem(_.Get().GetServiceTransport(), _);
           return (
             (_.eResult = __webpack_require__.GetEResult()),
-            1 == __webpack_require__.GetEResult()
+            __webpack_require__.GetEResult() == _._.k_EResultOK
               ? ((this.m_claimedFreeItemDef = __webpack_require__
                   .Body()
                   .reward_item()
@@ -7014,7 +7183,7 @@
                   .Body()
                   .next_claim_time()),
                 this.SetClaimTimer())
-              : (10 == __webpack_require__.GetEResult() &&
+              : (__webpack_require__.GetEResult() == _._.k_EResultBusy &&
                   (_.strMessage = (0, _._)("#SummerSale_Redeem_Busy")),
                 console.error(
                   `Error when calling SaleItemRewardsService.ClaimItem: EResult=${__webpack_require__.GetEResult()}`,
@@ -7054,6 +7223,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7287,9 +7457,9 @@
       function _(_) {
         const _ = (0, _._)(() => _._.GetAppInfo(_.appid));
         switch (_.type) {
-          case 6:
+          case _._.k_ELoyaltyRewardType_AutoGeneratedBundle:
             return (0, _._)("#RewardBundle_AutoGeneratedBundleName", _.name);
-          case 5:
+          case _._.k_ELoyaltyRewardType_Bundle:
             return _.community_item_data?.item_title ?? "";
           default:
             return (
@@ -7547,6 +7717,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const {
@@ -7689,21 +7860,21 @@
       }
       const _ = (_) => {
         switch (_.descriptor.type) {
-          case 1:
+          case _._.CAROUSEL:
             const _ = _.createElement(_, {
               ..._,
             });
             return _.descriptor.bHomogeneous
               ? _.createElement(_._, null, _)
               : _;
-          case 0:
+          case _._.GRID:
             const _ = _.createElement(_, {
               ..._,
             });
             return _.descriptor.bHomogeneous
               ? _.createElement(_._, null, _)
               : _;
-          case 2:
+          case _._.HERO:
             return _.createElement(_._, null, (_) =>
               "desktop" !== _
                 ? _.createElement(_, {
@@ -7722,7 +7893,7 @@
       };
       let _ = class extends _.Component {
         render() {
-          if (1 != this.props.descriptor.type) return null;
+          if (this.props.descriptor.type != _._.CAROUSEL) return null;
           const {
               descriptor: {
                 cluster: {
@@ -7929,7 +8100,7 @@
               linkedPage: _,
             } = _,
             _ = (0, _._)("(min-width: 1070px)");
-          if (2 !== _.type)
+          if (_.type !== _._.HERO)
             return (
               console.error(
                 `Attempt to render a hero cluster with a non-hero view. Cluster ${_.cluster._}`,
@@ -8005,7 +8176,7 @@
               linkedPage: _,
             } = _,
             _ = (0, _._)();
-          if (2 !== _.type)
+          if (_.type !== _._.HERO)
             return (
               console.error(
                 `Attempt to render a hero cluster with a non-hero view. Cluster ${_.cluster._}`,
@@ -8070,7 +8241,8 @@
           return _.createElement(_._, {
             definition: _,
             onClick: (_) => {
-              5 === _.type || 6 === _.type
+              _.type === _._.k_ELoyaltyRewardType_Bundle ||
+              _.type === _._.k_ELoyaltyRewardType_AutoGeneratedBundle
                 ? _.push(_._.LoyaltyItemBundle(_.defid))
                 : (0, _._)(_, _);
             },
@@ -10260,6 +10432,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext(!1);
       function _(_) {
@@ -10448,10 +10621,19 @@
       }
       const _ = (0, _._)((_) => {
           const { offer: _, items: __webpack_require__ } = _,
-            _ = _(__webpack_require__, 15),
-            _ = _(__webpack_require__, 14),
-            _ = _(__webpack_require__, 13),
-            _ = _(__webpack_require__, 3);
+            _ = _(
+              __webpack_require__,
+              _._.k_ECommunityItemClass_AnimatedAvatar,
+            ),
+            _ = _(__webpack_require__, _._.k_ECommunityItemClass_AvatarFrame),
+            _ = _(
+              __webpack_require__,
+              _._.k_ECommunityItemClass_MiniProfileBackground,
+            ),
+            _ = _(
+              __webpack_require__,
+              _._.k_ECommunityItemClass_ProfileBackground,
+            );
           return _.createElement(
             "div",
             {
@@ -10488,7 +10670,9 @@
         }),
         _ = (0, _._)((_) => {
           const { offer: _, item: __webpack_require__, className: _, ..._ } = _,
-            _ = 14 == __webpack_require__.community_item_class;
+            _ =
+              __webpack_require__.community_item_class ==
+              _._.k_ECommunityItemClass_AvatarFrame;
           return _.createElement(
             _._,
             {
@@ -10531,6 +10715,8 @@
       });
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10722,6 +10908,8 @@
         });
       const _ = _;
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -11541,7 +11729,8 @@
       const _ = _(_.GrayButton),
         _ = _(_.BlueButton),
         _ = _(_.GreenButton);
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -11558,7 +11747,7 @@
       }
       function _(_, _, _, _) {
         const _ = {
-          type: 1,
+          type: _.k_ERedeemPointsTypeVirtualItem,
           rewardDefinition: _,
           itemLevel: _,
           desiredItemLevel: _,
@@ -11573,7 +11762,7 @@
       }
       function _(_, _, _, _) {
         const _ = {
-          type: 3,
+          type: _.k_ERedeemPointsTypeProfileShowcaseSlot,
           profileCustomizationType: _,
           itemCount: _,
           itemLevel: _,
@@ -11588,7 +11777,7 @@
       }
       function _(_, _, _, _) {
         const _ = {
-          type: 2,
+          type: _.k_ERedeemPointsTypeProfileShowcaseUpgrade,
           profileCustomizationType: _,
           itemLevel: _,
           desiredItemLevel: _,
@@ -11602,7 +11791,7 @@
       }
       function _(_, _) {
         const _ = {
-          type: 1,
+          type: _.k_ERedeemPointsTypeVirtualItem,
           rewardDefinition: _,
         };
         (0, _._)(
@@ -11614,14 +11803,14 @@
       }
       function _(_) {
         switch (_.type) {
-          case 1:
+          case _.k_ERedeemPointsTypeVirtualItem:
             return _._.Get().BCanRedeemPointsForItem(_.rewardDefinition);
-          case 2:
+          case _.k_ERedeemPointsTypeProfileShowcaseUpgrade:
             return _._.Get().BCanRedeemPointsForProfileShowcaseUpgrade(
               _.profileCustomizationType,
               _.itemLevel,
             );
-          case 3:
+          case _.k_ERedeemPointsTypeProfileShowcaseSlot:
             return _._.Get().BCanRedeemPointsForProfileShowcaseSlot(
               _.profileCustomizationType,
               _.itemCount,
@@ -11631,17 +11820,24 @@
       }
       function _(_) {
         switch (_.type) {
-          case 1:
-            if (1 == _.rewardDefinition.community_item_class)
+          case _.k_ERedeemPointsTypeVirtualItem:
+            if (
+              _.rewardDefinition.community_item_class ==
+              _._.k_ECommunityItemClass_Badge
+            )
               return _._.Get().GetCostToLevelSeasonalBadge(_.itemLevel || 0);
-            if (5 == _.rewardDefinition.type || 6 == _.rewardDefinition.type) {
+            if (
+              _.rewardDefinition.type == _._.k_ELoyaltyRewardType_Bundle ||
+              _.rewardDefinition.type ==
+                _._.k_ELoyaltyRewardType_AutoGeneratedBundle
+            ) {
               return _._.Get().GetBundleOfferForUser(_.rewardDefinition)
                 .point_cost;
             }
             return parseInt(_.rewardDefinition.point_cost);
-          case 2:
+          case _.k_ERedeemPointsTypeProfileShowcaseUpgrade:
             return _._.Get().GetUpgradableProfileShowcaseCost();
-          case 3:
+          case _.k_ERedeemPointsTypeProfileShowcaseSlot:
             return _._.Get().GetPurchasableProfileShowcaseSlotCost();
         }
         return 0;
@@ -11651,7 +11847,7 @@
           _ = (0, _._)(() => _._.Get().GetRewardItem(_));
         if (!_) return null;
         const _ = {
-          type: 1,
+          type: _.k_ERedeemPointsTypeVirtualItem,
           rewardDefinition: _,
         };
         return _.createElement(_, {
@@ -11659,6 +11855,15 @@
           ...__webpack_require__,
         });
       }
+      !(function (_) {
+        (_[(_.k_ERedeemPointsTypeInvalid = 0)] = "k_ERedeemPointsTypeInvalid"),
+          (_[(_.k_ERedeemPointsTypeVirtualItem = 1)] =
+            "k_ERedeemPointsTypeVirtualItem"),
+          (_[(_.k_ERedeemPointsTypeProfileShowcaseUpgrade = 2)] =
+            "k_ERedeemPointsTypeProfileShowcaseUpgrade"),
+          (_[(_.k_ERedeemPointsTypeProfileShowcaseSlot = 3)] =
+            "k_ERedeemPointsTypeProfileShowcaseSlot");
+      })(_ || (_ = {}));
       let _ = class extends _.Component {
         m_bShowTransitions = !1;
         m_bIsMounted = !0;
@@ -11675,7 +11880,9 @@
             (this.m_mutableObjDefinition = this.props.definition);
         }
         componentDidMount() {
-          if (1 == this.m_mutableObjDefinition.type) {
+          if (
+            this.m_mutableObjDefinition.type == _.k_ERedeemPointsTypeVirtualItem
+          ) {
             const _ =
               this.m_mutableObjDefinition.rewardDefinition.bundle_defids;
             (0, _._)(
@@ -11749,27 +11956,31 @@
         }
         BSkipToCantAfford() {
           if (
-            2 == this.props.definition.type ||
-            3 == this.props.definition.type
+            this.props.definition.type ==
+              _.k_ERedeemPointsTypeProfileShowcaseUpgrade ||
+            this.props.definition.type ==
+              _.k_ERedeemPointsTypeProfileShowcaseSlot
           )
             return _._.Get().BIsLoggedIn() && !this.BCanAffordItem();
           const _ =
             _._.Get().BRewardOwnedByUser(
               this.props.definition.rewardDefinition,
-            ) && 2 != this.props.definition.rewardDefinition.type;
+            ) &&
+            this.props.definition.rewardDefinition.type !=
+              _._.k_ELoyaltyRewardType_Badge;
           return _._.Get().BIsLoggedIn() && !_ && !this.BCanAffordItem();
         }
         BAlreadyEquipped() {
           return (function (_) {
             switch (_.type) {
-              case 1:
+              case _.k_ERedeemPointsTypeVirtualItem:
                 return _._.Get().BRewardEquippedByUser(_.rewardDefinition);
-              case 2:
+              case _.k_ERedeemPointsTypeProfileShowcaseUpgrade:
                 return !_._.Get().BCanRedeemPointsForProfileShowcaseUpgrade(
                   _.profileCustomizationType,
                   _.itemLevel,
                 );
-              case 3:
+              case _.k_ERedeemPointsTypeProfileShowcaseSlot:
                 return !_._.Get().BCanRedeemPointsForProfileShowcaseSlot(
                   _.profileCustomizationType,
                   _.itemCount,
@@ -11780,19 +11991,25 @@
         }
         BSkipToEquip() {
           return (
-            2 != this.props.definition.type &&
-            3 != this.props.definition.type &&
+            this.props.definition.type !=
+              _.k_ERedeemPointsTypeProfileShowcaseUpgrade &&
+            this.props.definition.type !=
+              _.k_ERedeemPointsTypeProfileShowcaseSlot &&
             !(
               !_._.Get().BRewardOwnedByUser(
                 this.props.definition.rewardDefinition,
               ) ||
               !(
-                (2 == this.props.definition.rewardDefinition.type &&
+                (this.props.definition.rewardDefinition.type ==
+                  _._.k_ELoyaltyRewardType_Badge &&
                   _._.Get().GetUserSeasonalBadgeLevel() >=
                     this.props.definition.itemLevel) ||
-                1 == this.props.definition.rewardDefinition.type ||
-                5 == this.props.definition.rewardDefinition.type ||
-                6 == this.props.definition.rewardDefinition.type
+                this.props.definition.rewardDefinition.type ==
+                  _._.k_ELoyaltyRewardType_VirtualItemReward ||
+                this.props.definition.rewardDefinition.type ==
+                  _._.k_ELoyaltyRewardType_Bundle ||
+                this.props.definition.rewardDefinition.type ==
+                  _._.k_ELoyaltyRewardType_AutoGeneratedBundle
               )
             )
           );
@@ -11844,16 +12061,16 @@
               }),
               this.props.definition.type)
             ) {
-              case 1:
+              case _.k_ERedeemPointsTypeVirtualItem:
                 switch (this.props.definition.rewardDefinition.type) {
-                  case 1:
-                  case 5:
-                  case 6:
+                  case _._.k_ELoyaltyRewardType_VirtualItemReward:
+                  case _._.k_ELoyaltyRewardType_Bundle:
+                  case _._.k_ELoyaltyRewardType_AutoGeneratedBundle:
                     this.BIsFreeSaleRewardItem()
                       ? _._.Get()
                           .ClaimFreeSaleItem()
                           .then((_) => {
-                            1 == _.eResult
+                            _.eResult == _._.k_EResultOK
                               ? ((this.m_mutableObjDefinition.rewardDefinition =
                                   _._.Get().GetClaimedSaleRewardItemDef()),
                                 this.setState({
@@ -11872,7 +12089,7 @@
                             _(this.m_mutableObjDefinition),
                           )
                           .then((_) => {
-                            1 == _.eResult
+                            _.eResult == _._.k_EResultOK
                               ? this.setState({
                                   step: "equip",
                                   requestInProgress: !1,
@@ -11880,20 +12097,20 @@
                               : _.strMessage.length
                                 ? this.ShowError(_.strMessage)
                                 : this.ShowGenericError(),
-                              11 == _.eResult &&
+                              _.eResult == _._.k_EResultInvalidState &&
                                 this.setState({
                                   step: "pricechange",
                                 });
                           })
                           .catch(this.ShowGenericError);
                     break;
-                  case 4:
+                  case _._.k_ELoyaltyRewardType_CartDiscount:
                     _._.Get()
                       .RedeemPointsForCoupon(
                         this.props.definition.rewardDefinition.defid,
                       )
                       .then((_) => {
-                        1 == _.eResult
+                        _.eResult == _._.k_EResultOK
                           ? this.setState({
                               step: "equip",
                               requestInProgress: !1,
@@ -11902,7 +12119,7 @@
                       })
                       .catch(this.ShowGenericError);
                     break;
-                  case 2: {
+                  case _._.k_ELoyaltyRewardType_Badge: {
                     let _ = Math.max(
                       this.props.definition.itemLevel -
                         _._.Get().GetUserSeasonalBadgeLevel(),
@@ -11914,7 +12131,7 @@
                         _,
                       )
                       .then((_) => {
-                        1 == _.eResult
+                        _.eResult == _._.k_EResultOK
                           ? this.setState({
                               step: "equip",
                               requestInProgress: !1,
@@ -11927,14 +12144,14 @@
                   }
                 }
                 break;
-              case 2:
+              case _.k_ERedeemPointsTypeProfileShowcaseUpgrade:
                 _._.Get()
                   .RedeemPointsForProfileShowcaseUpgrade(
                     this.props.definition.profileCustomizationType,
                     this.props.definition.desiredItemLevel,
                   )
                   .then((_) => {
-                    1 == _.eResult
+                    _.eResult == _._.k_EResultOK
                       ? (this.setState({
                           requestInProgress: !1,
                         }),
@@ -11945,13 +12162,13 @@
                   })
                   .catch(this.ShowGenericError);
                 break;
-              case 3:
+              case _.k_ERedeemPointsTypeProfileShowcaseSlot:
                 _._.Get()
                   .RedeemPointsForProfileShowcase(
                     this.props.definition.profileCustomizationType,
                   )
                   .then((_) => {
-                    1 == _.eResult
+                    _.eResult == _._.k_EResultOK
                       ? this.CloseModal()
                       : _.strMessage.length
                         ? this.ShowError(_.strMessage)
@@ -11969,37 +12186,37 @@
           });
           let _ = null;
           switch (this.props.definition.rewardDefinition.community_item_class) {
-            case 3:
+            case _._.k_ECommunityItemClass_ProfileBackground:
               _ = _._.Get().SetProfileBackground(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 14:
+            case _._.k_ECommunityItemClass_AvatarFrame:
               _ = _._.Get().SetAvatarFrame(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 15:
+            case _._.k_ECommunityItemClass_AnimatedAvatar:
               _ = _._.Get().SetAnimatedAvatar(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 13:
+            case _._.k_ECommunityItemClass_MiniProfileBackground:
               _ = _._.Get().SetMiniProfileBackground(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 8:
+            case _._.k_ECommunityItemClass_ProfileModifier:
               _ = _._.Get().ActivateProfileModifier(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 16:
+            case _._.k_ECommunityItemClass_SteamDeckKeyboardSkin:
               _ = _._.Get().SetSteamDeckKeyboardSkin(
                 this.props.definition.rewardDefinition,
               );
               break;
-            case 17:
+            case _._.k_ECommunityItemClass_SteamDeckStartupMovie:
               return (
                 (window.location.href = "steam://open/settings/customization"),
                 void this.CloseModal()
@@ -12011,7 +12228,7 @@
               );
           }
           _.then((_) => {
-            1 == _.eResult
+            _.eResult == _._.k_EResultOK
               ? this.setState({
                   step: "equipped",
                   requestInProgress: !1,
@@ -12048,7 +12265,11 @@
               : null;
           let _ = "";
           if (
-            [1, 5, 6].includes(this.props.definition.rewardDefinition?.type)
+            [
+              _._.k_ELoyaltyRewardType_VirtualItemReward,
+              _._.k_ELoyaltyRewardType_Bundle,
+              _._.k_ELoyaltyRewardType_AutoGeneratedBundle,
+            ].includes(this.props.definition.rewardDefinition?.type)
           ) {
             _ = `${document.location.href.split("/reward/")[0]}/reward/${this.props.definition.rewardDefinition.defid}`;
           }
@@ -12267,7 +12488,8 @@
             ),
         ),
         _ = (_) =>
-          2 == _.type || 3 == _.type
+          _.type == _.k_ERedeemPointsTypeProfileShowcaseUpgrade ||
+          _.type == _.k_ERedeemPointsTypeProfileShowcaseSlot
             ? (0, _._)(
                 "#ProfileShowcases_ShowcaseName",
                 (0, _._)(
@@ -12276,7 +12498,7 @@
               )
             : _(_.rewardDefinition),
         _ = (_) => {
-          if (1 == _.type)
+          if (_.type == _._.k_ELoyaltyRewardType_VirtualItemReward)
             return (
               (0, _._)(
                 _.community_item_data,
@@ -12284,9 +12506,11 @@
               ),
               _.community_item_data.item_title
             );
-          if (2 == _.type) return (0, _._)("#Redeem_Badge_PrestigeBadge");
-          if (5 == _.type) return _.community_item_data.item_title;
-          if (6 == _.type) {
+          if (_.type == _._.k_ELoyaltyRewardType_Badge)
+            return (0, _._)("#Redeem_Badge_PrestigeBadge");
+          if (_.type == _._.k_ELoyaltyRewardType_Bundle)
+            return _.community_item_data.item_title;
+          if (_.type == _._.k_ELoyaltyRewardType_AutoGeneratedBundle) {
             const _ = _._.GetAppInfo(_.appid).name || "";
             return (0, _._)("#RewardBundle_AutoGeneratedBundleName", _);
           }
@@ -12300,7 +12524,7 @@
             rewardDefinition: _,
           } = _;
           switch (_) {
-            case 2:
+            case _.k_ERedeemPointsTypeProfileShowcaseUpgrade:
               return _(_)
                 ? (0, _._)(
                     "#ProfileShowcases_UpgradeLevel",
@@ -12311,16 +12535,23 @@
                     "#ProfileShowcases_UpgradeAtMaxLevel",
                     __webpack_require__,
                   );
-            case 3:
+            case _.k_ERedeemPointsTypeProfileShowcaseSlot:
               return (0, _._)("#ProfileShowcases_AdditionalSlot");
-            case 1:
-              if (1 == _.type || 2 == _.type)
+            case _.k_ERedeemPointsTypeVirtualItem:
+              if (
+                _.type == _._.k_ELoyaltyRewardType_VirtualItemReward ||
+                _.type == _._.k_ELoyaltyRewardType_Badge
+              )
                 return _.appid != _._.Get().GetCurrentSeasonalAppID() &&
-                  8 == _.community_item_class &&
+                  _.community_item_class ==
+                    _._.k_ECommunityItemClass_ProfileModifier &&
                   0 != _.bundle_defids?.length
                   ? (0, _._)("#RewardItemType_ProfileBundle")
                   : (0, _._)(_.community_item_class);
-              if (5 == _.type || 6 == _.type)
+              if (
+                _.type == _._.k_ELoyaltyRewardType_Bundle ||
+                _.type == _._.k_ELoyaltyRewardType_AutoGeneratedBundle
+              )
                 return (0, _._)("#RewardItemType_Bundle");
           }
           return "";
@@ -13418,7 +13649,11 @@
             };
             let _ = _._.Get()
               .GetRewardDefinitions(..._.rewardDefinition.bundle_defids)
-              .filter((_) => 14 == _.community_item_class);
+              .filter(
+                (_) =>
+                  _.community_item_class ==
+                  _._.k_ECommunityItemClass_AvatarFrame,
+              );
             0 != _?.length &&
               (_.frame =
                 "items/" +
@@ -13515,14 +13750,18 @@
               this.props.definition.profileCustomizationType,
           );
           if ("equipped" == this.props.step)
-            return 2 == this.props.definition.type
+            return this.props.definition.type ==
+              _.k_ERedeemPointsTypeProfileShowcaseUpgrade
               ? (0, _._)(
                   "#Redeem_Equipped_ProfileShowcaseUpgraded",
                   _,
                   this.props.definition.itemLevel,
                 )
               : (0, _._)("#Redeem_Equipped_ProfileShowcaseSlotPurchased", _);
-          if (2 == this.props.definition.type)
+          if (
+            this.props.definition.type ==
+            _.k_ERedeemPointsTypeProfileShowcaseUpgrade
+          )
             return (0, _._)(
               "#Redeem_UsePoints_ProfileShowcaseUpgrade",
               this.props.definition.desiredItemLevel,
@@ -13545,7 +13784,7 @@
         GetProfileSteamID() {
           return _._.Get().BIsLoggedIn()
             ? _._.steamid
-            : 2 == _._.EUNIVERSE
+            : _._.EUNIVERSE == _._.k_EUniverseBeta
               ? "148618792083695825"
               : "76561197960266962";
         }
@@ -13661,7 +13900,8 @@
             .items.map((_) => {
               const _ = _.community_item_data.item_image_large;
               let _ = (0, _._)(_.appid, _);
-              3 == _.community_item_class &&
+              _.community_item_class ==
+                _._.k_ECommunityItemClass_ProfileBackground &&
                 (_ =
                   _._.COMMUNITY_CDN_URL +
                   "economy/profilebackground/items/" +
@@ -13766,7 +14006,7 @@
         GetProfileSteamID() {
           return _._.Get().BIsLoggedIn()
             ? _._.steamid
-            : 2 == _._.EUNIVERSE
+            : _._.EUNIVERSE == _._.k_EUniverseBeta
               ? "148618792083695825"
               : "76561197960266962";
         }
@@ -13792,7 +14032,9 @@
             _ = _.items.map((_) => {
               let _ = (0, _._)(_);
               const _ = _._.Get().BRewardOwnedByUser(_),
-                _ = 8 == _.community_item_class;
+                _ =
+                  _.community_item_class ==
+                  _._.k_ECommunityItemClass_ProfileModifier;
               return _.createElement(
                 _._,
                 {
@@ -13937,31 +14179,34 @@
         }
       }
       const _ = {
-          11: _,
-          3: _,
-          4: _,
-          13: _,
-          14: _,
-          15: _,
-          1: _,
-          12: _,
-          8: _,
-          16: _,
-          17: _,
+          [_._.k_ECommunityItemClass_Sticker]: _,
+          [_._.k_ECommunityItemClass_ProfileBackground]: _,
+          [_._.k_ECommunityItemClass_Emoticon]: _,
+          [_._.k_ECommunityItemClass_MiniProfileBackground]: _,
+          [_._.k_ECommunityItemClass_AvatarFrame]: _,
+          [_._.k_ECommunityItemClass_AnimatedAvatar]: _,
+          [_._.k_ECommunityItemClass_Badge]: _,
+          [_._.k_ECommunityItemClass_ChatEffect]: _,
+          [_._.k_ECommunityItemClass_ProfileModifier]: _,
+          [_._.k_ECommunityItemClass_SteamDeckKeyboardSkin]: _,
+          [_._.k_ECommunityItemClass_SteamDeckStartupMovie]: _,
         },
         _ = (0, _._)((_) => {
           let _ = null;
           switch (_.definition.type) {
-            case 3:
-            case 2:
+            case _.k_ERedeemPointsTypeProfileShowcaseSlot:
+            case _.k_ERedeemPointsTypeProfileShowcaseUpgrade:
               _ = _;
               break;
-            case 1:
+            case _.k_ERedeemPointsTypeVirtualItem:
               _ =
-                5 == _.definition.rewardDefinition.type ||
-                6 == _.definition.rewardDefinition.type
+                _.definition.rewardDefinition.type ==
+                  _._.k_ELoyaltyRewardType_Bundle ||
+                _.definition.rewardDefinition.type ==
+                  _._.k_ELoyaltyRewardType_AutoGeneratedBundle
                   ? _
-                  : 8 == _.definition.rewardDefinition.community_item_class &&
+                  : _.definition.rewardDefinition.community_item_class ==
+                        _._.k_ECommunityItemClass_ProfileModifier &&
                       0 != _.definition.rewardDefinition.bundle_defids?.length
                     ? _
                     : _[_.definition.rewardDefinition.community_item_class];
@@ -13970,7 +14215,8 @@
             ? _.createElement(_, {
                 ..._,
               })
-            : 4 == _.definition.rewardDefinition.type
+            : _.definition.rewardDefinition.type ==
+                _._.k_ELoyaltyRewardType_CartDiscount
               ? _.createElement(_, {
                   ..._,
                 })
@@ -14318,10 +14564,12 @@
             const _ = _(__webpack_require__),
               { discount: _, originalCost: _ } = (function (_) {
                 switch (_.type) {
-                  case 1:
+                  case _.k_ERedeemPointsTypeVirtualItem:
                     if (
-                      5 == _.rewardDefinition.type ||
-                      6 == _.rewardDefinition.type
+                      _.rewardDefinition.type ==
+                        _._.k_ELoyaltyRewardType_Bundle ||
+                      _.rewardDefinition.type ==
+                        _._.k_ELoyaltyRewardType_AutoGeneratedBundle
                     ) {
                       const {
                         discount: _,
@@ -14336,13 +14584,13 @@
                       discount: 0,
                       originalCost: parseInt(_.rewardDefinition.point_cost),
                     };
-                  case 2:
+                  case _.k_ERedeemPointsTypeProfileShowcaseUpgrade:
                     return {
                       discount: 0,
                       originalCost:
                         _._.Get().GetUpgradableProfileShowcaseCost(),
                     };
-                  case 3:
+                  case _.k_ERedeemPointsTypeProfileShowcaseSlot:
                     return {
                       discount: 0,
                       originalCost:
@@ -14525,7 +14773,8 @@
             ("equip" != __webpack_require__ &&
               "equipped" != __webpack_require__) ||
             !_.rewardDefinition ||
-            1 != _.rewardDefinition.type
+            _.rewardDefinition.type !=
+              _._.k_ELoyaltyRewardType_VirtualItemReward
           ) {
             if ("cantredeemforapp" == __webpack_require__) {
               let _ = _.createElement(
@@ -14641,6 +14890,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { className: _, ...__webpack_require__ } = _;
@@ -14661,7 +14912,7 @@
       function _({ definition: _, ..._ }) {
         _.community_item_data || console.log(_);
         let _ = (0, _._)(_.appid, _.community_item_data.item_image_large);
-        3 == _.community_item_class &&
+        _.community_item_class == _._.k_ECommunityItemClass_ProfileBackground &&
           (_ =
             _._.COMMUNITY_CDN_URL +
             "economy/profilebackground/items/" +
@@ -14938,7 +15189,7 @@
           _.createElement(_, {
             ..._(_),
             iconComponent: _._,
-            desc: (0, _._)(8),
+            desc: (0, _._)(_._.k_ECommunityItemClass_ProfileModifier),
           }),
         ),
         _ = (0, _._)((_) =>
@@ -15353,22 +15604,25 @@
           );
         },
         _ = {
-          11: _,
-          4: _,
-          12: _,
-          3: _,
-          13: _,
-          8: _,
-          14: _,
-          15: _,
-          16: _,
-          17: _,
+          [_._.k_ECommunityItemClass_Sticker]: _,
+          [_._.k_ECommunityItemClass_Emoticon]: _,
+          [_._.k_ECommunityItemClass_ChatEffect]: _,
+          [_._.k_ECommunityItemClass_ProfileBackground]: _,
+          [_._.k_ECommunityItemClass_MiniProfileBackground]: _,
+          [_._.k_ECommunityItemClass_ProfileModifier]: _,
+          [_._.k_ECommunityItemClass_AvatarFrame]: _,
+          [_._.k_ECommunityItemClass_AnimatedAvatar]: _,
+          [_._.k_ECommunityItemClass_SteamDeckKeyboardSkin]: _,
+          [_._.k_ECommunityItemClass_SteamDeckStartupMovie]: _,
         },
         _ = (0, _._)((_) => {
           const { className: _, ...__webpack_require__ } = _,
             _ = _._.Get().BRewardOwnedByUser(_.definition),
             _ = (0, _._)(_, _ && _.OwnedItem);
-          if (5 == _.definition.type || 6 == _.definition.type)
+          if (
+            _.definition.type == _._.k_ELoyaltyRewardType_Bundle ||
+            _.definition.type == _._.k_ELoyaltyRewardType_AutoGeneratedBundle
+          )
             return _.createElement(
               _._,
               {
@@ -15381,7 +15635,8 @@
               }),
             );
           if (
-            8 == _.definition.community_item_class &&
+            _.definition.community_item_class ==
+              _._.k_ECommunityItemClass_ProfileModifier &&
             0 != _.definition.bundle_defids?.length
           )
             return _.createElement(
@@ -17067,6 +17322,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { steamid: _ } = _,
@@ -17103,20 +17360,24 @@
                 (_ = [..._.data.active_definitions, ..._]),
               _?.data?.inactive_definitions?.length &&
                 (_ = [..._.data.inactive_definitions, ..._]),
-              _?.find((_) => 3 == _.community_item_class)
+              _?.find(
+                (_) =>
+                  _.community_item_class ==
+                  _._.k_ECommunityItemClass_ProfileBackground,
+              )
             );
           }, [_]);
         if (!_.data || !_.data) return null;
         let _ = null;
-        1 != _.data.eResult
+        _.data.eResult != _._.k_EResultOK
           ? ((_ = (0, _._)("#EquippedProfile_Error_Generic")),
-            15 == _.data.eResult &&
+            _.data.eResult == _._.k_EResultAccessDenied &&
               (_ = (0, _._)("#EquippedProfile_Error_AccessDenied")))
           : _.data.active_definitions?.length ||
             _.data.inactive_definitions?.length ||
             (_ = (0, _._)("#EquippedProfile_Error_NoItems"));
         const _ = {
-            type: 1,
+            type: _._.CAROUSEL,
             cluster: {
               _: "SimilarProfileItems",
               title: (0, _._)("#EquippedProfile_RelatedAppsCarousel_Title"),
@@ -17125,7 +17386,7 @@
                 _._.Get().QueryRewardDefinitions(
                   {
                     appid: _,
-                    grouping: 2,
+                    grouping: _._.Popular,
                   },
                   _,
                   _,
@@ -17243,11 +17504,21 @@
         );
       }
       var _,
+        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_EAuctionBidState_Invalid = 0)] = "k_EAuctionBidState_Invalid"),
+          (_[(_.k_EAuctionBidState_Active = 1)] = "k_EAuctionBidState_Active"),
+          (_[(_.k_EAuctionBidState_Cancelled = 2)] =
+            "k_EAuctionBidState_Cancelled"),
+          (_[(_.k_EAuctionBidState_Winner = 3)] = "k_EAuctionBidState_Winner"),
+          (_[(_.k_EAuctionBidState_Expired = 4)] =
+            "k_EAuctionBidState_Expired");
+      })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -18358,7 +18629,7 @@
             steamid: _._.steamid,
           });
           let _ = await _.GetBidsForUser(this.m_transport, _);
-          return 1 == _.GetEResult()
+          return _.GetEResult() == _._.k_EResultOK
             ? _.Body().toObject().bids
             : (console.error(
                 `Error when calling AuctionService.GetBidsForUser: EResult=${_.GetEResult()}`,
@@ -18379,7 +18650,7 @@
         async LoadAllItems() {
           const _ = _._.Init(_);
           let _ = await _.GetAllItems(this.m_anonymousTransport, _);
-          return 1 == _.GetEResult()
+          return _.GetEResult() == _._.k_EResultOK
             ? _.Body().toObject().items
             : (console.error(
                 `Error when calling AuctionService.GetAllItems: EResult=${_.GetEResult()}`,
@@ -18403,7 +18674,7 @@
         async GetUserBidForItem(_) {
           const _ = _._.Init(_);
           let _ = await _.GetUserBidForItem(this.m_transport, _);
-          return 1 == __webpack_require__.GetEResult()
+          return __webpack_require__.GetEResult() == _._.k_EResultOK
             ? __webpack_require__.Body().toObject().bid
             : (console.error(
                 `Error when calling AuctionService.GetUserBidForItem: EResult=${__webpack_require__.GetEResult()}`,
@@ -18412,13 +18683,13 @@
         }
         async PlaceBid(_, _, _) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!_._.Get().BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: "Not logged on",
               }),
               _
@@ -18432,7 +18703,7 @@
           const _ = await _.PlaceBid(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._.k_EResultOK
               ? this.GetCurrentUserBids(!0)
               : ((_.strMessage = _.Hdr().error_message()),
                 console.error(
@@ -18443,13 +18714,13 @@
         }
         async CancelBid(_) {
           let _ = {
-            eResult: 2,
+            eResult: _._.k_EResultFail,
             strMessage: "",
           };
           if (!_._.Get().BIsLoggedIn())
             return (
               (_ = {
-                eResult: 21,
+                eResult: _._.k_EResultNotLoggedOn,
                 strMessage: "Not logged on",
               }),
               _
@@ -18461,7 +18732,7 @@
           const _ = await _.CancelBid(this.m_transport, _);
           return (
             (_.eResult = _.GetEResult()),
-            1 == _.GetEResult()
+            _.GetEResult() == _._.k_EResultOK
               ? this.GetCurrentUserBids(!0)
               : ((_.strMessage = _.Hdr().error_message()),
                 console.error(
@@ -18563,14 +18834,15 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_.community_item_class) {
-          case 15:
-          case 14:
-          case 11:
+          case _._.k_ECommunityItemClass_AnimatedAvatar:
+          case _._.k_ECommunityItemClass_AvatarFrame:
+          case _._.k_ECommunityItemClass_Sticker:
             return (0, _._)(_.appid, _.community_item_data.item_image_small);
-          case 3:
+          case _._.k_ECommunityItemClass_ProfileBackground:
             return `${_._.COMMUNITY_BASE_URL}economy/profilebackground/items/${_.appid}/${_.community_item_data.item_image_large}?size=320x200`;
           default:
             return (0, _._)(_.appid, _.community_item_data.item_image_large);
@@ -18584,6 +18856,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -18692,6 +18965,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const _ = {
@@ -18702,8 +18976,8 @@
             _ = {
               defid: void 0,
               appid: _._.Get().GetCurrentSaleRewardAppID(),
-              type: 1,
-              community_item_class: 11,
+              type: _._.k_ELoyaltyRewardType_VirtualItemReward,
+              community_item_class: _._.k_ECommunityItemClass_Sticker,
               point_cost: "0",
               quantity: "1",
               active: !0,
@@ -18870,6 +19144,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           __webpack_require__
@@ -18954,7 +19229,9 @@
           _._.Get()
             .getLoyaltyRewardDefMap()
             .forEach((_) => {
-              _.length < 3 && 1 == _.type && _.push(_);
+              _.length < 3 &&
+                _.type == _._.k_ELoyaltyRewardType_VirtualItemReward &&
+                _.push(_);
             });
           const _ = _._.Get().GetPageDescriptor({
               type: "custom",
@@ -19287,7 +19564,7 @@
           return _ && "clusterview" === _.type
             ? {
                 ..._.view,
-                type: 0,
+                type: _._.GRID,
               }
             : null;
         }
@@ -19403,7 +19680,7 @@
           !_.data)
         )
           return null;
-        if (!_ || !_.isSuccess || 1 != _.data.success)
+        if (!_ || !_.isSuccess || _.data.success != _._.k_EResultOK)
           return console.error(`Failed to get event page for ${_}`), null;
         const _ = _.data?.details?.included_apps?.concat(
             _.data?.details?.priority_apps,
@@ -19531,7 +19808,7 @@
             items: __webpack_require__.slice(0, _).map((_) => ({
               type: "clusterview",
               view: {
-                type: 1,
+                type: _._.CAROUSEL,
                 linkedPage: {
                   type: "app",
                   appid: _,
@@ -19584,7 +19861,7 @@
               items: _.slice(0, _).map((_) => ({
                 type: "clusterview",
                 view: {
-                  type: 1,
+                  type: _._.CAROUSEL,
                   linkedPage: {
                     type: "app",
                     appid: _,

@@ -323,11 +323,6 @@ function GetLocalTaxRate( dialogHandle )
 	} );
 }
 
-function GetFeeTotal( base_amt, ppct, spct )
-{
-	return Math.max( 1, Math.floor( ( base_amt * ppct ) / 100 ) ) + Math.max( 1, Math.floor( ( base_amt * spct ) / 100 ) );
-}
-
 // break the total amount down to figure out the fees, then calculate tax on those fees
 function CalculateLocalTax( amtWithFee, quantity, flRate )
 {
@@ -377,6 +372,7 @@ CreateBuyOrderDialog = {
 	m_rgLocalRate: {},
 	m_confirmation: 0,
 	m_confirmationTries: 0,
+	m_nMinPrice: 3,
 
 	Initialize: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		this.m_bInitialized = true;
@@ -384,6 +380,8 @@ CreateBuyOrderDialog = {
 		this.m_unAppId = unAppId;
 		this.m_strMarketHashName = strMarketHashName;
 		this.m_strMarketItemName = strMarketItemName;
+		this.m_nMinPrice = ( 3 * parseInt( g_rgWalletInfo[ 'wallet_market_minimum' ] ?? 1 ) );
+		$J( '#market_buy_commodity_min_warning').html( $J( '#market_buy_commodity_min_warning').html().replace( '%price%', v_currencyformat( this.m_nMinPrice, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ))) );
 	},
 
 	UpdateLocalTaxRate: function() {
@@ -457,8 +455,26 @@ CreateBuyOrderDialog = {
 	UpdateTotal: function() {
 		var currency = GetPriceValueAsInt($J('#market_buy_commodity_input_price').val());
 		var quantity = parseInt($J('#market_buy_commodity_input_quantity').val());
-		var price = Math.round(currency * quantity);
 		var local_tax_est = 0.0;
+
+		var nItemUnitPrice = GetItemPriceFromTotal( currency, g_rgWalletInfo );
+		var ppct = parseFloat( g_rgWalletInfo[ 'wallet_publisher_fee_percent_default' ] ?? 0.10 );
+		var spct = parseFloat( g_rgWalletInfo[ 'wallet_fee_percent' ] ?? 0.05 );
+		var nTotalUnitPrice = GetTotalWithFees( nItemUnitPrice, ppct, spct, g_rgWalletInfo );
+		var price = Math.round(nTotalUnitPrice * quantity);
+
+		if ( currency < this.m_nMinPrice )
+		{
+			$J('#market_buy_commodity_min_warning').show();
+			$J('#market_buy_commodity_input_price').css("color", "#FF6464");
+			$J('#market_buy_commodity_input_price_label').css("color", "#FF6464");
+		}
+		else
+		{
+			$J('#market_buy_commodity_min_warning').hide();
+			$J('#market_buy_commodity_input_price').css("color", "");
+			$J('#market_buy_commodity_input_price_label').css("color", "");
+		}
 
 		if (currency > 3 && this.m_bHasLocalRate && this.m_rgLocalRate.m_bAddTax && this.m_rgLocalRate.m_flRate > 0.0)
 		{
@@ -553,6 +569,13 @@ CreateBuyOrderDialog = {
 				this.DisplayError( errorString );
 				return;
 			}
+		}
+
+		var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
+		if ( currency < this.m_nMinPrice )
+		{
+			this.DisplayError( "This is below the minimum per-unit price." );
+			return;
 		}
 
 		new Effect.BlindUp('market_buyorder_dialog_paymentinfo_frame_container', {duration: 0.25});

@@ -10,1001 +10,73 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _,
         _,
+        _,
+        _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return "unknown ESteamNotificationType ( " + _ + " )";
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.notification_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  notification_id: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  notification_targets: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  notification_type: {
-                    _: 3,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  body_data: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  read: {
-                    _: 7,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  timestamp: {
-                    _: 8,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  hidden: {
-                    _: 9,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  expiry: {
-                    _: 10,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  viewed: {
-                    _: 11,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "SteamNotificationData";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.include_hidden || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  include_hidden: {
-                    _: 1,
-                    _: !1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  language: {
-                    _: 2,
-                    _: 0,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  include_confirmation_count: {
-                    _: 3,
-                    _: !0,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  include_pinned_counts: {
-                    _: 4,
-                    _: !1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  include_read: {
-                    _: 5,
-                    _: !0,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  count_only: {
-                    _: 6,
-                    _: !1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamNotification_GetSteamNotifications_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.notifications || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  notifications: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  confirmation_count: {
-                    _: 2,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  pending_gift_count: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  pending_friend_count: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  unread_count: {
-                    _: 6,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  pending_family_invite_count: {
-                    _: 7,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamNotification_GetSteamNotifications_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.timestamp || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  timestamp: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  notification_type: {
-                    _: 2,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  notification_ids: {
-                    _: 3,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint64String,
-                    pbr: _._.readPackedUint64String,
-                    _: _._.writeRepeatedUint64String,
-                  },
-                  mark_all_read: {
-                    _: 4,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamNotification_MarkNotificationsRead_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.remote_client_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  remote_client_id: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  target_client_type: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamNotification_MarkNotificationsViewed_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.notification_type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  notification_type: {
-                    _: 1,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  notification_targets: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "SteamNotificationPreference";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.preferences || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  preferences: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamNotification_SetPreferences_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamNotification_SetPreferences_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamNotification_GetPreferences_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.preferences || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  preferences: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamNotification_GetPreferences_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.notification_ids || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  notification_ids: {
-                    _: 1,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint64String,
-                    pbr: _._.readPackedUint64String,
-                    _: _._.writeRepeatedUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamNotification_HideNotification_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.notifications || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  notifications: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  pending_gift_count: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  pending_friend_count: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  pending_family_invite_count: {
-                    _: 4,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamNotification_NotificationsReceived_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.preferences || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  preferences: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamNotification_PreferencesUpdated_Notification";
-        }
-      }
       !(function (_) {
-        (_.GetSteamNotifications = function (_, _) {
-          return _.SendMsg(
-            "SteamNotification.GetSteamNotifications#1",
-            (0, _._)(_, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            },
-          );
-        }),
-          (_.MarkNotificationsRead = function (_, _) {
-            return _.SendNotification(
-              "SteamNotification.MarkNotificationsRead#1",
-              (0, _._)(_, _),
-              {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.MarkNotificationsViewed = function (_, _) {
-            return _.SendNotification(
-              "SteamNotification.MarkNotificationsViewed#1",
-              (0, _._)(_, _),
-              {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.HideNotification = function (_, _) {
-            return _.SendNotification(
-              "SteamNotification.HideNotification#1",
-              (0, _._)(_, _),
-              {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.SetPreferences = function (_, _) {
-            return _.SendMsg(
-              "SteamNotification.SetPreferences#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetPreferences = function (_, _) {
-            return _.SendMsg(
-              "SteamNotification.GetPreferences#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          });
+        (_[(_.k_EAssetPropertyType_Unknown = 0)] =
+          "k_EAssetPropertyType_Unknown"),
+          (_[(_.k_EAssetPropertyType_Float = 1)] =
+            "k_EAssetPropertyType_Float"),
+          (_[(_.k_EAssetPropertyType_Int = 2)] = "k_EAssetPropertyType_Int"),
+          (_[(_.k_EAssetPropertyType_String = 3)] =
+            "k_EAssetPropertyType_String"),
+          (_[(_.k_EAssetPropertyType_MAX = 4)] = "k_EAssetPropertyType_MAX");
       })(_ || (_ = {})),
         (function (_) {
-          (_.NotificationsReceivedHandler = {
-            name: "SteamNotificationClient.NotificationsReceived#1",
-            request: _,
-          }),
-            (_.PreferencesUpdatedHandler = {
-              name: "SteamNotificationClient.PreferencesUpdated#1",
-              request: _,
-            });
+          (_[(_.k_ETradeOfferStateInvalid = 1)] = "k_ETradeOfferStateInvalid"),
+            (_[(_.k_ETradeOfferStateActive = 2)] = "k_ETradeOfferStateActive"),
+            (_[(_.k_ETradeOfferStateAccepted = 3)] =
+              "k_ETradeOfferStateAccepted"),
+            (_[(_.k_ETradeOfferStateCountered = 4)] =
+              "k_ETradeOfferStateCountered"),
+            (_[(_.k_ETradeOfferStateExpired = 5)] =
+              "k_ETradeOfferStateExpired"),
+            (_[(_.k_ETradeOfferStateCanceled = 6)] =
+              "k_ETradeOfferStateCanceled"),
+            (_[(_.k_ETradeOfferStateDeclined = 7)] =
+              "k_ETradeOfferStateDeclined"),
+            (_[(_.k_ETradeOfferStateInvalidItems = 8)] =
+              "k_ETradeOfferStateInvalidItems"),
+            (_[(_.k_ETradeOfferStateCreatedNeedsConfirmation = 9)] =
+              "k_ETradeOfferStateCreatedNeedsConfirmation"),
+            (_[(_.k_ETradeOfferStateCanceledBySecondFactor = 10)] =
+              "k_ETradeOfferStateCanceledBySecondFactor"),
+            (_[(_.k_ETradeOfferStateInEscrow = 11)] =
+              "k_ETradeOfferStateInEscrow"),
+            (_[(_.k_ETradeOfferStateReverted = 12)] =
+              "k_ETradeOfferStateReverted");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_ETradeOfferConfirmationMethod_Invalid = 0)] =
+            "k_ETradeOfferConfirmationMethod_Invalid"),
+            (_[(_.k_ETradeOfferConfirmationMethod_Email = 1)] =
+              "k_ETradeOfferConfirmationMethod_Email"),
+            (_[(_.k_ETradeOfferConfirmationMethod_MobileApp = 2)] =
+              "k_ETradeOfferConfirmationMethod_MobileApp");
         })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -2881,9 +1953,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
-        11: {
+        [_._.k_ESteamNotificationType_HelpRequest]: {
           displayNameLoc: "#SteamNotification_HelpRequest_Author",
           titleLoc: "#SteamNotification_HelpRequest_Title",
           bodyLoc: (_) => ({
@@ -2892,7 +1966,7 @@
           }),
           link: (_) => _._.HELP_BASE_URL + "wizard/HelpRequest/" + _.ticket,
         },
-        6: {
+        [_._.k_ESteamNotificationType_MajorSale]: {
           displayNameLoc: "#SteamNotifications_MajorSale",
           titleLoc: (_) => ({
             locString: _.title,
@@ -2910,19 +1984,19 @@
                 )
               : _.link,
         },
-        10: {
+        [_._.k_ESteamNotificationType_General]: {
           displayNameLoc: (_) => _.display_name,
           titleLoc: (_) => _.title,
           bodyLoc: (_) => _.body,
           image: (_) => _.image,
           link: (_) => _.link,
         },
-        14: {
+        [_._.k_ESteamNotificationType_ModeratorMsg]: {
           titleLoc: "#SteamNotification_ModeratorMessage_Title",
           link: (_) =>
             _._.COMMUNITY_BASE_URL + "my/moderatormessages/" + _.msgid,
         },
-        28: {
+        [_._.k_ESteamNotificationType_PlaytestInvite]: {
           displayNameLoc: (_) =>
             _.is_limited_launch
               ? "#Notification_LimitedLaunchInviteTitle"
@@ -2943,47 +2017,47 @@
         return !!_(_);
       }
       const _ = {
-        16: {
+        [_._.k_ESteamNotificationType_FamilyInvite]: {
           steamidAttribute: "inviter",
           titleLoc: "#SteamNotifications_FamilyInviteTitle",
           bodyLoc: "#SteamNotifications_FamilyInviteBody",
           url: (_) =>
             `${_._.STORE_BASE_URL}account/familymanagement/join?invitation=${_.familyid}`,
         },
-        15: {
+        [_._.k_ESteamNotificationType_ParentalFeatureAccessRequest]: {
           steamidAttribute: "steamid",
           titleLoc: "#SteamNotifications_ParentalFeatureRequestTitle",
           bodyLoc: "#SteamNotifications_ParentalFeatureRequestBody",
           url: () =>
             `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
         },
-        17: {
+        [_._.k_ESteamNotificationType_FamilyPurchaseRequest]: {
           steamidAttribute: "requestor_steamid",
           titleLoc: "#SteamNotifications_FamilyPurchaseRequestTitle",
           bodyLoc: "#SteamNotifications_FamilyPurchaseRequestBody",
           url: (_) => (0, _._)(_.familyid, _.request_id),
         },
-        19: {
+        [_._.k_ESteamNotificationType_FamilyPurchaseRequestResponse]: {
           steamidAttribute: "responder_steamid",
           titleLoc: (_) =>
-            1 == _.action
+            _.action == _._.k_EPurchaseRequestAction_Decline
               ? "#SteamNotifications_FamilyPurchaseRequestResponseDeclinedTitle"
               : "",
           bodyLoc: (_) =>
-            1 == _.action
+            _.action == _._.k_EPurchaseRequestAction_Decline
               ? "#SteamNotifications_FamilyPurchaseRequestDeclinedBody"
               : "",
           url: () =>
             `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
         },
-        18: {
+        [_._.k_ESteamNotificationType_ParentalPlaytimeRequest]: {
           steamidAttribute: "steamid",
           titleLoc: "#SteamNotifications_ParentalPlaytimeRequestTitle",
           bodyLoc: "#SteamNotifications_ParentalPlaytimeRequestBody",
           url: () =>
             `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
         },
-        20: {
+        [_._.k_ESteamNotificationType_ParentalFeatureAccessResponse]: {
           steamidAttribute: "steamid_approver",
           titleLoc: (_) =>
             _.approved
@@ -2996,7 +2070,7 @@
           url: () =>
             `${_._.STORE_BASE_URL}account/familymanagement?tab=requests`,
         },
-        21: {
+        [_._.k_ESteamNotificationType_ParentalPlaytimeResponse]: {
           steamidAttribute: "steamid_approver",
           titleLoc: (_) =>
             _.approved
@@ -3016,7 +2090,19 @@
       function _(_) {
         return !!_(_);
       }
-      const _ = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23, 29];
+      const _ = [
+        _._.k_ESteamNotificationType_Comment,
+        _._.k_ESteamNotificationType_FriendInvite,
+        _._.k_ESteamNotificationType_Gift,
+        _._.k_ESteamNotificationType_Item,
+        _._.k_ESteamNotificationType_Wishlist,
+        _._.k_ESteamNotificationType_TradeOffer,
+        _._.k_ESteamNotificationType_AsyncGame,
+        _._.k_ESteamNotificationType_RequestedGameAdded,
+        _._.k_ESteamNotificationType_ClipDownloaded,
+        _._.k_ESteamNotificationType_SendToPhone,
+        _._.k_ESteamNotificationType_TradeReversal,
+      ];
       function _(_) {
         return null != _.findIndex((_) => _ == _);
       }
@@ -3084,7 +2170,7 @@
         m_rgTestNotifications = [];
         m_currentNotificationsData = null;
         m_strRemoteClientID = "";
-        m_eTargetClientType = 0;
+        m_eTargetClientType = _._.k_ESteamNotificationTargetClientType_Invalid;
         m_fnOnNotificationCallback = null;
         BHasNotificationsData() {
           return null != this.m_currentNotificationsData;
@@ -3095,7 +2181,10 @@
         RegisterOnNotificationCallback(_) {
           this.m_fnOnNotificationCallback = _;
         }
-        SetClientFilters(_, _ = 0) {
+        SetClientFilters(
+          _,
+          _ = _._.k_ESteamNotificationTargetClientType_Invalid,
+        ) {
           (this.m_strRemoteClientID = _), (this.m_eTargetClientType = _);
         }
         NotifyServerNotificationsRead(_) {
@@ -3393,7 +2482,7 @@
           _ && this.m_rgUnreadNotificationIDs.push(_.notification_id);
           let _ = _.notification_type;
           switch (_) {
-            case 3:
+            case _._.k_ESteamNotificationType_Comment:
               {
                 const _ = _(_);
                 if (!_) return;
@@ -3435,21 +2524,21 @@
                   });
               }
               break;
-            case 4:
+            case _._.k_ESteamNotificationType_Item:
               const _ = _(_);
               if (_) {
                 const _ = "item_" + _.appid;
                 this.AddNotificationToRollupByAppID(_, _, _, _, _, _.appid);
               }
               break;
-            case 12:
+            case _._.k_ESteamNotificationType_AsyncGame:
               const _ = _(_)?.appid.toString();
               if (_) {
                 const _ = "asyncgame_" + _;
                 this.AddNotificationToRollupByAppID(_, _, _, _, _, _);
               }
               break;
-            case 8:
+            case _._.k_ESteamNotificationType_Wishlist:
               const _ = _(_)?.appid;
               _ &&
                 _._.Get().QueueAppRequest(_, {
@@ -3504,7 +2593,7 @@
           _.Body().set_include_pinned_counts(!0),
           _.Body().set_include_confirmation_count(_);
         const _ = await _._.GetSteamNotifications(_, _);
-        if (1 !== _.GetEResult())
+        if (_.GetEResult() !== _._.k_EResultOK)
           throw (
             (_(
               `Received error from GetSteamNotifications. Result ${_.GetEResult()}. Transport ${_.Hdr().transport_error()}`,
@@ -3530,7 +2619,7 @@
         return [`${_}_${_?.steamid}_${_?.appid}_${_?.contextid}_${_?.assetid}`];
       }
       function _(_, _, _) {
-        let _ = _(4, _.body_data);
+        let _ = _(_._.k_ESteamNotificationType_Item, _.body_data);
         _.steamid = _;
         let _ = (0, _._)({
           queryKey: _(_),
@@ -3548,7 +2637,7 @@
               _.add_assetids(_.assetid),
                 __webpack_require__.Body().set_filters(_);
               const _ = await _.GetInventoryItemsWithDescriptions(_, _);
-              if (1 !== _.GetEResult())
+              if (_.GetEResult() !== _._.k_EResultOK)
                 return (
                   _(
                     "Request for steam item metadata did not succeed",
@@ -3558,7 +2647,7 @@
                 );
               let _ = "";
               const _ = await _._.Get().QueueAppRequest(parseInt(_.appid), {});
-              if (1 == _) {
+              if (_ == _._.k_EResultOK) {
                 const _ = _._.Get().GetApp(parseInt(_.appid));
                 _ = _?.GetName();
               } else _("Failed getting app info", _);
@@ -3576,13 +2665,13 @@
         return _.last_post > 0 && (_ += "&tscn=" + (_.last_post - 1)), _;
       }
       function _(_) {
-        return 10 == _.comment_type;
+        return _.comment_type == _._.k_ECommentThreadTypeProfile;
       }
       function _(_) {
         return _?.bhas_friend;
       }
       function _(_) {
-        return 10 == _.comment_type;
+        return _.comment_type == _._.k_ECommentThreadTypeProfile;
       }
       function _(_) {
         return _(_) || _(_);
@@ -3609,30 +2698,33 @@
         let _ = _(_);
         if (!_) return null;
         switch (_) {
-          case 2:
+          case _._.k_ESteamNotificationType_Gift:
             return _.gifter_account;
-          case 22:
+          case _._.k_ESteamNotificationType_RequestedGameAdded:
             return {
               responder_steamid: _.responder_steamid,
               package_id: _.package_id,
               bundle_id: _.bundle_id,
             };
-          case 9:
+          case _._.k_ESteamNotificationType_TradeOffer:
             return parseInt(_.sender);
-          case 8:
+          case _._.k_ESteamNotificationType_Wishlist:
             return {
               appid: _.appid,
               count: _.count ?? 1,
               appids: _.appids ?? [],
             };
-          case 12:
-            return !_.appid || !_.state || (1 != _.state && 2 != _.state)
+          case _._.k_ESteamNotificationType_AsyncGame:
+            return !_.appid ||
+              !_.state ||
+              (_.state != _._.k_EAsyncGameSessionUserStateReadyForAction &&
+                _.state != _._.k_EAsyncGameSessionUserStateDone)
               ? (_("Async game notification invalid data", _), null)
               : {
                   appid: parseInt(_.appid),
                   state: parseInt(_.state),
                 };
-          case 3:
+          case _._.k_ESteamNotificationType_Comment:
             let _ = {
               owner_steam_id: _.owner_steam_id
                 ? new _._(_.owner_steam_id)
@@ -3662,18 +2754,20 @@
                 }),
               _
             );
-          case 5:
+          case _._.k_ESteamNotificationType_FriendInvite:
             return {
               requestorID: parseInt(_.requestor_id),
-              state: _.state ? parseInt(_.state) : 0,
+              state: _.state
+                ? parseInt(_.state)
+                : _._.k_EFriendRelationshipNone,
             };
-          case 4:
+          case _._.k_ESteamNotificationType_Item:
             return {
               appid: parseInt(_.app_id),
               assetid: _.asset_id ?? "",
               contextid: _.context_id ?? "",
             };
-          case 23:
+          case _._.k_ESteamNotificationType_SendToPhone:
             return {
               url: _.url ?? "",
               strGameName: _.content_app_name ?? "",
@@ -3709,109 +2803,109 @@
         return _("notification contained unexpected boolean value"), !1;
       }
       const _ = {
-        0: {
+        [_._.k_ESteamNotificationType_Invalid]: {
           rollup_field: void 0,
           eFeature: void 0,
         },
-        1: {
+        [_._.k_ESteamNotificationType_Test]: {
           rollup_field: void 0,
           eFeature: void 0,
         },
-        2: {
+        [_._.k_ESteamNotificationType_Gift]: {
           rollup_field: "gifts",
           eFeature: _._,
         },
-        3: {
+        [_._.k_ESteamNotificationType_Comment]: {
           rollup_field: "comments",
-          eFeature: 2,
+          eFeature: _._.k_EFeatureCommunity,
         },
-        4: {
+        [_._.k_ESteamNotificationType_Item]: {
           rollup_field: "inventory_items",
-          eFeature: 3,
+          eFeature: _._.k_EFeatureProfile,
         },
-        5: {
+        [_._.k_ESteamNotificationType_FriendInvite]: {
           rollup_field: "invites",
-          eFeature: 4,
+          eFeature: _._.k_EFeatureFriends,
         },
-        6: {
+        [_._.k_ESteamNotificationType_MajorSale]: {
           rollup_field: "major_sale",
-          eFeature: 1,
+          eFeature: _._.k_EFeatureStore,
         },
-        7: {
+        [_._.k_ESteamNotificationType_PreloadAvailable]: {
           rollup_field: void 0,
           eFeature: void 0,
         },
-        8: {
+        [_._.k_ESteamNotificationType_Wishlist]: {
           rollup_field: "wishlist",
-          eFeature: 1,
+          eFeature: _._.k_EFeatureStore,
         },
-        9: {
+        [_._.k_ESteamNotificationType_TradeOffer]: {
           rollup_field: "trade_offers",
-          eFeature: 6,
+          eFeature: _._.k_EFeatureTrading,
         },
-        10: {
+        [_._.k_ESteamNotificationType_General]: {
           rollup_field: "general",
           eFeature: _._,
         },
-        11: {
+        [_._.k_ESteamNotificationType_HelpRequest]: {
           rollup_field: "help_request_replies",
           eFeature: _._,
         },
-        12: {
+        [_._.k_ESteamNotificationType_AsyncGame]: {
           rollup_field: "async_game_updates",
           eFeature: _._,
         },
-        14: {
+        [_._.k_ESteamNotificationType_ModeratorMsg]: {
           rollup_field: "moderator_messages",
-          eFeature: 2,
+          eFeature: _._.k_EFeatureCommunity,
         },
-        15: {
+        [_._.k_ESteamNotificationType_ParentalFeatureAccessRequest]: {
           rollup_field: "parental_feature_requests",
           eFeature: _._,
         },
-        16: {
+        [_._.k_ESteamNotificationType_FamilyInvite]: {
           rollup_field: "family_invites",
           eFeature: _._,
         },
-        17: {
+        [_._.k_ESteamNotificationType_FamilyPurchaseRequest]: {
           rollup_field: "family_purchase_requests",
           eFeature: _._,
         },
-        18: {
+        [_._.k_ESteamNotificationType_ParentalPlaytimeRequest]: {
           rollup_field: "parental_playtime_requests",
           eFeature: _._,
         },
-        19: {
+        [_._.k_ESteamNotificationType_FamilyPurchaseRequestResponse]: {
           rollup_field: "family_purchase_request_responses",
           eFeature: _._,
         },
-        20: {
+        [_._.k_ESteamNotificationType_ParentalFeatureAccessResponse]: {
           rollup_field: "parental_feature_access_responses",
           eFeature: _._,
         },
-        21: {
+        [_._.k_ESteamNotificationType_ParentalPlaytimeResponse]: {
           rollup_field: "parental_playtime_responses",
           eFeature: _._,
         },
-        22: {
+        [_._.k_ESteamNotificationType_RequestedGameAdded]: {
           rollup_field: "requested_game_added",
           eFeature: _._,
         },
-        23: {
+        [_._.k_ESteamNotificationType_SendToPhone]: {
           rollup_field: void 0,
           eFeature: _._,
         },
-        24: {
+        [_._.k_ESteamNotificationType_ClipDownloaded]: {
           rollup_field: void 0,
           eFeature: _._,
         },
-        28: {
+        [_._.k_ESteamNotificationType_PlaytestInvite]: {
           rollup_field: "playtest_invites",
-          eFeature: 1,
+          eFeature: _._.k_EFeatureStore,
         },
-        29: {
+        [_._.k_ESteamNotificationType_TradeReversal]: {
           rollup_field: void 0,
-          eFeature: 6,
+          eFeature: _._.k_EFeatureTrading,
         },
       };
       function _(_) {

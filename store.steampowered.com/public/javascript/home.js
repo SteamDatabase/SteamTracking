@@ -231,6 +231,7 @@ GHomepage = {
 			GHomepage.bSteamOS = rgParams.bSteamOS || false;
 			GHomepage.eHWVariant = rgParams.eHWVariant || 0;
 			GHomepage.eGamingDeviceType = rgParams.eGamingDeviceType || 0;
+			GHomepage.bIsSeasonalSale = rgParams.bIsSeasonalSale || false;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -4909,7 +4910,7 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 function HomeTabOnClick( elem, strTabSelectTarget, strDelayedImageGroup )
 {
 	if ( strDelayedImageGroup )
-		LoadDelayedImages( strDelayedImageGroup );
+		LoadDelayedImages( strDelayedImageGroup, true );
 
 	let elTopSellersControls = $J( '#topsellers_controls' );
 	elTopSellersControls.hide();

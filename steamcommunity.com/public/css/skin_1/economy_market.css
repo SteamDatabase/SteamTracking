@@ -1484,6 +1484,16 @@ input.filter_search_box:focus {
 	margin-left: 10px;
 }
 
+.market_buy_commodity_input_note {
+    display: inline-block;
+    text-align: left;
+	overflow: hidden;
+    min-width: 148px;
+    margin-left: 0px;
+	color: #ff6464;
+	font-size: 85.7%;
+}
+
 .market_buy_commodity_item_display {
 	float: left;
 	font-size: 100%;

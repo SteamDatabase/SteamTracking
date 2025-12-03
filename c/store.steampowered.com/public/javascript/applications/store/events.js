@@ -443,6 +443,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -608,7 +609,8 @@
                 null,
                 _.createElement(_._, {
                   appid: _.appid,
-                  trackingLocation: 7,
+                  trackingLocation:
+                    _._.k_EPartnerEventDisplayLocation_StoreFrontPage,
                   announcementGID: _.GetAnnouncementGID(),
                   partnerEventStore: _,
                   eventModel: _,
@@ -642,6 +644,7 @@
         }),
         _ = (0, _._)(_);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1254,7 +1257,8 @@
                     onEventNotFound: _,
                     appid: 0,
                     clanSteamID: _.clanInfo.clanSteamID,
-                    trackingLocation: 8,
+                    trackingLocation:
+                      _._.k_EPartnerEventDisplayLocation_NewsHub,
                     eventModel: void 0,
                     announcementGID: void 0,
                     partnerEventStore: _._,
@@ -2806,7 +2810,9 @@
             _.GetSummaryWithFallback(_),
           ]),
           [_, _] = _.useState(() =>
-            (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
+            (0, _._)() && _ == _._.k_EMajorUpdateEvent
+              ? _._.full
+              : _._.capsule_main,
           ),
           _ = (0, _._)(),
           _ = (0, _._)(() =>
@@ -2820,10 +2826,13 @@
               const { video_preview_type: _, video_preview_id: _, type: _ } = _,
                 _ = _.appid;
               if (!_) return null;
-              if (12 === _) return null;
+              if (_ === _._.k_ESmallUpdateEvent) return null;
               if ("youtube" === _) {
                 const _ = (0, _._)(_._.LANGUAGE),
-                  _ = (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
+                  _ =
+                    (0, _._)() && _ == _._.k_EMajorUpdateEvent
+                      ? _._.full
+                      : _._.capsule_main,
                   _ = _.GetImageForSizeAsArrayWithFallback("capsule", _, _, !0);
                 if ("carousel" === _)
                   return _.createElement(_._, {
@@ -2878,13 +2887,14 @@
             strCapsuleImgURLForBackground: _,
             fnSetCoverSize: _,
           }),
-          _ = _ && 14 != _ && !(_ && "carousel" !== _),
+          _ = _ && "carousel" !== _,
+          _ = _ && _ != _._.k_EMajorUpdateEvent && !_,
           _ = _ && _,
           _ = !_ && _,
           _ = "wide" !== _ || _,
           _ =
-            28 !== _ &&
-            12 !== _ &&
+            _ !== _._.k_ENewsEvent &&
+            _ !== _._.k_ESmallUpdateEvent &&
             _._.GetTimeNowWithOverride() < _ &&
             _.createElement(
               "div",
@@ -2899,7 +2909,7 @@
                 bExpandLeft: _,
               }),
             ),
-          _ = Boolean(12 !== _ && _),
+          _ = Boolean(_ !== _._.k_ESmallUpdateEvent && _),
           _ = Boolean(
             _ &&
               (!_ ||
@@ -2938,7 +2948,7 @@
                     _.preventDefault();
                 },
               },
-              14 === _ &&
+              _ === _._.k_EMajorUpdateEvent &&
                 _.createElement("div", {
                   className: (0, _._)(
                     _().TileBackgroundImage,
@@ -2959,7 +2969,7 @@
                   {
                     className: _().TileTextContainer,
                   },
-                  Boolean(12 == _) &&
+                  Boolean(_ == _._.k_ESmallUpdateEvent) &&
                     _.createElement(
                       "div",
                       {
@@ -3085,7 +3095,7 @@
               _.createElement(
                 _.Fragment,
                 null,
-                12 === _ &&
+                _ === _._.k_ESmallUpdateEvent &&
                   _.createElement(
                     _.Fragment,
                     null,
@@ -3113,7 +3123,7 @@
                       _,
                     ),
                   ),
-                12 !== _ &&
+                _ !== _._.k_ESmallUpdateEvent &&
                   _.createElement(
                     "div",
                     {
@@ -3567,7 +3577,8 @@
       const _ = "SteamNewsHub_SuggestCuratorsDismissed";
       function _() {
         const _ = _._.GetELanguageFallbackOrder();
-        void 0 === _.find((_) => 0 === _) && _.push(0);
+        void 0 === _.find((_) => _ === _._.k_Lang_English) &&
+          _.push(_._.k_Lang_English);
         const _ = new Array();
         for (const _ of _) {
           const _ = _.Get().GetCuratorsForLang(_);
@@ -4447,7 +4458,7 @@
             ? (await __webpack_require__.RegisterCalendarEventsAndModels(_),
               (_.m_bInitialLoad = !1))
             : await __webpack_require__.RegisterCalendarEventsAndModels({
-                success: 1,
+                success: _._.k_EResultOK,
               }),
             __webpack_require__.BIsSingleSourceCalendar() &&
               (__webpack_require__.BIsSingleAppCalendar()
@@ -4510,7 +4521,10 @@
                 });
         }
         async OnEventClicked(_) {
-          _._.Get().RecordEventRead(_, 8);
+          _._.Get().RecordEventRead(
+            _,
+            _._.k_EPartnerEventDisplayLocation_NewsHub,
+          );
           const _ =
               this.state.nSteamNavHeaderHeight +
               this.state.nHubBannerHeight +
@@ -4588,7 +4602,8 @@
                 this.state.modalEvent
                   ? _.createElement(_._, {
                       appid: this.state.modalEvent.appid,
-                      trackingLocation: 8,
+                      trackingLocation:
+                        _._.k_EPartnerEventDisplayLocation_NewsHub,
                       announcementGID:
                         this.state.modalEvent.GetAnnouncementGID(),
                       partnerEventStore: _._,

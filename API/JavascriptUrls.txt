@@ -1508,9 +1508,9 @@ ${STORE_BASE_URL}recommender/
 ${STORE_BASE_URL}recommenderdemos/getfests
 ${STORE_BASE_URL}recommenderdemos/getlist
 ${STORE_BASE_URL}remoteplay#anywhere
-${STORE_BASE_URL}replay/${steamid}/${}?src=9
+${STORE_BASE_URL}replay/${steamid}/${}?src=${k_EYearInReviewAccessSource_FriendsReplay}
 ${STORE_BASE_URL}replay/${}/${}
-${STORE_BASE_URL}replay/${}/${}?src=8
+${STORE_BASE_URL}replay/${}/${}?src=${k_EYearInReviewAccessSource_Press}
 ${STORE_BASE_URL}sale/${sale_vanity_id}
 ${STORE_BASE_URL}sale/${strSalePage}
 ${STORE_BASE_URL}sale/${strVanity}
@@ -2661,10 +2661,8 @@ https://steamcommunity.com/login/getrsakey/
 https://steamcommunity.com/login/logout/
 https://steamcommunity.com/market/appfilters/${unAppId}
 https://steamcommunity.com/market/buylisting/${listingid}
-https://steamcommunity.com/market/canbuyback/
 https://steamcommunity.com/market/cancelbuyorder/
 https://steamcommunity.com/market/createbuyorder/
-https://steamcommunity.com/market/dobuyback/
 https://steamcommunity.com/market/getbuyorderstatus/
 https://steamcommunity.com/market/gettradefeetaxrate/
 https://steamcommunity.com/market/itemordersactivity

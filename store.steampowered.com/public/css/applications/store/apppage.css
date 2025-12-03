@@ -1271,6 +1271,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  min-height: 125px;
   width: 100%;
   font-family: "Motiva Sans", sans-serif;
   display: flex;
@@ -1306,40 +1307,26 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   display: flex;
   flex-direction: column;
   max-width: 50%;
-  margin-top: 8px;
+  margin-top: 12px;
 }
 ._2whUPn_CZ5_BidCN9GODA5 {
-  font-size: 21px;
+  font-size: 22px;
   padding: 4px 4px;
   margin-bottom: 5px;
   text-align: center;
   font-weight: 800;
 }
 .OXgVBMVdP9Ecu6IgqZ3_n {
-  font-size: 14px;
+  margin-top: 5px;
+  font-size: 17px;
+  line-height: 20px;
   margin-bottom: 8px;
   padding: 0px 10px;
   font-weight: 500;
-  line-height: 18px;
   text-shadow: 1px 1px 2px #00000033;
 }
 .OXgVBMVdP9Ecu6IgqZ3_n span {
   font-weight: 800;
-}
-.widestore ._28-JzhtXHYEcY9I5iFk3YP {
-  min-height: 125px;
-}
-.widestore ._34ZA0IltnucVU_mKBtcc8E {
-  max-width: 50%;
-  margin-top: 12px;
-}
-.widestore ._2whUPn_CZ5_BidCN9GODA5 {
-  font-size: 22px;
-}
-.widestore .OXgVBMVdP9Ecu6IgqZ3_n {
-  margin-top: 5px;
-  font-size: 17px;
-  line-height: 20px;
 }
 @media screen and (max-width: 500px) {
   ._28-JzhtXHYEcY9I5iFk3YP {

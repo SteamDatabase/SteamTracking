@@ -60,7 +60,7 @@
     },
     19369: (e, t, n) => {
       "use strict";
-      n.d(t, { jl: () => k, Bv: () => E });
+      n.d(t, { jl: () => F, Bv: () => w });
       var a = n(34629),
         i = n(90626),
         s = n(73745),
@@ -150,9 +150,11 @@
       }
       (0, a.Cg)([h.sH], f.prototype, "m_mapProfiles", void 0);
       const g = new f();
-      var C = n(12155),
-        I = n(45699);
-      class E extends i.Component {
+      var C = n(37085),
+        I = n(12155),
+        E = n(86328),
+        k = n(45699);
+      class w extends i.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -207,7 +209,7 @@
               u.TS.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
               t,
             );
-            return e && e.data && 1 == e.data.success;
+            return e && e.data && e.data.success == C.d.k_EResultOK;
           } catch {
             return !1;
           }
@@ -216,7 +218,7 @@
           this.setState({ input_search: e.target.value });
         }
         OnSearchKeyDown(e) {
-          13 === e.keyCode && this.OnSearchSubmit();
+          e.keyCode === E.T.Enter && this.OnSearchSubmit();
         }
         OnSearchSubmit() {
           window.open(
@@ -266,7 +268,7 @@
                 { className: m().Body },
                 (0, c.we)("#ManageFriends_EnterFriendCode"),
               ),
-              i.createElement(k, {
+              i.createElement(F, {
                 onButtonClick: this.OnAddFriend,
                 buttonText: (0, c.we)("#ManageFriends_SendInvite"),
                 bDisableForSelf: !0,
@@ -358,20 +360,20 @@
                     },
                     onClick: this.OnSearchSubmit,
                   },
-                  i.createElement(C.eSy, null),
+                  i.createElement(I.eSy, null),
                 ),
               ),
             ),
           );
         }
       }
-      (0, a.Cg)([s.oI], E.prototype, "OnCreateInviteLink", null),
-        (0, a.Cg)([s.oI], E.prototype, "OnCopy", null),
-        (0, a.Cg)([s.oI], E.prototype, "OnAddFriend", null),
-        (0, a.Cg)([s.oI], E.prototype, "OnSearchChange", null),
-        (0, a.Cg)([s.oI], E.prototype, "OnSearchKeyDown", null),
-        (0, a.Cg)([s.oI], E.prototype, "OnSearchSubmit", null);
-      class k extends i.Component {
+      (0, a.Cg)([s.oI], w.prototype, "OnCreateInviteLink", null),
+        (0, a.Cg)([s.oI], w.prototype, "OnCopy", null),
+        (0, a.Cg)([s.oI], w.prototype, "OnAddFriend", null),
+        (0, a.Cg)([s.oI], w.prototype, "OnSearchChange", null),
+        (0, a.Cg)([s.oI], w.prototype, "OnSearchKeyDown", null),
+        (0, a.Cg)([s.oI], w.prototype, "OnSearchSubmit", null);
+      class F extends i.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -437,7 +439,7 @@
               ),
             }),
             i.createElement(
-              w,
+              y,
               {
                 searchResult: this.state.searchResult,
                 invite_status: this.state.invite_status,
@@ -457,10 +459,10 @@
           );
         }
       }
-      (0, a.Cg)([s.oI], k.prototype, "OnFriendCodeChange", null),
-        (0, a.Cg)([s.oI], k.prototype, "LoadProfile", null),
-        (0, a.Cg)([s.oI], k.prototype, "OnActionClick", null);
-      const w = (e) => {
+      (0, a.Cg)([s.oI], F.prototype, "OnFriendCodeChange", null),
+        (0, a.Cg)([s.oI], F.prototype, "LoadProfile", null),
+        (0, a.Cg)([s.oI], F.prototype, "OnActionClick", null);
+      const y = (e) => {
         const {
             searchResult: t,
             invite_status: n,
@@ -495,7 +497,7 @@
                     "div",
                     { className: m().ProfileLink },
                     i.createElement(
-                      I.Ii,
+                      k.Ii,
                       {
                         target: r ? void 0 : "_blank",
                         href: u.TS.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
@@ -528,7 +530,7 @@
                     "div",
                     null,
                     i.createElement(
-                      I.Ii,
+                      k.Ii,
                       {
                         target: r ? void 0 : "_blank",
                         href:

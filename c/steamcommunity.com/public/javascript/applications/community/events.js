@@ -22,6 +22,7 @@
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) =>
         _.createElement(_._, {
@@ -510,7 +511,7 @@
                 rtime_oldestevent: _,
               },
               strClassName: _.Container,
-              trackingLocation: 6,
+              trackingLocation: _._.k_EPartnerEventDisplayLocation_CommunityHub,
               bViewAllShowInfiniteScroll: !0,
             }),
           );
@@ -557,7 +558,8 @@
                         key: "InfScroll_NoDismissApp_" + _.match.params.appid,
                         ..._,
                         bPreventDismiss: !0,
-                        trackingLocation: 6,
+                        trackingLocation:
+                          _._.k_EPartnerEventDisplayLocation_CommunityHub,
                       }),
                   }),
                   _.createElement(_._, {
@@ -576,7 +578,8 @@
                       _.createElement(_, {
                         ..._,
                         key: "InfScroll_App_" + _.match.params.appid,
-                        trackingLocation: 6,
+                        trackingLocation:
+                          _._.k_EPartnerEventDisplayLocation_CommunityHub,
                       }),
                   }),
                   _.createElement(_._, {
@@ -585,7 +588,8 @@
                       _.createElement(_, {
                         ..._,
                         key: "InfScroll_App_" + _.match.params.group_vanity,
-                        trackingLocation: 6,
+                        trackingLocation:
+                          _._.k_EPartnerEventDisplayLocation_CommunityHub,
                       }),
                   }),
                   _.createElement(_._, {

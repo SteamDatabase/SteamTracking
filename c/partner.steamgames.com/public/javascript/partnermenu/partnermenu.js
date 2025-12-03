@@ -32063,7 +32063,7 @@ Error generating stack: ` +
         IN_STEAMUI: !1,
         IN_GAMEPADUI: !1,
         IN_STEAMUI_SHARED_CONTEXT: !1,
-        DECK_DISPLAY_MODE: !1,
+        FORCED_DISPLAY_MODE: void 0,
         ON_DECK: !1,
         ON_FRAME: !1,
         ON_STEAMOS: !1,
@@ -39803,7 +39803,7 @@ Error generating stack: ` +
   var _,
     _ = _(() => {
       "use strict";
-      _ = _(_());
+      _ = _(_(), 1);
     });
   function _(_) {
     let [_, _] = _.useState(document.documentElement[_]);

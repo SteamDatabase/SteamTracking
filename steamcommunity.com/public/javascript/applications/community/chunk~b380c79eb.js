@@ -25,6 +25,8 @@
         Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
         SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
         Item: "_2aNlsjcdOdHOtP8uACA3bM",
+        "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
+        "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
         "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
         "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
       };
@@ -321,30 +323,31 @@
     },
     86632: (e, r, t) => {
       "use strict";
-      t.d(r, { I: () => m });
+      t.d(r, { I: () => u });
       var s = t(90626),
         n = t(61023),
         a = t(90534),
         o = t(81393),
         i = t(64238),
         p = t.n(i),
-        l = t(53011);
-      const c = (0, s.createContext)(null);
-      function m(e) {
+        l = t(53011),
+        c = t(83392);
+      const m = (0, s.createContext)(null);
+      function u(e) {
         const { options: r, getOptionLabel: t = (e) => e, ...n } = e;
         return s.createElement(
-          m.Root,
+          u.Root,
           { ...n },
-          r.map((e) => s.createElement(m.Item, { value: e, key: e }, t(e))),
+          r.map((e) => s.createElement(u.Item, { value: e, key: e }, t(e))),
         );
       }
-      function u(e) {
+      function d(e) {
         return s.createElement(a.a, {
           className: l.Indicator,
           radius: e.radius,
         });
       }
-      function d(e, r) {
+      function _(e, r) {
         const t = e.compareDocumentPosition(r);
         return t & Node.DOCUMENT_POSITION_FOLLOWING
           ? -1
@@ -352,62 +355,66 @@
             ? 1
             : 0;
       }
-      (m.Item = function (e) {
+      (u.Item = function (e) {
         const { value: r, children: t } = e,
-          n = (0, s.useContext)(c),
-          [o, i] = (0, s.useState)(),
-          { register: p, unregister: m } = n || {};
+          n = (0, s.useContext)(m),
+          [a, o] = (0, s.useState)(),
+          { register: i, unregister: u } = n || {};
         if (
           ((0, s.useEffect)(
-            () => (o && p && m ? (p(o, r), () => m(o, r)) : () => {}),
-            [p, m, r, o],
+            () => (a && i && u ? (i(a, r), () => u(a, r)) : () => {}),
+            [i, u, r, a],
           ),
           !n)
         )
           return null;
-        const { value: u, onValueChange: d } = n,
-          _ = r === u,
-          f = _ ? void 0 : () => d(r),
-          g = void 0 === t ? r : t;
+        const { value: d, onValueChange: _, radius: f, size: g } = n,
+          v = r === d,
+          y = v ? void 0 : () => _(r),
+          x = void 0 === t ? r : t;
         return s.createElement(
-          a.a,
+          c.s,
           {
-            radius: n.radius,
-            ref: i,
-            onClick: f,
-            "data-selected": _ ? "true" : "false",
-            className: l.Item,
+            justify: "center",
+            align: "center",
+            radius: f,
+            ref: o,
+            onClick: y,
+            "data-selected": v ? "true" : "false",
+            className: p()(l.Item, g && l[`Size-${g}`]),
           },
-          g,
+          x,
         );
       }),
-        (m.Root = function (e) {
+        (u.Root = function (e) {
           const {
               variant: r = "default",
               radius: t,
-              children: a,
-              value: i,
-              onValueChange: m,
+              size: a,
+              children: i,
+              value: c,
+              onValueChange: u,
             } = e,
-            [_, f] = (0, s.useState)({}),
-            g = (0, s.useCallback)((e, r) => f((t) => ({ ...t, [r]: e })), []),
-            v = (0, s.useCallback)(
+            [f, g] = (0, s.useState)({}),
+            v = (0, s.useCallback)((e, r) => g((t) => ({ ...t, [r]: e })), []),
+            y = (0, s.useCallback)(
               (e, r) =>
-                f((t) => {
+                g((t) => {
                   const s = { ...t };
                   return s[r] === e && delete s[r], s;
                 }),
               [],
             ),
-            y = (0, s.useMemo)(
+            x = (0, s.useMemo)(
               () => ({
-                value: i,
-                onValueChange: m,
-                register: g,
-                unregister: v,
+                value: c,
+                onValueChange: u,
+                register: v,
+                unregister: y,
                 radius: t,
+                size: a,
               }),
-              [i, m, g, v, t],
+              [c, u, v, y, t, a],
             );
           return s.createElement(
             n.j,
@@ -417,6 +424,7 @@
               focusable: !1,
               variant: r,
               radius: t,
+              size: a,
               className: p()(l.SegmentedControlBox, l[`Variant-${r}`]),
               tabIndex: 0,
               onKeyDown: (e) => {
@@ -431,11 +439,11 @@
                     r = -1;
                 }
                 if (r) {
-                  const t = Array.from(Object.values(_)).sort(d);
+                  const t = Array.from(Object.values(f)).sort(_);
                   let s;
-                  if (null === i) s = r > 0 ? 0 : t.length - 1;
+                  if (null === c) s = r > 0 ? 0 : t.length - 1;
                   else {
-                    const e = _[i],
+                    const e = f[c],
                       n = t.findIndex((r) => r === e);
                     (0, o.wT)(
                       "number" == typeof n,
@@ -444,21 +452,21 @@
                       (s = n + r);
                   }
                   const n = t[s < 0 ? t.length + s : s % t.length],
-                    a = Object.keys(_).find((e) => _[e] === n);
+                    a = Object.keys(f).find((e) => f[e] === n);
                   "string" != typeof a
                     ? console.error("Could not find next segmeneted value")
-                    : (m(a), e.stopPropagation(), e.preventDefault());
+                    : (u(a), e.stopPropagation(), e.preventDefault());
                 }
               },
             },
             s.createElement(
-              c.Provider,
-              { value: y },
+              m.Provider,
+              { value: x },
               s.createElement(
                 "div",
                 { className: l.SegmentedControl },
-                a,
-                null !== i && s.createElement(u, { radius: t }),
+                i,
+                null !== c && s.createElement(d, { radius: t }),
               ),
             ),
           );

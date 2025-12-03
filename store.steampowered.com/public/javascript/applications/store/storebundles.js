@@ -19,138 +19,144 @@
         Subtitle: "_3Bvm26qCLKO-h1yHVlFGsS",
       };
     },
-    54847: (e, t, n) => {
+    54847: (e, t, r) => {
       "use strict";
-      n.d(t, { p: () => i });
-      var r = n(90626),
-        l = n(62792),
-        a = n(55263),
-        s = n(45359),
-        u = n(18654),
-        c = n.n(u);
-      function i(e) {
-        const { id: t, type: n } = e,
-          [u] = (0, a.G6)(t, (0, l.SW)(n), {});
-        return r.createElement(
+      r.d(t, { p: () => o });
+      var n = r(15161),
+        l = r(90626),
+        a = r(62792),
+        s = r(55263),
+        u = r(45359),
+        c = r(18654),
+        i = r.n(c);
+      function o(e) {
+        const { id: t, type: r } = e,
+          [c] = (0, s.G6)(t, (0, a.SW)(r), {});
+        return l.createElement(
           "div",
-          { className: c().SaleItemBrowserRow },
-          r.createElement(s.pb, {
+          { className: i().SaleItemBrowserRow },
+          l.createElement(u.pb, {
             ...e,
             bLoadShortDescription: !0,
             bShowReviewSummary: !0,
-            bShowDemoButton: e.bShowDemoButton || 1 == u?.GetAppType(),
+            bShowDemoButton:
+              e.bShowDemoButton || c?.GetAppType() == n.uE.k_EStoreAppType_Demo,
             bPreferDemoStorePage: e.bPreferDemoStorePage,
           }),
         );
       }
     },
-    54393: (e, t, n) => {
+    54393: (e, t, r) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => g });
-      var r,
-        l = n(90626),
-        a = n(57876),
-        s = n(55263),
-        u = n(84811),
-        c = n(54847),
-        i = n(37076),
-        d = n(32630),
-        o = n(52038),
-        m = n(61859),
-        p = n(31960),
-        B = n.n(p),
-        S = n(24484),
-        _ = n(82097),
-        G = n(63090),
-        I = n(30894),
-        b = n(94095);
-      function g(e) {
+      r.r(t), r.d(t, { default: () => E });
+      var n,
+        l = r(90626),
+        a = r(57876),
+        s = r(55263),
+        u = r(84811),
+        c = r(54847),
+        i = r(37076),
+        o = r(32630),
+        d = r(52038),
+        m = r(61859),
+        p = r(31960),
+        B = r.n(p),
+        S = r(24484),
+        _ = r(82097),
+        I = r(63090),
+        b = r(30894),
+        G = r(94095);
+      function E(e) {
         const {
             match: {
               params: { appid: t },
             },
           } = e,
-          n = Number.parseInt(t),
-          [r] = (0, s.t7)(n, a.Xh);
+          r = Number.parseInt(t),
+          [n] = (0, s.t7)(r, a.Xh);
         return (
           (0, l.useEffect)(() => {
-            if (r) {
-              const e = r.GetStorePageURL().replace("/app/", "/bundlelist/");
+            if (n) {
+              const e = n.GetStorePageURL().replace("/app/", "/bundlelist/");
               e != window.location.href &&
                 window.history.replaceState({}, "", e);
             }
-          }, [r]),
+          }, [n]),
           l.createElement(
-            d.Ay,
+            o.Ay,
             { method: "bundlelist" },
-            l.createElement(u.tH, null, l.createElement(E, { storeItem: r })),
+            l.createElement(u.tH, null, l.createElement(h, { storeItem: n })),
           )
         );
       }
-      function E(e) {
+      function h(e) {
         const { storeItem: t } = e,
-          [n, u] = (0, l.useState)(r.k_BundleSort_Price),
+          [r, u] = (0, l.useState)(n.k_BundleSort_Price),
           c = (function (e) {
             const t = (0, l.useMemo)(
                 () => (0, S.Tc)("bundle_list", "application_config"),
                 [],
               ),
-              [n] = (0, I.L2)(),
+              [r] = (0, b.L2)(),
               u = (0, s.MS)(t, a.Xh),
               c = (0, l.useMemo)(() => {
-                if (3 != u && 2 != u) return null;
+                if (
+                  u != s.N4.k_EStoreItemCacheState_Found &&
+                  u != s.N4.k_EStoreItemCacheState_Unavailable
+                )
+                  return null;
                 {
-                  let n = t;
+                  let r = t;
                   switch (
-                    (2 == u &&
-                      (n = t.filter((e) => {
+                    (u == s.N4.k_EStoreItemCacheState_Unavailable &&
+                      (r = t.filter((e) => {
                         const t = _.A.Get().GetBundle(e);
                         return t?.BIsVisible();
                       })),
                     e)
                   ) {
-                    case r.k_BundleSort_Name:
-                      return [...n].sort((e, t) => {
-                        const n = _.A.Get().GetBundle(e),
-                          r = _.A.Get().GetBundle(t);
-                        return n.GetName().localeCompare(r.GetName());
+                    case n.k_BundleSort_Name:
+                      return [...r].sort((e, t) => {
+                        const r = _.A.Get().GetBundle(e),
+                          n = _.A.Get().GetBundle(t);
+                        return r.GetName().localeCompare(n.GetName());
                       });
-                    case r.k_BundleSort_Price:
-                      return [...n].sort((e, t) => {
-                        const n = _.A.Get().GetBundle(e),
-                          r = _.A.Get().GetBundle(t);
+                    case n.k_BundleSort_Price:
+                      return [...r].sort((e, t) => {
+                        const r = _.A.Get().GetBundle(e),
+                          n = _.A.Get().GetBundle(t);
                         return (
-                          n.GetBestPurchasePriceInCents() -
-                          r.GetBestPurchasePriceInCents()
+                          r.GetBestPurchasePriceInCents() -
+                          n.GetBestPurchasePriceInCents()
                         );
                       });
                     default:
-                      return n;
+                      return r;
                   }
                 }
               }, [e, u, t]);
-            if (c && !n) {
+            if (c && !r) {
               const e = new Array(),
                 t = new Array(),
-                n = new Array();
+                r = new Array();
               return (
-                c.forEach((r) => {
-                  const l = _.A.Get().GetBundle(r);
-                  l.GetIncludedAppIDs().some((e) => !I.Fm.Get().BOwnsApp(e))
+                c.forEach((n) => {
+                  const l = _.A.Get().GetBundle(n);
+                  l.GetIncludedAppIDs().some((e) => !b.Fm.Get().BOwnsApp(e))
                     ? l.GetBestPurchaseOption().must_purchase_as_set
-                      ? n.push(r)
-                      : t.push(r)
-                    : e.push(r);
+                      ? r.push(n)
+                      : t.push(n)
+                    : e.push(n);
                 }),
                 {
                   rgOwnedBundleIDList: e,
                   rgCompleteTheSetBundleIDList: t,
-                  rgMustPurchaseTogetherBundleIDList: n,
+                  rgMustPurchaseTogetherBundleIDList: r,
                 }
               );
             }
             return null;
-          })(n);
+          })(r);
         if (!t || !c) return null;
         const i =
           t.GetAssets().GetLibraryHeroURL_2x() ??
@@ -171,8 +177,8 @@
           ),
           l.createElement(
             "div",
-            { className: (0, o.A)("page_content") },
-            l.createElement(w, { storeItem: t, eBundleSort: n, fnSetSort: u }),
+            { className: (0, d.A)("page_content") },
+            l.createElement(w, { storeItem: t, eBundleSort: r, fnSetSort: u }),
             c.rgCompleteTheSetBundleIDList?.length > 0 &&
               l.createElement(
                 "div",
@@ -187,7 +193,7 @@
                   { className: B().Subtitle },
                   (0, m.we)("#BundleList_CompleteTheSetSubtitle"),
                 ),
-                l.createElement(L, {
+                l.createElement(g, {
                   appId: t.GetAppID(),
                   rgBundleIDs: c.rgCompleteTheSetBundleIDList,
                 }),
@@ -206,7 +212,7 @@
                   { className: B().Subtitle },
                   (0, m.we)("#BundleList_MustPurchaseAsSetSubtitle"),
                 ),
-                l.createElement(L, {
+                l.createElement(g, {
                   appId: t.GetAppID(),
                   rgBundleIDs: c.rgMustPurchaseTogetherBundleIDList,
                 }),
@@ -225,7 +231,7 @@
                   { className: B().Subtitle },
                   (0, m.we)("#BundleList_AllInLibrarySubtitle"),
                 ),
-                l.createElement(L, {
+                l.createElement(g, {
                   appId: t.GetAppID(),
                   rgBundleIDs: c.rgOwnedBundleIDList,
                 }),
@@ -233,22 +239,22 @@
           ),
         );
       }
-      function L(e) {
-        const { rgBundleIDs: t, appId: n } = e;
+      function g(e) {
+        const { rgBundleIDs: t, appId: r } = e;
         return l.createElement(
           "div",
           { className: B().BundlesList },
           t.map((e) =>
-            l.createElement(h, {
+            l.createElement(L, {
               key: "bundleDisplay_" + e,
               bundleId: e,
-              appId: n,
+              appId: r,
             }),
           ),
         );
       }
-      function h(e) {
-        const { bundleId: t, appId: n } = e;
+      function L(e) {
+        const { bundleId: t, appId: r } = e;
         return l.createElement(
           "div",
           { className: B().BundleRow },
@@ -260,7 +266,7 @@
         );
       }
       function w(e) {
-        const { storeItem: t, eBundleSort: n, fnSetSort: a } = e;
+        const { storeItem: t, eBundleSort: r, fnSetSort: a } = e;
         return l.createElement(
           "div",
           { className: B().AppHeader },
@@ -278,13 +284,13 @@
               (0, m.we)("#BundleList_SubTitle"),
             ),
             l.createElement("div", { className: B().Title }, t.GetName()),
-            l.createElement(b.kb, { storeItem: t }),
+            l.createElement(G.kb, { storeItem: t }),
           ),
           l.createElement(
             "div",
             { className: B().SortOptions },
-            l.createElement(G.ZU, {
-              selectedOption: n,
+            l.createElement(I.ZU, {
+              selectedOption: r,
               renderButtonValue: (e) =>
                 l.createElement(
                   "div",
@@ -295,11 +301,11 @@
                 ),
               rgOptions: [
                 {
-                  data: r.k_BundleSort_Name,
+                  data: n.k_BundleSort_Name,
                   label: (0, m.we)("#BundleList_SortBy_Name"),
                 },
                 {
-                  data: r.k_BundleSort_Price,
+                  data: n.k_BundleSort_Price,
                   label: (0, m.we)("#BundleList_SortBy_Price"),
                 },
               ],
@@ -313,7 +319,7 @@
         (e[(e.k_BundleSort_Name = 1)] = "k_BundleSort_Name"),
           (e[(e.k_BundleSort_Price = 2)] = "k_BundleSort_Price"),
           (e[(e.k_BundleSort_Popular = 3)] = "k_BundleSort_Popular");
-      })(r || (r = {}));
+      })(n || (n = {}));
     },
   },
 ]);

@@ -115,13 +115,20 @@
         }
       }
     },
-    93980: (e, t, n) => {
+    99376: (e, t, n) => {
       "use strict";
-      n.d(t, { B: () => c });
-      var r = n(22837),
-        o = n(90626),
-        a = n(42780);
-      class s {
+      n.d(t, { B: () => m });
+      var r,
+        o = n(22837),
+        a = n(90626),
+        s = n(42780);
+      !(function (e) {
+        (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
+          (e[(e.TEXT = 1)] = "TEXT"),
+          (e[(e.OPENTAG = 2)] = "OPENTAG"),
+          (e[(e.CLOSETAG = 3)] = "CLOSETAG");
+      })(r || (r = {}));
+      class i {
         m_fnAccumulatorFactory;
         m_dictComponents;
         constructor(e, t) {
@@ -131,225 +138,238 @@
             (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, n = !0) {
-          const r = (function (e, t) {
+          const o = (function (e, t) {
             const n = [];
-            let r = { type: 0, text: "" },
-              o = !1,
+            let o = { type: r.UNKNOWN, text: "" },
               a = !1,
-              s = !1;
-            for (let c = 0; c < e.length; c++) {
-              const m = e[c];
-              switch (r.type) {
-                case 0:
-                  "[" == m
-                    ? ((r.type = 2), (a = !0))
-                    : ((r.type = 1), "\\" == m && t ? (o = !o) : (r.text += m));
+              s = !1,
+              i = !1;
+            for (let m = 0; m < e.length; m++) {
+              const p = e[m];
+              switch (o.type) {
+                case r.UNKNOWN:
+                  "[" == p
+                    ? ((o.type = r.OPENTAG), (s = !0))
+                    : ((o.type = r.TEXT),
+                      "\\" == p && t ? (a = !a) : (o.text += p));
                   break;
-                case 2:
-                case 3:
-                  if ("/" == m && a) (r.type = 3), (r.text = ""), (a = !1);
-                  else if ("[" != m || o)
-                    if ("]" != m || o)
-                      "\\" == m && t
-                        ? ((r.text += m), (o = !o), (a = !1))
-                        : ((r.text += m), (o = !1), (a = !1));
+                case r.OPENTAG:
+                case r.CLOSETAG:
+                  if ("/" == p && s)
+                    (o.type = r.CLOSETAG), (o.text = ""), (s = !1);
+                  else if ("[" != p || a)
+                    if ("]" != p || a)
+                      "\\" == p && t
+                        ? ((o.text += p), (a = !a), (s = !1))
+                        : ((o.text += p), (a = !1), (s = !1));
                     else {
                       const e =
-                          2 == r.type &&
-                          "noparse" == r.text?.toLocaleLowerCase(),
+                          o.type == r.OPENTAG &&
+                          "noparse" == o.text?.toLocaleLowerCase(),
                         t =
-                          3 == r.type &&
-                          "noparse" == r.text?.toLocaleLowerCase();
-                      a || (s && !t)
-                        ? ((r = l(r)), (r.text += m))
+                          o.type == r.CLOSETAG &&
+                          "noparse" == o.text?.toLocaleLowerCase();
+                      s || (i && !t)
+                        ? ((o = c(o)), (o.text += p))
                         : e
-                          ? (s = !0)
-                          : t && (s = !1),
-                        (r = i(n, r)),
-                        (a = !1);
+                          ? (i = !0)
+                          : t && (i = !1),
+                        (o = l(n, o)),
+                        (s = !1);
                     }
-                  else (r = i(n, l(r), 2)), (a = !0);
+                  else (o = l(n, c(o), r.OPENTAG)), (s = !0);
                   break;
-                case 1:
-                  "[" != m || o
-                    ? "\\" == m && t
-                      ? (o && (r.text += m), (o = !o))
-                      : ((r.text += m), (o = !1))
-                    : ((r = i(n, r, 2)), (a = !0));
+                case r.TEXT:
+                  "[" != p || a
+                    ? "\\" == p && t
+                      ? (a && (o.text += p), (a = !a))
+                      : ((o.text += p), (a = !1))
+                    : ((o = l(n, o, r.OPENTAG)), (s = !0));
               }
             }
-            0 != r.type &&
-              (2 == r.type || 3 == r.type
-                ? n.push(l(r))
-                : n.push({ type: r.type, text: r.text ?? "" }));
+            o.type != r.UNKNOWN &&
+              (o.type == r.OPENTAG || o.type == r.CLOSETAG
+                ? n.push(c(o))
+                : n.push({ type: o.type, text: o.text ?? "" }));
             return n;
           })(e || "", n);
-          return this.Parse_BuildElements(r, t);
+          return this.Parse_BuildElements(o, t);
         }
         Parse_BuildElements(e, t) {
           let n = this.m_fnAccumulatorFactory(void 0);
-          const r = [],
-            o = () => (r.length < 1 ? void 0 : r[r.length - 1]),
-            a = this.m_dictComponents,
-            s = (e) => !(!e.tag || !a.get(e.tag)?.autocloses);
-          let i = !1,
-            l = !0;
-          const c = (e, r) => {
-            if (e && e.node.tag === r.text && a.get(e.node.tag)) {
-              const r = a.get(e.node.tag),
+          const o = [],
+            a = () => (o.length < 1 ? void 0 : o[o.length - 1]),
+            s = this.m_dictComponents,
+            i = (e) => !(!e.tag || !s.get(e.tag)?.autocloses);
+          let l = !1,
+            c = !0;
+          const m = (e, r) => {
+            if (e && e.node.tag === r.text && s.get(e.node.tag)) {
+              const r = s.get(e.node.tag),
                 o = {
                   tagname: e.node.tag,
                   args: e.node.args,
                   rawargs: e.node.rawargs,
                 },
-                s = t(r.Constructor, o, ...n.GetElements());
+                a = t(r.Constructor, o, ...n.GetElements());
               (n = e.accumulator),
-                Array.isArray(s)
-                  ? s.forEach((e) => n.AppendNode(e))
-                  : n.AppendNode(s),
-                (i = !!r.skipFollowingNewline),
-                (l = e.bWrapTextForCopying);
+                Array.isArray(a)
+                  ? a.forEach((e) => n.AppendNode(e))
+                  : n.AppendNode(a),
+                (l = !!r.skipFollowingNewline),
+                (c = e.bWrapTextForCopying);
             } else if (e) {
               const t = e.accumulator;
               t.AppendText("[" + e.node.text + "]", !1),
                 n.GetElements().forEach((e) => t.AppendNode(e)),
                 t.AppendText("[/" + r.text + "]", !1),
                 (n = t),
-                (l = e.bWrapTextForCopying);
+                (c = e.bWrapTextForCopying);
             }
           };
           for (
             e.forEach((e, t) => {
-              if (1 == e.type) {
-                const t = i ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                n.AppendText(t, l), (i = !1);
-              } else if (2 == e.type) {
-                const t = a.get(e.tag);
+              if (e.type == r.TEXT) {
+                const t = l ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                n.AppendText(t, c), (l = !1);
+              } else if (e.type == r.OPENTAG) {
+                const t = s.get(e.tag);
                 if (t) {
-                  const s = o();
-                  if (void 0 !== s) {
-                    const t = a.get(s.node.tag);
+                  const r = a();
+                  if (void 0 !== r) {
+                    const t = s.get(r.node.tag);
                     t &&
                       t.autocloses &&
-                      e.tag === s.node.tag &&
-                      c(r.pop(), s.node);
+                      e.tag === r.node.tag &&
+                      m(o.pop(), r.node);
                   }
-                  r.push({ accumulator: n, node: e, bWrapTextForCopying: l }),
+                  o.push({ accumulator: n, node: e, bWrapTextForCopying: c }),
                     (n = this.m_fnAccumulatorFactory(e)),
-                    (i = !!t.skipInternalNewline),
-                    (l = t.allowWrapTextForCopying ?? !1);
-                } else n.AppendText("[" + e.text + "]", 0 == r.length);
-              } else if (3 == e.type) {
-                for (; o() && o().node.tag !== e.text && s(o().node); ) {
-                  const e = r.pop();
-                  c(e, e.node);
+                    (l = !!t.skipInternalNewline),
+                    (c = t.allowWrapTextForCopying ?? !1);
+                } else n.AppendText("[" + e.text + "]", 0 == o.length);
+              } else if (e.type == r.CLOSETAG) {
+                for (; a() && a().node.tag !== e.text && i(a().node); ) {
+                  const e = o.pop();
+                  m(e, e.node);
                 }
-                if (o()?.node.tag == e.text) {
-                  const t = r.pop();
-                  c(t, e);
-                } else n.AppendText("[/" + e.text + "]", 0 == r.length);
+                if (a()?.node.tag == e.text) {
+                  const t = o.pop();
+                  m(t, e);
+                } else n.AppendText("[/" + e.text + "]", 0 == o.length);
               }
             });
-            r.length > 0;
+            o.length > 0;
           ) {
-            const e = r.pop();
-            c(e, e.node);
+            const e = o.pop();
+            m(e, e.node);
           }
           return n.GetElements();
         }
       }
-      function i(e, t, n = 0) {
-        const { type: r, text: o = "" } = t;
-        if (2 == r) {
-          let t = o.indexOf("=");
-          const n = o.indexOf(" ");
-          let a, s;
+      function l(e, t, n = r.UNKNOWN) {
+        const { type: o, text: a = "" } = t;
+        if (o == r.OPENTAG) {
+          let t = a.indexOf("=");
+          const n = a.indexOf(" ");
+          let r, s;
           -1 != n && (-1 == t || n < t) && (t = n);
           let i = "";
           t > 0
-            ? ((a = o.substr(0, t).toLocaleLowerCase()),
-              (i = o.substr(t)),
+            ? ((r = a.substr(0, t).toLocaleLowerCase()),
+              (i = a.substr(t)),
               (s = (function (e) {
                 if (!e || e.length < 1) return {};
                 const t = {};
-                let n = "",
+                let n,
                   r = "",
-                  o = 0,
-                  a = 0;
-                "=" == e[0] && (o = 2);
-                let s = !1;
-                for (a++; a < e.length; a++) {
-                  const i = e[a];
-                  let l = !0,
-                    c = !1;
-                  switch (o) {
-                    case 0:
-                      if ("=" == i) return {};
-                      if (" " == i) continue;
-                      o = 1;
+                  o = "";
+                !(function (e) {
+                  (e[(e.PRE_NAME = 0)] = "PRE_NAME"),
+                    (e[(e.IN_NAME = 1)] = "IN_NAME"),
+                    (e[(e.POST_NAME = 2)] = "POST_NAME"),
+                    (e[(e.IN_VALUE = 3)] = "IN_VALUE"),
+                    (e[(e.IN_QUOTED_VALUE = 4)] = "IN_QUOTED_VALUE");
+                })(n || (n = {}));
+                let a = n.PRE_NAME,
+                  s = 0;
+                "=" == e[0] && (a = n.POST_NAME);
+                let i = !1;
+                for (s++; s < e.length; s++) {
+                  const l = e[s];
+                  let c = !0,
+                    m = !1;
+                  switch (a) {
+                    case n.PRE_NAME:
+                      if ("=" == l) return {};
+                      if (" " == l) continue;
+                      a = n.IN_NAME;
                       break;
-                    case 1:
-                      ("=" != i && " " != i) ||
-                        s ||
-                        (" " == i ? ((o = 0), (c = !0)) : (o = 2), (l = !1));
+                    case n.IN_NAME:
+                      ("=" != l && " " != l) ||
+                        i ||
+                        (" " == l
+                          ? ((a = n.PRE_NAME), (m = !0))
+                          : (a = n.POST_NAME),
+                        (c = !1));
                       break;
-                    case 2:
-                      " " == i
-                        ? ((o = 0), (l = !1), (c = !0))
-                        : '"' == i
-                          ? ((o = 4), (l = !1))
-                          : (o = 3);
+                    case n.POST_NAME:
+                      " " == l
+                        ? ((a = n.PRE_NAME), (c = !1), (m = !0))
+                        : '"' == l
+                          ? ((a = n.IN_QUOTED_VALUE), (c = !1))
+                          : (a = n.IN_VALUE);
                       break;
-                    case 3:
-                    case 4:
-                      ((" " == i && 4 != o && !s) ||
-                        ('"' == i && 4 == o && !s)) &&
-                        ((o = 0), (l = !1), (c = !0));
+                    case n.IN_VALUE:
+                    case n.IN_QUOTED_VALUE:
+                      ((" " == l && a != n.IN_QUOTED_VALUE && !i) ||
+                        ('"' == l && a == n.IN_QUOTED_VALUE && !i)) &&
+                        ((a = n.PRE_NAME), (c = !1), (m = !0));
                   }
-                  if (l)
-                    if ("\\" != i || s)
-                      if (((s = !1), 1 == o)) n += i;
+                  if (c)
+                    if ("\\" != l || i)
+                      if (((i = !1), a == n.IN_NAME)) r += l;
                       else {
-                        if (3 != o && 4 != o)
+                        if (a != n.IN_VALUE && a != n.IN_QUOTED_VALUE)
                           throw new Error(
-                            "Not expecting to accumulate buffer in state " + o,
+                            "Not expecting to accumulate buffer in state " + a,
                           );
-                        r += i;
+                        o += l;
                       }
-                    else s = !0;
-                  c && ((t[n] = r), (n = ""), (r = ""));
+                    else i = !0;
+                  m && ((t[r] = o), (r = ""), (o = ""));
                 }
-                0 != o && (t[n] = r);
+                a != n.PRE_NAME && (t[r] = o);
                 return t;
               })(i)))
-            : ((s = {}), (a = o.toLocaleLowerCase())),
-            e.push({ type: r, text: o, tag: a, args: s, rawargs: i });
-        } else 0 != r && e.push({ type: r, text: o });
+            : ((s = {}), (r = a.toLocaleLowerCase())),
+            e.push({ type: o, text: a, tag: r, args: s, rawargs: i });
+        } else o != r.UNKNOWN && e.push({ type: o, text: a });
         return { type: n, text: "" };
       }
-      function l(e) {
+      function c(e) {
         let t = "";
         return (
-          3 == e.type ? (t = "[/") : 2 == e.type && (t = "["),
-          { type: 1, text: t + (e.text ?? "") }
+          e.type == r.CLOSETAG ? (t = "[/") : e.type == r.OPENTAG && (t = "["),
+          { type: r.TEXT, text: t + (e.text ?? "") }
         );
       }
-      class c extends s {
+      class m extends i {
         m_renderingLanguage;
         constructor(e, t, n) {
-          super(e, t ?? (() => new a.R8())),
+          super(e, t ?? (() => new s.R8())),
             (this.m_renderingLanguage =
-              "string" == typeof n ? (0, r.sf)(n) : n);
+              "string" == typeof n ? (0, o.sf)(n) : n);
         }
         UpdateOverrideLanguage(e) {
           this.m_renderingLanguage = e;
         }
         ParseBBCode(e, t, n = !0) {
           let r = 0;
-          const a = this.Parse(
+          const o = this.Parse(
             e,
-            (e, n, ...a) =>
-              o.createElement(
+            (e, n, ...o) =>
+              a.createElement(
                 e,
                 {
                   ...n,
@@ -357,30 +377,31 @@
                   language: this.m_renderingLanguage,
                   key: "bbnode_" + r++,
                 },
-                ...a,
+                ...o,
               ),
             n,
           );
-          return a.length > 1
-            ? o.createElement(o.Fragment, null, ...a)
-            : 1 == a.length
-              ? a[0]
+          return o.length > 1
+            ? a.createElement(a.Fragment, null, ...o)
+            : 1 == o.length
+              ? o[0]
               : null;
         }
       }
     },
     73022: (e, t, n) => {
       "use strict";
-      n.d(t, { Q: () => u, h: () => d });
+      n.d(t, { Q: () => h, h: () => u });
       var r = n(34629),
         o = n(41735),
         a = n.n(o),
         s = n(90626),
-        i = n(68797),
-        l = n(6144),
-        c = n(84933),
-        m = n(78327);
-      class p {
+        i = n(37085),
+        l = n(68797),
+        c = n(6144),
+        m = n(84933),
+        p = n(78327);
+      class d {
         m_mapRegistrations = new Map();
         m_mapLoadPromises = new Map();
         m_mapCreatePromises = new Map();
@@ -391,7 +412,7 @@
         GetRegistrationChangeCallback(e) {
           return (
             this.m_listChangeCallback.has(e) ||
-              this.m_listChangeCallback.set(e, new l.lu()),
+              this.m_listChangeCallback.set(e, new c.lu()),
             this.m_listChangeCallback.get(e)
           );
         }
@@ -406,13 +427,13 @@
           let t = null;
           try {
             const n =
-                m.TS.STORE_BASE_URL +
+                p.TS.STORE_BASE_URL +
                 "saleaction/ajaxgetusergiveawayregistration",
-              r = { giveaway_name: e, sessionid: m.TS.SESSIONID },
+              r = { giveaway_name: e, sessionid: p.TS.SESSIONID },
               o = await a().get(n, { params: r, withCredentials: !0 });
             if (
               200 == o?.status &&
-              1 == o?.data?.success &&
+              o?.data?.success == i.d.k_EResultOK &&
               o?.data?.registration
             )
               return (
@@ -422,9 +443,9 @@
                 ),
                 o?.data?.registration
               );
-            t = (0, i.H)(o);
+            t = (0, l.H)(o);
           } catch (e) {
-            t = (0, i.H)(e);
+            t = (0, l.H)(e);
           }
           return (
             console.error(
@@ -451,13 +472,13 @@
           let t = null;
           try {
             const n =
-                m.TS.STORE_BASE_URL +
+                p.TS.STORE_BASE_URL +
                 "saleaction/ajaxupdateusergiveawayregistration",
-              r = { giveaway_name: e, sessionid: m.TS.SESSIONID },
+              r = { giveaway_name: e, sessionid: p.TS.SESSIONID },
               o = await a().get(n, { params: r, withCredentials: !0 });
             if (
               200 == o?.status &&
-              1 == o?.data?.success &&
+              o?.data?.success == i.d.k_EResultOK &&
               o?.data?.registration
             )
               return (
@@ -467,9 +488,9 @@
                 ),
                 o?.data?.registration
               );
-            t = (0, i.H)(o);
+            t = (0, l.H)(o);
           } catch (e) {
-            t = (0, i.H)(e);
+            t = (0, l.H)(e);
           }
           return (
             console.error(
@@ -485,36 +506,36 @@
         static s_Singleton;
         static Get() {
           return (
-            p.s_Singleton ||
-              ((p.s_Singleton = new p()),
-              p.s_Singleton.Init(),
-              "dev" == m.TS.WEB_UNIVERSE &&
-                (window.g_SaleMiniGameItemDefStore = p.s_Singleton)),
-            p.s_Singleton
+            d.s_Singleton ||
+              ((d.s_Singleton = new d()),
+              d.s_Singleton.Init(),
+              "dev" == p.TS.WEB_UNIVERSE &&
+                (window.g_SaleMiniGameItemDefStore = d.s_Singleton)),
+            d.s_Singleton
           );
         }
         constructor() {}
         Init() {}
       }
-      function d(e) {
-        const [t, n] = (0, s.useState)(p.Get().GetRegistration(e));
+      function u(e) {
+        const [t, n] = (0, s.useState)(d.Get().GetRegistration(e));
         return (
           (0, s.useEffect)(() => {
-            void 0 === t && p.Get().LoadRegistration(e).then(n);
+            void 0 === t && d.Get().LoadRegistration(e).then(n);
           }, [e, t]),
-          (0, c.hL)(p.Get().GetRegistrationChangeCallback(e), n),
+          (0, m.hL)(d.Get().GetRegistrationChangeCallback(e), n),
           t
         );
       }
-      function u() {
-        return { fnCreateRegistration: p.Get().CreateRegistration };
+      function h() {
+        return { fnCreateRegistration: d.Get().CreateRegistration };
       }
-      (0, r.Cg)([c.oI], p.prototype, "CreateRegistration", null);
+      (0, r.Cg)([m.oI], d.prototype, "CreateRegistration", null);
     },
     23649: (e, t, n) => {
       "use strict";
       n.d(t, { h: () => l });
-      var r = n(93980),
+      var r = n(99376),
         o = n(90626),
         a = n(59952),
         s = n(42780);
@@ -636,7 +657,7 @@
     },
     48079: (e, t, n) => {
       "use strict";
-      n.d(t, { $k: () => g, S8: () => E, fI: () => f });
+      n.d(t, { $k: () => g, S8: () => _, fI: () => E });
       var r = n(34629),
         o = n(75844),
         a = n(90626),
@@ -689,7 +710,7 @@
             ),
         );
       });
-      class f extends a.Component {
+      class E extends a.Component {
         static sm_embeddedElements = new l.MX(
           "presenter-hover-source-elements",
         );
@@ -720,10 +741,10 @@
             },
             r = "presenter-hover-" + Math.floor(1e8 * Math.random());
           (this.m_fnHidePopup = () =>
-            f.sm_embeddedElements.HideElement(t.ownerDocument, r)),
+            E.sm_embeddedElements.HideElement(t.ownerDocument, r)),
             window.addEventListener("scroll", this.OnScroll),
             (this.m_nScrollPosAtHoverStart = window.scrollY);
-          f.sm_embeddedElements.ShowElementDelayed(
+          E.sm_embeddedElements.ShowElementDelayed(
             t.ownerDocument,
             150,
             a.createElement(
@@ -752,7 +773,7 @@
           );
         }
       }
-      function E(e) {
+      function _(e) {
         const {
             photo: t,
             name: n,
@@ -768,7 +789,7 @@
           "div",
           { className: h().SpeakerOuter },
           a.createElement(
-            f,
+            E,
             { ...e },
             a.createElement(
               "div",
@@ -800,10 +821,10 @@
           ),
         );
       }
-      (0, r.Cg)([m.oI], f.prototype, "ClosePopup", null),
-        (0, r.Cg)([m.oI], f.prototype, "OnScroll", null),
-        (0, r.Cg)([m.oI], f.prototype, "OnHover", null),
-        (0, r.Cg)([m.oI], f.prototype, "OnLeave", null);
+      (0, r.Cg)([m.oI], E.prototype, "ClosePopup", null),
+        (0, r.Cg)([m.oI], E.prototype, "OnScroll", null),
+        (0, r.Cg)([m.oI], E.prototype, "OnHover", null),
+        (0, r.Cg)([m.oI], E.prototype, "OnLeave", null);
     },
     96236: (e, t, n) => {
       "use strict";

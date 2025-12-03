@@ -381,6 +381,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(_.d1w, null);
@@ -394,7 +396,9 @@
           {
             className: (0, _._)(_.RoleIcon, _.className),
           },
-          2 == _.role ? _.createElement(_, null) : _.createElement(_, null),
+          _.role == _._.k_EFamilyGroupRole_Child
+            ? _.createElement(_, null)
+            : _.createElement(_, null),
         );
       }
       function _(_) {
@@ -462,7 +466,7 @@
               bCompactView: !1,
               persona: _,
               strNickname: _,
-              eFriendRelationship: 3,
+              eFriendRelationship: _._.k_EFriendRelationshipFriend,
             }),
           ),
           _.createElement(
@@ -597,6 +601,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "nicknames";
       function _(_) {
@@ -638,7 +643,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._.k_EResultOK ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -655,7 +660,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._.k_EResultOK ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -716,6 +721,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)();
@@ -724,7 +730,7 @@
           queryFn: async () => {
             const _ = _._.Init(_._),
               _ = await _._.GetCommunityPreferences(_, _);
-            if (1 != __webpack_require__.GetEResult())
+            if (__webpack_require__.GetEResult() != _._.k_EResultOK)
               throw new Error(
                 `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
               );
@@ -779,6 +785,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -885,7 +892,9 @@
                   ),
                   closeModal: _,
                 },
-                1 === _ ? _.createElement(_, null) : _.createElement(_, null),
+                _ === _._.k_EFamilyGroupRole_Adult
+                  ? _.createElement(_, null)
+                  : _.createElement(_, null),
                 _.createElement(
                   _._,
                   {
@@ -905,12 +914,14 @@
                       _.mutate(null, {
                         onSuccess: (_) => {
                           _.cooldown_skip_granted() && _(!0),
-                            1 === _.two_factor_method()
+                            _.two_factor_method() ===
+                            _._.k_EFamilyGroupsTwoFactorMethodMobile
                               ? _._.IN_MOBILE_WEBVIEW
                                 ? (window.location.href =
                                     "steammobile://confirmations?first_of_type=11")
                                 : _("awaitmobile2fa")
-                              : 2 === _.two_factor_method()
+                              : _.two_factor_method() ===
+                                  _._.k_EFamilyGroupsTwoFactorMethodEmail
                                 ? _("awaitemail2fa")
                                 : _.push("/account/familymanagement");
                         },
@@ -971,7 +982,7 @@
                   title: (0, _._)("#FamilyManagement_Await2FAForJoin_Header"),
                   closeModal: _,
                 },
-                2 === _ &&
+                _ === _._.k_EFamilyGroupRole_Child &&
                   _.createElement(
                     _._,
                     {
@@ -1096,7 +1107,7 @@
                 className: _.InviteRowDetails,
               },
               (0, _._)(
-                1 === _
+                _ === _._.k_EFamilyGroupRole_Adult
                   ? "#FamilyManagement_PendingFamilyInviteInviteText_Adult"
                   : "#FamilyManagement_PendingFamilyInviteInviteText_Child",
                 _.createElement(
@@ -1133,7 +1144,7 @@
               ),
             ),
           ),
-          1 == _ &&
+          _ == _._.k_EFamilyGroupRole_Adult &&
             _.createElement(
               "div",
               {
@@ -1154,7 +1165,7 @@
                 ),
               ),
             ),
-          2 == _ &&
+          _ == _._.k_EFamilyGroupRole_Child &&
             _.createElement(
               "div",
               {
@@ -1317,6 +1328,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
           const {
@@ -1358,6 +1370,7 @@
               overscan: _,
               renderItem: _,
               bDynamic: _,
+              measureElement: _,
               className: _,
               forceVirtualizeType: _,
               initialOffset: _,
@@ -1387,6 +1400,7 @@
               overscan: _,
               renderItem: _,
               bDynamic: _,
+              measureElement: _,
               forceVirtualizeType: _,
               initialOffset: _,
               onOffsetChange: _,
@@ -1424,12 +1438,14 @@
             overscan: _ = 6,
             initialOffset: _,
             onOffsetChange: _,
+            measureElement: _,
           } = _,
           _ = _ + _,
           _ = (0, _._)({
             count: __webpack_require__,
             scrollMargin: _,
             estimateSize: _.useCallback(() => _, [_]),
+            measureElement: _,
             overscan: _,
             initialOffset: _,
             initialRect: void 0,
@@ -1461,6 +1477,7 @@
             overscan: _ = 6,
             initialOffset: _,
             onOffsetChange: _,
+            measureElement: _,
           } = _,
           _ = _ + _,
           _ = (0, _._)({
@@ -1468,6 +1485,7 @@
             scrollMargin: __webpack_require__ - (_?.offsetTop || 0),
             getScrollElement: () => _,
             estimateSize: _.useCallback(() => _, [_]),
+            measureElement: _,
             overscan: _,
             initialRect: _
               ? void 0
@@ -1838,7 +1856,7 @@
           { setErrorMessage: _ } = (0, _._)(),
           _ = (0, _._)(__webpack_require__);
         (0, _._)(_, "#FamilyManagement_ErrorLoadFamilyGeneric");
-        const [_, _] = (0, _.useState)(0),
+        const [_, _] = (0, _.useState)(_._.k_EFamilyGroupRole_None),
           [_, _] = (0, _.useState)(null),
           _ = (0, _._)(_, __webpack_require__, _);
         (0, _._)(
@@ -1866,25 +1884,32 @@
           _.createElement(
             _._,
             {
-              active: 0 !== _,
+              active: _ !== _._.k_EFamilyGroupRole_None,
             },
             "awaitmobile2fa" === _ || "awaitemail2fa" === _
               ? _.createElement(_, {
                   onClose: _,
-                  eMethod: "awaitemail2fa" === _ ? 2 : 1,
+                  eMethod:
+                    "awaitemail2fa" === _
+                      ? _._.k_EFamilyGroupsTwoFactorMethodEmail
+                      : _._.k_EFamilyGroupsTwoFactorMethodMobile,
                 })
               : _.createElement(_, {
                   steamid: __webpack_require__,
                   role: _,
-                  onCancel: () => _(0),
+                  onCancel: () => _(_._.k_EFamilyGroupRole_None),
                   onConfirm: () => {
                     _.mutateAsync(null, {
                       onSuccess: (_) => {
-                        0 === _.two_factor_method()
+                        _.two_factor_method() ===
+                        _._.k_EFamilyGroupsTwoFactorMethodNone
                           ? _()
-                          : 1 === _.two_factor_method()
+                          : _.two_factor_method() ===
+                              _._.k_EFamilyGroupsTwoFactorMethodMobile
                             ? _("awaitmobile2fa")
-                            : 2 === _.two_factor_method() && _("awaitemail2fa");
+                            : _.two_factor_method() ===
+                                _._.k_EFamilyGroupsTwoFactorMethodEmail &&
+                              _("awaitemail2fa");
                       },
                     });
                   },
@@ -1937,12 +1962,12 @@
               className: _.InviteButtonCtn,
             },
             _.createElement(_, {
-              role: 1,
-              onSelect: () => _(1),
+              role: _._.k_EFamilyGroupRole_Adult,
+              onSelect: () => _(_._.k_EFamilyGroupRole_Adult),
             }),
             _.createElement(_, {
-              role: 2,
-              onSelect: () => _(2),
+              role: _._.k_EFamilyGroupRole_Child,
+              onSelect: () => _(_._.k_EFamilyGroupRole_Child),
             }),
           ),
         );
@@ -1950,11 +1975,15 @@
       function _(_) {
         const { eMethod: _, onClose: __webpack_require__ } = _;
         let _;
-        if (1 === _ && _._.IN_MOBILE_WEBVIEW)
+        if (
+          _ === _._.k_EFamilyGroupsTwoFactorMethodMobile &&
+          _._.IN_MOBILE_WEBVIEW
+        )
           _ = "#FamilyManagement_Await2FAForInvite_MobileAuth_InMobileApp";
-        else if (1 === _) _ = "#FamilyManagement_Await2FAForInvite_MobileAuth";
+        else if (_ === _._.k_EFamilyGroupsTwoFactorMethodMobile)
+          _ = "#FamilyManagement_Await2FAForInvite_MobileAuth";
         else {
-          if (2 !== _) return null;
+          if (_ !== _._.k_EFamilyGroupsTwoFactorMethodEmail) return null;
           _ = "#FamilyManagement_Await2FAForInvite_EmailAuth";
         }
         return _.createElement(
@@ -2125,7 +2154,7 @@
             bCompactView: !1,
             persona: _,
             strNickname: _,
-            eFriendRelationship: 3,
+            eFriendRelationship: _._.k_EFriendRelationshipFriend,
           }),
         );
       }
@@ -2138,7 +2167,9 @@
             noFocusRing: !1,
             onClick: () => __webpack_require__(_),
           },
-          2 == _ ? _.createElement(_.Bir, null) : _.createElement(_.d1w, null),
+          _ == _._.k_EFamilyGroupRole_Child
+            ? _.createElement(_.Bir, null)
+            : _.createElement(_.d1w, null),
           _.createElement(
             "span",
             null,
@@ -2329,7 +2360,7 @@
               bCompactView: !1,
               persona: _,
               strNickname: __webpack_require__,
-              eFriendRelationship: 3,
+              eFriendRelationship: _._.k_EFriendRelationshipFriend,
             }),
           ),
         );
@@ -2341,6 +2372,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2515,76 +2547,76 @@
         let _,
           _ = null;
         switch (_.exclude_reason) {
-          case 0:
+          case _._.k_ESharedLibrary_Included:
             break;
-          case 2:
+          case _._.k_ESharedLibrary_LicenseExcluded:
             _ = "#FamilyGame_Excluded_License";
             break;
-          case 3:
-          case 29:
+          case _._.k_ESharedLibrary_FreeGame:
+          case _._.k_ESharedLibrary_LicenseExcluded_FreeSub:
             _ = "#FamilyGame_Excluded_FreeApp";
             break;
-          case 4:
+          case _._.k_ESharedLibrary_LicensePrivate:
             _ = _
               ? "#FamilyGame_Excluded_Private"
               : "#FamilyGame_Excluded_PrivateLicense";
             break;
-          case 1:
-          case 10:
+          case _._.k_ESharedLibrary_AppExcluded_ByPartner:
+          case _._.k_ESharedLibrary_PackageExcluded_ByPartner:
             _ = "#FamilyGame_Excluded_OptedOut";
             break;
-          case 7:
+          case _._.k_ESharedLibrary_AppExcluded_NonrefundableDLC:
             _ = "#FamilyGame_Excluded_Nonrefundable_DLC";
             break;
-          case 9:
+          case _._.k_ESharedLibrary_AppExcluded_ParentAppExcluded:
             _ = "#FamilyGame_Excluded_ParentAppExcluded";
             break;
-          case 8:
+          case _._.k_ESharedLibrary_AppExcluded_UnreleasedApp:
             _ = "#FamilyGame_Excluded_UnreleasedApp";
             break;
-          case 6:
+          case _._.k_ESharedLibrary_AppExcluded_WrongAppType:
             _ = "#FamilyGame_Excluded_WrongAppType";
             break;
-          case 12:
-          case 23:
-          case 27:
+          case _._.k_ESharedLibrary_PackageExcluded_Dev:
+          case _._.k_ESharedLibrary_LicenseExcluded_PaymentAutoGrant:
+          case _._.k_ESharedLibrary_LicenseExcluded_FlagAutoGrant:
             _ = "#FamilyGame_Excluded_DevPackage";
             break;
-          case 13:
+          case _._.k_ESharedLibrary_PackageExcluded_FreeWeekend:
             _ = "#FamilyGame_Excluded_FreeWeekend";
             break;
-          case 15:
+          case _._.k_ESharedLibrary_PackageExcluded_Invalid:
             _ = "#FamilyGame_Excluded_InvalidPackage";
             break;
-          case 18:
-          case 16:
-          case 20:
+          case _._.k_ESharedLibrary_PackageExcluded_MasterSub:
+          case _._.k_ESharedLibrary_PackageExcluded_RecurringLicense:
+          case _._.k_ESharedLibrary_LicenseExcluded_PaymentMasterSub:
             _ = "#FamilyGame_Excluded_Subscription";
             break;
-          case 11:
+          case _._.k_ESharedLibrary_PackageExcluded_Special:
             _ = "#FamilyGame_Excluded_SpecialPackage";
             break;
-          case 17:
+          case _._.k_ESharedLibrary_PackageExcluded_WrongLicenseType:
             _ = "#FamilyGame_Excluded_WrongLicenseType";
             break;
-          case 19:
+          case _._.k_ESharedLibrary_PackageExcluded_NoShareableApps:
             _ = "#FamilyGame_Excluded_NoShareableApps";
             break;
-          case 21:
-          case 22:
-          case 26:
+          case _._.k_ESharedLibrary_LicenseExcluded_PaymentFamilyGroup:
+          case _._.k_ESharedLibrary_LicenseExcluded_PaymentAuthorizedDevice:
+          case _._.k_ESharedLibrary_LicenseExcluded_FlagBorrowed:
             _ = "#FamilyGame_Excluded_Borrowed";
             break;
-          case 24:
+          case _._.k_ESharedLibrary_LicenseExcluded_FlagPending:
             _ = "#FamilyGame_Excluded_LicensePending";
             break;
-          case 25:
+          case _._.k_ESharedLibrary_LicenseExcluded_FlagPendingRefund:
             _ = "#FamilyGame_Excluded_RefundPending";
             break;
-          case 28:
+          case _._.k_ESharedLibrary_LicenseExcluded_FlagTimedTrial:
             _ = "#FamilyGame_Excluded_TimedTrial";
             break;
-          case 30:
+          case _._.k_ESharedLibrary_LicenseExcluded_Inactive:
             _ = "#FamilyGame_Excluded_LicenseInactive";
             break;
           default:
@@ -2620,7 +2652,7 @@
               },
               (0, _._)(_) + " (" + String(_.exclude_reason) + ")",
             )),
-          3 != _.exclude_reason)
+          _.exclude_reason != _._.k_ESharedLibrary_FreeGame)
         )
           if (
             (_ &&
@@ -2755,11 +2787,15 @@
         const { item: _, bOwnsGame: __webpack_require__, familyContext: _ } = _,
           _ = (0, _._)(),
           { familyGroup: _, invalidateGamesList: _ } = _,
-          _ = 1 == _.members.find((_) => _.steamid == _).role,
+          _ =
+            _.members.find((_) => _.steamid == _).role ==
+            _._.k_EFamilyGroupRole_Adult,
           { data: _ } = (0, _._)({
             appid: _.appid,
           }),
-          _ = __webpack_require__ || 0 == _.exclude_reason,
+          _ =
+            __webpack_require__ ||
+            _.exclude_reason == _._.k_ESharedLibrary_Included,
           _ = (0, _._)(_.appid),
           { mutateAsync: _ } = (0, _._)(_.appid),
           _ = _._.IN_CLIENT,
@@ -2819,7 +2855,7 @@
           ),
           _ &&
             _.members
-              .filter((_) => 2 == _.role)
+              .filter((_) => _.role == _._.k_EFamilyGroupRole_Child)
               .map((_) =>
                 _.createElement(_, {
                   key: _.steamid,
@@ -2849,8 +2885,9 @@
             appid: __webpack_require__.appid,
           }),
           _ =
-            0 == __webpack_require__.exclude_reason ||
-            3 == __webpack_require__.exclude_reason,
+            __webpack_require__.exclude_reason ==
+              _._.k_ESharedLibrary_Included ||
+            __webpack_require__.exclude_reason == _._.k_ESharedLibrary_FreeGame,
           _ = __webpack_require__.owner_steamids.some((_) => _ == _),
           _ = _._.IN_CLIENT,
           _ = _ && _.visible,
@@ -3208,13 +3245,29 @@
           [_, _] = _.useState("alpha-asc"),
           _ = (0, _._)(_, _),
           _ = (0, _._)(_.data, _, __webpack_require__),
-          _ = _.useMemo(() => _?.filter((_) => 0 == _.exclude_reason), [_]),
           _ = _.useMemo(
             () =>
-              _?.filter((_) => 0 != _.exclude_reason && 3 != _.exclude_reason),
+              _?.filter(
+                (_) => _.exclude_reason == _._.k_ESharedLibrary_Included,
+              ),
             [_],
           ),
-          _ = _.useMemo(() => _?.filter((_) => 3 == _.exclude_reason), [_]);
+          _ = _.useMemo(
+            () =>
+              _?.filter(
+                (_) =>
+                  _.exclude_reason != _._.k_ESharedLibrary_Included &&
+                  _.exclude_reason != _._.k_ESharedLibrary_FreeGame,
+              ),
+            [_],
+          ),
+          _ = _.useMemo(
+            () =>
+              _?.filter(
+                (_) => _.exclude_reason == _._.k_ESharedLibrary_FreeGame,
+              ),
+            [_],
+          );
         return _.createElement(
           _,
           {
@@ -3298,6 +3351,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const _ = _()()
@@ -3329,17 +3383,25 @@
         return -1 != _ && (_.push(_(_, 48)), (_ = -1)), _.join(", ");
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = [5, 2, 1, 4, 3];
+      const _ = [
+        _._.k_EContentDescriptor_AnyMatureContent,
+        _._.k_EContentDescriptor_FrequentViolenceOrGore,
+        _._.k_EContentDescriptor_NudityOrSexualContent,
+        _._.k_EContentDescriptor_GratuitousSexualContent,
+        _._.k_EContentDescriptor_AdultOnlySexualContent,
+      ];
       function _(_) {
         let _ = [];
         switch (_) {
-          case 5:
-            _.push(2), _.push(1);
-          case 1:
-            _.push(4);
-          case 4:
-            _.push(3);
+          case _._.k_EContentDescriptor_AnyMatureContent:
+            _.push(_._.k_EContentDescriptor_FrequentViolenceOrGore),
+              _.push(_._.k_EContentDescriptor_NudityOrSexualContent);
+          case _._.k_EContentDescriptor_NudityOrSexualContent:
+            _.push(_._.k_EContentDescriptor_GratuitousSexualContent);
+          case _._.k_EContentDescriptor_GratuitousSexualContent:
+            _.push(_._.k_EContentDescriptor_AdultOnlySexualContent);
         }
         return _;
       }
@@ -3352,19 +3414,19 @@
       function _(_) {
         let _ = null;
         switch (_) {
-          case 5:
+          case _._.k_EContentDescriptor_AnyMatureContent:
             _ = "#ContentDescriptor_GeneralMatureContent";
             break;
-          case 2:
+          case _._.k_EContentDescriptor_FrequentViolenceOrGore:
             _ = "#ContentDescriptor_FrequentViolenceOrGore";
             break;
-          case 1:
+          case _._.k_EContentDescriptor_NudityOrSexualContent:
             _ = "#ContentDescriptor_NudityOrSexualContent";
             break;
-          case 4:
+          case _._.k_EContentDescriptor_GratuitousSexualContent:
             _ = "#ContentDescriptor_GratuitousNudityOrSexualContent";
             break;
-          case 3:
+          case _._.k_EContentDescriptor_AdultOnlySexualContent:
             _ = "#ContentDescriptor_AdultOnlySexualContent";
             break;
           default:
@@ -3387,7 +3449,9 @@
         if (!_.isSuccess) return null;
         let _ = _.data
           .members()
-          .filter((_) => 2 == _.role() && _.steamid() != _)
+          .filter(
+            (_) => _.role() == _._.k_EFamilyGroupRole_Child && _.steamid() != _,
+          )
           .map((_) => _.steamid());
         return 0 == _.length
           ? null
@@ -3837,7 +3901,7 @@
                     }
                   );
                 }).filter((_) => !!_),
-              enabled: 1 != _,
+              enabled: _ != _._.k_EStoreItemCacheState_Loading,
               placeholderData: _._,
             });
           })(_).data,
@@ -3893,11 +3957,14 @@
             ).ConvertTo64BitString(),
             _ = _?.filter(
               (_) =>
-                4 != _.app_type &&
-                (0 == _.exclude_reason || _.owner_steamids.includes(_)),
+                _.app_type != _._.k_EAppTypeTool &&
+                (_.exclude_reason == _._.k_ESharedLibrary_Included ||
+                  _.owner_steamids.includes(_)),
             ),
             _ = _?.filter(
-              (_) => 4 == _.app_type && _.owner_steamids.includes(_),
+              (_) =>
+                _.app_type == _._.k_EAppTypeTool &&
+                _.owner_steamids.includes(_),
             );
           return [_, _ ? _?.concat(_ || []) : []];
         }, [_, _, _, _.steamid]);
@@ -4238,10 +4305,22 @@
       function _(_) {
         const { steamid: _, settings: __webpack_require__ } = _,
           _ = _.useRef(__webpack_require__.enabled_features),
-          _ = [1, 2, 3, 4],
-          _ = [10, 11, 12, 13, 14, 15],
+          _ = [
+            _._.k_EFeatureStore,
+            _._.k_EFeatureCommunity,
+            _._.k_EFeatureProfile,
+            _._.k_EFeatureFriends,
+          ],
+          _ = [
+            _._.k_EFeatureParentalSetup,
+            _._.k_EFeatureLibrary,
+            _._.k_EFeatureTest,
+            _._.k_EFeatureSiteLicense,
+            _._.k_EFeatureKioskMode_Deprecated,
+            _._.k_EFeatureBlockAlways,
+          ],
           _ = [];
-        for (let _ = 1; _ < 16; _++)
+        for (let _ = _._.k_EFeatureStore; _ < _._.k_EFeatureMax; _++)
           !_.includes(_) &&
             (_.includes(_) || _.current & (1 << _)) &&
             _.push(_);
@@ -4888,27 +4967,27 @@
           _ = (function (_, _ = !1) {
             let _ = "";
             switch (_) {
-              case 5:
+              case _._.k_EContentDescriptor_AnyMatureContent:
                 _ += (0, _._)(
                   "#ContentDescriptor_GeneralMatureContent_Description",
                 );
                 break;
-              case 2:
+              case _._.k_EContentDescriptor_FrequentViolenceOrGore:
                 _ += (0, _._)(
                   "#ContentDescriptor_FrequentViolenceOrGore_Description",
                 );
                 break;
-              case 1:
+              case _._.k_EContentDescriptor_NudityOrSexualContent:
                 _ += (0, _._)(
                   "#ContentDescriptor_NudityOrSexualContent_Description",
                 );
                 break;
-              case 4:
+              case _._.k_EContentDescriptor_GratuitousSexualContent:
                 _ += (0, _._)(
                   "#ContentDescriptor_GratuitousNudityOrSexualContent_Description",
                 );
                 break;
-              case 3:
+              case _._.k_EContentDescriptor_AdultOnlySexualContent:
                 _ += (0, _._)(
                   "#ContentDescriptor_AdultOnlySexualContent_Description",
                 );
@@ -4918,7 +4997,8 @@
             }
             return (
               !_ ||
-                (4 !== _ && 3 !== _) ||
+                (_ !== _._.k_EContentDescriptor_GratuitousSexualContent &&
+                  _ !== _._.k_EContentDescriptor_AdultOnlySexualContent) ||
                 (_ += " " + (0, _._)("#ContentDescriptor_Affirm18YearsOld")),
               _
             );
@@ -5197,7 +5277,8 @@
       function _(_) {
         const { role: _, steamid: __webpack_require__ } = _,
           _ = (0, _._)()?.data.family_groupid();
-        return 1 != (0, _._)(_) || 2 != _
+        return (0, _._)(_) != _._.k_EFamilyGroupRole_Adult ||
+          _ != _._.k_EFamilyGroupRole_Child
           ? null
           : _.createElement(_, {
               steamid: __webpack_require__,
@@ -5302,7 +5383,7 @@
                 }),
               ),
               !_ &&
-                2 == __webpack_require__.role() &&
+                __webpack_require__.role() == _._.k_EFamilyGroupRole_Child &&
                 _.createElement(
                   _._,
                   {
@@ -5320,7 +5401,7 @@
                   (0, _._)("#FamilyManagement_RecoverMember"),
                 ),
               !_ &&
-                2 !== _ &&
+                _ !== _._.k_EFamilyGroupRole_Child &&
                 _.createElement(
                   _._,
                   {
@@ -5468,7 +5549,22 @@
           }),
         );
       }
-      _.set(2, 5), _.set(1, 5), _.set(4, 1), _.set(3, 4);
+      _.set(
+        _._.k_EContentDescriptor_FrequentViolenceOrGore,
+        _._.k_EContentDescriptor_AnyMatureContent,
+      ),
+        _.set(
+          _._.k_EContentDescriptor_NudityOrSexualContent,
+          _._.k_EContentDescriptor_AnyMatureContent,
+        ),
+        _.set(
+          _._.k_EContentDescriptor_GratuitousSexualContent,
+          _._.k_EContentDescriptor_NudityOrSexualContent,
+        ),
+        _.set(
+          _._.k_EContentDescriptor_AdultOnlySexualContent,
+          _._.k_EContentDescriptor_GratuitousSexualContent,
+        );
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { familyGroupID: _, ...__webpack_require__ } = _,
@@ -5540,89 +5636,89 @@
           _ = _.reason ? _.reason : "";
         let _;
         switch (_.type()) {
-          case 1:
+          case _._.k_FamilyGroupCreated:
             _ = (0, _._)("#FamilyHistory_FamilyCreated", _, _.name);
             break;
-          case 2:
+          case _._.k_FamilyGroupModified:
             _ = (0, _._)("#FamilyHistory_FamilyModified", _, _.name);
             break;
-          case 3:
+          case _._.k_FamilyGroupDeleted:
             _ = (0, _._)("#FamilyHistory_FamilyDeleted", _);
             break;
-          case 4:
+          case _._.k_AccountInvited:
             const _ = (0, _._)(
               `#FamilyManagement_Role_${_.role}`,
             ).toLocaleLowerCase();
             _ = (0, _._)("#FamilyHistory_AccountInvited", _, _, _);
             break;
-          case 5:
+          case _._.k_InviteDeniedByGroupSize:
             _ = (0, _._)("#FamilyHistory_InviteDeniedByFamilySize", _, _);
             break;
-          case 6:
+          case _._.k_JoinedFamilyGroup:
             _ = (0, _._)("#FamilyHistory_JoinedFamily", _);
             break;
-          case 7:
+          case _._.k_JoinDeniedByRegionMismatch:
             _ = (0, _._)("#FamilyHistory_JoinDeniedByRegionMismatch", _);
             break;
-          case 24:
+          case _._.k_JoinDenied:
             _ = (0, _._)("#FamilyHistory_JoinDenied", _, _);
             break;
-          case 8:
+          case _._.k_JoinDeniedByMissingIpAddress:
             _ = (0, _._)("#FamilyHistory_JoinDeniedByMissingIpAddress", _);
             break;
-          case 9:
+          case _._.k_JoinDeniedByFamilyCooldown:
             _ = (0, _._)("#FamilyHistory_JoinDeniedByFamilyCooldown", _, _);
             break;
-          case 10:
+          case _._.k_JoinDeniedByUserCooldown:
             _ = (0, _._)("#FamilyHistory_JoinDeniedByUserCooldown", _, _);
             break;
-          case 11:
+          case _._.k_JoinDeniedByOtherGroup:
             _ = (0, _._)("#FamilyHistory_JoinDeniedByOtherFamily", _);
             break;
-          case 12:
+          case _._.k_AccountRemoved:
             _ = (0, _._)("#FamilyHistory_AccountRemoved", _, _);
             break;
-          case 13:
+          case _._.k_InviteCanceled:
             _ =
               _.actor_steamid() === _.account
                 ? (0, _._)("#FamilyHistory_InviteRejected", _)
                 : (0, _._)("#FamilyHistory_InviteCancelled", _, _);
             break;
-          case 14:
+          case _._.k_PurchaseRequested:
             _ = (0, _._)("#FamilyHistory_PurchaseRequested", _);
             break;
-          case 16:
+          case _._.k_ParentalSettingsDisabled:
             _ = (0, _._)("#FamilyHistory_ParentalSettingsDisabled", _, _);
             break;
-          case 15:
+          case _._.k_ParentalSettingsEnabled:
             _ = (0, _._)("#FamilyHistory_ParentalSettingsEnabled", _, _);
             break;
-          case 17:
+          case _._.k_ParentalSettingsChanged:
             _ = (0, _._)("#FamilyHistory_ParentalSettingsChanged", _, _);
             break;
-          case 18:
+          case _._.k_FamilyCooldownOverridesChanged:
             _ = (0, _._)(
               "#FamilyHistory_FamilyCooldownOverridesChanged",
               _,
               _.count,
             );
             break;
-          case 19:
+          case _._.k_PurchaseRequestCanceled:
             _ = (0, _._)("#FamilyHistory_PurchaseRequestCanceled", _);
             break;
-          case 20:
+          case _._.k_PurchaseRequestApproved:
             _ = (0, _._)("#FamilyHistory_PurchaseRequestApproved", _, _);
             break;
-          case 21:
+          case _._.k_PurchaseRequestDeclined:
             _ = (0, _._)("#FamilyHistory_PurchaseRequestDeclined", _, _);
             break;
-          case 22:
+          case _._.k_CooldownSkipConsumed:
             _ = (0, _._)("#FamilyHistory_CooldownSkipConsumed", _);
             break;
-          case 23:
+          case _._.k_FamilyGroupRestored:
             _ = (0, _._)("#FamilyHistory_FamilyRestored", _);
             break;
-          case 25:
+          case _._.k_SupportForceAcceptedInvite:
             _ = (0, _._)("#FamilyHistory_ForceAcceptedInvite", _, _);
             break;
           default:
@@ -5655,6 +5751,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { item: _, closeModal: __webpack_require__ } = _,
@@ -6255,7 +6352,10 @@
             [_],
           );
         if (!_) return null;
-        const _ = 1 === _.GetStoreItemType() ? "sub" : "bundle";
+        const _ =
+          _.GetStoreItemType() === _._.k_EStoreItemType_Package
+            ? "sub"
+            : "bundle";
         return _.createElement(
           _._,
           {
@@ -6296,7 +6396,13 @@
         const { item: _, familyGroupID: __webpack_require__ } = _,
           _ = (0, _._)(),
           _ = _.requester_steamid() === _,
-          _ = (0, _._)(__webpack_require__, _.request_id(), _ ? 4 : 1),
+          _ = (0, _._)(
+            __webpack_require__,
+            _.request_id(),
+            _
+              ? _._.k_EPurchaseRequestAction_Cancel
+              : _._.k_EPurchaseRequestAction_Decline,
+          ),
           { setErrorMessage: _ } = (0, _._)();
         (0, _._)(
           _,
@@ -6309,19 +6415,19 @@
         let _ = "";
         if (_.is_completed())
           switch (_.response_action()) {
-            case 0:
-            case 5:
+            case _._.k_EPurchaseRequestAction_None:
+            case _._.k_EPurchaseRequestAction_MAX:
               break;
-            case 1:
+            case _._.k_EPurchaseRequestAction_Decline:
               _ = (0, _._)("#PurchaseRequest_DeclinedBy");
               break;
-            case 2:
+            case _._.k_EPurchaseRequestAction_Purchased:
               _ = (0, _._)("#PurchaseRequest_PurchasedBy");
               break;
-            case 3:
+            case _._.k_EPurchaseRequestAction_Abandoned:
               _ = (0, _._)("#PurchaseRequest_Abandoned");
               break;
-            case 4:
+            case _._.k_EPurchaseRequestAction_Cancel:
               _ = (0, _._)("#PurchaseRequest_CanceledBy");
           }
         let _ = !1;
@@ -6810,7 +6916,7 @@
           _ = (0, _._)(_),
           _ = _.data
             ?.members()
-            .filter((_) => 2 === _.role())
+            .filter((_) => _.role() === _._.k_EFamilyGroupRole_Child)
             .map((_) => _.steamid()),
           _ = (0, _._)(_),
           _ = (0, _._)(),
@@ -7440,7 +7546,7 @@
       function _(_) {
         const _ = (0, _._)(),
           _ = _.data.family_groupid(),
-          _ = 1 === _.data.role(),
+          _ = _.data.role() === _._.k_EFamilyGroupRole_Adult,
           _ = (0, _._)(_);
         return (
           (0, _._)(
@@ -7643,7 +7749,7 @@
               familyGroupID: _,
             }),
           }),
-          1 === _ &&
+          _ === _._.k_EFamilyGroupRole_Adult &&
             (_.push({
               name: (0, _._)("#FamilyManagement_PlaytimeTab"),
               key: "playtime",
@@ -7690,7 +7796,7 @@
             _.createElement(_._, null),
           );
         if (_.isError) return null;
-        const _ = 1 == _,
+        const _ = _ == _._.k_EFamilyGroupRole_Adult,
           _ = _.data.members().findIndex((_) => _.steamid() === _),
           _ = _.data.members()[_],
           _ = _.data.members().slice();

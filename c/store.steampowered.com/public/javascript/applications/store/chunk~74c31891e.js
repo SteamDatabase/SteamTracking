@@ -289,7 +289,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_counts = null;
@@ -309,7 +311,11 @@
             const _ =
                 _._.STORE_BASE_URL + "saleaction/ajaxgetuserdeckcompatcounts",
               _ = await _().get(_, {});
-            if (200 == _?.status && 1 == _.data?.success && _.data?.counts)
+            if (
+              200 == _?.status &&
+              _.data?.success == _._.k_EResultOK &&
+              _.data?.counts
+            )
               return (this.m_counts = _.data.counts), this.m_counts;
             _ = (0, _._)(_);
           } catch (_) {
@@ -358,6 +364,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.Fragment;
       function _(_) {
@@ -379,15 +386,15 @@
                 unique_id: "reservation_bbcode_" + _,
                 reservation_package: _,
                 deposit_package: _,
-                localized_reservation_desc: (0, _._)([], 31, null),
+                localized_reservation_desc: (0, _._)([], _._.k_Lang_MAX, null),
                 localized_out_of_stock_override: (0, _._)(
                   [_ || null],
-                  31,
+                  _._.k_Lang_MAX,
                   null,
                 ),
                 localized_delivery_override_desc: (0, _._)(
                   [_ || null],
-                  31,
+                  _._.k_Lang_MAX,
                   null,
                 ),
                 override_delivery_only_out_of_stock: Boolean(_),
@@ -755,7 +762,7 @@
             return _.createElement(
               _._,
               {
-                location: _ ? 2 : 0,
+                location: _ ? _._.Previewing : _._.Display,
               },
               _.createElement(_, {
                 event: __webpack_require__,
@@ -861,10 +868,10 @@
         const _ = Number.parseInt((0, _._)(_.args));
         let _ = _.verified;
         switch (_) {
-          case 2:
+          case _._.k_ESteamDeckCompatibilityCategory_Playable:
             _ = _.playable;
             break;
-          case 1:
+          case _._.k_ESteamDeckCompatibilityCategory_Unsupported:
             _ = _.unsupported;
         }
         return _.createElement("span", null, Number(_).toLocaleString());
@@ -878,13 +885,13 @@
         const _ = Number.parseInt((0, _._)(_.args));
         let _ = _.verifiedList?.length || 0;
         switch (_) {
-          case 2:
+          case _._.k_ESteamDeckCompatibilityCategory_Playable:
             _ = _.playableList?.length || 0;
             break;
-          case 1:
+          case _._.k_ESteamDeckCompatibilityCategory_Unsupported:
             _ = _.unsupportedList?.length || 0;
             break;
-          case 0:
+          case _._.k_ESteamDeckCompatibilityCategory_Unknown:
             _ = _.unknownList?.length || 0;
         }
         return _.createElement("span", null, Number(_).toLocaleString());

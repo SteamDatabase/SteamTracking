@@ -138,15 +138,16 @@
     },
     70450: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { FAQRoutes: () => bt, default: () => At });
+      a.r(t), a.d(t, { FAQRoutes: () => At, default: () => ft });
       var n,
         l = a(75844),
         r = a(90626),
+        i = a(22837),
         o = a(87231),
-        i = a(68255),
-        s = a(92757),
-        c = a(17083),
-        m = a(78327);
+        s = a(68255),
+        c = a(92757),
+        m = a(17083),
+        d = a(78327);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eCommunityView = "communityview"),
@@ -154,28 +155,28 @@
           (e.k_eCommunityDashboard = "dashboard"),
           (e.k_eCommunityPreview = "preview");
       })(n || (n = {}));
-      const d = (e) => {
+      const u = (e) => {
         const { route: t, faqid: a } = e,
-          n = u(t, a);
+          n = E(t, a);
         return e.bForceRedirect
-          ? r.createElement(s.rd, { push: !0, to: n })
+          ? r.createElement(c.rd, { push: !0, to: n })
           : e.bForceAnchor
             ? r.createElement(
                 "a",
                 {
-                  href: m.TS.COMMUNITY_BASE_URL.slice(0, -1) + n,
+                  href: d.TS.COMMUNITY_BASE_URL.slice(0, -1) + n,
                   className: e.className,
                 },
                 e.children,
               )
             : r.createElement(
-                c.N_,
+                m.N_,
                 { to: n, className: e.className },
                 e.children,
               );
       };
-      function u(e, t) {
-        let a = "/faqs/" + m.UF.VANITY_ID + "/";
+      function E(e, t) {
+        let a = "/faqs/" + d.UF.VANITY_ID + "/";
         switch (e) {
           case n.k_eView:
           case n.k_eCommunityView:
@@ -192,57 +193,57 @@
         }
         return a;
       }
-      var E = a(9154),
-        _ = a(738),
-        g = a(12155),
+      var _ = a(9154),
+        g = a(738),
+        h = a(12155),
         v = a(22797),
-        h = a(32754),
+        b = a(32754),
         C = a(52038),
-        b = a(61859),
+        p = a(61859),
         A = a(41338),
-        p = a(11259),
-        w = a.n(p),
-        f = a(14947),
-        F = a(22837),
+        f = a(11259),
+        w = a.n(f),
+        F = a(14947),
+        S = a(37085),
         N = a(37739),
-        D = a.n(N),
-        L = a(17720),
-        S = a(95695),
-        Q = a.n(S),
+        L = a.n(N),
+        D = a(17720),
+        Q = a(95695),
+        k = a.n(Q),
         T = a(25228),
-        I = a(4434),
-        P = a(56011),
+        P = a(4434),
+        I = a(56011),
         B = a(91675),
         y = a(87669),
-        k = a(93084),
-        G = a(41471);
-      const V = "title",
-        q = "content";
+        G = a(93084),
+        V = a(41471);
+      const q = "title",
+        R = "content";
       const x = (e) => {
           const { draft: t, eLanguage: a } = e;
           return r.createElement(
             "div",
-            { className: S.FlexRowContainer },
+            { className: Q.FlexRowContainer },
             r.createElement(M, { draft: t, eLanguage: a }),
             r.createElement(T.t3, {
-              strToolTip: (0, b.we)("#FAQEditor_Loc_Import_ttip"),
-              strLabel: (0, b.we)("#EventEditor_Loc_Import_Short"),
+              strToolTip: (0, p.we)("#FAQEditor_Loc_Import_ttip"),
+              strLabel: (0, p.we)("#EventEditor_Loc_Import_Short"),
               fnOnImportLocData: (e, a) =>
                 (function (e, t, a) {
                   const n = new Set(),
                     l = t.GetSortedTokenList();
                   return (
-                    (0, f.h5)(() => {
+                    (0, F.h5)(() => {
                       a.forEach((a) => {
                         let r = !1;
                         l.forEach((n) => {
                           const l = t.GetLocalization(n, a) || "";
-                          if (n === V) {
+                          if (n === q) {
                             const t = e.GetDraftTitle(a);
                             (l || (t && t.length > 0)) &&
                               (e.SetDraftTitle(a, l), (r = !0));
                           }
-                          if (n === q) {
+                          if (n === R) {
                             const t = e.GetDraftContent(a);
                             (l || (t && t.length > 0)) &&
                               (e.SetDraftContent(a, l), (r = !0));
@@ -261,32 +262,32 @@
           const { draft: t } = e;
           return r.createElement(
             "div",
-            { className: S.FlexRowContainer },
+            { className: Q.FlexRowContainer },
             r.createElement(
               "div",
               {
-                className: S.EditPreviewButton,
+                className: Q.EditPreviewButton,
                 onClick: (e) => {
-                  (0, _.pg)(
+                  (0, g.pg)(
                     r.createElement(H, { direction: "export", draft: t }, " "),
-                    (0, P.uX)(e),
+                    (0, I.uX)(e),
                   );
                 },
               },
-              (0, b.we)("#EventEditor_Loc_Export_Short"),
+              (0, p.we)("#EventEditor_Loc_Export_Short"),
             ),
             r.createElement(
               "div",
               {
-                className: S.EditPreviewButton,
+                className: Q.EditPreviewButton,
                 onClick: (e) => {
-                  (0, _.pg)(
+                  (0, g.pg)(
                     r.createElement(H, { direction: "import", draft: t }, " "),
-                    (0, P.uX)(e),
+                    (0, I.uX)(e),
                   );
                 },
               },
-              (0, b.we)("#EventEditor_Loc_Import_Short"),
+              (0, p.we)("#EventEditor_Loc_Import_Short"),
             ),
           );
         },
@@ -296,12 +297,12 @@
             [s, c] = r.useState(new Array()),
             m =
               (l || s.length,
-              (0, b.we)(
+              (0, p.we)(
                 "import" == a
                   ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
                   : "#EventEditor_Loc_CrowdinIntegration_ExportTitle",
               )),
-            d = (0, b.we)(
+            d = (0, p.we)(
               "import" == a
                 ? "#EventEditor_Loc_Import_Crowdin_Confirm"
                 : "#EventEditor_Loc_Export_Crowdin_Confirm",
@@ -310,15 +311,15 @@
               "import" == a
                 ? r.createElement(W, {
                     draft: n,
-                    rgAllLanguages: O,
+                    rgAllLanguages: K,
                     rgLanguagesSelected: s,
                     fnSelectLanguages: c,
                   })
                 : null;
           return r.createElement(
-            E.o0,
+            _.o0,
             {
-              className: k.LanguageListDialog,
+              className: G.LanguageListDialog,
               closeModal: t,
               strTitle: m,
               strDescription: d,
@@ -345,18 +346,18 @@
         M = (e) => {
           const { draft: t, eLanguage: a } = e;
           return r.createElement(
-            h.he,
-            { toolTipContent: (0, b.we)("#FAQEditor_Loc_Export_ttip") },
+            b.he,
+            { toolTipContent: (0, p.we)("#FAQEditor_Loc_Export_ttip") },
             r.createElement(
               "div",
               {
-                className: S.EditPreviewButton,
+                className: Q.EditPreviewButton,
                 onClick: (e) => {
-                  (0, _.pg)(
+                  (0, g.pg)(
                     r.createElement(
-                      E.o0,
+                      _.o0,
                       {
-                        strTitle: (0, b.we)("#EventEditor_Loc_Export"),
+                        strTitle: (0, p.we)("#EventEditor_Loc_Export"),
                         bAlertDialog: !0,
                       },
                       r.createElement(T.Yg, {
@@ -364,10 +365,15 @@
                           (function (e, t) {
                             var a, n;
                             let l = new y.G();
-                            for (let r = 0; r < 31; ++r)
-                              (e.BHasSomeTextForLanguage(r) || 0 == t) &&
+                            for (
+                              let r = i.gS.k_Lang_English;
+                              r < i.gS.k_Lang_MAX;
+                              ++r
+                            )
+                              (e.BHasSomeTextForLanguage(r) ||
+                                i.gS.k_Lang_English == t) &&
                                 (l.SetLocalization(
-                                  V,
+                                  q,
                                   r,
                                   null !== (a = e.GetDraftTitle(r)) &&
                                     void 0 !== a
@@ -375,7 +381,7 @@
                                     : "",
                                 ),
                                 l.SetLocalization(
-                                  q,
+                                  R,
                                   r,
                                   null !== (n = e.GetDraftContent(r)) &&
                                     void 0 !== n
@@ -390,21 +396,47 @@
                         lang: a,
                       }),
                     ),
-                    (0, P.uX)(e),
+                    (0, I.uX)(e),
                   );
                 },
               },
-              (0, b.we)("#EventEditor_Loc_Export_Short"),
+              (0, p.we)("#EventEditor_Loc_Export_Short"),
             ),
           );
         },
-        R = [
+        O = [
           0, 9, 8, 12, 14, 21, 2, 3, 20, 24, 13, 17, 16, 5, 6, 7, 15, 23, 11, 4,
           19, 25, 18, 1, 10, 28, 26, 22, 27, 29, 30,
         ],
-        O = [
-          23, 6, 7, 19, 13, 14, 15, 2, 1, 24, 18, 3, 10, 4, 16, 12, 11, 22, 20,
-          8, 5, 27, 17, 9, 21, 26, 28, 30,
+        K = [
+          i.gS.k_Lang_Bulgarian,
+          i.gS.k_Lang_Simplified_Chinese,
+          i.gS.k_Lang_Traditional_Chinese,
+          i.gS.k_Lang_Czech,
+          i.gS.k_Lang_Danish,
+          i.gS.k_Lang_Dutch,
+          i.gS.k_Lang_Finnish,
+          i.gS.k_Lang_French,
+          i.gS.k_Lang_German,
+          i.gS.k_Lang_Greek,
+          i.gS.k_Lang_Hungarian,
+          i.gS.k_Lang_Italian,
+          i.gS.k_Lang_Japanese,
+          i.gS.k_Lang_Korean,
+          i.gS.k_Lang_Norwegian,
+          i.gS.k_Lang_Polish,
+          i.gS.k_Lang_Portuguese,
+          i.gS.k_Lang_Brazilian,
+          i.gS.k_Lang_Romanian,
+          i.gS.k_Lang_Russian,
+          i.gS.k_Lang_Spanish,
+          i.gS.k_Lang_Latam_Spanish,
+          i.gS.k_Lang_Swedish,
+          i.gS.k_Lang_Thai,
+          i.gS.k_Lang_Turkish,
+          i.gS.k_Lang_Ukrainian,
+          i.gS.k_Lang_Vietnamese,
+          i.gS.k_Lang_Indonesian,
         ],
         W = (e) => {
           const {
@@ -413,7 +445,7 @@
               rgLanguagesSelected: n,
               fnSelectLanguages: l,
             } = e,
-            o = (e, t) => {
+            i = (e, t) => {
               const a = n.includes(t);
               if (e && !a) {
                 const e = n.slice();
@@ -423,15 +455,15 @@
                 l(e);
               }
             },
-            s = a
-              .sort((e, t) => R[e] - R[t])
+            o = a
+              .sort((e, t) => O[e] - O[t])
               .map((e) =>
-                r.createElement(K, {
+                r.createElement(z, {
                   key: "langrow" + e + t.GetFAQID(),
                   draft: t,
                   eLang: e,
                   bInitialState: n.includes(e),
-                  fnOnChecked: o,
+                  fnOnChecked: i,
                 }),
               );
           return r.createElement(
@@ -439,142 +471,142 @@
             null,
             r.createElement(
               "div",
-              { className: k.ChecklistHeader },
+              { className: G.ChecklistHeader },
               r.createElement(
                 "div",
-                { className: k.Language },
-                (0, b.we)("#FAQCrowdin_LanguageHeader"),
+                { className: G.Language },
+                (0, p.we)("#FAQCrowdin_LanguageHeader"),
               ),
               r.createElement(
                 "div",
-                { className: k.Timestamp },
-                (0, b.we)("#FAQCrowdin_DraftTimestampHeader"),
+                { className: G.Timestamp },
+                (0, p.we)("#FAQCrowdin_DraftTimestampHeader"),
               ),
             ),
-            r.createElement(i.Yh, {
-              className: k.CheckAll,
-              label: (0, b.we)("#FAQCrowdin_SelectAllCheckboxes"),
+            r.createElement(s.Yh, {
+              className: G.CheckAll,
+              label: (0, p.we)("#FAQCrowdin_SelectAllCheckboxes"),
               onChange: (e) => {
                 l(e ? a.slice() : []);
               },
             }),
             r.createElement(
               "div",
-              { className: k.ChecklistRows },
-              null != s
-                ? s
+              { className: G.ChecklistRows },
+              null != o
+                ? o
                 : r.createElement(
                     "div",
                     null,
-                    (0, b.we)("#FAQCrowdin_NoDraftFound"),
+                    (0, p.we)("#FAQCrowdin_NoDraftFound"),
                   ),
             ),
           );
         },
-        K = (e) => {
+        z = (e) => {
           var t;
           const { draft: a, eLang: n, bInitialState: l, fnOnChecked: o } = e,
-            s = a.GetLastSavedDraftVersion(n),
-            c = s
-              ? L.b.InitFromAccountID(Number.parseInt(s.author_account_id))
+            c = a.GetLastSavedDraftVersion(n),
+            m = c
+              ? D.b.InitFromAccountID(Number.parseInt(c.author_account_id))
               : null,
-            { data: m } = (0, G.js)(null == c ? void 0 : c.GetAccountID()),
-            d = s
-              ? (0, b.we)(
+            { data: d } = (0, V.js)(null == m ? void 0 : m.GetAccountID()),
+            u = c
+              ? (0, p.we)(
                   "#FAQCrowdin_SavedAtTimeByAuthor",
-                  (0, b.TW)(s.timestamp) +
+                  (0, p.TW)(c.timestamp) +
                     " @ " +
-                    (0, B.KC)(s.timestamp, { bForce24HourClock: !1 }),
-                  null !== (t = null == m ? void 0 : m.m_strPlayerName) &&
+                    (0, B.KC)(c.timestamp, { bForce24HourClock: !1 }),
+                  null !== (t = null == d ? void 0 : d.m_strPlayerName) &&
                     void 0 !== t
                     ? t
-                    : s.author_account_id,
+                    : c.author_account_id,
                 )
-              : (0, b.we)("#FAQCrowdin_NoDraftFound"),
-            u = r.createElement(
+              : (0, p.we)("#FAQCrowdin_NoDraftFound"),
+            E = r.createElement(
               "div",
-              { className: k.LanguageCheckboxLabel },
+              { className: G.LanguageCheckboxLabel },
               r.createElement(
                 "div",
-                { className: k.Language },
-                (0, b.we)("#Language_" + (0, F.Lg)(n)),
+                { className: G.Language },
+                (0, p.we)("#Language_" + (0, i.Lg)(n)),
               ),
-              r.createElement("div", { className: k.Timestamp }, d),
+              r.createElement("div", { className: G.Timestamp }, u),
             );
-          return r.createElement(i.Yh, {
-            className: k.LanguageCheckbox,
-            label: u,
+          return r.createElement(s.Yh, {
+            className: G.LanguageCheckbox,
+            label: E,
             checked: l,
             onChange: (e) => o(e, n),
           });
         };
-      function z(e) {
+      function Y(e) {
         const [t, a] = (0, o.cf)(),
           [n, l] = r.useState(0),
-          [s, c] = r.useState(!1),
-          [m, d] = r.useState(!1),
-          [u, _] = r.useState(null),
-          g = (0, I.m)("CrowdinImportDialog"),
+          [c, m] = r.useState(!1),
+          [d, u] = r.useState(!1),
+          [E, g] = r.useState(null),
+          h = (0, P.m)("CrowdinImportDialog"),
           v = r.useRef([]);
-        if (u)
-          return r.createElement(E.o0, {
-            strTitle: (0, b.we)("#FAQDashboard_CrowdinToolTitle"),
-            strDescription: u,
+        if (E)
+          return r.createElement(_.o0, {
+            strTitle: (0, p.we)("#FAQDashboard_CrowdinToolTitle"),
+            strDescription: E,
             bAlertDialog: !0,
             bDestructiveWarning: !0,
             closeModal: e.closeModal,
           });
-        if (m)
-          return r.createElement(E.o0, {
-            strTitle: (0, b.we)("#FAQDashboard_CrowdinToolTitle"),
-            strDescription: (0, b.we)("#FAQDashboard_PublishComplete"),
+        if (d)
+          return r.createElement(_.o0, {
+            strTitle: (0, p.we)("#FAQDashboard_CrowdinToolTitle"),
+            strDescription: (0, p.we)("#FAQDashboard_PublishComplete"),
             bAlertDialog: !0,
             closeModal: e.closeModal,
           });
-        const h = (100 * (n + 0.5)) / t.length,
+        const b = (100 * (n + 0.5)) / t.length,
           C = t[n].internal_name;
         return r.createElement(
-          E.eV,
+          _.eV,
           {
-            title: (0, b.we)("#FAQDashboard_CrowdinToolTitle"),
+            title: (0, p.we)("#FAQDashboard_CrowdinToolTitle"),
             ...e,
-            onCancel: () => g.cancel("CrowdinImportDialog cancelled"),
+            onCancel: () => h.cancel("CrowdinImportDialog cancelled"),
           },
           r.createElement(
-            i.nB,
+            s.nB,
             null,
             r.createElement(
-              i.a3,
+              s.a3,
               null,
-              (0, b.we)(
+              (0, p.we)(
                 "#FAQDashboard_CrowdinToolInstructionsWithCount",
                 t.length,
               ),
               r.createElement(
                 "div",
-                { className: k.Warning },
-                (0, b.we)("#FAQDashboard_CrowdinToolWarning"),
+                { className: G.Warning },
+                (0, p.we)("#FAQDashboard_CrowdinToolWarning"),
               ),
             ),
             r.createElement(
-              i.a3,
+              s.a3,
               null,
               r.createElement(
-                i.$n,
+                s.$n,
                 {
                   onClick: async () => {
-                    c(!0);
+                    m(!0);
                     for (let e = 0; e < t.length; e++) {
                       l(e);
                       const a = t[e],
                         n = [],
                         r = 5;
-                      for (let e = 0; e < O.length; e += r) {
-                        const t = O.slice(e, e + r);
+                      for (let e = 0; e < K.length; e += r) {
+                        const t = K.slice(e, e + r);
                         n.push(
                           o.pN
                             .Get()
-                            .ImportNonEnglishDraftsFromCrowdin(a.faq_id, t, g),
+                            .ImportNonEnglishDraftsFromCrowdin(a.faq_id, t, h),
                         );
                       }
                       await Promise.all(n),
@@ -585,7 +617,7 @@
                             console.log(
                               "Going to publish FAQ",
                               a.faq_id,
-                              v.current[e].map((e) => (0, F.Lg)(e)),
+                              v.current[e].map((e) => (0, i.Lg)(e)),
                             ))
                           : console.log(
                               "No live english version for:",
@@ -600,85 +632,85 @@
                         const t = await o.pN
                           .Get()
                           .PublishDraftByLanguage(a.faq_id, n);
-                        if (g.token.reason) return;
-                        if (1 != t)
-                          return void _(
-                            (0, b.we)("#FAQDashboard_PublishFailed"),
+                        if (h.token.reason) return;
+                        if (t != S.d.k_EResultOK)
+                          return void g(
+                            (0, p.we)("#FAQDashboard_PublishFailed"),
                           );
                       }
                     }
-                    d(!0), c(!1);
+                    u(!0), m(!1);
                   },
-                  disabled: s,
+                  disabled: c,
                 },
-                (0, b.we)("#FAQDashboard_UpdateAllFAQsButton"),
+                (0, p.we)("#FAQDashboard_UpdateAllFAQsButton"),
               ),
-              s && r.createElement(Y, { nProgressPct: h, strCurrentLabel: C }),
+              c && r.createElement(j, { nProgressPct: b, strCurrentLabel: C }),
               v.current.length > 0 &&
-                r.createElement(j, { rgUpdatedLanguagesForAllFAQs: v.current }),
+                r.createElement(X, { rgUpdatedLanguagesForAllFAQs: v.current }),
             ),
           ),
         );
       }
-      function Y(e) {
+      function j(e) {
         const { nProgressPct: t, strCurrentLabel: a } = e;
         return r.createElement(
           "div",
           null,
           r.createElement(
             "div",
-            { className: k.ImportProgressBar },
+            { className: G.ImportProgressBar },
             r.createElement("div", {
-              className: k.ProgressMarker,
+              className: G.ProgressMarker,
               style: { width: t + "%" },
             }),
           ),
           r.createElement(
             "div",
-            { className: k.CurrentFAQ },
-            (0, b.we)("#FAQDashboard_CrowdinToolProgress", a),
+            { className: G.CurrentFAQ },
+            (0, p.we)("#FAQDashboard_CrowdinToolProgress", a),
           ),
         );
       }
-      function j(e) {
+      function X(e) {
         const { rgUpdatedLanguagesForAllFAQs: t } = e,
           [a, n] = (0, o.cf)();
         return r.createElement(
           "div",
-          { className: k.ImportResults },
+          { className: G.ImportResults },
           r.createElement(
             "div",
-            { className: k.ImportResultLabel },
-            (0, b.we)("#FAQDashboard_CrowdinToolResultsLabel"),
+            { className: G.ImportResultLabel },
+            (0, p.we)("#FAQDashboard_CrowdinToolResultsLabel"),
           ),
           t.map((e, t) => {
             const n = a[t];
             if (0 == e.length) return null;
-            const l = e.map((e) => (0, F.ww)(e)).join(",");
+            const l = e.map((e) => (0, i.ww)(e)).join(",");
             return r.createElement(
               "div",
               { key: n.faq_id },
               r.createElement(
                 "div",
-                { className: k.ImportResult },
+                { className: G.ImportResult },
                 r.createElement(
-                  h.he,
+                  b.he,
                   {
                     toolTipContent: n.internal_name,
-                    strTooltipClassname: D().HoverAboveModal,
+                    strTooltipClassname: L().HoverAboveModal,
                     nAllowOffscreenPx: 4e4,
-                    className: k.UrlCode,
+                    className: G.UrlCode,
                   },
                   n.url_code + ": ",
                 ),
                 r.createElement(
-                  h.he,
+                  b.he,
                   {
                     toolTipContent: l,
-                    strTooltipClassname: D().HoverAboveModal,
+                    strTooltipClassname: L().HoverAboveModal,
                     nAllowOffscreenPx: 4e4,
                     direction: "left",
-                    className: k.LanguageList,
+                    className: G.LanguageList,
                   },
                   l,
                 ),
@@ -687,37 +719,53 @@
           }),
         );
       }
-      var X = a(76684),
-        Z = a(55351),
-        J = a.n(Z),
-        $ = a(3063),
-        ee = a.n($);
-      const te = (e) => {
-          const { rtTimestamp: t, bShowAsWarning: a } = e;
-          if (!t)
-            return r.createElement(
-              "div",
-              { className: ee().Never },
-              (0, b.we)("#FAQDashboard_TimeNever"),
-            );
-          const n = Date.now() / 1e3 - t,
-            l = n < 86400 ? (0, b.Hq)(n, !1, !0) : (0, b.$z)(t);
+      var Z = a(76684),
+        J = a(55351),
+        $ = a.n(J),
+        ee = a(3063),
+        te = a.n(ee);
+      const ae = (e) => {
+        const { rtTimestamp: t, bShowAsWarning: a } = e;
+        if (!t)
           return r.createElement(
-            X.gS,
-            { className: a && ee().Warning, rtFullDate: t, stylesmodule: J() },
-            l,
+            "div",
+            { className: te().Never },
+            (0, p.we)("#FAQDashboard_TimeNever"),
           );
-        },
-        ae = (0, l.PA)((e) => {
+        const n = Date.now() / 1e3 - t,
+          l = n < 86400 ? (0, p.Hq)(n, !1, !0) : (0, p.$z)(t);
+        return r.createElement(
+          Z.gS,
+          { className: a && te().Warning, rtFullDate: t, stylesmodule: $() },
+          l,
+        );
+      };
+      var ne;
+      !(function (e) {
+        (e[(e.k_EFaqID = 0)] = "k_EFaqID"),
+          (e[(e.k_EName = 1)] = "k_EName"),
+          (e[(e.k_EDraftTimestamp = 2)] = "k_EDraftTimestamp"),
+          (e[(e.k_EUpdatedDrafts = 3)] = "k_EUpdatedDrafts"),
+          (e[(e.k_EStaleDrafts = 4)] = "k_EStaleDrafts"),
+          (e[(e.k_EPublished = 5)] = "k_EPublished"),
+          (e[(e.k_ENeedPublish = 6)] = "k_ENeedPublish"),
+          (e[(e.k_EGlobalVisible = 7)] = "k_EGlobalVisible"),
+          (e[(e.k_ESteamChinaVisible = 8)] = "k_ESteamChinaVisible");
+      })(ne || (ne = {}));
+      const le = (0, l.PA)((e) => {
           const [t, a] = (0, o.cf)(),
-            [n, l] = r.useState(1),
-            i = t
+            [n, l] = r.useState(ne.k_EName),
+            s = t
               .map((e) => {
-                const t = e.per_language_info.find((e) => 0 == e.language),
+                const t = e.per_language_info.find(
+                    (e) => e.language == i.gS.k_Lang_English,
+                  ),
                   a = (null == t ? void 0 : t.last_update_timestamp) || 0,
                   n = Array.from(
                     e.per_language_info.filter(
-                      (e) => 0 != e.language && e.last_update_timestamp >= a,
+                      (e) =>
+                        e.language != i.gS.k_Lang_English &&
+                        e.last_update_timestamp >= a,
                     ),
                   ).length,
                   l = Array.from(
@@ -748,7 +796,11 @@
                   e.visible_in_china_realm,
                 ];
               })
-              .sort((e, t) => (1 == n ? (0, A.lY)(e[1], t[1]) : t[n] - e[n]));
+              .sort((e, t) =>
+                n == ne.k_EName
+                  ? (0, A.lY)(e[ne.k_EName], t[ne.k_EName])
+                  : t[n] - e[n],
+              );
           return (
             (0, r.useEffect)(() => {
               o.pN.Get().RemoveAllDirtyDrafts();
@@ -759,8 +811,8 @@
               r.createElement(
                 "div",
                 { className: w().FAQDashboard },
-                r.createElement(ne, null),
-                r.createElement(re, {
+                r.createElement(re, null),
+                r.createElement(oe, {
                   eCurrentSortColumn: n,
                   SetSortColumn: l,
                 }),
@@ -768,29 +820,31 @@
                   r.createElement(
                     "div",
                     { className: w().ErrorMsg },
-                    (0, b.we)("#FAQDashboard_Empty"),
+                    (0, p.we)("#FAQDashboard_Empty"),
                   ),
-                i.map((e) => r.createElement(ce, { key: e[0], rgColumns: e })),
+                s.map((e) =>
+                  r.createElement(de, { key: e[ne.k_EFaqID], rgColumns: e }),
+                ),
                 !a &&
                   r.createElement(v.t, { position: "center", size: "xlarge" }),
               ),
             )
           );
         }),
-        ne = (e) => {
+        re = (e) => {
           const t = r.useCallback(
               () =>
-                (0, _.mK)(r.createElement(le, null), window, {
-                  strTitle: (0, b.we)("#FAQDashboard_CreateFAQButton"),
+                (0, g.mK)(r.createElement(ie, null), window, {
+                  strTitle: (0, p.we)("#FAQDashboard_CreateFAQButton"),
                 }),
               [],
             ),
             a = r.useCallback(
               () =>
-                (0, _.mK)(
-                  r.createElement(z, { bDisableBackgroundDismiss: !0 }),
+                (0, g.mK)(
+                  r.createElement(Y, { bDisableBackgroundDismiss: !0 }),
                   window,
-                  { strTitle: (0, b.we)("#FAQDashboard_CrowdinToolTitle") },
+                  { strTitle: (0, p.we)("#FAQDashboard_CrowdinToolTitle") },
                 ),
               [],
             );
@@ -800,28 +854,28 @@
             r.createElement(
               "div",
               { className: w().DashboardHeaderTitle },
-              (0, b.we)("#FAQDashboard_Header"),
+              (0, p.we)("#FAQDashboard_Header"),
             ),
             r.createElement(
               "div",
               { className: w().DashboardHeaderButtonCtn },
               r.createElement(
-                i.$n,
+                s.$n,
                 { onClick: a },
-                (0, b.we)("#FAQDashboard_CrowdinToolButton"),
+                (0, p.we)("#FAQDashboard_CrowdinToolButton"),
               ),
               r.createElement(
-                i.jn,
+                s.jn,
                 { onClick: t },
-                (0, b.we)("#FAQDashboard_CreateFAQButton"),
+                (0, p.we)("#FAQDashboard_CreateFAQButton"),
               ),
             ),
           );
         },
-        le = (e) => {
+        ie = (e) => {
           const [t, a] = r.useState("");
           return r.createElement(
-            E.o0,
+            _.o0,
             {
               onOK: () => {
                 o.pN.Get().CreateFAQ(t);
@@ -831,22 +885,22 @@
               className: w().CreateFAQDialog,
             },
             r.createElement(
-              i.Y9,
+              s.Y9,
               null,
-              (0, b.we)("#FAQDashboard_CreateFAQButton"),
+              (0, p.we)("#FAQDashboard_CreateFAQButton"),
             ),
             r.createElement(
-              i.nB,
+              s.nB,
               null,
               r.createElement(
-                i.a3,
+                s.a3,
                 null,
-                (0, b.we)("#FAQDashboard_CreateFAQInstructions"),
+                (0, p.we)("#FAQDashboard_CreateFAQInstructions"),
                 r.createElement("input", {
                   type: "text",
                   className: w().NameInput,
                   value: t,
-                  placeholder: (0, b.we)("#FAQDashboard_NamePlaceHolder"),
+                  placeholder: (0, p.we)("#FAQDashboard_NamePlaceHolder"),
                   onFocus: (e) => e.target.select(),
                   onChange: (e) => a(e.currentTarget.value),
                   maxLength: 120,
@@ -855,83 +909,83 @@
             ),
           );
         },
-        re = (e) =>
+        oe = (e) =>
           r.createElement(
             "div",
             { className: w().DashboardListHeaderRow },
-            r.createElement(oe, {
+            r.createElement(se, {
               strLabelLocToken: "#FAQDashboard_NameColumn",
               bIsNameColumn: !0,
-              eThisColumn: 1,
+              eThisColumn: ne.k_EName,
               ...e,
             }),
-            r.createElement(oe, {
+            r.createElement(se, {
               strLabelLocToken: "#FAQDashboard_DraftTimetampColumn",
-              eThisColumn: 2,
+              eThisColumn: ne.k_EDraftTimestamp,
               ...e,
             }),
-            r.createElement(oe, {
+            r.createElement(se, {
               strLabelLocToken: "#FAQDashboard_UpdatedLanguagesColumn",
-              eThisColumn: 3,
+              eThisColumn: ne.k_EUpdatedDrafts,
               ...e,
             }),
-            r.createElement(oe, {
+            r.createElement(se, {
               strLabelLocToken: "#FAQDashboard_StaleLanguagesColumn",
-              eThisColumn: 4,
+              eThisColumn: ne.k_EStaleDrafts,
               ...e,
             }),
-            r.createElement(oe, {
+            r.createElement(se, {
               strLabelLocToken: "#FAQDashboard_PublishedLanguagesColumn",
-              eThisColumn: 5,
+              eThisColumn: ne.k_EPublished,
               ...e,
             }),
-            r.createElement(oe, {
+            r.createElement(se, {
               strLabelLocToken: "#FAQDashboard_NeedPublishColumn",
-              eThisColumn: 6,
+              eThisColumn: ne.k_ENeedPublish,
               ...e,
             }),
-            r.createElement(oe, {
+            r.createElement(se, {
               strLabelLocToken: "#FAQDashboard_VisibilityColumn",
-              eThisColumn: 7,
+              eThisColumn: ne.k_EGlobalVisible,
               ...e,
             }),
-            r.createElement(oe, {
+            r.createElement(se, {
               strLabelLocToken: "#FAQDashboard_SteamChinaVisibilityColumn",
-              eThisColumn: 8,
+              eThisColumn: ne.k_ESteamChinaVisible,
               ...e,
             }),
           ),
-        oe = (e) => {
+        se = (e) => {
           const {
               strLabelLocToken: t,
               bIsNameColumn: a,
               eThisColumn: n,
               eCurrentSortColumn: l,
-              SetSortColumn: o,
+              SetSortColumn: i,
             } = e,
-            i = (0, C.A)(
+            o = (0, C.A)(
               w().EntryColumn,
               w().ClickableHeader,
               a ? w().NameCol : w().DataCol,
               l == n && w().Selected,
             );
           return r.createElement(
-            h.he,
+            b.he,
             {
-              toolTipContent: (0, b.we)(t + "_ttip"),
+              toolTipContent: (0, p.we)(t + "_ttip"),
               direction: "top",
-              className: i,
-              onClick: () => o(n),
+              className: o,
+              onClick: () => i(n),
             },
-            (0, b.we)(t),
+            (0, p.we)(t),
             r.createElement(
               "div",
               { className: w().DownArrow },
-              r.createElement(g.GB9, null),
+              r.createElement(h.GB9, null),
             ),
           );
         },
-        ie = (e) => {
+        ce = (e) => {
           const { nCount: t, nTotal: a, nGoal: n } = e;
           return r.createElement(
             "div",
@@ -939,20 +993,20 @@
             t + " / " + a,
           );
         },
-        se = (e) => {
+        me = (e) => {
           const { bIsVisible: t } = e;
           return r.createElement(
             "div",
             { className: t ? w().Visible : w().Hidden },
-            (0, b.we)(t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible"),
+            (0, p.we)(t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible"),
           );
         },
-        ce = (e) => {
-          const [t, a, l, o, i, s, c, m, u] = e.rgColumns,
+        de = (e) => {
+          const [t, a, l, i, o, s, c, m, d] = e.rgColumns,
             E = s + c,
-            _ = o + i;
+            _ = i + o;
           return r.createElement(
-            d,
+            u,
             {
               route: n.k_eCommunityEdit,
               faqid: t,
@@ -966,41 +1020,41 @@
             r.createElement(
               "div",
               { className: (0, C.A)(w().EntryColumn, w().DataCol) },
-              r.createElement(te, { rtTimestamp: l }),
+              r.createElement(ae, { rtTimestamp: l }),
             ),
             r.createElement(
               "div",
               { className: (0, C.A)(w().EntryColumn, w().DataCol) },
-              r.createElement(ie, { nCount: o, nTotal: _, nGoal: _ }),
+              r.createElement(ce, { nCount: i, nTotal: _, nGoal: _ }),
             ),
             r.createElement(
               "div",
               { className: (0, C.A)(w().EntryColumn, w().DataCol) },
-              r.createElement(ie, { nCount: i, nTotal: _, nGoal: 0 }),
+              r.createElement(ce, { nCount: o, nTotal: _, nGoal: 0 }),
             ),
             r.createElement(
               "div",
               { className: (0, C.A)(w().EntryColumn, w().DataCol) },
-              r.createElement(ie, { nCount: s, nTotal: E, nGoal: E }),
+              r.createElement(ce, { nCount: s, nTotal: E, nGoal: E }),
             ),
             r.createElement(
               "div",
               { className: (0, C.A)(w().EntryColumn, w().DataCol) },
-              r.createElement(ie, { nCount: c, nTotal: E, nGoal: 0 }),
+              r.createElement(ce, { nCount: c, nTotal: E, nGoal: 0 }),
             ),
             r.createElement(
               "div",
               { className: (0, C.A)(w().EntryColumn, w().DataCol) },
-              r.createElement(se, { bIsVisible: m }),
+              r.createElement(me, { bIsVisible: m }),
             ),
             r.createElement(
               "div",
               { className: (0, C.A)(w().EntryColumn, w().DataCol) },
-              r.createElement(se, { bIsVisible: u }),
+              r.createElement(me, { bIsVisible: d }),
             ),
           );
         },
-        me = (e) => {
+        ue = (e) => {
           r.useEffect(
             () => (
               (window.onbeforeunload = () => {
@@ -1014,7 +1068,7 @@
                     ? void 0
                     : e.length) > 0,
                 )
-                  ? (0, b.we)("#EventEditor_UnsavedChanges")
+                  ? (0, p.we)("#EventEditor_UnsavedChanges")
                   : null;
               }),
               () => {
@@ -1023,7 +1077,7 @@
             ),
             [],
           );
-          return r.createElement(s.XG, {
+          return r.createElement(c.XG, {
             message: (e) => {
               var t, a;
               const n = o.pN.Get().GetLoadedDraftObjs();
@@ -1036,123 +1090,123 @@
                     ? void 0
                     : t.length) > 0,
                 ) ||
-                (e.pathname != bt.DashboardFAQ(m.UF.VANITY_ID) &&
+                (e.pathname != At.DashboardFAQ(d.UF.VANITY_ID) &&
                   !(null === (a = e.pathname) || void 0 === a
                     ? void 0
                     : a.startsWith(
-                        bt.ViewFAQ(m.UF.VANITY_ID, "").slice(0, -1),
+                        At.ViewFAQ(d.UF.VANITY_ID, "").slice(0, -1),
                       ))) ||
-                (0, b.we)("#EventEditor_UnsavedChanges")
+                (0, p.we)("#EventEditor_UnsavedChanges")
               );
             },
           });
         };
-      var de = a(81047),
-        ue = a(86355),
-        Ee = a(68359),
-        _e = a(63556),
-        ge = a(9239),
-        ve = a(84811),
-        he = a(33494),
-        Ce = a(63280),
-        be = a.n(Ce),
-        Ae = a(64372),
-        pe = a(68797);
-      const we = (e) =>
+      var Ee = a(81047),
+        _e = a(86355),
+        ge = a(68359),
+        he = a(63556),
+        ve = a(9239),
+        be = a(84811),
+        Ce = a(33494),
+        pe = a(63280),
+        Ae = a.n(pe),
+        fe = a(64372),
+        we = a(68797);
+      const Fe = (e) =>
           r.createElement(
-            h.he,
-            { toolTipContent: (0, b.we)("#FAQEditor_DeleteAction_ttip") },
+            b.he,
+            { toolTipContent: (0, p.we)("#FAQEditor_DeleteAction_ttip") },
             r.createElement(
               "div",
               {
-                className: (0, C.A)(S.EditPreviewButton, S.Delete),
+                className: (0, C.A)(Q.EditPreviewButton, Q.Delete),
                 onClick: (t) => {
-                  (0, _.pg)(
-                    r.createElement(fe, { draft: e.draft }),
-                    (0, P.uX)(t),
+                  (0, g.pg)(
+                    r.createElement(Se, { draft: e.draft }),
+                    (0, I.uX)(t),
                   );
                 },
               },
-              (0, b.we)("#FAQEditor_DeleteAction"),
+              (0, p.we)("#FAQEditor_DeleteAction"),
             ),
           ),
-        fe = (e) => {
+        Se = (e) => {
           const { draft: t } = e,
             a = () => e.closeModal && e.closeModal(),
-            [l, s] = r.useState(!1),
-            [c, d] = r.useState(void 0);
-          let _ = r.createElement(
+            [l, i] = r.useState(!1),
+            [c, m] = r.useState(void 0);
+          let u = r.createElement(
             "div",
             null,
-            (0, b.we)("#FAQEditor_DeleteDesc"),
+            (0, p.we)("#FAQEditor_DeleteDesc"),
           );
           return (
             l
-              ? (_ = r.createElement(v.t, {
+              ? (u = r.createElement(v.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, b.we)("#FAQEditor_DeletingInProgress"),
+                  string: (0, p.we)("#FAQEditor_DeletingInProgress"),
                 }))
               : c &&
-                (_ = r.createElement(
+                (u = r.createElement(
                   "div",
                   null,
-                  (0, b.we)(
+                  (0, p.we)(
                     "Error_Description",
                     c,
-                    (0, b.we)("#Error_GenericFailureDescription"),
+                    (0, p.we)("#Error_GenericFailureDescription"),
                   ),
                 )),
             r.createElement(
-              ve.tH,
+              be.tH,
               null,
               r.createElement(
-                E.x_,
+                _.x_,
                 { onEscKeypress: a },
                 r.createElement(
-                  i.UC,
+                  s.UC,
                   null,
                   r.createElement(
-                    i.Y9,
+                    s.Y9,
                     null,
-                    (0, b.we)("#FAQEditor_DeleteAction"),
+                    (0, p.we)("#FAQEditor_DeleteAction"),
                   ),
-                  r.createElement(i.nB, null, r.createElement(i.a3, null, _)),
+                  r.createElement(s.nB, null, r.createElement(s.a3, null, u)),
                   r.createElement(
-                    i.wi,
+                    s.wi,
                     null,
-                    r.createElement(i.CB, {
+                    r.createElement(s.CB, {
                       onCancel: a,
                       bOKDisabled: Boolean(l || c),
-                      strOKText: (0, b.we)("#FAQEditor_DeleteAction"),
+                      strOKText: (0, p.we)("#FAQEditor_DeleteAction"),
                       strCancelText: Boolean(l || c)
-                        ? (0, b.we)("#Button_OK")
+                        ? (0, p.we)("#Button_OK")
                         : void 0,
                       onOK: async () => {
-                        s(!0),
+                        i(!0),
                           o.pN
                             .Get()
                             .DeleteFAQ(t.GetFAQID())
                             .then((e) => {
-                              if (1 == e) {
+                              if (e == S.d.k_EResultOK) {
                                 const e =
-                                  m.TS.COMMUNITY_BASE_URL.substr(
+                                  d.TS.COMMUNITY_BASE_URL.substr(
                                     0,
-                                    m.TS.COMMUNITY_BASE_URL.length - 1,
-                                  ) + u(n.k_eCommunityDashboard);
+                                    d.TS.COMMUNITY_BASE_URL.length - 1,
+                                  ) + E(n.k_eCommunityDashboard);
                                 window.location.href = e;
                               }
-                              d(e);
+                              m(e);
                             })
                             .catch((e) => {
-                              const t = (0, pe.H)(e);
+                              const t = (0, we.H)(e);
                               console.error(
                                 "FAQDeleteDialog: hit error: " + t.strErrorMsg,
                                 t,
                               ),
-                                d(2);
+                                m(S.d.k_EResultFail);
                             })
-                            .finally(() => s(!1));
+                            .finally(() => i(!1));
                       },
                     }),
                   ),
@@ -1161,74 +1215,74 @@
             )
           );
         },
-        Fe = (0, l.PA)((e) => {
+        Ne = (0, l.PA)((e) => {
           const { draft: t, bDisabled: a } = e,
             n = t.BNeedsSaving();
           return r.createElement(
-            h.he,
+            b.he,
             {
-              toolTipContent: (0, b.we)(
+              toolTipContent: (0, p.we)(
                 n ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip",
               ),
             },
             r.createElement(
               "div",
               {
-                className: (0, C.A)(S.EditPreviewButton, a && S.Disabled),
+                className: (0, C.A)(Q.EditPreviewButton, a && Q.Disabled),
                 onClick: (t) => {
                   a ||
-                    (0, _.pg)(
+                    (0, g.pg)(
                       n
-                        ? r.createElement(E.KG, {
-                            strDescription: (0, b.we)(
+                        ? r.createElement(_.KG, {
+                            strDescription: (0, p.we)(
                               "#FAQPublish_SaveRequire_ttip",
                             ),
                           })
-                        : r.createElement(Ne, { draft: e.draft }),
-                      (0, P.uX)(t),
+                        : r.createElement(Le, { draft: e.draft }),
+                      (0, I.uX)(t),
                     );
                 },
               },
-              (0, b.we)("#FAQPublish_Publish"),
+              (0, p.we)("#FAQPublish_Publish"),
             ),
           );
         }),
-        Ne = (e) => {
+        Le = (e) => {
           var t;
           const { draft: a } = e,
             n = () => e.closeModal && e.closeModal(),
-            [l, s] = r.useState(!1),
+            [l, i] = r.useState(!1),
             [c, m] = r.useState(void 0),
             [d, u] = r.useState(void 0),
-            [_, g] = (0, o.g5)(a.GetFAQID()),
-            [h, C] = r.useState(new Array());
-          let A = null;
+            [E, g] = (0, o.g5)(a.GetFAQID()),
+            [h, b] = r.useState(new Array());
+          let C = null;
           if (g)
             if (l)
-              A = r.createElement(v.t, {
+              C = r.createElement(v.t, {
                 position: "center",
                 size: "medium",
-                string: (0, b.we)("#FAQPublish_Publishing"),
+                string: (0, p.we)("#FAQPublish_Publishing"),
               });
             else if (c)
-              A = r.createElement(
+              C = r.createElement(
                 "div",
                 null,
-                (0, b.we)("#FAQPublish_Success"),
+                (0, p.we)("#FAQPublish_Success"),
               );
             else if (d)
-              A = r.createElement(
+              C = r.createElement(
                 "div",
                 null,
-                (0, b.we)(
+                (0, p.we)(
                   "#Error_Description",
                   d,
-                  (0, b.we)("#Error_GenericFailureDescription"),
+                  (0, p.we)("#Error_GenericFailureDescription"),
                 ),
               );
-            else if (_) {
+            else if (E) {
               const e =
-                null === (t = _.per_language_info) || void 0 === t
+                null === (t = E.per_language_info) || void 0 === t
                   ? void 0
                   : t
                       .filter(
@@ -1236,70 +1290,70 @@
                           e.last_publish_timestamp < e.last_update_timestamp,
                       )
                       .map((e) => e.language);
-              A = r.createElement(
+              C = r.createElement(
                 r.Fragment,
                 null,
-                r.createElement("div", null, (0, b.we)("#FAQPublish_Desc")),
+                r.createElement("div", null, (0, p.we)("#FAQPublish_Desc")),
                 r.createElement("br", null),
-                r.createElement("div", null, (0, b.we)("#FAQPublish_Desc2")),
+                r.createElement("div", null, (0, p.we)("#FAQPublish_Desc2")),
                 r.createElement("br", null),
                 r.createElement(W, {
                   draft: a,
                   rgAllLanguages: e,
                   rgLanguagesSelected: h,
-                  fnSelectLanguages: C,
+                  fnSelectLanguages: b,
                 }),
               );
             } else
-              A = r.createElement(
+              C = r.createElement(
                 "div",
                 null,
-                (0, b.we)("#FAQPublish_LoadError"),
+                (0, p.we)("#FAQPublish_LoadError"),
               );
           else
-            A = r.createElement(v.t, {
+            C = r.createElement(v.t, {
               size: "small",
               position: "center",
-              string: (0, b.we)("#FAQPublish_PublishWait"),
+              string: (0, p.we)("#FAQPublish_PublishWait"),
             });
           return r.createElement(
-            ve.tH,
+            be.tH,
             null,
             r.createElement(
-              E.x_,
+              _.x_,
               { onEscKeypress: n },
               r.createElement(
-                i.UC,
-                { className: k.LanguageListDialog },
-                r.createElement(i.Y9, null, (0, b.we)("#FAQPublish_Publish")),
-                r.createElement(i.nB, null, r.createElement(i.a3, null, A)),
+                s.UC,
+                { className: G.LanguageListDialog },
+                r.createElement(s.Y9, null, (0, p.we)("#FAQPublish_Publish")),
+                r.createElement(s.nB, null, r.createElement(s.a3, null, C)),
                 r.createElement(
-                  i.wi,
+                  s.wi,
                   null,
-                  r.createElement(i.CB, {
+                  r.createElement(s.CB, {
                     onCancel: n,
                     bOKDisabled: Boolean(l || c || d || 0 == h.length),
-                    strOKText: (0, b.we)("#FAQPublish_Publish"),
+                    strOKText: (0, p.we)("#FAQPublish_Publish"),
                     strCancelText: Boolean(l || c || d)
-                      ? (0, b.we)("#Button_OK")
+                      ? (0, p.we)("#Button_OK")
                       : void 0,
                     onOK: async () => {
-                      s(!0),
+                      i(!0),
                         o.pN
                           .Get()
                           .PublishDraftByLanguage(a.GetFAQID(), h)
                           .then((e) => {
-                            1 == e && m(!0), u(e);
+                            e == S.d.k_EResultOK && m(!0), u(e);
                           })
                           .catch((e) => {
-                            const t = (0, pe.H)(e);
+                            const t = (0, we.H)(e);
                             console.error(
                               "FAQPublishDialog: hit error: " + t.strErrorMsg,
                               t,
                             ),
-                              u(2);
+                              u(S.d.k_EResultFail);
                           })
-                          .finally(() => s(!1));
+                          .finally(() => i(!1));
                     },
                   }),
                 ),
@@ -1309,115 +1363,115 @@
         },
         De = (e) =>
           r.createElement(
-            h.he,
-            { toolTipContent: (0, b.we)("#FAQEditor_ChangeVisible_ttip") },
+            b.he,
+            { toolTipContent: (0, p.we)("#FAQEditor_ChangeVisible_ttip") },
             r.createElement(
               "div",
               {
-                className: S.EditPreviewButton,
+                className: Q.EditPreviewButton,
                 onClick: (t) => {
-                  (0, _.pg)(
-                    r.createElement(Le, { draft: e.draft }),
-                    (0, P.uX)(t),
+                  (0, g.pg)(
+                    r.createElement(Qe, { draft: e.draft }),
+                    (0, I.uX)(t),
                   );
                 },
               },
-              (0, b.we)("#FAQEditor_EditVisible"),
+              (0, p.we)("#FAQEditor_EditVisible"),
             ),
           ),
-        Le = (e) => {
+        Qe = (e) => {
           const { draft: t } = e,
             a = () => e.closeModal && e.closeModal(),
             [n, l] = r.useState(!1),
-            [s, c] = r.useState(void 0),
+            [i, c] = r.useState(void 0),
             [m, d] = r.useState(void 0),
             u = o.pN.Get().GetFAQArticleSummary(t.GetFAQID()),
-            [_, g] = r.useState(u.visible_in_global_realm),
-            [h, C] = r.useState(u.visible_in_china_realm);
-          let A = r.createElement(
+            [E, g] = r.useState(u.visible_in_global_realm),
+            [h, b] = r.useState(u.visible_in_china_realm);
+          let C = r.createElement(
             r.Fragment,
             null,
             r.createElement(
               "div",
               null,
-              (0, b.we)("#FAQEditor_ChangeVisible_Desc"),
+              (0, p.we)("#FAQEditor_ChangeVisible_Desc"),
             ),
-            r.createElement(i.Yh, {
-              label: (0, b.we)("#FAQEditor_VisibleInGlobal"),
-              checked: _,
+            r.createElement(s.Yh, {
+              label: (0, p.we)("#FAQEditor_VisibleInGlobal"),
+              checked: E,
               onChange: (e) => g(e),
             }),
-            r.createElement(i.Yh, {
-              label: (0, b.we)("#FAQEditor_VisibleInChina"),
+            r.createElement(s.Yh, {
+              label: (0, p.we)("#FAQEditor_VisibleInChina"),
               checked: h,
-              tooltip: (0, b.we)("#FAQEditor_VisibleInChina_ttip"),
-              onChange: (e) => C(e),
+              tooltip: (0, p.we)("#FAQEditor_VisibleInChina_ttip"),
+              onChange: (e) => b(e),
             }),
           );
           return (
             n
-              ? (A = r.createElement(v.t, {
+              ? (C = r.createElement(v.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, b.we)("#FAQEditor_ChangeVisible_InProgress"),
+                  string: (0, p.we)("#FAQEditor_ChangeVisible_InProgress"),
                 }))
-              : s
-                ? (A = r.createElement(
+              : i
+                ? (C = r.createElement(
                     "div",
                     null,
-                    (0, b.we)("#FAQEditor_ChangeVisible_Success"),
+                    (0, p.we)("#FAQEditor_ChangeVisible_Success"),
                   ))
                 : m &&
-                  (A = r.createElement(
+                  (C = r.createElement(
                     "div",
                     null,
-                    (0, b.we)(
+                    (0, p.we)(
                       "Error_Description",
                       m,
-                      (0, b.we)("#Error_GenericFailureDescription"),
+                      (0, p.we)("#Error_GenericFailureDescription"),
                     ),
                   )),
             r.createElement(
-              ve.tH,
+              be.tH,
               null,
               r.createElement(
-                E.x_,
+                _.x_,
                 { onEscKeypress: a },
                 r.createElement(
-                  i.UC,
+                  s.UC,
                   null,
                   r.createElement(
-                    i.Y9,
+                    s.Y9,
                     null,
-                    (0, b.we)("#FAQEditor_ChangeVisible"),
+                    (0, p.we)("#FAQEditor_ChangeVisible"),
                   ),
-                  r.createElement(i.nB, null, r.createElement(i.a3, null, A)),
+                  r.createElement(s.nB, null, r.createElement(s.a3, null, C)),
                   r.createElement(
-                    i.wi,
+                    s.wi,
                     null,
-                    r.createElement(i.CB, {
+                    r.createElement(s.CB, {
                       onCancel: a,
-                      bOKDisabled: Boolean(n || s || m),
-                      strOKText: (0, b.we)("#FAQEditor_ChangeVisible"),
-                      strCancelText: Boolean(n || s || m)
-                        ? (0, b.we)("#Button_OK")
+                      bOKDisabled: Boolean(n || i || m),
+                      strOKText: (0, p.we)("#FAQEditor_ChangeVisible"),
+                      strCancelText: Boolean(n || i || m)
+                        ? (0, p.we)("#Button_OK")
                         : void 0,
                       onOK: async () => {
                         l(!0),
                           o.pN
                             .Get()
-                            .UpdateVisibility(t.GetFAQID(), _, h)
+                            .UpdateVisibility(t.GetFAQID(), E, h)
                             .then((e) => {
-                              1 == e && c(!0), d(e);
+                              e == S.d.k_EResultOK && c(!0), d(e);
                             })
                             .catch((e) => {
-                              const t = (0, pe.H)(e);
+                              const t = (0, we.H)(e);
                               console.error(
                                 "FAQChangeVisibilityDialog: hit error: " +
                                   t.strErrorMsg,
                                 t,
                               ),
-                                d(2);
+                                d(S.d.k_EResultFail);
                             })
                             .finally(() => l(!1));
                       },
@@ -1428,219 +1482,220 @@
             )
           );
         };
-      var Se = a(35707),
-        Qe = (a(42519), a(23809)),
-        Te = a(61739),
+      var ke = a(35707),
+        Te = (a(42519), a(23809)),
+        Pe = a(61739),
         Ie = a(88942),
-        Pe = a(56545);
-      const Be = (0, l.PA)((e) => {
-          var t, a, n, l, i;
-          const { draft: s, eLanguage: c } = e,
-            m = s.GetFAQID(),
-            [d, u] = (0, o.g5)(m);
-          if (!u) return null;
-          const E =
+        Be = a(56545);
+      const ye = (0, l.PA)((e) => {
+          var t, a, n, l, s;
+          const { draft: c, eLanguage: m } = e,
+            d = c.GetFAQID(),
+            [u, E] = (0, o.g5)(d);
+          if (!E) return null;
+          const _ =
               null ===
                 (a =
-                  null === (t = null == d ? void 0 : d.per_language_info) ||
+                  null === (t = null == u ? void 0 : u.per_language_info) ||
                   void 0 === t
                     ? void 0
-                    : t.find((e) => 0 == e.language)) || void 0 === a
+                    : t.find((e) => e.language == i.gS.k_Lang_English)) ||
+              void 0 === a
                 ? void 0
                 : a.last_update_timestamp,
-            _ =
-              null === (n = null == d ? void 0 : d.per_language_info) ||
+            g =
+              null === (n = null == u ? void 0 : u.per_language_info) ||
               void 0 === n
                 ? void 0
                 : n.some(
                     (e) => e.last_publish_timestamp < e.last_update_timestamp,
                   ),
-            g =
+            h =
               null ===
-                (i =
-                  null === (l = null == d ? void 0 : d.per_language_info) ||
+                (s =
+                  null === (l = null == u ? void 0 : u.per_language_info) ||
                   void 0 === l
                     ? void 0
                     : l
                         .slice()
-                        .sort((e, t) => R[e.language] - R[t.language])) ||
-              void 0 === i
+                        .sort((e, t) => O[e.language] - O[t.language])) ||
+              void 0 === s
                 ? void 0
-                : i.map((e) =>
-                    r.createElement(ke, {
+                : s.map((e) =>
+                    r.createElement(Ve, {
                       key: e.language,
                       info: e,
-                      rtEnglishUpdateTime: E,
+                      rtEnglishUpdateTime: _,
                     }),
                   );
           return r.createElement(
-            ve.tH,
+            be.tH,
             null,
             r.createElement(
               "div",
-              { className: Se.LeftMenu },
+              { className: ke.LeftMenu },
               r.createElement(
                 "div",
-                { className: Se.Section },
+                { className: ke.Section },
                 r.createElement(
                   "div",
-                  { className: Se.SectionTitle },
-                  (0, b.we)("#FAQDashboard_VisibilityColumn"),
+                  { className: ke.SectionTitle },
+                  (0, p.we)("#FAQDashboard_VisibilityColumn"),
                   " ",
                 ),
                 r.createElement(
                   "div",
-                  { className: Se.SectionContents },
+                  { className: ke.SectionContents },
                   r.createElement(
                     "div",
-                    { className: Se.VisibilityCtn },
+                    { className: ke.VisibilityCtn },
                     r.createElement(
                       "div",
-                      { className: (0, C.A)(Se.StatusRow, Se.Global) },
-                      (0, b.we)("#FAQDashboard_VisibleInGlobalRealmLabel"),
+                      { className: (0, C.A)(ke.StatusRow, ke.Global) },
+                      (0, p.we)("#FAQDashboard_VisibleInGlobalRealmLabel"),
                       " ",
-                      r.createElement(se, {
-                        bIsVisible: d.visible_in_global_realm,
+                      r.createElement(me, {
+                        bIsVisible: u.visible_in_global_realm,
                       }),
                     ),
                     r.createElement(
                       "div",
-                      { className: (0, C.A)(Se.StatusRow, Se.China) },
-                      (0, b.we)("#FAQDashboard_VisibleInChinaRealmLabel"),
+                      { className: (0, C.A)(ke.StatusRow, ke.China) },
+                      (0, p.we)("#FAQDashboard_VisibleInChinaRealmLabel"),
                       " ",
-                      r.createElement(se, {
-                        bIsVisible: d.visible_in_china_realm,
+                      r.createElement(me, {
+                        bIsVisible: u.visible_in_china_realm,
                       }),
                     ),
                     r.createElement(
                       "div",
-                      { className: Se.StatusBtnCtn },
-                      r.createElement(De, { draft: s }),
+                      { className: ke.StatusBtnCtn },
+                      r.createElement(De, { draft: c }),
                     ),
                   ),
                   r.createElement(
                     "div",
-                    { className: Se.PublishCtn },
-                    _
+                    { className: ke.PublishCtn },
+                    g
                       ? r.createElement(
                           "div",
-                          { className: Se.PublishStatus },
-                          (0, b.we)("#FAQStatus_DraftVersionsDesc"),
+                          { className: ke.PublishStatus },
+                          (0, p.we)("#FAQStatus_DraftVersionsDesc"),
                         )
                       : r.createElement(
                           "div",
-                          { className: Se.PublishStatus },
-                          (0, b.we)("#FAQStatus_NothingToPublish"),
+                          { className: ke.PublishStatus },
+                          (0, p.we)("#FAQStatus_NothingToPublish"),
                         ),
                     r.createElement(
                       "div",
-                      { className: Se.PublishBtn },
-                      r.createElement(Fe, { draft: s, bDisabled: !_ }),
+                      { className: ke.PublishBtn },
+                      r.createElement(Ne, { draft: c, bDisabled: !g }),
                     ),
                   ),
                 ),
               ),
               r.createElement(
                 "div",
-                { className: Se.Section },
+                { className: ke.Section },
                 r.createElement(
                   "div",
-                  { className: Se.SectionTitle },
-                  (0, b.we)("#FAQDashboard_LocalizationSection"),
+                  { className: ke.SectionTitle },
+                  (0, p.we)("#FAQDashboard_LocalizationSection"),
                 ),
-                r.createElement(ye, { draft: s }),
+                r.createElement(Ge, { draft: c }),
                 r.createElement(
                   "div",
-                  { className: Se.SectionContents },
+                  { className: ke.SectionContents },
                   r.createElement(
                     "div",
-                    { className: Se.SectionDescription },
-                    (0, b.we)("#FAQDashboard_LocalizationSectionDesc"),
+                    { className: ke.SectionDescription },
+                    (0, p.we)("#FAQDashboard_LocalizationSectionDesc"),
                   ),
-                  r.createElement(x, { draft: s, eLanguage: c }),
+                  r.createElement(x, { draft: c, eLanguage: m }),
                 ),
                 r.createElement(
                   "div",
-                  { className: Se.SectionContents },
+                  { className: ke.SectionContents },
                   r.createElement(
                     "div",
-                    { className: Se.SectionDescription },
-                    (0, b.we)("#EventEditor_Loc_CrowdinIntegration_Desc"),
+                    { className: ke.SectionDescription },
+                    (0, p.we)("#EventEditor_Loc_CrowdinIntegration_Desc"),
                   ),
-                  r.createElement(U, { draft: s }),
+                  r.createElement(U, { draft: c }),
                 ),
               ),
               r.createElement(
                 "div",
-                { className: Se.Section },
+                { className: ke.Section },
                 r.createElement(
                   "div",
-                  { className: Se.SectionTitle },
-                  (0, b.we)("#FAQStatus_LocalizedVersionStatusHeader"),
+                  { className: ke.SectionTitle },
+                  (0, p.we)("#FAQStatus_LocalizedVersionStatusHeader"),
                 ),
                 r.createElement(
                   "table",
-                  { className: Se.FaqStatusTable },
+                  { className: ke.FaqStatusTable },
                   r.createElement(
                     "thead",
                     null,
                     r.createElement(
                       "tr",
                       null,
-                      r.createElement("th", null, (0, b.we)("#LanguageTitle")),
+                      r.createElement("th", null, (0, p.we)("#LanguageTitle")),
                       r.createElement(
                         "th",
                         null,
-                        (0, b.we)("#FAQStatus_LastUpdated"),
+                        (0, p.we)("#FAQStatus_LastUpdated"),
                       ),
                       r.createElement(
                         "th",
                         null,
-                        (0, b.we)("#FAQStatus_LastPublished"),
+                        (0, p.we)("#FAQStatus_LastPublished"),
                       ),
                     ),
                   ),
-                  r.createElement("tbody", null, g),
+                  r.createElement("tbody", null, h),
                 ),
               ),
               r.createElement(
                 "div",
-                { className: Se.Section },
-                r.createElement(we, { draft: s }),
+                { className: ke.Section },
+                r.createElement(Fe, { draft: c }),
               ),
             ),
           );
         }),
-        ye = (0, l.PA)((e) => {
+        Ge = (0, l.PA)((e) => {
           const { draft: t } = e,
             a =
               ((function (e) {
-                const t = (0, Qe.KV)();
-                (0, Te.n)({
+                const t = (0, Te.KV)();
+                (0, Pe.n)({
                   mutationKey: ["fetch_faq_translation", e],
                   mutationFn: async (a) => {
-                    const n = Pe.w.Init(Ae.PS);
+                    const n = Be.w.Init(fe.PS);
                     n.Body().set_faq_id(e), n.Body().set_language(a);
                     return (
-                      await Ae.RD.FetchLocalizationFromCrowdIn(t, n)
+                      await fe.RD.FetchLocalizationFromCrowdIn(t, n)
                     ).GetEResult();
                   },
                 });
               })(t.GetFAQID()),
               (function (e) {
-                const t = (0, Qe.KV)();
+                const t = (0, Te.KV)();
                 return (0, Ie.I)({
                   queryKey: ["get_faq_crowdin_metadata", e],
                   queryFn: async () => {
-                    const a = Pe.w.Init(Ae.lk);
+                    const a = Be.w.Init(fe.lk);
                     a.Body().set_faq_id(e);
-                    return (await Ae.RD.GetCrowdInMetadata(t, a))
+                    return (await fe.RD.GetCrowdInMetadata(t, a))
                       .Body()
                       .toObject();
                   },
                 });
               })(t.GetFAQID())),
-            [n, l] = (0, r.useState)(-1);
+            [n, l] = (0, r.useState)(i.gS.k_Lang_None);
           let o = "";
           return (
             a.isSuccess &&
@@ -1649,7 +1704,7 @@
             null
           );
         }),
-        ke = (0, l.PA)((e) => {
+        Ve = (0, l.PA)((e) => {
           const { info: t, rtEnglishUpdateTime: a } = e,
             n = !!a && a > t.last_update_timestamp,
             l = t.last_update_timestamp > t.last_publish_timestamp;
@@ -1659,12 +1714,12 @@
             r.createElement(
               "td",
               null,
-              (0, b.we)("#Language_" + (0, F.Lg)(t.language)),
+              (0, p.we)("#Language_" + (0, i.Lg)(t.language)),
             ),
             r.createElement(
               "td",
               null,
-              r.createElement(te, {
+              r.createElement(ae, {
                 rtTimestamp: t.last_update_timestamp,
                 bShowAsWarning: n,
               }),
@@ -1672,20 +1727,20 @@
             r.createElement(
               "td",
               null,
-              r.createElement(te, {
+              r.createElement(ae, {
                 rtTimestamp: t.last_publish_timestamp,
                 bShowAsWarning: l,
               }),
             ),
           );
         });
-      var Ge = a(2160),
-        Ve = a(1909),
-        qe = a(26759),
-        xe = a(54736),
-        Ue = a(59461),
-        He = a(51520);
-      const Me = (0, l.PA)((e) => {
+      var qe = a(2160),
+        Re = a(1909),
+        xe = a(26759),
+        Ue = a(54736),
+        He = a(59461),
+        Me = a(51520);
+      const Oe = (0, l.PA)((e) => {
           const { draft: t } = e,
             a = t.BNeedsSaving();
           return r.createElement(
@@ -1693,35 +1748,35 @@
             {
               className: "btn_green_steamui btn_medium",
               onClick: (t) =>
-                (0, _.pg)(
-                  r.createElement(Re, { draft: e.draft }),
-                  (0, P.uX)(t),
+                (0, g.pg)(
+                  r.createElement(Ke, { draft: e.draft }),
+                  (0, I.uX)(t),
                 ),
             },
             r.createElement(
               "span",
               null,
               !a &&
-                r.createElement("img", { className: He.SavedImage, src: Ue.A }),
-              (0, b.we)(a ? "#Button_Save" : "#Button_Saved"),
+                r.createElement("img", { className: Me.SavedImage, src: He.A }),
+              (0, p.we)(a ? "#Button_Save" : "#Button_Saved"),
             ),
           );
         }),
-        Re = (e) => {
+        Ke = (e) => {
           const { draft: t, closeModal: a } = e,
             [n, l] = r.useState(!0),
-            [o, s] = r.useState(void 0);
+            [i, o] = r.useState(void 0);
           r.useEffect(() => {
             (async () => {
               l(!0);
               try {
                 const e = await t.SaveDrafts();
-                s(e);
+                o(e);
               } catch (e) {
-                s(2),
+                o(S.d.k_EResultFail),
                   console.log(
                     "FAQSaveProgressDialog hit exception " +
-                      (0, pe.H)(e).strErrorMsg,
+                      (0, we.H)(e).strErrorMsg,
                   );
               } finally {
                 l(!1);
@@ -1730,7 +1785,7 @@
           }, [t]);
           const c = r.useId();
           return r.createElement(
-            E.eV,
+            _.eV,
             {
               "aria-labelledby": c,
               bAllowFullSize: !0,
@@ -1738,15 +1793,15 @@
               closeModal: a,
             },
             r.createElement(
-              i.Y9,
+              s.Y9,
               { id: c },
               n
-                ? r.createElement("div", null, (0, b.we)("#FAQSave_Saving"))
+                ? r.createElement("div", null, (0, p.we)("#FAQSave_Saving"))
                 : r.createElement(
                     "div",
                     null,
-                    (0, b.we)(
-                      Boolean(1 == o)
+                    (0, p.we)(
+                      Boolean(i == S.d.k_EResultOK)
                         ? "#FAQSave_SaveSuccess"
                         : "#FAQSave_Error",
                     ),
@@ -1754,64 +1809,64 @@
                   ),
             ),
             r.createElement(
-              i.nB,
+              s.nB,
               null,
               n
                 ? r.createElement(v.t, { size: "medium", position: "center" })
                 : r.createElement(
                     "div",
                     null,
-                    Boolean(1 == o)
+                    Boolean(i == S.d.k_EResultOK)
                       ? r.createElement(
                           "div",
                           null,
-                          (0, b.we)("#FAQSave_SaveSuccess_desc"),
+                          (0, p.we)("#FAQSave_SaveSuccess_desc"),
                         )
                       : r.createElement(
                           "div",
                           null,
-                          (0, b.we)(
+                          (0, p.we)(
                             "#Error_Description",
-                            o,
-                            (0, b.we)("#Error_GenericFailureDescription"),
+                            i,
+                            (0, p.we)("#Error_GenericFailureDescription"),
                           ),
                         ),
                   ),
             ),
             r.createElement(
-              i.wi,
+              s.wi,
               null,
               !n &&
-                r.createElement(i.jn, { onClick: a }, (0, b.we)("#Button_OK")),
+                r.createElement(s.jn, { onClick: a }, (0, p.we)("#Button_OK")),
             ),
           );
         };
-      var Oe = a(66444),
-        We = a.n(Oe);
-      const Ke = (0, l.PA)((e) => {
+      var We = a(66444),
+        ze = a.n(We);
+      const Ye = (0, l.PA)((e) => {
           const { draft: t, bPreview: a } = e,
             l = t.BHasPublished();
           return r.createElement(
-            ve.tH,
+            be.tH,
             null,
             r.createElement(
               "div",
               {
                 className: (0, C.A)({
-                  [xe.EventEditorTopBarContainer]: !0,
-                  [xe.EventUnPublished]: !a && !l,
-                  [xe.EventPublished]: !a && l,
-                  [We().FAQPreview]: a,
+                  [Ue.EventEditorTopBarContainer]: !0,
+                  [Ue.EventUnPublished]: !a && !l,
+                  [Ue.EventPublished]: !a && l,
+                  [ze().FAQPreview]: a,
                 }),
               },
               r.createElement(
-                d,
+                u,
                 {
                   route: a ? n.k_eCommunityEdit : n.k_eCommunityDashboard,
                   faqid: t.GetFAQID(),
-                  className: Q().EditPreviewButton,
+                  className: k().EditPreviewButton,
                 },
-                (0, b.we)(
+                (0, p.we)(
                   a ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn",
                 ),
               ),
@@ -1820,8 +1875,8 @@
                 null,
                 r.createElement(
                   "div",
-                  { className: We().EditorInternalNameLabel },
-                  (0, b.we)(
+                  { className: ze().EditorInternalNameLabel },
+                  (0, p.we)(
                     a
                       ? "#FAQEditor_InternalName_Preview"
                       : "#FAQEditor_InternalName",
@@ -1829,77 +1884,77 @@
                 ),
                 r.createElement(
                   "div",
-                  { className: We().EditorInternalName },
+                  { className: ze().EditorInternalName },
                   t.GetFAQInternalName(),
                   r.createElement("img", {
-                    src: qe.A,
+                    src: xe.A,
                     onClick: (e) =>
-                      (0, _.pg)(
-                        r.createElement(ze, { draft: t }),
-                        (0, P.uX)(e),
+                      (0, g.pg)(
+                        r.createElement(je, { draft: t }),
+                        (0, I.uX)(e),
                       ),
                   }),
                 ),
               ),
               r.createElement(
                 "div",
-                { className: Q().EventOptions },
-                r.createElement(Ve.Ng, {
-                  selectedLang: _e.O.Get().GetCurEditLanguage(),
-                  fnOnLanguageChanged: _e.O.Get().SetCurEditLanguage,
+                { className: k().EventOptions },
+                r.createElement(Re.Ng, {
+                  selectedLang: he.O.Get().GetCurEditLanguage(),
+                  fnOnLanguageChanged: he.O.Get().SetCurEditLanguage,
                   fnLangHasData: t.BHasSomeTextForLanguage,
                   fnIsLangSupported: (e) => !0,
                   fnLastUpdateRTime: t.GetLastTimeLanguageUpdated,
-                  realms: [Ge.TU.k_ESteamRealmGlobal, Ge.TU.k_ESteamRealmChina],
+                  realms: [qe.TU.k_ESteamRealmGlobal, qe.TU.k_ESteamRealmChina],
                 }),
                 !a &&
                   r.createElement(
-                    d,
+                    u,
                     {
                       route: n.k_eCommunityPreview,
                       faqid: t.GetFAQID(),
-                      className: Q().EditPreviewButton,
+                      className: k().EditPreviewButton,
                     },
-                    (0, b.we)("#Button_Preview"),
+                    (0, p.we)("#Button_Preview"),
                   ),
               ),
             ),
           );
         }),
-        ze = (e) => {
+        je = (e) => {
           const { closeModal: t, draft: a } = e,
             [n, l] = r.useState(a.GetFAQInternalName() || ""),
-            [s, c] = r.useState(!1),
-            [m, d] = r.useState(1),
-            [u, _] = r.useState(!1);
+            [i, c] = r.useState(!1),
+            [m, d] = r.useState(S.d.k_EResultOK),
+            [u, E] = r.useState(!1);
           return r.createElement(
-            E.eV,
+            _.eV,
             {
-              title: (0, b.we)("#FAQEditor_ChangeInternalName"),
+              title: (0, p.we)("#FAQEditor_ChangeInternalName"),
               bAllowFullSize: !0,
               onCancel: t,
               closeModal: t,
             },
             r.createElement(
-              i.nB,
+              s.nB,
               null,
               r.createElement(
                 "div",
                 null,
-                (0, b.we)("#FAQEditor_ChangeInternalName_desc"),
+                (0, p.we)("#FAQEditor_ChangeInternalName_desc"),
               ),
               r.createElement("input", {
                 type: "text",
                 value: n,
-                placeholder: (0, b.we)("#FAQEditor_ChangeInternalName"),
+                placeholder: (0, p.we)("#FAQEditor_ChangeInternalName"),
                 onFocus: (e) => e.target.select(),
                 onChange: (e) => l(e.currentTarget.value),
                 maxLength: 240,
-                disabled: s,
+                disabled: i,
               }),
-              Boolean(s && !u) &&
+              Boolean(i && !u) &&
                 r.createElement(v.t, {
-                  string: (0, b.we)("#Updating"),
+                  string: (0, p.we)("#Updating"),
                   position: "center",
                   size: "medium",
                 }),
@@ -1907,24 +1962,24 @@
                 r.createElement(
                   "span",
                   null,
-                  1 == m
-                    ? (0, b.we)("#EventDisplay_Share_Success")
-                    : (0, b.we)(
+                  m == S.d.k_EResultOK
+                    ? (0, p.we)("#EventDisplay_Share_Success")
+                    : (0, p.we)(
                         "#Error_Description",
                         m,
-                        (0, b.we)("#Error_GenericFailureDescription"),
+                        (0, p.we)("#Error_GenericFailureDescription"),
                       ),
                 ),
             ),
             r.createElement(
-              i.wi,
+              s.wi,
               null,
-              r.createElement(i.CB, {
-                bOKDisabled: 0 == n.trim().length || s,
+              r.createElement(s.CB, {
+                bOKDisabled: 0 == n.trim().length || i,
                 onCancel: t,
                 strCancelText: u
-                  ? (0, b.we)("#Button_Close")
-                  : (0, b.we)("#Button_Cancel"),
+                  ? (0, p.we)("#Button_Close")
+                  : (0, p.we)("#Button_Cancel"),
                 onOK: async () => {
                   c(!0),
                     o.pN
@@ -1932,54 +1987,54 @@
                       .UpdateInternalName(a.GetFAQID(), n)
                       .then((e) => d(e))
                       .finally(() => {
-                        _(!0);
+                        E(!0);
                       });
                 },
               }),
             ),
           );
         },
-        Ye = (0, l.PA)((e) => {
+        Xe = (0, l.PA)((e) => {
           const { draft: t, eLanguage: a } = e,
             n = t.GetFAQID(),
             [l, i] = (0, o.g5)(n),
             s = i && l.per_language_info.find((e) => e.language == a),
             c =
               i &&
-              ((m.TS.EREALM == Ge.TU.k_ESteamRealmGlobal &&
+              ((d.TS.EREALM == qe.TU.k_ESteamRealmGlobal &&
                 l.visible_in_global_realm) ||
-                (m.TS.EREALM == Ge.TU.k_ESteamRealmChina &&
+                (d.TS.EREALM == qe.TU.k_ESteamRealmChina &&
                   l.visible_in_china_realm)) &&
               !!(null == s ? void 0 : s.last_publish_timestamp);
           return r.createElement(
-            ve.tH,
+            be.tH,
             null,
             r.createElement(
               "div",
-              { className: (0, C.A)(Q().SaveBackground) },
+              { className: (0, C.A)(k().SaveBackground) },
               r.createElement(
                 "div",
                 {
-                  className: Q().FlexRowWrapFlexStartContainer,
+                  className: k().FlexRowWrapFlexStartContainer,
                   style: { width: "unset", justifyContent: "center" },
                 },
-                r.createElement(Me, { draft: t }),
+                r.createElement(Oe, { draft: t }),
                 Boolean(c) &&
                   r.createElement(
                     "div",
-                    { className: Q().EditPreviewButton },
+                    { className: k().EditPreviewButton },
                     r.createElement(
                       "a",
-                      { href: m.TS.HELP_BASE_URL + "faqs/view/" + l.url_code },
-                      (0, b.we)("#FAQEditir_ViewLiveFAQ"),
+                      { href: d.TS.HELP_BASE_URL + "faqs/view/" + l.url_code },
+                      (0, p.we)("#FAQEditir_ViewLiveFAQ"),
                     ),
                   ),
               ),
             ),
           );
         });
-      var je = a(91254);
-      const Xe = (0, l.PA)((e) => {
+      var Ze = a(91254);
+      const Je = (0, l.PA)((e) => {
           const { faqid: t } = e,
             [a, n] = (0, o.z5)(t),
             l = r.useRef(void 0);
@@ -1987,158 +2042,158 @@
             return r.createElement(v.t, {
               position: "center",
               size: "xlarge",
-              string: (0, b.we)("#Loading"),
+              string: (0, p.we)("#Loading"),
             });
           if (!a)
-            return r.createElement(et, {
-              strError: (0, b.we)("#FAQEditor_NoFAQFound"),
+            return r.createElement(at, {
+              strError: (0, p.we)("#FAQEditor_NoFAQFound"),
             });
-          const i = _e.O.Get().GetCurEditLanguage();
+          const i = he.O.Get().GetCurEditLanguage();
           return r.createElement(
             "div",
             null,
-            r.createElement(Ke, { draft: a }),
+            r.createElement(Ye, { draft: a }),
             r.createElement(
               "div",
-              { className: be().FAQEditPage },
+              { className: Ae().FAQEditPage },
               r.createElement(
                 "div",
-                { className: be().FAQMenuCtn },
-                r.createElement(Be, { draft: a, eLanguage: i }),
+                { className: Ae().FAQMenuCtn },
+                r.createElement(ye, { draft: a, eLanguage: i }),
               ),
               r.createElement(
                 "div",
-                { className: be().FAQEditorCtn },
+                { className: Ae().FAQEditorCtn },
                 r.createElement(
                   "div",
-                  { className: be().FAQEditor },
+                  { className: Ae().FAQEditor },
                   r.createElement(
                     "div",
-                    { className: (0, C.A)(Q().Columns, be().Columns) },
+                    { className: (0, C.A)(k().Columns, Ae().Columns) },
                     r.createElement(
                       "div",
-                      { className: (0, C.A)(Q().LeftCol, be().LeftCol) },
-                      r.createElement(Je, { draft: a, eLanguage: i }),
-                      r.createElement($e, {
+                      { className: (0, C.A)(k().LeftCol, Ae().LeftCol) },
+                      r.createElement(et, { draft: a, eLanguage: i }),
+                      r.createElement(tt, {
                         bbcodeEditorRef: l,
                         draft: a,
                         eLanguage: i,
                       }),
                     ),
-                    r.createElement(Ze, {
+                    r.createElement($e, {
                       draft: a,
                       bbcodeEditorRef: l,
-                      className: Q().RightCol,
+                      className: k().RightCol,
                     }),
                   ),
                 ),
               ),
             ),
-            r.createElement(Ye, { draft: a, eLanguage: i }),
+            r.createElement(Xe, { draft: a, eLanguage: i }),
           );
         }),
-        Ze = (e) => {
-          const t = (0, r.useMemo)(() => new L.b(m.UF.CLANSTEAMID), []);
-          if (!Boolean(m.UF.CAN_UPLOAD_IMAGES)) return null;
+        $e = (e) => {
+          const t = (0, r.useMemo)(() => new D.b(d.UF.CLANSTEAMID), []);
+          if (!Boolean(d.UF.CAN_UPLOAD_IMAGES)) return null;
           const { draft: a, bbcodeEditorRef: n } = e;
           return r.createElement(
-            ve.tH,
+            be.tH,
             null,
             r.createElement(
               "div",
               { className: e.className },
-              r.createElement("div", null, (0, b.we)("#FAQEditor_ImageTitle")),
-              r.createElement(he.G, {
+              r.createElement("div", null, (0, p.we)("#FAQEditor_ImageTitle")),
+              r.createElement(Ce.G, {
                 bShowLightBox: !0,
                 appid: void 0,
                 clanSteamID: t,
                 imageInsertCallBack: (e, t) =>
-                  n.current && (0, de.fW)(null == n ? void 0 : n.current, e, t),
+                  n.current && (0, Ee.fW)(null == n ? void 0 : n.current, e, t),
                 fnSetImageURL: () => {},
                 rgRealmList: a.GetIncludedRealmList(),
                 fnLangHasData: a.BHasSomeTextForLanguage,
                 fnGetImageHash: (e, t) => {
-                  if (ue.pb.includes(e)) {
-                    const e = Ee.R.GetAllLocalizedGroupImages();
+                  if (_e.pb.includes(e)) {
+                    const e = ge.R.GetAllLocalizedGroupImages();
                     return e && e.length > t && null != e[t] ? e[t] : null;
                   }
                   return null;
                 },
-                partnerEventStore: je.O3,
+                partnerEventStore: Ze.O3,
               }),
             ),
           );
         },
-        Je = (0, l.PA)((e) => {
+        et = (0, l.PA)((e) => {
           const { draft: t, eLanguage: a } = e;
           return r.createElement(
             "div",
-            { className: be().EditorTitleField },
+            { className: Ae().EditorTitleField },
             r.createElement(
               "div",
-              { className: be().EditorLabel },
-              (0, b.we)("#FAQEditor_TitleLabel"),
+              { className: Ae().EditorLabel },
+              (0, p.we)("#FAQEditor_TitleLabel"),
             ),
             r.createElement("input", {
               type: "text",
-              className: be().EditorTitleFieldInput,
+              className: Ae().EditorTitleFieldInput,
               value: t.GetDraftTitle(a) || "",
-              placeholder: (0, b.we)("#FAQEditor_TitlePlaceHolder"),
+              placeholder: (0, p.we)("#FAQEditor_TitlePlaceHolder"),
               onFocus: (e) => e.target.select(),
               onChange: (e) => t.SetDraftTitle(a, e.currentTarget.value),
               maxLength: 120,
             }),
           );
         }),
-        $e = (0, l.PA)((e) => {
+        tt = (0, l.PA)((e) => {
           const { draft: t, eLanguage: a, bbcodeEditorRef: n } = e;
           return r.createElement(
             "div",
-            { className: be().EditorPane },
+            { className: Ae().EditorPane },
             r.createElement(
               "div",
-              { className: be().EditorLabel },
-              (0, b.we)("#FAQEditor_ContentLabel"),
+              { className: Ae().EditorLabel },
+              (0, p.we)("#FAQEditor_ContentLabel"),
             ),
-            r.createElement(ge.I, {
+            r.createElement(ve.I, {
               ref: n,
               fnGetCurText: () => t.GetDraftContent(a) || "",
               fnOnTextChange: (e) =>
                 t.SetDraftContent(a, e.currentTarget.value),
               fnSetText: (e) => t.SetDraftContent(a, e),
-              strPlaceholder: (0, b.we)("#FAQEditor_ContentPlaceHolder"),
+              strPlaceholder: (0, p.we)("#FAQEditor_ContentPlaceHolder"),
               bSupportHTMLImport: !0,
               showFormatHelp: "PartnerEvents",
-              className: be().TextPaneContainer,
-              classNameForTextArea: be().EditorPaneTextArea,
+              className: Ae().TextPaneContainer,
+              classNameForTextArea: Ae().EditorPaneTextArea,
             }),
           );
         }),
-        et = (e) =>
+        at = (e) =>
           r.createElement(
             "div",
-            { className: be().ErrorCtn },
-            r.createElement("div", { className: be().ErrorMsg }, e.strError),
+            { className: Ae().ErrorCtn },
+            r.createElement("div", { className: Ae().ErrorMsg }, e.strError),
             r.createElement(
-              d,
-              { route: n.k_eCommunityDashboard, className: be().EscapeLink },
-              (0, b.we)("#FAQEditor_GoToDashboard"),
+              u,
+              { route: n.k_eCommunityDashboard, className: Ae().EscapeLink },
+              (0, p.we)("#FAQEditor_GoToDashboard"),
             ),
           );
-      var tt = a(17909),
-        at = a(28735);
-      const nt = (e) => {
+      var nt = a(17909),
+        lt = a(28735);
+      const rt = (e) => {
           const { title: t, content: a, bIsPreview: n, elSideBars: l } = e,
-            o = (0, s.zy)();
+            i = (0, c.zy)();
           return (
             r.useEffect(() => {
               var e, t, a;
               const n =
-                null === (e = null == o ? void 0 : o.hash) || void 0 === e
+                null === (e = null == i ? void 0 : i.hash) || void 0 === e
                   ? void 0
                   : e.substr(
                       "#" ===
-                        (null === (t = null == o ? void 0 : o.hash) ||
+                        (null === (t = null == i ? void 0 : i.hash) ||
                         void 0 === t
                           ? void 0
                           : t.substr(0, 1))
@@ -2149,29 +2204,29 @@
                 (null === (a = document.getElementById(n)) ||
                   void 0 === a ||
                   a.scrollIntoView({ block: "start", behavior: "smooth" }));
-            }, [o]),
+            }, [i]),
             r.createElement(
               "div",
-              { className: (0, C.A)(at.FAQViewPage, m.TS.LANGUAGE) },
+              { className: (0, C.A)(lt.FAQViewPage, d.TS.LANGUAGE) },
               r.createElement(
                 "a",
-                { className: at.SupportTitle, href: `${m.TS.HELP_BASE_URL}` },
-                (0, b.we)("#FAQViewer_SteamSupport"),
+                { className: lt.SupportTitle, href: `${d.TS.HELP_BASE_URL}` },
+                (0, p.we)("#FAQViewer_SteamSupport"),
               ),
               r.createElement(
                 "div",
-                { className: at.Columns },
+                { className: lt.Columns },
                 r.createElement(
                   "div",
-                  { className: (0, C.A)(at.LeftCol) },
-                  r.createElement("div", { className: at.TopColorBar }),
+                  { className: (0, C.A)(lt.LeftCol) },
+                  r.createElement("div", { className: lt.TopColorBar }),
                   r.createElement(
                     "div",
-                    { className: at.FAQTopicCtn },
+                    { className: lt.FAQTopicCtn },
                     r.createElement(
                       "div",
                       {
-                        className: at.FAQTitle,
+                        className: lt.FAQTitle,
                         role: "heading",
                         "aria-level": 1,
                       },
@@ -2179,70 +2234,70 @@
                     ),
                     r.createElement(
                       "div",
-                      { className: at.FAQContent },
-                      r.createElement(tt.u, { text: a, bShowErrorInfo: n }),
+                      { className: lt.FAQContent },
+                      r.createElement(nt.u, { text: a, bShowErrorInfo: n }),
                     ),
                   ),
                 ),
                 r.createElement(
                   "div",
-                  { className: at.RightCol },
-                  r.createElement("div", { className: at.SectionCtn }, l),
+                  { className: lt.RightCol },
+                  r.createElement("div", { className: lt.SectionCtn }, l),
                 ),
               ),
             )
           );
         },
-        lt = (e) =>
-          r.createElement("div", { className: at.FAQViewPage }, e.children);
-      var rt = a(85890),
-        ot = a(20572),
-        it = a(66891);
-      const st = (e) => {
+        it = (e) =>
+          r.createElement("div", { className: lt.FAQViewPage }, e.children);
+      var ot = a(85890),
+        st = a(20572),
+        ct = a(66891);
+      const mt = (e) => {
           const { faqContent: t } = e,
             [a, l] = (0, o.W)(t.faq_id, t.version, t.language);
           return o.pN.Get().BHasFAQEdit()
             ? r.createElement(
                 "div",
-                { className: (0, C.A)(it.Section, S.ValveOnlyBackground) },
+                { className: (0, C.A)(ct.Section, Q.ValveOnlyBackground) },
                 r.createElement(
                   "div",
-                  { className: it.TopicHeader },
-                  (0, b.we)("#FAQViewer_AdminLinks"),
+                  { className: ct.TopicHeader },
+                  (0, p.we)("#FAQViewer_AdminLinks"),
                 ),
                 r.createElement(
                   "div",
-                  { className: ot.InfoRow },
-                  (0, b.PP)(
+                  { className: st.InfoRow },
+                  (0, p.PP)(
                     "#FAQViewer_Admin_LastUpdate",
                     (null == a ? void 0 : a.author_account_id)
-                      ? r.createElement(rt.p, {
+                      ? r.createElement(ot.p, {
                           accountID: Number.parseInt(a.author_account_id),
                         })
-                      : (0, b.we)("#FAQViewer_UnknownUser"),
+                      : (0, p.we)("#FAQViewer_UnknownUser"),
                     r.createElement(
                       "span",
                       null,
-                      (0, b.TW)(t.timestamp) +
+                      (0, p.TW)(t.timestamp) +
                         "@" +
                         (0, B.KC)(t.timestamp, { bForce24HourClock: !1 }),
                     ),
                   ),
                 ),
-                r.createElement(ct, { faqContent: t }),
+                r.createElement(dt, { faqContent: t }),
                 r.createElement(
-                  d,
+                  u,
                   {
                     faqid: t.faq_id,
                     route: n.k_eCommunityEdit,
                     bForceAnchor: !0,
                   },
-                  (0, b.we)("#FAQViewer_GotoEditor"),
+                  (0, p.we)("#FAQViewer_GotoEditor"),
                 ),
               )
             : null;
         },
-        ct = (e) => {
+        dt = (e) => {
           const { faqContent: t } = e,
             [a, n] = (0, o.z5)(t.faq_id);
           if (
@@ -2254,259 +2309,216 @@
           const l = a.GetLastSavedDraftVersion(t.language);
           return r.createElement(
             "div",
-            { className: ot.InfoRow },
-            (0, b.PP)(
+            { className: st.InfoRow },
+            (0, p.PP)(
               "#FAQViewer_DraftNewer",
-              r.createElement(rt.p, {
+              r.createElement(ot.p, {
                 accountID: Number.parseInt(l.author_account_id),
               }),
               r.createElement(
                 "span",
                 null,
-                (0, b.TW)(l.timestamp) +
+                (0, p.TW)(l.timestamp) +
                   "@" +
                   (0, B.KC)(l.timestamp, { bForce24HourClock: !1 }),
               ),
             ),
           );
         },
-        mt = (e) =>
+        ut = (e) =>
           r.createElement(
             r.Fragment,
             null,
             r.createElement(
               "div",
-              { className: (0, C.A)(it.Section, it.NeedHelp) },
+              { className: (0, C.A)(ct.Section, ct.NeedHelp) },
               r.createElement(
                 "div",
-                { className: it.LeftCol },
-                r.createElement(g._VW, { role: "presentation" }),
+                { className: ct.LeftCol },
+                r.createElement(h._VW, { role: "presentation" }),
               ),
               r.createElement(
                 "div",
-                { className: it.RightCol },
+                { className: ct.RightCol },
                 r.createElement(
                   "div",
-                  { className: it.TopicHeader },
-                  (0, b.we)("#FAQViewer_SideBar_ProblemWithSteam_Title"),
+                  { className: ct.TopicHeader },
+                  (0, p.we)("#FAQViewer_SideBar_ProblemWithSteam_Title"),
                 ),
                 r.createElement(
                   "div",
                   null,
-                  (0, b.we)("#FAQViewer_SideBar_ProblemWithSteam_Desc"),
+                  (0, p.we)("#FAQViewer_SideBar_ProblemWithSteam_Desc"),
                 ),
                 r.createElement(
                   "div",
-                  { className: it.CenterButtonCtn },
+                  { className: ct.CenterButtonCtn },
                   r.createElement(
                     "a",
                     {
-                      href: m.TS.HELP_BASE_URL,
-                      className: S.EditPreviewButton,
+                      href: d.TS.HELP_BASE_URL,
+                      className: Q.EditPreviewButton,
                     },
-                    (0, b.we)("#FAQViewer_SideBar_ProblemWithSteam_Link"),
+                    (0, p.we)("#FAQViewer_SideBar_ProblemWithSteam_Link"),
                   ),
                 ),
               ),
             ),
-            !(0, m.Y2)() &&
+            !(0, d.Y2)() &&
               r.createElement(
                 "div",
-                { className: (0, C.A)(it.Section, it.CommunityHelp) },
+                { className: (0, C.A)(ct.Section, ct.CommunityHelp) },
                 r.createElement(
                   "div",
-                  { className: it.LeftCol },
-                  r.createElement(g.ROZ, { role: "presentation" }),
+                  { className: ct.LeftCol },
+                  r.createElement(h.ROZ, { role: "presentation" }),
                 ),
                 r.createElement(
                   "div",
-                  { className: it.RightCol },
+                  { className: ct.RightCol },
                   r.createElement(
                     "div",
-                    { className: it.TopicHeader },
-                    (0, b.we)("#FAQViewer_SideBar_CommunityHelp_Title"),
+                    { className: ct.TopicHeader },
+                    (0, p.we)("#FAQViewer_SideBar_CommunityHelp_Title"),
                   ),
                   r.createElement(
                     "div",
                     null,
-                    (0, b.we)("#FAQViewer_SideBar_CommunityHelp_Desc"),
+                    (0, p.we)("#FAQViewer_SideBar_CommunityHelp_Desc"),
                   ),
                   r.createElement(
                     "div",
-                    { className: it.CenterButtonCtn },
+                    { className: ct.CenterButtonCtn },
                     r.createElement(
                       "a",
                       {
-                        href: m.TS.COMMUNITY_BASE_URL + "discussions",
-                        className: S.EditPreviewButton,
+                        href: d.TS.COMMUNITY_BASE_URL + "discussions",
+                        className: Q.EditPreviewButton,
                       },
-                      (0, b.we)("#FAQViewer_SideBar_CommunityHelp_Link"),
+                      (0, p.we)("#FAQViewer_SideBar_CommunityHelp_Link"),
                     ),
                   ),
                 ),
               ),
           );
-      var dt = a(25651),
-        ut = a.n(dt);
-      const Et = (e) => {
+      var Et = a(25651),
+        _t = a.n(Et);
+      const gt = (e) => {
           const { faqid: t } = e,
-            [a, n] = (0, o.Kv)(t, (0, F.sf)(m.TS.LANGUAGE));
+            [a, n] = (0, o.Kv)(t, (0, i.sf)(d.TS.LANGUAGE));
           return n
             ? a
-              ? r.createElement(nt, {
+              ? r.createElement(rt, {
                   title: a.title,
                   content: a.content,
                   elSideBars: [
-                    r.createElement(mt, { key: "sidebar", faqContent: a }),
-                    r.createElement(st, { key: "adminbar", faqContent: a }),
+                    r.createElement(ut, { key: "sidebar", faqContent: a }),
+                    r.createElement(mt, { key: "adminbar", faqContent: a }),
                   ],
                 })
               : r.createElement(
-                  lt,
+                  it,
                   null,
-                  r.createElement(_t, {
-                    strError: (0, b.we)("#FAQViewer_NoFAQFound"),
+                  r.createElement(ht, {
+                    strError: (0, p.we)("#FAQViewer_NoFAQFound"),
                   }),
                 )
             : r.createElement(
-                lt,
+                it,
                 null,
                 r.createElement(v.t, {
                   position: "center",
                   size: "xlarge",
-                  string: (0, b.we)("#Loading"),
+                  string: (0, p.we)("#Loading"),
                 }),
               );
         },
-        _t = (e) => {
+        ht = (e) => {
           var t;
           const a =
-            m.TS.COMMUNITY_BASE_URL +
-            (m.UF.APPID
+            d.TS.COMMUNITY_BASE_URL +
+            (d.UF.APPID
               ? "app/" +
-                (null !== (t = m.UF.VANITY_ID) && void 0 !== t ? t : m.UF.APPID)
-              : "gid/" + m.UF.CLANSTEAMID);
+                (null !== (t = d.UF.VANITY_ID) && void 0 !== t ? t : d.UF.APPID)
+              : "gid/" + d.UF.CLANSTEAMID);
           return r.createElement(
             "div",
-            { className: ut().ErrorCtn },
-            r.createElement("div", { className: ut().ErrorMsg }, e.strError),
+            { className: _t().ErrorCtn },
+            r.createElement("div", { className: _t().ErrorMsg }, e.strError),
             r.createElement(
               "a",
-              { className: ut().EscapeLink, href: a },
-              (0, b.we)("#FAQViewer_GoToHomepage"),
+              { className: _t().EscapeLink, href: a },
+              (0, p.we)("#FAQViewer_GoToHomepage"),
             ),
           );
         },
-        gt = (0, l.PA)((e) => {
+        vt = (0, l.PA)((e) => {
           const { faqid: t } = e,
             [a, n] = (0, o.z5)(t),
-            l = _e.O.Get().GetCurEditLanguage();
+            l = he.O.Get().GetCurEditLanguage();
           return n
             ? a
               ? r.createElement(
                   r.Fragment,
                   null,
-                  r.createElement(Ke, { draft: a, bPreview: !0 }),
-                  r.createElement(nt, {
-                    title: a.GetDraftTitleWithFallback(l, m.TS.EREALM),
-                    content: a.GetDraftContentWithFallback(l, m.TS.EREALM),
+                  r.createElement(Ye, { draft: a, bPreview: !0 }),
+                  r.createElement(rt, {
+                    title: a.GetDraftTitleWithFallback(l, d.TS.EREALM),
+                    content: a.GetDraftContentWithFallback(l, d.TS.EREALM),
                   }),
-                  r.createElement(Ye, { draft: a, eLanguage: l }),
+                  r.createElement(Xe, { draft: a, eLanguage: l }),
                 )
               : r.createElement(
-                  lt,
+                  it,
                   null,
-                  r.createElement(_t, {
-                    strError: (0, b.we)("#FAQViewer_NoFAQFound"),
+                  r.createElement(ht, {
+                    strError: (0, p.we)("#FAQViewer_NoFAQFound"),
                   }),
                 )
             : r.createElement(
-                lt,
+                it,
                 null,
                 r.createElement(v.t, {
                   position: "center",
                   size: "xlarge",
-                  string: (0, b.we)("#Loading"),
+                  string: (0, p.we)("#Loading"),
                 }),
               );
         });
-      var vt = a(60746),
-        ht = a(6813),
-        Ct = a(97058);
-      const bt = {
+      var bt = a(60746),
+        Ct = a(6813),
+        pt = a(97058);
+      const At = {
           ViewFAQ: (e, t) => `/faqs/${e}/view/${t}*`,
           EditFAQ: (e, t) => `/faqs/${e}/edit/${t}*`,
           DashboardFAQ: (e) => `/faqs/${e}/dashboard`,
           PreviewFAQ: (e, t) => `/faqs/${e}/preview/${t}*`,
         },
-        At = (0, l.PA)((e) => {
+        ft = (0, l.PA)((e) => {
           const [t, a] = r.useState(!0);
           return (
             r.useEffect(() => {
               (async () => {
-                await vt.KN.InitGlobal(), a(!1);
+                await bt.KN.InitGlobal(), a(!1);
               })();
             }, []),
             t
               ? r.createElement(v.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, b.we)("#Loading"),
+                  string: (0, p.we)("#Loading"),
                 })
               : r.createElement(
                   r.Fragment,
                   null,
-                  r.createElement(me, null),
+                  r.createElement(ue, null),
                   r.createElement(
-                    s.dO,
+                    c.dO,
                     null,
-                    r.createElement(s.qh, {
-                      path: bt.ViewFAQ(":vanity_str", ":faqid"),
+                    r.createElement(c.qh, {
+                      path: At.ViewFAQ(":vanity_str", ":faqid"),
                       render: (e) =>
-                        r.createElement(ht.X, {
-                          config: {
-                            "faqs-root": () => {
-                              const { faqid: t } = e.match.params,
-                                a = (0, o.CJ)(t);
-                              return r.createElement(Et, { faqid: a });
-                            },
-                          },
-                        }),
-                    }),
-                    r.createElement(s.qh, {
-                      path: bt.EditFAQ(":vanity_str", ":faqid"),
-                      render: (e) =>
-                        r.createElement(ht.X, {
-                          config: {
-                            "faqs-root": () => {
-                              const { faqid: t } = e.match.params;
-                              if (t) {
-                                const e = (0, o.CJ)(t);
-                                return e
-                                  ? r.createElement(Xe, { faqid: e })
-                                  : r.createElement(s.rd, {
-                                      push: !0,
-                                      to: u(n.k_eCommunityDashboard),
-                                    });
-                              }
-                              return r.createElement(ae, null);
-                            },
-                          },
-                        }),
-                    }),
-                    r.createElement(s.qh, {
-                      path: bt.DashboardFAQ(":vanity_str"),
-                      render: (e) =>
-                        r.createElement(ht.X, {
-                          config: {
-                            "faqs-root": () => r.createElement(ae, null),
-                          },
-                        }),
-                    }),
-                    r.createElement(s.qh, {
-                      path: bt.PreviewFAQ(":vanity_str", ":faqid"),
-                      render: (e) =>
-                        r.createElement(ht.X, {
+                        r.createElement(Ct.X, {
                           config: {
                             "faqs-root": () => {
                               const { faqid: t } = e.match.params,
@@ -2516,7 +2528,50 @@
                           },
                         }),
                     }),
-                    r.createElement(s.qh, { component: Ct.a }),
+                    r.createElement(c.qh, {
+                      path: At.EditFAQ(":vanity_str", ":faqid"),
+                      render: (e) =>
+                        r.createElement(Ct.X, {
+                          config: {
+                            "faqs-root": () => {
+                              const { faqid: t } = e.match.params;
+                              if (t) {
+                                const e = (0, o.CJ)(t);
+                                return e
+                                  ? r.createElement(Je, { faqid: e })
+                                  : r.createElement(c.rd, {
+                                      push: !0,
+                                      to: E(n.k_eCommunityDashboard),
+                                    });
+                              }
+                              return r.createElement(le, null);
+                            },
+                          },
+                        }),
+                    }),
+                    r.createElement(c.qh, {
+                      path: At.DashboardFAQ(":vanity_str"),
+                      render: (e) =>
+                        r.createElement(Ct.X, {
+                          config: {
+                            "faqs-root": () => r.createElement(le, null),
+                          },
+                        }),
+                    }),
+                    r.createElement(c.qh, {
+                      path: At.PreviewFAQ(":vanity_str", ":faqid"),
+                      render: (e) =>
+                        r.createElement(Ct.X, {
+                          config: {
+                            "faqs-root": () => {
+                              const { faqid: t } = e.match.params,
+                                a = (0, o.CJ)(t);
+                              return r.createElement(vt, { faqid: a });
+                            },
+                          },
+                        }),
+                    }),
+                    r.createElement(c.qh, { component: pt.a }),
                   ),
                 )
           );

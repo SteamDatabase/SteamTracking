@@ -19,9 +19,9 @@
         Explanation: "_1isyHy9nKabM8wUFKUu-lm",
       };
     },
-    51706: (e, n, a) => {
+    51706: (e, n, t) => {
       "use strict";
-      a.d(n, {
+      t.d(n, {
         mt: () => o,
         Qs: () => v,
         o0: () => f.o0,
@@ -33,48 +33,48 @@
         pY: () => f.pY,
         EN: () => l.E,
       });
-      var t = a(90626),
-        s = a(53835),
-        l = a(21869),
-        r = a(2654),
+      var a = t(90626),
+        s = t(53835),
+        l = t(21869),
+        r = t(2654),
         i =
-          (a(72739),
-          a(48902),
-          a(68451),
-          a(25118),
-          a(84933),
-          a(52745),
-          a(13871),
-          a(78327));
-      a(28460);
+          (t(72739),
+          t(48902),
+          t(68451),
+          t(25118),
+          t(84933),
+          t(52745),
+          t(13871),
+          t(78327));
+      t(28460);
       function c(e) {
         const { labelledBy: n } = e || {},
-          [a, s] = t.useState(void 0);
+          [t, s] = a.useState(void 0);
         return {
-          headerId: n || a,
-          context: t.useMemo(() => ({ setHeaderId: s }), []),
+          headerId: n || t,
+          context: a.useMemo(() => ({ setHeaderId: s }), []),
         };
       }
       function o(e) {
         const {
             active: n,
-            onDismiss: a,
+            onDismiss: t,
             className: i,
             modalClassName: o,
             children: m,
             ...d
           } = e,
           { headerId: u, context: E } = c({ labelledBy: e["aria-labelledby"] });
-        return t.createElement(
+        return a.createElement(
           s.t6.Provider,
           { value: E },
-          t.createElement(
+          a.createElement(
             l.E,
             { active: n },
-            t.createElement(
+            a.createElement(
               r.x_,
-              { onEscKeypress: a, className: o },
-              t.createElement(
+              { onEscKeypress: t, className: o },
+              a.createElement(
                 s.UC,
                 { role: "dialog", "aria-labelledby": u, className: i, ...d },
                 m,
@@ -84,35 +84,35 @@
         );
       }
       function m(e) {
-        const { className: n, children: a } = e;
-        return t.createElement(
+        const { className: n, children: t } = e;
+        return a.createElement(
           l.E,
           { active: !0 },
-          t.createElement("div", { className: n }, a),
+          a.createElement("div", { className: n }, t),
         );
       }
-      a(81194);
-      var d = a(85585),
-        u = a(7445),
-        E = a(76217),
-        p = a(88843);
+      t(81194);
+      var d = t(85585),
+        u = t(7445),
+        E = t(76217),
+        p = t(88843);
       function v(e) {
-        const { children: n, navID: a, closeModal: s } = e,
-          l = t.createRef(),
+        const { children: n, navID: t, closeModal: s } = e,
+          l = a.createRef(),
           r = (e) => (e.stopPropagation(), e.preventDefault(), !0);
         return (0, i.Qn)() && !i.TS.IN_STEAMUI
-          ? t.createElement(
+          ? a.createElement(
               d.B2,
               {
-                navID: a,
+                navID: t,
                 navTreeRef: l,
                 onCancelButton: s,
                 className: p.GamepadOnlyModalWrapper,
               },
-              t.createElement(
+              a.createElement(
                 u.q,
                 null,
-                t.createElement(
+                a.createElement(
                   E.Z,
                   {
                     className: p.GamepadOnlyPanelWrapper,
@@ -123,140 +123,142 @@
                 ),
               ),
             )
-          : t.createElement(t.Fragment, null, n);
+          : a.createElement(a.Fragment, null, n);
       }
-      var f = a(78395),
-        N = a(10411);
-      a(76222);
+      var f = t(78395),
+        N = t(10411);
+      t(76222);
     },
-    40917: (e, n, a) => {
+    40917: (e, n, t) => {
       "use strict";
-      a.r(n), a.d(n, { default: () => D });
-      var t = a(90626),
-        s = a(9054),
-        l = a.n(s),
-        r = a(92757),
-        i = a(23809),
-        c = a(41762),
-        o = a(58632),
-        m = a.n(o),
-        d = a(20194),
-        u = a(56545),
-        E = a(37403),
-        p = a(30470),
-        v = a(22837);
-      let f;
-      const N = 864e5;
-      function h(e) {
-        return `appinfo_${e}_${p.TS.LANGUAGE}`;
-      }
+      t.r(n), t.d(n, { default: () => k });
+      var a = t(90626),
+        s = t(9054),
+        l = t.n(s),
+        r = t(92757),
+        i = t(23809),
+        c = t(41762),
+        o = t(58632),
+        m = t.n(o),
+        d = t(20194),
+        u = t(37085),
+        E = t(56545),
+        p = t(37403),
+        v = t(30470),
+        f = t(22837);
+      let N;
+      const h = 864e5;
       function S(e) {
-        return Boolean(e && Date.now() - e.timeCached < N);
+        return `appinfo_${e}_${v.TS.LANGUAGE}`;
       }
       function _(e) {
+        return Boolean(e && Date.now() - e.timeCached < h);
+      }
+      function I(e) {
         const n = (0, i.KV)(),
-          a = (0, i.rX)();
+          t = (0, i.rX)();
         return (0, d.I)({
           queryKey: ["appinfo", e],
           queryFn: async () =>
             (function (e, n) {
               return (
-                f ||
-                  (f = new (m())(
-                    async (a) => {
-                      const t = new Map();
-                      (await Promise.all(a.map((e) => n.GetObject(h(e)))))
-                        .filter(S)
-                        .forEach(({ value: e }) => t.set(e.appid, e));
-                      const s = a.slice().filter((e) => !t.has(e));
+                N ||
+                  (N = new (m())(
+                    async (t) => {
+                      const a = new Map();
+                      (await Promise.all(t.map((e) => n.GetObject(S(e)))))
+                        .filter(_)
+                        .forEach(({ value: e }) => a.set(e.appid, e));
+                      const s = t.slice().filter((e) => !a.has(e));
                       if (s.length) {
-                        const a = u.w.Init(E._z);
-                        a.Body().set_language((0, v.sf)(p.TS.LANGUAGE)),
-                          a.Body().set_appids(s);
-                        const l = await E.BE.GetApps(e, a);
-                        if (1 != l.GetEResult()) throw l.GetErrorMessage();
+                        const t = E.w.Init(p._z);
+                        t.Body().set_language((0, f.sf)(v.TS.LANGUAGE)),
+                          t.Body().set_appids(s);
+                        const l = await p.BE.GetApps(e, t);
+                        if (l.GetEResult() != u.d.k_EResultOK)
+                          throw l.GetErrorMessage();
                         l.Body()
                           .toObject()
                           .apps.forEach((e) => {
-                            n.StoreObject(h(e.appid), {
+                            n.StoreObject(S(e.appid), {
                               timeCached: Date.now(),
                               value: e,
                             }),
-                              t.set(e.appid, e);
+                              a.set(e.appid, e);
                           });
                       }
-                      return a.map((e) => t.get(e));
+                      return t.map((e) => a.get(e));
                     },
                     { cache: !1 },
                   )),
-                f
+                N
               );
-            })(n, a).load(e),
-          staleTime: N,
+            })(n, t).load(e),
+          staleTime: h,
           enabled: !!e,
         }).data;
       }
-      var I = a(79908),
-        g = a(61859),
-        y = a(82477),
-        b = a(53835),
-        C = a(22797),
-        w = a(78327);
-      function A(e) {
+      var g = t(96873),
+        y = t(61859),
+        b = t(82477),
+        C = t(53835),
+        w = t(22797),
+        A = t(78327);
+      function G(e) {
         return `?joinsessionid=${e}`;
       }
-      function G(e) {
-        return t.createElement(
-          b.$n,
+      function L(e) {
+        return a.createElement(
+          C.$n,
           {
             className: l().JoinSessionButton,
             onClick: () =>
               (window.location.href =
-                `steam://launch/${e.steamAppId}` + A(e.sessionID)),
+                `steam://launch/${e.steamAppId}` + G(e.sessionID)),
           },
           e.children,
         );
       }
-      function L(e) {
-        const n = (0, I.Vc)(),
-          a = (0, i.KV)();
+      function B(e) {
+        const n = (0, g.Vc)(),
+          t = (0, i.KV)();
         return n.isSuccess
           ? n.data?.sessions?.length > 0
-            ? t.createElement(
-                t.Fragment,
+            ? a.createElement(
+                a.Fragment,
                 null,
-                t.createElement(
-                  b.JU,
+                a.createElement(
+                  C.JU,
                   { className: l().AvailableSessionsText },
                   "Available Steam Sessions:",
                 ),
-                t.createElement(
+                a.createElement(
                   "div",
                   { className: l().SessionList },
                   n.data?.sessions.map((n) =>
-                    t.createElement(
+                    a.createElement(
                       "div",
                       { className: l().Session, key: n.client_instanceid },
-                      t.createElement(
+                      a.createElement(
                         "div",
                         { className: l().MachineName },
                         n.machine_name,
                       ),
-                      t.createElement(
+                      a.createElement(
                         "div",
                         { className: l().OsName },
                         n.os_name,
                       ),
-                      t.createElement(
-                        b.$n,
+                      a.createElement(
+                        C.$n,
                         {
                           className: l().JoinSessionButton,
                           onClick: () =>
-                            (0, I.o6)(
-                              a,
+                            (0, g.o6)(
+                              t,
                               n.client_instanceid,
                               e.steamAppId,
-                              A(e.sessionID),
+                              G(e.sessionID),
                             ),
                         },
                         "Launch Game",
@@ -265,102 +267,102 @@
                   ),
                 ),
               )
-            : t.createElement(
+            : a.createElement(
                 "div",
                 { className: l().Error },
                 "No logged in sessions",
               )
           : n.isFetching || n.isRefetching
-            ? t.createElement(C.t, null)
-            : t.createElement(
+            ? a.createElement(w.t, null)
+            : a.createElement(
                 "div",
                 { className: l().Error },
                 "Error ",
                 n.error.message,
               );
       }
-      function B(e) {
-        const n = _(e.steamAppId);
+      function D(e) {
+        const n = I(e.steamAppId);
         return n
-          ? t.createElement(
-              t.Fragment,
+          ? a.createElement(
+              a.Fragment,
               null,
-              t.createElement(
+              a.createElement(
                 "div",
                 { className: l().Header },
                 "Join Game Session",
               ),
-              t.createElement(
+              a.createElement(
                 "div",
                 { className: l().Explanation },
                 "You've been invited to join a game! Click below to launch ",
                 n.friendly_name || n.name,
                 " on Steam and start playing.",
               ),
-              t.createElement(
+              a.createElement(
                 "div",
                 { className: l().SessionInfoCtr },
-                t.createElement("iframe", { src: e.sessionLiveDataUrl }),
+                a.createElement("iframe", { src: e.sessionLiveDataUrl }),
               ),
-              w.TS.IN_CLIENT
-                ? t.createElement(
+              A.TS.IN_CLIENT
+                ? a.createElement(
                     "div",
                     { className: l().SectionCtr },
-                    t.createElement(G, { ...e }, "Launch Game"),
+                    a.createElement(L, { ...e }, "Launch Game"),
                   )
-                : t.createElement(
-                    t.Fragment,
+                : a.createElement(
+                    a.Fragment,
                     null,
-                    t.createElement(
+                    a.createElement(
                       "div",
                       { className: l().SectionCtr },
-                      w.iA.logged_in
-                        ? t.createElement(L, { ...e })
-                        : t.createElement(
-                            t.Fragment,
+                      A.iA.logged_in
+                        ? a.createElement(B, { ...e })
+                        : a.createElement(
+                            a.Fragment,
                             null,
-                            t.createElement(
-                              b.JU,
+                            a.createElement(
+                              C.JU,
                               null,
                               "Login to join on another device",
                             ),
-                            t.createElement(
-                              b.$n,
-                              { onClick: y.vg },
-                              (0, g.we)("#Login_SignIn"),
+                            a.createElement(
+                              C.$n,
+                              { onClick: b.vg },
+                              (0, y.we)("#Login_SignIn"),
                             ),
                           ),
                     ),
-                    !w.TS.IN_MOBILE_WEBVIEW &&
-                      t.createElement(
+                    !A.TS.IN_MOBILE_WEBVIEW &&
+                      a.createElement(
                         "div",
                         { className: l().SectionCtr },
-                        t.createElement(b.JU, null, "Or launch on this PC"),
-                        t.createElement(G, { ...e }, "Launch Game Here"),
+                        a.createElement(C.JU, null, "Or launch on this PC"),
+                        a.createElement(L, { ...e }, "Launch Game Here"),
                       ),
                   ),
             )
-          : t.createElement(C.t, null);
+          : a.createElement(w.t, null);
       }
-      function D() {
-        const e = (0, w.Tc)("multiplayersession_join", "application_config"),
+      function k() {
+        const e = (0, A.Tc)("multiplayersession_join", "application_config"),
           n = new URLSearchParams((0, r.zy)().search).get("jws"),
-          { header: a, body: s } = (0, c.I3)(n) || { header: {}, body: {} };
+          { header: t, body: s } = (0, c.I3)(n) || { header: {}, body: {} };
         let { steamAppId: i } = s;
         const o = s[e.jws_sessionid_key],
           m = s[e.jws_livedata_url_key];
         return (
           "string" == typeof i && (i = parseInt(i)),
-          t.createElement(
+          a.createElement(
             "div",
             { className: l().JoinApp },
             i && m && m
-              ? t.createElement(B, {
+              ? a.createElement(D, {
                   steamAppId: i,
                   sessionLiveDataUrl: m,
                   sessionID: o,
                 })
-              : t.createElement("div", null, "Invalid session link"),
+              : a.createElement("div", null, "Invalid session link"),
             " ",
           )
         );

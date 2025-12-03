@@ -92,231 +92,251 @@
     55263: (e, t, a) => {
       "use strict";
       a.d(t, {
-        G6: () => r,
-        Gg: () => u,
-        MS: () => _,
-        Ow: () => d,
-        YM: () => h,
-        mZ: () => m,
-        t7: () => c,
-        zX: () => g,
+        G6: () => u,
+        Gg: () => _,
+        MS: () => S,
+        N4: () => s,
+        Ow: () => p,
+        YM: () => I,
+        mZ: () => g,
+        t7: () => m,
+        zX: () => E,
       });
-      var s = a(41735),
-        i = a.n(s),
-        n = a(90626),
-        o = a(84933),
-        l = a(82097);
-      function r(e, t, a, s) {
-        const r = (0, n.useRef)(void 0),
-          c = (0, n.useRef)(void 0),
-          d = (0, o.CH)();
+      var s,
+        i = a(41735),
+        n = a.n(i),
+        o = a(90626),
+        l = a(37085),
+        r = a(15161),
+        c = a(84933),
+        d = a(82097);
+      function u(e, t, a, i) {
+        const r = (0, o.useRef)(void 0),
+          u = (0, o.useRef)(void 0),
+          m = (0, c.CH)();
         r.current = e;
-        const [u, m] = (0, n.useState)(void 0),
+        const [p, _] = (0, o.useState)(void 0),
           {
-            include_assets: p,
-            include_release: g,
-            include_platforms: _,
-            include_all_purchase_options: h,
-            include_screenshots: E,
-            include_trailers: f,
-            include_ratings: v,
-            include_tag_count: I,
-            include_reviews: y,
-            include_basic_info: S,
-            include_supported_languages: T,
-            include_full_description: R,
-            include_included_items: C,
-            include_assets_without_overrides: w,
-            apply_user_filters: A,
-            include_links: N,
+            include_assets: g,
+            include_release: h,
+            include_platforms: E,
+            include_all_purchase_options: S,
+            include_screenshots: I,
+            include_trailers: v,
+            include_ratings: f,
+            include_tag_count: y,
+            include_reviews: T,
+            include_basic_info: C,
+            include_supported_languages: R,
+            include_full_description: w,
+            include_included_items: A,
+            include_assets_without_overrides: N,
+            apply_user_filters: D,
+            include_links: P,
           } = a;
         if (
-          ((0, n.useEffect)(() => {
+          ((0, o.useEffect)(() => {
             const a = {
-              include_assets: p,
-              include_release: g,
-              include_platforms: _,
-              include_all_purchase_options: h,
-              include_screenshots: E,
-              include_trailers: f,
-              include_ratings: v,
-              include_tag_count: I,
-              include_reviews: y,
-              include_basic_info: S,
-              include_supported_languages: T,
-              include_full_description: R,
-              include_included_items: C,
-              include_assets_without_overrides: w,
-              apply_user_filters: A,
-              include_links: N,
+              include_assets: g,
+              include_release: h,
+              include_platforms: E,
+              include_all_purchase_options: S,
+              include_screenshots: I,
+              include_trailers: v,
+              include_ratings: f,
+              include_tag_count: y,
+              include_reviews: T,
+              include_basic_info: C,
+              include_supported_languages: R,
+              include_full_description: w,
+              include_included_items: A,
+              include_assets_without_overrides: N,
+              apply_user_filters: D,
+              include_links: P,
             };
-            let n = null;
+            let s = null;
             return (
               !e ||
                 e < 0 ||
-                l.A.Get().BHasStoreItem(e, t, a) ||
-                (void 0 !== u && s && s == c.current) ||
-                (s !== c.current && (m(void 0), (c.current = s)),
-                (n = i().CancelToken.source()),
-                l.A.Get()
+                d.A.Get().BHasStoreItem(e, t, a) ||
+                (void 0 !== p && i && i == u.current) ||
+                (i !== u.current && (_(void 0), (u.current = i)),
+                (s = n().CancelToken.source()),
+                d.A.Get()
                   .QueueStoreItemRequest(e, t, a)
                   .then((t) => {
-                    n?.token.reason || r.current !== e || m(1 == t), d();
+                    s?.token.reason ||
+                      r.current !== e ||
+                      _(t == l.d.k_EResultOK),
+                      m();
                   })),
-              () => n?.cancel("useStoreItemCache: unmounting")
+              () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, u, p, g, _, h, E, f, v, I, y, S, T, R, C, w, A, N, d]),
+          }, [e, t, i, p, g, h, E, S, I, v, f, y, T, C, R, w, A, N, D, P, m]),
           !e)
         )
-          return [null, 2];
-        if (!1 === u) return [void 0, 2];
-        if (l.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
-        if (!l.A.Get().BHasStoreItem(e, t, a)) return [void 0, 1];
-        const D = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return D ? [D, 3] : [null, 2];
-      }
-      function c(e, t, a) {
-        return r(e, 0, t, a);
-      }
-      function d(e, t, a) {
-        return r(e, 2, t, a);
-      }
-      function u(e, t, a) {
-        return r(e, 1, t, a);
+          return [null, s.k_EStoreItemCacheState_Unavailable];
+        if (!1 === p) return [void 0, s.k_EStoreItemCacheState_Unavailable];
+        if (d.A.Get().BIsStoreItemMissing(e, t))
+          return [void 0, s.k_EStoreItemCacheState_Unavailable];
+        if (!d.A.Get().BHasStoreItem(e, t, a))
+          return [void 0, s.k_EStoreItemCacheState_Loading];
+        const b = d.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return b
+          ? [b, s.k_EStoreItemCacheState_Found]
+          : [null, s.k_EStoreItemCacheState_Unavailable];
       }
       function m(e, t, a) {
-        const [s, i] = r(e, t, a);
+        return u(e, r.c6.k_EStoreItemType_App, t, a);
+      }
+      function p(e, t, a) {
+        return u(e, r.c6.k_EStoreItemType_Bundle, t, a);
+      }
+      function _(e, t, a) {
+        return u(e, r.c6.k_EStoreItemType_Package, t, a);
+      }
+      function g(e, t, a) {
+        const [s, i] = u(e, t, a);
         let n;
-        1 != s?.GetStoreItemType() ||
+        s?.GetStoreItemType() != r.c6.k_EStoreItemType_Package ||
           s.GetAssets()?.GetHeaderURL() ||
           1 != s?.GetIncludedAppIDs().length ||
           (n = s.GetIncludedAppIDs()[0]);
-        const [o, l] = c(n, a);
+        const [o, l] = m(n, a);
         return n && o?.BIsVisible() ? [o, l] : [s, i];
       }
-      function p(e, t, a, s) {
-        const r = (0, o.CH)(),
+      function h(e, t, a, i) {
+        const l = (0, c.CH)(),
           {
-            include_assets: c,
-            include_release: d,
-            include_platforms: u,
-            include_all_purchase_options: m,
-            include_screenshots: p,
+            include_assets: r,
+            include_release: u,
+            include_platforms: m,
+            include_all_purchase_options: p,
+            include_screenshots: _,
             include_trailers: g,
-            include_ratings: _,
-            include_tag_count: h,
-            include_reviews: E,
-            include_basic_info: f,
+            include_ratings: h,
+            include_tag_count: E,
+            include_reviews: S,
+            include_basic_info: I,
             include_supported_languages: v,
-            include_full_description: I,
+            include_full_description: f,
             include_included_items: y,
-            include_assets_without_overrides: S,
-            apply_user_filters: T,
+            include_assets_without_overrides: T,
+            apply_user_filters: C,
             include_links: R,
           } = a;
         if (
-          ((0, n.useEffect)(() => {
+          ((0, o.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const a = {
-                include_assets: c,
-                include_release: d,
-                include_platforms: u,
-                include_all_purchase_options: m,
-                include_screenshots: p,
+                include_assets: r,
+                include_release: u,
+                include_platforms: m,
+                include_all_purchase_options: p,
+                include_screenshots: _,
                 include_trailers: g,
-                include_ratings: _,
-                include_tag_count: h,
-                include_reviews: E,
-                include_basic_info: f,
+                include_ratings: h,
+                include_tag_count: E,
+                include_reviews: S,
+                include_basic_info: I,
                 include_supported_languages: v,
-                include_full_description: I,
+                include_full_description: f,
                 include_included_items: y,
-                include_assets_without_overrides: S,
-                apply_user_filters: T,
+                include_assets_without_overrides: T,
+                apply_user_filters: C,
                 include_links: R,
               },
               s = e.filter(
                 (e) =>
                   !(
-                    l.A.Get().BHasStoreItem(e, t, a) ||
-                    l.A.Get().BIsStoreItemMissing(e, t)
+                    d.A.Get().BHasStoreItem(e, t, a) ||
+                    d.A.Get().BIsStoreItemMissing(e, t)
                   ),
               );
             if (0 == s.length) return;
-            const n = i().CancelToken.source(),
-              o = s.map((e) => l.A.Get().QueueStoreItemRequest(e, t, a));
+            const i = n().CancelToken.source(),
+              o = s.map((e) => d.A.Get().QueueStoreItemRequest(e, t, a));
             return (
               Promise.all(o).then(() => {
-                n.token.reason || r();
+                i.token.reason || l();
               }),
-              () => n.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, r, c, d, u, m, p, g, _, h, E, f, v, I, y, S, T, R]),
+          }, [e, t, i, l, r, u, m, p, _, g, h, E, S, I, v, f, y, T, C, R]),
           !e)
         )
-          return 2;
+          return s.k_EStoreItemCacheState_Unavailable;
         if (
           !e.every(
             (e) =>
-              l.A.Get().BHasStoreItem(e, t, a) ||
-              l.A.Get().BIsStoreItemMissing(e, t),
+              d.A.Get().BHasStoreItem(e, t, a) ||
+              d.A.Get().BIsStoreItemMissing(e, t),
           )
         )
-          return 1;
+          return s.k_EStoreItemCacheState_Loading;
         return e.every((e) =>
-          l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+          d.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
         )
-          ? 3
-          : 2;
+          ? s.k_EStoreItemCacheState_Found
+          : s.k_EStoreItemCacheState_Unavailable;
       }
-      function g(e, t, a) {
-        return p(e, 0, t, a);
+      function E(e, t, a) {
+        return h(e, r.c6.k_EStoreItemType_App, t, a);
       }
-      function _(e, t, a) {
-        return p(e, 2, t, a);
+      function S(e, t, a) {
+        return h(e, r.c6.k_EStoreItemType_Bundle, t, a);
       }
-      function h() {
-        n.useEffect(
+      function I() {
+        o.useEffect(
           () => (
-            l.A.Get().SetReturnUnavailableItems(!0),
-            () => l.A.Get().SetReturnUnavailableItems(!1)
+            d.A.Get().SetReturnUnavailableItems(!0),
+            () => d.A.Get().SetReturnUnavailableItems(!1)
           ),
           [],
         );
       }
+      !(function (e) {
+        (e[(e.k_EStoreItemCacheState_Loading = 1)] =
+          "k_EStoreItemCacheState_Loading"),
+          (e[(e.k_EStoreItemCacheState_Unavailable = 2)] =
+            "k_EStoreItemCacheState_Unavailable"),
+          (e[(e.k_EStoreItemCacheState_Found = 3)] =
+            "k_EStoreItemCacheState_Found");
+      })(s || (s = {}));
     },
     82477: (e, t, a) => {
       "use strict";
-      a.d(t, { Cg: () => m, pZ: () => g, vg: () => p });
+      a.d(t, { Cg: () => p, pZ: () => g, vg: () => _ });
       var s = a(90626),
         i = a(738),
         n = a(61859),
         o = a(78327),
-        l = a(97436),
-        r = a(72034),
-        c = a(28240),
-        d = a(51706);
-      function u(e) {
+        l = a(92120),
+        r = a(21565),
+        c = a(72034),
+        d = a(28240),
+        u = a(51706);
+      function m(e) {
         return s.createElement(
           i.x_,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          s.createElement(_, {
+          s.createElement(h, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
         );
       }
-      function m(e) {
+      function p(e) {
         const { redirectURL: t = window.location.href } = e;
         return s.createElement(
-          d.EN,
+          u.EN,
           { active: !0 },
-          s.createElement(u, { redirectURL: t }),
+          s.createElement(m, { redirectURL: t }),
         );
       }
-      function p() {
+      function _() {
         (0, i.pg)(
-          s.createElement(u, {
+          s.createElement(m, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -326,7 +346,7 @@
       }
       function g(e, t) {
         (0, i.pg)(
-          s.createElement(u, {
+          s.createElement(m, {
             ownerWin: window,
             redirectURL: e,
             guestOption: t,
@@ -335,12 +355,12 @@
           { strTitle: (0, n.we)("#Login_SignInTitle") },
         );
       }
-      function _(e) {
+      function h(e) {
         const { redirectURL: t, guestOption: a } = e,
           [i] = (0, s.useState)(
-            new r.D(o.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new c.D(o.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [n, d] = (0, s.useState)(!1);
+          [n, u] = (0, s.useState)(!1);
         return s.createElement(
           "div",
           null,
@@ -351,10 +371,10 @@
                 {
                   autoFocus: !0,
                   transport: i,
-                  platform: 2,
+                  platform: r.SS.k_EAuthTokenPlatformType_WebBrowser,
                   onComplete: (e) => {
-                    e == c.wI.k_PrimaryDomainFail
-                      ? d(!0)
+                    e == d.wI.k_PrimaryDomainFail
+                      ? u(!0)
                       : window.location.assign(t);
                   },
                   redirectUrl: t,
@@ -369,7 +389,7 @@
       "use strict";
       a.d(t, {
         mt: () => c,
-        Qs: () => _,
+        Qs: () => g,
         o0: () => h.o0,
         eV: () => E.eV,
         KG: () => h.KG,
@@ -441,8 +461,8 @@
       var u = a(85585),
         m = a(7445),
         p = a(76217),
-        g = a(88843);
-      function _(e) {
+        _ = a(88843);
+      function g(e) {
         const { children: t, navID: a, closeModal: i } = e,
           n = s.createRef(),
           o = (e) => (e.stopPropagation(), e.preventDefault(), !0);
@@ -453,7 +473,7 @@
                 navID: a,
                 navTreeRef: n,
                 onCancelButton: i,
-                className: g.GamepadOnlyModalWrapper,
+                className: _.GamepadOnlyModalWrapper,
               },
               s.createElement(
                 m.q,
@@ -461,7 +481,7 @@
                 s.createElement(
                   p.Z,
                   {
-                    className: g.GamepadOnlyPanelWrapper,
+                    className: _.GamepadOnlyPanelWrapper,
                     onGamepadDirection: o,
                     focusableIfEmpty: !0,
                   },
@@ -489,11 +509,11 @@
         u = a(52038),
         m = a(61859),
         p = a(84933),
-        g = a(522),
-        _ = a(26649),
-        h = a.n(_),
+        _ = a(522),
+        g = a(26649),
+        h = a.n(g),
         E = a(41735),
-        f = a.n(E);
+        S = a.n(E);
       !(function (e) {
         (e[(e.Unrequested = 0)] = "Unrequested"),
           (e[(e.Pending = 1)] = "Pending"),
@@ -501,7 +521,7 @@
           (e[(e.Failed = 3)] = "Failed"),
           (e[(e.Rerequest = 4)] = "Rerequest");
       })(s || (s = {}));
-      class v {
+      class I {
         constructor() {
           (0, l.Gn)(this);
         }
@@ -564,8 +584,8 @@
         eState = s.Unrequested;
         nExpirationTime = 0;
       }
-      (0, i.Cg)([l.sH], v.prototype, "data", void 0),
-        (0, i.Cg)([l.sH], v.prototype, "nExpirationTime", void 0);
+      (0, i.Cg)([l.sH], I.prototype, "data", void 0),
+        (0, i.Cg)([l.sH], I.prototype, "nExpirationTime", void 0);
       (0, i.Cg)(
         [l.sH],
         class {
@@ -577,7 +597,7 @@
             return (
               this.m_mapKeyToDataWrapper.has(e)
                 ? (t = this.m_mapKeyToDataWrapper.get(e))
-                : ((t = new v()), this.m_mapKeyToDataWrapper.set(e, t)),
+                : ((t = new I()), this.m_mapKeyToDataWrapper.set(e, t)),
               t
             );
           }
@@ -605,7 +625,7 @@
         "m_mapKeyToDataWrapper",
         void 0,
       );
-      let I = {
+      let v = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -636,13 +656,13 @@
         PERSISTENT_IGNORE: !1,
         USE_MICROTRAILERS: !1,
       };
-      var y;
+      var f;
       !(function (e) {
         (e[(e.ClickThrough = 1)] = "ClickThrough"),
           (e[(e.AddToWishlist = 2)] = "AddToWishlist"),
           (e[(e.AddToCart = 3)] = "AddToCart");
-      })(y || (y = {}));
-      class S {
+      })(f || (f = {}));
+      class y {
         m_fPopularityValue = void 0;
         m_fRecencyValue = void 0;
         m_rgFilterTags = [];
@@ -654,9 +674,9 @@
         m_bUseMicrotrailers = void 0;
         m_bIgnoredEdited = void 0;
         m_mapAppDetailsCache = new Map();
-        m_ResultDataCache = new v();
-        m_InputAppsCache = new v();
-        m_TagsCache = new v();
+        m_ResultDataCache = new I();
+        m_InputAppsCache = new I();
+        m_TagsCache = new I();
         m_TagNameMap = new Map();
         m_bStateUpdated;
         constructor() {
@@ -717,7 +737,7 @@
             (this.m_bStateUpdated = !0),
             (this.m_bExcludeWishlisted =
               "1" == localStorage.getItem("IRExcludeWishlisted")),
-            (this.m_bUseMicrotrailers = I.USE_MICROTRAILERS);
+            (this.m_bUseMicrotrailers = v.USE_MICROTRAILERS);
           const e = localStorage.getItem("IRExcludeTags");
           if (e) {
             const t = e.split(",");
@@ -732,12 +752,12 @@
         getDetails(e) {
           return (
             this.m_mapAppDetailsCache.has(e) ||
-              this.m_mapAppDetailsCache.set(e, new v()),
+              this.m_mapAppDetailsCache.set(e, new I()),
             this.m_mapAppDetailsCache.get(e).getData(
               60,
               async () =>
-                await f().get(
-                  `${I.BASE_URL}recommender/${I.STEAM_ID}/details?appid=${e}&sessionid=${I.SESSION_ID}`,
+                await S().get(
+                  `${v.BASE_URL}recommender/${v.STEAM_ID}/details?appid=${e}&sessionid=${v.SESSION_ID}`,
                 ),
               (e) => e.data,
             )
@@ -760,8 +780,8 @@
             this.m_ResultDataCache.getData(
               9999999,
               async () =>
-                await f().get(
-                  `${I.BASE_URL}recommender/${I.STEAM_ID}/results?sessionid=${I.SESSION_ID}&steamid=${I.STEAM_ID}&include_played=${i}&algorithm=${n}&reinference=${o}&model_version=${l}${r}`,
+                await S().get(
+                  `${v.BASE_URL}recommender/${v.STEAM_ID}/results?sessionid=${v.SESSION_ID}&steamid=${v.STEAM_ID}&include_played=${i}&algorithm=${n}&reinference=${o}&model_version=${l}${r}`,
                 ),
               (e) => (
                 e.data.recommendations.request_results.sort((e, t) =>
@@ -784,10 +804,10 @@
         }
         getRecommendations() {
           const e = T.getResults(
-            I.INCLUDE_PLAYED,
-            I.ALGORITHM,
-            I.REINFERENCE,
-            I.MODEL_VERSION,
+            v.INCLUDE_PLAYED,
+            v.ALGORITHM,
+            v.REINFERENCE,
+            v.MODEL_VERSION,
           );
           return e ? e.recommendations : void 0;
         }
@@ -795,18 +815,18 @@
           return this.m_InputAppsCache.getData(
             9999999,
             async () =>
-              await f().get(
-                `${I.BASE_URL}recommender/${I.STEAM_ID}/inputs?sessionid=${I.SESSION_ID}&steamid=${I.STEAM_ID}`,
+              await S().get(
+                `${v.BASE_URL}recommender/${v.STEAM_ID}/inputs?sessionid=${v.SESSION_ID}&steamid=${v.STEAM_ID}`,
               ),
             (e) => e.data,
           );
         }
         getAppInfo() {
           const e = T.getResults(
-            I.INCLUDE_PLAYED,
-            I.ALGORITHM,
-            I.REINFERENCE,
-            I.MODEL_VERSION,
+            v.INCLUDE_PLAYED,
+            v.ALGORITHM,
+            v.REINFERENCE,
+            v.MODEL_VERSION,
           );
           return e ? e.app_info : void 0;
         }
@@ -814,8 +834,8 @@
           return this.m_TagsCache.getData(
             9999999,
             async () =>
-              await f().get(
-                `${I.BASE_URL}recommender/${I.STEAM_ID}/tags?sessionid=${I.SESSION_ID}`,
+              await S().get(
+                `${v.BASE_URL}recommender/${v.STEAM_ID}/tags?sessionid=${v.SESSION_ID}`,
               ),
             (e) => {
               this.m_TagNameMap.clear();
@@ -902,41 +922,41 @@
         }
         async onAddToWishlist(e, t) {
           T.getAppInfo()[e].w = !0;
-          let a = { sessionid: I.SESSION_ID, appid: e };
-          const s = await f().post(
-            `${I.BASE_URL}recommender/${I.STEAM_ID}/wishlist?snr=${I.LINK_PARAM}`,
+          let a = { sessionid: v.SESSION_ID, appid: e };
+          const s = await S().post(
+            `${v.BASE_URL}recommender/${v.STEAM_ID}/wishlist?snr=${v.LINK_PARAM}`,
             a,
           );
           let i = {
-            account_id: I.ACCOUNT_ID,
-            session_id: I.SESSION_ID,
+            account_id: v.ACCOUNT_ID,
+            session_id: v.SESSION_ID,
             app_id: e,
             app_rank: t,
-            action: y.AddToWishlist,
+            action: f.AddToWishlist,
             algorithm: 1,
             setting_1: 100 * this.m_fPopularityValue,
             setting_2: 100 * this.m_fRecencyValue,
           };
           return (
-            await f().post(`${I.BASE_URL}recommender/${I.STEAM_ID}/stats`, i), s
+            await S().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, i), s
           );
         }
         onGoToWishlist() {
-          window.location.href = `${I.COMMUNITY_BASE_URL}profiles/${I.STEAM_ID}/wishlist`;
+          window.location.href = `${v.COMMUNITY_BASE_URL}profiles/${v.STEAM_ID}/wishlist`;
         }
         onAddToCart(e, t, a) {
           window.AddItemToCart(t);
           let s = {
-            account_id: I.ACCOUNT_ID,
-            session_id: I.SESSION_ID,
+            account_id: v.ACCOUNT_ID,
+            session_id: v.SESSION_ID,
             app_id: e,
             app_rank: a,
-            action: y.AddToCart,
+            action: f.AddToCart,
             algorithm: 1,
             setting_1: 100 * this.m_fPopularityValue,
             setting_2: 100 * this.m_fRecencyValue,
           };
-          return f().post(`${I.BASE_URL}recommender/${I.STEAM_ID}/stats`, s);
+          return S().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, s);
         }
         onMuteClicked() {
           this.m_bShouldMute = !0;
@@ -951,44 +971,44 @@
           return this.m_bUseMicrotrailers;
         }
       }
-      (0, i.Cg)([l.sH], S.prototype, "m_fPopularityValue", void 0),
-        (0, i.Cg)([l.sH], S.prototype, "m_fRecencyValue", void 0),
-        (0, i.Cg)([l.sH], S.prototype, "m_rgFilterTags", void 0),
-        (0, i.Cg)([l.sH], S.prototype, "m_rgExcludeTags", void 0),
-        (0, i.Cg)([l.sH], S.prototype, "m_fQueuedPopularityValue", void 0),
-        (0, i.Cg)([l.sH], S.prototype, "m_fQueuedRecencyValue", void 0),
-        (0, i.Cg)([l.sH], S.prototype, "m_bExcludeWishlisted", void 0),
-        (0, i.Cg)([l.sH], S.prototype, "m_bShouldMute", void 0),
-        (0, i.Cg)([l.sH], S.prototype, "m_bUseMicrotrailers", void 0),
-        (0, i.Cg)([l.sH], S.prototype, "m_bIgnoredEdited", void 0),
-        (0, i.Cg)([p.oI], S.prototype, "getTagHeight", null),
-        (0, i.Cg)([p.oI], S.prototype, "onPopularityChanged", null),
-        (0, i.Cg)([p.oI], S.prototype, "onRecencyChanged", null),
-        (0, i.Cg)([p.oI], S.prototype, "onTagFilterAdd", null),
-        (0, i.Cg)([p.oI], S.prototype, "onTagFilterRemove", null),
-        (0, i.Cg)([p.oI], S.prototype, "onTagExcludeAdd", null),
-        (0, i.Cg)([p.oI], S.prototype, "onTagExcludeRemove", null),
-        (0, i.Cg)([p.oI], S.prototype, "doTagsPassFilter", null),
-        (0, i.Cg)([p.oI], S.prototype, "doTagsFailExclusion", null),
-        (0, i.Cg)([p.oI], S.prototype, "onExcludeWishlistedToggled", null),
-        (0, i.Cg)([p.oI], S.prototype, "onToggleIgnore", null),
-        (0, i.Cg)([p.oI], S.prototype, "onUpdateWithIgnored", null),
-        (0, i.Cg)([p.oI], S.prototype, "onAddToWishlist", null),
-        (0, i.Cg)([p.oI], S.prototype, "onGoToWishlist", null),
-        (0, i.Cg)([p.oI], S.prototype, "onAddToCart", null),
-        (0, i.Cg)([p.oI], S.prototype, "onMuteClicked", null),
-        (0, i.Cg)([p.oI], S.prototype, "onUnMuteClicked", null),
-        (0, i.Cg)([p.oI], S.prototype, "shouldMute", null),
-        (0, i.Cg)([p.oI], S.prototype, "shouldUseMicrotrailers", null);
-      const T = new S();
+      (0, i.Cg)([l.sH], y.prototype, "m_fPopularityValue", void 0),
+        (0, i.Cg)([l.sH], y.prototype, "m_fRecencyValue", void 0),
+        (0, i.Cg)([l.sH], y.prototype, "m_rgFilterTags", void 0),
+        (0, i.Cg)([l.sH], y.prototype, "m_rgExcludeTags", void 0),
+        (0, i.Cg)([l.sH], y.prototype, "m_fQueuedPopularityValue", void 0),
+        (0, i.Cg)([l.sH], y.prototype, "m_fQueuedRecencyValue", void 0),
+        (0, i.Cg)([l.sH], y.prototype, "m_bExcludeWishlisted", void 0),
+        (0, i.Cg)([l.sH], y.prototype, "m_bShouldMute", void 0),
+        (0, i.Cg)([l.sH], y.prototype, "m_bUseMicrotrailers", void 0),
+        (0, i.Cg)([l.sH], y.prototype, "m_bIgnoredEdited", void 0),
+        (0, i.Cg)([p.oI], y.prototype, "getTagHeight", null),
+        (0, i.Cg)([p.oI], y.prototype, "onPopularityChanged", null),
+        (0, i.Cg)([p.oI], y.prototype, "onRecencyChanged", null),
+        (0, i.Cg)([p.oI], y.prototype, "onTagFilterAdd", null),
+        (0, i.Cg)([p.oI], y.prototype, "onTagFilterRemove", null),
+        (0, i.Cg)([p.oI], y.prototype, "onTagExcludeAdd", null),
+        (0, i.Cg)([p.oI], y.prototype, "onTagExcludeRemove", null),
+        (0, i.Cg)([p.oI], y.prototype, "doTagsPassFilter", null),
+        (0, i.Cg)([p.oI], y.prototype, "doTagsFailExclusion", null),
+        (0, i.Cg)([p.oI], y.prototype, "onExcludeWishlistedToggled", null),
+        (0, i.Cg)([p.oI], y.prototype, "onToggleIgnore", null),
+        (0, i.Cg)([p.oI], y.prototype, "onUpdateWithIgnored", null),
+        (0, i.Cg)([p.oI], y.prototype, "onAddToWishlist", null),
+        (0, i.Cg)([p.oI], y.prototype, "onGoToWishlist", null),
+        (0, i.Cg)([p.oI], y.prototype, "onAddToCart", null),
+        (0, i.Cg)([p.oI], y.prototype, "onMuteClicked", null),
+        (0, i.Cg)([p.oI], y.prototype, "onUnMuteClicked", null),
+        (0, i.Cg)([p.oI], y.prototype, "shouldMute", null),
+        (0, i.Cg)([p.oI], y.prototype, "shouldUseMicrotrailers", null);
+      const T = new y();
       window.g_InteractiveRecommender = T;
-      var R = a(82477),
-        C = a(32630),
+      var C = a(82477),
+        R = a(32630),
         w = a(60014),
         A = a(55263);
       !(function () {
         let e = (0, n.Tc)("ir_config", "application_config");
-        e && (Object.assign(I, e), T.Init());
+        e && (Object.assign(v, e), T.Init());
       })();
       const N = ({ accountID: e }) => {
           const t = T.getInputApps(),
@@ -1000,27 +1020,27 @@
             }),
             r.createElement(
               "div",
-              { className: g.IdentityBlock },
+              { className: _.IdentityBlock },
               r.createElement("img", {
-                className: g.Avatar,
-                src: I.AVATAR_URL,
+                className: _.Avatar,
+                src: v.AVATAR_URL,
               }),
               r.createElement(
                 "div",
-                { className: g.PersonalInfo },
+                { className: _.PersonalInfo },
                 r.createElement(
                   "div",
-                  { className: g.Persona },
-                  I.PERSONA_NAME,
+                  { className: _.Persona },
+                  v.PERSONA_NAME,
                 ),
                 r.createElement(
                   "div",
-                  { className: g.GameCount },
+                  { className: _.GameCount },
                   (0, m.we)("#PlaytimeList_RecentGames", a),
                 ),
                 r.createElement(
                   "div",
-                  { className: g.TotalTime },
+                  { className: _.TotalTime },
                   (0, m.we)("#PlaytimeList_HoursTotal", s),
                 ),
               ),
@@ -1043,29 +1063,29 @@
                   (c = (0, m.we)("#PlaytimeList_LastPlayed", l))),
             r.createElement(
               "div",
-              { className: (0, u.A)(g.PlayedGame, i && g.Ignored) },
+              { className: (0, u.A)(_.PlayedGame, i && _.Ignored) },
               r.createElement(
                 "a",
-                { href: `${I.BASE_URL}app/${e}?snr=${I.LINK_PARAM}` },
+                { href: `${v.BASE_URL}app/${e}?snr=${v.LINK_PARAM}` },
                 r.createElement("img", {
-                  className: g.Logo,
+                  className: _.Logo,
                   src: n.GetAssets().GetHeaderURL(),
                 }),
               ),
               r.createElement(
                 "div",
-                { className: g.PlaytimeInfo },
+                { className: _.PlaytimeInfo },
                 r.createElement(
                   "div",
-                  { className: g.HoursPlayed },
+                  { className: _.HoursPlayed },
                   (0, m.we)("#PlaytimeList_Hours", a),
                 ),
-                r.createElement("div", { className: g.Title }, t),
-                r.createElement("div", { className: g.LastPlayed }, c),
+                r.createElement("div", { className: _.Title }, t),
+                r.createElement("div", { className: _.LastPlayed }, c),
                 r.createElement(
                   "div",
                   {
-                    className: g.IgnoreToggle,
+                    className: _.IgnoreToggle,
                     onClick: () => T.onToggleIgnore(e),
                   },
                   (0, m.we)(
@@ -1086,13 +1106,13 @@
           if (!e)
             return r.createElement(
               "div",
-              { className: g.PlaytimeList },
+              { className: _.PlaytimeList },
               r.createElement(
                 "div",
-                { className: g.Header },
+                { className: _.Header },
                 (0, m.we)("#PlaytimeList_Header"),
               ),
-              r.createElement("div", { className: g.Loading }),
+              r.createElement("div", { className: _.Loading }),
             );
           T.getAppInfo();
           const a = e.slice().sort((e, t) => t.l - e.l);
@@ -1112,20 +1132,20 @@
             }),
             r.createElement(
               "div",
-              { className: g.PlaytimeList },
+              { className: _.PlaytimeList },
               r.createElement(
                 "div",
-                { className: g.Header },
+                { className: _.Header },
                 (0, m.we)("#PlaytimeList_Header"),
               ),
               r.createElement(N, { accountID: this.props.accountID }),
-              r.createElement("div", { className: g.List }, t),
+              r.createElement("div", { className: _.List }, t),
             )
           );
         }
       };
       P = (0, i.Cg)([o.PA], P);
-      const L = ({
+      const b = ({
           titleLabel: e,
           minLabel: t,
           maxLabel: a,
@@ -1141,13 +1161,13 @@
             d = l ? l[c] : "";
           return r.createElement(
             "div",
-            { className: g.OptionSlider },
-            r.createElement("div", { className: g.Title }, e),
+            { className: _.OptionSlider },
+            r.createElement("div", { className: _.Title }, e),
             r.createElement(
               "div",
-              { className: g.Labels },
-              r.createElement("div", { className: g.Min }, t),
-              r.createElement("div", { className: g.Max }, a),
+              { className: _.Labels },
+              r.createElement("div", { className: _.Min }, t),
+              r.createElement("div", { className: _.Max }, a),
             ),
             r.createElement("input", {
               type: "range",
@@ -1157,16 +1177,16 @@
               value: n,
               onChange: o,
             }),
-            r.createElement("div", { className: g.OptionalLabel }, d),
+            r.createElement("div", { className: _.OptionalLabel }, d),
           );
         },
-        b = ({ className: e, titleLabel: t, checked: a, onChange: s }) =>
+        L = ({ className: e, titleLabel: t, checked: a, onChange: s }) =>
           r.createElement(
             "label",
-            { className: (0, u.A)(g.OptionCheckbox, e && e) },
+            { className: (0, u.A)(_.OptionCheckbox, e && e) },
             r.createElement("input", {
               type: "checkbox",
-              className: g.Checkbox,
+              className: _.Checkbox,
               checked: a,
               onChange: s,
             }),
@@ -1248,18 +1268,18 @@
                 "div",
                 {
                   key: e,
-                  className: g.SelectedTag,
+                  className: _.SelectedTag,
                   onClick: (t) => this.onRemoveSelectedTag(e),
                 },
                 r.createElement("div", null, a),
-                r.createElement("div", { className: g.Close }, "X"),
+                r.createElement("div", { className: _.Close }, "X"),
               ),
             );
           }
           return r.createElement(
             "div",
-            { className: g.OptionTagList },
-            r.createElement("div", { className: g.Label }, this.props.title),
+            { className: _.OptionTagList },
+            r.createElement("div", { className: _.Label }, this.props.title),
             r.createElement(h(), {
               suggestions: this.state.suggestions,
               onSuggestionsFetchRequested: this.onFetchRequested,
@@ -1270,10 +1290,10 @@
               renderSuggestion: (e) => r.createElement("div", null, e.name),
               inputProps: e,
               theme: {
-                input: g.SuggestionInput,
-                suggestion: g.OptionSuggestion,
-                suggestionsList: g.SuggestionsList,
-                suggestionsContainerOpen: g.SuggestionContainerOpen,
+                input: _.SuggestionInput,
+                suggestion: _.OptionSuggestion,
+                suggestionsList: _.SuggestionsList,
+                suggestionsContainerOpen: _.SuggestionContainerOpen,
               },
             }),
             t,
@@ -1306,11 +1326,11 @@
           i = T.m_rgFilterTags;
         return r.createElement(
           "div",
-          { className: g.RecommendationOptions },
+          { className: _.RecommendationOptions },
           r.createElement(
             "div",
-            { className: (0, u.A)(g.Row, g.FirstRow) },
-            r.createElement(L, {
+            { className: (0, u.A)(_.Row, _.FirstRow) },
+            r.createElement(b, {
               minLabel: (0, m.we)("#Popularity_Popular"),
               titleLabel: (0, m.we)("#Popularity_Title"),
               maxLabel: (0, m.we)("#Popularity_Niche"),
@@ -1319,7 +1339,7 @@
               value: T.m_fQueuedPopularityValue,
               onChange: T.onPopularityChanged,
             }),
-            r.createElement(L, {
+            r.createElement(b, {
               minLabel: (0, m.we)("#Recency_Older"),
               titleLabel: (0, m.we)("#Recency_Title"),
               maxLabel: (0, m.we)("#Recency_Newer"),
@@ -1332,7 +1352,7 @@
           ),
           r.createElement(
             "div",
-            { className: (0, u.A)(g.Row, g.SecondRow) },
+            { className: (0, u.A)(_.Row, _.SecondRow) },
             r.createElement(M, {
               title: (0, m.we)("#TagFilterMultiple_Title"),
               tagoptions: t,
@@ -1349,8 +1369,8 @@
               onAddTag: T.onTagExcludeAdd,
               onRemoveTag: T.onTagExcludeRemove,
             }),
-            r.createElement(b, {
-              className: g.WishlistCheckbox,
+            r.createElement(L, {
+              className: _.WishlistCheckbox,
               titleLabel: (0, m.we)("#ExcludeWishlisted"),
               checked: T.m_bExcludeWishlisted,
               onChange: T.onExcludeWishlistedToggled,
@@ -1440,7 +1460,7 @@
                 (l.push(
                   r.createElement(
                     "div",
-                    { key: `${e}_${a}`, className: g.Tag },
+                    { key: `${e}_${a}`, className: _.Tag },
                     T.getTagName(a),
                   ),
                 ),
@@ -1449,30 +1469,30 @@
               )
                 break;
           }
-          const p = parseInt(g.smallentrywidth),
-            _ = parseInt(g.optionswrapwidth);
+          const p = parseInt(_.smallentrywidth),
+            g = parseInt(_.optionswrapwidth);
           let h = 112,
             E = !0;
-          s < p ? ((h = 66), (E = !1)) : s < _ && ((h = 87), (E = !1));
-          const f = E && this.state.hovered,
-            v = Math.min(Number(t) / 100, 1e3);
-          let y = !1,
-            S = !1,
-            R = !0,
-            C = "",
+          s < p ? ((h = 66), (E = !1)) : s < g && ((h = 87), (E = !1));
+          const S = E && this.state.hovered,
+            I = Math.min(Number(t) / 100, 1e3);
+          let f = !1,
+            y = !1,
+            C = !0,
+            R = "",
             w = "",
             A = "",
             N = "",
             D = 0,
             P = "",
-            L = !1,
-            b = !0;
-          if (f) {
+            b = !1,
+            L = !0;
+          if (S) {
             const e = T.getDetails(this.props.appID);
             e &&
-              ((y = !0),
-              (S = e.discount_pct > 0),
-              (R = "0" == e.discount_price),
+              ((f = !0),
+              (y = e.discount_pct > 0),
+              (C = "0" == e.discount_price),
               (D = e.packageid),
               "probably" ==
               document
@@ -1481,14 +1501,14 @@
                 ? ((P = e.video_webm || ""),
                   ((T.shouldUseMicrotrailers() && e.microtrailer_webm) ||
                     0 == P.length) &&
-                    ((P = e.microtrailer_webm || ""), (L = !0), (b = !1)))
+                    ((P = e.microtrailer_webm || ""), (b = !0), (L = !1)))
                 : ((P = e.video_mp4 || ""),
                   ((T.shouldUseMicrotrailers() && e.microtrailer_mp4) ||
                     0 == P.length) &&
-                    ((P = e.microtrailer_mp4 || ""), (L = !0), (b = !1))),
-              (C = `-${e.discount_pct}%`),
+                    ((P = e.microtrailer_mp4 || ""), (b = !0), (L = !1))),
+              (R = `-${e.discount_pct}%`),
               (w = e.base_price),
-              (A = R ? (0, m.we)("#FreeToPlay") : e.discount_price),
+              (A = C ? (0, m.we)("#FreeToPlay") : e.discount_price),
               (N = e.description));
           }
           const M = P && P.length > 0;
@@ -1496,15 +1516,15 @@
             c.A,
             { appID: e },
             r.createElement(
-              O,
+              k,
               {
-                href: `${I.BASE_URL}app/${e}`,
+                href: `${v.BASE_URL}app/${e}`,
                 className: (0, u.A)(
-                  g.RecommendationEntry,
+                  _.RecommendationEntry,
                   "ds_flagged",
                   "ds_wishlist",
-                  a > 32 && g.Hidden,
-                  f && g.Hovered,
+                  a > 32 && _.Hidden,
+                  S && _.Hovered,
                 ),
                 style: { top: Math.min(33, a) * h },
                 onMouseEnter: this.OnHover,
@@ -1512,12 +1532,12 @@
               },
               r.createElement(
                 "div",
-                { className: g.TopEntrySection },
+                { className: _.TopEntrySection },
                 r.createElement(
                   "div",
-                  { className: g.LeftSection },
+                  { className: _.LeftSection },
                   r.createElement("img", {
-                    className: (0, u.A)(g.Logo, (!M || !f) && g.Revealed),
+                    className: (0, u.A)(_.Logo, (!M || !S) && _.Revealed),
                     src: this.props.header,
                   }),
                   r.createElement("video", {
@@ -1525,20 +1545,20 @@
                     className: (0, u.A)(
                       "highlight_player_item",
                       "highlight_movie",
-                      g.Video,
-                      M && f && g.Revealed,
+                      _.Video,
+                      M && S && _.Revealed,
                     ),
                     playsInline: !0,
                     autoPlay: !0,
-                    muted: b && T.shouldMute(),
+                    muted: L && T.shouldMute(),
                     src: P,
-                    loop: L,
+                    loop: b,
                   }),
-                  b &&
+                  L &&
                     r.createElement(
                       "div",
                       {
-                        className: (0, u.A)(g.UnMute, M && g.Revealed),
+                        className: (0, u.A)(_.UnMute, M && _.Revealed),
                         onClick: (e) => this.onMuteToggle(e),
                       },
                       r.createElement(d.fSs, { muted: T.shouldMute() }),
@@ -1550,7 +1570,7 @@
                         className: (0, u.A)(
                           "ds_flag",
                           "ds_wishlist_flag",
-                          g.WishlistFlag,
+                          _.WishlistFlag,
                         ),
                       },
                       (0, m.we)("#Recommendation_OnWishlist") + "  ",
@@ -1558,53 +1578,53 @@
                 ),
                 r.createElement(
                   "div",
-                  { className: g.RightSection },
-                  r.createElement("div", { className: g.Name }, n),
+                  { className: _.RightSection },
+                  r.createElement("div", { className: _.Name }, n),
                   r.createElement(
                     "div",
-                    { className: g.CenterSection },
+                    { className: _.CenterSection },
                     r.createElement(
                       "div",
                       {
                         className: (0, u.A)(
-                          g.CenterOption,
-                          g.CenterDefault,
-                          f && g.Hidden,
+                          _.CenterOption,
+                          _.CenterDefault,
+                          S && _.Hidden,
                         ),
                       },
-                      r.createElement("div", { className: g.Released }, o),
+                      r.createElement("div", { className: _.Released }, o),
                       r.createElement(
                         "div",
-                        { className: g.BarContainer },
+                        { className: _.BarContainer },
                         r.createElement("div", {
-                          className: g.Bar,
-                          style: { width: `${v}%` },
+                          className: _.Bar,
+                          style: { width: `${I}%` },
                         }),
                       ),
-                      r.createElement("div", { className: g.Tags }, l),
+                      r.createElement("div", { className: _.Tags }, l),
                     ),
                     r.createElement(
                       "div",
                       {
                         className: (0, u.A)(
-                          g.CenterOption,
-                          g.CenterHovered,
-                          !f && g.Hidden,
+                          _.CenterOption,
+                          _.CenterHovered,
+                          !S && _.Hidden,
                         ),
                       },
                       N,
                     ),
                   ),
-                  y &&
+                  f &&
                     r.createElement(
                       "div",
-                      { className: g.BottomEntrySection },
+                      { className: _.BottomEntrySection },
                       r.createElement(
                         "div",
                         {
                           className: (0, u.A)(
                             "game_purchase_action",
-                            g.PurchaseSection,
+                            _.PurchaseSection,
                           ),
                         },
                         r.createElement(
@@ -1612,10 +1632,10 @@
                           {
                             className: (0, u.A)(
                               "game_purchase_action_bg",
-                              g.PurchaseBG,
+                              _.PurchaseBG,
                             ),
                           },
-                          S &&
+                          y &&
                             r.createElement(
                               "div",
                               {
@@ -1625,7 +1645,7 @@
                               r.createElement(
                                 "div",
                                 { className: "discount_pct" },
-                                C,
+                                R,
                               ),
                               r.createElement(
                                 "div",
@@ -1642,19 +1662,19 @@
                                 ),
                               ),
                             ),
-                          !S &&
+                          !y &&
                             r.createElement(
                               "div",
                               {
                                 className: (0, u.A)(
                                   "game_purchase_price",
                                   "price",
-                                  g.Price,
+                                  _.Price,
                                 ),
                               },
                               A,
                             ),
-                          !R &&
+                          !C &&
                             r.createElement(
                               "div",
                               {
@@ -1677,12 +1697,12 @@
                         ),
                       ),
                       !this.state.wishlisted &&
-                        !R &&
+                        !C &&
                         r.createElement(
                           "div",
                           {
                             id: "add_to_wishlist_area",
-                            className: g.WishlistSection,
+                            className: _.WishlistSection,
                             onClick: (e) => this.onAddToWishlist(e),
                           },
                           r.createElement(
@@ -1696,15 +1716,15 @@
                           ),
                         ),
                       this.state.wishlisted &&
-                        !R &&
+                        !C &&
                         r.createElement(
                           "div",
                           {
                             className: (0, u.A)(
                               "btnv6_blue_hoverfade btn_medium",
                               "queue_btn_active",
-                              g.Wishlisted,
-                              g.WishlistSection,
+                              _.Wishlisted,
+                              _.WishlistSection,
                             ),
                             "data-tooltip-text": (0, m.we)(
                               "#OnWishlistTooltip",
@@ -1715,7 +1735,7 @@
                             "span",
                             null,
                             r.createElement("img", {
-                              src: `${I.IMG_URL_BASE}/v6/ico/ico_selected.png`,
+                              src: `${v.IMG_URL_BASE}/v6/ico/ico_selected.png`,
                             }),
                             "  " + (0, m.we)("#OnWishlist"),
                           ),
@@ -1734,44 +1754,44 @@
         (0, i.Cg)([p.oI], U.prototype, "onGoToWishlist", null),
         (0, i.Cg)([p.oI], U.prototype, "onAddToCart", null),
         (U = (0, i.Cg)([o.PA], U));
-      const O = r.forwardRef(function (e, t) {
+      const k = r.forwardRef(function (e, t) {
         const { href: a, ...s } = e,
           i = (0, w.aL)(a);
         return r.createElement("a", { ...s, ref: t, href: i });
       });
-      let k = class extends r.Component {
+      let O = class extends r.Component {
         constructor(e) {
           super(e), (this.state = { sortedRecommendedApps: [] });
         }
         render() {
           let e = [];
-          const t = T.m_fRecencyValue * (I.NUM_RECENCY_STEPS - 1 - 0.001),
+          const t = T.m_fRecencyValue * (v.NUM_RECENCY_STEPS - 1 - 0.001),
             a = Math.floor(t),
             s = a + 1,
             i = t - a,
-            n = T.m_fPopularityValue * (I.NUM_POPULARITY_STEPS - 1 - 0.001),
+            n = T.m_fPopularityValue * (v.NUM_POPULARITY_STEPS - 1 - 0.001),
             o = Math.floor(n),
             l = o + 1,
             c = n - o;
           e.push({
-            index: a * I.NUM_RECENCY_STEPS + o,
+            index: a * v.NUM_RECENCY_STEPS + o,
             weight: (1 - i) * (1 - c),
           }),
-            e.push({ index: s * I.NUM_RECENCY_STEPS + o, weight: i * (1 - c) }),
-            e.push({ index: a * I.NUM_RECENCY_STEPS + l, weight: (1 - i) * c }),
-            e.push({ index: s * I.NUM_RECENCY_STEPS + l, weight: i * c });
+            e.push({ index: s * v.NUM_RECENCY_STEPS + o, weight: i * (1 - c) }),
+            e.push({ index: a * v.NUM_RECENCY_STEPS + l, weight: (1 - i) * c }),
+            e.push({ index: s * v.NUM_RECENCY_STEPS + l, weight: i * c });
           let d = new Map(),
             p = 0;
-          const _ = T.getRecommendations(),
+          const g = T.getRecommendations(),
             h = T.getAppInfo();
           let E = [],
-            f = r.createElement("div", {
+            S = r.createElement("div", {
               key: "recommendations_loading",
-              className: g.RecommendationsLoading,
+              className: _.RecommendationsLoading,
             });
-          if (_) {
+          if (g) {
             for (const t of e) {
-              const e = _.request_results[t.index];
+              const e = g.request_results[t.index];
               if (e) {
                 p = Math.max(p, e.max_weight);
                 for (const a of e.app_recommendations) {
@@ -1805,21 +1825,21 @@
               for (let t of a) (t.rank = e), e++;
               E = a;
             } else
-              f = r.createElement(
+              S = r.createElement(
                 "div",
                 {
                   key: "no_recommedations_due_to_filter",
-                  className: g.NoRecommendationsMessage,
+                  className: _.NoRecommendationsMessage,
                 },
                 (0, m.we)("#NoRecommendationsDueToFilter"),
               );
           }
           return r.createElement(
             "div",
-            { className: g.RecommendationList },
+            { className: _.RecommendationList },
             r.createElement(
               "div",
-              { className: g.Header },
+              { className: _.Header },
               (0, m.we)("#Recommendations_Header"),
             ),
             r.createElement(x, null),
@@ -1827,8 +1847,8 @@
               "div",
               {
                 className: (0, u.A)(
-                  g.List,
-                  T.areResultsExpired() && g.Updating,
+                  _.List,
+                  T.areResultsExpired() && _.Updating,
                 ),
               },
               E.length
@@ -1836,7 +1856,7 @@
                     rgRecommendations: E,
                     width: this.props.width,
                   })
-                : f,
+                : S,
             ),
           );
         }
@@ -1875,7 +1895,7 @@
             })
           : null;
       }
-      k = (0, i.Cg)([o.PA], k);
+      O = (0, i.Cg)([o.PA], O);
       let F = class extends r.Component {
         state = { width: window.innerWidth };
         updateDimensions() {
@@ -1885,12 +1905,12 @@
           window.addEventListener("resize", this.updateDimensions);
         }
         ShowLoginDialog() {
-          (0, R.vg)();
+          (0, C.vg)();
         }
         render() {
           return n.iA.logged_in
             ? r.createElement(
-                C.Ay,
+                R.Ay,
                 {
                   controller: "recommender",
                   method: "default",
@@ -1899,45 +1919,45 @@
                 r.createElement(
                   "div",
                   {
-                    className: g.App,
+                    className: _.App,
                     style: { height: 3840 + 26 * T.getTagHeight() },
                   },
                   r.createElement(
                     "div",
-                    { className: g.Container },
+                    { className: _.Container },
                     r.createElement(
                       "div",
-                      { className: g.TopSection },
+                      { className: _.TopSection },
                       r.createElement(
                         "div",
-                        { className: g.Header },
+                        { className: _.Header },
                         (0, m.we)("#HeaderTitle"),
                       ),
                       r.createElement(
                         "div",
-                        { className: g.Body },
+                        { className: _.Body },
                         (0, m.we)("#HeaderBody1"),
                       ),
                     ),
                     r.createElement(
                       "div",
-                      { className: g.BottomSection },
+                      { className: _.BottomSection },
                       r.createElement(P, { accountID: n.iA.accountid }),
-                      r.createElement("div", { className: g.VerticalBar }),
-                      r.createElement(k, { width: this.state.width }),
+                      r.createElement("div", { className: _.VerticalBar }),
+                      r.createElement(O, { width: this.state.width }),
                     ),
                   ),
                 ),
               )
             : r.createElement(
                 "div",
-                { className: g.App },
+                { className: _.App },
                 r.createElement(
                   "div",
-                  { className: g.Login },
+                  { className: _.Login },
                   r.createElement(
                     "div",
-                    { className: g.Text },
+                    { className: _.Text },
                     (0, m.we)("#LoginText"),
                   ),
                   r.createElement(

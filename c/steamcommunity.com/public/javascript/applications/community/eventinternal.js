@@ -61,6 +61,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const {
@@ -553,10 +554,9 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              1 ==
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success) &&
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) == _._.k_EResultOK &&
               (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
                 ? void 0
                 : _.gidClanEvent)
@@ -616,10 +616,9 @@
             if (
               ((this.m_bLoadComplete = !0),
               200 == (null == _ ? void 0 : _.status) &&
-                1 ==
-                  (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                    ? void 0
-                    : _.success) &&
+                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                  ? void 0
+                  : _.success) == _._.k_EResultOK &&
                 (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
                   ? void 0
                   : _.data))
@@ -678,6 +677,7 @@
         (0, _._)([_._], _.prototype, "m_listSaleState", void 0);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -735,10 +735,9 @@
                 cancelToken: null == _ ? void 0 : _.token,
               });
               if (
-                1 ==
-                  (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                    ? void 0
-                    : _.success) &&
+                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                  ? void 0
+                  : _.success) == _._.k_EResultOK &&
                 _.data.apps
               ) {
                 (0, _._)(() => {
@@ -789,10 +788,9 @@
               cancelToken: null == _ ? void 0 : _.token,
             });
             if (
-              1 ==
-                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
-                  ? void 0
-                  : _.success) &&
+              (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                ? void 0
+                : _.success) == _._.k_EResultOK &&
               _.data.accountids
             )
               return void (this.m_rgClanAccountIDs =
@@ -967,7 +965,7 @@
                       "Migrating",
                       _,
                       _.AnnouncementGID,
-                      _.GetNameWithFallback(0),
+                      _.GetNameWithFallback(_._.k_Lang_English),
                       _,
                     );
                     try {

@@ -146,6 +146,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -532,7 +533,8 @@
                           ownerWin: _,
                           uploadFile: _,
                           forceResolution: _.forceResolution,
-                          fileType: _.forceFileType || 3,
+                          fileType:
+                            _.forceFileType || _._.k_EClanImageFileType_PNG,
                         });
                       (0, _._)(_, _, "CropModal", {
                         strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
@@ -633,7 +635,7 @@
         const _ = [],
           _ = new Array();
         for (const _ of _) {
-          if (25 == _) continue;
+          if (_ == _._.k_Lang_Arabic) continue;
           const _ = (0, _._)("#Language_" + (0, _._)(_));
           __webpack_require__.push({
             label: _,

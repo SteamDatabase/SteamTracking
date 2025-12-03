@@ -172,6 +172,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _;
       const _ = 864e5;
@@ -210,7 +211,8 @@
                           .set_language((0, _._)(_._.LANGUAGE)),
                           __webpack_require__.Body().set_appids(_);
                         const _ = await _._.GetApps(_, _);
-                        if (1 != _.GetEResult()) throw _.GetErrorMessage();
+                        if (_.GetEResult() != _._.k_EResultOK)
+                          throw _.GetErrorMessage();
                         _.Body()
                           .toObject()
                           .apps.forEach((_) => {

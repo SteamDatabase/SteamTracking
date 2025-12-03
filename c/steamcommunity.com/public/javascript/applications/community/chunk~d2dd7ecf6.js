@@ -1215,6 +1215,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const _ = (0, _._)();
@@ -1229,7 +1230,9 @@
             _.Body().set_steamid(_.ConvertTo64BitString()),
               _.Body().set_itemid(_);
             const _ = await _._.GetClanEventCrowdInMetadata(_, _);
-            return 1 != _.GetEResult() ? null : _.Body().toObject();
+            return _.GetEResult() != _._.k_EResultOK
+              ? null
+              : _.Body().toObject();
           },
         });
       }
@@ -1237,13 +1240,13 @@
         const _ = _._.Init(_._);
         __webpack_require__.Body().set_steamid(_);
         const _ = await _._.GetClanCrowdInMetadata(_, _);
-        if (42 === _.GetEResult())
+        if (_.GetEResult() === _._.k_EResultNoMatch)
           return {
             crowdin_project_id: null,
             crowdin_directory_id: null,
             push_by_default: !1,
           };
-        if (1 !== _.GetEResult()) throw _.GetEResult();
+        if (_.GetEResult() !== _._.k_EResultOK) throw _.GetEResult();
         return _.Body().toObject();
       }
       function _(_) {
@@ -1297,7 +1300,7 @@
                 _.Body().set_steamid(_),
                 _.Body().set_itemid(_);
               const _ = await _._.FetchTranslationFromCrowdIn(_, _);
-              if (1 != _.GetEResult())
+              if (_.GetEResult() != _._.k_EResultOK)
                 throw new Error(
                   `Error from FetchLocalizationForClanEventFromCrowdIn: ${_.GetErrorMessage()} (${_.GetEResult()})`,
                 );

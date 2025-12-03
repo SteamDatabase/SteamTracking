@@ -68,52 +68,54 @@
             overscan: l,
             renderItem: a,
             bDynamic: s,
-            className: c,
-            forceVirtualizeType: d,
-            initialOffset: m,
-            onOffsetChange: f,
-            ...h
+            measureElement: c,
+            className: d,
+            forceVirtualizeType: m,
+            initialOffset: f,
+            onOffsetChange: h,
+            ...b
           } = e,
-          [b, C] = (0, u.useState)(d),
-          [E, S] = u.useState(),
-          [z, x] = u.useState(),
-          R = u.useCallback(
+          [E, C] = (0, u.useState)(m),
+          [S, z] = u.useState(),
+          [x, R] = u.useState(),
+          y = u.useCallback(
             (e) => {
-              if (!e || "window" == d) return;
+              if (!e || "window" == m) return;
               const t = (0, p._f)(e, "y");
               (0, u.startTransition)(() => {
-                S(t || void 0),
-                  x(e.offsetTop),
-                  d || C(t ? "element" : "window");
+                z(t || void 0),
+                  R(e.offsetTop),
+                  m || C(t ? "element" : "window");
               });
             },
-            [d],
+            [m],
           ),
-          y = (0, r.Ue)(R, t),
-          H = {
+          H = (0, r.Ue)(y, t),
+          I = {
             nRows: n,
             nItemHeight: o,
             nRowGap: i,
             overscan: l,
             renderItem: a,
             bDynamic: s,
-            forceVirtualizeType: d,
-            initialOffset: m,
-            onOffsetChange: f,
+            measureElement: c,
+            forceVirtualizeType: m,
+            initialOffset: f,
+            onOffsetChange: h,
           };
         return u.createElement(
           g.Z,
-          { className: c, ref: y, ...h },
+          { className: d, ref: H, ...b },
           u.createElement(
             u.Suspense,
             null,
-            "element" === b &&
+            "element" === E &&
               u.createElement(w, {
-                ...H,
-                nScrollMargin: z || 0,
-                elScrollable: E,
+                ...I,
+                nScrollMargin: x || 0,
+                elScrollable: S,
               }),
-            "window" === b && u.createElement(v, { ...H, nScrollMargin: z }),
+            "window" === E && u.createElement(v, { ...I, nScrollMargin: x }),
           ),
         );
       });
@@ -126,16 +128,18 @@
             overscan: i = 6,
             initialOffset: a,
             onOffsetChange: s,
+            measureElement: c,
           } = e,
-          c = r + o,
-          d = (0, l.XW)({
+          d = r + o,
+          m = (0, l.XW)({
             count: n,
             scrollMargin: t,
-            estimateSize: u.useCallback(() => c, [c]),
+            estimateSize: u.useCallback(() => d, [d]),
+            measureElement: c,
             overscan: i,
             initialOffset: a,
             initialRect: void 0,
-            observeElementOffset: E,
+            observeElementOffset: C,
             observeElementRect: S,
             onChange(e, t) {
               s?.(e.scrollOffset);
@@ -144,10 +148,10 @@
         return (
           u.useEffect(() => {
             (0, u.startTransition)(() => {
-              d.measure();
+              m.measure();
             });
-          }, [d, c]),
-          u.createElement(b, { ...e, virtualizer: d })
+          }, [m, d]),
+          u.createElement(b, { ...e, virtualizer: m })
         );
       }
       function w(e) {
@@ -160,17 +164,19 @@
             overscan: a = 6,
             initialOffset: s,
             onOffsetChange: c,
+            measureElement: d,
           } = e,
-          d = o + i,
-          m = (0, l.Te)({
+          m = o + i,
+          g = (0, l.Te)({
             count: t,
             scrollMargin: n - (r?.offsetTop || 0),
             getScrollElement: () => r,
-            estimateSize: u.useCallback(() => d, [d]),
+            estimateSize: u.useCallback(() => m, [m]),
+            measureElement: d,
             overscan: a,
             initialRect: r ? void 0 : { height: 1e3, width: 1e3 },
             initialOffset: s,
-            observeElementOffset: E,
+            observeElementOffset: C,
             observeElementRect: z,
             onChange(e, t) {
               c?.(e.scrollOffset);
@@ -179,10 +185,10 @@
         return (
           u.useEffect(() => {
             (0, u.startTransition)(() => {
-              m.measure();
+              g.measure();
             });
-          }, [m, d]),
-          u.createElement(b, { ...e, virtualizer: m })
+          }, [g, m]),
+          u.createElement(b, { ...e, virtualizer: g })
         );
       }
       function b(e) {
@@ -221,7 +227,7 @@
           ),
         );
       }
-      function C(e) {
+      function E(e) {
         return (...t) => {
           queueMicrotask(() => {
             (0, u.startTransition)(() => {
@@ -230,11 +236,11 @@
           });
         };
       }
-      function E(e, t) {
+      function C(e, t) {
         const n = e.scrollElement;
         if (!n) return;
         let r;
-        r = C(
+        r = E(
           "scrollX" in n
             ? (r) => t(n[e.options.horizontal ? "scrollX" : "scrollY"], r)
             : (r) => t(n[e.options.horizontal ? "scrollLeft" : "scrollTop"], r),
@@ -254,7 +260,7 @@
       function S(e, t) {
         const n = e.scrollElement;
         if (!n) return;
-        const r = C(() => t({ width: n.innerWidth, height: n.innerHeight }));
+        const r = E(() => t({ width: n.innerWidth, height: n.innerHeight }));
         return (
           r(),
           n.addEventListener("resize", r, { passive: !0 }),
@@ -266,7 +272,7 @@
       function z(e, t) {
         const n = e.scrollElement;
         if (!n) return;
-        const r = C((e) =>
+        const r = E((e) =>
           t({ width: Math.round(e.width), height: Math.round(e.height) }),
         );
         r(n.getBoundingClientRect());
@@ -313,7 +319,7 @@
             getRowKey: v,
             initialSorting: w,
             initialColumnFilters: b,
-            initialGrouping: C,
+            initialGrouping: E,
             initialExpanded: x,
             initialColumnPinning: y,
             initialColumnVisibility: H,
@@ -344,7 +350,7 @@
             defaultColumn: { minSize: 60, maxSize: 800 },
             initialState: {
               sorting: w,
-              grouping: C ?? [],
+              grouping: E ?? [],
               expanded: x,
               columnPinning: y ?? {},
               columnFilters: b,
@@ -377,7 +383,7 @@
             estimateSize: u.useCallback(() => g, [g]),
             overscan: p,
             initialRect: void 0,
-            observeElementOffset: E,
+            observeElementOffset: C,
             observeElementRect: (e, t) => ("window" === D ? S(e, t) : z(e, t)),
             getItemKey(e) {
               const t = A[e];
@@ -425,7 +431,7 @@
                 Array.from(n).sort((e, t) => e - t)
               );
             },
-            observeElementOffset: E,
+            observeElementOffset: C,
             observeElementRect: (e, t) => ("window" === D ? S(e, t) : z(e, t)),
           });
         (0, u.useEffect)(() => {

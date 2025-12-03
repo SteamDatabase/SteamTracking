@@ -23,6 +23,8 @@
         Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
         SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
         Item: "_2aNlsjcdOdHOtP8uACA3bM",
+        "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
+        "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
         "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
         "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
       };
@@ -353,6 +355,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
@@ -405,18 +408,20 @@
           !_)
         )
           return null;
-        const { value: _, onValueChange: _ } = _,
+        const { value: _, onValueChange: _, radius: _, size: _ } = _,
           _ = _ === _,
           _ = _ ? void 0 : () => _(_),
           _ = void 0 === __webpack_require__ ? _ : __webpack_require__;
         return _.createElement(
           _._,
           {
-            radius: _.radius,
+            justify: "center",
+            align: "center",
+            radius: _,
             ref: _,
             onClick: _,
             "data-selected": _ ? "true" : "false",
-            className: _.Item,
+            className: _()(_.Item, _ && _[`Size-${_}`]),
           },
           _,
         );
@@ -425,6 +430,7 @@
           const {
               variant: _ = "default",
               radius: __webpack_require__,
+              size: _,
               children: _,
               value: _,
               onValueChange: _,
@@ -455,8 +461,9 @@
                 register: _,
                 unregister: _,
                 radius: __webpack_require__,
+                size: _,
               }),
-              [_, _, _, _, __webpack_require__],
+              [_, _, _, _, __webpack_require__, _],
             );
           return _.createElement(
             _._,
@@ -466,6 +473,7 @@
               focusable: !1,
               variant: _,
               radius: __webpack_require__,
+              size: _,
               className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
               tabIndex: 0,
               onKeyDown: (_) => {

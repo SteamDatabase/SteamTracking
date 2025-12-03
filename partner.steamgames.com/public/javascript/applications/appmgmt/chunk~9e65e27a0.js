@@ -228,32 +228,33 @@
     562: (e, t, a) => {
       "use strict";
       a.d(t, {
-        DT: () => b,
-        GX: () => d,
-        LD: () => S,
-        XL: () => E,
-        fT: () => _,
-        fs: () => p,
-        k: () => T,
-        lY: () => h,
-        tV: () => A,
-        vv: () => C,
+        DT: () => T,
+        GX: () => g,
+        LD: () => y,
+        XL: () => C,
+        fT: () => S,
+        fs: () => d,
+        k: () => f,
+        lY: () => _,
+        tV: () => b,
+        vv: () => A,
       });
       var s = a(34629),
         n = a(41735),
         r = a.n(n),
         o = a(90626),
-        l = a(68797),
-        i = a(78327),
-        m = a(14947),
-        u = a(65946),
-        c = a(6419);
-      class p {
+        l = a(37085),
+        i = a(68797),
+        m = a(78327),
+        u = a(14947),
+        c = a(65946),
+        p = a(6419);
+      class d {
         m_mapCategories;
         m_promise;
         static s_singleton;
         constructor() {
-          "dev" === i.TS.WEB_UNIVERSE &&
+          "dev" === m.TS.WEB_UNIVERSE &&
             (window.g_ContentHubCategoriesStore = this);
         }
         BIsLoaded() {
@@ -269,17 +270,17 @@
         }
         async Load() {
           const e =
-              i.TS.PARTNER_BASE_URL +
+              m.TS.PARTNER_BASE_URL +
               "admin/store/contenthub/ajaxgetcontenthubcategories",
-            t = { origin: self.origin, sessionid: i.TS.SESSIONID };
+            t = { origin: self.origin, sessionid: m.TS.SESSIONID };
           let a = null;
           try {
             const s = await r().get(e, { params: t });
-            if (200 === s.status && 1 === s.data?.success)
+            if (200 === s.status && s.data?.success === l.d.k_EResultOK)
               return void (this.m_mapCategories = this.ParseResponse(s.data));
-            (this.m_promise = null), (a = (0, l.H)(s));
+            (this.m_promise = null), (a = (0, i.H)(s));
           } catch (e) {
-            (this.m_promise = null), (a = (0, l.H)(e));
+            (this.m_promise = null), (a = (0, i.H)(e));
           }
           console.error(
             "CContentHubCategoriesStore.Load failed: " + a.strErrorMsg,
@@ -321,40 +322,40 @@
           return t;
         }
         static Get() {
-          return p.s_singleton || (p.s_singleton = new p()), p.s_singleton;
+          return d.s_singleton || (d.s_singleton = new d()), d.s_singleton;
         }
       }
-      async function d() {
+      async function g() {
         const e =
-            i.TS.PARTNER_BASE_URL +
+            m.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxgetcontenthubcategorieskv",
-          t = { origin: self.origin, sessionid: i.TS.SESSIONID };
+          t = { origin: self.origin, sessionid: m.TS.SESSIONID };
         let a = null;
         try {
           const s = await r().get(e, { params: t, withCredentials: !0 });
-          if (200 === s.status && 1 === s.data?.success) {
+          if (200 === s.status && s.data?.success === l.d.k_EResultOK) {
             const e = { rgCategories: [], bHasUnpublishedChanges: !1 };
             return (
               s.data.in_progress
-                ? ((e.rgCategories = g(
+                ? ((e.rgCategories = h(
                     JSON.parse(s.data.in_progress).categories,
                   )),
                   (e.bHasUnpublishedChanges = !0))
                 : s.data.active &&
-                  (e.rgCategories = g(JSON.parse(s.data.active).categories)),
+                  (e.rgCategories = h(JSON.parse(s.data.active).categories)),
               e
             );
           }
-          a = (0, l.H)(s);
+          a = (0, i.H)(s);
         } catch (e) {
-          a = (0, l.H)(e);
+          a = (0, i.H)(e);
         }
         return (
           console.error("GetCategoriesKV failed: " + a.strErrorMsg, a),
           { rgCategories: [] }
         );
       }
-      function g(e) {
+      function h(e) {
         const t = [];
         for (const a of Object.keys(e)) {
           const s = e[a],
@@ -389,18 +390,18 @@
         }
         return t;
       }
-      function h() {
+      function _() {
         const [e, t] = (0, o.useState)(null);
         return (
           (0, o.useEffect)(() => {
-            d().then((e) => {
+            g().then((e) => {
               t(e.rgCategories);
             });
           }, []),
           e
         );
       }
-      async function _(e) {
+      async function S(e) {
         const t = {};
         for (const a of e)
           (t[a.handle] = {
@@ -423,40 +424,41 @@
             1 === t[a.handle].replaces_tags?.length &&
               (t[a.handle].replaces_tags = t[a.handle].replaces_tags[0]);
         const a =
-            i.TS.PARTNER_BASE_URL +
+            m.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxsavecontenthubcategorieskv",
           s = new FormData();
-        s.append("sessionid", i.TS.SESSIONID),
+        s.append("sessionid", m.TS.SESSIONID),
           s.append("origin", self.origin),
           s.append("json", JSON.stringify(t));
         let n = null;
         try {
           const e = await r().post(a, s, { withCredentials: !0 });
-          if (200 === e.status && 1 === e.data?.success)
-            return y.Get().ClearDirty(), null;
-          n = (0, l.H)(e);
+          if (200 === e.status && e.data?.success === l.d.k_EResultOK)
+            return E.Get().ClearDirty(), null;
+          n = (0, i.H)(e);
         } catch (e) {
-          n = (0, l.H)(e);
+          n = (0, i.H)(e);
         }
         return console.error("SaveCategoriesKV failed: " + n.strErrorMsg, n), n;
       }
-      async function S() {
+      async function y() {
         const e =
-            i.TS.PARTNER_BASE_URL +
+            m.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxpublishcontenthubcategorieskv",
-          t = { origin: self.origin, sessionid: i.TS.SESSIONID };
+          t = { origin: self.origin, sessionid: m.TS.SESSIONID };
         try {
           const a = await r().get(e, { params: t, withCredentials: !0 });
-          if (200 !== a.status || 1 !== a.data?.success) return (0, l.H)(a);
+          if (200 !== a.status || a.data?.success !== l.d.k_EResultOK)
+            return (0, i.H)(a);
         } catch (e) {
-          return (0, l.H)(e);
+          return (0, i.H)(e);
         }
         return null;
       }
-      class y {
+      class E {
         constructor() {
-          (0, m.Gn)(this),
-            "dev" === i.TS.WEB_UNIVERSE && (window.g_StoreTagStore = this);
+          (0, u.Gn)(this),
+            "dev" === m.TS.WEB_UNIVERSE && (window.g_StoreTagStore = this);
         }
         m_rgTags;
         m_rgCategories;
@@ -496,17 +498,17 @@
         }
         async Load() {
           const e =
-              i.TS.PARTNER_BASE_URL +
+              m.TS.PARTNER_BASE_URL +
               "admin/store/contenthub/ajaxgetstoretagsandcategories",
             t = {
               origin: self.origin,
-              sessionid: i.TS.SESSIONID,
-              l: i.TS.LANGUAGE,
+              sessionid: m.TS.SESSIONID,
+              l: m.TS.LANGUAGE,
             };
           let a = null;
           try {
             const s = await r().get(e, { params: t });
-            if (200 === s.status && 1 === s.data?.success)
+            if (200 === s.status && s.data?.success === l.d.k_EResultOK)
               return (
                 (this.m_rgTags = s.data.tags),
                 (this.m_rgCategories = s.data.categories),
@@ -519,7 +521,7 @@
                   this.m_mapStoreCategories.set(e.categoryid, e),
                 ),
                 void (
-                  "dev" === i.TS.WEB_UNIVERSE &&
+                  "dev" === m.TS.WEB_UNIVERSE &&
                   console.log(
                     "tags " +
                       this.m_rgTags.length +
@@ -528,9 +530,9 @@
                   )
                 )
               );
-            (this.m_promise = null), (a = (0, l.H)(s));
+            (this.m_promise = null), (a = (0, i.H)(s));
           } catch (e) {
-            (this.m_promise = null), (a = (0, l.H)(e));
+            (this.m_promise = null), (a = (0, i.H)(e));
           }
           console.error(
             "CStoreTagsAndCategoriesStore.Load failed: " + a.strErrorMsg,
@@ -538,52 +540,50 @@
           );
         }
         static Get() {
-          return y.s_singleton || (y.s_singleton = new y()), y.s_singleton;
+          return E.s_singleton || (E.s_singleton = new E()), E.s_singleton;
         }
       }
-      function E() {
-        return (0, u.q3)(() => y.Get().BIsDirty());
-      }
       function C() {
-        return { fnSetDirty: y.Get().SetDirty };
+        return (0, c.q3)(() => E.Get().BIsDirty());
       }
       function A() {
-        return y.Get().BIsDirty();
+        return { fnSetDirty: E.Get().SetDirty };
       }
       function b() {
-        const [e, t] = o.useState(y.Get().GetTags()),
-          [a, s] = o.useState(y.Get().GetCategories());
+        return E.Get().BIsDirty();
+      }
+      function T() {
+        const [e, t] = o.useState(E.Get().GetTags()),
+          [a, s] = o.useState(E.Get().GetCategories());
         return (
           o.useEffect(() => {
             (void 0 !== e && void 0 !== a) ||
-              y
-                .Get()
+              E.Get()
                 .HintLoad()
                 .then(() => {
-                  t(y.Get().GetTags()), s(y.Get().GetCategories());
+                  t(E.Get().GetTags()), s(E.Get().GetCategories());
                 });
           }, [a, e]),
           { rgTags: e, rgCategories: a }
         );
       }
-      function T() {
-        const [e, t] = o.useState(y.Get().GetStoreTagMap()),
-          [a, s] = o.useState(y.Get().GetStoreCategoryMap());
+      function f() {
+        const [e, t] = o.useState(E.Get().GetStoreTagMap()),
+          [a, s] = o.useState(E.Get().GetStoreCategoryMap());
         return (
           o.useEffect(() => {
             (void 0 !== e && void 0 !== a) ||
-              y
-                .Get()
+              E.Get()
                 .HintLoad()
                 .then(() => {
-                  t(y.Get().GetStoreTagMap()), s(y.Get().GetStoreCategoryMap());
+                  t(E.Get().GetStoreTagMap()), s(E.Get().GetStoreCategoryMap());
                 });
           }, [a, e]),
           { mapStoreTags: e, mapStoreCategories: a }
         );
       }
-      (0, s.Cg)([m.sH], y.prototype, "m_bDirty", void 0),
-        (0, s.Cg)([c.o], y.prototype, "SetDirty", null);
+      (0, s.Cg)([u.sH], E.prototype, "m_bDirty", void 0),
+        (0, s.Cg)([p.o], E.prototype, "SetDirty", null);
     },
     31376: (e, t, a) => {
       "use strict";
@@ -1312,7 +1312,7 @@
               ("tagids" === t.type ||
                 "category" === t.type ||
                 "contenthub" == t.type) &&
-                r.createElement(D, { category: t }),
+                r.createElement(k, { category: t }),
             ),
           ),
           r.createElement(
@@ -1330,7 +1330,7 @@
           ),
         );
       }
-      function D(e) {
+      function k(e) {
         const { category: t } = e,
           [a, s] = (0, r.useState)(!1),
           [n, o] = (0, r.useState)(0);
@@ -1344,17 +1344,17 @@
               r.createElement(
                 "div",
                 { className: b().Category },
-                r.createElement(R, {
+                r.createElement(H, {
                   category: t,
                   list: "must",
                   title: "Must have all of these tags",
                 }),
-                r.createElement(R, {
+                r.createElement(H, {
                   category: t,
                   list: "any",
                   title: "Must have one of these tags",
                 }),
-                r.createElement(R, {
+                r.createElement(H, {
                   category: t,
                   list: "mustnot",
                   title: "Must not have any of these tags",
@@ -1367,7 +1367,7 @@
             r.createElement(
               "div",
               { className: b().CategoryCtn },
-              r.createElement(R, {
+              r.createElement(H, {
                 category: t,
                 list: "replaces_tags",
                 title:
@@ -1388,7 +1388,7 @@
                   { onClick: () => o(n + 1) },
                   "Refresh Stats",
                 ),
-                r.createElement(k, { category: t }),
+                r.createElement(D, { category: t }),
               )
             : r.createElement(m.Yh, {
                 checked: a,
@@ -1398,7 +1398,7 @@
               }),
         );
       }
-      function k(e) {
+      function D(e) {
         const { category: t } = e,
           a = (0, n.p$)(t.must, t.any, t.mustnot);
         if (!a)
@@ -1449,7 +1449,7 @@
               { className: C.ThemeDefinitionCtn },
               "Summary: ",
               r.createElement(E.KU, { nTotalGames: a.total_games }),
-              Boolean(s) && r.createElement(H, { category: t }),
+              Boolean(s) && r.createElement(R, { category: t }),
             ),
             r.createElement(
               "div",
@@ -1473,13 +1473,13 @@
           ),
         );
       }
-      function H(e) {
+      function R(e) {
         const { category: t } = e,
           a = (0, n.eX)(t.must, t.any, t.mustnot),
           s = (0, n.mg)(t.must, t.any, t.mustnot);
         return r.createElement(E.ny, { saleSummary: a, topAppSummary: s });
       }
-      function R(e) {
+      function H(e) {
         const { category: t, list: a, title: n } = e,
           { rgTags: l, rgCategories: i } = (0, s.DT)(),
           u = (0, S.CH)(),
@@ -1651,7 +1651,7 @@
         W7: () => v,
         hp: () => E,
         iT: () => C,
-        ny: () => D,
+        ny: () => k,
       });
       var s = a(562),
         n = a(31376),
@@ -1700,7 +1700,7 @@
                         n.tt,
                         " Days of Sale Summaries",
                       ),
-                    l.createElement(H, null),
+                    l.createElement(R, null),
                   ),
                 ),
                 l.createElement(
@@ -1797,7 +1797,7 @@
             l.createElement(
               "div",
               { className: S.SaleStats },
-              Boolean(a && o) && l.createElement(k, { category: t }),
+              Boolean(a && o) && l.createElement(D, { category: t }),
             ),
           ),
           l.createElement(
@@ -1965,7 +1965,7 @@
               ", ",
             );
       }
-      function D(e) {
+      function k(e) {
         const { saleSummary: t, topAppSummary: a } = e;
         return t
           ? l.createElement(
@@ -2050,13 +2050,13 @@
               string: "Loading Sale Info",
             });
       }
-      function k(e) {
+      function D(e) {
         const { category: t } = e,
           a = (0, n.Th)(t),
           s = (0, n.hl)(t);
-        return l.createElement(D, { saleSummary: a, topAppSummary: s });
+        return l.createElement(k, { saleSummary: a, topAppSummary: s });
       }
-      function H(e) {
+      function R(e) {
         const t = (0, n.AY)();
         return l.createElement(
           "a",
@@ -2101,8 +2101,8 @@
           [T, f] = s.useState(void 0),
           [v, G] = s.useState(void 0),
           [w, N] = s.useState(-1),
-          [D, k] = s.useState(void 0),
-          [H, R] = s.useState(0),
+          [k, D] = s.useState(void 0),
+          [R, H] = s.useState(0),
           [B, L] = s.useState(0),
           [I, M] = s.useState(void 0),
           [P, U] = s.useState(""),
@@ -2110,29 +2110,29 @@
           O = s.useMemo(() => new Array(), []),
           j = s.useMemo(() => new Array(), []),
           F = s.useMemo(() => g().CancelToken.source(), []),
-          W = () => {
+          K = () => {
             x.current?.firstElementChild &&
-              (R(x.current.firstElementChild.getBoundingClientRect().height),
+              (H(x.current.firstElementChild.getBoundingClientRect().height),
               L(x.current.firstElementChild.getBoundingClientRect().width));
           };
         s.useEffect(() => {
-          W();
+          K();
         }, []),
           s.useEffect(() => () => F.cancel("ReorderableList unmounting"), [F]);
-        const z = (e, t) => {
+        const W = (e, t) => {
             F.token.reason ||
               (x.current.firstElementChild?.getBoundingClientRect().height >
                 0 &&
-                H !=
+                R !=
                   x.current.firstElementChild.getBoundingClientRect().height &&
-                W(),
+                K(),
               ((e, t) => {
                 const a = O[e]?.current;
                 if (!a)
                   return void console.error(
                     "start element grab missing element at index " + e,
                   );
-                b(!0), N(e), M(void 0), k(e);
+                b(!0), N(e), M(void 0), D(e);
                 const s = t.clientX - a.getBoundingClientRect().left;
                 f(s);
                 const n = t.clientY - a.getBoundingClientRect().top;
@@ -2144,11 +2144,11 @@
               })(t, e),
               e.preventDefault());
           },
-          Y = (e, a) => {
+          z = (e, a) => {
             const s = h.OQ(a > e ? a - 1 : a, 0, t.length - 1);
             e != s && (S ? S(e, s) : (0, l.yY)(t, e, s), $(s), d && d(t));
           },
-          K = (e) => {
+          Y = (e) => {
             A &&
               !F.token.reason &&
               ((() => {
@@ -2159,9 +2159,9 @@
                   b(!1),
                   N(-1),
                   M(void 0),
-                  k(void 0);
+                  D(void 0);
               })(),
-              Y(w, D));
+              z(w, k));
           },
           V = (e) => {
             if (!A || F.token.reason) return;
@@ -2178,7 +2178,7 @@
                 break;
               }
             }
-            k(s ?? t.length),
+            D(s ?? t.length),
               ((e) => {
                 const t = O[w]?.current;
                 t
@@ -2188,7 +2188,7 @@
               })(e);
           };
         (0, n.l6)(window, "mousemove", (e) => V(e)),
-          (0, n.l6)(window, "mouseup", (e) => K()),
+          (0, n.l6)(window, "mouseup", (e) => Y()),
           s.useEffect(() => {
             for (let e = O.length; e < t.length; e++)
               O.push(s.createRef()), j.push(s.createRef());
@@ -2199,7 +2199,7 @@
               a = Number.parseInt(t);
             if (0 == t.length || isNaN(a)) return;
             const s = a - 1;
-            e != s && Y(e, s);
+            e != s && z(e, s);
           },
           [Q, $] = s.useState(void 0);
         return s.createElement(
@@ -2209,7 +2209,7 @@
             s.createElement(
               "div",
               { key: n, ref: j[n] },
-              n == D && s.createElement(y, { width: B }),
+              n == k && s.createElement(y, { width: B }),
               s.createElement(
                 "div",
                 { ref: O[n], className: m().DragGhost },
@@ -2228,7 +2228,7 @@
                         m().Grabbing,
                       ),
                       type: "text",
-                      value: (D > n ? D - 1 : D) + 1,
+                      value: (k > n ? k - 1 : k) + 1,
                       disabled: !0,
                     }),
                     a(e, n),
@@ -2253,7 +2253,7 @@
                     E && m().DisabledGrab,
                   ),
                   src: r,
-                  onMouseDown: Boolean(E) ? void 0 : (e) => z(e, n),
+                  onMouseDown: Boolean(E) ? void 0 : (e) => W(e, n),
                 }),
                 s.createElement("input", {
                   className: (0, _.A)(m().WhitelistNumber, E && m().Disabled),
@@ -2290,7 +2290,7 @@
                       }),
                   ),
               ),
-              D == t.length &&
+              k == t.length &&
                 n == t.length - 1 &&
                 s.createElement(y, { width: B }),
             ),

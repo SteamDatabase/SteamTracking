@@ -161,8 +161,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -174,7 +176,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_EPriceProposalStateInvalid = 0)] =
+          "k_EPriceProposalStateInvalid"),
+          (_[(_.k_EPriceProposalStateActive = 1)] =
+            "k_EPriceProposalStateActive"),
+          (_[(_.k_EPriceProposalStateCanceled = 2)] =
+            "k_EPriceProposalStateCanceled"),
+          (_[(_.k_EPriceProposalStateApplied = 3)] =
+            "k_EPriceProposalStateApplied"),
+          (_[(_.k_EPriceProposalStateApproved = 4)] =
+            "k_EPriceProposalStateApproved");
+      })(_ || (_ = {}));
       class _ {
         m_mapPackagePrice = new Map();
         m_setRecurringSubscriptions = new Set();
@@ -539,7 +554,7 @@
             rtSubmitted: Math.floor(Date.now() / 1e3),
             submitterID: _._.accountid,
             prices: {},
-            eState: 1,
+            eState: _.k_EPriceProposalStateActive,
             bPartnerWillPublish: _,
           };
           for (const _ of this.m_rgKnownPriceKeys)
@@ -568,10 +583,10 @@
             });
             if (
               200 == _?.status &&
-              1 == _.data?.success &&
-              0 != _.data.eState
+              _.data?.success == _._.k_EResultOK &&
+              _.data.eState != _.k_EPriceProposalStateInvalid
             ) {
-              if (3 == _.data.eState) {
+              if (_.data.eState == _.k_EPriceProposalStateApplied) {
                 this.m_mapPriceProposals.delete(_);
                 for (const _ of this.m_rgKnownPriceKeys)
                   this.m_mapPackagePrice.get(_).set(_, _.prices[_]);
@@ -592,15 +607,15 @@
               _,
             ),
             _?.response?.data ?? {
-              success: 2,
+              success: _._.k_EResultFail,
             }
           );
         }
         async PublishApprovedProposal(_, _, __webpack_require__ = 0) {
           const _ = this.m_mapPriceProposals.get(_);
-          if (4 != _?.eState || !_?.proposalKey)
+          if (_?.eState != _.k_EPriceProposalStateApproved || !_?.proposalKey)
             return {
-              success: 8,
+              success: _._.k_EResultInvalidParam,
             };
           const _ = (0, _._)("publisherid", "application_config"),
             _ =
@@ -619,7 +634,7 @@
               cancelToken: _?.token,
               timeout: __webpack_require__,
             });
-            if (200 == _?.status && 1 == _.data?.success) {
+            if (200 == _?.status && _.data?.success == _._.k_EResultOK) {
               this.m_mapPriceProposals.delete(_);
               for (const _ of this.m_rgKnownPriceKeys)
                 this.m_mapPackagePrice.get(_).set(_, _.prices[_]),
@@ -643,7 +658,7 @@
               _,
             ),
             _?.response?.data ?? {
-              success: 2,
+              success: _._.k_EResultFail,
             }
           );
         }
@@ -651,7 +666,7 @@
           const _ = this.m_mapPriceProposals.get(_);
           if (!_?.proposalKey)
             return {
-              success: 8,
+              success: _._.k_EResultInvalidParam,
             };
           const _ = (0, _._)("publisherid", "application_config"),
             _ =
@@ -669,7 +684,7 @@
               withCredentials: !0,
               cancelToken: _?.token,
             });
-            if (200 == _?.status && 1 == _.data?.success) {
+            if (200 == _?.status && _.data?.success == _._.k_EResultOK) {
               this.m_mapPriceProposals.delete(_);
               for (const _ of this.m_rgKnownPriceKeys)
                 this.GetPriceGridCellCallbackList(_, _).Dispatch(
@@ -692,7 +707,7 @@
               _,
             ),
             _?.response?.data ?? {
-              success: 2,
+              success: _._.k_EResultFail,
             }
           );
         }
@@ -1052,6 +1067,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const _ = (0, _._)("#PackageGrid_MultipleBaseGamesFoundForPackage"),
@@ -1093,12 +1109,12 @@
           return null;
         },
         _ = new Map([
-          [38, (_) => _(_, _)],
-          [39, _],
-          [40, (_) => _(_, _)],
-          [37, _],
-          [9, (_) => _(_, _)],
-          [13, (_) => _(_, _)],
+          [_._.UpArrow, (_) => _(_, _)],
+          [_._.RightArrow, _],
+          [_._.DownArrow, (_) => _(_, _)],
+          [_._.LeftArrow, _],
+          [_._.Tab, (_) => _(_, _)],
+          [_._.Enter, (_) => _(_, _)],
         ]);
       function _(_) {
         const _ = Array.prototype.slice.call(_.children).reverse();
@@ -1111,7 +1127,8 @@
       }
       function _(_) {
         let _ = _.get(_.keyCode);
-        if ((9 === _.keyCode && _.shiftKey && (_ = (_) => _(_, _)), !_)) return;
+        if ((_.keyCode === _._.Tab && _.shiftKey && (_ = (_) => _(_, _)), !_))
+          return;
         var _;
         let _ = _(
           ((_ = _.currentTarget),

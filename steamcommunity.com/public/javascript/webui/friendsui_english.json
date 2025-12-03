@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "You do not have permission to modify this page",
     "Chat_Settings_Permission_Denied_Permissions": "You only have permission to view role details",
     "Chat_Settings_Permission_Denied_Some": "You can only edit roles below your highest assigned role",
+    "Chat_Settings_Permission_DirectMessages": "Allow group members to send you direct messages",
     "Chat_Settings_Error_Unknown": "Image failed to upload",
     "Chat_Settings_Error_NotLoggedOn": "Not logged on",
     "Chat_Settings_Error_LimitedUser": "Limited users cannot upload images",

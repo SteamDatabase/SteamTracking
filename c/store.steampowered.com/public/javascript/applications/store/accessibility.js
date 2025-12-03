@@ -71,30 +71,37 @@
           bAccessibilityPlayableWithoutQuicktimeEvents: "#without_qte",
           bAccessibilityChatTexttoSpeech: "#tts",
           bAccessibilityChatSpeechtoText: "#stt",
+        };
+      var _;
+      !(function (_) {
+        (_.Gameplay = "gameplay"),
+          (_.Visual = "visual"),
+          (_.Audio = "audio"),
+          (_.Input = "input");
+      })(_ || (_ = {}));
+      const _ = {
+          bAccessibilityDifficultyLevels: _.Gameplay,
+          bAccessibilitySaveAnytime: _.Gameplay,
+          bAccessibilityNarratedMenus: _.Audio,
+          bAccessibilityBackgroundVolumeControls: _.Audio,
+          bAccessibilityStereoSound: _.Audio,
+          bAccessibilitySurroundSound: _.Audio,
+          bAccessibilityResizableUI: _.Visual,
+          bAccessibilitySubtitles: _.Visual,
+          bAccessibilityColorAlternatives: _.Visual,
+          bAccessibilityCameraComfort: _.Visual,
+          bAccessibilityKeyboardOnlyOption: _.Input,
+          bAccessibilityMouseOnlyOption: _.Input,
+          bAccessibilityTouchOnlyOption: _.Input,
+          bAccessibilityPlayableWithoutQuicktimeEvents: _.Input,
+          bAccessibilityChatTexttoSpeech: _.Input,
+          bAccessibilityChatSpeechtoText: _.Input,
         },
         _ = {
-          bAccessibilityDifficultyLevels: "gameplay",
-          bAccessibilitySaveAnytime: "gameplay",
-          bAccessibilityNarratedMenus: "audio",
-          bAccessibilityBackgroundVolumeControls: "audio",
-          bAccessibilityStereoSound: "audio",
-          bAccessibilitySurroundSound: "audio",
-          bAccessibilityResizableUI: "visual",
-          bAccessibilitySubtitles: "visual",
-          bAccessibilityColorAlternatives: "visual",
-          bAccessibilityCameraComfort: "visual",
-          bAccessibilityKeyboardOnlyOption: "input",
-          bAccessibilityMouseOnlyOption: "input",
-          bAccessibilityTouchOnlyOption: "input",
-          bAccessibilityPlayableWithoutQuicktimeEvents: "input",
-          bAccessibilityChatTexttoSpeech: "input",
-          bAccessibilityChatSpeechtoText: "input",
-        },
-        _ = {
-          gameplay: "#Accessibility_Group_Gameplay",
-          visual: "#Accessibility_Group_Visual",
-          audio: "#Accessibility_Group_Audio",
-          input: "#Accessibility_Group_Input",
+          [_.Gameplay]: "#Accessibility_Group_Gameplay",
+          [_.Visual]: "#Accessibility_Group_Visual",
+          [_.Audio]: "#Accessibility_Group_Audio",
+          [_.Input]: "#Accessibility_Group_Input",
         };
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(_.initialOpen ?? !1),
@@ -173,7 +180,7 @@
                     "li",
                     null,
                     _.createElement(_, {
-                      group: "gameplay",
+                      group: _.Gameplay,
                       features: _.gameplay,
                       open: _,
                     }),
@@ -183,7 +190,7 @@
                     "li",
                     null,
                     _.createElement(_, {
-                      group: "visual",
+                      group: _.Visual,
                       features: _.visual,
                       open: _,
                     }),
@@ -193,7 +200,7 @@
                     "li",
                     null,
                     _.createElement(_, {
-                      group: "audio",
+                      group: _.Audio,
                       features: _.audio,
                       open: _,
                     }),
@@ -203,7 +210,7 @@
                     "li",
                     null,
                     _.createElement(_, {
-                      group: "input",
+                      group: _.Input,
                       features: _.input,
                       open: _,
                     }),

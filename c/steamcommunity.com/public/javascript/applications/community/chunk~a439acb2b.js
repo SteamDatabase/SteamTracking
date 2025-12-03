@@ -49,7 +49,7 @@
       function _(_) {
         var _, _;
         const { editModel: _ } = _,
-          [_, _] = _.useState(1),
+          [_, _] = _.useState(_._.k_Lang_German),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(null),
           _ = _.GetClanSteamID(),
@@ -123,7 +123,7 @@
                 _.createElement(_, {
                   onChange: (_) => {
                     const _ = _.target.value;
-                    if ("all" === _) _(-1);
+                    if ("all" === _) _(_._.k_Lang_None);
                     else {
                       const _ = (0, _._)(_);
                       _(_);
@@ -376,8 +376,11 @@
                         error: _,
                       });
                     if (_[_].name.toLocaleLowerCase().endsWith(".xml")) {
-                      let { language: _ } = (0, _._)(_[_].name, -1);
-                      if (null == _ || -1 == _)
+                      let { language: _ } = (0, _._)(
+                        _[_].name,
+                        _._.k_Lang_None,
+                      );
+                      if (null == _ || _ == _._.k_Lang_None)
                         return void _({
                           code: "",
                           message: (0, _._)(
@@ -483,7 +486,9 @@
         }
         SetLocalization(_, _, _) {
           let _ = this.m_mapTokens.get(_);
-          _ || ((_ = (0, _._)([], 31, null)), this.m_mapTokens.set(_, _)),
+          _ ||
+            ((_ = (0, _._)([], _._.k_Lang_MAX, null)),
+            this.m_mapTokens.set(_, _)),
             (_[_] = _);
         }
         GetSortedTokenList() {
@@ -551,7 +556,7 @@
                     ? void 0
                     : _.length) >= 2 &&
                   "field" === _.meta.fields[0] &&
-                  -1 != (0, _._)(_.meta.fields[1], -1)
+                  (0, _._)(_.meta.fields[1], _._.k_Lang_None) != _._.k_Lang_None
                 ? (_ = this.ReadLocalizationData_CSV_LanguageColumns(_))
                 : (null ===
                     (_ =
@@ -596,7 +601,7 @@
           return (
             _.data.forEach((_) => {
               const _ = _.field;
-              for (let _ = 0; _ < 31; ++_) {
+              for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
                 const _ = (0, _._)((0, _._)(_));
                 _.SetLocalization(_, _, _[_]);
               }
@@ -608,8 +613,8 @@
           const _ = new _();
           return (
             _.data.forEach((_) => {
-              const _ = (0, _._)(_.language, 31);
-              if (31 !== _)
+              const _ = (0, _._)(_.language, _._.k_Lang_MAX);
+              if (_ !== _._.k_Lang_MAX)
                 for (const [_, _] of Object.entries(_))
                   "language" !== _ &&
                     "string" == typeof _ &&

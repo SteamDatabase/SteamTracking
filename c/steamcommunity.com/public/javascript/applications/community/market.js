@@ -248,6 +248,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _ = _._.LANGUAGE) {
         const _ = (0, _._)(),
@@ -276,7 +277,7 @@
               appid: _,
               language: _,
             });
-            if (!_.BSuccess() && 42 != _.GetEResult())
+            if (!_.BSuccess() && _.GetEResult() != _._.k_EResultNoMatch)
               throw `Error loading asset properties for ${_}: ${_.GetErrorMessage()}`;
             return {
               property_schemas:
@@ -498,7 +499,7 @@
                     _.set_classid(_), _.set_instanceid(_);
                   });
                 const _ = await _(_, _);
-                if (1 != _.GetEResult())
+                if (_.GetEResult() != _._.k_EResultOK)
                   throw `Error loading econ items: ${_.GetErrorMessage()}`;
                 return null !== (_ = _.Body().toObject().descriptions) &&
                   void 0 !== _
@@ -1520,6 +1521,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         return (0, _._)(
@@ -1682,7 +1684,8 @@
               null != __webpack_require__
                 ? __webpack_require__
                 : (null == _ ? void 0 : _.visible) &&
-                    14 !== (null == _ ? void 0 : _.type)
+                    (null == _ ? void 0 : _.type) !==
+                      _._.k_EStoreAppType_Advertising
                   ? _
                   : void 0;
           return _.createElement(
@@ -7614,6 +7617,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -8834,7 +8838,7 @@
             ),
           );
         const _ = (function (_) {
-          return _ === _ && 1 === _._.EUNIVERSE ? _ : _;
+          return _ === _ && _._.EUNIVERSE === _._.k_EUniversePublic ? _ : _;
         })(_);
         return _.createElement(_, {
           appid: _,
@@ -9184,6 +9188,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         eAdultOnlyMediaBehavior: "masked",
@@ -9207,8 +9212,12 @@
           );
         }, []) ||
           ("masked" == _ &&
-            (_._.excluded_content_descriptors.includes(4) ||
-              _._.excluded_content_descriptors.includes(3)))
+            (_._.excluded_content_descriptors.includes(
+              _._.k_EContentDescriptor_GratuitousSexualContent,
+            ) ||
+              _._.excluded_content_descriptors.includes(
+                _._.k_EContentDescriptor_AdultOnlySexualContent,
+              )))
           ? "blocked"
           : "masked" == _ && _
             ? "allowed"
@@ -9245,8 +9254,12 @@
         return (
           !!_ &&
           (!__webpack_require__ ||
-            __webpack_require__.content_descriptorids.includes(3) ||
-            __webpack_require__.content_descriptorids.includes(4))
+            __webpack_require__.content_descriptorids.includes(
+              _._.k_EContentDescriptor_AdultOnlySexualContent,
+            ) ||
+            __webpack_require__.content_descriptorids.includes(
+              _._.k_EContentDescriptor_GratuitousSexualContent,
+            ))
         );
       }
     },

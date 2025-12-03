@@ -9,8 +9,14 @@
       var _,
         _,
         _,
+        _,
+        _,
+        _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -21,6 +27,61 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_EPromoPlanAssociationType_Unknown = 0)] =
+          "k_EPromoPlanAssociationType_Unknown"),
+          (_[(_.k_EPromoPlanAssociationType_Spotlight = 1)] =
+            "k_EPromoPlanAssociationType_Spotlight"),
+          (_[(_.k_EPromoPlanAssociationType_MarketingMessage = 2)] =
+            "k_EPromoPlanAssociationType_MarketingMessage"),
+          (_[(_.k_EPromoPlanAssociationType_Takeover = 3)] =
+            "k_EPromoPlanAssociationType_Takeover"),
+          (_[(_.k_EPromoPlanAssociationType_Takeunder = 4)] =
+            "k_EPromoPlanAssociationType_Takeunder"),
+          (_[(_.k_EPromoPlanAssociationType_ContentHub_Takeover = 5)] =
+            "k_EPromoPlanAssociationType_ContentHub_Takeover"),
+          (_[(_.k_EPromoPlanAssociationType_DailyDeal = 6)] =
+            "k_EPromoPlanAssociationType_DailyDeal"),
+          (_[(_.k_EPromoPlanAssociationType_OptIn = 7)] =
+            "k_EPromoPlanAssociationType_OptIn"),
+          (_[(_.k_EPromoPlanAssociationType_Giveaway = 8)] =
+            "k_EPromoPlanAssociationType_Giveaway"),
+          (_[(_.k_EPromoPlanAssociationType_SteamChina_Takeover = 9)] =
+            "k_EPromoPlanAssociationType_SteamChina_Takeover"),
+          (_[(_.k_EPromoPlanAssociationType_DiscountEvent = 10)] =
+            "k_EPromoPlanAssociationType_DiscountEvent"),
+          (_[(_.k_EPromoPlanAssociationType_SaleEventGID = 11)] =
+            "k_EPromoPlanAssociationType_SaleEventGID"),
+          (_[
+            (_.k_EPromoPlanAssociationType_MarketingMessageMajorUpdateGID = 12)
+          ] = "k_EPromoPlanAssociationType_MarketingMessageMajorUpdateGID"),
+          (_[(_.k_EPromoPlanAssociationType_MAX = 13)] =
+            "k_EPromoPlanAssociationType_MAX");
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EPromotionNotification_Unknown = 0)] =
+            "k_EPromotionNotification_Unknown"),
+            (_[(_.k_EPromotionNotification_AssetRequest = 1)] =
+              "k_EPromotionNotification_AssetRequest"),
+            (_[(_.k_EPromotionNotification_AssetRequest_Reminder = 2)] =
+              "k_EPromotionNotification_AssetRequest_Reminder"),
+            (_[(_.k_EPromotionNotification_AssetRequest_Submitted = 3)] =
+              "k_EPromotionNotification_AssetRequest_Submitted"),
+            (_[(_.k_EPromotionNotification_MAX = 4)] =
+              "k_EPromotionNotification_MAX");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EPromotionEventInvite_Invalid = 0)] =
+            "k_EPromotionEventInvite_Invalid"),
+            (_[(_.k_EPromotionEventInvite_DailyDeal = 1)] =
+              "k_EPromotionEventInvite_DailyDeal"),
+            (_[(_.k_EPromotionEventInvite_MidWeekDeal = 2)] =
+              "k_EPromotionEventInvite_MidWeekDeal"),
+            (_[(_.k_EPromotionEventInvite_WeekendDeal = 3)] =
+              "k_EPromotionEventInvite_WeekendDeal"),
+            (_[(_.k_EPromotionEventInvite_AssetAndActionRequest = 4)] =
+              "k_EPromotionEventInvite_AssetAndActionRequest");
+        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -5752,7 +5813,7 @@
               __webpack_require__,
               _,
             );
-            if (1 != _.GetEResult())
+            if (_.GetEResult() != _._.k_EResultOK)
               throw new Error(
                 `Error from PromotionPlanBySalePage: ${_.GetEResult()}`,
               );
@@ -5776,7 +5837,6 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new (class {
         async DeleteForumTopic(_, _, _, _, _) {
@@ -5794,7 +5854,7 @@
             withCredentials: !0,
             cancelToken: _.token,
           });
-          if (1 != _.data.success) throw _.data;
+          if (_.data.success != _._.k_EResultOK) throw _.data;
           return _.data;
         }
       })();
@@ -6190,7 +6250,7 @@
                 (_.GetSaleSectionCount() > 0 &&
                   _.GetSaleSections().forEach((_) => {
                     (0, _._)(_.section_type) &&
-                      !_.smart_section &&
+                      !(0, _._)(_) &&
                       _.capsules.forEach((_) => {
                         void 0 !== _.visibility_index &&
                           (void 0 === _ || _ < _.visibility_index) &&
@@ -6243,7 +6303,7 @@
             _ = "store" == _,
             _ = _._.is_support && _(_.clanSteamID, !0),
             _ = _ && !_,
-            _ = 36 == _.GetEventType(),
+            _ = _.GetEventType() == _._.k_ECreatorHome,
             _ = _ && _?.GetLinkedEventGID() == _.GID,
             _ =
               (_ == _._.k_EEventStateVisible ||
@@ -6557,7 +6617,10 @@
                           const _ = new FormData();
                           _.append("sessionid", _._.SESSIONID),
                             _.append("clan_accountid", "" + _._.CLANACCOUNTID),
-                            _.append("event_id", "15");
+                            _.append(
+                              "event_id",
+                              "" + _._.k_EVirtualItemRewardEvent_Summer2022,
+                            );
                           const _ = await _().post(
                             `${_._.STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards`,
                             _,

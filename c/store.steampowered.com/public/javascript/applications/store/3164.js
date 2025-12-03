@@ -57,6 +57,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(_.d1w, null);
@@ -70,7 +72,9 @@
           {
             className: (0, _._)(_.RoleIcon, _.className),
           },
-          2 == _.role ? _.createElement(_, null) : _.createElement(_, null),
+          _.role == _._.k_EFamilyGroupRole_Child
+            ? _.createElement(_, null)
+            : _.createElement(_, null),
         );
       }
       function _(_) {
@@ -138,7 +142,7 @@
               bCompactView: !1,
               persona: _,
               strNickname: _,
-              eFriendRelationship: 3,
+              eFriendRelationship: _._.k_EFriendRelationshipFriend,
             }),
           ),
           _.createElement(
@@ -273,6 +277,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "nicknames";
       function _(_) {
@@ -314,7 +319,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._.k_EResultOK ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -331,7 +336,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._.k_EResultOK ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -392,6 +397,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)();
@@ -400,7 +406,7 @@
           queryFn: async () => {
             const _ = _._.Init(_._),
               _ = await _._.GetCommunityPreferences(_, _);
-            if (1 != __webpack_require__.GetEResult())
+            if (__webpack_require__.GetEResult() != _._.k_EResultOK)
               throw new Error(
                 `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
               );

@@ -107,18 +107,28 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_[(_.k_ENewsRecommendationState_None = 0)] =
+          "k_ENewsRecommendationState_None"),
+          (_[(_.k_ENewsRecommendationState_Recommended = 1)] =
+            "k_ENewsRecommendationState_Recommended"),
+          (_[(_.k_ENewsRecommendationState_NotRecommended = 2)] =
+            "k_ENewsRecommendationState_NotRecommended"),
+          (_[(_.k_ENewsRecommendationState_Informative = 3)] =
+            "k_ENewsRecommendationState_Informative");
+      })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -825,7 +835,7 @@
                 fields: {
                   feeds: {
                     _: 1,
-                    _: _,
+                    _,
                     _: !0,
                     _: !0,
                   },
@@ -1200,9 +1210,26 @@
             );
           });
       })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_clanAccountID;
@@ -1226,14 +1253,16 @@
             (this.m_eCuratorLanguage = _.curation_language);
         }
         GetFeedLanguageHandleUnset() {
-          return -1 == this.m_eRSSFeedLanguage
-            ? -1 == this.m_eCuratorLanguage
-              ? 0
+          return this.m_eRSSFeedLanguage == _._.k_Lang_None
+            ? this.m_eCuratorLanguage == _._.k_Lang_None
+              ? _._.k_Lang_English
               : this.m_eCuratorLanguage
             : this.m_eRSSFeedLanguage;
         }
         GetCuratorLanguage() {
-          return -1 == this.m_eCuratorLanguage ? 0 : this.m_eCuratorLanguage;
+          return this.m_eCuratorLanguage == _._.k_Lang_None
+            ? _._.k_Lang_English
+            : this.m_eCuratorLanguage;
         }
         BHasSavedRSSURL() {
           return Boolean(this.m_strRSSFeedURL);
@@ -1267,15 +1296,15 @@
               ),
               null
             );
-          const _ = _._.Init(_);
+          const _ = _._.Init(_._);
           _.Body().set_rss_url(_),
             _.Body().set_lang(this.GetFeedLanguageHandleUnset());
-          let _ = await _.PreviewPartnerEvents(
+          let _ = await _._.PreviewPartnerEvents(
             _.Get().GetCuratorTransport(),
             _,
           );
           return (
-            1 != __webpack_require__.GetEResult() &&
+            __webpack_require__.GetEResult() != _._.k_EResultOK &&
               console.error(
                 "PreviewPartnerEventsFromRSSFeed error: " +
                   __webpack_require__.GetEMsg() +
@@ -1297,19 +1326,18 @@
               ),
               null
             );
-          const _ = _._.Init(_);
+          const _ = _._.Init(_._);
           _.Body().set_news_feed_gid(this.m_strRSSGID), _.Body().set_amount(_);
-          let _ = await _.GetBatchPublishedPartnerEvent(
+          let _ = await _._.GetBatchPublishedPartnerEvent(
             _.Get().GetCuratorTransport(),
             _,
           );
           return (
-            1 != __webpack_require__.GetEResult()
+            __webpack_require__.GetEResult() != _._.k_EResultOK
               ? console.error(
                   "FetchPublishedEvents error: EMsg:" +
-                    ("unknown EMsg ( " +
-                      __webpack_require__.GetEMsg() +
-                      " ) EResult:") +
+                    (0, _._)(__webpack_require__.GetEMsg()) +
+                    " EResult:" +
                     __webpack_require__.GetEResult() +
                     " msg:" +
                     __webpack_require__.Hdr().error_message(),
@@ -1358,7 +1386,7 @@
             withCredentials: !0,
           });
           return (
-            1 == _.data.success &&
+            _.data.success == _._.k_EResultOK &&
               (0, _._)(() => {
                 (this.m_strRSSGID = _.data.gid),
                   (this.m_strRSSFeedURL = _),
@@ -1401,7 +1429,7 @@
               ),
               null
             );
-          let _ = new _();
+          let _ = new _._();
           __webpack_require__.set_gid(_.post.gid),
             __webpack_require__.set_news_feed_gid(this.m_strRSSGID),
             __webpack_require__.set_title(_.post.title),
@@ -1421,11 +1449,14 @@
               _.post.received_compensation,
             ),
             __webpack_require__.set_blurb(_.post.blurb);
-          const _ = _._.Init(_);
+          const _ = _._.Init(_._);
           _.Body().set_post(_), _.Body().set_draft(_);
-          let _ = await _.PublishPartnerEvent(_.Get().GetCuratorTransport(), _);
+          let _ = await _._.PublishPartnerEvent(
+            _.Get().GetCuratorTransport(),
+            _,
+          );
           return (
-            1 != _.GetEResult()
+            _.GetEResult() != _._.k_EResultOK
               ? console.error(
                   "CreatePost error: " + _.GetEMsg() + " " + _.GetEResult(),
                 )
@@ -1581,7 +1612,7 @@
               if (
                 _ &&
                 _.data &&
-                1 == _.data.success &&
+                _.data.success == _._.k_EResultOK &&
                 _.data.rss_admin_infos &&
                 Array.isArray(_.data.rss_admin_infos)
               )
@@ -1689,6 +1720,8 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1988,7 +2021,7 @@
         async DoLoadPreview() {
           let _ = this.props.admin,
             _ = await _.PreviewPartnerEventsFromRSSFeed(this.props.strRssURL);
-          if (_ && 1 == _.GetEResult()) {
+          if (_ && _.GetEResult() == _._.k_EResultOK) {
             let _ = _.Body().toObject();
             this.setState(
               {
@@ -2005,7 +2038,8 @@
                     _ && _.push(_),
                       _.post.appids &&
                         1 === _.post.appids.length &&
-                        0 !== _.post.recommendation_state &&
+                        _.post.recommendation_state !==
+                          _._.k_ENewsRecommendationState_None &&
                         _.push(_.post.appids[0]);
                   }),
                   _.length > 0 &&
@@ -2274,12 +2308,12 @@
             (_.clanSteamID = __webpack_require__),
             (_.postTime = Date.now() / 1e3),
             (_.startTime = Date.now() / 1e3),
-            (_.type = 28),
+            (_.type = _._.k_ENewsEvent),
             _.vecTags.push("auto_rssfeed"),
             _.vecTags.push("curator"),
             _.vecTags.push("curator_public"),
-            _.name.set(0, _.title),
-            _.description.set(0, _.desc),
+            _.name.set(_._.k_Lang_English, _.title),
+            _.description.set(_._.k_Lang_English, _.desc),
             this.ValidateJSONDefault(_.jsondata) && (_.jsondata = _.jsondata),
             _.jsondata.read_more_link ||
               (_.jsondata.read_more_link = _.unique_id);
@@ -2288,20 +2322,23 @@
             _.post.event_summary &&
             ((_.jsondata.localized_summary = (0, _._)(
               _.jsondata.localized_summary,
-              31,
+              _._.k_Lang_MAX,
               null,
             )),
-            (_.jsondata.localized_summary[0] = _.post.event_summary),
-            0 != _ && (_.jsondata.localized_summary[_] = _.post.event_summary)),
+            (_.jsondata.localized_summary[_._.k_Lang_English] =
+              _.post.event_summary),
+            _ != _._.k_Lang_English &&
+              (_.jsondata.localized_summary[_] = _.post.event_summary)),
             !_.jsondata.localized_subtitle &&
               _.post.event_subtitle &&
               ((_.jsondata.localized_subtitle = (0, _._)(
                 _.jsondata.localized_subtitle,
-                31,
+                _._.k_Lang_MAX,
                 null,
               )),
-              (_.jsondata.localized_subtitle[0] = _.post.event_subtitle),
-              0 != _ &&
+              (_.jsondata.localized_subtitle[_._.k_Lang_English] =
+                _.post.event_subtitle),
+              _ != _._.k_Lang_English &&
                 (_.jsondata.localized_subtitle[_] = _.post.event_subtitle)),
             this.ShowModalEvent(_);
         }
@@ -2395,7 +2432,8 @@
             _ = __webpack_require__ && __webpack_require__.BIsStagedEvent(),
             _ = _.post.appids && 1 == _.post.appids.length && _.post.appids[0],
             _ =
-              0 !== _.post.recommendation_state &&
+              _.post.recommendation_state !==
+                _._.k_ENewsRecommendationState_None &&
               _ &&
               _.Get().BHasReviewForApp(_, _),
             _ = "";
@@ -2611,7 +2649,7 @@
             this.props.strRSSUrl,
             this.props.bActivatePooling ? 300 : 0,
           );
-          1 != _.success
+          _.success != _._.k_EResultOK
             ? this.setState({
                 step: "failure",
                 eResult: _.success,
@@ -2634,7 +2672,7 @@
             this.props.newsData,
             Boolean(this.state.bDraftMode),
           );
-          1 != _.GetEResult()
+          _.GetEResult() != _._.k_EResultOK
             ? this.setState({
                 step: "failure",
                 eResult: _.GetEResult(),
@@ -2971,6 +3009,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ {
@@ -3034,7 +3073,7 @@
             let _ = await _().post(_, _, {
               withCredentials: !0,
             });
-            if (1 == _?.data?.success) return !0;
+            if (_?.data?.success == _._.k_EResultOK) return !0;
           } catch (_) {
             const _ = (0, _._)(_);
             console.error(
@@ -3530,6 +3569,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         static s_Singleton;
@@ -3768,7 +3808,11 @@
               : _.CompleteBackfill("resize_image");
         }
         async HandleResizeForImageType(_, _, _, _, _) {
-          for (let _ = 0; _ < _.length && _ < 31; ++_)
+          for (
+            let _ = _._.k_Lang_English;
+            _ < _.length && _ < _._.k_Lang_MAX;
+            ++_
+          )
             if (_[_] && _[_].length > 0) {
               let _ = _[_],
                 _ = (0, _._)(_);
@@ -3780,13 +3824,15 @@
                     {
                       height: 0,
                       width: 0,
-                      success: 2,
+                      success: _._.k_EResultFail,
                     }
                   ),
                 );
-                if (1 == _.success && (0, _._)(_.width, _.height, _, !0)) {
+                if (
+                  _.success == _._.k_EResultOK &&
+                  (0, _._)(_.width, _.height, _, !0)
+                ) {
                   if (
-                    1 ==
                     (
                       await this.GetImageInfo(_, _, _).catch(
                         (_) => (
@@ -3799,11 +3845,11 @@
                           {
                             height: 0,
                             width: 0,
-                            success: 2,
+                            success: _._.k_EResultFail,
                           }
                         ),
                       )
-                    ).success
+                    ).success == _._.k_EResultOK
                   )
                     _.bAlreadyProcessed = !0;
                   else {
@@ -3911,7 +3957,7 @@
                         " Event " +
                         _.GID +
                         " Title: " +
-                        _.GetNameWithFallback(0),
+                        _.GetNameWithFallback(_._.k_Lang_English),
                     }),
                     _.jsondata && _.jsondata.localized_capsule_image)
                   ) {
@@ -4003,7 +4049,7 @@
                             eventModel: _,
                             route: _._.k_eView,
                           },
-                          _.GetNameWithFallback(0),
+                          _.GetNameWithFallback(_._.k_Lang_English),
                         ),
                         _.createElement(
                           "div",
@@ -4130,7 +4176,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -5409,7 +5454,7 @@
                     {
                       className: (0, _._)(
                         _.TileEventType,
-                        1 == _ ? _.TileEventOtherType : "",
+                        _ == _._.k_EOtherEvent ? _.TileEventOtherType : "",
                       ),
                     },
                     _ ? _.GetCategoryAsString() : _.event_type,
@@ -5551,7 +5596,7 @@
         CountLanguages(_) {
           let _ = 0;
           if (_ && _.length > 0)
-            for (let _ = 0; _ < _.length && _ < 31; ++_)
+            for (let _ = 0; _ < _.length && _ < _._.k_Lang_MAX; ++_)
               _[_] && _[_].length > 0 && (_ += 1);
           return _;
         }
@@ -5934,9 +5979,9 @@
         state = {
           bUpdating: !1,
           newCategoryOption: {
-            label: (0, _._)(34),
+            label: (0, _._)(_._.k_ECrosspostEvent),
             value: {
-              eventType: 34,
+              eventType: _._.k_ECrosspostEvent,
             },
           },
         };
@@ -5998,12 +6043,17 @@
         }
         render() {
           const { eventModel: _, closeModal: _ } = this.props,
-            _ = _._.filter((_) => 1 == _ || 4 == _ || _ >= 9).map((_) => {
+            _ = _._.filter(
+              (_) =>
+                _ == _._.k_EOtherEvent ||
+                _ == _._.k_EMeetingEvent ||
+                _ >= _._.k_EChatEvent,
+            ).map((_) => {
               const _ = {
                 eventType: _,
               };
               return (
-                12 == _ && (_.tags = ["patchnotes"]),
+                _ == _._.k_ESmallUpdateEvent && (_.tags = ["patchnotes"]),
                 {
                   label: (0, _._)(_),
                   value: _,
@@ -6013,21 +6063,21 @@
           __webpack_require__.push({
             label: (0, _._)("#PartnerEvent_Curator_Group_Members"),
             value: {
-              eventType: 28,
+              eventType: _._.k_ENewsEvent,
               tags: ["curator", "curator_group_members"],
             },
           }),
             __webpack_require__.push({
               label: (0, _._)("#PartnerEvent_Curator_Public"),
               value: {
-                eventType: 28,
+                eventType: _._.k_ENewsEvent,
                 tags: ["curator", "curator_public"],
               },
             }),
             __webpack_require__.push({
               label: (0, _._)("#PartnerEvent_SteamAwardNominations"),
               value: {
-                eventType: 28,
+                eventType: _._.k_ENewsEvent,
                 tags: [
                   "steam_award_nomination_request",
                   "mod_hide_library_overview",
@@ -6037,42 +6087,42 @@
             __webpack_require__.push({
               label: (0, _._)("#PartnerEvent_SteamAwardVoteRequest"),
               value: {
-                eventType: 28,
+                eventType: _._.k_ENewsEvent,
                 tags: ["steam_award_vote_request", "mod_hide_library_overview"],
               },
             });
           const _ = [
               {
                 value: {
-                  eventType: 15,
+                  eventType: _._.k_EDLCReleaseEvent,
                   tags: ["halloween"],
                 },
                 label: "Halloween: " + (0, _._)("#PartnerEvent_15"),
               },
               {
                 value: {
-                  eventType: 22,
+                  eventType: _._.k_EInGameBonusXPEvent,
                   tags: ["halloween"],
                 },
                 label: "Halloween: " + (0, _._)("#PartnerEvent_22"),
               },
               {
                 value: {
-                  eventType: 23,
+                  eventType: _._.k_EInGameLootEvent,
                   tags: ["halloween"],
                 },
                 label: "Halloween: " + (0, _._)("#PartnerEvent_23"),
               },
               {
                 value: {
-                  eventType: 24,
+                  eventType: _._.k_EInGamePerksEvent,
                   tags: ["halloween"],
                 },
                 label: "Halloween: " + (0, _._)("#PartnerEvent_24"),
               },
               {
                 value: {
-                  eventType: 35,
+                  eventType: _._.k_EInGameEventGeneral,
                   tags: ["halloween"],
                 },
                 label: "Halloween: " + (0, _._)("#PartnerEvent_35"),
@@ -6281,6 +6331,7 @@
         (0, _._)([_._], _.prototype, "ChangeHorror", null),
         (0, _._)([_._], _.prototype, "ChangeCute", null),
         (0, _._)([_._], _.prototype, "ApplyAction", null);
+      var _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         state = {
           bLoadingEvent: !0,
@@ -6420,7 +6471,7 @@
                   {
                     key: "missingdemo_" + _,
                   },
-                  1 == _?.GetAppType() &&
+                  _?.GetAppType() == _._.k_EStoreAppType_Demo &&
                     _.createElement(
                       "b",
                       null,
@@ -6469,7 +6520,7 @@
           return (
             this.state.rgAppIDs.forEach((_) => {
               const _ = _._.Get().GetApp(_);
-              1 != _?.GetAppType() && (_ += 1);
+              _?.GetAppType() != _._.k_EStoreAppType_Demo && (_ += 1);
             }),
             _.createElement(
               _._,

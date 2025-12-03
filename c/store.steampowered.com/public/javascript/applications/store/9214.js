@@ -10,6 +10,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 0,
         _ = "061818254b2c99ac49e6626adb128ed1282a392f",
@@ -49,7 +50,10 @@
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return 4 == this.apptype || 2 == this.apptype;
+          return (
+            this.apptype == _._.k_EAppTypeTool ||
+            this.apptype == _._.k_EAppTypeApplication
+          );
         }
         BuildAppURL(_, _) {
           return _
@@ -69,7 +73,7 @@
             (this.m_eAppType = _.app_type());
         }
         DeserializeFromAppOverview(_) {
-          _.icon_hash() && 1073741824 != _.app_type()
+          _.icon_hash() && _.app_type() != _._.k_EAppTypeShortcut
             ? ((this.m_bInitialized = !0),
               (this.m_strName = _.display_name()),
               (this.m_strIconURL = _.icon_hash()),
@@ -137,9 +141,13 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -198,33 +206,40 @@
                 _._.Get()
                   .QueueStoreItemRequest(_, _, _)
                   .then((_) => {
-                    _?.token.reason || _.current !== _ || _(1 == _), _();
+                    _?.token.reason ||
+                      _.current !== _ ||
+                      _(_ == _._.k_EResultOK),
+                      _();
                   })),
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return [null, 2];
-        if (!1 === _) return [void 0, 2];
-        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
-        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
+          return [null, _.k_EStoreItemCacheState_Unavailable];
+        if (!1 === _) return [void 0, _.k_EStoreItemCacheState_Unavailable];
+        if (_._.Get().BIsStoreItemMissing(_, _))
+          return [void 0, _.k_EStoreItemCacheState_Unavailable];
+        if (!_._.Get().BHasStoreItem(_, _, _))
+          return [void 0, _.k_EStoreItemCacheState_Loading];
         const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _ ? [_, 3] : [null, 2];
+        return _
+          ? [_, _.k_EStoreItemCacheState_Found]
+          : [null, _.k_EStoreItemCacheState_Unavailable];
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._.k_EStoreItemType_App, _, _);
       }
       function _(_, _, _) {
-        return _(_, 2, _, _);
+        return _(_, _._.k_EStoreItemType_Bundle, _, _);
       }
       function _(_, _, _) {
-        return _(_, 1, _, _);
+        return _(_, _._.k_EStoreItemType_Package, _, _);
       }
       function _(_, _, _) {
         const [_, _] = _(_, _, _);
         let _;
-        1 != _?.GetStoreItemType() ||
+        _?.GetStoreItemType() != _._.k_EStoreItemType_Package ||
           _.GetAssets()?.GetHeaderURL() ||
           1 != _?.GetIncludedAppIDs().length ||
           (_ = _.GetIncludedAppIDs()[0]);
@@ -291,7 +306,7 @@
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return 2;
+          return _.k_EStoreItemCacheState_Unavailable;
         if (
           !_.every(
             (_) =>
@@ -299,18 +314,18 @@
               _._.Get().BIsStoreItemMissing(_, _),
           )
         )
-          return 1;
+          return _.k_EStoreItemCacheState_Loading;
         return _.every((_) =>
           _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
         )
-          ? 3
-          : 2;
+          ? _.k_EStoreItemCacheState_Found
+          : _.k_EStoreItemCacheState_Unavailable;
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._.k_EStoreItemType_App, _, _);
       }
       function _(_, _, _) {
-        return _(_, 2, _, _);
+        return _(_, _._.k_EStoreItemType_Bundle, _, _);
       }
       function _() {
         _.useEffect(
@@ -321,6 +336,14 @@
           [],
         );
       }
+      !(function (_) {
+        (_[(_.k_EStoreItemCacheState_Loading = 1)] =
+          "k_EStoreItemCacheState_Loading"),
+          (_[(_.k_EStoreItemCacheState_Unavailable = 2)] =
+            "k_EStoreItemCacheState_Unavailable"),
+          (_[(_.k_EStoreItemCacheState_Found = 3)] =
+            "k_EStoreItemCacheState_Found");
+      })(_ || (_ = {}));
     },
   },
 ]);

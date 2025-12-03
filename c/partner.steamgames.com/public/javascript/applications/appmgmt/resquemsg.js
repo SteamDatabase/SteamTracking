@@ -118,6 +118,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapProductPositionMsgList = new Map();
@@ -194,7 +195,7 @@
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == _.GetEResult()) {
+            if (_.GetEResult() == _._.k_EResultOK) {
               const _ = new Set(),
                 _ = Math.floor(Date.now() / 1e3);
               return (
@@ -242,7 +243,7 @@
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (1 == _.GetEResult()) {
+            if (_.GetEResult() == _._.k_EResultOK) {
               const _ = this.GetKey(_);
               let _ = this.m_mapProductPositionMsgList.get(_);
               const _ = __webpack_require__.findIndex(
@@ -1008,6 +1009,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "nicknames";
       function _(_) {
@@ -1049,7 +1051,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._.k_EResultOK ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -1066,7 +1068,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  1 != _.data?.success ||
+                  _.data?.success != _._.k_EResultOK ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -1470,11 +1472,13 @@
             accountID: _,
             bHideWhenNotAvailable: __webpack_require__,
             bHideName: _,
+            bLink: _ = !0,
           } = _,
           [_] = (0, _._)(_),
           _ = (0, _._)(_),
           _ = _.useMemo(() => _._.InitFromAccountID(_), [_]),
-          _ = `${_._.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`;
+          _ = `${_._.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`,
+          _ = _ ? "a" : "span";
         return _.createElement(
           _.Fragment,
           null,
@@ -1486,9 +1490,9 @@
                   _.createElement("span", null, _),
               )
             : _.createElement(
-                "a",
+                _,
                 {
-                  href: _,
+                  href: _ ? _ : void 0,
                 },
                 _.createElement("img", {
                   className: _.SmallAvatar,
@@ -1611,10 +1615,31 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
+        const _ = _.useRef(_().CancelToken.source());
+        return (
+          _.useEffect(() => {
+            const _ = _.current;
+            return () =>
+              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
+          }, [_]),
+          _.current
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
         if (_().isCancel(_))
           return {
             strErrorMsg: "Action Cancelled:" + _,
-            errorCode: 52,
+            errorCode: _._.k_EResultCancelled,
           };
         if (
           void 0 !== _.response &&
@@ -1696,11 +1721,11 @@
         return "object" == typeof _ && "status" in _
           ? {
               strErrorMsg: "Unknown Error: " + _ + "\nStatus Code:" + _.status,
-              errorCode: 2,
+              errorCode: _._.k_EResultFail,
             }
           : {
               strErrorMsg: "Unknown Error: " + _,
-              errorCode: 2,
+              errorCode: _._.k_EResultFail,
             };
       }
     },

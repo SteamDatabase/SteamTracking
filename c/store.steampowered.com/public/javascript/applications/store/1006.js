@@ -11,6 +11,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_nLastUpdated = 0;
@@ -83,7 +84,7 @@
               "Fallback:",
               _,
             ),
-          _ && 1 != _._.EUNIVERSE)
+          _ && _._.EUNIVERSE != _._.k_EUniversePublic)
         )
           return _;
         return _;
@@ -202,7 +203,7 @@
                 this.m_CMInterface.GetServiceTransport(),
                 _,
               );
-              1 == _.GetEResult()
+              _.GetEResult() == _._.k_EResultOK
                 ? this.OnGetAppsResponse(_)
                 : console.error(
                     `Error when calling CommunityService.GetApps: EResult=${_.GetEResult()}, AppIDs:`,
@@ -314,7 +315,7 @@
           const _ = this.GetRichPresenceLoc(_);
           return _
             ? _.Localize(_, _)
-            : 1 != _._.EUNIVERSE
+            : _._.EUNIVERSE != _._.k_EUniversePublic
               ? (console.log(
                   `Unable to find app localization information for app ${_} token ${_}, this may not have had a chance to load yet`,
                 ),
@@ -373,7 +374,7 @@
                 .then(
                   (_) => (
                     (_.m_fetching = null),
-                    1 != _.GetEResult()
+                    _.GetEResult() != _._.k_EResultOK
                       ? Promise.reject()
                       : (this.OnRichPresenceLocUpdate(
                           _,

@@ -4989,19 +4989,19 @@ a:link {
   background-color: var(--bg-color-focus, var(--color-debug));
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._2e1xlPghh48rkP13ydQOPb {
-  height: var(--control-height-1);
+  min-height: var(--control-height-1);
   --font-size: var(--text-size-2);
   --line-height: var(--line-height-2);
   --letter-spacing: var(--letter-spacing-2);
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH).B7HtDxiiORArIRcBR9kVB {
-  height: var(--control-height-2);
+  min-height: var(--control-height-2);
   --font-size: var(--text-size-3);
   --line-height: var(--line-height-3);
   --letter-spacing: var(--letter-spacing-3);
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._1K_Ve980-qBq8l1-cZJdw1 {
-  height: var(--control-height-3);
+  min-height: var(--control-height-3);
   --font-size: var(--text-size-4);
   --line-height: var(--line-height-4);
   --letter-spacing: var(--letter-spacing-4);
@@ -5049,8 +5049,7 @@ a:link {
   outline: none;
 }
 ._3tuJ3SHrhBu16Q7GZBtKyt {
-  padding-left: var(--spacing-1);
-  padding-right: var(--spacing-1);
+  padding: var(--spacing-1);
 }
 ._3tuJ3SHrhBu16Q7GZBtKyt:focus-visible {
   outline: none;
@@ -5152,7 +5151,10 @@ a:link {
   align-items: center;
   text-align: center;
   user-select: none;
-  padding: var(--spacing-1) var(--spacing-3);
+  padding-top: var(--spacing-1);
+  padding-bottom: var(--spacing-1);
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-3);
   font-weight: var(--font-weight-regular);
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM)[data-selected="false"] {
@@ -5162,6 +5164,14 @@ a:link {
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM)[data-selected="true"] {
   color: var(--text-color);
+}
+:where(._2aNlsjcdOdHOtP8uACA3bM):where(._2Y43gK-c1jI0x35n45iZ0) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+:where(._2aNlsjcdOdHOtP8uACA3bM):where(._3ohjaEz8PkzSzIrIZKEdt9) {
+  padding-top: var(--spacing-2);
+  padding-bottom: var(--spacing-2);
 }
 :where(
     ._3hD10Qy5141ZEY503SxZkd

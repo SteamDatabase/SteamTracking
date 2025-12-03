@@ -17,6 +17,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { redirectUrl: _ = _._.COMMUNITY_BASE_URL } = _,
@@ -34,7 +35,7 @@
             : _.createElement(_._, {
                 autoFocus: !0,
                 transport: __webpack_require__,
-                platform: 2,
+                platform: _._.k_EAuthTokenPlatformType_WebBrowser,
                 onComplete: (_) => {
                   _ == _._.k_PrimaryDomainFail
                     ? _(!0)

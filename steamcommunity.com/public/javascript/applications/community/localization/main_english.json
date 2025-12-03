@@ -1156,7 +1156,7 @@
     "selectimage_tip_sale_header_4": "Sale Background Image works well together with the Sale Page Logo specified below. If used together, your Sale Page Logo will float on top of the background.",
     "selectimage_tip_template_title": "Templates",
     "selectimage_tip_sale_overlay_1": "This image will be overlaid on the background at the top of your page. If you would like to have images localized, please email a .psd file to your Valve contact.",
-    "selectimage_tip_sale_product_banner": "If provided, this banner will appear on the top of the store page for all of the games that are part of this sale event. This banner lasts for the duration of the sales event, up to two weeks. Note that this banner must be approved by Valve prior to use.",
+    "selectimage_tip_sale_product_banner": "If provided, this banner will appear on the store page for all of the games that are part of this sale event. This banner lasts for the duration of the sales event, up to two weeks. Note that this banner must be approved by Valve prior to use and cannot be animated.",
     "selectimage_tip_sale_product_banner_mobile": "This version only appears when the page resolution shrink for a mobile display.",
     "selectimage_tip_hero_1": "You can also update your library hero image with branding for your update, announcement, season, or other event. To do so, please visit the \"graphical assets\" tab in the store page admin.",
     "selectimage_tip_design_title": "Design",

@@ -22,8 +22,8 @@
       "use strict";
       i.r(t),
         i.d(t, {
-          AccessibilityFeatureDisplay: () => y,
-          AccessibilityIcon: () => m,
+          AccessibilityFeatureDisplay: () => m,
+          AccessibilityIcon: () => A,
         });
       var s = i(90626),
         l = i(61859),
@@ -73,32 +73,39 @@
           bAccessibilityPlayableWithoutQuicktimeEvents: "#without_qte",
           bAccessibilityChatTexttoSpeech: "#tts",
           bAccessibilityChatSpeechtoText: "#stt",
-        },
-        o = {
-          bAccessibilityDifficultyLevels: "gameplay",
-          bAccessibilitySaveAnytime: "gameplay",
-          bAccessibilityNarratedMenus: "audio",
-          bAccessibilityBackgroundVolumeControls: "audio",
-          bAccessibilityStereoSound: "audio",
-          bAccessibilitySurroundSound: "audio",
-          bAccessibilityResizableUI: "visual",
-          bAccessibilitySubtitles: "visual",
-          bAccessibilityColorAlternatives: "visual",
-          bAccessibilityCameraComfort: "visual",
-          bAccessibilityKeyboardOnlyOption: "input",
-          bAccessibilityMouseOnlyOption: "input",
-          bAccessibilityTouchOnlyOption: "input",
-          bAccessibilityPlayableWithoutQuicktimeEvents: "input",
-          bAccessibilityChatTexttoSpeech: "input",
-          bAccessibilityChatSpeechtoText: "input",
-        },
-        b = {
-          gameplay: "#Accessibility_Group_Gameplay",
-          visual: "#Accessibility_Group_Visual",
-          audio: "#Accessibility_Group_Audio",
-          input: "#Accessibility_Group_Input",
         };
-      function y(e) {
+      var o;
+      !(function (e) {
+        (e.Gameplay = "gameplay"),
+          (e.Visual = "visual"),
+          (e.Audio = "audio"),
+          (e.Input = "input");
+      })(o || (o = {}));
+      const b = {
+          bAccessibilityDifficultyLevels: o.Gameplay,
+          bAccessibilitySaveAnytime: o.Gameplay,
+          bAccessibilityNarratedMenus: o.Audio,
+          bAccessibilityBackgroundVolumeControls: o.Audio,
+          bAccessibilityStereoSound: o.Audio,
+          bAccessibilitySurroundSound: o.Audio,
+          bAccessibilityResizableUI: o.Visual,
+          bAccessibilitySubtitles: o.Visual,
+          bAccessibilityColorAlternatives: o.Visual,
+          bAccessibilityCameraComfort: o.Visual,
+          bAccessibilityKeyboardOnlyOption: o.Input,
+          bAccessibilityMouseOnlyOption: o.Input,
+          bAccessibilityTouchOnlyOption: o.Input,
+          bAccessibilityPlayableWithoutQuicktimeEvents: o.Input,
+          bAccessibilityChatTexttoSpeech: o.Input,
+          bAccessibilityChatSpeechtoText: o.Input,
+        },
+        y = {
+          [o.Gameplay]: "#Accessibility_Group_Gameplay",
+          [o.Visual]: "#Accessibility_Group_Visual",
+          [o.Audio]: "#Accessibility_Group_Audio",
+          [o.Input]: "#Accessibility_Group_Input",
+        };
+      function m(e) {
         const [t, i] = (0, s.useState)(e.initialOpen ?? !1),
           c = s.useId(),
           r = Object.entries(e.features)
@@ -107,10 +114,10 @@
         if (0 === r.length) return null;
         const u = {};
         r.forEach((e) => {
-          const t = o[e];
+          const t = b[e];
           (u[t] ??= []), u[t].push(e);
         });
-        const b = Object.keys(u).length > 1;
+        const y = Object.keys(u).length > 1;
         return s.createElement(
           "details",
           {
@@ -127,7 +134,7 @@
             s.createElement(
               "div",
               { className: n().ImageContainer },
-              s.createElement(m, {
+              s.createElement(A, {
                 className: n().CategoryIcon,
                 "aria-label": "",
               }),
@@ -156,7 +163,7 @@
           s.createElement(
             "ul",
             { className: n().FeatureList, "aria-labelledby": c },
-            b &&
+            y &&
               s.createElement(
                 s.Fragment,
                 null,
@@ -164,8 +171,8 @@
                   s.createElement(
                     "li",
                     null,
-                    s.createElement(A, {
-                      group: "gameplay",
+                    s.createElement(p, {
+                      group: o.Gameplay,
                       features: u.gameplay,
                       open: t,
                     }),
@@ -174,8 +181,8 @@
                   s.createElement(
                     "li",
                     null,
-                    s.createElement(A, {
-                      group: "visual",
+                    s.createElement(p, {
+                      group: o.Visual,
                       features: u.visual,
                       open: t,
                     }),
@@ -184,8 +191,8 @@
                   s.createElement(
                     "li",
                     null,
-                    s.createElement(A, {
-                      group: "audio",
+                    s.createElement(p, {
+                      group: o.Audio,
                       features: u.audio,
                       open: t,
                     }),
@@ -194,25 +201,25 @@
                   s.createElement(
                     "li",
                     null,
-                    s.createElement(A, {
-                      group: "input",
+                    s.createElement(p, {
+                      group: o.Input,
                       features: u.input,
                       open: t,
                     }),
                   ),
               ),
-            !b &&
+            !y &&
               r.map((e) =>
                 s.createElement(
                   "li",
                   { key: e },
-                  s.createElement(p, { feature: e, open: t }),
+                  s.createElement(d, { feature: e, open: t }),
                 ),
               ),
           ),
         );
       }
-      function m(e) {
+      function A(e) {
         return s.createElement(
           "svg",
           {
@@ -238,7 +245,7 @@
           }),
         );
       }
-      function A(e) {
+      function p(e) {
         const t = s.useId();
         return s.createElement(
           s.Fragment,
@@ -246,7 +253,7 @@
           s.createElement(
             "span",
             { className: n().GroupLabel, id: t },
-            (0, l.we)(b[e.group]),
+            (0, l.we)(y[e.group]),
           ),
           s.createElement(
             "ul",
@@ -255,13 +262,13 @@
               s.createElement(
                 "li",
                 { key: t },
-                s.createElement(p, { feature: t, open: e.open }),
+                s.createElement(d, { feature: t, open: e.open }),
               ),
             ),
           ),
         );
       }
-      function p(e) {
+      function d(e) {
         return s.createElement(
           "a",
           {

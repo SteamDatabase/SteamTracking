@@ -77,6 +77,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1062,13 +1064,13 @@
           _ = _.useCallback(
             (_) => {
               switch (_.file_type) {
-                case 4:
+                case _._.k_EClanImageFileType_MP4:
                   _ &&
                     _({
                       mp4: (0, _._)(_),
                     });
                   break;
-                case 5:
+                case _._.k_EClanImageFileType_WEBM:
                   _ &&
                     _({
                       webm: (0, _._)(_),
@@ -1139,7 +1141,7 @@
               if (!_ || 1 != Object.values(_).length)
                 throw "Error uploading image";
               const _ = Object.values(_)[0];
-              if (!_.bSuccess || 1 != _.uploadResult.success)
+              if (!_.bSuccess || _.uploadResult.success != _._.k_EResultOK)
                 throw _.uploadResult.message;
               const _ = _(
                 _._.GetClanImageByImageHash(_, _.uploadResult.image_hash),
@@ -1170,12 +1172,12 @@
       function _(_, _, _) {
         const _ = (0, _._)(_);
         switch (_.file_type) {
-          case 4:
+          case _._.k_EClanImageFileType_MP4:
             if (!_) throw "Video unsupported";
             return __webpack_require__.create({
               mp4: _,
             });
-          case 5:
+          case _._.k_EClanImageFileType_WEBM:
             if (!_) throw "Video unsupported";
             return __webpack_require__.create({
               webm: _,
@@ -1336,6 +1338,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1887,10 +1890,10 @@
           } while (_ && _.findIndex((_) => _.group_id == _) >= 0);
           return {
             group_id: _,
-            localized_session_title: (0, _._)([], 31, null),
-            localized_session_description: (0, _._)([], 31, null),
-            localized_sesssion_faq: (0, _._)([], 31, null),
-            localized_intended_audience: (0, _._)([], 31, null),
+            localized_session_title: (0, _._)([], _._.k_Lang_MAX, null),
+            localized_session_description: (0, _._)([], _._.k_Lang_MAX, null),
+            localized_sesssion_faq: (0, _._)([], _._.k_Lang_MAX, null),
+            localized_intended_audience: (0, _._)([], _._.k_Lang_MAX, null),
             group_visibility_tokens: [],
             ask_registration_question: !1,
             sessions: [],
@@ -2581,7 +2584,11 @@
                 _(
                   {
                     break_id: _,
-                    localized_break_description: (0, _._)([], 31, null),
+                    localized_break_description: (0, _._)(
+                      [],
+                      _._.k_Lang_MAX,
+                      null,
+                    ),
                     rtime_start: _,
                     rtime_end: _ + _._.PerHour,
                   },
@@ -2984,7 +2991,7 @@
           _ = (0, _.useCallback)(
             (_, _, _, _, _) => {
               (0, _._)(
-                null != _ && _ >= 0 && _ < 31,
+                null != _ && _ >= _._.k_Lang_English && _ < _._.k_Lang_MAX,
                 "Unexpected value for elang: " + _,
               ),
                 (0, _._)(
@@ -3296,7 +3303,7 @@
           return {
             poll_id: _,
             options: [],
-            localized_poll_description: (0, _._)([], 31, null),
+            localized_poll_description: (0, _._)([], _._.k_Lang_MAX, null),
             poll_end_days_since_start: _ * _,
             poll_end_time: void 0,
             results_visibility_settings: _._.k_EPollResult_Visible_On_Demand,
@@ -3378,7 +3385,7 @@
           } while (_ && _.findIndex((_) => _.option_id == _) >= 0);
           return {
             option_id: _,
-            localized_option: (0, _._)([], 31, null),
+            localized_option: (0, _._)([], _._.k_Lang_MAX, null),
           };
         }
         return _
@@ -3648,7 +3655,7 @@
                     : _[_]) ||
                     (null === (_ = _.localized_option) || void 0 === _
                       ? void 0
-                      : _[0]) ||
+                      : _[_._.k_Lang_English]) ||
                     "",
                 );
               },
@@ -4362,11 +4369,11 @@
                     break;
                   case _._.k_eInsertVideo:
                     let _;
-                    4 == _.file_type
+                    _.file_type == _._.k_EClanImageFileType_MP4
                       ? (_ = {
                           mp4: (0, _._)(_),
                         })
-                      : 5 == _.file_type &&
+                      : _.file_type == _._.k_EClanImageFileType_WEBM &&
                         (_ = {
                           webm: (0, _._)(_),
                         }),

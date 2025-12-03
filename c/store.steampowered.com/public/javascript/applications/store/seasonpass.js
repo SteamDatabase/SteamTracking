@@ -46,6 +46,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = {
         include_assets: !0,
@@ -454,7 +455,8 @@
                   partnerEventStore: _._,
                   bShowOnlyInitialEvent: !0,
                   showAppHeader: !0,
-                  trackingLocation: 3,
+                  trackingLocation:
+                    _._.k_EPartnerEventDisplayLocation_StoreAppPage,
                 }),
             )
           : _.createElement(

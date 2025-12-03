@@ -72,6 +72,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -206,7 +208,8 @@
               const _ = {
                   steamid: _._.InitFromAccountID(_).ConvertTo64BitString(),
                   gid: __webpack_require__,
-                  type: 6,
+                  type: _._
+                    .k_UserActionEventType_MeetSteamInvitationAndRegistration,
                 },
                 _ = await _._.GetUserActionData(_, _);
               return _.BSuccess() && _.Body().jsondata()
@@ -242,7 +245,7 @@
                   ],
                   !0,
                 ),
-                _ = _ && 1 == _.success;
+                _ = _ && _.success == _._.k_EResultOK;
               _ || _("We hit error during invite, check console: " + _?.msg),
                 _(!1),
                 _.refetch(),
@@ -323,7 +326,7 @@
             onOK: async () => {
               _(!0);
               const _ = await _(__webpack_require__, _, !1);
-              1 == _?.success
+              _?.success == _._.k_EResultOK
                 ? (_(_.rgInvitedAccounts.length), _(_.rgSkippedAccounts.length))
                 : _("We hit error during invite, check console: " + _?.msg),
                 _(!1);
@@ -512,7 +515,7 @@
           const _ = await _().post(_, _, {
             withCredentials: !0,
           });
-          if (1 != _?.data?.success) {
+          if (_?.data?.success != _._.k_EResultOK) {
             let _ = (0, _._)(_);
             console.error("DisplayPartnerEventRow error: " + _.strErrorMsg, _);
           }
@@ -549,7 +552,12 @@
                 async (_) => {
                   const _ = _._.Init(_._);
                   __webpack_require__.Body().set_gids([..._]),
-                    __webpack_require__.Body().set_type(6);
+                    __webpack_require__
+                      .Body()
+                      .set_type(
+                        _._
+                          .k_UserActionEventType_MeetSteamInvitationAndRegistration,
+                      );
                   const _ = await _._.GetMultipleUserActionData(_, _);
                   if (!_.BSuccess())
                     throw `Failed to call GetMultipleUserActionData with details: ${_.GetErrorMessage()}`;
@@ -906,7 +914,7 @@
             rgSelected: __webpack_require__,
             fnSetSelected: _,
           } = _,
-          _ = (0, _._)(_).GetNameWithFallback(0);
+          _ = (0, _._)(_).GetNameWithFallback(_._.k_Lang_English);
         return _.createElement(_._, {
           label: _,
           checked: __webpack_require__.includes(_),
@@ -974,7 +982,7 @@
                           const _ = await _().post(_, _, {
                             withCredentials: !0,
                           });
-                          if (1 != _?.data?.success) {
+                          if (_?.data?.success != _._.k_EResultOK) {
                             let _ = (0, _._)(_);
                             console.error(
                               "AsyncSendInviteEmails error: " + _.strErrorMsg,
@@ -1612,7 +1620,7 @@
           _ = (0, _._)(),
           _ = (0, _._)(_, (0, _._)(), _),
           _ = _.isSuccess ? _.data : null,
-          _ = _.GetNameWithFallback(0),
+          _ = _.GetNameWithFallback(_._.k_Lang_English),
           _ = (0, _.useMemo)(() => {
             const _ = new Array();
             return (
@@ -2007,9 +2015,9 @@
                 _.createElement(_._, {
                   string: (0, _._)("#Loading"),
                 }),
-              Boolean(1 == _) &&
+              Boolean(_ == _._.k_EResultOK) &&
                 _.createElement("div", null, "Test Emails Sent"),
-              Boolean(_ && 1 != _) &&
+              Boolean(_ && _ != _._.k_EResultOK) &&
                 _.createElement(
                   "div",
                   null,
@@ -2029,15 +2037,15 @@
           } = _,
           _ = _._.GetWithFallback(
             __webpack_require__?.localized_session_title,
-            0,
+            _._.k_Lang_English,
           ),
           _ = _._.GetWithFallback(
             __webpack_require__?.localized_session_description,
-            0,
+            _._.k_Lang_English,
           ),
           _ = _._.GetWithFallback(
             __webpack_require__?.localized_intended_audience,
-            0,
+            _._.k_Lang_English,
           ),
           _ = _?.find(
             (_) =>
@@ -2157,7 +2165,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2706,7 +2713,11 @@
                       params: _,
                       withCredentials: !0,
                     });
-                  if (!_ || 200 != _?.status || 1 != _?.data?.success)
+                  if (
+                    !_ ||
+                    200 != _?.status ||
+                    _?.data?.success != _._.k_EResultOK
+                  )
                     throw `Failed to load app to user email and langs: ${((0, _._))(_).strErrorMsg}`;
                   const _ = new Map();
                   return (
@@ -2902,10 +2913,13 @@
               _.createElement(
                 "div",
                 null,
-                __webpack_require__.GetNameWithFallback("chunkid"),
+                __webpack_require__.GetNameWithFallback(_._.k_Lang_English),
               ),
               _.createElement("img", {
-                src: __webpack_require__.GetImageURL("capsule", 0),
+                src: __webpack_require__.GetImageURL(
+                  "capsule",
+                  _._.k_Lang_English,
+                ),
               }),
             )
           : _.createElement("div", null, "Loading ", _);
@@ -3077,7 +3091,7 @@
                               const _ = await _().post(_, _, {
                                 withCredentials: !0,
                               });
-                              1 != _.data.success
+                              _.data.success != _._.k_EResultOK
                                 ? (console.error(
                                     "MeetSteamLanding failed " + _.data.success,
                                   ),
@@ -3558,7 +3572,7 @@
                             const _ = await _().post(_, _, {
                               withCredentials: !0,
                             });
-                            1 != _.data.success
+                            _.data.success != _._.k_EResultOK
                               ? (console.error(
                                   "MeetSteamLanding failed " + _.data.success,
                                 ),
@@ -3701,7 +3715,7 @@
                       if (_) {
                         const _ = _.jsondata.meet_steam_groups.find(
                           (_) => _.group_id === _.group_id,
-                        ).localized_session_title[0];
+                        ).localized_session_title[_._.k_Lang_English];
                         _.registrations.length > 0 && (_.registrations += "|"),
                           (_.registrations += _);
                       }

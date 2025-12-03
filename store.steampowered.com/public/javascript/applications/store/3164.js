@@ -39,46 +39,50 @@
     75048: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Pr: () => P,
-        co: () => N,
-        iM: () => R,
-        iV: () => _,
-        pC: () => w,
+        Pr: () => N,
+        co: () => v,
+        iM: () => q,
+        iV: () => w,
+        pC: () => k,
       });
       var n = a(90626),
         r = a(20803),
         s = a(12155),
         o = a(53835),
         c = a(61859),
-        i = a(52038),
-        u = a(1035),
-        l = a(17720),
-        m = a(14860),
-        d = a(14336),
-        f = a(68950),
-        E = a(26505),
-        p = a(34181),
-        g = a(83137),
-        y = a(76217);
-      function I(e) {
+        i = a(64868),
+        u = a(52038),
+        l = a(1035),
+        m = a(17720),
+        d = a(30925),
+        f = a(14336),
+        E = a(68950),
+        p = a(26505),
+        g = a(34181),
+        y = a(22837),
+        I = a(83137),
+        R = a(76217);
+      function h(e) {
         return n.createElement(s.d1w, null);
       }
-      function h(e) {
+      function _(e) {
         return n.createElement(s.Bir, null);
       }
-      function R(e) {
+      function q(e) {
         return n.createElement(
           "div",
-          { className: (0, i.A)(r.RoleIcon, e.className) },
-          2 == e.role ? n.createElement(h, null) : n.createElement(I, null),
+          { className: (0, u.A)(r.RoleIcon, e.className) },
+          e.role == i.PQ.k_EFamilyGroupRole_Child
+            ? n.createElement(_, null)
+            : n.createElement(h, null),
         );
       }
-      function _(e) {
+      function w(e) {
         const { steamid: t } = e,
-          a = (0, d.js)(t),
-          s = (0, E.M8)(),
-          o = (0, g.T)(),
-          c = s.data?.get(new l.b(t).GetAccountID()),
+          a = (0, f.js)(t),
+          s = (0, p.M8)(),
+          o = (0, I.T)(),
+          c = s.data?.get(new m.b(t).GetAccountID()),
           i = o.data?.preferences().parenthesize_nicknames();
         return n.createElement(
           n.Fragment,
@@ -96,14 +100,14 @@
             ),
         );
       }
-      function q(e) {
+      function P(e) {
         const { strSteamID: t, role: a, persona: s, isSelf: o } = e,
-          i = new l.b(t);
-        let m = e.size || "Large";
-        const d = (0, E.M8)(),
-          f = (0, g.T)(),
-          y = d.data?.get(i.GetAccountID()),
-          I = f.data?.preferences().parenthesize_nicknames();
+          i = new m.b(t);
+        let u = e.size || "Large";
+        const d = (0, p.M8)(),
+          f = (0, I.T)(),
+          E = d.data?.get(i.GetAccountID()),
+          R = f.data?.preferences().parenthesize_nicknames();
         return n.createElement(
           n.Fragment,
           null,
@@ -116,28 +120,28 @@
                 e.stopPropagation();
               },
             },
-            n.createElement(u.i8, {
+            n.createElement(l.i8, {
               className: r.Avatar,
               persona: s,
-              size: m,
+              size: u,
               statusPosition: "right",
             }),
-            n.createElement(p.D, {
+            n.createElement(g.D, {
               className: r.PlayerName,
               bIsSelf: o,
               bHideStatus: !1,
               bHidePersona: !1,
-              bParenthesizeNicknames: I,
+              bParenthesizeNicknames: R,
               bCompactView: !1,
               persona: s,
-              strNickname: y,
-              eFriendRelationship: 3,
+              strNickname: E,
+              eFriendRelationship: y.SX.k_EFriendRelationshipFriend,
             }),
           ),
           n.createElement(
             "div",
             { className: r.RoleAndIcon },
-            n.createElement(R, { className: r.ProfileRoleIcon, role: a }),
+            n.createElement(q, { className: r.ProfileRoleIcon, role: a }),
             n.createElement(
               "div",
               { className: r.RoleName },
@@ -146,8 +150,8 @@
           ),
         );
       }
-      function w(e) {
-        const t = (0, n.useContext)(m.IN);
+      function k(e) {
+        const t = (0, n.useContext)(d.IN);
         return t.errorMessage
           ? n.createElement(
               "div",
@@ -156,39 +160,39 @@
             )
           : null;
       }
-      function P(e) {
+      function N(e) {
         const { strSteamID: t, role: a, bInvitePending: s, children: o } = e,
-          u = (0, f.LH)(),
-          [l, E] = (0, n.useState)(!1),
-          p = u == t,
-          g = (0, d.js)(t);
+          i = (0, E.LH)(),
+          [l, m] = (0, n.useState)(!1),
+          p = i == t,
+          g = (0, f.js)(t);
         if (
-          ((0, m.p8)(g, "#FamilyManagement_ErrorLoadFamilyGeneric"),
+          ((0, d.p8)(g, "#FamilyManagement_ErrorLoadFamilyGeneric"),
           !g.isSuccess)
         )
           return null;
-        const I = g.data;
+        const y = g.data;
         return n.createElement(
-          y.Z,
+          R.Z,
           {
-            className: (0, i.A)(
+            className: (0, u.A)(
               r.FamilyMemberRow,
               p && r.ActiveFamilyMemberRow,
             ),
           },
           n.createElement(
-            y.Z,
+            R.Z,
             {
               className: r.FamilyMemberRowTop,
-              onActivate: o ? () => E(!l) : void 0,
+              onActivate: o ? () => m(!l) : void 0,
             },
             n.createElement(
               "div",
               { className: r.Left },
-              n.createElement(q, {
+              n.createElement(P, {
                 strSteamID: t,
                 role: a,
-                persona: I,
+                persona: y,
                 isSelf: p,
               }),
               s &&
@@ -204,17 +208,17 @@
                   (0, c.we)("#FamilyManagement_Me"),
                 ),
             ),
-            o && n.createElement(N, { bExpanded: l, setExpanded: E }),
+            o && n.createElement(v, { bExpanded: l, setExpanded: m }),
           ),
           l && o,
         );
       }
-      function N(e) {
+      function v(e) {
         const { bExpanded: t, setExpanded: a } = e;
         return n.createElement(
           o.wl,
           {
-            className: (0, i.A)(r.ExpandRowButton, t && r.Selected),
+            className: (0, u.A)(r.ExpandRowButton, t && r.Selected),
             onClick: () => a(!t),
           },
           n.createElement(s.b8_, { direction: "down" }),
@@ -223,7 +227,7 @@
     },
     27144: (e, t, a) => {
       "use strict";
-      a.d(t, { B3: () => _, KM: () => y, KT: () => R });
+      a.d(t, { B3: () => q, KM: () => I, KT: () => _ });
       var n = a(41735),
         r = a.n(n),
         s = a(58632),
@@ -231,22 +235,23 @@
         c = a(90626),
         i = a(20194),
         u = a(75233),
-        l = a(17720),
-        m = a(68797),
-        d = a(78327),
-        f = a(56545),
-        E = a(37735),
-        p = a(23809);
-      const g = "nicknames";
-      function y(e) {
-        const t = (0, p.KV)(),
+        l = a(37085),
+        m = a(17720),
+        d = a(68797),
+        f = a(78327),
+        E = a(56545),
+        p = a(37735),
+        g = a(23809);
+      const y = "nicknames";
+      function I(e) {
+        const t = (0, g.KV)(),
           { data: a, isLoading: n } = (0, i.I)({
-            queryKey: [g],
+            queryKey: [y],
             queryFn: async () => {
               const e = new Map();
-              if (d.iA.logged_in) {
-                const a = f.w.Init(E.dN),
-                  n = (await E.xt.GetNicknameList(t, a)).Body().toObject();
+              if (f.iA.logged_in) {
+                const a = E.w.Init(p.dN),
+                  n = (await p.xt.GetNicknameList(t, a)).Body().toObject();
                 n?.nicknames &&
                   n.nicknames.length > 0 &&
                   n.nicknames.forEach((t) => {
@@ -258,14 +263,14 @@
           });
         return a ? a.get(e) : null;
       }
-      const I = new (o())(
+      const R = new (o())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, d.yK)()
-                  ? d.TS.COMMUNITY_BASE_URL
-                  : d.TS.STORE_BASE_URL;
+                "community" == (0, f.yK)()
+                  ? f.TS.COMMUNITY_BASE_URL
+                  : f.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const a = { accountid: e[0], origin: self.origin },
                   n = await r().get(`${t}actions/ajaxgetavatarpersona`, {
@@ -274,10 +279,10 @@
                 if (
                   !n ||
                   200 != n.status ||
-                  1 != n.data?.success ||
+                  n.data?.success != l.d.k_EResultOK ||
                   !n.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, d.H))(n).strErrorMsg}`;
                 return [n.data.userinfo];
               }
               {
@@ -288,14 +293,14 @@
                 if (
                   !n ||
                   200 != n.status ||
-                  1 != n.data?.success ||
+                  n.data?.success != l.d.k_EResultOK ||
                   !n.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, m.H))(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, d.H))(n).strErrorMsg}`;
                 const s = new Map();
                 return (
                   n.data.userinfos.forEach((e) =>
-                    s.set(new l.b(e.steamid).GetAccountID(), e),
+                    s.set(new m.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => s.get(e))
                 );
@@ -304,22 +309,22 @@
           { cache: !1 },
         ),
         h = "avatarandpersonas";
-      function R(e) {
+      function _(e) {
         const { data: t, isLoading: a } = (0, i.I)({
           queryKey: [h, e],
-          queryFn: () => I.load(e),
+          queryFn: () => R.load(e),
         });
         return [t, a];
       }
-      function _(e) {
+      function q(e) {
         const t = (0, u.jE)(),
           { data: a, isLoading: n } = (0, i.I)({
             queryKey: [h, e],
             queryFn: async () => {
-              const a = await I.loadMany(e);
+              const a = await R.loadMany(e);
               return (
                 a.forEach((e) => {
-                  const a = [h, new l.b(e.steamid).GetAccountID()];
+                  const a = [h, new m.b(e.steamid).GetAccountID()];
                   t.setQueryData(a, e);
                 }),
                 a
@@ -341,19 +346,20 @@
     },
     83137: (e, t, a) => {
       "use strict";
-      a.d(t, { T: () => c });
-      var n = a(56545),
-        r = a(37735),
-        s = a(20194),
-        o = a(23809);
-      function c() {
-        const e = (0, o.KV)();
-        return (0, s.I)({
+      a.d(t, { T: () => i });
+      var n = a(37085),
+        r = a(56545),
+        s = a(37735),
+        o = a(20194),
+        c = a(23809);
+      function i() {
+        const e = (0, c.KV)();
+        return (0, o.I)({
           queryKey: ["communitypreferences"],
           queryFn: async () => {
-            const t = n.w.Init(r.tz),
-              a = await r.xt.GetCommunityPreferences(e, t);
-            if (1 != a.GetEResult())
+            const t = r.w.Init(s.tz),
+              a = await s.xt.GetCommunityPreferences(e, t);
+            if (a.GetEResult() != n.d.k_EResultOK)
               throw new Error(
                 `Error from GetCommunityPreferences: ${a.GetEResult()} ${a.GetErrorMessage()}`,
               );
@@ -372,7 +378,7 @@
         o = a(90626),
         c = a(75233),
         i = a(68950),
-        u = a(14860),
+        u = a(30925),
         l = a(75048),
         m = a(17720),
         d = a(27144),
@@ -405,8 +411,8 @@
           ),
         );
       }
-      var h = a(91721),
-        R = a.n(h),
+      var R = a(91721),
+        h = a.n(R),
         _ = a(42976);
       function q(e) {
         const { familyGroupID: t, requestID: a } = e,
@@ -437,11 +443,11 @@
               ? o.createElement(P, null)
               : g
                 ? g.is_completed
-                  ? o.createElement(v, { familyGroupID: t })
+                  ? o.createElement(N, { familyGroupID: t })
                   : g.requester_steamid === E
-                    ? o.createElement(k, { familyGroupID: t })
+                    ? o.createElement(v, { familyGroupID: t })
                     : o.createElement(S, { request: g, cartID: l })
-                : o.createElement(N, { familyGroupID: t })
+                : o.createElement(k, { familyGroupID: t })
         );
       }
       function w(e) {
@@ -454,25 +460,25 @@
       function P() {
         return o.createElement(
           "div",
-          { className: R().PurchaseRequestInfoPage },
+          { className: h().PurchaseRequestInfoPage },
           o.createElement(E.t, { size: "medium", msDelayAppear: 300 }),
         );
       }
-      function N(e) {
+      function k(e) {
         const { familyGroupID: t } = e;
         return o.createElement(D, {
           familyGroupID: t,
           headerLocToken: "#PurchaseRequest_RequestNotFoundHeader",
         });
       }
-      function v(e) {
+      function N(e) {
         const { familyGroupID: t } = e;
         return o.createElement(D, {
           familyGroupID: t,
           headerLocToken: "#PurchaseRequest_RequestCompletedHeader",
         });
       }
-      function k(e) {
+      function v(e) {
         const { familyGroupID: t } = e;
         return o.createElement(D, {
           familyGroupID: t,
@@ -485,22 +491,22 @@
           [r, s] = o.useState(null);
         return o.createElement(
           "div",
-          { className: R().PurchaseRequestInfoPage },
+          { className: h().PurchaseRequestInfoPage },
           o.createElement(
             u.IN.Provider,
             { value: { errorMessage: r, setErrorMessage: s } },
-            o.createElement("div", { className: R().Header }, (0, p.we)(a)),
+            o.createElement("div", { className: h().Header }, (0, p.we)(a)),
             o.createElement(l.pC, null),
             o.createElement(I, { familyGroupID: t }),
             !!n &&
-              o.createElement("div", { className: R().Info }, (0, p.we)(n)),
+              o.createElement("div", { className: h().Info }, (0, p.we)(n)),
             o.createElement(
               "div",
-              { className: R().ButtonContainer },
+              { className: h().ButtonContainer },
               o.createElement(
                 f.jn,
                 {
-                  className: R().PrimaryButton,
+                  className: h().PrimaryButton,
                   onClick: () => {
                     window.location.assign(g.TS.STORE_BASE_URL);
                   },

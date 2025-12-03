@@ -1870,69 +1870,7 @@ function UpdateEventLog( events )
 
 			var currencyname = ( currency ) ? currency.name.escapeHTML() : 'Unknown Item';
 
-			var formatFunc;
-			if ( CurrencyIsWalletFunds( currency ) )
-			{
-				if ( bTheirAction )
-				{
-					var bShouldConvert = typeof(g_rgWalletInfo) != 'undefined' &&
-						g_rgWalletInfo['wallet_currency'] != g_rgWalletInfo['wallet_other_currency'];
-					var feeInfo = CalculateFeeAmount( newAmount );
-					var nNewAmountAfterFee = newAmount - feeInfo.fees;
-					if ( bShouldConvert )
-					{
-						nNewAmountAfterFee = ConvertToOurCurrencyForDisplay( nNewAmountAfterFee );
-					}
-
-					var bPreviouslyOverMax = g_bWalletBalanceWouldBeOverMax;
-					g_bWalletBalanceWouldBeOverMax = newAmount > 0 && ( typeof(g_rgWalletInfo) != 'undefined' && nNewAmountAfterFee + g_rgWalletInfo['wallet_balance'] > g_rgWalletInfo['wallet_max_balance'] );
-
-					if ( g_bWalletBalanceWouldBeOverMax )
-					{
-						strAfterEvent =
-							'<%1$s>Error:<%2$s> You can\'t accept %3$s\'s offer of %4$s. You currently have %5$s in your Steam Wallet, but this offer would put you over the maximum of %6$s.'
-								.replace( '%1$s', 'span class="warning"' )
-								.replace( '%2$s', '/span' )
-								.replace( '%3$s', g_strTradePartnerPersonaName )
-								.replace( '%4$s', v_currencyformat( nNewAmountAfterFee, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) )
-								.replace( '%5$s', v_currencyformat( g_rgWalletInfo['wallet_balance'], GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) )
-								.replace( '%6$s', v_currencyformat( g_rgWalletInfo['wallet_max_balance'], GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
-					}
-
-					if ( g_bWalletBalanceWouldBeOverMax != bPreviouslyOverMax )
-					{
-						UpdateReadyButtons();
-					}
-				}
-
-				// Don't show a currency name unless we're changing value ( ex: "increased the amount of Wallet Funds to $1.23" )
-				currencyname = bAmountChanged ? 'Wallet Funds' : '';
-
-				formatFunc = function( x ) {
-					var feeInfo = CalculateFeeAmount( x );
-					var nPostFeeAmount = x - feeInfo.fees;
-					if ( bShouldConvert )
-					{
-						// return "OurCurrency / TheirCurrency";
-						if ( g_rgWalletInfo['wallet_other_currency'] == ( currency.id % 1000 ) )
-						{
-							return v_currencyformat( ConvertToOurCurrencyForDisplay( nPostFeeAmount ), GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) + ' / ' + v_currencyformat( nPostFeeAmount, currency.name.escapeHTML() );
-						}
-						else if ( g_rgWalletInfo['wallet_currency'] == ( currency.id % 1000 ) )
-						{
-							return v_currencyformat( nPostFeeAmount, currency.name.escapeHTML() ) + ' / ' + v_currencyformat( ConvertToTheirCurrency( nPostFeeAmount ), GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) );
-						}
-					}
-
-					return v_currencyformat( nPostFeeAmount, currency.name.escapeHTML() );
-				};
-			}
-			else
-			{
-				formatFunc = v_numberformat;
-			}
-
-			var itemname = formatFunc( event.amount == 0 ? event.old_amount : event.amount ) + ' ' + currencyname;
+			var itemname = v_numberformat( event.amount == 0 ? event.old_amount : event.amount ) + ' ' + currencyname;
 			var itemstyle = ( currency && currency.name_color ) ? 'color: #' + currency.name_color + ';' : '';
 
 			strEvent = template.evaluate(
@@ -1941,7 +1879,7 @@ function UpdateEventLog( events )
 						itemname: itemname,
 						currencyname: currencyname,
 						itemstyle: itemstyle,
-						amount: formatFunc( event.amount )
+						amount: v_numberformat( event.amount )
 					}
 			);
 

@@ -59,7 +59,7 @@
     },
     64684: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { AccessibilityFeaturesInfo: () => K });
+      i.r(t), i.d(t, { AccessibilityFeaturesInfo: () => j });
       var a = i(90626),
         s = i(16676),
         n = i(12155),
@@ -110,32 +110,39 @@
           bAccessibilityPlayableWithoutQuicktimeEvents: "#without_qte",
           bAccessibilityChatTexttoSpeech: "#tts",
           bAccessibilityChatSpeechtoText: "#stt",
-        },
-        d = {
-          bAccessibilityDifficultyLevels: "gameplay",
-          bAccessibilitySaveAnytime: "gameplay",
-          bAccessibilityNarratedMenus: "audio",
-          bAccessibilityBackgroundVolumeControls: "audio",
-          bAccessibilityStereoSound: "audio",
-          bAccessibilitySurroundSound: "audio",
-          bAccessibilityResizableUI: "visual",
-          bAccessibilitySubtitles: "visual",
-          bAccessibilityColorAlternatives: "visual",
-          bAccessibilityCameraComfort: "visual",
-          bAccessibilityKeyboardOnlyOption: "input",
-          bAccessibilityMouseOnlyOption: "input",
-          bAccessibilityTouchOnlyOption: "input",
-          bAccessibilityPlayableWithoutQuicktimeEvents: "input",
-          bAccessibilityChatTexttoSpeech: "input",
-          bAccessibilityChatSpeechtoText: "input",
-        },
-        b = {
-          gameplay: "#Accessibility_Group_Gameplay",
-          visual: "#Accessibility_Group_Visual",
-          audio: "#Accessibility_Group_Audio",
-          input: "#Accessibility_Group_Input",
         };
-      function m(e) {
+      var d;
+      !(function (e) {
+        (e.Gameplay = "gameplay"),
+          (e.Visual = "visual"),
+          (e.Audio = "audio"),
+          (e.Input = "input");
+      })(d || (d = {}));
+      const b = {
+          bAccessibilityDifficultyLevels: d.Gameplay,
+          bAccessibilitySaveAnytime: d.Gameplay,
+          bAccessibilityNarratedMenus: d.Audio,
+          bAccessibilityBackgroundVolumeControls: d.Audio,
+          bAccessibilityStereoSound: d.Audio,
+          bAccessibilitySurroundSound: d.Audio,
+          bAccessibilityResizableUI: d.Visual,
+          bAccessibilitySubtitles: d.Visual,
+          bAccessibilityColorAlternatives: d.Visual,
+          bAccessibilityCameraComfort: d.Visual,
+          bAccessibilityKeyboardOnlyOption: d.Input,
+          bAccessibilityMouseOnlyOption: d.Input,
+          bAccessibilityTouchOnlyOption: d.Input,
+          bAccessibilityPlayableWithoutQuicktimeEvents: d.Input,
+          bAccessibilityChatTexttoSpeech: d.Input,
+          bAccessibilityChatSpeechtoText: d.Input,
+        },
+        m = {
+          [d.Gameplay]: "#Accessibility_Group_Gameplay",
+          [d.Visual]: "#Accessibility_Group_Visual",
+          [d.Audio]: "#Accessibility_Group_Audio",
+          [d.Input]: "#Accessibility_Group_Input",
+        };
+      function p(e) {
         const [t, i] = (0, a.useState)(e.initialOpen ?? !1),
           s = a.useId(),
           n = Object.entries(e.features)
@@ -144,7 +151,7 @@
         if (0 === n.length) return null;
         const l = {};
         n.forEach((e) => {
-          const t = d[e];
+          const t = b[e];
           (l[t] ??= []), l[t].push(e);
         });
         const o = Object.keys(l).length > 1;
@@ -164,7 +171,7 @@
             a.createElement(
               "div",
               { className: u().ImageContainer },
-              a.createElement(p, {
+              a.createElement(A, {
                 className: u().CategoryIcon,
                 "aria-label": "",
               }),
@@ -201,8 +208,8 @@
                   a.createElement(
                     "li",
                     null,
-                    a.createElement(A, {
-                      group: "gameplay",
+                    a.createElement(y, {
+                      group: d.Gameplay,
                       features: l.gameplay,
                       open: t,
                     }),
@@ -211,8 +218,8 @@
                   a.createElement(
                     "li",
                     null,
-                    a.createElement(A, {
-                      group: "visual",
+                    a.createElement(y, {
+                      group: d.Visual,
                       features: l.visual,
                       open: t,
                     }),
@@ -221,8 +228,8 @@
                   a.createElement(
                     "li",
                     null,
-                    a.createElement(A, {
-                      group: "audio",
+                    a.createElement(y, {
+                      group: d.Audio,
                       features: l.audio,
                       open: t,
                     }),
@@ -231,8 +238,8 @@
                   a.createElement(
                     "li",
                     null,
-                    a.createElement(A, {
-                      group: "input",
+                    a.createElement(y, {
+                      group: d.Input,
                       features: l.input,
                       open: t,
                     }),
@@ -243,13 +250,13 @@
                 a.createElement(
                   "li",
                   { key: e },
-                  a.createElement(y, { feature: e, open: t }),
+                  a.createElement(E, { feature: e, open: t }),
                 ),
               ),
           ),
         );
       }
-      function p(e) {
+      function A(e) {
         return a.createElement(
           "svg",
           {
@@ -275,7 +282,7 @@
           }),
         );
       }
-      function A(e) {
+      function y(e) {
         const t = a.useId();
         return a.createElement(
           a.Fragment,
@@ -283,7 +290,7 @@
           a.createElement(
             "span",
             { className: u().GroupLabel, id: t },
-            (0, c.we)(b[e.group]),
+            (0, c.we)(m[e.group]),
           ),
           a.createElement(
             "ul",
@@ -292,13 +299,13 @@
               a.createElement(
                 "li",
                 { key: t },
-                a.createElement(y, { feature: t, open: e.open }),
+                a.createElement(E, { feature: t, open: e.open }),
               ),
             ),
           ),
         );
       }
-      function y(e) {
+      function E(e) {
         return a.createElement(
           "a",
           {
@@ -318,15 +325,15 @@
           ),
         );
       }
-      var E = i(52038),
-        F = i(83882),
-        S = i(32754),
-        g = i(26408),
-        f = i(77127);
-      function W() {
+      var F = i(52038),
+        S = i(83882),
+        g = i(32754),
+        f = i(26408),
+        W = i(77127);
+      function z() {
         return a.createElement(
           "div",
-          { className: f.WizardContainer },
+          { className: W.WizardContainer },
           a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Gameplay",
@@ -334,7 +341,7 @@
           }),
           a.createElement(
             "div",
-            { className: f.Instructions },
+            { className: W.Instructions },
             a.createElement(
               "p",
               null,
@@ -354,7 +361,7 @@
           ),
           a.createElement(
             "div",
-            { className: f.Question },
+            { className: W.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Gameplay_Question",
             ),
@@ -379,12 +386,12 @@
           }),
         );
       }
-      function z() {
-        const { currentValues: e, fnSetValue: t } = I(),
+      function C() {
+        const { currentValues: e, fnSetValue: t } = k(),
           i = a.useId();
         return a.createElement(
           "div",
-          { className: f.WizardContainer },
+          { className: W.WizardContainer },
           a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus",
@@ -392,7 +399,7 @@
           }),
           a.createElement(
             "div",
-            { className: f.Instructions },
+            { className: W.Instructions },
             a.createElement(
               "p",
               null,
@@ -411,12 +418,12 @@
           ),
           a.createElement(
             "div",
-            { id: i, className: f.Question },
+            { id: i, className: W.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Question",
             ),
           ),
-          a.createElement(V, {
+          a.createElement(Q, {
             labelId: i,
             options: [
               {
@@ -446,11 +453,11 @@
         );
       }
       function v() {
-        const { currentValues: e, fnSetValue: t } = I(),
+        const { currentValues: e, fnSetValue: t } = k(),
           i = a.useId();
         return a.createElement(
           "div",
-          { className: f.WizardContainer },
+          { className: W.WizardContainer },
           a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls",
@@ -458,7 +465,7 @@
           }),
           a.createElement(
             "div",
-            { className: f.Instructions },
+            { className: W.Instructions },
             a.createElement(
               "p",
               null,
@@ -473,12 +480,12 @@
           ),
           a.createElement(
             "div",
-            { id: i, className: f.Question },
+            { id: i, className: W.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_Question",
             ),
           ),
-          a.createElement(V, {
+          a.createElement(Q, {
             labelId: i,
             options: [
               {
@@ -507,12 +514,12 @@
           }),
         );
       }
-      function C() {
-        const { currentValues: e, fnSetValue: t } = I(),
+      function L() {
+        const { currentValues: e, fnSetValue: t } = k(),
           i = a.useId();
         return a.createElement(
           "div",
-          { className: f.WizardContainer },
+          { className: W.WizardContainer },
           a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio",
@@ -520,7 +527,7 @@
           }),
           a.createElement(
             "div",
-            { className: f.Instructions },
+            { className: W.Instructions },
             a.createElement(
               "p",
               null,
@@ -531,12 +538,12 @@
           ),
           a.createElement(
             "div",
-            { id: i, className: f.Question },
+            { id: i, className: W.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_Question",
             ),
           ),
-          a.createElement(V, {
+          a.createElement(Q, {
             labelId: i,
             options: [
               {
@@ -578,10 +585,10 @@
           }),
         );
       }
-      function L() {
+      function w() {
         return a.createElement(
           "div",
-          { className: f.WizardContainer },
+          { className: W.WizardContainer },
           a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Visual",
@@ -589,7 +596,7 @@
           }),
           a.createElement(
             "div",
-            { className: f.Instructions },
+            { className: W.Instructions },
             a.createElement(
               "p",
               null,
@@ -604,7 +611,7 @@
           ),
           a.createElement(
             "div",
-            { className: f.Question },
+            { className: W.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Visual_Question",
             ),
@@ -647,10 +654,10 @@
           }),
         );
       }
-      function w() {
+      function h() {
         return a.createElement(
           "div",
-          { className: f.WizardContainer },
+          { className: W.WizardContainer },
           a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Input",
@@ -658,7 +665,7 @@
           }),
           a.createElement(
             "div",
-            { className: f.Instructions },
+            { className: W.Instructions },
             a.createElement(
               "p",
               null,
@@ -673,7 +680,7 @@
           ),
           a.createElement(
             "div",
-            { className: f.Question },
+            { className: W.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Input_Question",
             ),
@@ -707,12 +714,12 @@
           }),
         );
       }
-      function h() {
-        const { currentValues: e, fnSetValue: t } = I(),
+      function N() {
+        const { currentValues: e, fnSetValue: t } = k(),
           i = a.useId();
         return a.createElement(
           "div",
-          { className: f.WizardContainer },
+          { className: W.WizardContainer },
           a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents",
@@ -720,7 +727,7 @@
           }),
           a.createElement(
             "div",
-            { className: f.Instructions },
+            { className: W.Instructions },
             a.createElement(
               "p",
               null,
@@ -731,12 +738,12 @@
           ),
           a.createElement(
             "div",
-            { id: i, className: f.Question },
+            { id: i, className: W.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Question",
             ),
           ),
-          a.createElement(V, {
+          a.createElement(Q, {
             labelId: i,
             options: [
               {
@@ -767,10 +774,10 @@
           }),
         );
       }
-      function N() {
+      function T() {
         return a.createElement(
           "div",
-          { className: f.WizardContainer },
+          { className: W.WizardContainer },
           a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText",
@@ -778,7 +785,7 @@
           }),
           a.createElement(
             "div",
-            { className: f.Instructions },
+            { className: W.Instructions },
             a.createElement(
               "p",
               null,
@@ -793,7 +800,7 @@
           ),
           a.createElement(
             "div",
-            { className: f.Question },
+            { className: W.Question },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText_Question",
             ),
@@ -818,10 +825,10 @@
           }),
         );
       }
-      function T() {
+      function O() {
         return a.createElement(
           "div",
-          { className: f.WizardContainer },
+          { className: W.WizardContainer },
           a.createElement(M, {
             subtitle: (0, c.we)(
               "#App_Landing_AccessibilityFeatures_Wizard_Summary",
@@ -829,7 +836,7 @@
           }),
           a.createElement(
             "div",
-            { className: f.Instructions },
+            { className: W.Instructions },
             a.createElement(
               "p",
               null,
@@ -996,11 +1003,11 @@
           ),
         );
       }
-      const O = a.createContext(void 0);
-      function I() {
-        return a.useContext(O);
+      const I = a.createContext(void 0);
+      function k() {
+        return a.useContext(I);
       }
-      function k(e) {
+      function x(e) {
         const t = a.useMemo(
           () => ({
             currentValues: e.currentValues,
@@ -1010,17 +1017,17 @@
           }),
           [e.currentValues, e.fnSetValue, e.nPageIndex, e.bEditMode],
         );
-        return a.createElement(O.Provider, { value: t }, e.children);
+        return a.createElement(I.Provider, { value: t }, e.children);
       }
-      function x(e) {
+      function B(e) {
         const { close: t, features: i, editMode: n, isMultiplayer: r } = e,
           [l, u] = (0, a.useState)(0),
           o = (function (e, t) {
             return (0, a.useMemo)(
               () =>
                 e
-                  ? [T]
-                  : [W, z, v, C, L, w, h, t ? N : void 0, T].filter((e) => !!e),
+                  ? [O]
+                  : [z, C, v, L, w, h, N, t ? T : void 0, O].filter((e) => !!e),
               [e, t],
             );
           })(
@@ -1037,22 +1044,22 @@
         l === o.length - 1 &&
           ((m = () => {
             !(function (e) {
-              Q(64, e.bAccessibilityResizableUI),
-                Q(65, e.bAccessibilitySubtitles),
-                Q(66, e.bAccessibilityColorAlternatives),
-                Q(67, e.bAccessibilityCameraComfort),
-                Q(68, e.bAccessibilityBackgroundVolumeControls),
-                Q(69, e.bAccessibilityStereoSound),
-                Q(70, e.bAccessibilitySurroundSound),
-                Q(71, e.bAccessibilityNarratedMenus),
-                Q(72, e.bAccessibilityChatSpeechtoText),
-                Q(73, e.bAccessibilityChatTexttoSpeech),
-                Q(74, e.bAccessibilityPlayableWithoutQuicktimeEvents),
-                Q(75, e.bAccessibilityKeyboardOnlyOption),
-                Q(76, e.bAccessibilityMouseOnlyOption),
-                Q(77, e.bAccessibilityTouchOnlyOption),
-                Q(78, e.bAccessibilityDifficultyLevels),
-                Q(79, e.bAccessibilitySaveAnytime),
+              P(64, e.bAccessibilityResizableUI),
+                P(65, e.bAccessibilitySubtitles),
+                P(66, e.bAccessibilityColorAlternatives),
+                P(67, e.bAccessibilityCameraComfort),
+                P(68, e.bAccessibilityBackgroundVolumeControls),
+                P(69, e.bAccessibilityStereoSound),
+                P(70, e.bAccessibilitySurroundSound),
+                P(71, e.bAccessibilityNarratedMenus),
+                P(72, e.bAccessibilityChatSpeechtoText),
+                P(73, e.bAccessibilityChatTexttoSpeech),
+                P(74, e.bAccessibilityPlayableWithoutQuicktimeEvents),
+                P(75, e.bAccessibilityKeyboardOnlyOption),
+                P(76, e.bAccessibilityMouseOnlyOption),
+                P(77, e.bAccessibilityTouchOnlyOption),
+                P(78, e.bAccessibilityDifficultyLevels),
+                P(79, e.bAccessibilitySaveAnytime),
                 document
                   .querySelector(
                     '[name="app[content][accessibilitywizard][v1]"]',
@@ -1066,10 +1073,10 @@
           (p = (0, c.we)("#Wizard_SaveAndExitButton")));
         const A = o[l];
         return a.createElement(
-          F.mt,
-          { active: !0, className: f.WizardModal },
+          S.mt,
+          { active: !0, className: W.WizardModal },
           a.createElement(
-            k,
+            x,
             {
               fnSetValue: (e, t) => {
                 d((i) => ({ ...i, [e]: t }));
@@ -1078,15 +1085,15 @@
               nPageIndex: l,
               bEditMode: n,
             },
-            a.createElement(B, { nPages: o.length }),
+            a.createElement(V, { nPages: o.length }),
             a.createElement(
               s.nB,
-              { className: f.WizardBody },
+              { className: W.WizardBody },
               a.createElement(A, null),
             ),
           ),
           a.createElement(s.CB, {
-            className: f.WizardButtons,
+            className: W.WizardButtons,
             onCancel: b,
             strCancelText: (0, c.we)("#Wizard_BackButton"),
             onOK: m,
@@ -1094,66 +1101,66 @@
           }),
         );
       }
-      function B(e) {
+      function V(e) {
         const { nPages: t } = e,
-          { nPageIndex: i } = I(),
+          { nPageIndex: i } = k(),
           s = (100 * (i + 1)) / (t + 1);
         return a.createElement(
           "div",
           null,
           a.createElement(
             "div",
-            { className: f.WizardTitle },
+            { className: W.WizardTitle },
             (0, c.we)("#App_Landing_AccessibilityFeatures_Wizard_Title"),
           ),
           a.createElement(
             "div",
             {
-              className: (0, E.A)(
-                f.ProgressBar,
-                i == t - 1 && f.ProgressBarComplete,
+              className: (0, F.A)(
+                W.ProgressBar,
+                i == t - 1 && W.ProgressBarComplete,
               ),
             },
             i < t - 1 &&
               a.createElement("div", {
-                className: (0, E.A)(f.ProgressBarFillComponent),
+                className: (0, F.A)(W.ProgressBarFillComponent),
                 style: { width: s + "%" },
               }),
           ),
         );
       }
       function M(e) {
-        const { nPageIndex: t, bEditMode: i } = I();
+        const { nPageIndex: t, bEditMode: i } = k();
         return i
           ? null
           : a.createElement(
               "div",
-              { className: f.StepRow },
+              { className: W.StepRow },
               a.createElement(
                 "div",
-                { className: f.StepLabel },
+                { className: W.StepLabel },
                 (0, c.we)("#Wizard_StepNumber", t + 1),
                 e.subtitle && a.createElement(s.iK, null, e.subtitle),
               ),
             );
       }
       function D(e) {
-        const { currentValues: t, fnSetValue: i } = I();
+        const { currentValues: t, fnSetValue: i } = k();
         return a.createElement(s.Yh, {
           label: a.createElement(
             "div",
-            { className: f.CheckboxComplexLabel },
+            { className: W.CheckboxComplexLabel },
             a.createElement(
               "span",
               null,
               e.name,
               " ",
               e.tooltip &&
-                a.createElement(g.o, {
+                a.createElement(f.o, {
                   customTooltip: !0,
                   tooltip: a.createElement(
-                    S.zQ,
-                    { className: f.WizardTooltip },
+                    g.zQ,
+                    { className: W.WizardTooltip },
                     e.tooltip,
                   ),
                 }),
@@ -1164,7 +1171,7 @@
           onChange: (t) => i(e.id, t),
         });
       }
-      function V(e) {
+      function Q(e) {
         const t = e.fnCalculateSelectedOption();
         return a.createElement(
           s.zW,
@@ -1174,18 +1181,18 @@
               s.a,
               { key: e.id, value: e.id },
               a.createElement("div", {
-                className: (0, E.A)(f.RadioButton, t == e.id && f.Selected),
+                className: (0, F.A)(W.RadioButton, t == e.id && W.Selected),
               }),
               a.createElement(
                 "div",
-                { className: f.OptionLabel },
+                { className: W.OptionLabel },
                 (0, c.we)(e.name),
               ),
             ),
           ),
         );
       }
-      function Q(e, t) {
+      function P(e, t) {
         const i = document.querySelector(
           `[name="app[classification][category][category_${e}]"]`,
         );
@@ -1193,25 +1200,26 @@
           i.setAttribute("value", t ? "true" : "");
         }
       }
-      var P = i(70019),
-        R = i.n(P);
-      function K(e) {
+      var R,
+        G = i(70019),
+        K = i.n(G);
+      function j(e) {
         const { isMultiplayer: t, bWizardCompleted: i, ...s } = e,
           n = Object.entries(s).some(
             ([e, t]) => e.startsWith("bAccessibility") && t,
           ),
-          [c, r] = a.useState(0);
+          [c, r] = a.useState(R.Closed);
         return a.createElement(
           a.Fragment,
           null,
-          0 !== c &&
-            a.createElement(x, {
-              editMode: 2 === c,
-              close: () => r(0),
+          c !== R.Closed &&
+            a.createElement(B, {
+              editMode: c === R.Edit,
+              close: () => r(R.Closed),
               features: s,
               isMultiplayer: t,
             }),
-          a.createElement(G, {
+          a.createElement(U, {
             bWizardCompleted: i,
             bHasAnyAccessibilityFeatures: n,
             setModalState: r,
@@ -1219,7 +1227,7 @@
           }),
         );
       }
-      function G(e) {
+      function U(e) {
         const {
           bHasAnyAccessibilityFeatures: t,
           bWizardCompleted: i,
@@ -1227,39 +1235,39 @@
           features: n,
         } = e;
         return t || i
-          ? a.createElement(U, {
+          ? a.createElement(H, {
               bHasAnyAccessibilityFeatures: t,
-              onEdit: () => s(2),
-              onStart: () => s(1),
+              onEdit: () => s(R.Edit),
+              onStart: () => s(R.Wizard),
               features: n,
             })
-          : a.createElement(j, { onStart: () => s(1) });
+          : a.createElement(q, { onStart: () => s(R.Wizard) });
       }
-      function j(e) {
+      function q(e) {
         return a.createElement(
           s.nB,
           null,
           a.createElement(
             s.a3,
-            { className: R().AccessibilityFeatureDescription },
+            { className: K().AccessibilityFeatureDescription },
             (0, c.we)("#App_Landing_AccessibilityFeatures_WizardPrompt_Desc"),
           ),
           a.createElement(
             s.jn,
-            { className: R().StartWizardButton, onClick: e.onStart },
+            { className: K().StartWizardButton, onClick: e.onStart },
             (0, c.we)(
               "#App_Landing_AccessibilityFeatures_WizardPrompt_StartButton",
             ),
           ),
         );
       }
-      function U(e) {
+      function H(e) {
         return a.createElement(
           s.nB,
           null,
           a.createElement(
             s.a3,
-            { className: R().AccessibilityFeatureDescription },
+            { className: K().AccessibilityFeatureDescription },
             e.bHasAnyAccessibilityFeatures
               ? (0, c.we)("#App_Landing_AccessibilityFeatures_Summary")
               : (0, c.we)(
@@ -1267,13 +1275,13 @@
                 ),
           ),
           e.bHasAnyAccessibilityFeatures &&
-            a.createElement(q, { features: e.features, onEdit: e.onEdit }),
+            a.createElement(J, { features: e.features, onEdit: e.onEdit }),
           a.createElement(
             "div",
-            { className: R().ButtonRow },
+            { className: K().ButtonRow },
             a.createElement(
               s.jn,
-              { className: R().StartWizardButton, onClick: e.onStart },
+              { className: K().StartWizardButton, onClick: e.onStart },
               (0, c.we)(
                 "#App_Landing_AccessibilityFeatures_WizardPrompt_StartButton",
               ),
@@ -1281,36 +1289,41 @@
           ),
         );
       }
-      function q(e) {
+      function J(e) {
         return a.createElement(
           "div",
-          { className: R().AccessibilityFeatureInfoCtn },
+          { className: K().AccessibilityFeatureInfoCtn },
           a.createElement(
             "div",
-            { className: R().AccessibilityFeatureContent },
+            { className: K().AccessibilityFeatureContent },
             a.createElement(
               "div",
-              { className: R().PreviewContainer },
-              a.createElement(m, { features: e.features, initialOpen: !0 }),
+              { className: K().PreviewContainer },
+              a.createElement(p, { features: e.features, initialOpen: !0 }),
             ),
           ),
           a.createElement(
             "div",
-            { className: R().EditButton, onClick: e.onEdit },
+            { className: K().EditButton, onClick: e.onEdit },
             a.createElement("div", {
-              className: (0, E.A)(R().Spacer, R().Top),
+              className: (0, F.A)(K().Spacer, K().Top),
             }),
             a.createElement(
               "div",
-              { className: R().EditButtonIcon },
+              { className: K().EditButtonIcon },
               a.createElement(n.ffu, null),
             ),
             a.createElement("div", {
-              className: (0, E.A)(R().Spacer, R().Bottom),
+              className: (0, F.A)(K().Spacer, K().Bottom),
             }),
           ),
         );
       }
+      !(function (e) {
+        (e[(e.Closed = 0)] = "Closed"),
+          (e[(e.Wizard = 1)] = "Wizard"),
+          (e[(e.Edit = 2)] = "Edit");
+      })(R || (R = {}));
     },
   },
 ]);

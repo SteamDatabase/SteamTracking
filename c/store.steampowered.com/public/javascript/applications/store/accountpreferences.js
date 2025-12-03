@@ -136,6 +136,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
         return new (_())(
@@ -185,7 +186,8 @@
             const _ = _?.public_data,
               _ = _?.private_data;
             (_.m_bInitialized = !!_),
-              (_.m_ePersonaState = _?.persona_state ?? 0),
+              (_.m_ePersonaState =
+                _?.persona_state ?? _._.k_EPersonaStateOffline),
               (_.m_strAvatarHash = _?.sha_digest_avatar
                 ? (0, _._)(_.sha_digest_avatar)
                 : _._),
@@ -227,7 +229,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -251,8 +255,10 @@
             (void 0 !== this.m_Preferences.utm_enabled &&
               null !== this.m_Preferences.utm_enabled) ||
               (this.m_Preferences.utm_enabled = !0),
-            (0 != this.m_Preferences.preference_state &&
-              1 != this.m_Preferences.preference_state) ||
+            (this.m_Preferences.preference_state !=
+              _._.k_EPrivacyCookiePreferenceState_DefaultAllowAll &&
+              this.m_Preferences.preference_state !=
+                _._.k_EPrivacyCookiePreferenceState_AllowAll) ||
               ((this.m_Preferences.valve_analytics.product_impressions_tracking =
                 !0),
               (this.m_Preferences.content_customization.recentapps = !0),
@@ -261,7 +267,10 @@
               (this.m_Preferences.third_party_content.twitter = !0),
               (this.m_Preferences.third_party_content.vimeo = !0),
               (this.m_Preferences.third_party_content.youtube = !0)),
-            0 == this.m_Preferences.version && (this.m_Preferences.version = 1);
+            this.m_Preferences.version ==
+              _._.k_EPrivacyCookiePreferencesVersion_Invalid &&
+              (this.m_Preferences.version =
+                _._.k_EPrivacyCookiePreferencesVersion_LATEST);
         }
         GetVersion() {
           return this.m_Preferences.version;
@@ -271,17 +280,26 @@
         }
         BIsAllowAll() {
           return (
-            1 == this.m_Preferences.preference_state ||
-            0 == this.m_Preferences.preference_state
+            this.m_Preferences.preference_state ==
+              _._.k_EPrivacyCookiePreferenceState_AllowAll ||
+            this.m_Preferences.preference_state ==
+              _._.k_EPrivacyCookiePreferenceState_DefaultAllowAll
           );
         }
         BIsRejectAll() {
-          return 2 == this.m_Preferences.preference_state;
+          return (
+            this.m_Preferences.preference_state ==
+            _._.k_EPrivacyCookiePreferenceState_RejectAll
+          );
         }
         SetPreferenceState(_) {
           if (this.m_Preferences.preference_state != _) {
-            if (((this.m_Preferences.preference_state = _), 1 == _ || 2 == _)) {
-              let _ = 1 == _;
+            if (
+              ((this.m_Preferences.preference_state = _),
+              _ == _._.k_EPrivacyCookiePreferenceState_AllowAll ||
+                _ == _._.k_EPrivacyCookiePreferenceState_RejectAll)
+            ) {
+              let _ = _ == _._.k_EPrivacyCookiePreferenceState_AllowAll;
               (this.m_Preferences.content_customization.recentapps = _),
                 (this.m_Preferences.third_party_analytics.google_analytics = _),
                 (this.m_Preferences.third_party_content.sketchfab = _),
@@ -343,7 +361,9 @@
             this.PostCookieSettings();
         }
         ProcessToggle() {
-          (this.m_Preferences.preference_state = 3), this.PostCookieSettings();
+          (this.m_Preferences.preference_state =
+            _._.k_EPrivacyCookiePreferenceState_Customized),
+            this.PostCookieSettings();
         }
         async PostCookieSettings() {
           const _ = _._.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
@@ -354,12 +374,12 @@
             let _ = await _().post(_, _, {
               withCredentials: !0,
             });
-            if (200 != _.status || 1 != _?.data?.success)
+            if (200 != _.status || _?.data?.success != _._.k_EResultOK)
               window.ShowAlertDialog(
                 (0, _._)("#CookiePref_Error"),
                 (0, _._)("#CookiePref_ErrorNotSaved"),
               );
-            else if (1 == _?.data?.success) {
+            else if (_?.data?.success == _._.k_EResultOK) {
               0;
               const { transfer_urls: _, transfer_params: _ } = _.data;
               _ && _ && this.TransferCookiePreferencesToSites(_, _);
@@ -396,10 +416,14 @@
             return _;
           })();
           const _ = (0, _.useCallback)(() => {
-              _.SetPreferenceState(1);
+              _.SetPreferenceState(
+                _._.k_EPrivacyCookiePreferenceState_AllowAll,
+              );
             }, [_]),
             _ = (0, _.useCallback)(() => {
-              _.SetPreferenceState(2);
+              _.SetPreferenceState(
+                _._.k_EPrivacyCookiePreferenceState_RejectAll,
+              );
             }, [_]);
           return _.createElement(
             _._,
@@ -873,6 +897,7 @@
             ),
           );
         });
+      var _ = __webpack_require__("chunkid");
       class _ {
         m_Preferences = void 0;
         m_bUpdating = !1;
@@ -891,8 +916,11 @@
           for (let _ of this.m_Preferences)
             if (_.notification_type == _.notification_type) {
               (_.notification_targets ^= _),
-                1 != (1 & _.notification_targets) &&
-                  (_.notification_targets = 0),
+                (_.notification_targets &
+                  _._.k_ESteamNotificationTarget_NotificationFeed) !=
+                  _._.k_ESteamNotificationTarget_NotificationFeed &&
+                  (_.notification_targets =
+                    _._.k_ESteamNotificationTarget_Invalid),
                 (_ = !0);
               break;
             }
@@ -910,11 +938,12 @@
             let _ = await _().post(_, _, {
               withCredentials: !0,
             });
-            (200 == _.status && 1 == _?.data?.success) ||
-              window.ShowAlertDialog(
-                (0, _._)("#NotificationPref_Error"),
-                (0, _._)("#NotificationPref_ErrorNotSaved"),
-              );
+            200 != _.status || _?.data?.success != _._.k_EResultOK
+              ? window.ShowAlertDialog(
+                  (0, _._)("#NotificationPref_Error"),
+                  (0, _._)("#NotificationPref_ErrorNotSaved"),
+                )
+              : _._.k_EResultOK;
           } catch (_) {
             0,
               window.ShowAlertDialog(
@@ -1004,19 +1033,36 @@
           const { preferenceSetting: _ } = _;
           let _ = _();
           const _ = (0, _.useCallback)(() => {
-              __webpack_require__.ToggleTargetPreference(1, _);
+              __webpack_require__.ToggleTargetPreference(
+                _._.k_ESteamNotificationTarget_NotificationFeed,
+                _,
+              );
             }, [_, _]),
             _ = (0, _.useCallback)(() => {
-              __webpack_require__.ToggleTargetPreference(8, _);
+              __webpack_require__.ToggleTargetPreference(
+                _._.k_ESteamNotificationTarget_Steam,
+                _,
+              );
             }, [_, _]),
             _ = (0, _.useCallback)(() => {
-              __webpack_require__.ToggleTargetPreference(2, _);
+              __webpack_require__.ToggleTargetPreference(
+                _._.k_ESteamNotificationTarget_PushNotification,
+                _,
+              );
             }, [_, _]),
             [_, _] = (0, _.useState)(!1),
             _ = __webpack_require__.BUpdatingPreferences(),
-            _ = 1 == (1 & _.notification_targets),
-            _ = 2 == (2 & _.notification_targets),
-            _ = 8 == (8 & _.notification_targets),
+            _ =
+              (_.notification_targets &
+                _._.k_ESteamNotificationTarget_NotificationFeed) ==
+              _._.k_ESteamNotificationTarget_NotificationFeed,
+            _ =
+              (_.notification_targets &
+                _._.k_ESteamNotificationTarget_PushNotification) ==
+              _._.k_ESteamNotificationTarget_PushNotification,
+            _ =
+              (_.notification_targets & _._.k_ESteamNotificationTarget_Steam) ==
+              _._.k_ESteamNotificationTarget_Steam,
             _ =
               ((_ = _.notification_type),
               (0, _._)("#SteamNotificationTypeDesc_" + _)
@@ -1116,7 +1162,7 @@
               queryFn: async () => {
                 const _ = _._.Init(_._),
                   _ = await _._.GetInvites(_, _);
-                if (1 != __webpack_require__.GetEResult())
+                if (__webpack_require__.GetEResult() != _._.k_EResultOK)
                   throw new Error(
                     `Error from usePlaytestInvite: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
                   );
@@ -1128,18 +1174,26 @@
         return (
           _.isSuccess &&
             (_ = _.data
-              .filter((_) => 1 === _.status || 3 === _.status)
-              .map((_) =>
-                3 === _.status
-                  ? _.createElement(_, {
+              .filter(
+                (_) =>
+                  _.status === _._.k_EPlaytestInviteStatus_Invited ||
+                  _.status === _._.k_EPlaytestInviteStatus_Accepted,
+              )
+              .map((_) => {
+                switch (_.status) {
+                  case _._.k_EPlaytestInviteStatus_Accepted:
+                    return _.createElement(_, {
                       invite: _,
                       key: _.invite_id,
-                    })
-                  : _.createElement(_, {
+                    });
+                  case _._.k_EPlaytestInviteStatus_Invited:
+                  default:
+                    return _.createElement(_, {
                       invite: _,
                       key: _.invite_id,
-                    }),
-              )),
+                    });
+                }
+              })),
           _.createElement(
             _._,
             {
@@ -1256,9 +1310,13 @@
               mutationFn: async (_) => {
                 const _ = _._.Init(_._);
                 _.Body().add_invite_ids(_),
-                  _.Body().set_status(_.bAccept ? 3 : 2);
+                  _.Body().set_status(
+                    _.bAccept
+                      ? _._.k_EPlaytestInviteStatus_Accepted
+                      : _._.k_EPlaytestInviteStatus_Rejected,
+                  );
                 const _ = await _._.UpdateInvites(_, _);
-                if (1 != _.GetEResult())
+                if (_.GetEResult() != _._.k_EResultOK)
                   throw {
                     result: _.GetEResult(),
                     message: `Error from UpdatePlaytestInvite: ${_.GetErrorMessage()} ( ${_.GetEResult()} )`,
@@ -1270,7 +1328,9 @@
                     _.invite_id === _
                       ? {
                           ..._,
-                          status: _.bAccept ? 3 : 2,
+                          status: _.bAccept
+                            ? _._.k_EPlaytestInviteStatus_Accepted
+                            : _._.k_EPlaytestInviteStatus_Rejected,
                         }
                       : _,
                   ),
@@ -1472,7 +1532,9 @@
           include_basic_info: !0,
           include_assets: !0,
         });
-        return _ && 3 == __webpack_require__ ? _ : null;
+        return _ && __webpack_require__ == _._.k_EStoreItemCacheState_Found
+          ? _
+          : null;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -1611,6 +1673,11 @@
           __webpack_require__._ +
           "images/applications/store/steam_mobile_qr_code.png?v=valveisgoodatcaching";
       var _,
+        _,
+        _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1627,7 +1694,45 @@
             "k_ETwoFactorTokenSteamguardScheme_Email"),
           (_[(_.k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2)] =
             "k_ETwoFactorTokenSteamguardScheme_TwoFactor");
-      })(_ || (_ = {}));
+      })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EMobileConfirmationAction_None = 0)] =
+            "k_EMobileConfirmationAction_None"),
+            (_[(_.k_EMobileConfirmationAction_Allow = 1)] =
+              "k_EMobileConfirmationAction_Allow"),
+            (_[(_.k_EMobileConfirmationAction_Cancel = 2)] =
+              "k_EMobileConfirmationAction_Cancel");
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.k_EMobileConfirmationType_Invalid = 0)] =
+            "k_EMobileConfirmationType_Invalid"),
+            (_[(_.k_EMobileConfirmationType_Test = 1)] =
+              "k_EMobileConfirmationType_Test"),
+            (_[(_.k_EMobileConfirmationType_Trade = 2)] =
+              "k_EMobileConfirmationType_Trade"),
+            (_[(_.k_EMobileConfirmationType_MarketListing = 3)] =
+              "k_EMobileConfirmationType_MarketListing"),
+            (_[(_.k_EMobileConfirmationType_FeatureOptOut = 4)] =
+              "k_EMobileConfirmationType_FeatureOptOut"),
+            (_[(_.k_EMobileConfirmationType_PhoneNumberChange = 5)] =
+              "k_EMobileConfirmationType_PhoneNumberChange"),
+            (_[(_.k_EMobileConfirmationType_AccountRecovery = 6)] =
+              "k_EMobileConfirmationType_AccountRecovery"),
+            (_[(_.k_EMobileConfirmationType_BuildChangeRequest = 7)] =
+              "k_EMobileConfirmationType_BuildChangeRequest"),
+            (_[(_.k_EMobileConfirmationType_AddUser = 8)] =
+              "k_EMobileConfirmationType_AddUser"),
+            (_[(_.k_EMobileConfirmationType_RegisterApiKey = 9)] =
+              "k_EMobileConfirmationType_RegisterApiKey"),
+            (_[(_.k_EMobileConfirmationType_InviteToFamilyGroup = 10)] =
+              "k_EMobileConfirmationType_InviteToFamilyGroup"),
+            (_[(_.k_EMobileConfirmationType_JoinFamilyGroup = 11)] =
+              "k_EMobileConfirmationType_JoinFamilyGroup"),
+            (_[(_.k_EMobileConfirmationType_MarketPurchase = 12)] =
+              "k_EMobileConfirmationType_MarketPurchase"),
+            (_[(_.k_EMobileConfirmationType_RequestRefund = 13)] =
+              "k_EMobileConfirmationType_RequestRefund");
+        })(_ || (_ = {}));
       const _ = (0, _._)(() => {
         let _ = _.Get();
         const _ = _(),
@@ -1650,7 +1755,10 @@
           _ = [];
         for (const _ of _.GetActiveDevices()) {
           const _ = _.logged_in && _.last_seen?.time > _ - 900,
-            _ = 5 == _.effective_token_state ? _.RememberedDevice : null,
+            _ =
+              _.effective_token_state == _._.k_EAuthTokenState_LoggedOut
+                ? _.RememberedDevice
+                : null,
             _ = _.createElement(_, {
               className: _,
               device: _,
@@ -1841,7 +1949,7 @@
           _.current?.BHasFocus() && _.current?.Node().ForceMeasureFocusRing();
         }, [_]);
         let _ = (function (_) {
-          if (2 == _.platform_type) {
+          if (_.platform_type == _._.k_EAuthTokenPlatformType_WebBrowser) {
             let _ = new _.UAParser(_.token_description).getResult();
             return _.browser.name && _._.name
               ? "WebKit" == _.browser.name
@@ -2006,72 +2114,75 @@
         if (!_ || !_.time) return null;
         const _ = (0, _._)(_.time);
         let _ = null;
-        if (3 == _.usage_type)
+        if (_.usage_type == _._.k_ETwoFactorUsageType_Login)
           _ = (0, _._)("#authorized_devices_lasttwofactor_login", _);
-        else if (2 == _.usage_type) {
-          const _ = 1 == _.confirmation_action ? "_allow" : "_cancel";
+        else if (_.usage_type == _._.k_ETwoFactorUsageType_MobileConfirmation) {
+          const _ =
+            _.confirmation_action == _.k_EMobileConfirmationAction_Allow
+              ? "_allow"
+              : "_cancel";
           switch (_.confirmation_type) {
-            case 2:
+            case _.k_EMobileConfirmationType_Trade:
               _ = (0, _._)(
                 `#authorized_devices_lasttwofactor_confirmation_trade${_}`,
                 _,
               );
               break;
-            case 3:
+            case _.k_EMobileConfirmationType_MarketListing:
               _ = (0, _._)(
                 `#authorized_devices_lasttwofactor_confirmation_marketlisting${_}`,
                 _,
               );
               break;
-            case 5:
+            case _.k_EMobileConfirmationType_PhoneNumberChange:
               _ = (0, _._)(
                 `#authorized_devices_lasttwofactor_confirmation_phonechange${_}`,
                 _,
               );
               break;
-            case 6:
+            case _.k_EMobileConfirmationType_AccountRecovery:
               _ = (0, _._)(
                 `#authorized_devices_lasttwofactor_confirmation_accountrecovery${_}`,
                 _,
               );
               break;
-            case 7:
+            case _.k_EMobileConfirmationType_BuildChangeRequest:
               _ = (0, _._)(
                 `#authorized_devices_lasttwofactor_confirmation_buildchange${_}`,
                 _,
               );
               break;
-            case 8:
+            case _.k_EMobileConfirmationType_AddUser:
               _ = (0, _._)(
                 `#authorized_devices_lasttwofactor_confirmation_adduser${_}`,
                 _,
               );
               break;
-            case 9:
+            case _.k_EMobileConfirmationType_RegisterApiKey:
               _ = (0, _._)(
                 `#authorized_devices_lasttwofactor_confirmation_registerapikey${_}`,
                 _,
               );
               break;
-            case 10:
+            case _.k_EMobileConfirmationType_InviteToFamilyGroup:
               _ = (0, _._)(
                 `#authorized_devices_lasttwofactor_confirmation_familygroupinvite${_}`,
                 _,
               );
               break;
-            case 11:
+            case _.k_EMobileConfirmationType_JoinFamilyGroup:
               _ = (0, _._)(
                 `#authorized_devices_lasttwofactor_confirmation_joinfamilygroup${_}`,
                 _,
               );
               break;
-            case 12:
+            case _.k_EMobileConfirmationType_MarketPurchase:
               _ = (0, _._)(
                 `#authorized_devices_lasttwofactor_confirmation_marketpurchase${_}`,
                 _,
               );
               break;
-            case 13:
+            case _.k_EMobileConfirmationType_RequestRefund:
               _ = (0, _._)(
                 `#authorized_devices_lasttwofactor_confirmation_refund${_}`,
                 _,
@@ -2099,7 +2210,7 @@
           _ =
             _.first_seen?.time &&
             _.first_seen.time + 2 * _._.PerWeek > Date.now() / 1e3,
-          _ = 5 == _.effective_token_state;
+          _ = _.effective_token_state == _._.k_EAuthTokenState_LoggedOut;
         let _ = (0, _._)(
           "#accountpreferences_authorized_devices_last_seen_max",
         );
@@ -2169,19 +2280,23 @@
             (function (_) {
               const _ = _.authentication_type,
                 _ = _.auth_type;
-              if (2 == _) return "#authorized_devices_default_qr";
-              if (5 == _.effective_token_state)
+              if (_ == _._.k_EAuthenticationType_QR)
+                return "#authorized_devices_default_qr";
+              if (_.effective_token_state == _._.k_EAuthTokenState_LoggedOut)
                 return "#authorized_devices_remembered_machine";
               switch (_) {
-                case 2:
+                case _._.k_EAuthSessionGuardType_EmailCode:
                   return "#authorized_devices_emailcode_password";
-                case 3:
+                case _._.k_EAuthSessionGuardType_DeviceCode:
                   return "#authorized_devices_devicecode_password";
-                case 4:
-                case 5:
+                case _._.k_EAuthSessionGuardType_DeviceConfirmation:
+                case _._.k_EAuthSessionGuardType_EmailConfirmation:
                   return "#authorized_devices_mobileconf_password";
-                case 6:
+                case _._.k_EAuthSessionGuardType_MachineToken:
                   return "#authorized_devices_machinetoken_password";
+                case _._.k_EAuthSessionGuardType_LegacyMachineAuth:
+                case _._.k_EAuthSessionGuardType_Unknown:
+                case _._.k_EAuthSessionGuardType_None:
                 default:
                   return "#authorized_devices_default_password";
               }
@@ -2192,9 +2307,9 @@
       }
       function _(_) {
         const { device: _, bHasAuthenticator: __webpack_require__ } = _,
-          _ = 5 == _.effective_token_state;
+          _ = _.effective_token_state == _._.k_EAuthTokenState_LoggedOut;
         let _ = null;
-        if (2 == _.platform_type)
+        if (_.platform_type == _._.k_EAuthTokenPlatformType_WebBrowser)
           _ = _
             ? _.createElement(_.SQF, {
                 className: (0, _._)(_.DeviceLogo, _.RememberedDevice),
@@ -2203,10 +2318,10 @@
                 className: _.DeviceLogo,
               });
         else if (
-          1 != _.platform_type ||
-          (544 !== _.gaming_device_type &&
-            545 != _.gaming_device_type &&
-            541 != _.gaming_device_type)
+          _.platform_type != _._.k_EAuthTokenPlatformType_SteamClient ||
+          (_.gaming_device_type !== _._.k_EGamingDeviceType_SteamDeck &&
+            _.gaming_device_type != _._.k_EGamingDeviceType_LegionGoS &&
+            _.gaming_device_type != _._.k_EGamingDeviceType_SteamOSGeneric)
         )
           switch (_.os_platform) {
             case _._.k_EPlatformTypeWin32:
@@ -2270,30 +2385,31 @@
       function _(_) {
         const { device: _ } = _;
         switch (_.platform_type) {
-          case 3:
+          case _._.k_EAuthTokenPlatformType_MobileApp:
             return (0, _._)(
               "#accountpreferences_authorized_devices_type_mobile",
             );
-          case 1:
-            return 544 === _.gaming_device_type
+          case _._.k_EAuthTokenPlatformType_SteamClient:
+            return _.gaming_device_type === _._.k_EGamingDeviceType_SteamDeck
               ? (0, _._)(
                   "#accountpreferences_authorized_devices_type_steamdeck",
                 )
-              : 545 == _.gaming_device_type
+              : _.gaming_device_type == _._.k_EGamingDeviceType_LegionGoS
                 ? (0, _._)(
                     "#accountpreferences_authorized_devices_type_legiongos",
                   )
-                : 541 == _.gaming_device_type
+                : _.gaming_device_type == _._.k_EGamingDeviceType_SteamOSGeneric
                   ? (0, _._)(
                       "#accountpreferences_authorized_devices_type_steamos",
                     )
                   : (0, _._)(
                       "#accountpreferences_authorized_devices_type_desktop",
                     );
-          case 2:
+          case _._.k_EAuthTokenPlatformType_WebBrowser:
             return (0, _._)(
               "#accountpreferences_authorized_devices_type_browser",
             );
+          case _._.k_EAuthTokenPlatformType_Unknown:
           default:
             return (0, _._)(
               "#accountpreferences_authorized_devices_type_unknown",
@@ -2858,6 +2974,7 @@
       })(_ || (_ = {}));
       const _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

@@ -180,31 +180,32 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
-          case 0:
+          case _._.k_EStoreAppType_Game:
             return "game";
-          case 6:
+          case _._.k_EStoreAppType_Software:
             return "software";
-          case 1:
+          case _._.k_EStoreAppType_Demo:
             return "demo";
-          case 4:
+          case _._.k_EStoreAppType_DLC:
             return "dlc";
-          case 7:
-          case 3:
+          case _._.k_EStoreAppType_Video:
+          case _._.k_EStoreAppType_Movie:
             return "video";
-          case 11:
+          case _._.k_EStoreAppType_Music:
             return "music";
-          case 12:
+          case _._.k_EStoreAppType_Beta:
             return "beta";
-          case 2:
+          case _._.k_EStoreAppType_Mod:
             return "mod";
         }
         return "invalid";
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -215,6 +216,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2051,9 +2053,9 @@
               ));
         }
         OnKeyDown(_) {
-          37 == _.keyCode
+          _.keyCode == _._.LeftArrow
             ? (this.props.video.JumpTime(-15), _.preventDefault())
-            : 39 == _.keyCode &&
+            : _.keyCode == _._.RightArrow &&
               (this.props.video.JumpTime(15), _.preventDefault());
         }
         AdjustSliderForClientX(_) {
@@ -2750,6 +2752,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         let _ = _.toString();
@@ -2830,7 +2833,7 @@
         }
         async LoadDiscoveryQueue(_, _, _) {
           const _ = _(_, _);
-          if (!this.m_transport) return 2;
+          if (!this.m_transport) return _._.k_EResultFail;
           try {
             const _ = (0, _._)(this.m_transport, _, _, _);
             _ &&
@@ -2846,7 +2849,7 @@
                 : (this.m_setExhuasted.delete(_),
                   this.GetExhaustedCallback(_, _).Set(!1)),
               this.m_mapSkippedAppCount.set(_, _.skipped || 0),
-              1
+              _._.k_EResultOK
             );
           } catch (_) {
             return (
@@ -2858,7 +2861,7 @@
                 "key",
                 _,
               ),
-              2
+              _._.k_EResultFail
             );
           }
         }
@@ -2904,7 +2907,7 @@
             const _ = (
               await _._.SkipDiscoveryQueueItem(this.m_transport, _)
             ).GetEResult();
-            1 != _ && 29 != _
+            _ != _._.k_EResultOK && _ != _._.k_EResultDuplicateRequest
               ? (console.warn("Error", _, "failed to skip appid ", _),
                 this.m_mapSkippedApps.delete(_))
               : _ && this.MarkDiscoveryQueueCompleted(_, _);
@@ -2939,7 +2942,7 @@
               []
             );
           const _ = await _._.GetDiscoveryQueueSkippedApps(this.m_transport, _);
-          return 1 === _.GetEResult()
+          return _.GetEResult() === _._.k_EResultOK
             ? _.Body().appids() || []
             : (console.warn(
                 "Failed to retrieve skipped apps for discovery queue.",
@@ -2995,6 +2998,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3065,7 +3069,7 @@
               _ && _.Body().set_override_country_code(_);
               _.Body().set_query(_._.fromObject(_)), _.Body().set_query_name(_);
               const _ = await _._.Query(_, _);
-              if (1 != _.GetEResult())
+              if (_.GetEResult() != _._.k_EResultOK)
                 throw `Error executing StoreQuery "${_}", EResult: ${_.GetEResult()}`;
               return new _(_, _);
             })(_, _, _, _ ?? {}, _),
@@ -3131,6 +3135,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "bGameHighlightAutoplayDisabled",
@@ -3158,7 +3163,7 @@
           _ = (_ ?? !0) && _ && !_.BIsAllAges() && "masked" == _,
           _ = (0, _._)(),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(0),
+          [_, _] = _.useState(_._.Image),
           _ = _.useRef(void 0),
           _ = _.useRef(void 0),
           [_, _] = _.useState(),
@@ -3187,17 +3192,17 @@
           }, [_, _, _, _]);
         const _ = (function (_, _, _, _, _) {
           return _.useCallback(() => {
-            0 == _
+            _ == _._.Image
               ? _(!0)
-              : 1 == _ && _.current
+              : _ == _._.Micro && _.current
                 ? _.current.paused
                   ? _.current.play()
                   : _.current.pause()
-                : 2 == _ && _.current
+                : _ == _._.Full && _.current
                   ? _.current.IsPaused()
                     ? _.current.Play()
                     : _.current.Pause()
-                  : 2 == _ && _ && _.TogglePlayPause();
+                  : _ == _._.Full && _ && _.TogglePlayPause();
           }, [_, _, _, _, _]);
         })(_, _, _, _, _);
         _.useEffect(() => {
@@ -3213,7 +3218,7 @@
             onMouseLeave: () => _(!1),
           },
           _.createElement("img", {
-            className: (0, _._)(_().AppMainCap, 0 != _ && _().Hidden),
+            className: (0, _._)(_().AppMainCap, _ != _._.Image && _().Hidden),
             src: _,
             onClick: _,
           }),
@@ -3306,7 +3311,13 @@
           _ = !!_ || !!__webpack_require__;
         _.useEffect(() => {
           let _ = !1;
-          _ && _ && _ && (_ = 0 === _ || (1 === _ && !_) || (2 === _ && !_)),
+          _ &&
+            _ &&
+            _ &&
+            (_ =
+              _ === _._.Image ||
+              (_ === _._.Micro && !_) ||
+              (_ === _._.Full && !_)),
             _(_),
             _?.(_ && _);
         }, [_, _, _, _, _, _, _, _]),
@@ -3328,7 +3339,7 @@
           })(_, _),
           _.useEffect(() => {
             _ ||
-              (_(0),
+              (_(_._.Image),
               _(!1),
               _(!1),
               _.current && (_.current.pause(), (_.current.currentTime = 0)),
@@ -3337,16 +3348,16 @@
         const _ = _.useRef(!1);
         return (
           _.useEffect(() => {
-            if (_ && 0 === _)
+            if (_ && _ === _._.Image)
               if ((_(!0), _))
                 if (_.current) {
-                  _.Debug("Starting microtrailer"), _(1);
+                  _.Debug("Starting microtrailer"), _(_._.Micro);
                   const _ = () =>
                     (function (_, _, _) {
                       if (_.current) return;
                       (_.current = !0),
                         _.Debug("Starting main trailer"),
-                        _(2),
+                        _(_._.Full),
                         __webpack_require__.Play();
                     })(_, _, _.current);
                   _ || !_.current
@@ -3361,7 +3372,10 @@
                           _.Warning(`Failed to play ${_}: `, _);
                       }));
                 } else
-                  _ && (_.Debug("Starting broadcast player"), _(2), _.Play());
+                  _ &&
+                    (_.Debug("Starting broadcast player"),
+                    _(_._.Full),
+                    _.Play());
               else _.Debug("Showing image");
             var _, _, _;
           }, [_, _, _, _, _, _, _, _, _]),
@@ -3389,18 +3403,18 @@
             const [_, _] = _.useState(!1);
             _.useEffect(() => {
               _ && !_
-                ? 1 == _ && _ && _
+                ? _ == _._.Micro && _ && _
                   ? (__webpack_require__.pause(), _(!0))
-                  : 2 == _ && _ && _
+                  : _ == _._.Full && _ && _
                     ? (_.Pause(), _(!0))
-                    : 2 == _ && _ && !_.IsPaused() && (_.Pause(), _(!0))
+                    : _ == _._.Full && _ && !_.IsPaused() && (_.Pause(), _(!0))
                 : !_ &&
                   _ &&
-                  (1 == _ && _
+                  (_ == _._.Micro && _
                     ? __webpack_require__.play()
-                    : 2 == _ && _
+                    : _ == _._.Full && _
                       ? _.Play()
-                      : 2 == _ && _ && _.IsPaused() && _.Play(),
+                      : _ == _._.Full && _ && _.IsPaused() && _.Play(),
                   _(!1));
             }, [_, _, _, _, _, _, _, _]);
           })(_, _, _.current, _, _.current, _, _),
@@ -3455,7 +3469,8 @@
                   _.createElement(_.default, {
                     classes: _(!1, _),
                     nAppIDVOD: _.GetAppID(),
-                    watchLocation: 15,
+                    watchLocation:
+                      _._.k_EBroadcastWatchLocation_TrailerCarousel,
                     fnOnVideoEnd: _,
                     fnVideoClick: _,
                     fnSetBroadcastVideo: _,
@@ -3482,7 +3497,7 @@
             _.current.SetVolume(_, _);
           }
         }, [_, _]);
-        let _ = 2 != _,
+        let _ = _ != _._.Full,
           _ = _(!1, _);
         return _.createElement(
           _,
@@ -3524,9 +3539,9 @@
       function _(_, _) {
         return (0, _._)({
           [_().AppVideo]: !0,
-          [_().PlayFullTrailer]: 2 == _,
-          [_().PlayMicrotrailer]: 1 == _,
-          [_().NoTrailer]: 0 == _,
+          [_().PlayFullTrailer]: _ == _._.Full,
+          [_().PlayMicrotrailer]: _ == _._.Micro,
+          [_().NoTrailer]: _ == _._.Image,
           [_().Microtrailer]: _,
           [_().Trailer]: !_,
         });
@@ -3577,7 +3592,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3868,7 +3885,7 @@
             let { data: _ } = (0, _._)(
               "DiscoveryQueueWidget",
               {
-                sort: 11,
+                sort: _._.k_EStoreQuerySort_Global24hSalesRank,
                 start: 0,
                 count: 12,
                 filters: {
@@ -3932,7 +3949,11 @@
         );
       }
       function _() {
-        const _ = (0, _._)(2, _._.LANGUAGE, !0),
+        const _ = (0, _._)(
+            _._.k_ESaleRewardDefType_DiscoveryQueue,
+            _._.LANGUAGE,
+            !0,
+          ),
           _ = (0, _._)();
         if (!_.data?.definition || 0 == (_.data?.reward_items?.length ?? 0))
           return null;

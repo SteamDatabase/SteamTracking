@@ -77,12 +77,19 @@
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
+      var _;
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
-      });
+      }),
+        (function (_) {
+          (_[(_.UNKNOWN = 0)] = "UNKNOWN"),
+            (_[(_.TEXT = 1)] = "TEXT"),
+            (_[(_.OPENTAG = 2)] = "OPENTAG"),
+            (_[(_.CLOSETAG = 3)] = "CLOSETAG");
+        })(_ || (_ = {}));
       class _ {
         constructor(_, _) {
           _ instanceof Map
@@ -95,7 +102,7 @@
             var _, _, _;
             const _ = [];
             let _ = {
-                type: 0,
+                type: _.UNKNOWN,
                 text: "",
               },
               _ = !1,
@@ -104,14 +111,16 @@
             for (let _ = 0; _ < _.length; _++) {
               const _ = _[_];
               switch (_.type) {
-                case 0:
+                case _.UNKNOWN:
                   "[" == _
-                    ? ((_.type = 2), (_ = !0))
-                    : ((_.type = 1), "\\" == _ && _ ? (_ = !_) : (_.text += _));
+                    ? ((_.type = _.OPENTAG), (_ = !0))
+                    : ((_.type = _.TEXT),
+                      "\\" == _ && _ ? (_ = !_) : (_.text += _));
                   break;
-                case 2:
-                case 3:
-                  if ("/" == _ && _) (_.type = 3), (_.text = ""), (_ = !1);
+                case _.OPENTAG:
+                case _.CLOSETAG:
+                  if ("/" == _ && _)
+                    (_.type = _.CLOSETAG), (_.text = ""), (_ = !1);
                   else if ("[" != _ || _)
                     if ("]" != _ || _)
                       "\\" == _ && _
@@ -119,13 +128,13 @@
                         : ((_.text += _), (_ = !1), (_ = !1));
                     else {
                       const _ =
-                          2 == _.type &&
+                          _.type == _.OPENTAG &&
                           "noparse" ==
                             (null === (_ = _.text) || void 0 === _
                               ? void 0
                               : __webpack_require__.toLocaleLowerCase()),
                         _ =
-                          3 == _.type &&
+                          _.type == _.CLOSETAG &&
                           "noparse" ==
                             (null === (_ = _.text) || void 0 === _
                               ? void 0
@@ -138,18 +147,18 @@
                         (_ = _(_, _)),
                         (_ = !1);
                     }
-                  else (_ = _(_, _(_), 2)), (_ = !0);
+                  else (_ = _(_, _(_), _.OPENTAG)), (_ = !0);
                   break;
-                case 1:
+                case _.TEXT:
                   "[" != _ || _
                     ? "\\" == _ && _
                       ? (_ && (_.text += _), (_ = !_))
                       : ((_.text += _), (_ = !1))
-                    : ((_ = _(_, _, 2)), (_ = !0));
+                    : ((_ = _(_, _, _.OPENTAG)), (_ = !0));
               }
             }
-            0 != _.type &&
-              (2 == _.type || 3 == _.type
+            _.type != _.UNKNOWN &&
+              (_.type == _.OPENTAG || _.type == _.CLOSETAG
                 ? _.push(_(_))
                 : _.push({
                     type: _.type,
@@ -204,10 +213,10 @@
           for (
             _.forEach((_, _) => {
               var _, _;
-              if (1 == _.type) {
+              if (_.type == _.TEXT) {
                 const _ = _ ? _.text.replace(/^[\t\r ]*\n/g, "") : _.text;
                 __webpack_require__.AppendText(_, _), (_ = !1);
-              } else if (2 == _.type) {
+              } else if (_.type == _.OPENTAG) {
                 const _ = _.get(_.tag);
                 if (_) {
                   const _ = _();
@@ -234,7 +243,7 @@
                     "[" + _.text + "]",
                     0 == _.length,
                   );
-              } else if (3 == _.type) {
+              } else if (_.type == _.CLOSETAG) {
                 for (; _() && _().node.tag !== _.text && _(_().node); ) {
                   const _ = _.pop();
                   _(_, _.node);
@@ -278,9 +287,9 @@
       function _(_) {
         return _.replace(/(\\|\[)/g, "\\$1");
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, __webpack_require__ = _.UNKNOWN) {
         const { type: _, text: _ = "" } = _;
-        if (2 == _) {
+        if (_ == _.OPENTAG) {
           let _ = _.indexOf("=");
           const _ = _.indexOf(" ");
           let _, _;
@@ -292,45 +301,56 @@
               (_ = (function (_) {
                 if (!_ || _.length < 1) return {};
                 const _ = {};
-                let _ = "",
+                let _,
                   _ = "",
-                  _ = 0,
+                  _ = "";
+                !(function (_) {
+                  (_[(_.PRE_NAME = 0)] = "PRE_NAME"),
+                    (_[(_.IN_NAME = 1)] = "IN_NAME"),
+                    (_[(_.POST_NAME = 2)] = "POST_NAME"),
+                    (_[(_.IN_VALUE = 3)] = "IN_VALUE"),
+                    (_[(_.IN_QUOTED_VALUE = 4)] = "IN_QUOTED_VALUE");
+                })(_ || (_ = {}));
+                let _ = _.PRE_NAME,
                   _ = 0;
-                "=" == _[0] && (_ = 2);
+                "=" == _[0] && (_ = _.POST_NAME);
                 let _ = !1;
                 for (_++; _ < _.length; _++) {
                   const _ = _[_];
                   let _ = !0,
                     _ = !1;
                   switch (_) {
-                    case 0:
+                    case _.PRE_NAME:
                       if ("=" == _) return {};
                       if (" " == _) continue;
-                      _ = 1;
+                      _ = _.IN_NAME;
                       break;
-                    case 1:
+                    case _.IN_NAME:
                       ("=" != _ && " " != _) ||
                         _ ||
-                        (" " == _ ? ((_ = 0), (_ = !0)) : (_ = 2), (_ = !1));
+                        (" " == _
+                          ? ((_ = _.PRE_NAME), (_ = !0))
+                          : (_ = _.POST_NAME),
+                        (_ = !1));
                       break;
-                    case 2:
+                    case _.POST_NAME:
                       " " == _
-                        ? ((_ = 0), (_ = !1), (_ = !0))
+                        ? ((_ = _.PRE_NAME), (_ = !1), (_ = !0))
                         : '"' == _
-                          ? ((_ = 4), (_ = !1))
-                          : (_ = 3);
+                          ? ((_ = _.IN_QUOTED_VALUE), (_ = !1))
+                          : (_ = _.IN_VALUE);
                       break;
-                    case 3:
-                    case 4:
-                      ((" " == _ && 4 != _ && !_) ||
-                        ('"' == _ && 4 == _ && !_)) &&
-                        ((_ = 0), (_ = !1), (_ = !0));
+                    case _.IN_VALUE:
+                    case _.IN_QUOTED_VALUE:
+                      ((" " == _ && _ != _.IN_QUOTED_VALUE && !_) ||
+                        ('"' == _ && _ == _.IN_QUOTED_VALUE && !_)) &&
+                        ((_ = _.PRE_NAME), (_ = !1), (_ = !0));
                   }
                   if (_)
                     if ("\\" != _ || _)
-                      if (((_ = !1), 1 == _)) _ += _;
+                      if (((_ = !1), _ == _.IN_NAME)) _ += _;
                       else {
-                        if (3 != _ && 4 != _)
+                        if (_ != _.IN_VALUE && _ != _.IN_QUOTED_VALUE)
                           throw new Error(
                             "Not expecting to accumulate buffer in state " + _,
                           );
@@ -339,7 +359,7 @@
                     else _ = !0;
                   _ && ((_[_] = _), (_ = ""), (_ = ""));
                 }
-                0 != _ && (_[_] = _);
+                _ != _.PRE_NAME && (_[_] = _);
                 return _;
               })(_)))
             : ((_ = {}), (_ = _.toLocaleLowerCase())),
@@ -351,7 +371,7 @@
               rawargs: _,
             });
         } else
-          0 != _ &&
+          _ != _.UNKNOWN &&
             _.push({
               type: _,
               text: _,
@@ -365,9 +385,9 @@
         var _;
         let _ = "";
         return (
-          3 == _.type ? (_ = "[/") : 2 == _.type && (_ = "["),
+          _.type == _.CLOSETAG ? (_ = "[/") : _.type == _.OPENTAG && (_ = "["),
           {
-            type: 1,
+            type: _.TEXT,
             text: _ + (null !== (_ = _.text) && void 0 !== _ ? _ : ""),
           }
         );

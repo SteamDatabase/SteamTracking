@@ -69,6 +69,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
@@ -1103,7 +1104,7 @@
           (async () => {
             try {
               const _ = await _().get(_);
-              1 == _?.data?.success
+              _?.data?.success == _._.k_EResultOK
                 ? _(_.data.connections)
                 : (console.error(
                     "sdrsessionsearch: OnPerformSearch error code  " +
@@ -1314,13 +1315,14 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         if (_().isCancel(_))
           return {
             strErrorMsg: "Action Cancelled:" + _,
-            errorCode: 52,
+            errorCode: _._.k_EResultCancelled,
           };
         if (
           void 0 !== _.response &&
@@ -1402,11 +1404,11 @@
         return "object" == typeof _ && "status" in _
           ? {
               strErrorMsg: "Unknown Error: " + _ + "\nStatus Code:" + _.status,
-              errorCode: 2,
+              errorCode: _._.k_EResultFail,
             }
           : {
               strErrorMsg: "Unknown Error: " + _,
-              errorCode: 2,
+              errorCode: _._.k_EResultFail,
             };
       }
     },

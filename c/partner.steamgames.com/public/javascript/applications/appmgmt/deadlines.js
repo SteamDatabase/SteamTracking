@@ -105,35 +105,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _._)({
-          queryKey: ["useMilestoneByAppID", _],
-          queryFn: async () => {
-            const _ = `${_._.PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo`,
-              _ = {
-                appid: _,
-              },
-              _ = await _().get(_, {
-                params: _,
-              });
-            if (1 == _?.data?.success) return _.data.milestones;
-            throw new Error("failed to load milestonse for appid " + _);
-          },
-          enabled: Boolean(_),
-        });
-        return _.useMemo(() => _?.data, [_, _.isLoading]);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -143,12 +114,14 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
-        return 2 == _._.EUNIVERSE ? 12 : 1;
+        return _._.EUNIVERSE == _._.k_EUniverseBeta ? 12 : 1;
       }
       class _ {
         m_mapOptInToPartners = new Map();
@@ -178,7 +151,7 @@
               _ = await _().get(_, {
                 params: _,
               });
-            200 == _?.status && 1 == _?.data?.success
+            200 == _?.status && _?.data?.success == _._.k_EResultOK
               ? _.data.publishers.forEach((_) => {
                   const _ = {
                     partnerid: _.publisherid,
@@ -306,11 +279,13 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -330,7 +305,7 @@
         include_release: !0,
       };
       function _() {
-        const _ = _(9),
+        const _ = _(_._.k_EPartnerDeadlineType_SeasonPassMilestone),
           [_, __webpack_require__] = (0, _._)("query", ""),
           _ = (0, _.useMemo)(
             () =>
@@ -353,7 +328,7 @@
             return _?.filter(
               (_) =>
                 0 == _.length ||
-                1 == _ ||
+                _ == _._.k_EStoreItemCacheState_Loading ||
                 !_ ||
                 _._.Get()
                   .GetApp(_.data.store_item_id)
@@ -516,7 +491,8 @@
           _.createElement(
             "td",
             null,
-            _?.title.find((_) => 0 == _.language)?.localized_string,
+            _?.title.find((_) => _.language == _._.k_Lang_English)
+              ?.localized_string,
           ),
           _.createElement("td", null, "TODO"),
         );
@@ -524,7 +500,7 @@
       var _ = __webpack_require__("chunkid");
       function _() {
         const [_, _] = _.useState(0),
-          _ = _(10, _),
+          _ = _(_._.k_EPartnerDeadlineType_TaxRequirement, _),
           _ = _.useRef(0);
         _.useEffect(() => () => window.clearTimeout(_.current), []);
         const _ = _.useMemo(() => {
@@ -677,23 +653,25 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState((9).toString()),
+        const [_, __webpack_require__] = _.useState(
+            _._.k_EPartnerDeadlineType_SeasonPassMilestone.toString(),
+          ),
           _ = [
             {
               label: "Season Pass Milestone",
-              data: (9).toString(),
+              data: _._.k_EPartnerDeadlineType_SeasonPassMilestone.toString(),
             },
             {
               label: "Tax Requirement",
-              data: (10).toString(),
+              data: _._.k_EPartnerDeadlineType_TaxRequirement.toString(),
             },
           ];
         let _ = null;
         switch (_) {
-          case (10).toString():
+          case _._.k_EPartnerDeadlineType_TaxRequirement.toString():
             _ = _.createElement(_, null);
             break;
-          case (9).toString():
+          case _._.k_EPartnerDeadlineType_SeasonPassMilestone.toString():
             _ = _.createElement(_, null);
             break;
           default:
@@ -771,16 +749,18 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { requirement: _ } = _,
@@ -830,7 +810,9 @@
               const _ = await _().post(_, _, {
                 withCredentials: !0,
               });
-              200 == _?.status && 1 == _.data?.success && _.data.url
+              200 == _?.status &&
+              _.data?.success == _._.k_EResultOK &&
+              _.data.url
                 ? window.open(_.data.url, "_blank")
                 : _("An error occurred. " + (0, _._)(_)?.strErrorMsg);
             } catch (_) {
@@ -2858,7 +2840,7 @@
                     _.append("message", _);
                   const _ = `${_._.PARTNER_BASE_URL}taxrequirement/ajaxcontacttaxidentity`,
                     _ = await _().post(_, _);
-                  200 == _?.status && 1 == _.data?.success
+                  200 == _?.status && _.data?.success == _._.k_EResultOK
                     ? _(
                         `Your message has been sent.  You should receive an email acknowledgement from TaxIdentity to your Steam account's email address: ${_.data.msg}.`,
                       )
@@ -2921,7 +2903,7 @@
               Boolean(
                 _.find(
                   (_) =>
-                    0 == _.data.status ||
+                    _.data.status == _._.k_EPartnerDeadlineStatusActive ||
                     (function (_) {
                       const _ = JSON.parse(_.data.description_jsondata);
                       return (
@@ -3197,9 +3179,13 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -3258,33 +3244,40 @@
                 _._.Get()
                   .QueueStoreItemRequest(_, _, _)
                   .then((_) => {
-                    _?.token.reason || _.current !== _ || _(1 == _), _();
+                    _?.token.reason ||
+                      _.current !== _ ||
+                      _(_ == _._.k_EResultOK),
+                      _();
                   })),
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return [null, 2];
-        if (!1 === _) return [void 0, 2];
-        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
-        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
+          return [null, _.k_EStoreItemCacheState_Unavailable];
+        if (!1 === _) return [void 0, _.k_EStoreItemCacheState_Unavailable];
+        if (_._.Get().BIsStoreItemMissing(_, _))
+          return [void 0, _.k_EStoreItemCacheState_Unavailable];
+        if (!_._.Get().BHasStoreItem(_, _, _))
+          return [void 0, _.k_EStoreItemCacheState_Loading];
         const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _ ? [_, 3] : [null, 2];
+        return _
+          ? [_, _.k_EStoreItemCacheState_Found]
+          : [null, _.k_EStoreItemCacheState_Unavailable];
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._.k_EStoreItemType_App, _, _);
       }
       function _(_, _, _) {
-        return _(_, 2, _, _);
+        return _(_, _._.k_EStoreItemType_Bundle, _, _);
       }
       function _(_, _, _) {
-        return _(_, 1, _, _);
+        return _(_, _._.k_EStoreItemType_Package, _, _);
       }
       function _(_, _, _) {
         const [_, _] = _(_, _, _);
         let _;
-        1 != _?.GetStoreItemType() ||
+        _?.GetStoreItemType() != _._.k_EStoreItemType_Package ||
           _.GetAssets()?.GetHeaderURL() ||
           1 != _?.GetIncludedAppIDs().length ||
           (_ = _.GetIncludedAppIDs()[0]);
@@ -3351,7 +3344,7 @@
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return 2;
+          return _.k_EStoreItemCacheState_Unavailable;
         if (
           !_.every(
             (_) =>
@@ -3359,22 +3352,30 @@
               _._.Get().BIsStoreItemMissing(_, _),
           )
         )
-          return 1;
+          return _.k_EStoreItemCacheState_Loading;
         return _.every((_) =>
           _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
         )
-          ? 3
-          : 2;
+          ? _.k_EStoreItemCacheState_Found
+          : _.k_EStoreItemCacheState_Unavailable;
       }
       function _(_, _, _) {
-        return _(_, 0, _, _);
+        return _(_, _._.k_EStoreItemType_App, _, _);
       }
       function _(_, _, _) {
-        return _(_, 2, _, _);
+        return _(_, _._.k_EStoreItemType_Bundle, _, _);
       }
       function _(_, _, _) {
-        return _(_, 1, _, _);
+        return _(_, _._.k_EStoreItemType_Package, _, _);
       }
+      !(function (_) {
+        (_[(_.k_EStoreItemCacheState_Loading = 1)] =
+          "k_EStoreItemCacheState_Loading"),
+          (_[(_.k_EStoreItemCacheState_Unavailable = 2)] =
+            "k_EStoreItemCacheState_Unavailable"),
+          (_[(_.k_EStoreItemCacheState_Found = 3)] =
+            "k_EStoreItemCacheState_Found");
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

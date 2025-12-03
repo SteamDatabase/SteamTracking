@@ -76,6 +76,7 @@
             overscan: _,
             renderItem: _,
             bDynamic: _,
+            measureElement: _,
             className: _,
             forceVirtualizeType: _,
             initialOffset: _,
@@ -105,6 +106,7 @@
             overscan: _,
             renderItem: _,
             bDynamic: _,
+            measureElement: _,
             forceVirtualizeType: _,
             initialOffset: _,
             onOffsetChange: _,
@@ -142,12 +144,14 @@
             overscan: _ = 6,
             initialOffset: _,
             onOffsetChange: _,
+            measureElement: _,
           } = _,
           _ = _ + _,
           _ = (0, _._)({
             count: __webpack_require__,
             scrollMargin: _,
             estimateSize: _.useCallback(() => _, [_]),
+            measureElement: _,
             overscan: _,
             initialOffset: _,
             initialRect: void 0,
@@ -179,6 +183,7 @@
             overscan: _ = 6,
             initialOffset: _,
             onOffsetChange: _,
+            measureElement: _,
           } = _,
           _ = _ + _,
           _ = (0, _._)({
@@ -186,6 +191,7 @@
             scrollMargin: __webpack_require__ - (_?.offsetTop || 0),
             getScrollElement: () => _,
             estimateSize: _.useCallback(() => _, [_]),
+            measureElement: _,
             overscan: _,
             initialRect: _
               ? void 0
