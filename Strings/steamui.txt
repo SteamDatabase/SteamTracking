@@ -1056,6 +1056,7 @@
 #.CRemoteClient_AllocateSDR_Response"
 #.CRemotePlay_SessionStarted_Request
 #.CShader_GetBucketManifest_Response"
+#.CSleepManager_RequestSleep_Request
 #.CSteamTV_AddChatModerator_Response"
 #.CSteamTV_GetChatModerators_Request
 #.CStoreBrowse_GetDLCForApps_Request
@@ -1537,6 +1538,7 @@ $.CPublishedFile_Unsubscribe_Response"
 $.CRemoteClient_TaskList_Notification
 $.CRemotePlay_SessionStarted_Response"
 $.CShader_ReportExternalBuild_Request
+$.CSleepManager_RequestSleep_Response
 $.CSteamTV_GetChatModerators_Response"
 $.CStorageDeviceManager_Adopt_Request
 $.CStorageDeviceManager_Eject_Request
@@ -3302,7 +3304,7 @@ ${LANGUAGE}
 (\t"*\n(CSteamTV_ReportBroadcastChannel_Response"O\n/CSteamTV_GetBroadcastChannelInteraction_Request
 (\t"*\n(GameServerClient_QueryServerData_Request"
 (\t"*\n(SiteServerUI_ContentCacheConfig_ResponseB
-(\t"+\n)CSleepManager_SwitchToPowerState_Response*
+(\t"+\n)CSleepManager_SwitchToPowerState_Response"$\n"CSleepManager_RequestSleep_Request"%\n#CSleepManager_RequestSleep_Response*
 (\t",\n*CChatRoom_SetChatRoomGroupTagline_Response"U\n(CChatRoom_SetChatRoomGroupAvatar_Request
 (\t",\n*CClientNotificationDockUnsupportedFirmware"H\n$CClientNotificationPeerContentUpload
 (\t".\n,CSteamTV_SetBroadcastChannelProfile_Response"K\n+CSteamTV_GetBroadcastChannelProfile_Request
@@ -3458,6 +3460,7 @@ ${LANGUAGE}
 (\v2".CMsgBluetoothManagerDeviceDetails"-\n+CBluetoothManager_StateChanged_Notification";\n(CBluetoothManager_SetDiscovering_Request
 (\v2".CMsgGameServerRulesQueryData.Rule
 (\v2".CMsgNetworkDeviceConnect.CustomAPH
+(\v2".CMsgNetworkDeviceConnect.Wireless
 (\v2".CRemoteClient_GetReplies_ResponseH
 (\v2".CSteamTV_AppCheer_SingleCheerType":\n
 (\v2".CStorePageFilter.ContentHubFilter
@@ -4134,6 +4137,7 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN14CLEDController10InitializeEvE29CWebUILEDManagerSetEnabledJob30CLEDManager_SetEnabled_Request31CLEDManager_SetEnabled_ResponseE
 *18CWebUIMsgLambdaJobIZN14CLEDController10InitializeEvE32CWebUILEDManagerSetBrightnessJob33CLEDManager_SetBrightness_Request34CLEDManager_SetBrightness_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSleepController10InitializeEvE29CWebUISleepManagerGetStateJob30CSleepManager_GetState_Request31CSleepManager_GetState_ResponseE
+*18CWebUIMsgLambdaJobIZN16CSleepController10InitializeEvE33CWebUISleepManagerRequestSleepJob34CSleepManager_RequestSleep_Request35CSleepManager_RequestSleep_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSleepController10InitializeEvE39CWebUISleepManagerSwitchToPowerStateJob40CSleepManager_SwitchToPowerState_Request41CSleepManager_SwitchToPowerState_ResponseE
 *18CWebUIMsgLambdaJobIZN17CSteamOSTelemetry10InitializeEvE27CWebUISteamOSSLSGetStateJob28CSteamOSSLS_GetState_Request29CSteamOSSLS_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN17CSteamOSTelemetry10InitializeEvE29CWebUISteamOSSLSSetEnabledJob30CSteamOSSLS_SetEnabled_Request31CSteamOSSLS_SetEnabled_ResponseE
@@ -4294,8 +4298,10 @@ ${LANGUAGE}
 *ZN15CWebUITransport23ThreadedRequestShutdownEvEUlvE_
 *ZN15CWebUITransport29ThreadedBroadcastNotificationEPKcRN6google8protobuf11MessageLiteEEUlvE_
 *ZN16CSleepController10InitializeEvE29CWebUISleepManagerGetStateJob
+*ZN16CSleepController10InitializeEvE33CWebUISleepManagerRequestSleepJob
 *ZN16CSleepController10InitializeEvE39CWebUISleepManagerSwitchToPowerStateJob
 *ZN16CSleepController10InitializeEvEUlRK30CSleepManager_GetState_RequestR31CSleepManager_GetState_ResponseE_
+*ZN16CSleepController10InitializeEvEUlRK34CSleepManager_RequestSleep_RequestR35CSleepManager_RequestSleep_ResponseE1_
 *ZN16CSleepController10InitializeEvEUlRK40CSleepManager_SwitchToPowerState_RequestR41CSleepManager_SwitchToPowerState_ResponseE0_
 *ZN17CSteamOSTelemetry10InitializeEvE27CWebUISteamOSSLSGetStateJob
 *ZN17CSteamOSTelemetry10InitializeEvE29CWebUISteamOSSLSSetEnabledJob
@@ -7078,11 +7084,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
-01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -10516,6 +10522,7 @@ ${LANGUAGE}
 33CMsgDuplicateControllerSourceMode
 33CMsgGameServerRulesQueryData_Rule
 33CMsgNetworkDeviceConnect_CustomAP
+33CMsgNetworkDeviceConnect_Wireless
 33CMsgRemoteDeviceStreamingProgress
 33CMsgRemoteDeviceStreamingResponse
 33CMsgTest_MessageToClient_Response
@@ -10619,6 +10626,7 @@ ${LANGUAGE}
 34CRemoteClient_StartPairing_Request
 34CRemotePlay_SessionStarted_Request
 34CShader_GetBucketManifest_Response
+34CSleepManager_RequestSleep_Request
 34CSteamTV_AddChatModerator_Response
 34CSteamTV_GetChatModerators_Request
 34CSteamTV_HomePageTemplate_GameList
@@ -10700,6 +10708,7 @@ ${LANGUAGE}
 35CRemoteClient_TaskList_Notification
 35CRemotePlay_SessionStarted_Response
 35CShader_ReportExternalBuild_Request
+35CSleepManager_RequestSleep_Response
 35CSteamTV_GetChatModerators_Response
 35CSteamTV_HomePageTemplate_Developer
 35CStorageDeviceManager_Adopt_Request
@@ -12710,6 +12719,7 @@ ${LANGUAGE}
 :.CUserAccount_GetAvailableValveDiscountPromotions_Response"
 :.JlN
 :3(!V_DMr{`i
+:5gi
 :5ptI.T(
 :AhHa
 :BAD BOOLEAN
@@ -18364,7 +18374,7 @@ Deaccel
 Debit Card (Nodwin)
 Debug
 DebugStatsSystem
-Dec  1 2025 22:19:31
+Dec  3 2025 01:18:16
 December
 Decipher Only
 Deckard
@@ -24192,6 +24202,7 @@ Method RequestPeerContentServer() not implemented.
 Method RequestPlaytime() not implemented.
 Method RequestPurchase() not implemented.
 Method RequestRecoveryCode() not implemented.
+Method RequestSleep() not implemented.
 Method ResendInvitationToFamilyGroup() not implemented.
 Method ResetPlaytime() not implemented.
 Method ResolveReport() not implemented.
@@ -28748,6 +28759,7 @@ SleepManager.NotifyRequestSuspend#1
 SleepManager.NotifyResumeFromSuspend#1
 SleepManager.NotifyShowPowerMenu#1
 SleepManager.NotifyStateChanged#1
+SleepManager.RequestSleep#1
 SleepManager.SwitchToPowerState#1
 Sleeping for new frame
 Sleeping for time
@@ -31774,6 +31786,7 @@ YYYY
 Y\n steamos_manual_gpu_clock_enabled
 Y\n!gamerecording_export_limit_height
 Y\n!gamescope_disable_mura_correction
+Y\n\fRequestSleep
 Y\n\rIncludedItems
 Y\n\rOtherGameData
 Y\trH5
@@ -42168,6 +42181,7 @@ has_favorite_badge
 has_leaderboards
 has_mode_override
 has_new_players
+has_non_6ghz_channel
 has_on_screen_keyboard
 has_pending_messages
 has_seen_controllers

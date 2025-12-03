@@ -104,6 +104,8 @@ message CMsgNetworkDevicesData {
 				optional string password = 8;
 				optional int32 strength_raw = 9;
 				optional string band_filter = 10;
+				optional bool has_non_6ghz_channel = 11;
+				optional bool is_saved = 12;
 			}
 
 			repeated .CMsgNetworkDevicesData.Device.Wireless.AP aps = 1;
@@ -142,10 +144,15 @@ message CMsgNetworkDeviceConnect {
 		optional string password = 2;
 	}
 
+	message Wireless {
+		optional string band_filter = 1;
+	}
+
 	optional uint32 device_id = 1 [default = 0];
 	optional .CMsgNetworkDeviceConnect.Credentials credentials = 4;
 	optional .CMsgNetworkDeviceIP4Config ip4 = 5;
 	optional .CMsgNetworkDeviceIP6Config ip6 = 6;
+	optional .CMsgNetworkDeviceConnect.Wireless wireless = 7;
 
 	oneof ap_info {
 		.CMsgNetworkDeviceConnect.KnownAP ap_known = 2;

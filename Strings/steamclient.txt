@@ -1280,6 +1280,7 @@
 #.CRemoteClient_AllocateSDR_Response"
 #.CRemotePlay_SessionStarted_Request
 #.CShader_GetBucketManifest_Response"
+#.CSleepManager_RequestSleep_Request
 #.CSteamTV_AddChatModerator_Response"
 #.CSteamTV_GetChatModerators_Request
 #.CStoreBrowse_GetDLCForApps_Request
@@ -1765,6 +1766,7 @@ $.CPublishedFile_Unsubscribe_Response"
 $.CRemoteClient_TaskList_Notification
 $.CRemotePlay_SessionStarted_Response"
 $.CShader_ReportExternalBuild_Request
+$.CSleepManager_RequestSleep_Response
 $.CSteamTV_GetChatModerators_Response"
 $.CStorageDeviceManager_Adopt_Request
 $.CStorageDeviceManager_Eject_Request
@@ -3762,7 +3764,7 @@ $steammessages_parental_objects.proto"
 (\t"*\n(CSteamTV_ReportBroadcastChannel_Response"O\n/CSteamTV_GetBroadcastChannelInteraction_Request
 (\t"*\n(GameServerClient_QueryServerData_Request"
 (\t"*\n(SiteServerUI_ContentCacheConfig_ResponseB
-(\t"+\n)CSleepManager_SwitchToPowerState_Response*
+(\t"+\n)CSleepManager_SwitchToPowerState_Response"$\n"CSleepManager_RequestSleep_Request"%\n#CSleepManager_RequestSleep_Response*
 (\t",\n*CChatRoom_SetChatRoomGroupTagline_Response"U\n(CChatRoom_SetChatRoomGroupAvatar_Request
 (\t".\n,CSteamTV_SetBroadcastChannelProfile_Response"K\n+CSteamTV_GetBroadcastChannelProfile_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
@@ -3927,6 +3929,7 @@ $steammessages_parental_objects.proto"
 (\v2".CMsgClientGamesPlayed.ProcessInfo"9\n\rCMsgGSApprove
 (\v2".CMsgGameServerRulesQueryData.Rule
 (\v2".CMsgNetworkDeviceConnect.CustomAPH
+(\v2".CMsgNetworkDeviceConnect.Wireless
 (\v2".CRemoteClient_GetReplies_ResponseH
 (\v2".CSteamTV_AppCheer_SingleCheerType":\n
 (\v2".CStorePageFilter.ContentHubFilter
@@ -7064,8 +7067,8 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/music/playbackcontroller.cpp
 /data/src/clientdll/networkdevicemanager.cpp
 /data/src/clientdll/networkdevicemanager_linux.cpp
-/data/src/clientdll/networkdevicemanager_linux.cpp:2496
-/data/src/clientdll/networkdevicemanager_linux.cpp:2761
+/data/src/clientdll/networkdevicemanager_linux.cpp:2536
+/data/src/clientdll/networkdevicemanager_linux.cpp:2801
 /data/src/clientdll/p2pnetworkingsession.cpp
 /data/src/clientdll/peercontentserver.cpp
 /data/src/clientdll/pipewirecontext.cpp
@@ -7103,9 +7106,9 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/systemlogcollector.cpp
 /data/src/clientdll/systemmanager.cpp
 /data/src/clientdll/systemmanager.cpp:2649
-/data/src/clientdll/systemmanager.cpp:3137
-/data/src/clientdll/systemmanager.cpp:4755
-/data/src/clientdll/systemmanager.cpp:5350
+/data/src/clientdll/systemmanager.cpp:3132
+/data/src/clientdll/systemmanager.cpp:4750
+/data/src/clientdll/systemmanager.cpp:5345
 /data/src/clientdll/systemperfmanager.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp:1338
@@ -7711,11 +7714,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11175,11 +11178,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-2048
 20000
 2000000
 200M
 2019
+2048
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -13289,6 +13292,7 @@ $steammessages_parental_objects.proto"
 33CMsgDuplicateControllerSourceMode
 33CMsgGameServerRulesQueryData_Rule
 33CMsgNetworkDeviceConnect_CustomAP
+33CMsgNetworkDeviceConnect_Wireless
 33CMsgRemoteDeviceStreamingProgress
 33CMsgRemoteDeviceStreamingResponse
 33CMsgSteamDatagramConnectionClosed
@@ -13457,6 +13461,7 @@ $steammessages_parental_objects.proto"
 34CShader_GetBucketManifest_Response
 34CSiteServerUIContentCacheConfigJob
 34CSiteServerUIContentCacheStatusJob
+34CSleepManager_RequestSleep_Request
 34CSteamTV_AddChatModerator_Response
 34CSteamTV_GetChatModerators_Request
 34CSteamTV_HomePageTemplate_GameList
@@ -13570,6 +13575,7 @@ $steammessages_parental_objects.proto"
 35CRemoteClient_TaskList_Notification
 35CRemotePlay_SessionStarted_Response
 35CShader_ReportExternalBuild_Request
+35CSleepManager_RequestSleep_Response
 35CSteamTV_GetChatModerators_Response
 35CSteamTV_HomePageTemplate_Developer
 35CStorageDeviceManager_Adopt_Request
@@ -15860,6 +15866,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9HtY]
 9IClientVR
 9IGv
 9ISteamUGC
@@ -15921,6 +15928,7 @@ $steammessages_parental_objects.proto"
 :EXTERNAL TYPE %s\n
 :LBN
 :LBjI
+:UAJ
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EContentReportReason_GenderedBullyingAndIntimidation
 :\n6k_EContentReportResolution_SuspiciousIncludingUpvoters
@@ -29202,6 +29210,7 @@ Method RequestPeerContentServer() not implemented.
 Method RequestPlaytime() not implemented.
 Method RequestPurchase() not implemented.
 Method RequestRecoveryCode() not implemented.
+Method RequestSleep() not implemented.
 Method ResendInvitationToFamilyGroup() not implemented.
 Method ResetPlaytime() not implemented.
 Method ResolveReport() not implemented.
@@ -37969,6 +37978,7 @@ YEAR
 YHb9l
 YU=E
 YYYY
+Y\n\fRequestSleep
 Y\n\rIncludedItems
 Y\n\rOtherGameData
 Y\trH5
@@ -46372,7 +46382,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenr
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -46800,6 +46810,7 @@ has_favorite_badge
 has_leaderboards
 has_mode_override
 has_new_players
+has_non_6ghz_channel
 has_on_screen_keyboard
 has_pending_messages
 has_seen_controllers
@@ -48116,6 +48127,7 @@ is_restart_pending
 is_root_device
 is_rtmp
 is_save
+is_saved
 is_screen_reader_supported
 is_service_available
 is_shared_file
@@ -54139,6 +54151,7 @@ nistp256_pre_comp_new
 nistp521_pre_comp_new
 nl_NL
 nm_access_point_get_flags
+nm_access_point_get_frequency
 nm_access_point_get_rsn_flags
 nm_access_point_get_ssid
 nm_access_point_get_strength
@@ -58182,7 +58195,7 @@ stderr
 stdin
 stdout
 steam
-steam Dec  1 2025 22:19:28
+steam Dec  3 2025 01:18:14
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

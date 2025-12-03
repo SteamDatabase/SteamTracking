@@ -39803,7 +39803,7 @@ Error generating stack: ` +
   var _,
     _ = _(() => {
       "use strict";
-      _ = _(_(), 1);
+      _ = _(_());
     });
   function _(_) {
     let [_, _] = _.useState(document.documentElement[_]);
@@ -41669,7 +41669,7 @@ Error generating stack: ` +
   }
   _();
   _();
-  var _ = _(_(), 1);
+  var _ = _(_());
   var _ = [
       "sc_schinese",
       "schinese",

@@ -321,10 +321,8 @@
                   _ = _.current.NavTree().DeferredFocus;
                 let _ = !1;
                 _
-                  ? (_ = _.current.RestoreState(_, _._.eRestoreFocusAlways))
-                  : _ &&
-                    ((0, _._)(_.current.Node(), _, _._.eRestoreFocusIfHadFocus),
-                    (_ = !0)),
+                  ? (_ = _.current.RestoreState(_, 1))
+                  : _ && ((0, _._)(_.current.Node(), _, 0), (_ = !0)),
                   _(
                     `Completed restoring history for state ${_} - ${_ ? "had history." : "no history for this state."}`,
                   ),
@@ -360,7 +358,7 @@
         _ = __webpack_require__("chunkid");
       class _ {
         m_eCurLang = (0, _._)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], _._.k_Lang_MAX, !1);
+        m_rgHasData = (0, _._)([], 31, !1);
         m_bHasLocalizationContext = !1;
         m_callback = new _._();
         GetCallback() {
@@ -630,7 +628,7 @@
                 "option",
                 {
                   key: "langpicker_unset",
-                  value: _._.k_Lang_None,
+                  value: -1,
                 },
                 (0, _._)("#language_selection_none"),
               ),
@@ -1067,14 +1065,10 @@
             __webpack_require__.sub_menu_url,
             _(__webpack_require__.sub_menu_url, _),
             __webpack_require__.localized_sub_menu_name?.[_] ||
-              __webpack_require__.localized_sub_menu_name?.[
-                _._.k_Lang_English
-              ] ||
+              __webpack_require__.localized_sub_menu_name?.[0] ||
               "unknown",
             __webpack_require__.sub_menu_icon?.localized_media?.[_]?.image ||
-              __webpack_require__.sub_menu_icon?.localized_media?.[
-                _._.k_Lang_English
-              ]?.image ||
+              __webpack_require__.sub_menu_icon?.localized_media?.[0]?.image ||
               void 0,
           ]);
         let _ = _.label_color || "#DBDFE2";
@@ -1474,7 +1468,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         _.preventDefault();
@@ -1801,7 +1794,7 @@
                 const _ = [],
                   _ = new Array();
                 for (const _ of _) {
-                  if (_ == _._.k_Lang_Arabic) continue;
+                  if (25 == _) continue;
                   const _ = (0, _._)("#Language_" + (0, _._)(_));
                   __webpack_require__.push({
                     label: _,
@@ -1938,8 +1931,7 @@
                           ownerWin: _,
                           uploadFile: _,
                           forceResolution: _.forceResolution,
-                          fileType:
-                            _.forceFileType || _._.k_EClanImageFileType_PNG,
+                          fileType: _.forceFileType || 3,
                         });
                       (0, _._)(_, _, "CropModal", {
                         strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
@@ -2036,8 +2028,7 @@
           ),
         );
       }
-      var _,
-        _ = __webpack_require__("chunkid");
+      var _;
       !(function (_) {
         (_[(_.k_eInsertThumbnail = 1)] = "k_eInsertThumbnail"),
           (_[(_.k_eInsertFullImage = 2)] = "k_eInsertFullImage"),
@@ -2172,8 +2163,7 @@
             let _ = _._.InitFromClanID(_.clanAccountID);
             _._.DeleteClanImage(_, _)
               .then((_) => {
-                _.success != _._.k_EResultOK && _((0, _._)(_).strErrorMsg),
-                  _(!1);
+                1 != _.success && _((0, _._)(_).strErrorMsg), _(!1);
               })
               .catch((_) => {
                 _((0, _._)(_).strErrorMsg), _(!1);
@@ -2354,11 +2344,7 @@
               },
               _.createElement("source", {
                 src: _.url,
-                type:
-                  "video/" +
-                  (_.file_type == _._.k_EClanImageFileType_MP4
-                    ? "mp4"
-                    : "webm"),
+                type: "video/" + (4 == _.file_type ? "mp4" : "webm"),
               }),
             )
           : null;
@@ -2660,7 +2646,7 @@
               _._,
               {
                 onClick: () => {
-                  for (let _ = 0; _ < _._.k_Lang_MAX; _++) _(_) && _(_);
+                  for (let _ = 0; _ < 31; _++) _(_) && _(_);
                 },
               },
               (0, _._)("#Sale_RemoveAll"),
@@ -2875,7 +2861,7 @@
         (_ =
           void 0 !== __webpack_require__
             ? [__webpack_require__]
-            : 2434320 == _.appid || _._.EUNIVERSE == _._.k_EUniverseBeta
+            : 2434320 == _.appid || 2 == _._.EUNIVERSE
               ? _
                 ? _.GetImageForSizeAsArrayWithFallback(
                     "localized_store_app_spotlight_mobile",
@@ -3297,7 +3283,7 @@
               ),
             ),
           ),
-          _ != _._.k_ESmallUpdateEvent &&
+          12 != _ &&
             _.createElement(
               _.Fragment,
               null,
@@ -3422,8 +3408,7 @@
           );
       function _(_, _) {
         let _ = 0;
-        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_)
-          (_(_, _)?.length ?? 0) > 0 && (_ += 1);
+        for (let _ = 0; _ < 31; ++_) (_(_, _)?.length ?? 0) > 0 && (_ += 1);
         return _;
       }
       const _ =
@@ -3449,7 +3434,7 @@
             _?.GetEventType(),
             _?.BHasTag("vo_marketing_message"),
           ]),
-          _ = _ == _._.k_ECreatorHome;
+          _ = 36 == _;
         let _ = null;
         __webpack_require__ === _.k_Required
           ? (_ = _.createElement(
@@ -4213,7 +4198,7 @@
             _(!0);
         }, [_, _, _]);
         const _ = (0, _.useCallback)(
-            (_, _, __webpack_require__ = _._.k_Lang_English) => {
+            (_, _, __webpack_require__ = 0) => {
               const _ = _._.InitFromClanID(_),
                 _ = _._.GetHashAndExt(_ ?? null);
               if (0 == _._.GetAllLocalizedGroupImages().length) {
@@ -4243,7 +4228,7 @@
             bOKDisabled: _ > 0,
             onOK: () => {
               const _ = _._.GetLocalizedImageGroupForEdit();
-              for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
+              for (let _ = 0; _ < 31; ++_) {
                 const _ = _?.localized_images[_];
                 if (_) {
                   const _ = __webpack_require__.split("/").pop() || "";
@@ -4252,8 +4237,7 @@
                     {
                       image_hash: _(_),
                       clanAccountID: _,
-                      file_type:
-                        (0, _._)(_) ?? _._.k_EClanImageFileType_Unknown,
+                      file_type: (0, _._)(_) ?? 0,
                       imageid: 0,
                     },
                     _,
@@ -4367,10 +4351,10 @@
           ]),
           [_] = (0, _.useState)(() =>
             (function (_) {
-              const _ = _._([], _._.k_Lang_MAX, null);
+              const _ = _._([], 31, null);
               for (const _ in _) {
                 const _ = (0, _._)(_);
-                _ != _._.k_Lang_None && (_[_] = _[_]);
+                -1 != _ && (_[_] = _[_]);
               }
               return _;
             })(_.localized_background_art ?? {}),
@@ -4849,7 +4833,7 @@
         let _ = null;
         _?.nUniqueIDNextSaleSection &&
           (_ = (0, _._)(
-            _._.Previewing,
+            2,
             _.GetSaleSectionByID(_?.nUniqueIDNextSaleSection),
             _,
             _,
@@ -4859,7 +4843,7 @@
         if (_?.length > 1) {
           const _ = _[_.length - 1];
           _ = (0, _._)(
-            _._.Previewing,
+            2,
             _.GetSaleSectionByID(_),
             _,
             _,
@@ -4919,7 +4903,7 @@
                     key: "li_" + _,
                   },
                   (0, _._)(
-                    _._.TableOfContents,
+                    3,
                     _.GetSaleSectionByID(_),
                     _,
                     _,
@@ -5403,7 +5387,7 @@
               _.createElement(
                 _._,
                 {
-                  location: _ ? _._.Previewing : _._.Display,
+                  location: _ ? 2 : 0,
                 },
                 _.createElement(
                   _,

@@ -2578,8 +2578,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_summary = void 0;
@@ -2590,8 +2588,7 @@
             (this.m_summary = _),
             (this.m_mapStoredDrafts = _),
             (this.m_mapLocalUpdates = new Map());
-          for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; _++)
-            this.m_mapLocalUpdates.set(_, {});
+          for (let _ = 0; _ < 31; _++) this.m_mapLocalUpdates.set(_, {});
         }
         BNeedsSaving(_) {
           if (void 0 !== _) {
@@ -2607,9 +2604,9 @@
             Boolean(this.m_summary?.faq_id),
             "Attempting to save when we lack a FaqID in the summary object",
           );
-          let _ = _._.k_EResultOK,
+          let _ = 1,
             _ = new Array();
-          for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_)
+          for (let _ = 0; _ < 31; ++_)
             if (
               (this.m_mapLocalUpdates.get(_).strTitle &&
                 this.m_mapLocalUpdates.get(_).strTitle !==
@@ -2622,7 +2619,7 @@
                 _ = this.GetDraftContent(_),
                 _ = _.Get().UpdateDraft(this.m_summary?.faq_id, _, _, _);
               _.then((_) => {
-                _.eResult == _._.k_EResultOK
+                1 == _.eResult
                   ? (0, _._)(() => {
                       this.m_mapStoredDrafts.has(_) ||
                         this.m_mapStoredDrafts.set(_, {}),
@@ -2649,7 +2646,7 @@
                             last_update_timestamp: _.rtUpdateTime,
                           });
                     })
-                  : _ == _._.k_EResultOK &&
+                  : 1 == _ &&
                     (console.error(
                       "FAQModel.SaveDraft: Response not ok " + _.eResult,
                       _,
@@ -2659,7 +2656,7 @@
                 console.error(
                   "FAQModel.SaveDrafts: Hit error " + (0, _._)(_).strErrorMsg,
                 ),
-                  _ == _._.k_EResultOK && (_ = _._.k_EResultFail);
+                  1 == _ && (_ = 2);
               }),
                 _.push(_);
             }
@@ -2681,10 +2678,7 @@
             : this.m_mapStoredDrafts.get(_)?.content;
         }
         GetDraftTitleWithFallback(_, _ = _._.k_ESteamRealmGlobal) {
-          const _ =
-            _ == _._.k_ESteamRealmChina
-              ? _._.k_Lang_Simplified_Chinese
-              : _._.k_Lang_English;
+          const _ = _ == _._.k_ESteamRealmChina ? 6 : 0;
           return (
             this.m_mapLocalUpdates.get(_).strTitle ??
             this.m_mapLocalUpdates.get(_).strTitle ??
@@ -2694,10 +2688,7 @@
           );
         }
         GetDraftContentWithFallback(_, _ = _._.k_ESteamRealmGlobal) {
-          const _ =
-            _ == _._.k_ESteamRealmChina
-              ? _._.k_Lang_Simplified_Chinese
-              : _._.k_Lang_English;
+          const _ = _ == _._.k_ESteamRealmChina ? 6 : 0;
           return (
             this.m_mapLocalUpdates.get(_).strContent ??
             this.m_mapLocalUpdates.get(_).strContent ??
@@ -2766,11 +2757,7 @@
         }
         async UpdateJsonData(_) {
           const _ = await _.Get().UpdateJsonData(this.GetFAQID(), _);
-          return (
-            _ === _._.k_EResultOK &&
-              (this.m_summary.json_data = JSON.stringify(_)),
-            _
-          );
+          return 1 === _ && (this.m_summary.json_data = JSON.stringify(_)), _;
         }
       }
       (0, _._)([_._], _.prototype, "m_summary", void 0),
@@ -5423,13 +5410,13 @@
           const _ = _._.Init(_);
           _.Body().set_steamid(_._.CLANSTEAMID), _.Body().set_internal_name(_);
           let _,
-            _ = _._.k_EResultFail;
+            _ = 2;
           try {
             const _ = await _.Create(
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (((_ = _.GetEResult()), _ == _._.k_EResultOK)) {
+            if (((_ = _.GetEResult()), 1 == _)) {
               _ = _.Body().faq_id();
               const _ = {
                 faq_id: _,
@@ -5457,7 +5444,7 @@
             _.Body().set_language(_),
             _.Body().set_content(_),
             _.Body().set_title(_);
-          let _ = _._.k_EResultFail,
+          let _ = 2,
             _ = 0;
           try {
             const _ = await _.UpdateDraft(
@@ -5465,7 +5452,7 @@
               _,
             );
             (_ = _.GetEResult()),
-              _ != _._.k_EResultOK
+              1 != _
                 ? console.error("FAQStore.UpdateDraft request failed:", _)
                 : (_ = _.Body().last_update_timestamp());
           } catch (_) {
@@ -5486,7 +5473,7 @@
           _.Body().set_steamid(_._.CLANSTEAMID),
             _.Body().set_faq_id(_),
             _.Body().set_json_data(_);
-          let _ = _._.k_EResultFail;
+          let _ = 2;
           try {
             (_ = (
               await _.UpdateJsonData(
@@ -5494,7 +5481,7 @@
                 _,
               )
             ).GetEResult()),
-              _ != _._.k_EResultOK
+              1 != _
                 ? console.error("FAQStore.UpdateJsonData request failed:", _)
                 : (this.m_mapFAQSummaries.get(_).json_data = _);
           } catch (_) {
@@ -5518,7 +5505,7 @@
                 _,
               ),
               _ = _.GetEResult();
-            if (_ == _._.k_EResultOK) return _.Body().faq().toObject();
+            if (1 == _) return _.Body().faq().toObject();
             console.error("FAQStore.GetFAQVersion request failed:", _);
           } catch (_) {
             const _ = (0, _._)(_);
@@ -5532,12 +5519,12 @@
         async DeleteFAQ(_) {
           const _ = _._.Init(_);
           _.Body().set_steamid(_._.CLANSTEAMID), _.Body().set_faq_id(_);
-          let _ = _._.k_EResultFail;
+          let _ = 2;
           try {
             (_ = (
               await _.Delete(this.m_steamInterface.GetServiceTransport(), _)
             ).GetEResult()),
-              _ != _._.k_EResultOK
+              1 != _
                 ? console.error("FAQStore.DeleteFAQ request failed:", _)
                 : (this.m_mapFAQDrafts.delete(_),
                   this.m_mapFAQPublishedContent.delete(_),
@@ -5552,9 +5539,9 @@
           return _;
         }
         static sm_mapFallbackLanguages = new Map([
-          [_._.k_Lang_Spanish, _._.k_Lang_Latam_Spanish],
-          [_._.k_Lang_Latam_Spanish, _._.k_Lang_Spanish],
-          [_._.k_Lang_SteamChina_SChinese, _._.k_Lang_Simplified_Chinese],
+          [5, 27],
+          [27, 5],
+          [29, 6],
         ]);
         GetFAQPublishedContent(_, _) {
           const _ = this.m_mapFAQPublishedContent.get(_);
@@ -5565,9 +5552,9 @@
               _.sm_mapFallbackLanguages.has(_) &&
               (_ = __webpack_require__.get(_.sm_mapFallbackLanguages.get(_))),
             _ ||
-              _ == _._.k_Lang_English ||
+              0 == _ ||
               (0, _._)() ||
-              (_ = __webpack_require__.get(_._.k_Lang_English)),
+              (_ = __webpack_require__.get("chunkid")),
             _
           );
         }
@@ -5584,13 +5571,13 @@
           if (this.m_mapFAQDrafts.has(_)) return this.m_mapFAQDrafts.get(_);
           const _ = _._.Init(_);
           _.Body().set_steamid(_._.CLANSTEAMID), _.Body().set_faq_id(_);
-          let _ = _._.k_EResultFail;
+          let _ = 2;
           try {
             const _ = await _.GetAllDrafts(
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (((_ = _.GetEResult()), _ != _._.k_EResultOK))
+            if (((_ = _.GetEResult()), 1 != _))
               return (
                 console.error(
                   "FaqStore.LoadFAQDraftContent request failed:",
@@ -5625,7 +5612,7 @@
             _.Body().set_faq_id(_),
             _.Body().set_visible_in_global_realm(_),
             _.Body().set_visible_in_china_realm(_);
-          let _ = _._.k_EResultFail;
+          let _ = 2;
           try {
             if (
               ((_ = (
@@ -5634,7 +5621,7 @@
                   _,
                 )
               ).GetEResult()),
-              _ === _._.k_EResultOK)
+              1 === _)
             ) {
               const _ = this.m_mapFAQSummaries.get(_);
               _ &&
@@ -5652,18 +5639,18 @@
           return _;
         }
         async PublishDraftByLanguage(_, _) {
-          if (!_ || 0 == _.length) return _._.k_EResultOK;
+          if (!_ || 0 == _.length) return 1;
           const _ = _._.Init(_);
           __webpack_require__.Body().set_steamid(_._.CLANSTEAMID),
             __webpack_require__.Body().set_faq_id(_),
             _.forEach((_) => __webpack_require__.Body().add_language(_));
-          let _ = _._.k_EResultFail;
+          let _ = 2;
           try {
             const _ = await _.PublishDraft(
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (((_ = _.GetEResult()), _ === _._.k_EResultOK)) {
+            if (((_ = _.GetEResult()), 1 === _)) {
               const _ = this.m_mapFAQSummaries.get(_);
               _ &&
                 (0, _._)(() => {
@@ -5699,7 +5686,7 @@
           __webpack_require__.Body().set_steamid(_._.CLANSTEAMID),
             __webpack_require__.Body().set_faq_id(_),
             __webpack_require__.Body().set_internal_name(_);
-          let _ = _._.k_EResultFail;
+          let _ = 2;
           try {
             (_ = (
               await _.UpdateInternalName(
@@ -5707,7 +5694,7 @@
                 _,
               )
             ).GetEResult()),
-              _ === _._.k_EResultOK
+              1 === _
                 ? (0, _._)(() => {
                     this.m_mapFAQSummaries.get(_)?.internal_name &&
                       (this.m_mapFAQSummaries.get(_).internal_name = _),
@@ -5762,7 +5749,7 @@
               withCredentials: !0,
               cancelToken: _?.token,
             });
-            if (200 == _?.status && _.data?.success == _._.k_EResultOK) {
+            if (200 == _?.status && 1 == _.data?.success) {
               const _ = _.data.updated,
                 _ = _?.[_] ?? [];
               return (
@@ -5790,9 +5777,7 @@
           return this.m_mapFAQSummaries
             .get(_)
             .per_language_info.some(
-              (_) =>
-                _.language == _._.k_Lang_English &&
-                _.last_publish_timestamp > 0,
+              (_) => 0 == _.language && _.last_publish_timestamp > 0,
             );
         }
         GetNonEnglishDraftsToPublish(_) {
@@ -5800,7 +5785,7 @@
             .get(_)
             .per_language_info.filter(
               (_) =>
-                _.language != _._.k_Lang_English &&
+                0 != _.language &&
                 _.last_update_timestamp > (_.last_publish_timestamp ?? 0),
             )
             .map((_) => _.language);
@@ -5845,37 +5830,37 @@
           switch (_[1]) {
             case "app":
               return {
-                item_type: _._.k_EStoreItemType_App,
+                item_type: 0,
                 _: parseInt(_[2]),
               };
             case "package":
               return {
-                item_type: _._.k_EStoreItemType_Package,
+                item_type: 1,
                 _: parseInt(_[2]),
               };
             case "bundle":
               return {
-                item_type: _._.k_EStoreItemType_Bundle,
+                item_type: 2,
                 _: parseInt(_[2]),
               };
             case "tag":
               return {
-                item_type: _._.k_EStoreItemType_Tag,
+                item_type: 4,
                 _: parseInt(_[2]),
               };
             case "creator":
               return {
-                item_type: _._.k_EStoreItemType_Creator,
+                item_type: 5,
                 _: parseInt(_[2]),
               };
             case "hubcategory":
               return {
-                item_type: _._.k_EStoreItemType_HubCategory,
+                item_type: 6,
                 _: parseInt(_[2]),
               };
           }
         return {
-          item_type: _._.k_EStoreItemType_Invalid,
+          item_type: -1,
           _: _ ? parseInt(_[2]) : 0,
         };
       }
@@ -5971,20 +5956,20 @@
                   _.set(
                     (function (_, _) {
                       switch (_) {
-                        case _._.k_EStoreItemType_App:
+                        case 0:
                           return `app_${_}`;
-                        case _._.k_EStoreItemType_Package:
+                        case 1:
                           return `package_${_}`;
-                        case _._.k_EStoreItemType_Bundle:
+                        case 2:
                           return `bundle_${_}`;
-                        case _._.k_EStoreItemType_Tag:
+                        case 4:
                           return `tag_${_}`;
-                        case _._.k_EStoreItemType_Creator:
+                        case 5:
                           return `creator_${_}`;
-                        case _._.k_EStoreItemType_HubCategory:
+                        case 6:
                           return `hubcategory_${_}`;
-                        case _._.k_EStoreItemType_Mtx:
-                        case _._.k_EStoreItemType_Invalid:
+                        case 3:
+                        case -1:
                           return "";
                         default:
                           return (
@@ -6024,7 +6009,7 @@
                   ? __webpack_require__.toObject()
                   : {
                       ..._(_),
-                      success: _._.k_EResultFail,
+                      success: 2,
                     };
               })
             );
@@ -6044,35 +6029,35 @@
       }
       function _(_, _, _) {
         const _ = (function (_) {
-          const _ = _.item_type ?? _._.k_EStoreItemType_Invalid,
+          const _ = _.item_type ?? -1,
             _ = _._ || 0;
           switch (_) {
-            case _._.k_EStoreItemType_App:
+            case 0:
               return {
                 appid: _,
               };
-            case _._.k_EStoreItemType_Package:
+            case 1:
               return {
                 packageid: _,
               };
-            case _._.k_EStoreItemType_Bundle:
+            case 2:
               return {
                 bundleid: _,
               };
-            case _._.k_EStoreItemType_Tag:
+            case 4:
               return {
                 tagid: _,
               };
-            case _._.k_EStoreItemType_Creator:
+            case 5:
               return {
                 creatorid: _,
               };
-            case _._.k_EStoreItemType_HubCategory:
+            case 6:
               return {
                 hubcategoryid: _,
               };
-            case _._.k_EStoreItemType_Mtx:
-            case _._.k_EStoreItemType_Invalid:
+            case 3:
+            case -1:
               return;
             default:
               return void (0, _._)(
@@ -6302,22 +6287,13 @@
           );
         }
       }
-      var _,
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EClientBetaNone = 0)] = "k_EClientBetaNone"),
-          (_[(_.k_EClientBetaNoneChosen = 1)] = "k_EClientBetaNoneChosen"),
-          (_[(_.k_EClientBetaNoneChosenNonAdmin = 2)] =
-            "k_EClientBetaNoneChosenNonAdmin"),
-          (_[(_.k_EClientBetaInBeta = 3)] = "k_EClientBetaInBeta"),
-          (_[(_.k_EClientBetaInBetaNonAdmin = 4)] =
-            "k_EClientBetaInBetaNonAdmin");
-      })(_ || (_ = {}));
-      var _, _, _, _, _, _, _, _;
+      var _, _, _, _;
       !(function (_) {
         (_[(_.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
           (_[(_.EBrowserType_OpenVROverlay = 1)] =
@@ -6346,132 +6322,6 @@
             (_[(_.OverlayKeyboard = 4)] = "OverlayKeyboard");
         })(_ || (_ = {})),
         (function (_) {
-          (_.SENDTEXT_SPECIALKEY_NONE = "\0"),
-            (_.SENDTEXT_SPECIALKEY_ENTER = ""),
-            (_.SENDTEXT_SPECIALKEY_BACKSPACE = ""),
-            (_.SENDTEXT_SPECIALKEY_ARROW_LEFT = ""),
-            (_.SENDTEXT_SPECIALKEY_ARROW_RIGHT = ""),
-            (_.SENDTEXT_SPECIALKEY_ARROW_UP = ""),
-            (_.SENDTEXT_SPECIALKEY_ARROW_DOWN = ""),
-            (_.SENDTEXT_SPECIALKEY_LAST = "");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.KEY_INVALID = 0)] = "KEY_INVALID"),
-            (_[(_.KEY_FIRST = 4)] = "KEY_FIRST"),
-            (_[(_.KEY_A = 4)] = "KEY_A"),
-            (_[(_.KEY_B = 5)] = "KEY_B"),
-            (_[(_.KEY_C = 6)] = "KEY_C"),
-            (_[(_.KEY_D = 7)] = "KEY_D"),
-            (_[(_.KEY_E = 8)] = "KEY_E"),
-            (_[(_.KEY_F = 9)] = "KEY_F"),
-            (_[(_.KEY_G = 10)] = "KEY_G"),
-            (_[(_.KEY_H = 11)] = "KEY_H"),
-            (_[(_.KEY_I = 12)] = "KEY_I"),
-            (_[(_.KEY_J = 13)] = "KEY_J"),
-            (_[(_.KEY_K = 14)] = "KEY_K"),
-            (_[(_.KEY_L = 15)] = "KEY_L"),
-            (_[(_.KEY_M = 16)] = "KEY_M"),
-            (_[(_.KEY_N = 17)] = "KEY_N"),
-            (_[(_.KEY_O = 18)] = "KEY_O"),
-            (_[(_.KEY_P = 19)] = "KEY_P"),
-            (_[(_.KEY_Q = 20)] = "KEY_Q"),
-            (_[(_.KEY_R = 21)] = "KEY_R"),
-            (_[(_.KEY_S = 22)] = "KEY_S"),
-            (_[(_.KEY_T = 23)] = "KEY_T"),
-            (_[(_.KEY_U = 24)] = "KEY_U"),
-            (_[(_.KEY_V = 25)] = "KEY_V"),
-            (_[(_.KEY_W = 26)] = "KEY_W"),
-            (_[(_.KEY_X = 27)] = "KEY_X"),
-            (_[(_.KEY_Y = 28)] = "KEY_Y"),
-            (_[(_.KEY_Z = 29)] = "KEY_Z"),
-            (_[(_.KEY_1 = 30)] = "KEY_1"),
-            (_[(_.KEY_2 = 31)] = "KEY_2"),
-            (_[(_.KEY_3 = 32)] = "KEY_3"),
-            (_[(_.KEY_4 = 33)] = "KEY_4"),
-            (_[(_.KEY_5 = 34)] = "KEY_5"),
-            (_[(_.KEY_6 = 35)] = "KEY_6"),
-            (_[(_.KEY_7 = 36)] = "KEY_7"),
-            (_[(_.KEY_8 = 37)] = "KEY_8"),
-            (_[(_.KEY_9 = 38)] = "KEY_9"),
-            (_[(_.KEY_0 = 39)] = "KEY_0"),
-            (_[(_.KEY_RETURN = 40)] = "KEY_RETURN"),
-            (_[(_.KEY_ESCAPE = 41)] = "KEY_ESCAPE"),
-            (_[(_.KEY_BACKSPACE = 42)] = "KEY_BACKSPACE"),
-            (_[(_.KEY_TAB = 43)] = "KEY_TAB"),
-            (_[(_.KEY_SPACE = 44)] = "KEY_SPACE"),
-            (_[(_.KEY_DASH = 45)] = "KEY_DASH"),
-            (_[(_.KEY_EQUALS = 46)] = "KEY_EQUALS"),
-            (_[(_.KEY_LEFT_BRACKET = 47)] = "KEY_LEFT_BRACKET"),
-            (_[(_.KEY_RIGHT_BRACKET = 48)] = "KEY_RIGHT_BRACKET"),
-            (_[(_.KEY_BACKSLASH = 49)] = "KEY_BACKSLASH"),
-            (_[(_.KEY_UNUSED1 = 50)] = "KEY_UNUSED1"),
-            (_[(_.KEY_SEMICOLON = 51)] = "KEY_SEMICOLON"),
-            (_[(_.KEY_SINGLE_QUOTE = 52)] = "KEY_SINGLE_QUOTE"),
-            (_[(_.KEY_BACK_TICK = 53)] = "KEY_BACK_TICK"),
-            (_[(_.KEY_COMMA = 54)] = "KEY_COMMA"),
-            (_[(_.KEY_PERIOD = 55)] = "KEY_PERIOD"),
-            (_[(_.KEY_FORWARD_SLASH = 56)] = "KEY_FORWARD_SLASH"),
-            (_[(_.KEY_CAPSLOCK = 57)] = "KEY_CAPSLOCK"),
-            (_[(_.KEY_F1 = 58)] = "KEY_F1"),
-            (_[(_.KEY_F2 = 59)] = "KEY_F2"),
-            (_[(_.KEY_F3 = 60)] = "KEY_F3"),
-            (_[(_.KEY_F4 = 61)] = "KEY_F4"),
-            (_[(_.KEY_F5 = 62)] = "KEY_F5"),
-            (_[(_.KEY_F6 = 63)] = "KEY_F6"),
-            (_[(_.KEY_F7 = 64)] = "KEY_F7"),
-            (_[(_.KEY_F8 = 65)] = "KEY_F8"),
-            (_[(_.KEY_F9 = 66)] = "KEY_F9"),
-            (_[(_.KEY_F10 = 67)] = "KEY_F10"),
-            (_[(_.KEY_F11 = 68)] = "KEY_F11"),
-            (_[(_.KEY_F12 = 69)] = "KEY_F12"),
-            (_[(_.KEY_PRINT_SCREEN = 70)] = "KEY_PRINT_SCREEN"),
-            (_[(_.KEY_SCROLL_LOCK = 71)] = "KEY_SCROLL_LOCK"),
-            (_[(_.KEY_BREAK = 72)] = "KEY_BREAK"),
-            (_[(_.KEY_INSERT = 73)] = "KEY_INSERT"),
-            (_[(_.KEY_HOME = 74)] = "KEY_HOME"),
-            (_[(_.KEY_PAGE_UP = 75)] = "KEY_PAGE_UP"),
-            (_[(_.KEY_DELETE = 76)] = "KEY_DELETE"),
-            (_[(_.KEY_END = 77)] = "KEY_END"),
-            (_[(_.KEY_PAGE_DOWN = 78)] = "KEY_PAGE_DOWN"),
-            (_[(_.KEY_RIGHT_ARROW = 79)] = "KEY_RIGHT_ARROW"),
-            (_[(_.KEY_LEFT_ARROW = 80)] = "KEY_LEFT_ARROW"),
-            (_[(_.KEY_DOWN_ARROW = 81)] = "KEY_DOWN_ARROW"),
-            (_[(_.KEY_UP_ARROW = 82)] = "KEY_UP_ARROW"),
-            (_[(_.KEY_NUM_LOCK = 83)] = "KEY_NUM_LOCK"),
-            (_[(_.KEY_KEYPAD_FORWARD_SLASH = 84)] = "KEY_KEYPAD_FORWARD_SLASH"),
-            (_[(_.KEY_KEYPAD_ASTERISK = 85)] = "KEY_KEYPAD_ASTERISK"),
-            (_[(_.KEY_KEYPAD_DASH = 86)] = "KEY_KEYPAD_DASH"),
-            (_[(_.KEY_KEYPAD_PLUS = 87)] = "KEY_KEYPAD_PLUS"),
-            (_[(_.KEY_KEYPAD_ENTER = 88)] = "KEY_KEYPAD_ENTER"),
-            (_[(_.KEY_KEYPAD_1 = 89)] = "KEY_KEYPAD_1"),
-            (_[(_.KEY_KEYPAD_2 = 90)] = "KEY_KEYPAD_2"),
-            (_[(_.KEY_KEYPAD_3 = 91)] = "KEY_KEYPAD_3"),
-            (_[(_.KEY_KEYPAD_4 = 92)] = "KEY_KEYPAD_4"),
-            (_[(_.KEY_KEYPAD_5 = 93)] = "KEY_KEYPAD_5"),
-            (_[(_.KEY_KEYPAD_6 = 94)] = "KEY_KEYPAD_6"),
-            (_[(_.KEY_KEYPAD_7 = 95)] = "KEY_KEYPAD_7"),
-            (_[(_.KEY_KEYPAD_8 = 96)] = "KEY_KEYPAD_8"),
-            (_[(_.KEY_KEYPAD_9 = 97)] = "KEY_KEYPAD_9"),
-            (_[(_.KEY_KEYPAD_0 = 98)] = "KEY_KEYPAD_0"),
-            (_[(_.KEY_KEYPAD_PERIOD = 99)] = "KEY_KEYPAD_PERIOD"),
-            (_[(_.KEY_LALT = 100)] = "KEY_LALT"),
-            (_[(_.KEY_LSHIFT = 101)] = "KEY_LSHIFT"),
-            (_[(_.KEY_LWIN = 102)] = "KEY_LWIN"),
-            (_[(_.KEY_LCONTROL = 103)] = "KEY_LCONTROL"),
-            (_[(_.KEY_RALT = 104)] = "KEY_RALT"),
-            (_[(_.KEY_RSHIFT = 105)] = "KEY_RSHIFT"),
-            (_[(_.KEY_RWIN = 106)] = "KEY_RWIN"),
-            (_[(_.KEY_RCONTROL = 107)] = "KEY_RCONTROL"),
-            (_[(_.KEY_VOLUP = 108)] = "KEY_VOLUP"),
-            (_[(_.KEY_VOLDOWN = 109)] = "KEY_VOLDOWN"),
-            (_[(_.KEY_MUTE = 110)] = "KEY_MUTE"),
-            (_[(_.KEY_PLAY = 111)] = "KEY_PLAY"),
-            (_[(_.KEY_STOP = 112)] = "KEY_STOP"),
-            (_[(_.KEY_NEXT = 113)] = "KEY_NEXT"),
-            (_[(_.KEY_PREV = 114)] = "KEY_PREV"),
-            (_[(_.KEY_LAST = 114)] = "KEY_LAST");
-        })(_ || (_ = {})),
-        (function (_) {
           (_[(_.MainGamepadUI = 0)] = "MainGamepadUI"),
             (_[(_.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
             (_[(_.Keyboard = 2)] = "Keyboard"),
@@ -6481,31 +6331,6 @@
             (_[(_.DesktopLogin = 6)] = "DesktopLogin"),
             (_[(_.OverlayDesktopUI = 7)] = "OverlayDesktopUI"),
             (_[(_.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EJoinServerError_None = 0)] = "k_EJoinServerError_None"),
-            (_[(_.k_EJoinServerError_VACBanned = 1)] =
-              "k_EJoinServerError_VACBanned"),
-            (_[(_.k_EJoinServerError_ServerFull = 2)] =
-              "k_EJoinServerError_ServerFull"),
-            (_[(_.k_EJoinServerError_ModNotInstalled = 3)] =
-              "k_EJoinServerError_ModNotInstalled"),
-            (_[(_.k_EJoinServerError_AppNotFound = 4)] =
-              "k_EJoinServerError_AppNotFound"),
-            (_[(_.k_EJoinServerError_NotInitialized = 5)] =
-              "k_EJoinServerError_NotInitialized"),
-            (_[(_.k_EJoinServerError_Pinging = -1)] =
-              "k_EJoinServerError_Pinging"),
-            (_[(_.k_EJoinServerError_Connecting = -2)] =
-              "k_EJoinServerError_Connecting"),
-            (_[(_.k_EJoinServerError_PingFailed = -3)] =
-              "k_EJoinServerError_PingFailed");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EServerResponded = 0)] = "k_EServerResponded"),
-            (_[(_.k_EServerFailedToRespond = 1)] = "k_EServerFailedToRespond"),
-            (_[(_.k_ENoServersListedOnMasterServer = 2)] =
-              "k_ENoServersListedOnMasterServer");
         })(_ || (_ = {}));
       const _ = {
         m_unPID: 0,
@@ -6629,7 +6454,7 @@
       const _ = new Map();
       for (const [module, module_exports] of _.entries())
         _.set(module_exports, module);
-      var _, _, _;
+      var _, _;
       function _() {
         return (0, _._)() ? _.Composited : _.None;
       }
@@ -6686,45 +6511,6 @@
       }
       _.set("sc_schinese", _.get("schinese")),
         _.set("korean", _.get("koreana")),
-        (function (_) {
-          (_[(_.k_ELanguage_None = -1)] = "k_ELanguage_None"),
-            (_[(_.k_ELanguage_English = 0)] = "k_ELanguage_English"),
-            (_[(_.k_ELanguage_German = 1)] = "k_ELanguage_German"),
-            (_[(_.k_ELanguage_French = 2)] = "k_ELanguage_French"),
-            (_[(_.k_ELanguage_Italian = 3)] = "k_ELanguage_Italian"),
-            (_[(_.k_ELanguage_Korean = 4)] = "k_ELanguage_Korean"),
-            (_[(_.k_ELanguage_Spanish = 5)] = "k_ELanguage_Spanish"),
-            (_[(_.k_ELanguage_Simplified_Chinese = 6)] =
-              "k_ELanguage_Simplified_Chinese"),
-            (_[(_.k_ELanguage_Traditional_Chinese = 7)] =
-              "k_ELanguage_Traditional_Chinese"),
-            (_[(_.k_ELanguage_Russian = 8)] = "k_ELanguage_Russian"),
-            (_[(_.k_ELanguage_Thai = 9)] = "k_ELanguage_Thai"),
-            (_[(_.k_ELanguage_Japanese = 10)] = "k_ELanguage_Japanese"),
-            (_[(_.k_ELanguage_Portuguese = 11)] = "k_ELanguage_Portuguese"),
-            (_[(_.k_ELanguage_Polish = 12)] = "k_ELanguage_Polish"),
-            (_[(_.k_ELanguage_Danish = 13)] = "k_ELanguage_Danish"),
-            (_[(_.k_ELanguage_Dutch = 14)] = "k_ELanguage_Dutch"),
-            (_[(_.k_ELanguage_Finnish = 15)] = "k_ELanguage_Finnish"),
-            (_[(_.k_ELanguage_Norwegian = 16)] = "k_ELanguage_Norwegian"),
-            (_[(_.k_ELanguage_Swedish = 17)] = "k_ELanguage_Swedish"),
-            (_[(_.k_ELanguage_Hungarian = 18)] = "k_ELanguage_Hungarian"),
-            (_[(_.k_ELanguage_Czech = 19)] = "k_ELanguage_Czech"),
-            (_[(_.k_ELanguage_Romanian = 20)] = "k_ELanguage_Romanian"),
-            (_[(_.k_ELanguage_Turkish = 21)] = "k_ELanguage_Turkish"),
-            (_[(_.k_ELanguage_Brazilian = 22)] = "k_ELanguage_Brazilian"),
-            (_[(_.k_ELanguage_Bulgarian = 23)] = "k_ELanguage_Bulgarian"),
-            (_[(_.k_ELanguage_Greek = 24)] = "k_ELanguage_Greek"),
-            (_[(_.k_ELanguage_Arabic = 25)] = "k_ELanguage_Arabic"),
-            (_[(_.k_ELanguage_Ukrainian = 26)] = "k_ELanguage_Ukrainian"),
-            (_[(_.k_ELanguage_Latam_Spanish = 27)] =
-              "k_ELanguage_Latam_Spanish"),
-            (_[(_.k_ELanguage_Vietnamese = 28)] = "k_ELanguage_Vietnamese"),
-            (_[(_.k_ELanguage_SteamChina_SChinese = 29)] =
-              "k_ELanguage_SteamChina_SChinese"),
-            (_[(_.k_ELanguage_Indonesian = 30)] = "k_ELanguage_Indonesian"),
-            (_[(_.k_ELanguage_MAX = 31)] = "k_ELanguage_MAX");
-        })(_ || (_ = {})),
         (function (_) {
           (_[(_.None = 0)] = "None"),
             (_[(_.Minimized = 1)] = "Minimized"),
@@ -7472,7 +7258,6 @@
           )
         );
       }
-      var _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         body_class: "",
       });
@@ -7619,7 +7404,7 @@
             () => ({
               instance: _,
               styles: _(),
-              presentation: _._.Desktop,
+              presentation: 0,
             }),
             [_],
           ),
@@ -9339,7 +9124,6 @@
         }, [_, _, _, _]);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (
@@ -9828,7 +9612,7 @@
             this.props.onChange && this.props.onChange(_);
         }
         KeyDown(_) {
-          _.keyCode == _._.Space &&
+          32 == _.keyCode &&
             (this.Toggle(), _.preventDefault(), _.stopPropagation());
         }
         SetChecked(_, _) {
@@ -9918,8 +9702,8 @@
       });
       class _ extends _ {
         OnOffKeyDown(_) {
-          (_.keyCode == _._.LeftArrow && this.checked) ||
-          (_.keyCode == _._.RightArrow && !this.checked)
+          (37 == _.keyCode && this.checked) ||
+          (39 == _.keyCode && !this.checked)
             ? (this.Toggle(), _.preventDefault(), _.stopPropagation())
             : this.KeyDown(_);
         }
@@ -10602,14 +10386,6 @@
         (0, _._)([_._], _.prototype, "OnInputBlur", null);
       const _ = (_, _) =>
         "" + (null != _ ? Number.parseFloat(_.toFixed(3)) : null) + (_ ?? "");
-      var _;
-      !(function (_) {
-        (_[(_.Touch = 0)] = "Touch"),
-          (_[(_.Mouse = 1)] = "Mouse"),
-          (_[(_.DPad = 2)] = "DPad"),
-          (_[(_.TextInput = 3)] = "TextInput"),
-          (_[(_.Reset = 4)] = "Reset");
-      })(_ || (_ = {}));
       class _ extends _.Component {
         m_flLastSetValue = null;
         constructor(_) {
@@ -10630,8 +10406,8 @@
         OnMouseDown(_) {
           (this.m_elSlider = _.currentTarget),
             (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
-            this.props.onChangeStart && this.props.onChangeStart(_.Mouse),
-            this.AdjustSliderForClientX(_.clientX, _.Mouse),
+            this.props.onChangeStart && this.props.onChangeStart(1),
+            this.AdjustSliderForClientX(_.clientX, 1),
             this.m_elSlider.ownerDocument.defaultView?.addEventListener(
               "mousemove",
               this.OnMouseMove,
@@ -10642,7 +10418,7 @@
             );
         }
         OnMouseMove(_) {
-          this.AdjustSliderForClientX(_.clientX, _.Mouse);
+          this.AdjustSliderForClientX(_.clientX, 1);
         }
         OnMouseUp(_) {
           this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
@@ -10653,13 +10429,13 @@
               "mouseup",
               this.OnMouseUp,
             ),
-            this.CompleteChange(_.Mouse);
+            this.CompleteChange(1);
         }
         OnTouchStart(_) {
           (this.m_elSlider = _.currentTarget),
             (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
-            this.props.onChangeStart && this.props.onChangeStart(_.Touch),
-            this.AdjustSliderForClientX(_.touches[0].clientX, _.Touch),
+            this.props.onChangeStart && this.props.onChangeStart(0),
+            this.AdjustSliderForClientX(_.touches[0].clientX, 0),
             this.m_elSlider.ownerDocument.defaultView?.addEventListener(
               "touchmove",
               this.OnTouchMove,
@@ -10670,7 +10446,7 @@
             );
         }
         OnTouchMove(_) {
-          this.AdjustSliderForClientX(_.touches[0].clientX, _.Touch);
+          this.AdjustSliderForClientX(_.touches[0].clientX, 0);
         }
         OnTouchEnd(_) {
           this.m_elSlider?.ownerDocument.defaultView?.removeEventListener(
@@ -10681,7 +10457,7 @@
               "touchend",
               this.OnTouchEnd,
             ),
-            this.CompleteChange(_.Touch);
+            this.CompleteChange(0);
         }
         OnKeyDown(_) {
           let _ = 1;
@@ -10690,11 +10466,11 @@
               1,
               Math.floor(0.1 * (this.props.max - this.props.min) + 0.5),
             )),
-            _.keyCode == _._.LeftArrow
+            37 == _.keyCode
               ? (this.IncrementValue(-1 * _), _.preventDefault())
-              : _.keyCode == _._.RightArrow &&
+              : 39 == _.keyCode &&
                 (this.IncrementValue(1 * _), _.preventDefault()),
-            this.CompleteChange(_.DPad);
+            this.CompleteChange(2);
         }
         AdjustSliderForClientX(_, _) {
           let _ =
@@ -10717,7 +10493,7 @@
         IncrementValue(_) {
           let _ = this.ClampValue(this.props.value + _);
           _ != this.props.value &&
-            (this.props.onChange && this.props.onChange(_, _.DPad),
+            (this.props.onChange && this.props.onChange(_, 2),
             (this.m_flLastSetValue = _));
         }
         render() {
@@ -12504,7 +12280,7 @@
         _.onEscKeypress &&
           ((_.tabIndex = 0),
           (_.onKeyDown = (_) => {
-            _.keyCode == _._.Escape && (_.onEscKeypress(), _.stopPropagation());
+            27 == _.keyCode && (_.onEscKeypress(), _.stopPropagation());
           }),
           (_.onMouseDown = (_) => {
             _.currentTarget !== _.target ||
@@ -14248,7 +14024,7 @@
       function _(_, _) {
         return _.ChildTakeFocus(_);
       }
-      var _, _, _, _, _, _, _, _;
+      var _, _, _, _, _, _, _;
       !(function (_) {
         (_[(_.Invalid = 0)] = "Invalid"),
           (_[(_.TrackingSystemName_String = 1e3)] =
@@ -14570,11 +14346,6 @@
             "TrackedDeviceProperty_Max");
       })(_ || (_ = {})),
         (function (_) {
-          (_[(_.None = 0)] = "None"),
-            (_[(_.SecondaryClick = 1)] = "SecondaryClick"),
-            (_[(_.PrimaryClick = 2)] = "PrimaryClick");
-        })(_ || (_ = {})),
-        (function (_) {
           (_[(_.k_EButton_System = 0)] = "k_EButton_System"),
             (_[(_.k_EButton_ApplicationMenu = 1)] =
               "k_EButton_ApplicationMenu"),
@@ -14732,10 +14503,10 @@
         get SliderChangeSource() {
           switch (this.m_eDragMode) {
             case _.MouseDragging:
-              return _.Mouse;
+              return 1;
             case _.TouchDragging:
             case _.TouchStart:
-              return _.Touch;
+              return 0;
             case _.None:
               return;
           }
@@ -14839,7 +14610,7 @@
             const _ = _ > this.m_fLatestUserValue;
             _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown),
               (this.m_fLatestUserValue = _),
-              this.FireOnChange(_, _.DPad);
+              this.FireOnChange(_, 2);
           } else _._.PlayNavSound(_._.FailedNav);
           return !0;
         }
@@ -15022,12 +14793,12 @@
           if (!this.CanResetToDefault || this.m_eDragMode != _.None) return;
           let _;
           (this.m_fLatestUserValue = this.props.resetValue),
-            this.FireOnChange(this.props.resetValue, _.Reset),
+            this.FireOnChange(this.props.resetValue, 4),
             this.m_bInnerSliderHasFocus
               ? (_ = this.props.resetValue > this.m_fLatestUserValue)
               : ((_ = this.props.resetValue > this.props.value),
                 this.props.onChangeComplete &&
-                  this.props.onChangeComplete(this.props.resetValue, _.Reset)),
+                  this.props.onChangeComplete(this.props.resetValue, 4)),
             _._.PlayNavSound(_ ? _._.SliderUp : _._.SliderDown);
         }
         OnContextMenu(_) {
@@ -15902,13 +15673,6 @@
             });
         }
       }
-      var _;
-      !(function (_) {
-        (_[(_.UNKNOWN = 0)] = "UNKNOWN"),
-          (_[(_.TEXT = 1)] = "TEXT"),
-          (_[(_.OPENTAG = 2)] = "OPENTAG"),
-          (_[(_.CLOSETAG = 3)] = "CLOSETAG");
-      })(_ || (_ = {}));
       class _ {
         m_fnAccumulatorFactory;
         m_dictComponents;
@@ -15922,7 +15686,7 @@
           const _ = (function (_, _) {
             const _ = [];
             let _ = {
-                type: _.UNKNOWN,
+                type: 0,
                 text: "",
               },
               _ = !1,
@@ -15931,16 +15695,14 @@
             for (let _ = 0; _ < _.length; _++) {
               const _ = _[_];
               switch (_.type) {
-                case _.UNKNOWN:
+                case 0:
                   "[" == _
-                    ? ((_.type = _.OPENTAG), (_ = !0))
-                    : ((_.type = _.TEXT),
-                      "\\" == _ && _ ? (_ = !_) : (_.text += _));
+                    ? ((_.type = 2), (_ = !0))
+                    : ((_.type = 1), "\\" == _ && _ ? (_ = !_) : (_.text += _));
                   break;
-                case _.OPENTAG:
-                case _.CLOSETAG:
-                  if ("/" == _ && _)
-                    (_.type = _.CLOSETAG), (_.text = ""), (_ = !1);
+                case 2:
+                case 3:
+                  if ("/" == _ && _) (_.type = 3), (_.text = ""), (_ = !1);
                   else if ("[" != _ || _)
                     if ("]" != _ || _)
                       "\\" == _ && _
@@ -15948,10 +15710,10 @@
                         : ((_.text += _), (_ = !1), (_ = !1));
                     else {
                       const _ =
-                          _.type == _.OPENTAG &&
+                          2 == _.type &&
                           "noparse" == _.text?.toLocaleLowerCase(),
                         _ =
-                          _.type == _.CLOSETAG &&
+                          3 == _.type &&
                           "noparse" == _.text?.toLocaleLowerCase();
                       _ || (_ && !_)
                         ? ((_ = _(_)), (_.text += _))
@@ -15961,18 +15723,18 @@
                         (_ = _(_, _)),
                         (_ = !1);
                     }
-                  else (_ = _(_, _(_), _.OPENTAG)), (_ = !0);
+                  else (_ = _(_, _(_), 2)), (_ = !0);
                   break;
-                case _.TEXT:
+                case 1:
                   "[" != _ || _
                     ? "\\" == _ && _
                       ? (_ && (_.text += _), (_ = !_))
                       : ((_.text += _), (_ = !1))
-                    : ((_ = _(_, _, _.OPENTAG)), (_ = !0));
+                    : ((_ = _(_, _, 2)), (_ = !0));
               }
             }
-            _.type != _.UNKNOWN &&
-              (_.type == _.OPENTAG || _.type == _.CLOSETAG
+            0 != _.type &&
+              (2 == _.type || 3 == _.type
                 ? __webpack_require__.push(_(_))
                 : __webpack_require__.push({
                     type: _.type,
@@ -16018,10 +15780,10 @@
           };
           for (
             _.forEach((_, _) => {
-              if (_.type == _.TEXT) {
+              if (1 == _.type) {
                 const _ = _ ? _.text.replace(/^[\t\r ]*\n/g, "") : _.text;
                 __webpack_require__.AppendText(_, _), (_ = !1);
-              } else if (_.type == _.OPENTAG) {
+              } else if (2 == _.type) {
                 const _ = _.get(_.tag);
                 if (_) {
                   const _ = _();
@@ -16045,7 +15807,7 @@
                     "[" + _.text + "]",
                     0 == _.length,
                   );
-              } else if (_.type == _.CLOSETAG) {
+              } else if (3 == _.type) {
                 for (; _() && _().node.tag !== _.text && _(_().node); ) {
                   const _ = _.pop();
                   _(_, _.node);
@@ -16068,9 +15830,9 @@
           return __webpack_require__.GetElements();
         }
       }
-      function _(_, _, __webpack_require__ = _.UNKNOWN) {
+      function _(_, _, __webpack_require__ = 0) {
         const { type: _, text: _ = "" } = _;
-        if (_ == _.OPENTAG) {
+        if (2 == _) {
           let _ = _.indexOf("=");
           const _ = _.indexOf(" ");
           let _, _;
@@ -16082,56 +15844,45 @@
               (_ = (function (_) {
                 if (!_ || _.length < 1) return {};
                 const _ = {};
-                let _,
+                let _ = "",
                   _ = "",
-                  _ = "";
-                !(function (_) {
-                  (_[(_.PRE_NAME = 0)] = "PRE_NAME"),
-                    (_[(_.IN_NAME = 1)] = "IN_NAME"),
-                    (_[(_.POST_NAME = 2)] = "POST_NAME"),
-                    (_[(_.IN_VALUE = 3)] = "IN_VALUE"),
-                    (_[(_.IN_QUOTED_VALUE = 4)] = "IN_QUOTED_VALUE");
-                })(_ || (_ = {}));
-                let _ = _.PRE_NAME,
+                  _ = 0,
                   _ = 0;
-                "=" == _[0] && (_ = _.POST_NAME);
+                "=" == _[0] && (_ = 2);
                 let _ = !1;
                 for (_++; _ < _.length; _++) {
                   const _ = _[_];
                   let _ = !0,
                     _ = !1;
                   switch (_) {
-                    case _.PRE_NAME:
+                    case 0:
                       if ("=" == _) return {};
                       if (" " == _) continue;
-                      _ = _.IN_NAME;
+                      _ = 1;
                       break;
-                    case _.IN_NAME:
+                    case 1:
                       ("=" != _ && " " != _) ||
                         _ ||
-                        (" " == _
-                          ? ((_ = _.PRE_NAME), (_ = !0))
-                          : (_ = _.POST_NAME),
-                        (_ = !1));
+                        (" " == _ ? ((_ = 0), (_ = !0)) : (_ = 2), (_ = !1));
                       break;
-                    case _.POST_NAME:
+                    case 2:
                       " " == _
-                        ? ((_ = _.PRE_NAME), (_ = !1), (_ = !0))
+                        ? ((_ = 0), (_ = !1), (_ = !0))
                         : '"' == _
-                          ? ((_ = _.IN_QUOTED_VALUE), (_ = !1))
-                          : (_ = _.IN_VALUE);
+                          ? ((_ = 4), (_ = !1))
+                          : (_ = 3);
                       break;
-                    case _.IN_VALUE:
-                    case _.IN_QUOTED_VALUE:
-                      ((" " == _ && _ != _.IN_QUOTED_VALUE && !_) ||
-                        ('"' == _ && _ == _.IN_QUOTED_VALUE && !_)) &&
-                        ((_ = _.PRE_NAME), (_ = !1), (_ = !0));
+                    case 3:
+                    case 4:
+                      ((" " == _ && 4 != _ && !_) ||
+                        ('"' == _ && 4 == _ && !_)) &&
+                        ((_ = 0), (_ = !1), (_ = !0));
                   }
                   if (_)
                     if ("\\" != _ || _)
-                      if (((_ = !1), _ == _.IN_NAME)) _ += _;
+                      if (((_ = !1), 1 == _)) _ += _;
                       else {
-                        if (_ != _.IN_VALUE && _ != _.IN_QUOTED_VALUE)
+                        if (3 != _ && 4 != _)
                           throw new Error(
                             "Not expecting to accumulate buffer in state " + _,
                           );
@@ -16140,7 +15891,7 @@
                     else _ = !0;
                   _ && ((_[_] = _), (_ = ""), (_ = ""));
                 }
-                _ != _.PRE_NAME && (_[_] = _);
+                0 != _ && (_[_] = _);
                 return _;
               })(_)))
             : ((_ = {}), (_ = _.toLocaleLowerCase())),
@@ -16152,7 +15903,7 @@
               rawargs: _,
             });
         } else
-          _ != _.UNKNOWN &&
+          0 != _ &&
             _.push({
               type: _,
               text: _,
@@ -16165,9 +15916,9 @@
       function _(_) {
         let _ = "";
         return (
-          _.type == _.CLOSETAG ? (_ = "[/") : _.type == _.OPENTAG && (_ = "["),
+          3 == _.type ? (_ = "[/") : 2 == _.type && (_ = "["),
           {
-            type: _.TEXT,
+            type: 1,
             text: _ + (_.text ?? ""),
           }
         );
@@ -16211,8 +15962,7 @@
         _ = __webpack_require__("chunkid");
       const _ = "{STEAM_CLAN_IMAGE}",
         _ = "{STEAM_CLAN_LOC_IMAGE}";
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         return Array.isArray(_) ? _[0] : _;
       }
@@ -16223,30 +15973,9 @@
       function _(_, _) {
         return void 0 === _ ? _(_) : Array.isArray(_) ? _[_] : _;
       }
-      const _ = [
-          _._.k_EClanImageFileType_JPEG,
-          _._.k_EClanImageFileType_PNG,
-          _._.k_EClanImageFileType_GIF,
-          _._.k_EClanImageFileType_WEBP,
-        ],
-        _ = [
-          _._.k_EClanImageFileType_JPEG,
-          _._.k_EClanImageFileType_PNG,
-          _._.k_EClanImageFileType_GIF,
-        ],
-        _ = [_._.k_EClanImageFileType_JPEG, _._.k_EClanImageFileType_PNG],
-        _ = [_._.k_EClanImageFileType_WEBM, _._.k_EClanImageFileType_MP4],
-        _ =
-          (_._.k_EClanImageFileType_SRT,
-          _._.k_EClanImageFileType_VTT,
-          [
-            _._.k_EClanImageFileType_JPEG,
-            _._.k_EClanImageFileType_PNG,
-            _._.k_EClanImageFileType_GIF,
-            _._.k_EClanImageFileType_WEBP,
-            _._.k_EClanImageFileType_WEBM,
-            _._.k_EClanImageFileType_MP4,
-          ]),
+      const _ = [1, 3, 2],
+        _ = [1, 3],
+        _ = [5, 4],
         _ = {
           capsule: {
             width: 800,
@@ -16404,7 +16133,7 @@
           localized_marketing_message: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: _,
+            rgAcceptableTypes: [1, 3, 2, 10],
           },
           localized_optin_banner: {
             width: 1e3,
@@ -16414,39 +16143,33 @@
           localized_marketingmessage_webm: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           localized_marketingmessage_mp4: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           localized_partnerevent_webm: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           localized_partnerevent_mp4: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           localized_subtitles: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [
-              _._.k_EClanImageFileType_VTT,
-              _._.k_EClanImageFileType_SRT,
-            ],
+            rgAcceptableTypes: [6, 7],
           },
           localized_marketingmessage_poster: {
             width: 528,
             height: 297,
-            rgAcceptableTypes: [
-              _._.k_EClanImageFileType_JPEG,
-              _._.k_EClanImageFileType_PNG,
-            ],
+            rgAcceptableTypes: [1, 3],
           },
           localized_marketingmessage_background: {
             width: 570,
@@ -16463,7 +16186,7 @@
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
+            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
           user_poll_background: {
             width: 0,
@@ -16499,12 +16222,12 @@
           takeover_webm_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           takeover_mp4_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           takeover_mobile_art: {
             width: 500,
@@ -16514,12 +16237,12 @@
           takeover_webm_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           takeover_mp4_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           takeunder_art: {
             width: 940,
@@ -16764,8 +16487,7 @@
                 params: _,
               },
             );
-          if (!_ || 200 != _.status || _.data.success != _._.k_EResultOK)
-            return _.data;
+          if (!_ || 200 != _.status || 1 != _.data.success) return _.data;
           let _ = this.m_mapClanToImages.get(_);
           if (_) {
             let _ = _.findIndex((_, _, _) => _.imageid == _);
@@ -16796,21 +16518,21 @@
       }
       function _(_) {
         switch (_) {
-          case _._.k_EClanImageFileType_JPEG:
+          case 1:
             return ".jpg";
-          case _._.k_EClanImageFileType_GIF:
+          case 2:
             return ".gif";
-          case _._.k_EClanImageFileType_PNG:
+          case 3:
             return ".png";
-          case _._.k_EClanImageFileType_WEBM:
+          case 5:
             return ".webm";
-          case _._.k_EClanImageFileType_MP4:
+          case 4:
             return ".mp4";
-          case _._.k_EClanImageFileType_SRT:
+          case 7:
             return ".srt";
-          case _._.k_EClanImageFileType_VTT:
+          case 6:
             return ".vtt";
-          case _._.k_EClanImageFileType_WEBP:
+          case 10:
             return ".webp";
         }
       }
@@ -16870,22 +16592,22 @@
             (this.fileType =
               ((_ = _).indexOf("?") > 0 && (_ = _.split("?")[0]),
               (_.endsWith(".jpg") || _.endsWith(".jpeg")
-                ? _._.k_EClanImageFileType_JPEG
+                ? 1
                 : _.endsWith(".png")
-                  ? _._.k_EClanImageFileType_PNG
+                  ? 3
                   : _.endsWith(".gif")
-                    ? _._.k_EClanImageFileType_GIF
+                    ? 2
                     : _.endsWith(".mp4")
-                      ? _._.k_EClanImageFileType_MP4
+                      ? 4
                       : _.endsWith(".webm")
-                        ? _._.k_EClanImageFileType_WEBM
+                        ? 5
                         : _.endsWith(".vtt")
-                          ? _._.k_EClanImageFileType_VTT
+                          ? 6
                           : _.endsWith(".srt")
-                            ? _._.k_EClanImageFileType_SRT
+                            ? 7
                             : _.endsWith(".webp")
-                              ? _._.k_EClanImageFileType_WEBP
-                              : void 0) ?? _._.k_EClanImageFileType_Unknown)),
+                              ? 10
+                              : void 0) ?? 0)),
             (this.language = _),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
@@ -17431,8 +17153,7 @@
                 _?.drawImage(_, _, _, _, _, _, _, _, _),
                   _.toBlob((_) => {
                     const _ = _.toDataURL(_);
-                    _ !== _._.k_EClanImageFileType_PNG &&
-                    __webpack_require__.startsWith("data:image/png")
+                    3 !== _ && __webpack_require__.startsWith("data:image/png")
                       ? _("Unable to encode into the requested file format")
                       : _
                         ? ((_.file = (0, _._)(_, _.filename)),
@@ -17608,9 +17329,9 @@
       }
       function _(_) {
         switch (_) {
-          case _._.k_EClanImageFileType_PNG:
+          case 3:
             return "image/png";
-          case _._.k_EClanImageFileType_JPEG:
+          case 1:
             return "image/jpeg";
         }
       }
@@ -17833,7 +17554,7 @@
                 const _ = await __webpack_require__(
                   _,
                   _.filename,
-                  _.language ?? _._.k_Lang_None,
+                  _.language ?? -1,
                   _,
                 );
                 (_.status = _.bSuccess ? "success" : "failed"),
@@ -17878,12 +17599,7 @@
                       _ = [];
                     for (const _ of _) {
                       _.status = "uploading";
-                      const _ = await _(
-                        _,
-                        _.filename,
-                        _.language ?? _._.k_Lang_None,
-                        _,
-                      );
+                      const _ = await _(_, _.filename, _.language ?? -1, _);
                       (_.status = _.bSuccess ? "success" : "failed"),
                         (_.message =
                           !_.bSuccess && _.elErrorMessage
@@ -17963,17 +17679,14 @@
         GetClanSteamID() {
           return this.m_clanSteamID;
         }
-        async AddImage(_, _ = _._.k_Lang_English) {
-          const { language: __webpack_require__ } = (function (
-            _,
-            _ = _._.k_Lang_English,
-          ) {
+        async AddImage(_, _ = 0) {
+          const { language: __webpack_require__ } = (function (_, _ = 0) {
             let _ = _.lastIndexOf(".");
             -1 != _ && (_ = _.slice(0, _).toLowerCase());
             let _ = null,
               _ = 0;
-            _.endsWith("korean") && ((_ = _._.k_Lang_Korean), (_ = 6));
-            for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
+            _.endsWith("korean") && ((_ = 4), (_ = 6));
+            for (let _ = 0; _ < 31; ++_) {
               const _ = (0, _._)(_);
               if (_.length <= _) continue;
               if (_.endsWith(_) && _.length > _.length + 2) {
@@ -18050,7 +17763,7 @@
           var _;
           return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
         }
-        async AddExistingClanImage(_, _ = _._.k_Lang_English) {
+        async AddExistingClanImage(_, _ = 0) {
           const _ = _.GetHashAndExt(_);
           if (!_) return !1;
           const _ = _.GenerateEditableURLFromHashAndExt(this.m_clanSteamID, _),
@@ -18225,7 +17938,7 @@
             _,
             _,
             __webpack_require__,
-            _._.k_Lang_None,
+            -1,
             void 0,
           );
         },
@@ -18238,11 +17951,11 @@
         ) {
           _ instanceof _._ && (_ = _.GetAccountID());
           let _ = this.GetBaseURL();
-          const _ = null != _ && _ != _._.k_Lang_None;
+          const _ = null != _ && -1 != _;
           if (__webpack_require__ != _.full || _) {
             let _ = _.substring(_.lastIndexOf(".")),
               _ = _.substring(0, _.length - _.length);
-            return _ && _ != _._.k_Lang_English && "localized_image_group" == _
+            return _ && 0 != _ && "localized_image_group" == _
               ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
               : _ + _ + "/" + _ + __webpack_require__ + _;
           }
@@ -18301,7 +18014,7 @@
           (_.crossOrigin = "anonymous"),
             (_.onerror = (_) => {
               const _ = {
-                success: _._.k_EResultFail,
+                success: 2,
               };
               _ ||
                 ((_.err_msg =
@@ -18310,12 +18023,12 @@
                   " with error: " +
                   (0, _._)(_).strErrorMsg),
                 console.error(_.err_msg)),
-                (_.success = _._.k_EResultFail),
+                (_.success = 2),
                 _.resolve(_);
             }),
             (_.onload = () => {
               const _ = {
-                success: _._.k_EResultFail,
+                success: 2,
               };
               (_.width = _.width),
                 (_.height = _.height),
@@ -18323,17 +18036,15 @@
                   _.width > 0 && _.height > 0,
                   "unexpected image resolution discovered for strURL: " + _,
                 ),
-                (_.success = _._.k_EResultOK),
+                (_.success = 1),
                 _.resolve(_);
             }),
             (_.src = _),
             _.token.promise.catch(() => {
               const _ = {
-                success: _._.k_EResultFail,
+                success: 2,
               };
-              return (
-                (_.onload = () => {}), (_.success = _._.k_EResultCancelled), _
-              );
+              return (_.onload = () => {}), (_.success = 52), _;
             });
           const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
           let _;
@@ -18341,7 +18052,7 @@
             _ = await Promise.race([_, _.promise]);
           } catch {
             _ = {
-              success: _._.k_EResultTimeout,
+              success: 16,
               err_msg: "We timed out processing images",
             };
           }
@@ -18401,7 +18112,7 @@
             throw (
               (console.log(_),
               {
-                success: _._.k_EResultFail,
+                success: 2,
                 err_msg: _,
               })
             );
@@ -18409,7 +18120,7 @@
             _ = new _(
               _,
               _,
-              _._.k_Lang_None,
+              -1,
               void 0,
               "",
               {
@@ -18419,7 +18130,7 @@
               void 0,
               void 0,
             ),
-            _ = await _.UploadSingleImage(_, _, _._.k_Lang_None, void 0);
+            _ = await _.UploadSingleImage(_, _, -1, void 0);
           return _.bSuccess && _.result
             ? _.result.image_hash +
                 this.GetExtensionString({
@@ -18427,9 +18138,7 @@
                 })
             : void 0;
         },
-        BIsClanImageVideo: (_) =>
-          _.file_type == _._.k_EClanImageFileType_MP4 ||
-          _.file_type == _._.k_EClanImageFileType_WEBM,
+        BIsClanImageVideo: (_) => 4 == _.file_type || 5 == _.file_type,
       };
       class _ {
         constructor() {
@@ -18894,27 +18603,6 @@
           )
         );
       }
-      var _, _, _;
-      !(function (_) {
-        (_[(_.k_EPrivacyCookiePreferenceState_DefaultAllowAll = 0)] =
-          "k_EPrivacyCookiePreferenceState_DefaultAllowAll"),
-          (_[(_.k_EPrivacyCookiePreferenceState_AllowAll = 1)] =
-            "k_EPrivacyCookiePreferenceState_AllowAll"),
-          (_[(_.k_EPrivacyCookiePreferenceState_RejectAll = 2)] =
-            "k_EPrivacyCookiePreferenceState_RejectAll"),
-          (_[(_.k_EPrivacyCookiePreferenceState_Customized = 3)] =
-            "k_EPrivacyCookiePreferenceState_Customized"),
-          (_[(_.k_EPrivacyCookiePreferenceState_DefaultRejectAll = 4)] =
-            "k_EPrivacyCookiePreferenceState_DefaultRejectAll");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EPrivacyCookiePreferencesVersion_Invalid = 0)] =
-            "k_EPrivacyCookiePreferencesVersion_Invalid"),
-            (_[(_.k_EPrivacyCookiePreferencesVersion_InitialRelease = 1)] =
-              "k_EPrivacyCookiePreferencesVersion_InitialRelease"),
-            (_[(_.k_EPrivacyCookiePreferencesVersion_LATEST = 1)] =
-              "k_EPrivacyCookiePreferencesVersion_LATEST");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -19355,6 +19043,7 @@
           return "CAccountPrivacy_GetCookiePreferences_Response";
         }
       }
+      var _;
       !(function (_) {
         _.GetCookiePreferences = function (_, _) {
           return _.SendMsg(
@@ -19731,19 +19420,14 @@
       async function _(_) {
         if ((0, _._)(_._.EREALM))
           return {
-            version: _.k_EPrivacyCookiePreferencesVersion_LATEST,
-            preference_state: _.k_EPrivacyCookiePreferenceState_DefaultAllowAll,
+            version: 1,
+            preference_state: 0,
           };
         if (_._.logged_in) {
           const _ = (await _.GetCookiePreferences(_, {}))
             .Body()
             .toObject().preferences;
-          if (
-            _ &&
-            void 0 !== _.version &&
-            _.version != _.k_EPrivacyCookiePreferencesVersion_Invalid
-          )
-            return _;
+          if (_ && void 0 !== _.version && 0 != _.version) return _;
         }
         try {
           const _ = (function (_) {
@@ -19753,25 +19437,18 @@
           })(_);
           if (_) {
             const _ = JSON.parse(_);
-            if (
-              _ &&
-              void 0 !== _.version &&
-              _.version != _.k_EPrivacyCookiePreferencesVersion_Invalid
-            )
-              return _;
+            if (_ && void 0 !== _.version && 0 != _.version) return _;
           }
         } catch (_) {}
         const _ = _._.COUNTRY;
         return _ in _.eucountries || _ in _.eeacountries || "CH" === _
           ? {
-              version: _.k_EPrivacyCookiePreferencesVersion_LATEST,
-              preference_state:
-                _.k_EPrivacyCookiePreferenceState_DefaultRejectAll,
+              version: 1,
+              preference_state: 4,
             }
           : {
-              version: _.k_EPrivacyCookiePreferencesVersion_LATEST,
-              preference_state:
-                _.k_EPrivacyCookiePreferenceState_DefaultAllowAll,
+              version: 1,
+              preference_state: 0,
             };
       }
       var _ = __webpack_require__("chunkid");
@@ -19791,12 +19468,11 @@
         return _
           ? (function (_, _) {
               switch (_.preference_state) {
-                case _.k_EPrivacyCookiePreferenceState_DefaultAllowAll:
-                case _.k_EPrivacyCookiePreferenceState_AllowAll:
+                case 0:
+                case 1:
                   return !0;
-                case _.k_EPrivacyCookiePreferenceState_RejectAll:
+                case 2:
                   return !1;
-                case _.k_EPrivacyCookiePreferenceState_Customized:
                 default:
                   switch (_) {
                     case "youtube":
@@ -20402,1875 +20078,13 @@
         const _ = "\\[\\/?(?:" + _(_) + "){1,}.*?]";
         return _.replace(new RegExp(_, "gi"), __webpack_require__);
       }
-      var _, _, _, _, _;
-      !(function (_) {
-        (_[(_.k_ESteamAwardCategoryID_Invalid = 0)] =
-          "k_ESteamAwardCategoryID_Invalid"),
-          (_[(_.k_ESteamAwardCategoryID_2020_GameOfTheYear = 50)] =
-            "k_ESteamAwardCategoryID_2020_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2020_VRGameOfTheYear = 51)] =
-            "k_ESteamAwardCategoryID_2020_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2020_LaborOfLove = 52)] =
-            "k_ESteamAwardCategoryID_2020_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2020_BetterWithFriends = 53)] =
-            "k_ESteamAwardCategoryID_2020_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2020_OutstandingVisualStyle = 54)] =
-            "k_ESteamAwardCategoryID_2020_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2020_MostInnovativeGameplay = 55)] =
-            "k_ESteamAwardCategoryID_2020_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2020_BestGameYouSuckAt = 56)] =
-            "k_ESteamAwardCategoryID_2020_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2020_BestSoundtrack = 57)] =
-            "k_ESteamAwardCategoryID_2020_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2020_OutstandingStoryRichGame = 58)] =
-            "k_ESteamAwardCategoryID_2020_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2020_SitBackAndRelax = 59)] =
-            "k_ESteamAwardCategoryID_2020_SitBackAndRelax"),
-          (_[(_.k_ESteamAwardCategoryID_2020_MAX = 60)] =
-            "k_ESteamAwardCategoryID_2020_MAX"),
-          (_[(_.k_ESteamAwardCategoryID_2021_GameOfTheYear = 61)] =
-            "k_ESteamAwardCategoryID_2021_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2021_VRGameOfTheYear = 62)] =
-            "k_ESteamAwardCategoryID_2021_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2021_LaborOfLove = 63)] =
-            "k_ESteamAwardCategoryID_2021_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2021_BetterWithFriends = 64)] =
-            "k_ESteamAwardCategoryID_2021_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2021_OutstandingVisualStyle = 65)] =
-            "k_ESteamAwardCategoryID_2021_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2021_MostInnovativeGameplay = 66)] =
-            "k_ESteamAwardCategoryID_2021_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2021_BestGameYouSuckAt = 67)] =
-            "k_ESteamAwardCategoryID_2021_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2021_BestSoundtrack = 68)] =
-            "k_ESteamAwardCategoryID_2021_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2021_OutstandingStoryRichGame = 69)] =
-            "k_ESteamAwardCategoryID_2021_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2021_SitBackAndRelax = 70)] =
-            "k_ESteamAwardCategoryID_2021_SitBackAndRelax"),
-          (_[(_.k_ESteamAwardCategoryID_2021_MAX = 71)] =
-            "k_ESteamAwardCategoryID_2021_MAX"),
-          (_[(_.k_ESteamAwardCategoryID_2022_GameOfTheYear = 72)] =
-            "k_ESteamAwardCategoryID_2022_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2022_VRGameOfTheYear = 73)] =
-            "k_ESteamAwardCategoryID_2022_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2022_LaborOfLove = 74)] =
-            "k_ESteamAwardCategoryID_2022_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2022_BetterWithFriends = 75)] =
-            "k_ESteamAwardCategoryID_2022_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2022_OutstandingVisualStyle = 76)] =
-            "k_ESteamAwardCategoryID_2022_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2022_MostInnovativeGameplay = 77)] =
-            "k_ESteamAwardCategoryID_2022_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2022_BestGameYouSuckAt = 78)] =
-            "k_ESteamAwardCategoryID_2022_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2022_BestSoundtrack = 79)] =
-            "k_ESteamAwardCategoryID_2022_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2022_OutstandingStoryRichGame = 80)] =
-            "k_ESteamAwardCategoryID_2022_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2022_SitBackAndRelax = 81)] =
-            "k_ESteamAwardCategoryID_2022_SitBackAndRelax"),
-          (_[(_.k_ESteamAwardCategoryID_2022_BestGameOnTheGo = 82)] =
-            "k_ESteamAwardCategoryID_2022_BestGameOnTheGo"),
-          (_[(_.k_ESteamAwardCategoryID_2022_MAX = 83)] =
-            "k_ESteamAwardCategoryID_2022_MAX"),
-          (_[(_.k_ESteamAwardCategoryID_2023_GameOfTheYear = 90)] =
-            "k_ESteamAwardCategoryID_2023_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2023_VRGameOfTheYear = 91)] =
-            "k_ESteamAwardCategoryID_2023_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2023_LaborOfLove = 92)] =
-            "k_ESteamAwardCategoryID_2023_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2023_BestGameOnDeck = 93)] =
-            "k_ESteamAwardCategoryID_2023_BestGameOnDeck"),
-          (_[(_.k_ESteamAwardCategoryID_2023_BetterWithFriends = 94)] =
-            "k_ESteamAwardCategoryID_2023_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2023_OutstandingVisualStyle = 95)] =
-            "k_ESteamAwardCategoryID_2023_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2023_MostInnovativeGameplay = 96)] =
-            "k_ESteamAwardCategoryID_2023_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2023_BestGameYouSuckAt = 97)] =
-            "k_ESteamAwardCategoryID_2023_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2023_BestSoundtrack = 98)] =
-            "k_ESteamAwardCategoryID_2023_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2023_OutstandingStoryRichGame = 99)] =
-            "k_ESteamAwardCategoryID_2023_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2023_SitBackAndRelax = 100)] =
-            "k_ESteamAwardCategoryID_2023_SitBackAndRelax"),
-          (_[(_.k_ESteamAwardCategoryID_2023_MAX = 101)] =
-            "k_ESteamAwardCategoryID_2023_MAX"),
-          (_[(_.k_ESteamAwardCategoryID_2024_GameOfTheYear = 110)] =
-            "k_ESteamAwardCategoryID_2024_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2024_VRGameOfTheYear = 111)] =
-            "k_ESteamAwardCategoryID_2024_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2024_LaborOfLove = 112)] =
-            "k_ESteamAwardCategoryID_2024_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2024_BestGameOnDeck = 113)] =
-            "k_ESteamAwardCategoryID_2024_BestGameOnDeck"),
-          (_[(_.k_ESteamAwardCategoryID_2024_BetterWithFriends = 114)] =
-            "k_ESteamAwardCategoryID_2024_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2024_OutstandingVisualStyle = 115)] =
-            "k_ESteamAwardCategoryID_2024_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2024_MostInnovativeGameplay = 116)] =
-            "k_ESteamAwardCategoryID_2024_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2024_BestGameYouSuckAt = 117)] =
-            "k_ESteamAwardCategoryID_2024_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2024_BestSoundtrack = 118)] =
-            "k_ESteamAwardCategoryID_2024_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2024_OutstandingStoryRichGame = 119)] =
-            "k_ESteamAwardCategoryID_2024_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2024_SitBackAndRelax = 120)] =
-            "k_ESteamAwardCategoryID_2024_SitBackAndRelax"),
-          (_[(_.k_ESteamAwardCategoryID_2025_GameOfTheYear = 130)] =
-            "k_ESteamAwardCategoryID_2025_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2025_VRGameOfTheYear = 131)] =
-            "k_ESteamAwardCategoryID_2025_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2025_LaborOfLove = 132)] =
-            "k_ESteamAwardCategoryID_2025_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2025_BestGameOnDeck = 133)] =
-            "k_ESteamAwardCategoryID_2025_BestGameOnDeck"),
-          (_[(_.k_ESteamAwardCategoryID_2025_BetterWithFriends = 134)] =
-            "k_ESteamAwardCategoryID_2025_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2025_OutstandingVisualStyle = 135)] =
-            "k_ESteamAwardCategoryID_2025_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2025_MostInnovativeGameplay = 136)] =
-            "k_ESteamAwardCategoryID_2025_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2025_BestGameYouSuckAt = 137)] =
-            "k_ESteamAwardCategoryID_2025_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2025_BestSoundtrack = 138)] =
-            "k_ESteamAwardCategoryID_2025_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2025_OutstandingStoryRichGame = 139)] =
-            "k_ESteamAwardCategoryID_2025_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2025_SitBackAndRelax = 140)] =
-            "k_ESteamAwardCategoryID_2025_SitBackAndRelax");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EVoteDefinitionFlag_None = 0)] =
-            "k_EVoteDefinitionFlag_None"),
-            (_[(_.k_EVoteDefinitionFlag_OnlyVR = 1)] =
-              "k_EVoteDefinitionFlag_OnlyVR"),
-            (_[(_.k_EVoteDefinitionFlag_SteamDeck = 2)] =
-              "k_EVoteDefinitionFlag_SteamDeck"),
-            (_[(_.k_EVoteDefinitionFlag_LaborOfLove = 3)] =
-              "k_EVoteDefinitionFlag_LaborOfLove");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamAwardsNominationSource_Invalid = 0)] =
-            "k_ESteamAwardsNominationSource_Invalid"),
-            (_[(_.k_ESteamAwardsNominationSource_StorePage = 1)] =
-              "k_ESteamAwardsNominationSource_StorePage"),
-            (_[(_.k_ESteamAwardsNominationSource_Recommendation = 2)] =
-              "k_ESteamAwardsNominationSource_Recommendation"),
-            (_[(_.k_ESteamAwardsNominationSource_ModalSearch = 3)] =
-              "k_ESteamAwardsNominationSource_ModalSearch"),
-            (_[(_.k_ESteamAwardsNominationSource_PartnerEvent = 4)] =
-              "k_ESteamAwardsNominationSource_PartnerEvent"),
-            (_[(_.k_ESteamAwardsNominationSource_ModalPartnerEvent = 5)] =
-              "k_ESteamAwardsNominationSource_ModalPartnerEvent"),
-            (_[(_.k_ESteamAwardsNominationSource_ModalPlaytime = 6)] =
-              "k_ESteamAwardsNominationSource_ModalPlaytime"),
-            (_[(_.k_ESteamAwardsNominationSource_ModalRecommendation = 7)] =
-              "k_ESteamAwardsNominationSource_ModalRecommendation");
-        })(_ || (_ = {}));
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.voteid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [5, 7], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  voteid: {
-                    _: 1,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  active: {
-                    _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  start_time: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  end_time: {
-                    _: 4,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  app_discounts: {
-                    _: 5,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  grouped_vote_options: {
-                    _: 6,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  groups: {
-                    _: 7,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  internal_name: {
-                    _: 8,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  localization: {
-                    _: 9,
-                    _: _,
-                  },
-                  reveal_time: {
-                    _: 10,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  release_date_min: {
-                    _: 11,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  winner_appid: {
-                    _: 12,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  flag: {
-                    _: 13,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  release_date_max: {
-                    _: 14,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  item_type: {
-                    _: 15,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_VoteDefinition";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  discount: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_VoteDefinition_AppDefinition";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.groupid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  groupid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  group_name: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  app_discounts: {
-                    _: 3,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_VoteDefinition_GroupDefinition";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.title || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  title: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  title_linebreak: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  title_award: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  award_description: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_VoteDefinition_Localization";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.language || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  language: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  sale_appid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetVoteDefinitions_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.votes || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  votes: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  labor_of_love_winners: {
-                    _: 2,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetVoteDefinitions_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.voteid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  voteid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  appid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  communityitemid: {
-                    _: 3,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "SteamAwardsUserVote";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.sale_appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  sale_appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetUserVotes_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.user_votes || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  user_votes: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetUserVotes_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.voteid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  voteid: {
-                    _: 1,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  appid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  sale_appid: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_SetVote_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.user_votes || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  user_votes: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_SetVote_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.category_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  category_id: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  appid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  last_updated: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwardsNomination";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetUserNominations_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.nominations || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  nominations: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetUserNominations_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.steamid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  steamid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  code: {
-                    _: 2,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetOtherUserNominations_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.category_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  category_id: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  nominated_id: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  source: {
-                    _: 3,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_Nominate_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.nominations || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  nominations: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_Nominate_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.category_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  category_id: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationRecommendations_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.played_app || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  played_app: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  suggested_events: {
-                    _: 2,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  suggested_apps: {
-                    _: 3,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  debug_query: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationRecommendations_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  playtime: {
-                    _: 2,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationRecommendations_Response_PlayedApps";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.clanid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  clanid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  event_gid: {
-                    _: 2,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  appid: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationRecommendations_Response_SuggestedEvent";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationRecommendations_Response_SuggestedApp";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.generate_new || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  generate_new: {
-                    _: 1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationShareLink_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.code || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  code: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationShareLink_Response";
-        }
-      }
-      !(function (_) {
-        (_.GetVoteDefinitions = function (_, _) {
-          return _.SendMsg(
-            "StoreSales.GetVoteDefinitions#1",
-            (0, _._)(_, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 2,
-              eWebAPIKeyRequirement: 1,
-            },
-          );
-        }),
-          (_.SetVote = function (_, _) {
-            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetUserVotes = function (_, _) {
-            return _.SendMsg("StoreSales.GetUserVotes#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
-          });
-      })(_ || (_ = {})),
-        (function (_) {
-          (_.GetUserNominations = function (_, _) {
-            return _.SendMsg(
-              "SteamAwards.GetUserNominations#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-            (_.GetOtherUserNominations = function (_, _) {
-              return _.SendMsg(
-                "SteamAwards.GetOtherUserNominations#1",
-                (0, _._)(_, _),
-                _,
-                {
-                  bConstMethod: !0,
-                  ePrivilege: 2,
-                },
-              );
-            }),
-            (_.Nominate = function (_, _) {
-              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _), _, {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              });
-            }),
-            (_.GetNominationRecommendations = function (_, _) {
-              return _.SendMsg(
-                "SteamAwards.GetNominationRecommendations#1",
-                (0, _._)(_, _),
-                _,
-                {
-                  bConstMethod: !0,
-                  ePrivilege: 1,
-                },
-              );
-            }),
-            (_.GetNominationShareLink = function (_, _) {
-              return _.SendMsg(
-                "SteamAwards.GetNominationShareLink#1",
-                (0, _._)(_, _),
-                _,
-                {
-                  ePrivilege: 1,
-                },
-              );
-            });
-        })(_ || (_ = {}));
       const _ = {
         bBroadcastEnabled: !1,
         broadcastChatSetting: "hide",
         default_broadcast_title: "#Broadcast_default_title_dev",
-        localized_broadcast_title: new Array(_._.k_Lang_MAX),
-        localized_broadcast_left_image: new Array(_._.k_Lang_MAX),
-        localized_broadcast_right_image: new Array(_._.k_Lang_MAX),
+        localized_broadcast_title: new Array(31),
+        localized_broadcast_left_image: new Array(31),
+        localized_broadcast_right_image: new Array(31),
         broadcast_whitelist: [],
       };
       class _ {
@@ -22291,12 +20105,13 @@
               lang: "" + _,
             };
           return (
+            1 ==
             (
               await _().get(_, {
                 params: _,
                 cancelToken: _ && _.token,
               })
-            ).data.success == _._.k_EResultOK
+            ).data.success
           );
         }
         SetPrimaryImageForImageGroup(_, _) {
@@ -22310,7 +20125,7 @@
             (this.m_curLocImageGroupType = _),
             (this.m_curLocImageGroup.localized_images = (0, _._)(
               this.m_curLocImageGroup.localized_images,
-              _._.k_Lang_MAX,
+              31,
               null,
             )));
         }
@@ -22339,11 +20154,11 @@
             _ = _._.InitFromClanID(_.clanAccountID),
             _ = _.GetHashAndExt(_) ?? "",
             _ = [];
-          for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_)
+          for (let _ = 0; _ < 31; ++_)
             _.push(_.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
           const _ = await Promise.all(_);
           (0, _._)(() => {
-            for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_)
+            for (let _ = 0; _ < 31; ++_)
               _[_] &&
                 (this.m_curLocImageGroup.localized_images[_] =
                   _.GenerateURLFromHashAndExtAndLang(
@@ -22481,41 +20296,9 @@
         null,
       );
       const _ = 99999;
-      _._.k_ERegularUpdateEvent,
-        _._.k_EMajorUpdateEvent,
-        _._.k_EESportTournamentStreamEvent,
-        _._.k_EDevStreamEvent,
-        _._.k_EFamousStreamEvent,
-        _._.k_EInGameBonusXPEvent,
-        _._.k_EInGameLootEvent,
-        _._.k_EInGamePerksEvent,
-        _._.k_EInGameEventGeneral,
-        _._.k_EInGameChallengeEvent,
-        _._.k_EInGameContestEvent,
-        _._.k_ENewsEvent,
-        _._.k_EDLCReleaseEvent,
-        _._.k_ESeasonRelease,
-        _._.k_EGameReleaseEvent;
-      _._.k_EGameSalesEvent, _._.k_EFreeTrial, _._.k_ECrosspostEvent;
-      _._.k_ESmallUpdateEvent, _._.k_ECrosspostEvent;
-      const _ = [
-        _._.k_EChatEvent,
-        _._.k_EBroadcastEvent,
-        _._.k_EGameSalesEvent,
-        _._.k_EGameItemSalesEvent,
-        _._.k_EInGameBonusXPEvent,
-        _._.k_EInGameLootEvent,
-        _._.k_EInGamePerksEvent,
-        _._.k_EInGameChallengeEvent,
-        _._.k_EInGameContestEvent,
-        _._.k_EIRLEvent,
-        _._.k_EFreeTrial,
-        _._.k_EInGameEventGeneral,
-      ];
-      new Set(_);
+      new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const _ = 39049601,
         _ = 45559995;
-      _._.k_ESmallUpdateEvent, _._.k_ECrosspostEvent;
       var _;
       !(function (_) {
         (_[(_.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
@@ -22585,8 +20368,8 @@
         capsules: [],
         events: [],
         links: [],
-        localized_label: new Array(_._.k_Lang_MAX),
-        localized_label_image: new Array(_._.k_Lang_MAX),
+        localized_label: new Array(31),
+        localized_label_image: new Array(31),
         default_label: "#Sale_default_label",
         section_type: "unselected_empty",
       };
@@ -22596,10 +20379,10 @@
           (_[(_.k_EContentHub = 1)] = "k_EContentHub");
       })(_ || (_ = {}));
       const _ = {
-          localized_subtitle: new Array(_._.k_Lang_MAX),
-          localized_summary: new Array(_._.k_Lang_MAX),
-          localized_title_image: new Array(_._.k_Lang_MAX),
-          localized_capsule_image: new Array(_._.k_Lang_MAX),
+          localized_subtitle: new Array(31),
+          localized_summary: new Array(31),
+          localized_title_image: new Array(31),
+          localized_capsule_image: new Array(31),
           bSaleEnabled: !1,
           sale_show_creator: !1,
           sale_sections: [],
@@ -22607,11 +20390,11 @@
           sale_browsemore_url: "",
           sale_browsemore_color: "",
           sale_browsemore_bgcolor: "",
-          localized_sale_header: new Array(_._.k_Lang_MAX),
-          localized_sale_overlay: new Array(_._.k_Lang_MAX),
-          localized_sale_product_banner: new Array(_._.k_Lang_MAX),
-          localized_sale_product_mobile_banner: new Array(_._.k_Lang_MAX),
-          localized_sale_logo: new Array(_._.k_Lang_MAX),
+          localized_sale_header: new Array(31),
+          localized_sale_overlay: new Array(31),
+          localized_sale_product_banner: new Array(31),
+          localized_sale_product_mobile_banner: new Array(31),
+          localized_sale_logo: new Array(31),
           sale_font: "",
           sale_background_color: "",
           sale_header_offset: 530,
@@ -22637,21 +20420,8 @@
           "betachannel",
           "previewchannel",
         ],
-        _ = [_._.k_EGameSalesEvent, _._.k_EFreeTrial, _._.k_ECrosspostEvent],
-        _ = [
-          _._.k_EChatEvent,
-          _._.k_EBroadcastEvent,
-          _._.k_EGameSalesEvent,
-          _._.k_EGameItemSalesEvent,
-          _._.k_EInGameBonusXPEvent,
-          _._.k_EInGameLootEvent,
-          _._.k_EInGamePerksEvent,
-          _._.k_EInGameChallengeEvent,
-          _._.k_EInGameContestEvent,
-          _._.k_EIRLEvent,
-          _._.k_EFreeTrial,
-          _._.k_EInGameEventGeneral,
-        ];
+        _ = [20, 31, 34],
+        _ = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
       class _ {
         constructor() {
           (0, _._)(this);
@@ -22660,7 +20430,7 @@
         AnnouncementGID = void 0;
         clanSteamID = new _._();
         forumTopicGID = void 0;
-        type = _._.k_EOtherEvent;
+        type = 1;
         appid = 0;
         name = new Map();
         description = new Map();
@@ -22916,7 +20686,7 @@
                                   .localized_store_app_spotlight_mobile);
           return _;
         }
-        GetImageURL(_, _ = _._.k_Lang_English, __webpack_require__ = _.full) {
+        GetImageURL(_, _ = 0, __webpack_require__ = _.full) {
           const _ = this.GetImgArray(_),
             _ = _ && _.length > _ && null != _[_];
           return _ && _[_]?.startsWith("http")
@@ -22929,13 +20699,13 @@
                 )
               : void 0;
         }
-        GetImageHash(_, _ = _._.k_Lang_English) {
+        GetImageHash(_, _ = 0) {
           let _ = this.GetImgArray(_);
           return _ && _.length > _ && null != _[_]
             ? _[_].substr(0, _[_].length - 4)
             : null;
         }
-        GetImageHashAndExt(_, _ = _._.k_Lang_English) {
+        GetImageHashAndExt(_, _ = 0) {
           let _ = this.GetImgArray(_);
           return _ && _.length > _ && null != _[_] ? _[_] : null;
         }
@@ -23087,7 +20857,7 @@
               _ = _?.GetScreenshots(_.BHasAgeSafeScreenshots());
             return _ && _.length > 1 ? ((_ %= _.length), _[_]) : "";
           }
-          if (this.clanSteamID && this.GetEventType() != _._.k_ECreatorHome) {
+          if (this.clanSteamID && 36 != this.GetEventType()) {
             const _ = _._.GetClanInfoByClanAccountID(
               this.clanSteamID.GetAccountID(),
             );
@@ -23450,7 +21220,7 @@
             _ =
               0 == this.GetSaleSectionsByType("social_share").length &&
               !this.jsondata.sale_default_social_media_disabled,
-            _ = this.GetEventType() == _._.k_ECreatorHome;
+            _ = 36 == this.GetEventType();
           return _ || _ || _ || _
             ? [
                 ...this.GetSaleSections(),
@@ -23592,7 +21362,7 @@
                   ? (0, _._)("#PartnerEvent_SteamGameFestival_OfficeHour")
                   : this.BHasTag("steam_game_festival_broadcast") ||
                       (this.BHasTagStartingWith("sale_nextfest_") &&
-                        this.type == _._.k_EBroadcastEvent)
+                        11 == this.type)
                     ? (0, _._)("#PartnerEvent_SteamGameFestival_Broadcast")
                     : this.BHasTag("vo_marketing_message") && _
                       ? (0, _._)("#PartnerEvent_MM_MajorUpdate")
@@ -23624,10 +21394,7 @@
           );
         }
         GetSteamAwardCategory() {
-          return (
-            this.jsondata.steam_award_category_suggestion ??
-            _.k_ESteamAwardCategoryID_Invalid
-          );
+          return this.jsondata.steam_award_category_suggestion ?? 0;
         }
         GetSteamAwardNomineeCategories() {
           return this.jsondata.steam_award_category_voteids ?? [];
@@ -24056,7 +21823,7 @@
               (_.visibilityStartTime = _.rtime32_visibility_start),
               (_.visibilityEndTime = _.rtime32_visibility_end),
               (_.loadedAllLanguages = !1),
-              (_.type = _.event_type ?? _._.k_EOtherEvent),
+              (_.type = _.event_type ?? 1),
               (_.nVotesUp = _.votes_up ?? 0),
               (_.nVotesDown = _.votes_down ?? 0),
               (_.comment_type = _.comment_type),
@@ -24102,8 +21869,8 @@
                 _.timestamp_loc_updated.clear(),
                 (_.postTime = _.rtime32_start_time),
                 (_.nCommentCount = _.comment_count ?? 0),
-                _.name.set(_._.k_Lang_English, _.event_name ?? ""),
-                _.description.set(_._.k_Lang_English, _.event_notes ?? "");
+                _.name.set(0, _.event_name ?? ""),
+                _.description.set(0, _.event_notes ?? "");
             _.broadcaster_accountid &&
               (_.broadcaster = new _._(_.broadcaster_accountid));
             const _ = _;
@@ -24126,62 +21893,62 @@
             if (
               ((_.jsondata.localized_capsule_image = (0, _._)(
                 _.jsondata.localized_capsule_image || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_title_image = (0, _._)(
                 _.jsondata.localized_title_image || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_subtitle = (0, _._)(
                 _.jsondata.localized_subtitle || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_summary = (0, _._)(
                 _.jsondata.localized_summary || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_broadcast_title = (0, _._)(
                 _.jsondata.localized_broadcast_title || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_broadcast_left_image = (0, _._)(
                 _.jsondata.localized_broadcast_left_image || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_broadcast_right_image = (0, _._)(
                 _.jsondata.localized_broadcast_right_image || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_sale_header = (0, _._)(
                 _.jsondata.localized_sale_header || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_sale_overlay = (0, _._)(
                 _.jsondata.localized_sale_overlay || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_sale_product_banner = (0, _._)(
                 _.jsondata.localized_sale_product_banner || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_sale_product_mobile_banner = (0, _._)(
                 _.jsondata.localized_sale_product_mobile_banner || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_sale_logo = (0, _._)(
                 _.jsondata.localized_sale_logo || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               void 0 !== _.jsondata.sale_num_headers &&
@@ -24190,18 +21957,14 @@
               for (let _ = 0; _ < _.jsondata.sale_num_headers; ++_)
                 _.jsondata.localized_per_day_sales_header[_] = (0, _._)(
                   _.jsondata.localized_per_day_sales_header[_],
-                  _._.k_Lang_MAX,
+                  31,
                   null,
                 );
             return (
               _.jsondata.sale_sections &&
                 _.jsondata.sale_sections.forEach((_, _) => {
                   _.localized_label &&
-                    (_.localized_label = (0, _._)(
-                      _.localized_label,
-                      _._.k_Lang_MAX,
-                      null,
-                    )),
+                    (_.localized_label = (0, _._)(_.localized_label, 31, null)),
                     "trailercarousel" === _.section_type &&
                       (_.show_as_carousel = !1),
                     (_.jsondata.sale_sections[_] = {
@@ -24216,21 +21979,17 @@
                     null !== _.localized_headline &&
                     (_.localized_headline = (0, _._)(
                       _.localized_headline,
-                      _._.k_Lang_MAX,
+                      31,
                       null,
                     )),
                     void 0 !== _.localized_body &&
                       null !== _.localized_body &&
-                      (_.localized_body = (0, _._)(
-                        _.localized_body,
-                        _._.k_Lang_MAX,
-                        null,
-                      )),
+                      (_.localized_body = (0, _._)(_.localized_body, 31, null)),
                     void 0 !== _.localized_image &&
                       null !== _.localized_image &&
                       (_.localized_image = (0, _._)(
                         _.localized_image,
-                        _._.k_Lang_MAX,
+                        31,
                         null,
                       ));
                 }),
@@ -24266,7 +22025,7 @@
             _.jsondata.localized_per_day_sales_header = [];
             for (let _ = 0; _ < (_.jsondata.sale_num_headers ?? 0); ++_)
               _.jsondata.localized_per_day_sales_header.push(
-                (0, _._)([], _._.k_Lang_MAX, null),
+                (0, _._)([], 31, null),
               );
             _.m_overrideCurrentDay = 0;
           } else _.m_overrideCurrentDay = void 0;
@@ -24448,7 +22207,7 @@
                 params: _,
                 cancelToken: _?.token,
               });
-              if (_?.data?.success == _._.k_EResultOK)
+              if (1 == _?.data?.success)
                 (0, _._)(() => {
                   for (let _ of _.data.events) {
                     let _ = _(_);
@@ -24481,7 +22240,7 @@
               }
             } catch (_) {
               let _ = (0, _._)(_);
-              _.errorCode != _._.k_EResultCancelled &&
+              52 != _.errorCode &&
                 console.error(
                   "LoadAdjacentPartnerEvents hit error on appid:" +
                     _ +
@@ -24677,7 +22436,7 @@
           _,
           _ = !1,
         ) {
-          let _ = _(_ ? _._.k_Lang_English : (0, _._)(_._.LANGUAGE)),
+          let _ = _(_ ? 0 : (0, _._)(_._.LANGUAGE)),
             _ = {
               appid: _,
               clan_accountid: _ ? _.GetAccountID() : void 0,
@@ -24966,7 +22725,7 @@
             const _ = await _().post(_, _, {
               withCredentials: !0,
             });
-            if (_?.data?.success == _._.k_EResultOK) {
+            if (1 == _?.data?.success) {
               const _ = this.m_mapExistingEvents.get(_);
               for (const _ in _)
                 __webpack_require__.hasOwnProperty(_) &&
@@ -25008,7 +22767,7 @@
       window.g_PartnerEventStore = _;
       const _ = new _(!0);
       window.g_PartnerEventSummaryStore = _;
-      var _, _, _, _, _, _, _, _;
+      var _;
       __webpack_require__("chunkid");
       function _(_) {
         let _ = "" + _;
@@ -25016,248 +22775,15 @@
         return _ != _ && (_ += "_" + _), _;
       }
       !(function (_) {
-        (_[(_.k_EProductActionNoAction = 0)] = "k_EProductActionNoAction"),
-          (_[(_.k_EProductActionWatchBroadcast = 1)] =
-            "k_EProductActionWatchBroadcast"),
-          (_[(_.k_EProductActionHideBroadcast = 2)] =
-            "k_EProductActionHideBroadcast"),
-          (_[(_.k_EProductActionShowBroadcast = 3)] =
-            "k_EProductActionShowBroadcast"),
-          (_[(_.k_EProductActionShowBroadcastChat = 4)] =
-            "k_EProductActionShowBroadcastChat"),
-          (_[(_.k_EProductActionHideBroadcastChat = 5)] =
-            "k_EProductActionHideBroadcastChat"),
-          (_[(_.k_EProductActionPopoutChat = 6)] =
-            "k_EProductActionPopoutChat"),
-          (_[(_.k_EProductActionCloseBroadcastSmallPopup = 7)] =
-            "k_EProductActionCloseBroadcastSmallPopup"),
-          (_[(_.k_EProductActionUnmuteBroadcast = 8)] =
-            "k_EProductActionUnmuteBroadcast"),
-          (_[(_.k_EProductActionOpenBroadcastWatchPage = 9)] =
-            "k_EProductActionOpenBroadcastWatchPage"),
-          (_[(_.k_EProductActionSendChat = 10)] = "k_EProductActionSendChat"),
-          (_[(_.k_EProductActionAddsAnEmoticonToChat = 11)] =
-            "k_EProductActionAddsAnEmoticonToChat"),
-          (_[(_.k_EProductActionShowDailyDeals = 12)] =
-            "k_EProductActionShowDailyDeals"),
-          (_[(_.k_EProductActionShowInteractiveRecommendDeals = 13)] =
-            "k_EProductActionShowInteractiveRecommendDeals"),
-          (_[(_.k_EProductActionShowWishlistDeals = 14)] =
-            "k_EProductActionShowWishlistDeals"),
-          (_[(_.k_EProductActionShowDLCDeals = 15)] =
-            "k_EProductActionShowDLCDeals"),
-          (_[(_.k_EProductActionChangeNewsHubFilters = 16)] =
-            "k_EProductActionChangeNewsHubFilters"),
-          (_[(_.k_EProductActionNewsHubScrollPast = 17)] =
-            "k_EProductActionNewsHubScrollPast"),
-          (_[(_.k_EProductActionNewsHubScrollFuture = 18)] =
-            "k_EProductActionNewsHubScrollFuture"),
-          (_[(_.k_EProductActionNewsHubAppInteraction = 19)] =
-            "k_EProductActionNewsHubAppInteraction");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProductViewActionVisit = 0)] = "k_EProductViewActionVisit"),
-            (_[(_.k_EProductViewActionAddToWishlist = 1)] =
-              "k_EProductViewActionAddToWishlist"),
-            (_[(_.k_EProductViewActionIgnoreNotInterested = 2)] =
-              "k_EProductViewActionIgnoreNotInterested"),
-            (_[(_.k_EProductViewActionAddToCart = 3)] =
-              "k_EProductViewActionAddToCart");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[
-            (_.k_EProductImpressionFromClientType_FriendInGameNotification = 1)
-          ] = "k_EProductImpressionFromClientType_FriendInGameNotification"),
-            (_[
-              (_.k_EProductImpressionFromClientType_FriendInGameNotification_FirstTimeSession = 2)
-            ] =
-              "k_EProductImpressionFromClientType_FriendInGameNotification_FirstTimeSession");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETrackedEmail_WishlistEmail = 1)] =
-            "k_ETrackedEmail_WishlistEmail"),
-            (_[(_.k_ETrackedEmail_RecommendationEmailCampaign = 2)] =
-              "k_ETrackedEmail_RecommendationEmailCampaign");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EUnifiedProductInteractionStoreItemType_Invalid = 0)] =
-            "k_EUnifiedProductInteractionStoreItemType_Invalid"),
-            (_[(_.k_EUnifiedProductInteractionStoreItemType_AppPage = 1)] =
-              "k_EUnifiedProductInteractionStoreItemType_AppPage"),
-            (_[(_.k_EUnifiedProductInteractionStoreItemType_PackagePage = 2)] =
-              "k_EUnifiedProductInteractionStoreItemType_PackagePage"),
-            (_[
-              (_.k_EUnifiedProductInteractionStoreItemType_AnnouncementPage = 3)
-            ] = "k_EUnifiedProductInteractionStoreItemType_AnnouncementPage"),
-            (_[(_.k_EUnifiedProductInteractionStoreItemType_SalePage = 4)] =
-              "k_EUnifiedProductInteractionStoreItemType_SalePage"),
-            (_[(_.k_EUnifiedProductInteractionStoreItemType_FeaturePage = 5)] =
-              "k_EUnifiedProductInteractionStoreItemType_FeaturePage");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EUnifedProductInteractionActions_Invalid = -1)] =
-            "k_EUnifedProductInteractionActions_Invalid"),
-            (_[(_.k_EUnifedProductInteractionActions_Visit = 0)] =
-              "k_EUnifedProductInteractionActions_Visit"),
-            (_[(_.k_EUnifedProductInteractionActions_Wishlist = 1)] =
-              "k_EUnifedProductInteractionActions_Wishlist"),
-            (_[(_.k_EUnifedProductInteractionActions_IgnoreNotInterested = 2)] =
-              "k_EUnifedProductInteractionActions_IgnoreNotInterested"),
-            (_[(_.k_EUnifedProductInteractionActions_AddToCart = 3)] =
-              "k_EUnifedProductInteractionActions_AddToCart");
-        })(_ || (_ = {}));
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.impressions || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  impressions: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CProductImpressionsFromClient_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  type: {
-                    _: 1,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  appid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  num_impressions: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CProductImpressionsFromClient_Notification_Impression";
-        }
-      }
-      !(function (_) {
-        _.ReportProductImpressionsFromClient = function (_, _) {
-          return _.SendNotification(
-            "ExperimentService.ReportProductImpressionsFromClient#1",
-            (0, _._)(_, _),
-            {
-              ePrivilege: 1,
-            },
-          );
-        };
-      })(_ || (_ = {})),
-        (function (_) {
-          (_.k_ERecent = "recent"),
-            (_.k_ELibrary = "library"),
-            (_.k_EWishlist = "wishlist"),
-            (_.k_EFollowing = "following"),
-            (_.k_ERecommended = "recommended"),
-            (_.k_ESteam = "steam"),
-            (_.k_EFeatured = "featured"),
-            (_.k_ECurator = "curator");
-        })(_ || (_ = {}));
+        (_.k_ERecent = "recent"),
+          (_.k_ELibrary = "library"),
+          (_.k_EWishlist = "wishlist"),
+          (_.k_EFollowing = "following"),
+          (_.k_ERecommended = "recommended"),
+          (_.k_ESteam = "steam"),
+          (_.k_EFeatured = "featured"),
+          (_.k_ECurator = "curator");
+      })(_ || (_ = {}));
       const _ = [
           _.k_ELibrary,
           _.k_EWishlist,
@@ -25286,48 +22812,12 @@
           _.k_ESales,
         ],
         _ = new Map([
-          [_.k_ENews, [_._.k_ENewsEvent]],
-          [
-            _.k_EEvents,
-            [
-              _._.k_EChatEvent,
-              _._.k_EIRLEvent,
-              _._.k_EInGameBonusXPEvent,
-              _._.k_EInGameLootEvent,
-              _._.k_EInGamePerksEvent,
-              _._.k_EInGameEventGeneral,
-              _._.k_EInGameChallengeEvent,
-              _._.k_EInGameContestEvent,
-            ],
-          ],
-          [_.k_EStreaming, [_._.k_EBroadcastEvent]],
-          [
-            _.k_EUpdates,
-            [
-              _._.k_ESmallUpdateEvent,
-              _._.k_ERegularUpdateEvent,
-              _._.k_EMajorUpdateEvent,
-            ],
-          ],
-          [
-            _.k_EReleases,
-            [
-              _._.k_EGameReleaseEvent,
-              _._.k_EBetaReleaseEvent,
-              _._.k_EFutureReleaseEvent,
-              _._.k_EDLCReleaseEvent,
-              _._.k_ESeasonRelease,
-            ],
-          ],
-          [
-            _.k_ESales,
-            [
-              _._.k_EGameSalesEvent,
-              _._.k_EGameItemSalesEvent,
-              _._.k_EFreeTrial,
-              _._.k_ECrosspostEvent,
-            ],
-          ],
+          [_.k_ENews, [28]],
+          [_.k_EEvents, [9, 27, 22, 23, 24, 35, 25, 26]],
+          [_.k_EStreaming, [11]],
+          [_.k_EUpdates, [12, 13, 14]],
+          [_.k_EReleases, [10, 29, 16, 15, 32]],
+          [_.k_ESales, [20, 21, 31, 34]],
         ]);
       function _(_) {
         return new Map(_.map((_) => [_, !0]));
@@ -25476,7 +22966,7 @@
               this.enabledEventTypeSet.has(_.event_type) ||
               (this.m_bInitializedForUpdatesOnly &&
                 this.BIsEventTypeGroupAllowed(_.k_EUpdates) &&
-                _.event_type == _._.k_ENewsEvent &&
+                28 == _.event_type &&
                 _.start_time < 1599202800)
             ) &&
             !this.m_mapHiddenApps.has(_.appid) &&
@@ -25607,10 +23097,7 @@
                       Math.min(this.m_nFutureViewedIndex, 4095) |
                       (Math.min(this.m_nFutureViewableEvents, 255) << 12) |
                       (Math.min(this.GetTimeSpentOnPageS(_), 2047) << 20);
-                    _.SendExperimentEventToSteam(
-                      _.k_EProductActionNewsHubScrollFuture,
-                      _,
-                    );
+                    _.SendExperimentEventToSteam(18, _);
                   },
                   _ = 500;
                 this.m_scheduledFutureStats.Schedule(_, _);
@@ -25627,10 +23114,7 @@
                       Math.min(this.m_nPastViewedIndex, 4095) |
                       (Math.min(this.m_nPastViewedDays, 255) << 12) |
                       (Math.min(this.GetTimeSpentOnPageS(_), 2047) << 20);
-                    _.SendExperimentEventToSteam(
-                      _.k_EProductActionNewsHubScrollPast,
-                      _,
-                    );
+                    _.SendExperimentEventToSteam(17, _);
                   },
                   _ = 500;
                 this.m_scheduledPastStats.Schedule(_, _);
@@ -25655,10 +23139,7 @@
               _.BIsEventTypeGroupAllowed(_.k_ESales) && (_ |= 32768),
               _ != this.m_nLastRecordedFilter &&
                 ((this.m_nLastRecordedFilter = _),
-                this.SendExperimentEventToSteam(
-                  _.k_EProductActionChangeNewsHubFilters,
-                  _,
-                ));
+                this.SendExperimentEventToSteam(16, _));
           });
         }
         GetTimeSpentOnPageS(_) {
@@ -25670,10 +23151,7 @@
           );
         }
         RecordAppInteractionEvent(_, _) {
-          this.SendExperimentEventToSteam(
-            _.k_EProductActionNewsHubAppInteraction,
-            _,
-          );
+          this.SendExperimentEventToSteam(19, _);
         }
         SendExperimentEventToSteam(_, _) {
           this.InitBrowserID();
@@ -25742,11 +23220,11 @@
           return (
             this.LazyInit(),
             this.m_bIsLoaded
-              ? _._.k_EResultOK
+              ? 1
               : _._.logged_in
                 ? (this.m_promise || (this.m_promise = this.InternalLoad()),
                   this.m_promise)
-                : _._.k_EResultOK
+                : 1
           );
         }
         async InternalLoad() {
@@ -25755,7 +23233,7 @@
               withCredentials: !0,
             });
           return (
-            _.data.success == _._.k_EResultOK &&
+            1 == _.data.success &&
               (0, _._)(() => {
                 (this.m_bIsLoaded = !0),
                   (this.m_bValidatedEmail = _.data.email_validated),
@@ -26220,7 +23698,7 @@
             return _?.[1];
           })(window.location.href),
           _ = _ && "news" == _,
-          _ = _.GetEventType() == _._.k_ECreatorHome,
+          _ = 36 == _.GetEventType(),
           _ = "community" === (0, _._)(),
           _ = _.appid ? "games" : "groups",
           _ =
@@ -26285,7 +23763,7 @@
             _.appid &&
             _ &&
             _.BHasSaleUpdateLandingPageVanity(),
-          _ = _.GetEventType() == _._.k_ECreatorHome;
+          _ = 36 == _.GetEventType();
         switch (_) {
           case _.k_eCommunityPublish:
             return (
@@ -26369,187 +23847,159 @@
             return (0, _._)(!1, "Unknown route specified for link"), "";
         }
       }
+      var _ = __webpack_require__("chunkid");
+      const _ =
+          __webpack_require__._ +
+          "images/applications/help/login_mobile_auth.png?v=valveisgoodatcaching",
+        _ = __webpack_require__("chunkid")._,
+        _ = new _._("Login"),
+        _ = _.Info,
+        _ = (_.Debug, _.Warning),
+        _ = _.Error;
+      function _(_, _) {
+        let _ = _.getPublicKey(_.publickey_mod, _.publickey_exp),
+          _ = _.encrypt(_, _);
+        return !1 === _ ? null : _;
+      }
+      function _(_, _) {
+        let _;
+        "string" == typeof _
+          ? (_ = _)
+          : "location" in _
+            ? (_ = _.location.search)
+            : "search" in _ && (_ = _.search);
+        const _ = new URLSearchParams(__webpack_require__.substring("chunkid"));
+        if (_.has(_)) {
+          const _ = _.getAll(_);
+          return _[_.length - 1];
+        }
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+          length: _,
+          value: __webpack_require__,
+          onChange: _,
+          onPaste: _,
+          tone: _,
+          autoFocus: _,
+          disabled: _,
+          loading: _,
+          backupCode: _,
+          allowCharacter: _,
+        } = _;
+        (0, _.useEffect)(() => {
+          _ && _();
+        }, []);
+        const _ = (0, _.useRef)([]),
+          _ = () => _(_.current.map((_) => _.value)),
+          _ = (_) => {
+            const _ = _.target.value;
+            if (_ && _ && !_(_)) return;
+            const _ = _.target.nextElementSibling;
+            _.target.value && _ && __webpack_require__.focus(), _();
+          },
+          _ = (_) => {
+            -1 === _.current.findIndex((_) => !!_.value)
+              ? _.current[0]?.select()
+              : _.target.select();
+          },
+          _ = () => {
+            const _ = _.current.find((_) => !_.value);
+            _ ? _.focus() : _.current[_.current.length - 1].focus();
+          },
+          _ = (_) => {
+            const _ = _.target;
+            if ("Backspace" === _.key || "Delete" === _.key) {
+              const _ =
+                "Backspace" === _.key
+                  ? _.previousElementSibling
+                  : _.nextElementSibling;
+              "" === _.value &&
+                _ &&
+                ((_.value = ""),
+                __webpack_require__.focus(),
+                _.preventDefault(),
+                _());
+            } else if (
+              "ArrowLeft" === _.key ||
+              "ArrowRight" === _.key ||
+              "ArrowUp" === _.key ||
+              "ArrowDown" === _.key
+            ) {
+              const _ =
+                "ArrowLeft" === _.key || "ArrowUp" === _.key
+                  ? _.previousElementSibling
+                  : _.nextElementSibling;
+              _ && (__webpack_require__.focus(), _.preventDefault());
+            }
+          },
+          _ = (_) => {
+            const _ = _.clipboardData.getData("Text");
+            let _ = _.target,
+              _ = 0;
+            for (; _ && _ < _.length; )
+              __webpack_require__.focus(),
+                (_.value = _.charAt(_)),
+                (_ = _.nextElementSibling),
+                _++;
+            _(), _.preventDefault(), _ && _();
+          },
+          _ = [];
+        for (let _ = 0; _ < _; _++)
+          _.push(
+            _.createElement(_._, {
+              noFocusRing: !0,
+              type: "text",
+              maxLength: 1,
+              key: _,
+              ref: (_) => {
+                _.current[_] = _;
+              },
+              onChange: _,
+              onFocus: _,
+              onClick: (_) => _.stopPropagation(),
+              onKeyDown: _,
+              onPaste: _,
+              value: __webpack_require__[_] ? __webpack_require__[_][0] : "",
+              autoComplete: "none",
+              autoFocus: 0 === _ && _,
+              disabled: _ || _,
+              className: _().Input,
+            }),
+          );
+        return _.createElement(
+          _._,
+          {
+            className: (0, _._)(
+              _().SegmentedCharacterInput,
+              "danger" === _ && _().Danger,
+              _ && _().Disabled,
+              _ && _().BackupCode,
+            ),
+            onClick: _,
+          },
+          _ &&
+            _.createElement(
+              "div",
+              {
+                className: _().Loading,
+              },
+              _.createElement(_, {
+                size: "small",
+              }),
+            ),
+          _,
+        );
+      }
+      __webpack_require__("chunkid");
       var _,
         _,
         _,
         _,
         _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_ECaptchaAnnotationNone = 0)] = "k_ECaptchaAnnotationNone"),
-          (_[(_.k_ECaptchaAnnotationLegitimate = 1)] =
-            "k_ECaptchaAnnotationLegitimate"),
-          (_[(_.k_ECaptchaAnnotationFraudulent = 2)] =
-            "k_ECaptchaAnnotationFraudulent"),
-          (_[(_.k_ECaptchaAnnotationUnspecified = 3)] =
-            "k_ECaptchaAnnotationUnspecified");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAuthSessionSecurityHistory_Invalid = 0)] =
-            "k_EAuthSessionSecurityHistory_Invalid"),
-            (_[(_.k_EAuthSessionSecurityHistory_UsedPreviously = 1)] =
-              "k_EAuthSessionSecurityHistory_UsedPreviously"),
-            (_[(_.k_EAuthSessionSecurityHistory_NoPriorHistory = 2)] =
-              "k_EAuthSessionSecurityHistory_NoPriorHistory");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAuthenticationType_Unknown = 0)] =
-            "k_EAuthenticationType_Unknown"),
-            (_[(_.k_EAuthenticationType_Password = 1)] =
-              "k_EAuthenticationType_Password"),
-            (_[(_.k_EAuthenticationType_QR = 2)] = "k_EAuthenticationType_QR"),
-            (_[(_.k_EAuthenticationType_AccountCreation = 3)] =
-              "k_EAuthenticationType_AccountCreation"),
-            (_[(_.k_EAuthenticationType_GuestAccount = 4)] =
-              "k_EAuthenticationType_GuestAccount");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAuthSessionGuardType_Unknown = 0)] =
-            "k_EAuthSessionGuardType_Unknown"),
-            (_[(_.k_EAuthSessionGuardType_None = 1)] =
-              "k_EAuthSessionGuardType_None"),
-            (_[(_.k_EAuthSessionGuardType_EmailCode = 2)] =
-              "k_EAuthSessionGuardType_EmailCode"),
-            (_[(_.k_EAuthSessionGuardType_DeviceCode = 3)] =
-              "k_EAuthSessionGuardType_DeviceCode"),
-            (_[(_.k_EAuthSessionGuardType_DeviceConfirmation = 4)] =
-              "k_EAuthSessionGuardType_DeviceConfirmation"),
-            (_[(_.k_EAuthSessionGuardType_EmailConfirmation = 5)] =
-              "k_EAuthSessionGuardType_EmailConfirmation"),
-            (_[(_.k_EAuthSessionGuardType_MachineToken = 6)] =
-              "k_EAuthSessionGuardType_MachineToken"),
-            (_[(_.k_EAuthSessionGuardType_LegacyMachineAuth = 7)] =
-              "k_EAuthSessionGuardType_LegacyMachineAuth");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAuthTokenPlatformType_Unknown = 0)] =
-            "k_EAuthTokenPlatformType_Unknown"),
-            (_[(_.k_EAuthTokenPlatformType_SteamClient = 1)] =
-              "k_EAuthTokenPlatformType_SteamClient"),
-            (_[(_.k_EAuthTokenPlatformType_WebBrowser = 2)] =
-              "k_EAuthTokenPlatformType_WebBrowser"),
-            (_[(_.k_EAuthTokenPlatformType_MobileApp = 3)] =
-              "k_EAuthTokenPlatformType_MobileApp");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAuthTokenAppType_Unknown = 0)] =
-            "k_EAuthTokenAppType_Unknown"),
-            (_[(_.k_EAuthTokenAppType_Mobile_SteamApp = 1)] =
-              "k_EAuthTokenAppType_Mobile_SteamApp"),
-            (_[(_.k_EAuthTokenAppType_Mobile_ChatApp = 2)] =
-              "k_EAuthTokenAppType_Mobile_ChatApp");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETokenRenewalType_None = 0)] = "k_ETokenRenewalType_None"),
-            (_[(_.k_ETokenRenewalType_Allow = 1)] =
-              "k_ETokenRenewalType_Allow");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAuthTokenRevokeLogout = 0)] = "k_EAuthTokenRevokeLogout"),
-            (_[(_.k_EAuthTokenRevokePermanent = 1)] =
-              "k_EAuthTokenRevokePermanent"),
-            (_[(_.k_EAuthTokenRevokeReplaced = 2)] =
-              "k_EAuthTokenRevokeReplaced"),
-            (_[(_.k_EAuthTokenRevokeSupport = 3)] =
-              "k_EAuthTokenRevokeSupport"),
-            (_[(_.k_EAuthTokenRevokeConsume = 4)] =
-              "k_EAuthTokenRevokeConsume"),
-            (_[(_.k_EAuthTokenRevokeNonRememberedLogout = 5)] =
-              "k_EAuthTokenRevokeNonRememberedLogout"),
-            (_[(_.k_EAuthTokenRevokeNonRememberedPermanent = 6)] =
-              "k_EAuthTokenRevokeNonRememberedPermanent"),
-            (_[(_.k_EAuthTokenRevokeAutomatic = 7)] =
-              "k_EAuthTokenRevokeAutomatic");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAuthTokenState_Invalid = 0)] = "k_EAuthTokenState_Invalid"),
-            (_[(_.k_EAuthTokenState_New = 1)] = "k_EAuthTokenState_New"),
-            (_[(_.k_EAuthTokenState_Confirmed = 2)] =
-              "k_EAuthTokenState_Confirmed"),
-            (_[(_.k_EAuthTokenState_Issued = 3)] = "k_EAuthTokenState_Issued"),
-            (_[(_.k_EAuthTokenState_Denied = 4)] = "k_EAuthTokenState_Denied"),
-            (_[(_.k_EAuthTokenState_LoggedOut = 5)] =
-              "k_EAuthTokenState_LoggedOut"),
-            (_[(_.k_EAuthTokenState_Consumed = 6)] =
-              "k_EAuthTokenState_Consumed"),
-            (_[(_.k_EAuthTokenState_Revoked = 99)] =
-              "k_EAuthTokenState_Revoked");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECaptchaUsageNone = 0)] = "k_ECaptchaUsageNone"),
-            (_[(_.k_ECaptchaUsageGeneric = 1)] = "k_ECaptchaUsageGeneric"),
-            (_[(_.k_ECaptchaUsageAccountCreation = 2)] =
-              "k_ECaptchaUsageAccountCreation"),
-            (_[(_.k_ECaptchaUsageHelpRequest = 3)] =
-              "k_ECaptchaUsageHelpRequest"),
-            (_[(_.k_ECaptchaUsageLogon = 4)] = "k_ECaptchaUsageLogon"),
-            (_[(_.k_ECaptchaUsageChina = 5)] = "k_ECaptchaUsageChina"),
-            (_[(_.k_ECaptchaUsageContactForm = 6)] =
-              "k_ECaptchaUsageContactForm"),
-            (_[(_.k_ECaptchaUsageRedeemGiftCard = 7)] =
-              "k_ECaptchaUsageRedeemGiftCard"),
-            (_[(_.k_ECaptchaUsageMax = 8)] = "k_ECaptchaUsageMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECaptchaTypeNone = 0)] = "k_ECaptchaTypeNone"),
-            (_[(_.k_ECaptchaTypeLegacy = 1)] = "k_ECaptchaTypeLegacy"),
-            (_[(_.k_ECaptchaTypeReCaptcha = 2)] = "k_ECaptchaTypeReCaptcha"),
-            (_[(_.k_ECaptchaTypeHCaptcha = 3)] = "k_ECaptchaTypeHCaptcha"),
-            (_[(_.k_ECaptchaTypeMax = 4)] = "k_ECaptchaTypeMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECaptchaDifficultyDefault = 0)] =
-            "k_ECaptchaDifficultyDefault"),
-            (_[(_.k_ECaptchaDifficultyLow = 1)] = "k_ECaptchaDifficultyLow"),
-            (_[(_.k_ECaptchaDifficultyMedium = 2)] =
-              "k_ECaptchaDifficultyMedium"),
-            (_[(_.k_ECaptchaDifficultyHigh = 3)] = "k_ECaptchaDifficultyHigh");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ERiskUnknown = 1)] = "k_ERiskUnknown"),
-            (_[(_.k_ERiskMedium = 2)] = "k_ERiskMedium"),
-            (_[(_.k_ERiskHigh = 3)] = "k_ERiskHigh");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETokenRisk_ConfirmDistance = 1)] =
-            "k_ETokenRisk_ConfirmDistance"),
-            (_[(_.k_ETokenRisk_TokenLocation = 2)] =
-              "k_ETokenRisk_TokenLocation"),
-            (_[(_.k_ETokenRisk_FlaggedIP = 4)] = "k_ETokenRisk_FlaggedIP"),
-            (_[(_.k_ETokenRisk_APICalls = 8)] = "k_ETokenRisk_APICalls");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EConfirmation_Unknown = 0)] = "k_EConfirmation_Unknown"),
-            (_[(_.k_EConfirmation_Pending = 1)] = "k_EConfirmation_Pending"),
-            (_[(_.k_EConfirmation_Approved = 2)] = "k_EConfirmation_Approved"),
-            (_[(_.k_EConfirmation_Denied = 3)] = "k_EConfirmation_Denied"),
-            (_[(_.k_EConfirmation_Expired = 4)] = "k_EConfirmation_Expired"),
-            (_[(_.k_EConfirmation_Error = 5)] = "k_EConfirmation_Error");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EConfirmationRequest_None = 0)] =
-            "k_EConfirmationRequest_None"),
-            (_[(_.k_EConfirmationRequest_Email = 1)] =
-              "k_EConfirmationRequest_Email"),
-            (_[(_.k_EConfirmationRequest_Mobile = 2)] =
-              "k_EConfirmationRequest_Mobile");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -27043,7 +24493,7 @@
                   },
                   persistence: {
                     _: 7,
-                    _: _._.k_ESessionPersistence_Persistent,
+                    _: 1,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -27988,7 +25438,7 @@
                   },
                   persistence: {
                     _: 6,
-                    _: _._.k_ESessionPersistence_Persistent,
+                    _: 1,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -28692,7 +26142,7 @@
                   },
                   revoke_action: {
                     _: 2,
-                    _: _.k_EAuthTokenRevokePermanent,
+                    _: 1,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -28802,7 +26252,7 @@
                   },
                   revoke_action: {
                     _: 3,
-                    _: _.k_EAuthTokenRevokePermanent,
+                    _: 1,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -30431,165 +27881,16 @@
                 },
               );
             });
-        })(_ || (_ = {}));
-      const _ =
-          __webpack_require__._ +
-          "images/applications/help/login_mobile_auth.png?v=valveisgoodatcaching",
-        _ = __webpack_require__("chunkid")._,
-        _ = new _._("Login"),
-        _ = _.Info,
-        _ = (_.Debug, _.Warning),
-        _ = _.Error;
-      function _(_, _) {
-        let _ = _.getPublicKey(_.publickey_mod, _.publickey_exp),
-          _ = _.encrypt(_, _);
-        return !1 === _ ? null : _;
-      }
-      function _(_, _) {
-        let _;
-        "string" == typeof _
-          ? (_ = _)
-          : "location" in _
-            ? (_ = _.location.search)
-            : "search" in _ && (_ = _.search);
-        const _ = new URLSearchParams(__webpack_require__.substring("chunkid"));
-        if (_.has(_)) {
-          const _ = _.getAll(_);
-          return _[_.length - 1];
-        }
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-          length: _,
-          value: __webpack_require__,
-          onChange: _,
-          onPaste: _,
-          tone: _,
-          autoFocus: _,
-          disabled: _,
-          loading: _,
-          backupCode: _,
-          allowCharacter: _,
-        } = _;
-        (0, _.useEffect)(() => {
-          _ && _();
-        }, []);
-        const _ = (0, _.useRef)([]),
-          _ = () => _(_.current.map((_) => _.value)),
-          _ = (_) => {
-            const _ = _.target.value;
-            if (_ && _ && !_(_)) return;
-            const _ = _.target.nextElementSibling;
-            _.target.value && _ && __webpack_require__.focus(), _();
-          },
-          _ = (_) => {
-            -1 === _.current.findIndex((_) => !!_.value)
-              ? _.current[0]?.select()
-              : _.target.select();
-          },
-          _ = () => {
-            const _ = _.current.find((_) => !_.value);
-            _ ? _.focus() : _.current[_.current.length - 1].focus();
-          },
-          _ = (_) => {
-            const _ = _.target;
-            if ("Backspace" === _.key || "Delete" === _.key) {
-              const _ =
-                "Backspace" === _.key
-                  ? _.previousElementSibling
-                  : _.nextElementSibling;
-              "" === _.value &&
-                _ &&
-                ((_.value = ""),
-                __webpack_require__.focus(),
-                _.preventDefault(),
-                _());
-            } else if (
-              "ArrowLeft" === _.key ||
-              "ArrowRight" === _.key ||
-              "ArrowUp" === _.key ||
-              "ArrowDown" === _.key
-            ) {
-              const _ =
-                "ArrowLeft" === _.key || "ArrowUp" === _.key
-                  ? _.previousElementSibling
-                  : _.nextElementSibling;
-              _ && (__webpack_require__.focus(), _.preventDefault());
-            }
-          },
-          _ = (_) => {
-            const _ = _.clipboardData.getData("Text");
-            let _ = _.target,
-              _ = 0;
-            for (; _ && _ < _.length; )
-              __webpack_require__.focus(),
-                (_.value = _.charAt(_)),
-                (_ = _.nextElementSibling),
-                _++;
-            _(), _.preventDefault(), _ && _();
-          },
-          _ = [];
-        for (let _ = 0; _ < _; _++)
-          _.push(
-            _.createElement(_._, {
-              noFocusRing: !0,
-              type: "text",
-              maxLength: 1,
-              key: _,
-              ref: (_) => {
-                _.current[_] = _;
-              },
-              onChange: _,
-              onFocus: _,
-              onClick: (_) => _.stopPropagation(),
-              onKeyDown: _,
-              onPaste: _,
-              value: __webpack_require__[_] ? __webpack_require__[_][0] : "",
-              autoComplete: "none",
-              autoFocus: 0 === _ && _,
-              disabled: _ || _,
-              className: _().Input,
-            }),
-          );
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(
-              _().SegmentedCharacterInput,
-              "danger" === _ && _().Danger,
-              _ && _().Disabled,
-              _ && _().BackupCode,
-            ),
-            onClick: _,
-          },
-          _ &&
-            _.createElement(
-              "div",
-              {
-                className: _().Loading,
-              },
-              _.createElement(_, {
-                size: "small",
-              }),
-            ),
-          _,
-        );
-      }
-      __webpack_require__("chunkid");
-      var _,
-        _,
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.None = 0)] = "None"),
-          (_[(_.Generic = 1)] = "Generic"),
-          (_[(_.Expired = 2)] = "Expired"),
-          (_[(_.Network = 3)] = "Network"),
-          (_[(_.MoveAuthenticator = 4)] = "MoveAuthenticator"),
-          (_[(_.RateLimitExceeded = 5)] = "RateLimitExceeded"),
-          (_[(_.AnonymousLogin = 6)] = "AnonymousLogin");
-      })(_ || (_ = {})),
+        })(_ || (_ = {})),
+        (function (_) {
+          (_[(_.None = 0)] = "None"),
+            (_[(_.Generic = 1)] = "Generic"),
+            (_[(_.Expired = 2)] = "Expired"),
+            (_[(_.Network = 3)] = "Network"),
+            (_[(_.MoveAuthenticator = 4)] = "MoveAuthenticator"),
+            (_[(_.RateLimitExceeded = 5)] = "RateLimitExceeded"),
+            (_[(_.AnonymousLogin = 6)] = "AnonymousLogin");
+        })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_Success = 0)] = "k_Success"),
             (_[(_.k_PrimaryDomainFail = 1)] = "k_PrimaryDomainFail"),
@@ -30632,22 +27933,21 @@
         async PollForUpdate() {
           try {
             const _ = _._.Init(_);
-            _.SetEMsg(_._.k_EMsgServiceMethodCallFromClientNonAuthed),
+            _.SetEMsg(9804),
               _.Body().set_client_id(this.m_strClientID),
               _.Body().set_request_id(this.m_rgRequestID),
               this.m_strTokenToRevoke &&
                 _.Body().set_token_to_revoke(this.m_strTokenToRevoke);
             const _ = await _.PollAuthSessionStatus(this.m_transport, _),
               _ = _.GetEResult();
-            if (_ !== _._.k_EResultOK) {
-              if (_ === _._.k_EResultFail) {
+            if (1 !== _) {
+              if (2 === _) {
                 const _ = _.Hdr().transport_error();
                 if (
                   (_(
                     `Failed to poll auth session. Result ${_}. Transport Error: ${_}`,
                   ),
-                  _ === _._.k_ETransportRequestNotSent ||
-                    _ === _._.k_ETransportResponseNotReceived)
+                  2 === _ || 3 === _)
                 )
                   return (
                     this.m_transport.MakeReady(),
@@ -30655,15 +27955,13 @@
                       this.PollForUpdate,
                       this.m_msPollInterval,
                     ),
-                    _._.k_EResultOK
+                    1
                   );
               }
-              if (_ === _._.k_EResultFileNotFound || _ === _._.k_EResultExpired)
-                this.m_eFailureState = _.Expired;
-              else if (_ === _._.k_EResultRateLimitExceeded)
-                this.m_eFailureState = _.RateLimitExceeded;
+              if (9 === _ || 27 === _) this.m_eFailureState = _.Expired;
+              else if (84 === _) this.m_eFailureState = _.RateLimitExceeded;
               else {
-                if (_ == _._.k_EResultMustAgreeToSSA) {
+                if (118 == _) {
                   if (this.m_onShowAgreement)
                     this.m_onShowAgreement(_.Body().agreement_session_url());
                   else {
@@ -30723,7 +28021,7 @@
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
-              _._.k_EResultFail
+              2
             );
           }
         }
@@ -30790,7 +28088,7 @@
                             `Transfer login to ${_.host} failed with status code: ${_.status}`,
                           ),
                           (_ = !1))
-                        : _.data.result !== _._.k_EResultOK &&
+                        : 1 !== _.data.result &&
                           (_(
                             `Transfer login to ${_.host} failed with result: ${_.data.result}`,
                           ),
@@ -30838,25 +28136,7 @@
         (0, _._)([_._], _.prototype, "PollForUpdate", null),
         (0, _._)([_._], _.prototype, "SetTokenToRevoke", null);
       var _,
-        _,
-        _,
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_ETwoFactorUsageType_Unknown = 0)] =
-          "k_ETwoFactorUsageType_Unknown"),
-          (_[(_.k_ETwoFactorUsageType_None = 1)] =
-            "k_ETwoFactorUsageType_None"),
-          (_[(_.k_ETwoFactorUsageType_MobileConfirmation = 2)] =
-            "k_ETwoFactorUsageType_MobileConfirmation"),
-          (_[(_.k_ETwoFactorUsageType_Login = 3)] =
-            "k_ETwoFactorUsageType_Login");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETwoFactorStatusFieldFlag_None = 0)] =
-            "k_ETwoFactorStatusFieldFlag_None"),
-            (_[(_.k_ETwoFactorStatusFieldFlag_LastUsage = 1)] =
-              "k_ETwoFactorStatusFieldFlag_LastUsage");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -32335,30 +29615,8 @@
             );
           });
       })(_ || (_ = {}));
-      var _;
-      !(function (_) {
-        (_[(_.Unstarted = 0)] = "Unstarted"),
-          (_[(_.Starting = 1)] = "Starting"),
-          (_[(_.InvalidCredentials = 2)] = "InvalidCredentials"),
-          (_[(_.WaitingForEmailCode = 3)] = "WaitingForEmailCode"),
-          (_[(_.WaitingForEmailConfirmation = 4)] =
-            "WaitingForEmailConfirmation"),
-          (_[(_.WaitingForDeviceCode = 5)] = "WaitingForDeviceCode"),
-          (_[(_.WaitingForDeviceConfirmation = 6)] =
-            "WaitingForDeviceConfirmation"),
-          (_[(_.StartMoveAuthenticator = 7)] = "StartMoveAuthenticator"),
-          (_[(_.WaitingForMoveCode = 8)] = "WaitingForMoveCode"),
-          (_[(_.AuthenticatorMoved = 9)] = "AuthenticatorMoved"),
-          (_[(_.InvalidEmailCode = 10)] = "InvalidEmailCode"),
-          (_[(_.InvalidDeviceCode = 11)] = "InvalidDeviceCode"),
-          (_[(_.InvalidMoveCode = 12)] = "InvalidMoveCode"),
-          (_[(_.WaitingForToken = 13)] = "WaitingForToken"),
-          (_[(_.Success = 14)] = "Success"),
-          (_[(_.Failure = 15)] = "Failure"),
-          (_[(_.Stopped = 16)] = "Stopped");
-      })(_ || (_ = {}));
       class _ extends _ {
-        m_eStatus = _.Unstarted;
+        m_eStatus = 0;
         m_steamid;
         m_strAccountName;
         m_strConfirmationAssociatedMessage = "";
@@ -32381,44 +29639,31 @@
             (this.m_onGetMachineAuth = _.onGetMachineAuth);
         }
         async Start(_, _, _) {
-          if (
-            this.m_eStatus !== _.Unstarted &&
-            this.m_eStatus !== _.InvalidCredentials
-          )
+          if (0 !== this.m_eStatus && 2 !== this.m_eStatus)
             return (
               _(
                 "Cannot start an already started auth session. Create a new session instance.",
               ),
-              _._.k_EResultDuplicateRequest
+              29
             );
           const _ = _.replace(/[^\x00-\x7F]/g, ""),
             _ = _.replace(/[^\x00-\x7F]/g, "").slice(0, 64);
-          if (!_.length || !_.length) return _._.k_EResultInvalidParam;
+          if (!_.length || !_.length) return 8;
           if (
-            ((this.m_eStatus = _.Starting),
+            ((this.m_eStatus = 1),
             (this.m_bUsingCodeOverride = !1),
             "anonymous" == _)
           )
-            return (
-              this.SetFailureState(
-                _.AnonymousLogin,
-                _.EResult(_._.k_EResultInvalidName),
-              ),
-              _._.k_EResultInvalidName
-            );
+            return this.SetFailureState(_.AnonymousLogin, _.EResult(12)), 12;
           try {
             const _ = await (async function (_, _) {
               const _ = _._.Init(_);
               __webpack_require__.Body().set_account_name(_),
-                __webpack_require__.SetEMsg(
-                  _._.k_EMsgServiceMethodCallFromClientNonAuthed,
-                );
+                __webpack_require__.SetEMsg("chunkid");
               try {
                 await _.MakeReady();
                 const _ = await _.GetPasswordRSAPublicKey(_, _);
-                if (
-                  (_.DEBUG_LogToConsole(), _.GetEResult() !== _._.k_EResultOK)
-                )
+                if ((_.DEBUG_LogToConsole(), 1 !== _.GetEResult()))
                   return (
                     _(`Failed to get RSA key with EResult: ${_.GetEResult()}`),
                     null
@@ -32449,24 +29694,17 @@
             if (!_)
               return (
                 _("Cannot start auth session without a valid RSA key"),
-                this.SetFailureState(
-                  _.Network,
-                  _.EResult(_._.k_EResultServiceUnavailable),
-                ),
-                _._.k_EResultServiceUnavailable
+                this.SetFailureState(_.Network, _.EResult(20)),
+                20
               );
             const _ = _(_, _),
               _ = _._.Init(_);
-            _.SetEMsg(_._.k_EMsgServiceMethodCallFromClientNonAuthed),
+            _.SetEMsg(9804),
               _.Body().set_account_name(_),
               _.Body().set_encrypted_password(_),
               _.Body().set_encryption_timestamp(_.timestamp),
               _.Body().set_remember_login(!!_),
-              _.Body().set_persistence(
-                _
-                  ? _._.k_ESessionPersistence_Persistent
-                  : _._.k_ESessionPersistence_Ephemeral,
-              ),
+              _.Body().set_persistence(_ ? 1 : 0),
               _.Body().set_website_id(_._.WEBSITE_ID);
             try {
               _.Body().set_device_details(await this.GetDeviceDetails());
@@ -32478,7 +29716,7 @@
               null != this.m_onGetMachineAuth)
             ) {
               const _ = await this.m_onGetMachineAuth(_);
-              _.eresult == _._.k_EResultOK && _.Body().set_guard_data(_.data);
+              1 == _.eresult && _.Body().set_guard_data(_.data);
             }
             await this.m_transport.MakeReady();
             const _ = await _.BeginAuthSessionViaCredentials(
@@ -32490,25 +29728,19 @@
               (0, _._)(async () => {
                 const _ = _.GetEResult(),
                   _ = _.Hdr().transport_error();
-                if (_ !== _._.k_EResultOK)
+                if (1 !== _)
                   switch (_) {
-                    case _._.k_EResultInvalidPassword:
-                      return (this.m_eStatus = _.InvalidCredentials), _;
-                    case _._.k_EResultServiceUnavailable:
-                    case _._.k_EResultNoConnection:
-                      return (
-                        this.SetFailureState(
-                          _.Network,
-                          _.EResult(_._.k_EResultServiceUnavailable),
-                        ),
-                        _
-                      );
-                    case _._.k_EResultRateLimitExceeded:
+                    case 5:
+                      return (this.m_eStatus = 2), _;
+                    case 20:
+                    case 3:
+                      return this.SetFailureState(_.Network, _.EResult(20)), _;
+                    case 84:
                       return (
                         this.SetFailureState(_.RateLimitExceeded, _.EResult(_)),
                         _
                       );
-                    case _._.k_EResultMustAgreeToSSA:
+                    case 118:
                       if (this.m_onShowAgreement)
                         this.m_onShowAgreement(
                           _.Body().agreement_session_url(),
@@ -32522,10 +29754,9 @@
                         this.m_onCompleteCallback({
                           bSuccess: !1,
                         }),
-                        (this.m_eStatus = _.Unstarted),
+                        (this.m_eStatus = 0),
                         _
                       );
-                    case _._.k_EResultAccountDisabled:
                     default:
                       return (
                         _(
@@ -32557,16 +29788,14 @@
                   (this.m_rgRequestID = _),
                   (this.m_steamid = _),
                   (this.m_strWeakAuthToken = _),
-                  _.find(
-                    ({ confirmation_type: _ }) =>
-                      _ === _.k_EAuthSessionGuardType_MachineToken,
-                  ))
+                  _.find(({ confirmation_type: _ }) => 6 === _))
                 ) {
                   const _ = new FormData();
                   _.append("clientid", _), _.append("steamid", this.m_steamid);
                   const _ = `${_._.LOGIN_BASE_URL}jwt/checkdevice/${this.m_steamid}`;
                   try {
                     if (
+                      1 ==
                       (
                         await _().post(_, _, {
                           headers: {
@@ -32574,13 +29803,9 @@
                           },
                           withCredentials: !0,
                         })
-                      ).data.result == _._.k_EResultOK
+                      ).data.result
                     )
-                      return (
-                        (this.m_eStatus = _.WaitingForEmailConfirmation),
-                        this.StartPolling(!0),
-                        _._.k_EResultOK
-                      );
+                      return (this.m_eStatus = 4), this.StartPolling(!0), 1;
                   } catch (_) {
                     if (
                       (_(`checkdevice ajax to ${_} failed: ${_.message}`),
@@ -32592,24 +29817,18 @@
                             _.Network,
                             _.AjaxFailureWithCode(_.response.status),
                           ),
-                          _._.k_EResultServiceUnavailable)
+                          20)
                         : (this.SetFailureState(
                             _.Network,
                             _.AjaxFailureNoCode(),
                           ),
-                          _._.k_EResultServiceUnavailable);
+                          20);
                     }
-                    return (
-                      this.SetFailureState(
-                        _.Network,
-                        _.EResult(_._.k_EResultUnexpectedError),
-                      ),
-                      _._.k_EResultUnexpectedError
-                    );
+                    return this.SetFailureState(_.Network, _.EResult(79)), 79;
                   }
                 }
                 const _ = (function (_) {
-                    let _ = _[0] || _.k_EAuthSessionGuardType_Unknown;
+                    let _ = _[0] || 0;
                     _.length > 1 && (_ = _.sort((_, _) => _[_] - _[_])[0]);
                     return _;
                   })(_.map(({ confirmation_type: _ }) => _)),
@@ -32621,26 +29840,19 @@
                       _.associated_message),
                   _)
                 ) {
-                  case _.k_EAuthSessionGuardType_None:
-                    return (
-                      (this.m_eStatus = _.WaitingForToken),
-                      this.StartPolling(),
-                      _
-                    );
-                  case _.k_EAuthSessionGuardType_EmailCode:
-                    this.m_eStatus = _.WaitingForEmailCode;
+                  case 1:
+                    return (this.m_eStatus = 13), this.StartPolling(), _;
+                  case 2:
+                    this.m_eStatus = 3;
                     break;
-                  case _.k_EAuthSessionGuardType_EmailConfirmation:
-                    (this.m_eStatus = _.WaitingForEmailConfirmation),
-                      this.StartPolling(!1);
+                  case 5:
+                    (this.m_eStatus = 4), this.StartPolling(!1);
                     break;
-                  case _.k_EAuthSessionGuardType_DeviceCode:
-                    (this.m_eStatus = _.WaitingForDeviceCode),
-                      this.StartPolling(!1);
+                  case 3:
+                    (this.m_eStatus = 5), this.StartPolling(!1);
                     break;
-                  case _.k_EAuthSessionGuardType_DeviceConfirmation:
-                    (this.m_eStatus = _.WaitingForDeviceConfirmation),
-                      this.StartPolling(!1);
+                  case 4:
+                    (this.m_eStatus = 6), this.StartPolling(!1);
                 }
                 return _;
               })
@@ -32655,12 +29867,12 @@
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
-              _._.k_EResultFail
+              2
             );
           }
         }
         Stop() {
-          this.StopPolling(), (this.m_eStatus = _.Stopped);
+          this.StopPolling(), (this.m_eStatus = 16);
         }
         GetStatus() {
           return this.m_eStatus;
@@ -32683,41 +29895,35 @@
         async SendSteamGuardCode(_, _ = !0) {
           if (0 == _.length) {
             switch (this.m_eStatus) {
-              case _.InvalidEmailCode:
-                this.m_eStatus = _.WaitingForEmailCode;
+              case 10:
+                this.m_eStatus = 3;
                 break;
-              case _.InvalidDeviceCode:
-                this.m_eStatus = _.WaitingForDeviceCode;
+              case 11:
+                this.m_eStatus = 5;
                 break;
-              case _.WaitingForDeviceCode:
-              case _.WaitingForEmailCode:
+              case 5:
+              case 3:
                 break;
               default:
                 throw new Error("Attempted to clear code in invalid state");
             }
-            return Promise.resolve(_._.k_EResultOK);
+            return Promise.resolve(1);
           }
           try {
             await this.m_transport.MakeReady();
-            const _ =
-                this.m_eStatus === _.WaitingForEmailCode ||
-                this.m_eStatus === _.InvalidEmailCode,
+            const _ = 3 === this.m_eStatus || 10 === this.m_eStatus,
               _ = _._.Init(_);
-            _.SetEMsg(_._.k_EMsgServiceMethodCallFromClientNonAuthed),
+            _.SetEMsg(9804),
               _.Body().set_client_id(this.m_strClientID),
               _.Body().set_steamid(this.m_steamid),
               _.Body().set_code(_),
-              _.Body().set_code_type(
-                _
-                  ? _.k_EAuthSessionGuardType_EmailCode
-                  : _.k_EAuthSessionGuardType_DeviceCode,
-              );
+              _.Body().set_code_type(_ ? 2 : 3);
             const _ = await _.UpdateAuthSessionWithSteamGuardCode(
                 this.m_transport,
                 _,
               ),
               _ = _.GetEResult();
-            if (_ !== _._.k_EResultOK) {
+            if (1 !== _) {
               if (!_)
                 return (
                   _(
@@ -32726,15 +29932,10 @@
                   _
                 );
               switch (_) {
-                case _._.k_EResultInvalidLoginAuthCode:
-                case _._.k_EResultTwoFactorCodeMismatch:
-                  return (
-                    (this.m_eStatus = _
-                      ? _.InvalidEmailCode
-                      : _.InvalidDeviceCode),
-                    _
-                  );
-                case _._.k_EResultExpired:
+                case 65:
+                case 88:
+                  return (this.m_eStatus = _ ? 10 : 11), _;
+                case 27:
                   return (
                     this.SetFailureState(_.Expired, _.EResult(_)),
                     this.m_onCompleteCallback({
@@ -32742,7 +29943,7 @@
                     }),
                     _
                   );
-                case _._.k_EResultRateLimitExceeded:
+                case 84:
                   return (
                     this.SetFailureState(_.RateLimitExceeded, _.EResult(_)),
                     this.m_onCompleteCallback({
@@ -32750,7 +29951,7 @@
                     }),
                     _
                   );
-                case _._.k_EResultMustAgreeToSSA:
+                case 118:
                   if (this.m_onShowAgreement)
                     this.m_onShowAgreement(_.Body().agreement_session_url());
                   else {
@@ -32762,7 +29963,7 @@
                     this.m_onCompleteCallback({
                       bSuccess: !1,
                     }),
-                    (this.m_eStatus = _.Unstarted),
+                    (this.m_eStatus = 0),
                     _
                   );
                 default:
@@ -32778,7 +29979,7 @@
                   );
               }
             }
-            return (this.m_eStatus = _.WaitingForToken), this.StartPolling(), _;
+            return (this.m_eStatus = 13), this.StartPolling(), _;
           } catch (_) {
             return (
               _(`Failed to update auth session with SG code. ${_}`),
@@ -32786,21 +29987,19 @@
               this.m_onCompleteCallback({
                 bSuccess: !1,
               }),
-              _._.k_EResultFail
+              2
             );
           }
         }
         UseCodeOverride() {
           switch (this.m_eStatus) {
-            case _.WaitingForDeviceConfirmation:
+            case 6:
               return (
-                (this.m_bUsingCodeOverride = !0),
-                void (this.m_eStatus = _.WaitingForDeviceCode)
+                (this.m_bUsingCodeOverride = !0), void (this.m_eStatus = 5)
               );
-            case _.WaitingForEmailConfirmation:
+            case 4:
               return (
-                (this.m_bUsingCodeOverride = !0),
-                void (this.m_eStatus = _.WaitingForEmailCode)
+                (this.m_bUsingCodeOverride = !0), void (this.m_eStatus = 3)
               );
             default:
               return void _(
@@ -32809,7 +30008,7 @@
           }
         }
         CantAccessCode() {
-          this.m_eStatus = _.StartMoveAuthenticator;
+          this.m_eStatus = 7;
         }
         async StartMoveAuthenticator() {
           this.m_weakAuthWebInterface = new _._(
@@ -32822,7 +30021,7 @@
                 this.m_weakAuthWebInterface.GetServiceTransport(),
                 _,
               );
-            _._.k_EResultOK != _.GetEResult()
+            1 != _.GetEResult()
               ? (_.DEBUG_LogToConsole(),
                 _(
                   "An unexpected error occured while adding an authenticator",
@@ -32832,13 +30031,10 @@
                   _.MoveAuthenticator,
                   _.EResult(_.GetEResult()),
                 ))
-              : (this.m_eStatus = _.WaitingForMoveCode);
+              : (this.m_eStatus = 8);
           } catch (_) {
             _("An unexpected error occured while moving an authenticator", _),
-              this.SetFailureState(
-                _.MoveAuthenticator,
-                _.EResult(_._.k_EResultFail),
-              );
+              this.SetFailureState(_.MoveAuthenticator, _.EResult(2));
           }
         }
         async ResendMoveCode() {
@@ -32847,13 +30043,13 @@
               this.m_weakAuthWebInterface.GetServiceTransport(),
               _,
             );
-          _._.k_EResultOK != _.GetEResult() &&
+          1 != _.GetEResult() &&
             (_.DEBUG_LogToConsole(),
             _(
               "An unexpected error occured while adding an authenticator",
               _.GetEResult(),
             )),
-            (this.m_eStatus = _.WaitingForMoveCode);
+            (this.m_eStatus = 8);
         }
         async FinishMoveAuthenticator(_) {
           const _ = _._.Init(_);
@@ -32864,8 +30060,8 @@
             this.m_weakAuthWebInterface.GetServiceTransport(),
             _,
           );
-          _._.k_EResultSmsCodeFailed == __webpack_require__.GetEResult()
-            ? (this.m_eStatus = _.InvalidMoveCode)
+          94 == __webpack_require__.GetEResult()
+            ? (this.m_eStatus = 12)
             : __webpack_require__.Body().success()
               ? (__webpack_require__.DEBUG_LogToConsole(),
                 (this.m_replacementAuthenticator = (function (_) {
@@ -32885,7 +30081,7 @@
                     ..._,
                   };
                 })(__webpack_require__.Body().replacement_token().toObject())),
-                (this.m_eStatus = _.AuthenticatorMoved),
+                (this.m_eStatus = 9),
                 (this.m_bUsingCodeOverride = !1))
               : (__webpack_require__.DEBUG_LogToConsole(),
                 _(
@@ -32898,19 +30094,19 @@
                 ));
         }
         FinishMoveRecovery() {
-          this.m_eStatus = _.WaitingForDeviceCode;
+          this.m_eStatus = 5;
         }
         BCanGoBack() {
           switch (this.m_eStatus) {
-            case _.WaitingForDeviceCode:
-            case _.InvalidDeviceCode:
-            case _.WaitingForEmailCode:
-            case _.InvalidEmailCode:
-            case _.WaitingForDeviceConfirmation:
-            case _.WaitingForEmailConfirmation:
-            case _.StartMoveAuthenticator:
-            case _.WaitingForMoveCode:
-            case _.InvalidMoveCode:
+            case 5:
+            case 11:
+            case 3:
+            case 10:
+            case 6:
+            case 4:
+            case 7:
+            case 8:
+            case 12:
               return !0;
             default:
               return !1;
@@ -32918,27 +30114,22 @@
         }
         GoBack() {
           switch (this.m_eStatus) {
-            case _.WaitingForDeviceConfirmation:
-            case _.WaitingForEmailConfirmation:
-              this.m_eStatus = _.Unstarted;
+            case 6:
+            case 4:
+              this.m_eStatus = 0;
               break;
-            case _.WaitingForDeviceCode:
-            case _.InvalidDeviceCode:
-              this.m_eStatus = this.m_bUsingCodeOverride
-                ? _.WaitingForDeviceConfirmation
-                : _.Unstarted;
+            case 5:
+            case 11:
+              this.m_eStatus = this.m_bUsingCodeOverride ? 6 : 0;
               break;
-            case _.StartMoveAuthenticator:
-            case _.WaitingForMoveCode:
-            case _.InvalidMoveCode:
-              this.m_eStatus =
-                (this.m_bUsingCodeOverride, _.WaitingForDeviceCode);
+            case 7:
+            case 8:
+            case 12:
+              this.m_eStatus = (this.m_bUsingCodeOverride, 5);
               break;
-            case _.WaitingForEmailCode:
-            case _.InvalidEmailCode:
-              this.m_eStatus = this.m_bUsingCodeOverride
-                ? _.WaitingForEmailConfirmation
-                : _.Unstarted;
+            case 3:
+            case 10:
+              this.m_eStatus = this.m_bUsingCodeOverride ? 4 : 0;
               break;
             default:
               return void _(
@@ -32947,13 +30138,13 @@
           }
         }
         SetFailureState(_, _, __webpack_require__ = "") {
-          (this.m_eStatus = _.Failure),
+          (this.m_eStatus = 15),
             (this.m_eFailureState = _),
             (this.m_strErrorReference = _),
             (this.m_strExtendedErrorMessage = __webpack_require__);
         }
         onAuthComplete = (_) => {
-          this.m_eStatus = _.bSuccess ? _.Success : _.Failure;
+          this.m_eStatus = _.bSuccess ? 14 : 15;
           const _ = _.bSuccess
             ? {
                 ..._,
@@ -32980,14 +30171,7 @@
         (0, _._)([_._], _.prototype, "GoBack", null),
         (0, _._)([_._], _.prototype, "SetFailureState", null),
         (0, _._)([_._], _.prototype, "SetOnLoginComplete", null);
-      const _ = [
-        _.k_EAuthSessionGuardType_DeviceConfirmation,
-        _.k_EAuthSessionGuardType_DeviceCode,
-        _.k_EAuthSessionGuardType_EmailCode,
-        _.k_EAuthSessionGuardType_None,
-        _.k_EAuthSessionGuardType_Unknown,
-        _.k_EAuthSessionGuardType_EmailConfirmation,
-      ].reduce((_, _, _) => ((_[_] = _), _), {});
+      const _ = [4, 3, 2, 1, 0, 5].reduce((_, _, _) => ((_[_] = _), _), {});
       function _(_) {
         return _ ? 7 : 5;
       }
@@ -33004,103 +30188,6 @@
         AjaxFailureNoCode: () => "af",
         AjaxFailureWithCode: (_) => `af-${_}`,
       };
-      var _;
-      !(function (_) {
-        (_[(_.Unstarted = 0)] = "Unstarted"),
-          (_[(_.Starting = 1)] = "Starting"),
-          (_[(_.Pending = 2)] = "Pending"),
-          (_[(_.Success = 3)] = "Success"),
-          (_[(_.Failure = 4)] = "Failure"),
-          (_[(_.Stopped = 5)] = "Stopped");
-      })(_ || (_ = {}));
-      class _ extends _ {
-        m_eStatus = _.Unstarted;
-        constructor(_) {
-          super(
-            _.transport,
-            (_) => {
-              (this.m_eStatus = _.bSuccess ? _.Success : _.Failure),
-                _.onComplete(_);
-            },
-            _.onDeviceDetails,
-          ),
-            (0, _._)(this);
-        }
-        async Start() {
-          if (this.m_eStatus !== _.Unstarted)
-            return (
-              console.error(
-                "Cannot start an already started auth session. Create a new session instance.",
-              ),
-              _._.k_EResultFail
-            );
-          this.m_eStatus = _.Starting;
-          try {
-            await this.m_transport.MakeReady();
-            const _ = _._.Init(_);
-            _.SetEMsg(_._.k_EMsgServiceMethodCallFromClientNonAuthed);
-            try {
-              _.Body().set_device_details(await this.GetDeviceDetails());
-            } catch (_) {
-              console.error("Failed to GetDeviceDetails"), console.log(_);
-            }
-            _.Body().set_website_id(_._.WEBSITE_ID);
-            const _ = await _.BeginAuthSessionViaQR(this.m_transport, _),
-              _ = _.GetEResult(),
-              _ = _.Hdr().transport_error();
-            if (_ !== _._.k_EResultOK)
-              return (
-                console.error(
-                  `Failed to start auth session. Result: ${_} Transport: ${_}`,
-                ),
-                (this.m_eFailureState = _.Generic),
-                this.m_onCompleteCallback({
-                  bSuccess: !1,
-                }),
-                _
-              );
-            const {
-              client_id: _,
-              challenge_url: _,
-              interval: _,
-              request_id: _,
-            } = _.Body().toObject();
-            return (
-              (this.m_strClientID = _),
-              (this.m_strChallengeURL = _),
-              (this.m_msPollInterval = 1e3 * _),
-              (this.m_rgRequestID = _),
-              (this.m_eStatus = _.Pending),
-              this.StartPolling(!1),
-              _
-            );
-          } catch (_) {
-            return (
-              console.error(
-                `Failed to start auth session: ${JSON.stringify(_)}`,
-              ),
-              (this.m_eFailureState = _.Generic),
-              this.m_onCompleteCallback({
-                bSuccess: !1,
-              }),
-              _._.k_EResultFail
-            );
-          }
-        }
-        Stop() {
-          this.StopPolling(), (this.m_eStatus = _.Stopped);
-        }
-        GetChallengeURL() {
-          return this.m_strChallengeURL;
-        }
-        GetClientID() {
-          return this.m_strClientID;
-        }
-        GetStatus() {
-          return this.m_eStatus;
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_eStatus", void 0);
       var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -33210,6 +30297,93 @@
           (_[(_._ = 3)] = "Q"),
           (_[(_._ = 2)] = "H");
       })(_ || (_ = {}));
+      class _ extends _ {
+        m_eStatus = 0;
+        constructor(_) {
+          super(
+            _.transport,
+            (_) => {
+              (this.m_eStatus = _.bSuccess ? 3 : 4), _.onComplete(_);
+            },
+            _.onDeviceDetails,
+          ),
+            (0, _._)(this);
+        }
+        async Start() {
+          if (0 !== this.m_eStatus)
+            return (
+              console.error(
+                "Cannot start an already started auth session. Create a new session instance.",
+              ),
+              2
+            );
+          this.m_eStatus = 1;
+          try {
+            await this.m_transport.MakeReady();
+            const _ = _._.Init(_);
+            _.SetEMsg(9804);
+            try {
+              _.Body().set_device_details(await this.GetDeviceDetails());
+            } catch (_) {
+              console.error("Failed to GetDeviceDetails"), console.log(_);
+            }
+            _.Body().set_website_id(_._.WEBSITE_ID);
+            const _ = await _.BeginAuthSessionViaQR(this.m_transport, _),
+              _ = _.GetEResult(),
+              _ = _.Hdr().transport_error();
+            if (1 !== _)
+              return (
+                console.error(
+                  `Failed to start auth session. Result: ${_} Transport: ${_}`,
+                ),
+                (this.m_eFailureState = _.Generic),
+                this.m_onCompleteCallback({
+                  bSuccess: !1,
+                }),
+                _
+              );
+            const {
+              client_id: _,
+              challenge_url: _,
+              interval: _,
+              request_id: _,
+            } = _.Body().toObject();
+            return (
+              (this.m_strClientID = _),
+              (this.m_strChallengeURL = _),
+              (this.m_msPollInterval = 1e3 * _),
+              (this.m_rgRequestID = _),
+              (this.m_eStatus = 2),
+              this.StartPolling(!1),
+              _
+            );
+          } catch (_) {
+            return (
+              console.error(
+                `Failed to start auth session: ${JSON.stringify(_)}`,
+              ),
+              (this.m_eFailureState = _.Generic),
+              this.m_onCompleteCallback({
+                bSuccess: !1,
+              }),
+              2
+            );
+          }
+        }
+        Stop() {
+          this.StopPolling(), (this.m_eStatus = 5);
+        }
+        GetChallengeURL() {
+          return this.m_strChallengeURL;
+        }
+        GetClientID() {
+          return this.m_strClientID;
+        }
+        GetStatus() {
+          return this.m_eStatus;
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_eStatus", void 0);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
@@ -33256,10 +30430,10 @@
             onDeviceDetails: _,
           });
         (0, _.useEffect)(() => _ && _(_), [_, _]);
-        const _ = _ === _.Pending ? _ : _._.STORE_BASE_URL,
-          _ = _ === _.Unstarted || _ === _.Starting || _,
-          _ = _ === _.Failure,
-          _ = _ === _.Success,
+        const _ = 2 === _ ? _ : _._.STORE_BASE_URL,
+          _ = 0 === _ || 1 === _ || _,
+          _ = 4 === _,
+          _ = 3 === _,
           _ = _
             ? _.createElement(_, null)
             : _
@@ -33275,7 +30449,7 @@
         (0, _.useEffect)(() => {
           _.refreshInfo?.login_token_id && _(_.refreshInfo.login_token_id);
         }, [_.refreshInfo, _]);
-        const _ = _._.EUNIVERSE !== _._.k_EUniversePublic;
+        const _ = 1 !== _._.EUNIVERSE;
         return _.createElement(
           "div",
           {
@@ -33448,8 +30622,7 @@
                         _ = new FormData();
                       Object.keys(_).forEach((_) => _.append(_, _[_]));
                       const _ = await _().post(_, _),
-                        _ =
-                          200 === _.status && _.data.result === _._.k_EResultOK;
+                        _ = 200 === _.status && 1 === _.data.result;
                       _ && window.location.assign(_);
                       return _;
                     })(_.current)
@@ -33566,7 +30739,7 @@
           variant: __webpack_require__,
           redirectUrl: _,
         } = _;
-        if (_ === _._.k_ELauncherTypeSingleApp) return null;
+        if (8 === _) return null;
         if ("none" == __webpack_require__) return null;
         const _ = void 0 !== _;
         let _;
@@ -33607,14 +30780,14 @@
           os_type: _,
           device_friendly_name: __webpack_require__,
           machine_id: _,
-          platform_type: _.k_EAuthTokenPlatformType_SteamClient,
+          platform_type: 1,
           gaming_device_type: _.eGamingDeviceType,
         };
       }
       async function _() {
         return {
           device_friendly_name: window.navigator.userAgent,
-          platform_type: _.k_EAuthTokenPlatformType_WebBrowser,
+          platform_type: 2,
         };
       }
       function _(_) {
@@ -33678,7 +30851,7 @@
             onGetMachineAuth: _.onGetMachineAuth,
             onShowAgreement: _.onShowAgreement,
           }),
-          [_, _] = (0, _.useState)(_.Unstarted),
+          [_, _] = (0, _.useState)(0),
           _ = "Login_RememberMeSetting",
           [_, _] = (0, _.useState)(
             _.refreshInfo?.account_name ?? _.defaultAccountName ?? "",
@@ -33687,11 +30860,7 @@
           [_, _] = (0, _.useState)(
             __webpack_require__ && !_ && "0" != localStorage?.getItem(_),
           ),
-          _ = !(
-            _.eStatus === _.Unstarted ||
-            _.eStatus === _.Starting ||
-            _.eStatus === _.InvalidCredentials
-          );
+          _ = !(0 === _.eStatus || 1 === _.eStatus || 2 === _.eStatus);
         (0, _.useEffect)(() => {
           _.refreshInfo?.login_token_id &&
             _.setTokenToRevoke(_.refreshInfo.login_token_id);
@@ -33710,9 +30879,7 @@
             _(_), localStorage?.setItem(_, _ ? "1" : "0");
           },
           onPasswordSubmit: () =>
-            _ && _
-              ? _.start(_, _, _)
-              : Promise.resolve(_._.k_EResultInvalidParam),
+            _ && _ ? _.start(_, _, _) : Promise.resolve(8),
           bInPasswordFlow: _,
           onTryOffline: () => {
             _(`Logging in offline with username ${_}`),
@@ -33758,7 +30925,7 @@
             onShowAgreement: _,
           }),
           _ = _();
-        if (null != _ && _ != _._.k_EResultOK)
+        if (null != _ && 1 != _)
           return _.createElement(
             "div",
             {
@@ -33874,15 +31041,15 @@
         }
         const _ = _.password.eStatus;
         switch (_) {
-          case _.WaitingForToken:
+          case 13:
             return _.renderLoading
               ? _.createElement(_.Fragment, null, _.renderLoading())
               : _.createElement(_, null);
-          case _.WaitingForDeviceCode:
-          case _.InvalidDeviceCode:
-          case _.WaitingForEmailCode:
-          case _.InvalidEmailCode:
-            const _ = _ === _.WaitingForDeviceCode || _ === _.InvalidDeviceCode;
+          case 5:
+          case 11:
+          case 3:
+          case 10:
+            const _ = 5 === _ || 11 === _;
             return _.createElement(_, {
               type: _ ? "mobile" : "email",
               onSubmitCode: _.password.addCode,
@@ -33892,20 +31059,20 @@
               onBack: _.password.goBack,
               onCodeHelp: _.onCodeHelp,
             });
-          case _.WaitingForDeviceConfirmation:
-          case _.WaitingForEmailConfirmation:
-            const _ = _ === _.WaitingForDeviceConfirmation;
+          case 6:
+          case 4:
+            const _ = 6 === _;
             return _.createElement(_, {
               type: _ ? "mobile" : "email",
               accountName: _.password.strAccountName,
               onUseCodeOverride: _.password.useCodeOverride,
               onCodeHelp: _.onCodeHelp,
             });
-          case _.Stopped:
+          case 16:
             return _.createElement(_, {
               reset: _.password.reset,
             });
-          case _.Failure:
+          case 15:
             return _.createElement(_, {
               reset: _.password.reset,
               failure: _.password.eFailureState,
@@ -33913,7 +31080,7 @@
               errorReference: _.password.strErrorReference,
               extendedErrorMessage: _.password.strExtendedErrorMessage,
             });
-          case _.Success:
+          case 14:
             return _.createElement(
               _,
               {
@@ -33937,37 +31104,37 @@
       function _(_) {
         if (!_.refreshInfo) return null;
         let _;
-        switch (_.refreshInfo?.reason ?? _._.k_EResultFail) {
-          case _._.k_EResultFail:
-          case _._.k_EResultInvalidProtocolVer:
+        switch (_.refreshInfo?.reason ?? 2) {
+          case 2:
+          case 7:
           default:
             _ = "#Login_RefreshReason_Generic";
             break;
-          case _._.k_EResultLoggedInElsewhere:
+          case 6:
             _ = "#Login_RefreshReason_LoggedInElsewhere";
             break;
-          case _._.k_EResultLogonSessionReplaced:
+          case 34:
             _ = "#Login_RefreshReason_LogonSessionReplaced";
             break;
-          case _._.k_EResultInvalidPassword:
+          case 5:
             _ = "#Login_RefreshReason_InvalidPassword";
             break;
-          case _._.k_EResultRevoked:
+          case 26:
             _ = "#Login_RefreshReason_Revoked";
             break;
-          case _._.k_EResultExpired:
+          case 27:
             _ = "#Login_RefreshReason_Expired";
             break;
-          case _._.k_EResultPasswordRequiredToKickSession:
+          case 49:
             _ = "#Login_RefreshReason_PasswordRequiredToKickSession";
             break;
-          case _._.k_EResultAccountDisabled:
+          case 43:
             _ = "#Login_RefreshReason_AccountDisabled";
             break;
-          case _._.k_EResultParentalControlRestricted:
+          case 69:
             _ = "#Login_RefreshReason_ParentalControlRestricted";
             break;
-          case _._.k_EResultRateLimitExceeded:
+          case 84:
             _ = "#Login_RefreshReason_RateLimitExceeded";
         }
         return _.createElement(
@@ -34028,10 +31195,8 @@
               (0, _.useCallback)(() => _.current, [_])
             );
           })(),
-          _ =
-            __webpack_require__ === _.Starting ||
-            __webpack_require__ === _.WaitingForToken,
-          _ = __webpack_require__ === _.InvalidCredentials && !_,
+          _ = 1 === __webpack_require__ || 13 === __webpack_require__,
+          _ = 2 === __webpack_require__ && !_,
           _ = _
             ? _.createElement(_, null, (0, _._)("#Login_CheckCredentials"))
             : _.createElement(_, null, " "),
@@ -34738,7 +31903,7 @@
                 _(!1), _(!1);
               });
           },
-          _ = !_ && (_ === _.InvalidDeviceCode || _ === _.InvalidEmailCode);
+          _ = !_ && (11 === _ || 10 === _);
         let _, _;
         return (
           _
@@ -35293,7 +32458,7 @@
             : void 0,
           className: _ = _().HeaderLogo,
         } = _;
-        return __webpack_require__ === _._.k_ELauncherTypeSingleApp
+        return 8 === __webpack_require__
           ? _.createElement("div", {
               className: _,
             })
@@ -35489,7 +32654,7 @@
                 {
                   autoFocus: !0,
                   transport: _,
-                  platform: _.k_EAuthTokenPlatformType_WebBrowser,
+                  platform: 2,
                   onComplete: (_) => {
                     _ == _.k_PrimaryDomainFail
                       ? _(!0)
@@ -35522,11 +32687,11 @@
                   console.error(
                     "EventReminderWidget load fail: " + (0, _._)(_).strErrorMsg,
                   ),
-                  _._.k_EResultFail
+                  2
                 ),
               )
               .then((_) => {
-                _ != _._.k_EResultOK ||
+                1 != _ ||
                   this.m_bLoadWasCancelled ||
                   this.setState({
                     bIsLoadingNotificationSettings: !1,
@@ -36203,7 +33368,7 @@
           if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
             _ = _._.GetELanguageFallback(_);
           else {
-            if (_ !== _._.k_Lang_Simplified_Chinese) return null;
+            if (6 !== _) return null;
             if (
               __webpack_require__.find(
                 (_) => _._.GetELanguageFallback(_.eLanguage) === _,
@@ -37056,7 +34221,7 @@
               _.push(
                 _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
               ),
-                _ == _._.k_Lang_Korean &&
+                4 == _ &&
                   ((_ = (0, _._)((0, _._)(_))),
                   _.push(
                     _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
@@ -37175,9 +34340,9 @@
             });
         }
         const _ = (0, _._)(_._.LANGUAGE),
-          _ = _ != _._.k_Lang_English,
+          _ = 0 != _,
           _ = new Array();
-        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; _++) {
+        for (let _ = 0; _ < 31; _++) {
           const _ = _(_, "sub_" + (0, _._)(_));
           _ &&
             _.push({
@@ -37840,7 +35005,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  _.data?.success != _._.k_EResultOK ||
+                  1 != _.data?.success ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -37857,7 +35022,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  _.data?.success != _._.k_EResultOK ||
+                  1 != _.data?.success ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -38298,7 +35463,7 @@
             : _.createElement(_, {
                 autoFocus: !0,
                 transport: _,
-                platform: _.k_EAuthTokenPlatformType_WebBrowser,
+                platform: 2,
                 onComplete: (_) => {
                   _ == _.k_PrimaryDomainFail
                     ? _(!0)
@@ -38558,12 +35723,8 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var _, _, _, _, _, _, _, _, _, _, _, _, _, _;
       function _(_) {
-        return (
-          _ == _.k_EFriendRelationshipFriend ||
-          _ == _.k_EFriendRelationshipIgnoredFriend
-        );
+        return 3 == _ || 6 == _;
       }
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -38578,1314 +35739,282 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      }),
-        (function (_) {
-          (_[(_.k_ETransportOK = 1)] = "k_ETransportOK"),
-            (_[(_.k_ETransportRequestNotSent = 2)] =
-              "k_ETransportRequestNotSent"),
-            (_[(_.k_ETransportResponseNotReceived = 3)] =
-              "k_ETransportResponseNotReceived"),
-            (_[(_.k_ETransportIncorrectParameter = 4)] =
-              "k_ETransportIncorrectParameter"),
-            (_[(_.k_ETransportMethodNotFound = 100)] =
-              "k_ETransportMethodNotFound"),
-            (_[(_.k_ETransportCallMismatch = 101)] =
-              "k_ETransportCallMismatch"),
-            (_[(_.k_ETransportSetupError = 102)] = "k_ETransportSetupError"),
-            (_[(_.k_ETransportInternalError = 103)] =
-              "k_ETransportInternalError"),
-            (_[(_.k_ETransportNotSupported = 104)] =
-              "k_ETransportNotSupported");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAppErrorNone = 0)] = "k_EAppErrorNone"),
-            (_[(_.k_EAppErrorUnspecified = 1)] = "k_EAppErrorUnspecified"),
-            (_[(_.k_EAppErrorPaused = 2)] = "k_EAppErrorPaused"),
-            (_[(_.k_EAppErrorCanceled = 3)] = "k_EAppErrorCanceled"),
-            (_[(_.k_EAppErrorSuspended = 4)] = "k_EAppErrorSuspended"),
-            (_[(_.k_EAppErrorNoSubscription = 5)] =
-              "k_EAppErrorNoSubscription"),
-            (_[(_.k_EAppErrorNoConnection = 6)] = "k_EAppErrorNoConnection"),
-            (_[(_.k_EAppErrorTimeout = 7)] = "k_EAppErrorTimeout"),
-            (_[(_.k_EAppErrorMissingKey = 8)] = "k_EAppErrorMissingKey"),
-            (_[(_.k_EAppErrorMissingConfig = 9)] = "k_EAppErrorMissingConfig"),
-            (_[(_.k_EAppErrorDiskReadFailure = 10)] =
-              "k_EAppErrorDiskReadFailure"),
-            (_[(_.k_EAppErrorDiskWriteFailure = 11)] =
-              "k_EAppErrorDiskWriteFailure"),
-            (_[(_.k_EAppErrorNotEnoughDiskSpace = 12)] =
-              "k_EAppErrorNotEnoughDiskSpace"),
-            (_[(_.k_EAppErrorCorruptGameFiles = 13)] =
-              "k_EAppErrorCorruptGameFiles"),
-            (_[(_.k_EAppErrorWaitingForNextDisk = 14)] =
-              "k_EAppErrorWaitingForNextDisk"),
-            (_[(_.k_EAppErrorInvalidInstallPath = 15)] =
-              "k_EAppErrorInvalidInstallPath"),
-            (_[(_.k_EAppErrorAppRunning = 16)] = "k_EAppErrorAppRunning"),
-            (_[(_.k_EAppErrorDependencyFailure = 17)] =
-              "k_EAppErrorDependencyFailure"),
-            (_[(_.k_EAppErrorNotInstalled = 18)] = "k_EAppErrorNotInstalled"),
-            (_[(_.k_EAppErrorUpdateRequired = 19)] =
-              "k_EAppErrorUpdateRequired"),
-            (_[(_.k_EAppErrorBusy = 20)] = "k_EAppErrorBusy"),
-            (_[(_.k_EAppErrorNoDownloadSources = 21)] =
-              "k_EAppErrorNoDownloadSources"),
-            (_[(_.k_EAppErrorInvalidAppConfig = 22)] =
-              "k_EAppErrorInvalidAppConfig"),
-            (_[(_.k_EAppErrorInvalidDepotConfig = 23)] =
-              "k_EAppErrorInvalidDepotConfig"),
-            (_[(_.k_EAppErrorMissingManifest = 24)] =
-              "k_EAppErrorMissingManifest"),
-            (_[(_.k_EAppErrorNotReleased = 25)] = "k_EAppErrorNotReleased"),
-            (_[(_.k_EAppErrorRegionRestricted = 26)] =
-              "k_EAppErrorRegionRestricted"),
-            (_[(_.k_EAppErrorCorruptDepotCache = 27)] =
-              "k_EAppErrorCorruptDepotCache"),
-            (_[(_.k_EAppErrorMissingExecutable = 28)] =
-              "k_EAppErrorMissingExecutable"),
-            (_[(_.k_EAppErrorInvalidPlatform = 29)] =
-              "k_EAppErrorInvalidPlatform"),
-            (_[(_.k_EAppErrorInvalidFileSystem = 30)] =
-              "k_EAppErrorInvalidFileSystem"),
-            (_[(_.k_EAppErrorCorruptUpdateFiles = 31)] =
-              "k_EAppErrorCorruptUpdateFiles"),
-            (_[(_.k_EAppErrorDownloadDisabled = 32)] =
-              "k_EAppErrorDownloadDisabled"),
-            (_[(_.k_EAppErrorSharedLibraryLocked = 33)] =
-              "k_EAppErrorSharedLibraryLocked"),
-            (_[(_.k_EAppErrorPendingLicense = 34)] =
-              "k_EAppErrorPendingLicense"),
-            (_[(_.k_EAppErrorOtherSessionPlaying = 35)] =
-              "k_EAppErrorOtherSessionPlaying"),
-            (_[(_.k_EAppErrorCorruptDownload = 36)] =
-              "k_EAppErrorCorruptDownload"),
-            (_[(_.k_EAppErrorCorruptDisk = 37)] = "k_EAppErrorCorruptDisk"),
-            (_[(_.k_EAppErrorFilePermissions = 38)] =
-              "k_EAppErrorFilePermissions"),
-            (_[(_.k_EAppErrorFileLocked = 39)] = "k_EAppErrorFileLocked"),
-            (_[(_.k_EAppErrorMissingContent = 40)] =
-              "k_EAppErrorMissingContent"),
-            (_[(_.k_EAppErrorRequires64BitOS = 41)] =
-              "k_EAppErrorRequires64BitOS"),
-            (_[(_.k_EAppErrorMissingUpdateFiles = 42)] =
-              "k_EAppErrorMissingUpdateFiles"),
-            (_[(_.k_EAppErrorNotEnoughDiskQuota = 43)] =
-              "k_EAppErrorNotEnoughDiskQuota"),
-            (_[(_.k_EAppErrorLockedSiteLicense = 44)] =
-              "k_EAppErrorLockedSiteLicense"),
-            (_[(_.k_EAppErrorParentalBlocked = 45)] =
-              "k_EAppErrorParentalBlocked"),
-            (_[(_.k_EAppErrorSpawnProcess = 46)] = "k_EAppErrorSpawnProcess"),
-            (_[(_.k_EAppErrorClientOutOfDate = 47)] =
-              "k_EAppErrorClientOutOfDate"),
-            (_[(_.k_EAppErrorPlaytimeExceeded = 48)] =
-              "k_EAppErrorPlaytimeExceeded"),
-            (_[(_.k_EAppErrorCorruptFileSignature = 49)] =
-              "k_EAppErrorCorruptFileSignature"),
-            (_[(_.k_EAppErrorMissingGameFiles = 50)] =
-              "k_EAppErrorMissingGameFiles"),
-            (_[(_.k_EAppErrorCompatToolFailed = 51)] =
-              "k_EAppErrorCompatToolFailed"),
-            (_[(_.k_EAppErrorRemovedInstallPath = 52)] =
-              "k_EAppErrorRemovedInstallPath"),
-            (_[(_.k_EAppErrorInvalidBackupPath = 53)] =
-              "k_EAppErrorInvalidBackupPath"),
-            (_[(_.k_EAppErrorInvalidPasscode = 54)] =
-              "k_EAppErrorInvalidPasscode"),
-            (_[(_.k_EAppErrorSelfUpdating = 55)] = "k_EAppErrorSelfUpdating"),
-            (_[(_.k_EAppErrorParentalPlaytimeExceeded = 56)] =
-              "k_EAppErrorParentalPlaytimeExceeded"),
-            (_[(_.k_EAppErrorBlockedArguments = 57)] =
-              "k_EAppErrorBlockedArguments"),
-            (_[(_.k_EAppErrorMax = 58)] = "k_EAppErrorMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAvatarFriendStateOffline = 0)] =
-            "k_EAvatarFriendStateOffline"),
-            (_[(_.k_EAvatarFriendStateOnline = 1)] =
-              "k_EAvatarFriendStateOnline"),
-            (_[(_.k_EAvatarFriendStateInGame = 2)] =
-              "k_EAvatarFriendStateInGame");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EScreenshot = 0)] = "k_EScreenshot"),
-            (_[(_.k_ETradingCard = 1)] = "k_ETradingCard"),
-            (_[(_.k_EAchievement = 2)] = "k_EAchievement"),
-            (_[(_.k_EClip = 3)] = "k_EClip"),
-            (_[(_.k_eHighlights = 4)] = "k_eHighlights");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EPersonaStateOffline = 0)] = "k_EPersonaStateOffline"),
-            (_[(_.k_EPersonaStateOnline = 1)] = "k_EPersonaStateOnline"),
-            (_[(_.k_EPersonaStateBusy = 2)] = "k_EPersonaStateBusy"),
-            (_[(_.k_EPersonaStateAway = 3)] = "k_EPersonaStateAway"),
-            (_[(_.k_EPersonaStateSnooze = 4)] = "k_EPersonaStateSnooze"),
-            (_[(_.k_EPersonaStateLookingToTrade = 5)] =
-              "k_EPersonaStateLookingToTrade"),
-            (_[(_.k_EPersonaStateLookingToPlay = 6)] =
-              "k_EPersonaStateLookingToPlay"),
-            (_[(_.k_EPersonaStateInvisible = 7)] = "k_EPersonaStateInvisible"),
-            (_[(_.k_EPersonaStateMax = 8)] = "k_EPersonaStateMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EWorkshopFileTypeInvalid = -1)] =
-            "k_EWorkshopFileTypeInvalid"),
-            (_[(_.k_EWorkshopFileTypeCommunity = 0)] =
-              "k_EWorkshopFileTypeCommunity"),
-            (_[(_.k_EWorkshopFileTypeMicrotransaction = 1)] =
-              "k_EWorkshopFileTypeMicrotransaction"),
-            (_[(_.k_EWorkshopFileTypeCollection = 2)] =
-              "k_EWorkshopFileTypeCollection"),
-            (_[(_.k_EWorkshopFileTypeArt = 3)] = "k_EWorkshopFileTypeArt"),
-            (_[(_.k_EWorkshopFileTypeVideo = 4)] = "k_EWorkshopFileTypeVideo"),
-            (_[(_.k_EWorkshopFileTypeScreenshot = 5)] =
-              "k_EWorkshopFileTypeScreenshot"),
-            (_[(_.k_EWorkshopFileTypeGame = 6)] = "k_EWorkshopFileTypeGame"),
-            (_[(_.k_EWorkshopFileTypeSoftware = 7)] =
-              "k_EWorkshopFileTypeSoftware"),
-            (_[(_.k_EWorkshopFileTypeConcept = 8)] =
-              "k_EWorkshopFileTypeConcept"),
-            (_[(_.k_EWorkshopFileTypeWebGuide = 9)] =
-              "k_EWorkshopFileTypeWebGuide"),
-            (_[(_.k_EWorkshopFileTypeIntegratedGuide = 10)] =
-              "k_EWorkshopFileTypeIntegratedGuide"),
-            (_[(_.k_EWorkshopFileTypeMerch = 11)] = "k_EWorkshopFileTypeMerch"),
-            (_[(_.k_EWorkshopFileTypeControllerBinding = 12)] =
-              "k_EWorkshopFileTypeControllerBinding"),
-            (_[(_.k_EWorkshopFileTypeSteamworksAccessInvite = 13)] =
-              "k_EWorkshopFileTypeSteamworksAccessInvite"),
-            (_[(_.k_EWorkshopFileTypeSteamVideo = 14)] =
-              "k_EWorkshopFileTypeSteamVideo"),
-            (_[(_.k_EWorkshopFileTypeGameManagedItem = 15)] =
-              "k_EWorkshopFileTypeGameManagedItem"),
-            (_[(_.k_EWorkshopFileTypeFirst = 0)] = "k_EWorkshopFileTypeFirst"),
-            (_[(_.k_EWorkshopFileTypeMax = 16)] = "k_EWorkshopFileTypeMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ELoginState_None = 0)] = "k_ELoginState_None"),
-            (_[(_.k_ELoginState_WelcomeDialog = 1)] =
-              "k_ELoginState_WelcomeDialog"),
-            (_[(_.k_ELoginState_WaitingForCreateUser = 2)] =
-              "k_ELoginState_WaitingForCreateUser"),
-            (_[(_.k_ELoginState_WaitingForCredentials = 3)] =
-              "k_ELoginState_WaitingForCredentials"),
-            (_[(_.k_ELoginState_WaitingForNetwork = 4)] =
-              "k_ELoginState_WaitingForNetwork"),
-            (_[(_.k_ELoginState_WaitingForServerResponse = 5)] =
-              "k_ELoginState_WaitingForServerResponse"),
-            (_[(_.k_ELoginState_WaitingForLibraryReady = 6)] =
-              "k_ELoginState_WaitingForLibraryReady"),
-            (_[(_.k_ELoginState_Success = 7)] = "k_ELoginState_Success"),
-            (_[(_.k_ELoginState_Quit = 8)] = "k_ELoginState_Quit");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProgressType_None = 0)] = "k_EProgressType_None"),
-            (_[(_.k_EProgressType_UpdatingSteamInformation = 1)] =
-              "k_EProgressType_UpdatingSteamInformation"),
-            (_[(_.k_EProgressType_UpdatingUserConfiguration = 2)] =
-              "k_EProgressType_UpdatingUserConfiguration"),
-            (_[(_.k_EProgressType_LoggingIn = 3)] =
-              "k_EProgressType_LoggingIn");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EShutdownStep_None = 0)] = "k_EShutdownStep_None"),
-            (_[(_.k_EShutdownStep_Start = 1)] = "k_EShutdownStep_Start"),
-            (_[(_.k_EShutdownStep_WaitingForGames = 2)] =
-              "k_EShutdownStep_WaitingForGames"),
-            (_[(_.k_EShutdownStep_SynchronizingCloud = 3)] =
-              "k_EShutdownStep_SynchronizingCloud"),
-            (_[(_.k_EShutdownStep_FinishingDownload = 4)] =
-              "k_EShutdownStep_FinishingDownload"),
-            (_[(_.k_EShutdownStep_StoppingDownload = 5)] =
-              "k_EShutdownStep_StoppingDownload"),
-            (_[(_.k_EShutdownStep_StoppingServiceApps = 6)] =
-              "k_EShutdownStep_StoppingServiceApps"),
-            (_[(_.k_EShutdownStep_LogginOff = 7)] =
-              "k_EShutdownStep_LogginOff"),
-            (_[(_.k_EShutdownStep_Done = 8)] = "k_EShutdownStep_Done");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EIteratorTypeNone = 0)] = "k_EIteratorTypeNone"),
-            (_[(_.k_EIteratorTypeFolder = 1)] = "k_EIteratorTypeFolder"),
-            (_[(_.k_EIteratorTypeExecutables = 2)] =
-              "k_EIteratorTypeExecutables"),
-            (_[(_.k_EIteratorTypeImages = 3)] = "k_EIteratorTypeImages");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EUniverseInvalid = 0)] = "k_EUniverseInvalid"),
-            (_[(_.k_EUniversePublic = 1)] = "k_EUniversePublic"),
-            (_[(_.k_EUniverseBeta = 2)] = "k_EUniverseBeta"),
-            (_[(_.k_EUniverseInternal = 3)] = "k_EUniverseInternal"),
-            (_[(_.k_EUniverseDev = 4)] = "k_EUniverseDev"),
-            (_[(_.k_EUniverseMax = 5)] = "k_EUniverseMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAccountTypeInvalid = 0)] = "k_EAccountTypeInvalid"),
-            (_[(_.k_EAccountTypeIndividual = 1)] = "k_EAccountTypeIndividual"),
-            (_[(_.k_EAccountTypeMultiseat = 2)] = "k_EAccountTypeMultiseat"),
-            (_[(_.k_EAccountTypeGameServer = 3)] = "k_EAccountTypeGameServer"),
-            (_[(_.k_EAccountTypeAnonGameServer = 4)] =
-              "k_EAccountTypeAnonGameServer"),
-            (_[(_.k_EAccountTypePending = 5)] = "k_EAccountTypePending"),
-            (_[(_.k_EAccountTypeContentServer = 6)] =
-              "k_EAccountTypeContentServer"),
-            (_[(_.k_EAccountTypeClan = 7)] = "k_EAccountTypeClan"),
-            (_[(_.k_EAccountTypeChat = 8)] = "k_EAccountTypeChat"),
-            (_[(_.k_EAccountTypeConsoleUser = 9)] =
-              "k_EAccountTypeConsoleUser"),
-            (_[(_.k_EAccountTypeAnonUser = 10)] = "k_EAccountTypeAnonUser"),
-            (_[(_.k_EAccountTypeMax = 11)] = "k_EAccountTypeMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EFriendRelationshipNone = 0)] = "k_EFriendRelationshipNone"),
-            (_[(_.k_EFriendRelationshipBlocked = 1)] =
-              "k_EFriendRelationshipBlocked"),
-            (_[(_.k_EFriendRelationshipRequestRecipient = 2)] =
-              "k_EFriendRelationshipRequestRecipient"),
-            (_[(_.k_EFriendRelationshipFriend = 3)] =
-              "k_EFriendRelationshipFriend"),
-            (_[(_.k_EFriendRelationshipRequestInitiator = 4)] =
-              "k_EFriendRelationshipRequestInitiator"),
-            (_[(_.k_EFriendRelationshipIgnored = 5)] =
-              "k_EFriendRelationshipIgnored"),
-            (_[(_.k_EFriendRelationshipIgnoredFriend = 6)] =
-              "k_EFriendRelationshipIgnoredFriend"),
-            (_[(_.k_EFriendRelationshipSuggested_DEPRECATED = 7)] =
-              "k_EFriendRelationshipSuggested_DEPRECATED"),
-            (_[(_.k_EFriendRelationshipMax = 8)] = "k_EFriendRelationshipMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EClanRelationshipNone = 0)] = "k_EClanRelationshipNone"),
-            (_[(_.k_EClanRelationshipBlocked = 1)] =
-              "k_EClanRelationshipBlocked"),
-            (_[(_.k_EClanRelationshipInvited = 2)] =
-              "k_EClanRelationshipInvited"),
-            (_[(_.k_EClanRelationshipMember = 3)] =
-              "k_EClanRelationshipMember"),
-            (_[(_.k_EClanRelationshipKicked = 4)] =
-              "k_EClanRelationshipKicked"),
-            (_[(_.k_EClanRelationshipKickAcknowledged = 5)] =
-              "k_EClanRelationshipKickAcknowledged"),
-            (_[(_.k_EClanRelationshipPendingApproval = 6)] =
-              "k_EClanRelationshipPendingApproval"),
-            (_[(_.k_EClanRelationshipRequestDenied = 7)] =
-              "k_EClanRelationshipRequestDenied");
-        })(_ || (_ = {}));
+      });
       const _ = 1,
         _ = 4;
-      var _, _, _;
-      !(function (_) {
-        (_[(_.k_EChatEntryTypeInvalid = 0)] = "k_EChatEntryTypeInvalid"),
-          (_[(_.k_EChatEntryTypeChatMsg = 1)] = "k_EChatEntryTypeChatMsg"),
-          (_[(_.k_EChatEntryTypeTyping = 2)] = "k_EChatEntryTypeTyping"),
-          (_[(_.k_EChatEntryTypeInviteGame = 3)] =
-            "k_EChatEntryTypeInviteGame"),
-          (_[(_.k_EChatEntryTypeEmote = 4)] = "k_EChatEntryTypeEmote"),
-          (_[(_.k_EChatEntryTypeLeftConversation = 6)] =
-            "k_EChatEntryTypeLeftConversation"),
-          (_[(_.k_EChatEntryTypeEntered = 7)] = "k_EChatEntryTypeEntered"),
-          (_[(_.k_EChatEntryTypeWasKicked = 8)] = "k_EChatEntryTypeWasKicked"),
-          (_[(_.k_EChatEntryTypeWasBanned = 9)] = "k_EChatEntryTypeWasBanned"),
-          (_[(_.k_EChatEntryTypeDisconnected = 10)] =
-            "k_EChatEntryTypeDisconnected"),
-          (_[(_.k_EChatEntryTypeHistoricalChat = 11)] =
-            "k_EChatEntryTypeHistoricalChat"),
-          (_[(_.k_EChatEntryTypeLinkBlocked = 14)] =
-            "k_EChatEntryTypeLinkBlocked");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EEconTradeResponse_Accepted = 0)] =
-            "k_EEconTradeResponse_Accepted"),
-            (_[(_.k_EEconTradeResponse_Declined = 1)] =
-              "k_EEconTradeResponse_Declined"),
-            (_[(_.k_EEconTradeResponse_TradeBanned_Initiator = 2)] =
-              "k_EEconTradeResponse_TradeBanned_Initiator"),
-            (_[(_.k_EEconTradeResponse_TradeBanned_Target = 3)] =
-              "k_EEconTradeResponse_TradeBanned_Target"),
-            (_[(_.k_EEconTradeResponse_Target_Already_Trading = 4)] =
-              "k_EEconTradeResponse_Target_Already_Trading"),
-            (_[(_.k_EEconTradeResponse_Disabled = 5)] =
-              "k_EEconTradeResponse_Disabled"),
-            (_[(_.k_EEconTradeResponse_NotLoggedIn = 6)] =
-              "k_EEconTradeResponse_NotLoggedIn"),
-            (_[(_.k_EEconTradeResponse_Cancel = 7)] =
-              "k_EEconTradeResponse_Cancel"),
-            (_[(_.k_EEconTradeResponse_TooSoon = 8)] =
-              "k_EEconTradeResponse_TooSoon"),
-            (_[(_.k_EEconTradeResponse_TooSoonPenalty = 9)] =
-              "k_EEconTradeResponse_TooSoonPenalty"),
-            (_[(_.k_EEconTradeResponse_ConnectionFailed = 10)] =
-              "k_EEconTradeResponse_ConnectionFailed"),
-            (_[(_.k_EEconTradeResponse_Already_Trading = 11)] =
-              "k_EEconTradeResponse_Already_Trading"),
-            (_[(_.k_EEconTradeResponse_Already_Has_Trade_Request = 12)] =
-              "k_EEconTradeResponse_Already_Has_Trade_Request"),
-            (_[(_.k_EEconTradeResponse_NoResponse = 13)] =
-              "k_EEconTradeResponse_NoResponse"),
-            (_[(_.k_EEconTradeResponse_CyberCafe_Initiator = 14)] =
-              "k_EEconTradeResponse_CyberCafe_Initiator"),
-            (_[(_.k_EEconTradeResponse_CyberCafe_Target = 15)] =
-              "k_EEconTradeResponse_CyberCafe_Target"),
-            (_[(_.k_EEconTradeResponse_SchoolLab_Initiator = 16)] =
-              "k_EEconTradeResponse_SchoolLab_Initiator"),
-            (_[(_.k_EEconTradeResponse_SchoolLab_Target = 17)] =
-              "k_EEconTradeResponse_SchoolLab_Target"),
-            (_[(_.k_EEconTradeResponse_Initiator_Blocked_Target = 18)] =
-              "k_EEconTradeResponse_Initiator_Blocked_Target"),
-            (_[(_.k_EEconTradeResponse_Initiator_Needs_Verified_Email = 20)] =
-              "k_EEconTradeResponse_Initiator_Needs_Verified_Email"),
-            (_[(_.k_EEconTradeResponse_Initiator_Needs_Steam_Guard = 21)] =
-              "k_EEconTradeResponse_Initiator_Needs_Steam_Guard"),
-            (_[(_.k_EEconTradeResponse_Target_Account_Cannot_Trade = 22)] =
-              "k_EEconTradeResponse_Target_Account_Cannot_Trade"),
-            (_[(_.k_EEconTradeResponse_Initiator_Steam_Guard_Duration = 23)] =
-              "k_EEconTradeResponse_Initiator_Steam_Guard_Duration"),
-            (_[(_.k_EEconTradeResponse_Initiator_Recent_Password_Reset = 24)] =
-              "k_EEconTradeResponse_Initiator_Recent_Password_Reset"),
-            (_[(_.k_EEconTradeResponse_Initiator_Using_New_Device = 25)] =
-              "k_EEconTradeResponse_Initiator_Using_New_Device"),
-            (_[(_.k_EEconTradeResponse_Initiator_Sent_Invalid_Cookie = 26)] =
-              "k_EEconTradeResponse_Initiator_Sent_Invalid_Cookie"),
-            (_[(_.k_EEconTradeResponse_NeedsEmailConfirmation = 27)] =
-              "k_EEconTradeResponse_NeedsEmailConfirmation"),
-            (_[(_.k_EEconTradeResponse_Initiator_Recent_Email_Change = 28)] =
-              "k_EEconTradeResponse_Initiator_Recent_Email_Change"),
-            (_[(_.k_EEconTradeResponse_NeedsMobileConfirmation = 29)] =
-              "k_EEconTradeResponse_NeedsMobileConfirmation"),
-            (_[
-              (_.k_EEconTradeResponse_TradingHoldForClearedTradeOffers_Initiator = 30)
-            ] =
-              "k_EEconTradeResponse_TradingHoldForClearedTradeOffers_Initiator"),
-            (_[(_.k_EEconTradeResponse_WouldExceedMaxAssetCount = 31)] =
-              "k_EEconTradeResponse_WouldExceedMaxAssetCount"),
-            (_[(_.k_EEconTradeResponse_DisabledInRegion = 32)] =
-              "k_EEconTradeResponse_DisabledInRegion"),
-            (_[(_.k_EEconTradeResponse_DisabledInPartnerRegion = 33)] =
-              "k_EEconTradeResponse_DisabledInPartnerRegion"),
-            (_[(_.k_EEconTradeResponse_OKToDeliver = 50)] =
-              "k_EEconTradeResponse_OKToDeliver");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EServerTypeOther_Util = -2)] = "k_EServerTypeOther_Util"),
-            (_[(_.k_EServerTypeOther_Client = -3)] =
-              "k_EServerTypeOther_Client"),
-            (_[(_.k_EServerTypeOther_CServer = -4)] =
-              "k_EServerTypeOther_CServer"),
-            (_[(_.k_EServerTypeOther_CEconBase = -5)] =
-              "k_EServerTypeOther_CEconBase"),
-            (_[(_.k_EServerTypeInvalid = -1)] = "k_EServerTypeInvalid"),
-            (_[(_.k_EServerTypeShell = 0)] = "k_EServerTypeShell"),
-            (_[(_.k_EServerTypeGM = 1)] = "k_EServerTypeGM"),
-            (_[(_.k_EServerTypeAM = 3)] = "k_EServerTypeAM"),
-            (_[(_.k_EServerTypeBS = 4)] = "k_EServerTypeBS"),
-            (_[(_.k_EServerTypeVS = 5)] = "k_EServerTypeVS"),
-            (_[(_.k_EServerTypeATS = 6)] = "k_EServerTypeATS"),
-            (_[(_.k_EServerTypeCM = 7)] = "k_EServerTypeCM"),
-            (_[(_.k_EServerTypeFBS = 8)] = "k_EServerTypeFBS"),
-            (_[(_.k_EServerTypeBoxMonitor = 9)] = "k_EServerTypeBoxMonitor"),
-            (_[(_.k_EServerTypeSS = 10)] = "k_EServerTypeSS"),
-            (_[(_.k_EServerTypeDRMS = 11)] = "k_EServerTypeDRMS"),
-            (_[(_.k_EServerTypeConsole = 13)] = "k_EServerTypeConsole"),
-            (_[(_.k_EServerTypePICS = 14)] = "k_EServerTypePICS"),
-            (_[(_.k_EServerTypeContentStats = 16)] =
-              "k_EServerTypeContentStats"),
-            (_[(_.k_EServerTypeDP = 17)] = "k_EServerTypeDP"),
-            (_[(_.k_EServerTypeWG = 18)] = "k_EServerTypeWG"),
-            (_[(_.k_EServerTypeSM = 19)] = "k_EServerTypeSM"),
-            (_[(_.k_EServerTypeSLC = 20)] = "k_EServerTypeSLC"),
-            (_[(_.k_EServerTypeUFS = 21)] = "k_EServerTypeUFS"),
-            (_[(_.k_EServerTypeCommunity = 24)] = "k_EServerTypeCommunity"),
-            (_[(_.k_EServerTypeP2PRelayOBSOLETE = 25)] =
-              "k_EServerTypeP2PRelayOBSOLETE"),
-            (_[(_.k_EServerTypeAppInformation = 26)] =
-              "k_EServerTypeAppInformation"),
-            (_[(_.k_EServerTypeSpare = 27)] = "k_EServerTypeSpare"),
-            (_[(_.k_EServerTypeFTS = 28)] = "k_EServerTypeFTS"),
-            (_[(_.k_EServerTypeSiteLicense = 29)] = "k_EServerTypeSiteLicense"),
-            (_[(_.k_EServerTypePS = 30)] = "k_EServerTypePS"),
-            (_[(_.k_EServerTypeIS = 31)] = "k_EServerTypeIS"),
-            (_[(_.k_EServerTypeCCS = 32)] = "k_EServerTypeCCS"),
-            (_[(_.k_EServerTypeDFS = 33)] = "k_EServerTypeDFS"),
-            (_[(_.k_EServerTypeLBS = 34)] = "k_EServerTypeLBS"),
-            (_[(_.k_EServerTypeMDS = 35)] = "k_EServerTypeMDS"),
-            (_[(_.k_EServerTypeCS = 36)] = "k_EServerTypeCS"),
-            (_[(_.k_EServerTypeGC = 37)] = "k_EServerTypeGC"),
-            (_[(_.k_EServerTypeNS = 38)] = "k_EServerTypeNS"),
-            (_[(_.k_EServerTypeOGS = 39)] = "k_EServerTypeOGS"),
-            (_[(_.k_EServerTypeWebAPI = 40)] = "k_EServerTypeWebAPI"),
-            (_[(_.k_EServerTypeUDS = 41)] = "k_EServerTypeUDS"),
-            (_[(_.k_EServerTypeMMS = 42)] = "k_EServerTypeMMS"),
-            (_[(_.k_EServerTypeGMS = 43)] = "k_EServerTypeGMS"),
-            (_[(_.k_EServerTypeKGS = 44)] = "k_EServerTypeKGS"),
-            (_[(_.k_EServerTypeUCM = 45)] = "k_EServerTypeUCM"),
-            (_[(_.k_EServerTypeRM = 46)] = "k_EServerTypeRM"),
-            (_[(_.k_EServerTypeFS = 47)] = "k_EServerTypeFS"),
-            (_[(_.k_EServerTypeEcon = 48)] = "k_EServerTypeEcon"),
-            (_[(_.k_EServerTypeBackpack = 49)] = "k_EServerTypeBackpack"),
-            (_[(_.k_EServerTypeUGS = 50)] = "k_EServerTypeUGS"),
-            (_[(_.k_EServerTypeStoreFeature = 51)] =
-              "k_EServerTypeStoreFeature"),
-            (_[(_.k_EServerTypeMoneyStats = 52)] = "k_EServerTypeMoneyStats"),
-            (_[(_.k_EServerTypeCRE = 53)] = "k_EServerTypeCRE"),
-            (_[(_.k_EServerTypeUMQ = 54)] = "k_EServerTypeUMQ"),
-            (_[(_.k_EServerTypeWorkshop = 55)] = "k_EServerTypeWorkshop"),
-            (_[(_.k_EServerTypeBRP = 56)] = "k_EServerTypeBRP"),
-            (_[(_.k_EServerTypeGCH = 57)] = "k_EServerTypeGCH"),
-            (_[(_.k_EServerTypeMPAS = 58)] = "k_EServerTypeMPAS"),
-            (_[(_.k_EServerTypeTrade = 59)] = "k_EServerTypeTrade"),
-            (_[(_.k_EServerTypeSecrets = 60)] = "k_EServerTypeSecrets"),
-            (_[(_.k_EServerTypeLogsink = 61)] = "k_EServerTypeLogsink"),
-            (_[(_.k_EServerTypeMarket = 62)] = "k_EServerTypeMarket"),
-            (_[(_.k_EServerTypeQuest = 63)] = "k_EServerTypeQuest"),
-            (_[(_.k_EServerTypeWDS = 64)] = "k_EServerTypeWDS"),
-            (_[(_.k_EServerTypeACS = 65)] = "k_EServerTypeACS"),
-            (_[(_.k_EServerTypePNP = 66)] = "k_EServerTypePNP"),
-            (_[(_.k_EServerTypeTaxForm = 67)] = "k_EServerTypeTaxForm"),
-            (_[(_.k_EServerTypeExternalMonitor = 68)] =
-              "k_EServerTypeExternalMonitor"),
-            (_[(_.k_EServerTypeParental = 69)] = "k_EServerTypeParental"),
-            (_[(_.k_EServerTypePartnerUpload = 70)] =
-              "k_EServerTypePartnerUpload"),
-            (_[(_.k_EServerTypePartner = 71)] = "k_EServerTypePartner"),
-            (_[(_.k_EServerTypeES = 72)] = "k_EServerTypeES"),
-            (_[(_.k_EServerTypeDepotWebContent = 73)] =
-              "k_EServerTypeDepotWebContent"),
-            (_[(_.k_EServerTypeExternalConfig = 74)] =
-              "k_EServerTypeExternalConfig"),
-            (_[(_.k_EServerTypeGameNotifications = 75)] =
-              "k_EServerTypeGameNotifications"),
-            (_[(_.k_EServerTypeMarketRepl = 76)] = "k_EServerTypeMarketRepl"),
-            (_[(_.k_EServerTypeMarketSearch = 77)] =
-              "k_EServerTypeMarketSearch"),
-            (_[(_.k_EServerTypeLocalization = 78)] =
-              "k_EServerTypeLocalization"),
-            (_[(_.k_EServerTypeSteam2Emulator = 79)] =
-              "k_EServerTypeSteam2Emulator"),
-            (_[(_.k_EServerTypePublicTest = 80)] = "k_EServerTypePublicTest"),
-            (_[(_.k_EServerTypeSolrMgr = 81)] = "k_EServerTypeSolrMgr"),
-            (_[(_.k_EServerTypeBroadcastIngester = 82)] =
-              "k_EServerTypeBroadcastIngester"),
-            (_[(_.k_EServerTypeBroadcastDirectory = 83)] =
-              "k_EServerTypeBroadcastDirectory"),
-            (_[(_.k_EServerTypeVideoManager = 84)] =
-              "k_EServerTypeVideoManager"),
-            (_[(_.k_EServerTypeTradeOffer = 85)] = "k_EServerTypeTradeOffer"),
-            (_[(_.k_EServerTypeBroadcastChat = 86)] =
-              "k_EServerTypeBroadcastChat"),
-            (_[(_.k_EServerTypePhone = 87)] = "k_EServerTypePhone"),
-            (_[(_.k_EServerTypeAccountScore = 88)] =
-              "k_EServerTypeAccountScore"),
-            (_[(_.k_EServerTypeSupport = 89)] = "k_EServerTypeSupport"),
-            (_[(_.k_EServerTypeLogRequest = 90)] = "k_EServerTypeLogRequest"),
-            (_[(_.k_EServerTypeLogWorker = 91)] = "k_EServerTypeLogWorker"),
-            (_[(_.k_EServerTypeEmailDelivery = 92)] =
-              "k_EServerTypeEmailDelivery"),
-            (_[(_.k_EServerTypeInventoryManagement = 93)] =
-              "k_EServerTypeInventoryManagement"),
-            (_[(_.k_EServerTypeAuth = 94)] = "k_EServerTypeAuth"),
-            (_[(_.k_EServerTypeStoreCatalog = 95)] =
-              "k_EServerTypeStoreCatalog"),
-            (_[(_.k_EServerTypeHLTVRelay = 96)] = "k_EServerTypeHLTVRelay"),
-            (_[(_.k_EServerTypeIDLS = 97)] = "k_EServerTypeIDLS"),
-            (_[(_.k_EServerTypePerf = 98)] = "k_EServerTypePerf"),
-            (_[(_.k_EServerTypeItemInventory = 99)] =
-              "k_EServerTypeItemInventory"),
-            (_[(_.k_EServerTypeWatchdog = 100)] = "k_EServerTypeWatchdog"),
-            (_[(_.k_EServerTypeAccountHistory = 101)] =
-              "k_EServerTypeAccountHistory"),
-            (_[(_.k_EServerTypeChat = 102)] = "k_EServerTypeChat"),
-            (_[(_.k_EServerTypeShader = 103)] = "k_EServerTypeShader"),
-            (_[(_.k_EServerTypeAccountHardware = 104)] =
-              "k_EServerTypeAccountHardware"),
-            (_[(_.k_EServerTypeWebRTC = 105)] = "k_EServerTypeWebRTC"),
-            (_[(_.k_EServerTypeGiveaway = 106)] = "k_EServerTypeGiveaway"),
-            (_[(_.k_EServerTypeChatRoom = 107)] = "k_EServerTypeChatRoom"),
-            (_[(_.k_EServerTypeVoiceChat = 108)] = "k_EServerTypeVoiceChat"),
-            (_[(_.k_EServerTypeQMS = 109)] = "k_EServerTypeQMS"),
-            (_[(_.k_EServerTypeTrust = 110)] = "k_EServerTypeTrust"),
-            (_[(_.k_EServerTypeTimeMachine = 111)] =
-              "k_EServerTypeTimeMachine"),
-            (_[(_.k_EServerTypeVACDBMaster = 112)] =
-              "k_EServerTypeVACDBMaster"),
-            (_[(_.k_EServerTypeContentServerConfig = 113)] =
-              "k_EServerTypeContentServerConfig"),
-            (_[(_.k_EServerTypeMinigame = 114)] = "k_EServerTypeMinigame"),
-            (_[(_.k_EServerTypeMLTrain = 115)] = "k_EServerTypeMLTrain"),
-            (_[(_.k_EServerTypeVACTest = 116)] = "k_EServerTypeVACTest"),
-            (_[(_.k_EServerTypeTaxService = 117)] = "k_EServerTypeTaxService"),
-            (_[(_.k_EServerTypeMLInference = 118)] =
-              "k_EServerTypeMLInference"),
-            (_[(_.k_EServerTypeUGSAggregate = 119)] =
-              "k_EServerTypeUGSAggregate"),
-            (_[(_.k_EServerTypeTURN = 120)] = "k_EServerTypeTURN"),
-            (_[(_.k_EServerTypeRemoteClient = 121)] =
-              "k_EServerTypeRemoteClient"),
-            (_[(_.k_EServerTypeBroadcastOrigin = 122)] =
-              "k_EServerTypeBroadcastOrigin"),
-            (_[(_.k_EServerTypeBroadcastChannel = 123)] =
-              "k_EServerTypeBroadcastChannel"),
-            (_[(_.k_EServerTypeSteamAR = 124)] = "k_EServerTypeSteamAR"),
-            (_[(_.k_EServerTypeChina = 125)] = "k_EServerTypeChina"),
-            (_[(_.k_EServerTypeCrashDump = 126)] = "k_EServerTypeCrashDump"),
-            (_[(_.k_EServerTypeMax = 127)] = "k_EServerTypeMax");
-        })(_ || (_ = {}));
       const _ = "18446744073709551615";
-      var _;
       function _(_, _ = "en") {
         switch (_) {
-          case _.k_Lang_English:
+          case 0:
             return "en";
-          case _.k_Lang_German:
+          case 1:
             return "de";
-          case _.k_Lang_French:
+          case 2:
             return "fr";
-          case _.k_Lang_Italian:
+          case 3:
             return "it";
-          case _.k_Lang_Korean:
+          case 4:
             return "ko";
-          case _.k_Lang_Spanish:
+          case 5:
             return "es";
-          case _.k_Lang_Simplified_Chinese:
+          case 6:
             return "zh-cn";
-          case _.k_Lang_Traditional_Chinese:
+          case 7:
             return "zh-tw";
-          case _.k_Lang_Russian:
+          case 8:
             return "ru";
-          case _.k_Lang_Thai:
+          case 9:
             return "th";
-          case _.k_Lang_Japanese:
+          case 10:
             return "ja";
-          case _.k_Lang_Portuguese:
+          case 11:
             return "pt";
-          case _.k_Lang_Polish:
+          case 12:
             return "pl";
-          case _.k_Lang_Danish:
+          case 13:
             return "da";
-          case _.k_Lang_Dutch:
+          case 14:
             return "nl";
-          case _.k_Lang_Finnish:
+          case 15:
             return "fi";
-          case _.k_Lang_Norwegian:
+          case 16:
             return "no";
-          case _.k_Lang_Swedish:
+          case 17:
             return "sv";
-          case _.k_Lang_Hungarian:
+          case 18:
             return "hu";
-          case _.k_Lang_Czech:
+          case 19:
             return "cs";
-          case _.k_Lang_Romanian:
+          case 20:
             return "ro";
-          case _.k_Lang_Turkish:
+          case 21:
             return "tr";
-          case _.k_Lang_Arabic:
+          case 25:
             return "ar";
-          case _.k_Lang_Brazilian:
+          case 22:
             return "pt-br";
-          case _.k_Lang_Bulgarian:
+          case 23:
             return "bg";
-          case _.k_Lang_Greek:
+          case 24:
             return "el";
-          case _.k_Lang_Ukrainian:
+          case 26:
             return "uk";
-          case _.k_Lang_Latam_Spanish:
+          case 27:
             return "es-419";
-          case _.k_Lang_Vietnamese:
+          case 28:
             return "vi";
-          case _.k_Lang_SteamChina_SChinese:
+          case 29:
             return "sc-sc";
-          case _.k_Lang_Indonesian:
+          case 30:
             return "id";
           default:
             return _;
         }
       }
-      !(function (_) {
-        (_[(_.k_Lang_None = -1)] = "k_Lang_None"),
-          (_[(_.k_Lang_English = 0)] = "k_Lang_English"),
-          (_[(_.k_Lang_German = 1)] = "k_Lang_German"),
-          (_[(_.k_Lang_French = 2)] = "k_Lang_French"),
-          (_[(_.k_Lang_Italian = 3)] = "k_Lang_Italian"),
-          (_[(_.k_Lang_Korean = 4)] = "k_Lang_Korean"),
-          (_[(_.k_Lang_Spanish = 5)] = "k_Lang_Spanish"),
-          (_[(_.k_Lang_Simplified_Chinese = 6)] = "k_Lang_Simplified_Chinese"),
-          (_[(_.k_Lang_Traditional_Chinese = 7)] =
-            "k_Lang_Traditional_Chinese"),
-          (_[(_.k_Lang_Russian = 8)] = "k_Lang_Russian"),
-          (_[(_.k_Lang_Thai = 9)] = "k_Lang_Thai"),
-          (_[(_.k_Lang_Japanese = 10)] = "k_Lang_Japanese"),
-          (_[(_.k_Lang_Portuguese = 11)] = "k_Lang_Portuguese"),
-          (_[(_.k_Lang_Polish = 12)] = "k_Lang_Polish"),
-          (_[(_.k_Lang_Danish = 13)] = "k_Lang_Danish"),
-          (_[(_.k_Lang_Dutch = 14)] = "k_Lang_Dutch"),
-          (_[(_.k_Lang_Finnish = 15)] = "k_Lang_Finnish"),
-          (_[(_.k_Lang_Norwegian = 16)] = "k_Lang_Norwegian"),
-          (_[(_.k_Lang_Swedish = 17)] = "k_Lang_Swedish"),
-          (_[(_.k_Lang_Hungarian = 18)] = "k_Lang_Hungarian"),
-          (_[(_.k_Lang_Czech = 19)] = "k_Lang_Czech"),
-          (_[(_.k_Lang_Romanian = 20)] = "k_Lang_Romanian"),
-          (_[(_.k_Lang_Turkish = 21)] = "k_Lang_Turkish"),
-          (_[(_.k_Lang_Brazilian = 22)] = "k_Lang_Brazilian"),
-          (_[(_.k_Lang_Bulgarian = 23)] = "k_Lang_Bulgarian"),
-          (_[(_.k_Lang_Greek = 24)] = "k_Lang_Greek"),
-          (_[(_.k_Lang_Arabic = 25)] = "k_Lang_Arabic"),
-          (_[(_.k_Lang_Ukrainian = 26)] = "k_Lang_Ukrainian"),
-          (_[(_.k_Lang_Latam_Spanish = 27)] = "k_Lang_Latam_Spanish"),
-          (_[(_.k_Lang_Vietnamese = 28)] = "k_Lang_Vietnamese"),
-          (_[(_.k_Lang_SteamChina_SChinese = 29)] =
-            "k_Lang_SteamChina_SChinese"),
-          (_[(_.k_Lang_Indonesian = 30)] = "k_Lang_Indonesian"),
-          (_[(_.k_Lang_MAX = 31)] = "k_Lang_MAX");
-      })(_ || (_ = {}));
       const _ = (_) => ("koreana" === _ ? "korean" : _);
       function _(_, _ = "") {
         switch (_) {
-          case _.k_Lang_English:
+          case 0:
             return "english";
-          case _.k_Lang_German:
+          case 1:
             return "german";
-          case _.k_Lang_French:
+          case 2:
             return "french";
-          case _.k_Lang_Italian:
+          case 3:
             return "italian";
-          case _.k_Lang_Korean:
+          case 4:
             return "koreana";
-          case _.k_Lang_Spanish:
+          case 5:
             return "spanish";
-          case _.k_Lang_Simplified_Chinese:
+          case 6:
             return "schinese";
-          case _.k_Lang_Traditional_Chinese:
+          case 7:
             return "tchinese";
-          case _.k_Lang_Russian:
+          case 8:
             return "russian";
-          case _.k_Lang_Thai:
+          case 9:
             return "thai";
-          case _.k_Lang_Japanese:
+          case 10:
             return "japanese";
-          case _.k_Lang_Portuguese:
+          case 11:
             return "portuguese";
-          case _.k_Lang_Polish:
+          case 12:
             return "polish";
-          case _.k_Lang_Danish:
+          case 13:
             return "danish";
-          case _.k_Lang_Dutch:
+          case 14:
             return "dutch";
-          case _.k_Lang_Finnish:
+          case 15:
             return "finnish";
-          case _.k_Lang_Norwegian:
+          case 16:
             return "norwegian";
-          case _.k_Lang_Swedish:
+          case 17:
             return "swedish";
-          case _.k_Lang_Hungarian:
+          case 18:
             return "hungarian";
-          case _.k_Lang_Czech:
+          case 19:
             return "czech";
-          case _.k_Lang_Romanian:
+          case 20:
             return "romanian";
-          case _.k_Lang_Turkish:
+          case 21:
             return "turkish";
-          case _.k_Lang_Arabic:
+          case 25:
             return "arabic";
-          case _.k_Lang_Brazilian:
+          case 22:
             return "brazilian";
-          case _.k_Lang_Bulgarian:
+          case 23:
             return "bulgarian";
-          case _.k_Lang_Greek:
+          case 24:
             return "greek";
-          case _.k_Lang_Ukrainian:
+          case 26:
             return "ukrainian";
-          case _.k_Lang_Latam_Spanish:
+          case 27:
             return "latam";
-          case _.k_Lang_Vietnamese:
+          case 28:
             return "vietnamese";
-          case _.k_Lang_SteamChina_SChinese:
+          case 29:
             return "sc_schinese";
-          case _.k_Lang_Indonesian:
+          case 30:
             return "indonesian";
           default:
             return _;
         }
       }
-      function _(_, _ = _.k_Lang_English) {
+      function _(_, _ = 0) {
         switch (_) {
           case "english":
-            return _.k_Lang_English;
+            return 0;
           case "german":
-            return _.k_Lang_German;
+            return 1;
           case "french":
-            return _.k_Lang_French;
+            return 2;
           case "italian":
-            return _.k_Lang_Italian;
+            return 3;
           case "korean":
           case "koreana":
-            return _.k_Lang_Korean;
+            return 4;
           case "spanish":
-            return _.k_Lang_Spanish;
+            return 5;
           case "schinese":
-            return _.k_Lang_Simplified_Chinese;
+            return 6;
           case "tchinese":
-            return _.k_Lang_Traditional_Chinese;
+            return 7;
           case "russian":
-            return _.k_Lang_Russian;
+            return 8;
           case "thai":
-            return _.k_Lang_Thai;
+            return 9;
           case "japanese":
-            return _.k_Lang_Japanese;
+            return 10;
           case "portuguese":
-            return _.k_Lang_Portuguese;
+            return 11;
           case "polish":
-            return _.k_Lang_Polish;
+            return 12;
           case "danish":
-            return _.k_Lang_Danish;
+            return 13;
           case "dutch":
-            return _.k_Lang_Dutch;
+            return 14;
           case "finnish":
-            return _.k_Lang_Finnish;
+            return 15;
           case "norwegian":
-            return _.k_Lang_Norwegian;
+            return 16;
           case "swedish":
-            return _.k_Lang_Swedish;
+            return 17;
           case "hungarian":
-            return _.k_Lang_Hungarian;
+            return 18;
           case "czech":
-            return _.k_Lang_Czech;
+            return 19;
           case "romanian":
-            return _.k_Lang_Romanian;
+            return 20;
           case "turkish":
-            return _.k_Lang_Turkish;
+            return 21;
           case "arabic":
-            return _.k_Lang_Arabic;
+            return 25;
           case "brazilian":
-            return _.k_Lang_Brazilian;
+            return 22;
           case "bulgarian":
-            return _.k_Lang_Bulgarian;
+            return 23;
           case "greek":
-            return _.k_Lang_Greek;
+            return 24;
           case "ukrainian":
-            return _.k_Lang_Ukrainian;
+            return 26;
           case "latam":
-            return _.k_Lang_Latam_Spanish;
+            return 27;
           case "vietnamese":
-            return _.k_Lang_Vietnamese;
+            return 28;
           case "sc_schinese":
-            return _.k_Lang_SteamChina_SChinese;
+            return 29;
           case "indonesian":
-            return _.k_Lang_Indonesian;
+            return 30;
           default:
             return _;
         }
       }
-      var _;
-      !(function (_) {
-        (_[(_.k_EOtherEvent = 1)] = "k_EOtherEvent"),
-          (_[(_.k_EGameEvent = 2)] = "k_EGameEvent"),
-          (_[(_.k_EPartyEvent = 3)] = "k_EPartyEvent"),
-          (_[(_.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
-          (_[(_.k_ESpecialCauseEvent = 5)] = "k_ESpecialCauseEvent"),
-          (_[(_.k_EMusicAndArtsEvent = 6)] = "k_EMusicAndArtsEvent"),
-          (_[(_.k_ESportsEvent = 7)] = "k_ESportsEvent"),
-          (_[(_.k_ETripEvent = 8)] = "k_ETripEvent"),
-          (_[(_.k_EChatEvent = 9)] = "k_EChatEvent"),
-          (_[(_.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
-          (_[(_.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent"),
-          (_[(_.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
-          (_[(_.k_ERegularUpdateEvent = 13)] = "k_ERegularUpdateEvent"),
-          (_[(_.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
-          (_[(_.k_EDLCReleaseEvent = 15)] = "k_EDLCReleaseEvent"),
-          (_[(_.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
-          (_[(_.k_EESportTournamentStreamEvent = 17)] =
-            "k_EESportTournamentStreamEvent"),
-          (_[(_.k_EDevStreamEvent = 18)] = "k_EDevStreamEvent"),
-          (_[(_.k_EFamousStreamEvent = 19)] = "k_EFamousStreamEvent"),
-          (_[(_.k_EGameSalesEvent = 20)] = "k_EGameSalesEvent"),
-          (_[(_.k_EGameItemSalesEvent = 21)] = "k_EGameItemSalesEvent"),
-          (_[(_.k_EInGameBonusXPEvent = 22)] = "k_EInGameBonusXPEvent"),
-          (_[(_.k_EInGameLootEvent = 23)] = "k_EInGameLootEvent"),
-          (_[(_.k_EInGamePerksEvent = 24)] = "k_EInGamePerksEvent"),
-          (_[(_.k_EInGameChallengeEvent = 25)] = "k_EInGameChallengeEvent"),
-          (_[(_.k_EInGameContestEvent = 26)] = "k_EInGameContestEvent"),
-          (_[(_.k_EIRLEvent = 27)] = "k_EIRLEvent"),
-          (_[(_.k_ENewsEvent = 28)] = "k_ENewsEvent"),
-          (_[(_.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
-          (_[(_.k_EFreeTrial = 31)] = "k_EFreeTrial"),
-          (_[(_.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
-          (_[(_.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
-          (_[(_.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral"),
-          (_[(_.k_ECreatorHome = 36)] = "k_ECreatorHome");
-      })(_ || (_ = {}));
-      _.k_EOtherEvent,
-        _.k_EGameEvent,
-        _.k_EPartyEvent,
-        _.k_EMeetingEvent,
-        _.k_ESpecialCauseEvent,
-        _.k_EMusicAndArtsEvent,
-        _.k_ESportsEvent,
-        _.k_ETripEvent,
-        _.k_EChatEvent,
-        _.k_EGameReleaseEvent,
-        _.k_EBroadcastEvent,
-        _.k_ESmallUpdateEvent,
-        _.k_ERegularUpdateEvent,
-        _.k_EMajorUpdateEvent,
-        _.k_EDLCReleaseEvent,
-        _.k_EFutureReleaseEvent,
-        _.k_EESportTournamentStreamEvent,
-        _.k_EDevStreamEvent,
-        _.k_EFamousStreamEvent,
-        _.k_EGameSalesEvent,
-        _.k_EGameItemSalesEvent,
-        _.k_EInGameBonusXPEvent,
-        _.k_EInGameLootEvent,
-        _.k_EInGamePerksEvent,
-        _.k_EInGameChallengeEvent,
-        _.k_EInGameContestEvent,
-        _.k_EIRLEvent,
-        _.k_ENewsEvent,
-        _.k_EBetaReleaseEvent,
-        _.k_EFreeTrial,
-        _.k_ESeasonRelease,
-        _.k_ECrosspostEvent,
-        _.k_EInGameEventGeneral,
-        _.k_ECreatorHome;
-      var _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _;
       function _(_) {
         switch (_) {
           default:
             break;
-          case _.k_ELauncherTypeCSGO:
-          case _.k_ELauncherTypePerfectWorld:
-          case _.k_ELauncherTypeSingleApp:
+          case 4:
+          case 1:
+          case 8:
             return !0;
         }
         return !1;
       }
       function _(_) {
         switch (_) {
-          case _.Invalid:
+          case 0:
             return "invalid";
-          case _.GamepadToast:
+          case 1:
             return "gamepad";
-          case _.DesktopToast:
+          case 2:
             return "desktop";
-          case _.Tray:
+          case 3:
             return "tray";
-          case _.AllNotificationsTray:
+          case 4:
             return "all";
-          case _.MobilePush:
+          case 5:
             return "push";
         }
       }
       function _(_) {
         switch (_) {
-          case _.k_EUIMode_VGUI:
+          case 0:
             return "vgui";
-          case _.k_EUIMode_Tenfoot:
+          case 1:
             return "tenfoot";
-          case _.k_EUIMode_Mobile:
+          case 2:
             return "mobile";
-          case _.k_EUIMode_Web:
+          case 3:
             return "web";
-          case _.k_EUIMode_GamePadUI:
+          case 4:
             return "gamepad";
-          case _.k_EUIMode_MobileChat:
+          case 5:
             return "mobilechat";
-          case _.k_EUIMode_EmbeddedClient:
+          case 6:
             return "embedded";
-          case _.k_EUIMode_DesktopUI:
+          case 7:
             return "desktop";
-          case _.k_EUIMode_Unknown:
           default:
             return "unknown";
         }
       }
+      var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
       !(function (_) {
-        (_[(_.k_ELaunchSource_None = 0)] = "k_ELaunchSource_None"),
-          (_[(_.k_ELaunchSource_2ftLibraryDetails = 100)] =
-            "k_ELaunchSource_2ftLibraryDetails"),
-          (_[(_.k_ELaunchSource_2ftLibraryListView = 101)] =
-            "k_ELaunchSource_2ftLibraryListView"),
-          (_[(_.k_ELaunchSource_2ftLibraryGrid = 103)] =
-            "k_ELaunchSource_2ftLibraryGrid"),
-          (_[(_.k_ELaunchSource_InstallSubComplete = 104)] =
-            "k_ELaunchSource_InstallSubComplete"),
-          (_[(_.k_ELaunchSource_DownloadsPage = 105)] =
-            "k_ELaunchSource_DownloadsPage"),
-          (_[(_.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
-            "k_ELaunchSource_RemoteClientStartStreaming"),
-          (_[(_.k_ELaunchSource_2ftMiniModeList = 107)] =
-            "k_ELaunchSource_2ftMiniModeList"),
-          (_[(_.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
-          (_[(_.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
-            "k_ELaunchSource_DashAppLaunchCmdLine"),
-          (_[(_.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
-            "k_ELaunchSource_DashGameIdLaunchCmdLine"),
-          (_[(_.k_ELaunchSource_RunByGameDir = 302)] =
-            "k_ELaunchSource_RunByGameDir"),
-          (_[(_.k_ELaunchSource_SubCmdRunDashGame = 303)] =
-            "k_ELaunchSource_SubCmdRunDashGame"),
-          (_[(_.k_ELaunchSource_SteamURL_Launch = 400)] =
-            "k_ELaunchSource_SteamURL_Launch"),
-          (_[(_.k_ELaunchSource_SteamURL_Run = 401)] =
-            "k_ELaunchSource_SteamURL_Run"),
-          (_[(_.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
-            "k_ELaunchSource_SteamURL_JoinLobby"),
-          (_[(_.k_ELaunchSource_SteamURL_RunGame = 403)] =
-            "k_ELaunchSource_SteamURL_RunGame"),
-          (_[(_.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
-            "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
-          (_[(_.k_ELaunchSource_SteamURL_RunSafe = 405)] =
-            "k_ELaunchSource_SteamURL_RunSafe"),
-          (_[(_.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
-          (_[(_.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
-            "k_ELaunchSource_LibraryLeftColumnContextMenu"),
-          (_[(_.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
-            "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
-          (_[(_.k_ELaunchSource_Dota2Launcher = 700)] =
-            "k_ELaunchSource_Dota2Launcher"),
-          (_[(_.k_ELaunchSource_IRunGameEngine = 800)] =
-            "k_ELaunchSource_IRunGameEngine"),
-          (_[(_.k_ELaunchSource_DRMFailureResponse = 801)] =
-            "k_ELaunchSource_DRMFailureResponse"),
-          (_[(_.k_ELaunchSource_DRMDataRequest = 802)] =
-            "k_ELaunchSource_DRMDataRequest"),
-          (_[(_.k_ELaunchSource_CloudFilePanel = 803)] =
-            "k_ELaunchSource_CloudFilePanel"),
-          (_[(_.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
-            "k_ELaunchSource_DiscoveredAlreadyRunning"),
-          (_[(_.k_ELaunchSource_GameActionJoinParty = 900)] =
-            "k_ELaunchSource_GameActionJoinParty"),
-          (_[(_.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
-            "k_ELaunchSource_AppPortraitContextMenu"),
-          (_[(_.k_ELaunchSource_DownloadItem = 1001)] =
-            "k_ELaunchSource_DownloadItem");
+        (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
+          "k_EConnectivityTestResult_Unknown"),
+          (_[(_.k_EConnectivityTestResult_Connected = 1)] =
+            "k_EConnectivityTestResult_Connected"),
+          (_[(_.k_EConnectivityTestResult_CaptivePortal = 2)] =
+            "k_EConnectivityTestResult_CaptivePortal"),
+          (_[(_.k_EConnectivityTestResult_TimedOut = 3)] =
+            "k_EConnectivityTestResult_TimedOut"),
+          (_[(_.k_EConnectivityTestResult_Failed = 4)] =
+            "k_EConnectivityTestResult_Failed"),
+          (_[(_.k_EConnectivityTestResult_WifiDisabled = 5)] =
+            "k_EConnectivityTestResult_WifiDisabled"),
+          (_[(_.k_EConnectivityTestResult_NoLAN = 6)] =
+            "k_EConnectivityTestResult_NoLAN");
       })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECommunityPrivacyInvalid = 0)] =
-            "k_ECommunityPrivacyInvalid"),
-            (_[(_.k_ECommunityPrivacyPrivate = 1)] =
-              "k_ECommunityPrivacyPrivate"),
-            (_[(_.k_ECommunityPrivacyFriendsOnly = 2)] =
-              "k_ECommunityPrivacyFriendsOnly"),
-            (_[(_.k_ECommunityPrivacyPublic = 3)] =
-              "k_ECommunityPrivacyPublic"),
-            (_[(_.k_ECommunityPrivacyUsersOnly_DEPRECATED = 4)] =
-              "k_ECommunityPrivacyUsersOnly_DEPRECATED"),
-            (_[(_.k_ECommunityPrivacyFriendsFriendsOnly_DEPRECATED = 5)] =
-              "k_ECommunityPrivacyFriendsFriendsOnly_DEPRECATED");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EEconContextRoot = 0)] = "k_EEconContextRoot"),
-            (_[(_.k_EBackpackContextGiftPasses = 1)] =
-              "k_EBackpackContextGiftPasses"),
-            (_[(_.k_EBackpackContextProfile = 2)] =
-              "k_EBackpackContextProfile"),
-            (_[(_.k_EBackpackContextCoupons = 3)] =
-              "k_EBackpackContextCoupons"),
-            (_[(_.k_EBackpackContextWallet = 4)] = "k_EBackpackContextWallet"),
-            (_[(_.k_EBackpackContextCommunity = 6)] =
-              "k_EBackpackContextCommunity"),
-            (_[(_.k_EBackpackContextItemRewards = 7)] =
-              "k_EBackpackContextItemRewards"),
-            (_[(_.k_EEConContextMax = 999)] = "k_EEConContextMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ERemoteStoragePublishedFileVisibilityPublic = 0)] =
-            "k_ERemoteStoragePublishedFileVisibilityPublic"),
-            (_[(_.k_ERemoteStoragePublishedFileVisibilityFriendsOnly = 1)] =
-              "k_ERemoteStoragePublishedFileVisibilityFriendsOnly"),
-            (_[(_.k_ERemoteStoragePublishedFileVisibilityPrivate = 2)] =
-              "k_ERemoteStoragePublishedFileVisibilityPrivate"),
-            (_[(_.k_ERemoteStoragePublishedFileVisibilityUnlisted = 3)] =
-              "k_ERemoteStoragePublishedFileVisibilityUnlisted");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EUCMListTypeSubscribed = 1)] = "k_EUCMListTypeSubscribed"),
-            (_[(_.k_EUCMListTypeFavorites = 2)] = "k_EUCMListTypeFavorites"),
-            (_[(_.k_EUCMListTypePlayed = 3)] = "k_EUCMListTypePlayed"),
-            (_[(_.k_EUCMListTypeCompleted = 4)] = "k_EUCMListTypeCompleted"),
-            (_[(_.k_EUCMListTypeShortcutFavorites = 5)] =
-              "k_EUCMListTypeShortcutFavorites"),
-            (_[(_.k_EUCMListTypeFollowed = 6)] = "k_EUCMListTypeFollowed");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ELibraryAssetType_Capsule = 0)] =
-            "k_ELibraryAssetType_Capsule"),
-            (_[(_.k_ELibraryAssetType_Hero = 1)] = "k_ELibraryAssetType_Hero"),
-            (_[(_.k_ELibraryAssetType_Logo = 2)] = "k_ELibraryAssetType_Logo"),
-            (_[(_.k_ELibraryAssetType_Header = 3)] =
-              "k_ELibraryAssetType_Header"),
-            (_[(_.k_ELibraryAssetType_Icon = 4)] = "k_ELibraryAssetType_Icon"),
-            (_[(_.k_ELibaryAssetType_HeroBlur = 5)] =
-              "k_ELibaryAssetType_HeroBlur"),
-            (_[(_.k_ELibaryAssetType_PublicTimelineIcons = 6)] =
-              "k_ELibaryAssetType_PublicTimelineIcons"),
-            (_[(_.k_ELibaryAssetType_AlbumCover = 7)] =
-              "k_ELibaryAssetType_AlbumCover");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ERecommendationIgnoreReasonNotInterested = 0)] =
-            "k_ERecommendationIgnoreReasonNotInterested"),
-            (_[(_.k_ERecommendationIgnoreReasonBlocked = 1)] =
-              "k_ERecommendationIgnoreReasonBlocked"),
-            (_[(_.k_ERecommendationIgnoreReasonOwnedElsewhere = 2)] =
-              "k_ERecommendationIgnoreReasonOwnedElsewhere");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ELauncherTypeDefault = 0)] = "k_ELauncherTypeDefault"),
-            (_[(_.k_ELauncherTypePerfectWorld = 1)] =
-              "k_ELauncherTypePerfectWorld"),
-            (_[(_.k_ELauncherTypeNexon = 2)] = "k_ELauncherTypeNexon"),
-            (_[(_.k_ELauncherTypeCmdLine = 3)] = "k_ELauncherTypeCmdLine"),
-            (_[(_.k_ELauncherTypeCSGO = 4)] = "k_ELauncherTypeCSGO"),
-            (_[(_.k_ELauncherTypeClientUI = 5)] = "k_ELauncherTypeClientUI"),
-            (_[(_.k_ELauncherTypeHeadless = 6)] = "k_ELauncherTypeHeadless"),
-            (_[(_.k_ELauncherTypeSteamChina = 7)] =
-              "k_ELauncherTypeSteamChina"),
-            (_[(_.k_ELauncherTypeSingleApp = 8)] = "k_ELauncherTypeSingleApp"),
-            (_[(_.k_ELauncherTypeGameServer = 9)] =
-              "k_ELauncherTypeGameServer"),
-            (_[(_.k_ELauncherTypeMax = 10)] = "k_ELauncherTypeMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStoreCuratorRecommendationState_Recommended = 0)] =
-            "k_EStoreCuratorRecommendationState_Recommended"),
-            (_[(_.k_EStoreCuratorRecommendationState_NotRecommended = 1)] =
-              "k_EStoreCuratorRecommendationState_NotRecommended"),
-            (_[(_.k_EStoreCuratorRecommendationState_Informative = 2)] =
-              "k_EStoreCuratorRecommendationState_Informative"),
-            (_[(_.k_EStoreCuratorRecommendationState_CreatedApp = 3)] =
-              "k_EStoreCuratorRecommendationState_CreatedApp");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EUCMFilePrivacyStateInvalid = -1)] =
-            "k_EUCMFilePrivacyStateInvalid"),
-            (_[(_.k_EUCMFilePrivacyStatePrivate = 2)] =
-              "k_EUCMFilePrivacyStatePrivate"),
-            (_[(_.k_EUCMFilePrivacyStateFriendsOnly = 4)] =
-              "k_EUCMFilePrivacyStateFriendsOnly"),
-            (_[(_.k_EUCMFilePrivacyStatePublic = 8)] =
-              "k_EUCMFilePrivacyStatePublic"),
-            (_[(_.k_EUCMFilePrivacyStateUnlisted = 16)] =
-              "k_EUCMFilePrivacyStateUnlisted"),
-            (_[(_.k_EUCMFilePrivacyStateAll = 30)] =
-              "k_EUCMFilePrivacyStateAll");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.Invalid = 0)] = "Invalid"),
-            (_[(_.GamepadToast = 1)] = "GamepadToast"),
-            (_[(_.DesktopToast = 2)] = "DesktopToast"),
-            (_[(_.Tray = 3)] = "Tray"),
-            (_[(_.AllNotificationsTray = 4)] = "AllNotificationsTray"),
-            (_[(_.MobilePush = 5)] = "MobilePush");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EUIMode_Unknown = -1)] = "k_EUIMode_Unknown"),
-            (_[(_.k_EUIMode_VGUI = 0)] = "k_EUIMode_VGUI"),
-            (_[(_.k_EUIMode_Tenfoot = 1)] = "k_EUIMode_Tenfoot"),
-            (_[(_.k_EUIMode_Mobile = 2)] = "k_EUIMode_Mobile"),
-            (_[(_.k_EUIMode_Web = 3)] = "k_EUIMode_Web"),
-            (_[(_.k_EUIMode_GamePadUI = 4)] = "k_EUIMode_GamePadUI"),
-            (_[(_.k_EUIMode_MobileChat = 5)] = "k_EUIMode_MobileChat"),
-            (_[(_.k_EUIMode_EmbeddedClient = 6)] = "k_EUIMode_EmbeddedClient"),
-            (_[(_.k_EUIMode_DesktopUI = 7)] = "k_EUIMode_DesktopUI"),
-            (_[(_.k_EUIMode_MAX = 8)] = "k_EUIMode_MAX");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStoreCategoryMultiplayer = 1)] =
-            "k_EStoreCategoryMultiplayer"),
-            (_[(_.k_EStoreCategorySingleplayer = 2)] =
-              "k_EStoreCategorySingleplayer"),
-            (_[(_.k_EStoreCategoryModHL2 = 6)] = "k_EStoreCategoryModHL2"),
-            (_[(_.k_EStoreCategoryModHL = 7)] = "k_EStoreCategoryModHL"),
-            (_[(_.k_EStoreCategoryVAC = 8)] = "k_EStoreCategoryVAC"),
-            (_[(_.k_EStoreCategoryCoop = 9)] = "k_EStoreCategoryCoop"),
-            (_[(_.k_EStoreCategoryDemo = 10)] = "k_EStoreCategoryDemo"),
-            (_[(_.k_EStoreCategoryFriends = 11)] = "k_EStoreCategoryFriends"),
-            (_[(_.k_EStoreCategoryCC = 13)] = "k_EStoreCategoryCC"),
-            (_[(_.k_EStoreCategoryCommentary = 14)] =
-              "k_EStoreCategoryCommentary"),
-            (_[(_.k_EStoreCategoryStats = 15)] = "k_EStoreCategoryStats"),
-            (_[(_.k_EStoreCategorySDK = 16)] = "k_EStoreCategorySDK"),
-            (_[(_.k_EStoreCategoryEditor = 17)] = "k_EStoreCategoryEditor"),
-            (_[(_.k_EStoreCategoryPartialController = 18)] =
-              "k_EStoreCategoryPartialController"),
-            (_[(_.k_EStoreCategoryMod = 19)] = "k_EStoreCategoryMod"),
-            (_[(_.k_EStoreCategoryMMO = 20)] = "k_EStoreCategoryMMO"),
-            (_[(_.k_EStoreCategoryDLC = 21)] = "k_EStoreCategoryDLC"),
-            (_[(_.k_EStoreCategoryAchievements = 22)] =
-              "k_EStoreCategoryAchievements"),
-            (_[(_.k_EStoreCategoryCloud = 23)] = "k_EStoreCategoryCloud"),
-            (_[(_.k_EStoreCategorySharedSplitscreen = 24)] =
-              "k_EStoreCategorySharedSplitscreen"),
-            (_[(_.k_EStoreCategoryLeaderboards = 25)] =
-              "k_EStoreCategoryLeaderboards"),
-            (_[(_.k_EStoreCategoryGuide = 26)] = "k_EStoreCategoryGuide"),
-            (_[(_.k_EStoreCategoryCrossPlatMultiplayer = 27)] =
-              "k_EStoreCategoryCrossPlatMultiplayer"),
-            (_[(_.k_EStoreCategoryFullController = 28)] =
-              "k_EStoreCategoryFullController"),
-            (_[(_.k_EStoreCategoryTradingCard = 29)] =
-              "k_EStoreCategoryTradingCard"),
-            (_[(_.k_EStoreCategoryWorkshop = 30)] = "k_EStoreCategoryWorkshop"),
-            (_[(_.k_EStoreCategoryVRThirdParty = 31)] =
-              "k_EStoreCategoryVRThirdParty"),
-            (_[(_.k_EStoreCategoryAsyncGameNotifications = 32)] =
-              "k_EStoreCategoryAsyncGameNotifications"),
-            (_[(_.k_EStoreCategorySteamController = 33)] =
-              "k_EStoreCategorySteamController"),
-            (_[(_.k_EStoreCategoryVRSteam = 34)] = "k_EStoreCategoryVRSteam"),
-            (_[(_.k_EStoreCategoryInAppPurchases = 35)] =
-              "k_EStoreCategoryInAppPurchases"),
-            (_[(_.k_EStoreCategoryOnlinePvP = 36)] =
-              "k_EStoreCategoryOnlinePvP"),
-            (_[(_.k_EStoreCategoryLocalPvP = 37)] = "k_EStoreCategoryLocalPvP"),
-            (_[(_.k_EStoreCategoryOnlineCoop = 38)] =
-              "k_EStoreCategoryOnlineCoop"),
-            (_[(_.k_EStoreCategoryLocalCoop = 39)] =
-              "k_EStoreCategoryLocalCoop"),
-            (_[(_.k_EStoreCategorySteamVRCollectibles = 40)] =
-              "k_EStoreCategorySteamVRCollectibles"),
-            (_[(_.k_EStoreCategoryRemotePlayToPhone = 41)] =
-              "k_EStoreCategoryRemotePlayToPhone"),
-            (_[(_.k_EStoreCategoryRemotePlayToTablet = 42)] =
-              "k_EStoreCategoryRemotePlayToTablet"),
-            (_[(_.k_EStoreCategoryRemotePlayToTV = 43)] =
-              "k_EStoreCategoryRemotePlayToTV"),
-            (_[(_.k_EStoreCategoryRemotePlayTogether = 44)] =
-              "k_EStoreCategoryRemotePlayTogether"),
-            (_[(_.k_EStoreCategoryCloudGaming = 45)] =
-              "k_EStoreCategoryCloudGaming"),
-            (_[(_.k_EStoreCategoryCloudGamingNVIDIA = 46)] =
-              "k_EStoreCategoryCloudGamingNVIDIA"),
-            (_[(_.k_EStoreCategoryLANPvP = 47)] = "k_EStoreCategoryLANPvP"),
-            (_[(_.k_EStoreCategoryLANCoop = 48)] = "k_EStoreCategoryLANCoop"),
-            (_[(_.k_EStoreCategoryPvP = 49)] = "k_EStoreCategoryPvP"),
-            (_[(_.k_EStoreCategoryHighQualitySoundtrackAudio = 50)] =
-              "k_EStoreCategoryHighQualitySoundtrackAudio"),
-            (_[(_.k_EStoreCategorySteamChinaWorkshop = 51)] =
-              "k_EStoreCategorySteamChinaWorkshop"),
-            (_[(_.k_EStoreCategoryPS4Controller = 55)] =
-              "k_EStoreCategoryPS4Controller"),
-            (_[(_.k_EStoreCategoryPS4ControllerBT = 56)] =
-              "k_EStoreCategoryPS4ControllerBT"),
-            (_[(_.k_EStoreCategoryPS5Controller = 57)] =
-              "k_EStoreCategoryPS5Controller"),
-            (_[(_.k_EStoreCategoryPS5ControllerBT = 58)] =
-              "k_EStoreCategoryPS5ControllerBT"),
-            (_[(_.k_EStoreCategorySteamInputAPI = 59)] =
-              "k_EStoreCategorySteamInputAPI"),
-            (_[(_.k_EStoreCategoryGamepadPreferred = 60)] =
-              "k_EStoreCategoryGamepadPreferred"),
-            (_[(_.k_EStoreCategoryHDR = 61)] = "k_EStoreCategoryHDR"),
-            (_[(_.k_EStoreCategoryFamilySharing = 62)] =
-              "k_EStoreCategoryFamilySharing");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_PFI_MatchingFileType_Items = 0)] =
-            "k_PFI_MatchingFileType_Items"),
-            (_[(_.k_PFI_MatchingFileType_Collections = 1)] =
-              "k_PFI_MatchingFileType_Collections"),
-            (_[(_.k_PFI_MatchingFileType_Art = 2)] =
-              "k_PFI_MatchingFileType_Art"),
-            (_[(_.k_PFI_MatchingFileType_Videos = 3)] =
-              "k_PFI_MatchingFileType_Videos"),
-            (_[(_.k_PFI_MatchingFileType_Screenshots = 4)] =
-              "k_PFI_MatchingFileType_Screenshots"),
-            (_[(_.k_PFI_MatchingFileType_CollectionEligible = 5)] =
-              "k_PFI_MatchingFileType_CollectionEligible"),
-            (_[(_.k_PFI_MatchingFileType_Games = 6)] =
-              "k_PFI_MatchingFileType_Games"),
-            (_[(_.k_PFI_MatchingFileType_Software = 7)] =
-              "k_PFI_MatchingFileType_Software"),
-            (_[(_.k_PFI_MatchingFileType_Concepts = 8)] =
-              "k_PFI_MatchingFileType_Concepts"),
-            (_[(_.k_PFI_MatchingFileType_GreenlightItems = 9)] =
-              "k_PFI_MatchingFileType_GreenlightItems"),
-            (_[(_.k_PFI_MatchingFileType_AllGuides = 10)] =
-              "k_PFI_MatchingFileType_AllGuides"),
-            (_[(_.k_PFI_MatchingFileType_WebGuides = 11)] =
-              "k_PFI_MatchingFileType_WebGuides"),
-            (_[(_.k_PFI_MatchingFileType_IntegratedGuides = 12)] =
-              "k_PFI_MatchingFileType_IntegratedGuides"),
-            (_[(_.k_PFI_MatchingFileType_UsableInGame = 13)] =
-              "k_PFI_MatchingFileType_UsableInGame"),
-            (_[(_.k_PFI_MatchingFileType_Merch = 14)] =
-              "k_PFI_MatchingFileType_Merch"),
-            (_[(_.k_PFI_MatchingFileType_ControllerBindings = 15)] =
-              "k_PFI_MatchingFileType_ControllerBindings"),
-            (_[(_.k_PFI_MatchingFileType_SteamworksAccessInvites = 16)] =
-              "k_PFI_MatchingFileType_SteamworksAccessInvites"),
-            (_[(_.k_PFI_MatchingFileType_Items_Mtx = 17)] =
-              "k_PFI_MatchingFileType_Items_Mtx"),
-            (_[(_.k_PFI_MatchingFileType_Items_ReadyToUse = 18)] =
-              "k_PFI_MatchingFileType_Items_ReadyToUse"),
-            (_[(_.k_PFI_MatchingFileType_WorkshopShowcase = 19)] =
-              "k_PFI_MatchingFileType_WorkshopShowcase"),
-            (_[(_.k_PFI_MatchingFileType_GameManagedItems = 20)] =
-              "k_PFI_MatchingFileType_GameManagedItems"),
-            (_[(_.k_PFI_MatchingFileType_All = -1)] =
-              "k_PFI_MatchingFileType_All");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EConnectivityTestResult_Unknown = 0)] =
-            "k_EConnectivityTestResult_Unknown"),
-            (_[(_.k_EConnectivityTestResult_Connected = 1)] =
-              "k_EConnectivityTestResult_Connected"),
-            (_[(_.k_EConnectivityTestResult_CaptivePortal = 2)] =
-              "k_EConnectivityTestResult_CaptivePortal"),
-            (_[(_.k_EConnectivityTestResult_TimedOut = 3)] =
-              "k_EConnectivityTestResult_TimedOut"),
-            (_[(_.k_EConnectivityTestResult_Failed = 4)] =
-              "k_EConnectivityTestResult_Failed"),
-            (_[(_.k_EConnectivityTestResult_WifiDisabled = 5)] =
-              "k_EConnectivityTestResult_WifiDisabled"),
-            (_[(_.k_EConnectivityTestResult_NoLAN = 6)] =
-              "k_EConnectivityTestResult_NoLAN");
-        })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_ENetFakeLocalSystemState_Normal = 0)] =
             "k_ENetFakeLocalSystemState_Normal"),
@@ -39964,38 +36093,6 @@
             "k_EActivateGameOverlayToWebPageMode_Default"),
             (_[(_.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
               "k_EActivateGameOverlayToWebPageMode_Modal");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGamingDeviceType_Unknown = 0)] =
-            "k_EGamingDeviceType_Unknown"),
-            (_[(_.k_EGamingDeviceType_StandardPC = 1)] =
-              "k_EGamingDeviceType_StandardPC"),
-            (_[(_.k_EGamingDeviceType_ConsoleLegacy = 256)] =
-              "k_EGamingDeviceType_ConsoleLegacy"),
-            (_[(_.k_EGamingDeviceType_PS3 = 273)] = "k_EGamingDeviceType_PS3"),
-            (_[(_.k_EGamingDeviceType_Steambox = 288)] =
-              "k_EGamingDeviceType_Steambox"),
-            (_[(_.k_EGamingDeviceType_Tesla = 320)] =
-              "k_EGamingDeviceType_Tesla"),
-            (_[(_.k_EGamingDeviceType_Handheld_Legacy = 512)] =
-              "k_EGamingDeviceType_Handheld_Legacy"),
-            (_[(_.k_EGamingDeviceType_Phone = 528)] =
-              "k_EGamingDeviceType_Phone"),
-            (_[(_.k_EGamingDeviceType_Console = 540)] =
-              "k_EGamingDeviceType_Console"),
-            (_[(_.k_EGamingDeviceType_SteamOSGeneric = 541)] =
-              "k_EGamingDeviceType_SteamOSGeneric"),
-            (_[(_.k_EGamingDeviceType_SteamDeck = 544)] =
-              "k_EGamingDeviceType_SteamDeck"),
-            (_[(_.k_EGamingDeviceType_LegionGoS = 545)] =
-              "k_EGamingDeviceType_LegionGoS"),
-            (_[(_.k_EGamingDeviceType_Fremont = 546)] =
-              "k_EGamingDeviceType_Fremont"),
-            (_[(_.k_EGamingDeviceType_Console_Max = 4999)] =
-              "k_EGamingDeviceType_Console_Max"),
-            (_[(_.k_EGamingDeviceType_VR = 768)] = "k_EGamingDeviceType_VR"),
-            (_[(_.k_EGamingDeviceType_SteamFrame = 769)] =
-              "k_EGamingDeviceType_SteamFrame");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
@@ -40104,111 +36201,6 @@
               "k_EWindowBringToFrontAndForceOS"),
             (_[(_.k_EWindowBringToFrontWithoutForcingOS = 2)] =
               "k_EWindowBringToFrontWithoutForcingOS");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHardwareVariant_Unknown = 0)] =
-            "k_EHardwareVariant_Unknown"),
-            (_[(_.k_EHardwareVariant_SteamDeckJupiter = 1)] =
-              "k_EHardwareVariant_SteamDeckJupiter"),
-            (_[(_.k_EHardwareVariant_SteamDeckGalileo = 2)] =
-              "k_EHardwareVariant_SteamDeckGalileo"),
-            (_[(_.k_EHardwareVariant_Fremont = 3)] =
-              "k_EHardwareVariant_Fremont"),
-            (_[(_.k_EHardwareVariant_LegionGoS = 4)] =
-              "k_EHardwareVariant_LegionGoS");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESupportMessageInvalid = 0)] = "k_ESupportMessageInvalid"),
-            (_[(_.k_ESupportMessageTradeBan = 1)] =
-              "k_ESupportMessageTradeBan"),
-            (_[(_.k_ESupportMessageCommunityBan = 2)] =
-              "k_ESupportMessageCommunityBan"),
-            (_[(_.k_ESupportMessagePayPalDispute = 3)] =
-              "k_ESupportMessagePayPalDispute"),
-            (_[(_.k_ESupportMessageChargeback = 4)] =
-              "k_ESupportMessageChargeback"),
-            (_[(_.k_ESupportMessageCDKeyRevoked = 5)] =
-              "k_ESupportMessageCDKeyRevoked"),
-            (_[(_.k_ESupportMessageSuspectedFraudulentActivity = 6)] =
-              "k_ESupportMessageSuspectedFraudulentActivity"),
-            (_[(_.k_ESupportMessageSuspectedHijacking = 7)] =
-              "k_ESupportMessageSuspectedHijacking"),
-            (_[(_.k_ESupportMessageTOSViolation = 8)] =
-              "k_ESupportMessageTOSViolation"),
-            (_[(_.k_ESupportMessageWorkshopBan = 9)] =
-              "k_ESupportMessageWorkshopBan"),
-            (_[(_.k_ESupportMessageWorkshopContentTakedown = 10)] =
-              "k_ESupportMessageWorkshopContentTakedown"),
-            (_[(_.k_ESupportMessageGiftChargeback = 11)] =
-              "k_ESupportMessageGiftChargeback"),
-            (_[(_.k_ESupportMessageCustom = 12)] = "k_ESupportMessageCustom"),
-            (_[(_.k_ESupportMessageFriendlyFraud = 13)] =
-              "k_ESupportMessageFriendlyFraud"),
-            (_[(_.k_ESupportMessageFriendlyFraudResolved = 14)] =
-              "k_ESupportMessageFriendlyFraudResolved"),
-            (_[(_.k_ESupportMessageConfirmedFraudulentActivity = 15)] =
-              "k_ESupportMessageConfirmedFraudulentActivity"),
-            (_[(_.k_ESupportMessageRecurringPurchaseFailed = 16)] =
-              "k_ESupportMessageRecurringPurchaseFailed"),
-            (_[(_.k_ESupportMessageCardWillExpire = 17)] =
-              "k_ESupportMessageCardWillExpire"),
-            (_[(_.k_ESupportMessageCardHasExpired = 18)] =
-              "k_ESupportMessageCardHasExpired"),
-            (_[(_.k_ESupportMessageSubscriptionExpired = 19)] =
-              "k_ESupportMessageSubscriptionExpired"),
-            (_[(_.k_ESupportMessageNoCachedPaymentMethod = 20)] =
-              "k_ESupportMessageNoCachedPaymentMethod"),
-            (_[(_.k_ESupportMessageUsedForHijacking = 21)] =
-              "k_ESupportMessageUsedForHijacking"),
-            (_[(_.k_ESupportMessageUserRequestedLockdown = 22)] =
-              "k_ESupportMessageUserRequestedLockdown"),
-            (_[(_.k_ESupportMessageClientWizardTwoFactorRemovalFailure = 23)] =
-              "k_ESupportMessageClientWizardTwoFactorRemovalFailure"),
-            (_[(_.k_ESupportMessagePhoneRemovedByOtherAccount = 24)] =
-              "k_ESupportMessagePhoneRemovedByOtherAccount"),
-            (_[(_.k_ESupportMessagePhoneNeedsVerification = 25)] =
-              "k_ESupportMessagePhoneNeedsVerification"),
-            (_[(_.k_ESupportMessageVacBanAdded = 26)] =
-              "k_ESupportMessageVacBanAdded"),
-            (_[(_.k_ESupportMessageVacBanRemoved = 27)] =
-              "k_ESupportMessageVacBanRemoved"),
-            (_[(_.k_ESupportMessageBetaCDKeyRevoked = 28)] =
-              "k_ESupportMessageBetaCDKeyRevoked"),
-            (_[(_.k_ESupportMessageWalletGiftRevoked = 29)] =
-              "k_ESupportMessageWalletGiftRevoked"),
-            (_[(_.k_ESupportMessageWalletKeyBanned = 30)] =
-              "k_ESupportMessageWalletKeyBanned"),
-            (_[(_.k_ESupportMessagePendingRefund = 31)] =
-              "k_ESupportMessagePendingRefund"),
-            (_[(_.k_ESupportMessageAutoDiscussionsBan = 32)] =
-              "k_ESupportMessageAutoDiscussionsBan"),
-            (_[(_.k_ESupportMessageQueuedForDeletion = 33)] =
-              "k_ESupportMessageQueuedForDeletion"),
-            (_[(_.k_ESupportMessageHarassmentBan = 34)] =
-              "k_ESupportMessageHarassmentBan"),
-            (_[(_.k_ESupportMessagePartnerRevoke = 35)] =
-              "k_ESupportMessagePartnerRevoke"),
-            (_[(_.k_ESupportMessagePWGrant = 36)] = "k_ESupportMessagePWGrant"),
-            (_[(_.k_ESupportMessageQueuedForSteamChinaAccessDeletion = 37)] =
-              "k_ESupportMessageQueuedForSteamChinaAccessDeletion"),
-            (_[(_.k_ESupportMessageCDKeyRefunded = 38)] =
-              "k_ESupportMessageCDKeyRefunded"),
-            (_[(_.k_ESupportMessageSteamDeckReservationExpiring = 39)] =
-              "k_ESupportMessageSteamDeckReservationExpiring"),
-            (_[(_.k_ESupportMessagePostingSuspiciousContent = 40)] =
-              "k_ESupportMessagePostingSuspiciousContent"),
-            (_[(_.k_ESupportMessageAccountCompromised = 41)] =
-              "k_ESupportMessageAccountCompromised"),
-            (_[(_.k_ESupportMessageSSAUpdated = 42)] =
-              "k_ESupportMessageSSAUpdated"),
-            (_[(_.k_ESupportMessageMax = 43)] = "k_ESupportMessageMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EClanRankNone = 0)] = "k_EClanRankNone"),
-            (_[(_.k_EClanRankOwner = 1)] = "k_EClanRankOwner"),
-            (_[(_.k_EClanRankOfficer = 2)] = "k_EClanRankOfficer"),
-            (_[(_.k_EClanRankMember = 3)] = "k_EClanRankMember"),
-            (_[(_.k_EClanRankModerator = 4)] = "k_EClanRankModerator");
         })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -41224,12 +37216,6 @@
         _ = __webpack_require__("chunkid");
       const _ = new (__webpack_require__("chunkid")._)("FocusHistory"),
         _ = _.Debug;
-      var _;
-      !(function (_) {
-        (_[(_.eRestoreFocusIfHadFocus = 0)] = "eRestoreFocusIfHadFocus"),
-          (_[(_.eRestoreFocusAlways = 1)] = "eRestoreFocusAlways"),
-          (_[(_.eRestoreFocusNever = 2)] = "eRestoreFocusNever");
-      })(_ || (_ = {}));
       class _ {
         m_root;
         constructor(_) {
@@ -41262,16 +37248,11 @@
             }
           );
         }
-        static RestoreSerializedNavState(
-          _,
-          _,
-          __webpack_require__ = _.eRestoreFocusIfHadFocus,
-        ) {
+        static RestoreSerializedNavState(_, _, __webpack_require__ = 0) {
           const { root: _, bHadFocus: _ } = _;
           _.Tree.Controller.RestoreHistoryTransaction(() => {
             _.RestoreSerializedNavNode(_, _),
-              (__webpack_require__ == _.eRestoreFocusAlways ||
-                (__webpack_require__ == _.eRestoreFocusIfHadFocus && _)) &&
+              (1 == __webpack_require__ || (0 == __webpack_require__ && _)) &&
                 _.BTakeFocus(_._.APPLICATION);
           });
         }
@@ -41324,7 +37305,7 @@
         PushState() {
           this.m_rgHistory.push(_.SerializeNavState(this.m_root));
         }
-        PopState(_ = _.eRestoreFocusIfHadFocus) {
+        PopState(_ = 0) {
           this.m_rgHistory.length &&
             _.RestoreSerializedNavState(this.m_root, this.m_rgHistory.pop(), _);
         }
@@ -41334,7 +37315,7 @@
         SaveState(_) {
           this.m_mapHistory.set(_, _.SerializeNavState(this.m_root));
         }
-        RestoreState(_, _ = _.eRestoreFocusIfHadFocus) {
+        RestoreState(_, _ = 0) {
           const _ = this.m_mapHistory.get(_);
           return (
             !!_ &&
@@ -41380,14 +37361,14 @@
           this.m_History || (this.m_History = new _(this.m_node)),
             this.m_History.PushState();
         }
-        PopState(_ = _.eRestoreFocusIfHadFocus) {
+        PopState(_ = 0) {
           this.m_History && this.m_History.PopState(_);
         }
         SaveState(_) {
           this.m_StateHistory || (this.m_StateHistory = new _(this.m_node)),
             this.m_StateHistory.SaveState(_);
         }
-        RestoreState(_, _ = _.eRestoreFocusIfHadFocus) {
+        RestoreState(_, _ = 0) {
           return (
             !!this.m_StateHistory && this.m_StateHistory.RestoreState(_, _)
           );
@@ -41396,12 +37377,8 @@
           return (_ = this.m_node), _.SerializeNavState(_, !0, !1);
           var _;
         }
-        RestoreFocusSnapshot(_, _ = _.eRestoreFocusIfHadFocus) {
-          return (function (
-            _,
-            _,
-            __webpack_require__ = _.eRestoreFocusIfHadFocus,
-          ) {
+        RestoreFocusSnapshot(_, _ = 0) {
+          return (function (_, _, __webpack_require__ = 0) {
             return _.RestoreSerializedNavState(_, _, __webpack_require__);
           })(this.m_node, _, _);
         }
@@ -43245,205 +39222,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var _;
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      }),
-        (function (_) {
-          (_[(_.k_EResultOK = 1)] = "k_EResultOK"),
-            (_[(_.k_EResultFail = 2)] = "k_EResultFail"),
-            (_[(_.k_EResultNoConnection = 3)] = "k_EResultNoConnection"),
-            (_[(_.k_EResultInvalidPassword = 5)] = "k_EResultInvalidPassword"),
-            (_[(_.k_EResultLoggedInElsewhere = 6)] =
-              "k_EResultLoggedInElsewhere"),
-            (_[(_.k_EResultInvalidProtocolVer = 7)] =
-              "k_EResultInvalidProtocolVer"),
-            (_[(_.k_EResultInvalidParam = 8)] = "k_EResultInvalidParam"),
-            (_[(_.k_EResultFileNotFound = 9)] = "k_EResultFileNotFound"),
-            (_[(_.k_EResultBusy = 10)] = "k_EResultBusy"),
-            (_[(_.k_EResultInvalidState = 11)] = "k_EResultInvalidState"),
-            (_[(_.k_EResultInvalidName = 12)] = "k_EResultInvalidName"),
-            (_[(_.k_EResultInvalidEmail = 13)] = "k_EResultInvalidEmail"),
-            (_[(_.k_EResultDuplicateName = 14)] = "k_EResultDuplicateName"),
-            (_[(_.k_EResultAccessDenied = 15)] = "k_EResultAccessDenied"),
-            (_[(_.k_EResultTimeout = 16)] = "k_EResultTimeout"),
-            (_[(_.k_EResultBanned = 17)] = "k_EResultBanned"),
-            (_[(_.k_EResultAccountNotFound = 18)] = "k_EResultAccountNotFound"),
-            (_[(_.k_EResultInvalidSteamID = 19)] = "k_EResultInvalidSteamID"),
-            (_[(_.k_EResultServiceUnavailable = 20)] =
-              "k_EResultServiceUnavailable"),
-            (_[(_.k_EResultNotLoggedOn = 21)] = "k_EResultNotLoggedOn"),
-            (_[(_.k_EResultPending = 22)] = "k_EResultPending"),
-            (_[(_.k_EResultEncryptionFailure = 23)] =
-              "k_EResultEncryptionFailure"),
-            (_[(_.k_EResultInsufficientPrivilege = 24)] =
-              "k_EResultInsufficientPrivilege"),
-            (_[(_.k_EResultLimitExceeded = 25)] = "k_EResultLimitExceeded"),
-            (_[(_.k_EResultRevoked = 26)] = "k_EResultRevoked"),
-            (_[(_.k_EResultExpired = 27)] = "k_EResultExpired"),
-            (_[(_.k_EResultAlreadyRedeemed = 28)] = "k_EResultAlreadyRedeemed"),
-            (_[(_.k_EResultDuplicateRequest = 29)] =
-              "k_EResultDuplicateRequest"),
-            (_[(_.k_EResultAlreadyOwned = 30)] = "k_EResultAlreadyOwned"),
-            (_[(_.k_EResultIPNotFound = 31)] = "k_EResultIPNotFound"),
-            (_[(_.k_EResultPersistFailed = 32)] = "k_EResultPersistFailed"),
-            (_[(_.k_EResultLockingFailed = 33)] = "k_EResultLockingFailed"),
-            (_[(_.k_EResultLogonSessionReplaced = 34)] =
-              "k_EResultLogonSessionReplaced"),
-            (_[(_.k_EResultConnectFailed = 35)] = "k_EResultConnectFailed"),
-            (_[(_.k_EResultHandshakeFailed = 36)] = "k_EResultHandshakeFailed"),
-            (_[(_.k_EResultIOFailure = 37)] = "k_EResultIOFailure"),
-            (_[(_.k_EResultRemoteDisconnect = 38)] =
-              "k_EResultRemoteDisconnect"),
-            (_[(_.k_EResultShoppingCartNotFound = 39)] =
-              "k_EResultShoppingCartNotFound"),
-            (_[(_.k_EResultBlocked = 40)] = "k_EResultBlocked"),
-            (_[(_.k_EResultIgnored = 41)] = "k_EResultIgnored"),
-            (_[(_.k_EResultNoMatch = 42)] = "k_EResultNoMatch"),
-            (_[(_.k_EResultAccountDisabled = 43)] = "k_EResultAccountDisabled"),
-            (_[(_.k_EResultServiceReadOnly = 44)] = "k_EResultServiceReadOnly"),
-            (_[(_.k_EResultAccountNotFeatured = 45)] =
-              "k_EResultAccountNotFeatured"),
-            (_[(_.k_EResultAdministratorOK = 46)] = "k_EResultAdministratorOK"),
-            (_[(_.k_EResultContentVersion = 47)] = "k_EResultContentVersion"),
-            (_[(_.k_EResultTryAnotherCM = 48)] = "k_EResultTryAnotherCM"),
-            (_[(_.k_EResultPasswordRequiredToKickSession = 49)] =
-              "k_EResultPasswordRequiredToKickSession"),
-            (_[(_.k_EResultAlreadyLoggedInElsewhere = 50)] =
-              "k_EResultAlreadyLoggedInElsewhere"),
-            (_[(_.k_EResultSuspended = 51)] = "k_EResultSuspended"),
-            (_[(_.k_EResultCancelled = 52)] = "k_EResultCancelled"),
-            (_[(_.k_EResultDataCorruption = 53)] = "k_EResultDataCorruption"),
-            (_[(_.k_EResultDiskFull = 54)] = "k_EResultDiskFull"),
-            (_[(_.k_EResultRemoteCallFailed = 55)] =
-              "k_EResultRemoteCallFailed"),
-            (_[(_.k_EResultPasswordUnset = 56)] = "k_EResultPasswordUnset"),
-            (_[(_.k_EResultExternalAccountUnlinked = 57)] =
-              "k_EResultExternalAccountUnlinked"),
-            (_[(_.k_EResultPSNTicketInvalid = 58)] =
-              "k_EResultPSNTicketInvalid"),
-            (_[(_.k_EResultExternalAccountAlreadyLinked = 59)] =
-              "k_EResultExternalAccountAlreadyLinked"),
-            (_[(_.k_EResultRemoteFileConflict = 60)] =
-              "k_EResultRemoteFileConflict"),
-            (_[(_.k_EResultIllegalPassword = 61)] = "k_EResultIllegalPassword"),
-            (_[(_.k_EResultSameAsPreviousValue = 62)] =
-              "k_EResultSameAsPreviousValue"),
-            (_[(_.k_EResultAccountLogonDenied = 63)] =
-              "k_EResultAccountLogonDenied"),
-            (_[(_.k_EResultCannotUseOldPassword = 64)] =
-              "k_EResultCannotUseOldPassword"),
-            (_[(_.k_EResultInvalidLoginAuthCode = 65)] =
-              "k_EResultInvalidLoginAuthCode"),
-            (_[(_.k_EResultAccountLogonDeniedNoMail = 66)] =
-              "k_EResultAccountLogonDeniedNoMail"),
-            (_[(_.k_EResultHardwareNotCapableOfIPT = 67)] =
-              "k_EResultHardwareNotCapableOfIPT"),
-            (_[(_.k_EResultIPTInitError = 68)] = "k_EResultIPTInitError"),
-            (_[(_.k_EResultParentalControlRestricted = 69)] =
-              "k_EResultParentalControlRestricted"),
-            (_[(_.k_EResultFacebookQueryError = 70)] =
-              "k_EResultFacebookQueryError"),
-            (_[(_.k_EResultExpiredLoginAuthCode = 71)] =
-              "k_EResultExpiredLoginAuthCode"),
-            (_[(_.k_EResultIPLoginRestrictionFailed = 72)] =
-              "k_EResultIPLoginRestrictionFailed"),
-            (_[(_.k_EResultAccountLockedDown = 73)] =
-              "k_EResultAccountLockedDown"),
-            (_[(_.k_EResultAccountLogonDeniedVerifiedEmailRequired = 74)] =
-              "k_EResultAccountLogonDeniedVerifiedEmailRequired"),
-            (_[(_.k_EResultNoMatchingURL = 75)] = "k_EResultNoMatchingURL"),
-            (_[(_.k_EResultBadResponse = 76)] = "k_EResultBadResponse"),
-            (_[(_.k_EResultRequirePasswordReEntry = 77)] =
-              "k_EResultRequirePasswordReEntry"),
-            (_[(_.k_EResultValueOutOfRange = 78)] = "k_EResultValueOutOfRange"),
-            (_[(_.k_EResultUnexpectedError = 79)] = "k_EResultUnexpectedError"),
-            (_[(_.k_EResultDisabled = 80)] = "k_EResultDisabled"),
-            (_[(_.k_EResultInvalidCEGSubmission = 81)] =
-              "k_EResultInvalidCEGSubmission"),
-            (_[(_.k_EResultRestrictedDevice = 82)] =
-              "k_EResultRestrictedDevice"),
-            (_[(_.k_EResultRegionLocked = 83)] = "k_EResultRegionLocked"),
-            (_[(_.k_EResultRateLimitExceeded = 84)] =
-              "k_EResultRateLimitExceeded"),
-            (_[(_.k_EResultAccountLoginDeniedNeedTwoFactor = 85)] =
-              "k_EResultAccountLoginDeniedNeedTwoFactor"),
-            (_[(_.k_EResultItemDeleted = 86)] = "k_EResultItemDeleted"),
-            (_[(_.k_EResultAccountLoginDeniedThrottle = 87)] =
-              "k_EResultAccountLoginDeniedThrottle"),
-            (_[(_.k_EResultTwoFactorCodeMismatch = 88)] =
-              "k_EResultTwoFactorCodeMismatch"),
-            (_[(_.k_EResultTwoFactorActivationCodeMismatch = 89)] =
-              "k_EResultTwoFactorActivationCodeMismatch"),
-            (_[(_.k_EResultAccountAssociatedToMultiplePartners = 90)] =
-              "k_EResultAccountAssociatedToMultiplePartners"),
-            (_[(_.k_EResultNotModified = 91)] = "k_EResultNotModified"),
-            (_[(_.k_EResultNoMobileDevice = 92)] = "k_EResultNoMobileDevice"),
-            (_[(_.k_EResultTimeNotSynced = 93)] = "k_EResultTimeNotSynced"),
-            (_[(_.k_EResultSmsCodeFailed = 94)] = "k_EResultSmsCodeFailed"),
-            (_[(_.k_EResultAccountLimitExceeded = 95)] =
-              "k_EResultAccountLimitExceeded"),
-            (_[(_.k_EResultAccountActivityLimitExceeded = 96)] =
-              "k_EResultAccountActivityLimitExceeded"),
-            (_[(_.k_EResultPhoneActivityLimitExceeded = 97)] =
-              "k_EResultPhoneActivityLimitExceeded"),
-            (_[(_.k_EResultRefundToWallet = 98)] = "k_EResultRefundToWallet"),
-            (_[(_.k_EResultEmailSendFailure = 99)] =
-              "k_EResultEmailSendFailure"),
-            (_[(_.k_EResultNotSettled = 100)] = "k_EResultNotSettled"),
-            (_[(_.k_EResultNeedCaptcha = 101)] = "k_EResultNeedCaptcha"),
-            (_[(_.k_EResultGSLTDenied = 102)] = "k_EResultGSLTDenied"),
-            (_[(_.k_EResultGSOwnerDenied = 103)] = "k_EResultGSOwnerDenied"),
-            (_[(_.k_EResultInvalidItemType = 104)] =
-              "k_EResultInvalidItemType"),
-            (_[(_.k_EResultIPBanned = 105)] = "k_EResultIPBanned"),
-            (_[(_.k_EResultGSLTExpired = 106)] = "k_EResultGSLTExpired"),
-            (_[(_.k_EResultInsufficientFunds = 107)] =
-              "k_EResultInsufficientFunds"),
-            (_[(_.k_EResultTooManyPending = 108)] = "k_EResultTooManyPending"),
-            (_[(_.k_EResultNoSiteLicensesFound = 109)] =
-              "k_EResultNoSiteLicensesFound"),
-            (_[(_.k_EResultWGNetworkSendExceeded = 110)] =
-              "k_EResultWGNetworkSendExceeded"),
-            (_[(_.k_EResultAccountNotFriends = 111)] =
-              "k_EResultAccountNotFriends"),
-            (_[(_.k_EResultLimitedUserAccount = 112)] =
-              "k_EResultLimitedUserAccount"),
-            (_[(_.k_EResultCantRemoveItem = 113)] = "k_EResultCantRemoveItem"),
-            (_[(_.k_EResultAccountDeleted = 114)] = "k_EResultAccountDeleted"),
-            (_[(_.k_EResultExistingUserCancelledLicense = 115)] =
-              "k_EResultExistingUserCancelledLicense"),
-            (_[(_.k_EResultCommunityCooldown = 116)] =
-              "k_EResultCommunityCooldown"),
-            (_[(_.k_EResultNoLauncherSpecified = 117)] =
-              "k_EResultNoLauncherSpecified"),
-            (_[(_.k_EResultMustAgreeToSSA = 118)] = "k_EResultMustAgreeToSSA"),
-            (_[(_.k_EResultLauncherMigrated = 119)] =
-              "k_EResultLauncherMigrated"),
-            (_[(_.k_EResultSteamRealmMismatch = 120)] =
-              "k_EResultSteamRealmMismatch"),
-            (_[(_.k_EResultInvalidSignature = 121)] =
-              "k_EResultInvalidSignature"),
-            (_[(_.k_EResultParseFailure = 122)] = "k_EResultParseFailure"),
-            (_[(_.k_EResultNoVerifiedPhone = 123)] =
-              "k_EResultNoVerifiedPhone"),
-            (_[(_.k_EResultInsufficientBattery = 124)] =
-              "k_EResultInsufficientBattery"),
-            (_[(_.k_EResultChargerRequired = 125)] =
-              "k_EResultChargerRequired"),
-            (_[(_.k_EResultCachedCredentialInvalid = 126)] =
-              "k_EResultCachedCredentialInvalid"),
-            (_[(_.K_EResultPhoneNumberIsVOIP = 127)] =
-              "K_EResultPhoneNumberIsVOIP"),
-            (_[(_.k_EResultNotSupported = 128)] = "k_EResultNotSupported"),
-            (_[(_.k_EResultFamilySizeLimitExceeded = 129)] =
-              "k_EResultFamilySizeLimitExceeded"),
-            (_[(_.k_EResultOfflineAppCacheInvalid = 130)] =
-              "k_EResultOfflineAppCacheInvalid");
-        })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -43528,8 +39306,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
@@ -43639,7 +39415,7 @@
           return this.Hdr().eresult();
         }
         BSuccess() {
-          return this.Hdr().eresult() == _._.k_EResultOK;
+          return 1 == this.Hdr().eresult();
         }
         GetErrorMessage() {
           return this.Hdr().error_message()
@@ -43673,7 +39449,7 @@
         }
       }
       class _ extends _ {
-        constructor(_, _ = _._.k_EMsgInvalid, _, _, _) {
+        constructor(_, _ = 0, _, _, _) {
           super(_, _, _, _, void 0, _);
         }
         static InitFromPacket(_, _) {
@@ -43899,18 +39675,9 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EContentHubDiscountFilterType_None = 0)] =
-          "k_EContentHubDiscountFilterType_None"),
-          (_[(_.k_EContentHubDiscountFilterType_DiscountsOnly = 1)] =
-            "k_EContentHubDiscountFilterType_DiscountsOnly"),
-          (_[(_.k_EContentHubDiscountFilterType_PrioritizeDiscounts = 2)] =
-            "k_EContentHubDiscountFilterType_PrioritizeDiscounts");
-      })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -43932,7 +39699,7 @@
                   },
                   content_hub_filter: {
                     _: 2,
-                    _,
+                    _: _,
                   },
                   store_filters: {
                     _: 3,
@@ -44082,7 +39849,7 @@
                   },
                   optin: {
                     _: 5,
-                    _: _,
+                    _,
                   },
                 },
               }),
@@ -44267,3952 +40034,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var _, _, _, _, _, _;
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      }),
-        (function (_) {
-          (_[(_.k_EMsgInvalid = 0)] = "k_EMsgInvalid"),
-            (_[(_.k_EMsgMulti = 1)] = "k_EMsgMulti"),
-            (_[(_.k_EMsgProtobufWrapped = 2)] = "k_EMsgProtobufWrapped"),
-            (_[(_.k_EMsgBaseGeneral = 100)] = "k_EMsgBaseGeneral"),
-            (_[(_.k_EMsgGenericReply = 100)] = "k_EMsgGenericReply"),
-            (_[(_.k_EMsgDestJobFailed = 113)] = "k_EMsgDestJobFailed"),
-            (_[(_.k_EMsgAlert = 115)] = "k_EMsgAlert"),
-            (_[(_.k_EMsgSCIDRequest = 120)] = "k_EMsgSCIDRequest"),
-            (_[(_.k_EMsgSCIDResponse = 121)] = "k_EMsgSCIDResponse"),
-            (_[(_.k_EMsgJobHeartbeat = 123)] = "k_EMsgJobHeartbeat"),
-            (_[(_.k_EMsgHubConnect = 124)] = "k_EMsgHubConnect"),
-            (_[(_.k_EMsgSubscribe = 126)] = "k_EMsgSubscribe"),
-            (_[(_.k_EMRouteMessage = 127)] = "k_EMRouteMessage"),
-            (_[(_.k_EMsgWGRequest = 130)] = "k_EMsgWGRequest"),
-            (_[(_.k_EMsgWGResponse = 131)] = "k_EMsgWGResponse"),
-            (_[(_.k_EMsgKeepAlive = 132)] = "k_EMsgKeepAlive"),
-            (_[(_.k_EMsgWebAPIJobRequest = 133)] = "k_EMsgWebAPIJobRequest"),
-            (_[(_.k_EMsgWebAPIJobResponse = 134)] = "k_EMsgWebAPIJobResponse"),
-            (_[(_.k_EMsgClientSessionStart = 135)] =
-              "k_EMsgClientSessionStart"),
-            (_[(_.k_EMsgClientSessionEnd = 136)] = "k_EMsgClientSessionEnd"),
-            (_[(_.k_EMsgClientSessionUpdate = 137)] =
-              "k_EMsgClientSessionUpdate"),
-            (_[(_.k_EMsgStatsDeprecated = 138)] = "k_EMsgStatsDeprecated"),
-            (_[(_.k_EMsgPing = 139)] = "k_EMsgPing"),
-            (_[(_.k_EMsgPingResponse = 140)] = "k_EMsgPingResponse"),
-            (_[(_.k_EMsgStats = 141)] = "k_EMsgStats"),
-            (_[(_.k_EMsgRequestFullStatsBlock = 142)] =
-              "k_EMsgRequestFullStatsBlock"),
-            (_[(_.k_EMsgLoadDBOCacheItem = 143)] = "k_EMsgLoadDBOCacheItem"),
-            (_[(_.k_EMsgLoadDBOCacheItemResponse = 144)] =
-              "k_EMsgLoadDBOCacheItemResponse"),
-            (_[(_.k_EMsgInvalidateDBOCacheItems = 145)] =
-              "k_EMsgInvalidateDBOCacheItems"),
-            (_[(_.k_EMsgServiceMethod = 146)] = "k_EMsgServiceMethod"),
-            (_[(_.k_EMsgServiceMethodResponse = 147)] =
-              "k_EMsgServiceMethodResponse"),
-            (_[(_.k_EMsgClientPackageVersions = 148)] =
-              "k_EMsgClientPackageVersions"),
-            (_[(_.k_EMsgTimestampRequest = 149)] = "k_EMsgTimestampRequest"),
-            (_[(_.k_EMsgTimestampResponse = 150)] = "k_EMsgTimestampResponse"),
-            (_[(_.k_EMsgServiceMethodCallFromClient = 151)] =
-              "k_EMsgServiceMethodCallFromClient"),
-            (_[(_.k_EMsgServiceMethodSendToClient = 152)] =
-              "k_EMsgServiceMethodSendToClient"),
-            (_[(_.k_EMsgBaseShell = 200)] = "k_EMsgBaseShell"),
-            (_[(_.k_EMsgAssignSysID = 200)] = "k_EMsgAssignSysID"),
-            (_[(_.k_EMsgExit = 201)] = "k_EMsgExit"),
-            (_[(_.k_EMsgDirRequest = 202)] = "k_EMsgDirRequest"),
-            (_[(_.k_EMsgDirResponse = 203)] = "k_EMsgDirResponse"),
-            (_[(_.k_EMsgZipRequest = 204)] = "k_EMsgZipRequest"),
-            (_[(_.k_EMsgZipResponse = 205)] = "k_EMsgZipResponse"),
-            (_[(_.k_EMsgUpdateRecordResponse = 215)] =
-              "k_EMsgUpdateRecordResponse"),
-            (_[(_.k_EMsgUpdateCreditCardRequest = 221)] =
-              "k_EMsgUpdateCreditCardRequest"),
-            (_[(_.k_EMsgUpdateUserBanResponse = 225)] =
-              "k_EMsgUpdateUserBanResponse"),
-            (_[(_.k_EMsgPrepareToExit = 226)] = "k_EMsgPrepareToExit"),
-            (_[(_.k_EMsgContentDescriptionUpdate = 227)] =
-              "k_EMsgContentDescriptionUpdate"),
-            (_[(_.k_EMsgTestResetServer = 228)] = "k_EMsgTestResetServer"),
-            (_[(_.k_EMsgUniverseChanged = 229)] = "k_EMsgUniverseChanged"),
-            (_[(_.k_EMsgShellConfigInfoUpdate = 230)] =
-              "k_EMsgShellConfigInfoUpdate"),
-            (_[(_.k_EMsgRequestWindowsEventLogEntries = 233)] =
-              "k_EMsgRequestWindowsEventLogEntries"),
-            (_[(_.k_EMsgProvideWindowsEventLogEntries = 234)] =
-              "k_EMsgProvideWindowsEventLogEntries"),
-            (_[(_.k_EMsgShellSearchLogs = 235)] = "k_EMsgShellSearchLogs"),
-            (_[(_.k_EMsgShellSearchLogsResponse = 236)] =
-              "k_EMsgShellSearchLogsResponse"),
-            (_[(_.k_EMsgShellCheckWindowsUpdates = 237)] =
-              "k_EMsgShellCheckWindowsUpdates"),
-            (_[(_.k_EMsgShellCheckWindowsUpdatesResponse = 238)] =
-              "k_EMsgShellCheckWindowsUpdatesResponse"),
-            (_[(_.k_EMsgTestFlushDelayedSQL = 240)] =
-              "k_EMsgTestFlushDelayedSQL"),
-            (_[(_.k_EMsgTestFlushDelayedSQLResponse = 241)] =
-              "k_EMsgTestFlushDelayedSQLResponse"),
-            (_[(_.k_EMsgEnsureExecuteScheduledTask_TEST = 242)] =
-              "k_EMsgEnsureExecuteScheduledTask_TEST"),
-            (_[(_.k_EMsgEnsureExecuteScheduledTaskResponse_TEST = 243)] =
-              "k_EMsgEnsureExecuteScheduledTaskResponse_TEST"),
-            (_[(_.k_EMsgUpdateScheduledTaskEnableState_TEST = 244)] =
-              "k_EMsgUpdateScheduledTaskEnableState_TEST"),
-            (_[(_.k_EMsgUpdateScheduledTaskEnableStateResponse_TEST = 245)] =
-              "k_EMsgUpdateScheduledTaskEnableStateResponse_TEST"),
-            (_[(_.k_EMsgContentDescriptionDeltaUpdate = 246)] =
-              "k_EMsgContentDescriptionDeltaUpdate"),
-            (_[(_.k_EMsgGMShellAndServerAddressUpdates = 247)] =
-              "k_EMsgGMShellAndServerAddressUpdates"),
-            (_[(_.k_EMsgGMDynamicRoutingUpdate = 248)] =
-              "k_EMsgGMDynamicRoutingUpdate"),
-            (_[(_.k_EMsgEnsureBillingConfigReload_TEST = 249)] =
-              "k_EMsgEnsureBillingConfigReload_TEST"),
-            (_[(_.k_EMsgEnsureBillingConfigReloadResponse_TEST = 250)] =
-              "k_EMsgEnsureBillingConfigReloadResponse_TEST"),
-            (_[(_.k_EMsgBaseGM = 300)] = "k_EMsgBaseGM"),
-            (_[(_.k_EMsgHeartbeat = 300)] = "k_EMsgHeartbeat"),
-            (_[(_.k_EMsgShellFailed = 301)] = "k_EMsgShellFailed"),
-            (_[(_.k_EMsgExitShells = 307)] = "k_EMsgExitShells"),
-            (_[(_.k_EMsgExitShell = 308)] = "k_EMsgExitShell"),
-            (_[(_.k_EMsgGracefulExitShell = 309)] = "k_EMsgGracefulExitShell"),
-            (_[(_.k_EMsgLicenseProcessingComplete = 316)] =
-              "k_EMsgLicenseProcessingComplete"),
-            (_[(_.k_EMsgSetTestFlag = 317)] = "k_EMsgSetTestFlag"),
-            (_[(_.k_EMsgQueuedEmailsComplete = 318)] =
-              "k_EMsgQueuedEmailsComplete"),
-            (_[(_.k_EMsgGMDRMSync = 320)] = "k_EMsgGMDRMSync"),
-            (_[(_.k_EMsgPhysicalBoxInventory = 321)] =
-              "k_EMsgPhysicalBoxInventory"),
-            (_[(_.k_EMsgUpdateConfigFile = 322)] = "k_EMsgUpdateConfigFile"),
-            (_[(_.k_EMsgTestInitDB = 323)] = "k_EMsgTestInitDB"),
-            (_[(_.k_EMsgGMWriteConfigToSQL = 324)] =
-              "k_EMsgGMWriteConfigToSQL"),
-            (_[(_.k_EMsgGMLoadActivationCodes = 325)] =
-              "k_EMsgGMLoadActivationCodes"),
-            (_[(_.k_EMsgGMQueueForFBS = 326)] = "k_EMsgGMQueueForFBS"),
-            (_[(_.k_EMsgGMSchemaConversionResults = 327)] =
-              "k_EMsgGMSchemaConversionResults"),
-            (_[(_.k_EMsgGMWriteShellFailureToSQL = 329)] =
-              "k_EMsgGMWriteShellFailureToSQL"),
-            (_[(_.k_EMsgGMGetServiceMethodRouting = 331)] =
-              "k_EMsgGMGetServiceMethodRouting"),
-            (_[(_.k_EMsgGMGetServiceMethodRoutingResponse = 332)] =
-              "k_EMsgGMGetServiceMethodRoutingResponse"),
-            (_[(_.k_EMsgGMTestNextBuildSchemaConversion = 334)] =
-              "k_EMsgGMTestNextBuildSchemaConversion"),
-            (_[(_.k_EMsgGMTestNextBuildSchemaConversionResponse = 335)] =
-              "k_EMsgGMTestNextBuildSchemaConversionResponse"),
-            (_[(_.k_EMsgExpectShellRestart = 336)] =
-              "k_EMsgExpectShellRestart"),
-            (_[(_.k_EMsgHotFixProgress = 337)] = "k_EMsgHotFixProgress"),
-            (_[(_.k_EMsgGMStatsForwardToAdminConnections = 338)] =
-              "k_EMsgGMStatsForwardToAdminConnections"),
-            (_[(_.k_EMsgGMGetModifiedConVars = 339)] =
-              "k_EMsgGMGetModifiedConVars"),
-            (_[(_.k_EMsgGMGetModifiedConVarsResponse = 340)] =
-              "k_EMsgGMGetModifiedConVarsResponse"),
-            (_[(_.k_EMsgBaseAIS = 400)] = "k_EMsgBaseAIS"),
-            (_[(_.k_EMsgAISRequestContentDescription = 402)] =
-              "k_EMsgAISRequestContentDescription"),
-            (_[(_.k_EMsgAISGetPackageChangeNumber = 405)] =
-              "k_EMsgAISGetPackageChangeNumber"),
-            (_[(_.k_EMsgAISGetPackageChangeNumberResponse = 406)] =
-              "k_EMsgAISGetPackageChangeNumberResponse"),
-            (_[(_.k_EMsgAIGetAppGCFlags = 423)] = "k_EMsgAIGetAppGCFlags"),
-            (_[(_.k_EMsgAIGetAppGCFlagsResponse = 424)] =
-              "k_EMsgAIGetAppGCFlagsResponse"),
-            (_[(_.k_EMsgAIGetAppList = 425)] = "k_EMsgAIGetAppList"),
-            (_[(_.k_EMsgAIGetAppListResponse = 426)] =
-              "k_EMsgAIGetAppListResponse"),
-            (_[(_.k_EMsgAISGetCouponDefinition = 429)] =
-              "k_EMsgAISGetCouponDefinition"),
-            (_[(_.k_EMsgAISGetCouponDefinitionResponse = 430)] =
-              "k_EMsgAISGetCouponDefinitionResponse"),
-            (_[(_.k_EMsgAISUpdateSubordinateContentDescription = 431)] =
-              "k_EMsgAISUpdateSubordinateContentDescription"),
-            (_[(_.k_EMsgAISUpdateSubordinateContentDescriptionResponse = 432)] =
-              "k_EMsgAISUpdateSubordinateContentDescriptionResponse"),
-            (_[(_.k_EMsgAISBroadcastSubordinateContentDescription = 434)] =
-              "k_EMsgAISBroadcastSubordinateContentDescription"),
-            (_[(_.k_EMsgBaseAM = 500)] = "k_EMsgBaseAM"),
-            (_[(_.k_EMsgAMUpdateUserBanRequest = 504)] =
-              "k_EMsgAMUpdateUserBanRequest"),
-            (_[(_.k_EMsgAMAddLicense = 505)] = "k_EMsgAMAddLicense"),
-            (_[(_.k_EMsgAMSendSystemIMToUser = 508)] =
-              "k_EMsgAMSendSystemIMToUser"),
-            (_[(_.k_EMsgAMExtendLicense = 509)] = "k_EMsgAMExtendLicense"),
-            (_[(_.k_EMsgAMAddMinutesToLicense = 510)] =
-              "k_EMsgAMAddMinutesToLicense"),
-            (_[(_.k_EMsgAMCancelLicense = 511)] = "k_EMsgAMCancelLicense"),
-            (_[(_.k_EMsgAMInitPurchase = 512)] = "k_EMsgAMInitPurchase"),
-            (_[(_.k_EMsgAMPurchaseResponse = 513)] =
-              "k_EMsgAMPurchaseResponse"),
-            (_[(_.k_EMsgAMGetLegacyGameKey = 516)] =
-              "k_EMsgAMGetLegacyGameKey"),
-            (_[(_.k_EMsgAMGetLegacyGameKeyResponse = 517)] =
-              "k_EMsgAMGetLegacyGameKeyResponse"),
-            (_[(_.k_EMsgAMFindHungTransactions = 518)] =
-              "k_EMsgAMFindHungTransactions"),
-            (_[(_.k_EMsgAMSetAccountTrustedRequest = 519)] =
-              "k_EMsgAMSetAccountTrustedRequest"),
-            (_[(_.k_EMsgAMCancelPurchase = 522)] = "k_EMsgAMCancelPurchase"),
-            (_[(_.k_EMsgAMNewChallenge = 523)] = "k_EMsgAMNewChallenge"),
-            (_[(_.k_EMsgAMFixPendingPurchase = 525)] =
-              "k_EMsgAMFixPendingPurchase"),
-            (_[(_.k_EMsgAMFixPendingPurchaseResponse = 526)] =
-              "k_EMsgAMFixPendingPurchaseResponse"),
-            (_[(_.k_EMsgAMIsUserBanned = 527)] = "k_EMsgAMIsUserBanned"),
-            (_[(_.k_EMsgAMRegisterKey = 528)] = "k_EMsgAMRegisterKey"),
-            (_[(_.k_EMsgAMLoadActivationCodes = 529)] =
-              "k_EMsgAMLoadActivationCodes"),
-            (_[(_.k_EMsgAMLoadActivationCodesResponse = 530)] =
-              "k_EMsgAMLoadActivationCodesResponse"),
-            (_[(_.k_EMsgAMLookupKeyResponse = 531)] =
-              "k_EMsgAMLookupKeyResponse"),
-            (_[(_.k_EMsgAMLookupKey = 532)] = "k_EMsgAMLookupKey"),
-            (_[(_.k_EMsgAMChatCleanup = 533)] = "k_EMsgAMChatCleanup"),
-            (_[(_.k_EMsgAMClanCleanup = 534)] = "k_EMsgAMClanCleanup"),
-            (_[(_.k_EMsgAMFixPendingRefund = 535)] =
-              "k_EMsgAMFixPendingRefund"),
-            (_[(_.k_EMsgAMReverseChargeback = 536)] =
-              "k_EMsgAMReverseChargeback"),
-            (_[(_.k_EMsgAMReverseChargebackResponse = 537)] =
-              "k_EMsgAMReverseChargebackResponse"),
-            (_[(_.k_EMsgAMClanCleanupList = 538)] = "k_EMsgAMClanCleanupList"),
-            (_[(_.k_EMsgAMSendCartRepurchase = 541)] =
-              "k_EMsgAMSendCartRepurchase"),
-            (_[(_.k_EMsgAMSendCartRepurchaseResponse = 542)] =
-              "k_EMsgAMSendCartRepurchaseResponse"),
-            (_[(_.k_EMsgAllowUserToPlayQuery = 550)] =
-              "k_EMsgAllowUserToPlayQuery"),
-            (_[(_.k_EMsgAllowUserToPlayResponse = 551)] =
-              "k_EMsgAllowUserToPlayResponse"),
-            (_[(_.k_EMsgAMVerfiyUser = 552)] = "k_EMsgAMVerfiyUser"),
-            (_[(_.k_EMsgAMClientNotPlaying = 553)] =
-              "k_EMsgAMClientNotPlaying"),
-            (_[(_.k_EMsgAMClientRequestFriendship = 554)] =
-              "k_EMsgAMClientRequestFriendship"),
-            (_[(_.k_EMsgAMRelayPublishStatus = 555)] =
-              "k_EMsgAMRelayPublishStatus"),
-            (_[(_.k_EMsgAMInitPurchaseResponse = 560)] =
-              "k_EMsgAMInitPurchaseResponse"),
-            (_[(_.k_EMsgAMRevokePurchaseResponse = 561)] =
-              "k_EMsgAMRevokePurchaseResponse"),
-            (_[(_.k_EMsgAMRefreshGuestPasses = 563)] =
-              "k_EMsgAMRefreshGuestPasses"),
-            (_[(_.k_EMsgAMGrantGuestPasses = 566)] =
-              "k_EMsgAMGrantGuestPasses"),
-            (_[(_.k_EMsgAMClanDataUpdated = 567)] = "k_EMsgAMClanDataUpdated"),
-            (_[(_.k_EMsgAMReloadAccount = 568)] = "k_EMsgAMReloadAccount"),
-            (_[(_.k_EMsgAMClientChatMsgRelay = 569)] =
-              "k_EMsgAMClientChatMsgRelay"),
-            (_[(_.k_EMsgAMChatMulti = 570)] = "k_EMsgAMChatMulti"),
-            (_[(_.k_EMsgAMClientChatInviteRelay = 571)] =
-              "k_EMsgAMClientChatInviteRelay"),
-            (_[(_.k_EMsgAMChatInvite = 572)] = "k_EMsgAMChatInvite"),
-            (_[(_.k_EMsgAMClientJoinChatRelay = 573)] =
-              "k_EMsgAMClientJoinChatRelay"),
-            (_[(_.k_EMsgAMClientChatMemberInfoRelay = 574)] =
-              "k_EMsgAMClientChatMemberInfoRelay"),
-            (_[(_.k_EMsgAMPublishChatMemberInfo = 575)] =
-              "k_EMsgAMPublishChatMemberInfo"),
-            (_[(_.k_EMsgAMClientAcceptFriendInvite = 576)] =
-              "k_EMsgAMClientAcceptFriendInvite"),
-            (_[(_.k_EMsgAMChatEnter = 577)] = "k_EMsgAMChatEnter"),
-            (_[(_.k_EMsgAMClientPublishRemovalFromSource = 578)] =
-              "k_EMsgAMClientPublishRemovalFromSource"),
-            (_[(_.k_EMsgAMChatActionResult = 579)] =
-              "k_EMsgAMChatActionResult"),
-            (_[(_.k_EMsgAMFindAccounts = 580)] = "k_EMsgAMFindAccounts"),
-            (_[(_.k_EMsgAMFindAccountsResponse = 581)] =
-              "k_EMsgAMFindAccountsResponse"),
-            (_[(_.k_EMsgAMIsAccountNameInUse = 582)] =
-              "k_EMsgAMIsAccountNameInUse"),
-            (_[(_.k_EMsgAMIsAccountNameInUseResponse = 583)] =
-              "k_EMsgAMIsAccountNameInUseResponse"),
-            (_[(_.k_EMsgAMSetAccountFlags = 584)] = "k_EMsgAMSetAccountFlags"),
-            (_[(_.k_EMsgAMCreateClan = 586)] = "k_EMsgAMCreateClan"),
-            (_[(_.k_EMsgAMCreateClanResponse = 587)] =
-              "k_EMsgAMCreateClanResponse"),
-            (_[(_.k_EMsgAMGetClanDetails = 588)] = "k_EMsgAMGetClanDetails"),
-            (_[(_.k_EMsgAMGetClanDetailsResponse = 589)] =
-              "k_EMsgAMGetClanDetailsResponse"),
-            (_[(_.k_EMsgAMSetPersonaName = 590)] = "k_EMsgAMSetPersonaName"),
-            (_[(_.k_EMsgAMSetAvatar = 591)] = "k_EMsgAMSetAvatar"),
-            (_[(_.k_EMsgAMAuthenticateUser = 592)] =
-              "k_EMsgAMAuthenticateUser"),
-            (_[(_.k_EMsgAMAuthenticateUserResponse = 593)] =
-              "k_EMsgAMAuthenticateUserResponse"),
-            (_[(_.k_EMsgAMP2PIntroducerMessage = 596)] =
-              "k_EMsgAMP2PIntroducerMessage"),
-            (_[(_.k_EMsgClientChatAction = 597)] = "k_EMsgClientChatAction"),
-            (_[(_.k_EMsgAMClientChatActionRelay = 598)] =
-              "k_EMsgAMClientChatActionRelay"),
-            (_[(_.k_EMsgBaseVS = 600)] = "k_EMsgBaseVS"),
-            (_[(_.k_EMsgReqChallenge = 600)] = "k_EMsgReqChallenge"),
-            (_[(_.k_EMsgVACResponse = 601)] = "k_EMsgVACResponse"),
-            (_[(_.k_EMsgReqChallengeTest = 602)] = "k_EMsgReqChallengeTest"),
-            (_[(_.k_EMsgVSMarkCheat = 604)] = "k_EMsgVSMarkCheat"),
-            (_[(_.k_EMsgVSAddCheat = 605)] = "k_EMsgVSAddCheat"),
-            (_[(_.k_EMsgVSPurgeCodeModDB = 606)] = "k_EMsgVSPurgeCodeModDB"),
-            (_[(_.k_EMsgVSGetChallengeResults = 607)] =
-              "k_EMsgVSGetChallengeResults"),
-            (_[(_.k_EMsgVSChallengeResultText = 608)] =
-              "k_EMsgVSChallengeResultText"),
-            (_[(_.k_EMsgVSReportLingerer = 609)] = "k_EMsgVSReportLingerer"),
-            (_[(_.k_EMsgVSRequestManagedChallenge = 610)] =
-              "k_EMsgVSRequestManagedChallenge"),
-            (_[(_.k_EMsgVSLoadDBFinished = 611)] = "k_EMsgVSLoadDBFinished"),
-            (_[(_.k_EMsgBaseDRMS = 625)] = "k_EMsgBaseDRMS"),
-            (_[(_.k_EMsgDRMBuildBlobRequest = 628)] =
-              "k_EMsgDRMBuildBlobRequest"),
-            (_[(_.k_EMsgDRMBuildBlobResponse = 629)] =
-              "k_EMsgDRMBuildBlobResponse"),
-            (_[(_.k_EMsgDRMResolveGuidRequest = 630)] =
-              "k_EMsgDRMResolveGuidRequest"),
-            (_[(_.k_EMsgDRMResolveGuidResponse = 631)] =
-              "k_EMsgDRMResolveGuidResponse"),
-            (_[(_.k_EMsgDRMVariabilityReport = 633)] =
-              "k_EMsgDRMVariabilityReport"),
-            (_[(_.k_EMsgDRMVariabilityReportResponse = 634)] =
-              "k_EMsgDRMVariabilityReportResponse"),
-            (_[(_.k_EMsgDRMStabilityReport = 635)] =
-              "k_EMsgDRMStabilityReport"),
-            (_[(_.k_EMsgDRMStabilityReportResponse = 636)] =
-              "k_EMsgDRMStabilityReportResponse"),
-            (_[(_.k_EMsgDRMDetailsReportRequest = 637)] =
-              "k_EMsgDRMDetailsReportRequest"),
-            (_[(_.k_EMsgDRMDetailsReportResponse = 638)] =
-              "k_EMsgDRMDetailsReportResponse"),
-            (_[(_.k_EMsgDRMProcessFile = 639)] = "k_EMsgDRMProcessFile"),
-            (_[(_.k_EMsgDRMAdminUpdate = 640)] = "k_EMsgDRMAdminUpdate"),
-            (_[(_.k_EMsgDRMAdminUpdateResponse = 641)] =
-              "k_EMsgDRMAdminUpdateResponse"),
-            (_[(_.k_EMsgDRMSync = 642)] = "k_EMsgDRMSync"),
-            (_[(_.k_EMsgDRMSyncResponse = 643)] = "k_EMsgDRMSyncResponse"),
-            (_[(_.k_EMsgDRMProcessFileResponse = 644)] =
-              "k_EMsgDRMProcessFileResponse"),
-            (_[(_.k_EMsgDRMEmptyGuidCache = 645)] = "k_EMsgDRMEmptyGuidCache"),
-            (_[(_.k_EMsgDRMEmptyGuidCacheResponse = 646)] =
-              "k_EMsgDRMEmptyGuidCacheResponse"),
-            (_[(_.k_EMsgBaseCS = 650)] = "k_EMsgBaseCS"),
-            (_[(_.k_EMsgBaseClient = 700)] = "k_EMsgBaseClient"),
-            (_[(_.k_EMsgClientLogOn_Deprecated = 701)] =
-              "k_EMsgClientLogOn_Deprecated"),
-            (_[(_.k_EMsgClientAnonLogOn_Deprecated = 702)] =
-              "k_EMsgClientAnonLogOn_Deprecated"),
-            (_[(_.k_EMsgClientHeartBeat = 703)] = "k_EMsgClientHeartBeat"),
-            (_[(_.k_EMsgClientVACResponse = 704)] = "k_EMsgClientVACResponse"),
-            (_[(_.k_EMsgClientGamesPlayed_obsolete = 705)] =
-              "k_EMsgClientGamesPlayed_obsolete"),
-            (_[(_.k_EMsgClientLogOff = 706)] = "k_EMsgClientLogOff"),
-            (_[(_.k_EMsgClientNoUDPConnectivity = 707)] =
-              "k_EMsgClientNoUDPConnectivity"),
-            (_[(_.k_EMsgClientConnectionStats = 710)] =
-              "k_EMsgClientConnectionStats"),
-            (_[(_.k_EMsgClientPingResponse = 712)] =
-              "k_EMsgClientPingResponse"),
-            (_[(_.k_EMsgClientRemoveFriend = 714)] =
-              "k_EMsgClientRemoveFriend"),
-            (_[(_.k_EMsgClientGamesPlayedNoDataBlob = 715)] =
-              "k_EMsgClientGamesPlayedNoDataBlob"),
-            (_[(_.k_EMsgClientChangeStatus = 716)] =
-              "k_EMsgClientChangeStatus"),
-            (_[(_.k_EMsgClientVacStatusResponse = 717)] =
-              "k_EMsgClientVacStatusResponse"),
-            (_[(_.k_EMsgClientFriendMsg = 718)] = "k_EMsgClientFriendMsg"),
-            (_[(_.k_EMsgClientGameConnect_obsolete = 719)] =
-              "k_EMsgClientGameConnect_obsolete"),
-            (_[(_.k_EMsgClientGamesPlayed2_obsolete = 720)] =
-              "k_EMsgClientGamesPlayed2_obsolete"),
-            (_[(_.k_EMsgClientGameEnded_obsolete = 721)] =
-              "k_EMsgClientGameEnded_obsolete"),
-            (_[(_.k_EMsgClientSystemIM = 726)] = "k_EMsgClientSystemIM"),
-            (_[(_.k_EMsgClientSystemIMAck = 727)] = "k_EMsgClientSystemIMAck"),
-            (_[(_.k_EMsgClientGetLicenses = 728)] = "k_EMsgClientGetLicenses"),
-            (_[(_.k_EMsgClientGetLegacyGameKey = 730)] =
-              "k_EMsgClientGetLegacyGameKey"),
-            (_[(_.k_EMsgClientContentServerLogOn_Deprecated = 731)] =
-              "k_EMsgClientContentServerLogOn_Deprecated"),
-            (_[(_.k_EMsgClientAckVACBan2 = 732)] = "k_EMsgClientAckVACBan2"),
-            (_[(_.k_EMsgClientGetPurchaseReceipts = 736)] =
-              "k_EMsgClientGetPurchaseReceipts"),
-            (_[(_.k_EMsgClientGamesPlayed3_obsolete = 738)] =
-              "k_EMsgClientGamesPlayed3_obsolete"),
-            (_[(_.k_EMsgClientAckGuestPass = 740)] =
-              "k_EMsgClientAckGuestPass"),
-            (_[(_.k_EMsgClientRedeemGuestPass = 741)] =
-              "k_EMsgClientRedeemGuestPass"),
-            (_[(_.k_EMsgClientGamesPlayed = 742)] = "k_EMsgClientGamesPlayed"),
-            (_[(_.k_EMsgClientRegisterKey = 743)] = "k_EMsgClientRegisterKey"),
-            (_[(_.k_EMsgClientInviteUserToClan = 744)] =
-              "k_EMsgClientInviteUserToClan"),
-            (_[(_.k_EMsgClientAcknowledgeClanInvite = 745)] =
-              "k_EMsgClientAcknowledgeClanInvite"),
-            (_[(_.k_EMsgClientPurchaseWithMachineID = 746)] =
-              "k_EMsgClientPurchaseWithMachineID"),
-            (_[(_.k_EMsgClientAppUsageEvent = 747)] =
-              "k_EMsgClientAppUsageEvent"),
-            (_[(_.k_EMsgClientLogOnResponse = 751)] =
-              "k_EMsgClientLogOnResponse"),
-            (_[(_.k_EMsgClientSetHeartbeatRate = 755)] =
-              "k_EMsgClientSetHeartbeatRate"),
-            (_[(_.k_EMsgClientNotLoggedOnDeprecated = 756)] =
-              "k_EMsgClientNotLoggedOnDeprecated"),
-            (_[(_.k_EMsgClientLoggedOff = 757)] = "k_EMsgClientLoggedOff"),
-            (_[(_.k_EMsgGSApprove = 758)] = "k_EMsgGSApprove"),
-            (_[(_.k_EMsgGSDeny = 759)] = "k_EMsgGSDeny"),
-            (_[(_.k_EMsgGSKick = 760)] = "k_EMsgGSKick"),
-            (_[(_.k_EMsgClientPurchaseResponse = 763)] =
-              "k_EMsgClientPurchaseResponse"),
-            (_[(_.k_EMsgClientPing = 764)] = "k_EMsgClientPing"),
-            (_[(_.k_EMsgClientNOP = 765)] = "k_EMsgClientNOP"),
-            (_[(_.k_EMsgClientPersonaState = 766)] =
-              "k_EMsgClientPersonaState"),
-            (_[(_.k_EMsgClientFriendsList = 767)] = "k_EMsgClientFriendsList"),
-            (_[(_.k_EMsgClientAccountInfo = 768)] = "k_EMsgClientAccountInfo"),
-            (_[(_.k_EMsgClientNewsUpdate = 771)] = "k_EMsgClientNewsUpdate"),
-            (_[(_.k_EMsgClientGameConnectDeny = 773)] =
-              "k_EMsgClientGameConnectDeny"),
-            (_[(_.k_EMsgGSStatusReply = 774)] = "k_EMsgGSStatusReply"),
-            (_[(_.k_EMsgClientGameConnectTokens = 779)] =
-              "k_EMsgClientGameConnectTokens"),
-            (_[(_.k_EMsgClientLicenseList = 780)] = "k_EMsgClientLicenseList"),
-            (_[(_.k_EMsgClientVACBanStatus = 782)] =
-              "k_EMsgClientVACBanStatus"),
-            (_[(_.k_EMsgClientEncryptPct = 784)] = "k_EMsgClientEncryptPct"),
-            (_[(_.k_EMsgClientGetLegacyGameKeyResponse = 785)] =
-              "k_EMsgClientGetLegacyGameKeyResponse"),
-            (_[(_.k_EMsgClientAddFriend = 791)] = "k_EMsgClientAddFriend"),
-            (_[(_.k_EMsgClientAddFriendResponse = 792)] =
-              "k_EMsgClientAddFriendResponse"),
-            (_[(_.k_EMsgClientAckGuestPassResponse = 796)] =
-              "k_EMsgClientAckGuestPassResponse"),
-            (_[(_.k_EMsgClientRedeemGuestPassResponse = 797)] =
-              "k_EMsgClientRedeemGuestPassResponse"),
-            (_[(_.k_EMsgClientUpdateGuestPassesList = 798)] =
-              "k_EMsgClientUpdateGuestPassesList"),
-            (_[(_.k_EMsgClientChatMsg = 799)] = "k_EMsgClientChatMsg"),
-            (_[(_.k_EMsgClientChatInvite = 800)] = "k_EMsgClientChatInvite"),
-            (_[(_.k_EMsgClientJoinChat = 801)] = "k_EMsgClientJoinChat"),
-            (_[(_.k_EMsgClientChatMemberInfo = 802)] =
-              "k_EMsgClientChatMemberInfo"),
-            (_[(_.k_EMsgClientLogOnWithCredentials_Deprecated = 803)] =
-              "k_EMsgClientLogOnWithCredentials_Deprecated"),
-            (_[(_.k_EMsgClientPasswordChangeResponse = 805)] =
-              "k_EMsgClientPasswordChangeResponse"),
-            (_[(_.k_EMsgClientChatEnter = 807)] = "k_EMsgClientChatEnter"),
-            (_[(_.k_EMsgClientFriendRemovedFromSource = 808)] =
-              "k_EMsgClientFriendRemovedFromSource"),
-            (_[(_.k_EMsgClientCreateChat = 809)] = "k_EMsgClientCreateChat"),
-            (_[(_.k_EMsgClientCreateChatResponse = 810)] =
-              "k_EMsgClientCreateChatResponse"),
-            (_[(_.k_EMsgClientP2PIntroducerMessage = 813)] =
-              "k_EMsgClientP2PIntroducerMessage"),
-            (_[(_.k_EMsgClientChatActionResult = 814)] =
-              "k_EMsgClientChatActionResult"),
-            (_[(_.k_EMsgClientRequestFriendData = 815)] =
-              "k_EMsgClientRequestFriendData"),
-            (_[(_.k_EMsgClientGetUserStats = 818)] =
-              "k_EMsgClientGetUserStats"),
-            (_[(_.k_EMsgClientGetUserStatsResponse = 819)] =
-              "k_EMsgClientGetUserStatsResponse"),
-            (_[(_.k_EMsgClientStoreUserStats = 820)] =
-              "k_EMsgClientStoreUserStats"),
-            (_[(_.k_EMsgClientStoreUserStatsResponse = 821)] =
-              "k_EMsgClientStoreUserStatsResponse"),
-            (_[(_.k_EMsgClientClanState = 822)] = "k_EMsgClientClanState"),
-            (_[(_.k_EMsgClientServiceModule = 830)] =
-              "k_EMsgClientServiceModule"),
-            (_[(_.k_EMsgClientServiceCall = 831)] = "k_EMsgClientServiceCall"),
-            (_[(_.k_EMsgClientServiceCallResponse = 832)] =
-              "k_EMsgClientServiceCallResponse"),
-            (_[(_.k_EMsgClientNatTraversalStatEvent = 839)] =
-              "k_EMsgClientNatTraversalStatEvent"),
-            (_[(_.k_EMsgClientSteamUsageEvent = 842)] =
-              "k_EMsgClientSteamUsageEvent"),
-            (_[(_.k_EMsgClientCheckPassword = 845)] =
-              "k_EMsgClientCheckPassword"),
-            (_[(_.k_EMsgClientResetPassword = 846)] =
-              "k_EMsgClientResetPassword"),
-            (_[(_.k_EMsgClientCheckPasswordResponse = 848)] =
-              "k_EMsgClientCheckPasswordResponse"),
-            (_[(_.k_EMsgClientResetPasswordResponse = 849)] =
-              "k_EMsgClientResetPasswordResponse"),
-            (_[(_.k_EMsgClientSessionToken = 850)] =
-              "k_EMsgClientSessionToken"),
-            (_[(_.k_EMsgClientDRMProblemReport = 851)] =
-              "k_EMsgClientDRMProblemReport"),
-            (_[(_.k_EMsgClientSetIgnoreFriend = 855)] =
-              "k_EMsgClientSetIgnoreFriend"),
-            (_[(_.k_EMsgClientSetIgnoreFriendResponse = 856)] =
-              "k_EMsgClientSetIgnoreFriendResponse"),
-            (_[(_.k_EMsgClientGetAppOwnershipTicket = 857)] =
-              "k_EMsgClientGetAppOwnershipTicket"),
-            (_[(_.k_EMsgClientGetAppOwnershipTicketResponse = 858)] =
-              "k_EMsgClientGetAppOwnershipTicketResponse"),
-            (_[(_.k_EMsgClientGetLobbyListResponse = 860)] =
-              "k_EMsgClientGetLobbyListResponse"),
-            (_[(_.k_EMsgClientServerList = 880)] = "k_EMsgClientServerList"),
-            (_[(_.k_EMsgClientDRMBlobRequest = 896)] =
-              "k_EMsgClientDRMBlobRequest"),
-            (_[(_.k_EMsgClientDRMBlobResponse = 897)] =
-              "k_EMsgClientDRMBlobResponse"),
-            (_[(_.k_EMsgBaseGameServer = 900)] = "k_EMsgBaseGameServer"),
-            (_[(_.k_EMsgGSDisconnectNotice = 901)] =
-              "k_EMsgGSDisconnectNotice"),
-            (_[(_.k_EMsgGSStatus = 903)] = "k_EMsgGSStatus"),
-            (_[(_.k_EMsgGSUserPlaying = 905)] = "k_EMsgGSUserPlaying"),
-            (_[(_.k_EMsgGSStatus2 = 906)] = "k_EMsgGSStatus2"),
-            (_[(_.k_EMsgGSStatusUpdate_Unused = 907)] =
-              "k_EMsgGSStatusUpdate_Unused"),
-            (_[(_.k_EMsgGSServerType = 908)] = "k_EMsgGSServerType"),
-            (_[(_.k_EMsgGSPlayerList = 909)] = "k_EMsgGSPlayerList"),
-            (_[(_.k_EMsgGSGetUserAchievementStatus = 910)] =
-              "k_EMsgGSGetUserAchievementStatus"),
-            (_[(_.k_EMsgGSGetUserAchievementStatusResponse = 911)] =
-              "k_EMsgGSGetUserAchievementStatusResponse"),
-            (_[(_.k_EMsgGSGetPlayStats = 918)] = "k_EMsgGSGetPlayStats"),
-            (_[(_.k_EMsgGSGetPlayStatsResponse = 919)] =
-              "k_EMsgGSGetPlayStatsResponse"),
-            (_[(_.k_EMsgGSGetUserGroupStatus = 920)] =
-              "k_EMsgGSGetUserGroupStatus"),
-            (_[(_.k_EMsgAMGetUserGroupStatus = 921)] =
-              "k_EMsgAMGetUserGroupStatus"),
-            (_[(_.k_EMsgAMGetUserGroupStatusResponse = 922)] =
-              "k_EMsgAMGetUserGroupStatusResponse"),
-            (_[(_.k_EMsgGSGetUserGroupStatusResponse = 923)] =
-              "k_EMsgGSGetUserGroupStatusResponse"),
-            (_[(_.k_EMsgGSGetReputation = 936)] = "k_EMsgGSGetReputation"),
-            (_[(_.k_EMsgGSGetReputationResponse = 937)] =
-              "k_EMsgGSGetReputationResponse"),
-            (_[(_.k_EMsgGSAssociateWithClan = 938)] =
-              "k_EMsgGSAssociateWithClan"),
-            (_[(_.k_EMsgGSAssociateWithClanResponse = 939)] =
-              "k_EMsgGSAssociateWithClanResponse"),
-            (_[(_.k_EMsgGSComputeNewPlayerCompatibility = 940)] =
-              "k_EMsgGSComputeNewPlayerCompatibility"),
-            (_[(_.k_EMsgGSComputeNewPlayerCompatibilityResponse = 941)] =
-              "k_EMsgGSComputeNewPlayerCompatibilityResponse"),
-            (_[(_.k_EMsgBaseAdmin = 1e3)] = "k_EMsgBaseAdmin"),
-            (_[(_.k_EMsgAdminCmd = 1e3)] = "k_EMsgAdminCmd"),
-            (_[(_.k_EMsgAdminCmdResponse = 1004)] = "k_EMsgAdminCmdResponse"),
-            (_[(_.k_EMsgAdminLogListenRequest = 1005)] =
-              "k_EMsgAdminLogListenRequest"),
-            (_[(_.k_EMsgAdminLogEvent = 1006)] = "k_EMsgAdminLogEvent"),
-            (_[(_.k_EMsgUniverseData = 1010)] = "k_EMsgUniverseData"),
-            (_[(_.k_EMsgAdminSpew = 1019)] = "k_EMsgAdminSpew"),
-            (_[(_.k_EMsgAdminConsoleTitle = 1020)] = "k_EMsgAdminConsoleTitle"),
-            (_[(_.k_EMsgAdminGCSpew = 1023)] = "k_EMsgAdminGCSpew"),
-            (_[(_.k_EMsgAdminGCCommand = 1024)] = "k_EMsgAdminGCCommand"),
-            (_[(_.k_EMsgAdminGCGetCommandList = 1025)] =
-              "k_EMsgAdminGCGetCommandList"),
-            (_[(_.k_EMsgAdminGCGetCommandListResponse = 1026)] =
-              "k_EMsgAdminGCGetCommandListResponse"),
-            (_[(_.k_EMsgFBSConnectionData = 1027)] = "k_EMsgFBSConnectionData"),
-            (_[(_.k_EMsgAdminMsgSpew = 1028)] = "k_EMsgAdminMsgSpew"),
-            (_[(_.k_EMsgBaseFBS = 1100)] = "k_EMsgBaseFBS"),
-            (_[(_.k_EMsgFBSReqVersion = 1100)] = "k_EMsgFBSReqVersion"),
-            (_[(_.k_EMsgFBSVersionInfo = 1101)] = "k_EMsgFBSVersionInfo"),
-            (_[(_.k_EMsgFBSForceRefresh = 1102)] = "k_EMsgFBSForceRefresh"),
-            (_[(_.k_EMsgFBSForceBounce = 1103)] = "k_EMsgFBSForceBounce"),
-            (_[(_.k_EMsgFBSDeployPackage = 1104)] = "k_EMsgFBSDeployPackage"),
-            (_[(_.k_EMsgFBSDeployResponse = 1105)] = "k_EMsgFBSDeployResponse"),
-            (_[(_.k_EMsgFBSUpdateBootstrapper = 1106)] =
-              "k_EMsgFBSUpdateBootstrapper"),
-            (_[(_.k_EMsgFBSSetState = 1107)] = "k_EMsgFBSSetState"),
-            (_[(_.k_EMsgFBSApplyOSUpdates = 1108)] = "k_EMsgFBSApplyOSUpdates"),
-            (_[(_.k_EMsgFBSRunCMDScript = 1109)] = "k_EMsgFBSRunCMDScript"),
-            (_[(_.k_EMsgFBSRebootBox = 1110)] = "k_EMsgFBSRebootBox"),
-            (_[(_.k_EMsgFBSSetBigBrotherMode = 1111)] =
-              "k_EMsgFBSSetBigBrotherMode"),
-            (_[(_.k_EMsgFBSMinidumpServer = 1112)] = "k_EMsgFBSMinidumpServer"),
-            (_[(_.k_EMsgFBSDeployHotFixPackage = 1114)] =
-              "k_EMsgFBSDeployHotFixPackage"),
-            (_[(_.k_EMsgFBSDeployHotFixResponse = 1115)] =
-              "k_EMsgFBSDeployHotFixResponse"),
-            (_[(_.k_EMsgFBSDownloadHotFix = 1116)] = "k_EMsgFBSDownloadHotFix"),
-            (_[(_.k_EMsgFBSDownloadHotFixResponse = 1117)] =
-              "k_EMsgFBSDownloadHotFixResponse"),
-            (_[(_.k_EMsgFBSUpdateTargetConfigFile = 1118)] =
-              "k_EMsgFBSUpdateTargetConfigFile"),
-            (_[(_.k_EMsgFBSApplyAccountCred = 1119)] =
-              "k_EMsgFBSApplyAccountCred"),
-            (_[(_.k_EMsgFBSApplyAccountCredResponse = 1120)] =
-              "k_EMsgFBSApplyAccountCredResponse"),
-            (_[(_.k_EMsgFBSSetShellCount = 1121)] = "k_EMsgFBSSetShellCount"),
-            (_[(_.k_EMsgFBSTerminateShell = 1122)] = "k_EMsgFBSTerminateShell"),
-            (_[(_.k_EMsgFBSQueryGMForRequest = 1123)] =
-              "k_EMsgFBSQueryGMForRequest"),
-            (_[(_.k_EMsgFBSQueryGMResponse = 1124)] =
-              "k_EMsgFBSQueryGMResponse"),
-            (_[(_.k_EMsgFBSTerminateZombies = 1125)] =
-              "k_EMsgFBSTerminateZombies"),
-            (_[(_.k_EMsgFBSInfoFromBootstrapper = 1126)] =
-              "k_EMsgFBSInfoFromBootstrapper"),
-            (_[(_.k_EMsgFBSRebootBoxResponse = 1127)] =
-              "k_EMsgFBSRebootBoxResponse"),
-            (_[(_.k_EMsgFBSBootstrapperPackageRequest = 1128)] =
-              "k_EMsgFBSBootstrapperPackageRequest"),
-            (_[(_.k_EMsgFBSBootstrapperPackageResponse = 1129)] =
-              "k_EMsgFBSBootstrapperPackageResponse"),
-            (_[(_.k_EMsgFBSBootstrapperGetPackageChunk = 1130)] =
-              "k_EMsgFBSBootstrapperGetPackageChunk"),
-            (_[(_.k_EMsgFBSBootstrapperGetPackageChunkResponse = 1131)] =
-              "k_EMsgFBSBootstrapperGetPackageChunkResponse"),
-            (_[(_.k_EMsgFBSBootstrapperPackageTransferProgress = 1132)] =
-              "k_EMsgFBSBootstrapperPackageTransferProgress"),
-            (_[(_.k_EMsgFBSRestartBootstrapper = 1133)] =
-              "k_EMsgFBSRestartBootstrapper"),
-            (_[(_.k_EMsgFBSPauseFrozenDumps = 1134)] =
-              "k_EMsgFBSPauseFrozenDumps"),
-            (_[(_.k_EMsgBaseFileXfer = 1200)] = "k_EMsgBaseFileXfer"),
-            (_[(_.k_EMsgFileXferRequest = 1200)] = "k_EMsgFileXferRequest"),
-            (_[(_.k_EMsgFileXferResponse = 1201)] = "k_EMsgFileXferResponse"),
-            (_[(_.k_EMsgFileXferData = 1202)] = "k_EMsgFileXferData"),
-            (_[(_.k_EMsgFileXferEnd = 1203)] = "k_EMsgFileXferEnd"),
-            (_[(_.k_EMsgFileXferDataAck = 1204)] = "k_EMsgFileXferDataAck"),
-            (_[(_.k_EMsgBaseChannelAuth = 1300)] = "k_EMsgBaseChannelAuth"),
-            (_[(_.k_EMsgChannelAuthChallenge = 1300)] =
-              "k_EMsgChannelAuthChallenge"),
-            (_[(_.k_EMsgChannelAuthResponse = 1301)] =
-              "k_EMsgChannelAuthResponse"),
-            (_[(_.k_EMsgChannelAuthResult = 1302)] = "k_EMsgChannelAuthResult"),
-            (_[(_.k_EMsgChannelEncryptRequest = 1303)] =
-              "k_EMsgChannelEncryptRequest"),
-            (_[(_.k_EMsgChannelEncryptResponse = 1304)] =
-              "k_EMsgChannelEncryptResponse"),
-            (_[(_.k_EMsgChannelEncryptResult = 1305)] =
-              "k_EMsgChannelEncryptResult"),
-            (_[(_.k_EMsgBaseBS = 1400)] = "k_EMsgBaseBS"),
-            (_[(_.k_EMsgBSPurchaseStart = 1401)] = "k_EMsgBSPurchaseStart"),
-            (_[(_.k_EMsgBSPurchaseResponse = 1402)] =
-              "k_EMsgBSPurchaseResponse"),
-            (_[(_.k_EMsgBSAuthenticateCCTrans = 1403)] =
-              "k_EMsgBSAuthenticateCCTrans"),
-            (_[(_.k_EMsgBSAuthenticateCCTransResponse = 1404)] =
-              "k_EMsgBSAuthenticateCCTransResponse"),
-            (_[(_.k_EMsgBSSettleComplete = 1406)] = "k_EMsgBSSettleComplete"),
-            (_[(_.k_EMsgBSInitPayPalTxn = 1408)] = "k_EMsgBSInitPayPalTxn"),
-            (_[(_.k_EMsgBSInitPayPalTxnResponse = 1409)] =
-              "k_EMsgBSInitPayPalTxnResponse"),
-            (_[(_.k_EMsgBSGetPayPalUserInfo = 1410)] =
-              "k_EMsgBSGetPayPalUserInfo"),
-            (_[(_.k_EMsgBSGetPayPalUserInfoResponse = 1411)] =
-              "k_EMsgBSGetPayPalUserInfoResponse"),
-            (_[(_.k_EMsgBSPaymentInstrBan = 1417)] = "k_EMsgBSPaymentInstrBan"),
-            (_[(_.k_EMsgBSPaymentInstrBanResponse = 1418)] =
-              "k_EMsgBSPaymentInstrBanResponse"),
-            (_[(_.k_EMsgBSInitGCBankXferTxn = 1421)] =
-              "k_EMsgBSInitGCBankXferTxn"),
-            (_[(_.k_EMsgBSInitGCBankXferTxnResponse = 1422)] =
-              "k_EMsgBSInitGCBankXferTxnResponse"),
-            (_[(_.k_EMsgBSCommitGCTxn = 1425)] = "k_EMsgBSCommitGCTxn"),
-            (_[(_.k_EMsgBSQueryTransactionStatus = 1426)] =
-              "k_EMsgBSQueryTransactionStatus"),
-            (_[(_.k_EMsgBSQueryTransactionStatusResponse = 1427)] =
-              "k_EMsgBSQueryTransactionStatusResponse"),
-            (_[(_.k_EMsgBSQueryTxnExtendedInfo = 1433)] =
-              "k_EMsgBSQueryTxnExtendedInfo"),
-            (_[(_.k_EMsgBSQueryTxnExtendedInfoResponse = 1434)] =
-              "k_EMsgBSQueryTxnExtendedInfoResponse"),
-            (_[(_.k_EMsgBSUpdateConversionRates = 1435)] =
-              "k_EMsgBSUpdateConversionRates"),
-            (_[(_.k_EMsgBSPurchaseRunFraudChecks = 1437)] =
-              "k_EMsgBSPurchaseRunFraudChecks"),
-            (_[(_.k_EMsgBSPurchaseRunFraudChecksResponse = 1438)] =
-              "k_EMsgBSPurchaseRunFraudChecksResponse"),
-            (_[(_.k_EMsgBSQueryBankInformation = 1440)] =
-              "k_EMsgBSQueryBankInformation"),
-            (_[(_.k_EMsgBSQueryBankInformationResponse = 1441)] =
-              "k_EMsgBSQueryBankInformationResponse"),
-            (_[(_.k_EMsgBSValidateXsollaSignature = 1445)] =
-              "k_EMsgBSValidateXsollaSignature"),
-            (_[(_.k_EMsgBSValidateXsollaSignatureResponse = 1446)] =
-              "k_EMsgBSValidateXsollaSignatureResponse"),
-            (_[(_.k_EMsgBSQiwiWalletInvoice = 1448)] =
-              "k_EMsgBSQiwiWalletInvoice"),
-            (_[(_.k_EMsgBSQiwiWalletInvoiceResponse = 1449)] =
-              "k_EMsgBSQiwiWalletInvoiceResponse"),
-            (_[(_.k_EMsgBSUpdateInventoryFromProPack = 1450)] =
-              "k_EMsgBSUpdateInventoryFromProPack"),
-            (_[(_.k_EMsgBSUpdateInventoryFromProPackResponse = 1451)] =
-              "k_EMsgBSUpdateInventoryFromProPackResponse"),
-            (_[(_.k_EMsgBSSendShippingRequest = 1452)] =
-              "k_EMsgBSSendShippingRequest"),
-            (_[(_.k_EMsgBSSendShippingRequestResponse = 1453)] =
-              "k_EMsgBSSendShippingRequestResponse"),
-            (_[(_.k_EMsgBSGetProPackOrderStatus = 1454)] =
-              "k_EMsgBSGetProPackOrderStatus"),
-            (_[(_.k_EMsgBSGetProPackOrderStatusResponse = 1455)] =
-              "k_EMsgBSGetProPackOrderStatusResponse"),
-            (_[(_.k_EMsgBSCheckJobRunning = 1456)] = "k_EMsgBSCheckJobRunning"),
-            (_[(_.k_EMsgBSCheckJobRunningResponse = 1457)] =
-              "k_EMsgBSCheckJobRunningResponse"),
-            (_[(_.k_EMsgBSResetPackagePurchaseRateLimit = 1458)] =
-              "k_EMsgBSResetPackagePurchaseRateLimit"),
-            (_[(_.k_EMsgBSResetPackagePurchaseRateLimitResponse = 1459)] =
-              "k_EMsgBSResetPackagePurchaseRateLimitResponse"),
-            (_[(_.k_EMsgBSUpdatePaymentData = 1460)] =
-              "k_EMsgBSUpdatePaymentData"),
-            (_[(_.k_EMsgBSUpdatePaymentDataResponse = 1461)] =
-              "k_EMsgBSUpdatePaymentDataResponse"),
-            (_[(_.k_EMsgBSGetBillingAddress = 1462)] =
-              "k_EMsgBSGetBillingAddress"),
-            (_[(_.k_EMsgBSGetBillingAddressResponse = 1463)] =
-              "k_EMsgBSGetBillingAddressResponse"),
-            (_[(_.k_EMsgBSGetCreditCardInfo = 1464)] =
-              "k_EMsgBSGetCreditCardInfo"),
-            (_[(_.k_EMsgBSGetCreditCardInfoResponse = 1465)] =
-              "k_EMsgBSGetCreditCardInfoResponse"),
-            (_[(_.k_EMsgBSRemoveExpiredPaymentData = 1468)] =
-              "k_EMsgBSRemoveExpiredPaymentData"),
-            (_[(_.k_EMsgBSRemoveExpiredPaymentDataResponse = 1469)] =
-              "k_EMsgBSRemoveExpiredPaymentDataResponse"),
-            (_[(_.k_EMsgBSConvertToCurrentKeys = 1470)] =
-              "k_EMsgBSConvertToCurrentKeys"),
-            (_[(_.k_EMsgBSConvertToCurrentKeysResponse = 1471)] =
-              "k_EMsgBSConvertToCurrentKeysResponse"),
-            (_[(_.k_EMsgBSInitPurchase = 1472)] = "k_EMsgBSInitPurchase"),
-            (_[(_.k_EMsgBSInitPurchaseResponse = 1473)] =
-              "k_EMsgBSInitPurchaseResponse"),
-            (_[(_.k_EMsgBSCompletePurchase = 1474)] =
-              "k_EMsgBSCompletePurchase"),
-            (_[(_.k_EMsgBSCompletePurchaseResponse = 1475)] =
-              "k_EMsgBSCompletePurchaseResponse"),
-            (_[(_.k_EMsgBSPruneCardUsageStats = 1476)] =
-              "k_EMsgBSPruneCardUsageStats"),
-            (_[(_.k_EMsgBSPruneCardUsageStatsResponse = 1477)] =
-              "k_EMsgBSPruneCardUsageStatsResponse"),
-            (_[(_.k_EMsgBSStoreBankInformation = 1478)] =
-              "k_EMsgBSStoreBankInformation"),
-            (_[(_.k_EMsgBSStoreBankInformationResponse = 1479)] =
-              "k_EMsgBSStoreBankInformationResponse"),
-            (_[(_.k_EMsgBSVerifyPOSAKey = 1480)] = "k_EMsgBSVerifyPOSAKey"),
-            (_[(_.k_EMsgBSVerifyPOSAKeyResponse = 1481)] =
-              "k_EMsgBSVerifyPOSAKeyResponse"),
-            (_[(_.k_EMsgBSReverseRedeemPOSAKey = 1482)] =
-              "k_EMsgBSReverseRedeemPOSAKey"),
-            (_[(_.k_EMsgBSReverseRedeemPOSAKeyResponse = 1483)] =
-              "k_EMsgBSReverseRedeemPOSAKeyResponse"),
-            (_[(_.k_EMsgBSQueryFindCreditCard = 1484)] =
-              "k_EMsgBSQueryFindCreditCard"),
-            (_[(_.k_EMsgBSQueryFindCreditCardResponse = 1485)] =
-              "k_EMsgBSQueryFindCreditCardResponse"),
-            (_[(_.k_EMsgBSStatusInquiryPOSAKey = 1486)] =
-              "k_EMsgBSStatusInquiryPOSAKey"),
-            (_[(_.k_EMsgBSStatusInquiryPOSAKeyResponse = 1487)] =
-              "k_EMsgBSStatusInquiryPOSAKeyResponse"),
-            (_[(_.k_EMsgBSBoaCompraConfirmProductDelivery = 1494)] =
-              "k_EMsgBSBoaCompraConfirmProductDelivery"),
-            (_[(_.k_EMsgBSBoaCompraConfirmProductDeliveryResponse = 1495)] =
-              "k_EMsgBSBoaCompraConfirmProductDeliveryResponse"),
-            (_[(_.k_EMsgBSGenerateBoaCompraMD5 = 1496)] =
-              "k_EMsgBSGenerateBoaCompraMD5"),
-            (_[(_.k_EMsgBSGenerateBoaCompraMD5Response = 1497)] =
-              "k_EMsgBSGenerateBoaCompraMD5Response"),
-            (_[(_.k_EMsgBSCommitWPTxn = 1498)] = "k_EMsgBSCommitWPTxn"),
-            (_[(_.k_EMsgBSCommitAdyenTxn = 1499)] = "k_EMsgBSCommitAdyenTxn"),
-            (_[(_.k_EMsgBaseATS = 1500)] = "k_EMsgBaseATS"),
-            (_[(_.k_EMsgATSStartStressTest = 1501)] =
-              "k_EMsgATSStartStressTest"),
-            (_[(_.k_EMsgATSStopStressTest = 1502)] = "k_EMsgATSStopStressTest"),
-            (_[(_.k_EMsgATSRunFailServerTest = 1503)] =
-              "k_EMsgATSRunFailServerTest"),
-            (_[(_.k_EMsgATSUFSPerfTestTask = 1504)] =
-              "k_EMsgATSUFSPerfTestTask"),
-            (_[(_.k_EMsgATSUFSPerfTestResponse = 1505)] =
-              "k_EMsgATSUFSPerfTestResponse"),
-            (_[(_.k_EMsgATSCycleTCM = 1506)] = "k_EMsgATSCycleTCM"),
-            (_[(_.k_EMsgATSInitDRMSStressTest = 1507)] =
-              "k_EMsgATSInitDRMSStressTest"),
-            (_[(_.k_EMsgATSCallTest = 1508)] = "k_EMsgATSCallTest"),
-            (_[(_.k_EMsgATSCallTestReply = 1509)] = "k_EMsgATSCallTestReply"),
-            (_[(_.k_EMsgATSStartExternalStress = 1510)] =
-              "k_EMsgATSStartExternalStress"),
-            (_[(_.k_EMsgATSExternalStressJobStart = 1511)] =
-              "k_EMsgATSExternalStressJobStart"),
-            (_[(_.k_EMsgATSExternalStressJobQueued = 1512)] =
-              "k_EMsgATSExternalStressJobQueued"),
-            (_[(_.k_EMsgATSExternalStressJobRunning = 1513)] =
-              "k_EMsgATSExternalStressJobRunning"),
-            (_[(_.k_EMsgATSExternalStressJobStopped = 1514)] =
-              "k_EMsgATSExternalStressJobStopped"),
-            (_[(_.k_EMsgATSExternalStressJobStopAll = 1515)] =
-              "k_EMsgATSExternalStressJobStopAll"),
-            (_[(_.k_EMsgATSExternalStressActionResult = 1516)] =
-              "k_EMsgATSExternalStressActionResult"),
-            (_[(_.k_EMsgATSStarted = 1517)] = "k_EMsgATSStarted"),
-            (_[(_.k_EMsgATSCSPerfTestTask = 1518)] = "k_EMsgATSCSPerfTestTask"),
-            (_[(_.k_EMsgATSCSPerfTestResponse = 1519)] =
-              "k_EMsgATSCSPerfTestResponse"),
-            (_[(_.k_EMsgBaseDP = 1600)] = "k_EMsgBaseDP"),
-            (_[(_.k_EMsgDPSetPublishingState = 1601)] =
-              "k_EMsgDPSetPublishingState"),
-            (_[(_.k_EMsgDPUniquePlayersStat = 1603)] =
-              "k_EMsgDPUniquePlayersStat"),
-            (_[(_.k_EMsgDPCloudStats = 1612)] = "k_EMsgDPCloudStats"),
-            (_[(_.k_EMsgDPGetPlayerCount = 1615)] = "k_EMsgDPGetPlayerCount"),
-            (_[(_.k_EMsgDPGetPlayerCountResponse = 1616)] =
-              "k_EMsgDPGetPlayerCountResponse"),
-            (_[(_.k_EMsgDPGameServersPlayersStats = 1617)] =
-              "k_EMsgDPGameServersPlayersStats"),
-            (_[(_.k_EMsgClientDPCheckSpecialSurvey = 1620)] =
-              "k_EMsgClientDPCheckSpecialSurvey"),
-            (_[(_.k_EMsgClientDPCheckSpecialSurveyResponse = 1621)] =
-              "k_EMsgClientDPCheckSpecialSurveyResponse"),
-            (_[(_.k_EMsgClientDPSendSpecialSurveyResponse = 1622)] =
-              "k_EMsgClientDPSendSpecialSurveyResponse"),
-            (_[(_.k_EMsgClientDPSendSpecialSurveyResponseReply = 1623)] =
-              "k_EMsgClientDPSendSpecialSurveyResponseReply"),
-            (_[(_.k_EMsgDPStoreSaleStatistics = 1624)] =
-              "k_EMsgDPStoreSaleStatistics"),
-            (_[(_.k_EMsgDPPartnerMicroTxns = 1628)] =
-              "k_EMsgDPPartnerMicroTxns"),
-            (_[(_.k_EMsgDPPartnerMicroTxnsResponse = 1629)] =
-              "k_EMsgDPPartnerMicroTxnsResponse"),
-            (_[(_.k_EMsgDPVRUniquePlayersStat = 1631)] =
-              "k_EMsgDPVRUniquePlayersStat"),
-            (_[(_.k_EMsgBaseCM = 1700)] = "k_EMsgBaseCM"),
-            (_[(_.k_EMsgCMSetAllowState = 1701)] = "k_EMsgCMSetAllowState"),
-            (_[(_.k_EMsgCMSpewAllowState = 1702)] = "k_EMsgCMSpewAllowState"),
-            (_[(_.k_EMsgCMSessionRejected = 1703)] = "k_EMsgCMSessionRejected"),
-            (_[(_.k_EMsgCMSetSecrets = 1704)] = "k_EMsgCMSetSecrets"),
-            (_[(_.k_EMsgCMGetSecrets = 1705)] = "k_EMsgCMGetSecrets"),
-            (_[(_.k_EMsgCMRemotePlayReplyPacket = 1706)] =
-              "k_EMsgCMRemotePlayReplyPacket"),
-            (_[(_.k_EMsgBaseGC = 2200)] = "k_EMsgBaseGC"),
-            (_[(_.k_EMsgGCCmdRevive = 2203)] = "k_EMsgGCCmdRevive"),
-            (_[(_.k_EMsgGCCmdDown = 2206)] = "k_EMsgGCCmdDown"),
-            (_[(_.k_EMsgGCCmdDeploy = 2207)] = "k_EMsgGCCmdDeploy"),
-            (_[(_.k_EMsgGCCmdDeployResponse = 2208)] =
-              "k_EMsgGCCmdDeployResponse"),
-            (_[(_.k_EMsgGCCmdSwitch = 2209)] = "k_EMsgGCCmdSwitch"),
-            (_[(_.k_EMsgAMRefreshSessions = 2210)] = "k_EMsgAMRefreshSessions"),
-            (_[(_.k_EMsgGCAchievementAwarded = 2212)] =
-              "k_EMsgGCAchievementAwarded"),
-            (_[(_.k_EMsgGCCmdStatus = 2216)] = "k_EMsgGCCmdStatus"),
-            (_[(_.k_EMsgGCRegisterWebInterfaces_Deprecated = 2217)] =
-              "k_EMsgGCRegisterWebInterfaces_Deprecated"),
-            (_[(_.k_EMsgGCGetAccountDetails_DEPRECATED = 2218)] =
-              "k_EMsgGCGetAccountDetails_DEPRECATED"),
-            (_[(_.k_EMsgGCInterAppMessage = 2219)] = "k_EMsgGCInterAppMessage"),
-            (_[(_.k_EMsgGCGetEmailTemplate = 2220)] =
-              "k_EMsgGCGetEmailTemplate"),
-            (_[(_.k_EMsgGCGetEmailTemplateResponse = 2221)] =
-              "k_EMsgGCGetEmailTemplateResponse"),
-            (_[(_.k_EMsgGCHRelay = 2222)] = "k_EMsgGCHRelay"),
-            (_[(_.k_EMsgGCHRelayToClient = 2223)] = "k_EMsgGCHRelayToClient"),
-            (_[(_.k_EMsgGCHUpdateSession = 2224)] = "k_EMsgGCHUpdateSession"),
-            (_[(_.k_EMsgGCHRequestUpdateSession = 2225)] =
-              "k_EMsgGCHRequestUpdateSession"),
-            (_[(_.k_EMsgGCHRequestStatus = 2226)] = "k_EMsgGCHRequestStatus"),
-            (_[(_.k_EMsgGCHRequestStatusResponse = 2227)] =
-              "k_EMsgGCHRequestStatusResponse"),
-            (_[(_.k_EMsgGCHAccountVacStatusChange = 2228)] =
-              "k_EMsgGCHAccountVacStatusChange"),
-            (_[(_.k_EMsgGCHSpawnGC = 2229)] = "k_EMsgGCHSpawnGC"),
-            (_[(_.k_EMsgGCHSpawnGCResponse = 2230)] =
-              "k_EMsgGCHSpawnGCResponse"),
-            (_[(_.k_EMsgGCHKillGC = 2231)] = "k_EMsgGCHKillGC"),
-            (_[(_.k_EMsgGCHKillGCResponse = 2232)] = "k_EMsgGCHKillGCResponse"),
-            (_[(_.k_EMsgGCHAccountTradeBanStatusChange = 2233)] =
-              "k_EMsgGCHAccountTradeBanStatusChange"),
-            (_[(_.k_EMsgGCHAccountLockStatusChange = 2234)] =
-              "k_EMsgGCHAccountLockStatusChange"),
-            (_[(_.k_EMsgGCHVacVerificationChange = 2235)] =
-              "k_EMsgGCHVacVerificationChange"),
-            (_[(_.k_EMsgGCHAccountPhoneNumberChange = 2236)] =
-              "k_EMsgGCHAccountPhoneNumberChange"),
-            (_[(_.k_EMsgGCHAccountTwoFactorChange = 2237)] =
-              "k_EMsgGCHAccountTwoFactorChange"),
-            (_[(_.k_EMsgGCHInviteUserToLobby = 2238)] =
-              "k_EMsgGCHInviteUserToLobby"),
-            (_[(_.k_EMsgGCHUpdateMultipleSessions = 2239)] =
-              "k_EMsgGCHUpdateMultipleSessions"),
-            (_[(_.k_EMsgGCHMarkAppSessionsAuthoritative = 2240)] =
-              "k_EMsgGCHMarkAppSessionsAuthoritative"),
-            (_[(_.k_EMsgGCHRecurringSubscriptionStatusChange = 2241)] =
-              "k_EMsgGCHRecurringSubscriptionStatusChange"),
-            (_[(_.k_EMsgGCHAppCheersReceived = 2242)] =
-              "k_EMsgGCHAppCheersReceived"),
-            (_[(_.k_EMsgGCHAppCheersGetAllowedTypes = 2243)] =
-              "k_EMsgGCHAppCheersGetAllowedTypes"),
-            (_[(_.k_EMsgGCHAppCheersGetAllowedTypesResponse = 2244)] =
-              "k_EMsgGCHAppCheersGetAllowedTypesResponse"),
-            (_[(_.k_EMsgGCHRoutingRulesFromGCHtoGM = 2245)] =
-              "k_EMsgGCHRoutingRulesFromGCHtoGM"),
-            (_[(_.k_EMsgGCHRoutingRulesToGCHfromGM = 2246)] =
-              "k_EMsgGCHRoutingRulesToGCHfromGM"),
-            (_[(_.k_EMsgUpdateCMMessageRateRules = 2247)] =
-              "k_EMsgUpdateCMMessageRateRules"),
-            (_[(_.k_EMsgBaseP2P = 2500)] = "k_EMsgBaseP2P"),
-            (_[(_.k_EMsgP2PIntroducerMessage = 2502)] =
-              "k_EMsgP2PIntroducerMessage"),
-            (_[(_.k_EMsgBaseSM = 2900)] = "k_EMsgBaseSM"),
-            (_[(_.k_EMsgSMExpensiveReport = 2902)] = "k_EMsgSMExpensiveReport"),
-            (_[(_.k_EMsgSMHourlyReport = 2903)] = "k_EMsgSMHourlyReport"),
-            (_[(_.k_EMsgSMPartitionRenames = 2905)] =
-              "k_EMsgSMPartitionRenames"),
-            (_[(_.k_EMsgSMMonitorSpace = 2906)] = "k_EMsgSMMonitorSpace"),
-            (_[(_.k_EMsgSMTestNextBuildSchemaConversion = 2907)] =
-              "k_EMsgSMTestNextBuildSchemaConversion"),
-            (_[(_.k_EMsgSMTestNextBuildSchemaConversionResponse = 2908)] =
-              "k_EMsgSMTestNextBuildSchemaConversionResponse"),
-            (_[(_.k_EMsgBaseTest = 3e3)] = "k_EMsgBaseTest"),
-            (_[(_.k_EMsgFailServer = 3e3)] = "k_EMsgFailServer"),
-            (_[(_.k_EMsgJobHeartbeatTest = 3001)] = "k_EMsgJobHeartbeatTest"),
-            (_[(_.k_EMsgJobHeartbeatTestResponse = 3002)] =
-              "k_EMsgJobHeartbeatTestResponse"),
-            (_[(_.k_EMsgBaseFTSRange = 3100)] = "k_EMsgBaseFTSRange"),
-            (_[(_.k_EMsgBaseCCSRange = 3150)] = "k_EMsgBaseCCSRange"),
-            (_[(_.k_EMsgCCSDeleteAllCommentsByAuthor = 3161)] =
-              "k_EMsgCCSDeleteAllCommentsByAuthor"),
-            (_[(_.k_EMsgCCSDeleteAllCommentsByAuthorResponse = 3162)] =
-              "k_EMsgCCSDeleteAllCommentsByAuthorResponse"),
-            (_[(_.k_EMsgBaseLBSRange = 3200)] = "k_EMsgBaseLBSRange"),
-            (_[(_.k_EMsgLBSSetScore = 3201)] = "k_EMsgLBSSetScore"),
-            (_[(_.k_EMsgLBSSetScoreResponse = 3202)] =
-              "k_EMsgLBSSetScoreResponse"),
-            (_[(_.k_EMsgLBSFindOrCreateLB = 3203)] = "k_EMsgLBSFindOrCreateLB"),
-            (_[(_.k_EMsgLBSFindOrCreateLBResponse = 3204)] =
-              "k_EMsgLBSFindOrCreateLBResponse"),
-            (_[(_.k_EMsgLBSGetLBEntries = 3205)] = "k_EMsgLBSGetLBEntries"),
-            (_[(_.k_EMsgLBSGetLBEntriesResponse = 3206)] =
-              "k_EMsgLBSGetLBEntriesResponse"),
-            (_[(_.k_EMsgLBSGetLBList = 3207)] = "k_EMsgLBSGetLBList"),
-            (_[(_.k_EMsgLBSGetLBListResponse = 3208)] =
-              "k_EMsgLBSGetLBListResponse"),
-            (_[(_.k_EMsgLBSSetLBDetails = 3209)] = "k_EMsgLBSSetLBDetails"),
-            (_[(_.k_EMsgLBSDeleteLB = 3210)] = "k_EMsgLBSDeleteLB"),
-            (_[(_.k_EMsgLBSDeleteLBEntry = 3211)] = "k_EMsgLBSDeleteLBEntry"),
-            (_[(_.k_EMsgLBSResetLB = 3212)] = "k_EMsgLBSResetLB"),
-            (_[(_.k_EMsgLBSResetLBResponse = 3213)] =
-              "k_EMsgLBSResetLBResponse"),
-            (_[(_.k_EMsgLBSDeleteLBResponse = 3214)] =
-              "k_EMsgLBSDeleteLBResponse"),
-            (_[(_.k_EMsgBaseOGS = 3400)] = "k_EMsgBaseOGS"),
-            (_[(_.k_EMsgOGSBeginSession = 3401)] = "k_EMsgOGSBeginSession"),
-            (_[(_.k_EMsgOGSBeginSessionResponse = 3402)] =
-              "k_EMsgOGSBeginSessionResponse"),
-            (_[(_.k_EMsgOGSEndSession = 3403)] = "k_EMsgOGSEndSession"),
-            (_[(_.k_EMsgOGSEndSessionResponse = 3404)] =
-              "k_EMsgOGSEndSessionResponse"),
-            (_[(_.k_EMsgOGSWriteAppSessionRow = 3406)] =
-              "k_EMsgOGSWriteAppSessionRow"),
-            (_[(_.k_EMsgBaseBRP = 3600)] = "k_EMsgBaseBRP"),
-            (_[(_.k_EMsgBaseAMRange2 = 4e3)] = "k_EMsgBaseAMRange2"),
-            (_[(_.k_EMsgAMCreateChat = 4001)] = "k_EMsgAMCreateChat"),
-            (_[(_.k_EMsgAMCreateChatResponse = 4002)] =
-              "k_EMsgAMCreateChatResponse"),
-            (_[(_.k_EMsgAMGetAccountEmailAddress = 4006)] =
-              "k_EMsgAMGetAccountEmailAddress"),
-            (_[(_.k_EMsgAMGetAccountEmailAddressResponse = 4007)] =
-              "k_EMsgAMGetAccountEmailAddressResponse"),
-            (_[(_.k_EMsgAMRequestClanData = 4008)] = "k_EMsgAMRequestClanData"),
-            (_[(_.k_EMsgAMRouteToClients = 4009)] = "k_EMsgAMRouteToClients"),
-            (_[(_.k_EMsgAMLeaveClan = 4010)] = "k_EMsgAMLeaveClan"),
-            (_[(_.k_EMsgAMClanPermissions = 4011)] = "k_EMsgAMClanPermissions"),
-            (_[(_.k_EMsgAMClanPermissionsResponse = 4012)] =
-              "k_EMsgAMClanPermissionsResponse"),
-            (_[(_.k_EMsgAMCreateClanEventDummyForRateLimiting = 4013)] =
-              "k_EMsgAMCreateClanEventDummyForRateLimiting"),
-            (_[(_.k_EMsgAMUpdateClanEventDummyForRateLimiting = 4015)] =
-              "k_EMsgAMUpdateClanEventDummyForRateLimiting"),
-            (_[(_.k_EMsgAMSetClanPermissionSettings = 4021)] =
-              "k_EMsgAMSetClanPermissionSettings"),
-            (_[(_.k_EMsgAMSetClanPermissionSettingsResponse = 4022)] =
-              "k_EMsgAMSetClanPermissionSettingsResponse"),
-            (_[(_.k_EMsgAMGetClanPermissionSettings = 4023)] =
-              "k_EMsgAMGetClanPermissionSettings"),
-            (_[(_.k_EMsgAMGetClanPermissionSettingsResponse = 4024)] =
-              "k_EMsgAMGetClanPermissionSettingsResponse"),
-            (_[(_.k_EMsgAMPublishChatRoomInfo = 4025)] =
-              "k_EMsgAMPublishChatRoomInfo"),
-            (_[(_.k_EMsgClientChatRoomInfo = 4026)] =
-              "k_EMsgClientChatRoomInfo"),
-            (_[(_.k_EMsgAMGetClanHistory = 4039)] = "k_EMsgAMGetClanHistory"),
-            (_[(_.k_EMsgAMGetClanHistoryResponse = 4040)] =
-              "k_EMsgAMGetClanHistoryResponse"),
-            (_[(_.k_EMsgAMGetClanPermissionBits = 4041)] =
-              "k_EMsgAMGetClanPermissionBits"),
-            (_[(_.k_EMsgAMGetClanPermissionBitsResponse = 4042)] =
-              "k_EMsgAMGetClanPermissionBitsResponse"),
-            (_[(_.k_EMsgAMSetClanPermissionBits = 4043)] =
-              "k_EMsgAMSetClanPermissionBits"),
-            (_[(_.k_EMsgAMSetClanPermissionBitsResponse = 4044)] =
-              "k_EMsgAMSetClanPermissionBitsResponse"),
-            (_[(_.k_EMsgAMSessionInfoRequest = 4045)] =
-              "k_EMsgAMSessionInfoRequest"),
-            (_[(_.k_EMsgAMSessionInfoResponse = 4046)] =
-              "k_EMsgAMSessionInfoResponse"),
-            (_[(_.k_EMsgAMValidateWGToken = 4047)] = "k_EMsgAMValidateWGToken"),
-            (_[(_.k_EMsgAMGetClanRank = 4050)] = "k_EMsgAMGetClanRank"),
-            (_[(_.k_EMsgAMGetClanRankResponse = 4051)] =
-              "k_EMsgAMGetClanRankResponse"),
-            (_[(_.k_EMsgAMSetClanRank = 4052)] = "k_EMsgAMSetClanRank"),
-            (_[(_.k_EMsgAMSetClanRankResponse = 4053)] =
-              "k_EMsgAMSetClanRankResponse"),
-            (_[(_.k_EMsgAMGetClanPOTW = 4054)] = "k_EMsgAMGetClanPOTW"),
-            (_[(_.k_EMsgAMGetClanPOTWResponse = 4055)] =
-              "k_EMsgAMGetClanPOTWResponse"),
-            (_[(_.k_EMsgAMSetClanPOTW = 4056)] = "k_EMsgAMSetClanPOTW"),
-            (_[(_.k_EMsgAMSetClanPOTWResponse = 4057)] =
-              "k_EMsgAMSetClanPOTWResponse"),
-            (_[(_.k_EMsgAMDumpUser = 4059)] = "k_EMsgAMDumpUser"),
-            (_[(_.k_EMsgAMKickUserFromClan = 4060)] =
-              "k_EMsgAMKickUserFromClan"),
-            (_[(_.k_EMsgAMAddFounderToClan = 4061)] =
-              "k_EMsgAMAddFounderToClan"),
-            (_[(_.k_EMsgAMValidateWGTokenResponse = 4062)] =
-              "k_EMsgAMValidateWGTokenResponse"),
-            (_[(_.k_EMsgAMSetAccountDetails = 4064)] =
-              "k_EMsgAMSetAccountDetails"),
-            (_[(_.k_EMsgAMGetChatBanList = 4065)] = "k_EMsgAMGetChatBanList"),
-            (_[(_.k_EMsgAMGetChatBanListResponse = 4066)] =
-              "k_EMsgAMGetChatBanListResponse"),
-            (_[(_.k_EMsgAMUnBanFromChat = 4067)] = "k_EMsgAMUnBanFromChat"),
-            (_[(_.k_EMsgAMSetClanDetails = 4068)] = "k_EMsgAMSetClanDetails"),
-            (_[(_.k_EMsgUGSGetUserGameStats = 4073)] =
-              "k_EMsgUGSGetUserGameStats"),
-            (_[(_.k_EMsgUGSGetUserGameStatsResponse = 4074)] =
-              "k_EMsgUGSGetUserGameStatsResponse"),
-            (_[(_.k_EMsgAMCheckClanMembership = 4075)] =
-              "k_EMsgAMCheckClanMembership"),
-            (_[(_.k_EMsgAMGetClanMembers = 4076)] = "k_EMsgAMGetClanMembers"),
-            (_[(_.k_EMsgAMGetClanMembersResponse = 4077)] =
-              "k_EMsgAMGetClanMembersResponse"),
-            (_[(_.k_EMsgAMNotifyChatOfClanChange = 4079)] =
-              "k_EMsgAMNotifyChatOfClanChange"),
-            (_[(_.k_EMsgAMResubmitPurchase = 4080)] =
-              "k_EMsgAMResubmitPurchase"),
-            (_[(_.k_EMsgAMAddFriend = 4081)] = "k_EMsgAMAddFriend"),
-            (_[(_.k_EMsgAMAddFriendResponse = 4082)] =
-              "k_EMsgAMAddFriendResponse"),
-            (_[(_.k_EMsgAMRemoveFriend = 4083)] = "k_EMsgAMRemoveFriend"),
-            (_[(_.k_EMsgAMDumpClan = 4084)] = "k_EMsgAMDumpClan"),
-            (_[(_.k_EMsgAMChangeClanOwner = 4085)] = "k_EMsgAMChangeClanOwner"),
-            (_[(_.k_EMsgAMCancelEasyCollect = 4086)] =
-              "k_EMsgAMCancelEasyCollect"),
-            (_[(_.k_EMsgAMCancelEasyCollectResponse = 4087)] =
-              "k_EMsgAMCancelEasyCollectResponse"),
-            (_[(_.k_EMsgAMClansInCommon = 4090)] = "k_EMsgAMClansInCommon"),
-            (_[(_.k_EMsgAMClansInCommonResponse = 4091)] =
-              "k_EMsgAMClansInCommonResponse"),
-            (_[(_.k_EMsgAMIsValidAccountID = 4092)] =
-              "k_EMsgAMIsValidAccountID"),
-            (_[(_.k_EMsgAMWipeFriendsList = 4095)] = "k_EMsgAMWipeFriendsList"),
-            (_[(_.k_EMsgAMSetIgnored = 4096)] = "k_EMsgAMSetIgnored"),
-            (_[(_.k_EMsgAMClansInCommonCountResponse = 4097)] =
-              "k_EMsgAMClansInCommonCountResponse"),
-            (_[(_.k_EMsgAMFriendsList = 4098)] = "k_EMsgAMFriendsList"),
-            (_[(_.k_EMsgAMFriendsListResponse = 4099)] =
-              "k_EMsgAMFriendsListResponse"),
-            (_[(_.k_EMsgAMFriendsInCommon = 4100)] = "k_EMsgAMFriendsInCommon"),
-            (_[(_.k_EMsgAMFriendsInCommonResponse = 4101)] =
-              "k_EMsgAMFriendsInCommonResponse"),
-            (_[(_.k_EMsgAMFriendsInCommonCountResponse = 4102)] =
-              "k_EMsgAMFriendsInCommonCountResponse"),
-            (_[(_.k_EMsgAMClansInCommonCount = 4103)] =
-              "k_EMsgAMClansInCommonCount"),
-            (_[(_.k_EMsgAMChallengeVerdict = 4104)] =
-              "k_EMsgAMChallengeVerdict"),
-            (_[(_.k_EMsgAMChallengeNotification = 4105)] =
-              "k_EMsgAMChallengeNotification"),
-            (_[(_.k_EMsgAMFindGSByIP = 4106)] = "k_EMsgAMFindGSByIP"),
-            (_[(_.k_EMsgAMFoundGSByIP = 4107)] = "k_EMsgAMFoundGSByIP"),
-            (_[(_.k_EMsgAMGiftRevoked = 4108)] = "k_EMsgAMGiftRevoked"),
-            (_[(_.k_EMsgAMUserClanList = 4110)] = "k_EMsgAMUserClanList"),
-            (_[(_.k_EMsgAMUserClanListResponse = 4111)] =
-              "k_EMsgAMUserClanListResponse"),
-            (_[(_.k_EMsgAMGetAccountDetails2 = 4112)] =
-              "k_EMsgAMGetAccountDetails2"),
-            (_[(_.k_EMsgAMGetAccountDetailsResponse2 = 4113)] =
-              "k_EMsgAMGetAccountDetailsResponse2"),
-            (_[(_.k_EMsgAMSetCommunityProfileSettings = 4114)] =
-              "k_EMsgAMSetCommunityProfileSettings"),
-            (_[(_.k_EMsgAMSetCommunityProfileSettingsResponse = 4115)] =
-              "k_EMsgAMSetCommunityProfileSettingsResponse"),
-            (_[(_.k_EMsgAMGetCommunityPrivacyState = 4116)] =
-              "k_EMsgAMGetCommunityPrivacyState"),
-            (_[(_.k_EMsgAMGetCommunityPrivacyStateResponse = 4117)] =
-              "k_EMsgAMGetCommunityPrivacyStateResponse"),
-            (_[(_.k_EMsgAMCheckClanInviteRateLimiting = 4118)] =
-              "k_EMsgAMCheckClanInviteRateLimiting"),
-            (_[(_.k_EMsgUGSGetUserAchievementStatus = 4119)] =
-              "k_EMsgUGSGetUserAchievementStatus"),
-            (_[(_.k_EMsgAMGetIgnored = 4120)] = "k_EMsgAMGetIgnored"),
-            (_[(_.k_EMsgAMGetIgnoredResponse = 4121)] =
-              "k_EMsgAMGetIgnoredResponse"),
-            (_[(_.k_EMsgAMSetIgnoredResponse = 4122)] =
-              "k_EMsgAMSetIgnoredResponse"),
-            (_[(_.k_EMsgAMSetFriendRelationshipNone = 4123)] =
-              "k_EMsgAMSetFriendRelationshipNone"),
-            (_[(_.k_EMsgAMGetFriendRelationship = 4124)] =
-              "k_EMsgAMGetFriendRelationship"),
-            (_[(_.k_EMsgAMGetFriendRelationshipResponse = 4125)] =
-              "k_EMsgAMGetFriendRelationshipResponse"),
-            (_[(_.k_EMsgAMServiceModulesCache = 4126)] =
-              "k_EMsgAMServiceModulesCache"),
-            (_[(_.k_EMsgAMServiceModulesCall = 4127)] =
-              "k_EMsgAMServiceModulesCall"),
-            (_[(_.k_EMsgAMServiceModulesCallResponse = 4128)] =
-              "k_EMsgAMServiceModulesCallResponse"),
-            (_[(_.k_EMsgCommunityAddFriendNews = 4140)] =
-              "k_EMsgCommunityAddFriendNews"),
-            (_[(_.k_EMsgAMFindClanUser = 4143)] = "k_EMsgAMFindClanUser"),
-            (_[(_.k_EMsgAMFindClanUserResponse = 4144)] =
-              "k_EMsgAMFindClanUserResponse"),
-            (_[(_.k_EMsgAMBanFromChat = 4145)] = "k_EMsgAMBanFromChat"),
-            (_[(_.k_EMsgAMGetUserNewsSubscriptions = 4147)] =
-              "k_EMsgAMGetUserNewsSubscriptions"),
-            (_[(_.k_EMsgAMGetUserNewsSubscriptionsResponse = 4148)] =
-              "k_EMsgAMGetUserNewsSubscriptionsResponse"),
-            (_[(_.k_EMsgAMSetUserNewsSubscriptions = 4149)] =
-              "k_EMsgAMSetUserNewsSubscriptions"),
-            (_[(_.k_EMsgAMSendQueuedEmails = 4152)] =
-              "k_EMsgAMSendQueuedEmails"),
-            (_[(_.k_EMsgAMSetLicenseFlags = 4153)] = "k_EMsgAMSetLicenseFlags"),
-            (_[(_.k_EMsgAMGetAccountStatus = 4158)] =
-              "k_EMsgAMGetAccountStatus"),
-            (_[(_.k_EMsgAMGetAccountStatusResponse = 4159)] =
-              "k_EMsgAMGetAccountStatusResponse"),
-            (_[(_.k_EMsgAMEditBanReason = 4160)] = "k_EMsgAMEditBanReason"),
-            (_[(_.k_EMsgAMCheckClanMembershipResponse = 4161)] =
-              "k_EMsgAMCheckClanMembershipResponse"),
-            (_[(_.k_EMsgAMProbeClanMembershipList = 4162)] =
-              "k_EMsgAMProbeClanMembershipList"),
-            (_[(_.k_EMsgAMProbeClanMembershipListResponse = 4163)] =
-              "k_EMsgAMProbeClanMembershipListResponse"),
-            (_[(_.k_EMsgUGSGetUserAchievementStatusResponse = 4164)] =
-              "k_EMsgUGSGetUserAchievementStatusResponse"),
-            (_[(_.k_EMsgAMGetFriendsLobbies = 4165)] =
-              "k_EMsgAMGetFriendsLobbies"),
-            (_[(_.k_EMsgAMGetFriendsLobbiesResponse = 4166)] =
-              "k_EMsgAMGetFriendsLobbiesResponse"),
-            (_[(_.k_EMsgAMGetUserFriendNewsResponse = 4172)] =
-              "k_EMsgAMGetUserFriendNewsResponse"),
-            (_[(_.k_EMsgCommunityGetUserFriendNews = 4173)] =
-              "k_EMsgCommunityGetUserFriendNews"),
-            (_[(_.k_EMsgAMGetUserClansNewsResponse = 4174)] =
-              "k_EMsgAMGetUserClansNewsResponse"),
-            (_[(_.k_EMsgAMGetUserClansNews = 4175)] =
-              "k_EMsgAMGetUserClansNews"),
-            (_[(_.k_EMsgAMGetPreviousCBAccount = 4184)] =
-              "k_EMsgAMGetPreviousCBAccount"),
-            (_[(_.k_EMsgAMGetPreviousCBAccountResponse = 4185)] =
-              "k_EMsgAMGetPreviousCBAccountResponse"),
-            (_[(_.k_EMsgAMGetUserLicenseHistory = 4190)] =
-              "k_EMsgAMGetUserLicenseHistory"),
-            (_[(_.k_EMsgAMGetUserLicenseHistoryResponse = 4191)] =
-              "k_EMsgAMGetUserLicenseHistoryResponse"),
-            (_[(_.k_EMsgAMSupportChangePassword = 4194)] =
-              "k_EMsgAMSupportChangePassword"),
-            (_[(_.k_EMsgAMSupportChangeEmail = 4195)] =
-              "k_EMsgAMSupportChangeEmail"),
-            (_[(_.k_EMsgAMResetUserVerificationGSByIP = 4197)] =
-              "k_EMsgAMResetUserVerificationGSByIP"),
-            (_[(_.k_EMsgAMUpdateGSPlayStats = 4198)] =
-              "k_EMsgAMUpdateGSPlayStats"),
-            (_[(_.k_EMsgAMSupportEnableOrDisable = 4199)] =
-              "k_EMsgAMSupportEnableOrDisable"),
-            (_[(_.k_EMsgAMGetPurchaseStatus = 4206)] =
-              "k_EMsgAMGetPurchaseStatus"),
-            (_[(_.k_EMsgAMSupportIsAccountEnabled = 4209)] =
-              "k_EMsgAMSupportIsAccountEnabled"),
-            (_[(_.k_EMsgAMSupportIsAccountEnabledResponse = 4210)] =
-              "k_EMsgAMSupportIsAccountEnabledResponse"),
-            (_[(_.k_EMsgUGSGetUserStats = 4211)] = "k_EMsgUGSGetUserStats"),
-            (_[(_.k_EMsgAMGSSearch = 4213)] = "k_EMsgAMGSSearch"),
-            (_[(_.k_EMsgChatServerRouteFriendMsg = 4219)] =
-              "k_EMsgChatServerRouteFriendMsg"),
-            (_[(_.k_EMsgAMTicketAuthRequestOrResponse = 4220)] =
-              "k_EMsgAMTicketAuthRequestOrResponse"),
-            (_[(_.k_EMsgAMAddFreeLicense = 4224)] = "k_EMsgAMAddFreeLicense"),
-            (_[(_.k_EMsgAMValidateEmailLink = 4231)] =
-              "k_EMsgAMValidateEmailLink"),
-            (_[(_.k_EMsgAMValidateEmailLinkResponse = 4232)] =
-              "k_EMsgAMValidateEmailLinkResponse"),
-            (_[(_.k_EMsgUGSStoreUserStats = 4236)] = "k_EMsgUGSStoreUserStats"),
-            (_[(_.k_EMsgAMDeleteStoredCard = 4241)] =
-              "k_EMsgAMDeleteStoredCard"),
-            (_[(_.k_EMsgAMRevokeLegacyGameKeys = 4242)] =
-              "k_EMsgAMRevokeLegacyGameKeys"),
-            (_[(_.k_EMsgAMGetWalletDetails = 4244)] =
-              "k_EMsgAMGetWalletDetails"),
-            (_[(_.k_EMsgAMGetWalletDetailsResponse = 4245)] =
-              "k_EMsgAMGetWalletDetailsResponse"),
-            (_[(_.k_EMsgAMDeleteStoredPaymentInfo = 4246)] =
-              "k_EMsgAMDeleteStoredPaymentInfo"),
-            (_[(_.k_EMsgAMGetStoredPaymentSummary = 4247)] =
-              "k_EMsgAMGetStoredPaymentSummary"),
-            (_[(_.k_EMsgAMGetStoredPaymentSummaryResponse = 4248)] =
-              "k_EMsgAMGetStoredPaymentSummaryResponse"),
-            (_[(_.k_EMsgAMGetWalletConversionRate = 4249)] =
-              "k_EMsgAMGetWalletConversionRate"),
-            (_[(_.k_EMsgAMGetWalletConversionRateResponse = 4250)] =
-              "k_EMsgAMGetWalletConversionRateResponse"),
-            (_[(_.k_EMsgAMConvertWallet = 4251)] = "k_EMsgAMConvertWallet"),
-            (_[(_.k_EMsgAMConvertWalletResponse = 4252)] =
-              "k_EMsgAMConvertWalletResponse"),
-            (_[(_.k_EMsgAMSetPreApproval = 4255)] = "k_EMsgAMSetPreApproval"),
-            (_[(_.k_EMsgAMSetPreApprovalResponse = 4256)] =
-              "k_EMsgAMSetPreApprovalResponse"),
-            (_[(_.k_EMsgAMCreateRefund = 4258)] = "k_EMsgAMCreateRefund"),
-            (_[(_.k_EMsgAMCreateChargeback = 4260)] =
-              "k_EMsgAMCreateChargeback"),
-            (_[(_.k_EMsgAMCreateDispute = 4262)] = "k_EMsgAMCreateDispute"),
-            (_[(_.k_EMsgAMClearDispute = 4264)] = "k_EMsgAMClearDispute"),
-            (_[(_.k_EMsgAMCreateFinancialAdjustment = 4265)] =
-              "k_EMsgAMCreateFinancialAdjustment"),
-            (_[(_.k_EMsgAMPlayerNicknameList = 4266)] =
-              "k_EMsgAMPlayerNicknameList"),
-            (_[(_.k_EMsgAMPlayerNicknameListResponse = 4267)] =
-              "k_EMsgAMPlayerNicknameListResponse"),
-            (_[(_.k_EMsgAMGetUserCurrentGameInfo = 4269)] =
-              "k_EMsgAMGetUserCurrentGameInfo"),
-            (_[(_.k_EMsgAMGetUserCurrentGameInfoResponse = 4270)] =
-              "k_EMsgAMGetUserCurrentGameInfoResponse"),
-            (_[(_.k_EMsgAMGetGSPlayerList = 4271)] = "k_EMsgAMGetGSPlayerList"),
-            (_[(_.k_EMsgAMGetGSPlayerListResponse = 4272)] =
-              "k_EMsgAMGetGSPlayerListResponse"),
-            (_[(_.k_EMsgAMGetSteamIDForMicroTxn = 4278)] =
-              "k_EMsgAMGetSteamIDForMicroTxn"),
-            (_[(_.k_EMsgAMGetSteamIDForMicroTxnResponse = 4279)] =
-              "k_EMsgAMGetSteamIDForMicroTxnResponse"),
-            (_[(_.k_EMsgAMSetPartnerMember = 4280)] =
-              "k_EMsgAMSetPartnerMember"),
-            (_[(_.k_EMsgAMRemovePublisherUser = 4281)] =
-              "k_EMsgAMRemovePublisherUser"),
-            (_[(_.k_EMsgAMGetUserLicenseList = 4282)] =
-              "k_EMsgAMGetUserLicenseList"),
-            (_[(_.k_EMsgAMGetUserLicenseListResponse = 4283)] =
-              "k_EMsgAMGetUserLicenseListResponse"),
-            (_[(_.k_EMsgAMReloadGameGroupPolicy = 4284)] =
-              "k_EMsgAMReloadGameGroupPolicy"),
-            (_[(_.k_EMsgAMAddFreeLicenseResponse = 4285)] =
-              "k_EMsgAMAddFreeLicenseResponse"),
-            (_[(_.k_EMsgAMVACStatusUpdate = 4286)] = "k_EMsgAMVACStatusUpdate"),
-            (_[(_.k_EMsgAMGetAccountDetails = 4287)] =
-              "k_EMsgAMGetAccountDetails"),
-            (_[(_.k_EMsgAMGetAccountDetailsResponse = 4288)] =
-              "k_EMsgAMGetAccountDetailsResponse"),
-            (_[(_.k_EMsgAMGetPlayerLinkDetails = 4289)] =
-              "k_EMsgAMGetPlayerLinkDetails"),
-            (_[(_.k_EMsgAMGetPlayerLinkDetailsResponse = 4290)] =
-              "k_EMsgAMGetPlayerLinkDetailsResponse"),
-            (_[(_.k_EMsgAMGetAccountFlagsForWGSpoofing = 4294)] =
-              "k_EMsgAMGetAccountFlagsForWGSpoofing"),
-            (_[(_.k_EMsgAMGetAccountFlagsForWGSpoofingResponse = 4295)] =
-              "k_EMsgAMGetAccountFlagsForWGSpoofingResponse"),
-            (_[(_.k_EMsgAMGetClanOfficers = 4298)] = "k_EMsgAMGetClanOfficers"),
-            (_[(_.k_EMsgAMGetClanOfficersResponse = 4299)] =
-              "k_EMsgAMGetClanOfficersResponse"),
-            (_[(_.k_EMsgAMNameChange = 4300)] = "k_EMsgAMNameChange"),
-            (_[(_.k_EMsgAMGetNameHistory = 4301)] = "k_EMsgAMGetNameHistory"),
-            (_[(_.k_EMsgAMGetNameHistoryResponse = 4302)] =
-              "k_EMsgAMGetNameHistoryResponse"),
-            (_[(_.k_EMsgAMSupportRemoveAccountSecurity = 4307)] =
-              "k_EMsgAMSupportRemoveAccountSecurity"),
-            (_[(_.k_EMsgAMIsAccountInCaptchaGracePeriod = 4308)] =
-              "k_EMsgAMIsAccountInCaptchaGracePeriod"),
-            (_[(_.k_EMsgAMIsAccountInCaptchaGracePeriodResponse = 4309)] =
-              "k_EMsgAMIsAccountInCaptchaGracePeriodResponse"),
-            (_[(_.k_EMsgAMAccountPS3Unlink = 4310)] =
-              "k_EMsgAMAccountPS3Unlink"),
-            (_[(_.k_EMsgAMAccountPS3UnlinkResponse = 4311)] =
-              "k_EMsgAMAccountPS3UnlinkResponse"),
-            (_[(_.k_EMsgUGSStoreUserStatsResponse = 4312)] =
-              "k_EMsgUGSStoreUserStatsResponse"),
-            (_[(_.k_EMsgAMGetAccountPSNInfo = 4313)] =
-              "k_EMsgAMGetAccountPSNInfo"),
-            (_[(_.k_EMsgAMGetAccountPSNInfoResponse = 4314)] =
-              "k_EMsgAMGetAccountPSNInfoResponse"),
-            (_[(_.k_EMsgAMAuthenticatedPlayerList = 4315)] =
-              "k_EMsgAMAuthenticatedPlayerList"),
-            (_[(_.k_EMsgAMGetUserGifts = 4316)] = "k_EMsgAMGetUserGifts"),
-            (_[(_.k_EMsgAMGetUserGiftsResponse = 4317)] =
-              "k_EMsgAMGetUserGiftsResponse"),
-            (_[(_.k_EMsgAMTransferLockedGifts = 4320)] =
-              "k_EMsgAMTransferLockedGifts"),
-            (_[(_.k_EMsgAMTransferLockedGiftsResponse = 4321)] =
-              "k_EMsgAMTransferLockedGiftsResponse"),
-            (_[(_.k_EMsgAMPlayerHostedOnGameServer = 4322)] =
-              "k_EMsgAMPlayerHostedOnGameServer"),
-            (_[(_.k_EMsgAMGetAccountBanInfo = 4323)] =
-              "k_EMsgAMGetAccountBanInfo"),
-            (_[(_.k_EMsgAMGetAccountBanInfoResponse = 4324)] =
-              "k_EMsgAMGetAccountBanInfoResponse"),
-            (_[(_.k_EMsgAMRecordBanEnforcement = 4325)] =
-              "k_EMsgAMRecordBanEnforcement"),
-            (_[(_.k_EMsgAMRollbackGiftTransfer = 4326)] =
-              "k_EMsgAMRollbackGiftTransfer"),
-            (_[(_.k_EMsgAMRollbackGiftTransferResponse = 4327)] =
-              "k_EMsgAMRollbackGiftTransferResponse"),
-            (_[(_.k_EMsgAMHandlePendingTransaction = 4328)] =
-              "k_EMsgAMHandlePendingTransaction"),
-            (_[(_.k_EMsgAMRequestClanDetails = 4329)] =
-              "k_EMsgAMRequestClanDetails"),
-            (_[(_.k_EMsgAMDeleteStoredPaypalAgreement = 4330)] =
-              "k_EMsgAMDeleteStoredPaypalAgreement"),
-            (_[(_.k_EMsgAMGameServerUpdate = 4331)] =
-              "k_EMsgAMGameServerUpdate"),
-            (_[(_.k_EMsgAMGameServerRemove = 4332)] =
-              "k_EMsgAMGameServerRemove"),
-            (_[(_.k_EMsgAMGetPaypalAgreements = 4333)] =
-              "k_EMsgAMGetPaypalAgreements"),
-            (_[(_.k_EMsgAMGetPaypalAgreementsResponse = 4334)] =
-              "k_EMsgAMGetPaypalAgreementsResponse"),
-            (_[(_.k_EMsgAMGameServerPlayerCompatibilityCheck = 4335)] =
-              "k_EMsgAMGameServerPlayerCompatibilityCheck"),
-            (_[(_.k_EMsgAMGameServerPlayerCompatibilityCheckResponse = 4336)] =
-              "k_EMsgAMGameServerPlayerCompatibilityCheckResponse"),
-            (_[(_.k_EMsgAMRenewLicense = 4337)] = "k_EMsgAMRenewLicense"),
-            (_[(_.k_EMsgAMGetAccountCommunityBanInfo = 4338)] =
-              "k_EMsgAMGetAccountCommunityBanInfo"),
-            (_[(_.k_EMsgAMGetAccountCommunityBanInfoResponse = 4339)] =
-              "k_EMsgAMGetAccountCommunityBanInfoResponse"),
-            (_[(_.k_EMsgAMGameServerAccountChangePassword = 4340)] =
-              "k_EMsgAMGameServerAccountChangePassword"),
-            (_[(_.k_EMsgAMGameServerAccountDeleteAccount = 4341)] =
-              "k_EMsgAMGameServerAccountDeleteAccount"),
-            (_[(_.k_EMsgAMRenewAgreement = 4342)] = "k_EMsgAMRenewAgreement"),
-            (_[(_.k_EMsgAMXsollaPayment = 4344)] = "k_EMsgAMXsollaPayment"),
-            (_[(_.k_EMsgAMXsollaPaymentResponse = 4345)] =
-              "k_EMsgAMXsollaPaymentResponse"),
-            (_[(_.k_EMsgAMAcctAllowedToPurchase = 4346)] =
-              "k_EMsgAMAcctAllowedToPurchase"),
-            (_[(_.k_EMsgAMAcctAllowedToPurchaseResponse = 4347)] =
-              "k_EMsgAMAcctAllowedToPurchaseResponse");
-          (_[(_.k_EMsgAMSwapKioskDeposit = 4348)] = "k_EMsgAMSwapKioskDeposit"),
-            (_[(_.k_EMsgAMSwapKioskDepositResponse = 4349)] =
-              "k_EMsgAMSwapKioskDepositResponse"),
-            (_[(_.k_EMsgAMSetUserGiftUnowned = 4350)] =
-              "k_EMsgAMSetUserGiftUnowned"),
-            (_[(_.k_EMsgAMSetUserGiftUnownedResponse = 4351)] =
-              "k_EMsgAMSetUserGiftUnownedResponse"),
-            (_[(_.k_EMsgAMClaimUnownedUserGift = 4352)] =
-              "k_EMsgAMClaimUnownedUserGift"),
-            (_[(_.k_EMsgAMClaimUnownedUserGiftResponse = 4353)] =
-              "k_EMsgAMClaimUnownedUserGiftResponse"),
-            (_[(_.k_EMsgAMSetClanName = 4354)] = "k_EMsgAMSetClanName"),
-            (_[(_.k_EMsgAMSetClanNameResponse = 4355)] =
-              "k_EMsgAMSetClanNameResponse"),
-            (_[(_.k_EMsgAMGrantCoupon = 4356)] = "k_EMsgAMGrantCoupon"),
-            (_[(_.k_EMsgAMGrantCouponResponse = 4357)] =
-              "k_EMsgAMGrantCouponResponse"),
-            (_[(_.k_EMsgAMIsPackageRestrictedInUserCountry = 4358)] =
-              "k_EMsgAMIsPackageRestrictedInUserCountry"),
-            (_[(_.k_EMsgAMIsPackageRestrictedInUserCountryResponse = 4359)] =
-              "k_EMsgAMIsPackageRestrictedInUserCountryResponse"),
-            (_[(_.k_EMsgAMHandlePendingTransactionResponse = 4360)] =
-              "k_EMsgAMHandlePendingTransactionResponse"),
-            (_[(_.k_EMsgAMGrantGuestPasses2 = 4361)] =
-              "k_EMsgAMGrantGuestPasses2"),
-            (_[(_.k_EMsgAMGrantGuestPasses2Response = 4362)] =
-              "k_EMsgAMGrantGuestPasses2Response"),
-            (_[(_.k_EMsgAMGetPlayerBanDetails = 4365)] =
-              "k_EMsgAMGetPlayerBanDetails"),
-            (_[(_.k_EMsgAMGetPlayerBanDetailsResponse = 4366)] =
-              "k_EMsgAMGetPlayerBanDetailsResponse"),
-            (_[(_.k_EMsgAMFinalizePurchase = 4367)] =
-              "k_EMsgAMFinalizePurchase"),
-            (_[(_.k_EMsgAMFinalizePurchaseResponse = 4368)] =
-              "k_EMsgAMFinalizePurchaseResponse"),
-            (_[(_.k_EMsgAMPersonaChangeResponse = 4372)] =
-              "k_EMsgAMPersonaChangeResponse"),
-            (_[(_.k_EMsgAMGetClanDetailsForForumCreation = 4373)] =
-              "k_EMsgAMGetClanDetailsForForumCreation"),
-            (_[(_.k_EMsgAMGetClanDetailsForForumCreationResponse = 4374)] =
-              "k_EMsgAMGetClanDetailsForForumCreationResponse"),
-            (_[(_.k_EMsgAMGetPendingNotificationCount = 4375)] =
-              "k_EMsgAMGetPendingNotificationCount"),
-            (_[(_.k_EMsgAMGetPendingNotificationCountResponse = 4376)] =
-              "k_EMsgAMGetPendingNotificationCountResponse"),
-            (_[(_.k_EMsgAMPasswordHashUpgrade = 4377)] =
-              "k_EMsgAMPasswordHashUpgrade"),
-            (_[(_.k_EMsgAMBoaCompraPayment = 4380)] =
-              "k_EMsgAMBoaCompraPayment"),
-            (_[(_.k_EMsgAMBoaCompraPaymentResponse = 4381)] =
-              "k_EMsgAMBoaCompraPaymentResponse"),
-            (_[(_.k_EMsgAMCompleteExternalPurchase = 4383)] =
-              "k_EMsgAMCompleteExternalPurchase"),
-            (_[(_.k_EMsgAMCompleteExternalPurchaseResponse = 4384)] =
-              "k_EMsgAMCompleteExternalPurchaseResponse"),
-            (_[(_.k_EMsgAMResolveNegativeWalletCredits = 4385)] =
-              "k_EMsgAMResolveNegativeWalletCredits"),
-            (_[(_.k_EMsgAMResolveNegativeWalletCreditsResponse = 4386)] =
-              "k_EMsgAMResolveNegativeWalletCreditsResponse"),
-            (_[(_.k_EMsgAMPlayerGetClanBasicDetails = 4389)] =
-              "k_EMsgAMPlayerGetClanBasicDetails"),
-            (_[(_.k_EMsgAMPlayerGetClanBasicDetailsResponse = 4390)] =
-              "k_EMsgAMPlayerGetClanBasicDetailsResponse"),
-            (_[(_.k_EMsgAMMOLPayment = 4391)] = "k_EMsgAMMOLPayment"),
-            (_[(_.k_EMsgAMMOLPaymentResponse = 4392)] =
-              "k_EMsgAMMOLPaymentResponse"),
-            (_[(_.k_EMsgGetUserIPCountry = 4393)] = "k_EMsgGetUserIPCountry"),
-            (_[(_.k_EMsgGetUserIPCountryResponse = 4394)] =
-              "k_EMsgGetUserIPCountryResponse"),
-            (_[(_.k_EMsgNotificationOfSuspiciousActivity = 4395)] =
-              "k_EMsgNotificationOfSuspiciousActivity"),
-            (_[(_.k_EMsgAMDegicaPayment = 4396)] = "k_EMsgAMDegicaPayment"),
-            (_[(_.k_EMsgAMDegicaPaymentResponse = 4397)] =
-              "k_EMsgAMDegicaPaymentResponse"),
-            (_[(_.k_EMsgAMEClubPayment = 4398)] = "k_EMsgAMEClubPayment"),
-            (_[(_.k_EMsgAMEClubPaymentResponse = 4399)] =
-              "k_EMsgAMEClubPaymentResponse"),
-            (_[(_.k_EMsgAMPayPalPaymentsHubPayment = 4400)] =
-              "k_EMsgAMPayPalPaymentsHubPayment"),
-            (_[(_.k_EMsgAMPayPalPaymentsHubPaymentResponse = 4401)] =
-              "k_EMsgAMPayPalPaymentsHubPaymentResponse"),
-            (_[(_.k_EMsgAMTwoFactorRecoverAuthenticatorRequest = 4402)] =
-              "k_EMsgAMTwoFactorRecoverAuthenticatorRequest"),
-            (_[(_.k_EMsgAMTwoFactorRecoverAuthenticatorResponse = 4403)] =
-              "k_EMsgAMTwoFactorRecoverAuthenticatorResponse"),
-            (_[(_.k_EMsgAMSmart2PayPayment = 4404)] =
-              "k_EMsgAMSmart2PayPayment"),
-            (_[(_.k_EMsgAMSmart2PayPaymentResponse = 4405)] =
-              "k_EMsgAMSmart2PayPaymentResponse"),
-            (_[(_.k_EMsgAMValidatePasswordResetCodeAndSendSmsRequest = 4406)] =
-              "k_EMsgAMValidatePasswordResetCodeAndSendSmsRequest"),
-            (_[(_.k_EMsgAMValidatePasswordResetCodeAndSendSmsResponse = 4407)] =
-              "k_EMsgAMValidatePasswordResetCodeAndSendSmsResponse"),
-            (_[(_.k_EMsgAMGetAccountResetDetailsRequest = 4408)] =
-              "k_EMsgAMGetAccountResetDetailsRequest"),
-            (_[(_.k_EMsgAMGetAccountResetDetailsResponse = 4409)] =
-              "k_EMsgAMGetAccountResetDetailsResponse"),
-            (_[(_.k_EMsgAMBitPayPayment = 4410)] = "k_EMsgAMBitPayPayment"),
-            (_[(_.k_EMsgAMBitPayPaymentResponse = 4411)] =
-              "k_EMsgAMBitPayPaymentResponse"),
-            (_[(_.k_EMsgAMSendAccountInfoUpdate = 4412)] =
-              "k_EMsgAMSendAccountInfoUpdate"),
-            (_[(_.k_EMsgAMSendScheduledGift = 4413)] =
-              "k_EMsgAMSendScheduledGift"),
-            (_[(_.k_EMsgAMNodwinPayment = 4414)] = "k_EMsgAMNodwinPayment"),
-            (_[(_.k_EMsgAMNodwinPaymentResponse = 4415)] =
-              "k_EMsgAMNodwinPaymentResponse"),
-            (_[(_.k_EMsgAMResolveWalletRevoke = 4416)] =
-              "k_EMsgAMResolveWalletRevoke"),
-            (_[(_.k_EMsgAMResolveWalletReverseRevoke = 4417)] =
-              "k_EMsgAMResolveWalletReverseRevoke"),
-            (_[(_.k_EMsgAMFundedPayment = 4418)] = "k_EMsgAMFundedPayment"),
-            (_[(_.k_EMsgAMFundedPaymentResponse = 4419)] =
-              "k_EMsgAMFundedPaymentResponse"),
-            (_[(_.k_EMsgAMRequestPersonaUpdateForChatServer = 4420)] =
-              "k_EMsgAMRequestPersonaUpdateForChatServer"),
-            (_[(_.k_EMsgAMPerfectWorldPayment = 4421)] =
-              "k_EMsgAMPerfectWorldPayment"),
-            (_[(_.k_EMsgAMPerfectWorldPaymentResponse = 4422)] =
-              "k_EMsgAMPerfectWorldPaymentResponse"),
-            (_[(_.k_EMsgAMECommPayPayment = 4423)] = "k_EMsgAMECommPayPayment"),
-            (_[(_.k_EMsgAMECommPayPaymentResponse = 4424)] =
-              "k_EMsgAMECommPayPaymentResponse"),
-            (_[(_.k_EMsgAMSetRemoteClientID = 4425)] =
-              "k_EMsgAMSetRemoteClientID"),
-            (_[(_.k_EMsgAMNuveiPayment = 4426)] = "k_EMsgAMNuveiPayment"),
-            (_[(_.k_EMsgAMNuveiPaymentResponse = 4427)] =
-              "k_EMsgAMNuveiPaymentResponse"),
-            (_[(_.k_EMsgBasePSRange = 5e3)] = "k_EMsgBasePSRange"),
-            (_[(_.k_EMsgPSIsValidShoppingCart = 5003)] =
-              "k_EMsgPSIsValidShoppingCart"),
-            (_[(_.k_EMsgPSIsValidShoppingCartResponse = 5004)] =
-              "k_EMsgPSIsValidShoppingCartResponse"),
-            (_[(_.k_EMsgPSGetShoppingCartContents = 5009)] =
-              "k_EMsgPSGetShoppingCartContents"),
-            (_[(_.k_EMsgPSGetShoppingCartContentsResponse = 5010)] =
-              "k_EMsgPSGetShoppingCartContentsResponse"),
-            (_[(_.k_EMsgPSAddWalletCreditToShoppingCart = 5011)] =
-              "k_EMsgPSAddWalletCreditToShoppingCart"),
-            (_[(_.k_EMsgPSAddWalletCreditToShoppingCartResponse = 5012)] =
-              "k_EMsgPSAddWalletCreditToShoppingCartResponse"),
-            (_[(_.k_EMsgPSGetAccountCartContents = 5013)] =
-              "k_EMsgPSGetAccountCartContents"),
-            (_[(_.k_EMsgPSGetAccountCartContentsResponse = 5014)] =
-              "k_EMsgPSGetAccountCartContentsResponse"),
-            (_[(_.k_EMsgBaseUFSRange = 5200)] = "k_EMsgBaseUFSRange"),
-            (_[(_.k_EMsgUFSReloadPartitionInfo = 5215)] =
-              "k_EMsgUFSReloadPartitionInfo"),
-            (_[(_.k_EMsgUFSSynchronizeFile = 5217)] =
-              "k_EMsgUFSSynchronizeFile"),
-            (_[(_.k_EMsgUFSSynchronizeFileResponse = 5218)] =
-              "k_EMsgUFSSynchronizeFileResponse"),
-            (_[(_.k_EMsgClientUFSGetUGCDetails = 5226)] =
-              "k_EMsgClientUFSGetUGCDetails"),
-            (_[(_.k_EMsgClientUFSGetUGCDetailsResponse = 5227)] =
-              "k_EMsgClientUFSGetUGCDetailsResponse"),
-            (_[(_.k_EMsgUFSUpdateFileFlags = 5228)] =
-              "k_EMsgUFSUpdateFileFlags"),
-            (_[(_.k_EMsgUFSUpdateFileFlagsResponse = 5229)] =
-              "k_EMsgUFSUpdateFileFlagsResponse"),
-            (_[(_.k_EMsgClientUFSGetSingleFileInfo = 5230)] =
-              "k_EMsgClientUFSGetSingleFileInfo"),
-            (_[(_.k_EMsgClientUFSGetSingleFileInfoResponse = 5231)] =
-              "k_EMsgClientUFSGetSingleFileInfoResponse"),
-            (_[(_.k_EMsgClientUFSShareFile = 5232)] =
-              "k_EMsgClientUFSShareFile"),
-            (_[(_.k_EMsgClientUFSShareFileResponse = 5233)] =
-              "k_EMsgClientUFSShareFileResponse"),
-            (_[(_.k_EMsgUFSReloadAccount = 5234)] = "k_EMsgUFSReloadAccount"),
-            (_[(_.k_EMsgUFSReloadAccountResponse = 5235)] =
-              "k_EMsgUFSReloadAccountResponse"),
-            (_[(_.k_EMsgUFSUpdateRecordBatched = 5236)] =
-              "k_EMsgUFSUpdateRecordBatched"),
-            (_[(_.k_EMsgUFSUpdateRecordBatchedResponse = 5237)] =
-              "k_EMsgUFSUpdateRecordBatchedResponse"),
-            (_[(_.k_EMsgUFSMigrateFile = 5238)] = "k_EMsgUFSMigrateFile"),
-            (_[(_.k_EMsgUFSMigrateFileResponse = 5239)] =
-              "k_EMsgUFSMigrateFileResponse"),
-            (_[(_.k_EMsgUFSGetUGCURLs = 5240)] = "k_EMsgUFSGetUGCURLs"),
-            (_[(_.k_EMsgUFSGetUGCURLsResponse = 5241)] =
-              "k_EMsgUFSGetUGCURLsResponse"),
-            (_[(_.k_EMsgUFSHttpUploadFileFinishRequest = 5242)] =
-              "k_EMsgUFSHttpUploadFileFinishRequest"),
-            (_[(_.k_EMsgUFSHttpUploadFileFinishResponse = 5243)] =
-              "k_EMsgUFSHttpUploadFileFinishResponse"),
-            (_[(_.k_EMsgUFSDownloadStartRequest = 5244)] =
-              "k_EMsgUFSDownloadStartRequest"),
-            (_[(_.k_EMsgUFSDownloadStartResponse = 5245)] =
-              "k_EMsgUFSDownloadStartResponse"),
-            (_[(_.k_EMsgUFSDownloadChunkRequest = 5246)] =
-              "k_EMsgUFSDownloadChunkRequest"),
-            (_[(_.k_EMsgUFSDownloadChunkResponse = 5247)] =
-              "k_EMsgUFSDownloadChunkResponse"),
-            (_[(_.k_EMsgUFSDownloadFinishRequest = 5248)] =
-              "k_EMsgUFSDownloadFinishRequest"),
-            (_[(_.k_EMsgUFSDownloadFinishResponse = 5249)] =
-              "k_EMsgUFSDownloadFinishResponse"),
-            (_[(_.k_EMsgUFSFlushURLCache = 5250)] = "k_EMsgUFSFlushURLCache"),
-            (_[(_.k_EMsgUFSMigrateFileAppID = 5253)] =
-              "k_EMsgUFSMigrateFileAppID"),
-            (_[(_.k_EMsgUFSMigrateFileAppIDResponse = 5254)] =
-              "k_EMsgUFSMigrateFileAppIDResponse"),
-            (_[(_.k_EMsgBaseClient2 = 5400)] = "k_EMsgBaseClient2"),
-            (_[(_.k_EMsgClientRequestForgottenPasswordEmail = 5401)] =
-              "k_EMsgClientRequestForgottenPasswordEmail"),
-            (_[(_.k_EMsgClientRequestForgottenPasswordEmailResponse = 5402)] =
-              "k_EMsgClientRequestForgottenPasswordEmailResponse"),
-            (_[(_.k_EMsgClientCreateAccountResponse = 5403)] =
-              "k_EMsgClientCreateAccountResponse"),
-            (_[(_.k_EMsgClientResetForgottenPassword = 5404)] =
-              "k_EMsgClientResetForgottenPassword"),
-            (_[(_.k_EMsgClientResetForgottenPasswordResponse = 5405)] =
-              "k_EMsgClientResetForgottenPasswordResponse"),
-            (_[(_.k_EMsgClientInformOfResetForgottenPassword = 5407)] =
-              "k_EMsgClientInformOfResetForgottenPassword"),
-            (_[(_.k_EMsgClientInformOfResetForgottenPasswordResponse = 5408)] =
-              "k_EMsgClientInformOfResetForgottenPasswordResponse"),
-            (_[(_.k_EMsgClientAnonUserLogOn_Deprecated = 5409)] =
-              "k_EMsgClientAnonUserLogOn_Deprecated"),
-            (_[(_.k_EMsgClientGamesPlayedWithDataBlob = 5410)] =
-              "k_EMsgClientGamesPlayedWithDataBlob"),
-            (_[(_.k_EMsgClientUpdateUserGameInfo = 5411)] =
-              "k_EMsgClientUpdateUserGameInfo"),
-            (_[(_.k_EMsgClientFileToDownload = 5412)] =
-              "k_EMsgClientFileToDownload"),
-            (_[(_.k_EMsgClientFileToDownloadResponse = 5413)] =
-              "k_EMsgClientFileToDownloadResponse"),
-            (_[(_.k_EMsgClientLBSSetScore = 5414)] = "k_EMsgClientLBSSetScore"),
-            (_[(_.k_EMsgClientLBSSetScoreResponse = 5415)] =
-              "k_EMsgClientLBSSetScoreResponse"),
-            (_[(_.k_EMsgClientLBSFindOrCreateLB = 5416)] =
-              "k_EMsgClientLBSFindOrCreateLB"),
-            (_[(_.k_EMsgClientLBSFindOrCreateLBResponse = 5417)] =
-              "k_EMsgClientLBSFindOrCreateLBResponse"),
-            (_[(_.k_EMsgClientLBSGetLBEntries = 5418)] =
-              "k_EMsgClientLBSGetLBEntries"),
-            (_[(_.k_EMsgClientLBSGetLBEntriesResponse = 5419)] =
-              "k_EMsgClientLBSGetLBEntriesResponse"),
-            (_[(_.k_EMsgClientChatDeclined = 5426)] =
-              "k_EMsgClientChatDeclined"),
-            (_[(_.k_EMsgClientFriendMsgIncoming = 5427)] =
-              "k_EMsgClientFriendMsgIncoming"),
-            (_[(_.k_EMsgClientAuthList_Deprecated = 5428)] =
-              "k_EMsgClientAuthList_Deprecated"),
-            (_[(_.k_EMsgClientTicketAuthComplete = 5429)] =
-              "k_EMsgClientTicketAuthComplete"),
-            (_[(_.k_EMsgClientIsLimitedAccount = 5430)] =
-              "k_EMsgClientIsLimitedAccount"),
-            (_[(_.k_EMsgClientRequestAuthList = 5431)] =
-              "k_EMsgClientRequestAuthList"),
-            (_[(_.k_EMsgClientAuthList = 5432)] = "k_EMsgClientAuthList"),
-            (_[(_.k_EMsgClientStat_Deprecated = 5433)] =
-              "k_EMsgClientStat_Deprecated"),
-            (_[(_.k_EMsgClientP2PConnectionInfo = 5434)] =
-              "k_EMsgClientP2PConnectionInfo"),
-            (_[(_.k_EMsgClientP2PConnectionFailInfo = 5435)] =
-              "k_EMsgClientP2PConnectionFailInfo"),
-            (_[(_.k_EMsgClientGetDepotDecryptionKey = 5438)] =
-              "k_EMsgClientGetDepotDecryptionKey"),
-            (_[(_.k_EMsgClientGetDepotDecryptionKeyResponse = 5439)] =
-              "k_EMsgClientGetDepotDecryptionKeyResponse"),
-            (_[(_.k_EMsgClientEnableTestLicense = 5443)] =
-              "k_EMsgClientEnableTestLicense"),
-            (_[(_.k_EMsgClientEnableTestLicenseResponse = 5444)] =
-              "k_EMsgClientEnableTestLicenseResponse"),
-            (_[(_.k_EMsgClientDisableTestLicense = 5445)] =
-              "k_EMsgClientDisableTestLicense"),
-            (_[(_.k_EMsgClientDisableTestLicenseResponse = 5446)] =
-              "k_EMsgClientDisableTestLicenseResponse"),
-            (_[(_.k_EMsgClientCheckAppBetaPassword = 5450)] =
-              "k_EMsgClientCheckAppBetaPassword"),
-            (_[(_.k_EMsgClientCheckAppBetaPasswordResponse = 5451)] =
-              "k_EMsgClientCheckAppBetaPasswordResponse"),
-            (_[(_.k_EMsgClientToGC = 5452)] = "k_EMsgClientToGC"),
-            (_[(_.k_EMsgClientFromGC = 5453)] = "k_EMsgClientFromGC"),
-            (_[(_.k_EMsgClientEmailAddrInfo = 5456)] =
-              "k_EMsgClientEmailAddrInfo"),
-            (_[(_.k_EMsgClientPasswordChange3 = 5457)] =
-              "k_EMsgClientPasswordChange3"),
-            (_[(_.k_EMsgClientEmailChange3 = 5458)] =
-              "k_EMsgClientEmailChange3"),
-            (_[(_.k_EMsgClientPersonalQAChange3 = 5459)] =
-              "k_EMsgClientPersonalQAChange3"),
-            (_[(_.k_EMsgClientResetForgottenPassword3 = 5460)] =
-              "k_EMsgClientResetForgottenPassword3"),
-            (_[(_.k_EMsgClientRequestForgottenPasswordEmail3 = 5461)] =
-              "k_EMsgClientRequestForgottenPasswordEmail3"),
-            (_[(_.k_EMsgClientNewLoginKey = 5463)] = "k_EMsgClientNewLoginKey"),
-            (_[(_.k_EMsgClientNewLoginKeyAccepted_Deprecated = 5464)] =
-              "k_EMsgClientNewLoginKeyAccepted_Deprecated"),
-            (_[(_.k_EMsgClientLogOnWithHash_Deprecated = 5465)] =
-              "k_EMsgClientLogOnWithHash_Deprecated"),
-            (_[(_.k_EMsgClientStoreUserStats2 = 5466)] =
-              "k_EMsgClientStoreUserStats2"),
-            (_[(_.k_EMsgClientStatsUpdated = 5467)] =
-              "k_EMsgClientStatsUpdated"),
-            (_[(_.k_EMsgClientRequestedClientStats_Deprecated = 5480)] =
-              "k_EMsgClientRequestedClientStats_Deprecated"),
-            (_[(_.k_EMsgClientStat2Int32_Deprecated = 5481)] =
-              "k_EMsgClientStat2Int32_Deprecated"),
-            (_[(_.k_EMsgClientStat2_Deprecated = 5482)] =
-              "k_EMsgClientStat2_Deprecated"),
-            (_[(_.k_EMsgClientDRMDownloadRequest = 5485)] =
-              "k_EMsgClientDRMDownloadRequest"),
-            (_[(_.k_EMsgClientDRMDownloadResponse = 5486)] =
-              "k_EMsgClientDRMDownloadResponse"),
-            (_[(_.k_EMsgClientDRMFinalResult = 5487)] =
-              "k_EMsgClientDRMFinalResult"),
-            (_[(_.k_EMsgClientGetFriendsWhoPlayGame = 5488)] =
-              "k_EMsgClientGetFriendsWhoPlayGame"),
-            (_[(_.k_EMsgClientGetFriendsWhoPlayGameResponse = 5489)] =
-              "k_EMsgClientGetFriendsWhoPlayGameResponse"),
-            (_[(_.k_EMsgClientOGSBeginSession = 5490)] =
-              "k_EMsgClientOGSBeginSession"),
-            (_[(_.k_EMsgClientOGSBeginSessionResponse = 5491)] =
-              "k_EMsgClientOGSBeginSessionResponse"),
-            (_[(_.k_EMsgClientOGSEndSession = 5492)] =
-              "k_EMsgClientOGSEndSession"),
-            (_[(_.k_EMsgClientOGSEndSessionResponse = 5493)] =
-              "k_EMsgClientOGSEndSessionResponse"),
-            (_[(_.k_EMsgClientOGSWriteRow = 5494)] = "k_EMsgClientOGSWriteRow"),
-            (_[(_.k_EMsgClientGetPeerContentInfo = 5495)] =
-              "k_EMsgClientGetPeerContentInfo"),
-            (_[(_.k_EMsgClientGetPeerContentInfoResponse = 5496)] =
-              "k_EMsgClientGetPeerContentInfoResponse"),
-            (_[(_.k_EMsgClientStartPeerContentServer = 5497)] =
-              "k_EMsgClientStartPeerContentServer"),
-            (_[(_.k_EMsgClientStartPeerContentServerResponse = 5498)] =
-              "k_EMsgClientStartPeerContentServerResponse"),
-            (_[(_.k_EMsgClientServerUnavailable = 5500)] =
-              "k_EMsgClientServerUnavailable"),
-            (_[(_.k_EMsgClientServersAvailable = 5501)] =
-              "k_EMsgClientServersAvailable"),
-            (_[(_.k_EMsgClientRegisterAuthTicketWithCM = 5502)] =
-              "k_EMsgClientRegisterAuthTicketWithCM"),
-            (_[(_.k_EMsgClientGCMsgFailed = 5503)] = "k_EMsgClientGCMsgFailed"),
-            (_[(_.k_EMsgClientMicroTxnAuthRequest = 5504)] =
-              "k_EMsgClientMicroTxnAuthRequest"),
-            (_[(_.k_EMsgClientMicroTxnAuthorize = 5505)] =
-              "k_EMsgClientMicroTxnAuthorize"),
-            (_[(_.k_EMsgClientMicroTxnAuthorizeResponse = 5506)] =
-              "k_EMsgClientMicroTxnAuthorizeResponse"),
-            (_[(_.k_EMsgClientGetMicroTxnInfo = 5508)] =
-              "k_EMsgClientGetMicroTxnInfo"),
-            (_[(_.k_EMsgClientGetMicroTxnInfoResponse = 5509)] =
-              "k_EMsgClientGetMicroTxnInfoResponse"),
-            (_[(_.k_EMsgClientDeregisterWithServer = 5511)] =
-              "k_EMsgClientDeregisterWithServer"),
-            (_[(_.k_EMsgClientSubscribeToPersonaFeed = 5512)] =
-              "k_EMsgClientSubscribeToPersonaFeed"),
-            (_[(_.k_EMsgClientLogon = 5514)] = "k_EMsgClientLogon"),
-            (_[(_.k_EMsgClientGetClientDetails = 5515)] =
-              "k_EMsgClientGetClientDetails"),
-            (_[(_.k_EMsgClientGetClientDetailsResponse = 5516)] =
-              "k_EMsgClientGetClientDetailsResponse"),
-            (_[(_.k_EMsgClientReportOverlayDetourFailure = 5517)] =
-              "k_EMsgClientReportOverlayDetourFailure"),
-            (_[(_.k_EMsgClientGetClientAppList = 5518)] =
-              "k_EMsgClientGetClientAppList"),
-            (_[(_.k_EMsgClientGetClientAppListResponse = 5519)] =
-              "k_EMsgClientGetClientAppListResponse"),
-            (_[(_.k_EMsgClientInstallClientApp = 5520)] =
-              "k_EMsgClientInstallClientApp"),
-            (_[(_.k_EMsgClientInstallClientAppResponse = 5521)] =
-              "k_EMsgClientInstallClientAppResponse"),
-            (_[(_.k_EMsgClientUninstallClientApp = 5522)] =
-              "k_EMsgClientUninstallClientApp"),
-            (_[(_.k_EMsgClientUninstallClientAppResponse = 5523)] =
-              "k_EMsgClientUninstallClientAppResponse"),
-            (_[(_.k_EMsgClientSetClientAppUpdateState = 5524)] =
-              "k_EMsgClientSetClientAppUpdateState"),
-            (_[(_.k_EMsgClientSetClientAppUpdateStateResponse = 5525)] =
-              "k_EMsgClientSetClientAppUpdateStateResponse"),
-            (_[(_.k_EMsgClientRequestEncryptedAppTicket = 5526)] =
-              "k_EMsgClientRequestEncryptedAppTicket"),
-            (_[(_.k_EMsgClientRequestEncryptedAppTicketResponse = 5527)] =
-              "k_EMsgClientRequestEncryptedAppTicketResponse"),
-            (_[(_.k_EMsgClientWalletInfoUpdate = 5528)] =
-              "k_EMsgClientWalletInfoUpdate"),
-            (_[(_.k_EMsgClientLBSSetUGC = 5529)] = "k_EMsgClientLBSSetUGC"),
-            (_[(_.k_EMsgClientLBSSetUGCResponse = 5530)] =
-              "k_EMsgClientLBSSetUGCResponse"),
-            (_[(_.k_EMsgClientAMGetClanOfficers = 5531)] =
-              "k_EMsgClientAMGetClanOfficers"),
-            (_[(_.k_EMsgClientAMGetClanOfficersResponse = 5532)] =
-              "k_EMsgClientAMGetClanOfficersResponse"),
-            (_[(_.k_EMsgClientFriendProfileInfo = 5535)] =
-              "k_EMsgClientFriendProfileInfo"),
-            (_[(_.k_EMsgClientFriendProfileInfoResponse = 5536)] =
-              "k_EMsgClientFriendProfileInfoResponse"),
-            (_[(_.k_EMsgClientScreenshotsChanged = 5543)] =
-              "k_EMsgClientScreenshotsChanged"),
-            (_[(_.k_EMsgClientLaunchClientApp = 5544)] =
-              "k_EMsgClientLaunchClientApp"),
-            (_[(_.k_EMsgClientLaunchClientAppResponse = 5545)] =
-              "k_EMsgClientLaunchClientAppResponse"),
-            (_[(_.k_EMsgClientRequestAccountData = 5549)] =
-              "k_EMsgClientRequestAccountData"),
-            (_[(_.k_EMsgClientRequestAccountDataResponse = 5550)] =
-              "k_EMsgClientRequestAccountDataResponse"),
-            (_[(_.k_EMsgClientResetForgottenPassword4 = 5551)] =
-              "k_EMsgClientResetForgottenPassword4"),
-            (_[(_.k_EMsgClientHideFriend = 5552)] = "k_EMsgClientHideFriend"),
-            (_[(_.k_EMsgClientFriendsGroupsList = 5553)] =
-              "k_EMsgClientFriendsGroupsList"),
-            (_[(_.k_EMsgClientGetClanActivityCounts = 5554)] =
-              "k_EMsgClientGetClanActivityCounts"),
-            (_[(_.k_EMsgClientGetClanActivityCountsResponse = 5555)] =
-              "k_EMsgClientGetClanActivityCountsResponse"),
-            (_[(_.k_EMsgClientOGSReportString = 5556)] =
-              "k_EMsgClientOGSReportString"),
-            (_[(_.k_EMsgClientOGSReportBug = 5557)] =
-              "k_EMsgClientOGSReportBug"),
-            (_[(_.k_EMsgClientSentLogs = 5558)] = "k_EMsgClientSentLogs"),
-            (_[(_.k_EMsgClientLogonGameServer = 5559)] =
-              "k_EMsgClientLogonGameServer"),
-            (_[(_.k_EMsgAMClientCreateFriendsGroup = 5560)] =
-              "k_EMsgAMClientCreateFriendsGroup"),
-            (_[(_.k_EMsgAMClientCreateFriendsGroupResponse = 5561)] =
-              "k_EMsgAMClientCreateFriendsGroupResponse"),
-            (_[(_.k_EMsgAMClientDeleteFriendsGroup = 5562)] =
-              "k_EMsgAMClientDeleteFriendsGroup"),
-            (_[(_.k_EMsgAMClientDeleteFriendsGroupResponse = 5563)] =
-              "k_EMsgAMClientDeleteFriendsGroupResponse"),
-            (_[(_.k_EMsgAMClientManageFriendsGroup = 5564)] =
-              "k_EMsgAMClientManageFriendsGroup"),
-            (_[(_.k_EMsgAMClientManageFriendsGroupResponse = 5565)] =
-              "k_EMsgAMClientManageFriendsGroupResponse"),
-            (_[(_.k_EMsgAMClientAddFriendToGroup = 5566)] =
-              "k_EMsgAMClientAddFriendToGroup"),
-            (_[(_.k_EMsgAMClientAddFriendToGroupResponse = 5567)] =
-              "k_EMsgAMClientAddFriendToGroupResponse"),
-            (_[(_.k_EMsgAMClientRemoveFriendFromGroup = 5568)] =
-              "k_EMsgAMClientRemoveFriendFromGroup"),
-            (_[(_.k_EMsgAMClientRemoveFriendFromGroupResponse = 5569)] =
-              "k_EMsgAMClientRemoveFriendFromGroupResponse"),
-            (_[(_.k_EMsgClientAMGetPersonaNameHistory = 5570)] =
-              "k_EMsgClientAMGetPersonaNameHistory"),
-            (_[(_.k_EMsgClientAMGetPersonaNameHistoryResponse = 5571)] =
-              "k_EMsgClientAMGetPersonaNameHistoryResponse"),
-            (_[(_.k_EMsgClientRequestFreeLicense = 5572)] =
-              "k_EMsgClientRequestFreeLicense"),
-            (_[(_.k_EMsgClientRequestFreeLicenseResponse = 5573)] =
-              "k_EMsgClientRequestFreeLicenseResponse"),
-            (_[(_.k_EMsgClientDRMDownloadRequestWithCrashData = 5574)] =
-              "k_EMsgClientDRMDownloadRequestWithCrashData"),
-            (_[(_.k_EMsgClientAuthListAck = 5575)] = "k_EMsgClientAuthListAck"),
-            (_[(_.k_EMsgClientItemAnnouncements = 5576)] =
-              "k_EMsgClientItemAnnouncements"),
-            (_[(_.k_EMsgClientRequestItemAnnouncements = 5577)] =
-              "k_EMsgClientRequestItemAnnouncements"),
-            (_[(_.k_EMsgClientFriendMsgEchoToSender = 5578)] =
-              "k_EMsgClientFriendMsgEchoToSender"),
-            (_[(_.k_EMsgClientCommentNotifications = 5582)] =
-              "k_EMsgClientCommentNotifications"),
-            (_[(_.k_EMsgClientRequestCommentNotifications = 5583)] =
-              "k_EMsgClientRequestCommentNotifications"),
-            (_[(_.k_EMsgClientPersonaChangeResponse = 5584)] =
-              "k_EMsgClientPersonaChangeResponse"),
-            (_[
-              (_.k_EMsgClientRequestWebAPIAuthenticateUserNonce_Deprecated = 5585)
-            ] = "k_EMsgClientRequestWebAPIAuthenticateUserNonce_Deprecated"),
-            (_[
-              (_.k_EMsgClientRequestWebAPIAuthenticateUserNonceResponse_Deprecated = 5586)
-            ] =
-              "k_EMsgClientRequestWebAPIAuthenticateUserNonceResponse_Deprecated"),
-            (_[(_.k_EMsgClientPlayerNicknameList = 5587)] =
-              "k_EMsgClientPlayerNicknameList"),
-            (_[(_.k_EMsgAMClientSetPlayerNickname = 5588)] =
-              "k_EMsgAMClientSetPlayerNickname"),
-            (_[(_.k_EMsgAMClientSetPlayerNicknameResponse = 5589)] =
-              "k_EMsgAMClientSetPlayerNicknameResponse"),
-            (_[(_.k_EMsgClientGetNumberOfCurrentPlayersDP = 5592)] =
-              "k_EMsgClientGetNumberOfCurrentPlayersDP"),
-            (_[(_.k_EMsgClientGetNumberOfCurrentPlayersDPResponse = 5593)] =
-              "k_EMsgClientGetNumberOfCurrentPlayersDPResponse"),
-            (_[(_.k_EMsgClientServiceMethodLegacy = 5594)] =
-              "k_EMsgClientServiceMethodLegacy"),
-            (_[(_.k_EMsgClientServiceMethodLegacyResponse = 5595)] =
-              "k_EMsgClientServiceMethodLegacyResponse"),
-            (_[(_.k_EMsgClientFriendUserStatusPublished = 5596)] =
-              "k_EMsgClientFriendUserStatusPublished"),
-            (_[(_.k_EMsgClientCurrentUIMode = 5597)] =
-              "k_EMsgClientCurrentUIMode"),
-            (_[(_.k_EMsgClientVanityURLChangedNotification = 5598)] =
-              "k_EMsgClientVanityURLChangedNotification"),
-            (_[(_.k_EMsgClientUserNotifications = 5599)] =
-              "k_EMsgClientUserNotifications"),
-            (_[(_.k_EMsgBaseDFS = 5600)] = "k_EMsgBaseDFS"),
-            (_[(_.k_EMsgDFSGetFile = 5601)] = "k_EMsgDFSGetFile"),
-            (_[(_.k_EMsgDFSInstallLocalFile = 5602)] =
-              "k_EMsgDFSInstallLocalFile"),
-            (_[(_.k_EMsgDFSConnection = 5603)] = "k_EMsgDFSConnection"),
-            (_[(_.k_EMsgDFSConnectionReply = 5604)] =
-              "k_EMsgDFSConnectionReply"),
-            (_[(_.k_EMsgClientDFSAuthenticateRequest = 5605)] =
-              "k_EMsgClientDFSAuthenticateRequest"),
-            (_[(_.k_EMsgClientDFSAuthenticateResponse = 5606)] =
-              "k_EMsgClientDFSAuthenticateResponse"),
-            (_[(_.k_EMsgClientDFSEndSession = 5607)] =
-              "k_EMsgClientDFSEndSession"),
-            (_[(_.k_EMsgDFSPurgeFile = 5608)] = "k_EMsgDFSPurgeFile"),
-            (_[(_.k_EMsgDFSRouteFile = 5609)] = "k_EMsgDFSRouteFile"),
-            (_[(_.k_EMsgDFSGetFileFromServer = 5610)] =
-              "k_EMsgDFSGetFileFromServer"),
-            (_[(_.k_EMsgDFSAcceptedResponse = 5611)] =
-              "k_EMsgDFSAcceptedResponse"),
-            (_[(_.k_EMsgDFSRequestPingback = 5612)] =
-              "k_EMsgDFSRequestPingback"),
-            (_[(_.k_EMsgDFSRecvTransmitFile = 5613)] =
-              "k_EMsgDFSRecvTransmitFile"),
-            (_[(_.k_EMsgDFSSendTransmitFile = 5614)] =
-              "k_EMsgDFSSendTransmitFile"),
-            (_[(_.k_EMsgDFSRequestPingback2 = 5615)] =
-              "k_EMsgDFSRequestPingback2"),
-            (_[(_.k_EMsgDFSResponsePingback2 = 5616)] =
-              "k_EMsgDFSResponsePingback2"),
-            (_[(_.k_EMsgClientDFSDownloadStatus = 5617)] =
-              "k_EMsgClientDFSDownloadStatus"),
-            (_[(_.k_EMsgDFSStartTransfer = 5618)] = "k_EMsgDFSStartTransfer"),
-            (_[(_.k_EMsgDFSTransferComplete = 5619)] =
-              "k_EMsgDFSTransferComplete"),
-            (_[(_.k_EMsgDFSRouteFileResponse = 5620)] =
-              "k_EMsgDFSRouteFileResponse"),
-            (_[(_.k_EMsgClientNetworkingCertRequest = 5621)] =
-              "k_EMsgClientNetworkingCertRequest"),
-            (_[(_.k_EMsgClientNetworkingCertRequestResponse = 5622)] =
-              "k_EMsgClientNetworkingCertRequestResponse"),
-            (_[(_.k_EMsgClientChallengeRequest = 5623)] =
-              "k_EMsgClientChallengeRequest"),
-            (_[(_.k_EMsgClientChallengeResponse = 5624)] =
-              "k_EMsgClientChallengeResponse"),
-            (_[(_.k_EMsgBadgeCraftedNotification = 5625)] =
-              "k_EMsgBadgeCraftedNotification"),
-            (_[(_.k_EMsgClientNetworkingMobileCertRequest = 5626)] =
-              "k_EMsgClientNetworkingMobileCertRequest"),
-            (_[(_.k_EMsgClientNetworkingMobileCertRequestResponse = 5627)] =
-              "k_EMsgClientNetworkingMobileCertRequestResponse"),
-            (_[(_.k_EMsgBaseMDS = 5800)] = "k_EMsgBaseMDS"),
-            (_[(_.k_EMsgMDSGetDepotDecryptionKey = 5812)] =
-              "k_EMsgMDSGetDepotDecryptionKey"),
-            (_[(_.k_EMsgMDSGetDepotDecryptionKeyResponse = 5813)] =
-              "k_EMsgMDSGetDepotDecryptionKeyResponse"),
-            (_[(_.k_EMsgMDSContentServerConfigRequest = 5827)] =
-              "k_EMsgMDSContentServerConfigRequest"),
-            (_[(_.k_EMsgMDSContentServerConfig = 5828)] =
-              "k_EMsgMDSContentServerConfig"),
-            (_[(_.k_EMsgMDSGetDepotManifest = 5829)] =
-              "k_EMsgMDSGetDepotManifest"),
-            (_[(_.k_EMsgMDSGetDepotManifestResponse = 5830)] =
-              "k_EMsgMDSGetDepotManifestResponse"),
-            (_[(_.k_EMsgMDSGetDepotManifestChunk = 5831)] =
-              "k_EMsgMDSGetDepotManifestChunk"),
-            (_[(_.k_EMsgMDSToCSFlushChunk = 5844)] = "k_EMsgMDSToCSFlushChunk"),
-            (_[(_.k_EMsgMDSMigrateChunk = 5847)] = "k_EMsgMDSMigrateChunk"),
-            (_[(_.k_EMsgMDSMigrateChunkResponse = 5848)] =
-              "k_EMsgMDSMigrateChunkResponse"),
-            (_[(_.k_EMsgMDSToCSFlushManifest = 5849)] =
-              "k_EMsgMDSToCSFlushManifest"),
-            (_[(_.k_EMsgCSBase = 6200)] = "k_EMsgCSBase"),
-            (_[(_.k_EMsgCSPing = 6201)] = "k_EMsgCSPing"),
-            (_[(_.k_EMsgCSPingResponse = 6202)] = "k_EMsgCSPingResponse"),
-            (_[(_.k_EMsgGMSBase = 6400)] = "k_EMsgGMSBase"),
-            (_[(_.k_EMsgGMSGameServerReplicate = 6401)] =
-              "k_EMsgGMSGameServerReplicate"),
-            (_[(_.k_EMsgClientGMSServerQuery = 6403)] =
-              "k_EMsgClientGMSServerQuery"),
-            (_[(_.k_EMsgGMSClientServerQueryResponse = 6404)] =
-              "k_EMsgGMSClientServerQueryResponse"),
-            (_[(_.k_EMsgAMGMSGameServerUpdate = 6405)] =
-              "k_EMsgAMGMSGameServerUpdate"),
-            (_[(_.k_EMsgAMGMSGameServerRemove = 6406)] =
-              "k_EMsgAMGMSGameServerRemove"),
-            (_[(_.k_EMsgGameServerOutOfDate = 6407)] =
-              "k_EMsgGameServerOutOfDate"),
-            (_[(_.k_EMsgMMSBase = 6600)] = "k_EMsgMMSBase"),
-            (_[(_.k_EMsgClientMMSCreateLobby = 6601)] =
-              "k_EMsgClientMMSCreateLobby"),
-            (_[(_.k_EMsgClientMMSCreateLobbyResponse = 6602)] =
-              "k_EMsgClientMMSCreateLobbyResponse"),
-            (_[(_.k_EMsgClientMMSJoinLobby = 6603)] =
-              "k_EMsgClientMMSJoinLobby"),
-            (_[(_.k_EMsgClientMMSJoinLobbyResponse = 6604)] =
-              "k_EMsgClientMMSJoinLobbyResponse"),
-            (_[(_.k_EMsgClientMMSLeaveLobby = 6605)] =
-              "k_EMsgClientMMSLeaveLobby"),
-            (_[(_.k_EMsgClientMMSLeaveLobbyResponse = 6606)] =
-              "k_EMsgClientMMSLeaveLobbyResponse"),
-            (_[(_.k_EMsgClientMMSGetLobbyList = 6607)] =
-              "k_EMsgClientMMSGetLobbyList"),
-            (_[(_.k_EMsgClientMMSGetLobbyListResponse = 6608)] =
-              "k_EMsgClientMMSGetLobbyListResponse"),
-            (_[(_.k_EMsgClientMMSSetLobbyData = 6609)] =
-              "k_EMsgClientMMSSetLobbyData"),
-            (_[(_.k_EMsgClientMMSSetLobbyDataResponse = 6610)] =
-              "k_EMsgClientMMSSetLobbyDataResponse"),
-            (_[(_.k_EMsgClientMMSGetLobbyData = 6611)] =
-              "k_EMsgClientMMSGetLobbyData"),
-            (_[(_.k_EMsgClientMMSLobbyData = 6612)] =
-              "k_EMsgClientMMSLobbyData"),
-            (_[(_.k_EMsgClientMMSSendLobbyChatMsg = 6613)] =
-              "k_EMsgClientMMSSendLobbyChatMsg"),
-            (_[(_.k_EMsgClientMMSLobbyChatMsg = 6614)] =
-              "k_EMsgClientMMSLobbyChatMsg"),
-            (_[(_.k_EMsgClientMMSSetLobbyOwner = 6615)] =
-              "k_EMsgClientMMSSetLobbyOwner"),
-            (_[(_.k_EMsgClientMMSSetLobbyOwnerResponse = 6616)] =
-              "k_EMsgClientMMSSetLobbyOwnerResponse"),
-            (_[(_.k_EMsgClientMMSSetLobbyGameServer = 6617)] =
-              "k_EMsgClientMMSSetLobbyGameServer"),
-            (_[(_.k_EMsgClientMMSLobbyGameServerSet = 6618)] =
-              "k_EMsgClientMMSLobbyGameServerSet"),
-            (_[(_.k_EMsgClientMMSUserJoinedLobby = 6619)] =
-              "k_EMsgClientMMSUserJoinedLobby"),
-            (_[(_.k_EMsgClientMMSUserLeftLobby = 6620)] =
-              "k_EMsgClientMMSUserLeftLobby"),
-            (_[(_.k_EMsgClientMMSInviteToLobby = 6621)] =
-              "k_EMsgClientMMSInviteToLobby"),
-            (_[(_.k_EMsgClientMMSFlushFrenemyListCache = 6622)] =
-              "k_EMsgClientMMSFlushFrenemyListCache"),
-            (_[(_.k_EMsgClientMMSFlushFrenemyListCacheResponse = 6623)] =
-              "k_EMsgClientMMSFlushFrenemyListCacheResponse"),
-            (_[(_.k_EMsgClientMMSSetLobbyLinked = 6624)] =
-              "k_EMsgClientMMSSetLobbyLinked"),
-            (_[(_.k_EMsgClientMMSSetRatelimitPolicyOnClient = 6625)] =
-              "k_EMsgClientMMSSetRatelimitPolicyOnClient"),
-            (_[(_.k_EMsgClientMMSGetLobbyStatus = 6626)] =
-              "k_EMsgClientMMSGetLobbyStatus"),
-            (_[(_.k_EMsgClientMMSGetLobbyStatusResponse = 6627)] =
-              "k_EMsgClientMMSGetLobbyStatusResponse"),
-            (_[(_.k_EMsgMMSGetLobbyList = 6628)] = "k_EMsgMMSGetLobbyList"),
-            (_[(_.k_EMsgMMSGetLobbyListResponse = 6629)] =
-              "k_EMsgMMSGetLobbyListResponse"),
-            (_[(_.k_EMsgMMSRoutingOverride = 6630)] =
-              "k_EMsgMMSRoutingOverride"),
-            (_[(_.k_EMsgGameServerPolicyUpdate = 6631)] =
-              "k_EMsgGameServerPolicyUpdate"),
-            (_[(_.k_EMsgNonStdMsgBase = 6800)] = "k_EMsgNonStdMsgBase"),
-            (_[(_.k_EMsgNonStdMsgMemcached = 6801)] =
-              "k_EMsgNonStdMsgMemcached"),
-            (_[(_.k_EMsgNonStdMsgHTTPServer = 6802)] =
-              "k_EMsgNonStdMsgHTTPServer"),
-            (_[(_.k_EMsgNonStdMsgHTTPClient = 6803)] =
-              "k_EMsgNonStdMsgHTTPClient"),
-            (_[(_.k_EMsgNonStdMsgWGResponse = 6804)] =
-              "k_EMsgNonStdMsgWGResponse"),
-            (_[(_.k_EMsgNonStdMsgPHPSimulator = 6805)] =
-              "k_EMsgNonStdMsgPHPSimulator"),
-            (_[(_.k_EMsgNonStdMsgChase = 6806)] = "k_EMsgNonStdMsgChase"),
-            (_[(_.k_EMsgNonStdMsgDFSTransfer = 6807)] =
-              "k_EMsgNonStdMsgDFSTransfer"),
-            (_[(_.k_EMsgNonStdMsgTests = 6808)] = "k_EMsgNonStdMsgTests"),
-            (_[(_.k_EMsgNonStdMsgUMQpipeAAPL = 6809)] =
-              "k_EMsgNonStdMsgUMQpipeAAPL"),
-            (_[(_.k_EMSgNonStdMsgSyslog = 6810)] = "k_EMSgNonStdMsgSyslog"),
-            (_[(_.k_EMsgNonStdMsgSteam2Emulator = 6812)] =
-              "k_EMsgNonStdMsgSteam2Emulator"),
-            (_[(_.k_EMsgNonStdMsgRTMPServer = 6813)] =
-              "k_EMsgNonStdMsgRTMPServer"),
-            (_[(_.k_EMsgNonStdMsgWebSocket = 6814)] =
-              "k_EMsgNonStdMsgWebSocket"),
-            (_[(_.k_EMsgNonStdMsgRedis = 6815)] = "k_EMsgNonStdMsgRedis"),
-            (_[(_.k_EMsgUDSBase = 7e3)] = "k_EMsgUDSBase"),
-            (_[(_.k_EMsgClientUDSP2PSessionStarted = 7001)] =
-              "k_EMsgClientUDSP2PSessionStarted"),
-            (_[(_.k_EMsgClientUDSP2PSessionEnded = 7002)] =
-              "k_EMsgClientUDSP2PSessionEnded"),
-            (_[(_.k_EMsgUDSRenderUserAuth = 7003)] = "k_EMsgUDSRenderUserAuth"),
-            (_[(_.k_EMsgUDSRenderUserAuthResponse = 7004)] =
-              "k_EMsgUDSRenderUserAuthResponse"),
-            (_[(_.k_EMsgClientInviteToGame = 7005)] =
-              "k_EMsgClientInviteToGame"),
-            (_[(_.k_EMsgUDSHasSession = 7006)] = "k_EMsgUDSHasSession"),
-            (_[(_.k_EMsgUDSHasSessionResponse = 7007)] =
-              "k_EMsgUDSHasSessionResponse"),
-            (_[(_.k_EMsgMPASBase = 7100)] = "k_EMsgMPASBase"),
-            (_[(_.k_EMsgMPASVacBanReset = 7101)] = "k_EMsgMPASVacBanReset"),
-            (_[(_.k_EMsgKGSBase = 7200)] = "k_EMsgKGSBase"),
-            (_[(_.k_EMsgUCMBase = 7300)] = "k_EMsgUCMBase"),
-            (_[(_.k_EMsgClientUCMAddScreenshot = 7301)] =
-              "k_EMsgClientUCMAddScreenshot"),
-            (_[(_.k_EMsgClientUCMAddScreenshotResponse = 7302)] =
-              "k_EMsgClientUCMAddScreenshotResponse"),
-            (_[(_.k_EMsgUCMResetCommunityContent = 7307)] =
-              "k_EMsgUCMResetCommunityContent"),
-            (_[(_.k_EMsgUCMResetCommunityContentResponse = 7308)] =
-              "k_EMsgUCMResetCommunityContentResponse"),
-            (_[(_.k_EMsgClientUCMDeleteScreenshot = 7309)] =
-              "k_EMsgClientUCMDeleteScreenshot"),
-            (_[(_.k_EMsgClientUCMDeleteScreenshotResponse = 7310)] =
-              "k_EMsgClientUCMDeleteScreenshotResponse"),
-            (_[(_.k_EMsgClientUCMPublishFile = 7311)] =
-              "k_EMsgClientUCMPublishFile"),
-            (_[(_.k_EMsgClientUCMPublishFileResponse = 7312)] =
-              "k_EMsgClientUCMPublishFileResponse"),
-            (_[(_.k_EMsgClientUCMDeletePublishedFile = 7315)] =
-              "k_EMsgClientUCMDeletePublishedFile"),
-            (_[(_.k_EMsgClientUCMDeletePublishedFileResponse = 7316)] =
-              "k_EMsgClientUCMDeletePublishedFileResponse"),
-            (_[(_.k_EMsgClientUCMUpdatePublishedFile = 7325)] =
-              "k_EMsgClientUCMUpdatePublishedFile"),
-            (_[(_.k_EMsgClientUCMUpdatePublishedFileResponse = 7326)] =
-              "k_EMsgClientUCMUpdatePublishedFileResponse"),
-            (_[(_.k_EMsgUCMUpdatePublishedFile = 7327)] =
-              "k_EMsgUCMUpdatePublishedFile"),
-            (_[(_.k_EMsgUCMUpdatePublishedFileResponse = 7328)] =
-              "k_EMsgUCMUpdatePublishedFileResponse"),
-            (_[(_.k_EMsgUCMUpdatePublishedFileStat = 7331)] =
-              "k_EMsgUCMUpdatePublishedFileStat"),
-            (_[(_.k_EMsgUCMReloadPublishedFile = 7337)] =
-              "k_EMsgUCMReloadPublishedFile"),
-            (_[(_.k_EMsgUCMReloadUserFileListCaches = 7338)] =
-              "k_EMsgUCMReloadUserFileListCaches"),
-            (_[(_.k_EMsgUCMPublishedFileReported = 7339)] =
-              "k_EMsgUCMPublishedFileReported"),
-            (_[(_.k_EMsgUCMPublishedFilePreviewAdd = 7341)] =
-              "k_EMsgUCMPublishedFilePreviewAdd"),
-            (_[(_.k_EMsgUCMPublishedFilePreviewAddResponse = 7342)] =
-              "k_EMsgUCMPublishedFilePreviewAddResponse"),
-            (_[(_.k_EMsgUCMPublishedFilePreviewRemove = 7343)] =
-              "k_EMsgUCMPublishedFilePreviewRemove"),
-            (_[(_.k_EMsgUCMPublishedFilePreviewRemoveResponse = 7344)] =
-              "k_EMsgUCMPublishedFilePreviewRemoveResponse"),
-            (_[(_.k_EMsgUCMPublishedFileSubscribed = 7349)] =
-              "k_EMsgUCMPublishedFileSubscribed"),
-            (_[(_.k_EMsgUCMPublishedFileUnsubscribed = 7350)] =
-              "k_EMsgUCMPublishedFileUnsubscribed"),
-            (_[(_.k_EMsgUCMPublishFile = 7351)] = "k_EMsgUCMPublishFile"),
-            (_[(_.k_EMsgUCMPublishFileResponse = 7352)] =
-              "k_EMsgUCMPublishFileResponse"),
-            (_[(_.k_EMsgUCMPublishedFileChildAdd = 7353)] =
-              "k_EMsgUCMPublishedFileChildAdd"),
-            (_[(_.k_EMsgUCMPublishedFileChildAddResponse = 7354)] =
-              "k_EMsgUCMPublishedFileChildAddResponse"),
-            (_[(_.k_EMsgUCMPublishedFileChildRemove = 7355)] =
-              "k_EMsgUCMPublishedFileChildRemove"),
-            (_[(_.k_EMsgUCMPublishedFileChildRemoveResponse = 7356)] =
-              "k_EMsgUCMPublishedFileChildRemoveResponse"),
-            (_[(_.k_EMsgUCMPublishedFileParentChanged = 7359)] =
-              "k_EMsgUCMPublishedFileParentChanged"),
-            (_[(_.k_EMsgClientUCMSetUserPublishedFileAction = 7364)] =
-              "k_EMsgClientUCMSetUserPublishedFileAction"),
-            (_[(_.k_EMsgClientUCMSetUserPublishedFileActionResponse = 7365)] =
-              "k_EMsgClientUCMSetUserPublishedFileActionResponse"),
-            (_[(_.k_EMsgClientUCMEnumeratePublishedFilesByUserAction = 7366)] =
-              "k_EMsgClientUCMEnumeratePublishedFilesByUserAction"),
-            (_[
-              (_.k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse = 7367)
-            ] = "k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse"),
-            (_[(_.k_EMsgUCMGetUserSubscribedFiles = 7369)] =
-              "k_EMsgUCMGetUserSubscribedFiles"),
-            (_[(_.k_EMsgUCMGetUserSubscribedFilesResponse = 7370)] =
-              "k_EMsgUCMGetUserSubscribedFilesResponse"),
-            (_[(_.k_EMsgUCMFixStatsPublishedFile = 7371)] =
-              "k_EMsgUCMFixStatsPublishedFile"),
-            (_[
-              (_.k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates = 7378)
-            ] = "k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates"),
-            (_[
-              (_.k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse = 7379)
-            ] =
-              "k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse"),
-            (_[(_.k_EMsgUCMPublishedFileContentUpdated = 7380)] =
-              "k_EMsgUCMPublishedFileContentUpdated"),
-            (_[(_.k_EMsgClientUCMPublishedFileUpdated = 7381)] =
-              "k_EMsgClientUCMPublishedFileUpdated"),
-            (_[(_.k_EMsgFSBase = 7500)] = "k_EMsgFSBase"),
-            (_[(_.k_EMsgClientRichPresenceUpload = 7501)] =
-              "k_EMsgClientRichPresenceUpload"),
-            (_[(_.k_EMsgClientRichPresenceRequest = 7502)] =
-              "k_EMsgClientRichPresenceRequest"),
-            (_[(_.k_EMsgClientRichPresenceInfo = 7503)] =
-              "k_EMsgClientRichPresenceInfo"),
-            (_[(_.k_EMsgFSRichPresenceRequest = 7504)] =
-              "k_EMsgFSRichPresenceRequest"),
-            (_[(_.k_EMsgFSRichPresenceResponse = 7505)] =
-              "k_EMsgFSRichPresenceResponse"),
-            (_[(_.k_EMsgFSComputeFrenematrix = 7506)] =
-              "k_EMsgFSComputeFrenematrix"),
-            (_[(_.k_EMsgFSComputeFrenematrixResponse = 7507)] =
-              "k_EMsgFSComputeFrenematrixResponse"),
-            (_[(_.k_EMsgFSPlayStatusNotification = 7508)] =
-              "k_EMsgFSPlayStatusNotification"),
-            (_[(_.k_EMsgFSAddOrRemoveFollower = 7510)] =
-              "k_EMsgFSAddOrRemoveFollower"),
-            (_[(_.k_EMsgFSAddOrRemoveFollowerResponse = 7511)] =
-              "k_EMsgFSAddOrRemoveFollowerResponse"),
-            (_[(_.k_EMsgFSUpdateFollowingList = 7512)] =
-              "k_EMsgFSUpdateFollowingList"),
-            (_[(_.k_EMsgFSCommentNotification = 7513)] =
-              "k_EMsgFSCommentNotification"),
-            (_[(_.k_EMsgFSCommentNotificationViewed = 7514)] =
-              "k_EMsgFSCommentNotificationViewed"),
-            (_[(_.k_EMsgClientFSGetFollowerCount = 7515)] =
-              "k_EMsgClientFSGetFollowerCount"),
-            (_[(_.k_EMsgClientFSGetFollowerCountResponse = 7516)] =
-              "k_EMsgClientFSGetFollowerCountResponse"),
-            (_[(_.k_EMsgClientFSGetIsFollowing = 7517)] =
-              "k_EMsgClientFSGetIsFollowing"),
-            (_[(_.k_EMsgClientFSGetIsFollowingResponse = 7518)] =
-              "k_EMsgClientFSGetIsFollowingResponse"),
-            (_[(_.k_EMsgClientFSEnumerateFollowingList = 7519)] =
-              "k_EMsgClientFSEnumerateFollowingList"),
-            (_[(_.k_EMsgClientFSEnumerateFollowingListResponse = 7520)] =
-              "k_EMsgClientFSEnumerateFollowingListResponse"),
-            (_[(_.k_EMsgFSGetPendingNotificationCount = 7521)] =
-              "k_EMsgFSGetPendingNotificationCount"),
-            (_[(_.k_EMsgFSGetPendingNotificationCountResponse = 7522)] =
-              "k_EMsgFSGetPendingNotificationCountResponse"),
-            (_[(_.k_EMsgClientChatOfflineMessageNotification = 7523)] =
-              "k_EMsgClientChatOfflineMessageNotification"),
-            (_[(_.k_EMsgClientChatRequestOfflineMessageCount = 7524)] =
-              "k_EMsgClientChatRequestOfflineMessageCount"),
-            (_[(_.k_EMsgClientChatGetFriendMessageHistory = 7525)] =
-              "k_EMsgClientChatGetFriendMessageHistory"),
-            (_[(_.k_EMsgClientChatGetFriendMessageHistoryResponse = 7526)] =
-              "k_EMsgClientChatGetFriendMessageHistoryResponse"),
-            (_[
-              (_.k_EMsgClientChatGetFriendMessageHistoryForOfflineMessages = 7527)
-            ] = "k_EMsgClientChatGetFriendMessageHistoryForOfflineMessages"),
-            (_[(_.k_EMsgClientFSGetFriendsSteamLevels = 7528)] =
-              "k_EMsgClientFSGetFriendsSteamLevels"),
-            (_[(_.k_EMsgClientFSGetFriendsSteamLevelsResponse = 7529)] =
-              "k_EMsgClientFSGetFriendsSteamLevelsResponse"),
-            (_[(_.k_EMsgAMRequestFriendData = 7530)] =
-              "k_EMsgAMRequestFriendData"),
-            (_[(_.k_EMsgDRMRange2 = 7600)] = "k_EMsgDRMRange2"),
-            (_[(_.k_EMsgCEGVersionSetEnableDisableRequest = 7600)] =
-              "k_EMsgCEGVersionSetEnableDisableRequest"),
-            (_[(_.k_EMsgCEGVersionSetEnableDisableResponse = 7601)] =
-              "k_EMsgCEGVersionSetEnableDisableResponse"),
-            (_[(_.k_EMsgCEGPropStatusDRMSRequest = 7602)] =
-              "k_EMsgCEGPropStatusDRMSRequest"),
-            (_[(_.k_EMsgCEGPropStatusDRMSResponse = 7603)] =
-              "k_EMsgCEGPropStatusDRMSResponse"),
-            (_[(_.k_EMsgCEGWhackFailureReportRequest = 7604)] =
-              "k_EMsgCEGWhackFailureReportRequest"),
-            (_[(_.k_EMsgCEGWhackFailureReportResponse = 7605)] =
-              "k_EMsgCEGWhackFailureReportResponse"),
-            (_[(_.k_EMsgDRMSFetchVersionSet = 7606)] =
-              "k_EMsgDRMSFetchVersionSet"),
-            (_[(_.k_EMsgDRMSFetchVersionSetResponse = 7607)] =
-              "k_EMsgDRMSFetchVersionSetResponse"),
-            (_[(_.k_EMsgEconBase = 7700)] = "k_EMsgEconBase"),
-            (_[(_.k_EMsgEconTrading_InitiateTradeRequest = 7701)] =
-              "k_EMsgEconTrading_InitiateTradeRequest"),
-            (_[(_.k_EMsgEconTrading_InitiateTradeProposed = 7702)] =
-              "k_EMsgEconTrading_InitiateTradeProposed"),
-            (_[(_.k_EMsgEconTrading_InitiateTradeResponse = 7703)] =
-              "k_EMsgEconTrading_InitiateTradeResponse"),
-            (_[(_.k_EMsgEconTrading_InitiateTradeResult = 7704)] =
-              "k_EMsgEconTrading_InitiateTradeResult"),
-            (_[(_.k_EMsgEconTrading_StartSession = 7705)] =
-              "k_EMsgEconTrading_StartSession"),
-            (_[(_.k_EMsgEconTrading_CancelTradeRequest = 7706)] =
-              "k_EMsgEconTrading_CancelTradeRequest"),
-            (_[(_.k_EMsgEconFlushInventoryCache = 7707)] =
-              "k_EMsgEconFlushInventoryCache"),
-            (_[(_.k_EMsgEconFlushInventoryCacheResponse = 7708)] =
-              "k_EMsgEconFlushInventoryCacheResponse"),
-            (_[(_.k_EMsgEconCDKeyProcessTransaction = 7711)] =
-              "k_EMsgEconCDKeyProcessTransaction"),
-            (_[(_.k_EMsgEconCDKeyProcessTransactionResponse = 7712)] =
-              "k_EMsgEconCDKeyProcessTransactionResponse"),
-            (_[(_.k_EMsgEconGetErrorLogs = 7713)] = "k_EMsgEconGetErrorLogs"),
-            (_[(_.k_EMsgEconGetErrorLogsResponse = 7714)] =
-              "k_EMsgEconGetErrorLogsResponse"),
-            (_[(_.k_EMsgRMRange = 7800)] = "k_EMsgRMRange"),
-            (_[(_.k_EMsgRMTestVerisignOTP = 7800)] = "k_EMsgRMTestVerisignOTP"),
-            (_[(_.k_EMsgRMTestVerisignOTPResponse = 7801)] =
-              "k_EMsgRMTestVerisignOTPResponse"),
-            (_[(_.k_EMsgRMDeleteMemcachedKeys = 7803)] =
-              "k_EMsgRMDeleteMemcachedKeys"),
-            (_[(_.k_EMsgRMRemoteInvoke = 7804)] = "k_EMsgRMRemoteInvoke"),
-            (_[(_.k_EMsgBadLoginIPList = 7805)] = "k_EMsgBadLoginIPList"),
-            (_[(_.k_EMsgRMMsgTraceAddOrUpdateTrigger = 7806)] =
-              "k_EMsgRMMsgTraceAddOrUpdateTrigger"),
-            (_[(_.k_EMsgRMMsgTraceRemoveTriggers = 7807)] =
-              "k_EMsgRMMsgTraceRemoveTriggers"),
-            (_[(_.k_EMsgRMMsgTraceEvent = 7808)] = "k_EMsgRMMsgTraceEvent"),
-            (_[(_.k_EMsgUGSBase = 7900)] = "k_EMsgUGSBase"),
-            (_[(_.k_EMsgUGSUpdateGlobalStats = 7900)] =
-              "k_EMsgUGSUpdateGlobalStats"),
-            (_[(_.k_EMsgClientUGSGetGlobalStats = 7901)] =
-              "k_EMsgClientUGSGetGlobalStats"),
-            (_[(_.k_EMsgClientUGSGetGlobalStatsResponse = 7902)] =
-              "k_EMsgClientUGSGetGlobalStatsResponse"),
-            (_[(_.k_EMsgStoreBase = 8e3)] = "k_EMsgStoreBase"),
-            (_[(_.k_EMsgUMQBase = 8100)] = "k_EMsgUMQBase"),
-            (_[(_.k_EMsgWorkshopBase = 8200)] = "k_EMsgWorkshopBase"),
-            (_[(_.k_EMsgWebAPIBase = 8300)] = "k_EMsgWebAPIBase"),
-            (_[(_.k_EMsgWebAPIValidateOAuth2Token = 8300)] =
-              "k_EMsgWebAPIValidateOAuth2Token"),
-            (_[(_.k_EMsgWebAPIValidateOAuth2TokenResponse = 8301)] =
-              "k_EMsgWebAPIValidateOAuth2TokenResponse"),
-            (_[(_.k_EMsgWebAPIRegisterGCInterfaces = 8303)] =
-              "k_EMsgWebAPIRegisterGCInterfaces"),
-            (_[(_.k_EMsgWebAPIInvalidateOAuthClientCache = 8304)] =
-              "k_EMsgWebAPIInvalidateOAuthClientCache"),
-            (_[(_.k_EMsgWebAPIInvalidateOAuthTokenCache = 8305)] =
-              "k_EMsgWebAPIInvalidateOAuthTokenCache"),
-            (_[(_.k_EMsgWebAPISetSecrets = 8306)] = "k_EMsgWebAPISetSecrets"),
-            (_[(_.k_EMsgBackpackBase = 8400)] = "k_EMsgBackpackBase"),
-            (_[(_.k_EMsgBackpackAddToCurrency = 8401)] =
-              "k_EMsgBackpackAddToCurrency"),
-            (_[(_.k_EMsgBackpackAddToCurrencyResponse = 8402)] =
-              "k_EMsgBackpackAddToCurrencyResponse"),
-            (_[(_.k_EMsgCREBase = 8500)] = "k_EMsgCREBase"),
-            (_[(_.k_EMsgCREItemVoteSummary = 8503)] =
-              "k_EMsgCREItemVoteSummary"),
-            (_[(_.k_EMsgCREItemVoteSummaryResponse = 8504)] =
-              "k_EMsgCREItemVoteSummaryResponse"),
-            (_[(_.k_EMsgCREUpdateUserPublishedItemVote = 8507)] =
-              "k_EMsgCREUpdateUserPublishedItemVote"),
-            (_[(_.k_EMsgCREUpdateUserPublishedItemVoteResponse = 8508)] =
-              "k_EMsgCREUpdateUserPublishedItemVoteResponse"),
-            (_[(_.k_EMsgCREGetUserPublishedItemVoteDetails = 8509)] =
-              "k_EMsgCREGetUserPublishedItemVoteDetails"),
-            (_[(_.k_EMsgCREGetUserPublishedItemVoteDetailsResponse = 8510)] =
-              "k_EMsgCREGetUserPublishedItemVoteDetailsResponse"),
-            (_[(_.k_EMsgSecretsBase = 8600)] = "k_EMsgSecretsBase"),
-            (_[(_.k_EMsgSecretsRequestCredentialPair = 8600)] =
-              "k_EMsgSecretsRequestCredentialPair"),
-            (_[(_.k_EMsgSecretsCredentialPairResponse = 8601)] =
-              "k_EMsgSecretsCredentialPairResponse"),
-            (_[(_.k_EMsgBoxMonitorBase = 8700)] = "k_EMsgBoxMonitorBase"),
-            (_[(_.k_EMsgBoxMonitorReportRequest = 8700)] =
-              "k_EMsgBoxMonitorReportRequest"),
-            (_[(_.k_EMsgBoxMonitorReportResponse = 8701)] =
-              "k_EMsgBoxMonitorReportResponse"),
-            (_[(_.k_EMsgPICSBase = 8900)] = "k_EMsgPICSBase"),
-            (_[(_.k_EMsgClientPICSChangesSinceRequest = 8901)] =
-              "k_EMsgClientPICSChangesSinceRequest"),
-            (_[(_.k_EMsgClientPICSChangesSinceResponse = 8902)] =
-              "k_EMsgClientPICSChangesSinceResponse"),
-            (_[(_.k_EMsgClientPICSProductInfoRequest = 8903)] =
-              "k_EMsgClientPICSProductInfoRequest"),
-            (_[(_.k_EMsgClientPICSProductInfoResponse = 8904)] =
-              "k_EMsgClientPICSProductInfoResponse"),
-            (_[(_.k_EMsgClientPICSAccessTokenRequest = 8905)] =
-              "k_EMsgClientPICSAccessTokenRequest"),
-            (_[(_.k_EMsgClientPICSAccessTokenResponse = 8906)] =
-              "k_EMsgClientPICSAccessTokenResponse"),
-            (_[(_.k_EMsgClientPICSPrivateBetaRequest = 8907)] =
-              "k_EMsgClientPICSPrivateBetaRequest"),
-            (_[(_.k_EMsgClientPICSPrivateBetaResponse = 8908)] =
-              "k_EMsgClientPICSPrivateBetaResponse"),
-            (_[(_.k_EMsgWorkerProcess = 9e3)] = "k_EMsgWorkerProcess"),
-            (_[(_.k_EMsgWorkerProcessPingRequest = 9e3)] =
-              "k_EMsgWorkerProcessPingRequest"),
-            (_[(_.k_EMsgWorkerProcessPingResponse = 9001)] =
-              "k_EMsgWorkerProcessPingResponse"),
-            (_[(_.k_EMsgWorkerProcessShutdown = 9002)] =
-              "k_EMsgWorkerProcessShutdown"),
-            (_[(_.k_EMsgDRMWorkerProcess = 9100)] = "k_EMsgDRMWorkerProcess"),
-            (_[(_.k_EMsgDRMWorkerProcessDRMAndSign = 9100)] =
-              "k_EMsgDRMWorkerProcessDRMAndSign"),
-            (_[(_.k_EMsgDRMWorkerProcessDRMAndSignResponse = 9101)] =
-              "k_EMsgDRMWorkerProcessDRMAndSignResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessSteamworksInfoRequest = 9102)] =
-              "k_EMsgDRMWorkerProcessSteamworksInfoRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessSteamworksInfoResponse = 9103)] =
-              "k_EMsgDRMWorkerProcessSteamworksInfoResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessInstallDRMDLLRequest = 9104)] =
-              "k_EMsgDRMWorkerProcessInstallDRMDLLRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessInstallDRMDLLResponse = 9105)] =
-              "k_EMsgDRMWorkerProcessInstallDRMDLLResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessSecretIdStringRequest = 9106)] =
-              "k_EMsgDRMWorkerProcessSecretIdStringRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessSecretIdStringResponse = 9107)] =
-              "k_EMsgDRMWorkerProcessSecretIdStringResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessInstallProcessedFilesRequest = 9110)] =
-              "k_EMsgDRMWorkerProcessInstallProcessedFilesRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessInstallProcessedFilesResponse = 9111)] =
-              "k_EMsgDRMWorkerProcessInstallProcessedFilesResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessExamineBlobRequest = 9112)] =
-              "k_EMsgDRMWorkerProcessExamineBlobRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessExamineBlobResponse = 9113)] =
-              "k_EMsgDRMWorkerProcessExamineBlobResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessDescribeSecretRequest = 9114)] =
-              "k_EMsgDRMWorkerProcessDescribeSecretRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessDescribeSecretResponse = 9115)] =
-              "k_EMsgDRMWorkerProcessDescribeSecretResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessBackfillOriginalRequest = 9116)] =
-              "k_EMsgDRMWorkerProcessBackfillOriginalRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessBackfillOriginalResponse = 9117)] =
-              "k_EMsgDRMWorkerProcessBackfillOriginalResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessValidateDRMDLLRequest = 9118)] =
-              "k_EMsgDRMWorkerProcessValidateDRMDLLRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessValidateDRMDLLResponse = 9119)] =
-              "k_EMsgDRMWorkerProcessValidateDRMDLLResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessValidateFileRequest = 9120)] =
-              "k_EMsgDRMWorkerProcessValidateFileRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessValidateFileResponse = 9121)] =
-              "k_EMsgDRMWorkerProcessValidateFileResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessSplitAndInstallRequest = 9122)] =
-              "k_EMsgDRMWorkerProcessSplitAndInstallRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessSplitAndInstallResponse = 9123)] =
-              "k_EMsgDRMWorkerProcessSplitAndInstallResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessGetBlobRequest = 9124)] =
-              "k_EMsgDRMWorkerProcessGetBlobRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessGetBlobResponse = 9125)] =
-              "k_EMsgDRMWorkerProcessGetBlobResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessEvaluateCrashRequest = 9126)] =
-              "k_EMsgDRMWorkerProcessEvaluateCrashRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessEvaluateCrashResponse = 9127)] =
-              "k_EMsgDRMWorkerProcessEvaluateCrashResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessAnalyzeFileRequest = 9128)] =
-              "k_EMsgDRMWorkerProcessAnalyzeFileRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessAnalyzeFileResponse = 9129)] =
-              "k_EMsgDRMWorkerProcessAnalyzeFileResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessUnpackBlobRequest = 9130)] =
-              "k_EMsgDRMWorkerProcessUnpackBlobRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessUnpackBlobResponse = 9131)] =
-              "k_EMsgDRMWorkerProcessUnpackBlobResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessInstallAllRequest = 9132)] =
-              "k_EMsgDRMWorkerProcessInstallAllRequest"),
-            (_[(_.k_EMsgDRMWorkerProcessInstallAllResponse = 9133)] =
-              "k_EMsgDRMWorkerProcessInstallAllResponse"),
-            (_[(_.k_EMsgDRMWorkerProcessSignFile = 9134)] =
-              "k_EMsgDRMWorkerProcessSignFile"),
-            (_[(_.k_EMsgDRMWorkerProcessSignFileResponse = 9135)] =
-              "k_EMsgDRMWorkerProcessSignFileResponse"),
-            (_[(_.k_EMsgTestWorkerProcess = 9200)] = "k_EMsgTestWorkerProcess"),
-            (_[(_.k_EMsgTestWorkerProcessLoadUnloadModuleRequest = 9200)] =
-              "k_EMsgTestWorkerProcessLoadUnloadModuleRequest"),
-            (_[(_.k_EMsgTestWorkerProcessLoadUnloadModuleResponse = 9201)] =
-              "k_EMsgTestWorkerProcessLoadUnloadModuleResponse"),
-            (_[(_.k_EMsgTestWorkerProcessServiceModuleCallRequest = 9202)] =
-              "k_EMsgTestWorkerProcessServiceModuleCallRequest"),
-            (_[(_.k_EMsgTestWorkerProcessServiceModuleCallResponse = 9203)] =
-              "k_EMsgTestWorkerProcessServiceModuleCallResponse"),
-            (_[(_.k_EMsgQuestServerBase = 9300)] = "k_EMsgQuestServerBase"),
-            (_[(_.k_EMsgClientGetEmoticonList = 9330)] =
-              "k_EMsgClientGetEmoticonList"),
-            (_[(_.k_EMsgClientEmoticonList = 9331)] =
-              "k_EMsgClientEmoticonList"),
-            (_[(_.k_EMsgSLCBase = 9400)] = "k_EMsgSLCBase"),
-            (_[(_.k_EMsgClientSharedLibraryStopPlaying = 9406)] =
-              "k_EMsgClientSharedLibraryStopPlaying"),
-            (_[(_.k_EMsgRemoteClientBase = 9500)] = "k_EMsgRemoteClientBase"),
-            (_[(_.k_EMsgRemoteClientAuth_OBSOLETE = 9500)] =
-              "k_EMsgRemoteClientAuth_OBSOLETE"),
-            (_[(_.k_EMsgRemoteClientAuthResponse_OBSOLETE = 9501)] =
-              "k_EMsgRemoteClientAuthResponse_OBSOLETE"),
-            (_[(_.k_EMsgRemoteClientAppStatus = 9502)] =
-              "k_EMsgRemoteClientAppStatus"),
-            (_[(_.k_EMsgRemoteClientStartStream = 9503)] =
-              "k_EMsgRemoteClientStartStream"),
-            (_[(_.k_EMsgRemoteClientStartStreamResponse = 9504)] =
-              "k_EMsgRemoteClientStartStreamResponse"),
-            (_[(_.k_EMsgRemoteClientPing = 9505)] = "k_EMsgRemoteClientPing"),
-            (_[(_.k_EMsgRemoteClientPingResponse = 9506)] =
-              "k_EMsgRemoteClientPingResponse"),
-            (_[(_.k_EMsgClientUnlockH264 = 9507)] = "k_EMsgClientUnlockH264"),
-            (_[(_.k_EMsgClientUnlockH264Response = 9508)] =
-              "k_EMsgClientUnlockH264Response"),
-            (_[(_.k_EMsgRemoteClientAcceptEULA = 9509)] =
-              "k_EMsgRemoteClientAcceptEULA"),
-            (_[(_.k_EMsgRemoteClientGetControllerConfig = 9510)] =
-              "k_EMsgRemoteClientGetControllerConfig"),
-            (_[(_.k_EMsgRemoteClientGetControllerConfigResponse = 9511)] =
-              "k_EMsgRemoteClientGetControllerConfigResponse"),
-            (_[(_.k_EMsgRemoteClientStreamingEnabled = 9512)] =
-              "k_EMsgRemoteClientStreamingEnabled"),
-            (_[(_.k_EMsgClientUnlockHEVC_OBSOLETE = 9513)] =
-              "k_EMsgClientUnlockHEVC_OBSOLETE"),
-            (_[(_.k_EMsgClientUnlockHEVCResponse_OBSOLETE = 9514)] =
-              "k_EMsgClientUnlockHEVCResponse_OBSOLETE"),
-            (_[(_.k_EMsgRemoteClientStatusRequest = 9515)] =
-              "k_EMsgRemoteClientStatusRequest"),
-            (_[(_.k_EMsgRemoteClientStatusResponse = 9516)] =
-              "k_EMsgRemoteClientStatusResponse"),
-            (_[(_.k_EMsgRemoteClientAuthorizationRequest = 9517)] =
-              "k_EMsgRemoteClientAuthorizationRequest"),
-            (_[(_.k_EMsgRemoteClientAuthorizationResponse = 9518)] =
-              "k_EMsgRemoteClientAuthorizationResponse"),
-            (_[(_.k_EMsgRemoteClientAuthorizationCancelRequest = 9519)] =
-              "k_EMsgRemoteClientAuthorizationCancelRequest"),
-            (_[(_.k_EMsgRemoteClientAuthorizationConfirmed = 9520)] =
-              "k_EMsgRemoteClientAuthorizationConfirmed"),
-            (_[(_.k_EMsgRemoteClientProofRequest = 9521)] =
-              "k_EMsgRemoteClientProofRequest"),
-            (_[(_.k_EMsgRemoteClientProofResponse = 9522)] =
-              "k_EMsgRemoteClientProofResponse"),
-            (_[(_.k_EMsgRemoteClientWifiAPStatus = 9523)] =
-              "k_EMsgRemoteClientWifiAPStatus"),
-            (_[(_.k_EMsgRemoteClientPairWifiAP = 9524)] =
-              "k_EMsgRemoteClientPairWifiAP"),
-            (_[(_.k_EMsgRemoteClientPairWifiAPResponse = 9525)] =
-              "k_EMsgRemoteClientPairWifiAPResponse"),
-            (_[(_.k_EMsgClientConcurrentSessionsBase = 9600)] =
-              "k_EMsgClientConcurrentSessionsBase"),
-            (_[(_.k_EMsgClientPlayingSessionState = 9600)] =
-              "k_EMsgClientPlayingSessionState"),
-            (_[(_.k_EMsgClientKickPlayingSession = 9601)] =
-              "k_EMsgClientKickPlayingSession"),
-            (_[(_.k_EMsgClientBroadcastBase = 9700)] =
-              "k_EMsgClientBroadcastBase"),
-            (_[(_.k_EMsgClientBroadcastInit = 9700)] =
-              "k_EMsgClientBroadcastInit"),
-            (_[(_.k_EMsgClientBroadcastFrames = 9701)] =
-              "k_EMsgClientBroadcastFrames"),
-            (_[(_.k_EMsgClientBroadcastDisconnect = 9702)] =
-              "k_EMsgClientBroadcastDisconnect"),
-            (_[(_.k_EMsgClientBroadcastUploadConfig = 9704)] =
-              "k_EMsgClientBroadcastUploadConfig"),
-            (_[(_.k_EMsgBaseClient3 = 9800)] = "k_EMsgBaseClient3"),
-            (_[(_.k_EMsgClientVoiceCallPreAuthorize = 9800)] =
-              "k_EMsgClientVoiceCallPreAuthorize"),
-            (_[(_.k_EMsgClientVoiceCallPreAuthorizeResponse = 9801)] =
-              "k_EMsgClientVoiceCallPreAuthorizeResponse"),
-            (_[(_.k_EMsgClientServerTimestampRequest = 9802)] =
-              "k_EMsgClientServerTimestampRequest"),
-            (_[(_.k_EMsgClientServerTimestampResponse = 9803)] =
-              "k_EMsgClientServerTimestampResponse"),
-            (_[(_.k_EMsgServiceMethodCallFromClientNonAuthed = 9804)] =
-              "k_EMsgServiceMethodCallFromClientNonAuthed"),
-            (_[(_.k_EMsgClientHello = 9805)] = "k_EMsgClientHello"),
-            (_[(_.k_EMsgClientEnableOrDisableDownloads = 9806)] =
-              "k_EMsgClientEnableOrDisableDownloads"),
-            (_[(_.k_EMsgClientEnableOrDisableDownloadsResponse = 9807)] =
-              "k_EMsgClientEnableOrDisableDownloadsResponse"),
-            (_[(_.k_EMsgClientFeatureGroupInfo = 9808)] =
-              "k_EMsgClientFeatureGroupInfo"),
-            (_[(_.k_EMsgClientLANP2PBase = 9900)] = "k_EMsgClientLANP2PBase"),
-            (_[(_.k_EMsgClientLANP2PRequestChunk = 9900)] =
-              "k_EMsgClientLANP2PRequestChunk"),
-            (_[(_.k_EMsgClientLANP2PRequestChunkResponse = 9901)] =
-              "k_EMsgClientLANP2PRequestChunkResponse"),
-            (_[(_.k_EMsgClientPeerChunkRequest = 9902)] =
-              "k_EMsgClientPeerChunkRequest"),
-            (_[(_.k_EMsgClientPeerChunkResponse = 9903)] =
-              "k_EMsgClientPeerChunkResponse"),
-            (_[(_.k_EMsgClientLANP2PMax = 9999)] = "k_EMsgClientLANP2PMax"),
-            (_[(_.k_EMsgBaseWatchdogServer = 1e4)] =
-              "k_EMsgBaseWatchdogServer"),
-            (_[(_.k_EMsgNotifyWatchdog = 1e4)] = "k_EMsgNotifyWatchdog"),
-            (_[(_.k_EMsgClientSiteLicenseBase = 10100)] =
-              "k_EMsgClientSiteLicenseBase"),
-            (_[(_.k_EMsgClientSiteLicenseSiteInfoNotification = 10100)] =
-              "k_EMsgClientSiteLicenseSiteInfoNotification"),
-            (_[(_.k_EMsgClientSiteLicenseCheckout = 10101)] =
-              "k_EMsgClientSiteLicenseCheckout"),
-            (_[(_.k_EMsgClientSiteLicenseCheckoutResponse = 10102)] =
-              "k_EMsgClientSiteLicenseCheckoutResponse"),
-            (_[(_.k_EMsgClientSiteLicenseGetAvailableSeats = 10103)] =
-              "k_EMsgClientSiteLicenseGetAvailableSeats"),
-            (_[(_.k_EMsgClientSiteLicenseGetAvailableSeatsResponse = 10104)] =
-              "k_EMsgClientSiteLicenseGetAvailableSeatsResponse"),
-            (_[(_.k_EMsgClientSiteLicenseGetContentCacheInfo = 10105)] =
-              "k_EMsgClientSiteLicenseGetContentCacheInfo"),
-            (_[(_.k_EMsgClientSiteLicenseGetContentCacheInfoResponse = 10106)] =
-              "k_EMsgClientSiteLicenseGetContentCacheInfoResponse"),
-            (_[(_.k_EMsgBaseChatServer = 12e3)] = "k_EMsgBaseChatServer"),
-            (_[(_.k_EMsgChatServerGetPendingNotificationCount = 12e3)] =
-              "k_EMsgChatServerGetPendingNotificationCount"),
-            (_[
-              (_.k_EMsgChatServerGetPendingNotificationCountResponse = 12001)
-            ] = "k_EMsgChatServerGetPendingNotificationCountResponse"),
-            (_[(_.k_EMsgBaseSecretServer = 12100)] = "k_EMsgBaseSecretServer"),
-            (_[(_.k_EMsgServerSecretChanged = 12100)] =
-              "k_EMsgServerSecretChanged"),
-            (_[(_.k_EMsgBaseWG = 12200)] = "k_EMsgBaseWG"),
-            (_[(_.k_EMsgWGConnectionProtocolError = 12200)] =
-              "k_EMsgWGConnectionProtocolError"),
-            (_[(_.k_EMsgWGConnectionValidateUserToken = 12201)] =
-              "k_EMsgWGConnectionValidateUserToken"),
-            (_[(_.k_EMsgWGConnectionValidateUserTokenResponse = 12202)] =
-              "k_EMsgWGConnectionValidateUserTokenResponse"),
-            (_[(_.k_EMsgWGConnectionLegacyWGRequest = 12203)] =
-              "k_EMsgWGConnectionLegacyWGRequest"),
-            (_[(_.k_EMsgWGConnectionLegacyWGResponse = 12204)] =
-              "k_EMsgWGConnectionLegacyWGResponse"),
-            (_[(_.k_EMsgClientPendingGameLaunch = 12300)] =
-              "k_EMsgClientPendingGameLaunch"),
-            (_[(_.k_EMsgClientPendingGameLaunchResponse = 12301)] =
-              "k_EMsgClientPendingGameLaunchResponse");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EClientPersonaStateFlagStatus = 1)] =
-            "k_EClientPersonaStateFlagStatus"),
-            (_[(_.k_EClientPersonaStateFlagPlayerName = 2)] =
-              "k_EClientPersonaStateFlagPlayerName"),
-            (_[(_.k_EClientPersonaStateFlagQueryPort = 4)] =
-              "k_EClientPersonaStateFlagQueryPort"),
-            (_[(_.k_EClientPersonaStateFlagSourceID = 8)] =
-              "k_EClientPersonaStateFlagSourceID"),
-            (_[(_.k_EClientPersonaStateFlagPresence = 16)] =
-              "k_EClientPersonaStateFlagPresence"),
-            (_[(_.k_EClientPersonaStateFlagLastSeen = 64)] =
-              "k_EClientPersonaStateFlagLastSeen"),
-            (_[(_.k_EClientPersonaStateFlagUserClanRank = 128)] =
-              "k_EClientPersonaStateFlagUserClanRank"),
-            (_[(_.k_EClientPersonaStateGameExtraInfo = 256)] =
-              "k_EClientPersonaStateGameExtraInfo"),
-            (_[(_.k_EClientPersonaStateGameDataBlob = 512)] =
-              "k_EClientPersonaStateGameDataBlob"),
-            (_[(_.k_EClientPersonaStateFlagClanData = 1024)] =
-              "k_EClientPersonaStateFlagClanData"),
-            (_[(_.k_EClientPersonaStateFlagRichPresence = 4096)] =
-              "k_EClientPersonaStateFlagRichPresence"),
-            (_[(_.k_EClientPersonaStateFlagBroadcast = 8192)] =
-              "k_EClientPersonaStateFlagBroadcast"),
-            (_[(_.k_EClientPersonaStateFlagWatching = 16384)] =
-              "k_EClientPersonaStateFlagWatching");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EMsgClanAccountFlagPublic = 1)] =
-            "k_EMsgClanAccountFlagPublic"),
-            (_[(_.k_EMsgClanAccountFlagLarge = 2)] =
-              "k_EMsgClanAccountFlagLarge"),
-            (_[(_.k_EMsgClanAccountFlagLocked = 4)] =
-              "k_EMsgClanAccountFlagLocked"),
-            (_[(_.k_EMsgClanAccountFlagDisabled = 8)] =
-              "k_EMsgClanAccountFlagDisabled"),
-            (_[(_.k_EMsgClanAccountFlagOGG = 16)] = "k_EMsgClanAccountFlagOGG");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamReviewScore_OverwhelminglyPositive = 9)] =
-            "k_ESteamReviewScore_OverwhelminglyPositive"),
-            (_[(_.k_ESteamReviewScore_VeryPositive = 8)] =
-              "k_ESteamReviewScore_VeryPositive"),
-            (_[(_.k_ESteamReviewScore_Positive = 7)] =
-              "k_ESteamReviewScore_Positive"),
-            (_[(_.k_ESteamReviewScore_MostlyPositive = 6)] =
-              "k_ESteamReviewScore_MostlyPositive"),
-            (_[(_.k_ESteamReviewScore_Mixed = 5)] =
-              "k_ESteamReviewScore_Mixed"),
-            (_[(_.k_ESteamReviewScore_MostlyNegative = 4)] =
-              "k_ESteamReviewScore_MostlyNegative"),
-            (_[(_.k_ESteamReviewScore_Negative = 3)] =
-              "k_ESteamReviewScore_Negative"),
-            (_[(_.k_ESteamReviewScore_VeryNegative = 2)] =
-              "k_ESteamReviewScore_VeryNegative"),
-            (_[(_.k_ESteamReviewScore_OverwhelminglyNegative = 1)] =
-              "k_ESteamReviewScore_OverwhelminglyNegative"),
-            (_[(_.k_ESteamReviewScore_None = 0)] = "k_ESteamReviewScore_None");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECodecUsagePlatformUnknown = 0)] =
-            "k_ECodecUsagePlatformUnknown"),
-            (_[(_.k_ECodecUsagePlatformWindows = 1)] =
-              "k_ECodecUsagePlatformWindows"),
-            (_[(_.k_ECodecUsagePlatformMacOS = 2)] =
-              "k_ECodecUsagePlatformMacOS"),
-            (_[(_.k_ECodecUsagePlatformLinux = 3)] =
-              "k_ECodecUsagePlatformLinux"),
-            (_[(_.k_ECodecUsagePlatformSteamDeck = 4)] =
-              "k_ECodecUsagePlatformSteamDeck");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECodecUsageReasonUnknown = 0)] =
-            "k_ECodecUsageReasonUnknown"),
-            (_[(_.k_ECodecUsageReasonRemotePlay = 1)] =
-              "k_ECodecUsageReasonRemotePlay"),
-            (_[(_.k_ECodecUsageReasonBroadcasting = 2)] =
-              "k_ECodecUsageReasonBroadcasting"),
-            (_[(_.k_ECodecUsageReasonGameVideo = 3)] =
-              "k_ECodecUsageReasonGameVideo"),
-            (_[(_.k_ECodecUsageReasonGameRecording = 4)] =
-              "k_ECodecUsageReasonGameRecording");
-        })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      var _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _;
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      }),
-        (function (_) {
-          (_[(_.k_PublishedFileQueryType_RankedByVote = 0)] =
-            "k_PublishedFileQueryType_RankedByVote"),
-            (_[(_.k_PublishedFileQueryType_RankedByPublicationDate = 1)] =
-              "k_PublishedFileQueryType_RankedByPublicationDate"),
-            (_[
-              (_.k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate = 2)
-            ] =
-              "k_PublishedFileQueryType_AcceptedForGameRankedByAcceptanceDate"),
-            (_[(_.k_PublishedFileQueryType_RankedByTrend = 3)] =
-              "k_PublishedFileQueryType_RankedByTrend"),
-            (_[
-              (_.k_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate = 4)
-            ] =
-              "k_PublishedFileQueryType_FavoritedByFriendsRankedByPublicationDate"),
-            (_[
-              (_.k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate = 5)
-            ] =
-              "k_PublishedFileQueryType_CreatedByFriendsRankedByPublicationDate"),
-            (_[(_.k_PublishedFileQueryType_RankedByNumTimesReported = 6)] =
-              "k_PublishedFileQueryType_RankedByNumTimesReported"),
-            (_[
-              (_.k_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate = 7)
-            ] =
-              "k_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate"),
-            (_[(_.k_PublishedFileQueryType_NotYetRated = 8)] =
-              "k_PublishedFileQueryType_NotYetRated"),
-            (_[
-              (_.k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions = 9)
-            ] = "k_PublishedFileQueryType_RankedByTotalUniqueSubscriptions"),
-            (_[(_.k_PublishedFileQueryType_RankedByTotalVotesAsc = 10)] =
-              "k_PublishedFileQueryType_RankedByTotalVotesAsc"),
-            (_[(_.k_PublishedFileQueryType_RankedByVotesUp = 11)] =
-              "k_PublishedFileQueryType_RankedByVotesUp"),
-            (_[(_.k_PublishedFileQueryType_RankedByTextSearch = 12)] =
-              "k_PublishedFileQueryType_RankedByTextSearch"),
-            (_[(_.k_PublishedFileQueryType_RankedByPlaytimeTrend = 13)] =
-              "k_PublishedFileQueryType_RankedByPlaytimeTrend"),
-            (_[(_.k_PublishedFileQueryType_RankedByTotalPlaytime = 14)] =
-              "k_PublishedFileQueryType_RankedByTotalPlaytime"),
-            (_[(_.k_PublishedFileQueryType_RankedByAveragePlaytimeTrend = 15)] =
-              "k_PublishedFileQueryType_RankedByAveragePlaytimeTrend"),
-            (_[
-              (_.k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime = 16)
-            ] = "k_PublishedFileQueryType_RankedByLifetimeAveragePlaytime"),
-            (_[
-              (_.k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend = 17)
-            ] = "k_PublishedFileQueryType_RankedByPlaytimeSessionsTrend"),
-            (_[
-              (_.k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions = 18)
-            ] = "k_PublishedFileQueryType_RankedByLifetimePlaytimeSessions"),
-            (_[
-              (_.k_PublishedFileQueryType_RankedByInappropriateContentRating = 19)
-            ] = "k_PublishedFileQueryType_RankedByInappropriateContentRating"),
-            (_[(_.k_PublishedFileQueryType_RankedByBanContentCheck = 20)] =
-              "k_PublishedFileQueryType_RankedByBanContentCheck"),
-            (_[(_.k_PublishedFileQueryType_RankedByLastUpdatedDate = 21)] =
-              "k_PublishedFileQueryType_RankedByLastUpdatedDate");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EPublishedFileInappropriateProvider_Invalid = 0)] =
-            "k_EPublishedFileInappropriateProvider_Invalid"),
-            (_[(_.k_EPublishedFileInappropriateProvider_Google = 1)] =
-              "k_EPublishedFileInappropriateProvider_Google"),
-            (_[(_.k_EPublishedFileInappropriateProvider_Amazon = 2)] =
-              "k_EPublishedFileInappropriateProvider_Amazon");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EPublishedFileInappropriateResult_NotScanned = 0)] =
-            "k_EPublishedFileInappropriateResult_NotScanned"),
-            (_[(_.k_EPublishedFileInappropriateResult_VeryUnlikely = 1)] =
-              "k_EPublishedFileInappropriateResult_VeryUnlikely"),
-            (_[(_.k_EPublishedFileInappropriateResult_Unlikely = 30)] =
-              "k_EPublishedFileInappropriateResult_Unlikely"),
-            (_[(_.k_EPublishedFileInappropriateResult_Possible = 50)] =
-              "k_EPublishedFileInappropriateResult_Possible"),
-            (_[(_.k_EPublishedFileInappropriateResult_Likely = 75)] =
-              "k_EPublishedFileInappropriateResult_Likely"),
-            (_[(_.k_EPublishedFileInappropriateResult_VeryLikely = 100)] =
-              "k_EPublishedFileInappropriateResult_VeryLikely");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EPersonaStateFlag_HasRichPresence = 1)] =
-            "k_EPersonaStateFlag_HasRichPresence"),
-            (_[(_.k_EPersonaStateFlag_InJoinableGame = 2)] =
-              "k_EPersonaStateFlag_InJoinableGame"),
-            (_[(_.k_EPersonaStateFlag_Golden = 4)] =
-              "k_EPersonaStateFlag_Golden"),
-            (_[(_.k_EPersonaStateFlag_RemotePlayTogether = 8)] =
-              "k_EPersonaStateFlag_RemotePlayTogether"),
-            (_[(_.k_EPersonaStateFlag_ClientTypeWeb = 256)] =
-              "k_EPersonaStateFlag_ClientTypeWeb"),
-            (_[(_.k_EPersonaStateFlag_ClientTypeMobile = 512)] =
-              "k_EPersonaStateFlag_ClientTypeMobile"),
-            (_[(_.k_EPersonaStateFlag_ClientTypeTenfoot = 1024)] =
-              "k_EPersonaStateFlag_ClientTypeTenfoot"),
-            (_[(_.k_EPersonaStateFlag_ClientTypeVR = 2048)] =
-              "k_EPersonaStateFlag_ClientTypeVR"),
-            (_[(_.k_EPersonaStateFlag_LaunchTypeGamepad = 4096)] =
-              "k_EPersonaStateFlag_LaunchTypeGamepad"),
-            (_[(_.k_EPersonaStateFlag_LaunchTypeCompatTool = 8192)] =
-              "k_EPersonaStateFlag_LaunchTypeCompatTool");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EContentCheckProvider_Invalid = 0)] =
-            "k_EContentCheckProvider_Invalid"),
-            (_[(_.k_EContentCheckProvider_Google_DEPRECATED = 1)] =
-              "k_EContentCheckProvider_Google_DEPRECATED"),
-            (_[(_.k_EContentCheckProvider_Amazon = 2)] =
-              "k_EContentCheckProvider_Amazon"),
-            (_[(_.k_EContentCheckProvider_Local = 3)] =
-              "k_EContentCheckProvider_Local"),
-            (_[(_.k_EContentCheckProvider_GoogleVertexAI = 4)] =
-              "k_EContentCheckProvider_GoogleVertexAI"),
-            (_[(_.k_EContentCheckProvider_GoogleGemini = 5)] =
-              "k_EContentCheckProvider_GoogleGemini"),
-            (_[(_.k_EContentCheckProvider_SteamLearn = 6)] =
-              "k_EContentCheckProvider_SteamLearn");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProfileCustomizationTypeInvalid = 0)] =
-            "k_EProfileCustomizationTypeInvalid"),
-            (_[(_.k_EProfileCustomizationTypeRareAchievementShowcase = 1)] =
-              "k_EProfileCustomizationTypeRareAchievementShowcase"),
-            (_[(_.k_EProfileCustomizationTypeGameCollector = 2)] =
-              "k_EProfileCustomizationTypeGameCollector"),
-            (_[(_.k_EProfileCustomizationTypeItemShowcase = 3)] =
-              "k_EProfileCustomizationTypeItemShowcase"),
-            (_[(_.k_EProfileCustomizationTypeTradeShowcase = 4)] =
-              "k_EProfileCustomizationTypeTradeShowcase"),
-            (_[(_.k_EProfileCustomizationTypeBadges = 5)] =
-              "k_EProfileCustomizationTypeBadges"),
-            (_[(_.k_EProfileCustomizationTypeFavoriteGame = 6)] =
-              "k_EProfileCustomizationTypeFavoriteGame"),
-            (_[(_.k_EProfileCustomizationTypeScreenshotShowcase = 7)] =
-              "k_EProfileCustomizationTypeScreenshotShowcase"),
-            (_[(_.k_EProfileCustomizationTypeCustomText = 8)] =
-              "k_EProfileCustomizationTypeCustomText"),
-            (_[(_.k_EProfileCustomizationTypeFavoriteGroup = 9)] =
-              "k_EProfileCustomizationTypeFavoriteGroup"),
-            (_[(_.k_EProfileCustomizationTypeRecommendation = 10)] =
-              "k_EProfileCustomizationTypeRecommendation"),
-            (_[(_.k_EProfileCustomizationTypeWorkshopItem = 11)] =
-              "k_EProfileCustomizationTypeWorkshopItem"),
-            (_[(_.k_EProfileCustomizationTypeMyWorkshop = 12)] =
-              "k_EProfileCustomizationTypeMyWorkshop"),
-            (_[(_.k_EProfileCustomizationTypeArtworkShowcase = 13)] =
-              "k_EProfileCustomizationTypeArtworkShowcase"),
-            (_[(_.k_EProfileCustomizationTypeVideoShowcase = 14)] =
-              "k_EProfileCustomizationTypeVideoShowcase"),
-            (_[(_.k_EProfileCustomizationTypeGuides = 15)] =
-              "k_EProfileCustomizationTypeGuides"),
-            (_[(_.k_EProfileCustomizationTypeMyGuides = 16)] =
-              "k_EProfileCustomizationTypeMyGuides"),
-            (_[(_.k_EProfileCustomizationTypeAchievements = 17)] =
-              "k_EProfileCustomizationTypeAchievements"),
-            (_[(_.k_EProfileCustomizationTypeGreenlight = 18)] =
-              "k_EProfileCustomizationTypeGreenlight"),
-            (_[(_.k_EProfileCustomizationTypeMyGreenlight = 19)] =
-              "k_EProfileCustomizationTypeMyGreenlight"),
-            (_[(_.k_EProfileCustomizationTypeSalien = 20)] =
-              "k_EProfileCustomizationTypeSalien"),
-            (_[(_.k_EProfileCustomizationTypeLoyaltyRewardReactions = 21)] =
-              "k_EProfileCustomizationTypeLoyaltyRewardReactions"),
-            (_[(_.k_EProfileCustomizationTypeSingleArtworkShowcase = 22)] =
-              "k_EProfileCustomizationTypeSingleArtworkShowcase"),
-            (_[(_.k_EProfileCustomizationTypeAchievementsCompletionist = 23)] =
-              "k_EProfileCustomizationTypeAchievementsCompletionist"),
-            (_[(_.k_EProfileCustomizationTypeReplay = 24)] =
-              "k_EProfileCustomizationTypeReplay");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EPublishedFileStorageSystemInvalid = 0)] =
-            "k_EPublishedFileStorageSystemInvalid"),
-            (_[(_.k_EPublishedFileStorageSystemLegacyCloud = 1)] =
-              "k_EPublishedFileStorageSystemLegacyCloud"),
-            (_[(_.k_EPublishedFileStorageSystemDepot = 2)] =
-              "k_EPublishedFileStorageSystemDepot"),
-            (_[(_.k_EPublishedFileStorageSystemUGCCloud = 3)] =
-              "k_EPublishedFileStorageSystemUGCCloud");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECloudStoragePersistStatePersisted = 0)] =
-            "k_ECloudStoragePersistStatePersisted"),
-            (_[(_.k_ECloudStoragePersistStateForgotten = 1)] =
-              "k_ECloudStoragePersistStateForgotten"),
-            (_[(_.k_ECloudStoragePersistStateDeleted = 2)] =
-              "k_ECloudStoragePersistStateDeleted");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESDCardFormatStage_Invalid = 0)] =
-            "k_ESDCardFormatStage_Invalid"),
-            (_[(_.k_ESDCardFormatStage_Starting = 1)] =
-              "k_ESDCardFormatStage_Starting"),
-            (_[(_.k_ESDCardFormatStage_Testing = 2)] =
-              "k_ESDCardFormatStage_Testing"),
-            (_[(_.k_ESDCardFormatStage_Rescuing = 3)] =
-              "k_ESDCardFormatStage_Rescuing"),
-            (_[(_.k_ESDCardFormatStage_Formatting = 4)] =
-              "k_ESDCardFormatStage_Formatting"),
-            (_[(_.k_ESDCardFormatStage_Finalizing = 5)] =
-              "k_ESDCardFormatStage_Finalizing");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStorageFormatStage_Invalid = 0)] =
-            "k_EStorageFormatStage_Invalid"),
-            (_[(_.k_EStorageFormatStage_NotRunning = 1)] =
-              "k_EStorageFormatStage_NotRunning"),
-            (_[(_.k_EStorageFormatStage_Starting = 2)] =
-              "k_EStorageFormatStage_Starting"),
-            (_[(_.k_EStorageFormatStage_Testing = 3)] =
-              "k_EStorageFormatStage_Testing"),
-            (_[(_.k_EStorageFormatStage_Rescuing = 4)] =
-              "k_EStorageFormatStage_Rescuing"),
-            (_[(_.k_EStorageFormatStage_Formatting = 5)] =
-              "k_EStorageFormatStage_Formatting"),
-            (_[(_.k_EStorageFormatStage_Finalizing = 6)] =
-              "k_EStorageFormatStage_Finalizing");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_SystemFanControlMode_Invalid = 0)] =
-            "k_SystemFanControlMode_Invalid"),
-            (_[(_.k_SystemFanControlMode_Disabled = 1)] =
-              "k_SystemFanControlMode_Disabled"),
-            (_[(_.k_SystemFanControlMode_Default = 2)] =
-              "k_SystemFanControlMode_Default");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStartupMovieVariant_Invalid = 0)] =
-            "k_EStartupMovieVariant_Invalid"),
-            (_[(_.k_EStartupMovieVariant_Generic = 1)] =
-              "k_EStartupMovieVariant_Generic"),
-            (_[(_.k_EStartupMovieVariant_DeckBlue = 2)] =
-              "k_EStartupMovieVariant_DeckBlue"),
-            (_[(_.k_EStartupMovieVariant_DeckOrange = 3)] =
-              "k_EStartupMovieVariant_DeckOrange");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ColorGamutLabelSet_Default = 0)] =
-            "k_ColorGamutLabelSet_Default"),
-            (_[(_.k_ColorGamutLabelSet_sRGB_Native = 1)] =
-              "k_ColorGamutLabelSet_sRGB_Native"),
-            (_[(_.k_ColorGamutLabelSet_Native_sRGB_Boosted = 2)] =
-              "k_ColorGamutLabelSet_Native_sRGB_Boosted");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EWindowStackingOrder_Invalid = 0)] =
-            "k_EWindowStackingOrder_Invalid"),
-            (_[(_.k_EWindowStackingOrder_Top = 1)] =
-              "k_EWindowStackingOrder_Top"),
-            (_[(_.k_EWindowStackingOrder_Bottom = 2)] =
-              "k_EWindowStackingOrder_Bottom");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_BluetoothDeviceType_Invalid = 0)] =
-            "k_BluetoothDeviceType_Invalid"),
-            (_[(_.k_BluetoothDeviceType_Unknown = 1)] =
-              "k_BluetoothDeviceType_Unknown"),
-            (_[(_.k_BluetoothDeviceType_Phone = 2)] =
-              "k_BluetoothDeviceType_Phone"),
-            (_[(_.k_BluetoothDeviceType_Computer = 3)] =
-              "k_BluetoothDeviceType_Computer"),
-            (_[(_.k_BluetoothDeviceType_Headset = 4)] =
-              "k_BluetoothDeviceType_Headset"),
-            (_[(_.k_BluetoothDeviceType_Headphones = 5)] =
-              "k_BluetoothDeviceType_Headphones"),
-            (_[(_.k_BluetoothDeviceType_Speakers = 6)] =
-              "k_BluetoothDeviceType_Speakers"),
-            (_[(_.k_BluetoothDeviceType_OtherAudio = 7)] =
-              "k_BluetoothDeviceType_OtherAudio"),
-            (_[(_.k_BluetoothDeviceType_Mouse = 8)] =
-              "k_BluetoothDeviceType_Mouse"),
-            (_[(_.k_BluetoothDeviceType_Joystick = 9)] =
-              "k_BluetoothDeviceType_Joystick"),
-            (_[(_.k_BluetoothDeviceType_Gamepad = 10)] =
-              "k_BluetoothDeviceType_Gamepad"),
-            (_[(_.k_BluetoothDeviceType_Keyboard = 11)] =
-              "k_BluetoothDeviceType_Keyboard");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_SystemAudioDirection_Invalid = 0)] =
-            "k_SystemAudioDirection_Invalid"),
-            (_[(_.k_SystemAudioDirection_Input = 1)] =
-              "k_SystemAudioDirection_Input"),
-            (_[(_.k_SystemAudioDirection_Output = 2)] =
-              "k_SystemAudioDirection_Output");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_SystemAudioChannel_Invalid = 0)] =
-            "k_SystemAudioChannel_Invalid"),
-            (_[(_.k_SystemAudioChannel_Aggregated = 1)] =
-              "k_SystemAudioChannel_Aggregated"),
-            (_[(_.k_SystemAudioChannel_FrontLeft = 2)] =
-              "k_SystemAudioChannel_FrontLeft"),
-            (_[(_.k_SystemAudioChannel_FrontRight = 3)] =
-              "k_SystemAudioChannel_FrontRight"),
-            (_[(_.k_SystemAudioChannel_LFE = 4)] = "k_SystemAudioChannel_LFE"),
-            (_[(_.k_SystemAudioChannel_BackLeft = 5)] =
-              "k_SystemAudioChannel_BackLeft"),
-            (_[(_.k_SystemAudioChannel_BackRight = 6)] =
-              "k_SystemAudioChannel_BackRight"),
-            (_[(_.k_SystemAudioChannel_FrontCenter = 7)] =
-              "k_SystemAudioChannel_FrontCenter"),
-            (_[(_.k_SystemAudioChannel_Unknown = 8)] =
-              "k_SystemAudioChannel_Unknown"),
-            (_[(_.k_SystemAudioChannel_Mono = 9)] =
-              "k_SystemAudioChannel_Mono");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_SystemAudioPortType_Invalid = 0)] =
-            "k_SystemAudioPortType_Invalid"),
-            (_[(_.k_SystemAudioPortType_Unknown = 1)] =
-              "k_SystemAudioPortType_Unknown"),
-            (_[(_.k_SystemAudioPortType_Audio32f = 2)] =
-              "k_SystemAudioPortType_Audio32f"),
-            (_[(_.k_SystemAudioPortType_Midi8b = 3)] =
-              "k_SystemAudioPortType_Midi8b"),
-            (_[(_.k_SystemAudioPortType_Video32RGBA = 4)] =
-              "k_SystemAudioPortType_Video32RGBA");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_SystemAudioPortDirection_Invalid = 0)] =
-            "k_SystemAudioPortDirection_Invalid"),
-            (_[(_.k_SystemAudioPortDirection_Input = 1)] =
-              "k_SystemAudioPortDirection_Input"),
-            (_[(_.k_SystemAudioPortDirection_Output = 2)] =
-              "k_SystemAudioPortDirection_Output");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESystemServiceState_Unavailable = 0)] =
-            "k_ESystemServiceState_Unavailable"),
-            (_[(_.k_ESystemServiceState_Disabled = 1)] =
-              "k_ESystemServiceState_Disabled"),
-            (_[(_.k_ESystemServiceState_Enabled = 2)] =
-              "k_ESystemServiceState_Enabled");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGraphicsPerfOverlayLevel_Hidden = 0)] =
-            "k_EGraphicsPerfOverlayLevel_Hidden"),
-            (_[(_.k_EGraphicsPerfOverlayLevel_Basic = 1)] =
-              "k_EGraphicsPerfOverlayLevel_Basic"),
-            (_[(_.k_EGraphicsPerfOverlayLevel_Medium = 2)] =
-              "k_EGraphicsPerfOverlayLevel_Medium"),
-            (_[(_.k_EGraphicsPerfOverlayLevel_Full = 3)] =
-              "k_EGraphicsPerfOverlayLevel_Full"),
-            (_[(_.k_EGraphicsPerfOverlayLevel_Minimal = 4)] =
-              "k_EGraphicsPerfOverlayLevel_Minimal");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGPUPerformanceLevel_Invalid = 0)] =
-            "k_EGPUPerformanceLevel_Invalid"),
-            (_[(_.k_EGPUPerformanceLevel_Auto = 1)] =
-              "k_EGPUPerformanceLevel_Auto"),
-            (_[(_.k_EGPUPerformanceLevel_Manual = 2)] =
-              "k_EGPUPerformanceLevel_Manual"),
-            (_[(_.k_EGPUPerformanceLevel_Low = 3)] =
-              "k_EGPUPerformanceLevel_Low"),
-            (_[(_.k_EGPUPerformanceLevel_High = 4)] =
-              "k_EGPUPerformanceLevel_High"),
-            (_[(_.k_EGPUPerformanceLevel_Profiling = 5)] =
-              "k_EGPUPerformanceLevel_Profiling");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESplitScalingFilter_Invalid = 0)] =
-            "k_ESplitScalingFilter_Invalid"),
-            (_[(_.k_ESplitScalingFilter_Linear = 1)] =
-              "k_ESplitScalingFilter_Linear"),
-            (_[(_.k_ESplitScalingFilter_Nearest = 2)] =
-              "k_ESplitScalingFilter_Nearest"),
-            (_[(_.k_ESplitScalingFilter_Sharp = 3)] =
-              "k_ESplitScalingFilter_Sharp"),
-            (_[(_.k_ESplitScalingFilter_NIS_Deprecated = 4)] =
-              "k_ESplitScalingFilter_NIS_Deprecated");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESplitScalingScaler_Invalid = 0)] =
-            "k_ESplitScalingScaler_Invalid"),
-            (_[(_.k_ESplitScalingScaler_Auto = 1)] =
-              "k_ESplitScalingScaler_Auto"),
-            (_[(_.k_ESplitScalingScaler_Integer = 2)] =
-              "k_ESplitScalingScaler_Integer"),
-            (_[(_.k_ESplitScalingScaler_Fit = 3)] =
-              "k_ESplitScalingScaler_Fit"),
-            (_[(_.k_ESplitScalingScaler_Fill = 4)] =
-              "k_ESplitScalingScaler_Fill"),
-            (_[(_.k_ESplitScalingScaler_Stretch = 5)] =
-              "k_ESplitScalingScaler_Stretch");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGamescopeBlurMode_Disabled = 0)] =
-            "k_EGamescopeBlurMode_Disabled"),
-            (_[(_.k_EGamescopeBlurMode_IfOccluded = 1)] =
-              "k_EGamescopeBlurMode_IfOccluded"),
-            (_[(_.k_EGamescopeBlurMode_Always = 2)] =
-              "k_EGamescopeBlurMode_Always");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESLSHelper_Invalid = 0)] = "k_ESLSHelper_Invalid"),
-            (_[(_.k_ESLSHelper_Minidump = 1)] = "k_ESLSHelper_Minidump"),
-            (_[(_.k_ESLSHelper_Kdump = 2)] = "k_ESLSHelper_Kdump"),
-            (_[(_.k_ESLSHelper_Journal = 3)] = "k_ESLSHelper_Journal"),
-            (_[(_.k_ESLSHelper_Gpu = 4)] = "k_ESLSHelper_Gpu"),
-            (_[(_.k_ESLSHelper_SystemInfo = 5)] = "k_ESLSHelper_SystemInfo"),
-            (_[(_.k_ESLSHelper_Devcoredump = 6)] = "k_ESLSHelper_Devcoredump");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHDRVisualization_None = 0)] = "k_EHDRVisualization_None"),
-            (_[(_.k_EHDRVisualization_Heatmap = 1)] =
-              "k_EHDRVisualization_Heatmap"),
-            (_[(_.k_EHDRVisualization_Analysis = 2)] =
-              "k_EHDRVisualization_Analysis"),
-            (_[(_.k_EHDRVisualization_HeatmapExtended = 3)] =
-              "k_EHDRVisualization_HeatmapExtended"),
-            (_[(_.k_EHDRVisualization_HeatmapClassic = 4)] =
-              "k_EHDRVisualization_HeatmapClassic");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHDRToneMapOperator_Invalid = 0)] =
-            "k_EHDRToneMapOperator_Invalid"),
-            (_[(_.k_EHDRToneMapOperator_Uncharted = 1)] =
-              "k_EHDRToneMapOperator_Uncharted"),
-            (_[(_.k_EHDRToneMapOperator_Reinhard = 2)] =
-              "k_EHDRToneMapOperator_Reinhard");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECPUGovernor_Invalid = 0)] = "k_ECPUGovernor_Invalid"),
-            (_[(_.k_ECPUGovernor_Perf = 1)] = "k_ECPUGovernor_Perf"),
-            (_[(_.k_ECPUGovernor_Powersave = 2)] = "k_ECPUGovernor_Powersave"),
-            (_[(_.k_ECPUGovernor_Manual = 3)] = "k_ECPUGovernor_Manual");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EUpdaterType_Invalid = 0)] = "k_EUpdaterType_Invalid"),
-            (_[(_.k_EUpdaterType_Client = 1)] = "k_EUpdaterType_Client"),
-            (_[(_.k_EUpdaterType_OS = 2)] = "k_EUpdaterType_OS"),
-            (_[(_.k_EUpdaterType_BIOS = 3)] = "k_EUpdaterType_BIOS"),
-            (_[(_.k_EUpdaterType_Aggregated = 4)] =
-              "k_EUpdaterType_Aggregated"),
-            (_[(_.k_EUpdaterType_Test1 = 5)] = "k_EUpdaterType_Test1"),
-            (_[(_.k_EUpdaterType_Test2 = 6)] = "k_EUpdaterType_Test2"),
-            (_[(_.k_EUpdaterType_Dummy = 7)] = "k_EUpdaterType_Dummy");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EUpdaterState_Invalid = 0)] = "k_EUpdaterState_Invalid"),
-            (_[(_.k_EUpdaterState_UpToDate = 2)] = "k_EUpdaterState_UpToDate"),
-            (_[(_.k_EUpdaterState_Checking = 3)] = "k_EUpdaterState_Checking"),
-            (_[(_.k_EUpdaterState_Available = 4)] =
-              "k_EUpdaterState_Available"),
-            (_[(_.k_EUpdaterState_Applying = 5)] = "k_EUpdaterState_Applying"),
-            (_[(_.k_EUpdaterState_ClientRestartPending = 6)] =
-              "k_EUpdaterState_ClientRestartPending"),
-            (_[(_.k_EUpdaterState_SystemRestartPending = 7)] =
-              "k_EUpdaterState_SystemRestartPending"),
-            (_[(_.k_EUpdaterState_RollBack = 8)] = "k_EUpdaterState_RollBack");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStorageBlockContentType_Invalid = 0)] =
-            "k_EStorageBlockContentType_Invalid"),
-            (_[(_.k_EStorageBlockContentType_Unknown = 1)] =
-              "k_EStorageBlockContentType_Unknown"),
-            (_[(_.k_EStorageBlockContentType_FileSystem = 2)] =
-              "k_EStorageBlockContentType_FileSystem"),
-            (_[(_.k_EStorageBlockContentType_Crypto = 3)] =
-              "k_EStorageBlockContentType_Crypto"),
-            (_[(_.k_EStorageBlockContentType_Raid = 4)] =
-              "k_EStorageBlockContentType_Raid");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStorageBlockFileSystemType_Invalid = 0)] =
-            "k_EStorageBlockFileSystemType_Invalid"),
-            (_[(_.k_EStorageBlockFileSystemType_Unknown = 1)] =
-              "k_EStorageBlockFileSystemType_Unknown"),
-            (_[(_.k_EStorageBlockFileSystemType_VFat = 2)] =
-              "k_EStorageBlockFileSystemType_VFat"),
-            (_[(_.k_EStorageBlockFileSystemType_Ext4 = 3)] =
-              "k_EStorageBlockFileSystemType_Ext4");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStorageDriveMediaType_Invalid = 0)] =
-            "k_EStorageDriveMediaType_Invalid"),
-            (_[(_.k_EStorageDriveMediaType_Unknown = 1)] =
-              "k_EStorageDriveMediaType_Unknown"),
-            (_[(_.k_EStorageDriveMediaType_HDD = 2)] =
-              "k_EStorageDriveMediaType_HDD"),
-            (_[(_.k_EStorageDriveMediaType_SSD = 3)] =
-              "k_EStorageDriveMediaType_SSD"),
-            (_[(_.k_EStorageDriveMediaType_Removable = 4)] =
-              "k_EStorageDriveMediaType_Removable");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESystemDisplayCompatibilityMode_Invalid = 0)] =
-            "k_ESystemDisplayCompatibilityMode_Invalid"),
-            (_[(_.k_ESystemDisplayCompatibilityMode_None = 1)] =
-              "k_ESystemDisplayCompatibilityMode_None"),
-            (_[(_.k_ESystemDisplayCompatibilityMode_MinimalBandwith = 2)] =
-              "k_ESystemDisplayCompatibilityMode_MinimalBandwith");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamOSCompatibilityCategory_Unknown = 0)] =
-            "k_ESteamOSCompatibilityCategory_Unknown"),
-            (_[(_.k_ESteamOSCompatibilityCategory_Unsupported = 1)] =
-              "k_ESteamOSCompatibilityCategory_Unsupported"),
-            (_[(_.k_ESteamOSCompatibilityCategory_Compatible = 2)] =
-              "k_ESteamOSCompatibilityCategory_Compatible");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamOSCompatibilityResultDisplayType_Invisible = 0)] =
-            "k_ESteamOSCompatibilityResultDisplayType_Invisible"),
-            (_[(_.k_ESteamOSCompatibilityResultDisplayType_Informational = 1)] =
-              "k_ESteamOSCompatibilityResultDisplayType_Informational"),
-            (_[(_.k_ESteamOSCompatibilityResultDisplayType_Unsupported = 2)] =
-              "k_ESteamOSCompatibilityResultDisplayType_Unsupported"),
-            (_[(_.k_ESteamOSCompatibilityResultDisplayType_Compatible = 3)] =
-              "k_ESteamOSCompatibilityResultDisplayType_Compatible");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamDeckCompatibilityCategory_Unknown = 0)] =
-            "k_ESteamDeckCompatibilityCategory_Unknown"),
-            (_[(_.k_ESteamDeckCompatibilityCategory_Unsupported = 1)] =
-              "k_ESteamDeckCompatibilityCategory_Unsupported"),
-            (_[(_.k_ESteamDeckCompatibilityCategory_Playable = 2)] =
-              "k_ESteamDeckCompatibilityCategory_Playable"),
-            (_[(_.k_ESteamDeckCompatibilityCategory_Verified = 3)] =
-              "k_ESteamDeckCompatibilityCategory_Verified");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamDeckCompatibilityResultDisplayType_Invisible = 0)] =
-            "k_ESteamDeckCompatibilityResultDisplayType_Invisible"),
-            (_[
-              (_.k_ESteamDeckCompatibilityResultDisplayType_Informational = 1)
-            ] = "k_ESteamDeckCompatibilityResultDisplayType_Informational"),
-            (_[(_.k_ESteamDeckCompatibilityResultDisplayType_Unsupported = 2)] =
-              "k_ESteamDeckCompatibilityResultDisplayType_Unsupported"),
-            (_[(_.k_ESteamDeckCompatibilityResultDisplayType_Playable = 3)] =
-              "k_ESteamDeckCompatibilityResultDisplayType_Playable"),
-            (_[(_.k_ESteamDeckCompatibilityResultDisplayType_Verified = 4)] =
-              "k_ESteamDeckCompatibilityResultDisplayType_Verified");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamDeckCompatibilityTestResult_Invalid = 0)] =
-            "k_ESteamDeckCompatibilityTestResult_Invalid"),
-            (_[(_.k_ESteamDeckCompatibilityTestResult_NotApplicable = 1)] =
-              "k_ESteamDeckCompatibilityTestResult_NotApplicable"),
-            (_[(_.k_ESteamDeckCompatibilityTestResult_Pass = 2)] =
-              "k_ESteamDeckCompatibilityTestResult_Pass"),
-            (_[(_.k_ESteamDeckCompatibilityTestResult_Fail = 3)] =
-              "k_ESteamDeckCompatibilityTestResult_Fail"),
-            (_[(_.k_ESteamDeckCompatibilityTestResult_FailMinor = 4)] =
-              "k_ESteamDeckCompatibilityTestResult_FailMinor");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EACState_Unknown = 0)] = "k_EACState_Unknown"),
-            (_[(_.k_EACState_Disconnected = 1)] = "k_EACState_Disconnected"),
-            (_[(_.k_EACState_Connected = 2)] = "k_EACState_Connected"),
-            (_[(_.k_EACState_ConnectedSlow = 3)] = "k_EACState_ConnectedSlow");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EBatteryState_Unknown = 0)] = "k_EBatteryState_Unknown"),
-            (_[(_.k_EBatteryState_Discharging = 1)] =
-              "k_EBatteryState_Discharging"),
-            (_[(_.k_EBatteryState_Charging = 2)] = "k_EBatteryState_Charging"),
-            (_[(_.k_EBatteryState_Full = 3)] = "k_EBatteryState_Full");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EOSBranch_Unknown = 0)] = "k_EOSBranch_Unknown"),
-            (_[(_.k_EOSBranch_Release = 1)] = "k_EOSBranch_Release"),
-            (_[(_.k_EOSBranch_ReleaseCandidate = 2)] =
-              "k_EOSBranch_ReleaseCandidate"),
-            (_[(_.k_EOSBranch_Beta = 3)] = "k_EOSBranch_Beta"),
-            (_[(_.k_EOSBranch_BetaCandidate = 4)] =
-              "k_EOSBranch_BetaCandidate"),
-            (_[(_.k_EOSBranch_Preview = 5)] = "k_EOSBranch_Preview"),
-            (_[(_.k_EOSBranch_PreviewCandidate = 6)] =
-              "k_EOSBranch_PreviewCandidate"),
-            (_[(_.k_EOSBranch_Main = 7)] = "k_EOSBranch_Main"),
-            (_[(_.k_EOSBranch_Staging = 8)] = "k_EOSBranch_Staging");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EBrowserGPUStatus_Invalid = 0)] =
-            "k_EBrowserGPUStatus_Invalid"),
-            (_[(_.k_EBrowserGPUStatus_Enabled = 1)] =
-              "k_EBrowserGPUStatus_Enabled"),
-            (_[(_.k_EBrowserGPUStatus_DisabledUnknown = 2)] =
-              "k_EBrowserGPUStatus_DisabledUnknown"),
-            (_[(_.k_EBrowserGPUStatus_DisabledCrashCount = 4)] =
-              "k_EBrowserGPUStatus_DisabledCrashCount"),
-            (_[(_.k_EBrowserGPUStatus_DisabledBlocklist = 5)] =
-              "k_EBrowserGPUStatus_DisabledBlocklist"),
-            (_[(_.k_EBrowserGPUStatus_DisabledJSRequest = 6)] =
-              "k_EBrowserGPUStatus_DisabledJSRequest"),
-            (_[(_.k_EBrowserGPUStatus_DisabledCommandLine = 7)] =
-              "k_EBrowserGPUStatus_DisabledCommandLine"),
-            (_[(_.k_EBrowserGPUStatus_DisabledRuntimeDetect = 8)] =
-              "k_EBrowserGPUStatus_DisabledRuntimeDetect"),
-            (_[(_.k_EBrowserGPUStatus_DisabledChildCommandLine = 9)] =
-              "k_EBrowserGPUStatus_DisabledChildCommandLine"),
-            (_[(_.k_EBrowserGPUStatus_DisabledCompositingCommandLine = 10)] =
-              "k_EBrowserGPUStatus_DisabledCompositingCommandLine");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EBrowserFeatureStatus_Invalid = 0)] =
-            "k_EBrowserFeatureStatus_Invalid"),
-            (_[(_.k_EBrowserFeatureStatus_NotFound = 1)] =
-              "k_EBrowserFeatureStatus_NotFound"),
-            (_[(_.k_EBrowserFeatureStatus_Unknown = 2)] =
-              "k_EBrowserFeatureStatus_Unknown"),
-            (_[(_.k_EBrowserFeatureStatus_DisabledSoftware = 3)] =
-              "k_EBrowserFeatureStatus_DisabledSoftware"),
-            (_[(_.k_EBrowserFeatureStatus_DisabledOff = 4)] =
-              "k_EBrowserFeatureStatus_DisabledOff"),
-            (_[(_.k_EBrowserFeatureStatus_DisabledOffOk = 5)] =
-              "k_EBrowserFeatureStatus_DisabledOffOk"),
-            (_[(_.k_EBrowserFeatureStatus_UnavailableSoftware = 6)] =
-              "k_EBrowserFeatureStatus_UnavailableSoftware"),
-            (_[(_.k_EBrowserFeatureStatus_UnavailableOff = 7)] =
-              "k_EBrowserFeatureStatus_UnavailableOff"),
-            (_[(_.k_EBrowserFeatureStatus_UnavailableOffOk = 8)] =
-              "k_EBrowserFeatureStatus_UnavailableOffOk"),
-            (_[(_.k_EBrowserFeatureStatus_EnabledReadback = 9)] =
-              "k_EBrowserFeatureStatus_EnabledReadback"),
-            (_[(_.k_EBrowserFeatureStatus_EnabledForce = 10)] =
-              "k_EBrowserFeatureStatus_EnabledForce"),
-            (_[(_.k_EBrowserFeatureStatus_Enabled = 11)] =
-              "k_EBrowserFeatureStatus_Enabled"),
-            (_[(_.k_EBrowserFeatureStatus_EnabledOn = 12)] =
-              "k_EBrowserFeatureStatus_EnabledOn"),
-            (_[(_.k_EBrowserFeatureStatus_EnabledForceOn = 13)] =
-              "k_EBrowserFeatureStatus_EnabledForceOn");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGpuDriverId_Invalid = 0)] = "k_EGpuDriverId_Invalid"),
-            (_[(_.k_EGpuDriverId_Unknown = 1)] = "k_EGpuDriverId_Unknown"),
-            (_[(_.k_EGpuDriverId_AmdProprietary = 2)] =
-              "k_EGpuDriverId_AmdProprietary"),
-            (_[(_.k_EGpuDriverId_AmdOpenSource = 3)] =
-              "k_EGpuDriverId_AmdOpenSource"),
-            (_[(_.k_EGpuDriverId_MesaRadv = 4)] = "k_EGpuDriverId_MesaRadv"),
-            (_[(_.k_EGpuDriverId_NvidiaProprietary = 5)] =
-              "k_EGpuDriverId_NvidiaProprietary"),
-            (_[(_.k_EGpuDriverId_IntelPropietary = 6)] =
-              "k_EGpuDriverId_IntelPropietary"),
-            (_[(_.k_EGpuDriverId_MesaIntel = 7)] = "k_EGpuDriverId_MesaIntel"),
-            (_[(_.k_EGpuDriverId_QualcommProprietary = 8)] =
-              "k_EGpuDriverId_QualcommProprietary"),
-            (_[(_.k_EGpuDriverId_ArmProprietary = 9)] =
-              "k_EGpuDriverId_ArmProprietary"),
-            (_[(_.k_EGpuDriverId_GoogleSwiftshader = 10)] =
-              "k_EGpuDriverId_GoogleSwiftshader"),
-            (_[(_.k_EGpuDriverId_BroadcomProprietary = 11)] =
-              "k_EGpuDriverId_BroadcomProprietary"),
-            (_[(_.k_EGpuDriverId_MesaLLVMPipe = 12)] =
-              "k_EGpuDriverId_MesaLLVMPipe"),
-            (_[(_.k_EGpuDriverId_MoltenVK = 13)] = "k_EGpuDriverId_MoltenVK"),
-            (_[(_.k_EGpuDriverId_MesaTurnip = 14)] =
-              "k_EGpuDriverId_MesaTurnip"),
-            (_[(_.k_EGpuDriverId_MesaPanVK = 15)] = "k_EGpuDriverId_MesaPanVK"),
-            (_[(_.k_EGpuDriverId_MesaVenus = 16)] = "k_EGpuDriverId_MesaVenus"),
-            (_[(_.k_EGpuDriverId_MesaDozen = 17)] = "k_EGpuDriverId_MesaDozen"),
-            (_[(_.k_EGpuDriverId_MesaNVK = 18)] = "k_EGpuDriverId_MesaNVK"),
-            (_[(_.k_EGpuDriverId_MesaHoneyKrisp = 19)] =
-              "k_EGpuDriverId_MesaHoneyKrisp");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECommunityItemClass_Invalid = 0)] =
-            "k_ECommunityItemClass_Invalid"),
-            (_[(_.k_ECommunityItemClass_Badge = 1)] =
-              "k_ECommunityItemClass_Badge"),
-            (_[(_.k_ECommunityItemClass_GameCard = 2)] =
-              "k_ECommunityItemClass_GameCard"),
-            (_[(_.k_ECommunityItemClass_ProfileBackground = 3)] =
-              "k_ECommunityItemClass_ProfileBackground"),
-            (_[(_.k_ECommunityItemClass_Emoticon = 4)] =
-              "k_ECommunityItemClass_Emoticon"),
-            (_[(_.k_ECommunityItemClass_BoosterPack = 5)] =
-              "k_ECommunityItemClass_BoosterPack"),
-            (_[(_.k_ECommunityItemClass_Consumable = 6)] =
-              "k_ECommunityItemClass_Consumable"),
-            (_[(_.k_ECommunityItemClass_GameGoo = 7)] =
-              "k_ECommunityItemClass_GameGoo"),
-            (_[(_.k_ECommunityItemClass_ProfileModifier = 8)] =
-              "k_ECommunityItemClass_ProfileModifier"),
-            (_[(_.k_ECommunityItemClass_Scene = 9)] =
-              "k_ECommunityItemClass_Scene"),
-            (_[(_.k_ECommunityItemClass_SalienItem = 10)] =
-              "k_ECommunityItemClass_SalienItem"),
-            (_[(_.k_ECommunityItemClass_Sticker = 11)] =
-              "k_ECommunityItemClass_Sticker"),
-            (_[(_.k_ECommunityItemClass_ChatEffect = 12)] =
-              "k_ECommunityItemClass_ChatEffect"),
-            (_[(_.k_ECommunityItemClass_MiniProfileBackground = 13)] =
-              "k_ECommunityItemClass_MiniProfileBackground"),
-            (_[(_.k_ECommunityItemClass_AvatarFrame = 14)] =
-              "k_ECommunityItemClass_AvatarFrame"),
-            (_[(_.k_ECommunityItemClass_AnimatedAvatar = 15)] =
-              "k_ECommunityItemClass_AnimatedAvatar"),
-            (_[(_.k_ECommunityItemClass_SteamDeckKeyboardSkin = 16)] =
-              "k_ECommunityItemClass_SteamDeckKeyboardSkin"),
-            (_[(_.k_ECommunityItemClass_SteamDeckStartupMovie = 17)] =
-              "k_ECommunityItemClass_SteamDeckStartupMovie");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamDeckCompatibilityFeedback_Unset = 0)] =
-            "k_ESteamDeckCompatibilityFeedback_Unset"),
-            (_[(_.k_ESteamDeckCompatibilityFeedback_Agree = 1)] =
-              "k_ESteamDeckCompatibilityFeedback_Agree"),
-            (_[(_.k_ESteamDeckCompatibilityFeedback_Disagree = 2)] =
-              "k_ESteamDeckCompatibilityFeedback_Disagree"),
-            (_[(_.k_ESteamDeckCompatibilityFeedback_Ignore = 3)] =
-              "k_ESteamDeckCompatibilityFeedback_Ignore");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProvideDeckFeedbackPreference_Unset = 0)] =
-            "k_EProvideDeckFeedbackPreference_Unset"),
-            (_[(_.k_EProvideDeckFeedbackPreference_Yes = 1)] =
-              "k_EProvideDeckFeedbackPreference_Yes"),
-            (_[(_.k_EProvideDeckFeedbackPreference_No = 2)] =
-              "k_EProvideDeckFeedbackPreference_No");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETouchGestureNone = 0)] = "k_ETouchGestureNone"),
-            (_[(_.k_ETouchGestureTouch = 1)] = "k_ETouchGestureTouch"),
-            (_[(_.k_ETouchGestureTap = 2)] = "k_ETouchGestureTap"),
-            (_[(_.k_ETouchGestureDoubleTap = 3)] = "k_ETouchGestureDoubleTap"),
-            (_[(_.k_ETouchGestureShortPress = 4)] =
-              "k_ETouchGestureShortPress"),
-            (_[(_.k_ETouchGestureLongPress = 5)] = "k_ETouchGestureLongPress"),
-            (_[(_.k_ETouchGestureLongTap = 6)] = "k_ETouchGestureLongTap"),
-            (_[(_.k_ETouchGestureTwoFingerTap = 7)] =
-              "k_ETouchGestureTwoFingerTap"),
-            (_[(_.k_ETouchGestureTapCancelled = 8)] =
-              "k_ETouchGestureTapCancelled"),
-            (_[(_.k_ETouchGesturePinchBegin = 9)] =
-              "k_ETouchGesturePinchBegin"),
-            (_[(_.k_ETouchGesturePinchUpdate = 10)] =
-              "k_ETouchGesturePinchUpdate"),
-            (_[(_.k_ETouchGesturePinchEnd = 11)] = "k_ETouchGesturePinchEnd"),
-            (_[(_.k_ETouchGestureFlingStart = 12)] =
-              "k_ETouchGestureFlingStart"),
-            (_[(_.k_ETouchGestureFlingCancelled = 13)] =
-              "k_ETouchGestureFlingCancelled");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESessionPersistence_Invalid = -1)] =
-            "k_ESessionPersistence_Invalid"),
-            (_[(_.k_ESessionPersistence_Ephemeral = 0)] =
-              "k_ESessionPersistence_Ephemeral"),
-            (_[(_.k_ESessionPersistence_Persistent = 1)] =
-              "k_ESessionPersistence_Persistent");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ENewSteamAnnouncementState_Invalid = 0)] =
-            "k_ENewSteamAnnouncementState_Invalid"),
-            (_[(_.k_ENewSteamAnnouncementState_AllRead = 1)] =
-              "k_ENewSteamAnnouncementState_AllRead"),
-            (_[(_.k_ENewSteamAnnouncementState_NewAnnouncement = 2)] =
-              "k_ENewSteamAnnouncementState_NewAnnouncement"),
-            (_[(_.k_ENewSteamAnnouncementState_FeaturedAnnouncement = 3)] =
-              "k_ENewSteamAnnouncementState_FeaturedAnnouncement");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EForumType_Invalid = 0)] = "k_EForumType_Invalid"),
-            (_[(_.k_EForumType_General = 1)] = "k_EForumType_General"),
-            (_[(_.k_EForumType_ReportedPosts = 2)] =
-              "k_EForumType_ReportedPosts"),
-            (_[(_.k_EForumType_Workshop = 3)] = "k_EForumType_Workshop"),
-            (_[(_.k_EForumType_PublishedFile = 4)] =
-              "k_EForumType_PublishedFile"),
-            (_[(_.k_EForumType_Trading = 5)] = "k_EForumType_Trading"),
-            (_[(_.k_EForumType_PlayTest = 6)] = "k_EForumType_PlayTest"),
-            (_[(_.k_EForumType_Event = 7)] = "k_EForumType_Event"),
-            (_[(_.k_EForumType_Max = 8)] = "k_EForumType_Max");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECommentThreadTypeInvalid = 0)] =
-            "k_ECommentThreadTypeInvalid"),
-            (_[(_.k_ECommentThreadTypeScreenshot_Deprecated = 1)] =
-              "k_ECommentThreadTypeScreenshot_Deprecated"),
-            (_[(_.k_ECommentThreadTypeWorkshopAccount_Developer = 2)] =
-              "k_ECommentThreadTypeWorkshopAccount_Developer"),
-            (_[(_.k_ECommentThreadTypeWorkshopAccount_Public = 3)] =
-              "k_ECommentThreadTypeWorkshopAccount_Public"),
-            (_[(_.k_ECommentThreadTypePublishedFile_Developer = 4)] =
-              "k_ECommentThreadTypePublishedFile_Developer"),
-            (_[(_.k_ECommentThreadTypePublishedFile_Public = 5)] =
-              "k_ECommentThreadTypePublishedFile_Public"),
-            (_[(_.k_ECommentThreadTypeTest = 6)] = "k_ECommentThreadTypeTest"),
-            (_[(_.k_ECommentThreadTypeForumTopic = 7)] =
-              "k_ECommentThreadTypeForumTopic"),
-            (_[(_.k_ECommentThreadTypeRecommendation = 8)] =
-              "k_ECommentThreadTypeRecommendation"),
-            (_[(_.k_ECommentThreadTypeVideo_Deprecated = 9)] =
-              "k_ECommentThreadTypeVideo_Deprecated"),
-            (_[(_.k_ECommentThreadTypeProfile = 10)] =
-              "k_ECommentThreadTypeProfile"),
-            (_[(_.k_ECommentThreadTypeNewsPost = 11)] =
-              "k_ECommentThreadTypeNewsPost"),
-            (_[(_.k_ECommentThreadTypeClan = 12)] = "k_ECommentThreadTypeClan"),
-            (_[(_.k_ECommentThreadTypeClanAnnouncement = 13)] =
-              "k_ECommentThreadTypeClanAnnouncement"),
-            (_[(_.k_ECommentThreadTypeClanEvent = 14)] =
-              "k_ECommentThreadTypeClanEvent"),
-            (_[(_.k_ECommentThreadTypeUserStatusPublished = 15)] =
-              "k_ECommentThreadTypeUserStatusPublished"),
-            (_[(_.k_ECommentThreadTypeUserReceivedNewGame = 16)] =
-              "k_ECommentThreadTypeUserReceivedNewGame"),
-            (_[(_.k_ECommentThreadTypePublishedFile_Announcement = 17)] =
-              "k_ECommentThreadTypePublishedFile_Announcement"),
-            (_[(_.k_ECommentThreadTypeModeratorMessage = 18)] =
-              "k_ECommentThreadTypeModeratorMessage"),
-            (_[(_.k_ECommentThreadTypeClanCuratedApp = 19)] =
-              "k_ECommentThreadTypeClanCuratedApp"),
-            (_[(_.k_ECommentThreadTypeQAndASession = 20)] =
-              "k_ECommentThreadTypeQAndASession"),
-            (_[(_.k_ECommentThreadTypeMax = 21)] = "k_ECommentThreadTypeMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EBroadcastPermissionDisabled = 0)] =
-            "k_EBroadcastPermissionDisabled"),
-            (_[(_.k_EBroadcastPermissionFriendsApprove = 1)] =
-              "k_EBroadcastPermissionFriendsApprove"),
-            (_[(_.k_EBroadcastPermissionFriendsAllowed = 2)] =
-              "k_EBroadcastPermissionFriendsAllowed"),
-            (_[(_.k_EBroadcastPermissionPublic = 3)] =
-              "k_EBroadcastPermissionPublic"),
-            (_[(_.k_EBroadcastPermissionSubscribers = 4)] =
-              "k_EBroadcastPermissionSubscribers");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EBroadcastEncoderBestQuality = 0)] =
-            "k_EBroadcastEncoderBestQuality"),
-            (_[(_.k_EBroadcastEncoderBestPerformance = 1)] =
-              "k_EBroadcastEncoderBestPerformance");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECloudGamingPlatformNone = 0)] =
-            "k_ECloudGamingPlatformNone"),
-            (_[(_.k_ECloudGamingPlatformValve = 1)] =
-              "k_ECloudGamingPlatformValve"),
-            (_[(_.k_ECloudGamingPlatformNVIDIA = 2)] =
-              "k_ECloudGamingPlatformNVIDIA");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECompromiseDetectionType_None = 0)] =
-            "k_ECompromiseDetectionType_None"),
-            (_[(_.k_ECompromiseDetectionType_TradeEvent = 1)] =
-              "k_ECompromiseDetectionType_TradeEvent"),
-            (_[(_.k_ECompromiseDetectionType_ApiCallRate = 2)] =
-              "k_ECompromiseDetectionType_ApiCallRate"),
-            (_[(_.k_ECompromiseDetectionType_Manual = 3)] =
-              "k_ECompromiseDetectionType_Manual"),
-            (_[(_.k_ECompromiseDetectionType_TicketAction = 4)] =
-              "k_ECompromiseDetectionType_TicketAction"),
-            (_[(_.k_ECompromiseDetectionType_MaliciousRefund = 5)] =
-              "k_ECompromiseDetectionType_MaliciousRefund"),
-            (_[(_.k_ECompromiseDetectionType_Move2FA = 6)] =
-              "k_ECompromiseDetectionType_Move2FA"),
-            (_[(_.k_ECompromiseDetectionType_DeviceType = 7)] =
-              "k_ECompromiseDetectionType_DeviceType");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAsyncGameSessionUserStateUnknown = -1)] =
-            "k_EAsyncGameSessionUserStateUnknown"),
-            (_[(_.k_EAsyncGameSessionUserStateWaitingForOthers = 0)] =
-              "k_EAsyncGameSessionUserStateWaitingForOthers"),
-            (_[(_.k_EAsyncGameSessionUserStateReadyForAction = 1)] =
-              "k_EAsyncGameSessionUserStateReadyForAction"),
-            (_[(_.k_EAsyncGameSessionUserStateDone = 2)] =
-              "k_EAsyncGameSessionUserStateDone");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList = 0)] =
-            "k_EAsyncGameSessionUserVisibilityEnvelopeAndSessionList"),
-            (_[(_.k_EAsyncGameSessionUserVisibilitySessionListOnly = 1)] =
-              "k_EAsyncGameSessionUserVisibilitySessionListOnly"),
-            (_[(_.k_EAsyncGameSessionUserVisibilityDismissed = 2)] =
-              "k_EAsyncGameSessionUserVisibilityDismissed");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGameRecordingType_Unknown = 0)] =
-            "k_EGameRecordingType_Unknown"),
-            (_[(_.k_EGameRecordingType_NotRecording = 1)] =
-              "k_EGameRecordingType_NotRecording"),
-            (_[(_.k_EGameRecordingType_ManualRecording = 2)] =
-              "k_EGameRecordingType_ManualRecording"),
-            (_[(_.k_EGameRecordingType_BackgroundRecording = 3)] =
-              "k_EGameRecordingType_BackgroundRecording"),
-            (_[(_.k_EGameRecordingType_Clip = 4)] =
-              "k_EGameRecordingType_Clip");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGRMode_Never = 0)] = "k_EGRMode_Never"),
-            (_[(_.k_EGRMode_Always = 1)] = "k_EGRMode_Always"),
-            (_[(_.k_EGRMode_Manual = 2)] = "k_EGRMode_Manual");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EExportCodec_Default = 0)] = "k_EExportCodec_Default"),
-            (_[(_.k_EExportCodec_H264 = 1)] = "k_EExportCodec_H264"),
-            (_[(_.k_EExportCodec_H265 = 2)] = "k_EExportCodec_H265");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAppTypeInvalid = 0)] = "k_EAppTypeInvalid"),
-            (_[(_.k_EAppTypeGame = 1)] = "k_EAppTypeGame"),
-            (_[(_.k_EAppTypeApplication = 2)] = "k_EAppTypeApplication"),
-            (_[(_.k_EAppTypeTool = 4)] = "k_EAppTypeTool"),
-            (_[(_.k_EAppTypeDemo = 8)] = "k_EAppTypeDemo"),
-            (_[(_.k_EAppTypeDeprected = 16)] = "k_EAppTypeDeprected"),
-            (_[(_.k_EAppTypeDLC = 32)] = "k_EAppTypeDLC"),
-            (_[(_.k_EAppTypeGuide = 64)] = "k_EAppTypeGuide"),
-            (_[(_.k_EAppTypeDriver = 128)] = "k_EAppTypeDriver"),
-            (_[(_.k_EAppTypeConfig = 256)] = "k_EAppTypeConfig"),
-            (_[(_.k_EAppTypeHardware = 512)] = "k_EAppTypeHardware"),
-            (_[(_.k_EAppTypeFranchise = 1024)] = "k_EAppTypeFranchise"),
-            (_[(_.k_EAppTypeVideo = 2048)] = "k_EAppTypeVideo"),
-            (_[(_.k_EAppTypePlugin = 4096)] = "k_EAppTypePlugin"),
-            (_[(_.k_EAppTypeMusicAlbum = 8192)] = "k_EAppTypeMusicAlbum"),
-            (_[(_.k_EAppTypeSeries = 16384)] = "k_EAppTypeSeries"),
-            (_[(_.k_EAppTypeComic = 32768)] = "k_EAppTypeComic"),
-            (_[(_.k_EAppTypeBeta = 65536)] = "k_EAppTypeBeta"),
-            (_[(_.k_EAppTypeShortcut = 1073741824)] = "k_EAppTypeShortcut"),
-            (_[(_.k_EAppTypeDepotOnly = -2147483648)] = "k_EAppTypeDepotOnly");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EChildProcessQueryCommand_Invalid = 0)] =
-            "k_EChildProcessQueryCommand_Invalid"),
-            (_[(_.k_EChildProcessQueryCommand_GpuTopology = 1)] =
-              "k_EChildProcessQueryCommand_GpuTopology"),
-            (_[(_.k_EChildProcessQueryCommand_Max = 2)] =
-              "k_EChildProcessQueryCommand_Max");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EChildProcessQueryExitCode_Success = 0)] =
-            "k_EChildProcessQueryExitCode_Success"),
-            (_[(_.k_EChildProcessQueryExitCode_ErrorCommandline = -1)] =
-              "k_EChildProcessQueryExitCode_ErrorCommandline"),
-            (_[(_.k_EChildProcessQueryExitCode_ErrorOther = -2)] =
-              "k_EChildProcessQueryExitCode_ErrorOther"),
-            (_[(_.k_EChildProcessQueryExitCode_ErrorUnimplemented = -3)] =
-              "k_EChildProcessQueryExitCode_ErrorUnimplemented"),
-            (_[(_.k_EChildProcessQueryExitCode_ErrorFileSave = -4)] =
-              "k_EChildProcessQueryExitCode_ErrorFileSave"),
-            (_[
-              (_.k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform = -5)
-            ] = "k_EChildProcessQueryExitCode_ErrorNotSupportedByPlatform");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EWindowsUpdateInstallationImpact_Unknown = -1)] =
-            "k_EWindowsUpdateInstallationImpact_Unknown"),
-            (_[(_.k_EWindowsUpdateInstallationImpact_Normal = 0)] =
-              "k_EWindowsUpdateInstallationImpact_Normal"),
-            (_[(_.k_EWindowsUpdateInstallationImpact_Minor = 1)] =
-              "k_EWindowsUpdateInstallationImpact_Minor"),
-            (_[(_.k_EWindowsUpdateInstallationImpact_ExclusiveHandling = 2)] =
-              "k_EWindowsUpdateInstallationImpact_ExclusiveHandling");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EWindowsUpdateRebootBehavior_Unknown = -1)] =
-            "k_EWindowsUpdateRebootBehavior_Unknown"),
-            (_[(_.k_EWindowsUpdateRebootBehavior_NeverNeedsReboot = 0)] =
-              "k_EWindowsUpdateRebootBehavior_NeverNeedsReboot"),
-            (_[(_.k_EWindowsUpdateRebootBehavior_AlwaysNeedsReboot = 1)] =
-              "k_EWindowsUpdateRebootBehavior_AlwaysNeedsReboot"),
-            (_[(_.k_EWindowsUpdateRebootBehavior_MightNeedReboot = 2)] =
-              "k_EWindowsUpdateRebootBehavior_MightNeedReboot");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EExternalSaleEventType_Unknown = 0)] =
-            "k_EExternalSaleEventType_Unknown"),
-            (_[(_.k_EExternalSaleEventType_Publisher = 1)] =
-              "k_EExternalSaleEventType_Publisher"),
-            (_[(_.k_EExternalSaleEventType_Showcase = 2)] =
-              "k_EExternalSaleEventType_Showcase"),
-            (_[(_.k_EExternalSaleEventType_Region = 3)] =
-              "k_EExternalSaleEventType_Region"),
-            (_[(_.k_EExternalSaleEventType_Theme = 4)] =
-              "k_EExternalSaleEventType_Theme"),
-            (_[(_.k_EExternalSaleEventType_Franchise = 5)] =
-              "k_EExternalSaleEventType_Franchise");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EnhancedMarketAppearanceStatus_None = 0)] =
-            "k_EnhancedMarketAppearanceStatus_None"),
-            (_[(_.k_EnhancedMarketAppearanceStatus_Pending = 1)] =
-              "k_EnhancedMarketAppearanceStatus_Pending"),
-            (_[(_.k_EnhancedMarketAppearanceStatus_InProgress = 2)] =
-              "k_EnhancedMarketAppearanceStatus_InProgress"),
-            (_[(_.k_EnhancedMarketAppearanceStatus_Completed = 3)] =
-              "k_EnhancedMarketAppearanceStatus_Completed");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EContentReportSubjectType_Invalid = 0)] =
-            "k_EContentReportSubjectType_Invalid"),
-            (_[(_.k_EContentReportSubjectType_ForumPost = 1)] =
-              "k_EContentReportSubjectType_ForumPost"),
-            (_[(_.k_EContentReportSubjectType_Unused = 2)] =
-              "k_EContentReportSubjectType_Unused"),
-            (_[(_.k_EContentReportSubjectType_UGCFile = 3)] =
-              "k_EContentReportSubjectType_UGCFile"),
-            (_[(_.k_EContentReportSubjectType_FriendChatMsg = 4)] =
-              "k_EContentReportSubjectType_FriendChatMsg"),
-            (_[(_.k_EContentReportSubjectType_ChatRoomMsg = 5)] =
-              "k_EContentReportSubjectType_ChatRoomMsg"),
-            (_[(_.k_EContentReportSubjectType_ChatGroup = 6)] =
-              "k_EContentReportSubjectType_ChatGroup"),
-            (_[(_.k_EContentReportSubjectType_MAX = 7)] =
-              "k_EContentReportSubjectType_MAX");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EControlledLegalCategoryStatus_None = 0)] =
-            "k_EControlledLegalCategoryStatus_None"),
-            (_[(_.k_EControlledLegalCategoryStatus_Accused = 1)] =
-              "k_EControlledLegalCategoryStatus_Accused"),
-            (_[(_.k_EControlledLegalCategoryStatus_Convicted = 2)] =
-              "k_EControlledLegalCategoryStatus_Convicted"),
-            (_[(_.k_EControlledLegalCategoryStatus_Acquitted = 3)] =
-              "k_EControlledLegalCategoryStatus_Acquitted");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EContentModeratorLevel_Any = 0)] =
-            "k_EContentModeratorLevel_Any"),
-            (_[(_.k_EContentModeratorLevel_Supervisor = 1)] =
-              "k_EContentModeratorLevel_Supervisor"),
-            (_[(_.k_EContentModeratorLevel_Valve = 10)] =
-              "k_EContentModeratorLevel_Valve"),
-            (_[(_.k_EContentModeratorLevel_MAX = 11)] =
-              "k_EContentModeratorLevel_MAX");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EContentReportResolution_Unresolved = 0)] =
-            "k_EContentReportResolution_Unresolved"),
-            (_[(_.k_EContentReportResolution_Acquitted = 1)] =
-              "k_EContentReportResolution_Acquitted"),
-            (_[(_.k_EContentReportResolution_Removed = 2)] =
-              "k_EContentReportResolution_Removed"),
-            (_[(_.k_EContentReportResolution_Relabelled = 3)] =
-              "k_EContentReportResolution_Relabelled"),
-            (_[(_.k_EContentReportResolution_Suspicious = 4)] =
-              "k_EContentReportResolution_Suspicious"),
-            (_[(_.k_EContentReportResolution_HarassmentStrike = 5)] =
-              "k_EContentReportResolution_HarassmentStrike"),
-            (_[(_.k_EContentReportResolution_Purged = 6)] =
-              "k_EContentReportResolution_Purged"),
-            (_[(_.k_EContentReportResolution_DisconnectedFromApp = 7)] =
-              "k_EContentReportResolution_DisconnectedFromApp"),
-            (_[(_.k_EContentReportResolution_SuspiciousIncludingUpvoters = 8)] =
-              "k_EContentReportResolution_SuspiciousIncludingUpvoters"),
-            (_[(_.k_EContentReportResolution_VisibilityChanged = 9)] =
-              "k_EContentReportResolution_VisibilityChanged"),
-            (_[(_.k_EContentReportResolution_CountryRestrictionsChanged = 10)] =
-              "k_EContentReportResolution_CountryRestrictionsChanged"),
-            (_[(_.k_EContentReportResolution_RemoveAndWarn = 11)] =
-              "k_EContentReportResolution_RemoveAndWarn"),
-            (_[(_.k_EContentReportResolution_RemoveAndBan = 12)] =
-              "k_EContentReportResolution_RemoveAndBan"),
-            (_[(_.k_EContentReportResolution_MAX = 13)] =
-              "k_EContentReportResolution_MAX");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EContentReportSubjectAction_Invalid = 0)] =
-            "k_EContentReportSubjectAction_Invalid"),
-            (_[(_.k_EContentReportSubjectAction_Unresolved = 1)] =
-              "k_EContentReportSubjectAction_Unresolved"),
-            (_[(_.k_EContentReportSubjectAction_Sanctioned = 2)] =
-              "k_EContentReportSubjectAction_Sanctioned"),
-            (_[(_.k_EContentReportSubjectAction_Acquitted = 3)] =
-              "k_EContentReportSubjectAction_Acquitted"),
-            (_[(_.k_EContentReportSubjectAction_Cancelled = 4)] =
-              "k_EContentReportSubjectAction_Cancelled"),
-            (_[(_.k_EContentReportSubjectAction_Updated = 5)] =
-              "k_EContentReportSubjectAction_Updated"),
-            (_[(_.k_EContentReportSubjectAction_Escalated = 6)] =
-              "k_EContentReportSubjectAction_Escalated"),
-            (_[(_.k_EContentReportSubjectAction_Disputed = 7)] =
-              "k_EContentReportSubjectAction_Disputed"),
-            (_[(_.k_EContentReportSubjectAction_SustainedOnDispute = 8)] =
-              "k_EContentReportSubjectAction_SustainedOnDispute"),
-            (_[(_.k_EContentReportSubjectAction_Locked = 9)] =
-              "k_EContentReportSubjectAction_Locked"),
-            (_[(_.k_EContentReportSubjectAction_Unlocked = 10)] =
-              "k_EContentReportSubjectAction_Unlocked"),
-            (_[(_.k_EContentReportSubjectAction_Deleted = 11)] =
-              "k_EContentReportSubjectAction_Deleted"),
-            (_[(_.k_EContentReportSubjectAction_Warned = 12)] =
-              "k_EContentReportSubjectAction_Warned"),
-            (_[(_.k_EContentReportSubjectAction_BannedFromHub = 13)] =
-              "k_EContentReportSubjectAction_BannedFromHub"),
-            (_[(_.k_EContentReportSubjectAction_BannedFromCommunity = 14)] =
-              "k_EContentReportSubjectAction_BannedFromCommunity"),
-            (_[(_.k_EContentReportSubjectAction_TradeBanned = 15)] =
-              "k_EContentReportSubjectAction_TradeBanned"),
-            (_[(_.k_EContentReportSubjectAction_MarkedAsSuspicious = 16)] =
-              "k_EContentReportSubjectAction_MarkedAsSuspicious"),
-            (_[(_.k_EContentReportSubjectAction_ResetContent = 17)] =
-              "k_EContentReportSubjectAction_ResetContent"),
-            (_[(_.k_EContentReportSubjectAction_EscalatedForCSAM = 18)] =
-              "k_EContentReportSubjectAction_EscalatedForCSAM"),
-            (_[(_.k_EContentReportSubjectAction_EscalatedForTerrorism = 19)] =
-              "k_EContentReportSubjectAction_EscalatedForTerrorism"),
-            (_[(_.k_EContentReportSubjectAction_Claimed = 20)] =
-              "k_EContentReportSubjectAction_Claimed"),
-            (_[(_.k_EContentReportSubjectAction_Released = 21)] =
-              "k_EContentReportSubjectAction_Released"),
-            (_[(_.k_EContentReportSubjectAction_PrivateMessaged = 22)] =
-              "k_EContentReportSubjectAction_PrivateMessaged");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EContentReportReason_Invalid = 0)] =
-            "k_EContentReportReason_Invalid"),
-            (_[(_.k_EContentReportReason_None = 1)] =
-              "k_EContentReportReason_None"),
-            (_[(_.k_EContentReportReason_Unknown = 2)] =
-              "k_EContentReportReason_Unknown"),
-            (_[(_.k_EContentReportReason_Harassment = 3)] =
-              "k_EContentReportReason_Harassment"),
-            (_[(_.k_EContentReportReason_BullyingAndIntimidation = 4)] =
-              "k_EContentReportReason_BullyingAndIntimidation"),
-            (_[(_.k_EContentReportReason_Stalking = 5)] =
-              "k_EContentReportReason_Stalking"),
-            (_[(_.k_EContentReportReason_Doxxing = 6)] =
-              "k_EContentReportReason_Doxxing"),
-            (_[(_.k_EContentReportReason_OtherHarassment = 7)] =
-              "k_EContentReportReason_OtherHarassment"),
-            (_[(_.k_EContentReportReason_EncouragingViolence = 8)] =
-              "k_EContentReportReason_EncouragingViolence"),
-            (_[(_.k_EContentReportReason_EncouragingSelfHarm = 9)] =
-              "k_EContentReportReason_EncouragingSelfHarm"),
-            (_[(_.k_EContentReportReason_EncouragingSuicide = 10)] =
-              "k_EContentReportReason_EncouragingSuicide"),
-            (_[(_.k_EContentReportReason_OtherViolenceOrSelfHarm = 11)] =
-              "k_EContentReportReason_OtherViolenceOrSelfHarm"),
-            (_[(_.k_EContentReportReason_PhishingOrAccountTheft = 12)] =
-              "k_EContentReportReason_PhishingOrAccountTheft"),
-            (_[(_.k_EContentReportReason_AttemptedScamming = 13)] =
-              "k_EContentReportReason_AttemptedScamming"),
-            (_[(_.k_EContentReportReason_LinkingToMaliciousContent = 14)] =
-              "k_EContentReportReason_LinkingToMaliciousContent"),
-            (_[(_.k_EContentReportReason_Impersonation = 15)] =
-              "k_EContentReportReason_Impersonation"),
-            (_[(_.k_EContentReportReason_OtherScamsAndTheft = 16)] =
-              "k_EContentReportReason_OtherScamsAndTheft"),
-            (_[(_.k_EContentReportReason_EncouragingTerrorism = 17)] =
-              "k_EContentReportReason_EncouragingTerrorism"),
-            (_[(_.k_EContentReportReason_OrganizingTerrorism = 18)] =
-              "k_EContentReportReason_OrganizingTerrorism"),
-            (_[(_.k_EContentReportReason_OtherTerrorism = 19)] =
-              "k_EContentReportReason_OtherTerrorism"),
-            (_[(_.k_EContentReportReason_TargetedAbuse = 20)] =
-              "k_EContentReportReason_TargetedAbuse"),
-            (_[(_.k_EContentReportReason_NamingAndShaming = 21)] =
-              "k_EContentReportReason_NamingAndShaming"),
-            (_[(_.k_EContentReportReason_Discrimination = 22)] =
-              "k_EContentReportReason_Discrimination"),
-            (_[(_.k_EContentReportReason_OtherAbuse = 23)] =
-              "k_EContentReportReason_OtherAbuse"),
-            (_[(_.k_EContentReportReason_Trolling = 24)] =
-              "k_EContentReportReason_Trolling"),
-            (_[(_.k_EContentReportReason_Baiting = 25)] =
-              "k_EContentReportReason_Baiting"),
-            (_[(_.k_EContentReportReason_Derailing = 26)] =
-              "k_EContentReportReason_Derailing"),
-            (_[(_.k_EContentReportReason_OtherDisruptive = 27)] =
-              "k_EContentReportReason_OtherDisruptive"),
-            (_[(_.k_EContentReportReason_Spam = 28)] =
-              "k_EContentReportReason_Spam"),
-            (_[(_.k_EContentReportReason_Begging = 29)] =
-              "k_EContentReportReason_Begging"),
-            (_[(_.k_EContentReportReason_Reposting = 30)] =
-              "k_EContentReportReason_Reposting"),
-            (_[(_.k_EContentReportReason_OtherOffTopic = 31)] =
-              "k_EContentReportReason_OtherOffTopic"),
-            (_[(_.k_EContentReportReason_CSAMSexualContent = 32)] =
-              "k_EContentReportReason_CSAMSexualContent"),
-            (_[(_.k_EContentReportReason_CSAMGroomingOrEnticement = 33)] =
-              "k_EContentReportReason_CSAMGroomingOrEnticement"),
-            (_[(_.k_EContentReportReason_CSAMOther = 34)] =
-              "k_EContentReportReason_CSAMOther"),
-            (_[(_.k_EContentReportReason_NudityOrSexualContent = 35)] =
-              "k_EContentReportReason_NudityOrSexualContent"),
-            (_[(_.k_EContentReportReason_NonConsensualMaterial = 36)] =
-              "k_EContentReportReason_NonConsensualMaterial"),
-            (_[(_.k_EContentReportReason_Advertising = 37)] =
-              "k_EContentReportReason_Advertising"),
-            (_[(_.k_EContentReportReason_ReferralLinks = 38)] =
-              "k_EContentReportReason_ReferralLinks"),
-            (_[(_.k_EContentReportReason_Gambling = 39)] =
-              "k_EContentReportReason_Gambling"),
-            (_[(_.k_EContentReportReason_Raffles = 40)] =
-              "k_EContentReportReason_Raffles"),
-            (_[(_.k_EContentReportReason_OtherCommercialActivity = 41)] =
-              "k_EContentReportReason_OtherCommercialActivity"),
-            (_[(_.k_EContentReportReason_InauthenticReview = 42)] =
-              "k_EContentReportReason_InauthenticReview"),
-            (_[
-              (_.k_EContentReportReason_HiddenAdvertisementOrCommercialCommunication = 43)
-            ] =
-              "k_EContentReportReason_HiddenAdvertisementOrCommercialCommunication"),
-            (_[
-              (_.k_EContentReportReason_MisleadingInformationAboutGoodsOrServices = 44)
-            ] =
-              "k_EContentReportReason_MisleadingInformationAboutGoodsOrServices"),
-            (_[
-              (_.k_EContentReportReason_MisleadingInformationAboutConsumerRights = 45)
-            ] =
-              "k_EContentReportReason_MisleadingInformationAboutConsumerRights"),
-            (_[
-              (_.k_EContentReportReason_NoncomplianceWithPricingRegulations = 46)
-            ] = "k_EContentReportReason_NoncomplianceWithPricingRegulations"),
-            (_[(_.k_EContentReportReason_RightToBeForgottenViolation = 47)] =
-              "k_EContentReportReason_RightToBeForgottenViolation"),
-            (_[(_.k_EContentReportReason_MissingProcessingGroundForData = 48)] =
-              "k_EContentReportReason_MissingProcessingGroundForData"),
-            (_[
-              (_.k_EContentReportReason_OtherDataProtectionAndPrivacyViolation = 49)
-            ] =
-              "k_EContentReportReason_OtherDataProtectionAndPrivacyViolation"),
-            (_[(_.k_EContentReportReason_GenderedHarassment = 50)] =
-              "k_EContentReportReason_GenderedHarassment"),
-            (_[
-              (_.k_EContentReportReason_GenderedBullyingAndIntimidation = 51)
-            ] = "k_EContentReportReason_GenderedBullyingAndIntimidation"),
-            (_[(_.k_EContentReportReason_GenderedStalking = 52)] =
-              "k_EContentReportReason_GenderedStalking"),
-            (_[(_.k_EContentReportReason_GenderedDoxxing = 53)] =
-              "k_EContentReportReason_GenderedDoxxing"),
-            (_[(_.k_EContentReportReason_GenderedOtherHarassment = 54)] =
-              "k_EContentReportReason_GenderedOtherHarassment"),
-            (_[(_.k_EContentReportReason_GenderedEncouragingViolence = 55)] =
-              "k_EContentReportReason_GenderedEncouragingViolence"),
-            (_[(_.k_EContentReportReason_GenderedTargetedAbuse = 56)] =
-              "k_EContentReportReason_GenderedTargetedAbuse"),
-            (_[(_.k_EContentReportReason_CSAMFakedSexualContent = 57)] =
-              "k_EContentReportReason_CSAMFakedSexualContent"),
-            (_[(_.k_EContentReportReason_GenderedNonConsensualMaterial = 58)] =
-              "k_EContentReportReason_GenderedNonConsensualMaterial"),
-            (_[
-              (_.k_EContentReportReason_FakedGenderedNonConsensualMaterial = 59)
-            ] = "k_EContentReportReason_FakedGenderedNonConsensualMaterial"),
-            (_[(_.k_EContentReportReason_FakedNonConsensualMaterial = 60)] =
-              "k_EContentReportReason_FakedNonConsensualMaterial"),
-            (_[
-              (_.k_EContentReportReason_NegativeEffectonDiscourseOrElections = 61)
-            ] = "k_EContentReportReason_NegativeEffectonDiscourseOrElections"),
-            (_[(_.k_EContentReportReason_QuotesModeratedContent = 62)] =
-              "k_EContentReportReason_QuotesModeratedContent"),
-            (_[(_.k_EContentReportReason_CredibleThreatOfViolence = 63)] =
-              "k_EContentReportReason_CredibleThreatOfViolence"),
-            (_[(_.k_EContentReportReason_MAX = 64)] =
-              "k_EContentReportReason_MAX");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EResolutionAutomation_Manual = 0)] =
-            "k_EResolutionAutomation_Manual"),
-            (_[(_.k_EResolutionAutomation_PartiallyAutomated = 1)] =
-              "k_EResolutionAutomation_PartiallyAutomated"),
-            (_[(_.k_EResolutionAutomation_FullyAutomated = 2)] =
-              "k_EResolutionAutomation_FullyAutomated"),
-            (_[(_.k_EResolutionAutomation_MAX = 3)] =
-              "k_EResolutionAutomation_MAX");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EPressOutletAction_Invalid = 0)] =
-            "k_EPressOutletAction_Invalid"),
-            (_[(_.k_EPressOutletAction_Granted = 1)] =
-              "k_EPressOutletAction_Granted"),
-            (_[(_.k_EPressOutletAction_Removed = 2)] =
-              "k_EPressOutletAction_Removed"),
-            (_[(_.k_EPressOutletAction_Created = 3)] =
-              "k_EPressOutletAction_Created"),
-            (_[(_.k_EPressOutletAction_Updated = 4)] =
-              "k_EPressOutletAction_Updated"),
-            (_[(_.k_EPressOutletAction_Deleted = 5)] =
-              "k_EPressOutletAction_Deleted"),
-            (_[(_.k_EPressOutletAction_Undeleted = 6)] =
-              "k_EPressOutletAction_Undeleted"),
-            (_[(_.k_EPressOutletAction_MAX = 7)] = "k_EPressOutletAction_MAX");
-        })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -48221,84 +40042,9 @@
         _: () => _,
         _: () => _,
       });
-      var _,
-        _,
-        _,
-        _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EBanContentCheckResult_NotScanned = 0)] =
-          "k_EBanContentCheckResult_NotScanned"),
-          (_[(_.k_EBanContentCheckResult_Reset = 1)] =
-            "k_EBanContentCheckResult_Reset"),
-          (_[(_.k_EBanContentCheckResult_NeedsChecking = 2)] =
-            "k_EBanContentCheckResult_NeedsChecking"),
-          (_[(_.k_EBanContentCheckResult_VeryUnlikely = 5)] =
-            "k_EBanContentCheckResult_VeryUnlikely"),
-          (_[(_.k_EBanContentCheckResult_Unlikely = 30)] =
-            "k_EBanContentCheckResult_Unlikely"),
-          (_[(_.k_EBanContentCheckResult_Possible = 50)] =
-            "k_EBanContentCheckResult_Possible"),
-          (_[(_.k_EBanContentCheckResult_Likely = 75)] =
-            "k_EBanContentCheckResult_Likely"),
-          (_[(_.k_EBanContentCheckResult_VeryLikely = 100)] =
-            "k_EBanContentCheckResult_VeryLikely");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EClanOtherEvent = 1)] = "k_EClanOtherEvent"),
-            (_[(_.k_EClanGameEvent = 2)] = "k_EClanGameEvent"),
-            (_[(_.k_EClanPartyEvent = 3)] = "k_EClanPartyEvent"),
-            (_[(_.k_EClanMeetingEvent = 4)] = "k_EClanMeetingEvent"),
-            (_[(_.k_EClanSpecialCauseEvent = 5)] = "k_EClanSpecialCauseEvent"),
-            (_[(_.k_EClanMusicAndArtsEvent = 6)] = "k_EClanMusicAndArtsEvent"),
-            (_[(_.k_EClanSportsEvent = 7)] = "k_EClanSportsEvent"),
-            (_[(_.k_EClanTripEvent = 8)] = "k_EClanTripEvent"),
-            (_[(_.k_EClanChatEvent = 9)] = "k_EClanChatEvent"),
-            (_[(_.k_EClanGameReleaseEvent = 10)] = "k_EClanGameReleaseEvent"),
-            (_[(_.k_EClanBroadcastEvent = 11)] = "k_EClanBroadcastEvent"),
-            (_[(_.k_EClanSmallUpdateEvent = 12)] = "k_EClanSmallUpdateEvent"),
-            (_[(_.k_EClanPreAnnounceMajorUpdateEvent = 13)] =
-              "k_EClanPreAnnounceMajorUpdateEvent"),
-            (_[(_.k_EClanMajorUpdateEvent = 14)] = "k_EClanMajorUpdateEvent"),
-            (_[(_.k_EClanDLCReleaseEvent = 15)] = "k_EClanDLCReleaseEvent"),
-            (_[(_.k_EClanFutureReleaseEvent = 16)] =
-              "k_EClanFutureReleaseEvent"),
-            (_[(_.k_EClanESportTournamentStreamEvent = 17)] =
-              "k_EClanESportTournamentStreamEvent"),
-            (_[(_.k_EClanDevStreamEvent = 18)] = "k_EClanDevStreamEvent"),
-            (_[(_.k_EClanFamousStreamEvent = 19)] = "k_EClanFamousStreamEvent"),
-            (_[(_.k_EClanGameSalesEvent = 20)] = "k_EClanGameSalesEvent"),
-            (_[(_.k_EClanGameItemSalesEvent = 21)] =
-              "k_EClanGameItemSalesEvent"),
-            (_[(_.k_EClanInGameBonusXPEvent = 22)] =
-              "k_EClanInGameBonusXPEvent"),
-            (_[(_.k_EClanInGameLootEvent = 23)] = "k_EClanInGameLootEvent"),
-            (_[(_.k_EClanInGamePerksEvent = 24)] = "k_EClanInGamePerksEvent"),
-            (_[(_.k_EClanInGameChallengeEvent = 25)] =
-              "k_EClanInGameChallengeEvent"),
-            (_[(_.k_EClanInGameContestEvent = 26)] =
-              "k_EClanInGameContestEvent"),
-            (_[(_.k_EClanIRLEvent = 27)] = "k_EClanIRLEvent"),
-            (_[(_.k_EClanNewsEvent = 28)] = "k_EClanNewsEvent"),
-            (_[(_.k_EClanBetaReleaseEvent = 29)] = "k_EClanBetaReleaseEvent"),
-            (_[(_.k_EClanInGameContentReleaseEvent = 30)] =
-              "k_EClanInGameContentReleaseEvent"),
-            (_[(_.k_EClanFreeTrial = 31)] = "k_EClanFreeTrial"),
-            (_[(_.k_EClanSeasonRelease = 32)] = "k_EClanSeasonRelease"),
-            (_[(_.k_EClanSeasonUpdate = 33)] = "k_EClanSeasonUpdate"),
-            (_[(_.k_EClanCrosspostEvent = 34)] = "k_EClanCrosspostEvent"),
-            (_[(_.k_EClanInGameEventGeneral = 35)] =
-              "k_EClanInGameEventGeneral"),
-            (_[(_.k_EClanCreatorHome = 36)] = "k_EClanCreatorHome");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EEventStart = 0)] = "k_EEventStart"),
-            (_[(_.k_EEventBroadcastStart = 1)] = "k_EEventBroadcastStart"),
-            (_[(_.k_EEventMatchStart = 2)] = "k_EEventMatchStart"),
-            (_[(_.k_EEventPartnerMaxType = 3)] = "k_EEventPartnerMaxType");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -48602,7 +40348,7 @@
                   },
                   session_disposition: {
                     _: 38,
-                    _: _.k_ESessionDispositionNormal,
+                    _: 0,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -48679,12 +40425,6 @@
           return "CMsgProtoBufHeader";
         }
       }
-      !(function (_) {
-        (_[(_.k_ESessionDispositionNormal = 0)] =
-          "k_ESessionDispositionNormal"),
-          (_[(_.k_ESessionDispositionDisconnect = 1)] =
-            "k_ESessionDispositionDisconnect");
-      })(_ || (_ = {}));
       _.Message;
       _.Message;
       _.Message;
@@ -49216,686 +40956,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EClanAccountFlag_None = 0)] = "k_EClanAccountFlag_None"),
-          (_[(_.k_EClanAccountFlag_TrustedPress = 1)] =
-            "k_EClanAccountFlag_TrustedPress"),
-          (_[(_.k_EClanAccountFlag_AllowClanImages = 2)] =
-            "k_EClanAccountFlag_AllowClanImages"),
-          (_[(_.k_EClanAccountFlag_AllowRSSFeed = 4)] =
-            "k_EClanAccountFlag_AllowRSSFeed"),
-          (_[(_.k_EClanAccountFlag_AllowPartnerEventEditor = 8)] =
-            "k_EClanAccountFlag_AllowPartnerEventEditor"),
-          (_[(_.k_EClanAccountFlag_AllowFAQEditing = 16)] =
-            "k_EClanAccountFlag_AllowFAQEditing"),
-          (_[(_.k_EClanAccountFlag_AllowSalePageEditing = 32)] =
-            "k_EClanAccountFlag_AllowSalePageEditing"),
-          (_[(_.k_EClanAccountFlag_AllowSalePagePublishWithoutReview = 64)] =
-            "k_EClanAccountFlag_AllowSalePagePublishWithoutReview"),
-          (_[(_.k_EClanAccountFlag_AllowInSteamChina = 128)] =
-            "k_EClanAccountFlag_AllowInSteamChina");
-      })(_ || (_ = {}));
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.steamid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  steamid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  accept: {
-                    _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_RespondToClanInvite_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_RespondToClanInvite_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.steamid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  steamid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  rtime_oldest_date: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetDraftAndRecentPartnerEventSnippet_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.snippets || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  snippets: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetDraftAndRecentPartnerEventSnippet_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  announcement_gid: {
-                    _: 2,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  hidden: {
-                    _: 3,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  published: {
-                    _: 4,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  rtime32_start_time: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  event_name: {
-                    _: 6,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  event_type: {
-                    _: 7,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetDraftAndRecentPartnerEventSnippet_Response_CEventSnippetData";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.requests || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  requests: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  cursor: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  count: {
-                    _: 3,
-                    _: 100,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetPartnerEventsByBuildIDRange_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  start_build_id: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  end_build_id: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  branch: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetPartnerEventsByBuildIDRange_Request_PatchNoteRange";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.matches || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  matches: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  num_total_results: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  next_cursor: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetPartnerEventsByBuildIDRange_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  build_id: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  branch: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  clan_event_gid: {
-                    _: 4,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  clan_account_id: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CClan_GetPartnerEventsByBuildIDRange_Response_PatchNotesDesc";
-        }
-      }
-      !(function (_) {
-        (_.RespondToClanInvite = function (_, _) {
-          return _.SendMsg("Clan.RespondToClanInvite#1", (0, _._)(_, _), _, {
-            ePrivilege: 1,
-          });
-        }),
-          (_.GetDraftAndRecentPartnerEventSnippet = function (_, _) {
-            return _.SendMsg(
-              "Clan.GetDraftAndRecentPartnerEventSnippet#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetPartnerEventsByBuildIDRange = function (_, _) {
-            return _.SendMsg(
-              "Clan.GetPartnerEventsByBuildIDRange#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-                eWebAPIKeyRequirement: 1,
-              },
-            );
-          });
-      })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -49904,284 +40964,11 @@
         _: () => _,
       });
       var _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_ECommentDeleteReason_Invalid = 0)] =
-          "k_ECommentDeleteReason_Invalid"),
-          (_[(_.k_ECommentDeleteReason_User = 1)] =
-            "k_ECommentDeleteReason_User"),
-          (_[(_.k_ECommentDeleteReason_ThreadOwner = 2)] =
-            "k_ECommentDeleteReason_ThreadOwner"),
-          (_[(_.k_ECommentDeleteReason_Moderator = 3)] =
-            "k_ECommentDeleteReason_Moderator"),
-          (_[(_.k_ECommentDeleteReason_Support = 4)] =
-            "k_ECommentDeleteReason_Support"),
-          (_[(_.k_ECommentDeleteReason_Spam = 5)] =
-            "k_ECommentDeleteReason_Spam"),
-          (_[(_.k_ECommentDeleteReason_AccountDeletion = 6)] =
-            "k_ECommentDeleteReason_AccountDeletion");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECommunityWordFilterTypeInvalid = 0)] =
-            "k_ECommunityWordFilterTypeInvalid"),
-            (_[(_.k_ECommunityWordFilterTypeBadWords = 1)] =
-              "k_ECommunityWordFilterTypeBadWords"),
-            (_[(_.k_ECommunityWordFilterTypeBlacklistedURLs = 2)] =
-              "k_ECommunityWordFilterTypeBlacklistedURLs"),
-            (_[(_.k_ECommunityWordFilterTypeWhitelistedGreenlightURLs = 3)] =
-              "k_ECommunityWordFilterTypeWhitelistedGreenlightURLs"),
-            (_[(_.k_ECommunityWordFilterTypeBlacklistOverrideDomains = 4)] =
-              "k_ECommunityWordFilterTypeBlacklistOverrideDomains"),
-            (_[(_.k_ECommunityWordFilterTypeBadWordsInChina = 5)] =
-              "k_ECommunityWordFilterTypeBadWordsInChina"),
-            (_[(_.k_ECommunityWordFilterTypeCleanWords = 6)] =
-              "k_ECommunityWordFilterTypeCleanWords"),
-            (_[(_.k_ECommunityWordFilterTypeCleanWordsComplete = 7)] =
-              "k_ECommunityWordFilterTypeCleanWordsComplete"),
-            (_[(_.k_ECommunityWordFilterTypeBadNames = 8)] =
-              "k_ECommunityWordFilterTypeBadNames"),
-            (_[(_.k_ECommunityWordFilterTypeGoodNames = 9)] =
-              "k_ECommunityWordFilterTypeGoodNames");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECommunityWordFilterReason_Invalid = 0)] =
-            "k_ECommunityWordFilterReason_Invalid"),
-            (_[(_.k_ECommunityWordFilterReason_Phishing = 1)] =
-              "k_ECommunityWordFilterReason_Phishing"),
-            (_[(_.k_ECommunityWordFilterReason_Spam = 2)] =
-              "k_ECommunityWordFilterReason_Spam"),
-            (_[(_.k_ECommunityWordFilterReason_AdultContent = 3)] =
-              "k_ECommunityWordFilterReason_AdultContent"),
-            (_[(_.k_ECommunityWordFilterReason_Cheat = 4)] =
-              "k_ECommunityWordFilterReason_Cheat"),
-            (_[(_.k_ECommunityWordFilterReason_Referral = 5)] =
-              "k_ECommunityWordFilterReason_Referral"),
-            (_[
-              (_.k_ECommunityWordFilterReason_InappropriateLanguageStrongProfanity = 6)
-            ] =
-              "k_ECommunityWordFilterReason_InappropriateLanguageStrongProfanity"),
-            (_[(_.k_ECommunityWordFilterReason_Piracy = 7)] =
-              "k_ECommunityWordFilterReason_Piracy"),
-            (_[(_.k_ECommunityWordFilterReason_Scam = 8)] =
-              "k_ECommunityWordFilterReason_Scam"),
-            (_[(_.k_ECommunityWordFilterReason_Malware = 9)] =
-              "k_ECommunityWordFilterReason_Malware"),
-            (_[(_.k_ECommunityWordFilterReason_FreeTLD = 10)] =
-              "k_ECommunityWordFilterReason_FreeTLD"),
-            (_[(_.k_ECommunityWordFilterReason_Harassment = 11)] =
-              "k_ECommunityWordFilterReason_Harassment"),
-            (_[(_.k_ECommunityWordFilterReason_URLShortener = 12)] =
-              "k_ECommunityWordFilterReason_URLShortener"),
-            (_[
-              (_.k_ECommunityWordFilterReason_InappropriateLanguageSlur = 13)
-            ] = "k_ECommunityWordFilterReason_InappropriateLanguageSlur"),
-            (_[
-              (_.k_ECommunityWordFilterReason_InappropriateLanguageOther = 14)
-            ] = "k_ECommunityWordFilterReason_InappropriateLanguageOther"),
-            (_[
-              (_.k_ECommunityWordFilterReason_InappropriateLanguageMildProfanity = 15)
-            ] =
-              "k_ECommunityWordFilterReason_InappropriateLanguageMildProfanity"),
-            (_[
-              (_.k_ECommunityWordFilterReason_InappropriateLanguageHateSpeech = 16)
-            ] = "k_ECommunityWordFilterReason_InappropriateLanguageHateSpeech"),
-            (_[(_.k_ECommunityWordFilterReason_Max = 17)] =
-              "k_ECommunityWordFilterReason_Max");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EPushUpdatesToCrowdIn_Invalid = 0)] =
-            "k_EPushUpdatesToCrowdIn_Invalid"),
-            (_[(_.k_EPushUpdatesToCrowdIn_Never = 1)] =
-              "k_EPushUpdatesToCrowdIn_Never"),
-            (_[(_.k_EPushUpdatesToCrowdIn_OnEnglishChanged = 2)] =
-              "k_EPushUpdatesToCrowdIn_OnEnglishChanged"),
-            (_[(_.k_EPushUpdatesToCrowdIn_Always = 3)] =
-              "k_EPushUpdatesToCrowdIn_Always");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EClanImageFileType_Unknown = 0)] =
-            "k_EClanImageFileType_Unknown"),
-            (_[(_.k_EClanImageFileType_JPEG = 1)] =
-              "k_EClanImageFileType_JPEG"),
-            (_[(_.k_EClanImageFileType_GIF = 2)] = "k_EClanImageFileType_GIF"),
-            (_[(_.k_EClanImageFileType_PNG = 3)] = "k_EClanImageFileType_PNG"),
-            (_[(_.k_EClanImageFileType_MP4 = 4)] = "k_EClanImageFileType_MP4"),
-            (_[(_.k_EClanImageFileType_WEBM = 5)] =
-              "k_EClanImageFileType_WEBM"),
-            (_[(_.k_EClanImageFileType_VTT = 6)] = "k_EClanImageFileType_VTT"),
-            (_[(_.k_EClanImageFileType_SRT = 7)] = "k_EClanImageFileType_SRT"),
-            (_[(_.k_EClanImageFileType_SVG = 8)] = "k_EClanImageFileType_SVG"),
-            (_[(_.k_EClanImageFileType_XML = 9)] = "k_EClanImageFileType_XML"),
-            (_[(_.k_EClanImageFileType_WEBP = 10)] =
-              "k_EClanImageFileType_WEBP");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EClanImageGroup_None = 0)] = "k_EClanImageGroup_None"),
-            (_[(_.k_EClanImageGroup_Announcement = 1)] =
-              "k_EClanImageGroup_Announcement"),
-            (_[(_.k_EClanImageGroup_Curator = 2)] =
-              "k_EClanImageGroup_Curator");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProfileCooldown_Unknown = 0)] =
-            "k_EProfileCooldown_Unknown"),
-            (_[(_.k_EProfileCooldown_PersonaName = 1)] =
-              "k_EProfileCooldown_PersonaName"),
-            (_[(_.k_EProfileCooldown_ProfileSummary = 2)] =
-              "k_EProfileCooldown_ProfileSummary");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAvatarState_Unknown = 0)] = "k_EAvatarState_Unknown"),
-            (_[(_.k_EAvatarState_Approved = 1)] = "k_EAvatarState_Approved"),
-            (_[(_.k_EAvatarState_Denied = 2)] = "k_EAvatarState_Denied");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAbuseNotificationType_Invalid = 0)] =
-            "k_EAbuseNotificationType_Invalid"),
-            (_[(_.k_EAbuseNotificationType_TradeBan = 1)] =
-              "k_EAbuseNotificationType_TradeBan"),
-            (_[(_.k_EAbuseNotificationType_Profile = 2)] =
-              "k_EAbuseNotificationType_Profile"),
-            (_[(_.k_EAbuseNotificationType_Group = 3)] =
-              "k_EAbuseNotificationType_Group"),
-            (_[(_.k_EAbuseNotificationType_Comment = 4)] =
-              "k_EAbuseNotificationType_Comment"),
-            (_[(_.k_EAbuseNotificationType_Forum = 5)] =
-              "k_EAbuseNotificationType_Forum");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EModeratorAction_Resolve = 0)] =
-            "k_EModeratorAction_Resolve"),
-            (_[(_.k_EModeratorAction_Ban = 1)] = "k_EModeratorAction_Ban"),
-            (_[(_.k_EModeratorAction_Unban = 2)] = "k_EModeratorAction_Unban"),
-            (_[(_.k_EModeratorAction_Hide = 3)] = "k_EModeratorAction_Hide"),
-            (_[(_.k_EModeratorAction_Unhide = 4)] =
-              "k_EModeratorAction_Unhide"),
-            (_[(_.k_EModeratorAction_Lock = 5)] = "k_EModeratorAction_Lock"),
-            (_[(_.k_EModeratorAction_Delete = 6)] =
-              "k_EModeratorAction_Delete"),
-            (_[(_.k_EModeratorAction_Undelete = 7)] =
-              "k_EModeratorAction_Undelete"),
-            (_[(_.k_EModeratorAction_MassReset = 8)] =
-              "k_EModeratorAction_MassReset"),
-            (_[(_.k_EModeratorAction_Unlock = 9)] =
-              "k_EModeratorAction_Unlock"),
-            (_[(_.k_EModeratorAction_Warn = 10)] = "k_EModeratorAction_Warn"),
-            (_[(_.k_EModeratorAction_Move = 11)] = "k_EModeratorAction_Move"),
-            (_[(_.k_EModeratorAction_Classify = 12)] =
-              "k_EModeratorAction_Classify"),
-            (_[(_.k_EModeratorAction_Blur = 13)] = "k_EModeratorAction_Blur"),
-            (_[(_.k_EModeratorAction_Unblur = 14)] =
-              "k_EModeratorAction_Unblur");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EActorAffiliation_Unknown = 0)] =
-            "k_EActorAffiliation_Unknown"),
-            (_[(_.k_EActorAffiliation_Valve = 1)] =
-              "k_EActorAffiliation_Valve"),
-            (_[(_.k_EActorAffiliation_Keywords = 2)] =
-              "k_EActorAffiliation_Keywords"),
-            (_[(_.k_EActorAffiliation_TaskUs = 3)] =
-              "k_EActorAffiliation_TaskUs"),
-            (_[(_.k_EActorAffiliation_Volunteer = 4)] =
-              "k_EActorAffiliation_Volunteer");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAnswerActorRank_None = 0)] = "k_EAnswerActorRank_None"),
-            (_[(_.k_EAnswerActorRank_Valve = 1)] = "k_EAnswerActorRank_Valve"),
-            (_[(_.k_EAnswerActorRank_GlobalMod = 2)] =
-              "k_EAnswerActorRank_GlobalMod"),
-            (_[(_.k_EAnswerActorRank_Developer = 3)] =
-              "k_EAnswerActorRank_Developer"),
-            (_[(_.k_EAnswerActorRank_Moderator = 4)] =
-              "k_EAnswerActorRank_Moderator"),
-            (_[(_.k_EAnswerActorRank_OP = 5)] = "k_EAnswerActorRank_OP");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EPartnerEventDisplayLocation_Invalid = 0)] =
-            "k_EPartnerEventDisplayLocation_Invalid"),
-            (_[(_.k_EPartnerEventDisplayLocation_AppDetailsSpotlight = 1)] =
-              "k_EPartnerEventDisplayLocation_AppDetailsSpotlight"),
-            (_[(_.k_EPartnerEventDisplayLocation_LibraryOverview = 2)] =
-              "k_EPartnerEventDisplayLocation_LibraryOverview"),
-            (_[(_.k_EPartnerEventDisplayLocation_StoreAppPage = 3)] =
-              "k_EPartnerEventDisplayLocation_StoreAppPage"),
-            (_[(_.k_EPartnerEventDisplayLocation_EventScroller = 4)] =
-              "k_EPartnerEventDisplayLocation_EventScroller"),
-            (_[(_.k_EPartnerEventDisplayLocation_AppDetailsActivity = 5)] =
-              "k_EPartnerEventDisplayLocation_AppDetailsActivity"),
-            (_[(_.k_EPartnerEventDisplayLocation_CommunityHub = 6)] =
-              "k_EPartnerEventDisplayLocation_CommunityHub"),
-            (_[(_.k_EPartnerEventDisplayLocation_StoreFrontPage = 7)] =
-              "k_EPartnerEventDisplayLocation_StoreFrontPage"),
-            (_[(_.k_EPartnerEventDisplayLocation_NewsHub = 8)] =
-              "k_EPartnerEventDisplayLocation_NewsHub"),
-            (_[(_.k_EPartnerEventDisplayLocation_GamepadHome = 9)] =
-              "k_EPartnerEventDisplayLocation_GamepadHome"),
-            (_[(_.k_EPartnerEventDisplayLocation_StoreHub = 10)] =
-              "k_EPartnerEventDisplayLocation_StoreHub");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProfileModerationState_Unassigned = 0)] =
-            "k_EProfileModerationState_Unassigned"),
-            (_[(_.k_EProfileModerationState_Assigned = 1)] =
-              "k_EProfileModerationState_Assigned"),
-            (_[(_.k_EProfileModerationState_Escalated = 2)] =
-              "k_EProfileModerationState_Escalated"),
-            (_[(_.k_EProfileModerationState_Resolved = 3)] =
-              "k_EProfileModerationState_Resolved");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECommentReportAction_Invalid = 0)] =
-            "k_ECommentReportAction_Invalid"),
-            (_[(_.k_ECommentReportAction_NoAction = 1)] =
-              "k_ECommentReportAction_NoAction"),
-            (_[(_.k_ECommentReportAction_Deleted = 2)] =
-              "k_ECommentReportAction_Deleted"),
-            (_[(_.k_ECommentReportAction_Hidden = 3)] =
-              "k_ECommentReportAction_Hidden"),
-            (_[(_.k_ECommentReportAction_ExternalDelete = 4)] =
-              "k_ECommentReportAction_ExternalDelete"),
-            (_[(_.k_ECommentReportAction_ThreadDeleted = 5)] =
-              "k_ECommentReportAction_ThreadDeleted");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EBannedVanityURLAction_Invalid = 0)] =
-            "k_EBannedVanityURLAction_Invalid"),
-            (_[(_.k_EBannedVanityURLAction_Add = 1)] =
-              "k_EBannedVanityURLAction_Add"),
-            (_[(_.k_EBannedVanityURLAction_Remove = 2)] =
-              "k_EBannedVanityURLAction_Remove");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EBannedVanityURLSource_Unknown = 0)] =
-            "k_EBannedVanityURLSource_Unknown"),
-            (_[(_.k_EBannedVanityURLSource_ResetContent = 1)] =
-              "k_EBannedVanityURLSource_ResetContent"),
-            (_[(_.k_EBannedVanityURLSource_Manual = 2)] =
-              "k_EBannedVanityURLSource_Manual");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -55109,233 +45896,14 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
         _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EUserBadgeInvalid = 0)] = "k_EUserBadgeInvalid"),
-          (_[(_.k_EUserBadgeYearsOfService = 1)] =
-            "k_EUserBadgeYearsOfService"),
-          (_[(_.k_EUserBadgeCommunity = 2)] = "k_EUserBadgeCommunity"),
-          (_[(_.k_EUserBadgePortal2PotatoARG = 3)] =
-            "k_EUserBadgePortal2PotatoARG"),
-          (_[(_.k_EUserBadgeTreasureHunt = 4)] = "k_EUserBadgeTreasureHunt"),
-          (_[(_.k_EUserBadgeSummerSale2011 = 5)] =
-            "k_EUserBadgeSummerSale2011"),
-          (_[(_.k_EUserBadgeWinterSale2011 = 6)] =
-            "k_EUserBadgeWinterSale2011"),
-          (_[(_.k_EUserBadgeSummerSale2012 = 7)] =
-            "k_EUserBadgeSummerSale2012"),
-          (_[(_.k_EUserBadgeWinterSale2012 = 8)] =
-            "k_EUserBadgeWinterSale2012"),
-          (_[(_.k_EUserBadgeCommunityTranslator = 9)] =
-            "k_EUserBadgeCommunityTranslator"),
-          (_[(_.k_EUserBadgeCommunityModerator = 10)] =
-            "k_EUserBadgeCommunityModerator"),
-          (_[(_.k_EUserBadgeValveEmployee = 11)] = "k_EUserBadgeValveEmployee"),
-          (_[(_.k_EUserBadgeGameDeveloper = 12)] = "k_EUserBadgeGameDeveloper"),
-          (_[(_.k_EUserBadgeGameCollector = 13)] = "k_EUserBadgeGameCollector"),
-          (_[(_.k_EUserBadgeTradingCardBetaParticipant = 14)] =
-            "k_EUserBadgeTradingCardBetaParticipant"),
-          (_[(_.k_EUserBadgeSteamBoxBeta = 15)] = "k_EUserBadgeSteamBoxBeta"),
-          (_[(_.k_EUserBadgeSummer2014RedTeam = 16)] =
-            "k_EUserBadgeSummer2014RedTeam"),
-          (_[(_.k_EUserBadgeSummer2014BlueTeam = 17)] =
-            "k_EUserBadgeSummer2014BlueTeam"),
-          (_[(_.k_EUserBadgeSummer2014PinkTeam = 18)] =
-            "k_EUserBadgeSummer2014PinkTeam"),
-          (_[(_.k_EUserBadgeSummer2014GreenTeam = 19)] =
-            "k_EUserBadgeSummer2014GreenTeam"),
-          (_[(_.k_EUserBadgeSummer2014PurpleTeam = 20)] =
-            "k_EUserBadgeSummer2014PurpleTeam"),
-          (_[(_.k_EUserBadgeAuction2014 = 21)] = "k_EUserBadgeAuction2014"),
-          (_[(_.k_EUserBadgeGoldenProfile2014 = 22)] =
-            "k_EUserBadgeGoldenProfile2014"),
-          (_[(_.k_EUserBadgeTowerAttackMiniGame = 23)] =
-            "k_EUserBadgeTowerAttackMiniGame"),
-          (_[(_.k_EUserBadgeWinter2015ARG_RedHerring = 24)] =
-            "k_EUserBadgeWinter2015ARG_RedHerring"),
-          (_[(_.k_EUserBadgeSteamAwards2016Nominations = 25)] =
-            "k_EUserBadgeSteamAwards2016Nominations"),
-          (_[(_.k_EUserBadgeStickerCompletionist2017 = 26)] =
-            "k_EUserBadgeStickerCompletionist2017"),
-          (_[(_.k_EUserBadgeSteamAwards2017Nominations = 27)] =
-            "k_EUserBadgeSteamAwards2017Nominations"),
-          (_[(_.k_EUserBadgeSpringCleaning2018 = 28)] =
-            "k_EUserBadgeSpringCleaning2018"),
-          (_[(_.k_EUserBadgeSalien = 29)] = "k_EUserBadgeSalien"),
-          (_[(_.k_EUserBadgeRetiredModerator = 30)] =
-            "k_EUserBadgeRetiredModerator"),
-          (_[(_.k_EUserBadgeSteamAwards2018Nominations = 31)] =
-            "k_EUserBadgeSteamAwards2018Nominations"),
-          (_[(_.k_EUserBadgeValveModerator = 32)] =
-            "k_EUserBadgeValveModerator"),
-          (_[(_.k_EUserBadgeWinterSale2018 = 33)] =
-            "k_EUserBadgeWinterSale2018"),
-          (_[(_.k_EUserBadgeLunarNewYearSale2019 = 34)] =
-            "k_EUserBadgeLunarNewYearSale2019"),
-          (_[(_.k_EUserBadgeLunarNewYearSale2019GoldenProfile = 35)] =
-            "k_EUserBadgeLunarNewYearSale2019GoldenProfile"),
-          (_[(_.k_EUserBadgeSpringCleaning2019 = 36)] =
-            "k_EUserBadgeSpringCleaning2019"),
-          (_[(_.k_EUserBadgeSummerSale2019 = 37)] =
-            "k_EUserBadgeSummerSale2019"),
-          (_[(_.k_EUserBadgeSummerSale2019_TeamHare = 38)] =
-            "k_EUserBadgeSummerSale2019_TeamHare"),
-          (_[(_.k_EUserBadgeSummerSale2019_TeamTortoise = 39)] =
-            "k_EUserBadgeSummerSale2019_TeamTortoise"),
-          (_[(_.k_EUserBadgeSummerSale2019_TeamCorgi = 40)] =
-            "k_EUserBadgeSummerSale2019_TeamCorgi"),
-          (_[(_.k_EUserBadgeSummerSale2019_TeamCockatiel = 41)] =
-            "k_EUserBadgeSummerSale2019_TeamCockatiel"),
-          (_[(_.k_EUserBadgeSummerSale2019_TeamPig = 42)] =
-            "k_EUserBadgeSummerSale2019_TeamPig"),
-          (_[(_.k_EUserBadgeSteamAwards2019Nominations = 43)] =
-            "k_EUserBadgeSteamAwards2019Nominations"),
-          (_[(_.k_EUserBadgeWinterSaleEvent2019 = 44)] =
-            "k_EUserBadgeWinterSaleEvent2019"),
-          (_[(_.k_EUserBadgeWinterSale2019Steamville = 45)] =
-            "k_EUserBadgeWinterSale2019Steamville"),
-          (_[(_.k_EUserBadgeLunarNewYearSale2020 = 46)] =
-            "k_EUserBadgeLunarNewYearSale2020"),
-          (_[(_.k_EUserBadgeSpringCleaning2020 = 47)] =
-            "k_EUserBadgeSpringCleaning2020"),
-          (_[(_.k_EUserBadgeAwardsCommunityContributor = 48)] =
-            "k_EUserBadgeAwardsCommunityContributor"),
-          (_[(_.k_EUserBadgeAwardsCommunityPatron = 49)] =
-            "k_EUserBadgeAwardsCommunityPatron"),
-          (_[(_.k_EUserBadgeSteamAwards2020Nominations = 50)] =
-            "k_EUserBadgeSteamAwards2020Nominations"),
-          (_[(_.k_EUserBadgeSummerSale2021_MaskedAvenger = 51)] =
-            "k_EUserBadgeSummerSale2021_MaskedAvenger"),
-          (_[(_.k_EUserBadgeSummerSale2021_TrailblazingExplorer = 52)] =
-            "k_EUserBadgeSummerSale2021_TrailblazingExplorer"),
-          (_[(_.k_EUserBadgeSummerSale2021_GorillaScientist = 53)] =
-            "k_EUserBadgeSummerSale2021_GorillaScientist"),
-          (_[(_.k_EUserBadgeSummerSale2021_ParanormalProfessor = 54)] =
-            "k_EUserBadgeSummerSale2021_ParanormalProfessor"),
-          (_[(_.k_EUserBadgeSummerSale2021_GhostDetective = 55)] =
-            "k_EUserBadgeSummerSale2021_GhostDetective"),
-          (_[(_.k_EUserBadgeSteamAwards2021Nominations = 56)] =
-            "k_EUserBadgeSteamAwards2021Nominations"),
-          (_[(_.k_EUserBadgeSteamAwards2021NominationsClassic = 57)] =
-            "k_EUserBadgeSteamAwards2021NominationsClassic"),
-          (_[(_.k_EUserBadgeRetiredCommunityTranslator = 58)] =
-            "k_EUserBadgeRetiredCommunityTranslator"),
-          (_[(_.k_EUserBadgeRacingSale2022 = 59)] =
-            "k_EUserBadgeRacingSale2022"),
-          (_[(_.k_EUserBadgeNextFestSummer2022 = 60)] =
-            "k_EUserBadgeNextFestSummer2022"),
-          (_[(_.k_EUserBadgeSummerMiniGame2022 = 61)] =
-            "k_EUserBadgeSummerMiniGame2022"),
-          (_[(_.k_EUserBadgeNextFestAutumn2022 = 62)] =
-            "k_EUserBadgeNextFestAutumn2022"),
-          (_[(_.k_EUserBadgeSteamAwards2022Nominations = 63)] =
-            "k_EUserBadgeSteamAwards2022Nominations"),
-          (_[(_.k_EUserBadgeReplay2022 = 64)] = "k_EUserBadgeReplay2022"),
-          (_[(_.k_EUserBadgeSteamAwards2023Nominations = 65)] =
-            "k_EUserBadgeSteamAwards2023Nominations"),
-          (_[(_.k_EUserBadgeYearInReview2023 = 66)] =
-            "k_EUserBadgeYearInReview2023"),
-          (_[(_.k_EUserBadgeSteamAwards2024Nominations = 67)] =
-            "k_EUserBadgeSteamAwards2024Nominations"),
-          (_[(_.k_EUserBadgeYearInReview2024 = 68)] =
-            "k_EUserBadgeYearInReview2024"),
-          (_[(_.k_EUserBadgeYearInReview2025 = 69)] =
-            "k_EUserBadgeYearInReview2025"),
-          (_[(_.k_EUserBadgeSteamAwards2025Nominations = 70)] =
-            "k_EUserBadgeSteamAwards2025Nominations");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAuctionBadgeLevel_Invalid = 0)] =
-            "k_EAuctionBadgeLevel_Invalid"),
-            (_[(_.k_EAuctionBadgeLevel_MadeGoo = 1)] =
-              "k_EAuctionBadgeLevel_MadeGoo"),
-            (_[(_.k_EAuctionBadgeLevel_BidInAuction = 2)] =
-              "k_EAuctionBadgeLevel_BidInAuction"),
-            (_[(_.k_EAuctionBadgeLevel_WonInAuction = 3)] =
-              "k_EAuctionBadgeLevel_WonInAuction");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProfileCustomizationStyleDefault = 0)] =
-            "k_EProfileCustomizationStyleDefault"),
-            (_[(_.k_EProfileCustomizationStyleSelected = 1)] =
-              "k_EProfileCustomizationStyleSelected"),
-            (_[(_.k_EProfileCustomizationStyleRarest = 2)] =
-              "k_EProfileCustomizationStyleRarest"),
-            (_[(_.k_EProfileCustomizationStyleMostRecent = 3)] =
-              "k_EProfileCustomizationStyleMostRecent"),
-            (_[(_.k_EProfileCustomizationStyleRandom = 4)] =
-              "k_EProfileCustomizationStyleRandom"),
-            (_[(_.k_EProfileCustomizationStyleHighestRated = 5)] =
-              "k_EProfileCustomizationStyleHighestRated");
-        })(_ || (_ = {})),
-        (function (_) {
-          _[(_.k_EProfileItemEquippedFlag_FullScreen = 1)] =
-            "k_EProfileItemEquippedFlag_FullScreen";
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProfileColorStyle_Invalid = 0)] =
-            "k_EProfileColorStyle_Invalid"),
-            (_[(_.k_EProfileColorStyle_BackgroundGradient_Left = 1)] =
-              "k_EProfileColorStyle_BackgroundGradient_Left"),
-            (_[(_.k_EProfileColorStyle_BackgroundGradient_Right = 2)] =
-              "k_EProfileColorStyle_BackgroundGradient_Right"),
-            (_[(_.k_EProfileColorStyle_BackgroundGradient_Center = 3)] =
-              "k_EProfileColorStyle_BackgroundGradient_Center"),
-            (_[(_.k_EProfileColorStyle_ShowcaseGradient_Left = 4)] =
-              "k_EProfileColorStyle_ShowcaseGradient_Left"),
-            (_[(_.k_EProfileColorStyle_ShowcaseGradient_Right = 5)] =
-              "k_EProfileColorStyle_ShowcaseGradient_Right");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAgreementType_Invalid = -1)] = "k_EAgreementType_Invalid"),
-            (_[(_.k_EAgreementType_GlobalSSA = 0)] =
-              "k_EAgreementType_GlobalSSA"),
-            (_[(_.k_EAgreementType_ChinaSSA = 1)] =
-              "k_EAgreementType_ChinaSSA");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ENotificationSettingNotifyUseDefault = 0)] =
-            "k_ENotificationSettingNotifyUseDefault"),
-            (_[(_.k_ENotificationSettingAlways = 1)] =
-              "k_ENotificationSettingAlways"),
-            (_[(_.k_ENotificationSettingNever = 2)] =
-              "k_ENotificationSettingNever");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETextFilterSettingSteamLabOptedOut = 0)] =
-            "k_ETextFilterSettingSteamLabOptedOut"),
-            (_[(_.k_ETextFilterSettingEnabled = 1)] =
-              "k_ETextFilterSettingEnabled"),
-            (_[(_.k_ETextFilterSettingEnabledAllowProfanity = 2)] =
-              "k_ETextFilterSettingEnabledAllowProfanity"),
-            (_[(_.k_ETextFilterSettingDisabled = 3)] =
-              "k_ETextFilterSettingDisabled");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETextFilterOperationAddWords = 0)] =
-            "k_ETextFilterOperationAddWords"),
-            (_[(_.k_ETextFilterOperationRemoveWords = 1)] =
-              "k_ETextFilterOperationRemoveWords"),
-            (_[(_.k_ETextFilterOperationReplaceWords = 2)] =
-              "k_ETextFilterOperationReplaceWords");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -65433,17 +56001,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -65452,133 +56011,6 @@
       function _(_) {
         return "unknown EStoreItemType ( " + _ + " )";
       }
-      !(function (_) {
-        (_[(_.k_EStoreItemType_Invalid = -1)] = "k_EStoreItemType_Invalid"),
-          (_[(_.k_EStoreItemType_App = 0)] = "k_EStoreItemType_App"),
-          (_[(_.k_EStoreItemType_Package = 1)] = "k_EStoreItemType_Package"),
-          (_[(_.k_EStoreItemType_Bundle = 2)] = "k_EStoreItemType_Bundle"),
-          (_[(_.k_EStoreItemType_Mtx = 3)] = "k_EStoreItemType_Mtx"),
-          (_[(_.k_EStoreItemType_Tag = 4)] = "k_EStoreItemType_Tag"),
-          (_[(_.k_EStoreItemType_Creator = 5)] = "k_EStoreItemType_Creator"),
-          (_[(_.k_EStoreItemType_HubCategory = 6)] =
-            "k_EStoreItemType_HubCategory");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStoreAppType_Game = 0)] = "k_EStoreAppType_Game"),
-            (_[(_.k_EStoreAppType_Demo = 1)] = "k_EStoreAppType_Demo"),
-            (_[(_.k_EStoreAppType_Mod = 2)] = "k_EStoreAppType_Mod"),
-            (_[(_.k_EStoreAppType_Movie = 3)] = "k_EStoreAppType_Movie"),
-            (_[(_.k_EStoreAppType_DLC = 4)] = "k_EStoreAppType_DLC"),
-            (_[(_.k_EStoreAppType_Guide = 5)] = "k_EStoreAppType_Guide"),
-            (_[(_.k_EStoreAppType_Software = 6)] = "k_EStoreAppType_Software"),
-            (_[(_.k_EStoreAppType_Video = 7)] = "k_EStoreAppType_Video"),
-            (_[(_.k_EStoreAppType_Series = 8)] = "k_EStoreAppType_Series"),
-            (_[(_.k_EStoreAppType_Episode = 9)] = "k_EStoreAppType_Episode"),
-            (_[(_.k_EStoreAppType_Hardware = 10)] = "k_EStoreAppType_Hardware"),
-            (_[(_.k_EStoreAppType_Music = 11)] = "k_EStoreAppType_Music"),
-            (_[(_.k_EStoreAppType_Beta = 12)] = "k_EStoreAppType_Beta"),
-            (_[(_.k_EStoreAppType_Tool = 13)] = "k_EStoreAppType_Tool"),
-            (_[(_.k_EStoreAppType_Advertising = 14)] =
-              "k_EStoreAppType_Advertising");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStoreCategoryType_Category = 0)] =
-            "k_EStoreCategoryType_Category"),
-            (_[(_.k_EStoreCategoryType_SupportedPlayers = 1)] =
-              "k_EStoreCategoryType_SupportedPlayers"),
-            (_[(_.k_EStoreCategoryType_Feature = 2)] =
-              "k_EStoreCategoryType_Feature"),
-            (_[(_.k_EStoreCategoryType_ControllerSupport = 3)] =
-              "k_EStoreCategoryType_ControllerSupport"),
-            (_[(_.k_EStoreCategoryType_CloudGaming = 4)] =
-              "k_EStoreCategoryType_CloudGaming"),
-            (_[(_.k_EStoreCategoryType_MAX = 5)] = "k_EStoreCategoryType_MAX");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EUserReviewScore_None = 0)] = "k_EUserReviewScore_None"),
-            (_[(_.k_EUserReviewScore_OverwhelminglyNegative = 1)] =
-              "k_EUserReviewScore_OverwhelminglyNegative"),
-            (_[(_.k_EUserReviewScore_VeryNegative = 2)] =
-              "k_EUserReviewScore_VeryNegative"),
-            (_[(_.k_EUserReviewScore_Negative = 3)] =
-              "k_EUserReviewScore_Negative"),
-            (_[(_.k_EUserReviewScore_MostlyNegative = 4)] =
-              "k_EUserReviewScore_MostlyNegative"),
-            (_[(_.k_EUserReviewScore_Mixed = 5)] = "k_EUserReviewScore_Mixed"),
-            (_[(_.k_EUserReviewScore_MostlyPositive = 6)] =
-              "k_EUserReviewScore_MostlyPositive"),
-            (_[(_.k_EUserReviewScore_Positive = 7)] =
-              "k_EUserReviewScore_Positive"),
-            (_[(_.k_EUserReviewScore_VeryPositive = 8)] =
-              "k_EUserReviewScore_VeryPositive"),
-            (_[(_.k_EUserReviewScore_OverwhelminglyPositive = 9)] =
-              "k_EUserReviewScore_OverwhelminglyPositive");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStoreLinkType_None = 0)] = "k_EStoreLinkType_None"),
-            (_[(_.k_EStoreLinkType_YouTube = 1)] = "k_EStoreLinkType_YouTube"),
-            (_[(_.k_EStoreLinkType_Facebook = 2)] =
-              "k_EStoreLinkType_Facebook"),
-            (_[(_.k_EStoreLinkType_Twitter = 3)] = "k_EStoreLinkType_Twitter"),
-            (_[(_.k_EStoreLinkType_Twitch = 4)] = "k_EStoreLinkType_Twitch"),
-            (_[(_.k_EStoreLinkType_Discord = 5)] = "k_EStoreLinkType_Discord"),
-            (_[(_.k_EStoreLinkType_QQ = 6)] = "k_EStoreLinkType_QQ"),
-            (_[(_.k_EStoreLinkType_VK = 7)] = "k_EStoreLinkType_VK"),
-            (_[(_.k_EStoreLinkType_Bilibili = 8)] =
-              "k_EStoreLinkType_Bilibili"),
-            (_[(_.k_EStoreLinkType_Weibo = 9)] = "k_EStoreLinkType_Weibo"),
-            (_[(_.k_EStoreLinkType_Reddit = 10)] = "k_EStoreLinkType_Reddit"),
-            (_[(_.k_EStoreLinkType_Instagram = 11)] =
-              "k_EStoreLinkType_Instagram"),
-            (_[(_.k_EStoreLinkType_Tumblr = 12)] = "k_EStoreLinkType_Tumblr"),
-            (_[(_.k_EStoreLinkType_Tieba = 13)] = "k_EStoreLinkType_Tieba"),
-            (_[(_.k_EStoreLinkType_Tiktok = 14)] = "k_EStoreLinkType_Tiktok"),
-            (_[(_.k_EStoreLinkType_Telegram = 15)] =
-              "k_EStoreLinkType_Telegram"),
-            (_[(_.k_EStoreLinkType_LinkedIn = 16)] =
-              "k_EStoreLinkType_LinkedIn"),
-            (_[(_.k_EStoreLinkType_WeChat = 17)] = "k_EStoreLinkType_WeChat"),
-            (_[(_.k_EStoreLinkType_QQLink = 18)] = "k_EStoreLinkType_QQLink"),
-            (_[(_.k_EStoreLinkType_Douyin = 19)] = "k_EStoreLinkType_Douyin"),
-            (_[(_.k_EStoreLinkType_Bluesky = 20)] = "k_EStoreLinkType_Bluesky"),
-            (_[(_.k_EStoreLinkType_Mastodon = 21)] =
-              "k_EStoreLinkType_Mastodon"),
-            (_[(_.k_EStoreLinkType_Threads = 22)] = "k_EStoreLinkType_Threads"),
-            (_[(_.k_EStoreLinkType_QQChannel = 23)] =
-              "k_EStoreLinkType_QQChannel"),
-            (_[(_.k_EStoreLinkType_RedNote = 24)] = "k_EStoreLinkType_RedNote"),
-            (_[(_.k_EStoreLinkType_MAX = 25)] = "k_EStoreLinkType_MAX");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETrailerCategory_Invalid = 0)] =
-            "k_ETrailerCategory_Invalid"),
-            (_[(_.k_ETrailerCategory_Gameplay = 1)] =
-              "k_ETrailerCategory_Gameplay"),
-            (_[(_.k_ETrailerCategory_Teaser = 2)] =
-              "k_ETrailerCategory_Teaser"),
-            (_[(_.k_ETrailerCategory_Cinematic = 3)] =
-              "k_ETrailerCategory_Cinematic"),
-            (_[(_.k_ETrailerCategory_Update = 4)] =
-              "k_ETrailerCategory_Update"),
-            (_[(_.k_ETrailerCategory_Accolades = 5)] =
-              "k_ETrailerCategory_Accolades"),
-            (_[(_.k_ETrailerCategory_Interview = 6)] =
-              "k_ETrailerCategory_Interview");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStoreBrowseFilterFailure_None = 0)] =
-            "k_EStoreBrowseFilterFailure_None"),
-            (_[(_.k_EStoreBrowseFilterFailure_Redundant = 10)] =
-              "k_EStoreBrowseFilterFailure_Redundant"),
-            (_[(_.k_EStoreBrowseFilterFailure_NotPreferred = 20)] =
-              "k_EStoreBrowseFilterFailure_NotPreferred"),
-            (_[(_.k_EStoreBrowseFilterFailure_NotInterested = 30)] =
-              "k_EStoreBrowseFilterFailure_NotInterested"),
-            (_[(_.k_EStoreBrowseFilterFailure_UnwantedContent = 40)] =
-              "k_EStoreBrowseFilterFailure_UnwantedContent"),
-            (_[(_.k_EStoreBrowseFilterFailure_Unavailable = 50)] =
-              "k_EStoreBrowseFilterFailure_Unavailable");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -69832,7 +60264,7 @@
                 fields: {
                   filter_failure: {
                     _: 1,
-                    _: _.k_EStoreBrowseFilterFailure_None,
+                    _: 0,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -70006,65 +60438,12 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       var _,
-        _,
-        _,
-        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EStoreQuerySort_Relevance = 0)] =
-          "k_EStoreQuerySort_Relevance"),
-          (_[(_.k_EStoreQuerySort_Name = 1)] = "k_EStoreQuerySort_Name"),
-          (_[(_.k_EStoreQuerySort_TypeID = 2)] = "k_EStoreQuerySort_TypeID"),
-          (_[(_.k_EStoreQuerySort_Regional24hSalesRank = 10)] =
-            "k_EStoreQuerySort_Regional24hSalesRank"),
-          (_[(_.k_EStoreQuerySort_Global24hSalesRank = 11)] =
-            "k_EStoreQuerySort_Global24hSalesRank"),
-          (_[(_.k_EStoreQuerySort_RegionalLongTermSalesRank = 12)] =
-            "k_EStoreQuerySort_RegionalLongTermSalesRank"),
-          (_[(_.k_EStoreQuerySort_GlobalLongTermSalesRank = 13)] =
-            "k_EStoreQuerySort_GlobalLongTermSalesRank"),
-          (_[(_.k_EStoreQuerySort_WishlistActivityRank = 20)] =
-            "k_EStoreQuerySort_WishlistActivityRank"),
-          (_[(_.k_EStoreQuerySort_UserReviewScore = 21)] =
-            "k_EStoreQuerySort_UserReviewScore"),
-          (_[(_.k_EStoreQuerySort_UserReviewScoreAscending = 22)] =
-            "k_EStoreQuerySort_UserReviewScoreAscending"),
-          (_[(_.k_EStoreQuerySort_DailyActiveUserRank = 30)] =
-            "k_EStoreQuerySort_DailyActiveUserRank"),
-          (_[(_.k_EStoreQuerySort_VRDailyActiveUserRank = 31)] =
-            "k_EStoreQuerySort_VRDailyActiveUserRank"),
-          (_[(_.k_EStoreQuerySort_ConcurrentPlayers = 32)] =
-            "k_EStoreQuerySort_ConcurrentPlayers"),
-          (_[(_.k_EStoreQuerySort_ReleaseDate = 40)] =
-            "k_EStoreQuerySort_ReleaseDate"),
-          (_[(_.k_EStoreQuerySort_ReleaseDateAscending = 41)] =
-            "k_EStoreQuerySort_ReleaseDateAscending"),
-          (_[(_.k_EStoreQuerySort_SpecialsBoost = 50)] =
-            "k_EStoreQuerySort_SpecialsBoost");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStoreQueryExcludeFrom_Invalid = 0)] =
-            "k_EStoreQueryExcludeFrom_Invalid"),
-            (_[(_.k_EStoreQueryExcludeFrom_Search = 1)] =
-              "k_EStoreQueryExcludeFrom_Search"),
-            (_[(_.k_EStoreQueryExcludeFrom_Tabs = 2)] =
-              "k_EStoreQueryExcludeFrom_Tabs"),
-            (_[(_.k_EStoreQueryExcludeFrom_NewReleases = 3)] =
-              "k_EStoreQueryExcludeFrom_NewReleases");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStoreQueryPredefinedFilter_Invalid = 0)] =
-            "k_EStoreQueryPredefinedFilter_Invalid"),
-            (_[(_.k_EStoreQueryPredefinedFilter_PopularNewReleases = 1)] =
-              "k_EStoreQueryPredefinedFilter_PopularNewReleases"),
-            (_[(_.k_EStoreQueryPredefinedFilter_PopularFreeReleases = 2)] =
-              "k_EStoreQueryPredefinedFilter_PopularFreeReleases");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -70562,7 +60941,7 @@
                   },
                   sort: {
                     _: 10,
-                    _: _.k_EStoreQuerySort_Relevance,
+                    _: 0,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -71382,7 +61761,7 @@
                 fields: {
                   sort: {
                     _: 1,
-                    _: _.k_EStoreQuerySort_Relevance,
+                    _: 0,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -71597,7 +61976,7 @@
                 fields: {
                   sort: {
                     _: 1,
-                    _: _.k_EStoreQuerySort_Relevance,
+                    _: 0,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -73104,7 +63483,7 @@
         _: () => _,
         _: () => _,
       });
-      var _,
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -73112,22 +63491,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      !(function (_) {
-        (_[(_.k_EClientExecutionSiteInvalid = 0)] =
-          "k_EClientExecutionSiteInvalid"),
-          (_[(_.k_EClientExecutionSiteSteamUI = 1)] =
-            "k_EClientExecutionSiteSteamUI"),
-          (_[(_.k_EClientExecutionSiteClientdll = 2)] =
-            "k_EClientExecutionSiteClientdll"),
-          (_[(_.k_EClientExecutionSiteAny = 3)] = "k_EClientExecutionSiteAny");
-      })(_ || (_ = {}));
-      _.Message;
-      var _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
           (0, _._)(this);
@@ -73142,7 +63506,7 @@
         }
         DispatchMsgToHandlers(_, _) {
           let _ = _.GetEMsg();
-          if (_ == _._.k_EMsgServiceMethod) {
+          if (146 == _) {
             let _ = _.Hdr().target_job_name();
             if (_) {
               let _ = this.m_mapServiceMethodHandlers.get(_);
@@ -73216,14 +63580,14 @@
         AddServiceMethodHandler(_, _) {
           let _ = (_, _) => {
             let _ = _._.InitFromMsg(_.request, _),
-              _ = _._.Init(_.response, _._.k_EMsgServiceMethodResponse),
+              _ = _._.Init(_.response, 147),
               _ = _(_, _),
               _ = (_) => {
                 _.Hdr().set_eresult(_), _(_);
               };
             _ instanceof Promise
               ? _.then(_).catch(() => {
-                  _(_._.k_EResultFail);
+                  _(2);
                 })
               : _(_);
           };
@@ -73326,6 +63690,8 @@
           void 0,
         );
       var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
@@ -73606,8 +63972,7 @@
           do {
             try {
               const _ = await this.ConnectToSocket(_, _);
-              if (_.result == _._.k_EResultOK)
-                return (this.m_bConnecting = !1), _;
+              if (1 == _.result) return (this.m_bConnecting = !1), _;
               this.Log.Warning(
                 `connect attempt failed: ${_.result} - ${_.message}`,
               );
@@ -73629,7 +63994,7 @@
             (this.m_bConnecting = !1),
             this.BShouldReconnect() && this.StartReconnect(),
             {
-              result: _._.k_EResultFail,
+              result: 2,
               message: "not ready, exceeded retry count",
             }
           );
@@ -73655,12 +64020,12 @@
             this.m_fnOnReconnectStartHandler({
               connection: this,
             });
-          if ((await this.Reconnect()).result != _._.k_EResultOK)
+          if (1 != (await this.Reconnect()).result)
             return (
               this.Log.Warning("failed to re-connect to websocket after close"),
               this.m_fnOnReconnectFinishHandler({
                 connection: this,
-                eResult: _._.k_EResultFail,
+                eResult: 2,
               }),
               void this.m_fnOnCloseHandler({
                 connection: this,
@@ -73671,7 +64036,7 @@
           this.Log.Info("reconnect successful"),
             this.m_fnOnReconnectFinishHandler({
               connection: this,
-              eResult: _._.k_EResultOK,
+              eResult: 1,
             });
         }
         async ConnectToSocket(_, _) {
@@ -73681,11 +64046,11 @@
                   `websocket in an unexpected state: ${this.m_socket.readyState}`,
                 ),
                 {
-                  result: _._.k_EResultFail,
+                  result: 2,
                   message: "websocket in an unexpected state",
                 })
               : {
-                  result: _._.k_EResultOK,
+                  result: 1,
                   message: "ready",
                 };
           try {
@@ -73694,7 +64059,7 @@
             return (
               this.Log.Warning("failed to initialize websocket connection"),
               {
-                result: _._.k_EResultConnectFailed,
+                result: 35,
                 message: "Failed to initialize websocket connection",
               }
             );
@@ -73707,12 +64072,12 @@
           return (await this.WaitForSocketOpen(this.m_socket, _))
             ? (this.Log.Info("connection ready"),
               {
-                result: _._.k_EResultOK,
+                result: 1,
                 message: "ready",
               })
             : (this.Log.Warning("failed to reach open state"),
               {
-                result: _._.k_EResultFail,
+                result: 2,
                 message: "failed to reach open state",
               });
         }
@@ -73760,9 +64125,9 @@
         }
         SendSerializedMessage(_) {
           try {
-            return this.m_socket.send(_), _._.k_EResultOK;
+            return this.m_socket.send(_), 1;
           } catch (_) {
-            return _._.k_EResultFail;
+            return 2;
           }
         }
       }
@@ -73817,13 +64182,13 @@
           const _ = await SteamClient.WebUITransport.GetTransportInfo();
           (this.m_nMaximumMsgSizeBytes = _.nMaximumMsgSizeBytes),
             this.CreateConnection(
-              _.k_EClientExecutionSiteSteamUI,
+              1,
               "steamUI",
               _.portSteamUI,
               _.authKeySteamUI,
             ),
             this.CreateConnection(
-              _.k_EClientExecutionSiteClientdll,
+              2,
               "clientdll",
               _.portClientdll,
               _.authKeyClientdll,
@@ -73864,7 +64229,7 @@
         SendMsg(_, _, _, _) {
           return new Promise((_, _) => {
             const _ = _.eClientExecutionSite;
-            if (null == _ || _ == _.k_EClientExecutionSiteInvalid)
+            if (null == _ || 0 == _)
               return (
                 _.Error(`SendMsg: Invalid client execution site: ${_}`),
                 void _(`Transport SendMsg: invalid client execution site ${_}`)
@@ -73891,7 +64256,7 @@
               );
             }
             const _ = this.m_iMsgSeq++;
-            _.SetEMsg(_._.k_EMsgServiceMethod),
+            _.SetEMsg(146),
               _.Hdr().set_target_job_name(_),
               _.Hdr().set_jobid_source("" + _);
             const _ = _.Serialize();
@@ -73900,9 +64265,9 @@
                 `SendMsg: message exceeds maximum size: ${_.byteLength} >= ${this.m_nMaximumMsgSizeBytes}`,
               );
               const _ = _._.Init(_);
-              return _.Hdr().set_eresult(_._.k_EResultFail), void _(_);
+              return _.Hdr().set_eresult(2), void _(_);
             }
-            if (_.SendSerializedMessage(_) != _._.k_EResultOK)
+            if (1 != _.SendSerializedMessage(_))
               return (
                 _.Error("SendMsg: Failed to send message"),
                 void _("Transport SendMsg: failed to send message")
@@ -73917,7 +64282,7 @@
         }
         SendNotification(_, _, _) {
           const _ = _.eClientExecutionSite;
-          if (null == _ || _ == _.k_EClientExecutionSiteInvalid)
+          if (null == _ || 0 == _)
             return (
               _.Error(`SendNotification: Invalid client execution site: ${_}`),
               !1
@@ -73941,20 +64306,20 @@
               !1
             );
           }
-          _.SetEMsg(_._.k_EMsgServiceMethod), _.Hdr().set_target_job_name(_);
-          return _.SendSerializedMessage(_.Serialize()) == _._.k_EResultOK;
+          _.SetEMsg(146), _.Hdr().set_target_job_name(_);
+          return 1 == _.SendSerializedMessage(_.Serialize());
         }
         async ConnectToSite(_) {
           const _ = _.connection,
             _ = await _.Connect(_.sUrl);
-          if (_.result != _._.k_EResultOK) return _;
+          if (1 != _.result) return _;
           return (await this.SendAuthMessage(_)).BSuccess()
             ? {
-                result: _._.k_EResultOK,
+                result: 1,
                 message: "connected",
               }
             : {
-                result: _._.k_EResultFail,
+                result: 2,
                 message: "client auth failed",
               };
         }
@@ -73964,9 +64329,9 @@
             _.push(this.ConnectToSite(__webpack_require__));
           const _ = await Promise.all(_);
           (this.m_bInitialized = !0), this.DispatchTransportStatusUpdate();
-          for (const _ of _) if (_.result != _._.k_EResultOK) return _;
+          for (const _ of _) if (1 != _.result) return _;
           return {
-            result: _._.k_EResultOK,
+            result: 1,
             message: "ready",
           };
         }
@@ -73991,9 +64356,7 @@
           this.DispatchTransportStatusUpdate();
         }
         OnWebsocketReconnectFinish(_) {
-          if (
-            (this.DispatchTransportStatusUpdate(), _.eResult != _._.k_EResultOK)
-          )
+          if ((this.DispatchTransportStatusUpdate(), 1 != _.eResult))
             return (
               _.Warning(
                 "OnWebsocketReconnect: Failed to reconnect to steam client",
@@ -74045,7 +64408,7 @@
               `FailAllPendingRequests: forcing failure for request: ${_.m_responseClass.name}`,
             );
             let _ = _._.Init(_.m_responseClass);
-            _.Hdr().set_eresult(_._.k_EResultFail), _.m_fnCallback(_);
+            _.Hdr().set_eresult(2), _.m_fnCallback(_);
           }
           this.m_mapPendingMethodRequests.clear();
         }
@@ -74061,7 +64424,7 @@
         OnStartShutdown(_) {
           for (const [_, _] of this.m_mapConnectionDetails)
             _.connection.PrepareForShutdown();
-          return _._.k_EResultOK;
+          return 1;
         }
       }
       (0, _._)([_._], _.prototype, "OnWebsocketReconnectStart", null),
@@ -74076,10 +64439,9 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _._,
       });
+      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new (class {
         m_mapManagers = new WeakMap();
@@ -74137,16 +64499,11 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
-      !(function (_) {
-        (_[(_.Desktop = 0)] = "Desktop"), (_[(_.BasicUI = 1)] = "BasicUI");
-      })(_ || (_ = {}));
       class _ {
         static s_nNextKeyValue = 1;
         m_nKey = null;
@@ -74506,46 +64863,10 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var _;
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      }),
-        (function (_) {
-          (_[(_.Backspace = 8)] = "Backspace"),
-            (_[(_.Tab = 9)] = "Tab"),
-            (_[(_.Enter = 13)] = "Enter"),
-            (_[(_.Escape = 27)] = "Escape"),
-            (_[(_.Space = 32)] = "Space"),
-            (_[(_.PageUp = 33)] = "PageUp"),
-            (_[(_.PageDown = 34)] = "PageDown"),
-            (_[(_.End = 35)] = "End"),
-            (_[(_.Home = 36)] = "Home"),
-            (_[(_.LeftArrow = 37)] = "LeftArrow"),
-            (_[(_.UpArrow = 38)] = "UpArrow"),
-            (_[(_.RightArrow = 39)] = "RightArrow"),
-            (_[(_.DownArrow = 40)] = "DownArrow"),
-            (_[(_.Delete = 46)] = "Delete"),
-            (_[(_._ = 70)] = "F"),
-            (_[(_.Slash = 191)] = "Slash"),
-            (_[(_.BackSlash = 220)] = "BackSlash");
-        })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -74554,246 +64875,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EProtoAvailInterServer = 0)] = "k_EProtoAvailInterServer"),
-          (_[(_.k_EProtoAvailInternal = 1)] = "k_EProtoAvailInternal"),
-          (_[(_.k_EProtoAvailInternalAndServerLite = 2)] =
-            "k_EProtoAvailInternalAndServerLite"),
-          (_[(_.k_EProtoAvailExternal = 3)] = "k_EProtoAvailExternal");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProtoPrivInvalid = -1)] = "k_EProtoPrivInvalid"),
-            (_[(_.k_EProtoPrivNone = 0)] = "k_EProtoPrivNone"),
-            (_[(_.k_EProtoPrivAuthAccount = 1)] = "k_EProtoPrivAuthAccount"),
-            (_[(_.k_EProtoPrivAccountOptional = 2)] =
-              "k_EProtoPrivAccountOptional"),
-            (_[(_.k_EProtoPrivAuthAccountCommunityNotBlocked = 3)] =
-              "k_EProtoPrivAuthAccountCommunityNotBlocked"),
-            (_[(_.k_EProtoPrivAuthAccountAdmin = 4)] =
-              "k_EProtoPrivAuthAccountAdmin"),
-            (_[(_.k_EProtoPrivAuthAccountSupport = 5)] =
-              "k_EProtoPrivAuthAccountSupport"),
-            (_[(_.k_EProtoPrivAuthAccountGlobalModerator = 6)] =
-              "k_EProtoPrivAuthAccountGlobalModerator"),
-            (_[(_.k_EProtoPrivAuthAccountPublisherOwnsApp = 7)] =
-              "k_EProtoPrivAuthAccountPublisherOwnsApp"),
-            (_[(_.k_EProtoPrivAuthAccountMemberPublisher = 8)] =
-              "k_EProtoPrivAuthAccountMemberPublisher"),
-            (_[(_.k_EProtoPrivWeakAuthAccount = 9)] =
-              "k_EProtoPrivWeakAuthAccount"),
-            (_[(_.k_EProtoPrivAuthAccountSupervisor = 10)] =
-              "k_EProtoPrivAuthAccountSupervisor"),
-            (_[(_.k_EProtoPrivAuthAccountPublisherAdmin = 11)] =
-              "k_EProtoPrivAuthAccountPublisherAdmin"),
-            (_[(_.k_EProtoPrivAuthAccountValveStatsAccess = 12)] =
-              "k_EProtoPrivAuthAccountValveStatsAccess"),
-            (_[(_.k_EProtoPrivIsValveHostedDedicatedServer = 13)] =
-              "k_EProtoPrivIsValveHostedDedicatedServer"),
-            (_[(_.k_EProtoPrivMax = 14)] = "k_EProtoPrivMax");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProtoWebAPIKeyNotAccepted = 0)] =
-            "k_EProtoWebAPIKeyNotAccepted"),
-            (_[(_.k_EProtoWebAPIKeyNone = 1)] = "k_EProtoWebAPIKeyNone"),
-            (_[(_.k_EProtoWebAPIKeyAny = 2)] = "k_EProtoWebAPIKeyAny"),
-            (_[(_.k_EProtoWebAPIKeyAdmin = 3)] = "k_EProtoWebAPIKeyAdmin"),
-            (_[(_.k_EProtoWebAPIKeyPublisher = 4)] =
-              "k_EProtoWebAPIKeyPublisher"),
-            (_[(_.k_EProtoWebAPIKeyPublisherOwnsApp = 5)] =
-              "k_EProtoWebAPIKeyPublisherOwnsApp"),
-            (_[(_.k_EProtoWebAPIKeySpecificKey_VideoProcessingBot = 6)] =
-              "k_EProtoWebAPIKeySpecificKey_VideoProcessingBot");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProtoServiceTypeSteamMessages = 0)] =
-            "k_EProtoServiceTypeSteamMessages"),
-            (_[(_.k_EProtoServiceTypeVRGamepadUIMessages = 1)] =
-              "k_EProtoServiceTypeVRGamepadUIMessages");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProtoExecutionSiteServer = 1)] =
-            "k_EProtoExecutionSiteServer"),
-            (_[(_.k_EProtoExecutionSiteSteamClient = 2)] =
-              "k_EProtoExecutionSiteSteamClient"),
-            (_[(_.k_EProtoExecutionSiteGameClient = 3)] =
-              "k_EProtoExecutionSiteGameClient");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EProtoClientCallingConventionNone = 0)] =
-            "k_EProtoClientCallingConventionNone"),
-            (_[(_.k_EProtoClientCallingConventionAsync = 1)] =
-              "k_EProtoClientCallingConventionAsync"),
-            (_[(_.k_EProtoClientCallingConventionBlocking = 2)] =
-              "k_EProtoClientCallingConventionBlocking");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESupportPermissions_Invalid = 0)] =
-            "k_ESupportPermissions_Invalid"),
-            (_[(_.k_ESupportPermissions_BillingInfo = 1)] =
-              "k_ESupportPermissions_BillingInfo"),
-            (_[(_.k_ESupportPermissions_ItemGrant = 2)] =
-              "k_ESupportPermissions_ItemGrant"),
-            (_[(_.k_ESupportPermissions_WalletGrant = 3)] =
-              "k_ESupportPermissions_WalletGrant"),
-            (_[(_.k_ESupportPermissions_GameGrant = 4)] =
-              "k_ESupportPermissions_GameGrant"),
-            (_[(_.k_ESupportPermissions_EditQuicktexts = 5)] =
-              "k_ESupportPermissions_EditQuicktexts"),
-            (_[(_.k_ESupportPermissions_CallLogging = 6)] =
-              "k_ESupportPermissions_CallLogging"),
-            (_[(_.k_ESupportPermissions_CreditCardSearch = 7)] =
-              "k_ESupportPermissions_CreditCardSearch"),
-            (_[(_.k_ESupportPermissions_PartnerAppReadonlyAccess = 8)] =
-              "k_ESupportPermissions_PartnerAppReadonlyAccess"),
-            (_[(_.k_ESupportPartnerSupport = 9)] = "k_ESupportPartnerSupport"),
-            (_[(_.k_ESupportUserSupport = 10)] = "k_ESupportUserSupport"),
-            (_[(_.k_ESupportPermissions_FraudTools = 11)] =
-              "k_ESupportPermissions_FraudTools"),
-            (_[(_.k_ESupportPermissions_AdvancedPartnerTools = 12)] =
-              "k_ESupportPermissions_AdvancedPartnerTools"),
-            (_[(_.k_ESupportPermissions_AccountTermination = 13)] =
-              "k_ESupportPermissions_AccountTermination"),
-            (_[(_.k_ESupportPermissions_DeleteAndPurgeAvatars = 14)] =
-              "k_ESupportPermissions_DeleteAndPurgeAvatars"),
-            (_[(_.k_ESupportPermissions_SupportToolAccess = 15)] =
-              "k_ESupportPermissions_SupportToolAccess"),
-            (_[(_.k_ESupportPermissions_ModerateUGC = 16)] =
-              "k_ESupportPermissions_ModerateUGC"),
-            (_[(_.k_ESupportPermissions_ChangeAccountName = 17)] =
-              "k_ESupportPermissions_ChangeAccountName"),
-            (_[(_.k_ESupportPermissions_PartnerHardwareRequests = 18)] =
-              "k_ESupportPermissions_PartnerHardwareRequests"),
-            (_[(_.k_ESupportPermissions_GroupAndForumModeration = 19)] =
-              "k_ESupportPermissions_GroupAndForumModeration"),
-            (_[(_.k_ESupportPermissions_ModerateEvents = 20)] =
-              "k_ESupportPermissions_ModerateEvents"),
-            (_[(_.k_ESupportPermissions_AccessAgentMetrics = 21)] =
-              "k_ESupportPermissions_AccessAgentMetrics"),
-            (_[(_.k_ESupportPermissions_UpdatePurchaseReservations = 22)] =
-              "k_ESupportPermissions_UpdatePurchaseReservations"),
-            (_[(_.k_ESupportPermissions_SendSupportShipments = 23)] =
-              "k_ESupportPermissions_SendSupportShipments"),
-            (_[(_.k_ESupportPermissions_SaleTechEvents = 24)] =
-              "k_ESupportPermissions_SaleTechEvents"),
-            (_[(_.k_ESupportPermissions_SendHighValueSupportShipments = 25)] =
-              "k_ESupportPermissions_SendHighValueSupportShipments"),
-            (_[(_.k_ESupportPermissions_PartnerDeckCompatReadOnly = 26)] =
-              "k_ESupportPermissions_PartnerDeckCompatReadOnly"),
-            (_[(_.k_ESupportPermissions_CSGOTools = 27)] =
-              "k_ESupportPermissions_CSGOTools"),
-            (_[(_.k_ESupportPermissions_LocalizationAdvanceAccess = 28)] =
-              "k_ESupportPermissions_LocalizationAdvanceAccess"),
-            (_[(_.k_ESupportPermissions_BulkRefundTool = 29)] =
-              "k_ESupportPermissions_BulkRefundTool"),
-            (_[(_.k_ESupportPermissions_LocalizationAssetTools = 30)] =
-              "k_ESupportPermissions_LocalizationAssetTools"),
-            (_[(_.k_ESupportPermissions_CsVideoReview = 31)] =
-              "k_ESupportPermissions_CsVideoReview"),
-            (_[(_.k_ESupportPermissions_OptInOperations = 32)] =
-              "k_ESupportPermissions_OptInOperations"),
-            (_[(_.k_ESupportPermissions_CsVacNetDataLabeling = 33)] =
-              "k_ESupportPermissions_CsVacNetDataLabeling"),
-            (_[
-              (_.k_ESupportPermissions_EscalatedGroupAndForumModeration = 34)
-            ] = "k_ESupportPermissions_EscalatedGroupAndForumModeration"),
-            (_[(_.k_ESupportPermissions_ManageCSItems = 35)] =
-              "k_ESupportPermissions_ManageCSItems"),
-            (_[(_.k_ESupportPermissions_ModerationSupervisor = 36)] =
-              "k_ESupportPermissions_ModerationSupervisor"),
-            (_[(_.k_ESupportPermissions_ModerateChat = 37)] =
-              "k_ESupportPermissions_ModerateChat");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EWebAPIIPFilterType_None = 0)] =
-            "k_EWebAPIIPFilterType_None"),
-            (_[(_.k_EWebAPIIPFilterType_Xsolla = 1)] =
-              "k_EWebAPIIPFilterType_Xsolla"),
-            (_[(_.k_EWebAPIIPFilterType_MoPay = 2)] =
-              "k_EWebAPIIPFilterType_MoPay"),
-            (_[(_.k_EWebAPIIPFilterType_BoaCompra = 3)] =
-              "k_EWebAPIIPFilterType_BoaCompra"),
-            (_[(_.k_EWebAPIIPFilterType_GameStop = 4)] =
-              "k_EWebAPIIPFilterType_GameStop"),
-            (_[(_.k_EWebAPIIPFilterType_SteamKey = 5)] =
-              "k_EWebAPIIPFilterType_SteamKey"),
-            (_[(_.k_EWebAPIIPFilterType_Payelp = 6)] =
-              "k_EWebAPIIPFilterType_Payelp"),
-            (_[(_.k_EWebAPIIPFilterType_NexonPWRD = 7)] =
-              "k_EWebAPIIPFilterType_NexonPWRD"),
-            (_[(_.k_EWebAPIIPFilterType_TwitchTV = 8)] =
-              "k_EWebAPIIPFilterType_TwitchTV"),
-            (_[(_.k_EWebAPIIPFilterType_MOL = 9)] =
-              "k_EWebAPIIPFilterType_MOL"),
-            (_[(_.k_EWebAPIIPFilterType_Degica = 10)] =
-              "k_EWebAPIIPFilterType_Degica"),
-            (_[(_.k_EWebAPIIPFilterType_EClub = 11)] =
-              "k_EWebAPIIPFilterType_EClub"),
-            (_[(_.k_EWebAPIIPFilterType_Envoy = 12)] =
-              "k_EWebAPIIPFilterType_Envoy"),
-            (_[(_.k_EWebAPIIPFilterType_Smart2Pay = 13)] =
-              "k_EWebAPIIPFilterType_Smart2Pay"),
-            (_[(_.k_EWebAPIIPFilterType_IngramMicro = 14)] =
-              "k_EWebAPIIPFilterType_IngramMicro"),
-            (_[(_.k_EWebAPIIPFilterType_MailServers = 15)] =
-              "k_EWebAPIIPFilterType_MailServers"),
-            (_[(_.k_EWebAPIIPFilterType_SteamLinkKMS = 16)] =
-              "k_EWebAPIIPFilterType_SteamLinkKMS"),
-            (_[(_.k_EWebAPIIPFilterType_Allion = 17)] =
-              "k_EWebAPIIPFilterType_Allion"),
-            (_[(_.k_EWebAPIIPFilterType_BitPay = 18)] =
-              "k_EWebAPIIPFilterType_BitPay"),
-            (_[(_.k_EWebAPIIPFilterType_Ingenico = 19)] =
-              "k_EWebAPIIPFilterType_Ingenico"),
-            (_[(_.k_EWebAPIIPFilterType_WeLoveFine = 20)] =
-              "k_EWebAPIIPFilterType_WeLoveFine"),
-            (_[(_.k_EWebAPIIPFilterType_Nodwin = 21)] =
-              "k_EWebAPIIPFilterType_Nodwin"),
-            (_[(_.k_EWebAPIIPFilterType_Adyen = 22)] =
-              "k_EWebAPIIPFilterType_Adyen"),
-            (_[(_.k_EWebAPIIPFilterType_ComputeFarm = 23)] =
-              "k_EWebAPIIPFilterType_ComputeFarm"),
-            (_[(_.k_EWebAPIIPFilterType_Worldpay = 24)] =
-              "k_EWebAPIIPFilterType_Worldpay"),
-            (_[(_.k_EWebAPIIPFilterType_PerfectWorld = 25)] =
-              "k_EWebAPIIPFilterType_PerfectWorld"),
-            (_[(_.k_EWebAPIIPFilterType_Incomm = 26)] =
-              "k_EWebAPIIPFilterType_Incomm"),
-            (_[(_.k_EWebAPIIPFilterType_ECommPay = 27)] =
-              "k_EWebAPIIPFilterType_ECommPay"),
-            (_[(_.k_EWebAPIIPFilterType_CrowdIn = 28)] =
-              "k_EWebAPIIPFilterType_CrowdIn"),
-            (_[(_.k_EWebAPIIPFilterType_CEVA = 29)] =
-              "k_EWebAPIIPFilterType_CEVA");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EWebAPIPartnerGroupPermission_None = 0)] =
-            "k_EWebAPIPartnerGroupPermission_None"),
-            (_[(_.k_EWebAPIPartnerGroupPermission_SteamChina = 1)] =
-              "k_EWebAPIPartnerGroupPermission_SteamChina"),
-            (_[(_.k_EWebAPIPartnerGroupPermission_CDNStorage_Upload = 2)] =
-              "k_EWebAPIPartnerGroupPermission_CDNStorage_Upload"),
-            (_[(_.k_EWebAPIPartnerGroupPermission_CDNStorage_Purge = 3)] =
-              "k_EWebAPIPartnerGroupPermission_CDNStorage_Purge"),
-            (_[
-              (_.k_EWebAPIPartnerGroupPermission_InternalDirectory_Query = 4)
-            ] = "k_EWebAPIPartnerGroupPermission_InternalDirectory_Query"),
-            (_[
-              (_.k_EWebAPIPartnerGroupPermission_Support_HardwareRMAInfo = 5)
-            ] = "k_EWebAPIPartnerGroupPermission_Support_HardwareRMAInfo");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EMessageQueueAlertPolicy_Default = 0)] =
-            "k_EMessageQueueAlertPolicy_Default"),
-            (_[(_.k_EMessageQueueAlertPolicy_BusinessHoursOnly = 1)] =
-              "k_EMessageQueueAlertPolicy_BusinessHoursOnly"),
-            (_[(_.k_EMessageQueueAlertPolicy_NoAlerts = 2)] =
-              "k_EMessageQueueAlertPolicy_NoAlerts");
-        })(_ || (_ = {}));
-      _.Message;
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         try {
           if (!_ || "string" != typeof _) return null;
@@ -74871,7 +64953,7 @@
         }
         MakeReady() {
           return Promise.resolve({
-            result: _._.k_EResultOK,
+            result: 1,
             message: "ready",
           });
         }
@@ -74920,7 +65002,7 @@
             let _ = await this.Send(_, _, _, _);
             if (200 != _.status || !_.data) throw new Error("Request Error");
             if (
-              ((_ = _._.Init(_, _._.k_EMsgServiceMethodResponse)),
+              ((_ = _._.Init(_, 147)),
               _.headers &&
                 (_.headers["x-eresult"] &&
                   _.Hdr().set_eresult(parseInt(_.headers["x-eresult"])),
@@ -74946,11 +65028,7 @@
                 "response" in _ &&
                 401 === _?.response?.status,
               _ = _ ? "Unauthorized" : null;
-            (_ = this.CreateFailedMsgProtobuf(
-              _,
-              _._.k_ETransportResponseNotReceived,
-              _,
-            )),
+            (_ = this.CreateFailedMsgProtobuf(_, 3, _)),
               _ &&
                 !this.m_refreshAccessTokenPromise &&
                 this.m_bJWTToken &&
@@ -74973,9 +65051,7 @@
           let _ = __webpack_require__.SerializeBody(),
             _ = _._(_);
           const _ = _?.eWebAPIKeyRequirement;
-          let _ =
-              _?.ePrivilege == _.k_EProtoPrivNone &&
-              _ == _.k_EProtoWebAPIKeyNone,
+          let _ = 0 == _?.ePrivilege && 1 == _,
             _ = {
               responseType: this.m_bJsonMode ? "json" : "arraybuffer",
               params: {},
@@ -74986,7 +65062,7 @@
                   },
             };
           _.bSendAuth ||
-            _ == _.k_EProtoWebAPIKeyNone ||
+            1 == _ ||
             console.error(
               `Attempting to invoke service ${_} without auth, but auth is required.`,
             ),
@@ -75028,7 +65104,7 @@
         CreateFailedMsgProtobuf(_, _, _) {
           let _ = _._.Init(_);
           return (
-            _.Hdr().set_eresult(_._.k_EResultFail),
+            _.Hdr().set_eresult(2),
             _.Hdr().set_transport_error(_),
             _ && _.Hdr().set_error_message(_),
             _
@@ -75046,7 +65122,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "061818254b2c99ac49e6626adb128ed1282a392f",
@@ -75086,10 +65161,7 @@
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return (
-            this.apptype == _._.k_EAppTypeTool ||
-            this.apptype == _._.k_EAppTypeApplication
-          );
+          return 4 == this.apptype || 2 == this.apptype;
         }
         BuildAppURL(_, _) {
           return _
@@ -75109,7 +65181,7 @@
             (this.m_eAppType = _.app_type());
         }
         DeserializeFromAppOverview(_) {
-          _.icon_hash() && _.app_type() != _._.k_EAppTypeShortcut
+          _.icon_hash() && 1073741824 != _.app_type()
             ? ((this.m_bInitialized = !0),
               (this.m_strName = _.display_name()),
               (this.m_strIconURL = _.icon_hash()),
@@ -75188,15 +65260,10 @@
                 : (this.m_ulSteamID = _ ? _._.fromNumber(_, !0) : _._.UZERO);
         }
         static InitFromAccountID(_) {
-          return new _(
-            Number(_),
-            _._.EUNIVERSE,
-            _._.k_EAccountTypeIndividual,
-            _._,
-          );
+          return new _(Number(_), _._.EUNIVERSE, 1, _._);
         }
         static InitFromClanID(_) {
-          return new _(Number(_), _._.EUNIVERSE, _._.k_EAccountTypeClan, 0);
+          return new _(Number(_), _._.EUNIVERSE, 7, 0);
         }
         GetAccountID() {
           return this.m_ulSteamID.getLowBitsUnsigned();
@@ -75215,15 +65282,15 @@
         }
         Render() {
           switch (this.GetAccountType()) {
-            case _._.k_EAccountTypeInvalid:
+            case 0:
               return (
                 "[I:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
               );
-            case _._.k_EAccountTypeClan:
+            case 7:
               return (
                 "[g:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
               );
-            case _._.k_EAccountTypeAnonGameServer:
+            case 4:
               return (
                 "[A:" +
                 this.GetUniverse() +
@@ -75233,11 +65300,11 @@
                 this.GetInstance() +
                 "]"
               );
-            case _._.k_EAccountTypeGameServer:
+            case 3:
               return (
                 "[G:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
               );
-            case _._.k_EAccountTypeMultiseat:
+            case 2:
               return (
                 "[M:" +
                 this.GetUniverse() +
@@ -75247,11 +65314,11 @@
                 this.GetInstance() +
                 "]"
               );
-            case _._.k_EAccountTypePending:
+            case 5:
               return (
                 "[P:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
               );
-            case _._.k_EAccountTypeContentServer:
+            case 6:
               return (
                 "[C:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
               );
@@ -75271,47 +65338,42 @@
               _ = _ ? Number(_) : 1;
             switch (_) {
               case "I":
-                _.SetFromComponents(_, _, _._.k_EAccountTypeInvalid, _);
+                _.SetFromComponents(_, _, 0, _);
               case "g":
-                _.SetFromComponents(_, 0, _._.k_EAccountTypeClan, _);
+                _.SetFromComponents(_, 0, 7, _);
               case "A":
-                _.SetFromComponents(_, _, _._.k_EAccountTypeAnonGameServer, _);
+                _.SetFromComponents(_, _, 4, _);
               case "G":
-                _.SetFromComponents(_, _, _._.k_EAccountTypeGameServer, _);
+                _.SetFromComponents(_, _, 3, _);
               case "M":
-                _.SetFromComponents(_, _, _._.k_EAccountTypeMultiseat, _);
+                _.SetFromComponents(_, _, 2, _);
               case "P":
-                _.SetFromComponents(_, _, _._.k_EAccountTypePending, _);
+                _.SetFromComponents(_, _, 5, _);
               case "C":
-                _.SetFromComponents(_, _, _._.k_EAccountTypeContentServer, _);
+                _.SetFromComponents(_, _, 6, _);
               case "U":
-                _.SetFromComponents(_, _, _._.k_EAccountTypeIndividual, _);
+                _.SetFromComponents(_, _, 1, _);
             }
           } catch (_) {}
           return _;
         }
         BIsValid() {
           let _ = this.GetAccountType();
-          if (_ <= _._.k_EAccountTypeInvalid || _ >= _._.k_EAccountTypeMax)
-            return !1;
+          if (_ <= 0 || _ >= 11) return !1;
           let _ = this.GetUniverse();
-          if (_ <= _._.k_EUniverseInvalid || _ >= _._.k_EUniverseMax) return !1;
-          if (_ == _._.k_EAccountTypeIndividual) {
+          if (_ <= 0 || _ >= 5) return !1;
+          if (1 == _) {
             if (0 == this.GetAccountID() || this.GetInstance() > _._) return !1;
-          } else if (_ == _._.k_EAccountTypeClan) {
+          } else if (7 == _) {
             if (0 == this.GetAccountID() || 0 != this.GetInstance()) return !1;
-          } else if (
-            _ == _._.k_EAccountTypeGameServer &&
-            0 == this.GetAccountID()
-          )
-            return !1;
+          } else if (3 == _ && 0 == this.GetAccountID()) return !1;
           return !0;
         }
         BIsIndividualAccount() {
-          return this.GetAccountType() == _._.k_EAccountTypeIndividual;
+          return 1 == this.GetAccountType();
         }
         BIsClanAccount() {
-          return this.GetAccountType() == _._.k_EAccountTypeClan;
+          return 7 == this.GetAccountType();
         }
         SetAccountID(_) {
           this.m_ulSteamID = new _._(
@@ -75510,8 +65572,7 @@
         _: () => _,
         _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -75519,16 +65580,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.Sale = 0)] = "Sale"),
-          (_[(_.UpdateLandingPage = 1)] = "UpdateLandingPage"),
-          (_[(_.CreatorHome = 2)] = "CreatorHome");
-      })(_ || (_ = {}));
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       class _ {
         constructor() {
           (0, _._)(this);
@@ -75603,7 +65656,7 @@
             is_curator: _.is_curator,
             has_visible_store_page: _.has_visible_store_page,
             has_rss_feed: _.has_rss_feed,
-            rss_language: _.rss_language ? _.rss_language : _._.k_Lang_English,
+            rss_language: _.rss_language ? _.rss_language : 0,
             avatar_full_url: _.avatar_full_url,
             avatar_medium_url: _.avatar_medium_url,
             group_name: _.group_name,
@@ -75849,30 +65902,11 @@
         _: () => _,
       });
       var _,
-        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EAppDevsRelationship_Unknown = 0)] =
-          "k_EAppDevsRelationship_Unknown"),
-          (_[(_.k_EAppDevsRelationship_Publisher = 1)] =
-            "k_EAppDevsRelationship_Publisher"),
-          (_[(_.k_EAppDevsRelationship_Developer = 2)] =
-            "k_EAppDevsRelationship_Developer"),
-          (_[(_.k_EAppDevsRelationship_Publisher_Developer = 3)] =
-            "k_EAppDevsRelationship_Publisher_Developer"),
-          (_[(_.k_EAppDevsRelationship_MacPortDeveloper = 4)] =
-            "k_EAppDevsRelationship_MacPortDeveloper"),
-          (_[(_.k_EAppDevsRelationship_LinuxPortDeveloper = 5)] =
-            "k_EAppDevsRelationship_LinuxPortDeveloper"),
-          (_[(_.k_EAppDevsRelationship_Franchise = 6)] =
-            "k_EAppDevsRelationship_Franchise"),
-          (_[(_.k_EAppDevsRelationship_MAX = 7)] =
-            "k_EAppDevsRelationship_MAX");
-      })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -76043,7 +66077,7 @@
                   },
                   link: {
                     _: 2,
-                    _: _,
+                    _,
                   },
                   remove: {
                     _: 3,
@@ -76224,7 +66258,7 @@
                 fields: {
                   links: {
                     _: 1,
-                    _: _,
+                    _,
                     _: !0,
                     _: !0,
                   },
@@ -76627,40 +66661,7 @@
           });
       })(_ || (_ = {}));
       var _,
-        _,
-        _,
-        _,
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EStoreCuratorRecommendationState_Recommended = 0)] =
-          "k_EStoreCuratorRecommendationState_Recommended"),
-          (_[(_.k_EStoreCuratorRecommendationState_NotRecommended = 1)] =
-            "k_EStoreCuratorRecommendationState_NotRecommended"),
-          (_[(_.k_EStoreCuratorRecommendationState_Informative = 2)] =
-            "k_EStoreCuratorRecommendationState_Informative"),
-          (_[(_.k_EStoreCuratorRecommendationState_CreatedApp = 3)] =
-            "k_EStoreCuratorRecommendationState_CreatedApp");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStoreCuratorListType_Unknown = 0)] =
-            "k_EStoreCuratorListType_Unknown"),
-            (_[(_.k_EStoreCuratorListType_Grid = 1)] =
-              "k_EStoreCuratorListType_Grid"),
-            (_[(_.k_EStoreCuratorListType_Ordered = 2)] =
-              "k_EStoreCuratorListType_Ordered"),
-            (_[(_.k_EStoreCuratorListType_AutoDLC = 3)] =
-              "k_EStoreCuratorListType_AutoDLC"),
-            (_[(_.k_EStoreCuratorListType_SaleList = 4)] =
-              "k_EStoreCuratorListType_SaleList");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EStoreCuratorListState_Hidden = 0)] =
-            "k_EStoreCuratorListState_Hidden"),
-            (_[(_.k_EStoreCuratorListState_Public = 1)] =
-              "k_EStoreCuratorListState_Public"),
-            (_[(_.k_EStoreCuratorListState_Featured = 2)] =
-              "k_EStoreCuratorListState_Featured");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -77303,8 +67304,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_clanSteamID;
@@ -77349,10 +67348,7 @@
           };
         }
         BIsPartnerEventEditorEnabled() {
-          return Boolean(
-            this.m_clanAccountFlags &
-              _._.k_EClanAccountFlag_AllowPartnerEventEditor,
-          );
+          return Boolean(8 & this.m_clanAccountFlags);
         }
         BHasClanAccountFlagSet(_) {
           return Boolean(this.m_clanAccountFlags & _);
@@ -77425,13 +67421,7 @@
         }
         async EnablePartnerEventEditorFlag() {
           this.BIsPartnerEventEditorEnabled() ||
-            (await this.UpdateGroupFlagsFeature(
-              [
-                _._.k_EClanAccountFlag_AllowClanImages,
-                _._.k_EClanAccountFlag_AllowPartnerEventEditor,
-              ],
-              !0,
-            ));
+            (await this.UpdateGroupFlagsFeature([2, 8], !0));
         }
         async UpdateGroupFlagsFeature(_, _) {
           let _ = _._.PARTNER_BASE_URL + "sales/ajaxupdateclanaccountflags",
@@ -77444,20 +67434,13 @@
           )
             return;
           let _ = new Array();
-          _ & _._.k_EClanAccountFlag_TrustedPress &&
-            _.push(_._.k_EClanAccountFlag_TrustedPress),
-            _ & _._.k_EClanAccountFlag_AllowPartnerEventEditor &&
-              _.push(_._.k_EClanAccountFlag_AllowPartnerEventEditor),
-            _ & _._.k_EClanAccountFlag_AllowClanImages &&
-              _.push(_._.k_EClanAccountFlag_AllowClanImages),
-            _ & _._.k_EClanAccountFlag_AllowRSSFeed &&
-              _.push(_._.k_EClanAccountFlag_AllowRSSFeed),
-            _ & _._.k_EClanAccountFlag_AllowFAQEditing &&
-              _.push(_._.k_EClanAccountFlag_AllowFAQEditing),
-            _ & _._.k_EClanAccountFlag_AllowSalePageEditing &&
-              _.push(_._.k_EClanAccountFlag_AllowSalePageEditing),
-            _ & _._.k_EClanAccountFlag_AllowSalePagePublishWithoutReview &&
-              _.push(_._.k_EClanAccountFlag_AllowSalePagePublishWithoutReview);
+          1 & _ && _.push(1),
+            8 & _ && _.push(8),
+            2 & _ && _.push(2),
+            4 & _ && _.push(4),
+            16 & _ && _.push(16),
+            32 & _ && _.push(32),
+            64 & _ && _.push(64);
           let _ = new FormData();
           _.append("sessionid", _._.SESSIONID),
             _.append("clan_account_id", this.GetClanAccountID().toString()),
@@ -77465,7 +67448,7 @@
           let _ = await _().post(_, _);
           _ &&
             200 == _.status &&
-            _.data.success == _._.k_EResultOK &&
+            1 == _.data.success &&
             (this.m_clanAccountFlags = _);
         }
       }
@@ -77697,10 +67680,6 @@
         _: () => _,
       });
       var _,
-        _,
-        _,
-        _,
-        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -77853,13 +67832,13 @@
                   },
                   manifest_requests: {
                     _: 7,
-                    _: _,
+                    _,
                     _: !0,
                     _: !0,
                   },
                   package_requests: {
                     _: 8,
-                    _: _,
+                    _,
                     _: !0,
                     _: !0,
                   },
@@ -78123,49 +68102,6 @@
           return "CClientMetrics_ContentDownloadResponse_Hosts";
         }
       }
-      !(function (_) {
-        (_[(_.k_ESteamPipeOperationType_Invalid = 0)] =
-          "k_ESteamPipeOperationType_Invalid"),
-          (_[(_.k_ESteamPipeOperationType_DecryptCPU = 1)] =
-            "k_ESteamPipeOperationType_DecryptCPU"),
-          (_[(_.k_ESteamPipeOperationType_DiskRead = 2)] =
-            "k_ESteamPipeOperationType_DiskRead"),
-          (_[(_.k_ESteamPipeOperationType_DiskWrite = 3)] =
-            "k_ESteamPipeOperationType_DiskWrite");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamPipeClientWorkType_Invalid = 0)] =
-            "k_ESteamPipeClientWorkType_Invalid"),
-            (_[(_.k_ESteamPipeClientWorkType_StageFromChunkStores = 1)] =
-              "k_ESteamPipeClientWorkType_StageFromChunkStores");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EClipShareMethod_Chat = 1)] = "k_EClipShareMethod_Chat"),
-            (_[(_.k_EClipShareMethod_Clipboard = 2)] =
-              "k_EClipShareMethod_Clipboard"),
-            (_[(_.k_EClipShareMethod_File = 3)] = "k_EClipShareMethod_File"),
-            (_[(_.k_EClipShareMethod_SendClip = 4)] =
-              "k_EClipShareMethod_SendClip"),
-            (_[(_.k_EClipShareMethod_SaveToMedia = 5)] =
-              "k_EClipShareMethod_SaveToMedia"),
-            (_[(_.k_EClipShareMethod_CreateLink = 6)] =
-              "k_EClipShareMethod_CreateLink");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EClipRangeMethod_CreateClipButton = 1)] =
-            "k_EClipRangeMethod_CreateClipButton"),
-            (_[(_.k_EClipRangeMethod_Highlight = 2)] =
-              "k_EClipRangeMethod_Highlight"),
-            (_[(_.k_EClipRangeMethod_BeginEndButtons = 3)] =
-              "k_EClipRangeMethod_BeginEndButtons"),
-            (_[(_.k_EClipRangeMethod_ContextMenu = 4)] =
-              "k_EClipRangeMethod_ContextMenu"),
-            (_[(_.k_EClipRangeMethod_Drag = 5)] = "k_EClipRangeMethod_Drag"),
-            (_[(_.k_EClipRangeMethod_EntireClip = 6)] =
-              "k_EClipRangeMethod_EntireClip"),
-            (_[(_.k_EClipRangeMethod_PhaseRecording = 7)] =
-              "k_EClipRangeMethod_PhaseRecording");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -81048,7 +70984,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_CMInterface;
@@ -81118,7 +71053,7 @@
               this.m_CMInterface.GetServiceTransport(),
               _,
             );
-            (this.m_bUploading = !1), (_ = _.GetEResult() == _._.k_EResultOK);
+            (this.m_bUploading = !1), (_ = 1 == _.GetEResult());
           } else {
             if (!_._.logged_in) return;
             let _ = _.map((_) => _.toObject()),
@@ -81128,11 +71063,12 @@
               _.append("request", JSON.stringify(_));
             try {
               _ =
+                1 ==
                 (
                   await _().post(_, _, {
                     withCredentials: !0,
                   })
-                ).data.success == _._.k_EResultOK;
+                ).data.success;
             } catch (_) {
               let _ = (0, _._)(_);
               console.error(
@@ -81402,7 +71338,7 @@
                   params: _,
                   withCredentials: !0,
                 })),
-                _ && _.data.success == _._.k_EResultOK)
+                _ && 1 == _.data.success)
               ) {
                 let _ = this.m_mapClanToUserPermissions.get(_);
                 _ && this.CopyFromResponseToTrack(_, _.data);
@@ -81420,7 +71356,7 @@
                 void 0 !== _.response &&
                 void 0 !== _.response.data &&
                 void 0 !== _.response.data.success &&
-                _.response.data.success == _._.k_EResultNotLoggedOn)
+                21 == _.response.data.success)
             );
             else {
               const _ = (0, _._)(_);
@@ -81521,12 +71457,13 @@
               __webpack_require__
                 .Body()
                 .set_clan_accountid(_.clanSteamID.GetAccountID()),
-              (
-                await _._.RateClanAnnouncement(
-                  this.m_cm.GetServiceTransport(),
-                  _,
-                )
-              ).GetEResult() == _._.k_EResultOK
+              1 ==
+                (
+                  await _._.RateClanAnnouncement(
+                    this.m_cm.GetServiceTransport(),
+                    _,
+                  )
+                ).GetEResult()
             );
           }
           {
@@ -81550,7 +71487,7 @@
               withCredentials: !0,
               cancelToken: _.token,
             };
-            return (await _().post(_, _, _)).data.success == _._.k_EResultOK;
+            return 1 == (await _().post(_, _, _)).data.success;
           }
         }
         async LoadMyVote(_, _) {
@@ -81565,7 +71502,7 @@
                 this.m_cm.GetServiceTransport(),
                 _,
               );
-              _.GetEResult() == _._.k_EResultOK &&
+              1 == _.GetEResult() &&
                 (_ =
                   !!_.Body().voted_up() || (!_.Body().voted_down() && void 0));
             } else {
@@ -81621,8 +71558,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+      var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -81650,3298 +71586,30 @@
       function _(_, _) {
         _.Body().set_data_request(_._.fromObject(_));
       }
-      var _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
       !(function (_) {
-        (_[(_.k_EMarketingMessageInvalid = 0)] = "k_EMarketingMessageInvalid"),
-          (_[(_.k_EMarketingMessageNowAvailable = 1)] =
-            "k_EMarketingMessageNowAvailable"),
-          (_[(_.k_EMarketingMessageWeekendDeal = 2)] =
-            "k_EMarketingMessageWeekendDeal"),
-          (_[(_.k_EMarketingMessagePrePurchase = 3)] =
-            "k_EMarketingMessagePrePurchase"),
-          (_[(_.k_EMarketingMessagePlayNow = 4)] =
-            "k_EMarketingMessagePlayNow"),
-          (_[(_.k_EMarketingMessagePreloadNow = 5)] =
-            "k_EMarketingMessagePreloadNow"),
-          (_[(_.k_EMarketingMessageGeneral = 6)] =
-            "k_EMarketingMessageGeneral"),
-          (_[(_.k_EMarketingMessageDemoQuit = 7)] =
-            "k_EMarketingMessageDemoQuit"),
-          (_[(_.k_EMarketingMessageGifting = 8)] =
-            "k_EMarketingMessageGifting"),
-          (_[(_.k_EMarketingMessageEJsKorner = 9)] =
-            "k_EMarketingMessageEJsKorner"),
-          (_[(_.k_EMarketingMessageUpdate = 10)] = "k_EMarketingMessageUpdate"),
-          (_[(_.k_EMarketingMessageMidweekDeal = 11)] =
-            "k_EMarketingMessageMidweekDeal"),
-          (_[(_.k_EMarketingMessageDailyDeal = 12)] =
-            "k_EMarketingMessageDailyDeal"),
-          (_[(_.k_EMarketingMessageNewDLC = 13)] = "k_EMarketingMessageNewDLC"),
-          (_[(_.k_EMarketingMessageFreeWeekend = 14)] =
-            "k_EMarketingMessageFreeWeekend"),
-          (_[(_.k_EMarketingMessageSalePages = 15)] =
-            "k_EMarketingMessageSalePages"),
-          (_[(_.k_EMarketingMessagePlaytestAvailable = 16)] =
-            "k_EMarketingMessagePlaytestAvailable");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EMarketingMessageNoAssociation = 0)] =
-            "k_EMarketingMessageNoAssociation"),
-            (_[(_.k_EMarketingMessageAppAssociation = 1)] =
-              "k_EMarketingMessageAppAssociation"),
-            (_[(_.k_EMarketingMessageSubscriptionAssociation = 2)] =
-              "k_EMarketingMessageSubscriptionAssociation"),
-            (_[(_.k_EMarketingMessagePublisherAssociation = 3)] =
-              "k_EMarketingMessagePublisherAssociation"),
-            (_[(_.k_EMarketingMessageGenreAssociation = 4)] =
-              "k_EMarketingMessageGenreAssociation"),
-            (_[(_.k_EMarketingMessageBundleAssociation = 5)] =
-              "k_EMarketingMessageBundleAssociation");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EMarketingMessageVisibleBeta = 1)] =
-            "k_EMarketingMessageVisibleBeta"),
-            (_[(_.k_EMarketingMessageVisiblePublic = 2)] =
-              "k_EMarketingMessageVisiblePublic"),
-            (_[(_.k_EMarketingMessageVisibleApprovedForPublish = 3)] =
-              "k_EMarketingMessageVisibleApprovedForPublish");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EMarketingMessageLookupInvalid = 0)] =
-            "k_EMarketingMessageLookupInvalid"),
-            (_[(_.k_EMarketingMessageLookupByGID = 1)] =
-              "k_EMarketingMessageLookupByGID"),
-            (_[(_.k_EMarketingMessageLookupActive = 2)] =
-              "k_EMarketingMessageLookupActive"),
-            (_[(_.k_EMarketingMessageLookupByTitleWithType = 3)] =
-              "k_EMarketingMessageLookupByTitleWithType"),
-            (_[(_.k_EMarketingMessageLookupByGIDList = 4)] =
-              "k_EMarketingMessageLookupByGIDList");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EMarketingMessageValidRealms_GlobalOnly = 0)] =
-            "k_EMarketingMessageValidRealms_GlobalOnly"),
-            (_[(_.k_EMarketingMessageValidRealms_SteamChinaOnly = 1)] =
-              "k_EMarketingMessageValidRealms_SteamChinaOnly"),
-            (_[(_.k_EMarketingMessageValidRealms_GlobalAndSteamChina = 2)] =
-              "k_EMarketingMessageValidRealms_GlobalAndSteamChina");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EMarketingMessageFilterType_Invalid = 0)] =
-            "k_EMarketingMessageFilterType_Invalid"),
-            (_[(_.k_EMarketingMessageFilterType_OwnsApps = 1)] =
-              "k_EMarketingMessageFilterType_OwnsApps"),
-            (_[(_.k_EMarketingMessageFilterType_DoesNotOwnApps = 2)] =
-              "k_EMarketingMessageFilterType_DoesNotOwnApps"),
-            (_[(_.k_EMarketingMessageFilterType_OwnsPackages = 3)] =
-              "k_EMarketingMessageFilterType_OwnsPackages"),
-            (_[(_.k_EMarketingMessageFilterType_DoesNotOwnsPackages = 4)] =
-              "k_EMarketingMessageFilterType_DoesNotOwnsPackages"),
-            (_[(_.k_EMarketingMessageFilterType_WishlistsApps = 5)] =
-              "k_EMarketingMessageFilterType_WishlistsApps"),
-            (_[(_.k_EMarketingMessageFilterType_FollowsApps = 6)] =
-              "k_EMarketingMessageFilterType_FollowsApps"),
-            (_[(_.k_EMarketingMessageFilterType_MinPlayTimeApps = 7)] =
-              "k_EMarketingMessageFilterType_MinPlayTimeApps"),
-            (_[(_.k_EMarketingMessageFilterType_MustLaunchedApps = 8)] =
-              "k_EMarketingMessageFilterType_MustLaunchedApps"),
-            (_[(_.k_EMarketingMessageFilterType_RecentPlayedApps = 9)] =
-              "k_EMarketingMessageFilterType_RecentPlayedApps"),
-            (_[(_.k_EMarketingMessageFilterType_RetentionApps = 10)] =
-              "k_EMarketingMessageFilterType_RetentionApps"),
-            (_[(_.k_EMarketingMessageFilterType_SimilarApps = 11)] =
-              "k_EMarketingMessageFilterType_SimilarApps"),
-            (_[(_.k_EMarketingMessageFilterType_MAX = 12)] =
-              "k_EMarketingMessageFilterType_MAX");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EMarketingMessageTemplate_Unknown = 0)] =
-            "k_EMarketingMessageTemplate_Unknown"),
-            (_[(_.k_EMarketingMessageTemplate_Image = 1)] =
-              "k_EMarketingMessageTemplate_Image"),
-            (_[(_.k_EMarketingMessageTemplate_Animated = 2)] =
-              "k_EMarketingMessageTemplate_Animated"),
-            (_[(_.k_EMarketingMessageTemplate_Featured_Video = 3)] =
-              "k_EMarketingMessageTemplate_Featured_Video"),
-            (_[(_.k_EMarketingMessageTemplate_DLC_Override = 4)] =
-              "k_EMarketingMessageTemplate_DLC_Override"),
-            (_[(_.k_EMarketingMessageTemplate_Replay = 5)] =
-              "k_EMarketingMessageTemplate_Replay"),
-            (_[(_.k_EMarketingMessageTemplate_Event = 6)] =
-              "k_EMarketingMessageTemplate_Event"),
-            (_[(_.k_EMarketingMessageTemplate_AutoRender = 7)] =
-              "k_EMarketingMessageTemplate_AutoRender"),
-            (_[(_.k_EMarketingMessageTemplate_MAX = 8)] =
-              "k_EMarketingMessageTemplate_MAX");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EMarketingMessageClickLocation_Unknown = 0)] =
-            "k_EMarketingMessageClickLocation_Unknown"),
-            (_[(_.k_EMarketingMessageClickLocation_Image = 1)] =
-              "k_EMarketingMessageClickLocation_Image"),
-            (_[(_.k_EMarketingMessageClickLocation_Button = 2)] =
-              "k_EMarketingMessageClickLocation_Button"),
-            (_[(_.k_EMarketingMessageClickLocation_DlcCapsule = 3)] =
-              "k_EMarketingMessageClickLocation_DlcCapsule"),
-            (_[(_.k_EMarketingMessageClickLocation_HeaderArea = 4)] =
-              "k_EMarketingMessageClickLocation_HeaderArea"),
-            (_[(_.k_EMarketingMessageClickLocation_GameCapsule = 5)] =
-              "k_EMarketingMessageClickLocation_GameCapsule"),
-            (_[(_.k_EMarketingMessageClickLocation_PartnerEvent = 6)] =
-              "k_EMarketingMessageClickLocation_PartnerEvent");
-        })(_ || (_ = {}));
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  title: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  type: {
-                    _: 3,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  visibility: {
-                    _: 4,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  priority: {
-                    _: 5,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  association_type: {
-                    _: 6,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  associated_id: {
-                    _: 7,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  associated_name: {
-                    _: 8,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  start_date: {
-                    _: 9,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  end_date: {
-                    _: 10,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  country_allow: {
-                    _: 11,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  country_deny: {
-                    _: 12,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  ownership_restrictions_overridden: {
-                    _: 13,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  must_own_appid: {
-                    _: 14,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  must_not_own_appid: {
-                    _: 15,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  must_own_packageid: {
-                    _: 16,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  must_not_own_packageid: {
-                    _: 17,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  must_have_launched_appid: {
-                    _: 18,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  additional_restrictions: {
-                    _: 19,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  template_type: {
-                    _: 20,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  template_vars: {
-                    _: 21,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  flags: {
-                    _: 22,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  creator_name: {
-                    _: 23,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  template_vars_json: {
-                    _: 24,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  additional_restrictions_json: {
-                    _: 25,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessageProto";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  title: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  type: {
-                    _: 3,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  associated_item_id: {
-                    _: 4,
-                    _: _._,
-                  },
-                  associated_item: {
-                    _: 5,
-                    _: _._,
-                  },
-                  associated_name: {
-                    _: 6,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  template_type: {
-                    _: 10,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  template_vars_json: {
-                    _: 11,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CDisplayMarketingMessage";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.country || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  country: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  anonymous_user: {
-                    _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetActiveMarketingMessages_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.messages || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  messages: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  time_next_message_age: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetActiveMarketingMessages_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.start_past_days || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  start_past_days: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  upto_past_days: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetPastMarketingMessages_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.messages || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  messages: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetPastMarketingMessages_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.include_seen_messages || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  include_seen_messages: {
-                    _: 1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  country_code: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  elanguage: {
-                    _: 3,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  operating_system: {
-                    _: 4,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  client_package_version: {
-                    _: 5,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  context: {
-                    _: 6,
-                    _: _._,
-                  },
-                  data_request: {
-                    _: 7,
-                    _: _._,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessagesForUser_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.messages || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  messages: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessagesForUser_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.already_seen || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  already_seen: {
-                    _: 1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  message: {
-                    _: 2,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessagesForUser_Response_MarketingMessageForUser";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.country_code || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  country_code: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  elanguage: {
-                    _: 3,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  operating_system: {
-                    _: 4,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  client_package_version: {
-                    _: 5,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_DoesUserHavePendingMarketingMessages_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.has_pending_messages || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  has_pending_messages: {
-                    _: 1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  pending_message_count: {
-                    _: 2,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_DoesUserHavePendingMarketingMessages_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  context: {
-                    _: 2,
-                    _: _._,
-                  },
-                  data_request: {
-                    _: 3,
-                    _: _._,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetDisplayMarketingMessage_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.message || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  message: {
-                    _: 1,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetDisplayMarketingMessage_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  display_index: {
-                    _: 2,
-                    _: 0,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  template_type: {
-                    _: 3,
-                    _: _.k_EMarketingMessageTemplate_Unknown,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_MarkMessageSeen_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  display_index: {
-                    _: 2,
-                    _: 0,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  template_type: {
-                    _: 3,
-                    _: _.k_EMarketingMessageTemplate_Unknown,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  click_location: {
-                    _: 4,
-                    _: _.k_EMarketingMessageClickLocation_Unknown,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_MarkMessageClicked_Notification";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessage_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.message || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  message: {
-                    _: 1,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessage_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.lookup_type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [4], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  lookup_type: {
-                    _: 1,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  gid: {
-                    _: 2,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  message_type: {
-                    _: 3,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  gidlist: {
-                    _: 4,
-                    _: !0,
-                    _: !0,
-                    _: _._.readFixed64String,
-                    pbr: _._.readPackedFixed64String,
-                    _: _._.writeRepeatedFixed64String,
-                  },
-                  title: {
-                    _: 5,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_FindMarketingMessages_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.messages || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  messages: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_FindMarketingMessages_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.message || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  message: {
-                    _: 1,
-                    _: _,
-                  },
-                  from_json: {
-                    _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_CreateMarketingMessage_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_CreateMarketingMessage_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  message: {
-                    _: 2,
-                    _: _,
-                  },
-                  from_json: {
-                    _: 3,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_UpdateMarketingMessage_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_UpdateMarketingMessage_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_DeleteMarketingMessage_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_DeleteMarketingMessage_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessageViewerStats_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.rt_time_hour || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  rt_time_hour: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  seen_count: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  template_type: {
-                    _: 3,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  display_index: {
-                    _: 4,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessageHourlyStats";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.stats || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  stats: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessageViewerStats_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.rt_start_time || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  rt_start_time: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  rt_end_time: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.rt_time_hour || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  rt_time_hour: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  clicked_count: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  display_index: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  template_type: {
-                    _: 4,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  click_location: {
-                    _: 5,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessageClickedHourlyStats";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.stats || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  stats: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  clicked_stats: {
-                    _: 2,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessageClickedStats_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.stats || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  stats: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetMarketingMessageClickedStats_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.partnerid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  partnerid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetPartnerReadyToPublishMessages_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.messages || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  messages: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetPartnerReadyToPublishMessages_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  partnerid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_PartnerPublishMessage_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_PartnerPublishMessage_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.gid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  gid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  partnerid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetPartnerMessagePreview_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.message || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  message: {
-                    _: 1,
-                    _: _,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessages_GetPartnerMessagePreview_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appids || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appids: {
-                    _: 1,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessage_GetMarketingMessagesForApps_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.messages || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  messages: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessage_GetMarketingMessagesForApps_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.partnerid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  partnerid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessage_GetMarketingMessagesForPartner_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.messages || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  messages: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CMarketingMessage_GetMarketingMessagesForPartner_Response";
-        }
-      }
-      !(function (_) {
-        (_.GetActiveMarketingMessages = function (_, _) {
-          return _.SendMsg(
-            "MarketingMessages.GetActiveMarketingMessages#1",
-            (0, _._)(_, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 0,
-              eWebAPIKeyRequirement: 1,
-            },
-          );
-        }),
-          (_.GetPastMarketingMessages = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetPastMarketingMessages#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 4,
-              },
-            );
-          }),
-          (_.GetMarketingMessagesForUser = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetMarketingMessagesForUser#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.DoesUserHavePendingMarketingMessages = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.DoesUserHavePendingMarketingMessages#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetDisplayMarketingMessage = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetDisplayMarketingMessage#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 0,
-                eWebAPIKeyRequirement: 1,
-              },
-            );
-          }),
-          (_.GetDisplayMarketingMessageForUser = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetDisplayMarketingMessageForUser#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetDisplayMarketingMessageAdmin = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetDisplayMarketingMessageAdmin#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 4,
-              },
-            );
-          }),
-          (_.MarkMessageSeen = function (_, _) {
-            return _.SendNotification(
-              "MarketingMessages.MarkMessageSeen#1",
-              (0, _._)(_, _),
-              {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.MarkMessageClicked = function (_, _) {
-            return _.SendNotification(
-              "MarketingMessages.MarkMessageClicked#1",
-              (0, _._)(_, _),
-              {
-                ePrivilege: 1,
-              },
-            );
-          }),
-          (_.GetMarketingMessage = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetMarketingMessage#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 2,
-                eWebAPIKeyRequirement: 1,
-              },
-            );
-          }),
-          (_.CreateMarketingMessage = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.CreateMarketingMessage#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 4,
-              },
-            );
-          }),
-          (_.UpdateMarketingMessage = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.UpdateMarketingMessage#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 5,
-              },
-            );
-          }),
-          (_.DeleteMarketingMessage = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.DeleteMarketingMessage#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 4,
-              },
-            );
-          }),
-          (_.FindMarketingMessages = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.FindMarketingMessages#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 5,
-              },
-            );
-          }),
-          (_.GetMarketingMessageViewerStats = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetMarketingMessageViewerStats#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 4,
-              },
-            );
-          }),
-          (_.GetMarketingMessagesViewerRangeStats = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetMarketingMessagesViewerRangeStats#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 4,
-              },
-            );
-          }),
-          (_.GetMarketingMessageClickedStats = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetMarketingMessageClickedStats#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 4,
-              },
-            );
-          }),
-          (_.GetPartnerReadyToPublishMessages = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetPartnerReadyToPublishMessages#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-                eWebAPIKeyRequirement: 2,
-              },
-            );
-          }),
-          (_.PublishPartnerMessage = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.PublishPartnerMessage#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-                eWebAPIKeyRequirement: 2,
-              },
-            );
-          }),
-          (_.GetPartnerMessagePreview = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetPartnerMessagePreview#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-                eWebAPIKeyRequirement: 2,
-              },
-            );
-          }),
-          (_.GetMarketingMessagesForPartner = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetMarketingMessagesForPartner#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-                eWebAPIKeyRequirement: 2,
-              },
-            );
-          }),
-          (_.GetMarketingMessagesForApps = function (_, _) {
-            return _.SendMsg(
-              "MarketingMessages.GetMarketingMessagesForApps#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 4,
-              },
-            );
-          });
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_NotRejected = -1)] = "k_NotRejected"),
-            (_[(_.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
-            (_[(_.k_RejectWrongPlatform = 1)] = "k_RejectWrongPlatform"),
-            (_[(_.k_RejectNoComingSoon = 2)] = "k_RejectNoComingSoon"),
-            (_[(_.k_RejectNoVR = 3)] = "k_RejectNoVR"),
-            (_[(_.k_RejectCreatorClan = 4)] = "k_RejectCreatorClan"),
-            (_[(_.k_RejectIgnoredGame = 5)] = "k_RejectIgnoredGame"),
-            (_[(_.k_RejectSupportedLanguage = 6)] =
-              "k_RejectSupportedLanguage"),
-            (_[(_.k_RejectNotLoaded = 7)] = "k_RejectNotLoaded"),
-            (_[(_.k_RejectIgnoreGameTags = 8)] = "k_RejectIgnoreGameTags"),
-            (_[(_.k_RejectIgnoreContentDescriptors = 9)] =
-              "k_RejectIgnoreContentDescriptors"),
-            (_[(_.k_RejectEarlyAccess = 10)] = "k_RejectEarlyAccess"),
-            (_[(_.k_RejectSoftware = 11)] = "k_RejectSoftware"),
-            (_[(_.k_RejectDLC = 12)] = "k_RejectDLC"),
-            (_[(_.k_RejectInLibrary = 13)] = "k_RejectInLibrary"),
-            (_[(_.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
-            (_[(_.k_RejectVideo = 15)] = "k_RejectVideo"),
-            (_[(_.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
-            (_[(_.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed"),
-            (_[(_.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
-            (_[(_.k_RejectAO = 19)] = "k_RejectAO");
-        })(_ || (_ = {}));
+        (_[(_.k_NotRejected = -1)] = "k_NotRejected"),
+          (_[(_.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
+          (_[(_.k_RejectWrongPlatform = 1)] = "k_RejectWrongPlatform"),
+          (_[(_.k_RejectNoComingSoon = 2)] = "k_RejectNoComingSoon"),
+          (_[(_.k_RejectNoVR = 3)] = "k_RejectNoVR"),
+          (_[(_.k_RejectCreatorClan = 4)] = "k_RejectCreatorClan"),
+          (_[(_.k_RejectIgnoredGame = 5)] = "k_RejectIgnoredGame"),
+          (_[(_.k_RejectSupportedLanguage = 6)] = "k_RejectSupportedLanguage"),
+          (_[(_.k_RejectNotLoaded = 7)] = "k_RejectNotLoaded"),
+          (_[(_.k_RejectIgnoreGameTags = 8)] = "k_RejectIgnoreGameTags"),
+          (_[(_.k_RejectIgnoreContentDescriptors = 9)] =
+            "k_RejectIgnoreContentDescriptors"),
+          (_[(_.k_RejectEarlyAccess = 10)] = "k_RejectEarlyAccess"),
+          (_[(_.k_RejectSoftware = 11)] = "k_RejectSoftware"),
+          (_[(_.k_RejectDLC = 12)] = "k_RejectDLC"),
+          (_[(_.k_RejectInLibrary = 13)] = "k_RejectInLibrary"),
+          (_[(_.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
+          (_[(_.k_RejectVideo = 15)] = "k_RejectVideo"),
+          (_[(_.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
+          (_[(_.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed"),
+          (_[(_.k_RejectNoTrailer = 18)] = "k_RejectNoTrailer"),
+          (_[(_.k_RejectAO = 19)] = "k_RejectAO");
+      })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -85030,8 +71698,7 @@
             (this.m_strStoreURLPathOverride = _.store_url_path_override()),
             (this.m_freeWeekend = _.free_weekend()?.toObject()),
             (this.m_strInternalName = _.internal_name()),
-            (this.m_eItemType != _._.k_EStoreItemType_Package &&
-              this.m_eItemType != _._.k_EStoreItemType_Bundle) ||
+            (1 != this.m_eItemType && 2 != this.m_eItemType) ||
               (this.m_SelfPurchaseOption = _.self_purchase_option(!1)
                 ? _.self_purchase_option().toObject()
                 : this.m_BestPurchaseOption),
@@ -85136,13 +71803,13 @@
               this.BContainDataRequest(_),
               `Requested data without for ${(function (_) {
                 switch (_) {
-                  case _._.k_EStoreItemType_App:
+                  case 0:
                     return "app";
-                  case _._.k_EStoreItemType_Bundle:
+                  case 2:
                     return "bundle";
-                  case _._.k_EStoreItemType_Package:
+                  case 1:
                     return "package";
-                  case _._.k_EStoreItemType_Mtx:
+                  case 3:
                     return "mtx";
                 }
                 return "invalid";
@@ -85200,31 +71867,26 @@
         }
         GetAppIDToRun() {
           const _ = this.GetParentAppID();
-          return _ && this.m_eAppType != _._.k_EStoreAppType_Music
-            ? _
-            : this.GetAppID();
+          return _ && 11 != this.m_eAppType ? _ : this.GetAppID();
         }
         GetAppType() {
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return (
-            this.GetAppType() == _._.k_EStoreAppType_Software ||
-            this.GetAppType() == _._.k_EStoreAppType_Tool
-          );
+          return 6 == this.GetAppType() || 13 == this.GetAppType();
         }
         k_regexSalePage =
           /^https?:\/\/[^\/]*(?:valvesoftware|steampowered).com\/(?:(curator|dev|developer|pub|publisher|franchise)\/[0-9a-zA-Z\-_]+\/)?sale\//;
         BIsSalePage() {
           return (
-            this.GetStoreItemType() === _._.k_EStoreItemType_App &&
+            0 === this.GetStoreItemType() &&
             this.k_regexSalePage.test(this.GetStorePageURLWithOverride())
           );
         }
         GetSalePageVanityURL() {
           let _ = this.GetStorePageURLWithOverride();
           return (
-            this.GetStoreItemType() === _._.k_EStoreItemType_App &&
+            0 === this.GetStoreItemType() &&
               ((_ = this.GetStorePageURLWithOverride().replace(
                 this.k_regexSalePage,
                 "",
@@ -85240,7 +71902,7 @@
           return this.m_rgIncludedAppIDs;
         }
         GetIncludedAppIDsOrSelf() {
-          return this.GetStoreItemType() == _._.k_EStoreItemType_App
+          return 0 == this.GetStoreItemType()
             ? [this.GetID()]
             : this.GetIncludedAppIDs();
         }
@@ -86017,7 +72679,7 @@
       async function _(_, _) {
         const _ = await _,
           _ = await _;
-        return _ != _._.k_EResultOK ? _ : _;
+        return 1 != _ ? _ : _;
       }
       class _ {
         k_QueueWaitUntilRequestMS = 5;
@@ -86058,9 +72720,9 @@
         m_PendingInfoPromise;
         m_PendingInfoResolve = void 0;
         m_PendingTimer = void 0;
-        k_AlreadyResolvedOK = Promise.resolve(_._.k_EResultOK);
-        k_AlreadyResolvedInvalid = Promise.resolve(_._.k_EResultInvalidParam);
-        k_AlreadyResolvedBusy = Promise.resolve(_._.k_EResultBusy);
+        k_AlreadyResolvedOK = Promise.resolve(1);
+        k_AlreadyResolvedInvalid = Promise.resolve(8);
+        k_AlreadyResolvedBusy = Promise.resolve(10);
         static sm_instance;
         static Get() {
           return (
@@ -86154,26 +72816,22 @@
           include_links: !0,
         };
         async QueueAppRequest(_, _) {
-          return this.QueueStoreItemRequest(_, _._.k_EStoreItemType_App, _);
+          return this.QueueStoreItemRequest(_, 0, _);
         }
         async QueuePackageRequest(_, _) {
-          return this.QueueStoreItemRequest(_, _._.k_EStoreItemType_Package, _);
+          return this.QueueStoreItemRequest(_, 1, _);
         }
         async QueueBundleRequest(_, _) {
-          return this.QueueStoreItemRequest(_, _._.k_EStoreItemType_Bundle, _);
+          return this.QueueStoreItemRequest(_, 2, _);
         }
         async QueueTagRequest(_, _) {
-          return this.QueueStoreItemRequest(_, _._.k_EStoreItemType_Tag, _);
+          return this.QueueStoreItemRequest(_, 4, _);
         }
         async QueueCreatorRequest(_, _) {
-          return this.QueueStoreItemRequest(_, _._.k_EStoreItemType_Creator, _);
+          return this.QueueStoreItemRequest(_, 5, _);
         }
         async QueueHubCategoryRequest(_, _) {
-          return this.QueueStoreItemRequest(
-            _,
-            _._.k_EStoreItemType_HubCategory,
-            _,
-          );
+          return this.QueueStoreItemRequest(_, 6, _);
         }
         static ValidateDataRequest(_) {
           const _ = [
@@ -86193,83 +72851,55 @@
           return !0;
         }
         async QueueMultipleAppRequests(_, _) {
-          if (!_ || 0 == _.length) return _._.k_EResultOK;
+          if (!_ || 0 == _.length) return 1;
           const _ = (
-            await Promise.all(
-              _.map((_) =>
-                this.QueueStoreItemRequest(_, _._.k_EStoreItemType_App, _),
-              ),
-            )
-          ).filter((_) => _ != _._.k_EResultOK);
-          return _.length > 0 ? _[0] : _._.k_EResultOK;
+            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 0, _)))
+          ).filter((_) => 1 != _);
+          return _.length > 0 ? _[0] : 1;
         }
         async QueueMultiplePackageRequests(_, _) {
-          if (!_ || 0 == _.length) return _._.k_EResultOK;
+          if (!_ || 0 == _.length) return 1;
           const _ = (
-            await Promise.all(
-              _.map((_) =>
-                this.QueueStoreItemRequest(_, _._.k_EStoreItemType_Package, _),
-              ),
-            )
-          ).filter((_) => _ != _._.k_EResultOK);
-          return _.length > 0 ? _[0] : _._.k_EResultOK;
+            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 1, _)))
+          ).filter((_) => 1 != _);
+          return _.length > 0 ? _[0] : 1;
         }
         async QueueMultipleBundleRequests(_, _) {
-          if (!_ || 0 == _.length) return _._.k_EResultOK;
+          if (!_ || 0 == _.length) return 1;
           const _ = (
-            await Promise.all(
-              _.map((_) =>
-                this.QueueStoreItemRequest(_, _._.k_EStoreItemType_Bundle, _),
-              ),
-            )
-          ).filter((_) => _ != _._.k_EResultOK);
-          return _.length > 0 ? _[0] : _._.k_EResultOK;
+            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 2, _)))
+          ).filter((_) => 1 != _);
+          return _.length > 0 ? _[0] : 1;
         }
         async QueueMultipleTagRequests(_, _) {
-          if (!_ || 0 == _.length) return _._.k_EResultOK;
+          if (!_ || 0 == _.length) return 1;
           const _ = (
-            await Promise.all(
-              _.map((_) =>
-                this.QueueStoreItemRequest(_, _._.k_EStoreItemType_Tag, _),
-              ),
-            )
-          ).filter((_) => _ != _._.k_EResultOK);
-          return _.length > 0 ? _[0] : _._.k_EResultOK;
+            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 4, _)))
+          ).filter((_) => 1 != _);
+          return _.length > 0 ? _[0] : 1;
         }
         async QueueMultipleCreatorRequests(_, _) {
-          if (!_ || 0 == _.length) return _._.k_EResultOK;
+          if (!_ || 0 == _.length) return 1;
           const _ = (
-            await Promise.all(
-              _.map((_) =>
-                this.QueueStoreItemRequest(_, _._.k_EStoreItemType_Creator, _),
-              ),
-            )
-          ).filter((_) => _ != _._.k_EResultOK);
-          return _.length > 0 ? _[0] : _._.k_EResultOK;
+            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 5, _)))
+          ).filter((_) => 1 != _);
+          return _.length > 0 ? _[0] : 1;
         }
         async QueueMultipleHubCategoryRequests(_, _) {
-          if (!_ || 0 == _.length) return _._.k_EResultOK;
+          if (!_ || 0 == _.length) return 1;
           const _ = (
-            await Promise.all(
-              _.map((_) =>
-                this.QueueStoreItemRequest(
-                  _,
-                  _._.k_EStoreItemType_HubCategory,
-                  _,
-                ),
-              ),
-            )
-          ).filter((_) => _ != _._.k_EResultOK);
-          return _.length > 0 ? _[0] : _._.k_EResultOK;
+            await Promise.all(_.map((_) => this.QueueStoreItemRequest(_, 6, _)))
+          ).filter((_) => 1 != _);
+          return _.length > 0 ? _[0] : 1;
         }
         async QueueMultipleStoreItemRequests(_, _, _) {
-          if (!_ || 0 == _.length) return _._.k_EResultOK;
+          if (!_ || 0 == _.length) return 1;
           const _ = (
             await Promise.all(
               _.map((_, _) => this.QueueStoreItemRequest(_, _[_], _)),
             )
-          ).filter((_) => _ != _._.k_EResultOK);
-          return _.length > 0 ? _[0] : _._.k_EResultOK;
+          ).filter((_) => 1 != _);
+          return _.length > 0 ? _[0] : 1;
         }
         async QueueStoreItemRequest(_, _, _) {
           if (
@@ -86308,22 +72938,22 @@
             (this.m_setPendingDataRequest = _(this.m_setPendingDataRequest, _)),
             _)
           ) {
-            case _._.k_EStoreItemType_App:
+            case 0:
               this.m_setPendingAppInfo.add(_);
               break;
-            case _._.k_EStoreItemType_Bundle:
+            case 2:
               this.m_setPendingBundleInfo.add(_);
               break;
-            case _._.k_EStoreItemType_Package:
+            case 1:
               this.m_setPendingPackageInfo.add(_);
               break;
-            case _._.k_EStoreItemType_Tag:
+            case 4:
               this.m_setPendingTagInfo.add(_);
               break;
-            case _._.k_EStoreItemType_Creator:
+            case 5:
               this.m_setPendingCreatorInfo.add(_);
               break;
-            case _._.k_EStoreItemType_HubCategory:
+            case 6:
               this.m_setPendingHubCategoryInfo.add(_);
               break;
             default:
@@ -86376,22 +73006,22 @@
             return this.k_AlreadyResolvedOK;
           let _ = null;
           switch (_) {
-            case _._.k_EStoreItemType_App:
+            case 0:
               _ = this.m_mapAppsInFlight.get(_);
               break;
-            case _._.k_EStoreItemType_Package:
+            case 1:
               _ = this.m_mapPackageInFlight.get(_);
               break;
-            case _._.k_EStoreItemType_Bundle:
+            case 2:
               _ = this.m_mapBundleInFlight.get(_);
               break;
-            case _._.k_EStoreItemType_Tag:
+            case 4:
               _ = this.m_mapTagsInFlight.get(_);
               break;
-            case _._.k_EStoreItemType_Creator:
+            case 5:
               _ = this.m_mapCreatorsInFlight.get(_);
               break;
-            case _._.k_EStoreItemType_HubCategory:
+            case 6:
               _ = this.m_mapHubCategoriesInFlight.get(_);
           }
           return _ && _.BDataRequestContainsOtherDataRequest(_.dataRequest, _)
@@ -86404,11 +73034,7 @@
           let _ = [],
             _ = [];
           (_ || []).forEach((_) => {
-            const _ = this.GetPreviousSupersetLoadPromise(
-              _,
-              _._.k_EStoreItemType_App,
-              _,
-            );
+            const _ = this.GetPreviousSupersetLoadPromise(_, 0, _);
             if (_) _.push(_);
             else {
               _.push(
@@ -86416,10 +73042,7 @@
                   appid: _,
                 }),
               );
-              let _ = _(
-                this.GetStoreItemDataRequest(_, _._.k_EStoreItemType_App),
-                _,
-              );
+              let _ = _(this.GetStoreItemDataRequest(_, 0), _);
               const _ = this.m_mapAppsInFlight.get(_);
               (_ = _(_?.dataRequest, _)),
                 _ && _.push(_.promise),
@@ -86430,11 +73053,7 @@
             }
           }),
             (_ || []).forEach((_) => {
-              const _ = this.GetPreviousSupersetLoadPromise(
-                _,
-                _._.k_EStoreItemType_Package,
-                _,
-              );
+              const _ = this.GetPreviousSupersetLoadPromise(_, 1, _);
               if (_) _.push(_);
               else {
                 _.push(
@@ -86442,10 +73061,7 @@
                     packageid: _,
                   }),
                 );
-                let _ = _(
-                  this.GetStoreItemDataRequest(_, _._.k_EStoreItemType_Package),
-                  _,
-                );
+                let _ = _(this.GetStoreItemDataRequest(_, 1), _);
                 const _ = this.m_mapPackageInFlight.get(_);
                 (_ = _(_?.dataRequest, _)),
                   _ && _.push(_.promise),
@@ -86456,11 +73072,7 @@
               }
             }),
             (_ || []).forEach((_) => {
-              const _ = this.GetPreviousSupersetLoadPromise(
-                _,
-                _._.k_EStoreItemType_Bundle,
-                _,
-              );
+              const _ = this.GetPreviousSupersetLoadPromise(_, 2, _);
               if (_) _.push(_);
               else {
                 _.push(
@@ -86468,10 +73080,7 @@
                     bundleid: _,
                   }),
                 );
-                let _ = _(
-                  this.GetStoreItemDataRequest(_, _._.k_EStoreItemType_Bundle),
-                  _,
-                );
+                let _ = _(this.GetStoreItemDataRequest(_, 2), _);
                 const _ = this.m_mapBundleInFlight.get(_);
                 (_ = _(_?.dataRequest, _)),
                   _ && _.push(_.promise),
@@ -86482,11 +73091,7 @@
               }
             }),
             (_ || []).forEach((_) => {
-              const _ = this.GetPreviousSupersetLoadPromise(
-                _,
-                _._.k_EStoreItemType_Tag,
-                _,
-              );
+              const _ = this.GetPreviousSupersetLoadPromise(_, 4, _);
               if (_) _.push(_);
               else {
                 _.push(
@@ -86494,10 +73099,7 @@
                     tagid: _,
                   }),
                 );
-                let _ = _(
-                  this.GetStoreItemDataRequest(_, _._.k_EStoreItemType_Tag),
-                  _,
-                );
+                let _ = _(this.GetStoreItemDataRequest(_, 4), _);
                 const _ = this.m_mapTagsInFlight.get(_);
                 (_ = _(_?.dataRequest, _)),
                   _ && _.push(_.promise),
@@ -86508,11 +73110,7 @@
               }
             }),
             (_ || []).forEach((_) => {
-              const _ = this.GetPreviousSupersetLoadPromise(
-                _,
-                _._.k_EStoreItemType_Creator,
-                _,
-              );
+              const _ = this.GetPreviousSupersetLoadPromise(_, 5, _);
               if (_) _.push(_);
               else {
                 _.push(
@@ -86520,10 +73118,7 @@
                     creatorid: _,
                   }),
                 );
-                let _ = _(
-                  this.GetStoreItemDataRequest(_, _._.k_EStoreItemType_Creator),
-                  _,
-                );
+                let _ = _(this.GetStoreItemDataRequest(_, 5), _);
                 const _ = this.m_mapCreatorsInFlight.get(_);
                 (_ = _(_?.dataRequest, _)),
                   _ && _.push(_.promise),
@@ -86534,11 +73129,7 @@
               }
             }),
             (_ || []).forEach((_) => {
-              const _ = this.GetPreviousSupersetLoadPromise(
-                _,
-                _._.k_EStoreItemType_HubCategory,
-                _,
-              );
+              const _ = this.GetPreviousSupersetLoadPromise(_, 6, _);
               if (_) _.push(_);
               else {
                 _.push(
@@ -86546,13 +73137,7 @@
                     hubcategoryid: _,
                   }),
                 );
-                let _ = _(
-                  this.GetStoreItemDataRequest(
-                    _,
-                    _._.k_EStoreItemType_HubCategory,
-                  ),
-                  _,
-                );
+                let _ = _(this.GetStoreItemDataRequest(_, 6), _);
                 const _ = this.m_mapHubCategoriesInFlight.get(_);
                 (_ = _(_?.dataRequest, _)),
                   _ && _.push(_.promise),
@@ -86562,7 +73147,7 @@
                   });
               }
             });
-          let _ = _._.k_EResultOK;
+          let _ = 1;
           if (
             (_.length > 0 &&
               (_ = await this.InternalHandleLoadStoreItems(_, _)),
@@ -86570,8 +73155,7 @@
             _.length > 0)
           ) {
             const _ = await Promise.all(_);
-            for (const _ of _)
-              _ != _._.k_EResultOK && _ == _._.k_EResultOK && (_ = _);
+            for (const _ of _) 1 != _ && 1 == _ && (_ = _);
           }
           return (
             (_ || []).forEach((_) => this.m_mapAppsInFlight.delete(_)),
@@ -86646,7 +73230,7 @@
           );
         }
         async InternalHandleLoadStoreItems(_, _) {
-          let _ = _._.k_EResultOK;
+          let _ = 1;
           (_ = this.SortStoreItems(_)),
             _.include_included_items &&
               (_ = {
@@ -86678,7 +73262,7 @@
               }
             }
             (await Promise.all(_)).forEach((_, _) => {
-              _.GetEResult() == _._.k_EResultOK
+              1 == _.GetEResult()
                 ? _.Body()
                     .store_items()
                     .forEach((_) => {
@@ -86686,10 +73270,9 @@
                         _ = __webpack_require__.item_type();
                       let _ =
                           this.m_bReturnUnavailableItems &&
-                          __webpack_require__.success() ==
-                            _._.k_EResultAccessDenied,
+                          15 == __webpack_require__.success(),
                         _ =
-                          __webpack_require__.success() == _._.k_EResultOK &&
+                          1 == __webpack_require__.success() &&
                           !this.BIsStoreItemMissing(_, _);
                       if (_ || _) this.ReadItem(_, _);
                       else {
@@ -86701,27 +73284,27 @@
                             ),
                           _)
                         ) {
-                          case _._.k_EStoreItemType_App:
+                          case 0:
                             this.m_setUnavailableApps.add(_),
                               this.m_mapApps.delete(_);
                             break;
-                          case _._.k_EStoreItemType_Package:
+                          case 1:
                             this.m_setUnavailablePackages.add(_),
                               this.m_mapPackages.delete(_);
                             break;
-                          case _._.k_EStoreItemType_Bundle:
+                          case 2:
                             this.m_setUnavailableBundles.add(_),
                               this.m_mapBundles.delete(_);
                             break;
-                          case _._.k_EStoreItemType_Tag:
+                          case 4:
                             this.m_setUnavailableTags.add(_),
                               this.m_mapTags.delete(_);
                             break;
-                          case _._.k_EStoreItemType_Creator:
+                          case 5:
                             this.m_setUnavailableCreators.add(_),
                               this.m_mapCreators.delete(_);
                             break;
-                          case _._.k_EStoreItemType_HubCategory:
+                          case 6:
                             this.m_setUnavailableHubCategories.add(_),
                               this.m_mapHubCategories.delete(_);
                             break;
@@ -86737,24 +73320,24 @@
                           __webpack_require__.unvailable_for_country_restriction()
                         )
                           switch (_) {
-                            case _._.k_EStoreItemType_App:
+                            case 0:
                               this.m_setUnavailableDueToCountryRestrictionApps.add(
                                 _,
                               );
                               break;
-                            case _._.k_EStoreItemType_Package:
+                            case 1:
                               this.m_setUnavailableDueToCountryRestrictionPackages.add(
                                 _,
                               );
                               break;
-                            case _._.k_EStoreItemType_Bundle:
+                            case 2:
                               this.m_setUnavailableDueToCountryRestrictionBundles.add(
                                 _,
                               );
                               break;
-                            case _._.k_EStoreItemType_Tag:
-                            case _._.k_EStoreItemType_Creator:
-                            case _._.k_EStoreItemType_HubCategory:
+                            case 4:
+                            case 5:
+                            case 6:
                               console.error(
                                 "CStoreItemCache::InternalHandleLoadStoreItems - tags, creators or categories don't have country restrictions. eResult: " +
                                   _.GetEResult() +
@@ -86772,10 +73355,9 @@
                       _.Hdr().error_message(),
                     (0, _._)(_),
                   ),
-                  (_.Hdr().transport_error() == _._.k_ETransportOK ||
-                    _._.FROM_WEB) &&
+                  (1 == _.Hdr().transport_error() || _._.FROM_WEB) &&
                     this.MarkStoreItemIDUnavailable(_[_]),
-                  _ == _._.k_EResultOK && (_ = _.GetEResult()));
+                  1 == _ && (_ = _.GetEResult()));
             });
           } catch (_) {
             const _ = (0, _._)(_);
@@ -86786,7 +73368,7 @@
                 _,
               ),
               _.forEach((_) => this.MarkStoreItemIDUnavailable(_)),
-              _._.k_EResultUnexpectedError
+              79
             );
           }
           return _;
@@ -86794,22 +73376,22 @@
         GetMapForType(_) {
           let _;
           switch (_) {
-            case _._.k_EStoreItemType_App:
+            case 0:
               _ = this.m_mapApps;
               break;
-            case _._.k_EStoreItemType_Bundle:
+            case 2:
               _ = this.m_mapBundles;
               break;
-            case _._.k_EStoreItemType_Package:
+            case 1:
               _ = this.m_mapPackages;
               break;
-            case _._.k_EStoreItemType_Tag:
+            case 4:
               _ = this.m_mapTags;
               break;
-            case _._.k_EStoreItemType_Creator:
+            case 5:
               _ = this.m_mapCreators;
               break;
-            case _._.k_EStoreItemType_HubCategory:
+            case 6:
               _ = this.m_mapHubCategories;
               break;
             default:
@@ -86824,11 +73406,7 @@
           );
         }
         GetStoreItem(_, _) {
-          if (
-            _ == _._.k_EStoreItemType_Invalid ||
-            _ == _._.k_EStoreItemType_Mtx
-          )
-            return;
+          if (-1 == _ || 3 == _) return;
           const _ = this.GetMapForType(_);
           return __webpack_require__?.get(_);
         }
@@ -86843,54 +73421,54 @@
           return this.GetMapForType(_)?.get(_)?.GetDataRequest() || null;
         }
         BHasApp(_, _) {
-          return this.BHasStoreItem(_, _._.k_EStoreItemType_App, _);
+          return this.BHasStoreItem(_, 0, _);
         }
         GetApp(_) {
-          return this.GetStoreItem(_, _._.k_EStoreItemType_App);
+          return this.GetStoreItem(_, 0);
         }
         BHasPackage(_, _) {
-          return this.BHasStoreItem(_, _._.k_EStoreItemType_Package, _);
+          return this.BHasStoreItem(_, 1, _);
         }
         GetPackage(_) {
-          return this.GetStoreItem(_, _._.k_EStoreItemType_Package);
+          return this.GetStoreItem(_, 1);
         }
         BHasBundle(_, _) {
-          return this.BHasStoreItem(_, _._.k_EStoreItemType_Bundle, _);
+          return this.BHasStoreItem(_, 2, _);
         }
         GetBundle(_) {
-          return this.GetStoreItem(_, _._.k_EStoreItemType_Bundle);
+          return this.GetStoreItem(_, 2);
         }
         BHasTag(_, _) {
-          return this.BHasStoreItem(_, _._.k_EStoreItemType_Tag, _);
+          return this.BHasStoreItem(_, 4, _);
         }
         GetTag(_) {
-          return this.GetStoreItem(_, _._.k_EStoreItemType_Tag);
+          return this.GetStoreItem(_, 4);
         }
         BHasCreator(_, _) {
-          return this.BHasStoreItem(_, _._.k_EStoreItemType_Creator, _);
+          return this.BHasStoreItem(_, 5, _);
         }
         GetCreator(_) {
-          return this.GetStoreItem(_, _._.k_EStoreItemType_Creator);
+          return this.GetStoreItem(_, 5);
         }
         BHasHubCategory(_, _) {
-          return this.BHasStoreItem(_, _._.k_EStoreItemType_HubCategory, _);
+          return this.BHasStoreItem(_, 6, _);
         }
         GetHubCategory(_) {
-          return this.GetStoreItem(_, _._.k_EStoreItemType_HubCategory);
+          return this.GetStoreItem(_, 6);
         }
         BIsStoreItemMissing(_, _) {
           switch (_) {
-            case _._.k_EStoreItemType_App:
+            case 0:
               return this.BIsAppMissing(_);
-            case _._.k_EStoreItemType_Package:
+            case 1:
               return this.BIsPackageMissing(_);
-            case _._.k_EStoreItemType_Bundle:
+            case 2:
               return this.BIsBundleMissing(_);
-            case _._.k_EStoreItemType_Tag:
+            case 4:
               return this.BIsTagMissing(_);
-            case _._.k_EStoreItemType_Creator:
+            case 5:
               return this.BIsCreatorMissing(_);
-            case _._.k_EStoreItemType_HubCategory:
+            case 6:
               return this.BIsHubCategoryMissing(_);
             default:
               return console.error("BStoreItemMissing invalid type", _), !0;
@@ -86916,15 +73494,15 @@
         }
         BIsStoreItemUnavailableDueToCountryRestriction(_, _) {
           switch (_) {
-            case _._.k_EStoreItemType_App:
+            case 0:
               return this.BIsAppUnavailableDueToCountryRestriction(_);
-            case _._.k_EStoreItemType_Package:
+            case 1:
               return this.BIsPackageUnavailableDueToCountryRestriction(_);
-            case _._.k_EStoreItemType_Bundle:
+            case 2:
               return this.BIsBundleUnavailableDueToCountryRestriction(_);
-            case _._.k_EStoreItemType_Tag:
-            case _._.k_EStoreItemType_Creator:
-            case _._.k_EStoreItemType_HubCategory:
+            case 4:
+            case 5:
+            case 6:
               return (
                 console.error(
                   "BIsStoreItemUnavailableDueToCountryRestriction - tags, creators or categories don't have country restrictions. type: ",
@@ -86958,22 +73536,22 @@
               console.warn(`Failed to load item data: ${_.success()}`), null
             );
           switch (_) {
-            case _._.k_EStoreItemType_App:
+            case 0:
               _ = this.m_mapApps;
               break;
-            case _._.k_EStoreItemType_Package:
+            case 1:
               _ = this.m_mapPackages;
               break;
-            case _._.k_EStoreItemType_Bundle:
+            case 2:
               _ = this.m_mapBundles;
               break;
-            case _._.k_EStoreItemType_Tag:
+            case 4:
               _ = this.m_mapTags;
               break;
-            case _._.k_EStoreItemType_Creator:
+            case 5:
               _ = this.m_mapCreators;
               break;
-            case _._.k_EStoreItemType_HubCategory:
+            case 6:
               _ = this.m_mapHubCategories;
               break;
             default:
@@ -87000,11 +73578,8 @@
         _: () => _,
         _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -87063,48 +73638,33 @@
                 _._.Get()
                   .QueueStoreItemRequest(_, _, _)
                   .then((_) => {
-                    _?.token.reason ||
-                      _.current !== _ ||
-                      _(_ == _._.k_EResultOK),
-                      _();
+                    _?.token.reason || _.current !== _ || _(1 == _), _();
                   })),
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return [null, _.k_EStoreItemCacheState_Unavailable];
-        if (!1 === _) return [void 0, _.k_EStoreItemCacheState_Unavailable];
-        if (_._.Get().BIsStoreItemMissing(_, _))
-          return [void 0, _.k_EStoreItemCacheState_Unavailable];
-        if (!_._.Get().BHasStoreItem(_, _, _))
-          return [void 0, _.k_EStoreItemCacheState_Loading];
+          return [null, 2];
+        if (!1 === _) return [void 0, 2];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
         const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _
-          ? [_, _.k_EStoreItemCacheState_Found]
-          : [null, _.k_EStoreItemCacheState_Unavailable];
+        return _ ? [_, 3] : [null, 2];
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_App, _, _);
+        return _(_, 0, _, _);
       }
       function _(_, _, _) {
         const [_, _] = _(_, _, _);
         let _;
-        _?.GetStoreItemType() != _._.k_EStoreItemType_Package ||
+        1 != _?.GetStoreItemType() ||
           _.GetAssets()?.GetHeaderURL() ||
           1 != _?.GetIncludedAppIDs().length ||
           (_ = _.GetIncludedAppIDs()[0]);
         const [_, _] = _(_, _);
         return _ && _?.BIsVisible() ? [_, _] : [_, _];
       }
-      !(function (_) {
-        (_[(_.k_EStoreItemCacheState_Loading = 1)] =
-          "k_EStoreItemCacheState_Loading"),
-          (_[(_.k_EStoreItemCacheState_Unavailable = 2)] =
-            "k_EStoreItemCacheState_Unavailable"),
-          (_[(_.k_EStoreItemCacheState_Found = 3)] =
-            "k_EStoreItemCacheState_Found");
-      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -87137,7 +73697,6 @@
           : _ == _._.BACKWARD && _.BFocusLastChild(_._.GAMEPAD);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -87215,7 +73774,7 @@
           } = this.props;
           const _ = this.context.styles ?? _();
           let _ = _ ?? "#Button_Cancel";
-          if (this.context.presentation != _._.BasicUI || _)
+          if (1 != this.context.presentation || _)
             return _.createElement(
               "div",
               {
@@ -87333,8 +73892,7 @@
           this.m_refDiv.current?.click();
         }
         OnMouseEnter(_) {
-          this.context.presentation == _._.Desktop &&
-            this.instance.HideSubMenu();
+          0 == this.context.presentation && this.instance.HideSubMenu();
         }
         Focus() {
           this.m_ref.current
@@ -87349,7 +73907,7 @@
               ..._
             } = this.props,
             _ = this.context?.styles ?? _();
-          return this.context.presentation == _._.BasicUI
+          return 1 == this.context.presentation
             ? _.createElement(
                 _._,
                 {
@@ -87429,7 +73987,7 @@
             bActive: !1,
           }),
             this.props.bInGamepadUI &&
-              this.context.presentation == _._.BasicUI &&
+              1 == this.context.presentation &&
               this.m_refItem.current &&
               this.m_refItem.current.Focus();
         }
@@ -87456,14 +74014,13 @@
           );
         }
         OnMouseEnter(_) {
-          this.context.presentation == _._.Desktop &&
-            this.ShowSubMenu(_.currentTarget);
+          0 == this.context.presentation && this.ShowSubMenu(_.currentTarget);
         }
         OnClick(_) {
           this.OnMouseEnter(_),
             this.props.onClick && this.props.onClick(_),
             this.props.bInGamepadUI &&
-              this.context.presentation == _._.BasicUI &&
+              1 == this.context.presentation &&
               this.ShowSubMenu(_.currentTarget);
         }
         render() {
@@ -87595,7 +74152,7 @@
           }
         }
         OnKeyDown(_) {
-          _.keyCode == _._.Escape &&
+          27 == _.keyCode &&
             this.state.ready &&
             (this.props.instance.Hide(),
             _.preventDefault(),
@@ -88197,45 +74754,23 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = () => (_._.EUNIVERSE === _._.k_EUniverseBeta ? 2581 : 45267781);
+      var _ = __webpack_require__("chunkid");
+      const _ = () => (2 === _._.EUNIVERSE ? 2581 : 45267781);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
-        u49: () => _,
-        Epp: () => _,
-        jvG: () => _,
-        b8_: () => _,
-        ZyV: () => _,
-        rxV: () => _,
-        hJ4: () => _,
         $0s: () => _,
+        Epp: () => _,
+        ZyV: () => _,
+        b8_: () => _,
+        hJ4: () => _,
+        jvG: () => _,
+        rxV: () => _,
+        u49: () => _,
       });
-      var _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       function _(_) {
         const { direction: _, ...__webpack_require__ } = _;
         switch (_) {
@@ -88516,1369 +75051,6 @@
           }),
         );
       }
-      !(function (_) {
-        (_[(_.k_eControllerStyle_Unknown = 0)] = "k_eControllerStyle_Unknown"),
-          (_[(_.k_eControllerStyle_Gamepad = 1)] =
-            "k_eControllerStyle_Gamepad"),
-          (_[(_.k_eControllerStyle_Gamepad_GameCube = 2)] =
-            "k_eControllerStyle_Gamepad_GameCube"),
-          (_[(_.k_eControllerStyle_Gamepad_8BitDo_SN30 = 3)] =
-            "k_eControllerStyle_Gamepad_8BitDo_SN30"),
-          (_[(_.k_eControllerStyle_Gamepad_8BitDo_Pro = 4)] =
-            "k_eControllerStyle_Gamepad_8BitDo_Pro"),
-          (_[(_.k_eControllerStyle_Gamepad_8BitDo_Ultimate = 5)] =
-            "k_eControllerStyle_Gamepad_8BitDo_Ultimate"),
-          (_[(_.k_eControllerStyle_Gamepad_FlyDigi_Apex = 6)] =
-            "k_eControllerStyle_Gamepad_FlyDigi_Apex"),
-          (_[(_.k_eControllerStyle_Gamepad_FlyDigi_Vader = 7)] =
-            "k_eControllerStyle_Gamepad_FlyDigi_Vader"),
-          (_[(_.k_eControllerStyle_ArcadeStick = 50)] =
-            "k_eControllerStyle_ArcadeStick"),
-          (_[(_.k_eControllerStyle_Handheld = 100)] =
-            "k_eControllerStyle_Handheld");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ECceResult_Ok = 1)] = "k_ECceResult_Ok"),
-            (_[(_.k_ECceResult_Fail = 2)] = "k_ECceResult_Fail"),
-            (_[(_.k_ECceResult_NotImplemented = 12e3)] =
-              "k_ECceResult_NotImplemented"),
-            (_[(_.k_ECceResult_InvalidArgument = 12001)] =
-              "k_ECceResult_InvalidArgument"),
-            (_[(_.k_ECceResult_NoEditingConfiguration = 12002)] =
-              "k_ECceResult_NoEditingConfiguration"),
-            (_[(_.k_ECceResult_InvalidPath = 12100)] =
-              "k_ECceResult_InvalidPath"),
-            (_[(_.k_ECceResult_InvalidPathActionSetKey = 12101)] =
-              "k_ECceResult_InvalidPathActionSetKey"),
-            (_[(_.k_ECceResult_InvalidPathBaseActionSetKey = 12102)] =
-              "k_ECceResult_InvalidPathBaseActionSetKey"),
-            (_[(_.k_ECceResult_InvalidPathLayerActionSetKey = 12103)] =
-              "k_ECceResult_InvalidPathLayerActionSetKey"),
-            (_[(_.k_ECceResult_InvalidPathSourceKey = 12104)] =
-              "k_ECceResult_InvalidPathSourceKey"),
-            (_[(_.k_ECceResult_InvalidPathInputKey = 12105)] =
-              "k_ECceResult_InvalidPathInputKey"),
-            (_[(_.k_ECceResult_InvalidPathActivatorIndex = 12106)] =
-              "k_ECceResult_InvalidPathActivatorIndex"),
-            (_[(_.k_ECceResult_InvalidPathBindingIndex = 12107)] =
-              "k_ECceResult_InvalidPathBindingIndex"),
-            (_[(_.k_ECceResult_InvalidPathSourceModeKey = 12108)] =
-              "k_ECceResult_InvalidPathSourceModeKey"),
-            (_[(_.k_ECceResult_InvalidValueSourceMode = 12150)] =
-              "k_ECceResult_InvalidValueSourceMode"),
-            (_[(_.k_ECceResult_InvalidValueSourceModeSettingKey = 12151)] =
-              "k_ECceResult_InvalidValueSourceModeSettingKey"),
-            (_[(_.k_ECceResult_InvalidValueSourceModeSettingValue = 12152)] =
-              "k_ECceResult_InvalidValueSourceModeSettingValue"),
-            (_[(_.k_ECceResult_InvalidValueActivator = 12160)] =
-              "k_ECceResult_InvalidValueActivator"),
-            (_[(_.k_ECceResult_InvalidValueActivatorActivation = 12161)] =
-              "k_ECceResult_InvalidValueActivatorActivation"),
-            (_[(_.k_ECceResult_InvalidValueActivatorSettingKey = 12162)] =
-              "k_ECceResult_InvalidValueActivatorSettingKey"),
-            (_[(_.k_ECceResult_InvalidValueActivatorSettingValue = 12163)] =
-              "k_ECceResult_InvalidValueActivatorSettingValue"),
-            (_[(_.k_ECceResult_InvalidValueBinding = 12200)] =
-              "k_ECceResult_InvalidValueBinding"),
-            (_[(_.k_ECceResult_InvalidValueBindingKeyboardKey = 12201)] =
-              "k_ECceResult_InvalidValueBindingKeyboardKey"),
-            (_[(_.k_ECceResult_InvalidValueBindingMouseButton = 12202)] =
-              "k_ECceResult_InvalidValueBindingMouseButton"),
-            (_[(_.k_ECceResult_InvalidValueBindingGamepadButton = 12203)] =
-              "k_ECceResult_InvalidValueBindingGamepadButton"),
-            (_[(_.k_ECceResult_InvalidValueBindingMouseWheel = 12204)] =
-              "k_ECceResult_InvalidValueBindingMouseWheel"),
-            (_[(_.k_ECceResult_InvalidValueBindingGameAction = 12205)] =
-              "k_ECceResult_InvalidValueBindingGameAction"),
-            (_[(_.k_ECceResult_InvalidValueBindingGameActionSetKey = 12206)] =
-              "k_ECceResult_InvalidValueBindingGameActionSetKey"),
-            (_[(_.k_ECceResult_InvalidValueBindingGameActionKey = 12207)] =
-              "k_ECceResult_InvalidValueBindingGameActionKey"),
-            (_[(_.k_ECceResult_InvalidValueBindingModeShift = 12208)] =
-              "k_ECceResult_InvalidValueBindingModeShift"),
-            (_[(_.k_ECceResult_InvalidValueBindingControllerAction = 12209)] =
-              "k_ECceResult_InvalidValueBindingControllerAction"),
-            (_[(_.k_ECceResult_InvalidValueActionSetName = 12250)] =
-              "k_ECceResult_InvalidValueActionSetName");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGameActionBindingType_StickPadGyro = 0)] =
-            "k_EGameActionBindingType_StickPadGyro"),
-            (_[(_.k_EGameActionBindingType_AnalogTrigger = 1)] =
-              "k_EGameActionBindingType_AnalogTrigger"),
-            (_[(_.k_EGameActionBindingType_Button = 2)] =
-              "k_EGameActionBindingType_Button"),
-            (_[(_.k_EGameActionBindingType_Count = 3)] =
-              "k_EGameActionBindingType_Count");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EControllerSource_None = 0)] = "k_EControllerSource_None"),
-            (_[(_.k_EControllerSource_LeftTrackpad = 1)] =
-              "k_EControllerSource_LeftTrackpad"),
-            (_[(_.k_EControllerSource_RightTrackpad = 2)] =
-              "k_EControllerSource_RightTrackpad"),
-            (_[(_.k_EControllerSource_Joystick = 3)] =
-              "k_EControllerSource_Joystick"),
-            (_[(_.k_EControllerSource_ABXY = 4)] = "k_EControllerSource_ABXY"),
-            (_[(_.k_EControllerSource_Switch = 5)] =
-              "k_EControllerSource_Switch"),
-            (_[(_.k_EControllerSource_LeftTrigger = 6)] =
-              "k_EControllerSource_LeftTrigger"),
-            (_[(_.k_EControllerSource_RightTrigger = 7)] =
-              "k_EControllerSource_RightTrigger"),
-            (_[(_.k_EControllerSource_LeftBumper = 8)] =
-              "k_EControllerSource_LeftBumper"),
-            (_[(_.k_EControllerSource_RightBumper = 9)] =
-              "k_EControllerSource_RightBumper"),
-            (_[(_.k_EControllerSource_Gyro = 10)] = "k_EControllerSource_Gyro"),
-            (_[(_.k_EControllerSource_CenterTrackpad = 11)] =
-              "k_EControllerSource_CenterTrackpad"),
-            (_[(_.k_EControllerSource_RightJoystick = 12)] =
-              "k_EControllerSource_RightJoystick"),
-            (_[(_.k_EControllerSource_DPad = 13)] = "k_EControllerSource_DPad"),
-            (_[(_.k_EControllerSource_Key = 14)] = "k_EControllerSource_Key"),
-            (_[(_.k_EControllerSource_Mouse = 15)] =
-              "k_EControllerSource_Mouse"),
-            (_[(_.k_EControllerSource_LeftGyro = 16)] =
-              "k_EControllerSource_LeftGyro"),
-            (_[(_.k_EControllerSource_CapJoystickRight = 17)] =
-              "k_EControllerSource_CapJoystickRight"),
-            (_[(_.k_EControllerSource_CapJoystickLeft = 18)] =
-              "k_EControllerSource_CapJoystickLeft"),
-            (_[(_.k_EControllerSource_Count = 19)] =
-              "k_EControllerSource_Count");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EControllerSourceMode_None = 0)] =
-            "k_EControllerSourceMode_None"),
-            (_[(_.k_EControllerSourceMode_Dpad = 1)] =
-              "k_EControllerSourceMode_Dpad"),
-            (_[(_.k_EControllerSourceMode_Buttons = 2)] =
-              "k_EControllerSourceMode_Buttons"),
-            (_[(_.k_EControllerSourceMode_FourButtons = 3)] =
-              "k_EControllerSourceMode_FourButtons"),
-            (_[(_.k_EControllerSourceMode_AbsoluteMouse = 4)] =
-              "k_EControllerSourceMode_AbsoluteMouse"),
-            (_[(_.k_EControllerSourceMode_RelativeMouse = 5)] =
-              "k_EControllerSourceMode_RelativeMouse"),
-            (_[(_.k_EControllerSourceMode_JoystickMove = 6)] =
-              "k_EControllerSourceMode_JoystickMove"),
-            (_[(_.k_EControllerSourceMode_JoystickMouse = 7)] =
-              "k_EControllerSourceMode_JoystickMouse"),
-            (_[(_.k_EControllerSourceMode_JoystickCamera = 8)] =
-              "k_EControllerSourceMode_JoystickCamera"),
-            (_[(_.k_EControllerSourceMode_ScrollWheel = 9)] =
-              "k_EControllerSourceMode_ScrollWheel"),
-            (_[(_.k_EControllerSourceMode_Trigger = 10)] =
-              "k_EControllerSourceMode_Trigger"),
-            (_[(_.k_EControllerSourceMode_TouchMenu = 11)] =
-              "k_EControllerSourceMode_TouchMenu"),
-            (_[(_.k_EControllerSourceMode_MouseJoystick = 12)] =
-              "k_EControllerSourceMode_MouseJoystick"),
-            (_[(_.k_EControllerSourceMode_MouseRegion = 13)] =
-              "k_EControllerSourceMode_MouseRegion"),
-            (_[(_.k_EControllerSourceMode_RadialMenu = 14)] =
-              "k_EControllerSourceMode_RadialMenu"),
-            (_[(_.k_EControllerSourceMode_SingleButton = 15)] =
-              "k_EControllerSourceMode_SingleButton"),
-            (_[(_.k_EControllerSourceMode_Switches = 16)] =
-              "k_EControllerSourceMode_Switches"),
-            (_[(_.k_EControllerSourceMode_FlickStick = 17)] =
-              "k_EControllerSourceMode_FlickStick"),
-            (_[(_.k_EControllerSourceMode_2DScrollwheel = 18)] =
-              "k_EControllerSourceMode_2DScrollwheel"),
-            (_[(_.k_EControllerSourceMode_Hotbar = 19)] =
-              "k_EControllerSourceMode_Hotbar"),
-            (_[(_.k_EControllerSourceMode_Disabled = 20)] =
-              "k_EControllerSourceMode_Disabled"),
-            (_[(_.k_EControllerSourceMode_Reference = 21)] =
-              "k_EControllerSourceMode_Reference"),
-            (_[(_.k_EControllerSourceMode_GyroToMouse = 22)] =
-              "k_EControllerSourceMode_GyroToMouse"),
-            (_[(_.k_EControllerSourceMode_GyroToJoystickCamera = 23)] =
-              "k_EControllerSourceMode_GyroToJoystickCamera"),
-            (_[(_.k_EControllerSourceMode_GyroToJoystickDeflection = 24)] =
-              "k_EControllerSourceMode_GyroToJoystickDeflection"),
-            (_[(_.k_EControllerSourceMode_GyroToCameraAngles = 25)] =
-              "k_EControllerSourceMode_GyroToCameraAngles"),
-            (_[(_.k_EControllerSourceMode_JoystickToCameraAngles = 26)] =
-              "k_EControllerSourceMode_JoystickToCameraAngles"),
-            (_[(_.k_EControllerSourceMode_FlickStickToCameraAngles = 27)] =
-              "k_EControllerSourceMode_FlickStickToCameraAngles"),
-            (_[(_.k_EControllerSourceMode_TrackPadToCameraAngles = 28)] =
-              "k_EControllerSourceMode_TrackPadToCameraAngles"),
-            (_[(_.k_EControllerSourceMode_CameraAngles = 29)] =
-              "k_EControllerSourceMode_CameraAngles"),
-            (_[(_.k_EControllerSourceMode_Count = 30)] =
-              "k_EControllerSourceMode_Count");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EControllerModeInput_None = 0)] =
-            "k_EControllerModeInput_None"),
-            (_[(_.k_EControllerModeInput_Dpad_N = 1)] =
-              "k_EControllerModeInput_Dpad_N"),
-            (_[(_.k_EControllerModeInput_Dpad_NE = 2)] =
-              "k_EControllerModeInput_Dpad_NE"),
-            (_[(_.k_EControllerModeInput_Dpad_E = 3)] =
-              "k_EControllerModeInput_Dpad_E"),
-            (_[(_.k_EControllerModeInput_Dpad_SE = 4)] =
-              "k_EControllerModeInput_Dpad_SE"),
-            (_[(_.k_EControllerModeInput_Dpad_S = 5)] =
-              "k_EControllerModeInput_Dpad_S"),
-            (_[(_.k_EControllerModeInput_Dpad_SW = 6)] =
-              "k_EControllerModeInput_Dpad_SW"),
-            (_[(_.k_EControllerModeInput_Dpad_W = 7)] =
-              "k_EControllerModeInput_Dpad_W"),
-            (_[(_.k_EControllerModeInput_Dpad_NW = 8)] =
-              "k_EControllerModeInput_Dpad_NW"),
-            (_[(_.k_EControllerModeInput_Button_Y = 9)] =
-              "k_EControllerModeInput_Button_Y"),
-            (_[(_.k_EControllerModeInput_Button_B = 10)] =
-              "k_EControllerModeInput_Button_B"),
-            (_[(_.k_EControllerModeInput_Button_X = 11)] =
-              "k_EControllerModeInput_Button_X"),
-            (_[(_.k_EControllerModeInput_Button_A = 12)] =
-              "k_EControllerModeInput_Button_A"),
-            (_[(_.k_EControllerModeInput_Click = 13)] =
-              "k_EControllerModeInput_Click"),
-            (_[(_.k_EControllerModeInput_DoubleTap = 14)] =
-              "k_EControllerModeInput_DoubleTap"),
-            (_[(_.k_EControllerModeInput_Edge = 15)] =
-              "k_EControllerModeInput_Edge"),
-            (_[(_.k_EControllerModeInput_Clockwise = 16)] =
-              "k_EControllerModeInput_Clockwise"),
-            (_[(_.k_EControllerModeInput_CounterClockwise = 17)] =
-              "k_EControllerModeInput_CounterClockwise"),
-            (_[(_.k_EControllerModeInput_TriggerAnalog = 18)] =
-              "k_EControllerModeInput_TriggerAnalog"),
-            (_[(_.k_EControllerModeInput_ScrollWheel_List0 = 19)] =
-              "k_EControllerModeInput_ScrollWheel_List0"),
-            (_[(_.k_EControllerModeInput_ScrollWheel_List1 = 20)] =
-              "k_EControllerModeInput_ScrollWheel_List1"),
-            (_[(_.k_EControllerModeInput_ScrollWheel_List2 = 21)] =
-              "k_EControllerModeInput_ScrollWheel_List2"),
-            (_[(_.k_EControllerModeInput_ScrollWheel_List3 = 22)] =
-              "k_EControllerModeInput_ScrollWheel_List3"),
-            (_[(_.k_EControllerModeInput_ScrollWheel_List4 = 23)] =
-              "k_EControllerModeInput_ScrollWheel_List4"),
-            (_[(_.k_EControllerModeInput_ScrollWheel_List5 = 24)] =
-              "k_EControllerModeInput_ScrollWheel_List5"),
-            (_[(_.k_EControllerModeInput_ScrollWheel_List6 = 25)] =
-              "k_EControllerModeInput_ScrollWheel_List6"),
-            (_[(_.k_EControllerModeInput_ScrollWheel_List7 = 26)] =
-              "k_EControllerModeInput_ScrollWheel_List7"),
-            (_[(_.k_EControllerModeInput_ScrollWheel_List8 = 27)] =
-              "k_EControllerModeInput_ScrollWheel_List8"),
-            (_[(_.k_EControllerModeInput_ScrollWheel_List9 = 28)] =
-              "k_EControllerModeInput_ScrollWheel_List9"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button0 = 29)] =
-              "k_EControllerModeInput_TouchMenu_Button0"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button1 = 30)] =
-              "k_EControllerModeInput_TouchMenu_Button1"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button2 = 31)] =
-              "k_EControllerModeInput_TouchMenu_Button2"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button3 = 32)] =
-              "k_EControllerModeInput_TouchMenu_Button3"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button4 = 33)] =
-              "k_EControllerModeInput_TouchMenu_Button4"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button5 = 34)] =
-              "k_EControllerModeInput_TouchMenu_Button5"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button6 = 35)] =
-              "k_EControllerModeInput_TouchMenu_Button6"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button7 = 36)] =
-              "k_EControllerModeInput_TouchMenu_Button7"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button8 = 37)] =
-              "k_EControllerModeInput_TouchMenu_Button8"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button9 = 38)] =
-              "k_EControllerModeInput_TouchMenu_Button9"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button10 = 39)] =
-              "k_EControllerModeInput_TouchMenu_Button10"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button11 = 40)] =
-              "k_EControllerModeInput_TouchMenu_Button11"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button12 = 41)] =
-              "k_EControllerModeInput_TouchMenu_Button12"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button13 = 42)] =
-              "k_EControllerModeInput_TouchMenu_Button13"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button14 = 43)] =
-              "k_EControllerModeInput_TouchMenu_Button14"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button15 = 44)] =
-              "k_EControllerModeInput_TouchMenu_Button15"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button16 = 45)] =
-              "k_EControllerModeInput_TouchMenu_Button16"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button17 = 46)] =
-              "k_EControllerModeInput_TouchMenu_Button17"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button18 = 47)] =
-              "k_EControllerModeInput_TouchMenu_Button18"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button19 = 48)] =
-              "k_EControllerModeInput_TouchMenu_Button19"),
-            (_[(_.k_EControllerModeInput_TouchMenu_Button20 = 49)] =
-              "k_EControllerModeInput_TouchMenu_Button20"),
-            (_[(_.k_EControllerModeInput_Touch = 50)] =
-              "k_EControllerModeInput_Touch"),
-            (_[(_.k_EControllerModeInput_Switch_Select = 51)] =
-              "k_EControllerModeInput_Switch_Select"),
-            (_[(_.k_EControllerModeInput_Switch_Start = 52)] =
-              "k_EControllerModeInput_Switch_Start"),
-            (_[(_.k_EControllerModeInput_Switch_LeftBumper = 53)] =
-              "k_EControllerModeInput_Switch_LeftBumper"),
-            (_[(_.k_EControllerModeInput_Switch_RightBumper = 54)] =
-              "k_EControllerModeInput_Switch_RightBumper"),
-            (_[(_.k_EControllerModeInput_Switch_LeftGrip = 55)] =
-              "k_EControllerModeInput_Switch_LeftGrip"),
-            (_[(_.k_EControllerModeInput_Switch_RightGrip = 56)] =
-              "k_EControllerModeInput_Switch_RightGrip"),
-            (_[(_.k_EControllerModeInput_Switch_LeftGrip_Upper = 57)] =
-              "k_EControllerModeInput_Switch_LeftGrip_Upper"),
-            (_[(_.k_EControllerModeInput_Switch_RightGrip_Upper = 58)] =
-              "k_EControllerModeInput_Switch_RightGrip_Upper"),
-            (_[(_.k_EControllerModeInput_Switch_LeftTrackPadClick = 59)] =
-              "k_EControllerModeInput_Switch_LeftTrackPadClick"),
-            (_[(_.k_EControllerModeInput_Switch_RightTrackPadClick = 60)] =
-              "k_EControllerModeInput_Switch_RightTrackPadClick"),
-            (_[(_.k_EControllerModeInput_Switch_LeftTrigger = 61)] =
-              "k_EControllerModeInput_Switch_LeftTrigger"),
-            (_[(_.k_EControllerModeInput_Switch_RightTrigger = 62)] =
-              "k_EControllerModeInput_Switch_RightTrigger"),
-            (_[(_.k_EControllerModeInput_Switch_LeftTriggerThreshold = 63)] =
-              "k_EControllerModeInput_Switch_LeftTriggerThreshold"),
-            (_[(_.k_EControllerModeInput_Switch_RightTriggerThreshold = 64)] =
-              "k_EControllerModeInput_Switch_RightTriggerThreshold"),
-            (_[(_.k_EControllerModeInput_Switch_LeftJoystickClick = 65)] =
-              "k_EControllerModeInput_Switch_LeftJoystickClick"),
-            (_[(_.k_EControllerModeInput_Switch_Steam = 66)] =
-              "k_EControllerModeInput_Switch_Steam"),
-            (_[(_.k_EControllerModeInput_Switch_ActionSetAlwaysOn = 67)] =
-              "k_EControllerModeInput_Switch_ActionSetAlwaysOn"),
-            (_[(_.k_EControllerModeInput_Switch_CaptureButton = 68)] =
-              "k_EControllerModeInput_Switch_CaptureButton"),
-            (_[(_.k_EControllerModeInput_Switch_Macro0 = 69)] =
-              "k_EControllerModeInput_Switch_Macro0"),
-            (_[(_.k_EControllerModeInput_Switch_Macro1 = 70)] =
-              "k_EControllerModeInput_Switch_Macro1"),
-            (_[(_.k_EControllerModeInput_Switch_Macro2 = 71)] =
-              "k_EControllerModeInput_Switch_Macro2"),
-            (_[(_.k_EControllerModeInput_Switch_Macro3 = 72)] =
-              "k_EControllerModeInput_Switch_Macro3"),
-            (_[(_.k_EControllerModeInput_Switch_Macro4 = 73)] =
-              "k_EControllerModeInput_Switch_Macro4"),
-            (_[(_.k_EControllerModeInput_Switch_Macro5 = 74)] =
-              "k_EControllerModeInput_Switch_Macro5"),
-            (_[(_.k_EControllerModeInput_Switch_Macro6 = 75)] =
-              "k_EControllerModeInput_Switch_Macro6"),
-            (_[(_.k_EControllerModeInput_Switch_Macro7 = 76)] =
-              "k_EControllerModeInput_Switch_Macro7"),
-            (_[(_.k_EControllerModeInput_Switch_Macro1Finger = 77)] =
-              "k_EControllerModeInput_Switch_Macro1Finger"),
-            (_[(_.k_EControllerModeInput_Switch_Macro2Finger = 78)] =
-              "k_EControllerModeInput_Switch_Macro2Finger"),
-            (_[(_.k_EControllerModeInput_Switch_LeftAuxCapSense = 79)] =
-              "k_EControllerModeInput_Switch_LeftAuxCapSense"),
-            (_[(_.k_EControllerModeInput_Switch_RightAuxCapSense = 80)] =
-              "k_EControllerModeInput_Switch_RightAuxCapSense"),
-            (_[(_.k_EControllerModeInput_Switch_RightJoystickClick = 81)] =
-              "k_EControllerModeInput_Switch_RightJoystickClick"),
-            (_[(_.k_EControllerModeInput_Switch_LeftTrackPadTouch = 82)] =
-              "k_EControllerModeInput_Switch_LeftTrackPadTouch"),
-            (_[(_.k_EControllerModeInput_Switch_RightTrackPadTouch = 83)] =
-              "k_EControllerModeInput_Switch_RightTrackPadTouch"),
-            (_[(_.k_EControllerModeInput_Count = 84)] =
-              "k_EControllerModeInput_Count");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EControllerActivationType_None = 0)] =
-            "k_EControllerActivationType_None"),
-            (_[(_.k_EControllerActivationType_FullPress = 1)] =
-              "k_EControllerActivationType_FullPress"),
-            (_[(_.k_EControllerActivationType_SoftPress = 2)] =
-              "k_EControllerActivationType_SoftPress"),
-            (_[(_.k_EControllerActivationType_StartPress = 3)] =
-              "k_EControllerActivationType_StartPress"),
-            (_[(_.k_EControllerActivationType_Release = 4)] =
-              "k_EControllerActivationType_Release"),
-            (_[(_.k_EControllerActivationType_LongPress = 5)] =
-              "k_EControllerActivationType_LongPress"),
-            (_[(_.k_EControllerActivationType_DoublePress = 6)] =
-              "k_EControllerActivationType_DoublePress"),
-            (_[(_.k_EControllerActivationType_Analog = 7)] =
-              "k_EControllerActivationType_Analog"),
-            (_[(_.k_EControllerActivationType_Chord = 8)] =
-              "k_EControllerActivationType_Chord"),
-            (_[(_.k_EControllerActivationType_Count = 9)] =
-              "k_EControllerActivationType_Count");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EControllerAction_Change_Preset = 0)] =
-            "k_EControllerAction_Change_Preset"),
-            (_[(_.k_EControllerAction_Show_Keyboard = 1)] =
-              "k_EControllerAction_Show_Keyboard"),
-            (_[(_.k_EControllerAction_Screenshot = 2)] =
-              "k_EControllerAction_Screenshot"),
-            (_[(_.k_EControllerAction_Mouse_Position = 3)] =
-              "k_EControllerAction_Mouse_Position"),
-            (_[(_.k_EControllerAction_Toggle_Magnifier = 4)] =
-              "k_EControllerAction_Toggle_Magnifier"),
-            (_[(_.k_EControllerAction_Toggle_Rumble = 5)] =
-              "k_EControllerAction_Toggle_Rumble"),
-            (_[(_.k_EControllerAction_Toggle_Haptics = 6)] =
-              "k_EControllerAction_Toggle_Haptics"),
-            (_[(_.k_EControllerAction_Open_Configurator = 7)] =
-              "k_EControllerAction_Open_Configurator"),
-            (_[(_.k_EControllerAction_Open_QuickMenu = 8)] =
-              "k_EControllerAction_Open_QuickMenu"),
-            (_[(_.k_EControllerAction_SteamMusic_Next = 9)] =
-              "k_EControllerAction_SteamMusic_Next"),
-            (_[(_.k_EControllerAction_SteamMusic_Prev = 10)] =
-              "k_EControllerAction_SteamMusic_Prev"),
-            (_[(_.k_EControllerAction_SteamMusic_PlayPause = 11)] =
-              "k_EControllerAction_SteamMusic_PlayPause"),
-            (_[(_.k_EControllerAction_SteamMusic_VolUp = 12)] =
-              "k_EControllerAction_SteamMusic_VolUp"),
-            (_[(_.k_EControllerAction_SteamMusic_VolDown = 13)] =
-              "k_EControllerAction_SteamMusic_VolDown"),
-            (_[(_.k_EControllerAction_SteamMusic_VolMute = 14)] =
-              "k_EControllerAction_SteamMusic_VolMute"),
-            (_[(_.k_EControllerAction_Controller_PowerOff = 15)] =
-              "k_EControllerAction_Controller_PowerOff"),
-            (_[(_.k_EControllerAction_BigPicture_Minimize = 16)] =
-              "k_EControllerAction_BigPicture_Minimize"),
-            (_[(_.k_EControllerAction_BigPicture_Open = 17)] =
-              "k_EControllerAction_BigPicture_Open"),
-            (_[(_.k_EControllerAction_BigPicture_Quit = 18)] =
-              "k_EControllerAction_BigPicture_Quit"),
-            (_[(_.k_EControllerAction_Host_Suspend = 19)] =
-              "k_EControllerAction_Host_Suspend"),
-            (_[(_.k_EControllerAction_Host_PowerOff = 20)] =
-              "k_EControllerAction_Host_PowerOff"),
-            (_[(_.k_EControllerAction_Host_Restart = 21)] =
-              "k_EControllerAction_Host_Restart"),
-            (_[(_.k_EControllerAction_Toggle_Hud = 22)] =
-              "k_EControllerAction_Toggle_Hud"),
-            (_[(_.k_EControllerAction_Set_LED = 23)] =
-              "k_EControllerAction_Set_LED"),
-            (_[(_.k_EControllerAction_Force_Guide_Up = 24)] =
-              "k_EControllerAction_Force_Guide_Up"),
-            (_[(_.k_EControllerAction_Add_ActionSet_Layer = 25)] =
-              "k_EControllerAction_Add_ActionSet_Layer"),
-            (_[(_.k_EControllerAction_Remove_ActionSet_Layer = 26)] =
-              "k_EControllerAction_Remove_ActionSet_Layer"),
-            (_[(_.k_EControllerAction_Hold_ActionSet_Layer = 27)] =
-              "k_EControllerAction_Hold_ActionSet_Layer"),
-            (_[(_.k_EControllerAction_Toggle_Lizard_Mode = 28)] =
-              "k_EControllerAction_Toggle_Lizard_Mode"),
-            (_[(_.k_EControllerAction_Layer_Empty_Binding = 29)] =
-              "k_EControllerAction_Layer_Empty_Binding"),
-            (_[(_.k_EControllerAction_Quit_Application = 30)] =
-              "k_EControllerAction_Quit_Application"),
-            (_[(_.k_EControllerAction_Change_Player_Number = 31)] =
-              "k_EControllerAction_Change_Player_Number"),
-            (_[(_.k_EControllerAction_Change_TouchscreenMode_Hover = 32)] =
-              "k_EControllerAction_Change_TouchscreenMode_Hover"),
-            (_[(_.k_EControllerAction_Change_TouchscreenMode_RightClick = 33)] =
-              "k_EControllerAction_Change_TouchscreenMode_RightClick"),
-            (_[(_.k_EControllerAction_Change_TouchscreenMode_LeftClick = 34)] =
-              "k_EControllerAction_Change_TouchscreenMode_LeftClick"),
-            (_[
-              (_.k_EControllerAction_Change_TouchscreenMode_MiddleClick = 35)
-            ] = "k_EControllerAction_Change_TouchscreenMode_MiddleClick"),
-            (_[(_.k_EControllerAction_Mouse_Delta = 36)] =
-              "k_EControllerAction_Mouse_Delta"),
-            (_[(_.k_EControllerAction_Camera_Horizon_Reset = 37)] =
-              "k_EControllerAction_Camera_Horizon_Reset"),
-            (_[(_.k_EControllerAction_Camera_DotsPer360_CalibrationSpin = 38)] =
-              "k_EControllerAction_Camera_DotsPer360_CalibrationSpin"),
-            (_[(_.k_EControllerAction_Camera_Turn_To_Face_Direction = 39)] =
-              "k_EControllerAction_Camera_Turn_To_Face_Direction"),
-            (_[(_.k_EControllerAction_Change_TouchscreenMode_Native = 40)] =
-              "k_EControllerAction_Change_TouchscreenMode_Native"),
-            (_[(_.k_EControllerAction_Screen_Brightness_Up = 41)] =
-              "k_EControllerAction_Screen_Brightness_Up"),
-            (_[(_.k_EControllerAction_Screen_Brightness_Down = 42)] =
-              "k_EControllerAction_Screen_Brightness_Down"),
-            (_[(_.k_EControllerAction_Empty_Sub_Command = 43)] =
-              "k_EControllerAction_Empty_Sub_Command"),
-            (_[(_.k_EControllerAction_Change_TouchscreenMode_None = 44)] =
-              "k_EControllerAction_Change_TouchscreenMode_None"),
-            (_[(_.k_EControllerAction_GR_Toggle = 45)] =
-              "k_EControllerAction_GR_Toggle"),
-            (_[(_.k_EControllerAction_GR_Marker = 46)] =
-              "k_EControllerAction_GR_Marker"),
-            (_[(_.k_EControllerAction_GR_Clip = 47)] =
-              "k_EControllerAction_GR_Clip"),
-            (_[(_.k_EControllerAction_ScreenReader_Enable = 48)] =
-              "k_EControllerAction_ScreenReader_Enable"),
-            (_[(_.k_EControllerAction_ScreenReader_Disable = 49)] =
-              "k_EControllerAction_ScreenReader_Disable"),
-            (_[(_.k_EControllerAction_ScreenReader_ToggleMode = 50)] =
-              "k_EControllerAction_ScreenReader_ToggleMode"),
-            (_[(_.k_EControllerAction_ScreenReader_StopTalking = 51)] =
-              "k_EControllerAction_ScreenReader_StopTalking"),
-            (_[(_.k_EControllerAction_ScreenReader_NextWord = 52)] =
-              "k_EControllerAction_ScreenReader_NextWord"),
-            (_[(_.k_EControllerAction_ScreenReader_PrevWord = 53)] =
-              "k_EControllerAction_ScreenReader_PrevWord"),
-            (_[(_.k_EControllerAction_ScreenReader_NextItem = 54)] =
-              "k_EControllerAction_ScreenReader_NextItem"),
-            (_[(_.k_EControllerAction_ScreenReader_PrevItem = 55)] =
-              "k_EControllerAction_ScreenReader_PrevItem"),
-            (_[(_.k_EControllerAction_ScreenReader_NextLandmark = 56)] =
-              "k_EControllerAction_ScreenReader_NextLandmark"),
-            (_[(_.k_EControllerAction_ScreenReader_PrevLandmark = 57)] =
-              "k_EControllerAction_ScreenReader_PrevLandmark"),
-            (_[(_.k_EControllerAction_ScreenReader_NextHeading = 58)] =
-              "k_EControllerAction_ScreenReader_NextHeading"),
-            (_[(_.k_EControllerAction_ScreenReader_PrevHeading = 59)] =
-              "k_EControllerAction_ScreenReader_PrevHeading"),
-            (_[(_.k_EControllerAction_System_Key_0 = 60)] =
-              "k_EControllerAction_System_Key_0"),
-            (_[(_.k_EControllerAction_System_Key_1 = 61)] =
-              "k_EControllerAction_System_Key_1"),
-            (_[(_.k_EControllerAction_Notify_ActionSet_Change = 62)] =
-              "k_EControllerAction_Notify_ActionSet_Change"),
-            (_[(_.k_EControllerAction_Notify_ActionSetLayer_Change = 63)] =
-              "k_EControllerAction_Notify_ActionSetLayer_Change"),
-            (_[(_.k_EControllerAction_Chord_Hint_Display = 64)] =
-              "k_EControllerAction_Chord_Hint_Display"),
-            (_[(_.k_EControllerAction_Chord_Hint_Dismiss = 65)] =
-              "k_EControllerAction_Chord_Hint_Dismiss"),
-            (_[(_.k_EControllerAction_Notify_XInput_Slot_Change = 66)] =
-              "k_EControllerAction_Notify_XInput_Slot_Change"),
-            (_[(_.k_EControllerAction_Notify_InputGenerated = 67)] =
-              "k_EControllerAction_Notify_InputGenerated"),
-            (_[(_.k_EControllerAction_RequestConfigActivation = 68)] =
-              "k_EControllerAction_RequestConfigActivation"),
-            (_[(_.k_EControllerAction_RequestCursorVisibilityChecks = 69)] =
-              "k_EControllerAction_RequestCursorVisibilityChecks"),
-            (_[(_.k_EControllerAction_GuideQAMStateChange = 70)] =
-              "k_EControllerAction_GuideQAMStateChange"),
-            (_[(_.k_EControllerAction_IMUJerkEvent = 71)] =
-              "k_EControllerAction_IMUJerkEvent"),
-            (_[(_.k_EControllerAction_Count = 72)] =
-              "k_EControllerAction_Count");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHIDKeyboardKey_Invalid = 0)] = "k_EHIDKeyboardKey_Invalid"),
-            (_[(_.k_EHIDKeyboardKey_BeforeFirst = 3)] =
-              "k_EHIDKeyboardKey_BeforeFirst"),
-            (_[(_.k_EHIDKeyboardKey_A = 4)] = "k_EHIDKeyboardKey_A"),
-            (_[(_.k_EHIDKeyboardKey_B = 5)] = "k_EHIDKeyboardKey_B"),
-            (_[(_.k_EHIDKeyboardKey_C = 6)] = "k_EHIDKeyboardKey_C"),
-            (_[(_.k_EHIDKeyboardKey_D = 7)] = "k_EHIDKeyboardKey_D"),
-            (_[(_.k_EHIDKeyboardKey_E = 8)] = "k_EHIDKeyboardKey_E"),
-            (_[(_.k_EHIDKeyboardKey_F = 9)] = "k_EHIDKeyboardKey_F"),
-            (_[(_.k_EHIDKeyboardKey_G = 10)] = "k_EHIDKeyboardKey_G"),
-            (_[(_.k_EHIDKeyboardKey_H = 11)] = "k_EHIDKeyboardKey_H"),
-            (_[(_.k_EHIDKeyboardKey_I = 12)] = "k_EHIDKeyboardKey_I"),
-            (_[(_.k_EHIDKeyboardKey_J = 13)] = "k_EHIDKeyboardKey_J"),
-            (_[(_.k_EHIDKeyboardKey_K = 14)] = "k_EHIDKeyboardKey_K"),
-            (_[(_.k_EHIDKeyboardKey_L = 15)] = "k_EHIDKeyboardKey_L"),
-            (_[(_.k_EHIDKeyboardKey_M = 16)] = "k_EHIDKeyboardKey_M"),
-            (_[(_.k_EHIDKeyboardKey_N = 17)] = "k_EHIDKeyboardKey_N"),
-            (_[(_.k_EHIDKeyboardKey_O = 18)] = "k_EHIDKeyboardKey_O"),
-            (_[(_.k_EHIDKeyboardKey_P = 19)] = "k_EHIDKeyboardKey_P"),
-            (_[(_.k_EHIDKeyboardKey_Q = 20)] = "k_EHIDKeyboardKey_Q"),
-            (_[(_.k_EHIDKeyboardKey_R = 21)] = "k_EHIDKeyboardKey_R"),
-            (_[(_.k_EHIDKeyboardKey_S = 22)] = "k_EHIDKeyboardKey_S"),
-            (_[(_.k_EHIDKeyboardKey_T = 23)] = "k_EHIDKeyboardKey_T"),
-            (_[(_.k_EHIDKeyboardKey_U = 24)] = "k_EHIDKeyboardKey_U"),
-            (_[(_.k_EHIDKeyboardKey_V = 25)] = "k_EHIDKeyboardKey_V"),
-            (_[(_.k_EHIDKeyboardKey_W = 26)] = "k_EHIDKeyboardKey_W"),
-            (_[(_.k_EHIDKeyboardKey_X = 27)] = "k_EHIDKeyboardKey_X"),
-            (_[(_.k_EHIDKeyboardKey_Y = 28)] = "k_EHIDKeyboardKey_Y"),
-            (_[(_.k_EHIDKeyboardKey_Z = 29)] = "k_EHIDKeyboardKey_Z"),
-            (_[(_.k_EHIDKeyboardKey_1 = 30)] = "k_EHIDKeyboardKey_1"),
-            (_[(_.k_EHIDKeyboardKey_2 = 31)] = "k_EHIDKeyboardKey_2"),
-            (_[(_.k_EHIDKeyboardKey_3 = 32)] = "k_EHIDKeyboardKey_3"),
-            (_[(_.k_EHIDKeyboardKey_4 = 33)] = "k_EHIDKeyboardKey_4"),
-            (_[(_.k_EHIDKeyboardKey_5 = 34)] = "k_EHIDKeyboardKey_5"),
-            (_[(_.k_EHIDKeyboardKey_6 = 35)] = "k_EHIDKeyboardKey_6"),
-            (_[(_.k_EHIDKeyboardKey_7 = 36)] = "k_EHIDKeyboardKey_7"),
-            (_[(_.k_EHIDKeyboardKey_8 = 37)] = "k_EHIDKeyboardKey_8"),
-            (_[(_.k_EHIDKeyboardKey_9 = 38)] = "k_EHIDKeyboardKey_9"),
-            (_[(_.k_EHIDKeyboardKey_0 = 39)] = "k_EHIDKeyboardKey_0"),
-            (_[(_.k_EHIDKeyboardKey_Return = 40)] = "k_EHIDKeyboardKey_Return"),
-            (_[(_.k_EHIDKeyboardKey_Escape = 41)] = "k_EHIDKeyboardKey_Escape"),
-            (_[(_.k_EHIDKeyboardKey_Backspace = 42)] =
-              "k_EHIDKeyboardKey_Backspace"),
-            (_[(_.k_EHIDKeyboardKey_Tab = 43)] = "k_EHIDKeyboardKey_Tab"),
-            (_[(_.k_EHIDKeyboardKey_Space = 44)] = "k_EHIDKeyboardKey_Space"),
-            (_[(_.k_EHIDKeyboardKey_Dash = 45)] = "k_EHIDKeyboardKey_Dash"),
-            (_[(_.k_EHIDKeyboardKey_Equals = 46)] = "k_EHIDKeyboardKey_Equals"),
-            (_[(_.k_EHIDKeyboardKey_Left_Bracket = 47)] =
-              "k_EHIDKeyboardKey_Left_Bracket"),
-            (_[(_.k_EHIDKeyboardKey_Right_Bracket = 48)] =
-              "k_EHIDKeyboardKey_Right_Bracket"),
-            (_[(_.k_EHIDKeyboardKey_Backslash = 49)] =
-              "k_EHIDKeyboardKey_Backslash"),
-            (_[(_.k_EHIDKeyboardKey_Unused1 = 50)] =
-              "k_EHIDKeyboardKey_Unused1"),
-            (_[(_.k_EHIDKeyboardKey_Semicolon = 51)] =
-              "k_EHIDKeyboardKey_Semicolon"),
-            (_[(_.k_EHIDKeyboardKey_Single_Quote = 52)] =
-              "k_EHIDKeyboardKey_Single_Quote"),
-            (_[(_.k_EHIDKeyboardKey_Back_Tick = 53)] =
-              "k_EHIDKeyboardKey_Back_Tick"),
-            (_[(_.k_EHIDKeyboardKey_Comma = 54)] = "k_EHIDKeyboardKey_Comma"),
-            (_[(_.k_EHIDKeyboardKey_Period = 55)] = "k_EHIDKeyboardKey_Period"),
-            (_[(_.k_EHIDKeyboardKey_Forward_Slash = 56)] =
-              "k_EHIDKeyboardKey_Forward_Slash"),
-            (_[(_.k_EHIDKeyboardKey_CapsLock = 57)] =
-              "k_EHIDKeyboardKey_CapsLock"),
-            (_[(_.k_EHIDKeyboardKey_F1 = 58)] = "k_EHIDKeyboardKey_F1"),
-            (_[(_.k_EHIDKeyboardKey_F2 = 59)] = "k_EHIDKeyboardKey_F2"),
-            (_[(_.k_EHIDKeyboardKey_F3 = 60)] = "k_EHIDKeyboardKey_F3"),
-            (_[(_.k_EHIDKeyboardKey_F4 = 61)] = "k_EHIDKeyboardKey_F4"),
-            (_[(_.k_EHIDKeyboardKey_F5 = 62)] = "k_EHIDKeyboardKey_F5"),
-            (_[(_.k_EHIDKeyboardKey_F6 = 63)] = "k_EHIDKeyboardKey_F6"),
-            (_[(_.k_EHIDKeyboardKey_F7 = 64)] = "k_EHIDKeyboardKey_F7"),
-            (_[(_.k_EHIDKeyboardKey_F8 = 65)] = "k_EHIDKeyboardKey_F8"),
-            (_[(_.k_EHIDKeyboardKey_F9 = 66)] = "k_EHIDKeyboardKey_F9"),
-            (_[(_.k_EHIDKeyboardKey_F10 = 67)] = "k_EHIDKeyboardKey_F10"),
-            (_[(_.k_EHIDKeyboardKey_F11 = 68)] = "k_EHIDKeyboardKey_F11"),
-            (_[(_.k_EHIDKeyboardKey_F12 = 69)] = "k_EHIDKeyboardKey_F12"),
-            (_[(_.k_EHIDKeyboardKey_Print_Screen = 70)] =
-              "k_EHIDKeyboardKey_Print_Screen"),
-            (_[(_.k_EHIDKeyboardKey_Scroll_Lock = 71)] =
-              "k_EHIDKeyboardKey_Scroll_Lock"),
-            (_[(_.k_EHIDKeyboardKey_Break = 72)] = "k_EHIDKeyboardKey_Break"),
-            (_[(_.k_EHIDKeyboardKey_Insert = 73)] = "k_EHIDKeyboardKey_Insert"),
-            (_[(_.k_EHIDKeyboardKey_Home = 74)] = "k_EHIDKeyboardKey_Home"),
-            (_[(_.k_EHIDKeyboardKey_Page_Up = 75)] =
-              "k_EHIDKeyboardKey_Page_Up"),
-            (_[(_.k_EHIDKeyboardKey_Delete = 76)] = "k_EHIDKeyboardKey_Delete"),
-            (_[(_.k_EHIDKeyboardKey_End = 77)] = "k_EHIDKeyboardKey_End"),
-            (_[(_.k_EHIDKeyboardKey_Page_Down = 78)] =
-              "k_EHIDKeyboardKey_Page_Down"),
-            (_[(_.k_EHIDKeyboardKey_Right_Arrow = 79)] =
-              "k_EHIDKeyboardKey_Right_Arrow"),
-            (_[(_.k_EHIDKeyboardKey_Left_Arrow = 80)] =
-              "k_EHIDKeyboardKey_Left_Arrow"),
-            (_[(_.k_EHIDKeyboardKey_Down_Arrow = 81)] =
-              "k_EHIDKeyboardKey_Down_Arrow"),
-            (_[(_.k_EHIDKeyboardKey_Up_Arrow = 82)] =
-              "k_EHIDKeyboardKey_Up_Arrow"),
-            (_[(_.k_EHIDKeyboardKey_Num_Lock = 83)] =
-              "k_EHIDKeyboardKey_Num_Lock"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_Forward_Slash = 84)] =
-              "k_EHIDKeyboardKey_Keypad_Forward_Slash"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_Asterisk = 85)] =
-              "k_EHIDKeyboardKey_Keypad_Asterisk"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_Dash = 86)] =
-              "k_EHIDKeyboardKey_Keypad_Dash"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_Plus = 87)] =
-              "k_EHIDKeyboardKey_Keypad_Plus"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_Enter = 88)] =
-              "k_EHIDKeyboardKey_Keypad_Enter"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_1 = 89)] =
-              "k_EHIDKeyboardKey_Keypad_1"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_2 = 90)] =
-              "k_EHIDKeyboardKey_Keypad_2"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_3 = 91)] =
-              "k_EHIDKeyboardKey_Keypad_3"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_4 = 92)] =
-              "k_EHIDKeyboardKey_Keypad_4"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_5 = 93)] =
-              "k_EHIDKeyboardKey_Keypad_5"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_6 = 94)] =
-              "k_EHIDKeyboardKey_Keypad_6"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_7 = 95)] =
-              "k_EHIDKeyboardKey_Keypad_7"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_8 = 96)] =
-              "k_EHIDKeyboardKey_Keypad_8"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_9 = 97)] =
-              "k_EHIDKeyboardKey_Keypad_9"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_0 = 98)] =
-              "k_EHIDKeyboardKey_Keypad_0"),
-            (_[(_.k_EHIDKeyboardKey_Keypad_Period = 99)] =
-              "k_EHIDKeyboardKey_Keypad_Period"),
-            (_[(_.k_EHIDKeyboardKey_LAlt = 100)] = "k_EHIDKeyboardKey_LAlt"),
-            (_[(_.k_EHIDKeyboardKey_LShift = 101)] =
-              "k_EHIDKeyboardKey_LShift"),
-            (_[(_.k_EHIDKeyboardKey_LWin = 102)] = "k_EHIDKeyboardKey_LWin"),
-            (_[(_.k_EHIDKeyboardKey_LControl = 103)] =
-              "k_EHIDKeyboardKey_LControl"),
-            (_[(_.k_EHIDKeyboardKey_RAlt = 104)] = "k_EHIDKeyboardKey_RAlt"),
-            (_[(_.k_EHIDKeyboardKey_RShift = 105)] =
-              "k_EHIDKeyboardKey_RShift"),
-            (_[(_.k_EHIDKeyboardKey_RWin = 106)] = "k_EHIDKeyboardKey_RWin"),
-            (_[(_.k_EHIDKeyboardKey_RControl = 107)] =
-              "k_EHIDKeyboardKey_RControl"),
-            (_[(_.k_EHIDKeyboardKey_VolUp = 108)] = "k_EHIDKeyboardKey_VolUp"),
-            (_[(_.k_EHIDKeyboardKey_VolDown = 109)] =
-              "k_EHIDKeyboardKey_VolDown"),
-            (_[(_.k_EHIDKeyboardKey_Mute = 110)] = "k_EHIDKeyboardKey_Mute"),
-            (_[(_.k_EHIDKeyboardKey_Play = 111)] = "k_EHIDKeyboardKey_Play"),
-            (_[(_.k_EHIDKeyboardKey_Stop = 112)] = "k_EHIDKeyboardKey_Stop"),
-            (_[(_.k_EHIDKeyboardKey_Next = 113)] = "k_EHIDKeyboardKey_Next"),
-            (_[(_.k_EHIDKeyboardKey_Prev = 114)] = "k_EHIDKeyboardKey_Prev"),
-            (_[(_.k_EHIDKeyboardKey_AfterLast = 115)] =
-              "k_EHIDKeyboardKey_AfterLast");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EMouseControl_Button_Left = 0)] =
-            "k_EMouseControl_Button_Left"),
-            (_[(_.k_EMouseControl_Button_Right = 1)] =
-              "k_EMouseControl_Button_Right"),
-            (_[(_.k_EMouseControl_Button_Middle = 2)] =
-              "k_EMouseControl_Button_Middle"),
-            (_[(_.k_EMouseControl_Button_Back = 3)] =
-              "k_EMouseControl_Button_Back"),
-            (_[(_.k_EMouseControl_Button_Forward = 4)] =
-              "k_EMouseControl_Button_Forward"),
-            (_[(_.k_EMouseControl_Scroll_Up = 5)] =
-              "k_EMouseControl_Scroll_Up"),
-            (_[(_.k_EMouseControl_Scroll_Down = 6)] =
-              "k_EMouseControl_Scroll_Down"),
-            (_[(_.k_EMouseControl_Count = 7)] = "k_EMouseControl_Count");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EGamepadButton_BeforeFirst = 0)] =
-            "k_EGamepadButton_BeforeFirst"),
-            (_[(_.k_EGamepadButton_Trigger_Left = 1)] =
-              "k_EGamepadButton_Trigger_Left"),
-            (_[(_.k_EGamepadButton_Trigger_Right = 2)] =
-              "k_EGamepadButton_Trigger_Right"),
-            (_[(_.k_EGamepadButton_A = 3)] = "k_EGamepadButton_A"),
-            (_[(_.k_EGamepadButton_B = 4)] = "k_EGamepadButton_B"),
-            (_[(_.k_EGamepadButton_Y = 5)] = "k_EGamepadButton_Y"),
-            (_[(_.k_EGamepadButton_X = 6)] = "k_EGamepadButton_X"),
-            (_[(_.k_EGamepadButton_Shoulder_Left = 7)] =
-              "k_EGamepadButton_Shoulder_Left"),
-            (_[(_.k_EGamepadButton_Shoulder_Right = 8)] =
-              "k_EGamepadButton_Shoulder_Right"),
-            (_[(_.k_EGamepadButton_Left_Joystick = 9)] =
-              "k_EGamepadButton_Left_Joystick"),
-            (_[(_.k_EGamepadButton_Right_Joystick = 10)] =
-              "k_EGamepadButton_Right_Joystick"),
-            (_[(_.k_EGamepadButton_Start = 11)] = "k_EGamepadButton_Start"),
-            (_[(_.k_EGamepadButton_Select = 12)] = "k_EGamepadButton_Select"),
-            (_[(_.k_EGamepadButton_Steam = 13)] = "k_EGamepadButton_Steam"),
-            (_[(_.k_EGamepadButton_DPad_Up = 14)] = "k_EGamepadButton_DPad_Up"),
-            (_[(_.k_EGamepadButton_DPad_Down = 15)] =
-              "k_EGamepadButton_DPad_Down"),
-            (_[(_.k_EGamepadButton_DPad_Left = 16)] =
-              "k_EGamepadButton_DPad_Left"),
-            (_[(_.k_EGamepadButton_DPad_Right = 17)] =
-              "k_EGamepadButton_DPad_Right"),
-            (_[(_.k_EGamepadButton_LStick_Up = 18)] =
-              "k_EGamepadButton_LStick_Up"),
-            (_[(_.k_EGamepadButton_LStick_Down = 19)] =
-              "k_EGamepadButton_LStick_Down"),
-            (_[(_.k_EGamepadButton_LStick_Left = 20)] =
-              "k_EGamepadButton_LStick_Left"),
-            (_[(_.k_EGamepadButton_LStick_Right = 21)] =
-              "k_EGamepadButton_LStick_Right"),
-            (_[(_.k_EGamepadButton_RStick_Up = 22)] =
-              "k_EGamepadButton_RStick_Up"),
-            (_[(_.k_EGamepadButton_RStick_Down = 23)] =
-              "k_EGamepadButton_RStick_Down"),
-            (_[(_.k_EGamepadButton_RStick_Left = 24)] =
-              "k_EGamepadButton_RStick_Left"),
-            (_[(_.k_EGamepadButton_RStick_Right = 25)] =
-              "k_EGamepadButton_RStick_Right"),
-            (_[(_.k_EGamepadButton_AfterLast = 26)] =
-              "k_EGamepadButton_AfterLast");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EControllerLEDSettingDefault = 0)] =
-            "k_EControllerLEDSettingDefault"),
-            (_[(_.k_EControllerLEDSettingCustom = 1)] =
-              "k_EControllerLEDSettingCustom"),
-            (_[(_.k_EControllerLEDSettingXinputSlot = 2)] =
-              "k_EControllerLEDSettingXinputSlot"),
-            (_[(_.k_EControllerLEDSettingType_Count = 3)] =
-              "k_EControllerLEDSettingType_Count");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EControllerPresetType_None = 32767)] =
-            "k_EControllerPresetType_None"),
-            (_[(_.k_EControllerPresetType_Next = 32766)] =
-              "k_EControllerPresetType_Next"),
-            (_[(_.k_EControllerPresetType_Previous = 32765)] =
-              "k_EControllerPresetType_Previous");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EControllerSettingLeftTrackpadMode = 0)] =
-            "k_EControllerSettingLeftTrackpadMode"),
-            (_[(_.k_EControllerSettingRightTrackpadMode = 1)] =
-              "k_EControllerSettingRightTrackpadMode"),
-            (_[(_.k_EControllerSettingTrackpadTriggerData = 2)] =
-              "k_EControllerSettingTrackpadTriggerData"),
-            (_[(_.k_EControllerSettingHapticIntensity = 3)] =
-              "k_EControllerSettingHapticIntensity"),
-            (_[(_.k_EControllerSettingHapticIntensityOverride = 4)] =
-              "k_EControllerSettingHapticIntensityOverride"),
-            (_[(_.k_EControllerSettingRumbleType = 5)] =
-              "k_EControllerSettingRumbleType"),
-            (_[(_.k_EControllerSettingRumbleIntensity = 6)] =
-              "k_EControllerSettingRumbleIntensity"),
-            (_[(_.k_EControllerSettingEdgeBindingRadius = 7)] =
-              "k_EControllerSettingEdgeBindingRadius"),
-            (_[(_.k_EControllerSettingOutputJoystick = 8)] =
-              "k_EControllerSettingOutputJoystick"),
-            (_[(_.k_EControllerSettingCurveExponent = 9)] =
-              "k_EControllerSettingCurveExponent"),
-            (_[(_.k_EControllerSettingCustomCurveExponent = 10)] =
-              "k_EControllerSettingCustomCurveExponent"),
-            (_[(_.k_EControllerSettingSwipeDuration = 11)] =
-              "k_EControllerSettingSwipeDuration"),
-            (_[(_.k_EControllerSettingDeadZoneInnerRadius = 12)] =
-              "k_EControllerSettingDeadZoneInnerRadius"),
-            (_[(_.k_EControllerSettingDeadZoneOuterRadius = 13)] =
-              "k_EControllerSettingDeadZoneOuterRadius"),
-            (_[(_.k_EControllerSettingDeadZoneShape = 14)] =
-              "k_EControllerSettingDeadZoneShape"),
-            (_[(_.k_EControllerSettingAdaptiveCentering = 15)] =
-              "k_EControllerSettingAdaptiveCentering"),
-            (_[(_.k_EControllerSettingVirtualCapSize = 16)] =
-              "k_EControllerSettingVirtualCapSize"),
-            (_[(_.k_EControllerSettingVirtualStickThrow = 17)] =
-              "k_EControllerSettingVirtualStickThrow"),
-            (_[(_.k_EControllerSettingAntiDeadZone = 18)] =
-              "k_EControllerSettingAntiDeadZone"),
-            (_[(_.k_EControllerSettingAntiDeadZoneBuffer = 19)] =
-              "k_EControllerSettingAntiDeadZoneBuffer"),
-            (_[(_.k_EControllerSettingEdgeBindingInvert = 20)] =
-              "k_EControllerSettingEdgeBindingInvert"),
-            (_[(_.k_EControllerSettingOutputAxis = 21)] =
-              "k_EControllerSettingOutputAxis"),
-            (_[(_.k_EControllerSettingRequiresClick = 22)] =
-              "k_EControllerSettingRequiresClick"),
-            (_[(_.k_EControllerSettingDeadzone = 23)] =
-              "k_EControllerSettingDeadzone"),
-            (_[(_.k_EControllerSettingLayout = 24)] =
-              "k_EControllerSettingLayout"),
-            (_[(_.k_EControllerSettingHoldRepeats = 25)] =
-              "k_EControllerSettingHoldRepeats"),
-            (_[(_.k_EControllerSettingHoldRepeatInterval = 26)] =
-              "k_EControllerSettingHoldRepeatInterval"),
-            (_[(_.k_EControllerSettingAnalogEmulationDutyCyclePct = 27)] =
-              "k_EControllerSettingAnalogEmulationDutyCyclePct"),
-            (_[(_.k_EControllerSettingAnalogEmulationPeriod = 28)] =
-              "k_EControllerSettingAnalogEmulationPeriod"),
-            (_[(_.k_EControllerSettingOverlapRegion = 29)] =
-              "k_EControllerSettingOverlapRegion"),
-            (_[(_.k_EControllerSettingSensitivity = 30)] =
-              "k_EControllerSettingSensitivity"),
-            (_[(_.k_EControllerSettingSensitivityVertScale = 31)] =
-              "k_EControllerSettingSensitivityVertScale"),
-            (_[(_.k_EControllerSettingSensitivityHorizScale = 32)] =
-              "k_EControllerSettingSensitivityHorizScale"),
-            (_[(_.k_EControllerSettingTrackball = 33)] =
-              "k_EControllerSettingTrackball"),
-            (_[(_.k_EControllerSettingFriction = 34)] =
-              "k_EControllerSettingFriction"),
-            (_[(_.k_EControllerSettingFrictionVertScale = 35)] =
-              "k_EControllerSettingFrictionVertScale"),
-            (_[(_.k_EControllerSettingAcceleration = 36)] =
-              "k_EControllerSettingAcceleration"),
-            (_[(_.k_EControllerSettingDoubleTap = 37)] =
-              "k_EControllerSettingDoubleTap"),
-            (_[(_.k_EControllerSettingDoubleTapBeep = 38)] =
-              "k_EControllerSettingDoubleTapBeep"),
-            (_[(_.k_EControllerSettingEdgeSpinRadius = 39)] =
-              "k_EControllerSettingEdgeSpinRadius"),
-            (_[(_.k_EControllerSettingEdgeSpinVelocity = 40)] =
-              "k_EControllerSettingEdgeSpinVelocity"),
-            (_[(_.k_EControllerSettingInvertX = 41)] =
-              "k_EControllerSettingInvertX"),
-            (_[(_.k_EControllerSettingInvertY = 42)] =
-              "k_EControllerSettingInvertY"),
-            (_[(_.k_EControllerSettingMouseSmoothing = 43)] =
-              "k_EControllerSettingMouseSmoothing"),
-            (_[(_.k_EControllerSettingMouseMoveThreshold = 44)] =
-              "k_EControllerSettingMouseMoveThreshold"),
-            (_[(_.k_EControllerSettingRotation = 45)] =
-              "k_EControllerSettingRotation"),
-            (_[(_.k_EControllerSettingDoubleTapMaxDist = 46)] =
-              "k_EControllerSettingDoubleTapMaxDist"),
-            (_[(_.k_EControllerSettingDoubleTapMinDuration = 47)] =
-              "k_EControllerSettingDoubleTapMinDuration"),
-            (_[(_.k_EControllerSettingDoubleTapMaxDuration = 48)] =
-              "k_EControllerSettingDoubleTapMaxDuration"),
-            (_[(_.k_EControllerSettingOutputToJoystick = 49)] =
-              "k_EControllerSettingOutputToJoystick"),
-            (_[(_.k_EControllerSettingOutputToJoystickDeadzoneX = 50)] =
-              "k_EControllerSettingOutputToJoystickDeadzoneX"),
-            (_[(_.k_EControllerSettingOutputToJoystickDeadzoneY = 51)] =
-              "k_EControllerSettingOutputToJoystickDeadzoneY"),
-            (_[(_.k_EControllerSettingOutputToJoystickPrecision = 52)] =
-              "k_EControllerSettingOutputToJoystickPrecision"),
-            (_[(_.k_EControllerSettingScrollAngle = 53)] =
-              "k_EControllerSettingScrollAngle"),
-            (_[(_.k_EControllerSettingScrollWrap = 54)] =
-              "k_EControllerSettingScrollWrap"),
-            (_[(_.k_EControllerSettingScrollType = 55)] =
-              "k_EControllerSettingScrollType"),
-            (_[(_.k_EControllerSettingScrollInvert = 56)] =
-              "k_EControllerSettingScrollInvert"),
-            (_[(_.k_EControllerSettingScrollMomentum = 57)] =
-              "k_EControllerSettingScrollMomentum"),
-            (_[(_.k_EControllerSettingOutputTrigger = 58)] =
-              "k_EControllerSettingOutputTrigger"),
-            (_[(_.k_EControllerSettingAdaptiveThreshold = 59)] =
-              "k_EControllerSettingAdaptiveThreshold"),
-            (_[(_.k_EControllerSettingFourButtonSize = 60)] =
-              "k_EControllerSettingFourButtonSize"),
-            (_[(_.k_EControllerSettingFourButtonDist = 61)] =
-              "k_EControllerSettingFourButtonDist"),
-            (_[(_.k_EControllerSettingGyroMode = 62)] =
-              "k_EControllerSettingGyroMode"),
-            (_[(_.k_EControllerSettingSmoothJoystick = 63)] =
-              "k_EControllerSettingSmoothJoystick"),
-            (_[(_.k_EControllerSettingGyroAxis = 64)] =
-              "k_EControllerSettingGyroAxis"),
-            (_[(_.k_EControllerSettingGyroButton = 65)] =
-              "k_EControllerSettingGyroButton"),
-            (_[(_.k_EControllerSettingGyroNeutralAngle = 66)] =
-              "k_EControllerSettingGyroNeutralAngle"),
-            (_[(_.k_EControllerSettingGyroLockExtents = 67)] =
-              "k_EControllerSettingGyroLockExtents"),
-            (_[(_.k_EControllerSettingGyroPointer = 68)] =
-              "k_EControllerSettingGyroPointer"),
-            (_[(_.k_EControllerSettingGyroButtonInvert = 69)] =
-              "k_EControllerSettingGyroButtonInvert"),
-            (_[(_.k_EControllerSettingVirtualMode = 70)] =
-              "k_EControllerSettingVirtualMode"),
-            (_[(_.k_EControllerSettingDynamicMode = 71)] =
-              "k_EControllerSettingDynamicMode"),
-            (_[(_.k_EControllerSettingLayerMode = 72)] =
-              "k_EControllerSettingLayerMode"),
-            (_[(_.k_EControllerSettingTouchMenuButtonCount = 73)] =
-              "k_EControllerSettingTouchMenuButtonCount"),
-            (_[(_.k_EControllerSettingTouchMenuOpacity = 74)] =
-              "k_EControllerSettingTouchMenuOpacity"),
-            (_[(_.k_EControllerSettingTouchMenuPosX = 75)] =
-              "k_EControllerSettingTouchMenuPosX"),
-            (_[(_.k_EControllerSettingTouchMenuPosY = 76)] =
-              "k_EControllerSettingTouchMenuPosY"),
-            (_[(_.k_EControllerSettingTouchMenuScale = 77)] =
-              "k_EControllerSettingTouchMenuScale"),
-            (_[(_.k_EControllerSettingTriggerMouseClamping = 78)] =
-              "k_EControllerSettingTriggerMouseClamping"),
-            (_[(_.k_EControllerSettingTriggerMouseClampingAmount = 79)] =
-              "k_EControllerSettingTriggerMouseClampingAmount"),
-            (_[(_.k_EControllerSettingTouchMenuLabels = 80)] =
-              "k_EControllerSettingTouchMenuLabels"),
-            (_[(_.k_EControllerSettingGyroSensitivityScale = 81)] =
-              "k_EControllerSettingGyroSensitivityScale"),
-            (_[(_.k_EControllerSettingMouseRegionScale = 82)] =
-              "k_EControllerSettingMouseRegionScale"),
-            (_[(_.k_EControllerSettingMouseRegionPositionX = 83)] =
-              "k_EControllerSettingMouseRegionPositionX"),
-            (_[(_.k_EControllerSettingMouseRegionPositionY = 84)] =
-              "k_EControllerSettingMouseRegionPositionY"),
-            (_[(_.k_EControllerSettingTeleportMouseStart = 85)] =
-              "k_EControllerSettingTeleportMouseStart"),
-            (_[(_.k_EControllerSettingTeleportMouseStop = 86)] =
-              "k_EControllerSettingTeleportMouseStop"),
-            (_[(_.k_EControllerSettingTouchMenuButtonType = 87)] =
-              "k_EControllerSettingTouchMenuButtonType"),
-            (_[(_.k_EControllerSettingTestParam0 = 88)] =
-              "k_EControllerSettingTestParam0"),
-            (_[(_.k_EControllerSettingTestParam1 = 89)] =
-              "k_EControllerSettingTestParam1"),
-            (_[(_.k_EControllerSettingTestParam2 = 90)] =
-              "k_EControllerSettingTestParam2"),
-            (_[(_.k_EControllerSettingTestParam3 = 91)] =
-              "k_EControllerSettingTestParam3"),
-            (_[(_.k_EControllerSettingTestParam4 = 92)] =
-              "k_EControllerSettingTestParam4"),
-            (_[(_.k_EControllerSettingTestParam5 = 93)] =
-              "k_EControllerSettingTestParam5"),
-            (_[(_.k_EControllerSettingTestParam6 = 94)] =
-              "k_EControllerSettingTestParam6"),
-            (_[(_.k_EControllerSettingTestParam7 = 95)] =
-              "k_EControllerSettingTestParam7"),
-            (_[(_.k_EControllerSettingTestParam8 = 96)] =
-              "k_EControllerSettingTestParam8"),
-            (_[(_.k_EControllerSettingTestParam9 = 97)] =
-              "k_EControllerSettingTestParam9"),
-            (_[(_.k_EControllerSettingActionSetTriggerCursorShow = 98)] =
-              "k_EControllerSettingActionSetTriggerCursorShow"),
-            (_[(_.k_EControllerSettingActionSetTriggerCursorHide = 99)] =
-              "k_EControllerSettingActionSetTriggerCursorHide"),
-            (_[(_.k_EControllerSettingActivatorStartDelay = 100)] =
-              "k_EControllerSettingActivatorStartDelay"),
-            (_[(_.k_EControllerSettingActivatorEndDelay = 101)] =
-              "k_EControllerSettingActivatorEndDelay"),
-            (_[(_.k_EControllerSettingActivatorCycle = 102)] =
-              "k_EControllerSettingActivatorCycle"),
-            (_[(_.k_EControllerSettingActivatorToggle = 103)] =
-              "k_EControllerSettingActivatorToggle"),
-            (_[(_.k_EControllerSettingActivatorRepeatRate = 104)] =
-              "k_EControllerSettingActivatorRepeatRate"),
-            (_[(_.k_EControllerSettingActivatorDoubleTapTime = 105)] =
-              "k_EControllerSettingActivatorDoubleTapTime"),
-            (_[(_.k_EControllerSettingActivatorLongPressTime = 106)] =
-              "k_EControllerSettingActivatorLongPressTime"),
-            (_[(_.k_EControllerSettingActivatorThreshold = 107)] =
-              "k_EControllerSettingActivatorThreshold"),
-            (_[(_.k_EControllerSettingActivatorMouseWarpX = 108)] =
-              "k_EControllerSettingActivatorMouseWarpX"),
-            (_[(_.k_EControllerSettingActivatorMouseWarpY = 109)] =
-              "k_EControllerSettingActivatorMouseWarpY"),
-            (_[(_.k_EControllerSettingActivatorAnalogOutputValue = 110)] =
-              "k_EControllerSettingActivatorAnalogOutputValue"),
-            (_[(_.k_EControllerSettingActivatorInterruptable = 111)] =
-              "k_EControllerSettingActivatorInterruptable"),
-            (_[(_.k_EControllerSettingActivatorSoftPressStyle = 112)] =
-              "k_EControllerSettingActivatorSoftPressStyle"),
-            (_[(_.k_EControllerSettingActivatorOutputAxis = 113)] =
-              "k_EControllerSettingActivatorOutputAxis"),
-            (_[(_.k_EControllerSettingActivatorChord = 114)] =
-              "k_EControllerSettingActivatorChord"),
-            (_[(_.k_EControllerSettingTouchMenuInnerDeadzone = 115)] =
-              "k_EControllerSettingTouchMenuInnerDeadzone"),
-            (_[(_.k_EControllerSettingTouchMenuOuterDeadzone = 116)] =
-              "k_EControllerSettingTouchMenuOuterDeadzone"),
-            (_[(_.k_EControllerSettingPressureJoystickMinPressure = 117)] =
-              "k_EControllerSettingPressureJoystickMinPressure"),
-            (_[(_.k_EControllerSettingPressureJoystickMaxPressure = 118)] =
-              "k_EControllerSettingPressureJoystickMaxPressure"),
-            (_[(_.k_EControllerSettingPressureJoystickEnable = 119)] =
-              "k_EControllerSettingPressureJoystickEnable"),
-            (_[(_.k_EControllerSettingActivatorActivateStickOrTrackpad = 120)] =
-              "k_EControllerSettingActivatorActivateStickOrTrackpad"),
-            (_[(_.k_EControllerSettingFlickStickFrameTime = 121)] =
-              "k_EControllerSettingFlickStickFrameTime"),
-            (_[(_.k_EControllerSettingFlickStickTransitionTime = 122)] =
-              "k_EControllerSettingFlickStickTransitionTime"),
-            (_[(_.k_EControllerSettingTouchMenuActivateButton = 123)] =
-              "k_EControllerSettingTouchMenuActivateButton"),
-            (_[(_.k_EControllerSettingDeadZoneEnabled = 124)] =
-              "k_EControllerSettingDeadZoneEnabled"),
-            (_[(_.k_EControllerSettingGyroYawScale = 125)] =
-              "k_EControllerSettingGyroYawScale"),
-            (_[(_.k_EControllerSettingGyroRollScale = 126)] =
-              "k_EControllerSettingGyroRollScale"),
-            (_[(_.k_EControllerSettingDeadzoneAdvancedSettings = 127)] =
-              "k_EControllerSettingDeadzoneAdvancedSettings"),
-            (_[(_.k_EControllerSettingRotationOld = 128)] =
-              "k_EControllerSettingRotationOld"),
-            (_[(_.k_EControllerSettingReferencedMode = 129)] =
-              "k_EControllerSettingReferencedMode"),
-            (_[(_.k_EControllerSettingVirtualMenuCenterBound = 130)] =
-              "k_EControllerSettingVirtualMenuCenterBound"),
-            (_[(_.k_EControllerSettingFlickStickSnapMode = 131)] =
-              "k_EControllerSettingFlickStickSnapMode"),
-            (_[(_.k_EControllerSettingFlickStickForwardDeadZone = 132)] =
-              "k_EControllerSettingFlickStickForwardDeadZone"),
-            (_[(_.k_EControllerSettingFlickStickSnapTightness = 133)] =
-              "k_EControllerSettingFlickStickSnapTightness"),
-            (_[(_.k_EControllerSettingFlickStickSweepTightness = 134)] =
-              "k_EControllerSettingFlickStickSweepTightness"),
-            (_[(_.k_EControllerSettingFlickStickSweepSensitivity = 135)] =
-              "k_EControllerSettingFlickStickSweepSensitivity"),
-            (_[(_.k_EControllerSettingFlickStickDepressionSpeed = 136)] =
-              "k_EControllerSettingFlickStickDepressionSpeed"),
-            (_[(_.k_EControllerSettingDotsPer360 = 137)] =
-              "k_EControllerSettingDotsPer360"),
-            (_[(_.k_EControllerSettingFlickStickEdgeBindingRadius = 138)] =
-              "k_EControllerSettingFlickStickEdgeBindingRadius"),
-            (_[(_.k_EControllerSettingFlickStickHapticBumpPerAngle = 139)] =
-              "k_EControllerSettingFlickStickHapticBumpPerAngle"),
-            (_[(_.k_EControllerSettingGyroNaturalSensitivity = 140)] =
-              "k_EControllerSettingGyroNaturalSensitivity"),
-            (_[(_.k_EControllerSettingGyroXYRatio = 141)] =
-              "k_EControllerSettingGyroXYRatio"),
-            (_[(_.k_EControllerSettingGyroSampleAngleOffsetX = 142)] =
-              "k_EControllerSettingGyroSampleAngleOffsetX"),
-            (_[(_.k_EControllerSettingGyroPrecisionSpeed = 143)] =
-              "k_EControllerSettingGyroPrecisionSpeed"),
-            (_[(_.k_EControllerSettingGyroSpeedDeadzone = 144)] =
-              "k_EControllerSettingGyroSpeedDeadzone"),
-            (_[(_.k_EControllerSettingGyroSpeedMinAnglePerSecond = 145)] =
-              "k_EControllerSettingGyroSpeedMinAnglePerSecond"),
-            (_[(_.k_EControllerSettingGyroSpeedMaxAnglePerSecond = 146)] =
-              "k_EControllerSettingGyroSpeedMaxAnglePerSecond"),
-            (_[(_.k_EControllerSettingGyroDeflectionAngleMin = 147)] =
-              "k_EControllerSettingGyroDeflectionAngleMin"),
-            (_[(_.k_EControllerSettingGyroDeflectionAngleMax = 148)] =
-              "k_EControllerSettingGyroDeflectionAngleMax"),
-            (_[(_.k_EControllerSettingGyroJoystickOutputMin = 149)] =
-              "k_EControllerSettingGyroJoystickOutputMin"),
-            (_[(_.k_EControllerSettingGyroJoystickOutputMax = 150)] =
-              "k_EControllerSettingGyroJoystickOutputMax"),
-            (_[
-              (_.k_EControllerSettingGyroUsePerControllerGyroPreferences = 151)
-            ] = "k_EControllerSettingGyroUsePerControllerGyroPreferences"),
-            (_[(_.k_EControllerSettingGyroTo2DConversionStyle = 152)] =
-              "k_EControllerSettingGyroTo2DConversionStyle"),
-            (_[(_.k_EControllerSettingGyroEnableAngleCatchUp = 153)] =
-              "k_EControllerSettingGyroEnableAngleCatchUp"),
-            (_[(_.k_EControllerSettingGyroDeflectionUseGravity = 154)] =
-              "k_EControllerSettingGyroDeflectionUseGravity"),
-            (_[(_.k_EControllerSettingGyroDeflectionNeutralAngle = 155)] =
-              "k_EControllerSettingGyroDeflectionNeutralAngle"),
-            (_[(_.k_EControllerSettingGyroJoystickPowerCurve = 156)] =
-              "k_EControllerSettingGyroJoystickPowerCurve"),
-            (_[(_.k_EControllerSettingGyroButtonMask = 157)] =
-              "k_EControllerSettingGyroButtonMask"),
-            (_[(_.k_EControllerSettingGyroButtonHapticEffect = 158)] =
-              "k_EControllerSettingGyroButtonHapticEffect"),
-            (_[(_.k_EControllerSettingFlickStickAllowFlickOnAwake = 159)] =
-              "k_EControllerSettingFlickStickAllowFlickOnAwake"),
-            (_[(_.k_EControllerSettingGyroButtonRequireAnyOrAll = 160)] =
-              "k_EControllerSettingGyroButtonRequireAnyOrAll"),
-            (_[(_.k_EControllerSettingGyroOnOffHapticIntensity = 161)] =
-              "k_EControllerSettingGyroOnOffHapticIntensity"),
-            (_[(_.k_EControllerSettingActivatorInvertInput = 162)] =
-              "k_EControllerSettingActivatorInvertInput"),
-            (_[(_.k_EControllerSettingGyroDeflectionUseGravityRoll = 163)] =
-              "k_EControllerSettingGyroDeflectionUseGravityRoll"),
-            (_[(_.k_EControllerSettingCount = 164)] =
-              "k_EControllerSettingCount");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EDeviceSupportFlowStateIdle = 0)] =
-            "k_EDeviceSupportFlowStateIdle"),
-            (_[(_.k_EDeviceSupportFlowStateBinding = 1)] =
-              "k_EDeviceSupportFlowStateBinding"),
-            (_[(_.k_EDeviceSupportFlowStateTesting = 2)] =
-              "k_EDeviceSupportFlowStateTesting");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_TestingStarted = 0)] = "k_TestingStarted"),
-            (_[(_.k_TestingFreeMode = 1)] = "k_TestingFreeMode"),
-            (_[(_.k_TestingBindAButton = 2)] = "k_TestingBindAButton"),
-            (_[(_.k_TestingBindBButton = 3)] = "k_TestingBindBButton"),
-            (_[(_.k_TestingBindXButton = 4)] = "k_TestingBindXButton"),
-            (_[(_.k_TestingBindYButton = 5)] = "k_TestingBindYButton"),
-            (_[(_.k_TestingBindDPadLeft = 6)] = "k_TestingBindDPadLeft"),
-            (_[(_.k_TestingBindDPadRight = 7)] = "k_TestingBindDPadRight"),
-            (_[(_.k_TestingBindDPadUp = 8)] = "k_TestingBindDPadUp"),
-            (_[(_.k_TestingBindDPadDown = 9)] = "k_TestingBindDPadDown"),
-            (_[(_.k_TestingBindLeftStickLeft = 10)] =
-              "k_TestingBindLeftStickLeft"),
-            (_[(_.k_TestingBindLeftStickRight = 11)] =
-              "k_TestingBindLeftStickRight"),
-            (_[(_.k_TestingBindLeftStickUp = 12)] = "k_TestingBindLeftStickUp"),
-            (_[(_.k_TestingBindLeftStickDown = 13)] =
-              "k_TestingBindLeftStickDown"),
-            (_[(_.k_TestingBindLeftStickButton = 14)] =
-              "k_TestingBindLeftStickButton"),
-            (_[(_.k_TestingBindRightStickLeft = 15)] =
-              "k_TestingBindRightStickLeft"),
-            (_[(_.k_TestingBindRightStickRight = 16)] =
-              "k_TestingBindRightStickRight"),
-            (_[(_.k_TestingBindRightStickUp = 17)] =
-              "k_TestingBindRightStickUp"),
-            (_[(_.k_TestingBindRightStickDown = 18)] =
-              "k_TestingBindRightStickDown"),
-            (_[(_.k_TestingBindRightStickButton = 19)] =
-              "k_TestingBindRightStickButton"),
-            (_[(_.k_TestingBindLeftShoulder = 20)] =
-              "k_TestingBindLeftShoulder"),
-            (_[(_.k_TestingBindLeftTrigger = 21)] = "k_TestingBindLeftTrigger"),
-            (_[(_.k_TestingBindRightShoulder = 22)] =
-              "k_TestingBindRightShoulder"),
-            (_[(_.k_TestingBindRightTrigger = 23)] =
-              "k_TestingBindRightTrigger"),
-            (_[(_.k_TestingBindSelect = 24)] = "k_TestingBindSelect"),
-            (_[(_.k_TestingBindStart = 25)] = "k_TestingBindStart"),
-            (_[(_.k_TestingBindGuide = 26)] = "k_TestingBindGuide"),
-            (_[(_.k_TestingBindShare = 27)] = "k_TestingBindShare"),
-            (_[(_.k_TestingBindTouchpad = 28)] = "k_TestingBindTouchpad"),
-            (_[(_.k_TestingBindingComplete = 29)] = "k_TestingBindingComplete"),
-            (_[(_.k_TestingLeftTrigger = 30)] = "k_TestingLeftTrigger"),
-            (_[(_.k_TestingRightTrigger = 31)] = "k_TestingRightTrigger"),
-            (_[(_.k_TestingLeftTrackpad = 32)] = "k_TestingLeftTrackpad"),
-            (_[(_.k_TestingLeftTrackpadPressure = 33)] =
-              "k_TestingLeftTrackpadPressure"),
-            (_[(_.k_TestingRightTrackpad = 34)] = "k_TestingRightTrackpad"),
-            (_[(_.k_TestingRightTrackpadPressure = 35)] =
-              "k_TestingRightTrackpadPressure"),
-            (_[(_.k_TestingLeftJoystick = 36)] = "k_TestingLeftJoystick"),
-            (_[(_.k_TestingRightJoystick = 37)] = "k_TestingRightJoystick"),
-            (_[(_.k_TestingButtons = 38)] = "k_TestingButtons"),
-            (_[(_.k_TestingLeftHaptics = 39)] = "k_TestingLeftHaptics"),
-            (_[(_.k_TestingRightHaptics = 40)] = "k_TestingRightHaptics"),
-            (_[(_.k_TestingComplete = 41)] = "k_TestingComplete"),
-            (_[(_.k_TestingAborted = 42)] = "k_TestingAborted");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EFlickStickSnapAngles_NoSnap = 0)] =
-            "k_EFlickStickSnapAngles_NoSnap"),
-            (_[(_.k_EFlickStickSnapAngles_Half = 1)] =
-              "k_EFlickStickSnapAngles_Half"),
-            (_[(_.k_EFlickStickSnapAngles_Quarter = 2)] =
-              "k_EFlickStickSnapAngles_Quarter"),
-            (_[(_.k_EFlickStickSnapAngles_Sixths = 3)] =
-              "k_EFlickStickSnapAngles_Sixths"),
-            (_[(_.k_EFlickStickSnapAngles_Eighths = 4)] =
-              "k_EFlickStickSnapAngles_Eighths"),
-            (_[(_.k_EFlickStickSnapAngles_ForwardOnly = 5)] =
-              "k_EFlickStickSnapAngles_ForwardOnly");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EControllerDigitalInput_ButtonNone = -1)] =
-            "k_EControllerDigitalInput_ButtonNone"),
-            (_[(_.k_EControllerDigitalInput_ButtonRightTrigger = 0)] =
-              "k_EControllerDigitalInput_ButtonRightTrigger"),
-            (_[(_.k_EControllerDigitalInput_ButtonLeftTrigger = 1)] =
-              "k_EControllerDigitalInput_ButtonLeftTrigger"),
-            (_[(_.k_EControllerDigitalInput_Button1 = 2)] =
-              "k_EControllerDigitalInput_Button1"),
-            (_[(_.k_EControllerDigitalInput_ButtonY = 2)] =
-              "k_EControllerDigitalInput_ButtonY"),
-            (_[(_.k_EControllerDigitalInput_Button2 = 3)] =
-              "k_EControllerDigitalInput_Button2"),
-            (_[(_.k_EControllerDigitalInput_ButtonB = 3)] =
-              "k_EControllerDigitalInput_ButtonB"),
-            (_[(_.k_EControllerDigitalInput_Button3 = 4)] =
-              "k_EControllerDigitalInput_Button3"),
-            (_[(_.k_EControllerDigitalInput_ButtonX = 4)] =
-              "k_EControllerDigitalInput_ButtonX"),
-            (_[(_.k_EControllerDigitalInput_Button4 = 5)] =
-              "k_EControllerDigitalInput_Button4"),
-            (_[(_.k_EControllerDigitalInput_ButtonA = 5)] =
-              "k_EControllerDigitalInput_ButtonA"),
-            (_[(_.k_EControllerDigitalInput_ButtonRightBumper = 6)] =
-              "k_EControllerDigitalInput_ButtonRightBumper"),
-            (_[(_.k_EControllerDigitalInput_ButtonLeftBumper = 7)] =
-              "k_EControllerDigitalInput_ButtonLeftBumper"),
-            (_[(_.k_EControllerDigitalInput_ButtonLeftJoystickClick = 8)] =
-              "k_EControllerDigitalInput_ButtonLeftJoystickClick"),
-            (_[(_.k_EControllerDigitalInput_ButtonEscape = 9)] =
-              "k_EControllerDigitalInput_ButtonEscape"),
-            (_[(_.k_EControllerDigitalInput_ButtonSteam = 10)] =
-              "k_EControllerDigitalInput_ButtonSteam"),
-            (_[(_.k_EControllerDigitalInput_ButtonMenu = 11)] =
-              "k_EControllerDigitalInput_ButtonMenu"),
-            (_[(_.k_EControllerDigitalInput_StickUp = 12)] =
-              "k_EControllerDigitalInput_StickUp"),
-            (_[(_.k_EControllerDigitalInput_StickDown = 13)] =
-              "k_EControllerDigitalInput_StickDown"),
-            (_[(_.k_EControllerDigitalInput_StickLeft = 14)] =
-              "k_EControllerDigitalInput_StickLeft"),
-            (_[(_.k_EControllerDigitalInput_StickRight = 15)] =
-              "k_EControllerDigitalInput_StickRight"),
-            (_[(_.k_EControllerDigitalInput_Touch1 = 16)] =
-              "k_EControllerDigitalInput_Touch1"),
-            (_[(_.k_EControllerDigitalInput_ButtonUp = 16)] =
-              "k_EControllerDigitalInput_ButtonUp"),
-            (_[(_.k_EControllerDigitalInput_Touch2 = 17)] =
-              "k_EControllerDigitalInput_Touch2"),
-            (_[(_.k_EControllerDigitalInput_ButtonRight = 17)] =
-              "k_EControllerDigitalInput_ButtonRight"),
-            (_[(_.k_EControllerDigitalInput_Touch3 = 18)] =
-              "k_EControllerDigitalInput_Touch3"),
-            (_[(_.k_EControllerDigitalInput_ButtonLeft = 18)] =
-              "k_EControllerDigitalInput_ButtonLeft"),
-            (_[(_.k_EControllerDigitalInput_Touch4 = 19)] =
-              "k_EControllerDigitalInput_Touch4"),
-            (_[(_.k_EControllerDigitalInput_ButtonDown = 19)] =
-              "k_EControllerDigitalInput_ButtonDown"),
-            (_[(_.k_EControllerDigitalInput_ButtonBackLeft = 20)] =
-              "k_EControllerDigitalInput_ButtonBackLeft"),
-            (_[(_.k_EControllerDigitalInput_ButtonBackRight = 21)] =
-              "k_EControllerDigitalInput_ButtonBackRight"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackpadN = 22)] =
-              "k_EControllerDigitalInput_LeftTrackpadN"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackpadNe = 23)] =
-              "k_EControllerDigitalInput_LeftTrackpadNe"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackpadE = 24)] =
-              "k_EControllerDigitalInput_LeftTrackpadE"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackpadSe = 25)] =
-              "k_EControllerDigitalInput_LeftTrackpadSe"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackpadS = 26)] =
-              "k_EControllerDigitalInput_LeftTrackpadS"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackpadSw = 27)] =
-              "k_EControllerDigitalInput_LeftTrackpadSw"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackpadW = 28)] =
-              "k_EControllerDigitalInput_LeftTrackpadW"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackpadNw = 29)] =
-              "k_EControllerDigitalInput_LeftTrackpadNw"),
-            (_[(_.k_EControllerDigitalInput_RightTrackpadN = 30)] =
-              "k_EControllerDigitalInput_RightTrackpadN"),
-            (_[(_.k_EControllerDigitalInput_RightTrackpadNe = 31)] =
-              "k_EControllerDigitalInput_RightTrackpadNe"),
-            (_[(_.k_EControllerDigitalInput_RightTrackpadE = 32)] =
-              "k_EControllerDigitalInput_RightTrackpadE"),
-            (_[(_.k_EControllerDigitalInput_RightTrackpadSe = 33)] =
-              "k_EControllerDigitalInput_RightTrackpadSe"),
-            (_[(_.k_EControllerDigitalInput_RightTrackpadS = 34)] =
-              "k_EControllerDigitalInput_RightTrackpadS"),
-            (_[(_.k_EControllerDigitalInput_RightTrackpadSw = 35)] =
-              "k_EControllerDigitalInput_RightTrackpadSw"),
-            (_[(_.k_EControllerDigitalInput_RightTrackpadW = 36)] =
-              "k_EControllerDigitalInput_RightTrackpadW"),
-            (_[(_.k_EControllerDigitalInput_RightTrackpadNw = 37)] =
-              "k_EControllerDigitalInput_RightTrackpadNw"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackpadDoubleTap = 38)] =
-              "k_EControllerDigitalInput_LeftTrackpadDoubleTap"),
-            (_[(_.k_EControllerDigitalInput_RightTrackpadDoubleTap = 39)] =
-              "k_EControllerDigitalInput_RightTrackpadDoubleTap"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackpadOuterRadius = 40)] =
-              "k_EControllerDigitalInput_LeftTrackpadOuterRadius"),
-            (_[(_.k_EControllerDigitalInput_RightTrackpadOuterRadius = 41)] =
-              "k_EControllerDigitalInput_RightTrackpadOuterRadius"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackpadClick = 42)] =
-              "k_EControllerDigitalInput_LeftTrackpadClick"),
-            (_[(_.k_EControllerDigitalInput_RightTrackpadClick = 43)] =
-              "k_EControllerDigitalInput_RightTrackpadClick"),
-            (_[(_.k_EControllerDigitalInput_BatteryLow = 44)] =
-              "k_EControllerDigitalInput_BatteryLow"),
-            (_[(_.k_EControllerDigitalInput_LeftTriggerThreshold = 45)] =
-              "k_EControllerDigitalInput_LeftTriggerThreshold"),
-            (_[(_.k_EControllerDigitalInput_RightTriggerThreshold = 46)] =
-              "k_EControllerDigitalInput_RightTriggerThreshold"),
-            (_[(_.k_EControllerDigitalInput_ButtonBackLeft2 = 47)] =
-              "k_EControllerDigitalInput_ButtonBackLeft2"),
-            (_[(_.k_EControllerDigitalInput_ButtonBackRight2 = 48)] =
-              "k_EControllerDigitalInput_ButtonBackRight2"),
-            (_[(_.k_EControllerDigitalInput_ButtonAlwaysOn = 49)] =
-              "k_EControllerDigitalInput_ButtonAlwaysOn"),
-            (_[(_.k_EControllerDigitalInput_ButtonAncillary1 = 50)] =
-              "k_EControllerDigitalInput_ButtonAncillary1"),
-            (_[(_.k_EControllerDigitalInput_ButtonMacro0 = 51)] =
-              "k_EControllerDigitalInput_ButtonMacro0"),
-            (_[(_.k_EControllerDigitalInput_ButtonMacro1 = 52)] =
-              "k_EControllerDigitalInput_ButtonMacro1"),
-            (_[(_.k_EControllerDigitalInput_ButtonMacro2 = 53)] =
-              "k_EControllerDigitalInput_ButtonMacro2"),
-            (_[(_.k_EControllerDigitalInput_ButtonMacro3 = 54)] =
-              "k_EControllerDigitalInput_ButtonMacro3"),
-            (_[(_.k_EControllerDigitalInput_ButtonMacro4 = 55)] =
-              "k_EControllerDigitalInput_ButtonMacro4"),
-            (_[(_.k_EControllerDigitalInput_ButtonMacro5 = 56)] =
-              "k_EControllerDigitalInput_ButtonMacro5"),
-            (_[(_.k_EControllerDigitalInput_ButtonMacro6 = 57)] =
-              "k_EControllerDigitalInput_ButtonMacro6"),
-            (_[(_.k_EControllerDigitalInput_ButtonMacro7 = 58)] =
-              "k_EControllerDigitalInput_ButtonMacro7"),
-            (_[(_.k_EControllerDigitalInput_ButtonMacro1Finger = 59)] =
-              "k_EControllerDigitalInput_ButtonMacro1Finger"),
-            (_[(_.k_EControllerDigitalInput_ButtonMacro2Finger = 60)] =
-              "k_EControllerDigitalInput_ButtonMacro2Finger"),
-            (_[(_.k_EControllerDigitalInput_LeftAuxCapSense = 61)] =
-              "k_EControllerDigitalInput_LeftAuxCapSense"),
-            (_[(_.k_EControllerDigitalInput_RightAuxCapSense = 62)] =
-              "k_EControllerDigitalInput_RightAuxCapSense"),
-            (_[(_.k_EControllerDigitalInput_ButtonRightJoystickClick = 63)] =
-              "k_EControllerDigitalInput_ButtonRightJoystickClick"),
-            (_[(_.k_EControllerDigitalInput_LeftTrackPadTouch = 64)] =
-              "k_EControllerDigitalInput_LeftTrackPadTouch"),
-            (_[(_.k_EControllerDigitalInput_RightTrackPadTouch = 65)] =
-              "k_EControllerDigitalInput_RightTrackPadTouch"),
-            (_[(_.k_EControllerDigitalInput_Count = 66)] =
-              "k_EControllerDigitalInput_Count");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EFunctionCurveType_None = 0)] = "k_EFunctionCurveType_None"),
-            (_[(_.k_EFunctionCurveType_Power = 1)] =
-              "k_EFunctionCurveType_Power"),
-            (_[(_.k_EFunctionCurveType_Sigmoidalish = 2)] =
-              "k_EFunctionCurveType_Sigmoidalish"),
-            (_[(_.k_EFunctionCurveType_BezierCurve = 3)] =
-              "k_EFunctionCurveType_BezierCurve"),
-            (_[(_.k_EFunctionCurveType_Linear = 4)] =
-              "k_EFunctionCurveType_Linear"),
-            (_[(_.k_EFunctionCurveType_LinearList = 5)] =
-              "k_EFunctionCurveType_LinearList"),
-            (_[(_.k_EFunctionCurveType_Count = 6)] =
-              "k_EFunctionCurveType_Count");
-        })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -91002,14 +76174,13 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         if (_().isCancel(_))
           return {
             strErrorMsg: "Action Cancelled:" + _,
-            errorCode: _._.k_EResultCancelled,
+            errorCode: 52,
           };
         if (
           void 0 !== _.response &&
@@ -91091,11 +76262,11 @@
         return "object" == typeof _ && "status" in _
           ? {
               strErrorMsg: "Unknown Error: " + _ + "\nStatus Code:" + _.status,
-              errorCode: _._.k_EResultFail,
+              errorCode: 2,
             }
           : {
               strErrorMsg: "Unknown Error: " + _,
-              errorCode: _._.k_EResultFail,
+              errorCode: 2,
             };
       }
     },
@@ -91492,21 +76663,16 @@
           return "sc_schinese" === _ ? "schinese" : "english";
         }
         static GetELanguageFallback(_) {
-          return _ === _._.k_Lang_SteamChina_SChinese
-            ? _._.k_Lang_Simplified_Chinese
-            : _._.k_Lang_English;
+          return 29 === _ ? 6 : 0;
         }
         static IsELanguageValidInRealm(_, _) {
           return (
-            _ ===
-            (_ === _._.k_Lang_SteamChina_SChinese
-              ? _._.k_ESteamRealmChina
-              : _._.k_ESteamRealmGlobal)
+            _ === (29 === _ ? _._.k_ESteamRealmChina : _._.k_ESteamRealmGlobal)
           );
         }
         static GetLanguageListForRealms(_) {
           const _ = new Array();
-          for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; _++)
+          for (let _ = 0; _ < 31; _++)
             for (const _ of _)
               if (this.IsELanguageValidInRealm(_, _)) {
                 _.push(_);
@@ -91680,8 +76846,8 @@
       }
       class _ {
         static Set(_, _, _) {
-          if ((_ || (_ = (0, _._)([], _._.k_Lang_MAX, null)), _.length <= _)) {
-            if (_ >= _._.k_Lang_MAX) return _;
+          if ((_ || (_ = (0, _._)([], 31, null)), _.length <= _)) {
+            if (_ >= 31) return _;
             _ = (0, _._)(_, _ + 1, null);
           }
           return (_[_] = _), _;
@@ -91733,36 +76899,6 @@
         sc_schinese: "zh-cn",
         koreana: "ko",
       };
-      _._.k_Lang_English,
-        _._.k_Lang_German,
-        _._.k_Lang_French,
-        _._.k_Lang_Italian,
-        _._.k_Lang_Korean,
-        _._.k_Lang_Spanish,
-        _._.k_Lang_Simplified_Chinese,
-        _._.k_Lang_Traditional_Chinese,
-        _._.k_Lang_Russian,
-        _._.k_Lang_Thai,
-        _._.k_Lang_Japanese,
-        _._.k_Lang_Portuguese,
-        _._.k_Lang_Polish,
-        _._.k_Lang_Danish,
-        _._.k_Lang_Dutch,
-        _._.k_Lang_Finnish,
-        _._.k_Lang_Norwegian,
-        _._.k_Lang_Swedish,
-        _._.k_Lang_Hungarian,
-        _._.k_Lang_Czech,
-        _._.k_Lang_Romanian,
-        _._.k_Lang_Turkish,
-        _._.k_Lang_Brazilian,
-        _._.k_Lang_Bulgarian,
-        _._.k_Lang_Greek,
-        _._.k_Lang_Arabic,
-        _._.k_Lang_Ukrainian,
-        _._.k_Lang_Latam_Spanish,
-        _._.k_Lang_Vietnamese,
-        _._.k_Lang_Indonesian;
       function _() {
         return _[_._.LANGUAGE] || null;
       }
@@ -92414,8 +77550,7 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       function _(_) {
         if (void 0 === _)
@@ -92433,7 +77568,7 @@
       }
       function _(_) {
         return _
-          ? (_._.EUNIVERSE == _._.k_EUniversePublic &&
+          ? (1 == _._.EUNIVERSE &&
               ("http:" == _.substring(0, 5) && (_ = "https:" + _.substring(5)),
               (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ =
                 (_ = _.replace(
@@ -92666,21 +77801,7 @@
         _: () => _,
         _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EContentDescriptor_NudityOrSexualContent = 1)] =
-          "k_EContentDescriptor_NudityOrSexualContent"),
-          (_[(_.k_EContentDescriptor_FrequentViolenceOrGore = 2)] =
-            "k_EContentDescriptor_FrequentViolenceOrGore"),
-          (_[(_.k_EContentDescriptor_AdultOnlySexualContent = 3)] =
-            "k_EContentDescriptor_AdultOnlySexualContent"),
-          (_[(_.k_EContentDescriptor_GratuitousSexualContent = 4)] =
-            "k_EContentDescriptor_GratuitousSexualContent"),
-          (_[(_.k_EContentDescriptor_AnyMatureContent = 5)] =
-            "k_EContentDescriptor_AnyMatureContent"),
-          (_[(_.k_EContentDescriptorMAX = 6)] = "k_EContentDescriptorMAX");
-      })(_ || (_ = {}));
+      var _ = __webpack_require__("chunkid");
       const _ = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
@@ -92766,11 +77887,7 @@
           is_valve_email: !1,
           short_url: "",
           country_code: "",
-          excluded_content_descriptors: [
-            _.k_EContentDescriptor_AdultOnlySexualContent,
-            _.k_EContentDescriptor_GratuitousSexualContent,
-            _.k_EContentDescriptor_NudityOrSexualContent,
-          ],
+          excluded_content_descriptors: [3, 4, 1],
         },
         _ = {
           steamid: "",
@@ -92911,7 +78028,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 1993), _((_._ = _));
+      return (_ = 6806), _((_._ = _));
       var _;
     });
     _._();

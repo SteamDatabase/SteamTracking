@@ -56,34 +56,33 @@
     },
     20019: (e, t, n) => {
       "use strict";
-      n.d(t, { U: () => s });
-      var a = n(15161);
-      function s(e) {
+      function a(e) {
         switch (e) {
-          case a.uE.k_EStoreAppType_Game:
+          case 0:
             return "game";
-          case a.uE.k_EStoreAppType_Software:
+          case 6:
             return "software";
-          case a.uE.k_EStoreAppType_Demo:
+          case 1:
             return "demo";
-          case a.uE.k_EStoreAppType_DLC:
+          case 4:
             return "dlc";
-          case a.uE.k_EStoreAppType_Video:
-          case a.uE.k_EStoreAppType_Movie:
+          case 7:
+          case 3:
             return "video";
-          case a.uE.k_EStoreAppType_Music:
+          case 11:
             return "music";
-          case a.uE.k_EStoreAppType_Beta:
+          case 12:
             return "beta";
-          case a.uE.k_EStoreAppType_Mod:
+          case 2:
             return "mod";
         }
         return "invalid";
       }
+      n.d(t, { U: () => a });
     },
     27144: (e, t, n) => {
       "use strict";
-      n.d(t, { B3: () => T, KM: () => f, KT: () => h });
+      n.d(t, { B3: () => h, KM: () => S, KT: () => y });
       var a = n(41735),
         s = n.n(a),
         r = n(58632),
@@ -91,22 +90,21 @@
         o = n(90626),
         l = n(20194),
         c = n(75233),
-        u = n(37085),
-        m = n(17720),
-        d = n(68797),
-        p = n(78327),
-        E = n(56545),
+        u = n(17720),
+        m = n(68797),
+        d = n(78327),
+        p = n(56545),
         g = n(37735),
-        _ = n(23809);
-      const S = "nicknames";
-      function f(e) {
-        const t = (0, _.KV)(),
+        E = n(23809);
+      const _ = "nicknames";
+      function S(e) {
+        const t = (0, E.KV)(),
           { data: n, isLoading: a } = (0, l.I)({
-            queryKey: [S],
+            queryKey: [_],
             queryFn: async () => {
               const e = new Map();
-              if (p.iA.logged_in) {
-                const n = E.w.Init(g.dN),
+              if (d.iA.logged_in) {
+                const n = p.w.Init(g.dN),
                   a = (await g.xt.GetNicknameList(t, n)).Body().toObject();
                 a?.nicknames &&
                   a.nicknames.length > 0 &&
@@ -119,14 +117,14 @@
           });
         return n ? n.get(e) : null;
       }
-      const v = new (i())(
+      const f = new (i())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, p.yK)()
-                  ? p.TS.COMMUNITY_BASE_URL
-                  : p.TS.STORE_BASE_URL;
+                "community" == (0, d.yK)()
+                  ? d.TS.COMMUNITY_BASE_URL
+                  : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const n = { accountid: e[0], origin: self.origin },
                   a = await s().get(`${t}actions/ajaxgetavatarpersona`, {
@@ -135,10 +133,10 @@
                 if (
                   !a ||
                   200 != a.status ||
-                  a.data?.success != u.d.k_EResultOK ||
+                  1 != a.data?.success ||
                   !a.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${((0, d.H))(a).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(a).strErrorMsg}`;
                 return [a.data.userinfo];
               }
               {
@@ -149,14 +147,14 @@
                 if (
                   !a ||
                   200 != a.status ||
-                  a.data?.success != u.d.k_EResultOK ||
+                  1 != a.data?.success ||
                   !a.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${((0, d.H))(a).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${((0, m.H))(a).strErrorMsg}`;
                 const r = new Map();
                 return (
                   a.data.userinfos.forEach((e) =>
-                    r.set(new m.b(e.steamid).GetAccountID(), e),
+                    r.set(new u.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => r.get(e))
                 );
@@ -164,23 +162,23 @@
             })(e),
           { cache: !1 },
         ),
-        y = "avatarandpersonas";
-      function h(e) {
+        v = "avatarandpersonas";
+      function y(e) {
         const { data: t, isLoading: n } = (0, l.I)({
-          queryKey: [y, e],
-          queryFn: () => v.load(e),
+          queryKey: [v, e],
+          queryFn: () => f.load(e),
         });
         return [t, n];
       }
-      function T(e) {
+      function h(e) {
         const t = (0, c.jE)(),
           { data: n, isLoading: a } = (0, l.I)({
-            queryKey: [y, e],
+            queryKey: [v, e],
             queryFn: async () => {
-              const n = await v.loadMany(e);
+              const n = await f.loadMany(e);
               return (
                 n.forEach((e) => {
-                  const n = [y, new m.b(e.steamid).GetAccountID()];
+                  const n = [v, new u.b(e.steamid).GetAccountID()];
                   t.setQueryData(n, e);
                 }),
                 n
@@ -219,7 +217,7 @@
           m = (0, r.KM)(t),
           d = a.useMemo(() => s.b.InitFromAccountID(t), [t]),
           p = `${o.TS.COMMUNITY_BASE_URL}profiles/${d.ConvertTo64BitString()}`,
-          E = c ? "a" : "span";
+          g = c ? "a" : "span";
         return a.createElement(
           a.Fragment,
           null,
@@ -230,7 +228,7 @@
                 Boolean(!n) && a.createElement("span", null, t),
               )
             : a.createElement(
-                E,
+                g,
                 { href: c ? p : void 0 },
                 a.createElement("img", {
                   className: i.SmallAvatar,
@@ -249,7 +247,7 @@
     },
     48479: (e, t, n) => {
       "use strict";
-      n.d(t, { qx: () => E });
+      n.d(t, { qx: () => g });
       var a = n(53835),
         s = n(61859),
         r = n(12155),
@@ -268,7 +266,7 @@
             toggleMinimized: s,
             className: r,
             children: p,
-            elAdditionalButtons: E,
+            elAdditionalButtons: g,
           } = e,
           _ = (0, m.q3)(() => a());
         return i.createElement(
@@ -298,14 +296,14 @@
             i.createElement(
               "div",
               { className: u.SectionTitleButtons },
-              E,
-              i.createElement(g, { bIsMinimized: _, fnToggleMinimize: s }),
+              g,
+              i.createElement(E, { bIsMinimized: _, fnToggleMinimize: s }),
             ),
           ),
           !_ && i.createElement(c.tH, null, p),
         );
       }
-      function E(e) {
+      function g(e) {
         const [t, n] = i.useState(Boolean(e.bStartMinimized));
         return i.createElement(
           p,
@@ -313,7 +311,7 @@
           e.children,
         );
       }
-      function g(e) {
+      function E(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
           o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return i.createElement(
@@ -327,7 +325,7 @@
     },
     57912: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { MeetSteamRoutes: () => de, default: () => pe });
+      n.r(t), n.d(t, { MeetSteamRoutes: () => me, default: () => de });
       var a = n(90626),
         s = n(43527),
         r = n(92757),
@@ -339,8 +337,8 @@
         m = n(30756),
         d = n(92557),
         p = n(22797),
-        E = n(61859),
-        g = n(43068),
+        g = n(61859),
+        E = n(43068),
         _ = n(84811);
       function S(e) {
         const { gid: t } = (0, r.g)(),
@@ -353,7 +351,7 @@
           n)
         )
           return a.createElement(p.t, {
-            string: (0, E.we)("#Loading"),
+            string: (0, g.we)("#Loading"),
             position: "center",
           });
         const S = u.O3.GetClanEventModel(t);
@@ -372,7 +370,7 @@
                 event: S,
                 adminPanel:
                   l.TS.EREALM === o.TU.k_ESteamRealmChina
-                    ? a.createElement(g.P, { eventModel: S })
+                    ? a.createElement(E.P, { eventModel: S })
                     : a.createElement(m.g, {
                         eventModel: S,
                         bSupportsSticky: !0,
@@ -381,15 +379,14 @@
             )
           : null;
       }
-      var f = n(37085),
-        v = n(51614),
-        y = n(41735),
-        h = n.n(y),
-        T = n(62216),
+      var f = n(51614),
+        v = n(41735),
+        y = n.n(v),
+        h = n(62216),
         M = n(44165),
-        w = n(30470),
-        N = n(24484);
-      function C(e, t, n) {
+        T = n(30470),
+        w = n(24484);
+      function N(e, t, n) {
         for (const a of e)
           if (a.group_id === t) {
             const e = a.sessions.find((e) => e.id === n);
@@ -397,25 +394,25 @@
           }
         return { group: null, session: null };
       }
-      function k(e, t) {
+      function C(e, t) {
         const n = (0, M.f1)(),
           [s] = (0, a.useState)(() =>
-            (0, N.Tc)("registrations", "application_config")
+            (0, w.Tc)("registrations", "application_config")
               .map((e) => ((e.userReg = JSON.parse(e.jsondata)), e))
               .sort((t, n) => {
-                const a = C(
+                const a = N(
                     e.jsondata.meet_steam_groups,
                     t.group_id,
                     t.session_id,
                   ),
-                  s = C(e.jsondata.meet_steam_groups, n.group_id, n.session_id);
+                  s = N(e.jsondata.meet_steam_groups, n.group_id, n.session_id);
                 return (
                   (s?.session?.rtime_start || 0) -
                   (a?.session?.rtime_start || 0)
                 );
               })
               .map((t) => {
-                const a = C(
+                const a = N(
                   e.jsondata.meet_steam_groups,
                   t.group_id,
                   t.session_id,
@@ -423,8 +420,8 @@
                 return (
                   (t.relativeToToday = (function (e, t) {
                     if (!e) return "past";
-                    const n = (0, T.Sk)(e),
-                      a = (0, T.Ue)(e.rtime_start, n),
+                    const n = (0, h.Sk)(e),
+                      a = (0, h.Ue)(e.rtime_start, n),
                       s = void 0 !== t ? new Date(1e3 * t) : new Date(),
                       r = new Date(s.getFullYear(), s.getMonth(), s.getDate()),
                       i = new Date(
@@ -459,7 +456,7 @@
           [s, t],
         );
       }
-      function A(e, t) {
+      function D(e, t) {
         return (0, a.useMemo)(
           () =>
             e.reduce(
@@ -473,25 +470,25 @@
           [e, t],
         );
       }
-      var D = n(38390),
-        L = n(27144),
-        R = n(53835),
-        b = n(71298),
-        I = n(95034),
-        B = n(8905),
-        U = n(78395),
-        G = n(21869),
-        F = n(48479),
-        x = n(52038),
-        H = n(91675),
-        O = n(84933),
+      var A = n(38390),
+        k = n(27144),
+        b = n(53835),
+        L = n(71298),
+        R = n(95034),
+        I = n(8905),
+        B = n(78395),
+        U = n(21869),
+        G = n(48479),
+        F = n(52038),
+        x = n(91675),
+        H = n(84933),
         $ = n(15588),
         z = n.n($),
-        K = n(29233);
-      function j(e) {
-        const [t] = (0, I.QD)("gid"),
-          n = (0, D.RR)(t),
-          s = (0, i.sf)(w.TS.LANGUAGE);
+        j = n(29233);
+      function O(e) {
+        const [t] = (0, R.QD)("gid"),
+          n = (0, A.RR)(t),
+          s = (0, i.sf)(T.TS.LANGUAGE);
         return n
           ? a.createElement(
               "div",
@@ -503,20 +500,20 @@
                 a.createElement(
                   "a",
                   {
-                    href: `${w.TS.STORE_BASE_URL}meetsteam/${t}`,
+                    href: `${T.TS.STORE_BASE_URL}meetsteam/${t}`,
                     target: "_blank",
                   },
                   "See Event Details",
                 ),
               ),
-              a.createElement(q, { eventModel: n }),
+              a.createElement(K, { eventModel: n }),
             )
-          : a.createElement(p.t, { string: (0, E.we)("#Loading") });
+          : a.createElement(p.t, { string: (0, g.we)("#Loading") });
       }
-      function q(e) {
+      function K(e) {
         const { eventModel: t } = e,
-          n = A(k(t)),
-          [s] = (0, I.QD)("accountid"),
+          n = D(C(t)),
+          [s] = (0, R.QD)("accountid"),
           r = (0, M.f1)();
         return a.createElement(
           "div",
@@ -524,20 +521,20 @@
           a.createElement(
             "div",
             { className: z().User },
-            a.createElement(B.p, { accountID: s }),
+            a.createElement(I.p, { accountID: s }),
           ),
-          a.createElement(P, {
+          a.createElement(q, {
             eventModel: t,
             rgUserRegs: n.today,
-            strTitle: "Today " + (0, H.$z)(r),
+            strTitle: "Today " + (0, x.$z)(r),
           }),
-          a.createElement(P, {
+          a.createElement(q, {
             eventModel: t,
             rgUserRegs: n.future,
             bHideIfEmpty: !0,
             strTitle: "Future",
           }),
-          a.createElement(P, {
+          a.createElement(q, {
             eventModel: t,
             rgUserRegs: n.past,
             bHideIfEmpty: !0,
@@ -545,7 +542,7 @@
           }),
         );
       }
-      function P(e) {
+      function q(e) {
         const {
           eventModel: t,
           rgUserRegs: n,
@@ -555,7 +552,7 @@
         return 0 == n.length && s
           ? null
           : a.createElement(
-              F.qx,
+              G.qx,
               { title: `${r} (${n.length})`, bStartMinimized: s },
               Boolean(!n || 0 == n.length)
                 ? a.createElement("div", null, s ? "" : "No registrations")
@@ -565,7 +562,7 @@
                     n
                       .sort((e, t) => e.rtSesssionTime - t.rtSesssionTime)
                       .map((e) =>
-                        a.createElement(V, {
+                        a.createElement(Q, {
                           key: `${e.group_id}_${e.session_id}`,
                           eventModel: t,
                           reg: e,
@@ -574,14 +571,14 @@
                   ),
             );
       }
-      function Q(e) {
+      function P(e) {
         const { desc: t } = e,
           [n, s] = (0, a.useState)(!1),
           r = (0, a.useCallback)(() => s((e) => !e), []);
         return a.createElement(
           "div",
           {
-            className: (0, x.A)({
+            className: (0, F.A)({
               [z().DescriptionWrapper]: !0,
               [z().Expanded]: n,
             }),
@@ -592,48 +589,48 @@
           t,
         );
       }
-      function V(e) {
+      function Q(e) {
         const { reg: t, eventModel: n } = e,
-          s = new K.b2(t.steamid).GetAccountID(),
-          [r] = (0, L.KT)(t.userReg.accountid),
+          s = new j.b2(t.steamid).GetAccountID(),
+          [r] = (0, k.KT)(t.userReg.accountid),
           [i, o] = (0, a.useState)(!0),
           [l, c] = (0, a.useState)([]),
           [u, m] = (0, a.useState)(!1),
           d = t.userReg,
-          { group: p, session: E } = C(
+          { group: p, session: g } = N(
             n.jsondata.meet_steam_groups,
             t.group_id,
             t.session_id,
           ),
-          [g, S, y] = (0, O.uD)(),
-          T =
+          [E, S, v] = (0, H.uD)(),
+          h =
             ((M = n.GID),
-            (N = s),
-            (k = t.group_id),
-            (A = t.session_id),
-            (0, v.n)({
+            (w = s),
+            (C = t.group_id),
+            (D = t.session_id),
+            (0, f.n)({
               mutationFn: async ({ bIncludeSelf: e, rgGuests: t }) => {
                 const n = new FormData();
-                n.append("sessionid", w.TS.SESSIONID),
+                n.append("sessionid", T.TS.SESSIONID),
                   n.append("gid", M),
-                  n.append("accountid", "" + N),
-                  n.append("meetsteam_group_id", "" + k),
-                  n.append("meetsteam_session_id", "" + A),
+                  n.append("accountid", "" + w),
+                  n.append("meetsteam_group_id", "" + C),
+                  n.append("meetsteam_session_id", "" + D),
                   n.append("include_self", "" + (e ? 1 : 0)),
                   t?.length && n.append("guests", t.join("|"));
-                const a = `${w.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`,
-                  s = await h().post(a, n, { withCredentials: !0 });
-                return s?.data?.success == f.d.k_EResultOK;
+                const a = `${T.TS.STORE_BASE_URL}meetsteam/ajaxupdateattendance`,
+                  s = await y().post(a, n, { withCredentials: !0 });
+                return 1 == s?.data?.success;
               },
             }));
-        var M, N, k, A;
-        const D = new Set(
+        var M, w, C, D;
+        const A = new Set(
             t.guests_attendance?.length > 0
               ? t.guests_attendance.split("|")
               : [],
           ),
-          b = t.attendance_count > D.size,
-          I = (e, t, n, s) =>
+          L = t.attendance_count > A.size,
+          R = (e, t, n, s) =>
             a.createElement(
               a.Fragment,
               null,
@@ -673,7 +670,7 @@
         return a.createElement(
           "div",
           null,
-          a.createElement(W, { group: p, session: E }),
+          a.createElement(V, { group: p, session: g }),
           Boolean(u)
             ? a.createElement(
                 "div",
@@ -683,15 +680,15 @@
             : a.createElement(
                 "div",
                 { className: z().RegisteredUsers },
-                a.createElement(R.Yh, {
+                a.createElement(b.Yh, {
                   label: a.createElement(
                     a.Fragment,
                     null,
-                    I(
+                    R(
                       "Attendee",
                       d.name || r.persona_name,
                       d.email_override,
-                      b,
+                      L,
                     ),
                   ),
                   checked: i,
@@ -702,12 +699,12 @@
                     a.Fragment,
                     null,
                     d.guest_names.map((e) =>
-                      a.createElement(R.Yh, {
+                      a.createElement(b.Yh, {
                         key: t.group_id + "_" + t.session_id + "_" + e,
                         label: a.createElement(
                           a.Fragment,
                           null,
-                          I("Guest", e, void 0, D.has(e)),
+                          R("Guest", e, void 0, A.has(e)),
                         ),
                         checked: l.includes(e),
                         onChange: (t) => {
@@ -723,22 +720,22 @@
                     ),
                   ),
                 a.createElement(
-                  R.jn,
+                  b.jn,
                   { onClick: S },
                   "Check in selected people",
                 ),
               ),
           a.createElement(
-            G.E,
-            { active: g },
+            U.E,
+            { active: E },
             a.createElement(
               _.tH,
               null,
               a.createElement(J, {
-                closeModal: y,
+                closeModal: v,
                 bIncludeSelf: i,
                 rgGuestsAttending: l,
-                fnMarkAttendance: T,
+                fnMarkAttendance: h,
                 fnOnSuccess: () => m(!0),
               }),
             ),
@@ -753,18 +750,18 @@
             fnMarkAttendance: r,
             fnOnSuccess: i,
           } = e,
-          o = (0, b.vs)();
+          o = (0, L.vs)();
         return o.bLoading
-          ? a.createElement(b.Hh, {
+          ? a.createElement(L.Hh, {
               state: o,
-              strDialogTitle: (0, E.we)("#Saving"),
+              strDialogTitle: (0, g.we)("#Saving"),
               closeModal: t,
             })
           : a.createElement(
-              U.o0,
+              B.o0,
               {
                 onCancel: t,
-                strTitle: (0, E.we)("#Button_Submit"),
+                strTitle: (0, g.we)("#Button_Submit"),
                 bAllowFullSize: !0,
                 onOK: async () => {
                   o.fnSetLoading(!0),
@@ -777,12 +774,12 @@
                               "Success! This person has been checked in.",
                             ))
                           : o.fnSetStrError(
-                              (0, E.we)("#Login_Error_Network_Description"),
+                              (0, g.we)("#Login_Error_Network_Description"),
                             );
                       })
                       .catch(() =>
                         o.fnSetStrError(
-                          (0, E.we)("#Login_Error_Network_Description"),
+                          (0, g.we)("#Login_Error_Network_Description"),
                         ),
                       );
                 },
@@ -790,15 +787,15 @@
               "Mark as checked in?",
             );
       }
-      function W(e) {
+      function V(e) {
         const { session: t, group: n } = e,
           {
             sDisplayTimeZone: s,
             rtime_start: r,
-            rtime_end: o,
-          } = (0, T._t)(e.session),
-          l = (0, T.rF)(r, s),
-          c = (0, T.Mr)(r, o, s);
+            rtime_end: i,
+          } = (0, h._t)(e.session),
+          o = (0, h.rF)(r, s),
+          l = (0, h.Mr)(r, i, s);
         return t && n
           ? a.createElement(
               "div",
@@ -806,23 +803,23 @@
               a.createElement(
                 "div",
                 { className: z().SessionName },
-                n.localized_session_title[i.gS.k_Lang_English],
+                n.localized_session_title[0],
               ),
               a.createElement(
                 "div",
                 { className: z().SessionTime },
-                l,
+                o,
                 " @ ",
-                a.createElement("b", null, c),
+                a.createElement("b", null, l),
               ),
               a.createElement(
                 "div",
                 null,
-                a.createElement(Q, {
-                  desc: `Description: ${n.localized_session_description[i.gS.k_Lang_English] || ""}`,
+                a.createElement(P, {
+                  desc: `Description: ${n.localized_session_description[0] || ""}`,
                 }),
               ),
-              "dev" == w.TS.WEB_UNIVERSE &&
+              "dev" == T.TS.WEB_UNIVERSE &&
                 a.createElement(
                   "div",
                   null,
@@ -832,43 +829,43 @@
             )
           : a.createElement("div", null, "Session Infomrmation Missing");
       }
-      var Y = n(97058),
-        Z = n(29645),
-        X = n.n(Z),
-        ee = n(12155),
-        te = n(14771),
-        ne = n(78327);
-      function ae(e) {
+      var W = n(97058),
+        Y = n(29645),
+        Z = n.n(Y),
+        X = n(12155),
+        ee = n(14771),
+        te = n(78327);
+      function ne(e) {
         const t = new Date(e.getTime());
         return t.setHours(0, 0, 0, 0), t;
       }
-      function se(e) {
-        const [t] = (0, I.QD)("gid"),
-          n = (0, D.RR)(t),
-          s = (0, i.sf)(w.TS.LANGUAGE),
+      function ae(e) {
+        const [t] = (0, R.QD)("gid"),
+          n = (0, A.RR)(t),
+          s = (0, i.sf)(T.TS.LANGUAGE),
           [r, o] = (0, a.useState)("");
         return n
           ? a.createElement(
               "div",
-              { className: X().Ctn },
+              { className: Z().Ctn },
               a.createElement(
                 "div",
-                { className: X().EventName },
+                { className: Z().EventName },
                 a.createElement("h1", null, n.GetNameWithFallback(s)),
                 a.createElement(
                   "a",
                   {
-                    href: `${w.TS.STORE_BASE_URL}meetsteam/${t}`,
+                    href: `${T.TS.STORE_BASE_URL}meetsteam/${t}`,
                     target: "_blank",
                   },
                   "See Event Details",
                 ),
               ),
-              a.createElement(oe, { eventModel: n }),
+              a.createElement(ie, { eventModel: n }),
               a.createElement(
                 "div",
-                { className: X().AtendeeSearchRow },
-                a.createElement(R.pd, {
+                { className: Z().AtendeeSearchRow },
+                a.createElement(b.pd, {
                   type: "text",
                   label: "Search for an attendee",
                   value: r,
@@ -877,16 +874,16 @@
                   placeholder: "Type name or partner or email address",
                 }),
               ),
-              a.createElement(re, {
+              a.createElement(se, {
                 eventModel: n,
                 strSearch: r.toLowerCase(),
               }),
             )
-          : a.createElement(p.t, { string: (0, E.we)("#Loading") });
+          : a.createElement(p.t, { string: (0, g.we)("#Loading") });
       }
-      function re(e) {
+      function se(e) {
         const { eventModel: t, strSearch: n } = e,
-          s = k(t, n),
+          s = C(t, n),
           [r, i] = (0, a.useState)(null),
           [o, l] = (0, a.useMemo)(() => {
             const e = new Map();
@@ -911,7 +908,7 @@
             null,
             a.createElement("h3", null, "Attendees"),
             Boolean(r)
-              ? a.createElement(ie, {
+              ? a.createElement(re, {
                   eventModel: t,
                   rgSelected: r,
                   strSearch: n,
@@ -925,9 +922,9 @@
                     .map((e) =>
                       a.createElement(
                         "div",
-                        { key: e, className: X().AttendeeRow },
+                        { key: e, className: Z().AttendeeRow },
                         a.createElement(
-                          R.$n,
+                          b.$n,
                           { onClick: () => i(o.get(e.toLowerCase())) },
                           e,
                         ),
@@ -937,7 +934,7 @@
           )
         );
       }
-      function ie(e) {
+      function re(e) {
         const {
             eventModel: t,
             rgSelected: n,
@@ -945,32 +942,32 @@
             onCleanSelection: r,
           } = e,
           i = (0, M.f1)(),
-          o = A(n, s);
+          o = D(n, s);
         return a.createElement(
           "div",
           null,
           a.createElement(
             "div",
-            { className: X().AtendeeListButtonRow },
+            { className: Z().AtendeeListButtonRow },
             a.createElement(
-              R.$n,
+              b.$n,
               { onClick: r },
-              a.createElement(ee.uMb, { className: X().BackToListIcon }),
+              a.createElement(X.uMb, { className: Z().BackToListIcon }),
               "Back to full list",
             ),
           ),
-          a.createElement(P, {
+          a.createElement(q, {
             eventModel: t,
             rgUserRegs: o.today,
-            strTitle: "Today " + (0, E.$z)(i),
+            strTitle: "Today " + (0, g.$z)(i),
           }),
-          a.createElement(P, {
+          a.createElement(q, {
             eventModel: t,
             rgUserRegs: o.future,
             bHideIfEmpty: !0,
             strTitle: "Future",
           }),
-          a.createElement(P, {
+          a.createElement(q, {
             eventModel: t,
             rgUserRegs: o.past,
             bHideIfEmpty: !0,
@@ -978,24 +975,24 @@
           }),
         );
       }
-      function oe(e) {
+      function ie(e) {
         const { eventModel: t } = e,
           n = (0, M.s4)(),
           [s, r] = a.useState(!1),
           { rgGroupedSessions: i, bMoreSessions: o } = a.useMemo(() => {
             const e = t?.jsondata?.meet_steam_groups?.flatMap((e) =>
                 e.sessions.map((t) => {
-                  const n = (0, T.Sk)(t),
-                    a = (0, T.Ue)(t.rtime_start, n);
+                  const n = (0, h.Sk)(t),
+                    a = (0, h.Ue)(t.rtime_start, n);
                   return { group: e, session: t, displayDate: a };
                 }),
               ),
-              a = e?.filter((e) => s || ae(e.displayDate) >= ae(n)),
+              a = e?.filter((e) => s || ne(e.displayDate) >= ne(n)),
               r = s || (e && e.length > a.length);
             var i;
             return {
               rgGroupedSessions:
-                ((i = (e) => ae(e.displayDate)),
+                ((i = (e) => ne(e.displayDate)),
                 (a ?? []).reduce((e, t) => {
                   const n = i(t),
                     a = Math.floor(n.getTime() / 1e3),
@@ -1006,7 +1003,7 @@
             };
           }, [t?.jsondata?.meet_steam_groups, n, s]),
           l = a.useMemo(() => {
-            const e = (0, ne.Tc)("registrations", "application_config");
+            const e = (0, te.Tc)("registrations", "application_config");
             if (e && "object" == typeof e)
               return e.reduce((e, t) => {
                 const n = `${t.group_id}_${t.session_id}`,
@@ -1021,28 +1018,28 @@
               void 0,
             ) ?? 0,
           u = Array.from(i.keys()).some((e) =>
-            (0, te.JD)(n, new Date(1e3 * e)),
+            (0, ee.JD)(n, new Date(1e3 * e)),
           );
         return a.createElement(
           "div",
-          { className: X().DisplayAllDaysCtn },
+          { className: Z().DisplayAllDaysCtn },
           o &&
-            a.createElement(R.Yh, {
+            a.createElement(b.Yh, {
               label: "Show past events",
               checked: s,
               onChange: r,
             }),
           a.createElement(
             "div",
-            { className: X().DisplayDaysCtn },
+            { className: Z().DisplayDaysCtn },
             Array.from(i.keys()).map((e) =>
-              a.createElement(le, {
+              a.createElement(oe, {
                 key: e,
                 eventModel: t,
                 date: new Date(1e3 * e),
                 sessionsAndGroups: i.get(e),
                 rgRegistrationInfo: l,
-                isToday: (0, te.JD)(
+                isToday: (0, ee.JD)(
                   u ? n : new Date(1e3 * c),
                   new Date(1e3 * e),
                 ),
@@ -1051,7 +1048,7 @@
           ),
         );
       }
-      function le(e) {
+      function oe(e) {
         const {
           eventModel: t,
           date: n,
@@ -1061,13 +1058,13 @@
         } = e;
         return a.createElement(
           "div",
-          { className: (0, x.A)(X().DisplayDaySessions, !i && X().NotToday) },
-          a.createElement("div", { className: X().DateName }, (0, E.$w)(n)),
+          { className: (0, F.A)(Z().DisplayDaySessions, !i && Z().NotToday) },
+          a.createElement("div", { className: Z().DateName }, (0, g.$w)(n)),
           a.createElement(
             "div",
-            { className: X().DisplayDaySessionsRow },
+            { className: Z().DisplayDaySessionsRow },
             s.map((e) =>
-              a.createElement(ce, {
+              a.createElement(le, {
                 key: `${e.group.group_id}_${e.session.id}`,
                 eventModel: t,
                 date: n,
@@ -1080,7 +1077,7 @@
           ),
         );
       }
-      function ce(e) {
+      function le(e) {
         const {
             eventModel: t,
             date: n,
@@ -1088,12 +1085,12 @@
             session: r,
             registrations: o,
           } = e,
-          l = (0, i.sf)(w.TS.LANGUAGE),
+          l = (0, i.sf)(T.TS.LANGUAGE),
           c = (0, M.s4)(),
-          { sDisplayTimeZone: u, rtime_start: m } = (0, T._t)(r),
-          d = (0, T.us)(m, u),
+          { sDisplayTimeZone: u, rtime_start: m } = (0, h._t)(r),
+          d = (0, h.us)(m, u),
           p = o.reduce((e, t) => e + (t.guests_registered ?? 0), 0),
-          E = o.reduce(
+          g = o.reduce(
             (e, t) =>
               e +
               (t.rt_attendance_marked > 0 && t.guests_registered
@@ -1101,68 +1098,67 @@
                 : 0),
             0,
           ),
-          [g, S, y] = (0, O.uD)(),
-          N =
-            ((C = t.GID),
-            (k = s.group_id),
-            (A = r.id),
-            (0, v.n)({
+          [E, S, v] = (0, H.uD)(),
+          w =
+            ((N = t.GID),
+            (C = s.group_id),
+            (D = r.id),
+            (0, f.n)({
               mutationFn: async ({ nCapacity: e }) => {
                 const t = new FormData();
-                t.append("sessionid", w.TS.SESSIONID),
-                  t.append("gid", C),
-                  t.append("meetsteam_group_id", "" + k),
-                  t.append("meetsteam_session_id", "" + A),
+                t.append("sessionid", T.TS.SESSIONID),
+                  t.append("gid", N),
+                  t.append("meetsteam_group_id", "" + C),
+                  t.append("meetsteam_session_id", "" + D),
                   t.append("capacity", "" + e);
-                const n = `${w.TS.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`,
-                  a = await h().post(n, t, { withCredentials: !0 });
-                return a?.data?.success == f.d.k_EResultOK;
+                const n = `${T.TS.STORE_BASE_URL}meetsteam/ajaxupdatecapacity`,
+                  a = await y().post(n, t, { withCredentials: !0 });
+                return 1 == a?.data?.success;
               },
             }));
-        var C, k, A;
+        var N, C, D;
         return a.createElement(
           "div",
-          { className: X().DisplaySession },
+          { className: Z().DisplaySession },
           a.createElement(
             "div",
-            { className: X().Header },
+            { className: Z().Header },
             a.createElement(
               "div",
-              { className: X().SessionName },
-              s.localized_session_title[l] ??
-                s.localized_session_title[i.gS.k_Lang_English],
+              { className: Z().SessionName },
+              s.localized_session_title[l] ?? s.localized_session_title[0],
             ),
-            a.createElement("div", { className: X().SessionTime }, d),
+            a.createElement("div", { className: Z().SessionTime }, d),
           ),
-          a.createElement(me, {
+          a.createElement(ue, {
             title: "Registered:",
             nCount: p,
             nCapacity: r.max_capacity,
           }),
-          a.createElement(me, {
+          a.createElement(ue, {
             title: "Checked in:",
-            nCount: E,
+            nCount: g,
             nCapacity: r.max_capacity,
           }),
-          ae(n) >= ae(c) &&
+          ne(n) >= ne(c) &&
             a.createElement(
               a.Fragment,
               null,
               a.createElement(
-                R.$n,
-                { className: (0, x.A)(X().SetCapacityButton), onClick: S },
+                b.$n,
+                { className: (0, F.A)(Z().SetCapacityButton), onClick: S },
                 "Update capacity...",
               ),
               a.createElement(
-                G.E,
-                { active: g },
+                U.E,
+                { active: E },
                 a.createElement(
                   _.tH,
                   null,
-                  a.createElement(ue, {
-                    closeModal: y,
+                  a.createElement(ce, {
+                    closeModal: v,
                     nCapacity: r.max_capacity ?? 0,
-                    fnUpdateCapacity: N,
+                    fnUpdateCapacity: w,
                     fnOnSuccess: () => window.location.reload(),
                   }),
                 ),
@@ -1170,7 +1166,7 @@
             ),
         );
       }
-      function ue(e) {
+      function ce(e) {
         const {
             closeModal: t,
             nCapacity: n,
@@ -1178,18 +1174,18 @@
             fnOnSuccess: r,
           } = e,
           [i, o] = a.useState(n.toString()),
-          l = (0, b.vs)();
+          l = (0, L.vs)();
         return l.bLoading
-          ? a.createElement(b.Hh, {
+          ? a.createElement(L.Hh, {
               state: l,
-              strDialogTitle: (0, E.we)("#Saving"),
+              strDialogTitle: (0, g.we)("#Saving"),
               closeModal: t,
             })
           : a.createElement(
-              U.o0,
+              B.o0,
               {
                 onCancel: t,
-                strTitle: (0, E.we)("Update Capacity"),
+                strTitle: (0, g.we)("Update Capacity"),
                 bAllowFullSize: !0,
                 onOK: async () => {
                   l.fnSetLoading(!0);
@@ -1201,18 +1197,18 @@
                       e
                         ? (r(), l.fnSetStrSuccess("Max capacity updated."))
                         : l.fnSetStrError(
-                            (0, E.we)("#Login_Error_Network_Description"),
+                            (0, g.we)("#Login_Error_Network_Description"),
                           );
                     })
                     .catch(() =>
                       l.fnSetStrError(
-                        (0, E.we)("#Login_Error_Network_Description"),
+                        (0, g.we)("#Login_Error_Network_Description"),
                       ),
                     );
                 },
               },
-              a.createElement(R.pd, {
-                className: X().SetCapacityInput,
+              a.createElement(b.pd, {
+                className: Z().SetCapacityInput,
                 label: "New capacity",
                 type: "text",
                 autoComplete: "off",
@@ -1221,47 +1217,47 @@
               }),
             );
       }
-      function me(e) {
+      function ue(e) {
         const { title: t, nCount: n, nCapacity: s } = e,
           r = n >= s,
           i = Math.min((n / s) * 100, 100),
           o = n > 0 ? `${i}%` : "0%";
         return a.createElement(
           "div",
-          { className: X().CapacityCtn },
+          { className: Z().CapacityCtn },
           a.createElement("span", null, t, " ", n, " / ", s),
           a.createElement(
             "div",
-            { className: X().CapacityBarMax },
+            { className: Z().CapacityBarMax },
             a.createElement("div", {
-              className: (0, x.A)(X().CapacityBarCurrent, r ? X().Full : ""),
+              className: (0, F.A)(Z().CapacityBarCurrent, r ? Z().Full : ""),
               style: { width: o },
             }),
           ),
         );
       }
-      const de = {
+      const me = {
         MeetSteamAttendance: () => `${s.B.MeetSteamRoute()}attendance`,
         MeetSteamEvent: () => `${s.B.MeetSteamRoute()}:gid(\\d+)`,
         MeetSteamAttendeeList: () => `${s.B.MeetSteamRoute()}attendeelist`,
       };
-      function pe(e) {
+      function de(e) {
         return a.createElement(
           r.dO,
           null,
           a.createElement(r.qh, {
-            path: de.MeetSteamAttendance(),
-            render: (e) => a.createElement(j, { ...e }),
+            path: me.MeetSteamAttendance(),
+            render: (e) => a.createElement(O, { ...e }),
           }),
           a.createElement(r.qh, {
-            path: de.MeetSteamAttendeeList(),
-            render: (e) => a.createElement(se, { ...e }),
+            path: me.MeetSteamAttendeeList(),
+            render: (e) => a.createElement(ae, { ...e }),
           }),
           a.createElement(r.qh, {
-            path: de.MeetSteamEvent(),
+            path: me.MeetSteamEvent(),
             render: (e) => a.createElement(S, { ...e }),
           }),
-          a.createElement(r.qh, null, a.createElement(Y.a, null)),
+          a.createElement(r.qh, null, a.createElement(W.a, null)),
         );
       }
     },

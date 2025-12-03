@@ -236,7 +236,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           editModel: null,
@@ -273,7 +272,7 @@
           _.createElement(
             _._,
             {
-              location: _._.Editor,
+              location: 1,
             },
             _,
           ),
@@ -286,7 +285,7 @@
         const _ = _.useContext(_),
           _ =
             ("dev" == _._.WEB_UNIVERSE || "beta" == _._.WEB_UNIVERSE) &&
-            _._.EUNIVERSE == _._.k_EUniverseBeta &&
+            2 == _._.EUNIVERSE &&
             _._.is_support;
         return {
           bClanImagesV2: _.bClanImagesV2 && _,
@@ -301,7 +300,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -734,10 +732,7 @@
                     _ = Array.from(_);
                   for (let _ = 0; _ && _ < _.length; _++) {
                     let _ = _[_];
-                    (_ = await __webpack_require__.AddImage(
-                      _,
-                      _._.k_Lang_English,
-                    )),
+                    (_ = await __webpack_require__.AddImage(_, 0)),
                       _ ||
                         (console.error(
                           "ClanImagePicker.OnDropFiles: failed on i=" +
@@ -921,7 +916,6 @@
       });
       var _,
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _ = !1) {
         return _
@@ -933,9 +927,9 @@
         const _ = _(_);
         if (_ == _.k_eInsertVideo)
           (_ = "[video webm="),
-            _.file_type == _._.k_EClanImageFileType_WEBM && (_ += _),
+            5 == _.file_type && (_ += _),
             (_ += " mp4="),
-            _.file_type == _._.k_EClanImageFileType_MP4 && (_ += _),
+            4 == _.file_type && (_ += _),
             (_ += " autoplay=true controls=false][/video]");
         else if (_ == _.k_eInsertFullImage) _ = "[img]" + _ + "[/img]";
         else {
@@ -1620,8 +1614,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1769,8 +1761,7 @@
             let _ = _._.InitFromClanID(_.clanAccountID);
             _._.DeleteClanImage(_, _)
               .then((_) => {
-                _.success != _._.k_EResultOK && _((0, _._)(_).strErrorMsg),
-                  _(!1);
+                1 != _.success && _((0, _._)(_).strErrorMsg), _(!1);
               })
               .catch((_) => {
                 _((0, _._)(_).strErrorMsg), _(!1);
@@ -1955,11 +1946,7 @@
               },
               _.createElement("source", {
                 src: _.url,
-                type:
-                  "video/" +
-                  (_.file_type == _._.k_EClanImageFileType_MP4
-                    ? "mp4"
-                    : "webm"),
+                type: "video/" + (4 == _.file_type ? "mp4" : "webm"),
               }),
             )
           : null;
@@ -2187,7 +2174,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2432,7 +2418,7 @@
                 const _ = [],
                   _ = new Array();
                 for (const _ of _) {
-                  if (_ == _._.k_Lang_Arabic) continue;
+                  if (25 == _) continue;
                   const _ = (0, _._)("#Language_" + (0, _._)(_));
                   __webpack_require__.push({
                     label: _,
@@ -2587,8 +2573,7 @@
                           ownerWin: _,
                           uploadFile: _,
                           forceResolution: _.forceResolution,
-                          fileType:
-                            _.forceFileType || _._.k_EClanImageFileType_PNG,
+                          fileType: _.forceFileType || 3,
                         });
                       (0, _._)(_, _, "CropModal", {
                         strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
@@ -2759,7 +2744,7 @@
         (_ =
           void 0 !== __webpack_require__
             ? [__webpack_require__]
-            : 2434320 == _.appid || _._.EUNIVERSE == _._.k_EUniverseBeta
+            : 2434320 == _.appid || 2 == _._.EUNIVERSE
               ? _
                 ? _.GetImageForSizeAsArrayWithFallback(
                     "localized_store_app_spotlight_mobile",
@@ -3197,7 +3182,7 @@
               ),
             ),
           ),
-          _ != _._.k_ESmallUpdateEvent &&
+          12 != _ &&
             _.createElement(
               _.Fragment,
               null,
@@ -3327,7 +3312,7 @@
       function _(_, _) {
         var _, _;
         let _ = 0;
-        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_)
+        for (let _ = 0; _ < 31; ++_)
           (null !==
             (_ = null === (_ = _(_, _)) || void 0 === _ ? void 0 : _.length) &&
           void 0 !== _
@@ -3359,7 +3344,7 @@
             null == _ ? void 0 : _.GetEventType(),
             null == _ ? void 0 : _.BHasTag("vo_marketing_message"),
           ]),
-          _ = _ == _._.k_ECreatorHome;
+          _ = 36 == _;
         let _ = null;
         _ === _.k_Required
           ? (_ = _.createElement(
@@ -4187,7 +4172,7 @@
               _._,
               {
                 onClick: () => {
-                  for (let _ = 0; _ < _._.k_Lang_MAX; _++) _(_) && _(_);
+                  for (let _ = 0; _ < 31; _++) _(_) && _(_);
                 },
               },
               (0, _._)("#Sale_RemoveAll"),
@@ -4457,7 +4442,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "nicknames";
       const _ = new (_())(
@@ -4480,9 +4464,10 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  (null === (_ = _.data) || void 0 === _
-                    ? void 0
-                    : _.success) != _._.k_EResultOK ||
+                  1 !=
+                    (null === (_ = _.data) || void 0 === _
+                      ? void 0
+                      : _.success) ||
                   !(null === (_ = _.data) || void 0 === _ ? void 0 : _.userinfo)
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -4499,9 +4484,10 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  (null === (_ = _.data) || void 0 === _
-                    ? void 0
-                    : _.success) != _._.k_EResultOK ||
+                  1 !=
+                    (null === (_ = _.data) || void 0 === _
+                      ? void 0
+                      : _.success) ||
                   !(null === (_ = _.data) || void 0 === _
                     ? void 0
                     : _.userinfos)

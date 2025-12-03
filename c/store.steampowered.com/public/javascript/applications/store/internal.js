@@ -643,7 +643,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -769,7 +768,7 @@
                 className: _().ParentType,
               },
               (0, _._)(
-                _ == _._.k_EStoreAppType_Music
+                11 == _
                   ? "#SalePage_ParentApp_SoundTrack"
                   : "#SalePage_ParentApp_DLC",
               ),
@@ -918,7 +917,7 @@
             _?.GetIncludedAppIDsOrSelf().length > 0 &&
             _?.GetIncludedAppIDsOrSelf().every((_) => _._.Get().BOwnsApp(_)),
           _ = _ && !_;
-        if (_ && _?.GetStoreItemType() == _._.k_EStoreItemType_App)
+        if (_ && 0 == _?.GetStoreItemType())
           return _.createElement(_._, {
             appid: _.GetAppID(),
             bIsMuted: _,
@@ -2663,8 +2662,6 @@
         (0, _._)([_._], _.prototype, "OnSelectedEndApp", null),
         (_ = (0, _._)([_._], _));
       var _,
-        _,
-        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2672,30 +2669,6 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EStoreAppSimilarityPopularity_None = 0)] =
-          "k_EStoreAppSimilarityPopularity_None"),
-          (_[(_.k_EStoreAppSimilarityPopularity_SalesRank = 1)] =
-            "k_EStoreAppSimilarityPopularity_SalesRank"),
-          (_[(_.k_EStoreAppSimilarityPopularity_LongTermSalesRank = 2)] =
-            "k_EStoreAppSimilarityPopularity_LongTermSalesRank"),
-          (_[(_.k_EStoreAppSimilarityPopularity_WishlistActivityRank = 3)] =
-            "k_EStoreAppSimilarityPopularity_WishlistActivityRank"),
-          (_[(_.k_EStoreAppSimilarityPopularity_DailyActiveUserRank = 4)] =
-            "k_EStoreAppSimilarityPopularity_DailyActiveUserRank"),
-          (_[(_.k_EStoreAppSimilarityPopularity_Blended = 5)] =
-            "k_EStoreAppSimilarityPopularity_Blended");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EClustersFromPlaytimeSort_Invalid = 0)] =
-            "k_EClustersFromPlaytimeSort_Invalid"),
-            (_[(_.k_EClustersFromPlaytimeSort_MostRecent = 1)] =
-              "k_EClustersFromPlaytimeSort_MostRecent"),
-            (_[(_.k_EClustersFromPlaytimeSort_MostGames = 2)] =
-              "k_EClustersFromPlaytimeSort_MostGames"),
-            (_[(_.k_EClustersFromPlaytimeSort_MostPlaytime = 3)] =
-              "k_EClustersFromPlaytimeSort_MostPlaytime");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -2737,7 +2710,7 @@
                   },
                   popularity_factor: {
                     _: 20,
-                    _: _.k_EStoreAppSimilarityPopularity_Blended,
+                    _: 5,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -3190,7 +3163,7 @@
                   },
                   sort: {
                     _: 2,
-                    _: _.k_EClustersFromPlaytimeSort_MostRecent,
+                    _: 1,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
@@ -3540,15 +3513,15 @@
         );
       }
       const _ = {
-        [_.k_EClustersFromPlaytimeSort_MostPlaytime]: "Total Playtime",
-        [_.k_EClustersFromPlaytimeSort_MostGames]: "Number of Played Games",
-        [_.k_EClustersFromPlaytimeSort_MostRecent]: "Most Recently Played",
+        3: "Total Playtime",
+        2: "Number of Played Games",
+        1: "Most Recently Played",
       };
       function _(_) {
         const { SimilarityStore: _ } = _,
           [__webpack_require__, _] = _.useState(_._.steamid),
           [_, _] = _.useState("10"),
-          [_, _] = _.useState(_.k_EClustersFromPlaytimeSort_MostRecent),
+          [_, _] = _.useState(1),
           _ = _.useCallback((_) => _(_.currentTarget.value), [_]),
           _ = _.useCallback((_) => _(_.currentTarget.value), [_]),
           _ = _.useCallback((_) => _(_.data), [_]);
@@ -3570,14 +3543,7 @@
               });
             return _;
           }, []),
-          _ = (function (
-            _,
-            _,
-            _,
-            _ = _.k_EClustersFromPlaytimeSort_MostRecent,
-            _ = null,
-            _ = [],
-          ) {
+          _ = (function (_, _, _, _ = 1, _ = null, _ = []) {
             const [_, _] = _.useState(null);
             return (
               _.useEffect(() => {

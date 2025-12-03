@@ -56,32 +56,31 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
-          case _._.k_EStoreAppType_Game:
+          case 0:
             return "game";
-          case _._.k_EStoreAppType_Software:
+          case 6:
             return "software";
-          case _._.k_EStoreAppType_Demo:
+          case 1:
             return "demo";
-          case _._.k_EStoreAppType_DLC:
+          case 4:
             return "dlc";
-          case _._.k_EStoreAppType_Video:
-          case _._.k_EStoreAppType_Movie:
+          case 7:
+          case 3:
             return "video";
-          case _._.k_EStoreAppType_Music:
+          case 11:
             return "music";
-          case _._.k_EStoreAppType_Beta:
+          case 12:
             return "beta";
-          case _._.k_EStoreAppType_Mod:
+          case 2:
             return "mod";
         }
         return "invalid";
       }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -94,7 +93,6 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -144,7 +142,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  _.data?.success != _._.k_EResultOK ||
+                  1 != _.data?.success ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -161,7 +159,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  _.data?.success != _._.k_EResultOK ||
+                  1 != _.data?.success ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -424,7 +422,6 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -698,7 +695,7 @@
                   _ = await _().post(_, _, {
                     withCredentials: !0,
                   });
-                return _?.data?.success == _._.k_EResultOK;
+                return 1 == _?.data?.success;
               },
             }));
         var _, _, _, _;
@@ -902,7 +899,7 @@
                 {
                   className: _().SessionName,
                 },
-                __webpack_require__.localized_session_title[_._.k_Lang_English],
+                __webpack_require__.localized_session_title[0],
               ),
               _.createElement(
                 "div",
@@ -917,7 +914,7 @@
                 "div",
                 null,
                 _.createElement(_, {
-                  desc: `Description: ${__webpack_require__.localized_session_description[_._.k_Lang_English] || ""}`,
+                  desc: `Description: ${__webpack_require__.localized_session_description[0] || ""}`,
                 }),
               ),
               "dev" == _._.WEB_UNIVERSE &&
@@ -1258,7 +1255,7 @@
                   _ = await _().post(_, _, {
                     withCredentials: !0,
                   });
-                return _?.data?.success == _._.k_EResultOK;
+                return 1 == _?.data?.success;
               },
             }));
         var _, _, _;
@@ -1277,8 +1274,7 @@
               {
                 className: _().SessionName,
               },
-              _.localized_session_title[_] ??
-                _.localized_session_title[_._.k_Lang_English],
+              _.localized_session_title[_] ?? _.localized_session_title[0],
             ),
             _.createElement(
               "div",

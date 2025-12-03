@@ -1912,6 +1912,8 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+01:18:02
+01:18:10
 08bX
 0?0L
 0A/8
@@ -2445,8 +2447,6 @@ $ffn
 21CPurchaseLineItemInfo
 21CScheduledFunctionMgr
 21CUtlCStringConversion
-22:19:02
-22:19:13
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2613,7 +2613,7 @@ $ffn
 4f$H
 4h\4
 4i5U6B738%9
-4rV'
+4nV'
 4tpD
 5-535;5A5Q5e5o5q5w5{5}5
 5000
@@ -2828,7 +2828,6 @@ $ffn
 >#>)>/>3>A>W>c>e>w>
 >0PFJ
 >= or is NULL
->Dw-.e2
 >I{TrEX
 >ZF9
 >\n9k_EMsgClientChatGetFriendMessageHistoryForOfflineMessages
@@ -5073,7 +5072,7 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec  1 2025
+Dec  3 2025
 December
 Decipher Only
 Deckard
@@ -8890,7 +8889,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Dec  1 2025 22:19:13
+Startup - updater built Dec  3 2025 01:18:10
 State
 StaticFileWriterThread()
 Steam
@@ -19619,7 +19618,6 @@ xxJo%%\r..8$
 xzxv
 y9*O
 yU\n2`
-ydF~
 ye"Y
 year
 yielding

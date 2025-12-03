@@ -630,7 +630,7 @@
         _ = __webpack_require__("chunkid");
       class _ {
         m_eCurLang = (0, _._)(_._.LANGUAGE);
-        m_rgHasData = (0, _._)([], _._.k_Lang_MAX, !1);
+        m_rgHasData = (0, _._)([], 31, !1);
         m_bHasLocalizationContext = !1;
         m_callback = new _._();
         GetCallback() {
@@ -766,7 +766,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.Get().BIsLoaded() && _._.Get();
@@ -778,10 +777,10 @@
               if (_.BExcludesContentDescriptor(_.GetContentDescriptorIDs()))
                 return !0;
               switch (_.GetStoreItemType()) {
-                case _._.k_EStoreItemType_App:
+                case 0:
                   if (_.BIsGameIgnored(_.GetID())) return !0;
                   break;
-                case _._.k_EStoreItemType_Package:
+                case 1:
                   if (_.BIsPackageIgnored(_.GetID())) return !0;
               }
               return !1;
@@ -1005,7 +1004,7 @@
                 "option",
                 {
                   key: "langpicker_unset",
-                  value: _._.k_Lang_None,
+                  value: -1,
                 },
                 (0, _._)("#language_selection_none"),
               ),
@@ -1442,14 +1441,10 @@
             __webpack_require__.sub_menu_url,
             _(__webpack_require__.sub_menu_url, _),
             __webpack_require__.localized_sub_menu_name?.[_] ||
-              __webpack_require__.localized_sub_menu_name?.[
-                _._.k_Lang_English
-              ] ||
+              __webpack_require__.localized_sub_menu_name?.[0] ||
               "unknown",
             __webpack_require__.sub_menu_icon?.localized_media?.[_]?.image ||
-              __webpack_require__.sub_menu_icon?.localized_media?.[
-                _._.k_Lang_English
-              ]?.image ||
+              __webpack_require__.sub_menu_icon?.localized_media?.[0]?.image ||
               void 0,
           ]);
         let _ = _.label_color || "#DBDFE2";
@@ -1849,7 +1844,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         _.preventDefault();
@@ -2176,7 +2170,7 @@
                 const _ = [],
                   _ = new Array();
                 for (const _ of _) {
-                  if (_ == _._.k_Lang_Arabic) continue;
+                  if (25 == _) continue;
                   const _ = (0, _._)("#Language_" + (0, _._)(_));
                   __webpack_require__.push({
                     label: _,
@@ -2313,8 +2307,7 @@
                           ownerWin: _,
                           uploadFile: _,
                           forceResolution: _.forceResolution,
-                          fileType:
-                            _.forceFileType || _._.k_EClanImageFileType_PNG,
+                          fileType: _.forceFileType || 3,
                         });
                       (0, _._)(_, _, "CropModal", {
                         strTitle: (0, _._)("#ImageUpload_CropModalTitle"),
@@ -2411,8 +2404,7 @@
           ),
         );
       }
-      var _,
-        _ = __webpack_require__("chunkid");
+      var _;
       !(function (_) {
         (_[(_.k_eInsertThumbnail = 1)] = "k_eInsertThumbnail"),
           (_[(_.k_eInsertFullImage = 2)] = "k_eInsertFullImage"),
@@ -2547,8 +2539,7 @@
             let _ = _._.InitFromClanID(_.clanAccountID);
             _._.DeleteClanImage(_, _)
               .then((_) => {
-                _.success != _._.k_EResultOK && _((0, _._)(_).strErrorMsg),
-                  _(!1);
+                1 != _.success && _((0, _._)(_).strErrorMsg), _(!1);
               })
               .catch((_) => {
                 _((0, _._)(_).strErrorMsg), _(!1);
@@ -2729,11 +2720,7 @@
               },
               _.createElement("source", {
                 src: _.url,
-                type:
-                  "video/" +
-                  (_.file_type == _._.k_EClanImageFileType_MP4
-                    ? "mp4"
-                    : "webm"),
+                type: "video/" + (4 == _.file_type ? "mp4" : "webm"),
               }),
             )
           : null;
@@ -3035,7 +3022,7 @@
               _._,
               {
                 onClick: () => {
-                  for (let _ = 0; _ < _._.k_Lang_MAX; _++) _(_) && _(_);
+                  for (let _ = 0; _ < 31; _++) _(_) && _(_);
                 },
               },
               (0, _._)("#Sale_RemoveAll"),
@@ -3250,7 +3237,7 @@
         (_ =
           void 0 !== __webpack_require__
             ? [__webpack_require__]
-            : 2434320 == _.appid || _._.EUNIVERSE == _._.k_EUniverseBeta
+            : 2434320 == _.appid || 2 == _._.EUNIVERSE
               ? _
                 ? _.GetImageForSizeAsArrayWithFallback(
                     "localized_store_app_spotlight_mobile",
@@ -3672,7 +3659,7 @@
               ),
             ),
           ),
-          _ != _._.k_ESmallUpdateEvent &&
+          12 != _ &&
             _.createElement(
               _.Fragment,
               null,
@@ -3797,8 +3784,7 @@
           );
       function _(_, _) {
         let _ = 0;
-        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_)
-          (_(_, _)?.length ?? 0) > 0 && (_ += 1);
+        for (let _ = 0; _ < 31; ++_) (_(_, _)?.length ?? 0) > 0 && (_ += 1);
         return _;
       }
       const _ =
@@ -3824,7 +3810,7 @@
             _?.GetEventType(),
             _?.BHasTag("vo_marketing_message"),
           ]),
-          _ = _ == _._.k_ECreatorHome;
+          _ = 36 == _;
         let _ = null;
         __webpack_require__ === _.k_Required
           ? (_ = _.createElement(
@@ -4588,7 +4574,7 @@
             _(!0);
         }, [_, _, _]);
         const _ = (0, _.useCallback)(
-            (_, _, __webpack_require__ = _._.k_Lang_English) => {
+            (_, _, __webpack_require__ = 0) => {
               const _ = _._.InitFromClanID(_),
                 _ = _._.GetHashAndExt(_ ?? null);
               if (0 == _._.GetAllLocalizedGroupImages().length) {
@@ -4618,7 +4604,7 @@
             bOKDisabled: _ > 0,
             onOK: () => {
               const _ = _._.GetLocalizedImageGroupForEdit();
-              for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
+              for (let _ = 0; _ < 31; ++_) {
                 const _ = _?.localized_images[_];
                 if (_) {
                   const _ = __webpack_require__.split("/").pop() || "";
@@ -4627,8 +4613,7 @@
                     {
                       image_hash: _(_),
                       clanAccountID: _,
-                      file_type:
-                        (0, _._)(_) ?? _._.k_EClanImageFileType_Unknown,
+                      file_type: (0, _._)(_) ?? 0,
                       imageid: 0,
                     },
                     _,
@@ -4742,10 +4727,10 @@
           ]),
           [_] = (0, _.useState)(() =>
             (function (_) {
-              const _ = _._([], _._.k_Lang_MAX, null);
+              const _ = _._([], 31, null);
               for (const _ in _) {
                 const _ = (0, _._)(_);
-                _ != _._.k_Lang_None && (_[_] = _[_]);
+                -1 != _ && (_[_] = _[_]);
               }
               return _;
             })(_.localized_background_art ?? {}),
@@ -5224,7 +5209,7 @@
         let _ = null;
         _?.nUniqueIDNextSaleSection &&
           (_ = (0, _._)(
-            _._.Previewing,
+            2,
             _.GetSaleSectionByID(_?.nUniqueIDNextSaleSection),
             _,
             _,
@@ -5234,7 +5219,7 @@
         if (_?.length > 1) {
           const _ = _[_.length - 1];
           _ = (0, _._)(
-            _._.Previewing,
+            2,
             _.GetSaleSectionByID(_),
             _,
             _,
@@ -5294,7 +5279,7 @@
                     key: "li_" + _,
                   },
                   (0, _._)(
-                    _._.TableOfContents,
+                    3,
                     _.GetSaleSectionByID(_),
                     _,
                     _,
@@ -5778,7 +5763,7 @@
               _.createElement(
                 _._,
                 {
-                  location: _ ? _._.Previewing : _._.Display,
+                  location: _ ? 2 : 0,
                 },
                 _.createElement(
                   _,
@@ -6281,7 +6266,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -6292,10 +6276,7 @@
             ..._
           } = _,
           _ = _.useRef(0),
-          _ =
-            _.GetStoreItemType() == _._.k_EStoreItemType_App
-              ? _.GetAppID()
-              : null,
+          _ = 0 == _.GetStoreItemType() ? _.GetAppID() : null,
           _ = (0, _._)(),
           _ = _.useMemo(
             () =>
@@ -6472,7 +6453,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.DailyActiveUsers = "DailyActiveUsers"),
@@ -6490,8 +6470,7 @@
             this.m_WebAPI.GetAnonymousServiceTransport(),
             _,
           );
-          if (_.GetEResult() != _._.k_EResultOK)
-            throw "error loading most played by dau";
+          if (1 != _.GetEResult()) throw "error loading most played by dau";
           return {
             rgRanks: this.ReadMostPlayedByDAU(
               _,
@@ -6506,7 +6485,7 @@
             this.m_WebAPI.GetAnonymousServiceTransport(),
             _,
           );
-          if (_.GetEResult() != _._.k_EResultOK)
+          if (1 != _.GetEResult())
             throw "error loading most played by concurrent";
           return {
             rgRanks: this.ReadMostPlayedByConcurrent(
@@ -6550,7 +6529,6 @@
         });
       }
       var _,
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7033,9 +7011,7 @@
             this.m_promiseInitialize ||
               (this.m_promiseInitialize = new Promise((_, _) => {
                 let _;
-                (_._.EUNIVERSE != _._.k_EUniverseBeta &&
-                  _._.EUNIVERSE != _._.k_EUniverseDev) ||
-                  (_ = 1539068400),
+                (2 != _._.EUNIVERSE && 4 != _._.EUNIVERSE) || (_ = 1539068400),
                   this.LoadCountryList()
                     .then((_) =>
                       this.LoadTopSellersForWeek(_, _, _).then((_) => {
@@ -7065,7 +7041,7 @@
                 this.m_WebAPI.GetServiceTransport(),
                 _,
               );
-              if (__webpack_require__.GetEResult() == _._.k_EResultOK) {
+              if (1 == __webpack_require__.GetEResult()) {
                 let _ = __webpack_require__
                   .Body()
                   .countries()
@@ -7130,8 +7106,7 @@
             this.m_WebAPI.GetAnonymousServiceTransport(),
             _,
           );
-          if (_.GetEResult() != _._.k_EResultOK)
-            throw "error loading top sellers";
+          if (1 != _.GetEResult()) throw "error loading top sellers";
           return {
             strCountryCode: _,
             rtWeekStart: _.Body().start_date(),
@@ -7225,7 +7200,6 @@
         return _(_, _, _, _, _, _);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_WebAPI;
@@ -7238,8 +7212,7 @@
               this.m_WebAPI.GetAnonymousServiceTransport(),
               _,
             );
-          if (_.GetEResult() != _._.k_EResultOK)
-            throw "error loading best of year";
+          if (1 != _.GetEResult()) throw "error loading best of year";
           return {
             rgPages: this.ReadBestOfYear(_),
           };
@@ -7302,7 +7275,7 @@
             this.m_WebAPI.GetAnonymousServiceTransport(),
             _,
           );
-          if (__webpack_require__.GetEResult() != _._.k_EResultOK)
+          if (1 != __webpack_require__.GetEResult())
             throw "error loading most played on Steam Deck";
           return {
             rgRanks: this.ReadMostPlayedOnDeck(
@@ -7336,12 +7309,12 @@
             this.m_WebAPI.GetAnonymousServiceTransport(),
             _,
           );
-          if (_.GetEResult() != _._.k_EResultOK) {
-            if (_.GetEResult() == _._.k_EResultBusy)
+          if (1 != _.GetEResult()) {
+            if (10 == _.GetEResult())
               return {
                 bSQLError: !0,
               };
-            if (_.GetEResult() == _._.k_EResultNoMatch) return {};
+            if (42 == _.GetEResult()) return {};
             throw "error loading top releases";
           }
           return _.Body().toObject();
@@ -7391,7 +7364,7 @@
           return [
             "SteamCharts Overview Top Sellers",
             {
-              sort: _._.k_EStoreQuerySort_Regional24hSalesRank,
+              sort: 10,
               start: 0,
               count: 5,
               filters: this.m_TopSellersStore.GetDefaultTopSellersFilters(),
@@ -7403,7 +7376,7 @@
           return [
             "SteamCharts Overview Most Played",
             {
-              sort: _._.k_EStoreQuerySort_ConcurrentPlayers,
+              sort: 32,
               start: 0,
               count: 5,
               filters: {
@@ -7817,6 +7790,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8293,7 +8267,7 @@
           _ = (0, _._)(_, _),
           _ = (0, _.useMemo)(
             () =>
-              _ && _ != _._.k_EStoreItemCacheState_Loading
+              _ && 1 != _
                 ? _.top_dlc_releases
                     ?.filter((_) => !_._.Get().BIsAppMissing(_.appid))
                     .map((_) => _.appid)
@@ -8302,7 +8276,7 @@
           ),
           { rgFilteredCombinedAppsAndDLC: _, rgFilteredAppIDByTier: _ } = (0,
           _.useMemo)(() => {
-            if (!_ || _ == _._.k_EStoreItemCacheState_Loading)
+            if (!_ || 1 == _)
               return {
                 rgFilteredCombinedAppsAndDLC: [],
                 rgFilteredAppIDByTier: [],
@@ -8354,7 +8328,7 @@
               }).then(_);
           }, [_]),
           (0, _.useEffect)(() => {
-            if (null == _ && _ != _._.k_EStoreItemCacheState_Loading) {
+            if (null == _ && 1 != _) {
               const _ = (function (_) {
                 const _ = _._.Get(),
                   _ = _.filter((_) => {
@@ -8379,7 +8353,7 @@
                 : _([]);
             }
           }, [_, _, _, _]),
-          _ && _ != _._.k_EStoreItemCacheState_Loading && _ && null != _ && _
+          _ && 1 != _ && _ && null != _ && _
             ? 0 == _.length
               ? _.createElement(
                   "div",
@@ -10492,9 +10466,7 @@
           _ = (0, _._)(
             "SteamCharts Live Top Sellers",
             {
-              sort: __webpack_require__
-                ? _._.k_EStoreQuerySort_Regional24hSalesRank
-                : _._.k_EStoreQuerySort_Global24hSalesRank,
+              sort: __webpack_require__ ? 10 : 11,
               start: 0,
               count: 100,
             },
@@ -10948,7 +10920,6 @@
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
         ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
@@ -11356,7 +11327,7 @@
         const { MostPlayedOnDeckStore: _, strTimePeriod: __webpack_require__ } =
             _,
           { topPlayedPeriod: _, dateRangeString: _ } = _.useMemo(() => {
-            let _ = _._.k_ETopPlayedPeriod_PastWeek;
+            let _ = 1;
             const _ = new Date().getTime() / 1e3,
               _ = _ - 518400,
               _ = _ - 2505600,
@@ -11365,13 +11336,13 @@
             if (__webpack_require__)
               switch (__webpack_require__.toLowerCase()) {
                 case "pastmonth":
-                  (_ = _._.k_ETopPlayedPeriod_PastMonth), (_ = (0, _._)(_, _));
+                  (_ = 2), (_ = (0, _._)(_, _));
                   break;
                 case "pastyear":
-                  (_ = _._.k_ETopPlayedPeriod_PastYear), (_ = (0, _._)(_, _));
+                  (_ = 3), (_ = (0, _._)(_, _));
                   break;
                 case "pastweek":
-                  (_ = _._.k_ETopPlayedPeriod_PastWeek), (_ = (0, _._)(_, _));
+                  (_ = 1), (_ = (0, _._)(_, _));
               }
             return {
               topPlayedPeriod: _,
@@ -11601,12 +11572,12 @@
         const { children: _, eTopPlayedPeriod: __webpack_require__ } = _;
         let _ = (0, _._)("#SteamCharts_MostPlayedDeck_TableChangeWeek_Tooltip");
         switch (__webpack_require__) {
-          case _._.k_ETopPlayedPeriod_PastMonth:
+          case 2:
             _ = (0, _._)(
               "#SteamCharts_MostPlayedDeck_TableChangeMonth_Tooltip",
             );
             break;
-          case _._.k_ETopPlayedPeriod_PastYear:
+          case 3:
             _ = (0, _._)("#SteamCharts_MostPlayedDeck_TableChangeYear_Tooltip");
         }
         return _.createElement(

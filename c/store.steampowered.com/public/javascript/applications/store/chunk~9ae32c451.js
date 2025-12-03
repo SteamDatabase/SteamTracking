@@ -1,19 +1,8 @@
+"use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [351],
   {
-    chunkid: (module) => {
-      module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
-        TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
-        TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
-        Reason: "_2h0GKAYcXRP10ryZHFn79d",
-        StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
-      };
-    },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -27,7 +16,6 @@
       })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -37,7 +25,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -98,8 +85,7 @@
               });
             if (
               200 == _.status &&
-              (_.data?.success == _._.k_EResultOK ||
-                _.data?.success == _._.k_EResultNoMatch)
+              (1 == _.data?.success || 42 == _.data?.success)
             ) {
               const _ = {
                 badgeid: _.data.badgeid,
@@ -175,7 +161,6 @@
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -259,7 +244,6 @@
         (0, _._)([_._], _.prototype, "m_rgAnswerChosen", void 0);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -274,7 +258,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -421,7 +404,7 @@
             let _ = await _().post(_, _, {
               withCredentials: !0,
             });
-            if (200 == _?.status && _?.data?.success == _._.k_EResultOK)
+            if (200 == _?.status && 1 == _?.data?.success)
               return (
                 (this.m_userData[_].opened = _),
                 (this.m_strLastDoorOpenKey = "door_" + (_ ? _ : _ - 1)),
@@ -491,7 +474,7 @@
             let _ = await _().post(_, _, {
               withCredentials: !0,
             });
-            if (200 == _.status && _?.data?.success == _._.k_EResultOK) {
+            if (200 == _.status && 1 == _?.data?.success) {
               console.log("CDoorStore - closed " + _.data.count);
               for (let _ = 0; _ < _; ++_)
                 (this.m_userData[_].opened = !1),
@@ -590,7 +573,6 @@
         (0, _._)([_._], _.prototype, "OpenDoor", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -840,7 +822,6 @@
         (0, _._)([_._], _.prototype, "DeployCapsuleIfPossible", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
       });
@@ -895,276 +876,6 @@
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            creatorID: _,
-            bShowTagline: __webpack_require__,
-            bHideCreatorType: _,
-            bSmallFormat: _,
-            bHideFollowButton: _,
-            bAddLinkToMemberList: _,
-            bMinimalDisplay: _,
-          } = _,
-          { creatorHome: _ } = (0, _._)(_.clan_account_id),
-          [_] = (0, _._)();
-        if (_ || !_)
-          return _.createElement(
-            "div",
-            {
-              className: _.DevSummaryWidgetCtn,
-            },
-            _.createElement(_._, {
-              string: (0, _._)("#Loading"),
-              size: "medium",
-              position: "center",
-            }),
-          );
-        const _ = _.type,
-          _ =
-            "developer" == _.type
-              ? (0, _._)("#CreatorHome_DevelopedBy")
-              : "publisher" == _.type
-                ? (0, _._)("#CreatorHome_PublishedBy")
-                : (0, _._)("#CreatorHome_InFranchise"),
-          _ = _.GetCreatorHomeURL(_),
-          _ = _.GetNumFollowers();
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _._,
-            {
-              feature: "salecreatorhome",
-            },
-            _.createElement(
-              _._,
-              {
-                className: (0, _._)(
-                  _.DevSummaryCtn,
-                  _ ? _.SmallFormat : _.LargeFormat,
-                  _ ? _.MinimalDisplay : "",
-                ),
-                "flow-children": "row",
-              },
-              !_ &&
-                _.createElement(
-                  "span",
-                  {
-                    className: _.Title,
-                  },
-                  _,
-                ),
-              _.createElement(
-                "div",
-                {
-                  className: _.DevSummaryWidgetCtn,
-                },
-                _.createElement("div", {
-                  className: _.DevSummaryBackground,
-                  style: {
-                    backgroundImage: `url(${_.GetAvatarURLFullSize()} )`,
-                  },
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(_.DevSummaryContent),
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.FlexRowContainer,
-                    },
-                    _.createElement(
-                      _._,
-                      {
-                        href: (0, _._)(_),
-                        className: _.AvatarLink,
-                        bAllowFocuseableAnchor: !0,
-                      },
-                      _.createElement("img", {
-                        className: (0, _._)(_.Avatar, "Avatar_Trgt"),
-                        src: _.GetAvatarURLFullSize(),
-                      }),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: (0, _._)(
-                          _.FlexColumnContainer,
-                          _.CreatorDescCtn,
-                        ),
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: (0, _._)(
-                            _.CreatorTitleCtn,
-                            _.FlexColumnContainer,
-                          ),
-                        },
-                        _.createElement(
-                          _._,
-                          {
-                            href: (0, _._)(_),
-                            className: _.CreatorNameName,
-                          },
-                          _.GetName(),
-                        ),
-                        Boolean(__webpack_require__) &&
-                          _.createElement(
-                            "div",
-                            {
-                              className: (0, _._)(
-                                _.FlexColumnContainer,
-                                _.CreatorTagline,
-                              ),
-                            },
-                            _.GetTagLine(),
-                          ),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: (0, _._)({
-                            [_.FlexColumnContainer]: _,
-                            [_.FlexRowContainer]: !_,
-                            [_.SocialFollowersCtn]: !0,
-                          }),
-                        },
-                        _.createElement(
-                          "div",
-                          {
-                            className: (0, _._)(_.FollowBtnCtn),
-                          },
-                          Boolean(!_) &&
-                            _.createElement(_._, {
-                              clanAccountID: _.clan_account_id,
-                              creatorID: _,
-                            }),
-                          _.createElement(
-                            "div",
-                            {
-                              className: (0, _._)({
-                                [_.Followers]: !0,
-                              }),
-                            },
-                            _.createElement(
-                              "span",
-                              null,
-                              (0, _._)("#CreatorHome_JustFollowers"),
-                            ),
-                            _.createElement(
-                              "span",
-                              {
-                                className: _.FollowerCount,
-                              },
-                              (0, _._)(_),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Boolean(_) &&
-                    _.createElement(
-                      "a",
-                      {
-                        href:
-                          _._.COMMUNITY_BASE_URL +
-                          "gid/" +
-                          _.GetClanSteamID().ConvertTo64BitString() +
-                          "/members/",
-                        target: "_blank",
-                        className: _.MembersListLink,
-                      },
-                      (0, _._)("#ClanMembershipList"),
-                    ),
-                ),
-              ),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { appid: _, bSmallFormat: __webpack_require__ } = _,
-          [_] = (0, _._)(_, {
-            include_basic_info: !0,
-          });
-        if (!_) return null;
-        if (!_)
-          return _.createElement(
-            "div",
-            {
-              className: _.DevSummaryWidgetCtn,
-            },
-            _.createElement(_._, null),
-          );
-        let _;
-        const _ = _.GetAllDeveloperCreatorClans();
-        if (_?.length > 0)
-          _ = {
-            appid: _,
-            name: "",
-            clan_account_id: _[0],
-            type: "developer",
-          };
-        else {
-          const _ = _.GetAllPublisherCreatorClans();
-          if (_?.length > 0)
-            _ = {
-              appid: _,
-              name: "",
-              clan_account_id: _[0],
-              type: "publisher",
-            };
-          else {
-            const _ = _.GetAllFranchiseCreatorClans();
-            _?.length > 0 &&
-              (_ = {
-                appid: _,
-                name: "",
-                clan_account_id: _[0],
-                type: "franchise",
-              });
-          }
-        }
-        return _
-          ? _.createElement(
-              _._,
-              null,
-              _.createElement(_, {
-                creatorID: _,
-                bSmallFormat: __webpack_require__,
-              }),
-            )
-          : null;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -1357,363 +1068,6 @@
         (0, _._)([_._], _.prototype, "m_jumpToSection", void 0),
         (0, _._)([_._], _.prototype, "m_jumpToSubsection", void 0),
         (0, _._)([_._], _.prototype, "HandleMessage", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = "capsule_index_";
-      function _(_) {
-        const {
-            capsule: _,
-            bShowParentApp: __webpack_require__,
-            elElementToAppendToHover: _,
-            index: _,
-            navKey: _,
-            bHideStoreHover: _,
-            onlyOneDiscountPct: _,
-            bPreferDemoStorePage: _,
-            bShowEarlyAccessBanner: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          [_] = (0, _._)(__webpack_require__ && _?.GetParentAppID(), _._);
-        if (!_) return null;
-        const _ = Boolean(_),
-          _ = _.createElement(_, {
-            ..._,
-            strExtraParams: _.strExtraParams,
-            info: _,
-            bIsHovered: _,
-            bHasParentAppToDisplay: _,
-            onlyOneDiscountPct: _,
-            bShowEarlyAccessBanner: _,
-          });
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)({
-              [_().OuterCapsuleContainer]: !0,
-              [_ + _]: 0 == _,
-            }),
-            navEntryPreferPosition: _._.PREFERRED_CHILD,
-            navKey: _,
-          },
-          _.createElement(
-            _._,
-            {
-              appid: _.GetAppID(),
-            },
-            Boolean(_)
-              ? _.createElement(
-                  "div",
-                  {
-                    onMouseEnter: () => _(!0),
-                    onMouseLeave: () => _(!1),
-                  },
-                  _,
-                )
-              : _.createElement(
-                  _._,
-                  {
-                    className: _().CapsuleContainer,
-                    item: _,
-                    elElementToAppend: _.elElementToAppendToHover,
-                    bShowDemoButton: _.bShowDemoButton,
-                    bPreferDemoStorePage: _.bPreferDemoStorePage,
-                    bShowDeckCompatibilityDialog:
-                      _.bShowDeckCompatibilityDialog,
-                    bHidePrice: _.bHidePrice,
-                    bUseSubscriptionLayout: _.bUseSubscriptionLayout,
-                    strExtraParams: _.strExtraParams,
-                    nCreatorAccountID: _.creatorAccountID,
-                    nWidthMultiplier: _.nWidthMultiplier,
-                    bShowIgnoreButton: _.bShowIgnoreButton,
-                    bShowDescription: _.bShowDescriptionInHover,
-                  },
-                  _,
-                ),
-            Boolean(_) && _.createElement(_.Fragment, null, _),
-          ),
-          _ &&
-            _.createElement(_, {
-              strExtraParams: _.strExtraParams,
-              parentStoreItem: _,
-              childAppType: _.GetAppType(),
-              bPreferDemoStorePage: _,
-            }),
-        );
-      }
-      function _(_) {
-        const {
-            strExtraParams: _,
-            parentStoreItem: __webpack_require__,
-            childAppType: _,
-            bPreferDemoStorePage: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        return _.createElement(
-          _._,
-          {
-            className: _().CapsuleParentInfo,
-            ...(0, _._)(__webpack_require__, _, _, _, _),
-          },
-          _.createElement(
-            _._,
-            {
-              appid: __webpack_require__.GetAppID(),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().ParentType,
-              },
-              (0, _._)(
-                _ == _._.k_EStoreAppType_Music
-                  ? "#SalePage_ParentApp_SoundTrack"
-                  : "#SalePage_ParentApp_DLC",
-              ),
-            ),
-            _.createElement(
-              _._,
-              {
-                type: "app",
-                _: __webpack_require__.GetAppID(),
-                strExtraParams: _,
-              },
-              _.createElement("img", {
-                loading: "lazy",
-                className: _.AppCapsuleImage,
-                alt: __webpack_require__.GetName(),
-                src: __webpack_require__.GetAssets().GetSmallCapsuleURL(),
-                ...(0, _._)(),
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const {
-            info: _,
-            bHideStatusBanners: __webpack_require__,
-            strExtraParams: _,
-            index: _,
-            imageType: _,
-            bHasParentAppToDisplay: _,
-            bIsHovered: _,
-            strDoubleCapsuleMessage: _,
-            bPreferDemoStorePage: _,
-            bShowEarlyAccessBanner: _,
-          } = _,
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
-        if (!_) return null;
-        const _ = (0, _._)(
-          (0, _._)(`${_.GetStorePageURL(_)}${_ ? `?${_}` : ""}`, _, _),
-        );
-        let _;
-        "overrideNavigation" in _ &&
-          (_ = (_) => (
-            _.overrideNavigation(_), _.preventDefault(), _.stopPropagation(), !1
-          ));
-        const _ = Boolean(_);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)({
-                [_().TwoWidthCtn]: _,
-              }),
-            },
-            _.createElement(
-              _._,
-              {
-                href: _ ? void 0 : _,
-                style: {
-                  display: "block",
-                  cursor: "pointer",
-                },
-                className: (0, _._)({
-                  [_().TwoWidthCapsule]: _,
-                }),
-                preferredFocus: _,
-                onClick: _,
-              },
-              _.createElement(_._, {
-                appids: _,
-                hide_status_banners: __webpack_require__,
-                show_early_access: _.bShowEarlyAccessBanner,
-              }),
-              "none" != _ &&
-                _.createElement(_._, {
-                  imageType: _,
-                  info: _,
-                }),
-              _.createElement(_._, {
-                storeItem: _,
-              }),
-              Boolean(_) &&
-                _.createElement(_._, {
-                  appInfo: _,
-                  bIsHoverMode: !0,
-                }),
-            ),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().TwoWidthSideInfo, "TwoWidthSideInfo"),
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().Reason,
-                  },
-                  _,
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().StoreSaleItemRelease,
-                  },
-                  _.createElement(
-                    "span",
-                    null,
-                    _.GetFormattedSteamReleaseDate(),
-                  ),
-                ),
-                _.createElement(_._, {
-                  bHideTitle: !0,
-                  rgTagIDs: _.GetTagIDs(),
-                  instanceNum: _,
-                }),
-              ),
-          ),
-          _.createElement(_, {
-            ..._,
-          }),
-        );
-      }
-      function _(_) {
-        const {
-            info: _,
-            bHidePriceIfOwned: __webpack_require__,
-            bHideStatusBanners: _,
-            bUseSubscriptionLayout: _,
-            elElementToAppendToHover: _,
-            bHidePrice: _,
-            bHidePlatforms: _,
-            creatorAccountID: _,
-            bIsHovered: _,
-            onlyOneDiscountPct: _,
-            strDoubleCapsuleMessage: _,
-          } = _,
-          [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          _ =
-            _ &&
-            _?.GetIncludedAppIDsOrSelf().length > 0 &&
-            _?.GetIncludedAppIDsOrSelf().every((_) => _._.Get().BOwnsApp(_)),
-          _ = _ && !_;
-        if (_ && _?.GetStoreItemType() == _._.k_EStoreItemType_App)
-          return _.createElement(_._, {
-            appid: _.GetAppID(),
-            bIsMuted: _,
-          });
-        if (_) return null;
-        const _ = _ && __webpack_require__,
-          _ = _;
-        return _.createElement(_._, {
-          info: _,
-          bShowAsMuted: _,
-          bHidePrice: _,
-          bShowInLibraryInsteadOfPrice: _,
-          bHidePlatforms: _,
-          creatorAccountID: _,
-          bShowName: _.bShowName,
-          onlyOneDiscountPct: _,
-          bShowWishlistButton: Boolean(_),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          href: _,
-          children: __webpack_require__,
-          bAllowFocuseableAnchor: _,
-          ..._
-        } = _;
-        return (0, _._)()
-          ? _.createElement(
-              "div",
-              {
-                ..._,
-              },
-              __webpack_require__,
-            )
-          : _
-            ? _.createElement(
-                _._,
-                {
-                  href: _,
-                  ..._,
-                },
-                __webpack_require__,
-              )
-            : _.createElement(
-                "a",
-                {
-                  href: _,
-                  ..._,
-                },
-                __webpack_require__,
-              );
-      }
     },
   },
 ]);

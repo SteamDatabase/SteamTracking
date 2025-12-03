@@ -88,21 +88,7 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      const _ = [
-          _._.k_EMarketingMessageNowAvailable,
-          _._.k_EMarketingMessageWeekendDeal,
-          _._.k_EMarketingMessageMidweekDeal,
-          _._.k_EMarketingMessagePrePurchase,
-          _._.k_EMarketingMessagePlayNow,
-          _._.k_EMarketingMessageUpdate,
-          _._.k_EMarketingMessagePreloadNow,
-          _._.k_EMarketingMessageGeneral,
-          _._.k_EMarketingMessageNewDLC,
-          _._.k_EMarketingMessageFreeWeekend,
-          _._.k_EMarketingMessageSalePages,
-          _._.k_EMarketingMessagePlaytestAvailable,
-        ],
+      const _ = [1, 2, 11, 3, 4, 10, 5, 6, 13, 14, 15, 16],
         _ = [
           "#msg_action_details",
           "#msg_preload_now",
@@ -117,62 +103,49 @@
         ];
       function _(_) {
         switch (_) {
-          case _._.k_EMarketingMessageNowAvailable:
+          case 1:
             return "Now Available";
-          case _._.k_EMarketingMessageWeekendDeal:
+          case 2:
             return "Weekend Deal";
-          case _._.k_EMarketingMessagePrePurchase:
+          case 3:
             return "Pre-Purchase";
-          case _._.k_EMarketingMessagePlayNow:
+          case 4:
             return "Play Now";
-          case _._.k_EMarketingMessageGeneral:
+          case 6:
             return "General";
-          case _._.k_EMarketingMessageDemoQuit:
+          case 7:
             return "on Demo Quit";
-          case _._.k_EMarketingMessageEJsKorner:
+          case 9:
             return "EJ's Korner";
-          case _._.k_EMarketingMessagePreloadNow:
+          case 5:
             return "Pre-Load Now";
-          case _._.k_EMarketingMessageGifting:
+          case 8:
             return "Gifting Message";
-          case _._.k_EMarketingMessageUpdate:
+          case 10:
             return "Major Update";
-          case _._.k_EMarketingMessageMidweekDeal:
+          case 11:
             return "Midweek Deal";
-          case _._.k_EMarketingMessageDailyDeal:
+          case 12:
             return "Daily Deal";
-          case _._.k_EMarketingMessageNewDLC:
+          case 13:
             return "New DLC";
-          case _._.k_EMarketingMessageFreeWeekend:
+          case 14:
             return "Free Weekend";
-          case _._.k_EMarketingMessageSalePages:
+          case 15:
             return "Sale Page";
-          case _._.k_EMarketingMessagePlaytestAvailable:
+          case 16:
             return "Play Test";
-          case _._.k_EMarketingMessageInvalid:
           default:
             return "--------------------";
         }
       }
-      _._.k_EMarketingMessageFilterType_OwnsApps,
-        _._.k_EMarketingMessageFilterType_DoesNotOwnApps,
-        _._.k_EMarketingMessageFilterType_OwnsPackages,
-        _._.k_EMarketingMessageFilterType_DoesNotOwnsPackages,
-        _._.k_EMarketingMessageFilterType_WishlistsApps,
-        _._.k_EMarketingMessageFilterType_FollowsApps,
-        _._.k_EMarketingMessageFilterType_MustLaunchedApps,
-        _._.k_EMarketingMessageFilterType_MinPlayTimeApps,
-        _._.k_EMarketingMessageFilterType_RecentPlayedApps,
-        _._.k_EMarketingMessageFilterType_RetentionApps,
-        _._.k_EMarketingMessageFilterType_SimilarApps;
       var _;
       function _(_, _) {
         let _ = !0;
         return (
-          _ == _._.k_EMarketingMessageValidRealms_SteamChinaOnly
+          1 == _
             ? (_ = _?.startsWith("https://store.steamchina.com/"))
-            : _ == _._.k_EMarketingMessageValidRealms_GlobalAndSteamChina &&
-              (_ = _?.startsWith("https://store.steampowered.com/")),
+            : 2 == _ && (_ = _?.startsWith("https://store.steampowered.com/")),
           _
         );
       }
@@ -209,8 +182,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapAppIDToPaymentPartners = new Map();
@@ -239,11 +210,11 @@
         }
         GetInfoForStoreItem(_, _) {
           switch (_) {
-            case _._.k_EStoreItemType_App:
+            case 0:
               return this.GetInfoForApp(_);
-            case _._.k_EStoreItemType_Package:
+            case 1:
               return this.GetInfoForPackage(_);
-            case _._.k_EStoreItemType_Bundle:
+            case 2:
               return this.GetInfoForBundle(_);
             default:
               return null;
@@ -251,11 +222,11 @@
         }
         BHasInfoForStoreItem(_, _) {
           switch (_) {
-            case _._.k_EStoreItemType_App:
+            case 0:
               return this.BHasInfoForApp(_);
-            case _._.k_EStoreItemType_Package:
+            case 1:
               return this.BHasInfoForPackage(_);
-            case _._.k_EStoreItemType_Bundle:
+            case 2:
               return this.BHasInfoForBundle(_);
             default:
               return !1;
@@ -293,11 +264,11 @@
         }
         async LoadStoreItemPartnerInfo(_, _) {
           switch (_) {
-            case _._.k_EStoreItemType_App:
+            case 0:
               return this.LoadAppPartnerInfo(_);
-            case _._.k_EStoreItemType_Package:
+            case 1:
               return this.LoadPackagePartnerInfo(_);
-            case _._.k_EStoreItemType_Bundle:
+            case 2:
               return this.LoadBundlePartnerInfo(_);
             default:
               return null;
@@ -316,7 +287,7 @@
                 params: _,
                 withCredentials: !0,
               });
-            if (200 == _?.status && _.data?.success == _._.k_EResultOK)
+            if (200 == _?.status && 1 == _.data?.success)
               return _
                 ? (this.m_mapAppIDToPaymentPartners.set(_, _.data.partnerinfo),
                   this.m_mapAppIDToPaymentPartners.get(_))
@@ -357,7 +328,7 @@
         constructor() {}
       }
       function _(_) {
-        return _(_, _._.k_EStoreItemType_App);
+        return _(_, 0);
       }
       function _(_) {
         return _(_._, (0, _._)(_));
@@ -385,9 +356,7 @@
         return (
           (0, _.useEffect)(() => {
             if (_?.length > 0) {
-              const _ = _.map((_) =>
-                _.Get().LoadStoreItemPartnerInfo(_, _._.k_EStoreItemType_App),
-              );
+              const _ = _.map((_) => _.Get().LoadStoreItemPartnerInfo(_, 0));
               Promise.all(_).then(() => {
                 const _ = new Map();
                 _.forEach((_) => {
@@ -543,7 +512,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -584,10 +552,7 @@
             _._,
           ),
           _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
-          _ =
-            _?.GetAppType() != _._.k_EStoreAppType_Beta
-              ? _?.GetParentAppID()
-              : void 0;
+          _ = 12 != _?.GetAppType() ? _?.GetParentAppID() : void 0;
         return _.createElement(
           "div",
           null,
@@ -793,8 +758,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -830,10 +793,10 @@
                 },
                 _ = `${_._.PARTNER_BASE_URL}appsearch/suggestapps`;
               switch (_) {
-                case _._.k_EStoreItemType_Package:
+                case 1:
                   _ = `${_._.PARTNER_BASE_URL}admin/store/suggestpackage`;
                   break;
-                case _._.k_EStoreItemType_Bundle:
+                case 2:
                   _ = `${_._.PARTNER_BASE_URL}bundles/suggestbundle`;
                   break;
                 default:
@@ -846,7 +809,7 @@
                 params: _,
                 withCredentials: !0,
               });
-              200 == _?.status && _.data?.success == _._.k_EResultOK
+              200 == _?.status && 1 == _.data?.success
                 ? _
                   ? (_(_.data.matches?.filter((_) => _(_._)) || []),
                     _(
@@ -886,16 +849,16 @@
           }, []),
           _)
         ) {
-          case _._.k_EStoreItemType_Package:
+          case 1:
             _ = (0, _._)("#StoreAdmin_Search_Placeholder_package");
             break;
-          case _._.k_EStoreItemType_Bundle:
+          case 2:
             _ = (0, _._)("#StoreAdmin_Search_Placeholder_bundle");
             break;
           default:
             _ = (0, _._)("#StoreAdmin_Search_Placeholder");
         }
-        const _ = _ && !_ && _ == _._.k_EStoreItemType_App;
+        const _ = _ && !_ && 0 == _;
         return _.createElement(
           "div",
           {
@@ -949,7 +912,7 @@
                   name: _.match,
                   _: _._,
                   is_visible: !0,
-                  type: _._.k_EStoreItemType_App,
+                  type: 0,
                   fnSetItemID: () => {
                     _([]), _(_._, _.itemid);
                   },
@@ -961,7 +924,7 @@
                   key: _.packageid,
                   name: _.name,
                   _: _.packageid,
-                  type: _._.k_EStoreItemType_Package,
+                  type: 1,
                   is_visible: _.is_visible,
                   fnSetItemID: () => {
                     _([]), _(_.packageid);
@@ -974,7 +937,7 @@
                   key: _.bundleid,
                   name: _.name,
                   _: _.bundleid,
-                  type: _._.k_EStoreItemType_Bundle,
+                  type: 2,
                   is_visible: _.is_visible,
                   fnSetItemID: () => {
                     _([]), _(_.bundleid);
@@ -997,10 +960,10 @@
           });
         let _ = "#DailyDeals_HeaderArtMissing";
         switch (_) {
-          case _._.k_EStoreItemType_Package:
+          case 1:
             _ = "#DailyDeals_PackageHeaderArtMissing";
             break;
-          case _._.k_EStoreItemType_Bundle:
+          case 2:
             _ = "#DailyDeals_BundleHeaderArtMissing";
         }
         return _.createElement(
@@ -1033,9 +996,7 @@
                 " ",
               ),
             _,
-            _ == _._.k_EStoreItemType_Package
-              ? ` (${__webpack_require__})`
-              : "",
+            1 == _ ? ` (${__webpack_require__})` : "",
           ),
         );
       }
@@ -1065,14 +1026,14 @@
       function _(_) {
         if (!_) return 0;
         let _ = 0;
-        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
+        for (let _ = 0; _ < 31; ++_) {
           _[(0, _._)(_)] && (_ += 1);
         }
         return _;
       }
       function _(_) {
         const _ = new Array();
-        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
+        for (let _ = 0; _ < 31; ++_) {
           const _ = (0, _._)(_);
           _[_] && _.push([_, _[_]]);
         }
@@ -1704,7 +1665,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1830,7 +1790,7 @@
                 className: _().ParentType,
               },
               (0, _._)(
-                _ == _._.k_EStoreAppType_Music
+                11 == _
                   ? "#SalePage_ParentApp_SoundTrack"
                   : "#SalePage_ParentApp_DLC",
               ),
@@ -1979,7 +1939,7 @@
             _?.GetIncludedAppIDsOrSelf().length > 0 &&
             _?.GetIncludedAppIDsOrSelf().every((_) => _._.Get().BOwnsApp(_)),
           _ = _ && !_;
-        if (_ && _?.GetStoreItemType() == _._.k_EStoreItemType_App)
+        if (_ && 0 == _?.GetStoreItemType())
           return _.createElement(_._, {
             appid: _.GetAppID(),
             bIsMuted: _,

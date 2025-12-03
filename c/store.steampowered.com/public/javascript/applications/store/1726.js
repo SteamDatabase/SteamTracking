@@ -172,1893 +172,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _,
-        _,
-        _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_ESteamAwardCategoryID_Invalid = 0)] =
-          "k_ESteamAwardCategoryID_Invalid"),
-          (_[(_.k_ESteamAwardCategoryID_2020_GameOfTheYear = 50)] =
-            "k_ESteamAwardCategoryID_2020_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2020_VRGameOfTheYear = 51)] =
-            "k_ESteamAwardCategoryID_2020_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2020_LaborOfLove = 52)] =
-            "k_ESteamAwardCategoryID_2020_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2020_BetterWithFriends = 53)] =
-            "k_ESteamAwardCategoryID_2020_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2020_OutstandingVisualStyle = 54)] =
-            "k_ESteamAwardCategoryID_2020_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2020_MostInnovativeGameplay = 55)] =
-            "k_ESteamAwardCategoryID_2020_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2020_BestGameYouSuckAt = 56)] =
-            "k_ESteamAwardCategoryID_2020_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2020_BestSoundtrack = 57)] =
-            "k_ESteamAwardCategoryID_2020_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2020_OutstandingStoryRichGame = 58)] =
-            "k_ESteamAwardCategoryID_2020_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2020_SitBackAndRelax = 59)] =
-            "k_ESteamAwardCategoryID_2020_SitBackAndRelax"),
-          (_[(_.k_ESteamAwardCategoryID_2020_MAX = 60)] =
-            "k_ESteamAwardCategoryID_2020_MAX"),
-          (_[(_.k_ESteamAwardCategoryID_2021_GameOfTheYear = 61)] =
-            "k_ESteamAwardCategoryID_2021_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2021_VRGameOfTheYear = 62)] =
-            "k_ESteamAwardCategoryID_2021_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2021_LaborOfLove = 63)] =
-            "k_ESteamAwardCategoryID_2021_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2021_BetterWithFriends = 64)] =
-            "k_ESteamAwardCategoryID_2021_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2021_OutstandingVisualStyle = 65)] =
-            "k_ESteamAwardCategoryID_2021_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2021_MostInnovativeGameplay = 66)] =
-            "k_ESteamAwardCategoryID_2021_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2021_BestGameYouSuckAt = 67)] =
-            "k_ESteamAwardCategoryID_2021_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2021_BestSoundtrack = 68)] =
-            "k_ESteamAwardCategoryID_2021_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2021_OutstandingStoryRichGame = 69)] =
-            "k_ESteamAwardCategoryID_2021_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2021_SitBackAndRelax = 70)] =
-            "k_ESteamAwardCategoryID_2021_SitBackAndRelax"),
-          (_[(_.k_ESteamAwardCategoryID_2021_MAX = 71)] =
-            "k_ESteamAwardCategoryID_2021_MAX"),
-          (_[(_.k_ESteamAwardCategoryID_2022_GameOfTheYear = 72)] =
-            "k_ESteamAwardCategoryID_2022_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2022_VRGameOfTheYear = 73)] =
-            "k_ESteamAwardCategoryID_2022_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2022_LaborOfLove = 74)] =
-            "k_ESteamAwardCategoryID_2022_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2022_BetterWithFriends = 75)] =
-            "k_ESteamAwardCategoryID_2022_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2022_OutstandingVisualStyle = 76)] =
-            "k_ESteamAwardCategoryID_2022_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2022_MostInnovativeGameplay = 77)] =
-            "k_ESteamAwardCategoryID_2022_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2022_BestGameYouSuckAt = 78)] =
-            "k_ESteamAwardCategoryID_2022_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2022_BestSoundtrack = 79)] =
-            "k_ESteamAwardCategoryID_2022_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2022_OutstandingStoryRichGame = 80)] =
-            "k_ESteamAwardCategoryID_2022_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2022_SitBackAndRelax = 81)] =
-            "k_ESteamAwardCategoryID_2022_SitBackAndRelax"),
-          (_[(_.k_ESteamAwardCategoryID_2022_BestGameOnTheGo = 82)] =
-            "k_ESteamAwardCategoryID_2022_BestGameOnTheGo"),
-          (_[(_.k_ESteamAwardCategoryID_2022_MAX = 83)] =
-            "k_ESteamAwardCategoryID_2022_MAX"),
-          (_[(_.k_ESteamAwardCategoryID_2023_GameOfTheYear = 90)] =
-            "k_ESteamAwardCategoryID_2023_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2023_VRGameOfTheYear = 91)] =
-            "k_ESteamAwardCategoryID_2023_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2023_LaborOfLove = 92)] =
-            "k_ESteamAwardCategoryID_2023_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2023_BestGameOnDeck = 93)] =
-            "k_ESteamAwardCategoryID_2023_BestGameOnDeck"),
-          (_[(_.k_ESteamAwardCategoryID_2023_BetterWithFriends = 94)] =
-            "k_ESteamAwardCategoryID_2023_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2023_OutstandingVisualStyle = 95)] =
-            "k_ESteamAwardCategoryID_2023_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2023_MostInnovativeGameplay = 96)] =
-            "k_ESteamAwardCategoryID_2023_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2023_BestGameYouSuckAt = 97)] =
-            "k_ESteamAwardCategoryID_2023_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2023_BestSoundtrack = 98)] =
-            "k_ESteamAwardCategoryID_2023_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2023_OutstandingStoryRichGame = 99)] =
-            "k_ESteamAwardCategoryID_2023_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2023_SitBackAndRelax = 100)] =
-            "k_ESteamAwardCategoryID_2023_SitBackAndRelax"),
-          (_[(_.k_ESteamAwardCategoryID_2023_MAX = 101)] =
-            "k_ESteamAwardCategoryID_2023_MAX"),
-          (_[(_.k_ESteamAwardCategoryID_2024_GameOfTheYear = 110)] =
-            "k_ESteamAwardCategoryID_2024_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2024_VRGameOfTheYear = 111)] =
-            "k_ESteamAwardCategoryID_2024_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2024_LaborOfLove = 112)] =
-            "k_ESteamAwardCategoryID_2024_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2024_BestGameOnDeck = 113)] =
-            "k_ESteamAwardCategoryID_2024_BestGameOnDeck"),
-          (_[(_.k_ESteamAwardCategoryID_2024_BetterWithFriends = 114)] =
-            "k_ESteamAwardCategoryID_2024_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2024_OutstandingVisualStyle = 115)] =
-            "k_ESteamAwardCategoryID_2024_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2024_MostInnovativeGameplay = 116)] =
-            "k_ESteamAwardCategoryID_2024_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2024_BestGameYouSuckAt = 117)] =
-            "k_ESteamAwardCategoryID_2024_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2024_BestSoundtrack = 118)] =
-            "k_ESteamAwardCategoryID_2024_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2024_OutstandingStoryRichGame = 119)] =
-            "k_ESteamAwardCategoryID_2024_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2024_SitBackAndRelax = 120)] =
-            "k_ESteamAwardCategoryID_2024_SitBackAndRelax"),
-          (_[(_.k_ESteamAwardCategoryID_2025_GameOfTheYear = 130)] =
-            "k_ESteamAwardCategoryID_2025_GameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2025_VRGameOfTheYear = 131)] =
-            "k_ESteamAwardCategoryID_2025_VRGameOfTheYear"),
-          (_[(_.k_ESteamAwardCategoryID_2025_LaborOfLove = 132)] =
-            "k_ESteamAwardCategoryID_2025_LaborOfLove"),
-          (_[(_.k_ESteamAwardCategoryID_2025_BestGameOnDeck = 133)] =
-            "k_ESteamAwardCategoryID_2025_BestGameOnDeck"),
-          (_[(_.k_ESteamAwardCategoryID_2025_BetterWithFriends = 134)] =
-            "k_ESteamAwardCategoryID_2025_BetterWithFriends"),
-          (_[(_.k_ESteamAwardCategoryID_2025_OutstandingVisualStyle = 135)] =
-            "k_ESteamAwardCategoryID_2025_OutstandingVisualStyle"),
-          (_[(_.k_ESteamAwardCategoryID_2025_MostInnovativeGameplay = 136)] =
-            "k_ESteamAwardCategoryID_2025_MostInnovativeGameplay"),
-          (_[(_.k_ESteamAwardCategoryID_2025_BestGameYouSuckAt = 137)] =
-            "k_ESteamAwardCategoryID_2025_BestGameYouSuckAt"),
-          (_[(_.k_ESteamAwardCategoryID_2025_BestSoundtrack = 138)] =
-            "k_ESteamAwardCategoryID_2025_BestSoundtrack"),
-          (_[(_.k_ESteamAwardCategoryID_2025_OutstandingStoryRichGame = 139)] =
-            "k_ESteamAwardCategoryID_2025_OutstandingStoryRichGame"),
-          (_[(_.k_ESteamAwardCategoryID_2025_SitBackAndRelax = 140)] =
-            "k_ESteamAwardCategoryID_2025_SitBackAndRelax");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EVoteDefinitionFlag_None = 0)] =
-            "k_EVoteDefinitionFlag_None"),
-            (_[(_.k_EVoteDefinitionFlag_OnlyVR = 1)] =
-              "k_EVoteDefinitionFlag_OnlyVR"),
-            (_[(_.k_EVoteDefinitionFlag_SteamDeck = 2)] =
-              "k_EVoteDefinitionFlag_SteamDeck"),
-            (_[(_.k_EVoteDefinitionFlag_LaborOfLove = 3)] =
-              "k_EVoteDefinitionFlag_LaborOfLove");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESteamAwardsNominationSource_Invalid = 0)] =
-            "k_ESteamAwardsNominationSource_Invalid"),
-            (_[(_.k_ESteamAwardsNominationSource_StorePage = 1)] =
-              "k_ESteamAwardsNominationSource_StorePage"),
-            (_[(_.k_ESteamAwardsNominationSource_Recommendation = 2)] =
-              "k_ESteamAwardsNominationSource_Recommendation"),
-            (_[(_.k_ESteamAwardsNominationSource_ModalSearch = 3)] =
-              "k_ESteamAwardsNominationSource_ModalSearch"),
-            (_[(_.k_ESteamAwardsNominationSource_PartnerEvent = 4)] =
-              "k_ESteamAwardsNominationSource_PartnerEvent"),
-            (_[(_.k_ESteamAwardsNominationSource_ModalPartnerEvent = 5)] =
-              "k_ESteamAwardsNominationSource_ModalPartnerEvent"),
-            (_[(_.k_ESteamAwardsNominationSource_ModalPlaytime = 6)] =
-              "k_ESteamAwardsNominationSource_ModalPlaytime"),
-            (_[(_.k_ESteamAwardsNominationSource_ModalRecommendation = 7)] =
-              "k_ESteamAwardsNominationSource_ModalRecommendation");
-        })(_ || (_ = {}));
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.voteid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [5, 7], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  voteid: {
-                    _: 1,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  active: {
-                    _: 2,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                  start_time: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  end_time: {
-                    _: 4,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  app_discounts: {
-                    _: 5,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  grouped_vote_options: {
-                    _: 6,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  groups: {
-                    _: 7,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  internal_name: {
-                    _: 8,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  localization: {
-                    _: 9,
-                    _: _,
-                  },
-                  reveal_time: {
-                    _: 10,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  release_date_min: {
-                    _: 11,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  winner_appid: {
-                    _: 12,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  flag: {
-                    _: 13,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                  release_date_max: {
-                    _: 14,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  item_type: {
-                    _: 15,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_VoteDefinition";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  discount: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_VoteDefinition_AppDefinition";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.groupid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  groupid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  group_name: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  app_discounts: {
-                    _: 3,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_VoteDefinition_GroupDefinition";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.title || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  title: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  title_linebreak: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  title_award: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  award_description: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_VoteDefinition_Localization";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.language || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  language: {
-                    _: 1,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  sale_appid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetVoteDefinitions_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.votes || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  votes: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  labor_of_love_winners: {
-                    _: 2,
-                    _: !0,
-                    _: !0,
-                    _: _._.readUint32,
-                    pbr: _._.readPackedUint32,
-                    _: _._.writeRepeatedUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetVoteDefinitions_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.voteid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  voteid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  appid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  communityitemid: {
-                    _: 3,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "SteamAwardsUserVote";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.sale_appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  sale_appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetUserVotes_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.user_votes || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  user_votes: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetUserVotes_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.voteid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  voteid: {
-                    _: 1,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  appid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  sale_appid: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_SetVote_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.user_votes || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  user_votes: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_SetVote_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.category_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  category_id: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  appid: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  last_updated: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwardsNomination";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _
-            ? {
-                $jspbMessageInstance: _,
-              }
-            : {};
-        }
-        static fromObject(_) {
-          return new _();
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _;
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {}
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetUserNominations_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.nominations || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  nominations: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetUserNominations_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.steamid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  steamid: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                  code: {
-                    _: 2,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetOtherUserNominations_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.category_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  category_id: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  nominated_id: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  source: {
-                    _: 3,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_Nominate_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.nominations || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  nominations: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_Nominate_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.category_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  category_id: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationRecommendations_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.played_app || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  played_app: {
-                    _: 1,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  suggested_events: {
-                    _: 2,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  suggested_apps: {
-                    _: 3,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  debug_query: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationRecommendations_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  playtime: {
-                    _: 2,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationRecommendations_Response_PlayedApps";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.clanid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  clanid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  event_gid: {
-                    _: 2,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                  appid: {
-                    _: 3,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationRecommendations_Response_SuggestedEvent";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationRecommendations_Response_SuggestedApp";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.generate_new || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  generate_new: {
-                    _: 1,
-                    _: _._.readBool,
-                    _: _._.writeBool,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationShareLink_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.code || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  code: {
-                    _: 1,
-                    _: _._.readFixed64String,
-                    _: _._.writeFixed64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamAwards_GetNominationShareLink_Response";
-        }
-      }
-      !(function (_) {
-        (_.GetVoteDefinitions = function (_, _) {
-          return _.SendMsg(
-            "StoreSales.GetVoteDefinitions#1",
-            (0, _._)(_, _),
-            _,
-            {
-              bConstMethod: !0,
-              ePrivilege: 2,
-              eWebAPIKeyRequirement: 1,
-            },
-          );
-        }),
-          (_.SetVote = function (_, _) {
-            return _.SendMsg("StoreSales.SetVote#1", (0, _._)(_, _), _, {
-              ePrivilege: 1,
-            });
-          }),
-          (_.GetUserVotes = function (_, _) {
-            return _.SendMsg("StoreSales.GetUserVotes#1", (0, _._)(_, _), _, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
-          });
-      })(_ || (_ = {})),
-        (function (_) {
-          (_.GetUserNominations = function (_, _) {
-            return _.SendMsg(
-              "SteamAwards.GetUserNominations#1",
-              (0, _._)(_, _),
-              _,
-              {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              },
-            );
-          }),
-            (_.GetOtherUserNominations = function (_, _) {
-              return _.SendMsg(
-                "SteamAwards.GetOtherUserNominations#1",
-                (0, _._)(_, _),
-                _,
-                {
-                  bConstMethod: !0,
-                  ePrivilege: 2,
-                },
-              );
-            }),
-            (_.Nominate = function (_, _) {
-              return _.SendMsg("SteamAwards.Nominate#1", (0, _._)(_, _), _, {
-                bConstMethod: !0,
-                ePrivilege: 1,
-              });
-            }),
-            (_.GetNominationRecommendations = function (_, _) {
-              return _.SendMsg(
-                "SteamAwards.GetNominationRecommendations#1",
-                (0, _._)(_, _),
-                _,
-                {
-                  bConstMethod: !0,
-                  ePrivilege: 1,
-                },
-              );
-            }),
-            (_.GetNominationShareLink = function (_, _) {
-              return _.SendMsg(
-                "SteamAwards.GetNominationShareLink#1",
-                (0, _._)(_, _),
-                _,
-                {
-                  ePrivilege: 1,
-                },
-              );
-            });
-        })(_ || (_ = {}));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       const _ = "{STEAM_CLAN_IMAGE}",
         _ = "{STEAM_CLAN_LOC_IMAGE}",
@@ -2079,7 +192,6 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         return Array.isArray(_) ? _[0] : _;
       }
@@ -2090,30 +202,9 @@
       function _(_, _) {
         return void 0 === _ ? _(_) : Array.isArray(_) ? _[_] : _;
       }
-      const _ = [
-          _._.k_EClanImageFileType_JPEG,
-          _._.k_EClanImageFileType_PNG,
-          _._.k_EClanImageFileType_GIF,
-          _._.k_EClanImageFileType_WEBP,
-        ],
-        _ = [
-          _._.k_EClanImageFileType_JPEG,
-          _._.k_EClanImageFileType_PNG,
-          _._.k_EClanImageFileType_GIF,
-        ],
-        _ = [_._.k_EClanImageFileType_JPEG, _._.k_EClanImageFileType_PNG],
-        _ = [_._.k_EClanImageFileType_WEBM, _._.k_EClanImageFileType_MP4],
-        _ =
-          (_._.k_EClanImageFileType_SRT,
-          _._.k_EClanImageFileType_VTT,
-          [
-            _._.k_EClanImageFileType_JPEG,
-            _._.k_EClanImageFileType_PNG,
-            _._.k_EClanImageFileType_GIF,
-            _._.k_EClanImageFileType_WEBP,
-            _._.k_EClanImageFileType_WEBM,
-            _._.k_EClanImageFileType_MP4,
-          ]),
+      const _ = [1, 3, 2],
+        _ = [1, 3],
+        _ = [5, 4],
         _ = {
           capsule: {
             width: 800,
@@ -2271,7 +362,7 @@
           localized_marketing_message: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: _,
+            rgAcceptableTypes: [1, 3, 2, 10],
           },
           localized_optin_banner: {
             width: 1e3,
@@ -2281,39 +372,33 @@
           localized_marketingmessage_webm: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           localized_marketingmessage_mp4: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           localized_partnerevent_webm: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           localized_partnerevent_mp4: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           localized_subtitles: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: [
-              _._.k_EClanImageFileType_VTT,
-              _._.k_EClanImageFileType_SRT,
-            ],
+            rgAcceptableTypes: [6, 7],
           },
           localized_marketingmessage_poster: {
             width: 528,
             height: 297,
-            rgAcceptableTypes: [
-              _._.k_EClanImageFileType_JPEG,
-              _._.k_EClanImageFileType_PNG,
-            ],
+            rgAcceptableTypes: [1, 3],
           },
           localized_marketingmessage_background: {
             width: 570,
@@ -2330,7 +415,7 @@
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: _,
+            rgAcceptableTypes: [1, 3, 2, 10, 5, 4],
           },
           user_poll_background: {
             width: 0,
@@ -2366,12 +451,12 @@
           takeover_webm_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           takeover_mp4_art: {
             width: 1850,
             height: 450,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           takeover_mobile_art: {
             width: 500,
@@ -2381,12 +466,12 @@
           takeover_webm_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_WEBM],
+            rgAcceptableTypes: [5],
           },
           takeover_mp4_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: [_._.k_EClanImageFileType_MP4],
+            rgAcceptableTypes: [4],
           },
           takeunder_art: {
             width: 940,
@@ -2452,8 +537,7 @@
       function _(_) {
         const _ = _[_];
         return (
-          _.rgAcceptableTypes.includes(_._.k_EClanImageFileType_VTT) ||
-          _.rgAcceptableTypes.includes(_._.k_EClanImageFileType_SRT)
+          _.rgAcceptableTypes.includes(6) || _.rgAcceptableTypes.includes(7)
         );
       }
       function _(_, _) {
@@ -2512,16 +596,14 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         bBroadcastEnabled: !1,
         broadcastChatSetting: "hide",
         default_broadcast_title: "#Broadcast_default_title_dev",
-        localized_broadcast_title: new Array(_._.k_Lang_MAX),
-        localized_broadcast_left_image: new Array(_._.k_Lang_MAX),
-        localized_broadcast_right_image: new Array(_._.k_Lang_MAX),
+        localized_broadcast_title: new Array(31),
+        localized_broadcast_left_image: new Array(31),
+        localized_broadcast_right_image: new Array(31),
         broadcast_whitelist: [],
       };
       var _ = __webpack_require__("chunkid"),
@@ -2564,23 +646,7 @@
       );
       var _ = __webpack_require__("chunkid");
       const _ = 99999;
-      const _ = [
-        _._.k_ERegularUpdateEvent,
-        _._.k_EMajorUpdateEvent,
-        _._.k_EESportTournamentStreamEvent,
-        _._.k_EDevStreamEvent,
-        _._.k_EFamousStreamEvent,
-        _._.k_EInGameBonusXPEvent,
-        _._.k_EInGameLootEvent,
-        _._.k_EInGamePerksEvent,
-        _._.k_EInGameEventGeneral,
-        _._.k_EInGameChallengeEvent,
-        _._.k_EInGameContestEvent,
-        _._.k_ENewsEvent,
-        _._.k_EDLCReleaseEvent,
-        _._.k_ESeasonRelease,
-        _._.k_EGameReleaseEvent,
-      ];
+      const _ = [13, 14, 17, 18, 19, 22, 23, 24, 35, 25, 26, 28, 15, 32, 10];
       function _(_) {
         return (
           _.some((_) => _ == _.GetEventType()) &&
@@ -2588,30 +654,11 @@
           !_.BHasTag("curator")
         );
       }
-      const _ = [
-        _._.k_EGameSalesEvent,
-        _._.k_EFreeTrial,
-        _._.k_ECrosspostEvent,
-      ];
+      const _ = [20, 31, 34];
       function _(_) {
         return !_.some((_) => _ == _.GetEventType()) && !_.BHasTag("curator");
       }
-      _._.k_ESmallUpdateEvent, _._.k_ECrosspostEvent;
-      const _ = [
-        _._.k_EChatEvent,
-        _._.k_EBroadcastEvent,
-        _._.k_EGameSalesEvent,
-        _._.k_EGameItemSalesEvent,
-        _._.k_EInGameBonusXPEvent,
-        _._.k_EInGameLootEvent,
-        _._.k_EInGamePerksEvent,
-        _._.k_EInGameChallengeEvent,
-        _._.k_EInGameContestEvent,
-        _._.k_EIRLEvent,
-        _._.k_EFreeTrial,
-        _._.k_EInGameEventGeneral,
-      ];
-      new Set(_);
+      new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const _ = 593110,
         _ = [_, 766, 221410],
         _ = 39049601,
@@ -2620,7 +667,7 @@
         _ = 4,
         _ = 20,
         _ = 45559995,
-        _ = [_._.k_ESmallUpdateEvent, _._.k_ECrosspostEvent];
+        _ = [12, 34];
       function _(_) {
         return !_.some((_) => _ == _.GetEventType()) && !_.BHasTag("curator");
       }
@@ -2709,24 +756,27 @@
         return !1;
       }
       function _(_) {
+        switch (_) {
+          case "items":
+          case "trailercarousel":
+          case "crosspromotesalepage":
+          case "creator_list":
+          case "calendar":
+          case "events":
+          case "sale_events":
+          case "contenthubspecials":
+            return !0;
+        }
+        return !1;
+      }
+      function _(_, _ = !1) {
         return Boolean(
-          _ &&
-            (function (_) {
-              switch (_) {
-                case "items":
-                case "trailercarousel":
-                case "crosspromotesalepage":
-                case "creator_list":
-                case "calendar":
-                case "events":
-                case "sale_events":
-                case "contenthubspecials":
-                  return !0;
-              }
-              return !1;
-            })(_.section_type) &&
-            _.smart_section &&
-            null != _.smart_section_type,
+          _
+            ? _ && _(_.section_type) && _.smart_section
+            : _ &&
+                _(_.section_type) &&
+                _.smart_section &&
+                null != _.smart_section_type,
         );
       }
       function _(_) {
@@ -2795,8 +845,8 @@
         capsules: [],
         events: [],
         links: [],
-        localized_label: new Array(_._.k_Lang_MAX),
-        localized_label_image: new Array(_._.k_Lang_MAX),
+        localized_label: new Array(31),
+        localized_label_image: new Array(31),
         default_label: "#Sale_default_label",
         section_type: "unselected_empty",
       };
@@ -2815,10 +865,10 @@
           (_[(_.k_EContentHub = 1)] = "k_EContentHub");
       })(_ || (_ = {}));
       const _ = {
-          localized_subtitle: new Array(_._.k_Lang_MAX),
-          localized_summary: new Array(_._.k_Lang_MAX),
-          localized_title_image: new Array(_._.k_Lang_MAX),
-          localized_capsule_image: new Array(_._.k_Lang_MAX),
+          localized_subtitle: new Array(31),
+          localized_summary: new Array(31),
+          localized_title_image: new Array(31),
+          localized_capsule_image: new Array(31),
           bSaleEnabled: !1,
           sale_show_creator: !1,
           sale_sections: [],
@@ -2826,11 +876,11 @@
           sale_browsemore_url: "",
           sale_browsemore_color: "",
           sale_browsemore_bgcolor: "",
-          localized_sale_header: new Array(_._.k_Lang_MAX),
-          localized_sale_overlay: new Array(_._.k_Lang_MAX),
-          localized_sale_product_banner: new Array(_._.k_Lang_MAX),
-          localized_sale_product_mobile_banner: new Array(_._.k_Lang_MAX),
-          localized_sale_logo: new Array(_._.k_Lang_MAX),
+          localized_sale_header: new Array(31),
+          localized_sale_overlay: new Array(31),
+          localized_sale_product_banner: new Array(31),
+          localized_sale_product_mobile_banner: new Array(31),
+          localized_sale_logo: new Array(31),
           sale_font: "",
           sale_background_color: "",
           sale_header_offset: 530,
@@ -2913,21 +963,8 @@
           "curator_public",
           "audience_followers",
         ],
-        _ = [_._.k_EGameSalesEvent, _._.k_EFreeTrial, _._.k_ECrosspostEvent],
-        _ = [
-          _._.k_EChatEvent,
-          _._.k_EBroadcastEvent,
-          _._.k_EGameSalesEvent,
-          _._.k_EGameItemSalesEvent,
-          _._.k_EInGameBonusXPEvent,
-          _._.k_EInGameLootEvent,
-          _._.k_EInGamePerksEvent,
-          _._.k_EInGameChallengeEvent,
-          _._.k_EInGameContestEvent,
-          _._.k_EIRLEvent,
-          _._.k_EFreeTrial,
-          _._.k_EInGameEventGeneral,
-        ];
+        _ = [20, 31, 34],
+        _ = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
       class _ {
         constructor() {
           (0, _._)(this);
@@ -2936,7 +973,7 @@
         AnnouncementGID = void 0;
         clanSteamID = new _._();
         forumTopicGID = void 0;
-        type = _._.k_EOtherEvent;
+        type = 1;
         appid = 0;
         name = new Map();
         description = new Map();
@@ -3192,7 +1229,7 @@
                                   .localized_store_app_spotlight_mobile);
           return _;
         }
-        GetImageURL(_, _ = _._.k_Lang_English, __webpack_require__ = _._.full) {
+        GetImageURL(_, _ = 0, __webpack_require__ = _._.full) {
           const _ = this.GetImgArray(_),
             _ = _ && _.length > _ && null != _[_];
           return _ && _[_]?.startsWith("http")
@@ -3205,13 +1242,13 @@
                 )
               : void 0;
         }
-        GetImageHash(_, _ = _._.k_Lang_English) {
+        GetImageHash(_, _ = 0) {
           let _ = this.GetImgArray(_);
           return _ && _.length > _ && null != _[_]
             ? _[_].substr(0, _[_].length - 4)
             : null;
         }
-        GetImageHashAndExt(_, _ = _._.k_Lang_English) {
+        GetImageHashAndExt(_, _ = 0) {
           let _ = this.GetImgArray(_);
           return _ && _.length > _ && null != _[_] ? _[_] : null;
         }
@@ -3363,7 +1400,7 @@
               _ = _?.GetScreenshots(_.BHasAgeSafeScreenshots());
             return _ && _.length > 1 ? ((_ %= _.length), _[_]) : "";
           }
-          if (this.clanSteamID && this.GetEventType() != _._.k_ECreatorHome) {
+          if (this.clanSteamID && 36 != this.GetEventType()) {
             const _ = _._.GetClanInfoByClanAccountID(
               this.clanSteamID.GetAccountID(),
             );
@@ -3717,7 +1754,7 @@
             _ =
               0 == this.GetSaleSectionsByType("social_share").length &&
               !this.jsondata.sale_default_social_media_disabled,
-            _ = this.GetEventType() == _._.k_ECreatorHome;
+            _ = 36 == this.GetEventType();
           return _ || _ || _ || _
             ? [
                 ...this.GetSaleSections(),
@@ -3855,7 +1892,7 @@
                   ? (0, _._)("#PartnerEvent_SteamGameFestival_OfficeHour")
                   : this.BHasTag("steam_game_festival_broadcast") ||
                       (this.BHasTagStartingWith("sale_nextfest_") &&
-                        this.type == _._.k_EBroadcastEvent)
+                        11 == this.type)
                     ? (0, _._)("#PartnerEvent_SteamGameFestival_Broadcast")
                     : this.BHasTag("vo_marketing_message") && _
                       ? (0, _._)("#PartnerEvent_MM_MajorUpdate")
@@ -3887,10 +1924,7 @@
           );
         }
         GetSteamAwardCategory() {
-          return (
-            this.jsondata.steam_award_category_suggestion ??
-            _._.k_ESteamAwardCategoryID_Invalid
-          );
+          return this.jsondata.steam_award_category_suggestion ?? 0;
         }
         GetSteamAwardNomineeCategories() {
           return this.jsondata.steam_award_category_voteids ?? [];
@@ -4115,7 +2149,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       function _(_, _ = 0, _) {
@@ -4167,7 +2200,7 @@
         const [_, _] = (0, _.useState)(_ ? _._.GetClanEventModel(_) : void 0),
           [_, _] = (0, _.useState)(!!_ && !!_),
           [_, _] = (0, _.useState)(),
-          [_, _] = (0, _.useState)(_._.k_EResultOK),
+          [_, _] = (0, _.useState)(1),
           _ = (0, _._)("usePartnerEventByClanAccountAndEventGID");
         return (
           (0, _.useEffect)(() => {
@@ -4187,7 +2220,7 @@
                       );
                   } catch (_) {
                     _(_?.response?.data?.err_msg),
-                      _(_?.response?.data?.success || _._.k_EResultFail);
+                      _(_?.response?.data?.success || 2);
                   }
                   _.token.reason || _(_);
                 }
@@ -4218,7 +2251,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return "waiting" == _ || "uploading" == _ || "processing" == _;
@@ -4243,7 +2275,7 @@
           (0, _._)(this),
             (this.file = _),
             (this.filename = _),
-            (this.fileType = (0, _._)(_) ?? _._.k_EClanImageFileType_Unknown),
+            (this.fileType = (0, _._)(_) ?? 0),
             (this.language = _),
             (this.uploadTime = Date.now()),
             (this.status = "pending"),
@@ -4275,7 +2307,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4352,7 +2383,7 @@
         GetClanSteamID() {
           return this.m_clanSteamID;
         }
-        async AddImage(_, _ = _._.k_Lang_English) {
+        async AddImage(_, _ = 0) {
           const { language: __webpack_require__ } = (0, _._)(_.name, _);
           return this.AddImageForLanguage(_, __webpack_require__);
         }
@@ -4373,7 +2404,7 @@
           );
           return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
         }
-        async AddExistingClanImage(_, _ = _._.k_Lang_English) {
+        async AddExistingClanImage(_, _ = 0) {
           const _ = _._.GetHashAndExt(_);
           if (!_) return !1;
           const _ = _._.GenerateEditableURLFromHashAndExt(
@@ -4555,8 +2586,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
@@ -4594,7 +2623,7 @@
             _,
             _,
             __webpack_require__,
-            _._.k_Lang_None,
+            -1,
             void 0,
           );
         },
@@ -4607,11 +2636,11 @@
         ) {
           _ instanceof _._ && (_ = _.GetAccountID());
           let _ = this.GetBaseURL();
-          const _ = null != _ && _ != _._.k_Lang_None;
+          const _ = null != _ && -1 != _;
           if (__webpack_require__ != _._.full || _) {
             let _ = _.substring(_.lastIndexOf(".")),
               _ = _.substring(0, _.length - _.length);
-            return _ && _ != _._.k_Lang_English && "localized_image_group" == _
+            return _ && 0 != _ && "localized_image_group" == _
               ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
               : _ + _ + "/" + _ + __webpack_require__ + _;
           }
@@ -4650,7 +2679,7 @@
           (_.crossOrigin = "anonymous"),
             (_.onerror = (_) => {
               const _ = {
-                success: _._.k_EResultFail,
+                success: 2,
               };
               _ ||
                 ((_.err_msg =
@@ -4659,12 +2688,12 @@
                   " with error: " +
                   (0, _._)(_).strErrorMsg),
                 console.error(_.err_msg)),
-                (_.success = _._.k_EResultFail),
+                (_.success = 2),
                 _.resolve(_);
             }),
             (_.onload = () => {
               const _ = {
-                success: _._.k_EResultFail,
+                success: 2,
               };
               (_.width = _.width),
                 (_.height = _.height),
@@ -4672,17 +2701,15 @@
                   _.width > 0 && _.height > 0,
                   "unexpected image resolution discovered for strURL: " + _,
                 ),
-                (_.success = _._.k_EResultOK),
+                (_.success = 1),
                 _.resolve(_);
             }),
             (_.src = _),
             _.token.promise.catch(() => {
               const _ = {
-                success: _._.k_EResultFail,
+                success: 2,
               };
-              return (
-                (_.onload = () => {}), (_.success = _._.k_EResultCancelled), _
-              );
+              return (_.onload = () => {}), (_.success = 52), _;
             });
           const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
           let _;
@@ -4690,7 +2717,7 @@
             _ = await Promise.race([_, _.promise]);
           } catch {
             _ = {
-              success: _._.k_EResultTimeout,
+              success: 16,
               err_msg: "We timed out processing images",
             };
           }
@@ -4750,7 +2777,7 @@
             throw (
               (console.log(_),
               {
-                success: _._.k_EResultFail,
+                success: 2,
                 err_msg: _,
               })
             );
@@ -4758,7 +2785,7 @@
             _ = new _._(
               _,
               _,
-              _._.k_Lang_None,
+              -1,
               void 0,
               "",
               {
@@ -4768,7 +2795,7 @@
               void 0,
               void 0,
             ),
-            _ = await _.UploadSingleImage(_, _, _._.k_Lang_None, void 0);
+            _ = await _.UploadSingleImage(_, _, -1, void 0);
           return _.bSuccess && _.result
             ? _.result.image_hash +
                 this.GetExtensionString({
@@ -4776,9 +2803,7 @@
                 })
             : void 0;
         },
-        BIsClanImageVideo: (_) =>
-          _.file_type == _._.k_EClanImageFileType_MP4 ||
-          _.file_type == _._.k_EClanImageFileType_WEBM,
+        BIsClanImageVideo: (_) => 4 == _.file_type || 5 == _.file_type,
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -5029,7 +3054,7 @@
                 const _ = await __webpack_require__(
                   _,
                   _.filename,
-                  _.language ?? _._.k_Lang_None,
+                  _.language ?? -1,
                   _,
                 );
                 (_.status = _.bSuccess ? "success" : "failed"),
@@ -5074,12 +3099,7 @@
                       _ = [];
                     for (const _ of _) {
                       _.status = "uploading";
-                      const _ = await _(
-                        _,
-                        _.filename,
-                        _.language ?? _._.k_Lang_None,
-                        _,
-                      );
+                      const _ = await _(_, _.filename, _.language ?? -1, _);
                       (_.status = _.bSuccess ? "success" : "failed"),
                         (_.message =
                           !_.bSuccess && _.elErrorMessage
@@ -5105,17 +3125,15 @@
           return _;
         for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
         for (const _ of _) if (_._.IsELanguageValidInRealm(_, _)) return _;
-        return __webpack_require__.includes(_._.k_ESteamRealmGlobal)
-          ? _._.k_Lang_English
-          : _._.k_Lang_SteamChina_SChinese;
+        return __webpack_require__.includes(_._.k_ESteamRealmGlobal) ? 0 : 29;
       }
-      function _(_, _ = _._.k_Lang_English) {
+      function _(_, _ = 0) {
         let _ = _.lastIndexOf(".");
         -1 != _ && (_ = _.slice(0, _).toLowerCase());
         let _ = null,
           _ = 0;
-        _.endsWith("korean") && ((_ = _._.k_Lang_Korean), (_ = 6));
-        for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_) {
+        _.endsWith("korean") && ((_ = 4), (_ = 6));
+        for (let _ = 0; _ < 31; ++_) {
           const _ = (0, _._)(_);
           if (_.length <= _) continue;
           if (_.endsWith(_) && _.length > _.length + 2) {
@@ -5142,8 +3160,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5169,12 +3185,13 @@
               lang: "" + _,
             };
           return (
+            1 ==
             (
               await _().get(_, {
                 params: _,
                 cancelToken: _ && _.token,
               })
-            ).data.success == _._.k_EResultOK
+            ).data.success
           );
         }
         SetPrimaryImageForImageGroup(_, _) {
@@ -5188,7 +3205,7 @@
             (this.m_curLocImageGroupType = _),
             (this.m_curLocImageGroup.localized_images = (0, _._)(
               this.m_curLocImageGroup.localized_images,
-              _._.k_Lang_MAX,
+              31,
               null,
             )));
         }
@@ -5217,11 +3234,11 @@
             _ = _._.InitFromClanID(_.clanAccountID),
             _ = _._.GetHashAndExt(_) ?? "",
             _ = [];
-          for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_)
+          for (let _ = 0; _ < 31; ++_)
             _.push(_.BDoesClanImageFileExistsOnCDNOrOrigin(_, _, _, _));
           const _ = await Promise.all(_);
           (0, _._)(() => {
-            for (let _ = _._.k_Lang_English; _ < _._.k_Lang_MAX; ++_)
+            for (let _ = 0; _ < 31; ++_)
               _[_] &&
                 (this.m_curLocImageGroup.localized_images[_] =
                   _._.GenerateURLFromHashAndExtAndLang(
@@ -5288,7 +3305,6 @@
         _: () => _,
       });
       var _,
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -5464,8 +3480,7 @@
                 params: _,
               },
             );
-          if (!_ || 200 != _.status || _.data.success != _._.k_EResultOK)
-            return _.data;
+          if (!_ || 200 != _.status || 1 != _.data.success) return _.data;
           let _ = this.m_mapClanToImages.get(_);
           if (_) {
             let _ = _.findIndex((_, _, _) => _.imageid == _);
@@ -5519,26 +3534,25 @@
         _: () => _,
       });
       __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         return (
           _.indexOf("?") > 0 && (_ = _.split("?")[0]),
           _.endsWith(".jpg") || _.endsWith(".jpeg")
-            ? _._.k_EClanImageFileType_JPEG
+            ? 1
             : _.endsWith(".png")
-              ? _._.k_EClanImageFileType_PNG
+              ? 3
               : _.endsWith(".gif")
-                ? _._.k_EClanImageFileType_GIF
+                ? 2
                 : _.endsWith(".mp4")
-                  ? _._.k_EClanImageFileType_MP4
+                  ? 4
                   : _.endsWith(".webm")
-                    ? _._.k_EClanImageFileType_WEBM
+                    ? 5
                     : _.endsWith(".vtt")
-                      ? _._.k_EClanImageFileType_VTT
+                      ? 6
                       : _.endsWith(".srt")
-                        ? _._.k_EClanImageFileType_SRT
+                        ? 7
                         : _.endsWith(".webp")
-                          ? _._.k_EClanImageFileType_WEBP
+                          ? 10
                           : void 0
         );
       }
@@ -5554,7 +3568,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5788,7 +3801,7 @@
               (_.visibilityStartTime = _.rtime32_visibility_start),
               (_.visibilityEndTime = _.rtime32_visibility_end),
               (_.loadedAllLanguages = !1),
-              (_.type = _.event_type ?? _._.k_EOtherEvent),
+              (_.type = _.event_type ?? 1),
               (_.nVotesUp = _.votes_up ?? 0),
               (_.nVotesDown = _.votes_down ?? 0),
               (_.comment_type = _.comment_type),
@@ -5834,8 +3847,8 @@
                 _.timestamp_loc_updated.clear(),
                 (_.postTime = _.rtime32_start_time),
                 (_.nCommentCount = _.comment_count ?? 0),
-                _.name.set(_._.k_Lang_English, _.event_name ?? ""),
-                _.description.set(_._.k_Lang_English, _.event_notes ?? "");
+                _.name.set(0, _.event_name ?? ""),
+                _.description.set(0, _.event_notes ?? "");
             _.broadcaster_accountid &&
               (_.broadcaster = new _._(_.broadcaster_accountid));
             const _ = _._;
@@ -5858,62 +3871,62 @@
             if (
               ((_.jsondata.localized_capsule_image = (0, _._)(
                 _.jsondata.localized_capsule_image || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_title_image = (0, _._)(
                 _.jsondata.localized_title_image || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_subtitle = (0, _._)(
                 _.jsondata.localized_subtitle || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_summary = (0, _._)(
                 _.jsondata.localized_summary || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_broadcast_title = (0, _._)(
                 _.jsondata.localized_broadcast_title || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_broadcast_left_image = (0, _._)(
                 _.jsondata.localized_broadcast_left_image || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_broadcast_right_image = (0, _._)(
                 _.jsondata.localized_broadcast_right_image || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_sale_header = (0, _._)(
                 _.jsondata.localized_sale_header || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_sale_overlay = (0, _._)(
                 _.jsondata.localized_sale_overlay || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_sale_product_banner = (0, _._)(
                 _.jsondata.localized_sale_product_banner || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_sale_product_mobile_banner = (0, _._)(
                 _.jsondata.localized_sale_product_mobile_banner || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               (_.jsondata.localized_sale_logo = (0, _._)(
                 _.jsondata.localized_sale_logo || [],
-                _._.k_Lang_MAX,
+                31,
                 null,
               )),
               void 0 !== _.jsondata.sale_num_headers &&
@@ -5922,18 +3935,14 @@
               for (let _ = 0; _ < _.jsondata.sale_num_headers; ++_)
                 _.jsondata.localized_per_day_sales_header[_] = (0, _._)(
                   _.jsondata.localized_per_day_sales_header[_],
-                  _._.k_Lang_MAX,
+                  31,
                   null,
                 );
             return (
               _.jsondata.sale_sections &&
                 _.jsondata.sale_sections.forEach((_, _) => {
                   _.localized_label &&
-                    (_.localized_label = (0, _._)(
-                      _.localized_label,
-                      _._.k_Lang_MAX,
-                      null,
-                    )),
+                    (_.localized_label = (0, _._)(_.localized_label, 31, null)),
                     "trailercarousel" === _.section_type &&
                       (_.show_as_carousel = !1),
                     (_.jsondata.sale_sections[_] = {
@@ -5948,21 +3957,17 @@
                     null !== _.localized_headline &&
                     (_.localized_headline = (0, _._)(
                       _.localized_headline,
-                      _._.k_Lang_MAX,
+                      31,
                       null,
                     )),
                     void 0 !== _.localized_body &&
                       null !== _.localized_body &&
-                      (_.localized_body = (0, _._)(
-                        _.localized_body,
-                        _._.k_Lang_MAX,
-                        null,
-                      )),
+                      (_.localized_body = (0, _._)(_.localized_body, 31, null)),
                     void 0 !== _.localized_image &&
                       null !== _.localized_image &&
                       (_.localized_image = (0, _._)(
                         _.localized_image,
-                        _._.k_Lang_MAX,
+                        31,
                         null,
                       ));
                 }),
@@ -5998,7 +4003,7 @@
             _.jsondata.localized_per_day_sales_header = [];
             for (let _ = 0; _ < (_.jsondata.sale_num_headers ?? 0); ++_)
               _.jsondata.localized_per_day_sales_header.push(
-                (0, _._)([], _._.k_Lang_MAX, null),
+                (0, _._)([], 31, null),
               );
             _.m_overrideCurrentDay = 0;
           } else _.m_overrideCurrentDay = void 0;
@@ -6180,7 +4185,7 @@
                 params: _,
                 cancelToken: _?.token,
               });
-              if (_?.data?.success == _._.k_EResultOK)
+              if (1 == _?.data?.success)
                 (0, _._)(() => {
                   for (let _ of _.data.events) {
                     let _ = _(_);
@@ -6213,7 +4218,7 @@
               }
             } catch (_) {
               let _ = (0, _._)(_);
-              _.errorCode != _._.k_EResultCancelled &&
+              52 != _.errorCode &&
                 console.error(
                   "LoadAdjacentPartnerEvents hit error on appid:" +
                     _ +
@@ -6409,7 +4414,7 @@
           _,
           _ = !1,
         ) {
-          let _ = (0, _._)(_ ? _._.k_Lang_English : (0, _._)(_._.LANGUAGE)),
+          let _ = (0, _._)(_ ? 0 : (0, _._)(_._.LANGUAGE)),
             _ = {
               appid: _,
               clan_accountid: _ ? _.GetAccountID() : void 0,
@@ -6698,7 +4703,7 @@
             const _ = await _().post(_, _, {
               withCredentials: !0,
             });
-            if (_?.data?.success == _._.k_EResultOK) {
+            if (1 == _?.data?.success) {
               const _ = this.m_mapExistingEvents.get(_);
               for (const _ in _)
                 __webpack_require__.hasOwnProperty(_) &&
@@ -6782,8 +4787,7 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _.toLowerCase();
         return _.endsWith(".jpg") || _.endsWith(".jpeg")
@@ -6806,21 +4810,21 @@
       }
       function _(_) {
         switch (_) {
-          case _._.k_EClanImageFileType_JPEG:
+          case 1:
             return ".jpg";
-          case _._.k_EClanImageFileType_GIF:
+          case 2:
             return ".gif";
-          case _._.k_EClanImageFileType_PNG:
+          case 3:
             return ".png";
-          case _._.k_EClanImageFileType_WEBM:
+          case 5:
             return ".webm";
-          case _._.k_EClanImageFileType_MP4:
+          case 4:
             return ".mp4";
-          case _._.k_EClanImageFileType_SRT:
+          case 7:
             return ".srt";
-          case _._.k_EClanImageFileType_VTT:
+          case 6:
             return ".vtt";
-          case _._.k_EClanImageFileType_WEBP:
+          case 10:
             return ".webp";
         }
       }
@@ -6922,7 +4926,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.k_eView = "view"),
@@ -6952,7 +4955,7 @@
             return _?.[1];
           })(window.location.href),
           _ = _ && "news" == _,
-          _ = _.GetEventType() == _._.k_ECreatorHome,
+          _ = 36 == _.GetEventType(),
           _ = "community" === (0, _._)(),
           _ = _.appid ? "games" : "groups",
           _ =
@@ -7039,7 +5042,7 @@
             _.appid &&
             _ &&
             _.BHasSaleUpdateLandingPageVanity(),
-          _ = _.GetEventType() == _._.k_ECreatorHome;
+          _ = 36 == _.GetEventType();
         switch (_) {
           case _.k_eCommunityPublish:
             return (
@@ -7725,7 +5728,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
@@ -7752,8 +5754,7 @@
                 _?.drawImage(_, _, _, _, _, _, _, _, _),
                   _.toBlob((_) => {
                     const _ = _.toDataURL(_);
-                    _ !== _._.k_EClanImageFileType_PNG &&
-                    __webpack_require__.startsWith("data:image/png")
+                    3 !== _ && __webpack_require__.startsWith("data:image/png")
                       ? _("Unable to encode into the requested file format")
                       : _
                         ? ((_.file = (0, _._)(_, _.filename)),
@@ -7929,9 +5930,9 @@
       }
       function _(_) {
         switch (_) {
-          case _._.k_EClanImageFileType_PNG:
+          case 3:
             return "image/png";
-          case _._.k_EClanImageFileType_JPEG:
+          case 1:
             return "image/jpeg";
         }
       }
@@ -7944,35 +5945,34 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
-          case _._.k_EBetaReleaseEvent:
-          case _._.k_EIRLEvent:
-          case _._.k_EGameEvent:
-          case _._.k_EMeetingEvent:
-          case _._.k_ESpecialCauseEvent:
-          case _._.k_EMusicAndArtsEvent:
-          case _._.k_ETripEvent:
-          case _._.k_ESportsEvent:
-          case _._.k_EChatEvent:
-          case _._.k_EBroadcastEvent:
-          case _._.k_EESportTournamentStreamEvent:
-          case _._.k_EDevStreamEvent:
-          case _._.k_EFamousStreamEvent:
-          case _._.k_EGameSalesEvent:
-          case _._.k_EGameItemSalesEvent:
-          case _._.k_EInGameBonusXPEvent:
-          case _._.k_EInGameLootEvent:
-          case _._.k_EInGamePerksEvent:
-          case _._.k_EInGameEventGeneral:
-          case _._.k_EInGameChallengeEvent:
-          case _._.k_EInGameContestEvent:
-          case _._.k_EFreeTrial:
-          case _._.k_ESeasonRelease:
-          case _._.k_EOtherEvent:
-          case _._.k_ECrosspostEvent:
+          case 29:
+          case 27:
+          case 2:
+          case 4:
+          case 5:
+          case 6:
+          case 8:
+          case 7:
+          case 9:
+          case 11:
+          case 17:
+          case 18:
+          case 19:
+          case 20:
+          case 21:
+          case 22:
+          case 23:
+          case 24:
+          case 35:
+          case 25:
+          case 26:
+          case 31:
+          case 32:
+          case 1:
+          case 34:
             return !0;
         }
         return !1;

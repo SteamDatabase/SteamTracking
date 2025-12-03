@@ -45,6 +45,12 @@ message CSleepManager_SwitchToPowerState_Request {
 message CSleepManager_SwitchToPowerState_Response {
 }
 
+message CSleepManager_RequestSleep_Request {
+}
+
+message CSleepManager_RequestSleep_Response {
+}
+
 service SleepManager {
 	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
 
@@ -54,4 +60,5 @@ service SleepManager {
 	rpc NotifyResumeFromSuspend (.CSleepManager_ResumeFromSuspend_Notification) returns (.WebUINoResponse);
 	rpc NotifyShowPowerMenu (.CSleepManager_ShowPowerMenu_Notification) returns (.WebUINoResponse);
 	rpc SwitchToPowerState (.CSleepManager_SwitchToPowerState_Request) returns (.CSleepManager_SwitchToPowerState_Response);
+	rpc RequestSleep (.CSleepManager_RequestSleep_Request) returns (.CSleepManager_RequestSleep_Response);
 }

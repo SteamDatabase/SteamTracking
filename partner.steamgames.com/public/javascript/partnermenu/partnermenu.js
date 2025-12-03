@@ -38296,7 +38296,7 @@ Error generating stack: ` +
   var wi,
     sd = V(() => {
       "use strict";
-      wi = Y(Ae(), 1);
+      wi = Y(Ae());
     });
   function GP(t) {
     let [n, o] = so.useState(document.documentElement[t]);
@@ -40015,7 +40015,7 @@ Error generating stack: ` +
   }
   Gt();
   Gt();
-  var of = Y(Ae(), 1);
+  var of = Y(Ae());
   var _M = [
       "sc_schinese",
       "schinese",

@@ -118,7 +118,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_mapProductPositionMsgList = new Map();
@@ -195,7 +194,7 @@
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (_.GetEResult() == _._.k_EResultOK) {
+            if (1 == _.GetEResult()) {
               const _ = new Set(),
                 _ = Math.floor(Date.now() / 1e3);
               return (
@@ -243,7 +242,7 @@
               this.m_steamInterface.GetServiceTransport(),
               _,
             );
-            if (_.GetEResult() == _._.k_EResultOK) {
+            if (1 == _.GetEResult()) {
               const _ = this.GetKey(_);
               let _ = this.m_mapProductPositionMsgList.get(_);
               const _ = __webpack_require__.findIndex(
@@ -1009,7 +1008,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "nicknames";
       function _(_) {
@@ -1051,7 +1049,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  _.data?.success != _._.k_EResultOK ||
+                  1 != _.data?.success ||
                   !_.data?.userinfo
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -1068,7 +1066,7 @@
                 if (
                   !_ ||
                   200 != _.status ||
-                  _.data?.success != _._.k_EResultOK ||
+                  1 != _.data?.success ||
                   !_.data?.userinfos
                 )
                   throw `Load single avatar/persona failed ${((0, _._))(_).strErrorMsg}`;
@@ -1615,31 +1613,10 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const _ = _.useRef(_().CancelToken.source());
-        return (
-          _.useEffect(() => {
-            const _ = _.current;
-            return () =>
-              __webpack_require__.cancel(_ ? `${_}: unmounting` : "unmounting");
-          }, [_]),
-          _.current
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
         if (_().isCancel(_))
           return {
             strErrorMsg: "Action Cancelled:" + _,
-            errorCode: _._.k_EResultCancelled,
+            errorCode: 52,
           };
         if (
           void 0 !== _.response &&
@@ -1721,11 +1698,11 @@
         return "object" == typeof _ && "status" in _
           ? {
               strErrorMsg: "Unknown Error: " + _ + "\nStatus Code:" + _.status,
-              errorCode: _._.k_EResultFail,
+              errorCode: 2,
             }
           : {
               strErrorMsg: "Unknown Error: " + _,
-              errorCode: _._.k_EResultFail,
+              errorCode: 2,
             };
       }
     },

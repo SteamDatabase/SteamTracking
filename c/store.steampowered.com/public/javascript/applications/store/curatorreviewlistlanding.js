@@ -312,14 +312,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -342,23 +338,11 @@
             ),
             (_.list_jsondata = {}));
       }
-      !(function (_) {
-        (_[(_.k_EStoreCuratorListType_Unknown = 0)] =
-          "k_EStoreCuratorListType_Unknown"),
-          (_[(_.k_EStoreCuratorListType_Grid = 1)] =
-            "k_EStoreCuratorListType_Grid"),
-          (_[(_.k_EStoreCuratorListType_Ordered = 2)] =
-            "k_EStoreCuratorListType_Ordered"),
-          (_[(_.k_EStoreCuratorListType_AutoDLC = 3)] =
-            "k_EStoreCuratorListType_AutoDLC"),
-          (_[(_.k_EStoreCuratorListType_SaleList = 4)] =
-            "k_EStoreCuratorListType_SaleList");
-      })(_ || (_ = {}));
       const _ = "0";
       function _(_, _) {
-        (_.localized_flat_title = (0, _._)([], _._.k_Lang_MAX, null)),
-          (_.localized_flat_blurb = (0, _._)([], _._.k_Lang_MAX, null)),
-          (_.localized_flat_link = (0, _._)([], _._.k_Lang_MAX, null)),
+        (_.localized_flat_title = (0, _._)([], 31, null)),
+          (_.localized_flat_blurb = (0, _._)([], 31, null)),
+          (_.localized_flat_link = (0, _._)([], 31, null)),
           _.title !== _ && (_.localized_flat_title[_] = _.title),
           _.blurb !== _ && (_.localized_flat_blurb[_] = _.blurb),
           _.link !== _ && (_.localized_flat_link[_] = _.link),
@@ -403,7 +387,7 @@
               params: _,
               cancelToken: _?.token,
             });
-            if (_?.data?.success == _._.k_EResultOK) {
+            if (1 == _?.data?.success) {
               const _ = {
                 ..._.data.list_details,
               };
@@ -474,7 +458,7 @@
               params: _,
               cancelToken: _?.token,
             });
-            if (_?.data?.success == _._.k_EResultOK) {
+            if (1 == _?.data?.success) {
               const _ = new Array();
               return (
                 (0, _._)(() => {
@@ -709,7 +693,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -835,7 +818,7 @@
                 className: _().ParentType,
               },
               (0, _._)(
-                _ == _._.k_EStoreAppType_Music
+                11 == _
                   ? "#SalePage_ParentApp_SoundTrack"
                   : "#SalePage_ParentApp_DLC",
               ),
@@ -984,7 +967,7 @@
             _?.GetIncludedAppIDsOrSelf().length > 0 &&
             _?.GetIncludedAppIDsOrSelf().every((_) => _._.Get().BOwnsApp(_)),
           _ = _ && !_;
-        if (_ && _?.GetStoreItemType() == _._.k_EStoreItemType_App)
+        if (_ && 0 == _?.GetStoreItemType())
           return _.createElement(_._, {
             appid: _.GetAppID(),
             bIsMuted: _,
@@ -1135,7 +1118,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         const [__webpack_require__, _] = (0, _.useState)(
@@ -1166,7 +1148,7 @@
                   const _ = await _().get(_, {
                     params: _,
                   });
-                  if (_?.data?.success == _._.k_EResultOK)
+                  if (1 == _?.data?.success)
                     return _.data.appids.forEach((_) => _.add(_)), _;
                   _ = (0, _._)(_);
                 } catch (_) {
@@ -1502,7 +1484,7 @@
             position: "center",
             size: "medium",
           });
-        const _ = _.list_type == _._.k_EStoreCuratorListType_Grid;
+        const _ = 1 == _.list_type;
         return _.createElement(
           _.Fragment,
           null,
@@ -1827,7 +1809,7 @@
       }
       function _(_) {
         switch (_.type) {
-          case _._.k_EStoreCuratorRecommendationState_Recommended:
+          case 0:
             return _.createElement(
               "div",
               {
@@ -1835,7 +1817,7 @@
               },
               (0, _._)("#SteamCurator_Recommended"),
             );
-          case _._.k_EStoreCuratorRecommendationState_NotRecommended:
+          case 1:
             return _.createElement(
               "div",
               {
@@ -1843,7 +1825,7 @@
               },
               (0, _._)("#SteamCurator_NotRecommended"),
             );
-          case _._.k_EStoreCuratorRecommendationState_Informative:
+          case 2:
             return _.createElement(
               "div",
               {

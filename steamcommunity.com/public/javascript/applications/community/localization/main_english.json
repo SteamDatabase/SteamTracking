@@ -1729,6 +1729,8 @@
     "Sale_SmartSection_AllReleases_ttip": "Will show games from this page, sorted most recent first.",
     "Sale_SmartSection_AllUpcoming": "Upcoming: Sorted by release date",
     "Sale_SmartSection_AllUpcoming_ttip": "Will show games from this page, sorted soonest first.",
+    "Sale_SmartSection_FilterFromLinkedAppList": "Filter from Linked Apps List",
+    "Sale_SmartSection_FilterFromLinkedAppList_ttip": "Populate this section with all the apps from the Linked App list, optionally filtered by the filters below.",
     "Sale_Tag": "Show ANY discounted items with this tag",
     "Sale_Tag_ttip": "Will show any item on Steam that matches the store tag chosen in the field below.",
     "Sale_SearchCurator": "Search Curator/Creator Home by name or account id",

@@ -1182,7 +1182,6 @@ ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
 ${PARTNER_BASE_URL}sales/ajaxgetsalerank
 ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
 ${PARTNER_BASE_URL}sdr/ajaxsessionsearch?${}
-${PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo
 ${PARTNER_BASE_URL}seasonpass/ajaxgetreleasedorupcomingdlc?parentappid=${}
 ${PARTNER_BASE_URL}steamdirect
 ${PARTNER_BASE_URL}steamml/create_problem
@@ -1508,9 +1507,9 @@ ${STORE_BASE_URL}recommender/
 ${STORE_BASE_URL}recommenderdemos/getfests
 ${STORE_BASE_URL}recommenderdemos/getlist
 ${STORE_BASE_URL}remoteplay#anywhere
-${STORE_BASE_URL}replay/${steamid}/${}?src=${k_EYearInReviewAccessSource_FriendsReplay}
+${STORE_BASE_URL}replay/${steamid}/${}?src=9
 ${STORE_BASE_URL}replay/${}/${}
-${STORE_BASE_URL}replay/${}/${}?src=${k_EYearInReviewAccessSource_Press}
+${STORE_BASE_URL}replay/${}/${}?src=8
 ${STORE_BASE_URL}sale/${sale_vanity_id}
 ${STORE_BASE_URL}sale/${strSalePage}
 ${STORE_BASE_URL}sale/${strVanity}
@@ -2550,6 +2549,7 @@ https://rd.playstation.com/controller/fwupdater/
 https://react.dev/errors/${}
 https://reactflow.dev
 https://s.team/deck
+https://s.team/frame
 https://s.team/join
 https://s.team/machine
 https://s.team/remoteplay/connect/${}?appid=${}&${}
