@@ -54,7 +54,8 @@ body.v6 {
 	transform: scale(1.2);
 	pointer-events: none;
 }
-.friends_header_avatar .profile_avatar_frame > img {
+.friends_header_avatar .profile_avatar_frame > img,
+.friends_header_avatar .profile_avatar_frame > picture > img {
 	width: 100%;
 	height: 100%;
 }
