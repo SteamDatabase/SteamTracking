@@ -2814,6 +2814,13 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	gap: 1px;
 }
 
+#shareBtn img {
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	padding-bottom: 3px;
+}
+
 .queue_btn_menu > .queue_menu_arrow.queue_btn_active {
 	background: rgba( 103, 193, 245, 0.2 );
 	background-color: rgba( 103, 193, 245, 0.6 );

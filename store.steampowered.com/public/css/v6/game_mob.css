@@ -759,9 +759,7 @@
 		margin-left: 4px;
 		margin-right: 0;
 	}
-		/* using a share img instead of 'share' text on desktop */
-	html.responsive #reportBtn img,
-	html.responsive #shareBtn img {
+	html.responsive #reportBtn img {
 		vertical-align: middle;
 		height: 16px;
 		width: 16px;
