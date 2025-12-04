@@ -6048,12 +6048,18 @@
           _ != this.m_model.public_event_url &&
             ((this.m_model.public_event_url = _), this.SetDirty(!0));
         }
+        BHasAssetSetDocFile() {
+          return this.m_model.asset_set_doc_file?.length > 0;
+        }
         GetAssetSetDocFile() {
           return this.m_model.asset_set_doc_file;
         }
         SetAssetSetDocFile(_) {
           _ != this.m_model.asset_set_doc_file &&
             ((this.m_model.asset_set_doc_file = _), this.SetDirty(!0));
+        }
+        BHasPublicDocumentationWikiURL() {
+          return this.m_model.public_doc_wiki_url?.length > 0;
         }
         GetPublicDocumentationWikiURL() {
           return this.m_model.public_doc_wiki_url;
@@ -35932,10 +35938,16 @@
                           targeting: 32,
                         },
                         _ = _._.Get().AddEmailDraft(_);
-                      _.AddSection(_._.k_Custom),
-                        _.AddSection(_._.k_CallForRegistration),
-                        _.AddSection(_._.k_EnterDiscount),
-                        _.AddSection(_._.k_LearnMore);
+                      __webpack_require__.AddSection(_._.k_Custom),
+                        __webpack_require__.AddSection(
+                          _._.k_CallForRegistration,
+                        ),
+                        __webpack_require__.AddSection(_._.k_EnterDiscount),
+                        __webpack_require__.AddSection(_._.k_LearnMore),
+                        _.BHasPublicDocumentationWikiURL() &&
+                          __webpack_require__.SetWikiDocURL(
+                            _.GetPublicDocumentationWikiURL(),
+                          );
                     }
                     {
                       const _ = {
@@ -35949,9 +35961,15 @@
                           targeting: 512,
                         },
                         _ = _._.Get().AddEmailDraft(_);
-                      _.AddSection(_._.k_MediaUsePermission),
-                        _.AddSection(_._.k_EnterDiscountReminder),
-                        _.AddSection(_._.k_LearnMore);
+                      __webpack_require__.AddSection(_._.k_MediaUsePermission),
+                        __webpack_require__.AddSection(
+                          _._.k_EnterDiscountReminder,
+                        ),
+                        __webpack_require__.AddSection(_._.k_LearnMore),
+                        _.BHasPublicDocumentationWikiURL() &&
+                          __webpack_require__.SetWikiDocURL(
+                            _.GetPublicDocumentationWikiURL(),
+                          );
                     }
                     {
                       const _ = {
@@ -35963,10 +35981,24 @@
                           targeting: 1,
                         },
                         _ = _._.Get().AddEmailDraft(_);
-                      _.AddSection(_._.k_AssetKit),
-                        _.AddSection(_._.k_EnterDiscountReminder),
-                        _.AddSection(_._.k_LearnMore),
-                        _.AddSection(_._.k_CancelSection);
+                      __webpack_require__.AddSection(_._.k_AssetKit),
+                        __webpack_require__.AddSection(
+                          _._.k_EnterDiscountReminder,
+                        ),
+                        __webpack_require__.AddSection(_._.k_LearnMore),
+                        __webpack_require__.AddSection(_._.k_CancelSection),
+                        _.BHasPublicDocumentationWikiURL() &&
+                          __webpack_require__.SetWikiDocURL(
+                            _.GetPublicDocumentationWikiURL(),
+                          ),
+                        _.BHasAssetSetDocFile() &&
+                          __webpack_require__.SetAssetKitURL(
+                            _.GetAssetSetDocFile(),
+                          ),
+                        _.GetEventStartTime() &&
+                          __webpack_require__.SetCancelDate(
+                            _.GetEventStartTime(),
+                          );
                     }
                     _(!1);
                   },

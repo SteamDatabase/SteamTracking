@@ -5951,12 +5951,18 @@
           e != this.m_model.public_event_url &&
             ((this.m_model.public_event_url = e), this.SetDirty(!0));
         }
+        BHasAssetSetDocFile() {
+          return this.m_model.asset_set_doc_file?.length > 0;
+        }
         GetAssetSetDocFile() {
           return this.m_model.asset_set_doc_file;
         }
         SetAssetSetDocFile(e) {
           e != this.m_model.asset_set_doc_file &&
             ((this.m_model.asset_set_doc_file = e), this.SetDirty(!0));
+        }
+        BHasPublicDocumentationWikiURL() {
+          return this.m_model.public_doc_wiki_url?.length > 0;
         }
         GetPublicDocumentationWikiURL() {
           return this.m_model.public_doc_wiki_url;
@@ -32951,11 +32957,13 @@
                           subject_token: "#OptIn_EmailSubject_YourInvited",
                           targeting: 32,
                         },
-                        t = s.Mt.Get().AddEmailDraft(e);
-                      t.AddSection(U.Dj.k_Custom),
-                        t.AddSection(U.Dj.k_CallForRegistration),
-                        t.AddSection(U.Dj.k_EnterDiscount),
-                        t.AddSection(U.Dj.k_LearnMore);
+                        a = s.Mt.Get().AddEmailDraft(e);
+                      a.AddSection(U.Dj.k_Custom),
+                        a.AddSection(U.Dj.k_CallForRegistration),
+                        a.AddSection(U.Dj.k_EnterDiscount),
+                        a.AddSection(U.Dj.k_LearnMore),
+                        t.BHasPublicDocumentationWikiURL() &&
+                          a.SetWikiDocURL(t.GetPublicDocumentationWikiURL());
                     }
                     {
                       const e = {
@@ -32968,10 +32976,12 @@
                             "#OptIn_EmailSubject_TrailerPermissions",
                           targeting: 512,
                         },
-                        t = s.Mt.Get().AddEmailDraft(e);
-                      t.AddSection(U.Dj.k_MediaUsePermission),
-                        t.AddSection(U.Dj.k_EnterDiscountReminder),
-                        t.AddSection(U.Dj.k_LearnMore);
+                        a = s.Mt.Get().AddEmailDraft(e);
+                      a.AddSection(U.Dj.k_MediaUsePermission),
+                        a.AddSection(U.Dj.k_EnterDiscountReminder),
+                        a.AddSection(U.Dj.k_LearnMore),
+                        t.BHasPublicDocumentationWikiURL() &&
+                          a.SetWikiDocURL(t.GetPublicDocumentationWikiURL());
                     }
                     {
                       const e = {
@@ -32982,11 +32992,17 @@
                           subject_token: "#OptIn_EmailSubject_StartsNextWeek",
                           targeting: 1,
                         },
-                        t = s.Mt.Get().AddEmailDraft(e);
-                      t.AddSection(U.Dj.k_AssetKit),
-                        t.AddSection(U.Dj.k_EnterDiscountReminder),
-                        t.AddSection(U.Dj.k_LearnMore),
-                        t.AddSection(U.Dj.k_CancelSection);
+                        a = s.Mt.Get().AddEmailDraft(e);
+                      a.AddSection(U.Dj.k_AssetKit),
+                        a.AddSection(U.Dj.k_EnterDiscountReminder),
+                        a.AddSection(U.Dj.k_LearnMore),
+                        a.AddSection(U.Dj.k_CancelSection),
+                        t.BHasPublicDocumentationWikiURL() &&
+                          a.SetWikiDocURL(t.GetPublicDocumentationWikiURL()),
+                        t.BHasAssetSetDocFile() &&
+                          a.SetAssetKitURL(t.GetAssetSetDocFile()),
+                        t.GetEventStartTime() &&
+                          a.SetCancelDate(t.GetEventStartTime());
                     }
                     r(!1);
                   },
