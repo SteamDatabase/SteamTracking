@@ -1003,6 +1003,7 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
+(1ZT
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -1649,6 +1650,7 @@ $ffn
 /etc/slackware-release
 /etc/ssl/ca-bundle.pem
 /etc/ssl/certs/ca-certificates.crt
+/etc/steamos-oobe-image
 /etc/yellowdog-release
 /fxLf
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/planar_functions.cc
@@ -1705,16 +1707,21 @@ $ffn
 0 Umv
 0.15
 0.8.3
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+1000
+1024
+1536
+10000
+15000
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:18:02
+01:07:17
 08bX
 0?0L
 0A/8
@@ -1754,9 +1761,6 @@ $ffn
 10.0.0.0/8
 10.4.252.0/24
 100 127.0.0.1 stale
-1000
-1024
-10000
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2093,8 +2097,6 @@ $ffn
 14ISSLConnection
 14IVideoYUVFrame
 14VideoSegment_t
-1536
-15000
 15CAudioResampler
 15CEC25519KeyBase
 15CJobPromiseBase
@@ -4793,7 +4795,7 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec  3 2025
+Dec  5 2025
 December
 Decipher Only
 Deckard
@@ -8005,6 +8007,7 @@ RankedByVotesUp
 Rapipago
 Rate Limit Exceeded
 Raw stream mode only supported for TCP connections
+Rb#HC
 Rbg.E
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().

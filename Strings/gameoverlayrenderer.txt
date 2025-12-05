@@ -76,6 +76,7 @@ AtomID 0x%x
 Attrib_Color
 Attrib_Position
 Attrib_TexCoord
+Au.T
 BOverlayNeedsPresent
 Bad Access flag on shared mem create: %s: %u\n
 CBaseOverlayRenderer

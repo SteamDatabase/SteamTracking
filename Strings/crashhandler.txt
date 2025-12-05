@@ -301,6 +301,7 @@ $ORIGIN
 /dev/urandom
 /etc/lsb-release
 /etc/mtab
+/etc/steamos-oobe-image
 /proc/%d/status
 /proc/cpuinfo
 /proc/meminfo
@@ -317,7 +318,7 @@ $ORIGIN
 0123456789
 0123456789ABCDEF
 0123456789abcdef
-01:18:02
+01:07:17
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
@@ -448,7 +449,7 @@ CreateInterface
 DBG_PATHMATCH
 DBG_STAT
 DONT_BREAK_ON_ASSERT
-Dec  3 2025
+Dec  5 2025
 December
 Deleting thread object from the thread, this is bad
 Don't know how to check filesystem type on POSIX!

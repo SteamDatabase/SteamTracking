@@ -7715,10 +7715,10 @@ $steammessages_parental_objects.proto"
 00000001
 00003333
 00:00:00
+01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11178,11 +11178,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+2019
+2048
 20000
 2000000
 200M
-2019
-2048
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -15928,7 +15928,6 @@ $steammessages_parental_objects.proto"
 :EXTERNAL TYPE %s\n
 :LBN
 :LBjI
-:UAJ
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EContentReportReason_GenderedBullyingAndIntimidation
 :\n6k_EContentReportResolution_SuspiciousIncludingUpvoters
@@ -21892,7 +21891,9 @@ Concept
 Concepts
 Config
 Config 'revoked_keys' array has invalid item '%s'
-Config Edit Failed: %d, %d, %s, %s, %d
+Config Edit Failed - no activator: %d, %d, %d, %s, %s, %d
+Config Edit Failed: %d, %d, %d, %s, %s, %d
+Config Edit Failed: %d, %d, %d, %s, %s, %d, %d, %d
 Config Edit Failed: %d, %d, %s, %s, %d, %d, %d
 Config fetch is in progess, but network config avail is %d?
 Config store has m_bDisableDiskSave on beta or public!
@@ -22077,6 +22078,7 @@ Controller Chip ID invalid\n
 Controller Info Msg garbled\n
 Controller PollState Changed from %d to %d\n
 Controller Serial# invalid\n
+Controller VDF:\r\n, %s
 Controller Work Item Thread
 Controller detected on wireless receiver\n
 Controller device closed after hid_read failure\n
@@ -58195,7 +58197,7 @@ stderr
 stdin
 stdout
 steam
-steam Dec  3 2025 01:18:14
+steam Dec  5 2025 01:07:34
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

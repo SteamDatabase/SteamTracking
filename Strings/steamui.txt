@@ -1683,6 +1683,7 @@ $google/protobuf/source_context.proto"
 $steammessages_parental_objects.proto"
 $system\InGameOverlayScreenshotHotKey
 $system\InGameOverlayShowFPSBGOpacity
+$tI26CGameStreamVideoStageNVENC
 ${LANGUAGE}
 %&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
 %'%1%=%C%K%O%s%
@@ -6904,7 +6905,6 @@ ${LANGUAGE}
 /etc/pki/tls/cert.pem
 /etc/ssl/ca-bundle.pem
 /etc/ssl/certs/ca-certificates.crt
-/etc/steamos-oobe-image
 /etc/timezone
 /fxLf
 /generic
@@ -7042,7 +7042,6 @@ ${LANGUAGE}
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
 0(`xPH
-0.15
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
 0.CAccountHardware_SetPersonalizationFile_Request
@@ -7082,13 +7081,23 @@ ${LANGUAGE}
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
 0000
 0000000000000000000000000000000000000000
+0.15
+60.0
+1000
+1024
 000000001532
+1536
+2000
+2019
+2048
+3072
+3333
 00003333
+00:00:00
+01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
-01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7244,8 +7253,6 @@ ${LANGUAGE}
 10.4.252.0/24
 100 127.0.0.1 stale
 100-continue
-1000
-1024
 10000
 107F-BB20-FB5A-1CE4
 10BlankImage
@@ -8424,7 +8431,6 @@ ${LANGUAGE}
 14StoreItem_Link
 14TwoFactor_Stub
 14VideoClip_Stub
-1536
 15000
 15AccountHardware
 15BroadcastClient
@@ -9043,10 +9049,7 @@ ${LANGUAGE}
 2/YDc~-0
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
-2000
 200M
-2019
-2048
 20AccountHardware_Stub
 20BroadcastClient_Stub
 20CBroadcastController
@@ -10249,7 +10252,6 @@ ${LANGUAGE}
 3.CSteamInputService_GyroSoftwareCalibration_Request
 3.CSteamNotification_PreferencesUpdated_Notification
 30!]^JV
-3072
 30000
 30CAchievements_GetInfo_Response
 30CBluetoothManager_Pair_Request
@@ -10479,7 +10481,6 @@ ${LANGUAGE}
 32SiteServerUI_SetLanguage_Request
 32StoreItem_Screenshots_Screenshot
 32UserContentDescriptorPreferences
-3333
 333333
 3333UUUU
 333?
@@ -12197,7 +12198,6 @@ ${LANGUAGE}
 6.CSteamInputService_GyroQuaternionChanged_Notification
 6.CSteamNotification_NotificationsReceived_Notification
 6.CTransportValidation_RequestLargeNotification_Request
-60.0
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
 60CCommunity_GetAppRichPresenceLocalization_Response_TokenList
@@ -12719,7 +12719,7 @@ ${LANGUAGE}
 :.CUserAccount_GetAvailableValveDiscountPromotions_Response"
 :.JlN
 :3(!V_DMr{`i
-:5gi
+:5ji
 :5ptI.T(
 :AhHa
 :BAD BOOLEAN
@@ -13018,7 +13018,6 @@ ${LANGUAGE}
 @.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
 @0pp
 @AppMRUSize
-@B26CGameStreamVideoStageNVENC
 @EnableUDPHistory
 @HKEY_CURRENT_USER\Software\Valve\Steam\EnableGamescopeComposerVR
 @MaxOutstandingSendThreadItem
@@ -13676,6 +13675,7 @@ AddUninstallEntry
 AddVRDeviceInfo
 AddedGameToWishlist
 Adding connection back to pool, but not found in in use list or waiting list
+Adding preview config for appid: %u\n
 Adding process %u for gameID %llu\n
 Adding window %llu for process %u and gameID %llu\n
 AdditionalRoute
@@ -13984,6 +13984,7 @@ Atlantic/Azores
 Atlantic/Cape_Verde
 Attempt to create persistent logs with no end date!
 Attempt to schedule '%s' %lldusec in the past
+Attempt to use CX11WindowProperty without an X11 connection: %s
 Attempted to change replicated CVar when you are not the GM\n
 Attempted to force startup mode after it was already set
 Attempted to set an invalid startup mode
@@ -17328,6 +17329,7 @@ CWritePrecompiledCacheAPIJob
 CYieldingScopedJobLock failed - there is no indication to the caller!!!
 CZipWriterFile was not finalized before destruction
 CZipWriterFile was not finalized before reuse
+C["tO
 C\n#direct_rendering_display_compositor
 C\n;deprecated_authentication_exists_from_geoloc_before_mintime
 C\n>k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse
@@ -18374,7 +18376,7 @@ Deaccel
 Debit Card (Nodwin)
 Debug
 DebugStatsSystem
-Dec  3 2025 01:18:16
+Dec  5 2025 01:07:37
 December
 Decipher Only
 Deckard
@@ -23301,6 +23303,7 @@ Loaded Config for RemotePlayConfig for App ID %u, Controller %u: %s\n
 Loaded Config for User Path for App ID %u, Controller %u: %s\n
 Loaded SDL version %s\n
 LoaderWindowSynchronization
+Loading config for appid: %u\n
 LobbyMatchmakingLegacy
 Local:
 LocalKeySet
@@ -26765,6 +26768,7 @@ Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS
 Plat_IsSteamOS3
+Plat_IsSteamOS3FactoryImage
 Plat_IsTesla
 Plat_IsWSL
 Plat_MSTime
@@ -27475,6 +27479,8 @@ RemoveFromFirewall
 RemoveLast
 RemoveUninstallEntry
 RemoveUserChatText
+Removing all edited configs\n
+Removing edited config for appid: %u\n
 Removing idle connection for %s, %d left open, %d requests waiting, %d requests still in-flight\n
 Removing in-use connection for %s, %d left open, %d requests waiting, %d requests still in-flight\n
 Removing now closed connection (%p) for %s\n
@@ -28974,6 +28980,7 @@ StandardPC
 Start
 Start Of Frame 0x%02x: width=%u, height=%u, components=%d
 Start Of Scan: %d components
+Start editing config for appid: %u\n
 Start in Steam Big Picture mode
 Start in gamepadui mode
 Start in regular mode (force Big Picture mode off)
@@ -30871,6 +30878,7 @@ UserStatus
 UserUpdateSession
 UserUpdateTimelineEntry
 Using black frame\n
+Using preview config for appid: %u\n
 Ut]<E
 UtlThreadSafeQueue
 Uyghur
