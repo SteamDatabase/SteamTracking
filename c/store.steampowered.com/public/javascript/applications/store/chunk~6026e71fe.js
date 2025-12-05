@@ -12249,7 +12249,21 @@
           "ml_playtime_recommender",
           "all_released",
           "all_upcoming",
-        ];
+        ],
+        _ = new Set([
+          "search",
+          "topwishlisted",
+          "trendingwishlisted",
+          "popularcomingsoon",
+          "mostplayeddemo",
+          "dailyactiveuserdemo",
+          "playednowdemo",
+          "contenthub_upcoming",
+          "contenthub_all",
+          "ml_wishlist_recommender",
+          "all",
+          "all_upcoming",
+        ]);
       function _(_) {
         return "string" == typeof _ && _.includes(_);
       }
@@ -20537,14 +20551,25 @@
         GetFlavorsForActiveTab() {
           const { activeTab: _, browseInfo: _ } = this.props,
             _ = _?.GetActiveTabUniqueID();
-          return _ && _?.tabs && _?.show_flavor_on_sale_tabs
-            ? _.tabs.filter(
-                (_) =>
-                  !(_ in _.show_flavor_on_sale_tabs) ||
-                  0 === _.show_flavor_on_sale_tabs[_].length ||
-                  _.show_flavor_on_sale_tabs[_].includes(_),
-              )
-            : _?.tabs;
+          if (_) {
+            let _ = _?.tabs;
+            return (
+              _ &&
+                _ &&
+                _.show_flavor_on_sale_tabs &&
+                (_ = _.filter(
+                  (_) =>
+                    !(_ in _.show_flavor_on_sale_tabs) ||
+                    0 === _.show_flavor_on_sale_tabs[_].length ||
+                    _.show_flavor_on_sale_tabs[_].includes(_),
+                )),
+              _ &&
+                _?.BFilterRequiresUpcoming() &&
+                (_ = _.filter((_) => _.has(_))),
+              _
+            );
+          }
+          return _?.tabs;
         }
         GetDefaultTab() {
           const _ = this.GetFlavorsForActiveTab();
@@ -28482,6 +28507,23 @@
         }
         BIsDefaultTab() {
           return this.m_bDefaultTab;
+        }
+        BFilterRequiresUpcoming() {
+          return (
+            !!this.m_activeTab &&
+            _.BFilterRequiresUpcomingStatic(this.m_activeTab)
+          );
+        }
+        static BFilterRequiresUpcomingStatic(_) {
+          if (1 == _?.sale_tag_filter?.clauses?.length) {
+            const _ = _?.sale_tag_filter?.clauses[0];
+            return (
+              "Must have" === _.type &&
+              1 === _.or_tags.length &&
+              "[Feature] Coming Soon" === _.or_tags[0]
+            );
+          }
+          return !1;
         }
         BFilterRequiresFeatureDemo() {
           return (

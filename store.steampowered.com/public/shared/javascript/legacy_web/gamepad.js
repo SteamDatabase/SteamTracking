@@ -4,20 +4,20 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
-    73: (e, t, n) => {
+    49: (e, t, n) => {
       n.d(t, { InitializeGamepadNavigation: () => V });
       var o = n(669),
         a = n.n(o),
-        s = n(588),
-        i = n(408),
-        r = n(191),
-        c = n(702),
-        l = n(186),
-        u = n(900),
-        d = n(572),
-        g = n(363),
-        b = n(315),
-        h = n(406),
+        s = n(601),
+        i = n(971),
+        r = n(674),
+        c = n(247),
+        l = n(785),
+        u = n(110),
+        d = n(508),
+        g = n(266),
+        b = n(802),
+        h = n(649),
         m = n(382),
         _ = n.n(m);
       function f(e) {
@@ -96,9 +96,9 @@
           OnForceMeasureFocusRing: () => s && s(),
         };
       }
-      var p = n(124),
-        S = n(821),
-        E = n(209);
+      var p = n(742),
+        S = n(154),
+        E = n(473);
       function w(e) {
         return e ? Function("event", e) : null;
       }
@@ -149,7 +149,7 @@
         }
         return !1;
       }
-      var T = n(437);
+      var T = n(610);
       const A = !1;
       function D(e) {
         const { name: t, root: n, navState: o } = e;
@@ -164,7 +164,7 @@
         const n = window.history.state;
         return { name: e, root: t, navState: n?.[e] };
       }
-      const O = new (n(304).wd)("FocusNavigation").Debug;
+      const O = new (n(128).wd)("FocusNavigation").Debug;
       var k;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
@@ -593,11 +593,11 @@
         },
       };
     },
-    488: (e, t, n) => {
+    213: (e, t, n) => {
       n.d(t, { A7: () => i, Vp: () => r, n4: () => c });
       var o = n(629),
-        a = n(65),
-        s = n(714);
+        a = n(684),
+        s = n(991);
       class i {
         PostMessage(e) {}
         RegisterForMessage(e) {}
@@ -664,16 +664,16 @@
       }
       (0, o.Cg)([a.o], c.prototype, "OnMessage", null);
     },
-    519: (e, t, n) => {
+    552: (e, t, n) => {
       n.d(t, { xr: () => o });
       const o = { x: "y", y: "x" };
     },
-    754: (e, t, n) => {
+    791: (e, t, n) => {
       n.d(t, { Jc: () => u, LU: () => b, YX: () => g, e0: () => h });
       var o = n(629),
-        a = n(624),
-        s = n(65),
-        i = n(480);
+        a = n(981),
+        s = n(684),
+        i = n(651);
       class r {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -789,7 +789,7 @@
       }
       (0, o.Cg)([s.o], h.prototype, "Unregister", null);
     },
-    821: (e, t, n) => {
+    154: (e, t, n) => {
       function o(e) {
         return null != e && void 0 !== e.focus;
       }
@@ -859,10 +859,10 @@
         }
       }
     },
-    304: (e, t, n) => {
+    128: (e, t, n) => {
       n.d(t, { wd: () => l });
       var o = n(629),
-        a = n(65);
+        a = n(684);
       class s {
         async GetObject(e, t) {
           try {
@@ -888,7 +888,7 @@
         }
       }
       var r,
-        c = n(480);
+        c = n(651);
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
@@ -1134,7 +1134,7 @@
         (window.EnableSteamConsole = (e = !0) =>
           u.Get().SetDebugLogEnabled("SteamClient", e));
     },
-    638: (e, t, n) => {
+    219: (e, t, n) => {
       function o(e, t) {
         return null == e || null == t
           ? e === t
@@ -1145,9 +1145,9 @@
       }
       n.d(t, { e: () => o });
     },
-    851: (e, t, n) => {
+    965: (e, t, n) => {
       n.d(t, { TS: () => c });
-      var o = n(527);
+      var o = n(96);
       function a() {
         return !!window.document;
       }
