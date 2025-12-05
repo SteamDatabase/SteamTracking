@@ -4161,7 +4161,6 @@ SellItemDialog = {
 	},
 
 	GetBuyerPriceAsInt: function() {
-				console.log('hi mom');
 		return GetPriceValueAsInt( $('market_sell_buyercurrency_input').value );
 	},
 
@@ -4236,10 +4235,13 @@ SellItemDialog = {
 			return;
 		}
 
-		if ( price <= 0 || buyerPrice <= 0 )
+		var nFloor = parseInt( g_rgWalletInfo[ 'wallet_market_minimum' ] ?? 1 );
+		if ( price <= 0 || buyerPrice <= 0 || price < nFloor || buyerPrice < ( 3 * nFloor ) )
 		{
 			$('market_sell_currency_input').style.borderColor = 'red';
 			this.DisplayError( 'You must enter a valid price.' );
+			var strError = 'The minimum per-unit price is %price%.';
+			this.DisplayError( strError.replace( '%price%', v_currencyformat( nFloor, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) ) )
 			return;
 		}
 
@@ -4474,17 +4476,33 @@ SellItemDialog = {
 		}
 	},
 
+	HighlightPrices: function() {
+		var nPrice = this.GetPriceAsInt();
+		var nFloor = parseInt( g_rgWalletInfo[ 'wallet_market_minimum' ] ?? 1 );
+
+		if ( nPrice < nFloor )
+		{
+			$J('#market_sell_currency_input').css("color", "#ff6464" );
+		}
+		else
+		{
+			$J('#market_sell_currency_input').css("color", "");
+		}
+	},
+
 	OnInputKeyUp: function( event ) {
 		var inputValue = this.GetPriceAsInt();
 		var nAmount = inputValue;
 		var quantity = this.GetQuantityAsInt();
+		var nFloor = parseInt( g_rgWalletInfo[ 'wallet_market_minimum' ] ?? 1 );
 
 		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
-			// Calculate what the buyer pays
-			var publisherFee = (typeof this.m_item.description.market_fee != 'undefined' && this.m_item.description.market_fee !== null) ? this.m_item.description.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
-			var info = CalculateAmountToSendForDesiredReceivedAmount( nAmount, publisherFee );
-			$('market_sell_buyercurrency_input').value = v_currencyformat( info.amount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
+			var ppct = parseFloat( g_rgWalletInfo[ 'wallet_publisher_fee_percent_default' ] ?? 0.10 );
+			var spct = parseFloat( g_rgWalletInfo[ 'wallet_fee_percent' ] ?? 0.05 );
+			var nTotalUnitPrice = GetTotalWithFees( nAmount, ppct, spct, g_rgWalletInfo );
+
+			$('market_sell_buyercurrency_input').value = v_currencyformat( nTotalUnitPrice, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
 
 			this.RecalculateTotal( nAmount, quantity );
 		}
@@ -4497,11 +4515,8 @@ SellItemDialog = {
 
 		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
-			// Calculate what the seller gets
-			var publisherFee = (typeof this.m_item.description.market_fee != 'undefined' && this.m_item.description.market_fee !== null) ? this.m_item.description.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
-			var feeInfo = CalculateFeeAmount( nAmount, publisherFee );
-			nAmount = nAmount - feeInfo.fees;
-			$('market_sell_currency_input').value = v_currencyformat( nAmount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
+			var nItemPrice = GetItemPriceFromTotal( nAmount, g_rgWalletInfo );
+			$('market_sell_currency_input').value = v_currencyformat( nItemPrice, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
 
 			this.RecalculateTotal( nAmount, quantity );
 		}
@@ -4513,6 +4528,7 @@ SellItemDialog = {
 			$( 'market_sell_dialog_total_youreceive_amount' ).update( v_currencyformat( nAmount * quantity,
 				GetCurrencyCode( g_rgWalletInfo['wallet_currency'] )
 			) );
+			this.HighlightPrices();
 		}
 		else
 		{

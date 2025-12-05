@@ -236,12 +236,6 @@ function GetItemPriceFromTotal( nTotal, rgWallet )
 			break;
 		}
 	}
-	return nBase;
+
+	return Math.max( nFloor, nBase );
 }
-
-
-function GetFeeTotal( base_amt, ppct, spct )
-{
-	return Math.max( 1, Math.floor( ( base_amt * ppct ) / 100 ) ) + Math.max( 1, Math.floor( ( base_amt * spct ) / 100 ) );
-}
-
