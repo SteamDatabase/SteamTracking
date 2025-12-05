@@ -1134,6 +1134,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new Map();
       function _(_, _, _) {
@@ -1207,20 +1208,14 @@
                 for (let _ = 0; _ < _.num_sections && _ < _.length; ++_, ++_) {
                   const _ = _[_],
                     _ = _.unique_id;
-                  _.show_on_tabs?.length > 0 && !_.show_on_tabs.includes(_)
+                  (0, _._)(_, _)
                     ? --_
                     : (_.push(_),
                       _.set(_, _.background_id),
                       0 === _ && _.set(_, _.background_id));
                 }
                 let _ = _;
-                for (
-                  ;
-                  _ < _.length &&
-                  _[_].show_on_tabs?.length > 0 &&
-                  !_[_].show_on_tabs.includes(_);
-                )
-                  _ += 1;
+                for (; _ < _.length && !(0, _._)(_, _[_]); ) _ += 1;
                 _.set(_.background_id, {
                   nBackgroundGroupID: _.background_id,
                   sectionUniqueIDs: _,
@@ -1235,9 +1230,7 @@
                     _.set(_, _.background_id);
                   }
               });
-              _ < _.length &&
-              _[_].show_on_tabs?.length > 0 &&
-              !_[_].show_on_tabs.includes(_);
+              _ < _.length && !(0, _._)(_, _[_]);
             )
               _++;
             _ < _.length && (_ = _[_].unique_id);

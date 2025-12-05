@@ -16848,10 +16848,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new Map();
       function _(_, _, _) {
-        var _, _, _;
+        var _, _;
         const _ = new Map(),
           _ = new Map(),
           _ = new Map();
@@ -16928,30 +16929,19 @@
             const _ = _.groups.length;
             for (
               _.groups.forEach((_, _) => {
-                var _, _;
                 if (_ >= _.length) return;
                 const _ = new Array();
                 for (let _ = 0; _ < _.num_sections && _ < _.length; ++_, ++_) {
                   const _ = _[_],
                     _ = _.unique_id;
-                  (null === (_ = _.show_on_tabs) || void 0 === _
-                    ? void 0
-                    : _.length) > 0 && !_.show_on_tabs.includes(_)
+                  (0, _._)(_, _)
                     ? --_
                     : (_.push(_),
                       _.set(_, _.background_id),
                       0 === _ && _.set(_, _.background_id));
                 }
                 let _ = _;
-                for (
-                  ;
-                  _ < _.length &&
-                  (null === (_ = _[_].show_on_tabs) || void 0 === _
-                    ? void 0
-                    : _.length) > 0 &&
-                  !_[_].show_on_tabs.includes(_);
-                )
-                  _ += 1;
+                for (; _ < _.length && !(0, _._)(_, _[_]); ) _ += 1;
                 _.set(_.background_id, {
                   nBackgroundGroupID: _.background_id,
                   sectionUniqueIDs: _,
@@ -16970,11 +16960,7 @@
                     _.set(_, _.background_id);
                   }
               });
-              _ < _.length &&
-              (null === (_ = _[_].show_on_tabs) || void 0 === _
-                ? void 0
-                : _.length) > 0 &&
-              !_[_].show_on_tabs.includes(_);
+              _ < _.length && !(0, _._)(_, _[_]);
             )
               _++;
             _ < _.length && (_ = _[_].unique_id);
@@ -34261,7 +34247,8 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const {
             tab: _,
@@ -34342,19 +34329,17 @@
               for (const _ of _)
                 (0, _._)(_.section_type) &&
                   _.capsules &&
-                  ((_.show_on_tabs &&
-                    _.show_on_tabs.length > 0 &&
-                    !_.show_on_tabs.some((_) => _ === _)) ||
-                    (_.capsules.find((_) => _.type === _.type && _._ === _._) &&
-                      (_ && (_ += "; "),
-                      (_ += (0, _._)(
-                        _,
-                        _,
-                        __webpack_require__,
-                        _.GetAccountID(),
-                        _,
-                        !0,
-                      )))));
+                  (0, _._)(_, _) &&
+                  _.capsules.find((_) => _.type === _.type && _._ === _._) &&
+                  (_ && (_ += "; "),
+                  (_ += (0, _._)(
+                    _,
+                    _,
+                    __webpack_require__,
+                    _.GetAccountID(),
+                    _,
+                    !0,
+                  )));
               return _;
             },
             [_, _, _, __webpack_require__, _, _],
@@ -34652,14 +34637,11 @@
                 (_) => {
                   const _ = _.GetSaleSectionByID(_);
                   if (!_) return !1;
-                  if (
-                    !_.show_on_tabs ||
-                    _.show_on_tabs.some((_) => _ == _.GetTab().unique_id)
-                  )
-                    return !1;
-                  const _ = _.find((_) =>
-                    _.show_on_tabs.some((_) => _.unique_id == _),
-                  );
+                  if ((0, _._)(_.GetActiveTabUniqueID(), _)) return !1;
+                  const _ =
+                    null == _
+                      ? void 0
+                      : _.find((_) => (0, _._)(_.unique_id, _));
                   return _ && _(_), !1;
                 },
                 [_, _, _, _],

@@ -2363,6 +2363,29 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_, _) {
+        return (
+          null == _ ||
+          null == _ ||
+          !_(_) ||
+          (_.reverse_show_on_tabs
+            ? Boolean(_.show_on_tabs && !_.show_on_tabs.includes(_))
+            : Boolean(_.show_on_tabs && _.show_on_tabs.includes(_)))
+        );
+      }
+      function _(_) {
+        return Boolean(
+          _.show_on_tabs &&
+            _.show_on_tabs.length > 0 &&
+            !_.diable_tab_id_filtering,
+        );
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       var _;
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -21189,7 +21212,8 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const {
             tab: _,
@@ -21270,19 +21294,17 @@
               for (const _ of _)
                 (0, _._)(_.section_type) &&
                   _.capsules &&
-                  ((_.show_on_tabs &&
-                    _.show_on_tabs.length > 0 &&
-                    !_.show_on_tabs.some((_) => _ === _)) ||
-                    (_.capsules.find((_) => _.type === _.type && _._ === _._) &&
-                      (_ && (_ += "; "),
-                      (_ += (0, _._)(
-                        _,
-                        _,
-                        __webpack_require__,
-                        _.GetAccountID(),
-                        _,
-                        !0,
-                      )))));
+                  (0, _._)(_, _) &&
+                  _.capsules.find((_) => _.type === _.type && _._ === _._) &&
+                  (_ && (_ += "; "),
+                  (_ += (0, _._)(
+                    _,
+                    _,
+                    __webpack_require__,
+                    _.GetAccountID(),
+                    _,
+                    !0,
+                  )));
               return _;
             },
             [_, _, _, __webpack_require__, _, _],
@@ -21554,14 +21576,8 @@
                 (_) => {
                   const _ = _.GetSaleSectionByID(_);
                   if (!_) return !1;
-                  if (
-                    !_.show_on_tabs ||
-                    _.show_on_tabs.some((_) => _ == _.GetTab().unique_id)
-                  )
-                    return !1;
-                  const _ = _.find((_) =>
-                    _.show_on_tabs.some((_) => _.unique_id == _),
-                  );
+                  if ((0, _._)(_.GetActiveTabUniqueID(), _)) return !1;
+                  const _ = _?.find((_) => (0, _._)(_.unique_id, _));
                   return _ && _(_), !1;
                 },
                 [_, _, _, _],
@@ -28457,7 +28473,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _.filter(
           (_) => null == _.visibility_index || _.visibility_index == _,
@@ -28484,11 +28501,7 @@
           return this.m_nSaleDay;
         }
         ShouldShowSection(_) {
-          return (
-            !this.m_activeTab ||
-            !_.show_on_tabs || 0 === _.show_on_tabs.length ||
-            _.show_on_tabs.some((_) => _ === this.GetActiveTabUniqueID())
-          );
+          return !this.m_activeTab || (0, _._)(this.GetActiveTabUniqueID(), _);
         }
         GetTab() {
           return this.m_activeTab;

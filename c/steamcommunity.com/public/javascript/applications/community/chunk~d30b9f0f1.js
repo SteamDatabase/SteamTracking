@@ -1615,6 +1615,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.k_ENow = "now"), (_.k_ESpecified = "specified");
@@ -2440,7 +2441,10 @@
             (this.m_changes & _) != _ && (this.m_changes |= _),
             (this.m_curModel.rtime32_last_local_modification =
               Date.now() / 1e3),
-            _._.Get().UpdatePreview(this.GetEventModel());
+            _._.Get().BIsConnected() &&
+              (0, _._)(this).then(() =>
+                _._.Get().UpdatePreview(this.GetEventModel()),
+              );
         }
         GetChangeTypes() {
           return this.m_changes;
@@ -24108,7 +24112,9 @@
                   "button",
                   {
                     className: _().JumpToButton,
-                    onClick: _,
+                    onClick: (_) => {
+                      _(), _.stopPropagation();
+                    },
                   },
                   (0, _._)("#Sale_Debug_LivePreview_GoTo"),
                 ),
@@ -25680,70 +25686,82 @@
           }),
         );
       }
-      let _ = class extends _.Component {
-        GetShowOnTabsList(_) {
-          const { saleSection: _, editLanguage: __webpack_require__ } =
-            this.props;
-          if (!_ || !_.show_on_tabs || 0 === _.show_on_tabs.length)
-            return (0, _._)("#Sale_Section_ShowOnTabs_All");
-          let _ = [];
-          for (const _ of _.show_on_tabs) {
-            const _ = _.tabs ? _.tabs.find((_) => _.unique_id === _) : null;
-            _ && _.push((0, _._)(_, __webpack_require__));
-          }
-          return 0 === _.length
-            ? (0, _._)("#Sale_Section_ShowOnTabs_All")
-            : _.join(", ");
-        }
-        OnEditTabSections() {
-          const { saleSection: _, editModel: _ } = this.props;
-          _(_, _);
-        }
-        render() {
-          const _ = _(this.props.editModel, this.props.saleSection);
-          return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(_._, {
-              varName: "diable_tab_id_filtering",
-              editModel: this.props.editModel,
-              section: this.props.saleSection,
-              textToken: "#Sale_Section_TabSettings_DisableIDFiltering",
-              ttipToken: "#Sale_Section_TabSettings_DisableIDFiltering_ttip",
-            }),
+      function _(_) {
+        const {
+            saleSection: _,
+            editModel: __webpack_require__,
+            editLanguage: _,
+          } = _,
+          [_, _] = (0, _._)(() => [
+            _(__webpack_require__, _),
+            _.reverse_show_on_tabs,
+          ]),
+          _ = _.useMemo(() => {
+            if (!_ || !_.show_on_tabs || 0 === _.show_on_tabs.length)
+              return (0, _._)("#Sale_Section_ShowOnTabs_All");
+            let _ = [];
+            for (const _ of _.show_on_tabs) {
+              const _ = _.tabs ? _.tabs.find((_) => _.unique_id === _) : null;
+              _ && _.push((0, _._)(_, _));
+            }
+            return 0 === _.length
+              ? (0, _._)("#Sale_Section_ShowOnTabs_All")
+              : _.join(", ");
+          }, [_, _.show_on_tabs, _]),
+          _ = _ == (0, _._)("#Sale_Section_ShowOnTabs_All");
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_._, {
+            varName: "diable_tab_id_filtering",
+            editModel: __webpack_require__,
+            section: _,
+            textToken: "#Sale_Section_TabSettings_DisableIDFiltering",
+            ttipToken: "#Sale_Section_TabSettings_DisableIDFiltering_ttip",
+          }),
+          _.createElement(_._, {
+            varName: "reverse_show_on_tabs",
+            editModel: __webpack_require__,
+            section: _,
+            textToken: "#Sale_Section_ShowOnTabs_Exclusion",
+            ttipToken: _
+              ? (0, _._)("#Sale_Section_ShowOnTabs_Exclusion_ttip2")
+              : (0, _._)("#Sale_Section_ShowOnTabs_Exclusion_ttip"),
+            disabled: _,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.EventDefaultRowContainer,
+            },
             _.createElement(
               "div",
               {
-                className: _.EventDefaultRowContainer,
+                className: (0, _._)(_.EventEditorTextTitle, _.ShowOnTabsLabel),
+              },
+              (0, _._)(
+                _
+                  ? "#Sale_Section_ShowOnTabs_reverse"
+                  : "#Sale_Section_ShowOnTabs",
+              ),
+              _,
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.ShowOnTabsButton,
               },
               _.createElement(
-                "div",
+                _._,
                 {
-                  className: (0, _._)(
-                    _.EventEditorTextTitle,
-                    _.ShowOnTabsLabel,
-                  ),
+                  onClick: () => _(__webpack_require__, _),
                 },
-                (0, _._)("#Sale_Section_ShowOnTabs"),
-                this.GetShowOnTabsList(_),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _.ShowOnTabsButton,
-                },
-                _.createElement(
-                  _._,
-                  {
-                    onClick: this.OnEditTabSections,
-                  },
-                  (0, _._)("#Sale_Section_ShowOnTabs_Edit"),
-                ),
+                (0, _._)("#Sale_Section_ShowOnTabs_Edit"),
               ),
             ),
-          );
-        }
-      };
+          ),
+        );
+      }
       function _(_, _, _, _) {
         const _ = _(_, _);
         if (!_) return;
@@ -25784,7 +25802,9 @@
               onOK: () => {
                 _
                   ? _(Array.from(_.keys()))
-                  : (_.show_on_tabs = Array.from(_.keys())),
+                  : ((_.show_on_tabs = Array.from(_.keys())),
+                    0 == _.show_on_tabs.length &&
+                      (_.reverse_show_on_tabs = void 0)),
                   _.SetDirty(_._.jsondata_sales);
               },
             },
@@ -25806,8 +25826,6 @@
         }
         return null;
       }
-      (0, _._)([_._], _.prototype, "OnEditTabSections", null),
-        (_ = (0, _._)([_._], _));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -28074,6 +28092,7 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         return _.disable_background
@@ -28377,7 +28396,9 @@
                         "button",
                         {
                           className: _.JumpToButton,
-                          onClick: _,
+                          onClick: (_) => {
+                            _(), _.stopPropagation();
+                          },
                         },
                         (0, _._)("#Sale_Debug_LivePreview_GoTo"),
                       ),
@@ -28544,19 +28565,17 @@
                     "#Sale_SectionDesc_Tabs",
                     (function (_, _) {
                       let _ = "";
-                      return (
-                        _ && _.length > 0 && _ && _.tabs && _.tabs.length > 0
-                          ? _.forEach((_) => {
-                              _.length > 0 && (_ += ", ");
-                              let _ = _.tabs.find((_) => _.unique_id == _);
-                              _ += _
-                                ? (0, _._)(_, (0, _._)(_._.LANGUAGE))
-                                : (0, _._)("#EventCalendar_MuteApp_Unknown");
-                            })
-                          : (_ = (0, _._)("#Sale_Section_ShowOnTabs_All")),
-                        _
-                      );
-                    })(__webpack_require__.show_on_tabs, _),
+                      (0, _._)(_) && _ && _.tabs && _.tabs.length > 0
+                        ? (0, _._)(_, _.tabs).forEach((_) => {
+                            _.length > 0 && (_ += ", ");
+                            let _ = _.tabs.find((_) => _.unique_id == _);
+                            _ += _
+                              ? (0, _._)(_, (0, _._)(_._.LANGUAGE))
+                              : (0, _._)("#EventCalendar_MuteApp_Unknown");
+                          })
+                        : (_ = (0, _._)("#Sale_Section_ShowOnTabs_All"));
+                      return _;
+                    })(__webpack_require__, _),
                   ),
                 )
               : null;
@@ -29316,6 +29335,7 @@
       }
       function _(_) {
         const { editModel: _, capsuleContainer: __webpack_require__ } = _,
+          _ = (0, _._)(() => __webpack_require__.sale_tag_filter),
           _ = (_) => {
             const _ = (0, _._)(_);
             (__webpack_require__.sale_tag_filter = _),
@@ -29323,7 +29343,8 @@
                 _,
                 _,
                 __webpack_require__.capsules,
-              ));
+              )),
+              _.SetDirty(_._.jsondata_sales);
           };
         return _.createElement(
           "div",
@@ -29336,7 +29357,7 @@
               className: _.FilterActionsCtn,
             },
             _.createElement(_, {
-              filter: __webpack_require__.sale_tag_filter,
+              filter: _,
             }),
             _.createElement(
               _._,
@@ -29345,7 +29366,7 @@
                   (0, _._)(
                     _.createElement(_, {
                       editModel: _,
-                      filter: __webpack_require__.sale_tag_filter || {
+                      filter: _ || {
                         clauses: [],
                       },
                       title: (0, _._)("#Sale_TagFilter_EditFilter"),
@@ -33622,6 +33643,43 @@
         }
       }
       (0, _._)([_._], _.prototype, "m_section", void 0);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_, _) {
+        return (
+          null == _ ||
+          null == _ ||
+          !_(_) ||
+          (_.reverse_show_on_tabs
+            ? Boolean(_.show_on_tabs && !_.show_on_tabs.includes(_))
+            : Boolean(_.show_on_tabs && _.show_on_tabs.includes(_)))
+        );
+      }
+      function _(_) {
+        return Boolean(
+          _.show_on_tabs &&
+            _.show_on_tabs.length > 0 &&
+            !_.diable_tab_id_filtering,
+        );
+      }
+      function _(_, _) {
+        var _;
+        return _(_) && _ && 0 != _.length
+          ? _.reverse_show_on_tabs
+            ? _.filter(
+                (_) => _.show_on_tabs && !_.show_on_tabs.includes(_.unique_id),
+              ).map((_) => _.unique_id)
+            : null !== (_ = _.show_on_tabs) && void 0 !== _
+              ? _
+              : []
+          : (null == _ ? void 0 : _.map((_) => _.unique_id)) || [];
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -42258,7 +42316,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _) {
         return _.filter(
           (_) => null == _.visibility_index || _.visibility_index == _,
@@ -42284,11 +42343,7 @@
           return this.m_nSaleDay;
         }
         ShouldShowSection(_) {
-          return (
-            !this.m_activeTab ||
-            !_.show_on_tabs || 0 === _.show_on_tabs.length ||
-            _.show_on_tabs.some((_) => _ === this.GetActiveTabUniqueID())
-          );
+          return !this.m_activeTab || (0, _._)(this.GetActiveTabUniqueID(), _);
         }
         GetTab() {
           return this.m_activeTab;

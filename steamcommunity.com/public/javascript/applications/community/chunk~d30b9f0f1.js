@@ -1537,12 +1537,12 @@
     69001: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Fl: () => N,
+        Fl: () => L,
         IQ: () => i,
         IT: () => o,
         Kl: () => l,
-        nG: () => O,
-        s2: () => L,
+        nG: () => P,
+        s2: () => O,
         z8: () => n,
       });
       var n,
@@ -1574,7 +1574,8 @@
         A = a(26161),
         k = a(54969),
         G = a(27666),
-        B = a(84864);
+        B = a(84864),
+        N = a(60169);
       !(function (e) {
         (e.k_ENow = "now"), (e.k_ESpecified = "specified");
       })(n || (n = {})),
@@ -1598,14 +1599,14 @@
         (function (e) {
           (e.k_EHour = "hour"), (e.k_EDay = "day"), (e.k_EWeek = "week");
         })(o || (o = {}));
-      var N;
-      function L(e) {
+      var L;
+      function O(e) {
         switch (e) {
-          case N.immediate:
+          case L.immediate:
             return "immediate";
-          case N.event_start:
+          case L.event_start:
             return "event_start";
-          case N.specified_time:
+          case L.specified_time:
             return "specific time";
         }
         return "unknown";
@@ -1614,14 +1615,14 @@
         (e[(e.immediate = 0)] = "immediate"),
           (e[(e.event_start = 1)] = "event_start"),
           (e[(e.specified_time = 2)] = "specified_time");
-      })(N || (N = {}));
-      class O {
+      })(L || (L = {}));
+      class P {
         constructor(e) {
           (this.m_curModel = void 0),
             (this.m_bChanged = !1),
             (this.m_changes = i.None),
             (this.m_bEnglishTextChanged = !1),
-            (this.visibilitySetting = N.immediate),
+            (this.visibilitySetting = L.immediate),
             (this.m_startTimeEditChoice = n.k_ENow),
             (this.m_endTimeEditChoice = l.k_EDuration),
             (this.m_editDurationType = void 0),
@@ -2399,7 +2400,10 @@
             (this.m_changes & e) != e && (this.m_changes |= e),
             (this.m_curModel.rtime32_last_local_modification =
               Date.now() / 1e3),
-            k.xr.Get().UpdatePreview(this.GetEventModel());
+            k.xr.Get().BIsConnected() &&
+              (0, N.MH)(this).then(() =>
+                k.xr.Get().UpdatePreview(this.GetEventModel()),
+              );
         }
         GetChangeTypes() {
           return this.m_changes;
@@ -2429,15 +2433,15 @@
         DeriveVisibilitySetting() {
           this.BHidden() &&
             !this.BUnlisted() &&
-            (this.visibilitySetting = O.ComputeVisibilitySetting(
+            (this.visibilitySetting = P.ComputeVisibilitySetting(
               this.m_curModel.startTime,
               this.m_curModel.visibilityStartTime,
             ));
         }
         static ComputeVisibilitySetting(e, t) {
-          let a = N.specified_time;
+          let a = L.specified_time;
           return (
-            !t || t <= 1 ? (a = N.immediate) : t == e && (a = N.event_start), a
+            !t || t <= 1 ? (a = L.immediate) : t == e && (a = L.event_start), a
           );
         }
         static CalculateEndTimeFromStartAndDuration(e, t, a) {
@@ -2514,11 +2518,11 @@
           switch (this.visibilitySetting) {
             default:
               return console.error("Unexpected: " + this.visibilitySetting), 0;
-            case N.immediate:
+            case L.immediate:
               return 0;
-            case N.event_start:
+            case L.event_start:
               return t <= 1 ? e : t;
-            case N.specified_time:
+            case L.specified_time:
               return this.m_curModel.visibilityStartTime < e
                 ? e
                 : this.m_curModel.visibilityStartTime;
@@ -2550,7 +2554,7 @@
           let e = E.HD.GetTimeNowWithOverride();
           return (
             !!(
-              this.visibilitySetting != N.specified_time ||
+              this.visibilitySetting != L.specified_time ||
               !this.m_curModel.visibilityStartTime ||
               0 == this.m_curModel.visibilityStartTime ||
               this.m_curModel.startTime < e ||
@@ -2783,7 +2787,7 @@
         }
         InternalComputeDurationRoundedEndTime(e) {
           const t =
-            O.CalculateEndTimeFromStartAndDuration(
+            P.CalculateEndTimeFromStartAndDuration(
               e,
               this.m_editDurationType,
               this.m_editDurationValue,
@@ -2985,9 +2989,9 @@
           let e = this.m_curModel.startTime;
           return (
             this.m_startTimeEditChoice == n.k_ESpecified &&
-            ((this.visibilitySetting == N.immediate &&
+            ((this.visibilitySetting == L.immediate &&
               e > E.HD.GetTimeNowWithOverride()) ||
-              (this.visibilitySetting == N.specified_time &&
+              (this.visibilitySetting == L.specified_time &&
                 this.m_curModel.visibilityStartTime < e))
           );
         }
@@ -3430,138 +3434,138 @@
             (this.m_curModel.jsondata.rt_migrated_time = o);
         }
       }
-      (0, r.Cg)([d.sH], O.prototype, "m_curModel", void 0),
-        (0, r.Cg)([d.sH], O.prototype, "m_bChanged", void 0),
-        (0, r.Cg)([d.sH], O.prototype, "m_changes", void 0),
-        (0, r.Cg)([d.sH], O.prototype, "m_bEnglishTextChanged", void 0),
-        (0, r.Cg)([d.sH], O.prototype, "visibilitySetting", void 0),
-        (0, r.Cg)([d.sH], O.prototype, "m_startTimeEditChoice", void 0),
-        (0, r.Cg)([d.sH], O.prototype, "m_endTimeEditChoice", void 0),
-        (0, r.Cg)([d.sH], O.prototype, "m_editDurationType", void 0),
-        (0, r.Cg)([d.sH], O.prototype, "m_editDurationValue", void 0),
-        (0, r.Cg)([C.oI], O.prototype, "GetEventStartTime", null),
-        (0, r.Cg)([C.oI], O.prototype, "GetEventEndTime", null),
-        (0, r.Cg)([C.oI], O.prototype, "GetEventVisibilityStartTime", null),
-        (0, r.Cg)([C.oI], O.prototype, "GetEventVisibilityEndTime", null),
-        (0, r.Cg)([C.oI], O.prototype, "GetOriginalEventStartTime", null),
-        (0, r.Cg)([C.oI], O.prototype, "GetOriginalEventEndTime", null),
-        (0, r.Cg)([C.oI], O.prototype, "BEnglishTextChanged", null),
-        (0, r.Cg)([C.oI], O.prototype, "IsValidStartTimeForEdit", null),
-        (0, r.Cg)([C.oI], O.prototype, "IsValidEndTimeForEdit", null),
-        (0, r.Cg)([C.oI], O.prototype, "BHasLanguage", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetSteamStoreSpotlight", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetLibraryHomeSpotlight", null),
+      (0, r.Cg)([d.sH], P.prototype, "m_curModel", void 0),
+        (0, r.Cg)([d.sH], P.prototype, "m_bChanged", void 0),
+        (0, r.Cg)([d.sH], P.prototype, "m_changes", void 0),
+        (0, r.Cg)([d.sH], P.prototype, "m_bEnglishTextChanged", void 0),
+        (0, r.Cg)([d.sH], P.prototype, "visibilitySetting", void 0),
+        (0, r.Cg)([d.sH], P.prototype, "m_startTimeEditChoice", void 0),
+        (0, r.Cg)([d.sH], P.prototype, "m_endTimeEditChoice", void 0),
+        (0, r.Cg)([d.sH], P.prototype, "m_editDurationType", void 0),
+        (0, r.Cg)([d.sH], P.prototype, "m_editDurationValue", void 0),
+        (0, r.Cg)([C.oI], P.prototype, "GetEventStartTime", null),
+        (0, r.Cg)([C.oI], P.prototype, "GetEventEndTime", null),
+        (0, r.Cg)([C.oI], P.prototype, "GetEventVisibilityStartTime", null),
+        (0, r.Cg)([C.oI], P.prototype, "GetEventVisibilityEndTime", null),
+        (0, r.Cg)([C.oI], P.prototype, "GetOriginalEventStartTime", null),
+        (0, r.Cg)([C.oI], P.prototype, "GetOriginalEventEndTime", null),
+        (0, r.Cg)([C.oI], P.prototype, "BEnglishTextChanged", null),
+        (0, r.Cg)([C.oI], P.prototype, "IsValidStartTimeForEdit", null),
+        (0, r.Cg)([C.oI], P.prototype, "IsValidEndTimeForEdit", null),
+        (0, r.Cg)([C.oI], P.prototype, "BHasLanguage", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetSteamStoreSpotlight", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetLibraryHomeSpotlight", null),
         (0, r.Cg)(
           [d.XI],
-          O.prototype,
+          P.prototype,
           "SetPushSourceToCrowdInAutomatically",
           null,
         ),
-        (0, r.Cg)([d.XI], O.prototype, "UpdateVisibilityState", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetVisibilityPublishingSetup", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetGIDs", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetVisibilityState", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetName", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetDescription", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetSubTitle", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetSummary", null),
-        (0, r.Cg)([d.XI], O.prototype, "PrepareAsClone", null),
-        (0, r.Cg)([d.XI], O.prototype, "setEventType", null),
+        (0, r.Cg)([d.XI], P.prototype, "UpdateVisibilityState", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetVisibilityPublishingSetup", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetGIDs", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetVisibilityState", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetName", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetDescription", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetSubTitle", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetSummary", null),
+        (0, r.Cg)([d.XI], P.prototype, "PrepareAsClone", null),
+        (0, r.Cg)([d.XI], P.prototype, "setEventType", null),
         (0, r.Cg)(
           [d.XI.bound],
-          O.prototype,
+          P.prototype,
           "SetEarliestAllowedStartTime",
           null,
         ),
-        (0, r.Cg)([d.XI.bound], O.prototype, "SetLatestAllowedEndTime", null),
-        (0, r.Cg)([d.XI.bound], O.prototype, "SetEventStartTime", null),
-        (0, r.Cg)([d.XI.bound], O.prototype, "SetEventEndTime", null),
-        (0, r.Cg)([d.XI.bound], O.prototype, "SetSaleVanityID", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "SetLatestAllowedEndTime", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "SetEventStartTime", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "SetEventEndTime", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "SetSaleVanityID", null),
         (0, r.Cg)(
           [d.XI.bound],
-          O.prototype,
+          P.prototype,
           "SetSaleUpdateLandingPageVanityID",
           null,
         ),
-        (0, r.Cg)([d.XI.bound], O.prototype, "SetVisibilityStartTime", null),
-        (0, r.Cg)([d.XI], O.prototype, "ResetSetVisibilityStartTime", null),
-        (0, r.Cg)([d.XI.bound], O.prototype, "SetVisibilityEndTime", null),
-        (0, r.Cg)([d.XI.bound], O.prototype, "SetActionEndTime", null),
-        (0, r.Cg)([d.XI], O.prototype, "ClearDirty", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetDirty", null),
-        (0, r.Cg)([d.XI], O.prototype, "DeriveTimeEditChoices", null),
-        (0, r.Cg)([d.XI], O.prototype, "DeriveVisibilitySetting", null),
-        (0, r.Cg)([d.XI], O.prototype, "OnPreSave", null),
-        (0, r.Cg)([d.XI], O.prototype, "Refresh", null),
-        (0, r.Cg)([C.oI], O.prototype, "BIsBeginTimeBeforeEnd", null),
-        (0, r.Cg)([C.oI], O.prototype, "BIsValidVisibilityStartTime", null),
-        (0, r.Cg)([C.oI], O.prototype, "GetEarliestStartTimeForEdit", null),
-        (0, r.Cg)([C.oI], O.prototype, "GetLatestEndTimeForEdit", null),
-        (0, r.Cg)([C.oI], O.prototype, "GetEarliestEndTimeForEdit", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "SetVisibilityStartTime", null),
+        (0, r.Cg)([d.XI], P.prototype, "ResetSetVisibilityStartTime", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "SetVisibilityEndTime", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "SetActionEndTime", null),
+        (0, r.Cg)([d.XI], P.prototype, "ClearDirty", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetDirty", null),
+        (0, r.Cg)([d.XI], P.prototype, "DeriveTimeEditChoices", null),
+        (0, r.Cg)([d.XI], P.prototype, "DeriveVisibilitySetting", null),
+        (0, r.Cg)([d.XI], P.prototype, "OnPreSave", null),
+        (0, r.Cg)([d.XI], P.prototype, "Refresh", null),
+        (0, r.Cg)([C.oI], P.prototype, "BIsBeginTimeBeforeEnd", null),
+        (0, r.Cg)([C.oI], P.prototype, "BIsValidVisibilityStartTime", null),
+        (0, r.Cg)([C.oI], P.prototype, "GetEarliestStartTimeForEdit", null),
+        (0, r.Cg)([C.oI], P.prototype, "GetLatestEndTimeForEdit", null),
+        (0, r.Cg)([C.oI], P.prototype, "GetEarliestEndTimeForEdit", null),
         (0, r.Cg)(
           [C.oI],
-          O.prototype,
+          P.prototype,
           "GetEarliestVisibilityStartTimeForEdit",
           null,
         ),
-        (0, r.Cg)([d.XI.bound], O.prototype, "SetImageURL", null),
-        (0, r.Cg)([C.oI], O.prototype, "GetImageHashAndExt", null),
-        (0, r.Cg)([C.oI], O.prototype, "GetImageHash", null),
-        (0, r.Cg)([C.oI], O.prototype, "BHasTitleImage", null),
-        (0, r.Cg)([C.oI], O.prototype, "LastTimeLanguageUpdate", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetLibrarySpotlight", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetLibrarySpotlightText", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetDemoAppIDForRepost", null),
-        (0, r.Cg)([d.XI], O.prototype, "ToggleTag", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetTag", null),
-        (0, r.Cg)([d.XI], O.prototype, "AddTag", null),
-        (0, r.Cg)([d.XI], O.prototype, "ClearTags", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetSteamAwardCategory", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetSteamAwardNomineeVoteIDs", null),
-        (0, r.Cg)([C.oI], O.prototype, "BDoesSupportLanguage", null),
-        (0, r.Cg)([d.XI], O.prototype, "SetNumSalesBackgroundHeader", null),
-        (0, r.Cg)([d.XI.bound], O.prototype, "SetBackgroundImageEnabled", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "SetImageURL", null),
+        (0, r.Cg)([C.oI], P.prototype, "GetImageHashAndExt", null),
+        (0, r.Cg)([C.oI], P.prototype, "GetImageHash", null),
+        (0, r.Cg)([C.oI], P.prototype, "BHasTitleImage", null),
+        (0, r.Cg)([C.oI], P.prototype, "LastTimeLanguageUpdate", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetLibrarySpotlight", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetLibrarySpotlightText", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetDemoAppIDForRepost", null),
+        (0, r.Cg)([d.XI], P.prototype, "ToggleTag", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetTag", null),
+        (0, r.Cg)([d.XI], P.prototype, "AddTag", null),
+        (0, r.Cg)([d.XI], P.prototype, "ClearTags", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetSteamAwardCategory", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetSteamAwardNomineeVoteIDs", null),
+        (0, r.Cg)([C.oI], P.prototype, "BDoesSupportLanguage", null),
+        (0, r.Cg)([d.XI], P.prototype, "SetNumSalesBackgroundHeader", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "SetBackgroundImageEnabled", null),
         (0, r.Cg)(
           [d.XI.bound],
-          O.prototype,
+          P.prototype,
           "SetSalePageBackgroundGroup",
           null,
         ),
         (0, r.Cg)(
           [d.XI.bound],
-          O.prototype,
+          P.prototype,
           "AddSalePageBackgroundGroup",
           null,
         ),
         (0, r.Cg)(
           [d.XI.bound],
-          O.prototype,
+          P.prototype,
           "RemoveSalePageBackgroundGroup",
           null,
         ),
         (0, r.Cg)(
           [d.XI.bound],
-          O.prototype,
+          P.prototype,
           "SetSalePageLastCoverSectionUntilEnd",
           null,
         ),
         (0, r.Cg)(
           [d.XI.bound],
-          O.prototype,
+          P.prototype,
           "ClearAllBackgroundImageGroupSettings",
           null,
         ),
-        (0, r.Cg)([d.XI.bound], O.prototype, "SetTabEnabled", null),
-        (0, r.Cg)([d.XI.bound], O.prototype, "SetTabBackgroundGroup", null),
-        (0, r.Cg)([d.XI.bound], O.prototype, "AddTabBackgroundGroup", null),
-        (0, r.Cg)([d.XI.bound], O.prototype, "RemoveTabBackgroundGroup", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "SetTabEnabled", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "SetTabBackgroundGroup", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "AddTabBackgroundGroup", null),
+        (0, r.Cg)([d.XI.bound], P.prototype, "RemoveTabBackgroundGroup", null),
         (0, r.Cg)(
           [d.XI.bound],
-          O.prototype,
+          P.prototype,
           "SetTabLastCoverSectionUntilEnd",
           null,
         ),
-        (0, r.Cg)([d.XI], O, "SetSaleSectionType", null);
+        (0, r.Cg)([d.XI], P, "SetSaleSectionType", null);
     },
     9701: (e, t, a) => {
       "use strict";
@@ -11358,12 +11362,12 @@
     28406: (e, t, a) => {
       "use strict";
       a.d(t, {
-        vx: () => tr,
-        sq: () => Zo,
-        ke: () => ir,
-        m: () => ar,
-        gB: () => nr,
-        sL: () => or,
+        vx: () => ar,
+        sq: () => er,
+        ke: () => or,
+        m: () => nr,
+        gB: () => lr,
+        sL: () => rr,
       });
       var n = a(22837),
         l = a(69001),
@@ -21785,7 +21789,12 @@
                 },
                 c.createElement(
                   "button",
-                  { className: gi().JumpToButton, onClick: o },
+                  {
+                    className: gi().JumpToButton,
+                    onClick: (e) => {
+                      o(), e.stopPropagation();
+                    },
+                  },
                   (0, A.we)("#Sale_Debug_LivePreview_GoTo"),
                 ),
               ),
@@ -23183,63 +23192,69 @@
           }),
         );
       }
-      let eo = class extends c.Component {
-        GetShowOnTabsList(e) {
-          const { saleSection: t, editLanguage: a } = this.props;
-          if (!e || !t.show_on_tabs || 0 === t.show_on_tabs.length)
-            return (0, A.we)("#Sale_Section_ShowOnTabs_All");
-          let n = [];
-          for (const l of t.show_on_tabs) {
-            const t = e.tabs ? e.tabs.find((e) => e.unique_id === l) : null;
-            t && n.push((0, b.ue)(t, a));
-          }
-          return 0 === n.length
-            ? (0, A.we)("#Sale_Section_ShowOnTabs_All")
-            : n.join(", ");
-        }
-        OnEditTabSections() {
-          const { saleSection: e, editModel: t } = this.props;
-          to(t, e);
-        }
-        render() {
-          const e = ao(this.props.editModel, this.props.saleSection);
-          return c.createElement(
-            c.Fragment,
-            null,
-            c.createElement(O.G, {
-              varName: "diable_tab_id_filtering",
-              editModel: this.props.editModel,
-              section: this.props.saleSection,
-              textToken: "#Sale_Section_TabSettings_DisableIDFiltering",
-              ttipToken: "#Sale_Section_TabSettings_DisableIDFiltering_ttip",
-            }),
+      function eo(e) {
+        const { saleSection: t, editModel: a, editLanguage: n } = e,
+          [l, i] = (0, s.q3)(() => [ao(a, t), t.reverse_show_on_tabs]),
+          o = c.useMemo(() => {
+            if (!l || !t.show_on_tabs || 0 === t.show_on_tabs.length)
+              return (0, A.we)("#Sale_Section_ShowOnTabs_All");
+            let e = [];
+            for (const a of t.show_on_tabs) {
+              const t = l.tabs ? l.tabs.find((e) => e.unique_id === a) : null;
+              t && e.push((0, b.ue)(t, n));
+            }
+            return 0 === e.length
+              ? (0, A.we)("#Sale_Section_ShowOnTabs_All")
+              : e.join(", ");
+          }, [n, t.show_on_tabs, l]),
+          r = o == (0, A.we)("#Sale_Section_ShowOnTabs_All");
+        return c.createElement(
+          c.Fragment,
+          null,
+          c.createElement(O.G, {
+            varName: "diable_tab_id_filtering",
+            editModel: a,
+            section: t,
+            textToken: "#Sale_Section_TabSettings_DisableIDFiltering",
+            ttipToken: "#Sale_Section_TabSettings_DisableIDFiltering_ttip",
+          }),
+          c.createElement(O.G, {
+            varName: "reverse_show_on_tabs",
+            editModel: a,
+            section: t,
+            textToken: "#Sale_Section_ShowOnTabs_Exclusion",
+            ttipToken: r
+              ? (0, A.we)("#Sale_Section_ShowOnTabs_Exclusion_ttip2")
+              : (0, A.we)("#Sale_Section_ShowOnTabs_Exclusion_ttip"),
+            disabled: r,
+          }),
+          c.createElement(
+            "div",
+            { className: p.EventDefaultRowContainer },
             c.createElement(
               "div",
-              { className: p.EventDefaultRowContainer },
-              c.createElement(
-                "div",
-                {
-                  className: (0, M.A)(
-                    p.EventEditorTextTitle,
-                    S.ShowOnTabsLabel,
-                  ),
-                },
-                (0, A.we)("#Sale_Section_ShowOnTabs"),
-                this.GetShowOnTabsList(e),
+              {
+                className: (0, M.A)(p.EventEditorTextTitle, S.ShowOnTabsLabel),
+              },
+              (0, A.we)(
+                i
+                  ? "#Sale_Section_ShowOnTabs_reverse"
+                  : "#Sale_Section_ShowOnTabs",
               ),
+              o,
+            ),
+            c.createElement(
+              "div",
+              { className: S.ShowOnTabsButton },
               c.createElement(
-                "div",
-                { className: S.ShowOnTabsButton },
-                c.createElement(
-                  m.jn,
-                  { onClick: this.OnEditTabSections },
-                  (0, A.we)("#Sale_Section_ShowOnTabs_Edit"),
-                ),
+                m.jn,
+                { onClick: () => to(a, t) },
+                (0, A.we)("#Sale_Section_ShowOnTabs_Edit"),
               ),
             ),
-          );
-        }
-      };
+          ),
+        );
+      }
       function to(e, t, a, n) {
         const i = ao(e, t);
         if (!i) return;
@@ -23277,7 +23292,9 @@
               onOK: () => {
                 n
                   ? n(Array.from(o.keys()))
-                  : (t.show_on_tabs = Array.from(o.keys())),
+                  : ((t.show_on_tabs = Array.from(o.keys())),
+                    0 == t.show_on_tabs.length &&
+                      (t.reverse_show_on_tabs = void 0)),
                   e.SetDirty(l.IQ.jsondata_sales);
               },
             },
@@ -23293,8 +23310,6 @@
         }
         return null;
       }
-      (0, ft.Cg)([Ze.oI], eo.prototype, "OnEditTabSections", null),
-        (eo = (0, ft.Cg)([r.PA], eo));
       var no = a(64238),
         lo = a.n(no),
         io = a(1608);
@@ -25309,14 +25324,15 @@
         );
       }
       var $o = a(86927),
-        Jo = a(50607);
-      function Zo(e, t, a) {
+        Jo = a(50607),
+        Zo = a(98924);
+      function er(e, t, a) {
         return e.disable_background
           ? { background: "transparent" }
           : (0, f.Vb)(e, t, a);
       }
-      const er = ["tabs", "social_share"];
-      function tr(e) {
+      const tr = ["tabs", "social_share"];
+      function ar(e) {
         return [
           "broadcast",
           "sale_item_browser",
@@ -25329,7 +25345,7 @@
           "social_share",
         ].includes(e);
       }
-      const ar = (0, r.PA)((e) => {
+      const nr = (0, r.PA)((e) => {
         var t;
         const {
             saleSection: a,
@@ -25409,7 +25425,7 @@
             (null === (t = null == ee ? void 0 : ee.tabs) || void 0 === t
               ? void 0
               : t.length) > 0,
-          ae = !er.includes(a.section_type),
+          ae = !tr.includes(a.section_type),
           ne = (function (e) {
             return [
               "items",
@@ -25541,7 +25557,7 @@
                   "coverBlur" == a.background_repeat ? p.Blur : "",
                 ),
                 style: {
-                  ...Zo(a, n.GetEventModel(), !1),
+                  ...er(a, n.GetEventModel(), !1),
                   opacity: T ? 0 : 1,
                   transition: "opacity 500ms",
                 },
@@ -25593,7 +25609,12 @@
                       },
                       c.createElement(
                         "button",
-                        { className: p.JumpToButton, onClick: z },
+                        {
+                          className: p.JumpToButton,
+                          onClick: (e) => {
+                            z(), e.stopPropagation();
+                          },
+                        },
                         (0, A.we)("#Sale_Debug_LivePreview_GoTo"),
                       ),
                     ),
@@ -25633,7 +25654,7 @@
                     expanded: !G,
                   }),
                 ),
-              c.createElement(lr, {
+              c.createElement(ir, {
                 editModel: n,
                 section: a,
                 tabSection: ee,
@@ -25650,7 +25671,7 @@
                       rootMargin: "0px 0px 100% 0px",
                       className: v.SectionTypePicker,
                     },
-                    c.createElement(nr, {
+                    c.createElement(lr, {
                       rgSectionTypeInfos: V,
                       sectionType: X,
                       fnSetSectionType: (e) => {
@@ -25669,7 +25690,7 @@
                 ),
             );
       });
-      function nr(e) {
+      function lr(e) {
         const {
             rgSectionTypeInfos: t,
             sectionType: a,
@@ -25714,7 +25735,7 @@
             c.createElement("div", { className: v.SectionTypeWarning }, o),
         );
       }
-      const lr = (e) => {
+      const ir = (e) => {
           const { editModel: t, section: a, tabSection: l, minimized: i } = e,
             o = l
               ? c.createElement(
@@ -25724,19 +25745,17 @@
                     "#Sale_SectionDesc_Tabs",
                     (function (e, t) {
                       let a = "";
-                      return (
-                        e && e.length > 0 && t && t.tabs && t.tabs.length > 0
-                          ? e.forEach((e) => {
-                              a.length > 0 && (a += ", ");
-                              let l = t.tabs.find((t) => t.unique_id == e);
-                              a += l
-                                ? (0, b.ue)(l, (0, n.sf)(k.TS.LANGUAGE))
-                                : (0, A.we)("#EventCalendar_MuteApp_Unknown");
-                            })
-                          : (a = (0, A.we)("#Sale_Section_ShowOnTabs_All")),
-                        a
-                      );
-                    })(a.show_on_tabs, l),
+                      (0, Zo.lf)(e) && t && t.tabs && t.tabs.length > 0
+                        ? (0, Zo.bq)(e, t.tabs).forEach((e) => {
+                            a.length > 0 && (a += ", ");
+                            let l = t.tabs.find((t) => t.unique_id == e);
+                            a += l
+                              ? (0, b.ue)(l, (0, n.sf)(k.TS.LANGUAGE))
+                              : (0, A.we)("#EventCalendar_MuteApp_Unknown");
+                          })
+                        : (a = (0, A.we)("#Sale_Section_ShowOnTabs_All"));
+                      return a;
+                    })(a, l),
                   ),
                 )
               : null;
@@ -25808,7 +25827,7 @@
             r && c.createElement("div", { className: v.SectionSummaryCtn }, r)
           );
         },
-        ir = (0, r.PA)((e) => {
+        or = (0, r.PA)((e) => {
           var t, a;
           const { editModel: n } = e,
             [i, o] = (0, c.useState)(!1),
@@ -25881,7 +25900,7 @@
                         };
                         (n.GetEventModel().jsondata.source_content_hub = e),
                           n.GetEventModel().jsondata
-                            .bAutoUpdateVanityURLForContentHub && or(e, n);
+                            .bAutoUpdateVanityURLForContentHub && rr(e, n);
                       }
                       n.SetDirty(l.IQ.jsondata_sales);
                     },
@@ -25890,7 +25909,7 @@
               : c.createElement(T.t, { size: "medium", position: "center" }),
           );
         });
-      function or(e, t) {
+      function rr(e, t) {
         if (e.type)
           if ("category" !== e.type || e.category)
             if ("tags" !== e.type || e.tagid) {
@@ -26409,9 +26428,12 @@
       }
       function de(e) {
         const { editModel: t, capsuleContainer: a } = e,
-          n = (e) => {
+          n = (0, m.q3)(() => a.sale_tag_filter),
+          l = (e) => {
             const n = (0, r.PF)(t);
-            (a.sale_tag_filter = e), (a.capsules = (0, r.vl)(n, e, a.capsules));
+            (a.sale_tag_filter = e),
+              (a.capsules = (0, r.vl)(n, e, a.capsules)),
+              t.SetDirty(o.IQ.jsondata_sales);
           };
         return p.createElement(
           "div",
@@ -26419,7 +26441,7 @@
           p.createElement(
             "div",
             { className: X.FilterActionsCtn },
-            p.createElement(oe, { filter: a.sale_tag_filter }),
+            p.createElement(oe, { filter: n }),
             p.createElement(
               C.$n,
               {
@@ -26427,9 +26449,9 @@
                   (0, G.pg)(
                     p.createElement(De, {
                       editModel: t,
-                      filter: a.sale_tag_filter || { clauses: [] },
+                      filter: n || { clauses: [] },
                       title: (0, z.we)("#Sale_TagFilter_EditFilter"),
-                      onApplyFilter: n,
+                      onApplyFilter: l,
                       ignoreStartingReferences: a,
                     }),
                     window,
@@ -30084,6 +30106,42 @@
         }
       }
       (0, l.Cg)([i.sH], g.prototype, "m_section", void 0);
+    },
+    98924: (e, t, a) => {
+      "use strict";
+      function n(e, t) {
+        return (
+          null == e ||
+          null == e ||
+          !l(t) ||
+          (t.reverse_show_on_tabs
+            ? Boolean(t.show_on_tabs && !t.show_on_tabs.includes(e))
+            : Boolean(t.show_on_tabs && t.show_on_tabs.includes(e)))
+        );
+      }
+      function l(e) {
+        return Boolean(
+          e.show_on_tabs &&
+            e.show_on_tabs.length > 0 &&
+            !e.diable_tab_id_filtering,
+        );
+      }
+      function i(e, t) {
+        var a;
+        return l(e) && t && 0 != t.length
+          ? e.reverse_show_on_tabs
+            ? t
+                .filter(
+                  (t) =>
+                    e.show_on_tabs && !e.show_on_tabs.includes(t.unique_id),
+                )
+                .map((e) => e.unique_id)
+            : null !== (a = e.show_on_tabs) && void 0 !== a
+              ? a
+              : []
+          : (null == t ? void 0 : t.map((e) => e.unique_id)) || [];
+      }
+      a.d(t, { bF: () => n, bq: () => i, lf: () => l });
     },
     1608: (e, t, a) => {
       "use strict";
@@ -37689,14 +37747,15 @@
     },
     99487: (e, t, a) => {
       "use strict";
-      a.d(t, { O: () => l, y: () => i });
-      var n = a(89686);
-      function l(e, t) {
+      a.d(t, { O: () => i, y: () => o });
+      var n = a(89686),
+        l = a(98924);
+      function i(e, t) {
         return e.filter(
           (e) => null == e.visibility_index || e.visibility_index == t,
         );
       }
-      class i {
+      class o {
         constructor(e, t, a = !0) {
           (this.m_activeTab = null),
             (this.m_capsuleFilter = null),
@@ -37707,7 +37766,7 @@
               (this.m_bDefaultTab = a),
               e.capsules && 0 !== e.capsules.length
                 ? ((this.m_capsuleFilter = new Set()),
-                  (l ? l(e.capsules, t) : e.capsules).forEach((e) => {
+                  (i ? i(e.capsules, t) : e.capsules).forEach((e) => {
                     this.m_capsuleFilter.add(Number(e.id));
                   }))
                 : (this.m_capsuleFilter = null));
@@ -37716,11 +37775,7 @@
           return this.m_nSaleDay;
         }
         ShouldShowSection(e) {
-          return (
-            !this.m_activeTab ||
-            !e.show_on_tabs || 0 === e.show_on_tabs.length ||
-            e.show_on_tabs.some((e) => e === this.GetActiveTabUniqueID())
-          );
+          return !this.m_activeTab || (0, l.bF)(this.GetActiveTabUniqueID(), e);
         }
         GetTab() {
           return this.m_activeTab;
@@ -37746,7 +37801,7 @@
         BFilterRequiresFeatureDemo() {
           return (
             !!this.m_activeTab &&
-            i.BFilterRequiresFeatureDemoStatic(this.m_activeTab)
+            o.BFilterRequiresFeatureDemoStatic(this.m_activeTab)
           );
         }
         static BFilterRequiresFeatureDemoStatic(e) {
@@ -37778,7 +37833,7 @@
         BFilterRequiresSteamDeckVerifiedOrPlayable() {
           return (
             !!this.m_activeTab &&
-            i.BFilterRequiresSteamDeckVerifiedOrPlayableStatic(this.m_activeTab)
+            o.BFilterRequiresSteamDeckVerifiedOrPlayableStatic(this.m_activeTab)
           );
         }
         static BFilterRequiresSteamDeckVerifiedOrPlayableStatic(e) {

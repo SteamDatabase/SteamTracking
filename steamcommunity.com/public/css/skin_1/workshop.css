@@ -2678,7 +2678,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	cursor: pointer;
 }
 
-.workshopItemSplitName {
+.workshopItemSplitName, .workshopItemSplitName > a {
 	color:#413C2F;
 	width:150px;
 	font-size: 12px;
