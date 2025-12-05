@@ -7540,20 +7540,34 @@
         R = a(8092);
       const x = -1,
         H = (0, u.PA)((e) => {
-          const { capsuleContainer: t } = e,
-            a = (0, _.q3)(() => t.smart_section),
-            n = Boolean(t.sale_tag_filter);
-          return m.createElement(
-            v.tH,
-            null,
-            n && m.createElement(U, { ...e }),
-            !a && !n && m.createElement(j, { ...e }),
+          const { editModel: t, capsuleContainer: a } = e,
+            [n, l, i] = (0, _.q3)(() => [
+              a.smart_section,
+              a.smart_section_type,
+              a.sale_tag_filter,
+            ]);
+          let o = "manual";
+          return (
+            n && (o = null == l ? "linked_app_list" : "smart_section"),
+            m.createElement(
+              v.tH,
+              null,
+              "manual" == o &&
+                m.createElement(m.Fragment, null, m.createElement(j, { ...e })),
+              "linked_app_list" == o &&
+                m.createElement(m.Fragment, null, m.createElement(U, { ...e })),
+              "smart_section" == o &&
+                m.createElement(
+                  m.Fragment,
+                  null,
+                  m.createElement(d.WR, { editModel: t, capsuleContainer: a }),
+                ),
+            )
           );
         });
       function z(e) {
         const { capsuleContainer: t, editModel: a } = e,
-          n = (0, _.q3)(() => t.smart_section),
-          o = (function (e, t) {
+          n = (function (e, t) {
             const a = (a, n) => {
                 var o, r;
                 if (a) {
@@ -7617,19 +7631,18 @@
               };
             return n;
           })(t, a),
-          r = Boolean(t.sale_tag_filter),
-          s = Boolean(
-            n &&
-              (r ||
-                a.GetEventModel().GetTaggedItems().length > 0 ||
-                a.GetEventModel().BUsesContentHubForItemSource()),
+          o = Boolean(t.sale_tag_filter),
+          r = Boolean(
+            o ||
+              a.GetEventModel().GetTaggedItems().length > 0 ||
+              a.GetEventModel().BUsesContentHubForItemSource(),
           );
         return m.createElement(
           v.tH,
           null,
-          s &&
+          r &&
             m.createElement(h.RF, {
-              onChange: o,
+              onChange: n,
               label: (0, N.we)("#Sale_TaggedItemFilter"),
               description: t.sale_tag_filter
                 ? ""
@@ -26394,43 +26407,40 @@
           }),
         );
       }
-      let de = class extends p.Component {
-        OnApplyFilter(e) {
-          const { editModel: t, capsuleContainer: a } = this.props,
-            n = (0, r.PF)(t);
-          (a.sale_tag_filter = e), (a.capsules = (0, r.vl)(n, e, a.capsules));
-        }
-        OnEditFilter() {
-          const { capsuleContainer: e } = this.props;
-          (0, G.pg)(
-            p.createElement(De, {
-              editModel: this.props.editModel,
-              filter: e.sale_tag_filter || { clauses: [] },
-              title: (0, z.we)("#Sale_TagFilter_EditFilter"),
-              onApplyFilter: this.OnApplyFilter,
-              ignoreStartingReferences: e,
-            }),
-            window,
-          );
-        }
-        render() {
-          const { capsuleContainer: e } = this.props;
-          return p.createElement(
+      function de(e) {
+        const { editModel: t, capsuleContainer: a } = e,
+          n = (e) => {
+            const n = (0, r.PF)(t);
+            (a.sale_tag_filter = e), (a.capsules = (0, r.vl)(n, e, a.capsules));
+          };
+        return p.createElement(
+          "div",
+          { className: X.FilterDisplayCtn },
+          p.createElement(
             "div",
-            { className: X.FilterDisplayCtn },
+            { className: X.FilterActionsCtn },
+            p.createElement(oe, { filter: a.sale_tag_filter }),
             p.createElement(
-              "div",
-              { className: X.FilterActionsCtn },
-              p.createElement(oe, { filter: e.sale_tag_filter }),
-              p.createElement(
-                C.$n,
-                { onClick: this.OnEditFilter },
-                (0, z.we)("#Sale_TagFilter_EditFilter"),
-              ),
+              C.$n,
+              {
+                onClick: () => {
+                  (0, G.pg)(
+                    p.createElement(De, {
+                      editModel: t,
+                      filter: a.sale_tag_filter || { clauses: [] },
+                      title: (0, z.we)("#Sale_TagFilter_EditFilter"),
+                      onApplyFilter: n,
+                      ignoreStartingReferences: a,
+                    }),
+                    window,
+                  );
+                },
+              },
+              (0, z.we)("#Sale_TagFilter_EditFilter"),
             ),
-          );
-        }
-      };
+          ),
+        );
+      }
       function ue(e) {
         const { editModel: t } = e,
           [a, n] = p.useState(!1),
@@ -26984,14 +26994,11 @@
           }),
         );
       }
-      (0, n.Cg)([U.oI], de.prototype, "OnApplyFilter", null),
-        (0, n.Cg)([U.oI], de.prototype, "OnEditFilter", null),
-        (de = (0, n.Cg)([_.PA], de)),
-        (function (e) {
-          (e[(e.ShowIncludedItems = 0)] = "ShowIncludedItems"),
-            (e[(e.ShowAllItems = 1)] = "ShowAllItems"),
-            (e[(e.ShowFilteredOutItems = 2)] = "ShowFilteredOutItems");
-        })(pe || (pe = {}));
+      !(function (e) {
+        (e[(e.ShowIncludedItems = 0)] = "ShowIncludedItems"),
+          (e[(e.ShowAllItems = 1)] = "ShowAllItems"),
+          (e[(e.ShowFilteredOutItems = 2)] = "ShowFilteredOutItems");
+      })(pe || (pe = {}));
       const ve = (0, _.PA)((e) =>
           p.createElement(
             A.K,

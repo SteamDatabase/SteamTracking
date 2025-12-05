@@ -8170,26 +8170,48 @@
         _ = __webpack_require__("chunkid");
       const _ = -1,
         _ = (0, _._)((_) => {
-          const { capsuleContainer: _ } = _,
-            _ = (0, _._)(() => _.smart_section),
-            _ = Boolean(_.sale_tag_filter);
-          return _.createElement(
-            _._,
-            null,
-            _ &&
-              _.createElement(_, {
-                ..._,
-              }),
-            !_ &&
-              !_ &&
-              _.createElement(_, {
-                ..._,
-              }),
+          const { editModel: _, capsuleContainer: __webpack_require__ } = _,
+            [_, _, _] = (0, _._)(() => [
+              __webpack_require__.smart_section,
+              __webpack_require__.smart_section_type,
+              __webpack_require__.sale_tag_filter,
+            ]);
+          let _ = "manual";
+          return (
+            _ && (_ = null == _ ? "linked_app_list" : "smart_section"),
+            _.createElement(
+              _._,
+              null,
+              "manual" == _ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(_, {
+                    ..._,
+                  }),
+                ),
+              "linked_app_list" == _ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(_, {
+                    ..._,
+                  }),
+                ),
+              "smart_section" == _ &&
+                _.createElement(
+                  _.Fragment,
+                  null,
+                  _.createElement(_._, {
+                    editModel: _,
+                    capsuleContainer: __webpack_require__,
+                  }),
+                ),
+            )
           );
         });
       function _(_) {
         const { capsuleContainer: _, editModel: __webpack_require__ } = _,
-          _ = (0, _._)(() => _.smart_section),
           _ = (function (_, _) {
             const _ = (_, _) => {
                 var _, _;
@@ -8258,13 +8280,11 @@
           })(_, __webpack_require__),
           _ = Boolean(_.sale_tag_filter),
           _ = Boolean(
-            _ &&
-              (_ ||
-                __webpack_require__.GetEventModel().GetTaggedItems().length >
-                  0 ||
-                __webpack_require__
-                  .GetEventModel()
-                  .BUsesContentHubForItemSource()),
+            _ ||
+              __webpack_require__.GetEventModel().GetTaggedItems().length > 0 ||
+              __webpack_require__
+                .GetEventModel()
+                .BUsesContentHubForItemSource(),
           );
         return _.createElement(
           _._,
@@ -29294,59 +29314,53 @@
           }),
         );
       }
-      let _ = class extends _.Component {
-        OnApplyFilter(_) {
-          const { editModel: _, capsuleContainer: __webpack_require__ } =
-              this.props,
-            _ = (0, _._)(_);
-          (__webpack_require__.sale_tag_filter = _),
-            (__webpack_require__.capsules = (0, _._)(
-              _,
-              _,
-              __webpack_require__.capsules,
-            ));
-        }
-        OnEditFilter() {
-          const { capsuleContainer: _ } = this.props;
-          (0, _._)(
-            _.createElement(_, {
-              editModel: this.props.editModel,
-              filter: _.sale_tag_filter || {
-                clauses: [],
-              },
-              title: (0, _._)("#Sale_TagFilter_EditFilter"),
-              onApplyFilter: this.OnApplyFilter,
-              ignoreStartingReferences: _,
-            }),
-            window,
-          );
-        }
-        render() {
-          const { capsuleContainer: _ } = this.props;
-          return _.createElement(
+      function _(_) {
+        const { editModel: _, capsuleContainer: __webpack_require__ } = _,
+          _ = (_) => {
+            const _ = (0, _._)(_);
+            (__webpack_require__.sale_tag_filter = _),
+              (__webpack_require__.capsules = (0, _._)(
+                _,
+                _,
+                __webpack_require__.capsules,
+              ));
+          };
+        return _.createElement(
+          "div",
+          {
+            className: _.FilterDisplayCtn,
+          },
+          _.createElement(
             "div",
             {
-              className: _.FilterDisplayCtn,
+              className: _.FilterActionsCtn,
             },
+            _.createElement(_, {
+              filter: __webpack_require__.sale_tag_filter,
+            }),
             _.createElement(
-              "div",
+              _._,
               {
-                className: _.FilterActionsCtn,
-              },
-              _.createElement(_, {
-                filter: _.sale_tag_filter,
-              }),
-              _.createElement(
-                _._,
-                {
-                  onClick: this.OnEditFilter,
+                onClick: () => {
+                  (0, _._)(
+                    _.createElement(_, {
+                      editModel: _,
+                      filter: __webpack_require__.sale_tag_filter || {
+                        clauses: [],
+                      },
+                      title: (0, _._)("#Sale_TagFilter_EditFilter"),
+                      onApplyFilter: _,
+                      ignoreStartingReferences: __webpack_require__,
+                    }),
+                    window,
+                  );
                 },
-                (0, _._)("#Sale_TagFilter_EditFilter"),
-              ),
+              },
+              (0, _._)("#Sale_TagFilter_EditFilter"),
             ),
-          );
-        }
-      };
+          ),
+        );
+      }
       function _(_) {
         const { editModel: _ } = _,
           [__webpack_require__, _] = _.useState(!1),
@@ -29981,14 +29995,11 @@
           }),
         );
       }
-      (0, _._)([_._], _.prototype, "OnApplyFilter", null),
-        (0, _._)([_._], _.prototype, "OnEditFilter", null),
-        (_ = (0, _._)([_._], _)),
-        (function (_) {
-          (_[(_.ShowIncludedItems = 0)] = "ShowIncludedItems"),
-            (_[(_.ShowAllItems = 1)] = "ShowAllItems"),
-            (_[(_.ShowFilteredOutItems = 2)] = "ShowFilteredOutItems");
-        })(_ || (_ = {}));
+      !(function (_) {
+        (_[(_.ShowIncludedItems = 0)] = "ShowIncludedItems"),
+          (_[(_.ShowAllItems = 1)] = "ShowAllItems"),
+          (_[(_.ShowFilteredOutItems = 2)] = "ShowFilteredOutItems");
+      })(_ || (_ = {}));
       const _ = (0, _._)((_) =>
           _.createElement(
             _._,
