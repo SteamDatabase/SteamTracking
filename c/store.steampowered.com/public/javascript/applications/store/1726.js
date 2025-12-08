@@ -4232,7 +4232,13 @@
           }
           return _;
         }
-        async LoadPartnerEventsPageable(_, _, __webpack_require__ = 0, _ = 0) {
+        async LoadPartnerEventsPageable(
+          _,
+          _,
+          __webpack_require__ = 0,
+          _ = 0,
+          _,
+        ) {
           let _ = new Array(),
             _ = _._.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
             _ = {
@@ -4242,6 +4248,7 @@
               count: _,
               _: _._.LANGUAGE,
               origin: self.origin,
+              exclude_tags: _ && _.length > 0 ? _?.join(",") : void 0,
             };
           try {
             let _ = await _().get(_, {

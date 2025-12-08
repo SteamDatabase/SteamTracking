@@ -4016,19 +4016,20 @@
           }
           return u;
         }
-        async LoadPartnerEventsPageable(e, t, a = 0, n = 0) {
-          let i = new Array(),
-            o = v.TS.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
-            l = {
+        async LoadPartnerEventsPageable(e, t, a = 0, n = 0, i) {
+          let o = new Array(),
+            l = v.TS.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
+            c = {
               clan_accountid: e ? e.GetAccountID() : void 0,
               appid: t,
               offset: a,
               count: n,
               l: v.TS.LANGUAGE,
               origin: self.origin,
+              exclude_tags: i && i.length > 0 ? i?.join(",") : void 0,
             };
           try {
-            let e = await s().get(o, { params: l });
+            let e = await s().get(l, { params: c });
             (0, r.h5)(() => {
               for (let t of e.data.events) {
                 let e = b(t);
@@ -4036,7 +4037,7 @@
                   let e = new d.b(t.clan_steamid);
                   this.InsertEventModelFromClanEventData(e, t);
                 }
-                i.push(this.m_mapExistingEvents.get(e));
+                o.push(this.m_mapExistingEvents.get(e));
               }
             });
           } catch (e) {
@@ -4044,7 +4045,7 @@
               "LoadClanEventInDateRange hit error " + (0, p.H)(e).strErrorMsg,
             );
           }
-          return i;
+          return o;
         }
         async GetBestEventsForCurrentUser(e, t, a) {
           let n = new Array(),

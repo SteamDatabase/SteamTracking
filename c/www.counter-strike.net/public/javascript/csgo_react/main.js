@@ -35879,6 +35879,7 @@
       function _(_, _) {
         return _(_) ? _ + _.announcement_body.gid : _.gid + (_ ? _ : "");
       }
+      const _ = ["hide_library_detail", "mod_hide_library_detail"];
       class _ {
         appid;
         date;
@@ -36494,7 +36495,13 @@
           }
           return _;
         }
-        async LoadPartnerEventsPageable(_, _, __webpack_require__ = 0, _ = 0) {
+        async LoadPartnerEventsPageable(
+          _,
+          _,
+          __webpack_require__ = 0,
+          _ = 0,
+          _,
+        ) {
           let _ = new Array(),
             _ = _.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
             _ = {
@@ -36504,6 +36511,7 @@
               count: _,
               _: _.LANGUAGE,
               origin: self.origin,
+              exclude_tags: _ && _.length > 0 ? _?.join(",") : void 0,
             };
           try {
             let _ = await _().get(_, {
@@ -54267,9 +54275,13 @@
           _ = !!_.updates;
         if (((0, _.useEffect)(() => _(0), [_]), !__webpack_require__))
           return (
-            _.LoadPartnerEventsPageable(_.InitFromClanID(0), 730, 0, 100).then(
-              (_) => _(_),
-            ),
+            _.LoadPartnerEventsPageable(
+              _.InitFromClanID(0),
+              730,
+              0,
+              100,
+              _,
+            ).then((_) => _(_)),
             _.createElement(_, {
               bOverlapping: !0,
             })
@@ -54694,9 +54706,13 @@
         _ = (_) => {
           const [_, __webpack_require__] = (0, _.useState)(void 0);
           _ ||
-            _.LoadPartnerEventsPageable(_.InitFromClanID(0), 730, 0, 100).then(
-              (_) => __webpack_require__(_),
-            );
+            _.LoadPartnerEventsPageable(
+              _.InitFromClanID(0),
+              730,
+              0,
+              100,
+              _,
+            ).then((_) => __webpack_require__(_));
           let _ = [];
           if (_)
             for (const _ of _)
@@ -55157,9 +55173,13 @@
           _ = new URLSearchParams(_.search).has("is_embedded_in_client");
         if (!__webpack_require__)
           return (
-            _.LoadPartnerEventsPageable(_.InitFromClanID(0), 730, 0, 100).then(
-              (_) => _(_),
-            ),
+            _.LoadPartnerEventsPageable(
+              _.InitFromClanID(0),
+              730,
+              0,
+              100,
+              _,
+            ).then((_) => _(_)),
             _.createElement("div", null)
           );
         let _ = __webpack_require__.find((_) => _.GID == _._);
