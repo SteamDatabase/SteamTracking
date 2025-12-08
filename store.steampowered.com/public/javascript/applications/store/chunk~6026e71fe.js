@@ -8730,7 +8730,7 @@
     },
     89409: (e, t, a) => {
       "use strict";
-      a.d(t, { y: () => M });
+      a.d(t, { k: () => O, y: () => M });
       var n = a(90626),
         r = a(10224),
         i = a(78327),
@@ -9009,28 +9009,27 @@
           ),
         );
       }
-      const M = (e) => {
-        let { displayStyle: t } = e,
-          a = (0, i.Qn)();
-        if ("purchaseonlydisplay" === t) return n.createElement(F, { ...e });
-        if ("bundle" == e.type || "sub" == e.type)
-          return n.createElement(s.pb, { ...e });
-        if (a) return n.createElement(s.pb, { ...e });
-        switch (
-          (!(0, r.c5)() ||
-            ("library" != t && "animated" != t) ||
-            (t = "bordered"),
-          t)
-        ) {
+      function M(e) {
+        const { displayStyle: t, requestCompact: a, ...l } = e,
+          { type: c } = e,
+          m = (0, i.Qn)();
+        if ("purchaseonlydisplay" === t) return n.createElement(F, { ...l });
+        if (m) return n.createElement(s.pb, { ...l });
+        if (a && !(0, r.c5)()) return n.createElement(o.p, { ...l });
+        if ("bundle" == c || "sub" == c) return n.createElement(s.pb, { ...l });
+        if ((0, r.c5)() && ("library" == t || "animated" == t))
+          return n.createElement(s.pb, { ...e, bShowReviewSummary: !0 });
+        switch (t) {
           case "library":
           case "animated":
-            return n.createElement(k, { ...e });
-          case "compactlist":
-            return n.createElement(o.p, { ...e });
+            return n.createElement(k, { ...l });
           default:
-            return n.createElement(s.pb, { ...e, bShowReviewSummary: !0 });
+            return n.createElement(s.pb, { ...l, bShowReviewSummary: !0 });
         }
-      };
+      }
+      function O(e, t) {
+        return "purchaseonlydisplay" !== e && !t && !(0, r.c5)();
+      }
     },
     30294: (e, t, a) => {
       "use strict";
@@ -18464,9 +18463,7 @@
                 feature: b,
                 depth: E,
                 activeTab: s,
-                displayStyle: this.state.bCompactViewMode
-                  ? "compactlist"
-                  : "library",
+                compactDisplay: this.state.bCompactViewMode,
               }),
             l &&
               0 == c.length &&
@@ -18499,72 +18496,73 @@
                     ),
               ),
           );
-          return (
-            t?.enable_faceted_browsing &&
-              (w = n.createElement(
-                qe,
-                {
-                  language: r,
-                  section: t,
-                  event: a,
-                  facetFilterState: this.state.facetFilterState,
-                  nMaxFacetValues: t.max_facet_values_for_facet || 100,
-                  fnOnUpdateFilter: this.OnUpdateFacetFilter,
-                  onInitFilter: async () => {
-                    let e = this.props.section.facets;
-                    Ur.Debug("FacetedSaleSection.onInitFilter', rgFacet"),
-                      !e &&
-                        this.props.section.facet_auto_generate_options &&
-                        ((e = await (0, xr.$R)(
-                          this.props.section.facet_auto_generate_options,
-                        )),
-                        Ur.Debug(
-                          "FacetedSaleSection.onInitFilter autogen completed', rgFacet",
-                        )),
-                      this.setState({
-                        facetFilterState: new Ne(
-                          e ?? [],
-                          this.props.section.facet_sort_order ||
-                            i.IS.k_ESortFacetsByMatchCount,
-                          this.props.language,
-                          je(this.props.event, this.props.section),
-                        ),
-                      });
-                  },
-                  ...this.state.results,
+          t?.enable_faceted_browsing &&
+            (w = n.createElement(
+              qe,
+              {
+                language: r,
+                section: t,
+                event: a,
+                facetFilterState: this.state.facetFilterState,
+                nMaxFacetValues: t.max_facet_values_for_facet || 100,
+                fnOnUpdateFilter: this.OnUpdateFacetFilter,
+                onInitFilter: async () => {
+                  let e = this.props.section.facets;
+                  Ur.Debug("FacetedSaleSection.onInitFilter', rgFacet"),
+                    !e &&
+                      this.props.section.facet_auto_generate_options &&
+                      ((e = await (0, xr.$R)(
+                        this.props.section.facet_auto_generate_options,
+                      )),
+                      Ur.Debug(
+                        "FacetedSaleSection.onInitFilter autogen completed', rgFacet",
+                      )),
+                    this.setState({
+                      facetFilterState: new Ne(
+                        e ?? [],
+                        this.props.section.facet_sort_order ||
+                          i.IS.k_ESortFacetsByMatchCount,
+                        this.props.language,
+                        je(this.props.event, this.props.section),
+                      ),
+                    });
                 },
-                w,
-              )),
+                ...this.state.results,
+              },
+              w,
+            ));
+          const A = (0, Hr.k)("library", this.props.bInGamepadUI);
+          return n.createElement(
+            n.Fragment,
+            null,
             n.createElement(
-              n.Fragment,
-              null,
+              "div",
+              { className: u.SaleSectionTitleCtn },
+              n.createElement(q.jR, {
+                section: t,
+                event: a,
+                nHiddenCapsules: g,
+                ...this.props,
+              }),
+            ),
+            n.createElement(
+              "div",
+              { className: Or().SaleItemBrowserContainer },
               n.createElement(
-                "div",
-                { className: u.SaleSectionTitleCtn },
-                n.createElement(q.jR, {
-                  section: t,
-                  event: a,
-                  nHiddenCapsules: g,
-                  ...this.props,
-                }),
-              ),
-              n.createElement(
-                "div",
-                { className: Or().SaleItemBrowserContainer },
+                Fr.Z,
+                { className: Or().SaleItemBrowserHeaderContainer },
                 n.createElement(
-                  Fr.Z,
-                  { className: Or().SaleItemBrowserHeaderContainer },
-                  n.createElement(
-                    Z.Z,
-                    {
-                      "flow-children": "row",
-                      className: Or().SaleItemBrowserHeader,
-                    },
-                    f,
-                    !this.props.bInGamepadUI &&
-                      n.createElement(
-                        "div",
-                        { className: Or().SuggestContainer },
+                  Z.Z,
+                  {
+                    "flow-children": "row",
+                    className: Or().SaleItemBrowserHeader,
+                  },
+                  f,
+                  !this.props.bInGamepadUI &&
+                    n.createElement(
+                      "div",
+                      { className: Or().SuggestContainer },
+                      A &&
                         n.createElement(
                           Wr,
                           {
@@ -18586,22 +18584,21 @@
                             ? n.createElement(h.f9b, null)
                             : n.createElement(h.Emg, null),
                         ),
-                        n.createElement(h.eSy, null),
-                        n.createElement(De.pd, {
-                          type: "text",
-                          onChange: this.OnUpdateSearch,
-                          bAlwaysShowClearAction: S,
-                          placeholder: (0, B.we)(
-                            "#Sale_ItemBrowser_SearchPlaceholder",
-                          ),
-                          value: p,
-                        }),
-                      ),
-                  ),
+                      n.createElement(h.eSy, null),
+                      n.createElement(De.pd, {
+                        type: "text",
+                        onChange: this.OnUpdateSearch,
+                        bAlwaysShowClearAction: S,
+                        placeholder: (0, B.we)(
+                          "#Sale_ItemBrowser_SearchPlaceholder",
+                        ),
+                        value: p,
+                      }),
+                    ),
                 ),
-                w,
               ),
-            )
+              w,
+            ),
           );
         }
       };
@@ -18710,7 +18707,7 @@
             feature: s,
             depth: o,
             activeTab: l,
-            displayStyle: c,
+            compactDisplay: c,
           } = e,
           m = (0, J.c5)();
         return n.createElement(
@@ -18743,7 +18740,8 @@
                   type: e.type || "game",
                   fnOnClickOverride: a,
                   bPreferDemoStorePage: t.prefer_demo_store_page,
-                  displayStyle: c ?? "compactlist",
+                  displayStyle: "library",
+                  requestCompact: c,
                 })
               );
             }),

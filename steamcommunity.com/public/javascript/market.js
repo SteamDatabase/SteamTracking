@@ -339,7 +339,7 @@ function CalculateLocalTax( amtWithFee, quantity, flRate )
 	{
 						var base_est = Math.floor(amtWithFee * 100 / (100 + ppct + spct));
 		for ( var tries = 0; tries < 3; tries++ ) {
-			fee_amt = Math.max( 1, Math.floor( ( base_amt * ppct ) / 100 ) ) + Math.max( 1, Math.floor( ( base_amt * spct ) / 100 ) );
+			fee_amt = Math.max( 1, Math.floor( ( base_est * ppct ) / 100 ) ) + Math.max( 1, Math.floor( ( base_est * spct ) / 100 ) );
 			if ((base_est + fee_amt) < amtWithFee )
 			{
 				base_est++;

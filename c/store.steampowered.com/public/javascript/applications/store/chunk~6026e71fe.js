@@ -9842,6 +9842,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10191,34 +10192,39 @@
           ),
         );
       }
-      const _ = (_) => {
-        let { displayStyle: _ } = _,
+      function _(_) {
+        const {
+            displayStyle: _,
+            requestCompact: __webpack_require__,
+            ..._
+          } = _,
+          { type: _ } = _,
           _ = (0, _._)();
         if ("purchaseonlydisplay" === _)
           return _.createElement(_, {
-            ..._,
-          });
-        if ("bundle" == _.type || "sub" == _.type)
-          return _.createElement(_._, {
             ..._,
           });
         if (_)
           return _.createElement(_._, {
             ..._,
           });
-        switch (
-          (!(0, _._)() ||
-            ("library" != _ && "animated" != _) ||
-            (_ = "bordered"),
-          _)
-        ) {
+        if (__webpack_require__ && !(0, _._)())
+          return _.createElement(_._, {
+            ..._,
+          });
+        if ("bundle" == _ || "sub" == _)
+          return _.createElement(_._, {
+            ..._,
+          });
+        if ((0, _._)() && ("library" == _ || "animated" == _))
+          return _.createElement(_._, {
+            ..._,
+            bShowReviewSummary: !0,
+          });
+        switch (_) {
           case "library":
           case "animated":
             return _.createElement(_, {
-              ..._,
-            });
-          case "compactlist":
-            return _.createElement(_._, {
               ..._,
             });
           default:
@@ -10227,7 +10233,10 @@
               bShowReviewSummary: !0,
             });
         }
-      };
+      }
+      function _(_, _) {
+        return "purchaseonlydisplay" !== _ && !_ && !(0, _._)();
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -20782,9 +20791,7 @@
                 feature: _,
                 depth: _,
                 activeTab: _,
-                displayStyle: this.state.bCompactViewMode
-                  ? "compactlist"
-                  : "library",
+                compactDisplay: this.state.bCompactViewMode,
               }),
             _ &&
               0 == _.length &&
@@ -20819,80 +20826,81 @@
                     ),
               ),
           );
-          return (
-            _?.enable_faceted_browsing &&
-              (_ = _.createElement(
-                _,
-                {
-                  language: _,
-                  section: _,
-                  event: __webpack_require__,
-                  facetFilterState: this.state.facetFilterState,
-                  nMaxFacetValues: _.max_facet_values_for_facet || 100,
-                  fnOnUpdateFilter: this.OnUpdateFacetFilter,
-                  onInitFilter: async () => {
-                    let _ = this.props.section.facets;
-                    _.Debug("FacetedSaleSection.onInitFilter', rgFacet"),
-                      !_ &&
-                        this.props.section.facet_auto_generate_options &&
-                        ((_ = await (0, _._)(
-                          this.props.section.facet_auto_generate_options,
-                        )),
-                        _.Debug(
-                          "FacetedSaleSection.onInitFilter autogen completed', rgFacet",
-                        )),
-                      this.setState({
-                        facetFilterState: new _(
-                          _ ?? [],
-                          this.props.section.facet_sort_order ||
-                            _._.k_ESortFacetsByMatchCount,
-                          this.props.language,
-                          _(this.props.event, this.props.section),
-                        ),
-                      });
-                  },
-                  ...this.state.results,
+          _?.enable_faceted_browsing &&
+            (_ = _.createElement(
+              _,
+              {
+                language: _,
+                section: _,
+                event: __webpack_require__,
+                facetFilterState: this.state.facetFilterState,
+                nMaxFacetValues: _.max_facet_values_for_facet || 100,
+                fnOnUpdateFilter: this.OnUpdateFacetFilter,
+                onInitFilter: async () => {
+                  let _ = this.props.section.facets;
+                  _.Debug("FacetedSaleSection.onInitFilter', rgFacet"),
+                    !_ &&
+                      this.props.section.facet_auto_generate_options &&
+                      ((_ = await (0, _._)(
+                        this.props.section.facet_auto_generate_options,
+                      )),
+                      _.Debug(
+                        "FacetedSaleSection.onInitFilter autogen completed', rgFacet",
+                      )),
+                    this.setState({
+                      facetFilterState: new _(
+                        _ ?? [],
+                        this.props.section.facet_sort_order ||
+                          _._.k_ESortFacetsByMatchCount,
+                        this.props.language,
+                        _(this.props.event, this.props.section),
+                      ),
+                    });
                 },
-                _,
-              )),
+                ...this.state.results,
+              },
+              _,
+            ));
+          const _ = (0, _._)("library", this.props.bInGamepadUI);
+          return _.createElement(
+            _.Fragment,
+            null,
             _.createElement(
-              _.Fragment,
-              null,
+              "div",
+              {
+                className: _.SaleSectionTitleCtn,
+              },
+              _.createElement(_._, {
+                section: _,
+                event: __webpack_require__,
+                nHiddenCapsules: _,
+                ...this.props,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().SaleItemBrowserContainer,
+              },
               _.createElement(
-                "div",
+                _._,
                 {
-                  className: _.SaleSectionTitleCtn,
-                },
-                _.createElement(_._, {
-                  section: _,
-                  event: __webpack_require__,
-                  nHiddenCapsules: _,
-                  ...this.props,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SaleItemBrowserContainer,
+                  className: _().SaleItemBrowserHeaderContainer,
                 },
                 _.createElement(
                   _._,
                   {
-                    className: _().SaleItemBrowserHeaderContainer,
+                    "flow-children": "row",
+                    className: _().SaleItemBrowserHeader,
                   },
-                  _.createElement(
-                    _._,
-                    {
-                      "flow-children": "row",
-                      className: _().SaleItemBrowserHeader,
-                    },
-                    _,
-                    !this.props.bInGamepadUI &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().SuggestContainer,
-                        },
+                  _,
+                  !this.props.bInGamepadUI &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().SuggestContainer,
+                      },
+                      _ &&
                         _.createElement(
                           _,
                           {
@@ -20914,22 +20922,21 @@
                             ? _.createElement(_.f9b, null)
                             : _.createElement(_.Emg, null),
                         ),
-                        _.createElement(_.eSy, null),
-                        _.createElement(_._, {
-                          type: "text",
-                          onChange: this.OnUpdateSearch,
-                          bAlwaysShowClearAction: _,
-                          placeholder: (0, _._)(
-                            "#Sale_ItemBrowser_SearchPlaceholder",
-                          ),
-                          value: _,
-                        }),
-                      ),
-                  ),
+                      _.createElement(_.eSy, null),
+                      _.createElement(_._, {
+                        type: "text",
+                        onChange: this.OnUpdateSearch,
+                        bAlwaysShowClearAction: _,
+                        placeholder: (0, _._)(
+                          "#Sale_ItemBrowser_SearchPlaceholder",
+                        ),
+                        value: _,
+                      }),
+                    ),
                 ),
-                _,
               ),
-            )
+              _,
+            ),
           );
         }
       };
@@ -21048,7 +21055,7 @@
             feature: _,
             depth: _,
             activeTab: _,
-            displayStyle: _,
+            compactDisplay: _,
           } = _,
           _ = (0, _._)();
         return _.createElement(
@@ -21087,7 +21094,8 @@
                   type: _.type || "game",
                   fnOnClickOverride: _,
                   bPreferDemoStorePage: _.prefer_demo_store_page,
-                  displayStyle: _ ?? "compactlist",
+                  displayStyle: "library",
+                  requestCompact: _,
                 })
               );
             }),
