@@ -4494,7 +4494,6 @@ SellItemDialog = {
 		var inputValue = this.GetPriceAsInt();
 		var nAmount = inputValue;
 		var quantity = this.GetQuantityAsInt();
-		var nFloor = parseInt( g_rgWalletInfo[ 'wallet_market_minimum' ] ?? 1 );
 
 		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{

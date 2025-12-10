@@ -222,6 +222,19 @@ body.ban_keys #landingNav > a.active {
 	font-weight: 500;
 }
 
+.statusNotice {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			padding: 24px;
+	font-size: 15px;
+	margin: 5px -20px 15px;
+	background: -webkit-linear-gradient( 135deg, rgba( 114, 118, 133, 0.1) 5%,rgba( 114, 118, 133, 0.3) 95%);
+	background: linear-gradient( 315deg, rgba( 114, 118, 133, 0.1) 5%,rgba( 114, 118, 133, 0.3) 95%);
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+	border-radius: 4px;
+}
+
 @keyframes warning_highlight {
 	0% {
 		filter: brightness( 2 )
@@ -308,6 +321,7 @@ h1 span.titletext, h2 span.titletext {
 
 .sectionDescription {
 	margin-bottom: 20px;
+	font-size: 14px;
 }
 
 .descriptionRow {

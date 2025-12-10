@@ -35,28 +35,27 @@
     },
     91648: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => W });
+      n.r(t), n.d(t, { default: () => B });
       var a = n(90626),
         i = n(20194),
         l = n(30470),
         o = n(41735),
-        r = n.n(o),
-        s = n(37085);
-      var c = n(61859),
-        d = n(47534),
-        m = n(84933);
+        r = n.n(o);
+      var s = n(61859),
+        c = n(47534),
+        d = n(84933);
       const u =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC";
-      var A = n(44894),
-        g = n(62490),
-        p = n(41609),
-        S = n.n(p),
-        E = n(64641),
-        h = n.n(E),
-        f = n(12155),
-        v = n(25489),
-        w = n(52038);
-      function y(e) {
+      var m = n(44894),
+        A = n(62490),
+        g = n(41609),
+        p = n.n(g),
+        S = n(64641),
+        E = n.n(S),
+        h = n(12155),
+        f = n(25489),
+        v = n(52038);
+      function b(e) {
         const {
             items: t,
             render: n,
@@ -65,20 +64,20 @@
             onReorder: o,
             onMove: s,
             bDisabled: c,
-            rowClassName: d,
+            rowClassName: g,
           } = e,
-          [p, E] = a.useState(!1),
-          [y, M] = a.useState(void 0),
-          [C, _] = a.useState(void 0),
-          [D, R] = a.useState(-1),
-          [k, N] = a.useState(void 0),
+          [S, b] = a.useState(!1),
+          [y, C] = a.useState(void 0),
+          [M, D] = a.useState(void 0),
+          [_, k] = a.useState(-1),
+          [R, N] = a.useState(void 0),
           [B, W] = a.useState(0),
           [I, x] = a.useState(0),
           [V, G] = a.useState(void 0),
           [Y, T] = a.useState(""),
           L = a.useRef(void 0),
-          X = a.useMemo(() => new Array(), []),
-          H = a.useMemo(() => new Array(), []),
+          X = a.useRef([]),
+          H = a.useRef([]),
           Q = a.useMemo(() => r().CancelToken.source(), []),
           j = () => {
             L.current?.firstElementChild &&
@@ -89,7 +88,27 @@
           j();
         }, []),
           a.useEffect(() => () => Q.cancel("ReorderableList unmounting"), [Q]);
-        const J = (e, t) => {
+        const J = a.useCallback(
+            (e) => {
+              const t = X.current[_]?.current;
+              t
+                ? ((t.style.left = e.clientX - y + "px"),
+                  (t.style.top = e.clientY - M + "px"))
+                : console.error("update grab element missing element");
+            },
+            [_, y, M],
+          ),
+          U = a.useCallback(() => {
+            const e = X.current[_]?.current;
+            e
+              ? ((e.style.position = ""), (e.style.zIndex = ""))
+              : console.error("end element drag missing element"),
+              b(!1),
+              k(-1),
+              G(void 0),
+              N(void 0);
+          }, [_]),
+          F = (e, t) => {
             Q.token.reason ||
               (L.current.firstElementChild?.getBoundingClientRect().height >
                 0 &&
@@ -97,16 +116,16 @@
                   L.current.firstElementChild.getBoundingClientRect().height &&
                 j(),
               ((e, t) => {
-                const n = X[e]?.current;
+                const n = X.current[e]?.current;
                 if (!n)
                   return void console.error(
                     "start element grab missing element at index " + e,
                   );
-                E(!0), R(e), G(void 0), N(e);
+                b(!0), k(e), G(void 0), N(e);
                 const a = t.clientX - n.getBoundingClientRect().left;
-                M(a);
+                C(a);
                 const i = t.clientY - n.getBoundingClientRect().top;
-                _(i),
+                D(i),
                   (n.style.position = "fixed"),
                   (n.style.left = t.clientX - a + "px"),
                   (n.style.top = t.clientY - i + "px"),
@@ -114,91 +133,80 @@
               })(t, e),
               e.preventDefault());
           },
-          U = (e, n) => {
-            const a = v.OQ(n > e ? n - 1 : n, 0, t.length - 1);
-            e != a && (s ? s(e, a) : (0, g.yY)(t, e, a), Z(a), o && o(t));
+          q = (e, n) => {
+            const a = f.OQ(n > e ? n - 1 : n, 0, t.length - 1);
+            e != a && (s ? s(e, a) : (0, A.yY)(t, e, a), P(a), o && o(t));
           },
-          F = (e) => {
-            p &&
-              !Q.token.reason &&
-              ((() => {
-                const e = X[D]?.current;
-                e
-                  ? ((e.style.position = ""), (e.style.zIndex = ""))
-                  : console.error("end element drag missing element"),
-                  E(!1),
-                  R(-1),
-                  G(void 0),
-                  N(void 0);
-              })(),
-              U(D, k));
-          },
-          q = (e) => {
-            if (!p || Q.token.reason) return;
-            const n = e.clientY;
-            let a;
-            for (let e = 0; e < t.length; e++) {
-              if (
-                n <
-                (H[e].current.getBoundingClientRect().top +
-                  2 * H[e].current.getBoundingClientRect().bottom) /
-                  3
-              ) {
-                a = e;
-                break;
+          z = a.useCallback(
+            (e) => {
+              if (!S || Q.token.reason) return;
+              const t = e.clientY;
+              let n;
+              for (let e = 0; e < H.current.length; e++) {
+                if (
+                  t <
+                  (H.current[e].current.getBoundingClientRect().top +
+                    2 * H.current[e].current.getBoundingClientRect().bottom) /
+                    3
+                ) {
+                  n = e;
+                  break;
+                }
               }
-            }
-            N(a ?? t.length),
-              ((e) => {
-                const t = X[D]?.current;
-                t
-                  ? ((t.style.left = e.clientX - y + "px"),
-                    (t.style.top = e.clientY - C + "px"))
-                  : console.error("update grab element missing element");
-              })(e);
-          };
-        (0, m.l6)(window, "mousemove", (e) => q(e)),
-          (0, m.l6)(window, "mouseup", (e) => F()),
+              N(n ?? H.current.length), J(e);
+            },
+            [S, Q, J],
+          );
+        (0, d.l6)(window, "mousemove", S ? z : void 0),
+          (0, d.l6)(
+            window,
+            "mouseup",
+            S
+              ? (e) => {
+                  S && !Q.token.reason && (U(), q(_, R));
+                }
+              : void 0,
+          ),
           a.useEffect(() => {
-            for (let e = X.length; e < t.length; e++)
-              X.push(a.createRef()), H.push(a.createRef());
-          }, [t.length, X, H]);
+            for (let e = X.current.length; e < t.length; e++)
+              X.current.push(a.createRef()), H.current.push(a.createRef());
+          }, [t.length]);
         const O = (e) => {
             G(void 0);
             const t = Y?.trim(),
               n = Number.parseInt(t);
             if (0 == t.length || isNaN(n)) return;
             const a = n - 1;
-            e != a && U(e, a);
+            e != a && q(e, a);
           },
-          [z, Z] = a.useState(void 0);
+          [Z, P] = a.useState(void 0);
         return a.createElement(
           "div",
-          { className: S().WhitelistCtn, ref: L },
+          { className: p().WhitelistCtn, ref: L },
           t.map((e, o) =>
             a.createElement(
               "div",
-              { key: o, ref: H[o] },
-              o == k && a.createElement(b, { width: I }),
+              { key: o, ref: H.current[o] },
+              o == R && a.createElement(w, { width: I }),
               a.createElement(
                 "div",
-                { ref: X[o], className: S().DragGhost },
-                o == D &&
+                { ref: X.current[o], className: p().DragGhost },
+                o == _ &&
                   a.createElement(
                     "div",
-                    { className: (0, w.A)(S().WhitelistRow, d) },
+                    { className: (0, v.A)(p().WhitelistRow, g) },
                     a.createElement("img", {
-                      className: (0, w.A)(S().WhitelistAvatar, S().Grabbing),
+                      className: (0, v.A)(p().WhitelistAvatar, p().Grabbing),
                       src: u,
                     }),
                     a.createElement("input", {
-                      className: (0, w.A)(
-                        S().WhitelistNumber,
-                        S().Disabled,
-                        S().Grabbing,
+                      className: (0, v.A)(
+                        p().WhitelistNumber,
+                        p().Disabled,
+                        p().Grabbing,
                       ),
                       type: "text",
-                      value: (k > o ? k - 1 : k) + 1,
+                      value: (R > o ? R - 1 : R) + 1,
                       disabled: !0,
                     }),
                     n(e, o),
@@ -207,29 +215,29 @@
               a.createElement(
                 "div",
                 {
-                  className: (0, w.A)(
-                    S().WhitelistRow,
-                    d,
-                    p && S().DragActive,
-                    o == D && S().BeingDragged,
-                    z == o && S().Dropped,
+                  className: (0, v.A)(
+                    p().WhitelistRow,
+                    g,
+                    S && p().DragActive,
+                    o == _ && p().BeingDragged,
+                    Z == o && p().Dropped,
                   ),
-                  onAnimationEnd: () => Z(void 0),
+                  onAnimationEnd: () => P(void 0),
                 },
                 a.createElement("img", {
-                  className: (0, w.A)(
-                    S().WhitelistAvatar,
-                    S().Grabbable,
-                    c && S().DisabledGrab,
+                  className: (0, v.A)(
+                    p().WhitelistAvatar,
+                    p().Grabbable,
+                    c && p().DisabledGrab,
                   ),
                   src: u,
-                  onMouseDown: Boolean(c) ? void 0 : (e) => J(e, o),
+                  onMouseDown: Boolean(c) ? void 0 : (e) => F(e, o),
                 }),
                 a.createElement("input", {
-                  className: (0, w.A)(S().WhitelistNumber, c && S().Disabled),
+                  className: (0, v.A)(p().WhitelistNumber, c && p().Disabled),
                   type: "text",
                   value: V == o ? Y : o + 1,
-                  disabled: c || o == D,
+                  disabled: c || o == _,
                   onChange: (e) => T(e.target.value),
                   onKeyDown: (e) =>
                     ((e, t) => {
@@ -241,46 +249,46 @@
                   onBlur: () => O(o),
                 }),
                 n(e, o),
-                Boolean(o != D) &&
+                Boolean(o != _) &&
                   Boolean(l || i) &&
                   a.createElement(
                     "div",
-                    { className: S().ButtonCtn },
+                    { className: p().ButtonCtn },
                     Boolean(l) &&
                       a.createElement(
                         "div",
-                        { className: h().RemoveIcon, onClick: (e) => l(o, e) },
-                        a.createElement(f.ffu, null),
+                        { className: E().RemoveIcon, onClick: (e) => l(o, e) },
+                        a.createElement(h.ffu, null),
                       ),
                     Boolean(i) &&
                       a.createElement("img", {
-                        className: h().RemoveIcon,
-                        src: A.A,
+                        className: E().RemoveIcon,
+                        src: m.A,
                         onClick: (e) => i(o, e),
                       }),
                   ),
               ),
-              k == t.length &&
+              R == t.length &&
                 o == t.length - 1 &&
-                a.createElement(b, { width: I }),
+                a.createElement(w, { width: I }),
             ),
           ),
         );
       }
-      function b(e) {
+      function w(e) {
         const { width: t } = e;
         return a.createElement(
           "div",
-          { className: S().DragHighlightContainer },
+          { className: p().DragHighlightContainer },
           a.createElement("div", {
-            className: S().DragHighlight,
+            className: p().DragHighlight,
             style: { width: t },
           }),
         );
       }
-      var M = n(53835),
+      var y = n(53835),
         C = n(45699),
-        _ = n(32754);
+        M = n(32754);
       function D(e) {
         const {
             rgSocialMediaItems: t,
@@ -298,7 +306,7 @@
                     "qqlink" === e.type,
                 )
                 .map((e) => ({
-                  label: (0, c.we)(`#StoreAdmin_SocialMedia_Type_${e.type}`),
+                  label: (0, s.we)(`#StoreAdmin_SocialMedia_Type_${e.type}`),
                   data: e.type,
                 }))
                 .sort((e, t) => (e.label < t.label ? -1 : 1)),
@@ -307,14 +315,14 @@
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(R, {
+          a.createElement(_, {
             options: o,
             onAddLink: (e) => {
               let a = t.slice();
               a.push({ type: e, link: "" }), n(a);
             },
           }),
-          a.createElement(y, {
+          a.createElement(b, {
             items: t,
             onDelete: (e) => {
               let a = t.slice();
@@ -322,10 +330,10 @@
             },
             onMove: (e, a) => {
               let i = t.slice();
-              (0, g.yY)(i, e, a), n(i);
+              (0, A.yY)(i, e, a), n(i);
             },
             render: (e, i) =>
-              a.createElement(N, {
+              a.createElement(R, {
                 key: e.type,
                 item: e,
                 onUpdateLink: (e) =>
@@ -340,13 +348,13 @@
           }),
         );
       }
-      function R(e) {
+      function _(e) {
         const { options: t, onAddLink: n } = e;
         return a.createElement(
           "div",
-          { className: d.AddLinkDropDown },
-          a.createElement(M.ZU, {
-            strDefaultLabel: (0, c.we)("#StoreAdmin_SocialMedia_Add"),
+          { className: c.AddLinkDropDown },
+          a.createElement(y.ZU, {
+            strDefaultLabel: (0, s.we)("#StoreAdmin_SocialMedia_Add"),
             controlled: !0,
             rgOptions: t,
             onChange: (e) => {
@@ -364,11 +372,11 @@
           t.prefix
             ? ((a =
                 "mastodon" === e.type
-                  ? (0, c.we)(
+                  ? (0, s.we)(
                       "#StoreAdmin_SocialMedia_ValidationMastodon",
                       t.prefix.join(", "),
                     )
-                  : (0, c.we)(
+                  : (0, s.we)(
                       "#StoreAdmin_SocialMedia_ValidationPrefix",
                       t.prefix.join(", "),
                     )),
@@ -378,35 +386,35 @@
                   e.link.startsWith(t) && (n = !0);
                 })))
             : t.number
-              ? ((a = (0, c.we)("#StoreAdmin_SocialMedia_ValidationNumber")),
+              ? ((a = (0, s.we)("#StoreAdmin_SocialMedia_ValidationNumber")),
                 e.link && (n = /^\d+$/.test(e.link)))
               : t.text
-                ? (a = (0, c.we)("#StoreAdmin_SocialMedia_ValidationText"))
+                ? (a = (0, s.we)("#StoreAdmin_SocialMedia_ValidationText"))
                 : t.regex &&
                   "tumblr" === e.type &&
-                  (a = (0, c.we)("#StoreAdmin_SocialMedia_ValidationTumblr")),
+                  (a = (0, s.we)("#StoreAdmin_SocialMedia_ValidationTumblr")),
           { bValid: n, strTooltip: a }
         );
       }
-      function N(e) {
+      function R(e) {
         const { item: t, onUpdateLink: n, validationData: i } = e;
         let l;
         l = i.number
-          ? (0, c.we)("#StoreAdmin_SocialMedia_EnterNumber")
+          ? (0, s.we)("#StoreAdmin_SocialMedia_EnterNumber")
           : i.text
-            ? (0, c.we)("#StoreAdmin_SocialMedia_EnterName")
-            : (0, c.we)("#StoreAdmin_SocialMedia_EnterLink");
+            ? (0, s.we)("#StoreAdmin_SocialMedia_EnterName")
+            : (0, s.we)("#StoreAdmin_SocialMedia_EnterLink");
         const { bValid: o, strTooltip: r } = k(t, i);
         return a.createElement(
           "div",
-          { className: d.SocialMediaRow },
+          { className: c.SocialMediaRow },
           a.createElement(
             "div",
-            { className: d.SocialMediaType },
-            (0, c.we)(`#StoreAdmin_SocialMedia_Type_${t.type}`),
+            { className: c.SocialMediaType },
+            (0, s.we)(`#StoreAdmin_SocialMedia_Type_${t.type}`),
           ),
           a.createElement(C.BA, {
-            className: d.SocialMediaLink,
+            className: c.SocialMediaLink,
             type: "text",
             value: t.link,
             placeholder: l,
@@ -414,15 +422,15 @@
           }),
           r &&
             a.createElement(
-              _.he,
-              { className: d.SocialMediaTooltip, toolTipContent: r },
+              M.he,
+              { className: c.SocialMediaTooltip, toolTipContent: r },
               "(?)",
             ),
-          !o && a.createElement("div", { className: d.ValidationError }, r),
+          !o && a.createElement("div", { className: c.ValidationError }, r),
         );
       }
-      var B = n(22797);
-      function W(e) {
+      var N = n(22797);
+      function B(e) {
         const { clanAccountID: t, page_config: n } = e,
           o = (function () {
             const e = (0, i.I)({
@@ -431,16 +439,16 @@
                 const e = `${l.TS.COMMUNITY_BASE_URL}sale/ajaxgetsocialmediaeditsettings`,
                   t = { origin: self.origin },
                   n = await r().get(e, { params: t });
-                return 200 == n?.status && n.data?.success == s.d.k_EResultOK
+                return 200 == n?.status && 1 == n.data?.success
                   ? n.data
                   : (console.error("useSocialMediaSupports:", n?.status),
-                    { success: s.d.k_EResultFail });
+                    { success: 2 });
               },
             });
             return e.isLoading ? null : e.data;
           })(),
-          [d, m] = (0, a.useState)(() => n?.social_media ?? []),
-          [u, A] = (0, a.useState)(() => n?.social_media ?? []);
+          [c, d] = (0, a.useState)(() => n?.social_media ?? []),
+          [u, m] = (0, a.useState)(() => n?.social_media ?? []);
         return o
           ? a.createElement(
               a.Fragment,
@@ -449,12 +457,12 @@
               a.createElement(
                 "h4",
                 null,
-                (0, c.we)("#CreatorHome_SocialMedia_Title"),
+                (0, s.we)("#CreatorHome_SocialMedia_Title"),
               ),
               a.createElement(
                 "p",
                 null,
-                (0, c.we)("#CreatorHome_SocialMedia_Desc"),
+                (0, s.we)("#CreatorHome_SocialMedia_Desc"),
               ),
               a.createElement(
                 "blockquote",
@@ -462,14 +470,14 @@
                 a.createElement(D, {
                   rgValidationData: o.rgValidationData,
                   rgSupportedSocialMediaTypes: o.rgSupportedSocialMediaTypes,
-                  rgSocialMediaItems: d,
+                  rgSocialMediaItems: c,
                   fnSetItems: (e) => {
-                    m(e);
+                    d(e);
                     const t = o.rgValidationData,
                       n = e
                         .filter((e) => Boolean(e.link))
                         .filter((e) => k(e, t[e.type]).bValid);
-                    A(n);
+                    m(n);
                   },
                 }),
                 u?.length > 0 &&
@@ -491,12 +499,12 @@
                         );
                     },
                   },
-                  a.createElement("span", null, (0, c.we)("#Button_Save")),
+                  a.createElement("span", null, (0, s.we)("#Button_Save")),
                 ),
               ),
             )
-          : a.createElement(B.t, {
-              string: (0, c.we)("#Loading"),
+          : a.createElement(N.t, {
+              string: (0, s.we)("#Loading"),
               position: "center",
             });
       }

@@ -3000,14 +3000,13 @@ function CrossBranchApp( appid )
 //
 function CreateCommunityGroup( appid )
 {
-	if ( !confirm( "Create community group with this name? This action is irrevocable." ) )
+	if ( !confirm( 'Are you sure you want to create your Community Hub? It will be hidden until your store page is visible.' ) )
 	{
 		return false;
 	}
 
 	AppsAjaxRequest(
-		g_szBaseURL + '/apps/createogg/' + appid,
-		$('create_ogg').serialize( true ),
+		g_szBaseURL + '/apps/createogg/' + appid, {},
 		function( results )
 		{
 			if ( results.success == false )

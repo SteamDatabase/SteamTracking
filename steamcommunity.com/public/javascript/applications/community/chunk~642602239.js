@@ -5120,6 +5120,8 @@
                 : 0) >= 7,
             min_capsule_matches_for_facet_values: 5,
             max_facet_values_for_facet: 5,
+            background_gradient_top: "#00000030",
+            background_gradient_bottom: "#00000030",
             facet_sort_order: 1,
             facet_auto_generate_options: {
               only_facets: [
@@ -8531,19 +8533,21 @@
           }
           return _;
         }
-        async LoadPartnerEventsPageable(e, t, n = 0, i = 0) {
-          let a = new Array(),
-            o = v.TS.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
-            l = {
+        async LoadPartnerEventsPageable(e, t, n = 0, i = 0, a) {
+          let o = new Array(),
+            l = v.TS.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
+            c = {
               clan_accountid: e ? e.GetAccountID() : void 0,
               appid: t,
               offset: n,
               count: i,
               l: v.TS.LANGUAGE,
               origin: self.origin,
+              exclude_tags:
+                a && a.length > 0 ? (null == a ? void 0 : a.join(",")) : void 0,
             };
           try {
-            let e = await r().get(o, { params: l });
+            let e = await r().get(l, { params: c });
             (0, s.h5)(() => {
               for (let t of e.data.events) {
                 let e = (0, y.E0)(t);
@@ -8551,7 +8555,7 @@
                   let e = new d.b(t.clan_steamid);
                   this.InsertEventModelFromClanEventData(e, t);
                 }
-                a.push(this.m_mapExistingEvents.get(e));
+                o.push(this.m_mapExistingEvents.get(e));
               }
             });
           } catch (e) {
@@ -8559,7 +8563,7 @@
               "LoadClanEventInDateRange hit error " + (0, h.H)(e).strErrorMsg,
             );
           }
-          return a;
+          return o;
         }
         async GetBestEventsForCurrentUser(e, t, n) {
           var i, a;

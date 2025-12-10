@@ -5413,6 +5413,7 @@
                 focused: __webpack_require__,
                 label: _ = null,
                 render: _,
+                disabled: _,
                 ..._
               } = _,
               _ = _ ? "true" : "false",
@@ -5422,6 +5423,7 @@
               _.createElement(_, {
                 "data-selected": _,
                 "data-focused": _,
+                "aria-disabled": _,
                 className: _.ListBoxOption,
                 paddingY: "2",
                 paddingX: "3",
@@ -5433,6 +5435,7 @@
               {
                 selected: _,
                 focused: __webpack_require__,
+                disabled: _,
               },
             );
           },
@@ -5554,9 +5557,10 @@
           const {
               children: _,
               label: __webpack_require__,
+              selected: _,
               onSelect: _,
               ref: _,
-              selected: _,
+              disabled: _,
               ..._
             } = _,
             _ = (0, _.useContext)(_),
@@ -5582,14 +5586,16 @@
               role: "option",
               tabIndex: _ ? 0 : -1,
               ..._.getItemProps({
-                onClick: _,
+                onClick: _ ? void 0 : _,
                 onKeyDown: (_) => {
-                  ("Enter" === _.key ||
-                    (" " === _.key && !_.typingRef.current)) &&
+                  _ ||
+                    ("Enter" !== _.key &&
+                      (" " !== _.key || _.typingRef.current)) ||
                     (_(), _.preventDefault(), _.stopPropagation());
                 },
                 active: _,
                 selected: _,
+                disabled: _,
                 ..._,
               }),
             },

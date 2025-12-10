@@ -38217,6 +38217,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38286,6 +38287,19 @@
             return {
               ..._(_, _),
               select: (_) => _.best_purchase_option || null,
+              staleTime: 6e5,
+            };
+          })(_, _),
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              ..._(_, _),
+              select: (_) =>
+                _.self_purchase_option || _.best_purchase_option || null,
               staleTime: 6e5,
             };
           })(_, _),
@@ -66458,6 +66472,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -67712,13 +67727,15 @@
       }
       function _(_) {
         const _ = _.ownerDocument;
-        _.cancelFullscreen
-          ? _.cancelFullscreen()
-          : _.webkitCancelFullScreen
-            ? _.webkitCancelFullScreen()
-            : _.mozCancelFullScreen
-              ? _.mozCancelFullScreen()
-              : _.msExitFullscreen && _.msExitFullscreen();
+        _.exitFullscreen
+          ? _.exitFullscreen()
+          : _.cancelFullscreen
+            ? _.cancelFullscreen()
+            : _.webkitCancelFullScreen
+              ? _.webkitCancelFullScreen()
+              : _.mozCancelFullScreen
+                ? _.mozCancelFullScreen()
+                : _.msExitFullscreen && _.msExitFullscreen();
       }
       function _(_) {
         return "INPUT" === _.nodeName;
@@ -77264,9 +77281,7 @@
                   },
                   _.createElement(
                     "div",
-                    {
-                      className: _.LinkWithPadding,
-                    },
+                    null,
                     _("#Menu_Section_Browse_FreeToPlay"),
                   ),
                 ),
@@ -77276,13 +77291,7 @@
                   {
                     href: `${_._.STORE_BASE_URL}${_.url_path}`,
                   },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _.LinkWithPadding,
-                    },
-                    _.display_name,
-                  ),
+                  _.createElement("div", null, _.display_name),
                 ),
             ),
           _.createElement(
@@ -77290,39 +77299,21 @@
             {
               href: `${_._.STORE_BASE_URL}news/`,
             },
-            _.createElement(
-              "div",
-              {
-                className: _.LinkWithPadding,
-              },
-              _("#Menu_Popover_NewsAndUpdates"),
-            ),
+            _.createElement("div", null, _("#Menu_Popover_NewsAndUpdates")),
           ),
           _.createElement(
             _,
             {
               href: `${_._.STORE_BASE_URL}points/`,
             },
-            _.createElement(
-              "div",
-              {
-                className: _.LinkWithPadding,
-              },
-              _("#Menu_Popover_PointsShop"),
-            ),
+            _.createElement("div", null, _("#Menu_Popover_PointsShop")),
           ),
           _.createElement(
             _,
             {
               href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
             },
-            _.createElement(
-              "div",
-              {
-                className: _.LinkWithPadding,
-              },
-              _("#Menu_Popover_GiftCards"),
-            ),
+            _.createElement("div", null, _("#Menu_Popover_GiftCards")),
           ),
         );
       }

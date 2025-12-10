@@ -5048,6 +5048,11 @@ a:link {
 ._20oF9tLSfptitLraDOp6X6:focus-visible {
   outline: none;
 }
+._20oF9tLSfptitLraDOp6X6[aria-disabled="true"] {
+  background: var(--color-dull-7);
+  color: var(--color-text-body-note);
+  cursor: default;
+}
 ._3tuJ3SHrhBu16Q7GZBtKyt {
   padding: var(--spacing-1);
 }

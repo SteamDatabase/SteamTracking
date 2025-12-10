@@ -297,11 +297,23 @@
       module.exports = {
         narrowWidth: "500px",
         ImagesCtn: "_3C3Hy1Ldb_j8FpXikuio9T",
+        BlurCapsules: "ZhjPEOG0gzrTqrcqmNZsY",
+        AllImages: "_1DF4gfqbWS61FaehmUYkuU",
+        AnnualChart: "RLK6pXS_oOr0O7-PifqTy",
+        ImageTint: "_1uXifcwYEEZepZq9GX0pf0",
         AllImagesCtn: "Y8NVLbtTPQh9gVfG4V_tl",
         FadeInTiles: "_3HscHWkOLtsK-kzGBMVI2Y",
-        AllImages: "_1DF4gfqbWS61FaehmUYkuU",
-        ImageTint: "_1uXifcwYEEZepZq9GX0pf0",
+        TallCapsules: "_3KtoWhNtwhnMPl7e0OxGBj",
         Wide2: "_11TDFqeudgrq4D6KFL1Hs3",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PlatinumSection: "_2M6w2tE1mq1K57VNXnkzkT",
+        GoldSection: "_2XQYX2jtslkhZFeU8dsDIp",
+        SilverSection: "_2KzJEuTfwQGu9Qw4v4HY7R",
+        BronzeSection: "aAu4zZKXrAiL6gzPT_bZG",
+        AllTiers: "_3MBqFIUsuhw30AtrWEE_mX",
       };
     },
     chunkid: (module) => {
@@ -352,10 +364,12 @@
         SteamChartsPage: "_2aYDMWWN9bAVaHmPfFHXWA",
         SteamChartsShell: "_2rArjHHk-sJxtm0AQK-ifY",
         SteamChartsContent: "_2uKyXTgmlwRhfDB9pAKD76",
-        HeaderCtn: "_1kLTg9HHfMgVo8gDstT8uR",
-        WithSubtitle: "_kbFJdSwEh7bc98Yq_gZ2",
         PageSubtitle: "_3wxTKWJdN8vIdXKlu-ZHZX",
         TopDeckSubtitle: "_1l72-mnPYU9Ton0UyCrTgL",
+        HeaderCtn: "_1kLTg9HHfMgVo8gDstT8uR",
+        WithSubtitle: "_kbFJdSwEh7bc98Yq_gZ2",
+        YearlyHeaderCtn: "_23MzHKxNYqVS4XAaaE8YQK",
+        Triangle: "_3022w3NEiudslTNnPMWd8Z",
         SteamChartsRootPosition: "_2tAk2uCRwLsaOcFMF0VAr9",
         AlignWithMenu: "_2-hIBICcMkAAkFzWEvp5uM",
         SteamChartsMenu: "KSZ9hmL_XbHI_tlSUQylO",
@@ -691,8 +705,11 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -714,9 +731,9 @@
       function _(_, _) {
         return {
           unique_id: _++,
-          capsules: null,
-          events: null,
-          links: null,
+          capsules: [],
+          events: [],
+          links: [],
           section_type: _,
           localized_label: [],
           default_label: _,
@@ -758,6 +775,17 @@
             },
           ],
         };
+      }
+      function _() {
+        const [_, _] = _.useState(() => !_._.BIsInited());
+        return (
+          _.useEffect(() => {
+            (async () => {
+              await Promise.all([_._.InitGlobal()]), _(!1);
+            })();
+          }, []),
+          _
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -7314,6 +7342,112 @@
         }
       }
       const _ = "useMonthlyTopRelease";
+      var _ = __webpack_require__("chunkid");
+      class _ {
+        m_WebAPI;
+        constructor(_) {
+          this.m_WebAPI = _;
+        }
+        async LoadTopYearlyReleases(_) {
+          let _ = _._.Init(_._);
+          const _ = new Date(_, 1, 15);
+          _.Body().set_rtime_year(
+            Math.floor(__webpack_require__.getTime() / 1e3),
+          ),
+            _.Body().set_include_dlc(!0);
+          let _ = await _._.GetYearTopAppReleases(
+            this.m_WebAPI.GetAnonymousServiceTransport(),
+            _,
+          );
+          if (1 != _.GetEResult()) {
+            if (10 == _.GetEResult())
+              return {
+                bSQLError: !0,
+              };
+            if (42 == _.GetEResult()) return {};
+            throw "error loading top releases";
+          }
+          const _ = _.Body().toObject();
+          return _._.is_support && 0 == _.top_app_list.length
+            ? (function () {
+                const _ = {
+                    top_app_list: [],
+                    top_combined_app_and_dlc_releases: [],
+                    top_dlc_releases: [],
+                  },
+                  _ = [4, 1, 2, 3],
+                  _ = [
+                    {
+                      appid: 400,
+                      app_release_rank: 4,
+                      type: 1,
+                    },
+                    {
+                      appid: 440,
+                      app_release_rank: 4,
+                      type: 2,
+                    },
+                    {
+                      appid: 620,
+                      app_release_rank: 4,
+                      type: 3,
+                    },
+                    {
+                      appid: 583950,
+                      app_release_rank: 4,
+                      type: 4,
+                    },
+                    {
+                      appid: 546560,
+                      app_release_rank: 4,
+                      type: 5,
+                    },
+                  ];
+                for (const _ of _)
+                  for (const _ of _)
+                    _.top_app_list.push({
+                      ..._,
+                      app_release_rank: _,
+                    }),
+                      _.top_app_list.push({
+                        ..._,
+                        appid: 730,
+                        app_release_rank: _,
+                      }),
+                      _.top_app_list.push({
+                        ..._,
+                        appid: 540,
+                        app_release_rank: _,
+                      });
+                const _ = Math.round(new Date().getTime() / 1e3);
+                for (const _ of _)
+                  _.top_combined_app_and_dlc_releases.push(
+                    {
+                      appid: 400,
+                      app_release_rank: _,
+                      rtime_release: _,
+                    },
+                    {
+                      appid: 440,
+                      app_release_rank: _,
+                      rtime_release: _,
+                    },
+                    {
+                      appid: 620,
+                      app_release_rank: _,
+                      rtime_release: _,
+                    },
+                    {
+                      appid: 583950,
+                      app_release_rank: _,
+                      rtime_release: _,
+                    },
+                  );
+                return _;
+              })()
+            : _;
+        }
+      }
       class _ {
         m_DynamicUserStore;
         m_TopSellersStore;
@@ -7321,6 +7455,7 @@
         m_BestOfYearStore;
         m_MostPlayedOnSteamDeckStore;
         m_TopMonthlyReleasesStore;
+        m_TopYearlyReleasesStore;
         m_WebAPI;
         async Initialize(_, _) {
           (this.m_WebAPI = _),
@@ -7329,6 +7464,7 @@
             (this.m_BestOfYearStore = new _(this.m_WebAPI)),
             (this.m_MostPlayedOnSteamDeckStore = new _(this.m_WebAPI)),
             (this.m_TopMonthlyReleasesStore = new _(this.m_WebAPI)),
+            (this.m_TopYearlyReleasesStore = new _(this.m_WebAPI)),
             (this.m_DynamicUserStore = await _._.Get().HintLoad());
         }
         get TopSellersStore() {
@@ -7348,6 +7484,9 @@
         }
         get TopMonthlyReleasesStore() {
           return this.m_TopMonthlyReleasesStore;
+        }
+        get TopYearlyReleasesStore() {
+          return this.m_TopYearlyReleasesStore;
         }
         static overview_data_request = {
           include_basic_info: !0,
@@ -7433,62 +7572,7 @@
         include_tag_count: 20,
       };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = 1079395200;
-      function _(_) {
-        return (0, _._)(
-          "#SteamCharts_TopSellers_WeeklyRange",
-          (0, _._)(_, {
-            timeZone: "UTC",
-          }),
-          (0, _._)(_ + 604800, {
-            timeZone: "UTC",
-          }),
-        );
-      }
-      function _(_) {
-        if (!_) return "";
-        const _ = new Date(1e3 * _);
-        return `${_.getUTCFullYear()}-${_.getUTCMonth() + 1}-${_.getUTCDate()}`;
-      }
-      function _(_) {
-        return _ || "global";
-      }
-      function _(_) {
-        return "global" == _ ? "" : _;
-      }
-      function _(_, _) {
-        let _ = "",
-          _ = "";
-        return (
-          _ > _ ? ((_ = "Up"), (_ = "▲")) : _ < _ && ((_ = "Down"), (_ = "▼")),
-          {
-            direction: _,
-            symbol: _,
-          }
-        );
-      }
-      function _(_, _, _, _) {
-        const _ = (0, _._)();
-        return (
-          _.useEffect(() => {
-            if (
-              _ &&
-              !("global" == _ || (_ && _.BIsValidTopSellersCountry(_)))
-            ) {
-              let _ = "";
-              (_ = _.BIsValidTopSellersCountry(_._.COUNTRY)
-                ? _._.COUNTRY
-                : "global"),
-                _.replace(_(_(_)));
-            }
-          }, [_, _, _, _, _]),
-          _ && ("global" == _ || _.BIsValidTopSellersCountry(_))
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -7499,567 +7583,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = _.memo((_) => {
-          const _ = _();
-          return _.isLoading
-            ? _.createElement("div", {
-                className: (0, _._)(
-                  _().ChartContainerPlaceholder,
-                  _().Placeholder,
-                ),
-              })
-            : _.data
-              ? _.createElement(
-                  "div",
-                  {
-                    className: _().ChartContainer,
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Chart,
-                    },
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(_, {
-                        Data: _.data,
-                      }),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().Stats,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().PeakStats,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().StatsTitle,
-                        },
-                        (0, _._)(_.data.peak),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().StatSubtitle,
-                        },
-                        _.createElement(
-                          "span",
-                          {
-                            className: _().Concurrent,
-                          },
-                          (0, _._)("#SteamCharts_Graph_PeakConcurrent"),
-                        ),
-                      ),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().CurrentStats,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().StatsTitle,
-                        },
-                        (0, _._)(_.data.current),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().StatSubtitle,
-                        },
-                        _.createElement(
-                          "span",
-                          {
-                            className: _().Now,
-                          },
-                          (0, _._)("#SteamCharts_Graph_OnlineNow"),
-                        ),
-                      ),
-                    ),
-                  ),
-                )
-              : null;
-        }),
-        _ = _.memo((_) => {
-          const { Data: _ } = _;
-          return _.createElement(
-            _._,
-            {
-              width: "100%",
-              height: "100%",
-            },
-            _.createElement(
-              _._,
-              {
-                data: _.history,
-                margin: {
-                  top: 25,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                },
-                barGap: 10,
-              },
-              _.createElement(
-                "defs",
-                null,
-                _.createElement(
-                  "linearGradient",
-                  {
-                    _: "bar_linear",
-                    _: "0",
-                    _: "0",
-                    _: "0",
-                    _: "1",
-                  },
-                  _.createElement("stop", {
-                    stopColor: "#1A9FFF",
-                  }),
-                  _.createElement("stop", {
-                    offset: "0.01",
-                    stopColor: "#1A9FFF",
-                  }),
-                  _.createElement("stop", {
-                    offset: "0.0101",
-                    stopColor: "#1A9FFF",
-                    stopOpacity: "0.5",
-                  }),
-                  _.createElement("stop", {
-                    offset: "1",
-                    stopColor: "#30363D",
-                    stopOpacity: "0.5",
-                  }),
-                ),
-              ),
-              _.createElement(_._, {
-                vertical: !1,
-                stroke: "#a0aab6",
-              }),
-              _.createElement(_._, {
-                tickFormatter: _._,
-                tick: {
-                  fill: "white",
-                },
-                axisLine: !1,
-              }),
-              _.createElement(_._, {
-                content: _.createElement(_, null),
-              }),
-              _.createElement(_._, {
-                dataKey: "users",
-                barSize: 2,
-                fill: "url( #bar_linear )",
-              }),
-              _.createElement(_._, {
-                _: _.peak,
-                stroke: "#82FF01",
-                strokeDasharray: "6",
-              }),
-            ),
-          );
-        });
-      function _({ active: _, payload: _ }) {
-        if (_ && _ && _.length) {
-          const _ = _[0].payload;
-          return _.createElement(
-            _._,
-            null,
-            (0, _._)(
-              "#SteamCharts_OverviewGraph_Tooltip_OnlineAt",
-              _.createElement("b", null, (0, _._)(_.users)),
-              _.date.toLocaleString(),
-            ),
-          );
-        }
-        return null;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = new Date(_ > 1e12 ? _ : 1e3 * _),
-          _ =
-            (new Intl.DateTimeFormat("en-US", {
-              timeZone: "America/Los_Angeles",
-              year: "numeric",
-              month: "numeric",
-              day: "numeric",
-              hour: "numeric",
-              minute: "numeric",
-            }).format(_),
-            new Date(
-              _.toLocaleString("en-US", {
-                timeZone: "America/Los_Angeles",
-              }),
-            )),
-          _ = __webpack_require__.getMonth(),
-          _ = __webpack_require__.getFullYear(),
-          _ = __webpack_require__.getDate(),
-          _ = __webpack_require__.getHours();
-        let _, _;
-        for (_ = _ > 15 || (15 === _ && _ >= 10) ? _ - 1 : _ - 2; _ < 0; )
-          (_ += 12), (_ = (_ ?? _) - 1);
-        _ = _ ?? _;
-        const _ = new Date(Date.UTC(_, _, 15, 17, 0));
-        return Math.floor(_.getTime() / 1e3);
-      }
-      function _(_, _) {
-        if (_ < 0 || _ > 11)
-          throw new Error("Invalid month index. Must be between 0 and 11.");
-        return `${["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"][_]}_${_}`;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const { rgAppIDs: _, children: __webpack_require__, nMonth: _ } = _,
-          _ = (0, _.useMemo)(() => {
-            let _ = 0,
-              _ = [..._];
-            for (; _.length < 25; )
-              __webpack_require__.push(_[_ % _.length]), _++;
-            return __webpack_require__
-              .map((_) => _._.Get().GetApp(_))
-              .filter(Boolean);
-          }, [_]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(_().ImagesCtn),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().AllImagesCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().AllImages,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)({
-                      [_().ImageTint]: !0,
-                      [`Month${_}`]: !0,
-                      [_().Wide2]: _.length <= 10,
-                      [_().Wide3]: _.length <= 20,
-                    }),
-                  },
-                  _.map((_, _) =>
-                    _.createElement("img", {
-                      key: "bg_" + _.GetAppID() + "+" + _,
-                      src: _.GetAssets().GetHeaderURL(),
-                    }),
-                  ),
-                ),
-              ),
-            ),
-          ),
-          __webpack_require__,
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = [
-          null,
-          "rgb(187, 152, 81)",
-          "rgb(116, 118, 121)",
-          "rgb(173, 124, 77)",
-        ],
-        _ = [
-          null,
-          "rgba(55, 44, 24, 1)",
-          "rgba(41, 41, 43, 1)",
-          "rgba(52, 37, 24, 1)",
-        ],
-        _ = [
-          null,
-          "rgba(249, 202, 111, 1)",
-          "rgba(156, 159, 164, 1)",
-          "rgba(214, 153, 95, 1)",
-        ];
-      function _(_, _) {
-        const _ = _._.Get(),
-          _ = [],
-          _ = [],
-          _ = [],
-          _ = [],
-          _ = [];
-        for (const _ of _)
-          __webpack_require__.BIsGameIgnored(_) ||
-            (__webpack_require__.BIsGameRecommended(_)
-              ? _.push(_)
-              : __webpack_require__.BIsGameWishlisted(_)
-                ? _.push(_)
-                : _[1]?.includes(_)
-                  ? _.push(_)
-                  : _[2]?.includes(_)
-                    ? _.push(_)
-                    : _.push(_));
-        return [
-          ...(0, _._)(_),
-          ...(0, _._)(_),
-          ...(0, _._)(_),
-          ...(0, _._)(_),
-          ...(0, _._)(_),
-        ];
-      }
-      function _(_, _, _, _, _) {
-        const { data: _ } = (0, _._)({
-          queryKey: [_],
-          queryFn: () => {
-            try {
-              return (function (_, _, _, _, _) {
-                const _ = (0, _._)(_._, _),
-                  _ = [..._, ..._],
-                  _ = new Set(_);
-                if (
-                  (_.length > 9
-                    ? (_.jsondata.sale_sections = [
-                        {
-                          ...(0, _._)("trailercarousel", ""),
-                          capsules: _(_, _).map((_) => ({
-                            _: _,
-                            type: _.has(_) ? "dlc" : "game",
-                          })),
-                          use_random_order: !1,
-                          disable_background: !0,
-                          trailer_carousel_auto_advance_msec: 1e4,
-                        },
-                      ])
-                    : (_.jsondata.sale_sections = []),
-                  _?.length > 25)
-                )
-                  for (let _ in _) {
-                    const _ = _[_];
-                    _.jsondata.sale_sections.push({
-                      ...(0, _._)("items", "#SteamCharts_Monthly_Rank_" + _),
-                      capsules: _.map((_) => ({
-                        _: _,
-                        type: _.has(_) ? "dlc" : "game",
-                      })),
-                      capsules_per_row_array: [4],
-                      capsule_style_per_row_array:
-                        "1" == _ ? ["tall"] : ["grid"],
-                      show_as_carousel: !1,
-                      use_random_order: !0,
-                      background_gradient_top: _[_],
-                      background_gradient_bottom: _[_],
-                      border_width: 1,
-                      border_color: _[_],
-                      default_subtitle:
-                        "#SteamCharts_Monthly_Rank_" + _ + "_subtitle",
-                    });
-                  }
-                else {
-                  const _ = Object.values(_).flat();
-                  _.jsondata.sale_sections.push({
-                    ...(0, _._)("items", "#SteamCharts_Monthly_Rank_All"),
-                    capsules: _.map((_) => ({
-                      _: _,
-                      type: _.has(_) ? "dlc" : "game",
-                    })),
-                    capsules_per_row_array:
-                      _?.length > 9 ? (_?.length > 15 ? [3] : [2]) : [1],
-                    single_item_style: _?.length < 9 ? "library" : "bordered",
-                    show_as_carousel: !1,
-                    use_random_order: !0,
-                    background_gradient_top: _[1],
-                    background_gradient_bottom: _[3],
-                  });
-                }
-                if (_._.logged_in) {
-                  const _ = _._.Get(),
-                    _ = _.filter((_) => _.BIsGameWishlisted(_));
-                  _?.length > 0 &&
-                    _.jsondata.sale_sections.push({
-                      ...(0, _._)("items", "#Sale_OnWishlist"),
-                      capsules: _.map((_) => ({
-                        _: _,
-                        type: _.has(_) ? "dlc" : "game",
-                      })),
-                      capsules_per_row_array: _.length < 3 ? [2] : [5],
-                      carousel_rows: 1,
-                      show_as_carousel: !0,
-                      disable_background: !0,
-                      capsule_style_per_row_array:
-                        _.length < 3 ? ["grid"] : ["tall"],
-                      random_from_entire_set: !0,
-                    });
-                  const _ = _.filter(
-                    (_) => _.BIsGameRecommended(_) && !_.BIsGameIgnored(_),
-                  );
-                  if (_?.length > 0) {
-                    const _ = _.length;
-                    _.jsondata.sale_sections.push({
-                      ...(0, _._)(
-                        "items",
-                        "#Sale_default_label_RecommendedForYou",
-                      ),
-                      capsules: __webpack_require__.map((_) => ({
-                        _: _,
-                        type: _.has(_) ? "dlc" : "game",
-                      })),
-                      capsules_per_row_array: 2 == _ ? [2] : [3, 2],
-                      carousel_rows: 2,
-                      show_as_carousel: !0,
-                      disable_background: !0,
-                      capsule_style_per_row_array:
-                        2 == _ ? ["grid"] : ["tall", "grid"],
-                    });
-                  }
-                  const _ = _.filter((_) => {
-                    if (!_.BIsGameOwned(_)) {
-                      const _ = _._.Get().GetApp(_);
-                      return _.BIsGameOwned(
-                        __webpack_require__.GetParentAppID(),
-                      );
-                    }
-                    return !1;
-                  });
-                  _.length > 0 &&
-                    _.jsondata.sale_sections.push({
-                      ...(0, _._)("dlc_for_you", "#Sale_default_label_246"),
-                      capsules: _.map((_) => ({
-                        _: _,
-                        type: "dlc",
-                      })),
-                      dlc_for_you_data: {
-                        group_by_parent_app: !0,
-                        hide_dlc_stats: !0,
-                        parent_app_page_size: 5,
-                        hide_dlc_grouping: !0,
-                      },
-                      capsules_per_row_array: [3],
-                      show_as_carousel: !0,
-                      disable_background: !0,
-                    });
-                }
-                return (
-                  _?.length > 25 &&
-                    _.jsondata.sale_sections.push({
-                      ...(0, _._)("items", "#Sale_default_label_148"),
-                      capsules: __webpack_require__.map((_) => ({
-                        _: _,
-                        type: _.has(_) ? "dlc" : "game",
-                      })),
-                      capsules_per_row_array: [1],
-                      show_as_carousel: !1,
-                      carousel_rows: 1,
-                      single_item_style: "library",
-                      use_random_order: !0,
-                      cap_section_content: !1,
-                      cap_section_row_count: 50,
-                      disable_background: !0,
-                      enable_faceted_browsing: !0,
-                      min_capsule_matches_for_facet_values: 5,
-                      max_facet_values_for_facet: 5,
-                      facet_sort_order: 1,
-                      cap_item_count: 0,
-                      facets: _,
-                    }),
-                  _.jsondata.sale_sections.push({
-                    ...(0, _._)(
-                      "social_share",
-                      "#EventDisplay_Share_WithFriendsHeader",
-                    ),
-                    social_share: (0, _._)(),
-                  }),
-                  _
-                );
-              })(_, _, _, _, _);
-            } catch (_) {
-              return (
-                console.error(`Montly new release: ${_} failed: `, _), null
-              );
-            }
-          },
-        });
-        return _;
-      }
-      function _(_) {
-        const {
-            rgFilteredDLCsAppIDs: _,
-            rgFilteredCombinedAppsAndDLC: __webpack_require__,
-            promotionName: _,
-            rgFilteredAppIDByTier: _,
-            facets: _,
-          } = _,
-          _ = _(_, _, __webpack_require__, _, _),
-          _ = (0, _._)(_._.LANGUAGE),
-          _ = (function () {
-            const [_, _] = _.useState(() => !_._.BIsInited());
-            return (
-              _.useEffect(() => {
-                (async () => {
-                  await Promise.all([_._.InitGlobal()]), _(!1);
-                })();
-              }, []),
-              _
-            );
-          })();
-        return !_ || _
-          ? null === _
-            ? _.createElement(
-                "div",
-                {
-                  className: _.ErrorStylesWithIcon,
-                },
-                (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
-              )
-            : _.createElement(_._, {
-                string: (0, _._)("#Loading"),
-                position: "center",
-              })
-          : _.createElement(_._, {
-              eventModel: _,
-              language: _,
-              bIsPreview: !1,
-              bDynamicallyCreatedSale: !0,
-            });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
       function _(_) {
         const { toolTipContent: _ } = _,
           _ =
@@ -8178,7 +7711,390 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            rgAppIDs: _,
+            children: __webpack_require__,
+            nMonth: _,
+            bTallCapsule: _,
+            bBlurCapsules: _,
+          } = _,
+          _ = (0, _.useMemo)(() => {
+            let _ = 0,
+              _ = [..._];
+            for (; _.length < 25; )
+              __webpack_require__.push(_[_ % _.length]), _++;
+            return __webpack_require__
+              .map((_) => _._.Get().GetApp(_))
+              .filter(Boolean);
+          }, [_]);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)({
+                [_().ImagesCtn]: !0,
+                [_().TallCapsules]: _,
+                [_().BlurCapsules]: _,
+                [_().AnnualChart]: !_,
+              }),
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().AllImagesCtn,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _().AllImages,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)({
+                      [_().ImageTint]: !0,
+                      [`Month${_}`]: !0,
+                      [_().Wide2]: _.length <= 10,
+                      [_().Wide3]: _.length <= 20,
+                    }),
+                  },
+                  _.map((_, _) =>
+                    _
+                      ? _.createElement("img", {
+                          key: "bg_" + _.GetAppID() + "+" + _,
+                          src: _.GetAssets().GetHeroCapsuleURL(),
+                        })
+                      : _.createElement("img", {
+                          key: "bg_" + _.GetAppID() + "+" + _,
+                          src: _.GetAssets().GetHeaderURL(),
+                        }),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          __webpack_require__,
+        );
+      }
+      function _(_) {
+        const _ = new Date(_ > 1e12 ? _ : 1e3 * _),
+          _ =
+            (new Intl.DateTimeFormat("en-US", {
+              timeZone: "America/Los_Angeles",
+              year: "numeric",
+              month: "numeric",
+              day: "numeric",
+              hour: "numeric",
+              minute: "numeric",
+            }).format(_),
+            new Date(
+              _.toLocaleString("en-US", {
+                timeZone: "America/Los_Angeles",
+              }),
+            )),
+          _ = __webpack_require__.getMonth(),
+          _ = __webpack_require__.getFullYear(),
+          _ = __webpack_require__.getDate(),
+          _ = __webpack_require__.getHours();
+        let _, _;
+        for (_ = _ > 15 || (15 === _ && _ >= 10) ? _ - 1 : _ - 2; _ < 0; )
+          (_ += 12), (_ = (_ ?? _) - 1);
+        _ = _ ?? _;
+        const _ = new Date(Date.UTC(_, _, 15, 17, 0));
+        return Math.floor(_.getTime() / 1e3);
+      }
+      function _(_, _) {
+        if (_ < 0 || _ > 11)
+          throw new Error("Invalid month index. Must be between 0 and 11.");
+        return `${["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"][_]}_${_}`;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        let _ = _().PlatinumSection;
+        switch (_) {
+          case 1:
+            _ = _().GoldSection;
+            break;
+          case 2:
+            _ = _().SilverSection;
+            break;
+          case 3:
+            _ = _().BronzeSection;
+        }
+        return _;
+      }
+      function _(_, _) {
+        const _ = _._.Get(),
+          _ = [],
+          _ = [],
+          _ = [],
+          _ = [],
+          _ = [];
+        for (const _ of _)
+          __webpack_require__.BIsGameIgnored(_) ||
+            (__webpack_require__.BIsGameRecommended(_)
+              ? _.push(_)
+              : __webpack_require__.BIsGameWishlisted(_)
+                ? _.push(_)
+                : _[1]?.includes(_)
+                  ? _.push(_)
+                  : _[2]?.includes(_)
+                    ? _.push(_)
+                    : _.push(_));
+        return [
+          ...(0, _._)(_),
+          ...(0, _._)(_),
+          ...(0, _._)(_),
+          ...(0, _._)(_),
+          ...(0, _._)(_),
+        ];
+      }
+      function _(_, _, _, _, _) {
+        const _ = (0, _._)(_._, _),
+          _ = [..._, ..._],
+          _ = new Set(_);
+        if (
+          ((_.jsondata.sale_sections = []),
+          _.length > 9 &&
+            (function (_, _, _, _, _) {
+              _.jsondata.sale_sections.push({
+                ...(0, _._)("trailercarousel", ""),
+                capsules: _(_, _).map((_) => ({
+                  _: _,
+                  type: _.has(_) ? "dlc" : "game",
+                })),
+                use_random_order: !1,
+                disable_background: !0,
+                trailer_carousel_auto_advance_msec: 1e4,
+                show_on_tabs: _ ? [_] : void 0,
+              });
+            })(_, _, _, _),
+          _?.length > 25)
+        )
+          for (let _ in _) {
+            const _ = _[_];
+            _.jsondata.sale_sections.push({
+              ...(0, _._)("items", "#SteamCharts_Monthly_Rank_" + _),
+              capsules: _.map((_) => ({
+                _: _,
+                type: _.has(_) ? "dlc" : "game",
+              })),
+              capsules_per_row_array: [4],
+              capsule_style_per_row_array: "1" == _ ? ["tall"] : ["grid"],
+              show_as_carousel: !1,
+              use_random_order: !0,
+              border_width: 1,
+              default_subtitle: "#SteamCharts_Monthly_Rank_" + _ + "_subtitle",
+              sale_section_classname: _(Number.parseInt(_)),
+            });
+          }
+        else {
+          const _ = Object.values(_).flat();
+          _.jsondata.sale_sections.push({
+            ...(0, _._)("items", "#SteamCharts_Monthly_Rank_All"),
+            capsules: _.map((_) => ({
+              _: _,
+              type: _.has(_) ? "dlc" : "game",
+            })),
+            capsules_per_row_array:
+              _?.length > 9 ? (_?.length > 15 ? [3] : [2]) : [1],
+            single_item_style: _?.length < 9 ? "library" : "bordered",
+            show_as_carousel: !1,
+            use_random_order: !0,
+            sale_section_classname: _().AllTiers,
+          });
+        }
+        return (
+          (function (_, _, _, _, _) {
+            if (_._.logged_in) {
+              const _ = _._.Get(),
+                _ = _.filter((_) => _.BIsGameWishlisted(_));
+              _?.length > 0 &&
+                _.jsondata.sale_sections.push({
+                  ...(0, _._)("items", "#Sale_OnWishlist"),
+                  capsules: _.map((_) => ({
+                    _: _,
+                    type: _.has(_) ? "dlc" : "game",
+                  })),
+                  capsules_per_row_array: _.length < 3 ? [2] : [5],
+                  carousel_rows: 1,
+                  show_as_carousel: !0,
+                  disable_background: !0,
+                  capsule_style_per_row_array:
+                    _.length < 3 ? ["grid"] : ["tall"],
+                  random_from_entire_set: !0,
+                  show_on_tabs: _ ? [_] : void 0,
+                });
+              const _ = _.filter(
+                (_) => _.BIsGameRecommended(_) && !_.BIsGameIgnored(_),
+              );
+              if (_?.length > 0) {
+                const _ = _.length;
+                _.jsondata.sale_sections.push({
+                  ...(0, _._)("items", "#Sale_default_label_RecommendedForYou"),
+                  capsules: _.map((_) => ({
+                    _: _,
+                    type: _.has(_) ? "dlc" : "game",
+                  })),
+                  capsules_per_row_array: 2 == _ ? [2] : [3, 2],
+                  carousel_rows: 2,
+                  show_as_carousel: !0,
+                  disable_background: !0,
+                  capsule_style_per_row_array:
+                    2 == _ ? ["grid"] : ["tall", "grid"],
+                  show_on_tabs: _ ? [_] : void 0,
+                });
+              }
+              const _ = __webpack_require__.filter((_) => {
+                if (!_.BIsGameOwned(_)) {
+                  const _ = _._.Get().GetApp(_);
+                  return _.BIsGameOwned(_.GetParentAppID());
+                }
+                return !1;
+              });
+              _.length > 0 &&
+                _.jsondata.sale_sections.push({
+                  ...(0, _._)("dlc_for_you", "#Sale_default_label_246"),
+                  capsules: _.map((_) => ({
+                    _: _,
+                    type: "dlc",
+                  })),
+                  dlc_for_you_data: {
+                    group_by_parent_app: !0,
+                    hide_dlc_stats: !0,
+                    parent_app_page_size: 5,
+                    hide_dlc_grouping: !0,
+                  },
+                  capsules_per_row_array: [3],
+                  show_as_carousel: !0,
+                  disable_background: !0,
+                  show_on_tabs: _ ? [_] : void 0,
+                });
+            }
+          })(_, _, _, _),
+          (function (_, _, _, _, _) {
+            _?.length > 25 &&
+              _.jsondata.sale_sections.push({
+                ...(0, _._)("items", "#Sale_default_label_148"),
+                capsules: _.map((_) => ({
+                  _: _,
+                  type: _.has(_) ? "dlc" : "game",
+                })),
+                capsules_per_row_array: [1],
+                show_as_carousel: !1,
+                carousel_rows: 1,
+                single_item_style: "library",
+                use_random_order: !0,
+                cap_section_content: !1,
+                cap_section_row_count: _.length,
+                disable_background: !0,
+                enable_faceted_browsing: !0,
+                min_capsule_matches_for_facet_values: 5,
+                max_facet_values_for_facet: 5,
+                facet_sort_order: 1,
+                cap_item_count: 0,
+                facets: _,
+                show_on_tabs: _ ? [_] : void 0,
+              });
+          })(_, _, _, _),
+          _.jsondata.sale_sections.push({
+            ...(0, _._)(
+              "social_share",
+              "#EventDisplay_Share_WithFriendsHeader",
+            ),
+            social_share: (0, _._)(),
+          }),
+          _
+        );
+      }
+      function _(_) {
+        const {
+            rgFilteredDLCsAppIDs: _,
+            rgFilteredCombinedAppsAndDLC: __webpack_require__,
+            promotionName: _,
+            rgFilteredAppIDByTier: _,
+            facets: _,
+          } = _,
+          _ = (function (_, _, _, _, _) {
+            const { data: _ } = (0, _._)({
+              queryKey: ["useMonthEventModel", _],
+              queryFn: () => {
+                try {
+                  return _(_, _, _, _, _);
+                } catch (_) {
+                  return (
+                    console.error(`Montly new release: ${_} failed: `, _), null
+                  );
+                }
+              },
+            });
+            return _;
+          })(_, _, __webpack_require__, _, _),
+          _ = (0, _._)(_._.LANGUAGE),
+          _ = (0, _._)();
+        return !_ || _
+          ? null === _
+            ? _.createElement(
+                "div",
+                {
+                  className: _.ErrorStylesWithIcon,
+                },
+                (0, _._)("#Error_ErrorCommunicatingWithNetwork"),
+              )
+            : _.createElement(_._, {
+                string: (0, _._)("#Loading"),
+                position: "center",
+              })
+          : _.createElement(_._, {
+              eventModel: _,
+              language: _,
+              bIsPreview: !1,
+              bDynamicallyCreatedSale: !0,
+            });
+      }
+      function _(_, _, _, _) {
+        (0, _.useEffect)(() => {
+          if (null == _ && 1 != _ && _) {
+            const _ = (function (_) {
+              const _ = _._.Get(),
+                _ = _.filter((_) => {
+                  if (!_.BIsGameOwned(_)) {
+                    const _ = _._.Get().GetApp(_);
+                    return (
+                      _ &&
+                      __webpack_require__.BIsVisible() &&
+                      _.BIsGameOwned(__webpack_require__.GetParentAppID())
+                    );
+                  }
+                  return !1;
+                })
+                  .map((_) => _._.Get().GetApp(_).GetParentAppID())
+                  .filter(Boolean);
+              return Array.from(new Set(_));
+            })(_);
+            _?.length > 0
+              ? _._.Get()
+                  .HintLoadStoreApps(_, _._)
+                  .then(() => _(_))
+              : _([]);
+          }
+        }, [_, _, _, _]);
+      }
       function _(_) {
         const {
             salePageName: _,
@@ -8248,12 +8164,14 @@
           _ = (0, _.useMemo)(
             () =>
               _
-                ? [
-                    ...(_.top_dlc_releases?.map((_) => _.appid) || []),
-                    ...(_.top_combined_app_and_dlc_releases?.map(
-                      (_) => _.appid,
-                    ) || []),
-                  ]
+                ? Array.from(
+                    new Set([
+                      ...(_.top_dlc_releases?.map((_) => _.appid) || []),
+                      ...(_.top_combined_app_and_dlc_releases?.map(
+                        (_) => _.appid,
+                      ) || []),
+                    ]),
+                  )
                 : (_ && _(null), []),
             [_, _],
           ),
@@ -8320,32 +8238,7 @@
                 bForceFeatureTagForFullController: !1,
               }).then(_);
           }, [_]),
-          (0, _.useEffect)(() => {
-            if (null == _ && 1 != _) {
-              const _ = (function (_) {
-                const _ = _._.Get(),
-                  _ = _.filter((_) => {
-                    if (!_.BIsGameOwned(_)) {
-                      const _ = _._.Get().GetApp(_);
-                      return (
-                        _ &&
-                        __webpack_require__.BIsVisible() &&
-                        _.BIsGameOwned(__webpack_require__.GetParentAppID())
-                      );
-                    }
-                    return !1;
-                  })
-                    .map((_) => _._.Get().GetApp(_).GetParentAppID())
-                    .filter(Boolean);
-                return Array.from(new Set(_));
-              })(_);
-              _?.length > 0
-                ? _._.Get()
-                    .HintLoadStoreApps(_, _._)
-                    .then(() => _(_))
-                : _([]);
-            }
-          }, [_, _, _, _]),
+          _(_, _, _, _),
           _ && 1 != _ && _ && null != _ && _
             ? 0 == _.length
               ? _.createElement(
@@ -8379,6 +8272,7 @@
                     {
                       rgAppIDs: _,
                       nMonth: _,
+                      bBlurCapsules: !0,
                     },
                     _.createElement(_, {
                       nMonth: _,
@@ -8583,6 +8477,258 @@
           )
         );
       }
+      const _ = 1079395200;
+      function _(_) {
+        return (0, _._)(
+          "#SteamCharts_TopSellers_WeeklyRange",
+          (0, _._)(_, {
+            timeZone: "UTC",
+          }),
+          (0, _._)(_ + 604800, {
+            timeZone: "UTC",
+          }),
+        );
+      }
+      function _(_) {
+        if (!_) return "";
+        const _ = new Date(1e3 * _);
+        return `${_.getUTCFullYear()}-${_.getUTCMonth() + 1}-${_.getUTCDate()}`;
+      }
+      function _(_) {
+        return _ || "global";
+      }
+      function _(_) {
+        return "global" == _ ? "" : _;
+      }
+      function _(_, _) {
+        let _ = "",
+          _ = "";
+        return (
+          _ > _ ? ((_ = "Up"), (_ = "▲")) : _ < _ && ((_ = "Down"), (_ = "▼")),
+          {
+            direction: _,
+            symbol: _,
+          }
+        );
+      }
+      function _(_, _, _, _) {
+        const _ = (0, _._)();
+        return (
+          _.useEffect(() => {
+            if (
+              _ &&
+              !("global" == _ || (_ && _.BIsValidTopSellersCountry(_)))
+            ) {
+              let _ = "";
+              (_ = _.BIsValidTopSellersCountry(_._.COUNTRY)
+                ? _._.COUNTRY
+                : "global"),
+                _.replace(_(_(_)));
+            }
+          }, [_, _, _, _, _]),
+          _ && ("global" == _ || _.BIsValidTopSellersCountry(_))
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.memo((_) => {
+          const _ = _();
+          return _.isLoading
+            ? _.createElement("div", {
+                className: (0, _._)(
+                  _().ChartContainerPlaceholder,
+                  _().Placeholder,
+                ),
+              })
+            : _.data
+              ? _.createElement(
+                  "div",
+                  {
+                    className: _().ChartContainer,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Chart,
+                    },
+                    _.createElement(
+                      _._,
+                      null,
+                      _.createElement(_, {
+                        Data: _.data,
+                      }),
+                    ),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Stats,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().PeakStats,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().StatsTitle,
+                        },
+                        (0, _._)(_.data.peak),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().StatSubtitle,
+                        },
+                        _.createElement(
+                          "span",
+                          {
+                            className: _().Concurrent,
+                          },
+                          (0, _._)("#SteamCharts_Graph_PeakConcurrent"),
+                        ),
+                      ),
+                    ),
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().CurrentStats,
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().StatsTitle,
+                        },
+                        (0, _._)(_.data.current),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: _().StatSubtitle,
+                        },
+                        _.createElement(
+                          "span",
+                          {
+                            className: _().Now,
+                          },
+                          (0, _._)("#SteamCharts_Graph_OnlineNow"),
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              : null;
+        }),
+        _ = _.memo((_) => {
+          const { Data: _ } = _;
+          return _.createElement(
+            _._,
+            {
+              width: "100%",
+              height: "100%",
+            },
+            _.createElement(
+              _._,
+              {
+                data: _.history,
+                margin: {
+                  top: 25,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                },
+                barGap: 10,
+              },
+              _.createElement(
+                "defs",
+                null,
+                _.createElement(
+                  "linearGradient",
+                  {
+                    _: "bar_linear",
+                    _: "0",
+                    _: "0",
+                    _: "0",
+                    _: "1",
+                  },
+                  _.createElement("stop", {
+                    stopColor: "#1A9FFF",
+                  }),
+                  _.createElement("stop", {
+                    offset: "0.01",
+                    stopColor: "#1A9FFF",
+                  }),
+                  _.createElement("stop", {
+                    offset: "0.0101",
+                    stopColor: "#1A9FFF",
+                    stopOpacity: "0.5",
+                  }),
+                  _.createElement("stop", {
+                    offset: "1",
+                    stopColor: "#30363D",
+                    stopOpacity: "0.5",
+                  }),
+                ),
+              ),
+              _.createElement(_._, {
+                vertical: !1,
+                stroke: "#a0aab6",
+              }),
+              _.createElement(_._, {
+                tickFormatter: _._,
+                tick: {
+                  fill: "white",
+                },
+                axisLine: !1,
+              }),
+              _.createElement(_._, {
+                content: _.createElement(_, null),
+              }),
+              _.createElement(_._, {
+                dataKey: "users",
+                barSize: 2,
+                fill: "url( #bar_linear )",
+              }),
+              _.createElement(_._, {
+                _: _.peak,
+                stroke: "#82FF01",
+                strokeDasharray: "6",
+              }),
+            ),
+          );
+        });
+      function _({ active: _, payload: _ }) {
+        if (_ && _ && _.length) {
+          const _ = _[0].payload;
+          return _.createElement(
+            _._,
+            null,
+            (0, _._)(
+              "#SteamCharts_OverviewGraph_Tooltip_OnlineAt",
+              _.createElement("b", null, (0, _._)(_.users)),
+              _.date.toLocaleString(),
+            ),
+          );
+        }
+        return null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { SteamCharts: _ } = _;
         return _.createElement(
@@ -9510,6 +9656,386 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (0, _._)({
+          chartName: "LineChart",
+          GraphicalChild: _._,
+          axisComponents: [
+            {
+              axisType: "xAxis",
+              AxisComp: _._,
+            },
+            {
+              axisType: "yAxis",
+              AxisComp: _._,
+            },
+          ],
+          formatAxisMap: _._,
+        }),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        const _ = (0, _._)({
+          queryKey: ["SupportStatsPage"],
+          queryFn: async () => {
+            const _ = await _().get(
+              `${_._.STORE_BASE_URL}stats/support?json=1`,
+            );
+            if ("string" == typeof _.data) throw "Error loading release status";
+            return _.data;
+          },
+          staleTime: 9e5,
+        });
+        return _.createElement(
+          _._,
+          {
+            title: (0, _._)("#SteamCharts_SupportStats"),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().ChartPage,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
+              },
+              _.createElement(
+                "h1",
+                null,
+                (0, _._)("#SteamCharts_SupportStats"),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().PageSubtitle,
+              },
+              _.createElement(_, {
+                rtLastUpdated: _.data?.rtLastUpdated,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().PageSection,
+              },
+              _.createElement(
+                "p",
+                null,
+                (0, _._)(
+                  "#SupportStats_Header_Desc",
+                  _.createElement("a", {
+                    href: "http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549",
+                  }),
+                ),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().PageSection),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().SectionTitle),
+                },
+                _.createElement(
+                  "b",
+                  null,
+                  (0, _._)("#SupportStats_RequestsAndBacklog_Title"),
+                ),
+                " ",
+                (0, _._)("#SuportStats_MostRecent90Days"),
+                _.createElement(_._, null, _.createElement(_, null)),
+              ),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_().PageSection),
+              },
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().SectionTitle),
+                },
+                _.createElement(
+                  "b",
+                  null,
+                  (0, _._)("#SupportStats_RecentSupportActivity_Title"),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(_().CategoryBlock),
+                },
+                _.createElement(
+                  _._,
+                  null,
+                  _.createElement(_, {
+                    SupportStats: _.data,
+                  }),
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+      const _ = _.memo(function (_) {
+        const _ = new Date(1e3 * _.rtLastUpdated);
+        return _.createElement(
+          "span",
+          null,
+          (0, _._)(
+            "#SupportStats_Header_Title_Updated",
+            _.rtLastUpdated
+              ? _.toLocaleString(_._.GetPreferredLocales(), {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                  hour: "numeric",
+                  minute: "numeric",
+                  timeZoneName: "short",
+                })
+              : "",
+          ),
+        );
+      });
+      function _() {
+        const _ = (0, _._)({
+          queryKey: ["HelpRequestChartData"],
+          queryFn: async () => {
+            const _ = await _().get(
+              `${_._.STORE_BASE_URL}stats/supportdata.json`,
+            );
+            if ("string" == typeof _.data) throw "Error loading release status";
+            const _ = new Map(),
+              _ = [],
+              _ = [];
+            for (const _ of _.data) {
+              __webpack_require__.push({
+                dataKey: _.label,
+                color: _.color,
+              });
+              for (const _ of _.data) {
+                if (!_.has(_[0])) {
+                  const _ = {
+                    date: new Date(_[0]),
+                  };
+                  _.set(_[0], _), _.push(_);
+                }
+                _.get(_[0])[_.label] = _[1];
+              }
+            }
+            return {
+              rgSeries: _,
+              data: _,
+            };
+          },
+          staleTime: 216e5,
+        });
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(
+              _().HelpRequestChartContainer,
+              !_.data && _().Placeholder,
+            ),
+          },
+          _.data &&
+            _.createElement(_, {
+              ChartData: _.data,
+            }),
+        );
+      }
+      const _ = _.memo(function (_) {
+        const { ChartData: _ } = _,
+          { rgSeries: __webpack_require__, data: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            width: "100%",
+            height: "100%",
+          },
+          _.createElement(
+            _,
+            {
+              data: _,
+              margin: {
+                top: 20,
+                left: 30,
+                right: 30,
+                bottom: 0,
+              },
+            },
+            _.createElement(_._, {
+              dataKey: "date",
+              tickFormatter: _,
+              interval: 7,
+            }),
+            _.createElement(_._, {
+              type: "number",
+              tickFormatter: _._,
+            }),
+            _.createElement(_._, {
+              content: _.createElement(_, null),
+            }),
+            _.createElement(_._, null),
+            __webpack_require__.map((_) =>
+              _.createElement(_._, {
+                key: _.dataKey,
+                type: "monotone",
+                dataKey: _.dataKey,
+                stroke: _.color,
+                dot: !1,
+              }),
+            ),
+          ),
+        );
+      });
+      function _(_) {
+        const { active: _, payload: __webpack_require__ } = _;
+        if (_ && __webpack_require__ && __webpack_require__.length) {
+          const { date: _, ..._ } = __webpack_require__[0].payload;
+          return _.createElement(
+            _._,
+            null,
+            _.createElement("div", null, _(_), ":"),
+            Object.keys(_).map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                },
+                _,
+                ": ",
+                (0, _._)(_[_]),
+              ),
+            ),
+          );
+        }
+        return null;
+      }
+      function _(_) {
+        return _.toLocaleString(_._.GetPreferredLocales(), {
+          month: "short",
+          day: "numeric",
+        });
+      }
+      function _(_) {
+        const _ = _.SupportStats?.rgReportData;
+        return _
+          ? _.createElement(
+              "table",
+              {
+                className: _().ChartTable,
+              },
+              _.createElement(
+                "thead",
+                {
+                  className: _().ColumnHeaders,
+                },
+                _.createElement(
+                  "tr",
+                  null,
+                  _.createElement(
+                    "th",
+                    {
+                      className: _().Category,
+                    },
+                    _.createElement(
+                      "span",
+                      null,
+                      (0, _._)("#SupportStats_TicketsByCategory"),
+                    ),
+                  ),
+                  _.createElement(
+                    "th",
+                    {
+                      className: _().Submitted24h,
+                    },
+                    _.createElement(
+                      "span",
+                      null,
+                      (0, _._)("#SupportStats_TicketsLast24Hours"),
+                    ),
+                  ),
+                  _.createElement(
+                    "th",
+                    {
+                      className: _().ResponseTimes,
+                    },
+                    _.createElement(
+                      "span",
+                      null,
+                      (0, _._)("#SupportStats_TimeToResponse"),
+                    ),
+                  ),
+                ),
+              ),
+              _.createElement(
+                "tbody",
+                null,
+                _.map((_) =>
+                  _.createElement(_, {
+                    key: _.name,
+                    row: _,
+                  }),
+                ),
+              ),
+            )
+          : _.createElement("div", {
+              className: (0, _._)(_().Placeholder, _().Placeholder),
+            });
+      }
+      function _(_) {
+        const { row: _ } = _;
+        return _.createElement(
+          "tr",
+          {
+            className: (0, _._)(_().TableRow, _().TableRow),
+          },
+          _.createElement(
+            "td",
+            {
+              className: _().Category,
+            },
+            _.name,
+          ),
+          _.createElement(
+            "td",
+            {
+              className: _().Submitted24h,
+            },
+            (0, _._)(_.last24),
+          ),
+          _.createElement(
+            "td",
+            {
+              className: _().ResponseTimes,
+            },
+            (0, _._)(
+              "#SupportStats_RecentWaitTimeData",
+              _(_["30pct"]),
+              _(_["90pct"]),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        return (0, _._)(_, {
+          eSuffix: _._.None,
+          bAllowDecimal: !0,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { Item: _ } = _,
@@ -10085,6 +10611,65 @@
               ),
             ),
           )
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = _.lazy(() =>
+        Promise.all([
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+          __webpack_require__._("chunkid"),
+        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+      );
+      function _(_) {
+        const { salePagename: _ } = _;
+        (0, _._)(_().TopReleasesPage);
+        const _ = (0, _._)(_._.ANNOUNCEMENT_GID);
+        return _.createElement(
+          "div",
+          {
+            className: _().TopReleasesContainer,
+          },
+          _?.jsondata?.sale_custom_css &&
+            _.createElement("style", null, _?.jsondata?.sale_custom_css),
+          _.createElement(_, {
+            key: `sale_${_}`,
+            promotionName: `sale_${_}`,
+            language: (0, _._)(_._.LANGUAGE),
+          }),
         );
       }
       function _(_) {
@@ -10876,445 +11461,6 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      const _ = _.lazy(() =>
-        Promise.all([
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-          __webpack_require__._("chunkid"),
-        ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-      );
-      function _(_) {
-        const { salePagename: _ } = _;
-        (0, _._)(_().TopReleasesPage);
-        const _ = (0, _._)(_._.ANNOUNCEMENT_GID);
-        return _.createElement(
-          "div",
-          {
-            className: _().TopReleasesContainer,
-          },
-          _?.jsondata?.sale_custom_css &&
-            _.createElement("style", null, _?.jsondata?.sale_custom_css),
-          _.createElement(_, {
-            key: `sale_${_}`,
-            promotionName: `sale_${_}`,
-            language: (0, _._)(_._.LANGUAGE),
-          }),
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (0, _._)({
-          chartName: "LineChart",
-          GraphicalChild: _._,
-          axisComponents: [
-            {
-              axisType: "xAxis",
-              AxisComp: _._,
-            },
-            {
-              axisType: "yAxis",
-              AxisComp: _._,
-            },
-          ],
-          formatAxisMap: _._,
-        }),
-        _ = __webpack_require__("chunkid");
-      function _() {
-        const _ = (0, _._)({
-          queryKey: ["SupportStatsPage"],
-          queryFn: async () => {
-            const _ = await _().get(
-              `${_._.STORE_BASE_URL}stats/support?json=1`,
-            );
-            if ("string" == typeof _.data) throw "Error loading release status";
-            return _.data;
-          },
-          staleTime: 9e5,
-        });
-        return _.createElement(
-          _._,
-          {
-            title: (0, _._)("#SteamCharts_SupportStats"),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().ChartPage,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().HeaderCtn, _().WithSubtitle),
-              },
-              _.createElement(
-                "h1",
-                null,
-                (0, _._)("#SteamCharts_SupportStats"),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().PageSubtitle,
-              },
-              _.createElement(_, {
-                rtLastUpdated: _.data?.rtLastUpdated,
-              }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().PageSection,
-              },
-              _.createElement(
-                "p",
-                null,
-                (0, _._)(
-                  "#SupportStats_Header_Desc",
-                  _.createElement("a", {
-                    href: "http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549",
-                  }),
-                ),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().PageSection),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().SectionTitle),
-                },
-                _.createElement(
-                  "b",
-                  null,
-                  (0, _._)("#SupportStats_RequestsAndBacklog_Title"),
-                ),
-                " ",
-                (0, _._)("#SuportStats_MostRecent90Days"),
-                _.createElement(_._, null, _.createElement(_, null)),
-              ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().PageSection),
-              },
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().SectionTitle),
-                },
-                _.createElement(
-                  "b",
-                  null,
-                  (0, _._)("#SupportStats_RecentSupportActivity_Title"),
-                ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(_().CategoryBlock),
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(_, {
-                    SupportStats: _.data,
-                  }),
-                ),
-              ),
-            ),
-          ),
-        );
-      }
-      const _ = _.memo(function (_) {
-        const _ = new Date(1e3 * _.rtLastUpdated);
-        return _.createElement(
-          "span",
-          null,
-          (0, _._)(
-            "#SupportStats_Header_Title_Updated",
-            _.rtLastUpdated
-              ? _.toLocaleString(_._.GetPreferredLocales(), {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                  hour: "numeric",
-                  minute: "numeric",
-                  timeZoneName: "short",
-                })
-              : "",
-          ),
-        );
-      });
-      function _() {
-        const _ = (0, _._)({
-          queryKey: ["HelpRequestChartData"],
-          queryFn: async () => {
-            const _ = await _().get(
-              `${_._.STORE_BASE_URL}stats/supportdata.json`,
-            );
-            if ("string" == typeof _.data) throw "Error loading release status";
-            const _ = new Map(),
-              _ = [],
-              _ = [];
-            for (const _ of _.data) {
-              __webpack_require__.push({
-                dataKey: _.label,
-                color: _.color,
-              });
-              for (const _ of _.data) {
-                if (!_.has(_[0])) {
-                  const _ = {
-                    date: new Date(_[0]),
-                  };
-                  _.set(_[0], _), _.push(_);
-                }
-                _.get(_[0])[_.label] = _[1];
-              }
-            }
-            return {
-              rgSeries: _,
-              data: _,
-            };
-          },
-          staleTime: 216e5,
-        });
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(
-              _().HelpRequestChartContainer,
-              !_.data && _().Placeholder,
-            ),
-          },
-          _.data &&
-            _.createElement(_, {
-              ChartData: _.data,
-            }),
-        );
-      }
-      const _ = _.memo(function (_) {
-        const { ChartData: _ } = _,
-          { rgSeries: __webpack_require__, data: _ } = _;
-        return _.createElement(
-          _._,
-          {
-            width: "100%",
-            height: "100%",
-          },
-          _.createElement(
-            _,
-            {
-              data: _,
-              margin: {
-                top: 20,
-                left: 30,
-                right: 30,
-                bottom: 0,
-              },
-            },
-            _.createElement(_._, {
-              dataKey: "date",
-              tickFormatter: _,
-              interval: 7,
-            }),
-            _.createElement(_._, {
-              type: "number",
-              tickFormatter: _._,
-            }),
-            _.createElement(_._, {
-              content: _.createElement(_, null),
-            }),
-            _.createElement(_._, null),
-            __webpack_require__.map((_) =>
-              _.createElement(_._, {
-                key: _.dataKey,
-                type: "monotone",
-                dataKey: _.dataKey,
-                stroke: _.color,
-                dot: !1,
-              }),
-            ),
-          ),
-        );
-      });
-      function _(_) {
-        const { active: _, payload: __webpack_require__ } = _;
-        if (_ && __webpack_require__ && __webpack_require__.length) {
-          const { date: _, ..._ } = __webpack_require__[0].payload;
-          return _.createElement(
-            _._,
-            null,
-            _.createElement("div", null, _(_), ":"),
-            Object.keys(_).map((_) =>
-              _.createElement(
-                "div",
-                {
-                  key: _,
-                },
-                _,
-                ": ",
-                (0, _._)(_[_]),
-              ),
-            ),
-          );
-        }
-        return null;
-      }
-      function _(_) {
-        return _.toLocaleString(_._.GetPreferredLocales(), {
-          month: "short",
-          day: "numeric",
-        });
-      }
-      function _(_) {
-        const _ = _.SupportStats?.rgReportData;
-        return _
-          ? _.createElement(
-              "table",
-              {
-                className: _().ChartTable,
-              },
-              _.createElement(
-                "thead",
-                {
-                  className: _().ColumnHeaders,
-                },
-                _.createElement(
-                  "tr",
-                  null,
-                  _.createElement(
-                    "th",
-                    {
-                      className: _().Category,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#SupportStats_TicketsByCategory"),
-                    ),
-                  ),
-                  _.createElement(
-                    "th",
-                    {
-                      className: _().Submitted24h,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#SupportStats_TicketsLast24Hours"),
-                    ),
-                  ),
-                  _.createElement(
-                    "th",
-                    {
-                      className: _().ResponseTimes,
-                    },
-                    _.createElement(
-                      "span",
-                      null,
-                      (0, _._)("#SupportStats_TimeToResponse"),
-                    ),
-                  ),
-                ),
-              ),
-              _.createElement(
-                "tbody",
-                null,
-                _.map((_) =>
-                  _.createElement(_, {
-                    key: _.name,
-                    row: _,
-                  }),
-                ),
-              ),
-            )
-          : _.createElement("div", {
-              className: (0, _._)(_().Placeholder, _().Placeholder),
-            });
-      }
-      function _(_) {
-        const { row: _ } = _;
-        return _.createElement(
-          "tr",
-          {
-            className: (0, _._)(_().TableRow, _().TableRow),
-          },
-          _.createElement(
-            "td",
-            {
-              className: _().Category,
-            },
-            _.name,
-          ),
-          _.createElement(
-            "td",
-            {
-              className: _().Submitted24h,
-            },
-            (0, _._)(_.last24),
-          ),
-          _.createElement(
-            "td",
-            {
-              className: _().ResponseTimes,
-            },
-            (0, _._)(
-              "#SupportStats_RecentWaitTimeData",
-              _(_["30pct"]),
-              _(_["90pct"]),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        return (0, _._)(_, {
-          eSuffix: _._.None,
-          bAllowDecimal: !0,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { MostPlayedOnDeckStore: _, strTimePeriod: __webpack_require__ } =
@@ -11766,6 +11912,7 @@
           ),
         );
       }
+      _.Fragment;
       const _ = {
         Overview: () => `${_._.SteamCharts()}`,
         MostPlayed: () => `${_._.SteamCharts()}mostplayed`,
@@ -11775,8 +11922,9 @@
         TopSellers: (_, _) =>
           `${_._.SteamCharts()}topsellers/${_}${_ ? "/" + _ : ""}`,
         TopNewReleases: (_) => `${_._.SteamCharts()}topnewreleases/${_}`,
-        BestOfYear: (_) => `${_._.SteamCharts()}bestofyear/${_}`,
         SupportStats: () => `${_._.SteamCharts()}support/`,
+        BestOfYear: (_) => `${_._.SteamCharts()}bestofyear/${_}`,
+        BestOfYearV2: (_) => `${_._.SteamCharts()}bestofyear_v2/${_}`,
       };
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(void 0),
@@ -11801,6 +11949,7 @@
             BestOfYearStore: _,
             MostPlayedOnSteamDeckStore: _,
             TopMonthlyReleasesStore: _,
+            TopYearlyReleasesStore: _,
           } = _;
         return _.createElement(
           _,
@@ -11962,6 +12111,7 @@
                     );
                   },
                 }),
+                !1,
                 _.createElement(_._, {
                   path: `${_.MostPlayedOnSteamDeck(":timeperiod?")}`,
                   render: (_) => {

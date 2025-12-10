@@ -56588,6 +56588,17 @@
                   },
                   resolution: { n: 3, br: h.qM.readEnum, bw: h.gp.writeEnum },
                   reason: { n: 4, br: h.qM.readEnum, bw: h.gp.writeEnum },
+                  subject_type: { n: 5, br: h.qM.readEnum, bw: h.gp.writeEnum },
+                  chat_group_id: {
+                    n: 6,
+                    br: h.qM.readUint64String,
+                    bw: h.gp.writeUint64String,
+                  },
+                  kick_expiration_time: {
+                    n: 7,
+                    br: h.qM.readUint32,
+                    bw: h.gp.writeUint32,
+                  },
                 },
               }),
             Ji.sm_m
@@ -65180,19 +65191,8 @@
     18663: (e, t, r) => {
       "use strict";
       r.d(t, { lS: () => _, lz: () => b, wo: () => B });
-      var i = r(90626),
-        n = r(55263),
-        a = r(95695),
-        s = r.n(a),
-        o = r(12155),
-        l = r(52038),
-        c = r(61859),
-        u = r(61336),
-        m = r(78327),
-        d = r(32754),
-        g = r(12443),
-        p = r.n(g);
-      function h(e) {
+      var i = r(90626);
+      function n(e) {
         switch (e) {
           case "discord_server":
             return 5;
@@ -65245,45 +65245,56 @@
         }
         return 0;
       }
+      var a = r(55263),
+        s = r(95695),
+        o = r.n(s),
+        l = r(12155),
+        c = r(52038),
+        u = r(61859),
+        m = r(61336),
+        d = r(78327),
+        g = r(32754),
+        p = r(12443),
+        h = r.n(p);
       function _(e) {
         const { appid: t } = e;
         return i.createElement(
           "div",
-          { className: p().AppSocialLinksCtn },
+          { className: h().AppSocialLinksCtn },
           i.createElement(B, { appid: t }),
         );
       }
       function B(e) {
         const { appid: t } = e,
-          [r] = (0, n.t7)(t, { include_basic_info: !0, include_links: !0 });
+          [r] = (0, a.t7)(t, { include_basic_info: !0, include_links: !0 });
         if (!r) return null;
-        const a = r.GetLinks();
-        return a && 0 != a.length && m.TS.IMG_URL
+        const n = r.GetLinks();
+        return n && 0 != n.length && d.TS.IMG_URL
           ? i.createElement(
               i.Fragment,
               null,
               i.createElement(
                 "div",
                 {
-                  className: (0, l.A)(
-                    s().EventEditorTextTitle,
+                  className: (0, c.A)(
+                    o().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
                 },
-                (0, c.we)("#EventDisplay_SocialTitle"),
+                (0, u.we)("#EventDisplay_SocialTitle"),
               ),
-              i.createElement(f, { id: "" + t, rgSocialMedia: a }),
+              i.createElement(w, { id: "" + t, rgSocialMedia: n }),
             )
           : null;
       }
       function b(e) {
         const { gidClanEvent: t, rgSocial: r } = e,
-          n = (function (e) {
+          a = (function (e) {
             return (0, i.useMemo)(
               () =>
                 e
                   ? e.map((e) => {
-                      const t = { link_type: h(e.type) };
+                      const t = { link_type: n(e.type) };
                       return (
                         6 == t.link_type || 17 == t.link_type
                           ? (t.text = e.link)
@@ -65295,128 +65306,134 @@
               [e],
             );
           })(r);
-        return n && 0 != n.length && m.TS.IMG_URL
+        return a && 0 != a.length && d.TS.IMG_URL
           ? i.createElement(
               i.Fragment,
               null,
               i.createElement(
                 "div",
                 {
-                  className: (0, l.A)(
-                    s().EventEditorTextTitle,
+                  className: (0, c.A)(
+                    o().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
                 },
-                (0, c.we)("#EventDisplay_Sale_SocialTitle"),
+                (0, u.we)("#EventDisplay_Sale_SocialTitle"),
               ),
-              i.createElement(f, { id: t, rgSocialMedia: n }),
+              i.createElement(w, { id: t, rgSocialMedia: a }),
             )
           : null;
       }
-      function f(e) {
-        const { id: t, rgSocialMedia: r, className: n } = e;
+      const f = [6, 23, 18, 8, 9, 19, 24];
+      function w(e) {
+        const { id: t, rgSocialMedia: r, className: n } = e,
+          a = (0, d.Y2)();
         return i.createElement(
           "div",
-          { className: (0, l.A)(p().AppSocialLinks, n) },
-          r.map((e) =>
-            e.url
-              ? i.createElement(w, {
-                  key: "app_social_link_" + t + "_" + e.link_type,
-                  social: e,
-                })
-              : i.createElement(M, {
-                  key:
-                    "app_social_text_" + t + "_" + e.link_type + "_" + e.text,
-                  social: e,
-                }),
-          ),
-        );
-      }
-      function w(e) {
-        const { social: t } = e;
-        return i.createElement(
-          "a",
-          {
-            href: (0, u.NT)(t.url),
-            target: m.TS.IN_CLIENT ? void 0 : "_blank",
-            rel: "noopener noreferrer",
-          },
-          i.createElement(
-            d.he,
-            { toolTipContent: t.url },
-            i.createElement(y, { social: t }),
-          ),
+          { className: (0, c.A)(h().AppSocialLinks, n) },
+          r
+            .filter((e) => !a || f.includes(e.link_type || 0))
+            .map((e) =>
+              e.url
+                ? i.createElement(M, {
+                    key: "app_social_link_" + t + "_" + e.link_type,
+                    social: e,
+                  })
+                : i.createElement(y, {
+                    key:
+                      "app_social_text_" + t + "_" + e.link_type + "_" + e.text,
+                    social: e,
+                  }),
+            ),
         );
       }
       function M(e) {
         const { social: t } = e;
-        return i.createElement(
-          "div",
-          { className: p().AppSocialLinkWithText },
-          i.createElement(
-            d.he,
-            { toolTipContent: t.text },
-            i.createElement(y, { social: t }),
-          ),
-          i.createElement("div", { className: p().AppSocialText }, t.text),
-        );
+        return t.url
+          ? i.createElement(
+              "a",
+              {
+                href: (0, m.NT)(t.url),
+                target: d.TS.IN_CLIENT ? void 0 : "_blank",
+                rel: "noopener noreferrer",
+              },
+              i.createElement(
+                g.he,
+                { toolTipContent: t.url },
+                i.createElement(v, { social: t }),
+              ),
+            )
+          : null;
       }
       function y(e) {
         const { social: t } = e;
-        return i.createElement(v, {
-          linkType: t.link_type,
-          className: p().AppSocialLinkIcon,
-        });
+        return i.createElement(
+          "div",
+          { className: h().AppSocialLinkWithText },
+          i.createElement(
+            g.he,
+            { toolTipContent: t.text },
+            i.createElement(v, { social: t }),
+          ),
+          i.createElement("div", { className: h().AppSocialText }, t.text),
+        );
       }
       function v(e) {
+        const { social: t } = e;
+        return i.createElement(S, {
+          linkType: t.link_type || 0,
+          className: h().AppSocialLinkIcon,
+        });
+      }
+      function S(e) {
         const { linkType: t, ...r } = e;
         switch (t) {
           case 1:
-            return i.createElement(o.agV, { ...r });
+            return i.createElement(l.agV, { ...r });
           case 2:
-            return i.createElement(o.ZnA, { ...r });
+            return i.createElement(l.ZnA, { ...r });
           case 3:
-            return i.createElement(o.oy, { ...r });
+            return i.createElement(l.oy, { ...r });
           case 4:
-            return i.createElement(o.ofN, { ...r });
+            return i.createElement(l.ofN, { ...r });
           case 5:
-            return i.createElement(o.Bki, { ...r });
+            return i.createElement(l.Bki, { ...r });
           case 6:
           case 18:
           case 23:
-            return i.createElement(o.$vK, { ...r });
+            return i.createElement(l.$vK, { ...r });
           case 7:
-            return i.createElement(o.OSJ, { ...r });
+            return i.createElement(l.OSJ, { ...r });
           case 8:
-            return i.createElement(o.nm_, { ...r });
+            return i.createElement(l.nm_, { ...r });
           case 9:
-            return i.createElement(o.tIO, { ...r });
+            return i.createElement(l.tIO, { ...r });
           case 10:
-            return i.createElement(o.Vt2, { ...r });
+            return i.createElement(l.Vt2, { ...r });
           case 11:
-            return i.createElement(o.Vgk, { ...r });
+            return i.createElement(l.Vgk, { ...r });
           case 12:
-            return i.createElement(o.VSd, { ...r });
+            return i.createElement(l.VSd, { ...r });
           case 13:
-            return i.createElement(o.ccb, { ...r });
+            return i.createElement(l.ccb, { ...r });
           case 14:
-            return i.createElement(o.rNt, { ...r });
+            return i.createElement(l.rNt, { ...r });
           case 15:
-            return i.createElement(o.g$j, { ...r });
+            return i.createElement(l.g$j, { ...r });
           case 16:
-            return i.createElement(o.BQz, { ...r });
+            return i.createElement(l.BQz, { ...r });
           case 17:
-            return i.createElement(o.jdP, { ...r });
+            return i.createElement(l.jdP, { ...r });
           case 19:
-            return i.createElement(o.bKN, { ...r });
+            return i.createElement(l.bKN, { ...r });
           case 20:
-            return i.createElement(o.sDU, { ...r });
+            return i.createElement(l.sDU, { ...r });
           case 21:
-            return i.createElement(o.MbF, { ...r });
+            return i.createElement(l.MbF, { ...r });
           case 22:
-            return i.createElement(o.emH, { ...r });
+            return i.createElement(l.emH, { ...r });
           case 24:
-            return i.createElement(o.Yoo, { ...r });
+            return i.createElement(l.Yoo, { ...r });
           case 25:
           case 0:
             return "invalid social media type";
@@ -75151,6 +75168,7 @@
         C$: () => g,
         Gq: () => _,
         fS: () => f,
+        gK: () => d,
         he: () => p,
         m9: () => h,
         zQ: () => w,
@@ -76101,13 +76119,15 @@
       }
       function _(e) {
         const t = e.ownerDocument;
-        t.cancelFullscreen
-          ? t.cancelFullscreen()
-          : t.webkitCancelFullScreen
-            ? t.webkitCancelFullScreen()
-            : t.mozCancelFullScreen
-              ? t.mozCancelFullScreen()
-              : t.msExitFullscreen && t.msExitFullscreen();
+        t.exitFullscreen
+          ? t.exitFullscreen()
+          : t.cancelFullscreen
+            ? t.cancelFullscreen()
+            : t.webkitCancelFullScreen
+              ? t.webkitCancelFullScreen()
+              : t.mozCancelFullScreen
+                ? t.mozCancelFullScreen()
+                : t.msExitFullscreen && t.msExitFullscreen();
       }
       function B(e) {
         return "INPUT" === e.nodeName;

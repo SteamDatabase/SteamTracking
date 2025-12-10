@@ -1982,6 +1982,8 @@
                 0) >= 7,
             min_capsule_matches_for_facet_values: 5,
             max_facet_values_for_facet: 5,
+            background_gradient_top: "#00000030",
+            background_gradient_bottom: "#00000030",
             facet_sort_order: 1,
             facet_auto_generate_options: {
               only_facets: [

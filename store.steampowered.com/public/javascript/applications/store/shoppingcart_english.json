@@ -94,6 +94,7 @@
     "Cart_Warning_PriceChange_FootNote": "Note: One or more of the items below have changed in price since you added it to your cart.",
     "Cart_Warning_PriceChange_LineItem": "The price of this item has changed",
     "Cart_Warning_NoRefund_LineItem": "This product contains consumable content that makes it not eligible for a refund.",
+    "Cart_Warning_AvailableAtALowerPrice": "This item is available at a lower price as part of %1$s.",
     "PackageIncludesSubscriptionBySecond": "Subscription to be billed %1$s every %2$s second(s).",
     "PackageIncludesSubscriptionByMinute": "Subscription to be billed %1$s every %2$s minute(s).",
     "PackageIncludesSubscriptionByHour": "Subscription to be billed %1$s every %2$s hour(s).",

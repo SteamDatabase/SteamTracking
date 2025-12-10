@@ -358,7 +358,7 @@ function HomeSaleSteamAwardWinners( $Parent, rgSteamAwardWinners, rgSteamAwardDe
 		let purchaseAction = 'addToCart( %subid% )'.replace( '%subid%', rgItemData.pricing_subid );
 		let $Cap = $J( '<div/>', {'class': 'winner_ctn', 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
 		$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': params['href'], 'aria-label': rgItemData.name } ) );
-		$Cap.append( $J('<div/>', {'class': 'category_background', 'style': 'background-image: url( \'https://cdn.fastly.steamstatic.com/store/promo/steamawards2023/backgrounds/awardbg_' + def.voteid +'.jpg\');' } ) );
+		$Cap.append( $J('<div/>', {'class': 'category_background', 'style': 'background-image: url( \'https://cdn.fastly.steamstatic.com/store/promo/steamawards2024/backgrounds/' + def.internal_name +'.jpg\');' } ) );
 
 		let $Content = $J('<div/>', {'class': 'category_content' } );
 		$Content.append( $J('<div/>', {'class': 'category_title' } ).append( def.localization.title_linebreak.replace( '<1></1>', '<br/>' ).replace( '<2></2>', '<br/>' ) ) );

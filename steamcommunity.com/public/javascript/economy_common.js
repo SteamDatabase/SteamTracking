@@ -179,6 +179,10 @@ function ToValidMarketPrice( nPrice, rgWallet )
 	{
 		return nFloor;
 	}
+	if ( nPrice <= nIncrement )
+	{
+		return nIncrement;
+	}
 	if ( nIncrement > 1 )
 	{
 		var dAmount = nPrice / nIncrement;

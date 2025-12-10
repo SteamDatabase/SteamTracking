@@ -2284,8 +2284,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.None = 0)] = "None"),
@@ -2695,7 +2693,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = _(_().GetGameID());
@@ -2737,12 +2734,12 @@
         if (!_) return _.NotRecording;
         switch (_.recording_type) {
           default:
-          case _._.k_EGameRecordingType_Unknown:
-          case _._.k_EGameRecordingType_NotRecording:
+          case 0:
+          case 1:
             return _.NotRecording;
-          case _._.k_EGameRecordingType_ManualRecording:
+          case 2:
             return _.ManualRecording;
-          case _._.k_EGameRecordingType_BackgroundRecording:
+          case 3:
             return _.BackgroundRecording;
         }
       }
@@ -3452,15 +3449,14 @@
           var _, _;
           this.m_gameRecordingVideo.IsPaused() ||
           !this.m_gameRecordingVideo.IsInitialized()
-            ? (null !==
-                (_ =
-                  this.m_nGlobalTimelinePlaybackMS >
-                  (null === (_ = this.m_lastRecordingGlobalMS) || void 0 === _
-                    ? void 0
-                    : _.valMS)) &&
-                void 0 !== _ &&
-                _ &&
-                this.TryPlayInitialTimelineVideo(),
+            ? (this.m_nGlobalTimelinePlaybackMS >
+                (null !==
+                  (_ =
+                    null === (_ = this.m_lastRecordingGlobalMS) || void 0 === _
+                      ? void 0
+                      : _.valMS) && void 0 !== _
+                  ? _
+                  : 0) && this.TryPlayInitialTimelineVideo(),
               this.m_gameRecordingVideo.GetTimelineDuration() -
                 this.m_gameRecordingVideo.GetPlaybackTime() <
               0.05
@@ -3598,11 +3594,11 @@
                 timeline_id: _.strTimelineID,
                 entry_id: "",
                 time: "" + Math.floor(_.nTimelineOffsetMS.valMS + _),
-                type: _._.k_ETimelineEntryType_UserMarker,
+                type: 5,
                 marker_icon: _,
                 marker_priority: 0,
               });
-            _.eResult == _._.k_EResultOK &&
+            1 == _.eResult &&
               (this.m_timelineLoader.AddUserMarker(
                 _.strTimelineID,
                 Math.floor(_.nTimelineOffsetMS.valMS),
@@ -3615,8 +3611,7 @@
         async RemoveUserMarker(_, _) {
           const { fnRemoveUserTimelineMarker: __webpack_require__ } = _(),
             _ = this.m_timelineLoader.GetGameID();
-          return (await __webpack_require__(_, this.GetClipID(), _, _)) ==
-            _._.k_EResultOK
+          return 1 == (await __webpack_require__(_, this.GetClipID(), _, _))
             ? (this.m_timelineLoader.RemoveUserMarker(_, _), !0)
             : ((0, _._)(
                 `Failed to delete user marker for timeline ${_} entry ${_}`,
@@ -3630,13 +3625,13 @@
               timeline_id: _,
               entry_id: _._,
               time: _.time,
-              type: _._.k_ETimelineEntryType_UserMarker,
+              type: 5,
               marker_icon: _.icon,
               marker_priority: _.priority,
               range_title: _,
               marker_description: _,
             };
-          if ((await _(_, this.GetClipID(), _)) == _._.k_EResultOK) {
+          if (1 == (await _(_, this.GetClipID(), _))) {
             const _ = {
               strIcon: _.icon,
               name: _,
@@ -4077,8 +4072,7 @@
         })(null == _ ? void 0 : _.data);
       }
       (0, _._)([_._], _.prototype, "m_mapThumbnailImages", void 0);
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       const _ = {
           nBeforeMS: 0,
           nAfterMS: 12e3,
@@ -5010,7 +5004,7 @@
       function _() {
         return (0, _.useContext)(_);
       }
-      __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       class _ {
         constructor(_, _, _, _, _, _, _, _) {
@@ -5113,7 +5107,7 @@
                 (0, _._)(_);
               }
               return {
-                result: _._.k_EResultFail,
+                result: 2,
               };
             })(_, _, _, _, _, _, _, _, _),
           _ / 1e3,
@@ -5388,7 +5382,7 @@
               _._,
               {
                 onSelected: () => {
-                  _(_, _._.k_EClipRangeMethod_ContextMenu, _, void 0),
+                  _(_, 4, _, void 0),
                     _.SetPlaytimeFromGlobalMS(_),
                     _.FocusGlobalMS(_);
                 },
@@ -5413,7 +5407,7 @@
               _._,
               {
                 onSelected: () => {
-                  _(_, _._.k_EClipRangeMethod_ContextMenu, void 0, _),
+                  _(_, 4, void 0, _),
                     _.SetPlaytimeFromGlobalMS(_),
                     _.FocusGlobalMS(_);
                 },
@@ -5453,19 +5447,15 @@
                         _,
                         _,
                         _ - _,
-                        _._.k_EClipRangeMethod_PhaseRecording,
+                        7,
                         {
-                          latestRangeMethod:
-                            _._.k_EClipRangeMethod_PhaseRecording,
-                          originalRangeMethod:
-                            _._.k_EClipRangeMethod_PhaseRecording,
+                          latestRangeMethod: 7,
+                          originalRangeMethod: 7,
                           relativeMS: 0,
                         },
                         {
-                          latestRangeMethod:
-                            _._.k_EClipRangeMethod_PhaseRecording,
-                          originalRangeMethod:
-                            _._.k_EClipRangeMethod_PhaseRecording,
+                          latestRangeMethod: 7,
+                          originalRangeMethod: 7,
                           relativeMS: 0,
                         },
                       ).create(!1);
@@ -5577,12 +5567,7 @@
             {
               onSelected: () => {
                 const _ = _.GetGlobalMSPlaytime();
-                __webpack_require__(
-                  _,
-                  _._.k_EClipRangeMethod_ContextMenu,
-                  _,
-                  void 0,
-                ),
+                __webpack_require__(_, 4, _, void 0),
                   _.SetPlaytimeFromGlobalMS(_),
                   _.FocusGlobalMS(_);
               },
@@ -5604,12 +5589,7 @@
             {
               onSelected: () => {
                 const _ = _.GetGlobalMSPlaytime();
-                __webpack_require__(
-                  _,
-                  _._.k_EClipRangeMethod_ContextMenu,
-                  void 0,
-                  _,
-                ),
+                __webpack_require__(_, 4, void 0, _),
                   _.SetPlaytimeFromGlobalMS(_),
                   _.FocusGlobalMS(_);
               },
@@ -8613,13 +8593,9 @@
         );
       }
       var _ = __webpack_require__("chunkid");
-      const _ = 500;
-      var _;
-      !(function (_) {
-        (_.none = "none"), (_.left = "left"), (_.right = "right");
-      })(_ || (_ = {}));
-      const _ = (0, _.memo)(function () {
-          const [_, _] = (0, _.useState)(_.none),
+      const _ = 500,
+        _ = (0, _.memo)(function () {
+          const [_, _] = (0, _.useState)("none"),
             _ = _(),
             _ = _(),
             _ = _();
@@ -8662,20 +8638,20 @@
             ),
             _ = (0, _.useCallback)(
               (_) => {
-                _ === _.none && _.stopPropagation();
+                "none" === _ && _.stopPropagation();
               },
               [_],
             ),
             _ = (0, _.useCallback)(
               (_) => {
-                _ === _.none && _.stopPropagation();
+                "none" === _ && _.stopPropagation();
               },
               [_],
             );
           return _.createElement(
             "div",
             {
-              className: (0, _._)(_.RangeSelectorCtn, _ !== _.none && _.Active),
+              className: (0, _._)(_.RangeSelectorCtn, "none" !== _ && _.Active),
               onMouseOver: _,
               onMouseOut: _,
               onFocus: _,
@@ -8687,18 +8663,18 @@
                 className: _.TrackRangeControls,
               },
               _.createElement(_, {
-                isActive: _ === _.left,
+                isActive: "left" === _,
                 setControlState: __webpack_require__,
                 setRangeControlPX: _,
                 pxOffset: _,
               }),
               _.createElement(_, {
-                startOffsetPX: (_ === _.left && _) || _,
-                endOffsetPX: (_ === _.right && _) || _,
+                startOffsetPX: ("left" === _ && _) || _,
+                endOffsetPX: ("right" === _ && _) || _,
                 className: _.SelectedRangeMask,
               }),
               _.createElement(_, {
-                isActive: _ === _.right,
+                isActive: "right" === _,
                 setControlState: __webpack_require__,
                 setRangeControlPX: _,
                 pxOffset: _,
@@ -8729,7 +8705,7 @@
             })
           : _.createElement(_, {
               offsetMS: _.valMS,
-              direction: _.left,
+              direction: "left",
               setControlState: __webpack_require__,
               setRangeControlPX: _,
             });
@@ -8802,7 +8778,7 @@
                 _ = _.ConvertGlobalMSToScrollWindowPXOffset(_.valMS);
               if (_.valPX > _)
                 return (
-                  _(_), _(_.right), void _.SetThumbnailComponent(_.RangeRight)
+                  _(_), _("right"), void _.SetThumbnailComponent(_.RangeRight)
                 );
               if (_.valPX < _ && !_.BReachedMinScroll()) {
                 if (_.valPX > _.current) _.current = !0;
@@ -8840,14 +8816,11 @@
           (0, _.useEffect)(() => {
             isNaN(_) ||
               (_.SetThumbnailPosition(_),
-              _(
-                _._.k_EClipRangeMethod_Drag,
-                (0, _._)(_.ConvertPXOffsetToGlobalMS(_)),
-              ));
+              _(5, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
           }, [_, _, _]),
           _.createElement(_, {
             offsetPX: _,
-            direction: _.left,
+            direction: "left",
           })
         );
       }
@@ -8867,7 +8840,7 @@
             })
           : _.createElement(_, {
               offsetMS: _.valMS,
-              direction: _.right,
+              direction: "right",
               setControlState: __webpack_require__,
               setRangeControlPX: _,
             });
@@ -8940,7 +8913,7 @@
                 _ = _.ConvertGlobalMSToScrollWindowPXOffset(_.valMS);
               if (_.valPX < _)
                 return (
-                  _(_), _(_.left), void _.SetThumbnailComponent(_.RangeLeft)
+                  _(_), _("left"), void _.SetThumbnailComponent(_.RangeLeft)
                 );
               if (_.valPX > _ && !_.BReachedMaxScroll()) {
                 if (_.valPX < _.current) _.current = !0;
@@ -8980,14 +8953,11 @@
           (0, _.useEffect)(() => {
             isNaN(_) ||
               (_.SetThumbnailPosition(_),
-              _(
-                _._.k_EClipRangeMethod_Drag,
-                (0, _._)(_.ConvertPXOffsetToGlobalMS(_)),
-              ));
+              _(5, (0, _._)(_.ConvertPXOffsetToGlobalMS(_))));
           }, [_, _, _]),
           _.createElement(_, {
             offsetPX: _,
-            direction: _.right,
+            direction: "right",
           })
         );
       }
@@ -9016,14 +8986,14 @@
               const _ = () => {
                 _(__webpack_require__),
                   _.SetThumbnailComponent(
-                    __webpack_require__ === _.left ? _.RangeLeft : _.RangeRight,
+                    "left" === __webpack_require__ ? _.RangeLeft : _.RangeRight,
                   ),
                   _();
               };
               _.addEventListener("mousemove", _),
                 (_ = () => _.removeEventListener("mousemove", _));
               const _ = () => {
-                _(_.none), _.SetThumbnailComponent(null), _(), _();
+                _("none"), _.SetThumbnailComponent(null), _(), _();
               };
               _.addEventListener("mouseup", _),
                 (_ = () => _.removeEventListener("mouseup", _));
@@ -9032,7 +9002,7 @@
           ),
           _ = (_) => {
             _.SetThumbnailComponent(
-              __webpack_require__ === _.left ? _.RangeLeft : _.RangeRight,
+              "left" === __webpack_require__ ? _.RangeLeft : _.RangeRight,
             );
           },
           _ = (_) => {
@@ -9215,8 +9185,8 @@
             transform: `translateX(${_}px)`,
           },
           _ = _(),
-          _ = _ === _._.k_EGameRecordingType_Clip,
-          _ = _ === _._.k_EGameRecordingType_ManualRecording;
+          _ = 4 === _,
+          _ = 2 === _;
         return _.createElement(
           _.Fragment,
           null,
@@ -10264,7 +10234,7 @@
                 const _ = _._.Init(_);
                 __webpack_require__.Body().set_clip_id(_);
                 const _ = await _.GetSingleSharedClip(_, _);
-                if (_.GetEResult() != _._.k_EResultOK)
+                if (1 != _.GetEResult())
                   return (
                     (0, _._)("GetSingleSharedClip failed"),
                     void _.DEBUG_LogToConsole()
@@ -10284,7 +10254,7 @@
                       recording_id: _.video_manager_video_id,
                       start_offset_ms: _.start_offset_ms.toFixed(0),
                       duration_ms: _.duration_ms.toFixed(0),
-                      recording_type: _._.k_EGameRecordingType_Clip,
+                      recording_type: 4,
                       cdn_manifest_url: _.manifest_url,
                     });
                 return {
@@ -10406,21 +10376,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _,
-        _ = __webpack_require__("chunkid");
+      var _, _;
       function _(_) {
         return "gamemode" === _.type;
       }
@@ -10452,34 +10408,34 @@
           type: void 0,
         };
         switch (_.type) {
-          case _._.k_ETimelineEntryType_GameMode: {
+          case 1: {
             let _ = _;
             (_.type = "gamemode"), (_.mode = _.game_mode);
             break;
           }
-          case _._.k_ETimelineEntryType_UserMarker: {
+          case 5: {
             let _ = _;
             (_.type = "usermarker"),
               (_.icon = "steam_marker"),
               (_.priority = _.marker_priority);
             break;
           }
-          case _._.k_ETimelineEntryType_Achievement: {
+          case 4: {
             let _ = _;
             (_.type = "achievement"), (_.achievement_name = _.achievement_name);
             break;
           }
-          case _._.k_ETimelineEntryType_Error: {
+          case 7: {
             let _ = _;
             (_.type = "error"), (_.description = _.marker_description);
             break;
           }
-          case _._.k_ETimelineEntryType_StateDescription: {
+          case 3: {
             let _ = _;
             (_.type = "state_description"), (_.title = _.timestamp_title);
             break;
           }
-          case _._.k_ETimelineEntryType_Event: {
+          case 2: {
             let _ = _;
             (_.type = "event"),
               (_.icon = _.marker_icon),
@@ -10490,7 +10446,7 @@
               (_.possible_clip = _.range_possible_clip);
             break;
           }
-          case _._.k_ETimelineEntryType_Screenshot: {
+          case 6: {
             let _ = _;
             (_.type = "screenshot"),
               (_.icon = _.marker_icon),
@@ -10503,12 +10459,24 @@
         }
         return _;
       }
-      !(function (_) {
-        (_[(_.Invalid = 0)] = "Invalid"),
-          (_[(_.Playing = 1)] = "Playing"),
-          (_[(_.Staging = 2)] = "Staging"),
-          (_[(_.Menus = 3)] = "Menus");
-      })(_ || (_ = {})),
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      }),
+        (function (_) {
+          (_[(_.Invalid = 0)] = "Invalid"),
+            (_[(_.Playing = 1)] = "Playing"),
+            (_[(_.Staging = 2)] = "Staging"),
+            (_[(_.Menus = 3)] = "Menus");
+        })(_ || (_ = {})),
         (function (_) {
           (_[(_.Invalid = 0)] = "Invalid"),
             (_[(_.None = 1)] = "None"),
@@ -10566,7 +10534,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -10641,8 +10608,7 @@
           const _ = await _._.GetTimelinesForClip({
             clip_id: _,
           });
-          if (_.GetEResult() != _._.k_EResultOK)
-            throw new Error("Unable to load clip " + _);
+          if (1 != _.GetEResult()) throw new Error("Unable to load clip " + _);
           const {
             timelines: __webpack_require__ = [],
             game_id: _,
@@ -11632,7 +11598,7 @@
         RecordingSessionChanged(_) {
           let _ = _.session_id,
             _ = _.notification_type;
-          if (_ == _._.k_ERecordingSessionChangeNotificationType_Started) {
+          if (1 == _) {
             const _ = this.m_mapRunningTimelines.get(_.timeline_id);
             if (!_)
               return (
@@ -11650,17 +11616,13 @@
               recording_type: _.recording_type,
             };
             _.m_metadata.recordings.push(_), (_.m_runningRecording = _);
-          } else if (
-            _ == _._.k_ERecordingSessionChangeNotificationType_Stopped
-          ) {
+          } else if (2 == _) {
             const _ = this.GetRunningTimelineForRecording(_.timeline_id, _);
             if (!_) return;
             (_.m_runningRecording.duration_ms = _.duration_ms),
               (_.m_runningRecording = null),
               this.FireEvent("OnInvalidateRecording", _.timeline_id, _);
-          } else if (
-            _ == _._.k_ERecordingSessionChangeNotificationType_Updated
-          ) {
+          } else if (4 == _) {
             const _ = this.GetTimelineMetadata(_.timeline_id);
             if (_) {
               const _ = _.metadata.recordings.find((_) => _.recording_id === _);
@@ -11674,9 +11636,7 @@
             }
             this.GetRunningTimelineForRecording(_.timeline_id, _) ||
               this.FireEvent("OnInvalidateRecording", _.timeline_id, _);
-          } else if (
-            _ == _._.k_ERecordingSessionChangeNotificationType_Deleted
-          ) {
+          } else if (3 == _) {
             const _ = this.GetTimelineMetadata(_.timeline_id);
             if (_) {
               const _ = _.metadata.recordings.filter(
@@ -11838,20 +11798,8 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -11894,7 +11842,7 @@
                   },
                   recordings: {
                     _: 5,
-                    _: _,
+                    _,
                     _: !0,
                     _: !0,
                   },
@@ -12450,69 +12398,6 @@
           return "CPhaseAttribute";
         }
       }
-      !(function (_) {
-        (_[(_.k_ETimelineEntryType_Invalid = 0)] =
-          "k_ETimelineEntryType_Invalid"),
-          (_[(_.k_ETimelineEntryType_GameMode = 1)] =
-            "k_ETimelineEntryType_GameMode"),
-          (_[(_.k_ETimelineEntryType_Event = 2)] =
-            "k_ETimelineEntryType_Event"),
-          (_[(_.k_ETimelineEntryType_StateDescription = 3)] =
-            "k_ETimelineEntryType_StateDescription"),
-          (_[(_.k_ETimelineEntryType_Achievement = 4)] =
-            "k_ETimelineEntryType_Achievement"),
-          (_[(_.k_ETimelineEntryType_UserMarker = 5)] =
-            "k_ETimelineEntryType_UserMarker"),
-          (_[(_.k_ETimelineEntryType_Screenshot = 6)] =
-            "k_ETimelineEntryType_Screenshot"),
-          (_[(_.k_ETimelineEntryType_Error = 7)] =
-            "k_ETimelineEntryType_Error"),
-          (_[(_.k_ETimelineEntryType_Tag = 8)] = "k_ETimelineEntryType_Tag"),
-          (_[(_.k_ETimelineEntryType_GamePhase = 9)] =
-            "k_ETimelineEntryType_GamePhase");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EPhaseResultType_Automatic = 1)] =
-            "k_EPhaseResultType_Automatic"),
-            (_[(_.k_EPhaseResultType_Blank = 2)] = "k_EPhaseResultType_Blank"),
-            (_[(_.k_EPhaseResultType_API = 3)] = "k_EPhaseResultType_API");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETimelineChangeNotificationType_Started = 1)] =
-            "k_ETimelineChangeNotificationType_Started"),
-            (_[(_.k_ETimelineChangeNotificationType_Stopped = 2)] =
-              "k_ETimelineChangeNotificationType_Stopped"),
-            (_[(_.k_ETimelineChangeNotificationType_Deleted = 3)] =
-              "k_ETimelineChangeNotificationType_Deleted"),
-            (_[(_.k_ETimelineChangeNotificationType_RecordingStarted = 4)] =
-              "k_ETimelineChangeNotificationType_RecordingStarted"),
-            (_[(_.k_ETimelineChangeNotificationType_RecordingStopped = 5)] =
-              "k_ETimelineChangeNotificationType_RecordingStopped"),
-            (_[(_.k_ETimelineChangeNotificationType_RecordingUpdated = 6)] =
-              "k_ETimelineChangeNotificationType_RecordingUpdated");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ERecordingSessionChangeNotificationType_Started = 1)] =
-            "k_ERecordingSessionChangeNotificationType_Started"),
-            (_[(_.k_ERecordingSessionChangeNotificationType_Stopped = 2)] =
-              "k_ERecordingSessionChangeNotificationType_Stopped"),
-            (_[(_.k_ERecordingSessionChangeNotificationType_Deleted = 3)] =
-              "k_ERecordingSessionChangeNotificationType_Deleted"),
-            (_[(_.k_ERecordingSessionChangeNotificationType_Updated = 4)] =
-              "k_ERecordingSessionChangeNotificationType_Updated");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_eDiskSpaceType_Recording = 0)] =
-            "k_eDiskSpaceType_Recording"),
-            (_[(_.k_eDiskSpaceType_Clip = 1)] = "k_eDiskSpaceType_Clip");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ePrecise = 0)] = "k_ePrecise"),
-            (_[(_.k_eLoose = 1)] = "k_eLoose");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_eJPEG = 1)] = "k_eJPEG"), (_[(_.k_eRGB = 2)] = "k_eRGB");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -16350,13 +16235,13 @@
                   },
                   time_precision: {
                     _: 6,
-                    _: _.k_ePrecise,
+                    _: 0,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
                   format: {
                     _: 8,
-                    _: _.k_eJPEG,
+                    _: 1,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },

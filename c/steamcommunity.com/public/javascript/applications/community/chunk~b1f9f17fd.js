@@ -21882,71 +21882,6 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.top_dlc_releases || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2, 3], null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  top_dlc_releases: {
-                    _: 2,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                  top_combined_app_and_dlc_releases: {
-                    _: 3,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetMonthTopAppReleases_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
             _.prototype.appid || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -22008,7 +21943,72 @@
           return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
         }
         getClassName() {
-          return "CSteamCharts_GetMonthTopAppReleases_Response_AppNewRelease";
+          return "CTopAppNewRelease";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.top_dlc_releases || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2, 3], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  top_dlc_releases: {
+                    _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  top_combined_app_and_dlc_releases: {
+                    _: 3,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamCharts_GetMonthTopAppReleases_Response";
         }
       }
       class _ extends _.Message {
@@ -22143,74 +22143,6 @@
         }
         getClassName() {
           return "CSteamCharts_GetYearTopAppReleases_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  rtime_release: {
-                    _: 2,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  app_release_rank: {
-                    _: 3,
-                    _: _._.readEnum,
-                    _: _._.writeEnum,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetYearTopAppReleases_Response_AppNewRelease";
         }
       }
       class _ extends _.Message {
@@ -32362,6 +32294,7 @@
                 [_().DisabledBackground]: _.disable_background,
                 [_().SaleSectionCtn]: !0,
                 SaleSectionForCustomCSS: !0,
+                [_.sale_section_classname || ""]: !!_.sale_section_classname,
                 [_().Blur]: "coverBlur" == _.background_repeat,
               }),
               rootMargin: _._,
@@ -33584,18 +33517,25 @@
         GetFlavorsForActiveTab() {
           const { activeTab: _, browseInfo: _ } = this.props,
             _ = null == _ ? void 0 : _.GetActiveTabUniqueID();
-          return _ &&
-            (null == _ ? void 0 : _.tabs) &&
-            (null == _ ? void 0 : _.show_flavor_on_sale_tabs)
-            ? _.tabs.filter(
-                (_) =>
-                  !(_ in _.show_flavor_on_sale_tabs) ||
-                  0 === _.show_flavor_on_sale_tabs[_].length ||
-                  _.show_flavor_on_sale_tabs[_].includes(_),
-              )
-            : null == _
-              ? void 0
-              : _.tabs;
+          if (_) {
+            let _ = null == _ ? void 0 : _.tabs;
+            return (
+              _ &&
+                _ &&
+                _.show_flavor_on_sale_tabs &&
+                (_ = _.filter(
+                  (_) =>
+                    !(_ in _.show_flavor_on_sale_tabs) ||
+                    0 === _.show_flavor_on_sale_tabs[_].length ||
+                    _.show_flavor_on_sale_tabs[_].includes(_),
+                )),
+              _ &&
+                (null == _ ? void 0 : _.BFilterRequiresUpcoming()) &&
+                (_ = _.filter((_) => _._.has(_))),
+              _
+            );
+          }
+          return null == _ ? void 0 : _.tabs;
         }
         GetDefaultTab() {
           const _ = this.GetFlavorsForActiveTab();
@@ -33803,9 +33743,7 @@
                 feature: _,
                 depth: _,
                 activeTab: _,
-                displayStyle: this.state.bCompactViewMode
-                  ? "compactlist"
-                  : "library",
+                compactDisplay: this.state.bCompactViewMode,
               }),
             _ &&
               0 == _.length &&
@@ -33840,83 +33778,84 @@
                     ),
               ),
           );
-          return (
-            (null == __webpack_require__
-              ? void 0
-              : __webpack_require__.enable_faceted_browsing) &&
-              (_ = _.createElement(
-                _,
-                {
-                  language: _,
-                  section: __webpack_require__,
-                  event: _,
-                  facetFilterState: this.state.facetFilterState,
-                  nMaxFacetValues:
-                    __webpack_require__.max_facet_values_for_facet || 100,
-                  fnOnUpdateFilter: this.OnUpdateFacetFilter,
-                  onInitFilter: async () => {
-                    let _ = this.props.section.facets;
-                    _.Debug("FacetedSaleSection.onInitFilter', rgFacet"),
-                      !_ &&
-                        this.props.section.facet_auto_generate_options &&
-                        ((_ = await (0, _._)(
-                          this.props.section.facet_auto_generate_options,
-                        )),
-                        _.Debug(
-                          "FacetedSaleSection.onInitFilter autogen completed', rgFacet",
-                        )),
-                      this.setState({
-                        facetFilterState: new _(
-                          null != _ ? _ : [],
-                          this.props.section.facet_sort_order ||
-                            _._.k_ESortFacetsByMatchCount,
-                          this.props.language,
-                          _(this.props.event, this.props.section),
-                        ),
-                      });
-                  },
-                  ...this.state.results,
+          (null == __webpack_require__
+            ? void 0
+            : __webpack_require__.enable_faceted_browsing) &&
+            (_ = _.createElement(
+              _,
+              {
+                language: _,
+                section: __webpack_require__,
+                event: _,
+                facetFilterState: this.state.facetFilterState,
+                nMaxFacetValues:
+                  __webpack_require__.max_facet_values_for_facet || 100,
+                fnOnUpdateFilter: this.OnUpdateFacetFilter,
+                onInitFilter: async () => {
+                  let _ = this.props.section.facets;
+                  _.Debug("FacetedSaleSection.onInitFilter', rgFacet"),
+                    !_ &&
+                      this.props.section.facet_auto_generate_options &&
+                      ((_ = await (0, _._)(
+                        this.props.section.facet_auto_generate_options,
+                      )),
+                      _.Debug(
+                        "FacetedSaleSection.onInitFilter autogen completed', rgFacet",
+                      )),
+                    this.setState({
+                      facetFilterState: new _(
+                        null != _ ? _ : [],
+                        this.props.section.facet_sort_order ||
+                          _._.k_ESortFacetsByMatchCount,
+                        this.props.language,
+                        _(this.props.event, this.props.section),
+                      ),
+                    });
                 },
-                _,
-              )),
+                ...this.state.results,
+              },
+              _,
+            ));
+          const _ = (0, _._)("library", this.props.bInGamepadUI);
+          return _.createElement(
+            _.Fragment,
+            null,
             _.createElement(
-              _.Fragment,
-              null,
+              "div",
+              {
+                className: _.SaleSectionTitleCtn,
+              },
+              _.createElement(_._, {
+                section: __webpack_require__,
+                event: _,
+                nHiddenCapsules: _,
+                ...this.props,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().SaleItemBrowserContainer,
+              },
               _.createElement(
-                "div",
+                _,
                 {
-                  className: _.SaleSectionTitleCtn,
-                },
-                _.createElement(_._, {
-                  section: __webpack_require__,
-                  event: _,
-                  nHiddenCapsules: _,
-                  ...this.props,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SaleItemBrowserContainer,
+                  className: _().SaleItemBrowserHeaderContainer,
                 },
                 _.createElement(
-                  _,
+                  _._,
                   {
-                    className: _().SaleItemBrowserHeaderContainer,
+                    "flow-children": "row",
+                    className: _().SaleItemBrowserHeader,
                   },
-                  _.createElement(
-                    _._,
-                    {
-                      "flow-children": "row",
-                      className: _().SaleItemBrowserHeader,
-                    },
-                    _,
-                    !this.props.bInGamepadUI &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().SuggestContainer,
-                        },
+                  _,
+                  !this.props.bInGamepadUI &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().SuggestContainer,
+                      },
+                      _ &&
                         _.createElement(
                           _,
                           {
@@ -33938,22 +33877,21 @@
                             ? _.createElement(_.f9b, null)
                             : _.createElement(_.Emg, null),
                         ),
-                        _.createElement(_.eSy, null),
-                        _.createElement(_._, {
-                          type: "text",
-                          onChange: this.OnUpdateSearch,
-                          bAlwaysShowClearAction: _,
-                          placeholder: (0, _._)(
-                            "#Sale_ItemBrowser_SearchPlaceholder",
-                          ),
-                          value: _,
-                        }),
-                      ),
-                  ),
+                      _.createElement(_.eSy, null),
+                      _.createElement(_._, {
+                        type: "text",
+                        onChange: this.OnUpdateSearch,
+                        bAlwaysShowClearAction: _,
+                        placeholder: (0, _._)(
+                          "#Sale_ItemBrowser_SearchPlaceholder",
+                        ),
+                        value: _,
+                      }),
+                    ),
                 ),
-                _,
               ),
-            )
+              _,
+            ),
           );
         }
       };
@@ -34072,7 +34010,7 @@
             feature: _,
             depth: _,
             activeTab: _,
-            displayStyle: _,
+            compactDisplay: _,
           } = _,
           _ = (0, _._)();
         return _.createElement(
@@ -34114,7 +34052,8 @@
                   type: _.type || "game",
                   fnOnClickOverride: _,
                   bPreferDemoStorePage: _.prefer_demo_store_page,
-                  displayStyle: null != _ ? _ : "compactlist",
+                  displayStyle: "library",
+                  requestCompact: _,
                 })
               );
             }),

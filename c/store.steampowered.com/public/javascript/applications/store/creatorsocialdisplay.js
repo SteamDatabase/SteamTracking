@@ -26,13 +26,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -91,40 +87,33 @@
                 _._.Get()
                   .QueueStoreItemRequest(_, _, _)
                   .then((_) => {
-                    _?.token.reason ||
-                      _.current !== _ ||
-                      _(_ == _._.k_EResultOK),
-                      _();
+                    _?.token.reason || _.current !== _ || _(1 == _), _();
                   })),
               () => _?.cancel("useStoreItemCache: unmounting")
             );
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return [null, _.k_EStoreItemCacheState_Unavailable];
-        if (!1 === _) return [void 0, _.k_EStoreItemCacheState_Unavailable];
-        if (_._.Get().BIsStoreItemMissing(_, _))
-          return [void 0, _.k_EStoreItemCacheState_Unavailable];
-        if (!_._.Get().BHasStoreItem(_, _, _))
-          return [void 0, _.k_EStoreItemCacheState_Loading];
+          return [null, 2];
+        if (!1 === _) return [void 0, 2];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
         const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
-        return _
-          ? [_, _.k_EStoreItemCacheState_Found]
-          : [null, _.k_EStoreItemCacheState_Unavailable];
+        return _ ? [_, 3] : [null, 2];
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_App, _, _);
+        return _(_, 0, _, _);
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_Bundle, _, _);
+        return _(_, 2, _, _);
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_Package, _, _);
+        return _(_, 1, _, _);
       }
       function _(_, _, _) {
         const [_, _] = _(_, _, _);
         let _;
-        _?.GetStoreItemType() != _._.k_EStoreItemType_Package ||
+        1 != _?.GetStoreItemType() ||
           _.GetAssets()?.GetHeaderURL() ||
           1 != _?.GetIncludedAppIDs().length ||
           (_ = _.GetIncludedAppIDs()[0]);
@@ -191,7 +180,7 @@
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           !_)
         )
-          return _.k_EStoreItemCacheState_Unavailable;
+          return 2;
         if (
           !_.every(
             (_) =>
@@ -199,18 +188,18 @@
               _._.Get().BIsStoreItemMissing(_, _),
           )
         )
-          return _.k_EStoreItemCacheState_Loading;
+          return 1;
         return _.every((_) =>
           _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
         )
-          ? _.k_EStoreItemCacheState_Found
-          : _.k_EStoreItemCacheState_Unavailable;
+          ? 3
+          : 2;
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_App, _, _);
+        return _(_, 0, _, _);
       }
       function _(_, _, _) {
-        return _(_, _._.k_EStoreItemType_Bundle, _, _);
+        return _(_, 2, _, _);
       }
       function _() {
         _.useEffect(
@@ -221,14 +210,6 @@
           [],
         );
       }
-      !(function (_) {
-        (_[(_.k_EStoreItemCacheState_Loading = 1)] =
-          "k_EStoreItemCacheState_Loading"),
-          (_[(_.k_EStoreItemCacheState_Unavailable = 2)] =
-            "k_EStoreItemCacheState_Unavailable"),
-          (_[(_.k_EStoreItemCacheState_Found = 3)] =
-            "k_EStoreItemCacheState_Found");
-      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -238,9 +219,61 @@
         _: () => _,
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        switch (_) {
+          case "discord_server":
+            return 5;
+          case "youtube":
+            return 1;
+          case "facebook":
+            return 2;
+          case "twitter":
+            return 3;
+          case "twitch":
+            return 4;
+          case "reddit":
+            return 10;
+          case "instagram":
+            return 11;
+          case "tumblr":
+            return 12;
+          case "qq":
+            return 6;
+          case "qqlink":
+            return 18;
+          case "qqchannel":
+            return 23;
+          case "bilibili":
+            return 8;
+          case "weibo":
+            return 9;
+          case "wechat":
+            return 17;
+          case "tieba":
+            return 13;
+          case "tiktok":
+            return 14;
+          case "douyin":
+            return 19;
+          case "bluesky":
+            return 20;
+          case "mastodon":
+            return 21;
+          case "threads":
+            return 22;
+          case "vk":
+            return 7;
+          case "telegram":
+            return 15;
+          case "linkedin":
+            return 16;
+          case "rednote":
+            return 24;
+        }
+        return 0;
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -251,59 +284,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      function _(_) {
-        switch (_) {
-          case "discord_server":
-            return _._.k_EStoreLinkType_Discord;
-          case "youtube":
-            return _._.k_EStoreLinkType_YouTube;
-          case "facebook":
-            return _._.k_EStoreLinkType_Facebook;
-          case "twitter":
-            return _._.k_EStoreLinkType_Twitter;
-          case "twitch":
-            return _._.k_EStoreLinkType_Twitch;
-          case "reddit":
-            return _._.k_EStoreLinkType_Reddit;
-          case "instagram":
-            return _._.k_EStoreLinkType_Instagram;
-          case "tumblr":
-            return _._.k_EStoreLinkType_Tumblr;
-          case "qq":
-            return _._.k_EStoreLinkType_QQ;
-          case "qqlink":
-            return _._.k_EStoreLinkType_QQLink;
-          case "qqchannel":
-            return _._.k_EStoreLinkType_QQChannel;
-          case "bilibili":
-            return _._.k_EStoreLinkType_Bilibili;
-          case "weibo":
-            return _._.k_EStoreLinkType_Weibo;
-          case "wechat":
-            return _._.k_EStoreLinkType_WeChat;
-          case "tieba":
-            return _._.k_EStoreLinkType_Tieba;
-          case "tiktok":
-            return _._.k_EStoreLinkType_Tiktok;
-          case "douyin":
-            return _._.k_EStoreLinkType_Douyin;
-          case "bluesky":
-            return _._.k_EStoreLinkType_Bluesky;
-          case "mastodon":
-            return _._.k_EStoreLinkType_Mastodon;
-          case "threads":
-            return _._.k_EStoreLinkType_Threads;
-          case "vk":
-            return _._.k_EStoreLinkType_VK;
-          case "telegram":
-            return _._.k_EStoreLinkType_Telegram;
-          case "linkedin":
-            return _._.k_EStoreLinkType_LinkedIn;
-          case "rednote":
-            return _._.k_EStoreLinkType_RedNote;
-        }
-        return _._.k_EStoreLinkType_None;
-      }
       function _(_) {
         const { appid: _ } = _;
         return _.createElement(
@@ -354,8 +334,7 @@
                     link_type: _(_.type),
                   };
                   return (
-                    _.link_type == _._.k_EStoreLinkType_QQ ||
-                    _.link_type == _._.k_EStoreLinkType_WeChat
+                    6 == _.link_type || 17 == _.link_type
                       ? (_.text = _.link)
                       : (_.url = _.link),
                     _
@@ -389,46 +368,52 @@
             )
           : null;
       }
+      const _ = [6, 23, 18, 8, 9, 19, 24];
       function _(_) {
-        const { _: _, rgSocialMedia: __webpack_require__, className: _ } = _;
+        const { _: _, rgSocialMedia: __webpack_require__, className: _ } = _,
+          _ = (0, _._)();
         return _.createElement(
           "div",
           {
             className: (0, _._)(_().AppSocialLinks, _),
           },
-          __webpack_require__.map((_) =>
-            _.url
-              ? _.createElement(_, {
-                  key: "app_social_link_" + _ + "_" + _.link_type,
-                  social: _,
-                })
-              : _.createElement(_, {
-                  key:
-                    "app_social_text_" + _ + "_" + _.link_type + "_" + _.text,
-                  social: _,
-                }),
-          ),
+          __webpack_require__
+            .filter((_) => !_ || _.includes(_.link_type || 0))
+            .map((_) =>
+              _.url
+                ? _.createElement(_, {
+                    key: "app_social_link_" + _ + "_" + _.link_type,
+                    social: _,
+                  })
+                : _.createElement(_, {
+                    key:
+                      "app_social_text_" + _ + "_" + _.link_type + "_" + _.text,
+                    social: _,
+                  }),
+            ),
         );
       }
       function _(_) {
         const { social: _ } = _;
-        return _.createElement(
-          "a",
-          {
-            href: (0, _._)(_.url),
-            target: _._.IN_CLIENT ? void 0 : "_blank",
-            rel: "noopener noreferrer",
-          },
-          _.createElement(
-            _._,
-            {
-              toolTipContent: _.url,
-            },
-            _.createElement(_, {
-              social: _,
-            }),
-          ),
-        );
+        return _.url
+          ? _.createElement(
+              "a",
+              {
+                href: (0, _._)(_.url),
+                target: _._.IN_CLIENT ? void 0 : "_blank",
+                rel: "noopener noreferrer",
+              },
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: _.url,
+                },
+                _.createElement(_, {
+                  social: _,
+                }),
+              ),
+            )
+          : null;
       }
       function _(_) {
         const { social: _ } = _;
@@ -458,105 +443,105 @@
       function _(_) {
         const { social: _ } = _;
         return _.createElement(_, {
-          linkType: _.link_type,
+          linkType: _.link_type || 0,
           className: _().AppSocialLinkIcon,
         });
       }
       function _(_) {
         const { linkType: _, ...__webpack_require__ } = _;
         switch (_) {
-          case _._.k_EStoreLinkType_YouTube:
+          case 1:
             return _.createElement(_.agV, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Facebook:
+          case 2:
             return _.createElement(_.ZnA, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Twitter:
+          case 3:
             return _.createElement(_._, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Twitch:
+          case 4:
             return _.createElement(_.ofN, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Discord:
+          case 5:
             return _.createElement(_.Bki, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_QQ:
-          case _._.k_EStoreLinkType_QQLink:
-          case _._.k_EStoreLinkType_QQChannel:
+          case 6:
+          case 18:
+          case 23:
             return _.createElement(_.$vK, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_VK:
+          case 7:
             return _.createElement(_.OSJ, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Bilibili:
+          case 8:
             return _.createElement(_.nm_, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Weibo:
+          case 9:
             return _.createElement(_.tIO, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Reddit:
+          case 10:
             return _.createElement(_.Vt2, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Instagram:
+          case 11:
             return _.createElement(_.Vgk, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Tumblr:
+          case 12:
             return _.createElement(_.VSd, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Tieba:
+          case 13:
             return _.createElement(_.ccb, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Tiktok:
+          case 14:
             return _.createElement(_.rNt, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Telegram:
+          case 15:
             return _.createElement(_.g$j, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_LinkedIn:
+          case 16:
             return _.createElement(_.BQz, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_WeChat:
+          case 17:
             return _.createElement(_.jdP, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Douyin:
+          case 19:
             return _.createElement(_.bKN, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Bluesky:
+          case 20:
             return _.createElement(_.sDU, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Mastodon:
+          case 21:
             return _.createElement(_.MbF, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_Threads:
+          case 22:
             return _.createElement(_.emH, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_RedNote:
+          case 24:
             return _.createElement(_.Yoo, {
               ...__webpack_require__,
             });
-          case _._.k_EStoreLinkType_MAX:
-          case _._.k_EStoreLinkType_None:
+          case 25:
+          case 0:
             return "invalid social media type";
         }
       }

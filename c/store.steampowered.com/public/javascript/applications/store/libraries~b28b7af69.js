@@ -15907,6 +15907,12 @@
           );
         };
       function _(_, _) {
+        return !!(_ & _);
+      }
+      function _(_, _, _) {
+        return _ ? (_ |= _) : (_ &= ~_), _;
+      }
+      function _(_, _) {
         (null == _ || _ > _.length) && (_ = _.length);
         for (var _ = 0, _ = Array(_); _ < _; _++) _[_] = _[_];
         return _;
@@ -16035,10 +16041,8 @@
           function _(_) {
             void 0 === _ && (_ = "Atom"),
               (this.name_ = void 0),
-              (this.isPendingUnobservation = !1),
-              (this.isBeingObserved = !1),
+              (this.flags_ = 0),
               (this.observers_ = new Set()),
-              (this.diffValue_ = 0),
               (this.lastAccessedBy_ = 0),
               (this.lowestObserverState_ = _.NOT_TRACKING_),
               (this.onBOL = void 0),
@@ -16068,10 +16072,45 @@
             (_.toString = function () {
               return this.name_;
             }),
-            _
+            _(_, [
+              {
+                key: "isBeingObserved",
+                get: function () {
+                  return _(this.flags_, _.isBeingObservedMask_);
+                },
+                set: function (_) {
+                  this.flags_ = _(this.flags_, _.isBeingObservedMask_, _);
+                },
+              },
+              {
+                key: "isPendingUnobservation",
+                get: function () {
+                  return _(this.flags_, _.isPendingUnobservationMask_);
+                },
+                set: function (_) {
+                  this.flags_ = _(
+                    this.flags_,
+                    _.isPendingUnobservationMask_,
+                    _,
+                  );
+                },
+              },
+              {
+                key: "diffValue",
+                get: function () {
+                  return _(this.flags_, _.diffValueMask_) ? 1 : 0;
+                },
+                set: function (_) {
+                  this.flags_ = _(this.flags_, _.diffValueMask_, 1 === _);
+                },
+              },
+            ])
           );
-        })(),
-        _ = _("Atom", _);
+        })();
+      (_.isBeingObservedMask_ = 1),
+        (_.isPendingUnobservationMask_ = 2),
+        (_.diffValueMask_ = 4);
+      var _ = _("Atom", _);
       function _(_, _, _) {
         void 0 === _ && (_ = _), void 0 === _ && (_ = _);
         var _,
@@ -16148,24 +16187,36 @@
         return _.defineProperty_(_, _, _);
       }
       function _(_, _) {
-        var _ = _.kind,
+        var _,
+          _ = _.kind,
           _ = _.name,
           _ = _.addInitializer,
-          _ = this;
-        if ("field" != _) {
-          var _, _, _, _, _, _;
-          if ("method" == _)
-            return (
-              _(_) ||
-                ((_ = _),
-                (_ = _(
-                  null != (_ = null == (_ = _.options_) ? void 0 : _.name)
-                    ? _
-                    : _.toString(),
-                  _,
-                  null !=
-                    (_ = null == (_ = _.options_) ? void 0 : _.autoAction) && _,
-                ))),
+          _ = this,
+          _ = function (_) {
+            var _, _, _, _;
+            return _(
+              null != (_ = null == (_ = _.options_) ? void 0 : _.name)
+                ? _
+                : _.toString(),
+              _,
+              null != (_ = null == (_ = _.options_) ? void 0 : _.autoAction) &&
+                _,
+            );
+          };
+        return "field" == _
+          ? function (_) {
+              var _,
+                _ = _;
+              return (
+                _(_) || (_ = _(_)),
+                null != (_ = _.options_) &&
+                  _.bound &&
+                  ((_ = __webpack_require__.bind(this)).isMobxAction = !0),
+                _
+              );
+            }
+          : "method" == _
+            ? (_(_) || (_ = _(_)),
               null != (_ = this.options_) &&
                 _.bound &&
                 _(function () {
@@ -16173,23 +16224,18 @@
                     _ = _[_].bind(_);
                   (_.isMobxAction = !0), (_[_] = _);
                 }),
-              _
-            );
-          _(
-            "Cannot apply '" +
-              _.annotationType_ +
-              "' to '" +
-              String(_) +
-              "' (kind: " +
-              _ +
-              "):\n'" +
-              _.annotationType_ +
-              "' can only be used on properties with a function value.",
-          );
-        } else
-          _(function () {
-            _(this, _, _);
-          });
+              _)
+            : void _(
+                "Cannot apply '" +
+                  _.annotationType_ +
+                  "' to '" +
+                  String(_) +
+                  "' (kind: " +
+                  _ +
+                  "):\n'" +
+                  _.annotationType_ +
+                  "' can only be used on properties with a function value.",
+              );
       }
       function _(_, _, _, _, _) {
         var _, _, _, _, _, _, _, _;
@@ -16409,7 +16455,7 @@
         var _, _, _, _;
         if (_.get) return _.make_(_, _, _, _);
         if (_.set) {
-          var _ = _(_.toString(), _.set);
+          var _ = _(_.set) ? _.set : _(_.toString(), _.set);
           return _ === _.target_
             ? null ===
               _.defineProperty_(_, {
@@ -16794,215 +16840,224 @@
             _
           );
         })(_),
-        _ = _("ObservableValue", _);
-      function _(_, _) {
-        return !!(_ & _);
-      }
-      function _(_, _, _) {
-        return _ ? (_ |= _) : (_ &= ~_), _;
-      }
-      var _ = (function () {
-        function _(_) {
-          (this.dependenciesState_ = _.NOT_TRACKING_),
-            (this.observing_ = []),
-            (this.newObserving_ = null),
-            (this.observers_ = new Set()),
-            (this.diffValue_ = 0),
-            (this.runId_ = 0),
-            (this.lastAccessedBy_ = 0),
-            (this.lowestObserverState_ = _.UP_TO_DATE_),
-            (this.unboundDepsCount_ = 0),
-            (this.value_ = new _(null)),
-            (this.name_ = void 0),
-            (this.triggeredBy_ = void 0),
-            (this.flags_ = 0),
-            (this.derivation = void 0),
-            (this.setter_ = void 0),
-            (this.isTracing_ = _.NONE),
-            (this.scope_ = void 0),
-            (this.equals_ = void 0),
-            (this.requiresReaction_ = void 0),
-            (this.keepAlive_ = void 0),
-            (this.onBOL = void 0),
-            (this.onBUOL = void 0),
-            _.get || _(31),
-            (this.derivation = _.get),
-            (this.name_ = _.name || "ComputedValue"),
-            _.set && (this.setter_ = _("ComputedValue-setter", _.set)),
-            (this.equals_ =
-              _.equals ||
-              (_.compareStructural || _.struct ? _.structural : _.default)),
-            (this.scope_ = _.context),
-            (this.requiresReaction_ = _.requiresReaction),
-            (this.keepAlive_ = !!_.keepAlive);
-        }
-        var _ = _.prototype;
-        return (
-          (_.onBecomeStale_ = function () {
-            !(function (_) {
-              if (_.lowestObserverState_ !== _.UP_TO_DATE_) return;
-              (_.lowestObserverState_ = _.POSSIBLY_STALE_),
-                _.observers_.forEach(function (_) {
-                  _.dependenciesState_ === _.UP_TO_DATE_ &&
-                    ((_.dependenciesState_ = _.POSSIBLY_STALE_),
-                    _.onBecomeStale_());
+        _ = _("ObservableValue", _),
+        _ = (function () {
+          function _(_) {
+            (this.dependenciesState_ = _.NOT_TRACKING_),
+              (this.observing_ = []),
+              (this.newObserving_ = null),
+              (this.observers_ = new Set()),
+              (this.runId_ = 0),
+              (this.lastAccessedBy_ = 0),
+              (this.lowestObserverState_ = _.UP_TO_DATE_),
+              (this.unboundDepsCount_ = 0),
+              (this.value_ = new _(null)),
+              (this.name_ = void 0),
+              (this.triggeredBy_ = void 0),
+              (this.flags_ = 0),
+              (this.derivation = void 0),
+              (this.setter_ = void 0),
+              (this.isTracing_ = _.NONE),
+              (this.scope_ = void 0),
+              (this.equals_ = void 0),
+              (this.requiresReaction_ = void 0),
+              (this.keepAlive_ = void 0),
+              (this.onBOL = void 0),
+              (this.onBUOL = void 0),
+              _.get || _(31),
+              (this.derivation = _.get),
+              (this.name_ = _.name || "ComputedValue"),
+              _.set && (this.setter_ = _("ComputedValue-setter", _.set)),
+              (this.equals_ =
+                _.equals ||
+                (_.compareStructural || _.struct ? _.structural : _.default)),
+              (this.scope_ = _.context),
+              (this.requiresReaction_ = _.requiresReaction),
+              (this.keepAlive_ = !!_.keepAlive);
+          }
+          var _ = _.prototype;
+          return (
+            (_.onBecomeStale_ = function () {
+              !(function (_) {
+                if (_.lowestObserverState_ !== _.UP_TO_DATE_) return;
+                (_.lowestObserverState_ = _.POSSIBLY_STALE_),
+                  _.observers_.forEach(function (_) {
+                    _.dependenciesState_ === _.UP_TO_DATE_ &&
+                      ((_.dependenciesState_ = _.POSSIBLY_STALE_),
+                      _.onBecomeStale_());
+                  });
+              })(this);
+            }),
+            (_.onBO = function () {
+              this.onBOL &&
+                this.onBOL.forEach(function (_) {
+                  return _();
                 });
-            })(this);
-          }),
-          (_.onBO = function () {
-            this.onBOL &&
-              this.onBOL.forEach(function (_) {
-                return _();
-              });
-          }),
-          (_.onBUO = function () {
-            this.onBUOL &&
-              this.onBUOL.forEach(function (_) {
-                return _();
-              });
-          }),
-          (_.get = function () {
-            if (
-              (this.isComputing && _(32, this.name_, this.derivation),
-              0 !== _.inBatch || 0 !== this.observers_.size || this.keepAlive_)
-            ) {
-              if ((_(this), _(this))) {
-                var _ = _.trackingContext;
-                this.keepAlive_ && !_ && (_.trackingContext = this),
-                  this.trackAndCompute() &&
-                    (function (_) {
-                      if (_.lowestObserverState_ === _.STALE_) return;
-                      (_.lowestObserverState_ = _.STALE_),
-                        _.observers_.forEach(function (_) {
-                          _.dependenciesState_ === _.POSSIBLY_STALE_
-                            ? (_.dependenciesState_ = _.STALE_)
-                            : _.dependenciesState_ === _.UP_TO_DATE_ &&
-                              (_.lowestObserverState_ = _.UP_TO_DATE_);
-                        });
-                    })(this),
-                  (_.trackingContext = _);
-              }
-            } else
-              _(this) &&
-                (this.warnAboutUntrackedRead_(),
-                _(),
-                (this.value_ = this.computeValue_(!1)),
-                _());
-            var _ = this.value_;
-            if (_(_)) throw _.cause;
-            return _;
-          }),
-          (_.set = function (_) {
-            if (this.setter_) {
-              this.isRunningSetter && _(33, this.name_),
-                (this.isRunningSetter = !0);
-              try {
-                this.setter_.call(this.scope_, _);
-              } finally {
-                this.isRunningSetter = !1;
-              }
-            } else _(34, this.name_);
-          }),
-          (_.trackAndCompute = function () {
-            var _ = this.value_,
-              _ = this.dependenciesState_ === _.NOT_TRACKING_,
-              _ = this.computeValue_(!0),
-              _ = _ || _(_) || _(_) || !this.equals_(_, _);
-            return _ && (this.value_ = _), _;
-          }),
-          (_.computeValue_ = function (_) {
-            this.isComputing = !0;
-            var _,
-              _ = _(!1);
-            if (_) _ = _(this, this.derivation, this.scope_);
-            else if (!0 === _.disableErrorBoundaries)
-              _ = this.derivation.call(this.scope_);
-            else
-              try {
+            }),
+            (_.onBUO = function () {
+              this.onBUOL &&
+                this.onBUOL.forEach(function (_) {
+                  return _();
+                });
+            }),
+            (_.get = function () {
+              if (
+                (this.isComputing && _(32, this.name_, this.derivation),
+                0 !== _.inBatch ||
+                  0 !== this.observers_.size ||
+                  this.keepAlive_)
+              ) {
+                if ((_(this), _(this))) {
+                  var _ = _.trackingContext;
+                  this.keepAlive_ && !_ && (_.trackingContext = this),
+                    this.trackAndCompute() &&
+                      (function (_) {
+                        if (_.lowestObserverState_ === _.STALE_) return;
+                        (_.lowestObserverState_ = _.STALE_),
+                          _.observers_.forEach(function (_) {
+                            _.dependenciesState_ === _.POSSIBLY_STALE_
+                              ? (_.dependenciesState_ = _.STALE_)
+                              : _.dependenciesState_ === _.UP_TO_DATE_ &&
+                                (_.lowestObserverState_ = _.UP_TO_DATE_);
+                          });
+                      })(this),
+                    (_.trackingContext = _);
+                }
+              } else
+                _(this) &&
+                  (this.warnAboutUntrackedRead_(),
+                  _(),
+                  (this.value_ = this.computeValue_(!1)),
+                  _());
+              var _ = this.value_;
+              if (_(_)) throw _.cause;
+              return _;
+            }),
+            (_.set = function (_) {
+              if (this.setter_) {
+                this.isRunningSetter && _(33, this.name_),
+                  (this.isRunningSetter = !0);
+                try {
+                  this.setter_.call(this.scope_, _);
+                } finally {
+                  this.isRunningSetter = !1;
+                }
+              } else _(34, this.name_);
+            }),
+            (_.trackAndCompute = function () {
+              var _ = this.value_,
+                _ = this.dependenciesState_ === _.NOT_TRACKING_,
+                _ = this.computeValue_(!0),
+                _ = _ || _(_) || _(_) || !this.equals_(_, _);
+              return _ && (this.value_ = _), _;
+            }),
+            (_.computeValue_ = function (_) {
+              this.isComputing = !0;
+              var _,
+                _ = _(!1);
+              if (_) _ = _(this, this.derivation, this.scope_);
+              else if (!0 === _.disableErrorBoundaries)
                 _ = this.derivation.call(this.scope_);
-              } catch (_) {
-                _ = new _(_);
-              }
-            return _(_), (this.isComputing = !1), _;
-          }),
-          (_.suspend_ = function () {
-            this.keepAlive_ || (_(this), (this.value_ = void 0));
-          }),
-          (_.observe_ = function (_, _) {
-            var _ = this,
-              _ = !0,
-              _ = void 0;
-            return _(function () {
-              var _ = __webpack_require__.get();
-              if (!_ || _) {
-                var _ = _();
-                _({
-                  observableKind: "computed",
-                  debugObjectName: _.name_,
-                  type: _,
-                  object: _,
-                  newValue: _,
-                  oldValue: _,
-                }),
-                  _(_);
-              }
-              (_ = !1), (_ = _);
-            });
-          }),
-          (_.warnAboutUntrackedRead_ = function () {}),
-          (_.toString = function () {
-            return this.name_ + "[" + this.derivation.toString() + "]";
-          }),
-          (_.valueOf = function () {
-            return _(this.get());
-          }),
-          (_[Symbol.toPrimitive] = function () {
-            return this.valueOf();
-          }),
-          _(_, [
-            {
-              key: "isComputing",
-              get: function () {
-                return _(this.flags_, _.isComputingMask_);
+              else
+                try {
+                  _ = this.derivation.call(this.scope_);
+                } catch (_) {
+                  _ = new _(_);
+                }
+              return _(_), (this.isComputing = !1), _;
+            }),
+            (_.suspend_ = function () {
+              this.keepAlive_ || (_(this), (this.value_ = void 0));
+            }),
+            (_.observe_ = function (_, _) {
+              var _ = this,
+                _ = !0,
+                _ = void 0;
+              return _(function () {
+                var _ = __webpack_require__.get();
+                if (!_ || _) {
+                  var _ = _();
+                  _({
+                    observableKind: "computed",
+                    debugObjectName: _.name_,
+                    type: _,
+                    object: _,
+                    newValue: _,
+                    oldValue: _,
+                  }),
+                    _(_);
+                }
+                (_ = !1), (_ = _);
+              });
+            }),
+            (_.warnAboutUntrackedRead_ = function () {}),
+            (_.toString = function () {
+              return this.name_ + "[" + this.derivation.toString() + "]";
+            }),
+            (_.valueOf = function () {
+              return _(this.get());
+            }),
+            (_[Symbol.toPrimitive] = function () {
+              return this.valueOf();
+            }),
+            _(_, [
+              {
+                key: "isComputing",
+                get: function () {
+                  return _(this.flags_, _.isComputingMask_);
+                },
+                set: function (_) {
+                  this.flags_ = _(this.flags_, _.isComputingMask_, _);
+                },
               },
-              set: function (_) {
-                this.flags_ = _(this.flags_, _.isComputingMask_, _);
+              {
+                key: "isRunningSetter",
+                get: function () {
+                  return _(this.flags_, _.isRunningSetterMask_);
+                },
+                set: function (_) {
+                  this.flags_ = _(this.flags_, _.isRunningSetterMask_, _);
+                },
               },
-            },
-            {
-              key: "isRunningSetter",
-              get: function () {
-                return _(this.flags_, _.isRunningSetterMask_);
+              {
+                key: "isBeingObserved",
+                get: function () {
+                  return _(this.flags_, _.isBeingObservedMask_);
+                },
+                set: function (_) {
+                  this.flags_ = _(this.flags_, _.isBeingObservedMask_, _);
+                },
               },
-              set: function (_) {
-                this.flags_ = _(this.flags_, _.isRunningSetterMask_, _);
+              {
+                key: "isPendingUnobservation",
+                get: function () {
+                  return _(this.flags_, _.isPendingUnobservationMask_);
+                },
+                set: function (_) {
+                  this.flags_ = _(
+                    this.flags_,
+                    _.isPendingUnobservationMask_,
+                    _,
+                  );
+                },
               },
-            },
-            {
-              key: "isBeingObserved",
-              get: function () {
-                return _(this.flags_, _.isBeingObservedMask_);
+              {
+                key: "diffValue",
+                get: function () {
+                  return _(this.flags_, _.diffValueMask_) ? 1 : 0;
+                },
+                set: function (_) {
+                  this.flags_ = _(this.flags_, _.diffValueMask_, 1 === _);
+                },
               },
-              set: function (_) {
-                this.flags_ = _(this.flags_, _.isBeingObservedMask_, _);
-              },
-            },
-            {
-              key: "isPendingUnobservation",
-              get: function () {
-                return _(this.flags_, _.isPendingUnobservationMask_);
-              },
-              set: function (_) {
-                this.flags_ = _(this.flags_, _.isPendingUnobservationMask_, _);
-              },
-            },
-          ])
-        );
-      })();
+            ])
+          );
+        })();
       (_.isComputingMask_ = 1),
         (_.isRunningSetterMask_ = 2),
         (_.isBeingObservedMask_ = 4),
-        (_.isPendingUnobservationMask_ = 8);
+        (_.isPendingUnobservationMask_ = 8),
+        (_.diffValueMask_ = 16);
       var _,
         _,
         _ = _("ComputedValue", _);
@@ -17092,18 +17147,18 @@
               _++
             ) {
               var _ = _[_];
-              0 === _.diffValue_ &&
-                ((_.diffValue_ = 1), _ !== _ && (_[_] = _), _++),
+              0 === _.diffValue &&
+                ((_.diffValue = 1), _ !== _ && (_[_] = _), _++),
                 _.dependenciesState_ > _ && (_ = _.dependenciesState_);
             }
             (_.length = _), (_.newObserving_ = null), (_ = _.length);
             for (; _--; ) {
               var _ = _[_];
-              0 === _.diffValue_ && _(_, _), (_.diffValue_ = 0);
+              0 === _.diffValue && _(_, _), (_.diffValue = 0);
             }
             for (; _--; ) {
               var _ = _[_];
-              1 === _.diffValue_ && ((_.diffValue_ = 0), _(_, _));
+              1 === _.diffValue && ((_.diffValue = 0), _(_, _));
             }
             _ !== _.UP_TO_DATE_ &&
               ((_.dependenciesState_ = _), _.onBecomeStale_());
@@ -17252,13 +17307,9 @@
             (this.observing_ = []),
             (this.newObserving_ = []),
             (this.dependenciesState_ = _.NOT_TRACKING_),
-            (this.diffValue_ = 0),
             (this.runId_ = 0),
             (this.unboundDepsCount_ = 0),
-            (this.isDisposed_ = !1),
-            (this.isScheduled_ = !1),
-            (this.isTrackPending_ = !1),
-            (this.isRunning_ = !1),
+            (this.flags_ = 0),
             (this.isTracing_ = _.NONE),
             (this.name_ = _),
             (this.onInvalidate_ = _),
@@ -17271,18 +17322,15 @@
             this.schedule_();
           }),
           (_.schedule_ = function () {
-            this.isScheduled_ ||
-              ((this.isScheduled_ = !0), _.pendingReactions.push(this), _());
-          }),
-          (_.isScheduled = function () {
-            return this.isScheduled_;
+            this.isScheduled ||
+              ((this.isScheduled = !0), _.pendingReactions.push(this), _());
           }),
           (_.runReaction_ = function () {
-            if (!this.isDisposed_) {
-              _(), (this.isScheduled_ = !1);
+            if (!this.isDisposed) {
+              _(), (this.isScheduled = !1);
               var _ = _.trackingContext;
               if (((_.trackingContext = this), _(this))) {
-                this.isTrackPending_ = !0;
+                this.isTrackPending = !0;
                 try {
                   this.onInvalidate_();
                 } catch (_) {
@@ -17293,16 +17341,16 @@
             }
           }),
           (_.track = function (_) {
-            if (!this.isDisposed_) {
+            if (!this.isDisposed) {
               _();
-              0, (this.isRunning_ = !0);
+              0, (this.isRunning = !0);
               var _ = _.trackingContext;
               _.trackingContext = this;
               var _ = _(this, _, void 0);
               (_.trackingContext = _),
-                (this.isRunning_ = !1),
-                (this.isTrackPending_ = !1),
-                this.isDisposed_ && _(this),
+                (this.isRunning = !1),
+                (this.isTrackPending = !1),
+                this.isDisposed && _(this),
                 _(_) && this.reportExceptionInDerivation_(_.cause),
                 _();
             }
@@ -17320,8 +17368,8 @@
             }
           }),
           (_.dispose = function () {
-            this.isDisposed_ ||
-              ((this.isDisposed_ = !0), this.isRunning_ || (_(), _(this), _()));
+            this.isDisposed ||
+              ((this.isDisposed = !0), this.isRunning || (_(), _(this), _()));
           }),
           (_.getDisposer_ = function (_) {
             var _ = this,
@@ -17336,6 +17384,9 @@
                 null == _.addEventListener ||
                 _.addEventListener("abort", _),
               (_[_] = this),
+              "dispose" in Symbol &&
+                "symbol" == typeof Symbol.dispose &&
+                (_[Symbol.dispose] = _),
               _
             );
           }),
@@ -17345,9 +17396,60 @@
           (_.trace = function (_) {
             void 0 === _ && (_ = !1);
           }),
-          _
+          _(_, [
+            {
+              key: "isDisposed",
+              get: function () {
+                return _(this.flags_, _.isDisposedMask_);
+              },
+              set: function (_) {
+                this.flags_ = _(this.flags_, _.isDisposedMask_, _);
+              },
+            },
+            {
+              key: "isScheduled",
+              get: function () {
+                return _(this.flags_, _.isScheduledMask_);
+              },
+              set: function (_) {
+                this.flags_ = _(this.flags_, _.isScheduledMask_, _);
+              },
+            },
+            {
+              key: "isTrackPending",
+              get: function () {
+                return _(this.flags_, _.isTrackPendingMask_);
+              },
+              set: function (_) {
+                this.flags_ = _(this.flags_, _.isTrackPendingMask_, _);
+              },
+            },
+            {
+              key: "isRunning",
+              get: function () {
+                return _(this.flags_, _.isRunningMask_);
+              },
+              set: function (_) {
+                this.flags_ = _(this.flags_, _.isRunningMask_, _);
+              },
+            },
+            {
+              key: "diffValue",
+              get: function () {
+                return _(this.flags_, _.diffValueMask_) ? 1 : 0;
+              },
+              set: function (_) {
+                this.flags_ = _(this.flags_, _.diffValueMask_, 1 === _);
+              },
+            },
+          ])
         );
       })();
+      (_.isDisposedMask_ = 1),
+        (_.isScheduledMask_ = 2),
+        (_.isTrackPendingMask_ = 4),
+        (_.isRunningMask_ = 8),
+        (_.diffValueMask_ = 16);
       var _ = 100,
         _ = function (_) {
           return _();
@@ -17432,7 +17534,7 @@
               _ ||
                 ((_ = !0),
                 _(function () {
-                  (_ = !1), _.isDisposed_ || _.track(_);
+                  (_ = !1), _.isDisposed || _.track(_);
                 }));
             },
             _.onError,
@@ -17496,7 +17598,7 @@
             _.requiresObservable,
           );
         function _() {
-          if (((_ = !1), !_.isDisposed_)) {
+          if (((_ = !1), !_.isDisposed)) {
             var _ = !1,
               _ = _;
             _.track(function () {
@@ -17843,7 +17945,7 @@
         if ("number" == typeof _.timeout) {
           var _ = new Error("WHEN_TIMEOUT");
           _ = setTimeout(function () {
-            if (!_[_].isDisposed_) {
+            if (!_[_].isDisposed) {
               if ((_(), !_.onError)) throw _;
               __webpack_require__.onError(_);
             }
@@ -18677,6 +18779,9 @@
           );
         })(),
         _ = _("ObservableMap", _);
+      function _(_) {
+        return (_[Symbol.toStringTag] = "MapIterator"), _(_);
+      }
       var _ = {},
         _ = (function () {
           function _(_, _, _) {
@@ -18727,15 +18832,15 @@
             }),
             (_.add = function (_) {
               var _ = this;
-              if (
-                (this.atom_, _(this)) &&
-                !_(this, {
+              if ((this.atom_, _(this))) {
+                var _ = _(this, {
                   type: _,
                   object: this,
                   newValue: _,
-                })
-              )
-                return this;
+                });
+                if (!_) return this;
+                _ = _.newValue;
+              }
               if (!this.has(_)) {
                 _(function () {
                   _.data_.add(_.enhancer_(_, void 0)), _.atom_.reportChanged();
@@ -18794,23 +18899,21 @@
               );
             }),
             (_.entries = function () {
-              var _ = 0,
-                _ = Array.from(this.keys()),
-                _ = Array.from(this.values());
+              var _ = this.values();
               return _({
                 next: function () {
-                  var _ = _;
-                  return (
-                    (_ += 1),
-                    _ < _.length
-                      ? {
-                          value: [_[_], _[_]],
-                          done: !1,
-                        }
-                      : {
-                          done: !0,
-                        }
-                  );
+                  var _ = _.next(),
+                    _ = _.value,
+                    _ = _.done;
+                  return _
+                    ? {
+                        value: void 0,
+                        done: _,
+                      }
+                    : {
+                        value: [_, _],
+                        done: _,
+                      };
                 },
               });
             }),
@@ -18820,34 +18923,37 @@
             (_.values = function () {
               this.atom_.reportObserved();
               var _ = this,
-                _ = 0,
-                _ = Array.from(this.data_.values());
+                _ = this.data_.values();
               return _({
                 next: function () {
-                  return _ < _.length
+                  var _ = _.next(),
+                    _ = _.value,
+                    _ = _.done;
+                  return _
                     ? {
-                        value: _.dehanceValue_(_[_++]),
-                        done: !1,
+                        value: void 0,
+                        done: _,
                       }
                     : {
-                        done: !0,
+                        value: _.dehanceValue_(_),
+                        done: _,
                       };
                 },
               });
             }),
             (_.intersection = function (_) {
-              return _(_)
+              return _(_) && !_(_)
                 ? _.intersection(this)
                 : new Set(this).intersection(_);
             }),
             (_.union = function (_) {
-              return _(_) ? _.union(this) : new Set(this).union(_);
+              return _(_) && !_(_) ? _.union(this) : new Set(this).union(_);
             }),
             (_.difference = function (_) {
               return new Set(this).difference(_);
             }),
             (_.symmetricDifference = function (_) {
-              return _(_)
+              return _(_) && !_(_)
                 ? _.symmetricDifference(this)
                 : new Set(this).symmetricDifference(_);
             }),
@@ -18858,7 +18964,7 @@
               return new Set(this).isSupersetOf(_);
             }),
             (_.isDisjointFrom = function (_) {
-              return _(_)
+              return _(_) && !_(_)
                 ? _.isDisjointFrom(this)
                 : new Set(this).isDisjointFrom(_);
             }),
@@ -18908,8 +19014,11 @@
             ])
           );
         })(),
-        _ = _("ObservableSet", _),
-        _ = Object.create(null),
+        _ = _("ObservableSet", _);
+      function _(_) {
+        return (_[Symbol.toStringTag] = "SetIterator"), _(_);
+      }
+      var _ = Object.create(null),
         _ = "remove",
         _ = (function () {
           function _(_, _, _, _) {
@@ -19439,7 +19548,8 @@
         "concat" !== _ && _(_.prototype, _, _);
       }),
         _(1e3);
-      var _ = _.toString;
+      var _,
+        _ = _.toString;
       function _(_, _, _) {
         return void 0 === _ && (_ = -1), _(_, _, _);
       }
@@ -19492,11 +19602,13 @@
           if ((_ = _.length) !== _.length) return !1;
           for (; _--; ) if (!_(_[_], _[_], _ - 1, _, _)) return !1;
         } else {
-          var _,
-            _ = Object.keys(_);
-          if (((_ = _.length), Object.keys(_).length !== _)) return !1;
-          for (; _--; )
-            if (!_(_, (_ = _[_])) || !_(_[_], _[_], _ - 1, _, _)) return !1;
+          var _ = Object.keys(_),
+            _ = _.length;
+          if (Object.keys(_).length !== _) return !1;
+          for (var _ = 0; _ < _; _++) {
+            var _ = _[_];
+            if (!_(_, _) || !_(_[_], _[_], _ - 1, _, _)) return !1;
+          }
         }
         return _.pop(), _.pop(), !0;
       }
@@ -19507,8 +19619,9 @@
             ? Array.from(_.entries())
             : _;
       }
+      var _ = (null == (_ = _().Iterator) ? void 0 : _.prototype) || {};
       function _(_) {
-        return (_[Symbol.iterator] = _), _;
+        return (_[Symbol.iterator] = _), Object.assign(Object.create(_), _);
       }
       function _() {
         return this;

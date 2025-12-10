@@ -33957,45 +33957,45 @@
         );
       }
       const ce = (0, n.PA)(function (e) {
-          s.useEffect(() => {
-            g.Fm.Get().HintLoad();
-          }, []);
-          const {
-            info: t,
-            displayInfo: r,
-            strStoreUrl: i,
-            bHideBottomHalf: n,
-            bShowDeckCompatibilityDialog: a,
-            bShowWishlistButton: o = !0,
-            bShowIgnoreButton: l = !1,
-          } = e;
-          let c;
-          return (
-            t.overrideNavigation && (c = (e) => t.overrideNavigation()),
-            s.createElement(
-              "div",
-              {
-                className: (0, F.A)(
-                  N().GameHoverCapsuleCtn,
-                  P().InGameHover,
-                  n && N().UseHidingBottomHalf,
-                ),
-                onClick: c,
-              },
-              s.createElement(
-                "a",
-                { href: c ? null : i, className: N().TrailerAnchorStoreLink },
-                Boolean(o && !a && !c) &&
-                  s.createElement(ne, { appID: r.id, snr: e.strSNR }),
-                Boolean(l && !a && !c) &&
-                  s.createElement(ae, { appID: r.id, snr: e.strSNR }),
-                s.createElement(te, { info: r }),
+        s.useEffect(() => {
+          g.Fm.Get().HintLoad();
+        }, []);
+        const {
+          info: t,
+          displayInfo: r,
+          strStoreUrl: i,
+          bHideBottomHalf: n,
+          bShowDeckCompatibilityDialog: a,
+          bShowWishlistButton: o = !0,
+          bShowIgnoreButton: l = !1,
+        } = e;
+        let c;
+        return (
+          t.overrideNavigation && (c = (e) => t.overrideNavigation()),
+          s.createElement(
+            "div",
+            {
+              className: (0, F.A)(
+                N().GameHoverCapsuleCtn,
+                P().InGameHover,
+                n && N().UseHidingBottomHalf,
               ),
-              s.createElement(le, { ...e, bPreventNavigation: Boolean(c) }),
-            )
-          );
-        }),
-        me = 150;
+              onClick: c,
+            },
+            s.createElement(
+              "a",
+              { href: c ? null : i, className: N().TrailerAnchorStoreLink },
+              Boolean(o && !a && !c) &&
+                s.createElement(ne, { appID: r.id, snr: e.strSNR }),
+              Boolean(l && !a && !c) &&
+                s.createElement(ae, { appID: r.id, snr: e.strSNR }),
+              s.createElement(te, { info: r }),
+            ),
+            s.createElement(le, { ...e, bPreventNavigation: Boolean(c) }),
+          )
+        );
+      });
+      const me = 150;
       function ue(e) {
         const {
             item: t,
@@ -34142,7 +34142,9 @@
             visible: a,
             children: l,
           } = e,
-          [c, m] = s.useState(a);
+          [c, m] = s.useState(a),
+          { targetElement: u = null == n ? void 0 : n.ownerDocument.body } = (0,
+          R.gK)();
         if (
           (s.useEffect(() => {
             if (a) {
@@ -34168,15 +34170,15 @@
           !n || !l || !c)
         )
           return null;
-        const u = n.clientWidth < 200 ? "8px" : "10px",
-          d = {
+        const d = n.clientWidth < 200 ? "8px" : "10px",
+          p = {
             direction: "overlay-center",
             bEnablePointerEvents: !0,
             ...t,
             style: {
               zIndex: 98,
               width: n.clientWidth * i,
-              fontSize: u,
+              fontSize: d,
               minHeight: "hiding" == Q() ? void 0 : 300,
               height:
                 "hiding" == Q() ? 1.15 * n.clientWidth * (125 / 184) : void 0,
@@ -34187,10 +34189,10 @@
         return o.createPortal(
           s.createElement(
             de,
-            { hoverProps: d },
+            { hoverProps: p },
             s.createElement(b.tH, null, l),
           ),
-          n.ownerDocument.body,
+          u,
         );
       }
     },

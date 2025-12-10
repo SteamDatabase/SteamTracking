@@ -21533,6 +21533,8 @@
                 0) >= 7,
             min_capsule_matches_for_facet_values: 5,
             max_facet_values_for_facet: 5,
+            background_gradient_top: "#00000030",
+            background_gradient_bottom: "#00000030",
             facet_sort_order: 1,
             facet_auto_generate_options: {
               only_facets: [
@@ -22254,7 +22256,13 @@
           }
           return _;
         }
-        async LoadPartnerEventsPageable(_, _, __webpack_require__ = 0, _ = 0) {
+        async LoadPartnerEventsPageable(
+          _,
+          _,
+          __webpack_require__ = 0,
+          _ = 0,
+          _,
+        ) {
           let _ = new Array(),
             _ = _._.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
             _ = {
@@ -22264,6 +22272,7 @@
               count: _,
               _: _._.LANGUAGE,
               origin: self.origin,
+              exclude_tags: _ && _.length > 0 ? _?.join(",") : void 0,
             };
           try {
             let _ = await _().get(_, {
@@ -30244,21 +30253,34 @@
               (_[_++] = 0),
               (_[_++] = _),
               (_[_++] = 0),
+              (0, _._)(
+                "transparent" != _ || "transparent" != _,
+                "Trying to use transparent for both colors in QR",
+              ),
               (_[_++] = 161),
               (_[_++] = 0),
               (_[_++] = 0),
-              (_[_++] = _[0]),
-              (_[_++] = _[1]),
-              (_[_++] = _[2]),
-              (_[_++] = _[0]),
-              (_[_++] = _[1]),
-              (_[_++] = _[2]),
+              "transparent" == _
+                ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
+                : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
+              "transparent" == _
+                ? ((_[_++] = 0), (_[_++] = 0), (_[_++] = 0))
+                : ((_[_++] = _[0]), (_[_++] = _[1]), (_[_++] = _[2])),
               (_[_++] = 255),
               (_[_++] = 255),
               (_[_++] = 255),
               (_[_++] = 255),
               (_[_++] = 255),
               (_[_++] = 255),
+              ("transparent" != _ && "transparent" != _) ||
+                ((_[_++] = 33),
+                (_[_++] = 249),
+                (_[_++] = 4),
+                (_[_++] = 1),
+                (_[_++] = 0),
+                (_[_++] = 0),
+                (_[_++] = "transparent" == _ ? 0 : 1),
+                (_[_++] = 0)),
               (_[_++] = 44),
               (_[_++] = 0),
               (_[_++] = 0),

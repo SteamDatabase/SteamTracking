@@ -405,8 +405,11 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
@@ -428,9 +431,9 @@
       function _(_, _) {
         return {
           unique_id: _++,
-          capsules: null,
-          events: null,
-          links: null,
+          capsules: [],
+          events: [],
+          links: [],
           section_type: _,
           localized_label: [],
           default_label: _,
@@ -472,6 +475,17 @@
             },
           ],
         };
+      }
+      function _() {
+        const [_, _] = _.useState(() => !_._.BIsInited());
+        return (
+          _.useEffect(() => {
+            (async () => {
+              await Promise.all([_._.InitGlobal()]), _(!1);
+            })();
+          }, []),
+          _
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

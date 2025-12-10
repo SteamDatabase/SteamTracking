@@ -6,6 +6,39 @@
         Main: "_1Zn_5pvuMbqr57ws1eJKe",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
+        OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
+        OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
+        OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
+        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
+        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
+        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
+        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
+        UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
+        OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
+        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
+        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
+        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
+        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
+        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
+        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
+        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
+        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
+        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
+        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
+        AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
+        AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
+        AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+      };
+    },
     chunkid: () => {},
     chunkid: (module) => {
       module.exports = {
@@ -139,6 +172,7 @@
         InfoText: "_3Rnea2kVxFT3chmOmqisne",
         Large: "_2jbNvt46h0RqPVOeAwcb8o",
         FAQCtn: "_3UcPLvxpWKhkpPp5vuNZ4T",
+        FaqEntry: "_8B-oP4jghkxueOwLkY5FR",
         FAQ_Q: "_3PJmH1yq33fNNGz3U9m-G0",
         FAQ_A: "_2CZcny1e2NwmV-B3klLJiN",
         ProgressCtn: "_3NRXvKouZmkfv0SJaRwm3z",
@@ -225,7 +259,6 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _._ {
         async DeleteOldAnnouncement(_, _) {
@@ -238,7 +271,7 @@
               "/announcements/ajaxdeleteannouncement/" +
               _,
             _ = await _().post(_, _);
-          if (_.data.success != _._.k_EResultOK) throw _.data;
+          if (1 != _.data.success) throw _.data;
           return this.RemoveGIDFromList(_, _._ + _), _.data;
         }
         static sm_Instance;
@@ -257,6 +290,103 @@
           );
         }
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_, _) {
+        return new (_())(
+          async (_) => {
+            const _ = [..._],
+              _ = await _._.GetPlayerLinkDetails(_, {
+                steamids: _,
+              }),
+              _ = new Map();
+            return (
+              _.Body()
+                .accounts()
+                .forEach((_) => {
+                  const _ = _.toObject();
+                  _.set(_.public_data.steamid, _);
+                }),
+              __webpack_require__.map((_) => _.get(_) ?? null)
+            );
+          },
+          {
+            maxBatchSize: 100,
+            cache: !1,
+            ..._,
+          },
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = _.useContext(_);
+        return (0, _._)(_(_, _, _));
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = _.useContext(_);
+        return (0, _._)({
+          queries: _.map((_) => _(_, _, _)),
+        });
+      }
+      const _ = _.createContext({
+        loadPersonaState: async (_, _) => {
+          if (null == _) return null;
+          const _ = await (function (_) {
+            return (_ ??= _(_));
+          })(_).load(_._.InitFromAccountID(_).ConvertTo64BitString());
+          return (function (_, _) {
+            let _ = new _._(_);
+            const _ = _?.public_data,
+              _ = _?.private_data;
+            (_.m_bInitialized = !!_),
+              (_.m_ePersonaState = _?.persona_state ?? 0),
+              (_.m_strAvatarHash = _?.sha_digest_avatar
+                ? (0, _._)(_.sha_digest_avatar)
+                : _._),
+              (_.m_strPlayerName = _?.persona_name ?? _.ConvertTo64BitString()),
+              (_.m_strAccountName = _?.account_name),
+              _?.persona_state_flags &&
+                (_.m_unPersonaStateFlags = _?.persona_state_flags);
+            _?.game_id && (_.m_gameid = _?.game_id);
+            _?.game_server_ip_address &&
+              (_.m_unGameServerIP = _?.game_server_ip_address);
+            _?.lobby_steam_id && (_.m_game_lobby_id = _?.lobby_steam_id);
+            _?.game_extra_info && (_.m_strGameExtraInfo = _?.game_extra_info);
+            _?.profile_url && (_.m_strProfileURL = _.profile_url);
+            return _;
+          })(_._.InitFromAccountID(_), _);
+        },
+      });
+      function _() {
+        return _.useContext(_);
+      }
+      function _(_, _, _) {
+        const _ = "string" == typeof _ ? new _._(_).GetAccountID() : _;
+        return {
+          queryKey: ["PlayerSummary", _],
+          queryFn: () => _.loadPersonaState(_, _),
+          enabled: !!_,
+        };
+      }
+      let _;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1109,10 +1239,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
         include_basic_info: !0,
@@ -1133,8 +1259,7 @@
           });
         let _ = (0, _._)("#Steamawards_Nominate_ThisYear");
         return (
-          _.flag == _._.k_EVoteDefinitionFlag_LaborOfLove &&
-            (_ = (0, _._)("#Steamawards_Nominate_PastYear")),
+          3 == _.flag && (_ = (0, _._)("#Steamawards_Nominate_PastYear")),
           _.createElement(
             "div",
             {
@@ -1193,7 +1318,7 @@
               _.createElement(_, {
                 unAppID: _._,
                 eSteamAwardCategoryID: _.voteid,
-                eNominatonSource: _._.k_ESteamAwardsNominationSource_Invalid,
+                eNominatonSource: 0,
                 fnShowPicker: __webpack_require__,
               }),
             ),
@@ -1240,8 +1365,7 @@
                 ),
                 _.createElement(_, {
                   eSteamAwardCategoryID: _.voteid,
-                  eNominatonSource:
-                    _._.k_ESteamAwardsNominationSource_ModalPlaytime,
+                  eNominatonSource: 6,
                   rgGameCarouselItems: _,
                 }),
               )
@@ -1282,8 +1406,7 @@
             _.data?.suggested_apps &&
               _.createElement(_, {
                 eSteamAwardCategoryID: _.voteid,
-                eNominatonSource:
-                  _._.k_ESteamAwardsNominationSource_ModalRecommendation,
+                eNominatonSource: 7,
                 rgGameCarouselItems: _.data.suggested_apps.map((_) => ({
                   appID: _.appid,
                 })),
@@ -1316,7 +1439,7 @@
           _.createElement(_, {
             unAppID: _._,
             eSteamAwardCategoryID: _,
-            eNominatonSource: _._.k_ESteamAwardsNominationSource_Invalid,
+            eNominatonSource: 0,
             fnShowPicker: __webpack_require__,
           }),
         );
@@ -1360,8 +1483,7 @@
                           _.createElement(_, {
                             key: _._,
                             eSteamAwardCategoryID: __webpack_require__.voteid,
-                            eNominatonSource:
-                              _._.k_ESteamAwardsNominationSource_ModalSearch,
+                            eNominatonSource: 3,
                             appSuggestion: _,
                           }),
                         ),
@@ -1438,7 +1560,7 @@
             [_],
           ),
           _ = (0, _._)(_);
-        if (_ == _._.k_EStoreItemCacheState_Loading) return null;
+        if (1 == _) return null;
         const _ = _.filter((_) => _._.Get().BHasApp(_.appID));
         return _.createElement(
           "div",
@@ -1541,7 +1663,7 @@
                 _,
                 _ ?? "Unknown",
               );
-              _ == _._.k_EResultNoMatch &&
+              42 == _ &&
                 (_ = (0, _._)("#Steamawards_Nominate_Error_NoMatch", _)),
                 (0, _._)(_, _);
             },
@@ -1668,10 +1790,7 @@
           bShowAssociatedApp: !0,
           bHidePrices: !0,
           onClick: (_) => {
-            _._.Get().RecordEventRead(
-              _,
-              _._.k_EPartnerEventDisplayLocation_StoreFrontPage,
-            ),
+            _._.Get().RecordEventRead(_, 7),
               (0, _._)(_, _._(_)),
               _.stopPropagation(),
               _.preventDefault();
@@ -2084,7 +2203,7 @@
         );
       }
       function _() {
-        const _ = (0, _._)(_._.k_EUserBadgeSteamAwards2025Nominations);
+        const _ = (0, _._)(70);
         let _ = 0;
         const _ = _.data?.quests?.map(
           (_) => (
@@ -2809,7 +2928,10 @@
                           {
                             className: (0, _._)(_().InfoText, _.InfoText),
                           },
-                          (0, _._)("#Steamawards_Voting_Header_HowTo"),
+                          (0, _._)(
+                            "#Steamawards_Voting_Header_HowTo",
+                            _(_.rtVoteEnd),
+                          ),
                         ),
                         _.createElement(
                           "div",
@@ -3038,7 +3160,7 @@
           _ = _.useCallback(() => {
             _(0), _(_[_.current]);
           }, [_]);
-        if (_ == _._.k_EStoreItemCacheState_Loading)
+        if (1 == _)
           return _.createElement(_._, {
             position: "center",
             size: "large",
@@ -3499,7 +3621,7 @@
             _.createElement(
               "div",
               {
-                className: _().FaqSectionTitle,
+                className: (0, _._)(_().FaqSectionTitle, _.FaqSectionTitle),
               },
               (0, _._)("#Steamawards_Voting_FAQ_Title"),
             ),
@@ -3524,14 +3646,14 @@
           _.createElement(
             "div",
             {
-              className: _().FAQ_Q,
+              className: (0, _._)(_().FAQ_Q, _.FAQ_Q),
             },
             _,
           ),
           _.createElement(
             "div",
             {
-              className: _().FAQ_A,
+              className: (0, _._)(_().FAQ_A, _.FAQ_A),
             },
             __webpack_require__,
           ),

@@ -3141,11 +3141,18 @@
           (this.m_originalEvent.last_update_steamid = _),
             (this.m_originalEvent.rtime32_last_modified = _);
         }
-        GetSaleSectionCount() {
-          return this.m_curModel.jsondata.bSaleEnabled &&
-            this.m_curModel.jsondata.sale_sections
-            ? this.m_curModel.jsondata.sale_sections.length
-            : 0;
+        GetSaleSectionCount(_) {
+          return _
+            ? this.m_curModel.jsondata.bSaleEnabled &&
+              this.m_curModel.jsondata.sale_sections
+              ? this.m_curModel.jsondata.sale_sections.filter(
+                  (_) => _.section_type == _,
+                ).length
+              : 0
+            : this.m_curModel.jsondata.bSaleEnabled &&
+                this.m_curModel.jsondata.sale_sections
+              ? this.m_curModel.jsondata.sale_sections.length
+              : 0;
         }
         GetAllSalePageFeaturedItems(_) {
           let _ = new Set();
@@ -10388,6 +10395,7 @@
               null,
               _.createElement(_, {
                 tab: _,
+                editModel: _,
               }),
               _.createElement(_._, {
                 capsuleContainer: _,
@@ -10419,7 +10427,7 @@
         );
       }
       function _(_) {
-        const { tab: _ } = _;
+        const { tab: _, editModel: __webpack_require__ } = _;
         return _._.BFilterRequiresFeatureAdultOnly(_)
           ? _.createElement(
               "div",
@@ -10444,7 +10452,17 @@
                   },
                   (0, _._)("#Sale_Tabs_Editor_Demo"),
                 )
-              : null;
+              : _._.BFilterRequiresUpcomingStatic(_) &&
+                  __webpack_require__.GetSaleSectionCount("sale_item_browser") >
+                    0
+                ? _.createElement(
+                    "div",
+                    {
+                      className: _.InfoStylesBackground,
+                    },
+                    (0, _._)("#Sale_Tabs_Editor_Upcoming"),
+                  )
+                : null;
       }
       function _(_) {
         const { tab: _, editModel: __webpack_require__ } = _,
@@ -22250,7 +22268,7 @@
         const { nSelected: _, fnUpdate: __webpack_require__ } = _,
           [_] = (0, _.useMemo)(() => {
             const _ = new Array();
-            for (let _ = 0; _ < 67; ++_)
+            for (let _ = 0; _ < 71; ++_)
               _.push({
                 label: (0, _._)(_),
                 data: _,
@@ -28554,6 +28572,21 @@
               tabSection: _,
               minimized: _,
             } = _,
+            _ = (0, _._)(() =>
+              (function (_, _) {
+                let _ = "";
+                (0, _._)(_) && _ && _.tabs && _.tabs.length > 0
+                  ? (0, _._)(_, _.tabs).forEach((_) => {
+                      _.length > 0 && (_ += ", ");
+                      let _ = _.tabs.find((_) => _.unique_id == _);
+                      _ += _
+                        ? (0, _._)(_, (0, _._)(_._.LANGUAGE))
+                        : (0, _._)("#EventCalendar_MuteApp_Unknown");
+                    })
+                  : (_ = (0, _._)("#Sale_Section_ShowOnTabs_All"));
+                return _;
+              })(__webpack_require__, _),
+            ),
             _ = _
               ? _.createElement(
                   "span",
@@ -28561,22 +28594,7 @@
                     className: _.ShowInTabsList,
                     onClick: () => _(_, __webpack_require__),
                   },
-                  (0, _._)(
-                    "#Sale_SectionDesc_Tabs",
-                    (function (_, _) {
-                      let _ = "";
-                      (0, _._)(_) && _ && _.tabs && _.tabs.length > 0
-                        ? (0, _._)(_, _.tabs).forEach((_) => {
-                            _.length > 0 && (_ += ", ");
-                            let _ = _.tabs.find((_) => _.unique_id == _);
-                            _ += _
-                              ? (0, _._)(_, (0, _._)(_._.LANGUAGE))
-                              : (0, _._)("#EventCalendar_MuteApp_Unknown");
-                          })
-                        : (_ = (0, _._)("#Sale_Section_ShowOnTabs_All"));
-                      return _;
-                    })(__webpack_require__, _),
-                  ),
+                  (0, _._)("#Sale_SectionDesc_Tabs", _),
                 )
               : null;
           let _;
@@ -33688,6 +33706,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       const _ = [
           {
@@ -33833,7 +33852,21 @@
           "ml_playtime_recommender",
           "all_released",
           "all_upcoming",
-        ];
+        ],
+        _ = new Set([
+          "search",
+          "topwishlisted",
+          "trendingwishlisted",
+          "popularcomingsoon",
+          "mostplayeddemo",
+          "dailyactiveuserdemo",
+          "playednowdemo",
+          "contenthub_upcoming",
+          "contenthub_all",
+          "ml_wishlist_recommender",
+          "all",
+          "all_upcoming",
+        ]);
       function _(_) {
         return "string" == typeof _ && _.includes(_);
       }
@@ -41010,6 +41043,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -41395,33 +41429,38 @@
           ),
         );
       }
-      const _ = (_) => {
-        let { displayStyle: _ } = _,
+      function _(_) {
+        const {
+            displayStyle: _,
+            requestCompact: __webpack_require__,
+            ..._
+          } = _,
+          { type: _ } = _,
           _ = (0, _._)();
         if ("purchaseonlydisplay" === _)
           return _.createElement(_, {
-            ..._,
-          });
-        if ("bundle" == _.type || "sub" == _.type)
-          return _.createElement(_._, {
             ..._,
           });
         if (_)
           return _.createElement(_._, {
             ..._,
           });
-        switch (
-          (!(0, _._)() ||
-            ("library" != _ && "animated" != _) ||
-            (_ = "bordered"),
-          _)
-        ) {
+        if (__webpack_require__ && !(0, _._)())
+          return _.createElement(_, {
+            ..._,
+          });
+        if ("bundle" == _ || "sub" == _)
+          return _.createElement(_._, {
+            ..._,
+          });
+        if ((0, _._)() && ("library" == _ || "animated" == _))
+          return _.createElement(_._, {
+            ..._,
+            bShowReviewSummary: !0,
+          });
+        switch (_) {
           case "library":
           case "animated":
-            return _.createElement(_, {
-              ..._,
-            });
-          case "compactlist":
             return _.createElement(_, {
               ..._,
             });
@@ -41431,7 +41470,10 @@
               bShowReviewSummary: !0,
             });
         }
-      };
+      }
+      function _(_, _) {
+        return "purchaseonlydisplay" !== _ && !_ && !(0, _._)();
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -41698,19 +41740,19 @@
             eventModel: _,
             index: _,
           } = _,
-          _ = (0, _._)(),
-          _ = (0, _._)(() =>
-            (0, _._)(
-              _,
-              _,
-              __webpack_require__,
-              _.clanSteamID.GetAccountID(),
-              _.eLocation,
-            ),
-          );
-        if (_) return _;
-        const _ = (0, _._)("#Sale_Section_Header", _ + 1),
-          _ = "#Sale_Section_Type_" + _.section_type,
+          _ = (0, _._)();
+        let _;
+        (_ = (0, _._)(() =>
+          (0, _._)(
+            _,
+            _,
+            __webpack_require__,
+            _.clanSteamID.GetAccountID(),
+            _.eLocation,
+          ),
+        )),
+          _ || (_ = (0, _._)("#Sale_Section_Header", _ + 1));
+        const _ = "#Sale_Section_Type_" + _.section_type,
           _ = (0, _._)(_);
         return _ !== _
           ? _.createElement(
@@ -41720,7 +41762,7 @@
               " ",
               _.createElement("span", null, "(", _, ")"),
             )
-          : null;
+          : _;
       }
       function _(_, _, _, _, _) {
         const _ = (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _);
@@ -42366,6 +42408,38 @@
         BIsDefaultTab() {
           return this.m_bDefaultTab;
         }
+        BFilterRequiresUpcoming() {
+          return (
+            !!this.m_activeTab &&
+            _.BFilterRequiresUpcomingStatic(this.m_activeTab)
+          );
+        }
+        static BFilterRequiresUpcomingStatic(_) {
+          var _, _, _;
+          if (
+            1 ==
+            (null ===
+              (_ =
+                null === (_ = null == _ ? void 0 : _.sale_tag_filter) ||
+                void 0 === _
+                  ? void 0
+                  : _.clauses) || void 0 === _
+              ? void 0
+              : _.length)
+          ) {
+            const _ =
+              null === (_ = null == _ ? void 0 : _.sale_tag_filter) ||
+              void 0 === _
+                ? void 0
+                : _.clauses[0];
+            return (
+              "Must have" === _.type &&
+              1 === _.or_tags.length &&
+              "[Feature] Coming Soon" === _.or_tags[0]
+            );
+          }
+          return !1;
+        }
         BFilterRequiresFeatureDemo() {
           return (
             !!this.m_activeTab &&
@@ -42533,8 +42607,8 @@
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(""),
           _ = _.useRef(void 0),
-          _ = _.useMemo(() => new Array(), []),
-          _ = _.useMemo(() => new Array(), []),
+          _ = _.useRef([]),
+          _ = _.useRef([]),
           _ = _.useMemo(() => _().CancelToken.source(), []),
           _ = () => {
             var _;
@@ -42548,7 +42622,33 @@
           _();
         }, []),
           _.useEffect(() => () => _.cancel("ReorderableList unmounting"), [_]);
-        const _ = (_, _) => {
+        const _ = _.useCallback(
+            (_) => {
+              var _;
+              const _ =
+                null === (_ = _.current[_]) || void 0 === _
+                  ? void 0
+                  : _.current;
+              _
+                ? ((_.style.left = _.clientX - _ + "px"),
+                  (_.style.top = _.clientY - _ + "px"))
+                : console.error("update grab element missing element");
+            },
+            [_, _, _],
+          ),
+          _ = _.useCallback(() => {
+            var _;
+            const _ =
+              null === (_ = _.current[_]) || void 0 === _ ? void 0 : _.current;
+            _
+              ? ((_.style.position = ""), (_.style.zIndex = ""))
+              : console.error("end element drag missing element"),
+              _(!1),
+              _(-1),
+              _(void 0),
+              _(void 0);
+          }, [_]),
+          _ = (_, _) => {
             var _;
             _.token.reason ||
               ((null === (_ = _.current.firstElementChild) || void 0 === _
@@ -42560,7 +42660,9 @@
               ((_, _) => {
                 var _;
                 const _ =
-                  null === (_ = _[_]) || void 0 === _ ? void 0 : _.current;
+                  null === (_ = _.current[_]) || void 0 === _
+                    ? void 0
+                    : _.current;
                 if (!_)
                   return void console.error(
                     "start element grab missing element at index " + _,
@@ -42581,55 +42683,40 @@
             const _ = _._(_ > _ ? _ - 1 : _, 0, _.length - 1);
             _ != _ && (_ ? _(_, _) : (0, _._)(_, _, _), _(_), _ && _(_));
           },
-          _ = (_) => {
-            _ &&
-              !_.token.reason &&
-              ((() => {
-                var _;
-                const _ =
-                  null === (_ = _[_]) || void 0 === _ ? void 0 : _.current;
-                _
-                  ? ((_.style.position = ""), (_.style.zIndex = ""))
-                  : console.error("end element drag missing element"),
-                  _(!1),
-                  _(-1),
-                  _(void 0),
-                  _(void 0);
-              })(),
-              _(_, _));
-          },
-          _ = (_) => {
-            if (!_ || _.token.reason) return;
-            const _ = _.clientY;
-            let _;
-            for (let _ = 0; _ < _.length; _++) {
-              if (
-                _ <
-                (_[_].current.getBoundingClientRect().top +
-                  2 * _[_].current.getBoundingClientRect().bottom) /
-                  3
-              ) {
-                _ = _;
-                break;
+          _ = _.useCallback(
+            (_) => {
+              if (!_ || _.token.reason) return;
+              const _ = _.clientY;
+              let _;
+              for (let _ = 0; _ < _.current.length; _++) {
+                if (
+                  _ <
+                  (_.current[_].current.getBoundingClientRect().top +
+                    2 * _.current[_].current.getBoundingClientRect().bottom) /
+                    3
+                ) {
+                  _ = _;
+                  break;
+                }
               }
-            }
-            _(null != _ ? _ : _.length),
-              ((_) => {
-                var _;
-                const _ =
-                  null === (_ = _[_]) || void 0 === _ ? void 0 : _.current;
-                _
-                  ? ((_.style.left = _.clientX - _ + "px"),
-                    (_.style.top = _.clientY - _ + "px"))
-                  : console.error("update grab element missing element");
-              })(_);
-          };
-        (0, _._)(window, "mousemove", (_) => _(_)),
-          (0, _._)(window, "mouseup", (_) => _()),
+              _(null != _ ? _ : _.current.length), _(_);
+            },
+            [_, _, _],
+          );
+        (0, _._)(window, "mousemove", _ ? _ : void 0),
+          (0, _._)(
+            window,
+            "mouseup",
+            _
+              ? (_) => {
+                  _ && !_.token.reason && (_(), _(_, _));
+                }
+              : void 0,
+          ),
           _.useEffect(() => {
-            for (let _ = _.length; _ < _.length; _++)
-              _.push(_.createRef()), _.push(_.createRef());
-          }, [_.length, _, _]);
+            for (let _ = _.current.length; _ < _.length; _++)
+              _.current.push(_.createRef()), _.current.push(_.createRef());
+          }, [_.length]);
         const _ = (_) => {
             _(void 0);
             const _ = null == _ ? void 0 : _.trim(),
@@ -42650,7 +42737,7 @@
               "div",
               {
                 key: _,
-                ref: _[_],
+                ref: _.current[_],
               },
               _ == _ &&
                 _.createElement(_, {
@@ -42659,7 +42746,7 @@
               _.createElement(
                 "div",
                 {
-                  ref: _[_],
+                  ref: _.current[_],
                   className: _().DragGhost,
                 },
                 _ == _ &&

@@ -388,15 +388,17 @@
     },
     96859: (e, t, a) => {
       "use strict";
-      a.d(t, { Sm: () => s, U: () => o, r3: () => m });
+      a.d(t, { Sm: () => m, U: () => s, oR: () => d, r3: () => g });
       var n = a(89128),
         l = a(17720),
-        r = a(44165);
-      function o(e, t) {
+        r = a(44165),
+        o = a(90626),
+        i = a(60746);
+      function s(e, t) {
         const a = new n.lh();
         return (
           (a.clanSteamID = l.b.InitFromClanID(e)),
-          (a.GID = "fakeevent_" + i++),
+          (a.GID = "fakeevent_" + c++),
           (a.visibility_state = n.zv.k_EEventStateUnlisted),
           (a.visibilityStartTime = (0, r.sB)() - 1),
           (a.jsondata.bSaleEnabled = !0),
@@ -407,20 +409,20 @@
           a
         );
       }
-      let i = 1234;
-      function s(e, t) {
+      let c = 1234;
+      function m(e, t) {
         return {
-          unique_id: i++,
-          capsules: null,
-          events: null,
-          links: null,
+          unique_id: c++,
+          capsules: [],
+          events: [],
+          links: [],
           section_type: e,
           localized_label: [],
           default_label: t,
         };
       }
-      const c = "socialcontent_";
-      function m() {
+      const u = "socialcontent_";
+      function g() {
         return {
           platforms: [
             { label: n.Zf.Steam, checked: !0 },
@@ -431,7 +433,7 @@
           doorsEnabled: !1,
           content_options: [
             {
-              unique_id: c + Math.floor(1e6 * Math.random()),
+              unique_id: u + Math.floor(1e6 * Math.random()),
               door: void 0,
               twitter_card: n.jR.SummaryLargeImage,
               localized_option_fields: {
@@ -443,6 +445,17 @@
             },
           ],
         };
+      }
+      function d() {
+        const [e, t] = o.useState(() => !i.KN.BIsInited());
+        return (
+          o.useEffect(() => {
+            (async () => {
+              await Promise.all([i.KN.InitGlobal()]), t(!1);
+            })();
+          }, []),
+          e
+        );
       }
     },
     29347: (e, t, a) => {
@@ -1189,9 +1202,9 @@
           ),
         );
       }
-      var J = a(45318),
-        K = a(69183),
-        X = a.n(K);
+      var K = a(45318),
+        J = a(69183),
+        X = a.n(J);
       function $(e) {
         const { eventModel: t, language: a } = e,
           [r, o] = (0, n.q3)(() => [
@@ -1825,8 +1838,8 @@
       var Ye = a(60746),
         Qe = a(29347),
         Ze = a(96236),
-        Je = a(53732),
-        Ke = a.n(Je),
+        Ke = a(53732),
+        Je = a.n(Ke),
         Xe = a(49460);
       function $e(e) {
         const { fnSetImageSearch: t } = e,
@@ -1885,7 +1898,7 @@
                 "div",
                 {
                   key: "ImagePicker_Result",
-                  className: Ke().ResultNotification,
+                  className: Je().ResultNotification,
                 },
                 o.length > 0
                   ? (0, p.we)("#ImagePicker_EmptySearch")
@@ -1894,14 +1907,14 @@
             : a && a.errMsg
               ? l.createElement(
                   "div",
-                  { key: "ImagePicker_Result", className: Ke().ErrorCode },
+                  { key: "ImagePicker_Result", className: Je().ErrorCode },
                   (0, p.we)("#ImagePicker_Error", a.errMsg),
                 )
               : l.createElement(
                   "div",
                   {
                     key: "ImagePicker_Result",
-                    className: Ke().ResultNotification,
+                    className: Je().ResultNotification,
                   },
                   (0, p.we)("#Loading"),
                 );
@@ -1950,7 +1963,7 @@
           },
           d = () => {},
           _ = t.file_name ? t.file_name : "",
-          E = (0, Qe.r)(a, _, String(t.imageid), Ke().Hilight),
+          E = (0, Qe.r)(a, _, String(t.imageid), Je().Hilight),
           b = S.z.BIsClanImageVideo(t),
           v = o && !s && !b,
           I = o && !s && !b,
@@ -1960,16 +1973,16 @@
           Ze.K,
           {
             placeholderHeight: "100vh",
-            className: Ke().ImageWrapperContainer,
+            className: Je().ImageWrapperContainer,
             rootMargin: "0px 0px 100% 0px",
           },
           l.createElement(
             "div",
-            { className: Ke().ImageButton },
+            { className: Je().ImageButton },
             l.createElement(
               "div",
               {
-                className: Ke().ImageWrapper,
+                className: Je().ImageWrapper,
                 style: { backgroundImage: b ? "" : `url( '${t.thumb_url}' )` },
                 draggable: !0,
                 onDragStart: (e) => {
@@ -1992,25 +2005,25 @@
               },
               l.createElement(lt, {
                 clanImage: t,
-                className: Ke().VideoBackground,
+                className: Je().VideoBackground,
               }),
             ),
             v &&
               l.createElement(
                 "span",
-                { className: Ke().Full, onClick: m },
+                { className: Je().Full, onClick: m },
                 (0, p.we)("#ImagePicker_FullSize"),
               ),
             s &&
               l.createElement(te.t, {
                 size: "medium",
-                className: Ke().FloatingThrobber,
+                className: Je().FloatingThrobber,
               }),
             I &&
               l.createElement(
                 "span",
                 {
-                  className: Ke().Thumb,
+                  className: Je().Thumb,
                   onClick: () => n(t, Ve.k_eInsertThumbnail),
                 },
                 (0, p.we)("#ImagePicker_Thumbnail"),
@@ -2026,7 +2039,7 @@
               l.createElement(
                 "span",
                 {
-                  className: Ke().Full,
+                  className: Je().Full,
                   onClick: () => n(t, Ve.k_eInsertVideo),
                 },
                 (0, p.we)("#ImagePicker_Video"),
@@ -2035,7 +2048,7 @@
               l.createElement(
                 "span",
                 {
-                  className: Ke().Delete,
+                  className: Je().Delete,
                   onClick: (e) => {
                     (0, ie.pg)(
                       l.createElement(
@@ -2075,7 +2088,7 @@
               ),
             l.createElement(
               "div",
-              { className: Ke().ImageWrapperFilename, title: _ },
+              { className: Je().ImageWrapperFilename, title: _ },
               E,
             ),
           ),
@@ -2093,7 +2106,7 @@
           : l.createElement(
               "span",
               {
-                className: (0, x.A)(Ke().Localized, ve().ValveOnlyBackground),
+                className: (0, x.A)(Je().Localized, ve().ValveOnlyBackground),
                 onClick: () => a?.(t),
               },
               "(VO) " + (0, p.we)("#ImagePicker_Localized"),
@@ -2978,7 +2991,7 @@
       const Qt =
         "https://partner.steamgames.com/doc/store/localization#supported_languages";
       var Zt;
-      function Jt(e) {
+      function Kt(e) {
         const {
             artworkType: t,
             headerHint: a,
@@ -3481,7 +3494,7 @@
                   {
                     onClick: (t) => {
                       (0, ie.pg)(
-                        l.createElement(Kt, {
+                        l.createElement(Jt, {
                           fnRemoveAllArtwork: e.fnRemoveAllArtwork,
                         }),
                         (0, ce.uX)(t) ?? window,
@@ -3506,7 +3519,7 @@
             }),
         );
       }
-      function Kt(e) {
+      function Jt(e) {
         const { fnRemoveAllArtwork: t, closeModal: a } = e;
         return l.createElement(oe.o0, {
           strTitle: (0, p.we)("#Sale_RemoveAll"),
@@ -3781,7 +3794,7 @@
                   rgRealmList: o ?? [],
                   uploaderOverride: E,
                 }),
-                l.createElement(Jt, {
+                l.createElement(Kt, {
                   clanSteamID: t,
                   eventModel: r,
                   artworkType: s,
@@ -4874,9 +4887,9 @@
           let p = (0, Ia.I)(n, c, t, a, T);
           if (void 0 === p) return;
           if (p);
-          else if ((0, J.su)(n) && !R.iA.logged_in)
+          else if ((0, K.su)(n) && !R.iA.logged_in)
             C ||
-              ((p = l.createElement(J.CC, {
+              ((p = l.createElement(K.CC, {
                 section: n,
                 event: t,
                 language: a,

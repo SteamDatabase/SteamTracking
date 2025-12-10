@@ -62508,6 +62508,21 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  subject_type: {
+                    _: 5,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  chat_group_id: {
+                    _: 6,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  kick_expiration_time: {
+                    _: 7,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m
@@ -72135,18 +72150,7 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         switch (_) {
           case "discord_server":
@@ -72200,6 +72204,17 @@
         }
         return 0;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { appid: _ } = _;
         return _.createElement(
@@ -72283,46 +72298,52 @@
             )
           : null;
       }
+      const _ = [6, 23, 18, 8, 9, 19, 24];
       function _(_) {
-        const { _: _, rgSocialMedia: __webpack_require__, className: _ } = _;
+        const { _: _, rgSocialMedia: __webpack_require__, className: _ } = _,
+          _ = (0, _._)();
         return _.createElement(
           "div",
           {
             className: (0, _._)(_().AppSocialLinks, _),
           },
-          __webpack_require__.map((_) =>
-            _.url
-              ? _.createElement(_, {
-                  key: "app_social_link_" + _ + "_" + _.link_type,
-                  social: _,
-                })
-              : _.createElement(_, {
-                  key:
-                    "app_social_text_" + _ + "_" + _.link_type + "_" + _.text,
-                  social: _,
-                }),
-          ),
+          __webpack_require__
+            .filter((_) => !_ || _.includes(_.link_type || 0))
+            .map((_) =>
+              _.url
+                ? _.createElement(_, {
+                    key: "app_social_link_" + _ + "_" + _.link_type,
+                    social: _,
+                  })
+                : _.createElement(_, {
+                    key:
+                      "app_social_text_" + _ + "_" + _.link_type + "_" + _.text,
+                    social: _,
+                  }),
+            ),
         );
       }
       function _(_) {
         const { social: _ } = _;
-        return _.createElement(
-          "a",
-          {
-            href: (0, _._)(_.url),
-            target: _._.IN_CLIENT ? void 0 : "_blank",
-            rel: "noopener noreferrer",
-          },
-          _.createElement(
-            _._,
-            {
-              toolTipContent: _.url,
-            },
-            _.createElement(_, {
-              social: _,
-            }),
-          ),
-        );
+        return _.url
+          ? _.createElement(
+              "a",
+              {
+                href: (0, _._)(_.url),
+                target: _._.IN_CLIENT ? void 0 : "_blank",
+                rel: "noopener noreferrer",
+              },
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: _.url,
+                },
+                _.createElement(_, {
+                  social: _,
+                }),
+              ),
+            )
+          : null;
       }
       function _(_) {
         const { social: _ } = _;
@@ -72352,7 +72373,7 @@
       function _(_) {
         const { social: _ } = _;
         return _.createElement(_, {
-          linkType: _.link_type,
+          linkType: _.link_type || 0,
           className: _().AppSocialLinkIcon,
         });
       }
@@ -82756,6 +82777,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -83834,13 +83856,15 @@
       }
       function _(_) {
         const _ = _.ownerDocument;
-        _.cancelFullscreen
-          ? _.cancelFullscreen()
-          : _.webkitCancelFullScreen
-            ? _.webkitCancelFullScreen()
-            : _.mozCancelFullScreen
-              ? _.mozCancelFullScreen()
-              : _.msExitFullscreen && _.msExitFullscreen();
+        _.exitFullscreen
+          ? _.exitFullscreen()
+          : _.cancelFullscreen
+            ? _.cancelFullscreen()
+            : _.webkitCancelFullScreen
+              ? _.webkitCancelFullScreen()
+              : _.mozCancelFullScreen
+                ? _.mozCancelFullScreen()
+                : _.msExitFullscreen && _.msExitFullscreen();
       }
       function _(_) {
         return "INPUT" === _.nodeName;

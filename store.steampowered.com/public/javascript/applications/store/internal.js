@@ -4716,21 +4716,23 @@
                 focused: a,
                 label: s = null,
                 render: n,
-                ...i
+                disabled: i,
+                ...o
               } = e,
-              o = t ? "true" : "false",
-              l = a ? "true" : void 0;
+              l = t ? "true" : "false",
+              c = a ? "true" : void 0;
             return te(
               n,
               r.createElement(j, {
-                "data-selected": o,
-                "data-focused": l,
+                "data-selected": l,
+                "data-focused": c,
+                "aria-disabled": i,
                 className: ae.ListBoxOption,
                 paddingY: "2",
                 paddingX: "3",
               }),
-              { role: "option", ...i },
-              { selected: t, focused: a },
+              { role: "option", ...o },
+              { selected: t, focused: a, disabled: i },
             );
           },
         },
@@ -4835,41 +4837,44 @@
           const {
               children: t,
               label: a,
-              onSelect: s,
-              ref: n,
-              selected: i,
-              ...o
+              selected: s,
+              onSelect: n,
+              ref: i,
+              disabled: o,
+              ...l
             } = e,
-            l = (0, r.useContext)(ie),
-            { ref: c, index: m } = (0, X.rm)({ label: a }),
-            p = (0, X.SV)([n, c]);
-          if (!l)
+            c = (0, r.useContext)(ie),
+            { ref: m, index: p } = (0, X.rm)({ label: a }),
+            d = (0, X.SV)([i, m]);
+          if (!c)
             return (
               console.error(
                 "<PopoverListItem> must be a child of <PopoverListRoot>.",
               ),
               null
             );
-          const d = m === l.activeIndex,
-            u = m === l.selectedIndex || !!i;
+          const u = p === c.activeIndex,
+            h = p === c.selectedIndex || !!s;
           return r.createElement(
             re.Option,
             {
-              ref: p,
-              selected: u,
-              focused: d,
+              ref: d,
+              selected: h,
+              focused: u,
               role: "option",
-              tabIndex: d ? 0 : -1,
-              ...l.getItemProps({
-                onClick: s,
+              tabIndex: u ? 0 : -1,
+              ...c.getItemProps({
+                onClick: o ? void 0 : n,
                 onKeyDown: (e) => {
-                  ("Enter" === e.key ||
-                    (" " === e.key && !l.typingRef.current)) &&
-                    (s(), e.preventDefault(), e.stopPropagation());
+                  o ||
+                    ("Enter" !== e.key &&
+                      (" " !== e.key || c.typingRef.current)) ||
+                    (n(), e.preventDefault(), e.stopPropagation());
                 },
-                active: d,
-                selected: u,
-                ...o,
+                active: u,
+                selected: h,
+                disabled: o,
+                ...l,
               }),
             },
             t,

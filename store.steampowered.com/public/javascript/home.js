@@ -41,6 +41,7 @@ GHomepage = {
 	rgAppsRecommendedByCurators: [],
 	rgTopSteamCurators: [],
 	rgAccountTagBuckets: [],
+	rgSteamAwardDefs: [],
 
 	rgfnCustomRenders: [],
 
@@ -108,6 +109,9 @@ GHomepage = {
 		}
 
 		InitHorizontalAutoSliders();
+
+		if ( $J( 'body' ).hasClass('v7') )
+			InitTabSectionMicrotrailer();
 
 		if ( $J( '#load_addtl_scroll_target' ).length )
 			new CScrollOffsetWatcher( '#load_addtl_scroll_target', GHomepage.OnHomeActivate.bind(this) );
@@ -232,6 +236,7 @@ GHomepage = {
 			GHomepage.eHWVariant = rgParams.eHWVariant || 0;
 			GHomepage.eGamingDeviceType = rgParams.eGamingDeviceType || 0;
 			GHomepage.bIsSeasonalSale = rgParams.bIsSeasonalSale || false;
+			GHomepage.rgSteamAwardDefs = rgParams.rgSteamAwardDefs || [];
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -348,6 +353,7 @@ GHomepage = {
 		GHomepage.oDisplayLists.sale_tier2 = GHomepage.oDisplayListsRaw.sale_tier2 || [];
 		GHomepage.oDisplayLists.heros = GHomepage.oDisplayListsRaw.heros || [];
 		GHomepage.oDisplayLists.special_deals = GHomepage.oDisplayListsRaw.special_deals || [];
+		GHomepage.oDisplayLists.steam_award_winners = GHomepage.oDisplayListsRaw.steam_award_winners || [];
 
 		GHomepage.oDisplayLists.popular_new_on_steam = GHomepage.oDisplayLists.popular_new || [];
 
@@ -553,9 +559,9 @@ GHomepage = {
 		if ( !GHomepage.oDisplayLists.sale_tier1 )
 			return;
 
-		if ( GHomepage.oDisplayLists.steam_award_winners )
+		if ( GHomepage.oDisplayLists.steam_award_winners && GHomepage.rgSteamAwardDefs.length )
 		{
-			HomeSaleSteamAwardWinners( $J( '.home_steamawards_ctn' ), rgDisplayLists.steam_award_winners, rgSteamAwardDefs );
+			HomeSaleSteamAwardWinners( $J( '.home_steamawards_ctn' ), GHomepage.oDisplayLists.steam_award_winners, GHomepage.rgSteamAwardDefs );
 		}
 		else
 		{
@@ -1481,8 +1487,8 @@ GHomepage = {
 
 			if( rgLookup.item )
 			{
-				$el.on('hover focus', function(){
-
+				$el.on('hover focus', function()
+				{
 					var fnShowElement = function()
 					{
 						if ( GHomepage.m_iTabItemPreviewMountTimeout )
@@ -1587,8 +1593,18 @@ GHomepage = {
 
 	},
 
+	m_TabItemPreviewMicrotrailerTimeout: null,
 	InstrumentTabbedSectionv2: function( $Items )
 	{
+		const fnPauseActiveMicrotrailer = function()
+		{
+			let $elPrevMicrotrailer = $J( '.tab_preview.focus' ).find('.tab_preview_video')[0];
+			if ( $elPrevMicrotrailer )
+			{
+				$elPrevMicrotrailer.pause();
+			}
+		}
+
 		$Items.each(function(i, j){
 			var $el = $J(j);
 			var rgLookup = GStoreItemData.GetStoreItemDataForElement( $el );
@@ -1597,25 +1613,33 @@ GHomepage = {
 			if( rgLookup.item )
 			{
 				$el.on('hover focus', function(){
-
-					var fnShowElement = function()
-					{
-						if ( GHomepage.m_iTabItemPreviewMountTimeout )
-						{
+					var fnShowElement = function() {
+						if (GHomepage.m_iTabItemPreviewMountTimeout) {
 							// we may have someone showing delayed.  clear them out if that's the case.
-							window.clearTimeout( GHomepage.m_iTabItemPreviewMountTimeout );
+							window.clearTimeout(GHomepage.m_iTabItemPreviewMountTimeout);
 							GHomepage.m_iTabItemPreviewMountTimeout = null;
 						}
 
+						fnPauseActiveMicrotrailer();
 						$el.siblings().removeClass('focus');
 						$elInfoDiv.siblings().removeClass('focus');
 						$elInfoDiv.siblings().attr('inert', true);
-						$elInfoDiv.find( '.tab_preview_video' )[0]?.pause();
 
 						$el.addClass('focus');
 						$elInfoDiv.addClass('focus');
 						$elInfoDiv.removeAttr('inert');
-						$elInfoDiv.children( '.tab_preview_video' )[0]?.play();
+
+						// Current microtrailer
+						let $elMicrotrailer = $elInfoDiv.children( '.tab_preview_video' )[0];
+						if ( $elMicrotrailer )
+						{
+							const rect = $elMicrotrailer.getBoundingClientRect();
+							const bIsVisible = rect.top >= 0 && rect.left >= 0 && rect.bottom <= window.innerHeight && rect.right <= window.innerWidth;
+							if ( bIsVisible )
+							{
+								window.setTimeout( () => $elMicrotrailer.play(), 1 );
+							}
+						}
 					};
 
 					if ( $elInfoDiv )
@@ -1719,7 +1743,6 @@ GHomepage = {
 				});
 			}
 		});
-
 	},
 
 	RenderFriendsRecentlyPurchased: function()
@@ -4907,10 +4930,79 @@ function InitTopSellersControls( $Controls, RangeInitData, bVersion2 )
 
 }
 
+function InitTabSectionMicrotrailer()
+{
+	const elRightSection = document.getElementById( 'tab_preview_container' );
+	if ( elRightSection )
+	{
+		const intersectionOptions = {
+			root: null,
+			rootMargin: '-50% 0px 0px 0px',
+			threshold: 0,
+		};
+
+		const k_nMicrotrailerTimeoutMS = 30000;
+
+		const fnPlayTabMicrotrailer = function()
+		{
+			if ( GHomepage.m_TabItemPreviewMicrotrailerTimeout )
+				window.clearTimeout( GHomepage.m_TabItemPreviewMicrotrailerTimeout );
+
+			let elMicrotrailer = $J( '.tab_preview.focus' ).find( '.tab_preview_video' )[0];
+			if ( elMicrotrailer && elMicrotrailer.paused )
+			{
+				elMicrotrailer.play();
+			}
+
+			GHomepage.m_TabItemPreviewMicrotrailerTimeout = window.setTimeout( fnPauseTabMicrotrailer, k_nMicrotrailerTimeoutMS );
+		}
+
+		const fnPauseTabMicrotrailer = function()
+		{
+			let elMicrotrailer = $J( '.tab_preview.focus' ).find( '.tab_preview_video' )[0];
+			if ( elMicrotrailer )
+				elMicrotrailer.pause();
+		}
+
+		const fnRestartVideoIfVisible = function()
+		{
+			let $elMicrotrailer = $J( '.tab_preview.focus' ).find( '.tab_preview_video' )[0];
+			if ( $elMicrotrailer )
+			{
+				const rect = $elMicrotrailer.getBoundingClientRect();
+				const bIsVisible = rect.top >= 0 && rect.left >= 0 && rect.bottom <= window.innerHeight && rect.right <= window.innerWidth;
+				if ( bIsVisible )
+				{
+					fnPlayTabMicrotrailer();
+				}
+			}
+		}
+
+		const intersectionObserver = new IntersectionObserver( ([e]) =>
+		{
+			let bIsVisible = e.isIntersecting;
+			if ( bIsVisible )
+			{
+				fnPlayTabMicrotrailer();
+			}
+			else
+			{
+				fnPauseTabMicrotrailer();
+			}
+		}, intersectionOptions );
+
+		intersectionObserver.observe( elRightSection );
+
+		GHomepage.m_TabItemPreviewMicrotrailerTimeout = window.setTimeout( fnPauseTabMicrotrailer, k_nMicrotrailerTimeoutMS );
+
+		$J( window ).on( 'scroll resize mouseover vgp_onfocus', fnRestartVideoIfVisible );
+	}
+}
+
 function HomeTabOnClick( elem, strTabSelectTarget, strDelayedImageGroup )
 {
 	if ( strDelayedImageGroup )
-		LoadDelayedImages( strDelayedImageGroup, true );
+		LoadDelayedImages( strDelayedImageGroup );
 
 	let elTopSellersControls = $J( '#topsellers_controls' );
 	elTopSellersControls.hide();
@@ -4921,5 +5013,16 @@ function HomeTabOnClick( elem, strTabSelectTarget, strDelayedImageGroup )
 	let $List = $JFromIDOrElement( strTabSelectTarget );
 	$List.find('.tab_row_item').first().trigger('mouseenter');
 	GDynamicStoreHelpers.AddSNRDepthParamsToCapsuleList( $List.find('.tab_row_item') );
+}
+
+function PreviewScreenshotModal( strAppName, elScreenshot )
+{
+	let image = new Image();
+	image.src =  $J( elScreenshot ).data( 'screenshot-url' );
+	image.className = 'home_content_screenshot_img';
+	image.onload = function() {
+		let $Modal = ShowAlertDialog( strAppName, image, 'Close' );
+		window.setTimeout( () => $Modal.AdjustSizing(), 1 );
+	}
 }
 

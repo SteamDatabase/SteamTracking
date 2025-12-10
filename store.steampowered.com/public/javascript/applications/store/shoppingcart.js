@@ -45,7 +45,7 @@
             { className: E().ShoppingCartHeader },
             (0, i.we)(h ? "#Cart_UpdatedYourCart" : "#Cart_AddedToYourCart"),
           ),
-          l.createElement(m.p, { lineItems: _, cartValidation: p }),
+          l.createElement(m.pf, { lineItems: _, cartValidation: p }),
           l.createElement(
             s.Z,
             { className: E().ShoppingCartModalBtns },

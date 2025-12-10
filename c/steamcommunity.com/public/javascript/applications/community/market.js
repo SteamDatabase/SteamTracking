@@ -248,7 +248,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _ = _._.LANGUAGE) {
         const _ = (0, _._)(),
@@ -277,7 +276,7 @@
               appid: _,
               language: _,
             });
-            if (!_.BSuccess() && _.GetEResult() != _._.k_EResultNoMatch)
+            if (!_.BSuccess() && 42 != _.GetEResult())
               throw `Error loading asset properties for ${_}: ${_.GetErrorMessage()}`;
             return {
               property_schemas:
@@ -499,7 +498,7 @@
                     _.set_classid(_), _.set_instanceid(_);
                   });
                 const _ = await _(_, _);
-                if (_.GetEResult() != _._.k_EResultOK)
+                if (1 != _.GetEResult())
                   throw `Error loading econ items: ${_.GetErrorMessage()}`;
                 return null !== (_ = _.Body().toObject().descriptions) &&
                   void 0 !== _
@@ -1521,7 +1520,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _, _) {
         return (0, _._)(
@@ -1684,8 +1682,7 @@
               null != __webpack_require__
                 ? __webpack_require__
                 : (null == _ ? void 0 : _.visible) &&
-                    (null == _ ? void 0 : _.type) !==
-                      _._.k_EStoreAppType_Advertising
+                    14 !== (null == _ ? void 0 : _.type)
                   ? _
                   : void 0;
           return _.createElement(
@@ -3448,6 +3445,7 @@
                 focused: __webpack_require__,
                 label: _ = null,
                 render: _,
+                disabled: _,
                 ..._
               } = _,
               _ = _ ? "true" : "false",
@@ -3457,6 +3455,7 @@
               _.createElement(_._, {
                 "data-selected": _,
                 "data-focused": _,
+                "aria-disabled": _,
                 className: _.ListBoxOption,
                 paddingY: "2",
                 paddingX: "3",
@@ -3468,6 +3467,7 @@
               {
                 selected: _,
                 focused: __webpack_require__,
+                disabled: _,
               },
             );
           },
@@ -3619,9 +3619,10 @@
           const {
               children: _,
               label: __webpack_require__,
+              selected: _,
               onSelect: _,
               ref: _,
-              selected: _,
+              disabled: _,
               ..._
             } = _,
             _ = (0, _.useContext)(_),
@@ -3647,14 +3648,16 @@
               role: "option",
               tabIndex: _ ? 0 : -1,
               ..._.getItemProps({
-                onClick: _,
+                onClick: _ ? void 0 : _,
                 onKeyDown: (_) => {
-                  ("Enter" === _.key ||
-                    (" " === _.key && !_.typingRef.current)) &&
+                  _ ||
+                    ("Enter" !== _.key &&
+                      (" " !== _.key || _.typingRef.current)) ||
                     (_(), _.preventDefault(), _.stopPropagation());
                 },
                 active: _,
                 selected: _,
+                disabled: _,
                 ..._,
               }),
             },
@@ -4057,7 +4060,7 @@
         );
       }
       function _(_) {
-        const { value: _, children: __webpack_require__ } = _,
+        const { value: _, children: __webpack_require__, disabled: _ } = _,
           {
             onItemSelectionChange: _,
             selectedValue: _,
@@ -4071,6 +4074,7 @@
             {
               onSelect: () => _(_),
               selected: _,
+              disabled: _,
             },
             _ &&
               _.createElement(
@@ -4629,7 +4633,7 @@
           );
         },
         Option: function (_) {
-          const { value: _, children: __webpack_require__ } = _,
+          const { value: _, children: __webpack_require__, disabled: _ } = _,
             {
               onItemSelectionChange: _,
               multiselect: _,
@@ -4643,6 +4647,7 @@
               label: _,
               onSelect: () => _(_),
               selected: _,
+              disabled: _,
             },
             _ &&
               _.createElement(
@@ -5019,10 +5024,126 @@
       }
       var _ = __webpack_require__("chunkid");
       const _ = {};
-      _.english = () =>
+      (_.arabic = () =>
         __webpack_require__
           ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 92395, 19));
+          .then(__webpack_require__._.bind(__webpack_require__, 3157, 19))),
+        (_.brazilian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 98281, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 3858, 19))),
+        (_.czech = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 64796, 19))),
+        (_.danish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 77104, 19))),
+        (_.dutch = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 96589, 19))),
+        (_.english = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 92395, 19))),
+        (_.finnish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 21156, 19))),
+        (_.french = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 30801, 19))),
+        (_.german = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 98859, 19))),
+        (_.greek = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 47707, 19))),
+        (_.hungarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 15662, 19))),
+        (_.indonesian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 43817, 19))),
+        (_.italian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 3091, 19))),
+        (_.japanese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 73054, 19))),
+        (_.koreana = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 59704, 19))),
+        (_.latam = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 25560, 19))),
+        (_.norwegian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 85515, 19))),
+        (_.polish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 90428, 19))),
+        (_.portuguese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 18980, 19))),
+        (_.romanian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 28774, 19))),
+        (_.russian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 24482, 19))),
+        (_.schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 55841, 19))),
+        (_.spanish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 38883, 19))),
+        (_.swedish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 15778, 19))),
+        (_.tchinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 59826, 19))),
+        (_.thai = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 70171, 19))),
+        (_.turkish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 89019, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 33377, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 95902, 19)));
       var _ = __webpack_require__("chunkid");
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
@@ -5093,17 +5214,14 @@
                 {
                   value: _,
                   key: _(_),
+                  disabled: !_ && 0 === _.matches,
                 },
                 _.createElement(
-                  _._,
+                  _,
                   {
-                    gap: "2",
-                    align: "center",
+                    color: _.color,
+                    matches: _.matches,
                   },
-                  _.color &&
-                    _.createElement(_, {
-                      color: _.color,
-                    }),
                   _.strLabel,
                 ),
               ),
@@ -5167,21 +5285,49 @@
                 {
                   value: _,
                   key: _(_),
+                  disabled: !_ && 0 === _.matches,
                 },
                 _.createElement(
-                  _._,
+                  _,
                   {
-                    gap: "2",
-                    align: "center",
+                    color: _.color,
+                    matches: _.matches,
                   },
-                  _.color &&
-                    _.createElement(_, {
-                      color: _.color,
-                    }),
                   _.strLabel,
                 ),
               ),
             ),
+          ),
+        );
+      }
+      function _(_) {
+        const { color: _, matches: __webpack_require__, children: _ } = _;
+        return _.createElement(
+          _._,
+          {
+            gap: "2",
+            align: "center",
+          },
+          _ &&
+            _.createElement(_, {
+              color: _,
+            }),
+          _.createElement(
+            _._,
+            null,
+            _,
+            " ",
+            void 0 !== __webpack_require__ && __webpack_require__ >= 1
+              ? _.createElement(
+                  _._,
+                  {
+                    contrast: "description",
+                  },
+                  "(",
+                  Intl.NumberFormat().format(__webpack_require__),
+                  ")",
+                )
+              : void 0,
           ),
         );
       }
@@ -5449,20 +5595,51 @@
             );
         }
       }
-      function _(_, _, _) {
-        let _ = Object.keys(_.tags || {}).map((_) => _(_.name, _, _.tags[_]));
-        _ ? _.sort(_) : (_ = (0, _._)(_, (_) => _.strLabel));
+      function _(_, _, _, _) {
+        var _;
+        let _ = [],
+          _ = 0;
+        const _ = _.tags || {};
+        for (const _ of Object.keys(_)) {
+          let _;
+          _ &&
+            (_ =
+              null !== (_ = _[_.name] && _[_.name][_]) && void 0 !== _ ? _ : 0),
+            (_ += null != _ ? _ : 0);
+          const _ = _(_.name, _, _[_], _);
+          _ && _.push(_);
+        }
+        if (_) _.sort(_);
+        else {
+          _.sort((_, _) => {
+            var _, _;
+            return (
+              (null !== (_ = _.matches) && void 0 !== _ ? _ : 0) -
+              (null !== (_ = _.matches) && void 0 !== _ ? _ : 0)
+            );
+          });
+          let _ = -1;
+          for (let _ = _.length - 1; _ >= 0 && 0 === _[_].matches; _--) _ = _;
+          if (-1 === _) _ = (0, _._)(_, (_) => _.strLabel);
+          else {
+            const _ = (0, _._)(_.slice(0, _), (_) => _.strLabel),
+              _ = (0, _._)(_.slice(_), (_) => _.strLabel);
+            _ = [..._, ..._];
+          }
+        }
+        if (_ && 0 === _) return null;
         return {
           strLabel: _.localized_name,
           rgOptions: _,
           fieldType: _,
         };
       }
-      function _(_, _, _) {
+      function _(_, _, _, _) {
         const _ = {
           facet: _,
           tag: _,
           strLabel: _.localized_name,
+          matches: _,
         };
         return _.color && (_.color = `#${_.color}`), _;
       }
@@ -6550,6 +6727,21 @@
           },
         ],
         _ = {
+          facet: "",
+          trigger: [
+            {
+              facet: "Weapon",
+            },
+            {
+              facet: "Type",
+              tag: _,
+            },
+            {
+              facet: "ItemSet",
+            },
+          ],
+        },
+        _ = {
           Exterior: [
             "WearCategory0",
             "WearCategory1",
@@ -6854,11 +7046,13 @@
                       : _ - _;
               };
             }
+            const _ = _(_, "select", _);
+            if (!_) return null;
             return {
-              facet: _(_, "select", _),
+              facet: _,
               condition: _(_.trigger),
             };
-          }),
+          }).filter((_) => !!_),
           otherFacet: _,
           rgFacetsWithCustomDisplay: Object.keys(_),
         };
@@ -6902,8 +7096,8 @@
         );
       }
       function _(_) {
-        const { facets: _, ...__webpack_require__ } = _,
-          { state: _, onStateChange: _ } = __webpack_require__,
+        const { facets: _, accessories: __webpack_require__, ..._ } = _,
+          { state: _, onStateChange: _ } = _,
           {
             rgGroups: _,
             rgToggles: _,
@@ -6912,6 +7106,7 @@
             rgFacetsWithCustomDisplay: _,
           } = (0, _.useMemo)(() => _(_.facets), [_.facets]),
           [_, _] = (0, _.useState)(() => _.filter((_) => _.condition(_)));
+        (0, _.useMemo)(() => _(_.trigger), []);
         (0, _.useEffect)(() => {
           let _ = null;
           const _ = _.filter((_) => _.condition(_)),
@@ -7061,7 +7256,7 @@
               minHeight: "88px",
             },
             _.createElement(_, {
-              ...__webpack_require__,
+              ..._,
             }),
             _.createElement(
               _._,
@@ -7073,9 +7268,10 @@
                 _.createElement(_, {
                   key: _.facet.strLabel,
                   facet: _.facet,
-                  ...__webpack_require__,
+                  ..._,
                 }),
               ),
+              !1,
             ),
           ),
         );
@@ -7614,7 +7810,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8264,7 +8459,10 @@
         const _ = !_.app && _,
           _ = _(_),
           _ = (0, _.useMemo)(
-            () => __webpack_require__.filter((_) => _ !== _).map((_) => _[_]),
+            () =>
+              __webpack_require__
+                .filter((_) => _ !== _ && _[_])
+                .map((_) => _[_]),
             [__webpack_require__, _],
           );
         return _.createElement(
@@ -8687,11 +8885,13 @@
           filterInGame: {
             app: null,
             facets: {},
+            accessories: {},
             price: [0, _.config.maxPrice],
           },
           filterSteam: {
             app: null,
             facets: {},
+            accessories: {},
             price: [0, _.config.maxPrice],
           },
           bSteamItems: !1,
@@ -8823,9 +9023,31 @@
               queryFn: () => _(_),
               enabled: !!_,
             });
+          })(_),
+          _ = (function (_) {
+            return (0, _._)({
+              queryKey: ["marketaccessories", _],
+              queryFn: () =>
+                (async function (_) {
+                  const _ = await fetch(
+                    `${_._.COMMUNITY_BASE_URL}market/appaccessories/${_}`,
+                  );
+                  if (!_ || !_._)
+                    throw new Error(
+                      `Failed to load market filters for app ${_}`,
+                    );
+                  const _ = await _.json();
+                  if (!_.success || !_.facets)
+                    throw new Error(
+                      `Loaded malformed market filters for app ${_}`,
+                    );
+                  return _.facets;
+                })(_),
+              enabled: !!_,
+            });
           })(_);
-        if (_.isLoading) return _.createElement(_, null);
-        if (_.isError || !_.data)
+        if (_.isLoading || _.isLoading) return _.createElement(_, null);
+        if (_.isError || !_.data || _.isError || !_.data)
           return _.createElement(
             _,
             null,
@@ -8838,11 +9060,12 @@
             ),
           );
         const _ = (function (_) {
-          return _ === _ && _._.EUNIVERSE === _._.k_EUniversePublic ? _ : _;
+          return _ === _ && 1 === _._.EUNIVERSE ? _ : _;
         })(_);
         return _.createElement(_, {
           appid: _,
           facets: _.data,
+          accessories: _.data,
           ...__webpack_require__,
         });
       }
@@ -8923,7 +9146,7 @@
       const _ = {
         [_]: (_) => _(_, 3),
       };
-      function _(_, _) {
+      function _(_, _, _) {
         const _ = "number" == typeof _ ? _ : _,
           _ = [],
           _ = [];
@@ -8932,8 +9155,8 @@
           const _ = _[_];
           if (!_.tags) continue;
           const _ = Object.keys(_.tags).length < _,
-            _ = _(_, _ ? "checkbox" : "select");
-          _ ? _.push(_) : _.push(_);
+            _ = _(_, _ ? "checkbox" : "select", void 0, _);
+          _ && (_ ? _.push(_) : _.push(_));
         }
         return [_, _].filter((_) => _.length > 0);
       }
@@ -8949,7 +9172,7 @@
             selectedValue: _ || null,
             onSelectionChange: _,
             filter: (_, _) =>
-              _.name.toLocaleLowerCase().includes(_.toLocaleLowerCase()),
+              _ && _.name.toLocaleLowerCase().includes(_.toLocaleLowerCase()),
             filterPlaceholder: _.Localize(
               "#AdvancedSearch_AppSelect_FilterPlaceholder",
             ),
@@ -9188,7 +9411,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         eAdultOnlyMediaBehavior: "masked",
@@ -9212,12 +9434,8 @@
           );
         }, []) ||
           ("masked" == _ &&
-            (_._.excluded_content_descriptors.includes(
-              _._.k_EContentDescriptor_GratuitousSexualContent,
-            ) ||
-              _._.excluded_content_descriptors.includes(
-                _._.k_EContentDescriptor_AdultOnlySexualContent,
-              )))
+            (_._.excluded_content_descriptors.includes(4) ||
+              _._.excluded_content_descriptors.includes(3)))
           ? "blocked"
           : "masked" == _ && _
             ? "allowed"
@@ -9254,12 +9472,8 @@
         return (
           !!_ &&
           (!__webpack_require__ ||
-            __webpack_require__.content_descriptorids.includes(
-              _._.k_EContentDescriptor_AdultOnlySexualContent,
-            ) ||
-            __webpack_require__.content_descriptorids.includes(
-              _._.k_EContentDescriptor_GratuitousSexualContent,
-            ))
+            __webpack_require__.content_descriptorids.includes(3) ||
+            __webpack_require__.content_descriptorids.includes(4))
         );
       }
     },

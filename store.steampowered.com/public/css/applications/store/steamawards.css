@@ -874,7 +874,7 @@ body.SteamAwardsVoting {
   scroll-behavior: smooth;
 }
 .zKwKtEP3BYYZy9vgcUrYt {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2%;
 }
@@ -892,7 +892,7 @@ body.SteamAwardsVoting {
   justify-content: center;
   position: relative;
   z-index: 100;
-  max-width: 970px;
+  max-width: 1200px;
   line-height: 20px;
 }
 @media screen and (max-width: 910px) {
@@ -1664,44 +1664,52 @@ body.SteamAwardsVoting_2024 .responsive_page_frame {
 ._1M-Tp2eIsHzDqKVdeyNwEE {
   color: #ebf000;
 }
-body.SteamAwardsVoting_2024 .responsive_page_frame {
-  background: linear-gradient(to bottom right, #232341, #67629c);
+body.SteamAwardsVoting_2025 {
+  background: linear-gradient(172deg, #3c7cc7, #00006d);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 ._1LNVToRGS4KgtDmwChCdO- {
   position: relative;
-  background: url("https://cdn.fastly.steamstatic.com/store/promo/steamawards2024/header_trophy.webp?v=2")
-    no-repeat;
+  background: url("https://cdn.fastly.steamstatic.com/store/promo/steamawards2025/header_w_trophy.webp?v=1")
+    no-repeat,
+    linear-gradient(
+      to right,
+      #030f66 0%,
+      #030f66 20%,
+      #00006d 80%,
+      #00006d 100%
+    );
   background-position: center;
   background-size: contain;
-  background-color: #111;
 }
 ._1LNVToRGS4KgtDmwChCdO- .SHcWFaCZK_WUravI9p1Lm {
-  color: #ebf000;
+  color: #ee6c5d;
   text-shadow: 0 0 16px #22131b75;
 }
 ._1LNVToRGS4KgtDmwChCdO- ._3Rnea2kVxFT3chmOmqisne {
-  color: #e3e0fe;
+  color: #feeae6;
   text-shadow: 0 0 16px #22131b75;
 }
 ._1LNVToRGS4KgtDmwChCdO- ._3Rnea2kVxFT3chmOmqisne._2jbNvt46h0RqPVOeAwcb8o {
   color: #fff;
 }
-._3UcPLvxpWKhkpPp5vuNZ4T ._3PJmH1yq33fNNGz3U9m-G0 {
-  color: yearThemeText;
+._3UcPLvxpWKhkpPp5vuNZ4T ._8B-oP4jghkxueOwLkY5FR ._3PJmH1yq33fNNGz3U9m-G0 {
+  color: #feeae6;
 }
-._3UcPLvxpWKhkpPp5vuNZ4T ._2CZcny1e2NwmV-B3klLJiN {
-  color: yearThemeText;
+._3UcPLvxpWKhkpPp5vuNZ4T ._8B-oP4jghkxueOwLkY5FR ._2CZcny1e2NwmV-B3klLJiN {
+  color: #feeae6;
 }
-._3UcPLvxpWKhkpPp5vuNZ4T ._2CZcny1e2NwmV-B3klLJiN a {
+._3UcPLvxpWKhkpPp5vuNZ4T ._8B-oP4jghkxueOwLkY5FR ._2CZcny1e2NwmV-B3klLJiN a {
   color: #fff;
 }
 ._3NRXvKouZmkfv0SJaRwm3z {
-  background-color: #b0abe5;
+  background-color: #e87157;
   box-shadow: 0 0 9px #000;
 }
 ._3NRXvKouZmkfv0SJaRwm3z ._3aAMtCHlbBv9NIEZdV0q4E:hover .MofbE6cz8noD7aLG-RuYg {
   filter: opacity(1) drop-shadow(0px 0px 10px #773c6ccf);
 }
 ._1KImUETUAUTMVe-r0tBhbv {
-  color: #ebf000;
+  color: #ee6c5d;
 }

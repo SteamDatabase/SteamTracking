@@ -21443,6 +21443,21 @@ var CLSTAMP = "steamdb";
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  subject_type: {
+                    _: 5,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  chat_group_id: {
+                    _: 6,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  kick_expiration_time: {
+                    _: 7,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
                 },
               }),
             _.sm_m

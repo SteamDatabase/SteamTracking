@@ -1805,6 +1805,26 @@ html.responsive.touch .GXjJQihysg6S5INBKClED:hover ._1dm-6uzq_x5Gqo421G3a1r {
   font-weight: 600;
   line-height: 16px;
 }
+html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
+  text-shadow: none !important;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #0e141b !important;
+  font-weight: 600;
+  line-height: 16px;
+}
+@media screen and (max-width: 910px) {
+  html.responsive ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
+    text-shadow: none !important;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #0e141b !important;
+    font-weight: 600;
+    line-height: 16px;
+  }
+}
 .NVuxjpTCUClP-4RsNDDvk {
   position: relative;
   width: fit-content;

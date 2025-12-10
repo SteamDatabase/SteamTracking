@@ -259,7 +259,9 @@
         AllImages: "RxFaOYvEjQF0lVUfJj_zJ",
         TilesAnimation: "_30Wt5HlsA-Eu-wNp6fxvAM",
         ImageTint: "_3vfLRYyJuqrXOJhwTZrjAQ",
-        Wide2: "_3bktuy-WjyQzpvqpLHPLtf",
+        Sub40: "_2GXGtIJU7vMFbIAW5q8vTf",
+        Sub20: "_34EFfExWoNFsS8bKk0VoUk",
+        Sub10: "_3EpFGAzMavgSiUDDmsg9Su",
         BgImage: "n692TaP8cknh66LhvzuSm",
         FadeInTiles: "_3pF3M93ASmlVi_qQpQ8EhJ",
         SingleGame: "VGWhXeoNnGx0Nu7JmHSb-",
@@ -678,7 +680,10 @@
         _: "_CEQfQH1OkR8jt1adMzo4",
         SectionTitle: "CzWCpgYPO2uaG0Z6dmyR8",
         BackgroundImage: "_1WIHnfDUg1Ris9ckKCXkWJ",
+        Playtest: "_2B3yLpEzmGVHlSorQjxlPa",
+        BG_Playtest: "_2T9_95J3xfwWGQaOzLsFhM",
         Demo: "_3n-kz3Ry2dhIathOLI4IGw",
+        BG_Demo: "_2RhbJSRG7YkXKScVbk1NBI",
         GameImage: "_3itig7mcoZxe6CnZ0G_PkS",
         SectionSubTitle: "_1bbOkPv_T0qFeU-EJhebve",
         ElementFadeIn: "_1u6VRQMSXcBWw8IznhXyej",
@@ -686,7 +691,6 @@
         StatBlock: "e603WE5bPLPSnZARvy-3X",
         BigNum: "lJ1mE7HcpxArZX1S53dZv",
         StatDescription: "_1eD7UBNdpC4pcVHfz6ewf4",
-        Playtest: "_2B3yLpEzmGVHlSorQjxlPa",
         DemoSash: "_sTGZcUomFCt0EYSpASw6",
         BadgeBoxIntro: "JFDJAK3sl61nIHwfkPwNw",
         BadgeBarFiller: "_1TdxYijmKImjE7_AhaYM1b",
@@ -13893,7 +13897,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           19: [19, 1663, 1774, 3814, 1646, 4158],
@@ -14469,6 +14472,7 @@
         _ = "percentOtherGamesRelativeMonth";
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 5;
       class _ {
@@ -14579,12 +14583,20 @@
             (this.m_previousYearSummary = _),
             _.playtime_stats?.total_stats?.total_sessions > 0)
           ) {
-            _.playtime_stats.game_summary.forEach((_) =>
-              this.m_mapGameSummary.set(_.appid, _),
-            ),
-              _.playtime_stats.games.forEach((_) =>
-                this.m_mapGameStats.set(_.appid, _),
-              );
+            _.playtime_stats.game_summary.forEach((_) => {
+              (0, _._)(
+                !this.m_mapGameSummary.has(_.appid),
+                `Found at least two record of appid ${_.appid} in stats.playtime_stats.game_summary`,
+              ),
+                this.m_mapGameSummary.set(_.appid, _);
+            }),
+              _.playtime_stats.games.forEach((_) => {
+                (0, _._)(
+                  !this.m_mapGameStats.has(_.appid),
+                  `Found at least two record of appid ${_.appid} in stats.playtime_stats.games`,
+                ),
+                  this.m_mapGameStats.set(_.appid, _);
+              });
             const { rgResults: _ } = (function (_, _, _) {
                 const { rgRankings: _, nTotalResultCount: _ } = _(_, _),
                   _ = new Set(_.map((_) => _.appid).slice(0, _));
@@ -15163,6 +15175,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -15357,7 +15370,7 @@
         if (!__webpack_require__) return null;
         const _ = __webpack_require__.GetScreenshots("blocked" == _);
         if (!_.length) return null;
-        const _ = _[0],
+        const _ = _[1],
           _ = "masked" == _ && !__webpack_require__.BIsAgeSafeScreenshot(_);
         return _.createElement("img", {
           src: _,
@@ -15703,7 +15716,13 @@
             const _ = _.game_summary
                 .filter((_) => {
                   const _ = __webpack_require__.GetGameSummaryForApp(_.appid);
-                  return _ && (_.parent_appid || (!_.demo && !_.playtest));
+                  return (
+                    (0, _._)(
+                      _,
+                      `Displaying Month Data ${_.rtime_month} missing summary for appid: ${_.appid}`,
+                    ),
+                    _ && (_.parent_appid || (!_.demo && !_.playtest))
+                  );
                 })
                 .sort(
                   (_, _) =>
@@ -15726,7 +15745,7 @@
               bShouldShowMore: _,
               rgGameStats: _ ? _.slice(0, 8) : _,
             };
-          }, [_.game_summary, __webpack_require__, _]);
+          }, [_.game_summary, _.rtime_month, _, __webpack_require__]);
         if (0 == _.length) return null;
         const _ = new Date(1e3 * (_.rtime_month + 86400));
         return _.createElement(
@@ -15986,8 +16005,9 @@
                         {
                           className: (0, _._)({
                             [_().ImageTint]: !0,
-                            [_().Wide2]: _.length <= 10,
-                            [_().Wide3]: _.length <= 20,
+                            [_().Sub10]: _.length <= 10,
+                            [_().Sub20]: _.length <= 20,
+                            [_().Sub40]: _.length <= 40,
                           }),
                         },
                         _.map((_) =>
@@ -15995,17 +16015,27 @@
                             key: "bg_" + _.GetAppID(),
                             className: _().BgImage,
                             style: {
-                              backgroundImage: `url( ${_.GetAssets().GetLibraryHeroURL()} )`,
+                              backgroundImage: `url( ${_.GetAssets().GetLibraryHeroURL()?.trim().length > 0 ? _.GetAssets().GetLibraryHeroURL() : _.GetAssets().GetMainCapsuleURL()} )`,
                             },
                           }),
                         ),
-                        _.length <= 40 &&
+                        _.length <= 50 &&
                           _.map((_) =>
                             _.createElement("div", {
                               key: "bg_" + _.GetAppID(),
                               className: _().BgImage,
                               style: {
-                                backgroundImage: `url( ${_.GetAssets().GetLibraryHeroURL()} )`,
+                                backgroundImage: `url( ${_.GetAssets().GetRawPageBackgroundURL()?.trim().length > 0 ? _.GetAssets().GetRawPageBackgroundURL() : _.GetAssets().GetMainCapsuleURL()} )`,
+                              },
+                            }),
+                          ),
+                        _.length <= 20 &&
+                          _.map((_) =>
+                            _.createElement("div", {
+                              key: "bg_" + _.GetAppID(),
+                              className: _().BgImage,
+                              style: {
+                                backgroundImage: `url( ${_.GetAssets().GetLibraryHeroURL()?.trim().length > 0 ? _.GetAssets().GetLibraryHeroURL() : _.GetAssets().GetMainCapsuleURL()} )`,
                               },
                             }),
                           ),
@@ -17783,6 +17813,9 @@
               {
                 className: (0, _._)(_().Section, _().Demo),
               },
+              _.createElement("div", {
+                className: _().BG_Demo,
+              }),
               _.createElement(_, {
                 category: "demo",
                 userYearInReview: _,
@@ -17796,6 +17829,9 @@
               {
                 className: (0, _._)(_().Section, _().Playtest),
               },
+              _.createElement("div", {
+                className: _().BG_Playtest,
+              }),
               _.createElement(_, {
                 category: "playtest",
                 userYearInReview: _,
@@ -19020,11 +19056,14 @@
       }
       const _ = 1e3;
       function _(_, _) {
-        const _ = _.controller_playtime_percentagex100,
+        const _ =
+            _.controller_playtime_percentagex100 +
+            _.deck_playtime_percentagex100,
           _ =
             _.total_playtime_percentagex100 -
             _.controller_playtime_percentagex100 -
-            _.vr_playtime_percentagex100;
+            _.vr_playtime_percentagex100 -
+            _.deck_playtime_percentagex100;
         return _ < _ || _ < _
           ? null
           : _.createElement(_, {
@@ -22017,6 +22056,7 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid");
       const _ = {
         Home: (_, _) => `${_._.YearInReview(_, _)}`,
       };
@@ -22044,7 +22084,10 @@
                       _._,
                       null,
                       _.createElement(_, {
-                        steamId: _.match.params.steamId,
+                        steamId:
+                          "my" == _.match.params.steamId
+                            ? _._.steamid
+                            : _.match.params.steamId,
                         year: _.match.params.year,
                       }),
                     ),

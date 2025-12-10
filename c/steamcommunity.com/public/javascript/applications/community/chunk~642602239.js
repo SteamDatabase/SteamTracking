@@ -5931,6 +5931,8 @@
                 : 0) >= 7,
             min_capsule_matches_for_facet_values: 5,
             max_facet_values_for_facet: 5,
+            background_gradient_top: "#00000030",
+            background_gradient_bottom: "#00000030",
             facet_sort_order: 1,
             facet_auto_generate_options: {
               only_facets: [
@@ -9572,7 +9574,13 @@
           }
           return _;
         }
-        async LoadPartnerEventsPageable(_, _, __webpack_require__ = 0, _ = 0) {
+        async LoadPartnerEventsPageable(
+          _,
+          _,
+          __webpack_require__ = 0,
+          _ = 0,
+          _,
+        ) {
           let _ = new Array(),
             _ = _._.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
             _ = {
@@ -9582,6 +9590,8 @@
               count: _,
               _: _._.LANGUAGE,
               origin: self.origin,
+              exclude_tags:
+                _ && _.length > 0 ? (null == _ ? void 0 : _.join(",")) : void 0,
             };
           try {
             let _ = await _().get(_, {

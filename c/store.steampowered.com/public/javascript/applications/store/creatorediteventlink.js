@@ -162,7 +162,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -176,9 +175,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { clanAccountID: _ } = _,
-          _ = (0, _._)(
-            () => new _._(_, _._.EUNIVERSE, _._.k_EAccountTypeClan, 0),
-          ),
+          _ = (0, _._)(() => new _._(_, _._.EUNIVERSE, 7, 0)),
           {
             bIsFetching: _,
             rgEventModels: _,
@@ -345,7 +342,7 @@
               const _ = await _().post(_, _, {
                 withCredentials: !0,
               });
-              return _?.data?.success == _._.k_EResultOK ?? !1;
+              return 1 == _?.data?.success;
             },
           }),
           [_, _] = _.useState(!1),
@@ -363,7 +360,7 @@
               const _ = await _().post(_, _, {
                 withCredentials: !0,
               });
-              return _?.data?.success == _._.k_EResultOK ?? !1;
+              return 1 == _?.data?.success;
             },
           }),
           _ = __webpack_require__?.GetLinkedEventGID(),

@@ -3756,7 +3756,7 @@ html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
 }
 .SteamChartsShell
   ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
-  width: 100%;
+  width: calc(100% - 100px);
 }
 @media screen and (max-width: 851px) {
   .SteamChartsShell

@@ -19526,6 +19526,8 @@
                 0) >= 7,
             min_capsule_matches_for_facet_values: 5,
             max_facet_values_for_facet: 5,
+            background_gradient_top: "#00000030",
+            background_gradient_bottom: "#00000030",
             facet_sort_order: 1,
             facet_auto_generate_options: {
               only_facets: [
@@ -20250,19 +20252,20 @@
           }
           return c;
         }
-        async LoadPartnerEventsPageable(e, t, r = 0, i = 0) {
-          let n = new Array(),
-            a = s.TS.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
-            o = {
+        async LoadPartnerEventsPageable(e, t, r = 0, i = 0, n) {
+          let a = new Array(),
+            o = s.TS.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
+            l = {
               clan_accountid: e ? e.GetAccountID() : void 0,
               appid: t,
               offset: r,
               count: i,
               l: s.TS.LANGUAGE,
               origin: self.origin,
+              exclude_tags: n && n.length > 0 ? n?.join(",") : void 0,
             };
           try {
-            let e = await y().get(a, { params: o });
+            let e = await y().get(o, { params: l });
             (0, w.h5)(() => {
               for (let t of e.data.events) {
                 let e = uc(t);
@@ -20270,7 +20273,7 @@
                   let e = new Pa.b(t.clan_steamid);
                   this.InsertEventModelFromClanEventData(e, t);
                 }
-                n.push(this.m_mapExistingEvents.get(e));
+                a.push(this.m_mapExistingEvents.get(e));
               }
             });
           } catch (e) {
@@ -20278,7 +20281,7 @@
               "LoadClanEventInDateRange hit error " + (0, R.H)(e).strErrorMsg,
             );
           }
-          return n;
+          return a;
         }
         async GetBestEventsForCurrentUser(e, t, r) {
           let i = new Array(),
@@ -27593,21 +27596,34 @@
               (s[a++] = 0),
               (s[a++] = n),
               (s[a++] = 0),
+              (0, v.wT)(
+                "transparent" != t || "transparent" != r,
+                "Trying to use transparent for both colors in QR",
+              ),
               (s[a++] = 161),
               (s[a++] = 0),
               (s[a++] = 0),
-              (s[a++] = t[0]),
-              (s[a++] = t[1]),
-              (s[a++] = t[2]),
-              (s[a++] = r[0]),
-              (s[a++] = r[1]),
-              (s[a++] = r[2]),
+              "transparent" == t
+                ? ((s[a++] = 0), (s[a++] = 0), (s[a++] = 0))
+                : ((s[a++] = t[0]), (s[a++] = t[1]), (s[a++] = t[2])),
+              "transparent" == r
+                ? ((s[a++] = 0), (s[a++] = 0), (s[a++] = 0))
+                : ((s[a++] = r[0]), (s[a++] = r[1]), (s[a++] = r[2])),
               (s[a++] = 255),
               (s[a++] = 255),
               (s[a++] = 255),
               (s[a++] = 255),
               (s[a++] = 255),
               (s[a++] = 255),
+              ("transparent" != t && "transparent" != r) ||
+                ((s[a++] = 33),
+                (s[a++] = 249),
+                (s[a++] = 4),
+                (s[a++] = 1),
+                (s[a++] = 0),
+                (s[a++] = 0),
+                (s[a++] = "transparent" == t ? 0 : 1),
+                (s[a++] = 0)),
               (s[a++] = 44),
               (s[a++] = 0),
               (s[a++] = 0),

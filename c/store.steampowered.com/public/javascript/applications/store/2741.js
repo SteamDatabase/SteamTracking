@@ -53,6 +53,7 @@
         GiftForNotice: "tKoWmz4HQdpU6S-Fq6IEh",
         Name: "_2BZrRaucjIMeqixZMVlakn",
         RemoveButton: "_1j8t9ZjX3tyKrSBnkY6IeG",
+        LineItemStoreHover: "MaJOGQvA8cOPjY5-v5S-c",
       };
     },
     chunkid: (module) => {
@@ -1756,6 +1757,8 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1766,9 +1769,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2397,33 +2400,16 @@
         );
       }
       function _(_) {
-        const { validatedItem: _, children: __webpack_require__ } = _,
-          _ = (0, _._)(_);
+        const { validatedItem: _, children: __webpack_require__ } = _;
         return _.createElement(
           "div",
           {
             className: (0, _._)(_().LineItemSpaceBetween),
           },
-          _.map((_) =>
-            _.createElement(_, {
-              key: _.purchase_state,
-              notice: _,
-            }),
-          ),
-          __webpack_require__,
-        );
-      }
-      function _(_) {
-        const { notice: _ } = _,
-          _ = (0, _._)(_.purchase_state);
-        return _.createElement(
-          _._,
-          null,
-          _.notice_text,
-          _ && _.createElement("sup", null, _),
-          _.createElement(_, {
-            rgAppIDs: _.appids,
+          _.createElement(_._, {
+            lineItem: _,
           }),
+          __webpack_require__,
         );
       }
       function _(_) {
@@ -2473,41 +2459,6 @@
             _.discount_pct,
           ),
         );
-      }
-      function _(_) {
-        const { rgAppIDs: _ } = _;
-        return _ && 0 != _.length
-          ? _.map((_, _) =>
-              _.createElement(_, {
-                key: `${_}_${_}`,
-                appid: _,
-                last: _ >= _.length - 1,
-              }),
-            )
-          : null;
-      }
-      function _(_) {
-        const { appid: _, last: __webpack_require__ } = _,
-          [_] = (0, _._)(_, {
-            include_basic_info: !0,
-          });
-        return _
-          ? _.createElement(
-              _,
-              {
-                appid: _,
-              },
-              _.createElement(
-                _._,
-                {
-                  item: _,
-                  noImpressionTracking: !0,
-                },
-                _.GetName(),
-              ),
-              !__webpack_require__ && _.createElement(_.Fragment, null, ", "),
-            )
-          : null;
       }
       function _(_) {
         const {
@@ -2632,7 +2583,6 @@
               },
               _ > 0 && ", ",
               _.createElement(_, {
-                key: _,
                 appid: _,
               }),
             ),
@@ -2652,24 +2602,6 @@
         );
       }
       function _(_) {
-        const { appid: _ } = _,
-          [__webpack_require__] = (0, _._)(_, {});
-        return _.createElement(
-          _,
-          {
-            appid: _,
-          },
-          _.createElement(
-            _._,
-            {
-              item: __webpack_require__,
-              noImpressionTracking: !0,
-            },
-            __webpack_require__.GetName(),
-          ),
-        );
-      }
-      function _(_) {
         return _.user_can_purchase_as_gift;
       }
       const _ = {
@@ -2680,15 +2612,27 @@
         },
       };
       function _(_) {
-        const { appid: _, children: __webpack_require__ } = _;
+        const { name_override: _, ...__webpack_require__ } = _,
+          { data: _ } = (0, _._)(_ ? void 0 : __webpack_require__),
+          _ = _ ?? _?.name;
+        return _.createElement(
+          _,
+          {
+            ...__webpack_require__,
+            name: _,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const { name: _, children: __webpack_require__, ..._ } = _;
         return _.createElement(
           _._,
           {
-            item: {
-              type: "game",
-              _: _,
-            },
+            item: (0, _._)(_),
             hoverProps: _,
+            name: _,
+            className: _().LineItemStoreHover,
             bShowWishlistButton: !1,
           },
           __webpack_require__,
@@ -2702,9 +2646,13 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -2858,150 +2806,270 @@
         );
       }
       function _(_) {
-        const _ = _.useContext(_);
-        return _?.mapValidateNoticesToFootnote.get(_)?.index;
+        const { lineItem: _ } = _;
+        let _ = [],
+          _ = !!_.gift_info?.accountid_giftee;
+        return (
+          _.errors?.duplicate_appids_in_cart?.length &&
+            __webpack_require__.push(
+              _.createElement(_, {
+                key: "duplicate_appids",
+                purchase_state: 1,
+                notice_text: (0, _._)("#Cart_Error_DuplicateApps_LineItem"),
+                appids: _.errors.duplicate_appids_in_cart,
+              }),
+            ),
+          __webpack_require__.push(
+            _.createElement(_, {
+              key: "owned_apps",
+              lineItem: _,
+            }),
+          ),
+          _.errors?.unavailable_in_country &&
+            __webpack_require__.push(
+              _.createElement(_, {
+                key: "unavailable_in_country",
+                purchase_state: 8,
+                notice_text: (0, _._)(
+                  "#Cart_Error_UnavailableCountry_LineItem",
+                ),
+              }),
+            ),
+          _.errors?.adult_content_restricted &&
+            __webpack_require__.push(
+              _.createElement(_, {
+                key: "adult_content_restricted",
+                purchase_state: 17,
+                notice_text: (0, _._)(
+                  "#Cart_Error_AdultContentRestricted_LineItem",
+                ),
+              }),
+            ),
+          _.errors?.commercial_license_restricted &&
+            __webpack_require__.push(
+              _.createElement(_, {
+                key: "commercial_license_restricted",
+                purchase_state: 18,
+                notice_text: (0, _._)(
+                  "#Cart_Error_CommercialLicenseRestricted_LineItem",
+                ),
+              }),
+            ),
+          __webpack_require__.push(
+            _.createElement(_, {
+              key: "coupon_notices",
+              lineItem: _,
+            }),
+          ),
+          _.errors?.too_many_in_cart &&
+            __webpack_require__.push(
+              _.createElement(_, {
+                key: "too_many_in_cart",
+                purchase_state: 14,
+                notice_text: (0, _._)("#Cart_Error_TooManyInCart"),
+              }),
+            ),
+          _.errors?.missing_must_own_appids?.length &&
+            __webpack_require__.push(
+              _.createElement(_, {
+                key: "missing_must_own_appids",
+                purchase_state: 16,
+                notice_text: _
+                  ? (0, _._)("#Cart_Error_MissingMustOwnApps_GiftLineItem")
+                  : (0, _._)("#Cart_Error_MissingMustOwnApps_LineItem"),
+                appids: _.errors.missing_must_own_appids,
+              }),
+            ),
+          _.warnings?.appids_in_mastersub?.length &&
+            __webpack_require__.push(
+              _.createElement(_, {
+                key: "appids_in_mastersub",
+                purchase_state: 4,
+                notice_text: (0, _._)(
+                  "#Cart_Error_MasterSubscription_LineItem",
+                ),
+                appids: _.warnings.appids_in_mastersub.map((_) => _.cart_appid),
+              }),
+            ),
+          _.warnings?.owned_appids?.length &&
+            __webpack_require__.push(
+              _.createElement(_, {
+                key: "owned_appids",
+                purchase_state: 3,
+                notice_text: (0, _._)("#Cart_Warning_AlreadyOwned_LineItem"),
+                appids: _.warnings.owned_appids,
+              }),
+            ),
+          _.warnings?.owned_appids_extra_copy?.length &&
+            __webpack_require__.push(
+              _.createElement(_, {
+                key: "owned_appids_extra_copy",
+                purchase_state: 9,
+                notice_text: (0, _._)("#Cart_Warning_ExtraCopies_LineItem"),
+                appids: _.warnings.owned_appids_extra_copy,
+              }),
+            ),
+          _.warnings?.price_has_changed &&
+            __webpack_require__.push(
+              _.createElement(_, {
+                key: "price_has_changed",
+                purchase_state: 10,
+                notice_text: (0, _._)("#Cart_Warning_PriceChange_LineItem"),
+              }),
+            ),
+          _.warnings?.non_refundable &&
+            __webpack_require__.push(
+              _.createElement(_, {
+                key: "non_refundable",
+                purchase_state: 5,
+                notice_text: (0, _._)("#Cart_Warning_NoRefund_LineItem"),
+              }),
+            ),
+          __webpack_require__.push(
+            _.createElement(_, {
+              key: "available_cheaper",
+              lineItem: _,
+            }),
+          ),
+          _
+        );
       }
       function _(_) {
-        return _.useMemo(
-          () =>
+        const {
+            purchase_state: _,
+            notice_text: __webpack_require__,
+            appids: _,
+          } = _,
+          _ = (function (_) {
+            const _ = _.useContext(_);
+            return _?.mapValidateNoticesToFootnote.get(_)?.index;
+          })(_);
+        return _.createElement(
+          _._,
+          null,
+          __webpack_require__,
+          _ && _.createElement("sup", null, _),
+          _.createElement(_, {
+            rgAppIDs: _,
+          }),
+        );
+      }
+      function _(_) {
+        const { rgAppIDs: _ } = _;
+        return _ && 0 != _.length
+          ? _.map((_, _) =>
+              _.createElement(_, {
+                key: `${_}_${_}`,
+                appid: _,
+                last: _ >= _.length - 1,
+              }),
+            )
+          : null;
+      }
+      function _(_) {
+        const { appid: _, last: __webpack_require__ } = _,
+          [_] = (0, _._)(_, {
+            include_basic_info: !0,
+          });
+        return _
+          ? _.createElement(
+              _._,
+              {
+                appid: _,
+              },
+              _.createElement(
+                _._,
+                {
+                  item: _,
+                  noImpressionTracking: !0,
+                },
+                _.GetName(),
+              ),
+              !__webpack_require__ && _.createElement(_.Fragment, null, ", "),
+            )
+          : null;
+      }
+      function _(_) {
+        const { lineItem: _ } = _;
+        if (!_.errors?.owned_appids?.length) return null;
+        let _ = !!_.gift_info?.accountid_giftee;
+        if (_.errors?.has_existing_billing_agreement)
+          return _.createElement(_, {
+            purchase_state: 15,
+            notice_text: (0, _._)("#Cart_Error_ExistingBillingAgreement"),
+          });
+        {
+          const _ = (_.store_item?.included_appids.length ?? 0) > 1;
+          let _ = (0, _._)(
             _
-              ? (function (_) {
-                  let _ = [],
-                    _ = !!_.gift_info?.accountid_giftee;
-                  _.errors?.duplicate_appids_in_cart?.length &&
-                    _.push({
-                      purchase_state: 1,
-                      notice_text: (0, _._)(
-                        "#Cart_Error_DuplicateApps_LineItem",
-                      ),
-                      appids: _.errors.duplicate_appids_in_cart,
-                    });
-                  if (_.errors?.owned_appids?.length)
-                    if (_.errors?.has_existing_billing_agreement)
-                      _.push({
-                        purchase_state: 15,
-                        notice_text: (0, _._)(
-                          "#Cart_Error_ExistingBillingAgreement",
-                        ),
-                      });
-                    else {
-                      const _ = (_.store_item?.included_appids.length ?? 0) > 1;
-                      let _ = (0, _._)(
-                        _
-                          ? "#Cart_Error_AlreadyOwned_GiftLineItem_Game"
-                          : "#Cart_Error_AlreadyOwned_LineItem_Game",
-                      );
-                      _ &&
-                        (_ = (0, _._)(
-                          _
-                            ? "#Cart_Error_AlreadyOwned_GiftLineItem"
-                            : "#Cart_Error_AlreadyOwned_LineItem",
-                        )),
-                        _.push({
-                          purchase_state: 2,
-                          notice_text: _,
-                          appids: _ ? _.errors.owned_appids : null,
-                        });
-                    }
-                  _.errors?.unavailable_in_country &&
-                    _.push({
-                      purchase_state: 8,
-                      notice_text: (0, _._)(
-                        "#Cart_Error_UnavailableCountry_LineItem",
-                      ),
-                    });
-                  _.errors?.adult_content_restricted &&
-                    _.push({
-                      purchase_state: 17,
-                      notice_text: (0, _._)(
-                        "#Cart_Error_AdultContentRestricted_LineItem",
-                      ),
-                    });
-                  _.errors?.commercial_license_restricted &&
-                    _.push({
-                      purchase_state: 18,
-                      notice_text: (0, _._)(
-                        "#Cart_Error_CommercialLicenseRestricted_LineItem",
-                      ),
-                    });
-                  _.errors?.coupon_exclusive_promo &&
-                    _.push({
-                      purchase_state: 13,
-                      notice_text: (0, _._)(
-                        "#Cart_Error_CouponIsExclusivePromo",
-                      ),
-                    });
-                  _.errors?.invalid_coupon &&
-                    _.push({
-                      purchase_state: 11,
-                      notice_text: (0, _._)("#Cart_Error_CouponIsInvalid"),
-                    });
-                  _.errors?.invalid_coupon_for_item &&
-                    _.push({
-                      purchase_state: 12,
-                      notice_text: (0, _._)(
-                        "#Cart_Error_CouponIsInvalidForItem",
-                      ),
-                    });
-                  _.errors?.too_many_in_cart &&
-                    _.push({
-                      purchase_state: 14,
-                      notice_text: (0, _._)("#Cart_Error_TooManyInCart"),
-                    });
-                  _.errors?.missing_must_own_appids?.length &&
-                    _.push({
-                      purchase_state: 16,
-                      notice_text: _
-                        ? (0, _._)(
-                            "#Cart_Error_MissingMustOwnApps_GiftLineItem",
-                          )
-                        : (0, _._)("#Cart_Error_MissingMustOwnApps_LineItem"),
-                      appids: Array.from(
-                        new Set(_.errors.missing_must_own_appids).values(),
-                      ),
-                    });
-                  _.warnings?.appids_in_mastersub?.length &&
-                    _.push({
-                      purchase_state: 4,
-                      notice_text: (0, _._)(
-                        "#Cart_Error_MasterSubscription_LineItem",
-                      ),
-                      appids: _.warnings.appids_in_mastersub.map(
-                        (_) => _.cart_appid,
-                      ),
-                    });
-                  _.warnings?.owned_appids?.length &&
-                    _.push({
-                      purchase_state: 3,
-                      notice_text: (0, _._)(
-                        "#Cart_Warning_AlreadyOwned_LineItem",
-                      ),
-                      appids: _.warnings.owned_appids,
-                    });
-                  _.warnings?.owned_appids_extra_copy?.length &&
-                    _.push({
-                      purchase_state: 9,
-                      notice_text: (0, _._)(
-                        "#Cart_Warning_ExtraCopies_LineItem",
-                      ),
-                      appids: _.warnings.owned_appids_extra_copy,
-                    });
-                  _.warnings?.price_has_changed &&
-                    _.push({
-                      purchase_state: 10,
-                      notice_text: (0, _._)(
-                        "#Cart_Warning_PriceChange_LineItem",
-                      ),
-                    });
-                  _.warnings?.non_refundable &&
-                    _.push({
-                      purchase_state: 5,
-                      notice_text: (0, _._)("#Cart_Warning_NoRefund_LineItem"),
-                    });
-                  return _;
-                })(_)
-              : [],
-          [_],
+              ? "#Cart_Error_AlreadyOwned_GiftLineItem_Game"
+              : "#Cart_Error_AlreadyOwned_LineItem_Game",
+          );
+          return (
+            _ &&
+              (_ = (0, _._)(
+                _
+                  ? "#Cart_Error_AlreadyOwned_GiftLineItem"
+                  : "#Cart_Error_AlreadyOwned_LineItem",
+              )),
+            _.createElement(_, {
+              purchase_state: 2,
+              notice_text: _,
+              appids: _ ? _.errors.owned_appids : null,
+            })
+          );
+        }
+      }
+      function _(_) {
+        const { lineItem: _ } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.errors?.coupon_exclusive_promo &&
+            _.createElement(_, {
+              purchase_state: 13,
+              notice_text: (0, _._)("#Cart_Error_CouponIsExclusivePromo"),
+            }),
+          _.errors?.invalid_coupon &&
+            _.createElement(_, {
+              purchase_state: 11,
+              notice_text: (0, _._)("#Cart_Error_CouponIsInvalid"),
+            }),
+          _.errors?.invalid_coupon_for_item &&
+            _.createElement(_, {
+              purchase_state: 12,
+              notice_text: (0, _._)("#Cart_Error_CouponIsInvalidForItem"),
+            }),
+        );
+      }
+      function _(_) {
+        const { lineItem: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_.item_id),
+          { data: _ } = (0, _._)(_.item_id);
+        if (
+          !!_.gift_info?.accountid_giftee ||
+          !__webpack_require__ ||
+          __webpack_require__ == _
+        )
+          return null;
+        const { purchase_option_name: _, packageid: _, bundleid: _ } = _,
+          _ = _
+            ? {
+                packageid: _,
+              }
+            : {
+                bundleid: _,
+              };
+        return _.createElement(
+          _._,
+          null,
+          (0, _._)(
+            "#Cart_Warning_AvailableAtALowerPrice",
+            _.createElement(_._, {
+              name_override: _,
+              ..._,
+            }),
+          ),
         );
       }
     },
