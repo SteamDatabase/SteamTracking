@@ -859,6 +859,11 @@
             return _.createElement("u", null, _.children);
           },
         },
+        _: {
+          Constructor: function (_) {
+            return _.createElement("code", null, _.children);
+          },
+        },
         strike: {
           Constructor: function (_) {
             return _.createElement("s", null, _.children);
@@ -897,6 +902,16 @@
         _: {
           Constructor: function (_) {
             return _.createElement("h3", null, _.children);
+          },
+          skipFollowingNewline: !0,
+        },
+        code: {
+          Constructor: function (_) {
+            return _.createElement(
+              "pre",
+              null,
+              _.createElement("code", null, _.children),
+            );
           },
           skipFollowingNewline: !0,
         },
