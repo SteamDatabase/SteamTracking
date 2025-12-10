@@ -3787,6 +3787,8 @@
                 0) >= 7,
             min_capsule_matches_for_facet_values: 5,
             max_facet_values_for_facet: 5,
+            background_gradient_top: "#00000030",
+            background_gradient_bottom: "#00000030",
             facet_sort_order: 1,
             facet_auto_generate_options: {
               only_facets: [
@@ -11754,19 +11756,20 @@
           }
           return _;
         }
-        async LoadPartnerEventsPageable(e, t, r = 0, a = 0) {
-          let n = new Array(),
-            o = h.TS.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
-            l = {
+        async LoadPartnerEventsPageable(e, t, r = 0, a = 0, n) {
+          let o = new Array(),
+            l = h.TS.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
+            c = {
               clan_accountid: e ? e.GetAccountID() : void 0,
               appid: t,
               offset: r,
               count: a,
               l: h.TS.LANGUAGE,
               origin: self.origin,
+              exclude_tags: n && n.length > 0 ? n?.join(",") : void 0,
             };
           try {
-            let e = await i().get(o, { params: l });
+            let e = await i().get(l, { params: c });
             (0, s.h5)(() => {
               for (let t of e.data.events) {
                 let e = (0, b.E0)(t);
@@ -11774,7 +11777,7 @@
                   let e = new m.b(t.clan_steamid);
                   this.InsertEventModelFromClanEventData(e, t);
                 }
-                n.push(this.m_mapExistingEvents.get(e));
+                o.push(this.m_mapExistingEvents.get(e));
               }
             });
           } catch (e) {
@@ -11782,7 +11785,7 @@
               "LoadClanEventInDateRange hit error " + (0, p.H)(e).strErrorMsg,
             );
           }
-          return n;
+          return o;
         }
         async GetBestEventsForCurrentUser(e, t, r) {
           let a = new Array(),
@@ -18253,45 +18256,45 @@
         );
       }
       const se = (0, n.PA)(function (e) {
-          i.useEffect(() => {
-            p.Fm.Get().HintLoad();
-          }, []);
-          const {
-            info: t,
-            displayInfo: r,
-            strStoreUrl: a,
-            bHideBottomHalf: n,
-            bShowDeckCompatibilityDialog: s,
-            bShowWishlistButton: o = !0,
-            bShowIgnoreButton: l = !1,
-          } = e;
-          let c;
-          return (
-            t.overrideNavigation && (c = (e) => t.overrideNavigation()),
-            i.createElement(
-              "div",
-              {
-                className: (0, M.A)(
-                  z().GameHoverCapsuleCtn,
-                  P().InGameHover,
-                  n && z().UseHidingBottomHalf,
-                ),
-                onClick: c,
-              },
-              i.createElement(
-                "a",
-                { href: c ? null : a, className: z().TrailerAnchorStoreLink },
-                Boolean(o && !s && !c) &&
-                  i.createElement(re, { appID: r.id, snr: e.strSNR }),
-                Boolean(l && !s && !c) &&
-                  i.createElement(ae, { appID: r.id, snr: e.strSNR }),
-                i.createElement($, { info: r }),
+        i.useEffect(() => {
+          p.Fm.Get().HintLoad();
+        }, []);
+        const {
+          info: t,
+          displayInfo: r,
+          strStoreUrl: a,
+          bHideBottomHalf: n,
+          bShowDeckCompatibilityDialog: s,
+          bShowWishlistButton: o = !0,
+          bShowIgnoreButton: l = !1,
+        } = e;
+        let c;
+        return (
+          t.overrideNavigation && (c = (e) => t.overrideNavigation()),
+          i.createElement(
+            "div",
+            {
+              className: (0, M.A)(
+                z().GameHoverCapsuleCtn,
+                P().InGameHover,
+                n && z().UseHidingBottomHalf,
               ),
-              i.createElement(ie, { ...e, bPreventNavigation: Boolean(c) }),
-            )
-          );
-        }),
-        oe = 150;
+              onClick: c,
+            },
+            i.createElement(
+              "a",
+              { href: c ? null : a, className: z().TrailerAnchorStoreLink },
+              Boolean(o && !s && !c) &&
+                i.createElement(re, { appID: r.id, snr: e.strSNR }),
+              Boolean(l && !s && !c) &&
+                i.createElement(ae, { appID: r.id, snr: e.strSNR }),
+              i.createElement($, { info: r }),
+            ),
+            i.createElement(ie, { ...e, bPreventNavigation: Boolean(c) }),
+          )
+        );
+      });
+      const oe = 150;
       function le(e) {
         const {
             item: t,
@@ -18434,7 +18437,8 @@
             visible: o,
             children: l,
           } = e,
-          [c, m] = i.useState(o);
+          [c, m] = i.useState(o),
+          { targetElement: d = n?.ownerDocument.body } = (0, T.gK)();
         if (
           (i.useEffect(() => {
             if (o) {
@@ -18460,15 +18464,15 @@
           !n || !l || !c)
         )
           return null;
-        const d = n.clientWidth < 200 ? "8px" : "10px",
-          u = {
+        const u = n.clientWidth < 200 ? "8px" : "10px",
+          p = {
             direction: "overlay-center",
             bEnablePointerEvents: !0,
             ...t,
             style: {
               zIndex: 98,
               width: n.clientWidth * a,
-              fontSize: d,
+              fontSize: u,
               minHeight: "hiding" == Y() ? void 0 : 300,
               height:
                 "hiding" == Y() ? 1.15 * n.clientWidth * (125 / 184) : void 0,
@@ -18479,10 +18483,10 @@
         return s.createPortal(
           i.createElement(
             ce,
-            { hoverProps: u },
+            { hoverProps: p },
             i.createElement(f.tH, null, l),
           ),
-          n.ownerDocument.body,
+          d,
         );
       }
     },

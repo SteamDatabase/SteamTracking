@@ -4747,6 +4747,8 @@
                 0) >= 7,
             min_capsule_matches_for_facet_values: 5,
             max_facet_values_for_facet: 5,
+            background_gradient_top: "#00000030",
+            background_gradient_bottom: "#00000030",
             facet_sort_order: 1,
             facet_auto_generate_options: {
               only_facets: [
@@ -13118,7 +13120,13 @@
           }
           return _;
         }
-        async LoadPartnerEventsPageable(_, _, __webpack_require__ = 0, _ = 0) {
+        async LoadPartnerEventsPageable(
+          _,
+          _,
+          __webpack_require__ = 0,
+          _ = 0,
+          _,
+        ) {
           let _ = new Array(),
             _ = _._.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
             _ = {
@@ -13128,6 +13136,7 @@
               count: _,
               _: _._.LANGUAGE,
               origin: self.origin,
+              exclude_tags: _ && _.length > 0 ? _?.join(",") : void 0,
             };
           try {
             let _ = await _().get(_, {
@@ -20212,59 +20221,59 @@
         );
       }
       const _ = (0, _._)(function (_) {
-          _.useEffect(() => {
-            _._.Get().HintLoad();
-          }, []);
-          const {
-            info: _,
-            displayInfo: __webpack_require__,
-            strStoreUrl: _,
-            bHideBottomHalf: _,
-            bShowDeckCompatibilityDialog: _,
-            bShowWishlistButton: _ = !0,
-            bShowIgnoreButton: _ = !1,
-          } = _;
-          let _;
-          return (
-            _.overrideNavigation && (_ = (_) => _.overrideNavigation()),
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(
-                  _().GameHoverCapsuleCtn,
-                  _().InGameHover,
-                  _ && _().UseHidingBottomHalf,
-                ),
-                onClick: _,
-              },
-              _.createElement(
-                "a",
-                {
-                  href: _ ? null : _,
-                  className: _().TrailerAnchorStoreLink,
-                },
-                Boolean(_ && !_ && !_) &&
-                  _.createElement(_, {
-                    appID: __webpack_require__._,
-                    snr: _.strSNR,
-                  }),
-                Boolean(_ && !_ && !_) &&
-                  _.createElement(_, {
-                    appID: __webpack_require__._,
-                    snr: _.strSNR,
-                  }),
-                _.createElement(_, {
-                  info: __webpack_require__,
-                }),
+        _.useEffect(() => {
+          _._.Get().HintLoad();
+        }, []);
+        const {
+          info: _,
+          displayInfo: __webpack_require__,
+          strStoreUrl: _,
+          bHideBottomHalf: _,
+          bShowDeckCompatibilityDialog: _,
+          bShowWishlistButton: _ = !0,
+          bShowIgnoreButton: _ = !1,
+        } = _;
+        let _;
+        return (
+          _.overrideNavigation && (_ = (_) => _.overrideNavigation()),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _().GameHoverCapsuleCtn,
+                _().InGameHover,
+                _ && _().UseHidingBottomHalf,
               ),
+              onClick: _,
+            },
+            _.createElement(
+              "a",
+              {
+                href: _ ? null : _,
+                className: _().TrailerAnchorStoreLink,
+              },
+              Boolean(_ && !_ && !_) &&
+                _.createElement(_, {
+                  appID: __webpack_require__._,
+                  snr: _.strSNR,
+                }),
+              Boolean(_ && !_ && !_) &&
+                _.createElement(_, {
+                  appID: __webpack_require__._,
+                  snr: _.strSNR,
+                }),
               _.createElement(_, {
-                ..._,
-                bPreventNavigation: Boolean(_),
+                info: __webpack_require__,
               }),
-            )
-          );
-        }),
-        _ = 150;
+            ),
+            _.createElement(_, {
+              ..._,
+              bPreventNavigation: Boolean(_),
+            }),
+          )
+        );
+      });
+      const _ = 150;
       function _(_) {
         const {
             item: _,
@@ -20432,7 +20441,8 @@
             visible: _,
             children: _,
           } = _,
-          [_, _] = _.useState(_);
+          [_, _] = _.useState(_),
+          { targetElement: _ = _?.ownerDocument.body } = (0, _._)();
         if (
           (_.useEffect(() => {
             if (_) {
@@ -20482,7 +20492,7 @@
             },
             _.createElement(_._, null, _),
           ),
-          _.ownerDocument.body,
+          _,
         );
       }
     },

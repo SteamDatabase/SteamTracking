@@ -4,25 +4,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        TitleHR: "_1rdzNwXOoo1-LmnB-gVa8L",
-        ActionButtonCtn: "_7a7-wklt6L9bHpSe8uw95",
-        CategoriesList: "YMtVaSAftRDKdmUzno1V-",
-        CategoryCtn: "_1vjux5UePGI2QR8pgGS5s9",
-        Category: "_12BB3TMamY8yT5zyDnNr5Y",
-        CategoryType: "_2rg93RSnGgt35AemsbS3XN",
-        ExcludedFromSearch: "_1qSt9f_EVF7MmpIxINFOnq",
-        ReplacesTags: "_2VMbzBly9fJ6k58VPyo5Dw",
-        CategoryEditor: "hDZX9jvA2yVDsxIl25krT",
-        TagOrCategoryList: "_33SvLrTusAraXr9O6rG1RK",
-        IDSelector: "_1COCuEUNPkqoSthDBf5dKb",
-        CategorySummary: "_1h-LQnwvNcayOGn1YjEAw8",
-        Clause: "_17Lm214eZBjzdDsBlWCP0y",
-        Item: "uZOnNO-9GSMjuZg73yUDz",
-        UnpublishedChangesNotice: "_3IZil2pI21oJCdU0WQn6Z3",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Dummy: "wW1AV4_YscO4bfrtkjtze",
         ThemeRow: "_1iI4q9Lh3S4b7MvHV8-9FH",
         ThemeSize: "w1hcRNJLqJaIKpJvsg7Ry",
@@ -46,26 +27,6 @@
         DashTitleBar: "_11xa2NywK-XoPRPzAprmhr",
         ButtonGroup: "_31Lp_UMwj_nvMZg4wGKeqr",
         DashDescription: "_16bPPRfJgTdFDNoMeEHx96",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        WhitelistCtn: "_1UhmxrINvvaNnHzhCPoill",
-        WhitelistRow: "_28TC1EYm0jlWPjyk89xXCL",
-        WhitelistNumber: "IY3dF3eWXX1OmE8oYcQKp",
-        Disabled: "_2VzE-3UQEHXyAext8t7gLW",
-        Grabbing: "_1vSZ5gJndAOamRhVGni8HG",
-        DragActive: "_31uDZXKZQlYMd8FK9xdaJb",
-        Dropped: "_3bfDVSvzMDkk4s1j0Vw8jI",
-        JumpToSection: "oABTo2lkoYYI5YMYaeq_Q",
-        BeingDragged: "_3y7I4DL9Hua5OhZ4HgcBB5",
-        DragGhost: "_61nYWo98IhSjR8PWtQX9O",
-        Grabbable: "riuelIz655g_IBddWfLQ-",
-        DisabledGrab: "_2K0C_m1AZvB6yeNaEXXjDD",
-        WhitelistAvatar: "_3DGjmH9KW9BAXsEYwH1WpE",
-        ButtonCtn: "_1hSqlvDTyj9P6eWTHXutUt",
-        DragHighlightContainer: "_2jRMC5JVSK6dsktYus9Gjf",
-        DragHighlight: "Y9ryg1Npznt3dpkr7BGp1",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -239,14 +200,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -284,7 +241,7 @@
             const _ = await _().get(_, {
               params: _,
             });
-            if (200 === _.status && _.data?.success === _._.k_EResultOK)
+            if (200 === _.status && 1 === _.data?.success)
               return void (this.m_mapCategories = this.ParseResponse(_.data));
             (this.m_promise = null), (_ = (0, _._)(_));
           } catch (_) {
@@ -308,47 +265,57 @@
                 _: _._ || void 0,
                 exclude_from_search: _.exclude_from_search,
                 search_alias: _.search_alias,
-              };
-            _.must &&
-              (Array.isArray(_.must)
-                ? (_.must = _.must.map((_) => ({
+              },
+              {
+                must: _,
+                any: _,
+                mustnot: _,
+                replaces_tags: _,
+                content_descriptors: _,
+              } = _;
+            _ &&
+              (Array.isArray(_)
+                ? (_.must = _.map((_) => ({
                     _: _,
                   })))
                 : (_.must = [
                     {
-                      _: _.must,
+                      _: _,
                     },
                   ])),
-              _.any &&
-                (Array.isArray(_.any)
-                  ? (_.any = _.any.map((_) => ({
+              _ &&
+                (Array.isArray(_)
+                  ? (_.any = _.map((_) => ({
                       _: _,
                     })))
                   : (_.any = [
                       {
-                        _: _.any,
+                        _: _,
                       },
                     ])),
-              _.mustnot &&
-                (Array.isArray(_.mustnot)
-                  ? (_.mustnot = _.mustnot.map((_) => ({
+              _ &&
+                (Array.isArray(_)
+                  ? (_.mustnot = _.map((_) => ({
                       _: _,
                     })))
                   : (_.mustnot = [
                       {
-                        _: _.mustnot,
+                        _: _,
                       },
                     ])),
-              _.replaces_tags &&
-                (Array.isArray(_.replaces_tags)
-                  ? (_.replaces_tags = _.replaces_tags.map((_) => ({
+              _ &&
+                (Array.isArray(_)
+                  ? (_.replaces_tags = _.map((_) => ({
                       _: _,
                     })))
                   : (_.replaces_tags = [
                       {
-                        _: _.replaces_tags,
+                        _: _,
                       },
                     ])),
+              _ &&
+                "string" == typeof _ &&
+                (_.content_descriptors = _.split(",").map((_) => parseInt(_))),
               _.set(_, _);
           }
           return _;
@@ -371,7 +338,7 @@
             params: _,
             withCredentials: !0,
           });
-          if (200 === _.status && _.data?.success === _._.k_EResultOK) {
+          if (200 === _.status && 1 === _.data?.success) {
             const _ = {
               rgCategories: [],
               bHasUnpublishedChanges: !1,
@@ -410,47 +377,57 @@
               _: _._ || void 0,
               exclude_from_search: Boolean(_.exclude_from_search),
               search_alias: _.search_alias,
-            };
-          _.must &&
-            (Array.isArray(_.must)
-              ? (_.must = _.must.map((_) => ({
+            },
+            {
+              must: _,
+              any: _,
+              mustnot: _,
+              replaces_tags: _,
+              content_descriptors: _,
+            } = _;
+          _ &&
+            (Array.isArray(_)
+              ? (_.must = _.map((_) => ({
                   _: Number(_),
                 })))
               : (_.must = [
                   {
-                    _: Number(_.must),
+                    _: Number(_),
                   },
                 ])),
-            _.any &&
-              (Array.isArray(_.any)
-                ? (_.any = _.any.map((_) => ({
+            _ &&
+              (Array.isArray(_)
+                ? (_.any = _.map((_) => ({
                     _: Number(_),
                   })))
                 : (_.any = [
                     {
-                      _: Number(_.any),
+                      _: Number(_),
                     },
                   ])),
-            _.mustnot &&
-              (Array.isArray(_.mustnot)
-                ? (_.mustnot = _.mustnot.map((_) => ({
+            _ &&
+              (Array.isArray(_)
+                ? (_.mustnot = _.map((_) => ({
                     _: Number(_),
                   })))
                 : (_.mustnot = [
                     {
-                      _: Number(_.mustnot),
+                      _: Number(_),
                     },
                   ])),
-            _.replaces_tags &&
-              (Array.isArray(_.replaces_tags)
-                ? (_.replaces_tags = _.replaces_tags.map((_) => ({
+            _ &&
+              (Array.isArray(_)
+                ? (_.replaces_tags = _.map((_) => ({
                     _: Number(_),
                   })))
                 : (_.replaces_tags = [
                     {
-                      _: Number(_.replaces_tags),
+                      _: Number(_),
                     },
                   ])),
+            _ &&
+              "string" == typeof _ &&
+              (_.content_descriptors = _.split(",").map((_) => parseInt(_))),
             _.push(_);
         }
         return _;
@@ -481,6 +458,9 @@
             _: _._,
             exclude_from_search: _.exclude_from_search,
             search_alias: _.search_alias,
+            content_descriptors: _.content_descriptors?.length
+              ? _.content_descriptors.join(",")
+              : void 0,
           }),
             1 === _[_.handle].must?.length &&
               (_[_.handle].must = _[_.handle].must[0]),
@@ -500,7 +480,7 @@
           const _ = await _().post(_, _, {
             withCredentials: !0,
           });
-          if (200 === _.status && _.data?.success === _._.k_EResultOK)
+          if (200 === _.status && 1 === _.data?.success)
             return _.Get().ClearDirty(), null;
           _ = (0, _._)(_);
         } catch (_) {
@@ -521,8 +501,7 @@
             params: _,
             withCredentials: !0,
           });
-          if (200 !== _.status || _.data?.success !== _._.k_EResultOK)
-            return (0, _._)(_);
+          if (200 !== _.status || 1 !== _.data?.success) return (0, _._)(_);
         } catch (_) {
           return (0, _._)(_);
         }
@@ -583,7 +562,7 @@
             const _ = await _().get(_, {
               params: _,
             });
-            if (200 === _.status && _.data?.success === _._.k_EResultOK)
+            if (200 === _.status && 1 === _.data?.success)
               return (
                 (this.m_rgTags = _.data.tags),
                 (this.m_rgCategories = _.data.categories),
@@ -617,14 +596,6 @@
         static Get() {
           return _.s_singleton || (_.s_singleton = new _()), _.s_singleton;
         }
-      }
-      function _() {
-        return (0, _._)(() => _.Get().BIsDirty());
-      }
-      function _() {
-        return {
-          fnSetDirty: _.Get().SetDirty,
-        };
       }
       function _() {
         return _.Get().BIsDirty();
@@ -1110,12 +1081,15 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1127,770 +1101,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      function _() {
-        const [_, _] = _.useState(),
-          [__webpack_require__, _] = _.useState(!1),
-          _ = (0, _._)(),
-          { fnSetDirty: _ } = (0, _._)(),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1);
-        return (
-          _.useEffect(() => {
-            (0, _._)().then((_) => {
-              _(_.rgCategories), _(_.bHasUnpublishedChanges), _(!0);
-            });
-          }, []),
-          __webpack_require__
-            ? _.createElement(
-                "div",
-                {
-                  className: _().AdminPageCtn,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PageTitle,
-                  },
-                  "Content Hub Categories",
-                ),
-                _.createElement("hr", {
-                  className: _().TitleHR,
-                }),
-                _.createElement(
-                  "p",
-                  null,
-                  "This page lets you review and edit existing categories. Click on their titles.  At the bottom there is controls to create a new category. To see the hubs performance related to making a theme sale ",
-                  _.createElement(
-                    "a",
-                    {
-                      href: `${_._.PARTNER_BASE_URL}promotion/planning/themes`,
-                    },
-                    "here.",
-                  ),
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    href: "https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m",
-                    target: "_blank",
-                  },
-                  "Content Hub Graphana Stats Page",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().PageSubTitle,
-                  },
-                  "Categories",
-                ),
-                _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().UnpublishedChangesNotice,
-                    },
-                    "You have unpublished changes. Click Publish below to publish and make them available to users.",
-                  ),
-                _.createElement(_, {
-                  categories: _,
-                  onUpdate: _,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _().ActionButtonCtn,
-                  },
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: () =>
-                        (0, _._)(
-                          _.createElement(_, {
-                            onImport: (_) => {
-                              _(_), _(!0);
-                            },
-                          }),
-                          window,
-                        ),
-                    },
-                    "Import From PHP",
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: () =>
-                        (0, _._)(
-                          _.createElement(_, {
-                            categories: _,
-                            onSave: () => {
-                              _(!1), _(!0);
-                            },
-                          }),
-                          window,
-                        ),
-                    },
-                    _
-                      ? _.createElement(_.Fragment, null, "Save")
-                      : _.createElement(
-                          _.Fragment,
-                          null,
-                          _.createElement(_.Jlk, null),
-                          "Saved",
-                        ),
-                  ),
-                  _.createElement(
-                    _._,
-                    {
-                      onClick: () =>
-                        (0, _._)(
-                          _.createElement(_, {
-                            onPublish: () => _(!1),
-                          }),
-                          window,
-                        ),
-                    },
-                    "Publish",
-                  ),
-                ),
-              )
-            : _.createElement(_._, {
-                size: "medium",
-                position: "center",
-              })
-        );
-      }
-      function _(_) {
-        const { categories: _, onUpdate: __webpack_require__ } = _,
-          { rgTags: _, rgCategories: _ } = (0, _._)(),
-          [_] = (0, _._)("edit");
-        if (!_) return _.createElement("div", null, "No categories defined.");
-        return _.createElement(
-          "div",
-          {
-            className: _().CategoriesList,
-          },
-          _.createElement(_._, {
-            bDisabled: !0,
-            items: _,
-            onDelete: (_) => {
-              _.splice(_, 1), __webpack_require__();
-            },
-            render: (_) =>
-              _.createElement(_, {
-                key: _._,
-                item: _,
-                rgTags: _,
-                onUpdate: __webpack_require__,
-                bOpenEditor: _?.toLowerCase() == _.handle,
-              }),
-          }),
-          _.createElement(
-            _._,
-            {
-              onClick: () => {
-                let _ = 0;
-                for (const _ of _) _._ && Number(_._) > _ && (_ = Number(_._));
-                _.push({
-                  handle: "new_category_" + _.length,
-                  _: ++_,
-                }),
-                  __webpack_require__();
-              },
-            },
-            "Add Category",
-          ),
-        );
-      }
-      function _(_) {
-        const { rgTags: _, replacesTags: __webpack_require__ } = _,
-          _ = (0, _.useMemo)(
-            () =>
-              __webpack_require__
-                ?.map((_) => {
-                  const _ = _?.find((_) => _.tagid === _._);
-                  return (_?.name || "Unknown tag") + " (" + String(_._) + ")";
-                })
-                .join(", "),
-            [__webpack_require__, _],
-          );
-        return _
-          ? _.createElement("span", null, "Replaces tags: " + _)
-          : _.createElement("span", null);
-      }
-      function _(_) {
-        const {
-            item: _,
-            rgTags: __webpack_require__,
-            onUpdate: _,
-            bOpenEditor: _,
-          } = _,
-          [_, _, _] = (0, _._)(_);
-        return _.createElement(
-          "div",
-          {
-            className: _().CategoryCtn,
-          },
-          _.createElement(
-            "div",
-            {
-              className: _().Category,
-            },
-            _.createElement(
-              "a",
-              {
-                onClick: (_) =>
-                  ((_, _) => {
-                    _.preventDefault(), _.stopPropagation(), _();
-                  })(_),
-              },
-              _.createElement(
-                "b",
-                null,
-                _.loc_token ? (0, _._)(_.loc_token) : "",
-              ),
-              _.loc_token ? " (" + _.handle + ")" : _.handle,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().CategoryType,
-              },
-              "tagids" === _.type
-                ? "Tags"
-                : "category" === _.type
-                  ? "Category"
-                  : "contenthub" === _.type
-                    ? "Hardcoded Filter"
-                    : "Special",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ExcludedFromSearch,
-              },
-              !0 === _.exclude_from_search ? "Excluded from search" : "",
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().ReplacesTags,
-              },
-              _.createElement(_, {
-                rgTags: __webpack_require__,
-                replacesTags: _.replaces_tags,
-              }),
-            ),
-            _.createElement(
-              _._,
-              {
-                active: _,
-              },
-              _.createElement(_, {
-                category: _,
-                onUpdate: _,
-                closeModal: _,
-              }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { category: _, onUpdate: __webpack_require__, closeModal: _ } = _,
-          _ = (0, _._)();
-        return _.createElement(
-          _._,
-          {
-            title: `Edit Category (ID ${_._})`,
-            bAllowFullSize: !0,
-            onCancel: _,
-            closeModal: _,
-          },
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              "div",
-              {
-                className: _().CategoryEditor,
-              },
-              _.createElement(_._, {
-                label: "Handle",
-                tooltip: "This forms the end of the URL. It must be unique",
-                value: _.handle,
-                onChange: (_) => {
-                  (_.handle = _.target.value), _();
-                },
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _().CategoryCtn,
-                },
-                _.createElement(_._, {
-                  label: "Loc Token",
-                  tooltip:
-                    "Token only needed if we wish to expose this hub to customers",
-                  value: _.loc_token,
-                  onChange: (_) => {
-                    (_.loc_token = _.target.value), _();
-                  },
-                }),
-                _.loc_token ? (0, _._)(_.loc_token) : "",
-              ),
-              _.createElement(_._, {
-                label: "Use As A Heading ",
-                tooltip:
-                  "Only used for establishing headings used on the main store drop-down menu",
-                checked: _.heading,
-                onChange: (_) => {
-                  (_.heading = _), _();
-                },
-              }),
-              _.createElement(_._, {
-                label: "Exclude from search ",
-                tooltip: "Do not show this category in store search",
-                checked: _.exclude_from_search,
-                onChange: (_) => {
-                  (_.exclude_from_search = _), _();
-                },
-              }),
-              _.createElement(_._, {
-                label: "Search aliases",
-                tooltip: "Comma separated search aliases",
-                value: _.search_alias,
-                onChange: (_) => {
-                  (_.search_alias = _.target.value), _();
-                },
-              }),
-              _.createElement(_._, {
-                label: "Type",
-                rgOptions: [
-                  {
-                    data: "tagids",
-                    label: "Tag Hub",
-                  },
-                  {
-                    data: "category",
-                    label: "Categories",
-                  },
-                  {
-                    data: "contenthub",
-                    label: "Hardcoded Filter Hub",
-                  },
-                ],
-                selectedOption: _.type,
-                onChange: (_) => {
-                  (_.type = _.data), _();
-                },
-              }),
-              ("tagids" === _.type ||
-                "category" === _.type ||
-                "contenthub" == _.type) &&
-                _.createElement(_, {
-                  category: _,
-                }),
-            ),
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              {
-                onClick: () => {
-                  __webpack_require__ && __webpack_require__(), _ && _();
-                },
-              },
-              "Close",
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { category: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useState)(0);
-        return _.createElement(
-          _.Fragment,
-          null,
-          ("tagids" == _.type || "category" == _.type) &&
-            _.createElement(
-              "div",
-              {
-                className: _().CategoryCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Category,
-                },
-                _.createElement(_, {
-                  category: _,
-                  list: "must",
-                  title: "Must have all of these tags",
-                }),
-                _.createElement(_, {
-                  category: _,
-                  list: "any",
-                  title: "Must have one of these tags",
-                }),
-                _.createElement(_, {
-                  category: _,
-                  list: "mustnot",
-                  title: "Must not have any of these tags",
-                }),
-              ),
-            ),
-          ("tagids" == _.type ||
-            "category" == _.type ||
-            "contenthub" == _.type) &&
-            _.createElement(
-              "div",
-              {
-                className: _().CategoryCtn,
-              },
-              _.createElement(_, {
-                category: _,
-                list: "replaces_tags",
-                title:
-                  "The following Tags should redirect to this category page",
-              }),
-              _.createElement(
-                "p",
-                null,
-                'This is only needed if this category is similar in name to an existing tag, such as "Sports" where the category is better than the individual tag.',
-              ),
-            ),
-          Boolean(__webpack_require__)
-            ? _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () => _(_ + 1),
-                  },
-                  "Refresh Stats",
-                ),
-                _.createElement(_, {
-                  category: _,
-                }),
-              )
-            : _.createElement(_._, {
-                checked: __webpack_require__,
-                onChange: (_) => _(_),
-                label: "Show Category Sale Stats",
-                key: "info" + _,
-              }),
-        );
-      }
-      function _(_) {
-        const { category: _ } = _,
-          _ = (0, _._)(_.must, _.any, _.mustnot);
-        if (!_)
-          return _.createElement(_._, {
-            string: (0, _._)("#Loading"),
-            position: "center",
-            size: "medium",
-          });
-        const _ = _.total_games > _._ && _.total_games <= _._;
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
-              onClick: () => {
-                const _ = [];
-                _.push(["AppID", "Sale Rank"]),
-                  _.top_games.forEach((_) => {
-                    _.push(["" + _.appid, "" + _.long_term_sale_rank]);
-                  });
-                const _ = (_.handle || "top100").replace(" ", "_") + ".csv";
-                _._.WriteCSVToFile(_, _);
-              },
-            },
-            "Download Top 100 Games",
-          ),
-          _.createElement(
-            _._,
-            {
-              onClick: () => {
-                const _ = [];
-                _.push(["AppID"]),
-                  _.all_appid.forEach((_) => {
-                    _.push(["" + _]);
-                  });
-                const _ = (_.handle || "allgames").replace(" ", "_") + ".csv";
-                _._.WriteCSVToFile(_, _);
-              },
-            },
-            "Download All Games",
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _.ThemeRow,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.ThemeDefinitionCtn,
-              },
-              "Summary: ",
-              _.createElement(_._, {
-                nTotalGames: _.total_games,
-              }),
-              Boolean(_) &&
-                _.createElement(_, {
-                  category: _,
-                }),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.TopGamesCtn,
-              },
-              _.createElement("div", null, "Top 10 Games non-F2P:"),
-              _.createElement(
-                "div",
-                {
-                  className: _.GamesColumn,
-                },
-                _.top_games?.slice(0, 10).map((_) =>
-                  _.createElement(_._, {
-                    key: _.appid,
-                    info: _,
-                    category: _,
-                    bSaleSummary: _,
-                  }),
-                ),
-              ),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { category: _ } = _,
-          _ = (0, _._)(_.must, _.any, _.mustnot),
-          _ = (0, _._)(_.must, _.any, _.mustnot);
-        return _.createElement(_._, {
-          saleSummary: _,
-          topAppSummary: _,
-        });
-      }
-      function _(_) {
-        const { category: _, list: __webpack_require__, title: _ } = _,
-          { rgTags: _, rgCategories: _ } = (0, _._)(),
-          _ = (0, _._)(),
-          _ =
-            _?.map((_) => ({
-              value: _.tagid,
-              label: `${_.name} (${_.tagid})`,
-            })) || [],
-          _ =
-            _?.map((_) => ({
-              value: _.categoryid,
-              label: `${_.name} (${_.categoryid})`,
-            })) || [];
-        return _.createElement(
-          "div",
-          {
-            className: _().TagOrCategoryList,
-          },
-          _.createElement(_._, null, _),
-          _.createElement(_._, {
-            bDisabled: !0,
-            items: _[__webpack_require__] || [],
-            onDelete: (_) => {
-              _[__webpack_require__].splice(_, 1), _();
-            },
-            render: (_) =>
-              "tagids" === _.type || "replaces_tags" === __webpack_require__
-                ? _.createElement(
-                    "div",
-                    {
-                      className: _().IDSelector,
-                    },
-                    _.createElement(_._, {
-                      value: _._,
-                      onChange: (_) => {
-                        (_._ = Number(_.target.value)), _();
-                      },
-                    }),
-                    _.createElement(_._, {
-                      className: "react-select-container",
-                      classNamePrefix: "react-select",
-                      isSearchable: !0,
-                      options: _,
-                      value: _.find((_) => _.value === _._),
-                      onChange: (_) => {
-                        (_._ = _.value), _();
-                      },
-                    }),
-                  )
-                : "category" === _.type
-                  ? _.createElement(
-                      "div",
-                      {
-                        className: _().IDSelector,
-                      },
-                      _.createElement(_._, {
-                        className: "react-select-container",
-                        classNamePrefix: "react-select",
-                        isSearchable: !0,
-                        options: _,
-                        value: _.find((_) => _.value === _._),
-                        onChange: (_) => {
-                          (_._ = _.value), _();
-                        },
-                      }),
-                    )
-                  : null,
-          }),
-          _.createElement(
-            _._,
-            {
-              onClick: () => {
-                _[__webpack_require__] || (_[__webpack_require__] = []),
-                  _[__webpack_require__].push({
-                    _: 0,
-                  }),
-                  _();
-              },
-            },
-            "Add",
-          ),
-        );
-      }
-      function _(_) {
-        const { onImport: _, closeModal: __webpack_require__ } = _;
-        return (
-          _.useEffect(() => {
-            _._.Get()
-              .HintLoad()
-              .then(() => {
-                _(Array.from(_._.Get().GetCategories().values())),
-                  __webpack_require__ && __webpack_require__();
-              });
-          }, [__webpack_require__, _]),
-          _.createElement(
-            _._,
-            {
-              strTitle: "Importing",
-              bAlertDialog: !0,
-              bDisableBackgroundDismiss: !0,
-              bHideCloseIcon: !0,
-            },
-            _.createElement(_._, {
-              size: "medium",
-              position: "center",
-            }),
-          )
-        );
-      }
-      function _(_) {
-        const { categories: _, onSave: __webpack_require__, closeModal: _ } = _,
-          [_, _] = _.useState();
-        return (
-          _.useEffect(() => {
-            (0, _._)(_).then((_) => {
-              _ ? _(_.strErrorMsg) : (__webpack_require__(), _ && _());
-            });
-          }, [_, _, __webpack_require__]),
-          _.createElement(
-            _._,
-            {
-              strTitle: "Saving",
-              bAlertDialog: !0,
-              bDisableBackgroundDismiss: !0,
-              bHideCloseIcon: !0,
-              closeModal: _,
-            },
-            Boolean(_)
-              ? _.createElement("div", null, "Error: ", _)
-              : _.createElement(_._, {
-                  size: "medium",
-                  position: "center",
-                }),
-          )
-        );
-      }
-      function _(_) {
-        const { onPublish: _, closeModal: __webpack_require__ } = _,
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState();
-        return (
-          _.useEffect(() => {
-            _ &&
-              (0, _._)().then((_) => {
-                _
-                  ? _(_.strErrorMsg)
-                  : (_(), _(!1), __webpack_require__ && __webpack_require__());
-              });
-          }, [_, __webpack_require__, _]),
-          _.createElement(
-            _._,
-            {
-              strTitle: _ ? "Publishing" : "Really Publish?",
-              strDescription:
-                !_ &&
-                "Publishing will make your changes immediately visible to users.",
-              bAlertDialog: _,
-              bDisableBackgroundDismiss: _,
-              bHideCloseIcon: _,
-              onOK: () => {
-                _ ? __webpack_require__ && __webpack_require__() : _(!0);
-              },
-              onCancel: () => {
-                __webpack_require__ && __webpack_require__();
-              },
-            },
-            _ &&
-              _.createElement(
-                _.Fragment,
-                null,
-                Boolean(_)
-                  ? _.createElement("div", null, "Error: ", _)
-                  : _.createElement(_._, {
-                      size: "medium",
-                      position: "center",
-                    }),
-              ),
-          )
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       const _ = "0px 0px 100% 0px",
         _ = 5e3,
         _ = 500;
@@ -2373,276 +1584,6 @@
             download: "theme_sale_stats.csv",
           },
           "Export CSV",
-        );
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC";
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            items: _,
-            render: __webpack_require__,
-            onDelete: _,
-            onEdit: _,
-            onReorder: _,
-            onMove: _,
-            bDisabled: _,
-            rowClassName: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(-1),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(""),
-          _ = _.useRef(void 0),
-          _ = _.useMemo(() => new Array(), []),
-          _ = _.useMemo(() => new Array(), []),
-          _ = _.useMemo(() => _().CancelToken.source(), []),
-          _ = () => {
-            _.current?.firstElementChild &&
-              (_(_.current.firstElementChild.getBoundingClientRect().height),
-              _(_.current.firstElementChild.getBoundingClientRect().width));
-          };
-        _.useEffect(() => {
-          _();
-        }, []),
-          _.useEffect(() => () => _.cancel("ReorderableList unmounting"), [_]);
-        const _ = (_, _) => {
-            _.token.reason ||
-              (_.current.firstElementChild?.getBoundingClientRect().height >
-                0 &&
-                _ !=
-                  _.current.firstElementChild.getBoundingClientRect().height &&
-                _(),
-              ((_, _) => {
-                const _ = _[_]?.current;
-                if (!_)
-                  return void console.error(
-                    "start element grab missing element at index " + _,
-                  );
-                _(!0), _(_), _(void 0), _(_);
-                const _ =
-                  _.clientX - __webpack_require__.getBoundingClientRect().left;
-                _(_);
-                const _ =
-                  _.clientY - __webpack_require__.getBoundingClientRect().top;
-                _(_),
-                  (_.style.position = "fixed"),
-                  (_.style.left = _.clientX - _ + "px"),
-                  (_.style.top = _.clientY - _ + "px"),
-                  (_.style.zIndex = "1");
-              })(_, _),
-              _.preventDefault());
-          },
-          _ = (_, _) => {
-            const _ = _._(_ > _ ? _ - 1 : _, 0, _.length - 1);
-            _ != _ && (_ ? _(_, _) : (0, _._)(_, _, _), _(_), _ && _(_));
-          },
-          _ = (_) => {
-            _ &&
-              !_.token.reason &&
-              ((() => {
-                const _ = _[_]?.current;
-                _
-                  ? ((_.style.position = ""), (_.style.zIndex = ""))
-                  : console.error("end element drag missing element"),
-                  _(!1),
-                  _(-1),
-                  _(void 0),
-                  _(void 0);
-              })(),
-              _(_, _));
-          },
-          _ = (_) => {
-            if (!_ || _.token.reason) return;
-            const _ = _.clientY;
-            let _;
-            for (let _ = 0; _ < _.length; _++) {
-              if (
-                _ <
-                (_[_].current.getBoundingClientRect().top +
-                  2 * _[_].current.getBoundingClientRect().bottom) /
-                  3
-              ) {
-                _ = _;
-                break;
-              }
-            }
-            _(_ ?? _.length),
-              ((_) => {
-                const _ = _[_]?.current;
-                _
-                  ? ((_.style.left = _.clientX - _ + "px"),
-                    (_.style.top = _.clientY - _ + "px"))
-                  : console.error("update grab element missing element");
-              })(_);
-          };
-        (0, _._)(window, "mousemove", (_) => _(_)),
-          (0, _._)(window, "mouseup", (_) => _()),
-          _.useEffect(() => {
-            for (let _ = _.length; _ < _.length; _++)
-              _.push(_.createRef()), _.push(_.createRef());
-          }, [_.length, _, _]);
-        const _ = (_) => {
-            _(void 0);
-            const _ = _?.trim(),
-              _ = Number.parseInt(_);
-            if (0 == _.length || isNaN(_)) return;
-            const _ = _ - 1;
-            _ != _ && _(_, _);
-          },
-          [_, _] = _.useState(void 0);
-        return _.createElement(
-          "div",
-          {
-            className: _().WhitelistCtn,
-            ref: _,
-          },
-          _.map((_, _) =>
-            _.createElement(
-              "div",
-              {
-                key: _,
-                ref: _[_],
-              },
-              _ == _ &&
-                _.createElement(_, {
-                  width: _,
-                }),
-              _.createElement(
-                "div",
-                {
-                  ref: _[_],
-                  className: _().DragGhost,
-                },
-                _ == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().WhitelistRow, _),
-                    },
-                    _.createElement("img", {
-                      className: (0, _._)(_().WhitelistAvatar, _().Grabbing),
-                      src: _,
-                    }),
-                    _.createElement("input", {
-                      className: (0, _._)(
-                        _().WhitelistNumber,
-                        _().Disabled,
-                        _().Grabbing,
-                      ),
-                      type: "text",
-                      value: (_ > _ ? _ - 1 : _) + 1,
-                      disabled: !0,
-                    }),
-                    __webpack_require__(_, _),
-                  ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().WhitelistRow,
-                    _,
-                    _ && _().DragActive,
-                    _ == _ && _().BeingDragged,
-                    _ == _ && _().Dropped,
-                  ),
-                  onAnimationEnd: () => _(void 0),
-                },
-                _.createElement("img", {
-                  className: (0, _._)(
-                    _().WhitelistAvatar,
-                    _().Grabbable,
-                    _ && _().DisabledGrab,
-                  ),
-                  src: _,
-                  onMouseDown: Boolean(_) ? void 0 : (_) => _(_, _),
-                }),
-                _.createElement("input", {
-                  className: (0, _._)(_().WhitelistNumber, _ && _().Disabled),
-                  type: "text",
-                  value: _ == _ ? _ : _ + 1,
-                  disabled: _ || _ == _,
-                  onChange: (_) => _(_.target.value),
-                  onKeyDown: (_) =>
-                    ((_, _) => {
-                      "Enter" === _.key && (_(_), _.currentTarget.blur());
-                    })(_, _),
-                  onFocus: (_) => {
-                    _(_), _(_.target.value);
-                  },
-                  onBlur: () => _(_),
-                }),
-                __webpack_require__(_, _),
-                Boolean(_ != _) &&
-                  Boolean(_ || _) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ButtonCtn,
-                    },
-                    Boolean(_) &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().RemoveIcon,
-                          onClick: (_) => _(_, _),
-                        },
-                        _.createElement(_.ffu, null),
-                      ),
-                    Boolean(_) &&
-                      _.createElement("img", {
-                        className: _().RemoveIcon,
-                        src: _._,
-                        onClick: (_) => _(_, _),
-                      }),
-                  ),
-              ),
-              _ == _.length &&
-                _ == _.length - 1 &&
-                _.createElement(_, {
-                  width: _,
-                }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { width: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().DragHighlightContainer,
-          },
-          _.createElement("div", {
-            className: _().DragHighlight,
-            style: {
-              width: _,
-            },
-          }),
         );
       }
     },

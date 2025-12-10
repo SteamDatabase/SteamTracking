@@ -48,6 +48,44 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        ProgressBar: "_2H35Exdt_TEmnht61LT9o",
+        ProgressBarComplete: "ch7u6iAsb2ympJBJjGMoi",
+        ProgressBarFillComponent: "_3i0WE7KIdK23MdG8F-EDns",
+        WizardModal: "_16ywt-UaM5pXRZAZ59hFqb",
+        GameName: "_11vp-bH8bgBrQCbqtuK439",
+        WizardButtons: "_3dsdpW7Qfs3LWOkzgMJJhJ",
+        WizardContainer: "_2wuBak_ecUSy1__ByQUkLA",
+        WizardTitle: "_1_VaMIoHomh0nkSL5a0OfP",
+        StepRow: "CggdGMWnkepTgIdPa8qF0",
+        StepLabel: "_2zme0St18-D_jyf9u4x71k",
+        RadioButton: "_11VhNInHVvEffMe2vf2Gg9",
+        Selected: "QEXaA3fx7EU29BoZu31SA",
+        OptionLabel: "_3QKLY00ZQqv8hxmvbGg8-6",
+        CheckboxComplexLabel: "_15L6_SM-oLsYhwZf6E6Ii9",
+        Question: "_17VRokV9gQrl4MOm03kxGV",
+        Instructions: "_2N-j8qfNmHJEMMz1pXbdvC",
+        WizardTooltip: "_2RXE_aA8kQtPJymKYYSMAl",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        AccessibilityFeatureDescription: "k6qQ5DLbV9P6dfFuuQpnR",
+        AccessibilityFeatureInfoCtn: "Jwl4gCBBBKG2avQH1KE4f",
+        GameEditCtn: "Jafw2l9EIfZgvxXAq7oSs",
+        AccessibilityFeatureContent: "_2O3bOye9ePb-fkhbamPamK",
+        EditButton: "_1aweU2y3d4e3510d3nNqjP",
+        Spacer: "_2H1h4op2he4A9SRW-5xU9A",
+        Top: "_3YANuSYfijJQ5Jq5-sUfaQ",
+        Bottom: "_3U8po-ZE4D_KXUQ32LJT0c",
+        EditButtonIcon: "_2t7TJZb12JsMs-PxroqLQ9",
+        StartWizardButton: "_1VzLAfLRNEbppzyyYS8ueA",
+        ButtonRow: "_1L2BTYNuiNzNkV3fxuFZ4A",
+        PreviewContainer: "_1z9Dg4jsYlNummQKgczgWN",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
         ControllerWizardModal: "_2M4zwA7Ac68En7AUUHEpuK",
         GameName: "_1wayRCM9VO944GbqtTisWi",
         WizardButtons: "ja88t0u0UmDMjZ2vKEXyg",
@@ -476,29 +514,24 @@
     },
     chunkid: (module) => {
       module.exports = {
-        WhitelistCtn: "_1UhmxrINvvaNnHzhCPoill",
-        WhitelistRow: "_28TC1EYm0jlWPjyk89xXCL",
-        WhitelistNumber: "IY3dF3eWXX1OmE8oYcQKp",
-        Disabled: "_2VzE-3UQEHXyAext8t7gLW",
-        Grabbing: "_1vSZ5gJndAOamRhVGni8HG",
-        DragActive: "_31uDZXKZQlYMd8FK9xdaJb",
-        Dropped: "_3bfDVSvzMDkk4s1j0Vw8jI",
-        JumpToSection: "oABTo2lkoYYI5YMYaeq_Q",
-        BeingDragged: "_3y7I4DL9Hua5OhZ4HgcBB5",
-        DragGhost: "_61nYWo98IhSjR8PWtQX9O",
-        Grabbable: "riuelIz655g_IBddWfLQ-",
-        DisabledGrab: "_2K0C_m1AZvB6yeNaEXXjDD",
-        WhitelistAvatar: "_3DGjmH9KW9BAXsEYwH1WpE",
-        ButtonCtn: "_1hSqlvDTyj9P6eWTHXutUt",
-        DragHighlightContainer: "_2jRMC5JVSK6dsktYus9Gjf",
-        DragHighlight: "Y9ryg1Npznt3dpkr7BGp1",
+        StoreItemCtn: "_2SxhiHrQSCtBnKf3oKdon2",
+        StoreItemRow: "_3cBgZqhPaJpdeZl8hARr1o",
+        StoreItemDescription: "_2pkGLftA9XILpaWN0kejPk",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        StoreItemCtn: "_2SxhiHrQSCtBnKf3oKdon2",
-        StoreItemRow: "_3cBgZqhPaJpdeZl8hARr1o",
-        StoreItemDescription: "_2pkGLftA9XILpaWN0kejPk",
+        Details: "_8DSX9d1ihrMSeZUFC9elD",
+        Summary: "_1FCh_hPFNuwj9vrVDMOvMC",
+        FeatureList: "TwihVkmmqI5XLg6P4fpwF",
+        CategoryIcon: "_1GkKPFI1K10GLg9538MMAF",
+        FeatureNameContainer: "_3sRe2CGQBgablPBz9Bc9c2",
+        GroupLabel: "_2079QFhY02KJ4KxGMltDNJ",
+        FeatureGroupItems: "_2WWlH-JTbq_f1PEyooC78U",
+        InfoRow: "_1RmibngWLogcFmO93kGFgq",
+        FeatureName: "ny6hWVK6ii05H200KRhds",
+        ImageContainer: "_29jQMo9DGCmcSKyDIC3V7M",
+        InfoLink: "_2xmH7agKi37v9kwFHi093S",
       };
     },
     chunkid: (module) => {
@@ -866,7 +899,7 @@
           _ = _ || _,
           _ = _ || _ || _,
           _ = !(_ || !_ || (_ && _ == _)),
-          _ = _?.eState == _._.k_EPriceProposalStateApproved,
+          _ = 4 == _?.eState,
           _ = (0, _._)(
             _().PriceCell,
             _ && _().USD,
@@ -1153,7 +1186,7 @@
             const _ = (0, _._)(_, _),
               _ = (0, _._)(_.ExtraAssetImg, _ && _.Selected);
             _ =
-              _.usage == _._.Video
+              1 == _.usage
                 ? _.createElement("video", {
                     key: _,
                     className: _,
@@ -1797,7 +1830,7 @@
         _.useEffect(() => {
           const _ = (_) => ({
             baseFilename: (0, _._)(_),
-            languages: (0, _._)(_) ? [_._.k_Lang_English] : (0, _._)(_),
+            languages: (0, _._)(_) ? [0] : (0, _._)(_),
           });
           _.SetExistingAssetGroups(_.map(_), _),
             _.SetOnlyAssetGroup(_ ? _(_) : null);
@@ -1856,12 +1889,10 @@
         return (
           _.useEffect(() => {
             const _ = _.map(async (_) => {
-              let _ = (0, _._)(_, !1, _._.k_Lang_None);
+              let _ = (0, _._)(_, !1, -1);
               return (
-                _ || (_ = (0, _._)(_, !0, _._.k_Lang_None)),
-                (0, _._)(
-                  await (0, _._)((0, _._)(_?.url, _), _?.usage == _._.Video),
-                )
+                _ || (_ = (0, _._)(_, !0, -1)),
+                (0, _._)(await (0, _._)((0, _._)(_?.url, _), 1 == _?.usage))
               );
             });
             Promise.all(_).then(__webpack_require__);
@@ -1887,10 +1918,7 @@
           const _ = (0, _._)(_, !1);
           _ = _ ? [_] : [];
         } else {
-          const _ =
-              _ == _._.k_Lang_SteamChina_SChinese
-                ? _._.k_Lang_Simplified_Chinese
-                : _._.k_Lang_English,
+          const _ = 29 == _ ? 6 : 0,
             _ = (0, _._)(_).sort((_, _) =>
               (function (_, _, _, _) {
                 if (null != _) {
@@ -2021,7 +2049,7 @@
                 className: _.StackedImageCtn,
               },
               _.map((_, _) =>
-                _.usage == _._.Video
+                1 == _.usage
                   ? _.createElement("video", {
                       key: _.url + _,
                       className: (0, _._)(_.StackedImage, _[`Image-${_}`]),
@@ -2076,7 +2104,7 @@
                   _.append("name", (0, _._)(_)),
                   (0, _._)(_) &&
                     null != __webpack_require__ &&
-                    __webpack_require__ != _._.k_Lang_None &&
+                    -1 != __webpack_require__ &&
                     _.append("lang", (0, _._)(__webpack_require__));
                 const _ = await fetch(_, {
                     method: "post",
@@ -2138,7 +2166,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2256,9 +2283,7 @@
             return _.find((_) => _.sKey == this.m_rgCurrentImageOptionKey);
           }
           const _ = _.find(
-            (_) =>
-              _.groupName ==
-              (0, _._)(this.filename, _._.k_Lang_None).baseFilename,
+            (_) => _.groupName == (0, _._)(this.filename, -1).baseFilename,
           );
           return _ || (1 == _.length ? _[0] : void 0);
         }
@@ -2277,12 +2302,12 @@
         }
         IsFileTypeSupported(_) {
           switch (_) {
-            case _._.k_EClanImageFileType_JPEG:
-            case _._.k_EClanImageFileType_PNG:
-            case _._.k_EClanImageFileType_WEBP:
-            case _._.k_EClanImageFileType_GIF:
-            case _._.k_EClanImageFileType_MP4:
-            case _._.k_EClanImageFileType_WEBM:
+            case 1:
+            case 3:
+            case 10:
+            case 2:
+            case 4:
+            case 5:
               return !0;
             default:
               return !1;
@@ -2294,7 +2319,6 @@
         (0, _._)([_._], _.prototype, "SetCurrentImageOption", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2427,11 +2451,11 @@
                   try {
                     const _ = await Promise.race([_, _.promise]);
                     _.set(_.nRequestId, {
-                      bSuccess: _ == _._.k_EResultOK,
+                      bSuccess: 1 == _,
                       uploadImage: _,
                       strGroupName: _,
                       elErrorMessage:
-                        _ == _._.k_EResultOK
+                        1 == _
                           ? void 0
                           : (0, _._)("#MediaConvert_InternalError"),
                     });
@@ -2477,7 +2501,7 @@
                 );
               if (_)
                 for (const [_, _] of _._(_, _))
-                  if (_ != _._.k_EResultPending) {
+                  if (22 != _) {
                     const _ = _.get(_);
                     _.delete(_), _?.(_);
                   }
@@ -2621,7 +2645,7 @@
             _.append("request_id", _.toString()),
             _.append("name", _),
             _.append("asset_type", "extra_asset_v2"),
-            _ != _._.k_Lang_None && _.append("language", (0, _._)(_));
+            -1 != _ && _.append("language", (0, _._)(_));
           const _ = await this.MakePost(
             this.m_urls.strCompleteConvert,
             _,
@@ -2709,7 +2733,7 @@
               _.push(
                 _(
                   this.m_onlyAssetGroup.baseFilename,
-                  _.language ?? _._.k_Lang_English,
+                  _.language ?? 0,
                   !0,
                   _.width,
                   _.height,
@@ -2719,20 +2743,8 @@
             else {
               const _ = (0, _._)(_.filename).baseFilename,
                 _ = __webpack_require__.GetCurrentImageOptionKey() ?? _;
-              _.push(
-                _(
-                  _,
-                  _.language ?? _._.k_Lang_English,
-                  !0,
-                  _.width,
-                  _.height,
-                  _.file.size,
-                ),
-              ),
-                _ != _ &&
-                  _.push(
-                    _(_, _._.k_Lang_None, !0, _.width, _.height, _.file.size),
-                  );
+              _.push(_(_, _.language ?? 0, !0, _.width, _.height, _.file.size)),
+                _ != _ && _.push(_(_, -1, !0, _.width, _.height, _.file.size));
             }
           let _ = this.m_rgExistingAssetGroups ?? [],
             _ = this.m_rgImageSizes ?? [];
@@ -2759,7 +2771,7 @@
             }, new Map()),
             _ = [];
           for (const _ of _.keys()) {
-            const _ = _.get(_).filter((_) => _.language != _._.k_Lang_None),
+            const _ = _.get(_).filter((_) => -1 != _.language),
               _ = new Set(_.map((_) => _.language)).size,
               _ =
                 _ > 1
@@ -2840,10 +2852,8 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _ && !_(_);
@@ -2881,37 +2891,32 @@
         switch (_) {
           case "mp4":
           case "webm":
-            return _.Video;
+            return 1;
         }
-        return _.Image;
+        return 0;
       }
-      function _(_, _ = _._.k_Lang_English, __webpack_require__ = 0) {
+      function _(_, _ = 0, __webpack_require__ = 0) {
         const _ = _(_, !1, _);
         return _ ? (0, _._)(_.url, __webpack_require__) : null;
       }
-      function _(_, _, __webpack_require__ = _._.k_Lang_English) {
+      function _(_, _, __webpack_require__ = 0) {
         if (!_) return;
         if (_(_))
           return {
             url: _.url,
-            usage: _.Image,
+            usage: 0,
           };
         const _ = (function (_, _) {
           if (!_ || 0 == Object.keys(_).length) return null;
           if (1 == Object.keys(_).length) return Object.values(_)._(0);
           let _ = _[(0, _._)(_)];
           if (_) return _;
-          const _ =
-            _ == _._.k_Lang_SteamChina_SChinese
-              ? _._.k_Lang_Simplified_Chinese
-              : _._.k_Lang_English;
-          return (
-            (_ = _[(0, _._)(_)]), _ || (_ == _._.k_Lang_None ? _[0] : null)
-          );
+          const _ = 29 == _ ? 6 : 0;
+          return (_ = _[(0, _._)(_)]), _ || (-1 == _ ? _[0] : null);
         })(_.images, __webpack_require__);
         return _ ? _(_, _) : null;
       }
-      function _(_, _ = _._.k_Lang_English) {
+      function _(_, _ = 0) {
         if (!_) return;
         if (_(_)) return _.name;
         const _ = _.alt_text?.[(0, _._)(_)];
@@ -2932,9 +2937,6 @@
       function _(_) {
         return `{STEAM_APP_IMAGE}/extras/${_}`;
       }
-      !(function (_) {
-        (_[(_.Image = 0)] = "Image"), (_[(_.Video = 1)] = "Video");
-      })(_ || (_ = {}));
       const _ =
         "image/png, image/jpeg, image/gif, image/webp, video/mp4, video/webm";
     },
@@ -3117,7 +3119,7 @@
       });
       function _() {
         const _ = _.useContext(_);
-        return (0, _._)(_?.strActiveLanguage, _._.k_Lang_English);
+        return (0, _._)(_?.strActiveLanguage, 0);
       }
       function _(_) {
         const {
@@ -3126,7 +3128,7 @@
             rctLanguageSelect: _,
             setActiveLanguage: _,
           } = _(_, [], null, null),
-          _ = (0, _._)(_, _._.k_Lang_English);
+          _ = (0, _._)(_, 0);
         return (
           _.useEffect(() => {
             _._.Get().SetCurEditLanguage(_);
@@ -6275,12 +6277,12 @@
           { file: _, onCancel: _ } = _,
           { rgExtraAssets: _, regexInvalidFilenameCharacters: _ } = _(),
           _ = _.useCallback((_) => _?.replace(_, "_").toLowerCase() ?? "", [_]),
-          { baseFilename: _, language: _ } = (0, _._)(_.name, _._.k_Lang_None),
+          { baseFilename: _, language: _ } = (0, _._)(_.name, -1),
           [_, _] = _.useState(() => _(_)),
           _ = _.useMemo(() => _(_), [_, _]),
           _ = (0, _._)(_.languages),
           _ = (function (_, _, _) {
-            return 1 == _?.length ? _[0] : _ != _._.k_Lang_None ? _ : _;
+            return 1 == _?.length ? _[0] : -1 != _ ? _ : _;
           })(
             _.map((_) => _.data),
             _,
@@ -6423,7 +6425,7 @@
                 _.createElement("img", {
                   src:
                     "name" in _
-                      ? (0, _._)(_, _._.k_Lang_English, _)
+                      ? (0, _._)(_, 0, _)
                       : (0, _._)((0, _._)(_, !1)?.url, _),
                   className: _.ImgPreview,
                 }),
@@ -6663,7 +6665,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
@@ -6801,7 +6802,7 @@
         if (__webpack_require__ && _ && _ && _) {
           const _ = _.createElement(_.pcV, {
               className: _.SmallerSVG,
-              controllerType: _._.k_eControllerType_PS4Controller,
+              controllerType: 34,
               partial: !_,
               role: "presentation",
             }),
@@ -6820,7 +6821,7 @@
           if (__webpack_require__) {
             const _ = _.createElement(_.pcV, {
               className: _.SmallerSVG,
-              controllerType: _._.k_eControllerType_PS4Controller,
+              controllerType: 34,
               partial: !_,
               role: "presentation",
             });
@@ -6851,7 +6852,7 @@
           if (_) {
             const _ = _.createElement(_.pcV, {
               className: _.SmallerSVG,
-              controllerType: _._.k_eControllerType_PS5Controller,
+              controllerType: 45,
               partial: !_,
               role: "presentation",
             });
@@ -6901,7 +6902,7 @@
               _.createElement(_, {
                 tagImage: _.createElement(_.pcV, {
                   className: _.SmallerSVG,
-                  controllerType: _._.k_eControllerType_XBoxOneController,
+                  controllerType: 32,
                   partial: !_,
                   role: "presentation",
                 }),
@@ -8541,7 +8542,7 @@
           _ = (0, _._)(_, _),
           _ = (0, _.useMemo)(
             () =>
-              _ != _._.k_EStoreItemCacheState_Loading && _
+              1 != _ && _
                 ? _.filter((_) => _ != _).map((_) => {
                     const _ = _._.Get().GetApp(_);
                     return {
@@ -8552,7 +8553,7 @@
                 : [],
             [_, _, _],
           );
-        return _ && _ != _._.k_EStoreItemCacheState_Loading
+        return _ && 1 != _
           ? _.createElement(
               "div",
               {
@@ -8959,7 +8960,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
@@ -9130,7 +9130,7 @@
                   _ = await _().get(_, {
                     params: _,
                   });
-                if (_?.data?.success != _._.k_EResultOK)
+                if (1 != _?.data?.success)
                   throw (
                     "Fail to load DLC list for appid " +
                     _ +
@@ -9146,7 +9146,7 @@
           _ = (0, _._)(_, _),
           _ = (0, _.useMemo)(
             () =>
-              _ != _._.k_EStoreItemCacheState_Loading && _
+              1 != _ && _
                 ? _.filter((_) => _ != _).map((_) => {
                     const _ = _._.Get().GetApp(_);
                     return {
@@ -9157,7 +9157,7 @@
                 : [],
             [_, _, _],
           );
-        return _ && _ != _._.k_EStoreItemCacheState_Loading
+        return _ && 1 != _
           ? _.createElement(
               "div",
               {
@@ -9190,7 +9190,6 @@
             });
       }
       var _,
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9320,9 +9319,8 @@
             onSelected: _,
             parentAppID: _,
           } = _,
-          _ = _._.k_EStoreItemType_App,
           [_, _] = _.useState(null),
-          [_] = (0, _._)(_?.appid, _, {
+          [_] = (0, _._)(_?.appid, 0, {
             include_basic_info: !0,
             include_assets: !0,
           }),
@@ -9359,7 +9357,7 @@
                     itemid: _,
                   });
                 },
-                itemType: _,
+                itemType: 0,
                 fnFilterID: (_) =>
                   -1 ==
                   __webpack_require__.findIndex((_) => parseInt(_.appid) == _),
@@ -9740,7 +9738,7 @@
               _ = await _().post(_, _, {
                 withCredentials: !0,
               });
-            if (200 == _.status && _.data?.success == _._.k_EResultOK)
+            if (200 == _.status && 1 == _.data?.success)
               return (
                 console.log(`Proposal for package ${_} successfully rejected`),
                 this.m_rgMapProposal.delete(_),
@@ -9774,7 +9772,7 @@
               _ = await _().post(_, _, {
                 withCredentials: !0,
               });
-            if (200 == _.status && _.data?.success == _._.k_EResultOK)
+            if (200 == _.status && 1 == _.data?.success)
               return (
                 console.log(
                   `Proposal for package ${_} successfully accepted`,
@@ -10711,1208 +10709,8 @@
               }),
             );
       }
-      var _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EHelpRequestType_Invalid = 0)] = "k_EHelpRequestType_Invalid"),
-          (_[(_.k_EHelpRequestType_RefundRequest = 1)] =
-            "k_EHelpRequestType_RefundRequest"),
-          (_[(_.k_EHelpRequestType_HelpMeFindMyGame = 3)] =
-            "k_EHelpRequestType_HelpMeFindMyGame"),
-          (_[(_.k_EHelpRequestType_HelpMeFindDLCOrBonusContent = 4)] =
-            "k_EHelpRequestType_HelpMeFindDLCOrBonusContent"),
-          (_[(_.k_EHelpRequestType_Remove2FA = 5)] =
-            "k_EHelpRequestType_Remove2FA"),
-          (_[(_.k_EHelpRequestType_RemoveMobileNumber = 6)] =
-            "k_EHelpRequestType_RemoveMobileNumber"),
-          (_[(_.k_EHelpRequestType_RedeemWalletCode = 7)] =
-            "k_EHelpRequestType_RedeemWalletCode"),
-          (_[(_.k_EHelpRequestType_HelpFixChargeback = 8)] =
-            "k_EHelpRequestType_HelpFixChargeback"),
-          (_[(_.k_EHelpRequestType_TroubleshootSteamController = 9)] =
-            "k_EHelpRequestType_TroubleshootSteamController"),
-          (_[(_.k_EHelpRequestType_TroubleshootSteamLink = 10)] =
-            "k_EHelpRequestType_TroubleshootSteamLink"),
-          (_[(_.k_EHelpRequestType_TroubleshootSteamVR = 11)] =
-            "k_EHelpRequestType_TroubleshootSteamVR"),
-          (_[(_.k_EHelpRequestType_LockedForFraud = 12)] =
-            "k_EHelpRequestType_LockedForFraud"),
-          (_[(_.k_EHelpRequestType_RemoveFamilyPIN = 13)] =
-            "k_EHelpRequestType_RemoveFamilyPIN"),
-          (_[(_.k_EHelpRequestType_HelpResetPassword = 14)] =
-            "k_EHelpRequestType_HelpResetPassword"),
-          (_[(_.k_EHelpRequestType_HelpRedeemCDKey = 15)] =
-            "k_EHelpRequestType_HelpRedeemCDKey"),
-          (_[(_.k_EHelpRequestType_HelpGameCannotInstall = 16)] =
-            "k_EHelpRequestType_HelpGameCannotInstall"),
-          (_[(_.k_EHelpRequestType_HelpGameCannotStart = 17)] =
-            "k_EHelpRequestType_HelpGameCannotStart"),
-          (_[(_.k_EHelpRequestType_HelpGameInGameProblem = 18)] =
-            "k_EHelpRequestType_HelpGameInGameProblem"),
-          (_[(_.k_EHelpRequestType_FixUnknownCharge = 19)] =
-            "k_EHelpRequestType_FixUnknownCharge"),
-          (_[(_.k_EHelpRequestType_PurchasingRestricted = 20)] =
-            "k_EHelpRequestType_PurchasingRestricted"),
-          (_[(_.k_EHelpRequestType_CannotSignInClient = 21)] =
-            "k_EHelpRequestType_CannotSignInClient"),
-          (_[(_.k_EHelpRequestType_ClientCrash = 22)] =
-            "k_EHelpRequestType_ClientCrash"),
-          (_[(_.k_EHelpRequestType_SteamFeature_Community = 23)] =
-            "k_EHelpRequestType_SteamFeature_Community"),
-          (_[(_.k_EHelpRequestType_SteamFeature_BigPicture = 24)] =
-            "k_EHelpRequestType_SteamFeature_BigPicture"),
-          (_[(_.k_EHelpRequestType_SteamFeature_FamilySharing = 25)] =
-            "k_EHelpRequestType_SteamFeature_FamilySharing"),
-          (_[(_.k_EHelpRequestType_SteamFeature_FamilyView = 26)] =
-            "k_EHelpRequestType_SteamFeature_FamilyView"),
-          (_[(_.k_EHelpRequestType_SteamFeature_OfflineMode = 27)] =
-            "k_EHelpRequestType_SteamFeature_OfflineMode"),
-          (_[(_.k_EHelpRequestType_SteamFeature_Broadcasting = 28)] =
-            "k_EHelpRequestType_SteamFeature_Broadcasting"),
-          (_[(_.k_EHelpRequestType_SteamFeature_Workshop = 29)] =
-            "k_EHelpRequestType_SteamFeature_Workshop"),
-          (_[(_.k_EHelpRequestType_SteamFeature_SteamGuard = 30)] =
-            "k_EHelpRequestType_SteamFeature_SteamGuard"),
-          (_[(_.k_EHelpRequestType_SteamFeature_MobileAuthenticator = 31)] =
-            "k_EHelpRequestType_SteamFeature_MobileAuthenticator"),
-          (_[(_.k_EHelpRequestType_Account_SteamGuard_NotReceivingCode = 32)] =
-            "k_EHelpRequestType_Account_SteamGuard_NotReceivingCode"),
-          (_[(_.k_EHelpRequestType_SteamFeature_HelpWithTrading = 33)] =
-            "k_EHelpRequestType_SteamFeature_HelpWithTrading"),
-          (_[(_.k_EHelpRequestType_SteamFeature_HelpWithItem = 34)] =
-            "k_EHelpRequestType_SteamFeature_HelpWithItem"),
-          (_[(_.k_EHelpRequestType_StolenAccount = 35)] =
-            "k_EHelpRequestType_StolenAccount"),
-          (_[(_.k_EHelpRequestType_SteamFeature_Market_TaxForm = 36)] =
-            "k_EHelpRequestType_SteamFeature_Market_TaxForm"),
-          (_[(_.k_EHelpRequestType_HelpResolvePurchaseIssue = 37)] =
-            "k_EHelpRequestType_HelpResolvePurchaseIssue"),
-          (_[(_.k_EHelpRequestType_HelpChangeEmail = 38)] =
-            "k_EHelpRequestType_HelpChangeEmail"),
-          (_[(_.k_EHelpRequestType_HelpCompletePurchase = 39)] =
-            "k_EHelpRequestType_HelpCompletePurchase"),
-          (_[(_.k_EHelpRequestType_AccountLock_SelfLocked = 40)] =
-            "k_EHelpRequestType_AccountLock_SelfLocked"),
-          (_[(_.k_EHelpRequestType_AccountLock_SuspectedHijack = 41)] =
-            "k_EHelpRequestType_AccountLock_SuspectedHijack"),
-          (_[(_.k_EHelpRequestType_HardwareAccessory = 42)] =
-            "k_EHelpRequestType_HardwareAccessory"),
-          (_[(_.k_EHelpRequestType_ParentContactForm = 43)] =
-            "k_EHelpRequestType_ParentContactForm"),
-          (_[(_.k_EHelpRequestType_StoreCountryIncorrect = 44)] =
-            "k_EHelpRequestType_StoreCountryIncorrect"),
-          (_[(_.k_EHelpRequestType_DeleteMyAccount = 45)] =
-            "k_EHelpRequestType_DeleteMyAccount"),
-          (_[(_.k_EHelpRequestType_ValveStoreMerchandise = 46)] =
-            "k_EHelpRequestType_ValveStoreMerchandise"),
-          (_[(_.k_EHelpRequestType_HardwarePurchase = 47)] =
-            "k_EHelpRequestType_HardwarePurchase"),
-          (_[(_.k_EHelpRequestType_VacOrInGameBan = 48)] =
-            "k_EHelpRequestType_VacOrInGameBan"),
-          (_[(_.k_EHelpRequestType_ContentCountryRestriction = 49)] =
-            "k_EHelpRequestType_ContentCountryRestriction"),
-          (_[(_.k_EHelpRequestType_GameCooldown = 50)] =
-            "k_EHelpRequestType_GameCooldown"),
-          (_[(_.k_EHelpRequestType_Publishing_ManagingMyApp = 51)] =
-            "k_EHelpRequestType_Publishing_ManagingMyApp"),
-          (_[(_.k_EHelpRequestType_Publishing_ReleasingMyApp = 52)] =
-            "k_EHelpRequestType_Publishing_ReleasingMyApp"),
-          (_[
-            (_.k_EHelpRequestType_Publishing_ManagingMySteamworksAccount = 53)
-          ] = "k_EHelpRequestType_Publishing_ManagingMySteamworksAccount"),
-          (_[(_.k_EHelpRequestType_Publishing_PaymentsAndTaxes = 54)] =
-            "k_EHelpRequestType_Publishing_PaymentsAndTaxes"),
-          (_[(_.k_EHelpRequestType_Publishing_ManagingMyStorePage = 55)] =
-            "k_EHelpRequestType_Publishing_ManagingMyStorePage"),
-          (_[(_.k_EHelpRequestType_Publishing_NotAffiliated = 56)] =
-            "k_EHelpRequestType_Publishing_NotAffiliated"),
-          (_[(_.k_EHelpRequestType_Publishing_StreamingVideo = 57)] =
-            "k_EHelpRequestType_Publishing_StreamingVideo"),
-          (_[(_.k_EHelpRequestType_Publishing_SteamKeys = 58)] =
-            "k_EHelpRequestType_Publishing_SteamKeys"),
-          (_[(_.k_EHelpRequestType_Publishing_SteamSales = 59)] =
-            "k_EHelpRequestType_Publishing_SteamSales"),
-          (_[(_.k_EHelpRequestType_ReviewMyContent = 60)] =
-            "k_EHelpRequestType_ReviewMyContent"),
-          (_[(_.k_EHelpRequestType_ReviewMyForumBan = 61)] =
-            "k_EHelpRequestType_ReviewMyForumBan"),
-          (_[(_.k_EHelpRequestType_AccountDataQuestion = 62)] =
-            "k_EHelpRequestType_AccountDataQuestion"),
-          (_[(_.k_EHelpRequestType_Publishing_SiteLicense = 63)] =
-            "k_EHelpRequestType_Publishing_SiteLicense"),
-          (_[(_.k_EHelpRequestType_SteamCommunity_Group = 64)] =
-            "k_EHelpRequestType_SteamCommunity_Group"),
-          (_[(_.k_EHelpRequestType_SteamCommunity_Profile = 65)] =
-            "k_EHelpRequestType_SteamCommunity_Profile"),
-          (_[(_.k_EHelpRequestType_SteamCommunity_Discussions = 66)] =
-            "k_EHelpRequestType_SteamCommunity_Discussions"),
-          (_[(_.k_EHelpRequestType_SteamCommunity_Chat = 67)] =
-            "k_EHelpRequestType_SteamCommunity_Chat"),
-          (_[(_.k_EHelpRequestType_SteamFeature_Cloud = 68)] =
-            "k_EHelpRequestType_SteamFeature_Cloud"),
-          (_[(_.k_EHelpRequestType_Publishing_Moderation = 69)] =
-            "k_EHelpRequestType_Publishing_Moderation"),
-          (_[(_.k_EHelpRequestType_Publishing_BuildReview = 70)] =
-            "k_EHelpRequestType_Publishing_BuildReview"),
-          (_[(_.k_EHelpRequestType_Publishing_StorePageReview = 71)] =
-            "k_EHelpRequestType_Publishing_StorePageReview"),
-          (_[(_.k_EHelpRequestType_SteamCommunity_MobileChat = 72)] =
-            "k_EHelpRequestType_SteamCommunity_MobileChat"),
-          (_[(_.k_EHelpRequestType_SteamFeature_ItemBug = 73)] =
-            "k_EHelpRequestType_SteamFeature_ItemBug"),
-          (_[(_.k_EHelpRequestType_SteamFeature_SteamSaleEvents = 74)] =
-            "k_EHelpRequestType_SteamFeature_SteamSaleEvents"),
-          (_[(_.k_EHelpRequestType_ShippingIssue = 75)] =
-            "k_EHelpRequestType_ShippingIssue"),
-          (_[(_.k_EHelpRequestType_SteamFeature_SteamRewards = 76)] =
-            "k_EHelpRequestType_SteamFeature_SteamRewards"),
-          (_[(_.k_EHelpRequestType_Publishing_SteamChinaBuildReview = 77)] =
-            "k_EHelpRequestType_Publishing_SteamChinaBuildReview"),
-          (_[(_.k_EHelpRequestType_Publishing_SteamChinaStorePageReview = 78)] =
-            "k_EHelpRequestType_Publishing_SteamChinaStorePageReview"),
-          (_[(_.k_EHelpRequestType_DeleteSteamChinaAccount = 79)] =
-            "k_EHelpRequestType_DeleteSteamChinaAccount"),
-          (_[(_.k_EHelpRequestType_Publishing_EventRegistration = 80)] =
-            "k_EHelpRequestType_Publishing_EventRegistration"),
-          (_[(_.k_EHelpRequestType_TroubleshootSteamDeck = 81)] =
-            "k_EHelpRequestType_TroubleshootSteamDeck"),
-          (_[(_.k_EHelpRequestType_Publishing_SteamworksSite = 82)] =
-            "k_EHelpRequestType_Publishing_SteamworksSite"),
-          (_[(_.k_EHelpRequestType_Publishing_SteamworksAPI = 83)] =
-            "k_EHelpRequestType_Publishing_SteamworksAPI"),
-          (_[(_.k_EHelpRequestType_Publishing_TechnicalIssues = 84)] =
-            "k_EHelpRequestType_Publishing_TechnicalIssues"),
-          (_[(_.k_EHelpRequestType_Publishing_EventRegistrationGeneric = 85)] =
-            "k_EHelpRequestType_Publishing_EventRegistrationGeneric"),
-          (_[
-            (_.k_EHelpRequestType_Publishing_SteamDeckCompatibilityReview = 86)
-          ] = "k_EHelpRequestType_Publishing_SteamDeckCompatibilityReview"),
-          (_[(_.k_EHelpRequestType_Publishing_SteamDeckTwitter = 87)] =
-            "k_EHelpRequestType_Publishing_SteamDeckTwitter"),
-          (_[(_.k_EHelpRequestType_Publishing_EventCreation = 88)] =
-            "k_EHelpRequestType_Publishing_EventCreation"),
-          (_[(_.k_EHelpRequestType_GenericLegalSupport = 89)] =
-            "k_EHelpRequestType_GenericLegalSupport"),
-          (_[(_.k_EHelpRequestType_NintendoSwitch_Billing = 90)] =
-            "k_EHelpRequestType_NintendoSwitch_Billing"),
-          (_[(_.k_EHelpRequestType_NintendoSwitch_Technical = 91)] =
-            "k_EHelpRequestType_NintendoSwitch_Technical"),
-          (_[(_.k_EHelpRequestType_NintendoSwitch_Generic = 92)] =
-            "k_EHelpRequestType_NintendoSwitch_Generic"),
-          (_[(_.k_EHelpRequestType_ShippingDelay = 93)] =
-            "k_EHelpRequestType_ShippingDelay"),
-          (_[(_.k_EHelpRequestType_Publishing_CommunityItemReview = 94)] =
-            "k_EHelpRequestType_Publishing_CommunityItemReview"),
-          (_[(_.k_EHelpRequestType_SteamDeckSale = 95)] =
-            "k_EHelpRequestType_SteamDeckSale"),
-          (_[(_.k_EHelpRequestType_Publishing_ReviewEarlyAccess = 96)] =
-            "k_EHelpRequestType_Publishing_ReviewEarlyAccess"),
-          (_[(_.k_EHelpRequestType_Publishing_SteamSalesPublishReview = 97)] =
-            "k_EHelpRequestType_Publishing_SteamSalesPublishReview"),
-          (_[(_.k_EHelpRequestType_SteamFeature_SteamFamilies = 98)] =
-            "k_EHelpRequestType_SteamFeature_SteamFamilies"),
-          (_[(_.k_EHelpRequestType_Publishing_WhitelistBuildChange = 99)] =
-            "k_EHelpRequestType_Publishing_WhitelistBuildChange"),
-          (_[(_.k_EHelpRequestType_Agent_Preapproval = 100)] =
-            "k_EHelpRequestType_Agent_Preapproval"),
-          (_[(_.k_EHelpRequestType_Publishing_DailyDeals = 101)] =
-            "k_EHelpRequestType_Publishing_DailyDeals"),
-          (_[(_.k_EHelpRequestType_Hardware_PendingCommunication = 102)] =
-            "k_EHelpRequestType_Hardware_PendingCommunication"),
-          (_[(_.k_EHelpRequestType_Hardware_SteamOS = 103)] =
-            "k_EHelpRequestType_Hardware_SteamOS"),
-          (_[
-            (_.k_EHelpRequestType_Publishing_MarketingMessageMajorUpdateReview = 104)
-          ] =
-            "k_EHelpRequestType_Publishing_MarketingMessageMajorUpdateReview");
-      })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHelpRequestState_Invalid = 0)] =
-            "k_EHelpRequestState_Invalid"),
-            (_[(_.k_EHelpRequestState_WaitingForAgent = 1)] =
-              "k_EHelpRequestState_WaitingForAgent"),
-            (_[(_.k_EHelpRequestState_WaitingForUser = 2)] =
-              "k_EHelpRequestState_WaitingForUser"),
-            (_[(_.k_EHelpRequestState_CanceledByUser = 3)] =
-              "k_EHelpRequestState_CanceledByUser"),
-            (_[(_.k_EHelpRequestState_Closed = 4)] =
-              "k_EHelpRequestState_Closed"),
-            (_[(_.k_EHelpRequestState_WaitingForBatchProcessor = 5)] =
-              "k_EHelpRequestState_WaitingForBatchProcessor");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHelpRequestReviewState_Assigned = 0)] =
-            "k_EHelpRequestReviewState_Assigned"),
-            (_[(_.k_EHelpRequestReviewState_OK = 1)] =
-              "k_EHelpRequestReviewState_OK"),
-            (_[(_.k_EHelpRequestReviewState_Mishandled = 2)] =
-              "k_EHelpRequestReviewState_Mishandled"),
-            (_[(_.k_EHelpRequestReviewState_Released = 3)] =
-              "k_EHelpRequestReviewState_Released"),
-            (_[(_.k_EHelpRequestReviewState_Expired = 4)] =
-              "k_EHelpRequestReviewState_Expired");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHelpRequestStatRollupInterval_Hour = 0)] =
-            "k_EHelpRequestStatRollupInterval_Hour"),
-            (_[(_.k_EHelpRequestStatRollupInterval_DayUTC = 1)] =
-              "k_EHelpRequestStatRollupInterval_DayUTC"),
-            (_[(_.k_EHelpRequestStatRollupInterval_DayLocal = 2)] =
-              "k_EHelpRequestStatRollupInterval_DayLocal");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHelpRequestStatsResponderType_Valve = 0)] =
-            "k_EHelpRequestStatsResponderType_Valve"),
-            (_[(_.k_EHelpRequestStatsResponderType_Blueprint = 1)] =
-              "k_EHelpRequestStatsResponderType_Blueprint"),
-            (_[(_.k_EHelpRequestStatsResponderType_Bot = 2)] =
-              "k_EHelpRequestStatsResponderType_Bot"),
-            (_[(_.k_EHelpRequestStatsResponderType_TaskUs = 3)] =
-              "k_EHelpRequestStatsResponderType_TaskUs"),
-            (_[(_.k_EHelpRequestStatsResponderType_Interaction = 4)] =
-              "k_EHelpRequestStatsResponderType_Interaction"),
-            (_[(_.k_EHelpRequestStatsResponderType_PerfectWorld = 5)] =
-              "k_EHelpRequestStatsResponderType_PerfectWorld"),
-            (_[(_.k_EHelpRequestStatsResponderType_Keywords = 6)] =
-              "k_EHelpRequestStatsResponderType_Keywords");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHelpIssue_Invalid = 0)] = "k_EHelpIssue_Invalid"),
-            (_[(_.k_EHelpIssue_Game_CannotFindInLibrary = 101)] =
-              "k_EHelpIssue_Game_CannotFindInLibrary"),
-            (_[(_.k_EHelpIssue_Game_WrongOS = 102)] =
-              "k_EHelpIssue_Game_WrongOS"),
-            (_[(_.k_EHelpIssue_Game_PurchasedTwice = 103)] =
-              "k_EHelpIssue_Game_PurchasedTwice"),
-            (_[(_.k_EHelpIssue_Game_MissingExtraCopy = 104)] =
-              "k_EHelpIssue_Game_MissingExtraCopy"),
-            (_[(_.k_EHelpIssue_Game_Payment = 105)] =
-              "k_EHelpIssue_Game_Payment"),
-            (_[(_.k_EHelpIssue_Game_GameplayOrTechnicalProblem = 106)] =
-              "k_EHelpIssue_Game_GameplayOrTechnicalProblem"),
-            (_[(_.k_EHelpIssue_Game_InGamePurchase = 107)] =
-              "k_EHelpIssue_Game_InGamePurchase"),
-            (_[(_.k_EHelpIssue_Game_NotWhatExpected = 108)] =
-              "k_EHelpIssue_Game_NotWhatExpected"),
-            (_[(_.k_EHelpIssue_Game_PurchasedByAccident = 109)] =
-              "k_EHelpIssue_Game_PurchasedByAccident"),
-            (_[(_.k_EHelpIssue_Game_Gameplay = 110)] =
-              "k_EHelpIssue_Game_Gameplay"),
-            (_[(_.k_EHelpIssue_Game_Technical = 111)] =
-              "k_EHelpIssue_Game_Technical"),
-            (_[(_.k_EHelpIssue_Game_Other = 112)] = "k_EHelpIssue_Game_Other"),
-            (_[(_.k_EHelpIssue_Game_Crashes = 113)] =
-              "k_EHelpIssue_Game_Crashes"),
-            (_[(_.k_EHelpIssue_Game_SystemRequirementsNotMet = 114)] =
-              "k_EHelpIssue_Game_SystemRequirementsNotMet"),
-            (_[(_.k_EHelpIssue_Game_NotFun = 115)] =
-              "k_EHelpIssue_Game_NotFun"),
-            (_[(_.k_EHelpIssue_Game_WillNotStart = 116)] =
-              "k_EHelpIssue_Game_WillNotStart"),
-            (_[(_.k_EHelpIssue_Game_NowAvailableCheaper = 117)] =
-              "k_EHelpIssue_Game_NowAvailableCheaper"),
-            (_[(_.k_EHelpIssue_Game_FrameRateTooLow = 118)] =
-              "k_EHelpIssue_Game_FrameRateTooLow"),
-            (_[(_.k_EHelpIssue_Game_GameplayDidNotMatchTrailer = 119)] =
-              "k_EHelpIssue_Game_GameplayDidNotMatchTrailer"),
-            (_[(_.k_EHelpIssue_Game_GameplayTooDifficult = 120)] =
-              "k_EHelpIssue_Game_GameplayTooDifficult"),
-            (_[(_.k_EHelpIssue_Game_MultiplayerDoesNotWork = 121)] =
-              "k_EHelpIssue_Game_MultiplayerDoesNotWork"),
-            (_[(_.k_EHelpIssue_Game_VACOrInGameBan = 122)] =
-              "k_EHelpIssue_Game_VACOrInGameBan"),
-            (_[(_.k_EHelpIssue_Game_PermanentlyRemove = 123)] =
-              "k_EHelpIssue_Game_PermanentlyRemove"),
-            (_[(_.k_EHelpIssue_Game_RetryFailedPurchase = 124)] =
-              "k_EHelpIssue_Game_RetryFailedPurchase"),
-            (_[(_.k_EHelpIssue_Game_MissingDLCOrBonusContent = 125)] =
-              "k_EHelpIssue_Game_MissingDLCOrBonusContent"),
-            (_[(_.k_EHelpIssue_Game_RevokedCDKey = 126)] =
-              "k_EHelpIssue_Game_RevokedCDKey"),
-            (_[(_.k_EHelpIssue_Game_RevokedGift = 127)] =
-              "k_EHelpIssue_Game_RevokedGift"),
-            (_[(_.k_EHelpIssue_Game_ManageAuthKeys = 128)] =
-              "k_EHelpIssue_Game_ManageAuthKeys"),
-            (_[(_.k_EHelpIssue_Game_TroubleWithCDKey = 129)] =
-              "k_EHelpIssue_Game_TroubleWithCDKey"),
-            (_[(_.k_EHelpIssue_Game_InGameItems = 130)] =
-              "k_EHelpIssue_Game_InGameItems"),
-            (_[(_.k_EHelpIssue_Game_Cooldown = 131)] =
-              "k_EHelpIssue_Game_Cooldown"),
-            (_[(_.k_EHelpIssue_Game_FamilySharingIssues = 132)] =
-              "k_EHelpIssue_Game_FamilySharingIssues"),
-            (_[(_.k_EHelpIssue_Game_IssueWithGameLauncher = 133)] =
-              "k_EHelpIssue_Game_IssueWithGameLauncher"),
-            (_[(_.k_EHelpIssue_Game_AccessibilityIssue = 134)] =
-              "k_EHelpIssue_Game_AccessibilityIssue"),
-            (_[(_.k_EHelpIssue_Purchase_ChargedWrongAmount = 201)] =
-              "k_EHelpIssue_Purchase_ChargedWrongAmount"),
-            (_[(_.k_EHelpIssue_Purchase_DoubleCharged = 202)] =
-              "k_EHelpIssue_Purchase_DoubleCharged"),
-            (_[(_.k_EHelpIssue_Purchase_Failed = 203)] =
-              "k_EHelpIssue_Purchase_Failed"),
-            (_[(_.k_EHelpIssue_Purchase_Pending = 204)] =
-              "k_EHelpIssue_Purchase_Pending"),
-            (_[(_.k_EHelpIssue_Purchase_Missing_Refund = 205)] =
-              "k_EHelpIssue_Purchase_Missing_Refund"),
-            (_[(_.k_EHelpIssue_Purchase_CantFindMicrotransaction = 206)] =
-              "k_EHelpIssue_Purchase_CantFindMicrotransaction"),
-            (_[(_.k_EHelpIssue_Purchase_ChargebackLock = 207)] =
-              "k_EHelpIssue_Purchase_ChargebackLock"),
-            (_[(_.k_EHelpIssue_Purchase_PurchasingRestricted = 208)] =
-              "k_EHelpIssue_Purchase_PurchasingRestricted"),
-            (_[(_.k_EHelpIssue_Purchase_UnknownCharges = 209)] =
-              "k_EHelpIssue_Purchase_UnknownCharges"),
-            (_[(_.k_EHelpIssue_Purchase_CannotCompleteMicrotransaction = 210)] =
-              "k_EHelpIssue_Purchase_CannotCompleteMicrotransaction"),
-            (_[(_.k_EHelpIssue_Purchase_CannotAddFundsToWallet = 211)] =
-              "k_EHelpIssue_Purchase_CannotAddFundsToWallet"),
-            (_[(_.k_EHelpIssue_Purchase_CannotCompleteGamePurchase = 212)] =
-              "k_EHelpIssue_Purchase_CannotCompleteGamePurchase"),
-            (_[(_.k_EHelpIssue_Purchase_OtherQuestionAboutPurchase = 213)] =
-              "k_EHelpIssue_Purchase_OtherQuestionAboutPurchase"),
-            (_[(_.k_EHelpIssue_Purchase_ParentContact = 214)] =
-              "k_EHelpIssue_Purchase_ParentContact"),
-            (_[(_.k_EHelpIssue_Purchase_StoreCountryIncorrect = 215)] =
-              "k_EHelpIssue_Purchase_StoreCountryIncorrect"),
-            (_[(_.k_EHelpIssue_Purchase_ValveStoreMerch = 216)] =
-              "k_EHelpIssue_Purchase_ValveStoreMerch"),
-            (_[(_.k_EHelpIssue_Purchase_TaxQuestions = 217)] =
-              "k_EHelpIssue_Purchase_TaxQuestions"),
-            (_[(_.k_EHelpIssue_Hardware_MissingComponents = 301)] =
-              "k_EHelpIssue_Hardware_MissingComponents"),
-            (_[(_.k_EHelpIssue_Hardware_Technical = 302)] =
-              "k_EHelpIssue_Hardware_Technical"),
-            (_[(_.k_EHelpIssue_Hardware_Broken = 303)] =
-              "k_EHelpIssue_Hardware_Broken"),
-            (_[(_.k_EHelpIssue_Hardware_Controller_Technical = 304)] =
-              "k_EHelpIssue_Hardware_Controller_Technical"),
-            (_[(_.k_EHelpIssue_Hardware_DoNotWant = 305)] =
-              "k_EHelpIssue_Hardware_DoNotWant"),
-            (_[(_.k_EHelpIssue_Hardware_Other = 306)] =
-              "k_EHelpIssue_Hardware_Other"),
-            (_[(_.k_EHelpIssue_Hardware_Purchase = 307)] =
-              "k_EHelpIssue_Hardware_Purchase"),
-            (_[(_.k_EHelpIssue_Hardware_QuestionAboutShipping = 308)] =
-              "k_EHelpIssue_Hardware_QuestionAboutShipping"),
-            (_[(_.k_EHelpIssue_SteamDeck_Generic = 320)] =
-              "k_EHelpIssue_SteamDeck_Generic"),
-            (_[(_.k_EHelpIssue_SteamDeck_SteamOS = 321)] =
-              "k_EHelpIssue_SteamDeck_SteamOS"),
-            (_[(_.k_EHelpIssue_SteamLink_Network = 350)] =
-              "k_EHelpIssue_SteamLink_Network"),
-            (_[(_.k_EHelpIssue_SteamLink_Display = 351)] =
-              "k_EHelpIssue_SteamLink_Display"),
-            (_[(_.k_EHelpIssue_SteamLink_Sound = 352)] =
-              "k_EHelpIssue_SteamLink_Sound"),
-            (_[(_.k_EHelpIssue_SteamLink_Input = 353)] =
-              "k_EHelpIssue_SteamLink_Input"),
-            (_[(_.k_EHelpIssue_SteamLink_Other = 354)] =
-              "k_EHelpIssue_SteamLink_Other"),
-            (_[(_.k_EHelpIssue_SteamLink_Generic = 355)] =
-              "k_EHelpIssue_SteamLink_Generic"),
-            (_[(_.k_EHelpIssue_SteamLink_App = 356)] =
-              "k_EHelpIssue_SteamLink_App"),
-            (_[(_.k_EHelpIssue_SteamController_Power = 360)] =
-              "k_EHelpIssue_SteamController_Power"),
-            (_[(_.k_EHelpIssue_SteamController_Input = 361)] =
-              "k_EHelpIssue_SteamController_Input"),
-            (_[(_.k_EHelpIssue_SteamController_Configurations = 362)] =
-              "k_EHelpIssue_SteamController_Configurations"),
-            (_[(_.k_EHelpIssue_SteamController_MissingParts = 363)] =
-              "k_EHelpIssue_SteamController_MissingParts"),
-            (_[(_.k_EHelpIssue_SteamController_Other = 364)] =
-              "k_EHelpIssue_SteamController_Other"),
-            (_[(_.k_EHelpIssue_SteamController_Generic = 365)] =
-              "k_EHelpIssue_SteamController_Generic"),
-            (_[(_.k_EHelpIssue_VR_Display = 370)] = "k_EHelpIssue_VR_Display"),
-            (_[(_.k_EHelpIssue_VR_DevicePairing = 371)] =
-              "k_EHelpIssue_VR_DevicePairing"),
-            (_[(_.k_EHelpIssue_VR_Sound = 372)] = "k_EHelpIssue_VR_Sound"),
-            (_[(_.k_EHelpIssue_VR_Tracking = 373)] =
-              "k_EHelpIssue_VR_Tracking"),
-            (_[(_.k_EHelpIssue_VR_ErrorMessages = 374)] =
-              "k_EHelpIssue_VR_ErrorMessages"),
-            (_[(_.k_EHelpIssue_VR_Other = 375)] = "k_EHelpIssue_VR_Other"),
-            (_[(_.k_EHelpIssue_VR_Generic = 376)] = "k_EHelpIssue_VR_Generic"),
-            (_[(_.k_EHelpIssue_SteamHardwareAccessory_Damaged = 380)] =
-              "k_EHelpIssue_SteamHardwareAccessory_Damaged"),
-            (_[(_.k_EHelpIssue_SteamHardwareAccessory_Other = 381)] =
-              "k_EHelpIssue_SteamHardwareAccessory_Other"),
-            (_[(_.k_EHelpIssue_Account_Lost2FARecoveryCode = 401)] =
-              "k_EHelpIssue_Account_Lost2FARecoveryCode"),
-            (_[(_.k_EHelpIssue_Account_LostOrBroken2FADevice = 402)] =
-              "k_EHelpIssue_Account_LostOrBroken2FADevice"),
-            (_[(_.k_EHelpIssue_Account_MobileNumberOutOfDate = 403)] =
-              "k_EHelpIssue_Account_MobileNumberOutOfDate"),
-            (_[(_.k_EHelpIssue_Account_FraudLock = 404)] =
-              "k_EHelpIssue_Account_FraudLock"),
-            (_[(_.k_EHelpIssue_Account_FamilyView = 405)] =
-              "k_EHelpIssue_Account_FamilyView"),
-            (_[(_.k_EHelpIssue_Account_ForgotPassword = 406)] =
-              "k_EHelpIssue_Account_ForgotPassword"),
-            (_[(_.k_EHelpIssue_Account_SteamGuard_NotReceivingCode = 407)] =
-              "k_EHelpIssue_Account_SteamGuard_NotReceivingCode"),
-            (_[(_.k_EHelpIssue_Account_Hijacked = 408)] =
-              "k_EHelpIssue_Account_Hijacked"),
-            (_[(_.k_EHelpIssue_Account_ChangeEmail = 409)] =
-              "k_EHelpIssue_Account_ChangeEmail"),
-            (_[(_.k_EHelpIssue_Account_MobileNumber = 410)] =
-              "k_EHelpIssue_Account_MobileNumber"),
-            (_[(_.k_EHelpIssue_Account_Locked_SelfLocked = 411)] =
-              "k_EHelpIssue_Account_Locked_SelfLocked"),
-            (_[(_.k_EHelpIssue_Account_Locked_SuspectedHijack = 412)] =
-              "k_EHelpIssue_Account_Locked_SuspectedHijack"),
-            (_[(_.k_EHelpIssue_Account_DeleteMyAccount = 413)] =
-              "k_EHelpIssue_Account_DeleteMyAccount"),
-            (_[(_.k_EHelpIssue_Account_ContentCountryRestriction = 414)] =
-              "k_EHelpIssue_Account_ContentCountryRestriction"),
-            (_[(_.k_EHelpIssue_Account_BannedContentAppeal = 415)] =
-              "k_EHelpIssue_Account_BannedContentAppeal"),
-            (_[(_.k_EHelpIssue_Account_BannedForumAppeal = 416)] =
-              "k_EHelpIssue_Account_BannedForumAppeal"),
-            (_[(_.k_EHelpIssue_Account_AccountDataQuestion = 417)] =
-              "k_EHelpIssue_Account_AccountDataQuestion"),
-            (_[(_.k_EHelpIssue_Account_DeleteSteamChinaAccount = 418)] =
-              "k_EHelpIssue_Account_DeleteSteamChinaAccount"),
-            (_[(_.k_EHelpIssue_Account_FamilyMemberRecovery = 419)] =
-              "k_EHelpIssue_Account_FamilyMemberRecovery"),
-            (_[(_.k_EHelpIssue_Wallet_DamagedWalletCode = 501)] =
-              "k_EHelpIssue_Wallet_DamagedWalletCode"),
-            (_[(_.k_EHelpIssue_CDKey_DuplicateKey = 601)] =
-              "k_EHelpIssue_CDKey_DuplicateKey"),
-            (_[(_.k_EHelpIssue_CDKey_InvalidKey = 602)] =
-              "k_EHelpIssue_CDKey_InvalidKey"),
-            (_[(_.k_EHelpIssue_CDKey_DamagedKey = 603)] =
-              "k_EHelpIssue_CDKey_DamagedKey"),
-            (_[(_.k_EHelpIssue_Technical_Install = 701)] =
-              "k_EHelpIssue_Technical_Install"),
-            (_[(_.k_EHelpIssue_Technical_GameLaunch = 702)] =
-              "k_EHelpIssue_Technical_GameLaunch"),
-            (_[(_.k_EHelpIssue_Technical_GameplayCrash = 703)] =
-              "k_EHelpIssue_Technical_GameplayCrash"),
-            (_[(_.k_EHelpIssue_Technical_Performance = 704)] =
-              "k_EHelpIssue_Technical_Performance"),
-            (_[(_.k_EHelpIssue_Technical_Other = 705)] =
-              "k_EHelpIssue_Technical_Other"),
-            (_[(_.k_EHelpIssue_Technical_Steam_CannotSignInToClient = 706)] =
-              "k_EHelpIssue_Technical_Steam_CannotSignInToClient"),
-            (_[(_.k_EHelpIssue_Technical_Steam_ClientCrash = 707)] =
-              "k_EHelpIssue_Technical_Steam_ClientCrash"),
-            (_[(_.k_EHelpIssue_Technical_Generic = 708)] =
-              "k_EHelpIssue_Technical_Generic"),
-            (_[(_.k_EHelpIssue_Technical_SteamPlay = 709)] =
-              "k_EHelpIssue_Technical_SteamPlay"),
-            (_[(_.k_EHelpIssue_SteamFeature_Community = 801)] =
-              "k_EHelpIssue_SteamFeature_Community"),
-            (_[(_.k_EHelpIssue_SteamFeature_BigPicture = 802)] =
-              "k_EHelpIssue_SteamFeature_BigPicture"),
-            (_[(_.k_EHelpIssue_SteamFeature_FamilySharing = 803)] =
-              "k_EHelpIssue_SteamFeature_FamilySharing"),
-            (_[(_.k_EHelpIssue_SteamFeature_FamilyView = 804)] =
-              "k_EHelpIssue_SteamFeature_FamilyView"),
-            (_[(_.k_EHelpIssue_SteamFeature_OfflineMode = 805)] =
-              "k_EHelpIssue_SteamFeature_OfflineMode"),
-            (_[(_.k_EHelpIssue_SteamFeature_Broadcasting = 806)] =
-              "k_EHelpIssue_SteamFeature_Broadcasting"),
-            (_[(_.k_EHelpIssue_SteamFeature_Workshop = 807)] =
-              "k_EHelpIssue_SteamFeature_Workshop"),
-            (_[(_.k_EHelpIssue_SteamFeature_SteamGuard = 808)] =
-              "k_EHelpIssue_SteamFeature_SteamGuard"),
-            (_[(_.k_EHelpIssue_SteamFeature_MobileAuthenticator = 809)] =
-              "k_EHelpIssue_SteamFeature_MobileAuthenticator"),
-            (_[(_.k_EHelpIssue_SteamFeature_CannotTrade = 810)] =
-              "k_EHelpIssue_SteamFeature_CannotTrade"),
-            (_[(_.k_EHelpIssue_SteamFeature_Market_TaxForm = 811)] =
-              "k_EHelpIssue_SteamFeature_Market_TaxForm"),
-            (_[(_.k_EHelpIssue_SteamFeature_Cloud = 812)] =
-              "k_EHelpIssue_SteamFeature_Cloud"),
-            (_[(_.k_EHelpIssue_SteamFeature_ItemBug = 813)] =
-              "k_EHelpIssue_SteamFeature_ItemBug"),
-            (_[(_.k_EHelpIssue_SteamFeature_SteamSaleEvents = 814)] =
-              "k_EHelpIssue_SteamFeature_SteamSaleEvents"),
-            (_[(_.k_EHelpIssue_SteamFeature_SteamRewards = 815)] =
-              "k_EHelpIssue_SteamFeature_SteamRewards"),
-            (_[(_.k_EHelpIssue_SteamFeature_SteamFamilies = 816)] =
-              "k_EHelpIssue_SteamFeature_SteamFamilies"),
-            (_[(_.k_EHelpIssue_Publishing_ManagingMyApp = 901)] =
-              "k_EHelpIssue_Publishing_ManagingMyApp"),
-            (_[(_.k_EHelpIssue_Publishing_ReleasingMyApp = 902)] =
-              "k_EHelpIssue_Publishing_ReleasingMyApp"),
-            (_[(_.k_EHelpIssue_Publishing_ManagingMySteamworksAccount = 903)] =
-              "k_EHelpIssue_Publishing_ManagingMySteamworksAccount"),
-            (_[(_.k_EHelpIssue_Publishing_PaymentsAndTaxes = 904)] =
-              "k_EHelpIssue_Publishing_PaymentsAndTaxes"),
-            (_[(_.k_EHelpIssue_Publishing_ManagingMyStorePage = 905)] =
-              "k_EHelpIssue_Publishing_ManagingMyStorePage"),
-            (_[(_.k_EHelpIssue_Publishing_SteamworksSDK = 906)] =
-              "k_EHelpIssue_Publishing_SteamworksSDK"),
-            (_[(_.k_EHelpIssue_Publishing_AppReview = 907)] =
-              "k_EHelpIssue_Publishing_AppReview"),
-            (_[(_.k_EHelpIssue_Publishing_GameLauncherFailure = 908)] =
-              "k_EHelpIssue_Publishing_GameLauncherFailure"),
-            (_[(_.k_EHelpIssue_Publishing_MissingLanguageDepot = 909)] =
-              "k_EHelpIssue_Publishing_MissingLanguageDepot"),
-            (_[(_.k_EHelpIssue_Publishing_DepotBuildFailure = 910)] =
-              "k_EHelpIssue_Publishing_DepotBuildFailure"),
-            (_[(_.k_EHelpIssue_Publishing_CustomerTax = 911)] =
-              "k_EHelpIssue_Publishing_CustomerTax"),
-            (_[(_.k_EHelpIssue_Publishing_IdentityVerificationWait = 912)] =
-              "k_EHelpIssue_Publishing_IdentityVerificationWait"),
-            (_[(_.k_EHelpIssue_Publishing_MissingPayment = 913)] =
-              "k_EHelpIssue_Publishing_MissingPayment"),
-            (_[(_.k_EHelpIssue_Publishing_RemoveAppFromStore = 914)] =
-              "k_EHelpIssue_Publishing_RemoveAppFromStore"),
-            (_[(_.k_EHelpIssue_Publishing_AppPaidToFree = 915)] =
-              "k_EHelpIssue_Publishing_AppPaidToFree"),
-            (_[(_.k_EHelpIssue_Publishing_TransferApp = 916)] =
-              "k_EHelpIssue_Publishing_TransferApp"),
-            (_[(_.k_EHelpIssue_Publishing_ChangeAppType = 917)] =
-              "k_EHelpIssue_Publishing_ChangeAppType"),
-            (_[(_.k_EHelpIssue_Publishing_AddActualAuthority = 918)] =
-              "k_EHelpIssue_Publishing_AddActualAuthority"),
-            (_[(_.k_EHelpIssue_Publishing_DiscountError = 919)] =
-              "k_EHelpIssue_Publishing_DiscountError"),
-            (_[(_.k_EHelpIssue_Publishing_RaisingMyPrice = 920)] =
-              "k_EHelpIssue_Publishing_RaisingMyPrice"),
-            (_[(_.k_EHelpIssue_Publishing_AppComingSoonToEarlyAccess = 921)] =
-              "k_EHelpIssue_Publishing_AppComingSoonToEarlyAccess"),
-            (_[(_.k_EHelpIssue_Publishing_StoreVisibility = 922)] =
-              "k_EHelpIssue_Publishing_StoreVisibility"),
-            (_[(_.k_EHelpIssue_Publishing_NotAffiliated = 923)] =
-              "k_EHelpIssue_Publishing_NotAffiliated"),
-            (_[(_.k_EHelpIssue_Publishing_StreamingVideo = 924)] =
-              "k_EHelpIssue_Publishing_StreamingVideo"),
-            (_[(_.k_EHelpIssue_Publishing_NonGameSoftware = 925)] =
-              "k_EHelpIssue_Publishing_NonGameSoftware"),
-            (_[(_.k_EHelpIssue_Publishing_SteamKeys = 926)] =
-              "k_EHelpIssue_Publishing_SteamKeys"),
-            (_[(_.k_EHelpIssue_Publishing_SteamSales = 927)] =
-              "k_EHelpIssue_Publishing_SteamSales"),
-            (_[(_.k_EHelpIssue_Publishing_SiteLicense = 928)] =
-              "k_EHelpIssue_Publishing_SiteLicense"),
-            (_[(_.k_EHelpIssue_Publishing_ModerationAssistance = 929)] =
-              "k_EHelpIssue_Publishing_ModerationAssistance"),
-            (_[(_.k_EHelpIssue_Publishing_ReviewMyApp = 930)] =
-              "k_EHelpIssue_Publishing_ReviewMyApp"),
-            (_[(_.k_EHelpIssue_Publishing_ShareApp = 931)] =
-              "k_EHelpIssue_Publishing_ShareApp"),
-            (_[(_.k_EHelpIssue_Publishing_EventRegistration = 932)] =
-              "k_EHelpIssue_Publishing_EventRegistration"),
-            (_[(_.k_EHelpIssue_Publishing_EventRegistrationGeneric = 933)] =
-              "k_EHelpIssue_Publishing_EventRegistrationGeneric"),
-            (_[(_.k_EHelpIssue_Publishing_SteamworksSite = 934)] =
-              "k_EHelpIssue_Publishing_SteamworksSite"),
-            (_[(_.k_EHelpIssue_Publishing_SteamworksAPI = 935)] =
-              "k_EHelpIssue_Publishing_SteamworksAPI"),
-            (_[(_.k_EHelpIssue_Publishing_TechnicalIssues = 936)] =
-              "k_EHelpIssue_Publishing_TechnicalIssues"),
-            (_[(_.k_EHelpIssue_Publishing_SteamDeckTwitter = 937)] =
-              "k_EHelpIssue_Publishing_SteamDeckTwitter"),
-            (_[(_.k_EHelpIssue_Publishing_EventCreation = 938)] =
-              "k_EHelpIssue_Publishing_EventCreation"),
-            (_[(_.k_EHelpIssue_Publishing_GeneralPricing = 939)] =
-              "k_EHelpIssue_Publishing_GeneralPricing"),
-            (_[(_.k_EHelpIssue_Publishing_ReviewMyCommunityItems = 940)] =
-              "k_EHelpIssue_Publishing_ReviewMyCommunityItems"),
-            (_[(_.k_EHelpIssue_Publishing_ReviewEarlyAccess = 941)] =
-              "k_EHelpIssue_Publishing_ReviewEarlyAccess"),
-            (_[(_.k_EHelpIssue_Publishing_SteamSalesPublishReview = 942)] =
-              "k_EHelpIssue_Publishing_SteamSalesPublishReview"),
-            (_[
-              (_.k_EHelpIssue_Publishing_RecentSecurityEventBuildChange = 943)
-            ] = "k_EHelpIssue_Publishing_RecentSecurityEventBuildChange"),
-            (_[(_.k_EHelpIssue_Publishing_DailyDeals = 944)] =
-              "k_EHelpIssue_Publishing_DailyDeals"),
-            (_[
-              (_.k_EHelpIssue_Publishing_MarketingMessageMajorUpdateReview = 945)
-            ] = "k_EHelpIssue_Publishing_MarketingMessageMajorUpdateReview"),
-            (_[(_.k_EHelpIssue_SteamCommunity_Group = 1001)] =
-              "k_EHelpIssue_SteamCommunity_Group"),
-            (_[(_.k_EHelpIssue_SteamCommunity_Profile = 1002)] =
-              "k_EHelpIssue_SteamCommunity_Profile"),
-            (_[(_.k_EHelpIssue_SteamCommunity_Discussions = 1003)] =
-              "k_EHelpIssue_SteamCommunity_Discussions"),
-            (_[(_.k_EHelpIssue_SteamCommunity_Chat = 1004)] =
-              "k_EHelpIssue_SteamCommunity_Chat"),
-            (_[(_.k_EHelpIssue_SteamCommunity_MobileChat = 1005)] =
-              "k_EHelpIssue_SteamCommunity_MobileChat"),
-            (_[(_.k_EHelpIssue_GenericLegalForm = 1101)] =
-              "k_EHelpIssue_GenericLegalForm"),
-            (_[(_.k_EHelpIssue_NintendoSwitch_Billing = 1201)] =
-              "k_EHelpIssue_NintendoSwitch_Billing"),
-            (_[(_.k_EHelpIssue_NintendoSwitch_Technical = 1202)] =
-              "k_EHelpIssue_NintendoSwitch_Technical"),
-            (_[(_.k_EHelpIssue_NintendoSwitch_Generic = 1203)] =
-              "k_EHelpIssue_NintendoSwitch_Generic"),
-            (_[(_.k_EHelpIssue_AgentGeneric = 1500)] =
-              "k_EHelpIssue_AgentGeneric");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHelpRequestEscalationLevel_NotEscalated = 0)] =
-            "k_EHelpRequestEscalationLevel_NotEscalated"),
-            (_[(_.k_EHelpRequestEscalationLevel_Experienced = 1)] =
-              "k_EHelpRequestEscalationLevel_Experienced"),
-            (_[(_.k_EHelpRequestEscalationLevel_Expert = 2)] =
-              "k_EHelpRequestEscalationLevel_Expert"),
-            (_[(_.k_EHelpRequestEscalationLevel_Valve = 3)] =
-              "k_EHelpRequestEscalationLevel_Valve");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHelpRequestMsgType_Invalid = 0)] =
-            "k_EHelpRequestMsgType_Invalid"),
-            (_[(_.k_EHelpRequestMsgType_MsgFromUser = 1)] =
-              "k_EHelpRequestMsgType_MsgFromUser"),
-            (_[(_.k_EHelpRequestMsgType_MsgFromSteam = 2)] =
-              "k_EHelpRequestMsgType_MsgFromSteam"),
-            (_[(_.k_EHelpRequestMsgType_Note = 3)] =
-              "k_EHelpRequestMsgType_Note");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHelpRequestAction_Invalid = 0)] =
-            "k_EHelpRequestAction_Invalid"),
-            (_[(_.k_EHelpRequestAction_ChangeSupportAgent = 1)] =
-              "k_EHelpRequestAction_ChangeSupportAgent"),
-            (_[(_.k_EHelpRequestAction_ChangeState = 2)] =
-              "k_EHelpRequestAction_ChangeState"),
-            (_[(_.k_EHelpRequestAction_ChangeHelpRequestType = 3)] =
-              "k_EHelpRequestAction_ChangeHelpRequestType"),
-            (_[(_.k_EHelpRequestAction_ChangeHelpIssue = 4)] =
-              "k_EHelpRequestAction_ChangeHelpIssue"),
-            (_[(_.k_EHelpRequestAction_ElevatedTicket = 5)] =
-              "k_EHelpRequestAction_ElevatedTicket"),
-            (_[(_.k_EHelpRequestAction_EditedMessage = 6)] =
-              "k_EHelpRequestAction_EditedMessage"),
-            (_[(_.k_EHelpRequestAction_ClaimedByAgent = 7)] =
-              "k_EHelpRequestAction_ClaimedByAgent"),
-            (_[(_.k_EHelpRequestAction_MarkedAsHeld = 8)] =
-              "k_EHelpRequestAction_MarkedAsHeld"),
-            (_[(_.k_EHelpRequestAction_ChangeApp = 9)] =
-              "k_EHelpRequestAction_ChangeApp"),
-            (_[(_.k_EHelpRequestAction_UnassignedBySystem = 10)] =
-              "k_EHelpRequestAction_UnassignedBySystem"),
-            (_[(_.k_EHelpRequestAction_ChangedRelatedAccount = 11)] =
-              "k_EHelpRequestAction_ChangedRelatedAccount"),
-            (_[(_.k_EHelpRequestAction_ChangeLanguage = 12)] =
-              "k_EHelpRequestAction_ChangeLanguage"),
-            (_[(_.k_EHelpRequestAction_IssueHelpRequestCooldown = 13)] =
-              "k_EHelpRequestAction_IssueHelpRequestCooldown"),
-            (_[(_.k_EHelpRequestAction_ChangeRealm = 14)] =
-              "k_EHelpRequestAction_ChangeRealm"),
-            (_[(_.k_EHelpRequestAction_RespondedToRequest = 15)] =
-              "k_EHelpRequestAction_RespondedToRequest");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHelpRequestSort_TimeCreatedAsc = 0)] =
-            "k_EHelpRequestSort_TimeCreatedAsc"),
-            (_[(_.k_EHelpRequestSort_TimeCreatedDesc = 1)] =
-              "k_EHelpRequestSort_TimeCreatedDesc"),
-            (_[(_.k_EHelpRequestSort_TimeFirstResponseAsc = 2)] =
-              "k_EHelpRequestSort_TimeFirstResponseAsc"),
-            (_[(_.k_EHelpRequestSort_TimeFirstResponseDesc = 3)] =
-              "k_EHelpRequestSort_TimeFirstResponseDesc");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EHelpRequestPOPType_Invalid = 0)] =
-            "k_EHelpRequestPOPType_Invalid"),
-            (_[(_.k_EHelpRequestPOPType_Email = 1)] =
-              "k_EHelpRequestPOPType_Email"),
-            (_[(_.k_EHelpRequestPOPType_CreditCard = 2)] =
-              "k_EHelpRequestPOPType_CreditCard"),
-            (_[(_.k_EHelpRequestPOPType_PayPal = 3)] =
-              "k_EHelpRequestPOPType_PayPal"),
-            (_[(_.k_EHelpRequestPOPType_CDKey = 4)] =
-              "k_EHelpRequestPOPType_CDKey"),
-            (_[(_.k_EHelpRequestPOPType_Sofort = 5)] =
-              "k_EHelpRequestPOPType_Sofort"),
-            (_[(_.k_EHelpRequestPOPType_Webmoney = 6)] =
-              "k_EHelpRequestPOPType_Webmoney"),
-            (_[(_.k_EHelpRequestPOPType_Paysafe = 7)] =
-              "k_EHelpRequestPOPType_Paysafe"),
-            (_[(_.k_EHelpRequestPOPType_PerfectWorld = 8)] =
-              "k_EHelpRequestPOPType_PerfectWorld"),
-            (_[(_.k_EHelpRequestPOPType_Gift = 9)] =
-              "k_EHelpRequestPOPType_Gift"),
-            (_[(_.k_EHelpRequestPOPType_WalletCode = 10)] =
-              "k_EHelpRequestPOPType_WalletCode"),
-            (_[(_.k_EHelpRequestPOPType_Giropay = 11)] =
-              "k_EHelpRequestPOPType_Giropay"),
-            (_[(_.k_EHelpRequestPOPType_Ideal = 12)] =
-              "k_EHelpRequestPOPType_Ideal"),
-            (_[(_.k_EHelpRequestPOPType_Alipay = 13)] =
-              "k_EHelpRequestPOPType_Alipay"),
-            (_[(_.k_EHelpRequestPOPType_Yandex = 14)] =
-              "k_EHelpRequestPOPType_Yandex"),
-            (_[(_.k_EHelpRequestPOPType_QIWI = 15)] =
-              "k_EHelpRequestPOPType_QIWI"),
-            (_[(_.k_EHelpRequestPOPType_Kiosk = 16)] =
-              "k_EHelpRequestPOPType_Kiosk"),
-            (_[(_.k_EHelpRequestPOPType_BoaCompra = 17)] =
-              "k_EHelpRequestPOPType_BoaCompra"),
-            (_[(_.k_EHelpRequestPOPType_MoneyBookers = 18)] =
-              "k_EHelpRequestPOPType_MoneyBookers"),
-            (_[(_.k_EHelpRequestPOPType_Phone = 19)] =
-              "k_EHelpRequestPOPType_Phone"),
-            (_[(_.k_EHelpRequestPOPType_AccountName = 20)] =
-              "k_EHelpRequestPOPType_AccountName"),
-            (_[(_.k_EHelpRequestPOPType_WeChat = 21)] =
-              "k_EHelpRequestPOPType_WeChat"),
-            (_[(_.k_EHelpRequestPOPType_Konbini = 22)] =
-              "k_EHelpRequestPOPType_Konbini"),
-            (_[(_.k_EHelpRequestPOPType_Nodwin = 23)] =
-              "k_EHelpRequestPOPType_Nodwin"),
-            (_[(_.k_EHelpRequestPOPType_Przelewy = 24)] =
-              "k_EHelpRequestPOPType_Przelewy"),
-            (_[(_.k_EHelpRequestPOPType_SantanderRio = 25)] =
-              "k_EHelpRequestPOPType_SantanderRio"),
-            (_[(_.k_EHelpRequestPOPType_Rapipago = 26)] =
-              "k_EHelpRequestPOPType_Rapipago"),
-            (_[(_.k_EHelpRequestPOPType_Redpagos = 27)] =
-              "k_EHelpRequestPOPType_Redpagos"),
-            (_[(_.k_EHelpRequestPOPType_POLi = 28)] =
-              "k_EHelpRequestPOPType_POLi"),
-            (_[(_.k_EHelpRequestPOPType_PagoFacil = 29)] =
-              "k_EHelpRequestPOPType_PagoFacil"),
-            (_[(_.k_EHelpRequestPOPType_Happymoney = 30)] =
-              "k_EHelpRequestPOPType_Happymoney"),
-            (_[(_.k_EHelpRequestPOPType_CultureVoucher = 31)] =
-              "k_EHelpRequestPOPType_CultureVoucher"),
-            (_[(_.k_EHelpRequestPOPType_Toss = 32)] =
-              "k_EHelpRequestPOPType_Toss");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EAnnouncementPlacement_Invalid = 0)] =
-            "k_EAnnouncementPlacement_Invalid"),
-            (_[(_.k_EAnnouncementPlacement_FrontPage = 1)] =
-              "k_EAnnouncementPlacement_FrontPage"),
-            (_[(_.k_EAnnouncementPlacement_TicketDetails = 2)] =
-              "k_EAnnouncementPlacement_TicketDetails");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ETickerCategoryLanguageRule_Invalid = 0)] =
-            "k_ETickerCategoryLanguageRule_Invalid"),
-            (_[(_.k_ETickerCategoryLanguageRule_Normal = 1)] =
-              "k_ETickerCategoryLanguageRule_Normal"),
-            (_[(_.k_ETickerCategoryLanguageRule_NoDelay = 2)] =
-              "k_ETickerCategoryLanguageRule_NoDelay"),
-            (_[(_.k_ETickerCategoryLanguageRule_Escalate = 3)] =
-              "k_ETickerCategoryLanguageRule_Escalate");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EPreapprovalResolution_Invalid = 0)] =
-            "k_EPreapprovalResolution_Invalid"),
-            (_[(_.k_EPreapprovalResolution_Approved = 1)] =
-              "k_EPreapprovalResolution_Approved"),
-            (_[(_.k_EPreapprovalResolution_Denied = 2)] =
-              "k_EPreapprovalResolution_Denied"),
-            (_[(_.k_EPreapprovalResolution_UserCanceled = 3)] =
-              "k_EPreapprovalResolution_UserCanceled"),
-            (_[(_.k_EPreapprovalResolution_AutoClosed = 4)] =
-              "k_EPreapprovalResolution_AutoClosed");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EFeedbackCategory_POP = 0)] = "k_EFeedbackCategory_POP"),
-            (_[(_.k_EFeedbackCategory_QT = 1)] = "k_EFeedbackCategory_QT"),
-            (_[(_.k_EFeedbackCategory_TicketComprehension = 2)] =
-              "k_EFeedbackCategory_TicketComprehension"),
-            (_[(_.k_EFeedbackCategory_Escalation = 3)] =
-              "k_EFeedbackCategory_Escalation"),
-            (_[(_.k_EFeedbackCategory_IncorrectData = 4)] =
-              "k_EFeedbackCategory_IncorrectData"),
-            (_[(_.k_EFeedbackCategory_IncorrectProcedure = 5)] =
-              "k_EFeedbackCategory_IncorrectProcedure"),
-            (_[(_.k_EFeedbackCategory_Research = 6)] =
-              "k_EFeedbackCategory_Research"),
-            (_[(_.k_EFeedbackCategory_Language = 7)] =
-              "k_EFeedbackCategory_Language"),
-            (_[(_.k_EFeedbackCategory_NaturalLanguage = 8)] =
-              "k_EFeedbackCategory_NaturalLanguage"),
-            (_[(_.k_EFeedbackCategory_Contextualization = 9)] =
-              "k_EFeedbackCategory_Contextualization"),
-            (_[(_.k_EFeedbackCategory_Tone = 10)] = "k_EFeedbackCategory_Tone"),
-            (_[(_.k_EFeedbackCategory_Semantics = 11)] =
-              "k_EFeedbackCategory_Semantics"),
-            (_[(_.k_EFeedbackCategory_Max = 12)] = "k_EFeedbackCategory_Max");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EFeedbackTarget_Message = 0)] = "k_EFeedbackTarget_Message"),
-            (_[(_.k_EFeedbackTarget_Action = 1)] = "k_EFeedbackTarget_Action");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_EFeedbackStateNew = 0)] = "k_EFeedbackStateNew"),
-            (_[(_.k_EFeedbackStateWaitingForApproval = 1)] =
-              "k_EFeedbackStateWaitingForApproval"),
-            (_[(_.k_EFeedbackStateRejected = 2)] = "k_EFeedbackStateRejected"),
-            (_[(_.k_EFeedbackStateRejectionAcknowledged = 3)] =
-              "k_EFeedbackStateRejectionAcknowledged"),
-            (_[(_.k_EFeedbackStateApproved = 4)] = "k_EFeedbackStateApproved"),
-            (_[(_.k_EFeedbackStateViewed = 5)] = "k_EFeedbackStateViewed"),
-            (_[(_.k_EFeedbackStateApprovedForCoaching = 6)] =
-              "k_EFeedbackStateApprovedForCoaching");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ESupportActionSource_System = 0)] =
-            "k_ESupportActionSource_System"),
-            (_[(_.k_ESupportActionSource_Agent = 1)] =
-              "k_ESupportActionSource_Agent");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ERefundSupportAction_Invalid = 0)] =
-            "k_ERefundSupportAction_Invalid"),
-            (_[(_.k_ERefundSupportAction_IssuedRefund = 1)] =
-              "k_ERefundSupportAction_IssuedRefund"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_Playtime = 2)] =
-              "k_ERefundSupportAction_DeclineRefund_Playtime"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_PurchaseDate = 3)] =
-              "k_ERefundSupportAction_DeclineRefund_PurchaseDate"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_MustUseWallet = 4)] =
-              "k_ERefundSupportAction_DeclineRefund_MustUseWallet"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_Misuse = 5)] =
-              "k_ERefundSupportAction_DeclineRefund_Misuse"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_WalletCreditUsed = 6)] =
-              "k_ERefundSupportAction_DeclineRefund_WalletCreditUsed"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_ItemsConsumed = 7)] =
-              "k_ERefundSupportAction_DeclineRefund_ItemsConsumed"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_GiftRedeemed = 8)] =
-              "k_ERefundSupportAction_DeclineRefund_GiftRedeemed"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_AccountLocked = 9)] =
-              "k_ERefundSupportAction_DeclineRefund_AccountLocked"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_VACBan = 10)] =
-              "k_ERefundSupportAction_DeclineRefund_VACBan"),
-            (_[
-              (_.k_ERefundSupportAction_DeclineRefund_RefundAlreadyIssued = 11)
-            ] = "k_ERefundSupportAction_DeclineRefund_RefundAlreadyIssued"),
-            (_[
-              (_.k_ERefundSupportAction_DeclineRefund_AlreadyChargedback = 12)
-            ] = "k_ERefundSupportAction_DeclineRefund_AlreadyChargedback"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_Overuse = 13)] =
-              "k_ERefundSupportAction_DeclineRefund_Overuse"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_GameBan = 14)] =
-              "k_ERefundSupportAction_DeclineRefund_GameBan"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_NoDefectAU = 15)] =
-              "k_ERefundSupportAction_DeclineRefund_NoDefectAU"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_NeedMoreInfo = 16)] =
-              "k_ERefundSupportAction_DeclineRefund_NeedMoreInfo"),
-            (_[
-              (_.k_ERefundSupportAction_DeclineRefund_GiftResellerAbuse = 17)
-            ] = "k_ERefundSupportAction_DeclineRefund_GiftResellerAbuse"),
-            (_[
-              (_.k_ERefundSupportAction_DeclineRefund_BadReviewBehavior = 18)
-            ] = "k_ERefundSupportAction_DeclineRefund_BadReviewBehavior"),
-            (_[
-              (_.k_ERefundSupportAction_DeclineRefund_MasterSubDiscountUsed = 19)
-            ] = "k_ERefundSupportAction_DeclineRefund_MasterSubDiscountUsed"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_SubscriptionUsed = 20)] =
-              "k_ERefundSupportAction_DeclineRefund_SubscriptionUsed"),
-            (_[(_.k_ERefundSupportAction_DeclineRefund_DiscountConsumed = 21)] =
-              "k_ERefundSupportAction_DeclineRefund_DiscountConsumed");
-        })(_ || (_ = {}));
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  log_type: {
-                    _: 2,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  version_string: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  log_contents: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  request_id: {
-                    _: 5,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CHelpRequestLogs_UploadUserApplicationLog_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype._ || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  _: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CHelpRequestLogs_UploadUserApplicationLog_Response";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  appid: {
-                    _: 1,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CHelpRequestLogs_GetApplicationLogDemand_Request";
-        }
-      }
-      class _ extends _.Message {
-        static ImplementsStaticInterface() {}
-        constructor(_ = null) {
-          super(),
-            _.prototype.request_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  request_id: {
-                    _: 1,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
-        }
-        toObject(_ = !1) {
-          return _.toObject(_, this);
-        }
-        static toObject(_, _) {
-          return _._(_._(), _, _);
-        }
-        static fromObject(_) {
-          return _._(_._(), _);
-        }
-        static deserializeBinary(_) {
-          let _ = new (_().BinaryReader)(_),
-            _ = new _();
-          return _.deserializeBinaryFromReader(_, _);
-        }
-        static deserializeBinaryFromReader(_, _) {
-          return _._(_.MBF(), _, _);
-        }
-        serializeBinary() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
-        }
-        static serializeBinaryToWriter(_, _) {
-          _._(_._(), _, _);
-        }
-        serializeBase64String() {
-          var _ = new (_().BinaryWriter)();
-          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
-        }
-        getClassName() {
-          return "CHelpRequestLogs_GetApplicationLogDemand_Response";
-        }
-      }
-      !(function (_) {
-        (_.UploadUserApplicationLog = function (_, _) {
-          return _.SendMsg(
-            "HelpRequestLogs.UploadUserApplicationLog#1",
-            (0, _._)(_, _),
-            _,
-            {
-              ePrivilege: 1,
-            },
-          );
-        }),
-          (_.GetApplicationLogDemand = function (_, _) {
-            return _.SendMsg(
-              "HelpRequestLogs.GetApplicationLogDemand#1",
-              (0, _._)(_, _),
-              _,
-              {
-                ePrivilege: 1,
-              },
-            );
-          });
-      })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -11941,11 +10739,7 @@
                 ).data.tickets;
               },
             });
-          })(
-            _,
-            _.k_EHelpIssue_Publishing_RaisingMyPrice,
-            _.k_EHelpRequestType_Publishing_ManagingMyStorePage,
-          ),
+          })(_, 920, 55),
           [_, _] = (0, _.useState)(2);
         return (
           (0, _.useEffect)(() => {
@@ -12119,7 +10913,7 @@
                   `${_._.PARTNER_BASE_URL}admin/ajaxcreatesupportticketforrequest/`,
                   _,
                 );
-                if (_?.data?.success != _._.k_EResultOK)
+                if (1 != _?.data?.success)
                   throw (
                     (_?.data?.message && _.fnSetStrError(_?.data?.message),
                     _?.data?.message || "create ticket failed generic")
@@ -12137,13 +10931,7 @@
                 });
               },
             });
-          })(
-            _,
-            _,
-            _.k_EHelpIssue_Publishing_RaisingMyPrice,
-            _.k_EHelpRequestType_Publishing_ManagingMyStorePage,
-            _,
-          );
+          })(_, _, 920, 55, _);
         return _.bLoading
           ? _.createElement(_._, {
               state: _,
@@ -12224,11 +11012,11 @@
                   },
                   `Package ${_.packageid}`,
                 ),
-            Boolean(_?.GetAppType() == _._.k_EStoreAppType_DLC) &&
+            Boolean(4 == _?.GetAppType()) &&
               _.createElement("span", null, " (DLC)"),
-            Boolean(_?.GetAppType() == _._.k_EStoreAppType_Mod) &&
+            Boolean(2 == _?.GetAppType()) &&
               _.createElement("span", null, " (MOD)"),
-            Boolean(_?.GetAppType() == _._.k_EStoreAppType_Hardware) &&
+            Boolean(10 == _?.GetAppType()) &&
               _.createElement("span", null, " (HARDWARE)"),
           ),
           _.createElement(
@@ -14572,20 +13360,19 @@
           _ = (0, _.useMemo)(
             () => _?.filter((_) => !_ || !_.includes(_.appid)),
             [_, _],
+          ),
+          _ = (0, _.useMemo)(
+            () =>
+              _
+                ? _.map((_) => ({
+                    label: _.createElement(_, {
+                      appInfo: _,
+                    }),
+                    data: _.appid,
+                  }))
+                : [],
+            [_],
           );
-        console.log("adil", _, _);
-        const _ = (0, _.useMemo)(
-          () =>
-            _
-              ? _.map((_) => ({
-                  label: _.createElement(_, {
-                    appInfo: _,
-                  }),
-                  data: _.appid,
-                }))
-              : [],
-          [_],
-        );
         return _
           ? 0 == _.length && _
             ? _.createElement(
@@ -14671,7 +13458,7 @@
         return (
           (0, _.useEffect)(() => {
             if (_) {
-              const _ = (0, _._)(_.strActiveLanguage, _._.k_Lang_English);
+              const _ = (0, _._)(_.strActiveLanguage, 0);
               _._.Get().SetCurEditLanguage(_);
             }
           }, [_.strActiveLanguage, _]),
@@ -17531,7 +16318,8 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = "useCreatorHomeClanLinksByApp";
       function _(_) {
         const _ = (0, _._)(),
@@ -17541,7 +16329,7 @@
               const _ = _._.Init(_._);
               __webpack_require__.Body().set_appid(_);
               const _ = await _._.GetDevPageLinks(_, _);
-              return _.GetEResult() == _._.k_EResultOK
+              return 1 == _.GetEResult()
                 ? _.Body()
                     .links()
                     .map((_) => _.toObject())
@@ -17555,7 +16343,6 @@
         return _.isLoading ? null : _.data;
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -17582,7 +16369,7 @@
               __webpack_require__.Body().link().set_linkname(_.link.linkname),
               __webpack_require__.Body().link().set_json(_.link.json);
             const _ = await _._.SetDevPageLink(_, _);
-            return _.GetEResult() == _._.k_EResultOK
+            return 1 == _.GetEResult()
               ? (_._.invalidateQueries({
                   queryKey: [_, _.appid],
                 }),
@@ -17637,7 +16424,7 @@
                     link: {
                       appid: _,
                       clan_steamid: _.ConvertTo64BitString(),
-                      relation: _._.k_EAppDevsRelationship_Unknown,
+                      relation: 0,
                       linkname: _,
                       json: null,
                     },
@@ -17741,7 +16528,7 @@
                     link: {
                       appid: _,
                       clan_steamid: _.ConvertTo64BitString(),
-                      relation: _._.k_EAppDevsRelationship_Unknown,
+                      relation: 0,
                       linkname: _,
                       json: null,
                     },
@@ -17759,7 +16546,7 @@
                   const _ = _._.Init(_._);
                   __webpack_require__.Body().set_partnerid(_);
                   const _ = await _._.GetDevPagesForPartner(_, _);
-                  return _.GetEResult() == _._.k_EResultOK
+                  return 1 == _.GetEResult()
                     ? _.Body()
                         .results()
                         .map((_) => _.toObject())
@@ -17783,7 +16570,7 @@
                   _ = await _().get(_, {
                     params: _,
                   });
-                return 200 == _?.status && _.data?.success == _._.k_EResultOK
+                return 200 == _?.status && 1 == _.data?.success
                   ? _.data.rgClanAccountIDs
                   : (console.error(
                       "useClanLinkableForMeViaCreatorHome:",
@@ -18167,11 +16954,7 @@
           ),
           _ = (_, _) => {
             const _ = (0, _._)(_),
-              _ = (0, _._)(
-                _ == _._.k_Lang_SteamChina_SChinese
-                  ? _._.k_Lang_Simplified_Chinese
-                  : _._.k_Lang_English,
-              );
+              _ = (0, _._)(29 == _ ? 6 : 0);
             return _ in _[_].urls
               ? _[_].urls[_]
               : _ in _[_].urls
@@ -18292,14 +17075,1412 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = {
+          bAccessibilityDifficultyLevels:
+            "#Accessibility_Feature_AdjustableDifficulty",
+          bAccessibilitySaveAnytime: "#Accessibility_Feature_SaveAnytime",
+          bAccessibilityNarratedMenus: "#Accessibility_Feature_NarratedMenus",
+          bAccessibilityBackgroundVolumeControls:
+            "#Accessibility_Feature_CustomVolumeControls",
+          bAccessibilityStereoSound: "#Accessibility_Feature_StereoSound",
+          bAccessibilitySurroundSound: "#Accessibility_Feature_SurroundSound",
+          bAccessibilityResizableUI:
+            "#Accessibility_Feature_AdjustableTextSize",
+          bAccessibilitySubtitles: "#Accessibility_Feature_SubtitleOptions",
+          bAccessibilityColorAlternatives:
+            "#Accessibility_Feature_ColorAlternatives",
+          bAccessibilityCameraComfort: "#Accessibility_Feature_CameraComfort",
+          bAccessibilityKeyboardOnlyOption:
+            "#Accessibility_Feature_KeyboardOnlyOption",
+          bAccessibilityMouseOnlyOption:
+            "#Accessibility_Feature_MouseOnlyOption",
+          bAccessibilityTouchOnlyOption:
+            "#Accessibility_Feature_TouchOnlyOption",
+          bAccessibilityPlayableWithoutQuicktimeEvents:
+            "#Accessibility_Feature_WithoutQuickTimeEvents",
+          bAccessibilityChatTexttoSpeech: "#Accessibility_Feature_TextToSpeech",
+          bAccessibilityChatSpeechtoText: "#Accessibility_Feature_SpeechToText",
+        },
+        _ = {
+          bAccessibilityDifficultyLevels: "#adjustable_difficulty",
+          bAccessibilitySaveAnytime: "#saving_options",
+          bAccessibilityNarratedMenus: "#narrated_menus",
+          bAccessibilityBackgroundVolumeControls: "#volume_controls",
+          bAccessibilityStereoSound: "#stereo_sound",
+          bAccessibilitySurroundSound: "#surround_sound",
+          bAccessibilityResizableUI: "#adjustable_text_size",
+          bAccessibilitySubtitles: "#subtitles",
+          bAccessibilityColorAlternatives: "#color_alternatives",
+          bAccessibilityCameraComfort: "#camera_comfort",
+          bAccessibilityKeyboardOnlyOption: "#keyboard_only",
+          bAccessibilityMouseOnlyOption: "#mouse_only",
+          bAccessibilityTouchOnlyOption: "#touch_only",
+          bAccessibilityPlayableWithoutQuicktimeEvents: "#without_qte",
+          bAccessibilityChatTexttoSpeech: "#tts",
+          bAccessibilityChatSpeechtoText: "#stt",
+        },
+        _ = {
+          bAccessibilityDifficultyLevels: "gameplay",
+          bAccessibilitySaveAnytime: "gameplay",
+          bAccessibilityNarratedMenus: "audio",
+          bAccessibilityBackgroundVolumeControls: "audio",
+          bAccessibilityStereoSound: "audio",
+          bAccessibilitySurroundSound: "audio",
+          bAccessibilityResizableUI: "visual",
+          bAccessibilitySubtitles: "visual",
+          bAccessibilityColorAlternatives: "visual",
+          bAccessibilityCameraComfort: "visual",
+          bAccessibilityKeyboardOnlyOption: "input",
+          bAccessibilityMouseOnlyOption: "input",
+          bAccessibilityTouchOnlyOption: "input",
+          bAccessibilityPlayableWithoutQuicktimeEvents: "input",
+          bAccessibilityChatTexttoSpeech: "input",
+          bAccessibilityChatSpeechtoText: "input",
+        },
+        _ = {
+          gameplay: "#Accessibility_Group_Gameplay",
+          visual: "#Accessibility_Group_Visual",
+          audio: "#Accessibility_Group_Audio",
+          input: "#Accessibility_Group_Input",
+        };
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(_.initialOpen ?? !1),
+          _ = _.useId(),
+          _ = Object.entries(_.features)
+            .filter(([_, _]) => _)
+            .map(([_]) => _);
+        if (0 === _.length) return null;
+        const _ = {};
+        _.forEach((_) => {
+          const _ = _[_];
+          (_[_] ??= []), _[_].push(_);
+        });
+        const _ = Object.keys(_).length > 1;
+        return _.createElement(
+          "details",
+          {
+            className: _().Details,
+            open: _,
+            onToggle: (_) => __webpack_require__(_.currentTarget.open),
+          },
+          _.createElement(
+            "summary",
+            {
+              className: _().Summary,
+              "data-panel": '{"clickOnActivate": true}',
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().ImageContainer,
+              },
+              _.createElement(_, {
+                className: _().CategoryIcon,
+                "aria-label": "",
+              }),
+            ),
+            _.createElement(
+              "span",
+              {
+                className: _().FeatureNameContainer,
+                _: _,
+              },
+              _.createElement(
+                "span",
+                {
+                  className: _().FeatureName,
+                },
+                _
+                  ? (0, _._)("#AccessibilityFeatures")
+                  : (0, _._)("#AccessibilityFeaturesWithCount", _.length),
+              ),
+              _.createElement(
+                "a",
+                {
+                  className: _().InfoLink,
+                  href: `${_._.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36`,
+                  target: "_blank",
+                },
+                "?",
+              ),
+            ),
+          ),
+          _.createElement(
+            "ul",
+            {
+              className: _().FeatureList,
+              "aria-labelledby": _,
+            },
+            _ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.gameplay &&
+                  _.createElement(
+                    "li",
+                    null,
+                    _.createElement(_, {
+                      group: "gameplay",
+                      features: _.gameplay,
+                      open: _,
+                    }),
+                  ),
+                _.visual &&
+                  _.createElement(
+                    "li",
+                    null,
+                    _.createElement(_, {
+                      group: "visual",
+                      features: _.visual,
+                      open: _,
+                    }),
+                  ),
+                _.audio &&
+                  _.createElement(
+                    "li",
+                    null,
+                    _.createElement(_, {
+                      group: "audio",
+                      features: _.audio,
+                      open: _,
+                    }),
+                  ),
+                _.input &&
+                  _.createElement(
+                    "li",
+                    null,
+                    _.createElement(_, {
+                      group: "input",
+                      features: _.input,
+                      open: _,
+                    }),
+                  ),
+              ),
+            !_ &&
+              _.map((_) =>
+                _.createElement(
+                  "li",
+                  {
+                    key: _,
+                  },
+                  _.createElement(_, {
+                    feature: _,
+                    open: _,
+                  }),
+                ),
+              ),
+          ),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1200 1200",
+            ..._,
+          },
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "m600 60c-298.03 0-540 241.97-540 540s241.97 540 540 540 540-241.97 540-540-241.97-540-540-540zm0 95.555c245.3 0 444.46 199.14 444.46 444.45s-199.15 444.45-444.46 444.45c-245.29 0-444.45-199.14-444.45-444.45s199.15-444.45 444.45-444.45z",
+            fillRule: "evenodd",
+          }),
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "m521.1 573.13c-9.3242 107.1-33.887 210.97-72.18 311.96-9.3477 24.66 3.0859 52.262 27.73 61.609 24.66 9.3477 52.262-3.0703 61.609-27.73 27.109-71.496 47.832-144.32 61.738-218.58 13.906 74.258 34.633 147.09 61.738 218.58 9.3477 24.66 36.949 37.078 61.609 27.73 24.66-9.3477 37.078-36.949 27.73-61.609-38.27-100.93-62.82-204.76-72.156-311.76 57.227-2.8086 114.48-8.8086 171.73-18.109 26.027-4.2344 43.727-28.801 39.492-54.828-4.2227-26.016-28.789-43.715-54.816-39.492-156.98 25.512-313.96 24.504-470.94-0.046875-26.051-4.0664-50.508 13.777-54.59 39.828-4.0664 26.051 13.777 50.508 39.828 54.574 57.145 8.9414 114.3 14.941 171.47 17.867z",
+            fillRule: "evenodd",
+          }),
+          _.createElement("path", {
+            fill: "currentColor",
+            _: "m686.23 353.69c0 47.625-38.605 86.234-86.23 86.234s-86.23-38.609-86.23-86.234 38.605-86.23 86.23-86.23 86.23 38.605 86.23 86.23",
+            fillRule: "evenodd",
+          }),
+        );
+      }
+      function _(_) {
+        const _ = _.useId();
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "span",
+            {
+              className: _().GroupLabel,
+              _: _,
+            },
+            (0, _._)(_[_.group]),
+          ),
+          _.createElement(
+            "ul",
+            {
+              className: _().FeatureGroupItems,
+              "aria-labelledby": _,
+            },
+            _.features.map((_) =>
+              _.createElement(
+                "li",
+                {
+                  key: _,
+                },
+                _.createElement(_, {
+                  feature: _,
+                  open: _.open,
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "a",
+          {
+            href: `${_._.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36${_[_.feature]}`,
+            className: _().InfoRow,
+            "data-panel": '{"clickOnActivate": true}',
+            "data-gp-focus-disabled": _.open ? void 0 : "true",
+          },
+          _.createElement(
+            "span",
+            {
+              className: _().FeatureNameContainer,
+            },
+            _.createElement(
+              "span",
+              {
+                className: _().FeatureName,
+              },
+              (0, _._)(_[_.feature]),
+            ),
+          ),
+        );
+      }
       var _ = __webpack_require__("chunkid");
-      const _ = _.lazy(async () => ({
-        default: (
-          await __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__.bind(__webpack_require__, "chunkid"))
-        ).AccessibilityFeaturesInfo,
-      }));
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Gameplay",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)("#App_Landing_AccessibilityFeatures_WizardPrompt_Desc"),
+            ),
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_Gameplay_Instructions",
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#gameplay`,
+                  target: "_blank",
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Gameplay_Question",
+            ),
+          ),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableDifficulty",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableDifficulty_Desc",
+            ),
+            _: "bAccessibilityDifficultyLevels",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SaveAnytime",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SaveAnytime_Desc",
+            ),
+            _: "bAccessibilitySaveAnytime",
+          }),
+        );
+      }
+      function _() {
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Instructions",
+                _.createElement("a", {
+                  href: "https://learn.microsoft.com/en-us/windows/win32/winauto/entry-uiauto-win32",
+                  target: "_blank",
+                }),
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#narrated_menus`,
+                  target: "_blank",
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              _: _,
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Question",
+            ),
+          ),
+          _.createElement(_, {
+            labelId: _,
+            options: [
+              {
+                _: "yes",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_Yes",
+                ),
+              },
+              {
+                _: "no",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_NarratedMenus_No",
+                ),
+              },
+            ],
+            fnCalculateSelectedOption: () =>
+              _.bAccessibilityNarratedMenus
+                ? "yes"
+                : !1 === _.bAccessibilityNarratedMenus
+                  ? "no"
+                  : void 0,
+            fnSetValues: (_) => {
+              "yes" === _ && _("bAccessibilityNarratedMenus", !0),
+                "no" === _ && _("bAccessibilityNarratedMenus", !1);
+            },
+          }),
+        );
+      }
+      function _() {
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_Instructions",
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#volume_controls`,
+                  target: "_blank",
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              _: _,
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_Question",
+            ),
+          ),
+          _.createElement(_, {
+            labelId: _,
+            options: [
+              {
+                _: "yes",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_Yes",
+                ),
+              },
+              {
+                _: "no",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_CustomVolumeControls_No",
+                ),
+              },
+            ],
+            fnCalculateSelectedOption: () =>
+              _.bAccessibilityBackgroundVolumeControls
+                ? "yes"
+                : !1 === _.bAccessibilityBackgroundVolumeControls
+                  ? "no"
+                  : void 0,
+            fnSetValues: (_) => {
+              "yes" === _ && _("bAccessibilityBackgroundVolumeControls", !0),
+                "no" === _ && _("bAccessibilityBackgroundVolumeControls", !1);
+            },
+          }),
+        );
+      }
+      function _() {
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_Instructions",
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              _: _,
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_Question",
+            ),
+          ),
+          _.createElement(_, {
+            labelId: _,
+            options: [
+              {
+                _: "surround",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_SurroundSound",
+                ),
+              },
+              {
+                _: "stereo",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_StereoSound",
+                ),
+              },
+              {
+                _: "none",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_DirectionalAudio_None",
+                ),
+              },
+            ],
+            fnCalculateSelectedOption: () =>
+              _.bAccessibilitySurroundSound
+                ? "surround"
+                : _.bAccessibilityStereoSound
+                  ? "stereo"
+                  : "none",
+            fnSetValues: (_) => {
+              "surround" === _ &&
+                (_("bAccessibilitySurroundSound", !0),
+                _("bAccessibilityStereoSound", !0)),
+                "stereo" === _ &&
+                  (_("bAccessibilitySurroundSound", !1),
+                  _("bAccessibilityStereoSound", !0)),
+                "none" === _ &&
+                  (_("bAccessibilitySurroundSound", !1),
+                  _("bAccessibilityStereoSound", !1));
+            },
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Visual",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_Visual_Instructions",
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#visual_recommendations`,
+                  target: "_blank",
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Visual_Question",
+            ),
+          ),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableTextSize",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableTextSize_Desc",
+            ),
+            _: "bAccessibilityResizableUI",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions_Desc",
+            ),
+            _: "bAccessibilitySubtitles",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives_Desc",
+            ),
+            _: "bAccessibilityColorAlternatives",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort_Desc",
+            ),
+            _: "bAccessibilityCameraComfort",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Input",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_Input_Instructions",
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#input_recommendations`,
+                  target: "_blank",
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Input_Question",
+            ),
+          ),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_KeyboardOnlyOption",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_KeyboardOnlyOption_Desc",
+            ),
+            _: "bAccessibilityKeyboardOnlyOption",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_MouseOnlyOption",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_MouseOnlyOption_Desc",
+            ),
+            _: "bAccessibilityMouseOnlyOption",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_TouchOnlyOption",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_TouchOnlyOption_Desc",
+            ),
+            _: "bAccessibilityTouchOnlyOption",
+          }),
+        );
+      }
+      function _() {
+        const { currentValues: _, fnSetValue: _ } = _(),
+          _ = _.useId();
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Instructions",
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              _: _,
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Question",
+            ),
+          ),
+          _.createElement(_, {
+            labelId: _,
+            options: [
+              {
+                _: "yes",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_Yes",
+                ),
+              },
+              {
+                _: "no",
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_QuickTimeEvents_No",
+                ),
+              },
+            ],
+            fnCalculateSelectedOption: () =>
+              _.bAccessibilityPlayableWithoutQuicktimeEvents
+                ? "yes"
+                : !1 === _.bAccessibilityPlayableWithoutQuicktimeEvents
+                  ? "no"
+                  : void 0,
+            fnSetValues: (_) => {
+              "yes" === _ &&
+                _("bAccessibilityPlayableWithoutQuicktimeEvents", !0),
+                "no" === _ &&
+                  _("bAccessibilityPlayableWithoutQuicktimeEvents", !1);
+            },
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText_Instructions",
+                _.createElement("a", {
+                  href: `${_._.PARTNER_BASE_URL}doc/accessibility_features#tts`,
+                  target: "_blank",
+                }),
+              ),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _.Question,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_TextToSpeechAndSpeechToText_Question",
+            ),
+          ),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech_Desc",
+            ),
+            _: "bAccessibilityChatTexttoSpeech",
+          }),
+          _.createElement(_, {
+            name: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SpeechToText",
+            ),
+            description: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Feature_SpeechToText_Desc",
+            ),
+            _: "bAccessibilityChatSpeechtoText",
+          }),
+        );
+      }
+      function _() {
+        return _.createElement(
+          "div",
+          {
+            className: _.WizardContainer,
+          },
+          _.createElement(_, {
+            subtitle: (0, _._)(
+              "#App_Landing_AccessibilityFeatures_Wizard_Summary",
+            ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.Instructions,
+            },
+            _.createElement(
+              "p",
+              null,
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_Wizard_Summary_Instructions",
+              ),
+            ),
+          ),
+          _.createElement(
+            _._,
+            null,
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableDifficulty",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableDifficulty_Desc",
+                ),
+                _: "bAccessibilityDifficultyLevels",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_SaveAnytime",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_SaveAnytime_Desc",
+                ),
+                _: "bAccessibilitySaveAnytime",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_CustomVolumeControls_Desc",
+                ),
+                _: "bAccessibilityBackgroundVolumeControls",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_NarratedMenus_Desc",
+                ),
+                _: "bAccessibilityNarratedMenus",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_StereoSound",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_StereoSound_Desc",
+                ),
+                _: "bAccessibilityStereoSound",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_SurroundSound",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_SurroundSound_Desc",
+                ),
+                _: "bAccessibilitySurroundSound",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableTextSize",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_AdjustableTextSize_Desc",
+                ),
+                _: "bAccessibilityResizableUI",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_SubtitleOptions_Desc",
+                ),
+                _: "bAccessibilitySubtitles",
+              }),
+            ),
+            _.createElement(
+              _._,
+              null,
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_ColorAlternatives_Desc",
+                ),
+                _: "bAccessibilityColorAlternatives",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_CameraComfort_Desc",
+                ),
+                _: "bAccessibilityCameraComfort",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_KeyboardOnlyOption",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_KeyboardOnlyOption_Desc",
+                ),
+                _: "bAccessibilityKeyboardOnlyOption",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_MouseOnlyOption",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_MouseOnlyOption_Desc",
+                ),
+                _: "bAccessibilityMouseOnlyOption",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_TouchOnlyOption",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_TouchOnlyOption_Desc",
+                ),
+                _: "bAccessibilityTouchOnlyOption",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_WithoutQuickTimeEvents",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_WithoutQuickTimeEvents_Desc",
+                ),
+                _: "bAccessibilityPlayableWithoutQuicktimeEvents",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_TextToSpeech_Desc",
+                ),
+                _: "bAccessibilityChatTexttoSpeech",
+              }),
+              _.createElement(_, {
+                name: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_SpeechToText",
+                ),
+                description: (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Wizard_Feature_SpeechToText_Desc",
+                ),
+                _: "bAccessibilityChatSpeechtoText",
+              }),
+            ),
+          ),
+        );
+      }
+      const _ = _.createContext(void 0);
+      function _() {
+        return _.useContext(_);
+      }
+      function _(_) {
+        const _ = _.useMemo(
+          () => ({
+            currentValues: _.currentValues,
+            fnSetValue: _.fnSetValue,
+            nPageIndex: _.nPageIndex,
+            bEditMode: _.bEditMode,
+          }),
+          [_.currentValues, _.fnSetValue, _.nPageIndex, _.bEditMode],
+        );
+        return _.createElement(
+          _.Provider,
+          {
+            value: _,
+          },
+          _.children,
+        );
+      }
+      function _(_) {
+        const {
+            close: _,
+            features: __webpack_require__,
+            editMode: _,
+            isMultiplayer: _,
+          } = _,
+          [_, _] = (0, _.useState)(0),
+          _ = (function (_, _) {
+            return (0, _.useMemo)(
+              () =>
+                _
+                  ? [_]
+                  : [_, _, _, _, _, _, _, _ ? _ : void 0, _].filter((_) => !!_),
+              [_, _],
+            );
+          })(
+            _,
+            _ ||
+              __webpack_require__.bAccessibilityChatSpeechtoText ||
+              __webpack_require__.bAccessibilityChatTexttoSpeech,
+          ),
+          [_, _] = _.useState(__webpack_require__);
+        let _ = () => _((_) => _ - 1);
+        0 === _ && (_ = _);
+        let _ = () => _((_) => _ + 1),
+          _ = (0, _._)("#Wizard_NextButton");
+        _ === _.length - 1 &&
+          ((_ = () => {
+            !(function (_) {
+              _(64, _.bAccessibilityResizableUI),
+                _(65, _.bAccessibilitySubtitles),
+                _(66, _.bAccessibilityColorAlternatives),
+                _(67, _.bAccessibilityCameraComfort),
+                _(68, _.bAccessibilityBackgroundVolumeControls),
+                _(69, _.bAccessibilityStereoSound),
+                _(70, _.bAccessibilitySurroundSound),
+                _(71, _.bAccessibilityNarratedMenus),
+                _(72, _.bAccessibilityChatSpeechtoText),
+                _(73, _.bAccessibilityChatTexttoSpeech),
+                _(74, _.bAccessibilityPlayableWithoutQuicktimeEvents),
+                _(75, _.bAccessibilityKeyboardOnlyOption),
+                _(76, _.bAccessibilityMouseOnlyOption),
+                _(77, _.bAccessibilityTouchOnlyOption),
+                _(78, _.bAccessibilityDifficultyLevels),
+                _(79, _.bAccessibilitySaveAnytime),
+                document
+                  .querySelector(
+                    '[name="app[content][accessibilitywizard][v1]"]',
+                  )
+                  ?.setAttribute("value", "true");
+              const _ = document.getElementById("submitBtn");
+              _ && _.click();
+            })(_),
+              _();
+          }),
+          (_ = (0, _._)("#Wizard_SaveAndExitButton")));
+        const _ = _[_];
+        return _.createElement(
+          _._,
+          {
+            active: !0,
+            className: _.WizardModal,
+          },
+          _.createElement(
+            _,
+            {
+              fnSetValue: (_, _) => {
+                _((_) => ({
+                  ..._,
+                  [_]: _,
+                }));
+              },
+              currentValues: _,
+              nPageIndex: _,
+              bEditMode: _,
+            },
+            _.createElement(_, {
+              nPages: _.length,
+            }),
+            _.createElement(
+              _._,
+              {
+                className: _.WizardBody,
+              },
+              _.createElement(_, null),
+            ),
+          ),
+          _.createElement(_._, {
+            className: _.WizardButtons,
+            onCancel: _,
+            strCancelText: (0, _._)("#Wizard_BackButton"),
+            onOK: _,
+            strOKText: _,
+          }),
+        );
+      }
+      function _(_) {
+        const { nPages: _ } = _,
+          { nPageIndex: __webpack_require__ } = _(),
+          _ = (100 * (__webpack_require__ + 1)) / (_ + 1);
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _.WizardTitle,
+            },
+            (0, _._)("#App_Landing_AccessibilityFeatures_Wizard_Title"),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(
+                _.ProgressBar,
+                __webpack_require__ == _ - 1 && _.ProgressBarComplete,
+              ),
+            },
+            __webpack_require__ < _ - 1 &&
+              _.createElement("div", {
+                className: (0, _._)(_.ProgressBarFillComponent),
+                style: {
+                  width: _ + "%",
+                },
+              }),
+          ),
+        );
+      }
+      function _(_) {
+        const { nPageIndex: _, bEditMode: __webpack_require__ } = _();
+        return __webpack_require__
+          ? null
+          : _.createElement(
+              "div",
+              {
+                className: _.StepRow,
+              },
+              _.createElement(
+                "div",
+                {
+                  className: _.StepLabel,
+                },
+                (0, _._)("#Wizard_StepNumber", _ + 1),
+                _.subtitle && _.createElement(_._, null, _.subtitle),
+              ),
+            );
+      }
+      function _(_) {
+        const { currentValues: _, fnSetValue: __webpack_require__ } = _();
+        return _.createElement(_._, {
+          label: _.createElement(
+            "div",
+            {
+              className: _.CheckboxComplexLabel,
+            },
+            _.createElement(
+              "span",
+              null,
+              _.name,
+              " ",
+              _.tooltip &&
+                _.createElement(_._, {
+                  customTooltip: !0,
+                  tooltip: _.createElement(
+                    _._,
+                    {
+                      className: _.WizardTooltip,
+                    },
+                    _.tooltip,
+                  ),
+                }),
+            ),
+            _.createElement("p", null, _.description),
+          ),
+          checked: _[_._],
+          onChange: (_) => __webpack_require__(_._, _),
+        });
+      }
+      function _(_) {
+        const _ = _.fnCalculateSelectedOption();
+        return _.createElement(
+          _._,
+          {
+            labelId: _.labelId,
+            value: _,
+            onChange: _.fnSetValues,
+          },
+          _.options.map((_) =>
+            _.createElement(
+              _._,
+              {
+                key: _._,
+                value: _._,
+              },
+              _.createElement("div", {
+                className: (0, _._)(_.RadioButton, _ == _._ && _.Selected),
+              }),
+              _.createElement(
+                "div",
+                {
+                  className: _.OptionLabel,
+                },
+                (0, _._)(_.name),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_, _) {
+        const _ = document.querySelector(
+          `[name="app[classification][category][category_${_}]"]`,
+        );
+        if (_) {
+          __webpack_require__.setAttribute("value", _ ? "true" : "");
+        }
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            isMultiplayer: _,
+            bWizardCompleted: __webpack_require__,
+            ..._
+          } = _,
+          _ = Object.entries(_).some(
+            ([_, _]) => _.startsWith("bAccessibility") && _,
+          ),
+          [_, _] = _.useState(0);
+        return _.createElement(
+          _.Fragment,
+          null,
+          0 !== _ &&
+            _.createElement(_, {
+              editMode: 2 === _,
+              close: () => _(0),
+              features: _,
+              isMultiplayer: _,
+            }),
+          _.createElement(_, {
+            bWizardCompleted: __webpack_require__,
+            bHasAnyAccessibilityFeatures: _,
+            setModalState: _,
+            features: _,
+          }),
+        );
+      }
+      function _(_) {
+        const {
+          bHasAnyAccessibilityFeatures: _,
+          bWizardCompleted: __webpack_require__,
+          setModalState: _,
+          features: _,
+        } = _;
+        return _ || __webpack_require__
+          ? _.createElement(_, {
+              bHasAnyAccessibilityFeatures: _,
+              onEdit: () => _(2),
+              onStart: () => _(1),
+              features: _,
+            })
+          : _.createElement(_, {
+              onStart: () => _(1),
+            });
+      }
+      function _(_) {
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(
+            _._,
+            {
+              className: _().AccessibilityFeatureDescription,
+            },
+            (0, _._)("#App_Landing_AccessibilityFeatures_WizardPrompt_Desc"),
+          ),
+          _.createElement(
+            _._,
+            {
+              className: _().StartWizardButton,
+              onClick: _.onStart,
+            },
+            (0, _._)(
+              "#App_Landing_AccessibilityFeatures_WizardPrompt_StartButton",
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(
+            _._,
+            {
+              className: _().AccessibilityFeatureDescription,
+            },
+            _.bHasAnyAccessibilityFeatures
+              ? (0, _._)("#App_Landing_AccessibilityFeatures_Summary")
+              : (0, _._)(
+                  "#App_Landing_AccessibilityFeatures_Summary_NoFeatures",
+                ),
+          ),
+          _.bHasAnyAccessibilityFeatures &&
+            _.createElement(_, {
+              features: _.features,
+              onEdit: _.onEdit,
+            }),
+          _.createElement(
+            "div",
+            {
+              className: _().ButtonRow,
+            },
+            _.createElement(
+              _._,
+              {
+                className: _().StartWizardButton,
+                onClick: _.onStart,
+              },
+              (0, _._)(
+                "#App_Landing_AccessibilityFeatures_WizardPrompt_StartButton",
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        return _.createElement(
+          "div",
+          {
+            className: _().AccessibilityFeatureInfoCtn,
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().AccessibilityFeatureContent,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().PreviewContainer,
+              },
+              _.createElement(_, {
+                features: _.features,
+                initialOpen: !0,
+              }),
+            ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().EditButton,
+              onClick: _.onEdit,
+            },
+            _.createElement("div", {
+              className: (0, _._)(_().Spacer, _().Top),
+            }),
+            _.createElement(
+              "div",
+              {
+                className: _().EditButtonIcon,
+              },
+              _.createElement(_.ffu, null),
+            ),
+            _.createElement("div", {
+              className: (0, _._)(_().Spacer, _().Bottom),
+            }),
+          ),
+        );
+      }
       function _(_) {
         return _.createElement(
           _._,
@@ -19553,276 +19734,6 @@
             return "macos" == _._.PLATFORM ? "Option" : "Alt";
         }
         return null;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC";
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            items: _,
-            render: __webpack_require__,
-            onDelete: _,
-            onEdit: _,
-            onReorder: _,
-            onMove: _,
-            bDisabled: _,
-            rowClassName: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(-1),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(0),
-          [_, _] = _.useState(void 0),
-          [_, _] = _.useState(""),
-          _ = _.useRef(void 0),
-          _ = _.useMemo(() => new Array(), []),
-          _ = _.useMemo(() => new Array(), []),
-          _ = _.useMemo(() => _().CancelToken.source(), []),
-          _ = () => {
-            _.current?.firstElementChild &&
-              (_(_.current.firstElementChild.getBoundingClientRect().height),
-              _(_.current.firstElementChild.getBoundingClientRect().width));
-          };
-        _.useEffect(() => {
-          _();
-        }, []),
-          _.useEffect(() => () => _.cancel("ReorderableList unmounting"), [_]);
-        const _ = (_, _) => {
-            _.token.reason ||
-              (_.current.firstElementChild?.getBoundingClientRect().height >
-                0 &&
-                _ !=
-                  _.current.firstElementChild.getBoundingClientRect().height &&
-                _(),
-              ((_, _) => {
-                const _ = _[_]?.current;
-                if (!_)
-                  return void console.error(
-                    "start element grab missing element at index " + _,
-                  );
-                _(!0), _(_), _(void 0), _(_);
-                const _ =
-                  _.clientX - __webpack_require__.getBoundingClientRect().left;
-                _(_);
-                const _ =
-                  _.clientY - __webpack_require__.getBoundingClientRect().top;
-                _(_),
-                  (_.style.position = "fixed"),
-                  (_.style.left = _.clientX - _ + "px"),
-                  (_.style.top = _.clientY - _ + "px"),
-                  (_.style.zIndex = "1");
-              })(_, _),
-              _.preventDefault());
-          },
-          _ = (_, _) => {
-            const _ = _._(_ > _ ? _ - 1 : _, 0, _.length - 1);
-            _ != _ && (_ ? _(_, _) : (0, _._)(_, _, _), _(_), _ && _(_));
-          },
-          _ = (_) => {
-            _ &&
-              !_.token.reason &&
-              ((() => {
-                const _ = _[_]?.current;
-                _
-                  ? ((_.style.position = ""), (_.style.zIndex = ""))
-                  : console.error("end element drag missing element"),
-                  _(!1),
-                  _(-1),
-                  _(void 0),
-                  _(void 0);
-              })(),
-              _(_, _));
-          },
-          _ = (_) => {
-            if (!_ || _.token.reason) return;
-            const _ = _.clientY;
-            let _;
-            for (let _ = 0; _ < _.length; _++) {
-              if (
-                _ <
-                (_[_].current.getBoundingClientRect().top +
-                  2 * _[_].current.getBoundingClientRect().bottom) /
-                  3
-              ) {
-                _ = _;
-                break;
-              }
-            }
-            _(_ ?? _.length),
-              ((_) => {
-                const _ = _[_]?.current;
-                _
-                  ? ((_.style.left = _.clientX - _ + "px"),
-                    (_.style.top = _.clientY - _ + "px"))
-                  : console.error("update grab element missing element");
-              })(_);
-          };
-        (0, _._)(window, "mousemove", (_) => _(_)),
-          (0, _._)(window, "mouseup", (_) => _()),
-          _.useEffect(() => {
-            for (let _ = _.length; _ < _.length; _++)
-              _.push(_.createRef()), _.push(_.createRef());
-          }, [_.length, _, _]);
-        const _ = (_) => {
-            _(void 0);
-            const _ = _?.trim(),
-              _ = Number.parseInt(_);
-            if (0 == _.length || isNaN(_)) return;
-            const _ = _ - 1;
-            _ != _ && _(_, _);
-          },
-          [_, _] = _.useState(void 0);
-        return _.createElement(
-          "div",
-          {
-            className: _().WhitelistCtn,
-            ref: _,
-          },
-          _.map((_, _) =>
-            _.createElement(
-              "div",
-              {
-                key: _,
-                ref: _[_],
-              },
-              _ == _ &&
-                _.createElement(_, {
-                  width: _,
-                }),
-              _.createElement(
-                "div",
-                {
-                  ref: _[_],
-                  className: _().DragGhost,
-                },
-                _ == _ &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(_().WhitelistRow, _),
-                    },
-                    _.createElement("img", {
-                      className: (0, _._)(_().WhitelistAvatar, _().Grabbing),
-                      src: _,
-                    }),
-                    _.createElement("input", {
-                      className: (0, _._)(
-                        _().WhitelistNumber,
-                        _().Disabled,
-                        _().Grabbing,
-                      ),
-                      type: "text",
-                      value: (_ > _ ? _ - 1 : _) + 1,
-                      disabled: !0,
-                    }),
-                    __webpack_require__(_, _),
-                  ),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().WhitelistRow,
-                    _,
-                    _ && _().DragActive,
-                    _ == _ && _().BeingDragged,
-                    _ == _ && _().Dropped,
-                  ),
-                  onAnimationEnd: () => _(void 0),
-                },
-                _.createElement("img", {
-                  className: (0, _._)(
-                    _().WhitelistAvatar,
-                    _().Grabbable,
-                    _ && _().DisabledGrab,
-                  ),
-                  src: _,
-                  onMouseDown: Boolean(_) ? void 0 : (_) => _(_, _),
-                }),
-                _.createElement("input", {
-                  className: (0, _._)(_().WhitelistNumber, _ && _().Disabled),
-                  type: "text",
-                  value: _ == _ ? _ : _ + 1,
-                  disabled: _ || _ == _,
-                  onChange: (_) => _(_.target.value),
-                  onKeyDown: (_) =>
-                    ((_, _) => {
-                      "Enter" === _.key && (_(_), _.currentTarget.blur());
-                    })(_, _),
-                  onFocus: (_) => {
-                    _(_), _(_.target.value);
-                  },
-                  onBlur: () => _(_),
-                }),
-                __webpack_require__(_, _),
-                Boolean(_ != _) &&
-                  Boolean(_ || _) &&
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().ButtonCtn,
-                    },
-                    Boolean(_) &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().RemoveIcon,
-                          onClick: (_) => _(_, _),
-                        },
-                        _.createElement(_.ffu, null),
-                      ),
-                    Boolean(_) &&
-                      _.createElement("img", {
-                        className: _().RemoveIcon,
-                        src: _._,
-                        onClick: (_) => _(_, _),
-                      }),
-                  ),
-              ),
-              _ == _.length &&
-                _ == _.length - 1 &&
-                _.createElement(_, {
-                  width: _,
-                }),
-            ),
-          ),
-        );
-      }
-      function _(_) {
-        const { width: _ } = _;
-        return _.createElement(
-          "div",
-          {
-            className: _().DragHighlightContainer,
-          },
-          _.createElement("div", {
-            className: _().DragHighlight,
-            style: {
-              width: _,
-            },
-          }),
-        );
       }
     },
   },

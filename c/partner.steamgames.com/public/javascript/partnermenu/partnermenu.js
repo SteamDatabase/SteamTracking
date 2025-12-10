@@ -490,6 +490,10 @@
   });
   var _ = _(() => {
     "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+    _();
     _();
     _();
     _();
@@ -41669,7 +41673,7 @@ Error generating stack: ` +
   }
   _();
   _();
-  var _ = _(_());
+  var _ = _(_(), 1);
   var _ = [
       "sc_schinese",
       "schinese",

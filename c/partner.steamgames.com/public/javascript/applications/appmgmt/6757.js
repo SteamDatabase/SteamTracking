@@ -48,7 +48,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
@@ -88,7 +87,7 @@
                   _._.CMInterface.GetServiceTransport(),
                   _,
                 );
-                if (_.GetEResult() != _._.k_EResultOK) {
+                if (1 != _.GetEResult()) {
                   const _ =
                     (0, _._)("#EventDisplay_Share_Failure") +
                     "\n\n" +
@@ -106,7 +105,7 @@
                 const _ = await _().post(_, _, {
                   withCredentials: !0,
                 });
-                if (200 != _.status || _?.data?.success != _._.k_EResultOK) {
+                if (200 != _.status || 1 != _?.data?.success) {
                   const _ =
                     (0, _._)("#EventDisplay_Share_Failure") +
                     "\n\n" +

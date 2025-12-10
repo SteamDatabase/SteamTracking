@@ -1930,7 +1930,7 @@
             );
           })(),
           [a, l] = (0, r.useState)(""),
-          s = A.TS.PARTNER_BASE_URL + "meetsteam/2025",
+          s = A.TS.PARTNER_BASE_URL + "meetsteam",
           i = (0, r.useMemo)(() => {
             const e = new Map();
             return (

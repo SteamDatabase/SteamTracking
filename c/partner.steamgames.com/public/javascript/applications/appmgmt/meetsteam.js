@@ -2175,7 +2175,7 @@
             );
           })(),
           [_, _] = (0, _.useState)(""),
-          _ = _._.PARTNER_BASE_URL + "meetsteam/2025",
+          _ = _._.PARTNER_BASE_URL + "meetsteam",
           _ = (0, _.useMemo)(() => {
             const _ = new Map();
             return (

@@ -4,25 +4,6 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [7352],
   {
-    4940: (e) => {
-      e.exports = {
-        TitleHR: "_1rdzNwXOoo1-LmnB-gVa8L",
-        ActionButtonCtn: "_7a7-wklt6L9bHpSe8uw95",
-        CategoriesList: "YMtVaSAftRDKdmUzno1V-",
-        CategoryCtn: "_1vjux5UePGI2QR8pgGS5s9",
-        Category: "_12BB3TMamY8yT5zyDnNr5Y",
-        CategoryType: "_2rg93RSnGgt35AemsbS3XN",
-        ExcludedFromSearch: "_1qSt9f_EVF7MmpIxINFOnq",
-        ReplacesTags: "_2VMbzBly9fJ6k58VPyo5Dw",
-        CategoryEditor: "hDZX9jvA2yVDsxIl25krT",
-        TagOrCategoryList: "_33SvLrTusAraXr9O6rG1RK",
-        IDSelector: "_1COCuEUNPkqoSthDBf5dKb",
-        CategorySummary: "_1h-LQnwvNcayOGn1YjEAw8",
-        Clause: "_17Lm214eZBjzdDsBlWCP0y",
-        Item: "uZOnNO-9GSMjuZg73yUDz",
-        UnpublishedChangesNotice: "_3IZil2pI21oJCdU0WQn6Z3",
-      };
-    },
     92237: (e) => {
       e.exports = {
         Dummy: "wW1AV4_YscO4bfrtkjtze",
@@ -50,26 +31,6 @@
         DashDescription: "_16bPPRfJgTdFDNoMeEHx96",
       };
     },
-    41609: (e) => {
-      e.exports = {
-        WhitelistCtn: "_1UhmxrINvvaNnHzhCPoill",
-        WhitelistRow: "_28TC1EYm0jlWPjyk89xXCL",
-        WhitelistNumber: "IY3dF3eWXX1OmE8oYcQKp",
-        Disabled: "_2VzE-3UQEHXyAext8t7gLW",
-        Grabbing: "_1vSZ5gJndAOamRhVGni8HG",
-        DragActive: "_31uDZXKZQlYMd8FK9xdaJb",
-        Dropped: "_3bfDVSvzMDkk4s1j0Vw8jI",
-        JumpToSection: "oABTo2lkoYYI5YMYaeq_Q",
-        BeingDragged: "_3y7I4DL9Hua5OhZ4HgcBB5",
-        DragGhost: "_61nYWo98IhSjR8PWtQX9O",
-        Grabbable: "riuelIz655g_IBddWfLQ-",
-        DisabledGrab: "_2K0C_m1AZvB6yeNaEXXjDD",
-        WhitelistAvatar: "_3DGjmH9KW9BAXsEYwH1WpE",
-        ButtonCtn: "_1hSqlvDTyj9P6eWTHXutUt",
-        DragHighlightContainer: "_2jRMC5JVSK6dsktYus9Gjf",
-        DragHighlight: "Y9ryg1Npznt3dpkr7BGp1",
-      };
-    },
     1814: (e, t, a) => {
       "use strict";
       a.d(t, { Q: () => i });
@@ -77,7 +38,7 @@
         n = a.n(s),
         r = a(68797),
         o = a(6144),
-        l = a(30470);
+        m = a(30470);
       class i {
         m_rtStartTime;
         m_rtEndTime;
@@ -158,11 +119,11 @@
           let t;
           try {
             const a = new FormData();
-            a.append("sessionid", l.TS.SESSIONID),
+            a.append("sessionid", m.TS.SESSIONID),
               a.append("rgAppIDs", e.join(",")),
               a.append("rtimeStart", "" + this.m_rtStartTime),
               a.append("rtimeEnd", "" + this.m_rtEndTime);
-            const s = `${l.TS.PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries`,
+            const s = `${m.TS.PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries`,
               o = await n().post(s, a, { withCredentials: !0 });
             if (200 == o.status && o.data?.apps_to_packages?.length > 0)
               return (
@@ -218,7 +179,7 @@
             (this.m_rtEndTime = a - 86400),
               (this.m_rtStartTime = a - 24 * (e + 1) * 60 * 60);
           }
-          "dev" == l.TS.WEB_UNIVERSE &&
+          "dev" == m.TS.WEB_UNIVERSE &&
             console.log(
               `CAppSaleSummary initializing to ${this.m_rtStartTime} to ${this.m_rtEndTime}`,
             );
@@ -228,33 +189,29 @@
     562: (e, t, a) => {
       "use strict";
       a.d(t, {
-        DT: () => T,
-        GX: () => g,
-        LD: () => y,
-        XL: () => C,
-        fT: () => S,
-        fs: () => d,
-        k: () => f,
-        lY: () => _,
-        tV: () => b,
-        vv: () => A,
+        DT: () => C,
+        GX: () => c,
+        LD: () => g,
+        fT: () => h,
+        fs: () => p,
+        k: () => T,
+        lY: () => d,
+        tV: () => y,
       });
       var s = a(34629),
         n = a(41735),
         r = a.n(n),
         o = a(90626),
-        l = a(37085),
-        i = a(68797),
-        m = a(78327),
-        u = a(14947),
-        c = a(65946),
-        p = a(6419);
-      class d {
+        m = a(68797),
+        i = a(78327),
+        l = a(14947),
+        u = a(6419);
+      class p {
         m_mapCategories;
         m_promise;
         static s_singleton;
         constructor() {
-          "dev" === m.TS.WEB_UNIVERSE &&
+          "dev" === i.TS.WEB_UNIVERSE &&
             (window.g_ContentHubCategoriesStore = this);
         }
         BIsLoaded() {
@@ -270,17 +227,17 @@
         }
         async Load() {
           const e =
-              m.TS.PARTNER_BASE_URL +
+              i.TS.PARTNER_BASE_URL +
               "admin/store/contenthub/ajaxgetcontenthubcategories",
-            t = { origin: self.origin, sessionid: m.TS.SESSIONID };
+            t = { origin: self.origin, sessionid: i.TS.SESSIONID };
           let a = null;
           try {
             const s = await r().get(e, { params: t });
-            if (200 === s.status && s.data?.success === l.d.k_EResultOK)
+            if (200 === s.status && 1 === s.data?.success)
               return void (this.m_mapCategories = this.ParseResponse(s.data));
-            (this.m_promise = null), (a = (0, i.H)(s));
+            (this.m_promise = null), (a = (0, m.H)(s));
           } catch (e) {
-            (this.m_promise = null), (a = (0, i.H)(e));
+            (this.m_promise = null), (a = (0, m.H)(e));
           }
           console.error(
             "CContentHubCategoriesStore.Load failed: " + a.strErrorMsg,
@@ -300,62 +257,72 @@
                 id: s.id || void 0,
                 exclude_from_search: s.exclude_from_search,
                 search_alias: s.search_alias,
-              };
-            s.must &&
-              (Array.isArray(s.must)
-                ? (n.must = s.must.map((e) => ({ id: e })))
-                : (n.must = [{ id: s.must }])),
-              s.any &&
-                (Array.isArray(s.any)
-                  ? (n.any = s.any.map((e) => ({ id: e })))
-                  : (n.any = [{ id: s.any }])),
-              s.mustnot &&
-                (Array.isArray(s.mustnot)
-                  ? (n.mustnot = s.mustnot.map((e) => ({ id: e })))
-                  : (n.mustnot = [{ id: s.mustnot }])),
-              s.replaces_tags &&
-                (Array.isArray(s.replaces_tags)
-                  ? (n.replaces_tags = s.replaces_tags.map((e) => ({ id: e })))
-                  : (n.replaces_tags = [{ id: s.replaces_tags }])),
+              },
+              {
+                must: r,
+                any: o,
+                mustnot: m,
+                replaces_tags: i,
+                content_descriptors: l,
+              } = s;
+            r &&
+              (Array.isArray(r)
+                ? (n.must = r.map((e) => ({ id: e })))
+                : (n.must = [{ id: r }])),
+              o &&
+                (Array.isArray(o)
+                  ? (n.any = o.map((e) => ({ id: e })))
+                  : (n.any = [{ id: o }])),
+              m &&
+                (Array.isArray(m)
+                  ? (n.mustnot = m.map((e) => ({ id: e })))
+                  : (n.mustnot = [{ id: m }])),
+              i &&
+                (Array.isArray(i)
+                  ? (n.replaces_tags = i.map((e) => ({ id: e })))
+                  : (n.replaces_tags = [{ id: i }])),
+              l &&
+                "string" == typeof l &&
+                (n.content_descriptors = l.split(",").map((e) => parseInt(e))),
               t.set(e, n);
           }
           return t;
         }
         static Get() {
-          return d.s_singleton || (d.s_singleton = new d()), d.s_singleton;
+          return p.s_singleton || (p.s_singleton = new p()), p.s_singleton;
         }
       }
-      async function g() {
+      async function c() {
         const e =
-            m.TS.PARTNER_BASE_URL +
+            i.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxgetcontenthubcategorieskv",
-          t = { origin: self.origin, sessionid: m.TS.SESSIONID };
+          t = { origin: self.origin, sessionid: i.TS.SESSIONID };
         let a = null;
         try {
           const s = await r().get(e, { params: t, withCredentials: !0 });
-          if (200 === s.status && s.data?.success === l.d.k_EResultOK) {
+          if (200 === s.status && 1 === s.data?.success) {
             const e = { rgCategories: [], bHasUnpublishedChanges: !1 };
             return (
               s.data.in_progress
-                ? ((e.rgCategories = h(
+                ? ((e.rgCategories = _(
                     JSON.parse(s.data.in_progress).categories,
                   )),
                   (e.bHasUnpublishedChanges = !0))
                 : s.data.active &&
-                  (e.rgCategories = h(JSON.parse(s.data.active).categories)),
+                  (e.rgCategories = _(JSON.parse(s.data.active).categories)),
               e
             );
           }
-          a = (0, i.H)(s);
+          a = (0, m.H)(s);
         } catch (e) {
-          a = (0, i.H)(e);
+          a = (0, m.H)(e);
         }
         return (
           console.error("GetCategoriesKV failed: " + a.strErrorMsg, a),
           { rgCategories: [] }
         );
       }
-      function h(e) {
+      function _(e) {
         const t = [];
         for (const a of Object.keys(e)) {
           const s = e[a],
@@ -367,41 +334,49 @@
               id: s.id || void 0,
               exclude_from_search: Boolean(s.exclude_from_search),
               search_alias: s.search_alias,
-            };
-          s.must &&
-            (Array.isArray(s.must)
-              ? (n.must = s.must.map((e) => ({ id: Number(e) })))
-              : (n.must = [{ id: Number(s.must) }])),
-            s.any &&
-              (Array.isArray(s.any)
-                ? (n.any = s.any.map((e) => ({ id: Number(e) })))
-                : (n.any = [{ id: Number(s.any) }])),
-            s.mustnot &&
-              (Array.isArray(s.mustnot)
-                ? (n.mustnot = s.mustnot.map((e) => ({ id: Number(e) })))
-                : (n.mustnot = [{ id: Number(s.mustnot) }])),
-            s.replaces_tags &&
-              (Array.isArray(s.replaces_tags)
-                ? (n.replaces_tags = s.replaces_tags.map((e) => ({
-                    id: Number(e),
-                  })))
-                : (n.replaces_tags = [{ id: Number(s.replaces_tags) }])),
+            },
+            {
+              must: r,
+              any: o,
+              mustnot: m,
+              replaces_tags: i,
+              content_descriptors: l,
+            } = s;
+          r &&
+            (Array.isArray(r)
+              ? (n.must = r.map((e) => ({ id: Number(e) })))
+              : (n.must = [{ id: Number(r) }])),
+            o &&
+              (Array.isArray(o)
+                ? (n.any = o.map((e) => ({ id: Number(e) })))
+                : (n.any = [{ id: Number(o) }])),
+            m &&
+              (Array.isArray(m)
+                ? (n.mustnot = m.map((e) => ({ id: Number(e) })))
+                : (n.mustnot = [{ id: Number(m) }])),
+            i &&
+              (Array.isArray(i)
+                ? (n.replaces_tags = i.map((e) => ({ id: Number(e) })))
+                : (n.replaces_tags = [{ id: Number(i) }])),
+            l &&
+              "string" == typeof l &&
+              (n.content_descriptors = l.split(",").map((e) => parseInt(e))),
             t.push(n);
         }
         return t;
       }
-      function _() {
+      function d() {
         const [e, t] = (0, o.useState)(null);
         return (
           (0, o.useEffect)(() => {
-            g().then((e) => {
+            c().then((e) => {
               t(e.rgCategories);
             });
           }, []),
           e
         );
       }
-      async function S(e) {
+      async function h(e) {
         const t = {};
         for (const a of e)
           (t[a.handle] = {
@@ -416,6 +391,9 @@
             id: a.id,
             exclude_from_search: a.exclude_from_search,
             search_alias: a.search_alias,
+            content_descriptors: a.content_descriptors?.length
+              ? a.content_descriptors.join(",")
+              : void 0,
           }),
             1 === t[a.handle].must?.length &&
               (t[a.handle].must = t[a.handle].must[0]),
@@ -424,41 +402,40 @@
             1 === t[a.handle].replaces_tags?.length &&
               (t[a.handle].replaces_tags = t[a.handle].replaces_tags[0]);
         const a =
-            m.TS.PARTNER_BASE_URL +
+            i.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxsavecontenthubcategorieskv",
           s = new FormData();
-        s.append("sessionid", m.TS.SESSIONID),
+        s.append("sessionid", i.TS.SESSIONID),
           s.append("origin", self.origin),
           s.append("json", JSON.stringify(t));
         let n = null;
         try {
           const e = await r().post(a, s, { withCredentials: !0 });
-          if (200 === e.status && e.data?.success === l.d.k_EResultOK)
-            return E.Get().ClearDirty(), null;
-          n = (0, i.H)(e);
+          if (200 === e.status && 1 === e.data?.success)
+            return S.Get().ClearDirty(), null;
+          n = (0, m.H)(e);
         } catch (e) {
-          n = (0, i.H)(e);
+          n = (0, m.H)(e);
         }
         return console.error("SaveCategoriesKV failed: " + n.strErrorMsg, n), n;
       }
-      async function y() {
+      async function g() {
         const e =
-            m.TS.PARTNER_BASE_URL +
+            i.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxpublishcontenthubcategorieskv",
-          t = { origin: self.origin, sessionid: m.TS.SESSIONID };
+          t = { origin: self.origin, sessionid: i.TS.SESSIONID };
         try {
           const a = await r().get(e, { params: t, withCredentials: !0 });
-          if (200 !== a.status || a.data?.success !== l.d.k_EResultOK)
-            return (0, i.H)(a);
+          if (200 !== a.status || 1 !== a.data?.success) return (0, m.H)(a);
         } catch (e) {
-          return (0, i.H)(e);
+          return (0, m.H)(e);
         }
         return null;
       }
-      class E {
+      class S {
         constructor() {
-          (0, u.Gn)(this),
-            "dev" === m.TS.WEB_UNIVERSE && (window.g_StoreTagStore = this);
+          (0, l.Gn)(this),
+            "dev" === i.TS.WEB_UNIVERSE && (window.g_StoreTagStore = this);
         }
         m_rgTags;
         m_rgCategories;
@@ -498,17 +475,17 @@
         }
         async Load() {
           const e =
-              m.TS.PARTNER_BASE_URL +
+              i.TS.PARTNER_BASE_URL +
               "admin/store/contenthub/ajaxgetstoretagsandcategories",
             t = {
               origin: self.origin,
-              sessionid: m.TS.SESSIONID,
-              l: m.TS.LANGUAGE,
+              sessionid: i.TS.SESSIONID,
+              l: i.TS.LANGUAGE,
             };
           let a = null;
           try {
             const s = await r().get(e, { params: t });
-            if (200 === s.status && s.data?.success === l.d.k_EResultOK)
+            if (200 === s.status && 1 === s.data?.success)
               return (
                 (this.m_rgTags = s.data.tags),
                 (this.m_rgCategories = s.data.categories),
@@ -521,7 +498,7 @@
                   this.m_mapStoreCategories.set(e.categoryid, e),
                 ),
                 void (
-                  "dev" === m.TS.WEB_UNIVERSE &&
+                  "dev" === i.TS.WEB_UNIVERSE &&
                   console.log(
                     "tags " +
                       this.m_rgTags.length +
@@ -530,9 +507,9 @@
                   )
                 )
               );
-            (this.m_promise = null), (a = (0, i.H)(s));
+            (this.m_promise = null), (a = (0, m.H)(s));
           } catch (e) {
-            (this.m_promise = null), (a = (0, i.H)(e));
+            (this.m_promise = null), (a = (0, m.H)(e));
           }
           console.error(
             "CStoreTagsAndCategoriesStore.Load failed: " + a.strErrorMsg,
@@ -540,79 +517,73 @@
           );
         }
         static Get() {
-          return E.s_singleton || (E.s_singleton = new E()), E.s_singleton;
+          return S.s_singleton || (S.s_singleton = new S()), S.s_singleton;
         }
       }
+      function y() {
+        return S.Get().BIsDirty();
+      }
       function C() {
-        return (0, c.q3)(() => E.Get().BIsDirty());
-      }
-      function A() {
-        return { fnSetDirty: E.Get().SetDirty };
-      }
-      function b() {
-        return E.Get().BIsDirty();
-      }
-      function T() {
-        const [e, t] = o.useState(E.Get().GetTags()),
-          [a, s] = o.useState(E.Get().GetCategories());
+        const [e, t] = o.useState(S.Get().GetTags()),
+          [a, s] = o.useState(S.Get().GetCategories());
         return (
           o.useEffect(() => {
             (void 0 !== e && void 0 !== a) ||
-              E.Get()
+              S.Get()
                 .HintLoad()
                 .then(() => {
-                  t(E.Get().GetTags()), s(E.Get().GetCategories());
+                  t(S.Get().GetTags()), s(S.Get().GetCategories());
                 });
           }, [a, e]),
           { rgTags: e, rgCategories: a }
         );
       }
-      function f() {
-        const [e, t] = o.useState(E.Get().GetStoreTagMap()),
-          [a, s] = o.useState(E.Get().GetStoreCategoryMap());
+      function T() {
+        const [e, t] = o.useState(S.Get().GetStoreTagMap()),
+          [a, s] = o.useState(S.Get().GetStoreCategoryMap());
         return (
           o.useEffect(() => {
             (void 0 !== e && void 0 !== a) ||
-              E.Get()
+              S.Get()
                 .HintLoad()
                 .then(() => {
-                  t(E.Get().GetStoreTagMap()), s(E.Get().GetStoreCategoryMap());
+                  t(S.Get().GetStoreTagMap()), s(S.Get().GetStoreCategoryMap());
                 });
           }, [a, e]),
           { mapStoreTags: e, mapStoreCategories: a }
         );
       }
-      (0, s.Cg)([u.sH], E.prototype, "m_bDirty", void 0),
-        (0, s.Cg)([p.o], E.prototype, "SetDirty", null);
+      (0, s.Cg)([l.sH], S.prototype, "m_bDirty", void 0),
+        (0, s.Cg)([u.o], S.prototype, "SetDirty", null);
     },
     31376: (e, t, a) => {
       "use strict";
       a.d(t, {
-        AY: () => v,
-        CU: () => _,
-        Iw: () => T,
-        Th: () => b,
-        _E: () => g,
-        eX: () => C,
+        AY: () => G,
+        CU: () => g,
+        Iw: () => b,
+        Th: () => A,
+        _E: () => d,
+        eX: () => T,
         hl: () => f,
-        mg: () => A,
-        p$: () => E,
-        tt: () => d,
+        mg: () => E,
+        p$: () => C,
+        tt: () => _,
       });
       var s = a(34629),
         n = a(41735),
         r = a.n(n),
         o = a(1814),
-        l = a(14947),
+        m = a(14947),
         i = a(90626),
-        m = a(20194),
+        l = a(20194),
         u = a(6144),
-        c = a(73745),
-        p = a(30470);
-      const d = 120,
-        g = 10;
+        p = a(73745),
+        c = a(30470);
+      const _ = 120,
+        d = 10;
       class h {
-        m_appAndPackagesSummuries = new o.Q(d);
+        m_appAndPackagesSummuries = new o.Q(_);
         m_mapContentHubSummary = new Map();
         m_mapContentHubToAppCount = new Map();
         m_mapContentHubSummaryPromises = new Map();
@@ -697,7 +668,7 @@
             net_units_sold: 0,
           };
           return (
-            n.slice(0, g).forEach((e) => {
+            n.slice(0, d).forEach((e) => {
               (r.gross_sales_usd += e.gross_sales_usd),
                 (r.gross_units_sold += e.gross_units_sold),
                 (r.net_sales_usd += e.net_sales_usd),
@@ -713,7 +684,7 @@
               this.BuildAnalysis(e),
             ]),
             this.m_summaryAnalysisChange.Dispatch(this.m_rgSummaries),
-            this.SaveToCacheSaleSummary(e, s, r, n.slice(0, g), n.length),
+            this.SaveToCacheSaleSummary(e, s, r, n.slice(0, d), n.length),
             s
           );
         }
@@ -729,9 +700,9 @@
           const e = {
               rtStartTime: this.m_appAndPackagesSummuries.GetRTStartTime(),
               rtEndTime: this.m_appAndPackagesSummuries.GetRTEndTime(),
-              sessionid: p.TS.SESSIONID,
+              sessionid: c.TS.SESSIONID,
             },
-            t = `${p.TS.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubstats`,
+            t = `${c.TS.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubstats`,
             a = await r().get(t, { params: e });
           if (200 == a.status && a.data?.cache?.length > 0) {
             const e = new Array();
@@ -770,8 +741,8 @@
             total_games: n,
             hub_gross_units_sold: a.gross_units_sold,
             hub_gross_sales_usd: Math.floor(a.gross_sales_usd / 100),
-            hub_units_per_day: Math.floor(a.gross_units_sold / d),
-            hub_sales_usd_per_day: Math.floor(a.gross_sales_usd / (100 * d)),
+            hub_units_per_day: Math.floor(a.gross_units_sold / _),
+            hub_sales_usd_per_day: Math.floor(a.gross_sales_usd / (100 * _)),
             top_apps_percent:
               a.gross_sales_usd > 0
                 ? ((s.gross_sales_usd / a.gross_sales_usd) * 100).toFixed(2)
@@ -789,7 +760,7 @@
               appCount: n,
             },
             i = new FormData();
-          i.append("sessionid", p.TS.SESSIONID),
+          i.append("sessionid", c.TS.SESSIONID),
             i.append(
               "rtStartTime",
               "" + this.m_appAndPackagesSummuries.GetRTStartTime(),
@@ -801,36 +772,36 @@
             i.append("bClear", "false"),
             i.append("key", this.GetKey(e)),
             i.append("rgStats", JSON.stringify(o));
-          const m = `${p.TS.PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats`,
-            u = await r().post(m, i, { withCredentials: !0 });
+          const l = `${c.TS.PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats`,
+            u = await r().post(l, i, { withCredentials: !0 });
           200 != u.status &&
-            console.error("SaveToCacheSaleSummary failed to save " + l.HP, u);
+            console.error("SaveToCacheSaleSummary failed to save " + m.HP, u);
         }
         static s_Singleton;
         static Get() {
           return (
             h.s_Singleton ||
               ((h.s_Singleton = new h()),
-              "dev" == p.TS.WEB_UNIVERSE &&
+              "dev" == c.TS.WEB_UNIVERSE &&
                 (window.g_ThemeEventStore = h.s_Singleton)),
             h.s_Singleton
           );
         }
       }
-      function _(e) {
+      function g(e) {
         const {
           data: t,
           isLoading: a,
           isError: s,
-        } = (0, m.I)({
+        } = (0, l.I)({
           queryKey: ["contenthubsummary", e.type, e.handle],
           queryFn: async () => {
             const t = {
                 contenthubcategorytype: e.type,
                 handle: e.handle,
-                sessionid: p.TS.SESSIONID,
+                sessionid: c.TS.SESSIONID,
               },
-              a = `${p.TS.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubsummary`,
+              a = `${c.TS.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubsummary`,
               s = await r().get(a, { params: t });
             return 200 == s.status && s.data?.top_apps?.length > 0
               ? s.data
@@ -862,28 +833,28 @@
             .join(","),
         };
       }
-      (0, s.Cg)([c.oI], h.prototype, "LoadCachedSaleSummaries", null);
+      (0, s.Cg)([p.oI], h.prototype, "LoadCachedSaleSummaries", null);
       const y = { total_games: 0, all_appid: [], top_games: [] };
-      function E(e, t, a) {
+      function C(e, t, a) {
         const {
             musthaveall: s,
             musthaveany: n,
             mustnothaveany: o,
           } = S(e, t, a),
           {
-            data: l,
+            data: m,
             isLoading: i,
             isError: u,
-          } = (0, m.I)({
+          } = (0, l.I)({
             queryKey: ["useContentHubCategoryEditorFullAppList", s, n, o],
             queryFn: async () => {
               const e = {
                   musthaveall: s,
                   musthaveany: n,
                   mustnothaveany: o,
-                  sessionid: p.TS.SESSIONID,
+                  sessionid: c.TS.SESSIONID,
                 },
-                t = `${p.TS.PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist`,
+                t = `${c.TS.PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist`,
                 a = await r().get(t, { params: e });
               return 200 == a.status && a.data?.top_games?.length > 0
                 ? a.data
@@ -891,10 +862,10 @@
             },
             enabled: 0 != s.length || 0 != n.length || 0 != o.length,
           });
-        return 0 == s.length && 0 == n.length && 0 == o.length ? y : l || null;
+        return 0 == s.length && 0 == n.length && 0 == o.length ? y : m || null;
       }
-      function C(e, t, a) {
-        const s = E(e, t, a),
+      function T(e, t, a) {
+        const s = C(e, t, a),
           n = (0, i.useMemo)(() => {
             const {
               musthaveall: s,
@@ -910,11 +881,11 @@
               !r &&
               h.Get().LoadContentHubSaleSummary(n, s.all_appid);
           }, [n, s, r]),
-          (0, c.hL)(h.Get().GetContentHubSummaryChangeCallback(n), o),
+          (0, p.hL)(h.Get().GetContentHubSummaryChangeCallback(n), o),
           r
         );
       }
-      function A(e, t, a) {
+      function E(e, t, a) {
         const s = (0, i.useMemo)(() => {
             const {
               musthaveall: s,
@@ -925,25 +896,25 @@
           }, [e, t, a]),
           [n, r] = (0, i.useState)(h.Get().GetTopAppSummary(s));
         return (
-          (0, c.hL)(h.Get().GetContentHubTopAppSaleSummaryChangeCallback(s), r),
+          (0, p.hL)(h.Get().GetContentHubTopAppSaleSummaryChangeCallback(s), r),
           n
         );
       }
-      function b(e) {
+      function A(e) {
         const t = (function (e) {
             const {
               data: t,
               isLoading: a,
               isError: s,
-            } = (0, m.I)({
+            } = (0, l.I)({
               queryKey: ["contenthubapplist", e.type, e.handle],
               queryFn: async () => {
                 const t = {
                     contenthubcategorytype: e.type,
                     handle: e.handle,
-                    sessionid: p.TS.SESSIONID,
+                    sessionid: c.TS.SESSIONID,
                   },
-                  a = `${p.TS.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist`,
+                  a = `${c.TS.PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist`,
                   s = await r().get(a, { params: t });
                 return 200 == s.status && s.data?.apps?.length > 0
                   ? s.data
@@ -957,16 +928,16 @@
           (0, i.useEffect)(() => {
             t?.length && !a && h.Get().LoadContentHubSaleSummary(e, t);
           }, [e, e.type, e.handle, t, a]),
-          (0, c.hL)(h.Get().GetContentHubSummaryChangeCallback(e), s),
+          (0, p.hL)(h.Get().GetContentHubSummaryChangeCallback(e), s),
           a
         );
       }
-      function T(e) {
+      function b(e) {
         const [t, a] = (0, i.useState)(
           h.Get().GetAppSummaryObject().GetAppSaleSummary(e),
         );
         return (
-          (0, c.hL)(
+          (0, p.hL)(
             h.Get().GetAppSummaryObject().GetAppSaleSummaryChangeCallback(e),
             a,
           ),
@@ -976,765 +947,113 @@
       function f(e) {
         const [t, a] = (0, i.useState)(h.Get().GetTopAppSummary(e));
         return (
-          (0, c.hL)(h.Get().GetContentHubTopAppSaleSummaryChangeCallback(e), a),
+          (0, p.hL)(h.Get().GetContentHubTopAppSaleSummaryChangeCallback(e), a),
           t
         );
       }
-      function v() {
+      function G() {
         const [e, t] = (0, i.useState)(h.Get().GetSummaryAnalysis());
         return (
           (0, i.useEffect)(() => {
             h.Get().LoadCachedSaleSummaries();
           }, []),
-          (0, c.hL)(h.Get().GetSummaryAnalysisChange(), t),
+          (0, p.hL)(h.Get().GetSummaryAnalysisChange(), t),
           e
-        );
-      }
-    },
-    65213: (e, t, a) => {
-      "use strict";
-      a.d(t, { A: () => f });
-      var s = a(562),
-        n = a(31376),
-        r = a(90626),
-        o = a(82359),
-        l = a(45737),
-        i = a.n(l),
-        m = a(16676),
-        u = a(9154),
-        c = a(738),
-        p = a(56654),
-        d = a(12155),
-        g = a(22797),
-        h = a(9161),
-        _ = a(61859),
-        S = a(73745),
-        y = a(30470),
-        E = a(74810),
-        C = a(92237),
-        A = a(4940),
-        b = a.n(A),
-        T = a(95034);
-      function f() {
-        const [e, t] = r.useState(),
-          [a, n] = r.useState(!1),
-          o = (0, s.XL)(),
-          { fnSetDirty: l } = (0, s.vv)(),
-          [u, p] = r.useState(!1),
-          [h, _] = r.useState(!1);
-        return (
-          r.useEffect(() => {
-            (0, s.GX)().then((e) => {
-              t(e.rgCategories), _(e.bHasUnpublishedChanges), n(!0);
-            });
-          }, []),
-          a
-            ? r.createElement(
-                "div",
-                { className: i().AdminPageCtn },
-                r.createElement(
-                  "div",
-                  { className: i().PageTitle },
-                  "Content Hub Categories",
-                ),
-                r.createElement("hr", { className: b().TitleHR }),
-                r.createElement(
-                  "p",
-                  null,
-                  "This page lets you review and edit existing categories. Click on their titles.  At the bottom there is controls to create a new category. To see the hubs performance related to making a theme sale ",
-                  r.createElement(
-                    "a",
-                    {
-                      href: `${y.TS.PARTNER_BASE_URL}promotion/planning/themes`,
-                    },
-                    "here.",
-                  ),
-                ),
-                r.createElement(
-                  "a",
-                  {
-                    href: "https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m",
-                    target: "_blank",
-                  },
-                  "Content Hub Graphana Stats Page",
-                ),
-                r.createElement(
-                  "div",
-                  { className: i().PageSubTitle },
-                  "Categories",
-                ),
-                h &&
-                  r.createElement(
-                    "div",
-                    { className: b().UnpublishedChangesNotice },
-                    "You have unpublished changes. Click Publish below to publish and make them available to users.",
-                  ),
-                r.createElement(v, { categories: e, onUpdate: l }),
-                r.createElement(
-                  "div",
-                  { className: b().ActionButtonCtn },
-                  r.createElement(
-                    m.$n,
-                    {
-                      onClick: () =>
-                        (0, c.pg)(
-                          r.createElement(B, {
-                            onImport: (e) => {
-                              t(e), p(!0);
-                            },
-                          }),
-                          window,
-                        ),
-                    },
-                    "Import From PHP",
-                  ),
-                  r.createElement(
-                    m.jn,
-                    {
-                      onClick: () =>
-                        (0, c.pg)(
-                          r.createElement(L, {
-                            categories: e,
-                            onSave: () => {
-                              p(!1), _(!0);
-                            },
-                          }),
-                          window,
-                        ),
-                    },
-                    o
-                      ? r.createElement(r.Fragment, null, "Save")
-                      : r.createElement(
-                          r.Fragment,
-                          null,
-                          r.createElement(d.Jlk, null),
-                          "Saved",
-                        ),
-                  ),
-                  r.createElement(
-                    m.$n,
-                    {
-                      onClick: () =>
-                        (0, c.pg)(
-                          r.createElement(I, { onPublish: () => _(!1) }),
-                          window,
-                        ),
-                    },
-                    "Publish",
-                  ),
-                ),
-              )
-            : r.createElement(g.t, { size: "medium", position: "center" })
-        );
-      }
-      function v(e) {
-        const { categories: t, onUpdate: a } = e,
-          { rgTags: n, rgCategories: o } = (0, s.DT)(),
-          [l] = (0, T.QD)("edit");
-        if (!t) return r.createElement("div", null, "No categories defined.");
-        return r.createElement(
-          "div",
-          { className: b().CategoriesList },
-          r.createElement(p.A, {
-            bDisabled: !0,
-            items: t,
-            onDelete: (e) => {
-              t.splice(e, 1), a();
-            },
-            render: (e) =>
-              r.createElement(w, {
-                key: e.id,
-                item: e,
-                rgTags: n,
-                onUpdate: a,
-                bOpenEditor: l?.toLowerCase() == e.handle,
-              }),
-          }),
-          r.createElement(
-            m.$n,
-            {
-              onClick: () => {
-                let e = 0;
-                for (const a of t)
-                  a.id && Number(a.id) > e && (e = Number(a.id));
-                t.push({ handle: "new_category_" + t.length, id: ++e }), a();
-              },
-            },
-            "Add Category",
-          ),
-        );
-      }
-      function G(e) {
-        const { rgTags: t, replacesTags: a } = e,
-          s = (0, r.useMemo)(
-            () =>
-              a
-                ?.map((e) => {
-                  const a = t?.find((t) => t.tagid === e.id);
-                  return (a?.name || "Unknown tag") + " (" + String(e.id) + ")";
-                })
-                .join(", "),
-            [a, t],
-          );
-        return s
-          ? r.createElement("span", null, "Replaces tags: " + s)
-          : r.createElement("span", null);
-      }
-      function w(e) {
-        const { item: t, rgTags: a, onUpdate: s, bOpenEditor: n } = e,
-          [o, l, i] = (0, S.uD)(n);
-        return r.createElement(
-          "div",
-          { className: b().CategoryCtn },
-          r.createElement(
-            "div",
-            { className: b().Category },
-            r.createElement(
-              "a",
-              {
-                onClick: (e) =>
-                  ((e, t) => {
-                    e.preventDefault(), e.stopPropagation(), l();
-                  })(e),
-              },
-              r.createElement(
-                "b",
-                null,
-                t.loc_token ? (0, _.we)(t.loc_token) : "",
-              ),
-              t.loc_token ? " (" + t.handle + ")" : t.handle,
-            ),
-            r.createElement(
-              "div",
-              { className: b().CategoryType },
-              "tagids" === t.type
-                ? "Tags"
-                : "category" === t.type
-                  ? "Category"
-                  : "contenthub" === t.type
-                    ? "Hardcoded Filter"
-                    : "Special",
-            ),
-            r.createElement(
-              "div",
-              { className: b().ExcludedFromSearch },
-              !0 === t.exclude_from_search ? "Excluded from search" : "",
-            ),
-            r.createElement(
-              "div",
-              { className: b().ReplacesTags },
-              r.createElement(G, { rgTags: a, replacesTags: t.replaces_tags }),
-            ),
-            r.createElement(
-              u.EN,
-              { active: o },
-              r.createElement(N, { category: t, onUpdate: s, closeModal: i }),
-            ),
-          ),
-        );
-      }
-      function N(e) {
-        const { category: t, onUpdate: a, closeModal: s } = e,
-          n = (0, S.CH)();
-        return r.createElement(
-          u.eV,
-          {
-            title: `Edit Category (ID ${t.id})`,
-            bAllowFullSize: !0,
-            onCancel: s,
-            closeModal: s,
-          },
-          r.createElement(
-            m.nB,
-            null,
-            r.createElement(
-              "div",
-              { className: b().CategoryEditor },
-              r.createElement(m.pd, {
-                label: "Handle",
-                tooltip: "This forms the end of the URL. It must be unique",
-                value: t.handle,
-                onChange: (e) => {
-                  (t.handle = e.target.value), n();
-                },
-              }),
-              r.createElement(
-                "div",
-                { className: b().CategoryCtn },
-                r.createElement(m.pd, {
-                  label: "Loc Token",
-                  tooltip:
-                    "Token only needed if we wish to expose this hub to customers",
-                  value: t.loc_token,
-                  onChange: (e) => {
-                    (t.loc_token = e.target.value), n();
-                  },
-                }),
-                t.loc_token ? (0, _.we)(t.loc_token) : "",
-              ),
-              r.createElement(m.Yh, {
-                label: "Use As A Heading ",
-                tooltip:
-                  "Only used for establishing headings used on the main store drop-down menu",
-                checked: t.heading,
-                onChange: (e) => {
-                  (t.heading = e), n();
-                },
-              }),
-              r.createElement(m.Yh, {
-                label: "Exclude from search ",
-                tooltip: "Do not show this category in store search",
-                checked: t.exclude_from_search,
-                onChange: (e) => {
-                  (t.exclude_from_search = e), n();
-                },
-              }),
-              r.createElement(m.pd, {
-                label: "Search aliases",
-                tooltip: "Comma separated search aliases",
-                value: t.search_alias,
-                onChange: (e) => {
-                  (t.search_alias = e.target.value), n();
-                },
-              }),
-              r.createElement(m.m, {
-                label: "Type",
-                rgOptions: [
-                  { data: "tagids", label: "Tag Hub" },
-                  { data: "category", label: "Categories" },
-                  { data: "contenthub", label: "Hardcoded Filter Hub" },
-                ],
-                selectedOption: t.type,
-                onChange: (e) => {
-                  (t.type = e.data), n();
-                },
-              }),
-              ("tagids" === t.type ||
-                "category" === t.type ||
-                "contenthub" == t.type) &&
-                r.createElement(k, { category: t }),
-            ),
-          ),
-          r.createElement(
-            m.wi,
-            null,
-            r.createElement(
-              m.jn,
-              {
-                onClick: () => {
-                  a && a(), s && s();
-                },
-              },
-              "Close",
-            ),
-          ),
-        );
-      }
-      function k(e) {
-        const { category: t } = e,
-          [a, s] = (0, r.useState)(!1),
-          [n, o] = (0, r.useState)(0);
-        return r.createElement(
-          r.Fragment,
-          null,
-          ("tagids" == t.type || "category" == t.type) &&
-            r.createElement(
-              "div",
-              { className: b().CategoryCtn },
-              r.createElement(
-                "div",
-                { className: b().Category },
-                r.createElement(H, {
-                  category: t,
-                  list: "must",
-                  title: "Must have all of these tags",
-                }),
-                r.createElement(H, {
-                  category: t,
-                  list: "any",
-                  title: "Must have one of these tags",
-                }),
-                r.createElement(H, {
-                  category: t,
-                  list: "mustnot",
-                  title: "Must not have any of these tags",
-                }),
-              ),
-            ),
-          ("tagids" == t.type ||
-            "category" == t.type ||
-            "contenthub" == t.type) &&
-            r.createElement(
-              "div",
-              { className: b().CategoryCtn },
-              r.createElement(H, {
-                category: t,
-                list: "replaces_tags",
-                title:
-                  "The following Tags should redirect to this category page",
-              }),
-              r.createElement(
-                "p",
-                null,
-                'This is only needed if this category is similar in name to an existing tag, such as "Sports" where the category is better than the individual tag.',
-              ),
-            ),
-          Boolean(a)
-            ? r.createElement(
-                r.Fragment,
-                null,
-                r.createElement(
-                  m.$n,
-                  { onClick: () => o(n + 1) },
-                  "Refresh Stats",
-                ),
-                r.createElement(D, { category: t }),
-              )
-            : r.createElement(m.Yh, {
-                checked: a,
-                onChange: (e) => s(e),
-                label: "Show Category Sale Stats",
-                key: "info" + n,
-              }),
-        );
-      }
-      function D(e) {
-        const { category: t } = e,
-          a = (0, n.p$)(t.must, t.any, t.mustnot);
-        if (!a)
-          return r.createElement(g.t, {
-            string: (0, _.we)("#Loading"),
-            position: "center",
-            size: "medium",
-          });
-        const s = a.total_games > E.iT && a.total_games <= E.hp;
-        return r.createElement(
-          r.Fragment,
-          null,
-          r.createElement(
-            m.$n,
-            {
-              onClick: () => {
-                const e = [];
-                e.push(["AppID", "Sale Rank"]),
-                  a.top_games.forEach((t) => {
-                    e.push(["" + t.appid, "" + t.long_term_sale_rank]);
-                  });
-                const s = (t.handle || "top100").replace(" ", "_") + ".csv";
-                h.g.WriteCSVToFile(e, s);
-              },
-            },
-            "Download Top 100 Games",
-          ),
-          r.createElement(
-            m.$n,
-            {
-              onClick: () => {
-                const e = [];
-                e.push(["AppID"]),
-                  a.all_appid.forEach((t) => {
-                    e.push(["" + t]);
-                  });
-                const s = (t.handle || "allgames").replace(" ", "_") + ".csv";
-                h.g.WriteCSVToFile(e, s);
-              },
-            },
-            "Download All Games",
-          ),
-          r.createElement(
-            "div",
-            { className: C.ThemeRow },
-            r.createElement(
-              "div",
-              { className: C.ThemeDefinitionCtn },
-              "Summary: ",
-              r.createElement(E.KU, { nTotalGames: a.total_games }),
-              Boolean(s) && r.createElement(R, { category: t }),
-            ),
-            r.createElement(
-              "div",
-              { className: C.TopGamesCtn },
-              r.createElement("div", null, "Top 10 Games non-F2P:"),
-              r.createElement(
-                "div",
-                { className: C.GamesColumn },
-                a.top_games
-                  ?.slice(0, 10)
-                  .map((e) =>
-                    r.createElement(E.W7, {
-                      key: e.appid,
-                      info: e,
-                      category: t,
-                      bSaleSummary: s,
-                    }),
-                  ),
-              ),
-            ),
-          ),
-        );
-      }
-      function R(e) {
-        const { category: t } = e,
-          a = (0, n.eX)(t.must, t.any, t.mustnot),
-          s = (0, n.mg)(t.must, t.any, t.mustnot);
-        return r.createElement(E.ny, { saleSummary: a, topAppSummary: s });
-      }
-      function H(e) {
-        const { category: t, list: a, title: n } = e,
-          { rgTags: l, rgCategories: i } = (0, s.DT)(),
-          u = (0, S.CH)(),
-          c =
-            l?.map((e) => ({
-              value: e.tagid,
-              label: `${e.name} (${e.tagid})`,
-            })) || [],
-          d =
-            i?.map((e) => ({
-              value: e.categoryid,
-              label: `${e.name} (${e.categoryid})`,
-            })) || [];
-        return r.createElement(
-          "div",
-          { className: b().TagOrCategoryList },
-          r.createElement(m.JU, null, n),
-          r.createElement(p.A, {
-            bDisabled: !0,
-            items: t[a] || [],
-            onDelete: (e) => {
-              t[a].splice(e, 1), u();
-            },
-            render: (e) =>
-              "tagids" === t.type || "replaces_tags" === a
-                ? r.createElement(
-                    "div",
-                    { className: b().IDSelector },
-                    r.createElement(m.pd, {
-                      value: e.id,
-                      onChange: (t) => {
-                        (e.id = Number(t.target.value)), u();
-                      },
-                    }),
-                    r.createElement(o.Ay, {
-                      className: "react-select-container",
-                      classNamePrefix: "react-select",
-                      isSearchable: !0,
-                      options: c,
-                      value: c.find((t) => t.value === e.id),
-                      onChange: (t) => {
-                        (e.id = t.value), u();
-                      },
-                    }),
-                  )
-                : "category" === t.type
-                  ? r.createElement(
-                      "div",
-                      { className: b().IDSelector },
-                      r.createElement(o.Ay, {
-                        className: "react-select-container",
-                        classNamePrefix: "react-select",
-                        isSearchable: !0,
-                        options: d,
-                        value: d.find((t) => t.value === e.id),
-                        onChange: (t) => {
-                          (e.id = t.value), u();
-                        },
-                      }),
-                    )
-                  : null,
-          }),
-          r.createElement(
-            m.$n,
-            {
-              onClick: () => {
-                t[a] || (t[a] = []), t[a].push({ id: 0 }), u();
-              },
-            },
-            "Add",
-          ),
-        );
-      }
-      function B(e) {
-        const { onImport: t, closeModal: a } = e;
-        return (
-          r.useEffect(() => {
-            s.fs
-              .Get()
-              .HintLoad()
-              .then(() => {
-                t(Array.from(s.fs.Get().GetCategories().values())), a && a();
-              });
-          }, [a, t]),
-          r.createElement(
-            u.o0,
-            {
-              strTitle: "Importing",
-              bAlertDialog: !0,
-              bDisableBackgroundDismiss: !0,
-              bHideCloseIcon: !0,
-            },
-            r.createElement(g.t, { size: "medium", position: "center" }),
-          )
-        );
-      }
-      function L(e) {
-        const { categories: t, onSave: a, closeModal: n } = e,
-          [o, l] = r.useState();
-        return (
-          r.useEffect(() => {
-            (0, s.fT)(t).then((e) => {
-              e ? l(e.strErrorMsg) : (a(), n && n());
-            });
-          }, [t, n, a]),
-          r.createElement(
-            u.o0,
-            {
-              strTitle: "Saving",
-              bAlertDialog: !0,
-              bDisableBackgroundDismiss: !0,
-              bHideCloseIcon: !0,
-              closeModal: n,
-            },
-            Boolean(o)
-              ? r.createElement("div", null, "Error: ", o)
-              : r.createElement(g.t, { size: "medium", position: "center" }),
-          )
-        );
-      }
-      function I(e) {
-        const { onPublish: t, closeModal: a } = e,
-          [n, o] = r.useState(!1),
-          [l, i] = r.useState();
-        return (
-          r.useEffect(() => {
-            n &&
-              (0, s.LD)().then((e) => {
-                e ? i(e.strErrorMsg) : (t(), o(!1), a && a());
-              });
-          }, [n, a, t]),
-          r.createElement(
-            u.o0,
-            {
-              strTitle: n ? "Publishing" : "Really Publish?",
-              strDescription:
-                !n &&
-                "Publishing will make your changes immediately visible to users.",
-              bAlertDialog: n,
-              bDisableBackgroundDismiss: n,
-              bHideCloseIcon: n,
-              onOK: () => {
-                n ? a && a() : o(!0);
-              },
-              onCancel: () => {
-                a && a();
-              },
-            },
-            n &&
-              r.createElement(
-                r.Fragment,
-                null,
-                Boolean(l)
-                  ? r.createElement("div", null, "Error: ", l)
-                  : r.createElement(g.t, {
-                      size: "medium",
-                      position: "center",
-                    }),
-              ),
-          )
         );
       }
     },
     74810: (e, t, a) => {
       "use strict";
       a.d(t, {
-        KU: () => T,
-        Ke: () => A,
-        W7: () => v,
-        hp: () => E,
-        iT: () => C,
-        ny: () => k,
+        KU: () => b,
+        Ke: () => E,
+        W7: () => G,
+        hp: () => C,
+        iT: () => T,
+        ny: () => L,
       });
       var s = a(562),
         n = a(31376),
         r = a(40323),
         o = a.n(r),
-        l = a(90626),
+        m = a(90626),
         i = a(55263),
-        m = a(16676),
+        l = a(16676),
         u = a(29863),
-        c = a(96236),
-        p = a(22797),
-        d = a(52038),
-        g = a(61859),
+        p = a(96236),
+        c = a(22797),
+        _ = a(52038),
+        d = a(61859),
         h = a(82227),
-        _ = a(30470),
-        S = (a(65213), a(92237));
+        g = a(30470),
+        S = a(92237);
       const y = "0px 0px 100% 0px",
-        E = 5e3,
-        C = 500;
-      function A(e) {
-        const [t, a] = (0, l.useState)(!0),
+        C = 5e3,
+        T = 500;
+      function E(e) {
+        const [t, a] = (0, m.useState)(!0),
           r = (0, s.lY)(),
-          o = (0, l.useMemo)(
+          o = (0, m.useMemo)(
             () => (r?.length > 0 ? r.filter((e) => Boolean(e.type)) : null),
             [r],
           );
         return o && 0 != o.length
-          ? l.createElement(
+          ? m.createElement(
               "div",
               null,
-              l.createElement(
+              m.createElement(
                 "div",
                 null,
-                l.createElement(
+                m.createElement(
                   "div",
                   { className: S.DashTitleBar },
-                  l.createElement("h1", null, "Theme Sale Planning Dashboard"),
-                  l.createElement(
+                  m.createElement("h1", null, "Theme Sale Planning Dashboard"),
+                  m.createElement(
                     "div",
                     { className: S.ButtonGroup },
                     Boolean(!t) &&
-                      l.createElement(
-                        m.$n,
+                      m.createElement(
+                        l.$n,
                         { onClick: () => a(!0) },
                         "Load ",
                         n.tt,
                         " Days of Sale Summaries",
                       ),
-                    l.createElement(R, null),
+                    m.createElement(k, null),
                   ),
                 ),
-                l.createElement(
+                m.createElement(
                   "div",
                   { className: S.DashDescription },
-                  l.createElement(
+                  m.createElement(
                     "ul",
                     null,
-                    l.createElement(
+                    m.createElement(
                       "li",
                       null,
                       "Themes are currently make from all of the categories that are defined on this",
                       " ",
-                      l.createElement(
+                      m.createElement(
                         "a",
                         {
-                          href: `${_.TS.PARTNER_BASE_URL}admin/store/contenthub/categories`,
+                          href: `${g.TS.PARTNER_BASE_URL}admin/store/contenthub/categories`,
                         },
                         "categories editor page.",
                       ),
                     ),
-                    l.createElement(
+                    m.createElement(
                       "li",
                       null,
                       "Hubs with more than ",
-                      E,
+                      C,
                       " games are called out as 'too big'.",
                     ),
-                    l.createElement(
+                    m.createElement(
                       "li",
                       null,
                       "Sales rank shown for individual games is long-term and includes all sources of revenue.",
                     ),
-                    l.createElement(
+                    m.createElement(
                       "li",
                       null,
                       "Revenue shown is computed over the past 45 days and only using base games package revenue (a technical limitation for now) ",
@@ -1743,31 +1062,31 @@
                 ),
               ),
               o.map((e, a) =>
-                l.createElement(b, { key: a, category: e, bSaleSummary: t }),
+                m.createElement(A, { key: a, category: e, bSaleSummary: t }),
               ),
             )
-          : l.createElement(p.t, { string: (0, g.we)("#Loading") });
+          : m.createElement(c.t, { string: (0, d.we)("#Loading") });
       }
-      function b(e) {
+      function A(e) {
         const { category: t, bSaleSummary: a } = e;
-        return l.createElement(
-          c.K,
+        return m.createElement(
+          p.K,
           { placeholderHeight: 250, rootMargin: y },
-          l.createElement(f, { category: t, bSaleSummary: a }),
+          m.createElement(f, { category: t, bSaleSummary: a }),
         );
       }
-      function T(e) {
+      function b(e) {
         const { nTotalGames: t } = e;
         let a, s;
         return (
-          t > C && t <= E
+          t > T && t <= C
             ? ((a = S.SizeColorSweet), (s = "Good size!"))
-            : t > E
+            : t > C
               ? ((a = S.SizeColorBig), (s = "Too big"))
               : ((a = S.SizeColorSmall), (s = "Too small")),
-          l.createElement(
+          m.createElement(
             "div",
-            { className: (0, d.A)(S.ThemeSize, a) },
+            { className: (0, _.A)(S.ThemeSize, a) },
             (0, h.Dq)(t),
             " games ( ",
             s,
@@ -1778,39 +1097,39 @@
       function f(e) {
         const { category: t, bSaleSummary: a } = e,
           { rgTopApps: s, nTotalGames: r } = (0, n.CU)(t),
-          o = r > 500 && r <= E;
-        return l.createElement(
+          o = r > 500 && r <= C;
+        return m.createElement(
           "div",
           { className: S.ThemeRow },
-          l.createElement(
+          m.createElement(
             "div",
             { className: S.ThemeDefinitionCtn },
-            l.createElement(
+            m.createElement(
               "a",
               {
-                href: `${_.TS.STORE_BASE_URL}category/${t.handle}`,
+                href: `${g.TS.STORE_BASE_URL}category/${t.handle}`,
                 className: S.ThemeTitle,
               },
-              t.loc_token ? (0, g.we)(t.loc_token) : t.handle,
+              t.loc_token ? (0, d.we)(t.loc_token) : t.handle,
             ),
-            l.createElement(T, { nTotalGames: r }),
-            l.createElement(
+            m.createElement(b, { nTotalGames: r }),
+            m.createElement(
               "div",
               { className: S.SaleStats },
-              Boolean(a && o) && l.createElement(D, { category: t }),
+              Boolean(a && o) && m.createElement(N, { category: t }),
             ),
           ),
-          l.createElement(
+          m.createElement(
             "div",
             { className: S.TopGamesCtn },
-            l.createElement("div", null, "Top 10 Games non-F2P:"),
-            l.createElement(
+            m.createElement("div", null, "Top 10 Games non-F2P:"),
+            m.createElement(
               "div",
               { className: S.GamesRow },
               s
                 ?.slice(0, 10)
                 .map((e) =>
-                  l.createElement(v, {
+                  m.createElement(G, {
                     key: e.appid,
                     info: e,
                     category: t,
@@ -1819,23 +1138,23 @@
                 ),
             ),
           ),
-          l.createElement(
+          m.createElement(
             "div",
             { className: S.ThemeDetails },
             "handle: ",
             t.handle,
-            l.createElement(w, { category: t }),
+            m.createElement(w, { category: t }),
           ),
         );
       }
-      function v(e) {
+      function G(e) {
         const { info: t, bSaleSummary: a } = e,
           [s] = (0, i.t7)(t.appid, { include_assets: !0 });
         return s
-          ? l.createElement(
+          ? m.createElement(
               "div",
               { className: S.GameItem },
-              l.createElement(
+              m.createElement(
                 u.Qf,
                 {
                   item: { type: "game", id: t.appid },
@@ -1845,16 +1164,16 @@
                   },
                   className: S.GameImage,
                 },
-                l.createElement(
+                m.createElement(
                   "a",
                   { href: s.GetStorePageURL() },
-                  l.createElement("img", { src: s.GetAssets().GetHeaderURL() }),
+                  m.createElement("img", { src: s.GetAssets().GetHeaderURL() }),
                 ),
               ),
-              l.createElement("div", null, " Rank: ", t.long_term_sale_rank),
-              Boolean(a) && l.createElement(G, { ...e }),
+              m.createElement("div", null, " Rank: ", t.long_term_sale_rank),
+              Boolean(a) && m.createElement(v, { ...e }),
             )
-          : l.createElement(
+          : m.createElement(
               "div",
               null,
               "Loading appid: ",
@@ -1863,15 +1182,15 @@
               t.long_term_sale_rank,
             );
       }
-      function G(e) {
+      function v(e) {
         const { info: t, category: a } = e,
           s = (0, n.Iw)(t.appid),
           r = (0, n.Th)(a);
-        return l.createElement(
-          l.Fragment,
+        return m.createElement(
+          m.Fragment,
           null,
           Boolean(s) &&
-            l.createElement(
+            m.createElement(
               "div",
               null,
               " ",
@@ -1879,7 +1198,7 @@
               Math.floor(s.gross_sales_usd / 100).toLocaleString(),
             ),
           Boolean(s && r?.gross_sales_usd) &&
-            l.createElement(
+            m.createElement(
               "div",
               null,
               "( ",
@@ -1892,21 +1211,21 @@
         const { mapStoreTags: t, mapStoreCategories: a } = (0, s.k)(),
           { category: n } = e;
         return t && a && (n.any || n.must || n.mustnot)
-          ? l.createElement(
+          ? m.createElement(
               "div",
               { className: S.ThemeTags },
               Boolean(n.must) &&
-                l.createElement(
+                m.createElement(
                   "div",
                   null,
-                  l.createElement(
+                  m.createElement(
                     "span",
                     { className: S.TagsMustTitle },
                     "Must:",
                   ),
                   " ",
                   n.must?.map((e) =>
-                    l.createElement(N, {
+                    m.createElement(H, {
                       key: n.type + "_" + e.id + "_" + n.handle,
                       type: n.type,
                       id: e.id,
@@ -1914,13 +1233,13 @@
                   ),
                 ),
               Boolean(n.any) &&
-                l.createElement(
+                m.createElement(
                   "div",
                   null,
-                  l.createElement("span", { className: S.TagsOrTitle }, "Any:"),
+                  m.createElement("span", { className: S.TagsOrTitle }, "Any:"),
                   " ",
                   n.any?.map((e) =>
-                    l.createElement(N, {
+                    m.createElement(H, {
                       key: n.type + "_" + e.id + "_" + n.handle,
                       type: n.type,
                       id: e.id,
@@ -1928,17 +1247,17 @@
                   ),
                 ),
               Boolean(n.mustnot) &&
-                l.createElement(
+                m.createElement(
                   "div",
                   null,
-                  l.createElement(
+                  m.createElement(
                     "span",
                     { className: S.TagsNotTitle },
                     "Must Not:",
                   ),
                   " ",
                   n.mustnot?.map((e) =>
-                    l.createElement(N, {
+                    m.createElement(H, {
                       key: n.type + "_" + e.id + "_" + n.handle,
                       type: n.type,
                       id: e.id,
@@ -1948,82 +1267,82 @@
             )
           : null;
       }
-      function N(e) {
+      function H(e) {
         const { mapStoreTags: t, mapStoreCategories: a } = (0, s.k)(),
           { type: n, id: r } = e;
         return "tagids" == n
-          ? l.createElement(
+          ? m.createElement(
               "span",
               null,
               t.has(r) ? t.get(r).name : "tagid: " + r,
               ", ",
             )
-          : l.createElement(
+          : m.createElement(
               "span",
               null,
               a.has(r) ? a.get(r).name : "category id: " + r,
               ", ",
             );
       }
-      function k(e) {
+      function L(e) {
         const { saleSummary: t, topAppSummary: a } = e;
         return t
-          ? l.createElement(
+          ? m.createElement(
               "div",
               { className: S.ThemeRevenueCtn },
-              l.createElement(
+              m.createElement(
                 "table",
                 null,
-                l.createElement(
+                m.createElement(
                   "tbody",
                   null,
-                  l.createElement(
+                  m.createElement(
                     "tr",
                     null,
-                    l.createElement(
+                    m.createElement(
                       "td",
                       null,
                       "Total: ",
-                      l.createElement("br", null),
+                      m.createElement("br", null),
                       "$",
                       Math.floor(t.gross_sales_usd / 100).toLocaleString(),
                     ),
-                    l.createElement(
+                    m.createElement(
                       "td",
                       null,
                       "Per Day: ",
-                      l.createElement("br", null),
+                      m.createElement("br", null),
                       "$",
                       Math.floor(
                         t.gross_sales_usd / (100 * n.tt),
                       ).toLocaleString(),
                     ),
-                    l.createElement(
+                    m.createElement(
                       "td",
                       null,
                       "Total Units: ",
-                      l.createElement("br", null),
+                      m.createElement("br", null),
                       t.gross_units_sold.toLocaleString(),
                     ),
-                    l.createElement(
+                    m.createElement(
                       "td",
                       null,
                       "Units Per Day: ",
-                      l.createElement("br", null),
+                      m.createElement("br", null),
                       Math.floor(t.gross_units_sold / n.tt).toLocaleString(),
                     ),
                     Boolean(t.gross_sales_usd > 0) &&
-                      l.createElement(
-                        l.Fragment,
+                      m.createElement(
+                        m.Fragment,
                         null,
-                        l.createElement(
+                        m.createElement(
                           "td",
                           null,
                           "Top ",
                           n._E,
                           " Apps: ",
-                          l.createElement("br", null),
-                          l.createElement(
+                          m.createElement("br", null),
+                          m.createElement(
                             "span",
                             {
                               className:
@@ -2045,267 +1364,26 @@
                 ),
               ),
             )
-          : l.createElement(p.t, {
+          : m.createElement(c.t, {
               position: "center",
               string: "Loading Sale Info",
             });
       }
-      function D(e) {
+      function N(e) {
         const { category: t } = e,
           a = (0, n.Th)(t),
           s = (0, n.hl)(t);
-        return l.createElement(k, { saleSummary: a, topAppSummary: s });
+        return m.createElement(L, { saleSummary: a, topAppSummary: s });
       }
-      function R(e) {
+      function k(e) {
         const t = (0, n.AY)();
-        return l.createElement(
+        return m.createElement(
           "a",
           {
             href: `data:application/octet-stream,${encodeURIComponent(o().unparse({ data: t, fields: Object.keys(t ? t[0] : {}) }))}`,
             download: "theme_sale_stats.csv",
           },
           "Export CSV",
-        );
-      }
-    },
-    56654: (e, t, a) => {
-      "use strict";
-      a.d(t, { A: () => S });
-      var s = a(90626),
-        n = a(73745);
-      const r =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC";
-      var o = a(44894),
-        l = a(62490),
-        i = a(41609),
-        m = a.n(i),
-        u = a(64641),
-        c = a.n(u),
-        p = a(12155),
-        d = a(41735),
-        g = a.n(d),
-        h = a(25489),
-        _ = a(52038);
-      function S(e) {
-        const {
-            items: t,
-            render: a,
-            onDelete: i,
-            onEdit: u,
-            onReorder: d,
-            onMove: S,
-            bDisabled: E,
-            rowClassName: C,
-          } = e,
-          [A, b] = s.useState(!1),
-          [T, f] = s.useState(void 0),
-          [v, G] = s.useState(void 0),
-          [w, N] = s.useState(-1),
-          [k, D] = s.useState(void 0),
-          [R, H] = s.useState(0),
-          [B, L] = s.useState(0),
-          [I, M] = s.useState(void 0),
-          [P, U] = s.useState(""),
-          x = s.useRef(void 0),
-          O = s.useMemo(() => new Array(), []),
-          j = s.useMemo(() => new Array(), []),
-          F = s.useMemo(() => g().CancelToken.source(), []),
-          K = () => {
-            x.current?.firstElementChild &&
-              (H(x.current.firstElementChild.getBoundingClientRect().height),
-              L(x.current.firstElementChild.getBoundingClientRect().width));
-          };
-        s.useEffect(() => {
-          K();
-        }, []),
-          s.useEffect(() => () => F.cancel("ReorderableList unmounting"), [F]);
-        const W = (e, t) => {
-            F.token.reason ||
-              (x.current.firstElementChild?.getBoundingClientRect().height >
-                0 &&
-                R !=
-                  x.current.firstElementChild.getBoundingClientRect().height &&
-                K(),
-              ((e, t) => {
-                const a = O[e]?.current;
-                if (!a)
-                  return void console.error(
-                    "start element grab missing element at index " + e,
-                  );
-                b(!0), N(e), M(void 0), D(e);
-                const s = t.clientX - a.getBoundingClientRect().left;
-                f(s);
-                const n = t.clientY - a.getBoundingClientRect().top;
-                G(n),
-                  (a.style.position = "fixed"),
-                  (a.style.left = t.clientX - s + "px"),
-                  (a.style.top = t.clientY - n + "px"),
-                  (a.style.zIndex = "1");
-              })(t, e),
-              e.preventDefault());
-          },
-          z = (e, a) => {
-            const s = h.OQ(a > e ? a - 1 : a, 0, t.length - 1);
-            e != s && (S ? S(e, s) : (0, l.yY)(t, e, s), $(s), d && d(t));
-          },
-          Y = (e) => {
-            A &&
-              !F.token.reason &&
-              ((() => {
-                const e = O[w]?.current;
-                e
-                  ? ((e.style.position = ""), (e.style.zIndex = ""))
-                  : console.error("end element drag missing element"),
-                  b(!1),
-                  N(-1),
-                  M(void 0),
-                  D(void 0);
-              })(),
-              z(w, k));
-          },
-          V = (e) => {
-            if (!A || F.token.reason) return;
-            const a = e.clientY;
-            let s;
-            for (let e = 0; e < t.length; e++) {
-              if (
-                a <
-                (j[e].current.getBoundingClientRect().top +
-                  2 * j[e].current.getBoundingClientRect().bottom) /
-                  3
-              ) {
-                s = e;
-                break;
-              }
-            }
-            D(s ?? t.length),
-              ((e) => {
-                const t = O[w]?.current;
-                t
-                  ? ((t.style.left = e.clientX - T + "px"),
-                    (t.style.top = e.clientY - v + "px"))
-                  : console.error("update grab element missing element");
-              })(e);
-          };
-        (0, n.l6)(window, "mousemove", (e) => V(e)),
-          (0, n.l6)(window, "mouseup", (e) => Y()),
-          s.useEffect(() => {
-            for (let e = O.length; e < t.length; e++)
-              O.push(s.createRef()), j.push(s.createRef());
-          }, [t.length, O, j]);
-        const X = (e) => {
-            M(void 0);
-            const t = P?.trim(),
-              a = Number.parseInt(t);
-            if (0 == t.length || isNaN(a)) return;
-            const s = a - 1;
-            e != s && z(e, s);
-          },
-          [Q, $] = s.useState(void 0);
-        return s.createElement(
-          "div",
-          { className: m().WhitelistCtn, ref: x },
-          t.map((e, n) =>
-            s.createElement(
-              "div",
-              { key: n, ref: j[n] },
-              n == k && s.createElement(y, { width: B }),
-              s.createElement(
-                "div",
-                { ref: O[n], className: m().DragGhost },
-                n == w &&
-                  s.createElement(
-                    "div",
-                    { className: (0, _.A)(m().WhitelistRow, C) },
-                    s.createElement("img", {
-                      className: (0, _.A)(m().WhitelistAvatar, m().Grabbing),
-                      src: r,
-                    }),
-                    s.createElement("input", {
-                      className: (0, _.A)(
-                        m().WhitelistNumber,
-                        m().Disabled,
-                        m().Grabbing,
-                      ),
-                      type: "text",
-                      value: (k > n ? k - 1 : k) + 1,
-                      disabled: !0,
-                    }),
-                    a(e, n),
-                  ),
-              ),
-              s.createElement(
-                "div",
-                {
-                  className: (0, _.A)(
-                    m().WhitelistRow,
-                    C,
-                    A && m().DragActive,
-                    n == w && m().BeingDragged,
-                    Q == n && m().Dropped,
-                  ),
-                  onAnimationEnd: () => $(void 0),
-                },
-                s.createElement("img", {
-                  className: (0, _.A)(
-                    m().WhitelistAvatar,
-                    m().Grabbable,
-                    E && m().DisabledGrab,
-                  ),
-                  src: r,
-                  onMouseDown: Boolean(E) ? void 0 : (e) => W(e, n),
-                }),
-                s.createElement("input", {
-                  className: (0, _.A)(m().WhitelistNumber, E && m().Disabled),
-                  type: "text",
-                  value: I == n ? P : n + 1,
-                  disabled: E || n == w,
-                  onChange: (e) => U(e.target.value),
-                  onKeyDown: (e) =>
-                    ((e, t) => {
-                      "Enter" === e.key && (X(t), e.currentTarget.blur());
-                    })(e, n),
-                  onFocus: (e) => {
-                    M(n), U(e.target.value);
-                  },
-                  onBlur: () => X(n),
-                }),
-                a(e, n),
-                Boolean(n != w) &&
-                  Boolean(u || i) &&
-                  s.createElement(
-                    "div",
-                    { className: m().ButtonCtn },
-                    Boolean(u) &&
-                      s.createElement(
-                        "div",
-                        { className: c().RemoveIcon, onClick: (e) => u(n, e) },
-                        s.createElement(p.ffu, null),
-                      ),
-                    Boolean(i) &&
-                      s.createElement("img", {
-                        className: c().RemoveIcon,
-                        src: o.A,
-                        onClick: (e) => i(n, e),
-                      }),
-                  ),
-              ),
-              k == t.length &&
-                n == t.length - 1 &&
-                s.createElement(y, { width: B }),
-            ),
-          ),
-        );
-      }
-      function y(e) {
-        const { width: t } = e;
-        return s.createElement(
-          "div",
-          { className: m().DragHighlightContainer },
-          s.createElement("div", {
-            className: m().DragHighlight,
-            style: { width: t },
-          }),
         );
       }
     },

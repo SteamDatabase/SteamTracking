@@ -14,7 +14,7 @@
     },
     36757: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => R });
+      a.r(t), a.d(t, { default: () => J });
       var n = a(34629),
         M = a(90626),
         s = a(22837),
@@ -38,22 +38,21 @@
         I = a.n(C),
         g = a(75844),
         y = a(79821),
-        d = a(37085),
-        z = a(56545),
-        p = a(51006),
-        x = a(17720),
-        k = a(37735),
+        d = a(56545),
+        z = a(51006),
+        p = a(17720),
+        x = a(37735),
         U = a(6205),
-        O = a(68797),
-        h = a(22797),
-        v = a(98764),
-        B = a(86244),
-        b = a.n(B),
-        Q = a(14336);
-      const Y = (0, g.PA)((e) => {
+        k = a(68797),
+        O = a(22797),
+        h = a(97625),
+        v = a(86244),
+        B = a.n(v),
+        b = a(14336);
+      const Q = (0, g.PA)((e) => {
         const { appid: t, eventLink: a } = e,
           n = M.useRef(null),
-          { data: s } = (0, Q.js)(L.iA.steamid),
+          { data: s } = (0, b.js)(L.iA.steamid),
           [i, l] = M.useState(""),
           [c, A] = M.useState(!1),
           [D, T] = M.useState(""),
@@ -65,7 +64,7 @@
           [],
         );
         const S = s ? s.avatar_url : null,
-          j = x.b.InitFromAccountID(L.iA.accountid),
+          j = p.b.InitFromAccountID(L.iA.accountid),
           m = async () => {
             n.current &&
               n.current("ShareEventOnFriendsActivityFeed: cancel previous...");
@@ -80,13 +79,13 @@
               "/ajaxpostuserstatus";
             try {
               if (L.TS.IN_STEAMUI) {
-                let a = z.w.Init(k.kV);
+                let a = d.w.Init(x.kV);
                 a.Body().set_appid(t), a.Body().set_status_text(M);
-                let n = await k.xt.PostStatusToFriends(
-                  p.Vw.CMInterface.GetServiceTransport(),
+                let n = await x.xt.PostStatusToFriends(
+                  z.Vw.CMInterface.GetServiceTransport(),
                   a,
                 );
-                if (n.GetEResult() != d.d.k_EResultOK) {
+                if (1 != n.GetEResult()) {
                   const t =
                     (0, N.we)("#EventDisplay_Share_Failure") +
                     "\n\n" +
@@ -102,7 +101,7 @@
                   a.append("status_text", M),
                   a.append("sessionid", L.TS.SESSIONID);
                 const n = await I().post(s, a, { withCredentials: !0 });
-                if (200 != n.status || n?.data?.success != d.d.k_EResultOK) {
+                if (200 != n.status || 1 != n?.data?.success) {
                   const t =
                     (0, N.we)("#EventDisplay_Share_Failure") +
                     "\n\n" +
@@ -113,7 +112,7 @@
               e.token.reason ||
                 (w(!0), T((0, N.we)("#EventDisplay_Share_Success")));
             } catch (t) {
-              const a = (0, O.H)(t),
+              const a = (0, k.H)(t),
                 n =
                   (0, N.we)("#EventDisplay_Share_Failure") +
                   "\n\n" +
@@ -141,9 +140,9 @@
                 ),
                 M.createElement(
                   "div",
-                  { className: b().Container },
+                  { className: B().Container },
                   0 == D?.length
-                    ? M.createElement(h.t, { position: "center" })
+                    ? M.createElement(O.t, { position: "center" })
                     : M.createElement("div", null, D),
                   Boolean(E) &&
                     M.createElement(
@@ -181,13 +180,13 @@
                 M.createElement(
                   "div",
                   {
-                    className: (0, o.A)(b().Container, r().FlexColumnContainer),
+                    className: (0, o.A)(B().Container, r().FlexColumnContainer),
                   },
                   M.createElement(
                     "div",
                     null,
                     M.createElement("img", {
-                      className: b().SmallAvatar,
+                      className: B().SmallAvatar,
                       src: S,
                       "data-miniprofile": "s" + L.iA.steamid,
                     }),
@@ -205,15 +204,15 @@
                         bSupportHTMLImport: !1,
                         showFormatHelp: "UserStatusPublished",
                         limitBBCode: y.iH,
-                        classNameForTextArea: b().ShareDescription,
+                        classNameForTextArea: B().ShareDescription,
                         bEmbeddedInDialog: !0,
                       }),
                     ),
                   ),
                   M.createElement(
                     "div",
-                    { className: b().ShareLink },
-                    M.createElement(v.fh, {
+                    { className: B().ShareLink },
+                    M.createElement(h.fh, {
                       text: a,
                       event: null,
                       partnerEventStore: e.partnerEventStore,
@@ -223,9 +222,9 @@
               ),
             );
       });
-      var F = a(16676),
-        Z = a(96715);
-      const J = (e) => {
+      var Y = a(16676),
+        F = a(96715);
+      const Z = (e) => {
         const t = M.createRef(),
           [a, n] = M.useState(""),
           s = M.createRef();
@@ -278,7 +277,7 @@
                   { toolTipContent: (0, N.we)("#ToolTip_CopyLinkToClipboard") },
                   M.createElement("img", {
                     className: j().ClipboardIcon,
-                    src: Z.A,
+                    src: F.A,
                   }),
                 ),
               ),
@@ -286,7 +285,7 @@
           M.createElement("div", { ref: s, className: j().ClipboardText }, a),
         );
       };
-      class R extends M.Component {
+      class J extends M.Component {
         state = { bShareOnSteamDialog: !1, bRequireLoginToShare: !1 };
         ShareOnSteamActivityFeed() {
           L.iA.logged_in
@@ -317,7 +316,7 @@
                 onOK: () => (0, l.vg)(),
               })
             : this.state.bShareOnSteamDialog
-              ? M.createElement(Y, {
+              ? M.createElement(Q, {
                   eventLink: e,
                   appid: a,
                   emoticonStore: s,
@@ -334,7 +333,7 @@
                     bAlertDialog: !0,
                     modalClassName: "EventDisplay_Share_Dialog",
                   },
-                  M.createElement(G, {
+                  M.createElement(R, {
                     eventLink: e,
                     sharePageUrls: t,
                     fnShareOnSteamActivityFeed: this.ShareOnSteamActivityFeed,
@@ -342,8 +341,8 @@
                 );
         }
       }
-      (0, n.Cg)([c.oI], R.prototype, "ShareOnSteamActivityFeed", null);
-      const G = (e) => {
+      (0, n.Cg)([c.oI], J.prototype, "ShareOnSteamActivityFeed", null);
+      const R = (e) => {
         const {
             eventLink: t,
             sharePageUrls: a,
@@ -371,7 +370,7 @@
                 "div",
                 { className: j().ShareLanguagePicker },
                 M.createElement(
-                  F.JU,
+                  Y.JU,
                   { className: j().LanguageLabel },
                   (0, N.we)("#EventDisplay_Share_LanguageLabel"),
                 ),
@@ -460,7 +459,7 @@
               ),
               M.createElement("div", { className: r().Divider }),
             ),
-          M.createElement(J, { eventLink: u }),
+          M.createElement(Z, { eventLink: u }),
         );
       };
     },

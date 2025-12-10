@@ -764,6 +764,109 @@
       }
       r.d(t, { j_: () => i });
     },
+    42475: (e, t, r) => {
+      "use strict";
+      r.d(t, { l: () => o, A: () => m });
+      var i = r(8527),
+        a = r(90626),
+        n = r(96762);
+      function s(e, ...t) {
+        return 0 == t.length
+          ? e
+          : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, r) {
+              if (r <= t.length && r >= 1) {
+                const e = t[r - 1];
+                return String(null == e ? "" : e);
+              }
+              return e;
+            }));
+      }
+      let l;
+      l ??= new Set();
+      function o(e) {
+        const t = new Map();
+        const r = (async function () {
+          await (0, i.Ki)();
+          const r = m(),
+            a = new Set([]);
+          for (const e of r.languages) {
+            a.add(e.strLanguage);
+            const t = (0, n.mR)(e.strLanguage);
+            t && a.add(t);
+          }
+          return Promise.all(
+            Array.from(a).map((r) =>
+              e(r).then((e) => {
+                if (!e) return;
+                const i = new Map();
+                for (const [t, r] of Object.entries(e)) i.set("#" + t, r);
+                t.set(r, i);
+              }),
+            ),
+          );
+        })();
+        let o = !1;
+        var c;
+        function u(e, r) {
+          const [i, ...a] = r,
+            s =
+              t.get(i.strLanguage)?.get(e) ??
+              t.get((0, n.mR)(i.strLanguage) ?? "english")?.get(e);
+          return (
+            s ||
+            (0 === a.length
+              ? (console.error("Couldn't find localization key", e), e)
+              : u(e, a))
+          );
+        }
+        function d(e, ...t) {
+          return s(u(e, m().languages), ...t);
+        }
+        return (
+          r.then(() => (o = !0)),
+          (c = r),
+          (l ??= new Set()),
+          l.add(c),
+          {
+            Localize: (e, ...t) => d(e, ...t),
+            LocalizeReact(e, ...t) {
+              const r = this.Localize(e);
+              if (r === e) return r;
+              const i = [],
+                n = /(.*?)%(\d+)\$s/g;
+              let s,
+                l = 0;
+              for (; (s = n.exec(r)); ) {
+                (l += s[0].length), i.push(s[1]);
+                const e = parseInt(s[2]);
+                e >= 1 && e <= t.length && i.push(t[e - 1]);
+              }
+              return (
+                i.push(r.slice(l)), a.createElement(a.Fragment, null, ...i)
+              );
+            },
+            LocalizePlural: (e, t, ...r) =>
+              1 === t || "1" === t ? d(e, t, ...r) : d(e + "_Plural", t, ...r),
+            LocalizeInSpecificLang: (e, t, ...r) => s(u(t, [e]), ...r),
+            Ready: () => r,
+            IsReady: () => o,
+          }
+        );
+      }
+      function m() {
+        if (!(0, n.VD)(i.TS.LANGUAGE))
+          throw `unknown language ${i.TS.LANGUAGE}`;
+        return {
+          languages: [
+            {
+              strLanguage: i.TS.LANGUAGE,
+              strISOCode: n.yc.get(i.TS.LANGUAGE),
+              eSource: 5,
+            },
+          ],
+        };
+      }
+    },
     83935: (e, t, r) => {
       "use strict";
       r.d(t, { GB: () => L, a9: () => i, l3: () => N });
@@ -24292,7 +24395,7 @@
           ),
         );
       }
-      var Kr = r(35212),
+      var Kr = r(97625),
         Yr = r(20194),
         $r = r(41735),
         Jr = r.n($r);
@@ -25148,9 +25251,9 @@
       }
       r.d(t, { J: () => i });
     },
-    35212: (e, t, r) => {
+    97625: (e, t, r) => {
       "use strict";
-      r.d(t, { fh: () => Vr });
+      r.d(t, { fh: () => xr });
       var i = r(52967),
         a = r(42780),
         n = r(8527),
@@ -27496,108 +27599,10 @@
         (Br.turkish = () => r.e(7996).then(r.t.bind(r, 87996, 19))),
         (Br.ukrainian = () => r.e(7306).then(r.t.bind(r, 47306, 19))),
         (Br.vietnamese = () => r.e(2539).then(r.t.bind(r, 72539, 19)));
-      var br = r(96762);
-      function fr(e, ...t) {
-        return 0 == t.length
-          ? e
-          : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, r) {
-              if (r <= t.length && r >= 1) {
-                const e = t[r - 1];
-                return String(null == e ? "" : e);
-              }
-              return e;
-            }));
-      }
-      let Mr;
-      Mr ??= new Set();
-      function wr() {
-        if (!(0, br.VD)(n.TS.LANGUAGE))
-          throw `unknown language ${n.TS.LANGUAGE}`;
-        return {
-          languages: [
-            {
-              strLanguage: n.TS.LANGUAGE,
-              strISOCode: br.yc.get(n.TS.LANGUAGE),
-              eSource: 5,
-            },
-          ],
-        };
-      }
-      const hr = (function (e) {
-          const t = new Map(),
-            r = (async function () {
-              await (0, n.Ki)();
-              const r = wr(),
-                i = new Set([]);
-              for (const e of r.languages) {
-                i.add(e.strLanguage);
-                const t = (0, br.mR)(e.strLanguage);
-                t && i.add(t);
-              }
-              return Promise.all(
-                Array.from(i).map((r) =>
-                  e(r).then((e) => {
-                    if (!e) return;
-                    const i = new Map();
-                    for (const [t, r] of Object.entries(e)) i.set("#" + t, r);
-                    t.set(r, i);
-                  }),
-                ),
-              );
-            })();
-          let i = !1;
-          var a;
-          function l(e, r) {
-            const [i, ...a] = r,
-              n =
-                t.get(i.strLanguage)?.get(e) ??
-                t.get((0, br.mR)(i.strLanguage) ?? "english")?.get(e);
-            return (
-              n ||
-              (0 === a.length
-                ? (console.error("Couldn't find localization key", e), e)
-                : l(e, a))
-            );
-          }
-          function o(e, ...t) {
-            return fr(l(e, wr().languages), ...t);
-          }
-          return (
-            r.then(() => (i = !0)),
-            (a = r),
-            (Mr ??= new Set()),
-            Mr.add(a),
-            {
-              Localize: (e, ...t) => o(e, ...t),
-              LocalizeReact(e, ...t) {
-                const r = this.Localize(e);
-                if (r === e) return r;
-                const i = [],
-                  a = /(.*?)%(\d+)\$s/g;
-                let n,
-                  l = 0;
-                for (; (n = a.exec(r)); ) {
-                  (l += n[0].length), i.push(n[1]);
-                  const e = parseInt(n[2]);
-                  e >= 1 && e <= t.length && i.push(t[e - 1]);
-                }
-                return (
-                  i.push(r.slice(l)), s.createElement(s.Fragment, null, ...i)
-                );
-              },
-              LocalizePlural: (e, t, ...r) =>
-                1 === t || "1" === t
-                  ? o(e, t, ...r)
-                  : o(e + "_Plural", t, ...r),
-              LocalizeInSpecificLang: (e, t, ...r) => fr(l(t, [e]), ...r),
-              Ready: () => r,
-              IsReady: () => i,
-            }
-          );
-        })(async function (e) {
+      const br = (0, r(42475).l)(async function (e) {
           if (Br[e]) return Br[e]();
         }),
-        Sr = {
+        fr = {
           PerYear: 31536e3,
           PerMonth: 2628e3,
           PerWeek: 604800,
@@ -27605,8 +27610,8 @@
           PerHour: 3600,
           PerMinute: 60,
         };
-      var zr;
-      function Rr(e) {
+      var Mr;
+      function wr(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
           i = (0, l.j$)(e.args, "poll_id"),
@@ -27629,10 +27634,10 @@
         return s.createElement(
           dt.tH,
           null,
-          s.createElement(vr, { userPollDef: n, lang: o, eventModel: t }),
+          s.createElement(hr, { userPollDef: n, lang: o, eventModel: t }),
         );
       }
-      function vr(e) {
+      function hr(e) {
         const { eventModel: t, userPollDef: r, lang: i } = e,
           { userPollData: a, ...n } = nr(
             t.clanSteamID,
@@ -27701,7 +27706,7 @@
             }
           }, [_, y, g, t, r]),
           s.createElement(
-            Tr,
+            Sr,
             { ...e },
             r.options?.map((e) => {
               const t = a?.option_results.find(
@@ -27710,7 +27715,7 @@
                 r =
                   a?.voted_option_id.includes(e.option_id || 0) ||
                   m === e.option_id;
-              return s.createElement(Cr, {
+              return s.createElement(zr, {
                 key: "polloption" + e.option_id,
                 lang: i,
                 pollOptionDef: e,
@@ -27772,7 +27777,7 @@
           )
         );
       }
-      function Tr(e) {
+      function Sr(e) {
         const { userPollDef: t, lang: r, eventModel: i, children: a } = e,
           n = (0, yr.f1)(),
           [l, o] = (0, ft.q3)(() => [
@@ -27825,32 +27830,32 @@
                     (0, w.PP)(
                       "#UserPolls_status_N_TimeRemaining",
                       (function (e) {
-                        const t = Math.floor(e / Sr.PerYear),
-                          r = Math.floor(e / Sr.PerMonth),
-                          i = Math.floor((e % Sr.PerMonth) / Sr.PerDay),
-                          a = Math.floor((e % Sr.PerDay) / Sr.PerHour),
-                          n = Math.floor((e % Sr.PerHour) / Sr.PerMinute);
+                        const t = Math.floor(e / fr.PerYear),
+                          r = Math.floor(e / fr.PerMonth),
+                          i = Math.floor((e % fr.PerMonth) / fr.PerDay),
+                          a = Math.floor((e % fr.PerDay) / fr.PerHour),
+                          n = Math.floor((e % fr.PerHour) / fr.PerMinute);
                         return (
-                          (e %= Sr.PerMinute),
+                          (e %= fr.PerMinute),
                           t > 0
-                            ? hr.Localize("#TimeRemaining_MoreThanOneYear")
+                            ? br.Localize("#TimeRemaining_MoreThanOneYear")
                             : r > 0
-                              ? hr.Localize("#TimeRemaining_MonthsDays", r, i)
+                              ? br.Localize("#TimeRemaining_MonthsDays", r, i)
                               : i > 0
-                                ? hr.Localize(
+                                ? br.Localize(
                                     "#TimeRemaining_DaysHoursMinutes",
                                     i,
                                     a.toString().padStart(2, "0"),
                                     n.toString().padStart(2, "0"),
                                   )
                                 : a > 0
-                                  ? hr.Localize(
+                                  ? br.Localize(
                                       "#TimeRemaining_HoursMinutesSeconds",
                                       a.toString().padStart(2, "0"),
                                       n.toString().padStart(2, "0"),
                                       e.toString().padStart(2, "0"),
                                     )
-                                  : hr.Localize(
+                                  : br.Localize(
                                       "#TimeRemaining_MinutesSeconds",
                                       n.toString().padStart(2, "0"),
                                       e.toString().padStart(2, "0"),
@@ -27863,7 +27868,7 @@
           ),
         );
       }
-      function Cr(e) {
+      function zr(e) {
         const {
             pollOptionDef: t,
             onClick: r,
@@ -27903,12 +27908,12 @@
         (e[(e.None = 0)] = "None"),
           (e[(e.Ago = 1)] = "Ago"),
           (e[(e.Remaining = 2)] = "Remaining");
-      })(zr || (zr = {}));
-      let Fr = null;
-      function Ir() {
+      })(Mr || (Mr = {}));
+      let Rr = null;
+      function vr() {
         return (
-          null == Fr &&
-            (Fr = new Map([
+          null == Rr &&
+            (Rr = new Map([
               ["url", { Constructor: Je, autocloses: !1 }],
               ["dynamiclink", { Constructor: Ze, autocloses: !1 }],
               [
@@ -27951,37 +27956,37 @@
                 "*",
                 { Constructor: l.ck, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: Er, autocloses: !1 }],
+              ["img", { Constructor: Tr, autocloses: !1 }],
               ["previewyoutube", { Constructor: F.gH, autocloses: !1 }],
               ["looping_media", { Constructor: l.$A, autocloses: !1 }],
               ["video", { Constructor: l.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: F.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: Wr, autocloses: !1 }],
-              ["vod", { Constructor: jr, autocloses: !1 }],
+              ["trailer", { Constructor: Fr, autocloses: !1 }],
+              ["vod", { Constructor: Ir, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: Or,
+                  Constructor: Er,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: Pr, autocloses: !1 }],
-              ["claimitem", { Constructor: Nr, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: Ar, autocloses: !1 }],
-              ["actiondialog", { Constructor: xr, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: Dr, autocloses: !0 }],
-              ["docimg", { Constructor: Ur, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: Wr, autocloses: !1 }],
+              ["claimitem", { Constructor: jr, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: Or, autocloses: !1 }],
+              ["actiondialog", { Constructor: Pr, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: Ar, autocloses: !0 }],
+              ["docimg", { Constructor: Cr, autocloses: !1 }],
               ["carousel", { Constructor: It, autocloses: !1 }],
               ["meetsteamsessiongroup", { Constructor: E.ac, autocloses: !1 }],
               ["meetsteamscheduleview", { Constructor: E.Xk, autocloses: !1 }],
-              ["userpolls", { Constructor: Rr, autocloses: !1 }],
+              ["userpolls", { Constructor: wr, autocloses: !1 }],
             ])),
-          Fr
+          Rr
         );
       }
-      function Er(e) {
+      function Tr(e) {
         const { showErrorInfo: t, event: r } = e.context;
         let i = (0, l.j$)(e.args, "src") || e.children?.toString();
         i || (i = (0, l.j$)(e.args));
@@ -28015,7 +28020,7 @@
           s.createElement(X.c, { rgSources: a }),
         );
       }
-      function Ur(e) {
+      function Cr(e) {
         const t = (0, l.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const r = e && e.children && e.children.toString(),
@@ -28031,13 +28036,13 @@
           s.createElement(X.c, { rgSources: i, alt: r })
         );
       }
-      function Wr(e) {
-        const t = qr(
+      function Fr(e) {
+        const t = Ur(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          r = qr(e.args, "trailerid", 0);
+          r = Ur(e.args, "trailerid", 0);
         let i =
           (0, l.j$)(e.args, "style")?.toLocaleLowerCase() ?? Xe.k_TrailerAsFull;
         i = Object.values(Xe).includes(i) ? i : Xe.k_TrailerAsFull;
@@ -28053,14 +28058,14 @@
           children: e.children,
         });
       }
-      function jr(e) {
-        const t = qr(e.args, "appid", 0);
+      function Ir(e) {
+        const t = Ur(e.args, "appid", 0);
         return s.createElement(pt, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Or(e) {
+      function Er(e) {
         const t = (0, l.j$)(e.args, "name"),
           r = (0, l.j$)(e.args, "title"),
           i = (0, l.j$)(e.args, "company"),
@@ -28081,11 +28086,11 @@
               bio: e.children,
             });
       }
-      function qr(e, t, r) {
+      function Ur(e, t, r) {
         const i = (0, l.j$)(e, t);
         return void 0 === i || null == i ? r : Number.parseInt(i);
       }
-      function Pr(e) {
+      function Wr(e) {
         const t = (0, l.j$)(e.args, "name"),
           r =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -28099,7 +28104,7 @@
           ? e.children
           : null;
       }
-      function Nr(e) {
+      function jr(e) {
         const t = e.context.showErrorInfo;
         if (!h.iA.logged_in)
           return s.createElement(
@@ -28119,7 +28124,7 @@
           }
         return s.createElement(Ht, { bPreviewMode: t, rewardType: i });
       }
-      function Ar(e) {
+      function Or(e) {
         const t = Number.parseInt((0, l.j$)(e.args, "id")) || 0,
           r =
             "true" === ((0, l.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -28137,7 +28142,7 @@
           (!o && !r) || (o && r) ? e.children : null
         );
       }
-      function kr(e) {
+      function qr(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, v.h)(e),
             r = (0, v.Q)();
@@ -28163,12 +28168,12 @@
         }
         return { bInitialState: !0 };
       }
-      function xr(e) {
+      function Pr(e) {
         const t = (0, l.j$)(e.args, "action"),
           r = (0, l.j$)(e.args, "initialToken"),
           i = (0, l.j$)(e.args, "successToken"),
           a = (0, l.j$)(e.args, "failToken"),
-          n = kr(t);
+          n = qr(t);
         if (!(t && r && i && a)) {
           return e.context.showErrorInfo
             ? s.createElement(
@@ -28186,7 +28191,7 @@
                 onClick: (n) => {
                   (0, Tt.pg)(
                     s.createElement(
-                      Gr,
+                      Nr,
                       {
                         strAction: t,
                         strInitialToken: r,
@@ -28209,7 +28214,7 @@
               (0, w.we)("#Login_SignIn"),
             );
       }
-      function Gr(e) {
+      function Nr(e) {
         const {
             strAction: t,
             children: r,
@@ -28218,7 +28223,7 @@
             strSuccessToken: n,
             strFailToken: l,
           } = e,
-          o = kr(t),
+          o = qr(t),
           [m, c] = s.useState(Boolean(o.fnAction));
         s.useEffect(() => {
           o.fnAction && (c(!0), o.fnAction().finally(() => c(!1)));
@@ -28257,7 +28262,7 @@
           ),
         );
       }
-      function Dr(e) {
+      function Ar(e) {
         const { showErrorInfo: t, event: r } = e.context,
           i = r.clanSteamID.GetAccountID(),
           [a] = s.useState(
@@ -28297,19 +28302,19 @@
             ? s.createElement("div", null, (0, w.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      class Lr {
+      class kr {
         static sm_BBCodeDictionary = new Map([
           ...Array.from(l.W4.entries()),
-          ...Array.from(Ir().entries()),
+          ...Array.from(vr().entries()),
         ]);
         static AddDictionary(e) {
-          Lr.sm_BBCodeDictionary = new Map([
-            ...Array.from(Lr.sm_BBCodeDictionary.entries()),
+          kr.sm_BBCodeDictionary = new Map([
+            ...Array.from(kr.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
       }
-      function Vr(e) {
+      function xr(e) {
         const {
             text: t,
             partnerEventStore: r,
@@ -28333,7 +28338,7 @@
           );
         return s
           .useMemo(
-            () => new i.B(Lr.sm_BBCodeDictionary, u, l || n.TS.LANGUAGE),
+            () => new i.B(kr.sm_BBCodeDictionary, u, l || n.TS.LANGUAGE),
             [u, l],
           )
           .ParseBBCode(t, {

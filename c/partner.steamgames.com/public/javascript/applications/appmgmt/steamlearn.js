@@ -37931,7 +37931,7 @@
               label: (0, _._)("#SteamLearn_TrainSettings_TrainBatchSizeInput"),
               fnGetInitialValue: () =>
                 _.train_config().train_batch_size()?.toString() || "1000",
-              fnValidateValue: (_) => _(_, 10, 5e3),
+              fnValidateValue: (_) => _(_, 10, 16e3),
               fnSetValue: (_) =>
                 _.train_config().set_train_batch_size(parseInt(_)),
             }),

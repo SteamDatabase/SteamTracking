@@ -37774,10 +37774,9 @@
         UpdateInternalModel(_, _) {
           const _ = _.data.community_items_def;
           return (
-            this.m_mapCommunityItemDefs.set(
-              _,
-              [..._.data.community_items_def] || [],
-            ),
+            this.m_mapCommunityItemDefs.set(_, [
+              ...(_.data.community_items_def ?? []),
+            ]),
             _.data.defs?.forEach((_) => {
               const _ = __webpack_require__?.findIndex(
                 (_) =>
@@ -37795,7 +37794,7 @@
                       _.appid,
                   );
             }),
-            this.m_mapPointShopDefs.set(_, [..._.data.defs] || []),
+            this.m_mapPointShopDefs.set(_, [...(_.data.defs ?? [])]),
             _.data.defs || []
           );
         }
@@ -39880,8 +39879,24 @@
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return Boolean(
+          _.show_on_tabs &&
+            _.show_on_tabs.length > 0 &&
+            !_.diable_tab_id_filtering,
+        );
+      }
+      function _(_, _) {
+        return _(_) && _ && 0 != _.length
+          ? _.reverse_show_on_tabs
+            ? _.filter(
+                (_) => _.show_on_tabs && !_.show_on_tabs.includes(_.unique_id),
+              ).map((_) => _.unique_id)
+            : (_.show_on_tabs ?? [])
+          : _?.map((_) => _.unique_id) || [];
+      }
+      var _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         if (!_.eventdata) return null;
         const { appid: _, eventdata: __webpack_require__ } = _,
@@ -39892,10 +39907,11 @@
             _ = (0, _._)(_._.LANGUAGE),
             _ = [];
           let _ = null,
-            _ = [];
+            _ = [],
+            _ = null;
           for (const _ of _.sale_sections)
             if ("tabs" === _.section_type && _.tabs?.length) {
-              _ = [];
+              (_ = _), (_ = []);
               for (const _ of _.tabs)
                 _.push({
                   _: _.unique_id,
@@ -39912,21 +39928,8 @@
               if (((0, _._)(_) && _.enable_faceted_browsing && (_ = !0), !_))
                 continue;
               const _ = (0, _._)(_, _, _, 0, 0, !0);
-              if (null === _)
-                _.push(
-                  _.createElement(_, {
-                    key: _,
-                    section: _,
-                    tab: "",
-                  }),
-                );
-              else {
-                let _ = _.show_on_tabs?.length
-                  ? _.show_on_tabs
-                  : _.map((_) => _._);
-                _ &&
-                  !_.diable_tab_id_filtering &&
-                  (_ = _.filter((_) => _.includes(_)));
+              if (null !== _ && _) {
+                const _ = _(_, _?.tabs || []);
                 for (const _ of _) {
                   const _ = _.find((_) => _._ === _);
                   _ &&
@@ -39938,7 +39941,14 @@
                       }),
                     );
                 }
-              }
+              } else
+                _.push(
+                  _.createElement(_, {
+                    key: _,
+                    section: _,
+                    tab: "",
+                  }),
+                );
             }
           return _;
         })(_, __webpack_require__);
@@ -84051,7 +84061,21 @@
           "ml_playtime_recommender",
           "all_released",
           "all_upcoming",
-        ];
+        ],
+        _ = new Set([
+          "search",
+          "topwishlisted",
+          "trendingwishlisted",
+          "popularcomingsoon",
+          "mostplayeddemo",
+          "dailyactiveuserdemo",
+          "playednowdemo",
+          "contenthub_upcoming",
+          "contenthub_all",
+          "ml_wishlist_recommender",
+          "all",
+          "all_upcoming",
+        ]);
       function _(_) {
         return "string" == typeof _ && _.includes(_);
       }
@@ -88192,33 +88216,38 @@
           ),
         );
       }
-      const _ = (_) => {
-        let { displayStyle: _ } = _,
+      function _(_) {
+        const {
+            displayStyle: _,
+            requestCompact: __webpack_require__,
+            ..._
+          } = _,
+          { type: _ } = _,
           _ = (0, _._)();
         if ("purchaseonlydisplay" === _)
           return _.createElement(_, {
-            ..._,
-          });
-        if ("bundle" == _.type || "sub" == _.type)
-          return _.createElement(_._, {
             ..._,
           });
         if (_)
           return _.createElement(_._, {
             ..._,
           });
-        switch (
-          (!(0, _._)() ||
-            ("library" != _ && "animated" != _) ||
-            (_ = "bordered"),
-          _)
-        ) {
+        if (__webpack_require__ && !(0, _._)())
+          return _.createElement(_, {
+            ..._,
+          });
+        if ("bundle" == _ || "sub" == _)
+          return _.createElement(_._, {
+            ..._,
+          });
+        if ((0, _._)() && ("library" == _ || "animated" == _))
+          return _.createElement(_._, {
+            ..._,
+            bShowReviewSummary: !0,
+          });
+        switch (_) {
           case "library":
           case "animated":
-            return _.createElement(_, {
-              ..._,
-            });
-          case "compactlist":
             return _.createElement(_, {
               ..._,
             });
@@ -88228,7 +88257,7 @@
               bShowReviewSummary: !0,
             });
         }
-      };
+      }
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
@@ -89136,14 +89165,25 @@
         GetFlavorsForActiveTab() {
           const { activeTab: _, browseInfo: _ } = this.props,
             _ = _?.GetActiveTabUniqueID();
-          return _ && _?.tabs && _?.show_flavor_on_sale_tabs
-            ? _.tabs.filter(
-                (_) =>
-                  !(_ in _.show_flavor_on_sale_tabs) ||
-                  0 === _.show_flavor_on_sale_tabs[_].length ||
-                  _.show_flavor_on_sale_tabs[_].includes(_),
-              )
-            : _?.tabs;
+          if (_) {
+            let _ = _?.tabs;
+            return (
+              _ &&
+                _ &&
+                _.show_flavor_on_sale_tabs &&
+                (_ = _.filter(
+                  (_) =>
+                    !(_ in _.show_flavor_on_sale_tabs) ||
+                    0 === _.show_flavor_on_sale_tabs[_].length ||
+                    _.show_flavor_on_sale_tabs[_].includes(_),
+                )),
+              _ &&
+                _?.BFilterRequiresUpcoming() &&
+                (_ = _.filter((_) => _.has(_))),
+              _
+            );
+          }
+          return _?.tabs;
         }
         GetDefaultTab() {
           const _ = this.GetFlavorsForActiveTab();
@@ -89333,9 +89373,7 @@
                 feature: _,
                 depth: _,
                 activeTab: _,
-                displayStyle: this.state.bCompactViewMode
-                  ? "compactlist"
-                  : "library",
+                compactDisplay: this.state.bCompactViewMode,
               }),
             _ &&
               0 == _.length &&
@@ -89370,80 +89408,83 @@
                     ),
               ),
           );
-          return (
-            _?.enable_faceted_browsing &&
-              (_ = _.createElement(
-                _,
-                {
-                  language: _,
-                  section: _,
-                  event: __webpack_require__,
-                  facetFilterState: this.state.facetFilterState,
-                  nMaxFacetValues: _.max_facet_values_for_facet || 100,
-                  fnOnUpdateFilter: this.OnUpdateFacetFilter,
-                  onInitFilter: async () => {
-                    let _ = this.props.section.facets;
-                    _.Debug("FacetedSaleSection.onInitFilter', rgFacet"),
-                      !_ &&
-                        this.props.section.facet_auto_generate_options &&
-                        ((_ = await _(
-                          this.props.section.facet_auto_generate_options,
-                        )),
-                        _.Debug(
-                          "FacetedSaleSection.onInitFilter autogen completed', rgFacet",
-                        )),
-                      this.setState({
-                        facetFilterState: new _(
-                          _ ?? [],
-                          this.props.section.facet_sort_order ||
-                            _._.k_ESortFacetsByMatchCount,
-                          this.props.language,
-                          _(this.props.event, this.props.section),
-                        ),
-                      });
-                  },
-                  ...this.state.results,
+          _?.enable_faceted_browsing &&
+            (_ = _.createElement(
+              _,
+              {
+                language: _,
+                section: _,
+                event: __webpack_require__,
+                facetFilterState: this.state.facetFilterState,
+                nMaxFacetValues: _.max_facet_values_for_facet || 100,
+                fnOnUpdateFilter: this.OnUpdateFacetFilter,
+                onInitFilter: async () => {
+                  let _ = this.props.section.facets;
+                  _.Debug("FacetedSaleSection.onInitFilter', rgFacet"),
+                    !_ &&
+                      this.props.section.facet_auto_generate_options &&
+                      ((_ = await _(
+                        this.props.section.facet_auto_generate_options,
+                      )),
+                      _.Debug(
+                        "FacetedSaleSection.onInitFilter autogen completed', rgFacet",
+                      )),
+                    this.setState({
+                      facetFilterState: new _(
+                        _ ?? [],
+                        this.props.section.facet_sort_order ||
+                          _._.k_ESortFacetsByMatchCount,
+                        this.props.language,
+                        _(this.props.event, this.props.section),
+                      ),
+                    });
                 },
-                _,
-              )),
+                ...this.state.results,
+              },
+              _,
+            ));
+          const _ = (function (_, _) {
+            return "purchaseonlydisplay" !== _ && !_ && !(0, _._)();
+          })("library", this.props.bInGamepadUI);
+          return _.createElement(
+            _.Fragment,
+            null,
             _.createElement(
-              _.Fragment,
-              null,
+              "div",
+              {
+                className: _.SaleSectionTitleCtn,
+              },
+              _.createElement(_._, {
+                section: _,
+                event: __webpack_require__,
+                nHiddenCapsules: _,
+                ...this.props,
+              }),
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _().SaleItemBrowserContainer,
+              },
               _.createElement(
-                "div",
+                _,
                 {
-                  className: _.SaleSectionTitleCtn,
-                },
-                _.createElement(_._, {
-                  section: _,
-                  event: __webpack_require__,
-                  nHiddenCapsules: _,
-                  ...this.props,
-                }),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().SaleItemBrowserContainer,
+                  className: _().SaleItemBrowserHeaderContainer,
                 },
                 _.createElement(
-                  _,
+                  _._,
                   {
-                    className: _().SaleItemBrowserHeaderContainer,
+                    "flow-children": "row",
+                    className: _().SaleItemBrowserHeader,
                   },
-                  _.createElement(
-                    _._,
-                    {
-                      "flow-children": "row",
-                      className: _().SaleItemBrowserHeader,
-                    },
-                    _,
-                    !this.props.bInGamepadUI &&
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().SuggestContainer,
-                        },
+                  _,
+                  !this.props.bInGamepadUI &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().SuggestContainer,
+                      },
+                      _ &&
                         _.createElement(
                           _,
                           {
@@ -89465,22 +89506,21 @@
                             ? _.createElement(_.f9b, null)
                             : _.createElement(_.Emg, null),
                         ),
-                        _.createElement(_.eSy, null),
-                        _.createElement(_._, {
-                          type: "text",
-                          onChange: this.OnUpdateSearch,
-                          bAlwaysShowClearAction: _,
-                          placeholder: (0, _._)(
-                            "#Sale_ItemBrowser_SearchPlaceholder",
-                          ),
-                          value: _,
-                        }),
-                      ),
-                  ),
+                      _.createElement(_.eSy, null),
+                      _.createElement(_._, {
+                        type: "text",
+                        onChange: this.OnUpdateSearch,
+                        bAlwaysShowClearAction: _,
+                        placeholder: (0, _._)(
+                          "#Sale_ItemBrowser_SearchPlaceholder",
+                        ),
+                        value: _,
+                      }),
+                    ),
                 ),
-                _,
               ),
-            )
+              _,
+            ),
           );
         }
       };
@@ -89599,7 +89639,7 @@
             feature: _,
             depth: _,
             activeTab: _,
-            displayStyle: _,
+            compactDisplay: _,
           } = _,
           _ = (0, _._)();
         return _.createElement(
@@ -89638,7 +89678,8 @@
                   type: _.type || "game",
                   fnOnClickOverride: _,
                   bPreferDemoStorePage: _.prefer_demo_store_page,
-                  displayStyle: _ ?? "compactlist",
+                  displayStyle: "library",
+                  requestCompact: _,
                 })
               );
             }),
@@ -109302,46 +109343,52 @@
             )
           : null;
       }
+      const _ = [6, 23, 18, 8, 9, 19, 24];
       function _(_) {
-        const { _: _, rgSocialMedia: __webpack_require__, className: _ } = _;
+        const { _: _, rgSocialMedia: __webpack_require__, className: _ } = _,
+          _ = (0, _._)();
         return _.createElement(
           "div",
           {
             className: (0, _._)(_().AppSocialLinks, _),
           },
-          __webpack_require__.map((_) =>
-            _.url
-              ? _.createElement(_, {
-                  key: "app_social_link_" + _ + "_" + _.link_type,
-                  social: _,
-                })
-              : _.createElement(_, {
-                  key:
-                    "app_social_text_" + _ + "_" + _.link_type + "_" + _.text,
-                  social: _,
-                }),
-          ),
+          __webpack_require__
+            .filter((_) => !_ || _.includes(_.link_type || 0))
+            .map((_) =>
+              _.url
+                ? _.createElement(_, {
+                    key: "app_social_link_" + _ + "_" + _.link_type,
+                    social: _,
+                  })
+                : _.createElement(_, {
+                    key:
+                      "app_social_text_" + _ + "_" + _.link_type + "_" + _.text,
+                    social: _,
+                  }),
+            ),
         );
       }
       function _(_) {
         const { social: _ } = _;
-        return _.createElement(
-          "a",
-          {
-            href: (0, _._)(_.url),
-            target: _._.IN_CLIENT ? void 0 : "_blank",
-            rel: "noopener noreferrer",
-          },
-          _.createElement(
-            _._,
-            {
-              toolTipContent: _.url,
-            },
-            _.createElement(_, {
-              social: _,
-            }),
-          ),
-        );
+        return _.url
+          ? _.createElement(
+              "a",
+              {
+                href: (0, _._)(_.url),
+                target: _._.IN_CLIENT ? void 0 : "_blank",
+                rel: "noopener noreferrer",
+              },
+              _.createElement(
+                _._,
+                {
+                  toolTipContent: _.url,
+                },
+                _.createElement(_, {
+                  social: _,
+                }),
+              ),
+            )
+          : null;
       }
       function _(_) {
         const { social: _ } = _;
@@ -109371,7 +109418,7 @@
       function _(_) {
         const { social: _ } = _;
         return _.createElement(_, {
-          linkType: _.link_type,
+          linkType: _.link_type || 0,
           className: _().AppSocialLinkIcon,
         });
       }

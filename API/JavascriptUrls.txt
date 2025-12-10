@@ -1021,7 +1021,7 @@ ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&timezone=${_ ? _ : ""}&locale=${}&dlc_override=${_ ? _ : ""}
 ${PARTNER_BASE_URL}marketingmessages/messagepreview/${}/?cc=${}&l=${language}
-${PARTNER_BASE_URL}meetsteam/2025
+${PARTNER_BASE_URL}meetsteam
 ${PARTNER_BASE_URL}meetsteam/ajaxbatchgetuseremails
 ${PARTNER_BASE_URL}meetsteam/ajaxregisterinterest
 ${PARTNER_BASE_URL}meetsteam/ajaxsubmitsurvey/${}
@@ -1183,6 +1183,7 @@ ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
 ${PARTNER_BASE_URL}sales/ajaxgetsalerank
 ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
 ${PARTNER_BASE_URL}sdr/ajaxsessionsearch?${}
+${PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo
 ${PARTNER_BASE_URL}seasonpass/ajaxgetreleasedorupcomingdlc?parentappid=${}
 ${PARTNER_BASE_URL}steamdirect
 ${PARTNER_BASE_URL}steamml/create_problem
