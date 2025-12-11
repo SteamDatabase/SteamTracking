@@ -430,7 +430,7 @@
             null,
             i.createElement(
               o.a,
-              null,
+              { marginX: "2" },
               i.createElement(Y, { ...n, refHover: c }),
             ),
           ),
@@ -555,7 +555,7 @@
               i.createElement(
                 z,
                 { description: a },
-                a.market_hash_name
+                a.marketable && a.market_hash_name
                   ? i.createElement(H, {
                       description: a,
                       href: j.N.Item(t, a.market_hash_name),

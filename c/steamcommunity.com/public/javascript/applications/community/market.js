@@ -561,7 +561,9 @@
             null,
             _.createElement(
               _._,
-              null,
+              {
+                marginX: "2",
+              },
               _.createElement(_, {
                 ...__webpack_require__,
                 refHover: _,
@@ -737,7 +739,7 @@
                 {
                   description: _,
                 },
-                _.market_hash_name
+                _.marketable && _.market_hash_name
                   ? _.createElement(_, {
                       description: _,
                       href: _._.Item(_, _.market_hash_name),

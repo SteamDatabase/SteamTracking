@@ -747,8 +747,8 @@
         const n = new Map(),
           l = new Map(),
           r = new Map();
-        let o = null,
-          i = null,
+        let o,
+          i,
           s = 0;
         const { selectedTabBackgroundDef: c, nTabSaleSectionIndex: m } =
           (function (e, t) {
@@ -815,10 +815,10 @@
                   const o = t[e],
                     s = o.unique_id;
                   (0, b.bF)(a, o)
-                    ? --n
-                    : (m.push(s),
+                    ? (m.push(s),
                       l.set(s, i.background_id),
-                      0 === n && r.set(s, i.background_id));
+                      0 === n && r.set(s, i.background_id))
+                    : --n;
                 }
                 let u = e;
                 for (; u < t.length && !(0, b.bF)(a, t[u]); ) u += 1;
