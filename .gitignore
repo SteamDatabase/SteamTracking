@@ -13,6 +13,7 @@
 *.mp3
 *.swp
 *.tmp
+*.save
 *.uifont
 *.wav
 *.webm
