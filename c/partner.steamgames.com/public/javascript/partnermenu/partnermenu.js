@@ -41673,7 +41673,7 @@ Error generating stack: ` +
   }
   _();
   _();
-  var _ = _(_(), 1);
+  var _ = _(_());
   var _ = [
       "sc_schinese",
       "schinese",
@@ -44979,8 +44979,38 @@ Error generating stack: ` +
   _();
   _();
   var _ = _(_(), 1),
-    _ = _(_(), 1),
     _ = _(_(), 1);
+  var _ = _(_());
+  function _(_, _ = {}) {
+    let {
+        nTimeoutMS: _ = 350,
+        nTimeoutExtensionMS: _ = 125,
+        nMaxTimeoutExtensions: _ = 3,
+      } = _,
+      [_, _] = _.default.useState(_),
+      _ = _.default.useRef(void 0);
+    return (
+      _.default.useEffect(() => {
+        let _ = performance.now();
+        _.current
+          ? _ - _.current.tsLastChange < _ * _ &&
+            (_.current.tsScheduledTimeout = Math.max(
+              performance.now() + _,
+              _.current.tsScheduledTimeout,
+            ))
+          : (_.current = {
+              tsLastChange: _,
+              tsScheduledTimeout: performance.now() + _,
+            });
+        let _ = _.current.tsScheduledTimeout - performance.now(),
+          _ = window.setTimeout(() => {
+            (_.current = void 0), _(_);
+          }, _);
+        return () => window.clearTimeout(_);
+      }, [_, _, _, _]),
+      _
+    );
+  }
   var _ = {
     SearchBox: "_7Pw3ZpeGxEo-",
     SuggestionsPopup: "_2gHY0Embs-0-",
@@ -45077,7 +45107,8 @@ Error generating stack: ` +
         },
       };
     }
-    let _ = _(_, _),
+    let _ = _(_),
+      _ = _(_, _),
       _ = _("clientWidth"),
       _ = _?.data?.length,
       _ = _.default.useRef(null);
