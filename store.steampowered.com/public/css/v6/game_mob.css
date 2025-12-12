@@ -801,8 +801,26 @@
 	}
 
 	/* Hide the "compare editions" button in purchase options */
-	html.responsive div[class*='game_purchase_options_editions_header_compare_button'] {
+	html.responsive div[class*='game_purchase_options_editions_header_compare_button_ctn'] {
+		margin-left: auto;
+	}
+
+	html.responsive button[class*='game_purchase_options_editions_header_compare_button'] {
+		font-size: 14px;
+	}
+
+	html.responsive div[class*='game_purchase_options_editions_header_title'] {
 		display: none;
+	}
+
+	html.responsive div[class*='game_purchase_options_editions_header'] {
+		background: none;
+	}
+
+	html.responsive img[class*='game_purchase_options_editions_image'] {
+		max-width: 100%;
+		max-height: 100%;
+		height: auto;
 	}
 
 	/* reduce font sizes in Early Access Game section */
