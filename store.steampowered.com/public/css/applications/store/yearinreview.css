@@ -1610,6 +1610,7 @@ body.v6 {
   color: #fff;
   display: flex;
   flex-direction: column;
+  text-align: center;
   margin-bottom: 5px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -2562,6 +2563,12 @@ body.v6 {
   padding: unset;
   height: 51vw;
 }
+@media screen and (max-width: 500px) {
+  html:not(.force_desktop) ._3Q6xYLon3xp6vd3Bt-DtpC._3-3rSWam8RFS0p1CFk64Sr {
+    height: unset;
+    padding: 30px 0;
+  }
+}
 ._3Q6xYLon3xp6vd3Bt-DtpC._38lJlaE06XJ8bToTpU4p6t {
   background: linear-gradient(135deg, #0d215e 0%, #0b4648 100%);
   overflow: hidden;
@@ -2899,6 +2906,11 @@ body.v6 {
   width: calc(50% + 3px);
   align-items: center;
 }
+@media screen and (max-width: 500px) {
+  html:not(.force_desktop) .DMCZIDNqrSb2BeQ4d5kAj {
+    width: 100%;
+  }
+}
 .DMCZIDNqrSb2BeQ4d5kAj:nth-child(odd) {
   align-self: flex-end;
   align-items: flex-start;
@@ -2929,6 +2941,23 @@ body.v6 {
   margin-right: -22px;
   padding-right: 22px;
 }
+@media screen and (max-width: 500px) {
+  html:not(.force_desktop) .DMCZIDNqrSb2BeQ4d5kAj:nth-child(even) {
+    align-self: flex-end;
+    align-items: flex-start;
+    border-left: 6px dotted #67c1f5;
+    border-right: unset;
+    padding-left: 20px;
+    padding-right: 0;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+  }
+  html:not(.force_desktop)
+    .DMCZIDNqrSb2BeQ4d5kAj:nth-child(even)
+    .rjWoTavA51H_s5xhADpI_ {
+    justify-content: flex-start;
+  }
+}
 .DMCZIDNqrSb2BeQ4d5kAj ._1MQ1FhzTm2tRDLvBSFD1Rl {
   font-size: 18px;
   color: #fff;
@@ -2951,8 +2980,8 @@ body.v6 {
   }
 }
 @media screen and (max-width: 500px) {
-  .DMCZIDNqrSb2BeQ4d5kAj ._1ctBsQkYV5RUf_mKMDJOy6 {
-    width: calc(50% - 4px);
+  html:not(.force_desktop) .DMCZIDNqrSb2BeQ4d5kAj ._1ctBsQkYV5RUf_mKMDJOy6 {
+    width: calc(33% - 6px);
   }
 }
 ._1ctBsQkYV5RUf_mKMDJOy6 {
@@ -2963,6 +2992,11 @@ body.v6 {
   transition-property: filter, transform;
   transition-duration: .2s;
   transition-timing-function: ease-in-out;
+}
+@media screen and (max-width: 500px) {
+  html:not(.force_desktop) ._1ctBsQkYV5RUf_mKMDJOy6 {
+    width: calc(33% - 6px);
+  }
 }
 ._1ctBsQkYV5RUf_mKMDJOy6:hover {
   filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.35));

@@ -14777,7 +14777,7 @@
         _ = __webpack_require__("chunkid");
       const _ = {
         include_basic_info: !0,
-        include_assets: !0,
+        include_assets_without_overrides: !0,
       };
       class _ {
         m_SteamInterface = null;
@@ -15441,7 +15441,7 @@
                 nParentAppID: _,
                 eChildType: 0,
               });
-        const _ = _.GetAssets().GetLibraryCapsuleURL();
+        const _ = _.GetAssetsWithoutOverrides().GetLibraryCapsuleURL();
         return _.createElement(
           "a",
           {
@@ -15833,7 +15833,7 @@
           _ = _();
         if (!_ || !_.BIsVisible()) return null;
         const _ = (0, _._)(_?.GetStorePageURL() || "", _),
-          _ = _.GetAssets().GetLibraryCapsuleURL();
+          _ = _.GetAssetsWithoutOverrides().GetLibraryCapsuleURL();
         return _.createElement(
           "div",
           {
@@ -16015,7 +16015,7 @@
                             key: "bg_" + _.GetAppID(),
                             className: _().BgImage,
                             style: {
-                              backgroundImage: `url( ${_.GetAssets().GetLibraryHeroURL()?.trim().length > 0 ? _.GetAssets().GetLibraryHeroURL() : _.GetAssets().GetMainCapsuleURL()} )`,
+                              backgroundImage: `url( ${_.GetAssetsWithoutOverrides().GetLibraryHeroURL()?.trim().length > 0 ? _.GetAssetsWithoutOverrides().GetLibraryHeroURL() : _.GetAssetsWithoutOverrides().GetMainCapsuleURL()} )`,
                             },
                           }),
                         ),
@@ -16025,7 +16025,7 @@
                               key: "bg_" + _.GetAppID(),
                               className: _().BgImage,
                               style: {
-                                backgroundImage: `url( ${_.GetAssets().GetRawPageBackgroundURL()?.trim().length > 0 ? _.GetAssets().GetRawPageBackgroundURL() : _.GetAssets().GetMainCapsuleURL()} )`,
+                                backgroundImage: `url( ${_.GetAssetsWithoutOverrides().GetRawPageBackgroundURL()?.trim().length > 0 ? _.GetAssetsWithoutOverrides().GetRawPageBackgroundURL() : _.GetAssetsWithoutOverrides().GetMainCapsuleURL()} )`,
                               },
                             }),
                           ),
@@ -16035,7 +16035,7 @@
                               key: "bg_" + _.GetAppID(),
                               className: _().BgImage,
                               style: {
-                                backgroundImage: `url( ${_.GetAssets().GetLibraryHeroURL()?.trim().length > 0 ? _.GetAssets().GetLibraryHeroURL() : _.GetAssets().GetMainCapsuleURL()} )`,
+                                backgroundImage: `url( ${_.GetAssetsWithoutOverrides().GetLibraryHeroURL()?.trim().length > 0 ? _.GetAssetsWithoutOverrides().GetLibraryHeroURL() : _.GetAssetsWithoutOverrides().GetMainCapsuleURL()} )`,
                               },
                             }),
                           ),
@@ -16072,7 +16072,7 @@
                       className: (0, _._)(_().ImageTint, _.ImageTint),
                     },
                     _.createElement("img", {
-                      src: _?.GetAssets()?.GetLibraryHeroURL(),
+                      src: _?.GetAssetsWithoutOverrides()?.GetLibraryHeroURL(),
                     }),
                   ),
                 ),
@@ -17549,12 +17549,13 @@
             duration: 2e3,
             startAnimation: _,
           }),
-          _ = _.createElement(_, {
-            endValue: _,
-            duration: 2e3,
-            startAnimation: _,
-          }),
-          _ = (0, _.useRef)(null);
+          _ =
+            (_.createElement(_, {
+              endValue: _,
+              duration: 2e3,
+              startAnimation: _,
+            }),
+            (0, _.useRef)(null));
         return (
           (0, _._)(_),
           _.createElement(
@@ -17635,28 +17636,10 @@
                       (0, _._)("#YIR_NewLine_Session"),
                     ),
                   ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: _().StatBlock,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().BigNum,
-                      },
-                      _ < 100
-                        ? (0, _._)("#YIR_Percent", "<1")
-                        : _.createElement(_.Fragment, null, _, " %"),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _().StatDescription,
-                      },
-                      (0, _._)("#YIR_NewLine_Percent"),
-                    ),
-                  ),
+                  _.createElement(_, {
+                    percentVal: _,
+                    subToken: "#YIR_NewLine",
+                  }),
                 ),
                 Boolean(_) &&
                   _.createElement(
@@ -19682,7 +19665,7 @@
           _ = _(0, [_]),
           _ = _();
         if (!_) return null;
-        const _ = _.GetAssets()?.GetLibraryHeroURL(),
+        const _ = _.GetAssetsWithoutOverrides()?.GetLibraryHeroURL(),
           _ = Math.trunc(_.stats.total_sessions);
         return _.createElement(
           "div",
@@ -20041,7 +20024,10 @@
       function _({ appId: _, style: _ }) {
         const [__webpack_require__] = (0, _._)(parseInt(_), _);
         if (!__webpack_require__) return null;
-        const _ = __webpack_require__.GetAssets().GetLibraryCapsuleURL() || _._;
+        const _ =
+          __webpack_require__
+            .GetAssetsWithoutOverrides()
+            .GetLibraryCapsuleURL() || _._;
         return _.createElement("img", {
           style: _,
           className: _.CapsuleImg,
@@ -21237,7 +21223,7 @@
       function _(_) {
         const { oStoreItem: _ } = _,
           _ = _(_),
-          _ = _.GetAssets()?.GetLibraryHeroURL();
+          _ = _.GetAssetsWithoutOverrides()?.GetLibraryHeroURL();
         return _.createElement("div", {
           className: _.BackgroundImage,
           style: _
@@ -21251,7 +21237,7 @@
         const { oStoreItem: _ } = _,
           _ = _(),
           _ = _(_),
-          _ = _.GetAssets()?.GetLibraryHeroURL();
+          _ = _.GetAssetsWithoutOverrides()?.GetLibraryHeroURL();
         return _.createElement(
           _.Fragment,
           null,

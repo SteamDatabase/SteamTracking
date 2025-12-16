@@ -5095,17 +5095,20 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('review_subtotal_value').innerHTML = price_data.formattedSubTotal;
 			else
 				$('review_subtotal_value').innerHTML = '';
-			if ( price_data.totalloyaltypoints > 0 )
+			if ( $J('#checkout_steam_rewards_banner_to_earn').length )
 			{
-				$('checkout_steam_rewards_banner_to_earn').show();
-				$('checkout_receipt_steam_rewards').show();
-				$('reward_points_to_earn').innerHTML = price_data.formattedTotalLoyaltyPoints;
-				$('reward_points_earned').innerHTML = price_data.formattedTotalLoyaltyPoints;
-			}
-			else
-			{
-				$('checkout_steam_rewards_banner_to_earn').hide();
-				$('checkout_receipt_steam_rewards').hide();
+				if ( price_data.totalloyaltypoints > 0 )
+				{
+					$('checkout_steam_rewards_banner_to_earn').show();
+					$('checkout_receipt_steam_rewards').show();
+					$('reward_points_to_earn').innerHTML = price_data.formattedTotalLoyaltyPoints;
+					$('reward_points_earned').innerHTML = price_data.formattedTotalLoyaltyPoints;
+				}
+				else
+				{
+					$('checkout_steam_rewards_banner_to_earn').hide();
+					$('checkout_receipt_steam_rewards').hide();
+				}
 			}
 			// deal with promotion elements
 			var promotionNodes = document.getElementsByClassName('cart_total_row_promotion');
