@@ -1383,7 +1383,7 @@
               let _ = 0;
               _ <
               _.backend_response.outputs[0].categorical_crossentropy.value
-                .length;
+                ?.length;
               _++
             ) {
               const _ =

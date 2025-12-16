@@ -619,6 +619,7 @@ ${IMG_URL}icons/hero_agility.png
 ${IMG_URL}icons/hero_intelligence.png
 ${IMG_URL}icons/hero_strength.png
 ${IMG_URL}icons/innate_icon.png
+${IMG_URL}icons/talent_tree_icon.png
 ${IMG_URL}icons/talents.svg
 ${IMG_URL}international2020/arrow_left.png
 ${IMG_URL}international2020/assistant/assistant_1.png
@@ -2976,6 +2977,7 @@ https://www.dota2.com/international2023
 https://www.dota2.com/international2024
 https://www.dota2.com/kez
 https://www.dota2.com/labyrinth
+https://www.dota2.com/largo
 https://www.dota2.com/marci
 https://www.dota2.com/mars
 https://www.dota2.com/mistwoods
@@ -3195,6 +3197,7 @@ url( ${IMG_URL}/pastupdates/innates_facets_social.png )
 url( ${IMG_URL}/pastupdates/international2023_social.png )
 url( ${IMG_URL}/pastupdates/kez_social.png )
 url( ${IMG_URL}/pastupdates/labyrinth_social.jpg )
+url( ${IMG_URL}/pastupdates/largo_social.png )
 url( ${IMG_URL}/pastupdates/marci_social.jpg )
 url( ${IMG_URL}/pastupdates/mars_social.jpg )
 url( ${IMG_URL}/pastupdates/nemestice_social.jpg )
