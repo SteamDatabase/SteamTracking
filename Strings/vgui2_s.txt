@@ -69,7 +69,6 @@
 !"FontMatch unhandled type"
 !"Impl me"
 !"Implement me!"
-!"Implement me"
 !"Invalid scheme requested."
 !"Invalid window handle"
 !"Not implemented"
@@ -77,7 +76,6 @@
 !"Unexpect KB message"
 !"Warning: VPanel with no drawing context"
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
-!"failed to base64 encode value"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !("CLocalizedStringTable::ConstructString - Found a %s# escape sequence who's index was more than the number of args.")
 !1AQaq
@@ -613,10 +611,10 @@ $\nY8O
 /yQA
 0)KEY_0
 00003333
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789
 0123456789ABCDEF
 0123456789abcdef
 0F`8
@@ -1861,6 +1859,7 @@ Image width exceeds user limit in IHDR
 Image width is too large for this architecture
 Image width is zero in IHDR
 Impl COpenGLSurface::DrawPolyLine()\n
+Implement me
 Import
 Import "
 Incorrect number of arguments.  %d arguments required, %d were given.\n
@@ -2577,6 +2576,9 @@ SalesTerritoryCodeFromKey
 Sandbox
 Saturday
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
+SaveRegistryVDF FAILED\n
+SaveRegistryVDF completed successfully\n
+SaveRegistryVDF\n
 Saving unknown chunk:
 ScheduledSendOnDate
 Scheme
@@ -2883,7 +2885,6 @@ Unexpected end of string.
 Unexpected failure while serializing option submessage
 Unexpected number of glibc version components
 Unexpected number of glibc version components: %d
-Unhandled eRegKeyRoot passed into HKeyGet
 UnhandledMouseClick
 Unimplemented type:
 Uninitialized row
@@ -3828,6 +3829,7 @@ f.N%H
 fFKEY_F
 fP~V
 faccessat
+failed to base64 encode value
 failed to generate a valid callback handler key
 fallocate64
 false
@@ -4501,7 +4503,6 @@ m_pMemory
 m_pParent == this
 m_pPlatformModuleData
 m_pRef->m_pT
-m_pRegistryKV
 m_pSetIntValue
 m_pSetStringValue
 m_pUserConfigData
@@ -4728,7 +4729,6 @@ path
 pchBuffer
 pchData
 pchEncodedData
-pchRegPath
 pclose
 pcubDecodedData
 period
@@ -4828,6 +4828,7 @@ pthread_rwlock_unlock
 pthread_rwlock_wrlock
 pthread_self
 pthread_setspecific
+pubValue || !*pcubValue
 public/steam_tray_48
 public_dependency
 punct
@@ -5092,6 +5093,7 @@ sudo -n steamos-update
 sudo -n timedatectl set-timezone
 supplied row stride too small
 surface()->RunFrame()
+svRegPath
 sv_SE
 swahili
 swedish

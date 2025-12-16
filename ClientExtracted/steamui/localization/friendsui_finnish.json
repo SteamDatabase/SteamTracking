@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Sinulla ei ole sivun muokkausoikeutta",
     "Chat_Settings_Permission_Denied_Permissions": "Sinulla on oikeus vain roolin yksityiskohtien katseluun",
     "Chat_Settings_Permission_Denied_Some": "Voit ainoastaan muokata korkeimman määritetyn roolisi alapuolisia rooleja",
+    "Chat_Settings_Permission_DirectMessages": "Salli ryhmän jäsenten lähettää sinulle suoria viestejä",
     "Chat_Settings_Error_Unknown": "Kuvan lataaminen epäonnistui",
     "Chat_Settings_Error_NotLoggedOn": "Ei sisäänkirjautuneena",
     "Chat_Settings_Error_LimitedUser": "Rajoitetut käyttöoikeudet omaava käyttäjä ei voi ladata kuvia",

@@ -76,7 +76,6 @@ AtomID 0x%x
 Attrib_Color
 Attrib_Position
 Attrib_TexCoord
-Au.T
 BOverlayNeedsPresent
 Bad Access flag on shared mem create: %s: %u\n
 CBaseOverlayRenderer
@@ -189,6 +188,7 @@ GLIBC_2.3.2
 GLIBC_2.3.3
 GLIBC_2.3.4
 GLIBC_2.4
+GLIBC_2.9
 GLOVERLAYCOREPROFILE
 GLSL Fragment Shader log:\n
 GLSL Program log:\n
@@ -565,6 +565,7 @@ en_US.UTF-8
 enable
 exec
 execv
+execvp
 f5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 false
 fclose
@@ -768,6 +769,7 @@ opendir
 operator
 operator""
 pid %d != %d, skipping destruction (fork without exec?)\n
+pipe2
 pthread_attr_init
 pthread_attr_setstacksize
 pthread_cancel

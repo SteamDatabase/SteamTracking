@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "페이지를 수정할 수 있는 권한이 없습니다",
     "Chat_Settings_Permission_Denied_Permissions": "역할 정보를 볼 수 있는 권한만 있습니다",
     "Chat_Settings_Permission_Denied_Some": "내게 배정된 최고 역할보다 낮은 역할만 수정할 수 있습니다.",
+    "Chat_Settings_Permission_DirectMessages": "그룹 멤버가 나에게 직접 메시지를 보낼 수 있도록 허용",
     "Chat_Settings_Error_Unknown": "이미지 업로드 실패",
     "Chat_Settings_Error_NotLoggedOn": "로그인이 필요합니다",
     "Chat_Settings_Error_LimitedUser": "제한된 사용자는 이미지를 업로드할 수 없습니다",

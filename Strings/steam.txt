@@ -159,11 +159,9 @@
  with type
 ! !K+hcF&db
 !"Don't poll on UDP sockets dude"
-!"Implement me"
 !"Not implemented"
 !"couldn't read cpu information from /proc/cpuinfo"
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
-!"failed to base64 encode value"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !( m_pHTTPResponseHandler && m_pHTTPStreamingResponseHandler )
 !( pSSLCallback && pKeyCallback )
@@ -1903,14 +1901,16 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
+00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:07:17
-01:07:31
 08bX
 0?0L
 0A/8
@@ -1952,14 +1952,9 @@ $ffn
 10.0.0.0/8
 10.4.252.0/24
 100 127.0.0.1 stale
-172.16
 1000
 1024
-00003333
 10000
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2328,6 +2323,7 @@ $ffn
 16IKeyValuesSystem
 16ITCPHostCallback
 16JobStatsBucket_t
+172.16
 172.16.3.31
 172.16.3.39
 17CBootstrapLogFile
@@ -2353,6 +2349,8 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:19:34
+18:20:41
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -2573,6 +2571,7 @@ $ffn
 3DES
 3DES(168)
 3HLhx
+3UD&
 3Wk1^
 3YH_!
 3\n.k_EMsgAMGetClanDetailsForForumCreationResponse
@@ -5072,7 +5071,7 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec  5 2025
+Dec 16 2025
 December
 Decipher Only
 Deckard
@@ -5968,6 +5967,7 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
+GLIBC_2.9
 GL_RENDERER
 GL_VENDOR
 GL_VERSION
@@ -6154,9 +6154,15 @@ HKCR
 HKCU
 HKDF
 HKEY_CLASSES_ROOT
+HKEY_CLASSES_ROOT (force 32Bit)
+HKEY_CLASSES_ROOT (force 64Bit)
 HKEY_CURRENT_USER
+HKEY_CURRENT_USER (force 32Bit)
+HKEY_CURRENT_USER (force 64Bit)
 HKEY_CURRENT_USER\Software\Valve\Steam\Language
 HKEY_LOCAL_MACHINE
+HKEY_LOCAL_MACHINE (force 32Bit)
+HKEY_LOCAL_MACHINE (force 64Bit)
 HKEY_LOCAL_MACHINE_WOW64_32
 HKEY_LOCAL_MACHINE_WOW64_64
 HKLM
@@ -6365,6 +6371,7 @@ Image too wide for this implementation
 Image width exceeds user limit in IHDR
 Image width is too large for this architecture
 Image width is zero in IHDR
+Implement me
 Import
 Import "
 Improper call to JPEG library in state %d
@@ -8641,6 +8648,9 @@ Sandbox
 Santander Rio
 Saturday
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
+SaveRegistryVDF FAILED\n
+SaveRegistryVDF completed successfully\n
+SaveRegistryVDF\n
 Saving metrics to disk (%s)
 Saving package (%s) failed.
 Saving unknown chunk:
@@ -8779,7 +8789,6 @@ SocketFail
 Sofort
 Software
 Software\Valve\Steam
-Software\Valve\SteamService
 Solo
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
 Someone called ClearWritingMinidump without holding the minidump lock.
@@ -8889,7 +8898,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Dec  5 2025 01:07:31
+Startup - updater built Dec 16 2025 18:20:40
 State
 StaticFileWriterThread()
 Steam
@@ -9502,7 +9511,6 @@ Unexpected failure while serializing option submessage
 Unexpected marker 0x%02x
 Unexpected result from V_SplitString()
 Unexpected sleep reason %d in CJobMgr::BResumeSleepingJobs. Job %s Yield Info %s.  Code is bad.\n
-Unhandled eRegKeyRoot passed into HKeyGet
 Unhandled pending I/O type %d
 Unimplemented type:
 Uninitialized
@@ -12919,6 +12927,7 @@ fNt7
 fP~V
 faccessat
 facsimileTelephoneNumber
+failed to base64 encode value
 failed to correctly set CJob::SetWaitingOnMessageFrom() when waiting for client message %s\n
 failed to create lock
 failed to init async
@@ -13190,7 +13199,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenn
+ggen\n
 givenName
 glBegin
 glBindTexture
@@ -15925,7 +15934,6 @@ m_pReceivedPktFirst->GetSeq() != m_pReceivedPktFirst->PReceivedPktNext()->GetSeq
 m_pRecvState == NULL
 m_pRecvState->m_bufMsg
 m_pRedirectRequestHandle.Get()
-m_pRegistryKV
 m_pRequestCache
 m_pRequestHandle
 m_pResponse.Get()
@@ -16913,7 +16921,7 @@ pItem->GetJobID() == GetJobID()
 pJob
 pJob->GetPauseReason() == k_EJobPauseReasonWaitingForLock
 pJob->m_pWaitingOnLock == pLock
-pJob->m_vecNetPackets.Count()
+pJob->m_vecNetPackets.Count() && pJob->m_vecNetPackets[0] != NULL
 pJobType->m_pCreationMessageInfo == nullptr
 pJobType->m_pNumCurrentJobs == nullptr
 pJobType->m_pchName && *pJobType->m_pchName
@@ -17081,11 +17089,11 @@ pchEncodedData
 pchFileName
 pchHaystack != NULL
 pchInput
+pchKey
 pchMsg
 pchName
 pchNeedle != NULL
 pchOut
-pchRegPath
 pchSteam2ID
 pchTLSServerName == NULL
 pch[cub - 1] != '\0' && pch[cub] == '\0'
@@ -17133,6 +17141,7 @@ pilotObject
 pilotObjectClass
 pilotOrganization
 pilotPerson
+pipe2
 pipeline failure
 pitem_new
 pkInitClientAuth
@@ -17456,6 +17465,7 @@ pubMsgStart >= pubCurrent
 pubPktSend
 pubPlaintextData
 pubSignature
+pubValue || !*pcubValue
 pub_key
 pubkey
 public
@@ -18631,6 +18641,7 @@ supportedAlgorithms
 supportedApplicationContext
 supported_languages
 surname
+svRegPath
 sv_SE
 svcm
 swahili

@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Нямате правомощие да модифицирате тази страница",
     "Chat_Settings_Permission_Denied_Permissions": "Имате правомощие да преглеждате само детайлите за ролите",
     "Chat_Settings_Permission_Denied_Some": "Можете да редактирате само роли под най-високата възложена Ви такава",
+    "Chat_Settings_Permission_DirectMessages": "Позволяване на груповите членове да Ви изпращат директни съобщения",
     "Chat_Settings_Error_Unknown": "Неуспешно качване на изображение",
     "Chat_Settings_Error_NotLoggedOn": "Не сте влезли",
     "Chat_Settings_Error_LimitedUser": "Ограничените потребители не могат да качват изображения",

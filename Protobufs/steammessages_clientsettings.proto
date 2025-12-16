@@ -84,7 +84,6 @@ message CMsgSettingVariant {
 
 message CMsgClientSettings {
 	optional bool no_save_personal_info = 1 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\NoSavePersonalInfo"];
-	optional bool oobe_test_mode_enabled = 2 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\OOBETestModeEnabled"];
 	optional bool in_client_beta = 3 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_pre_login) = true];
 	optional bool is_steam_sideloaded = 4 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_pre_login) = true];
 	optional string preferred_monitor = 5 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "BigPicture/Monitor"];
@@ -235,7 +234,6 @@ message CMsgClientSettings {
 	optional bool gamerecording_force_mic_mono = 18226 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\ForceMicMono", (setting_default_bool) = false];
 	optional bool gamerecording_automatic_gain_control = 18227 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\AutomaticGainControl", (setting_default_bool) = true];
 	optional bool show_timestamps_in_console = 20000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer\\ShowTimestampsInConsole"];
-	optional bool force_oobe = 20001 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE"];
 	optional int32 override_browser_composer_mode = 20002 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool cef_remote_debugging_enabled = 20003 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool force_deck_perf_tab = 20004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/ForceDeckPerfTab"];
@@ -313,4 +311,11 @@ message CMsgClientSettings {
 	optional string remote_play_wifi_ap_hotspot_password = 27006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPHotspotPassword", (setting_default_string) = ""];
 	optional string remote_play_wifi_ap_hotspot_routing = 27007 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPHotspotRouting", (setting_default_string) = "noroute"];
 	optional bool remote_play_wifi_ap_show_advanced = 27008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "streaming_v2/WifiAPShowAdvanced", (setting_default_bool) = false];
+	optional string remote_play_wifi_ap_paired_ssid = 27009 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "streaming_v2\\WifiAPPairedSSID", (setting_default_string) = ""];
+	optional bool oobe_completed = 28001 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_pre_login) = true, (setting_description) = "True if OOBE stage 1 has completed or we're on a platform where we don't do OOBE"];
+	optional bool oobe_test_mode_enabled = 28002 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_pre_login) = true, (setting_readonly) = true, (setting_description) = "OOBE test mode is enabled either by passing -testoobe on the command line or setting the force_oobe client setting"];
+	optional bool force_oobe = 28003 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE", (setting_pre_login) = true];
+	optional bool oobe_stage_2_completed = 28004 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_pre_login) = true, (setting_description) = "True if OOBE stage 2 has completed or we're on a platform where we don't do OOBE"];
+	optional bool oobe_stage_2_test_mode_enabled = 28005 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_pre_login) = true, (setting_readonly) = true, (setting_description) = "OOBE test mode is enabled for stage 2 either by passing -testoobe on the command line or setting the force_stage2_oobe client setting"];
+	optional bool force_stage_2_oobe = 28006 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBEStage2", (setting_pre_login) = true];
 }

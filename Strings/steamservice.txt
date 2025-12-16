@@ -148,12 +148,10 @@
 ! !K+hcF&db
 !"Don't poll on UDP sockets dude"
 !"Emptying callback queue because client didn't process them in a timely manner"
-!"Implement me"
 !"Interface type not found"
 !"Not implemented"
 !"couldn't read cpu information from /proc/cpuinfo"
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
-!"failed to base64 encode value"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 !( m_pHTTPResponseHandler && m_pHTTPStreamingResponseHandler )
 !( pSSLCallback && pKeyCallback )
@@ -1704,7 +1702,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:07:17
 08bX
 0?0L
 0A/8
@@ -2130,6 +2127,7 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:19:34
 18CBaseFrameFunction
 18CFutureSharedStateIbE
 18CHTTPClientRequest
@@ -2379,10 +2377,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-6144
-8000
-8192
-65536
 524288
 52F*
 55Ly
@@ -2405,7 +2399,9 @@ $ffn
 6*Fc7
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
+6144
 64CK\vH
+65536
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2456,6 +2452,8 @@ $ffn
 7~8A
 8.K%G
 8/A0
+8000
+8192
 82\n:XPH
 88n|
 88pH
@@ -3076,12 +3074,10 @@ BF_cbc_encrypt
 BF_decrypt
 BF_encrypt
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
-BGetSubKeys
 BGetValueBin
 BGetValueStr
 BGetValueUint
 BGetValueUint64
-BGetValues
 BHandleTCPMessageData - buffered
 BHandleTCPMessageData - unbuffered
 BIGNUM
@@ -4683,7 +4679,7 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec  5 2025
+Dec 16 2025
 December
 Decipher Only
 Deckard
@@ -5489,6 +5485,7 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
+GLIBC_2.9
 GMapJobTypesByMsg()
 GMapJobTypesByName()
 GMapJobTypesByName().Find( emsg )
@@ -5656,8 +5653,14 @@ HKCR
 HKCU
 HKDF
 HKEY_CLASSES_ROOT
+HKEY_CLASSES_ROOT (force 32Bit)
+HKEY_CLASSES_ROOT (force 64Bit)
 HKEY_CURRENT_USER
+HKEY_CURRENT_USER (force 32Bit)
+HKEY_CURRENT_USER (force 64Bit)
 HKEY_LOCAL_MACHINE
+HKEY_LOCAL_MACHINE (force 32Bit)
+HKEY_LOCAL_MACHINE (force 64Bit)
 HKEY_LOCAL_MACHINE_WOW64_32
 HKEY_LOCAL_MACHINE_WOW64_64
 HKLM
@@ -5927,6 +5930,7 @@ Illegal character (\) in IPC name.
 Illegal jstype for int64, uint64, sint64, fixed64 or sfixed64 field:
 Illegal password
 Illegal termination of worker thread '%s'
+Implement me
 Import
 Import "
 In dispute
@@ -8003,6 +8007,9 @@ Same as previous value
 Santander Rio
 Saturday
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
+SaveRegistryVDF FAILED\n
+SaveRegistryVDF completed successfully\n
+SaveRegistryVDF\n
 SbEwd
 Sberbank
 ScheduledEvent
@@ -8119,7 +8126,6 @@ SocketFail
 Sofort
 Software
 Software\Valve\Steam
-Software\Valve\SteamService
 Solo
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
 Someone called ClearWritingMinidump without holding the minidump lock.
@@ -8249,7 +8255,7 @@ SteamRealPath
 SteamService: file missing %s\n
 SteamService: invalid signature %s\n
 SteamService: parsing failed %s\n
-SteamService: registry key not in white list: %s (%d)\n
+SteamService: registry key not in allowlist: %s (%d)\n
 SteamService_GetIPCServer
 SteamService_Shutdown
 SteamService_StartThread
@@ -8793,7 +8799,6 @@ Unexpected error
 Unexpected failure while serializing option submessage
 Unexpected result from V_SplitString()
 Unexpected sleep reason %d in CJobMgr::BResumeSleepingJobs. Job %s Yield Info %s.  Code is bad.\n
-Unhandled eRegKeyRoot passed into HKeyGet
 Unhandled pending I/O type %d
 Unimplemented function
 Unimplemented type:
@@ -11910,6 +11915,7 @@ excluded subtree violation
 excludedSubtrees
 exec
 execv
+execvp
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 exp master
 expand on static bignum data
@@ -11974,6 +11980,7 @@ fG;P^
 fNt7
 faccessat
 facsimileTelephoneNumber
+failed to base64 encode value
 failed to correctly set CJob::SetWaitingOnMessageFrom() when waiting for client message %s\n
 failed to create lock
 failed to init async
@@ -12215,7 +12222,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenn-
+ggen
 givenName
 global constructors keyed to
 global destructors keyed to
@@ -14566,6 +14573,7 @@ mC4\n
 mK1f
 mXRecord
 mZzW\v
+m_AllowList
 m_AssocHandles
 m_AssocHandles.IsValidIndex( nAssocIdx )
 m_BaseIP.GetType() == k_EIPTypeV4
@@ -14639,7 +14647,6 @@ m_Tree
 m_VecCoroutineStack
 m_VecCoroutineStack.Count() > 1
 m_VecPFrameFunction[iFrameType]
-m_WhiteList
 m_WorkThreadPool
 m_WorkThreads
 m_WorkThreads.Count() == 0 && m_cThreadsRunning == (uint32) 0
@@ -14819,7 +14826,6 @@ m_pReceivedPktFirst->GetSeq() != m_pReceivedPktFirst->PReceivedPktNext()->GetSeq
 m_pRecvState == NULL
 m_pRecvState->m_bufMsg
 m_pRedirectRequestHandle.Get()
-m_pRegistryKV
 m_pRequestCache
 m_pRequestHandle
 m_pResponse.Get()
@@ -15908,7 +15914,7 @@ pItem->GetJobID() == GetJobID()
 pJob
 pJob->GetPauseReason() == k_EJobPauseReasonWaitingForLock
 pJob->m_pWaitingOnLock == pLock
-pJob->m_vecNetPackets.Count()
+pJob->m_vecNetPackets.Count() && pJob->m_vecNetPackets[0] != NULL
 pJobType->m_pCreationMessageInfo == nullptr
 pJobType->m_pNumCurrentJobs == nullptr
 pJobType->m_pchName && *pJobType->m_pchName
@@ -16066,11 +16072,11 @@ pchEncodedData
 pchFileName
 pchHaystack != NULL
 pchInput
+pchKey
 pchMsg
 pchName
 pchNeedle != NULL
 pchOut
-pchRegPath
 pchSteam2ID
 pchTLSServerName == NULL
 pch[cub - 1] != '\0' && pch[cub] == '\0'
@@ -16114,6 +16120,7 @@ pilotObject
 pilotObjectClass
 pilotOrganization
 pilotPerson
+pipe2
 pipeline failure
 pitem_new
 pkInitClientAuth
@@ -16393,6 +16400,7 @@ pubParam != NULL
 pubPktSend
 pubPlaintextData
 pubSignature
+pubValue || !*pcubValue
 pub_key
 pubkey
 public
@@ -17512,6 +17520,7 @@ supportedAlgorithms
 supportedApplicationContext
 supported_languages
 surname
+svRegPath
 sv_SE
 svcm
 swahili

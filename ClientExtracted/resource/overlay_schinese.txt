@@ -38,7 +38,7 @@
 "Steam_Settings_Library_LowBandwidth_Title" "低带宽模式"
 "Steam_Settings_Library_LowBandwidth_Desc" "禁用社区内容自动载入功能等以减少带宽使用"
 "Steam_Settings_Library_LowPerf_Title" "低性能模式"
-"Steam_Settings_Library_LowPerf_Desc" "禁用某些图像优化和转换以改善库性能"
+"Steam_Settings_Library_LowPerf_Desc" "禁用某些图像优化和过渡以改善库性能"
 "Steam_Settings_Library_DisableCommunityContent_Title" "禁用社区内容"
 "Steam_Settings_Library_DisableCommunityContent_Desc" "防止在查看游戏详情时自动载入社区内容。"
 "Steam_Settings_Library_DisableCommunityContent_Disabled_Desc" "由低带宽模式启用。\n\n防止在查看游戏详情时自动载入社区内容。"

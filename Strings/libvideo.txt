@@ -1003,7 +1003,6 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
-(1ZT
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -1707,21 +1706,15 @@ $ffn
 0 Umv
 0.15
 0.8.3
-00:00:00
-01/01/00
-1000
-1024
-1536
-10000
-15000
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:07:17
 08bX
 0?0L
 0A/8
@@ -1761,6 +1754,9 @@ $ffn
 10.0.0.0/8
 10.4.252.0/24
 100 127.0.0.1 stale
+1000
+1024
+10000
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2097,6 +2093,8 @@ $ffn
 14ISSLConnection
 14IVideoYUVFrame
 14VideoSegment_t
+1536
+15000
 15CAudioResampler
 15CEC25519KeyBase
 15CJobPromiseBase
@@ -2145,6 +2143,7 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:19:34
 18CAVFrameYUVWrapper
 18CAlignedBufferBase
 18CBaseFrameFunction
@@ -2469,6 +2468,7 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
+9Hh0
 9IGv
 9IMemAlloc
 9PE,$
@@ -4795,7 +4795,7 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec  5 2025
+Dec 16 2025
 December
 Decipher Only
 Deckard
@@ -5643,6 +5643,7 @@ GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
 GLIBC_2.8
+GLIBC_2.9
 GMapJobTypesByMsg()
 GMapJobTypesByName()
 GMapJobTypesByName().Find( emsg )
@@ -5835,8 +5836,14 @@ HIST_count_wksp
 HIST_isError
 HKDF
 HKEY_CLASSES_ROOT
+HKEY_CLASSES_ROOT (force 32Bit)
+HKEY_CLASSES_ROOT (force 64Bit)
 HKEY_CURRENT_USER
+HKEY_CURRENT_USER (force 32Bit)
+HKEY_CURRENT_USER (force 64Bit)
 HKEY_LOCAL_MACHINE
+HKEY_LOCAL_MACHINE (force 32Bit)
+HKEY_LOCAL_MACHINE (force 64Bit)
 HMAC
 HMAC DSTU Gost 34311-95
 HMAC GOST 34.11-2012 256 bit
@@ -8007,7 +8014,6 @@ RankedByVotesUp
 Rapipago
 Rate Limit Exceeded
 Raw stream mode only supported for TCP connections
-Rb#HC
 Rbg.E
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
@@ -12708,6 +12714,7 @@ excluded subtree violation
 excludedSubtrees
 exec
 execv
+execvp
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 exp master
 expand on static bignum data
@@ -16793,7 +16800,7 @@ pItem->GetJobID() == GetJobID()
 pJob
 pJob->GetPauseReason() == k_EJobPauseReasonWaitingForLock
 pJob->m_pWaitingOnLock == pLock
-pJob->m_vecNetPackets.Count()
+pJob->m_vecNetPackets.Count() && pJob->m_vecNetPackets[0] != NULL
 pJobType->m_pCreationMessageInfo == nullptr
 pJobType->m_pNumCurrentJobs == nullptr
 pJobType->m_pchName && *pJobType->m_pchName
@@ -17009,6 +17016,7 @@ pilotObject
 pilotObjectClass
 pilotOrganization
 pilotPerson
+pipe2
 pipeline failure
 pitem_new
 pix_fmts

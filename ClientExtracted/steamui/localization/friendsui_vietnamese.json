@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Bạn không có quyền sửa đổi trang này",
     "Chat_Settings_Permission_Denied_Permissions": "Bạn chỉ có quyền xem chi tiết các vai trò",
     "Chat_Settings_Permission_Denied_Some": "Bạn chỉ có thể sửa vai trò dưới quyền cao nhất mình có",
+    "Chat_Settings_Permission_DirectMessages": "Cho phép thành viên trong nhóm gửi tin nhắn trực tiếp tới bạn",
     "Chat_Settings_Error_Unknown": "Tải ảnh lên thất bại",
     "Chat_Settings_Error_NotLoggedOn": "Chưa đăng nhập",
     "Chat_Settings_Error_LimitedUser": "Người dùng bị giới hạn không thể tải ảnh lên",

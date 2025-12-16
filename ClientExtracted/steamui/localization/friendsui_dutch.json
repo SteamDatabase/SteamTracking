@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Je hebt geen toestemming om deze pagina te wijzigen",
     "Chat_Settings_Permission_Denied_Permissions": "Je hebt alleen toestemming om roldetails te bekijken",
     "Chat_Settings_Permission_Denied_Some": "Je kunt alleen rollen lager dan je hoogst toegewezen rol bewerken",
+    "Chat_Settings_Permission_DirectMessages": "Groepsleden toestaan om je berichten te sturen",
     "Chat_Settings_Error_Unknown": "Afbeelding uploaden mislukt",
     "Chat_Settings_Error_NotLoggedOn": "Niet ingelogd",
     "Chat_Settings_Error_LimitedUser": "Beperkte gebruikers kunnen geen afbeeldingen uploaden",

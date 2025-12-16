@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "ΔΕΝ ΕΧΕΤΕ ΔΙΚΑΙΩΜΑ ΝΑ ΤΡΟΠΟΠΟΙΗΣΕΤΕ ΑΥΤΗ ΤΗ ΣΕΛΙΔΑ",
     "Chat_Settings_Permission_Denied_Permissions": "Έχετε δικαίωμα μόνο να δείτε τις πληροφορίες ρόλων",
     "Chat_Settings_Permission_Denied_Some": "Μπορείτε να επεξεργαστείτε μόνο ρόλους κάτω από τον υψηλότερο ρόλο σας",
+    "Chat_Settings_Permission_DirectMessages": "Να επιτρέπεται σε μέλη ομάδας να σας στέλνουν άμεσα μηνύματα",
     "Chat_Settings_Error_Unknown": "Αποτυχία μεταφόρτωσης εικόνας",
     "Chat_Settings_Error_NotLoggedOn": "Δεν έχετε συνδεθεί",
     "Chat_Settings_Error_LimitedUser": "Οι περιορισμένοι χρήστες δεν μπορούν να μεταφορτώσουν εικόνες",

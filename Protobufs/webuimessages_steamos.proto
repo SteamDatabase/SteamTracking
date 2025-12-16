@@ -81,6 +81,12 @@ message CSteamOSManager_FactoryReset_Request {
 message CSteamOSManager_FactoryReset_Response {
 }
 
+message CSteamOSManager_RefreshScreenReaderAutoLocale_Request {
+}
+
+message CSteamOSManager_RefreshScreenReaderAutoLocale_Response {
+}
+
 message CSteamOSSLSPlugin {
 	optional .ESLSHelper etype = 1 [default = k_ESLSHelper_Invalid];
 	optional bool is_available = 2;
@@ -126,6 +132,7 @@ service SteamOSManager {
 	rpc OptOutOfSideloadedClient (.CSteamOSManager_OptOutOfSideloadedClient_Request) returns (.CSteamOSManager_OptOutOfSideloadedClient_Response);
 	rpc ApplyMandatoryUpdate (.CSteamOSManager_ApplyMandatoryUpdate_Request) returns (.CSteamOSManager_ApplyMandatoryUpdate_Response);
 	rpc FactoryReset (.CSteamOSManager_FactoryReset_Request) returns (.CSteamOSManager_FactoryReset_Response);
+	rpc RefreshScreenReaderAutoLocale (.CSteamOSManager_RefreshScreenReaderAutoLocale_Request) returns (.CSteamOSManager_RefreshScreenReaderAutoLocale_Response);
 }
 
 service SteamOSSLS {

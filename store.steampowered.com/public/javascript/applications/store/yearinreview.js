@@ -18110,7 +18110,8 @@
       function Ir(e) {
         const { appid: t, bBlurContent: a, nYear: r } = e,
           n = K(t),
-          [i, l] = (0, dr.XC)();
+          [i, l] = (0, dr.XC)(),
+          o = f();
         return n && 0 != n.length
           ? s.createElement(
               "div",
@@ -18121,7 +18122,7 @@
               s.createElement(
                 "div",
                 { className: Cr.ScreenshotHeader },
-                (0, p.we)("#YIR_ScreenshotsThisYear"),
+                o("#YIR_ScreenshotsThisYear"),
               ),
               s.createElement(
                 "div",
@@ -19078,6 +19079,7 @@
         );
       }
       function Vr(e) {
+        const { year: t } = e;
         return s.createElement(
           "div",
           {
@@ -19105,7 +19107,7 @@
               s.createElement(
                 "div",
                 { className: he().Answer },
-                (0, p.we)("#YIR_FAQ_Dates_A", e.year),
+                (0, p.we)("#YIR_FAQ_Dates_A", t),
               ),
             ),
             s.createElement(
@@ -19191,20 +19193,35 @@
                 (0, p.we)("#YIR_FAQ_Controller_A2"),
               ),
             ),
-            s.createElement(
-              "div",
-              { className: he().QuestionCtn },
-              s.createElement(
-                "div",
-                { className: he().Question },
-                (0, p.we)("#YIR_FAQ_PrivateApps_Q"),
-              ),
-              s.createElement(
-                "div",
-                { className: he().Answer },
-                (0, p.we)("#YIR_FAQ_PrivateApps_A", e.year),
-              ),
-            ),
+            2022 == t
+              ? s.createElement(
+                  "div",
+                  { className: he().QuestionCtn },
+                  s.createElement(
+                    "div",
+                    { className: he().Question },
+                    (0, p.we)("#YIR_FAQ_PrivateApps_Q"),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: he().Answer },
+                    (0, p.we)("#YIR_FAQ_PrivateApps_A", t),
+                  ),
+                )
+              : s.createElement(
+                  "div",
+                  { className: he().QuestionCtn },
+                  s.createElement(
+                    "div",
+                    { className: he().Question },
+                    (0, p.we)("#YIR_FAQ_PrivateApps_v2_Q"),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: he().Answer },
+                    (0, p.we)("#YIR_FAQ_PrivateApps_v2_A", t),
+                  ),
+                ),
           ),
         );
       }

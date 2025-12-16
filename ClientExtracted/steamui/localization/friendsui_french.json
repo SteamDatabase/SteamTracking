@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Vous n'avez pas la permission de modifier cette page",
     "Chat_Settings_Permission_Denied_Permissions": "Vous ne pouvez voir que les détails des rôles",
     "Chat_Settings_Permission_Denied_Some": "Vous ne pouvez modifier que les rôles de rang inférieur à votre rôle le plus haut",
+    "Chat_Settings_Permission_DirectMessages": "Autoriser les membres du groupe à vous envoyer des messages directs",
     "Chat_Settings_Error_Unknown": "Échec de la mise en ligne de l'image",
     "Chat_Settings_Error_NotLoggedOn": "Non connecté(e)",
     "Chat_Settings_Error_LimitedUser": "Les comptes limités ne peuvent pas mettre en ligne d'images",

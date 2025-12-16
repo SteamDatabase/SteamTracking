@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Du har inte behörighet att ändra denna sida",
     "Chat_Settings_Permission_Denied_Permissions": "Du har endast behörighet att se rolldetaljer",
     "Chat_Settings_Permission_Denied_Some": "Du kan endast redigera roller som står lägre än den högsta som tilldelats dig",
+    "Chat_Settings_Permission_DirectMessages": "Låt gruppmedlemmar skicka direktmeddelanden till dig",
     "Chat_Settings_Error_Unknown": "Kunde inte ladda upp bilden",
     "Chat_Settings_Error_NotLoggedOn": "Ej inloggad",
     "Chat_Settings_Error_LimitedUser": "Begränsade användare kan inte ladda upp bilder",

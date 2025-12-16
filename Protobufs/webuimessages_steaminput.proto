@@ -130,6 +130,19 @@ message CSteamInputService_GyroSoftwareCalibration_Request {
 message CSteamInputService_GyroSoftwareCalibration_Response {
 }
 
+message CSteamInputService_PairDongleTritonUSB_Request {
+	optional uint32 controller_index = 1;
+	optional uint32 dongle_index = 2;
+	optional uint32 slot = 3;
+}
+
+message CSteamInputService_PairDongleTritonUSB_Response {
+}
+
+message CSteamInputService_UnpairedTritonPluggedIn_Notification {
+	optional uint32 controller_index = 1;
+}
+
 message CControllerOriginKey {
 	optional int32 controller_type = 1;
 	optional int32 controller_style = 2;
@@ -163,9 +176,11 @@ service SteamInputManager {
 	rpc NotifyGyroAccelerometerStateChanged (.CSteamInputService_GyroAccelerometerChanged_Notification) returns (.WebUINoResponse);
 	rpc NotifyGyroCalibrationStateChanged (.CSteamInputService_GyroCalibration_Notification) returns (.WebUINoResponse);
 	rpc NotifyControllerPowerMenu (.CSteamInputService_ControllerPowerMenu_Notification) returns (.WebUINoResponse);
+	rpc NotifyUnpairedTritonPluggedIn (.CSteamInputService_UnpairedTritonPluggedIn_Notification) returns (.WebUINoResponse);
 	rpc StartControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
 	rpc EndControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
 	rpc GetControllerAccessibilityStrings (.CSteamInputService_ControllerAccessibilityStrings_Request) returns (.CSteamInputService_ControllerAccessibilityStrings_Response);
 	rpc StartGyroSoftwareCalibration (.CSteamInputService_GyroSoftwareCalibration_Request) returns (.CSteamInputService_GyroSoftwareCalibration_Response);
 	rpc CancelGyroSoftwareCalibration (.CSteamInputService_GyroSoftwareCalibration_Request) returns (.CSteamInputService_GyroSoftwareCalibration_Response);
+	rpc PairDongleTritonUSB (.CSteamInputService_PairDongleTritonUSB_Request) returns (.CSteamInputService_PairDongleTritonUSB_Response);
 }

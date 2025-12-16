@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "このページを変更する権限がありません",
     "Chat_Settings_Permission_Denied_Permissions": "役割の詳細を表示する権限しかありません",
     "Chat_Settings_Permission_Denied_Some": "割り当てられた役割より下位の役割のみを編集できます。",
+    "Chat_Settings_Permission_DirectMessages": "グループメンバーによるダイレクトメッセージの送信を許可する",
     "Chat_Settings_Error_Unknown": "画像のアップロードに失敗しました",
     "Chat_Settings_Error_NotLoggedOn": "ログインしていません",
     "Chat_Settings_Error_LimitedUser": "リミテッドユーザーは画像をアップロードできません。",

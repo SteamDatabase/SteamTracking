@@ -1983,6 +1983,13 @@ enum eState
 	eStateError = 3;
 }
 
+enum ESteam
+{
+	k_ESteamOSGeneric = 0;
+	k_ESteamMachine = 1;
+	k_ESteamFrame = 2;
+}
+
 enum ESteamHWCompatibility
 {
 	k_ESteamHWCompatibility_None = 0;
@@ -3256,17 +3263,6 @@ enum UnnamedEnum25bb92eddba41afe
 	Preprocessing = 2;
 	Keras = 3;
 	Train = 4;
-}
-
-enum UnnamedEnum264a8e743f04edb5
-{
-	PlugInInputScreen = 1;
-	LanguageScreen = 2;
-	TimezoneScreen = 3;
-	NetworkSetupScreen = 4;
-	UpdateScreen = 5;
-	Complete = 6;
-	ScreenReaderConfirmScreen = 7;
 }
 
 enum UnnamedEnum26b26332fa565251

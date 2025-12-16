@@ -399,6 +399,7 @@ div.ModalPosition_TopBar {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  gap: 14px;
 }
 .DesktopUI .DialogFooter button.DialogButton {
   padding: 0 12px;

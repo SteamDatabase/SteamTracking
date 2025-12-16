@@ -27,6 +27,16 @@
 			}
 			"button_x"
 			{
+				"activators"
+				{
+					"full_press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action sr_stop_talk"
+						}
+					}
+				}
 			}
 			"button_a"
 			{
@@ -36,7 +46,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action sr_stop_talk"
+							"binding"		"controller_action system_key_1"
 						}
 					}
 				}

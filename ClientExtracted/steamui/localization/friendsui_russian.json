@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "У вас нет прав для изменения этой страницы",
     "Chat_Settings_Permission_Denied_Permissions": "Вы можете только просматривать роли",
     "Chat_Settings_Permission_Denied_Some": "Вы можете изменять только роли ниже ваших по статусу",
+    "Chat_Settings_Permission_DirectMessages": "Разрешить участникам группы отправлять вам личные сообщения",
     "Chat_Settings_Error_Unknown": "Не удалось отправить изображение",
     "Chat_Settings_Error_NotLoggedOn": "Вы не вошли в аккаунт",
     "Chat_Settings_Error_LimitedUser": "Пользователи с ограниченными аккаунтами не могут загружать изображения",

@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Ви не маєте дозволу змінювати цю сторінку",
     "Chat_Settings_Permission_Denied_Permissions": "Ви маєте дозвіл лише на перегляд інформації про ролі",
     "Chat_Settings_Permission_Denied_Some": "Ви можете змінювати лише нижчі за вашу ролі",
+    "Chat_Settings_Permission_DirectMessages": "Дозволити членам групи надсилати вам особисті повідомлення",
     "Chat_Settings_Error_Unknown": "Не вдалося вивантажити зображення",
     "Chat_Settings_Error_NotLoggedOn": "Ви не увійшли",
     "Chat_Settings_Error_LimitedUser": "Обмежені користувачі не можуть вивантажувати зображення",

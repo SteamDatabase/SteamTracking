@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Du har ikke tillatelse til å endre denne siden",
     "Chat_Settings_Permission_Denied_Permissions": "Du har kun tillatelse til å se rolledetaljene",
     "Chat_Settings_Permission_Denied_Some": "Du kan kun redigere roller under din høyeste rolle",
+    "Chat_Settings_Permission_DirectMessages": "Tillat gruppemedlemmer å sende deg direktemeldinger",
     "Chat_Settings_Error_Unknown": "Bildet kunne ikke lastes opp",
     "Chat_Settings_Error_NotLoggedOn": "Ikke logget på",
     "Chat_Settings_Error_LimitedUser": "Begrensede brukere kan ikke laste opp bilder",

@@ -778,6 +778,9 @@ message CChatRoom_ResolveReport_Request {
 	optional uint64 subject_id = 2;
 	optional .EContentReportResolution resolution = 3 [default = k_EContentReportResolution_Unresolved];
 	optional .EContentReportReason reason = 4 [default = k_EContentReportReason_Invalid];
+	optional .EContentReportSubjectType subject_type = 5 [default = k_EContentReportSubjectType_Invalid];
+	optional uint64 chat_group_id = 6;
+	optional uint32 kick_expiration_time = 7;
 }
 
 message CChatRoom_ResolveReport_Response {

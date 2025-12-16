@@ -530,6 +530,7 @@ $\n k_SystemAudioPortDirection_Input
 ,\n(k_EContentReportReason_AttemptedScamming
 ,\n(k_EContentReportReason_CSAMSexualContent
 ,\n(k_EContentReportReason_InauthenticReview
+,\n(k_EContentReportResolution_RemoveAndKick
 ,\n(k_EContentReportResolution_RemoveAndWarn
 ,\n(k_EContentReportSubjectAction_Sanctioned
 ,\n(k_EContentReportSubjectAction_Unresolved
@@ -688,6 +689,7 @@ $\n k_SystemAudioPortDirection_Input
 -steamdeckdisplaynosizescale
 -steamframe
 -steamid=%llu
+-steammachinedisplay
 -steamos3
 -steampath=%s
 -steampid=%u
@@ -695,6 +697,7 @@ $\n k_SystemAudioPortDirection_Input
 -steamuniverse=Dev
 -steamuniverse=Internal
 -steamuniverse=Public
+-testoobe
 -toggle-overlay-html-mode
 -uimode=%d
 -use_xcomposite_workaround
@@ -1031,6 +1034,7 @@ $\n k_SystemAudioPortDirection_Input
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
 1\n-k_EContentReportReason_QuotesModeratedContent
+1\n-k_EContentReportSubjectAction_PrivateMessaged
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
 1\n-k_EPublishedFileInappropriateProvider_Invalid
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
@@ -1136,6 +1140,7 @@ $\n k_SystemAudioPortDirection_Input
 35CMsgZoomToElementAtPositionResponse
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
+3\n/k_EContentReportReason_CredibleThreatOfViolence
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
 3pay
 41CMsgBrowserViewPostMessageToParentRequest
@@ -2538,8 +2543,14 @@ Guides
 Gujarati
 HEAD
 HKEY_CLASSES_ROOT
+HKEY_CLASSES_ROOT (force 32Bit)
+HKEY_CLASSES_ROOT (force 64Bit)
 HKEY_CURRENT_USER
+HKEY_CURRENT_USER (force 32Bit)
+HKEY_CURRENT_USER (force 64Bit)
 HKEY_LOCAL_MACHINE
+HKEY_LOCAL_MACHINE (force 32Bit)
+HKEY_LOCAL_MACHINE (force 64Bit)
 HOME
 HTMLController Commands
 HTML_MSG_FUNC eHTMLCommands_AckPIDShuttingDown
@@ -3250,6 +3261,7 @@ Plat_IsInDebugSession
 Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamFrame_DoNotUse
 Plat_IsSteamOS3
+Plat_IsSteamOS3FactoryImage
 Plat_MSTime
 Plat_OutputDebugString
 Plat_RelativeTicks
@@ -5196,6 +5208,7 @@ k_ESplitScalingScaler_Stretch
 k_EStartupMovieVariant_DeckBlue
 k_EStartupMovieVariant_Generic
 k_EStartupMovieVariant_Invalid
+k_EStartupMovieVariant_Machine
 k_EStorageBlockContentType_Raid
 k_EStorageDriveMediaType_HDD
 k_EStorageDriveMediaType_SSD

@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Nu ai permisiunea de a modifica această pagină",
     "Chat_Settings_Permission_Denied_Permissions": "Ai doar permisiunea pentru a vedea detaliile rolurilor",
     "Chat_Settings_Permission_Denied_Some": "Poți edita doar rolurile care se află sub cel mai important rol al tău",
+    "Chat_Settings_Permission_DirectMessages": "Permite membrilor grupului să îți trimită mesaje directe",
     "Chat_Settings_Error_Unknown": "Încărcarea imaginii a eșuat",
     "Chat_Settings_Error_NotLoggedOn": "Neconectat",
     "Chat_Settings_Error_LimitedUser": "Utilizatorii limitați nu pot încărca imagini",

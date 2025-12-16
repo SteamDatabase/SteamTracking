@@ -2,41 +2,59 @@
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
   [3714],
   {
-    58616: (e, t, n) => {
-      n.r(t), n.d(t, { default: () => k });
-      var o = n(74315),
+    61855: (e, t, n) => {
+      n.r(t), n.d(t, { default: () => h });
+      var o = n(89748),
         u = n(35560),
-        c = n(46422),
-        r = n(10501),
+        r = n(46422),
+        c = n(10501),
         s = n(63696),
         a = n(98606),
         l = n(91435),
         i = n(50341),
-        d = n(83857),
-        m = n(42318);
-      const w = s.memo(function (e) {
-        return s.createElement(
-          m.wC,
-          null,
-          s.createElement(d.L, null),
-          s.createElement(i.BV, null),
+        m = n(45967),
+        d = n(35194),
+        w = n(90095);
+      const f = s.memo(function () {
+        const e = (0, d.Eb)(),
+          t = (0, w.q3)(() => m.qL.IsSteamVRRunning);
+        return (
+          s.useEffect(() => {
+            t &&
+              SteamClient?.OpenVR?.PathProperties?.SetBoolPathProperty(
+                "/steam/oobe",
+                e,
+              );
+          }, [e, t]),
+          null
         );
       });
-      var f = n(29971),
-        v = n(87913),
-        E = n(59578),
-        p = n(7528),
-        b = n(11131);
-      const g = new (n(83599).wd)("ReactQuery").Debug;
-      function F() {
+      var E = n(83857),
+        p = n(42318);
+      const v = s.memo(function (e) {
+        return s.createElement(
+          p.wC,
+          null,
+          s.createElement(E.L, null),
+          s.createElement(i.BV, null),
+          s.createElement(f, null),
+        );
+      });
+      var b = n(29971),
+        g = n(87913),
+        F = n(59578),
+        P = n(7528),
+        T = n(11131);
+      const k = new (n(83599).wd)("ReactQuery").Debug;
+      function C() {
         const [e] = s.useState(() => ({
           focusedPopup: void 0,
           timeoutFocusTransfer: void 0,
         }));
         s.useEffect(
           () => (
-            g(`focusManager isVisible: ${p.m.isFocused()}`),
-            p.m.subscribe((e) => g(`focusManager isVisible: ${e}`))
+            k(`focusManager isVisible: ${P.m.isFocused()}`),
+            P.m.subscribe((e) => k(`focusManager isVisible: ${e}`))
           ),
           [],
         );
@@ -48,14 +66,14 @@
                   (window.clearTimeout(e.timeoutFocusTransfer),
                   (e.timeoutFocusTransfer = void 0)),
                   (e.focusedPopup = t),
-                  p.m.setFocused(!0);
+                  P.m.setFocused(!0);
               },
               u = () => {
                 e.focusedPopup == t &&
                   ((e.focusedPopup = void 0),
                   (e.timeoutFocusTransfer = window.setTimeout(() => {
                     console.assert(!e.focusedPopup),
-                      e.focusedPopup || p.m.setFocused(!1);
+                      e.focusedPopup || P.m.setFocused(!1);
                   }, 50)));
               };
             return (
@@ -65,17 +83,17 @@
               () => {
                 t.window.removeEventListener("focus", o),
                   t.window.removeEventListener("blur", u),
-                  p.m.setFocused(!1);
+                  P.m.setFocused(!1);
               }
             );
           },
           [e],
         );
-        (0, b.VR)(t);
+        (0, T.VR)(t);
       }
-      const T = s.memo(function () {
-        return (0, v.u$)()
-          ? s.createElement(m.tH, null, s.createElement(f._V, null))
+      const V = s.memo(function () {
+        return (0, g.u$)()
+          ? s.createElement(p.tH, null, s.createElement(b._V, null))
           : null;
       });
       (0, n(89193).jK)({ enforceActions: "never" }),
@@ -90,29 +108,29 @@
           let e = (0, o.KC)();
           await e.Init(window.cm);
         })();
-      const k = function (e) {
+      const h = function (e) {
         const t = (0, o.gK)();
         return (
-          F(),
+          C(),
           s.createElement(
             s.Fragment,
             null,
             s.createElement(
               l.EO,
               { bOnlyPopups: !0 },
-              s.createElement(w, null),
+              s.createElement(v, null),
               t &&
                 s.createElement(
                   u.VQ,
-                  { controller: c.oy.NavigationManager },
+                  { controller: r.oy.NavigationManager },
                   s.createElement(
                     a.p,
                     null,
                     s.createElement(
-                      E.QA,
+                      F.QA,
                       { eAdultOnlyMediaBehavior: "allowed" },
-                      s.createElement(r.u, { cm: e.cm }),
-                      s.createElement(T, null),
+                      s.createElement(c.u, { cm: e.cm }),
+                      s.createElement(V, null),
                     ),
                   ),
                 ),

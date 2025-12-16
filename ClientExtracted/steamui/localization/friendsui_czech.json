@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Nemáte oprávnění upravovat tuto stránku",
     "Chat_Settings_Permission_Denied_Permissions": "Máte oprávnění pouze vidět role a jejich podrobnosti",
     "Chat_Settings_Permission_Denied_Some": "Můžete upravovat pouze role, které jsou pod Vaší nejvyšší rolí",
+    "Chat_Settings_Permission_DirectMessages": "Povolit členům místnosti posílat Vám přímé zprávy",
     "Chat_Settings_Error_Unknown": "Nepodařilo se nahrát obrázek",
     "Chat_Settings_Error_NotLoggedOn": "Nejste přihlášeni",
     "Chat_Settings_Error_LimitedUser": "Omezení uživatelé nemohou nahrávat obrázky",

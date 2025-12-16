@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Non hai i permessi per modificare questa pagina",
     "Chat_Settings_Permission_Denied_Permissions": "Hai solo i permessi per visualizzare i dettagli dei ruoli",
     "Chat_Settings_Permission_Denied_Some": "Puoi modificare solo i ruoli di livello inferiore a quello più alto a te assegnato",
+    "Chat_Settings_Permission_DirectMessages": "Consenti ai membri del gruppo di inviarti messaggi diretti",
     "Chat_Settings_Error_Unknown": "Impossibile caricare l'immagine",
     "Chat_Settings_Error_NotLoggedOn": "Non connesso",
     "Chat_Settings_Error_LimitedUser": "Gli utenti limitati non possono inviare immagini",

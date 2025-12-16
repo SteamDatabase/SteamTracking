@@ -134,6 +134,7 @@ enum EStartupMovieVariant {
 	k_EStartupMovieVariant_Generic = 1;
 	k_EStartupMovieVariant_DeckBlue = 2;
 	k_EStartupMovieVariant_DeckOrange = 3;
+	k_EStartupMovieVariant_Machine = 4;
 }
 
 enum EColorGamutLabelSet {
@@ -710,7 +711,8 @@ enum EContentReportResolution {
 	k_EContentReportResolution_CountryRestrictionsChanged = 10;
 	k_EContentReportResolution_RemoveAndWarn = 11;
 	k_EContentReportResolution_RemoveAndBan = 12;
-	k_EContentReportResolution_MAX = 13;
+	k_EContentReportResolution_RemoveAndKick = 13;
+	k_EContentReportResolution_MAX = 14;
 }
 
 enum EContentReportSubjectAction {
@@ -736,6 +738,7 @@ enum EContentReportSubjectAction {
 	k_EContentReportSubjectAction_EscalatedForTerrorism = 19;
 	k_EContentReportSubjectAction_Claimed = 20;
 	k_EContentReportSubjectAction_Released = 21;
+	k_EContentReportSubjectAction_PrivateMessaged = 22;
 }
 
 enum EContentReportReason {
@@ -802,7 +805,8 @@ enum EContentReportReason {
 	k_EContentReportReason_FakedNonConsensualMaterial = 60;
 	k_EContentReportReason_NegativeEffectonDiscourseOrElections = 61;
 	k_EContentReportReason_QuotesModeratedContent = 62;
-	k_EContentReportReason_MAX = 63;
+	k_EContentReportReason_CredibleThreatOfViolence = 63;
+	k_EContentReportReason_MAX = 64;
 }
 
 enum EResolutionAutomation {

@@ -1278,16 +1278,16 @@
 "Steam_HardwarePromo_SupportURL" "https://support.steampowered.com/kb/2734-UDFX-1098/"
 
 "Steam_Subscription_HardwarePromo_AlreadyPurchased_Headline" "已有产品"
-"Steam_Subscription_HardwarePromo_AlreadyPurchased" "该 Steam 帐户已拥有此特惠中包含的产品。\n请访问您的库进行使用。"
+"Steam_Subscription_HardwarePromo_AlreadyPurchased" "此 Steam 帐户已拥有此特惠中包含的产品。\n请访问您的库以便使用。"
 
 
-"Steam_PurchaseError_HardwarePromoNeedDirectX" "抱歉！ 我们要求安装 DirectX 9 或更高版本才能验证 %subscription% 特惠的合格要求。"
+"Steam_PurchaseError_HardwarePromoNeedDirectX" "抱歉！我们要求安装 DirectX 9 或更高版本才能验证 %subscription% 特惠的资格要求。"
 "Steam_HardwarePromoInstallDirextX_Link" "Microsoft DirectX® 下载站点"
 "Steam_HardwarePromoInstallDirextX_URL" "http://www.microsoft.com/windows/directx/"
 
 "Steam_SubscriptionSuccess_HardwarePromo_Headline" "注册成功"
 "Steam_SubscriptionSuccess_HardwarePromo" "您对 %subscription% 特惠的兑换已成功完成。您的订阅被登记至以下 Steam 帐户：%accountname%。今后，您必须登录此帐户才能访问您的游戏。"
-"Steam_SubscriptionSuccess_HardwarePromo2" "只要登录 '%accountname%' 帐户，您就可以从其它任意计算机上访问包含在此特惠中的游戏。"
+"Steam_SubscriptionSuccess_HardwarePromo2" "只要登录 Steam 帐户“%accountname%”，您就可以从其他任意计算机上访问包含在此特惠中的游戏。"
 
 "Steam_PreorderCancelled_Headline" "预订被取消"
 "Steam_PreorderCancelled" "应您的要求，您通过 Steam 对 %subscription% 的预购已取消。您的帐户将不会被扣款。"
@@ -1343,7 +1343,7 @@
 
 "SteamUI_GamesDialog_JustReleased"	"最新发行"
 
-"Steam_PurchaseInfo"			"本游戏包包含下列项目。"
+"Steam_PurchaseInfo"			"此优惠包含下列项目。"
 "Steam_PurchaseInfo_Preorder"		"您正在预订此礼包；在礼包官方发布可供玩家游戏之前，不会向您收取费用。"
 
 "Steam_InstallGameInfo"			"即将开始安装 %game%。\n"
@@ -1513,7 +1513,7 @@
 "SteamUI_ThrottleApplyChange"			"应用"
 "Steam_AutoUpdateTimeRestrictionLabel"	"仅在以下时段自动更新游戏："
 "Steam_AutoUpdateTimeRestrictionEnd"		"至"
-"Steam_AllowDownloadsDuringGameplay"	"在游戏时允许下载"
+"Steam_AllowDownloadsDuringGameplay"	"允许在运行游戏时下载"
 "Steam_AllowDownloadsDuringGameplayDetails"	"若勾选此选项，那么 Steam 将可以在您运行游戏或其它 \nSteam 应用程序时开始或继续下载更新。您也可以在各游戏的属性页面中针对该游戏单独设置"
 "Steam_ThrottleDownloadsWhileStreaming"	"流式传输时限制下载"
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"如果勾选此选项，Steam 会限制下载速度，以保持 Steam 远程畅玩的高质量体验。"
@@ -1530,7 +1530,7 @@
 "Steam_CloudInfo"					"Steam 云会储存您的信息，以便您在不同的计算机也能享受到一致的产品体验。"
 "Steam_EnableCloud"					"为支持的应用程序启用 Steam 云同步"
 "Steam_EnableCloudForApp"			"为 %game% 启用 Steam 云同步"
-"Steam_EnableCloudScreenshots"		"如果在游戏时截图，退出游戏后自动打开截图上传器"
+"Steam_EnableCloudScreenshots"		"如果在游戏中截图，退出游戏后自动打开截图上传器"
 "Steam_CloudUsage"					"%used% 已储存 / %available% 可用"
 "Steam_CloudEnableLink"				"查看设置 / 下载和云功能"
 "Steam_CloudEnableLinkContinued"	"重新启用您帐户的 Steam 云。"
@@ -1573,7 +1573,7 @@
 "Steam_HardwarePromo_Intro" "恭喜！您的计算机满足此特惠要求。您可以通过将此特惠注册到一个（只能一个）Steam 帐户来兑换它。只要登录此 Steam 帐户，您就可以在其它任意计算机上访问包含在此特惠中的游戏。"
 "Steam_Legal_HardwarePromo_Unreleased" "此礼包中的某些产品尚未发布，目前尚无法使用。 这些产品将在发布时自动通过 Steam 向您提供。 这些产品的发行日期尚未确定，估计发行日期仅供参考。 单击“下一步”将显示其它条款和条件。"
 "Steam_Legal_HardwarePromo" ""
-"Steam_Working_HardwarePromo" "正在注册特惠..."
+"Steam_Working_HardwarePromo" "正在注册特惠…"
 "SteamUI_OEMTicketWizard_Title" "注册 OEM 许可"
 
 "SteamUI_GamesDialog_RightClick_BackupGame" "备份游戏文件…"
@@ -2815,7 +2815,7 @@
 "Steam_PurchaseError_MissingRequiredApp"	"%subscription% 要求您拥有 %app%，\n 单击“确定”以浏览 %app% 的购买选项。"
 
 "Steam_Ubisoft_EmailPrompt"			"%subscription% 的发行商 Ubisoft 将与您保持联系。 请提供以下信息，您将能不定期收到有关即将推出的游戏的信息。"
-"Steam_TellTale_EmailPrompt"			"%subscription% 的发行商 Telltale 希望与您保持联系。 请在下面输入您的电子邮件地址以订阅 Telltale 的新闻简报，其中包括新游戏公告、开发过程幕后揭秘、漫画、烹饪和读者问答专栏以及临时性的特别服务。 您绝不会为自己的选择感到失望！"
+"Steam_TellTale_EmailPrompt"			"%subscription% 的发行商 Telltale 希望与您保持联系。请在下面输入您的电子邮件地址以订阅 Telltale 的新闻简报，其中包括新游戏公告、开发过程幕后揭秘、漫画、烹饪和读者问答专栏以及临时性的特别优惠。您绝不会为自己的选择感到失望！"
 
 "Steam_ManageGuestPasses"		"管理礼物和玩家通行证..."
 "Steam_GuestPasses_Title"		"礼物和玩家通行证"
@@ -3182,7 +3182,9 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_UserCantSetBeta" "%electedbeta%\n（只有安装了 Steam 客户端的用户才能更改是否参与测试。)"
 "Steam_BetaReportBug"	"报告错误"
 "Steam_ChooseBetaDlgTitle" "参与测试 - Steam"
-"Steam_ChooseBetaExplanation"	"Steam 通常都会在正式版推出之前为玩家提供试玩游戏或试用 Steam 更新的机会。要加入其中一个试用活动，请从下面的列表中选择并点击“确定”。（要将您自己从所有试用活动中移除，请选择“无”。）"
+"Steam_ChooseBetaExplanation"	"Steam 通常都会在正式版推出之前为玩家提供尝试游戏更新或 Steam 更新的机会。
+
+要加入其中一个测试项目，请从下面的列表中选择并点击“确定”。（要将您自己从所有测试项目中移除，请选择“无”。）"
 
 "Steam_ReadMoreAboutBetas"	"了解更多关于 Steam 如何执行 Beta 的信息"
 "Steam_SelectNoBeta"	"无 - 不选择任何测试活动"
@@ -3399,11 +3401,11 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_SubscriptionSuccessCart$purchasetype=gift" "以下项目已作为礼物发送至 %giftee%。感谢您的订购！"
 "Steam_SubscriptionSuccessCart$purchasetype=unknown" "您对以下项目的购买已成功完成。感谢您的订购！"
 "Steam_Subscription_Preorder_CcardSuccessCart" "最近您预购了以下项目。这些项目已经正式发布，因此我们已从您的信用卡扣款。感谢您的订购！"
-"Steam_Subscription_Success_WithShippingCart$purchasetype=regular"	"已成功完成以下项目的预订。\n\n通过在您的 Steam 游戏库中单击它们，您就可以玩当前已发布的任何一款游戏。一旦您订单中购买的物品发货，您还将收到电子邮件确认。感谢您的订购！"
-"Steam_Subscription_Success_WithShippingCart$purchasetype=gift"	"以下项目的礼物已被发送到 %giftee%。 一旦您订单中购买的物品发货，您将收到电子邮件确认。 感谢您的订购！"
-"Steam_Subscription_Success_WithShippingCart$purchasetype=unknown"	"您对以下项目的购买已完成。 一旦您订单中购买的物品发货，您将收到电子邮件确认。 感谢您的订购！"
+"Steam_Subscription_Success_WithShippingCart$purchasetype=regular"	"您对以下项目的订阅已成功完成。\n\n在您的 Steam 库中点击任何一款当前已发行的游戏，就可以开始畅玩。一旦您订单中包含的周边产品发货，您还将收到电子邮件确认。感谢您的订购！"
+"Steam_Subscription_Success_WithShippingCart$purchasetype=gift"	"以下项目已作为礼物发送至 %giftee%。一旦您订单中包含的周边产品发货，您将收到电子邮件确认。感谢您的订购！"
+"Steam_Subscription_Success_WithShippingCart$purchasetype=unknown"	"您对以下项目的购买已完成。一旦您订单中包含的周边产品发货，您将收到电子邮件确认。感谢您的订购！"
 "Steam_SubscriptionCancelled_PaymentCardUseLimitHit_InfoCart" 	"由于以下信用卡在 Steam 中使用过于频繁，因此未处理此交易。n\n制定此条约是为了保护我们的客户免受信用卡欺诈损害。 我们将在法律许可的最大范围内起诉欺诈行为。"
-"Steam_Subscription_ContactSupportCart" "发生了意外错误，您对以下项目的订购尚未完成。\n\n请通过下面的链接联系 Steam 客服。"
+"Steam_Subscription_ContactSupportCart" "发生了意外错误，您对以下项目的订阅尚未完成。\n\n请通过下面的链接联系 Steam 客服。"
 "Steam_SubscriptionCancelled_PayPalDeclinedCart" "您对以下项目的购买尚未完成。\n\n%provider% 报告认证失败。 请通过其它支付方式再次尝试购买。"
 "Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddressCart"	"您对以下项目的购买尚未完成。\n\n%provider% 报告了与您的 %provider% 账户相关的地址问题。您可以通过 %provider% 更正此问题，也可以通过其它支付方式再次尝试购买。"
 "Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSourceCart"	"您对以下项目的购买尚未完成。\n\n%provider% 报告了与您的 %provider% 账户相关的收款源问题。您可以通过 %provider% 更正此问题，也可以通过其它支付方式再次尝试购买。"
@@ -3414,7 +3416,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_Subscription_RestrictedCountryCart" "抱歉，以下物品在此国家/地区不提供购买。您的购买操作已被取消。"
 "Steam_SubscriptionCancelled_ServerFailedCart" "您以下项目的订阅尚未完成。Steam 服务器当前太忙，无法处理您的请求。\n\n对此给您带来的不便，我们深表歉意。请在几小时之后尝试交易。"
 "Steam_SubscriptionCancelled_RegionNotSupportedCart" "您对以下项目的购买尚未完成。\n\n您选择的支付方式目前不适用于您的国家/地区。 请通过其它支付方式再次尝试购买。"
-"Steam_SubscriptionFailure_Timeout_CantPlayCart"	"您对以下项目的订购尚未完成，Steam 服务器当前无法处理您的交易。\n\n您只能在订购处理完成后开始这些游戏。 若有不便，敬请见谅。 Steam 小组正在全力改善此状况，一旦交易完成即会尽快通知您。"
+"Steam_SubscriptionFailure_Timeout_CantPlayCart"	"您对以下项目的订阅尚未完成，因为 Steam 服务器当前无法处理您的交易。\n\n订阅处理完成后，你才能开始玩这些游戏。若有不便，敬请见谅。Steam 团队正在全力解决此问题，一旦交易完成即会尽快通知您。"
 
 "Steam_GuestPasses_Status_Unsent"	"未送出"
 "Steam_GuestPasses_Status_Sent"	"已发送"
@@ -4117,7 +4119,7 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "默认 Steam 安装文件夹不能被移除。"
 "SteamUI_ContentMgr_RemoveFailedUsedFolder" "“%game%”当前正在使用此 Steam 库文件夹，因此无法移除。"
 "SteamUI_ContentMgr_FlushDownloadConfig" "清除下载缓存"
-"SteamUI_ContentMgr_FlushDownloadConfigInfo" "清除下载缓存可能能够解决下载或启动应用时的问题"
+"SteamUI_ContentMgr_FlushDownloadConfigInfo" "清除下载缓存可能能够解决下载或启动应用时的问题。"
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "这将不会影响您已安装的游戏或游戏存档"
 
 "SteamUI_ContentMgr_Repair_Title" "Steam 库修复"
@@ -4321,8 +4323,8 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_TimedTrial_Minutes" "还有 %minutes% 分钟剩余游戏时间"
 "Steam_TimedTrial_Hours" "还剩 %hours% 小时 %minutes% 分钟游戏时间"
 
-"steam_inbox_tradeoffer"	"1 pending trade offer"
-"steam_inbox_tradeoffers"	"%count% pending trade offers"
+"steam_inbox_tradeoffer"	"1 个待处理的交易请求"
+"steam_inbox_tradeoffers"	"%count% 个待处理的交易请求"
 
 "steam_inbox_moderatormessage"	"1 条社区消息"
 "steam_inbox_moderatormessages"	"%count% 条社区消息"

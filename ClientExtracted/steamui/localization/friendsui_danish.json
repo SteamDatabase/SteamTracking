@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Du har ikke tilladelse til at ændre denne side",
     "Chat_Settings_Permission_Denied_Permissions": "Du har kun tilladelse til at se rolleoplysninger",
     "Chat_Settings_Permission_Denied_Some": "Du kan kun redigere roller, som er under din højeste tildelte rolle",
+    "Chat_Settings_Permission_DirectMessages": "Tillad, at gruppemedlemmer kan sende dig direkte beskeder",
     "Chat_Settings_Error_Unknown": "Billedet kunne ikke overføres",
     "Chat_Settings_Error_NotLoggedOn": "Ikke logget på",
     "Chat_Settings_Error_LimitedUser": "Brugere med begrænsede rettigheder kan ikke uploade billeder",

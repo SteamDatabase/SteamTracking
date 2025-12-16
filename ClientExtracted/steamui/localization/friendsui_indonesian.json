@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Kamu tidak memiliki izin untuk memodifikasi halaman ini",
     "Chat_Settings_Permission_Denied_Permissions": "Kamu hanya memiliki izin untuk melihat rincian peran",
     "Chat_Settings_Permission_Denied_Some": "Kamu hanya dapat mengedit peran dengan tingkat di bawah peran tertinggimu",
+    "Chat_Settings_Permission_DirectMessages": "Izinkan anggota grup untuk mengirimkan pesan langsung",
     "Chat_Settings_Error_Unknown": "Gambar gagal diunggah",
     "Chat_Settings_Error_NotLoggedOn": "Tidak ter-login",
     "Chat_Settings_Error_LimitedUser": "Pengguna yang dibatasi tidak dapat mengunggah gambar",

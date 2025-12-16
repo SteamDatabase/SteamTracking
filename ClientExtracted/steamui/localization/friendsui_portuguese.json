@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Não tens permissão para modificar esta página",
     "Chat_Settings_Permission_Denied_Permissions": "Só tens permissão para ver os detalhes de cada cargo",
     "Chat_Settings_Permission_Denied_Some": "Só podes editar cargos inferiores ao mais alto que te foi atribuído",
+    "Chat_Settings_Permission_DirectMessages": "Permitir mensagens diretas de membros do grupo",
     "Chat_Settings_Error_Unknown": "Erro ao enviar imagem",
     "Chat_Settings_Error_NotLoggedOn": "A sessão não foi iniciada",
     "Chat_Settings_Error_LimitedUser": "Utilizadores limitados não podem enviar imagens",

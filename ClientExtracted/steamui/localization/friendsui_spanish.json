@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "No tienes permiso para modificar esta página",
     "Chat_Settings_Permission_Denied_Permissions": "Solo tienes permiso para ver los detalles de los roles",
     "Chat_Settings_Permission_Denied_Some": "Solo puedes editar los roles por debajo de tu rol más alto asignado",
+    "Chat_Settings_Permission_DirectMessages": "Permitir que los miembros del grupo te envíen mensajes directos",
     "Chat_Settings_Error_Unknown": "No se pudo cargar la imagen",
     "Chat_Settings_Error_NotLoggedOn": "Sesión no iniciada",
     "Chat_Settings_Error_LimitedUser": "Los usuarios con cuentas limitadas no pueden cargar imágenes",

@@ -2555,6 +2555,7 @@ https://s.team/deck
 https://s.team/frame
 https://s.team/join
 https://s.team/machine
+https://s.team/os
 https://s.team/remoteplay/connect/${}?appid=${}&${}
 https://s.team/steamos
 https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${appid}/${filename}

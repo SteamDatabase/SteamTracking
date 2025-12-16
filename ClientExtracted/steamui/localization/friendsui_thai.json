@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "คุณไม่ได้รับสิทธิ์ให้แก้ไขหน้านี้",
     "Chat_Settings_Permission_Denied_Permissions": "คุณได้รับสิทธิ์ให้ดูเฉพาะรายละเอียดของบทบาทเท่านั้น",
     "Chat_Settings_Permission_Denied_Some": "คุณสามารถแก้ไขบทบาทที่อยู่ต่ำกว่าบทบาทสูงสุดของคุณที่ถูกกำหนดไว้ได้เท่านั้น",
+    "Chat_Settings_Permission_DirectMessages": "อนุญาตให้สมาชิกกลุ่มส่งข้อความตรงถึงคุณ",
     "Chat_Settings_Error_Unknown": "ล้มเหลวในการอัปโหลดภาพ",
     "Chat_Settings_Error_NotLoggedOn": "ไม่ได้เข้าสู่ระบบ",
     "Chat_Settings_Error_LimitedUser": "ผู้ใช้แบบจำกัดสิทธิ์ไม่สามารถอัปโหลดภาพได้",

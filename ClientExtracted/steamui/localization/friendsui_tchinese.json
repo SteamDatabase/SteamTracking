@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "您沒有修改此頁面的權限",
     "Chat_Settings_Permission_Denied_Permissions": "您只有瀏覽職位詳細資料的權限",
     "Chat_Settings_Permission_Denied_Some": "您只能編輯在您最高職位之下的職位",
+    "Chat_Settings_Permission_DirectMessages": "允許群組成員傳送直接訊息給您",
     "Chat_Settings_Error_Unknown": "圖片上傳失敗",
     "Chat_Settings_Error_NotLoggedOn": "未登入",
     "Chat_Settings_Error_LimitedUser": "受限的使用者無法上傳圖片",

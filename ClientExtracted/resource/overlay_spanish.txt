@@ -13,7 +13,7 @@
 "Overlay_SettingsEnable"	"Habilitar la interfaz de Steam durante las partidas"
 "Overlay_SettingsEnableApp"	"Activar Comunidad Steam en la aplicación"
 "Overlay_SettingsSCTenfootEnable"	"Utilizar interfaz de Big Picture al usar un mando compat. con Steam Input desde el escritorio"
-"Overlay_SettingsHotKeyLabel"	"Teclas de acceso directo a la interfaz"
+"Overlay_SettingsHotKeyLabel"	"Teclas de acceso directo a la interfaz superpuesta"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Teclas de captura de pantalla"
 "Overlay_SettingsScreenshotActionLabel" "Cuando se capture una imagen"
 "Overlay_SettingsEnableVRDesktopGameTheaterCheck" "Utilizar el modo cine al iniciar juegos de escritorio mientras SteamVR esté activo"

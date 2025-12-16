@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Nincs engedélyed módosítani ezt az oldalt.",
     "Chat_Settings_Permission_Denied_Permissions": "Csak a szereprészletek megnézésre van engedélyed.",
     "Chat_Settings_Permission_Denied_Some": "Csak a hozzád rendelt legmagasabb alatti szerepeket tudod szerkeszteni.",
+    "Chat_Settings_Permission_DirectMessages": "A csoporttagok küldhetnek neked privát üzeneteket",
     "Chat_Settings_Error_Unknown": "A képfeltöltés nem sikerült.",
     "Chat_Settings_Error_NotLoggedOn": "Nem vagy bejelentkezve",
     "Chat_Settings_Error_LimitedUser": "A korlátozott felhasználók nem tölthetnek fel képeket.",

@@ -1693,7 +1693,7 @@
 "SteamUI_ActivateProductLockedDown"		"고객님의 계정이 고객님에 의해 잠겼거나 Steam 고객지원에 의해 잠겼습니다. 해당 문제가 해결될 때까지 이 계정에서 새 제품을 활성화할 수 없습니다."
 "SteamUI_ActivateProduct_ViewSupportMessage" "Steam 고객지원의 활성화된 알림 보기"
 
-"SteamUI_PPA_Agree"				"Valve 개인정보처리방침의 전체 내용을 읽고 확인해 주세요. 계속하려면 동의해야 합니다."
+"SteamUI_PPA_Agree"				"Valve 개인정보 처리방침의 전체 내용을 읽고 확인해 주세요. 계속하려면 동의해야 합니다."
 "Steam_ClickToPrint"			"인쇄하려면 여기를 클릭하세요"
 
 

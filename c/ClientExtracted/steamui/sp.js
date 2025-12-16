@@ -16,6 +16,23 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.memo(function () {
+        const _ = (0, _._)(),
+          _ = (0, _._)(() => _._.IsSteamVRRunning);
+        return (
+          _.useEffect(() => {
+            _ &&
+              SteamClient?.OpenVR?.PathProperties?.SetBoolPathProperty(
+                "/steam/oobe",
+                _,
+              );
+          }, [_, _]),
+          null
+        );
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         return _.createElement(
@@ -23,6 +40,7 @@
           null,
           _.createElement(_._, null),
           _.createElement(_._, null),
+          _.createElement(_, null),
         );
       });
       var _ = __webpack_require__("chunkid"),

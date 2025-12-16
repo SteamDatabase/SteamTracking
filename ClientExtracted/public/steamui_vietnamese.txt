@@ -1945,7 +1945,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 
 
 
-"Steam_Game_FreeWeekend"			"Cuối tuần miễn phí"
+"Steam_Game_FreeWeekend"			"Miễn phí cuối tuần"
 "Steam_Game_Retail"						"Cửa hàng khác"
 "Steam_Game_AuthorizeDevice"		"Thiết bị được cấp phép"
 "Steam_Game_Complimentary"		"Miễn phí"
@@ -2256,12 +2256,12 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 
 "Steam_PreloadCountdown_UnlockTime"	"%game% sẽ được mở khóa trong:"
 
-"Steam_DoDFreeWeekend_BeginsIn"	"Bản miễn phí dùng thử cuối tuần của Day of Defeat sẽ bắt đầu trong:"
+"Steam_DoDFreeWeekend_BeginsIn"	"Miễn phí cuối tuần Day of Defeat sẽ bắt đầu sau:"
 "Steam_DoDFreeWeekend_Info"		"Khi đồng hồ điểm số không, 72 giờ miễn phí sẽ bắt đầu."
-"Steam_DoDFreeWeekend_URL"		"Đọc thêm thông tin về sự kiện cuối tuần miễn phí Day of Defeat"
-"Steam_FreeWeekend_BeginsIn"		"Cuối tuần miễn phí %game% sẽ bắt đầu trong:"
+"Steam_DoDFreeWeekend_URL"		"Đọc thêm thông tin về sự kiện Miễn phí cuối tuần Day of Defeat"
+"Steam_FreeWeekend_BeginsIn"		"Miễn phí cuối tuần %game% sẽ bắt đầu sau:"
 "Steam_FreeWeekend_Info"			"Khi đồng hồ điểm số không, %time% miễn phí sẽ bắt đầu."
-"Steam_FreeWeekend_URL"			"Đọc thêm thông tin về Cuối Tuần Miễn Phí %game%"
+"Steam_FreeWeekend_URL"			"Đọc thêm thông tin về Miễn phí cuối tuần %game%"
 "Steam_FreeWeekend_48H"			"48 giờ"
 "Steam_FreeWeekend_72H"			"72 giờ"
 "Steam_FreeWeekend_1W"			"1 tuần"

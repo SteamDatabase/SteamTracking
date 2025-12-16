@@ -20653,7 +20653,8 @@
       function _(_) {
         const { appid: _, bBlurContent: __webpack_require__, nYear: _ } = _,
           _ = _(_),
-          [_, _] = (0, _._)();
+          [_, _] = (0, _._)(),
+          _ = _();
         return _ && 0 != _.length
           ? _.createElement(
               "div",
@@ -20666,7 +20667,7 @@
                 {
                   className: _.ScreenshotHeader,
                 },
-                (0, _._)("#YIR_ScreenshotsThisYear"),
+                _("#YIR_ScreenshotsThisYear"),
               ),
               _.createElement(
                 "div",
@@ -21864,6 +21865,7 @@
         );
       }
       function _(_) {
+        const { year: _ } = _;
         return _.createElement(
           "div",
           {
@@ -21901,7 +21903,7 @@
                 {
                   className: _().Answer,
                 },
-                (0, _._)("#YIR_FAQ_Dates_A", _.year),
+                (0, _._)("#YIR_FAQ_Dates_A", _),
               ),
             ),
             _.createElement(
@@ -22019,26 +22021,47 @@
                 (0, _._)("#YIR_FAQ_Controller_A2"),
               ),
             ),
-            _.createElement(
-              "div",
-              {
-                className: _().QuestionCtn,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: _().Question,
-                },
-                (0, _._)("#YIR_FAQ_PrivateApps_Q"),
-              ),
-              _.createElement(
-                "div",
-                {
-                  className: _().Answer,
-                },
-                (0, _._)("#YIR_FAQ_PrivateApps_A", _.year),
-              ),
-            ),
+            2022 == _
+              ? _.createElement(
+                  "div",
+                  {
+                    className: _().QuestionCtn,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Question,
+                    },
+                    (0, _._)("#YIR_FAQ_PrivateApps_Q"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Answer,
+                    },
+                    (0, _._)("#YIR_FAQ_PrivateApps_A", _),
+                  ),
+                )
+              : _.createElement(
+                  "div",
+                  {
+                    className: _().QuestionCtn,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Question,
+                    },
+                    (0, _._)("#YIR_FAQ_PrivateApps_v2_Q"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _().Answer,
+                    },
+                    (0, _._)("#YIR_FAQ_PrivateApps_v2_A", _),
+                  ),
+                ),
           ),
         );
       }

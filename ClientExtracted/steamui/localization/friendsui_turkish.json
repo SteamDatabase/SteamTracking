@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Bu sayfayı değiştirmeye izniniz yok",
     "Chat_Settings_Permission_Denied_Permissions": "Sadece rol detaylarını görüntülemeye izniniz var",
     "Chat_Settings_Permission_Denied_Some": "Size atanan en yüksek dereceli rolün altındaki rolleri düzenleyebilirsiniz",
+    "Chat_Settings_Permission_DirectMessages": "Grup üyelerinin size direkt mesaj göndermelerine izin ver",
     "Chat_Settings_Error_Unknown": "Görsel yüklenemedi",
     "Chat_Settings_Error_NotLoggedOn": "Giriş yapılmamış",
     "Chat_Settings_Error_LimitedUser": "Sınırlı kullanıcılar görsel yükleyemez",

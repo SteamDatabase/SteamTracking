@@ -351,6 +351,7 @@
     "Chat_Settings_Permission_Denied": "Nie posiadasz uprawnień do modyfikowania tej strony",
     "Chat_Settings_Permission_Denied_Permissions": "Twoje uprawnienia pozwalają tylko na wyświetlenie szczegółów ról",
     "Chat_Settings_Permission_Denied_Some": "Możesz edytować wyłącznie role niższe od twojej najwyższej nadanej",
+    "Chat_Settings_Permission_DirectMessages": "Zezwól członkom grupy na wysyłanie ci bezpośrednich wiadomości",
     "Chat_Settings_Error_Unknown": "Nie udało się przesłać obrazu",
     "Chat_Settings_Error_NotLoggedOn": "Nie zalogowano",
     "Chat_Settings_Error_LimitedUser": "Użytkownicy z ograniczeniami nie mogą przesyłać obrazów",
