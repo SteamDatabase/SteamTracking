@@ -7722,11 +7722,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
-0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -10105,7 +10105,6 @@ $steammessages_parental_objects.proto"
 14TwoFactor_Stub
 14VideoClip_Stub
 1536
-15000
 15AccountHardware
 15BroadcastClient
 15CBootReserveJob
@@ -10215,7 +10214,6 @@ $steammessages_parental_objects.proto"
 15WebUINoResponse
 16 Mbps
 16.0
-16000
 162.254.192.71:27017
 162.254.192.74:27017
 162.254.192.75:27017
@@ -10585,6 +10583,7 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI20CRemoteClientManager21VRLinkInviteChanged_tE
 17CInternalCallbackI20CRemoteClientManager25NetworkDevicesRefreshed_tE
 17CInternalCallbackI20CRemoteClientManager27FocusedSteamWindowChanged_tE
+17CInternalCallbackI20CRemoteClientManager27SystemResumingFromSuspend_tE
 17CInternalCallbackI20CRemoteClientManager28LoadControllerConfigResult_tE
 17CInternalCallbackI20CRemoteClientManager29RemoteClientDongleConnected_tE
 17CInternalCallbackI20CRemoteClientManager29RemoteClientDonglePlugEvent_tE
@@ -10721,8 +10720,6 @@ $steammessages_parental_objects.proto"
 17VoiceEncoder_SILK
 180.0
 1800
-18000000
-18446744073709551615
 18446744073709551615";\n%CMsgClientUCMDeleteScreenshotResponse
 18446744073709551615"p\n!CCloud_EnumerateUserFiles_Request
 18BasicRequestInfo_t
@@ -11190,11 +11187,15 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-20000
-2000000
 200M
 2019
 2048
+15000
+16000
+20000
+2000000
+18000000
+18446744073709551615
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -17664,6 +17665,7 @@ BRemoteClientHasStreamingSupported
 BRemoteClientHasStreamingSupportedByIndex
 BRemoteClientIsSteamDeck
 BRemoteClientStreaming
+BRemoteClientWifiAPUnpaired
 BRemoteDeviceStreaming
 BRemoveDirectory Yielding IO Job
 BRemoveDirectoryRecursive Yielding IO Job
@@ -20528,11 +20530,13 @@ CRemoteClientManager_PurgeDeadStreamClients
 CRemoteClientManager_SendQueuedBroadcastMessagesIfNecessary
 CRemoteClientManager_WaitForUITimeout
 CRemoteClientPairWifiAP
+CRemoteClientPairWifiAP paired to %s %llu (%s)
 CRemoteClientPairWifiAP received e_pair_result %d
 CRemoteClientPairWifiAP timed out waiting for reply (extend client timeout?)
 CRemoteClientPairWifiAP::BYieldingRunClientJob pairing with %llu (%s)
 CRemoteClientPairWifiAPResponse
 CRemoteClientPairWifiAPResponse got unexepected auth failure
+CRemoteClientPairWifiAPResponse paired to %s %llu (%s)
 CRemoteClientPairWifiAPResponse sent ssid %s
 CRemoteClientSoftAP settings updated, enabled = %d, hotspot = %d, ssid = "%s"
 CRemoteClientSoftAP::Init
@@ -22182,7 +22186,6 @@ Could not read microtransaction info from message
 Could not read wallet info from message
 Couldn't access HTTP response\n
 Couldn't bind TCP port
-Couldn't bind to broadcast port %d with IPv6
 Couldn't bind to broadcast port %d, RemoteClientManager disabled
 Couldn't compile regex '%S': %s\n
 Couldn't connect to CM for CCMInterface::BYieldingTryCMConnection()
@@ -35671,7 +35674,7 @@ SuspendWithFlags
 Suspended
 Suspended workshop downloads
 Suspending
-Suspending, suppressing status update
+Suspending, suppressing %s
 Suspension not allowed here
 Swahili
 Swap
@@ -36863,6 +36866,7 @@ Unmounted library folder "%s" (%u apps)
 Unnamed service method.
 Unpack failed (c:%u,u:%u,r:%zu,b:%zu)
 UnpairLocalWifiAP
+UnpairLocalWifiAP: clearing SSID/password
 UnpairRemoteClient
 UnpairRemoteDevice
 UnpairRemoteDevices
@@ -44675,6 +44679,7 @@ digitalSignature
 dinfo
 dirName
 dir_ctrl
+direct connection
 direct_messages_allowed
 directory
 directory services (X.500)
@@ -44720,6 +44725,7 @@ discount_description
 discount_end_date
 discount_filter
 discount_percentage
+discovery
 discriminant is zero
 discussion_url
 disk
@@ -46461,7 +46467,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen.
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -47764,6 +47770,9 @@ index too large
 index too small
 index.html
 indexBuffer.TellPut() == unIndexSize
+indirect connection
+indirect connection complete
+indirect connection request
 indirectCRL
 indonesian
 inet_aton
@@ -58280,7 +58289,7 @@ stderr
 stdin
 stdout
 steam
-steam Dec 16 2025 18:21:57
+steam Dec 16 2025 23:37:08
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

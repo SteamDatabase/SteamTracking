@@ -1,4 +1,4 @@
-var CLSTAMP = "10321015";
+var CLSTAMP = "10322314";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4208,6 +4208,7 @@ var CLSTAMP = "10321015";
           ["el", "greek"],
           ["uk", "ukrainian"],
           ["vn", "vietnamese"],
+          ["vi", "vietnamese"],
           ["id", "indonesian"],
         ]);
         const o = new Map();
@@ -11489,9 +11490,9 @@ var CLSTAMP = "10321015";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Dec 16 2025 : 10:21:27",
-                BUILD_TIME_UTC: "Dec 16 2025 : 18:21:27",
-                BUILD_RTIME_UTC: 1765909287,
+                BUILD_TIME_LOCAL: "Dec 16 2025 : 14:04:06",
+                BUILD_TIME_UTC: "Dec 16 2025 : 22:04:06",
+                BUILD_RTIME_UTC: 1765922646,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -25176,9 +25177,9 @@ var CLSTAMP = "10321015";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Dec 16 2025 : 10:21:27",
-                    BUILD_TIME_UTC: "Dec 16 2025 : 18:21:27",
-                    BUILD_RTIME_UTC: 1765909287,
+                    BUILD_TIME_LOCAL: "Dec 16 2025 : 14:04:06",
+                    BUILD_TIME_UTC: "Dec 16 2025 : 22:04:06",
+                    BUILD_RTIME_UTC: 1765922646,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25793,7 +25794,7 @@ var CLSTAMP = "10321015";
         3350: "25be1c0cde58ecd53fec",
         3366: "049be15e2923de61326d",
         3473: "aa2e2c813e7588319881",
-        3569: "46cf0e80675ec4d92f99",
+        3569: "81e0a75909f48b806265",
         3583: "f831ab7edbd9ffa591ac",
         3594: "b70bd041356f4decc88d",
         3714: "1c32411f9644bb684e2b",
@@ -25914,7 +25915,7 @@ var CLSTAMP = "10321015";
         9711: "2ed989ee7251a5d19c6f",
         9746: "02bbf44c33adfc258656",
         9779: "59ef76674166d4b9e52e",
-        9858: "fd31970d54850d3e4496",
+        9858: "05a8f54fdfe149d9d44f",
         9869: "0f5bcdc9b2a986acf0cb",
         9882: "499f31ccf435fd972880",
         9887: "ed1418cfca13109f4418",

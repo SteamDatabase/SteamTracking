@@ -5452,6 +5452,7 @@ ${LANGUAGE}
 -steammachinedisplay
 -steamos
 -system-composer
+-system\SteamFrameWirelessAdapterPairingDialog
 -tenfoot
 -testled
 -testoobe
@@ -7089,11 +7090,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+00:00:00
+01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
-01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -12189,6 +12190,7 @@ ${LANGUAGE}
 5mmQ
 5nsfZ
 5q\teH
+5t\rK
 5y?4
 6 Mbps
 6 PQ
@@ -18398,7 +18400,7 @@ Deaccel
 Debit Card (Nodwin)
 Debug
 DebugStatsSystem
-Dec 16 2025 18:22:14
+Dec 16 2025 23:37:10
 December
 Decipher Only
 Deckard
@@ -35098,6 +35100,7 @@ bHasNintendoLayout
 bHasOutput
 bHasTouchscreen
 bHasTwoFactor
+bHasUnpairedWifiAP
 bHidden
 bIgnoreRegistrationPrompt
 bInput
@@ -39218,7 +39221,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen\n"n
 ghost_
 gidlist
 gidparentcomment
@@ -51343,6 +51346,7 @@ sk_reserve
 skew_tolerance_seconds
 skins/%s
 skip_friendsui_check
+skip_steamframe_pairing_dialog
 skip_steamvr_install_dialog
 skip_storage_update
 skip_unvetted_apps
