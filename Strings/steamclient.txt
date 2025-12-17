@@ -7722,11 +7722,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
+0123456789.
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -10105,6 +10105,7 @@ $steammessages_parental_objects.proto"
 14TwoFactor_Stub
 14VideoClip_Stub
 1536
+15000
 15AccountHardware
 15BroadcastClient
 15CBootReserveJob
@@ -10214,6 +10215,7 @@ $steammessages_parental_objects.proto"
 15WebUINoResponse
 16 Mbps
 16.0
+16000
 162.254.192.71:27017
 162.254.192.74:27017
 162.254.192.75:27017
@@ -10720,6 +10722,8 @@ $steammessages_parental_objects.proto"
 17VoiceEncoder_SILK
 180.0
 1800
+18000000
+18446744073709551615
 18446744073709551615";\n%CMsgClientUCMDeleteScreenshotResponse
 18446744073709551615"p\n!CCloud_EnumerateUserFiles_Request
 18BasicRequestInfo_t
@@ -11187,15 +11191,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+20000
+2000000
 200M
 2019
 2048
-15000
-16000
-20000
-2000000
-18000000
-18446744073709551615
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -58289,7 +58289,7 @@ stderr
 stdin
 stdout
 steam
-steam Dec 16 2025 23:37:08
+steam Dec 17 2025 03:36:16
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

@@ -318,6 +318,7 @@ $ORIGIN
 0123456789
 0123456789ABCDEF
 0123456789abcdef
+03:35:51
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
@@ -344,7 +345,6 @@ $ORIGIN
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
-23:36:53
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -437,6 +437,7 @@ CValidator::ClaimUntrackedMemory
 CValidator::IsClaimed
 CValidator::Pop
 CValidator::Push
+C`G3L
 Calling Tell on an async file writer is unsafe, will race with thread and may corrupt file pointer.
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
@@ -449,7 +450,7 @@ CreateInterface
 DBG_PATHMATCH
 DBG_STAT
 DONT_BREAK_ON_ASSERT
-Dec 16 2025
+Dec 17 2025
 December
 Deleting thread object from the thread, this is bad
 Don't know how to check filesystem type on POSIX!
