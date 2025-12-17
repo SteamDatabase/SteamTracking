@@ -2064,36 +2064,14 @@
     },
     38390: (e, t, a) => {
       "use strict";
-      a.d(t, { B9: () => m, G4: () => c, RR: () => d, hE: () => u });
+      a.d(t, { B9: () => c, RR: () => l, hE: () => d });
       var n = a(90626),
         i = a(6379),
         s = a(4434),
         r = a(17720),
-        o = a(78327),
-        l = (a(17690), a(61859));
+        o = (a(78327), a(17690), a(61859));
       a(41735), a(68797);
-      function c(e, t = 0, a) {
-        const [l, c] = (0, n.useState)(i.O3.GetClanEventFromAnnouncementGID(e)),
-          d = (0, s.m)("usePartnerEventByAnnouncementGID");
-        return (
-          (0, n.useEffect)(() => {
-            if (l?.AnnouncementGID != e) {
-              i.O3.Init();
-              const n = new r.b(o.UF.CLANSTEAMID);
-              i.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                n,
-                e,
-                t,
-                a,
-              ).then((e) => {
-                e && !d.token.reason && c(e);
-              });
-            }
-          }, [e, t, a, l, d]),
-          l
-        );
-      }
-      function d(e) {
+      function l(e) {
         const [t, a] = (0, n.useState)(() => i.O3.GetClanEventModel(e)),
           r = (0, s.m)("usePartnerEventByEventGID");
         return (
@@ -2112,7 +2090,7 @@
           t
         );
       }
-      function m(e, t, a) {
+      function c(e, t, a) {
         const [o, l] = (0, n.useState)(t ? i.O3.GetClanEventModel(t) : void 0),
           [c, d] = (0, n.useState)(!!e && !!t),
           [m, u] = (0, n.useState)(),
@@ -2148,9 +2126,9 @@
           { eventModel: o, bLoading: c, sErrorMessage: m, eResult: h }
         );
       }
-      function u(e) {
+      function d(e) {
         let t = "" + e;
-        const a = l.A0.GetELanguageFallback(e);
+        const a = o.A0.GetELanguageFallback(e);
         return e != a && (t += "_" + a), t;
       }
     },

@@ -2146,36 +2146,16 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"));
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
-      function _(_, _ = 0, _) {
-        const [_, _] = (0, _.useState)(_._.GetClanEventFromAnnouncementGID(_)),
-          _ = (0, _._)("usePartnerEventByAnnouncementGID");
-        return (
-          (0, _.useEffect)(() => {
-            if (_?.AnnouncementGID != _) {
-              _._.Init();
-              const _ = new _._(_._.CLANSTEAMID);
-              _._.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                _,
-                _,
-                _,
-                _,
-              ).then((_) => {
-                _ && !_.token.reason && _(_);
-              });
-            }
-          }, [_, _, _, _, _]),
-          _
-        );
-      }
       function _(_) {
         const [_, __webpack_require__] = (0, _.useState)(() =>
             _._.GetClanEventModel(_),
