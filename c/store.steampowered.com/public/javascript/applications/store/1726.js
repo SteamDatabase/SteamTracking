@@ -2057,7 +2057,9 @@
                 "all_upcoming",
                 "discounted",
               ],
+              prefer_assets_without_overrides: !1,
             },
+            prefer_assets_without_overrides: !1,
             enable_faceted_browsing:
               (_._.GetCreatorHome(this.clanSteamID)?.GetAppIDList().length ??
                 0) >= 7,

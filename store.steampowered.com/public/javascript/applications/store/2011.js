@@ -160,11 +160,11 @@
             bSmallFormat: C,
             bHideFollowButton: f,
             bAddLinkToMemberList: g,
-            bMinimalDisplay: w,
+            bMinimalDisplay: A,
           } = e,
-          { creatorHome: y } = (0, o.FV)(t.clan_account_id),
-          [A] = (0, l.L2)();
-        if (A || !y)
+          { creatorHome: w } = (0, o.FV)(t.clan_account_id),
+          [y] = (0, l.L2)();
+        if (y || !w)
           return n.createElement(
             "div",
             { className: h.DevSummaryWidgetCtn },
@@ -181,8 +181,8 @@
               : "publisher" == t.type
                 ? (0, m.we)("#CreatorHome_PublishedBy")
                 : (0, m.we)("#CreatorHome_InFranchise"),
-          P = y.GetCreatorHomeURL(D),
-          N = y.GetNumFollowers();
+          P = w.GetCreatorHomeURL(D),
+          N = w.GetNumFollowers();
         return n.createElement(
           _.tH,
           null,
@@ -195,7 +195,7 @@
                 className: (0, c.A)(
                   h.DevSummaryCtn,
                   C ? h.SmallFormat : h.LargeFormat,
-                  w ? h.MinimalDisplay : "",
+                  A ? h.MinimalDisplay : "",
                 ),
                 "flow-children": "row",
               },
@@ -206,7 +206,7 @@
                 n.createElement("div", {
                   className: h.DevSummaryBackground,
                   style: {
-                    backgroundImage: `url(${y.GetAvatarURLFullSize()} )`,
+                    backgroundImage: `url(${w.GetAvatarURLFullSize()} )`,
                   },
                 }),
                 n.createElement(
@@ -224,7 +224,7 @@
                       },
                       n.createElement("img", {
                         className: (0, c.A)(h.Avatar, "Avatar_Trgt"),
-                        src: y.GetAvatarURLFullSize(),
+                        src: w.GetAvatarURLFullSize(),
                       }),
                     ),
                     n.createElement(
@@ -246,7 +246,7 @@
                         n.createElement(
                           i.m,
                           { href: (0, p.k2)(P), className: h.CreatorNameName },
-                          y.GetName(),
+                          w.GetName(),
                         ),
                         Boolean(a) &&
                           n.createElement(
@@ -257,7 +257,7 @@
                                 h.CreatorTagline,
                               ),
                             },
-                            y.GetTagLine(),
+                            w.GetTagLine(),
                           ),
                       ),
                       n.createElement(
@@ -302,7 +302,7 @@
                         href:
                           d.TS.COMMUNITY_BASE_URL +
                           "gid/" +
-                          y.GetClanSteamID().ConvertTo64BitString() +
+                          w.GetClanSteamID().ConvertTo64BitString() +
                           "/members/",
                         target: "_blank",
                         className: h.MembersListLink,
@@ -381,9 +381,9 @@
         C = a(70300),
         f = a(47235),
         g = a(37076),
-        w = a(54492),
-        y = a(60014),
-        A = a(52038),
+        A = a(54492),
+        w = a(60014),
+        y = a(52038),
         D = a(61859),
         I = a(61336),
         P = a(78327),
@@ -406,22 +406,22 @@
           } = e,
           [v, S] = n.useState(!1),
           [f] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          [g] = (0, u.t7)(a && f?.GetParentAppID(), r.Xh);
+          [g] = (0, u.t7)(a ? f?.GetParentAppID() : void 0, r.Xh);
         if (!f) return null;
-        const w = Boolean(g),
-          y = n.createElement(L, {
+        const A = Boolean(g),
+          w = n.createElement(W, {
             ...e,
             strExtraParams: e.strExtraParams,
             info: t,
             bIsHovered: v,
-            bHasParentAppToDisplay: w,
+            bHasParentAppToDisplay: A,
             onlyOneDiscountPct: _,
             bShowEarlyAccessBanner: h,
           });
         return n.createElement(
           l.Z,
           {
-            className: (0, A.A)({
+            className: (0, y.A)({
               [E().OuterCapsuleContainer]: !0,
               [G + i]: 0 == i,
             }),
@@ -435,7 +435,7 @@
               ? n.createElement(
                   "div",
                   { onMouseEnter: () => S(!0), onMouseLeave: () => S(!1) },
-                  y,
+                  w,
                 )
               : n.createElement(
                   d.Qf,
@@ -455,11 +455,11 @@
                     bShowIgnoreButton: e.bShowIgnoreButton,
                     bShowDescription: e.bShowDescriptionInHover,
                   },
-                  y,
+                  w,
                 ),
             Boolean(o) && n.createElement(n.Fragment, null, o),
           ),
-          w &&
+          A &&
             n.createElement(B, {
               strExtraParams: e.strExtraParams,
               parentStoreItem: g,
@@ -475,7 +475,7 @@
             childAppType: l,
             bPreferDemoStorePage: s,
           } = e,
-          i = (0, y.n9)(),
+          i = (0, w.n9)(),
           c = (0, P.Qn)();
         return n.createElement(
           o.ml,
@@ -506,7 +506,7 @@
           ),
         );
       }
-      function L(e) {
+      function W(e) {
         const {
             info: t,
             bHideStatusBanners: a,
@@ -518,51 +518,57 @@
             strDoubleCapsuleMessage: b,
             bPreferDemoStorePage: E,
             bShowEarlyAccessBanner: S,
+            bPreferAssetWithoutOverride: C,
           } = e,
-          [C] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          f = (0, y.n9)(),
-          g = (0, F.w)(),
-          D = (0, n.useMemo)(() => C?.GetIncludedAppIDsOrSelf(), [C]);
-        if (!C) return null;
-        const P = (0, I.NT)(
-          (0, i.It)(`${C.GetStorePageURL(E)}${l ? `?${l}` : ""}`, f, g),
+          [f] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
+          g = (0, w.n9)(),
+          D = (0, F.w)(),
+          P = (0, n.useMemo)(() => f?.GetIncludedAppIDsOrSelf(), [f]);
+        if (!f) return null;
+        const N = (0, I.NT)(
+          (0, i.It)(`${f.GetStorePageURL(E)}${l ? `?${l}` : ""}`, g, D),
         );
-        let N;
+        let G;
         "overrideNavigation" in t &&
-          (N = (e) => (
+          (G = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const G = Boolean(b);
+        const x = Boolean(b);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             "div",
-            { className: (0, A.A)({ [T().TwoWidthCtn]: G }) },
+            { className: (0, y.A)({ [T().TwoWidthCtn]: x }) },
             n.createElement(
               o.Ii,
               {
-                href: N ? void 0 : P,
+                href: G ? void 0 : N,
                 style: { display: "block", cursor: "pointer" },
-                className: (0, A.A)({ [T().TwoWidthCapsule]: G }),
+                className: (0, y.A)({ [T().TwoWidthCapsule]: x }),
                 preferredFocus: p,
-                onClick: N,
+                onClick: G,
               },
               n.createElement(v.V, {
-                appids: D,
+                appids: P,
                 hide_status_banners: a,
                 show_early_access: e.bShowEarlyAccessBanner,
               }),
-              "none" != c && n.createElement(_.aU, { imageType: c, info: t }),
-              n.createElement(w.J, { storeItem: C }),
+              "none" != c &&
+                n.createElement(_.aU, {
+                  imageType: c,
+                  info: t,
+                  bPreferAssetWithoutOverride: C,
+                }),
+              n.createElement(A.J, { storeItem: f }),
               Boolean(d) &&
                 n.createElement(h.m, { appInfo: t, bIsHoverMode: !0 }),
             ),
-            G &&
+            x &&
               n.createElement(
                 "div",
                 {
-                  className: (0, A.A)(T().TwoWidthSideInfo, "TwoWidthSideInfo"),
+                  className: (0, y.A)(T().TwoWidthSideInfo, "TwoWidthSideInfo"),
                 },
                 n.createElement("div", { className: T().Reason }, b),
                 n.createElement(
@@ -571,20 +577,20 @@
                   n.createElement(
                     "span",
                     null,
-                    C.GetFormattedSteamReleaseDate(),
+                    f.GetFormattedSteamReleaseDate(),
                   ),
                 ),
                 n.createElement(H.n, {
                   bHideTitle: !0,
-                  rgTagIDs: C.GetTagIDs(),
+                  rgTagIDs: f.GetTagIDs(),
                   instanceNum: s,
                 }),
               ),
           ),
-          n.createElement(W, { ...e }),
+          n.createElement(L, { ...e }),
         );
       }
-      function W(e) {
+      function L(e) {
         const {
             info: t,
             bHidePriceIfOwned: a,
@@ -608,10 +614,10 @@
           return n.createElement(f.E, { appid: v.GetAppID(), bIsMuted: b });
         if (s) return null;
         const g = S && a,
-          w = C;
+          A = C;
         return n.createElement(_.qn, {
           info: t,
-          bShowAsMuted: w,
+          bShowAsMuted: A,
           bHidePrice: i,
           bShowInLibraryInsteadOfPrice: g,
           bHidePlatforms: p,

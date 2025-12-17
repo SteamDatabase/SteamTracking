@@ -4743,14 +4743,7 @@
                   ),
                   2 === e || 3 === e)
                 )
-                  return (
-                    this.m_transport.MakeReady(),
-                    window.setTimeout(
-                      this.PollForUpdate,
-                      this.m_msPollInterval,
-                    ),
-                    1
-                  );
+                  return this.m_transport.MakeReady(), this.StartPolling(!1), 1;
               }
               if (9 === r || 27 === r) this.m_eFailureState = i.Expired;
               else if (84 === r) this.m_eFailureState = i.RateLimitExceeded;
@@ -4792,10 +4785,7 @@
                   r)
                 : (n && (this.m_strChallengeURL = n),
                   s && (this.m_strClientID = s),
-                  (this.m_activeTimerID = window.setTimeout(
-                    this.PollForUpdate,
-                    this.m_msPollInterval,
-                  )),
+                  this.StartPolling(!1),
                   r)
             );
           } catch (e) {
@@ -8998,26 +8988,26 @@
     },
     95034: (e, t, r) => {
       "use strict";
-      r.d(t, { Bm: () => o, QD: () => l, f3: () => s, ip: () => c });
+      r.d(t, { Bm: () => a, QD: () => o, f3: () => s, ip: () => l });
       var i = r(90626),
         n = r(92757);
       function s(e, t) {
         let r;
-        "string" == typeof e
-          ? (r = e)
-          : "location" in e
-            ? (r = e.location.search)
-            : "search" in e && (r = e.search);
+        if ("string" == typeof e) r = e;
+        else if ("location" in e) r = e.location.search;
+        else {
+          if (!("search" in e)) return;
+          r = e.search;
+        }
         const i = new URLSearchParams(r.substring(1));
         if (i.has(t)) {
           const e = i.getAll(t);
           return e[e.length - 1];
         }
       }
-      const a = (e) => null != e;
-      function o(e, t, r, i = !1) {
+      function a(e, t, r, i = !1) {
         const n = new URLSearchParams(e.location.search.substring(1));
-        if (a(r)) {
+        if (null != r && null != r) {
           if (n.get(t) == r) return;
           n.set(t, r);
         } else {
@@ -9028,33 +9018,33 @@
           ? e.replace(`?${n.toString()}`, { ...e.location.state })
           : e.push(`?${n.toString()}`);
       }
-      function l(e, t) {
+      function o(e, t) {
         const r = (0, n.W6)(),
-          l = (0, n.zy)(),
-          c = (0, i.useMemo)(() => {
-            const r = s(l.search, e);
-            return a(r)
-              ? a(t)
+          o = (0, n.zy)(),
+          l = (0, i.useMemo)(() => {
+            const r = s(o.search, e);
+            return null != r && null != r
+              ? null != t && null != t
                 ? "boolean" == typeof t
                   ? t.constructor("false" !== r)
                   : t.constructor(r)
                 : r
               : t;
-          }, [l.search, e, t]),
-          u = (0, i.useCallback)(
+          }, [o.search, e, t]),
+          c = (0, i.useCallback)(
             (t, i = !1) => {
-              o(r, e, a(t) ? String(t) : null, i);
+              a(r, e, null != t && null != t ? String(t) : null, i);
             },
             [r, e],
           );
-        return [c, u];
+        return [l, c];
       }
-      function c(e, t, r = !1) {
+      function l(e, t, r = !1) {
         const i = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
             const r = t[e];
-            i.delete(e), a(r) && i.append(e, r);
+            i.delete(e), null != r && null != r && i.append(e, r);
           }
         r
           ? e.replace(`?${i.toString()}`, { ...e.location.state })

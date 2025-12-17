@@ -59098,6 +59098,20 @@
               ),
             ),
           ),
+          _.createElement(
+            "div",
+            {
+              className: _().SectionCtn,
+            },
+            _.createElement(_._, null, "Link"),
+            _.createElement(
+              "a",
+              {
+                href: `${_._.PARTNER_BASE_URL}admin/game/editbyappid/${_.GetID()}?activetab=tab_graphicalassets&base_assets=1`,
+              },
+              "Edit Advertising App",
+            ),
+          ),
         );
       }
       function _(_) {
@@ -87915,6 +87929,7 @@
             bPreferDemoStorePage: _,
             bShowPurchaseOptionsButton: _,
             bUseSubscriptionLayout: _,
+            bPreferAssetWithoutOverride: _,
           } = _,
           [_, _] = _.useState(!1),
           _ = () => _(!_),
@@ -87975,6 +87990,7 @@
                     _.createElement(_._, {
                       info: _,
                       imageType: "library",
+                      bPreferAssetWithoutOverride: _,
                     }),
                     _.createElement(_._, {
                       storeItem: _,
@@ -88120,6 +88136,7 @@
                   },
                   _.createElement(_._, {
                     info: _,
+                    bPreferAssetWithoutOverride: _,
                   }),
                   _.createElement(_._, {
                     storeItem: _,
@@ -88131,6 +88148,7 @@
               storeItem: _,
               bPurchaseOptionsExpanded: _,
               fnCollapseOptions: _,
+              bPreferAssetWithoutOverride: _,
             }),
           ),
         );
@@ -89680,6 +89698,8 @@
                   bPreferDemoStorePage: _.prefer_demo_store_page,
                   displayStyle: "library",
                   requestCompact: _,
+                  bPreferAssetWithoutOverride:
+                    _.prefer_assets_without_overrides,
                 })
               );
             }),
@@ -90005,6 +90025,7 @@
               type: _.type || "game",
               bShowDemoButton: !1,
               bLoadShortDescription: !1,
+              bPreferAssetWithoutOverride: !1,
             }),
           ),
         );
@@ -90753,6 +90774,7 @@
                         browseInfo: {
                           enable_search: !0,
                           show_as_demos: !1,
+                          prefer_assets_without_overrides: !1,
                           tabs: [
                             "popularpurchased",
                             "recentlyreleased",
@@ -109374,7 +109396,7 @@
           ? _.createElement(
               "a",
               {
-                href: (0, _._)(_.url),
+                href: (0, _._)(_.url, !0),
                 target: _._.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer",
               },

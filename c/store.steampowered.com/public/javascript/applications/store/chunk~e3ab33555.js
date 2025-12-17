@@ -1154,10 +1154,7 @@
                         ? _.get(_).push(_.group_id)
                         : _.set(_, [_.group_id]);
                     }),
-                    _.set(
-                      _.group_id,
-                      _.localized_session_title[_._.k_Lang_English],
-                    ))
+                    _.set(_.group_id, _.localized_session_title[0]))
                   : (_ = !0);
               }),
               [_, _, _]
@@ -1239,8 +1236,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = (0, _._)((_) => {
@@ -1267,7 +1262,7 @@
             [_, _] = (0, _._)(_);
           if (
             (_.useEffect(() => window.scrollTo(0, 0), [_, _]),
-            !_ && _.GetEventType() == _._.k_ECreatorHome)
+            !_ && 36 == _.GetEventType())
           )
             return _.createElement(_._, {
               eventModel: _,
@@ -1276,11 +1271,7 @@
             });
           const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative"),
             _ = (0, _._)(_, _._.k_eStoreUsersNewsHub, "allowRelative");
-          if (
-            !_.bLoaded ||
-            !_ ||
-            (_ && !_ && _ !== _._.k_EStoreItemCacheState_Unavailable)
-          )
+          if (!_.bLoaded || !_ || (_ && !_ && 2 !== _))
             return _.createElement(
               "div",
               {
@@ -1522,6 +1513,7 @@
                         _.createElement(_._, {
                           _: _.appid,
                           type: (0, _._)(_.GetAppType()),
+                          bPreferAssetWithoutOverride: !1,
                         }),
                       ),
                     ),
@@ -1697,7 +1689,7 @@
                     nOverrideEndTime: _,
                     nOverrideStartTime: _,
                   }),
-                  _ !== _._.k_ENewsEvent &&
+                  28 !== _ &&
                     _ < _ &&
                     _.createElement(
                       "div",
@@ -1779,6 +1771,7 @@
             },
             bHidePriceIfOwned: !0,
             bHideStatusBanners: !0,
+            bPreferAssetWithoutOverride: !1,
           }),
           _.createElement(
             "div",
@@ -2347,7 +2340,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_objApprovalPriviledge = null;
@@ -2370,7 +2362,7 @@
             const _ = await _().get(_, {
               withCredentials: !0,
             });
-            if (_?.data?.success == _._.k_EResultOK)
+            if (1 == _?.data?.success)
               return (
                 (this.m_objApprovalPriviledge = {
                   bHasAccess: _.data.bHasAccess,
@@ -2529,11 +2521,9 @@
                                   withCredentials: !0,
                                 });
                               (_ =
-                                _?.data?.success == _._.k_EResultOK ||
-                                _?.data?.success ==
-                                  _._.k_EResultDuplicateRequest),
-                                _?.data?.success ==
-                                  _._.k_EResultDuplicateRequest &&
+                                1 == _?.data?.success ||
+                                29 == _?.data?.success),
+                                29 == _?.data?.success &&
                                   console.warn(
                                     `RemoveEventFromSteamChinaButton: we receive duplicate request ${_.clanSteamID.GetAccountID()} : ${_.GID}; event is still removed from SC`,
                                   ),

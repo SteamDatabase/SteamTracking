@@ -36207,6 +36207,7 @@
             type: _,
             bShowDemoButton: 1 == (null == _ ? void 0 : _.GetAppType()),
             bAllowTwoLinesForHeader: !0,
+            bPreferAssetWithoutOverride: !1,
           }),
         );
       }
@@ -39803,6 +39804,7 @@
               bAutoFocus: _,
               fnOnClickOverride: _,
               bIsMarketingMessage: _,
+              bPreferAssetWithoutOverride: _,
             } = _,
             _ = (0, _._)(),
             _ = (0, _._)(),
@@ -39928,6 +39930,7 @@
                       _.createElement(_, {
                         info: _,
                         imageType: "header",
+                        bPreferAssetWithoutOverride: _,
                       }),
                       _.createElement(_._, {
                         storeItem: _,
@@ -40112,6 +40115,7 @@
                     },
                     _.createElement(_, {
                       info: _,
+                      bPreferAssetWithoutOverride: _,
                       imageType: "header",
                     }),
                   ),
@@ -40355,7 +40359,11 @@
         );
       };
       function _(_) {
-        const { info: _, imageType: __webpack_require__ } = _,
+        const {
+            info: _,
+            imageType: __webpack_require__,
+            bPreferAssetWithoutOverride: _,
+          } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), {
             include_assets: !0,
           });
@@ -40394,10 +40402,11 @@
         if ("library" === __webpack_require__)
           return _.createElement(_._, {
             info: _,
+            bPreferAssetWithoutOverride: _,
           });
         let _,
           _,
-          _ = (0, _._)(_, "header" === __webpack_require__),
+          _ = (0, _._)(_, "header" === __webpack_require__, _),
           _ = "";
         if ("main" === __webpack_require__)
           (_ = _().mainCapsuleImgWidth),
@@ -41463,6 +41472,7 @@
             storeItem: _,
             bPurchaseOptionsExpanded: __webpack_require__,
             fnCollapseOptions: _,
+            bPreferAssetWithoutOverride: _,
           } = _,
           _ = null == _ ? void 0 : _.GetAllPurchaseOptions(),
           _ = (0, _.useRef)(null);
@@ -41509,6 +41519,7 @@
                         _: _.packageid,
                         type: "sub",
                         bForceSmallCapsuleArt: !0,
+                        bPreferAssetWithoutOverride: _,
                       }),
                     ),
                   ),
@@ -42298,34 +42309,71 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        var _;
-        const { info: __webpack_require__, bPreferLibrary: _ } = _,
-          [_] = (0, _._)(
-            __webpack_require__._,
-            (0, _._)(__webpack_require__.type),
-            {
-              include_assets: !0,
-            },
-          ),
+        const {
+            info: _,
+            bPreferLibrary: __webpack_require__,
+            bPreferAssetWithoutOverride: _,
+          } = _,
+          [_] = (0, _._)(_._, (0, _._)(_.type), {
+            include_assets: !0,
+          }),
           [_, _] = _.useState(0);
         if (!_)
           return _.createElement("div", {
             className: _().HeroCapsuleImageContainer,
           });
-        let _ = _.GetAssets().GetHeroCapsuleURL(),
-          _ = _.GetAssets().GetLibraryCapsuleURL();
-        if (
-          (null === (_ = _.GetIncludedAppIDs()) || void 0 === _
-            ? void 0
-            : _.length) > 0 &&
-          !_
+        const { strStoreVerticalURL: _, strLibraryVerticalURL: _ } = (function (
+          _,
+          _,
         ) {
-          const _ = _._.Get().GetApp(_.GetIncludedAppIDs()[0]);
-          _ &&
-            (_ || (_ = _.GetAssets().GetHeroCapsuleURL()),
-            _ || (_ = _.GetAssets().GetLibraryCapsuleURL()));
-        }
-        if (_ && (!_ || !_))
+          var _, _, _, _, _;
+          let _ =
+              null === (_ = _.GetAssets()) || void 0 === _
+                ? void 0
+                : __webpack_require__.GetHeroCapsuleURL(),
+            _ =
+              null === (_ = _.GetAssets()) || void 0 === _
+                ? void 0
+                : _.GetLibraryCapsuleURL();
+          if (_) {
+            const _ = _.GetAssetsWithoutOverrides();
+            _ &&
+              ((_ = _.GetHeroCapsuleURL() || _),
+              (_ = _.GetLibraryCapsuleURL() || _));
+          }
+          if (
+            (null === (_ = _.GetIncludedAppIDs()) || void 0 === _
+              ? void 0
+              : _.length) > 0 &&
+            !_
+          ) {
+            const _ = _._.Get().GetApp(_.GetIncludedAppIDs()[0]);
+            if (_) {
+              if (_) {
+                const _ = __webpack_require__.GetAssetsWithoutOverrides();
+                _ &&
+                  (_ || (_ = _.GetHeroCapsuleURL()),
+                  _ || (_ = _.GetLibraryCapsuleURL()));
+              }
+              _ ||
+                (_ =
+                  null === (_ = __webpack_require__.GetAssets()) || void 0 === _
+                    ? void 0
+                    : _.GetHeroCapsuleURL()),
+                _ ||
+                  (_ =
+                    null === (_ = __webpack_require__.GetAssets()) ||
+                    void 0 === _
+                      ? void 0
+                      : _.GetLibraryCapsuleURL());
+            }
+          }
+          return {
+            strStoreVerticalURL: _,
+            strLibraryVerticalURL: _,
+          };
+        })(_, _);
+        if (_ && (!__webpack_require__ || !_))
           return _.createElement(
             "div",
             {
@@ -42339,7 +42387,7 @@
               className: _().CapsuleImage,
               alt: _.GetName(),
             }),
-            Boolean("dlc" == __webpack_require__.type) &&
+            Boolean("dlc" == _.type) &&
               _.createElement("img", {
                 className: _().CornerSash,
                 src: `${_._.MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png`,
@@ -42352,7 +42400,7 @@
               className: (0, _._)(
                 _().LibraryFallbackAssetImageContainer,
                 _().VerticalCapsule,
-                _ ? _().ForceLibrarySizing : "",
+                __webpack_require__ ? _().ForceLibrarySizing : "",
               ),
             },
             _.createElement("div", {
@@ -42367,7 +42415,7 @@
               alt: _.GetName(),
             }),
           );
-        const _ = _(_, !0),
+        const _ = _(_, !0, _),
           _ = _.length - 1,
           _ = (_) => {
             const _ = _.indexOf(_);
@@ -42399,21 +42447,22 @@
           className: _().HeroCapsuleImageContainer,
         });
       }
-      function _(_, _) {
+      function _(_, _, _) {
         let _ = [];
-        return (
-          _.GetAssets() &&
-            (_
-              ? __webpack_require__.push(
-                  _.GetAssets().GetHeaderURL(),
-                  _.GetAssets().GetMainCapsuleURL(),
-                )
-              : __webpack_require__.push(
-                  _.GetAssets().GetMainCapsuleURL(),
-                  _.GetAssets().GetHeaderURL(),
-                )),
-          __webpack_require__.filter((_) => !!_)
-        );
+        const _ = _.GetAssets();
+        if (_) {
+          if (_) {
+            const _ = _.GetAssetsWithoutOverrides();
+            _ && _(_, _, _);
+          }
+          _(_, _, _);
+        }
+        return _.filter((_) => !!_);
+      }
+      function _(_, _, _) {
+        _
+          ? _.push(_.GetHeaderURL(), _.GetMainCapsuleURL())
+          : _.push(_.GetMainCapsuleURL(), _.GetHeaderURL());
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -45885,18 +45934,27 @@
               __webpack_require__,
             ];
           })(_, _),
-          _ = (function () {
-            let _ = _.useCallback((_) => {
+          _ = (0, _._)((_) => {
+            if (!_) return;
+            let _ = (_) => {
                 _.stopPropagation();
-              }, []),
-              _ = _.useCallback((_) => {
+              },
+              _ = (_) => {
                 _.stopPropagation();
-              }, []);
-            return {
-              onTouchStart: _,
-              onTouchEnd: _,
-            };
-          })();
+              };
+            return (
+              _.addEventListener("touchstart", _, {
+                passive: !1,
+              }),
+              _.addEventListener("touchend", _, {
+                passive: !1,
+              }),
+              () => {
+                _.removeEventListener("touchstart", _),
+                  _.removeEventListener("touchend", _);
+              }
+            );
+          }, []);
         _() && (_ = null);
         let _ = (function (_) {
           return _.useCallback(
@@ -45927,6 +45985,7 @@
         return _.createElement(
           "div",
           {
+            ref: _,
             className: _,
             "data-keepcontrols": !!_,
             onClick: _,
@@ -45934,7 +45993,6 @@
             onPointerLeave: _.onPointerLeave,
             onPointerDown: _.onPointerDown,
             onLostPointerCapture: _.onLostPointerCapture,
-            ..._,
           },
           _.createElement(
             "div",

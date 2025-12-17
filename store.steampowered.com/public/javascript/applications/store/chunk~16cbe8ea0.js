@@ -8750,8 +8750,8 @@
           r.e(6597),
           r.e(7937),
           r.e(2797),
-          r.e(7436),
           r.e(7403),
+          r.e(7436),
           r.e(9214),
           r.e(4796),
           r.e(9063),
@@ -13242,8 +13242,8 @@
             r.e(6597),
             r.e(7937),
             r.e(2797),
-            r.e(7436),
             r.e(7403),
+            r.e(7436),
             r.e(9214),
             r.e(4796),
             r.e(9063),
@@ -14449,6 +14449,7 @@
             type: g,
             bShowDemoButton: 1 == _?.GetAppType(),
             bAllowTwoLinesForHeader: !0,
+            bPreferAssetWithoutOverride: !1,
           }),
         );
       }
@@ -15911,7 +15912,7 @@
           ? i.createElement(
               "a",
               {
-                href: (0, u.NT)(t.url),
+                href: (0, u.NT)(t.url, !0),
                 target: d.TS.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer",
               },

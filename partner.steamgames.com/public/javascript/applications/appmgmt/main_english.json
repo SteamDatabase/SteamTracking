@@ -2099,6 +2099,7 @@
     "SteamLearn_Config_DataSource_Input_Preprocess_TableFullSample": "Large Sample",
     "SteamLearn_Config_DataSource_Input_Preprocess_TableCount": "Maximum table count",
     "SteamLearn_Config_DataSource_Input_Preprocess_UsesOtherProject": "Uses Other Project",
+    "SteamLearn_Config_DataSource_Input_Preprocess_DropoutPct": "Dropout Percent",
     "SteamLearn_Config_DataSource_Input_Preprocess_OtherProjectID": "Other Project ID",
     "SteamLearn_Config_DataSource_Input_Preprocess_OtherFetchID": "Other Fetch ID",
     "SteamLearn_Config_DataSource_Input_Explode": "Explode",

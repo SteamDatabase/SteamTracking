@@ -7072,6 +7072,7 @@
         ["el", "greek"],
         ["uk", "ukrainian"],
         ["vn", "vietnamese"],
+        ["vi", "vietnamese"],
         ["id", "indonesian"],
       ]);
       const _ = new Map();
@@ -26323,7 +26324,8 @@
           : !(!_(_) || !_(_)) ||
               (!_(_) &&
                 !_(_) &&
-                _.label === _.label &&
+                typeof _.label == typeof _.label &&
+                  ("string" != typeof _.label || _.label === _.label) &&
                   _.tooltip === _.tooltip &&
                     _(_) == _(_) &&
                       !(_(_) && _(_) && !_(_.options, _.options)) &&
@@ -26457,7 +26459,7 @@
           );
           const _ = !_(_.rgOptions, this.props.rgOptions),
             _ = _.selectedOption !== this.props.selectedOption,
-            _ = this.value !== _.value;
+            _ = !_(this.value, _.value);
           !this.props.controlled &&
             (_ || _ || _) &&
             (_ || null == this.value
@@ -30359,21 +30361,21 @@
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         let _;
-        "string" == typeof _
-          ? (_ = _)
-          : "location" in _
-            ? (_ = _.location.search)
-            : "search" in _ && (_ = _.search);
+        if ("string" == typeof _) _ = _;
+        else if ("location" in _) _ = _.location.search;
+        else {
+          if (!("search" in _)) return;
+          _ = _.search;
+        }
         const _ = new URLSearchParams(__webpack_require__.substring("chunkid"));
         if (_.has(_)) {
           const _ = _.getAll(_);
           return _[_.length - 1];
         }
       }
-      const _ = (_) => null != _;
       function _(_, _, _, _ = !1) {
         const _ = new URLSearchParams(_.location.search.substring(1));
-        if (_(_)) {
+        if (null != _ && null != _) {
           if (_.get(_) == _) return;
           _.set(_, _);
         } else {
@@ -30391,8 +30393,8 @@
           _ = (0, _._)(),
           _ = (0, _.useMemo)(() => {
             const _ = _(_.search, _);
-            return _(_)
-              ? _(_)
+            return null != _ && null != _
+              ? null != _ && null != _
                 ? "boolean" == typeof _
                   ? _.constructor("false" !== _)
                   : _.constructor(_)
@@ -30401,7 +30403,7 @@
           }, [_.search, _, _]),
           _ = (0, _.useCallback)(
             (_, _ = !1) => {
-              _(_, _, _(_) ? String(_) : null, _);
+              _(_, _, null != _ && null != _ ? String(_) : null, _);
             },
             [_, _],
           );
@@ -30412,7 +30414,7 @@
         for (const _ in _)
           if (_.hasOwnProperty(_)) {
             const _ = _[_];
-            _.delete(_), _(_) && _.append(_, _);
+            _.delete(_), null != _ && null != _ && _.append(_, _);
           }
         _
           ? _.replace(`?${_.toString()}`, {
@@ -40777,11 +40779,11 @@
       function _() {
         return `${_._.HELP_BASE_URL}${(0, _._)()}/`;
       }
-      function _(_) {
+      function _(_, _) {
         return (
           _._.IN_STEAMUI &&
             !_.startsWith("steam://") &&
-            (_ = `steam://openurl/${_}`),
+            (_ = _ ? `steam://openurl_external/${_}` : `steam://openurl/${_}`),
           _
         );
       }

@@ -14286,6 +14286,7 @@
                         d.createElement(z.pb, {
                           id: t.appid,
                           type: (0, i.U)(h.GetAppType()),
+                          bPreferAssetWithoutOverride: !1,
                         }),
                       ),
                     ),
@@ -14482,6 +14483,7 @@
             capsule: { id: t, type: "game" },
             bHidePriceIfOwned: !0,
             bHideStatusBanners: !0,
+            bPreferAssetWithoutOverride: !1,
           }),
           d.createElement(
             "div",
@@ -15998,11 +16000,11 @@
         se = a(9154),
         oe = a(738),
         le = a(48479),
-        ce = a(56011),
-        de = a(30294),
-        ue = a(91254),
-        me = a(64046),
-        _e = a(95695),
+        ce = a(30294),
+        de = a(91254),
+        ue = a(64046),
+        me = a(95695),
+        _e = a(56011),
         pe = a(13447),
         ge = a.n(pe),
         ve = a(32190),
@@ -16051,7 +16053,7 @@
             eventModel: s,
             clanSteamID: s.clanSteamID,
             closeModal: t,
-            partnerEventStore: ue.O3,
+            partnerEventStore: de.O3,
             artworkType: "localized_background_art",
             realms: h,
             loc_images: S,
@@ -16121,7 +16123,7 @@
                           color: null != u ? u : "",
                           setColor: (e) => l({ ...o, background_color1: e }),
                         }),
-                        null !== (t = (0, ce.uX)(e)) && void 0 !== t
+                        null !== (t = (0, _e.uX)(e)) && void 0 !== t
                           ? t
                           : window,
                       );
@@ -16168,7 +16170,7 @@
                             color: null != _ ? _ : "",
                             setColor: (e) => l({ ...o, background_color2: e }),
                           }),
-                          null !== (t = (0, ce.uX)(e)) && void 0 !== t
+                          null !== (t = (0, _e.uX)(e)) && void 0 !== t
                             ? t
                             : window,
                         );
@@ -16206,7 +16208,7 @@
             closeModal: t,
             onOK: () => n(i),
           },
-          r.createElement(me.s, { onChange: (e) => s(e), color: i }),
+          r.createElement(ue.s, { onChange: (e) => s(e), color: i }),
         );
       }
       function we(e) {
@@ -16243,7 +16245,7 @@
             n || (0, p.we)("#BackgroundGroups_Scaling"),
           ),
           r.createElement(ie.m, {
-            strDropDownClassName: _e.DropDownScroll,
+            strDropDownClassName: me.DropDownScroll,
             disabled: i,
             rgOptions: s,
             selectedOption: t || "cover",
@@ -16282,7 +16284,7 @@
             n || (0, p.we)("#EventEditor_ColorSetting_Title"),
           ),
           r.createElement(ie.m, {
-            strDropDownClassName: _e.DropDownScroll,
+            strDropDownClassName: me.DropDownScroll,
             rgOptions: i,
             selectedOption: t || "top-to-bottom",
             onChange: (e) => a(e.data),
@@ -16328,7 +16330,7 @@
             n || (0, p.we)("#BackgroundGroups_Position"),
           ),
           r.createElement(ie.m, {
-            strDropDownClassName: _e.DropDownScroll,
+            strDropDownClassName: me.DropDownScroll,
             rgOptions: i,
             selectedOption: t || "unset",
             onChange: (e) => a(e.data),
@@ -16344,7 +16346,8 @@
             fnSetBackgroundImgGroupEditMode: i,
           } = e,
           [s, o] = (0, r.useState)(t.BIsBackgroundImageEnabled()),
-          l = (0, n.q3)(() => t.GetSalePageLastCoverSectionUntilEnd());
+          [l, c, u] = (0, g.uD)(),
+          m = (0, n.q3)(() => t.GetSalePageLastCoverSectionUntilEnd());
         return r.createElement(
           "div",
           { className: ge().Ctn },
@@ -16371,31 +16374,29 @@
                   r.createElement(ie.Yh, {
                     label: (0, p.we)("#BackgroundGroups_ExtendToEnd"),
                     tooltip: (0, p.we)("#BackgroundGroups_ExtendToEnd_ttip"),
-                    checked: l,
+                    checked: m,
                     onChange: (e) => t.SetSalePageLastCoverSectionUntilEnd(e),
                   }),
                   r.createElement("hr", null),
                   r.createElement(
                     ie.$n,
-                    {
-                      onClick: (e) =>
-                        (0, oe.pg)(
-                          r.createElement(se.o0, {
-                            strTitle: (0, p.we)(
-                              "#EventEditor_GenericAreYouSure",
-                            ),
-                            strDescription: (0, p.we)(
-                              "#BackgroundGroups_ClearAllSettings_Desc",
-                            ),
-                            bDestructiveWarning: !0,
-                            onOK: () => {
-                              t.ClearAllBackgroundImageGroupSettings(), o(!1);
-                            },
-                          }),
-                          (0, ce.uX)(e),
-                        ),
-                    },
+                    { onClick: c },
                     (0, p.we)("#BackgroundGroups_ClearAllSettings"),
+                  ),
+                  r.createElement(
+                    se.EN,
+                    { active: l },
+                    r.createElement(se.o0, {
+                      strTitle: (0, p.we)("#EventEditor_GenericAreYouSure"),
+                      strDescription: (0, p.we)(
+                        "#BackgroundGroups_ClearAllSettings_Desc",
+                      ),
+                      bDestructiveWarning: !0,
+                      onOK: () => {
+                        t.ClearAllBackgroundImageGroupSettings(), o(!1);
+                      },
+                      closeModal: u,
+                    }),
                   ),
                 )
               : r.createElement("p", null, (0, p.we)("#BackgroundGroups_Desc")),
@@ -16420,47 +16421,51 @@
             eventModel: l,
             nTabIndex: c,
           } = e,
-          d = c >= 0,
-          u = (0, _.E)(),
-          [m, g, v, h] = (0, n.q3)(() => {
+          d = (0, _.E)(),
+          [u, m, v, h] = (0, n.q3)(() => {
             var e, t;
             return [
-              a.mapGroupToSections.get(o.background_id),
+              a.mapGroupToSections.get(null == o ? void 0 : o.background_id),
               null !==
                 (t =
-                  null === (e = a.mapGroupToSections.get(o.background_id)) ||
-                  void 0 === e
+                  null ===
+                    (e = a.mapGroupToSections.get(
+                      null == o ? void 0 : o.background_id,
+                    )) || void 0 === e
                     ? void 0
                     : e.sectionUniqueIDs) && void 0 !== t
                 ? t
                 : [],
-              d
+              null != c
                 ? i.GetTabLastCoverSectionUntilEnd(c)
                 : i.GetSalePageLastCoverSectionUntilEnd(),
-              d ? i.GetTabGroupCount(c) : i.GetSalePageGroupCount(),
+              null != c ? i.GetTabGroupCount(c) : i.GetSalePageGroupCount(),
             ];
           }),
-          S = v && s + 1 === h;
-        let y = null;
-        (null == m ? void 0 : m.nUniqueIDNextSaleSection) &&
-          (y = (0, de.h_)(
-            2,
-            i.GetSaleSectionByID(
-              null == m ? void 0 : m.nUniqueIDNextSaleSection,
-            ),
-            u,
-            l,
-            m.nSaleSectionLastIndex + 1,
-          ));
-        let E = null;
-        if ((null == g ? void 0 : g.length) > 1) {
-          const e = g[g.length - 1];
-          E = (0, de.h_)(
+          S = v && s + 1 === h,
+          [y, E, b] = (0, g.uD)(),
+          [f, w, C] = (0, g.uD)();
+        let B, T;
+        if (
+          ((null == u ? void 0 : u.nUniqueIDNextSaleSection) &&
+            (B = (0, ce.h_)(
+              2,
+              i.GetSaleSectionByID(
+                null == u ? void 0 : u.nUniqueIDNextSaleSection,
+              ),
+              d,
+              l,
+              u.nSaleSectionLastIndex + 1,
+            )),
+          u && (null == m ? void 0 : m.length) > 1)
+        ) {
+          const e = m[m.length - 1];
+          T = (0, ce.h_)(
             2,
             i.GetSaleSectionByID(e),
-            u,
+            d,
             l,
-            m.nSaleSectionLastIndex,
+            u.nSaleSectionLastIndex,
           );
         }
         return r.createElement(
@@ -16468,7 +16473,7 @@
           {
             bStartMinimized: !1,
             title: (0, p.we)(
-              c >= 0
+              null != c
                 ? "#BackgroundGroups_Sale_Tab_GroupNum"
                 : "#BackgroundGroups_Sale_GroupNum",
               s + 1,
@@ -16480,21 +16485,21 @@
             { ref: t },
             r.createElement(
               ie.$n,
-              {
-                onClick: (e) =>
-                  (0, oe.pg)(
-                    r.createElement(be, {
-                      imgGroup: o,
-                      eventModel: l,
-                      fnUpdateImageGroup: (e) =>
-                        d
-                          ? i.SetTabBackgroundGroup(c, s, e)
-                          : i.SetSalePageBackgroundGroup(s, e),
-                    }),
-                    (0, ce.uX)(e),
-                  ),
-              },
+              { onClick: E },
               (0, p.we)("#BackgroundGroups_Configure"),
+            ),
+            r.createElement(
+              se.EN,
+              { active: y },
+              r.createElement(be, {
+                imgGroup: o,
+                closeModal: b,
+                eventModel: l,
+                fnUpdateImageGroup: (e) =>
+                  null != c
+                    ? i.SetTabBackgroundGroup(c, s, e)
+                    : i.SetSalePageBackgroundGroup(s, e),
+              }),
             ),
             r.createElement("br", null),
             r.createElement(
@@ -16505,14 +16510,14 @@
             r.createElement(
               "ul",
               null,
-              g.map((e) =>
+              m.map((e) =>
                 r.createElement(
                   "li",
                   { key: "li_" + e },
-                  (0, de.h_)(
+                  (0, ce.h_)(
                     3,
                     i.GetSaleSectionByID(e),
-                    u,
+                    d,
                     l,
                     i.GetSaleSectionIndexByID(e),
                   ),
@@ -16525,12 +16530,12 @@
                   (0, p.we)("#BackgroundGroups_EndOfList"),
                 ),
             ),
-            Boolean(E) &&
+            !!T &&
               r.createElement(
                 ie.$n,
                 {
                   onClick: () =>
-                    d
+                    null != c
                       ? i.SetTabBackgroundGroup(c, s, {
                           ...o,
                           num_sections: o.num_sections - 1,
@@ -16540,14 +16545,14 @@
                           num_sections: o.num_sections - 1,
                         }),
                 },
-                (0, p.we)("#BackgroundGroups_Reduce", E),
+                (0, p.we)("#BackgroundGroups_Reduce", T),
               ),
-            Boolean(y) &&
+            !!B &&
               r.createElement(
                 ie.$n,
                 {
                   onClick: () =>
-                    d
+                    null != c
                       ? i.SetTabBackgroundGroup(c, s, {
                           ...o,
                           num_sections: o.num_sections + 1,
@@ -16557,7 +16562,7 @@
                           num_sections: o.num_sections + 1,
                         }),
                 },
-                (0, p.we)("#BackgroundGroups_Extend", y),
+                (0, p.we)("#BackgroundGroups_Extend", B),
               ),
             Boolean(s > 0) &&
               r.createElement(
@@ -16566,31 +16571,31 @@
                 r.createElement("hr", null),
                 r.createElement(
                   ie.$n,
-                  {
-                    onClick: (e) =>
-                      (0, oe.pg)(
-                        r.createElement(se.o0, {
-                          strTitle: (0, p.we)("#Dialog_AreYouSure"),
-                          bDestructiveWarning: !0,
-                          strDescription: (0, p.we)(
-                            "#BackgroundGroups_RemoveThisGroup_Desc",
-                          ),
-                          onOK: () =>
-                            d
-                              ? i.RemoveTabBackgroundGroup(c, s)
-                              : i.RemoveSalePageBackgroundGroup(s),
-                        }),
-                        (0, ce.uX)(e),
-                      ),
-                  },
+                  { onClick: w },
                   (0, p.we)("#BackgroundGroups_RemoveThisGroup"),
+                ),
+                r.createElement(
+                  se.EN,
+                  { active: f },
+                  r.createElement(se.o0, {
+                    strTitle: (0, p.we)("#Dialog_AreYouSure"),
+                    bDestructiveWarning: !0,
+                    strDescription: (0, p.we)(
+                      "#BackgroundGroups_RemoveThisGroup_Desc",
+                    ),
+                    onOK: () =>
+                      null != c
+                        ? i.RemoveTabBackgroundGroup(c, s)
+                        : i.RemoveSalePageBackgroundGroup(s),
+                    closeModal: C,
+                  }),
                 ),
               ),
           ),
         );
       });
       function Me(e) {
-        const { backgroundImageEditModel: t, nLastSectionID: a, nTabID: n } = e;
+        const { backgroundImageEditModel: t, nTabID: a } = e;
         return r.createElement(
           "div",
           { className: ge().CtnEditor },
@@ -16598,12 +16603,12 @@
             ie.$n,
             {
               onClick: (e) =>
-                n >= 0
-                  ? t.AddTabBackgroundGroup(n)
+                a && a >= 0
+                  ? t.AddTabBackgroundGroup(a)
                   : t.AddSalePageBackgroundGroup(),
             },
             (0, p.we)(
-              n >= 0
+              a && a >= 0
                 ? "#BackgroundGroups_AddNewGroupTab"
                 : "#BackgroundGroups_AddNewGroup",
             ),
@@ -16620,11 +16625,7 @@
           s = n.mapFirstSectionToGroup.get(a);
         return a == n.nFirstSaleSectionIDWithoutGroup ||
           a == n.nFirstTabSectionIDWithoutGroup
-          ? r.createElement(Me, {
-              backgroundImageEditModel: i,
-              nLastSectionID: a,
-              nTabID: t,
-            })
+          ? r.createElement(Me, { backgroundImageEditModel: i, nTabID: t })
           : s
             ? r.createElement(De, { ...e, groupID: s })
             : null;
@@ -21785,6 +21786,7 @@
             key: Je(t),
             capsule: e,
             imageType: "header",
+            bPreferAssetWithoutOverride: !1,
           });
         }
         return null;
@@ -29365,6 +29367,8 @@
                         void 0 === a
                           ? void 0
                           : a.height,
+                      bPreferAssetWithoutOverride:
+                        !!e.section.prefer_assets_without_overrides,
                     }),
                     T < 28 &&
                       n.createElement(
@@ -29407,6 +29411,8 @@
                     void 0 === s
                       ? void 0
                       : s.height,
+                  bPreferAssetWithoutOverride:
+                    !!e.section.prefer_assets_without_overrides,
                 }),
               )
         );
@@ -29422,12 +29428,12 @@
           { className: zi().AppList },
           null == a
             ? void 0
-            : a.map((e) =>
+            : a.map((t) =>
                 n.createElement(
                   "div",
-                  { key: e, className: zi().AppListEntry },
+                  { key: t, className: zi().AppListEntry },
                   n.createElement(ke.W, {
-                    capsule: { id: e },
+                    capsule: { id: t },
                     imageType: "main",
                     nWidthMultiplier: 2,
                     bShowName: !1,
@@ -29435,6 +29441,7 @@
                     bHidePrice: !0,
                     bShowIgnoreButton: !0,
                     bShowDescriptionInHover: !0,
+                    bPreferAssetWithoutOverride: e.bPreferAssetWithoutOverride,
                   }),
                 ),
               ),
@@ -29516,6 +29523,7 @@
               maxGamesInBlock: r,
               height: e.height,
               isSmallDay: (s.includes(t) && !l) || (o.includes(t) && !c),
+              bPreferAssetWithoutOverride: e.bPreferAssetWithoutOverride,
             });
           }),
         );
@@ -29594,12 +29602,12 @@
             { className: zi().GameList },
             null == i
               ? void 0
-              : i.map((e) =>
+              : i.map((t) =>
                   n.createElement(
                     "div",
-                    { key: e, className: zi().CalendarAppEntry },
+                    { key: t, className: zi().CalendarAppEntry },
                     n.createElement(ke.W, {
-                      capsule: { id: e },
+                      capsule: { id: t },
                       imageType: s,
                       nWidthMultiplier: 2,
                       bShowName: !1,
@@ -29607,6 +29615,8 @@
                       bHidePrice: !0,
                       bShowIgnoreButton: !0,
                       bShowDescriptionInHover: !0,
+                      bPreferAssetWithoutOverride:
+                        e.bPreferAssetWithoutOverride,
                     }),
                   ),
                 ),
@@ -30773,6 +30783,8 @@
                   bPreferDemoStorePage: t.prefer_demo_store_page,
                   displayStyle: "library",
                   requestCompact: c,
+                  bPreferAssetWithoutOverride:
+                    t.prefer_assets_without_overrides,
                 })
               );
             }),
@@ -32333,6 +32345,8 @@
                         e.show_as_demos ||
                         (null == a ? void 0 : a.BFilterRequiresFeatureDemo()),
                       bPreferDemoStorePage: e.prefer_demo_store_page,
+                      bPreferAssetWithoutOverride:
+                        e.prefer_assets_without_overrides,
                       rgFutureCalendarItems:
                         this.cachedUpcomingCalenderEvents.rgCalendarItems
                           .slice()
@@ -32589,25 +32603,27 @@
           bShowDemoButton: a,
           bPreferDemoStorePage: r,
           rgFutureCalendarItems: i,
+          bPreferAssetWithoutOverride: s,
         } = e;
         return n.createElement(
           "div",
           { className: (0, y.A)(eo().SaleSchedGridCtn) },
           t.map((e) => {
             const t = Na.O3.GetClanEventModel(e),
-              s = i.find((t) => t.unique_id == e);
-            if (!s) return null;
-            const o = bo(t);
-            if (o && B.A.Get().GetApp(o)) {
-              const t = { id: o, type: "game" };
+              o = i.find((t) => t.unique_id == e);
+            if (!o) return null;
+            const l = bo(t);
+            if (l && B.A.Get().GetApp(l)) {
+              const t = { id: l, type: "game" };
               return n.createElement(ke.W, {
                 key: "schedule_grid_" + e,
                 capsule: t,
                 imageType: "main",
                 bShowDemoButton: a,
                 bPreferDemoStorePage: r,
+                bPreferAssetWithoutOverride: s,
                 elElementToAppendToHover: n.createElement(ro, {
-                  item: s,
+                  item: o,
                   bMiniMode: !0,
                 }),
               });
@@ -32615,7 +32631,7 @@
             return n.createElement(Mo, {
               key: "schedule_grid_" + e,
               event: t,
-              eventCalendarItem: s,
+              eventCalendarItem: o,
             });
           }),
         );
@@ -35286,6 +35302,8 @@
                     bHidePrice: c.hide_prices,
                     bShowDeckCompatibilityDialog:
                       c.show_deck_compability_details,
+                    bPreferAssetWithoutOverride:
+                      !!c.prefer_assets_without_overrides,
                   })
                 : (0, _.ss)(
                     c.unique_id,
@@ -35312,6 +35330,8 @@
                                 capsule: e,
                                 imageType: "header",
                                 bShowParentApp: P,
+                                bPreferAssetWithoutOverride:
+                                  !!c.prefer_assets_without_overrides,
                               }),
                             ),
                         }))) || [],

@@ -231,22 +231,6 @@ enum EAppAllowDownloadsWhileRunningBehavior
 	k_EAppAllowDownloadsWhileRunningBehaviorNeverAllow = 2;
 }
 
-enum EAppAntiCheatType
-{
-	k_EAppAntiCheatTypeNone = 0;
-	k_EAppAntiCheatTypeEasyAC = 1;
-	k_EAppAntiCheatTypeDenuvo = 2;
-	k_EAppAntiCheatTypeBattlEye = 3;
-	k_EAppAntiCheatTypeXignCode = 4;
-	k_EAppAntiCheatTypePunkBuster = 5;
-	k_EAppAntiCheatTypeVAC = 6;
-	k_EAppAntiCheatTypeGameGuard = 7;
-	k_EAppAntiCheatTypeHackShield = 8;
-	k_EAppAntiCheatTypeAntiCheatExpert = 9;
-	k_EAppAntiCheatTypeOther = 10;
-	k_EAppAntiCheatTypeSard = 11;
-}
-
 enum EAppAutoUpdateBehavior
 {
 	k_EAppAutoUpdateBehaviorUseGlobal = 0;
@@ -265,23 +249,6 @@ enum EAppCapability
 	k_EAppCapabilityEligibleForUpcomingList = 5;
 	k_EAppCapabilityVettedForShowcaseItems = 6;
 	k_EAppCapabilityFishy = 7;
-}
-
-enum EAppContentDetectionType
-{
-	k_EAppContentDetectionType_None = 0;
-	k_EAppContentDetectionType_AntiCheat = 1;
-	k_EAppContentDetectionType_GameEngine = 2;
-}
-
-enum EAppContentPurge
-{
-	k_EAppContentPurgeInvalidStatus = 0;
-	k_EAppContentPurgeNotRequested = 1;
-	k_EAppContentPurgeRequested = 2;
-	k_EAppContentPurgeConfirmedInProgress = 3;
-	k_EAppContentPurgeComplete = 4;
-	k_EAppContentPurgeError = 5;
 }
 
 enum EAppCreationCreditStatus
@@ -309,33 +276,6 @@ enum EAppDevsRelationship
 	k_EAppDevsRelationship_LinuxPortDeveloper = 5;
 	k_EAppDevsRelationship_Franchise = 6;
 	k_EAppDevsRelationship_MAX = 7;
-}
-
-enum EAppGameEngineType
-{
-	k_EAppGameEngineTypeNone = 0;
-	k_EAppGameEngineTypeUnreal = 1;
-	k_EAppGameEngineTypeUnity = 2;
-	k_EAppGameEngineTypeGodot = 3;
-	k_EAppGameEngineTypeGameMaker = 4;
-	k_EAppGameEngineTypeRPGMaker = 5;
-	k_EAppGameEngineTypePyGame = 6;
-	k_EAppGameEngineTypeRenPy = 7;
-	k_EAppGameEngineTypeXNA = 8;
-	k_EAppGameEngineTypeCocos = 9;
-	k_EAppGameEngineTypeAdobeAIR = 10;
-	k_EAppGameEngineTypeMonoGame = 11;
-	k_EAppGameEngineTypeKiriKiri = 12;
-	k_EAppGameEngineTypeConstruct = 13;
-	k_EAppGameEngineTypeClickTeamFusion = 14;
-	k_EAppGameEngineTypeChoiceScript = 15;
-	k_EAppGameEngineTypeGameGuru = 16;
-	k_EAppGameEngineTypeTyranoBuilder = 17;
-	k_EAppGameEngineTypeAdventureGameStudio = 18;
-	k_EAppGameEngineTypeSource = 19;
-	k_EAppGameEngineTypeCryEngine = 20;
-	k_EAppGameEngineTypeidTech = 21;
-	k_EAppGameEngineTypeSource2 = 22;
 }
 
 enum EAppOwnershipFlags
@@ -2689,13 +2629,6 @@ enum UnnamedEnum082dd12e6086021e
 	Neutral = 0;
 	Up = 1;
 	Down = 2;
-}
-
-enum UnnamedEnum0850cb4878ffd690
-{
-	Image = 0;
-	Micro = 1;
-	Full = 2;
 }
 
 enum UnnamedEnum08a7599cef1b51d6

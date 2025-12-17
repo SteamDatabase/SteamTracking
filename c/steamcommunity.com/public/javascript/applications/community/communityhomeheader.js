@@ -127,9 +127,10 @@
             if (_.length)
               return {
                 isLoading:
+                  1 ===
                   (0, _._)(_, {
                     include_assets: !0,
-                  }) === _._.k_EStoreItemCacheState_Loading,
+                  }),
                 data: {
                   personalAppIds: _,
                   popularAppIds: _,
@@ -466,21 +467,21 @@
         _ = __webpack_require__("chunkid");
       function _(_, _) {
         let _;
-        "string" == typeof _
-          ? (_ = _)
-          : "location" in _
-            ? (_ = _.location.search)
-            : "search" in _ && (_ = _.search);
+        if ("string" == typeof _) _ = _;
+        else if ("location" in _) _ = _.location.search;
+        else {
+          if (!("search" in _)) return;
+          _ = _.search;
+        }
         const _ = new URLSearchParams(__webpack_require__.substring("chunkid"));
         if (_.has(_)) {
           const _ = _.getAll(_);
           return _[_.length - 1];
         }
       }
-      const _ = (_) => null != _;
       function _(_, _, _, _ = !1) {
         const _ = new URLSearchParams(_.location.search.substring(1));
-        if (_(_)) {
+        if (null != _ && null != _) {
           if (_.get(_) == _) return;
           _.set(_, _);
         } else {
@@ -498,8 +499,8 @@
           _ = (0, _._)(),
           _ = (0, _.useMemo)(() => {
             const _ = _(_.search, _);
-            return _(_)
-              ? _(_)
+            return null != _ && null != _
+              ? null != _ && null != _
                 ? "boolean" == typeof _
                   ? _.constructor("false" !== _)
                   : _.constructor(_)
@@ -508,7 +509,7 @@
           }, [_.search, _, _]),
           _ = (0, _.useCallback)(
             (_, _ = !1) => {
-              _(_, _, _(_) ? String(_) : null, _);
+              _(_, _, null != _ && null != _ ? String(_) : null, _);
             },
             [_, _],
           );
@@ -519,7 +520,7 @@
         for (const _ in _)
           if (_.hasOwnProperty(_)) {
             const _ = _[_];
-            _.delete(_), _(_) && _.append(_, _);
+            _.delete(_), null != _ && null != _ && _.append(_, _);
           }
         _
           ? _.replace(`?${_.toString()}`, {

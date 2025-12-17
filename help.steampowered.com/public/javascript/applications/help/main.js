@@ -6160,6 +6160,7 @@
         ["el", "greek"],
         ["uk", "ukrainian"],
         ["vn", "vietnamese"],
+        ["vi", "vietnamese"],
         ["id", "indonesian"],
       ]);
       const lt = new Map();
@@ -9842,7 +9843,8 @@
           : !(!Pi(e) || !Pi(t)) ||
               (!Pi(e) &&
                 !Pi(t) &&
-                e.label === t.label &&
+                typeof e.label == typeof t.label &&
+                  ("string" != typeof e.label || e.label === t.label) &&
                   e.tooltip === t.tooltip &&
                     Li(e) == Li(t) &&
                       !(Li(e) && Li(t) && !qi(e.options, t.options)) &&
@@ -9956,7 +9958,7 @@
           );
           const r = !qi(e.rgOptions, this.props.rgOptions),
             i = e.selectedOption !== this.props.selectedOption,
-            n = this.value !== t.value;
+            n = !Ni(this.value, t.value);
           !this.props.controlled &&
             (r || n || i) &&
             (i || null == this.value
@@ -19520,7 +19522,9 @@
                 "all_upcoming",
                 "discounted",
               ],
+              prefer_assets_without_overrides: !1,
             },
+            prefer_assets_without_overrides: !1,
             enable_faceted_browsing:
               (jl.pF.GetCreatorHome(this.clanSteamID)?.GetAppIDList().length ??
                 0) >= 7,
@@ -21722,11 +21726,12 @@
       }
       function im(e, t) {
         let r;
-        "string" == typeof e
-          ? (r = e)
-          : "location" in e
-            ? (r = e.location.search)
-            : "search" in e && (r = e.search);
+        if ("string" == typeof e) r = e;
+        else if ("location" in e) r = e.location.search;
+        else {
+          if (!("search" in e)) return;
+          r = e.search;
+        }
         const i = new URLSearchParams(r.substring(1));
         if (i.has(t)) {
           const e = i.getAll(t);
@@ -25455,14 +25460,7 @@
                   ),
                   2 === e || 3 === e)
                 )
-                  return (
-                    this.m_transport.MakeReady(),
-                    window.setTimeout(
-                      this.PollForUpdate,
-                      this.m_msPollInterval,
-                    ),
-                    1
-                  );
+                  return this.m_transport.MakeReady(), this.StartPolling(!1), 1;
               }
               if (9 === r || 27 === r) this.m_eFailureState = mm.Expired;
               else if (84 === r) this.m_eFailureState = mm.RateLimitExceeded;
@@ -25504,10 +25502,7 @@
                   r)
                 : (i && (this.m_strChallengeURL = i),
                   n && (this.m_strClientID = n),
-                  (this.m_activeTimerID = window.setTimeout(
-                    this.PollForUpdate,
-                    this.m_msPollInterval,
-                  )),
+                  this.StartPolling(!1),
                   r)
             );
           } catch (e) {
@@ -69955,11 +69950,11 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + i.TS.SNR
           : e;
       }
-      function c(e) {
+      function c(e, t) {
         return (
           i.TS.IN_STEAMUI &&
             !e.startsWith("steam://") &&
-            (e = `steam://openurl/${e}`),
+            (e = t ? `steam://openurl_external/${e}` : `steam://openurl/${e}`),
           e
         );
       }

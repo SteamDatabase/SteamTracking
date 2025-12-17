@@ -29172,6 +29172,7 @@
             type: _,
             bShowDemoButton: 1 == _?.GetAppType(),
             bAllowTwoLinesForHeader: !0,
+            bPreferAssetWithoutOverride: !1,
           }),
         );
       }
@@ -35032,18 +35033,27 @@
               __webpack_require__,
             ];
           })(_, _),
-          _ = (function () {
-            let _ = _.useCallback((_) => {
+          _ = (0, _._)((_) => {
+            if (!_) return;
+            let _ = (_) => {
                 _.stopPropagation();
-              }, []),
-              _ = _.useCallback((_) => {
+              },
+              _ = (_) => {
                 _.stopPropagation();
-              }, []);
-            return {
-              onTouchStart: _,
-              onTouchEnd: _,
-            };
-          })();
+              };
+            return (
+              _.addEventListener("touchstart", _, {
+                passive: !1,
+              }),
+              _.addEventListener("touchend", _, {
+                passive: !1,
+              }),
+              () => {
+                _.removeEventListener("touchstart", _),
+                  _.removeEventListener("touchend", _);
+              }
+            );
+          }, []);
         _() && (_ = null);
         let _ = (function (_) {
           return _.useCallback(
@@ -35074,6 +35084,7 @@
         return _.createElement(
           "div",
           {
+            ref: _,
             className: _,
             "data-keepcontrols": !!_,
             onClick: _,
@@ -35081,7 +35092,6 @@
             onPointerLeave: _.onPointerLeave,
             onPointerDown: _.onPointerDown,
             onLostPointerCapture: _.onLostPointerCapture,
-            ..._,
           },
           _.createElement(
             "div",

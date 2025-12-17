@@ -8764,6 +8764,7 @@
                   imageType: "header",
                   bShowParentApp: !1,
                   bHideStoreHover: !0,
+                  bPreferAssetWithoutOverride: !1,
                 }),
               )
             : _.createElement(
@@ -18481,6 +18482,8 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
           _._,
@@ -18622,6 +18625,51 @@
               },
             }),
           ),
+          _.createElement(
+            _._,
+            {
+              path: _._.FrontPageEdit(":clusterid"),
+            },
+            _.createElement(_._, {
+              config: {
+                "storeadmin-colors": (_) =>
+                  _.createElement(_._, {
+                    ..._,
+                  }),
+              },
+            }),
+          ),
+          _.createElement(
+            _._,
+            {
+              path: _._.FrontPageSteamChinaEdit(":clusterid"),
+            },
+            _.createElement(_._, {
+              config: {
+                "storeadmin-colors": (_) =>
+                  _.createElement(_._, {
+                    ..._,
+                  }),
+              },
+            }),
+          ),
+          _.createElement(
+            _._,
+            {
+              path: _._.ContentHubEditor(":suffix", ":clusterid"),
+            },
+            _.createElement(_._, {
+              config: {
+                "storeadmin-colors": (_) =>
+                  _.createElement(_._, {
+                    ..._,
+                  }),
+              },
+            }),
+          ),
+          _.createElement(_._, {
+            component: _._,
+          }),
         );
       }
     },

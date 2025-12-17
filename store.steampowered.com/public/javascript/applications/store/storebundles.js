@@ -21,26 +21,24 @@
     },
     54847: (e, t, r) => {
       "use strict";
-      r.d(t, { p: () => o });
-      var n = r(15161),
-        l = r(90626),
-        a = r(62792),
-        s = r(55263),
-        u = r(45359),
-        c = r(18654),
-        i = r.n(c);
-      function o(e) {
+      r.d(t, { p: () => c });
+      var n = r(90626),
+        l = r(62792),
+        a = r(55263),
+        s = r(45359),
+        u = r(18654),
+        i = r.n(u);
+      function c(e) {
         const { id: t, type: r } = e,
-          [c] = (0, s.G6)(t, (0, a.SW)(r), {});
-        return l.createElement(
+          [u] = (0, a.G6)(t, (0, l.SW)(r), {});
+        return n.createElement(
           "div",
           { className: i().SaleItemBrowserRow },
-          l.createElement(u.pb, {
+          n.createElement(s.pb, {
             ...e,
             bLoadShortDescription: !0,
             bShowReviewSummary: !0,
-            bShowDemoButton:
-              e.bShowDemoButton || c?.GetAppType() == n.uE.k_EStoreAppType_Demo,
+            bShowDemoButton: e.bShowDemoButton || 1 == u?.GetAppType(),
             bPreferDemoStorePage: e.bPreferDemoStorePage,
           }),
         );
@@ -48,25 +46,25 @@
     },
     54393: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => E });
+      r.r(t), r.d(t, { default: () => g });
       var n,
         l = r(90626),
         a = r(57876),
         s = r(55263),
         u = r(84811),
-        c = r(54847),
-        i = r(37076),
-        o = r(32630),
-        d = r(52038),
+        i = r(54847),
+        c = r(37076),
+        d = r(32630),
+        o = r(52038),
         m = r(61859),
         p = r(31960),
         B = r.n(p),
         S = r(24484),
         _ = r(82097),
-        I = r(63090),
-        b = r(30894),
-        G = r(94095);
-      function E(e) {
+        G = r(63090),
+        I = r(30894),
+        b = r(94095);
+      function g(e) {
         const {
             match: {
               params: { appid: t },
@@ -83,7 +81,7 @@
             }
           }, [n]),
           l.createElement(
-            o.Ay,
+            d.Ay,
             { method: "bundlelist" },
             l.createElement(u.tH, null, l.createElement(h, { storeItem: n })),
           )
@@ -92,23 +90,19 @@
       function h(e) {
         const { storeItem: t } = e,
           [r, u] = (0, l.useState)(n.k_BundleSort_Price),
-          c = (function (e) {
+          i = (function (e) {
             const t = (0, l.useMemo)(
                 () => (0, S.Tc)("bundle_list", "application_config"),
                 [],
               ),
-              [r] = (0, b.L2)(),
+              [r] = (0, I.L2)(),
               u = (0, s.MS)(t, a.Xh),
-              c = (0, l.useMemo)(() => {
-                if (
-                  u != s.N4.k_EStoreItemCacheState_Found &&
-                  u != s.N4.k_EStoreItemCacheState_Unavailable
-                )
-                  return null;
+              i = (0, l.useMemo)(() => {
+                if (3 != u && 2 != u) return null;
                 {
                   let r = t;
                   switch (
-                    (u == s.N4.k_EStoreItemCacheState_Unavailable &&
+                    (2 == u &&
                       (r = t.filter((e) => {
                         const t = _.A.Get().GetBundle(e);
                         return t?.BIsVisible();
@@ -135,14 +129,14 @@
                   }
                 }
               }, [e, u, t]);
-            if (c && !r) {
+            if (i && !r) {
               const e = new Array(),
                 t = new Array(),
                 r = new Array();
               return (
-                c.forEach((n) => {
+                i.forEach((n) => {
                   const l = _.A.Get().GetBundle(n);
-                  l.GetIncludedAppIDs().some((e) => !b.Fm.Get().BOwnsApp(e))
+                  l.GetIncludedAppIDs().some((e) => !I.Fm.Get().BOwnsApp(e))
                     ? l.GetBestPurchaseOption().must_purchase_as_set
                       ? r.push(n)
                       : t.push(n)
@@ -157,8 +151,8 @@
             }
             return null;
           })(r);
-        if (!t || !c) return null;
-        const i =
+        if (!t || !i) return null;
+        const c =
           t.GetAssets().GetLibraryHeroURL_2x() ??
           t.GetAssets().GetLibraryHeroURL() ??
           t.GetAssets().GetRawPageBackgroundURL();
@@ -168,18 +162,18 @@
           l.createElement(
             "div",
             { className: B().BackgroundImageCtn },
-            l.createElement("img", { src: i }),
+            l.createElement("img", { src: c }),
           ),
           l.createElement(
             "div",
             { className: B().BackgroundImageBlurCtn },
-            l.createElement("img", { src: i }),
+            l.createElement("img", { src: c }),
           ),
           l.createElement(
             "div",
-            { className: (0, d.A)("page_content") },
+            { className: (0, o.A)("page_content") },
             l.createElement(w, { storeItem: t, eBundleSort: r, fnSetSort: u }),
-            c.rgCompleteTheSetBundleIDList?.length > 0 &&
+            i.rgCompleteTheSetBundleIDList?.length > 0 &&
               l.createElement(
                 "div",
                 { className: B().BundlesInLibrary },
@@ -193,12 +187,12 @@
                   { className: B().Subtitle },
                   (0, m.we)("#BundleList_CompleteTheSetSubtitle"),
                 ),
-                l.createElement(g, {
+                l.createElement(E, {
                   appId: t.GetAppID(),
-                  rgBundleIDs: c.rgCompleteTheSetBundleIDList,
+                  rgBundleIDs: i.rgCompleteTheSetBundleIDList,
                 }),
               ),
-            c.rgMustPurchaseTogetherBundleIDList?.length > 0 &&
+            i.rgMustPurchaseTogetherBundleIDList?.length > 0 &&
               l.createElement(
                 "div",
                 { className: B().BundlesInLibrary },
@@ -212,12 +206,12 @@
                   { className: B().Subtitle },
                   (0, m.we)("#BundleList_MustPurchaseAsSetSubtitle"),
                 ),
-                l.createElement(g, {
+                l.createElement(E, {
                   appId: t.GetAppID(),
-                  rgBundleIDs: c.rgMustPurchaseTogetherBundleIDList,
+                  rgBundleIDs: i.rgMustPurchaseTogetherBundleIDList,
                 }),
               ),
-            c.rgOwnedBundleIDList?.length > 0 &&
+            i.rgOwnedBundleIDList?.length > 0 &&
               l.createElement(
                 "div",
                 { className: B().BundlesInLibrary },
@@ -231,15 +225,15 @@
                   { className: B().Subtitle },
                   (0, m.we)("#BundleList_AllInLibrarySubtitle"),
                 ),
-                l.createElement(g, {
+                l.createElement(E, {
                   appId: t.GetAppID(),
-                  rgBundleIDs: c.rgOwnedBundleIDList,
+                  rgBundleIDs: i.rgOwnedBundleIDList,
                 }),
               ),
           ),
         );
       }
-      function g(e) {
+      function E(e) {
         const { rgBundleIDs: t, appId: r } = e;
         return l.createElement(
           "div",
@@ -258,10 +252,11 @@
         return l.createElement(
           "div",
           { className: B().BundleRow },
-          l.createElement(c.p, {
+          l.createElement(i.p, {
             id: t,
             type: "bundle",
             bShowDeckCompatibilityDialog: !1,
+            bPreferAssetWithoutOverride: !1,
           }),
         );
       }
@@ -271,7 +266,7 @@
           "div",
           { className: B().AppHeader },
           l.createElement(
-            i.u,
+            c.u,
             { type: "app", id: t.GetAppID(), hoverClassName: B().PreviewItem },
             l.createElement("img", { src: t.GetAssets().GetHeaderURL() }),
           ),
@@ -284,12 +279,12 @@
               (0, m.we)("#BundleList_SubTitle"),
             ),
             l.createElement("div", { className: B().Title }, t.GetName()),
-            l.createElement(G.kb, { storeItem: t }),
+            l.createElement(b.kb, { storeItem: t }),
           ),
           l.createElement(
             "div",
             { className: B().SortOptions },
-            l.createElement(I.ZU, {
+            l.createElement(G.ZU, {
               selectedOption: r,
               renderButtonValue: (e) =>
                 l.createElement(

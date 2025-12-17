@@ -3397,7 +3397,7 @@ img.franchise_placeholder {
     height: auto;
 }
 
-    html.tablet .content_hub_carousel_ctn .season_sale_feature_event_capsule  {
+    html.gamepad .content_hub_carousel_ctn .season_sale_feature_event_capsule  {
         width: calc( 100vw / 3 );
     }
 
@@ -3500,114 +3500,114 @@ img.franchise_placeholder {
 
 /* Tablet/SteamDeck Overrides */
 
-html.tablet body.v6.seasonalsales {
+html.gamepad body.v6.seasonalsales {
 	/* background-size: 200%; */
 }
 
-html.tablet .discount_block_inline .discount_prices {
+html.gamepad .discount_block_inline .discount_prices {
     padding: 8px;
     background: #0c0f11;
 }
 
-html.tablet .discount_block {
+html.gamepad .discount_block {
     gap: 0;
 }
 
-html.tablet body.v6.seasonalsales .hero_add_to_cart  {
+html.gamepad body.v6.seasonalsales .hero_add_to_cart  {
     display: none;
 }
 
-html.tablet body.v6.seasonalsales .home_sticker_ctn.mobile {
+html.gamepad body.v6.seasonalsales .home_sticker_ctn.mobile {
     display: none;
 }
 
-html.tablet body.v6.seasonalsales .home_sticker_ctn.desktop {
+html.gamepad body.v6.seasonalsales .home_sticker_ctn.desktop {
     display: block;
     min-height: 105px;
 }
 
-html.tablet body.v6.seasonalsales .home_featured_ctn {
+html.gamepad body.v6.seasonalsales .home_featured_ctn {
     margin-top: 0;
 }
 
-html.tablet body.v6.seasonalsales .home_page_body_ctn .home_page_takeover_size {
+html.gamepad body.v6.seasonalsales .home_page_body_ctn .home_page_takeover_size {
     height: 0;
 }
 
-html.tablet body.v6.seasonalsales .franchise_carousel {
+html.gamepad body.v6.seasonalsales .franchise_carousel {
     padding: 0 2%;
 }
 
-html.tablet body.v6.seasonalsales .home_tabs_row_ctn, html.tablet body.v6.seasonalsales .home_tabs_row {
+html.gamepad body.v6.seasonalsales .home_tabs_row_ctn, html.gamepad body.v6.seasonalsales .home_tabs_row {
     display: block;
 }
 
-html.tablet body.v6.seasonalsales .pill_tab_menu_item {
+html.gamepad body.v6.seasonalsales .pill_tab_menu_item {
 	background-color: #000000;
 	color: #ffffff;
 }
 
-html.tablet body.v6.seasonalsales .pill_tab_menu_item.active {
+html.gamepad body.v6.seasonalsales .pill_tab_menu_item.active {
 	background: #e5574b;
 }
 
-html.tablet body.v6.seasonalsales .pill_tab_menu_item.gpfocus {
+html.gamepad body.v6.seasonalsales .pill_tab_menu_item.gpfocus {
 	background: #ffffff;
 	color: #000000;
 }
 
-html.tablet body.v6.seasonalsales .carousel_container .carousel_items:not(.no_paging).hero_row {
+html.gamepad body.v6.seasonalsales .carousel_container .carousel_items:not(.no_paging).hero_row {
 	justify-content: unset;
 }
 
-html.tablet body.v6.seasonalsales .home_pagecontent_ctn.no_mobile_margin {
+html.gamepad body.v6.seasonalsales .home_pagecontent_ctn.no_mobile_margin {
 	padding-left: 0;
 	padding-right: 0;
 }
 
-html.tablet body.v6.seasonalsales .content_hub_carousel_ctn .carousel_items {
+html.gamepad body.v6.seasonalsales .content_hub_carousel_ctn .carousel_items {
 	padding-left: 36px;
 	scroll-padding: 36px;
 }
 
-html.tablet .home_header_textimage_ctn {
+html.gamepad .home_header_textimage_ctn {
 	background: center;
 }
 
-html.tablet body.v6.seasonalsales .home_page_takeover_sizer {
+html.gamepad body.v6.seasonalsales .home_page_takeover_sizer {
 	height: 22vw !important;
 }
 
-html.tablet body.v6.seasonalsales .fullscreen-bg__video, html.tablet body.v6.seasonalsales .page_background_holder {
+html.gamepad body.v6.seasonalsales .fullscreen-bg__video, html.gamepad body.v6.seasonalsales .page_background_holder {
 	height: calc( 45vw - ((100vw - 854px) / 10) ) !important;
 }
 
-html.tablet body.v6.seasonalsales .page_background_holder {
+html.gamepad body.v6.seasonalsales .page_background_holder {
     margin: 0;
 }
 
-html.tablet body.v6.seasonalsales .hero_parent_ctn .arrow.right, html.tablet body.v6.seasonalsales .hero_parent_ctn .arrow.left {
+html.gamepad body.v6.seasonalsales .hero_parent_ctn .arrow.right, html.gamepad body.v6.seasonalsales .hero_parent_ctn .arrow.left {
 	visibility: hidden;
 }
 
-html.tablet body.v6.seasonalsales .carousel_container .carousel_items .hero_capsule {
+html.gamepad body.v6.seasonalsales .carousel_container .carousel_items .hero_capsule {
 	width: 30vw;
 	margin-right: 8px;
 	height: max-content;
 }
 
-html.tablet body.v6.seasonalsales .carousel_container .carousel_items .hero_name {
+html.gamepad body.v6.seasonalsales .carousel_container .carousel_items .hero_name {
 	font-size: 16px;
 }
 
-html.tablet body.v6.seasonalsales .hero_capsule img.hero_capsule_img {
+html.gamepad body.v6.seasonalsales .hero_capsule img.hero_capsule_img {
 	height: auto;
 }
 
-html.tablet body.v6.seasonalsales .franchise_capsule.active .franchise_games {
+html.gamepad body.v6.seasonalsales .franchise_capsule.active .franchise_games {
 	top: 10%;
 }
 
-html.tablet body.v6.seasonalsales .sale_capsule_carousel .carousel_items {
+html.gamepad body.v6.seasonalsales .sale_capsule_carousel .carousel_items {
 	justify-content: unset;
 }

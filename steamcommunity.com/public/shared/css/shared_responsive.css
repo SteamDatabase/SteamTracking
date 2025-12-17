@@ -958,17 +958,17 @@ html.force_desktop body #footer_responsive_optin_spacer {
 
 }
 
-	html.responsive.tablet:not(.legacy_mobile) .responsive_scroll_snap_start {
+	html.responsive.gamepad:not(.legacy_mobile) .responsive_scroll_snap_start {
 		scroll-snap-align: start;
 		scroll-snap-stop: always;
 	}
 
-	html.responsive.tablet:not(.legacy_mobile) .responsive_scroll_snap_ctn {
+	html.responsive.gamepad:not(.legacy_mobile) .responsive_scroll_snap_ctn {
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
 	}
 
-	html.responsive.tablet div.responsive_tab_baseline {
+	html.responsive.gamepad div.responsive_tab_baseline {
         display: none;
     }
 

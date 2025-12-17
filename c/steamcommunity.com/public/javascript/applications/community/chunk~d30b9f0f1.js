@@ -3306,7 +3306,9 @@
               ? void 0
               : _.length) <= _;
           )
-            this.m_curModel.jsondata.sale_background_img_groups.groups.push({});
+            this.m_curModel.jsondata.sale_background_img_groups.groups.push({
+              num_sections: 1,
+            });
           (this.m_curModel.jsondata.sale_background_img_groups.groups[_] = _),
             this.SetDirty(_.jsondata_sales);
         }
@@ -3438,7 +3440,9 @@
                 ? void 0
                 : _.length) <= _;
             )
-              _.tab_background_img_groups.groups.push({});
+              _.tab_background_img_groups.groups.push({
+                num_sections: 1,
+              });
             (_.tab_background_img_groups.groups[_] = _),
               this.SetDirty(_.jsondata_sales);
           }
@@ -14939,6 +14943,7 @@
             editModel: _,
             saleSection: __webpack_require__,
             defaultType: _,
+            nDefaultMaxAppToLoad: _,
           } = _,
           [_, _] = _.useState((0, _._)(__webpack_require__, !0)),
           [_] = (0, _._)(() => [_.GetEventType()]),
@@ -14972,6 +14977,9 @@
                         (__webpack_require__.smart_section_type = _
                           ? _
                           : void 0),
+                          !__webpack_require__.smart_section_max_apps &&
+                            _ &&
+                            (__webpack_require__.smart_section_max_apps = _),
                           _(
                             __webpack_require__,
                             _,
@@ -16167,7 +16175,7 @@
           _.createElement(_._, {
             type: "number",
             min: "4",
-            max: "90",
+            max: "100",
             label: (0, _._)("#Sale_EventMaxEventsToShow"),
             tooltip: (0, _._)("#Sale_EventMaxEventsToShow_ttip"),
             value: __webpack_require__.smart_section_max_apps,
@@ -25564,6 +25572,7 @@
             editModel: __webpack_require__,
             saleSection: _,
             defaultType: _ ? "recent_tagged_events" : "recent_events",
+            nDefaultMaxAppToLoad: 15,
           }),
           Boolean(_)
             ? _.createElement(
@@ -25850,7 +25859,9 @@
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
           [_, _] = (0, _._)(() => [
-            _.item_browse_section_data || {},
+            _.item_browse_section_data || {
+              prefer_assets_without_overrides: !1,
+            },
             _.cap_item_count || 0,
           ]),
           [_, _, _] = (0, _._)(() => [
@@ -25860,7 +25871,9 @@
           ]),
           _ = _.useCallback(() => {
             _.item_browse_section_data ||
-              ((_.item_browse_section_data = {}),
+              ((_.item_browse_section_data = {
+                prefer_assets_without_overrides: !1,
+              }),
               __webpack_require__.SetDirty(_._.jsondata_sales));
           }, [_, __webpack_require__]),
           _ =
@@ -38993,6 +39006,8 @@
                               bHidePrice: _.hide_prices,
                               bHidePlatforms: _ >= 5,
                               index: _,
+                              bPreferAssetWithoutOverride:
+                                !!_.prefer_assets_without_overrides,
                               bShowDeckCompatibilityDialog:
                                 _.show_deck_compability_details ||
                                 (null === (_ = _.activeTab) || void 0 === _
@@ -39045,6 +39060,8 @@
                                   ? void 0
                                   : _.BFilterRequiresSteamDeckVerifiedOrPlayable()),
                               fnOnClickOverride: _,
+                              bPreferAssetWithoutOverride:
+                                !!_.prefer_assets_without_overrides,
                             }),
                           );
                         }
@@ -41110,6 +41127,7 @@
             bPreferDemoStorePage: _,
             bShowPurchaseOptionsButton: _,
             bUseSubscriptionLayout: _,
+            bPreferAssetWithoutOverride: _,
           } = _,
           [_, _] = _.useState(!1),
           _ = () => _(!_),
@@ -41174,6 +41192,7 @@
                     _.createElement(_._, {
                       info: _,
                       imageType: "library",
+                      bPreferAssetWithoutOverride: _,
                     }),
                     _.createElement(_._, {
                       storeItem: _,
@@ -41329,6 +41348,7 @@
                   },
                   _.createElement(_._, {
                     info: _,
+                    bPreferAssetWithoutOverride: _,
                   }),
                   _.createElement(_._, {
                     storeItem: _,
@@ -41340,6 +41360,7 @@
               storeItem: _,
               bPurchaseOptionsExpanded: _,
               fnCollapseOptions: _,
+              bPreferAssetWithoutOverride: _,
             }),
           ),
         );
@@ -42080,7 +42101,11 @@
           [_, _] = _.useState(!1),
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           [_] = (0, _._)(
-            __webpack_require__ && (null == _ ? void 0 : _.GetParentAppID()),
+            __webpack_require__
+              ? null == _
+                ? void 0
+                : _.GetParentAppID()
+              : void 0,
             _._,
           );
         if (!_) return null;
@@ -42210,6 +42235,7 @@
             strDoubleCapsuleMessage: _,
             bPreferDemoStorePage: _,
             bShowEarlyAccessBanner: _,
+            bPreferAssetWithoutOverride: _,
           } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ = (0, _._)(),
@@ -42261,6 +42287,7 @@
                 _.createElement(_._, {
                   imageType: _,
                   info: _,
+                  bPreferAssetWithoutOverride: _,
                 }),
               _.createElement(_._, {
                 storeItem: _,

@@ -381,6 +381,7 @@
         MenuHeader: "_19bojcj07vGvbhrAJ4T55c",
         ActiveLink: "_3kEWJGuSEOp09T1ZND24zk",
         ChartRangeCtn: "wLFBOAfa7yijnxFGxj9xs",
+        AnnualChart: "_2HgYqWURygpji4_HPSk_sw",
         ChartRangeText: "vlHd8EhkUPvzcN2Xn4Y0j",
         ShortDate: "_2AQqwf9WZKu7d8zUGYJ5VR",
         LongDate: "_1V5zBbE55eaOW2YYdG-bDd",
@@ -1789,7 +1790,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
@@ -1852,6 +1852,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -5137,6 +5138,7 @@
             fnSetBackgroundImgGroupEditMode: _,
           } = _,
           [_, _] = (0, _.useState)(_.BIsBackgroundImageEnabled()),
+          [_, _, _] = (0, _._)(),
           _ = (0, _._)(() => _.GetSalePageLastCoverSectionUntilEnd());
         return _.createElement(
           "div",
@@ -5173,24 +5175,26 @@
                   _.createElement(
                     _._,
                     {
-                      onClick: (_) =>
-                        (0, _._)(
-                          _.createElement(_._, {
-                            strTitle: (0, _._)(
-                              "#EventEditor_GenericAreYouSure",
-                            ),
-                            strDescription: (0, _._)(
-                              "#BackgroundGroups_ClearAllSettings_Desc",
-                            ),
-                            bDestructiveWarning: !0,
-                            onOK: () => {
-                              _.ClearAllBackgroundImageGroupSettings(), _(!1);
-                            },
-                          }),
-                          (0, _._)(_),
-                        ),
+                      onClick: _,
                     },
                     (0, _._)("#BackgroundGroups_ClearAllSettings"),
+                  ),
+                  _.createElement(
+                    _._,
+                    {
+                      active: _,
+                    },
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#EventEditor_GenericAreYouSure"),
+                      strDescription: (0, _._)(
+                        "#BackgroundGroups_ClearAllSettings_Desc",
+                      ),
+                      bDestructiveWarning: !0,
+                      onOK: () => {
+                        _.ClearAllBackgroundImageGroupSettings(), _(!1);
+                      },
+                      closeModal: _,
+                    }),
                   ),
                 )
               : _.createElement("p", null, (0, _._)("#BackgroundGroups_Desc")),
@@ -5215,29 +5219,31 @@
             eventModel: _,
             nTabIndex: _,
           } = _,
-          _ = _ >= 0,
           _ = (0, _._)(),
           [_, _, _, _] = (0, _._)(() => [
-            __webpack_require__.mapGroupToSections.get(_.background_id),
-            __webpack_require__.mapGroupToSections.get(_.background_id)
+            __webpack_require__.mapGroupToSections.get(_?.background_id),
+            __webpack_require__.mapGroupToSections.get(_?.background_id)
               ?.sectionUniqueIDs ?? [],
-            _
+            null != _
               ? _.GetTabLastCoverSectionUntilEnd(_)
               : _.GetSalePageLastCoverSectionUntilEnd(),
-            _ ? _.GetTabGroupCount(_) : _.GetSalePageGroupCount(),
+            null != _ ? _.GetTabGroupCount(_) : _.GetSalePageGroupCount(),
           ]),
-          _ = _ && _ + 1 === _;
-        let _ = null;
-        _?.nUniqueIDNextSaleSection &&
-          (_ = (0, _._)(
-            2,
-            _.GetSaleSectionByID(_?.nUniqueIDNextSaleSection),
-            _,
-            _,
-            _.nSaleSectionLastIndex + 1,
-          ));
-        let _ = null;
-        if (_?.length > 1) {
+          _ = _ && _ + 1 === _,
+          [_, _, _] = (0, _._)(),
+          [_, _, _] = (0, _._)();
+        let _, _;
+        if (
+          (_?.nUniqueIDNextSaleSection &&
+            (_ = (0, _._)(
+              2,
+              _.GetSaleSectionByID(_?.nUniqueIDNextSaleSection),
+              _,
+              _,
+              _.nSaleSectionLastIndex + 1,
+            )),
+          _ && _?.length > 1)
+        ) {
           const _ = _[_.length - 1];
           _ = (0, _._)(
             2,
@@ -5252,7 +5258,7 @@
           {
             bStartMinimized: !1,
             title: (0, _._)(
-              _ >= 0
+              null != _
                 ? "#BackgroundGroups_Sale_Tab_GroupNum"
                 : "#BackgroundGroups_Sale_GroupNum",
               _ + 1,
@@ -5267,20 +5273,24 @@
             _.createElement(
               _._,
               {
-                onClick: (_) =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      imgGroup: _,
-                      eventModel: _,
-                      fnUpdateImageGroup: (_) =>
-                        _
-                          ? _.SetTabBackgroundGroup(_, _, _)
-                          : _.SetSalePageBackgroundGroup(_, _),
-                    }),
-                    (0, _._)(_),
-                  ),
+                onClick: _,
               },
               (0, _._)("#BackgroundGroups_Configure"),
+            ),
+            _.createElement(
+              _._,
+              {
+                active: _,
+              },
+              _.createElement(_, {
+                imgGroup: _,
+                closeModal: _,
+                eventModel: _,
+                fnUpdateImageGroup: (_) =>
+                  null != _
+                    ? _.SetTabBackgroundGroup(_, _, _)
+                    : _.SetSalePageBackgroundGroup(_, _),
+              }),
             ),
             _.createElement("br", null),
             _.createElement(
@@ -5315,12 +5325,12 @@
                   (0, _._)("#BackgroundGroups_EndOfList"),
                 ),
             ),
-            Boolean(_) &&
+            !!_ &&
               _.createElement(
                 _._,
                 {
                   onClick: () =>
-                    _
+                    null != _
                       ? _.SetTabBackgroundGroup(_, _, {
                           ..._,
                           num_sections: _.num_sections - 1,
@@ -5332,12 +5342,12 @@
                 },
                 (0, _._)("#BackgroundGroups_Reduce", _),
               ),
-            Boolean(_) &&
+            !!_ &&
               _.createElement(
                 _._,
                 {
                   onClick: () =>
-                    _
+                    null != _
                       ? _.SetTabBackgroundGroup(_, _, {
                           ..._,
                           num_sections: _.num_sections + 1,
@@ -5357,34 +5367,34 @@
                 _.createElement(
                   _._,
                   {
-                    onClick: (_) =>
-                      (0, _._)(
-                        _.createElement(_._, {
-                          strTitle: (0, _._)("#Dialog_AreYouSure"),
-                          bDestructiveWarning: !0,
-                          strDescription: (0, _._)(
-                            "#BackgroundGroups_RemoveThisGroup_Desc",
-                          ),
-                          onOK: () =>
-                            _
-                              ? _.RemoveTabBackgroundGroup(_, _)
-                              : _.RemoveSalePageBackgroundGroup(_),
-                        }),
-                        (0, _._)(_),
-                      ),
+                    onClick: _,
                   },
                   (0, _._)("#BackgroundGroups_RemoveThisGroup"),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    active: _,
+                  },
+                  _.createElement(_._, {
+                    strTitle: (0, _._)("#Dialog_AreYouSure"),
+                    bDestructiveWarning: !0,
+                    strDescription: (0, _._)(
+                      "#BackgroundGroups_RemoveThisGroup_Desc",
+                    ),
+                    onOK: () =>
+                      null != _
+                        ? _.RemoveTabBackgroundGroup(_, _)
+                        : _.RemoveSalePageBackgroundGroup(_),
+                    closeModal: _,
+                  }),
                 ),
               ),
           ),
         );
       });
       function _(_) {
-        const {
-          backgroundImageEditModel: _,
-          nLastSectionID: __webpack_require__,
-          nTabID: _,
-        } = _;
+        const { backgroundImageEditModel: _, nTabID: __webpack_require__ } = _;
         return _.createElement(
           "div",
           {
@@ -5394,12 +5404,12 @@
             _._,
             {
               onClick: (_) =>
-                _ >= 0
-                  ? _.AddTabBackgroundGroup(_)
+                __webpack_require__ && __webpack_require__ >= 0
+                  ? _.AddTabBackgroundGroup(__webpack_require__)
                   : _.AddSalePageBackgroundGroup(),
             },
             (0, _._)(
-              _ >= 0
+              __webpack_require__ && __webpack_require__ >= 0
                 ? "#BackgroundGroups_AddNewGroupTab"
                 : "#BackgroundGroups_AddNewGroup",
             ),
@@ -5418,7 +5428,6 @@
           __webpack_require__ == _.nFirstTabSectionIDWithoutGroup
           ? _.createElement(_, {
               backgroundImageEditModel: _,
-              nLastSectionID: __webpack_require__,
               nTabID: _,
             })
           : _
@@ -7342,7 +7351,8 @@
         }
       }
       const _ = "useMonthlyTopRelease";
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ {
         m_WebAPI;
         constructor(_) {
@@ -7355,10 +7365,13 @@
             Math.floor(__webpack_require__.getTime() / 1e3),
           ),
             _.Body().set_include_dlc(!0);
-          let _ = await _._.GetYearTopAppReleases(
-            this.m_WebAPI.GetAnonymousServiceTransport(),
-            _,
-          );
+          const _ =
+            _._.is_support &&
+            "public" !== _._.WEB_UNIVERSE &&
+            _ == new Date().getUTCFullYear()
+              ? this.m_WebAPI.GetServiceTransport()
+              : this.m_WebAPI.GetAnonymousServiceTransport();
+          let _ = await _._.GetYearTopAppReleases(_, _);
           if (1 != _.GetEResult()) {
             if (10 == _.GetEResult())
               return {
@@ -7822,7 +7835,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         let _ = _().PlatinumSection;
@@ -7866,12 +7878,13 @@
       }
       function _(_, _, _, _, _) {
         const _ = (0, _._)(_._, _),
+          _ = !1,
           _ = [..._, ..._],
           _ = new Set(_);
         if (
           ((_.jsondata.sale_sections = []),
           _.length > 9 &&
-            (function (_, _, _, _, _) {
+            (function (_, _, _, _, _, _) {
               _.jsondata.sale_sections.push({
                 ...(0, _._)("trailercarousel", ""),
                 capsules: _(_, _).map((_) => ({
@@ -7882,8 +7895,9 @@
                 disable_background: !0,
                 trailer_carousel_auto_advance_msec: 1e4,
                 show_on_tabs: _ ? [_] : void 0,
+                prefer_assets_without_overrides: _,
               });
-            })(_, _, _, _),
+            })(_, _, _, _, _),
           _?.length > 25)
         )
           for (let _ in _) {
@@ -7901,6 +7915,7 @@
               border_width: 1,
               default_subtitle: "#SteamCharts_Monthly_Rank_" + _ + "_subtitle",
               sale_section_classname: _(Number.parseInt(_)),
+              prefer_assets_without_overrides: _,
             });
           }
         else {
@@ -7917,10 +7932,11 @@
             show_as_carousel: !1,
             use_random_order: !0,
             sale_section_classname: _().AllTiers,
+            prefer_assets_without_overrides: _,
           });
         }
         return (
-          (function (_, _, _, _, _) {
+          (function (_, _, _, _, _, _) {
             if (_._.logged_in) {
               const _ = _._.Get(),
                 _ = _.filter((_) => _.BIsGameWishlisted(_));
@@ -7939,6 +7955,7 @@
                     _.length < 3 ? ["grid"] : ["tall"],
                   random_from_entire_set: !0,
                   show_on_tabs: _ ? [_] : void 0,
+                  prefer_assets_without_overrides: _,
                 });
               const _ = _.filter(
                 (_) => _.BIsGameRecommended(_) && !_.BIsGameIgnored(_),
@@ -7958,6 +7975,7 @@
                   capsule_style_per_row_array:
                     2 == _ ? ["grid"] : ["tall", "grid"],
                   show_on_tabs: _ ? [_] : void 0,
+                  prefer_assets_without_overrides: _,
                 });
               }
               const _ = __webpack_require__.filter((_) => {
@@ -7984,10 +8002,11 @@
                   show_as_carousel: !0,
                   disable_background: !0,
                   show_on_tabs: _ ? [_] : void 0,
+                  prefer_assets_without_overrides: _,
                 });
             }
-          })(_, _, _, _),
-          (function (_, _, _, _, _) {
+          })(_, _, _, _, _),
+          (function (_, _, _, _, _, _) {
             _?.length > 25 &&
               _.jsondata.sale_sections.push({
                 ...(0, _._)("items", "#Sale_default_label_148"),
@@ -8010,8 +8029,9 @@
                 cap_item_count: 0,
                 facets: _,
                 show_on_tabs: _ ? [_] : void 0,
+                prefer_assets_without_overrides: _,
               });
-          })(_, _, _, _),
+          })(_, _, _, _, _),
           _.jsondata.sale_sections.push({
             ...(0, _._)(
               "social_share",

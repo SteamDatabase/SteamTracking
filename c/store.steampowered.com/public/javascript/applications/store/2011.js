@@ -462,7 +462,10 @@
           } = _,
           [_, _] = _.useState(!1),
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          [_] = (0, _._)(__webpack_require__ && _?.GetParentAppID(), _._);
+          [_] = (0, _._)(
+            __webpack_require__ ? _?.GetParentAppID() : void 0,
+            _._,
+          );
         if (!_) return null;
         const _ = Boolean(_),
           _ = _.createElement(_, {
@@ -590,6 +593,7 @@
             strDoubleCapsuleMessage: _,
             bPreferDemoStorePage: _,
             bShowEarlyAccessBanner: _,
+            bPreferAssetWithoutOverride: _,
           } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ = (0, _._)(),
@@ -638,6 +642,7 @@
                 _.createElement(_._, {
                   imageType: _,
                   info: _,
+                  bPreferAssetWithoutOverride: _,
                 }),
               _.createElement(_._, {
                 storeItem: _,

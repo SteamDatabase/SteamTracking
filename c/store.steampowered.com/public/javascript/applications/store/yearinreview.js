@@ -13109,6 +13109,7 @@
             type: _,
             bShowDemoButton: 1 == _?.GetAppType(),
             bAllowTwoLinesForHeader: !0,
+            bPreferAssetWithoutOverride: !1,
           }),
         );
       }

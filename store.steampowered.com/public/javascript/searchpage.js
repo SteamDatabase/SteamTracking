@@ -498,7 +498,7 @@ function ExecuteSearch( rgParameters )
 		return;
 
 	// On tablet hide the virtual keyboard
-	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() ) 
+	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() ) 
 	{
 		GPShowVirtualKeyboard( false );
 	}
@@ -641,7 +641,7 @@ function HandleBackReposition()
 	}, 1000 );
 
 	// If we're on Deck restore focus for gamepad navigation once scrolling finishes
-	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
+	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
 	{
 		SetGPFocusRestoreTimeout();
 		document.addEventListener( 'scroll', function() {

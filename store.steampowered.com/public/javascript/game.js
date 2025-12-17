@@ -332,7 +332,7 @@ function AddScrollToAccessoriesBlock()
 
 function ShowEULA( elLink )
 {
-	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
+	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
 	{
 		// it's a better user experience on Deck if we navigate to the EULA instead of opening a new window
 		window.location = elLink.href;
@@ -1953,8 +1953,8 @@ function ToggleBannerContentVisibility( divContentID, divIconID )
 // which requires some section moves here, and formatting changes in .css
 function ReparentReviewsForSmallScreens()
 {
-	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
-	var fn_reparent = bUseTabletScreenMode ? Responsive_ReparentItemsInTabletMode : Responsive_ReparentItemsInMobileMode;
+	var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
+	var fn_reparent = bUseGamepadScreenMode ? Responsive_ReparentItemsInGamepadMode : Responsive_ReparentItemsInMobileMode;
 
 	var $MoveReviewSections = $J('.user_reviews_container');
 	$MoveReviewSections.each( function() {
@@ -2033,7 +2033,7 @@ function ShowEarlyAccessModal( contentID )
 	);
 }
 
-// applies layout changes for mobile and tablet screen sizes
+// applies layout changes for mobile and gamepad screens
 function ReparentAppLandingPageForSmallScreens()
 {
 	// copy the review summary content to the review details section
@@ -2053,20 +2053,20 @@ function ReparentAppLandingPageForSmallScreens()
 		$J('#shareImg').attr('src', 'https://store.fastly.steamstatic.com/public/shared/images/icon_share_ios.svg' );
 	}
 
-	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+	var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
 
-	ReparentPurchaseOptionsForTablet( '#purchaseOptionsContent' );
+	ReparentPurchaseOptionsForGamepad( '#purchaseOptionsContent' );
 
-		var fn_reparent = bUseTabletScreenMode ? Responsive_ReparentItemsInTabletMode : Responsive_ReparentItemsInMobileMode;
+		var fn_reparent = bUseGamepadScreenMode ? Responsive_ReparentItemsInGamepadMode : Responsive_ReparentItemsInMobileMode;
 
-	if ( bUseTabletScreenMode )
+	if ( bUseGamepadScreenMode )
 	{
 		// move the page header image to the top of purchase options
 		fn_reparent( $J('#page_header_img'), $J('#purchaseOptionsContent') );
 	}
 
 	// move early access content into the purchase options parent
-	if ( bUseTabletScreenMode )
+	if ( bUseGamepadScreenMode )
 	{
 		// on tablet we provide a learn more link which opens a dialog containing early access details
 		fn_reparent( $J('#earlyAccessBody'), $J('#earlyAccessTabletDialogContent') );
@@ -2097,7 +2097,7 @@ function ReparentAppLandingPageForSmallScreens()
 	fn_reparent( '#bannerCommunity', $J( '#appLinksAndInfo' ) );
 
 	// on tablet these go into a dropdown
-	fn_reparent( '#appDetailsUnderlinedLinks', bUseTabletScreenMode ? $J( '#appLinksAndInfo_TabletDropdownContent' ) : $J( '#appLinksAndInfo' ) );
+	fn_reparent( '#appDetailsUnderlinedLinks', bUseGamepadScreenMode ? $J( '#appLinksAndInfo_TabletDropdownContent' ) : $J( '#appLinksAndInfo' ) );
 
 	// place the active review filter list in the review details section
 	fn_reparent( '#reviews_active_filters', $J('.reviews_info_ctn') );
@@ -2116,10 +2116,10 @@ function ReparentAppLandingPageForSmallScreens()
 	var defaultReportFlex = $J('#reportBtn').css('flex-grow');
 	var defaultLanguageTableDisplay = $J('#languageTable').css('display');
 
-	var msgWatch = bUseTabletScreenMode ? 'Responsive_TabletScreenModeToggled' : 'Responsive_MobileScreenModeToggled';
+	var msgWatch = bUseGamepadScreenMode ? 'Responsive_GamepadScreenModeToggled' : 'Responsive_MobileScreenModeToggled';
 	$J(window).on( msgWatch, function() {
 
-		var bUseNewUX = ( bUseTabletScreenMode || ( window.UseMobileScreenMode && window.UseMobileScreenMode() ) );
+		var bUseNewUX = ( bUseGamepadScreenMode || ( window.UseMobileScreenMode && window.UseMobileScreenMode() ) );
 
 		// if one of the wishlist buttons are visible make the action buttons flex grow so the two rows of buttons match width.
 		if ( bUseNewUX && ( $J('#add_to_wishlist_area').is(':visible')
@@ -2163,14 +2163,14 @@ function ReparentAppLandingPageForSmallScreens()
 	$J(window).trigger( msgWatch );
 
 	// the vertical space available to display purchase options can change when the page scrolls.  Check if we need to update the height.
-	if ( bUseTabletScreenMode )
-		$J(window).on( 'scroll', UpdateTabletPurchaseOptionsHeight );
+	if ( bUseGamepadScreenMode )
+		$J(window).on( 'scroll', UpdateGamepadPurchaseOptionsHeight );
 }
 
 // Update the height of the sticky, scrollable purchase options container.
-function UpdateTabletPurchaseOptionsHeight()
+function UpdateGamepadPurchaseOptionsHeight()
 {
-	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
+	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
 	{
 		let $purchaseContentHeight = parseInt( window.innerHeight ) - parseInt( GetResponsiveHeaderFixedOffsetAdjustment() ) - parseInt( $J('#purchaseOptionsContentTablet')[0].getBoundingClientRect().top );
 		$purchaseContentHeight += 'px';
@@ -2182,16 +2182,16 @@ function UpdateTabletPurchaseOptionsHeight()
 	}
 }
 
-function ReparentPurchaseOptionsForTablet( idPurchaseOptions )
+function ReparentPurchaseOptionsForGamepad( idPurchaseOptions )
 {
-	// tablet mode has its own purchase options container (shown on right side of screen)
-	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
+	// gamepad has its own purchase options container (shown on right side of screen)
+	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
 	{
-		Responsive_ReparentItemsInTabletMode( idPurchaseOptions, $J('#purchaseOptionsContentTablet') );
+		Responsive_ReparentItemsInGamepadMode( idPurchaseOptions, $J('#purchaseOptionsContentTablet') );
 
 		$J('#purchaseOptionsContentTablet').css('top', parseInt( GetResponsiveHeaderFixedOffsetAdjustment() ) + 'px' );
 		$J('#purchaseOptionsContentTablet').css('scrollTop', 0);
-		UpdateTabletPurchaseOptionsHeight();
+		UpdateGamepadPurchaseOptionsHeight();
 	}
 }
 

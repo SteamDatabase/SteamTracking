@@ -16678,6 +16678,8 @@
             [_, _] = _.useState(_?.compact_table()),
             [_, _] = _.useState(_?.compact_table_count()?.toFixed(0) || "0"),
             [_, _] = _.useState(!0),
+            [_, _] = _.useState(_?.dropout_pct()?.toFixed(0) || "0"),
+            [_, _] = _.useState(!0),
             [_, _] = _.useState(_?.sequence_table()),
             [_, _] = _.useState(_?.sort_sequence() || !1),
             [_, _] = _.useState(_?.sequence_min_length()?.toFixed(0) || "0"),
@@ -16754,10 +16756,14 @@
                 (_ =
                   _(_, _.other_fetch_id()?.toString() || "0", () =>
                     _.set_other_fetch_id(parseInt(_)),
+                  ) || _),
+                (_ =
+                  _(_, _.dropout_pct()?.toString() || "0", () =>
+                    _.set_dropout_pct(parseInt(_)),
                   ) || _));
             }),
               _ && _(_);
-          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
           const _ = 0 == __webpack_require__,
             _ = (_, _, _) => {
               _(_),
@@ -17326,6 +17332,30 @@
                       onChange: () => {
                         console.log("changed"), _(!_), _ && (_("0"), _("0"));
                       },
+                    }),
+                  ),
+                _ &&
+                  0 != _.input() &&
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.PreprocessingOptions,
+                    },
+                    _.createElement(
+                      "div",
+                      {
+                        className: _.Label,
+                      },
+                      (0, _._)(
+                        "#SteamLearn_Config_DataSource_Input_Preprocess_DropoutPct",
+                      ),
+                    ),
+                    _.createElement("input", {
+                      type: "text",
+                      className: (0, _._)(_.ValueInput, !_ && _.Invalid),
+                      disabled: !1,
+                      value: _,
+                      onChange: (_) => _(_.target.value, _, _),
                     }),
                   ),
                 _ &&

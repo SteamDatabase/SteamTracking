@@ -7628,6 +7628,7 @@
         ["el", "greek"],
         ["uk", "ukrainian"],
         ["vn", "vietnamese"],
+        ["vi", "vietnamese"],
         ["id", "indonesian"],
       ]);
       const s = new Map();
@@ -56599,6 +56600,7 @@
                     br: h.qM.readUint32,
                     bw: h.gp.writeUint32,
                   },
+                  skip_lock: { n: 8, br: h.qM.readBool, bw: h.gp.writeBool },
                 },
               }),
             Ji.sm_m
@@ -61393,7 +61395,8 @@
           : !(!j(e) || !j(t)) ||
               (!j(e) &&
                 !j(t) &&
-                e.label === t.label &&
+                typeof e.label == typeof t.label &&
+                  ("string" != typeof e.label || e.label === t.label) &&
                   e.tooltip === t.tooltip &&
                     q(e) == q(t) &&
                       !(q(e) && q(t) && !x(e.options, t.options)) &&
@@ -61504,7 +61507,7 @@
           );
           const n = !x(e.rgOptions, this.props.rgOptions),
             a = e.selectedOption !== this.props.selectedOption,
-            s = this.value !== t.value;
+            s = !U(this.value, t.value);
           !this.props.controlled &&
             (n || s || a) &&
             (a || null == this.value
@@ -65353,7 +65356,7 @@
           ? i.createElement(
               "a",
               {
-                href: (0, m.NT)(t.url),
+                href: (0, m.NT)(t.url, !0),
                 target: d.TS.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer",
               },
@@ -77759,11 +77762,11 @@
           return "";
         }
       }
-      function u(e) {
+      function u(e, t) {
         return (
           i.TS.IN_STEAMUI &&
             !e.startsWith("steam://") &&
-            (e = `steam://openurl/${e}`),
+            (e = t ? `steam://openurl_external/${e}` : `steam://openurl/${e}`),
           e
         );
       }

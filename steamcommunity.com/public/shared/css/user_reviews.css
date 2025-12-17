@@ -484,7 +484,7 @@ select {
 
 }
 
-	html.responsive.tablet .gameLogoHolder_default img {
+	html.responsive.gamepad .gameLogoHolder_default img {
 		width: 100%;
 		padding: 0;
 	}

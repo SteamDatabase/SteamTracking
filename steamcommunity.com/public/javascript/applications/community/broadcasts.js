@@ -264,8 +264,8 @@
         N = a(9154),
         A = a(738),
         k = a(52038),
-        G = a(56011),
-        O = a(61859),
+        O = a(56011),
+        G = a(61859),
         R = a(14932),
         U = a(76684),
         M = a(82227),
@@ -624,7 +624,11 @@
                 n.createElement(
                   "div",
                   { className: H.AppSummaryWidgetCtn },
-                  n.createElement(T.pb, { id: a.app_id, type: "game" }),
+                  n.createElement(T.pb, {
+                    id: a.app_id,
+                    type: "game",
+                    bPreferAssetWithoutOverride: !1,
+                  }),
                 ),
             ),
             n.createElement(
@@ -752,7 +756,7 @@
                   n.createElement(
                     "div",
                     { className: Q.ViewerCount },
-                    (0, O.Yp)("#Broadcast_ViewerCount", r.toLocaleString()),
+                    (0, G.Yp)("#Broadcast_ViewerCount", r.toLocaleString()),
                   ),
                 ),
                 n.createElement(te, { broadcasterSteamID: t }),
@@ -774,7 +778,7 @@
           return n.createElement(
             "div",
             { className: Q.BroadcastTitleCtn },
-            (0, O.we)("#Broadcast_Playing"),
+            (0, G.we)("#Broadcast_Playing"),
             n.createElement(
               "a",
               {
@@ -805,26 +809,26 @@
                     _.iA.logged_in
                       ? (0, A.pg)(
                           n.createElement(ae, { broadcasterSteamID: t }),
-                          (0, G.uX)(e),
+                          (0, O.uX)(e),
                         )
                       : (0, A.pg)(
                           n.createElement(N.o0, {
-                            strTitle: (0, O.we)(
+                            strTitle: (0, G.we)(
                               "#EventDisplay_Share_NotLoggedIn",
                             ),
-                            strDescription: (0, O.we)(
+                            strDescription: (0, G.we)(
                               "#EventDisplay_Share_NotLoggedIn_Description",
                             ),
-                            strOKButtonText: (0, O.we)("#MobileLogin_SignIn"),
+                            strOKButtonText: (0, G.we)("#MobileLogin_SignIn"),
                             onOK: () => (0, $.vg)(),
                           }),
-                          (0, G.uX)(e),
+                          (0, O.uX)(e),
                         );
                   },
                 },
                 n.createElement(
                   J.he,
-                  { toolTipContent: (0, O.we)("#Broadcast_User_Report_ttip") },
+                  { toolTipContent: (0, G.we)("#Broadcast_User_Report_ttip") },
                   n.createElement(z.lNU, null),
                 ),
               ),
@@ -839,7 +843,7 @@
               },
               n.createElement(
                 J.he,
-                { toolTipContent: (0, O.we)("#Broadcast_User_FAQ_ttip") },
+                { toolTipContent: (0, G.we)("#Broadcast_User_FAQ_ttip") },
                 n.createElement(z.$$j, null),
               ),
             ),
@@ -850,8 +854,8 @@
           return n.createElement(
             N.o0,
             {
-              strTitle: (0, O.we)("#Broadcast_ReportItem_Title"),
-              strDescription: (0, O.we)("#Broadcast_ReportItem_Description"),
+              strTitle: (0, G.we)("#Broadcast_ReportItem_Title"),
+              strDescription: (0, G.we)("#Broadcast_ReportItem_Description"),
               onCancel: e.closeModal,
               bOKDisabled: 0 == t.trim().length,
               onOK: async () => {
@@ -877,7 +881,7 @@
                   broadcastSteamID: e.broadcastSteamID,
                   strAction: a,
                 }),
-                (0, G.uX)(t),
+                (0, O.uX)(t),
               );
             },
             a =
@@ -903,7 +907,7 @@
                 onClick: (t) => {
                   (0, A.pg)(
                     n.createElement(se, { steamid: e.broadcastSteamID }),
-                    (0, G.uX)(t),
+                    (0, O.uX)(t),
                   );
                 },
               },
@@ -992,7 +996,7 @@
                     ? n.createElement(
                         b.jn,
                         { onClick: E },
-                        (0, O.we)("#Button_Dismiss"),
+                        (0, G.we)("#Button_Dismiss"),
                       )
                     : n.createElement(
                         b.dR,
@@ -1000,7 +1004,7 @@
                         n.createElement(
                           b.$n,
                           { onClick: E },
-                          (0, O.we)("#Button_Cancel"),
+                          (0, G.we)("#Button_Cancel"),
                         ),
                         n.createElement(
                           b.jn,
@@ -1020,7 +1024,7 @@
                               }
                             },
                           },
-                          (0, O.we)("#Button_Confirm"),
+                          (0, G.we)("#Button_Confirm"),
                         ),
                       ),
                 ),
@@ -1083,7 +1087,7 @@
                     ? n.createElement(
                         b.jn,
                         { onClick: d },
-                        (0, O.we)("#Button_Dismiss"),
+                        (0, G.we)("#Button_Dismiss"),
                       )
                     : n.createElement(
                         b.dR,
@@ -1091,7 +1095,7 @@
                         n.createElement(
                           b.$n,
                           { onClick: d },
-                          (0, O.we)("#Button_Cancel"),
+                          (0, G.we)("#Button_Cancel"),
                         ),
                         n.createElement(
                           b.jn,
@@ -1109,7 +1113,7 @@
                               }
                             },
                           },
-                          (0, O.we)("#Button_Confirm"),
+                          (0, G.we)("#Button_Confirm"),
                         ),
                       ),
                 ),
@@ -1246,7 +1250,7 @@
                       "div",
                       { className: L.GameAboutTitle },
                       " ",
-                      (0, O.we)("#Broadcast_About_Game"),
+                      (0, G.we)("#Broadcast_About_Game"),
                       " ",
                     ),
                     n.createElement(
@@ -1261,6 +1265,7 @@
                     n.createElement(T.pb, {
                       id: Number.parseInt(a.m_strAppId),
                       type: "game",
+                      bPreferAssetWithoutOverride: !1,
                     }),
                   ),
                 ),
@@ -1305,7 +1310,7 @@
             n.createElement(
               "div",
               { className: L.ControlsTitle },
-              (0, O.we)("#Broadcaster_Control_title"),
+              (0, G.we)("#Broadcaster_Control_title"),
             ),
             n.createElement(
               "div",
@@ -1315,14 +1320,14 @@
                 { className: L.Options },
                 n.createElement(b.pd, {
                   type: "text",
-                  label: (0, O.we)("#Broadcast_title_title"),
+                  label: (0, G.we)("#Broadcast_title_title"),
                   onChange: (e) => l(e.currentTarget.value || ""),
-                  placeholder: (0, O.we)("#Broadcast_title_placeholder"),
+                  placeholder: (0, G.we)("#Broadcast_title_placeholder"),
                   value: r,
                 }),
                 n.createElement(b.pd, {
                   type: "text",
-                  label: (0, O.we)("#Broadcast_Control_matchid"),
+                  label: (0, G.we)("#Broadcast_Control_matchid"),
                   onChange: (e) => c(e.currentTarget.value || ""),
                   value: o,
                 }),
@@ -1336,7 +1341,7 @@
                       let a = await p.Get().UpdateBroadcastSettings(o, r, e);
                       e.token.reason ||
                         d(
-                          (0, O.we)(
+                          (0, G.we)(
                             a
                               ? "#Broadcast_Control_Success"
                               : "#Broadcast_Control_Failure",
@@ -1344,9 +1349,9 @@
                         );
                     },
                   },
-                  (0, O.we)("#Broadcast_save_changes"),
+                  (0, G.we)("#Broadcast_save_changes"),
                   n.createElement(ce.o, {
-                    tooltip: (0, O.we)("#Broadcast_save_title_ttip"),
+                    tooltip: (0, G.we)("#Broadcast_save_title_ttip"),
                   }),
                 ),
               ),
@@ -1359,10 +1364,10 @@
                     onClick: (e) => {
                       (0, A.pg)(
                         n.createElement(N.o0, {
-                          strTitle: (0, O.we)(
+                          strTitle: (0, G.we)(
                             "#Broadcast_Control_StopBroadcast",
                           ),
-                          strDescription: (0, O.we)(
+                          strDescription: (0, G.we)(
                             "#EventEditor_GenericAreYouSure",
                           ),
                           onOK: async () => {
@@ -1372,7 +1377,7 @@
                             let a = await p.Get().StopBroadcast(e);
                             e.token.reason ||
                               d(
-                                (0, O.we)(
+                                (0, G.we)(
                                   a
                                     ? "#Broadcast_Control_StopSuccess"
                                     : "#Broadcast_Control_StopFailure",
@@ -1380,11 +1385,11 @@
                               );
                           },
                         }),
-                        (0, G.uX)(e),
+                        (0, O.uX)(e),
                       );
                     },
                   },
-                  (0, O.we)("#Broadcast_Control_StopBroadcast"),
+                  (0, G.we)("#Broadcast_Control_StopBroadcast"),
                 ),
                 Boolean(i) && n.createElement("div", null, i),
               ),
@@ -1401,7 +1406,7 @@
           }, [t]),
           t
             ? n.createElement(re.t, {
-                string: (0, O.we)("#Loading"),
+                string: (0, G.we)("#Loading"),
                 position: "center",
                 size: "medium",
               })

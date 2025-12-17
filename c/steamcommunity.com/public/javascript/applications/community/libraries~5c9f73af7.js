@@ -3157,7 +3157,38 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ =
+        "undefined" != typeof document ? _.useLayoutEffect : _.useEffect;
+      function _(_) {
+        const _ = _.useReducer(() => ({}), {})[1],
+          _ = {
+            ..._,
+            onChange: (_, _) => {
+              var _;
+              _ ? (0, _.flushSync)(_) : _(),
+                null == (_ = _.onChange) || _.call(_, _, _);
+            },
+          },
+          [_] = _.useState(() => new _._(_));
+        return (
+          _.setOptions(_),
+          _(() => _._didMount(), []),
+          _(() => _._willUpdate()),
+          _
+        );
+      }
+      function _(_) {
+        return _({
+          observeElementRect: _._,
+          observeElementOffset: _._,
+          scrollToFn: _._,
+          ..._,
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
       function _(_, _, _) {
         let _,
           _ = _.initialDeps ?? [];
@@ -3208,6 +3239,13 @@
           throw new Error("Unexpected undefined" + (_ ? `: ${_}` : ""));
         return _;
       }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
       const _ = (_, _, _) => {
           let _;
           return function (..._) {
@@ -3914,34 +3952,6 @@
         }
         return _ > 0 ? _ - 1 : 0;
       };
-      const _ =
-        "undefined" != typeof document ? _.useLayoutEffect : _.useEffect;
-      function _(_) {
-        const _ = _.useReducer(() => ({}), {})[1],
-          _ = {
-            ..._,
-            onChange: (_, _) => {
-              var _;
-              _ ? (0, _.flushSync)(_) : _(),
-                null == (_ = _.onChange) || _.call(_, _, _);
-            },
-          },
-          [_] = _.useState(() => new _(_));
-        return (
-          _.setOptions(_),
-          _(() => _._didMount(), []),
-          _(() => _._willUpdate()),
-          _
-        );
-      }
-      function _(_) {
-        return _({
-          observeElementRect: _,
-          observeElementOffset: _,
-          scrollToFn: _,
-          ..._,
-        });
-      }
     },
   },
 ]);

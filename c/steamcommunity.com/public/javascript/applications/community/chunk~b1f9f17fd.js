@@ -15568,6 +15568,7 @@
                         _.createElement(_._, {
                           _: _.appid,
                           type: (0, _._)(_.GetAppType()),
+                          bPreferAssetWithoutOverride: !1,
                         }),
                       ),
                     ),
@@ -15825,6 +15826,7 @@
             },
             bHidePriceIfOwned: !0,
             bHideStatusBanners: !0,
+            bPreferAssetWithoutOverride: !1,
           }),
           _.createElement(
             "div",
@@ -17988,6 +17990,7 @@
             fnSetBackgroundImgGroupEditMode: _,
           } = _,
           [_, _] = (0, _.useState)(_.BIsBackgroundImageEnabled()),
+          [_, _, _] = (0, _._)(),
           _ = (0, _._)(() => _.GetSalePageLastCoverSectionUntilEnd());
         return _.createElement(
           "div",
@@ -18024,24 +18027,26 @@
                   _.createElement(
                     _._,
                     {
-                      onClick: (_) =>
-                        (0, _._)(
-                          _.createElement(_._, {
-                            strTitle: (0, _._)(
-                              "#EventEditor_GenericAreYouSure",
-                            ),
-                            strDescription: (0, _._)(
-                              "#BackgroundGroups_ClearAllSettings_Desc",
-                            ),
-                            bDestructiveWarning: !0,
-                            onOK: () => {
-                              _.ClearAllBackgroundImageGroupSettings(), _(!1);
-                            },
-                          }),
-                          (0, _._)(_),
-                        ),
+                      onClick: _,
                     },
                     (0, _._)("#BackgroundGroups_ClearAllSettings"),
+                  ),
+                  _.createElement(
+                    _._,
+                    {
+                      active: _,
+                    },
+                    _.createElement(_._, {
+                      strTitle: (0, _._)("#EventEditor_GenericAreYouSure"),
+                      strDescription: (0, _._)(
+                        "#BackgroundGroups_ClearAllSettings_Desc",
+                      ),
+                      bDestructiveWarning: !0,
+                      onOK: () => {
+                        _.ClearAllBackgroundImageGroupSettings(), _(!1);
+                      },
+                      closeModal: _,
+                    }),
                   ),
                 )
               : _.createElement("p", null, (0, _._)("#BackgroundGroups_Desc")),
@@ -18066,42 +18071,46 @@
             eventModel: _,
             nTabIndex: _,
           } = _,
-          _ = _ >= 0,
           _ = (0, _._)(),
           [_, _, _, _] = (0, _._)(() => {
             var _, _;
             return [
-              __webpack_require__.mapGroupToSections.get(_.background_id),
+              __webpack_require__.mapGroupToSections.get(
+                null == _ ? void 0 : _.background_id,
+              ),
               null !==
                 (_ =
                   null ===
                     (_ = __webpack_require__.mapGroupToSections.get(
-                      _.background_id,
+                      null == _ ? void 0 : _.background_id,
                     )) || void 0 === _
                     ? void 0
                     : _.sectionUniqueIDs) && void 0 !== _
                 ? _
                 : [],
-              _
+              null != _
                 ? _.GetTabLastCoverSectionUntilEnd(_)
                 : _.GetSalePageLastCoverSectionUntilEnd(),
-              _ ? _.GetTabGroupCount(_) : _.GetSalePageGroupCount(),
+              null != _ ? _.GetTabGroupCount(_) : _.GetSalePageGroupCount(),
             ];
           }),
-          _ = _ && _ + 1 === _;
-        let _ = null;
-        (null == _ ? void 0 : _.nUniqueIDNextSaleSection) &&
-          (_ = (0, _._)(
-            2,
-            _.GetSaleSectionByID(
-              null == _ ? void 0 : _.nUniqueIDNextSaleSection,
-            ),
-            _,
-            _,
-            _.nSaleSectionLastIndex + 1,
-          ));
-        let _ = null;
-        if ((null == _ ? void 0 : _.length) > 1) {
+          _ = _ && _ + 1 === _,
+          [_, _, _] = (0, _._)(),
+          [_, _, _] = (0, _._)();
+        let _, _;
+        if (
+          ((null == _ ? void 0 : _.nUniqueIDNextSaleSection) &&
+            (_ = (0, _._)(
+              2,
+              _.GetSaleSectionByID(
+                null == _ ? void 0 : _.nUniqueIDNextSaleSection,
+              ),
+              _,
+              _,
+              _.nSaleSectionLastIndex + 1,
+            )),
+          _ && (null == _ ? void 0 : _.length) > 1)
+        ) {
           const _ = _[_.length - 1];
           _ = (0, _._)(
             2,
@@ -18116,7 +18125,7 @@
           {
             bStartMinimized: !1,
             title: (0, _._)(
-              _ >= 0
+              null != _
                 ? "#BackgroundGroups_Sale_Tab_GroupNum"
                 : "#BackgroundGroups_Sale_GroupNum",
               _ + 1,
@@ -18131,20 +18140,24 @@
             _.createElement(
               _._,
               {
-                onClick: (_) =>
-                  (0, _._)(
-                    _.createElement(_, {
-                      imgGroup: _,
-                      eventModel: _,
-                      fnUpdateImageGroup: (_) =>
-                        _
-                          ? _.SetTabBackgroundGroup(_, _, _)
-                          : _.SetSalePageBackgroundGroup(_, _),
-                    }),
-                    (0, _._)(_),
-                  ),
+                onClick: _,
               },
               (0, _._)("#BackgroundGroups_Configure"),
+            ),
+            _.createElement(
+              _._,
+              {
+                active: _,
+              },
+              _.createElement(_, {
+                imgGroup: _,
+                closeModal: _,
+                eventModel: _,
+                fnUpdateImageGroup: (_) =>
+                  null != _
+                    ? _.SetTabBackgroundGroup(_, _, _)
+                    : _.SetSalePageBackgroundGroup(_, _),
+              }),
             ),
             _.createElement("br", null),
             _.createElement(
@@ -18179,12 +18192,12 @@
                   (0, _._)("#BackgroundGroups_EndOfList"),
                 ),
             ),
-            Boolean(_) &&
+            !!_ &&
               _.createElement(
                 _._,
                 {
                   onClick: () =>
-                    _
+                    null != _
                       ? _.SetTabBackgroundGroup(_, _, {
                           ..._,
                           num_sections: _.num_sections - 1,
@@ -18196,12 +18209,12 @@
                 },
                 (0, _._)("#BackgroundGroups_Reduce", _),
               ),
-            Boolean(_) &&
+            !!_ &&
               _.createElement(
                 _._,
                 {
                   onClick: () =>
-                    _
+                    null != _
                       ? _.SetTabBackgroundGroup(_, _, {
                           ..._,
                           num_sections: _.num_sections + 1,
@@ -18221,34 +18234,34 @@
                 _.createElement(
                   _._,
                   {
-                    onClick: (_) =>
-                      (0, _._)(
-                        _.createElement(_._, {
-                          strTitle: (0, _._)("#Dialog_AreYouSure"),
-                          bDestructiveWarning: !0,
-                          strDescription: (0, _._)(
-                            "#BackgroundGroups_RemoveThisGroup_Desc",
-                          ),
-                          onOK: () =>
-                            _
-                              ? _.RemoveTabBackgroundGroup(_, _)
-                              : _.RemoveSalePageBackgroundGroup(_),
-                        }),
-                        (0, _._)(_),
-                      ),
+                    onClick: _,
                   },
                   (0, _._)("#BackgroundGroups_RemoveThisGroup"),
+                ),
+                _.createElement(
+                  _._,
+                  {
+                    active: _,
+                  },
+                  _.createElement(_._, {
+                    strTitle: (0, _._)("#Dialog_AreYouSure"),
+                    bDestructiveWarning: !0,
+                    strDescription: (0, _._)(
+                      "#BackgroundGroups_RemoveThisGroup_Desc",
+                    ),
+                    onOK: () =>
+                      null != _
+                        ? _.RemoveTabBackgroundGroup(_, _)
+                        : _.RemoveSalePageBackgroundGroup(_),
+                    closeModal: _,
+                  }),
                 ),
               ),
           ),
         );
       });
       function _(_) {
-        const {
-          backgroundImageEditModel: _,
-          nLastSectionID: __webpack_require__,
-          nTabID: _,
-        } = _;
+        const { backgroundImageEditModel: _, nTabID: __webpack_require__ } = _;
         return _.createElement(
           "div",
           {
@@ -18258,12 +18271,12 @@
             _._,
             {
               onClick: (_) =>
-                _ >= 0
-                  ? _.AddTabBackgroundGroup(_)
+                __webpack_require__ && __webpack_require__ >= 0
+                  ? _.AddTabBackgroundGroup(__webpack_require__)
                   : _.AddSalePageBackgroundGroup(),
             },
             (0, _._)(
-              _ >= 0
+              __webpack_require__ && __webpack_require__ >= 0
                 ? "#BackgroundGroups_AddNewGroupTab"
                 : "#BackgroundGroups_AddNewGroup",
             ),
@@ -18282,7 +18295,6 @@
           __webpack_require__ == _.nFirstTabSectionIDWithoutGroup
           ? _.createElement(_, {
               backgroundImageEditModel: _,
-              nLastSectionID: __webpack_require__,
               nTabID: _,
             })
           : _
@@ -24139,6 +24151,7 @@
             key: _(_),
             capsule: _,
             imageType: "header",
+            bPreferAssetWithoutOverride: !1,
           });
         }
         return null;
@@ -32523,6 +32536,8 @@
                         void 0 === _
                           ? void 0
                           : _.height,
+                      bPreferAssetWithoutOverride:
+                        !!_.section.prefer_assets_without_overrides,
                     }),
                     _ < 28 &&
                       _.createElement(
@@ -32571,6 +32586,8 @@
                     void 0 === _
                       ? void 0
                       : _.height,
+                  bPreferAssetWithoutOverride:
+                    !!_.section.prefer_assets_without_overrides,
                 }),
               )
         );
@@ -32606,6 +32623,7 @@
                     bHidePrice: !0,
                     bShowIgnoreButton: !0,
                     bShowDescriptionInHover: !0,
+                    bPreferAssetWithoutOverride: _.bPreferAssetWithoutOverride,
                   }),
                 ),
               ),
@@ -32689,6 +32707,7 @@
               maxGamesInBlock: _,
               height: _.height,
               isSmallDay: (_.includes(_) && !_) || (_.includes(_) && !_),
+              bPreferAssetWithoutOverride: _.bPreferAssetWithoutOverride,
             });
           }),
         );
@@ -32808,6 +32827,8 @@
                       bHidePrice: !0,
                       bShowIgnoreButton: !0,
                       bShowDescriptionInHover: !0,
+                      bPreferAssetWithoutOverride:
+                        _.bPreferAssetWithoutOverride,
                     }),
                   ),
                 ),
@@ -34054,6 +34075,8 @@
                   bPreferDemoStorePage: _.prefer_demo_store_page,
                   displayStyle: "library",
                   requestCompact: _,
+                  bPreferAssetWithoutOverride:
+                    _.prefer_assets_without_overrides,
                 })
               );
             }),
@@ -35822,6 +35845,8 @@
                           ? void 0
                           : __webpack_require__.BFilterRequiresFeatureDemo()),
                       bPreferDemoStorePage: _.prefer_demo_store_page,
+                      bPreferAssetWithoutOverride:
+                        _.prefer_assets_without_overrides,
                       rgFutureCalendarItems:
                         this.cachedUpcomingCalenderEvents.rgCalendarItems
                           .slice()
@@ -36087,6 +36112,7 @@
           bShowDemoButton: __webpack_require__,
           bPreferDemoStorePage: _,
           rgFutureCalendarItems: _,
+          bPreferAssetWithoutOverride: _,
         } = _;
         return _.createElement(
           "div",
@@ -36109,6 +36135,7 @@
                 imageType: "main",
                 bShowDemoButton: __webpack_require__,
                 bPreferDemoStorePage: _,
+                bPreferAssetWithoutOverride: _,
                 elElementToAppendToHover: _.createElement(_, {
                   item: _,
                   bMiniMode: !0,
@@ -39085,6 +39112,8 @@
                     bHidePrice: _.hide_prices,
                     bShowDeckCompatibilityDialog:
                       _.show_deck_compability_details,
+                    bPreferAssetWithoutOverride:
+                      !!_.prefer_assets_without_overrides,
                   })
                 : (0, _._)(
                     _.unique_id,
@@ -39111,6 +39140,8 @@
                                 capsule: _,
                                 imageType: "header",
                                 bShowParentApp: _,
+                                bPreferAssetWithoutOverride:
+                                  !!_.prefer_assets_without_overrides,
                               }),
                             ),
                         }))) || [],

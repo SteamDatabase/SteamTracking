@@ -377,7 +377,7 @@
           ? r.createElement(
               "a",
               {
-                href: (0, d.NT)(t.url),
+                href: (0, d.NT)(t.url, !0),
                 target: _.TS.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer",
               },

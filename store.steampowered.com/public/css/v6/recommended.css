@@ -2380,7 +2380,7 @@ body.v6 h2.user_reviews_header .header_links .partner_help_note:after {
 	height: 74px;
 }
 
-html.tablet .review_box .avatar {
+html.gamepad .review_box .avatar {
 	width: unset;
 	height: unset;
 }
@@ -2411,7 +2411,7 @@ div.rightcol .ReviewContentCtn {
 	flex-direction: column;
 }
 
-html.tablet .friend_reviews .review_box .review_leftcol {
+html.gamepad .friend_reviews .review_box .review_leftcol {
 	margin-top: unset;
 }
 
@@ -3139,7 +3139,7 @@ div.graph_toggle_icon.down {
 	padding-top: 10px;
 }
 
-html.tablet #review_create .content {
+html.gamepad #review_create .content {
 	flex-direction: column;
 }
 

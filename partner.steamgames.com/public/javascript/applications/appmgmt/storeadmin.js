@@ -5841,7 +5841,7 @@
     },
     27634: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Zo });
+      n.r(t), n.d(t, { default: () => es });
       var a = n(90626),
         r = n(61859),
         o = n(93763),
@@ -7675,6 +7675,7 @@
                   imageType: "header",
                   bShowParentApp: !1,
                   bHideStoreHover: !0,
+                  bPreferAssetWithoutOverride: !1,
                 }),
               )
             : a.createElement(
@@ -16041,7 +16042,9 @@
           ),
         );
       }
-      function Zo(e) {
+      var Zo = n(92528),
+        Jo = n(97058);
+      function es(e) {
         return a.createElement(
           ie.dO,
           null,
@@ -16132,6 +16135,34 @@
               },
             }),
           ),
+          a.createElement(
+            ie.qh,
+            { path: le.bI.FrontPageEdit(":clusterid") },
+            a.createElement(ce.X, {
+              config: {
+                "storeadmin-colors": (e) => a.createElement(Zo.Y, { ...e }),
+              },
+            }),
+          ),
+          a.createElement(
+            ie.qh,
+            { path: le.bI.FrontPageSteamChinaEdit(":clusterid") },
+            a.createElement(ce.X, {
+              config: {
+                "storeadmin-colors": (e) => a.createElement(Zo.Y, { ...e }),
+              },
+            }),
+          ),
+          a.createElement(
+            ie.qh,
+            { path: le.bI.ContentHubEditor(":suffix", ":clusterid") },
+            a.createElement(ce.X, {
+              config: {
+                "storeadmin-colors": (e) => a.createElement(Zo.Y, { ...e }),
+              },
+            }),
+          ),
+          a.createElement(ie.qh, { component: Jo.a }),
         );
       }
     },

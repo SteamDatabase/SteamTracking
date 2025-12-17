@@ -4477,28 +4477,28 @@ div._36qS74l1tXSXwGdyfIFQ-G {
     font-size: 14px;
   }
 }
-.tablet ._8DSX9d1ihrMSeZUFC9elD .ny6hWVK6ii05H200KRhds {
+.gamepad ._8DSX9d1ihrMSeZUFC9elD .ny6hWVK6ii05H200KRhds {
   font-size: 14px;
   color: #1a9fff;
 }
-.tablet ._8DSX9d1ihrMSeZUFC9elD ._3sRe2CGQBgablPBz9Bc9c2 {
+.gamepad ._8DSX9d1ihrMSeZUFC9elD ._3sRe2CGQBgablPBz9Bc9c2 {
   background: unset;
   font-size: 14px;
 }
-.tablet ._8DSX9d1ihrMSeZUFC9elD ._29jQMo9DGCmcSKyDIC3V7M {
+.gamepad ._8DSX9d1ihrMSeZUFC9elD ._29jQMo9DGCmcSKyDIC3V7M {
   background: unset;
 }
-.tablet ._8DSX9d1ihrMSeZUFC9elD .TwihVkmmqI5XLg6P4fpwF li a.gpfocus,
-.tablet ._8DSX9d1ihrMSeZUFC9elD ._1FCh_hPFNuwj9vrVDMOvMC.gpfocus {
+.gamepad ._8DSX9d1ihrMSeZUFC9elD .TwihVkmmqI5XLg6P4fpwF li a.gpfocus,
+.gamepad ._8DSX9d1ihrMSeZUFC9elD ._1FCh_hPFNuwj9vrVDMOvMC.gpfocus {
   background-color: #3b5a7280;
 }
-.tablet
+.gamepad
   ._8DSX9d1ihrMSeZUFC9elD
   .TwihVkmmqI5XLg6P4fpwF
   li
   a.gpfocus
   .ny6hWVK6ii05H200KRhds,
-.tablet
+.gamepad
   ._8DSX9d1ihrMSeZUFC9elD
   ._1FCh_hPFNuwj9vrVDMOvMC.gpfocus
   .ny6hWVK6ii05H200KRhds {
@@ -4703,4 +4703,13 @@ button.DialogButton._1VzLAfLRNEbppzyyYS8ueA {
   display: flex;
   align-items: center;
   justify-content: stretch;
+}
+._2VqhO10AlkJOsh7sPoqPcp {
+  width: 28px;
+  margin-left: 10px;
+  height: 26px;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #e1e1e1;
+  cursor: pointer;
 }

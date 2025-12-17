@@ -21458,6 +21458,11 @@ var CLSTAMP = "steamdb";
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  skip_lock: {
+                    _: 8,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -91056,6 +91061,105 @@ var CLSTAMP = "steamdb";
           return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
         }
         getClassName() {
+          return "CVRGamepadUI_Message_SetCurrentLanguage_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.language || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  language: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Message_SetCurrentLanguage_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
           return "CVRGamepadUI_Message_ShowOverlay_Response";
         }
       }
@@ -91461,7 +91565,8 @@ var CLSTAMP = "steamdb";
             (this.RemoteVideoStream = this.RemoteVideoStream.bind(this)),
             (this.ShowGame = this.ShowGame.bind(this)),
             (this.ShowOverlay = this.ShowOverlay.bind(this)),
-            (this.SetDisplayBrightness = this.SetDisplayBrightness.bind(this));
+            (this.SetDisplayBrightness = this.SetDisplayBrightness.bind(this)),
+            (this.SetCurrentLanguage = this.SetCurrentLanguage.bind(this));
         }
         DashboardTabClicked(_, _) {
           return this.m_Client.SendVRGamepadUIRequest(
@@ -91530,6 +91635,14 @@ var CLSTAMP = "steamdb";
         SetDisplayBrightness(_, _) {
           return this.m_Client.SendVRGamepadUIRequest(
             "SetDisplayBrightness#1",
+            _.fromObject(_ ?? {}),
+            _,
+            _,
+          );
+        }
+        SetCurrentLanguage(_, _) {
+          return this.m_Client.SendVRGamepadUIRequest(
+            "SetCurrentLanguage#1",
             _.fromObject(_ ?? {}),
             _,
             _,

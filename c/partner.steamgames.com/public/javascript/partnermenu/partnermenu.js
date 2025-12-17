@@ -32780,6 +32780,56 @@ Error generating stack: ` +
 `),
         (_ = null);
     });
+  function _(_, _) {
+    _ != null &&
+      (typeof _ == "function" ? _(_) : "current" in _ && (_.current = _));
+  }
+  function _(..._) {
+    return _.useCallback((_) => {
+      for (let _ of _) _(_, _);
+    }, _);
+  }
+  function _(_, _) {
+    let _ = _.useRef(void 0);
+    return _.useCallback((_) => {
+      _.current && _.current(), (_.current = _(_));
+    }, _);
+  }
+  var _,
+    _ = _(() => {
+      "use strict";
+      _ = _(_(), 1);
+    });
+  function _(_, _, _, _) {
+    _.useEffect(() => {
+      if (!(!_ || !_))
+        return (
+          _.addEventListener(_, _, _), () => _.removeEventListener(_, _, _)
+        );
+    }, [_, _, _]);
+  }
+  function _(_) {
+    let [_, _] = _.useState(document.documentElement[_]);
+    return (
+      _.useEffect(() => {
+        function _() {
+          _(document.documentElement[_]);
+        }
+        return (
+          window.addEventListener("resize", _, {
+            passive: !0,
+          }),
+          () => window.removeEventListener("resize", _)
+        );
+      }, [_]),
+      _
+    );
+  }
+  var _,
+    _ = _(() => {
+      "use strict";
+      _ = _(_());
+    });
   var _,
     _ = _(() => {
       _ = {
@@ -39790,48 +39840,6 @@ Error generating stack: ` +
     _.exports = _;
   });
   function _(_, _) {
-    _ != null &&
-      (typeof _ == "function" ? _(_) : "current" in _ && (_.current = _));
-  }
-  function _(..._) {
-    return _.useCallback((_) => {
-      for (let _ of _) _(_, _);
-    }, _);
-  }
-  function _(_, _) {
-    let _ = _.useRef(void 0);
-    return _.useCallback((_) => {
-      _.current && _.current(), (_.current = _(_));
-    }, _);
-  }
-  var _,
-    _ = _(() => {
-      "use strict";
-      _ = _(_());
-    });
-  function _(_) {
-    let [_, _] = _.useState(document.documentElement[_]);
-    return (
-      _.useEffect(() => {
-        function _() {
-          _(document.documentElement[_]);
-        }
-        return (
-          window.addEventListener("resize", _, {
-            passive: !0,
-          }),
-          () => window.removeEventListener("resize", _)
-        );
-      }, [_]),
-      _
-    );
-  }
-  var _,
-    _ = _(() => {
-      "use strict";
-      _ = _(_(), 1);
-    });
-  function _(_, _) {
     _.useLayoutEffect(() => {
       if (!_ || !_) return;
       let _ = _.Register(_);
@@ -41743,6 +41751,7 @@ Error generating stack: ` +
     ["el", "greek"],
     ["uk", "ukrainian"],
     ["vn", "vietnamese"],
+    ["vi", "vietnamese"],
     ["id", "indonesian"],
   ]);
   var _ = new Map();
@@ -44380,11 +44389,13 @@ Error generating stack: ` +
   }
   _();
   var _ = _(_(), 1);
+  _();
   var _ = _(_(), 1);
   _();
   _();
   _();
   _();
+  var _ = _(_(), 1);
   _();
   function _(_, _) {
     return {
@@ -44504,9 +44515,11 @@ Error generating stack: ` +
       loaderData: _,
       renderContext: _,
       loaderDataClientReferences: _ = {},
+      scrollPosition: _,
     } = _;
     return (
       _(),
+      _(_),
       (0, _.jsxs)(_.Fragment, {
         children: [
           (0, _.jsx)(_, {
@@ -44539,6 +44552,12 @@ Error generating stack: ` +
         ],
       })
     );
+  }
+  function _(_) {
+    (0, _.useLayoutEffect)(() => {
+      let { _: _ = 0, _: _ = 0 } = _ ?? {};
+      window.scrollTo(_, _);
+    }, [_]);
   }
   function _(_) {
     let { pageRoutes: _, index: _ = 0, loaderData: _ } = _,
@@ -44657,6 +44676,7 @@ Error generating stack: ` +
   var _;
   function _() {
     (0, _.useEffect)(() => {
+      window.history.scrollRestoration = "manual";
       async function _(_) {
         if (
           (_?.abort(),
@@ -44678,9 +44698,25 @@ Error generating stack: ` +
           _?.abort(), window.removeEventListener("popstate", _);
         }
       );
-    }, []);
+    }, []),
+      _(
+        window,
+        "scroll",
+        (0, _.useCallback)(() => {
+          window.history.replaceState(
+            {
+              ...(window.history.state || {}),
+              scrollPosition: {
+                _: window.scrollX,
+                _: window.scrollY,
+              },
+            },
+            "",
+          );
+        }, []),
+      );
   }
-  function _(_, _, _, _, _) {
+  function _(_, _, _, _, _, _) {
     let _ = _.filter((_) => _.route?.Component).map((_) => _.route);
     if (_.length === 0) throw "no routemodule with a component, can't render";
     (window.SSR ??= {}),
@@ -44693,6 +44729,7 @@ Error generating stack: ` +
             loaderData: _,
             metadata: _,
             renderContext: _,
+            scrollPosition: _,
           }),
         );
       }),
@@ -44747,7 +44784,14 @@ Error generating stack: ` +
   async function _(_) {
     let { cssPromises: _, routeModules: _ } = await _(_.assetData);
     await Promise.all(_),
-      _(_, _.assetData, _.loaderData ?? [], _.metadata, _.renderContext);
+      _(
+        _,
+        _.assetData,
+        _.loaderData ?? [],
+        _.metadata,
+        _.renderContext,
+        _.scrollPosition,
+      );
   }
   function _(_) {
     let _ = Math.min(_, 1).toString();
@@ -44795,7 +44839,11 @@ Error generating stack: ` +
       _?.aborted)
     )
       return;
-    let _ = await Promise.all(_.map(_));
+    let _ = await Promise.all(_.map(_)),
+      _ = {
+        _: 0,
+        _: 0,
+      };
     _(
       {
         assetData: _,
@@ -44803,10 +44851,11 @@ Error generating stack: ` +
         loaderData: _,
         renderContext: _,
         _: _,
+        scrollPosition: _,
       },
       _,
     ),
-      _(_, _, _, _, _);
+      _(_, _, _, _, _, _);
   }
   async function _(_) {
     _?.abort(), (_ = new AbortController());
@@ -44826,7 +44875,10 @@ Error generating stack: ` +
     _ = (0, _.createContext)(_);
   function _(_) {
     let [_, _] = (0, _.useState)(_.loaderData),
-      [_, _] = (0, _.useState)(),
+      _ = (0, _.useRef)(_.loaderData),
+      _ = _.current !== _.loaderData;
+    _.current = _.loaderData;
+    let [_, _] = (0, _.useState)(),
       _ = (0, _.useCallback)(
         async (_) => {
           let _ = new URL(location.href),
@@ -44878,9 +44930,10 @@ Error generating stack: ` +
       }, [_.loaderData, _._]),
       (0, _.jsx)(_.Provider, {
         value: {
-          loaderData: _,
+          loaderData: _ ? _.loaderData : _,
           refetchFn: _,
           fetchState: _,
+          _: _._,
         },
         children: _.children,
       })

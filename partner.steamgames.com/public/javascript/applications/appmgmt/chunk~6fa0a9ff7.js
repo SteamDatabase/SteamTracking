@@ -387,7 +387,7 @@
             observeElementRect: (e, t) => ("window" === D ? S(e, t) : z(e, t)),
             getItemKey(e) {
               const t = A[e];
-              return v(e, t);
+              return v(e, t.original);
             },
           }),
           U = (0, u.useRef)(0),

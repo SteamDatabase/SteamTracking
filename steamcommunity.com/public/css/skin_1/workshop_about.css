@@ -53,12 +53,28 @@ h4 {
 	padding-bottom: 20px;
 }
 
+.info_row {
+	display: flex;
+	flex-direction: row;
+}
+
 .feature_icon
 {
-	float: left;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 	width: 42px;
 	height: 42px;
 	margin-right: 8px;
+	border: 1px solid #66c0f470;
+	border-radius: 4px;
+}
+
+.feature_icon svg {
+	width: 36px;
+	height: 36px;
+	fill: #66c0f4;
 }
 
 .feature_body

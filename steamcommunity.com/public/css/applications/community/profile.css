@@ -1037,10 +1037,10 @@ body.profile_edit_page .SaveActions button.DialogButton {
   margin-left: 12px;
 }
 @media screen and (max-width: 910px) {
-  html.tablet .responsive_page_content {
+  html.gamepad .responsive_page_content {
     background: none;
   }
-  html.tablet .gray_bevel {
+  html.gamepad .gray_bevel {
     background-color: #3d4450;
     border-radius: 2px;
     border: 0px solid rgba(91, 132, 181, 0.2);

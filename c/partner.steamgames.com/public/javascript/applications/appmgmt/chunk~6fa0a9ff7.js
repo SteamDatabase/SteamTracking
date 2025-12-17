@@ -457,7 +457,7 @@
             observeElementRect: (_, _) => ("window" === _ ? _(_, _) : _(_, _)),
             getItemKey(_) {
               const _ = _[_];
-              return _(_, _);
+              return _(_, _.original);
             },
           }),
           _ = (0, _.useRef)(0),

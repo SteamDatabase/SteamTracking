@@ -6449,6 +6449,7 @@
         ["el", "greek"],
         ["uk", "ukrainian"],
         ["vn", "vietnamese"],
+        ["vi", "vietnamese"],
         ["id", "indonesian"],
       ]);
       const _ = new Map();
@@ -10602,7 +10603,8 @@
           : !(!_(_) || !_(_)) ||
               (!_(_) &&
                 !_(_) &&
-                _.label === _.label &&
+                typeof _.label == typeof _.label &&
+                  ("string" != typeof _.label || _.label === _.label) &&
                   _.tooltip === _.tooltip &&
                     _(_) == _(_) &&
                       !(_(_) && _(_) && !_(_.options, _.options)) &&
@@ -10736,7 +10738,7 @@
           );
           const _ = !_(_.rgOptions, this.props.rgOptions),
             _ = _.selectedOption !== this.props.selectedOption,
-            _ = this.value !== _.value;
+            _ = !_(this.value, _.value);
           !this.props.controlled &&
             (_ || _ || _) &&
             (_ || null == this.value
@@ -21527,7 +21529,9 @@
                 "all_upcoming",
                 "discounted",
               ],
+              prefer_assets_without_overrides: !1,
             },
+            prefer_assets_without_overrides: !1,
             enable_faceted_browsing:
               (_._.GetCreatorHome(this.clanSteamID)?.GetAppIDList().length ??
                 0) >= 7,
@@ -23872,11 +23876,12 @@
       }
       function _(_, _) {
         let _;
-        "string" == typeof _
-          ? (_ = _)
-          : "location" in _
-            ? (_ = _.location.search)
-            : "search" in _ && (_ = _.search);
+        if ("string" == typeof _) _ = _;
+        else if ("location" in _) _ = _.location.search;
+        else {
+          if (!("search" in _)) return;
+          _ = _.search;
+        }
         const _ = new URLSearchParams(__webpack_require__.substring("chunkid"));
         if (_.has(_)) {
           const _ = _.getAll(_);
@@ -27958,14 +27963,7 @@
                   ),
                   2 === _ || 3 === _)
                 )
-                  return (
-                    this.m_transport.MakeReady(),
-                    window.setTimeout(
-                      this.PollForUpdate,
-                      this.m_msPollInterval,
-                    ),
-                    1
-                  );
+                  return this.m_transport.MakeReady(), this.StartPolling(!1), 1;
               }
               if (9 === _ || 27 === _) this.m_eFailureState = _.Expired;
               else if (84 === _) this.m_eFailureState = _.RateLimitExceeded;
@@ -28017,10 +28015,7 @@
                   _)
                 : (_ && (this.m_strChallengeURL = _),
                   _ && (this.m_strClientID = _),
-                  (this.m_activeTimerID = window.setTimeout(
-                    this.PollForUpdate,
-                    this.m_msPollInterval,
-                  )),
+                  this.StartPolling(!1),
                   _)
             );
           } catch (_) {
@@ -77677,11 +77672,11 @@
           ? _ + (_.indexOf("?") >= 0 ? "&" : "?") + "snr=" + _._.SNR
           : _;
       }
-      function _(_) {
+      function _(_, _) {
         return (
           _._.IN_STEAMUI &&
             !_.startsWith("steam://") &&
-            (_ = `steam://openurl/${_}`),
+            (_ = _ ? `steam://openurl_external/${_}` : `steam://openurl/${_}`),
           _
         );
       }

@@ -26240,6 +26240,7 @@
             type: n,
             bShowDemoButton: 1 == a?.GetAppType(),
             bAllowTwoLinesForHeader: !0,
+            bPreferAssetWithoutOverride: !1,
           }),
         );
       }
@@ -31175,17 +31176,25 @@
               r,
             ];
           })(t, a),
-          u = (function () {
-            let e = i.useCallback((e) => {
+          d = (0, u.QS)((e) => {
+            if (!e) return;
+            let t = (e) => {
                 e.stopPropagation();
-              }, []),
-              t = i.useCallback((e) => {
+              },
+              r = (e) => {
                 e.stopPropagation();
-              }, []);
-            return { onTouchStart: e, onTouchEnd: t };
-          })();
+              };
+            return (
+              e.addEventListener("touchstart", t, { passive: !1 }),
+              e.addEventListener("touchend", r, { passive: !1 }),
+              () => {
+                e.removeEventListener("touchstart", t),
+                  e.removeEventListener("touchend", r);
+              }
+            );
+          }, []);
         G() && (c = null);
-        let d = (function (e) {
+        let g = (function (e) {
           return i.useCallback(
             (t) => {
               let r = t.currentTarget.getBoundingClientRect(),
@@ -31197,25 +31206,25 @@
             [e],
           );
         })(t);
-        c || (d = void 0);
-        let g = { display: "none" };
-        c && ((g.left = c.nTickOffset), (g.display = "block"));
-        let p = X.bT(s, 0, l, 0, 100),
-          _ = X.bT(o, 0, l, 0, 100),
-          y = { width: `${p.toFixed(1)}%` },
+        c || (g = void 0);
+        let p = { display: "none" };
+        c && ((p.left = c.nTickOffset), (p.display = "block"));
+        let _ = X.bT(s, 0, l, 0, 100),
+          y = X.bT(o, 0, l, 0, 100),
           b = { width: `${_.toFixed(1)}%` },
-          f = (0, B.A)(te().Timeline, c && te().Hovered);
+          f = { width: `${y.toFixed(1)}%` },
+          M = (0, B.A)(te().Timeline, c && te().Hovered);
         return i.createElement(
           "div",
           {
-            className: f,
+            ref: d,
+            className: M,
             "data-keepcontrols": !!c,
-            onClick: d,
+            onClick: g,
             onPointerMove: m.onPointerMove,
             onPointerLeave: m.onPointerLeave,
             onPointerDown: m.onPointerDown,
             onLostPointerCapture: m.onLostPointerCapture,
-            ...u,
           },
           i.createElement(
             "div",
@@ -31226,15 +31235,15 @@
             },
             i.createElement("div", {
               className: (0, B.A)(te().Bar, te().Buffered),
-              style: b,
+              style: f,
             }),
             i.createElement("div", {
               className: (0, B.A)(te().Bar, te().Played),
-              style: y,
+              style: b,
             }),
             i.createElement("div", {
               className: (0, B.A)(te().HoverTick),
-              style: g,
+              style: p,
             }),
           ),
           i.createElement(Me, {

@@ -3706,7 +3706,10 @@
           } = _,
           [_, _] = _.useState(!1),
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
-          [_] = (0, _._)(__webpack_require__ && _?.GetParentAppID(), _._);
+          [_] = (0, _._)(
+            __webpack_require__ ? _?.GetParentAppID() : void 0,
+            _._,
+          );
         if (!_) return null;
         const _ = Boolean(_),
           _ = _.createElement(_, {
@@ -3834,6 +3837,7 @@
             strDoubleCapsuleMessage: _,
             bPreferDemoStorePage: _,
             bShowEarlyAccessBanner: _,
+            bPreferAssetWithoutOverride: _,
           } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
           _ = (0, _._)(),
@@ -3882,6 +3886,7 @@
                 _.createElement(_._, {
                   imageType: _,
                   info: _,
+                  bPreferAssetWithoutOverride: _,
                 }),
               _.createElement(_._, {
                 storeItem: _,
@@ -4412,7 +4417,11 @@
           : null;
       }
       function _(_) {
-        const { storeItem: _, bPreview: __webpack_require__ } = _,
+        const {
+            storeItem: _,
+            bPreview: __webpack_require__,
+            bPreferAssetWithoutOverride: _,
+          } = _,
           _ = (0, _.useMemo)(
             () => ({
               _: _.GetID(),
@@ -4456,6 +4465,7 @@
             _.createElement(_._, {
               info: _,
               bPreferLibrary: !0,
+              bPreferAssetWithoutOverride: _,
             }),
           ),
           _.createElement(
@@ -4662,6 +4672,7 @@
               _.createElement(_, {
                 storeItem: _.associated_item,
                 bPreview: _,
+                bPreferAssetWithoutOverride: !1,
               }),
               _.createElement(_, {
                 message: _,
@@ -4825,6 +4836,7 @@
                 _.createElement(_, {
                   storeItem: _.associated_item,
                   bPreview: _,
+                  bPreferAssetWithoutOverride: !1,
                 }),
                 _.createElement(_, {
                   rgDLCSaleCapsules: _,
@@ -5015,6 +5027,7 @@
             imageType: __webpack_require__,
             bShowParentApp: !1,
             bHideStoreHover: !0,
+            bPreferAssetWithoutOverride: !1,
           })
         );
       }
@@ -5026,6 +5039,7 @@
           type: __webpack_require__,
           fnOnClickOverride: _,
           bIsMarketingMessage: !0,
+          bPreferAssetWithoutOverride: !1,
         });
       }
       var _ = __webpack_require__("chunkid"),

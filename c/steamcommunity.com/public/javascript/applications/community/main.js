@@ -8342,6 +8342,7 @@
         ["el", "greek"],
         ["uk", "ukrainian"],
         ["vn", "vietnamese"],
+        ["vi", "vietnamese"],
         ["id", "indonesian"],
       ]);
       const _ = new Map();
@@ -62523,6 +62524,11 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
+                  skip_lock: {
+                    _: 8,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -67949,7 +67955,8 @@
           : !(!_(_) || !_(_)) ||
               (!_(_) &&
                 !_(_) &&
-                _.label === _.label &&
+                typeof _.label == typeof _.label &&
+                  ("string" != typeof _.label || _.label === _.label) &&
                   _.tooltip === _.tooltip &&
                     _(_) == _(_) &&
                       !(_(_) && _(_) && !_(_.options, _.options)) &&
@@ -68082,7 +68089,7 @@
           );
           const _ = !_(_.rgOptions, this.props.rgOptions),
             _ = _.selectedOption !== this.props.selectedOption,
-            _ = this.value !== _.value;
+            _ = !_(this.value, _.value);
           !this.props.controlled &&
             (_ || _ || _) &&
             (_ || null == this.value
@@ -72329,7 +72336,7 @@
           ? _.createElement(
               "a",
               {
-                href: (0, _._)(_.url),
+                href: (0, _._)(_.url, !0),
                 target: _._.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer",
               },
@@ -85582,11 +85589,11 @@
           return "";
         }
       }
-      function _(_) {
+      function _(_, _) {
         return (
           _._.IN_STEAMUI &&
             !_.startsWith("steam://") &&
-            (_ = `steam://openurl/${_}`),
+            (_ = _ ? `steam://openurl_external/${_}` : `steam://openurl/${_}`),
           _
         );
       }

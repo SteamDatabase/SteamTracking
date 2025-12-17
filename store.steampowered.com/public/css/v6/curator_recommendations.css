@@ -1685,16 +1685,16 @@ background: -webkit-linear-gradient( top, rgba(78, 102, 115, 0.3) 5%, rgba(78, 1
 
 }
 
-	html.responsive.tablet .browse_filters {
+	html.responsive.gamepad .browse_filters {
 		display: none;
 	}
 
-	html.responsive.tablet .browse_container {
+	html.responsive.gamepad .browse_container {
 		width: 100%;
 		flex-direction: column;
 	}
 
-	html.responsive.tablet .browse_tabs {
+	html.responsive.gamepad .browse_tabs {
 		width: 100%;
 	}
 

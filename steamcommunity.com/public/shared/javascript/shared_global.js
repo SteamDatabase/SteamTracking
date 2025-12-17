@@ -734,7 +734,7 @@ CModal.prototype.AdjustSizing = function( duration )
 		return;
 
 	var bResponsiveScreen = window.UseTouchFriendlyMode && UseTouchFriendlyMode();
-	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+	var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
 
 	var nViewportWidth = document.compatMode === 'BackCompat' ? document.body.clientWidth : $J(window).width();
 	var nViewportHeight = document.compatMode === 'BackCompat' ? document.body.clientHeight : $J(window).height();
@@ -780,7 +780,7 @@ CModal.prototype.AdjustSizing = function( duration )
 	var nTop = Math.max( Math.floor( ( nViewportHeight - nContentHeight ) / 2 ), 12 );
 
 	// only use absolute position on mobile screens
-	if ( bResponsiveScreen && !bUseTabletScreenMode )
+	if ( bResponsiveScreen && !bUseGamepadScreenMode )
 	{
 		nLeft += this.m_nInitialOffsetLeft;
 		nTop += this.m_nInitialOffsetTop;
@@ -3252,8 +3252,8 @@ function ShowMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	var $Popup = $JFromIDOrElement(elemPopup);
 
 	// If we're in tablet screen mode put the menu content in a modal dialog
-	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
-	if ( bUseTabletScreenMode )
+	var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
+	if ( bUseGamepadScreenMode )
 	{
 		// detach this element and when the dialog closes re-attach to the document body
 		$Popup.detach();
@@ -5230,7 +5230,7 @@ function InitializeGPFocusRestoreTimeout( bUseWindowOnload = true )
 	window.history.replaceState( $J.extend( {}, window.history.state, { notify_focus_restore_ready: true } ), "" );
 	SetGPFocusRestoreTimeout = function( delay = 200 )
 	{
-		if ( nGPFocusRestoreTimeoutID == 0 || ( !window.UseTabletScreenMode || !window.UseTabletScreenMode() ) )
+		if ( nGPFocusRestoreTimeoutID == 0 || ( !window.UseGamepadScreenMode || !window.UseGamepadScreenMode() ) )
 			return;
 
 		if ( nGPFocusRestoreTimeoutID !== -1 )

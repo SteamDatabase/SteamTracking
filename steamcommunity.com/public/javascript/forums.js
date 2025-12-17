@@ -897,10 +897,10 @@ function Forum_AuthorMenu( elLink, accountIDTarget, gidComment )
 
 	$Menu.css('min-width', $Link.width() + 'px' );
 
-	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
-	if ( bUseTabletScreenMode )
+	var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
+	if ( bUseGamepadScreenMode )
 	{
-		// On tablet open a dialog with a clone of the content in the dialog body, which will be destroyed when the dialog closes
+		// On gamepad open a dialog with a clone of the content in the dialog body, which will be destroyed when the dialog closes
 		var $menuContent = $Menu.clone();
 		$menuContent.css( 'position', 'static' ); // clear possible absolute positioning
 		$menuContent.show();

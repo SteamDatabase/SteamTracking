@@ -7358,6 +7358,8 @@
                               bHidePrice: _.hide_prices,
                               bHidePlatforms: _ >= 5,
                               index: _,
+                              bPreferAssetWithoutOverride:
+                                !!_.prefer_assets_without_overrides,
                               bShowDeckCompatibilityDialog:
                                 _.show_deck_compability_details ||
                                 _.activeTab?.BFilterRequiresSteamDeckVerifiedOrPlayable(),
@@ -7404,6 +7406,8 @@
                                 _.show_deck_compability_details ||
                                 _.activeTab?.BFilterRequiresSteamDeckVerifiedOrPlayable(),
                               fnOnClickOverride: _,
+                              bPreferAssetWithoutOverride:
+                                !!_.prefer_assets_without_overrides,
                             }),
                           );
                         }
@@ -9820,6 +9824,7 @@
             bPreferDemoStorePage: _,
             bShowPurchaseOptionsButton: _,
             bUseSubscriptionLayout: _,
+            bPreferAssetWithoutOverride: _,
           } = _,
           [_, _] = _.useState(!1),
           _ = () => _(!_),
@@ -9880,6 +9885,7 @@
                     _.createElement(_._, {
                       info: _,
                       imageType: "library",
+                      bPreferAssetWithoutOverride: _,
                     }),
                     _.createElement(_._, {
                       storeItem: _,
@@ -10025,6 +10031,7 @@
                   },
                   _.createElement(_._, {
                     info: _,
+                    bPreferAssetWithoutOverride: _,
                   }),
                   _.createElement(_._, {
                     storeItem: _,
@@ -10036,6 +10043,7 @@
               storeItem: _,
               bPurchaseOptionsExpanded: _,
               fnCollapseOptions: _,
+              bPreferAssetWithoutOverride: _,
             }),
           ),
         );
@@ -12557,6 +12565,7 @@
             key: _(_),
             capsule: _,
             imageType: "header",
+            bPreferAssetWithoutOverride: !1,
           });
         }
         return null;
@@ -19704,6 +19713,8 @@
                       appIDsByDay: _,
                       dayTimestamps: _,
                       height: _.section.calendar_section_data?.height,
+                      bPreferAssetWithoutOverride:
+                        !!_.section.prefer_assets_without_overrides,
                     }),
                     _ < 28 &&
                       _.createElement(
@@ -19741,6 +19752,8 @@
                   appIDs: _,
                   dayCount: _.section.calendar_section_data?.day_count,
                   height: _.section.calendar_section_data?.height,
+                  bPreferAssetWithoutOverride:
+                    !!_.section.prefer_assets_without_overrides,
                 }),
               )
         );
@@ -19770,6 +19783,7 @@
                 bHidePrice: !0,
                 bShowIgnoreButton: !0,
                 bShowDescriptionInHover: !0,
+                bPreferAssetWithoutOverride: _.bPreferAssetWithoutOverride,
               }),
             ),
           ),
@@ -19830,6 +19844,7 @@
               maxGamesInBlock: _,
               height: _.height,
               isSmallDay: (_.includes(_) && !_) || (_.includes(_) && !_),
+              bPreferAssetWithoutOverride: _.bPreferAssetWithoutOverride,
             }),
           ),
         );
@@ -19943,6 +19958,7 @@
                   bHidePrice: !0,
                   bShowIgnoreButton: !0,
                   bShowDescriptionInHover: !0,
+                  bPreferAssetWithoutOverride: _.bPreferAssetWithoutOverride,
                 }),
               ),
             ),
@@ -21028,6 +21044,8 @@
                   bPreferDemoStorePage: _.prefer_demo_store_page,
                   displayStyle: "library",
                   requestCompact: _,
+                  bPreferAssetWithoutOverride:
+                    _.prefer_assets_without_overrides,
                 })
               );
             }),
@@ -22736,6 +22754,8 @@
                         _.show_as_demos ||
                         __webpack_require__?.BFilterRequiresFeatureDemo(),
                       bPreferDemoStorePage: _.prefer_demo_store_page,
+                      bPreferAssetWithoutOverride:
+                        _.prefer_assets_without_overrides,
                       rgFutureCalendarItems:
                         this.cachedUpcomingCalenderEvents.rgCalendarItems
                           .slice()
@@ -22996,6 +23016,7 @@
           bShowDemoButton: __webpack_require__,
           bPreferDemoStorePage: _,
           rgFutureCalendarItems: _,
+          bPreferAssetWithoutOverride: _,
         } = _;
         return _.createElement(
           "div",
@@ -23018,6 +23039,7 @@
                 imageType: "main",
                 bShowDemoButton: __webpack_require__,
                 bPreferDemoStorePage: _,
+                bPreferAssetWithoutOverride: _,
                 elElementToAppendToHover: _.createElement(_, {
                   item: _,
                   bMiniMode: !0,
@@ -25505,6 +25527,8 @@
                     bHidePrice: __webpack_require__.hide_prices,
                     bShowDeckCompatibilityDialog:
                       __webpack_require__.show_deck_compability_details,
+                    bPreferAssetWithoutOverride:
+                      !!__webpack_require__.prefer_assets_without_overrides,
                   })
                 : (0, _._)(
                     __webpack_require__.unique_id,
@@ -25530,6 +25554,8 @@
                             capsule: _,
                             imageType: "header",
                             bShowParentApp: _,
+                            bPreferAssetWithoutOverride:
+                              !!__webpack_require__.prefer_assets_without_overrides,
                           }),
                         ),
                     })) || [],

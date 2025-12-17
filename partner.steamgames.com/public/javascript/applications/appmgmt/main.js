@@ -1948,7 +1948,7 @@
             r.e(3506),
             r.e(4017),
             r.e(9433),
-          ]).then(r.bind(r, 35331)),
+          ]).then(r.bind(r, 55057)),
         ),
         ve = u.lazy(() =>
           Promise.all([
@@ -6506,6 +6506,7 @@
         ["el", "greek"],
         ["uk", "ukrainian"],
         ["vn", "vietnamese"],
+        ["vi", "vietnamese"],
         ["id", "indonesian"],
       ]);
       const a = new Map();
@@ -23858,7 +23859,8 @@
           : !(!F(e) || !F(t)) ||
               (!F(e) &&
                 !F(t) &&
-                e.label === t.label &&
+                typeof e.label == typeof t.label &&
+                  ("string" != typeof e.label || e.label === t.label) &&
                   e.tooltip === t.tooltip &&
                     x(e) == x(t) &&
                       !(x(e) && x(t) && !z(e.options, t.options)) &&
@@ -23970,7 +23972,7 @@
           );
           const r = !z(e.rgOptions, this.props.rgOptions),
             n = e.selectedOption !== this.props.selectedOption,
-            i = this.value !== t.value;
+            i = !A(this.value, t.value);
           !this.props.controlled &&
             (r || i || n) &&
             (n || null == this.value
@@ -27497,26 +27499,26 @@
     },
     95034: (e, t, r) => {
       "use strict";
-      r.d(t, { Bm: () => o, QD: () => l, f3: () => s, ip: () => c });
+      r.d(t, { Bm: () => a, QD: () => o, f3: () => s, ip: () => l });
       var n = r(90626),
         i = r(92757);
       function s(e, t) {
         let r;
-        "string" == typeof e
-          ? (r = e)
-          : "location" in e
-            ? (r = e.location.search)
-            : "search" in e && (r = e.search);
+        if ("string" == typeof e) r = e;
+        else if ("location" in e) r = e.location.search;
+        else {
+          if (!("search" in e)) return;
+          r = e.search;
+        }
         const n = new URLSearchParams(r.substring(1));
         if (n.has(t)) {
           const e = n.getAll(t);
           return e[e.length - 1];
         }
       }
-      const a = (e) => null != e;
-      function o(e, t, r, n = !1) {
+      function a(e, t, r, n = !1) {
         const i = new URLSearchParams(e.location.search.substring(1));
-        if (a(r)) {
+        if (null != r && null != r) {
           if (i.get(t) == r) return;
           i.set(t, r);
         } else {
@@ -27527,33 +27529,33 @@
           ? e.replace(`?${i.toString()}`, { ...e.location.state })
           : e.push(`?${i.toString()}`);
       }
-      function l(e, t) {
+      function o(e, t) {
         const r = (0, i.W6)(),
-          l = (0, i.zy)(),
-          c = (0, n.useMemo)(() => {
-            const r = s(l.search, e);
-            return a(r)
-              ? a(t)
+          o = (0, i.zy)(),
+          l = (0, n.useMemo)(() => {
+            const r = s(o.search, e);
+            return null != r && null != r
+              ? null != t && null != t
                 ? "boolean" == typeof t
                   ? t.constructor("false" !== r)
                   : t.constructor(r)
                 : r
               : t;
-          }, [l.search, e, t]),
-          u = (0, n.useCallback)(
+          }, [o.search, e, t]),
+          c = (0, n.useCallback)(
             (t, n = !1) => {
-              o(r, e, a(t) ? String(t) : null, n);
+              a(r, e, null != t && null != t ? String(t) : null, n);
             },
             [r, e],
           );
-        return [c, u];
+        return [l, c];
       }
-      function c(e, t, r = !1) {
+      function l(e, t, r = !1) {
         const n = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
             const r = t[e];
-            n.delete(e), a(r) && n.append(e, r);
+            n.delete(e), null != r && null != r && n.append(e, r);
           }
         r
           ? e.replace(`?${n.toString()}`, { ...e.location.state })
@@ -37163,11 +37165,11 @@
       function m() {
         return `${n.TS.HELP_BASE_URL}${(0, i.l4)()}/`;
       }
-      function d(e) {
+      function d(e, t) {
         return (
           n.TS.IN_STEAMUI &&
             !e.startsWith("steam://") &&
-            (e = `steam://openurl/${e}`),
+            (e = t ? `steam://openurl_external/${e}` : `steam://openurl/${e}`),
           e
         );
       }

@@ -2521,6 +2521,15 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   border-right: none;
   background-color: unset;
 }
+._1nUtBXgWizhgU1jv-8wVC7 {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+}
+._1xGaMOW4aakB5uwqOCT3nI {
+  position: relative;
+}
 ._2Sg7W8jsvFcXVuQ7fbhSLJ,
 .Lc2PK-Vkkvr2TUS0TfCqq {
   color: #c44848;
@@ -2635,15 +2644,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 ._1wBO1L1tT0f1wtl3CpBWbn .DialogFooter .DialogTwoColLayout {
   gap: 8px;
-}
-._1nUtBXgWizhgU1jv-8wVC7 {
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-  display: flex;
-  flex-wrap: nowrap;
-}
-._1xGaMOW4aakB5uwqOCT3nI {
-  position: relative;
 }
 .CCBFyy2uP4GNSQGfe2T1L {
   position: absolute;
@@ -2961,7 +2961,7 @@ body.v6.partner_events {
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-html.responsive.tablet .ZHAfj0MPg1zDLXRnCzSsx {
+html.responsive.gamepad .ZHAfj0MPg1zDLXRnCzSsx {
   backdrop-filter: blur(32px);
 }
 @media screen and (max-width: 910px) {
@@ -3107,7 +3107,7 @@ html.responsive.tablet .ZHAfj0MPg1zDLXRnCzSsx {
   cursor: pointer;
   color: #fff;
 }
-html.responsive.tablet .TqEPC9bhvVpZ1rb3Z8Mbd {
+html.responsive.gamepad .TqEPC9bhvVpZ1rb3Z8Mbd {
   font-weight: 500;
   line-height: 1.3;
   margin-bottom: 0px;
@@ -3155,7 +3155,7 @@ html.responsive.tablet .TqEPC9bhvVpZ1rb3Z8Mbd {
   font-weight: 200;
   margin-top: 4px;
 }
-html.responsive.tablet ._20f2sKS2M7PlPSnPCinT26 {
+html.responsive.gamepad ._20f2sKS2M7PlPSnPCinT26 {
   font-size: 18px;
 }
 @media screen and (max-width: 910px) {
@@ -3264,7 +3264,7 @@ html.responsive.tablet ._20f2sKS2M7PlPSnPCinT26 {
   position: relative;
   z-index: 2;
 }
-html.responsive.tablet ._3z2NYCkFizMu4fMvWTIBUG {
+html.responsive.gamepad ._3z2NYCkFizMu4fMvWTIBUG {
   padding-top: 10px;
 }
 @media screen and (max-width: 910px) {
@@ -3353,7 +3353,7 @@ html.responsive.tablet ._3z2NYCkFizMu4fMvWTIBUG {
   color: #dadadb;
   margin-bottom: 20px;
 }
-html.responsive.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
+html.responsive.gamepad ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   margin-bottom: 0px;
 }
 @media screen and (max-width: 910px) {

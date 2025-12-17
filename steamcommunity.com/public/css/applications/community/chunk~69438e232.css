@@ -3754,10 +3754,6 @@ html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
 ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
   max-width: 1200px;
 }
-.SteamChartsShell
-  ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
-  width: calc(100% - 100px);
-}
 @media screen and (max-width: 851px) {
   .SteamChartsShell
     ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
@@ -9109,7 +9105,7 @@ body.v6.partner_events {
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-html.responsive.tablet .ZHAfj0MPg1zDLXRnCzSsx {
+html.responsive.gamepad .ZHAfj0MPg1zDLXRnCzSsx {
   backdrop-filter: blur(32px);
 }
 @media screen and (max-width: 910px) {
@@ -9255,7 +9251,7 @@ html.responsive.tablet .ZHAfj0MPg1zDLXRnCzSsx {
   cursor: pointer;
   color: #fff;
 }
-html.responsive.tablet .TqEPC9bhvVpZ1rb3Z8Mbd {
+html.responsive.gamepad .TqEPC9bhvVpZ1rb3Z8Mbd {
   font-weight: 500;
   line-height: 1.3;
   margin-bottom: 0px;
@@ -9303,7 +9299,7 @@ html.responsive.tablet .TqEPC9bhvVpZ1rb3Z8Mbd {
   font-weight: 200;
   margin-top: 4px;
 }
-html.responsive.tablet ._20f2sKS2M7PlPSnPCinT26 {
+html.responsive.gamepad ._20f2sKS2M7PlPSnPCinT26 {
   font-size: 18px;
 }
 @media screen and (max-width: 910px) {
@@ -9412,7 +9408,7 @@ html.responsive.tablet ._20f2sKS2M7PlPSnPCinT26 {
   position: relative;
   z-index: 2;
 }
-html.responsive.tablet ._3z2NYCkFizMu4fMvWTIBUG {
+html.responsive.gamepad ._3z2NYCkFizMu4fMvWTIBUG {
   padding-top: 10px;
 }
 @media screen and (max-width: 910px) {
@@ -9501,7 +9497,7 @@ html.responsive.tablet ._3z2NYCkFizMu4fMvWTIBUG {
   color: #dadadb;
   margin-bottom: 20px;
 }
-html.responsive.tablet ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
+html.responsive.gamepad ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   margin-bottom: 0px;
 }
 @media screen and (max-width: 910px) {

@@ -319,9 +319,9 @@ GHomepage = {
 
 	OnHomeDataReady: function()
 	{
-		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+		var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
 		// Deck: Hide discovery queue shenanigans for now
-		if( !bUseTabletScreenMode )
+		if( !bUseGamepadScreenMode )
 		{
 			try {
 				if ( g_AccountID != 0 )
@@ -824,9 +824,9 @@ GHomepage = {
 		var $ScreenshotCtn = $J('<div/>').addClass('screenshots');
 
 		var rgScreenshots = rgItemData.screenshots;
-		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+		var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
 
-		if( rgScreenshots && rgScreenshots.length && !bUseTabletScreenMode )
+		if( rgScreenshots && rgScreenshots.length && !bUseGamepadScreenMode )
 		{
 			for ( var i = 0; i < 4 && i < rgScreenshots.length; i++ )
 			{
@@ -1166,9 +1166,9 @@ GHomepage = {
 		var $ScreenshotCtn = $J('<div/>').addClass('screenshots');
 
 		var rgScreenshots = rgItemData.screenshots;
-		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+		var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
 
-		if( rgScreenshots && rgScreenshots.length && !bUseTabletScreenMode )
+		if( rgScreenshots && rgScreenshots.length && !bUseGamepadScreenMode )
 		{
 			for ( var i = 0; i < 4 && i < rgScreenshots.length; i++ )
 			{
@@ -2645,10 +2645,10 @@ GHomepage = {
 	{
 		var $elCapsuleTarget = $J('.carousel_items', $elTarget);
 		var $elThumbTarget = $J('.carousel_thumbs', $elTarget);
-		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
+		var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
 		var strViewAllLink = "";
 
-				if ( bUseTabletScreenMode )
+				if ( bUseGamepadScreenMode )
 		{
 			var $elAnchor = $J('a.deck_view_all_action_link', $elTarget);
 			if ( $elAnchor && $elAnchor.attr('href') !== undefined )
@@ -2683,7 +2683,7 @@ GHomepage = {
 				if( !$CapCtn )
 					continue;
 
-								if ( bUseTabletScreenMode && strViewAllLink !== "" )
+								if ( bUseGamepadScreenMode && strViewAllLink !== "" )
 				{
 					const panelString = '{"onOptionsActionDescription":"View all","onOptionsButton":"window.location=\'%1$s\'"}';
 					$CapCtn.attr( 'data-panel', panelString.replace( '%1$s', strViewAllLink ) );
@@ -3054,7 +3054,7 @@ GHomepage = {
 		if ( !microtrailer )
 			return;
 
-		if ( window.UseTouchFriendlyMode() && !window.UseTabletScreenMode() )
+		if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
 			return;
 
 		$CapCtn.addClass( 'with_microtrailer' );
@@ -3095,7 +3095,7 @@ GHomepage = {
 				$CapCtn.removeClass( 'microtrailer_active' );
 			};
 
-			if ( $CapCtn.data('microtrailerOnImageHover') && !window.UseTabletScreenMode() )
+			if ( $CapCtn.data('microtrailerOnImageHover') && !window.UseGamepadScreenMode() )
 			{
 				$ImgCtn.on( 'mouseenter vgp_onfocus', fnPlay );
 				$ImgCtn.on( 'mouseleave vgp_onblur', fnPause );
@@ -3245,8 +3245,8 @@ GHomepage = {
 
 		var itemParams = {'class': 'community_recommendation_app responsive_scroll_snap_start'};
 		let $Item = $J('<div>', itemParams);
-		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
-		if (bUseTabletScreenMode) {
+		var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
+		if (bUseGamepadScreenMode) {
 			GStoreItemData.GetCapParamsForItem(strFeatureContext, oItem, itemParams);
 			$Item = $J('<a/>', itemParams);
 		}
@@ -3419,8 +3419,8 @@ GHomepage = {
 
 		var itemParams = { 'class' : 'community_recommendation_app responsive_scroll_snap_start' };
 		let $Item = $J( '<div>', itemParams );
-		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
-		if ( bUseTabletScreenMode )
+		var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
+		if ( bUseGamepadScreenMode )
 		{
 			GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, itemParams );
 			$Item = $J( '<a/>', itemParams );
@@ -4277,8 +4277,8 @@ GSteamCurators = {
 		// if we rendered recommended apps above, there's no need to render recommended curators
 		//
 		// On deck, we want to suppress the suggested curators.
-		var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
-		if ( !GSteamCurators.bNeedRecommendedCurators || bUseTabletScreenMode )
+		var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
+		if ( !GSteamCurators.bNeedRecommendedCurators || bUseGamepadScreenMode )
 		{
 			return;
 		}

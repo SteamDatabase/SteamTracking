@@ -4398,10 +4398,6 @@ html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
 ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
   max-width: 1200px;
 }
-.SteamChartsShell
-  ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {
-  width: calc(100% - 100px);
-}
 @media screen and (max-width: 851px) {
   .SteamChartsShell
     ._1cOoCFwafBlSkwllIMf3XM:not(._1FPIVJTLsw1nvAN24BGGKg):not(.SaleSchedCtn) {

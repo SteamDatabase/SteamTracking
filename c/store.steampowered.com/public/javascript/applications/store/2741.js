@@ -3486,6 +3486,7 @@
           },
           imageType: "header",
           onlyOneDiscountPct: !0,
+          bPreferAssetWithoutOverride: !1,
         });
       }
       function _(_) {

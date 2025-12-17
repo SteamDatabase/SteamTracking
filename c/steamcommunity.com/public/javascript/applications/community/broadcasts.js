@@ -759,6 +759,7 @@
                   _.createElement(_._, {
                     _: __webpack_require__.app_id,
                     type: "game",
+                    bPreferAssetWithoutOverride: !1,
                   }),
                 ),
             ),
@@ -1519,6 +1520,7 @@
                     _.createElement(_._, {
                       _: Number.parseInt(__webpack_require__.m_strAppId),
                       type: "game",
+                      bPreferAssetWithoutOverride: !1,
                     }),
                   ),
                 ),

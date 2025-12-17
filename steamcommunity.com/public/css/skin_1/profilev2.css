@@ -446,7 +446,7 @@ body.Steam3000Theme .profile_header_content {
     background: black;
 }
 
-body.Steam3000Theme html.responsive.tablet .profile_rightcol {
+body.Steam3000Theme html.responsive.gamepad .profile_rightcol {
 	background: black;
 }
 
@@ -3602,26 +3602,26 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 
 }
 
-	html.responsive.tablet .profile_rightcol {
+	html.responsive.gamepad .profile_rightcol {
 		float: none;
 		width: auto;
 	}
 
-	html.responsive.tablet .profile_leftcol {
+	html.responsive.gamepad .profile_leftcol {
 		float: none;
 		width: auto;
 	}
 
-	html.responsive.tablet .profile_content {
+	html.responsive.gamepad .profile_content {
         width: auto;
         font-size: inherit;
     }
 
-	html.responsive.tablet .profile_count_link {
+	html.responsive.gamepad .profile_count_link {
 		font-size: inherit;
 	}
 
-    html.responsive.tablet .profile_count_link_preview_ctn .profile_count_link {
+    html.responsive.gamepad .profile_count_link_preview_ctn .profile_count_link {
         background: transparent;
         margin: 0;
 		width: auto;
@@ -3630,19 +3630,19 @@ background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
 		margin-bottom: 8px;
     }
 
-	html.responsive.tablet .profile_count_link_preview > div {
+	html.responsive.gamepad .profile_count_link_preview > div {
 		float: none;
 		display: inline-block;
 		vertical-align: middle;
 	}
 
-	html.responsive.tablet .profile_badges_badge,
-	html.responsive.tablet .profile_badges_badge img {
+	html.responsive.gamepad .profile_badges_badge,
+	html.responsive.gamepad .profile_badges_badge img {
 		width: 36px;
 		height: 36px;
 	}
 
-	html.responsive.tablet .profile_badges_badge {
+	html.responsive.gamepad .profile_badges_badge {
 		margin-right: 6px;
 	}
 

@@ -391,7 +391,7 @@ a.trigger, a.activetrigger {
 
 }
 
-	html.responsive.tablet .review_list #rightContents {
+	html.responsive.gamepad .review_list #rightContents {
 		float: none;
 		width: auto;
 	}

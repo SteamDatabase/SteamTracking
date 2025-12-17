@@ -26,7 +26,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         constructor() {
@@ -1869,9 +1868,9 @@
               ));
         }
         OnKeyDown(_) {
-          _.keyCode == _._.LeftArrow
+          37 == _.keyCode
             ? (this.props.video.JumpTime(-15), _.preventDefault())
-            : _.keyCode == _._.RightArrow &&
+            : 39 == _.keyCode &&
               (this.props.video.JumpTime(15), _.preventDefault());
         }
         AdjustSliderForClientX(_) {
@@ -2274,6 +2273,7 @@
                     ? _._.appID
                     : parseInt(_.m_strAppId),
                 type: "game",
+                bPreferAssetWithoutOverride: !1,
               }),
           );
         }

@@ -4845,14 +4845,7 @@
                   ),
                   2 === e || 3 === e)
                 )
-                  return (
-                    this.m_transport.MakeReady(),
-                    window.setTimeout(
-                      this.PollForUpdate,
-                      this.m_msPollInterval,
-                    ),
-                    1
-                  );
+                  return this.m_transport.MakeReady(), this.StartPolling(!1), 1;
               }
               if (9 === r || 27 === r) this.m_eFailureState = i.Expired;
               else if (84 === r) this.m_eFailureState = i.RateLimitExceeded;
@@ -4894,10 +4887,7 @@
                   r)
                 : (n && (this.m_strChallengeURL = n),
                   s && (this.m_strClientID = s),
-                  (this.m_activeTimerID = window.setTimeout(
-                    this.PollForUpdate,
-                    this.m_msPollInterval,
-                  )),
+                  this.StartPolling(!1),
                   r)
             );
           } catch (e) {

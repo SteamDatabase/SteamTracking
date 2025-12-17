@@ -5108,7 +5108,9 @@
                 "all_upcoming",
                 "discounted",
               ],
+              prefer_assets_without_overrides: !1,
             },
+            prefer_assets_without_overrides: !1,
             enable_faceted_browsing:
               (null !==
                 (i =

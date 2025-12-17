@@ -1602,8 +1602,13 @@ input.filter_search_box:focus {
 	padding: 15px;
 }
 
+.market_listing_filter_price_accessory_filter {
+	padding-bottom: 10px;
+}
+
 .market_listing_filter_active .market_listing_filter_contents {
 	border: 1px solid #6C9831;
+	font-weight: bold;
 }
 
 .market_listing_filter_active .market_listing_filter_searchhint {

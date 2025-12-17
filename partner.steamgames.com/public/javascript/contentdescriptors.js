@@ -55,9 +55,7 @@ function SaveSurvey( appid, bIsSupport )
 		rgErrors.push( 'Please tell us about your content moderation strategy.' );
 	}
 
-	if ( checkboxAIYes.prop( 'checked' ) &&
-		$J("#categoryid_40" ).is(":checked") &&
-		$J("#categoryid_49" ).is(":checked") )
+	if ( checkboxAIYes.prop( 'checked' ) && $J("#categoryid_49" ).is(":checked") )
 	{
 		if ( v_trim( $J( "#external_service_name" ).val() ).length == 0 )
 		{
@@ -307,15 +305,44 @@ function HandleAISurveySelection( checkbox, bAnimate )
 		}
 	}
 
-	var relatedDiv = $J( "#AISurvey" );
-	if ( checkboxAIYes.prop( 'checked') )
+	let rgSections = [ '#AISurvey', '#AIStoreMessage', '#AILiveSurvey', '#AIExternalService' ];
+	for ( let strSection of rgSections )
 	{
-		relatedDiv.animate( { opacity: 'show', height: 'show'}, bAnimate ? 500 : 0 );
+		let relatedDiv = $J( strSection );
+		if ( checkboxAIYes.prop( 'checked') )
+		{
+			relatedDiv.animate( { opacity: 'show', height: 'show'}, bAnimate ? 500 : 0 );
+		}
+		else
+		{
+			relatedDiv.animate( { opacity: 'hide', height: 'hide'}, bAnimate ? 500 : 0 );
+		}
 	}
-	else
+}
+
+function HandleAISurveySectionTrueFalse( strCheckboxID )
+{
+	let checkboxTrue = $J( strCheckboxID );
+	let checkboxFalse = $J( strCheckboxID + '_no' );
+
+	let fnCheck = ( bCheck, bAnimate ) =>
 	{
-		relatedDiv.animate( { opacity: 'hide', height: 'hide'}, bAnimate ? 500 : 0 );
-	}
+		checkboxTrue.prop( 'checked', bCheck );
+		checkboxFalse.prop( 'checked', !bCheck );
+
+		let section = checkboxTrue.closest( '.AISection' );
+		let questions = section.find( '.AISectionQuestions' );
+
+		if ( bCheck )
+			questions.animate( { opacity: 'show', height: 'show'}, bAnimate ? 500 : 0 );
+		else
+			questions.animate( { opacity: 'hide', height: 'hide'}, bAnimate ? 500 : 0 );
+
+	};
+
+	checkboxTrue.on( 'change', () => fnCheck( true, true ) );
+	checkboxFalse.on( 'change', () => fnCheck( false, true ) );
+	fnCheck( checkboxTrue.prop( 'checked' ), false );
 }
 
 function CheckAOContentAndLiveGenerateAIContent()

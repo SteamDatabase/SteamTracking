@@ -170,23 +170,23 @@ body.v6 {
 
 }
 
-	html.responsive.tablet .profile_friends.title_bar,
-	html.responsive.tablet .profile_groups.title_bar {
+	html.responsive.gamepad .profile_friends.title_bar,
+	html.responsive.gamepad .profile_groups.title_bar {
 		background-color: transparent;
 		flex-wrap: wrap;
 		 padding: 10px 0;
 	}
 
-	html.responsive.tablet .profile_friends .friends_search_text_box, html.responsive .profile_groups .groups_search_text_box {
+	html.responsive.gamepad .profile_friends .friends_search_text_box, html.responsive .profile_groups .groups_search_text_box {
 	    width: 100%;
     }
 
-	html.responsive.tablet .searchBarContainer input {
+	html.responsive.gamepad .searchBarContainer input {
 		width: 100%;
 		max-width: none;
 	}
 
-	html.responsive.tablet .manage_link, html.responsive #add_friends_button {
+	html.responsive.gamepad .manage_link, html.responsive #add_friends_button {
 		text-align: center;
 		margin: 0;
 	}

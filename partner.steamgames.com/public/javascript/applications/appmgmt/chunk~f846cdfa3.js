@@ -4,6 +4,9 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4017],
   {
+    40139: (e) => {
+      e.exports = { profile_color_preview: "_2VqhO10AlkJOsh7sPoqPcp" };
+    },
     93542: (e) => {
       e.exports = {
         EditionPickerHr: "_2N7bWzRE2_6yMlW8HoWwKL",
@@ -66,6 +69,84 @@
         HTMLErrorBoxAppear: "bXT6nAG7o3DqMjoZ_zWJ",
       };
     },
+    92528: (e, t, a) => {
+      "use strict";
+      a.d(t, { Y: () => o });
+      var n = a(90626),
+        i = a(64046),
+        l = a(88997),
+        r = a(40139),
+        s = a.n(r);
+      function o(e) {
+        const { rgGameProfileColorDefs: t } = e,
+          a = t.map((e) =>
+            n.createElement(
+              "div",
+              { key: e.strProfileColorKey, className: "form_row_flex" },
+              n.createElement(
+                "div",
+                { className: "form_label_flex" },
+                "*",
+                e.strProfileColorLabel,
+              ),
+              n.createElement(
+                "div",
+                { className: "form_data_flex" },
+                (function (e) {
+                  const { strKVPrepend: t, bWriteAsRGBOnly: a } = e;
+                  let [r, o] = n.useState(e.strCurrentColor);
+                  const c = n.useRef(void 0),
+                    m = (e) => {
+                      const t = (e) => {
+                        o(e);
+                      };
+                      (0, l.lX)(
+                        n.createElement(i.s, {
+                          onChange: t,
+                          color: r,
+                          disableAlpha: a,
+                        }),
+                        e,
+                        { bDisablePopTop: !0 },
+                      );
+                    },
+                    p = () => {
+                      o(c.current.value);
+                    };
+                  return n.createElement(
+                    n.Fragment,
+                    null,
+                    n.createElement("input", {
+                      ref: c,
+                      type: "text",
+                      name: `${t || "item[profile_colors]"}[${e.strProfileColorKey}]`,
+                      onChange: p,
+                      placeholder: a
+                        ? "255,255,255"
+                        : "rgba(255, 255, 255, .5)",
+                      size: 20,
+                      value: a ? d(r) : r,
+                      readOnly: !0,
+                    }),
+                    n.createElement("div", {
+                      className: s().profile_color_preview,
+                      style: { backgroundColor: `${r}` },
+                      onClick: m,
+                    }),
+                  );
+                })(e),
+              ),
+            ),
+          );
+        return n.createElement("div", { className: s().profile_colors_ctn }, a);
+      }
+      function d(e) {
+        const t = e.match(/rgba?\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i);
+        if (!t) return null;
+        const [, a, n, i] = t;
+        return `${a},${n},${i}`;
+      }
+    },
     35863: (e, t, a) => {
       "use strict";
       a.d(t, { H: () => h });
@@ -114,15 +195,15 @@
           h = new Map();
         for (const t of Object.keys(e.rgEditionsComparisonGraphics))
           h.set(t, e.rgEditionsComparisonGraphics[t]);
-        const [b, w] = (0, n.useState)(() => {
+        const [b, C] = (0, n.useState)(() => {
             const t = new Map();
             for (const a of Object.keys(e.rgEditionsAltText))
               t.set(a, e.rgEditionsAltText[a]);
             return t;
           }),
-          [C, f] = (0, n.useState)(h),
+          [D, w] = (0, n.useState)(h),
           R = Object.keys(e.rgEditionsComparisonGraphics).length > 0,
-          N = (function (e, t) {
+          v = (function (e, t) {
             return (0, d.n)({
               mutationFn: async (a) => {
                 const {
@@ -184,8 +265,8 @@
               },
             });
           })(e.nItemId, c),
-          v = new Map();
-        for (const t of e.rgCandidates) v.set(t.nId, t);
+          N = new Map();
+        for (const t of e.rgCandidates) N.set(t.nId, t);
         let k = null;
         if (
           _.size > 0 &&
@@ -221,8 +302,8 @@
                       { id: T },
                       (0, l.we)("#StoreAdmin_EditEditions_DialogTitle"),
                     ),
-                    N.isPending && n.createElement(p.t, null),
-                    !N.isPending &&
+                    v.isPending && n.createElement(p.t, null),
+                    !v.isPending &&
                       n.createElement(
                         n.Fragment,
                         null,
@@ -233,7 +314,7 @@
                             n.createElement(u.X, null),
                             n.createElement("div", null, k),
                           ),
-                        n.createElement(A, {
+                        n.createElement(f, {
                           rgEditions: _,
                           rgCandidates: e.rgCandidates,
                           setEditions: g,
@@ -241,12 +322,12 @@
                         n.createElement("div", {
                           className: i.EditionPickerHr,
                         }),
-                        n.createElement(D, {
+                        n.createElement(A, {
                           mapOriginalImages: h,
-                          mapImages: C,
-                          setImages: f,
+                          mapImages: D,
+                          setImages: w,
                           mapAltText: b,
-                          setAltText: w,
+                          setAltText: C,
                           bAppHasSteamChinaToolsEnabled:
                             e.bAppHasSteamChinaToolsEnabled,
                         }),
@@ -262,14 +343,14 @@
                         disabled: null !== k,
                         onClick: async () => {
                           const e = new Map();
-                          C.forEach((t, a) => {
+                          D.forEach((t, a) => {
                             t instanceof File && e.set(a, t);
                           });
                           const t = [];
                           h.forEach((e, a) => {
-                            C.has(a) || t.push(a);
+                            D.has(a) || t.push(a);
                           }),
-                            N.mutate({
+                            v.mutate({
                               rgEditionsToSave: Array.from(_),
                               mapGraphicsToUpload: e,
                               mapAltText: b,
@@ -317,7 +398,7 @@
                     n.createElement(
                       "div",
                       { className: i.EditionsEditorSaveStatus },
-                      N.isPending &&
+                      v.isPending &&
                         n.createElement(
                           n.Fragment,
                           null,
@@ -325,7 +406,7 @@
                           " ",
                           (0, l.we)("#StoreAdmin_EditEditions_Saving"),
                         ),
-                      !N.isPending &&
+                      !v.isPending &&
                         n.createElement(
                           "span",
                           null,
@@ -435,7 +516,7 @@
       }
       const b = (e) =>
         "bundle" === e.eType ? { bundleid: e.nId } : { packageid: e.nId };
-      function A(e) {
+      function f(e) {
         const { rgEditions: t, rgCandidates: a, setEditions: r } = e,
           s = new Map();
         for (const t of e.rgCandidates) s.set(t.nId, t);
@@ -568,7 +649,7 @@
           ),
         );
       }
-      function D(e) {
+      function A(e) {
         const {
             mapOriginalImages: t,
             mapImages: a,
@@ -582,14 +663,14 @@
           [E, S] = (0, n.useState)("english"),
           h = (0, n.useRef)(null);
         let b = null,
-          A = "missing";
+          f = "missing";
         if (a.has(E)) {
           const e = a.get(E);
           e instanceof File
-            ? ((b = URL.createObjectURL(e)), (A = "uploaded"))
-            : ((b = e), (A = "exists"));
+            ? ((b = URL.createObjectURL(e)), (f = "uploaded"))
+            : ((b = e), (f = "exists"));
         }
-        const D = (e) =>
+        const A = (e) =>
           a.has(e) && a.get(e) instanceof File
             ? i.UploadedImageOption
             : a.has(e)
@@ -644,12 +725,12 @@
                 onChange: (e) => {
                   S(e.target.value), m(null);
                 },
-                className: D(E),
+                className: A(E),
               },
               (0, l.vR)(p, (e, t) =>
                 n.createElement(
                   "option",
-                  { key: t, value: t, className: D(t) },
+                  { key: t, value: t, className: A(t) },
                   e,
                 ),
               ),
@@ -801,7 +882,7 @@
     },
     67045: (e, t, a) => {
       "use strict";
-      a.d(t, { M: () => F });
+      a.d(t, { M: () => O });
       var n = a(90626),
         i = a(63369),
         l = a(61859),
@@ -812,16 +893,15 @@
         c = a.n(d),
         m = a(70986),
         p = a(20194),
-        E = a(37085),
-        u = a(16676),
-        _ = a(99637),
-        g = a(9154),
-        S = a(22797),
-        h = a(7860),
-        b = a(61336),
-        A = a(78327),
-        D = a(39679),
-        w = a(51780);
+        E = a(16676),
+        u = a(99637),
+        _ = a(9154),
+        g = a(22797),
+        S = a(7860),
+        h = a(61336),
+        b = a(78327),
+        f = a(39679),
+        A = a(51780);
       function C(e) {
         const { appid: t, onClose: a, onCommit: i } = e,
           [r, s] = n.useState(null),
@@ -834,7 +914,7 @@
               queryKey: ["ReleaseRequest", e],
               queryFn: async () => {
                 const t = await c().get(
-                  `${A.TS.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${e}`,
+                  `${b.TS.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${e}`,
                 );
                 if ("string" == typeof t.data)
                   throw "Error loading release status";
@@ -845,61 +925,61 @@
           E = "prerelease" == o?.strReleaseState,
           u = n.useCallback(
             (e, a) => {
-              h.L.invalidateQueries({ queryKey: ["ReleaseRequest", t] }),
+              S.L.invalidateQueries({ queryKey: ["ReleaseRequest", t] }),
                 i(e, a, E);
             },
             [t, i, E],
           );
-        let _ = n.createElement(N, { setOnOKButton: s, onCommit: u });
+        let _ = n.createElement(R, { setOnOKButton: s, onCommit: u });
         return (
           m
             ? (_ = n.createElement(v, {
                 strError: (0, l.we)("#Error_ErrorCommunicatingWithNetwork"),
               }))
-            : (!d && o) || (_ = n.createElement(S.t, null)),
+            : (!d && o) || (_ = n.createElement(g.t, null)),
           n.createElement(
-            f.Provider,
+            D.Provider,
             { value: o },
-            n.createElement(T, { fnSubmit: r, fnCloseModal: a }, _),
+            n.createElement(k, { fnSubmit: r, fnCloseModal: a }, _),
           )
         );
       }
-      const f = n.createContext(null);
-      function R() {
-        return n.useContext(f);
+      const D = n.createContext(null);
+      function w() {
+        return n.useContext(D);
       }
-      const N = n.memo(function (e) {
+      const R = n.memo(function (e) {
         const {
             appid: t,
             bCanUpdateComingSoonDate: a,
             rtReleaseDate: i,
             strComingSoonDisplay: r,
-          } = R(),
+          } = w(),
           { setOnOKButton: s, onCommit: o } = e,
           [d, m] = n.useState(i),
-          [p, _] = n.useState(r || void 0),
-          [g, S] = n.useState("none"),
-          [h, C] = n.useState(),
-          f = n.useCallback((e) => {
-            C(e), S("none");
+          [p, u] = n.useState(r || void 0),
+          [_, g] = n.useState("none"),
+          [S, C] = n.useState(),
+          D = n.useCallback((e) => {
+            C(e), g("none");
           }, []),
-          N = n.useCallback(() => {
+          R = n.useCallback(() => {
             if (d)
               if (p) {
-                S("submitting"), C(null);
+                g("submitting"), C(null);
                 (async function (e) {
                   const {
                       unAppID: t,
                       rtReleaseDate: a,
                       strComingSoonDisplay: n,
                     } = e,
-                    i = `${A.TS.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${t}`,
+                    i = `${b.TS.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${t}`,
                     r = new FormData();
-                  r.append("sessionid", A.TS.SESSIONID),
+                  r.append("sessionid", b.TS.SESSIONID),
                     a && r.append("release_date", a.toString());
                   r.append("coming_soon_display", n);
                   const s = await c().post(i, r);
-                  if (!s.data || s.data.success != E.d.k_EResultOK)
+                  if (!s.data || 1 != s.data.success)
                     throw (0, l.we)(
                       "#Error_Description",
                       s.data?.success,
@@ -911,42 +991,42 @@
                   strComingSoonDisplay: p,
                 })
                   .then(() => {
-                    S("refreshing"), o(d, p);
+                    g("refreshing"), o(d, p);
                   })
                   .catch((e) => {
-                    f(e);
+                    D(e);
                   });
               } else
-                f(
+                D(
                   (0, l.we)("#App_Landing_ReleaseDate_Error_ComingSoonDisplay"),
                 );
-            else f((0, l.we)("#App_Landing_ReleaseDate_Error_NoDate"));
-          }, [t, d, p, a, o, f]);
+            else D((0, l.we)("#App_Landing_ReleaseDate_Error_NoDate"));
+          }, [t, d, p, a, o, D]);
         return (
           n.useEffect(() => {
-            s("none" == g ? () => N : null);
-          }, [N, a, g, s]),
+            s("none" == _ ? () => R : null);
+          }, [R, a, _, s]),
           n.createElement(
             n.Fragment,
             null,
-            h && n.createElement(v, { strError: h }),
-            n.createElement(k, null),
+            S && n.createElement(v, { strError: S }),
+            n.createElement(N, null),
             n.createElement(
-              u.dR,
+              E.dR,
               null,
               n.createElement(
-                I,
+                T,
                 { label: (0, l.we)("#App_Landing_IntendedReleaseDateTitle") },
-                n.createElement(L, { rtSelectedDate: d, setSelectedDate: m }),
-                n.createElement(B, null),
+                n.createElement(P, { rtSelectedDate: d, setSelectedDate: m }),
+                n.createElement(I, null),
               ),
               n.createElement(
-                I,
+                T,
                 { label: (0, l.we)("#App_Landing_PublicDateDisplayTitle") },
-                n.createElement(D.Ll, {
+                n.createElement(f.Ll, {
                   rtSteamReleaseDate: d,
                   value: p,
-                  onChange: _,
+                  onChange: u,
                 }),
                 n.createElement(
                   "p",
@@ -962,69 +1042,69 @@
             ),
             n.createElement(
               "div",
-              { className: w.ReleaseColumnFooter },
+              { className: A.ReleaseColumnFooter },
               (0, l.oW)(
                 "#App_Landing_NeedHelpWithReleaseDates",
                 n.createElement("a", {
                   target: "_blank",
-                  href: `${A.TS.PARTNER_BASE_URL}doc/store/coming_soon`,
+                  href: `${b.TS.PARTNER_BASE_URL}doc/store/coming_soon`,
                 }),
                 n.createElement("a", {
                   target: "_blank",
-                  href: `${(0, b.GX)()}wizard/HelpWithPublishing`,
+                  href: `${(0, h.GX)()}wizard/HelpWithPublishing`,
                 }),
               ),
             ),
-            n.createElement(y, null),
+            n.createElement(B, null),
           )
         );
       });
       function v(e) {
         const { strError: t } = e;
-        return n.createElement("div", { className: w.ErrorBox }, t);
+        return n.createElement("div", { className: A.ErrorBox }, t);
       }
-      function k() {
+      function N() {
         const {
           bIsComingSoon: e,
           bIsStorePageReviewed: t,
           bIsWaitingForBuildReview: a,
           bIsFirstSelfPublishingApp: i,
           rtEarliestDate: r,
-        } = R();
+        } = w();
         return e && t
           ? a
             ? n.createElement(
-                P,
+                L,
                 null,
                 (0, l.we)("#App_Landing_Release_EarliestDate_BuildReview"),
               )
             : n.createElement(
-                P,
+                L,
                 null,
                 (0, l.we)("#App_Landing_Release_EarliestDate", (0, l.$z)(r)),
               )
           : i
             ? n.createElement(
-                P,
+                L,
                 null,
                 (0, l.we)("#App_Landing_Release_EarliestDate_TwoWeeks30Days"),
               )
             : n.createElement(
-                P,
+                L,
                 null,
                 (0, l.we)("#App_Landing_Release_EarliestDate_TwoWeeks"),
               );
       }
-      function T(e) {
+      function k(e) {
         const { fnCloseModal: t, fnSubmit: a, children: i } = e,
-          { bCanUpdateComingSoonDate: r } = R() || {
+          { bCanUpdateComingSoonDate: r } = w() || {
             bCanUpdateComingSoonDate: !0,
           };
         return n.createElement(
-          g.mt,
-          { active: !0, className: w.ReleaseDateModal, onDismiss: t },
+          _.mt,
+          { active: !0, className: A.ReleaseDateModal, onDismiss: t },
           n.createElement(
-            u.Y9,
+            E.Y9,
             null,
             (0, l.we)(
               r
@@ -1032,8 +1112,8 @@
                 : "#App_Landing_Change_Release_Date",
             ),
           ),
-          n.createElement(u.nB, { className: w.ReleaseDateRequestBody }, i),
-          n.createElement(u.CB, {
+          n.createElement(E.nB, { className: A.ReleaseDateRequestBody }, i),
+          n.createElement(E.CB, {
             bOKDisabled: !a,
             onCancel: t,
             strCancelText: (0, l.we)("#App_Landing_Requested_Date_Cancel"),
@@ -1042,36 +1122,36 @@
           }),
         );
       }
-      function I(e) {
+      function T(e) {
         const { label: t, children: a } = e;
         return n.createElement(
-          u.VP,
-          { className: w.Column },
-          n.createElement("div", { className: w.ColumnLabel }, t, ":"),
-          n.createElement("div", { className: w.ColumnContent }, a),
+          E.VP,
+          { className: A.Column },
+          n.createElement("div", { className: A.ColumnLabel }, t, ":"),
+          n.createElement("div", { className: A.ColumnContent }, a),
         );
       }
-      function L(e) {
+      function P(e) {
         const { rtSelectedDate: t, setSelectedDate: a } = e,
-          { bCanUpdateComingSoonDate: i, rtEarliestDate: l } = R();
+          { bCanUpdateComingSoonDate: i, rtEarliestDate: l } = w();
         return n.createElement(
           n.Fragment,
           null,
-          n.createElement(_.K, {
+          n.createElement(u.K, {
             bWeekdaysOnly: !0,
             bNoDefaultDate: !0,
             disabled: !i,
             nEarliestTime: l,
             fnGetTimeToUpdate: () => t,
             fnSetTimeToUpdate: a,
-            className: w.DatePicker,
+            className: A.DatePicker,
             bShowTimeZone: !0,
             strAlsoShowTimeZone: m.o,
           }),
         );
       }
-      function B(e) {
-        const { bCanUpdateComingSoonDate: t, rtReleaseDate: a } = R();
+      function I(e) {
+        const { bCanUpdateComingSoonDate: t, rtReleaseDate: a } = w();
         return t
           ? n.createElement(
               n.Fragment,
@@ -1101,34 +1181,34 @@
                   (0, l.$z)(a),
                 ),
                 n.createElement("a", {
-                  href: `${(0, b.GX)()}wizard/HelpWithPublishing?issueid=905`,
+                  href: `${(0, h.GX)()}wizard/HelpWithPublishing?issueid=905`,
                 }),
               ),
             );
       }
-      function P(e) {
-        return n.createElement("span", { className: w.BlueNote }, e.children);
+      function L(e) {
+        return n.createElement("span", { className: A.BlueNote }, e.children);
       }
-      function y(e) {
+      function B(e) {
         const {
           rtEarliestDate: t,
           strReleaseState: a,
           bCanUpdateComingSoonDate: i,
-        } = R();
+        } = w();
         return "prerelease" != a || i
           ? null
           : n.createElement(
               "div",
-              { className: w.PublishNowWarning },
+              { className: A.PublishNowWarning },
               (0, l.we)(
                 "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note",
                 (0, l.$z)(t),
               ),
             );
       }
-      var O = a(52038),
+      var y = a(52038),
         x = a(96409);
-      function F(e) {
+      function O(e) {
         const {
             bIsGameEdit: t,
             unAppID: a,
@@ -1148,28 +1228,28 @@
           null,
           E && n.createElement(C, { appid: a, onClose: h, onCommit: b }),
           _ &&
-            n.createElement(q, {
+            n.createElement($, {
               appid: a,
               bIsGameEdit: t,
               closeModal: () => g(!1),
             }),
           n.createElement(
             "div",
-            { className: (0, O.A)(s.ReleaseDateInfoCtn, t && s.GameEditCtn) },
+            { className: (0, y.A)(s.ReleaseDateInfoCtn, t && s.GameEditCtn) },
             n.createElement(
               "div",
               { className: s.ReleaseDateContent },
               n.createElement(
-                U,
+                M,
                 { label: (0, l.we)("#App_Landing_SpecifiedReleaseDate") },
-                n.createElement(M, { rtReleaseDate: d }),
+                n.createElement(F, { rtReleaseDate: d }),
               ),
               n.createElement(
-                U,
+                M,
                 { label: (0, l.we)("#App_Landing_CustomersSeeReleaseDate") },
                 n.createElement(
                   "div",
-                  { className: (0, O.A)(s.BigField, m ? s.Set : s.Unset) },
+                  { className: (0, y.A)(s.BigField, m ? s.Set : s.Unset) },
                   m
                     ? (0, i.M)(m, d)
                     : (0, l.we)("#App_Landing_UnsetReleaseDate"),
@@ -1179,26 +1259,26 @@
             n.createElement(
               "div",
               { className: s.EditButton, onClick: S },
-              n.createElement("div", { className: (0, O.A)(s.Spacer, s.Top) }),
+              n.createElement("div", { className: (0, y.A)(s.Spacer, s.Top) }),
               n.createElement(
                 "div",
                 { className: s.EditButtonIcon },
                 n.createElement(o.ffu, null),
               ),
               n.createElement("div", {
-                className: (0, O.A)(s.Spacer, s.Bottom),
+                className: (0, y.A)(s.Spacer, s.Bottom),
               }),
             ),
           ),
           1e3 * r > new Date().getTime() &&
             n.createElement(
-              U,
+              M,
               { label: (0, l.we)("#App_Landing_EarliestAdvancedAccessDate") },
-              n.createElement(M, { rtReleaseDate: r }),
+              n.createElement(F, { rtReleaseDate: r }),
             ),
         );
       }
-      function M(e) {
+      function F(e) {
         const { rtReleaseDate: t } = e;
         return t
           ? n.createElement(
@@ -1206,22 +1286,22 @@
               null,
               n.createElement(
                 "div",
-                { className: (0, O.A)(s.BigField, s.Set) },
+                { className: (0, y.A)(s.BigField, s.Set) },
                 (0, l.$z)(t),
               ),
               n.createElement(
                 "div",
-                { className: (0, O.A)(s.SubField, s.Set) },
+                { className: (0, y.A)(s.SubField, s.Set) },
                 (0, r.KC)(t, {}, { timeZoneName: "short" }),
               ),
             )
           : n.createElement(
               "div",
-              { className: (0, O.A)(s.BigField, s.Unset) },
+              { className: (0, y.A)(s.BigField, s.Unset) },
               (0, l.we)("#App_Landing_UnsetReleaseDate"),
             );
       }
-      function U(e) {
+      function M(e) {
         return n.createElement(
           "div",
           { className: s.LabelField },
@@ -1229,7 +1309,7 @@
           e.children,
         );
       }
-      function q(e) {
+      function $(e) {
         const { appid: t, bIsGameEdit: a, closeModal: i } = e,
           r = n.useCallback(() => {
             a
@@ -1240,9 +1320,9 @@
               i();
           }, [t, a, i]);
         return n.createElement(
-          g.EN,
+          _.EN,
           { active: !0 },
-          n.createElement(g.o0, {
+          n.createElement(_.o0, {
             strTitle: (0, l.we)("#App_Landing_ReleaseDate_ChangesSaved"),
             strDescription: (0, l.we)(
               "#App_Landing_Release_PublishStorePrompt",
@@ -1265,6 +1345,11 @@
         GameEditByAppID: (e) => `/admin/game/editbyappid/${e}`,
         ReviewPriceProposals: () => "/admin/reviewpricesubmissions/",
         PackageLanding: (e) => `/store/packagelanding/${e}`,
+        FrontPageEdit: (e) => `/admin/store/pageclusteredit/frontpage/${e}`,
+        FrontPageSteamChinaEdit: (e) =>
+          `/admin/store/pageclusteredit/frontpage_china/${e}`,
+        ContentHubEditor: (e, t) =>
+          `/admin/store/pageclusteredit/content_hub_${t}/${e}`,
       };
       const i = ["edit", "diff", "revert", "prepare", "publish"],
         l = [

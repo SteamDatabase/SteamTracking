@@ -2355,6 +2355,7 @@
                     ? _._.appID
                     : parseInt(_.m_strAppId),
                 type: "game",
+                bPreferAssetWithoutOverride: !1,
               }),
           );
         }
@@ -3250,6 +3251,7 @@
             bPreferDemoStorePage: _,
             bShowPurchaseOptionsButton: _,
             bUseSubscriptionLayout: _,
+            bPreferAssetWithoutOverride: _,
           } = _,
           [_, _] = _.useState(!1),
           _ = () => _(!_),
@@ -3310,6 +3312,7 @@
                     _.createElement(_._, {
                       info: _,
                       imageType: "library",
+                      bPreferAssetWithoutOverride: _,
                     }),
                     _.createElement(_._, {
                       storeItem: _,
@@ -3455,6 +3458,7 @@
                   },
                   _.createElement(_._, {
                     info: _,
+                    bPreferAssetWithoutOverride: _,
                   }),
                   _.createElement(_._, {
                     storeItem: _,
@@ -3466,6 +3470,7 @@
               storeItem: _,
               bPurchaseOptionsExpanded: _,
               fnCollapseOptions: _,
+              bPreferAssetWithoutOverride: _,
             }),
           ),
         );
@@ -4299,6 +4304,7 @@
             bShowDemoButton: !0,
             bAutoFocus: !0,
             displayStyle: "library",
+            bPreferAssetWithoutOverride: !1,
           }),
         );
       }

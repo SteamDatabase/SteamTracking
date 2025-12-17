@@ -16,8 +16,8 @@ jQuery( function($) {
 	window.UseMobileScreenMode = function() {
 		return $HTML.hasClass( 'responsive' ) && mqMobileMode.matches;
 	};
-	window.UseTabletScreenMode = function() {
-		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'tablet' );
+	window.UseGamepadScreenMode = function() {
+		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'gamepad' );
 	};
 	window.UseNewMobileAppMode = function() {
 		// the new mobile app can run on screen widths wider than responsive_css_maxwidth
@@ -211,7 +211,7 @@ jQuery( function($) {
 		g_fnActivateLocalMenu = LocalMenuEvents.fnActivateMenu;
 
 		$(window ).on( 'Responsive_SmallScreenModeToggled.ReponsiveLocalMenu', function() {
-			var bShouldUseResponsiveMenu = UseSmallScreenMode() || UseTabletScreenMode(); 
+			var bShouldUseResponsiveMenu = UseSmallScreenMode() || UseGamepadScreenMode(); 
 			if ( bLocalMenuEnabed != bShouldUseResponsiveMenu )
 			{
 				if ( bShouldUseResponsiveMenu )
@@ -250,11 +250,11 @@ jQuery( function($) {
 
 	Responsive_InitJQPlotHooks( $ );
 
-	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
-		Responsive_InitForTablet( $ );
+	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
+		Responsive_InitForGamepad( $ );
 });
 
-function Responsive_InitForTablet( $ )
+function Responsive_InitForGamepad( $ )
 {
 	// support using gamepad to change slider position
 	$( 'input[type=range]' ).on( 'vgp_ondirection', function( event ) {
@@ -640,7 +640,7 @@ function Responsive_UpdateResponsivePrefs( strFlag, bEnabled )
 function Responsive_InitResponsiveToggleEvents( $ )
 {
 	// initially undefined, so we will fire the events at at start
-	var bTouchFriendly, bSmallScreen, bMobileScreen, bTabletScreen;
+	var bTouchFriendly, bSmallScreen, bMobileScreen, bGamepad;
 
 	$(window).on('resize.ResponsiveToggle', function() {
 		if ( window.UseTouchFriendlyMode() !== bTouchFriendly )
@@ -661,10 +661,10 @@ function Responsive_InitResponsiveToggleEvents( $ )
 			$(window).trigger('Responsive_MobileScreenModeToggled');
 		}
 
-		if ( window.UseTabletScreenMode() !== bTabletScreen )
+		if ( window.UseGamepadScreenMode() !== bGamepad )
 		{
-			bTabletScreen = window.UseTabletScreenMode();
-			$(window).trigger('Responsive_TabletScreenModeToggled');
+			bGamepad = window.UseGamepadScreenMode();
+			$(window).trigger('Responsive_GamepadScreenModeToggled');
 		}
 
 
@@ -677,21 +677,23 @@ function Responsive_ReparentItemsInMobileMode( strItemSelector, $CtnOrFn )
 	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return window.UseMobileScreenMode && window.UseMobileScreenMode(); }, 'Responsive_MobileScreenModeToggled' );
 }
 
-/* reparent element when we're rendering in the tablet layout (which could be any screen size given docked tablet scenarios) */
-function Responsive_ReparentItemsInTabletMode( strItemSelector, $CtnOrFn )
+/* reparent element when we're rendering in the gamepad layout (which could be any screen size given docked tablet, steam machine, scenarios) */
+function Responsive_ReparentItemsInGamepadMode( strItemSelector, $CtnOrFn )
 {
-	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return window.UseTabletScreenMode && window.UseTabletScreenMode(); }, 'Responsive_TabletScreenModeToggled' );
+	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, function() { return window.UseGamepadScreenMode && window.UseGamepadScreenMode(); }, 'Responsive_GamepadScreenModeToggled' );
 }
 
-/* reparent element when screen width is up to RESPONSIVE_CSS_MAXWIDTH, or we're in TabletScreenMode */
+/* reparent element when screen width is up to RESPONSIVE_CSS_MAXWIDTH, or we're in GamepadScreenMode */
 function Responsive_ReparentItemsInResponsiveMode( strItemSelector, $CtnOrFn, isWideModeEnabled )
 {
 	var fnShouldReparent = function()
 	{
 		return ( ( window.UseSmallScreenMode && window.UseSmallScreenMode( isWideModeEnabled ) ) ||
-			( window.UseTabletScreenMode && window.UseTabletScreenMode() ) );
+			( window.UseGamepadScreenMode && window.UseGamepadScreenMode() ) );
 	}
 
+	console.log( "SHOULD REPARENT:", fnShouldReparent() );
+	
 	return _Responsive_ReparentItems( strItemSelector, $CtnOrFn, fnShouldReparent, 'Responsive_SmallScreenModeToggled' );
 }
 

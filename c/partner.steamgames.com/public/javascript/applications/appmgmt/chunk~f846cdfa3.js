@@ -4,6 +4,11 @@
   {
     chunkid: (module) => {
       module.exports = {
+        profile_color_preview: "_2VqhO10AlkJOsh7sPoqPcp",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         EditionPickerHr: "_2N7bWzRE2_6yMlW8HoWwKL",
         NeedToPublishNotification: "_1YyjMfNhBo6lWsvunbhkmG",
         EditionsEditorRow: "_1kVAFKlQN-iaGJNQM64lbU",
@@ -63,6 +68,103 @@
         ErrorBox: "_27JIJRbunDgYqS_xDV7Xha",
         HTMLErrorBoxAppear: "bXT6nAG7o3DqMjoZ_zWJ",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { rgGameProfileColorDefs: _ } = _,
+          _ = _.map((_) =>
+            _.createElement(
+              "div",
+              {
+                key: _.strProfileColorKey,
+                className: "form_row_flex",
+              },
+              _.createElement(
+                "div",
+                {
+                  className: "form_label_flex",
+                },
+                "*",
+                _.strProfileColorLabel,
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: "form_data_flex",
+                },
+                (function (_) {
+                  const { strKVPrepend: _, bWriteAsRGBOnly: _ } = _;
+                  let [_, _] = _.useState(_.strCurrentColor);
+                  const _ = _.useRef(void 0),
+                    _ = (_) => {
+                      const _ = (_) => {
+                        _(_);
+                      };
+                      (0, _._)(
+                        _.createElement(_._, {
+                          onChange: _,
+                          color: _,
+                          disableAlpha: _,
+                        }),
+                        _,
+                        {
+                          bDisablePopTop: !0,
+                        },
+                      );
+                    },
+                    _ = () => {
+                      _(_.current.value);
+                    };
+                  return _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement("input", {
+                      ref: _,
+                      type: "text",
+                      name: `${_ || "item[profile_colors]"}[${_.strProfileColorKey}]`,
+                      onChange: _,
+                      placeholder: _
+                        ? "255,255,255"
+                        : "rgba(255, 255, 255, .5)",
+                      size: 20,
+                      value: _ ? _(_) : _,
+                      readOnly: !0,
+                    }),
+                    _.createElement("div", {
+                      className: _().profile_color_preview,
+                      style: {
+                        backgroundColor: `${_}`,
+                      },
+                      onClick: _,
+                    }),
+                  );
+                })(_),
+              ),
+            ),
+          );
+        return _.createElement(
+          "div",
+          {
+            className: _().profile_colors_ctn,
+          },
+          _,
+        );
+      }
+      function _(_) {
+        const _ = _.match(/rgba?\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i);
+        if (!_) return null;
+        const [, __webpack_require__, _, _] = _;
+        return `${__webpack_require__},${_},${_}`;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -901,7 +1003,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { appid: _, onClose: __webpack_require__, onCommit: _ } = _,
@@ -998,7 +1099,7 @@
                       _.append("release_date", __webpack_require__.toString());
                   _.append("coming_soon_display", _);
                   const _ = await _().post(_, _);
-                  if (!_.data || _.data.success != _._.k_EResultOK)
+                  if (!_.data || 1 != _.data.success)
                     throw (0, _._)(
                       "#Error_Description",
                       _.data?.success,
@@ -1472,6 +1573,11 @@
         GameEditByAppID: (_) => `/admin/game/editbyappid/${_}`,
         ReviewPriceProposals: () => "/admin/reviewpricesubmissions/",
         PackageLanding: (_) => `/store/packagelanding/${_}`,
+        FrontPageEdit: (_) => `/admin/store/pageclusteredit/frontpage/${_}`,
+        FrontPageSteamChinaEdit: (_) =>
+          `/admin/store/pageclusteredit/frontpage_china/${_}`,
+        ContentHubEditor: (_, _) =>
+          `/admin/store/pageclusteredit/content_hub_${_}/${_}`,
       };
       const _ = ["edit", "diff", "revert", "prepare", "publish"],
         _ = [

@@ -6202,6 +6202,7 @@
         ["el", "greek"],
         ["uk", "ukrainian"],
         ["vn", "vietnamese"],
+        ["vi", "vietnamese"],
         ["id", "indonesian"],
       ]);
       const _ = new Map();
@@ -53661,7 +53662,8 @@
           : !(!_(_) || !_(_)) ||
               (!_(_) &&
                 !_(_) &&
-                _.label === _.label &&
+                typeof _.label == typeof _.label &&
+                  ("string" != typeof _.label || _.label === _.label) &&
                   _.tooltip === _.tooltip &&
                     _(_) == _(_) &&
                       !(_(_) && _(_) && !_(_.options, _.options)) &&
@@ -53795,7 +53797,7 @@
           );
           const _ = !_(_.rgOptions, this.props.rgOptions),
             _ = _.selectedOption !== this.props.selectedOption,
-            _ = this.value !== _.value;
+            _ = !_(this.value, _.value);
           !this.props.controlled &&
             (_ || _ || _) &&
             (_ || null == this.value
@@ -69619,11 +69621,11 @@
           return "";
         }
       }
-      function _(_) {
+      function _(_, _) {
         return (
           _._.IN_STEAMUI &&
             !_.startsWith("steam://") &&
-            (_ = `steam://openurl/${_}`),
+            (_ = _ ? `steam://openurl_external/${_}` : `steam://openurl/${_}`),
           _
         );
       }
@@ -70200,7 +70202,6 @@
         EventGameFestivalDebug: () =>
           "/events_admin/gamefestival/:clanacountid(\\d+)/:claneventgid(\\d+)",
         EventRSSModeration: () => "/events_admin/rss_admin/",
-        InteractiveRecommender: () => "/recommender/:steamid(\\d+)?/",
         LabsSandbox: () => "/labs/sandbox",
         LabsHome: () => "/labs",
         AccountPreferences: () => "/account/",
@@ -80989,15 +80990,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -81827,16 +81819,6 @@
                         }),
                         _.createElement(_, {
                           exact: !0,
-                          path: _._.InteractiveRecommender(),
-                          render: (_) =>
-                            _.createElement(_._, {
-                              config: {
-                                recommender: () => _.createElement(_, null),
-                              },
-                            }),
-                        }),
-                        _.createElement(_, {
-                          exact: !0,
                           path: _._.GameMixer(),
                           render: (_) =>
                             _.createElement(_._, {
@@ -82640,7 +82622,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 20699), _((_._ = _));
+      return (_ = 92307), _((_._ = _));
       var _;
     });
     _._();

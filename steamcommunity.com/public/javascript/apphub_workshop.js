@@ -286,8 +286,8 @@ CSlideShow.prototype.ScrollRight = function()
 CSlideShow.prototype.StartTimer = function()
 {
 	// disabled in table mode
-	var bUseTabletScreenMode = window.UseTabletScreenMode && window.UseTabletScreenMode();
-	if ( bUseTabletScreenMode )
+	var bUseGamepadScreenMode = window.UseGamepadScreenMode && window.UseGamepadScreenMode();
+	if ( bUseGamepadScreenMode )
 		return;
 
 	this.ClearInterval();

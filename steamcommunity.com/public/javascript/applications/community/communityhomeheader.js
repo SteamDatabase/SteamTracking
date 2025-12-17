@@ -34,89 +34,87 @@
         SortIcon: "_2g7dImB7FKkKiEYpVTXCWb",
       };
     },
-    92598: (e, t, a) => {
+    92598: (e, t, n) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => b });
-      var n = a(90626),
-        r = a(61859),
-        o = a(84202),
-        i = a.n(o),
-        c = a(45699),
-        s = a(78327),
-        l = a(12155),
-        m = a(68255),
-        u = a(41735),
-        d = a.n(u),
-        p = a(55263);
-      var _ = a(52038),
-        h = a(13952),
-        S = a(95034),
-        H = a(92757),
-        f = a(76217),
-        C = a(12447);
+      n.r(t), n.d(t, { default: () => b });
+      var a = n(90626),
+        r = n(61859),
+        o = n(84202),
+        i = n.n(o),
+        l = n(45699),
+        c = n(78327),
+        s = n(12155),
+        m = n(68255),
+        u = n(41735),
+        d = n.n(u),
+        p = n(55263);
+      var _ = n(52038),
+        h = n(13952),
+        S = n(95034),
+        f = n(92757),
+        H = n(76217),
+        C = n(12447);
       function b() {
-        const e = (0, n.useRef)(void 0);
+        const e = (0, a.useRef)(void 0);
         return (
-          (0, n.useEffect)(() => {
+          (0, a.useEffect)(() => {
             e.current && e.current.TakeFocus();
           }, []),
-          n.createElement(
+          a.createElement(
             C.u,
             { navID: "CommunityHomeHeader" },
-            n.createElement(
-              f.Z,
+            a.createElement(
+              H.Z,
               { navRef: e, className: i().CommunityHomeHeader },
-              n.createElement(
+              a.createElement(
                 "div",
                 { className: i().CommunityHomeHeaderTitleSection },
-                n.createElement(
+                a.createElement(
                   "div",
                   null,
-                  n.createElement(
+                  a.createElement(
                     "div",
                     { className: i().CommunityHomeHeaderTitle },
                     (0, r.we)("#Community_Home_Header_Title"),
                   ),
-                  n.createElement(
+                  a.createElement(
                     "div",
                     { className: i().CommunityHomeHeaderSubtitle },
                     (0, r.we)("#Community_Home_Header_Subtitle"),
                   ),
                 ),
-                n.createElement(
-                  c.Ii,
+                a.createElement(
+                  l.Ii,
                   {
                     className: i().AddFriendBtn,
-                    href: `${s.TS.COMMUNITY_BASE_URL}search/users/`,
+                    href: `${c.TS.COMMUNITY_BASE_URL}search/users/`,
                   },
                   (0, r.we)("#Community_Home_Header_AddFriend_Button"),
                 ),
               ),
-              n.createElement(v, null),
-              n.createElement(A, null),
+              a.createElement(v, null),
+              a.createElement(A, null),
             ),
           )
         );
       }
       function v() {
-        const [e, t] = (0, n.useState)(""),
-          [a, o] = (0, n.useState)([]),
-          [u, _] = (0, n.useState)(!1),
+        const [e, t] = (0, a.useState)(""),
+          [n, o] = (0, a.useState)([]),
+          [u, _] = (0, a.useState)(!1),
           h = (function () {
-            const e = (0, n.useMemo)(
-                () => (0, s.Fd)("personalapps", "application_config") || [],
+            const e = (0, a.useMemo)(
+                () => (0, c.Fd)("personalapps", "application_config") || [],
                 [],
               ),
-              t = (0, n.useMemo)(
-                () => (0, s.Fd)("popularapps", "application_config") || [],
+              t = (0, a.useMemo)(
+                () => (0, c.Fd)("popularapps", "application_config") || [],
                 [],
               ),
-              a = [...e, ...t];
-            if (a.length)
+              n = [...e, ...t];
+            if (n.length)
               return {
-                isLoading:
-                  (0, p.zX)(a, { include_assets: !0 }) ===
-                  p.N4.k_EStoreItemCacheState_Loading,
+                isLoading: 1 === (0, p.zX)(n, { include_assets: !0 }),
                 data: { personalAppIds: e, popularAppIds: t },
               };
             return {
@@ -125,26 +123,26 @@
             };
           })();
         if (h.isLoading) return null;
-        return n.createElement(
+        return a.createElement(
           "div",
           { className: i().CommunityHomeHeaderContent },
-          n.createElement(
-            f.Z,
+          a.createElement(
+            H.Z,
             { className: i().AppHubsCtn },
-            n.createElement(E, {
+            a.createElement(E, {
               appShortcuts: h.data.personalAppIds,
               sectionTitle: (0, r.we)("#Community_Home_Header_GameHubs_ForYou"),
               withDivider: h.data.popularAppIds.length > 0,
             }),
-            n.createElement(E, {
+            a.createElement(E, {
               appShortcuts: h.data.popularAppIds,
               sectionTitle: (0, r.we)(
                 "#Community_Home_Header_GameHubs_Popular",
               ),
             }),
           ),
-          n.createElement(
-            f.Z,
+          a.createElement(
+            H.Z,
             {
               onFocus: () => _(!0),
               onBlur: (e) => {
@@ -152,20 +150,20 @@
               },
               className: i().Search,
             },
-            n.createElement(
-              f.Z,
+            a.createElement(
+              H.Z,
               { className: i().SearchBar },
-              n.createElement(
+              a.createElement(
                 "div",
                 { className: i().InputContainer },
-                n.createElement(m.pd, {
+                a.createElement(m.pd, {
                   onChange: async (e) => {
                     t(e.target.value);
-                    const a = await (async function (e) {
-                      const t = `${s.TS.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
+                    const n = await (async function (e) {
+                      const t = `${c.TS.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
                       return (await d().get(t)).data;
                     })(e.target.value);
-                    o(a);
+                    o(n);
                   },
                   value: e,
                   className: i().Input,
@@ -174,21 +172,21 @@
                   ),
                 }),
               ),
-              n.createElement(
+              a.createElement(
                 "div",
                 { className: i().SearchIcon },
-                n.createElement(l.eSy, null),
+                a.createElement(s.eSy, null),
               ),
             ),
             u &&
-              n.createElement(
-                f.Z,
+              a.createElement(
+                H.Z,
                 { className: i().SearchResultsCtn },
-                a.map((e) =>
-                  n.createElement(
-                    c.Ii,
+                n.map((e) =>
+                  a.createElement(
+                    l.Ii,
                     {
-                      href: `${s.TS.COMMUNITY_BASE_URL}app/${e.appid}`,
+                      href: `${c.TS.COMMUNITY_BASE_URL}app/${e.appid}`,
                       key: e.appid,
                       className: i().SearchResult,
                     },
@@ -200,13 +198,13 @@
         );
       }
       function E(e) {
-        const { appShortcuts: t, sectionTitle: a, withDivider: r } = e;
+        const { appShortcuts: t, sectionTitle: n, withDivider: r } = e;
         return t && t.length
-          ? n.createElement(
+          ? a.createElement(
               "div",
               { className: i().AppHubShortcutsCtn },
-              n.createElement("div", { className: i().AppHubTitle }, a),
-              n.createElement(
+              a.createElement("div", { className: i().AppHubTitle }, n),
+              a.createElement(
                 "div",
                 {
                   "flow-children": "row",
@@ -215,7 +213,7 @@
                     r ? i().Divider : null,
                   ),
                 },
-                t.map((e, t) => n.createElement(y, { key: t, appId: e })),
+                t.map((e, t) => a.createElement(y, { key: t, appId: e })),
               ),
             )
           : null;
@@ -223,13 +221,13 @@
       function y(e) {
         const t = h.A.Get().GetApp(e.appId);
         return t
-          ? n.createElement(
-              c.Ii,
+          ? a.createElement(
+              l.Ii,
               {
                 className: i().ShortcutLink,
-                href: `${s.TS.COMMUNITY_BASE_URL}app/${e.appId}`,
+                href: `${c.TS.COMMUNITY_BASE_URL}app/${e.appId}`,
               },
-              n.createElement("img", {
+              a.createElement("img", {
                 className: i().ShortcutImage,
                 src: t.GetAssets().GetLibraryCapsuleURL(),
               }),
@@ -239,20 +237,20 @@
       const T = "subsection",
         w = "browsefilter";
       function A() {
-        const e = (0, H.W6)(),
+        const e = (0, f.W6)(),
           t = (0, S.f3)(e, T),
-          a = (0, S.f3)(e, w);
-        return n.createElement(
+          n = (0, S.f3)(e, w);
+        return a.createElement(
           "div",
           null,
-          n.createElement(g, { activeTab: t, activeSort: a }),
-          n.createElement(I, { activeTab: t, activeSort: a }),
+          a.createElement(g, { activeTab: t, activeSort: n }),
+          a.createElement(I, { activeTab: t, activeSort: n }),
         );
       }
       function g(e) {
-        const { activeTab: t, activeSort: a } = e,
-          o = n.useRef(void 0);
-        n.useEffect(() => {
+        const { activeTab: t, activeSort: n } = e,
+          o = a.useRef(void 0);
+        a.useEffect(() => {
           const e = document.getElementById(t);
           if (e && (null == o ? void 0 : o.current)) {
             const t = e.offsetLeft + e.clientWidth;
@@ -260,8 +258,8 @@
               o.current.scrollBy(t - window.innerWidth, 0);
           }
         }, [null == o ? void 0 : o.current]);
-        return n.createElement(
-          f.Z,
+        return a.createElement(
+          H.Z,
           { "flow-children": "row", className: i().TabContainer, ref: o },
           [
             { label: "#Community_Home_Header_Filter_All", id: "" },
@@ -280,17 +278,17 @@
             { label: "#Community_Home_Header_Filter_Guides", id: "guides" },
             { label: "#Community_Home_Header_Filter_Reviews", id: "reviews" },
           ].map((e, o) => {
-            const l = t ? t === e.id : 0 === o,
+            const s = t ? t === e.id : 0 === o,
               m = e.id ? `${T}=${e.id}` : "",
-              u = a ? `${w}=${a}` : "",
-              d = `${s.TS.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
-            return n.createElement(
-              c.Ii,
+              u = n ? `${w}=${n}` : "",
+              d = `${c.TS.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
+            return a.createElement(
+              l.Ii,
               {
                 id: e.id,
                 href: d,
                 key: e.id,
-                className: (0, _.A)(i().Tab, l ? i().ActiveTab : null),
+                className: (0, _.A)(i().Tab, s ? i().ActiveTab : null),
               },
               (0, r.we)(e.label),
             );
@@ -298,14 +296,14 @@
         );
       }
       function I(e) {
-        const { activeTab: t, activeSort: a } = e;
-        return n.createElement(
-          f.Z,
+        const { activeTab: t, activeSort: n } = e;
+        return a.createElement(
+          H.Z,
           { "flow-children": "row", className: i().SortContainer },
-          n.createElement(
+          a.createElement(
             "div",
             { className: i().SortIcon },
-            n.createElement(l.LPs, null),
+            a.createElement(s.LPs, null),
           ),
           [
             { label: "#Community_Home_Header_BrowseFilter_Popular", id: "" },
@@ -314,16 +312,16 @@
               id: "mostrecent",
             },
           ].map((e, o) => {
-            const l = a ? a === e.id : 0 === o,
+            const s = n ? n === e.id : 0 === o,
               m = t ? `${T}=${t}` : "",
               u = e.id ? `${w}=${e.id}` : "",
-              d = `${s.TS.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
-            return n.createElement(
-              c.Ii,
+              d = `${c.TS.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
+            return a.createElement(
+              l.Ii,
               {
                 href: d,
                 key: e.id,
-                className: (0, _.A)(i().Sort, l ? i().ActiveSort : null),
+                className: (0, _.A)(i().Sort, s ? i().ActiveSort : null),
               },
               (0, r.we)(e.label),
             );
@@ -331,21 +329,21 @@
         );
       }
     },
-    12447: (e, t, a) => {
+    12447: (e, t, n) => {
       "use strict";
-      a.d(t, { u: () => l });
-      var n = a(8871),
-        r = a(90626),
-        o = a(78327),
-        i = a(85585),
-        c = a(7445),
-        s = a(43899);
-      const l = r.forwardRef(function (e, t) {
-        const { children: a, navTreeRef: l, ...m } = e,
+      n.d(t, { u: () => s });
+      var a = n(8871),
+        r = n(90626),
+        o = n(78327),
+        i = n(85585),
+        l = n(7445),
+        c = n(43899);
+      const s = r.forwardRef(function (e, t) {
+        const { children: n, navTreeRef: s, ...m } = e,
           u = r.useRef(void 0),
-          d = (0, n.Ue)(u, l),
+          d = (0, a.Ue)(u, s),
           p = (0, o.Qn)(),
-          _ = (0, s.AO)("__nav_tree_root");
+          _ = (0, c.AO)("__nav_tree_root");
         return r.createElement(
           i.B2,
           {
@@ -355,73 +353,73 @@
             parentEmbeddedNavTree: _,
             disabledRoot: !p,
           },
-          r.createElement(c.q, { disableFocusRing: !p }, a),
+          r.createElement(l.q, { disableFocusRing: !p }, n),
         );
       });
     },
-    95034: (e, t, a) => {
+    95034: (e, t, n) => {
       "use strict";
-      a.d(t, { Bm: () => c, QD: () => s, f3: () => o, ip: () => l });
-      var n = a(90626),
-        r = a(92757);
+      n.d(t, { Bm: () => i, QD: () => l, f3: () => o, ip: () => c });
+      var a = n(90626),
+        r = n(92757);
       function o(e, t) {
-        let a;
-        "string" == typeof e
-          ? (a = e)
-          : "location" in e
-            ? (a = e.location.search)
-            : "search" in e && (a = e.search);
-        const n = new URLSearchParams(a.substring(1));
-        if (n.has(t)) {
-          const e = n.getAll(t);
+        let n;
+        if ("string" == typeof e) n = e;
+        else if ("location" in e) n = e.location.search;
+        else {
+          if (!("search" in e)) return;
+          n = e.search;
+        }
+        const a = new URLSearchParams(n.substring(1));
+        if (a.has(t)) {
+          const e = a.getAll(t);
           return e[e.length - 1];
         }
       }
-      const i = (e) => null != e;
-      function c(e, t, a, n = !1) {
+      function i(e, t, n, a = !1) {
         const r = new URLSearchParams(e.location.search.substring(1));
-        if (i(a)) {
-          if (r.get(t) == a) return;
-          r.set(t, a);
+        if (null != n && null != n) {
+          if (r.get(t) == n) return;
+          r.set(t, n);
         } else {
           if (!r.has(t)) return;
           r.delete(t);
         }
-        n
+        a
           ? e.replace(`?${r.toString()}`, { ...e.location.state })
           : e.push(`?${r.toString()}`);
       }
-      function s(e, t) {
-        const a = (0, r.W6)(),
-          s = (0, r.zy)(),
-          l = (0, n.useMemo)(() => {
-            const a = o(s.search, e);
-            return i(a)
-              ? i(t)
+      function l(e, t) {
+        const n = (0, r.W6)(),
+          l = (0, r.zy)(),
+          c = (0, a.useMemo)(() => {
+            const n = o(l.search, e);
+            return null != n && null != n
+              ? null != t && null != t
                 ? "boolean" == typeof t
-                  ? t.constructor("false" !== a)
-                  : t.constructor(a)
-                : a
+                  ? t.constructor("false" !== n)
+                  : t.constructor(n)
+                : n
               : t;
-          }, [s.search, e, t]),
-          m = (0, n.useCallback)(
-            (t, n = !1) => {
-              c(a, e, i(t) ? String(t) : null, n);
+          }, [l.search, e, t]),
+          s = (0, a.useCallback)(
+            (t, a = !1) => {
+              i(n, e, null != t && null != t ? String(t) : null, a);
             },
-            [a, e],
+            [n, e],
           );
-        return [l, m];
+        return [c, s];
       }
-      function l(e, t, a = !1) {
-        const n = new URLSearchParams(e.location.search.substring(1));
+      function c(e, t, n = !1) {
+        const a = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
-            const a = t[e];
-            n.delete(e), i(a) && n.append(e, a);
+            const n = t[e];
+            a.delete(e), null != n && null != n && a.append(e, n);
           }
-        a
-          ? e.replace(`?${n.toString()}`, { ...e.location.state })
-          : e.push(`?${n.toString()}`);
+        n
+          ? e.replace(`?${a.toString()}`, { ...e.location.state })
+          : e.push(`?${a.toString()}`);
       }
     },
   },

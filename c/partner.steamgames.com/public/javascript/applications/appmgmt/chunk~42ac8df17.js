@@ -4741,7 +4741,9 @@
                 "all_upcoming",
                 "discounted",
               ],
+              prefer_assets_without_overrides: !1,
             },
+            prefer_assets_without_overrides: !1,
             enable_faceted_browsing:
               (_._.GetCreatorHome(this.clanSteamID)?.GetAppIDList().length ??
                 0) >= 7,
@@ -20863,6 +20865,7 @@
               bAutoFocus: _,
               fnOnClickOverride: _,
               bIsMarketingMessage: _,
+              bPreferAssetWithoutOverride: _,
             } = _,
             _ = (0, _._)(),
             _ = (0, _._)(),
@@ -20972,6 +20975,7 @@
                       _.createElement(_, {
                         info: _,
                         imageType: "header",
+                        bPreferAssetWithoutOverride: _,
                       }),
                       _.createElement(_._, {
                         storeItem: _,
@@ -21154,6 +21158,7 @@
                     },
                     _.createElement(_, {
                       info: _,
+                      bPreferAssetWithoutOverride: _,
                       imageType: "header",
                     }),
                   ),
@@ -21386,7 +21391,11 @@
         );
       };
       function _(_) {
-        const { info: _, imageType: __webpack_require__ } = _,
+        const {
+            info: _,
+            imageType: __webpack_require__,
+            bPreferAssetWithoutOverride: _,
+          } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), {
             include_assets: !0,
           });
@@ -21425,10 +21434,11 @@
         if ("library" === __webpack_require__)
           return _.createElement(_._, {
             info: _,
+            bPreferAssetWithoutOverride: _,
           });
         let _,
           _,
-          _ = (0, _._)(_, "header" === __webpack_require__),
+          _ = (0, _._)(_, "header" === __webpack_require__, _),
           _ = "";
         if ("main" === __webpack_require__)
           (_ = _().mainCapsuleImgWidth),
@@ -21986,6 +21996,7 @@
             storeItem: _,
             bPurchaseOptionsExpanded: __webpack_require__,
             fnCollapseOptions: _,
+            bPreferAssetWithoutOverride: _,
           } = _,
           _ = _?.GetAllPurchaseOptions(),
           _ = (0, _.useRef)(null);
@@ -22026,6 +22037,7 @@
                     _: _.packageid,
                     type: "sub",
                     bForceSmallCapsuleArt: !0,
+                    bPreferAssetWithoutOverride: _,
                   }),
                 ),
               ),
@@ -22792,7 +22804,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { info: _, bPreferLibrary: __webpack_require__ } = _,
+        const {
+            info: _,
+            bPreferLibrary: __webpack_require__,
+            bPreferAssetWithoutOverride: _,
+          } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), {
             include_assets: !0,
           }),
@@ -22801,14 +22817,36 @@
           return _.createElement("div", {
             className: _().HeroCapsuleImageContainer,
           });
-        let _ = _.GetAssets().GetHeroCapsuleURL(),
-          _ = _.GetAssets().GetLibraryCapsuleURL();
-        if (_.GetIncludedAppIDs()?.length > 0 && !_) {
-          const _ = _._.Get().GetApp(_.GetIncludedAppIDs()[0]);
-          _ &&
-            (_ || (_ = _.GetAssets().GetHeroCapsuleURL()),
-            _ || (_ = _.GetAssets().GetLibraryCapsuleURL()));
-        }
+        const { strStoreVerticalURL: _, strLibraryVerticalURL: _ } = (function (
+          _,
+          _,
+        ) {
+          let _ = _.GetAssets()?.GetHeroCapsuleURL(),
+            _ = _.GetAssets()?.GetLibraryCapsuleURL();
+          if (_) {
+            const _ = _.GetAssetsWithoutOverrides();
+            _ &&
+              ((_ = _.GetHeroCapsuleURL() || _),
+              (_ = _.GetLibraryCapsuleURL() || _));
+          }
+          if (_.GetIncludedAppIDs()?.length > 0 && !_) {
+            const _ = _._.Get().GetApp(_.GetIncludedAppIDs()[0]);
+            if (_) {
+              if (_) {
+                const _ = _.GetAssetsWithoutOverrides();
+                _ &&
+                  (_ || (_ = _.GetHeroCapsuleURL()),
+                  _ || (_ = _.GetLibraryCapsuleURL()));
+              }
+              _ || (_ = _.GetAssets()?.GetHeroCapsuleURL()),
+                _ || (_ = _.GetAssets()?.GetLibraryCapsuleURL());
+            }
+          }
+          return {
+            strStoreVerticalURL: _,
+            strLibraryVerticalURL: _,
+          };
+        })(_, _);
         if (_ && (!__webpack_require__ || !_))
           return _.createElement(
             "div",
@@ -22851,7 +22889,7 @@
               alt: _.GetName(),
             }),
           );
-        const _ = _(_, !0),
+        const _ = _(_, !0, _),
           _ = _.length - 1,
           _ = (_) => {
             const _ = _.indexOf(_);
@@ -22883,21 +22921,22 @@
           className: _().HeroCapsuleImageContainer,
         });
       }
-      function _(_, _) {
+      function _(_, _, _) {
         let _ = [];
-        return (
-          _.GetAssets() &&
-            (_
-              ? __webpack_require__.push(
-                  _.GetAssets().GetHeaderURL(),
-                  _.GetAssets().GetMainCapsuleURL(),
-                )
-              : __webpack_require__.push(
-                  _.GetAssets().GetMainCapsuleURL(),
-                  _.GetAssets().GetHeaderURL(),
-                )),
-          __webpack_require__.filter((_) => !!_)
-        );
+        const _ = _.GetAssets();
+        if (_) {
+          if (_) {
+            const _ = _.GetAssetsWithoutOverrides();
+            _ && _(_, _, _);
+          }
+          _(_, _, _);
+        }
+        return _.filter((_) => !!_);
+      }
+      function _(_, _, _) {
+        _
+          ? _.push(_.GetHeaderURL(), _.GetMainCapsuleURL())
+          : _.push(_.GetMainCapsuleURL(), _.GetHeaderURL());
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

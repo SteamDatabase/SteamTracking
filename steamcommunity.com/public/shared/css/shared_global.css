@@ -83,7 +83,7 @@
 	--gpWidth-1colcap: calc((var(--screen-width) - (2 * var(--gpSpace-Gutter))));
 
     /* Fixed heights */
-    --gpStoreMenuHeight: 58px;
+    --gpStoreMenuHeight: 24px;
 
 	/* Surfaces */
 	--gpShadow-Small: 0px 2px 2px 0px #0000003D;
@@ -2979,7 +2979,7 @@ body.v6 #footer_nav .popup_menu .hr{
 
 }
 
-	html.responsive.tablet .newmodal {
+	html.responsive.gamepad .newmodal {
 		min-width: 500px;
 	}
 

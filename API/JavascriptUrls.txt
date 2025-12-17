@@ -906,6 +906,7 @@ ${PARTNER_BASE_URL}admin/game/edit/${nItemId}?activetab=tab_publish
 ${PARTNER_BASE_URL}admin/game/editbyappid/${store_item_id}
 ${PARTNER_BASE_URL}admin/game/editbyappid/${store_item_id}?activetab=tab_specialsettings#seasonpass
 ${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_graphicalassets
+${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_graphicalassets&base_assets=1
 ${PARTNER_BASE_URL}admin/game/quickupdateajax/${}
 ${PARTNER_BASE_URL}admin/reviewpricesubmissions/?myPartners=1
 ${PARTNER_BASE_URL}admin/reviewpricesubmissions/?publisherID=${partnerid}

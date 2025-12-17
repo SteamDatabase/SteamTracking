@@ -377,20 +377,6 @@ textarea#leaderboard_blob {
     width: auto;
 }
 
-.profile_color_preview {
-    width: 28px;
-    margin-left: 10px;
-    height: 26px;
-    DISPLAY: inline-block;
-    vertical-align: top;
-    border: 1px solid #e1e1e1;
-    cursor: pointer;
-}
-
-.profile_colors_ctn {
-    min-height: 226px;
-}
-
 .communityitem_header_ctn {
 	background: rgba( 0, 0, 0, 0.4 );
 	padding: 20px;

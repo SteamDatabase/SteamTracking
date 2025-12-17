@@ -672,7 +672,7 @@
           } = e,
           [g, h] = n.useState(!1),
           [C] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
-          [S] = (0, m.t7)(a && C?.GetParentAppID(), r.Xh);
+          [S] = (0, m.t7)(a ? C?.GetParentAppID() : void 0, r.Xh);
         if (!C) return null;
         const I = Boolean(S),
           w = n.createElement(F, {
@@ -784,47 +784,53 @@
             strDoubleCapsuleMessage: f,
             bPreferDemoStorePage: v,
             bShowEarlyAccessBanner: h,
+            bPreferAssetWithoutOverride: b,
           } = e,
-          [b] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
-          C = (0, w.n9)(),
-          S = (0, G.w)(),
-          A = (0, n.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
-        if (!b) return null;
-        const T = (0, D.NT)(
-          (0, i.It)(`${b.GetStorePageURL(v)}${l ? `?${l}` : ""}`, C, S),
+          [C] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
+          S = (0, w.n9)(),
+          A = (0, G.w)(),
+          T = (0, n.useMemo)(() => C?.GetIncludedAppIDsOrSelf(), [C]);
+        if (!C) return null;
+        const L = (0, D.NT)(
+          (0, i.It)(`${C.GetStorePageURL(v)}${l ? `?${l}` : ""}`, S, A),
         );
-        let L;
+        let R;
         "overrideNavigation" in t &&
-          (L = (e) => (
+          (R = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const R = Boolean(f);
+        const B = Boolean(f);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             "div",
-            { className: (0, y.A)({ [N().TwoWidthCtn]: R }) },
+            { className: (0, y.A)({ [N().TwoWidthCtn]: B }) },
             n.createElement(
               o.Ii,
               {
-                href: L ? void 0 : T,
+                href: R ? void 0 : L,
                 style: { display: "block", cursor: "pointer" },
-                className: (0, y.A)({ [N().TwoWidthCapsule]: R }),
+                className: (0, y.A)({ [N().TwoWidthCapsule]: B }),
                 preferredFocus: d,
-                onClick: L,
+                onClick: R,
               },
               n.createElement(g.V, {
-                appids: A,
+                appids: T,
                 hide_status_banners: a,
                 show_early_access: e.bShowEarlyAccessBanner,
               }),
-              "none" != c && n.createElement(_.aU, { imageType: c, info: t }),
-              n.createElement(I.J, { storeItem: b }),
+              "none" != c &&
+                n.createElement(_.aU, {
+                  imageType: c,
+                  info: t,
+                  bPreferAssetWithoutOverride: b,
+                }),
+              n.createElement(I.J, { storeItem: C }),
               Boolean(p) &&
                 n.createElement(E.m, { appInfo: t, bIsHoverMode: !0 }),
             ),
-            R &&
+            B &&
               n.createElement(
                 "div",
                 {
@@ -837,12 +843,12 @@
                   n.createElement(
                     "span",
                     null,
-                    b.GetFormattedSteamReleaseDate(),
+                    C.GetFormattedSteamReleaseDate(),
                   ),
                 ),
                 n.createElement(P.n, {
                   bHideTitle: !0,
-                  rgTagIDs: b.GetTagIDs(),
+                  rgTagIDs: C.GetTagIDs(),
                   instanceNum: s,
                 }),
               ),
@@ -1149,8 +1155,8 @@
         H = a(46416),
         x = a(22797),
         O = a(10224),
-        M = a(94743),
-        W = a(61859),
+        W = a(94743),
+        M = a(61859),
         Y = a(61336),
         j = a(62014),
         U = a.n(j),
@@ -1197,7 +1203,7 @@
                 r.createElement(
                   s.Ii,
                   { className: "pageheader curator_name", href: a },
-                  (0, W.we)("#SteamCurator_List_Header_List", t.group_name),
+                  (0, M.we)("#SteamCurator_List_Header_List", t.group_name),
                 ),
               ),
             ),
@@ -1247,12 +1253,12 @@
                         r.createElement(
                           "h2",
                           null,
-                          (0, W.we)("#SteamCurator_ExploreMoreTitle"),
+                          (0, M.we)("#SteamCurator_ExploreMoreTitle"),
                         ),
                         r.createElement(
                           s.Ii,
                           { href: a.vanity_url },
-                          (0, W.PP)("#SteamCurator_MoreReviews", a.group_name),
+                          (0, M.PP)("#SteamCurator_MoreReviews", a.group_name),
                         ),
                       ),
                     ),
@@ -1322,7 +1328,7 @@
           null == l)
         )
           return r.createElement(x.t, {
-            string: (0, W.we)("#Loading"),
+            string: (0, M.we)("#Loading"),
             position: "center",
             size: "medium",
           });
@@ -1352,13 +1358,13 @@
               r.createElement(
                 "span",
                 null,
-                (0, W.Yp)("#SteamCurator_Hidden", n - l.length),
+                (0, M.Yp)("#SteamCurator_Hidden", n - l.length),
                 " ",
               ),
               r.createElement(
                 s.Ii,
                 { href: E.TS.STORE_BASE_URL + "account/preferences/" },
-                (0, W.we)("#SteamCurator_Setting"),
+                (0, M.we)("#SteamCurator_Setting"),
               ),
             ),
         );
@@ -1373,9 +1379,9 @@
             (0, u.XU)(t.list_jsondata.youtube_link),
           c = t.list_jsondata.youtube_link && G(t.list_jsondata.youtube_link),
           m = (0, l.sf)(E.TS.LANGUAGE),
-          d = W.NT.GetWithFallback(t.localized_flat_title, m),
-          p = W.NT.GetWithFallback(t.localized_flat_blurb, m),
-          _ = W.NT.GetWithFallback(t.localized_flat_link, m),
+          d = M.NT.GetWithFallback(t.localized_flat_title, m),
+          p = M.NT.GetWithFallback(t.localized_flat_blurb, m),
+          _ = M.NT.GetWithFallback(t.localized_flat_link, m),
           f =
             a &&
             a.GetImageURL(
@@ -1398,7 +1404,7 @@
             r.createElement(
               "div",
               { className: U().VideoReviewCtn },
-              r.createElement(M.l, {
+              r.createElement(W.l, {
                 video: i.strVideoID,
                 startSeconds: i.nStartSeconds,
                 autoplay: !0,
@@ -1476,6 +1482,7 @@
                   capsule: i,
                   bShowDemoButton: y,
                   strExtraParams: D,
+                  bPreferAssetWithoutOverride: !1,
                 }),
           ),
           r.createElement(
@@ -1494,18 +1501,18 @@
                 "div",
                 { className: U().ReviewDate },
                 v || !Boolean(_)
-                  ? (0, W.we)(
+                  ? (0, M.we)(
                       "#EventModTile_ReleaseDate",
                       s.GetFormattedSteamReleaseDate(),
                     )
-                  : (0, W.$z)(_),
+                  : (0, M.$z)(_),
               ),
             ),
             Boolean(S) &&
               r.createElement(
                 "div",
                 { className: U().ReviewBlurb },
-                (0, W.we)("#SteamCurator_ReviewTextQuoted", S),
+                (0, M.we)("#SteamCurator_ReviewTextQuoted", S),
               ),
             Boolean(d) && r.createElement(ne, { url: d }),
           ),
@@ -1535,7 +1542,7 @@
                   imageClassnames: U().YouTubePreviewImage,
                   autoplay: !0,
                 })
-              : r.createElement(M.l, {
+              : r.createElement(W.l, {
                   video: t,
                   startSeconds: a,
                   autoplay: !0,
@@ -1582,19 +1589,19 @@
             return r.createElement(
               "div",
               { className: U().Recommended },
-              (0, W.we)("#SteamCurator_Recommended"),
+              (0, M.we)("#SteamCurator_Recommended"),
             );
           case 1:
             return r.createElement(
               "div",
               { className: U().NotRecommended },
-              (0, W.we)("#SteamCurator_NotRecommended"),
+              (0, M.we)("#SteamCurator_NotRecommended"),
             );
           case 2:
             return r.createElement(
               "div",
               { className: U().Informational },
-              (0, W.we)("#SteamCurator_Informational"),
+              (0, M.we)("#SteamCurator_Informational"),
             );
           default:
             return null;
@@ -1622,7 +1629,7 @@
               preferredFocus: !1,
               autoFocus: !1,
             },
-            (0, W.we)(
+            (0, M.we)(
               n
                 ? "#SteamCurator_WatchFullReview"
                 : "#SteamCurator_ReadFullReview",
@@ -1631,7 +1638,7 @@
           r.createElement(
             "div",
             { className: U().FullReviewDomain },
-            (0, W.we)("#SteamCurator_ReviewLinkHostnameBracketed", a),
+            (0, M.we)("#SteamCurator_ReviewLinkHostnameBracketed", a),
           ),
         );
       }

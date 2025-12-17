@@ -595,7 +595,7 @@
           } = e,
           I = (0, d.f1)(),
           { clanInfo: S, bLoadingClanInfo: w } = (0, l.vF)(t),
-          C = (function (e, t) {
+          P = (function (e, t) {
             const a = (0, c.a)(),
               n = (0, s.useMemo)(() => o.b.InitFromClanID(e), [e]),
               r = (0, u.I)({
@@ -633,14 +633,14 @@
               [r.data, r.isLoading],
             );
           })(S?.clanAccountID, I - 2592e3),
-          P = (0, s.useMemo)(
-            () => (D ? C?.filter((e) => !e.hidden) : C),
-            [C, D],
+          C = (0, s.useMemo)(
+            () => (D ? P?.filter((e) => !e.hidden) : P),
+            [P, D],
           ),
           y = (0, s.useMemo)(
             () =>
-              P
-                ? P.map((e) => {
+              C
+                ? C.map((e) => {
                     const t = e.hidden
                       ? e.published
                         ? "#EventDropDown_HiddenPublish"
@@ -656,9 +656,9 @@
                     };
                   })
                 : [],
-            [P],
+            [C],
           ),
-          T = P?.find((e) => e.gid === a);
+          T = C?.find((e) => e.gid === a);
         return (
           "dev" == v.TS.WEB_UNIVERSE &&
             console.log(
@@ -667,8 +667,8 @@
               T,
               T?.gid,
             ),
-          P || (!w && !S?.appid)
-            ? P && 0 != P.length
+          C || (!w && !S?.appid)
+            ? C && 0 != C.length
               ? s.createElement(
                   s.Fragment,
                   null,
@@ -749,7 +749,7 @@
           } = e,
           [D, I] = s.useState(""),
           [S, w] = s.useState(!1),
-          [C, P] = s.useState(!1),
+          [P, C] = s.useState(!1),
           [y] = s.useState(new i.LU()),
           [T, N] = s.useState(new Array()),
           [k, B] = s.useState(new Array()),
@@ -758,7 +758,7 @@
           F = s.createRef();
         const G = (0, s.useCallback)(
             async (e, t) => {
-              P(!0);
+              C(!0);
               let a = { json: 1, term: e, bexcluderetired: !_ },
                 s = `${u.TS.PARTNER_BASE_URL}appsearch/suggestapps`;
               switch (n) {
@@ -789,7 +789,7 @@
                     B(l.data.package_matches || []),
                     M(l.data.bundle_matches || []))
                 : (N([]), B([]), M([])),
-                P(!1);
+                C(!1);
             },
             [o, n, _, A, b],
           ),
@@ -855,7 +855,7 @@
           s.createElement(
             "div",
             { className: d.Results },
-            C &&
+            P &&
               s.createElement(
                 "div",
                 { className: d.LoadingContainer },
@@ -1312,14 +1312,14 @@
               position: "center",
             }),
           );
-        const C = t.type,
-          P =
+        const P = t.type,
+          C =
             "developer" == t.type
               ? (0, d.we)("#CreatorHome_DevelopedBy")
               : "publisher" == t.type
                 ? (0, d.we)("#CreatorHome_PublishedBy")
                 : (0, d.we)("#CreatorHome_InFranchise"),
-          y = S.GetCreatorHomeURL(C),
+          y = S.GetCreatorHomeURL(P),
           T = S.GetNumFollowers();
         return n.createElement(
           h.tH,
@@ -1337,7 +1337,7 @@
                 ),
                 "flow-children": "row",
               },
-              !l && n.createElement("span", { className: f.Title }, P),
+              !l && n.createElement("span", { className: f.Title }, C),
               n.createElement(
                 "div",
                 { className: f.DevSummaryWidgetCtn },
@@ -1507,8 +1507,8 @@
         I = a(54492),
         S = a(60014),
         w = a(52038),
-        C = a(61859),
-        P = a(61336),
+        P = a(61859),
+        C = a(61336),
         y = a(78327),
         T = a(91291),
         N = a.n(T),
@@ -1529,7 +1529,7 @@
           } = e,
           [f, A] = n.useState(!1),
           [b] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          [D] = (0, u.t7)(a && b?.GetParentAppID(), r.Xh);
+          [D] = (0, u.t7)(a ? b?.GetParentAppID() : void 0, r.Xh);
         if (!b) return null;
         const I = Boolean(D),
           S = n.createElement(F, {
@@ -1609,7 +1609,7 @@
             n.createElement(
               "div",
               { className: E().ParentType },
-              (0, C.we)(
+              (0, P.we)(
                 11 == o
                   ? "#SalePage_ParentApp_SoundTrack"
                   : "#SalePage_ParentApp_DLC",
@@ -1641,47 +1641,53 @@
             strDoubleCapsuleMessage: h,
             bPreferDemoStorePage: E,
             bShowEarlyAccessBanner: A,
+            bPreferAssetWithoutOverride: v,
           } = e,
-          [v] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          b = (0, S.n9)(),
-          D = (0, B.w)(),
-          C = (0, n.useMemo)(() => v?.GetIncludedAppIDsOrSelf(), [v]);
-        if (!v) return null;
-        const y = (0, P.NT)(
-          (0, i.It)(`${v.GetStorePageURL(E)}${o ? `?${o}` : ""}`, b, D),
+          [b] = (0, u.G6)(t.id, (0, m.SW)(t.type), r.Xh),
+          D = (0, S.n9)(),
+          P = (0, B.w)(),
+          y = (0, n.useMemo)(() => b?.GetIncludedAppIDsOrSelf(), [b]);
+        if (!b) return null;
+        const T = (0, C.NT)(
+          (0, i.It)(`${b.GetStorePageURL(E)}${o ? `?${o}` : ""}`, D, P),
         );
-        let T;
+        let L;
         "overrideNavigation" in t &&
-          (T = (e) => (
+          (L = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const L = Boolean(h);
+        const M = Boolean(h);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             "div",
-            { className: (0, w.A)({ [N().TwoWidthCtn]: L }) },
+            { className: (0, w.A)({ [N().TwoWidthCtn]: M }) },
             n.createElement(
               s.Ii,
               {
-                href: T ? void 0 : y,
+                href: L ? void 0 : T,
                 style: { display: "block", cursor: "pointer" },
-                className: (0, w.A)({ [N().TwoWidthCapsule]: L }),
+                className: (0, w.A)({ [N().TwoWidthCapsule]: M }),
                 preferredFocus: d,
-                onClick: T,
+                onClick: L,
               },
               n.createElement(f.V, {
-                appids: C,
+                appids: y,
                 hide_status_banners: a,
                 show_early_access: e.bShowEarlyAccessBanner,
               }),
-              "none" != c && n.createElement(g.aU, { imageType: c, info: t }),
-              n.createElement(I.J, { storeItem: v }),
+              "none" != c &&
+                n.createElement(g.aU, {
+                  imageType: c,
+                  info: t,
+                  bPreferAssetWithoutOverride: v,
+                }),
+              n.createElement(I.J, { storeItem: b }),
               Boolean(p) &&
                 n.createElement(_.m, { appInfo: t, bIsHoverMode: !0 }),
             ),
-            L &&
+            M &&
               n.createElement(
                 "div",
                 {
@@ -1694,12 +1700,12 @@
                   n.createElement(
                     "span",
                     null,
-                    v.GetFormattedSteamReleaseDate(),
+                    b.GetFormattedSteamReleaseDate(),
                   ),
                 ),
                 n.createElement(k.n, {
                   bHideTitle: !0,
-                  rgTagIDs: v.GetTagIDs(),
+                  rgTagIDs: b.GetTagIDs(),
                   instanceNum: l,
                 }),
               ),
@@ -1823,8 +1829,8 @@
           } = e,
           [b, D] = n.useState(!1),
           [I, S] = n.useState(void 0),
-          [w, C] = n.useState(void 0),
-          [P, y] = n.useState(-1),
+          [w, P] = n.useState(void 0),
+          [C, y] = n.useState(-1),
           [T, N] = n.useState(void 0),
           [k, B] = n.useState(0),
           [L, M] = n.useState(0),
@@ -1845,16 +1851,16 @@
           n.useEffect(() => () => O.cancel("ReorderableList unmounting"), [O]);
         const X = n.useCallback(
             (e) => {
-              const t = x.current[P]?.current;
+              const t = x.current[C]?.current;
               t
                 ? ((t.style.left = e.clientX - I + "px"),
                   (t.style.top = e.clientY - w + "px"))
                 : console.error("update grab element missing element");
             },
-            [P, I, w],
+            [C, I, w],
           ),
           z = n.useCallback(() => {
-            const e = x.current[P]?.current;
+            const e = x.current[C]?.current;
             e
               ? ((e.style.position = ""), (e.style.zIndex = ""))
               : console.error("end element drag missing element"),
@@ -1862,7 +1868,7 @@
               y(-1),
               F(void 0),
               N(void 0);
-          }, [P]),
+          }, [C]),
           Q = (e, t) => {
             O.token.reason ||
               (U.current.firstElementChild?.getBoundingClientRect().height >
@@ -1880,7 +1886,7 @@
                 const n = t.clientX - a.getBoundingClientRect().left;
                 S(n);
                 const r = t.clientY - a.getBoundingClientRect().top;
-                C(r),
+                P(r),
                   (a.style.position = "fixed"),
                   (a.style.left = t.clientX - n + "px"),
                   (a.style.top = t.clientY - r + "px"),
@@ -1918,7 +1924,7 @@
             "mouseup",
             b
               ? (e) => {
-                  b && !O.token.reason && (z(), V(P, T));
+                  b && !O.token.reason && (z(), V(C, T));
                 }
               : void 0,
           ),
@@ -1946,7 +1952,7 @@
               n.createElement(
                 "div",
                 { ref: x.current[r], className: c().DragGhost },
-                r == P &&
+                r == C &&
                   n.createElement(
                     "div",
                     { className: (0, E.A)(c().WhitelistRow, v) },
@@ -1974,7 +1980,7 @@
                     c().WhitelistRow,
                     v,
                     b && c().DragActive,
-                    r == P && c().BeingDragged,
+                    r == C && c().BeingDragged,
                     J == r && c().Dropped,
                   ),
                   onAnimationEnd: () => j(void 0),
@@ -1992,7 +1998,7 @@
                   className: (0, E.A)(c().WhitelistNumber, A && c().Disabled),
                   type: "text",
                   value: R == r ? G : r + 1,
-                  disabled: A || r == P,
+                  disabled: A || r == C,
                   onChange: (e) => H(e.target.value),
                   onKeyDown: (e) =>
                     ((e, t) => {
@@ -2004,7 +2010,7 @@
                   onBlur: () => q(r),
                 }),
                 a(e, r),
-                Boolean(r != P) &&
+                Boolean(r != C) &&
                   Boolean(m || i) &&
                   n.createElement(
                     "div",

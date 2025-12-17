@@ -5387,24 +5387,24 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 
 }
 
-	html.responsive.tablet .game_description_snippet {
+	html.responsive.gamepad .game_description_snippet {
 		overflow: hidden;
 		padding-right: 0;
 	}
 
-	html.responsive.tablet .game_page_background_ctn {
+	html.responsive.gamepad .game_page_background_ctn {
 		 width: 96vw;
 		 overflow: hidden;
 		 min-width: unset;
 	 }
 
-	html.responsive.tablet #game_highlights,
-	html.responsive.tablet #game_highlights .rightcol {
+	html.responsive.gamepad #game_highlights,
+	html.responsive.gamepad #game_highlights .rightcol {
 		width: auto;
 		height: auto;
 	}
 
-    html.responsive.tablet .discoveryqueue_appwidget {
+    html.responsive.gamepad .discoveryqueue_appwidget {
         height: 50px;
         margin-bottom: 10px;
     }
@@ -7111,24 +7111,24 @@ body.v6.widestore .game_area_already_owned.master_sub {
 
 }
 
-	html.responsive.tablet .widestore .game_description_snippet {
+	html.responsive.gamepad .widestore .game_description_snippet {
 		overflow: hidden;
 		padding-right: 0;
 		margin-bottom: 10px;
 	}
 
-	html.responsive.tablet .widestore #game_highlights,
-	html.responsive.tablet .widestore #game_highlights .rightcol {
+	html.responsive.gamepad .widestore #game_highlights,
+	html.responsive.gamepad .widestore #game_highlights .rightcol {
 		width: auto;
 		height: auto;
 		flex-direction: column;
 	}
 
-	html.responsive.tablet .widestore #game_highlights .leftcol {
+	html.responsive.gamepad .widestore #game_highlights .leftcol {
 		width: auto;
 	}
 
-    html.responsive.tablet .widestore .discoveryqueue_appwidget {
+    html.responsive.gamepad .widestore .discoveryqueue_appwidget {
         height: 50px;
         margin-bottom: 10px;
     }

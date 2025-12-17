@@ -795,20 +795,24 @@ html.responsive.touch ._1j8KSE1MOgkAPtRye2FcTh ._37ivcc2B6InJBq1X6WZFW4 {
 }
 .HcnwPf22p8HKGwzt30Tcp {
   position: absolute;
+  top: -5px;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 .HcnwPf22p8HKGwzt30Tcp ._17HtwoPW8D9u5QIY_UNAs3 {
-  width: 100%;
+  width: fit-content;
+  margin: 0 auto;
   text-align: center;
   color: #fff;
   font-weight: 700;
   font-size: 10px;
   letter-spacing: .1em;
   text-transform: uppercase;
-  padding: 3px;
+  padding: 3px 9px;
+  border-radius: 1px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 500px) {
   .HcnwPf22p8HKGwzt30Tcp ._17HtwoPW8D9u5QIY_UNAs3 {
@@ -1366,7 +1370,6 @@ html.responsive.touch ._1j8KSE1MOgkAPtRye2FcTh ._37ivcc2B6InJBq1X6WZFW4 {
   position: relative;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
   transition-property: filter, transform, color;
   transition-duration: .2s;

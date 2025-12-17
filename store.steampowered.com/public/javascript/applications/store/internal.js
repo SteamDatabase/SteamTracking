@@ -660,7 +660,7 @@
           } = e,
           [y, S] = r.useState(!1),
           [C] = (0, p.G6)(t.id, (0, m.SW)(t.type), s.Xh),
-          [b] = (0, p.t7)(a && C?.GetParentAppID(), s.Xh);
+          [b] = (0, p.t7)(a ? C?.GetParentAppID() : void 0, s.Xh);
         if (!C) return null;
         const w = Boolean(b),
           I = r.createElement(O, {
@@ -772,47 +772,53 @@
             strDoubleCapsuleMessage: g,
             bPreferDemoStorePage: _,
             bShowEarlyAccessBanner: S,
+            bPreferAssetWithoutOverride: E,
           } = e,
-          [E] = (0, p.G6)(t.id, (0, m.SW)(t.type), s.Xh),
-          C = (0, I.n9)(),
-          b = (0, R.w)(),
-          N = (0, r.useMemo)(() => E?.GetIncludedAppIDsOrSelf(), [E]);
-        if (!E) return null;
-        const A = (0, x.NT)(
-          (0, l.It)(`${E.GetStorePageURL(_)}${i ? `?${i}` : ""}`, C, b),
+          [C] = (0, p.G6)(t.id, (0, m.SW)(t.type), s.Xh),
+          b = (0, I.n9)(),
+          N = (0, R.w)(),
+          A = (0, r.useMemo)(() => C?.GetIncludedAppIDsOrSelf(), [C]);
+        if (!C) return null;
+        const P = (0, x.NT)(
+          (0, l.It)(`${C.GetStorePageURL(_)}${i ? `?${i}` : ""}`, b, N),
         );
-        let P;
+        let M;
         "overrideNavigation" in t &&
-          (P = (e) => (
+          (M = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const M = Boolean(g);
+        const B = Boolean(g);
         return r.createElement(
           r.Fragment,
           null,
           r.createElement(
             "div",
-            { className: (0, v.A)({ [D().TwoWidthCtn]: M }) },
+            { className: (0, v.A)({ [D().TwoWidthCtn]: B }) },
             r.createElement(
               n.Ii,
               {
-                href: P ? void 0 : A,
+                href: M ? void 0 : P,
                 style: { display: "block", cursor: "pointer" },
-                className: (0, v.A)({ [D().TwoWidthCapsule]: M }),
+                className: (0, v.A)({ [D().TwoWidthCapsule]: B }),
                 preferredFocus: d,
-                onClick: P,
+                onClick: M,
               },
               r.createElement(y.V, {
-                appids: N,
+                appids: A,
                 hide_status_banners: a,
                 show_early_access: e.bShowEarlyAccessBanner,
               }),
-              "none" != c && r.createElement(h.aU, { imageType: c, info: t }),
-              r.createElement(w.J, { storeItem: E }),
+              "none" != c &&
+                r.createElement(h.aU, {
+                  imageType: c,
+                  info: t,
+                  bPreferAssetWithoutOverride: E,
+                }),
+              r.createElement(w.J, { storeItem: C }),
               Boolean(u) &&
                 r.createElement(f.m, { appInfo: t, bIsHoverMode: !0 }),
             ),
-            M &&
+            B &&
               r.createElement(
                 "div",
                 {
@@ -825,12 +831,12 @@
                   r.createElement(
                     "span",
                     null,
-                    E.GetFormattedSteamReleaseDate(),
+                    C.GetFormattedSteamReleaseDate(),
                   ),
                 ),
                 r.createElement(T.n, {
                   bHideTitle: !0,
-                  rgTagIDs: E.GetTagIDs(),
+                  rgTagIDs: C.GetTagIDs(),
                   instanceNum: o,
                 }),
               ),
@@ -5528,6 +5534,7 @@
                     bShowEarlyAccessBanner: !0,
                     bShowIgnoreButton: !0,
                     bShowDescriptionInHover: !0,
+                    bPreferAssetWithoutOverride: !1,
                   }),
                 ),
               ),
@@ -5563,6 +5570,7 @@
                     bShowEarlyAccessBanner: !0,
                     bShowIgnoreButton: !0,
                     bShowDescriptionInHover: !0,
+                    bPreferAssetWithoutOverride: !1,
                   }),
                 ),
               ),
@@ -5770,6 +5778,7 @@
                   bShowEarlyAccessBanner: !0,
                   bShowIgnoreButton: !0,
                   bShowDescriptionInHover: !0,
+                  bPreferAssetWithoutOverride: !1,
                 }),
               ),
             ),
@@ -5829,6 +5838,7 @@
                         bHideStatusBanners: !0,
                         bShowIgnoreButton: !0,
                         bShowDescriptionInHover: !0,
+                        bPreferAssetWithoutOverride: !1,
                       }),
                     ),
                   ),

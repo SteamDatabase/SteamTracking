@@ -53098,6 +53098,18 @@
                 ),
               ),
           ),
+          l.createElement(
+            "div",
+            { className: c().SectionCtn },
+            l.createElement(m.JU, null, "Link"),
+            l.createElement(
+              "a",
+              {
+                href: `${T.TS.PARTNER_BASE_URL}admin/game/editbyappid/${t.GetID()}?activetab=tab_graphicalassets&base_assets=1`,
+              },
+              "Edit Advertising App",
+            ),
+          ),
         );
       }
       function ht(e) {
@@ -78285,24 +78297,25 @@
             bPreferDemoStorePage: m,
             bShowPurchaseOptionsButton: d,
             bUseSubscriptionLayout: u,
+            bPreferAssetWithoutOverride: p,
           } = e,
-          [p, _] = i.useState(!1),
-          g = () => _(!p),
-          h = (0, At.n9)(),
-          E = i.useMemo(() => n?.GetIncludedAppIDsOrSelf(), [n]);
+          [_, g] = i.useState(!1),
+          h = () => g(!_),
+          E = (0, At.n9)(),
+          S = i.useMemo(() => n?.GetIncludedAppIDsOrSelf(), [n]);
         if (!n)
           return i.createElement(re, {
             capsules_per_row: [1],
             is_expanded_display: !0,
           });
-        const S = (0, ct.L3)(h),
-          v =
+        const v = (0, ct.L3)(E),
+          y =
             ((0, xt.tB)(n.GetStorePageURL(m)),
             n.GetName()?.length > 0 && n.GetName(),
             m && n.HasDemoStandaloneStorePage()
               ? n.GetDemoStandaloneStorePageAppIDs()[0]
               : s),
-          y = 0 == n.GetStoreItemType();
+          f = 0 == n.GetStoreItemType();
         return i.createElement(
           "div",
           {
@@ -78314,7 +78327,7 @@
           },
           i.createElement(
             Vt.oj,
-            { appid: y && n.GetAppID() },
+            { appid: f && n.GetAppID() },
             i.createElement(
               "div",
               { className: Mt().StoreSaleWidgetLibraryAssetExtendedTop },
@@ -78323,12 +78336,16 @@
                 { className: (0, te.A)(Mt().StoreSaleWidgetLeft) },
                 i.createElement(
                   Jt.u,
-                  { type: r, id: v, fnHoverState: a },
+                  { type: r, id: y, fnHoverState: a },
                   i.createElement(
                     "div",
                     { className: Mt().StoreSaleWidgetImage },
-                    i.createElement(qt.V, { appids: E }),
-                    i.createElement(Lt.aU, { info: l, imageType: "library" }),
+                    i.createElement(qt.V, { appids: S }),
+                    i.createElement(Lt.aU, {
+                      info: l,
+                      imageType: "library",
+                      bPreferAssetWithoutOverride: p,
+                    }),
                     i.createElement(Kt.J, { storeItem: n }),
                   ),
                 ),
@@ -78337,12 +78354,12 @@
                 "div",
                 { className: Mt().StoreSaleWidgetCrossCenterRight },
                 i.createElement(Bt.EP, {
-                  appID: y && n.GetAppID(),
+                  appID: f && n.GetAppID(),
                   classOverride: (0, te.A)(
                     zt().WishlistButtonNotTop,
                     "WishlistButton",
                   ),
-                  snr: S,
+                  snr: v,
                 }),
                 i.createElement(
                   "div",
@@ -78421,7 +78438,7 @@
                 i.createElement(
                   "div",
                   { className: Mt().CapsuleBottomBar },
-                  Boolean(u && y)
+                  Boolean(u && f)
                     ? i.createElement(Yt.E, {
                         appid: n.GetAppID(),
                         bIsMuted: !1,
@@ -78435,7 +78452,7 @@
                           bShowDemoButton: c,
                           bHidePrice: o,
                           bShowPurchaseOptionsButton: d,
-                          fnOnPurchaseOptionsClick: g,
+                          fnOnPurchaseOptionsClick: h,
                           bHideWishlistButton: !n.BIsComingSoon(),
                         }),
                       ),
@@ -78443,15 +78460,19 @@
                 i.createElement(
                   "div",
                   { className: Mt().StoreSaleWidgetBgTint },
-                  i.createElement(Qt.G, { info: l }),
+                  i.createElement(Qt.G, {
+                    info: l,
+                    bPreferAssetWithoutOverride: p,
+                  }),
                   i.createElement(Kt.J, { storeItem: n }),
                 ),
               ),
             ),
             i.createElement(jt.cg, {
               storeItem: n,
-              bPurchaseOptionsExpanded: p,
-              fnCollapseOptions: g,
+              bPurchaseOptionsExpanded: _,
+              fnCollapseOptions: h,
+              bPreferAssetWithoutOverride: p,
             }),
           ),
         );
@@ -79842,6 +79863,8 @@
                   bPreferDemoStorePage: t.prefer_demo_store_page,
                   displayStyle: "library",
                   requestCompact: c,
+                  bPreferAssetWithoutOverride:
+                    t.prefer_assets_without_overrides,
                 })
               );
             }),
@@ -80128,6 +80151,7 @@
               type: e.type || "game",
               bShowDemoButton: !1,
               bLoadShortDescription: !1,
+              bPreferAssetWithoutOverride: !1,
             }),
           ),
         );
@@ -80736,6 +80760,7 @@
                         browseInfo: {
                           enable_search: !0,
                           show_as_demos: !1,
+                          prefer_assets_without_overrides: !1,
                           tabs: [
                             "popularpurchased",
                             "recentlyreleased",
@@ -97484,7 +97509,7 @@
           ? s.createElement(
               "a",
               {
-                href: (0, w.NT)(t.url),
+                href: (0, w.NT)(t.url, !0),
                 target: I.TS.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer",
               },

@@ -296,14 +296,14 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 	});
 
 	$J('.hero_capsule').on( 'mouseenter vgp_onfocus', function() {
-		if ( window.UseTouchFriendlyMode() && !window.UseTabletScreenMode() )
+		if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
 			return;
 
 		$J(this).find('.hero_screenshot_load').each( function() { $J(this).css( 'backgroundImage', $J(this).data('background') ); } );
 	} );
 
 	$J('.hero_capsule:not(.valveindex)').on( 'mouseenter vgp_onfocus', function() {
-		if ( window.UseTouchFriendlyMode() && !window.UseTabletScreenMode() )
+		if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
 			return;
 
 		if ( $J(this).find('video.hero_video').length )
@@ -311,7 +311,7 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 	} );
 
 	$J('.hero_capsule:not(.valveindex)').on( 'mouseleave vgp_onblur', function() {
-		if ( window.UseTouchFriendlyMode() && !window.UseTabletScreenMode() )
+		if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
 			return;
 
 		if ( $J(this).find('video.hero_video').length )
@@ -651,7 +651,7 @@ function AddMicrotrailer( $CapCtn, microtrailer )
 	if ( !microtrailer )
 		return;
 
-	if ( window.UseTouchFriendlyMode() && !window.UseTabletScreenMode() )
+	if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
 		return;
 
 	$CapCtn.addClass( 'with_microtrailer' );

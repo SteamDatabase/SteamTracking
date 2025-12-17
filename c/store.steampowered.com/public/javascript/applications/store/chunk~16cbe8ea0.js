@@ -16248,6 +16248,7 @@
             type: _,
             bShowDemoButton: 1 == _?.GetAppType(),
             bAllowTwoLinesForHeader: !0,
+            bPreferAssetWithoutOverride: !1,
           }),
         );
       }
@@ -17917,7 +17918,7 @@
           ? _.createElement(
               "a",
               {
-                href: (0, _._)(_.url),
+                href: (0, _._)(_.url, !0),
                 target: _._.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer",
               },

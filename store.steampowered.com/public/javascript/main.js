@@ -2103,7 +2103,7 @@ function GamePurchaseDropdownSelectOption( dropdownName, subId, inCart )
 		}
 	}
 
-	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
+	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
 	{
 		CModal.DismissActiveModal();
 	}
@@ -2133,7 +2133,7 @@ function ShowGamePurchaseDropdown( elemLink, elemPopup )
 	var nWidth = $Link.outerWidth();
 	$Popup.css( 'min-width', nWidth );
 
-	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
+	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
 	{
 		var $Content = $Popup.clone();
 		$Content.attr('data-panel', '{"maintainY":true,"autoFocus":true}' );
@@ -2268,7 +2268,7 @@ function PreloadImages( elElement )
 				var $elTarget = $J(j);
 
 				let strBackgroundImg = $elTarget.data('background-image-url');
-				if ( !window.UseTabletScreenMode() && !window.UseMobileScreenMode() )
+				if ( !window.UseGamepadScreenMode() && !window.UseMobileScreenMode() )
 				{
 					const strBackgroundImg2x = $elTarget.data('background-image2x-url');
 					if ( strBackgroundImg2x )
@@ -2309,7 +2309,7 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	this.UpdateItems();
 	PreloadImages( this.$elItems[ this.nIndex ] );
 
-	if ( window.UseTabletScreenMode && window.UseTabletScreenMode() )
+	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
 	{
 		PreloadImages( $elContainer );
 	}
@@ -2522,7 +2522,7 @@ CGenericCarousel.prototype.bIsResponsive = function( )
 
 CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )
 {
-		if( this.bIsResponsive() && !window.UseTabletScreenMode() )
+		if( this.bIsResponsive() && !window.UseGamepadScreenMode() )
 	{
 		return this.ResponsiveAdvance(nNewIndex );
 	}
