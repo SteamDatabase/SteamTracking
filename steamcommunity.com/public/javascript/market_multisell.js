@@ -250,9 +250,10 @@ function PriceRecvChanged( $elThis )
 		var description = g_rgAssets[nAppId][ulContextId][ulAssetId].description;
 
 		// Calculate what the buyer pays
-		var publisherFee = (typeof description.market_fee != 'undefined' && description.market_fee !== null) ? description.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
-		var info = CalculateAmountToSendForDesiredReceivedAmount( nAmount, publisherFee );
-		$J('#sell_' + llNameId + '_price_paid').val( v_currencyformat( info.amount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
+		var ppct = parseFloat( g_rgWalletInfo[ 'wallet_publisher_fee_percent_default' ] ?? 0.10 );
+		var spct = parseFloat( g_rgWalletInfo[ 'wallet_fee_percent' ] ?? 0.05 );
+		var nTotalUnitPrice = GetTotalWithFees( nAmount, ppct, spct, g_rgWalletInfo );
+		$J('#sell_' + llNameId + '_price_paid').val( v_currencyformat( nTotalUnitPrice, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
 
 		UpdateOrderTotal()
 	}
@@ -273,11 +274,9 @@ function PricePaidChanged( $elThis )
 		var description = g_rgAssets[nAppId][ulContextId][ulAssetId].description;
 
 		// Calculate what the seller gets
-		var publisherFee = (typeof description.market_fee != 'undefined' && description.market_fee !== null) ? description.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
-		var feeInfo = CalculateFeeAmount( nAmount, publisherFee );
-		nAmount = nAmount - feeInfo.fees;
+		var nItemPrice = GetItemPriceFromTotal( nAmount, g_rgWalletInfo );
 		var $elRecv = $J('#sell_' + llNameId + '_price_recv');
-		$elRecv.val( v_currencyformat( nAmount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
+		$elRecv.val( v_currencyformat( nItemPrice, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) ) );
 
 		UpdateOrderTotal();
 	}
