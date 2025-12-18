@@ -407,14 +407,10 @@ var _ = _((_) => {
     _ = Symbol.for("react.suspense"),
     _ = Symbol.for("react.suspense_list"),
     _ = Symbol.for("react.memo"),
-    _ = Symbol.for("react.lazy");
-  Symbol.for("react.scope");
-  var _ = Symbol.for("react.activity");
-  Symbol.for("react.legacy_hidden");
-  Symbol.for("react.tracing_marker");
-  var _ = Symbol.for("react.memo_cache_sentinel");
-  Symbol.for("react.view_transition");
-  var _ = Symbol.iterator;
+    _ = Symbol.for("react.lazy"),
+    _ = Symbol.for("react.activity"),
+    _ = Symbol.for("react.memo_cache_sentinel"),
+    _ = Symbol.iterator;
   function _(_) {
     return _ === null || typeof _ != "object"
       ? null
@@ -4024,9 +4020,7 @@ Error generating stack: ` +
             _ = _(_, _);
           if (((_.hasEagerState = !0), (_.eagerState = _), _(_, _)))
             return _(_, _, _, 0), _ === null && _(), !1;
-        } catch {
-        } finally {
-        }
+        } catch {}
       if (((_ = _(_, _, _, _)), _ !== null)) return _(_, _, _), _(_, _, _), !0;
     }
     return !1;
@@ -4679,7 +4673,6 @@ Error generating stack: ` +
         if (_ === _ || _ === _) throw _;
         var _ = _(29, _, null, _.mode);
         return (_.lanes = _), (_.return = _), _;
-      } finally {
       }
     };
   }
@@ -5824,16 +5817,13 @@ Error generating stack: ` +
             } else if (_ !== _) {
               (_ = _(Error(_(424)), _)), _(_), (_ = _(_, _, _, _));
               break _;
-            } else {
-              switch (((_ = _.stateNode.containerInfo), _.nodeType)) {
-                case 9:
-                  _ = _.body;
-                  break;
-                default:
-                  _ = _.nodeName === "HTML" ? _.ownerDocument.body : _;
-              }
+            } else
               for (
-                _ = _(_.firstChild),
+                _ = _.stateNode.containerInfo,
+                  _.nodeType === 9
+                    ? (_ = _.body)
+                    : (_ = _.nodeName === "HTML" ? _.ownerDocument.body : _),
+                  _ = _(_.firstChild),
                   _ = _,
                   _ = !0,
                   _ = null,
@@ -5843,7 +5833,6 @@ Error generating stack: ` +
                 _;
               )
                 (_.flags = (_.flags & -3) | 4096), (_ = _.sibling);
-            }
           else {
             if ((_(), _ === _)) {
               _ = _(_, _, _);
@@ -9845,15 +9834,12 @@ Error generating stack: ` +
         return;
       case "option":
         for (_ in _)
-          if (_.hasOwnProperty(_) && ((_ = _[_]), _ != null))
-            switch (_) {
-              case "selected":
-                _.selected =
-                  _ && typeof _ != "function" && typeof _ != "symbol";
-                break;
-              default:
-                _(_, _, _, _, _, null);
-            }
+          _.hasOwnProperty(_) &&
+            ((_ = _[_]), _ != null) &&
+            (_ === "selected"
+              ? (_.selected =
+                  _ && typeof _ != "function" && typeof _ != "symbol")
+              : _(_, _, _, _, _, null));
         return;
       case "dialog":
         _("beforetoggle", _), _("toggle", _), _("cancel", _), _("close", _);
@@ -10051,31 +10037,21 @@ Error generating stack: ` +
         return;
       case "option":
         for (var _ in _)
-          if (
-            ((_ = _[_]),
-            _.hasOwnProperty(_) && _ != null && !_.hasOwnProperty(_))
-          )
-            switch (_) {
-              case "selected":
-                _.selected = !1;
-                break;
-              default:
-                _(_, _, _, null, _, _);
-            }
+          (_ = _[_]),
+            _.hasOwnProperty(_) &&
+              _ != null &&
+              !_.hasOwnProperty(_) &&
+              (_ === "selected" ? (_.selected = !1) : _(_, _, _, null, _, _));
         for (_ in _)
-          if (
-            ((_ = _[_]),
+          (_ = _[_]),
             (_ = _[_]),
-            _.hasOwnProperty(_) && _ !== _ && (_ != null || _ != null))
-          )
-            switch (_) {
-              case "selected":
-                _.selected =
-                  _ && typeof _ != "function" && typeof _ != "symbol";
-                break;
-              default:
-                _(_, _, _, _, _, _);
-            }
+            _.hasOwnProperty(_) &&
+              _ !== _ &&
+              (_ != null || _ != null) &&
+              (_ === "selected"
+                ? (_.selected =
+                    _ && typeof _ != "function" && typeof _ != "symbol")
+                : _(_, _, _, _, _, _));
         return;
       case "img":
       case "link":
@@ -10935,14 +10911,9 @@ Error generating stack: ` +
           _.onError
         )
           break;
-        switch (_.rel) {
-          case "stylesheet":
-            return (
-              (_ = _.disabled), typeof _.precedence == "string" && _ == null
-            );
-          default:
-            return !0;
-        }
+        return _.rel === "stylesheet"
+          ? ((_ = _.disabled), typeof _.precedence == "string" && _ == null)
+          : !0;
       case "script":
         if (
           _.async &&

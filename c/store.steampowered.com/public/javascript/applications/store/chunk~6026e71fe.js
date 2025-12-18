@@ -4976,6 +4976,7 @@
                 name: ["#AppTypeLabelTitle"],
                 facetValues: [],
                 logical_and: !1,
+                single_selection: !0,
               },
               _ = [
                 "game",
@@ -5058,6 +5059,7 @@
               name: ["#Platform"],
               facetValues: [],
               logical_and: !1,
+              single_selection: !0,
             };
             _.facetValues.push({
               name: ["#Platform_Windows"],
@@ -13322,6 +13324,7 @@
                         styleOverrides: _,
                         bSearching: _?.length > 0,
                         bInitiallyExpanded: _.facet.facet.bInitiallyExpanded,
+                        bSingleSelection: _.facet.facet.single_selection,
                       }),
                     ),
                   ),
@@ -13418,6 +13421,7 @@
               styleOverrides: _,
               bSearching: _,
               bInitiallyExpanded: _,
+              bSingleSelection: _,
             } = _,
             [_, _] = (0, _.useState)(Boolean(0 === _ || _)),
             [_, _] = (0, _.useState)(!1);
@@ -13480,6 +13484,12 @@
                 styleOverrides: _,
                 showMatchCounts: _ && !_(_.facet.facet),
                 ..._,
+                fnOnUpdateFilter: () =>
+                  ((_) => {
+                    if (_ && _.bEnabled)
+                      for (const _ of _) _ != _ && (_.bEnabled = !1);
+                    _?.fnOnUpdateFilter();
+                  })(_),
               }),
             ),
             _ &&
@@ -17736,6 +17746,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { event: _, section: __webpack_require__, language: _ } = _,
@@ -17908,10 +17919,7 @@
                     "salepagebadgeprogressdisplay_BadgeLevel",
                   ),
                 },
-                (0, _._)(
-                  "#SalePage_BadgeProgress_LevelNum",
-                  _.toLocaleString(),
-                ),
+                (0, _._)("#SalePage_BadgeProgress_LevelNum", (0, _._)(_)),
               ),
               _.createElement("img", {
                 src: (0, _._)(_.levels[_].badge_icon_url),
@@ -18016,7 +18024,7 @@
                   "salepagebadgeprogressdisplay_BadgeLevel_Final",
                 ),
               },
-              (0, _._)("#SalePage_BadgeProgress_LevelNum", _.toLocaleString()),
+              (0, _._)("#SalePage_BadgeProgress_LevelNum", (0, _._)(_)),
             ),
           ),
           _.createElement(
@@ -18497,7 +18505,7 @@
                 "scenario" == _
                   ? "#SalePage_Quiz_Scenario"
                   : "#SalePage_Question",
-                (_ + 1).toLocaleString(),
+                (0, _._)(_ + 1),
               ),
             ),
           _.createElement(_, {
@@ -20153,6 +20161,7 @@
               optin_only: _?.jsondata?.optin_only || void 0,
               controller_category: Number(_.eControllerCategory) || void 0,
               bUseCreatorHomeApps: 36 == _?.GetEventType(),
+              bAllowDemos: 36 == _?.GetEventType(),
             };
           let _ = null;
           try {

@@ -2,6 +2,7 @@ import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -15,60 +16,59 @@ import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
@@ -755,12 +755,7 @@ var _ = class extends _ {
       _.addEventListener("blur", this.Reset);
   }
   TranslateKey(_) {
-    switch (_.button) {
-      case 3:
-        return 2;
-      default:
-        return 0;
-    }
+    return _.button === 3 ? 2 : 0;
   }
   OnMouseDown(_) {
     if (_.defaultPrevented) return;
@@ -869,11 +864,7 @@ var _ = class {
     this.InternalDispatchMessage(_.data);
   }
   InternalDispatchMessage(_) {
-    if (_(_))
-      switch (_.message) {
-        case "OnEnterKeyPress":
-          break;
-      }
+    _(_) && _.message;
   }
   SendMessage(_) {
     let _ = {
@@ -2785,10 +2776,7 @@ function _(_) {
     ? null
     : (0, _.jsx)("div", {
         className: _,
-        children: _(
-          "#Menu_IncludesXGames",
-          _.included_game_count.toLocaleString(),
-        ),
+        children: _("#Menu_IncludesXGames", _(_.included_game_count)),
       });
 }
 function _(_) {
@@ -3237,9 +3225,10 @@ function _(_) {
       switch (_) {
         case "apps":
           return _.rgMainItems.length;
-        case "categories":
+        case "categories": {
           let _ = _.rgSubSectionItems?.length || 0;
           return _ && _ ? (_ > 0 ? 1 : 0) : _;
+        }
         case "advancedsearch":
           return 1;
         default:
@@ -3511,10 +3500,7 @@ function _(_) {
     ? null
     : (0, _.jsx)("div", {
         className: _,
-        children: _(
-          "#Menu_SearchBar_CategoryGameCount",
-          _.game_count.toLocaleString(),
-        ),
+        children: _("#Menu_SearchBar_CategoryGameCount", _(_.game_count)),
       });
 }
 var _ = _.memo(function (_) {
@@ -4437,7 +4423,7 @@ function _() {
               className: _,
               children: _(
                 "#Menu_Section_Browse_Discounts_YourWishlist_Discounts",
-                _.toLocaleString(),
+                _(_),
               ),
             }),
         ],
@@ -6846,7 +6832,7 @@ function _() {
           _ !== void 0 &&
             _ > 0 &&
             (0, _.jsx)(_, {
-              children: _.toLocaleString(),
+              children: _(_),
             }),
         ],
       })
@@ -6877,7 +6863,7 @@ function _() {
             children:
               _ > 0 &&
               (0, _.jsx)(_, {
-                children: _.toLocaleString(),
+                children: _(_),
               }),
           }),
         ],

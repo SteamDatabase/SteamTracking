@@ -228,7 +228,6 @@ body.v6 .section_title_ctn p {
 
 .creator_grid_ctn {
 	width: 100%;
-	overflow: hidden;
 	max-width: calc( 1200px + 70px);
 	display: grid;
 	grid-template-columns: auto;
@@ -237,6 +236,7 @@ body.v6 .section_title_ctn p {
     "navigation"
 	"broadcast"
 	"desc"
+	"announcements"
 	"specials"
     "merch"
     "tabs";
@@ -246,22 +246,10 @@ body.v6 .section_title_ctn p {
 	gap: 0 60px;
 }
 
-/* If there are announcements present, add a right-column to the grid */
-.creator_announcement_browse_adjustment .creator_grid_ctn {
-	max-width: calc( 1600px + 70px);
-	grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
-	grid-template-areas:
-    "navigation announcements"
-	"broadcast announcements"
-	"desc announcements"
-	"specials announcements"
-    "merch announcements"
-    "tabs announcements";
-}
-
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {
 	body.responsive_page .creator_grid_ctn {
 		max-width: 100%;
+		overflow: hidden;
 		grid-template-columns: 100%;
 		grid-template-areas:
 			"navigation"
@@ -272,9 +260,11 @@ body.v6 .section_title_ctn p {
 			"tabs";
 	}
 
-	body.responsive_page .creator_grid_ctn .creator_announcement_list {
-		flex-direction: row;
+	body.responsive_page.creatorhome .navigation_bar,
+	body.responsive_page.creatorhome .creator_announcement_container {
+		margin: 0 2%;
 	}
+
 }
 
 @media screen and (max-width: 910px) {
@@ -602,6 +592,7 @@ background: -webkit-linear-gradient( 45deg, rgba(87, 92, 104, 0.3) 5%,rgba(87, 9
 .curator .type_four_row .store_capsule {
 	box-shadow: 0 0 3px rgba( 0, 0, 0, 0.5);
 	overflow: visible;
+	width: calc(25% - 6px);
 }
 .curator .valve_user_only {
 	background-color:#990000;
@@ -830,7 +821,6 @@ background: -webkit-linear-gradient( 45deg, rgba(87, 92, 104, 0.3) 5%,rgba(87, 9
 
 .lists_more_container {
 	display: flex;
-	height: 235px;
 }
 
 .lists_more_container.wrapping {
@@ -1071,7 +1061,7 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 	background: rgba( 255, 255, 255, 0.1);
 }
 .browse_content .recommendation .recommendation_link {
-    flex-grow: 0;
+    flex-grow: 1;
 }
 .browse_content .recommendation .recommendation_midcol .recommendation_link {
 	flex-grow: 1;
@@ -1629,6 +1619,7 @@ background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, #1b2838 95%);
 	z-index: 1;
 	width: 100%;
 	grid-area: tabs;
+	margin-top: 30px;
 }
 
 .curator_header_area_ctn {

@@ -100,8 +100,6 @@ var _ = _((exports, module) => {
           for (let _ of _) _[_] = cloneValue(_[_]);
           return _;
         }
-        case "symbol":
-        case "function":
         default:
           throw new DOMException(
             "Uncloneable value in stream",
@@ -5205,7 +5203,6 @@ var _ = _((exports, module) => {
             case 1:
               _ = this.deflate_fast(_);
               break;
-            case 2:
             default:
               _ = this.deflate_slow(_);
           }

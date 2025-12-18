@@ -6129,6 +6129,30 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.toLocaleString((0, _._)());
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return (0, _._)().languages.map((_) => {
+          return 2 == (_ = _.strISOCode).length ? `${_}-${_._.COUNTRY}` : _;
+          var _;
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -6224,6 +6248,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -68073,7 +68098,11 @@
       function _(_, _, ...__webpack_require__) {
         return 1 === _ || "1" === _
           ? _(_, _, ...__webpack_require__)
-          : _(_ + "_Plural", _.toLocaleString(), ...__webpack_require__);
+          : _(
+              _ + "_Plural",
+              _.toLocaleString(_.GetPreferredLocales()),
+              ...__webpack_require__,
+            );
       }
       function _(_, ..._) {
         let _ = _.LocalizeIfToken(_);
@@ -75411,7 +75440,8 @@
           }),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { rgItemIDs: _ } = _;
         return _.createElement(
@@ -75509,7 +75539,7 @@
               {
                 className: _.BundleItemCount,
               },
-              _("#Menu_IncludesXGames", _.included_game_count.toLocaleString()),
+              _("#Menu_IncludesXGames", (0, _._)(_.included_game_count)),
             );
       }
       function _(_) {
@@ -75955,9 +75985,10 @@
               switch (_) {
                 case "apps":
                   return _.rgMainItems.length;
-                case "categories":
+                case "categories": {
                   const _ = _.rgSubSectionItems?.length || 0;
                   return _ && _ ? (_ > 0 ? 1 : 0) : _;
+                }
                 case "advancedsearch":
                   return 1;
                 default:
@@ -76342,10 +76373,7 @@
               {
                 className: _.GameCount,
               },
-              _(
-                "#Menu_SearchBar_CategoryGameCount",
-                _.game_count.toLocaleString(),
-              ),
+              _("#Menu_SearchBar_CategoryGameCount", (0, _._)(_.game_count)),
             )
           : null;
       }
@@ -77817,7 +77845,7 @@
                   },
                   _(
                     "#Menu_Section_Browse_Discounts_YourWishlist_Discounts",
-                    _.toLocaleString(),
+                    (0, _._)(_),
                   ),
                 ),
             ),
@@ -80323,9 +80351,7 @@
                 role: "presentation",
               }),
               _.Localize("#Menu_Wishlist"),
-              void 0 !== _ &&
-                _ > 0 &&
-                _.createElement(_, null, _.toLocaleString()),
+              void 0 !== _ && _ > 0 && _.createElement(_, null, (0, _._)(_)),
             )
           : null;
       }
@@ -80362,7 +80388,7 @@
                 {
                   className: _.safarionly,
                 },
-                _ > 0 && _.createElement(_, null, _.toLocaleString()),
+                _ > 0 && _.createElement(_, null, (0, _._)(_)),
               ),
             )
           : null;

@@ -1963,9 +1963,16 @@ GHomepage = {
 				dlc: false,
 				localized: true,
 				not_wishlisted: false,
-				displayed_elsewhere: false
+				displayed_elsewhere: false,
+				has_discount: GHomepage.bIsSeasonalSale
 			}
 		);
+
+		if ( rgCapsules.length < 4 )
+		{
+			$DeepDive.hide();
+			return;
+		}
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $DeepDive,
 			function( oItem, strFeature, rgOptions, nDepth )

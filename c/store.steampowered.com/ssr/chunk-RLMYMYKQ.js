@@ -118,7 +118,6 @@ function _(_) {
       return "embedded";
     case 7:
       return "desktop";
-    case -1:
     default:
       return "unknown";
   }

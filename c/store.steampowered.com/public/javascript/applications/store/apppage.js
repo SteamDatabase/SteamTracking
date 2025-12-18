@@ -2471,6 +2471,7 @@
       var _,
         _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.LOADING = 0)] = "LOADING"),
@@ -2849,7 +2850,7 @@
                             },
                             (0, _._)(
                               "#GrantAward_CantAfford",
-                              _.negate().add(_).toNumber().toLocaleString(),
+                              (0, _._)(_.negate().add(_).toNumber()),
                             ),
                           ),
                           _.createElement(
@@ -2912,7 +2913,7 @@
                         },
                         (0, _._)(
                           "#GrantAward_Confirm",
-                          _.createElement(_, null, _.toLocaleString()),
+                          _.createElement(_, null, (0, _._)(_)),
                           _.createElement(
                             "span",
                             {
@@ -2929,7 +2930,7 @@
                         },
                         (0, _._)(
                           "#GrantAward_Confirm_Details",
-                          _.createElement(_, null, _.toLocaleString()),
+                          _.createElement(_, null, (0, _._)(_)),
                           _.createElement(
                             "span",
                             {
@@ -3201,7 +3202,7 @@
           ),
         _ = (0, _._)(({ store: _, children: _ }) => {
           const _ = _.GetUserPointBalance(),
-            _ = _ && __webpack_require__.toNumber().toLocaleString();
+            _ = _ && (0, _._)(__webpack_require__.toNumber());
           return _.createElement(
             "div",
             {
@@ -3340,7 +3341,7 @@
                 {
                   className: _.Points,
                 },
-                _.toLocaleString(),
+                (0, _._)(_),
               ),
             ),
             __webpack_require__ &&

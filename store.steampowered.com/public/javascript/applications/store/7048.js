@@ -11430,12 +11430,12 @@
     26101: (e, t, a) => {
       "use strict";
       a.d(t, {
-        EP: () => re,
-        Jz: () => ae,
-        Q3: () => se,
-        Qf: () => ce,
-        SZ: () => me,
-        gi: () => ie,
+        EP: () => ne,
+        Jz: () => re,
+        Q3: () => oe,
+        Qf: () => ue,
+        SZ: () => de,
+        gi: () => se,
       });
       var r = a(14947),
         n = a(75844),
@@ -11481,18 +11481,19 @@
         z = a(10224),
         q = a(38535),
         Z = a(49411),
-        j = a(76217);
-      const K = "DEBUG_UseNewGameHover";
-      function Y() {
-        return window.sessionStorage?.getItem(K) || "default";
+        j = a(76217),
+        K = a(3049);
+      const Y = "DEBUG_UseNewGameHover";
+      function J() {
+        return window.sessionStorage?.getItem(Y) || "default";
       }
       window.SetHoverPresentation = function (e) {
-        window.sessionStorage.setItem(K, e);
+        window.sessionStorage.setItem(Y, e);
       };
-      const J = 5500,
-        Q = 2e3,
-        X = 10;
-      function $(e, t, a, n) {
+      const Q = 5500,
+        X = 2e3,
+        $ = 10;
+      function ee(e, t, a, n) {
         const i = [];
         if (1 == e.length) {
           const t = _.A.Get().GetApp(e[0]);
@@ -11501,10 +11502,10 @@
               rctImage: s.createElement(y.m, {
                 appInfo: { id: t.GetID(), type: "game" },
               }),
-              nDurationMs: J,
+              nDurationMs: Q,
             });
           t.GetScreenshots(n)
-            .slice(0, X)
+            .slice(0, $)
             .forEach((e, t) => {
               i.push({
                 rctImage: s.createElement("img", {
@@ -11514,7 +11515,7 @@
                   src: e,
                   alt: "screenshot " + (t + 1),
                 }),
-                nDurationMs: Q,
+                nDurationMs: X,
               });
             });
         }
@@ -11531,7 +11532,7 @@
                   src: a,
                   alt: e.GetName(),
                 }),
-                nDurationMs: Q,
+                nDurationMs: X,
               });
           }
         i.length > 0
@@ -11542,7 +11543,7 @@
               (0, r.HO)(e),
             );
       }
-      function ee(e) {
+      function te(e) {
         const { info: t } = e,
           a = (0, s.useRef)({
             include_assets: !0,
@@ -11583,7 +11584,7 @@
                           src: l.A,
                           alt: "default",
                         }),
-                        nDurationMs: Q,
+                        nDurationMs: X,
                       },
                     ])
                   : o?.length && h()
@@ -11600,7 +11601,7 @@
                         .QueueMultipleAppRequests(r.GetIncludedAppIDs(), {
                           include_assets: !0,
                         })
-                        .then(() => $(r.GetIncludedAppIDs(), m, h, p)))
+                        .then(() => ee(r.GetIncludedAppIDs(), m, h, p)))
                     : 1 == r.GetAppType() &&
                         r.GetParentAppID() &&
                         !r.GetAllTrailers().BHasTrailers(p)
@@ -11615,10 +11616,10 @@
                                   rctImage: s.createElement(y.m, {
                                     appInfo: { id: o.GetID(), type: "game" },
                                   }),
-                                  nDurationMs: J,
+                                  nDurationMs: Q,
                                 });
                               const l = _.A.Get().GetApp(e).GetScreenshots(n);
-                              l.slice(0, X).forEach((e, t) => {
+                              l.slice(0, $).forEach((e, t) => {
                                 i.push({
                                   rctImage: s.createElement("img", {
                                     key: e,
@@ -11627,13 +11628,13 @@
                                     src: e,
                                     alt: "screenshot " + (t + 1),
                                   }),
-                                  nDurationMs: Q,
+                                  nDurationMs: X,
                                 });
                               }),
-                                X - l.length > 0 &&
+                                $ - l.length > 0 &&
                                   o
                                     .GetScreenshots(n)
-                                    .slice(0, X)
+                                    .slice(0, $)
                                     .forEach((e, t) => {
                                       i.push({
                                         rctImage: s.createElement("img", {
@@ -11643,7 +11644,7 @@
                                           src: e,
                                           alt: "screenshot " + (t + 1),
                                         }),
-                                        nDurationMs: Q,
+                                        nDurationMs: X,
                                       });
                                     }),
                                 i.length > 0
@@ -11657,7 +11658,7 @@
                                     );
                             })(r.GetID(), r.GetParentAppID(), m, h, p),
                           )
-                      : $([r.GetID()], m, h, p)),
+                      : ee([r.GetID()], m, h, p)),
               () => u.Cancel()
             ),
             [o, r, n, u, h, i, p],
@@ -11681,7 +11682,7 @@
           )
         );
       }
-      function te(e) {
+      function ae(e) {
         const { rgTagIDs: t } = e;
         return s.createElement(
           "div",
@@ -11699,7 +11700,7 @@
           ),
         );
       }
-      function ae(e) {
+      function re(e) {
         const { appInfo: t, bTruncateTotalReviews: a, bShowTooltip: r } = e,
           [n] = (0, S.G6)(t?.id, (0, g.SW)(t?.type), { include_reviews: !0 }),
           [i] = (0, S.G6)(n?.GetParentAppID(), n?.GetStoreItemType(), {
@@ -11746,21 +11747,21 @@
                 className: P().ReviewScoreCount,
                 "aria-label": (0, R.we)(
                   "#GameHover_UserReviewCount",
-                  o.review_count.toLocaleString(),
+                  o.review_count.toLocaleString((0, K.J)()),
                 ),
               },
               "(",
               a
-                ? "(" + o.review_count.toLocaleString() + ")"
+                ? "(" + o.review_count.toLocaleString((0, K.J)()) + ")"
                 : m
                   ? (0, R.we)(
                       "#GameHover_UserReviewCount_Lang",
-                      o.review_count.toLocaleString(),
+                      o.review_count.toLocaleString((0, K.J)()),
                       d,
                     )
                   : (0, R.we)(
                       "#GameHover_UserReviewCount",
-                      o.review_count.toLocaleString(),
+                      o.review_count.toLocaleString((0, K.J)()),
                     ),
               ")",
             ),
@@ -11811,7 +11812,7 @@
             : p,
         );
       }
-      const re = (0, n.PA)(function (e) {
+      const ne = (0, n.PA)(function (e) {
           const { appID: t, snr: a, classOverride: r, styleOverride: n } = e,
             [i] = (0, S.t7)(t, {}),
             [o, l] = (0, s.useState)(() =>
@@ -11860,7 +11861,7 @@
             ),
           );
         }),
-        ne = (0, n.PA)(function (e) {
+        ie = (0, n.PA)(function (e) {
           const { appID: t, snr: a, classOverride: r } = e,
             [n] = (0, S.t7)(t, {}),
             [i, o] = (0, s.useState)(!1),
@@ -11893,7 +11894,7 @@
             ),
           );
         });
-      function ie(e) {
+      function se(e) {
         const { appID: t, classOverride: a, styleOverride: r } = e,
           [n, o] = (0, s.useState)(!1),
           l = (0, U.m)("GameHoverIgnoreButton"),
@@ -11927,7 +11928,7 @@
           ),
         );
       }
-      function se(e) {
+      function oe(e) {
         const {
             nCreatorAccountID: t,
             classOverride: a,
@@ -11952,7 +11953,7 @@
           s.createElement(w.of, { clanAccountID: t, followType: n }),
         );
       }
-      function oe(e) {
+      function le(e) {
         const {
             info: t,
             displayInfo: a,
@@ -12042,8 +12043,8 @@
                   { className: P().ShortDescription },
                   B?.GetShortDescription(),
                 ),
-              Boolean(B) && s.createElement(te, { rgTagIDs: B.GetTagIDs() }),
-              Boolean(!d && B) && s.createElement(ae, { appInfo: t }),
+              Boolean(B) && s.createElement(ae, { rgTagIDs: B.GetTagIDs() }),
+              Boolean(!d && B) && s.createElement(re, { appInfo: t }),
               Boolean(!d && I) &&
                 s.createElement(
                   "div",
@@ -12064,12 +12065,12 @@
               Boolean(i) && i,
               Boolean(c && T) &&
                 s.createElement(D.E, { appid: t.id, bIsMuted: !1 }),
-              u && s.createElement(se, { nCreatorAccountID: u }),
+              u && s.createElement(oe, { nCreatorAccountID: u }),
             ),
           ),
         );
       }
-      const le = (0, n.PA)(function (e) {
+      const me = (0, n.PA)(function (e) {
         s.useEffect(() => {
           h.Fm.Get().HintLoad();
         }, []);
@@ -12099,16 +12100,16 @@
               "a",
               { href: m ? null : r, className: P().TrailerAnchorStoreLink },
               Boolean(o && !i && !m) &&
-                s.createElement(re, { appID: a.id, snr: e.strSNR }),
-              Boolean(l && !i && !m) &&
                 s.createElement(ne, { appID: a.id, snr: e.strSNR }),
-              s.createElement(ee, { info: a }),
+              Boolean(l && !i && !m) &&
+                s.createElement(ie, { appID: a.id, snr: e.strSNR }),
+              s.createElement(te, { info: a }),
             ),
-            s.createElement(oe, { ...e, bPreventNavigation: Boolean(m) }),
+            s.createElement(le, { ...e, bPreventNavigation: Boolean(m) }),
           )
         );
       });
-      function me(e) {
+      function de(e) {
         return "appid" in e
           ? { id: e.appid }
           : "packageid" in e
@@ -12120,8 +12121,8 @@
                   `unhandled item id type: ${JSON.stringify(e)}`,
                 );
       }
-      const de = 150;
-      function ce(e) {
+      const ce = 150;
+      function ue(e) {
         const {
             item: t,
             name: a,
@@ -12152,7 +12153,7 @@
         1 == b?.GetStoreItemType() &&
           1 == b?.GetIncludedAppIDs().length &&
           (I = { id: b.GetIncludedAppIDs()[0], type: "game" });
-        const T = "hiding" == Y(),
+        const T = "hiding" == J(),
           k =
             r || !b
               ? null
@@ -12175,15 +12176,15 @@
             bShowIgnoreButton: C,
             bShowDescription: w,
           },
-          G = s.createElement(le, { ...A }),
+          G = s.createElement(me, { ...A }),
           R = k ? s.createElement("a", { href: k }, u) : u;
         return s.createElement(
-          pe,
+          he,
           { hoverContent: G, nWidthMultiplier: h, ...y },
           R,
         );
       }
-      function ue(e) {
+      function pe(e) {
         const { hoverProps: t, children: a } = e,
           r = s.useCallback((e) => e?.focus(), []);
         return s.createElement(
@@ -12210,7 +12211,7 @@
           ),
         );
       }
-      function pe(e) {
+      function he(e) {
         const {
             hoverContent: t,
             hoverProps: a,
@@ -12241,7 +12242,7 @@
           },
           d &&
             s.createElement(
-              he,
+              _e,
               {
                 visible: c,
                 target: p,
@@ -12254,10 +12255,10 @@
           s.createElement(C.tH, null, i),
         );
       }
-      function he(e) {
+      function _e(e) {
         const {
             hoverProps: t,
-            nDelayShowMs: a = de,
+            nDelayShowMs: a = ce,
             nWidthMultiplier: r = 1.15,
             target: n,
             visible: i,
@@ -12299,16 +12300,16 @@
               zIndex: 98,
               width: n.clientWidth * r,
               fontSize: u,
-              minHeight: "hiding" == Y() ? void 0 : 300,
+              minHeight: "hiding" == J() ? void 0 : 300,
               height:
-                "hiding" == Y() ? 1.15 * n.clientWidth * (125 / 184) : void 0,
+                "hiding" == J() ? 1.15 * n.clientWidth * (125 / 184) : void 0,
               ...t?.style,
             },
             target: n,
           };
         return o.createPortal(
           s.createElement(
-            ue,
+            pe,
             { hoverProps: p },
             s.createElement(C.tH, null, l),
           ),

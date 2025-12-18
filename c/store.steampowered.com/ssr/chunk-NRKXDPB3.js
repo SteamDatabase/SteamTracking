@@ -57,9 +57,6 @@ function _(_) {
     case 7:
     case 8:
       return _.Localize("#Time_QuarterOfYear_Q3", _.getUTCFullYear());
-    case 9:
-    case 10:
-    case 11:
     default:
       return _.Localize("#Time_QuarterOfYear_Q4", _.getUTCFullYear());
   }

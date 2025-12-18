@@ -464,6 +464,7 @@
 !.CPublishedFile_Subscribe_Request
 !.CRemotePlayTogether_Notification
 !.CSteamOSManager_GetState_Request
+!.CSteamOS_SetUserPassword_Request
 !.CStore_GetDiscoveryQueue_Request
 !.CStore_GetGamesFollowed_Response"
 !.CSystemManager_Hibernate_Request
@@ -809,7 +810,7 @@
 "'\n%CChatRoom_GetMyChatRoomGroups_Request"
 "'\n%CChatRoom_LeaveChatRoomGroup_Response"\\n CChatRoom_CreateChatRoom_Request
 "'\n%CPlayer_SetProfileBackground_Response"M\n(CPlayer_GetMiniProfileBackground_Request
-"'\n%CSteamOSManager_FactoryReset_Response"7\n5CSteamOSManager_RefreshScreenReaderAutoLocale_Request"8\n6CSteamOSManager_RefreshScreenReaderAutoLocale_Response"Y\n
+"'\n%CSteamOSManager_FactoryReset_Response"7\n5CSteamOSManager_RefreshScreenReaderAutoLocale_Request"8\n6CSteamOSManager_RefreshScreenReaderAutoLocale_Response"R\n CSteamOS_SetUserPassword_Request
 "'\n%CSteamOSSLS_SetPluginEnabled_Response2
 "'\n\rCMsgShowPopup
 "(\n&CBroadcast_GetBuildClipStatus_Response"
@@ -910,6 +911,7 @@
 ".CRemoteClient_Online_Notification
 ".CShader_GetBucketManifest_Request
 ".CSteamOSManager_GetState_Response
+".CSteamOS_SetUserPassword_Response
 ".CSteamTV_AddChatModerator_Request
 ".CStore_GetDiscoveryQueue_Response"
 ".CStore_GetMostPopularTags_Request
@@ -1435,6 +1437,7 @@
 #\n\flobby_status
 #\n\nchat_rooms
 #\n\ravatar_frames
+#\n\tpair_type
 #\n\vsearch_tags
 #\t#\v#'#)#/#3#5#E#Q#S#Y#c#k#
 #\v+(bF&drJ:x#
@@ -1767,6 +1770,7 @@ $.CRemoteClient_TaskList_Notification
 $.CRemotePlay_SessionStarted_Response"
 $.CShader_ReportExternalBuild_Request
 $.CSleepManager_RequestSleep_Response
+$.CSteamOS_GetUserHasPassword_Request
 $.CSteamTV_GetChatModerators_Response"
 $.CStorageDeviceManager_Adopt_Request
 $.CStorageDeviceManager_Eject_Request
@@ -2002,6 +2006,7 @@ $steammessages_parental_objects.proto"
 %.CSteamEngine_GetGameIDForPID_Request
 %.CSteamOSManager_FactoryReset_Request
 %.CSteamOSSLS_SetPluginEnabled_Request
+%.CSteamOS_GetUserHasPassword_Response
 %.CSteamTV_GetFollowedChannels_Request
 %.CSteamTV_GetHomePageContents_Request
 %.CStorageDeviceManager_Adopt_Response
@@ -2186,6 +2191,7 @@ $steammessages_parental_objects.proto"
 %\n!k_EStreamDeviceFormFactorComputer
 %\n!k_EStreamTransportWebRTC_OBSOLETE
 %\n!k_ESystemServiceState_Unavailable
+%\n!k_ETritonPairType_PairToPuckWired
 %\n!k_EUserReviewScore_MostlyNegative
 %\n!k_EUserReviewScore_MostlyPositive
 %\n!k_EValveIndexComponentLeftKnuckle
@@ -2803,6 +2809,7 @@ $steammessages_parental_objects.proto"
 &.CSiteLicense_LCSAssociateUser_Request
 &.CSiteLicense_LCSAuthenticate_Response"
 &.CSteamEngine_GetGameIDForPID_Response
+&.CSteamInputService_GetDongles_Request
 &.CSteamOSManager_FactoryReset_Response
 &.CSteamOSSLS_SetPluginEnabled_Response
 &.CSteamOSSLS_StateChanged_Notification
@@ -2968,6 +2975,7 @@ $steammessages_parental_objects.proto"
 &\n"k_EStreamControlStopMicrophoneData
 &\n"k_EStreamControlVirtualHereRequest
 &\n"k_EStreamDeviceFormFactorVRHeadset
+&\n"k_ETritonPairType_PairToPuckDocked
 &\n"k_EUserReviewScorePreference_Unset
 &\n"k_EValveIndexComponentRightKnuckle
 &\n"k_EWatchResponseSystemNotSupported
@@ -3057,6 +3065,7 @@ $steammessages_parental_objects.proto"
 '.CRemoteClient_MarkTaskComplete_Request
 '.CRemoteClient_ReplyPacket_Notification
 '.CSiteLicense_LCSAssociateUser_Response"
+'.CSteamInputService_GetDongles_Response
 '.CSteamTV_GetBroadcastChannelID_Request
 '.CSteamTV_GetSubscribedChannels_Request
 '.CStorageDeviceManager_GetState_Request
@@ -3588,7 +3597,7 @@ $steammessages_parental_objects.proto"
 (\r"1\n/CCommunity_PartnerEventsShowLessForApp_Response"8\n6CCommunity_ClearUserPartnerEventsAppPriorities_Request"9\n7CCommunity_ClearUserPartnerEventsAppPriorities_Response"6\n4CCommunity_GetUserPartnerEventsAppPriorities_Request"O\n#CCommunity_PartnerEventsAppPriority
 (\r"1\n/CCommunity_PartnerEventsShowMoreForApp_Response"?\n.CCommunity_PartnerEventsShowLessForApp_Request
 (\r"1\n/CSteamInputService_ControllerStateFlow_Response"\\n2CSteamInputService_GyroSoftwareCalibration_Request
-(\r"1\n/CSteamInputService_PairDongleTritonUSB_Response"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
+(\r"1\n/CSteamInputService_PairDongleTritonUSB_Response"6\n4CSteamInputService_TritonDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
 (\r"2\n!CTimedTrial_ResetPlaytime_Request
 (\r"2\n0CAccountHardware_SetPersonalizationFile_Response"[\n/CAccountHardware_GetPersonalizationFile_Request
 (\r"2\n0CPlayer_UpdateSteamAnnouncementLastRead_Response"$\n"CPlayer_GetPrivacySettings_Request"
@@ -3596,10 +3605,12 @@ $steammessages_parental_objects.proto"
 (\r"2\n0CStore_DeleteReservationPositionMessage_Response"2\n0CStore_GetAllReservationPositionMessages_Request"c\n1CStore_GetAllReservationPositionMessages_Response
 (\r"3\n1CFamilyGroups_SetFamilyCooldownOverrides_Response"
 (\r"3\n1CMarketingMessages_PartnerPublishMessage_Response"U\n3CMarketingMessages_GetPartnerMessagePreview_Request
+(\r"3\n1CSteamInputService_ShouldTritonPairInOobe_Request"A\n?CSteamInputService_WaitInitialControllerStateEnumerated_Request"V\n@CSteamInputService_WaitInitialControllerStateEnumerated_Response
 (\r"3\n1CVideo_CommitGameRecordingSegmentsUpload_Response"R\n:CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request
 (\r"4\n"CMsgClientEnableOrDisableDownloads
 (\r"4\n"CMsgClientInstallClientAppResponse
 (\r"4\n"CPlayer_DeletePostedStatus_Request
+(\r"4\n2CSteamInputService_PairDongleTritonDocked_Response"'\n%CSteamInputService_GetDongles_Request"s\n&CSteamInputService_GetDongles_Response
 (\r"5\n3CAccountHardware_DeRegisterSteamController_Response"t\n/CAccountHardware_SetPersonalizationFile_Request
 (\r"6\n$CMsgClientUninstallClientAppResponse
 (\r"6\n\rCInputTextMsg
@@ -3648,6 +3659,7 @@ $steammessages_parental_objects.proto"
 (\r"I\n7CSteamEngine_SearchAppDataCacheByStoreKeywords_Response
 (\r"J\n CChatRoom_GetInviteList_Response
 (\r"K\n"CTimedTrial_RecordPlaytime_Request
+(\r"K\n.CSteamInputService_TritonUndocked_Notification
 (\r"K\n0CAccountHardware_GetPersonalizationFile_Response
 (\r"L\n CPlayer_SetFavoriteBadge_Request
 (\r"L\n,CBroadcast_WebRTCNeedTURNServer_Notification
@@ -3667,6 +3679,7 @@ $steammessages_parental_objects.proto"
 (\r"Q\n"CStoreBrowse_GetPriceStops_Request
 (\r"Q\n)CFovasVideo_ClientGetOPFSettings_Response
 (\r"Q\n.CCommunity_GetClanEventCrowdInMetadata_Request
+(\r"Q\n4CSteamInputService_UnpairedTritonDocked_Notification
 (\r"R\n'CFamilyGroups_ForceAcceptInvite_Request
 (\r"R\n\fCAudioFormat
 (\r"S\n&CStoreBrowse_GetHardwareItems_Response
@@ -3720,6 +3733,7 @@ $steammessages_parental_objects.proto"
 (\r"j\n:CMarketingMessages_GetMarketingMessageViewerStats_Response
 (\r"k\n$CMsgClientWorkshopItemChangesRequest
 (\r"k\n+CStore_QueueWishlistDemoEmailToFire_Request
+(\r"k\n1CSteamInputService_PairDongleTritonDocked_Request
 (\r"k\n<CMarketingMessages_GetPartnerReadyToPublishMessages_Response
 (\r"l\n-CBroadcast_StopWatchingBroadcast_Notification
 (\r"m\n'CMsgClientGetDepotDecryptionKeyResponse
@@ -3745,6 +3759,7 @@ $steammessages_parental_objects.proto"
 (\t""\n CParental_ValidateToken_Response"g\n"CParental_ValidatePassword_Request
 (\t""\n CPlayer_SetProfileTheme_Response"Y\n%CPlayer_SetProfilePreferences_Request
 (\t"#\n!CChatRoom_RenameChatRoom_Response"g\n!CChatRoom_ReorderChatRoom_Request
+(\t"#\n!CSteamOS_SetUserPassword_Response"%\n#CSteamOS_GetUserHasPassword_Request"<\n$CSteamOS_GetUserHasPassword_Response
 (\t"#\n!SiteServerUI_SetLanguage_Response"#\n!SiteServerUI_ClientStatus_Request"
 (\t"#\n\rCDebugDumpMsg
 (\t"$\n"CBroadcast_SetClipDetails_Response">\n!CBroadcast_GetClipDetails_Request
@@ -4709,12 +4724,16 @@ $steammessages_parental_objects.proto"
 *18CWebUIMsgLambdaJobIZN12CSteamEngine4InitE12EAccountTypejE53CWebUISteamEngineSearchAppDataCacheByStoreKeywordsJob54CSteamEngine_SearchAppDataCacheByStoreKeywords_Request55CSteamEngine_SearchAppDataCacheByStoreKeywords_ResponseE
 *18CWebUIMsgLambdaJobIZN14CSystemManagerC4EvE31CWebUISystemManagerHibernateJob32CSystemManager_Hibernate_Request33CSystemManager_Hibernate_ResponseE
 *18CWebUIMsgLambdaJobIZN14CSystemManagerC4EvE31CWebUISystemManagerWriteFileJob32CSystemManager_WriteFile_Request33CSystemManager_WriteFile_ResponseE
+*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE36CWebUISteamInputManagerGetDonglesJob37CSteamInputService_GetDongles_Request38CSteamInputService_GetDongles_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE45CWebUISteamInputManagerPairDongleTritonUSBJob46CSteamInputService_PairDongleTritonUSB_Request47CSteamInputService_PairDongleTritonUSB_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerEndControllerStateFlowJob46CSteamInputService_ControllerStateFlow_Request47CSteamInputService_ControllerStateFlow_ResponseE
+*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerPairDongleTritonDockedJob49CSteamInputService_PairDongleTritonDocked_Request50CSteamInputService_PairDongleTritonDocked_ResponseE
+*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerShouldTritonPairInOobeJob49CSteamInputService_ShouldTritonPairInOobe_Request50CSteamInputService_ShouldTritonPairInOobe_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE50CWebUISteamInputManagerStartControllerStateFlowJob46CSteamInputService_ControllerStateFlow_Request47CSteamInputService_ControllerStateFlow_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE54CWebUISteamInputManagerStartGyroSoftwareCalibrationJob50CSteamInputService_GyroSoftwareCalibration_Request51CSteamInputService_GyroSoftwareCalibration_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE55CWebUISteamInputManagerCancelGyroSoftwareCalibrationJob50CSteamInputService_GyroSoftwareCalibration_Request51CSteamInputService_GyroSoftwareCalibration_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE59CWebUISteamInputManagerGetControllerAccessibilityStringsJob57CSteamInputService_ControllerAccessibilityStrings_Request58CSteamInputService_ControllerAccessibilityStrings_ResponseE
+*18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE62CWebUISteamInputManagerWaitInitialControllerStateEnumeratedJob63CSteamInputService_WaitInitialControllerStateEnumerated_Request64CSteamInputService_WaitInitialControllerStateEnumerated_ResponseE
 *20SteamClientJobLambdaIZN12CUserFriends25GetLocalizedDisplayStringEjP10ClFriend_tEUlvE_E
 *20SteamClientJobLambdaIZN19CRemoteClientDongle28EnsureFirmwareDepotInstalledEvEUlvE_E
 *20SteamClientJobLambdaIZN20CRemoteClientManager20StopStreamingSessionEjEUlvE_E
@@ -4860,18 +4879,26 @@ $steammessages_parental_objects.proto"
 *ZN16CSteamController20SetGyroAutoCalibrateEjbEUlP22IControllerAbstractionE_
 *ZN16CSteamController23RegisterForIMUJerkEventEjEUlP22IControllerAbstractionE_
 *ZN16CSteamController25UnregisterForIMUJerkEventEjEUlP22IControllerAbstractionE_
+*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE36CWebUISteamInputManagerGetDonglesJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE45CWebUISteamInputManagerPairDongleTritonUSBJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerEndControllerStateFlowJob
+*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerPairDongleTritonDockedJob
+*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerShouldTritonPairInOobeJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE50CWebUISteamInputManagerStartControllerStateFlowJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE54CWebUISteamInputManagerStartGyroSoftwareCalibrationJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE55CWebUISteamInputManagerCancelGyroSoftwareCalibrationJob
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE59CWebUISteamInputManagerGetControllerAccessibilityStringsJob
+*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE62CWebUISteamInputManagerWaitInitialControllerStateEnumeratedJob
+*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK37CSteamInputService_GetDongles_RequestR38CSteamInputService_GetDongles_ResponseE6_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK46CSteamInputService_ControllerStateFlow_RequestR47CSteamInputService_ControllerStateFlow_ResponseE0_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK46CSteamInputService_ControllerStateFlow_RequestR47CSteamInputService_ControllerStateFlow_ResponseE_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK46CSteamInputService_PairDongleTritonUSB_RequestR47CSteamInputService_PairDongleTritonUSB_ResponseE4_
+*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK49CSteamInputService_PairDongleTritonDocked_RequestR50CSteamInputService_PairDongleTritonDocked_ResponseE5_
+*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK49CSteamInputService_ShouldTritonPairInOobe_RequestR50CSteamInputService_ShouldTritonPairInOobe_ResponseE7_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK50CSteamInputService_GyroSoftwareCalibration_RequestR51CSteamInputService_GyroSoftwareCalibration_ResponseE2_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK50CSteamInputService_GyroSoftwareCalibration_RequestR51CSteamInputService_GyroSoftwareCalibration_ResponseE3_
 *ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK57CSteamInputService_ControllerAccessibilityStrings_RequestR58CSteamInputService_ControllerAccessibilityStrings_ResponseE1_
+*ZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvEUlRK63CSteamInputService_WaitInitialControllerStateEnumerated_RequestR64CSteamInputService_WaitInitialControllerStateEnumerated_ResponseE8_
 *ZN18CControllerMapping20CreateDigitalBindingEPK15BindingAction_tPKcP17IconBindingData_tEUlR22ControllerActionData_tE_
 *ZN18CControllerMapping20CreateDigitalBindingEPKc8PresetIdRK10CUtlVectorI6ASetId10CUtlMemoryIS4_EEEUlR22ControllerActionData_tE0_
 *ZN18CControllerMapping20CreateDigitalBindingEPKc8PresetIdRK10CUtlVectorI6ASetId10CUtlMemoryIS4_EEEUlR22ControllerActionData_tE1_
@@ -6612,6 +6639,7 @@ $steammessages_parental_objects.proto"
 .ETimelineEntryType
 .ETokenRenewalType"b\n3CAuthentication_AccessToken_GenerateForApp_Response
 .ETrailerCategory
+.ETritonPairType
 .ETwoFactorStatusFieldFlag"
 .ETwoFactorUsageType
 .EUpdaterState
@@ -6864,6 +6892,7 @@ $steammessages_parental_objects.proto"
 /.CPublishedFile_FileDeleted_Client_Notification
 /.CSteamInputService_ControllerStateFlow_Request
 /.CSteamInputService_PairDongleTritonUSB_Request
+/.CSteamInputService_TritonUndocked_Notification
 /.CStore_MigratePartnerLinkTracking_Notification
 /.CTransportValidationClient_AddNumbers_Response
 /.CTransportValidation_CountOrderedBytes_Request
@@ -6942,6 +6971,7 @@ $steammessages_parental_objects.proto"
 /\n+k_EStoreDiscoveryQueueTypeRecommendedOnSale
 /\n+k_EStreamControlTriggerHapticPulse_OBSOLETE
 /\n+k_EStreamControllerConfigMsg_ConfigResponse
+/\n+k_ETritonPairType_RePairToSteamMachineWired
 /\n+k_EnhancedMarketAppearanceStatus_InProgress
 /\n+k_PublishedFileQueryType_RankedByTextSearch
 /\n\fcontent_type
@@ -7722,11 +7752,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
-0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7793,6 +7823,7 @@ $steammessages_parental_objects.proto"
 0\n,k_ESharedLibrary_LicenseExcluded_FlagPending
 0\n,k_ESharedLibrary_PackageExcluded_FreeWeekend
 0\n,k_ESteamDatagramMsg_GameserverSessionRequest
+0\n,k_ETritonPairType_RePairToSteamMachineDocked
 0\n\fNameInstance
 0\n\fdescriptions
 0\n\fheader_state
@@ -7885,8 +7916,11 @@ $steammessages_parental_objects.proto"
 10CGameStats
 10CIPCClient
 10CIPCServer
+10CJobFutureI50CSteamInputService_ShouldTritonPairInOobe_ResponseE
 10CJobFutureI79CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationshipE
-10CJobFutureI7EResultE
+10CJobFutureIN24CControllerValueWorkItemI12TritonBond_tE16WorkItemResult_tEE
+10CJobFutureIN24CControllerValueWorkItemIbE16WorkItemResult_tEE
+10CJobFutureIN24CControllerValueWorkItemIjE16WorkItemResult_tEE
 10CJobFutureIbE
 10CJobFutureIyE
 10CKeySource
@@ -9102,8 +9136,11 @@ $steammessages_parental_objects.proto"
 11CHTTPServer
 11CHotbarMode
 11CInGameChat
+11CJobPromiseI50CSteamInputService_ShouldTritonPairInOobe_ResponseE
 11CJobPromiseI79CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationshipE
-11CJobPromiseI7EResultE
+11CJobPromiseIN24CControllerValueWorkItemI12TritonBond_tE16WorkItemResult_tEE
+11CJobPromiseIN24CControllerValueWorkItemIbE16WorkItemResult_tEE
+11CJobPromiseIN24CControllerValueWorkItemIjE16WorkItemResult_tEE
 11CJobPromiseIbE
 11CJobPromiseIyE
 11CKeyBinding
@@ -9964,6 +10001,7 @@ $steammessages_parental_objects.proto"
 14CHideCursorMsg
 14CInputKeyUpMsg
 14CJobFutureBase
+14CJobTritonBase
 14CMachineIDInfo
 14CMessageObject
 14CMetricsString
@@ -10619,6 +10657,7 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI5CUser33RemoteStorageAppSyncStatusCheck_tE
 17CInternalCallbackI5CUser33RemoteStorageConflictResolution_tE
 17CInternalCallbackI9CBaseUser23SteamServersConnected_tE
+17CJobTritonHelpers
 17CJoystickMoveMode
 17CKeyEscrow_Ticket
 17CLoadAppStatesJob
@@ -10744,8 +10783,11 @@ $steammessages_parental_objects.proto"
 18CDepotCDNInterface
 18CDepotFileVerifier
 18CFrameStatsListMsg
+18CFutureSharedStateI50CSteamInputService_ShouldTritonPairInOobe_ResponseE
 18CFutureSharedStateI79CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationshipE
-18CFutureSharedStateI7EResultE
+18CFutureSharedStateIN24CControllerValueWorkItemI12TritonBond_tE16WorkItemResult_tEE
+18CFutureSharedStateIN24CControllerValueWorkItemIbE16WorkItemResult_tEE
+18CFutureSharedStateIN24CControllerValueWorkItemIjE16WorkItemResult_tEE
 18CFutureSharedStateIbE
 18CFutureSharedStateIyE
 18CGSClientJobGSDeny
@@ -11180,6 +11222,8 @@ $steammessages_parental_objects.proto"
 2.CPublishedFile_GetAppRelationshipsBatched_Request
 2.CRemoteClient_UnregisterStatusUpdate_Notification
 2.CSharedJSContext_GetDesiredSteamUIWindows_Request
+2.CSteamInputService_PairDongleTritonDocked_Request
+2.CSteamInputService_ShouldTritonPairInOobe_Request
 2.CSteamOSManager_OptOutOfSideloadedClient_Response
 2.CSteamTV_GetBroadcastChannelBroadcasters_Response"
 2.CStorageDeviceManager_IsServiceAvailable_Response
@@ -11191,11 +11235,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+2019
+2048
 20000
 2000000
 200M
-2019
-2048
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -11533,6 +11577,7 @@ $steammessages_parental_objects.proto"
 22CGameserverSimpleQuery
 22CGetTouchConfigDataMsg
 22CInputTouchFingerUpMsg
+22CJobCheckForTritonOobe
 22CJobSaveCacheDirectory
 22CMarketingMessageProto
 22CMsgAckPIDShuttingDown
@@ -11841,6 +11886,9 @@ $steammessages_parental_objects.proto"
 24CCloud_ShareFile_Request
 24CControllerActionBinding
 24CControllerActivatorImpl
+24CControllerValueWorkItemI12TritonBond_tE
+24CControllerValueWorkItemIbE
+24CControllerValueWorkItemIjE
 24CCryptoKeyBase_RawBuffer
 24CDirWatcherPollingThread
 24CDisplayMarketingMessage
@@ -12161,6 +12209,7 @@ $steammessages_parental_objects.proto"
 26CGameRecording_ClipSummary
 26CGetControllerInfoWorkItem
 26CGetShaderDepotManifestJob
+26CGetTritonSlotInfoWorkItem
 26CHTTPCacheInitializeThread
 26CInputTouchFingerMotionMsg
 26CInstallScriptManagerPosix
@@ -12309,7 +12358,6 @@ $steammessages_parental_objects.proto"
 27CGameNotifications_Variable
 27CGameRecordingTimelineEvent
 27CGamescope_GetState_Request
-27CGetPuckPairingInfoWorkItem
 27CGetShaderBucketManifestJob
 27CHTTPServerClientConnection
 27CHTTPServerFlushResponseJob
@@ -12372,6 +12420,7 @@ $steammessages_parental_objects.proto"
 27CRemoteClient_ClientDetails
 27CRemoteClient_DeviceDetails
 27CReservationPositionMessage
+27CSetPuckPairingInfoWorkItem
 27CShader_SendShader_Response
 27CSiteServerUICancelLoginJob
 27CSiteServerUIGetLanguageJob
@@ -12384,6 +12433,7 @@ $steammessages_parental_objects.proto"
 27CSteamTV_AddChatBan_Request
 27CSteamTV_AddWordBan_Request
 27CSteamTV_HomePageContentRow
+27CTritonDockedToPuckWorkItem
 27CWorkItemApplySteamOSUpdate
 27CWorkItemGetAvailableDrives
 27CWorkItemLoadFileIntoBuffer
@@ -12605,8 +12655,6 @@ $steammessages_parental_objects.proto"
 29CGameNotifications_UserStatus
 29CGameRecordingPostGameSummary
 29CGetControllerConnectionState
-29CGetDonglePairingInfoWorkItem
-29CGetTritonPairingInfoWorkItem
 29CGyroToJoystickDeflectionMode
 29CHIDDevicePipeSharedMemStream
 29CHTTPServerSend100ContinueJob
@@ -12733,6 +12781,7 @@ $steammessages_parental_objects.proto"
 2\n.k_ESteamDeckKeyboardLayout_Chinese_Traditional
 2\n.k_ESteamNotificationType_FamilyPurchaseRequest
 2\n.k_EStreamControlSetControllerSettings_OBSOLETE
+2\n.k_ETritonPairType_RePairToSteamMachineWireless
 2\n.k_EValveIndexComponentSteamFrameLeftController
 2\n.k_EWindowsUpdateRebootBehavior_MightNeedReboot
 2\n.k_PublishedFileQueryType_RankedByPlaytimeTrend
@@ -12803,6 +12852,8 @@ $steammessages_parental_objects.proto"
 3.CPublishedFile_GetAppRelationshipsBatched_Response"
 3.CSharedJSContext_GetDesiredSteamUIWindows_Response
 3.CSteamInputService_GyroSoftwareCalibration_Request
+3.CSteamInputService_PairDongleTritonDocked_Response
+3.CSteamInputService_ShouldTritonPairInOobe_Response
 3.CSteamNotification_PreferencesUpdated_Notification
 30!]^JV
 30.0
@@ -12945,6 +12996,8 @@ $steammessages_parental_objects.proto"
 30CStoreBrowse_GetItems_Response
 30CStore_GetTagList_Response_Tag
 30CTouchActionSetLayerRemovedMsg
+30CTritonDongleConnectedWorkItem
+30CTritonRemovedFromPuckWorkItem
 30CVirtualControllerGlobalConfig
 30CWebUITransportServerStatusJob
 30CWorkItemGetFileSystemStableId
@@ -13190,6 +13243,7 @@ $steammessages_parental_objects.proto"
 32CRemotePlayTogether_Notification
 32CSteamControllerChellAbstraction
 32CSteamOSManager_GetState_Request
+32CSteamOS_SetUserPassword_Request
 32CStorageDeviceManagerBlockDevice
 32CStore_GetDiscoveryQueue_Request
 32CStore_GetGamesFollowed_Response
@@ -13340,6 +13394,7 @@ $steammessages_parental_objects.proto"
 33CSteamControllerProtocolHandlerV1
 33CSteamControllerProtocolHandlerV2
 33CSteamOSManager_GetState_Response
+33CSteamOS_SetUserPassword_Response
 33CSteamTV_AddChatModerator_Request
 33CSteamTV_AppCheer_SingleCheerType
 33CStorePageFilter_ContentHubFilter
@@ -13417,6 +13472,7 @@ $steammessages_parental_objects.proto"
 34CGameRecording_ExportClip_Settings
 34CGameRecording_QueryPhases_Request
 34CGameServers_QueryByFakeIP_Request
+34CGetWiredTritonPairingBondWorkItem
 34CHTTPStreamingResponseHandlerFuncs
 34CInternalGameProcessCallResultBase
 34CInventoryClientJob_NotifyNewItems
@@ -13537,6 +13593,7 @@ $steammessages_parental_objects.proto"
 35CFriendMessages_SendMessage_Request
 35CGameNetworkingUI_ConnectionSummary
 35CGameRecording_QueryPhases_Response
+35CGetTritonDonglePairingBondWorkItem
 35CInventory_PurchaseFinalize_Request
 35CMarketingMessageClickedHourlyStats
 35CMsgClientAMGetClanOfficersResponse
@@ -13594,6 +13651,7 @@ $steammessages_parental_objects.proto"
 35CRemotePlay_SessionStarted_Response
 35CShader_ReportExternalBuild_Request
 35CSleepManager_RequestSleep_Response
+35CSteamOS_GetUserHasPassword_Request
 35CSteamTV_GetChatModerators_Response
 35CSteamTV_HomePageTemplate_Developer
 35CStorageDeviceManager_Adopt_Request
@@ -13660,6 +13718,7 @@ $steammessages_parental_objects.proto"
 36CGenericGamepadControllerAbstraction
 36CHIDMessageToRemote_DeviceDisconnect
 36CInventory_CombineItemStacks_Request
+36CJobCheckForUnpairedDockedController
 36CMsgClientCheckFileSignatureResponse
 36CMsgClientCreateFriendsGroupResponse
 36CMsgClientDeleteFriendsGroupResponse
@@ -13706,6 +13765,7 @@ $steammessages_parental_objects.proto"
 36CSteamEngine_GetGameIDForPID_Request
 36CSteamOSManager_FactoryReset_Request
 36CSteamOSSLS_SetPluginEnabled_Request
+36CSteamOS_GetUserHasPassword_Response
 36CSteamTV_GetFollowedChannels_Request
 36CSteamTV_GetHomePageContents_Request
 36CSteamTV_HomePageTemplate_SingleGame
@@ -13775,6 +13835,7 @@ $steammessages_parental_objects.proto"
 37CHIDMessageFromRemote_CloseAllDevices
 37CHIDMessageFromRemote_RequestResponse
 37CHardwareUpdate_PrepForUpdate_Request
+37CJobCheckForUnpairedTritonControllers
 37CLEDManager_StateChanged_Notification
 37CMsgClientAuthorizeLocalDeviceRequest
 37CMsgClientChatGetFriendMessageHistory
@@ -13816,6 +13877,7 @@ $steammessages_parental_objects.proto"
 37CSiteLicense_LCSAssociateUser_Request
 37CSiteLicense_LCSAuthenticate_Response
 37CSteamEngine_GetGameIDForPID_Response
+37CSteamInputService_GetDongles_Request
 37CSteamOSManager_FactoryReset_Response
 37CSteamOSSLS_SetPluginEnabled_Response
 37CSteamOSSLS_StateChanged_Notification
@@ -13880,6 +13942,8 @@ $steammessages_parental_objects.proto"
 38CGameRecording_QueryPhases_Request_Tag
 38CGameRecording_StartRecording_Response
 38CGameRecording_TakeScreenshot_Response
+38CGetDockedControllerActiveSlotWorkItem
+38CGetTritonDockedControllerBondWorkItem
 38CHIDMessageFromRemote_UpdateDeviceList
 38CHardwareUpdate_PrepForUpdate_Response
 38CInventoryClient_NewItems_Notification
@@ -13924,6 +13988,7 @@ $steammessages_parental_objects.proto"
 38CRemoteClient_ReplyPacket_Notification
 38CRemoteClient_SteamBroadcastPacket_Job
 38CSiteLicense_LCSAssociateUser_Response
+38CSteamInputService_GetDongles_Response
 38CSteamTV_GetBroadcastChannelID_Request
 38CSteamTV_GetSubscribedChannels_Request
 38CSteamTV_HomePageTemplate_ConveyorBelt
@@ -14733,6 +14798,7 @@ $steammessages_parental_objects.proto"
 46CPublishedFile_FileDeleted_Client_Notification
 46CSteamInputService_ControllerStateFlow_Request
 46CSteamInputService_PairDongleTritonUSB_Request
+46CSteamInputService_TritonUndocked_Notification
 46CStore_MigratePartnerLinkTracking_Notification
 46CTransportValidationClient_AddNumbers_Response
 46CTransportValidation_CountOrderedBytes_Request
@@ -14886,6 +14952,8 @@ $steammessages_parental_objects.proto"
 49CRemoteClientJobHandleClientAuthorizationResponse
 49CRemoteClient_UnregisterStatusUpdate_Notification
 49CSharedJSContext_GetDesiredSteamUIWindows_Request
+49CSteamInputService_PairDongleTritonDocked_Request
+49CSteamInputService_ShouldTritonPairInOobe_Request
 49CSteamOSManager_OptOutOfSideloadedClient_Response
 49CSteamTV_GetBroadcastChannelBroadcasters_Response
 49CStorageDeviceManager_IsServiceAvailable_Response
@@ -14970,6 +15038,8 @@ $steammessages_parental_objects.proto"
 5.CMarketingMessages_GetPastMarketingMessages_Response"
 5.CQueuedMatchmakingGameHost_SearchForPlayers_Response
 5.CSteamEngine_UpdateTextFilterDictionary_Notification
+5.CSteamInputService_TritonDonglesChanged_Notification
+5.CSteamInputService_UnpairedTritonDocked_Notification
 5.CTransportValidation_TriggerSyntheticEvents_Response
 5.ChatRoomClient_NotifyChatRoomDisconnect_Notification
 5000
@@ -15010,6 +15080,8 @@ $steammessages_parental_objects.proto"
 50CRemoteClientJobHandleClientAuthorizationConfirmed
 50CSharedJSContext_GetDesiredSteamUIWindows_Response
 50CSteamInputService_GyroSoftwareCalibration_Request
+50CSteamInputService_PairDongleTritonDocked_Response
+50CSteamInputService_ShouldTritonPairInOobe_Response
 50CSteamNotification_PreferencesUpdated_Notification
 50CSteamOSManager_IsTelemetryHelperAvailable_Request
 50CSteamTV_GetBroadcastChannelImages_Response_Images
@@ -15066,6 +15138,8 @@ $steammessages_parental_objects.proto"
 52CPublishedFile_GetItemInfo_Response_WorkshopItemInfo
 52CQueuedMatchmakingGameHost_SearchForPlayers_Response
 52CSteamEngine_UpdateTextFilterDictionary_Notification
+52CSteamInputService_TritonDonglesChanged_Notification
+52CSteamInputService_UnpairedTritonDocked_Notification
 52CTransportValidation_TriggerSyntheticEvents_Response
 52ChatRoomClient_NotifyChatRoomDisconnect_Notification
 52F*
@@ -15331,6 +15405,7 @@ $steammessages_parental_objects.proto"
 63CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
 63CPlayer_GetProfileCustomization_Response_PurchasedCustomization
 63CPublishedFile_GetContentDescriptors_Response_ContentDescriptor
+63CSteamInputService_WaitInitialControllerStateEnumerated_Request
 64CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response
 64CChatRoom_GetMessageHistory_Response_ChatMessage_MessageReaction
 64CChatUsability_ClientUsabilityMetrics_Notification_VoiceSettings
@@ -15339,6 +15414,7 @@ $steammessages_parental_objects.proto"
 64CMarketingMessages_DoesUserHavePendingMarketingMessages_Response
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification
+64CSteamInputService_WaitInitialControllerStateEnumerated_Response
 65536
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 65CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail
@@ -16194,6 +16270,7 @@ $steammessages_parental_objects.proto"
 @.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request
 @.CMarketingMessages_DoesUserHavePendingMarketingMessages_Request
 @.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request
+@.CSteamInputService_WaitInitialControllerStateEnumerated_Request
 @0pp
 @AE\S
 @CSInterfaceProxyPassword
@@ -16429,6 +16506,7 @@ A!A3A5A;A?AYAeAkAwA{A
 A.CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response"
 A.CMarketingMessages_DoesUserHavePendingMarketingMessages_Response"
 A.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response"
+A.CSteamInputService_WaitInitialControllerStateEnumerated_Response
 A2VPD
 A33s?333?
 A9ue_
@@ -17652,6 +17730,7 @@ BQueueControllerConfigMessageForLocal
 BQueueControllerConfigMessageForRemote
 BREAK
 BREAKPAD_DUMP_LOCATION
+BReadFeatureReport
 BReceiveFile
 BRecvCryptoHandshake
 BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
@@ -17737,6 +17816,7 @@ BUseIOCP()
 BVRDeviceSeenRecently
 BVoiceIsLocalOnHold
 BVoiceIsRemoteOnHold
+BWriteAltFeatureReport
 BWriteValueToFileAsUser
 BWriteValuetoFileAsRoot
 BWritingFatalMiniDump
@@ -19099,6 +19179,8 @@ CGetCompatToolBucketJob for %s: not installed or other error, early out.
 CGetControllerInfoWorkItem::RunFunc: Read failure.\n
 CGetControllerInfoWorkItem::RunFunc: too many read failures.
 CGetCursorImageMsg
+CGetDockedControllerActiveSlotWorkItem
+CGetDockedControllerActiveSlotWorkItem - ReadAltFeatureReport
 CGetShaderBucketForGraphicsAPIJob
 CGetShaderBucketManifestJob
 CGetShaderDepotManifestJob
@@ -19107,6 +19189,10 @@ CGetShaderDepotManifestJob::ThreadedRelocateOldSwarmDepots
 CGetStaleBucketJob
 CGetTouchConfigDataMsg
 CGetTouchIconDataMsg
+CGetTritonDockedControllerBondWorkItem
+CGetTritonDonglePairingBondWorkItem
+CGetTritonSlotInfoWorkItem
+CGetWiredTritonPairingBondWorkItem
 CGlibContextManager
 CGlibContextManager: g_main_context_iteration() exceeded budget, deferring outstanding requests to the next frame\n
 CGlibContextManager::RunFrame
@@ -20610,9 +20696,11 @@ CSetCapslockMsg
 CSetCaptureSizeMsg
 CSetCursorImageMsg
 CSetCursorScaleMsg
+CSetDonglePairingInfoWorkItem
 CSetFlashStateMsg
 CSetGammaRampMsg
 CSetInputTemporarilyDisabledMsg
+CSetPuckPairingInfoWorkItem
 CSetQualityOverrideMsg
 CSetSpectatorModeMsg
 CSetStreamingClientConfig
@@ -20620,6 +20708,7 @@ CSetTargetBitrateMsg
 CSetTargetFramerateMsg
 CSetTouchConfigDataMsg
 CSetTouchIconDataMsg
+CSetTritonPairingInfoWorkItem
 CSetWifiEnabledJob
 CSetWifiEnabledJob::ThreadedSetWifiEnabled
 CSettingsPanelGameController.Timeout
@@ -22102,6 +22191,7 @@ ControlPoint2Y
 Controller
 Controller %d mapping uses xinput : false\n
 Controller %d uses xinput : true\n
+Controller Actions
 Controller Binding
 Controller Chip ID invalid\n
 Controller Info Msg garbled\n
@@ -22122,7 +22212,7 @@ Controller uses V1 HID protocol via USB\n
 Controller uses V1 HID protocol\n
 Controller uses V2 HID protocol\n
 Controller using HIDAPI driver, vid=0x%.4x, pid=0x%.4x\n
-Controller work item
+Controller work item value
 ControllerActiveConfigMsg
 ControllerBindings
 ControllerConfigResponse
@@ -22866,6 +22956,7 @@ DisableOverlayInjection
 DisableParentalSettings
 DisableRemotePlayTogetherInputEvents
 DisableShaderReporting
+DisableSteamDeckAutoDetection
 DisableTestLicense
 Disabled
 Disabled license for package: %u\n
@@ -23594,6 +23685,7 @@ ETimelineGameMode
 ETokenRenewalType
 ETrailerCategory
 ETransportError
+ETritonPairType
 ETwoFactorStatusFieldFlag
 ETwoFactorUsageType
 EUFSFileFlags
@@ -24523,7 +24615,7 @@ Failed to post write to chunkstore %s
 Failed to preallocate
 Failed to process chunk %s
 Failed to process data from file (%u bytes @ %llu), dropping chunk
-Failed to read Triton (puck) bonding info\n
+Failed to read bond from slot on dongle %d
 Failed to read chat member data from initial chat Enter message
 Failed to read chunk from file "%s".
 Failed to read data from "%s" (%u bytes @ %llu), dropping chunk
@@ -24543,8 +24635,6 @@ Failed to remove dependency between %llu => %llu! Error: %s (%s)
 Failed to remove log event from threadsafe queue!
 Failed to resolve path before download\n
 Failed to resolve path for '%s' for upload\n
-Failed to retrieve Dongle bond info for index %d\n
-Failed to retrieve Triton bonding info on controller index: %d\n
 Failed to retrieve app dependencies (batched)!: %s (%s)
 Failed to retrieve info for AppID %u private beta "%s" (%s)
 Failed to save download to filesystem: path was %s\n
@@ -24606,7 +24696,6 @@ Failed to write file after download (%u)\n
 Failed to write local CS file "%s" (%u bytes).
 Failed to write manifest text file %s!\n
 Failed to write new bond to controller %d
-Failed to write old bond to other slot %d
 Failed to write or verify final page during dongle update!
 Failed to write or verify page %i during dongle update!
 Failed to write patch state file
@@ -26229,6 +26318,7 @@ GetUserCountry
 GetUserDataFolder
 GetUserFileCount
 GetUserGameInterestState
+GetUserHasPassword
 GetUserItemVote
 GetUserMachineName
 GetUserPartnerEventNews
@@ -28897,6 +28987,7 @@ Method GetDiscoveryQueueSkippedApps() not implemented.
 Method GetDisplayMarketingMessage() not implemented.
 Method GetDisplayMarketingMessageAdmin() not implemented.
 Method GetDisplayMarketingMessageForUser() not implemented.
+Method GetDongles() not implemented.
 Method GetDurationControl() not implemented.
 Method GetEULAStatus() not implemented.
 Method GetEligiblePromoItemDefIDs() not implemented.
@@ -29030,6 +29121,7 @@ Method GetUserCountry() not implemented.
 Method GetUserFileCount() not implemented.
 Method GetUserFiles() not implemented.
 Method GetUserGameInterestState() not implemented.
+Method GetUserHasPassword() not implemented.
 Method GetUserPartnerEventNews() not implemented.
 Method GetUserPartnerEventViewStatus() not implemented.
 Method GetUserPartnerEventsAppPriorities() not implemented.
@@ -29169,8 +29261,11 @@ Method NotifyTextFilterWordsChanged() not implemented.
 Method NotifyTimelineChanged() not implemented.
 Method NotifyTimelineEntryChanged() not implemented.
 Method NotifyTimelineEntryRemoved() not implemented.
+Method NotifyTritonDonglesChanged() not implemented.
+Method NotifyTritonUndocked() not implemented.
 Method NotifyUnlock() not implemented.
 Method NotifyUnlockedH264() not implemented.
+Method NotifyUnpairedTritonDocked() not implemented.
 Method NotifyUnpairedTritonPluggedIn() not implemented.
 Method NotifyUnregisterStatusUpdate() not implemented.
 Method NotifyUpdateProgress() not implemented.
@@ -29188,6 +29283,7 @@ Method OnReservationCompleted() not implemented.
 Method OnUserStatusChanged() not implemented.
 Method OptOutOfSideloadedClient() not implemented.
 Method Pair() not implemented.
+Method PairDongleTritonDocked() not implemented.
 Method PairDongleTritonUSB() not implemented.
 Method PartnerEventsShowLessForApp() not implemented.
 Method PartnerEventsShowMoreForApp() not implemented.
@@ -29346,11 +29442,13 @@ Method SetSubscriptionListFromCollection() not implemented.
 Method SetTrusted() not implemented.
 Method SetUserBanState() not implemented.
 Method SetUserChatGroupPreferences() not implemented.
+Method SetUserPassword() not implemented.
 Method SetVRDeviceInfoAggregationReference() not implemented.
 Method SetVideoBookmark() not implemented.
 Method SetWakeAllowed() not implemented.
 Method ShareFile() not implemented.
 Method ShouldPromptForCompatibilityFeedback() not implemented.
+Method ShouldTritonPairInOobe() not implemented.
 Method SignInstallScript() not implemented.
 Method SignalAppExitSyncDone() not implemented.
 Method SignalAppLaunchIntent() not implemented.
@@ -29414,6 +29512,7 @@ Method ValidateToken() not implemented.
 Method VerifyClanMembership() not implemented.
 Method ViewFriendInviteToken() not implemented.
 Method Vote() not implemented.
+Method WaitInitialControllerStateEnumerated() not implemented.
 Method WatchBroadcast() not implemented.
 Method WebRTCAddHostCandidate() not implemented.
 Method WebRTCAddViewerCandidate() not implemented.
@@ -30842,8 +30941,11 @@ NotifyTextFilterWordsChanged
 NotifyTimelineChanged
 NotifyTimelineEntryChanged
 NotifyTimelineEntryRemoved
+NotifyTritonDonglesChanged
+NotifyTritonUndocked
 NotifyUIOfMenuChange
 NotifyUnlockedH264
+NotifyUnpairedTritonDocked
 NotifyUnpairedTritonPluggedIn
 NotifyUnregisterStatusUpdate
 NotifyUpdateProgress
@@ -31719,6 +31821,7 @@ Pago Facil
 PagoEfectivo
 Pagseguro
 Pair
+PairDongleTritonDocked
 PairDongleTritonUSB
 PairViaWifiAP
 Palette is NULL in indexed image
@@ -32136,6 +32239,7 @@ Proc-Type:
 Proc-Type: 4,%s\n
 Process
 Process %d failed to shm_open %s\n
+Process controller actions
 Process controller work items
 ProcessActivateGameOverlayInMainUI
 ProcessCandidates: %s L %s --> %s sending %s:%d\n
@@ -34603,6 +34707,7 @@ SetUserItemVote
 SetUserLedColor
 SetUserLinger
 SetUserMachineName
+SetUserPassword
 SetUserPublishedFileAction
 SetUserStat
 SetVRConnectionParams
@@ -34677,6 +34782,7 @@ Should not have multiple chunks for the same offset
 Should not reach here.
 Should use ScopeID of 0 for default broadcast group!
 Should we do scheduling of updates on Steam Beta? If not, they'll all be ASAP
+ShouldTritonPairInOobe
 Shouldn't be re-submitting a request we have body data for
 Shouldn't be receiving this unless on accepted connections, only connections initiated locally.
 Shouldn't have a body on an HTTP continue response, clearing body which was set
@@ -35287,6 +35393,7 @@ SteamInputManager
 SteamInputManager.CancelGyroSoftwareCalibration#1
 SteamInputManager.EndControllerStateFlow#1
 SteamInputManager.GetControllerAccessibilityStrings#1
+SteamInputManager.GetDongles#1
 SteamInputManager.NotifyAxesStateChanged#1
 SteamInputManager.NotifyButtonStateChanged#1
 SteamInputManager.NotifyControllerPowerMenu#1
@@ -35294,10 +35401,16 @@ SteamInputManager.NotifyGyroAccelerometerStateChanged#1
 SteamInputManager.NotifyGyroCalibrationStateChanged#1
 SteamInputManager.NotifyGyroQuaternionStateChanged#1
 SteamInputManager.NotifyGyroSpeedStateChanged#1
+SteamInputManager.NotifyTritonDonglesChanged#1
+SteamInputManager.NotifyTritonUndocked#1
+SteamInputManager.NotifyUnpairedTritonDocked#1
 SteamInputManager.NotifyUnpairedTritonPluggedIn#1
+SteamInputManager.PairDongleTritonDocked#1
 SteamInputManager.PairDongleTritonUSB#1
+SteamInputManager.ShouldTritonPairInOobe#1
 SteamInputManager.StartControllerStateFlow#1
 SteamInputManager.StartGyroSoftwareCalibration#1
+SteamInputManager.WaitInitialControllerStateEnumerated#1
 SteamInstallPath
 SteamLibrary
 SteamLinuxRuntime
@@ -35634,9 +35747,6 @@ Success! http%s://%s%s\n
 Successful file request %s %s
 Successfully generated token via password authentication
 Successfully loaded
-Successfully read Triton (puck) bonding info\n
-Successfully retrieved Dongle bond info for index %d\n
-Successfully retrieved Triton bonding info on controller index: %d\n
 Successfully signed install script %s
 SuggestedFriend
 Suite B: cannot sign P-384 with P-256
@@ -36662,6 +36772,7 @@ Unable to determine local identity, and auth required.  Not logged in?
 Unable to determine local identity.  Not logged in?
 Unable to find boundary string in multipart/form-data: %s\n
 Unable to find unique connection ID
+Unable to find vacant slot to pair to on %u
 Unable to get home directory
 Unable to increment IOCP eventfd, error %d
 Unable to init decoder\n
@@ -36677,11 +36788,14 @@ Unable to open %s device: %s\n
 Unable to parse %s\n
 Unable to read %s\n
 Unable to read VR Path Registry from %s\n
+Unable to read active slot from controller. Pairing in slot 0. %d
+Unable to read bond from docked Triton immediate after it docked
 Unable to read wake fd\n
 Unable to send encrypted SSL data over connection\n
 Unable to send message to disable license for package: %u. Please try again\n
 Unable to send message to enable license for package: %u. Please try again\n
 Unable to set default socket options, error %d
+Unable to write old pairing bond to second slot on docked controller %d
 Unable to write wake fd\n
 Unannounced
 Unauthenticated connections not allowed.
@@ -37701,7 +37815,6 @@ Wireless Gamepad
 Wolof
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify\n
-Work Items
 Work thread '%s' is marked exited, but we could not immediately join prior to deleting -- proceeding without join\n
 Workshop
 Workshop Items
@@ -38132,6 +38245,11 @@ YldFirmwareCheckForUpdate
 YldFirmwareCheckForUpdateInternal
 YldFirmwareUpdate
 YldGetAchievementInfo
+YldInitialControllerStateEnumerated: Done\n
+YldInitialControllerStateEnumerated: no controllers\n
+YldInitialControllerStateEnumerated: waiting on details\n
+YldInitialControllerStateEnumerated: waiting on enumeration\n
+YldInitialControllerStateEnumerated\n
 YldPostStateUpdate
 YldRebuildState
 YldRequestBadgeLevels
@@ -38799,7 +38917,9 @@ Zulu
 [AppID %u] skipping item %llu because item entry result = %s (%d)
 [AppID %u]\tSkipping un-modified file %s
 [CClientJobPairIbexController]: Failed to pair Slot %d of Ibex %d to dongle slot %d\n
+[CClientJobPairIbexController]: Failed to pair Slot %d of Ibex docked at %d to dongle slot %d\n
 [CClientJobPairIbexController]: Successfuly paired Slot %d of Ibex %d to dongle slot %d\n
+[CClientJobPairIbexController]: Successfuly paired Slot %d of Ibex docked at %d to dongle slot %d\n
 [Config]\n# Product information.\nProductName=cefwebhelper\nProductVersion=%u\n\n# Required to enable crash dump upload.\nServerURL=%s\n\n# Disable rate limiting so that all crashes are uploaded.\nRateLimitEnabled=true\nMaxUploadsPerDay=5\n\n[CrashKeys]\nVendor=small\nUserID=small\nBuildID=small\nPlatform=small\nSteamUniverse=small\n
 [GameID %llu] Processing screenshot #%d/%d - %s
 [GameID %llu] Revert file upload %s finished with result %s
@@ -39131,6 +39251,7 @@ Zulu
 \n$GetMarketingMessagesViewerRangeStats
 \n$RemoveAuthenticatorViaChallengeStart
 \n$ShouldPromptForCompatibilityFeedback
+\n$WaitInitialControllerStateEnumerated
 \n$steammessages_auth.steamclient.proto
 \n$steammessages_chat.steamclient.proto
 \n$steammessages_clientserver_lbs.proto
@@ -39480,6 +39601,7 @@ Zulu
 \n2CPlayer_GetRecentPlaytimeSessionsForChild_Response
 \n2CPublishedFile_AreFilesInSubscriptionList_Response
 \n2CPublishedFile_GetAppRelationshipsBatched_Response
+\n2CSteamInputService_ShouldTritonPairInOobe_Response
 \n2gQ\v\tU
 \n3CChatRoom_SetChatRoomGroupWatchingBroadcast_Request
 \n3CCommunity_SetRecommendationBotReviewStatus_Request
@@ -39655,6 +39777,7 @@ Zulu
 \n\fgetlasterror
 \n\fgid_manifest
 \n\fh_steam_pipe
+\n\fhas_password
 \n\fhas_workshop
 \n\fhero_capsule
 \n\fhost_steamid
@@ -39926,6 +40049,7 @@ Zulu
 \n\nconfig_vdf
 \n\ncontent_id
 \n\ncontext_id
+\n\ncontroller
 \n\ncrash_data
 \n\ncurrencyid
 \n\ncurrent_bw
@@ -40233,6 +40357,8 @@ Zulu
 \n\rhttp_min_size
 \n\rhttps_support
 \n\rhubcategoryid
+\n\ribex_external
+\n\ribex_internal
 \n\rignore_appids
 \n\rimg_icon_hash
 \n\rinclude_links
@@ -41082,6 +41208,7 @@ Zulu
 ]\n\fCanSubscribe
 ]\n\fFactoryReset
 ]\n\fGetUserFiles
+]\n\nGetDongles
 ]gy73
 ]me6n
 ^&gDo
@@ -44247,6 +44374,7 @@ current_connections
 current_game_id
 current_mode_id
 current_now
+current_password
 current_playtime_restrictions
 current_size_gb
 current_step
@@ -44823,6 +44951,7 @@ do_ssl3_write
 do_tcreate
 doapr_outch
 docked
+docked_puck_index
 document
 document is not standalone
 documentAuthor
@@ -46467,7 +46596,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggenn
 ghjkl
 gidlist
 gidparentcomment
@@ -48208,6 +48337,7 @@ is_notification
 is_openxr
 is_pairing_capable
 is_partner_chat_only
+is_password_change_supported
 is_phone_identifying
 is_phone_needing_reverify
 is_phone_verified
@@ -50287,6 +50417,8 @@ k_ETrailerCategory_Interview
 k_ETrailerCategory_Invalid
 k_ETrailerCategory_Teaser
 k_ETrailerCategory_Update
+k_ETritonPairType_None
+k_ETritonPairType_Unknown
 k_ETwoFactorUsageType_Login
 k_ETwoFactorUsageType_None
 k_ETwoFactorUsageType_Unknown
@@ -54728,6 +54860,7 @@ onlyallowrunincountries
 onlyattr
 onlysomereasons
 onlyuser
+oobe pairing check
 oouwwwcc
 opaque
 opaqueBlob
@@ -55039,6 +55172,7 @@ pDecodedData
 pDecoder->GetInterleavedBytesPerSample() == kInterleavedOutputSampleBytes
 pDefaultValue
 pDeltaChunk->m_unCompressedSizeDelta == unSize
+pDevice
 pEnd <= pubMsgBytes + cubBuffer
 pEnd == m_ReplacementBody.Base() + m_ReplacementBody.Count()
 pEnd == pOut + cbSerialized
@@ -58289,7 +58423,7 @@ stderr
 stdin
 stdout
 steam
-steam Dec 17 2025 03:36:16
+steam Dec 18 2025 20:19:22
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -58335,6 +58469,7 @@ steam_autocloud.vdf
 steam_beta_name
 steam_china_only
 steam_china_only/steam_china_enable_duration_control
+steam_controller_v1
 steam_deck_compat_category
 steam_deck_compatibility
 steam_deck_keyboard_skin
@@ -58874,6 +59009,7 @@ tanf
 target
 targetInformation
 target_buildid
+target_dongle_index
 target_job_name
 target_manifestid
 task
@@ -60372,6 +60508,7 @@ user-new
 user-removed
 user-requested
 user-stop-delay-usec
+user/wireless_transport
 user=%u %s,
 userCertificate
 userClass

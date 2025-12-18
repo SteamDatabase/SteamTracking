@@ -4023,31 +4023,34 @@
       function A(e) {
         const { storeItem: t, bPreview: r, bPreferAssetWithoutOverride: s } = e,
           i = (0, a.useMemo)(() => ({ id: t.GetID(), type: "game" }), [t]),
+          n = (0, l.Qn)(),
           {
-            bOwnsApp: n,
-            bWishlistApp: l,
-            bFollowsApp: m,
+            bOwnsApp: m,
+            bWishlistApp: o,
+            bFollowsApp: u,
           } = (0, d.z_)(t.GetAppID()),
-          o = (0, c.lS)(t.GetAppID()),
-          u = (0, a.useMemo)(() => {
-            if (r && (!o?.playtime_forever || !o?.rtime_last_played)) {
+          g = (0, c.lS)(t.GetAppID()),
+          M = (0, a.useMemo)(() => {
+            if (r && (!g?.playtime_forever || !g?.rtime_last_played)) {
               return {
                 playtime_forever: 300,
                 rtime_last_played: Math.floor(Date.now() / 1e3) - 432e3,
               };
             }
-            return o;
-          }, [o, r]),
-          g = n
-            ? "steam://nav/games/details/" + t.GetID()
-            : "steam://openurl/" + t.GetStorePageURL(),
-          M = (0, c.WN)(g, 4);
+            return g;
+          }, [g, r]);
+        let p = "steam://openurl/" + t.GetStorePageURL();
+        m &&
+          (p = n
+            ? `steam://open/games/details/${t.GetID()}`
+            : `steam://nav/games/details/${t.GetID()}`);
+        const _ = (0, c.WN)(p, 4, m);
         return a.createElement(
           "div",
           { className: W.BaseCtn },
           a.createElement(
             R.Ii,
-            { className: W.CapsuleCtn, onClick: M },
+            { className: W.CapsuleCtn, onClick: _ },
             a.createElement(I.G, {
               info: i,
               bPreferLibrary: !0,
@@ -4062,7 +4065,7 @@
               { className: W.GameNameCtn },
               a.createElement(
                 R.Ii,
-                { className: W.GameName, onClick: M },
+                { className: W.GameName, onClick: _ },
                 t.GetName(),
               ),
             ),
@@ -4071,28 +4074,28 @@
               { className: W.LibraryDetails },
               a.createElement(
                 R.Ii,
-                { onClick: M, className: (0, w.A)(W.Button, W.ViewInLibrary) },
+                { onClick: _, className: (0, w.A)(W.Button, W.ViewInLibrary) },
                 (0, S.we)(
-                  n
+                  m
                     ? "#EventDisplay_ViewInLibrary"
                     : "#EventDisplay_ViewStorePage",
                 ),
               ),
-              !n &&
+              !m &&
                 a.createElement(
                   a.Fragment,
                   null,
                   a.createElement(
                     "div",
                     { className: W.PlayDetailCtn },
-                    l &&
+                    o &&
                       a.createElement(
                         "span",
                         null,
                         (0, S.we)("#EventDisplay_OnWishlist"),
                       ),
-                    !l &&
-                      m &&
+                    !o &&
+                      u &&
                       a.createElement(
                         "span",
                         null,
@@ -4100,11 +4103,11 @@
                       ),
                   ),
                 ),
-              n &&
+              m &&
                 a.createElement(
                   a.Fragment,
                   null,
-                  Boolean(u?.rtime_last_played) &&
+                  Boolean(M?.rtime_last_played) &&
                     a.createElement(
                       "div",
                       { className: W.PlayDetailCtn },
@@ -4113,9 +4116,9 @@
                         null,
                         (0, S.we)("#MarketingMessages_DLC_lastplayed"),
                       ),
-                      (0, S._l)(u.rtime_last_played),
+                      (0, S._l)(M.rtime_last_played),
                     ),
-                  Boolean(u?.playtime_forever) &&
+                  Boolean(M?.playtime_forever) &&
                     a.createElement(
                       "div",
                       { className: W.PlayDetailCtn },
@@ -4124,7 +4127,7 @@
                         null,
                         (0, S.we)("#MarketingMessages_DLC_hours"),
                       ),
-                      (0, k.l)(u.playtime_forever),
+                      (0, k.l)(M.playtime_forever),
                     ),
                 ),
             ),

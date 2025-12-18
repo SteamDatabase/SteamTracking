@@ -4,6 +4,16 @@ import "webuimessages_base.proto";
 option optimize_for = SPEED;
 option cc_generic_services = true;
 
+enum ETritonPairType {
+	k_ETritonPairType_Unknown = 0;
+	k_ETritonPairType_None = 1;
+	k_ETritonPairType_RePairToSteamMachineWired = 2;
+	k_ETritonPairType_RePairToSteamMachineDocked = 3;
+	k_ETritonPairType_RePairToSteamMachineWireless = 4;
+	k_ETritonPairType_PairToPuckWired = 5;
+	k_ETritonPairType_PairToPuckDocked = 6;
+}
+
 message CSteamInputService_ControllerButtonStateChanged_Notification {
 	optional uint32 controller_index = 1;
 	optional bool dpad_up = 2;
@@ -139,8 +149,52 @@ message CSteamInputService_PairDongleTritonUSB_Request {
 message CSteamInputService_PairDongleTritonUSB_Response {
 }
 
+message CSteamInputService_TritonDonglesChanged_Notification {
+}
+
 message CSteamInputService_UnpairedTritonPluggedIn_Notification {
 	optional uint32 controller_index = 1;
+}
+
+message CSteamInputService_UnpairedTritonDocked_Notification {
+	optional uint32 docked_puck_index = 1;
+}
+
+message CSteamInputService_TritonUndocked_Notification {
+	optional uint32 docked_puck_index = 1;
+}
+
+message CSteamInputService_PairDongleTritonDocked_Request {
+	optional uint32 docked_puck_index = 1;
+	optional uint32 target_dongle_index = 2;
+}
+
+message CSteamInputService_PairDongleTritonDocked_Response {
+}
+
+message CSteamInputService_GetDongles_Request {
+}
+
+message CSteamInputService_GetDongles_Response {
+	optional bool steam_controller_v1 = 1;
+	repeated uint32 ibex_internal = 2;
+	repeated uint32 ibex_external = 3;
+}
+
+message CSteamInputService_ShouldTritonPairInOobe_Request {
+}
+
+message CSteamInputService_WaitInitialControllerStateEnumerated_Request {
+}
+
+message CSteamInputService_WaitInitialControllerStateEnumerated_Response {
+	repeated uint32 controller = 1;
+}
+
+message CSteamInputService_ShouldTritonPairInOobe_Response {
+	optional .ETritonPairType pair_type = 1 [default = k_ETritonPairType_Unknown];
+	optional uint32 controller_index = 2;
+	optional uint32 dongle_index = 3;
 }
 
 message CControllerOriginKey {
@@ -177,10 +231,17 @@ service SteamInputManager {
 	rpc NotifyGyroCalibrationStateChanged (.CSteamInputService_GyroCalibration_Notification) returns (.WebUINoResponse);
 	rpc NotifyControllerPowerMenu (.CSteamInputService_ControllerPowerMenu_Notification) returns (.WebUINoResponse);
 	rpc NotifyUnpairedTritonPluggedIn (.CSteamInputService_UnpairedTritonPluggedIn_Notification) returns (.WebUINoResponse);
+	rpc NotifyUnpairedTritonDocked (.CSteamInputService_UnpairedTritonDocked_Notification) returns (.WebUINoResponse);
+	rpc NotifyTritonUndocked (.CSteamInputService_TritonUndocked_Notification) returns (.WebUINoResponse);
+	rpc NotifyTritonDonglesChanged (.CSteamInputService_TritonDonglesChanged_Notification) returns (.WebUINoResponse);
 	rpc StartControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
 	rpc EndControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
 	rpc GetControllerAccessibilityStrings (.CSteamInputService_ControllerAccessibilityStrings_Request) returns (.CSteamInputService_ControllerAccessibilityStrings_Response);
 	rpc StartGyroSoftwareCalibration (.CSteamInputService_GyroSoftwareCalibration_Request) returns (.CSteamInputService_GyroSoftwareCalibration_Response);
 	rpc CancelGyroSoftwareCalibration (.CSteamInputService_GyroSoftwareCalibration_Request) returns (.CSteamInputService_GyroSoftwareCalibration_Response);
 	rpc PairDongleTritonUSB (.CSteamInputService_PairDongleTritonUSB_Request) returns (.CSteamInputService_PairDongleTritonUSB_Response);
+	rpc PairDongleTritonDocked (.CSteamInputService_PairDongleTritonDocked_Request) returns (.CSteamInputService_PairDongleTritonDocked_Response);
+	rpc GetDongles (.CSteamInputService_GetDongles_Request) returns (.CSteamInputService_GetDongles_Response);
+	rpc ShouldTritonPairInOobe (.CSteamInputService_ShouldTritonPairInOobe_Request) returns (.CSteamInputService_ShouldTritonPairInOobe_Response);
+	rpc WaitInitialControllerStateEnumerated (.CSteamInputService_WaitInitialControllerStateEnumerated_Request) returns (.CSteamInputService_WaitInitialControllerStateEnumerated_Response);
 }

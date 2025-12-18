@@ -1,8 +1,8 @@
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
@@ -2287,7 +2287,6 @@ var _ = class {
             : (_ - 1) * (2 * _ - 2) * (2 * _ - 2) + 1;
         };
         break;
-      case "sine":
       default:
         _ = function (_) {
           return 0.5 - Math.cos(_ * Math._) / 2;
@@ -2497,7 +2496,6 @@ var _ = _(_()),
       case "both":
         _ = _.ScrollBoth;
         break;
-      case "y":
       default:
         _ = _.ScrollY;
         break;

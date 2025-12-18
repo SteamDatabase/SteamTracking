@@ -4847,9 +4847,6 @@ function _(_, _) {
         _ ? "#Time_QuarterOfYear_Expanded_Q3" : "#Time_QuarterOfYear_Q3",
         _.getUTCFullYear(),
       );
-    case 9:
-    case 10:
-    case 11:
     default:
       return _(
         _ ? "#Time_QuarterOfYear_Expanded_Q4" : "#Time_QuarterOfYear_Q4",

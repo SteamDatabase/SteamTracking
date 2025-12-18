@@ -8881,7 +8881,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = "America/Los_Angeles";
       function _(_) {
         const _ = _.context.event,
@@ -9274,7 +9275,7 @@
                     {
                       className: _().MaxSize,
                     },
-                    (0, _._)("#MeetSteam_Spot", _.toLocaleString()),
+                    (0, _._)("#MeetSteam_Spot", _.toLocaleString((0, _._)())),
                   ),
               " ",
             ),
@@ -11950,6 +11951,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
@@ -12337,7 +12339,7 @@
                 null,
                 (0, _._)(
                   "#UserPolls_status_N_Votes",
-                  (_?.total_votes || 0).toLocaleString(),
+                  (0, _._)(_?.total_votes || 0),
                 ),
               ),
               _?.display_message
@@ -15296,7 +15298,7 @@
                 {
                   className: _().StatDescription,
                 },
-                (0, _._)("#YIR_NewLine_Games"),
+                (0, _._)("#YIR_NewLine_Games", _),
               ),
             ),
             _.createElement(
@@ -15316,7 +15318,7 @@
                 {
                   className: _().StatDescription,
                 },
-                (0, _._)("#YIR_NewLine_Session"),
+                (0, _._)("#YIR_NewLine_Session", _),
               ),
             ),
             Boolean(!_) &&
@@ -15344,13 +15346,14 @@
               },
               (0, _._)(_, _),
             ),
-          _.createElement(
-            "div",
-            {
-              className: _().Disclaimer,
-            },
-            _,
-          ),
+          Boolean(_) &&
+            _.createElement(
+              "div",
+              {
+                className: _().Disclaimer,
+              },
+              _,
+            ),
           _.createElement(
             _,
             {
@@ -16148,6 +16151,7 @@
         );
       };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = () => {
           const _ = _();
@@ -16347,7 +16351,10 @@
           _ >= 99 && (_ = 100),
           _ == _.GetPlayTimeStats().by_numbers?.achievements_avg && (_ = 50),
           _ == _.GetPlayTimeStats().by_numbers?.games_played_avg && (_ = 50),
-          _ == _.GetPlayTimeStats().by_numbers?.game_streak_avg && (_ = 50);
+          _ == _.GetPlayTimeStats().by_numbers?.game_streak_avg && (_ = 50),
+          0 == _ && (_ = 0),
+          0 == _ && (_ = 0),
+          0 == _ && (_ = 0);
         const [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
@@ -17023,7 +17030,7 @@
       }
       function _(_) {
         let { label: _, value: __webpack_require__ } = _,
-          _ = __webpack_require__ ? __webpack_require__.toLocaleString() : "-";
+          _ = __webpack_require__ ? (0, _._)(__webpack_require__) : "-";
         return _.createElement(
           "div",
           {
@@ -17614,7 +17621,7 @@
                       {
                         className: _().StatDescription,
                       },
-                      (0, _._)("#YIR_NewLine_Games"),
+                      (0, _._)("#YIR_NewLine_Games", _),
                     ),
                   ),
                   _.createElement(
@@ -17634,7 +17641,7 @@
                       {
                         className: _().StatDescription,
                       },
-                      (0, _._)("#YIR_NewLine_Session"),
+                      (0, _._)("#YIR_NewLine_Session", _),
                     ),
                   ),
                   _.createElement(_, {
@@ -17989,7 +17996,7 @@
                   _ > 1
                     ? "#YIR_Longest_Streak_Games"
                     : "#YIR_Longest_Streak_Games_Singular",
-                  _.toLocaleString(),
+                  (0, _._)(_),
                 ),
               ),
               _.createElement(
@@ -19027,16 +19034,18 @@
           : null;
       }
       function _(_, _, _) {
-        return _ &&
-          _.longest_consecutive_days > 0 &&
-          "cn" !== _._.country_code.toLowerCase()
-          ? _.createElement(_, {
-              key: "longestStreak",
-              oLongestStreak: _,
-              nYear: _,
-              nPrevLongestStreamDays: _,
-            })
-          : null;
+        return _ && _.longest_consecutive_days <= 1 && _ <= 1
+          ? null
+          : _ &&
+              _.longest_consecutive_days > 0 &&
+              "cn" !== _._.country_code.toLowerCase()
+            ? _.createElement(_, {
+                key: "longestStreak",
+                oLongestStreak: _,
+                nYear: _,
+                nPrevLongestStreamDays: _,
+              })
+            : null;
       }
       const _ = 1e3;
       function _(_, _) {
@@ -19292,7 +19301,7 @@
                     (0, _._)(
                       _ + "Less",
                       _ - __webpack_require__,
-                      (_ - __webpack_require__).toLocaleString(),
+                      (0, _._)(_ - __webpack_require__),
                     ),
                   ),
                 )
@@ -19312,7 +19321,7 @@
                     (0, _._)(
                       _ + "More",
                       __webpack_require__ - _,
-                      (__webpack_require__ - _).toLocaleString(),
+                      (0, _._)(__webpack_require__ - _),
                     ),
                   ),
                 );
@@ -20946,8 +20955,9 @@
             }),
           );
         if (!_ || !_) return null;
-        const _ = (0, _._)(_.GetStorePageURL(), _),
-          _ = _?.find((_) => _.percent > 0),
+        let _ = (0, _._)(_.GetStorePageURL(), _);
+        _._.IN_CLIENT && (_ = "steam://openurl/" + _);
+        const _ = _?.find((_) => _.percent > 0),
           _ = _ ? _.date.getMonth() : null,
           _ = _ ? (0, _._)(`#YIR_MonthlyCharts_MonthNoun_${_ + 1}`) : "",
           _ = Math.trunc(_.total_sessions);
@@ -21310,15 +21320,22 @@
       function _(_) {
         const _ = parseInt(_.year),
           _ = _.steamId || "",
-          _ = (0, _._)();
+          _ = (0, _._)(),
+          _ = Number.parseInt(
+            (0, _._)("yearinreview_eresults", "application_config"),
+          );
         if (
           (_.useEffect(() => {
             (0, _._)(_, "src", null),
               (0, _._)(_, "snr", null),
               (0, _._)(_, "sP", null);
           }, [_]),
-          !_ || !_)
+          15 == _)
         )
+          return _.createElement(_, {
+            message: (0, _._)("#YIR_Error_NoShareNoGameplayNotUser"),
+          });
+        if (!_ || !_)
           return _.createElement(_, {
             message: (0, _._)("#YIR_Error_NoData"),
           });

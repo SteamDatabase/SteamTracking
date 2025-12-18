@@ -289,9 +289,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_counts = null;
@@ -311,11 +309,7 @@
             const _ =
                 _._.STORE_BASE_URL + "saleaction/ajaxgetuserdeckcompatcounts",
               _ = await _().get(_, {});
-            if (
-              200 == _?.status &&
-              _.data?.success == _._.k_EResultOK &&
-              _.data?.counts
-            )
+            if (200 == _?.status && 1 == _.data?.success && _.data?.counts)
               return (this.m_counts = _.data.counts), this.m_counts;
             _ = (0, _._)(_);
           } catch (_) {
@@ -364,7 +358,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.Fragment;
       function _(_) {
@@ -386,15 +379,15 @@
                 unique_id: "reservation_bbcode_" + _,
                 reservation_package: _,
                 deposit_package: _,
-                localized_reservation_desc: (0, _._)([], _._.k_Lang_MAX, null),
+                localized_reservation_desc: (0, _._)([], 31, null),
                 localized_out_of_stock_override: (0, _._)(
                   [_ || null],
-                  _._.k_Lang_MAX,
+                  31,
                   null,
                 ),
                 localized_delivery_override_desc: (0, _._)(
                   [_ || null],
-                  _._.k_Lang_MAX,
+                  31,
                   null,
                 ),
                 override_delivery_only_out_of_stock: Boolean(_),
@@ -523,6 +516,7 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _ < 10 ? "0" + _ : _;
@@ -550,7 +544,7 @@
                     className: _.Closed,
                   },
                   _ > 0
-                    ? (0, _._)("#Giveaway_Closed", _.toLocaleString())
+                    ? (0, _._)("#Giveaway_Closed", (0, _._)(_))
                     : (0, _._)("#Giveaway_Closed_NoWinnerInfo"),
                 ),
               Boolean(!_) &&
@@ -605,7 +599,7 @@
                         {
                           className: _.WinnerCount,
                         },
-                        _.toLocaleString(),
+                        (0, _._)(_),
                       ),
                       _.createElement(
                         "div",
@@ -658,7 +652,7 @@
             {
               className: "DisplayBadgeProgress",
             },
-            _.toLocaleString(),
+            (0, _._)(_),
           );
         }
         return null;
@@ -686,7 +680,7 @@
           {
             className: "DisplayBadgeProgress",
           },
-          _.toLocaleString(),
+          (0, _._)(_),
         );
       }
       function _(_) {
@@ -762,7 +756,7 @@
             return _.createElement(
               _._,
               {
-                location: _ ? _._.Previewing : _._.Display,
+                location: _ ? 2 : 0,
               },
               _.createElement(_, {
                 event: __webpack_require__,
@@ -868,13 +862,13 @@
         const _ = Number.parseInt((0, _._)(_.args));
         let _ = _.verified;
         switch (_) {
-          case _._.k_ESteamDeckCompatibilityCategory_Playable:
+          case 2:
             _ = _.playable;
             break;
-          case _._.k_ESteamDeckCompatibilityCategory_Unsupported:
+          case 1:
             _ = _.unsupported;
         }
-        return _.createElement("span", null, Number(_).toLocaleString());
+        return _.createElement("span", null, (0, _._)(Number(_)));
       }
       function _(_) {
         const _ = (0, _._)("library");
@@ -885,16 +879,16 @@
         const _ = Number.parseInt((0, _._)(_.args));
         let _ = _.verifiedList?.length || 0;
         switch (_) {
-          case _._.k_ESteamDeckCompatibilityCategory_Playable:
+          case 2:
             _ = _.playableList?.length || 0;
             break;
-          case _._.k_ESteamDeckCompatibilityCategory_Unsupported:
+          case 1:
             _ = _.unsupportedList?.length || 0;
             break;
-          case _._.k_ESteamDeckCompatibilityCategory_Unknown:
+          case 0:
             _ = _.unknownList?.length || 0;
         }
-        return _.createElement("span", null, Number(_).toLocaleString());
+        return _.createElement("span", null, (0, _._)(Number(_)));
       }
       function _(_) {
         const _ = Number.parseInt((0, _._)(_.args)),

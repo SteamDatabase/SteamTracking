@@ -410,6 +410,12 @@ a.home_block_footer_btn:hover {
 	margin-right: auto;
 }
 
+@media screen and ( max-width: 910px ) {
+	html.responsive .home_tabs_row_ctn {
+		width: auto;
+	}
+}
+
 .home_tab {
 	display: inline-block;
 	margin-right: 0px;

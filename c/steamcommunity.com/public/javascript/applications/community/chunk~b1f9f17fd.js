@@ -25015,6 +25015,7 @@
                             bSearching: (null == _ ? void 0 : _.length) > 0,
                             bInitiallyExpanded:
                               _.facet.facet.bInitiallyExpanded,
+                            bSingleSelection: _.facet.facet.single_selection,
                           }),
                         ),
                   ),
@@ -25112,6 +25113,7 @@
               styleOverrides: _,
               bSearching: _,
               bInitiallyExpanded: _,
+              bSingleSelection: _,
             } = _,
             [_, _] = (0, _.useState)(Boolean(0 === _ || _)),
             [_, _] = (0, _.useState)(!1);
@@ -25179,6 +25181,12 @@
                 styleOverrides: _,
                 showMatchCounts: _ && !_(_.facet.facet),
                 ..._,
+                fnOnUpdateFilter: () =>
+                  ((_) => {
+                    if (_ && _.bEnabled)
+                      for (const _ of _) _ != _ && (_.bEnabled = !1);
+                    null == _ || _.fnOnUpdateFilter();
+                  })(_),
               }),
             ),
             _ &&
@@ -33045,6 +33053,7 @@
               controller_category: Number(_.eControllerCategory) || void 0,
               bUseCreatorHomeApps:
                 36 == (null == _ ? void 0 : _.GetEventType()),
+              bAllowDemos: 36 == (null == _ ? void 0 : _.GetEventType()),
             };
           let _ = null;
           try {

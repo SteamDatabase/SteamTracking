@@ -22634,6 +22634,7 @@
                             bSearching: (null == m ? void 0 : m.length) > 0,
                             bInitiallyExpanded:
                               t.facet.facet.bInitiallyExpanded,
+                            bSingleSelection: t.facet.facet.single_selection,
                           }),
                         ),
                   ),
@@ -22719,36 +22720,37 @@
               styleOverrides: l,
               bSearching: c,
               bInitiallyExpanded: d,
+              bSingleSelection: u,
             } = e,
-            [u, m] = (0, n.useState)(Boolean(0 === o || d)),
-            [_, p] = (0, n.useState)(!1);
+            [m, _] = (0, n.useState)(Boolean(0 === o || d)),
+            [p, g] = (0, n.useState)(!1);
           if (s.facetValues.every((e) => e.bHiddenBySearch)) return null;
-          let g;
+          let h;
           (null == l ? void 0 : l.facetName) ||
-            (g = {
+            (h = {
               borderBottom: "0px solid " + (a || "white"),
               color: r || "white",
             });
-          const h = (0, M.we)(
+          const S = (0, M.we)(
             M.NT.GetWithFallback(s.facet.facet.name, t).trim(),
           );
-          let S = e.nMaxFacetValues;
-          const y = s.facetValues.reduce(
+          let y = e.nMaxFacetValues;
+          const E = s.facetValues.reduce(
             (e, t) => e + (t.bDeactivated ? 1 : 0),
             0,
           );
-          S = Math.min(S, s.facetValues.length - y);
-          const E = s.facetValues.reduce(
+          y = Math.min(y, s.facetValues.length - E);
+          const b = s.facetValues.reduce(
               (e, t) =>
                 e + (t.bEnabled || t.facetValue.type === i.GE.k_EPrice ? 1 : 0),
               0,
             ),
-            b = s.facetValues.some((e) => !e.bEnabled && !e.bDeactivated);
-          S = Math.max(S, E + (b ? 1 : 0));
-          const f = s.facetValues.length > S;
-          let w = !f || _ || c ? s.facetValues : s.facetValues.slice(0, S);
-          u || c || (w = w.filter((e) => e.bEnabled));
-          const C = w.every((e) => {
+            f = s.facetValues.some((e) => !e.bEnabled && !e.bDeactivated);
+          y = Math.max(y, b + (f ? 1 : 0));
+          const w = s.facetValues.length > y;
+          let C = !w || p || c ? s.facetValues : s.facetValues.slice(0, y);
+          m || c || (C = C.filter((e) => e.bEnabled));
+          const B = C.every((e) => {
             var a;
             return (
               !Boolean(e.facetValue.subtitle) ||
@@ -22763,38 +22765,44 @@
             { className: lt.Facet },
             n.createElement(
               "div",
-              { className: lt.FacetTitleCtn, onClick: () => m(!u) },
+              { className: lt.FacetTitleCtn, onClick: () => _(!m) },
               n.createElement(
                 "div",
                 {
                   className:
                     (null == l ? void 0 : l.facetName) || lt.FacetTitle,
-                  style: g,
+                  style: h,
                 },
-                h,
+                S,
               ),
-              n.createElement(v.DK4, { angle: u ? 0 : 270 }),
+              n.createElement(v.DK4, { angle: m ? 0 : 270 }),
             ),
-            w.map((t, a) =>
+            C.map((t, a) =>
               n.createElement(St, {
-                key: "facet_" + h + "_value_" + a,
+                key: "facet_" + S + "_value_" + a,
                 facetValue: t,
                 styleOverrides: l,
-                showMatchCounts: C && !Bt(s.facet.facet),
+                showMatchCounts: B && !Bt(s.facet.facet),
                 ...e,
+                fnOnUpdateFilter: () =>
+                  ((t) => {
+                    if (u && t.bEnabled)
+                      for (const e of C) e != t && (e.bEnabled = !1);
+                    null == e || e.fnOnUpdateFilter();
+                  })(t),
               }),
             ),
-            u &&
-              f &&
+            m &&
+              w &&
               !c &&
               n.createElement(
                 "div",
                 {
                   className:
                     (null == l ? void 0 : l.showMore) || lt.FacetValueShowMore,
-                  onClick: () => p(!_),
+                  onClick: () => g(!p),
                 },
-                _
+                p
                   ? (0, M.we)("#Bbcode_Expand_ShowMore_Expanded")
                   : (0, M.we)("#Bbcode_Expand_ShowMore_Collapsed"),
               ),
@@ -29824,6 +29832,7 @@
               controller_category: Number(a.eControllerCategory) || void 0,
               bUseCreatorHomeApps:
                 36 == (null == e ? void 0 : e.GetEventType()),
+              bAllowDemos: 36 == (null == e ? void 0 : e.GetEventType()),
             };
           let w = null;
           try {

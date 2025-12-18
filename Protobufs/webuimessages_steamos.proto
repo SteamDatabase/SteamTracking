@@ -41,6 +41,7 @@ message CSteamOSManagerState {
 	optional bool is_system_tracing_available = 27;
 	optional bool is_vrs_available = 28;
 	optional bool is_wifi_driver_reload_available = 29;
+	optional bool is_password_change_supported = 30;
 }
 
 message CSteamOSManager_GetState_Request {
@@ -85,6 +86,21 @@ message CSteamOSManager_RefreshScreenReaderAutoLocale_Request {
 }
 
 message CSteamOSManager_RefreshScreenReaderAutoLocale_Response {
+}
+
+message CSteamOS_SetUserPassword_Request {
+	optional string current_password = 1;
+	optional string new_password = 2;
+}
+
+message CSteamOS_SetUserPassword_Response {
+}
+
+message CSteamOS_GetUserHasPassword_Request {
+}
+
+message CSteamOS_GetUserHasPassword_Response {
+	optional bool has_password = 1;
 }
 
 message CSteamOSSLSPlugin {
@@ -133,6 +149,8 @@ service SteamOSManager {
 	rpc ApplyMandatoryUpdate (.CSteamOSManager_ApplyMandatoryUpdate_Request) returns (.CSteamOSManager_ApplyMandatoryUpdate_Response);
 	rpc FactoryReset (.CSteamOSManager_FactoryReset_Request) returns (.CSteamOSManager_FactoryReset_Response);
 	rpc RefreshScreenReaderAutoLocale (.CSteamOSManager_RefreshScreenReaderAutoLocale_Request) returns (.CSteamOSManager_RefreshScreenReaderAutoLocale_Response);
+	rpc SetUserPassword (.CSteamOS_SetUserPassword_Request) returns (.CSteamOS_SetUserPassword_Response);
+	rpc GetUserHasPassword (.CSteamOS_GetUserHasPassword_Request) returns (.CSteamOS_GetUserHasPassword_Response);
 }
 
 service SteamOSSLS {

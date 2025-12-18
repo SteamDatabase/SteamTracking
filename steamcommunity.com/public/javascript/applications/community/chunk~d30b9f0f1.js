@@ -204,6 +204,7 @@
         FacetValueFilterDisplayCtn: "_2Xo5CAmME5d9LyBk_BrsRP",
         FacetName: "_39gQoPlhC5SrPyRJ4KoT5C",
         FacetFilterDisplayCtn: "_3_YHdJM-bvnd1QlFxkO8PW",
+        FacetFilterDisplayCheckboxRow: "_3maFYi_d5UEpnOtSzwwEIJ",
         FacetValueFilterDescCtn: "WSCVddrRS1CwquFgRA1s8",
       };
     },
@@ -1997,16 +1998,15 @@
             ((e.internal_section_data =
               "vo_internal" === t ? { ..._.p6 } : null),
             (e.section_type = t),
-            (0, _.ye)(e.section_type) && void 0 === e.capsules_per_row_array
+            (0, _.ye)(e.section_type)
               ? ((e.capsules_per_row_array = [2, 3, 4, 3]),
                 (e.carousel_rows = 2),
                 (e.show_as_carousel = !0))
-              : "links" == t && null == e.capsules_per_row_array
+              : "links" == t
                 ? ((e.capsules_per_row_array = [1]),
                   (e.carousel_rows = 1),
                   (e.show_as_carousel = !0))
                 : "creator_list_of_lists" == t &&
-                  null == e.capsules_per_row_array &&
                   ((e.capsules_per_row_array = [4]),
                   (e.carousel_rows = 1),
                   (e.show_as_carousel = !0)),
@@ -10146,14 +10146,36 @@
                 i();
               },
             }),
-            r.createElement(S.Yh, {
-              label: (0, A.we)("#FacetedBrowseEditor_LogicalAND"),
-              tooltip: (0, A.we)("#FacetedBrowseEditor_LogicalAND_Tooltip"),
-              checked: a.logical_and,
-              onChange: (e) => {
-                (a.logical_and = e), i();
-              },
-            }),
+            r.createElement(
+              "div",
+              { className: G.FacetFilterDisplayCheckboxRow },
+              r.createElement(S.Yh, {
+                label: (0, A.we)("#FacetedBrowseEditor_LogicalAND"),
+                tooltip: (0, A.we)("#FacetedBrowseEditor_LogicalAND_Tooltip"),
+                checked: a.logical_and,
+                onChange: (e) => {
+                  (a.logical_and = e), i();
+                },
+              }),
+              r.createElement(S.Yh, {
+                label: (0, A.we)("#FacetedBrowseEditor_InitiallyExpanded"),
+                tooltip: (0, A.we)(
+                  "#FacetedBrowseEditor_InitiallyExpanded_Tooltip",
+                ),
+                checked: a.bInitiallyExpanded,
+                onChange: (e) => {
+                  (a.bInitiallyExpanded = e), i();
+                },
+              }),
+              r.createElement(S.Yh, {
+                label: (0, A.we)("#FacetedBrowseEditor_SingleSelect"),
+                tooltip: (0, A.we)("#FacetedBrowseEditor_SingleSelect_Tooltip"),
+                checked: a.single_selection,
+                onChange: (e) => {
+                  (a.single_selection = e), i();
+                },
+              }),
+            ),
             r.createElement(P, {
               language: t,
               facet: a,
@@ -32363,6 +32385,7 @@
                 name: ["#AppTypeLabelTitle"],
                 facetValues: [],
                 logical_and: !1,
+                single_selection: !0,
               },
               a = [
                 "game",
@@ -32433,7 +32456,12 @@
             e.push(t);
           })(t),
           (function (e) {
-            const t = { name: ["#Platform"], facetValues: [], logical_and: !1 };
+            const t = {
+              name: ["#Platform"],
+              facetValues: [],
+              logical_and: !1,
+              single_selection: !0,
+            };
             t.facetValues.push({
               name: ["#Platform_Windows"],
               type: l.GE.k_ESaleTagFilter,

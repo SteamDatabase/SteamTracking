@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10323073";
+var CLSTAMP = "10328808";
 (() => {
   var e,
     t,
@@ -10,7 +10,7 @@ var CLSTAMP = "10323073";
     r = {
       9437: (e, t, n) => {
         var s = {
-          "./friendsui_arabic.json": [83784, 6518],
+          "./friendsui_arabic.json": [61403, 6518],
           "./friendsui_brazilian.json": [18522, 4154],
           "./friendsui_bulgarian.json": [96737, 6385],
           "./friendsui_czech.json": [60347, 7487],
@@ -56,7 +56,7 @@ var CLSTAMP = "10323073";
       },
       48516: (e, t, n) => {
         var s = {
-          "./friendsui_arabic.json": [83784, 6518],
+          "./friendsui_arabic.json": [61403, 6518],
           "./friendsui_brazilian.json": [18522, 4154],
           "./friendsui_bulgarian.json": [96737, 6385],
           "./friendsui_czech.json": [60347, 7487],
@@ -100,9 +100,9 @@ var CLSTAMP = "10323073";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      11502: (e, t, n) => {
+      5162: (e, t, n) => {
         "use strict";
-        n(16718);
+        n(93031);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -1722,7 +1722,7 @@ var CLSTAMP = "10323073";
               })();
           });
       },
-      16718: (e, t, n) => {
+      93031: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1993,7 +1993,7 @@ var CLSTAMP = "10323073";
         6208: "5d8ef089bd3ab7c3a618",
         6239: "833129037f6d5046e180",
         6385: "28aa4268c8991e8c7a48",
-        6518: "7fe5f05b9fed4ee70450",
+        6518: "dbfbb4e466ff53241f2a",
         6523: "d261475cd23f7a58ac1e",
         6562: "33239059a755d28e60a0",
         6609: "bf20057d0ca6372be58f",
@@ -2151,6 +2151,6 @@ var CLSTAMP = "10323073";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(11502));
+  var c = o.O(void 0, [1068], () => o(5162));
   c = o.O(c);
 })();

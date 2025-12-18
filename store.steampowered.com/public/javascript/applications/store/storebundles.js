@@ -46,7 +46,7 @@
     },
     54393: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => g });
+      r.r(t), r.d(t, { default: () => E });
       var n,
         l = r(90626),
         a = r(57876),
@@ -63,8 +63,9 @@
         _ = r(82097),
         G = r(63090),
         I = r(30894),
-        b = r(94095);
-      function g(e) {
+        b = r(94095),
+        g = r(22797);
+      function E(e) {
         const {
             match: {
               params: { appid: t },
@@ -83,11 +84,11 @@
           l.createElement(
             d.Ay,
             { method: "bundlelist" },
-            l.createElement(u.tH, null, l.createElement(h, { storeItem: n })),
+            l.createElement(u.tH, null, l.createElement(L, { storeItem: n })),
           )
         );
       }
-      function h(e) {
+      function L(e) {
         const { storeItem: t } = e,
           [r, u] = (0, l.useState)(n.k_BundleSort_Price),
           i = (function (e) {
@@ -151,7 +152,11 @@
             }
             return null;
           })(r);
-        if (!t || !i) return null;
+        if (!t || !i)
+          return l.createElement(g.t, {
+            string: (0, m.we)("#Loading"),
+            position: "center",
+          });
         const c =
           t.GetAssets().GetLibraryHeroURL_2x() ??
           t.GetAssets().GetLibraryHeroURL() ??
@@ -172,7 +177,7 @@
           l.createElement(
             "div",
             { className: (0, o.A)("page_content") },
-            l.createElement(w, { storeItem: t, eBundleSort: r, fnSetSort: u }),
+            l.createElement(N, { storeItem: t, eBundleSort: r, fnSetSort: u }),
             i.rgCompleteTheSetBundleIDList?.length > 0 &&
               l.createElement(
                 "div",
@@ -187,7 +192,7 @@
                   { className: B().Subtitle },
                   (0, m.we)("#BundleList_CompleteTheSetSubtitle"),
                 ),
-                l.createElement(E, {
+                l.createElement(h, {
                   appId: t.GetAppID(),
                   rgBundleIDs: i.rgCompleteTheSetBundleIDList,
                 }),
@@ -206,7 +211,7 @@
                   { className: B().Subtitle },
                   (0, m.we)("#BundleList_MustPurchaseAsSetSubtitle"),
                 ),
-                l.createElement(E, {
+                l.createElement(h, {
                   appId: t.GetAppID(),
                   rgBundleIDs: i.rgMustPurchaseTogetherBundleIDList,
                 }),
@@ -225,7 +230,7 @@
                   { className: B().Subtitle },
                   (0, m.we)("#BundleList_AllInLibrarySubtitle"),
                 ),
-                l.createElement(E, {
+                l.createElement(h, {
                   appId: t.GetAppID(),
                   rgBundleIDs: i.rgOwnedBundleIDList,
                 }),
@@ -233,13 +238,13 @@
           ),
         );
       }
-      function E(e) {
+      function h(e) {
         const { rgBundleIDs: t, appId: r } = e;
         return l.createElement(
           "div",
           { className: B().BundlesList },
           t.map((e) =>
-            l.createElement(L, {
+            l.createElement(w, {
               key: "bundleDisplay_" + e,
               bundleId: e,
               appId: r,
@@ -247,7 +252,7 @@
           ),
         );
       }
-      function L(e) {
+      function w(e) {
         const { bundleId: t, appId: r } = e;
         return l.createElement(
           "div",
@@ -260,7 +265,7 @@
           }),
         );
       }
-      function w(e) {
+      function N(e) {
         const { storeItem: t, eBundleSort: r, fnSetSort: a } = e;
         return l.createElement(
           "div",

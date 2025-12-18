@@ -1,14 +1,6 @@
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-var _;
-_ ??= new Set();
-async function _() {
-  await Promise.all(_);
-}
-function _(_) {
-  (_ ??= new Set()), _.add(_);
-}
 var _ = _(_(), 1);
 var _ = [
     "sc_schinese",
@@ -104,6 +96,14 @@ function _(_, ..._) {
       })),
     _
   );
+}
+var _;
+_ ??= new Set();
+async function _() {
+  await Promise.all(_);
+}
+function _(_) {
+  (_ ??= new Set()), _.add(_);
 }
 function _(_) {
   let _ = new Map();

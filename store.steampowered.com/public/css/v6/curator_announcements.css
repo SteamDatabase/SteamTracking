@@ -14,7 +14,7 @@ body.v6 h2.announcement_top_title{
 
 .creator_announcement_container {
 	z-index: 2;
-	margin: 20px 8px 20px 8px;
+	margin: 20px 0;
 	grid-area: announcements;
 }
 
@@ -49,12 +49,14 @@ body.v6 h2.announcement_top_title{
 
 .creator_announcement_list{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 
 .creator_announcement_list a {
 	display: block;
 	padding: 6px;
+	flex-basis: 0;
+	flex-grow: 1;
 }
 .creator_announcement_list a:hover {
 	background: rgba(255,255,255,0.2);
@@ -82,30 +84,12 @@ body.v6 h2.announcement_top_title{
 	position:relative;
 }
 
-
-.creator_announcement_browse_adjustment{
-    z-index: 2;
-    position: relative;
-}
-.creator_announcement_browse_adjustment:last-child {
-	z-index: 1;
-}
-
-.creator_announcement_browse_adjustment .page_content {
-	position: relative;
-	z-index: 3;
-}
-
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1300px) {
 	html .creator_announcement_adjustment.not(.background_header_ctn) {
 		position: static;
 		left:0px;
 	}
 
-	html .creator_announcement_link {
-		flex-basis: 0;
-		flex-grow: 1;
-	}
 	html .creator_announcement_list .creator_announcement_link:nth-child(4) {
 		display: none;
 	}

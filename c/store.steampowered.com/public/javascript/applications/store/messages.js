@@ -4429,6 +4429,7 @@
             }),
             [_],
           ),
+          _ = (0, _._)(),
           {
             bOwnsApp: _,
             bWishlistApp: _,
@@ -4446,11 +4447,13 @@
               };
             }
             return _;
-          }, [_, __webpack_require__]),
-          _ = _
-            ? "steam://nav/games/details/" + _.GetID()
-            : "steam://openurl/" + _.GetStorePageURL(),
-          _ = (0, _._)(_, 4);
+          }, [_, __webpack_require__]);
+        let _ = "steam://openurl/" + _.GetStorePageURL();
+        _ &&
+          (_ = _
+            ? `steam://open/games/details/${_.GetID()}`
+            : `steam://nav/games/details/${_.GetID()}`);
+        const _ = (0, _._)(_, 4, _);
         return _.createElement(
           "div",
           {

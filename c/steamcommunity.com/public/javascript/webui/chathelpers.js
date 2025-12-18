@@ -8,7 +8,7 @@ var CLSTAMP = "steamdb";
     _ = {
       chunkid: (module, module_exports, __webpack_require__) => {
         var _ = {
-          "./friendsui_arabic.json": [83784, 6518],
+          "./friendsui_arabic.json": [61403, 6518],
           "./friendsui_brazilian.json": [18522, 4154],
           "./friendsui_bulgarian.json": [96737, 6385],
           "./friendsui_czech.json": [60347, 7487],
@@ -56,7 +56,7 @@ var CLSTAMP = "steamdb";
       },
       chunkid: (module, module_exports, __webpack_require__) => {
         var _ = {
-          "./friendsui_arabic.json": [83784, 6518],
+          "./friendsui_arabic.json": [61403, 6518],
           "./friendsui_brazilian.json": [18522, 4154],
           "./friendsui_bulgarian.json": [96737, 6385],
           "./friendsui_czech.json": [60347, 7487],
@@ -2136,7 +2136,7 @@ var CLSTAMP = "steamdb";
         6208: "5d8ef089bd3ab7c3a618",
         6239: "833129037f6d5046e180",
         6385: "28aa4268c8991e8c7a48",
-        6518: "7fe5f05b9fed4ee70450",
+        6518: "dbfbb4e466ff53241f2a",
         6523: "d261475cd23f7a58ac1e",
         6562: "33239059a755d28e60a0",
         6609: "bf20057d0ca6372be58f",
@@ -2303,6 +2303,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [1068], () => _(11502));
+  var _ = _._(void 0, [1068], () => _(5162));
   _ = _._(_);
 })();

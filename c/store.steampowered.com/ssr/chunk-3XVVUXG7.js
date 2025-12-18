@@ -1948,7 +1948,6 @@ var _ = class {
               : (_ - 1) * (2 * _ - 2) * (2 * _ - 2) + 1;
           };
           break;
-        case "sine":
         default:
           _ = function (_) {
             return 0.5 - Math.cos(_ * Math._) / 2;

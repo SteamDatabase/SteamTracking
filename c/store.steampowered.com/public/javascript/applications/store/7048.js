@@ -12058,6 +12058,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "DEBUG_UseNewGameHover";
       function _() {
@@ -12342,21 +12343,21 @@
                 className: _().ReviewScoreCount,
                 "aria-label": (0, _._)(
                   "#GameHover_UserReviewCount",
-                  _.review_count.toLocaleString(),
+                  _.review_count.toLocaleString((0, _._)()),
                 ),
               },
               "(",
               __webpack_require__
-                ? "(" + _.review_count.toLocaleString() + ")"
+                ? "(" + _.review_count.toLocaleString((0, _._)()) + ")"
                 : _
                   ? (0, _._)(
                       "#GameHover_UserReviewCount_Lang",
-                      _.review_count.toLocaleString(),
+                      _.review_count.toLocaleString((0, _._)()),
                       _,
                     )
                   : (0, _._)(
                       "#GameHover_UserReviewCount",
-                      _.review_count.toLocaleString(),
+                      _.review_count.toLocaleString((0, _._)()),
                     ),
               ")",
             ),

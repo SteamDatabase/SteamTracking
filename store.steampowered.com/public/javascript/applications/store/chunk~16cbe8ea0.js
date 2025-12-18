@@ -9799,7 +9799,7 @@
     },
     44736: (e, t, r) => {
       "use strict";
-      r.d(t, { Xk: () => oe, ac: () => K, hh: () => H });
+      r.d(t, { Xk: () => le, ac: () => Y, hh: () => K });
       var i = r(22837),
         n = r(81393),
         a = r(64753),
@@ -10312,14 +10312,15 @@
       var P = r(95377),
         q = r(20194),
         L = r(41735),
-        V = r.n(L);
-      const H = "America/Los_Angeles";
-      function K(e) {
+        V = r.n(L),
+        H = r(3049);
+      const K = "America/Los_Angeles";
+      function Y(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
           i = (0, u.j$)(e.args, "group_id"),
           n = Number.parseInt(i),
-          a = (0, o.q3)(() => ae(t, n));
+          a = (0, o.q3)(() => se(t, n));
         return a
           ? t.clanSteamID.GetAccountID() != (0, b.H)()
             ? r
@@ -10328,9 +10329,9 @@
             : m.createElement(
                 m.Fragment,
                 null,
-                m.createElement(Y, { eventModel: t }),
-                m.createElement(Z, { groupData: a, eventModel: t }),
-                m.createElement(ne, { eventModel: t }),
+                m.createElement(Q, { eventModel: t }),
+                m.createElement(J, { groupData: a, eventModel: t }),
+                m.createElement(ae, { eventModel: t }),
               )
           : r
             ? m.createElement(
@@ -10341,13 +10342,13 @@
               )
             : null;
       }
-      function Y(e) {
+      function Q(e) {
         const { eventModel: t } = e;
         return (0, o.q3)(() => h.Get().BHasSomeRegistration())
-          ? m.createElement(Q, { eventModel: t, accountID: s.iA.accountid })
+          ? m.createElement(X, { eventModel: t, accountID: s.iA.accountid })
           : null;
       }
-      function Q(e) {
+      function X(e) {
         const { eventModel: t, accountID: r } = e,
           i = (function (e, t) {
             const r = (0, q.I)({
@@ -10385,7 +10386,7 @@
             ),
         );
       }
-      function X() {
+      function $() {
         const e = (0, A.Tc)("promotion_operation_token", "application_config");
         (0, n.wT)(
           Boolean(e) || !s.iA.accountid,
@@ -10396,7 +10397,7 @@
           [e],
         );
       }
-      function $() {
+      function Z() {
         const [e] = (0, m.useState)(() =>
           Number.parseInt(
             (0, A.Tc)("meet_steam_visibility_id", "application_config"),
@@ -10404,18 +10405,18 @@
         );
         return e;
       }
-      function Z(e) {
+      function J(e) {
         const { groupData: t, eventModel: r } = e,
-          i = X(),
+          i = $(),
           n = (0, D.MU)(),
-          a = $(),
+          a = Z(),
           l = w(),
           c = (0, _.my)(i, r.clanSteamID.GetAccountID(), r.GID),
           u = (0, m.useMemo)(
             () => t?.sessions?.sort((e, t) => e.rtime_start - t.rtime_start),
             [t?.sessions],
           ),
-          d = se(),
+          d = oe(),
           p = (0, o.q3)(() =>
             u?.reduce(
               (e, r) =>
@@ -10442,7 +10443,7 @@
           !n
           ? null
           : m.createElement(
-              J,
+              ee,
               { groupData: t },
               u?.map((e, r) => {
                 const i = c.data.find(
@@ -10456,7 +10457,7 @@
                   m.createElement(
                     "div",
                     { className: k().SessionColumnCtn },
-                    m.createElement(te, {
+                    m.createElement(re, {
                       sessionData: e,
                       onClick: () =>
                         d(() =>
@@ -10470,12 +10471,12 @@
                       bAllowedToRegisterIfFull: f,
                     }),
                   ),
-                  a && m.createElement(ie, null),
+                  a && m.createElement(ne, null),
                 );
               }),
             );
       }
-      function J(e) {
+      function ee(e) {
         const { groupData: t, children: r } = e,
           n = (0, i.sf)(F.TS.LANGUAGE),
           a = z.NT.GetWithFallback(t?.localized_session_title, n),
@@ -10526,7 +10527,7 @@
             )
           : null;
       }
-      function ee(e, t, r, i) {
+      function te(e, t, r, i) {
         const n = r || (0 === e && t > 0) || 1 === e || 2 === e || 3 === e;
         let a = null,
           s = null;
@@ -10545,7 +10546,7 @@
           { bEnabled: n, strStatusClass: s, strStatusToken: a }
         );
       }
-      function te(e) {
+      function re(e) {
         const {
             sessionData: t,
             onClick: r,
@@ -10555,7 +10556,7 @@
           } = e,
           s = (0, o.q3)(() => t.max_capacity),
           l = Math.max(0, s - (i || 0)),
-          { strStatusClass: c, strStatusToken: u, bEnabled: d } = ee(n, l, a),
+          { strStatusClass: c, strStatusToken: u, bEnabled: d } = te(n, l, a),
           { sDisplayTimeZone: p, rtime_start: g, rtime_end: f } = (0, _._t)(t),
           y = (0, _.rF)(g, p),
           B = (0, _.Mr)(g, f, p);
@@ -10580,14 +10581,14 @@
               m.createElement("div", { className: k().Title }, y),
               m.createElement("div", { className: k().TimeFrame }, B),
             ),
-            m.createElement(re, {
+            m.createElement(ie, {
               nAvailableSpace: l,
               bAllowedToRegisterIfFull: a,
             }),
           ),
         );
       }
-      function re(e) {
+      function ie(e) {
         const { nAvailableSpace: t, bAllowedToRegisterIfFull: r } = e;
         return m.createElement(
           m.Fragment,
@@ -10606,16 +10607,16 @@
                 : m.createElement(
                     "div",
                     { className: k().MaxSize },
-                    (0, z.Yp)("#MeetSteam_Spot", t.toLocaleString()),
+                    (0, z.Yp)("#MeetSteam_Spot", t.toLocaleString((0, H.J)())),
                   ),
               " ",
             ),
         );
       }
-      function ie() {
+      function ne() {
         return m.createElement("div", { className: k().InstanceDivider }, "◆");
       }
-      function ne(e) {
+      function ae(e) {
         const { eventModel: t } = e,
           r = "complete-registration-marker",
           { refIsLast: i, bIsLast: n } = (function (e) {
@@ -10629,7 +10630,7 @@
               { refIsLast: i, bIsLast: t }
             );
           })(r),
-          l = X(),
+          l = $(),
           [c, u] = m.useState(!1),
           [d, p] = m.useState(!1);
         !(function (e, t, r, i) {
@@ -10641,7 +10642,7 @@
         })(l, s.iA.accountid, t.clanSteamID.GetAccountID(), t.GID);
         const g = (0, _.my)(l, t.clanSteamID.GetAccountID(), t.GID),
           [f, y, B] = (0, a.uD)(),
-          b = se(),
+          b = oe(),
           S = w(),
           M = c || S,
           C = (0, o.q3)(() => h.Get().BHaveSelectionsChanged()),
@@ -10652,7 +10653,7 @@
               .Get()
               .GetSelectedGroups()
               .reduce((e, r) => {
-                const i = ae(t, r),
+                const i = se(t, r),
                   n = h.Get().GetSelection(i.group_id),
                   a = i.sessions?.find((e) => e.id == n)?.max_per_team ?? 0;
                 return Math.max(e, a);
@@ -10733,11 +10734,11 @@
           )
         );
       }
-      function ae(e, t) {
+      function se(e, t) {
         const r = e?.jsondata?.meet_steam_groups || [];
         return r?.find((e) => e.group_id == t);
       }
-      function se() {
+      function oe() {
         return M.KN.Get().BIsUserLoggedIn()
           ? (e) => e()
           : () =>
@@ -10753,7 +10754,7 @@
                 window,
               );
       }
-      function oe(e) {
+      function le(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
           i = (0, u.j$)(e.args, "schedule_id"),
@@ -10772,8 +10773,8 @@
             : m.createElement(
                 m.Fragment,
                 null,
-                m.createElement(le, { scheduleData: a, eventModel: t }),
-                m.createElement(ne, { eventModel: t }),
+                m.createElement(ce, { scheduleData: a, eventModel: t }),
+                m.createElement(ae, { eventModel: t }),
               )
           : r
             ? m.createElement(
@@ -10784,9 +10785,9 @@
               )
             : null;
       }
-      function le(e) {
+      function ce(e) {
         const { eventModel: t } = e,
-          r = X(),
+          r = $(),
           i = w(),
           n = (0, _.my)(r, t.clanSteamID.GetAccountID(), t.GID),
           a = (0, _.mG)(r, t.clanSteamID.GetAccountID(), t.GID, s.iA.accountid);
@@ -10802,7 +10803,7 @@
             position: "center",
             string: (0, z.we)("#Loading"),
           });
-        return m.createElement(ce, {
+        return m.createElement(me, {
           ...e,
           fnOnClick: (e, t) => {
             const r = h.Get().GetSelection(e) == t;
@@ -10812,7 +10813,7 @@
           bAllowedToRegisterIfFull: a?.data?.allow_registration_if_full,
         });
       }
-      function ce(e) {
+      function me(e) {
         const {
             eventModel: t,
             scheduleData: r,
@@ -10821,10 +10822,10 @@
             rgAvailability: a,
           } = e,
           s = (0, D.HN)(),
-          l = $(),
+          l = Z(),
           [u, d, p] = (0, o.q3)(() => [
             t.jsondata.meet_steam_groups,
-            r.in_person_time_zone ?? H,
+            r.in_person_time_zone ?? K,
             r.location_type,
           ]),
           [_, g, f] = (0, m.useMemo)(() => {
@@ -10869,7 +10870,7 @@
                 return m.createElement(
                   "div",
                   { key: "day_" + e, className: k().SingleDayCtn },
-                  m.createElement(me, {
+                  m.createElement(ue, {
                     scheduleData: r,
                     bAllowedToRegisterIfFull: i,
                     fnOnClick: n,
@@ -10886,7 +10887,7 @@
               "No Meet Steam Events; please create some first.",
             );
       }
-      function me(e) {
+      function ue(e) {
         const {
             scheduleData: t,
             rgDayGroupSessions: r,
@@ -10913,7 +10914,7 @@
           i
             .filter((e) => e.rtime_end <= o[0][0].session.rtime_start)
             .map((e) =>
-              m.createElement(ue, {
+              m.createElement(de, {
                 key: `breaks_${t.schedule_id}_${e.break_id}`,
                 scheduleData: t,
                 breakSession: e,
@@ -10929,7 +10930,7 @@
             return m.createElement(
               m.Fragment,
               { key: "start_" + e[0].session.rtime_start },
-              m.createElement(de, {
+              m.createElement(pe, {
                 bAllowedToRegisterIfFull: n,
                 fnOnClick: a,
                 scheduleData: t,
@@ -10937,7 +10938,7 @@
                 rgAvailability: s,
               }),
               l.map((e) =>
-                m.createElement(ue, {
+                m.createElement(de, {
                   key: `breaks_${t.schedule_id}_${e.break_id}`,
                   scheduleData: t,
                   breakSession: e,
@@ -10950,7 +10951,7 @@
               (e) => e.rtime_start >= o[o.length - 1][0].session.rtime_end,
             )
             .map((e) =>
-              m.createElement(ue, {
+              m.createElement(de, {
                 key: `breaks_${t.schedule_id}_${e.break_id}`,
                 scheduleData: t,
                 breakSession: e,
@@ -10958,7 +10959,7 @@
             ),
         );
       }
-      function ue(e) {
+      function de(e) {
         const { scheduleData: t, breakSession: r } = e,
           n = (0, i.sf)(F.TS.LANGUAGE),
           a = (0, o.q3)(
@@ -10976,11 +10977,11 @@
         return m.createElement(
           "div",
           { className: k().ScheduleRow },
-          m.createElement(pe, { session: s }),
+          m.createElement(_e, { session: s }),
           m.createElement("div", null, a),
         );
       }
-      function de(e) {
+      function pe(e) {
         const {
           scheduleData: t,
           rgSlotSessions: r,
@@ -10991,12 +10992,12 @@
         return m.createElement(
           "div",
           { className: k().ScheduleRow },
-          m.createElement(pe, { session: r[0].session }),
+          m.createElement(_e, { session: r[0].session }),
           m.createElement(
             "div",
             { className: k().ScheduleSessionsColumn },
             r.map((e) =>
-              m.createElement(_e, {
+              m.createElement(ge, {
                 key: `entry_${e.group.group_id}_${e.session.id}`,
                 bAllowedToRegisterIfFull: i,
                 fnOnClick: n,
@@ -11007,7 +11008,7 @@
           ),
         );
       }
-      function pe(e) {
+      function _e(e) {
         const { session: t } = e,
           { sDisplayTimeZone: r, rtime_start: i, rtime_end: n } = (0, _._t)(t),
           a = (0, _.rF)(i, r),
@@ -11019,7 +11020,7 @@
           m.createElement("div", { className: k().Timezone }, a),
         );
       }
-      function _e(e) {
+      function ge(e) {
         const {
             session: t,
             bAllowedToRegisterIfFull: r,
@@ -11061,7 +11062,7 @@
             strStatusClass: M,
             strStatusToken: C,
             bEnabled: I,
-          } = ee(y, w, r, B),
+          } = te(y, w, r, B),
           A =
             B && b
               ? t.group.sessions.find((e) => e.id == b)?.rtime_start
@@ -11111,7 +11112,7 @@
                 ),
               ),
             ),
-            m.createElement(re, {
+            m.createElement(ie, {
               nAvailableSpace: w,
               bAllowedToRegisterIfFull: r,
             }),
@@ -11820,7 +11821,7 @@
     },
     95377: (e, t, r) => {
       "use strict";
-      r.d(t, { us: () => Br, fh: () => br });
+      r.d(t, { us: () => br, fh: () => Sr });
       var i = r(93980),
         n = r(42780),
         a = r(8527),
@@ -13614,42 +13615,43 @@
         Vt = r(69484),
         Ht = r(33280),
         Kt = r.n(Ht),
-        Yt = r(44165);
-      const Qt = {};
-      (Qt.arabic = () => r.e(6696).then(r.t.bind(r, 6696, 19))),
-        (Qt.brazilian = () => r.e(8906).then(r.t.bind(r, 58906, 19))),
-        (Qt.bulgarian = () => r.e(3473).then(r.t.bind(r, 53473, 19))),
-        (Qt.czech = () => r.e(3899).then(r.t.bind(r, 83899, 19))),
-        (Qt.danish = () => r.e(4925).then(r.t.bind(r, 84925, 19))),
-        (Qt.dutch = () => r.e(9902).then(r.t.bind(r, 69902, 19))),
-        (Qt.english = () => r.e(8335).then(r.t.bind(r, 80716, 19))),
-        (Qt.finnish = () => r.e(1663).then(r.t.bind(r, 81663, 19))),
-        (Qt.french = () => r.e(8484).then(r.t.bind(r, 48484, 19))),
-        (Qt.german = () => r.e(6810).then(r.t.bind(r, 66810, 19))),
-        (Qt.greek = () => r.e(3744).then(r.t.bind(r, 13744, 19))),
-        (Qt.hungarian = () => r.e(2101).then(r.t.bind(r, 62101, 19))),
-        (Qt.indonesian = () => r.e(8948).then(r.t.bind(r, 68948, 19))),
-        (Qt.italian = () => r.e(2916).then(r.t.bind(r, 2916, 19))),
-        (Qt.japanese = () => r.e(195).then(r.t.bind(r, 40195, 19))),
-        (Qt.koreana = () => r.e(4259).then(r.t.bind(r, 84259, 19))),
-        (Qt.latam = () => r.e(4475).then(r.t.bind(r, 24475, 19))),
-        (Qt.norwegian = () => r.e(6884).then(r.t.bind(r, 36884, 19))),
-        (Qt.polish = () => r.e(5269).then(r.t.bind(r, 15269, 19))),
-        (Qt.portuguese = () => r.e(6865).then(r.t.bind(r, 96865, 19))),
-        (Qt.romanian = () => r.e(1391).then(r.t.bind(r, 71391, 19))),
-        (Qt.russian = () => r.e(4933).then(r.t.bind(r, 64933, 19))),
-        (Qt.schinese = () => r.e(4768).then(r.t.bind(r, 44768, 19))),
-        (Qt.spanish = () => r.e(876).then(r.t.bind(r, 20876, 19))),
-        (Qt.swedish = () => r.e(5181).then(r.t.bind(r, 75181, 19))),
-        (Qt.tchinese = () => r.e(9779).then(r.t.bind(r, 89779, 19))),
-        (Qt.thai = () => r.e(3732).then(r.t.bind(r, 98970, 19))),
-        (Qt.turkish = () => r.e(7996).then(r.t.bind(r, 87996, 19))),
-        (Qt.ukrainian = () => r.e(7306).then(r.t.bind(r, 47306, 19))),
-        (Qt.vietnamese = () => r.e(2539).then(r.t.bind(r, 72539, 19)));
-      const Xt = (0, r(42475).l)(async function (e) {
-          if (Qt[e]) return Qt[e]();
+        Yt = r(44165),
+        Qt = r(6083);
+      const Xt = {};
+      (Xt.arabic = () => r.e(6696).then(r.t.bind(r, 6696, 19))),
+        (Xt.brazilian = () => r.e(8906).then(r.t.bind(r, 58906, 19))),
+        (Xt.bulgarian = () => r.e(3473).then(r.t.bind(r, 53473, 19))),
+        (Xt.czech = () => r.e(3899).then(r.t.bind(r, 83899, 19))),
+        (Xt.danish = () => r.e(4925).then(r.t.bind(r, 84925, 19))),
+        (Xt.dutch = () => r.e(9902).then(r.t.bind(r, 69902, 19))),
+        (Xt.english = () => r.e(8335).then(r.t.bind(r, 80716, 19))),
+        (Xt.finnish = () => r.e(1663).then(r.t.bind(r, 81663, 19))),
+        (Xt.french = () => r.e(8484).then(r.t.bind(r, 48484, 19))),
+        (Xt.german = () => r.e(6810).then(r.t.bind(r, 66810, 19))),
+        (Xt.greek = () => r.e(3744).then(r.t.bind(r, 13744, 19))),
+        (Xt.hungarian = () => r.e(2101).then(r.t.bind(r, 62101, 19))),
+        (Xt.indonesian = () => r.e(8948).then(r.t.bind(r, 68948, 19))),
+        (Xt.italian = () => r.e(2916).then(r.t.bind(r, 2916, 19))),
+        (Xt.japanese = () => r.e(195).then(r.t.bind(r, 40195, 19))),
+        (Xt.koreana = () => r.e(4259).then(r.t.bind(r, 84259, 19))),
+        (Xt.latam = () => r.e(4475).then(r.t.bind(r, 24475, 19))),
+        (Xt.norwegian = () => r.e(6884).then(r.t.bind(r, 36884, 19))),
+        (Xt.polish = () => r.e(5269).then(r.t.bind(r, 15269, 19))),
+        (Xt.portuguese = () => r.e(6865).then(r.t.bind(r, 96865, 19))),
+        (Xt.romanian = () => r.e(1391).then(r.t.bind(r, 71391, 19))),
+        (Xt.russian = () => r.e(4933).then(r.t.bind(r, 64933, 19))),
+        (Xt.schinese = () => r.e(4768).then(r.t.bind(r, 44768, 19))),
+        (Xt.spanish = () => r.e(876).then(r.t.bind(r, 20876, 19))),
+        (Xt.swedish = () => r.e(5181).then(r.t.bind(r, 75181, 19))),
+        (Xt.tchinese = () => r.e(9779).then(r.t.bind(r, 89779, 19))),
+        (Xt.thai = () => r.e(3732).then(r.t.bind(r, 98970, 19))),
+        (Xt.turkish = () => r.e(7996).then(r.t.bind(r, 87996, 19))),
+        (Xt.ukrainian = () => r.e(7306).then(r.t.bind(r, 47306, 19))),
+        (Xt.vietnamese = () => r.e(2539).then(r.t.bind(r, 72539, 19)));
+      const $t = (0, r(42475).l)(async function (e) {
+          if (Xt[e]) return Xt[e]();
         }),
-        $t = {
+        Zt = {
           PerYear: 31536e3,
           PerMonth: 2628e3,
           PerWeek: 604800,
@@ -13657,8 +13659,8 @@
           PerHour: 3600,
           PerMinute: 60,
         };
-      var Zt;
-      function Jt(e) {
+      var Jt;
+      function er(e) {
         const t = e.context.event,
           r = e.context.showErrorInfo,
           i = (0, o.j$)(e.args, "poll_id"),
@@ -13681,10 +13683,10 @@
         return s.createElement(
           st.tH,
           null,
-          s.createElement(er, { userPollDef: a, lang: l, eventModel: t }),
+          s.createElement(tr, { userPollDef: a, lang: l, eventModel: t }),
         );
       }
-      function er(e) {
+      function tr(e) {
         const { eventModel: t, userPollDef: r, lang: i } = e,
           { userPollData: n, ...a } = Nt(
             t.clanSteamID,
@@ -13753,7 +13755,7 @@
             }
           }, [g, f, p, t, r]),
           s.createElement(
-            tr,
+            rr,
             { ...e },
             r.options?.map((e) => {
               const t = n?.option_results.find(
@@ -13762,7 +13764,7 @@
                 r =
                   n?.voted_option_id.includes(e.option_id || 0) ||
                   c === e.option_id;
-              return s.createElement(rr, {
+              return s.createElement(ir, {
                 key: "polloption" + e.option_id,
                 lang: i,
                 pollOptionDef: e,
@@ -13824,7 +13826,7 @@
           )
         );
       }
-      function tr(e) {
+      function rr(e) {
         const { userPollDef: t, lang: r, eventModel: i, children: n } = e,
           a = (0, Yt.f1)(),
           [o, l] = (0, pt.q3)(() => [
@@ -13866,7 +13868,7 @@
                 null,
                 (0, h.Yp)(
                   "#UserPolls_status_N_Votes",
-                  (d?.total_votes || 0).toLocaleString(),
+                  (0, Qt.D)(d?.total_votes || 0),
                 ),
               ),
               d?.display_message
@@ -13877,32 +13879,32 @@
                     (0, h.PP)(
                       "#UserPolls_status_N_TimeRemaining",
                       (function (e) {
-                        const t = Math.floor(e / $t.PerYear),
-                          r = Math.floor(e / $t.PerMonth),
-                          i = Math.floor((e % $t.PerMonth) / $t.PerDay),
-                          n = Math.floor((e % $t.PerDay) / $t.PerHour),
-                          a = Math.floor((e % $t.PerHour) / $t.PerMinute);
+                        const t = Math.floor(e / Zt.PerYear),
+                          r = Math.floor(e / Zt.PerMonth),
+                          i = Math.floor((e % Zt.PerMonth) / Zt.PerDay),
+                          n = Math.floor((e % Zt.PerDay) / Zt.PerHour),
+                          a = Math.floor((e % Zt.PerHour) / Zt.PerMinute);
                         return (
-                          (e %= $t.PerMinute),
+                          (e %= Zt.PerMinute),
                           t > 0
-                            ? Xt.Localize("#TimeRemaining_MoreThanOneYear")
+                            ? $t.Localize("#TimeRemaining_MoreThanOneYear")
                             : r > 0
-                              ? Xt.Localize("#TimeRemaining_MonthsDays", r, i)
+                              ? $t.Localize("#TimeRemaining_MonthsDays", r, i)
                               : i > 0
-                                ? Xt.Localize(
+                                ? $t.Localize(
                                     "#TimeRemaining_DaysHoursMinutes",
                                     i,
                                     n.toString().padStart(2, "0"),
                                     a.toString().padStart(2, "0"),
                                   )
                                 : n > 0
-                                  ? Xt.Localize(
+                                  ? $t.Localize(
                                       "#TimeRemaining_HoursMinutesSeconds",
                                       n.toString().padStart(2, "0"),
                                       a.toString().padStart(2, "0"),
                                       e.toString().padStart(2, "0"),
                                     )
-                                  : Xt.Localize(
+                                  : $t.Localize(
                                       "#TimeRemaining_MinutesSeconds",
                                       a.toString().padStart(2, "0"),
                                       e.toString().padStart(2, "0"),
@@ -13915,7 +13917,7 @@
           ),
         );
       }
-      function rr(e) {
+      function ir(e) {
         const {
             pollOptionDef: t,
             onClick: r,
@@ -13955,12 +13957,12 @@
         (e[(e.None = 0)] = "None"),
           (e[(e.Ago = 1)] = "Ago"),
           (e[(e.Remaining = 2)] = "Remaining");
-      })(Zt || (Zt = {}));
-      let ir = null;
-      function nr() {
+      })(Jt || (Jt = {}));
+      let nr = null;
+      function ar() {
         return (
-          null == ir &&
-            (ir = new Map([
+          null == nr &&
+            (nr = new Map([
               ["url", { Constructor: Ve, autocloses: !1 }],
               ["dynamiclink", { Constructor: He, autocloses: !1 }],
               [
@@ -14003,37 +14005,37 @@
                 "*",
                 { Constructor: o.ck, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: ar, autocloses: !1 }],
+              ["img", { Constructor: sr, autocloses: !1 }],
               ["previewyoutube", { Constructor: T.gH, autocloses: !1 }],
               ["looping_media", { Constructor: o.$A, autocloses: !1 }],
               ["video", { Constructor: o.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: T.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: or, autocloses: !1 }],
-              ["vod", { Constructor: lr, autocloses: !1 }],
+              ["trailer", { Constructor: lr, autocloses: !1 }],
+              ["vod", { Constructor: cr, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: cr,
+                  Constructor: mr,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: ur, autocloses: !1 }],
-              ["claimitem", { Constructor: dr, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: pr, autocloses: !1 }],
-              ["actiondialog", { Constructor: gr, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: yr, autocloses: !0 }],
-              ["docimg", { Constructor: sr, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: dr, autocloses: !1 }],
+              ["claimitem", { Constructor: pr, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: _r, autocloses: !1 }],
+              ["actiondialog", { Constructor: fr, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: Br, autocloses: !0 }],
+              ["docimg", { Constructor: or, autocloses: !1 }],
               ["carousel", { Constructor: vt, autocloses: !1 }],
               ["meetsteamsessiongroup", { Constructor: U.ac, autocloses: !1 }],
               ["meetsteamscheduleview", { Constructor: U.Xk, autocloses: !1 }],
-              ["userpolls", { Constructor: Jt, autocloses: !1 }],
+              ["userpolls", { Constructor: er, autocloses: !1 }],
             ])),
-          ir
+          nr
         );
       }
-      function ar(e) {
+      function sr(e) {
         const { showErrorInfo: t, event: r } = e.context;
         let i = (0, o.j$)(e.args, "src") || e.children?.toString();
         i || (i = (0, o.j$)(e.args));
@@ -14067,7 +14069,7 @@
           s.createElement(J.c, { rgSources: n }),
         );
       }
-      function sr(e) {
+      function or(e) {
         const t = (0, o.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const r = e && e.children && e.children.toString(),
@@ -14083,13 +14085,13 @@
           s.createElement(J.c, { rgSources: i, alt: r })
         );
       }
-      function or(e) {
-        const t = mr(
+      function lr(e) {
+        const t = ur(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          r = mr(e.args, "trailerid", 0);
+          r = ur(e.args, "trailerid", 0);
         let i =
           (0, o.j$)(e.args, "style")?.toLocaleLowerCase() ?? Ke.k_TrailerAsFull;
         i = Object.values(Ke).includes(i) ? i : Ke.k_TrailerAsFull;
@@ -14105,14 +14107,14 @@
           children: e.children,
         });
       }
-      function lr(e) {
-        const t = mr(e.args, "appid", 0);
+      function cr(e) {
+        const t = ur(e.args, "appid", 0);
         return s.createElement(lt, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function cr(e) {
+      function mr(e) {
         const t = (0, o.j$)(e.args, "name"),
           r = (0, o.j$)(e.args, "title"),
           i = (0, o.j$)(e.args, "company"),
@@ -14133,11 +14135,11 @@
               bio: e.children,
             });
       }
-      function mr(e, t, r) {
+      function ur(e, t, r) {
         const i = (0, o.j$)(e, t);
         return void 0 === i || null == i ? r : Number.parseInt(i);
       }
-      function ur(e) {
+      function dr(e) {
         const t = (0, o.j$)(e.args, "name"),
           r =
             "true" === ((0, o.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -14151,7 +14153,7 @@
           ? e.children
           : null;
       }
-      function dr(e) {
+      function pr(e) {
         const t = e.context.showErrorInfo;
         if (!w.iA.logged_in)
           return s.createElement(
@@ -14171,7 +14173,7 @@
           }
         return s.createElement(Ct.m, { bPreviewMode: t, rewardType: i });
       }
-      function pr(e) {
+      function _r(e) {
         const t = Number.parseInt((0, o.j$)(e.args, "id")) || 0,
           r =
             "true" === ((0, o.j$)(e.args, "visible") || "false").toLowerCase(),
@@ -14189,7 +14191,7 @@
           (!l && !r) || (l && r) ? e.children : null
         );
       }
-      function _r(e) {
+      function gr(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, C.h)(e),
             r = (0, C.Q)();
@@ -14215,12 +14217,12 @@
         }
         return { bInitialState: !0 };
       }
-      function gr(e) {
+      function fr(e) {
         const t = (0, o.j$)(e.args, "action"),
           r = (0, o.j$)(e.args, "initialToken"),
           i = (0, o.j$)(e.args, "successToken"),
           n = (0, o.j$)(e.args, "failToken"),
-          a = _r(t);
+          a = gr(t);
         if (!(t && r && i && n)) {
           return e.context.showErrorInfo
             ? s.createElement(
@@ -14238,7 +14240,7 @@
                 onClick: (a) => {
                   (0, ht.pg)(
                     s.createElement(
-                      fr,
+                      yr,
                       {
                         strAction: t,
                         strInitialToken: r,
@@ -14261,7 +14263,7 @@
               (0, h.we)("#Login_SignIn"),
             );
       }
-      function fr(e) {
+      function yr(e) {
         const {
             strAction: t,
             children: r,
@@ -14270,7 +14272,7 @@
             strSuccessToken: a,
             strFailToken: o,
           } = e,
-          l = _r(t),
+          l = gr(t),
           [c, m] = s.useState(Boolean(l.fnAction));
         s.useEffect(() => {
           l.fnAction && (m(!0), l.fnAction().finally(() => m(!1)));
@@ -14309,7 +14311,7 @@
           ),
         );
       }
-      function yr(e) {
+      function Br(e) {
         const { showErrorInfo: t, event: r } = e.context,
           i = r.clanSteamID.GetAccountID(),
           [n] = s.useState(
@@ -14349,19 +14351,19 @@
             ? s.createElement("div", null, (0, h.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      class Br {
+      class br {
         static sm_BBCodeDictionary = new Map([
           ...Array.from(o.W4.entries()),
-          ...Array.from(nr().entries()),
+          ...Array.from(ar().entries()),
         ]);
         static AddDictionary(e) {
-          Br.sm_BBCodeDictionary = new Map([
-            ...Array.from(Br.sm_BBCodeDictionary.entries()),
+          br.sm_BBCodeDictionary = new Map([
+            ...Array.from(br.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
       }
-      function br(e) {
+      function Sr(e) {
         const {
             text: t,
             partnerEventStore: r,
@@ -14385,7 +14387,7 @@
           );
         return s
           .useMemo(
-            () => new i.B(Br.sm_BBCodeDictionary, u, o || a.TS.LANGUAGE),
+            () => new i.B(br.sm_BBCodeDictionary, u, o || a.TS.LANGUAGE),
             [u, o],
           )
           .ParseBBCode(t, {

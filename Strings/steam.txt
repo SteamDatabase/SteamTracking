@@ -1902,19 +1902,15 @@ $ffn
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 00003333
-0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-03:35:51
-03:36:02
-03:36:03
-03:36:04
 08bX
 0?0L
 0A/8
@@ -2422,6 +2418,8 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
+20:18:52
+20:19:00
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2579,7 +2577,6 @@ $ffn
 3\n.k_EMsgDRMWorkerProcessBackfillOriginalResponse
 3\n.k_EMsgTestWorkerProcessLoadUnloadModuleRequest
 3\v;8BJ\nH
-3aD&
 3ej\n
 3pay
 3psC'dcG,
@@ -5073,7 +5070,7 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec 17 2025
+Dec 18 2025
 December
 Decipher Only
 Deckard
@@ -6023,7 +6020,6 @@ GOST_KX_MESSAGE
 GRAPHICSTRING
 GROUPACHIEVEMENTS
 GSc\v3
-GX8u
 GXqN
 Galician
 Game
@@ -7309,6 +7305,7 @@ Network send exceeded
 News
 Next packet in multi-packet UDP message is too large and would exceed initially allocated buffer
 Next schedule deadline: %lldus\n
+NgOs
 Ni.f
 Night
 Nil time value
@@ -8901,7 +8898,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Dec 17 2025 03:36:02
+Startup - updater built Dec 18 2025 20:19:00
 State
 StaticFileWriterThread()
 Steam

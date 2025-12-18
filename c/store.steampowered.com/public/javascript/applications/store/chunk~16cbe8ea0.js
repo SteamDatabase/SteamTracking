@@ -11281,7 +11281,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = "America/Los_Angeles";
       function _(_) {
         const _ = _.context.event,
@@ -11674,7 +11675,7 @@
                     {
                       className: _().MaxSize,
                     },
-                    (0, _._)("#MeetSteam_Spot", _.toLocaleString()),
+                    (0, _._)("#MeetSteam_Spot", _.toLocaleString((0, _._)())),
                   ),
               " ",
             ),
@@ -15089,6 +15090,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
@@ -15476,7 +15478,7 @@
                 null,
                 (0, _._)(
                   "#UserPolls_status_N_Votes",
-                  (_?.total_votes || 0).toLocaleString(),
+                  (0, _._)(_?.total_votes || 0),
                 ),
               ),
               _?.display_message

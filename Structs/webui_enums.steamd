@@ -135,21 +135,6 @@ enum EAbuseNotificationType
 	k_EAbuseNotificationType_Forum = 5;
 }
 
-enum EAccountCountryChangeSource
-{
-	k_EAccountCountryChangeSource_Invalid = 0;
-	k_EAccountCountryChangeSource_InitialBackfill = 1;
-	k_EAccountCountryChangeSource_Purchase = 2;
-	k_EAccountCountryChangeSource_ActivationCode = 3;
-	k_EAccountCountryChangeSource_Support = 4;
-	k_EAccountCountryChangeSource_WalletCreation = 5;
-	k_EAccountCountryChangeSource_WalletMatch = 6;
-	k_EAccountCountryChangeSource_UserSelected = 7;
-	k_EAccountCountryChangeSource_AccountCreation = 8;
-	k_EAccountCountryChangeSource_RedeemedGift = 9;
-	k_EAccountCountryChangeSource_MatchFamily = 10;
-}
-
 enum EAccountFlag
 {
 	k_EAccountFlagNormalUser = 0;
@@ -405,15 +390,6 @@ enum EAuctionBadgeLevel
 	k_EAuctionBadgeLevel_MadeGoo = 1;
 	k_EAuctionBadgeLevel_BidInAuction = 2;
 	k_EAuctionBadgeLevel_WonInAuction = 3;
-}
-
-enum EAuctionBidState
-{
-	k_EAuctionBidState_Invalid = 0;
-	k_EAuctionBidState_Active = 1;
-	k_EAuctionBidState_Cancelled = 2;
-	k_EAuctionBidState_Winner = 3;
-	k_EAuctionBidState_Expired = 4;
 }
 
 enum EAudioStreamType
@@ -1433,14 +1409,6 @@ enum ENetFakeLocalSystemState
 	k_ENetFakeLocalSystemState_NoSteam = 5;
 }
 
-enum ENewsRecommendationState
-{
-	k_ENewsRecommendationState_None = 0;
-	k_ENewsRecommendationState_Recommended = 1;
-	k_ENewsRecommendationState_NotRecommended = 2;
-	k_ENewsRecommendationState_Informative = 3;
-}
-
 enum ENoiseGateLevel
 {
 	k_ENoiseGateLevel_Off = 0;
@@ -1726,14 +1694,6 @@ enum ERaiseGameWindowResult
 	k_ERaiseGameWindowResult_Failure = 3;
 }
 
-enum ERedeemPointsType
-{
-	k_ERedeemPointsTypeInvalid = 0;
-	k_ERedeemPointsTypeVirtualItem = 1;
-	k_ERedeemPointsTypeProfileShowcaseUpgrade = 2;
-	k_ERedeemPointsTypeProfileShowcaseSlot = 3;
-}
-
 enum ERegionCode
 {
 	k_ERegionCodeInvalid = 0;
@@ -1785,59 +1745,6 @@ enum ERemoteClientLaunch
 	k_ERemoteClientLaunchUnauthorized = 29;
 }
 
-enum EReviewTagType
-{
-	k_EReviewTagType_Graphics = 1;
-	k_EReviewTagType_Gameplay = 2;
-	k_EReviewTagType_Story = 3;
-	k_EReviewTagType_Audio = 4;
-	k_EReviewTagType_Controls = 5;
-	k_EReviewTagType_Performance = 6;
-	k_EReviewTagType_Multiplayer = 7;
-	k_EReviewTagType_Replayability = 8;
-	k_EReviewTagType_Difficulty = 9;
-	k_EReviewTagType_Customization = 10;
-	k_EReviewTagType_LevelDesign = 11;
-	k_EReviewTagType_AI = 12;
-	k_EReviewTagType_Exploration = 13;
-	k_EReviewTagType_Characters = 14;
-	k_EReviewTagType_Content = 15;
-	k_EReviewTagType_Immersion = 16;
-	k_EReviewTagType_UI = 17;
-	k_EReviewTagType_Community = 18;
-	k_EReviewTagType_Innovation = 19;
-	k_EReviewTagType_Tutorials = 20;
-	k_EReviewTagType_Loading = 21;
-	k_EReviewTagType_Monetization = 22;
-	k_EReviewTagType_DeveloperSupport = 23;
-	k_EReviewTagType_Achievements = 24;
-	k_EReviewTagType_Accessibility = 25;
-	k_EReviewTagType_Setting = 26;
-	k_EReviewTagType_Combat = 27;
-	k_EReviewTagType_VoiceOver = 28;
-	k_EReviewTagType_Physics = 29;
-	k_EReviewTagType_Stability = 30;
-	k_EReviewTagType_Lore = 31;
-	k_EReviewTagType_Companions = 32;
-	k_EReviewTagType_Cutscenes = 33;
-	k_EReviewTagType_Dialogue = 34;
-	k_EReviewTagType_Balance = 35;
-	k_EReviewTagType_Inventory = 36;
-	k_EReviewTagType_Platforming = 37;
-	k_EReviewTagType_Strategy = 38;
-	k_EReviewTagType_Atmosphere = 39;
-	k_EReviewTagType_Quests = 40;
-	k_EReviewTagType_Minigames = 41;
-	k_EReviewTagType_Humor = 42;
-	k_EReviewTagType_Cheating = 43;
-	k_EReviewTagType_Disabled_Test = 44;
-	k_EReviewTagType_Matchmaking = 45;
-	k_EReviewTagType_SteamDeck = 46;
-	k_EReviewTagType_Progression = 47;
-	k_EReviewTagType_Singleplayer = 48;
-	k_EReviewTagType_VoiceChat = 49;
-}
-
 enum ERewardDefinitionsAction
 {
 	k_ERewardDefinitionsAction_Invalid = 0;
@@ -1859,20 +1766,6 @@ enum ESection
 	k_ESectionDefault = 1;
 	k_ESectionFamily = 2;
 	k_ESectionMax = 3;
-}
-
-enum ESetUserCountryError
-{
-	k_ESetUserCountryError_None = 0;
-	k_ESetUserCountryError_NewCountryMustMatchWebIP = 1;
-	k_ESetUserCountryError_NewCountryMustMatchClientIP = 2;
-	k_ESetUserCountryError_MilitaryCountryMustBeUSA = 3;
-	k_ESetUserCountryError_NoUSMilitaryBaseInIPCountry = 4;
-	k_ESetUserCountryError_InvalidMilitaryAddress = 5;
-	k_ESetUserCountryError_HasPendingPurchase = 6;
-	k_ESetUserCountryError_HasRecentPurchase = 7;
-	k_ESetUserCountryError_HasRecentCountryChange = 8;
-	k_ESetUserCountryError_WalletConversionFailed = 9;
 }
 
 enum ESharedLibrary
@@ -2133,12 +2026,6 @@ enum ETwoFactorTokenSteamguardScheme
 	k_ETwoFactorTokenSteamguardScheme_TwoFactor = 2;
 }
 
-enum EUserAccountHistoryCategory_Inv
-{
-	k_EUserAccountHistoryCategory_Invalid = 0;
-	k_EUserAccountHistoryCategory_Inventory = 1;
-}
-
 enum EUserBadge
 {
 	k_EUserBadgeInvalid = 0;
@@ -2212,60 +2099,6 @@ enum EUserBadge
 	k_EUserBadgeYearInReview2024 = 68;
 	k_EUserBadgeYearInReview2025 = 69;
 	k_EUserBadgeSteamAwards2025Nominations = 70;
-}
-
-enum EUserLastReadFeed
-{
-	k_EUserLastReadFeed_Invalid = 0;
-	k_EUserLastReadFeed_TradeOffers = 1;
-	k_EUserLastReadFeed_AuctionWins = 2;
-	k_EUserLastReadFeed_SteamAnnouncement = 3;
-}
-
-enum EUserReviewAuditAction
-{
-	k_EUserReviewAuditAction_Invalid = 0;
-	k_EUserReviewAuditAction_Banned = 1;
-	k_EUserReviewAuditAction_Unbanned = 2;
-	k_EUserReviewAuditAction_FlaggedByDeveloper = 3;
-	k_EUserReviewAuditAction_ClearedFlaggedByDeveloper = 4;
-	k_EUserReviewAuditAction_VoteBanUsers = 5;
-	k_EUserReviewAuditAction_ClearVoteBanUsers = 6;
-	k_EUserReviewAuditAction_ClearReports = 7;
-	k_EUserReviewAuditAction_ClearedContentCheck = 8;
-	k_EUserReviewAuditAction_MarkedAsSuspicious = 9;
-	k_EUserReviewAuditAction_SetQuality = 10;
-}
-
-enum EUserReviewBombPeriodType
-{
-	k_EUserReviewBombPeriodType_OffTopic = 0;
-	k_EUserReviewBombPeriodType_PendingReview = 1;
-	k_EUserReviewBombPeriodType_Testing = 2;
-}
-
-enum EUserReviewFlaggedByDeveloperType
-{
-	k_EUserReviewFlaggedByDeveloperType_None = 0;
-	k_EUserReviewFlaggedByDeveloperType_Abusive = 1;
-	k_EUserReviewFlaggedByDeveloperType_OffTopic = 2;
-	k_EUserReviewFlaggedByDeveloperType_ViolatesCommunityGuidelines = 3;
-}
-
-enum EUserReviewQuality
-{
-	k_EUserReviewQuality_Uninformative = 0;
-	k_EUserReviewQuality_Meme = 1;
-	k_EUserReviewQuality_ASCII = 2;
-	k_EUserReviewQuality_OffTopic = 3;
-	k_EUserReviewQuality_VoteOrAwardFarming = 4;
-	k_EUserReviewQuality_None = 5;
-}
-
-enum EUserReviewVoteTag
-{
-	k_EUserReviewVoteTag_None = 0;
-	k_EUserReviewVoteTag_Funny = 1;
 }
 
 enum EVoiceCallState
@@ -3900,12 +3733,6 @@ enum UnnamedEnum55a9e12958fe69d4
 	Days = 86400000;
 }
 
-enum UnnamedEnum55cdda1583360b17
-{
-	All = 1;
-	Popular = 2;
-}
-
 enum UnnamedEnum56fdca98a5fc5dc5
 {
 	NOT_TRACKING_ = -1;
@@ -4417,13 +4244,6 @@ enum UnnamedEnum80fde622b7ffb8a2
 	Minimap = 2;
 }
 
-enum UnnamedEnum8109693d463750cd
-{
-	GRID = 0;
-	CAROUSEL = 1;
-	HERO = 2;
-}
-
 enum UnnamedEnum832449b80e67603d
 {
 	acceptSuggestionOnCommitCharacter = 0;
@@ -4577,6 +4397,14 @@ enum UnnamedEnum832449b80e67603d
 	defaultColorDecorators = 148;
 	colorDecoratorsActivatedOn = 149;
 	inlineCompletionsAccessibilityVerbose = 150;
+}
+
+enum UnnamedEnum83e8cb94545d96a9
+{
+	ReadyToPair = 0;
+	PairingSuccessful = 1;
+	PairingFailed = 2;
+	NoDevices = 3;
 }
 
 enum UnnamedEnum8464db862b909b82

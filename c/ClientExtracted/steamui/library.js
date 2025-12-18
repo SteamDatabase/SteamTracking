@@ -12936,9 +12936,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Dec 16 2025 : 14:04:06",
-                BUILD_TIME_UTC: "Dec 16 2025 : 22:04:06",
-                BUILD_RTIME_UTC: 1765922646,
+                BUILD_TIME_LOCAL: "Dec 18 2025 : 12:20:51",
+                BUILD_TIME_UTC: "Dec 18 2025 : 20:20:51",
+                BUILD_RTIME_UTC: 1766089251,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -27414,9 +27414,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Dec 16 2025 : 14:04:06",
-                    BUILD_TIME_UTC: "Dec 16 2025 : 22:04:06",
-                    BUILD_RTIME_UTC: 1765922646,
+                    BUILD_TIME_LOCAL: "Dec 18 2025 : 12:20:51",
+                    BUILD_TIME_UTC: "Dec 18 2025 : 20:20:51",
+                    BUILD_RTIME_UTC: 1766089251,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -27594,7 +27594,7 @@ var CLSTAMP = "steamdb";
             this.m_eLoginState = _;
           }
           BHasUser() {
-            return 6 == this.m_eLoginState || 7 == this.m_eLoginState;
+            return 4 == this.m_eLoginState || 5 == this.m_eLoginState;
           }
         }
         (0, _._)([_._], _.prototype, "OnLoginStateChange", null);
@@ -28113,7 +28113,7 @@ var CLSTAMP = "steamdb";
         3350: "25be1c0cde58ecd53fec",
         3366: "049be15e2923de61326d",
         3473: "aa2e2c813e7588319881",
-        3569: "81e0a75909f48b806265",
+        3569: "0c020fea0239f8cfc91b",
         3583: "f831ab7edbd9ffa591ac",
         3594: "b70bd041356f4decc88d",
         3714: "1c32411f9644bb684e2b",
@@ -28234,7 +28234,7 @@ var CLSTAMP = "steamdb";
         9711: "2ed989ee7251a5d19c6f",
         9746: "02bbf44c33adfc258656",
         9779: "59ef76674166d4b9e52e",
-        9858: "05a8f54fdfe149d9d44f",
+        9858: "39929a72fdaedde2bd8b",
         9869: "0f5bcdc9b2a986acf0cb",
         9882: "499f31ccf435fd972880",
         9887: "ed1418cfca13109f4418",

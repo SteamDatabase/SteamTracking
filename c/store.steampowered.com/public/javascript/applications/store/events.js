@@ -443,7 +443,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -609,8 +608,7 @@
                 null,
                 _.createElement(_._, {
                   appid: _.appid,
-                  trackingLocation:
-                    _._.k_EPartnerEventDisplayLocation_StoreFrontPage,
+                  trackingLocation: 7,
                   announcementGID: _.GetAnnouncementGID(),
                   partnerEventStore: _,
                   eventModel: _,
@@ -644,7 +642,6 @@
         }),
         _ = (0, _._)(_);
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1257,8 +1254,7 @@
                     onEventNotFound: _,
                     appid: 0,
                     clanSteamID: _.clanInfo.clanSteamID,
-                    trackingLocation:
-                      _._.k_EPartnerEventDisplayLocation_NewsHub,
+                    trackingLocation: 8,
                     eventModel: void 0,
                     announcementGID: void 0,
                     partnerEventStore: _._,
@@ -2810,9 +2806,7 @@
             _.GetSummaryWithFallback(_),
           ]),
           [_, _] = _.useState(() =>
-            (0, _._)() && _ == _._.k_EMajorUpdateEvent
-              ? _._.full
-              : _._.capsule_main,
+            (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
           ),
           _ = (0, _._)(),
           _ = (0, _._)(() =>
@@ -2826,13 +2820,10 @@
               const { video_preview_type: _, video_preview_id: _, type: _ } = _,
                 _ = _.appid;
               if (!_) return null;
-              if (_ === _._.k_ESmallUpdateEvent) return null;
+              if (12 === _) return null;
               if ("youtube" === _) {
                 const _ = (0, _._)(_._.LANGUAGE),
-                  _ =
-                    (0, _._)() && _ == _._.k_EMajorUpdateEvent
-                      ? _._.full
-                      : _._.capsule_main,
+                  _ = (0, _._)() && 14 == _ ? _._.full : _._.capsule_main,
                   _ = _.GetImageForSizeAsArrayWithFallback("capsule", _, _, !0);
                 if ("carousel" === _)
                   return _.createElement(_._, {
@@ -2887,14 +2878,13 @@
             strCapsuleImgURLForBackground: _,
             fnSetCoverSize: _,
           }),
-          _ = _ && "carousel" !== _,
-          _ = _ && _ != _._.k_EMajorUpdateEvent && !_,
+          _ = _ && 14 != _ && !(_ && "carousel" !== _),
           _ = _ && _,
           _ = !_ && _,
           _ = "wide" !== _ || _,
           _ =
-            _ !== _._.k_ENewsEvent &&
-            _ !== _._.k_ESmallUpdateEvent &&
+            28 !== _ &&
+            12 !== _ &&
             _._.GetTimeNowWithOverride() < _ &&
             _.createElement(
               "div",
@@ -2909,7 +2899,7 @@
                 bExpandLeft: _,
               }),
             ),
-          _ = Boolean(_ !== _._.k_ESmallUpdateEvent && _),
+          _ = Boolean(12 !== _ && _),
           _ = Boolean(
             _ &&
               (!_ ||
@@ -2948,7 +2938,7 @@
                     _.preventDefault();
                 },
               },
-              _ === _._.k_EMajorUpdateEvent &&
+              14 === _ &&
                 _.createElement("div", {
                   className: (0, _._)(
                     _().TileBackgroundImage,
@@ -2969,7 +2959,7 @@
                   {
                     className: _().TileTextContainer,
                   },
-                  Boolean(_ == _._.k_ESmallUpdateEvent) &&
+                  Boolean(12 == _) &&
                     _.createElement(
                       "div",
                       {
@@ -3095,7 +3085,7 @@
               _.createElement(
                 _.Fragment,
                 null,
-                _ === _._.k_ESmallUpdateEvent &&
+                12 === _ &&
                   _.createElement(
                     _.Fragment,
                     null,
@@ -3123,7 +3113,7 @@
                       _,
                     ),
                   ),
-                _ !== _._.k_ESmallUpdateEvent &&
+                12 !== _ &&
                   _.createElement(
                     "div",
                     {
@@ -3436,7 +3426,7 @@
                 _.createElement(_.bfp, {
                   className: _().RateIcon,
                 }),
-                _.createElement("span", null, Number(_).toLocaleString()),
+                _.createElement("span", null, (0, _._)(Number(_))),
               ),
               _ &&
                 _.createElement(
@@ -3458,7 +3448,7 @@
                     _.createElement(
                       "span",
                       null,
-                      Number(_.nCommentCount).toLocaleString(),
+                      (0, _._)(Number(_.nCommentCount)),
                     ),
                   ),
                 ),
@@ -3577,8 +3567,7 @@
       const _ = "SteamNewsHub_SuggestCuratorsDismissed";
       function _() {
         const _ = _._.GetELanguageFallbackOrder();
-        void 0 === _.find((_) => _ === _._.k_Lang_English) &&
-          _.push(_._.k_Lang_English);
+        void 0 === _.find((_) => 0 === _) && _.push(0);
         const _ = new Array();
         for (const _ of _) {
           const _ = _.Get().GetCuratorsForLang(_);
@@ -4064,6 +4053,7 @@
         };
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "global_header";
       function _() {
@@ -4458,7 +4448,7 @@
             ? (await __webpack_require__.RegisterCalendarEventsAndModels(_),
               (_.m_bInitialLoad = !1))
             : await __webpack_require__.RegisterCalendarEventsAndModels({
-                success: _._.k_EResultOK,
+                success: 1,
               }),
             __webpack_require__.BIsSingleSourceCalendar() &&
               (__webpack_require__.BIsSingleAppCalendar()
@@ -4521,10 +4511,7 @@
                 });
         }
         async OnEventClicked(_) {
-          _._.Get().RecordEventRead(
-            _,
-            _._.k_EPartnerEventDisplayLocation_NewsHub,
-          );
+          _._.Get().RecordEventRead(_, 8);
           const _ =
               this.state.nSteamNavHeaderHeight +
               this.state.nHubBannerHeight +
@@ -4602,8 +4589,7 @@
                 this.state.modalEvent
                   ? _.createElement(_._, {
                       appid: this.state.modalEvent.appid,
-                      trackingLocation:
-                        _._.k_EPartnerEventDisplayLocation_NewsHub,
+                      trackingLocation: 8,
                       announcementGID:
                         this.state.modalEvent.GetAnnouncementGID(),
                       partnerEventStore: _._,
@@ -5438,7 +5424,7 @@
                   },
                   (0, _._)(
                     "#EventCalendar_LoadEventsProgress",
-                    Number((0, _._)().GetNumEventsLoaded()).toLocaleString(),
+                    (0, _._)(Number((0, _._)().GetNumEventsLoaded())),
                     (0, _._)(_),
                   ),
                 ),
