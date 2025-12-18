@@ -20,7 +20,10 @@
 *.exe
 *.dll
 *.so
+*.so.*
 *.dylib
+*.pak
+*.bin
 
 /ClientExtracted/steamcmd
 /ClientExtracted/steam_osx
