@@ -39631,7 +39631,8 @@
 	"trendingfree": 100753,
 	"reactroot": 100754,
 	"bundlelist": 100755,
-	"verifiedprogram": 100756
+	"verifiedprogram": 100756,
+	"trailercarousel": 100757
 }`);
       class _ {
         static InstrumentLink(_, _, __webpack_require__ = null) {

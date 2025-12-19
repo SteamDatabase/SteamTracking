@@ -2010,6 +2010,7 @@ ${wiki_doc_url}${}
 ${wizard_url}
 ${wizard_url}Home
 /wishlist/id/${profile_url}/
+[url=${HELP_BASE_URL}faqs/view/6C17-2BC1-2A01-9B76]${}[/url]
 http://
 http://${}
 http://dashif.org/guidelines/thumbnail_tile${}

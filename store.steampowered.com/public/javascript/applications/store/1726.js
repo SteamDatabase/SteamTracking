@@ -493,48 +493,49 @@
     89128: (e, t, a) => {
       "use strict";
       a.d(t, {
-        FZ: () => _e,
+        FZ: () => ge,
         A4: () => D,
         iy: () => G,
-        ZA: () => x,
-        Dn: () => H,
-        CU: () => se,
-        Ay: () => ne,
-        ye: () => ae,
-        Fo: () => oe,
-        G$: () => le,
-        Xx: () => M,
-        DJ: () => ue,
-        G6: () => ce,
-        zv: () => z,
-        IS: () => Y,
-        GE: () => $,
-        yX: () => q,
-        w: () => de,
-        EE: () => W,
-        Zf: () => Q,
-        jR: () => X,
-        Ac: () => ge,
-        lh: () => fe,
-        Hc: () => me,
-        mz: () => ee,
-        qQ: () => Z,
-        MW: () => J,
-        W2: () => K,
-        Pm: () => re,
-        qR: () => te,
-        _B: () => N,
-        j3: () => Ie,
-        Yw: () => V,
+        ZA: () => H,
+        Dn: () => M,
+        CU: () => re,
+        Ay: () => ie,
+        ye: () => ne,
+        Fo: () => le,
+        G$: () => ce,
+        Xx: () => z,
+        DJ: () => he,
+        G6: () => de,
+        zv: () => N,
+        IS: () => Q,
+        GE: () => q,
+        yX: () => Y,
+        w: () => me,
+        EE: () => $,
+        Zf: () => X,
+        jR: () => K,
+        Ac: () => ve,
+        lh: () => Ie,
+        Hc: () => ue,
+        mz: () => te,
+        qQ: () => J,
+        MW: () => ee,
+        W2: () => Z,
+        Pm: () => oe,
+        qR: () => ae,
+        _B: () => V,
+        j3: () => Ee,
+        Yw: () => W,
         zK: () => k,
         DU: () => L,
-        mW: () => j,
+        yT: () => O,
+        mW: () => U,
         wv: () => F,
         Ro: () => R,
         GU: () => P,
         bv: () => B,
-        Kd: () => U,
-        cB: () => he,
+        Kd: () => j,
+        cB: () => pe,
       });
       var n = a(34629),
         i = a(79821),
@@ -603,27 +604,28 @@
         P = 39049601,
         B = 41316928,
         R = 4397053,
-        U = 4,
-        j = 20,
+        j = 4,
+        U = 20,
         F = 45559995,
-        O = [12, 34];
-      function x(e) {
-        return !O.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
-      }
+        O = 45902273,
+        x = [12, 34];
       function H(e) {
+        return !x.some((t) => t == e.GetEventType()) && !e.BHasTag("curator");
+      }
+      function M(e) {
         const t = 60 * b.Kp.PerDay;
         return (
           e.BIsVisibleEvent() &&
           e.BIsOGGEvent() &&
           (e.rtime32_last_modified ?? 0) > p.HD.GetTimeNowWithOverride() - t &&
-          !M(e)
+          !z(e)
         );
       }
-      function M(e) {
+      function z(e) {
         return e.BHasTag("mod_reviewed") && !e.BHasTag("mod_require_rereview");
       }
-      var z;
-      function N(e) {
+      var N;
+      function V(e) {
         switch (e) {
           case "links":
           case "itemdef":
@@ -639,19 +641,19 @@
           (e[(e.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible"),
           (e[(e.k_EEventStateUnlisted = 3)] = "k_EEventStateUnlisted");
-      })(z || (z = {}));
-      const V = "bordered";
-      var W, $, q, Y, Q, X;
-      function K(e) {
+      })(N || (N = {}));
+      const W = "bordered";
+      var $, q, Y, Q, X, K;
+      function Z(e) {
         return e && !!e.show_as_carousel && !e.enable_faceted_browsing;
       }
-      function Z(e) {
+      function J(e) {
         return e.carousel_rows || 1;
       }
-      function J(e) {
+      function ee(e) {
         return e.cap_item_count || 0;
       }
-      function ee(e) {
+      function te(e) {
         return e.cap_section_row_count && e.cap_section_row_count > 0
           ? e.cap_section_row_count
           : "trailercarousel" == e.section_type
@@ -660,12 +662,12 @@
               ? 4
               : 0;
       }
-      function te(e) {
+      function ae(e) {
         return Boolean(e?.store_filter)
           ? JSON.stringify(e.store_filter)
           : void 0;
       }
-      function ae(e) {
+      function ne(e) {
         switch (e) {
           case "items":
           case "trailercarousel":
@@ -676,7 +678,7 @@
         }
         return !1;
       }
-      function ne(e) {
+      function ie(e) {
         switch (e) {
           case "items":
           case "crosspromotesalepage":
@@ -685,7 +687,7 @@
         }
         return !1;
       }
-      function ie(e) {
+      function se(e) {
         switch (e) {
           case "items":
           case "trailercarousel":
@@ -699,21 +701,21 @@
         }
         return !1;
       }
-      function se(e, t = !1) {
+      function re(e, t = !1) {
         return Boolean(
           t
-            ? e && ie(e.section_type) && e.smart_section
+            ? e && se(e.section_type) && e.smart_section
             : e &&
-                ie(e.section_type) &&
+                se(e.section_type) &&
                 e.smart_section &&
                 null != e.smart_section_type,
         );
       }
-      function re(e) {
-        return se(e) ? e?.smart_section_type : void 0;
+      function oe(e) {
+        return re(e) ? e?.smart_section_type : void 0;
       }
-      function oe(e, t) {
-        if (!e.BIsNextFest() || ae(t.section_type) || se(t)) return !1;
+      function le(e, t) {
+        if (!e.BIsNextFest() || ne(t.section_type) || re(t)) return !1;
         return (
           ((e.jsondata.sale_ml_recommender_delay_hours &&
             (e.startTime ?? 0) +
@@ -722,8 +724,8 @@
             0) > 0
         );
       }
-      function le(e, t) {
-        return !!t.use_random_order || !!oe(e, t);
+      function ce(e, t) {
+        return !!t.use_random_order || !!le(e, t);
       }
       !(function (e) {
         (e[(e.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
@@ -741,7 +743,7 @@
             "k_EStoreFilterClauseTypePrice"),
           (e[(e.k_EStoreFilterClauseTypeAppType = 7)] =
             "k_EStoreFilterClauseTypeAppType");
-      })(W || (W = {})),
+      })($ || ($ = {})),
         (function (e) {
           (e[(e.k_ESaleTagFilter = 0)] = "k_ESaleTagFilter"),
             (e[(e.k_ELanguage = 1)] = "k_ELanguage"),
@@ -749,29 +751,29 @@
             (e[(e.k_EUserPreference = 3)] = "k_EUserPreference"),
             (e[(e.k_EPrice = 4)] = "k_EPrice"),
             (e[(e.k_EAppType = 5)] = "k_EAppType");
-        })($ || ($ = {})),
+        })(q || (q = {})),
         (function (e) {
           (e[(e.k_EHideOwnedItems = 0)] = "k_EHideOwnedItems"),
             (e[(e.k_EHideWishlistedItems = 1)] = "k_EHideWishlistedItems"),
             (e[(e.k_EHideIgnoredItems = 2)] = "k_EHideIgnoredItems");
-        })(q || (q = {})),
+        })(Y || (Y = {})),
         (function (e) {
           (e[(e.k_ESortFacetsByName = 0)] = "k_ESortFacetsByName"),
             (e[(e.k_ESortFacetsByMatchCount = 1)] =
               "k_ESortFacetsByMatchCount"),
             (e[(e.k_ESortFacetsManually = 2)] = "k_ESortFacetsManually");
-        })(Y || (Y = {})),
+        })(Q || (Q = {})),
         (function (e) {
           (e.Steam = "Steam"),
             (e.Facebook = "Facebook"),
             (e.Twitter = "Twitter"),
             (e.Reddit = "Reddit");
-        })(Q || (Q = {})),
+        })(X || (X = {})),
         (function (e) {
           (e.Summary = "summary"),
             (e.SummaryLargeImage = "summary_large_image");
-        })(X || (X = {}));
-      const ce = {
+        })(K || (K = {}));
+      const de = {
         capsules: [],
         events: [],
         links: [],
@@ -780,8 +782,8 @@
         default_label: "#Sale_default_label",
         section_type: "unselected_empty",
       };
-      var de;
-      function me(e) {
+      var me;
+      function ue(e) {
         return {
           arrowFill: e?.sale_carousel_arrow_color,
           arrowStyle: e?.sale_carousel_arrow_style,
@@ -793,8 +795,8 @@
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
           (e[(e.k_EContentHub = 1)] = "k_EContentHub");
-      })(de || (de = {}));
-      const ue = {
+      })(me || (me = {}));
+      const he = {
           localized_subtitle: new Array(31),
           localized_summary: new Array(31),
           localized_title_image: new Array(31),
@@ -819,8 +821,8 @@
           bScheduleEnabled: !1,
           scheduleEntries: [],
         },
-        he = "old_announce_",
-        pe = [
+        pe = "old_announce_",
+        _e = [
           "workshop",
           "patchnotes",
           "contenthub",
@@ -836,7 +838,7 @@
           "betachannel",
           "previewchannel",
         ],
-        _e = [
+        ge = [
           "steam_blog_featured",
           "workshop",
           "steam_blog",
@@ -879,7 +881,7 @@
           "autocreate_promotools",
           "vo_marketing_message",
         ],
-        ge = [
+        ve = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -893,9 +895,9 @@
           "curator_public",
           "audience_followers",
         ],
-        ve = [20, 31, 34],
-        ye = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
-      class fe {
+        ye = [20, 31, 34],
+        fe = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
+      class Ie {
         constructor() {
           (0, r.Gn)(this);
         }
@@ -915,9 +917,9 @@
         m_nBuildID = void 0;
         m_strBuildBranch = void 0;
         postTime = void 0;
-        visibility_state = z.k_EEventStateUnpublished;
+        visibility_state = N.k_EEventStateUnpublished;
         broadcaster = void 0;
-        jsondata = ue;
+        jsondata = he;
         nCommentCount = 0;
         nVotesUp = 0;
         nVotesDown = 0;
@@ -946,7 +948,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new fe(),
+          let t = new Ie(),
             a = JSON.parse(e);
           return (
             Object.assign(t, a),
@@ -982,7 +984,7 @@
           );
         }
         clone(e = !1) {
-          let t = new fe();
+          let t = new Ie();
           if (
             ((t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -1034,7 +1036,7 @@
                 (t.m_strBuildBranch = this.m_strBuildBranch),
                 this.vecTags.forEach((e) => t.vecTags.push(e)))
               : this.vecTags.forEach((e) => {
-                  pe.includes(e) && t.vecTags.push(e);
+                  _e.includes(e) && t.vecTags.push(e);
                 }),
             t.jsondata.email_setting)
           ) {
@@ -1375,18 +1377,18 @@
         BIsVisibleEvent() {
           let e = Math.floor(p.HD.GetTimeNowWithOverride());
           return (
-            this.visibility_state == z.k_EEventStateUnlisted ||
-            (this.visibility_state == z.k_EEventStateVisible &&
+            this.visibility_state == N.k_EEventStateUnlisted ||
+            (this.visibility_state == N.k_EEventStateVisible &&
               e > (this.visibilityStartTime ?? 0) &&
               ((this.visibilityEndTime ?? 0) < 10 ||
                 e < (this.visibilityEndTime ?? 0)))
           );
         }
         BIsStagedEvent() {
-          return this.visibility_state == z.k_EEventStateStaged;
+          return this.visibility_state == N.k_EEventStateStaged;
         }
         BIsUnlistedEvent() {
-          return this.visibility_state == z.k_EEventStateUnlisted;
+          return this.visibility_state == N.k_EEventStateUnlisted;
         }
         GetStartTimeAndDateUnixSeconds() {
           return this.startTime ?? 0;
@@ -1436,13 +1438,13 @@
         GetSubTitleWithSummaryFallback(e) {
           return (
             v.NT.GetWithFallback(this.jsondata?.localized_subtitle, e) ||
-            fe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            Ie.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
           return (
             v.NT.GetWithFallback(this.jsondata?.localized_summary, e) ||
-            fe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            Ie.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -1483,10 +1485,10 @@
         BShowLibrarySpotlight(e) {
           if (!e) return Boolean(this.jsondata.library_spotlight);
           if (!this.jsondata.library_spotlight) return !1;
-          if (ve.includes(this.type)) return !1;
+          if (ye.includes(this.type)) return !1;
           const t = new Date().getTime() / 1e3;
           return (
-            !(ye.includes(this.type) && this.endTime && t > this.endTime) &&
+            !(fe.includes(this.type) && this.endTime && t > this.endTime) &&
             !(this.startTime && t > this.startTime + 60 * b.Kp.PerDay)
           );
         }
@@ -1740,14 +1742,14 @@
             );
           return (
             this.jsondata.tagged_items?.forEach((e) => {
-              fe.AccumulateCapsuleListIDs([e.capsule], a, n, t);
+              Ie.AccumulateCapsuleListIDs([e.capsule], a, n, t);
             }),
             this.jsondata.sale_sections.forEach((e) => {
-              if (ae(e.section_type))
-                fe.AccumulateCapsuleListIDs(e.capsules, a, n, t);
+              if (ne(e.section_type))
+                Ie.AccumulateCapsuleListIDs(e.capsules, a, n, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const i of e.tabs)
-                  fe.AccumulateCapsuleListIDs(i.capsules, a, n, t);
+                  Ie.AccumulateCapsuleListIDs(i.capsules, a, n, t);
             }),
             n
           );
@@ -1884,7 +1886,7 @@
         }
         BUsesContentHubForItemSource() {
           return (
-            this.jsondata.item_source_type === de.k_EContentHub &&
+            this.jsondata.item_source_type === me.k_EContentHub &&
             Boolean(this.jsondata.source_content_hub)
           );
         }
@@ -2013,52 +2015,52 @@
           };
         }
       }
-      (0, n.Cg)([r.sH], fe.prototype, "GID", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "AnnouncementGID", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "forumTopicGID", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "type", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "appid", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "name", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "description", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "timestamp_loc_updated", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "startTime", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "endTime", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "visibilityStartTime", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "visibilityEndTime", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "m_nBuildID", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "m_strBuildBranch", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "postTime", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "visibility_state", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "broadcaster", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "jsondata", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "nCommentCount", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "nVotesUp", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "nVotesDown", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "bOldAnnouncement", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "announcementClanSteamID", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "loadedAllLanguages", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "bLoaded", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "deleteInProgress", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "vecTags", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "last_update_steamid", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "rtime32_last_modified", void 0),
+      (0, n.Cg)([r.sH], Ie.prototype, "GID", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "AnnouncementGID", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "forumTopicGID", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "type", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "appid", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "name", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "description", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "timestamp_loc_updated", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "startTime", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "endTime", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "visibilityStartTime", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "visibilityEndTime", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "m_nBuildID", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "m_strBuildBranch", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "postTime", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "visibility_state", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "broadcaster", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "jsondata", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "nCommentCount", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "nVotesUp", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "nVotesDown", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "bOldAnnouncement", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "announcementClanSteamID", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "loadedAllLanguages", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "bLoaded", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "deleteInProgress", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "vecTags", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "last_update_steamid", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "rtime32_last_modified", void 0),
         (0, n.Cg)(
           [r.sH],
-          fe.prototype,
+          Ie.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, n.Cg)(
           [r.sH],
-          fe.prototype,
+          Ie.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, n.Cg)([r.sH], fe.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "video_preview_type", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "video_preview_id", void 0),
-        (0, n.Cg)([r.sH], fe.prototype, "m_overrideCurrentDay", void 0);
-      function Ie(e) {
+        (0, n.Cg)([r.sH], Ie.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "video_preview_type", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "video_preview_id", void 0),
+        (0, n.Cg)([r.sH], Ie.prototype, "m_overrideCurrentDay", void 0);
+      function Ee(e) {
         return e?.replace(/[()]/g, "\\$&");
       }
     },
@@ -4816,17 +4818,20 @@
             return e.jsondata.bSaleEnabled
               ? e.clanSteamID.GetAccountID() == r.wv
                 ? `${d}charts/topnewreleases/${e.jsondata.sale_vanity_id}`
-                : _
-                  ? `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`
-                  : g
-                    ? `${d}curator/${e.clanSteamID.GetAccountID()}`
-                    : d +
-                      (e.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                        ? "sale/"
-                        : "curator/" +
-                          e.clanSteamID.GetAccountID() +
-                          "/sale/") +
-                      e.jsondata.sale_vanity_id
+                : e.clanSteamID.GetAccountID() == r.yT
+                  ? `${d}charts/bestofyear/${e.jsondata.sale_vanity_id}`
+                  : _
+                    ? `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`
+                    : g
+                      ? `${d}curator/${e.clanSteamID.GetAccountID()}`
+                      : d +
+                        (e.jsondata
+                          .sale_vanity_id_valve_approved_for_sale_subpath
+                          ? "sale/"
+                          : "curator/" +
+                            e.clanSteamID.GetAccountID() +
+                            "/sale/") +
+                        e.jsondata.sale_vanity_id
               : d;
           case n.k_eCommunityView:
             return m + "announcements/detail/" + h;

@@ -592,6 +592,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -667,6 +668,7 @@
         _ = 4,
         _ = 20,
         _ = 45559995,
+        _ = 45902273,
         _ = [12, 34];
       function _(_) {
         return !_.some((_) => _ == _.GetEventType()) && !_.BHasTag("curator");
@@ -5090,17 +5092,20 @@
             return _.jsondata.bSaleEnabled
               ? _.clanSteamID.GetAccountID() == _._
                 ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
-                : _
-                  ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
+                : _.clanSteamID.GetAccountID() == _._
+                  ? `${_}charts/bestofyear/${_.jsondata.sale_vanity_id}`
                   : _
-                    ? `${_}curator/${_.clanSteamID.GetAccountID()}`
-                    : _ +
-                      (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                        ? "sale/"
-                        : "curator/" +
-                          _.clanSteamID.GetAccountID() +
-                          "/sale/") +
-                      _.jsondata.sale_vanity_id
+                    ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
+                    : _
+                      ? `${_}curator/${_.clanSteamID.GetAccountID()}`
+                      : _ +
+                        (_.jsondata
+                          .sale_vanity_id_valve_approved_for_sale_subpath
+                          ? "sale/"
+                          : "curator/" +
+                            _.clanSteamID.GetAccountID() +
+                            "/sale/") +
+                        _.jsondata.sale_vanity_id
               : _;
           case _.k_eCommunityView:
             return _ + "announcements/detail/" + _;

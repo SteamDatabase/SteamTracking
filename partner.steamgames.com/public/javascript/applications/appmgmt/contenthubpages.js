@@ -2138,7 +2138,7 @@
           }),
           r.createElement(
             ye.$n,
-            { onClick: () => c((e) => [...e, { id: 0 }]) },
+            { onClick: () => c((e) => (e ? [...e, { id: 0 }] : [{ id: 0 }])) },
             "Add",
           ),
         );

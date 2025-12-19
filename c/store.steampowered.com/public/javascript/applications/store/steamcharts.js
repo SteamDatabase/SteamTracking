@@ -7323,8 +7323,11 @@
             throw "error loading top releases";
           }
           const _ = _.Body().toObject();
-          return _._.is_support && 0 == _.top_app_list.length
-            ? (function () {
+          return !_._.is_support ||
+            0 != _.top_app_list.length ||
+            ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE)
+            ? _
+            : (function () {
                 const _ = {
                     top_app_list: [],
                     top_combined_app_and_dlc_releases: [],
@@ -7399,8 +7402,7 @@
                     },
                   );
                 return _;
-              })()
-            : _;
+              })();
         }
       }
       const _ = "useYearlyTopRelease";
@@ -7796,7 +7798,7 @@
         }
         return _;
       }
-      function _(_, _, _, _, _, _) {
+      function _(_, _, _, _, _, _, _, _) {
         _?.length > 25 &&
           _.jsondata.sale_sections.push({
             ...(0, _._)("items", "#Sale_default_label_148"),
@@ -7820,9 +7822,12 @@
             facets: _,
             show_on_tabs: _ ? [_] : void 0,
             prefer_assets_without_overrides: _,
+            show_deck_compability_details: Boolean(_),
+            show_as_demos: Boolean(_),
+            prefer_demo_store_page: Boolean(_),
           });
       }
-      function _(_, _, _, _, _, _) {
+      function _(_, _, _, _, _, _, _, _) {
         if (_._.logged_in) {
           const _ = _._.Get(),
             _ = _.filter((_) => _.BIsGameWishlisted(_));
@@ -7841,6 +7846,9 @@
               random_from_entire_set: !0,
               show_on_tabs: _ ? [_] : void 0,
               prefer_assets_without_overrides: _,
+              show_deck_compability_details: Boolean(_),
+              show_as_demos: Boolean(_),
+              prefer_demo_store_page: Boolean(_),
             });
           const _ = _.filter(
             (_) => _.BIsGameRecommended(_) && !_.BIsGameIgnored(_),
@@ -7860,34 +7868,39 @@
               capsule_style_per_row_array: 2 == _ ? ["grid"] : ["tall", "grid"],
               show_on_tabs: _ ? [_] : void 0,
               prefer_assets_without_overrides: _,
+              show_deck_compability_details: Boolean(_),
+              show_as_demos: Boolean(_),
+              prefer_demo_store_page: Boolean(_),
             });
           }
-          const _ = __webpack_require__.filter((_) => {
-            if (!_.BIsGameOwned(_)) {
-              const _ = _._.Get().GetApp(_);
-              return _.BIsGameOwned(_.GetParentAppID());
-            }
-            return !1;
-          });
-          _.length > 0 &&
-            _.jsondata.sale_sections.push({
-              ...(0, _._)("dlc_for_you", "#Sale_default_label_246"),
-              capsules: _.map((_) => ({
-                _: _,
-                type: "dlc",
-              })),
-              dlc_for_you_data: {
-                group_by_parent_app: !0,
-                hide_dlc_stats: !0,
-                parent_app_page_size: 5,
-                hide_dlc_grouping: !0,
-              },
-              capsules_per_row_array: [3],
-              show_as_carousel: !0,
-              disable_background: !0,
-              show_on_tabs: _ ? [_] : void 0,
-              prefer_assets_without_overrides: _,
+          if (_) {
+            const _ = __webpack_require__.filter((_) => {
+              if (!_.BIsGameOwned(_)) {
+                const _ = _._.Get().GetApp(_);
+                return _.BIsGameOwned(_.GetParentAppID());
+              }
+              return !1;
             });
+            _.length > 0 &&
+              _.jsondata.sale_sections.push({
+                ...(0, _._)("dlc_for_you", "#Sale_default_label_246"),
+                capsules: _.map((_) => ({
+                  _: _,
+                  type: "dlc",
+                })),
+                dlc_for_you_data: {
+                  group_by_parent_app: !0,
+                  hide_dlc_stats: !0,
+                  parent_app_page_size: 5,
+                  hide_dlc_grouping: !0,
+                },
+                capsules_per_row_array: [3],
+                show_as_carousel: !0,
+                disable_background: !0,
+                show_on_tabs: _ ? [_] : void 0,
+                prefer_assets_without_overrides: _,
+              });
+          }
         }
       }
       function _(_, _) {
@@ -7916,7 +7929,7 @@
           ...(0, _._)(_),
         ];
       }
-      function _(_, _, _, _, _, _) {
+      function _(_, _, _, _, _, _, _, _) {
         _.jsondata.sale_sections.push({
           ...(0, _._)("trailercarousel", ""),
           capsules: _(_, _).map((_) => ({
@@ -7928,6 +7941,9 @@
           trailer_carousel_auto_advance_msec: 1e4,
           show_on_tabs: _ ? [_] : void 0,
           prefer_assets_without_overrides: _,
+          show_deck_compability_details: Boolean(_),
+          show_as_demos: Boolean(_),
+          prefer_demo_store_page: Boolean(_),
         });
       }
       function _(_, _, _, _, _) {
@@ -11876,7 +11892,7 @@
           queryFn: () => {
             try {
               return (function (_, _, _) {
-                const _ = (0, _._)(_._, `bestofyear${_}`),
+                const _ = (0, _._)(_._, "" + _),
                   _ = !0,
                   _ = {
                     ...(0, _._)("tabs", ""),
@@ -11929,11 +11945,51 @@
                         show_on_tabs: [_.tabs[_].unique_id],
                         sale_section_classname: _(Number.parseInt(_)),
                         prefer_assets_without_overrides: _,
+                        show_deck_compability_details: Boolean(
+                          _.bShowDeckCompat,
+                        ),
+                        show_as_demos: Boolean(_.bShowDemoInfo),
+                        prefer_demo_store_page: Boolean(_.bShowDemoInfo),
                       });
                     }
-                    _(_, _, _, _, _, _.tabs[_].unique_id),
-                      _(_, _, _, _, _, _.tabs[_].unique_id),
-                      _(_, _, _, _, _, _.tabs[_].unique_id);
+                    _(
+                      _,
+                      _,
+                      _,
+                      _,
+                      _,
+                      _.tabs[_].unique_id,
+                      Boolean(_.bShowDeckCompat),
+                      Boolean(_.bShowDemoInfo),
+                    ),
+                      _(
+                        _,
+                        _,
+                        _,
+                        _,
+                        _,
+                        _.tabs[_].unique_id,
+                        Boolean(_.bShowDeckCompat),
+                        Boolean(_.bShowDemoInfo),
+                      ),
+                      _(
+                        _,
+                        _,
+                        _,
+                        _,
+                        _,
+                        _.tabs[_].unique_id,
+                        Boolean(_.bShowDeckCompat),
+                        Boolean(_.bShowDemoInfo),
+                      );
+                  }),
+                  _.jsondata.sale_sections.push({
+                    ...(0, _._)("text_section", ""),
+                    text_section_contents: [
+                      (0, _._)("#SteamCharts_Yearly_FAQ") +
+                        "\n" +
+                        `[url=${_._.HELP_BASE_URL}faqs/view/6C17-2BC1-2A01-9B76]${(0, _._)("#SteamCharts_Yearly_FAQ_link")}[/url]`,
+                    ],
                   }),
                   _.jsondata.sale_sections.push({
                     ...(0, _._)(
@@ -12150,6 +12206,14 @@
                   )),
                   _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
                     __webpack_require__.push(_),
+                  (_ = _(
+                    6,
+                    "#SteamCharts_Yearly_Tab_Demo",
+                    "#SteamCharts_Yearly_Tab_Demo_desc",
+                    _.top_app_list,
+                  )),
+                  _.rgFilteredCombinedAppsAndDLC?.length > 0 &&
+                    ((_.bShowDemoInfo = !0), __webpack_require__.push(_)),
                   _
                 );
               }, [_, _, _, _]);
