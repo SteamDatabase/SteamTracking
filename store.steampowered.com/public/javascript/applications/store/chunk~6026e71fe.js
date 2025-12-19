@@ -18383,7 +18383,7 @@
               event: a,
               language: r,
               activeTab: s,
-              displayStyle: o,
+              bInGamepadUI: o,
             } = this.props,
             {
               bInitialLoadComplete: l,
@@ -18500,7 +18500,10 @@
               },
               w,
             ));
-          const A = (0, Ur.k)("library", this.props.bInGamepadUI);
+          const A =
+            (t.item_browse_section_data?.item_browser_has_compact_toggle ??
+              !0) &&
+            (0, Ur.k)("library", o);
           return n.createElement(
             n.Fragment,
             null,

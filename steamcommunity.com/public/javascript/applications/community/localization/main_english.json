@@ -1911,6 +1911,8 @@
     "Sale_Section_HidePrices_ttip": "When checked, this will not show the prices on item capsules within this section",
     "Sale_Section_ShowDeckCompatibility": "Show Steam Deck Compatibility",
     "Sale_Section_ShowDeckCompatibility_ttip": "On hover, it will surface the Steam Deck compatibility details dialog, which surfaces the specific results from this game",
+    "Sale_Section_AllowCompactBrowserItemSwitch": "Allow expanded/compact items switch",
+    "Sale_Section_AllowCompactBrowserItemSwitch_ttip": "Shows a expanded/compact items toggle, if the items in the current support it.",
     "Sale_Section_EventClickDirectOpen": "Open Event Landing Page Directly",
     "Sale_Section_EventClickDirectOpen_ttip": "When checked, we want clicking the event to take the users to the landing page. When not checked it opens the event inline in a modal browser which in most cases is the ideal experience as the user doesn't need to leave this sales landing page.",
     "Sale_Section_Layout_Instructions": "How would you like the contents of this section to appear? Choose a preset option or manually configure.",

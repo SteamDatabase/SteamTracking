@@ -30451,30 +30451,30 @@
           return !e || "compactlist" == e;
         }
         render() {
-          var e;
+          var e, t, a;
           const {
-              browseInfo: t,
-              section: a,
-              event: r,
-              language: s,
-              activeTab: o,
-              displayStyle: l,
+              browseInfo: r,
+              section: s,
+              event: o,
+              language: l,
+              activeTab: c,
+              bInGamepadUI: d,
             } = this.props,
             {
-              bInitialLoadComplete: c,
-              rgCapsules: d,
-              nOriginalStartIndex: m,
-              bIsMoreAvailable: _,
-              bAwaitingMoreRowsLoading: p,
-              strRawSearch: g,
-              nHiddenCapsules: h,
+              bInitialLoadComplete: m,
+              rgCapsules: _,
+              nOriginalStartIndex: p,
+              bIsMoreAvailable: g,
+              bAwaitingMoreRowsLoading: h,
+              strRawSearch: S,
+              nHiddenCapsules: b,
             } = this.state,
-            S = Boolean(g),
-            b = this.RenderTabHeaders();
-          if (!b || 0 == b.length) return null;
-          const { feature: f, depth: w } = this.GetSNRData(),
-            C =
-              m > 0
+            f = Boolean(S),
+            w = this.RenderTabHeaders();
+          if (!w || 0 == w.length) return null;
+          const { feature: C, depth: B } = this.GetSNRData(),
+            T =
+              p > 0
                 ? () => {
                     (0, wn.Bm)(this.props.history, "offset", void 0),
                       this.setState(
@@ -30491,7 +30491,7 @@
                       );
                   }
                 : void 0;
-          let B = n.createElement(
+          let I = n.createElement(
             n.Fragment,
             null,
             Boolean(
@@ -30501,34 +30501,34 @@
                   : e.strRequest),
             ) &&
               n.createElement(rs, { request: this.state.results.strRequest }),
-            c &&
+            m &&
               n.createElement(is, {
-                browseInfo: t,
-                rgCapsules: d,
-                fnOnRestartBrowse: C,
+                browseInfo: r,
+                rgCapsules: _,
+                fnOnRestartBrowse: T,
                 fnBIsPermittedApp: this.props.fnBIsPermittedApp,
-                feature: f,
-                depth: w,
-                activeTab: o,
+                feature: C,
+                depth: B,
+                activeTab: c,
                 compactDisplay: this.state.bCompactViewMode,
               }),
-            c &&
-              0 == d.length &&
+            m &&
+              0 == _.length &&
               n.createElement(
                 "div",
                 { className: Xi().EmptyResults },
                 (0, M.we)("#Sale_EmptySearchResultsOrLoadFailure"),
               ),
-            (!c || _) &&
+            (!m || g) &&
               n.createElement(
                 "div",
                 {
                   className: (0, y.A)(
                     Xi().ShowContentsContainer,
-                    !c && Xi().Loading,
+                    !m && Xi().Loading,
                   ),
                 },
-                !c || p
+                !m || h
                   ? n.createElement(ve.h, {
                       capsules_per_row: [12],
                       is_item_browser: !0,
@@ -30543,15 +30543,15 @@
                     ),
               ),
           );
-          (null == a ? void 0 : a.enable_faceted_browsing) &&
-            (B = n.createElement(
+          (null == s ? void 0 : s.enable_faceted_browsing) &&
+            (I = n.createElement(
               ft,
               {
-                language: s,
-                section: a,
-                event: r,
+                language: l,
+                section: s,
+                event: o,
                 facetFilterState: this.state.facetFilterState,
-                nMaxFacetValues: a.max_facet_values_for_facet || 100,
+                nMaxFacetValues: s.max_facet_values_for_facet || 100,
                 fnOnUpdateFilter: this.OnUpdateFacetFilter,
                 onInitFilter: async () => {
                   let e = this.props.section.facets;
@@ -30576,9 +30576,17 @@
                 },
                 ...this.state.results,
               },
-              B,
+              I,
             ));
-          const T = (0, es.k)("library", this.props.bInGamepadUI);
+          const A =
+            (null ===
+              (a =
+                null === (t = s.item_browse_section_data) || void 0 === t
+                  ? void 0
+                  : t.item_browser_has_compact_toggle) ||
+              void 0 === a ||
+              a) &&
+            (0, es.k)("library", d);
           return n.createElement(
             n.Fragment,
             null,
@@ -30586,9 +30594,9 @@
               "div",
               { className: u.SaleSectionTitleCtn },
               n.createElement(ge.jR, {
-                section: a,
-                event: r,
-                nHiddenCapsules: h,
+                section: s,
+                event: o,
+                nHiddenCapsules: b,
                 ...this.props,
               }),
             ),
@@ -30604,12 +30612,12 @@
                     "flow-children": "row",
                     className: Xi().SaleItemBrowserHeader,
                   },
-                  b,
+                  w,
                   !this.props.bInGamepadUI &&
                     n.createElement(
                       "div",
                       { className: Xi().SuggestContainer },
-                      T &&
+                      A &&
                         n.createElement(
                           ns,
                           {
@@ -30635,16 +30643,16 @@
                       n.createElement(ot.pd, {
                         type: "text",
                         onChange: this.OnUpdateSearch,
-                        bAlwaysShowClearAction: S,
+                        bAlwaysShowClearAction: f,
                         placeholder: (0, M.we)(
                           "#Sale_ItemBrowser_SearchPlaceholder",
                         ),
-                        value: g,
+                        value: S,
                       }),
                     ),
                 ),
               ),
-              B,
+              I,
             ),
           );
         }

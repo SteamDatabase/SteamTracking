@@ -20696,7 +20696,7 @@
               event: __webpack_require__,
               language: _,
               activeTab: _,
-              displayStyle: _,
+              bInGamepadUI: _,
             } = this.props,
             {
               bInitialLoadComplete: _,
@@ -20817,7 +20817,10 @@
               },
               _,
             ));
-          const _ = (0, _._)("library", this.props.bInGamepadUI);
+          const _ =
+            (_.item_browse_section_data?.item_browser_has_compact_toggle ??
+              !0) &&
+            (0, _._)("library", _);
           return _.createElement(
             _.Fragment,
             null,

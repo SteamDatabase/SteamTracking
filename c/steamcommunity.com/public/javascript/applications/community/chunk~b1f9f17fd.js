@@ -33712,14 +33712,14 @@
           return !_ || "compactlist" == _;
         }
         render() {
-          var _;
+          var _, _, _;
           const {
               browseInfo: _,
-              section: __webpack_require__,
+              section: _,
               event: _,
               language: _,
               activeTab: _,
-              displayStyle: _,
+              bInGamepadUI: _,
             } = this.props,
             {
               bInitialLoadComplete: _,
@@ -33808,18 +33808,15 @@
                     ),
               ),
           );
-          (null == __webpack_require__
-            ? void 0
-            : __webpack_require__.enable_faceted_browsing) &&
+          (null == _ ? void 0 : _.enable_faceted_browsing) &&
             (_ = _.createElement(
               _,
               {
                 language: _,
-                section: __webpack_require__,
+                section: _,
                 event: _,
                 facetFilterState: this.state.facetFilterState,
-                nMaxFacetValues:
-                  __webpack_require__.max_facet_values_for_facet || 100,
+                nMaxFacetValues: _.max_facet_values_for_facet || 100,
                 fnOnUpdateFilter: this.OnUpdateFacetFilter,
                 onInitFilter: async () => {
                   let _ = this.props.section.facets;
@@ -33846,7 +33843,15 @@
               },
               _,
             ));
-          const _ = (0, _._)("library", this.props.bInGamepadUI);
+          const _ =
+            (null ===
+              (_ =
+                null === (_ = _.item_browse_section_data) || void 0 === _
+                  ? void 0
+                  : _.item_browser_has_compact_toggle) ||
+              void 0 === _ ||
+              _) &&
+            (0, _._)("library", _);
           return _.createElement(
             _.Fragment,
             null,
@@ -33856,7 +33861,7 @@
                 className: _.SaleSectionTitleCtn,
               },
               _.createElement(_._, {
-                section: __webpack_require__,
+                section: _,
                 event: _,
                 nHiddenCapsules: _,
                 ...this.props,

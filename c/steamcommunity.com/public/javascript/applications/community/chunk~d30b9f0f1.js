@@ -12894,7 +12894,457 @@
             }),
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            saleSection: _,
+            editModel: __webpack_require__,
+            editLanguage: _,
+          } = _,
+          [_, _] = (0, _._)(() => [
+            _(__webpack_require__, _),
+            _.reverse_show_on_tabs,
+          ]),
+          _ = _.useMemo(() => {
+            if (!_ || !_.show_on_tabs || 0 === _.show_on_tabs.length)
+              return (0, _._)("#Sale_Section_ShowOnTabs_All");
+            let _ = [];
+            for (const _ of _.show_on_tabs) {
+              const _ = _.tabs ? _.tabs.find((_) => _.unique_id === _) : null;
+              _ && _.push((0, _._)(_, _));
+            }
+            return 0 === _.length
+              ? (0, _._)("#Sale_Section_ShowOnTabs_All")
+              : _.join(", ");
+          }, [_, _.show_on_tabs, _]),
+          _ = _ == (0, _._)("#Sale_Section_ShowOnTabs_All");
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_._, {
+            varName: "diable_tab_id_filtering",
+            editModel: __webpack_require__,
+            section: _,
+            textToken: "#Sale_Section_TabSettings_DisableIDFiltering",
+            ttipToken: "#Sale_Section_TabSettings_DisableIDFiltering_ttip",
+          }),
+          _.createElement(_._, {
+            varName: "reverse_show_on_tabs",
+            editModel: __webpack_require__,
+            section: _,
+            textToken: "#Sale_Section_ShowOnTabs_Exclusion",
+            ttipToken: _
+              ? (0, _._)("#Sale_Section_ShowOnTabs_Exclusion_ttip2")
+              : (0, _._)("#Sale_Section_ShowOnTabs_Exclusion_ttip"),
+            disabled: _,
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.EventDefaultRowContainer,
+            },
+            _.createElement(
+              "div",
+              {
+                className: (0, _._)(_.EventEditorTextTitle, _.ShowOnTabsLabel),
+              },
+              (0, _._)(
+                _
+                  ? "#Sale_Section_ShowOnTabs_reverse"
+                  : "#Sale_Section_ShowOnTabs",
+              ),
+              _,
+            ),
+            _.createElement(
+              "div",
+              {
+                className: _.ShowOnTabsButton,
+              },
+              _.createElement(
+                _._,
+                {
+                  onClick: () => _(__webpack_require__, _),
+                },
+                (0, _._)("#Sale_Section_ShowOnTabs_Edit"),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_, _, _, _) {
+        const _ = _(_, _);
+        if (!_) return;
+        let _ = new Set(
+          _ ? __webpack_require__() : [...(_.show_on_tabs || [])],
+        );
+        const _ = _.tabs.map((_) => {
+          var _;
+          const _ =
+              (null === (_ = _.capsules) || void 0 === _ ? void 0 : _.length) >
+              0
+                ? (function (_, _) {
+                    const _ = new Set();
+                    _.forEach((_) => __webpack_require__.add(Number(_._)));
+                    let _ = 0;
+                    for (const _ of _)
+                      __webpack_require__.has(Number(_._)) && _++;
+                    return _;
+                  })(_.capsules, _.capsules)
+                : void 0,
+            _ = void 0 === _ ? "" : " (" + _ + ")";
+          return _.createElement(_._, {
+            key: _.unique_id,
+            className: _.ShowOnTabCheckBox,
+            onChange: (_) => {
+              _ ? _.add(_.unique_id) : _.delete(_.unique_id);
+            },
+            label: (0, _._)(_, _.GetCurEditLanguage()) + _,
+            checked: _.has(_.unique_id),
+          });
+        });
+        (0, _._)(
+          _.createElement(
+            _._,
+            {
+              strTitle: (0, _._)("#Sale_Section_ShowOnTabs_DialogTitle"),
+              strDescription: (0, _._)("#Sale_Section_ShowOnTabs_DialogDesc"),
+              onOK: () => {
+                _
+                  ? _(Array.from(_.keys()))
+                  : ((_.show_on_tabs = Array.from(_.keys())),
+                    0 == _.show_on_tabs.length &&
+                      (_.reverse_show_on_tabs = void 0)),
+                  _.SetDirty(_._.jsondata_sales);
+              },
+            },
+            _.createElement(
+              "div",
+              {
+                className: _.ShowOnTabCheckBoxCtn,
+              },
+              _,
+            ),
+          ),
+          window,
+        );
+      }
+      function _(_, _) {
+        for (const _ of _.GetSaleSections()) {
+          if (_ === _) break;
+          if ("tabs" === _.section_type) return _;
+        }
+        return null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { saleSection: _, editModel: __webpack_require__ } = _,
+          [_, _] = (0, _._)(() => [
+            _.item_browse_section_data || {
+              prefer_assets_without_overrides: !1,
+            },
+            _.cap_item_count || 0,
+          ]),
+          [_, _, _] = (0, _._)(() => [
+            _.master_subscription,
+            _.show_deck_compability_details,
+            _.tabs || [],
+          ]),
+          _ = _(__webpack_require__, _),
+          _ =
+            __webpack_require__.GetEventModel().jsondata.item_source_type ===
+            _._.k_EContentHub,
+          _ =
+            !!__webpack_require__.GetEventModel().jsondata
+              .prune_list_optin_name ||
+            !!__webpack_require__.GetEventModel().jsondata
+              .prune_list_optin_name,
+          _ = _._.filter(
+            (_) => "search" != _ && void 0 === _.find((_) => _ === _),
+          )
+            .filter((_) => (0, _._)(_, _, _))
+            .map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: _,
+                  className: _.ItemBrowseInactiveTab,
+                },
+                _.createElement(
+                  "div",
+                  {
+                    className: _.ItemBrowseInactiveTabAdd,
+                    onClick: () => {
+                      _(),
+                        _.item_browse_section_data.tabs ||
+                          (_.item_browse_section_data.tabs = []),
+                        (_.item_browse_section_data.tabs = [
+                          ..._.item_browse_section_data.tabs,
+                          _,
+                        ]),
+                        __webpack_require__.SetDirty(_._.jsondata_sales);
+                    },
+                  },
+                  _.createElement(_.FWt, null),
+                ),
+                _.createElement(_, {
+                  editModel: __webpack_require__,
+                  saleSection: _,
+                  tab: _,
+                }),
+              ),
+            );
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(_._, {
+            label: (0, _._)("#Sale_Section_EnableSearch"),
+            tooltip: (0, _._)("#Sale_Section_EnableSearch_ttip"),
+            onChange: (_) => {
+              _(),
+                (_.item_browse_section_data.enable_search = _),
+                __webpack_require__.SetDirty(_._.jsondata_sales);
+            },
+            checked: _.enable_search,
+          }),
+          _.createElement(_._, {
+            label: (0, _._)("#Sale_Section_UseDemoLayout"),
+            tooltip: (0, _._)("#Sale_Section_UseDemoLayout_ttip"),
+            onChange: (_) => {
+              _(),
+                (_.item_browse_section_data.show_as_demos = _),
+                __webpack_require__.SetDirty(_._.jsondata_sales);
+            },
+            checked: _.show_as_demos,
+          }),
+          _.createElement(_._, {
+            label: (0, _._)("#Sale_Section_PreferDemoStorePage"),
+            tooltip: (0, _._)("#Sale_Section_PreferDemoStorePage_tooltip"),
+            onChange: (_) => {
+              _(),
+                (_.item_browse_section_data.prefer_demo_store_page = _),
+                __webpack_require__.SetDirty(_._.jsondata_sales);
+            },
+            checked: _.prefer_demo_store_page,
+          }),
+          _.createElement(_._, {
+            label: (0, _._)("#Sale_Section_ShowDeckCompatibility"),
+            tooltip: (0, _._)("#Sale_Section_ShowDeckCompatibility_ttip"),
+            onChange: (_) => {
+              _(),
+                (_.item_browse_section_data.show_deck_compability_details = _),
+                __webpack_require__.SetDirty(_._.jsondata_sales);
+            },
+            checked: _,
+          }),
+          _.createElement(_._, {
+            type: "text",
+            label: (0, _._)("#Sale_BrowseSection_SubscriptionID"),
+            tooltip: (0, _._)("#Sale_BrowseSection_SubscriptionID_ttip"),
+            onChange: (_) => {
+              _(),
+                (_.item_browse_section_data.master_subscription =
+                  Number.parseInt(_.target.value) || 0),
+                __webpack_require__.SetDirty(_._.jsondata_sales);
+            },
+            value: _,
+          }),
+          _.createElement(_._, {
+            type: "number",
+            label: (0, _._)("#Sale_Section_SaleItemBrowser_ItemCap"),
+            tooltip: (0, _._)("#Sale_Section_SaleItemBrowser_ItemCap_ttips"),
+            value: _,
+            min: 0,
+            onChange: (_) => {
+              const _ = Number(_.currentTarget.value);
+              _.cap_item_count != _ &&
+                (_(),
+                (_.cap_item_count = _),
+                __webpack_require__.SetDirty(_._.jsondata_sales));
+            },
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.EventEditorTextTitle,
+            },
+            (0, _._)("#Sale_BrowseSection_TabList"),
+            _.createElement(_._, {
+              tooltip: (0, _._)("#Sale_BrowseSection_TabList_ttip"),
+            }),
+          ),
+          _.createElement(_._, {
+            items: _,
+            onDelete: (_) => {
+              _();
+              const { item_browse_section_data: _ } = _;
+              _ >= 0 &&
+                _ < _.tabs.length &&
+                ((_.tabs = [..._.tabs.slice(0, _), ..._.tabs.slice(_ + 1)]),
+                __webpack_require__.SetDirty(_._.jsondata_sales));
+            },
+            onReorder: () => __webpack_require__.SetDirty(_._.jsondata_sales),
+            render: (_) =>
+              _.createElement(
+                "div",
+                {
+                  className: _.ItemBrowseActiveTab,
+                },
+                _.createElement(_, {
+                  saleSection: _,
+                  editModel: __webpack_require__,
+                  tab: _,
+                  bShowTabInclusionControls: !0,
+                }),
+              ),
+          }),
+          _.createElement(
+            "div",
+            {
+              className: _.EventEditorTextTitle,
+            },
+            (0, _._)("#Sale_BrowseSection_AdditionalTabList"),
+            _.createElement(_._, {
+              tooltip: (0, _._)("#Sale_BrowseSection_AdditionalTabList_ttip"),
+            }),
+          ),
+          _.createElement("div", null, _),
+          _.createElement(_._, {
+            section: _,
+            capsuleContainer: _,
+            editModel: __webpack_require__,
+            bAllowPruneFacets: !0,
+          }),
+        );
+      }
+      function _(_) {
+        var _;
+        const {
+            editModel: __webpack_require__,
+            saleSection: _,
+            tab: _,
+            bShowTabInclusionControls: _,
+          } = _,
+          _ = _._.find((_) => _.flavor === _);
+        let _ = _;
+        _ &&
+          ((_ = (0, _._)(_.label)),
+          _.startsWith("contenthub_") &&
+            (_ +=
+              " (" +
+              (0, _._)("#Sale_BrowserSortOption_ContentHub_Suffix") +
+              ")"));
+        const _ =
+            __webpack_require__.GetEventModel().jsondata.item_source_type ===
+            _._.k_EContentHub,
+          _ =
+            !!__webpack_require__.GetEventModel().jsondata
+              .prune_list_optin_name ||
+            !!__webpack_require__.GetEventModel().jsondata
+              .prune_list_optin_name,
+          _ = (0, _._)(_, _, _),
+          _ = _(__webpack_require__, _),
+          [_] = (0, _._)(() => {
+            var _;
+            return [
+              null === (_ = _.item_browse_section_data) || void 0 === _
+                ? void 0
+                : _.show_flavor_on_sale_tabs,
+            ];
+          }),
+          _ = (0, _._)();
+        return _.createElement(
+          "div",
+          {
+            className: _()(
+              _.ItemBrowseTabNameCtn,
+              _ ? void 0 : _.ItemBrowseTabNameIncompatible,
+            ),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _.ItemBrowseTabName,
+            },
+            _.createElement("b", null, _),
+            Boolean(null == _ ? void 0 : _.tooltip) &&
+              _.createElement("span", null, " - ", (0, _._)(_.tooltip)),
+            _ ? null : (0, _._)("#Sale_BrowserSortOption_Incompatible"),
+          ),
+          _ &&
+            (null === (_ = null == _ ? void 0 : _.tabs) || void 0 === _
+              ? void 0
+              : _.length) > 0 &&
+            _.createElement(
+              "a",
+              {
+                className: _.ItemBrowseTabInclusionLink,
+                onClick: (_) => {
+                  _.preventDefault(),
+                    _.stopPropagation(),
+                    _(
+                      __webpack_require__,
+                      _,
+                      () => (_ && _[_]) || [],
+                      (_) => {
+                        _.item_browse_section_data.show_flavor_on_sale_tabs ||
+                          (_.item_browse_section_data.show_flavor_on_sale_tabs =
+                            {}),
+                          (_.item_browse_section_data.show_flavor_on_sale_tabs[
+                            _
+                          ] = _),
+                          _();
+                      },
+                    );
+                },
+              },
+              (0, _._)("#Sale_Section_ShowOnTabs"),
+              (function (_, _, _, _) {
+                var _;
+                const _ = _.GetCurEditLanguage();
+                if (
+                  !_ ||
+                  !(null === (_ = _.item_browse_section_data) || void 0 === _
+                    ? void 0
+                    : _.show_flavor_on_sale_tabs) ||
+                  !_.item_browse_section_data.show_flavor_on_sale_tabs[_] ||
+                  0 ===
+                    _.item_browse_section_data.show_flavor_on_sale_tabs[_]
+                      .length
+                )
+                  return (0, _._)("#Sale_Section_ShowOnTabs_All");
+                let _ = [];
+                for (const _ of _.item_browse_section_data
+                  .show_flavor_on_sale_tabs[_]) {
+                  const _ = _.tabs
+                    ? _.tabs.find((_) => _.unique_id === _)
+                    : null;
+                  _ && _.push((0, _._)(_, _));
+                }
+                return 0 === _.length
+                  ? (0, _._)("#Sale_Section_ShowOnTabs_All")
+                  : _.join(", ");
+              })(_, __webpack_require__, _, _),
+            ),
+        );
+      }
+      function _(_, _) {
+        return _.useCallback(() => {
+          _.item_browse_section_data ||
+            ((_.item_browse_section_data = {
+              prefer_assets_without_overrides: !1,
+            }),
+            _.SetDirty(_._.jsondata_sales));
+        }, [_, _]);
+      }
       function _(_) {
         const {
             saleSection: _,
@@ -13534,10 +13984,23 @@
               section: __webpack_require__,
               bDisabled: _,
             } = _,
-            [_, _] = (0, _._)(() => [
-              __webpack_require__.single_item_style,
-              __webpack_require__.section_type,
-            ]),
+            [_, _, _] = (0, _._)(() => {
+              var _, _;
+              return [
+                __webpack_require__.single_item_style,
+                __webpack_require__.section_type,
+                null ===
+                  (_ =
+                    null ===
+                      (_ = __webpack_require__.item_browse_section_data) ||
+                    void 0 === _
+                      ? void 0
+                      : _.item_browser_has_compact_toggle) ||
+                  void 0 === _ ||
+                  _,
+              ];
+            }),
+            _ = _(_, __webpack_require__),
             _ = "sale_item_browser" == _,
             _ = _ ? "compactlist" : _._;
           if (!(0, _._)(_) && !_) return null;
@@ -13578,27 +14041,50 @@
                     data: "purchaseonlydisplay",
                   },
             ]);
-          return _.createElement(_._, {
-            disabled: _,
-            rgOptions: _,
-            label: (0, _._)(
-              _
-                ? "#Sale_Section_SingleItemDisplay_disabled"
-                : "#Sale_Section_SingleItemDisplay",
+          return _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_._, {
+              disabled: _,
+              rgOptions: _,
+              label: (0, _._)(
+                _
+                  ? "#Sale_Section_SingleItemDisplay_disabled"
+                  : "#Sale_Section_SingleItemDisplay",
+              ),
+              tooltip: (0, _._)(
+                _
+                  ? "#Sale_Section_SingleItemDisplay_disabled_ttip"
+                  : "#Sale_Section_SingleItemDisplay_ttip",
+              ),
+              strDropDownClassName: _.DropDownScroll,
+              selectedOption: _ || _,
+              onChange: (_) => {
+                __webpack_require__.single_item_style !== _.data &&
+                  ((__webpack_require__.single_item_style = _.data),
+                  _.SetDirty(_._.jsondata_sales));
+              },
+            }),
+            _.createElement(
+              _._,
+              {
+                clanSteamID: _.GetClanSteamID(),
+              },
+              _.createElement(_._, {
+                label: (0, _._)("#Sale_Section_AllowCompactBrowserItemSwitch"),
+                tooltip: (0, _._)(
+                  "#Sale_Section_AllowCompactBrowserItemSwitch_ttip",
+                ),
+                onChange: (_) => {
+                  _(),
+                    (__webpack_require__.item_browse_section_data.item_browser_has_compact_toggle =
+                      _),
+                    _.SetDirty(_._.jsondata_sales);
+                },
+                checked: _,
+              }),
             ),
-            tooltip: (0, _._)(
-              _
-                ? "#Sale_Section_SingleItemDisplay_disabled_ttip"
-                : "#Sale_Section_SingleItemDisplay_ttip",
-            ),
-            strDropDownClassName: _.DropDownScroll,
-            selectedOption: _ || _,
-            onChange: (_) => {
-              __webpack_require__.single_item_style !== _.data &&
-                ((__webpack_require__.single_item_style = _.data),
-                _.SetDirty(_._.jsondata_sales));
-            },
-          });
+          );
         });
       function _(_, _) {
         return JSON.stringify({
@@ -13868,8 +14354,6 @@
           );
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15051,8 +15535,7 @@
           }),
         );
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
           _ = [
@@ -15251,7 +15734,6 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
@@ -15661,8 +16143,6 @@
         return _ ? _[_] : "";
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20058,8 +20538,7 @@
           ),
         );
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       const _ = [_._.k_Header1, _._.k_Header2, _._.k_Header3];
       function _(_) {
         const {
@@ -25735,446 +26214,6 @@
                 _.SetDirty(_._.jsondata_sales);
             },
           }),
-        );
-      }
-      function _(_) {
-        const {
-            saleSection: _,
-            editModel: __webpack_require__,
-            editLanguage: _,
-          } = _,
-          [_, _] = (0, _._)(() => [
-            _(__webpack_require__, _),
-            _.reverse_show_on_tabs,
-          ]),
-          _ = _.useMemo(() => {
-            if (!_ || !_.show_on_tabs || 0 === _.show_on_tabs.length)
-              return (0, _._)("#Sale_Section_ShowOnTabs_All");
-            let _ = [];
-            for (const _ of _.show_on_tabs) {
-              const _ = _.tabs ? _.tabs.find((_) => _.unique_id === _) : null;
-              _ && _.push((0, _._)(_, _));
-            }
-            return 0 === _.length
-              ? (0, _._)("#Sale_Section_ShowOnTabs_All")
-              : _.join(", ");
-          }, [_, _.show_on_tabs, _]),
-          _ = _ == (0, _._)("#Sale_Section_ShowOnTabs_All");
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_._, {
-            varName: "diable_tab_id_filtering",
-            editModel: __webpack_require__,
-            section: _,
-            textToken: "#Sale_Section_TabSettings_DisableIDFiltering",
-            ttipToken: "#Sale_Section_TabSettings_DisableIDFiltering_ttip",
-          }),
-          _.createElement(_._, {
-            varName: "reverse_show_on_tabs",
-            editModel: __webpack_require__,
-            section: _,
-            textToken: "#Sale_Section_ShowOnTabs_Exclusion",
-            ttipToken: _
-              ? (0, _._)("#Sale_Section_ShowOnTabs_Exclusion_ttip2")
-              : (0, _._)("#Sale_Section_ShowOnTabs_Exclusion_ttip"),
-            disabled: _,
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _.EventDefaultRowContainer,
-            },
-            _.createElement(
-              "div",
-              {
-                className: (0, _._)(_.EventEditorTextTitle, _.ShowOnTabsLabel),
-              },
-              (0, _._)(
-                _
-                  ? "#Sale_Section_ShowOnTabs_reverse"
-                  : "#Sale_Section_ShowOnTabs",
-              ),
-              _,
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _.ShowOnTabsButton,
-              },
-              _.createElement(
-                _._,
-                {
-                  onClick: () => _(__webpack_require__, _),
-                },
-                (0, _._)("#Sale_Section_ShowOnTabs_Edit"),
-              ),
-            ),
-          ),
-        );
-      }
-      function _(_, _, _, _) {
-        const _ = _(_, _);
-        if (!_) return;
-        let _ = new Set(
-          _ ? __webpack_require__() : [...(_.show_on_tabs || [])],
-        );
-        const _ = _.tabs.map((_) => {
-          var _;
-          const _ =
-              (null === (_ = _.capsules) || void 0 === _ ? void 0 : _.length) >
-              0
-                ? (function (_, _) {
-                    const _ = new Set();
-                    _.forEach((_) => __webpack_require__.add(Number(_._)));
-                    let _ = 0;
-                    for (const _ of _)
-                      __webpack_require__.has(Number(_._)) && _++;
-                    return _;
-                  })(_.capsules, _.capsules)
-                : void 0,
-            _ = void 0 === _ ? "" : " (" + _ + ")";
-          return _.createElement(_._, {
-            key: _.unique_id,
-            className: _.ShowOnTabCheckBox,
-            onChange: (_) => {
-              _ ? _.add(_.unique_id) : _.delete(_.unique_id);
-            },
-            label: (0, _._)(_, _.GetCurEditLanguage()) + _,
-            checked: _.has(_.unique_id),
-          });
-        });
-        (0, _._)(
-          _.createElement(
-            _._,
-            {
-              strTitle: (0, _._)("#Sale_Section_ShowOnTabs_DialogTitle"),
-              strDescription: (0, _._)("#Sale_Section_ShowOnTabs_DialogDesc"),
-              onOK: () => {
-                _
-                  ? _(Array.from(_.keys()))
-                  : ((_.show_on_tabs = Array.from(_.keys())),
-                    0 == _.show_on_tabs.length &&
-                      (_.reverse_show_on_tabs = void 0)),
-                  _.SetDirty(_._.jsondata_sales);
-              },
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.ShowOnTabCheckBoxCtn,
-              },
-              _,
-            ),
-          ),
-          window,
-        );
-      }
-      function _(_, _) {
-        for (const _ of _.GetSaleSections()) {
-          if (_ === _) break;
-          if ("tabs" === _.section_type) return _;
-        }
-        return null;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { saleSection: _, editModel: __webpack_require__ } = _,
-          [_, _] = (0, _._)(() => [
-            _.item_browse_section_data || {
-              prefer_assets_without_overrides: !1,
-            },
-            _.cap_item_count || 0,
-          ]),
-          [_, _, _] = (0, _._)(() => [
-            _.master_subscription,
-            _.show_deck_compability_details,
-            _.tabs || [],
-          ]),
-          _ = _.useCallback(() => {
-            _.item_browse_section_data ||
-              ((_.item_browse_section_data = {
-                prefer_assets_without_overrides: !1,
-              }),
-              __webpack_require__.SetDirty(_._.jsondata_sales));
-          }, [_, __webpack_require__]),
-          _ =
-            __webpack_require__.GetEventModel().jsondata.item_source_type ===
-            _._.k_EContentHub,
-          _ =
-            !!__webpack_require__.GetEventModel().jsondata
-              .prune_list_optin_name ||
-            !!__webpack_require__.GetEventModel().jsondata
-              .prune_list_optin_name,
-          _ = _._.filter(
-            (_) => "search" != _ && void 0 === _.find((_) => _ === _),
-          )
-            .filter((_) => (0, _._)(_, _, _))
-            .map((_) =>
-              _.createElement(
-                "div",
-                {
-                  key: _,
-                  className: _.ItemBrowseInactiveTab,
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className: _.ItemBrowseInactiveTabAdd,
-                    onClick: () => {
-                      _(),
-                        _.item_browse_section_data.tabs ||
-                          (_.item_browse_section_data.tabs = []),
-                        (_.item_browse_section_data.tabs = [
-                          ..._.item_browse_section_data.tabs,
-                          _,
-                        ]),
-                        __webpack_require__.SetDirty(_._.jsondata_sales);
-                    },
-                  },
-                  _.createElement(_.FWt, null),
-                ),
-                _.createElement(_, {
-                  editModel: __webpack_require__,
-                  saleSection: _,
-                  tab: _,
-                }),
-              ),
-            );
-        return _.createElement(
-          "div",
-          null,
-          _.createElement(_._, {
-            label: (0, _._)("#Sale_Section_EnableSearch"),
-            tooltip: (0, _._)("#Sale_Section_EnableSearch_ttip"),
-            onChange: (_) => {
-              _(),
-                (_.item_browse_section_data.enable_search = _),
-                __webpack_require__.SetDirty(_._.jsondata_sales);
-            },
-            checked: _.enable_search,
-          }),
-          _.createElement(_._, {
-            label: (0, _._)("#Sale_Section_UseDemoLayout"),
-            tooltip: (0, _._)("#Sale_Section_UseDemoLayout_ttip"),
-            onChange: (_) => {
-              _(),
-                (_.item_browse_section_data.show_as_demos = _),
-                __webpack_require__.SetDirty(_._.jsondata_sales);
-            },
-            checked: _.show_as_demos,
-          }),
-          _.createElement(_._, {
-            label: (0, _._)("#Sale_Section_PreferDemoStorePage"),
-            tooltip: (0, _._)("#Sale_Section_PreferDemoStorePage_tooltip"),
-            onChange: (_) => {
-              _(),
-                (_.item_browse_section_data.prefer_demo_store_page = _),
-                __webpack_require__.SetDirty(_._.jsondata_sales);
-            },
-            checked: _.prefer_demo_store_page,
-          }),
-          _.createElement(_._, {
-            label: (0, _._)("#Sale_Section_ShowDeckCompatibility"),
-            tooltip: (0, _._)("#Sale_Section_ShowDeckCompatibility_ttip"),
-            onChange: (_) => {
-              _(),
-                (_.item_browse_section_data.show_deck_compability_details = _),
-                __webpack_require__.SetDirty(_._.jsondata_sales);
-            },
-            checked: _,
-          }),
-          _.createElement(_._, {
-            type: "text",
-            label: (0, _._)("#Sale_BrowseSection_SubscriptionID"),
-            tooltip: (0, _._)("#Sale_BrowseSection_SubscriptionID_ttip"),
-            onChange: (_) => {
-              _(),
-                (_.item_browse_section_data.master_subscription =
-                  Number.parseInt(_.target.value) || 0),
-                __webpack_require__.SetDirty(_._.jsondata_sales);
-            },
-            value: _,
-          }),
-          _.createElement(_._, {
-            type: "number",
-            label: (0, _._)("#Sale_Section_SaleItemBrowser_ItemCap"),
-            tooltip: (0, _._)("#Sale_Section_SaleItemBrowser_ItemCap_ttips"),
-            value: _,
-            min: 0,
-            onChange: (_) => {
-              const _ = Number(_.currentTarget.value);
-              _.cap_item_count != _ &&
-                (_(),
-                (_.cap_item_count = _),
-                __webpack_require__.SetDirty(_._.jsondata_sales));
-            },
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _.EventEditorTextTitle,
-            },
-            (0, _._)("#Sale_BrowseSection_TabList"),
-            _.createElement(_._, {
-              tooltip: (0, _._)("#Sale_BrowseSection_TabList_ttip"),
-            }),
-          ),
-          _.createElement(_._, {
-            items: _,
-            onDelete: (_) => {
-              _();
-              const { item_browse_section_data: _ } = _;
-              _ >= 0 &&
-                _ < _.tabs.length &&
-                ((_.tabs = [..._.tabs.slice(0, _), ..._.tabs.slice(_ + 1)]),
-                __webpack_require__.SetDirty(_._.jsondata_sales));
-            },
-            onReorder: () => __webpack_require__.SetDirty(_._.jsondata_sales),
-            render: (_) =>
-              _.createElement(
-                "div",
-                {
-                  className: _.ItemBrowseActiveTab,
-                },
-                _.createElement(_, {
-                  saleSection: _,
-                  editModel: __webpack_require__,
-                  tab: _,
-                  bShowTabInclusionControls: !0,
-                }),
-              ),
-          }),
-          _.createElement(
-            "div",
-            {
-              className: _.EventEditorTextTitle,
-            },
-            (0, _._)("#Sale_BrowseSection_AdditionalTabList"),
-            _.createElement(_._, {
-              tooltip: (0, _._)("#Sale_BrowseSection_AdditionalTabList_ttip"),
-            }),
-          ),
-          _.createElement("div", null, _),
-          _.createElement(_._, {
-            section: _,
-            capsuleContainer: _,
-            editModel: __webpack_require__,
-            bAllowPruneFacets: !0,
-          }),
-        );
-      }
-      function _(_) {
-        var _;
-        const {
-            editModel: __webpack_require__,
-            saleSection: _,
-            tab: _,
-            bShowTabInclusionControls: _,
-          } = _,
-          _ = _._.find((_) => _.flavor === _);
-        let _ = _;
-        _ &&
-          ((_ = (0, _._)(_.label)),
-          _.startsWith("contenthub_") &&
-            (_ +=
-              " (" +
-              (0, _._)("#Sale_BrowserSortOption_ContentHub_Suffix") +
-              ")"));
-        const _ =
-            __webpack_require__.GetEventModel().jsondata.item_source_type ===
-            _._.k_EContentHub,
-          _ =
-            !!__webpack_require__.GetEventModel().jsondata
-              .prune_list_optin_name ||
-            !!__webpack_require__.GetEventModel().jsondata
-              .prune_list_optin_name,
-          _ = (0, _._)(_, _, _),
-          _ = _(__webpack_require__, _),
-          [_] = (0, _._)(() => {
-            var _;
-            return [
-              null === (_ = _.item_browse_section_data) || void 0 === _
-                ? void 0
-                : _.show_flavor_on_sale_tabs,
-            ];
-          }),
-          _ = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            className: _()(
-              _.ItemBrowseTabNameCtn,
-              _ ? void 0 : _.ItemBrowseTabNameIncompatible,
-            ),
-          },
-          _.createElement(
-            "div",
-            {
-              className: _.ItemBrowseTabName,
-            },
-            _.createElement("b", null, _),
-            Boolean(null == _ ? void 0 : _.tooltip) &&
-              _.createElement("span", null, " - ", (0, _._)(_.tooltip)),
-            _ ? null : (0, _._)("#Sale_BrowserSortOption_Incompatible"),
-          ),
-          _ &&
-            (null === (_ = null == _ ? void 0 : _.tabs) || void 0 === _
-              ? void 0
-              : _.length) > 0 &&
-            _.createElement(
-              "a",
-              {
-                className: _.ItemBrowseTabInclusionLink,
-                onClick: (_) => {
-                  _.preventDefault(),
-                    _.stopPropagation(),
-                    _(
-                      __webpack_require__,
-                      _,
-                      () => (_ && _[_]) || [],
-                      (_) => {
-                        _.item_browse_section_data.show_flavor_on_sale_tabs ||
-                          (_.item_browse_section_data.show_flavor_on_sale_tabs =
-                            {}),
-                          (_.item_browse_section_data.show_flavor_on_sale_tabs[
-                            _
-                          ] = _),
-                          _();
-                      },
-                    );
-                },
-              },
-              (0, _._)("#Sale_Section_ShowOnTabs"),
-              (function (_, _, _, _) {
-                var _;
-                const _ = _.GetCurEditLanguage();
-                if (
-                  !_ ||
-                  !(null === (_ = _.item_browse_section_data) || void 0 === _
-                    ? void 0
-                    : _.show_flavor_on_sale_tabs) ||
-                  !_.item_browse_section_data.show_flavor_on_sale_tabs[_] ||
-                  0 ===
-                    _.item_browse_section_data.show_flavor_on_sale_tabs[_]
-                      .length
-                )
-                  return (0, _._)("#Sale_Section_ShowOnTabs_All");
-                let _ = [];
-                for (const _ of _.item_browse_section_data
-                  .show_flavor_on_sale_tabs[_]) {
-                  const _ = _.tabs
-                    ? _.tabs.find((_) => _.unique_id === _)
-                    : null;
-                  _ && _.push((0, _._)(_, _));
-                }
-                return 0 === _.length
-                  ? (0, _._)("#Sale_Section_ShowOnTabs_All")
-                  : _.join(", ");
-              })(_, __webpack_require__, _, _),
-            ),
         );
       }
       var _ = __webpack_require__("chunkid"),
