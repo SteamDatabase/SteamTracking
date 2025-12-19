@@ -597,18 +597,17 @@
         ShareCtn: "_3wBwgFLePqfIcCKHyA6g-K",
         ShareTypeTitle: "_3X3w682EtopjFadHYWO8nC",
         ShareArea: "_11Wb4dZGttl7jOW2o_OF27",
-        ElementFadeIn: "_3_CA6jxTDtdeP097_ybDKj",
-        ShareHeader: "j8KV_szYFpuGx7laNzqiC",
-        DropDownSizer: "ZrLd2gp4EdJNEtWgHX-H-",
-        DropdownButton: "H5GE-sEeFx3Nv8992Vu48",
-        Error: "_3quoXc_g1S9w4WTXaDr_-m",
+        SeeRewindButton: "JIh21cFM3TAJhriJuK8lg",
         PrivacyWarning: "_1mHX7Rnmm65ymfxaNJuN8C",
         Visible: "_1qJRh1dLXCnKaglc4szmtz",
-        DropdownOption: "_39UwyRyvMneijogt3gratx",
+        DropDownSizer: "ZrLd2gp4EdJNEtWgHX-H-",
         ShareButton: "_2MSFQv8F34No-YaWoPUlC_",
+        ShareHeader: "j8KV_szYFpuGx7laNzqiC",
+        DropdownButton: "H5GE-sEeFx3Nv8992Vu48",
+        Error: "_3quoXc_g1S9w4WTXaDr_-m",
+        DropdownOption: "_39UwyRyvMneijogt3gratx",
         ShareText: "_3OTeC-8X-moj-kosZaRG_G",
         ShareIcon: "zOiWIqdjr4HIUZy3CNUuF",
-        SeeRewindButton: "JIh21cFM3TAJhriJuK8lg",
         ShareModalDialogCtn: "_1C2t5QNoTGA1zu7S9JtVmm",
         ShareModal: "_2Eeev6ktdPSi1jP0CfLWNX",
         ShareLanguagePicker: "klz2du8mPgLnSyjzwAe3g",
@@ -661,6 +660,7 @@
         MobileCtn: "_2MA6bi7DByTfZRDaukv61F",
         ShareLinkIcon: "_2n1Y63Vt8TdcnfmRnIKM0h",
         ShareLinkText: "HMDF7pMwhFbXs0_jYFoKP",
+        ElementFadeIn: "_3_CA6jxTDtdeP097_ybDKj",
         BadgeBoxIntro: "_3KDm8EwU_3Sz4_wdFW3wgi",
         BadgeBarFiller: "_25GQdCYkcBLyHGYsskioXv",
         Appear: "lI6QfIVVz4Z1rvUQ_ndRn",
@@ -15688,11 +15688,19 @@
           }),
           _ &&
             _.createElement(
-              "button",
+              "div",
               {
-                onClick: () => _(!0),
+                className: _.MoreButtonContainer,
               },
-              (0, _._)("#YIR_ShowMore"),
+              _.createElement(
+                "a",
+                {
+                  href: "#",
+                  className: _.ShowMoreBtn,
+                  onClick: () => _(!0),
+                },
+                (0, _._)("#YIR_ShowMore"),
+              ),
             ),
         );
       }
@@ -18169,29 +18177,21 @@
         if (!_._.logged_in) return null;
         if (!_ && _._.logged_in)
           return _.createElement(
-            _.Fragment,
-            null,
-            _.createElement(
-              "a",
-              {
-                className: (_.SeeRewindButton, _.SeeRewindButton),
-                href: `${_._.STORE_BASE_URL}replay/${_._.steamid}/${_}?src=9`,
-              },
-              (0, _._)("#YIR_SeeYourRewind"),
-            ),
+            "a",
+            {
+              className: (0, _._)(_.SeeRewindButton, _.SeeRewindButton),
+              href: `${_._.STORE_BASE_URL}replay/${_._.steamid}/${_}?src=9`,
+            },
+            (0, _._)("#YIR_SeeYourRewind"),
           );
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(
-            "div",
-            null,
-            _.createElement(_, {
-              userYearInReview: _,
-              steamId: __webpack_require__,
-              nYear: _,
-            }),
-          ),
+          _.createElement(_, {
+            userYearInReview: _,
+            steamId: __webpack_require__,
+            nYear: _,
+          }),
           _.createElement(
             "div",
             {
@@ -21608,17 +21608,11 @@
                         },
                         (0, _._)("#YIR_ShareModal_TitleSocial"),
                       ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _().ShareCtn,
-                        },
-                        _.createElement(_, {
-                          userYearInReview: _,
-                          steamId: _,
-                          nYear: _,
-                        }),
-                      ),
+                      _.createElement(_, {
+                        userYearInReview: _,
+                        steamId: _,
+                        nYear: _,
+                      }),
                     ),
                     _.createElement(
                       "div",
@@ -21745,19 +21739,13 @@
                     className: (0, _._)(_().ShareArea),
                   },
                   _.createElement(
-                    "div",
-                    {
-                      className: _().ShareCtn,
-                    },
-                    _.createElement(
-                      _._,
-                      null,
-                      _.createElement(_, {
-                        userYearInReview: __webpack_require__,
-                        steamId: _,
-                        nYear: _,
-                      }),
-                    ),
+                    _._,
+                    null,
+                    _.createElement(_, {
+                      userYearInReview: __webpack_require__,
+                      steamId: _,
+                      nYear: _,
+                    }),
                   ),
                 ),
               ),

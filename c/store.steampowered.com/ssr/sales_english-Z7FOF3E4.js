@@ -931,7 +931,7 @@ Upon completing all of the stories, you'll get one of five unique badges reflect
   _ =
     "Add a special showcase to your Steam Profile. Click the 'Add Profile Showcase' button above and select 'Steam Replay' from the drop-down in your showcase editor.",
   _ =
-    "How does Steam Replay differentiate 'Keyboard + Mouse' and 'Controller playtime?",
+    "How does Steam Replay differentiate 'Keyboard + Mouse' and 'Controller playtime'?",
   _ =
     "'Keyboard + Mouse' denotes playtime on PC, Mac, or Linux without an active Controller being used.",
   _ =
