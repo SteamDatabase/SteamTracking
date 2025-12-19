@@ -5324,7 +5324,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = "public",
         _ = 5e3,
         _ = (_) =>
@@ -5553,7 +5554,9 @@
             key: "time_created",
             displayName: "Time Created",
             formatFunction: (_) =>
-              _ ? new Date(1e3 * _).toLocaleString() : "",
+              _
+                ? new Date(1e3 * _).toLocaleString(_._.GetPreferredLocales())
+                : "",
           },
           {
             key: "pickup_team",
@@ -5809,7 +5812,9 @@
             key: "timestamp",
             displayName: "Timestamp",
             formatFunction: (_) =>
-              _ ? new Date(1e3 * _).toLocaleString() : "",
+              _
+                ? new Date(1e3 * _).toLocaleString(_._.GetPreferredLocales())
+                : "",
           },
           {
             key: "action",
@@ -5841,7 +5846,9 @@
             key: "comment_timestamp",
             displayName: "Last Comment",
             formatFunction: (_) =>
-              _ ? new Date(1e3 * _).toLocaleString() : "",
+              _
+                ? new Date(1e3 * _).toLocaleString(_._.GetPreferredLocales())
+                : "",
           },
           {
             key: "spray_count",
@@ -5863,7 +5870,9 @@
             key: "timestamp",
             displayName: "Last Changed",
             formatFunction: (_) =>
-              _ ? new Date(1e3 * _).toLocaleString() : "",
+              _
+                ? new Date(1e3 * _).toLocaleString(_._.GetPreferredLocales())
+                : "",
           },
         ],
         _ = [
@@ -5875,7 +5884,9 @@
             key: "scheduled_time",
             displayName: "Series Date & Time",
             formatFunction: (_) =>
-              _ ? new Date(1e3 * _).toLocaleString() : "",
+              _
+                ? new Date(1e3 * _).toLocaleString(_._.GetPreferredLocales())
+                : "",
           },
           {
             key: "outcome",

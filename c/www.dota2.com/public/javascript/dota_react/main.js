@@ -6961,6 +6961,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const { detect: _ } = __webpack_require__("chunkid"),
         _ = _();
@@ -7929,7 +7930,7 @@
                       _().PrizePoolValue,
                     ),
                   },
-                  _ > 0 ? "$" + _.toLocaleString() : "...",
+                  _ > 0 ? "$" + (0, _._)(_) : "...",
                 ),
               ),
               _.createElement(
@@ -17103,7 +17104,7 @@
                         _().PrizePoolValue,
                       ),
                     },
-                    _ > 0 ? "$" + _.toLocaleString() : "",
+                    _ > 0 ? "$" + (0, _._)(_) : "",
                   ),
                 ),
               ),
@@ -19747,7 +19748,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = ({ event: _ }) => {
         const _ = new Date(1e3 * _.GetStartTimeAndDateUnixSeconds()),
           _ = (0, _._)(_._.LANGUAGE),
@@ -19792,7 +19794,7 @@
               {
                 className: _().Date,
               },
-              _.toLocaleDateString(void 0, {
+              _.toLocaleDateString(_._.GetPreferredLocales(), {
                 month: "long",
                 day: "numeric",
                 year: "numeric",
@@ -19822,7 +19824,7 @@
             {
               className: _().Date,
             },
-            _.toLocaleDateString(void 0, {
+            _.toLocaleDateString(_._.GetPreferredLocales(), {
               month: "long",
               day: "numeric",
               year: "numeric",
@@ -19922,7 +19924,7 @@
                     {
                       className: _().Date,
                     },
-                    _.toLocaleDateString(void 0, {
+                    _.toLocaleDateString(_._.GetPreferredLocales(), {
                       month: "long",
                       day: "numeric",
                       year: "numeric",
@@ -20137,7 +20139,7 @@
           let _ = new Date(1e3 * _.GetStartTimeAndDateUnixSeconds());
           _.GID == _ && (_ = new Date(2024, 5, 11));
           const _ = (0, _._)(_._.LANGUAGE);
-          let _ = _.toLocaleDateString(void 0, {
+          let _ = _.toLocaleDateString(_._.GetPreferredLocales(), {
             month: "long",
             day: "numeric",
             year: "numeric",
@@ -20396,10 +20398,10 @@
                 if ((0, _._)(_)) {
                   const _ = new Date(
                       1e3 * _.timestamp_started_at,
-                    ).toLocaleDateString(void 0, _),
+                    ).toLocaleDateString(_._.GetPreferredLocales(), _),
                     _ = new Date(
                       1e3 * _.timestamp_completed_at,
-                    ).toLocaleDateString(void 0, _);
+                    ).toLocaleDateString(_._.GetPreferredLocales(), _);
                   _ =
                     _ != _
                       ? _.createElement("div", null, `${_} - ${_}`)
@@ -20830,7 +20832,6 @@
           );
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -25476,7 +25477,7 @@
                 {
                   className: _().Value,
                 },
-                `$${_.nEarnings ? _.nEarnings.toLocaleString() : "0"} USD`,
+                `$${_.nEarnings ? ((0, _._))(_.nEarnings) : "0"} USD`,
               ),
             ),
             _.event_type != _._.INTERNATIONAL &&
@@ -25497,7 +25498,7 @@
                   {
                     className: _().Value,
                   },
-                  `${_.nPoints ? _.nPoints.toLocaleString() : "0"}`,
+                  `${_.nPoints ? ((0, _._))(_.nPoints) : "0"}`,
                 ),
               ),
           );
@@ -27263,7 +27264,7 @@
               {
                 className: _().PrizePoolValue,
               },
-              _ ? `$${_.prize_pool.total_prize_pool.toLocaleString()}` : "-",
+              _ ? `$${(0, _._)(_.prize_pool.total_prize_pool)}` : "-",
             ),
           ),
         );
@@ -27277,7 +27278,7 @@
           return (
             _?.prize_pool.prize_split_pct_x100.forEach((_) =>
               _.push(
-                `$${(100 * Math.floor((_.prize_pool.total_prize_pool * _) / 1e6 + 0.5)).toLocaleString()}`,
+                `$${(0, _._)(100 * Math.floor((_.prize_pool.total_prize_pool * _) / 1e6 + 0.5))}`,
               ),
             ),
             _.createElement(
@@ -28245,7 +28246,7 @@
             return (
               _?.prize_pool.prize_split_pct_x100.forEach((_) =>
                 _.push(
-                  `$${(100 * Math.floor((_.prize_pool.total_prize_pool * _) / 1e6 + 0.5)).toLocaleString()}`,
+                  `$${(0, _._)(100 * Math.floor((_.prize_pool.total_prize_pool * _) / 1e6 + 0.5))}`,
                 ),
               ),
               _.createElement(
@@ -28275,7 +28276,7 @@
                     {
                       className: _().PrizePoolValue,
                     },
-                    _ > 0 ? "$" + _.toLocaleString() : "",
+                    _ > 0 ? "$" + (0, _._)(_) : "",
                   ),
                   _.createElement("div", {
                     className: _().Underline,
@@ -29364,7 +29365,7 @@
             return (
               _?.prize_pool.prize_split_pct_x100.forEach((_) =>
                 _.push(
-                  `$${(100 * Math.floor((_.prize_pool.total_prize_pool * _) / 1e6 + 0.5)).toLocaleString()}`,
+                  `$${(0, _._)(100 * Math.floor((_.prize_pool.total_prize_pool * _) / 1e6 + 0.5))}`,
                 ),
               ),
               _.createElement(
@@ -29394,7 +29395,7 @@
                     {
                       className: _().PrizePoolValue,
                     },
-                    _ > 0 ? "$" + _.toLocaleString() : "",
+                    _ > 0 ? "$" + (0, _._)(_) : "",
                   ),
                   _.createElement("div", {
                     className: _().Underline,
@@ -30187,7 +30188,7 @@
             return (
               _?.prize_pool.prize_split_pct_x100.forEach((_) =>
                 _.push(
-                  `$${(100 * Math.floor((_.prize_pool.total_prize_pool * _) / 1e6 + 0.5)).toLocaleString()}`,
+                  `$${(0, _._)(100 * Math.floor((_.prize_pool.total_prize_pool * _) / 1e6 + 0.5))}`,
                 ),
               ),
               _.createElement(
@@ -30217,7 +30218,7 @@
                     {
                       className: _().PrizePoolValue,
                     },
-                    _ > 0 ? "$" + _.toLocaleString() : "",
+                    _ > 0 ? "$" + (0, _._)(_) : "",
                   ),
                   _.createElement("div", {
                     className: _().Underline,
@@ -31005,7 +31006,7 @@
             return (
               _?.prize_pool.prize_split_pct_x100.forEach((_) =>
                 _.push(
-                  `$${(100 * Math.floor((_.prize_pool.total_prize_pool * _) / 1e6 + 0.5)).toLocaleString()}`,
+                  `$${(0, _._)(100 * Math.floor((_.prize_pool.total_prize_pool * _) / 1e6 + 0.5))}`,
                 ),
               ),
               _.createElement(
@@ -31035,7 +31036,7 @@
                     {
                       className: _().PrizePoolValue,
                     },
-                    _ > 0 ? "$" + _.toLocaleString() : "",
+                    _ > 0 ? "$" + (0, _._)(_) : "",
                   ),
                   _.createElement("div", {
                     className: _().Underline,
@@ -36880,7 +36881,7 @@
                     {
                       className: _().PrizePoolValue,
                     },
-                    _ > 0 ? "$" + _.toLocaleString() : "",
+                    _ > 0 ? "$" + (0, _._)(_) : "",
                   ),
                   _.createElement(
                     "div",
@@ -38088,7 +38089,7 @@
                     {
                       className: _().PrizePoolValue,
                     },
-                    _ > 0 ? "$" + _.toLocaleString() : "",
+                    _ > 0 ? "$" + (0, _._)(_) : "",
                   ),
                 ),
               ),
@@ -38271,7 +38272,7 @@
                     {
                       className: _().PrizePoolValue,
                     },
-                    _ > 0 ? "$" + _.toLocaleString() : "",
+                    _ > 0 ? "$" + (0, _._)(_) : "",
                   ),
                 ),
               ),
@@ -38421,7 +38422,7 @@
                       {
                         className: _().PrizePoolValue,
                       },
-                      _ > 0 ? "$" + _.toLocaleString() : "",
+                      _ > 0 ? "$" + (0, _._)(_) : "",
                     ),
                   ),
                 ),
@@ -53981,8 +53982,9 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
       const _ = (_) =>
-        _.toLocaleString(void 0, {
+        _.toLocaleString(_._.GetPreferredLocales(), {
           useGrouping: !1,
           minimumFractionDigits: 0,
           maximumFractionDigits: 2,
@@ -59998,12 +60000,13 @@
       (0, _._)([_._], _.prototype, "m_mapYouTubeVideo", void 0),
         (0, _._)([_._], _.prototype, "m_mapSharedFile", void 0);
       const _ = new _();
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -60068,21 +60071,7 @@
                 {
                   className: _().DynamicLink_YoutubeViews,
                 },
-                (0, _._)(
-                  "#EventEditor_YouTubeVideoViews",
-                  (function (_, _ = 0) {
-                    let _;
-                    return (
-                      _ &&
-                        (_ = {
-                          maximumFractionDigits: _,
-                        }),
-                      _
-                        ? _.toLocaleString(_._.GetPreferredLocales(), _)
-                        : "" + _
-                    );
-                  })(Number(_)),
-                ),
+                (0, _._)("#EventEditor_YouTubeVideoViews", (0, _._)(Number(_))),
               ),
               _.createElement(
                 "div",
@@ -72644,6 +72633,7 @@
         ["el", "greek"],
         ["uk", "ukrainian"],
         ["vn", "vietnamese"],
+        ["vi", "vietnamese"],
         ["id", "indonesian"],
       ]);
       const _ = new Map();
@@ -74991,7 +74981,9 @@
                 "all_upcoming",
                 "discounted",
               ],
+              prefer_assets_without_overrides: !1,
             },
+            prefer_assets_without_overrides: !1,
             enable_faceted_browsing:
               (_._.GetCreatorHome(this.clanSteamID)?.GetAppIDList().length ??
                 0) >= 7,
@@ -97591,7 +97583,8 @@
           : !(!_(_) || !_(_)) ||
               (!_(_) &&
                 !_(_) &&
-                _.label === _.label &&
+                typeof _.label == typeof _.label &&
+                  ("string" != typeof _.label || _.label === _.label) &&
                   _.tooltip === _.tooltip &&
                     _(_) == _(_) &&
                       !(_(_) && _(_) && !_(_.options, _.options)) &&
@@ -97725,7 +97718,7 @@
           );
           const _ = !_(_.rgOptions, this.props.rgOptions),
             _ = _.selectedOption !== this.props.selectedOption,
-            _ = this.value !== _.value;
+            _ = !_(this.value, _.value);
           !this.props.controlled &&
             (_ || _ || _) &&
             (_ || null == this.value
@@ -107473,6 +107466,23 @@
               _.getUTCFullYear(),
             );
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _ = 0) {
+        let _;
+        return (
+          _ &&
+            (_ = {
+              maximumFractionDigits: _,
+            }),
+          _ ? _.toLocaleString(_._.GetPreferredLocales(), _) : "" + _
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
