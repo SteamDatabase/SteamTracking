@@ -1596,6 +1596,12 @@ GHomepage = {
 	m_TabItemPreviewMicrotrailerTimeout: null,
 	InstrumentTabbedSectionv2: function( $Items )
 	{
+		if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
+		{
+			$J( '.home_rightcol' ).hide();
+			return;
+		}
+
 		const fnPauseActiveMicrotrailer = function()
 		{
 			let $elPrevMicrotrailer = $J( '.tab_preview.focus' ).find('.tab_preview_video')[0];
@@ -1612,7 +1618,7 @@ GHomepage = {
 
 			if( rgLookup.item )
 			{
-				$el.on('hover focus', function(){
+				$el.on('hover focus gpfocus', function(){
 					var fnShowElement = function() {
 						if (GHomepage.m_iTabItemPreviewMountTimeout) {
 							// we may have someone showing delayed.  clear them out if that's the case.

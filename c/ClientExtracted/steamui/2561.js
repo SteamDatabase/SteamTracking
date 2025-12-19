@@ -134,7 +134,7 @@
           Steam_Language_Selection_Label: "Wybierz język",
           Steam_Welcome: "Witaj",
           OOBE_Plug_In_Controller_Alt_Text:
-            "Podłącz kontroler lub naciśnij Enter",
+            "Podłącz kontroler lub naciśnij Enter.",
           Language_Name: "Polski",
         },
         portuguese: {

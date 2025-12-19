@@ -6,7 +6,7 @@
       a.r(t), a.d(t, { default: () => X });
       var o = a(34629),
         n = a(63696),
-        s = a(48550),
+        s = a(76627),
         r = a(58490),
         i = a(50376),
         c = a(13869),
@@ -752,4 +752,4 @@
       });
     },
   },
-]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/broadcastapp.js.map
+]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/broadcastapp.js.map

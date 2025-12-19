@@ -1424,7 +1424,6 @@ $ffn
 .EBanContentCheckResult
 .EProtoClanEventType
 .HCK\v
-.KT1*
 .PLACEHOLDER_VALUE
 .\n)k_EMsgAMGetClanPermissionSettingsResponse
 .\n)k_EMsgAMPlayerGetClanBasicDetailsResponse
@@ -2196,7 +2195,7 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
-20:18:52
+20:00:55
 20CCDDBAppDetailCommon
 20CClientModuleManager
 20CClientSecureDesktop
@@ -2378,9 +2377,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-6144
-65536
-524288
 52F*
 55Ly
 55j_WW
@@ -2402,7 +2398,10 @@ $ffn
 6*Fc7
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
+6144
 64CK\vH
+65536
+524288
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -4680,7 +4679,7 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec 18 2025
+Dec 19 2025
 December
 Decipher Only
 Deckard
