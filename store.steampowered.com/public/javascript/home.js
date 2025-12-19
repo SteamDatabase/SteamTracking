@@ -1699,7 +1699,8 @@ GHomepage = {
 							const $Video = $J('<video/>', {
 								'class': 'tab_preview_video',
 								loop: true,
-								preload: 'none'
+								preload: 'none',
+								playsinline: true,
 							}).prop("muted", true).append($J("<source>", {src: rgData.microtrailer, type: "video/webm"}));
 
 							$elInfoDiv.append($Video);
@@ -3072,7 +3073,7 @@ GHomepage = {
 			let $Video = null;
 			if ( !$ImgCtn.children( '.sale_capsule_video' ).length )
 			{
-				$Video = $J('<video/>', {'class': 'sale_capsule_video', loop: true, preload: 'none' }).prop( "muted", true )
+				$Video = $J('<video/>', {'class': 'sale_capsule_video', loop: true, preload: 'none', playsinline: true }).prop( "muted", true )
 					.append($J("<source>", {src: microtrailer, type: "video/webm"}));
 				$ImgCtn.append( $Video );
 			}
@@ -3288,7 +3289,7 @@ GHomepage = {
 
 		// micro trailer
 		if (rgItemData.microtrailer) {
-			let $Video = $J('<video class="microtrailer_video" loop muted aria-hidden=true>').appendTo($ImageCapsule);
+			let $Video = $J('<video class="microtrailer_video" loop muted playsinline aria-hidden=true>').appendTo($ImageCapsule);
 			$Video.on("canplay", function () {
 				$Item.addClass("has_microtrailer");
 			});
@@ -3459,7 +3460,7 @@ GHomepage = {
 		// micro trailer
 		if ( rgItemData.microtrailer )
 		{
-			let $Video = $J( '<video class="microtrailer_video" loop muted aria-hidden=true>' ).appendTo( $ImageCapsule );
+			let $Video = $J( '<video class="microtrailer_video" loop muted playsinline aria-hidden=true>' ).appendTo( $ImageCapsule );
 			$Video.on( "canplay", function() {
 				$Item.addClass( "has_microtrailer" );
 			} );
