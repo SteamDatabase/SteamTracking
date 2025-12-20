@@ -33,13 +33,13 @@
     },
     1814: (e, t, a) => {
       "use strict";
-      a.d(t, { Q: () => i });
+      a.d(t, { Q: () => l });
       var s = a(41735),
         n = a.n(s),
         r = a(68797),
         o = a(6144),
         m = a(30470);
-      class i {
+      class l {
         m_rtStartTime;
         m_rtEndTime;
         m_totalSummary;
@@ -189,114 +189,27 @@
     562: (e, t, a) => {
       "use strict";
       a.d(t, {
-        DT: () => C,
-        GX: () => c,
-        LD: () => g,
-        fT: () => h,
-        fs: () => p,
-        k: () => T,
-        lY: () => d,
-        tV: () => y,
+        DT: () => y,
+        GX: () => p,
+        LD: () => d,
+        fT: () => _,
+        k: () => C,
+        lY: () => h,
+        tV: () => S,
       });
       var s = a(34629),
         n = a(41735),
         r = a.n(n),
         o = a(90626),
         m = a(68797),
-        i = a(78327),
-        l = a(14947),
+        l = a(78327),
+        i = a(14947),
         u = a(6419);
-      class p {
-        m_mapCategories;
-        m_promise;
-        static s_singleton;
-        constructor() {
-          "dev" === i.TS.WEB_UNIVERSE &&
-            (window.g_ContentHubCategoriesStore = this);
-        }
-        BIsLoaded() {
-          return Boolean(this.m_mapCategories);
-        }
-        GetCategories() {
-          return this.m_mapCategories;
-        }
-        async HintLoad() {
-          return (
-            this.m_promise || (this.m_promise = this.Load()), this.m_promise
-          );
-        }
-        async Load() {
-          const e =
-              i.TS.PARTNER_BASE_URL +
-              "admin/store/contenthub/ajaxgetcontenthubcategories",
-            t = { origin: self.origin, sessionid: i.TS.SESSIONID };
-          let a = null;
-          try {
-            const s = await r().get(e, { params: t });
-            if (200 === s.status && 1 === s.data?.success)
-              return void (this.m_mapCategories = this.ParseResponse(s.data));
-            (this.m_promise = null), (a = (0, m.H)(s));
-          } catch (e) {
-            (this.m_promise = null), (a = (0, m.H)(e));
-          }
-          console.error(
-            "CContentHubCategoriesStore.Load failed: " + a.strErrorMsg,
-            a,
-          );
-        }
-        ParseResponse(e) {
-          const t = new Map(),
-            a = e.categories;
-          for (const e of Object.keys(a)) {
-            const s = a[e],
-              n = {
-                handle: s.handle,
-                loc_token: s.loc_token,
-                type: s.type,
-                heading: s.heading,
-                id: s.id || void 0,
-                exclude_from_search: s.exclude_from_search,
-                search_alias: s.search_alias,
-              },
-              {
-                must: r,
-                any: o,
-                mustnot: m,
-                replaces_tags: i,
-                content_descriptors: l,
-              } = s;
-            r &&
-              (Array.isArray(r)
-                ? (n.must = r.map((e) => ({ id: e })))
-                : (n.must = [{ id: r }])),
-              o &&
-                (Array.isArray(o)
-                  ? (n.any = o.map((e) => ({ id: e })))
-                  : (n.any = [{ id: o }])),
-              m &&
-                (Array.isArray(m)
-                  ? (n.mustnot = m.map((e) => ({ id: e })))
-                  : (n.mustnot = [{ id: m }])),
-              i &&
-                (Array.isArray(i)
-                  ? (n.replaces_tags = i.map((e) => ({ id: e })))
-                  : (n.replaces_tags = [{ id: i }])),
-              l &&
-                "string" == typeof l &&
-                (n.content_descriptors = l.split(",").map((e) => parseInt(e))),
-              t.set(e, n);
-          }
-          return t;
-        }
-        static Get() {
-          return p.s_singleton || (p.s_singleton = new p()), p.s_singleton;
-        }
-      }
-      async function c() {
+      async function p() {
         const e =
-            i.TS.PARTNER_BASE_URL +
+            l.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxgetcontenthubcategorieskv",
-          t = { origin: self.origin, sessionid: i.TS.SESSIONID };
+          t = { origin: self.origin, sessionid: l.TS.SESSIONID };
         let a = null;
         try {
           const s = await r().get(e, { params: t, withCredentials: !0 });
@@ -304,12 +217,12 @@
             const e = { rgCategories: [], bHasUnpublishedChanges: !1 };
             return (
               s.data.in_progress
-                ? ((e.rgCategories = _(
+                ? ((e.rgCategories = c(
                     JSON.parse(s.data.in_progress).categories,
                   )),
                   (e.bHasUnpublishedChanges = !0))
                 : s.data.active &&
-                  (e.rgCategories = _(JSON.parse(s.data.active).categories)),
+                  (e.rgCategories = c(JSON.parse(s.data.active).categories)),
               e
             );
           }
@@ -322,7 +235,7 @@
           { rgCategories: [] }
         );
       }
-      function _(e) {
+      function c(e) {
         const t = [];
         for (const a of Object.keys(e)) {
           const s = e[a],
@@ -339,8 +252,8 @@
               must: r,
               any: o,
               mustnot: m,
-              replaces_tags: i,
-              content_descriptors: l,
+              replaces_tags: l,
+              content_descriptors: i,
             } = s;
           r &&
             (Array.isArray(r)
@@ -354,29 +267,29 @@
               (Array.isArray(m)
                 ? (n.mustnot = m.map((e) => ({ id: Number(e) })))
                 : (n.mustnot = [{ id: Number(m) }])),
-            i &&
-              (Array.isArray(i)
-                ? (n.replaces_tags = i.map((e) => ({ id: Number(e) })))
-                : (n.replaces_tags = [{ id: Number(i) }])),
             l &&
-              "string" == typeof l &&
-              (n.content_descriptors = l.split(",").map((e) => parseInt(e))),
+              (Array.isArray(l)
+                ? (n.replaces_tags = l.map((e) => ({ id: Number(e) })))
+                : (n.replaces_tags = [{ id: Number(l) }])),
+            i &&
+              "string" == typeof i &&
+              (n.content_descriptors = i.split(",").map((e) => parseInt(e))),
             t.push(n);
         }
         return t;
       }
-      function d() {
+      function h() {
         const [e, t] = (0, o.useState)(null);
         return (
           (0, o.useEffect)(() => {
-            c().then((e) => {
+            p().then((e) => {
               t(e.rgCategories);
             });
           }, []),
           e
         );
       }
-      async function h(e) {
+      async function _(e) {
         const t = {};
         for (const a of e)
           (t[a.handle] = {
@@ -402,28 +315,28 @@
             1 === t[a.handle].replaces_tags?.length &&
               (t[a.handle].replaces_tags = t[a.handle].replaces_tags[0]);
         const a =
-            i.TS.PARTNER_BASE_URL +
+            l.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxsavecontenthubcategorieskv",
           s = new FormData();
-        s.append("sessionid", i.TS.SESSIONID),
+        s.append("sessionid", l.TS.SESSIONID),
           s.append("origin", self.origin),
           s.append("json", JSON.stringify(t));
         let n = null;
         try {
           const e = await r().post(a, s, { withCredentials: !0 });
           if (200 === e.status && 1 === e.data?.success)
-            return S.Get().ClearDirty(), null;
+            return g.Get().ClearDirty(), null;
           n = (0, m.H)(e);
         } catch (e) {
           n = (0, m.H)(e);
         }
         return console.error("SaveCategoriesKV failed: " + n.strErrorMsg, n), n;
       }
-      async function g() {
+      async function d() {
         const e =
-            i.TS.PARTNER_BASE_URL +
+            l.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxpublishcontenthubcategorieskv",
-          t = { origin: self.origin, sessionid: i.TS.SESSIONID };
+          t = { origin: self.origin, sessionid: l.TS.SESSIONID };
         try {
           const a = await r().get(e, { params: t, withCredentials: !0 });
           if (200 !== a.status || 1 !== a.data?.success) return (0, m.H)(a);
@@ -432,10 +345,10 @@
         }
         return null;
       }
-      class S {
+      class g {
         constructor() {
-          (0, l.Gn)(this),
-            "dev" === i.TS.WEB_UNIVERSE && (window.g_StoreTagStore = this);
+          (0, i.Gn)(this),
+            "dev" === l.TS.WEB_UNIVERSE && (window.g_StoreTagStore = this);
         }
         m_rgTags;
         m_rgCategories;
@@ -475,12 +388,12 @@
         }
         async Load() {
           const e =
-              i.TS.PARTNER_BASE_URL +
+              l.TS.PARTNER_BASE_URL +
               "admin/store/contenthub/ajaxgetstoretagsandcategories",
             t = {
               origin: self.origin,
-              sessionid: i.TS.SESSIONID,
-              l: i.TS.LANGUAGE,
+              sessionid: l.TS.SESSIONID,
+              l: l.TS.LANGUAGE,
             };
           let a = null;
           try {
@@ -498,7 +411,7 @@
                   this.m_mapStoreCategories.set(e.categoryid, e),
                 ),
                 void (
-                  "dev" === i.TS.WEB_UNIVERSE &&
+                  "dev" === l.TS.WEB_UNIVERSE &&
                   console.log(
                     "tags " +
                       this.m_rgTags.length +
@@ -517,44 +430,46 @@
           );
         }
         static Get() {
-          return S.s_singleton || (S.s_singleton = new S()), S.s_singleton;
+          return g.s_singleton || (g.s_singleton = new g()), g.s_singleton;
         }
       }
-      function y() {
-        return S.Get().BIsDirty();
+      function S() {
+        return g.Get().BIsDirty();
       }
-      function C() {
-        const [e, t] = o.useState(S.Get().GetTags()),
-          [a, s] = o.useState(S.Get().GetCategories());
+      function y() {
+        const [e, t] = o.useState(g.Get().GetTags()),
+          [a, s] = o.useState(g.Get().GetCategories());
         return (
           o.useEffect(() => {
             (void 0 !== e && void 0 !== a) ||
-              S.Get()
+              g
+                .Get()
                 .HintLoad()
                 .then(() => {
-                  t(S.Get().GetTags()), s(S.Get().GetCategories());
+                  t(g.Get().GetTags()), s(g.Get().GetCategories());
                 });
           }, [a, e]),
           { rgTags: e, rgCategories: a }
         );
       }
-      function T() {
-        const [e, t] = o.useState(S.Get().GetStoreTagMap()),
-          [a, s] = o.useState(S.Get().GetStoreCategoryMap());
+      function C() {
+        const [e, t] = o.useState(g.Get().GetStoreTagMap()),
+          [a, s] = o.useState(g.Get().GetStoreCategoryMap());
         return (
           o.useEffect(() => {
             (void 0 !== e && void 0 !== a) ||
-              S.Get()
+              g
+                .Get()
                 .HintLoad()
                 .then(() => {
-                  t(S.Get().GetStoreTagMap()), s(S.Get().GetStoreCategoryMap());
+                  t(g.Get().GetStoreTagMap()), s(g.Get().GetStoreCategoryMap());
                 });
           }, [a, e]),
           { mapStoreTags: e, mapStoreCategories: a }
         );
       }
-      (0, s.Cg)([l.sH], S.prototype, "m_bDirty", void 0),
-        (0, s.Cg)([u.o], S.prototype, "SetDirty", null);
+      (0, s.Cg)([i.sH], g.prototype, "m_bDirty", void 0),
+        (0, s.Cg)([u.o], g.prototype, "SetDirty", null);
     },
     31376: (e, t, a) => {
       "use strict";
@@ -563,27 +478,27 @@
         CU: () => g,
         Iw: () => b,
         Th: () => A,
-        _E: () => d,
+        _E: () => _,
         eX: () => T,
         hl: () => f,
         mg: () => E,
         p$: () => C,
-        tt: () => _,
+        tt: () => h,
       });
       var s = a(34629),
         n = a(41735),
         r = a.n(n),
         o = a(1814),
         m = a(14947),
-        i = a(90626),
-        l = a(20194),
+        l = a(90626),
+        i = a(20194),
         u = a(6144),
         p = a(73745),
         c = a(30470);
-      const _ = 120,
-        d = 10;
-      class h {
-        m_appAndPackagesSummuries = new o.Q(_);
+      const h = 120,
+        _ = 10;
+      class d {
+        m_appAndPackagesSummuries = new o.Q(h);
         m_mapContentHubSummary = new Map();
         m_mapContentHubToAppCount = new Map();
         m_mapContentHubSummaryPromises = new Map();
@@ -668,7 +583,7 @@
             net_units_sold: 0,
           };
           return (
-            n.slice(0, d).forEach((e) => {
+            n.slice(0, _).forEach((e) => {
               (r.gross_sales_usd += e.gross_sales_usd),
                 (r.gross_units_sold += e.gross_units_sold),
                 (r.net_sales_usd += e.net_sales_usd),
@@ -684,7 +599,7 @@
               this.BuildAnalysis(e),
             ]),
             this.m_summaryAnalysisChange.Dispatch(this.m_rgSummaries),
-            this.SaveToCacheSaleSummary(e, s, r, n.slice(0, d), n.length),
+            this.SaveToCacheSaleSummary(e, s, r, n.slice(0, _), n.length),
             s
           );
         }
@@ -741,8 +656,8 @@
             total_games: n,
             hub_gross_units_sold: a.gross_units_sold,
             hub_gross_sales_usd: Math.floor(a.gross_sales_usd / 100),
-            hub_units_per_day: Math.floor(a.gross_units_sold / _),
-            hub_sales_usd_per_day: Math.floor(a.gross_sales_usd / (100 * _)),
+            hub_units_per_day: Math.floor(a.gross_units_sold / h),
+            hub_sales_usd_per_day: Math.floor(a.gross_sales_usd / (100 * h)),
             top_apps_percent:
               a.gross_sales_usd > 0
                 ? ((s.gross_sales_usd / a.gross_sales_usd) * 100).toFixed(2)
@@ -759,32 +674,32 @@
               topApps: s,
               appCount: n,
             },
-            i = new FormData();
-          i.append("sessionid", c.TS.SESSIONID),
-            i.append(
+            l = new FormData();
+          l.append("sessionid", c.TS.SESSIONID),
+            l.append(
               "rtStartTime",
               "" + this.m_appAndPackagesSummuries.GetRTStartTime(),
             ),
-            i.append(
+            l.append(
               "rtEndTime",
               "" + this.m_appAndPackagesSummuries.GetRTEndTime(),
             ),
-            i.append("bClear", "false"),
-            i.append("key", this.GetKey(e)),
-            i.append("rgStats", JSON.stringify(o));
-          const l = `${c.TS.PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats`,
-            u = await r().post(l, i, { withCredentials: !0 });
+            l.append("bClear", "false"),
+            l.append("key", this.GetKey(e)),
+            l.append("rgStats", JSON.stringify(o));
+          const i = `${c.TS.PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats`,
+            u = await r().post(i, l, { withCredentials: !0 });
           200 != u.status &&
             console.error("SaveToCacheSaleSummary failed to save " + m.HP, u);
         }
         static s_Singleton;
         static Get() {
           return (
-            h.s_Singleton ||
-              ((h.s_Singleton = new h()),
+            d.s_Singleton ||
+              ((d.s_Singleton = new d()),
               "dev" == c.TS.WEB_UNIVERSE &&
-                (window.g_ThemeEventStore = h.s_Singleton)),
-            h.s_Singleton
+                (window.g_ThemeEventStore = d.s_Singleton)),
+            d.s_Singleton
           );
         }
       }
@@ -793,7 +708,7 @@
           data: t,
           isLoading: a,
           isError: s,
-        } = (0, l.I)({
+        } = (0, i.I)({
           queryKey: ["contenthubsummary", e.type, e.handle],
           queryFn: async () => {
             const t = {
@@ -833,7 +748,7 @@
             .join(","),
         };
       }
-      (0, s.Cg)([p.oI], h.prototype, "LoadCachedSaleSummaries", null);
+      (0, s.Cg)([p.oI], d.prototype, "LoadCachedSaleSummaries", null);
       const y = { total_games: 0, all_appid: [], top_games: [] };
       function C(e, t, a) {
         const {
@@ -843,9 +758,9 @@
           } = S(e, t, a),
           {
             data: m,
-            isLoading: i,
+            isLoading: l,
             isError: u,
-          } = (0, l.I)({
+          } = (0, i.I)({
             queryKey: ["useContentHubCategoryEditorFullAppList", s, n, o],
             queryFn: async () => {
               const e = {
@@ -866,7 +781,7 @@
       }
       function T(e, t, a) {
         const s = C(e, t, a),
-          n = (0, i.useMemo)(() => {
+          n = (0, l.useMemo)(() => {
             const {
               musthaveall: s,
               musthaveany: n,
@@ -874,19 +789,19 @@
             } = S(e, t, a);
             return { type: "category_editor", handle: s + "_" + n + "_" + r };
           }, [e, t, a]),
-          [r, o] = (0, i.useState)(h.Get().GetContentHubSaleSummary(n));
+          [r, o] = (0, l.useState)(d.Get().GetContentHubSaleSummary(n));
         return (
-          (0, i.useEffect)(() => {
+          (0, l.useEffect)(() => {
             s?.all_appid?.length &&
               !r &&
-              h.Get().LoadContentHubSaleSummary(n, s.all_appid);
+              d.Get().LoadContentHubSaleSummary(n, s.all_appid);
           }, [n, s, r]),
-          (0, p.hL)(h.Get().GetContentHubSummaryChangeCallback(n), o),
+          (0, p.hL)(d.Get().GetContentHubSummaryChangeCallback(n), o),
           r
         );
       }
       function E(e, t, a) {
-        const s = (0, i.useMemo)(() => {
+        const s = (0, l.useMemo)(() => {
             const {
               musthaveall: s,
               musthaveany: n,
@@ -894,9 +809,9 @@
             } = S(e, t, a);
             return { type: "category_editor", handle: s + "_" + n + "_" + r };
           }, [e, t, a]),
-          [n, r] = (0, i.useState)(h.Get().GetTopAppSummary(s));
+          [n, r] = (0, l.useState)(d.Get().GetTopAppSummary(s));
         return (
-          (0, p.hL)(h.Get().GetContentHubTopAppSaleSummaryChangeCallback(s), r),
+          (0, p.hL)(d.Get().GetContentHubTopAppSaleSummaryChangeCallback(s), r),
           n
         );
       }
@@ -906,7 +821,7 @@
               data: t,
               isLoading: a,
               isError: s,
-            } = (0, l.I)({
+            } = (0, i.I)({
               queryKey: ["contenthubapplist", e.type, e.handle],
               queryFn: async () => {
                 const t = {
@@ -923,41 +838,41 @@
             });
             return t?.apps || null;
           })(e),
-          [a, s] = (0, i.useState)(h.Get().GetContentHubSaleSummary(e));
+          [a, s] = (0, l.useState)(d.Get().GetContentHubSaleSummary(e));
         return (
-          (0, i.useEffect)(() => {
-            t?.length && !a && h.Get().LoadContentHubSaleSummary(e, t);
+          (0, l.useEffect)(() => {
+            t?.length && !a && d.Get().LoadContentHubSaleSummary(e, t);
           }, [e, e.type, e.handle, t, a]),
-          (0, p.hL)(h.Get().GetContentHubSummaryChangeCallback(e), s),
+          (0, p.hL)(d.Get().GetContentHubSummaryChangeCallback(e), s),
           a
         );
       }
       function b(e) {
-        const [t, a] = (0, i.useState)(
-          h.Get().GetAppSummaryObject().GetAppSaleSummary(e),
+        const [t, a] = (0, l.useState)(
+          d.Get().GetAppSummaryObject().GetAppSaleSummary(e),
         );
         return (
           (0, p.hL)(
-            h.Get().GetAppSummaryObject().GetAppSaleSummaryChangeCallback(e),
+            d.Get().GetAppSummaryObject().GetAppSaleSummaryChangeCallback(e),
             a,
           ),
           t
         );
       }
       function f(e) {
-        const [t, a] = (0, i.useState)(h.Get().GetTopAppSummary(e));
+        const [t, a] = (0, l.useState)(d.Get().GetTopAppSummary(e));
         return (
-          (0, p.hL)(h.Get().GetContentHubTopAppSaleSummaryChangeCallback(e), a),
+          (0, p.hL)(d.Get().GetContentHubTopAppSaleSummaryChangeCallback(e), a),
           t
         );
       }
       function G() {
-        const [e, t] = (0, i.useState)(h.Get().GetSummaryAnalysis());
+        const [e, t] = (0, l.useState)(d.Get().GetSummaryAnalysis());
         return (
-          (0, i.useEffect)(() => {
-            h.Get().LoadCachedSaleSummaries();
+          (0, l.useEffect)(() => {
+            d.Get().LoadCachedSaleSummaries();
           }, []),
-          (0, p.hL)(h.Get().GetSummaryAnalysisChange(), t),
+          (0, p.hL)(d.Get().GetSummaryAnalysisChange(), t),
           e
         );
       }
@@ -970,21 +885,21 @@
         W7: () => G,
         hp: () => C,
         iT: () => T,
-        ny: () => L,
+        ny: () => N,
       });
       var s = a(562),
         n = a(31376),
         r = a(40323),
         o = a.n(r),
         m = a(90626),
-        i = a(55263),
-        l = a(16676),
+        l = a(55263),
+        i = a(16676),
         u = a(29863),
         p = a(96236),
         c = a(22797),
-        _ = a(52038),
-        d = a(61859),
-        h = a(82227),
+        h = a(52038),
+        _ = a(61859),
+        d = a(82227),
         g = a(30470),
         S = a(92237);
       const y = "0px 0px 100% 0px",
@@ -1013,13 +928,13 @@
                     { className: S.ButtonGroup },
                     Boolean(!t) &&
                       m.createElement(
-                        l.$n,
+                        i.$n,
                         { onClick: () => a(!0) },
                         "Load ",
                         n.tt,
                         " Days of Sale Summaries",
                       ),
-                    m.createElement(k, null),
+                    m.createElement(L, null),
                   ),
                 ),
                 m.createElement(
@@ -1065,7 +980,7 @@
                 m.createElement(A, { key: a, category: e, bSaleSummary: t }),
               ),
             )
-          : m.createElement(c.t, { string: (0, d.we)("#Loading") });
+          : m.createElement(c.t, { string: (0, _.we)("#Loading") });
       }
       function A(e) {
         const { category: t, bSaleSummary: a } = e;
@@ -1086,8 +1001,8 @@
               : ((a = S.SizeColorSmall), (s = "Too small")),
           m.createElement(
             "div",
-            { className: (0, _.A)(S.ThemeSize, a) },
-            (0, h.Dq)(t),
+            { className: (0, h.A)(S.ThemeSize, a) },
+            (0, d.Dq)(t),
             " games ( ",
             s,
             ")",
@@ -1110,13 +1025,13 @@
                 href: `${g.TS.STORE_BASE_URL}category/${t.handle}`,
                 className: S.ThemeTitle,
               },
-              t.loc_token ? (0, d.we)(t.loc_token) : t.handle,
+              t.loc_token ? (0, _.we)(t.loc_token) : t.handle,
             ),
             m.createElement(b, { nTotalGames: r }),
             m.createElement(
               "div",
               { className: S.SaleStats },
-              Boolean(a && o) && m.createElement(N, { category: t }),
+              Boolean(a && o) && m.createElement(k, { category: t }),
             ),
           ),
           m.createElement(
@@ -1149,7 +1064,7 @@
       }
       function G(e) {
         const { info: t, bSaleSummary: a } = e,
-          [s] = (0, i.t7)(t.appid, { include_assets: !0 });
+          [s] = (0, l.t7)(t.appid, { include_assets: !0 });
         return s
           ? m.createElement(
               "div",
@@ -1284,7 +1199,7 @@
               ", ",
             );
       }
-      function L(e) {
+      function N(e) {
         const { saleSummary: t, topAppSummary: a } = e;
         return t
           ? m.createElement(
@@ -1369,13 +1284,13 @@
               string: "Loading Sale Info",
             });
       }
-      function N(e) {
+      function k(e) {
         const { category: t } = e,
           a = (0, n.Th)(t),
           s = (0, n.hl)(t);
-        return m.createElement(L, { saleSummary: a, topAppSummary: s });
+        return m.createElement(N, { saleSummary: a, topAppSummary: s });
       }
-      function k(e) {
+      function L(e) {
         const t = (0, n.AY)();
         return m.createElement(
           "a",

@@ -199,7 +199,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -209,121 +208,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        m_mapCategories;
-        m_promise;
-        static s_singleton;
-        constructor() {
-          "dev" === _._.WEB_UNIVERSE &&
-            (window.g_ContentHubCategoriesStore = this);
-        }
-        BIsLoaded() {
-          return Boolean(this.m_mapCategories);
-        }
-        GetCategories() {
-          return this.m_mapCategories;
-        }
-        async HintLoad() {
-          return (
-            this.m_promise || (this.m_promise = this.Load()), this.m_promise
-          );
-        }
-        async Load() {
-          const _ =
-              _._.PARTNER_BASE_URL +
-              "admin/store/contenthub/ajaxgetcontenthubcategories",
-            _ = {
-              origin: self.origin,
-              sessionid: _._.SESSIONID,
-            };
-          let _ = null;
-          try {
-            const _ = await _().get(_, {
-              params: _,
-            });
-            if (200 === _.status && 1 === _.data?.success)
-              return void (this.m_mapCategories = this.ParseResponse(_.data));
-            (this.m_promise = null), (_ = (0, _._)(_));
-          } catch (_) {
-            (this.m_promise = null), (_ = (0, _._)(_));
-          }
-          console.error(
-            "CContentHubCategoriesStore.Load failed: " + _.strErrorMsg,
-            _,
-          );
-        }
-        ParseResponse(_) {
-          const _ = new Map(),
-            _ = _.categories;
-          for (const _ of Object.keys(_)) {
-            const _ = _[_],
-              _ = {
-                handle: _.handle,
-                loc_token: _.loc_token,
-                type: _.type,
-                heading: _.heading,
-                _: _._ || void 0,
-                exclude_from_search: _.exclude_from_search,
-                search_alias: _.search_alias,
-              },
-              {
-                must: _,
-                any: _,
-                mustnot: _,
-                replaces_tags: _,
-                content_descriptors: _,
-              } = _;
-            _ &&
-              (Array.isArray(_)
-                ? (_.must = _.map((_) => ({
-                    _: _,
-                  })))
-                : (_.must = [
-                    {
-                      _: _,
-                    },
-                  ])),
-              _ &&
-                (Array.isArray(_)
-                  ? (_.any = _.map((_) => ({
-                      _: _,
-                    })))
-                  : (_.any = [
-                      {
-                        _: _,
-                      },
-                    ])),
-              _ &&
-                (Array.isArray(_)
-                  ? (_.mustnot = _.map((_) => ({
-                      _: _,
-                    })))
-                  : (_.mustnot = [
-                      {
-                        _: _,
-                      },
-                    ])),
-              _ &&
-                (Array.isArray(_)
-                  ? (_.replaces_tags = _.map((_) => ({
-                      _: _,
-                    })))
-                  : (_.replaces_tags = [
-                      {
-                        _: _,
-                      },
-                    ])),
-              _ &&
-                "string" == typeof _ &&
-                (_.content_descriptors = _.split(",").map((_) => parseInt(_))),
-              _.set(_, _);
-          }
-          return _;
-        }
-        static Get() {
-          return _.s_singleton || (_.s_singleton = new _()), _.s_singleton;
-        }
-      }
       async function _() {
         const _ =
             _._.PARTNER_BASE_URL +

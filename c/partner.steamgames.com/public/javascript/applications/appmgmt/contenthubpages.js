@@ -1867,19 +1867,6 @@
                     onClick: () =>
                       (0, _._)(
                         _.createElement(_, {
-                          onImport: _,
-                        }),
-                        window,
-                      ),
-                  },
-                  "Import From PHP",
-                ),
-                _.createElement(
-                  _._,
-                  {
-                    onClick: () =>
-                      (0, _._)(
-                        _.createElement(_, {
                           categories: _,
                           onSave: () => {
                             _(!1), _(!0);
@@ -2542,32 +2529,6 @@
           ),
         );
       });
-      function _(_) {
-        const { onImport: _, closeModal: __webpack_require__ } = _;
-        return (
-          _.useEffect(() => {
-            _._.Get()
-              .HintLoad()
-              .then(() => {
-                _(Array.from(_._.Get().GetCategories().values())),
-                  __webpack_require__ && __webpack_require__();
-              });
-          }, [__webpack_require__, _]),
-          _.createElement(
-            _._,
-            {
-              strTitle: "Importing",
-              bAlertDialog: !0,
-              bDisableBackgroundDismiss: !0,
-              bHideCloseIcon: !0,
-            },
-            _.createElement(_._, {
-              size: "medium",
-              position: "center",
-            }),
-          )
-        );
-      }
       function _(_) {
         const { categories: _, onSave: __webpack_require__, closeModal: _ } = _,
           [_, _] = _.useState();

@@ -364,7 +364,7 @@
     },
     98443: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { ContentHubRoutes: () => Ze, default: () => Ke });
+      n.r(t), n.d(t, { ContentHubRoutes: () => Ye, default: () => Ze });
       var r = n(90626),
         a = n(97058),
         o = n(17083),
@@ -731,17 +731,17 @@
         return r.createElement("div", { ...t });
       }
       const k = A;
-      function I(e, t, n) {
+      function P(e, t, n) {
         return "function" == typeof e ? e(t, n) : r.cloneElement(e, t);
       }
-      function P(e, t, n, r) {
-        return I(e || t, n, r);
+      function I(e, t, n, r) {
+        return P(e || t, n, r);
       }
       var R = n(48093);
       const D = Object.assign(
         function (e) {
           const { render: t, ...n } = e;
-          return P(
+          return I(
             t,
             r.createElement(w, {
               radius: "sm",
@@ -763,7 +763,7 @@
               } = e,
               i = t ? "true" : "false",
               c = n ? "true" : void 0;
-            return P(
+            return I(
               o,
               r.createElement(w, {
                 "data-selected": i,
@@ -875,7 +875,7 @@
               ),
               null);
         },
-        H = function (e) {
+        W = function (e) {
           const {
               children: t,
               label: n,
@@ -922,9 +922,9 @@
             t,
           );
         };
-      var W = n(68875);
-      function O(e) {
-        const t = y({ ...e, className: g()(e.className, W.Flex) }, V);
+      var O = n(68875);
+      function H(e) {
+        const t = y({ ...e, className: g()(e.className, O.Flex) }, V);
         return r.createElement("div", { ...t });
       }
       const V = [
@@ -932,46 +932,46 @@
         {
           prop: "direction",
           responsive: !0,
-          className: W.Direction,
+          className: O.Direction,
           cssProperty: "--direction",
         },
         {
           prop: "justify",
           responsive: !0,
-          className: W.Justify,
+          className: O.Justify,
           cssProperty: (e) => ["--justify", M(e)],
         },
         {
           prop: "align",
           responsive: !0,
-          className: W.Align,
+          className: O.Align,
           cssProperty: "--align",
         },
         {
           prop: "gap",
           responsive: !0,
-          className: W.Gap,
+          className: O.Gap,
           cssProperty: (e) => ["--gap", `var(--spacing-${e})`],
         },
         {
           prop: "gapX",
           responsive: !0,
-          className: W.GapX,
+          className: O.GapX,
           cssProperty: (e) => ["--gap-x", `var(--spacing-${e})`],
         },
         {
           prop: "gapY",
           responsive: !0,
-          className: W.GapY,
+          className: O.GapY,
           cssProperty: (e) => ["--gap-y", `var(--spacing-${e})`],
         },
         {
           prop: "wrap",
           responsive: !0,
-          className: W.Wrap,
+          className: O.Wrap,
           cssProperty: "--wrap",
         },
-        { prop: "inline", responsive: !0, className: W.Inline },
+        { prop: "inline", responsive: !0, className: O.Inline },
       ];
       function M(e) {
         return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
@@ -994,7 +994,7 @@
           } = e,
           h = "underline" === t ? "none" : a;
         return r.createElement(
-          O,
+          H,
           {
             ...d,
             radius: h,
@@ -1010,9 +1010,9 @@
             align: "center",
             "data-has-value": !!u,
           },
-          p && r.createElement(O, { paddingRight: "2" }, p),
+          p && r.createElement(H, { paddingRight: "2" }, p),
           r.createElement(w, { flexGrow: "1", minWidth: "0" }, c),
-          m && r.createElement(O, { paddingLeft: "2" }, m),
+          m && r.createElement(H, { paddingLeft: "2" }, m),
         );
       }
       var Y = n(16619);
@@ -1152,7 +1152,7 @@
             n && n(!!c || !t);
           };
         return r.createElement(
-          O,
+          H,
           {
             ref: s,
             role: "checkbox",
@@ -1349,11 +1349,11 @@
             i = "string" == typeof t ? t : void 0,
             c = s ? l.includes(t) : l === t;
           return r.createElement(
-            H,
+            W,
             { label: i, onSelect: () => o(t), selected: c, disabled: a },
             s &&
               r.createElement(
-                O,
+                H,
                 { gap: "2", align: "center" },
                 r.createElement(ae, { checked: c, variant: "dark" }),
                 n,
@@ -1403,7 +1403,7 @@
                     hitSlop: !0,
                   })
                 : r.createElement(J, null),
-            N = P(
+            N = I(
               n,
               r.createElement(j, {
                 afterContent: A,
@@ -1552,8 +1552,8 @@
       var Ne = n(9161),
         we = n(73745),
         ke = n(30470),
-        Ie = n(74810),
-        Pe = n(92237),
+        Pe = n(74810),
+        Ie = n(92237),
         Re = n(4940),
         De = n.n(Re),
         Te = n(95034);
@@ -1616,19 +1616,11 @@
                 "div",
                 { className: De().ActionButtonCtn },
                 r.createElement(
-                  ye.$n,
-                  {
-                    onClick: () =>
-                      (0, Ce.pg)(r.createElement(Ue, { onImport: p }), window),
-                  },
-                  "Import From PHP",
-                ),
-                r.createElement(
                   ye.jn,
                   {
                     onClick: () =>
                       (0, Ce.pg)(
-                        r.createElement(je, {
+                        r.createElement(Ue, {
                           categories: e,
                           onSave: () => {
                             s(!1), c(!0);
@@ -1651,7 +1643,7 @@
                   {
                     onClick: () =>
                       (0, Ce.pg)(
-                        r.createElement(Ye, { onPublish: () => c(!1) }),
+                        r.createElement(je, { onPublish: () => c(!1) }),
                         window,
                       ),
                   },
@@ -1853,14 +1845,14 @@
                 selectedOption: a.type,
                 onChange: (e) => o((t) => ({ ...t, type: e.data })),
               }),
-              r.createElement(He, {
+              r.createElement(We, {
                 rgContentDescriptors: a.content_descriptors ?? [],
                 setContentDescriptors: l,
               }),
               ("tagids" === a.type ||
                 "category" === a.type ||
                 "contenthub" == a.type) &&
-                r.createElement(We, { category: a, setCategory: o }),
+                r.createElement(Oe, { category: a, setCategory: o }),
             ),
           ),
           r.createElement(
@@ -1876,7 +1868,7 @@
           ),
         );
       }
-      const He = r.memo(function (e) {
+      const We = r.memo(function (e) {
         const { rgContentDescriptors: t, setContentDescriptors: n } = e,
           a = r.useMemo(() => [2, 1, 4, 3], []);
         return r.createElement(
@@ -1913,7 +1905,7 @@
           }),
         );
       });
-      function We(e) {
+      function Oe(e) {
         const { category: t, setCategory: n } = e,
           [a, o] = (0, r.useState)(!1),
           [s, l] = (0, r.useState)(0);
@@ -1975,7 +1967,7 @@
                   { onClick: () => l(s + 1) },
                   "Refresh Stats",
                 ),
-                r.createElement(Oe, { category: t }),
+                r.createElement(He, { category: t }),
               )
             : r.createElement(ye.Yh, {
                 checked: a,
@@ -1985,7 +1977,7 @@
               }),
         );
       }
-      function Oe(e) {
+      function He(e) {
         const { category: t } = e,
           n = (0, he.p$)(t.must, t.any, t.mustnot);
         if (!n)
@@ -1994,7 +1986,7 @@
             position: "center",
             size: "medium",
           });
-        const a = n.total_games > Ie.iT && n.total_games <= Ie.hp;
+        const a = n.total_games > Pe.iT && n.total_games <= Pe.hp;
         return r.createElement(
           r.Fragment,
           null,
@@ -2030,25 +2022,25 @@
           ),
           r.createElement(
             "div",
-            { className: Pe.ThemeRow },
+            { className: Ie.ThemeRow },
             r.createElement(
               "div",
-              { className: Pe.ThemeDefinitionCtn },
+              { className: Ie.ThemeDefinitionCtn },
               "Summary: ",
-              r.createElement(Ie.KU, { nTotalGames: n.total_games }),
+              r.createElement(Pe.KU, { nTotalGames: n.total_games }),
               Boolean(a) && r.createElement(Ve, { category: t }),
             ),
             r.createElement(
               "div",
-              { className: Pe.TopGamesCtn },
+              { className: Ie.TopGamesCtn },
               r.createElement("div", null, "Top 10 Games non-F2P:"),
               r.createElement(
                 "div",
-                { className: Pe.GamesColumn },
+                { className: Ie.GamesColumn },
                 n.top_games
                   ?.slice(0, 10)
                   .map((e) =>
-                    r.createElement(Ie.W7, {
+                    r.createElement(Pe.W7, {
                       key: e.appid,
                       info: e,
                       category: t,
@@ -2064,7 +2056,7 @@
         const { category: t } = e,
           n = (0, he.eX)(t.must, t.any, t.mustnot),
           a = (0, he.mg)(t.must, t.any, t.mustnot);
-        return r.createElement(Ie.ny, { saleSummary: n, topAppSummary: a });
+        return r.createElement(Pe.ny, { saleSummary: n, topAppSummary: a });
       }
       const Me = r.memo(function (e) {
         const { category: t, setCategory: n, list: a, title: o } = e,
@@ -2144,29 +2136,6 @@
         );
       });
       function Ue(e) {
-        const { onImport: t, closeModal: n } = e;
-        return (
-          r.useEffect(() => {
-            l.fs
-              .Get()
-              .HintLoad()
-              .then(() => {
-                t(Array.from(l.fs.Get().GetCategories().values())), n && n();
-              });
-          }, [n, t]),
-          r.createElement(
-            Ee.o0,
-            {
-              strTitle: "Importing",
-              bAlertDialog: !0,
-              bDisableBackgroundDismiss: !0,
-              bHideCloseIcon: !0,
-            },
-            r.createElement(xe.t, { size: "medium", position: "center" }),
-          )
-        );
-      }
-      function je(e) {
         const { categories: t, onSave: n, closeModal: a } = e,
           [o, s] = r.useState();
         return (
@@ -2190,7 +2159,7 @@
           )
         );
       }
-      function Ye(e) {
+      function je(e) {
         const { onPublish: t, closeModal: n } = e,
           [a, o] = r.useState(!1),
           [s, i] = r.useState();
@@ -2232,8 +2201,8 @@
           )
         );
       }
-      const Ze = { ContentHubCategories: () => "/categories/" };
-      function Ke(e) {
+      const Ye = { ContentHubCategories: () => "/categories/" };
+      function Ze(e) {
         return r.createElement(
           o.Kd,
           { basename: (0, p.C)() + "admin/store/contenthub/" },
@@ -2242,7 +2211,7 @@
             s.dO,
             null,
             r.createElement(s.qh, {
-              path: Ze.ContentHubCategories(),
+              path: Ye.ContentHubCategories(),
               component: Le,
             }),
             r.createElement(s.qh, { component: a.a }),
@@ -2386,19 +2355,19 @@
           [S, x] = r.useState(void 0),
           [A, N] = r.useState(void 0),
           [w, k] = r.useState(-1),
-          [I, P] = r.useState(void 0),
+          [P, I] = r.useState(void 0),
           [R, D] = r.useState(0),
           [T, L] = r.useState(0),
           [B, z] = r.useState(void 0),
           [F, G] = r.useState(""),
-          H = r.useRef(void 0),
-          W = r.useRef([]),
+          W = r.useRef(void 0),
           O = r.useRef([]),
+          H = r.useRef([]),
           V = r.useMemo(() => g().CancelToken.source(), []),
           M = () => {
-            H.current?.firstElementChild &&
-              (D(H.current.firstElementChild.getBoundingClientRect().height),
-              L(H.current.firstElementChild.getBoundingClientRect().width));
+            W.current?.firstElementChild &&
+              (D(W.current.firstElementChild.getBoundingClientRect().height),
+              L(W.current.firstElementChild.getBoundingClientRect().width));
           };
         r.useEffect(() => {
           M();
@@ -2406,7 +2375,7 @@
           r.useEffect(() => () => V.cancel("ReorderableList unmounting"), [V]);
         const U = r.useCallback(
             (e) => {
-              const t = W.current[w]?.current;
+              const t = O.current[w]?.current;
               t
                 ? ((t.style.left = e.clientX - S + "px"),
                   (t.style.top = e.clientY - A + "px"))
@@ -2415,29 +2384,29 @@
             [w, S, A],
           ),
           j = r.useCallback(() => {
-            const e = W.current[w]?.current;
+            const e = O.current[w]?.current;
             e
               ? ((e.style.position = ""), (e.style.zIndex = ""))
               : console.error("end element drag missing element"),
               b(!1),
               k(-1),
               z(void 0),
-              P(void 0);
+              I(void 0);
           }, [w]),
           Y = (e, t) => {
             V.token.reason ||
-              (H.current.firstElementChild?.getBoundingClientRect().height >
+              (W.current.firstElementChild?.getBoundingClientRect().height >
                 0 &&
                 R !=
-                  H.current.firstElementChild.getBoundingClientRect().height &&
+                  W.current.firstElementChild.getBoundingClientRect().height &&
                 M(),
               ((e, t) => {
-                const n = W.current[e]?.current;
+                const n = O.current[e]?.current;
                 if (!n)
                   return void console.error(
                     "start element grab missing element at index " + e,
                   );
-                b(!0), k(e), z(void 0), P(e);
+                b(!0), k(e), z(void 0), I(e);
                 const r = t.clientX - n.getBoundingClientRect().left;
                 x(r);
                 const a = t.clientY - n.getBoundingClientRect().top;
@@ -2458,18 +2427,18 @@
               if (!C || V.token.reason) return;
               const t = e.clientY;
               let n;
-              for (let e = 0; e < O.current.length; e++) {
+              for (let e = 0; e < H.current.length; e++) {
                 if (
                   t <
-                  (O.current[e].current.getBoundingClientRect().top +
-                    2 * O.current[e].current.getBoundingClientRect().bottom) /
+                  (H.current[e].current.getBoundingClientRect().top +
+                    2 * H.current[e].current.getBoundingClientRect().bottom) /
                     3
                 ) {
                   n = e;
                   break;
                 }
               }
-              P(n ?? O.current.length), U(e);
+              I(n ?? H.current.length), U(e);
             },
             [C, V, U],
           );
@@ -2479,13 +2448,13 @@
             "mouseup",
             C
               ? (e) => {
-                  C && !V.token.reason && (j(), Z(w, I));
+                  C && !V.token.reason && (j(), Z(w, P));
                 }
               : void 0,
           ),
           r.useEffect(() => {
-            for (let e = W.current.length; e < t.length; e++)
-              W.current.push(r.createRef()), O.current.push(r.createRef());
+            for (let e = O.current.length; e < t.length; e++)
+              O.current.push(r.createRef()), H.current.push(r.createRef());
           }, [t.length]);
         const Q = (e) => {
             z(void 0);
@@ -2498,15 +2467,15 @@
           [J, q] = r.useState(void 0);
         return r.createElement(
           "div",
-          { className: c().WhitelistCtn, ref: H },
+          { className: c().WhitelistCtn, ref: W },
           t.map((e, a) =>
             r.createElement(
               "div",
-              { key: a, ref: O.current[a] },
-              a == I && r.createElement(v, { width: T }),
+              { key: a, ref: H.current[a] },
+              a == P && r.createElement(v, { width: T }),
               r.createElement(
                 "div",
-                { ref: W.current[a], className: c().DragGhost },
+                { ref: O.current[a], className: c().DragGhost },
                 a == w &&
                   r.createElement(
                     "div",
@@ -2522,7 +2491,7 @@
                         c().Grabbing,
                       ),
                       type: "text",
-                      value: (I > a ? I - 1 : I) + 1,
+                      value: (P > a ? P - 1 : P) + 1,
                       disabled: !0,
                     }),
                     n(e, a),
@@ -2584,7 +2553,7 @@
                       }),
                   ),
               ),
-              I == t.length &&
+              P == t.length &&
                 a == t.length - 1 &&
                 r.createElement(v, { width: T }),
             ),
