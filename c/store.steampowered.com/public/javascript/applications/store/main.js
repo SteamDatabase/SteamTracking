@@ -38750,6 +38750,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -38933,6 +38934,21 @@
                       {
                         appid: 0,
                       });
+      }
+      function _(_, _) {
+        return "appid" in _
+          ? "appid" in _ && _.appid == _.appid
+          : "packageid" in _
+            ? "packageid" in _ && _.packageid == _.packageid
+            : "bundleid" in _
+              ? "bundleid" in _ && _.bundleid == _.bundleid
+              : "tagid" in _
+                ? "tagid" in _ && _.tagid == _.tagid
+                : "creatorid" in _
+                  ? "creatorid" in _ && _.creatorid == _.creatorid
+                  : "hubcategoryid" in _
+                    ? "hubcategoryid" in _ && _.hubcategoryid == _.hubcategoryid
+                    : ((0, _._)(_, `Invalid itemid: ${JSON.stringify(_)}`), !1);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

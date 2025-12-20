@@ -2656,6 +2656,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.createContext(null);
       function _(_) {
@@ -3051,7 +3052,7 @@
           !!_.gift_info?.accountid_giftee ||
           !__webpack_require__ ||
           !_ ||
-          __webpack_require__ == _
+          (0, _._)(__webpack_require__, _)
         )
           return null;
         const { purchase_option_name: _, packageid: _, bundleid: _ } = _,

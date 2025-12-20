@@ -2279,21 +2279,22 @@
     },
     98362: (e, t, n) => {
       "use strict";
-      n.d(t, { LP: () => g, Yz: () => C, ZZ: () => p, wW: () => _ });
+      n.d(t, { LP: () => E, Yz: () => h, ZZ: () => f, wW: () => p });
       var a = n(70343),
         r = n(39777),
-        i = n(7151),
-        o = n(90626),
-        l = n(55263),
-        s = n(43595),
-        c = n(61859),
-        m = n(11543),
-        u = n.n(m);
-      const d = o.createContext(null);
-      function _(e) {
+        i = n(52541),
+        o = n(7151),
+        l = n(90626),
+        s = n(55263),
+        c = n(43595),
+        m = n(61859),
+        u = n(11543),
+        d = n.n(u);
+      const _ = l.createContext(null);
+      function p(e) {
         const { validateCart: t, children: n } = e,
           a = (function (e) {
-            return o.useMemo(() => {
+            return l.useMemo(() => {
               let t = new Map(),
                 n = new Map(),
                 a = 1;
@@ -2304,18 +2305,18 @@
                 e?.cart_items?.forEach((e) => {
                   let n = !!e.gift_info?.accountid_giftee;
                   e.errors?.duplicate_appids_in_cart?.length &&
-                    r(1, (0, c.we)("#Cart_Error_DuplicateApps_FootNote")),
+                    r(1, (0, m.we)("#Cart_Error_DuplicateApps_FootNote")),
                     e.errors?.owned_appids?.length &&
                       (e.errors?.has_existing_billing_agreement
                         ? r(
                             15,
-                            (0, c.we)(
+                            (0, m.we)(
                               "#Cart_Error_ExistingBillingAgreement_FootNote",
                             ),
                           )
                         : r(
                             2,
-                            (0, c.we)(
+                            (0, m.we)(
                               n
                                 ? "#Cart_Error_AlreadyOwned_GiftFootNote"
                                 : "#Cart_Error_AlreadyOwned_FootNote",
@@ -2324,19 +2325,19 @@
                     e.errors?.unavailable_in_country &&
                       r(
                         8,
-                        (0, c.we)("#Cart_Error_UnavailableCountry_FootNote"),
+                        (0, m.we)("#Cart_Error_UnavailableCountry_FootNote"),
                       ),
                     e.errors?.adult_content_restricted &&
                       r(
                         17,
-                        (0, c.we)(
+                        (0, m.we)(
                           "#Cart_Error_AdultContentRestricted_FootNote",
                         ),
                       ),
                     e.errors?.commercial_license_restricted &&
                       r(
                         18,
-                        (0, c.we)(
+                        (0, m.we)(
                           "#Cart_Error_CommercialLicenseRestricted_FootNote",
                         ),
                       ),
@@ -2344,22 +2345,22 @@
                       r(
                         16,
                         n
-                          ? (0, c.we)(
+                          ? (0, m.we)(
                               "#Cart_Error_MissingMustOwnApps_FootNoteGift",
                             )
-                          : (0, c.we)(
+                          : (0, m.we)(
                               "#Cart_Error_MissingMustOwnApps_FootNote",
                             ),
                       ),
                     e.warnings?.appids_in_mastersub?.length &&
                       r(
                         4,
-                        (0, c.we)("#Cart_Error_MasterSubscription_FootNote"),
+                        (0, m.we)("#Cart_Error_MasterSubscription_FootNote"),
                       ),
                     e.warnings?.price_has_changed &&
                       t.set(
                         10,
-                        (0, c.we)("#Cart_Warning_PriceChange_FootNote"),
+                        (0, m.we)("#Cart_Warning_PriceChange_FootNote"),
                       );
                 }),
                 {
@@ -2369,122 +2370,122 @@
               );
             }, [e]);
           })(t);
-        return o.createElement(d.Provider, { value: a }, n);
+        return l.createElement(_.Provider, { value: a }, n);
       }
-      function p() {
-        const { rgCartLevelNotices: e } = o.useContext(d);
+      function f() {
+        const { rgCartLevelNotices: e } = l.useContext(_);
         return e && e.length
-          ? o.createElement(
+          ? l.createElement(
               "div",
-              { className: u().HeaderNotices },
-              e.map((e, t) => o.createElement(f, { key: t }, e)),
+              { className: d().HeaderNotices },
+              e.map((e, t) => l.createElement(g, { key: t }, e)),
             )
           : null;
       }
-      function f(e) {
+      function g(e) {
         const { children: t } = e;
-        return o.createElement("div", { className: u().HeaderNotice }, t);
+        return l.createElement("div", { className: d().HeaderNotice }, t);
       }
-      function g() {
-        const { mapValidateNoticesToFootnote: e } = o.useContext(d);
+      function E() {
+        const { mapValidateNoticesToFootnote: e } = l.useContext(_);
         return e && e.size
-          ? o.createElement(
+          ? l.createElement(
               "div",
-              { className: u().FooterNoticesCtn },
+              { className: d().FooterNoticesCtn },
               Array.from(e).map(([e, t]) =>
-                o.createElement(E, { key: t.index, notice: t }),
+                l.createElement(C, { key: t.index, notice: t }),
               ),
             )
           : null;
       }
-      function E(e) {
+      function C(e) {
         const { notice: t } = e;
-        return o.createElement(
+        return l.createElement(
           "div",
-          { className: u().FooterNotice },
-          o.createElement(
+          { className: d().FooterNotice },
+          l.createElement(
             "div",
-            { className: u().NoticeIndex },
-            o.createElement("sup", null, t.index),
+            { className: d().NoticeIndex },
+            l.createElement("sup", null, t.index),
           ),
-          o.createElement(
+          l.createElement(
             "div",
-            { className: u().NoticeText },
+            { className: d().NoticeText },
             t.footnote_text,
           ),
         );
       }
-      function C(e) {
+      function h(e) {
         const { lineItem: t } = e;
         let n = [],
           a = !!t.gift_info?.accountid_giftee;
         return (
           t.errors?.duplicate_appids_in_cart?.length &&
             n.push(
-              o.createElement(h, {
+              l.createElement(I, {
                 key: "duplicate_appids",
                 purchase_state: 1,
-                notice_text: (0, c.we)("#Cart_Error_DuplicateApps_LineItem"),
+                notice_text: (0, m.we)("#Cart_Error_DuplicateApps_LineItem"),
                 appids: t.errors.duplicate_appids_in_cart,
               }),
             ),
-          n.push(o.createElement(S, { key: "owned_apps", lineItem: t })),
+          n.push(l.createElement(w, { key: "owned_apps", lineItem: t })),
           t.errors?.unavailable_in_country &&
             n.push(
-              o.createElement(h, {
+              l.createElement(I, {
                 key: "unavailable_in_country",
                 purchase_state: 8,
-                notice_text: (0, c.we)(
+                notice_text: (0, m.we)(
                   "#Cart_Error_UnavailableCountry_LineItem",
                 ),
               }),
             ),
           t.errors?.adult_content_restricted &&
             n.push(
-              o.createElement(h, {
+              l.createElement(I, {
                 key: "adult_content_restricted",
                 purchase_state: 17,
-                notice_text: (0, c.we)(
+                notice_text: (0, m.we)(
                   "#Cart_Error_AdultContentRestricted_LineItem",
                 ),
               }),
             ),
           t.errors?.commercial_license_restricted &&
             n.push(
-              o.createElement(h, {
+              l.createElement(I, {
                 key: "commercial_license_restricted",
                 purchase_state: 18,
-                notice_text: (0, c.we)(
+                notice_text: (0, m.we)(
                   "#Cart_Error_CommercialLicenseRestricted_LineItem",
                 ),
               }),
             ),
-          n.push(o.createElement(w, { key: "coupon_notices", lineItem: t })),
+          n.push(l.createElement(y, { key: "coupon_notices", lineItem: t })),
           t.errors?.too_many_in_cart &&
             n.push(
-              o.createElement(h, {
+              l.createElement(I, {
                 key: "too_many_in_cart",
                 purchase_state: 14,
-                notice_text: (0, c.we)("#Cart_Error_TooManyInCart"),
+                notice_text: (0, m.we)("#Cart_Error_TooManyInCart"),
               }),
             ),
           t.errors?.missing_must_own_appids?.length &&
             n.push(
-              o.createElement(h, {
+              l.createElement(I, {
                 key: "missing_must_own_appids",
                 purchase_state: 16,
                 notice_text: a
-                  ? (0, c.we)("#Cart_Error_MissingMustOwnApps_GiftLineItem")
-                  : (0, c.we)("#Cart_Error_MissingMustOwnApps_LineItem"),
+                  ? (0, m.we)("#Cart_Error_MissingMustOwnApps_GiftLineItem")
+                  : (0, m.we)("#Cart_Error_MissingMustOwnApps_LineItem"),
                 appids: t.errors.missing_must_own_appids,
               }),
             ),
           t.warnings?.appids_in_mastersub?.length &&
             n.push(
-              o.createElement(h, {
+              l.createElement(I, {
                 key: "appids_in_mastersub",
                 purchase_state: 4,
-                notice_text: (0, c.we)(
+                notice_text: (0, m.we)(
                   "#Cart_Error_MasterSubscription_LineItem",
                 ),
                 appids: t.warnings.appids_in_mastersub.map((e) => e.cart_appid),
@@ -2492,61 +2493,61 @@
             ),
           t.warnings?.owned_appids?.length &&
             n.push(
-              o.createElement(h, {
+              l.createElement(I, {
                 key: "owned_appids",
                 purchase_state: 3,
-                notice_text: (0, c.we)("#Cart_Warning_AlreadyOwned_LineItem"),
+                notice_text: (0, m.we)("#Cart_Warning_AlreadyOwned_LineItem"),
                 appids: t.warnings.owned_appids,
               }),
             ),
           t.warnings?.owned_appids_extra_copy?.length &&
             n.push(
-              o.createElement(h, {
+              l.createElement(I, {
                 key: "owned_appids_extra_copy",
                 purchase_state: 9,
-                notice_text: (0, c.we)("#Cart_Warning_ExtraCopies_LineItem"),
+                notice_text: (0, m.we)("#Cart_Warning_ExtraCopies_LineItem"),
                 appids: t.warnings.owned_appids_extra_copy,
               }),
             ),
           t.warnings?.price_has_changed &&
             n.push(
-              o.createElement(h, {
+              l.createElement(I, {
                 key: "price_has_changed",
                 purchase_state: 10,
-                notice_text: (0, c.we)("#Cart_Warning_PriceChange_LineItem"),
+                notice_text: (0, m.we)("#Cart_Warning_PriceChange_LineItem"),
               }),
             ),
           t.warnings?.non_refundable &&
             n.push(
-              o.createElement(h, {
+              l.createElement(I, {
                 key: "non_refundable",
                 purchase_state: 5,
-                notice_text: (0, c.we)("#Cart_Warning_NoRefund_LineItem"),
+                notice_text: (0, m.we)("#Cart_Warning_NoRefund_LineItem"),
               }),
             ),
-          n.push(o.createElement(y, { key: "available_cheaper", lineItem: t })),
+          n.push(l.createElement(N, { key: "available_cheaper", lineItem: t })),
           n
         );
       }
-      function h(e) {
+      function I(e) {
         const { purchase_state: t, notice_text: n, appids: r } = e,
           i = (function (e) {
-            const t = o.useContext(d);
+            const t = l.useContext(_);
             return t?.mapValidateNoticesToFootnote.get(e)?.index;
           })(t);
-        return o.createElement(
+        return l.createElement(
           a.dp,
           null,
           n,
-          i && o.createElement("sup", null, i),
-          o.createElement(I, { rgAppIDs: r }),
+          i && l.createElement("sup", null, i),
+          l.createElement(v, { rgAppIDs: r }),
         );
       }
-      function I(e) {
+      function v(e) {
         const { rgAppIDs: t } = e;
         return t && 0 != t.length
           ? t.map((e, n) =>
-              o.createElement(v, {
+              l.createElement(S, {
                 key: `${e}_${n}`,
                 appid: e,
                 last: n >= t.length - 1,
@@ -2554,46 +2555,46 @@
             )
           : null;
       }
-      function v(e) {
+      function S(e) {
         const { appid: t, last: n } = e,
-          [a] = (0, l.t7)(t, { include_basic_info: !0 });
+          [a] = (0, s.t7)(t, { include_basic_info: !0 });
         return a
-          ? o.createElement(
-              i.Zx,
+          ? l.createElement(
+              o.Zx,
               { appid: t },
-              o.createElement(
-                s.p,
+              l.createElement(
+                c.p,
                 { item: a, noImpressionTracking: !0 },
                 a.GetName(),
               ),
-              !n && o.createElement(o.Fragment, null, ", "),
+              !n && l.createElement(l.Fragment, null, ", "),
             )
           : null;
       }
-      function S(e) {
+      function w(e) {
         const { lineItem: t } = e;
         if (!t.errors?.owned_appids?.length) return null;
         let n = !!t.gift_info?.accountid_giftee;
         if (t.errors?.has_existing_billing_agreement)
-          return o.createElement(h, {
+          return l.createElement(I, {
             purchase_state: 15,
-            notice_text: (0, c.we)("#Cart_Error_ExistingBillingAgreement"),
+            notice_text: (0, m.we)("#Cart_Error_ExistingBillingAgreement"),
           });
         {
           const e = (t.store_item?.included_appids.length ?? 0) > 1;
-          let a = (0, c.we)(
+          let a = (0, m.we)(
             n
               ? "#Cart_Error_AlreadyOwned_GiftLineItem_Game"
               : "#Cart_Error_AlreadyOwned_LineItem_Game",
           );
           return (
             e &&
-              (a = (0, c.we)(
+              (a = (0, m.we)(
                 n
                   ? "#Cart_Error_AlreadyOwned_GiftLineItem"
                   : "#Cart_Error_AlreadyOwned_LineItem",
               )),
-            o.createElement(h, {
+            l.createElement(I, {
               purchase_state: 2,
               notice_text: a,
               appids: e ? t.errors.owned_appids : null,
@@ -2601,41 +2602,42 @@
           );
         }
       }
-      function w(e) {
+      function y(e) {
         const { lineItem: t } = e;
-        return o.createElement(
-          o.Fragment,
+        return l.createElement(
+          l.Fragment,
           null,
           t.errors?.coupon_exclusive_promo &&
-            o.createElement(h, {
+            l.createElement(I, {
               purchase_state: 13,
-              notice_text: (0, c.we)("#Cart_Error_CouponIsExclusivePromo"),
+              notice_text: (0, m.we)("#Cart_Error_CouponIsExclusivePromo"),
             }),
           t.errors?.invalid_coupon &&
-            o.createElement(h, {
+            l.createElement(I, {
               purchase_state: 11,
-              notice_text: (0, c.we)("#Cart_Error_CouponIsInvalid"),
+              notice_text: (0, m.we)("#Cart_Error_CouponIsInvalid"),
             }),
           t.errors?.invalid_coupon_for_item &&
-            o.createElement(h, {
+            l.createElement(I, {
               purchase_state: 12,
-              notice_text: (0, c.we)("#Cart_Error_CouponIsInvalidForItem"),
+              notice_text: (0, m.we)("#Cart_Error_CouponIsInvalidForItem"),
             }),
         );
       }
-      function y(e) {
+      function N(e) {
         const { lineItem: t } = e,
           { data: n } = (0, r.mr)(t.item_id),
-          { data: l } = (0, r.EO)(t.item_id);
-        if (!!t.gift_info?.accountid_giftee || !n || !l || n == l) return null;
-        const { purchase_option_name: s, packageid: m, bundleid: u } = l,
-          d = m ? { packageid: m } : { bundleid: u };
-        return o.createElement(
+          { data: s } = (0, r.EO)(t.item_id);
+        if (!!t.gift_info?.accountid_giftee || !n || !s || (0, i.vk)(n, s))
+          return null;
+        const { purchase_option_name: c, packageid: u, bundleid: d } = s,
+          _ = u ? { packageid: u } : { bundleid: d };
+        return l.createElement(
           a.dp,
           null,
-          (0, c.PP)(
+          (0, m.PP)(
             "#Cart_Warning_AvailableAtALowerPrice",
-            o.createElement(i.O3, { name_override: s, ...d }),
+            l.createElement(o.O3, { name_override: c, ..._ }),
           ),
         );
       }
