@@ -1441,7 +1441,12 @@
           include_platforms: !0,
           include_release: !0,
         },
-        T = { ...b, include_included_items: !0, included_item_data_request: b };
+        T = {
+          ...b,
+          include_included_items: !0,
+          include_all_purchase_options: !0,
+          included_item_data_request: b,
+        };
       function A() {
         const [e] = (0, h.fg)();
         return p(e, T);
@@ -2621,8 +2626,8 @@
       function y(e) {
         const { lineItem: t } = e,
           { data: n } = (0, r.mr)(t.item_id),
-          { data: l } = (0, r.Q_)(t.item_id);
-        if (!!t.gift_info?.accountid_giftee || !n || n == l) return null;
+          { data: l } = (0, r.EO)(t.item_id);
+        if (!!t.gift_info?.accountid_giftee || !n || !l || n == l) return null;
         const { purchase_option_name: s, packageid: m, bundleid: u } = l,
           d = m ? { packageid: m } : { bundleid: u };
         return o.createElement(

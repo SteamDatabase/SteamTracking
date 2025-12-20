@@ -3043,7 +3043,7 @@
     },
     37788: (e, t, r) => {
       "use strict";
-      r.d(t, { YZ: () => o });
+      r.d(t, { YZ: () => o, f7: () => l });
       var i = r(8871),
         n = r(90626),
         s = r(76217),
@@ -3053,18 +3053,18 @@
             onExplicitFocusLevelChanged: r,
             onOKButton: a,
             onCancelButton: o,
-            navRef: c,
+            navRef: l,
             focusable: u,
             ...m
           } = e,
           d = n.useRef(null),
-          { fnOnOKButton: g, fnOnCancelButton: p } = l({
+          { fnOnOKButton: g, fnOnCancelButton: p } = c({
             navRefPanel: d,
             onOKButton: a,
             onCancelButton: o,
             onExplicitFocusLevelChanged: r,
           }),
-          _ = (0, i.Ue)(c, d);
+          _ = (0, i.Ue)(l, d);
         return n.createElement(s.Z, {
           ...m,
           onOKButton: g,
@@ -3074,18 +3074,18 @@
           focusable: !1 !== u,
         });
       });
-      n.forwardRef(function (e, t) {
+      const l = n.forwardRef(function (e, t) {
         const {
             onOKButton: r,
             onCancelButton: s,
             navRef: o,
-            focusable: c,
+            focusable: l,
             ...u
           } = e,
           m = n.useRef(null),
           d = n.useRef(null),
           g = n.useCallback((e, t) => e.FocusVisibleChild(), []),
-          { fnOnOKButton: p, fnOnCancelButton: _ } = l({
+          { fnOnOKButton: p, fnOnCancelButton: _ } = c({
             navRefPanel: m,
             onOKButton: r,
             onCancelButton: s,
@@ -3099,10 +3099,10 @@
           onCancelButton: _,
           navRef: f,
           ref: h,
-          focusable: !1 !== c,
+          focusable: !1 !== l,
         });
       });
-      function l(e) {
+      function c(e) {
         let {
           navRefPanel: t,
           onOKButton: r,
@@ -3110,7 +3110,7 @@
           onExplicitFocusLevelChanged: s,
           fnFocusChildren: a,
         } = e;
-        a = a ?? c;
+        a = a ?? u;
         return {
           fnOnOKButton: n.useCallback(
             (e) => {
@@ -3134,7 +3134,7 @@
           ),
         };
       }
-      function c(e, t) {
+      function u(e, t) {
         return e.ChildTakeFocus(t);
       }
     },
@@ -34734,19 +34734,20 @@
     39777: (e, t, r) => {
       "use strict";
       r.d(t, {
-        AQ: () => B,
-        Ij: () => b,
+        AQ: () => w,
+        EO: () => _,
+        Ij: () => B,
         J$: () => l,
         Q_: () => p,
         U2: () => c,
         f2: () => u,
-        j4: () => f,
-        jD: () => y,
-        lv: () => h,
-        mr: () => _,
-        rK: () => w,
-        us: () => v,
-        vB: () => z,
+        j4: () => b,
+        jD: () => M,
+        lv: () => f,
+        mr: () => h,
+        rK: () => y,
+        us: () => z,
+        vB: () => E,
         wl: () => g,
       });
       var i = r(81393),
@@ -34756,13 +34757,13 @@
         o = r(7338);
       function l(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(v(t, e));
+        return (0, n.I)(z(t, e));
       }
       function c(e) {
-        return m(e, v);
+        return m(e, z);
       }
       function u(e) {
-        return m(e, B, "include_assets");
+        return m(e, w, "include_assets");
       }
       function m(e, t, r) {
         const i = (0, o.eG)(),
@@ -34770,7 +34771,7 @@
           l = e && "packageid" in e && !!e.packageid;
         let c;
         if (l) {
-          const t = a.getQueryData(R(e, "default_info"));
+          const t = a.getQueryData(T(e, "default_info"));
           t &&
             1 == t.included_appids?.length &&
             (c = { appid: t.included_appids[0] });
@@ -34783,10 +34784,10 @@
       function d(e, t, r) {
         const i = t && "packageid" in t && !!t.packageid;
         return {
-          queryKey: R(t, "include_included_items"),
+          queryKey: T(t, "include_included_items"),
           queryFn: async () => {
-            r && E(e, t, r);
-            const i = await E(e, t, "include_included_items");
+            r && L(e, t, r);
+            const i = await L(e, t, "include_included_items");
             return 1 == i.included_appids?.length
               ? { appid: i.included_appids[0] }
               : t;
@@ -34799,28 +34800,34 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return C(e, t, "include_basic_info", "basic_info");
+            return v(e, t, "include_basic_info", "basic_info");
           })(t, e),
         );
       }
       function p(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(
-          (function (e, t) {
-            return {
-              ...v(e, t),
-              select: (e) => e.best_purchase_option || null,
-              staleTime: 6e5,
-            };
-          })(t, e),
-        );
+        return (0, n.I)(I(t, e));
       }
       function _(e) {
         const t = (0, o.eG)();
         return (0, n.I)(
+          e && "bundleid" in e
+            ? I(t, e)
+            : (function (e, t) {
+                return {
+                  ...C(e, t),
+                  select: (e) => (e ? e[0] : null),
+                  staleTime: 6e5,
+                };
+              })(t, e),
+        );
+      }
+      function h(e) {
+        const t = (0, o.eG)();
+        return (0, n.I)(
           (function (e, t) {
             return {
-              ...v(e, t),
+              ...z(e, t),
               select: (e) =>
                 e.self_purchase_option || e.best_purchase_option || null,
               staleTime: 6e5,
@@ -34828,32 +34835,35 @@
           })(t, e),
         );
       }
-      function h(e) {
-        const t = (0, o.eG)();
-        return (0, n.I)(B(t, e));
-      }
       function f(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(
-          (function (e, t) {
-            return C(e, t, "include_screenshots", "screenshots");
-          })(t, e),
-        );
+        return (0, n.I)(w(t, e));
       }
       function b(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(y(t, e));
+        return (0, n.I)(
+          (function (e, t) {
+            return v(e, t, "include_screenshots", "screenshots");
+          })(t, e),
+        );
       }
-      function B(e, t) {
-        return C(e, t, "include_assets", "assets");
+      function B(e) {
+        const t = (0, o.eG)();
+        return (0, n.I)(M(t, e));
       }
       function w(e, t) {
-        return C(e, t, "include_platforms", "platforms");
+        return v(e, t, "include_assets", "assets");
       }
       function y(e, t) {
-        return C(e, t, "apply_user_filters", "user_filter_failure");
+        return v(e, t, "include_platforms", "platforms");
       }
-      function M(e) {
+      function M(e, t) {
+        return v(e, t, "apply_user_filters", "user_filter_failure");
+      }
+      function C(e, t) {
+        return v(e, t, "include_all_purchase_options", "purchase_options");
+      }
+      function S(e) {
         return (
           !!e &&
           ("appid" in e && !e.appid
@@ -34862,53 +34872,60 @@
               ((0, i.wT)(!1, "Invalid bundleid passed to useStoreItem"), !1))
         );
       }
-      function C(e, t, r, i) {
+      function v(e, t, r, i) {
         return {
-          queryKey: R(t, r),
-          queryFn: async () => (await E(e, t, r))[i] || null,
+          queryKey: T(t, r),
+          queryFn: async () => (await L(e, t, r))[i] || null,
           staleTime: 216e5,
-          enabled: M(t),
+          enabled: S(t),
         };
       }
-      function S(e, t, r, i, n) {
-        e.setQueryData(R(t, i), r[n] ?? null);
+      function R(e, t, r, i, n) {
+        e.setQueryData(T(t, i), r[n] ?? null);
       }
-      function v(e, t) {
+      function z(e, t) {
         return {
-          queryKey: R(t, "default_info"),
-          queryFn: async () => T(await E(e, t, "default_info")),
+          queryKey: T(t, "default_info"),
+          queryFn: async () => O(await L(e, t, "default_info")),
           staleTime: 216e5,
-          enabled: M(t),
+          enabled: S(t),
         };
       }
-      function R(e, t) {
+      function I(e, t) {
+        return {
+          ...z(e, t),
+          select: (e) => e.best_purchase_option || null,
+          staleTime: 6e5,
+        };
+      }
+      function T(e, t) {
         return ["StoreItem", e && (0, a.ER)(e), t];
       }
-      function z(e, t, r) {
+      function E(e, t, r) {
         const i = (0, a.Jz)(t);
         i &&
           (!(function (e, t, r) {
-            e.setQueryData(R(t, "default_info"), T(r));
+            e.setQueryData(T(t, "default_info"), O(r));
           })(e, i, t),
           r.include_basic_info &&
             (function (e, t, r) {
-              S(e, t, r, "include_basic_info", "basic_info");
+              R(e, t, r, "include_basic_info", "basic_info");
             })(e, i, t),
           r.include_assets &&
             (function (e, t, r) {
-              S(e, t, r, "include_assets", "assets");
+              R(e, t, r, "include_assets", "assets");
             })(e, i, t),
           r.include_screenshots &&
             (function (e, t, r) {
-              S(e, t, r, "include_screenshots", "screenshots");
+              R(e, t, r, "include_screenshots", "screenshots");
             })(e, i, t),
           r.include_trailers &&
             (function (e, t, r) {
-              S(e, t, r, "include_trailers", "trailers");
+              R(e, t, r, "include_trailers", "trailers");
             })(e, i, t),
           r.include_assets_without_overrides &&
             (function (e, t, r) {
-              S(
+              R(
                 e,
                 t,
                 r,
@@ -34918,35 +34935,39 @@
             })(e, i, t),
           r.include_reviews &&
             (function (e, t, r) {
-              S(e, t, r, "include_reviews", "reviews");
+              R(e, t, r, "include_reviews", "reviews");
             })(e, i, t),
           r.include_release &&
             (function (e, t, r) {
-              S(e, t, r, "include_release", "release");
+              R(e, t, r, "include_release", "release");
             })(e, i, t),
           r.include_tag_count &&
             r.include_tag_count > 0 &&
             (function (e, t, r) {
-              S(e, t, r, "top_tags", "tags");
+              R(e, t, r, "top_tags", "tags");
             })(e, i, t),
           r.include_platforms &&
             (function (e, t, r) {
-              S(e, t, r, "include_platforms", "platforms");
+              R(e, t, r, "include_platforms", "platforms");
             })(e, i, t),
           r.apply_user_filters &&
             (function (e, t, r) {
-              S(e, t, r, "apply_user_filters", "user_filter_failure");
+              R(e, t, r, "apply_user_filters", "user_filter_failure");
+            })(e, i, t),
+          r.include_all_purchase_options &&
+            (function (e, t, r) {
+              R(e, t, r, "include_all_purchase_options", "purchase_options");
             })(e, i, t),
           r.include_included_items &&
             r.included_item_data_request &&
             (t.included_items?.included_apps?.forEach((t) =>
-              z(e, t, r.included_item_data_request),
+              E(e, t, r.included_item_data_request),
             ),
             t.included_items?.included_packages?.forEach((t) =>
-              z(e, t, r.included_item_data_request),
+              E(e, t, r.included_item_data_request),
             )));
       }
-      const I = [
+      const F = [
         "assets",
         "tagids",
         "tags",
@@ -34964,12 +34985,12 @@
         "platforms",
         "release",
       ];
-      function T(e) {
+      function O(e) {
         const t = { ...e };
-        for (const e of I) delete t[e];
+        for (const e of F) delete t[e];
         return t;
       }
-      async function E(e, t, r) {
+      async function L(e, t, r) {
         return await e.load(`${(0, a.ER)(t)}|${r}`);
       }
     },
@@ -73346,7 +73367,13 @@
                         }),
                         n.createElement(Ko, {
                           path: q.B.YearInReview(),
-                          render: (e) => n.createElement(No, { ...e }),
+                          render: (e) =>
+                            n.createElement(Ge.X, {
+                              config: {
+                                "react-root": () =>
+                                  n.createElement(No, { ...e }),
+                              },
+                            }),
                         }),
                         n.createElement(Ko, {
                           path: q.B.ShoppingCartAccountCartPurchaseRequested(),

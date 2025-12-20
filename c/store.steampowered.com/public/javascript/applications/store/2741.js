@@ -1643,6 +1643,7 @@
         _ = {
           ..._,
           include_included_items: !0,
+          include_all_purchase_options: !0,
           included_item_data_request: _,
         };
       function _() {
@@ -3049,6 +3050,7 @@
         if (
           !!_.gift_info?.accountid_giftee ||
           !__webpack_require__ ||
+          !_ ||
           __webpack_require__ == _
         )
           return null;

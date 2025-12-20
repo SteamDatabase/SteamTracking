@@ -5,9 +5,9 @@ import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 function _(_) {
   return "appid" in _
@@ -489,6 +489,9 @@ function _(_, _) {
 function _(_, _, _) {
   _(_, _, _, "apply_user_filters", "user_filter_failure");
 }
+function _(_, _, _) {
+  _(_, _, _, "include_all_purchase_options", "purchase_options");
+}
 function _(_) {
   return _
     ? "appid" in _ && !_.appid
@@ -548,6 +551,7 @@ function _(_, _, _) {
     _.include_tag_count && _.include_tag_count > 0 && _(_, _, _),
     _.include_platforms && _(_, _, _),
     _.apply_user_filters && _(_, _, _),
+    _.include_all_purchase_options && _(_, _, _),
     _.include_included_items &&
       _.included_item_data_request &&
       (_.included_items?.included_apps?.forEach((_) =>

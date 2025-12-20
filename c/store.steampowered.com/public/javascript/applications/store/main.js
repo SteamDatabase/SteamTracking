@@ -3305,6 +3305,7 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3336,7 +3337,7 @@
           focusable: !1 !== _,
         });
       });
-      _.forwardRef(function (_, _) {
+      const _ = _.forwardRef(function (_, _) {
         const {
             onOKButton: __webpack_require__,
             onCancelButton: _,
@@ -38244,6 +38245,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -38308,14 +38310,20 @@
       }
       function _(_) {
         const _ = (0, _._)();
+        return (0, _._)(_(_, _));
+      }
+      function _(_) {
+        const _ = (0, _._)();
         return (0, _._)(
-          (function (_, _) {
-            return {
-              ..._(_, _),
-              select: (_) => _.best_purchase_option || null,
-              staleTime: 6e5,
-            };
-          })(_, _),
+          _ && "bundleid" in _
+            ? _(_, _)
+            : (function (_, _) {
+                return {
+                  ..._(_, _),
+                  select: (_) => (_ ? _[0] : null),
+                  staleTime: 6e5,
+                };
+              })(_, _),
         );
       }
       function _(_) {
@@ -38356,6 +38364,9 @@
       function _(_, _) {
         return _(_, _, "apply_user_filters", "user_filter_failure");
       }
+      function _(_, _) {
+        return _(_, _, "include_all_purchase_options", "purchase_options");
+      }
       function _(_) {
         return (
           !!_ &&
@@ -38382,6 +38393,13 @@
           queryFn: async () => _(await _(_, _, "default_info")),
           staleTime: 216e5,
           enabled: _(_),
+        };
+      }
+      function _(_, _) {
+        return {
+          ..._(_, _),
+          select: (_) => _.best_purchase_option || null,
+          staleTime: 6e5,
         };
       }
       function _(_, _) {
@@ -38439,6 +38457,10 @@
           _.apply_user_filters &&
             (function (_, _, _) {
               _(_, _, _, "apply_user_filters", "user_filter_failure");
+            })(_, _, _),
+          _.include_all_purchase_options &&
+            (function (_, _, _) {
+              _(_, _, _, "include_all_purchase_options", "purchase_options");
             })(_, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
@@ -81986,8 +82008,13 @@
                         _.createElement(_, {
                           path: _._.YearInReview(),
                           render: (_) =>
-                            _.createElement(_, {
-                              ..._,
+                            _.createElement(_._, {
+                              config: {
+                                "react-root": () =>
+                                  _.createElement(_, {
+                                    ..._,
+                                  }),
+                              },
                             }),
                         }),
                         _.createElement(_, {

@@ -595,13 +595,14 @@
         ShareColumns: "_17-suJNiK6Qevk_3Uw1027",
         ShowcaseInfo: "_35BgPO9cE8odvnQgcSec2O",
         ShareCtn: "_3wBwgFLePqfIcCKHyA6g-K",
+        YIRShareCtn: "_3l5ecqQPGv_1e29eSE2Yw_",
+        ShareButton: "_2MSFQv8F34No-YaWoPUlC_",
+        PrivacyWarning: "_1mHX7Rnmm65ymfxaNJuN8C",
         ShareTypeTitle: "_3X3w682EtopjFadHYWO8nC",
         ShareArea: "_11Wb4dZGttl7jOW2o_OF27",
         SeeRewindButton: "JIh21cFM3TAJhriJuK8lg",
-        PrivacyWarning: "_1mHX7Rnmm65ymfxaNJuN8C",
         Visible: "_1qJRh1dLXCnKaglc4szmtz",
         DropDownSizer: "ZrLd2gp4EdJNEtWgHX-H-",
-        ShareButton: "_2MSFQv8F34No-YaWoPUlC_",
         ShareHeader: "j8KV_szYFpuGx7laNzqiC",
         DropdownButton: "H5GE-sEeFx3Nv8992Vu48",
         Error: "_3quoXc_g1S9w4WTXaDr_-m",
@@ -13900,6 +13901,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
           19: [19, 1663, 1774, 3814, 1646, 4158],
@@ -17099,6 +17101,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { userYearInReview: _ } = _;
@@ -17210,9 +17214,10 @@
               (0, _._)("#YIR_FriendShared"),
             ),
             _.createElement(
-              "div",
+              _._,
               {
                 className: _.FriendsGrid,
+                "flow-children": "grid",
               },
               _.slice(0, _).map((_) =>
                 _.createElement(_, {
@@ -17240,7 +17245,7 @@
           _ = new _._(_),
           _ = _();
         return _.createElement(
-          "a",
+          _._,
           {
             href: `${_._.STORE_BASE_URL}replay/${_.ConvertTo64BitString()}/${__webpack_require__}`,
             className: (0, _._)({
@@ -18185,18 +18190,20 @@
             (0, _._)("#YIR_SeeYourRewind"),
           );
         return _.createElement(
-          _.Fragment,
-          null,
+          _._,
+          {
+            className: _.YIRShareCtn,
+          },
           _.createElement(_, {
             userYearInReview: _,
             steamId: __webpack_require__,
             nYear: _,
           }),
           _.createElement(
-            "div",
+            _._,
             {
               className: _.ShareButton,
-              onClick: (_) => {
+              onActivate: (_) => {
                 (0, _._)(
                   _.createElement(_, {
                     userYearInReview: _,
@@ -18248,8 +18255,10 @@
             },
           ];
         return _.createElement(
-          _.Fragment,
-          null,
+          _._,
+          {
+            "flow-children": "column",
+          },
           _.createElement(
             "div",
             {
@@ -20513,7 +20522,7 @@
                 ),
               !_ &&
                 _.createElement(
-                  "a",
+                  _._,
                   {
                     href: _,
                     target: "_blank",
@@ -21007,9 +21016,10 @@
                     className: _.InfoContainer,
                   },
                   _.createElement(
-                    "div",
+                    _._,
                     {
                       className: _.GameLinks,
+                      "flow-children": "row",
                     },
                     _ &&
                       _.createElement(
@@ -21022,7 +21032,7 @@
                       ),
                     !_ &&
                       _.createElement(
-                        "a",
+                        _._,
                         {
                           href: _,
                           target: "_blank",
@@ -21032,7 +21042,7 @@
                       ),
                     !!_ &&
                       _.createElement(
-                        "a",
+                        _._,
                         {
                           href: _,
                           className: _.GameLink,
@@ -21317,6 +21327,7 @@
           (0, _._)(_ ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"),
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = parseInt(_.year),
           _ = _.steamId || "",
@@ -21391,14 +21402,22 @@
                 message: (0, _._)("#YIR_Error_NoShareNoGameplay"),
               })
             : _.createElement(
-                "div",
+                _._,
                 {
-                  className: _().YearInReviewContainer,
+                  autoFocus: !0,
+                  noFocusRing: !0,
+                  focusable: !1,
                 },
-                _.createElement(_, {
-                  userYearInReview: _,
-                  avatarAndPersona: _,
-                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _().YearInReviewContainer,
+                  },
+                  _.createElement(_, {
+                    userYearInReview: _,
+                    avatarAndPersona: _,
+                  }),
+                ),
               );
       }
       const _ = _.createContext({
@@ -21771,48 +21790,50 @@
             Boolean(
               (0, _._)("localization_advanced_access", "application_config"),
             ))
-          ? _.createElement(
-              "div",
-              {
-                className: (0, _._)(_().DevToggle, _.ValveOnlyBackground),
-              },
-              _.createElement(
+          ? _._.IN_GAMEPADUI
+            ? null
+            : _.createElement(
                 "div",
-                null,
-                "Debug Only: Toggle First Person View",
-              ),
-              _.createElement(_._, {
-                onChange: __webpack_require__,
-                checked: _,
-              }),
-              _.createElement(
-                "div",
-                null,
-                "Debug Only: Change to view the contents in the css style of a different year",
-              ),
-              _.createElement(_._, {
-                rgOptions: [
-                  {
-                    data: 2022,
-                    label: "2022",
-                  },
-                  {
-                    data: 2023,
-                    label: "2023",
-                  },
-                  {
-                    data: 2024,
-                    label: "2024",
-                  },
-                  {
-                    data: 2025,
-                    label: "2025",
-                  },
-                ],
-                selectedOption: _,
-                onChange: _,
-              }),
-            )
+                {
+                  className: (0, _._)(_().DevToggle, _.ValveOnlyBackground),
+                },
+                _.createElement(
+                  "div",
+                  null,
+                  "Debug Only: Toggle First Person View",
+                ),
+                _.createElement(_._, {
+                  onChange: __webpack_require__,
+                  checked: _,
+                }),
+                _.createElement(
+                  "div",
+                  null,
+                  "Debug Only: Change to view the contents in the css style of a different year",
+                ),
+                _.createElement(_._, {
+                  rgOptions: [
+                    {
+                      data: 2022,
+                      label: "2022",
+                    },
+                    {
+                      data: 2023,
+                      label: "2023",
+                    },
+                    {
+                      data: 2024,
+                      label: "2024",
+                    },
+                    {
+                      data: 2025,
+                      label: "2025",
+                    },
+                  ],
+                  selectedOption: _,
+                  onChange: _,
+                }),
+              )
           : null;
       }
       function _(_) {
@@ -22081,33 +22102,39 @@
           _.createElement(
             _._,
             {
-              domain: "store.steampowered.com",
-              controller: "yearinreview",
+              navID: "YearInReviewPageRoot",
             },
             _.createElement(
               _._,
-              null,
-              _.createElement(_._, {
-                path: `${_.Home(":steamId?", ":year?")}`,
-                render: (_) =>
-                  _.createElement(
-                    _._,
-                    {
-                      method: "yearinreview",
-                    },
+              {
+                domain: "store.steampowered.com",
+                controller: "yearinreview",
+              },
+              _.createElement(
+                _._,
+                null,
+                _.createElement(_._, {
+                  path: `${_.Home(":steamId?", ":year?")}`,
+                  render: (_) =>
                     _.createElement(
                       _._,
-                      null,
-                      _.createElement(_, {
-                        steamId:
-                          "my" == _.match.params.steamId
-                            ? _._.steamid
-                            : _.match.params.steamId,
-                        year: _.match.params.year,
-                      }),
+                      {
+                        method: "yearinreview",
+                      },
+                      _.createElement(
+                        _._,
+                        null,
+                        _.createElement(_, {
+                          steamId:
+                            "my" == _.match.params.steamId
+                              ? _._.steamid
+                              : _.match.params.steamId,
+                          year: _.match.params.year,
+                        }),
+                      ),
                     ),
-                  ),
-              }),
+                }),
+              ),
             ),
           )
         );
