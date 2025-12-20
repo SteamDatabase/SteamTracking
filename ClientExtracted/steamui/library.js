@@ -1,4 +1,4 @@
-var CLSTAMP = "10331538";
+var CLSTAMP = "10332729";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -11490,9 +11490,9 @@ var CLSTAMP = "10331538";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Dec 19 2025 : 12:20:30",
-                BUILD_TIME_UTC: "Dec 19 2025 : 20:20:30",
-                BUILD_RTIME_UTC: 1766175630,
+                BUILD_TIME_LOCAL: "Dec 19 2025 : 16:51:25",
+                BUILD_TIME_UTC: "Dec 20 2025 : 00:51:25",
+                BUILD_RTIME_UTC: 1766191885,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -25177,9 +25177,9 @@ var CLSTAMP = "10331538";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Dec 19 2025 : 12:20:30",
-                    BUILD_TIME_UTC: "Dec 19 2025 : 20:20:30",
-                    BUILD_RTIME_UTC: 1766175630,
+                    BUILD_TIME_LOCAL: "Dec 19 2025 : 16:51:25",
+                    BUILD_TIME_UTC: "Dec 20 2025 : 00:51:25",
+                    BUILD_RTIME_UTC: 1766191885,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25733,7 +25733,7 @@ var CLSTAMP = "10331538";
         277: "bdae3efac23e12cc7864",
         297: "021cac54333a4357031b",
         382: "1657080d0854d3e0ff94",
-        674: "a95d90d6c28d3094c1ec",
+        674: "7d7ee420c866e2486e62",
         716: "666de33917d80425274c",
         740: "9e5178d640822b970871",
         786: "4373be06007bc4b7a422",
@@ -25744,7 +25744,7 @@ var CLSTAMP = "10331538";
         1012: "ebbaa97b86764aacb98f",
         1087: "7810a0c125a76d20865e",
         1093: "37b65dcf1918dcb6d0ba",
-        1220: "66975e0b5c83e0dbcf9a",
+        1220: "e4438f17b7ca0167731a",
         1275: "11e4a8e286f3edd19d2b",
         1316: "af868756e608665803f0",
         1389: "5cb0ccbb14e86f15ab06",
@@ -25773,7 +25773,7 @@ var CLSTAMP = "10331538";
         2515: "9a062cc85cb096b00e67",
         2520: "c27ae611dbcf323d5153",
         2539: "0f9b65120876cd1969bc",
-        2561: "1c69048eda9a1054435f",
+        2561: "5be0608b86de04e57cf1",
         2611: "086a95d80b9798256c52",
         2640: "3e1675797304528e0e1f",
         2646: "ce195c0ca3d4d3713bcd",
@@ -25797,7 +25797,7 @@ var CLSTAMP = "10331538";
         3569: "0c020fea0239f8cfc91b",
         3583: "f831ab7edbd9ffa591ac",
         3594: "d140b99546df0569f2ca",
-        3714: "a57c4b020350f3004680",
+        3714: "1c32411f9644bb684e2b",
         3744: "775ac7cdb21bac1fe37c",
         3778: "630972f249a9463996c0",
         3869: "c187e86874caed8fbbd7",
@@ -25861,11 +25861,11 @@ var CLSTAMP = "10331538";
         7316: "18e5e6b118a1b52fddc2",
         7376: "1a70f0da1467e92dd08f",
         7442: "c4e8981db9f17452ac1b",
-        7462: "1eb939af6a8376cbb25f",
+        7462: "52ace9199689821be1eb",
         7464: "814eb2b0705f21c38903",
         7533: "fc9de01c132c31ff8269",
         7569: "5c6a8bfaf01e13e9762b",
-        7653: "1a209ad192c72de8f8c3",
+        7653: "d6fdb1639cc9e3e6269b",
         7696: "920c8ed2efd25e6ad1a4",
         7770: "aceefbb364a30f3f02c4",
         7788: "f8b1034b43ff39129177",
@@ -25880,7 +25880,7 @@ var CLSTAMP = "10331538";
         8280: "3d7e35216f210df6e779",
         8286: "1f5be36130bf4017cada",
         8291: "cc3ea37449902e9bd50d",
-        8396: "e25602dd1b79fd76cffb",
+        8396: "acc2bb63c9be7007f07f",
         8443: "2639023ea5099cfe4b64",
         8445: "cb5f87fa07cfc2cde2fb",
         8478: "89707ac0ffb085fd89be",
@@ -25892,7 +25892,7 @@ var CLSTAMP = "10331538";
         8674: "8442bc2fe3c395aa9304",
         8699: "2827a37c802da5b8dabd",
         8703: "9b9a02d31667b9ad3cdd",
-        8732: "040eabed865450e61de1",
+        8732: "d033c9d6ffdf8af8bbd7",
         8830: "6e7f26087da8cbdee63d",
         8855: "096d7ef258c36eb0db70",
         8871: "cb296f4ce02ebf257e84",
@@ -25903,7 +25903,7 @@ var CLSTAMP = "10331538";
         8970: "c432673605747d241ec4",
         9053: "297e0baba49fcdaa292a",
         9063: "77f0c9977cc1aecd1944",
-        9129: "9ffb50003c4f871667b0",
+        9129: "e54edd0ab2832321c5a4",
         9134: "370830da314eb8247bf6",
         9171: "a0f8baf81b894bccba8d",
         9298: "46dbf91ed47e115566a6",
@@ -25911,13 +25911,13 @@ var CLSTAMP = "10331538";
         9418: "29e9fa15a9fc8e62a893",
         9457: "530aaf268be1cc7b9c25",
         9462: "f3c03ad55b9e54dab3bf",
-        9672: "b096f37543d4bb20f581",
+        9672: "ff8c38972e44fdae4add",
         9711: "2ed989ee7251a5d19c6f",
         9746: "02bbf44c33adfc258656",
         9779: "59ef76674166d4b9e52e",
-        9858: "8073a43513f544ccfc49",
+        9858: "50ab45f2d291775ab374",
         9869: "0f5bcdc9b2a986acf0cb",
-        9882: "3aa4eb23afffa251be3d",
+        9882: "499f31ccf435fd972880",
         9887: "e92e1dff8506bdc55c60",
         9902: "687ccd0d6e13cf864303",
       }[e]),
@@ -26143,4 +26143,4 @@ var CLSTAMP = "10331538";
     })();
   var c = a.O(void 0, [41], () => a(69823));
   c = a.O(c);
-})(); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-hotfix-steamui/build/client/steamui/sourcemaps/library.js.map
+})(); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/library.js.map

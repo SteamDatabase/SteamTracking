@@ -341,10 +341,10 @@ $ORIGIN
 17CStreamReaderBase
 18CUtlCharConversion
 19CUtlNoEscConversion
-20:00:55
 20CUniformRandomStream
 20IUniformRandomStream
 21CUtlCStringConversion
+23:09:32
 24CDirWatcherPollingThread
 31CAdHocValidation_SimpleCallback
 64 >= identifier_length
@@ -605,7 +605,6 @@ QkkXa
 Root
 SDL_GetError
 SDL_SetCurrentThreadPriority
-SOC4
 STEAMVIDEOTOKEN
 STEAM_BASE_FOLDER
 Saturday

@@ -2195,7 +2195,6 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
-20:00:55
 20CCDDBAppDetailCommon
 20CClientModuleManager
 20CClientSecureDesktop
@@ -2232,6 +2231,7 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
+23:09:32
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -2377,6 +2377,7 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
+524288
 52F*
 55Ly
 55j_WW
@@ -2400,9 +2401,6 @@ $ffn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
-65536
-524288
-666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
 6ConVar
@@ -2454,6 +2452,8 @@ $ffn
 8/A0
 8000
 8192
+65536
+666666666666666666666666666666666666666666666666
 82\n:XPH
 88n|
 88pH
