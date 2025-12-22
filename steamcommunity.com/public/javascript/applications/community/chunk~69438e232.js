@@ -36965,6 +36965,7 @@
                 autoPlay: !0,
                 loop: !0,
                 poster: i,
+                playsInline: !0,
                 className: e.videoClassName,
               },
               n.createElement("source", { src: o, type: "video/webm" }),

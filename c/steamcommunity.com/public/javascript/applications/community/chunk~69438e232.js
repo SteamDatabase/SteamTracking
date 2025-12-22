@@ -40980,6 +40980,7 @@
                 autoPlay: !0,
                 loop: !0,
                 poster: _,
+                playsInline: !0,
                 className: _.videoClassName,
               },
               _.createElement("source", {
