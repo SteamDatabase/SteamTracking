@@ -490,10 +490,6 @@ function PurchaseNextItem()
 		return;
 	}
 
-	if ( g_rgOrders[g_iNamePurchase].m_cCreateOrderAttempts >= 5 )
-	{
-		g_iNamePurchase++;
-	}
 	if ( g_rgOrders[g_iNamePurchase].m_bOrderAjaxComplete )
 	{
 		g_iNamePurchase++;
