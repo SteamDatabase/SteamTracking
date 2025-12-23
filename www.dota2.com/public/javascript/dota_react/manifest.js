@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10336299";
+var CLSTAMP = "10336604";
 (() => {
   "use strict";
   var e,
@@ -251,7 +251,7 @@ var CLSTAMP = "10336299";
         3144: "6f5ba9c5aea4d5c21273",
         3147: "0aa0c5b79f813b4e58e6",
         3161: "56ae6e400bbc8d3a6aef",
-        3174: "04db590199418c579bc3",
+        3174: "bdf9a728e770e1ca8e82",
         3186: "37894ca504bcc123e614",
         3190: "a7747f1797bc1eb25689",
         3227: "28d379cf98c40e41d14f",
@@ -296,11 +296,11 @@ var CLSTAMP = "10336299";
         4197: "35536e0f7760ee76c4e8",
         4242: "c842b534f042a9550811",
         4249: "f875e1520692ca16cbaf",
-        4271: "415234b2fc1d1ecf3bce",
+        4271: "03c0d0e734f0d66b9e9f",
         4298: "7531236be39c2491a9b4",
         4317: "1503184677011542e877",
         4330: "1dead3b8f09dd02bde6d",
-        4333: "024ce4af0a1affce1b20",
+        4333: "80d657b5924495eeed8a",
         4338: "dd19456c9ee5518b2e9f",
         4345: "f7dbf9f228297b5d3514",
         4349: "e563f2988af92ab83108",
@@ -446,7 +446,7 @@ var CLSTAMP = "10336299";
         6983: "a5114eed9c1e268b5bdd",
         6987: "6eba67e075906e7eb052",
         6990: "165239d997f07137bab7",
-        7005: "747e54fcd2816fbc8f00",
+        7005: "31fe2707f6a0b08adda6",
         7040: "0b8294c85388678d795d",
         7084: "329fbe4eeeb1a082ebef",
         7092: "cbc052502096b4a84ee6",
@@ -510,11 +510,11 @@ var CLSTAMP = "10336299";
         8102: "1b04f3c7c70ae740e852",
         8180: "2229f130bad4825313a0",
         8194: "46a18b1d3c510553d1c0",
-        8206: "06087ccb5e209f201f5d",
+        8206: "9e59465fc8d3c474a72a",
         8267: "62f9e8d1c918542c2b61",
         8284: "a6e931c240c52cc9be5f",
         8287: "40620168868da527c57b",
-        8291: "0fd36e846adc5d279e39",
+        8291: "d3fc56b4b3d286807e22",
         8306: "2ae66fc97624984080e8",
         8320: "9207adcd8a2921764006",
         8326: "68f0d7bd14b276109106",
