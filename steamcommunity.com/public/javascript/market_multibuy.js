@@ -566,6 +566,12 @@ function MultiBuyStartPurchase()
 		return;
 	}
 
+	// prevent duplicate purchase by hiding the purchase & commit sections
+	{
+		$J('#market_multibuy_billinginfo').slideUp();
+		$J('#market_multibuy_commit').slideUp();
+	}
+
 	g_rgOrders = [];
 	var bAnyError = false;
 	for ( var i = 0; i < g_rgItemNameIds.length; i++ )
