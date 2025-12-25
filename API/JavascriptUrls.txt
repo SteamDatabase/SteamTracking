@@ -1323,6 +1323,7 @@ ${STORE_BASE_URL}buyitem/${nAppID}/${nItemDefID}/${}
 ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
 ${STORE_BASE_URL}cart/addtocart
+${STORE_BASE_URL}cart/addtocartwrapper
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
 ${STORE_BASE_URL}cart/ajaxsaledropprogress
 ${STORE_BASE_URL}cart/purchaserequest/${}/${}

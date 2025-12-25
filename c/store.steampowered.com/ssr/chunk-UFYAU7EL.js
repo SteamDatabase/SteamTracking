@@ -5,8 +5,8 @@ import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 var _ = _(_());
@@ -3019,12 +3019,16 @@ async function _(_, _, _, _) {
   }),
     _ && _.Body().set_navdata(_.fromObject(_(_))),
     _.Body().set_user_country(_);
-  let _ = await _.AddItemsToCart(_, _);
-  return (
-    _.BSuccess() ||
-      console.warn(`Failed to add item to account cart: ${_.GetEResult()}`),
-    [_.GetEResult(), _.Body().toObject()]
-  );
+  let _ = await (
+    await fetch(`${_.STORE_BASE_URL}cart/addtocartwrapper`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(_.Body().toObject()),
+    })
+  ).json();
+  return [_.success, _.message];
 }
 async function _(_, _) {
   if (_(_)) {

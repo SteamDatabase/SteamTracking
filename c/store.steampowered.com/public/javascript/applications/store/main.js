@@ -1448,14 +1448,15 @@
         }),
           _ && _.Body().set_navdata(_._.fromObject((0, _._)(_))),
           _.Body().set_user_country(_);
-        const _ = await _._.AddItemsToCart(_, _);
-        return (
-          _.BSuccess() ||
-            console.warn(
-              `Failed to add item to account cart: ${_.GetEResult()}`,
-            ),
-          [_.GetEResult(), _.Body().toObject()]
-        );
+        const _ = await fetch(`${_._.STORE_BASE_URL}cart/addtocartwrapper`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(_.Body().toObject()),
+          }),
+          _ = await _.json();
+        return [_.success, _.message];
       }
       async function _(_, _) {
         if ((0, _._)(_)) {
