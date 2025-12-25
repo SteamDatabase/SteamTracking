@@ -733,7 +733,6 @@ $ffn
 %s%02x
 %s%c%08lx.%s%d
 %s%c.temp_write_%x
-%s*.txt
 %s,%lld;%d;%u\n
 %s,100 127.0.0.1 stale
 %s------%s%s
@@ -1248,6 +1247,7 @@ $ffn
 )\n$k_EMsgGCGetAccountDetails_DEPRECATED
 )\n$k_EMsgGCHAccountTradeBanStatusChange
 )\n$k_EMsgGMShellAndServerAddressUpdates
+)\n$k_EMsgProductInfoChangedNotification
 )\n$k_EMsgRemoteClientPairWifiAPResponse
 )\n$k_EMsgUCMPublishedFileContentUpdated
 )\n$k_EMsgUCMUpdatePublishedFileResponse
@@ -1260,6 +1260,10 @@ $ffn
 ***** OUT OF MEMORY! attempted allocation size: %zu ****\n
 **qXU
 *0fT
+*10CUtlMemoryIN10CUtlRBTreeIN12_GLOBAL__N_121CLocalizedStringTable11fastvalue_tEiPFbRKS3_S5_E25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+*10CUtlMemoryIN10CUtlRBTreeIN12_GLOBAL__N_121CLocalizedStringTable17localizedstring_tEiPFbRKS3_S5_E25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+*10CUtlRBTreeIN12_GLOBAL__N_121CLocalizedStringTable11fastvalue_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E
+*10CUtlRBTreeIN12_GLOBAL__N_121CLocalizedStringTable17localizedstring_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E
 *23CInternalLambdaWorkItemIZ31YieldingResolveHostNameWithPortPKcbEUlvE0_vE
 *23CInternalLambdaWorkItemIZ31YldThreadedRunFunctorAndReleasePKcP8CFunctorP15CWorkThreadPoolEUlvE_vE
 *23CInternalLambdaWorkItemIZN4CNet24YieldingIPAddrToHostNameE10CIPAddressPcjEUlvE_vE
@@ -1267,6 +1271,7 @@ $ffn
 *5KS
 *:JZjz
 *DQW%
+*N12_GLOBAL__N_121CLocalizedStringTableE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
 *N12_GLOBAL__N_127CDummySSLConnectionCallbackE
@@ -1901,8 +1906,12 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
+00003333
+0123456789.
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -1950,11 +1959,7 @@ $ffn
 100 127.0.0.1 stale
 1000
 1024
-00003333
 10000
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -1971,8 +1976,6 @@ $ffn
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexIiEiN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoES_IS5_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
@@ -2096,8 +2099,6 @@ $ffn
 10CUtlRBTreeI16CStringPoolIndexIiEiN19CBaseUtlSymbolTableI14CMetricsSymbolE5CLessE25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES1_E
 10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
-10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
-10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS4_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
@@ -2349,6 +2350,8 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:29:34
+18:29:42
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -2436,7 +2439,6 @@ $ffn
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
-21CLocalizedStringTable
 21CLogFileAsyncCallback
 21CMetricsReporterChain
 21CMsgKubeRPCPacket_Hdr
@@ -2451,8 +2453,6 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:09:32
-23:09:40
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2572,7 +2572,6 @@ $ffn
 3DES(168)
 3HLhx
 3Wk1^
-3YD&
 3YH_!
 3\n.k_EMsgAMGetClanDetailsForForumCreationResponse
 3\n.k_EMsgDRMWorkerProcessBackfillOriginalResponse
@@ -5071,7 +5070,7 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec 19 2025
+Dec 24 2025
 December
 Decipher Only
 Deckard
@@ -6159,7 +6158,6 @@ HKEY_CLASSES_ROOT (force 64Bit)
 HKEY_CURRENT_USER
 HKEY_CURRENT_USER (force 32Bit)
 HKEY_CURRENT_USER (force 64Bit)
-HKEY_CURRENT_USER\Software\Valve\Steam\Language
 HKEY_LOCAL_MACHINE
 HKEY_LOCAL_MACHINE (force 32Bit)
 HKEY_LOCAL_MACHINE (force 64Bit)
@@ -8898,7 +8896,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Dec 19 2025 23:09:40
+Startup - updater built Dec 24 2025 18:29:42
 State
 StaticFileWriterThread()
 Steam
@@ -13199,7 +13197,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen\n
+ggen\n\n
 givenName
 glBegin
 glBindTexture
@@ -15327,6 +15325,7 @@ k_EMsgPSIsValidShoppingCart
 k_EMsgPhysicalBoxInventory
 k_EMsgPingResponse
 k_EMsgPrepareToExit
+k_EMsgProductInfoCacheStatus
 k_EMsgProtobufWrapped
 k_EMsgQuestServerBase
 k_EMsgQueuedEmailsComplete

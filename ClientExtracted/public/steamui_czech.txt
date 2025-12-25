@@ -316,7 +316,7 @@ Tato operace zabere jenom okamžik."
 "CloudFiles_RemoveFile_Button"			"Odstranit"
 
 
-"SteamUI_NotifyTrayHintDialog_DontShow"	"Tuto zprávu již nezobrazovat"
+"SteamUI_NotifyTrayHintDialog_DontShow"	"Tuto zprávu znovu nezobrazovat"
 "SteamUI_NotifyTrayHintDialog_Close"	"Zavřít"
 
 "SteamUI_SpecialOffersDialog_Close"	"Zavřít"

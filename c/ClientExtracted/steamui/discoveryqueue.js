@@ -256,6 +256,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("AppRelevance").Debug;
       function _(_) {
@@ -508,7 +509,7 @@
                     _.createElement(_, {
                       header: (0, _._)(
                         "#DiscoveryQueue_TopSellers",
-                        (_ + 1).toLocaleString(),
+                        (0, _._)(_ + 1),
                         _.createElement("span", {
                           className: _().RelevantTextBold,
                         }),
@@ -2308,7 +2309,7 @@
                   {
                     className: _().GridNumber,
                   },
-                  _.toLocaleString(),
+                  (0, _._)(_),
                 ),
                 _.createElement(
                   "div",
@@ -2335,7 +2336,7 @@
                   {
                     className: _().GridNumber,
                   },
-                  _.toLocaleString(),
+                  (0, _._)(_),
                 ),
                 _.createElement(
                   _._,
@@ -2363,7 +2364,7 @@
                   {
                     className: _().GridNumber,
                   },
-                  _.toLocaleString(),
+                  (0, _._)(_),
                 ),
                 _.createElement(
                   _._,
@@ -2523,7 +2524,7 @@
               },
               (0, _._)(
                 "#DiscoveryQueue_SaleStatus_Title" + (_ ? "" : "_Complete"),
-                _.toLocaleString(),
+                (0, _._)(_),
                 _.GetName(),
               ),
             ),
@@ -2535,7 +2536,7 @@
                 },
                 (0, _._)(
                   "#DiscoveryQueue_SaleStatus_Desc",
-                  _.toLocaleString(),
+                  (0, _._)(_),
                   _.GetName(),
                 ),
               ),

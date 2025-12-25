@@ -4911,7 +4911,7 @@
         }
       };
       function Pt(e) {
-        return null == e ? "" : e.toLocaleString();
+        return null == e ? "" : e.toLocaleString([]);
       }
       It = (0, i.Cg)([o.PA], It);
       class Rt extends a.Component {
@@ -5176,7 +5176,7 @@
                   return null == e
                     ? ""
                     : e < 1e3
-                      ? e.toLocaleString()
+                      ? e.toLocaleString([])
                       : e < 1e6
                         ? (e / 1e3).toFixed(1).toLocaleString() + " KB"
                         : e < 1e9

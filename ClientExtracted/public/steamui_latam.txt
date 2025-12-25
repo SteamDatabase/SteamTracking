@@ -3016,7 +3016,7 @@ Crea uno enviando un regalo por email a alguien que conozcas."
 "Steam_ClientUpdateSuppressed"						"Las actualizaciones del cliente de Steam han sido desactivadas por un modificador de la línea de comandos o un archivo de configuración. Elimina el bloqueo, reinicia el cliente e inténtalo de nuevo."
 
 "steam_menu_updatevendorgraphicscard"			"Actualizar el controlador de video de %graphics_vendor%..."
-"steam_menu_checkforvideodriverupdates"			"Comprobar si existen actualizaciones del controlador de video..."
+"steam_menu_checkforvideodriverupdates"			"Revisar si existen actualizaciones  del controlador de video..."
 "Steam_CheckForVideoDriverUpdates_Title"		"Steam - Actualizaciones del controlador de video"
 "Steam_NoVideoDriverUpdateAvailable"			"Los controladores de tu tarjeta de video ya están al día."
 "Steam_VideoDriverAvailableDownloading"			"Se está descargando una nueva actualización disponible del controlador de video."
@@ -3106,7 +3106,7 @@ Crea uno enviando un regalo por email a alguien que conozcas."
 "Steam_P2P_StateIncomplete"		"Incompleto"
 
 "Steam_P2P_TorrentState_Unknown"	"No disponible"
-"Steam_P2P_TorrentState_Checking"	"Comprobando..."
+"Steam_P2P_TorrentState_Checking"	"Revisando..."
 "Steam_P2P_TorrentState_Waiting"	"Esperando..."
 "Steam_P2P_TorrentState_Ready"		"Lista."
 

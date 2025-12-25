@@ -8,6 +8,7 @@
  throw
  transaction_safe
  volatile
+$ORIGIN
 %s: __pos (which is %zu) > this->size() (which is %zu)
 (anonymous namespace)
 *N12_GLOBAL__N_121system_error_categoryE

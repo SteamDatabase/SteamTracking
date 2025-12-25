@@ -11,6 +11,7 @@ enum EValveIndexComponent {
 	k_EValveIndexComponentSteamFrameHMD = 4;
 	k_EValveIndexComponentSteamFrameLeftController = 5;
 	k_EValveIndexComponentSteamFrameRightController = 6;
+	k_EValveIndexComponentSteamFrameWirelessAdapter = 7;
 }
 
 message CAccountHardware_RegisterSteamController_Request {

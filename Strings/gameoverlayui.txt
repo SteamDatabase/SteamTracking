@@ -458,9 +458,11 @@ $\nY8O
 %s.%u.tmp
 %s.async%u.tmp
 %s.current.txt
+%s.old
 %s/.local/share/applications
 %s/.steam/%s
 %s/.steam/steam
+%s/Steam/registry.vdf
 %s/config
 %s/skins/%s
 %s/steamXXXXXX
@@ -688,6 +690,7 @@ $\nY8O
 *\n&k_ESystemDisplayCompatibilityMode_None
 *\n&k_PublishedFileQueryType_RankedByTrend
 *pchMsg && *pchMsg == '%'
+*pcubDecodedData
 *|\n\fECPUGovernor
 +\n'k_EBrowserFeatureStatus_EnabledReadback
 +\n'k_EBrowserGPUStatus_DisabledCommandLine
@@ -876,6 +879,7 @@ $\nY8O
 .steam_exec_test.sh
 .webm
 .y4w
+/Steam3PosixRegistryManager
 /ValveIPCSHM_%d
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
 /\n+k_ECommentThreadTypePublishedFile_Developer
@@ -891,6 +895,7 @@ $\nY8O
 /\n+k_PublishedFileQueryType_RankedByTextSearch
 /bin/lsof
 /data/src/common/../common/clientdirectories.h
+/data/src/common/crypto_textencode.cpp
 /data/src/common/enum_names.cpp
 /data/src/common/filesystem_helpers.cpp
 /data/src/common/friendsuihelpers.cpp
@@ -900,6 +905,7 @@ $\nY8O
 /data/src/common/logger.cpp
 /data/src/common/messageobjects.cpp
 /data/src/common/platformhelpers.cpp
+/data/src/common/registry.cpp
 /data/src/common/steam/client_api.cpp
 /data/src/common/steamid.cpp
 /data/src/common/steamui/urlmanager.cpp
@@ -1023,6 +1029,7 @@ $\nY8O
 /usr/sbin/lsof
 /usr/share/applications/steam.desktop
 /usr/share/applications/steambeta.desktop
+/var/lib/dbus/machine-id
 /var/run/reboot-required
 0 != m_rgchPrefixFileName[0]
 0 == m_ThreadLocalSpewReentrancyGuardInstance.Get()
@@ -1425,6 +1432,7 @@ $\nY8O
 17CStreamReaderBase
 17DirectoryTreeView
 17LayoutDebugDialog
+18:29:53
 18CGPUStatsReaderDrm
 18CJSCallbackPromise
 18CMsgBlockedRequest
@@ -1516,7 +1524,6 @@ $\nY8O
 22CMsgSetPIDShuttingDown
 22CMsgSetTargetFrameRate
 22SerializedOverlayPumps
-23:09:56
 23CActivationCodeItemInfo
 23CMsgBrowserErrorStrings
 23CMsgBrowserFocusChanged
@@ -1895,6 +1902,7 @@ Away
 Azerbaijani
 BBVA Continental
 BCreateDirectory
+BEGIN
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
 BIPFamiliesOverlap - unknown eServerFamilies value %d
@@ -2014,6 +2022,14 @@ CBasePanel::ShellExecuteHook
 CBitmapImagePanel
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!\n
 CCookie
+CCrypto::Base64Decode
+CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
+CCrypto::Base64Encode
+CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required, plus linebreaks)
+CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d\n
+CCrypto::HexDecode
+CCrypto::HexDecode: insufficient output buffer (input length %u, output size %u)
+CCrypto::HexEncode
 CD Key
 CDNAuth
 CEmbeddedHTML
@@ -2727,6 +2743,7 @@ Corrupt update files
 Corrupted or unrecoverable data error
 Could not create an instance of
 Could not find type "
+Could not read existing registry file.
 Couldn't find script file %s\n
 Couldn't format time value %llu
 Couldn't parse default value "
@@ -2805,7 +2822,7 @@ Data Exploit
 Deaccel
 Debit Card (Nodwin)
 Debug
-Dec 19 2025
+Dec 24 2025
 December
 Deckard
 Default
@@ -3245,6 +3262,7 @@ Failed creating/finding serialized work event: %d\n
 Failed creating/finding vgui paint event: %d\n
 Failed during internal/external buffer swapping\n
 Failed finding game exiting event %s\n
+Failed loading registry KV.
 Failed putting data into external buffer during swapping\n
 Failed system(%s) in execute test: %d %s\n
 Failed system(%s) in execute test: %d\n
@@ -3571,16 +3589,22 @@ H$6t
 H*0"ZOW
 HEAD
 HFont
+HKCR
+HKCU
 HKEY_CLASSES_ROOT
 HKEY_CLASSES_ROOT (force 32Bit)
 HKEY_CLASSES_ROOT (force 64Bit)
 HKEY_CURRENT_USER
 HKEY_CURRENT_USER (force 32Bit)
 HKEY_CURRENT_USER (force 64Bit)
-HKEY_CURRENT_USER\Software\Valve\Steam\SkinV5
 HKEY_LOCAL_MACHINE
 HKEY_LOCAL_MACHINE (force 32Bit)
 HKEY_LOCAL_MACHINE (force 64Bit)
+HKEY_LOCAL_MACHINE_WOW64_32
+HKEY_LOCAL_MACHINE_WOW64_64
+HKLM
+HKLM32
+HKLM64
 HOME
 HTML
 HTML.SearchAnimationTime
@@ -3671,6 +3695,7 @@ ImeCancelComposition
 ImeCommitString
 ImeCompositionString
 Imperial_Aramaic
+Implement me
 Import
 Import "
 In dispute
@@ -4611,6 +4636,8 @@ NULL
 NULL != pchFileName
 NULL != pchPrefixPassed
 NULL == m_pFile
+NULL output buffer with non-zero size passed to Base64Decode
+NULL output buffer with non-zero size passed to Base64Encode
 NVIDIA
 Name
 NameEntry
@@ -4736,6 +4763,7 @@ Old_Italic
 Old_Persian
 Old_South_Arabian
 Old_Turkic
+On-disk registry has changed and is marked dirty - we're about to lose data.
 OnAppShutdown
 OnCloseWindow
 OnCursorMoved
@@ -4796,6 +4824,7 @@ OverlayHidden
 OverlayShown
 OverlayWebFrame
 OverlayWebPopup
+Overwriting on-disk registry with newly created registry.
 Owner
 OwnerID
 PATCH
@@ -5080,6 +5109,7 @@ Region Locked
 Region Restriction Expired
 Region not supported
 Region restricted
+Registry
 Rejang
 Relay Failed
 Release State Override
@@ -5177,6 +5207,9 @@ Santander Rio
 Saturday
 Saurashtra
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
+SaveRegistryVDF FAILED\n
+SaveRegistryVDF completed successfully\n
+SaveRegistryVDF\n
 Sberbank
 ScheduledEvent
 ScheduledSendOnDate
@@ -5317,6 +5350,7 @@ Site License locked
 SiteLicense
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Size() == operand.Size()
+SkinV5
 Skipping js method registration, already exists: %s
 Sleep for overlay FPS limiting
 Slider
@@ -5330,6 +5364,7 @@ SnapRange
 Snooze
 Sofort
 Software
+Software\Valve\Steam
 Solo
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
 Sora_Sompeng
@@ -5463,6 +5498,8 @@ SteamThreadTools::CThread::Yield()
 SteamThreadTools::CThread::~CThread()
 SteamThreadTools::CThreadEvent::CThreadEvent(bool)
 SteamThreadTools::CThreadEvent::Set()
+SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
+SteamThreadTools::CThreadFullMutex::Release()
 SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
 SteamThreadTools::CThreadLocalBase::Get() const
 SteamThreadTools::CThreadLocalBase::Set(void*)
@@ -5849,6 +5886,7 @@ VTC Pay Wallet
 VTT for
 V_AppendSlash
 V_ComposeFileName
+V_CopyAndFixSlashes
 V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
 V_ExtractFileExtension
 V_ExtractFilePath
@@ -6675,6 +6713,8 @@ cbToRead <= 1024 * 1024 * 1024
 cc_enable_arenas
 cc_generic_services
 cchCharBlock <= m_TextStream.Count()
+cchEncodedData > 0
+cchEncodedData >= ( cubData * 2 ) + 1
 cdkeyrestrictions
 cdninfo
 cellcolor
@@ -6837,6 +6877,7 @@ csharp_namespace
 ctrl
 ctype
 cubBytesToRead < INT32_MAX
+cubData
 cubData < FIO_MAX_IO_BYTES
 cubData < INT32_MAX
 curFilter[0] == '*' && curFilter[1] == '.'
@@ -6995,6 +7036,7 @@ external
 f.N%H
 faccessat
 facebook.com
+failed to base64 encode value
 failed to get memory
 fallocate64
 false
@@ -8361,6 +8403,7 @@ pCRF
 pChild
 pConv && pConv->GetDelimiterLength() > 0
 pData
+pDecodedData
 pDefaultValue
 pEndingDelim && pEndingDelim[0]
 pFile->m_hFileDest != INVALID_OSFILEHANDLE
@@ -8408,6 +8451,8 @@ pcgamer.com
 pcgames.gwn.com
 pchBaseFileName
 pchBuffer
+pchData
+pchEncodedData
 pchMsg
 pchSteam2ID
 pch[cub - 1] != '\0' && pch[cub] == '\0'
@@ -8486,6 +8531,7 @@ pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
 pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
 pcrecpp::RE::no_arg
 pcrecpp::RE::~RE()
+pcubDecodedData
 peering
 perfectworld
 period
@@ -8545,6 +8591,7 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pstrValue
 pszArg0 && *pszArg0
 pt-BR
 pt-br
@@ -8556,6 +8603,7 @@ pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
 pthread_self
+pubValue || !*pcubValue
 public
 public/steamui_%language%.txt
 public_dependency
@@ -8608,6 +8656,7 @@ referrer
 regions
 registered:
 registry
+registry.vdf
 regular expression is too large
 reinterpret_cast
 reject
@@ -8971,6 +9020,7 @@ support for \P, \p, and \X has not been compiled
 support locked group
 support unlocked group
 surface()->GetOverlayInterface()
+svRegPath
 sv_SE
 svcm
 swahili
@@ -9349,3 +9399,4 @@ zulu
 {parm#
 {unnamed type#
 {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
+~/.steam/machine-id

@@ -111,6 +111,8 @@ enum EMsg {
 	k_EMsgAISUpdateSubordinateContentDescription = 431;
 	k_EMsgAISUpdateSubordinateContentDescriptionResponse = 432;
 	k_EMsgAISBroadcastSubordinateContentDescription = 434;
+	k_EMsgProductInfoChangedNotification = 435;
+	k_EMsgProductInfoCacheStatus = 436;
 	k_EMsgBaseAM = 500;
 	k_EMsgAMUpdateUserBanRequest = 504;
 	k_EMsgAMAddLicense = 505;

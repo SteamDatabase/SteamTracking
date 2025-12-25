@@ -3779,7 +3779,7 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_details_addedtoaccount"	"계정에 추가됨"
 "steam_details_totalplaytime_minutes" "%minutes%분"
 "steam_details_totalplaytime_hours" "%hours%시간"
-"steam_details_totalplaytimeheader" "총플레이 시간:"
+"steam_details_totalplaytimeheader" "전체 플레이 시간:"
 "steam_details_totallaunchtimeheader" "사용한 시간:"
 "steam_details_sharedbyheader" "공유한 사람:"
 "steam_details_sharedinuseheader" "라이브러리를 사용 중인 사람:"

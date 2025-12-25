@@ -281,6 +281,7 @@
 !! Controller %u attributes%s:\n  Type: %u\n  ProductID: %u\n  Serial: %s\n  Capabilities: %016llx\n  Firmware Version: %u\n
 !!!Invalid
 !"Chrome interface missing"
+!"Couldn't initialize software encoder"
 !"Don't poll on UDP sockets dude"
 !"Emptying callback queue because client didn't process them in a timely manner"
 !"Fatal Error: Could not get IFileSystem interface from 'bin/FileSystem_Steam.dll"
@@ -531,6 +532,7 @@
 " which is.
 "!"%"+"1"9"K"O"c"g"s"u"
 ""\n CChatRoom_AddRoleToUser_Response"K\n!CChatRoom_GetRolesForUser_Request
+""\n CChatRoom_ResolveReport_Response"W\n*CClanChatRooms_GetClanChatRoomInfo_Request
 ""\n CCloud_AppSessionResume_Response"
 ""\n CCloud_ClientDeleteFile_Response"X\n,CCloud_ClientConflictResolution_Notification
 ""\n CPublishedFile_AddChild_Response"\\n"CPublishedFile_RemoveChild_Request
@@ -2289,7 +2291,13 @@ ${LANGUAGE}
 %sWatchdogThread
 %sYesterday
 %s\%s\liblist.gam
+%s\Apps\%i\IgnoreInstallError
 %s\Disk_1\sku.sis
+%s\Rate
+%s\ShowScreenshotManager
+%s\SurveyDateBeta
+%s\SurveyDateSteamDeckDelay
+%s\SurveyID
 %s\appcache
 %s\config\config.vdf
 %s\controller_config\game_actions_%u.vdf
@@ -3104,7 +3112,6 @@ ${LANGUAGE}
 (\n\rparty_beacons
 (\n\rreceiver_role
 (\n\vnotice_type
-(\r""\n CChatRoom_ResolveReport_Response"W\n*CClanChatRooms_GetClanChatRoomInfo_Request
 (\r"#\n!CBluetoothManager_Forget_Response"3\n!CBluetoothManager_Connect_Request
 (\r"#\n!CPlayer_SetFavoriteBadge_Response"
 (\r"#\n\tCMsgPaste
@@ -3963,6 +3970,7 @@ ${LANGUAGE}
 )\n$k_EMsgGCGetAccountDetails_DEPRECATED
 )\n$k_EMsgGCHAccountTradeBanStatusChange
 )\n$k_EMsgGMShellAndServerAddressUpdates
+)\n$k_EMsgProductInfoChangedNotification
 )\n$k_EMsgRemoteClientPairWifiAPResponse
 )\n$k_EMsgUCMPublishedFileContentUpdated
 )\n$k_EMsgUCMUpdatePublishedFileResponse
@@ -6763,10 +6771,10 @@ ${LANGUAGE}
 /data/src/steamUI/gamerecording/gamerecordingtimeline.cpp
 /data/src/steamUI/gamerecording/gamerecordingutils.cpp
 /data/src/steamUI/gamerecordingcontroller.cpp
-/data/src/steamUI/gamerecordingcontroller.cpp:5027
-/data/src/steamUI/gamerecordingcontroller.cpp:5127
-/data/src/steamUI/gamerecordingcontroller.cpp:6438
-/data/src/steamUI/gamerecordingcontroller.cpp:6513
+/data/src/steamUI/gamerecordingcontroller.cpp:5028
+/data/src/steamUI/gamerecordingcontroller.cpp:5128
+/data/src/steamUI/gamerecordingcontroller.cpp:6439
+/data/src/steamUI/gamerecordingcontroller.cpp:6514
 /data/src/steamUI/gamescopecontroller_linux.cpp
 /data/src/steamUI/gamestream/../../common/callbacklist.h
 /data/src/steamUI/gamestream/audiorecorder.cpp
@@ -6807,9 +6815,9 @@ ${LANGUAGE}
 /data/src/steamUI/serverbrowsercontroller.cpp
 /data/src/steamUI/settinghandler.cpp
 /data/src/steamUI/settingscontroller.cpp
-/data/src/steamUI/settingscontroller.cpp:1517
-/data/src/steamUI/settingscontroller.cpp:1538
-/data/src/steamUI/settingscontroller.cpp:2554
+/data/src/steamUI/settingscontroller.cpp:1531
+/data/src/steamUI/settingscontroller.cpp:1552
+/data/src/steamUI/settingscontroller.cpp:2595
 /data/src/steamUI/settingscontroller.h
 /data/src/steamUI/settingsprofilemanager.cpp
 /data/src/steamUI/sharedconnectioncontroller.cpp
@@ -6842,7 +6850,7 @@ ${LANGUAGE}
 /data/src/steamUI/systemdevkitcontroller.cpp:75
 /data/src/steamUI/systemreportcontroller.cpp:138
 /data/src/steamUI/systemstoragecontroller.cpp
-/data/src/steamUI/systemstoragecontroller.cpp:1437
+/data/src/steamUI/systemstoragecontroller.cpp:1444
 /data/src/steamUI/threadedpromiseresolver.cpp
 /data/src/steamUI/userlogincontroller.cpp
 /data/src/steamUI/valvecontrollermanager.cpp
@@ -7117,13 +7125,10 @@ ${LANGUAGE}
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
 0000
 0000000000000000000000000000000000000000
-1000
-1024
 000000001532
 00003333
 00:00:00
 01/01/00
-10000
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -7283,6 +7288,9 @@ ${LANGUAGE}
 10.4.252.0/24
 100 127.0.0.1 stale
 100-continue
+1000
+1024
+10000
 107F-BB20-FB5A-1CE4
 10BlankImage
 10CHintLabel
@@ -10174,7 +10182,6 @@ ${LANGUAGE}
 2:.CBroadcast_BroadcastViewerState_Notification.EViewerState"T\n\fEViewerState
 2>/dev/null
 2CZu
-2EW1
 2GJH
 2Hax
 2Ht\l
@@ -10638,6 +10645,7 @@ ${LANGUAGE}
 34CGameRecording_ExportClip_Settings
 34CGameRecording_QueryPhases_Request
 34CGameServers_QueryByFakeIP_Request
+34CGameStreamVideoStageUpdateBitRate
 34CInventory_ConsumePlaytime_Request
 34CInventory_GetItemDefMeta_Response
 34CLEDManager_SetBrightness_Response
@@ -11142,6 +11150,7 @@ ${LANGUAGE}
 3\n/k_EStoreDiscoveryQueueTypeRecommendedComingSoon
 3\n/k_EStreamControllerConfigMsg_ActiveConfigChange
 3\n/k_EValveIndexComponentSteamFrameRightController
+3\n/k_EValveIndexComponentSteamFrameWirelessAdapter
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
 3\n\ninterfaces
 3\n\rlogin_history
@@ -12828,6 +12837,7 @@ ${LANGUAGE}
 :eaI
 :metho
 :method
+:mzi
 :oc\ve
 :pat
 :path
@@ -13056,7 +13066,6 @@ ${LANGUAGE}
 ?24CGameStreamVideoStageAMF
 ?25CGameStreamVideoStageX264
 ?27CStreamingServerGameActions
-?34CGameStreamVideoStageUpdateBitRate
 ?4)"K@]Vglqz
 ?456789:;<=
 ???\f???????\n???\r?\t?\v
@@ -13809,6 +13818,7 @@ Already Redeemed
 Already connected
 Already have converter for type %s, ignoring...\n
 Already saw decimal point or exponent; can't have another one.
+AlreadyRetriedOfflineMode
 AlsCalibrationGain
 Always Blocked
 Always attempt to start in offline mode
@@ -14138,6 +14148,7 @@ Auto Moderation
 Auto-Registering controller: %s, %s\n
 Auto-detected proxy settings: auto-detect(%s), proxy(%s), proxy-https(%s), exclude:\n
 AutoDeny
+AutoLoginUser
 AutoResize
 Autoclear
 Automatically logs in user
@@ -14195,7 +14206,6 @@ BASIC_CONSTRAINTS
 BBVA Continental
 BC (default)
 BCallerDeadlineTriggered()
-BCodecSupported( k_EStreamVideoCodecH264 )
 BConnectToPipe - couldn't set TCP_NODELAY
 BConvertYUVtoRGB
 BCreateDirectory
@@ -15236,6 +15246,7 @@ CDisconnectDeviceJob
 CDiscoveryPingRequest
 CDiscoveryPingResponse
 CDisplayMarketingMessage
+CEFGPUBlocklistDisabled
 CERTIFICATE
 CERTIFICATE REQUEST
 CERTIFICATEPOLICIES
@@ -18365,6 +18376,7 @@ DOCUMENTS
 DONT_BREAK_ON_ASSERT
 DOWNGRD
 DOWNLOAD
+DPIScaling
 DRCHV
 DSA PARAMETERS
 DSA PRIVATE KEY
@@ -18454,7 +18466,7 @@ Deaccel
 Debit Card (Nodwin)
 Debug
 DebugStatsSystem
-Dec 19 2025 23:10:01
+Dec 24 2025 18:29:54
 December
 Decipher Only
 Deckard
@@ -20162,6 +20174,7 @@ Force a Specific AppID for Steam Controller Config - Prevents context/app switch
 Force canceled while pending
 Force the use of the system browser composer
 ForceAcceptInvite
+ForceOOBE
 ForceOOBEStage2
 ForceQuit
 ForceUpdate
@@ -20244,6 +20257,7 @@ FriendsFilter
 FriendsGameplayInfo
 FriendsGames
 FriendsUIInterfaceV001
+FriendsUI\FriendsUIJSON
 Full
 FullPathEdit
 Fullscreen
@@ -21714,29 +21728,9 @@ HKEY_CLASSES_ROOT (force 64Bit)
 HKEY_CURRENT_USER
 HKEY_CURRENT_USER (force 32Bit)
 HKEY_CURRENT_USER (force 64Bit)
-HKEY_CURRENT_USER\Software\Valve\Half-Life\Settings\User Token 2
-HKEY_CURRENT_USER\Software\Valve\Source\Settings\User Token 2
-HKEY_CURRENT_USER\Software\Valve\Steam\%s\%s\Language
-HKEY_CURRENT_USER\Software\Valve\Steam\%s\Language
-HKEY_CURRENT_USER\Software\Valve\Steam\AlreadyRetriedOfflineMode
-HKEY_CURRENT_USER\Software\Valve\Steam\AutoLoginUser
-HKEY_CURRENT_USER\Software\Valve\Steam\CEFGPUBlocklistDisabled
-HKEY_CURRENT_USER\Software\Valve\Steam\CompletedOOBE
-HKEY_CURRENT_USER\Software\Valve\Steam\DPIScaling
-HKEY_CURRENT_USER\Software\Valve\Steam\ForceOOBE
-HKEY_CURRENT_USER\Software\Valve\Steam\GPUAccelWebViewsV3
-HKEY_CURRENT_USER\Software\Valve\Steam\H264HWAccel
-HKEY_CURRENT_USER\Software\Valve\Steam\Language
-HKEY_CURRENT_USER\Software\Valve\Steam\ModInstallPath
-HKEY_CURRENT_USER\Software\Valve\Steam\SmoothScrollWebViews
-HKEY_CURRENT_USER\Software\Valve\Steam\SourceModInstallPath
-HKEY_CURRENT_USER\Software\Valve\Steam\SuppressAutoRun
-HKEY_CURRENT_USER\Software\Valve\Steam\TempAppCmdLine
-HKEY_CURRENT_USER\Software\Valve\Steam\TempAppPath
 HKEY_LOCAL_MACHINE
 HKEY_LOCAL_MACHINE (force 32Bit)
 HKEY_LOCAL_MACHINE (force 64Bit)
-HKEY_LOCAL_MACHINE\Software\Valve\Steam\Language
 HKEY_LOCAL_MACHINE_WOW64_32
 HKEY_LOCAL_MACHINE_WOW64_64
 HKLM
@@ -23223,8 +23217,8 @@ LEDManager.SetSpeed#1
 LEDManager/%x/%d/%s
 LEDManager/%x/%s
 LEGACY_GOST_PKCS12
-LIBAVCODEC_61
-LIBAVUTIL_59
+LIBAVCODEC_62
+LIBAVUTIL_60
 LIBDBUSMENU-GLIB
 LIMIT_MATCH=
 LIMIT_RECURSION=
@@ -24543,6 +24537,7 @@ Missing update files
 MkL\f
 Mobile (Degica)
 Mobile Wallet (Japan)
+ModInstallPath
 Modalias
 Mode
 Model
@@ -28921,6 +28916,7 @@ SmartSupported
 SmartTemperature
 SmartUpdate
 SmartUpdated
+SmoothScrollWebViews
 Smoothing not supported with nonstandard sampling ratios
 SnapRange
 Snooze
@@ -28935,14 +28931,12 @@ Sofort
 Software
 Software/Valve/Steam
 SoftwareEncodingThreadCount
+Software\Valve\Half-Life\Settings
+Software\Valve\Source\Settings
 Software\Valve\Steam
-Software\Valve\Steam\Apps\%d\betadesc_%s
-Software\Valve\Steam\Apps\%d\betahash_%s
-Software\Valve\Steam\Apps\%i\IgnoreInstallError
 Software\Valve\Steam\Apps\%u
 Software\Valve\Steam\Apps\%u_%u
 Software\Valve\Steam\DesktopShortcutCheck
-Software\Valve\Steam\FriendsUI\FriendsUIJSON
 Software\Valve\Steam\MaxServerBrowserPingsPerMin
 Software\Valve\Steam\NexonPrivacyPolicyVersion
 Software\Valve\Steam\NexonSSAVersion
@@ -28952,17 +28946,9 @@ Software\Valve\Steam\PrivacyPolicyVersion
 Software\Valve\Steam\Rate
 Software\Valve\Steam\SSAVersion
 Software\Valve\Steam\Shortcuts\%u
-Software\Valve\Steam\ShowScreenshotManager
 Software\Valve\Steam\SmallMode
 Software\Valve\Steam\StartMenuShortcutCheck
 Software\Valve\Steam\SteamDefaultDialog
-Software\Valve\Steam\Storage\NextTrimRunTime
-Software\Valve\Steam\SurveyDate
-Software\Valve\Steam\SurveyDateBeta
-Software\Valve\Steam\SurveyDateSteamDeckDelay
-Software\Valve\Steam\SurveyDateType
-Software\Valve\Steam\SurveyDateVersion
-Software\Valve\Steam\SurveyID
 SolicitUUIDs
 Solo
 Some options could not be correctly parsed using the proto descriptors compiled into this binary.\nUnparsed options:
@@ -28982,6 +28968,7 @@ Source buffer is wrong
 Source stopped sending encoded bitstream
 SourceCodeInfo
 SourceContextProtoP
+SourceModInstallPath
 Space
 Spamming
 Spanish
@@ -29604,6 +29591,7 @@ StorageDeviceManager.IsServiceAvailable#1
 StorageDeviceManager.NotifyStateChanged#1
 StorageDeviceManager.TrimAll#1
 StorageDeviceManager.Unmount#1
+Storage\NextTrimRunTime
 Store
 Store / Billing country code mismatch
 Store / Business country code mismatch
@@ -29703,6 +29691,10 @@ SupportsOculusVR
 SupportsOpenVROverlay
 SupportsOpenVRScene
 SupportsOpenXR
+SuppressAutoRun
+SurveyDate
+SurveyDateType
+SurveyDateVersion
 SurveyResults
 Suspect
 Suspected Hijacker
@@ -30206,6 +30198,8 @@ Telling process %d to change audio capture state: %s%s
 Tells UI to pop a profile dialog for each known thread, must use profile_on/off separately to actually enable/disable data gathering
 Tells vprof to dump the full profile of all threads (using the last profile data if vprof is off)
 Telugu
+TempAppCmdLine
+TempAppPath
 Temporary Redirect
 TenfootGamepadMapping
 TenfootJoystickGUIDID
@@ -30943,6 +30937,7 @@ Use other payment method
 Use the OpenGL render for the UI
 Use the full screen OpenGL render for the UI
 User
+User Token 2
 User already has an existing billing agreement for a package in this transaction
 User cannot complete purchase with provider because the amount is not supported
 User cannot purchase due to owning excluded app
@@ -39303,7 +39298,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenJ
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -45155,6 +45150,7 @@ k_EMsgPSIsValidShoppingCart
 k_EMsgPhysicalBoxInventory
 k_EMsgPingResponse
 k_EMsgPrepareToExit
+k_EMsgProductInfoCacheStatus
 k_EMsgProtobufWrapped
 k_EMsgQuestServerBase
 k_EMsgQueuedEmailsComplete
@@ -45972,8 +45968,8 @@ libamfrt32.so.1
 libappindicator.so.1
 libasound.so.2
 libaudio.so
-libavcodec.so.61
-libavutil.so.59
+libavcodec.so.62
+libavutil.so.60
 libc.so.6
 libcuda.so.1
 libdl.so.2

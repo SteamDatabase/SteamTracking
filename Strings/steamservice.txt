@@ -1161,6 +1161,7 @@ $ffn
 )\n$k_EMsgGCGetAccountDetails_DEPRECATED
 )\n$k_EMsgGCHAccountTradeBanStatusChange
 )\n$k_EMsgGMShellAndServerAddressUpdates
+)\n$k_EMsgProductInfoChangedNotification
 )\n$k_EMsgRemoteClientPairWifiAPResponse
 )\n$k_EMsgUCMPublishedFileContentUpdated
 )\n$k_EMsgUCMUpdatePublishedFileResponse
@@ -2127,6 +2128,7 @@ $ffn
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:29:34
 18CBaseFrameFunction
 18CFutureSharedStateIbE
 18CHTTPClientRequest
@@ -2231,7 +2233,6 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
-23:09:32
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -2401,6 +2402,8 @@ $ffn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
+65536
+666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
 6ConVar
@@ -2452,8 +2455,6 @@ $ffn
 8/A0
 8000
 8192
-65536
-666666666666666666666666666666666666666666666666
 82\n:XPH
 88n|
 88pH
@@ -4679,7 +4680,7 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec 19 2025
+Dec 24 2025
 December
 Decipher Only
 Deckard
@@ -12222,7 +12223,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenjV
 givenName
 global constructors keyed to
 global destructors keyed to
@@ -14225,6 +14226,7 @@ k_EMsgPSIsValidShoppingCart
 k_EMsgPhysicalBoxInventory
 k_EMsgPingResponse
 k_EMsgPrepareToExit
+k_EMsgProductInfoCacheStatus
 k_EMsgProtobufWrapped
 k_EMsgQuestServerBase
 k_EMsgQueuedEmailsComplete

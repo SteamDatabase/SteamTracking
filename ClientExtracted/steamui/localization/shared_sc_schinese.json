@@ -89,6 +89,7 @@
     "Login_ExitSteam": "退出蒸汽平台",
     "Login_UseAppForQR_Inner": "蒸汽平台手机应用",
     "Login_UseMobileAppForQR_Inline": "通过二维码使用 <1>蒸汽平台手机应用</1>登录",
+    "Login_BetaTesterScanQR_Subtitle": "蒸汽平台手机应用测试人员可以通过扫描二维码登录。",
     "Login_MobileFlow_SignIn_ScanQR": "蒸汽平台手机应用用户可以通过扫描二维码登录。",
     "Login_Help_AccessMobileApp": "请求帮助，我已无法访问我的蒸汽平台手机应用。",
     "Login_EnterBackupCodeDescription": "备用码是您可以为自己的帐户生成的一次性蒸汽平台令牌验证码。",

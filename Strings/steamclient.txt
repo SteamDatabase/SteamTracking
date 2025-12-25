@@ -775,6 +775,7 @@
 " which is.
 "!"%"+"1"9"K"O"c"g"s"u"
 ""\n CChatRoom_AddRoleToUser_Response"K\n!CChatRoom_GetRolesForUser_Request
+""\n CChatRoom_ResolveReport_Response"W\n*CClanChatRooms_GetClanChatRoomInfo_Request
 ""\n CCloud_AppSessionResume_Response"
 ""\n CCloud_ClientDeleteFile_Response"X\n,CCloud_ClientConflictResolution_Notification
 ""\n CPublishedFile_AddChild_Response"\\n"CPublishedFile_RemoveChild_Request
@@ -2689,15 +2690,21 @@ $steammessages_parental_objects.proto"
 %s\%u_depotcache_%u.csd
 %s\%u_preview.manifest.txt
 %s\App\%llu\%d\%d
+%s\Apps\%d
+%s\Apps\%d\betadesc_%s
+%s\Apps\%d\betahash_%s
 %s\Authorized
 %s\DeviceID
 %s\Disk_%u
 %s\Disk_%u\sku.sis
 %s\Expiry
 %s\Global\%d\%d
+%s\NoSavePersonalInfo
 %s\Secret
 %s\appcache\stats\UserGameStatsSchema_%s.bin
 %s\appcache\stats\UserGameStats_%u_%s.bin
+%s\apps\%u\autocloud\lastexit
+%s\apps\%u\autocloud\lastlaunch
 %s\config\%s_stats.vdf
 %s\depot\%u\chunk
 %s\depot\%u\chunk\%s
@@ -2829,6 +2836,7 @@ $steammessages_parental_objects.proto"
 &8Yv
 &C-A3Y;
 &Lj&6lZ6?~A?
+&Lru
 &OzJ
 &\n!k_EClientPersonaStateFlagClanData
 &\n!k_EClientPersonaStateGameDataBlob
@@ -3556,7 +3564,6 @@ $steammessages_parental_objects.proto"
 (\n\rparty_beacons
 (\n\rreceiver_role
 (\n\vnotice_type
-(\r""\n CChatRoom_ResolveReport_Response"W\n*CClanChatRooms_GetClanChatRoomInfo_Request
 (\r"#\n!CBluetoothManager_Forget_Response"3\n!CBluetoothManager_Connect_Request
 (\r"#\n!CPlayer_SetFavoriteBadge_Response"
 (\r"#\n\tCMsgPaste
@@ -4529,6 +4536,7 @@ $steammessages_parental_objects.proto"
 )\n$k_EMsgGCGetAccountDetails_DEPRECATED
 )\n$k_EMsgGCHAccountTradeBanStatusChange
 )\n$k_EMsgGMShellAndServerAddressUpdates
+)\n$k_EMsgProductInfoChangedNotification
 )\n$k_EMsgRemoteClientPairWifiAPResponse
 )\n$k_EMsgUCMPublishedFileContentUpdated
 )\n$k_EMsgUCMUpdatePublishedFileResponse
@@ -4716,6 +4724,15 @@ $steammessages_parental_objects.proto"
 *.valve.org
 *.vdf
 *0fT
+*10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc8CAutoPtrIN12_GLOBAL__N_115CachedSDRConfigEEi22CDefCaselessStringLessE6Node_tEiNS9_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+*10CUtlMemoryIN11CUtlHashMapIj8CAutoPtrIN12_GLOBAL__N_119AppNetworkSummary_tEE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
+*10CUtlMemoryIN11CUtlHashMapIj8CAutoPtrIN12_GLOBAL__N_119AppNetworkSummary_tEE10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
+*10CUtlMemoryIN12_GLOBAL__N_119AppNetworkSummary_t12Connection_tEE
+*10CUtlRBTreeIN7CUtlMapIPKc8CAutoPtrIN12_GLOBAL__N_115CachedSDRConfigEEi22CDefCaselessStringLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+*10CUtlVectorIN11CUtlHashMapIj8CAutoPtrIN12_GLOBAL__N_119AppNetworkSummary_tEE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryISA_EE
+*10CUtlVectorIN12_GLOBAL__N_119AppNetworkSummary_t12Connection_tE10CUtlMemoryIS2_EE
+*11CUtlHashMapIj8CAutoPtrIN12_GLOBAL__N_119AppNetworkSummary_tEE10CDefEqualsIjE11HashFunctorIjEjE
+*18CScheduledFunctionIN12_GLOBAL__N_119AppNetworkSummary_tEE
 *18CWebUIMsgLambdaJobIZN10CUserStatsC4EP9CBaseUserP12CCMInterfaceE28CWebUIAchievementsGetInfoJob29CAchievements_GetInfo_Request30CAchievements_GetInfo_ResponseE
 *18CWebUIMsgLambdaJobIZN12CSteamEngine4InitE12EAccountTypejE35CWebUISteamEngineGetGameIDForPIDJob36CSteamEngine_GetGameIDForPID_Request37CSteamEngine_GetGameIDForPID_ResponseE
 *18CWebUIMsgLambdaJobIZN12CSteamEngine4InitE12EAccountTypejE43CWebUISteamEngineGetTextFilterDictionaryJob44CSteamEngine_GetTextFilterDictionary_Request45CSteamEngine_GetTextFilterDictionary_ResponseE
@@ -4781,6 +4798,10 @@ $steammessages_parental_objects.proto"
 *23CInternalLambdaWorkItemIZN5CUser12SpawnProcessEPKcS2_S2_7CGameIDS2_jj13ELaunchSourcejRjiEUlvE_vE
 *23CInternalLambdaWorkItemIZZN21CNetworkManagerClient23RequestUpdateDeviceDataEjENKUlvE_clEvEUlvE_bE
 *5KS
+*7CUtlMapIPKc8CAutoPtrIN12_GLOBAL__N_115CachedSDRConfigEEi22CDefCaselessStringLessE
+*8CAutoPtrIN12_GLOBAL__N_115CachedSDRConfigEE
+*8CAutoPtrIN12_GLOBAL__N_119AppNetworkSummary_tEE
+*8CUtlDictI8CAutoPtrIN12_GLOBAL__N_115CachedSDRConfigEE22CDefCaselessStringLessiE
 *9CFunctor0IZN18CSiteLicenseClient18RunLCSAuthenticateEvEUlvE_E
 *9CFunctor0IZN18CSiteLicenseClient23OnRemoteClientConnectedEP23RemoteClientConnected_tEUlvE_E
 *9CFunctor0IZN27CClientJobRemoteStorageSync14YldUploadFilesEvEUlvE1_E
@@ -4790,6 +4811,7 @@ $steammessages_parental_objects.proto"
 *BYr
 *DQW%
 *N12_GLOBAL__N_115DefaultListenerE
+*N12_GLOBAL__N_119AppNetworkSummary_tE
 *N12_GLOBAL__N_121system_error_categoryE
 *N12_GLOBAL__N_122generic_error_categoryE
 *N12_GLOBAL__N_127CDummySSLConnectionCallbackE
@@ -4802,16 +4824,12 @@ $steammessages_parental_objects.proto"
 *W\n\fEVideoFormat
 *Z20LocalizeSteamDisplayP10CUtlStringRK8CUtlDictIS_22CDefCaselessStringLessiERK7CUtlMapIS_S_iS2_EEUlPKcE0_
 *Z20LocalizeSteamDisplayP10CUtlStringRK8CUtlDictIS_22CDefCaselessStringLessiERK7CUtlMapIS_S_iS2_EEUlPKcE_
-*ZL10app_statusPvR9ConParamsR10ConCommandEUlvE_
-*ZL10patch_dumpPvR9ConParamsR10ConCommandEUlvE_
-*ZL14app_set_configPvR9ConParamsR10ConCommandEUlvE_
 *ZL14net_fake_statePvR9ConParamsR10ConCommandEUlvE_
 *ZL15app_info_updatePvR9ConParamsR10ConCommandEUlvE_
 *ZL16app_delay_updatePvR9ConParamsR10ConCommandEUlvE_
 *ZL16download_sourcesPvR9ConParamsR10ConCommandEUlvE_
 *ZL18timed_trial_statusPvR9ConParamsR10ConCommandEUlvE_
 *ZL19http_cache_clearallPvR9ConParamsR10ConCommandEUlvE_
-*ZL21set_download_throttlePvR9ConParamsR10ConCommandEUlvE_
 *ZL23remote_client_softapcmdPvR9ConParamsR10ConCommandEUlvE_
 *ZL24dump_scheduled_functionsPvR9ConParamsR10ConCommandEUlvE_
 *ZL24timed_trial_add_playtimePvR9ConParamsR10ConCommandEUlvE_
@@ -4845,6 +4863,10 @@ $steammessages_parental_objects.proto"
 *ZN12CSteamEngine4InitE12EAccountTypejEUlRK54CSteamEngine_SearchAppDataCacheByStoreKeywords_RequestR55CSteamEngine_SearchAppDataCacheByStoreKeywords_ResponseE3_
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN12LinuxHelpers28SendCloseSignalToProcessListERK10CUtlVectorIj10CUtlMemoryIjEEEUlP9_XDisplaymE_
+*ZN12_GLOBAL__N_1L10app_statusEPvR9ConParamsR10ConCommandEUlvE_
+*ZN12_GLOBAL__N_1L10patch_dumpEPvR9ConParamsR10ConCommandEUlvE_
+*ZN12_GLOBAL__N_1L14app_set_configEPvR9ConParamsR10ConCommandEUlvE_
+*ZN12_GLOBAL__N_1L21set_download_throttleEPvR9ConParamsR10ConCommandEUlvE_
 *ZN14CCompatManager16OnPostLogonStateEP16PostLogonState_tEUlvE_
 *ZN14CCompatManager21OnCacheOffJobCompleteEvEUlvE_
 *ZN14CSystemManagerC4EvE31CWebUISystemManagerHibernateJob
@@ -7022,8 +7044,8 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/applicationmanager.cpp
 /data/src/clientdll/applicationmanager.h
 /data/src/clientdll/autocloud.cpp
-/data/src/clientdll/autocloud.cpp:1249
-/data/src/clientdll/autocloud.cpp:1265
+/data/src/clientdll/autocloud.cpp:1273
+/data/src/clientdll/autocloud.cpp:1289
 /data/src/clientdll/baseuser.cpp
 /data/src/clientdll/baseuser.h
 /data/src/clientdll/broadcastupload.cpp
@@ -7047,7 +7069,7 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/clientlinkfilter.cpp
 /data/src/clientdll/clientlinkfilter.h
 /data/src/clientdll/clientnetworkingapi.cpp
-/data/src/clientdll/clientnetworkingapi.cpp:2841
+/data/src/clientdll/clientnetworkingapi.cpp:2848
 /data/src/clientdll/clientparties.cpp
 /data/src/clientdll/clientservicemethodlist.cpp
 /data/src/clientdll/clientsharedconnection.cpp
@@ -7754,11 +7776,6 @@ $steammessages_parental_objects.proto"
 00003333
 00:00:00
 01/01/00
-1000
-1024
-10000
-1000000
-10000000
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -7908,6 +7925,11 @@ $steammessages_parental_objects.proto"
 100 127.0.0.1 stale
 100-continue
 100.64.0.0/10
+1000
+1024
+10000
+1000000
+10000000
 10ByteReader
 10CClientJob
 10CClientUGC
@@ -8101,7 +8123,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc10CUtlStringi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc13CSteamVarianti22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc16JobStatsBucket_ti19CMapStatsBucketLessIS3_EE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc8CAutoPtrI15CachedSDRConfigEi22CDefCaselessStringLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcN16CSteamController11configset_tEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcP11CGameActioni22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcP14CGameActionSeti22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
@@ -8352,8 +8373,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN11CUtlHashMapIj18CCopyableUtlVectorIiS_IiEE10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIj26UserEquippedProfileItems_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIj26UserEquippedProfileItems_t10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
-10CUtlMemoryIN11CUtlHashMapIj8CAutoPtrI19AppNetworkSummary_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
-10CUtlMemoryIN11CUtlHashMapIj8CAutoPtrI19AppNetworkSummary_tE10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIj9CSmartPtrI23CHIDDevicePipeSteamSideE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapIj9CSmartPtrI23CHIDDevicePipeSteamSideE10CDefEqualsIjE11HashFunctorIjEjE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapIjN14CCompatManager19PlatformOverrides_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tEE
@@ -8500,7 +8519,6 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN17IControllerSource10ModeInfo_tEE
 10CUtlMemoryIN18CSiteLicenseClient19WalletFundPayment_tEE
 10CUtlMemoryIN18CUtlSparse2DVectorIsyE14CUtlSparseNodeEE
-10CUtlMemoryIN19AppNetworkSummary_t12Connection_tEE
 10CUtlMemoryIN20CRemoteClientManager14ResendStatus_tEE
 10CUtlMemoryIN20CRemoteClientManager20RemoteClientWaitUI_tEE
 10CUtlMemoryIN20CRemoteClientManager24StreamingSessionRecord_tEE
@@ -8666,7 +8684,6 @@ $steammessages_parental_objects.proto"
 10CUtlRBTreeIN7CUtlMapIPKc10CUtlStringi22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKc13CSteamVarianti22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKc16JobStatsBucket_ti19CMapStatsBucketLessIS2_EE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlRBTreeIN7CUtlMapIPKc8CAutoPtrI15CachedSDRConfigEi22CDefCaselessStringLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcN16CSteamController11configset_tEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcP11CGameActioni22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlRBTreeIN7CUtlMapIPKcP14CGameActionSeti22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
@@ -8941,7 +8958,6 @@ $steammessages_parental_objects.proto"
 10CUtlVectorIN11CUtlHashMapIj18AppMinutesPlayed_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS7_EE
 10CUtlVectorIN11CUtlHashMapIj18CCopyableUtlVectorIi10CUtlMemoryIiEE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tES2_ISA_EE
 10CUtlVectorIN11CUtlHashMapIj26UserEquippedProfileItems_t10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS7_EE
-10CUtlVectorIN11CUtlHashMapIj8CAutoPtrI19AppNetworkSummary_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIj9CSmartPtrI23CHIDDevicePipeSteamSideE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIN11CUtlHashMapIjN14CCompatManager19PlatformOverrides_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlVectorIN11CUtlHashMapIjN16CTokenBucketBaseIjE12ClientData_tE10CDefEqualsIjE11HashFunctorIjEjE12HashBucket_tE10CUtlMemoryIS9_EE
@@ -9009,7 +9025,6 @@ $steammessages_parental_objects.proto"
 10CUtlVectorIN17CWorkItemPipeline7BarrierE10CUtlMemoryIS1_EE
 10CUtlVectorIN17IControllerSource10ModeInfo_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN18CSiteLicenseClient19WalletFundPayment_tE10CUtlMemoryIS1_EE
-10CUtlVectorIN19AppNetworkSummary_t12Connection_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN20CRemoteClientManager14ResendStatus_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN20CRemoteClientManager20RemoteClientWaitUI_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN20CRemoteClientManager24StreamingSessionRecord_tE10CUtlMemoryIS1_EE
@@ -9223,7 +9238,6 @@ $steammessages_parental_objects.proto"
 11CUtlHashMapIj18AppMinutesPlayed_t10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIj18CCopyableUtlVectorIi10CUtlMemoryIiEE10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIj26UserEquippedProfileItems_t10CDefEqualsIjE11HashFunctorIjEjE
-11CUtlHashMapIj8CAutoPtrI19AppNetworkSummary_tE10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIj9CSmartPtrI23CHIDDevicePipeSteamSideE10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjN14CCompatManager19PlatformOverrides_tE10CDefEqualsIjE11HashFunctorIjEjE
 11CUtlHashMapIjN16CTokenBucketBaseIjE12ClientData_tE10CDefEqualsIjE11HashFunctorIjEjE
@@ -10860,7 +10874,6 @@ $steammessages_parental_objects.proto"
 18CScheduledFunctionI17CDepotDownloadMgrE
 18CScheduledFunctionI18COpenSSLConnectionE
 18CScheduledFunctionI18CSiteLicenseClientE
-18CScheduledFunctionI19AppNetworkSummary_tE
 18CScheduledFunctionI19CRemoteClientDongleE
 18CScheduledFunctionI19CRemoteClientSoftAPE
 18CScheduledFunctionI20CBatteryStateManagerE
@@ -10940,7 +10953,6 @@ $steammessages_parental_objects.proto"
 18ValveHWSurvey_Stub
 18VoiceRecord_OpenAL
 19AppLifetimeNotice_t
-19AppNetworkSummary_t
 19AppStartedProcess_t
 19Authentication_Stub
 19AvatarImageLoaded_t
@@ -11235,11 +11247,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-200M
 2019
 2048
 20000
 2000000
+200M
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -13870,6 +13882,7 @@ $steammessages_parental_objects.proto"
 37CPlayer_SetProfileBackground_Response
 37CPlayer_SetProfilePreferences_Request
 37CPublishedFile_GetItemChanges_Request
+37CRegisterSteamFrameWirelessAdapterJob
 37CRemoteClient_GetPairingInfo_Response
 37CRemoteClient_SetPairingInfo_Response
 37CShader_RegisterShader_Request_Shader
@@ -14141,6 +14154,7 @@ $steammessages_parental_objects.proto"
 3\n/k_EStoreDiscoveryQueueTypeRecommendedComingSoon
 3\n/k_EStreamControllerConfigMsg_ActiveConfigChange
 3\n/k_EValveIndexComponentSteamFrameRightController
+3\n/k_EValveIndexComponentSteamFrameWirelessAdapter
 3\n/k_EWindowsUpdateRebootBehavior_NeverNeedsReboot
 3\n\ninterfaces
 3\n\rlogin_history
@@ -15585,7 +15599,6 @@ $steammessages_parental_objects.proto"
 7CUtlMapIPKc10CUtlStringi22CDefCaselessStringLessE
 7CUtlMapIPKc13CSteamVarianti22CDefCaselessStringLessE
 7CUtlMapIPKc16JobStatsBucket_ti19CMapStatsBucketLessIS1_EE
-7CUtlMapIPKc8CAutoPtrI15CachedSDRConfigEi22CDefCaselessStringLessE
 7CUtlMapIPKcN16CSteamController11configset_tEi22CDefCaselessStringLessE
 7CUtlMapIPKcP11CGameActioni22CDefCaselessStringLessE
 7CUtlMapIPKcP14CGameActionSeti22CDefCaselessStringLessE
@@ -15808,12 +15821,10 @@ $steammessages_parental_objects.proto"
 8CAppData
 8CAutoPtrI11CHTTPServerE
 8CAutoPtrI15CWebUITransportE
-8CAutoPtrI15CachedSDRConfigE
 8CAutoPtrI15IMetricsFactoryE
 8CAutoPtrI16CClientInventoryE
 8CAutoPtrI16CSharedMemStreamE
 8CAutoPtrI18CFanServiceManagerE
-8CAutoPtrI19AppNetworkSummary_tE
 8CAutoPtrI19CGlibContextManagerE
 8CAutoPtrI19CMsgSystemDockStateE
 8CAutoPtrI19CMsgSystemPerfStateE
@@ -15841,7 +15852,6 @@ $steammessages_parental_objects.proto"
 8CUDPHost
 8CUtlDictI10CUtlString22CDefCaselessStringLessiE
 8CUtlDictI13CSteamVariant22CDefCaselessStringLessiE
-8CUtlDictI8CAutoPtrI15CachedSDRConfigE22CDefCaselessStringLessiE
 8CUtlDictIN16CSteamController11configset_tE22CDefCaselessStringLessiE
 8CUtlDictIP14CGameActionSet22CDefCaselessStringLessiE
 8CUtlDictIb22CDefCaselessStringLessiE
@@ -15970,6 +15980,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9Hpn]
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17054,6 +17065,7 @@ Allow to download updates to other drives then install folder is on
 Allow webhelper to create BrowserView underlays
 AllowDesktopConfig
 AllowDirectConnectToPeerString
+AllowDownloadsDuringGameplay
 AllowExternalArguments
 AllowNoDHEKEX
 AllowOtherDownloadsWhileRunning
@@ -17374,6 +17386,9 @@ AutoDeny
 AutoRegisterControllerRegistrationToAccount
 AutoSignIntoFriends
 AutoUpdateBehavior
+AutoUpdateWindowEnabled
+AutoUpdateWindowEnd
+AutoUpdateWindowStart
 Autonomous System Numbers
 Avantgarde
 Avatar Image
@@ -20554,7 +20569,6 @@ CRemoteClientBroadcastHandler - status
 CRemoteClientBroadcastHandler::Process
 CRemoteClientDongle::OnRemoteClientUSBTriggerHotplug() valid
 CRemoteClientDongle::OnVRHMDDetected
-CRemoteClientDongle::RetryAllMonitoring()\n
 CRemoteClientJobGetControllerConfig
 CRemoteClientJobHandleClientAuthorizationCancelRequest
 CRemoteClientJobHandleClientAuthorizationConfirmed
@@ -22020,8 +22034,7 @@ ConfigSet - found config set file on-disk: %s
 ConfigSet - found deck config set file on-disk: %s
 ConfigSet Failed to Resolve Path: %s
 ConfigStore (%s) is dirty, and being destroyed, we're discarding data
-Configure: %s (clientid %llu) from monitor
-Configure: %s (clientid %llu) manual
+Configure: %s manual
 ConfigureConnectionLanes
 ConfigureNetworDeviceIPAddresses
 ConfirmEndToEnd
@@ -22030,10 +22043,10 @@ ConfirmJoinFamilyGroup
 Conflict
 Conn[
 Connect
-Connect event: %s (clientid %llu)
+Connect event: %s
 Connect failed
 Connect timed out
-Connect timeout event: %s (clientid %llu)
+Connect timeout event: %s
 Connect() starting connection (%s, %s, %s)
 ConnectByIPAddress
 ConnectChannels
@@ -22989,8 +23002,8 @@ Discarding invalid CMsgSteamNetworkingP2PRendezvous from %s
 Discarding oldest SDR ticket for server %s.  Expiry=%u\n
 Discharging
 Disco
-Disconnect event: %s (clientid %llu)
-Disconnect: Was %s (clientid %llu) %sconnected
+Disconnect event: %s
+Disconnect: Was %s %sconnected
 DisconnectBTDeviceOnMainThread
 DisconnectFromDevice
 DisconnectFromMember
@@ -25452,6 +25465,7 @@ GetAvailableCompatToolsForApp
 GetAvailableDiskSpace
 GetAvailableLanguages
 GetAvailableLaunchOptions
+GetAvailableRemotePlayTogetherGuestID
 GetAvailableSeats
 GetAvailableSeats from %s %s for app (%u): FAILED - EResult (%d) %s (%ums)
 GetAvailableSeats from %s %s for app (%u): SUCCESS - %u seats (%ums)
@@ -26361,6 +26375,7 @@ Glagolitic
 Global Collect unknown error
 Global Moderator
 Global stats not initialized, so we shouldn't be here
+GlobalDefaultAppUpdateBehavior
 Gone
 Google Swiftshader
 Google.Protobuf.Reflection
@@ -29632,10 +29647,6 @@ Mon, 26 Jul 1997 05:00:00 GMT
 Monday
 MoneyBookers
 Mongolian
-Monitor: %s (clientid %llu) added
-Monitor: %s (clientid %llu) failed to connect (attempt %d)
-Monitor: %s (clientid %llu) removed
-Monitor: %s (clientid %llu) successfully connected
 MonitorDiagonalInMillimeters
 MonitorHeightInMillimeters
 MonitorHeightInPixels
@@ -34909,25 +34920,18 @@ Software\Valve\Steam
 Software\Valve\SteamService
 Software\Valve\Steam\
 Software\Valve\Steam\Accounts
-Software\Valve\Steam\AllowDownloadsDuringGameplay
 Software\Valve\Steam\Apps
-Software\Valve\Steam\Apps\%d
 Software\Valve\Steam\Apps\%d\%s
 Software\Valve\Steam\Apps\%d\DisableUpdatesUntil
 Software\Valve\Steam\Apps\%d\LastPlayed
 Software\Valve\Steam\Apps\%d\Playtime
 Software\Valve\Steam\Apps\%d\Playtime2wks
 Software\Valve\Steam\Apps\%d\PlaytimeDisconnected
-Software\Valve\Steam\Apps\%d\betadesc_%s
-Software\Valve\Steam\Apps\%d\betahash_%s
 Software\Valve\Steam\Apps\%d\cloud\%s
 Software\Valve\Steam\Apps\%d\cloud\last_sync_state
 Software\Valve\Steam\Apps\%u
 Software\Valve\Steam\Apps\%u\BadgeData
 Software\Valve\Steam\Apps\%u_%u
-Software\Valve\Steam\AutoUpdateWindowEnabled
-Software\Valve\Steam\AutoUpdateWindowEnd
-Software\Valve\Steam\AutoUpdateWindowStart
 Software\Valve\Steam\CellIDServerOverride
 Software\Valve\Steam\CloudEnabled
 Software\Valve\Steam\CompatToolMapping
@@ -34939,7 +34943,6 @@ Software\Valve\Steam\DownloadsUseHTTPSWhenPossible
 Software\Valve\Steam\Embedded\%d
 Software\Valve\Steam\Embedded\%d\LastBetaSteamID
 Software\Valve\Steam\Embedded\%d\LastSteamID
-Software\Valve\Steam\GlobalDefaultAppUpdateBehavior
 Software\Valve\Steam\IsSteamDeck
 Software\Valve\Steam\IsSteamDeck_01
 Software\Valve\Steam\LastConfigstoreUploadTime
@@ -34988,8 +34991,6 @@ Software\Valve\Steam\ToolMapping
 Software\Valve\Steam\Tools\%u\Registered
 Software\Valve\Steam\Tools\%u\SizeOnDisk
 Software\Valve\Steam\apps
-Software\Valve\Steam\apps\%u\autocloud\lastexit
-Software\Valve\Steam\apps\%u\autocloud\lastlaunch
 Software\Valve\Steam\apps\%u\cloudenabled
 Software\Valve\Steam\apps\%u\cloudsynconsuspendenabled
 Software\Valve\Steam\cip
@@ -35222,10 +35223,6 @@ StatsP2PRouterToClient
 Stats_Failed_Validation
 Status code: %d (%s)\n
 Status: %s\n
-Status: Can Connect
-Status: No Connection
-Status: Pending
-Status: Unknown
 Status=
 Status=0x%x
 Steam
@@ -43305,7 +43302,6 @@ check_policy
 check_suiteb_cipher_list
 checkguid
 checkguids
-checkon
 checkout
 checksum_error
 cheer_target_id
@@ -46596,7 +46592,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenn
+ggen.
 ghjkl
 gidlist
 gidparentcomment
@@ -49940,6 +49936,7 @@ k_EMsgPSIsValidShoppingCart
 k_EMsgPhysicalBoxInventory
 k_EMsgPingResponse
 k_EMsgPrepareToExit
+k_EMsgProductInfoCacheStatus
 k_EMsgProtobufWrapped
 k_EMsgQuestServerBase
 k_EMsgQueuedEmailsComplete
@@ -50763,6 +50760,8 @@ leaderboard_sort_method
 leading_comments
 leading_detached_comments
 led_brightness
+leddebug
+lednodebug
 left
 left the group
 left_accelerometer_stationary_noise_tolerance
@@ -51089,10 +51088,10 @@ low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1609
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1759
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1964
 low-pri yield - /data/src/clientdll/appdatacache.cpp:885
-low-pri yield - /data/src/clientdll/autocloud.cpp:567
-low-pri yield - /data/src/clientdll/autocloud.cpp:646
-low-pri yield - /data/src/clientdll/autocloud.cpp:821
-low-pri yield - /data/src/clientdll/autocloud.cpp:912
+low-pri yield - /data/src/clientdll/autocloud.cpp:591
+low-pri yield - /data/src/clientdll/autocloud.cpp:670
+low-pri yield - /data/src/clientdll/autocloud.cpp:845
+low-pri yield - /data/src/clientdll/autocloud.cpp:936
 low-pri yield - /data/src/clientdll/clientjob.cpp:436
 low-pri yield - /data/src/clientdll/clientjob.cpp:467
 low-pri yield - /data/src/clientdll/clientjob.cpp:776
@@ -51101,11 +51100,11 @@ low-pri yield - /data/src/clientdll/clientugc.cpp:6854
 low-pri yield - /data/src/clientdll/compatmanager.cpp:1949
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2220
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2491
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3157
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3189
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3202
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3254
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3861
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3165
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3197
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3210
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3262
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3869
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3071
@@ -52620,6 +52619,7 @@ m_sDebugTextCached
 m_sDeviceName
 m_sDevkitGameID
 m_sDisplayName
+m_sDongleHwidSN
 m_sEmail
 m_sExe
 m_sFailureInfo
@@ -53748,7 +53748,6 @@ modulus too large
 modulus:
 mold 1.10.1 (compatible with GNU ld)
 mongolian
-monitor
 monitor_device_name
 monitor_display_name
 monitors
@@ -56771,7 +56770,6 @@ reliance
 remember_login
 remember_open_chats
 remember_password
-remonitor
 remote
 remote-connection-failed
 remote-server-not-found
@@ -56781,8 +56779,8 @@ remoteStorageConfig
 remote_address
 remote_candidate_types
 remote_client_dongle
-remote_client_dongle [[connect|monitor] clientid ssid password]|[[disconnect|status|disable|enable|checkon] clientid]|remonitor
-remote_client_dongle [[connect|monitor] clientid ssid password|disconnect|status|checkon clientid]
+remote_client_dongle [[connect] clientid ssid password]|disconnect|status|disable|enable
+remote_client_dongle [[connect] clientid ssid password]|disconnect|status|disable|enable|leddebug|lednodebug
 remote_client_id
 remote_client_softapcmd
 remote_client_softapcmd <softapcmd args>
@@ -58423,7 +58421,7 @@ stderr
 stdin
 stdout
 steam
-steam Dec 19 2025 23:10:02
+steam Dec 24 2025 18:29:52
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

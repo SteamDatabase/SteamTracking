@@ -1879,6 +1879,7 @@
                     ? D.td.appID
                     : parseInt(e.m_strAppId),
                 type: "game",
+                bPreferAssetWithoutOverride: !1,
               }),
           );
         }

@@ -781,6 +781,7 @@ message CChatRoom_ResolveReport_Request {
 	optional .EContentReportSubjectType subject_type = 5 [default = k_EContentReportSubjectType_Invalid];
 	optional uint64 chat_group_id = 6;
 	optional uint32 kick_expiration_time = 7;
+	optional bool skip_lock = 8;
 }
 
 message CChatRoom_ResolveReport_Response {

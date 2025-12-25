@@ -2146,6 +2146,7 @@
                     ? _._.appID
                     : parseInt(_.m_strAppId),
                 type: "game",
+                bPreferAssetWithoutOverride: !1,
               }),
           );
         }

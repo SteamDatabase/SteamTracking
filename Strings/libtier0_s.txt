@@ -100,7 +100,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-23:09:36
+18:29:37
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -205,7 +205,7 @@ DBG_PATHMATCH
 DLog
 DONT_BREAK_ON_ASSERT
 DWarning
-Dec 19 2025
+Dec 24 2025
 DeclareCurrentThreadIsMainThread
 Deleting thread object from the thread, this is bad
 DoNewAssertDialog

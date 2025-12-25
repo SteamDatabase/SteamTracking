@@ -5677,7 +5677,7 @@
         }
       };
       function _(_) {
-        return null == _ ? "" : _.toLocaleString();
+        return null == _ ? "" : _.toLocaleString([]);
       }
       _ = (0, _._)([_._], _);
       class _ extends _.Component {
@@ -6018,7 +6018,7 @@
                   return null == _
                     ? ""
                     : _ < 1e3
-                      ? _.toLocaleString()
+                      ? _.toLocaleString([])
                       : _ < 1e6
                         ? (_ / 1e3).toFixed(1).toLocaleString() + " KB"
                         : _ < 1e9

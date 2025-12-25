@@ -313,7 +313,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "CloudFiles_RemoveFile_Button"			"Bỏ ra"
 
 
-"SteamUI_NotifyTrayHintDialog_DontShow"	"Không hiện lại thông báo này"
+"SteamUI_NotifyTrayHintDialog_DontShow"	"Không hiện lại hộp thoại này"
 "SteamUI_NotifyTrayHintDialog_Close"	"Đóng"
 
 "SteamUI_SpecialOffersDialog_Close"	"Đóng"
@@ -2422,7 +2422,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_Shutdown_Dialog_Text" "Đang tắt Steam ..."
 "Steam_Shutdown_Waiting_For_Game" "Đang đợi %game% tắt ..."
 "Steam_Shutdown_Finishing_Download" "Đang đợi hoàn thành hàng chờ tải về..."
-"Steam_Shutdown_Waiting_For_Download" "Ngừng tải %game% về ..."
+"Steam_Shutdown_Waiting_For_Download" "Ngừng tải xuống %game% ..."
 "Steam_Shutdown_Waiting_For_Cloud" "Đang hoàn thành đồng bộ Steam Cloud..."
 "Steam_Shutdown_Waiting_For_Logoff" "Đang đăng xuất ..."
 "Steam_Shutdown_ForceQuit" "Thoát ngay"

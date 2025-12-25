@@ -3795,7 +3795,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_friendwhoplays"		"Tienes %friendswhoplay% amigo que juega a %gamename%"
 "steam_nofriendswhoplay"	"No tienes amigos que jueguen a %gamename%"
 "steam_openfriendslist"		"Abrir lista de amigos"
-"steam_viewallfriends"		"Ver todos los amigos que juegan a él"
+"steam_viewallfriends"		"Ver todos los amigos que juegan a este juego"
 "steam_friendsplayingnowapplication"	"¡Tienes %friendsplayingnow% amigos utilizando %gamename% en este momento!"
 "steam_friendplayingnowapplication"	"¡Tienes %friendsplayingnow% amigo utilizando %gamename% en este momento!"
 "steam_morefriendswhoplayapplication"		"Tienes %friendswhoplay% amigos más que utilizan %gamename%"

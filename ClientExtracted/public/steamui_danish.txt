@@ -317,7 +317,7 @@ Dette burde vare mindre end et minut."
 "CloudFiles_RemoveFile_Button"			"Fjern"
 
 
-"SteamUI_NotifyTrayHintDialog_DontShow"	"Vis ikke denne dialog igen"
+"SteamUI_NotifyTrayHintDialog_DontShow"	"Vis ikke dette vindue igen"
 "SteamUI_NotifyTrayHintDialog_Close"	"Luk"
 
 "SteamUI_SpecialOffersDialog_Close"	"Luk"

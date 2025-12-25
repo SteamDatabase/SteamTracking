@@ -455,6 +455,8 @@ message CNegotiationInitMsg {
 	repeated .EStreamVideoCodec supported_video_codecs = 3;
 	optional bool supports_remote_hid = 4;
 	optional bool supports_touch_input = 5;
+	optional int32 os_type = 6;
+	optional int32 gaming_device_type = 7;
 }
 
 message CNegotiationSetConfigMsg {

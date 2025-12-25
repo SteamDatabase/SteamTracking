@@ -56,8 +56,12 @@
     "Audio_Channels_5Point1": "5.1 صوت محيطي",
     "Audio_Channels_7Point1": "7.1 صوت محيطي",
     "ControllerSettingValue_GyroRequireAll": "الجميع",
+    "Menu_Stats": "المخططات",
     "SteamUI_ValveSurvey_Summary_BootProtect_Enabled": "مُمكن",
+    "SteamFrameWirelessAdapterDialog_DontShowAgain": "عدم عرض هذه النافذة مرة أخرى",
     "IdleStatus_RemainingTime": "~ متبقٍ %1$s",
+    "PairControllerScreen_Pair": "التالي",
+    "PairControllerScreen_Skip": "تخطي",
     "HardwareUpdaterWizard_Success_Button": "تم",
     "HardwareDeviceName_Ibex": "وحدة تحكم Steam"
 }
