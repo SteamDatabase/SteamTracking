@@ -5412,6 +5412,7 @@ ${LANGUAGE}
 -dumpvideostream
 -enable-desktop-gl-fallback
 -enable-devkit
+-enablepro2
 -exitsteam
 -flushconfig
 -force-no-dbus-simulate-user-activity
@@ -7127,11 +7128,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -12837,7 +12838,6 @@ ${LANGUAGE}
 :eaI
 :metho
 :method
-:mzi
 :oc\ve
 :pat
 :path
@@ -12990,6 +12990,7 @@ ${LANGUAGE}
 =\n\temoticons
 =\n\vupdate_info
 =\tUa7
+=]JCWb9
 =asyv
 =fff?
 =j&&LZ66lA??~
@@ -18466,7 +18467,7 @@ Deaccel
 Debit Card (Nodwin)
 Debug
 DebugStatsSystem
-Dec 24 2025 18:29:54
+Dec 26 2025 22:06:27
 December
 Decipher Only
 Deckard
@@ -19385,6 +19386,7 @@ Empty Config
 Empty JPEG image (DNL not supported)
 Empty input file
 EmptyFragments
+Enable GC/Pro 2 controller support
 Enable HTTP/2 on all CHTTPClients automatically for SSL connections
 Enable PipeWire desktop capture
 Enable PipeWire desktop capture using DMA-BUF
@@ -27913,6 +27915,7 @@ SDL_GetPrimaryDisplay
 SDL_GetRectIntersection
 SDL_GetRectUnion
 SDL_GetRevision
+SDL_HIDAPI_LIBUSB
 SDL_IOFromConstMem
 SDL_InitSubSystem
 SDL_IsGamepad
@@ -39298,7 +39301,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenJ
 ghost_
 gidlist
 gidparentcomment
