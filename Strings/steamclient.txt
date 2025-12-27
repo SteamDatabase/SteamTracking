@@ -15129,6 +15129,7 @@ $steammessages_parental_objects.proto"
 51CSteamInputService_GyroSoftwareCalibration_Response
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
+524288
 52CAccountHardware_RegisterValveIndexComponent_Request
 52CAccountHardware_UpdateControllerUsageReport_Request
 52CAuthenticationSupport_MarkTokenCompromised_Response
@@ -15428,7 +15429,6 @@ $steammessages_parental_objects.proto"
 64CSiteLicenseClientJob_SiteManagerClient_SeatCheckoutNotification
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
 65536
-524288
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
 65CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail
 666666666666666666666666666666666666666666666666
@@ -58420,7 +58420,7 @@ stderr
 stdin
 stdout
 steam
-steam Dec 26 2025 22:06:30
+steam Dec 26 2025 22:55:08
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
