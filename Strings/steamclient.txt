@@ -3687,6 +3687,7 @@ $steammessages_parental_objects.proto"
 (\r"Q\n.CCommunity_GetClanEventCrowdInMetadata_Request
 (\r"Q\n4CSteamInputService_UnpairedTritonDocked_Notification
 (\r"R\n'CFamilyGroups_ForceAcceptInvite_Request
+(\r"R\n6CSteamInputService_ControllerDisconnected_Notification
 (\r"R\n\fCAudioFormat
 (\r"S\n&CStoreBrowse_GetHardwareItems_Response
 (\r"S\n'CMsgDPGetNumberOfCurrentPlayersResponse
@@ -7725,11 +7726,13 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
+0000000000000000000000000000000000000000
 0.0333
 0.050
 0.13.15.106
 0.15
 0.3.27
+0000000000000000
 0.75
 0.CAccountHardware_GetPersonalizationFile_Request
 0.CAccountHardware_GetSteamDeckComponents_Request
@@ -7769,8 +7772,6 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-0000000000000000000000000000000000000000
-0000000000000000
 00000001
 00003333
 00:00:00
@@ -11246,11 +11247,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-2019
-2048
 20000
 2000000
 200M
+2019
+2048
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -15207,6 +15208,7 @@ $steammessages_parental_objects.proto"
 54CQueuedMatchmakingGameHost_SubmitPlayerResult_Response
 54CRemoteClientJobHandleClientAuthorizationCancelRequest
 54CSteamEngine_SearchAppDataCacheByStoreKeywords_Request
+54CSteamInputService_ControllerDisconnected_Notification
 54CSteamOSManager_RefreshScreenReaderAutoLocale_Response
 54CTransportValidation_NotifySyntheticEvent_Notification
 54CTransportValidation_RequestLargeNotification_Response
@@ -15497,6 +15499,7 @@ $steammessages_parental_objects.proto"
 7.CPublishedFile_SetPlaytimeForControllerConfigs_Request
 7.CQueuedMatchmakingGameHost_SubmitPlayerResult_Response
 7.CSteamEngine_SearchAppDataCacheByStoreKeywords_Request
+7.CSteamInputService_ControllerDisconnected_Notification
 7.CSteamOSManager_RefreshScreenReaderAutoLocale_Response
 7.CTransportValidation_NotifySyntheticEvent_Notification
 7.CTransportValidation_RequestLargeNotification_Response
@@ -15979,6 +15982,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9Hpo]
 9IClientVR
 9IGv
 9ISteamUGC
@@ -16029,7 +16033,6 @@ $steammessages_parental_objects.proto"
 :.CSteamInputService_ControllerAxesStateChange_Notification
 :.CUserAccount_GetAvailableValveDiscountPromotions_Response"
 :.JlN
-:1IJ
 :443
 :5ptI.T(
 :: %s :: %s :: %s\n
@@ -29212,6 +29215,7 @@ Method NotifyClientUsabilityMetrics() not implemented.
 Method NotifyClipCreated() not implemented.
 Method NotifyClipDeleted() not implemented.
 Method NotifyCommunityPreferencesChanged() not implemented.
+Method NotifyControllerDisconnected() not implemented.
 Method NotifyControllerPowerMenu() not implemented.
 Method NotifyCount() not implemented.
 Method NotifyExportProgress() not implemented.
@@ -30891,6 +30895,7 @@ NotifyClientUsabilityMetrics
 NotifyClipCreated
 NotifyClipDeleted
 NotifyClock
+NotifyControllerDisconnected
 NotifyControllerPowerMenu
 NotifyDriveAdded
 NotifyDriveRemoved
@@ -35392,6 +35397,7 @@ SteamInputManager.GetControllerAccessibilityStrings#1
 SteamInputManager.GetDongles#1
 SteamInputManager.NotifyAxesStateChanged#1
 SteamInputManager.NotifyButtonStateChanged#1
+SteamInputManager.NotifyControllerDisconnected#1
 SteamInputManager.NotifyControllerPowerMenu#1
 SteamInputManager.NotifyGyroAccelerometerStateChanged#1
 SteamInputManager.NotifyGyroCalibrationStateChanged#1
@@ -58420,7 +58426,7 @@ stderr
 stdin
 stdout
 steam
-steam Dec 28 2025 22:27:47
+steam Dec 31 2025 00:44:52
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

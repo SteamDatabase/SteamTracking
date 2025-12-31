@@ -220,6 +220,10 @@ message CSteamInputService_ControllerPowerMenu_Notification {
 	optional uint32 idx = 1;
 }
 
+message CSteamInputService_ControllerDisconnected_Notification {
+	optional uint32 controller_index = 1;
+}
+
 service SteamInputManager {
 	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
 
@@ -234,6 +238,7 @@ service SteamInputManager {
 	rpc NotifyUnpairedTritonDocked (.CSteamInputService_UnpairedTritonDocked_Notification) returns (.WebUINoResponse);
 	rpc NotifyTritonUndocked (.CSteamInputService_TritonUndocked_Notification) returns (.WebUINoResponse);
 	rpc NotifyTritonDonglesChanged (.CSteamInputService_TritonDonglesChanged_Notification) returns (.WebUINoResponse);
+	rpc NotifyControllerDisconnected (.CSteamInputService_ControllerDisconnected_Notification) returns (.WebUINoResponse);
 	rpc StartControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
 	rpc EndControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
 	rpc GetControllerAccessibilityStrings (.CSteamInputService_ControllerAccessibilityStrings_Request) returns (.CSteamInputService_ControllerAccessibilityStrings_Response);

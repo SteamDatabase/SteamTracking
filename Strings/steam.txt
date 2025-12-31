@@ -1511,8 +1511,9 @@ $ffn
 -dev
 -devsites
 -devsiteshost
+-disable-libusb
 -download
--enablepro2
+-enable-libusb
 -exitsteam
 -failsystemcheck
 -forceguiupdater
@@ -1910,6 +1911,8 @@ $ffn
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
+00:42:44
+00:43:35
 01/01/00
 0123456789.
 0123456789
@@ -2224,7 +2227,6 @@ $ffn
 11CWorkThread
 11IFileSystem
 11M|
-123456789
 127.0.0.1
 12CAddressInfo
 12CAutoReleaseI14CMetricsStringE
@@ -2298,7 +2300,6 @@ $ffn
 14ConCommandBase
 14ISSLConnection
 1536
-15000
 15CBaseFileSystem
 15CChatMemberInfo
 15CEC25519KeyBase
@@ -2349,8 +2350,6 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18000000
-18446744073709551615
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -2420,6 +2419,10 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
+15000
+18000000
+123456789
+18446744073709551615
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2445,8 +2448,6 @@ $ffn
 21CPurchaseLineItemInfo
 21CScheduledFunctionMgr
 21CUtlCStringConversion
-22:27:30
-22:27:37
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2568,6 +2569,7 @@ $ffn
 384:H\n
 38CClientMetrics_ClientBootstrap_Summary
 38CWorkItemNetEncryptionHandshakeEncrypt
+38D&
 3Cn(
 3DES
 3DES(168)
@@ -2618,6 +2620,7 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
+524288
 52F*
 55Ly
 55j_WW
@@ -2640,7 +2643,6 @@ $ffn
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
-524288
 64CK\vH
 65536
 666666666666666666666666666666666666666666666666
@@ -5071,7 +5073,7 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec 28 2025
+Dec 31 2025
 December
 Decipher Only
 Deckard
@@ -8897,7 +8899,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Dec 28 2025 22:27:37
+Startup - updater built Dec 31 2025 00:43:34
 State
 StaticFileWriterThread()
 Steam
@@ -13198,7 +13200,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen\n\n
+ggen\n
 givenName
 glBegin
 glBindTexture
@@ -17102,6 +17104,7 @@ pcubDecodedData
 pcubEncryptedData
 pcubPlaintextData
 pcubSignature
+pcubValue
 peer
 peer did not return a certificate
 peer does not accept heartbeats
@@ -17465,6 +17468,7 @@ pubMsgStart >= pubCurrent
 pubPktSend
 pubPlaintextData
 pubSignature
+pubValue
 pubValue || !*pcubValue
 pub_key
 pubkey

@@ -3229,6 +3229,7 @@ ${LANGUAGE}
 (\r"Q\n.CCommunity_GetClanEventCrowdInMetadata_Request
 (\r"Q\n4CSteamInputService_UnpairedTritonDocked_Notification
 (\r"R\n'CFamilyGroups_ForceAcceptInvite_Request
+(\r"R\n6CSteamInputService_ControllerDisconnected_Notification
 (\r"R\n\fCAudioFormat
 (\r"S\n&CStoreBrowse_GetHardwareItems_Response
 (\r"S\n.CMsgClientSiteLicenseGetAvailableSeatsResponse
@@ -5408,11 +5409,13 @@ ${LANGUAGE}
 -dev
 -devsites
 -devsiteshost
+-disable-libusb
 -drop
 -dumpvideostream
 -enable-desktop-gl-fallback
 -enable-devkit
--enablepro2
+-enable-libusb
+-enable-libusb-gamecube
 -exitsteam
 -flushconfig
 -force-no-dbus-simulate-user-activity
@@ -6565,6 +6568,7 @@ ${LANGUAGE}
 /data/src/common/audio/audio_utils.cpp
 /data/src/common/callbacklist.h
 /data/src/common/childprocessquery.cpp
+/data/src/common/clientregkeys.cpp
 /data/src/common/clipboardhelpers.cpp
 /data/src/common/commonkeycode.cpp
 /data/src/common/completionportmanager.cpp
@@ -7128,11 +7132,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+00:00:00
+01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
-01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -12092,6 +12096,7 @@ ${LANGUAGE}
 54CPublishedFile_SetPlaytimeForControllerConfigs_Request
 54CQueuedMatchmakingGameHost_SubmitPlayerResult_Response
 54CSteamEngine_SearchAppDataCacheByStoreKeywords_Request
+54CSteamInputService_ControllerDisconnected_Notification
 54CSteamOSManager_RefreshScreenReaderAutoLocale_Response
 54CTransportValidation_NotifySyntheticEvent_Notification
 54CTransportValidation_RequestLargeNotification_Response
@@ -12382,6 +12387,7 @@ ${LANGUAGE}
 7.CPublishedFile_SetPlaytimeForControllerConfigs_Request
 7.CQueuedMatchmakingGameHost_SubmitPlayerResult_Response
 7.CSteamEngine_SearchAppDataCacheByStoreKeywords_Request
+7.CSteamInputService_ControllerDisconnected_Notification
 7.CSteamOSManager_RefreshScreenReaderAutoLocale_Response
 7.CTransportValidation_NotifySyntheticEvent_Notification
 7.CTransportValidation_RequestLargeNotification_Response
@@ -13076,7 +13082,6 @@ ${LANGUAGE}
 ?Installed
 ?QfZ
 ?SetUniverse
-?Steam3Master
 ?SteamRootDialog
 ?WAYLAND_DISPLAY
 ?\fYjvE
@@ -18466,7 +18471,7 @@ Deaccel
 Debit Card (Nodwin)
 Debug
 DebugStatsSystem
-Dec 28 2025 22:27:44
+Dec 31 2025 00:45:04
 December
 Decipher Only
 Deckard
@@ -18608,6 +18613,7 @@ DirectorySelected
 DirectoryTreeView
 Disable client beta filtering
 Disable controller support
+Disable support for controllers requiring exclusive USB access
 DisableAllToasts
 DisableHttpProxy
 DisableParentalSettings
@@ -19385,11 +19391,12 @@ Empty Config
 Empty JPEG image (DNL not supported)
 Empty input file
 EmptyFragments
-Enable GC/Pro 2 controller support
 Enable HTTP/2 on all CHTTPClients automatically for SSL connections
 Enable PipeWire desktop capture
 Enable PipeWire desktop capture using DMA-BUF
 Enable devkit functionality
+Enable support for Nintendo GameCube adapters in Wii-U mode
+Enable support for controllers requiring exclusive USB access
 Enable test storage data
 EnableBuiltInControllerDisplacementEvents
 EnableCaptureNVFBC
@@ -24134,6 +24141,7 @@ Method NotifyClientUsabilityMetrics() not implemented.
 Method NotifyClipCreated() not implemented.
 Method NotifyClipDeleted() not implemented.
 Method NotifyCommunityPreferencesChanged() not implemented.
+Method NotifyControllerDisconnected() not implemented.
 Method NotifyControllerPowerMenu() not implemented.
 Method NotifyCount() not implemented.
 Method NotifyExportProgress() not implemented.
@@ -25844,6 +25852,7 @@ NotifyChatRoomHeaderStateChange
 NotifyClientUsabilityMetrics
 NotifyClipCreated
 NotifyClipDeleted
+NotifyControllerDisconnected
 NotifyControllerPowerMenu
 NotifyExportProgress
 NotifyFileDeleted
@@ -27915,6 +27924,7 @@ SDL_GetRectIntersection
 SDL_GetRectUnion
 SDL_GetRevision
 SDL_HIDAPI_LIBUSB
+SDL_HIDAPI_LIBUSB_GAMECUBE
 SDL_IOFromConstMem
 SDL_InitSubSystem
 SDL_IsGamepad
@@ -39300,7 +39310,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenJ
+ggen\n
 ghost_
 gidlist
 gidparentcomment
@@ -49335,6 +49345,7 @@ pchData
 pchEncodedData
 pchFaqName && pchFaqName[ 0 ]
 pchInput
+pchKey
 pchMsg
 pchName
 pchQueryString[0] == '?'
@@ -49423,6 +49434,7 @@ pcubDecodedData
 pcubEncryptedData
 pcubPlaintextData
 pcubSignature
+pcubValue
 peer
 peer did not return a certificate
 peer does not accept heartbeats
@@ -50000,6 +50012,7 @@ pubPktSend
 pubPlaintextData
 pubSignature
 pubTextureData
+pubValue
 pubValue || !*pcubValue
 pub_key
 pubkey
@@ -50033,6 +50046,7 @@ publishedfileids
 publisher/
 publisher_group_id
 pulContext
+punValue
 punct
 purchase
 purchase_option_name
