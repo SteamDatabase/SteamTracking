@@ -8081,7 +8081,10 @@
             [n],
           ),
           l = (0, ie.zX)(r, jt);
-        return n && 0 != n.top_combined_app_and_dlc_releases.length && 3 == l
+        return n &&
+          n.top_combined_app_and_dlc_releases &&
+          0 != n.top_combined_app_and_dlc_releases.length &&
+          3 == l
           ? h.createElement(
               "div",
               { className: ee().PageSection },
@@ -10272,14 +10275,11 @@
         include_assets_without_overrides: !0,
       };
       function _n(e, t, a, n) {
-        const r = n.filter((t) => t.type == e),
+        const r = n?.filter((t) => t.type == e),
           l = [],
-          o = [];
-        return {
-          strTabTitleToken: t,
-          strTabSubTitleToken: a,
-          rgFilteredCombinedAppsAndDLC: r
-            .filter((e) => !u.A.Get().BIsAppMissing(e.appid))
+          o = [],
+          s = r
+            ?.filter((e) => !u.A.Get().BIsAppMissing(e.appid))
             .map((e) => {
               let t = e.app_release_rank;
               return (
@@ -10289,7 +10289,11 @@
                 4 == u.A.Get().GetApp(e.appid)?.GetAppType() && o.push(e.appid),
                 e.appid
               );
-            }),
+            });
+        return {
+          strTabTitleToken: t,
+          strTabSubTitleToken: a,
+          rgFilteredCombinedAppsAndDLC: s,
           rgFilteredAppIDByTier: l,
           rgFilteredDLCsAppIDs: o,
         };
@@ -10447,11 +10451,7 @@
                   h.createElement(
                     "div",
                     { className: ee().NoticeBox },
-                    (0, be.we)(
-                      i.bSQLError
-                        ? "#Error_ErrorCommunicatingWithNetwork"
-                        : "#SteamCharts_NewMonth_NoRelease",
-                    ),
+                    (0, be.we)("#Error_ErrorCommunicatingWithNetwork"),
                   ),
                 )
               : h.createElement(
