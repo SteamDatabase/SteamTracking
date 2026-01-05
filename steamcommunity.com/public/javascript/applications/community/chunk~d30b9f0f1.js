@@ -7514,7 +7514,7 @@
     },
     69663: (e, t, a) => {
       "use strict";
-      a.d(t, { X_: () => z, ip: () => H });
+      a.d(t, { X_: () => H, ip: () => x });
       var n = a(34629),
         l = a(69001),
         i = a(9701),
@@ -7524,61 +7524,51 @@
         c = a(40023),
         d = a(61491),
         u = a(75844),
-        _ = a(65946),
-        m = a(90626),
-        p = a(57876),
-        g = a(13952),
-        S = a(62792),
-        h = a(68255),
-        v = a(84811),
-        E = a(56330),
-        b = a(95695),
-        f = a(99032),
-        y = a(76684),
-        w = a(9154),
-        T = a(738),
-        C = a(56654),
-        D = a(22797),
-        I = a(32754),
-        M = a(48479),
-        A = a(64846),
-        k = a(81393),
-        G = a(52038),
-        B = a(56011),
-        N = a(61859),
-        L = a(73745),
-        O = a(63872),
-        P = a(10206),
-        F = a(26408),
-        R = a(8092);
-      const x = -1,
-        H = (0, u.PA)((e) => {
-          const { editModel: t, capsuleContainer: a } = e,
-            [n, l, i] = (0, _.q3)(() => [
-              a.smart_section,
-              a.smart_section_type,
-              a.sale_tag_filter,
-            ]);
-          let o = "manual";
-          return (
-            n && (o = null == l ? "linked_app_list" : "smart_section"),
-            m.createElement(
-              v.tH,
-              null,
-              "manual" == o &&
-                m.createElement(m.Fragment, null, m.createElement(j, { ...e })),
-              "linked_app_list" == o &&
-                m.createElement(m.Fragment, null, m.createElement(U, { ...e })),
-              "smart_section" == o &&
-                m.createElement(
-                  m.Fragment,
-                  null,
-                  m.createElement(d.WR, { editModel: t, capsuleContainer: a }),
-                ),
-            )
+        _ = a(90626),
+        m = a(57876),
+        p = a(13952),
+        g = a(62792),
+        S = a(68255),
+        h = a(84811),
+        v = a(56330),
+        E = a(95695),
+        b = a(99032),
+        f = a(76684),
+        y = a(9154),
+        w = a(738),
+        T = a(56654),
+        C = a(22797),
+        D = a(32754),
+        I = a(48479),
+        M = a(64846),
+        A = a(81393),
+        k = a(52038),
+        G = a(56011),
+        B = a(61859),
+        N = a(73745),
+        L = a(63872),
+        O = a(10206),
+        P = a(26408),
+        F = a(8092);
+      const R = -1,
+        x = (0, u.PA)((e) => {
+          const { editModel: t, capsuleContainer: a, filterMode: n } = e;
+          return _.createElement(
+            h.tH,
+            null,
+            0 == n &&
+              _.createElement(_.Fragment, null, _.createElement(U, { ...e })),
+            1 == n &&
+              _.createElement(_.Fragment, null, _.createElement(z, { ...e })),
+            2 == n &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(d.WR, { editModel: t, capsuleContainer: a }),
+              ),
           );
         });
-      function z(e) {
+      function H(e) {
         const { capsuleContainer: t, editModel: a } = e,
           n = (function (e, t) {
             const a = (a, n) => {
@@ -7607,12 +7597,12 @@
                       ? void 0
                       : l.length
                   )
-                    ? (0, T.pg)(
-                        m.createElement(w.o0, {
-                          strTitle: (0, N.we)(
+                    ? (0, w.pg)(
+                        _.createElement(y.o0, {
+                          strTitle: (0, B.we)(
                             "#Sale_TaggedItemFilter_EnableTitle",
                           ),
-                          strDescription: (0, N.we)(
+                          strDescription: (0, B.we)(
                             "#Sale_TaggedItemFilter_EnableDescription",
                           ),
                           onOK: () => a(!0, n),
@@ -7627,12 +7617,12 @@
                       ? void 0
                       : i.length
                   )
-                    ? (0, T.pg)(
-                        m.createElement(w.o0, {
-                          strTitle: (0, N.we)(
+                    ? (0, w.pg)(
+                        _.createElement(y.o0, {
+                          strTitle: (0, B.we)(
                             "#Sale_TaggedItemFilter_DisableTitle",
                           ),
-                          strDescription: (0, N.we)(
+                          strDescription: (0, B.we)(
                             "#Sale_TaggedItemFilter_DisableDescription",
                           ),
                           onOK: () => a(!1, n),
@@ -7650,21 +7640,21 @@
               a.GetEventModel().GetTaggedItems().length > 0 ||
               a.GetEventModel().BUsesContentHubForItemSource(),
           );
-        return m.createElement(
-          v.tH,
+        return _.createElement(
+          h.tH,
           null,
           r &&
-            m.createElement(h.RF, {
+            _.createElement(S.RF, {
               onChange: n,
-              label: (0, N.we)("#Sale_TaggedItemFilter"),
+              label: (0, B.we)("#Sale_TaggedItemFilter"),
               description: t.sale_tag_filter
                 ? ""
-                : (0, N.we)("#Sale_TaggedItemFilterDescription"),
+                : (0, B.we)("#Sale_TaggedItemFilterDescription"),
               checked: Boolean(t.sale_tag_filter),
             }),
         );
       }
-      const U = (0, u.PA)((e) => {
+      const z = (0, u.PA)((e) => {
           var t, a;
           const {
               capsuleContainer: n,
@@ -7673,8 +7663,8 @@
               titleLocToken: c,
               ttipLocToken: u,
             } = e,
-            _ =
-              (0, N.we)(c || "#Sale_Section_FilteredProducts_Title") +
+            m =
+              (0, B.we)(c || "#Sale_Section_FilteredProducts_Title") +
               " - " +
               (null !==
                 (a =
@@ -7683,84 +7673,84 @@
                     : t.length) && void 0 !== a
                 ? a
                 : 0),
-            p = (0, N.we)(u || "#Sale_Section_FilteredProducts_Tooltip"),
+            p = (0, B.we)(u || "#Sale_Section_FilteredProducts_Tooltip"),
             g = "ShowFilterItems_" + r,
             S = (0, o.Nx)(g, !0);
-          return m.createElement(
-            v.tH,
+          return _.createElement(
+            h.tH,
             null,
-            m.createElement(
+            _.createElement(
               "div",
               {
-                className: (0, G.A)(
-                  O.FilterDisplayCtn,
-                  b.EventDefaultRowContainer,
+                className: (0, k.A)(
+                  L.FilterDisplayCtn,
+                  E.EventDefaultRowContainer,
                 ),
               },
-              m.createElement(d.WR, { editModel: i, capsuleContainer: n }),
-              m.createElement(
+              _.createElement(d.WR, { editModel: i, capsuleContainer: n }),
+              _.createElement(
                 "div",
-                { className: O.SaleSectionTitleHeader },
-                m.createElement(
+                { className: L.SaleSectionTitleHeader },
+                _.createElement(
                   "div",
-                  { className: b.EventEditorTextTitle },
-                  _,
-                  m.createElement(F.o, { tooltip: p }),
+                  { className: E.EventEditorTextTitle },
+                  m,
+                  _.createElement(P.o, { tooltip: p }),
                 ),
-                m.createElement(M.pn, {
+                _.createElement(I.pn, {
                   bIsMinimized: S,
                   fnToggleMinimize: () => (0, o.mi)(g, !0),
                 }),
               ),
               !S &&
-                m.createElement(
+                _.createElement(
                   "div",
                   {
-                    className: (0, G.A)(
-                      b.FlexColumnContainer,
-                      b.EventDefaultRowContainer,
+                    className: (0, k.A)(
+                      E.FlexColumnContainer,
+                      E.EventDefaultRowContainer,
                     ),
                   },
-                  m.createElement(C.A, {
+                  _.createElement(T.A, {
                     items: n.capsules,
                     onReorder: () => i.SetDirty(l.IQ.jsondata_sales),
                     render: (e) =>
-                      m.createElement(s.Y, { capsule: e, capsuleContainer: n }),
+                      _.createElement(s.Y, { capsule: e, capsuleContainer: n }),
                   }),
                 ),
             ),
           );
         }),
-        j = (0, u.PA)((e) => {
+        U = (0, u.PA)((e) => {
           const {
               capsuleContainer: t,
               editModel: a,
               uniqueKey: n,
               disableDaySelection: i,
               titleLocToken: u,
-              ttipLocToken: _,
-              warning: E,
+              ttipLocToken: v,
+              warning: C,
             } = e,
-            [D, L] = m.useState(x),
-            [H, z] = m.useState(x),
+            [N, x] = _.useState(R),
+            [H, z] = _.useState(R),
             U = [
-              { label: (0, N.we)("#Sale_VisibilityIndex_Default"), data: x },
+              { label: (0, B.we)("#Sale_VisibilityIndex_Default"), data: R },
             ],
-            j = a.GetNumberOfDays(),
+            q = a.GetNumberOfDays(),
             V = "ShowCapsuleItems_" + n,
             Q = (0, o.Nx)(V, !1);
-          if (!i && j > 1)
-            for (let e = 0; e < j; e++) {
+          if (!i && q > 1)
+            for (let e = 0; e < q; e++) {
               const t = 86400,
                 n = a.GetEventStartTime() + t * e,
                 l = {
-                  label: (0, N.PP)(
-                    e + 1 == j
+                  label: (0, B.PP)(
+                    e + 1 == q
                       ? "#Sale_VisibilityIndex_DayTimeOnward"
                       : "#Sale_VisibilityIndex_DayTime",
                     e + 1,
-                    m.createElement(y.K4, { dateAndTime: n, bSingleLine: !0 }),
-                    m.createElement(y.K4, {
+                    _.createElement(f.K4, { dateAndTime: n, bSingleLine: !0 }),
+                    _.createElement(f.K4, {
                       dateAndTime: n + t,
                       bSingleLine: !0,
                     }),
@@ -7791,27 +7781,27 @@
             let e = "CountFilter_Sale" + n,
               t = "CountFilter_Sale" + n + "_day_all";
             Y.push(
-              m.createElement(
+              _.createElement(
                 "div",
                 {
-                  key: "CountFilter_sale" + n + "_" + x,
-                  className: (0, G.A)(b.FlexRowContainer, b.RadioOption),
+                  key: "CountFilter_sale" + n + "_" + R,
+                  className: (0, k.A)(E.FlexRowContainer, E.RadioOption),
                 },
-                m.createElement("input", {
+                _.createElement("input", {
                   type: "radio",
                   name: e,
                   id: t,
-                  value: x,
-                  checked: x == H,
-                  onChange: () => z(x),
+                  value: R,
+                  checked: R == H,
+                  onChange: () => z(R),
                 }),
-                m.createElement(
+                _.createElement(
                   "label",
                   { htmlFor: t },
-                  m.createElement(
+                  _.createElement(
                     "span",
                     null,
-                    (0, N.we)("#Sale_VisibilityIndex_ShowAll"),
+                    (0, B.we)("#Sale_VisibilityIndex_ShowAll"),
                   ),
                 ),
               ),
@@ -7819,13 +7809,13 @@
               W.forEach((t, a) => {
                 let l = "CountFilter_Sale" + n + "_day_" + a;
                 Y.push(
-                  m.createElement(
+                  _.createElement(
                     "div",
                     {
                       key: "CountFilter_sale" + n + "_" + a,
-                      className: (0, G.A)(b.FlexRowContainer, b.RadioOption),
+                      className: (0, k.A)(E.FlexRowContainer, E.RadioOption),
                     },
-                    m.createElement("input", {
+                    _.createElement("input", {
                       type: "radio",
                       name: e,
                       id: l,
@@ -7833,13 +7823,13 @@
                       checked: a == H,
                       onChange: () => z(a),
                     }),
-                    m.createElement(
+                    _.createElement(
                       "label",
                       { htmlFor: l },
-                      m.createElement(
+                      _.createElement(
                         "span",
                         null,
-                        (0, N.we)("#Sale_VisibilityIndex_ShowDay", a + 1, t),
+                        (0, B.we)("#Sale_VisibilityIndex_ShowDay", a + 1, t),
                       ),
                     ),
                   ),
@@ -7850,23 +7840,23 @@
               const i = {
                 id: e,
                 type: n,
-                visibility_index: D == x ? void 0 : D,
+                visibility_index: N == R ? void 0 : N,
               };
               t.capsules.push(i),
-                (0, f.H2)([i], p.Xh),
+                (0, b.H2)([i], m.Xh),
                 a.SetDirty(l.IQ.jsondata_sales);
             },
             K = () => {
               (t.capsules = []), a.SetDirty(l.IQ.jsondata_sales);
             },
             $ =
-              (0, N.we)(u || "#Sale_Section_ReferencedProducts_Title") +
+              (0, B.we)(u || "#Sale_Section_ReferencedProducts_Title") +
               " - " +
               t.capsules.length,
-            J = (0, N.we)(_ || "#Sale_Section_ReferencedProducts_Tooltip"),
-            { creatorHome: Z } = (0, R.FV)(a.GetClanSteamID().GetAccountID()),
+            J = (0, B.we)(v || "#Sale_Section_ReferencedProducts_Tooltip"),
+            { creatorHome: Z } = (0, F.FV)(a.GetClanSteamID().GetAccountID()),
             ee = 36 == a.GetEventType(),
-            te = m.useMemo(
+            te = _.useMemo(
               () =>
                 ee &&
                 (null == Z
@@ -7875,75 +7865,75 @@
               [Z, ee],
             ),
             ae =
-              H === x
+              H === R
                 ? t.capsules
                 : t.capsules.filter(
                     (e) =>
                       null == e.visibility_index || e.visibility_index == H,
                   );
-          return m.createElement(
-            v.tH,
+          return _.createElement(
+            h.tH,
             null,
-            m.createElement(
+            _.createElement(
               "div",
-              { className: O.SaleSectionTitleHeader },
-              m.createElement(
+              { className: L.SaleSectionTitleHeader },
+              _.createElement(
                 "div",
-                { className: b.EventEditorTextTitle },
+                { className: E.EventEditorTextTitle },
                 $,
-                m.createElement(F.o, { tooltip: J }),
+                _.createElement(P.o, { tooltip: J }),
               ),
-              m.createElement(M.pn, {
+              _.createElement(I.pn, {
                 bIsMinimized: Q,
                 fnToggleMinimize: () => (0, o.mi)(V, !1),
               }),
             ),
             !Q &&
-              m.createElement(
+              _.createElement(
                 "div",
                 {
-                  className: (0, G.A)(
-                    b.FlexColumnContainer,
-                    b.EventDefaultRowContainer,
+                  className: (0, k.A)(
+                    E.FlexColumnContainer,
+                    E.EventDefaultRowContainer,
                   ),
                 },
                 Boolean(W && W.length > 0) &&
-                  m.createElement(
+                  _.createElement(
                     "div",
-                    { className: P.SaleVisibilityDateFilter },
-                    m.createElement(
+                    { className: O.SaleVisibilityDateFilter },
+                    _.createElement(
                       "span",
                       null,
-                      (0, N.we)("#Sale_VisibilityIndex_ShowFilter"),
+                      (0, B.we)("#Sale_VisibilityIndex_ShowFilter"),
                     ),
                     Y,
                   ),
-                m.createElement(d.Io, {
+                _.createElement(d.Io, {
                   onAddItem: X,
                   creatorClanId: ee
                     ? a.GetClanSteamID().GetAccountID()
                     : void 0,
                 }),
-                m.createElement(
+                _.createElement(
                   "div",
-                  { className: P.SaleImportBar },
-                  m.createElement(
-                    I.he,
+                  { className: O.SaleImportBar },
+                  _.createElement(
+                    D.he,
                     {
-                      className: P.SaleImportBarTooltip,
-                      toolTipContent: (0, N.we)("#Sale_RemoveAll_Tooltip"),
+                      className: O.SaleImportBarTooltip,
+                      toolTipContent: (0, B.we)("#Sale_RemoveAll_Tooltip"),
                     },
-                    m.createElement(
-                      h.$n,
+                    _.createElement(
+                      S.$n,
                       {
-                        className: P.SaleImportBarButton,
+                        className: O.SaleImportBarButton,
                         onClick: () => {
-                          (0, T.pg)(
-                            m.createElement(w.o0, {
-                              strTitle: (0, N.we)(
+                          (0, w.pg)(
+                            _.createElement(y.o0, {
+                              strTitle: (0, B.we)(
                                 "#Sale_RemoveAllConfirm_Title",
                               ),
-                              strDescription: (0, N.we)(
+                              strDescription: (0, B.we)(
                                 "#Sale_RemoveAllConfirm_Body",
                               ),
                               onOK: () => K(),
@@ -7952,79 +7942,79 @@
                           );
                         },
                       },
-                      (0, N.we)("#Sale_RemoveAll"),
+                      (0, B.we)("#Sale_RemoveAll"),
                     ),
                   ),
-                  m.createElement(
-                    I.he,
+                  _.createElement(
+                    D.he,
                     {
-                      className: P.SaleImportBarTooltip,
-                      toolTipContent: (0, N.we)("#Sale_ImportItems_Tooltip"),
+                      className: O.SaleImportBarTooltip,
+                      toolTipContent: (0, B.we)("#Sale_ImportItems_Tooltip"),
                     },
-                    m.createElement(
-                      h.$n,
+                    _.createElement(
+                      S.$n,
                       {
-                        className: P.SaleImportBarButton,
+                        className: O.SaleImportBarButton,
                         onClick: (e) => {
-                          (0, T.pg)(
-                            m.createElement(c.z, { fnAddCapsule: X }),
-                            (0, B.uX)(e),
+                          (0, w.pg)(
+                            _.createElement(c.z, { fnAddCapsule: X }),
+                            (0, G.uX)(e),
                           );
                         },
                       },
-                      (0, N.we)("#Sale_ImportItems"),
+                      (0, B.we)("#Sale_ImportItems"),
                     ),
                   ),
-                  m.createElement(
-                    I.he,
+                  _.createElement(
+                    D.he,
                     {
-                      className: P.SaleImportBarTooltip,
-                      toolTipContent: (0, N.we)("#Sale_EditRaw_Tooltip"),
+                      className: O.SaleImportBarTooltip,
+                      toolTipContent: (0, B.we)("#Sale_EditRaw_Tooltip"),
                     },
-                    m.createElement(
-                      h.$n,
+                    _.createElement(
+                      S.$n,
                       {
-                        className: P.SaleImportBarButton,
+                        className: O.SaleImportBarButton,
                         onClick: (e) => {
-                          (0, T.pg)(
-                            m.createElement(q, {
+                          (0, w.pg)(
+                            _.createElement(j, {
                               editModel: a,
                               capsuleContainer: t,
                             }),
-                            (0, B.uX)(e),
+                            (0, G.uX)(e),
                           );
                         },
                       },
-                      (0, N.we)("#Sale_EditRaw"),
+                      (0, B.we)("#Sale_EditRaw"),
                     ),
                   ),
                   !ee &&
-                    m.createElement(
-                      A.E,
+                    _.createElement(
+                      M.E,
                       { requireAdmin: !0, clanSteamID: a.GetClanSteamID() },
-                      m.createElement(
-                        I.he,
+                      _.createElement(
+                        D.he,
                         {
-                          className: P.SaleImportBarTooltip,
-                          toolTipContent: (0, N.we)("#Sale_DiscountEvent_ttip"),
+                          className: O.SaleImportBarTooltip,
+                          toolTipContent: (0, B.we)("#Sale_DiscountEvent_ttip"),
                         },
-                        m.createElement(
-                          h.$n,
+                        _.createElement(
+                          S.$n,
                           {
-                            className: P.SaleImportBarButton,
+                            className: O.SaleImportBarButton,
                             onClick: (e) => {
-                              (0, T.pg)(
-                                m.createElement(r.x, {
+                              (0, w.pg)(
+                                _.createElement(r.x, {
                                   onDiscountEventSelected: (e, n) => {
-                                    const i = D == x ? void 0 : D;
+                                    const i = N == R ? void 0 : N;
                                     e.forEach((e) => {
                                       if (
                                         !t.capsules.find(
                                           (t) => t.id === e && "sub" !== t.type,
                                         )
                                       ) {
-                                        const a = g.A.Get().GetApp(e),
-                                          n = (0, S._4)(
+                                        const a = p.A.Get().GetApp(e),
+                                          n = (0, g._4)(
                                             null == a
                                               ? void 0
                                               : a.GetStoreItemType(),
@@ -8050,22 +8040,22 @@
                                       a.SetDirty(l.IQ.jsondata_sales);
                                   },
                                 }),
-                                (0, B.uX)(e),
+                                (0, G.uX)(e),
                               );
                             },
                           },
-                          (0, N.we)("#Sale_DiscountEvent_Add"),
+                          (0, B.we)("#Sale_DiscountEvent_Add"),
                         ),
                       ),
                     ),
                 ),
                 !!(null == ae ? void 0 : ae.length) &&
-                  m.createElement(C.A, {
-                    bDisabled: H != x,
+                  _.createElement(T.A, {
+                    bDisabled: H != R,
                     items: ae,
                     onDelete: (e) => {
                       var n, i, o, r, s, c;
-                      (0, k.wT)(
+                      (0, A.wT)(
                         e >= 0 &&
                           e <
                             (null !==
@@ -8100,33 +8090,33 @@
                     },
                     onReorder: () => a.SetDirty(l.IQ.jsondata_sales),
                     render: (e) =>
-                      m.createElement(s.Y, {
+                      _.createElement(s.Y, {
                         capsule: e,
                         capsuleContainer: t,
                         allowedApps: te,
-                        warning: null == E ? void 0 : E(e),
+                        warning: null == C ? void 0 : C(e),
                       }),
                   }),
                 U.length > 1 &&
-                  m.createElement(h.m, {
-                    strDropDownClassName: b.DropDownScroll,
-                    label: (0, N.we)("#Sale_VisibilityIndex_Label"),
+                  _.createElement(S.m, {
+                    strDropDownClassName: E.DropDownScroll,
+                    label: (0, B.we)("#Sale_VisibilityIndex_Label"),
                     rgOptions: U,
-                    selectedOption: D,
-                    onChange: (e) => L(e.data),
+                    selectedOption: N,
+                    onChange: (e) => x(e.data),
                     bDisableMouseOverlay: !0,
                     contextMenuPositionOptions: {
                       bDisableMouseOverlay: !0,
                       bDisablePopTop: !0,
                     },
                     disabled: 1 == U.length,
-                    strClassName: P.SaleDaySelection,
-                    tooltip: (0, N.we)("#Sale_VisibilityIndex_Tooltip"),
+                    strClassName: O.SaleDaySelection,
+                    tooltip: (0, B.we)("#Sale_VisibilityIndex_Tooltip"),
                   }),
               ),
           );
         });
-      let q = class extends m.Component {
+      let j = class extends _.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -8146,7 +8136,7 @@
           for (const l of t.capsules) {
             if (!l) continue;
             const t =
-              (null === (e = g.A.Get().GetStoreItem(l.id, (0, S.SW)(l.type))) ||
+              (null === (e = p.A.Get().GetStoreItem(l.id, (0, g.SW)(l.type))) ||
               void 0 === e
                 ? void 0
                 : e.GetName()) || "";
@@ -8184,12 +8174,12 @@
             const t = this.ParseCapsuleInfoFromLine(e);
             t && a.push(t);
           }
-          await (0, f.H2)(a, p.Xh);
+          await (0, b.H2)(a, m.Xh);
           let i = "";
           const o = e.GetNumberOfDays();
           for (const e of a)
             if (void 0 !== e.visibility_index && e.visibility_index >= o) {
-              i = (0, N.we)(
+              i = (0, B.we)(
                 "#Sale_EditRaw_Error_InvalidDay",
                 e.id,
                 e.visibility_index,
@@ -8207,52 +8197,52 @@
         }
         render() {
           const { closeModal: e } = this.props;
-          return m.createElement(
-            w.eV,
+          return _.createElement(
+            y.eV,
             {
-              title: (0, N.we)("#Sale_EditRaw_Title"),
+              title: (0, B.we)("#Sale_EditRaw_Title"),
               onCancel: e,
               closeModal: e,
               bDisableBackgroundDismiss: !0,
               bAllowFullSize: !0,
               bHideCloseIcon: this.state.bImporting,
             },
-            m.createElement(
-              h.nB,
+            _.createElement(
+              S.nB,
               null,
-              m.createElement("div", null, (0, N.we)("#Sale_EditRaw_Desc_1")),
-              m.createElement("div", null, (0, N.we)("#Sale_EditRaw_Desc_2")),
-              m.createElement(
+              _.createElement("div", null, (0, B.we)("#Sale_EditRaw_Desc_1")),
+              _.createElement("div", null, (0, B.we)("#Sale_EditRaw_Desc_2")),
+              _.createElement(
                 "div",
-                { className: O.EditRawExample },
-                (0, N.we)("#Sale_EditRaw_Example_Title"),
+                { className: L.EditRawExample },
+                (0, B.we)("#Sale_EditRaw_Example_Title"),
               ),
-              m.createElement(
+              _.createElement(
                 "div",
-                { className: O.EditRawExample },
-                (0, N.we)("#Sale_EditRaw_Example_1"),
+                { className: L.EditRawExample },
+                (0, B.we)("#Sale_EditRaw_Example_1"),
               ),
-              m.createElement(
+              _.createElement(
                 "div",
-                { className: O.EditRawExample },
-                (0, N.we)("#Sale_EditRaw_Example_2"),
+                { className: L.EditRawExample },
+                (0, B.we)("#Sale_EditRaw_Example_2"),
               ),
-              m.createElement(
+              _.createElement(
                 "div",
-                { className: O.EditRawExample },
-                (0, N.we)("#Sale_EditRaw_Example_3"),
+                { className: L.EditRawExample },
+                (0, B.we)("#Sale_EditRaw_Example_3"),
               ),
               Boolean(this.state.errMsg) &&
-                m.createElement(
+                _.createElement(
                   "p",
-                  { className: E.ErrorStyles },
+                  { className: v.ErrorStyles },
                   this.state.errMsg,
                 ),
               this.state.bImporting &&
-                m.createElement(D.t, { size: "medium", position: "center" }),
+                _.createElement(C.t, { size: "medium", position: "center" }),
               !this.state.bImporting &&
-                m.createElement("textarea", {
-                  className: O.EditRawTextArea,
+                _.createElement("textarea", {
+                  className: L.EditRawTextArea,
                   value: this.state.editValue,
                   cols: 40,
                   rows: 30,
@@ -8260,28 +8250,28 @@
                 }),
             ),
             !this.state.bImporting &&
-              m.createElement(
-                h.wi,
+              _.createElement(
+                S.wi,
                 null,
-                m.createElement(
-                  h.jn,
+                _.createElement(
+                  S.jn,
                   { onClick: this.OnCompleteEdit, disabled: !1 },
-                  (0, N.we)("#Button_Confirm"),
+                  (0, B.we)("#Button_Confirm"),
                   " ",
                 ),
-                m.createElement(
-                  h.$n,
+                _.createElement(
+                  S.$n,
                   { onClick: e, disabled: !1 },
-                  (0, N.we)("#Button_Cancel"),
+                  (0, B.we)("#Button_Cancel"),
                 ),
               ),
           );
         }
       };
-      (0, n.Cg)([L.oI], q.prototype, "OnCompleteEdit", null),
-        (0, n.Cg)([L.oI], q.prototype, "DoImport", null),
-        (0, n.Cg)([L.oI], q.prototype, "OnTextChange", null),
-        (q = (0, n.Cg)([u.PA], q));
+      (0, n.Cg)([N.oI], j.prototype, "OnCompleteEdit", null),
+        (0, n.Cg)([N.oI], j.prototype, "DoImport", null),
+        (0, n.Cg)([N.oI], j.prototype, "OnTextChange", null),
+        (j = (0, n.Cg)([u.PA], j));
     },
     16989: (e, t, a) => {
       "use strict";
@@ -9468,7 +9458,10 @@
             ),
             (v.current = u));
         }, [u]);
-        const E = (0, s.q3)(() => (0, O.dy)() === u.unique_id);
+        const [E, b] = (0, s.q3)(() => [
+          (0, O.dy)() === u.unique_id,
+          u.sale_tag_filter,
+        ]);
         return c.createElement(
           "div",
           { className: B.SelectedTabDetailsCtn },
@@ -9516,6 +9509,7 @@
                 disableDaySelection: !1,
                 titleLocToken: "#Sale_Tabs_ItemTitle",
                 ttipLocToken: "#Sale_Tabs_ItemTitle_ttip",
+                filterMode: b ? 1 : 0,
               }),
             ),
           c.createElement(m.Yh, {
@@ -17281,18 +17275,24 @@
       }
       function Ga(e) {
         const { saleSection: t, editModel: a } = e,
-          [n] = (0, s.q3)(() => [t.unique_id]);
-        return c.createElement(
-          c.Fragment,
-          null,
-          c.createElement(rt, { editModel: a, saleSection: t }),
-          c.createElement(We, { saleSection: t, editModel: a }),
-          c.createElement(Aa.ip, {
-            uniqueKey: "Section" + n,
-            capsuleContainer: t,
-            editModel: a,
-          }),
-          c.createElement(Ye, { saleSection: t, ...e }),
+          [n] = (0, s.q3)(() => [t.unique_id]),
+          [l, i] = (0, s.q3)(() => [t.smart_section, t.smart_section_type]);
+        let o = 0;
+        return (
+          l && (o = null == i ? 1 : 2),
+          c.createElement(
+            c.Fragment,
+            null,
+            c.createElement(rt, { editModel: a, saleSection: t }),
+            c.createElement(We, { saleSection: t, editModel: a }),
+            c.createElement(Aa.ip, {
+              uniqueKey: "Section" + n,
+              capsuleContainer: t,
+              editModel: a,
+              filterMode: o,
+            }),
+            c.createElement(Ye, { saleSection: t, ...e }),
+          )
         );
       }
       function Ba(e) {
@@ -24599,6 +24599,7 @@
                 editModel: t,
                 uniqueKey: "Section" + a.unique_id,
                 disableDaySelection: !0,
+                filterMode: a.sale_tag_filter ? 1 : 0,
               }),
             ),
           Boolean("subscription_pricing" === r) &&

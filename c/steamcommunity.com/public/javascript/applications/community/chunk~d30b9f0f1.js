@@ -8181,48 +8181,42 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = -1,
         _ = (0, _._)((_) => {
-          const { editModel: _, capsuleContainer: __webpack_require__ } = _,
-            [_, _, _] = (0, _._)(() => [
-              __webpack_require__.smart_section,
-              __webpack_require__.smart_section_type,
-              __webpack_require__.sale_tag_filter,
-            ]);
-          let _ = "manual";
-          return (
-            _ && (_ = null == _ ? "linked_app_list" : "smart_section"),
-            _.createElement(
-              _._,
-              null,
-              "manual" == _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    ..._,
-                  }),
-                ),
-              "linked_app_list" == _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_, {
-                    ..._,
-                  }),
-                ),
-              "smart_section" == _ &&
-                _.createElement(
-                  _.Fragment,
-                  null,
-                  _.createElement(_._, {
-                    editModel: _,
-                    capsuleContainer: __webpack_require__,
-                  }),
-                ),
-            )
+          const {
+            editModel: _,
+            capsuleContainer: __webpack_require__,
+            filterMode: _,
+          } = _;
+          return _.createElement(
+            _._,
+            null,
+            0 == _ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(_, {
+                  ..._,
+                }),
+              ),
+            1 == _ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(_, {
+                  ..._,
+                }),
+              ),
+            2 == _ &&
+              _.createElement(
+                _.Fragment,
+                null,
+                _.createElement(_._, {
+                  editModel: _,
+                  capsuleContainer: __webpack_require__,
+                }),
+              ),
           );
         });
       function _(_) {
@@ -10351,7 +10345,10 @@
             ),
             (_.current = _));
         }, [_]);
-        const _ = (0, _._)(() => (0, _._)() === _.unique_id);
+        const [_, _] = (0, _._)(() => [
+          (0, _._)() === _.unique_id,
+          _.sale_tag_filter,
+        ]);
         return _.createElement(
           "div",
           {
@@ -10413,6 +10410,7 @@
                 disableDaySelection: !1,
                 titleLocToken: "#Sale_Tabs_ItemTitle",
                 ttipLocToken: "#Sale_Tabs_ItemTitle_ttip",
+                filterMode: _ ? 1 : 0,
               }),
             ),
           _.createElement(_._, {
@@ -19168,27 +19166,33 @@
       }
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
-          [_] = (0, _._)(() => [_.unique_id]);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(_, {
-            editModel: __webpack_require__,
-            saleSection: _,
-          }),
-          _.createElement(_, {
-            saleSection: _,
-            editModel: __webpack_require__,
-          }),
-          _.createElement(_._, {
-            uniqueKey: "Section" + _,
-            capsuleContainer: _,
-            editModel: __webpack_require__,
-          }),
-          _.createElement(_, {
-            saleSection: _,
-            ..._,
-          }),
+          [_] = (0, _._)(() => [_.unique_id]),
+          [_, _] = (0, _._)(() => [_.smart_section, _.smart_section_type]);
+        let _ = 0;
+        return (
+          _ && (_ = null == _ ? 1 : 2),
+          _.createElement(
+            _.Fragment,
+            null,
+            _.createElement(_, {
+              editModel: __webpack_require__,
+              saleSection: _,
+            }),
+            _.createElement(_, {
+              saleSection: _,
+              editModel: __webpack_require__,
+            }),
+            _.createElement(_._, {
+              uniqueKey: "Section" + _,
+              capsuleContainer: _,
+              editModel: __webpack_require__,
+              filterMode: _,
+            }),
+            _.createElement(_, {
+              saleSection: _,
+              ..._,
+            }),
+          )
         );
       }
       function _(_) {
@@ -27232,6 +27236,7 @@
                 editModel: _,
                 uniqueKey: "Section" + __webpack_require__.unique_id,
                 disableDaySelection: !0,
+                filterMode: __webpack_require__.sale_tag_filter ? 1 : 0,
               }),
             ),
           Boolean("subscription_pricing" === _) &&
