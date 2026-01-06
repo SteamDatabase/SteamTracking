@@ -2117,7 +2117,21 @@
                       loc_token: _.target.value,
                     })),
                 }),
-                _.loc_token ? (0, _._)(_.loc_token) : "",
+                _.loc_token &&
+                  _.createElement(_._, null, (0, _._)(_.loc_token)),
+                _.createElement(_._, {
+                  label: "Description Loc Token",
+                  tooltip:
+                    "A localized token explaining this content hub to customers",
+                  value: _.description_loc_token,
+                  onChange: (_) =>
+                    _((_) => ({
+                      ..._,
+                      description_loc_token: _.target.value,
+                    })),
+                }),
+                _.description_loc_token &&
+                  _.createElement(_._, null, (0, _._)(_.description_loc_token)),
               ),
               _.createElement(_._, {
                 label: "Use As A Heading ",

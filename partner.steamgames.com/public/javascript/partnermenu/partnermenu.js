@@ -29265,6 +29265,11 @@ Error generating stack: ` +
                       pbr: A.readPackedUint32,
                       bw: P.writeRepeatedUint32,
                     },
+                    hub_description: {
+                      n: 10,
+                      br: A.readString,
+                      bw: P.writeString,
+                    },
                   },
                 }),
               t.sm_m

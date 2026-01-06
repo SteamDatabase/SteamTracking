@@ -192,9 +192,9 @@
         DT: () => y,
         GX: () => p,
         LD: () => d,
-        fT: () => _,
+        fT: () => h,
         k: () => C,
-        lY: () => h,
+        lY: () => _,
         tV: () => S,
       });
       var s = a(34629),
@@ -243,6 +243,7 @@
               handle: s.handle,
               type: s.type,
               loc_token: s.loc_token,
+              description_loc_token: s.description_loc_token,
               heading: s.heading,
               id: s.id || void 0,
               exclude_from_search: Boolean(s.exclude_from_search),
@@ -278,7 +279,7 @@
         }
         return t;
       }
-      function h() {
+      function _() {
         const [e, t] = (0, o.useState)(null);
         return (
           (0, o.useEffect)(() => {
@@ -289,7 +290,7 @@
           e
         );
       }
-      async function _(e) {
+      async function h(e) {
         const t = {};
         for (const a of e)
           (t[a.handle] = {
@@ -478,12 +479,12 @@
         CU: () => g,
         Iw: () => b,
         Th: () => A,
-        _E: () => _,
+        _E: () => h,
         eX: () => T,
         hl: () => f,
         mg: () => E,
         p$: () => C,
-        tt: () => h,
+        tt: () => _,
       });
       var s = a(34629),
         n = a(41735),
@@ -495,10 +496,10 @@
         u = a(6144),
         p = a(73745),
         c = a(30470);
-      const h = 120,
-        _ = 10;
+      const _ = 120,
+        h = 10;
       class d {
-        m_appAndPackagesSummuries = new o.Q(h);
+        m_appAndPackagesSummuries = new o.Q(_);
         m_mapContentHubSummary = new Map();
         m_mapContentHubToAppCount = new Map();
         m_mapContentHubSummaryPromises = new Map();
@@ -583,7 +584,7 @@
             net_units_sold: 0,
           };
           return (
-            n.slice(0, _).forEach((e) => {
+            n.slice(0, h).forEach((e) => {
               (r.gross_sales_usd += e.gross_sales_usd),
                 (r.gross_units_sold += e.gross_units_sold),
                 (r.net_sales_usd += e.net_sales_usd),
@@ -599,7 +600,7 @@
               this.BuildAnalysis(e),
             ]),
             this.m_summaryAnalysisChange.Dispatch(this.m_rgSummaries),
-            this.SaveToCacheSaleSummary(e, s, r, n.slice(0, _), n.length),
+            this.SaveToCacheSaleSummary(e, s, r, n.slice(0, h), n.length),
             s
           );
         }
@@ -656,8 +657,8 @@
             total_games: n,
             hub_gross_units_sold: a.gross_units_sold,
             hub_gross_sales_usd: Math.floor(a.gross_sales_usd / 100),
-            hub_units_per_day: Math.floor(a.gross_units_sold / h),
-            hub_sales_usd_per_day: Math.floor(a.gross_sales_usd / (100 * h)),
+            hub_units_per_day: Math.floor(a.gross_units_sold / _),
+            hub_sales_usd_per_day: Math.floor(a.gross_sales_usd / (100 * _)),
             top_apps_percent:
               a.gross_sales_usd > 0
                 ? ((s.gross_sales_usd / a.gross_sales_usd) * 100).toFixed(2)
@@ -885,7 +886,7 @@
         W7: () => G,
         hp: () => C,
         iT: () => T,
-        ny: () => N,
+        ny: () => k,
       });
       var s = a(562),
         n = a(31376),
@@ -897,8 +898,8 @@
         u = a(29863),
         p = a(96236),
         c = a(22797),
-        h = a(52038),
-        _ = a(61859),
+        _ = a(52038),
+        h = a(61859),
         d = a(82227),
         g = a(30470),
         S = a(92237);
@@ -980,7 +981,7 @@
                 m.createElement(A, { key: a, category: e, bSaleSummary: t }),
               ),
             )
-          : m.createElement(c.t, { string: (0, _.we)("#Loading") });
+          : m.createElement(c.t, { string: (0, h.we)("#Loading") });
       }
       function A(e) {
         const { category: t, bSaleSummary: a } = e;
@@ -1001,7 +1002,7 @@
               : ((a = S.SizeColorSmall), (s = "Too small")),
           m.createElement(
             "div",
-            { className: (0, h.A)(S.ThemeSize, a) },
+            { className: (0, _.A)(S.ThemeSize, a) },
             (0, d.Dq)(t),
             " games ( ",
             s,
@@ -1025,13 +1026,13 @@
                 href: `${g.TS.STORE_BASE_URL}category/${t.handle}`,
                 className: S.ThemeTitle,
               },
-              t.loc_token ? (0, _.we)(t.loc_token) : t.handle,
+              t.loc_token ? (0, h.we)(t.loc_token) : t.handle,
             ),
             m.createElement(b, { nTotalGames: r }),
             m.createElement(
               "div",
               { className: S.SaleStats },
-              Boolean(a && o) && m.createElement(k, { category: t }),
+              Boolean(a && o) && m.createElement(N, { category: t }),
             ),
           ),
           m.createElement(
@@ -1199,7 +1200,7 @@
               ", ",
             );
       }
-      function N(e) {
+      function k(e) {
         const { saleSummary: t, topAppSummary: a } = e;
         return t
           ? m.createElement(
@@ -1284,11 +1285,11 @@
               string: "Loading Sale Info",
             });
       }
-      function k(e) {
+      function N(e) {
         const { category: t } = e,
           a = (0, n.Th)(t),
           s = (0, n.hl)(t);
-        return m.createElement(N, { saleSummary: a, topAppSummary: s });
+        return m.createElement(k, { saleSummary: a, topAppSummary: s });
       }
       function L(e) {
         const t = (0, n.AY)();

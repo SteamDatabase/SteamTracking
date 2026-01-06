@@ -257,6 +257,7 @@
               handle: _.handle,
               type: _.type,
               loc_token: _.loc_token,
+              description_loc_token: _.description_loc_token,
               heading: _.heading,
               _: _._ || void 0,
               exclude_from_search: Boolean(_.exclude_from_search),

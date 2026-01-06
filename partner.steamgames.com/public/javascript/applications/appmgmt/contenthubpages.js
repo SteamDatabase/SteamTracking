@@ -476,252 +476,252 @@
       function b(e, t) {
         return e.startsWith("text") ? `var(--color-${e}-${t})` : C(e);
       }
-      var S = n(88122);
-      const x = [
-          { prop: "margin", responsive: !0, className: (e) => S[`m-${e}`] },
-          { prop: "marginX", responsive: !0, className: (e) => S[`mx-${e}`] },
-          { prop: "marginY", responsive: !0, className: (e) => S[`my-${e}`] },
-          { prop: "marginTop", responsive: !0, className: (e) => S[`mt-${e}`] },
+      var x = n(88122);
+      const S = [
+          { prop: "margin", responsive: !0, className: (e) => x[`m-${e}`] },
+          { prop: "marginX", responsive: !0, className: (e) => x[`mx-${e}`] },
+          { prop: "marginY", responsive: !0, className: (e) => x[`my-${e}`] },
+          { prop: "marginTop", responsive: !0, className: (e) => x[`mt-${e}`] },
           {
             prop: "marginRight",
             responsive: !0,
-            className: (e) => S[`mr-${e}`],
+            className: (e) => x[`mr-${e}`],
           },
           {
             prop: "marginBottom",
             responsive: !0,
-            className: (e) => S[`mb-${e}`],
+            className: (e) => x[`mb-${e}`],
           },
           {
             prop: "marginLeft",
             responsive: !0,
-            className: (e) => S[`ml-${e}`],
+            className: (e) => x[`ml-${e}`],
           },
           {
             prop: "marginStart",
             responsive: !0,
-            className: (e) => S[`ms-${e}`],
+            className: (e) => x[`ms-${e}`],
           },
-          { prop: "marginEnd", responsive: !0, className: (e) => S[`me-${e}`] },
+          { prop: "marginEnd", responsive: !0, className: (e) => x[`me-${e}`] },
         ],
         A = [
-          ...x,
-          { prop: "padding", responsive: !0, className: (e) => S[`p-${e}`] },
-          { prop: "paddingX", responsive: !0, className: (e) => S[`px-${e}`] },
-          { prop: "paddingY", responsive: !0, className: (e) => S[`py-${e}`] },
+          ...S,
+          { prop: "padding", responsive: !0, className: (e) => x[`p-${e}`] },
+          { prop: "paddingX", responsive: !0, className: (e) => x[`px-${e}`] },
+          { prop: "paddingY", responsive: !0, className: (e) => x[`py-${e}`] },
           {
             prop: "paddingTop",
             responsive: !0,
-            className: (e) => S[`pt-${e}`],
+            className: (e) => x[`pt-${e}`],
           },
           {
             prop: "paddingRight",
             responsive: !0,
-            className: (e) => S[`pr-${e}`],
+            className: (e) => x[`pr-${e}`],
           },
           {
             prop: "paddingBottom",
             responsive: !0,
-            className: (e) => S[`pb-${e}`],
+            className: (e) => x[`pb-${e}`],
           },
           {
             prop: "paddingLeft",
             responsive: !0,
-            className: (e) => S[`pl-${e}`],
+            className: (e) => x[`pl-${e}`],
           },
           {
             prop: "paddingStart",
             responsive: !0,
-            className: (e) => S[`ps-${e}`],
+            className: (e) => x[`ps-${e}`],
           },
           {
             prop: "paddingEnd",
             responsive: !0,
-            className: (e) => S[`pe-${e}`],
+            className: (e) => x[`pe-${e}`],
           },
           {
             prop: "width",
             responsive: !0,
-            className: S.Width,
+            className: x.Width,
             cssProperty: "--width",
           },
           {
             prop: "minWidth",
             responsive: !0,
-            className: S.MinWidth,
+            className: x.MinWidth,
             cssProperty: "--min-width",
           },
           {
             prop: "maxWidth",
             responsive: !0,
-            className: S.MaxWidth,
+            className: x.MaxWidth,
             cssProperty: "--max-width",
           },
           {
             prop: "height",
             responsive: !0,
-            className: S.Height,
+            className: x.Height,
             cssProperty: "--height",
           },
           {
             prop: "minHeight",
             responsive: !0,
-            className: S.MinHeight,
+            className: x.MinHeight,
             cssProperty: "--min-height",
           },
           {
             prop: "maxHeight",
             responsive: !0,
-            className: S.MaxHeight,
+            className: x.MaxHeight,
             cssProperty: "--max-height",
           },
           {
             prop: "flexBasis",
             responsive: !0,
-            className: S.FlexBasis,
+            className: x.FlexBasis,
             cssProperty: "--flex-basis",
           },
           {
             prop: "flexGrow",
             responsive: !0,
-            className: S.FlexGrow,
+            className: x.FlexGrow,
             cssProperty: "--flex-grow",
           },
           {
             prop: "flexShrink",
             responsive: !0,
-            className: S.FlexShrink,
+            className: x.FlexShrink,
             cssProperty: "--flex-shrink",
           },
           {
             prop: "radius",
             responsive: !0,
-            className: (e) => S[`Radius-${e}`],
+            className: (e) => x[`Radius-${e}`],
           },
           {
             prop: "cursor",
             responsive: !0,
-            className: S.Cursor,
+            className: x.Cursor,
             cssProperty: "--cursor",
           },
           {
             prop: "position",
             responsive: !0,
-            className: S.Position,
+            className: x.Position,
             cssProperty: "--position",
           },
           {
             prop: "inset",
             responsive: !0,
-            className: S.Inset,
+            className: x.Inset,
             cssProperty: (e) => ["--inset", E(e)],
           },
           {
             prop: "gridColumn",
             responsive: !0,
-            className: S.GridColumn,
+            className: x.GridColumn,
             cssProperty: "--grid-column",
           },
           {
             prop: "gridColumnStart",
             responsive: !0,
-            className: S.GridColumnStart,
+            className: x.GridColumnStart,
             cssProperty: "--grid-column-start",
           },
           {
             prop: "gridColumnEnd",
             responsive: !0,
-            className: S.GridColumnEnd,
+            className: x.GridColumnEnd,
             cssProperty: "--grid-column-end",
           },
           {
             prop: "gridRow",
             responsive: !0,
-            className: S.GridRow,
+            className: x.GridRow,
             cssProperty: "--grid-row",
           },
           {
             prop: "gridRowStart",
             responsive: !0,
-            className: S.GridRowStart,
+            className: x.GridRowStart,
             cssProperty: "--grid-row-start",
           },
           {
             prop: "gridRowEnd",
             responsive: !0,
-            className: S.GridRowEnd,
+            className: x.GridRowEnd,
             cssProperty: "--grid-row-end",
           },
           {
             prop: "gridArea",
             responsive: !0,
-            className: S.GridArea,
+            className: x.GridArea,
             cssProperty: "--grid-area",
           },
           {
             prop: "alignSelf",
             responsive: !0,
-            className: S.AlignSelf,
+            className: x.AlignSelf,
             cssProperty: "--align-self",
           },
           {
             prop: "justifySelf",
             responsive: !0,
-            className: S.JustifySelf,
+            className: x.JustifySelf,
             cssProperty: "--justify-self",
           },
           {
             prop: "background",
             responsive: !0,
-            className: S.Background,
+            className: x.Background,
             cssProperty: (e) => ["--background", C(e)],
           },
           {
             prop: "overflow",
             responsive: !0,
-            className: S.Overflow,
+            className: x.Overflow,
             cssProperty: "--overflow",
           },
           {
             prop: "zIndex",
             responsive: !0,
-            className: S.ZIndex,
+            className: x.ZIndex,
             cssProperty: "--z-index",
           },
           {
             prop: "display",
             responsive: !0,
-            className: S.Display,
+            className: x.Display,
             cssProperty: "--display",
           },
           {
             prop: "elevation",
             responsive: !0,
-            className: S.Elevation,
+            className: x.Elevation,
             dataProperty: "elevation",
           },
           {
             prop: "border",
             responsive: !0,
-            className: S.Border,
+            className: x.Border,
             cssProperty: "--border",
           },
           {
             prop: "borderColor",
             responsive: !0,
-            className: [S.Border, S.BorderColor].join(" "),
+            className: [x.Border, x.BorderColor].join(" "),
             cssProperty: (e) => ["--border-color", C(e)],
           },
           {
             prop: "outline",
             responsive: !0,
-            className: S.Outline,
+            className: x.Outline,
             cssProperty: (e) => ["--outline-color", C(e)],
           },
           {
             prop: "textAlign",
             responsive: !0,
-            className: S.TextAlign,
+            className: x.TextAlign,
             cssProperty: "--text-align",
           },
         ];
@@ -820,15 +820,15 @@
           }),
         ];
       }
-      const B = (0, r.createContext)(null);
-      const z = function (e) {
+      const z = (0, r.createContext)(null);
+      const B = function (e) {
           const { children: t, state: n } = e;
-          return r.createElement(B.Provider, { value: n }, t);
+          return r.createElement(z.Provider, { value: n }, t);
         },
         F = function (e) {
           const { children: t } = e,
             n = r.Children.only(t),
-            a = (0, r.useContext)(B),
+            a = (0, r.useContext)(z),
             o = (0, m.SV)([a?.floating.refs.setReference, n?.props.ref]);
           if (!n) return null;
           if (!a)
@@ -843,7 +843,7 @@
         },
         G = function (e) {
           const { children: t, render: n, ref: a } = e,
-            o = (0, r.useContext)(B),
+            o = (0, r.useContext)(z),
             s = (0, m.SV)([a, o?.floating.refs.setFloating]);
           return o
             ? o.open
@@ -885,7 +885,7 @@
               disabled: l,
               ...i
             } = e,
-            c = (0, r.useContext)(B),
+            c = (0, r.useContext)(z),
             { ref: p, index: u } = (0, m.rm)({ label: n }),
             d = (0, m.SV)([s, p]);
           if (!c)
@@ -1025,7 +1025,7 @@
         });
       }
       const K = [
-          ...x,
+          ...S,
           {
             prop: "size",
             responsive: !0,
@@ -1111,7 +1111,7 @@
             cssProperty: "--white-space",
           },
         ],
-        ...x,
+        ...S,
         { prop: "size", responsive: !0, className: (e) => q[`TextSize-${e}`] },
       ];
       function ee(e) {
@@ -1299,15 +1299,15 @@
                   onMatch: d ? o : l,
                   onTypingChange: (e) => (C.current = e),
                 }),
-                S = (0, m.It)(g.context, { role: c }),
+                x = (0, m.It)(g.context, { role: c }),
                 {
-                  getFloatingProps: x,
+                  getFloatingProps: S,
                   getReferenceProps: A,
                   getItemProps: N,
-                } = (0, m.bv)([S, h, f, _, y, b]);
+                } = (0, m.bv)([x, h, f, _, y, b]);
               return {
                 floating: g,
-                getFloatingProps: x,
+                getFloatingProps: S,
                 getReferenceProps: A,
                 getItemProps: N,
                 open: d,
@@ -1336,7 +1336,7 @@
           return r.createElement(
             de.Provider,
             { value: d },
-            r.createElement(z, { state: g }, t),
+            r.createElement(B, { state: g }, t),
           );
         },
         Option: function (e) {
@@ -1388,15 +1388,15 @@
               placeholder: C,
               ...b
             } = ge("<SelectTrigger>"),
-            S = {
+            x = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => o(!a),
               children: t,
             },
-            x = m ? Array.isArray(s) && s.length > 0 : !!s,
+            S = m ? Array.isArray(s) && s.length > 0 : !!s,
             A =
-              x && f
+              S && f
                 ? r.createElement(ee, {
                     onClick: u,
                     cursor: "pointer",
@@ -1410,11 +1410,11 @@
                 variant: l,
                 size: i,
                 radius: c,
-                hasValue: x,
+                hasValue: S,
                 tabIndex: 0,
                 ...b,
               }),
-              S,
+              x,
               void 0,
             );
           return r.createElement(F, null, N);
@@ -1544,8 +1544,8 @@
         Ee = n(9154),
         Ce = n(738),
         be = n(56654),
-        Se = n(12155),
-        xe = n(22797);
+        xe = n(12155),
+        Se = n(22797);
       n(41735), n(78327);
       let Ae = new Map();
       Ae.set(2, 5), Ae.set(1, 5), Ae.set(4, 1), Ae.set(3, 4);
@@ -1611,7 +1611,7 @@
                   { className: De().UnpublishedChangesNotice },
                   "You have unpublished changes. Click Publish below to publish and make them available to users.",
                 ),
-              r.createElement(Be, { categories: e, onUpdate: p }),
+              r.createElement(ze, { categories: e, onUpdate: p }),
               r.createElement(
                 "div",
                 { className: De().ActionButtonCtn },
@@ -1634,7 +1634,7 @@
                     : r.createElement(
                         r.Fragment,
                         null,
-                        r.createElement(Se.Jlk, null),
+                        r.createElement(xe.Jlk, null),
                         "Saved",
                       ),
                 ),
@@ -1651,9 +1651,9 @@
                 ),
               ),
             )
-          : r.createElement(xe.t, { size: "medium", position: "center" });
+          : r.createElement(Se.t, { size: "medium", position: "center" });
       });
-      function Be(e) {
+      function ze(e) {
         const { categories: t, onUpdate: n } = e,
           { rgTags: a } = (0, l.DT)(),
           [o] = (0, Te.QD)("edit");
@@ -1698,7 +1698,7 @@
           ),
         );
       }
-      function ze(e) {
+      function Be(e) {
         const { rgTags: t, replacesTags: n } = e,
           a = (0, r.useMemo)(
             () =>
@@ -1757,7 +1757,7 @@
             r.createElement(
               "div",
               { className: De().ReplacesTags },
-              r.createElement(ze, { rgTags: n, replacesTags: t.replaces_tags }),
+              r.createElement(Be, { rgTags: n, replacesTags: t.replaces_tags }),
             ),
             r.createElement(
               Ee.EN,
@@ -1817,7 +1817,22 @@
                   onChange: (e) =>
                     o((t) => ({ ...t, loc_token: e.target.value })),
                 }),
-                a.loc_token ? (0, i.we)(a.loc_token) : "",
+                a.loc_token &&
+                  r.createElement(ye.a3, null, (0, i.we)(a.loc_token)),
+                r.createElement(ye.pd, {
+                  label: "Description Loc Token",
+                  tooltip:
+                    "A localized token explaining this content hub to customers",
+                  value: a.description_loc_token,
+                  onChange: (e) =>
+                    o((t) => ({ ...t, description_loc_token: e.target.value })),
+                }),
+                a.description_loc_token &&
+                  r.createElement(
+                    ye.a3,
+                    null,
+                    (0, i.we)(a.description_loc_token),
+                  ),
               ),
               r.createElement(ye.Yh, {
                 label: "Use As A Heading ",
@@ -1981,7 +1996,7 @@
         const { category: t } = e,
           n = (0, he.p$)(t.must, t.any, t.mustnot);
         if (!n)
-          return r.createElement(xe.t, {
+          return r.createElement(Se.t, {
             string: (0, i.we)("#Loading"),
             position: "center",
             size: "medium",
@@ -2155,7 +2170,7 @@
             },
             Boolean(o)
               ? r.createElement("div", null, "Error: ", o)
-              : r.createElement(xe.t, { size: "medium", position: "center" }),
+              : r.createElement(Se.t, { size: "medium", position: "center" }),
           )
         );
       }
@@ -2193,7 +2208,7 @@
                 null,
                 Boolean(s)
                   ? r.createElement("div", null, "Error: ", s)
-                  : r.createElement(xe.t, {
+                  : r.createElement(Se.t, {
                       size: "medium",
                       position: "center",
                     }),
@@ -2352,13 +2367,13 @@
             rowClassName: E,
           } = e,
           [C, b] = r.useState(!1),
-          [S, x] = r.useState(void 0),
+          [x, S] = r.useState(void 0),
           [A, N] = r.useState(void 0),
           [w, k] = r.useState(-1),
           [P, I] = r.useState(void 0),
           [R, D] = r.useState(0),
           [T, L] = r.useState(0),
-          [B, z] = r.useState(void 0),
+          [z, B] = r.useState(void 0),
           [F, G] = r.useState(""),
           W = r.useRef(void 0),
           O = r.useRef([]),
@@ -2377,11 +2392,11 @@
             (e) => {
               const t = O.current[w]?.current;
               t
-                ? ((t.style.left = e.clientX - S + "px"),
+                ? ((t.style.left = e.clientX - x + "px"),
                   (t.style.top = e.clientY - A + "px"))
                 : console.error("update grab element missing element");
             },
-            [w, S, A],
+            [w, x, A],
           ),
           j = r.useCallback(() => {
             const e = O.current[w]?.current;
@@ -2390,7 +2405,7 @@
               : console.error("end element drag missing element"),
               b(!1),
               k(-1),
-              z(void 0),
+              B(void 0),
               I(void 0);
           }, [w]),
           Y = (e, t) => {
@@ -2406,9 +2421,9 @@
                   return void console.error(
                     "start element grab missing element at index " + e,
                   );
-                b(!0), k(e), z(void 0), I(e);
+                b(!0), k(e), B(void 0), I(e);
                 const r = t.clientX - n.getBoundingClientRect().left;
-                x(r);
+                S(r);
                 const a = t.clientY - n.getBoundingClientRect().top;
                 N(a),
                   (n.style.position = "fixed"),
@@ -2457,7 +2472,7 @@
               O.current.push(r.createRef()), H.current.push(r.createRef());
           }, [t.length]);
         const Q = (e) => {
-            z(void 0);
+            B(void 0);
             const t = F?.trim(),
               n = Number.parseInt(t);
             if (0 == t.length || isNaN(n)) return;
@@ -2521,7 +2536,7 @@
                 r.createElement("input", {
                   className: (0, f.A)(c().WhitelistNumber, y && c().Disabled),
                   type: "text",
-                  value: B == a ? F : a + 1,
+                  value: z == a ? F : a + 1,
                   disabled: y || a == w,
                   onChange: (e) => G(e.target.value),
                   onKeyDown: (e) =>
@@ -2529,7 +2544,7 @@
                       "Enter" === e.key && (Q(t), e.currentTarget.blur());
                     })(e, a),
                   onFocus: (e) => {
-                    z(a), G(e.target.value);
+                    B(a), G(e.target.value);
                   },
                   onBlur: () => Q(a),
                 }),

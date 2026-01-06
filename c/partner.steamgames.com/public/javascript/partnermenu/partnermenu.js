@@ -30615,6 +30615,11 @@ Error generating stack: ` +
                       pbr: _.readPackedUint32,
                       _: _.writeRepeatedUint32,
                     },
+                    hub_description: {
+                      _: 10,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
                   },
                 }),
               _.sm_m

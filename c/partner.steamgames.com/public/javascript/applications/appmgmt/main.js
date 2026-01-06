@@ -15289,6 +15289,11 @@
                     pbr: _._.readPackedUint32,
                     _: _._.writeRepeatedUint32,
                   },
+                  hub_description: {
+                    _: 10,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
