@@ -4524,8 +4524,8 @@ SellItemDialog = {
 	RecalculateTotal: function( nAmount, quantity ) {
 		if ( quantity > 0 )
 		{
-			$( 'market_sell_dialog_total_youreceive_amount' ).update( v_currencyformat( nAmount * quantity,
-				GetCurrencyCode( g_rgWalletInfo['wallet_currency'] )
+			$( 'market_sell_dialog_total_youreceive_amount' ).update(
+				v_currencyformat( nAmount * quantity, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] )
 			) );
 			this.HighlightPrices();
 		}

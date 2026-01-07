@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Цей предмет є поширеним товаром, тому всі його копії практично ідентичні. Індивідуальні пропозиції не доступні; натомість ви можете оформити замовлення на купівлю за конкретною ціною. Найдешевша пропозиція буде автоматично зіставлена із найдорожчим замовленням на купівлю.",
 	"Search_AmountFound": "Знайдені результати: %1$s",
 	"Search_AmountFound_Plural": "Знайдені результати: %1$s",
-	"Search_ListingsFound": "Знайдені пропозиції: %1$s",
-	"Search_ListingsFound_Plural": "Знайдені пропозиції: %1$s",
+	"Search_ListingsFound": "Знайдені пропозиції: %2$s",
+	"Search_ListingsFound_Plural": "Знайдені пропозиції: %2$s",
 	"SortBy_Name_Asc": "Назва (від А до Я)",
 	"SortBy_Name_Desc": "Назва (від Я до А)",
 	"SortBy_Price_Asc": "Ціна (за зростанням)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Інформація про важливі властивості деяких старіших предметів міститься в їхніх текстових описах, які не доступні через вибрані фільтри. Завдяки цій опції система шукатиме текст вашого запиту не лише в назвах предметів, але й у повних описах.",
 	"MarketSearch_FilterColumn_Header": "Фільтри",
 	"MarketSearch_Reset": "Скинути пошук",
-	"Listings_Filter_Placeholder": "Фільтрувати пропозиції…",
+	"Listings_TextFilter_Placeholder": "Введіть текст для фільтра…",
 	"Economy_Market_Purchase_Restrictions": "Після покупки цей предмет:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "не можна обмінювати протягом 1 дня",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "не можна обмінювати протягом 1 тижня",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Вибачте!",
 	"Error_Encountered": "Під час обробки вашого запиту сталася помилка:",
 	"Error_TooManyRequests_Description": "Ви надіслали забагато запитів за останній час. Зачекайте і спробуйте надіслати запит пізніше.",
-	"Container_ContentsLabel": "Можливий вміст:"
+	"Container_ContentsLabel": "Можливий вміст:",
+	"Error_LoadingContent": "Під час завантаження цього вмісту сталася помилка",
+	"Error_LoadingMarketItem": "Цей предмет не існує або не завантажується через тимчасову помилку. Спробуйте пізніше.",
+	"ListingFilter_Title": "Фільтрувати пропозиції"
 }`);
     },
   },

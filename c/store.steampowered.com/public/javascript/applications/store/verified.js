@@ -46,6 +46,7 @@
         TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
         VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
         ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
+        AutoAdvanceBar: "_3F82OZtnlZ8bcDCZZT1TSF",
         ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
         CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
         ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
@@ -2768,6 +2769,7 @@
           is_maincap: _,
           is_expanded_maincap: _,
           is_expanded_display: _,
+          show_auto_advance_bar: _,
         } = _;
         if (!_) return null;
         if (__webpack_require__)
@@ -2832,6 +2834,16 @@
                 }),
               ),
             ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().AutoAdvanceBar,
+                },
+                _.createElement("div", {
+                  className: _().ShineCtn,
+                }),
+              ),
           );
         if (_)
           return _.createElement(

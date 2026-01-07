@@ -39,7 +39,7 @@
 	"Search_AmountFound": "A fost găsit un rezultat",
 	"Search_AmountFound_Plural": "Au fost găsite %1$s rezultate",
 	"Search_ListingsFound": "A fost găsită o listare",
-	"Search_ListingsFound_Plural": "Au fost găsite %1$s listări",
+	"Search_ListingsFound_Plural": "Au fost găsite %2$s listări",
 	"SortBy_Name_Asc": "Nume (A-Z)",
 	"SortBy_Name_Desc": "Nume (Z-A)",
 	"SortBy_Price_Asc": "Preț (crescător)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Unele obiecte mai vechi utilizează descrieri textuale pentru proprietățile importante, iar acestea nu sunt accesibile cu ajutorul filtrelor de mai jos. Opțiunea aceasta îți va permite să cauți text nu doar în denumirile obiectelor, ci și în descrierile lor textuale.",
 	"MarketSearch_FilterColumn_Header": "Filtre",
 	"MarketSearch_Reset": "Resetează căutarea",
-	"Listings_Filter_Placeholder": "Filtrează listările...",
+	"Listings_TextFilter_Placeholder": "Introdu un text de filtrare personalizat...",
 	"Economy_Market_Purchase_Restrictions": "După achiziționare, acest obiect:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "nu va putea fi dat la schimb timp de o zi",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "nu va putea fi dat la schimb timp de o săptămână",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Scuze!",
 	"Error_Encountered": "A apărut o eroare în timpul procesării:",
 	"Error_TooManyRequests_Description": "Ai făcut prea multe solicitări recent. Te rugăm să aștepți și să retrimiți solicitarea mai târziu.",
-	"Container_ContentsLabel": "Conținut posibil:"
+	"Container_ContentsLabel": "Conținut posibil:",
+	"Error_LoadingContent": "A apărut o problemă la încărcarea acestui conținut.",
+	"Error_LoadingMarketItem": "Este posibil ca obiectul solicitat să nu existe. De asemenea, poate exista o problemă temporară care împiedică încărcarea acestui obiect. Te rugăm să încerci din nou mai târziu.",
+	"ListingFilter_Title": "Filtrează listările"
 }`);
     },
   },

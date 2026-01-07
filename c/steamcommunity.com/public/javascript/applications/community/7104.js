@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Denne genstand er en handelsvare, hvor alle de individuelle genstande reelt set er identiske. Individuelle opslag kan ikke tilgås. I stedet kan du lave en købsordre om at købe til en bestemt pris, hvor det billigste opslag automatisk matches med den højeste købsordre.",
 	"Search_AmountFound": "Fandt %1$s resultat",
 	"Search_AmountFound_Plural": "Fandt %1$s resultater",
-	"Search_ListingsFound": "Fandt %1$s opslag",
-	"Search_ListingsFound_Plural": "Fandt %1$s opslag",
+	"Search_ListingsFound": "Fandt %2$s opslag",
+	"Search_ListingsFound_Plural": "Fandt %2$s opslag",
 	"SortBy_Name_Asc": "Navn (A til Z)",
 	"SortBy_Name_Desc": "Navn (Z til A)",
 	"SortBy_Price_Asc": "Pris (lav til høj)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Visse ældre genstande bruger tekstbeskrivelser til vigtige egenskaber, som ikke er tilgængelige med filtrene nedenfor. Denne indstilling gør det muligt at se, om søgeteksten passer med den fulde beskrivelse i stedet for kun genstandens navn.",
 	"MarketSearch_FilterColumn_Header": "Filtre",
 	"MarketSearch_Reset": "Nulstil søgning",
-	"Listings_Filter_Placeholder": "Filtrer opslag...",
+	"Listings_TextFilter_Placeholder": "Indtast brugerdefineret filtertekst...",
 	"Economy_Market_Purchase_Restrictions": "Efter du køber denne genstand:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "kan den ikke byttes i én dag",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "kan den ikke byttes i én uge",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Beklager!",
 	"Error_Encountered": "Der opstod en fejl ved behandling af anmodningen:",
 	"Error_TooManyRequests_Description": "Du har sendt for mange anmodninger for nylig. Vent lidt, og prøv at indsende anmodningen igen senere.",
-	"Container_ContentsLabel": "Muligt indhold:"
+	"Container_ContentsLabel": "Muligt indhold:",
+	"Error_LoadingContent": "Der opstod et problem med at indlæse dette indhold",
+	"Error_LoadingMarketItem": "Den forespurgte genstand eksisterer måske ikke, eller der kan være et midlertidigt problem, der forhindrer genstanden i at blive indlæst. Prøv igen senere.",
+	"ListingFilter_Title": "Filtrer opslag"
 }`);
     },
   },

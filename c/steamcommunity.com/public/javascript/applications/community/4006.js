@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Контент удалён, пользователю выдано предупреждение",
 	"moderation_resolutionstatus_removeandban": "Контент удалён, пользователь заблокирован в центре сообщества",
 	"moderation_resolutionstatus_removeandkick": "Контент удалён, пользователь выгнан из группы",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Неизвестно",
 	"moderationaction_acquitted": "Пользователь оправдан",
 	"moderationaction_cancelled": "Последняя открытая жалоба отменена",

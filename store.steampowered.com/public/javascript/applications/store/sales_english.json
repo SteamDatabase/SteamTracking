@@ -584,6 +584,7 @@
     "YIR_MonthlyCharts_OtherGamesTooltip_AndMore": "and %1$s more...",
     "_comment_YIR_MonthlyCharts_Tooltips": "Where %1$s is the amount of time/percent of time, %2$s is the month as a noun from above tokens, and %3$s is the name of the content",
     "YIR_Percent": "%1$s%",
+    "YIR_Percent_Low": "<%1$s%",
     "YIR_Hours": "%1$s hrs",
     "YIR_Percent_Playtime": "%1$s Playtime",
     "YIR_NewLine_Games": "Game",

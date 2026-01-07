@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Borttagen och varnad",
 	"moderation_resolutionstatus_removeandban": "Borttagen och avstängd från central",
 	"moderation_resolutionstatus_removeandkick": "Borttagen och utkastad från grupp",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Okänt",
 	"moderationaction_acquitted": "Frikänd",
 	"moderationaction_cancelled": "Senaste öppna anmälan avbruten",

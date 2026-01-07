@@ -2218,14 +2218,7 @@ function CancelTrade()
 /* currency transfer in/out of trade */
 function PresentCurrencyDialog( currency )
 {
-	if ( CurrencyIsWalletFunds( currency ) && g_rgWalletInfo['wallet_currency'] != g_rgWalletInfo['wallet_other_currency'] )
-	{
-		CurrencyConversionDialog.Show( currency );
-	}
-	else
-	{
-		CurrencyDialog.Show( currency );
-	}
+	CurrencyDialog.Show( currency );
 }
 
 function UpdateCurrencyDisplay( currency )
@@ -2327,12 +2320,6 @@ CurrencyDialog = {
 		this.m_$Dialog.find('#trade_currency_dialog_error').text('');
 
 		var maximum = this.m_currency.original_amount;
-		if ( this.m_bIsWallet && g_rgWalletInfo['wallet_fee'] )
-		{
-			this.m_$Dialog.find('#trade_currency_fee_amount_percent').text( ( g_rgWalletInfo['wallet_fee_percent'] * 100).toFixed(1) );
-			var feeInfo = CalculateFeeAmount( maximum );
-			maximum = maximum - feeInfo.fees;
-		}
 
 		this.m_$Dialog.find('#trade_currency_input').on( 'keypress', this.OnInputKeyPress.bindAsEventListener(this) );
 		this.m_$Dialog.find('#trade_currency_input').on( 'keyup', this.OnInputKeyUp.bindAsEventListener(this) );
@@ -2353,35 +2340,11 @@ CurrencyDialog = {
 	UpdateRemainingCurrencyDisplay: function() {
 		var inputValue = this.GetInputValueAsInt();
 		var nAmount = inputValue;
-
-		// If we're taking a fee, nAmount must be equal to the amount deducted from the sender's wallet.
-		if ( this.m_bIsWallet && g_rgWalletInfo['wallet_fee'] )
-		{
-			if ( inputValue > 0 )
-			{
-				var feeInfo = CalculateAmountToSendForDesiredReceivedAmount( nAmount );
-				this.m_$Dialog.find('#trade_currency_fee_amount_dollars').text( v_currencyformat( feeInfo.fees, this.m_currency.name ) );
-			}
-			else
-			{
-				this.m_$Dialog.find('#trade_currency_fee_amount_dollars').text( v_currencyformat( 0, this.m_currency.name ) );
-			}
-
-			this.m_$Dialog.find('#trade_currency_fee_total_dollars').text( v_currencyformat( nAmount, this.m_currency.name ) );
-		}
-
 		var nDisplayAmount = this.m_currency.original_amount;
 		if ( nAmount <= this.m_currency.original_amount )
 			nDisplayAmount = this.m_currency.original_amount - nAmount;
 
-		if ( this.m_bIsWallet )
-		{
-			this.m_$Dialog.find('#trade_currency_dialog_remaining_display').text( v_currencyformat( nDisplayAmount, this.m_currency.name ) );
-		}
-		else
-		{
-			this.m_$Dialog.find('#trade_currency_dialog_remaining_display').text( v_numberformat( nDisplayAmount ) );
-		}
+		this.m_$Dialog.find('#trade_currency_dialog_remaining_display').text( v_numberformat( nDisplayAmount ) );
 	},
 
 	DisplayError: function( error ) {
@@ -2427,12 +2390,6 @@ CurrencyDialog = {
 		}
 
 		var xferAmount = this.GetInputValueAsInt();
-
-		if ( this.m_bIsWallet && xferAmount > 0 )
-		{
-			var feeInfo = CalculateAmountToSendForDesiredReceivedAmount( xferAmount );
-			xferAmount = feeInfo.amount;
-		}
 
 		if ( xferAmount > this.m_currency.original_amount )
 		{
@@ -2545,289 +2502,6 @@ WarningDialog = {
 	}
 };
 
-CurrencyConversionDialog = {
-
-	m_bInitialized: false,
-	m_currency: null,
-	m_fnDocumentKeyHandler: null,
-	m_slider: null,
-	m_elSliderHandle: null,
-	m_elSliderProgress: null,
-	m_elSliderCount: null,
-	m_bIgnoreSlider: false,
-	m_bIgnoreConversion: false,
-	m_bIsWallet: false,
-
-	Initialize: function() {
-		$('trade_currency_dialog_conversion_accept').observe( 'click', this.OnAccept.bindAsEventListener(this) );
-		$('trade_currency_dialog_conversion_cancel').observe( 'click', this.OnCancel.bindAsEventListener(this) );
-		$('trade_currency_conversion_input_you').observe( 'keypress', this.OnInputKeyPress.bindAsEventListener(this) );
-		$('trade_currency_conversion_input_you').observe( 'keyup', this.OnInputKeyUp.bindAsEventListener(this) );
-		$('trade_currency_conversion_input_them').observe( 'keypress', this.OnInputKeyPress.bindAsEventListener(this) );
-		$('trade_currency_conversion_input_them').observe( 'keyup', this.OnOtherCurrencyInputKeyUp.bindAsEventListener(this) );
-
-		$('trade_currency_dialog_conversion').style.visibility = 'hidden';
-		$('trade_currency_dialog_conversion').show();
-
-		this.m_elSliderHandle = $('trade_currency_conversion_slider').down('.handle');
-		this.m_slider = new Control.Slider( this.m_elSliderHandle, $('trade_currency_conversion_slider'), {
-			range: $R(0, 1 ),
-			sliderValue: 0,
-			onSlide: this.OnSliderSlide.bind( this ),
-			onChange: this.OnSliderChange.bind( this )
-		});
-		this.m_elSliderProgress = $('trade_currency_conversion_slider_ctn').down('.slider_progress');
-		this.m_elSliderCount = $('trade_currency_conversion_slider_count');
-		$('trade_currency_dialog_conversion').hide();
-		$('trade_currency_dialog_conversion').style.visibility = '';
-		this.m_bInitialized = true;
-	},
-
-	Show: function ( currency ) {
-
-		if ( !this.m_bInitialized )
-			this.Initialize();
-
-		this.m_currency = currency;
-
-		var stack = currency.trade_stack;
-		var amount = stack && stack.amount > 0 ? stack.amount : 1;
-
-		$('trade_currency_conversion_input_you').value = amount;
-
-		$('trade_currency_conversion_input_you').style.color = currency.name_color ? '#' + currency.name_color : '';
-		$('trade_currency_conversion_input_them').style.color = currency.name_color ? '#' + currency.name_color : '';
-		$('trade_currency_dialog_conversion_remaining').style.color = currency.name_color ? '#' + currency.name_color : '';
-		$('trade_currency_dialog_conversion_currencyname1').style.color = currency.name_color ? '#' + currency.name_color : '';
-		$('trade_currency_dialog_conversion_currencyname2').style.color = currency.name_color ? '#' + currency.name_color : '';
-
-		$('trade_currency_dialog_conversion_currencyname1').update( currency.name.escapeHTML() );
-		$('trade_currency_dialog_conversion_username1').update( g_strTradePartnerPersonaName );
-		$('trade_currency_dialog_conversion_currencyname2').update( GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) );
-		$('trade_currency_dialog_conversion_username2').update( g_strTradePartnerPersonaName );
-
-		$('trade_currency_dialog_conversion_error').update('');
-
-		this.m_fnDocumentKeyHandler = this.OnDocumentKeyPress.bindAsEventListener( this );
-		$(document).observe( 'keydown', this.m_fnDocumentKeyHandler );
-
-		var maximum = this.m_currency.original_amount;
-		if ( g_rgWalletInfo['wallet_fee'] )
-		{
-			$('trade_currency_conversion_fee_amount_percent').update( ( g_rgWalletInfo['wallet_fee_percent'] * 100).toFixed(1) );
-			var feeInfo = CalculateFeeAmount( maximum );
-			maximum = maximum - feeInfo.fees;
-		}
-
-		this.m_slider.range = $R( 0, maximum );
-		this.m_slider.maximum = this.m_currency.original_amount;
-		this.m_slider.setValue( amount );
-
-		this.UpdateRemainingCurrencyDisplay();
-
-		showModal( 'trade_currency_dialog_conversion', true );
-		$('trade_currency_conversion_input_you').focus();
-	},
-
-	UpdateRemainingCurrencyDisplay: function() {
-		var inputValue = this.GetInputValueAsInt();
-		var nAmount = inputValue;
-
-		// If we're taking a fee, nAmount must be equal to the amount deducted from the sender's wallet.
-		if ( g_rgWalletInfo['wallet_fee'] )
-		{
-			if ( inputValue > 0 )
-			{
-				var feeInfo = CalculateAmountToSendForDesiredReceivedAmount( nAmount );
-				$('trade_currency_conversion_fee_amount_dollars').update( v_currencyformat( feeInfo.fees, this.m_currency.name.escapeHTML() ) );
-			}
-			else
-			{
-				$('trade_currency_conversion_fee_amount_dollars').update( v_currencyformat( 0, this.m_currency.name.escapeHTML() ) );
-			}
-
-			$('trade_currency_conversion_fee_total_dollars').update( v_currencyformat( nAmount, this.m_currency.name.escapeHTML() ) );
-		}
-
-		var nDisplayAmount = this.m_currency.original_amount;
-		if ( nAmount <= this.m_currency.original_amount )
-			nDisplayAmount = this.m_currency.original_amount - nAmount;
-
-		$('trade_currency_dialog_conversion_remaining_display').update( v_currencyformat( nDisplayAmount, this.m_currency.name.escapeHTML() ) );
-	},
-
-	DisplayError: function( error ) {
-		$('trade_currency_dialog_conversion_error').update( error );
-		$('trade_currency_dialog_conversion_error').style.color = '#ffffff';
-		new Effect.Morph( $('trade_currency_dialog_conversion_error'), { style: {color: '#ff0000'}, duration: 0.25 } );
-	},
-
-	Dismiss: function() {
-		$(document).stopObserving( 'keydown', this.m_fnDocumentKeyHandler );
-		hideModal( 'trade_currency_dialog_conversion' );
-	},
-
-	GetInputValueAsInt: function() {
-		return GetPriceValueAsInt( $('trade_currency_conversion_input_you').value );
-	},
-
-	OnAccept: function( event ) {
-
-		var inputValue = $('trade_currency_conversion_input_you').value.replace( GetCurrencySymbol( this.m_currency.name ), '' ).replace( '.--', '.00');
-		var theirInputValue = $('trade_currency_conversion_input_them').value.replace( GetCurrencySymbol( GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ), '' ).replace( '.--', '.00');
-		var theirInputValueAsFloat = parseFloat( theirInputValue ) * 100;
-		var theirInputValueAsInt = GetPriceValueAsInt( $('trade_currency_conversion_input_them').value );
-		if ( ! inputValue.match( /^[0-9,.]*$/ ) )
-		{
-			this.DisplayError( 'Please enter a valid amount above.' );
-			return;
-		}
-
-		var strWarning, bHadWarning;
-		var xferAmount = this.GetInputValueAsInt();
-		if ( theirInputValue.match( /^[0-9,.]*$/ ) && ConvertToTheirCurrency( xferAmount ) != theirInputValueAsInt )
-		{
-			bHadWarning = true;
-			strWarning = 'Due to currency conversion, you cannot send %1$s to %2$s. The amount being sent has been changed to %3$s and %4$s will receive %5$s.'
-					.replace( '%1$s', v_currencyformat( theirInputValueAsInt, GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ) )
-					.replace( '%2$s', g_strTradePartnerPersonaName )
-					.replace( '%3$s', v_currencyformat( xferAmount, this.m_currency.name.escapeHTML() ) )
-					.replace( '%4$s', g_strTradePartnerPersonaName )
-					.replace( '%5$s', v_currencyformat( ConvertToTheirCurrency( xferAmount ), GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) ) );
-		}
-
-
-		var feeInfo = CalculateAmountToSendForDesiredReceivedAmount( xferAmount );
-		xferAmount = feeInfo.amount;
-
-		if ( bHadWarning && g_rgWalletInfo['wallet_fee'] )
-		{
-			strWarning += ' After the transaction fee, you will be charged %1$s.'
-					.replace( '%1$s', v_currencyformat( xferAmount, this.m_currency.name.escapeHTML() ) );
-		}
-
-		if ( xferAmount > this.m_currency.original_amount )
-		{
-			this.DisplayError( 'You do not have enough ' + this.m_currency.name.escapeHTML() + '.' );
-			return;
-		}
-
-		SetStackableItemInTrade( this.m_currency, xferAmount );
-
-		this.Dismiss();
-		event.stop();
-
-		if ( bHadWarning )
-		{
-			WarningDialog.Show( strWarning );
-		}
-	},
-
-	OnCancel: function( event ) {
-		this.Dismiss();
-		event.stop();
-	},
-
-	OnDocumentKeyPress: function( event ) {
-		if ( event.keyCode == Event.KEY_ESC )
-		{
-			this.Dismiss();
-			event.stop();
-		}
-	},
-
-	OnInputKeyPress: function( event ) {
-		if ( event.keyCode == Event.KEY_RETURN )
-		{
-			this.OnAccept( event );
-		}
-	},
-
-	OnInputKeyUp: function( event ) {
-
-		var value = this.GetInputValueAsInt();
-
-		this.UpdateRemainingCurrencyDisplay();
-
-		this.m_bIgnoreSlider = true;
-		this.m_slider.setValue( value );
-		this.m_bIgnoreSlider = false;
-		this.UpdateSliderNumberDisplays( value );
-	},
-
-	OnOtherCurrencyInputKeyUp: function( event ) {
-
-		// Convert the other currency back to our currency.
-		var strAmount = $('trade_currency_conversion_input_them').value;
-		var nAmount = ConvertToOurCurrency( GetPriceValueAsInt( strAmount ) );
-		$('trade_currency_conversion_input_you').value = v_currencyformat( nAmount, this.m_currency.name.escapeHTML() );
-
-		this.m_bIgnoreConversion = true;
-		this.OnInputKeyUp( event );
-		this.m_bIgnoreConversion = false;
-	},
-
-	UpdateSliderNumberDisplays: function( value )
-	{
-		var flooredValue = Math.floor( value );
-		var strValue = v_currencyformat( flooredValue, this.m_currency.name );
-
-		this.m_elSliderProgress.style.width = this.m_slider.handles[0].style.left;
-
-		this.m_elSliderCount.style.left = ( parseInt( this.m_slider.handles[0].style.left ) - 40 ) + 'px';
-		this.m_elSliderCount.update( strValue.escapeHTML() );
-
-		if ( !this.m_bIgnoreConversion )
-		{
-			var nAmount = ConvertToTheirCurrency( flooredValue );
-			$('trade_currency_conversion_input_them').value = v_currencyformat( nAmount, GetCurrencyCode( g_rgWalletInfo['wallet_other_currency'] ) );
-		}
-	},
-
-	SetInputValuesFromSlider: function( value )
-	{
-		var flooredValue = Math.floor( value );
-		var strValue = v_currencyformat( flooredValue, this.m_currency.name );
-		$('trade_currency_conversion_input_you').value = strValue.escapeHTML();
-		this.UpdateRemainingCurrencyDisplay();
-	},
-
-	OnSliderSlide: function( value )
-	{
-		this.UpdateSliderNumberDisplays( value );
-		if ( this.m_slider.active && !this.m_elSliderHandle.active )
-		{
-			this.m_elSliderHandle.active = true;
-			this.m_elSliderHandle.addClassName('active');
-		}
-
-		if ( this.m_bIgnoreSlider )
-			return;
-
-		this.SetInputValuesFromSlider( value );
-	},
-
-	OnSliderChange: function( value )
-	{
-		if ( this.m_elSliderHandle.active )
-		{
-			this.m_elSliderHandle.active = false;
-			this.m_elSliderHandle.removeClassName('active');
-		}
-
-		if ( this.m_bIgnoreSlider )
-			return;
-		this.m_bIgnoreSlider = true;
-
-		this.UpdateSliderNumberDisplays( value );
-		this.m_slider.setValue( value );
-
-		this.SetInputValuesFromSlider( value );
-
-		this.m_bIgnoreSlider = false;
-	}
-};
-
 function GetTradeItemStack( user, item )
 {
 	var stack = item.trade_stack;
@@ -2895,32 +2569,6 @@ function UpdateTradeItemStackDisplay( item, stack, amount )
 		item.amount = item.original_amount - amount;
 		stack.amount = amount;
 		stack.fee = 0;
-		if ( CurrencyIsWalletFunds( stack ) && g_rgWalletInfo['wallet_fee'] && stack.amount > 0 )
-		{
-			var feeInfo = CalculateFeeAmount( stack.amount );
-			stack.fee = feeInfo.fees;
-			if ( stack.fee > 0 && stack.owner == UserYou )
-			{
-				// Fake some descriptions so that we can display fee information.
-				stack.descriptions = [
-					{
-						value: '+%1$s Steam transaction fee (%2$s%%)'
-							.replace( '%1$s', v_currencyformat( stack.fee, stack.name.escapeHTML() ) )
-							.replace( '%2$s', (g_rgWalletInfo['wallet_fee_percent'] * 100).toFixed(1) )
-							.replace( '%%', '%' )
-					},
-					{
-						value: '%1$s Total cost to you'
-							.replace( '%1$s', v_currencyformat( stack.amount, stack.name.escapeHTML() ) )
-					}
-				];
-
-				var elDescriptors = $('hover_item_descriptors');
-				PopulateDescriptions( elDescriptors, item.descriptions );
-			}
-
-			stack.amount -= stack.fee;
-		}
 
 		UpdateCurrencyDisplay( item );
 		UpdateCurrencyDisplay( stack );

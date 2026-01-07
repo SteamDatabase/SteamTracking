@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Burada satılan tüm öğeler birbiri ile tamamen aynı olduğu için tekil ilanlara erişemezsiniz, bunun yerine belirli bir fiyattan satın alma talimatı oluşturabilirsiniz. En düşük ilan otomatik olarak en yüksek satın alma talimatıyla eşleşecektir.",
 	"Search_AmountFound": "%1$s sonuç bulundu",
 	"Search_AmountFound_Plural": "%1$s sonuç bulundu",
-	"Search_ListingsFound": "%1$s ilan bulundu",
-	"Search_ListingsFound_Plural": "%1$s ilan bulundu",
+	"Search_ListingsFound": "%2$s ilan bulundu",
+	"Search_ListingsFound_Plural": "%2$s ilan bulundu",
 	"SortBy_Name_Asc": "Ad (A - Z)",
 	"SortBy_Name_Desc": "Ad (Z - A)",
 	"SortBy_Price_Asc": "Fiyat (düşükten yükseğe)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Bazı eski öğeler, önemli öğe özellikleri için aşağıdaki filtrelerle erişilemeyen metin açıklamaları kullanır. Bu seçenek, arama metninizin yalnızca öğe adı yerine tam açıklama metniyle eşleştirilmesini sağlar.",
 	"MarketSearch_FilterColumn_Header": "Filtreler",
 	"MarketSearch_Reset": "Aramayı Sıfırla",
-	"Listings_Filter_Placeholder": "İlanları filtrele...",
+	"Listings_TextFilter_Placeholder": "Özel filtre metni girin...",
 	"Economy_Market_Purchase_Restrictions": "Satın alımdan sonra bu öğe:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "bir gün boyunca takas edilemez",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "bir hafta boyunca takas edilemez",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Üzgünüz!",
 	"Error_Encountered": "Talebiniz gerçekleştirilirken bir hata meydana geldi:",
 	"Error_TooManyRequests_Description": "Yakın zamanda çok fazla talepte bulundunuz. Lütfen bekleyin ve talebinizi daha sonra tekrar gönderin.",
-	"Container_ContentsLabel": "Olası İçerik:"
+	"Container_ContentsLabel": "Olası İçerik:",
+	"Error_LoadingContent": "Bu içerik yüklenirken bir sorun meydana geldi.",
+	"Error_LoadingMarketItem": "İstenen öğe mevcut olmayabilir veya öğenin yüklenmesini engelleyen geçici bir sorun olabilir. Lütfen daha sonra tekrar deneyin.",
+	"ListingFilter_Title": "İlanları Filtrele"
 }`);
     },
   },

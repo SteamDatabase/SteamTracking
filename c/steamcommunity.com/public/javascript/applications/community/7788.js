@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Fjernet og advaret",
 	"moderation_resolutionstatus_removeandban": "Fjernet og udelukket fra hub",
 	"moderation_resolutionstatus_removeandkick": "Fjernet og smidt ud af gruppe",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Ukendt",
 	"moderationaction_acquitted": "Frikendt",
 	"moderationaction_cancelled": "Senest åbnede rapport annulleret",

@@ -189,7 +189,7 @@
     },
     55057: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => Qe });
+      a.r(t), a.d(t, { default: () => et });
       var n = a(90626),
         i = a(92528),
         s = a(92757),
@@ -577,14 +577,15 @@
         W = a(84811),
         F = a(32754),
         H = a(27429),
-        O = a(19976);
-      function V(e) {
+        O = a(19976),
+        V = a(6083);
+      function K(e) {
         const { nPartnerID: t, nAppID: a } = e;
         return P.iA.is_support
-          ? n.createElement(K, { nPartnerID: t, nAppID: a })
+          ? n.createElement($, { nPartnerID: t, nAppID: a })
           : null;
       }
-      function K(e) {
+      function $(e) {
         const { nPartnerID: t, nAppID: a } = e,
           [i, s] = (0, n.useState)(90),
           r = (function (e, t, a) {
@@ -607,18 +608,18 @@
               "div",
               { className: (0, _.A)(O.AppDashboard, "valveOutline padded") },
               n.createElement("p", { className: "valveh2" }, "Valve Only:"),
-              n.createElement(j, { nDaysInThePast: i, fnUpdateDaysInPast: s }),
-              n.createElement(X, { stats: r }),
+              n.createElement(q, { nDaysInThePast: i, fnUpdateDaysInPast: s }),
               n.createElement(z, { stats: r }),
+              n.createElement(Y, { stats: r }),
             )
           : null;
       }
-      const $ = [
+      const j = [
         { label: (0, m.we)("#PartnerStats_DayWeek"), data: 7 },
         { label: (0, m.we)("#PartnerStats_DayMonth"), data: 30 },
         { label: (0, m.we)("#PartnerStats_DayPeriod"), data: 90 },
       ];
-      function j(e) {
+      function q(e) {
         const { nDaysInThePast: t, fnUpdateDaysInPast: a } = e;
         return n.createElement(
           "div",
@@ -634,7 +635,7 @@
             n.createElement(c.m, {
               layout: "inline",
               label: null,
-              rgOptions: $,
+              rgOptions: j,
               selectedOption: t,
               onChange: (e) => a(e.data),
             }),
@@ -650,13 +651,13 @@
           ),
         );
       }
-      const q = new Intl.NumberFormat("en-US", {
+      const X = new Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD",
         maximumFractionDigits: 0,
         minimumFractionDigits: 0,
       });
-      function X(e) {
+      function z(e) {
         const { stats: t } = e;
         return n.createElement(
           "div",
@@ -678,7 +679,7 @@
                   e.forEach((e) => {
                     t += Number.parseInt(e || "0") / 1e4;
                   }),
-                  q.format(t)
+                  X.format(t)
                 );
               })(t.summary_sales.total_gross_sales_usdx100),
             ),
@@ -694,14 +695,14 @@
             n.createElement(
               "div",
               { className: O.Numerals },
-              Number.parseInt(
-                t.summary_sales.steam_gross_units_sold || "0",
-              ).toLocaleString(),
+              (0, V.D)(
+                Number.parseInt(t.summary_sales.steam_gross_units_sold || "0"),
+              ),
             ),
           ),
         );
       }
-      function z(e) {
+      function Y(e) {
         const { stats: t } = e,
           a = "total_gross_sales_usdx100",
           [i, s, r] = (0, n.useMemo)(() => {
@@ -742,13 +743,13 @@
                 n.createElement(
                   W.tH,
                   null,
-                  n.createElement(Y, { Data: r, nPeak: i }),
+                  n.createElement(Z, { Data: r, nPeak: i }),
                 ),
               ),
             )
           : null;
       }
-      const Y = n.memo((e) => {
+      const Z = n.memo((e) => {
         const { Data: t, nPeak: a } = e,
           i = (0, n.useCallback)(
             (e, a) =>
@@ -798,20 +799,20 @@
               axisLine: !1,
               orientation: "right",
             }),
-            n.createElement(G.m, { content: n.createElement(J, null) }),
+            n.createElement(G.m, { content: n.createElement(Q, null) }),
             n.createElement(M.y, {
               dataKey: "partner_stats_value",
               fill: "url( #bar_linear )",
             }),
             n.createElement(U.W, {
               interval: 0,
-              tick: n.createElement(Z, null),
+              tick: n.createElement(J, null),
               tickFormatter: i,
             }),
           ),
         );
       });
-      function Z(e) {
+      function J(e) {
         const { x: t, y: a, payload: i } = e,
           s = e.tickFormatter(i.value, i.index);
         return n.createElement(
@@ -832,7 +833,7 @@
           ),
         );
       }
-      function J({ active: e, payload: t }) {
+      function Q({ active: e, payload: t }) {
         if (e && t && t.length) {
           const e = t[0].payload,
             a = e.partner_stats_value;
@@ -865,7 +866,7 @@
                         1e4 /
                         a) *
                       100;
-                    return n.createElement(Q, {
+                    return n.createElement(ee, {
                       key: "app" + e.appid,
                       appid: e.appid,
                       usdRevenue:
@@ -918,7 +919,7 @@
         }
         return null;
       }
-      function Q(e) {
+      function ee(e) {
         const { appid: t, usdRevenue: a, nPercentage: i } = e,
           [s] = (0, f.t7)(t, {});
         return n.createElement(
@@ -942,24 +943,24 @@
           ),
         );
       }
-      function ee(e) {
+      function te(e) {
         const { nAppId: t, strAppType: a } = e,
           i = (0, b.V)();
         return (
           ("Game" == a || "Application" == a || "DLC" == a || "Music" == a) &&
-          n.createElement(V, { nPartnerID: i, nAppID: t })
+          n.createElement(K, { nPartnerID: i, nAppID: t })
         );
       }
-      function te(e) {
+      function ae(e) {
         const { nAppId: t, nParentAppId: a, strAppType: i } = e;
         return (
           "Demo" == i && n.createElement(v, { demoAppID: t, parentAppId: a })
         );
       }
-      var ae = a(35863),
-        ne = a(85325),
-        ie = a(45699);
-      function se(e) {
+      var ne = a(35863),
+        ie = a(85325),
+        se = a(45699);
+      function re(e) {
         const { rgAssetProperties: t, appid: a } = e,
           [i, s] = (0, n.useState)(""),
           [r, o] = (0, n.useState)(
@@ -984,7 +985,7 @@
             "div",
             null,
             r.map((e, t) =>
-              n.createElement(re, {
+              n.createElement(oe, {
                 schema: e,
                 index: t,
                 onUpdate: (e) => {
@@ -1004,7 +1005,7 @@
           ),
           n.createElement(
             "div",
-            { className: ne.AddPropertyButton },
+            { className: ie.AddPropertyButton },
             n.createElement(
               c.$n,
               {
@@ -1026,7 +1027,7 @@
           ),
           n.createElement(
             "div",
-            { className: ne.SaveButton },
+            { className: ie.SaveButton },
             n.createElement(
               c.$n,
               {
@@ -1048,17 +1049,17 @@
               "Save",
             ),
           ),
-          n.createElement("div", { className: ne.StatusMessage }, i),
+          n.createElement("div", { className: ie.StatusMessage }, i),
         );
       }
-      function re(e) {
+      function oe(e) {
         const { schema: t, index: a, onUpdate: i, onRemove: s } = e;
         return n.createElement(
           "div",
-          { className: ne.AssetPropertyRow },
+          { className: ie.AssetPropertyRow },
           n.createElement("div", null, "ID"),
-          n.createElement(ie.BA, {
-            className: ne.PropertyID,
+          n.createElement(se.BA, {
+            className: ie.PropertyID,
             type: "number",
             value: 0 !== t.id ? t.id : "",
             placeholder: "Property id",
@@ -1067,8 +1068,8 @@
             },
           }),
           n.createElement("div", null, "Name"),
-          n.createElement(ie.BA, {
-            className: ne.PropertyName,
+          n.createElement(se.BA, {
+            className: ie.PropertyName,
             type: "text",
             value: t.name,
             placeholder: "Property name",
@@ -1077,15 +1078,15 @@
             },
           }),
           n.createElement("div", null, "Type"),
-          n.createElement(oe, {
+          n.createElement(le, {
             propertyType: t.type,
             onUpdateType: (e) => {
               i({ ...t, type: e });
             },
           }),
           n.createElement("div", null, "Min"),
-          n.createElement(ie.BA, {
-            className: ne.PropertyRange,
+          n.createElement(se.BA, {
+            className: ie.PropertyRange,
             type: "number",
             value: t.min ?? "",
             placeholder: "Min value",
@@ -1094,8 +1095,8 @@
             },
           }),
           n.createElement("div", null, "Max"),
-          n.createElement(ie.BA, {
-            className: ne.PropertyRange,
+          n.createElement(se.BA, {
+            className: ie.PropertyRange,
             type: "number",
             value: t.max ?? "",
             placeholder: "Max value",
@@ -1104,8 +1105,8 @@
             },
           }),
           n.createElement("div", null, "Hide"),
-          n.createElement(ie.BA, {
-            className: ne.HideFromDescription,
+          n.createElement(se.BA, {
+            className: ie.HideFromDescription,
             type: "checkbox",
             checked: t.hide_from_description,
             onChange: (e) => {
@@ -1114,16 +1115,16 @@
           }),
           n.createElement(
             c.$n,
-            { className: ne.RemoveButton, onClick: () => s(a) },
+            { className: ie.RemoveButton, onClick: () => s(a) },
             "Remove",
           ),
         );
       }
-      function oe(e) {
+      function le(e) {
         const { propertyType: t, onUpdateType: a } = e;
         return n.createElement(
           "div",
-          { className: ne.PropertyType },
+          { className: ie.PropertyType },
           n.createElement(c.ZU, {
             strDefaultLabel: "Choose property type",
             controlled: !0,
@@ -1139,10 +1140,10 @@
           }),
         );
       }
-      var le = a(65038),
-        me = a(64238),
-        ce = a.n(me);
-      function ue(e, t, a) {
+      var me = a(65038),
+        ce = a(64238),
+        ue = a.n(ce);
+      function de(e, t, a) {
         let n = !1;
         t.forEach((t) => {
           e.get(t) && (n = !0);
@@ -1155,7 +1156,7 @@
           n && i
         );
       }
-      function de(e) {
+      function pe(e) {
         const {
             rgCommonRedistAllPlatforms: t,
             rgCommonRedistWindows: a,
@@ -1202,10 +1203,10 @@
               [e, t]
             );
           }, [o]),
-          [p, _] = (0, n.useState)(ue(l, u, d)),
+          [p, _] = (0, n.useState)(de(l, u, d)),
           g = (e, t) => {
             const a = new Map(l);
-            a.set(e, t), c(a), _(ue(a, u, d));
+            a.set(e, t), c(a), _(de(a, u, d));
             const n = {};
             a.forEach((e, t) => {
               n[t] = e ? 1 : 0;
@@ -1218,14 +1219,14 @@
           "div",
           null,
           h &&
-            n.createElement(_e, {
+            n.createElement(ge, {
               name: (0, m.we)("#StoreAdmin_Platform_AllPlatforms"),
               categories: r,
               checkedState: l,
               setChecked: g,
             }),
-          y && n.createElement(pe, { checked: p }),
-          n.createElement(_e, {
+          y && n.createElement(_e, { checked: p }),
+          n.createElement(ge, {
             name: (0, m.we)("#StoreAdmin_Platform_Windows"),
             categories: o,
             checkedState: l,
@@ -1233,20 +1234,20 @@
           }),
         );
       }
-      function pe(e) {
+      function _e(e) {
         const { checked: t } = e;
         return n.createElement(
           "div",
-          { className: le.DXVCNotice },
+          { className: me.DXVCNotice },
           !t &&
-            n.createElement("div", { className: le.DXVCNoticeIconUnchecked }),
-          t && n.createElement("div", { className: le.DXVCNoticeIconChecked }),
+            n.createElement("div", { className: me.DXVCNoticeIconUnchecked }),
+          t && n.createElement("div", { className: me.DXVCNoticeIconChecked }),
           n.createElement(
             "div",
             {
-              className: ce()(
-                le.DXVCNoticeText,
-                t ? le.DXVCNoticeTextChecked : le.DXVCNoticeTextUnchecked,
+              className: ue()(
+                me.DXVCNoticeText,
+                t ? me.DXVCNoticeTextChecked : me.DXVCNoticeTextUnchecked,
               ),
             },
             (0, m.we)(
@@ -1256,14 +1257,14 @@
           ),
         );
       }
-      function _e(e) {
+      function ge(e) {
         const { name: t, categories: a, checkedState: i, setChecked: s } = e,
           r = (0, n.useMemo)(() => {
             let e = [];
             return (
               a.forEach((t, a) =>
                 e.push(
-                  n.createElement(ge, {
+                  n.createElement(he, {
                     name: a,
                     category: t,
                     checkedState: i,
@@ -1283,13 +1284,13 @@
           ...r,
         );
       }
-      function ge(e) {
+      function he(e) {
         const { name: t, category: a, checkedState: i, setChecked: s } = e,
           r = Object.entries(a.components).map(([e, t]) =>
             n.createElement(
               "li",
               { key: t },
-              n.createElement(he, {
+              n.createElement(ye, {
                 name: e,
                 depotID: t,
                 checked: i.get(t),
@@ -1304,7 +1305,7 @@
           n.createElement("ul", null, ...r),
         );
       }
-      function he(e) {
+      function ye(e) {
         const { name: t, depotID: a, checked: i, setChecked: s } = e,
           r = (228987 == a || 228986 == a) && !i;
         return n.createElement(
@@ -1320,10 +1321,10 @@
           n.createElement("label", { htmlFor: a.toString() }, t),
         );
       }
-      var ye = a(67045),
-        Ee = a(7860),
-        fe = a(24484);
-      function Se(e, t) {
+      var Ee = a(67045),
+        fe = a(7860),
+        Se = a(24484);
+      function Ie(e, t) {
         let a = [];
         switch (e) {
           case "image_large":
@@ -1338,24 +1339,24 @@
         }
         return a;
       }
-      function Ie(e, t) {
+      function Ce(e, t) {
         return [`InProgressItemDefinition_${e}_${t}`];
       }
-      var Ce = a(34629),
-        De = a(14947),
-        ve = a(6419),
-        we = a(69343),
-        Te = a(78511),
-        be = a(68797),
-        Ae = a(82817),
-        Ne = a(73744);
-      class Le extends Te.q {
+      var De = a(34629),
+        ve = a(14947),
+        we = a(6419),
+        Te = a(69343),
+        be = a(78511),
+        Ae = a(68797),
+        Ne = a(82817),
+        Le = a(73744);
+      class Pe extends be.q {
         m_currentImageOptionKey = void 0;
         m_fnGetImageOptions;
         constructor(e, t, a, n) {
-          const i = (0, Ae.II)(a);
+          const i = (0, Ne.II)(a);
           super(e, e.name, t, a.src, i),
-            (0, De.Gn)(this),
+            (0, ve.Gn)(this),
             (this.m_fnGetImageOptions = n);
         }
         IsValidAssetType(e, t) {
@@ -1366,7 +1367,7 @@
           return (
             n
               ? a &&
-                (s = (0, m.we)("#ImageUpload_InvalidFormat", (0, Ae.EG)(t)))
+                (s = (0, m.we)("#ImageUpload_InvalidFormat", (0, Ne.EG)(t)))
               : (s = (0, m.we)("#ImageUpload_InvalidFormatSelected")),
             i || (s = (0, m.we)("#CommunityItems_NoValidAsset_Error")),
             i?.bDuplicateAssetType &&
@@ -1381,7 +1382,7 @@
           return !0;
         }
         BIsVideo() {
-          return Ne.Ho.includes(this.fileType);
+          return Le.Ho.includes(this.fileType);
         }
         GetResizeDimension() {}
         BSupportsLanguages() {
@@ -1428,17 +1429,17 @@
           }
         }
       }
-      (0, Ce.Cg)([De.sH], Le.prototype, "m_currentImageOptionKey", void 0),
-        (0, Ce.Cg)([De.EW], Le.prototype, "ImageOptions", null),
-        (0, Ce.Cg)([De.XI], Le.prototype, "SetCurrentImageOption", null);
-      class Pe extends we.Vr {
-        m_filesToUpload = De.sH.array();
+      (0, De.Cg)([ve.sH], Pe.prototype, "m_currentImageOptionKey", void 0),
+        (0, De.Cg)([ve.EW], Pe.prototype, "ImageOptions", null),
+        (0, De.Cg)([ve.XI], Pe.prototype, "SetCurrentImageOption", null);
+      class Be extends Te.Vr {
+        m_filesToUpload = ve.sH.array();
         m_strUploadPath = null;
         m_bSynchronousUpload = !1;
         m_rgAssetRequirements = [];
         constructor(e, t, a) {
           super(),
-            (0, De.Gn)(this),
+            (0, ve.Gn)(this),
             (this.m_strUploadPath = e),
             (this.m_bSynchronousUpload = t),
             (this.m_rgAssetRequirements = a);
@@ -1453,7 +1454,7 @@
           return this.m_filesToUpload;
         }
         ClearImages() {
-          this.m_filesToUpload = De.sH.array();
+          this.m_filesToUpload = ve.sH.array();
         }
         DeleteUploadImage(e) {
           const t = this.m_filesToUpload.findIndex(
@@ -1467,10 +1468,10 @@
           return this.m_bSynchronousUpload;
         }
         async AddImageForLanguage(e, t) {
-          if ((0, Ae.aL)(e.type) || (0, Ae.Uz)(e.type)) {
-            const a = await (0, Ae.zB)(e, (0, Ae.Uz)(e.type));
+          if ((0, Ne.aL)(e.type) || (0, Ne.Uz)(e.type)) {
+            const a = await (0, Ne.zB)(e, (0, Ne.Uz)(e.type));
             if (a) {
-              const n = new Le(e, t, a, () => this.GetImageOptions());
+              const n = new Pe(e, t, a, () => this.GetImageOptions());
               return (this.m_filesToUpload = [...this.m_filesToUpload, n]), !0;
             }
           } else
@@ -1485,7 +1486,7 @@
           let e = [],
             t = new Set();
           for (const a of this.m_filesToUpload.filter(
-            (e) => "pending" == e.status || (0, Te.o)(e.status),
+            (e) => "pending" == e.status || (0, be.o)(e.status),
           ))
             this.m_rgAssetRequirements.forEach((n) => {
               a.width === n.width &&
@@ -1512,7 +1513,7 @@
             s.append("sessionid", P.TS.SESSIONID);
           const r = e.GetCurrentImageOption();
           s.append("strAssetType", r.asset_type);
-          if (!(0, Ae.ab)(t))
+          if (!(0, Ne.ab)(t))
             return {
               bSuccess: !1,
               elErrorMessage:
@@ -1525,7 +1526,7 @@
               cancelToken: n,
             });
           } catch (e) {
-            console.error((0, be.H)(e)?.strErrorMsg);
+            console.error((0, Ae.H)(e)?.strErrorMsg);
           }
           return !i.data || i.data.error
             ? {
@@ -1537,47 +1538,47 @@
             : { bSuccess: !0, result: i?.data };
         }
       }
-      (0, Ce.Cg)([De.sH], Pe.prototype, "m_filesToUpload", void 0),
-        (0, Ce.Cg)([ve.o], Pe.prototype, "GetUploadImages", null),
-        (0, Ce.Cg)([ve.o], Pe.prototype, "ClearImages", null),
-        (0, Ce.Cg)([ve.o], Pe.prototype, "DeleteUploadImage", null),
-        (0, Ce.Cg)([ve.o], Pe.prototype, "AddImageForLanguage", null);
-      var Be = a(8527),
-        ke = a(42027),
-        Re = a(2160);
-      function xe(e) {
+      (0, De.Cg)([ve.sH], Be.prototype, "m_filesToUpload", void 0),
+        (0, De.Cg)([we.o], Be.prototype, "GetUploadImages", null),
+        (0, De.Cg)([we.o], Be.prototype, "ClearImages", null),
+        (0, De.Cg)([we.o], Be.prototype, "DeleteUploadImage", null),
+        (0, De.Cg)([we.o], Be.prototype, "AddImageForLanguage", null);
+      var ke = a(8527),
+        Re = a(42027),
+        xe = a(2160);
+      function Ge(e) {
         const { appID: t, unItemType: a, rgAssetDefinitions: i } = e,
           s = n.useMemo(() => {
             const e =
-              Be.TS.PARTNER_BASE_URL +
+              ke.TS.PARTNER_BASE_URL +
               `communityitems/ajaxuploadasset/${t}/${a}`;
-            return new Pe(e, !0, i);
+            return new Be(e, !0, i);
           }, [t, a, i]);
         return n.createElement(
           "div",
           null,
-          n.createElement(ke.O9, {
+          n.createElement(Re.O9, {
             elOverrideDragAndDropText: (0, m.we)(
               "#CommunityItems_Upload_Instructions",
             ),
             imageUploader: s,
-            rgRealmList: [Re.TU.k_ESteamRealmGlobal],
+            rgRealmList: [xe.TU.k_ESteamRealmGlobal],
             fnUploadComplete: (e) => {
               var n, i;
               e.some((e) => e.bSuccess) &&
                 ((n = t),
                 (i = a),
-                Ee.L.invalidateQueries({ queryKey: Ie(n, i) }));
+                fe.L.invalidateQueries({ queryKey: Ce(n, i) }));
             },
           }),
         );
       }
-      var Ge = a(89925);
-      class Me {
+      var Me = a(89925);
+      class Ue {
         m_ItemDefinition = null;
         m_ItemKV = null;
         constructor(e, t) {
-          (0, De.Gn)(this), this.LoadItemDefinition(e, t);
+          (0, ve.Gn)(this), this.LoadItemDefinition(e, t);
         }
         LoadItemDefinition(e, t) {
           (this.m_ItemDefinition = e
@@ -1625,12 +1626,12 @@
           return this.m_ItemDefinition;
         }
       }
-      function Ue(e, t) {
+      function We(e, t) {
         return `${P.TS.COMMUNITY_ASSETS_BASE_URL}images/items/${e}/${t}`;
       }
-      (0, Ce.Cg)([De.sH], Me.prototype, "m_ItemDefinition", void 0),
-        (0, Ce.Cg)([De.sH], Me.prototype, "m_ItemKV", void 0);
-      const We = [
+      (0, De.Cg)([ve.sH], Ue.prototype, "m_ItemDefinition", void 0),
+        (0, De.Cg)([ve.sH], Ue.prototype, "m_ItemKV", void 0);
+      const Fe = [
           {
             asset_type: "movie_large",
             label: (0, m.we)("#CommunityItems_StartupMovie_Label_Video"),
@@ -1711,18 +1712,18 @@
             ],
           },
         ],
-        Fe = n.createContext(null),
-        He = ({ communityItem: e, assetDefs: t, children: a }) =>
+        He = n.createContext(null),
+        Oe = ({ communityItem: e, assetDefs: t, children: a }) =>
           n.createElement(
-            Fe.Provider,
+            He.Provider,
             { value: { communityItem: e, assetDefs: t } },
             a,
           );
-      function Oe(e) {
+      function Ve(e) {
         const { appID: t, unItemType: a } = e,
           i = (function (e, t) {
             const a = (0, L.I)({
-              queryKey: Ie(e, t),
+              queryKey: Ce(e, t),
               queryFn: async () => {
                 const a = `${P.TS.PARTNER_BASE_URL}communityitems/ajaxgetcommunityitemdef/${e}/${t}`,
                   n = new FormData();
@@ -1737,99 +1738,99 @@
                     null);
               },
               staleTime: 1 / 0,
-              initialData: (0, fe.Tc)("item_def", "application_config"),
+              initialData: (0, Se.Tc)("item_def", "application_config"),
             });
             return a.isLoading ? null : a.data;
           })(t, a);
         if (!i) return null;
-        const s = new Me(i),
-          r = 17 === s.ItemClass ? We : null;
+        const s = new Ue(i),
+          r = 17 === s.ItemClass ? Fe : null;
         if (!r) return null;
-        const o = (!s.BIsActive || Be.iA.is_support) && !s.BIsDeleted;
+        const o = (!s.BIsActive || ke.iA.is_support) && !s.BIsDeleted;
         return n.createElement(
-          He,
+          Oe,
           { communityItem: s, assetDefs: r },
           n.createElement(
             "div",
-            { className: Ge.AssetEditorContainer },
-            o && n.createElement(Ve, null),
-            n.createElement(je, null),
+            { className: Me.AssetEditorContainer },
+            o && n.createElement(Ke, null),
+            n.createElement(qe, null),
           ),
         );
       }
-      function Ve() {
-        const { communityItem: e, assetDefs: t } = n.useContext(Fe),
+      function Ke() {
+        const { communityItem: e, assetDefs: t } = n.useContext(He),
           a = t
             .flatMap((e) => e.guidelines)
             .map((e, t) =>
-              n.createElement(Ke, { key: `guideline_${t}`, guideline: e }),
+              n.createElement($e, { key: `guideline_${t}`, guideline: e }),
             );
         return n.createElement(
           "div",
-          { className: Ge.AssetUploadSection },
-          n.createElement("div", { className: Ge.AssetGuidelinesSection }, a),
-          n.createElement(xe, {
+          { className: Me.AssetUploadSection },
+          n.createElement("div", { className: Me.AssetGuidelinesSection }, a),
+          n.createElement(Ge, {
             appID: e.AppID,
             unItemType: e.ItemID,
             rgAssetDefinitions: t,
           }),
         );
       }
-      function Ke(e) {
+      function $e(e) {
         const { guideline: t } = e;
         return n.createElement(
           "div",
-          { className: Ge.GuidelineCtn },
+          { className: Me.GuidelineCtn },
           n.createElement(
             "div",
-            { className: Ge.GuidelineHeader },
+            { className: Me.GuidelineHeader },
             t.strHeader,
           ),
-          n.createElement("div", { className: Ge.GuidelineIntro }, t.strIntro),
+          n.createElement("div", { className: Me.GuidelineIntro }, t.strIntro),
           t.rgBulletPoints?.length > 0 &&
-            n.createElement($e, { rgBulletPoints: t.rgBulletPoints }),
+            n.createElement(je, { rgBulletPoints: t.rgBulletPoints }),
         );
       }
-      function $e(e) {
+      function je(e) {
         const { rgBulletPoints: t } = e,
           a = t.map((e, t) =>
             n.createElement("li", { key: `bulletpoint_${t}` }, e),
           );
         return n.createElement("ul", null, a);
       }
-      function je() {
-        const { communityItem: e, assetDefs: t } = n.useContext(Fe),
+      function qe() {
+        const { communityItem: e, assetDefs: t } = n.useContext(He),
           a = t.map((e) =>
-            n.createElement(qe, { key: e.asset_type, assetDef: e }),
+            n.createElement(Xe, { key: e.asset_type, assetDef: e }),
           );
-        return n.createElement("div", { className: Ge.AssetTypesCtn }, a);
+        return n.createElement("div", { className: Me.AssetTypesCtn }, a);
       }
-      function qe(e) {
+      function Xe(e) {
         const { assetDef: t } = e,
-          { communityItem: a, assetDefs: i } = n.useContext(Fe);
+          { communityItem: a, assetDefs: i } = n.useContext(He);
         return n.createElement(
           "div",
-          { className: Ge.AssetEntryCtn },
-          n.createElement("div", { className: Ge.AssetTitle }, "*", t.label),
+          { className: Me.AssetEntryCtn },
+          n.createElement("div", { className: Me.AssetTitle }, "*", t.label),
           n.createElement(
             "div",
-            { className: Ge.AssetPreviewCtn },
+            { className: Me.AssetPreviewCtn },
             t.is_video
-              ? n.createElement(Ye, {
-                  rgSources: Se(t.asset_type, a.CommunityItemDef),
+              ? n.createElement(Ze, {
+                  rgSources: Ie(t.asset_type, a.CommunityItemDef),
                   unAppID: a.AppID,
                 })
-              : n.createElement(ze, {
-                  rgSources: Se(t.asset_type, a.CommunityItemDef),
+              : n.createElement(Ye, {
+                  rgSources: Ie(t.asset_type, a.CommunityItemDef),
                   unAppID: a.AppID,
                 }),
           ),
         );
       }
-      function Xe() {
+      function ze() {
         return n.createElement(
           "div",
-          { className: Ge.PlaceholderAsset },
+          { className: Me.PlaceholderAsset },
           n.createElement(
             "div",
             null,
@@ -1837,16 +1838,16 @@
           ),
         );
       }
-      function ze(e) {
+      function Ye(e) {
         const { rgSources: t, unAppID: a } = e;
         return t.length
           ? n.createElement("img", {
-              className: Ge.AssetPreview,
-              src: Ue(a, t[0]),
+              className: Me.AssetPreview,
+              src: We(a, t[0]),
             })
-          : n.createElement(Xe, null);
+          : n.createElement(ze, null);
       }
-      function Ye(e) {
+      function Ze(e) {
         const { rgSources: t, unAppID: a } = e,
           i = n.useRef(void 0);
         if (
@@ -1855,19 +1856,19 @@
           }, [t]),
           !t.length)
         )
-          return n.createElement(Xe, null);
+          return n.createElement(ze, null);
         const s = t.map((e, t) =>
           n.createElement("source", {
             key: `video_${t}`,
-            src: Ue(a, e),
-            type: (0, Ae.ab)(e),
+            src: We(a, e),
+            type: (0, Ne.ab)(e),
           }),
         );
         return n.createElement(
           "video",
           {
             ref: i,
-            className: Ge.AssetPreview,
+            className: Me.AssetPreview,
             autoPlay: !0,
             loop: !0,
             muted: !0,
@@ -1877,7 +1878,7 @@
           s,
         );
       }
-      function Ze(e) {
+      function Je(e) {
         const {
             unAppID: t,
             bShowSteamChina: a,
@@ -1918,7 +1919,7 @@
                   (0, m.oW)(
                     "#AppLanding_RegionRestrictions_ContentSurvey",
                     n.createElement("a", {
-                      href: `${Be.TS.PARTNER_BASE_URL}/contentdescriptors/editsurvey/${t}`,
+                      href: `${ke.TS.PARTNER_BASE_URL}/contentdescriptors/editsurvey/${t}`,
                     }),
                   ),
                 ),
@@ -1929,25 +1930,25 @@
               (0, m.we)("#AppLanding_RegionRestrictions_None"),
             );
       }
-      const Je = {
+      const Qe = {
         CommunityItem: (e, t) => `/apps/communityitems/${e}/${t}`,
         AppLanding: (e) => `/apps/landing/${e}`,
         AppInstaller: (e) => `/apps/installer/${e}`,
         AppEconomy: (e) => `/apps/economy/${e}`,
       };
-      function Qe(e) {
+      function et(e) {
         return n.createElement(
           s.dO,
           null,
           n.createElement(s.qh, {
-            path: Je.CommunityItem(":appid", ":itemtype"),
+            path: Qe.CommunityItem(":appid", ":itemtype"),
             render: (e) =>
               n.createElement(r.X, {
                 config: {
                   "appadmin-profilecolors": (e) =>
                     n.createElement(i.Y, { ...e }),
                   "appadmin-communityitemassets": () =>
-                    n.createElement(Oe, {
+                    n.createElement(Ve, {
                       appID: Number.parseInt(e.match.params.appid),
                       unItemType: Number.parseInt(e.match.params.itemtype),
                     }),
@@ -1955,40 +1956,40 @@
               }),
           }),
           n.createElement(s.qh, {
-            path: Je.AppLanding(":appid"),
+            path: Qe.AppLanding(":appid"),
             render: (e) =>
               n.createElement(r.X, {
                 config: {
                   "storeadmin-releasedateinfo": (e) =>
-                    n.createElement(ye.M, { ...e }),
+                    n.createElement(Ee.M, { ...e }),
                   "storeadmin-applanding-statsrollup": (e) =>
-                    n.createElement(ee, { ...e }),
-                  "storeadmin-applanding-demowishlistemails": (e) =>
                     n.createElement(te, { ...e }),
+                  "storeadmin-applanding-demowishlistemails": (e) =>
+                    n.createElement(ae, { ...e }),
                   "storeadmin-editions-editor": (e) =>
-                    n.createElement(ae.H, { ...e }),
+                    n.createElement(ne.H, { ...e }),
                   "appadmin-restrictedcountries": (e) =>
-                    n.createElement(Ze, { ...e }),
+                    n.createElement(Je, { ...e }),
                 },
               }),
           }),
           n.createElement(s.qh, {
-            path: Je.AppInstaller(":appid"),
+            path: Qe.AppInstaller(":appid"),
             render: (e) =>
               n.createElement(r.X, {
                 config: {
                   "storeadmin-steamworksredist-edit": (e) =>
-                    n.createElement(de, { ...e }),
+                    n.createElement(pe, { ...e }),
                 },
               }),
           }),
           n.createElement(s.qh, {
-            path: Je.AppEconomy(":appid"),
+            path: Qe.AppEconomy(":appid"),
             render: (e) =>
               n.createElement(r.X, {
                 config: {
                   "storeadmin-steamworkseconomy-propertyedit": (e) =>
-                    n.createElement(se, { ...e }),
+                    n.createElement(re, { ...e }),
                 },
               }),
           }),

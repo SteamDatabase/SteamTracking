@@ -6857,6 +6857,11 @@
                     _: 7,
                     _: _,
                   },
+                  optimal_f1_score: {
+                    _: 10,
+                    _: _._.readFloat,
+                    _: _._.writeFloat,
+                  },
                 },
               }),
             _.sm_m
@@ -36499,7 +36504,8 @@
         }
         return [_, _];
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = () => {
           const { msgWorkingProjectConfig: _ } = _(),
             _ = _(),
@@ -37319,7 +37325,9 @@
                       {
                         className: _.StatusValue,
                       },
-                      __webpack_require__.snapshot_count()?.toLocaleString(),
+                      __webpack_require__
+                        .snapshot_count()
+                        ?.toLocaleString((0, _._)()),
                     ),
                   ),
                   _.createElement(
@@ -37341,7 +37349,7 @@
                       },
                       __webpack_require__
                         .snapshot_object_count()
-                        ?.toLocaleString(),
+                        ?.toLocaleString((0, _._)()),
                     ),
                   ),
                   _ &&
@@ -38371,6 +38379,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let _ = "";
@@ -38748,7 +38757,7 @@
                     {
                       className: _.RowCurrent,
                     },
-                    _.total_rows_processed().toLocaleString(),
+                    _.total_rows_processed().toLocaleString((0, _._)()),
                   ),
                   _.createElement(
                     "div",
@@ -38762,7 +38771,7 @@
                     {
                       className: _.RowTotal,
                     },
-                    _.total_rows().toLocaleString(),
+                    _.total_rows().toLocaleString((0, _._)()),
                   ),
                 ),
                 _.total_rows_written() != _.total_rows_processed() &&
@@ -38778,7 +38787,7 @@
                       },
                       (0, _._)(
                         "#SteamLearn_Status_Train_Fetch_Written",
-                        _.total_rows_written().toLocaleString(),
+                        _.total_rows_written().toLocaleString((0, _._)()),
                       ),
                     ),
                   ),
@@ -38941,9 +38950,10 @@
               _.createElement(
                 _._,
                 {
-                  width: 500,
+                  width: 420,
                   height: 300,
                 },
+                _.createElement(_._, null),
                 _.lines.map((_, _) =>
                   _.createElement(_._, {
                     key: `${_.strHeading}_${_.strDataLabel}_${_}`,
@@ -39120,7 +39130,7 @@
                 ) {
                   const _ = (_ + _) / (_ + _),
                     _ = Date.now() / 1e3 - _.start_time(),
-                    _ = _ / _;
+                    _ = _ / (_ * _.train_config().gpu_count());
                   if (_.end_time())
                     _ = (0, _._)(
                       "#SteamLearn_Status_Train_BatchCurrent_EpochDuration",
@@ -39162,7 +39172,11 @@
                 _ = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [0, Math.min(_, _.train_batches().length) / _],
+                    XAxisDomain: [
+                      0,
+                      Math.min(_, _.train_batches().length) /
+                        (_ * _.train_config().gpu_count()),
+                    ],
                     data: _,
                     color: "#547d9e",
                     bAxisLine: !1,
@@ -39172,7 +39186,8 @@
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(_, _.validate_batches().length) / _,
+                      Math.min(_, _.validate_batches().length) /
+                        (_ * _.train_config().gpu_count()),
                     ],
                     data: _,
                     color: "#609e54",
@@ -39197,7 +39212,11 @@
                 _ = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [0, Math.min(_, _.train_batches().length) / _],
+                    XAxisDomain: [
+                      0,
+                      Math.min(_, _.train_batches().length) /
+                        (_ * _.train_config().gpu_count()),
+                    ],
                     data: _,
                     color: "#547d9e",
                     bAxisLine: !1,
@@ -39207,7 +39226,8 @@
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(_, _.validate_batches().length) / _,
+                      Math.min(_, _.validate_batches().length) /
+                        (_ * _.train_config().gpu_count()),
                     ],
                     data: _,
                     color: "#609e54",
@@ -39232,7 +39252,11 @@
                 _ = [
                   {
                     strDataLabel: "Train",
-                    XAxisDomain: [0, Math.min(_, _.train_batches().length) / _],
+                    XAxisDomain: [
+                      0,
+                      Math.min(_, _.train_batches().length) /
+                        (_ * _.train_config().gpu_count()),
+                    ],
                     data: _,
                     color: "#547d9e",
                     bAxisLine: !1,
@@ -39242,7 +39266,8 @@
                     strDataLabel: "Validate",
                     XAxisDomain: [
                       0,
-                      Math.min(_, _.validate_batches().length) / _,
+                      Math.min(_, _.validate_batches().length) /
+                        (_ * _.train_config().gpu_count()),
                     ],
                     data: _,
                     color: "#609e54",
@@ -39370,7 +39395,9 @@
                 _.getSeconds().toString().padStart(2, "0") +
                 ", " +
                 _.toDateString(),
-            );
+            ),
+            _ = _.project_nodes().find((_) => 6 == _.type()),
+            _ = 2 == _?.train().loss() || 3 == _?.train().loss();
           let _,
             _,
             _ = 1 / 0;
@@ -39583,14 +39610,14 @@
                         {
                           className: _.PhaseValues,
                         },
-                        (100 * _).toLocaleString(),
+                        (100 * _).toLocaleString((0, _._)()),
                         " / ",
                         _.createElement(
                           "span",
                           {
                             className: _.Total,
                           },
-                          (100 * _).toLocaleString(),
+                          (100 * _).toLocaleString((0, _._)()),
                         ),
                       ),
                   ),
@@ -39632,14 +39659,14 @@
                         {
                           className: _.PhaseValues,
                         },
-                        (100 * _).toLocaleString(),
+                        (100 * _).toLocaleString((0, _._)()),
                         " / ",
                         _.createElement(
                           "span",
                           {
                             className: _.Total,
                           },
-                          (100 * _).toLocaleString(),
+                          (100 * _).toLocaleString((0, _._)()),
                         ),
                       ),
                   ),
@@ -39719,7 +39746,11 @@
                       {
                         className: _.PhaseLabel,
                       },
-                      (0, _._)("#SteamLearn_Status_Train_Epoch_BestF1Score"),
+                      (0, _._)(
+                        _
+                          ? "#SteamLearn_Status_Train_Epoch_BestTopK10"
+                          : "#SteamLearn_Status_Train_Epoch_BestF1Score",
+                      ),
                     ),
                     _.createElement(
                       "div",
@@ -39764,7 +39795,9 @@
                   _ &&
                     _.createElement(_, {
                       strHeading: (0, _._)(
-                        "#SteamLearn_Status_Train_Axis_F1Score",
+                        _
+                          ? "#SteamLearn_Status_Train_Axis_TopK10"
+                          : "#SteamLearn_Status_Train_Axis_F1Score",
                       ),
                       lines: _,
                       fAxisPaddingPct: 25,
@@ -40235,7 +40268,9 @@
                       _(_, _),
                       __webpack_require__.BIsValid() &&
                         1 == __webpack_require__.GetEResult() &&
-                        (await _(_.project_id(), _.published_version()),
+                        (await new Promise((_) => setTimeout(_, 250)),
+                        await _(_.project_id(), _.published_version()),
+                        await new Promise((_) => setTimeout(_, 250)),
                         _.push(
                           _.SteamLearnProjectTrainStatus(
                             _.project_id(),
@@ -40340,6 +40375,15 @@
                 _.scheduled_train_config().set_auto_activate_accuracy_threshold(
                   parseFloat(_),
                 ),
+            }),
+            _.createElement(_, {
+              label: (0, _._)("#SteamLearn_ScheduledTrain_NotifyEmails"),
+              hidden: 0 == _.scheduled_train_config().scheduled_type(),
+              width: 200,
+              fnGetInitialValue: () =>
+                _.scheduled_train_config().failed_auto_activate_emails() || "",
+              fnSetValue: (_) =>
+                _.scheduled_train_config().set_failed_auto_activate_emails(_),
             }),
           ),
         );

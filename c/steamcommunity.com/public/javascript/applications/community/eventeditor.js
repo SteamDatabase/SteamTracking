@@ -2677,7 +2677,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { eventModel: _, bAllowUpdate: __webpack_require__ } = _,
           [_, _] = (0, _._)(_);
@@ -2765,7 +2766,7 @@
         );
       });
       function _(_) {
-        const _ = new Date(1e3 * _.date).toLocaleDateString();
+        const _ = new Date(1e3 * _.date).toLocaleDateString((0, _._)());
         return _.branch
           ? (0, _._)(
               "#EventEditor_AssociateBuildBranch",
@@ -2902,6 +2903,7 @@
           )
         );
       };
+      var _ = __webpack_require__("chunkid");
       let _ = class extends _.Component {
         constructor(_) {
           super(_),
@@ -3185,7 +3187,7 @@
                             _.createElement(
                               "span",
                               null,
-                              _.m_stats.total_showm.toLocaleString(),
+                              (0, _._)(_.m_stats.total_showm),
                             ),
                           ),
                           _.createElement("br", null),
@@ -3194,7 +3196,7 @@
                             _.createElement(
                               "span",
                               null,
-                              _.m_stats.total_read.toLocaleString(),
+                              (0, _._)(_.m_stats.total_read),
                             ),
                           ),
                         ),
@@ -3472,7 +3474,7 @@
                     ? void 0
                     : _.length) || void 0 === _
                 ? void 0
-                : __webpack_require__.toLocaleString(),
+                : __webpack_require__.toLocaleString((0, _._)()),
             ),
             _.slice(0, 10).map((_) =>
               _.createElement(
@@ -3482,7 +3484,7 @@
                 },
                 _.key,
                 ": ",
-                _.size.toLocaleString(),
+                (0, _._)(_.size),
               ),
             ),
           );
@@ -15836,7 +15838,7 @@
                     null,
                     (0, _._)(
                       "#EventEmail_Developer_DuplicateRemoved",
-                      this.state.nDuplicatesRemoved.toLocaleString(),
+                      (0, _._)(this.state.nDuplicatesRemoved),
                     ),
                   ),
                 ),
@@ -17042,8 +17044,7 @@
             _.createElement(
               "span",
               null,
-              Boolean(void 0 !== this.props.audience) &&
-                this.props.audience.toLocaleString(),
+              void 0 !== this.props.audience && (0, _._)(this.props.audience),
             ),
           );
         }
@@ -17252,6 +17253,7 @@
             (this.autoRefreshInterval = void 0));
         }
         render() {
+          var _, _, _, _, _, _, _, _, _, _;
           const { editModel: _ } = this.props;
           if (!_.GetEventModel().jsondata.email_setting.force_feature_id)
             return _.createElement("div", null);
@@ -17372,8 +17374,12 @@
                     null,
                     (0, _._)(
                       "#EventEmail_Stats_Examined",
-                      _.accounts_examined
-                        ? _.accounts_examined.toLocaleString()
+                      null !==
+                        (_ =
+                          null === (_ = _.accounts_examined) || void 0 === _
+                            ? void 0
+                            : _.toLocaleString((0, _._)())) && void 0 !== _
+                        ? _
                         : 0,
                     ),
                   ),
@@ -17382,8 +17388,13 @@
                     null,
                     (0, _._)(
                       "#EventEmail_Stats_Duplicates",
-                      _.accounts_duplicates
-                        ? _.accounts_duplicates.toLocaleString()
+                      null !==
+                        (_ =
+                          null === (_ = _.accounts_duplicates) || void 0 === _
+                            ? void 0
+                            : __webpack_require__.toLocaleString((0, _._)())) &&
+                        void 0 !== _
+                        ? _
                         : 0,
                     ),
                   ),
@@ -17392,8 +17403,12 @@
                     null,
                     (0, _._)(
                       "#EventEmail_Stats_Emailed",
-                      _.accounts_emailed
-                        ? _.accounts_emailed.toLocaleString()
+                      null !==
+                        (_ =
+                          null === (_ = _.accounts_emailed) || void 0 === _
+                            ? void 0
+                            : _.toLocaleString((0, _._)())) && void 0 !== _
+                        ? _
                         : 0,
                     ),
                   ),
@@ -17402,8 +17417,12 @@
                     null,
                     (0, _._)(
                       "#EventEmail_Stats_Skipped",
-                      _.accounts_not_emailed
-                        ? _.accounts_not_emailed.toLocaleString()
+                      null !==
+                        (_ =
+                          null === (_ = _.accounts_not_emailed) || void 0 === _
+                            ? void 0
+                            : _.toLocaleString((0, _._)())) && void 0 !== _
+                        ? _
                         : 0,
                     ),
                   ),
@@ -17412,8 +17431,12 @@
                     null,
                     (0, _._)(
                       "#EventEmail_Stats_Failed",
-                      _.accounts_email_failed
-                        ? _.accounts_email_failed.toLocaleString()
+                      null !==
+                        (_ =
+                          null === (_ = _.accounts_email_failed) || void 0 === _
+                            ? void 0
+                            : _.toLocaleString((0, _._)())) && void 0 !== _
+                        ? _
                         : 0,
                     ),
                   ),
@@ -20657,7 +20680,7 @@
                     className: _.Closed,
                   },
                   _ > 0
-                    ? (0, _._)("#Giveaway_Closed", _.toLocaleString())
+                    ? (0, _._)("#Giveaway_Closed", (0, _._)(_))
                     : (0, _._)("#Giveaway_Closed_NoWinnerInfo"),
                 ),
               Boolean(!_) &&
@@ -20712,7 +20735,7 @@
                         {
                           className: _.WinnerCount,
                         },
-                        _.toLocaleString(),
+                        (0, _._)(_),
                       ),
                       _.createElement(
                         "div",
@@ -20761,7 +20784,7 @@
             {
               className: "DisplayBadgeProgress",
             },
-            _.toLocaleString(),
+            (0, _._)(_),
           );
         }
         return null;
@@ -20789,7 +20812,7 @@
           {
             className: "DisplayBadgeProgress",
           },
-          _.toLocaleString(),
+          (0, _._)(_),
         );
       }
       function _(_) {
@@ -20982,7 +21005,7 @@
           case 1:
             _ = _.unsupported;
         }
-        return _.createElement("span", null, Number(_).toLocaleString());
+        return _.createElement("span", null, (0, _._)(Number(_)));
       }
       function _(_) {
         var _, _, _, _;
@@ -21014,7 +21037,7 @@
                 ? void 0
                 : _.length) || 0;
         }
-        return _.createElement("span", null, Number(_).toLocaleString());
+        return _.createElement("span", null, (0, _._)(Number(_)));
       }
       function _(_) {
         const _ = Number.parseInt((0, _._)(_.args)),

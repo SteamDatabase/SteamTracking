@@ -4571,6 +4571,7 @@
             onKeyDown: (e) => {
               " " === e.key && (p(), e.preventDefault(), e.stopPropagation());
             },
+            cursor: "default",
             ...l,
           },
           r.createElement(

@@ -14471,9 +14471,9 @@
             badgeLevel: __webpack_require__,
             title: _,
           } = _;
+          if (!__webpack_require__) return null;
           let _ =
-              _.community_item_data.badge_data[__webpack_require__ - 1].image ||
-              "",
+              _.community_item_data.badge_data[__webpack_require__ - 1]?.image,
             _ = _.NextLevel;
           return (
             _._.Get().GetUserSeasonalBadgeLevel() == __webpack_require__ &&

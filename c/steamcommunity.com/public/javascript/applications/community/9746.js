@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Eltávolítva és figyelmeztetve",
 	"moderation_resolutionstatus_removeandban": "Eltávolítva és kitiltva a központból",
 	"moderation_resolutionstatus_removeandkick": "Eltávolítva és kirúgva a csoportból",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Ismeretlen",
 	"moderationaction_acquitted": "Felmentve",
 	"moderationaction_cancelled": "Legutóbb megnyitott jelentés törölve",

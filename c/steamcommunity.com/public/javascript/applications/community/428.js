@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Ten przedmiot to towar, którego indywidualne egzemplarze są identyczne. Pojedyncze oferty nie będą wyświetlane. Możesz złożyć zamówienie, określając cenę zakupu. Najwyższym ofertom zakupu zostają automatycznie przypisane najtańsze oferty sprzedaży.",
 	"Search_AmountFound": "Znalezione wyniki: %1$s",
 	"Search_AmountFound_Plural": "Znalezione wyniki: %1$s",
-	"Search_ListingsFound": "Znalezione oferty: %1$s",
-	"Search_ListingsFound_Plural": "Znalezione oferty: %1$s",
+	"Search_ListingsFound": "Znalezione oferty: %2$s",
+	"Search_ListingsFound_Plural": "Znalezione oferty: %2$s",
 	"SortBy_Name_Asc": "Nazwa (od A do Z)",
 	"SortBy_Name_Desc": "Nazwa (od Z do A)",
 	"SortBy_Price_Asc": "Cena (rosnąco)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Niektóre starsze przedmioty wykorzystują opisy tekstowe dla istotnych właściwości przedmiotu, które nie są dostępne z użyciem poniższych filtrów. Ta opcja umożliwi dopasowanie twojego wyszukiwanego tekstu do pełnego tekstu opisu, a nie tylko nazwy przedmiotu.",
 	"MarketSearch_FilterColumn_Header": "Filtry",
 	"MarketSearch_Reset": "Zresetuj wyszukiwanie",
-	"Listings_Filter_Placeholder": "Filtruj oferty…",
+	"Listings_TextFilter_Placeholder": "Wprowadź niestandardowy tekst filtra…",
 	"Economy_Market_Purchase_Restrictions": "Po zakupie tego przedmiotu:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "nie będzie można go wymienić przez 1 dzień",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "nie będzie można go wymienić przez tydzień",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Przepraszamy!",
 	"Error_Encountered": "Wystąpił błąd podczas przetwarzania twojego żądania:",
 	"Error_TooManyRequests_Description": "Dokonano zbyt wielu żądań. Poczekaj i spróbuj ponownie później.",
-	"Container_ContentsLabel": "Możliwa zawartość:"
+	"Container_ContentsLabel": "Możliwa zawartość:",
+	"Error_LoadingContent": "Wystąpił problem podczas wczytywania tych treści",
+	"Error_LoadingMarketItem": "Żądany element może nie istnieć lub mógł wystąpić tymczasowy problem uniemożliwiający jego wczytanie. Spróbuj ponownie później.",
+	"ListingFilter_Title": "Filtruj oferty"
 }`);
     },
   },

@@ -96,7 +96,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = [
         "mousemove",
@@ -151,18 +150,10 @@
         }, []);
       }
       (0, _._)([_._], _.prototype, "ResetFidgetTimer", null);
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_EQuestionStateNew = 0)] = "k_EQuestionStateNew"),
-          (_[(_.k_EQuestionStateModerated = 1)] = "k_EQuestionStateModerated"),
-          (_[(_.k_EQuestionStateAnswered = 2)] = "k_EQuestionStateAnswered"),
-          (_[(_.k_EQuestionStateHidden = 3)] = "k_EQuestionStateHidden"),
-          (_[(_.k_EQuestionStateDeleted = 4)] = "k_EQuestionStateDeleted");
-      })(_ || (_ = {}));
       class _ {
         static Get() {
           return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
@@ -204,8 +195,7 @@
         }
         async LoadAllSessions(_) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID)
-            return _._.k_EResultAccessDenied;
+          if (!_._.logged_in || !_._.SESSIONID) return 15;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -221,15 +211,16 @@
             if (
               (console.log(_),
               200 == (null == _ ? void 0 : _.status) &&
-                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                  _._.k_EResultOK &&
+                1 ==
+                  (null === (_ = _.data) || void 0 === _
+                    ? void 0
+                    : _.success) &&
                 _.data.qandas)
             ) {
               for (const _ of _.data.qandas)
                 this.m_mapQAndASessions.set(_.gidSession, _);
               return (
-                this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
-                _._.k_EResultOK
+                this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()), 1
               );
             }
             _ = {
@@ -256,13 +247,12 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : _._.k_EResultFail
+              : 2
           );
         }
         async CreateNewSession(_, _) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID)
-            return _._.k_EResultAccessDenied;
+          if (!_._.logged_in || !_._.SESSIONID) return 15;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -278,8 +268,8 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._.k_EResultOK &&
+              1 ==
+                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) &&
               _.data.qanda
             )
               return (
@@ -288,7 +278,7 @@
                   _.data.qanda,
                 ),
                 this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
-                _._.k_EResultOK
+                1
               );
             _ = {
               response: _,
@@ -310,13 +300,12 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : _._.k_EResultFail
+              : 2
           );
         }
         async RenameSession(_, _, _) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID)
-            return _._.k_EResultAccessDenied;
+          if (!_._.logged_in || !_._.SESSIONID) return 15;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -333,8 +322,7 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._.k_EResultOK
+              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
             )
               return (
                 (this.m_mapQAndASessions.get(_).strName = _),
@@ -342,7 +330,7 @@
                   this.m_mapQAndASessions.get(_),
                 ),
                 this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
-                _._.k_EResultOK
+                1
               );
             _ = {
               response: _,
@@ -364,13 +352,12 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : _._.k_EResultFail
+              : 2
           );
         }
         async DeleteSession(_, _) {
           var _, _, _, _;
-          if (!_._.logged_in || !_._.SESSIONID)
-            return _._.k_EResultAccessDenied;
+          if (!_._.logged_in || !_._.SESSIONID) return 15;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -387,13 +374,12 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._.k_EResultOK
+              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
             )
               return (
                 this.m_mapQAndASessions.delete(_),
                 this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
-                _._.k_EResultOK
+                1
               );
             _ = {
               response: _,
@@ -415,7 +401,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : _._.k_EResultFail
+              : 2
           );
         }
         async LoadSession(_, _, _) {
@@ -438,8 +424,8 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._.k_EResultOK &&
+              1 ==
+                (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) &&
               _.data.qanda &&
               _.data.questions
             ) {
@@ -488,7 +474,7 @@
                 this.m_mapQAndASessions.set(_, _),
                 this.GetQAndACallbackList(_).Dispatch(_),
                 this.UpdatePendingQuestionList(_.data.qanda.rgQuestionGIDs),
-                _._.k_EResultOK
+                1
               );
             }
             _ = {
@@ -511,7 +497,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : _._.k_EResultFail
+              : 2
           );
         }
         UpdatePendingQuestionList(_) {
@@ -520,16 +506,17 @@
           for (const _ of _) {
             const _ = this.m_mapQuestions.get(_);
             _.posterAccountID == _._.accountid &&
-              _.eState == _.k_EQuestionStateModerated &&
+              1 == _.eState &&
               __webpack_require__.add(_.gidQuestion);
           }
           if (this.m_rgPendingQuestionGIDs.length > 0) {
             const _ = new Set(_);
             for (const _ of this.m_rgPendingQuestionGIDs)
               _.has(_) &&
-                (null === (_ = this.m_mapQuestions.get(_)) || void 0 === _
-                  ? void 0
-                  : _.eState) == _.k_EQuestionStateModerated &&
+                1 ==
+                  (null === (_ = this.m_mapQuestions.get(_)) || void 0 === _
+                    ? void 0
+                    : _.eState) &&
                 __webpack_require__.add(_);
           }
           this.m_rgPendingQuestionGIDs = Array.from(_);
@@ -543,7 +530,7 @@
               ? void 0
               : _.bUserCanAskQuestions)
           )
-            return _._.k_EResultAccessDenied;
+            return 15;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -560,12 +547,11 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._.k_EResultOK
+              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
             ) {
               this.m_rgPendingQuestionGIDs.push(_.data.gidQuestion);
               const _ = !0;
-              return this.LoadSession(_, _, _), _._.k_EResultOK;
+              return this.LoadSession(_, _, _), 1;
             }
             _ = {
               response: _,
@@ -587,7 +573,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : _._.k_EResultFail
+              : 2
           );
         }
         async ModerateQuestion(_, _, _, _) {
@@ -599,10 +585,9 @@
               ? void 0
               : _.bUserCanModerate)
           )
-            return _._.k_EResultAccessDenied;
-          if (_ != _.k_EQuestionStateModerated && _ != _.k_EQuestionStateHidden)
-            return _._.k_EResultInvalidParam;
-          if (this.m_mapQuestions.get(_).eState == _) return _._.k_EResultOK;
+            return 15;
+          if (1 != _ && 3 != _) return 8;
+          if (this.m_mapQuestions.get(_).eState == _) return 1;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -612,10 +597,7 @@
             _ = new FormData();
           _.append("sessionid", _._.SESSIONID),
             _.append("gidquestion", _),
-            _.append(
-              "action",
-              _ == _.k_EQuestionStateModerated ? "show" : "hide",
-            );
+            _.append("action", 1 == _ ? "show" : "hide");
           let _ = null;
           try {
             const _ = await _().post(_, _, {
@@ -624,11 +606,10 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._.k_EResultOK
+              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
             ) {
               const _ = !0;
-              return this.LoadSession(_, _, _), _._.k_EResultOK;
+              return this.LoadSession(_, _, _), 1;
             }
             _ = {
               response: _,
@@ -657,7 +638,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : _._.k_EResultFail
+              : 2
           );
         }
         async AnswerQuestion(_, _, _, _) {
@@ -669,7 +650,7 @@
               ? void 0
               : _.bUserCanAskQuestions)
           )
-            return _._.k_EResultAccessDenied;
+            return 15;
           const _ =
               _._.COMMUNITY_BASE_URL +
               "questions/" +
@@ -688,11 +669,10 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._.k_EResultOK
+              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
             ) {
               const _ = !0;
-              return this.LoadSession(_, _, _), _._.k_EResultOK;
+              return this.LoadSession(_, _, _), 1;
             }
             _ = {
               response: _,
@@ -714,7 +694,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : _._.k_EResultFail
+              : 2
           );
         }
         async VoteOnQuestion(_, _, _, _) {
@@ -726,9 +706,8 @@
               ? void 0
               : _.bUserCanAskQuestions)
           )
-            return _._.k_EResultAccessDenied;
-          if (_ === this.m_mapQuestions.get(_).bUserUpVoted)
-            return _._.k_EResultOK;
+            return 15;
+          if (_ === this.m_mapQuestions.get(_).bUserUpVoted) return 1;
           let _ = this.m_mapQuestions.get(_);
           const _ = _.nVoteCount,
             _ = _ + (_ ? 1 : -1);
@@ -757,10 +736,9 @@
             });
             if (
               200 == (null == _ ? void 0 : _.status) &&
-              (null === (_ = _.data) || void 0 === _ ? void 0 : _.success) ==
-                _._.k_EResultOK
+              1 == (null === (_ = _.data) || void 0 === _ ? void 0 : _.success)
             )
-              return _._.k_EResultOK;
+              return 1;
             _ = {
               response: _,
             };
@@ -788,7 +766,7 @@
                   ? void 0
                   : _.success) && void 0 !== _
               ? _
-              : _._.k_EResultFail
+              : 2
           );
         }
       }
@@ -835,16 +813,16 @@
                 : []) {
                 const _ = _.Get().GetQuestion(_);
                 switch (null == _ ? void 0 : _.eState) {
-                  case _.k_EQuestionStateModerated:
+                  case 1:
                     _.push(_);
                     break;
-                  case _.k_EQuestionStateAnswered:
+                  case 2:
                     _.push(_);
                     break;
-                  case _.k_EQuestionStateNew:
+                  case 0:
                     _.push(_);
                     break;
-                  case _.k_EQuestionStateHidden:
+                  case 3:
                     _.push(_);
                 }
               }
@@ -987,6 +965,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (function () {
@@ -1296,10 +1275,10 @@
             : _().Vote_CannotVote,
           _ = (0, _._)(
             _().Question,
-            _.eState == _.k_EQuestionStateHidden && _().Hidden,
-            _.eState == _.k_EQuestionStateModerated && _().Moderated,
-            _.eState == _.k_EQuestionStateNew && _().Unmoderated,
-            _.eState == _.k_EQuestionStateAnswered && _().Answered,
+            3 == _.eState && _().Hidden,
+            1 == _.eState && _().Moderated,
+            0 == _.eState && _().Unmoderated,
+            2 == _.eState && _().Answered,
           );
         return _.createElement(
           "div",
@@ -1354,7 +1333,7 @@
                       {
                         className: _().VoteCount,
                       },
-                      Number(_.nVoteCount).toLocaleString(),
+                      (0, _._)(Number(_.nVoteCount)),
                     ),
                   ),
                 ),
@@ -1491,9 +1470,9 @@
             eState: _,
           } = _,
           { fnAnswerQuestion: _, fnModerateQuestion: _ } = _(_),
-          _ = _ == _.k_EQuestionStateNew || _ == _.k_EQuestionStateHidden,
-          _ = _ != _.k_EQuestionStateHidden,
-          _ = _ == _.k_EQuestionStateModerated;
+          _ = 0 == _ || 3 == _,
+          _ = 3 != _,
+          _ = 1 == _;
         return _.createElement(
           "div",
           {
@@ -1524,8 +1503,7 @@
               _.createElement(
                 _._,
                 {
-                  onClick: () =>
-                    _(__webpack_require__, _.k_EQuestionStateModerated),
+                  onClick: () => _(__webpack_require__, 1),
                   className: _().InputButton,
                   disabled: !_,
                 },
@@ -1540,8 +1518,7 @@
               _.createElement(
                 _._,
                 {
-                  onClick: () =>
-                    _(__webpack_require__, _.k_EQuestionStateHidden),
+                  onClick: () => _(__webpack_require__, 3),
                   className: _().InputButton,
                   disabled: !_,
                 },
@@ -1733,8 +1710,7 @@
                       {
                         onClick: async () => {
                           for (const _ of [_, _, _])
-                            for (const _ of _)
-                              await _(_, _.k_EQuestionStateHidden);
+                            for (const _ of _) await _(_, 3);
                         },
                         className: _().InputButton,
                       },
@@ -1841,7 +1817,7 @@
             fnSubmit: async (_) => {
               const _ = await _.fnAskQuestion(_);
               return (
-                _ != _._.k_EResultOK ||
+                1 != _ ||
                   _.token.reason ||
                   (__webpack_require__(!0),
                   window.setTimeout(() => {
@@ -1900,8 +1876,7 @@
                 {
                   onClick: async () => {
                     _(!0);
-                    (await __webpack_require__(_)) == _._.k_EResultOK && _(""),
-                      _(!1);
+                    1 == (await __webpack_require__(_)) && _(""), _(!1);
                   },
                   disabled: _ || !_,
                   className: _().InputButton,

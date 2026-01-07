@@ -426,6 +426,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         FriendCtn: "_1dEBrEq6v5neOeVMAn5etR",
         FriendsSharedSection: "_3zKPE2ZlhrQ9o2OKqQY2wz",
         FriendsSharedSectionTitle: "_2Jnwqsg3lgHxusPRrKpXY9",
@@ -13567,6 +13568,7 @@
                 autoPlay: !0,
                 loop: !0,
                 poster: _,
+                playsInline: !0,
                 className: _.videoClassName,
               },
               _.createElement("source", {
@@ -14344,7 +14346,7 @@
       }
       function _(_) {
         return _ < 100
-          ? (0, _._)("#YIR_Percent", "<1")
+          ? (0, _._)("#YIR_Percent_Low", "1")
           : (0, _._)("#YIR_Percent", Math.round(_ / 100).toFixed(0));
       }
       var _ = __webpack_require__("chunkid");
@@ -15204,7 +15206,8 @@
           __webpack_require__,
         );
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = {
         ..._,
         include_screenshots: !0,
@@ -15234,7 +15237,9 @@
             () => _.map((_) => _.parent_appid || _.appid),
             [_],
           ),
-          [_, _] = (0, _.useState)(_[0].parent_appid || _[0].appid),
+          [_, _] = (0, _.useState)(
+            _.length > 0 ? _[0].parent_appid || _[0].appid : 0,
+          ),
           _ = (0, _._)(_, Boolean("vr" == _) ? _ : _),
           _ = (function (_, _, _) {
             const [_, _] = _.useState(0);
@@ -15275,6 +15280,7 @@
               className: _().BackgroundImage,
             }),
           Boolean("vr" === _) &&
+            Boolean(_ > 0) &&
             _.createElement(_, {
               appid: _,
             }),
@@ -15402,8 +15408,9 @@
             _ = 12;
         }
         return _.createElement(
-          "div",
+          _._,
           {
+            "flow-children": "grid",
             className: (0, _._)(
               _().YearInReviewContent,
               _().CapRow,
@@ -15824,8 +15831,9 @@
           }),
         );
         return _.createElement(
-          "div",
+          _._,
           {
+            "flow-children": "grid",
             className: (0, _._)(_.FirstPlayCtn, _.FirstPlayCtn),
           },
           _,
@@ -17102,7 +17110,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { userYearInReview: _ } = _;
@@ -17727,9 +17734,12 @@
         const { userYearInReview: _ } = _,
           _ = _.GetYear(),
           _ = _(),
-          _ = _.GetPlayTimeStats().total_stats;
+          _ = _.GetPlayTimeStats().total_stats,
+          _ =
+            _.controller_playtime_percentagex100 +
+            _.deck_playtime_percentagex100;
         let _;
-        _.controller_playtime_percentagex100 > 7e3 && (_ = !0);
+        _ > 7e3 && (_ = !0);
         const _ = _(_);
         return _.createElement(
           _._,
@@ -17761,7 +17771,7 @@
                 subTitle: void 0,
               }),
             ),
-          Boolean(_.controller_playtime_percentagex100 > 1e3) &&
+          Boolean(_ > 1e3) &&
             _.createElement(
               _,
               {
@@ -17774,7 +17784,7 @@
                   _
                     ? "#YIR_TopGames_controllerMost"
                     : "#YIR_TopGames_controller",
-                  _(_.controller_playtime_percentagex100),
+                  _(_),
                 ),
                 subTitle: _(
                   "#YIR_Platform_subtitle_controller",
@@ -18018,8 +18028,9 @@
                   className: (0, _._)(_().CapRowCtn),
                 },
                 _.createElement(
-                  "div",
+                  _._,
                   {
+                    "flow-children": "grid",
                     className: (0, _._)(
                       _().CapRow,
                       _().LongestStreak,
@@ -18111,7 +18122,7 @@
                 },
                 _.map((_) =>
                   _.createElement(
-                    "a",
+                    _._,
                     {
                       key: _,
                       href: `${_._.STORE_BASE_URL}replay/${_.ConvertTo64BitString()}/${_}?src=8`,
@@ -18182,7 +18193,7 @@
         if (!_._.logged_in) return null;
         if (!_ && _._.logged_in)
           return _.createElement(
-            "a",
+            _._,
             {
               className: (0, _._)(_.SeeRewindButton, _.SeeRewindButton),
               href: `${_._.STORE_BASE_URL}replay/${_._.steamid}/${_}?src=9`,
@@ -21312,10 +21323,10 @@
         )
           return null;
         return _.createElement(
-          "div",
+          _._,
           {
             className: (0, _._)(_.AddToWishlist),
-            onClick: async (_) => {
+            onActivate: async (_) => {
               _.preventDefault(),
                 _.stopPropagation(),
                 _(!0),
@@ -21611,7 +21622,7 @@
                     (0, _._)("#YIR_ShareOptionsTitle"),
                   ),
                   _.createElement(
-                    "div",
+                    _._,
                     {
                       className: _().ShareColumns,
                     },
@@ -21646,7 +21657,7 @@
                         (0, _._)("#YIR_ShareModal_TitleProfile"),
                       ),
                       _.createElement(
-                        "a",
+                        _._,
                         {
                           href: `${_._.COMMUNITY_BASE_URL}profiles/${_._.steamid}/edit/showcases`,
                           className: (0, _._)(_().ShareButton),

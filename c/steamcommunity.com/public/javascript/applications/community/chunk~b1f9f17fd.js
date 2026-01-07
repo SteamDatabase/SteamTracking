@@ -28621,10 +28621,11 @@
         _.useEffect(() => {
           _ || _ || !_ || (_(!1), _());
         }, [_, _, _, _]);
-        const _ =
-          !_ &&
-          _ > 1 &&
-          (null == __webpack_require__ || __webpack_require__ > 0);
+        const _ = !_ && !(0, _._)(),
+          _ =
+            !_ &&
+            _ > 1 &&
+            (null == __webpack_require__ || __webpack_require__ > 0);
         let _;
         _
           ? (_ = 4)
@@ -28755,8 +28756,7 @@
                       }),
                     ),
                 ),
-                !_ &&
-                  !(0, _._)() &&
+                _ &&
                   _.createElement(_, {
                     className: (0, _._)(_().AutoAdvanceRow, _ && _().Enabled),
                     enabled: _,
@@ -28770,6 +28770,7 @@
           : _.createElement(_._, {
               capsules_per_row: [1],
               is_trailer_carousel: !0,
+              show_auto_advance_bar: _,
             });
       }
       function _(_) {
@@ -30405,6 +30406,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -30583,10 +30585,7 @@
                     "salepagebadgeprogressdisplay_BadgeLevel",
                   ),
                 },
-                (0, _._)(
-                  "#SalePage_BadgeProgress_LevelNum",
-                  _.toLocaleString(),
-                ),
+                (0, _._)("#SalePage_BadgeProgress_LevelNum", (0, _._)(_)),
               ),
               _.createElement("img", {
                 src: (0, _._)(_.levels[_].badge_icon_url),
@@ -30691,7 +30690,7 @@
                   "salepagebadgeprogressdisplay_BadgeLevel_Final",
                 ),
               },
-              (0, _._)("#SalePage_BadgeProgress_LevelNum", _.toLocaleString()),
+              (0, _._)("#SalePage_BadgeProgress_LevelNum", (0, _._)(_)),
             ),
           ),
           _.createElement(
@@ -31268,7 +31267,7 @@
                 "scenario" == _
                   ? "#SalePage_Quiz_Scenario"
                   : "#SalePage_Question",
-                (_ + 1).toLocaleString(),
+                (0, _._)(_ + 1),
               ),
             ),
           _.createElement(_, {

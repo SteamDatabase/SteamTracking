@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Dit voorwerp is een handelsartikel waarbij alle individuele voorwerpen praktisch identiek zijn. Individuele vermeldingen zijn niet toegankelijk - je kunt opdracht geven om voorwerpen te kopen voor een specifieke prijs, waarbij de goedkoopste vermelding automatisch gekoppeld wordt aan de hoogste aankoopopdracht.",
 	"Search_AmountFound": "%1$s resultaat gevonden",
 	"Search_AmountFound_Plural": "%1$s resultaten gevonden",
-	"Search_ListingsFound": "%1$s vermelding gevonden",
-	"Search_ListingsFound_Plural": "%1$s vermeldingen gevonden",
+	"Search_ListingsFound": "%2$s vermelding gevonden",
+	"Search_ListingsFound_Plural": "%2$s vermeldingen gevonden",
 	"SortBy_Name_Asc": "Naam (A tot Z)",
 	"SortBy_Name_Desc": "Naam (Z tot A)",
 	"SortBy_Price_Asc": "Prijs (laag naar hoog)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Sommige oudere voorwerpen maken gebruik van tekst om belangrijke voorwerpeigenschappen te beschrijven en deze tekst kan niet worden doorzocht met behulp van onderstaande filters. Met deze optie kun je zoeken in de volledige beschrijving in plaats van alleen de naam van het voorwerp.",
 	"MarketSearch_FilterColumn_Header": "Filters",
 	"MarketSearch_Reset": "Zoekopdracht wissen",
-	"Listings_Filter_Placeholder": "Vermeldingen filteren ...",
+	"Listings_TextFilter_Placeholder": "Aangepaste filtertekst invoeren ...",
 	"Economy_Market_Purchase_Restrictions": "Na aankoop zal dit voorwerp:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "een dag niet ruilbaar zijn",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "een week niet ruilbaar zijn",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Helaas!",
 	"Error_Encountered": "Er is een fout opgetreden bij het verwerken van je verzoek:",
 	"Error_TooManyRequests_Description": "Je hebt in korte tijd te veel verzoeken verzonden. Wacht even en probeer het later opnieuw.",
-	"Container_ContentsLabel": "Mogelijke inhoud:"
+	"Container_ContentsLabel": "Mogelijke inhoud:",
+	"Error_LoadingContent": "Er is een probleem opgetreden bij het laden van deze inhoud",
+	"Error_LoadingMarketItem": "Het gevraagde voorwerp bestaat mogelijk niet of er is een tijdelijk probleem waardoor het niet geladen kan worden. Probeer het later opnieuw.",
+	"ListingFilter_Title": "Vermeldingen filteren ..."
 }`);
     },
   },

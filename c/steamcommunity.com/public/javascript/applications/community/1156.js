@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Esine on massahyödyke. Kaikki sen kopiot ovat käytännössä identtisiä, joten yksittäisiä tarjouksia ei näytetä. Voit sen sijaan määrittää kappalehinnan, jonka olet valmis maksamaan, jolloin suurimpaan kappalehintaan tilannut saa ensisijaisesti halvimman tarjouksen.",
 	"Search_AmountFound": "%1$s hakutulos",
 	"Search_AmountFound_Plural": "%1$s hakutulosta",
-	"Search_ListingsFound": "%1$s esine löydetty",
-	"Search_ListingsFound_Plural": "%1$s esinettä löydetty",
+	"Search_ListingsFound": "%2$s listaus löydetty",
+	"Search_ListingsFound_Plural": "%2$s listausta löydetty",
 	"SortBy_Name_Asc": "Nimi (A–Ö)",
 	"SortBy_Name_Desc": "Nimi (Ö–A)",
 	"SortBy_Price_Asc": "Hinta (halvin ensin)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Jotkin vanhemmat tuotteet käyttävät tärkeille ominaisuuksille tekstikuvausta, joka ei ole alla näkyvien suodattimien kanssa yhteensopiva. Tällä vaihtoehdolla hakutermejä voidaan verrata pelkän nimen sijasta kuvauksen koko sisältöön.",
 	"MarketSearch_FilterColumn_Header": "Suodattimet",
 	"MarketSearch_Reset": "Nollaa haku",
-	"Listings_Filter_Placeholder": "Suodata esineitä",
+	"Listings_TextFilter_Placeholder": "Syötä mukautettu suodatettava teksti",
 	"Economy_Market_Purchase_Restrictions": "Oston jälkeen esine",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "ei ole vaihdettavissa vuorokauden ajan",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "ei ole vaihdettavissa viikon ajan",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Pahoittelut!",
 	"Error_Encountered": "Pyyntösi käsittely epäonnistui:",
 	"Error_TooManyRequests_Description": "Olet tehnyt liian monta pyyntöä viime aikoina. Yritä myöhemmin uudelleen.",
-	"Container_ContentsLabel": "Mahdollinen sisältö:"
+	"Container_ContentsLabel": "Mahdollinen sisältö:",
+	"Error_LoadingContent": "Sisällön lataaminen epäonnistui.",
+	"Error_LoadingMarketItem": "Pyydettyä esinettä ei ehkä ole olemassa tai väliaikainen ongelma saattaa estää sen näyttämisen. Yritä myöhemmin uudelleen.",
+	"ListingFilter_Title": "Suodata listauksia"
 }`);
     },
   },

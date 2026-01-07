@@ -10977,6 +10977,7 @@
               }),
             );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { proposal: _, mapPartnerPaidByPackage: __webpack_require__ } = _,
           [_] = (0, _._)(_.packageid, _),
@@ -11111,7 +11112,7 @@
       }
       function _(_) {
         return _
-          ? (_ / 100).toLocaleString(void 0, {
+          ? (_ / 100).toLocaleString((0, _._)(), {
               minimumFractionDigits: 2,
               maximumFractionDigits: 2,
             })

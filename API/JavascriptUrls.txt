@@ -228,6 +228,7 @@ ${COMMUNITY_BASE_URL}gid/${}/membersManage
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/${}/edit
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/create?type=creatorhome
+${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/$clanEventGID}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${GID}?tab=sale
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${GID}?tab=sale#SalePageEdit_SaleBanner
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${clanEventGID}
@@ -235,7 +236,6 @@ ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${clan_event_gid}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${eventGID}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${gid_clan_event}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${sale_clan_event_gid}?tab=sale
-${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${update_event_gid}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${}
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${}?tab=sale
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/preview/${}
@@ -1323,7 +1323,6 @@ ${STORE_BASE_URL}buyitem/${nAppID}/${nItemDefID}/${}
 ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
 ${STORE_BASE_URL}cart/addtocart
-${STORE_BASE_URL}cart/addtocartwrapper
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
 ${STORE_BASE_URL}cart/ajaxsaledropprogress
 ${STORE_BASE_URL}cart/purchaserequest/${}/${}
@@ -2818,7 +2817,6 @@ https://store.steampowered.com/${strUrlTarget}
 https://store.steampowered.com//account/preferences/#CommunityContentPreferences
 https://store.steampowered.com//ajaxreportproductaction/${appId}/
 https://store.steampowered.com//app/${appid}
-https://store.steampowered.com//login?redir=app/${appid}
 https://store.steampowered.com//news/post/${gid}
 https://store.steampowered.com//userreviews/ajaxgetvotes/
 https://store.steampowered.com/about/
@@ -2899,6 +2897,7 @@ https://store.steampowered.com/itemcart/checkout/
 https://store.steampowered.com/itemstore/${appid}/ajaxcheckout/
 https://store.steampowered.com/jserrorreport/
 https://store.steampowered.com/labs/mlttagwizard
+https://store.steampowered.com/login?redir=app/${appid}
 https://store.steampowered.com/logout/
 https://store.steampowered.com/mobile
 https://store.steampowered.com/news/app/${appid}/view/${announcementid}/

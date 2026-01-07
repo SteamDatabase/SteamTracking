@@ -10545,6 +10545,7 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = 3e3,
         _ = _ + 1e3;
@@ -11754,7 +11755,7 @@
             _ = new Date(),
             _ = [
               _,
-              `${_.getFullYear()}-${(_.getMonth() + 1).toString().padStart(2, "0")}-${_.getDate().toString().padStart(2, "0")} ${_.toLocaleTimeString()}`,
+              `${_.getFullYear()}-${(_.getMonth() + 1).toString().padStart(2, "0")}-${_.getDate().toString().padStart(2, "0")} ${_.toLocaleTimeString(_._.GetPreferredLocales())}`,
               _,
             ]
               .filter((_) => !!_)

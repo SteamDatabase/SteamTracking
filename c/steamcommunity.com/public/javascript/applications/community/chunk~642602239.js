@@ -4247,6 +4247,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4320,6 +4321,7 @@
         _ = 4,
         _ = 20,
         _ = 45559995,
+        _ = 45902273,
         _ = [_, 35143931, _, _, _],
         _ = [12, 34];
       function _(_) {
@@ -5933,8 +5935,8 @@
                 : 0) >= 7,
             min_capsule_matches_for_facet_values: 5,
             max_facet_values_for_facet: 5,
-            background_gradient_top: "#00000030",
-            background_gradient_bottom: "#00000030",
+            background_gradient_top: "#0000006b",
+            background_gradient_bottom: "#0000006b",
             facet_sort_order: 1,
             facet_auto_generate_options: {
               only_facets: [
@@ -12406,17 +12408,20 @@
             return _.jsondata.bSaleEnabled
               ? _.clanSteamID.GetAccountID() == _._
                 ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
-                : _
-                  ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
+                : _.clanSteamID.GetAccountID() == _._
+                  ? `${_}charts/bestofyear/${_.jsondata.sale_vanity_id}`
                   : _
-                    ? `${_}curator/${_.clanSteamID.GetAccountID()}`
-                    : _ +
-                      (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                        ? "sale/"
-                        : "curator/" +
-                          _.clanSteamID.GetAccountID() +
-                          "/sale/") +
-                      _.jsondata.sale_vanity_id
+                    ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
+                    : _
+                      ? `${_}curator/${_.clanSteamID.GetAccountID()}`
+                      : _ +
+                        (_.jsondata
+                          .sale_vanity_id_valve_approved_for_sale_subpath
+                          ? "sale/"
+                          : "curator/" +
+                            _.clanSteamID.GetAccountID() +
+                            "/sale/") +
+                        _.jsondata.sale_vanity_id
               : _;
           case _.k_eCommunityView:
             return _ + "announcements/detail/" + _;

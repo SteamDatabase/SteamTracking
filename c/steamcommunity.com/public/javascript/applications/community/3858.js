@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Този артикул е търговска стока, при която всички отделни такива в действителност са идентични. Отделните обяви не са достъпни. Вместо това можете да подадете заявка за купуването им на специална цена. Най-евтината обява автоматично бива съчетана с най-подходящата заявка за купуване.",
 	"Search_AmountFound": "Намерен е %1$s резултат",
 	"Search_AmountFound_Plural": "Намерени са %1$s резултата",
-	"Search_ListingsFound": "Намерена е %1$s обява",
-	"Search_ListingsFound_Plural": "Намерени са %1$s обяви",
+	"Search_ListingsFound": "Намерена е %2$s обява",
+	"Search_ListingsFound_Plural": "Намерени са %2$s обяви",
 	"SortBy_Name_Asc": "Име (А — Я)",
 	"SortBy_Name_Desc": "Име (Я — А)",
 	"SortBy_Price_Asc": "Цена (възходящо)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Някои по-стари артикули използват текстови описания за смислени техни свойства, които не са достъпни с филтрите по-долу. Тази опция ще позволи текстът Ви за търсене да бъде съпоставен спрямо пълното такова описание, вместо само с името на артикула.",
 	"MarketSearch_FilterColumn_Header": "Филтри",
 	"MarketSearch_Reset": "Нулиране на търсенето",
-	"Listings_Filter_Placeholder": "Филтриране на обяви…",
+	"Listings_TextFilter_Placeholder": "Въвеждане на персонализиран текст за филтър…",
 	"Economy_Market_Purchase_Restrictions": "След покупка, този артикул:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "няма да бъде търгуем за един ден",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "няма да бъде търгуем за една седмица",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Съжаляваме!",
 	"Error_Encountered": "Натъкнахме се на грешка, докато обработвахме заявката Ви:",
 	"Error_TooManyRequests_Description": "Наскоро сте направили прекалено много заявки. Моля, изчакайте и опитайте Вашата заявка по-късно.",
-	"Container_ContentsLabel": "Възможно съдържание:"
+	"Container_ContentsLabel": "Възможно съдържание:",
+	"Error_LoadingContent": "Имаше проблем при зареждането на това съдържание",
+	"Error_LoadingMarketItem": "Възможно е изискваният артикул да не съществува или да има временен проблем, който възпрепятства зареждането му.",
+	"ListingFilter_Title": "Филтриране на обяви"
 }`);
     },
   },

@@ -545,14 +545,6 @@ enum ECommentDeleteReason
 	k_ECommentDeleteReason_AccountDeletion = 6;
 }
 
-enum ECommentPermission
-{
-	k_ECommentPermissionInvalid = -1;
-	k_ECommentPermissionFriendsOnly = 0;
-	k_ECommentPermissionAnyone = 1;
-	k_ECommentPermissionSelfOnly = 2;
-}
-
 enum ECommentReportAction
 {
 	k_ECommentReportAction_Invalid = 0;
@@ -1678,15 +1670,6 @@ enum EPushUpdatesToCrowdIn
 	k_EPushUpdatesToCrowdIn_Always = 3;
 }
 
-enum EQuestionState
-{
-	k_EQuestionStateNew = 0;
-	k_EQuestionStateModerated = 1;
-	k_EQuestionStateAnswered = 2;
-	k_EQuestionStateHidden = 3;
-	k_EQuestionStateDeleted = 4;
-}
-
 enum ERaiseGameWindowResult
 {
 	k_ERaiseGameWindowResult_NotRunning = 1;
@@ -1806,14 +1789,6 @@ enum ESortFacets
 	k_ESortFacetsByName = 0;
 	k_ESortFacetsByMatchCount = 1;
 	k_ESortFacetsManually = 2;
-}
-
-enum eState
-{
-	eStateNone = 0;
-	eStateSaving = 1;
-	eStateSaved = 2;
-	eStateError = 3;
 }
 
 enum ESteam
@@ -5402,6 +5377,40 @@ enum UnnamedEnumd754cec457ef65e8
 	Hover = 0;
 	ClickPopup = 1;
 	ClickSurroundingRegion = 2;
+}
+
+enum UnnamedEnumd8b0cee91fc2961d
+{
+	INVALID = 0;
+	OK = 1;
+	CANCEL = 2;
+	SECONDARY = 3;
+	OPTIONS = 4;
+	BUMPER_LEFT = 5;
+	BUMPER_RIGHT = 6;
+	TRIGGER_LEFT = 7;
+	TRIGGER_RIGHT = 8;
+	DIR_UP = 9;
+	DIR_DOWN = 10;
+	DIR_LEFT = 11;
+	DIR_RIGHT = 12;
+	SELECT = 13;
+	START = 14;
+	LSTICK_CLICK = 15;
+	RSTICK_CLICK = 16;
+	LSTICK_TOUCH = 17;
+	RSTICK_TOUCH = 18;
+	LPAD_TOUCH = 19;
+	LPAD_CLICK = 20;
+	RPAD_TOUCH = 21;
+	RPAD_CLICK = 22;
+	REAR_LEFT_UPPER = 23;
+	REAR_LEFT_LOWER = 24;
+	REAR_RIGHT_UPPER = 25;
+	REAR_RIGHT_LOWER = 26;
+	STEAM_GUIDE = 27;
+	STEAM_QUICK_MENU = 28;
+	DUMMY_INPUT = 29;
 }
 
 enum UnnamedEnumd97103ae663c8a09

@@ -38,8 +38,8 @@
 	"CommodityExplanation": "ไอเท็มนี้เป็นสินค้าโภคภัณฑ์ ซึ่งแต่ละไอเท็มนั้นเหมือนกันทุกอย่าง รายการขายแต่ละรายการไม่สามารถเข้าถึงได้โดยตรง แต่คุณสามารถวางคำสั่งซื้อในราคาที่เฉพาะเจาะจงได้ โดยรายการขายที่ถูกที่สุดจะถูกจับคู่กับคำสั่งซื้อที่แพงที่สุดโดยอัตโนมัติ",
 	"Search_AmountFound": "พบผลลัพธ์ %1$s รายการ",
 	"Search_AmountFound_Plural": "พบผลลัพธ์ %1$s รายการ",
-	"Search_ListingsFound": "พบ %1$s รายการ",
-	"Search_ListingsFound_Plural": "พบ %1$s รายการ",
+	"Search_ListingsFound": "พบ %2$s รายการ",
+	"Search_ListingsFound_Plural": "พบ %2$s รายการ",
 	"SortBy_Name_Asc": "ชื่อ (จาก A ถึง Z)",
 	"SortBy_Name_Desc": "ชื่อ (จาก Z ถึง A)",
 	"SortBy_Price_Asc": "ราคา (ต่ำไปสูง)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "ไอเท็มเก่าบางรายการใช้ข้อความอธิบายเพื่อให้เข้าใจเกี่ยวกับคุณสมบัติของไอเท็มที่ไม่สามารถเข้าถึงได้ด้วยตัวกรองด้านล่าง ตัวเลือกนี้จะช่วยให้สามารถใช้คำค้นหาของคุณเพื่อค้นหาข้อความอธิบายทั้งหมดที่ตรงกันได้ แทนที่จะค้นหาเฉพาะชื่อไอเท็มเพียงอย่างเดียว",
 	"MarketSearch_FilterColumn_Header": "ตัวกรอง",
 	"MarketSearch_Reset": "รีเซ็ตการค้นหา",
-	"Listings_Filter_Placeholder": "กรองรายการ...",
+	"Listings_TextFilter_Placeholder": "กรอกข้อความตัวกรองแบบกำหนดเอง...",
 	"Economy_Market_Purchase_Restrictions": "หลังจากสั่งซื้อ ไอเท็มนี้: ",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "จะไม่สามารถแลกเปลี่ยนได้เป็นเวลา 1 วัน",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "จะไม่สามารถแลกเปลี่ยนได้เป็นเวลา 1 สัปดาห์",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "ขออภัย!",
 	"Error_Encountered": "ตรวจพบข้อผิดพลาดขณะกำลังประมวลผลคำขอของคุณ:",
 	"Error_TooManyRequests_Description": "คุณได้ส่งคำขอจำนวนมากเกินกำหนดในช่วงไม่นานมานี้ โปรดรอสักครู่แล้วลองส่งคำขอของคุณใหม่ภายหลัง",
-	"Container_ContentsLabel": "เนื้อหาที่เป็นไปได้:"
+	"Container_ContentsLabel": "เนื้อหาที่เป็นไปได้:",
+	"Error_LoadingContent": "ตรวจพบปัญหาในการโหลดเนื้อหานี้",
+	"Error_LoadingMarketItem": "ไอเท็มที่ขออาจไม่มีอยู่จริง หรืออาจมีปัญหาชั่วคราวที่ทำให้ไม่สามารถโหลดไอเท็มนี้ได้ โปรดลองใหม่อีกครั้งภายหลัง",
+	"ListingFilter_Title": "รายการตัวกรอง"
 }`);
     },
   },

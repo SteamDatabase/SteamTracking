@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Poistettu ja varoitettu",
 	"moderation_resolutionstatus_removeandban": "Poistettu ja estetty pääsy keskukseen",
 	"moderation_resolutionstatus_removeandkick": "Poistettu ja erotettu ryhmästä",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Tuntematon",
 	"moderationaction_acquitted": "Sallittu",
 	"moderationaction_cancelled": "Viimeinen avoin ilmoitus peruttu",

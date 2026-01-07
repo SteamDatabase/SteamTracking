@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Tato položka představuje zboží. To znamená, že jednotlivé položky jsou stejné a nejsou mezi nimi žádné rozdíly. Místo nákupu konkrétní položky ze seznamu jednotlivých nabídek pouze vytvoříte příkaz k nákupu za Vámi určenou kupní cenu. Nejlevnější nabídky k prodeji jsou automaticky přiřazovány k příkazům s nejvyšší kupní cenou.",
 	"Search_AmountFound": "Byl nalezen %1$s výsledek",
 	"Search_AmountFound_Plural": "Bylo nalezeno %1$s výsledků",
-	"Search_ListingsFound": "Byla nalezena %1$s nabídka",
-	"Search_ListingsFound_Plural": "Bylo nalezeno %1$s nabídek",
+	"Search_ListingsFound": "Byla nalezena %2$s nabídka",
+	"Search_ListingsFound_Plural": "Bylo nalezeno %2$s nabídek",
 	"SortBy_Name_Asc": "Název (od A do Z)",
 	"SortBy_Name_Desc": "Název (od Z do A)",
 	"SortBy_Price_Asc": "Cena (od nejnižší)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Některé starší položky mají své vlastnosti určené v popisech, se kterými neumí níže nabízené filtry pracovat. Tato možnost zajistí, že hledaný text bude porovnán nejen proti názvům položek, ale také proti jejich popisům.",
 	"MarketSearch_FilterColumn_Header": "Filtry",
 	"MarketSearch_Reset": "Resetovat vyhledávání",
-	"Listings_Filter_Placeholder": "Filtrovat nabídky...",
+	"Listings_TextFilter_Placeholder": "Zadejte text pro filtrování...",
 	"Economy_Market_Purchase_Restrictions": "Po zakoupení této položky ji:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "nebudete moci jeden den použít při obchodování",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "nebudete moci jeden týden použít při obchodování",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Omlouváme se!",
 	"Error_Encountered": "Při zpracovávání Vašeho požadavku došlo k chybě:",
 	"Error_TooManyRequests_Description": "Odeslali jste příliš mnoho požadavků. Počkejte a zkuste to později znovu.",
-	"Container_ContentsLabel": "Možný obsah:"
+	"Container_ContentsLabel": "Možný obsah:",
+	"Error_LoadingContent": "Při načítání tohoto obsahu došlo k chybě.",
+	"Error_LoadingMarketItem": "Požadovaná položka nemusí existovat, nebo mohla nastat dočasná chyba bránící v jejím načtení. Zkuste to později znovu.",
+	"ListingFilter_Title": "Filtrování nabídek"
 }`);
     },
   },

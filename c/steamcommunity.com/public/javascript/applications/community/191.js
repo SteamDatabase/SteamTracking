@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "ถูกลบและเตือนแล้ว",
 	"moderation_resolutionstatus_removeandban": "ถูกลบและถูกแบนจากศูนย์กลางแล้ว",
 	"moderation_resolutionstatus_removeandkick": "ถูกลบและถูกเตะออกจากกลุ่มแล้ว",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "ไม่รู้จัก",
 	"moderationaction_acquitted": "พ้นผิดแล้ว",
 	"moderationaction_cancelled": "รายงานที่เปิดอยู่ล่าสุดถูกยกเลิก",

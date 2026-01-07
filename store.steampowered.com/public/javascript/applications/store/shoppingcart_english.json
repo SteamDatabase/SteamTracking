@@ -70,7 +70,7 @@
     "Cart_Error_AlreadyOwned_GiftLineItem": "The gift recipient already owns everything in this package",
     "Cart_Error_AlreadyOwned_GiftFootNote": "The gift recipient already owns some of the above items, so you can’t purchase them again. You can purchase these items for a different account or adjust the contents of your cart to continue.",
     "Cart_Error_DuplicateApps_FootNote": "It looks like you have packages which overlap in your cart. You need to remove the redundant packages from your cart before you can checkout.",
-    "Cart_Error_DuplicateApps_LineItem": "Already in your cart:",
+    "Cart_Error_DuplicateApps_LineItem": "Already in your cart: ",
     "Cart_Error_UnavailableCountry_FootNote": "Your cart contains a package that is unavailable in your country. You need to remove the package from your cart before you can checkout.",
     "Cart_Error_UnavailableCountry_LineItem": "Unavailable in your country",
     "Cart_Error_AdultContentRestricted_FootNote": "Valve is required to verify that you are 18 or older before allowing the purchase of mature sexual content.",

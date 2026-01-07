@@ -1111,7 +1111,7 @@
               null,
               " ",
               "$",
-              Math.floor(s.gross_sales_usd / 100).toLocaleString(),
+              (0, d.Dq)(Math.floor(s.gross_sales_usd / 100)),
             ),
           Boolean(s && r?.gross_sales_usd) &&
             m.createElement(
@@ -1221,7 +1221,7 @@
                       "Total: ",
                       m.createElement("br", null),
                       "$",
-                      Math.floor(t.gross_sales_usd / 100).toLocaleString(),
+                      (0, d.Dq)(Math.floor(t.gross_sales_usd / 100)),
                     ),
                     m.createElement(
                       "td",
@@ -1229,23 +1229,21 @@
                       "Per Day: ",
                       m.createElement("br", null),
                       "$",
-                      Math.floor(
-                        t.gross_sales_usd / (100 * n.tt),
-                      ).toLocaleString(),
+                      (0, d.Dq)(Math.floor(t.gross_sales_usd / (100 * n.tt))),
                     ),
                     m.createElement(
                       "td",
                       null,
                       "Total Units: ",
                       m.createElement("br", null),
-                      t.gross_units_sold.toLocaleString(),
+                      (0, d.Dq)(t.gross_units_sold),
                     ),
                     m.createElement(
                       "td",
                       null,
                       "Units Per Day: ",
                       m.createElement("br", null),
-                      Math.floor(t.gross_units_sold / n.tt).toLocaleString(),
+                      (0, d.Dq)(Math.floor(t.gross_units_sold / n.tt)),
                     ),
                     Boolean(t.gross_sales_usd > 0) &&
                       m.createElement(

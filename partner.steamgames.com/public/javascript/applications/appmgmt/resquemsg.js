@@ -101,7 +101,7 @@
     },
     43709: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => J });
+      n.r(t), n.d(t, { default: () => Z });
       var a = n(90626),
         r = n(24484);
       const i = (0, r.Tc)("physical_goods", "application_config");
@@ -502,14 +502,15 @@
           (0, D.we)(c, s, o, l, ""),
         );
       }
-      function x(e) {
+      var x = n(6083);
+      function F(e) {
         const t = h();
         return t && 0 != t.length
           ? a.createElement(
               "div",
               null,
               t.map((e) =>
-                a.createElement(Y, {
+                a.createElement(z, {
                   key: `${e.edistributor}_${e.product_identifier}`,
                   productID: e,
                 }),
@@ -521,7 +522,7 @@
               "No products with reservation position messages exists.",
             );
       }
-      function F(e) {
+      function U(e) {
         return a.createElement(
           "div",
           null,
@@ -538,7 +539,7 @@
           ),
         );
       }
-      function U(e) {
+      function Y(e) {
         h();
         return a.createElement(
           "div",
@@ -557,13 +558,13 @@
           a.createElement(
             S.$n,
             {
-              onClick: (e) => (0, A.pg)(a.createElement(W, null), (0, R.uX)(e)),
+              onClick: (e) => (0, A.pg)(a.createElement(H, null), (0, R.uX)(e)),
             },
             "Force Reload Definitions on Steam Servers",
           ),
         );
       }
-      function Y(e) {
+      function z(e) {
         const { productID: t } = e,
           n = (function (e) {
             return i.find(
@@ -590,7 +591,7 @@
             S.$n,
             {
               onClick: (e) =>
-                (0, A.pg)(a.createElement(O, { productID: t }), (0, R.uX)(e)),
+                (0, A.pg)(a.createElement(q, { productID: t }), (0, R.uX)(e)),
             },
             "Add new start position",
           ),
@@ -614,7 +615,7 @@
               "tbody",
               null,
               s.map((e) =>
-                a.createElement(z, {
+                a.createElement(O, {
                   key: r + e.start_queue_position,
                   positionMsg: e,
                 }),
@@ -623,12 +624,12 @@
           ),
         );
       }
-      function z(e) {
+      function O(e) {
         const { positionMsg: t } = e;
         return a.createElement(
           "tr",
           null,
-          a.createElement("td", null, t.start_queue_position.toLocaleString()),
+          a.createElement("td", null, (0, x.D)(t.start_queue_position)),
           a.createElement(
             "td",
             null,
@@ -662,7 +663,7 @@
               {
                 onClick: (e) =>
                   (0, A.pg)(
-                    a.createElement(O, {
+                    a.createElement(q, {
                       productID: t,
                       existingPositionMsg: t,
                     }),
@@ -676,7 +677,7 @@
               {
                 onClick: (e) =>
                   (0, A.pg)(
-                    a.createElement(q, { positionMsg: t }),
+                    a.createElement(W, { positionMsg: t }),
                     (0, R.uX)(e),
                   ),
               },
@@ -685,7 +686,7 @@
           ),
         );
       }
-      function O(e) {
+      function q(e) {
         const { productID: t, existingPositionMsg: n, closeModal: r } = e,
           { fnSetPositionMessages: i } = f(),
           s = Math.floor(Date.now() / 1e3),
@@ -757,7 +758,7 @@
                   fnSetTimeToUpdate: u,
                 }),
                 a.createElement("br", null),
-                a.createElement(V, {
+                a.createElement(K, {
                   strToken: d,
                   fnSetToken: m,
                   rtEstimateDate: c,
@@ -765,10 +766,10 @@
               ),
             );
       }
-      function q(e) {
+      function W(e) {
         const { positionMsg: t, closeModal: n } = e,
           { fnDeletePositionMessage: r } = f(),
-          i = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
+          i = `Delete Queue Position ${(0, x.D)(t.start_queue_position)}`,
           s = (0, C.vs)();
         return s.bLoading
           ? a.createElement(C.Hh, {
@@ -794,7 +795,7 @@
               },
             });
       }
-      function W(e) {
+      function H(e) {
         const { closeModal: t } = e,
           { fnReloadReservationPositionMessages: n } = f(),
           [r, i] = (0, a.useState)(!1);
@@ -812,7 +813,7 @@
           })
         );
       }
-      const H = [
+      const V = [
         "#Sale_Reservation_MonthYear",
         "#Sale_Reservation_TwoMonthRangeYear",
         "#Sale_Reservation_ThreeMonthRangeYear",
@@ -824,11 +825,11 @@
         "#Sale_Reservation_AfterQuarter_ThreeMonths",
         "#Sale_Reservation_RelativeWeekly",
       ];
-      function V(e) {
+      function K(e) {
         const { strToken: t, fnSetToken: n, rtEstimateDate: r } = e,
           i = (0, a.useMemo)(
             () =>
-              H.map((e) => ({
+              V.map((e) => ({
                 label: a.createElement(G, {
                   strToken: e,
                   rtEstimatedNotifcationDate: r,
@@ -869,52 +870,52 @@
           ),
         );
       }
-      var K = n(52038),
-        Q = n(45737),
-        j = n.n(Q);
-      function J(e) {
+      var Q = n(52038),
+        j = n(45737),
+        J = n.n(j);
+      function Z(e) {
         return a.createElement(
           "div",
-          { className: (0, K.A)(v.ctn, j().AdminPageCtn) },
+          { className: (0, Q.A)(v.ctn, J().AdminPageCtn) },
           a.createElement(
             "h1",
-            { className: j().PageTitle },
+            { className: J().PageTitle },
             "Reservation Queue - Messaging Tools",
           ),
           a.createElement("hr", { className: "VO" }),
           a.createElement(
             "div",
-            { className: j().ColumnCtn },
+            { className: J().ColumnCtn },
             a.createElement(
               "div",
-              { className: j().LeftCol },
+              { className: J().LeftCol },
               a.createElement(
                 "div",
-                { className: j().SectionCtn },
+                { className: J().SectionCtn },
                 a.createElement(M, null),
               ),
               a.createElement(
                 "div",
-                { className: j().SectionCtn },
-                a.createElement(x, null),
+                { className: J().SectionCtn },
+                a.createElement(F, null),
               ),
             ),
             a.createElement(
               "div",
-              { className: j().RightCol },
+              { className: J().RightCol },
               a.createElement(
                 "div",
-                { className: j().SectionCtn },
-                a.createElement(F, null),
-              ),
-              a.createElement(
-                "div",
-                { className: j().SectionCtn },
+                { className: J().SectionCtn },
                 a.createElement(U, null),
               ),
               a.createElement(
                 "div",
-                { className: j().SectionCtn },
+                { className: J().SectionCtn },
+                a.createElement(Y, null),
+              ),
+              a.createElement(
+                "div",
+                { className: J().SectionCtn },
                 a.createElement(S.JU, null, "Useful Links:"),
                 a.createElement(
                   "ul",

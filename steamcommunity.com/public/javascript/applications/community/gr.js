@@ -9551,7 +9551,7 @@
     },
     39393: (e, t, r) => {
       "use strict";
-      r.d(t, { SX: () => M, kh: () => S });
+      r.d(t, { SX: () => y, kh: () => b });
       var i = r(34629),
         n = r(41735),
         a = r.n(n),
@@ -9566,10 +9566,11 @@
         f = (r(90626), r(14947)),
         p = r(29210),
         h = r(51006),
-        _ = r(81393);
-      const S = 3e3,
-        b = S + 1e3;
-      class M {
+        _ = r(81393),
+        S = r(61859);
+      const b = 3e3,
+        M = b + 1e3;
+      class y {
         constructor() {
           (this.m_bInitialized = !1),
             (this.m_rgListeners = []),
@@ -9824,7 +9825,7 @@
                 nTimelineOffsetMS: r - i,
                 ulGlobalToTimelineOffset: n,
               };
-            i += M.ApplyTimelineRounding(a, t);
+            i += y.ApplyTimelineRounding(a, t);
           }
           return null;
         }
@@ -9832,7 +9833,7 @@
           let r = 0;
           for (let i of this.m_rgTimelineMetadata) {
             let n = parseInt(i.metadata.duration_ms),
-              a = M.ApplyTimelineRounding(n, t);
+              a = y.ApplyTimelineRounding(n, t);
             if (i.metadata.timeline_id == e)
               return { nGlobalOffsetMS: r, nRoundedDurationMS: a };
             r += a;
@@ -9861,7 +9862,7 @@
                 e.metadata.timeline_id,
               ),
               a = parseInt(e.metadata.duration_ms) + n;
-            if (r < i + M.ApplyTimelineRounding(a, t))
+            if (r < i + y.ApplyTimelineRounding(a, t))
               return {
                 strTimelineID: e.metadata.timeline_id,
                 nTimelineOffsetMS: (0, g.sK)(r - i - n),
@@ -9877,7 +9878,7 @@
             const s = this.GetTimelineStartBeforeGlobalZeroMS(
               n.metadata.timeline_id,
             );
-            let o = M.ApplyTimelineRounding(a, r);
+            let o = y.ApplyTimelineRounding(a, r);
             for (let r of n.metadata.recordings)
               if (r.recording_id === e) {
                 let e =
@@ -10526,7 +10527,7 @@
           };
           this.m_mapRunningTimelines.set(e, s),
             this.m_schUpdateRunning.IsScheduled() ||
-              this.m_schUpdateRunning.Schedule(b, this.UpdateRunningTimelines),
+              this.m_schUpdateRunning.Schedule(M, this.UpdateRunningTimelines),
             this.FireEvent("OnInvalidate", e);
         }
         UpdateRunningTimelines() {
@@ -10541,7 +10542,7 @@
               (t.m_metadata.duration_ms = r.toString());
           }),
             this.m_mapRunningTimelines.size > 0 &&
-              this.m_schUpdateRunning.Schedule(b, this.UpdateRunningTimelines),
+              this.m_schUpdateRunning.Schedule(M, this.UpdateRunningTimelines),
             this.FireEvent("OnInvalidate", e);
         }
         RunningTimelineStopped(e, t) {
@@ -10716,7 +10717,7 @@
               if (d && r < t) continue;
               if (g && r > i) continue;
               if (!(0, m.eJ)(e) && !(0, m.N$)(e)) continue;
-              const n = y(e);
+              const n = T(e);
               (!a || (n && n.rank > a.rank)) && (a = n);
             }
             for (let e of f.m_rgStateDescriptions) {
@@ -10746,7 +10747,7 @@
             s = new Date(),
             o = [
               a,
-              `${s.getFullYear()}-${(s.getMonth() + 1).toString().padStart(2, "0")}-${s.getDate().toString().padStart(2, "0")} ${s.toLocaleTimeString()}`,
+              `${s.getFullYear()}-${(s.getMonth() + 1).toString().padStart(2, "0")}-${s.getDate().toString().padStart(2, "0")} ${s.toLocaleTimeString(S.pf.GetPreferredLocales())}`,
               n,
             ]
               .filter((e) => !!e)
@@ -10754,7 +10755,7 @@
           return (0, l.q_)(`Generated clip name "${o}"`), o;
         }
       }
-      function y(e) {
+      function T(e) {
         switch (e.type) {
           case "event":
             const t = e;
@@ -10771,8 +10772,8 @@
         }
         return null;
       }
-      (0, i.Cg)([f.sH], M.prototype, "m_bInitialized", void 0),
-        (0, i.Cg)([d.o], M.prototype, "UpdateRunningTimelines", null);
+      (0, i.Cg)([f.sH], y.prototype, "m_bInitialized", void 0),
+        (0, i.Cg)([d.o], y.prototype, "UpdateRunningTimelines", null);
     },
     53184: (e, t, r) => {
       "use strict";

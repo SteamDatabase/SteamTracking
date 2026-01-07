@@ -1448,15 +1448,14 @@
         }),
           _ && _.Body().set_navdata(_._.fromObject((0, _._)(_))),
           _.Body().set_user_country(_);
-        const _ = await fetch(`${_._.STORE_BASE_URL}cart/addtocartwrapper`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(_.Body().toObject()),
-          }),
-          _ = await _.json();
-        return [_.success, _.message];
+        const _ = await _._.AddItemsToCart(_, _);
+        return (
+          _.BSuccess() ||
+            console.warn(
+              `Failed to add item to account cart: ${_.GetEResult()}`,
+            ),
+          [_.GetEResult(), _.Body().toObject()]
+        );
       }
       async function _(_, _) {
         if ((0, _._)(_)) {
@@ -3742,7 +3741,8 @@
             (_[(_.REAR_RIGHT_UPPER = 25)] = "REAR_RIGHT_UPPER"),
             (_[(_.REAR_RIGHT_LOWER = 26)] = "REAR_RIGHT_LOWER"),
             (_[(_.STEAM_GUIDE = 27)] = "STEAM_GUIDE"),
-            (_[(_.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU");
+            (_[(_.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU"),
+            (_[(_.DUMMY_INPUT = 29)] = "DUMMY_INPUT");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.UNKNOWN = 0)] = "UNKNOWN"),
@@ -6146,7 +6146,9 @@
         _ = __webpack_require__("chunkid");
       function _() {
         return (0, _._)().languages.map((_) => {
-          return 2 == (_ = _.strISOCode).length ? `${_}-${_._.COUNTRY}` : _;
+          return 2 == (_ = _.strISOCode).length && _._.COUNTRY
+            ? `${_}-${_._.COUNTRY}`
+            : _;
           var _;
         });
       }
@@ -9678,7 +9680,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.line_item_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [15], null);
         }
         static sm_m;
         static sm_mbf;
@@ -9747,6 +9749,14 @@
                     _: 14,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  included_packageids: {
+                    _: 15,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
                   },
                 },
               }),
@@ -32664,6 +32674,11 @@
                     _: _._.readUint32,
                     pbr: _._.readPackedUint32,
                     _: _._.writeRepeatedUint32,
+                  },
+                  hub_description: {
+                    _: 10,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),

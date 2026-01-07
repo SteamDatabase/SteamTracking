@@ -808,7 +808,8 @@
         MMArtPreview: "uaJWOBcbrszCIM9jPJQ1P",
         MMArtNoArt: "_1oJlfyCX34cNTvLlNJxqAM",
         LegalPreview: "_3UR3Ewy0eOiigTBb1kMIk5",
-        legalSectionCtn: "_2Pr-js3Udcl6ijZj_UySRj",
+        OptionGroup: "_1HJ6h08b1FOuXNY7Uct015",
+        Padded: "_3R8W-ZLVAGIdVDvAAQFqTS",
         subSection: "_2W8DuE42O6B1_qpeGV7i9c",
         previewSection: "_18ctSpZDuUziLFqRD5Afxq",
       };
@@ -1665,6 +1666,7 @@
         TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
         VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
         ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
+        AutoAdvanceBar: "_3F82OZtnlZ8bcDCZZT1TSF",
         ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
         CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
         ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
@@ -19275,7 +19277,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { bShowOnlySummary: _ } = _,
           _ = _._.Get(),
@@ -19433,7 +19436,7 @@
               {
                 className: _().BigStat,
               },
-              _.length.toLocaleString(),
+              (0, _._)(_.length),
             ),
             _.createElement(
               "span",
@@ -20041,7 +20044,7 @@
                   textAlign: "right",
                 },
               },
-              _.gross_units_sold.toLocaleString(),
+              (0, _._)(_.gross_units_sold),
             ),
             _.createElement(
               "td",
@@ -20050,7 +20053,7 @@
                   textAlign: "right",
                 },
               },
-              (_.gross_sales_usd / _).toLocaleString(),
+              (0, _._)(_.gross_sales_usd / _),
               " %",
             ),
             _.createElement(
@@ -20060,7 +20063,7 @@
                   textAlign: "right",
                 },
               },
-              (_ / _).toLocaleString(),
+              (0, _._)(_ / _),
               " %",
             ),
           )
@@ -20267,6 +20270,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { bShowOnlySummary: _ } = _,
@@ -20442,7 +20446,7 @@
               {
                 className: _().BigStat,
               },
-              _.toLocaleString(),
+              (0, _._)(_),
             ),
             _.createElement(
               "span",
@@ -20462,7 +20466,7 @@
               {
                 className: _().BigStat,
               },
-              _.toLocaleString(),
+              (0, _._)(_),
             ),
             _.createElement(
               "span",
@@ -20482,7 +20486,7 @@
               {
                 className: _().BigStat,
               },
-              _.toLocaleString(),
+              (0, _._)(_),
             ),
             _.createElement(
               "span",
@@ -20503,7 +20507,7 @@
                 {
                   className: _().BigStat,
                 },
-                _.toLocaleString(),
+                (0, _._)(_),
               ),
               _.createElement(
                 "span",
@@ -20695,7 +20699,7 @@
         return _.createElement(
           "tr",
           null,
-          _.createElement("td", null, (_ + 1).toLocaleString()),
+          _.createElement("td", null, (0, _._)(_ + 1)),
           !__webpack_require__ &&
             _.createElement(
               "td",
@@ -20772,11 +20776,7 @@
         return _.createElement(
           "tr",
           null,
-          _.createElement(
-            "td",
-            null,
-            (__webpack_require__ + 1).toLocaleString(),
-          ),
+          _.createElement("td", null, (0, _._)(__webpack_require__ + 1)),
           !_ &&
             _.createElement(
               "td",
@@ -20820,7 +20820,7 @@
                 textAlign: "right",
               },
             },
-            _.demo_player_count.toLocaleString(),
+            (0, _._)(_.demo_player_count),
           ),
           _.createElement(
             "td",
@@ -20829,7 +20829,7 @@
                 textAlign: "right",
               },
             },
-            _.wishlist_count.toLocaleString(),
+            (0, _._)(_.wishlist_count),
           ),
           _.createElement(
             "td",
@@ -20838,7 +20838,7 @@
                 textAlign: "right",
               },
             },
-            _.player_wishlist_count.toLocaleString(),
+            (0, _._)(_.player_wishlist_count),
           ),
           Boolean(_) &&
             _.createElement(
@@ -24653,6 +24653,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const [_, __webpack_require__, _] = (0, _._)(!1);
@@ -24946,9 +24947,7 @@
                       {
                         className: _().BigNumber,
                       },
-                      __webpack_require__[
-                        _.pageid
-                      ].count_eligible.toLocaleString(),
+                      (0, _._)(__webpack_require__[_.pageid].count_eligible),
                     ),
                     _.createElement(
                       "span",
@@ -24973,9 +24972,7 @@
                       {
                         className: _().BigNumber,
                       },
-                      __webpack_require__[
-                        _.pageid
-                      ].count_invited.toLocaleString(),
+                      (0, _._)(__webpack_require__[_.pageid].count_invited),
                     ),
                     _.createElement(
                       "span",
@@ -25000,9 +24997,7 @@
                       {
                         className: (0, _._)(_().BigNumber, _().Highlight),
                       },
-                      __webpack_require__[
-                        _.pageid
-                      ].count_opted_in.toLocaleString(),
+                      (0, _._)(__webpack_require__[_.pageid].count_opted_in),
                     ),
                     _.createElement(
                       "span",
@@ -25040,9 +25035,7 @@
                       {
                         className: _().BigNumber,
                       },
-                      __webpack_require__[
-                        _.pageid
-                      ].count_opted_out.toLocaleString(),
+                      (0, _._)(__webpack_require__[_.pageid].count_opted_out),
                     ),
                     _.createElement(
                       "div",
@@ -25063,9 +25056,7 @@
                       {
                         className: _().BigNumber,
                       },
-                      __webpack_require__[
-                        _.pageid
-                      ].count_featured.toLocaleString(),
+                      (0, _._)(__webpack_require__[_.pageid].count_featured),
                     ),
                     _.createElement(
                       "span",
@@ -31835,7 +31826,7 @@
                   null,
                   (0, _._)(
                     "#OptIn_EmailSection_schedlive_Body",
-                    _.GetScheduleMaxItems().toLocaleString(),
+                    (0, _._)(_.GetScheduleMaxItems()),
                     _,
                     _.createElement(
                       "a",
@@ -36460,7 +36451,7 @@
               _.GetSubject(_) || _.GetInternalName(),
             ),
             _.createElement("td", null, (0, _._)(_.GetType())),
-            _.createElement("td", null, _.GetNumberSections().toLocaleString()),
+            _.createElement("td", null, (0, _._)(_.GetNumberSections())),
             _.createElement(
               "td",
               {
@@ -42007,7 +41998,7 @@
             {
               className: _.RowNumber,
             },
-            (_ + 1).toLocaleString(),
+            (0, _._)(_ + 1),
           ),
         );
       }
@@ -42542,7 +42533,7 @@
             {
               className: _.RowNumber,
             },
-            (_ + 1).toLocaleString(),
+            (0, _._)(_ + 1),
           ),
         );
       }
@@ -44501,7 +44492,7 @@
                     {
                       className: _().BigNumber,
                     },
-                    _.open_appeals.toLocaleString(),
+                    (0, _._)(_.open_appeals),
                   ),
                   _.createElement(
                     "span",
@@ -44525,7 +44516,7 @@
                     {
                       className: _().BigNumber,
                     },
-                    _.accepted_appeals.toLocaleString(),
+                    (0, _._)(_.accepted_appeals),
                   ),
                   _.createElement(
                     "span",
@@ -44548,7 +44539,7 @@
                     {
                       className: _().BigNumber,
                     },
-                    _.reject_appeals.toLocaleString(),
+                    (0, _._)(_.reject_appeals),
                   ),
                   _.createElement(
                     "span",
@@ -44597,19 +44588,19 @@
             "div",
             null,
             "Accepted Appeals: ",
-            _.accepted_appeals.toLocaleString(),
+            (0, _._)(_.accepted_appeals),
           ),
           _.createElement(
             "div",
             null,
             "Rejected Appeals: ",
-            _.reject_appeals.toLocaleString(),
+            (0, _._)(_.reject_appeals),
           ),
           _.createElement(
             "div",
             null,
             "Total: ",
-            (_.accepted_appeals + _.reject_appeals).toLocaleString(),
+            (0, _._)(_.accepted_appeals + _.reject_appeals),
           ),
         );
       }
@@ -44881,7 +44872,7 @@
               " @ ",
               (0, _._)(_),
               ". There were ",
-              _.toLocaleString(),
+              (0, _._)(_),
               " included in the stats collection.",
             ),
             _.createElement(_._, {
@@ -45059,9 +45050,7 @@
                     .map((_) => _.get(_.tagid) ?? _.tagid)
                     .join(", "),
                   strShortDescription: _.GetShortDescription(),
-                  wishlist_count: _
-                    ? Number(_.wishlist_count).toLocaleString()
-                    : "",
+                  wishlist_count: _ ? (0, _._)(Number(_.wishlist_count)) : "",
                   sales: _
                     ? (0, _._)(
                         Number(_.sales) +
@@ -45557,6 +45546,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const { fnGetAltText: _, fnSetAltText: __webpack_require__ } = _,
@@ -45606,15 +45598,54 @@
           : _.createElement(
               _.Fragment,
               null,
-              _.createElement(_._, {
-                fnLangHasData: (_) => _(_)?.trim().length > 0,
-              }),
+              _.createElement(
+                _._,
+                null,
+                "Alternative Text (Alt Text) ",
+                _.createElement(_._, {
+                  tooltip:
+                    "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
+                }),
+              ),
               _.createElement(
                 "div",
                 {
-                  className: _().Ctn,
+                  className: (0, _._)(_().OptionGroup, _().Padded),
                 },
-                _.createElement(_._, null),
+                _.createElement(_._, {
+                  fnLangHasData: (_) => _(_)?.trim().length > 0,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: (0, _._)(_().Ctn),
+                  },
+                  _.createElement(_._, null),
+                  _.createElement(
+                    _._,
+                    {
+                      active: Boolean(_),
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        strTitle: "Error Importing Localization JSON",
+                        strDescription: "Error from parsing JSON:",
+                        bAlertDialog: !0,
+                        closeModal: () => _(null),
+                      },
+                      _.createElement("hr", null),
+                      _.createElement("p", null, _),
+                    ),
+                  ),
+                  _.createElement(_._, {
+                    type: "text",
+                    value: _,
+                    onChange: (_) => {
+                      __webpack_require__(_, _.currentTarget.value), _();
+                    },
+                  }),
+                ),
                 _.createElement(
                   _._,
                   null,
@@ -45624,60 +45655,39 @@
                       'The json should use API language code in lower case as they key { "english": "my string", "german": "my german string", ... }, see https://partner.steamgames.com/doc/store/localization/languages',
                   }),
                 ),
-                _.createElement("input", {
-                  type: "file",
-                  accept: ".json",
-                  onChange: _,
-                }),
                 _.createElement(
-                  _._,
+                  "div",
                   {
-                    onClick: () => {
-                      let _ = {};
-                      for (let _ = 0; _ < 30; ++_)
-                        _(_)?.trim().length > 0 && (_[(0, _._)(_)] = _(_));
-                      const _ = JSON.stringify(_, null, 2),
-                        _ = new Blob([_], {
-                          type: "application/json",
-                        }),
-                        _ = URL.createObjectURL(_),
-                        _ = document.createElement("a");
-                      (_.href = _),
-                        (_.download = "export.json"),
-                        _.click(),
-                        URL.revokeObjectURL(_);
+                    className: _().Ctn,
+                  },
+                  _.createElement("input", {
+                    type: "file",
+                    accept: ".json",
+                    onChange: _,
+                  }),
+                  _.createElement(
+                    _._,
+                    {
+                      onClick: () => {
+                        let _ = {};
+                        for (let _ = 0; _ < 30; ++_)
+                          _(_)?.trim().length > 0 && (_[(0, _._)(_)] = _(_));
+                        const _ = JSON.stringify(_, null, 2),
+                          _ = new Blob([_], {
+                            type: "application/json",
+                          }),
+                          _ = URL.createObjectURL(_),
+                          _ = document.createElement("a");
+                        (_.href = _),
+                          (_.download = "export.json"),
+                          _.click(),
+                          URL.revokeObjectURL(_);
+                      },
                     },
-                  },
-                  "Export JSON",
+                    "Export JSON",
+                  ),
                 ),
               ),
-              _.createElement(
-                _._,
-                {
-                  active: Boolean(_),
-                },
-                _.createElement(
-                  _._,
-                  {
-                    strTitle: "Error Importing Localization JSON",
-                    strDescription: "Error from parsing JSON:",
-                    bAlertDialog: !0,
-                    closeModal: () => _(null),
-                  },
-                  _.createElement("hr", null),
-                  _.createElement("p", null, _),
-                ),
-              ),
-              _.createElement(_._, {
-                type: "text",
-                value: _,
-                onChange: (_) => {
-                  __webpack_require__(_, _.currentTarget.value), _();
-                },
-                label: "Alternative Text",
-                tooltip:
-                  "Required for screen readers for the visually impaired. Should be the copy burned into the image.",
-              }),
             );
       }
     },
@@ -67618,13 +67628,15 @@
             () => JSON.parse(__webpack_require__.input_jsondata),
             [__webpack_require__],
           ),
-          _ = (0, _._)(_.update_event_clan_account_id, _.update_event_gid, !0),
-          _ = (0, _._)(_.update_event_clan_account_id, _.update_event_gid),
-          _ = _._.InitFromClanID(_.update_event_clan_account_id);
+          _ = _.GetUpdateEventGID() ?? _.update_event_gid,
+          _ = _.GetUpdateEventClanAccountID() ?? _.update_event_clan_account_id,
+          _ = (0, _._)(_, _, !0),
+          _ = (0, _._)(_, _),
+          _ = _._.InitFromClanID(_);
         return _.createElement(
           _.Fragment,
           null,
-          Boolean(_.update_event_gid)
+          Boolean(_)
             ? _.createElement(
                 _.Fragment,
                 null,
@@ -67632,7 +67644,7 @@
                 _.createElement(
                   "a",
                   {
-                    href: `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/edit/${_.update_event_gid}`,
+                    href: `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/edit/$clanEventGID}`,
                     target: "_black",
                   },
                   _.createElement(
@@ -67654,21 +67666,17 @@
                           ? "Event State: Visible"
                           : "Event State: Hidden",
                       ),
-                      _ != _.update_event_gid &&
+                      _ != _ &&
                         _.createElement(
                           _._,
                           {
-                            onClick: () =>
-                              _.SetUpdateEvent(
-                                _.update_event_clan_account_id,
-                                _.update_event_gid,
-                              ),
+                            onClick: () => _.SetUpdateEvent(_, _),
                           },
                           "Associate Event to Marketing Message",
                         ),
                     )
                   : _.createElement(_._, {
-                      string: "Loading Event: " + _.update_event_gid,
+                      string: "Loading Event: " + _,
                       size: "small",
                       position: "center",
                     }),
@@ -68622,7 +68630,7 @@
           _.createElement(
             "div",
             {
-              className: _().legalSectionCtn,
+              className: _().OptionGroup,
             },
             _.createElement(
               "div",
@@ -69297,6 +69305,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)();
@@ -69477,10 +69486,12 @@
                 "td",
                 null,
                 "$",
-                Math.floor(
-                  (__webpack_require__?.GetAppSaleSummary(_.appid)
-                    ?.gross_sales_usd || 0) / 100,
-                ).toLocaleString(),
+                (0, _._)(
+                  Math.floor(
+                    (__webpack_require__?.GetAppSaleSummary(_.appid)
+                      ?.gross_sales_usd || 0) / 100,
+                  ),
+                ),
               ),
               _.createElement("td", null, "TODO Discount Rev"),
               _.createElement("td", null, "#", _.long_term_sale_rank + 1),
@@ -73631,7 +73642,7 @@
                 null,
                 (0, _._)(Number.parseInt(_.USD)),
                 " | ",
-                __webpack_require__.toLocaleString(),
+                (0, _._)(_),
                 " units",
               ),
             ),
@@ -73782,7 +73793,7 @@
                     _.createElement(
                       "strong",
                       null,
-                      0 === _ ? "N/A" : _.toLocaleString(),
+                      0 === _ ? "N/A" : (0, _._)(_),
                     ),
                   ),
                   _.createElement(
@@ -73853,7 +73864,7 @@
                     {
                       className: (0, _._)(_.Col, _.Revenue),
                     },
-                    _.createElement("strong", null, _.toLocaleString()),
+                    _.createElement("strong", null, (0, _._)(_)),
                   ),
                   _.createElement("div", {
                     className: (0, _._)(_.Col, _.Small),
@@ -73916,9 +73927,7 @@
               {
                 className: (0, _._)(_.Col, _.Revenue),
               },
-              1 === _.product_type
-                ? "N/A"
-                : _.gross_units_sold.toLocaleString(),
+              1 === _.product_type ? "N/A" : (0, _._)(_.gross_units_sold),
             ),
             _.createElement(
               "div",
@@ -79171,6 +79180,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -79217,7 +79227,7 @@
                 className: _().BigStat,
               },
               "$",
-              _.toLocaleString(void 0, {
+              _.toLocaleString((0, _._)(), {
                 maximumFractionDigits: 0,
               }),
             ),
@@ -79245,7 +79255,7 @@
                         className: _().BigStat,
                       },
                       "$",
-                      _.toLocaleString(void 0, {
+                      _.toLocaleString((0, _._)(), {
                         maximumFractionDigits: 0,
                       }),
                     ),
@@ -79272,7 +79282,7 @@
                       {
                         className: _().BigStat,
                       },
-                      (100 * _).toLocaleString(void 0, {
+                      (100 * _).toLocaleString((0, _._)(), {
                         maximumFractionDigits: 0,
                       }),
                       "%",
@@ -79339,11 +79349,11 @@
               className: _().IncreaseRateInfo,
             },
             "Daily average revenue during sale period ($",
-            _.toLocaleString(void 0, {
+            _.toLocaleString((0, _._)(), {
               maximumFractionDigits: 0,
             }),
             ") vs. average daily revenue over the previous year ($",
-            _.toLocaleString(void 0, {
+            _.toLocaleString((0, _._)(), {
               maximumFractionDigits: 0,
             }),
             ").",
@@ -83433,6 +83443,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { publisherid: _ } = (0, _._)(),
@@ -83567,7 +83578,7 @@
             {
               name: (0, _._)(
                 "#Sale_Summary_Active",
-                _._.Get().GetActiveEvents().length.toLocaleString(),
+                (0, _._)(_._.Get().GetActiveEvents().length),
               ),
               key: "active",
               contents: _.createElement(
@@ -83594,7 +83605,7 @@
             _.push({
               name: (0, _._)(
                 "#Sale_Summary_SeasonalSaleFeatured",
-                _._.Get().GetSeasonFeaturedEvents().length.toLocaleString(),
+                (0, _._)(_._.Get().GetSeasonFeaturedEvents().length),
               ),
               key: "seasonal",
               contents: _.createElement(
@@ -83619,7 +83630,7 @@
           _.push({
             name: (0, _._)(
               "#Sale_Summary_Upcoming",
-              _._.Get().GetUpcomingEvents().length.toLocaleString(),
+              (0, _._)(_._.Get().GetUpcomingEvents().length),
             ),
             key: "upcoming",
             contents: _.createElement(
@@ -83637,7 +83648,7 @@
           _.push({
             name: (0, _._)(
               "#Sale_Summary_Draft",
-              _._.Get().GetDraftEvents().length.toLocaleString(),
+              (0, _._)(_._.Get().GetDraftEvents().length),
             ),
             tooltip: (0, _._)("#Sale_Summary_Draft_Ttip"),
             key: "draft",
@@ -83657,7 +83668,7 @@
             _.push({
               name: (0, _._)(
                 "#Sale_Summary_OldDraft",
-                _._.Get().GetOldDraftEvents().length.toLocaleString(),
+                (0, _._)(_._.Get().GetOldDraftEvents().length),
               ),
               tooltip: (0, _._)("#Sale_Summary_OldDraft_Ttip"),
               key: "olddraft",
@@ -83674,7 +83685,7 @@
           _.push({
             name: (0, _._)(
               "#Sale_Summary_Archived",
-              _._.Get().GetArchiveEvents().length.toLocaleString(),
+              (0, _._)(_._.Get().GetArchiveEvents().length),
             ),
             key: "archived",
             contents: _.createElement(
@@ -84550,6 +84561,7 @@
               optin_only: _?.jsondata?.optin_only || void 0,
               controller_category: Number(_.eControllerCategory) || void 0,
               bUseCreatorHomeApps: 36 == _?.GetEventType(),
+              bAllowDemos: 36 == _?.GetEventType(),
             };
           let _ = null;
           try {
@@ -84642,6 +84654,7 @@
           is_maincap: _,
           is_expanded_maincap: _,
           is_expanded_display: _,
+          show_auto_advance_bar: _,
         } = _;
         if (!_) return null;
         if (__webpack_require__)
@@ -84706,6 +84719,16 @@
                 }),
               ),
             ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().AutoAdvanceBar,
+                },
+                _.createElement("div", {
+                  className: _().ShineCtn,
+                }),
+              ),
           );
         if (_)
           return _.createElement(
@@ -85814,6 +85837,7 @@
                         styleOverrides: _,
                         bSearching: _?.length > 0,
                         bInitiallyExpanded: _.facet.facet.bInitiallyExpanded,
+                        bSingleSelection: _.facet.facet.single_selection,
                       }),
                     ),
                   ),
@@ -85910,6 +85934,7 @@
               styleOverrides: _,
               bSearching: _,
               bInitiallyExpanded: _,
+              bSingleSelection: _,
             } = _,
             [_, _] = (0, _.useState)(Boolean(0 === _ || _)),
             [_, _] = (0, _.useState)(!1);
@@ -85972,6 +85997,12 @@
                 styleOverrides: _,
                 showMatchCounts: _ && !_(_.facet.facet),
                 ..._,
+                fnOnUpdateFilter: () =>
+                  ((_) => {
+                    if (_ && _.bEnabled)
+                      for (const _ of _) _ != _ && (_.bEnabled = !1);
+                    _?.fnOnUpdateFilter();
+                  })(_),
               }),
             ),
             _ &&
@@ -88563,6 +88594,7 @@
                 name: ["#AppTypeLabelTitle"],
                 facetValues: [],
                 logical_and: !1,
+                single_selection: !0,
               },
               _ = [
                 "game",
@@ -88645,6 +88677,7 @@
               name: ["#Platform"],
               facetValues: [],
               logical_and: !1,
+              single_selection: !0,
             };
             _.facetValues.push({
               name: ["#Platform_Windows"],
@@ -89340,7 +89373,7 @@
               event: __webpack_require__,
               language: _,
               activeTab: _,
-              displayStyle: _,
+              bInGamepadUI: _,
             } = this.props,
             {
               bInitialLoadComplete: _,
@@ -89461,9 +89494,12 @@
               },
               _,
             ));
-          const _ = (function (_, _) {
-            return "purchaseonlydisplay" !== _ && !_ && !(0, _._)();
-          })("library", this.props.bInGamepadUI);
+          const _ =
+            (_.item_browse_section_data?.item_browser_has_compact_toggle ??
+              !0) &&
+            (function (_, _) {
+              return "purchaseonlydisplay" !== _ && !_ && !(0, _._)();
+            })("library", _);
           return _.createElement(
             _.Fragment,
             null,
@@ -90145,7 +90181,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = (_) => {
         const {
             saleDescList: _,
@@ -90509,7 +90546,7 @@
                   _.GetStatsFor(
                     _.clanSteamID,
                     _,
-                  ).m_stats.store_app_page_read.toLocaleString(),
+                  ).m_stats.store_app_page_read.toLocaleString((0, _._)()),
                 ),
                 _.createElement(
                   _._,

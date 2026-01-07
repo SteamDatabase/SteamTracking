@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Denna artikel är en handelsvara, där alla individuella artiklar i praktiken är identiska. Individuella annonser är inte tillgängliga; du kan istället lägga beställningar för att köpa för ett visst pris, där den billigaste annonsen automatiskt matchas med den högsta beställningen.",
 	"Search_AmountFound": "Hittade %1$s resultat",
 	"Search_AmountFound_Plural": "Hittade %1$s resultat",
-	"Search_ListingsFound": "Hittade %1$s annons",
-	"Search_ListingsFound_Plural": "Hittade %1$s annonser",
+	"Search_ListingsFound": "Hittade %2$s annons",
+	"Search_ListingsFound_Plural": "Hittade %2$s annonser",
 	"SortBy_Name_Asc": "Namn (A till Z)",
 	"SortBy_Name_Desc": "Namn (Z till A)",
 	"SortBy_Price_Asc": "Pris (lågt till högt)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Vissa äldre artiklar använder textbeskrivningar för meningsfulla egenskaper som inte är tillgängliga med nedanstående filter. Det här alternativet gör att söktexten kan matchas mot den fullständiga beskrivningen istället för endast artikelnamnet.",
 	"MarketSearch_FilterColumn_Header": "Filter",
 	"MarketSearch_Reset": "Återställ sökning",
-	"Listings_Filter_Placeholder": "Filtrera annonser ...",
+	"Listings_TextFilter_Placeholder": "Ange anpassad filtertext ...",
 	"Economy_Market_Purchase_Restrictions": "Gäller för artikeln efter köp:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "kan inte bytas på en dag",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "kan inte bytas på en vecka",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Hoppsan!",
 	"Error_Encountered": "Ett fel uppstod när din begäran behandlades:",
 	"Error_TooManyRequests_Description": "Du har gjort för många förfrågningar nyligen. Vänta och försök igen senare.",
-	"Container_ContentsLabel": "Möjligt innehåll:"
+	"Container_ContentsLabel": "Möjligt innehåll:",
+	"Error_LoadingContent": "Det uppstod ett problem vid inläsningen av detta innehåll",
+	"Error_LoadingMarketItem": "Den begärda artikeln finns antingen inte eller så förhindrar ett tillfälligt problem artikeln från att läsas in. Försök igen senare.",
+	"ListingFilter_Title": "Filtrera annonser"
 }`);
     },
   },

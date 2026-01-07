@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Đã gỡ bỏ và cảnh báo",
 	"moderation_resolutionstatus_removeandban": "Đã gỡ bỏ và cấm khỏi trung tâm",
 	"moderation_resolutionstatus_removeandkick": "Đã gỡ bỏ và đuổi khỏi nhóm",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Không xác định",
 	"moderationaction_acquitted": "Không phạt",
 	"moderationaction_cancelled": "Tố cáo đã mở cuối cùng bị hủy",

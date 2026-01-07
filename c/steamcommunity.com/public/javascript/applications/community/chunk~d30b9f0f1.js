@@ -742,6 +742,7 @@
         TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
         VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
         ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
+        AutoAdvanceBar: "_3F82OZtnlZ8bcDCZZT1TSF",
         ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
         CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
         ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
@@ -7172,6 +7173,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const _ = () => _.closeModal && _.closeModal(),
@@ -7373,8 +7375,8 @@
               null,
               (0, _._)(
                 "#Sale_DiscountEvent_Contains",
-                _.apps.length.toLocaleString(),
-                _.packages.length.toLocaleString(),
+                (0, _._)(_.apps.length),
+                (0, _._)(_.packages.length),
               ),
             ),
             _.createElement(
@@ -7383,8 +7385,8 @@
               (0, _._)(
                 "#Sale_New_Selected",
                 _.Get().GetTotalSelectedCount(),
-                _.Get().AppCount().toLocaleString(),
-                _.Get().PackageCount().toLocaleString(),
+                (0, _._)(_.Get().AppCount()),
+                (0, _._)(_.Get().PackageCount()),
               ),
             ),
             _.createElement(
@@ -12093,6 +12095,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _ } = _,
@@ -12213,9 +12216,9 @@
         const { version: _ } = _,
           _ = new Date(1e3 * _.time_stamp),
           _ =
-            __webpack_require__.toLocaleDateString() +
+            __webpack_require__.toLocaleDateString((0, _._)()) +
             " " +
-            __webpack_require__.toLocaleTimeString();
+            __webpack_require__.toLocaleTimeString((0, _._)());
         return _.createElement(
           "div",
           {
@@ -40694,6 +40697,7 @@
           is_maincap: _,
           is_expanded_maincap: _,
           is_expanded_display: _,
+          show_auto_advance_bar: _,
         } = _;
         if (!_) return null;
         if (__webpack_require__)
@@ -40758,6 +40762,16 @@
                 }),
               ),
             ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().AutoAdvanceBar,
+                },
+                _.createElement("div", {
+                  className: _().ShineCtn,
+                }),
+              ),
           );
         if (_)
           return _.createElement(

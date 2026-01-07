@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Item ini adalah komoditas dan mewakili sekelompok item individual yang secara efektif identik. Tidak mungkin untuk mengiklankan setiap item secara individual. Namun, kamu dapat memesan sebanyak yang kamu inginkan dengan harga tertentu. Harga jual yang terendah akan selalu dicocokkan dengan penawaran pembelian tertinggi.",
 	"Search_AmountFound": "%1$s hasil ditemukan",
 	"Search_AmountFound_Plural": "%1$s hasil ditemukan",
-	"Search_ListingsFound": "%1$s Iklan Penjualan ditemukan",
-	"Search_ListingsFound_Plural": "%1$s Iklan Penjualan ditemukan",
+	"Search_ListingsFound": "%2$s iklan penjualan ditemukan",
+	"Search_ListingsFound_Plural": "%2$s iklan penjualan ditemukan",
 	"SortBy_Name_Asc": "Nama (A ke Z)",
 	"SortBy_Name_Desc": "Nama (Z ke A)",
 	"SortBy_Price_Asc": "Harga (rendah ke tinggi)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Beberapa item lama menggunakan deskripsi tekstual untuk menyertakan properti penting yang tidak dapat diakses dengan filter di bawah ini. Opsi ini memungkinkan teks pencarian untuk mendapatkan teks deskripsi penuh, alih-alih hanya nama item.",
 	"MarketSearch_FilterColumn_Header": "Filter",
 	"MarketSearch_Reset": "Reset Pencarian",
-	"Listings_Filter_Placeholder": "Filter iklan penjualan...",
+	"Listings_TextFilter_Placeholder": "Masukkan teks filter kustom...",
 	"Economy_Market_Purchase_Restrictions": "Setelah dibeli, item ini:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "tidak dapat ditukarkan selama satu hari",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "tidak dapat ditukarkan selama satu minggu",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Maaf!",
 	"Error_Encountered": "Terjadi kesalahan saat memproses permintaanmu:",
 	"Error_TooManyRequests_Description": "Kamu terlalu banyak mengajukan permintaan baru-baru ini. Mohon tunggu dan coba lagi nanti.",
-	"Container_ContentsLabel": "Kemungkinan Isi:"
+	"Container_ContentsLabel": "Kemungkinan Isi:",
+	"Error_LoadingContent": "Terjadi kendala saat memuat konten ini",
+	"Error_LoadingMarketItem": "Item yang diminta mungkin tidak ada, atau terjadi masalah sementara yang mencegah item ini dimuat. Silakan coba lagi nanti.",
+	"ListingFilter_Title": "Filter Iklan Penjualan"
 }`);
     },
   },

@@ -1528,6 +1528,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (function () {
@@ -1557,9 +1558,9 @@
               "p",
               null,
               "We are running batches in ",
-              _.queue_batch_size.toLocaleString(),
+              (0, _._)(_.queue_batch_size),
               " accounts at a time. Active phase 2 queue size is ",
-              _.monthly_active_queue_size.toLocaleString(),
+              (0, _._)(_.monthly_active_queue_size),
             ),
             _.progress.map((_) =>
               _.createElement(_, {
@@ -1617,7 +1618,7 @@
             "div",
             null,
             "Account prefetched ",
-            _.prefetched_accounts_count.toLocaleString(),
+            (0, _._)(_.prefetched_accounts_count),
           ),
           Boolean(_.rt_end_finding_accounts)
             ? _.createElement(
@@ -1628,13 +1629,13 @@
                   rtTime: _.rt_end_finding_accounts,
                 }),
                 " prefetched upto accountid ",
-                _.largest_account_id_prefetched.toLocaleString(),
+                (0, _._)(_.largest_account_id_prefetched),
               )
             : _.createElement(
                 "div",
                 null,
                 "Pre-fetched upto Account ID ",
-                _.largest_account_id_prefetched.toLocaleString(),
+                (0, _._)(_.largest_account_id_prefetched),
               ),
           Boolean(_.rt_start_processing) &&
             _.createElement(
@@ -1665,17 +1666,17 @@
                       rtTime: _.rt_end_processing,
                     }),
                     "  queue'ed upto account ID ",
-                    _.largest_account_queued.toLocaleString(),
+                    (0, _._)(_.largest_account_queued),
                     "total accounts queued ",
-                    _.queued_accounts.toLocaleString(),
+                    (0, _._)(_.queued_accounts),
                   )
                 : _.createElement(
                     "div",
                     null,
                     "Queue'ed upto Account ID ",
-                    _.largest_account_queued.toLocaleString(),
+                    (0, _._)(_.largest_account_queued),
                     "total accounts queued ",
-                    _.queued_accounts.toLocaleString(),
+                    (0, _._)(_.queued_accounts),
                   ),
             ),
           Boolean(
@@ -4606,7 +4607,8 @@
             (_[(_.REAR_RIGHT_UPPER = 25)] = "REAR_RIGHT_UPPER"),
             (_[(_.REAR_RIGHT_LOWER = 26)] = "REAR_RIGHT_LOWER"),
             (_[(_.STEAM_GUIDE = 27)] = "STEAM_GUIDE"),
-            (_[(_.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU");
+            (_[(_.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU"),
+            (_[(_.DUMMY_INPUT = 29)] = "DUMMY_INPUT");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.UNKNOWN = 0)] = "UNKNOWN"),
@@ -7000,6 +7002,32 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.toLocaleString((0, _._)());
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return (0, _._)().languages.map((_) => {
+          return 2 == (_ = _.strISOCode).length && _._.COUNTRY
+            ? `${_}-${_._.COUNTRY}`
+            : _;
+          var _;
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -7087,6 +7115,112 @@
       }
       _.set("sc_schinese", _.get("schinese")),
         _.set("korean", _.get("koreana"));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, ..._) {
+        return 0 == _.length
+          ? _
+          : (_ = _.replace(/%(?:(\d+)\$)?s/g, function (_, _) {
+              if (_ <= _.length && _ >= 1) {
+                const _ = _[_ - 1];
+                return String(null == _ ? "" : _);
+              }
+              return _;
+            }));
+      }
+      let _;
+      _ ??= new Set();
+      function _(_) {
+        const _ = new Map();
+        const _ = (async function () {
+          await (0, _._)();
+          const _ = _(),
+            _ = new Set([]);
+          for (const _ of _.languages) {
+            _.add(_.strLanguage);
+            const _ = (0, _._)(_.strLanguage);
+            _ && _.add(_);
+          }
+          return Promise.all(
+            Array.from(_).map((_) =>
+              _(_).then((_) => {
+                if (!_) return;
+                const _ = new Map();
+                for (const [_, _] of Object.entries(_)) _.set("#" + _, _);
+                _.set(_, _);
+              }),
+            ),
+          );
+        })();
+        let _ = !1;
+        var _;
+        function _(_, _) {
+          const [_, ..._] = _,
+            _ =
+              _.get(_.strLanguage)?.get(_) ??
+              _.get((0, _._)(_.strLanguage) ?? "english")?.get(_);
+          return (
+            _ ||
+            (0 === _.length
+              ? (console.error("Couldn't find localization key", _), _)
+              : _(_, _))
+          );
+        }
+        function _(_, ..._) {
+          return _(_(_, _().languages), ..._);
+        }
+        return (
+          __webpack_require__.then(() => (_ = !0)),
+          (_ = _),
+          (_ ??= new Set()),
+          _.add(_),
+          {
+            Localize: (_, ..._) => _(_, ..._),
+            LocalizeReact(_, ..._) {
+              const _ = this.Localize(_);
+              if (_ === _) return _;
+              const _ = [],
+                _ = /(.*?)%(\d+)\$s/g;
+              let _,
+                _ = 0;
+              for (; (_ = _.exec(_)); ) {
+                (_ += _[0].length), _.push(_[1]);
+                const _ = parseInt(_[2]);
+                _ >= 1 && _ <= _.length && _.push(_[_ - 1]);
+              }
+              return (
+                _.push(__webpack_require__.slice(_)),
+                _.createElement(_.Fragment, null, ..._)
+              );
+            },
+            LocalizePlural: (_, _, ..._) =>
+              1 === _ || "1" === _ ? _(_, _, ..._) : _(_ + "_Plural", _, ..._),
+            LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
+            Ready: () => _,
+            IsReady: () => _,
+          }
+        );
+      }
+      function _() {
+        if (!(0, _._)(_._.LANGUAGE)) throw `unknown language ${_._.LANGUAGE}`;
+        return {
+          languages: [
+            {
+              strLanguage: _._.LANGUAGE,
+              strISOCode: _._.get(_._.LANGUAGE),
+              eSource: 5,
+            },
+          ],
+        };
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -19213,6 +19347,10 @@
           _.apply_user_filters &&
             (function (_, _, _) {
               _(_, _, _, "apply_user_filters", "user_filter_failure");
+            })(_, _, _),
+          _.include_all_purchase_options &&
+            (function (_, _, _) {
+              _(_, _, _, "include_all_purchase_options", "purchase_options");
             })(_, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
@@ -39434,7 +39572,11 @@
       function _(_, _, ...__webpack_require__) {
         return 1 === _ || "1" === _
           ? _(_, _, ...__webpack_require__)
-          : _(_ + "_Plural", _.toLocaleString(), ...__webpack_require__);
+          : _(
+              _ + "_Plural",
+              _.toLocaleString(_.GetPreferredLocales()),
+              ...__webpack_require__,
+            );
       }
       function _(_, ..._) {
         let _ = _.LocalizeIfToken(_);

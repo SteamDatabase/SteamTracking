@@ -1251,7 +1251,7 @@
               null,
               " ",
               "$",
-              Math.floor(_.gross_sales_usd / 100).toLocaleString(),
+              (0, _._)(Math.floor(_.gross_sales_usd / 100)),
             ),
           Boolean(_ && _?.gross_sales_usd) &&
             _.createElement(
@@ -1379,7 +1379,7 @@
                       "Total: ",
                       _.createElement("br", null),
                       "$",
-                      Math.floor(_.gross_sales_usd / 100).toLocaleString(),
+                      (0, _._)(Math.floor(_.gross_sales_usd / 100)),
                     ),
                     _.createElement(
                       "td",
@@ -1387,23 +1387,21 @@
                       "Per Day: ",
                       _.createElement("br", null),
                       "$",
-                      Math.floor(
-                        _.gross_sales_usd / (100 * _._),
-                      ).toLocaleString(),
+                      (0, _._)(Math.floor(_.gross_sales_usd / (100 * _._))),
                     ),
                     _.createElement(
                       "td",
                       null,
                       "Total Units: ",
                       _.createElement("br", null),
-                      _.gross_units_sold.toLocaleString(),
+                      (0, _._)(_.gross_units_sold),
                     ),
                     _.createElement(
                       "td",
                       null,
                       "Units Per Day: ",
                       _.createElement("br", null),
-                      Math.floor(_.gross_units_sold / _._).toLocaleString(),
+                      (0, _._)(Math.floor(_.gross_units_sold / _._)),
                     ),
                     Boolean(_.gross_sales_usd > 0) &&
                       _.createElement(

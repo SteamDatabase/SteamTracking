@@ -476,7 +476,8 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _.getValue();
         return _?.length > 0
@@ -511,7 +512,8 @@
         return Number.parseInt(_.getValue()) ? "yes" : "no";
       }
       function _(_) {
-        return Number.parseInt(_.getValue()).toLocaleString();
+        const _ = Number.parseInt(_.getValue());
+        return (0, _._)(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -815,112 +817,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, ..._) {
-        return 0 == _.length
-          ? _
-          : (_ = _.replace(/%(?:(\d+)\$)?s/g, function (_, _) {
-              if (_ <= _.length && _ >= 1) {
-                const _ = _[_ - 1];
-                return String(null == _ ? "" : _);
-              }
-              return _;
-            }));
-      }
-      let _;
-      _ ??= new Set();
-      function _(_) {
-        const _ = new Map();
-        const _ = (async function () {
-          await (0, _._)();
-          const _ = _(),
-            _ = new Set([]);
-          for (const _ of _.languages) {
-            _.add(_.strLanguage);
-            const _ = (0, _._)(_.strLanguage);
-            _ && _.add(_);
-          }
-          return Promise.all(
-            Array.from(_).map((_) =>
-              _(_).then((_) => {
-                if (!_) return;
-                const _ = new Map();
-                for (const [_, _] of Object.entries(_)) _.set("#" + _, _);
-                _.set(_, _);
-              }),
-            ),
-          );
-        })();
-        let _ = !1;
-        var _;
-        function _(_, _) {
-          const [_, ..._] = _,
-            _ =
-              _.get(_.strLanguage)?.get(_) ??
-              _.get((0, _._)(_.strLanguage) ?? "english")?.get(_);
-          return (
-            _ ||
-            (0 === _.length
-              ? (console.error("Couldn't find localization key", _), _)
-              : _(_, _))
-          );
-        }
-        function _(_, ..._) {
-          return _(_(_, _().languages), ..._);
-        }
-        return (
-          __webpack_require__.then(() => (_ = !0)),
-          (_ = _),
-          (_ ??= new Set()),
-          _.add(_),
-          {
-            Localize: (_, ..._) => _(_, ..._),
-            LocalizeReact(_, ..._) {
-              const _ = this.Localize(_);
-              if (_ === _) return _;
-              const _ = [],
-                _ = /(.*?)%(\d+)\$s/g;
-              let _,
-                _ = 0;
-              for (; (_ = _.exec(_)); ) {
-                (_ += _[0].length), _.push(_[1]);
-                const _ = parseInt(_[2]);
-                _ >= 1 && _ <= _.length && _.push(_[_ - 1]);
-              }
-              return (
-                _.push(__webpack_require__.slice(_)),
-                _.createElement(_.Fragment, null, ..._)
-              );
-            },
-            LocalizePlural: (_, _, ..._) =>
-              1 === _ || "1" === _ ? _(_, _, ..._) : _(_ + "_Plural", _, ..._),
-            LocalizeInSpecificLang: (_, _, ..._) => _(_(_, [_]), ..._),
-            Ready: () => _,
-            IsReady: () => _,
-          }
-        );
-      }
-      function _() {
-        if (!(0, _._)(_._.LANGUAGE)) throw `unknown language ${_._.LANGUAGE}`;
-        return {
-          languages: [
-            {
-              strLanguage: _._.LANGUAGE,
-              strISOCode: _._.get(_._.LANGUAGE),
-              eSource: 5,
-            },
-          ],
-        };
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -27054,7 +26950,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = "America/Los_Angeles";
       function _(_) {
         const _ = _.context.event,
@@ -27447,7 +27344,7 @@
                     {
                       className: _().MaxSize,
                     },
-                    (0, _._)("#MeetSteam_Spot", _.toLocaleString()),
+                    (0, _._)("#MeetSteam_Spot", _.toLocaleString((0, _._)())),
                   ),
               " ",
             ),
@@ -30299,6 +30196,7 @@
                 autoPlay: !0,
                 loop: !0,
                 poster: _,
+                playsInline: !0,
                 className: _.videoClassName,
               },
               _.createElement("source", {
@@ -30712,6 +30610,7 @@
         })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
@@ -31099,7 +30998,7 @@
                 null,
                 (0, _._)(
                   "#UserPolls_status_N_Votes",
-                  (_?.total_votes || 0).toLocaleString(),
+                  (0, _._)(_?.total_votes || 0),
                 ),
               ),
               _?.display_message

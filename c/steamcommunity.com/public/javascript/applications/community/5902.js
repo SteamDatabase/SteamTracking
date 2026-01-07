@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Vật phẩm này là một mặt hàng đồng nhất, nghĩa là mọi vật phẩm đơn lẻ được coi là như nhau. Bạn không thể xem vật phẩm của riêng từng bài đăng bán; thay vào đó bạn có thể đặt lệnh mua ở mức giá cụ thể, và lệnh bán với giá thấp nhất sẽ tự động khớp với lệnh mua cao nhất.",
 	"Search_AmountFound": "Tìm thấy %1$s kết quả",
 	"Search_AmountFound_Plural": "Tìm thấy %1$s kết quả",
-	"Search_ListingsFound": "Tìm thấy %1$s bài đăng bán",
-	"Search_ListingsFound_Plural": "Tìm thấy %1$s bài đăng bán",
+	"Search_ListingsFound": "Tìm thấy %2$s bài đăng bán",
+	"Search_ListingsFound_Plural": "Tìm thấy %2$s bài đăng bán",
 	"SortBy_Name_Asc": "Tên (A đến Z)",
 	"SortBy_Name_Desc": "Tên (Z đến A)",
 	"SortBy_Price_Asc": "Giá (thấp đến cao)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Một số vật phẩm cũ hơn sử dụng các đoạn mô tả thuộc tính sản phẩm quan trọng, nhưng không thể tìm thấy qua nhóm bộ lọc dưới đây. Tùy chọn này sẽ cho phép so khớp nội dung tìm kiếm của bạn với văn bản mô tả đầy đủ thay vì chỉ tên vật phẩm.",
 	"MarketSearch_FilterColumn_Header": "Bộ lọc",
 	"MarketSearch_Reset": "Đặt lại tìm kiếm",
-	"Listings_Filter_Placeholder": "Lọc bài đăng bán...",
+	"Listings_TextFilter_Placeholder": "Nhập văn bản lọc tùy biến...",
 	"Economy_Market_Purchase_Restrictions": "Sau khi mua, vật phẩm này:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "sẽ không thể trao đổi trong một ngày",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "sẽ không thể trao đổi trong một tuần",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Xin thứ lỗi!",
 	"Error_Encountered": "Đã có lỗi xảy ra trong quá trình xử lí yêu cầu của bạn:",
 	"Error_TooManyRequests_Description": "Bạn đã thực hiện quá nhiều yêu cầu gần đây. Vui lòng chờ và thử yêu cầu lại sau.",
-	"Container_ContentsLabel": "Nội dung có thể có:"
+	"Container_ContentsLabel": "Nội dung có thể có:",
+	"Error_LoadingContent": "Có vấn đề phát sinh trong khi nạp nội dung này",
+	"Error_LoadingMarketItem": "Mục yêu cầu có thể không tồn tại, hoặc tạm thời đang gặp vấn đề ngăn quá trình nạp. Vui lòng thử lại sau.",
+	"ListingFilter_Title": "Lọc bài đăng bán"
 }`);
     },
   },

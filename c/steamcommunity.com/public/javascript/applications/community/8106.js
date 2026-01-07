@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Removido e advertido",
 	"moderation_resolutionstatus_removeandban": "Removido e banido da central",
 	"moderation_resolutionstatus_removeandkick": "Removido e expulso do grupo",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Desconhecido",
 	"moderationaction_acquitted": "Absolvido",
 	"moderationaction_cancelled": "Última denúncia aberta cancelada",

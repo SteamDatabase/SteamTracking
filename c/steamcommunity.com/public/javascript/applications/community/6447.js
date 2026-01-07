@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Silindi ve kullanıcı uyarıldı",
 	"moderation_resolutionstatus_removeandban": "Silindi ve merkezden yasaklandı",
 	"moderation_resolutionstatus_removeandkick": "Silindi ve kullanıcı gruptan atıldı",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Bilinmiyor",
 	"moderationaction_acquitted": "Aklandı",
 	"moderationaction_cancelled": "Son açık şikâyet iptal edildi",

@@ -375,6 +375,7 @@
         TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
         VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
         ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
+        AutoAdvanceBar: "_3F82OZtnlZ8bcDCZZT1TSF",
         ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
         CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
         ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
@@ -9342,6 +9343,7 @@
           is_maincap: _,
           is_expanded_maincap: _,
           is_expanded_display: _,
+          show_auto_advance_bar: _,
         } = _;
         if (!_) return null;
         if (__webpack_require__)
@@ -9406,6 +9408,16 @@
                 }),
               ),
             ),
+            _ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().AutoAdvanceBar,
+                },
+                _.createElement("div", {
+                  className: _().ShineCtn,
+                }),
+              ),
           );
         if (_)
           return _.createElement(
@@ -16086,10 +16098,11 @@
         _.useEffect(() => {
           _ || _ || !_ || (_(!1), _());
         }, [_, _, _, _]);
-        const _ =
-          !_ &&
-          _ > 1 &&
-          (null == __webpack_require__ || __webpack_require__ > 0);
+        const _ = !_ && !(0, _._)(),
+          _ =
+            !_ &&
+            _ > 1 &&
+            (null == __webpack_require__ || __webpack_require__ > 0);
         let _;
         _
           ? (_ = 4)
@@ -16211,8 +16224,7 @@
                       }),
                     ),
                 ),
-                !_ &&
-                  !(0, _._)() &&
+                _ &&
                   _.createElement(_, {
                     className: (0, _._)(_().AutoAdvanceRow, _ && _().Enabled),
                     enabled: _,
@@ -16226,6 +16238,7 @@
           : _.createElement(_._, {
               capsules_per_row: [1],
               is_trailer_carousel: !0,
+              show_auto_advance_bar: _,
             });
       }
       function _(_) {

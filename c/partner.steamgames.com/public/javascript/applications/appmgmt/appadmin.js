@@ -634,6 +634,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { nPartnerID: _, nAppID: __webpack_require__ } = _;
@@ -813,9 +814,9 @@
               {
                 className: _.Numerals,
               },
-              Number.parseInt(
-                _.summary_sales.steam_gross_units_sold || "0",
-              ).toLocaleString(),
+              (0, _._)(
+                Number.parseInt(_.summary_sales.steam_gross_units_sold || "0"),
+              ),
             ),
           ),
         );

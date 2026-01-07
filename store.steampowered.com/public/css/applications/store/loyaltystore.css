@@ -1666,7 +1666,6 @@ body.v6.rewards .ModalPosition_Content {
 }
 .skI5tVFxF4zkY8z56LALc .CcuoOiSs23_Y___I-1Myh .U-rBCVfODx4G2p43_zb8V {
   width: 160%;
-  height: auto;
   border-radius: 3px;
   transform: scaleX(0.55) scaleY(0.55);
   -moz-transform: scaleX(0.9) scaleY(0.9);
@@ -4991,9 +4990,6 @@ body.v6.rewards .ModalPosition_Content {
   color: inherit;
   stroke: currentColor;
   fill: currentColor;
-}
-.nNfIqrE3gYu9tzwyGZ4sR:focus-within {
-  width: 240px;
 }
 ._3F5iu5eLMKJWPO589tdk9p {
   display: flex;

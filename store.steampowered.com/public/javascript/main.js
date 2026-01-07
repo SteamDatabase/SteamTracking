@@ -557,7 +557,7 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
 	{
 		ShowAlertDialog( "Please login...", "You must log into Steam to add an item to your wishlist." )
 		.done( function() {
-			window.location.href = 'https://store.steampowered.com//login?redir=app/' + appid;
+			window.location.href = 'https://store.steampowered.com/login?redir=app/' + appid;
 		} );
 		return;
 	}

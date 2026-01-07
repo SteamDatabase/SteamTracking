@@ -489,7 +489,7 @@
             {
               ref: _,
               className: _().LightboxDialog,
-              onClose: () => _.onCloseRequest(),
+              onClose: (_) => _.onCloseRequest(_),
               onKeyDown: (_) => {
                 "ArrowRight" === _.key && _.nextSrc
                   ? _.onMoveNextRequest()
@@ -519,7 +519,7 @@
                 ),
                 key: _.mainSrc,
                 onClick: (_) => {
-                  "IMG" !== _.target.nodeName && _.onCloseRequest();
+                  "IMG" !== _.target.nodeName && _.onCloseRequest(_);
                 },
               },
               _.createElement("img", {

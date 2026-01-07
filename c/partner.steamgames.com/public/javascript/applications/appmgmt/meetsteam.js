@@ -191,6 +191,7 @@
       function _() {
         return _.Get().GetSaleFeatureTransport().GetServiceTransport();
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { hideModal: _, gid: __webpack_require__ } = _,
           [_, _] = (0, _.useState)(!1),
@@ -345,9 +346,9 @@
               "div",
               null,
               "Invited ",
-              _.toLocaleString(),
+              (0, _._)(_),
               " accounts, skipped previously invited ",
-              _.toLocaleString(),
+              (0, _._)(_),
             ),
           _ &&
             _.createElement(_._, {
@@ -2202,7 +2203,7 @@
             "div",
             null,
             "Total Survey Responses: ",
-            (_?.length || 0).toLocaleString(),
+            (0, _._)(_?.length || 0),
           ),
           _.createElement(
             "div",
@@ -2240,7 +2241,7 @@
         return _.createElement(
           _._,
           {
-            title: `${_.name} in ${_.place} around ${_.time}: Interest: ${__webpack_require__.toLocaleString()}`,
+            title: `${_.name} in ${_.place} around ${_.time}: Interest: ${(0, _._)(__webpack_require__)}`,
             bStartMinimized: !0,
           },
           _.createElement(_, {
@@ -2732,7 +2733,8 @@
         };
       }
       let _;
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
           _ = (0, _._)(),
@@ -2783,7 +2785,7 @@
                           _?.m_strPlayerName || "",
                           "" + _.accountid,
                           _?.email_address || "",
-                          _.clan_event_gids?.length.toLocaleString(),
+                          _.clan_event_gids?.length.toLocaleString((0, _._)()),
                         ]);
                       });
                     _._.WriteCSVToFile(_, "sale_operators.csv");
@@ -2864,7 +2866,7 @@
               onClick: _,
             },
             "See ",
-            __webpack_require__.length.toLocaleString(),
+            (0, _._)(__webpack_require__.length),
             " Events",
           ),
           _.createElement(

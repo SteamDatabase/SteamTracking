@@ -291,11 +291,6 @@ body.v6 h3 {
 			font-weight: normal;
 }
 
-body.v6 .page_content {
-	width: 940px;
-	margin: 0 auto;
-}
-
 .ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -6436,11 +6431,10 @@ html.mobile_client body.v7menu .home_page_body_ctn:not(.has_takeover) .v7menu_sp
 
 /* 2025 Game Page Widening */
 
-/* TODO: remove !important when the .widestore class is removed */
 body.v6.narrowstore .page_content {
-	max-width: unset !important;
-	width: 940px !important;
-	margin: 0 auto !important;
+	max-width: unset;
+	width: 940px;
+	margin: 0 auto;
 }
 
 body.v6 {
@@ -6451,13 +6445,13 @@ body.v6.widestore {
 	--store-page-width: 1200px;
 }
 
-body.v6.widestore .page_content {
+body.v6 .page_content {
 	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
 }
 
-body.v6.widestore .page_content.middle_page {
+body.v6 .page_content.middle_page {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
@@ -6485,12 +6479,12 @@ body.v6.widestore #store_header {
 }
 
 @media screen and (max-width: 910px) {
-	body.v6.widestore .page_content.middle_page {
+	body.v6 .page_content.middle_page {
 		display: block;
 		flex-direction: unset;
 	}
 
-	body.v6.widestore .page_content {
+	body.v6 .page_content {
 		max-width: 1200px;
 		width: auto;
 		margin: 0 2%;
@@ -6579,20 +6573,20 @@ body.v6.widestore #store_header {
 		padding-bottom: 21px;
 	}
 
-	body.v6.widestore .carousel_container .carousel_items > * {
+	body.v6 .carousel_container .carousel_items > * {
 		pointer-events: auto;
 		flex-shrink: 0;
 	}
 }
 
 @media screen and (max-width: 1245px) and (min-width: 500px) {
-	body.v6.widestore .page_content {
+	body.v6 .page_content {
 		width: 98%;
 	}
 }
 
 @media screen and (max-width: 1325px) and (min-width: 910px) {
-	body.v6.widestore .related_items_ctn .page_content {
+	body.v6 .related_items_ctn .page_content {
 		width: calc(100vw - 144px);
 	}
 }

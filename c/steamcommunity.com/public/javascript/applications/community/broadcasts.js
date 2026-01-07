@@ -865,6 +865,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { broadcasterSteamID: _ } = _,
@@ -924,7 +925,7 @@
                     {
                       className: _.ViewerCount,
                     },
-                    (0, _._)("#Broadcast_ViewerCount", _.toLocaleString()),
+                    (0, _._)("#Broadcast_ViewerCount", (0, _._)(_)),
                   ),
                 ),
                 _.createElement(_, {

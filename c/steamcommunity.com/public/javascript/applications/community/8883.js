@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Este artículo es una mercancía, donde todos los artículos individuales son idénticos. No puedes acceder a los anuncios individuales, pero sí realizar pedidos para comprar a un precio específico. El anuncio más barato se emparejará automáticamente con el pedido de compra más alto.",
 	"Search_AmountFound": "Se encontró %1$s resultado",
 	"Search_AmountFound_Plural": "Se encontraron %1$s resultados",
-	"Search_ListingsFound": "Se encontró %1$s anuncio",
-	"Search_ListingsFound_Plural": "Se encontraron %1$s anuncios",
+	"Search_ListingsFound": "Se encontró %2$s anuncio",
+	"Search_ListingsFound_Plural": "Se encontraron %2$s anuncios",
 	"SortBy_Name_Asc": "Nombre (de la A a la Z)",
 	"SortBy_Name_Desc": "Nombre (de la Z a la A)",
 	"SortBy_Price_Asc": "Precio (de menor a mayor)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Algunos artículos más antiguos utilizan descripciones de texto para indicar propiedades importantes que no pueden filtrarse con las opciones de abajo. Esta opción permite que tu búsqueda coincida con todo el texto de la descripción, en lugar de hacerlo solo con el nombre del artículo.",
 	"MarketSearch_FilterColumn_Header": "Filtros",
 	"MarketSearch_Reset": "Restablecer búsqueda",
-	"Listings_Filter_Placeholder": "Filtrar anuncios...",
+	"Listings_TextFilter_Placeholder": "Escribe un texto personalizado para filtrar...",
 	"Economy_Market_Purchase_Restrictions": "Después de la compra, este artículo:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "no será intercambiable durante un día",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "no será intercambiable durante una semana",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "¡Lo sentimos!",
 	"Error_Encountered": "Se ha producido un error mientras se procesaba la solicitud:",
 	"Error_TooManyRequests_Description": "Has realizado demasiadas solicitudes recientemente. Por favor, espera e inténtalo de nuevo más tarde.",
-	"Container_ContentsLabel": "Posibles contenidos:"
+	"Container_ContentsLabel": "Posibles contenidos:",
+	"Error_LoadingContent": "Se produjo un problema al cargar este contenido",
+	"Error_LoadingMarketItem": "Es posible que el artículo solicitado no exista o que haya un problema temporal que impida su carga. Inténtalo de nuevo más tarde.",
+	"ListingFilter_Title": "Filtrar anuncios"
 }`);
     },
   },

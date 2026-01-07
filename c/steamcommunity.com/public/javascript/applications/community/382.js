@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "已移除並警告",
 	"moderation_resolutionstatus_removeandban": "已移除且從中心封鎖",
 	"moderation_resolutionstatus_removeandkick": "已移除並從群組踢出",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "不明",
 	"moderationaction_acquitted": "檢舉不成立",
 	"moderationaction_cancelled": "上次開啟的檢舉已取消",

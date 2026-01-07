@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Entfernt und verwarnt",
 	"moderation_resolutionstatus_removeandban": "Entfernt und aus Hub ausgeschlossen",
 	"moderation_resolutionstatus_removeandkick": "Entfernt und aus der Gruppe ausgeschlossen",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Unbekannt",
 	"moderationaction_acquitted": "Keine Maßnahmen ergriffen",
 	"moderationaction_cancelled": "Zuletzt geöffnete Meldung abgebrochen",

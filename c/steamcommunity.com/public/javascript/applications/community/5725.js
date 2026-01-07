@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Вилучено та попереджено",
 	"moderation_resolutionstatus_removeandban": "Вилучено та заблоковано в центрі",
 	"moderation_resolutionstatus_removeandkick": "Вилучено та вигнано з групи",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Невідомо",
 	"moderationaction_acquitted": "Виправдано",
 	"moderationaction_cancelled": "Останню відкриту скаргу скасовано",

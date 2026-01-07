@@ -203,7 +203,7 @@ body.tag_page h3 {
 	flex-grow: 1;
 	min-width: 200px;
 	aspect-ratio: 16/9;
-	color: #898a8c;
+	color: var(--gpStoreLighterGrey);
 	font-size: 13px;
 	line-height: 18px;
 }
@@ -228,13 +228,13 @@ body.tag_page h3 {
 	display: block;
 }
 
-.browse_tag_game_name {
-	color: #B0AEAC;
-}
-
 .browse_tag_game_price {
 	font-size: 11px;
 	font-family: tahoma, helvetica, arial, trebuchet ms, sans-serif;
+}
+
+.browse_tag_game_name {
+	color: var(--gpStoreLightestGrey);
 }
 
 .tag_notenough_ctn {

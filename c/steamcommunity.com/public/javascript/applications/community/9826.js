@@ -38,8 +38,8 @@
 	"CommodityExplanation": "此物品為大宗商品，個別物品之間皆無差異，因此系統不會分別列出販賣中的物品。您可以直接指定價格下單，而架上最便宜的物品將自動和最高金額的訂購單配對。",
 	"Search_AmountFound": "找到 %1$s 個結果",
 	"Search_AmountFound_Plural": "找到 %1$s 個結果",
-	"Search_ListingsFound": "找到 %1$s 項上架物品",
-	"Search_ListingsFound_Plural": "找到 %1$s 項上架物品",
+	"Search_ListingsFound": "找到 %2$s 項上架物品",
+	"Search_ListingsFound_Plural": "找到 %2$s 項上架物品",
 	"SortBy_Name_Asc": "名稱（從 A 到 Z）",
 	"SortBy_Name_Desc": "名稱（從 Z 到 A）",
 	"SortBy_Price_Asc": "價格（由低至高）",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "部分較舊項目使用文字來說明有意義的項目屬性，這些文字無法透過下列篩選條件來存取。此選項讓您能以整體說明文字為範圍來搜索相符文字，而非僅搜尋項目名稱。",
 	"MarketSearch_FilterColumn_Header": "篩選條件",
 	"MarketSearch_Reset": "重設搜尋",
-	"Listings_Filter_Placeholder": "篩選上架物品…",
+	"Listings_TextFilter_Placeholder": "輸入自訂篩選文字…",
 	"Economy_Market_Purchase_Restrictions": "購買後，此物品：",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "一天內不可用於交易",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "一週內不可用於交易",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "抱歉！",
 	"Error_Encountered": "處理您的請求時發生錯誤：",
 	"Error_TooManyRequests_Description": "您近期內提出的請求次數過於頻繁。請稍後再重試您的請求。",
-	"Container_ContentsLabel": "可能包含的內容："
+	"Container_ContentsLabel": "可能包含的內容：",
+	"Error_LoadingContent": "載入此內容時出現問題",
+	"Error_LoadingMarketItem": "您所請求的物品可能不存在，或暫時發生問題導致無法載入此物品。請稍後再試。",
+	"ListingFilter_Title": "篩選上架物品"
 }`);
     },
   },

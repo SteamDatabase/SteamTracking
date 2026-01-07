@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Cet item est un item de masse, dont tous les exemplaires sont effectivement identiques. Les offres individuelles ne sont pas permises. À la place, vous pouvez donner des ordres d'achat à un prix déterminé. L'offre la moins chère sera automatiquement associée à l'ordre d'achat le plus élevé.",
 	"Search_AmountFound": "%1$s résultat trouvé :",
 	"Search_AmountFound_Plural": "%1$s résultats trouvés :",
-	"Search_ListingsFound": "%1$s offre trouvée :",
-	"Search_ListingsFound_Plural": "%1$s offres trouvées :",
+	"Search_ListingsFound": "%2$s offre trouvée :",
+	"Search_ListingsFound_Plural": "%2$s offres trouvées :",
 	"SortBy_Name_Asc": "Nom (A à Z)",
 	"SortBy_Name_Desc": "Nom (Z à A)",
 	"SortBy_Price_Asc": "Prix (croissant)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Certains items anciens utilisent des descriptions textuelles afin d'inclure des éléments importants qui ne sont pas accessibles avec les filtres ci-dessous. Cette option permettra à votre texte de recherche d'être comparé à la description complète plutôt qu'au seul nom de l'item.",
 	"MarketSearch_FilterColumn_Header": "Filtres",
 	"MarketSearch_Reset": "Réinitialiser la recherche",
-	"Listings_Filter_Placeholder": "Filtrer les offres…",
+	"Listings_TextFilter_Placeholder": "Saisissez un texte de filtre personnalisé…",
 	"Economy_Market_Purchase_Restrictions": "Après achat, cet item :",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "ne sera pas échangeable pendant un jour",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "ne sera pas échangeable pendant une semaine",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Oups !",
 	"Error_Encountered": "Une erreur est survenue lors du traitement de votre demande :",
 	"Error_TooManyRequests_Description": "Vous avez récemment fait trop de demandes. Veuillez patienter et réessayer votre demande ultérieurement.",
-	"Container_ContentsLabel": "Contenu possible :"
+	"Container_ContentsLabel": "Contenu possible :",
+	"Error_LoadingContent": "Une erreur s'est produite lors du chargement de ce contenu.",
+	"Error_LoadingMarketItem": "L'item demandé est peut-être introuvable, ou bien un problème temporaire empêche son chargement. Veuillez réessayer plus tard.",
+	"ListingFilter_Title": "Filtrer les offres…"
 }`);
     },
   },

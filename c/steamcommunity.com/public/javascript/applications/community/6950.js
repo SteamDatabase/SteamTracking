@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Премахнато и предупредено",
 	"moderation_resolutionstatus_removeandban": "Премахнато и забранено от центъра",
 	"moderation_resolutionstatus_removeandkick": "Премахнати и изритани от групата",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Неизвестно",
 	"moderationaction_acquitted": "Оправдано",
 	"moderationaction_cancelled": "Последният отворен доклад е отказан",

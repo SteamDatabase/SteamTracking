@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Dieser Gegenstand ist eine Massenware, bei der jedes einzelne Exemplar identisch ist. Individuelle Angebote sind nicht einsehbar; Sie können stattdessen Kaufaufträge stellen, um den Gegenstand zu einem bestimmten Preis zu kaufen. Das günstigste Angebot wird automatisch mit dem höchsten Kaufauftrag gepaart.",
 	"Search_AmountFound": "%1$s Ergebnis gefunden",
 	"Search_AmountFound_Plural": "%1$s Ergebnisse gefunden",
-	"Search_ListingsFound": "%1$s Angebot gefunden",
-	"Search_ListingsFound_Plural": "%1$s Angebote gefunden",
+	"Search_ListingsFound": "%2$s Angebot gefunden",
+	"Search_ListingsFound_Plural": "%2$s Angebote gefunden",
 	"SortBy_Name_Asc": "Name (A bis Z)",
 	"SortBy_Name_Desc": "Name (Z bis A)",
 	"SortBy_Price_Asc": "Preis (ansteigend)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Für einige ältere Gegenstände liegen aussagekräftige Beschreibungen der jeweiligen Eigenschaften vor, die aufgrund der unten ausgewählten Filter nicht angezeigt werden. Mit dieser Option wird Ihr Suchtext mit der vollständigen Beschreibung abgeglichen, anstatt nur mit dem Gegenstandsnamen.",
 	"MarketSearch_FilterColumn_Header": "Filter",
 	"MarketSearch_Reset": "Suche zurücksetzen",
-	"Listings_Filter_Placeholder": "Angebote filtern …",
+	"Listings_TextFilter_Placeholder": "Benutzerdefinierten Filter eingeben …",
 	"Economy_Market_Purchase_Restrictions": "Nach dem Kauf kann dieser Gegenstand:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "für einen Tag nicht gehandelt werden",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "für eine Woche nicht gehandelt werden",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Entschuldigung!",
 	"Error_Encountered": "Bei der Verarbeitung Ihrer Anfrage ist ein Fehler aufgetreten:",
 	"Error_TooManyRequests_Description": "Sie haben in letzter Zeit zu viele Anfragen gesendet. Bitte warten Sie und versuchen Sie es später erneut.",
-	"Container_ContentsLabel": "Mögliche Inhalte:"
+	"Container_ContentsLabel": "Mögliche Inhalte:",
+	"Error_LoadingContent": "Beim Laden des Inhalts ist ein Fehler aufgetreten",
+	"Error_LoadingMarketItem": "Der angeforderte Inhalt steht möglicherweise nicht zur Verfügung oder es liegt ein vorübergehendes Problem vor, das das Laden verhindert. Bitte versuchen Sie es später erneut.",
+	"ListingFilter_Title": "Angebote filtern"
 }`);
     },
   },

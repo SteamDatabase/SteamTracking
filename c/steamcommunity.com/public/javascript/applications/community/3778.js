@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Eliminat și avertizat",
 	"moderation_resolutionstatus_removeandban": "Eliminat și interzis în centru",
 	"moderation_resolutionstatus_removeandkick": "Eliminat și exclus din grup",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Necunoscut",
 	"moderationaction_acquitted": "Achitat",
 	"moderationaction_cancelled": "Ultimul raport deschis a fost anulat",

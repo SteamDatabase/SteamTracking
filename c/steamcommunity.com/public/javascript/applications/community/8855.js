@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Έγινε αφαίρεση και δόθηκε προειδοποίηση",
 	"moderation_resolutionstatus_removeandban": "Αφαιρέθηκε και αποκλείστηκε από το Κέντρο",
 	"moderation_resolutionstatus_removeandkick": "Έγινε αφαίρεση και αποβολή από την ομάδα",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Άγνωστη",
 	"moderationaction_acquitted": "Απαλλάχθηκε",
 	"moderationaction_cancelled": "Η τελευταία ανοιχτή αναφορά ακυρώθηκε",

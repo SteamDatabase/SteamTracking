@@ -38,8 +38,8 @@
 	"CommodityExplanation": "This item is a commodity, where all the individual items are effectively identical. Individual listings aren't accessible; you can instead issue orders to buy at a specific price, with the cheapest listing getting automatically matched to the highest buy order.",
 	"Search_AmountFound": "Found %1$s result",
 	"Search_AmountFound_Plural": "Found %1$s results",
-	"Search_ListingsFound": "Found %1$s listing",
-	"Search_ListingsFound_Plural": "Found %1$s listings",
+	"Search_ListingsFound": "Found %2$s listing",
+	"Search_ListingsFound_Plural": "Found %2$s listings",
 	"SortBy_Name_Asc": "Name (A to Z)",
 	"SortBy_Name_Desc": "Name (Z to A)",
 	"SortBy_Price_Asc": "Price (low to high)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Some older items use text descriptions for meaningful item properties that are not accessible with the below filters. This option will allow your search text to be matched against the full description text instead of only the item name.",
 	"MarketSearch_FilterColumn_Header": "Filters",
 	"MarketSearch_Reset": "Reset Search",
-	"Listings_Filter_Placeholder": "Filter listings...",
+	"Listings_TextFilter_Placeholder": "Enter custom filter text...",
 	"Economy_Market_Purchase_Restrictions": "After purchase, this item:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "will not be tradable for one day",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "will not be tradable for one week",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Sorry!",
 	"Error_Encountered": "An error was encountered while processing your request:",
 	"Error_TooManyRequests_Description": "You've made too many requests recently. Please wait and try your request again later.",
-	"Container_ContentsLabel": "Possible Contents:"
+	"Container_ContentsLabel": "Possible Contents:",
+	"Error_LoadingContent": "There was a problem loading this content",
+	"Error_LoadingMarketItem": "The requested item might not exist, or there might be a temporary issue preventing this item from loading. Please try again later.",
+	"ListingFilter_Title": "Filter Listings"
 }`);
     },
   },

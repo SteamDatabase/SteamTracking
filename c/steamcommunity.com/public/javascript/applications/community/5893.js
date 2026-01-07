@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Supprimé et compte averti",
 	"moderation_resolutionstatus_removeandban": "Supprimé et compte banni du hub",
 	"moderation_resolutionstatus_removeandkick": "Suppression et exclusion du groupe",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Inconnu",
 	"moderationaction_acquitted": "Acquittement",
 	"moderationaction_cancelled": "Dernier signalement ouvert annulé",

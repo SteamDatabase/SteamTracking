@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Obsah byl smazán a uživatel varován",
 	"moderation_resolutionstatus_removeandban": "Obsah byl smazán a uživatel zabanován v centru",
 	"moderation_resolutionstatus_removeandkick": "Obsah byl smazán a uživatel vyhozen ze skupiny",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Neznámý stav",
 	"moderationaction_acquitted": "Zproštěno",
 	"moderationaction_cancelled": "Poslední otevřené nahlášení bylo zrušeno",

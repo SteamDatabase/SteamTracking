@@ -588,7 +588,8 @@ body._2aYDMWWN9bAVaHmPfFHXWA .responsive_page_frame {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 6vh;
+  padding-top: 92px;
+  box-sizing: border-box;
 }
 ._23MzHKxNYqVS4XAaaE8YQK ._3022w3NEiudslTNnPMWd8Z {
   position: absolute;
@@ -3092,12 +3093,14 @@ p a:hover {
   transform: scale(1.04) rotateZ(-9deg);
 }
 @media screen and (max-width: 500px) {
-  html:not(.force_desktop) ._3Qf-XadcjXMDgnu95-quHx {
+  html:not(.force_desktop):not(.force_desktop) ._3Qf-XadcjXMDgnu95-quHx {
     flex-direction: column;
     text-align: center;
     justify-content: space-around;
   }
-  html:not(.force_desktop) ._3Qf-XadcjXMDgnu95-quHx ._2TEWmnx8AyVWR6eUSiFGUq {
+  html:not(.force_desktop):not(.force_desktop)
+    ._3Qf-XadcjXMDgnu95-quHx
+    ._2TEWmnx8AyVWR6eUSiFGUq {
     flex-basis: 0;
   }
 }

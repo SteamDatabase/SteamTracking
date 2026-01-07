@@ -2770,7 +2770,8 @@
 	"trendingfree": 100753,
 	"reactroot": 100754,
 	"bundlelist": 100755,
-	"verifiedprogram": 100756
+	"verifiedprogram": 100756,
+	"trailercarousel": 100757
 }`);
       class _ {
         static InstrumentLink(_, _, __webpack_require__ = null) {
@@ -3306,6 +3307,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3492,7 +3494,8 @@
         _ = 41316928,
         _ = 4,
         _ = 20,
-        _ = 45559995;
+        _ = 45559995,
+        _ = 45902273;
       var _;
       !(function (_) {
         (_[(_.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
@@ -4749,8 +4752,8 @@
                 0) >= 7,
             min_capsule_matches_for_facet_values: 5,
             max_facet_values_for_facet: 5,
-            background_gradient_top: "#00000030",
-            background_gradient_bottom: "#00000030",
+            background_gradient_top: "#0000006b",
+            background_gradient_bottom: "#0000006b",
             facet_sort_order: 1,
             facet_auto_generate_options: {
               only_facets: [
@@ -15464,7 +15467,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.line_item_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [15], null);
         }
         static sm_m;
         static sm_mbf;
@@ -15533,6 +15536,14 @@
                     _: 14,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  included_packageids: {
+                    _: 15,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
                   },
                 },
               }),
@@ -19195,17 +19206,20 @@
             return _.jsondata.bSaleEnabled
               ? _.clanSteamID.GetAccountID() == _._
                 ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
-                : _
-                  ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
+                : _.clanSteamID.GetAccountID() == _._
+                  ? `${_}charts/bestofyear/${_.jsondata.sale_vanity_id}`
                   : _
-                    ? `${_}curator/${_.clanSteamID.GetAccountID()}`
-                    : _ +
-                      (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                        ? "sale/"
-                        : "curator/" +
-                          _.clanSteamID.GetAccountID() +
-                          "/sale/") +
-                      _.jsondata.sale_vanity_id
+                    ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
+                    : _
+                      ? `${_}curator/${_.clanSteamID.GetAccountID()}`
+                      : _ +
+                        (_.jsondata
+                          .sale_vanity_id_valve_approved_for_sale_subpath
+                          ? "sale/"
+                          : "curator/" +
+                            _.clanSteamID.GetAccountID() +
+                            "/sale/") +
+                        _.jsondata.sale_vanity_id
               : _;
           case _.k_eCommunityView:
             return _ + "announcements/detail/" + _;
@@ -19574,6 +19588,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "DEBUG_UseNewGameHover";
       function _() {
@@ -19858,21 +19873,21 @@
                 className: _().ReviewScoreCount,
                 "aria-label": (0, _._)(
                   "#GameHover_UserReviewCount",
-                  _.review_count.toLocaleString(),
+                  _.review_count.toLocaleString((0, _._)()),
                 ),
               },
               "(",
               __webpack_require__
-                ? "(" + _.review_count.toLocaleString() + ")"
+                ? "(" + _.review_count.toLocaleString((0, _._)()) + ")"
                 : _
                   ? (0, _._)(
                       "#GameHover_UserReviewCount_Lang",
-                      _.review_count.toLocaleString(),
+                      _.review_count.toLocaleString((0, _._)()),
                       _,
                     )
                   : (0, _._)(
                       "#GameHover_UserReviewCount",
-                      _.review_count.toLocaleString(),
+                      _.review_count.toLocaleString((0, _._)()),
                     ),
               ")",
             ),
@@ -23092,7 +23107,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -23126,24 +23140,17 @@
             },
             [_, _, _],
           );
-        return (
-          "dev" == _._.WEB_UNIVERSE &&
-            (0, _._)(
-              "store" == (0, _._)(),
-              "StoreGameHoverAnchorSource only works on Store web properties",
-            ),
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              className: _,
-              onMouseEnter: _,
-              onMouseLeave: _,
-              onFocus: _,
-              onBlur: _,
-            },
-            _,
-          )
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _,
+            onMouseEnter: _,
+            onMouseLeave: _,
+            onFocus: _,
+            onBlur: _,
+          },
+          _,
         );
       }
       function _(_) {

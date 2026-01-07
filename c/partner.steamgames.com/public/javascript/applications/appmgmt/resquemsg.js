@@ -505,6 +505,7 @@
           (0, _._)(_, _, _, _, ""),
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _();
         return _ && 0 != _.length
@@ -638,7 +639,7 @@
         return _.createElement(
           "tr",
           null,
-          _.createElement("td", null, _.start_queue_position.toLocaleString()),
+          _.createElement("td", null, (0, _._)(_.start_queue_position)),
           _.createElement("td", null, (0, _._)(_.rtime_estimated_notification)),
           _.createElement(
             "td",
@@ -787,7 +788,7 @@
       function _(_) {
         const { positionMsg: _, closeModal: __webpack_require__ } = _,
           { fnDeletePositionMessage: _ } = _(),
-          _ = `Delete Queue Position ${_.start_queue_position.toLocaleString()}`,
+          _ = `Delete Queue Position ${(0, _._)(_.start_queue_position)}`,
           _ = (0, _._)();
         return _.bLoading
           ? _.createElement(_._, {

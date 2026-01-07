@@ -5,7 +5,29 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.toLocaleString((0, _._)());
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _() {
+        return (0, _._)().languages.map((_) => {
+          return 2 == (_ = _.strISOCode).length && _._.COUNTRY
+            ? `${_}-${_._.COUNTRY}`
+            : _;
+          var _;
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
         _: () => _,
@@ -15,249 +37,10 @@
         _: () => _,
       });
       var _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
-        _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.k_ELoyaltyRewardAuditType_Invalid = 0)] =
-          "k_ELoyaltyRewardAuditType_Invalid"),
-          (_[(_.k_ELoyaltyRewardAuditType_Purchase = 1)] =
-            "k_ELoyaltyRewardAuditType_Purchase"),
-          (_[(_.k_ELoyaltyRewardAuditType_RefundOrChargeback = 2)] =
-            "k_ELoyaltyRewardAuditType_RefundOrChargeback"),
-          (_[(_.k_ELoyaltyRewardAuditType_SupportGrant = 3)] =
-            "k_ELoyaltyRewardAuditType_SupportGrant"),
-          (_[(_.k_ELoyaltyRewardAuditType_PointRedemption = 4)] =
-            "k_ELoyaltyRewardAuditType_PointRedemption"),
-          (_[(_.k_ELoyaltyRewardAuditType_PointClawback = 5)] =
-            "k_ELoyaltyRewardAuditType_PointClawback"),
-          (_[(_.k_ELoyaltyRewardAuditType_PointRedemptionForBadgeLevel = 6)] =
-            "k_ELoyaltyRewardAuditType_PointRedemptionForBadgeLevel"),
-          (_[(_.k_ELoyaltyRewardAuditType_SpendingBackfill = 7)] =
-            "k_ELoyaltyRewardAuditType_SpendingBackfill"),
-          (_[(_.k_ELoyaltyRewardAuditType_PointRedemptionForItemUpgrade = 9)] =
-            "k_ELoyaltyRewardAuditType_PointRedemptionForItemUpgrade"),
-          (_[(_.k_ELoyaltyRewardAuditType_PointRedemptionForTransaction = 10)] =
-            "k_ELoyaltyRewardAuditType_PointRedemptionForTransaction"),
-          (_[(_.k_ELoyaltyRewardAuditType_SupportRegrantItem = 19)] =
-            "k_ELoyaltyRewardAuditType_SupportRegrantItem"),
-          (_[(_.k_ELoyaltyRewardAuditType_TransferRequest = 20)] =
-            "k_ELoyaltyRewardAuditType_TransferRequest"),
-          (_[(_.k_ELoyaltyRewardAuditType_Transferred = 21)] =
-            "k_ELoyaltyRewardAuditType_Transferred"),
-          (_[(_.k_ELoyaltyRewardAuditType_UserReviewReaction = 22)] =
-            "k_ELoyaltyRewardAuditType_UserReviewReaction"),
-          (_[
-            (_.k_ELoyaltyRewardAuditType_UserReviewReaction_PointsTransferred = 23)
-          ] = "k_ELoyaltyRewardAuditType_UserReviewReaction_PointsTransferred"),
-          (_[(_.k_ELoyaltyRewardAuditType_LaunchBackfill_Purchase = 24)] =
-            "k_ELoyaltyRewardAuditType_LaunchBackfill_Purchase"),
-          (_[
-            (_.k_ELoyaltyRewardAuditType_LaunchBackfill_RefundOrChargeback = 25)
-          ] = "k_ELoyaltyRewardAuditType_LaunchBackfill_RefundOrChargeback"),
-          (_[(_.k_ELoyaltyRewardAuditType_UGCReaction = 26)] =
-            "k_ELoyaltyRewardAuditType_UGCReaction"),
-          (_[(_.k_ELoyaltyRewardAuditType_UGCReaction_PointsTransferred = 27)] =
-            "k_ELoyaltyRewardAuditType_UGCReaction_PointsTransferred"),
-          (_[(_.k_ELoyaltyRewardAuditType_SupportSetBadgeLevel = 28)] =
-            "k_ELoyaltyRewardAuditType_SupportSetBadgeLevel"),
-          (_[(_.k_ELoyaltyRewardAuditType_UserReviewReaction_Removed = 29)] =
-            "k_ELoyaltyRewardAuditType_UserReviewReaction_Removed"),
-          (_[(_.k_ELoyaltyRewardAuditType_UGCReaction_Removed = 30)] =
-            "k_ELoyaltyRewardAuditType_UGCReaction_Removed"),
-          (_[(_.k_ELoyaltyRewardAuditType_Auction_Bid = 31)] =
-            "k_ELoyaltyRewardAuditType_Auction_Bid"),
-          (_[(_.k_ELoyaltyRewardAuditType_Auction_BidCancelled = 32)] =
-            "k_ELoyaltyRewardAuditType_Auction_BidCancelled"),
-          (_[(_.k_ELoyaltyRewardAuditType_Auction_WinningBid = 33)] =
-            "k_ELoyaltyRewardAuditType_Auction_WinningBid"),
-          (_[(_.k_ELoyaltyRewardAuditType_GrantedFromPackage = 34)] =
-            "k_ELoyaltyRewardAuditType_GrantedFromPackage"),
-          (_[
-            (_.k_ELoyaltyRewardAuditType_PointRedemptionForProfileCustomization = 35)
-          ] =
-            "k_ELoyaltyRewardAuditType_PointRedemptionForProfileCustomization"),
-          (_[(_.k_ELoyaltyRewardAuditType_ProfileReaction = 36)] =
-            "k_ELoyaltyRewardAuditType_ProfileReaction"),
-          (_[
-            (_.k_ELoyaltyRewardAuditType_ProfileReaction_PointsTransferred = 37)
-          ] = "k_ELoyaltyRewardAuditType_ProfileReaction_PointsTransferred"),
-          (_[(_.k_ELoyaltyRewardAuditType_ProfileReaction_Removed = 38)] =
-            "k_ELoyaltyRewardAuditType_ProfileReaction_Removed"),
-          (_[
-            (_.k_ELoyaltyRewardAuditType_PointRedemptionForProfileCustomizationUpgrade = 39)
-          ] =
-            "k_ELoyaltyRewardAuditType_PointRedemptionForProfileCustomizationUpgrade"),
-          (_[(_.k_ELoyaltyRewardAuditType_ForumTopicReaction = 40)] =
-            "k_ELoyaltyRewardAuditType_ForumTopicReaction"),
-          (_[
-            (_.k_ELoyaltyRewardAuditType_ForumTopicReaction_PointsTransferred = 41)
-          ] = "k_ELoyaltyRewardAuditType_ForumTopicReaction_PointsTransferred"),
-          (_[(_.k_ELoyaltyRewardAuditType_ForumTopicReaction_Removed = 42)] =
-            "k_ELoyaltyRewardAuditType_ForumTopicReaction_Removed"),
-          (_[(_.k_ELoyaltyRewardAuditType_CommentReaction = 43)] =
-            "k_ELoyaltyRewardAuditType_CommentReaction"),
-          (_[
-            (_.k_ELoyaltyRewardAuditType_CommentReaction_PointsTransferred = 44)
-          ] = "k_ELoyaltyRewardAuditType_CommentReaction_PointsTransferred"),
-          (_[(_.k_ELoyaltyRewardAuditType_CommentReaction_Removed = 45)] =
-            "k_ELoyaltyRewardAuditType_CommentReaction_Removed"),
-          (_[(_.k_ELoyaltyRewardAuditType_SteamDeckRewards = 46)] =
-            "k_ELoyaltyRewardAuditType_SteamDeckRewards"),
-          (_[(_.k_ELoyaltyRewardAuditType_SupportGrantReward = 47)] =
-            "k_ELoyaltyRewardAuditType_SupportGrantReward"),
-          (_[(_.k_ELoyaltyRewardAuditType_PointRedemptionForFreeItem = 48)] =
-            "k_ELoyaltyRewardAuditType_PointRedemptionForFreeItem");
-      })(_ || (_ = {})),
-        (function (_) {
-          _[(_.k_ELoyaltyRewardDefID_Invalid = 0)] =
-            "k_ELoyaltyRewardDefID_Invalid";
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ELoyaltyRewardType_Invalid = 0)] =
-            "k_ELoyaltyRewardType_Invalid"),
-            (_[(_.k_ELoyaltyRewardType_VirtualItemReward = 1)] =
-              "k_ELoyaltyRewardType_VirtualItemReward"),
-            (_[(_.k_ELoyaltyRewardType_Badge = 2)] =
-              "k_ELoyaltyRewardType_Badge"),
-            (_[(_.k_ELoyaltyRewardType_CommunityItemLevelUpgrade = 3)] =
-              "k_ELoyaltyRewardType_CommunityItemLevelUpgrade"),
-            (_[(_.k_ELoyaltyRewardType_CartDiscount = 4)] =
-              "k_ELoyaltyRewardType_CartDiscount"),
-            (_[(_.k_ELoyaltyRewardType_Bundle = 5)] =
-              "k_ELoyaltyRewardType_Bundle"),
-            (_[(_.k_ELoyaltyRewardType_AutoGeneratedBundle = 6)] =
-              "k_ELoyaltyRewardType_AutoGeneratedBundle");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ELoyaltyRewardPointTransferType_Invalid = 0)] =
-            "k_ELoyaltyRewardPointTransferType_Invalid"),
-            (_[(_.k_ELoyaltyRewardPointTransferType_Support = 1)] =
-              "k_ELoyaltyRewardPointTransferType_Support"),
-            (_[(_.k_ELoyaltyRewardPointTransferType_Review = 2)] =
-              "k_ELoyaltyRewardPointTransferType_Review"),
-            (_[(_.k_ELoyaltyRewardPointTransferType_UGC = 3)] =
-              "k_ELoyaltyRewardPointTransferType_UGC"),
-            (_[(_.k_ELoyaltyRewardPointTransferType_Profile = 4)] =
-              "k_ELoyaltyRewardPointTransferType_Profile"),
-            (_[(_.k_ELoyaltyRewardPointTransferType_ForumTopic = 5)] =
-              "k_ELoyaltyRewardPointTransferType_ForumTopic"),
-            (_[(_.k_ELoyaltyRewardPointTransferType_Comment = 6)] =
-              "k_ELoyaltyRewardPointTransferType_Comment");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ELoyaltyRewardReactionType_Invalid = 0)] =
-            "k_ELoyaltyRewardReactionType_Invalid"),
-            (_[(_.k_ELoyaltyRewardReactionType_DeepThoughts = 1)] =
-              "k_ELoyaltyRewardReactionType_DeepThoughts"),
-            (_[(_.k_ELoyaltyRewardReactionType_Heartwarming = 2)] =
-              "k_ELoyaltyRewardReactionType_Heartwarming"),
-            (_[(_.k_ELoyaltyRewardReactionType_Hilarious = 3)] =
-              "k_ELoyaltyRewardReactionType_Hilarious"),
-            (_[(_.k_ELoyaltyRewardReactionType_HotTake = 4)] =
-              "k_ELoyaltyRewardReactionType_HotTake"),
-            (_[(_.k_ELoyaltyRewardReactionType_Poetry = 5)] =
-              "k_ELoyaltyRewardReactionType_Poetry"),
-            (_[(_.k_ELoyaltyRewardReactionType_ExtraHelpful = 6)] =
-              "k_ELoyaltyRewardReactionType_ExtraHelpful"),
-            (_[(_.k_ELoyaltyRewardReactionType_GottaHaveIt = 7)] =
-              "k_ELoyaltyRewardReactionType_GottaHaveIt"),
-            (_[(_.k_ELoyaltyRewardReactionType_Michelangelo = 8)] =
-              "k_ELoyaltyRewardReactionType_Michelangelo"),
-            (_[(_.k_ELoyaltyRewardReactionType_Treasure = 9)] =
-              "k_ELoyaltyRewardReactionType_Treasure"),
-            (_[(_.k_ELoyaltyRewardReactionType_MindBlown = 10)] =
-              "k_ELoyaltyRewardReactionType_MindBlown"),
-            (_[(_.k_ELoyaltyRewardReactionType_GoldenUnicorn = 11)] =
-              "k_ELoyaltyRewardReactionType_GoldenUnicorn"),
-            (_[(_.k_ELoyaltyRewardReactionType_MadScientist = 12)] =
-              "k_ELoyaltyRewardReactionType_MadScientist"),
-            (_[(_.k_ELoyaltyRewardReactionType_Clever = 13)] =
-              "k_ELoyaltyRewardReactionType_Clever"),
-            (_[(_.k_ELoyaltyRewardReactionType_WarmBlanket = 14)] =
-              "k_ELoyaltyRewardReactionType_WarmBlanket"),
-            (_[(_.k_ELoyaltyRewardReactionType_Saucy = 15)] =
-              "k_ELoyaltyRewardReactionType_Saucy"),
-            (_[(_.k_ELoyaltyRewardReactionType_SlowClap = 16)] =
-              "k_ELoyaltyRewardReactionType_SlowClap"),
-            (_[(_.k_ELoyaltyRewardReactionType_TakeMyPoints = 17)] =
-              "k_ELoyaltyRewardReactionType_TakeMyPoints"),
-            (_[(_.k_ELoyaltyRewardReactionType_Wholesome = 18)] =
-              "k_ELoyaltyRewardReactionType_Wholesome"),
-            (_[(_.k_ELoyaltyRewardReactionType_Jester = 19)] =
-              "k_ELoyaltyRewardReactionType_Jester"),
-            (_[(_.k_ELoyaltyRewardReactionType_FancyPants = 20)] =
-              "k_ELoyaltyRewardReactionType_FancyPants"),
-            (_[(_.k_ELoyaltyRewardReactionType_Whoa = 21)] =
-              "k_ELoyaltyRewardReactionType_Whoa"),
-            (_[(_.k_ELoyaltyRewardReactionType_SuperStar = 22)] =
-              "k_ELoyaltyRewardReactionType_SuperStar"),
-            (_[(_.k_ELoyaltyRewardReactionType_Wild = 23)] =
-              "k_ELoyaltyRewardReactionType_Wild"),
-            (_[(_.k_ELoyaltyRewardReactionType_Award = 24)] =
-              "k_ELoyaltyRewardReactionType_Award"),
-            (_[(_.k_ELoyaltyRewardReactionType_Beautiful = 25)] =
-              "k_ELoyaltyRewardReactionType_Beautiful"),
-            (_[(_.k_ELoyaltyRewardReactionType_VIP = 26)] =
-              "k_ELoyaltyRewardReactionType_VIP"),
-            (_[(_.k_ELoyaltyRewardReactionType_OnFire = 27)] =
-              "k_ELoyaltyRewardReactionType_OnFire"),
-            (_[(_.k_ELoyaltyRewardReactionType_Funny = 28)] =
-              "k_ELoyaltyRewardReactionType_Funny"),
-            (_[(_.k_ELoyaltyRewardReactionType_OneHundred = 29)] =
-              "k_ELoyaltyRewardReactionType_OneHundred"),
-            (_[(_.k_ELoyaltyRewardReactionType_LifeSaver = 30)] =
-              "k_ELoyaltyRewardReactionType_LifeSaver"),
-            (_[(_.k_ELoyaltyRewardReactionType_Perfect = 31)] =
-              "k_ELoyaltyRewardReactionType_Perfect"),
-            (_[(_.k_ELoyaltyRewardReactionType_PlusOne = 32)] =
-              "k_ELoyaltyRewardReactionType_PlusOne"),
-            (_[(_.k_ELoyaltyRewardReactionType_Smart = 33)] =
-              "k_ELoyaltyRewardReactionType_Smart"),
-            (_[(_.k_ELoyaltyRewardReactionType_PureGold = 34)] =
-              "k_ELoyaltyRewardReactionType_PureGold"),
-            (_[(_.k_ELoyaltyRewardReactionType_Coffee = 35)] =
-              "k_ELoyaltyRewardReactionType_Coffee");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ELoyaltyRewardReactionTargetType_Invalid = 0)] =
-            "k_ELoyaltyRewardReactionTargetType_Invalid"),
-            (_[(_.k_ELoyaltyRewardReactionTargetType_UserReview = 1)] =
-              "k_ELoyaltyRewardReactionTargetType_UserReview"),
-            (_[(_.k_ELoyaltyRewardReactionTargetType_UGC = 2)] =
-              "k_ELoyaltyRewardReactionTargetType_UGC"),
-            (_[(_.k_ELoyaltyRewardReactionTargetType_Profile = 3)] =
-              "k_ELoyaltyRewardReactionTargetType_Profile"),
-            (_[(_.k_ELoyaltyRewardReactionTargetType_ForumTopic = 4)] =
-              "k_ELoyaltyRewardReactionTargetType_ForumTopic"),
-            (_[(_.k_ELoyaltyRewardReactionTargetType_Comment = 5)] =
-              "k_ELoyaltyRewardReactionTargetType_Comment");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ELoyaltyRewardsQuerySort_TimeCreated = 1)] =
-            "k_ELoyaltyRewardsQuerySort_TimeCreated"),
-            (_[(_.k_ELoyaltyRewardsQuerySort_RedemptionRank = 2)] =
-              "k_ELoyaltyRewardsQuerySort_RedemptionRank");
-        })(_ || (_ = {})),
-        (function (_) {
-          (_[(_.k_ELoyaltyRewardQueryFilter_Animated = 1)] =
-            "k_ELoyaltyRewardQueryFilter_Animated"),
-            (_[(_.k_ELoyaltyRewardQueryFilter_NotAnimated = 2)] =
-              "k_ELoyaltyRewardQueryFilter_NotAnimated"),
-            (_[(_.k_ELoyaltyRewardQueryFilter_Bundle = 3)] =
-              "k_ELoyaltyRewardQueryFilter_Bundle"),
-            (_[(_.k_ELoyaltyRewardQueryFilter_Tiled = 4)] =
-              "k_ELoyaltyRewardQueryFilter_Tiled");
-        })(_ || (_ = {}));
       class _ extends _.Message {
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
@@ -2705,7 +2488,7 @@
                   },
                   sort: {
                     _: 7,
-                    _: _.k_ELoyaltyRewardsQuerySort_TimeCreated,
+                    _: 1,
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },

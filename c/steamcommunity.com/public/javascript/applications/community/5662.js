@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Ez egy tömegcikk, amelynél az egyedi tételek lényegében egyformák. Darabonkénti felajánlás nem lehetséges, helyette tehetsz vételi ajánlatot egy bizonyos áron történő vásárlásra, ahol a legolcsóbb tétel automatikusan összevetésre kerül a legmagasabb vételi ajánlattal.",
 	"Search_AmountFound": "%1$s eredményt találtunk",
 	"Search_AmountFound_Plural": "%1$s eredményt találtunk",
-	"Search_ListingsFound": "%1$s ajánlatot találtunk",
-	"Search_ListingsFound_Plural": "%1$s ajánlatot találtunk",
+	"Search_ListingsFound": "%2$s ajánlatot találtunk",
+	"Search_ListingsFound_Plural": "%2$s ajánlatot találtunk",
 	"SortBy_Name_Asc": "Név (A–Z)",
 	"SortBy_Name_Desc": "Név (Z–A)",
 	"SortBy_Price_Asc": "Ár (növekvő)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Némely régi tárgyak szöveges leírásokat használnak olyan lényeges tárgytulajdonságokhoz, melyek nem hozzáférhetők az alábbi szűrőkkel. Ez a beállítás lehetővé fogja tenni, hogy keresési szövegedet összevessük a leírás teljes szövegével csupán a tárgynév helyett.",
 	"MarketSearch_FilterColumn_Header": "Szűrők",
 	"MarketSearch_Reset": "Keresés alaphelyzetbe",
-	"Listings_Filter_Placeholder": "Ajánlatok szűrése...",
+	"Listings_TextFilter_Placeholder": "Egyedi szűrőszöveg megadása...",
 	"Economy_Market_Purchase_Restrictions": "Vásárlás után ez a tárgy:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "nem lesz cserélhető egy napig",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "nem lesz cserélhető egy hétig",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Sajnáljuk!",
 	"Error_Encountered": "Hiba történt kérésed feldolgozásakor:",
 	"Error_TooManyRequests_Description": "Túl sok kérést küldtél mostanában. Kérjük várj, és próbálkozz a kéréseddel újra később.",
-	"Container_ContentsLabel": "Lehetséges tartalom:"
+	"Container_ContentsLabel": "Lehetséges tartalom:",
+	"Error_LoadingContent": "Probléma adódott e tartalom betöltésekor.",
+	"Error_LoadingMarketItem": "Lehet, hogy a kért elem nem létezik, vagy átmeneti probléma akadályozza az elem betöltését. Kérjük, próbáld újra később.",
+	"ListingFilter_Title": "Ajánlatok szűrése"
 }`);
     },
   },

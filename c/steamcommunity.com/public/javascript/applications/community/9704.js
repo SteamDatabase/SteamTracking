@@ -38,8 +38,8 @@
 	"CommodityExplanation": "이 아이템의 경우 각 판매 등록 아이템이 실질적으로 모두 같은 아이템이므로 개별적으로 확인할 수는 없습니다. 그렇지만 특정 가격으로 구매 주문을 할 수 있으며 제일 낮은 판매 가격의 아이템이 제일 높은 구매 주문 가격의 아이템과 자동으로 거래됩니다.",
 	"Search_AmountFound": "검색 결과 %1$s개",
 	"Search_AmountFound_Plural": "검색 결과 %1$s개",
-	"Search_ListingsFound": "판매 등록 아이템 %1$s개",
-	"Search_ListingsFound_Plural": "판매 등록 아이템 %1$s개",
+	"Search_ListingsFound": "판매 등록 아이템 %2$s개",
+	"Search_ListingsFound_Plural": "판매 등록 아이템 %2$s개",
 	"SortBy_Name_Asc": "이름(알파벳순)",
 	"SortBy_Name_Desc": "이름(역알파벳순)",
 	"SortBy_Price_Asc": "낮은 가격순",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "일부 예전 아이템의 경우 아이템 관련 속성이 텍스트 설명으로 입력되어 있어 아래의 필터로는 검색할 수 없습니다. 이 옵션을 사용하면 아이템 이름뿐만 아니라 설명까지 검색할 수 있습니다.",
 	"MarketSearch_FilterColumn_Header": "필터",
 	"MarketSearch_Reset": "검색 초기화",
-	"Listings_Filter_Placeholder": "판매 등록 아이템 필터링...",
+	"Listings_TextFilter_Placeholder": "맞춤 필터 텍스트 입력...",
 	"Economy_Market_Purchase_Restrictions": "구매 시 이 아이템에 적용되는 제한:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "하루 동안 거래 불가",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "일주일 동안 거래 불가",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "죄송합니다!",
 	"Error_Encountered": "요청을 처리하는 도중 오류가 발생했습니다.",
 	"Error_TooManyRequests_Description": "너무 많은 요청을 보냈습니다. 잠시 기다렸다가 나중에 다시 시도해 주세요.",
-	"Container_ContentsLabel": "포함 가능 콘텐츠:"
+	"Container_ContentsLabel": "포함 가능 콘텐츠:",
+	"Error_LoadingContent": "콘텐츠를 불러오는 도중 오류가 발생했습니다.",
+	"Error_LoadingMarketItem": "요청하신 장터 아이템이 존재하지 않거나 해당 아이템을 불러오는 도중 일시적인 문제가 발생했을 수 있습니다. 나중에 다시 시도해 주세요.",
+	"ListingFilter_Title": "판매 등록 아이템 필터링"
 }`);
     },
   },

@@ -26333,7 +26333,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = "America/Los_Angeles";
       function _(_) {
         const _ = _.context.event,
@@ -26776,7 +26777,7 @@
                     {
                       className: _().MaxSize,
                     },
-                    (0, _._)("#MeetSteam_Spot", _.toLocaleString()),
+                    (0, _._)("#MeetSteam_Spot", _.toLocaleString((0, _._)())),
                   ),
               " ",
             ),
@@ -27764,6 +27765,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
@@ -28176,7 +28178,7 @@
                 null,
                 (0, _._)(
                   "#UserPolls_status_N_Votes",
-                  ((null == _ ? void 0 : _.total_votes) || 0).toLocaleString(),
+                  (0, _._)((null == _ ? void 0 : _.total_votes) || 0),
                 ),
               ),
               (null == _ ? void 0 : _.display_message)
@@ -28768,7 +28770,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.line_item_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [15], null);
         }
         static M() {
           return (
@@ -28835,6 +28837,14 @@
                     _: 14,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  included_packageids: {
+                    _: 15,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
                   },
                 },
               }),
@@ -36740,6 +36750,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "DEBUG_UseNewGameHover";
       function _() {
@@ -37048,21 +37059,21 @@
                 className: _().ReviewScoreCount,
                 "aria-label": (0, _._)(
                   "#GameHover_UserReviewCount",
-                  _.review_count.toLocaleString(),
+                  _.review_count.toLocaleString((0, _._)()),
                 ),
               },
               "(",
               __webpack_require__
-                ? "(" + _.review_count.toLocaleString() + ")"
+                ? "(" + _.review_count.toLocaleString((0, _._)()) + ")"
                 : _
                   ? (0, _._)(
                       "#GameHover_UserReviewCount_Lang",
-                      _.review_count.toLocaleString(),
+                      _.review_count.toLocaleString((0, _._)()),
                       _,
                     )
                   : (0, _._)(
                       "#GameHover_UserReviewCount",
-                      _.review_count.toLocaleString(),
+                      _.review_count.toLocaleString((0, _._)()),
                     ),
               ")",
             ),
@@ -42619,7 +42630,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -42653,24 +42663,17 @@
             },
             [_, _, _],
           );
-        return (
-          "dev" == _._.WEB_UNIVERSE &&
-            (0, _._)(
-              "store" == (0, _._)(),
-              "StoreGameHoverAnchorSource only works on Store web properties",
-            ),
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              className: _,
-              onMouseEnter: _,
-              onMouseLeave: _,
-              onFocus: _,
-              onBlur: _,
-            },
-            _,
-          )
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _,
+            onMouseEnter: _,
+            onMouseLeave: _,
+            onFocus: _,
+            onBlur: _,
+          },
+          _,
         );
       }
       function _(_) {

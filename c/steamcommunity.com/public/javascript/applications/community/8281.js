@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Este item é uma commodity, onde todos os itens individuais são efetivamente idênticos. Não é possível acessar anúncios individuais; no entanto, você pode fazer uma encomenda para comprar a um preço especifico, sendo que o anúncio mais barato será automaticamente associado à encomenda de maior quantidade.",
 	"Search_AmountFound": "%1$s resultado",
 	"Search_AmountFound_Plural": "%1$s resultados encontrados",
-	"Search_ListingsFound": "%1$s anúncio encontrado",
-	"Search_ListingsFound_Plural": "%1$s anúncios encontrados",
+	"Search_ListingsFound": "%2$s anúncio encontrado",
+	"Search_ListingsFound_Plural": "%2$s anúncios encontrados",
 	"SortBy_Name_Asc": "Nome (A a Z)",
 	"SortBy_Name_Desc": "Nome (Z a A)",
 	"SortBy_Price_Asc": "Preço (crescente)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Algumas entradas mais antigas usam descrições textuais para propriedades importantes que não são acessíveis com os filtros abaixo. Esta opção permitirá que o texto buscado seja comparado com a descrição completa em vez de apenas com o nome da entrada.",
 	"MarketSearch_FilterColumn_Header": "Filtros",
 	"MarketSearch_Reset": "Redefinir busca",
-	"Listings_Filter_Placeholder": "Filtrar anúncios...",
+	"Listings_TextFilter_Placeholder": "Inserir texto de filtro personalizado...",
 	"Economy_Market_Purchase_Restrictions": "Após a compra, este item:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "não será trocável por um dia",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "não será trocável por uma semana",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Ops!",
 	"Error_Encountered": "Ocorreu um erro ao processar a sua solicitação:",
 	"Error_TooManyRequests_Description": "Você realizou solicitações demais recentemente. Aguarde e tente realizar a sua solicitação novamente mais tarde.",
-	"Container_ContentsLabel": "Pode conter:"
+	"Container_ContentsLabel": "Pode conter:",
+	"Error_LoadingContent": "Houve um problema ao carregar este conteúdo",
+	"Error_LoadingMarketItem": "O item solicitado pode não existir ou um problema temporário pode estar impedindo o seu carregamento. Tente novamente mais tarde.",
+	"ListingFilter_Title": "Filtrar anúncios"
 }`);
     },
   },

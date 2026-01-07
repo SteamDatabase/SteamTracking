@@ -14321,31 +14321,30 @@
     },
     37076: (e, t, a) => {
       "use strict";
-      a.d(t, { j: () => c, u: () => u });
+      a.d(t, { j: () => d, u: () => c });
       var r = a(90626),
         n = a(45699),
         i = a(55963),
         s = a(60014),
-        o = a(81393),
-        l = a(78327),
-        m = a(49411),
-        d = a(61336);
-      function c(e) {
+        o = a(78327),
+        l = a(49411),
+        m = a(61336);
+      function d(e) {
         const {
             type: t,
             id: a,
             hoverClassName: n,
             fnGetIDOverride: i,
             fnHoverState: s,
-            children: m,
+            children: o,
           } = e,
-          d = r.useRef(null),
-          c = r.useCallback(
+          l = r.useRef(null),
+          m = r.useCallback(
             (e) => {
               "clan" != t &&
                 (s && s(!0),
                 window.GameHover &&
-                  window.GameHover(i ? i() : d.current, e, "global_hover", {
+                  window.GameHover(i ? i() : l.current, e, "global_hover", {
                     type: t,
                     id: a,
                     v6: 1,
@@ -14353,68 +14352,61 @@
             },
             [t, s, i, a],
           ),
-          u = r.useCallback(
+          d = r.useCallback(
             (e) => {
               "clan" != t &&
                 (s && e.relatedTarget && s(!1),
                 window.HideGameHover &&
-                  window.HideGameHover(i ? i() : d.current, e, "global_hover"));
+                  window.HideGameHover(i ? i() : l.current, e, "global_hover"));
             },
             [t, s, i],
           );
-        return (
-          "dev" == l.TS.WEB_UNIVERSE &&
-            (0, o.wT)(
-              "store" == (0, l.yK)(),
-              "StoreGameHoverAnchorSource only works on Store web properties",
-            ),
-          r.createElement(
-            "div",
-            {
-              ref: d,
-              className: n,
-              onMouseEnter: c,
-              onMouseLeave: u,
-              onFocus: c,
-              onBlur: u,
-            },
-            m,
-          )
+        return r.createElement(
+          "div",
+          {
+            ref: l,
+            className: n,
+            onMouseEnter: m,
+            onMouseLeave: d,
+            onFocus: m,
+            onBlur: d,
+          },
+          o,
         );
       }
-      function u(e) {
+      function c(e) {
         const {
             id: t,
             type: a,
-            strExtraParams: o,
+            strExtraParams: c,
             fnOnClickOverride: u,
             strOverrideURL: p,
           } = e,
           h = (0, s.n9)(),
-          _ = (0, m.w)(),
-          g = (0, d.NT)(
+          _ = (0, l.w)(),
+          g = (0, m.NT)(
             p ||
               ("clan" == a
                 ? (0, i.It)(
-                    `${l.TS.STORE_BASE_URL}curator/${t}${o ? `?${o}` : ""}`,
+                    `${o.TS.STORE_BASE_URL}curator/${t}${c ? `?${c}` : ""}`,
                     h,
                     _,
                   )
                 : (0, i.It)(
-                    `${l.TS.STORE_BASE_URL}${a}/${t}${o ? `?${o}` : ""}`,
+                    `${o.TS.STORE_BASE_URL}${a}/${t}${c ? `?${c}` : ""}`,
                     h,
                     _,
                   )),
           );
         return r.createElement(
-          c,
+          d,
           { ...e },
           r.createElement(
             n.Ii,
             {
               className: e.className,
               href: u ? void 0 : g,
-              target: l.TS.IN_CLIENT || u ? void 0 : "_blank",
+              target: o.TS.IN_CLIENT || u ? void 0 : "_blank",
               rel: "noopener noreferrer",
               onClick: u,
             },

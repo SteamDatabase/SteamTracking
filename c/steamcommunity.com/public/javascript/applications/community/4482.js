@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Этот предмет является типовым, то есть все его копии идентичны друг другу. По этой причине отдельные лоты на продажу недоступны, но вы можете создать запрос на покупку предмета за определённую цену. Наиболее дешёвое предложение автоматически сопоставится с наиболее дорогим запросом.",
 	"Search_AmountFound": "Найдено результатов: %1$s",
 	"Search_AmountFound_Plural": "Найдено результатов: %1$s",
-	"Search_ListingsFound": "Найдено заявок на продажу: %1$s",
-	"Search_ListingsFound_Plural": "Найдено заявок на продажу: %1$s",
+	"Search_ListingsFound": "Найдено заявок на продажу: %2$s",
+	"Search_ListingsFound_Plural": "Найдено заявок на продажу: %2$s",
 	"SortBy_Name_Asc": "Название (от А до Я)",
 	"SortBy_Name_Desc": "Название (от Я до А)",
 	"SortBy_Price_Asc": "Цена (по возрастанию)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "У некоторых старых предметов значимые свойства указаны в текстовых описаниях, которые недоступны с выбранными ниже фильтрами. Эта опция позволит включить в поиск текст описания предметов, а не только их названия.",
 	"MarketSearch_FilterColumn_Header": "Фильтры",
 	"MarketSearch_Reset": "Сбросить поиск",
-	"Listings_Filter_Placeholder": "Отфильтровать заявки на продажу...",
+	"Listings_TextFilter_Placeholder": "Введите текст фильтра...",
 	"Economy_Market_Purchase_Restrictions": "После покупки этот предмет",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "нельзя будет обменять в течение одного дня",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "нельзя будет обменять в течение одной недели",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Извините!",
 	"Error_Encountered": "При обработке вашего запроса произошла ошибка:",
 	"Error_TooManyRequests_Description": "За недавнее время вы отправили слишком много запросов. Повторите попытку позже.",
-	"Container_ContentsLabel": "Возможный контент:"
+	"Container_ContentsLabel": "Возможный контент:",
+	"Error_LoadingContent": "Не удалось загрузить этот контент",
+	"Error_LoadingMarketItem": "Запрашиваемый предмет, возможно, не существует или возникла временная проблема, которая мешает его загрузке. Повторите попытку позже.",
+	"ListingFilter_Title": "Отфильтровать заявки"
 }`);
     },
   },

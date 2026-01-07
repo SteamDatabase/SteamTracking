@@ -38,8 +38,8 @@
 	"CommodityExplanation": "Denne gjenstanden er en handelsvare, der alle de individuelle gjenstandene er identiske. Individuelle annonser er ikke tilgjengelige; i stedet kan du legge inn kjøpsordrer for å kjøpe til en bestemt pris, der den billigste annonsen automatisk blir matchet med den høyeste kjøpsordren.",
 	"Search_AmountFound": "%1$s treff",
 	"Search_AmountFound_Plural": "%1$s treff",
-	"Search_ListingsFound": "Fant %1$s annonse",
-	"Search_ListingsFound_Plural": "Fant %1$s annonser",
+	"Search_ListingsFound": "Fant %2$s annonse",
+	"Search_ListingsFound_Plural": "Fant %2$s annonser",
 	"SortBy_Name_Asc": "Navn (A til Å)",
 	"SortBy_Name_Desc": "Navn (Å til A)",
 	"SortBy_Price_Asc": "Pris (lav til høy)",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "Enkelte eldre gjenstander bruker tekstbeskrivelser for viktige egenskaper som ikke er tilgjengelige med filtrene nedenfor. Dette alternativet gjør det mulig å se om søketeksten samsvarer med den fullstendige beskrivelsen istedenfor bare gjenstandens navn.",
 	"MarketSearch_FilterColumn_Header": "Filtre",
 	"MarketSearch_Reset": "Tilbakestill søk",
-	"Listings_Filter_Placeholder": "Filtrer annonser …",
+	"Listings_TextFilter_Placeholder": "Skriv inn filtertekst …",
 	"Economy_Market_Purchase_Restrictions": "Gjelder for gjenstanden etter kjøp:",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "kan ikke byttes på en dag",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "kan ikke byttes på en uke",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "Beklager!",
 	"Error_Encountered": "Det oppstod en feil under behandling av forespørselen:",
 	"Error_TooManyRequests_Description": "Du har sendt for mange forespørsler i det siste. Vent litt, og prøv forespørselen igjen senere.",
-	"Container_ContentsLabel": "Mulig innhold:"
+	"Container_ContentsLabel": "Mulig innhold:",
+	"Error_LoadingContent": "Det oppstod et problem med å laste innholdet",
+	"Error_LoadingMarketItem": "Den forespurte gjenstanden finnes kanskje ikke, eller det kan være et midlertidig problem som hindrer gjenstanden fra å lastes inn. Prøv igjen senere.",
+	"ListingFilter_Title": "Filtrer annonser"
 }`);
     },
   },

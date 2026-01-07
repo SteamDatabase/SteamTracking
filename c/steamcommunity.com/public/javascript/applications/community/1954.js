@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "削除および警告済み",
 	"moderation_resolutionstatus_removeandban": "ハブから削除および禁止済み",
 	"moderation_resolutionstatus_removeandkick": "グループから削除および追放済み",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "不明",
 	"moderationaction_acquitted": "問題はありませんでした",
 	"moderationaction_cancelled": "最後の未解決報告はキャンセルされました",

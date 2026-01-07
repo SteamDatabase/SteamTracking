@@ -23857,7 +23857,7 @@ var CLSTAMP = "steamdb";
         constructor(_ = null) {
           super(),
             _.prototype.line_item_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [15], null);
         }
         static sm_m;
         static sm_mbf;
@@ -23926,6 +23926,14 @@ var CLSTAMP = "steamdb";
                     _: 14,
                     _: _._.readUint32,
                     _: _._.writeUint32,
+                  },
+                  included_packageids: {
+                    _: 15,
+                    _: !0,
+                    _: !0,
+                    _: _._.readUint32,
+                    pbr: _._.readPackedUint32,
+                    _: _._.writeRepeatedUint32,
                   },
                 },
               }),
@@ -39370,7 +39378,7 @@ var CLSTAMP = "steamdb";
         constructor(_ = null) {
           super(),
             _.prototype.report_id || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [23, 24], null);
         }
         static sm_m;
         static sm_mbf;
@@ -39490,6 +39498,18 @@ var CLSTAMP = "steamdb";
                     _: 22,
                     _: _._.readEnum,
                     _: _._.writeEnum,
+                  },
+                  sanctions_applied: {
+                    _: 23,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  sanctions_applied_on_dispute: {
+                    _: 24,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -39657,7 +39677,7 @@ var CLSTAMP = "steamdb";
         constructor(_ = null) {
           super(),
             _.prototype.subject_type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [13], null);
+            _.Message.initialize(this, _, 0, -1, [13, 31, 32], null);
         }
         static sm_m;
         static sm_mbf;
@@ -39818,6 +39838,18 @@ var CLSTAMP = "steamdb";
                     _: 30,
                     _: _._.readEnum,
                     _: _._.writeEnum,
+                  },
+                  sanctions_applied: {
+                    _: 31,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  sanctions_applied_after_dispute: {
+                    _: 32,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -40296,8 +40328,73 @@ var CLSTAMP = "steamdb";
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.subject_type || _._(_._()),
+            _.prototype.sanction || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  sanction: {
+                    _: 1,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  days: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "ContentReportSubjectSanction";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.subject_type || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [9], null);
         }
         static sm_m;
         static sm_mbf;
@@ -40346,6 +40443,12 @@ var CLSTAMP = "steamdb";
                     _: 8,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  sanctions_applied: {
+                    _: 9,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -40765,7 +40868,7 @@ var CLSTAMP = "steamdb";
         constructor(_ = null) {
           super(),
             _.prototype.subject_type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [9], null);
         }
         static sm_m;
         static sm_mbf;
@@ -40804,6 +40907,12 @@ var CLSTAMP = "steamdb";
                     _: 6,
                     _: _._.readEnum,
                     _: _._.writeEnum,
+                  },
+                  sanctions_applied: {
+                    _: 9,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -41350,7 +41459,7 @@ var CLSTAMP = "steamdb";
         constructor(_ = null) {
           super(),
             _.prototype.subject_type || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, void 0, null);
+            _.Message.initialize(this, _, 0, -1, [6], null);
         }
         static sm_m;
         static sm_mbf;
@@ -41384,6 +41493,12 @@ var CLSTAMP = "steamdb";
                     _: 5,
                     _: _._.readEnum,
                     _: _._.writeEnum,
+                  },
+                  updated_sanctions: {
+                    _: 6,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -78795,6 +78910,11 @@ var CLSTAMP = "steamdb";
                     _: _._.readUint32,
                     pbr: _._.readPackedUint32,
                     _: _._.writeRepeatedUint32,
+                  },
+                  hub_description: {
+                    _: 10,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),

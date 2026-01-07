@@ -12729,7 +12729,8 @@
         },
         Mt = (e) => {
           const { definition: t, badgeLevel: i, title: r } = e;
-          let n = t.community_item_data.badge_data[i - 1].image || "",
+          if (!i) return null;
+          let n = t.community_item_data.badge_data[i - 1]?.image,
             a = p.NextLevel;
           return (
             h.DZ.Get().GetUserSeasonalBadgeLevel() == i && (a = p.CurrentLevel),

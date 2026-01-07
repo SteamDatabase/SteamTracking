@@ -6117,6 +6117,10 @@
             (function (_, _, _) {
               _(_, _, _, "apply_user_filters", "user_filter_failure");
             })(_, _, _),
+          _.include_all_purchase_options &&
+            (function (_, _, _) {
+              _(_, _, _, "include_all_purchase_options", "purchase_options");
+            })(_, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
             (_.included_items?.included_apps?.forEach((_) =>
@@ -20300,7 +20304,8 @@
       const _ = 99999;
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const _ = 39049601,
-        _ = 45559995;
+        _ = 45559995,
+        _ = 45902273;
       var _;
       !(function (_) {
         (_[(_.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
@@ -21537,8 +21542,8 @@
                 0) >= 7,
             min_capsule_matches_for_facet_values: 5,
             max_facet_values_for_facet: 5,
-            background_gradient_top: "#00000030",
-            background_gradient_bottom: "#00000030",
+            background_gradient_top: "#0000006b",
+            background_gradient_bottom: "#0000006b",
             facet_sort_order: 1,
             facet_auto_generate_options: {
               only_facets: [
@@ -23833,17 +23838,20 @@
             return _.jsondata.bSaleEnabled
               ? _.clanSteamID.GetAccountID() == _
                 ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
-                : _
-                  ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
+                : _.clanSteamID.GetAccountID() == _
+                  ? `${_}charts/bestofyear/${_.jsondata.sale_vanity_id}`
                   : _
-                    ? `${_}curator/${_.clanSteamID.GetAccountID()}`
-                    : _ +
-                      (_.jsondata.sale_vanity_id_valve_approved_for_sale_subpath
-                        ? "sale/"
-                        : "curator/" +
-                          _.clanSteamID.GetAccountID() +
-                          "/sale/") +
-                      _.jsondata.sale_vanity_id
+                    ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
+                    : _
+                      ? `${_}curator/${_.clanSteamID.GetAccountID()}`
+                      : _ +
+                        (_.jsondata
+                          .sale_vanity_id_valve_approved_for_sale_subpath
+                          ? "sale/"
+                          : "curator/" +
+                            _.clanSteamID.GetAccountID() +
+                            "/sale/") +
+                        _.jsondata.sale_vanity_id
               : _;
           case _.k_eCommunityView:
             return _ + "announcements/detail/" + _;
@@ -37203,7 +37211,8 @@
             (_[(_.REAR_RIGHT_UPPER = 25)] = "REAR_RIGHT_UPPER"),
             (_[(_.REAR_RIGHT_LOWER = 26)] = "REAR_RIGHT_LOWER"),
             (_[(_.STEAM_GUIDE = 27)] = "STEAM_GUIDE"),
-            (_[(_.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU");
+            (_[(_.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU"),
+            (_[(_.DUMMY_INPUT = 29)] = "DUMMY_INPUT");
         })(_ || (_ = {})),
         (function (_) {
           (_[(_.UNKNOWN = 0)] = "UNKNOWN"),
@@ -59254,6 +59263,11 @@
                     pbr: _._.readPackedUint32,
                     _: _._.writeRepeatedUint32,
                   },
+                  hub_description: {
+                    _: 10,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -63335,7 +63349,8 @@
 	"trendingfree": 100753,
 	"reactroot": 100754,
 	"bundlelist": 100755,
-	"verifiedprogram": 100756
+	"verifiedprogram": 100756,
+	"trailercarousel": 100757
 }`);
       class _ {
         static InstrumentLink(_, _, __webpack_require__ = null) {

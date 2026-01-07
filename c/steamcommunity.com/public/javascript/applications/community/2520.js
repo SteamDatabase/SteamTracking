@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Usunięto i ostrzeżono",
 	"moderation_resolutionstatus_removeandban": "Usunięto i zbanowano z centrum",
 	"moderation_resolutionstatus_removeandkick": "Usunięto i wyrzucono z grupy",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Nieznany",
 	"moderationaction_acquitted": "Uniewinniono",
 	"moderationaction_cancelled": "Ostatnie otwarte zgłoszenie anulowane",

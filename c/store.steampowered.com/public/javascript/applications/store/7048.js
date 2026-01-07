@@ -15455,7 +15455,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -15489,24 +15488,17 @@
             },
             [_, _, _],
           );
-        return (
-          "dev" == _._.WEB_UNIVERSE &&
-            (0, _._)(
-              "store" == (0, _._)(),
-              "StoreGameHoverAnchorSource only works on Store web properties",
-            ),
-          _.createElement(
-            "div",
-            {
-              ref: _,
-              className: _,
-              onMouseEnter: _,
-              onMouseLeave: _,
-              onFocus: _,
-              onBlur: _,
-            },
-            _,
-          )
+        return _.createElement(
+          "div",
+          {
+            ref: _,
+            className: _,
+            onMouseEnter: _,
+            onMouseLeave: _,
+            onFocus: _,
+            onBlur: _,
+          },
+          _,
         );
       }
       function _(_) {

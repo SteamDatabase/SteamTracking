@@ -38,8 +38,8 @@
 	"CommodityExplanation": "このアイテムはコモディティであり、個々のアイテムは事実上同一です。個々の出品にはアクセスできません。代わりに特定の価格で買い注文を出すことができ、最安値の出品が自動的に最高額の買い注文にマッチします。",
 	"Search_AmountFound": "%1$s件の検索結果が見つかりました",
 	"Search_AmountFound_Plural": "%1$s件の検索結果が見つかりました",
-	"Search_ListingsFound": "%1$s件の出品が見つかりました",
-	"Search_ListingsFound_Plural": "%1$s件の出品が見つかりました",
+	"Search_ListingsFound": "%2$s件の出品が見つかりました",
+	"Search_ListingsFound_Plural": "%2$s件の出品が見つかりました",
 	"SortBy_Name_Asc": "名前（A～Z）",
 	"SortBy_Name_Desc": "名前（Z～A）",
 	"SortBy_Price_Asc": "価格（低～高）",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "一部の古いアイテムでは、以下のフィルターではアクセスできない重要なアイテムプロパティ用のテキストによる説明が使用されています。このオプションを使用すると、検索テキストをアイテム名だけでなく、説明テキスト全体と照合できるようになります。",
 	"MarketSearch_FilterColumn_Header": "フィルター",
 	"MarketSearch_Reset": "検索をリセット",
-	"Listings_Filter_Placeholder": "出品を絞り込む...",
+	"Listings_TextFilter_Placeholder": "カスタムフィルターテキストを入力...",
 	"Economy_Market_Purchase_Restrictions": "購入後、このアイテムは：",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "1日間トレードできません",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "1週間トレードできません",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "申し訳ございません。",
 	"Error_Encountered": "リクエストの処理中にエラーが発生しました。",
 	"Error_TooManyRequests_Description": "リクエスト回数が多すぎます。しばらくしてから、もう一度お試しください。",
-	"Container_ContentsLabel": "可能な内容："
+	"Container_ContentsLabel": "可能な内容：",
+	"Error_LoadingContent": "このコンテンツの読み込み時に問題が発生しました",
+	"Error_LoadingMarketItem": "リクエストされたアイテムが存在しないか、一時的な問題によりアイテムを読み込めない可能性があります。後でもう一度お試しください。",
+	"ListingFilter_Title": "出品を絞り込む"
 }`);
     },
   },

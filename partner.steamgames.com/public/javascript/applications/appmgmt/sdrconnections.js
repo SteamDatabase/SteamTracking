@@ -56,45 +56,46 @@
     },
     26193: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => P });
+      a.r(t), a.d(t, { default: () => x });
       var n = a(41735),
-        s = a.n(n),
-        r = a(90626),
+        r = a.n(n),
+        s = a(90626),
         l = a(52038),
-        c = a(37085),
-        o = a(92757),
-        i = a(16676),
-        m = a(84811),
+        c = a(92757),
+        o = a(16676),
+        i = a(84811),
+        m = a(61859),
         d = a(68797),
         u = a(78327),
         p = a(97712),
         E = a(22797),
-        _ = a(91675);
-      function f(e) {
-        return r.createElement(
+        _ = a(91675),
+        f = a(3049);
+      function g(e) {
+        return s.createElement(
           "span",
           { className: (0, l.A)(p.GenericLabeledItem, e.className) },
-          r.createElement(
+          s.createElement(
             "span",
             { className: p.CxnGenericDataLabel },
             e.label,
           ),
-          r.createElement("span", { className: p.CxnGenericData }, e.children),
+          s.createElement("span", { className: p.CxnGenericData }, e.children),
         );
       }
-      function g(e) {
+      function C(e) {
         const t = e.host,
           a = t.type + ":" + t.id;
         let n = "peer" == e.host_role ? "Peer" : "Client",
-          s = null;
+          r = null;
         if (t.data_center)
           (n = "Gameserver"),
-            (s = r.createElement(
-              r.Fragment,
+            (r = s.createElement(
+              s.Fragment,
               null,
-              r.createElement("span", { className: p.host_id }, a),
+              s.createElement("span", { className: p.host_id }, a),
               " in ",
-              r.createElement(
+              s.createElement(
                 "span",
                 { className: p.GameServerDataCenter },
                 t.data_center,
@@ -102,25 +103,25 @@
             ));
         else if (t.steam_persona) {
           const e = u.TS.COMMUNITY_BASE_URL + "/profiles/" + t.id;
-          s = r.createElement(
-            r.Fragment,
+          r = s.createElement(
+            s.Fragment,
             null,
-            r.createElement(
+            s.createElement(
               "span",
               { className: p.host_id },
-              r.createElement("a", { href: e }, t.steam_persona),
+              s.createElement("a", { href: e }, t.steam_persona),
             ),
             " (",
-            r.createElement("span", { className: p.host_id }, a),
+            s.createElement("span", { className: p.host_id }, a),
             ")",
           );
         } else
-          s = r.createElement(
-            r.Fragment,
+          r = s.createElement(
+            s.Fragment,
             null,
-            r.createElement("span", { className: p.host_id }, a),
+            s.createElement("span", { className: p.host_id }, a),
           );
-        return r.createElement(
+        return s.createElement(
           "div",
           {
             className: (0, l.A)(
@@ -128,61 +129,61 @@
               t.data_center && p.HostIsGameserver,
             ),
           },
-          r.createElement(
+          s.createElement(
             "div",
             { className: p.HostIDAndConnectionCtr },
-            r.createElement(f, { className: p.HostIDInfo, label: n }, s),
+            s.createElement(g, { className: p.HostIDInfo, label: n }, r),
             null != t.connection_id &&
-              r.createElement(
-                f,
+              s.createElement(
+                g,
                 { className: p.HostConnectionID, label: "ConnectionID" },
                 t.connection_id,
               ),
           ),
-          r.createElement(
+          s.createElement(
             "div",
             { className: p.ClientIPInfo },
             t.addr &&
-              r.createElement(f, { className: "addr", label: "IP" }, t.addr),
+              s.createElement(g, { className: "addr", label: "IP" }, t.addr),
             t.city_name &&
-              r.createElement(
-                f,
+              s.createElement(
+                g,
                 { className: "city_name", label: "City" },
                 t.city_name,
               ),
             t.country_code &&
-              r.createElement(
-                f,
+              s.createElement(
+                g,
                 { className: "country_code", label: "Country" },
                 t.country_code,
               ),
-            t.as && r.createElement(f, { className: "as", label: "AS" }, t.as),
+            t.as && s.createElement(g, { className: "as", label: "AS" }, t.as),
           ),
         );
       }
-      function C(e, t) {
+      function h(e, t) {
         return (
           null == t && (t = 0),
-          e.toLocaleString(void 0, {
+          e.toLocaleString((0, f.J)(), {
             minimumFractionDigits: t,
             maximumFractionDigits: t,
           })
         );
       }
-      function h(e) {
+      function v(e) {
         let t = 1e30,
           a = -1e30;
         if (e && e.ping_pctile)
           for (const n in e.ping_pctile) {
-            const s = parseFloat(n);
-            if (s >= 5 && s <= 95) {
-              const s = e.ping_pctile[n];
-              s < t && (t = s), s > a && (a = s);
+            const r = parseFloat(n);
+            if (r >= 5 && r <= 95) {
+              const r = e.ping_pctile[n];
+              r < t && (t = r), r > a && (a = r);
             }
           }
         return [t, a];
       }
-      function v(e) {
+      function N(e) {
         let t = 1e30;
         if (e && e.quality_pctile)
           for (const a in e.quality_pctile) {
@@ -194,82 +195,82 @@
           }
         return t;
       }
-      function N(e, t, a) {
+      function y(e, t, a) {
         const n = a > 0 ? t / a : 0,
-          s = (100 * n).toFixed(1) + "%";
-        return r.createElement(
+          r = (100 * n).toFixed(1) + "%";
+        return s.createElement(
           "tr",
           { key: e },
-          r.createElement("th", { className: p.Label }, e),
-          r.createElement("td", { className: p.Pct }, s),
-          r.createElement(
+          s.createElement("th", { className: p.Label }, e),
+          s.createElement("td", { className: p.Pct }, r),
+          s.createElement(
             "td",
             null,
-            r.createElement("span", {
+            s.createElement("span", {
               className: p.Bar,
               style: { width: 90 * n + 1 + "px" },
             }),
-            r.createElement("span", { className: p.Num }, C(t)),
+            s.createElement("span", { className: p.Num }, h(t)),
           ),
         );
       }
-      function y(e, t) {
+      function S(e, t) {
         if (!(t > 0)) return null;
         let a = [];
-        for (let n = 0; n < e.length; ++n) a.push(N(e[n][0], e[n][1], t));
-        return r.createElement(
+        for (let n = 0; n < e.length; ++n) a.push(y(e[n][0], e[n][1], t));
+        return s.createElement(
           "table",
           { className: p.Histogram },
-          r.createElement("tbody", null, a),
+          s.createElement("tbody", null, a),
         );
       }
-      function S(e) {
+      function b(e) {
         let t = [];
         for (let a = 0; a < e.length; ++a) {
-          const [n, s] = e[a];
-          null != s &&
+          const [n, r] = e[a];
+          null != r &&
             t.push(
-              r.createElement(
+              s.createElement(
                 "tr",
                 { key: n },
-                r.createElement("th", { className: p.NTile }, n, "% <="),
-                r.createElement("td", { className: p.Value }, s),
+                s.createElement("th", { className: p.NTile }, n, "% <="),
+                s.createElement("td", { className: p.Value }, r),
               ),
             );
         }
         return t.length
-          ? r.createElement(
+          ? s.createElement(
               "table",
               { className: p.Distribution },
-              r.createElement("tbody", null, t),
+              s.createElement("tbody", null, t),
             )
           : null;
       }
-      function b(e) {
+      function k(e) {
         return e >= 0 ? e.toFixed(0) + "ms" : "???";
       }
-      function k(e) {
+      function w(e) {
         const t = e.flow;
-        return r.createElement(
+        return s.createElement(
           "div",
           { className: p.FlowQualityStats },
-          r.createElement("div", { className: p.FlowQualityTitle }, e.title),
+          s.createElement("div", { className: p.FlowQualityTitle }, e.title),
           t
-            ? r.createElement(
-                r.Fragment,
+            ? s.createElement(
+                s.Fragment,
                 null,
                 (function (e) {
                   const t = function (e) {
-                      const t = e >= 0 ? C(e) : "?";
-                      return r.createElement(
+                      const t = e >= 0 ? h(e) : "?";
+                      return s.createElement(
                         "td",
                         { className: p.NumPkts },
                         t + " pkts",
                       );
                     },
                     a = function (e) {
-                      const t = e >= 0 ? C(e) : "?";
-                      return r.createElement(
+                      const t = e >= 0 ? h(e) : "?";
+                      return s.createElement(
                         "td",
                         { className: p.KB },
                         t + "kb",
@@ -281,10 +282,10 @@
                         t > 0 &&
                           e >= 0 &&
                           (a = ((e / t) * 100).toFixed(3) + "%"),
-                        r.createElement("td", { className: p.Pct }, a)
+                        s.createElement("td", { className: p.Pct }, a)
                       );
                     };
-                  return r.createElement(
+                  return s.createElement(
                     "div",
                     {
                       className: (0, l.A)(
@@ -292,58 +293,58 @@
                         p.FlowStatsSection,
                       ),
                     },
-                    r.createElement(
+                    s.createElement(
                       "div",
                       { className: p.FlowSectionTitle },
                       "Summary counters",
                     ),
-                    r.createElement(
+                    s.createElement(
                       "table",
                       null,
-                      r.createElement(
+                      s.createElement(
                         "tbody",
                         null,
-                        r.createElement(
+                        s.createElement(
                           "tr",
                           null,
-                          r.createElement("th", null, "Sent"),
+                          s.createElement("th", null, "Sent"),
                           t(e.sent_pkt),
                           a(e.sent_kb),
-                          r.createElement("td", { className: p.Spacer }),
-                          r.createElement("th", null, "Dropped"),
+                          s.createElement("td", { className: p.Spacer }),
+                          s.createElement("th", null, "Dropped"),
                           t(e.drop),
                           n(e.drop, e.recv_seq),
                         ),
-                        r.createElement(
+                        s.createElement(
                           "tr",
                           null,
-                          r.createElement("th", null, "Recv"),
+                          s.createElement("th", null, "Recv"),
                           t(e.recv_pkt),
                           a(e.recv_kb),
-                          r.createElement("td", { className: p.Spacer }),
-                          r.createElement("th", null, "Duplicate"),
+                          s.createElement("td", { className: p.Spacer }),
+                          s.createElement("th", null, "Duplicate"),
                           t(e.dup),
                           n(e.dup, e.recv_seq),
                         ),
-                        r.createElement(
+                        s.createElement(
                           "tr",
                           null,
-                          r.createElement("th", null, "Recv w/ seq"),
+                          s.createElement("th", null, "Recv w/ seq"),
                           t(e.recv_seq),
-                          r.createElement("td", null),
-                          r.createElement("td", { className: p.Spacer }),
-                          r.createElement("th", null, "Out of order"),
+                          s.createElement("td", null),
+                          s.createElement("td", { className: p.Spacer }),
+                          s.createElement("th", null, "Out of order"),
                           t(e.ooo),
                           n(e.ooo, e.recv_seq),
                         ),
-                        r.createElement(
+                        s.createElement(
                           "tr",
                           null,
-                          r.createElement("th", null, "Summary"),
-                          r.createElement(
+                          s.createElement("th", null, "Summary"),
+                          s.createElement(
                             "td",
                             { colSpan: 2, className: p.FlowQualityClass },
-                            r.createElement(
+                            s.createElement(
                               "span",
                               {
                                 className:
@@ -352,8 +353,8 @@
                               e.quality_class,
                             ),
                           ),
-                          r.createElement("td", { className: p.Spacer }),
-                          r.createElement("th", null, "Seq num lurch"),
+                          s.createElement("td", { className: p.Spacer }),
+                          s.createElement("th", null, "Seq num lurch"),
                           t(e.seqlurch),
                           n(e.seqlurch, e.recv_seq),
                         ),
@@ -365,43 +366,43 @@
                   let t = null,
                     a = null,
                     n = 0;
-                  const s = e.quality_hist;
-                  if (s) {
+                  const r = e.quality_hist;
+                  if (r) {
                     const e = [
-                      ["Perfect", s[100] || 0],
-                      [">99%", s[99] || 0],
-                      ["97-99%", s[97] || 0],
-                      ["95-97%", s[95] || 0],
-                      ["90-95%", s[90] || 0],
-                      ["75-90%", s[75] || 0],
-                      ["50-75%", s[50] || 0],
-                      ["<50%", s[1] || 0],
-                      ["Dead", s[0] || 0],
+                      ["Perfect", r[100] || 0],
+                      [">99%", r[99] || 0],
+                      ["97-99%", r[97] || 0],
+                      ["95-97%", r[95] || 0],
+                      ["90-95%", r[90] || 0],
+                      ["75-90%", r[75] || 0],
+                      ["50-75%", r[50] || 0],
+                      ["<50%", r[1] || 0],
+                      ["Dead", r[0] || 0],
                     ];
                     for (let t = 0; t < e.length; ++t) n += e[t][1];
-                    t = y(e, n);
+                    t = S(e, n);
                   }
                   if (n <= 0) return null;
                   const l = e.quality_pctile;
                   if (l) {
                     const e = (e) => (null == e ? void 0 : e + "%");
-                    a = S([
+                    a = b([
                       [50, e(l[50])],
                       [25, e(l[25])],
                       [5, e(l[5])],
                       [2, e(l[2])],
                     ]);
                   }
-                  const c = C(n) + " measurement intervals";
-                  return r.createElement(
+                  const c = h(n) + " measurement intervals";
+                  return s.createElement(
                     "div",
                     { className: p.QualityBreakdown },
-                    r.createElement(
+                    s.createElement(
                       "div",
                       { className: p.FlowSectionTitle },
                       "Quality interval breakdown",
                     ),
-                    r.createElement("div", { className: p.numSamples }, c),
+                    s.createElement("div", { className: p.numSamples }, c),
                     t,
                     a,
                   );
@@ -422,36 +423,36 @@
                       [200, a[300] || 0],
                       [300, a.max || 0],
                     ];
-                    let s,
+                    let r,
                       l = 0;
                     for (let t = 0; t < e.length; ++t)
                       e[t][1] > 0 &&
-                        (null == s && (s = t), (l = t + 1), (n += e[t][1]));
+                        (null == r && (r = t), (l = t + 1), (n += e[t][1]));
                     if (n > 0) {
-                      (s = Math.max(0, s - 2)), (l = Math.min(e.length, l + 2));
+                      (r = Math.max(0, r - 2)), (l = Math.min(e.length, l + 2));
                       let a = [];
-                      for (let t = s; t < l; ++t) {
-                        let r,
+                      for (let t = r; t < l; ++t) {
+                        let s,
                           [c, o] = e[t];
-                        t == s && 0 == o && (c = 0),
-                          (r =
+                        t == r && 0 == o && (c = 0),
+                          (s =
                             t + 1 >= e.length || (t + 1 >= l && 0 == o)
-                              ? b(c) + "+"
-                              : c + "-" + b(e[t + 1][0])),
-                          a.push(N(r, o, n));
+                              ? k(c) + "+"
+                              : c + "-" + k(e[t + 1][0])),
+                          a.push(y(s, o, n));
                       }
-                      t = r.createElement(
+                      t = s.createElement(
                         "table",
                         { className: p.Histogram },
-                        r.createElement("tbody", null, a),
+                        s.createElement("tbody", null, a),
                       );
                     }
                   }
-                  let s = null;
+                  let r = null;
                   const l = e.ping_pctile;
                   if (l) {
-                    const e = (e) => (null == e ? void 0 : b(e));
-                    s = S([
+                    const e = (e) => (null == e ? void 0 : k(e));
+                    r = b([
                       [5, e(l[5])],
                       [50, e(l[50])],
                       [75, e(l[75])],
@@ -472,62 +473,62 @@
                       ["20ms+", i[20] || 0],
                     ];
                     for (let t = 0; t < e.length; ++t) o += e[t][1];
-                    c = y(e, o);
+                    c = S(e, o);
                   }
-                  if (!t && !s && !c) return null;
-                  const m = C(n) + " samples",
-                    d = C(o) + " samples";
-                  return r.createElement(
+                  if (!t && !r && !c) return null;
+                  const m = h(n) + " samples",
+                    d = h(o) + " samples";
+                  return s.createElement(
                     "div",
                     { className: p.PingBreakdown },
-                    r.createElement(
+                    s.createElement(
                       "div",
                       { className: p.PingSection },
-                      r.createElement(
+                      s.createElement(
                         "div",
                         { className: p.FlowSectionTitle },
                         "Round Trip Latency",
                       ),
-                      r.createElement("div", { className: p.NumSamples }, m),
+                      s.createElement("div", { className: p.NumSamples }, m),
                       t,
-                      s,
+                      r,
                     ),
-                    r.createElement(
+                    s.createElement(
                       "div",
                       { className: p.JitterSection },
-                      r.createElement(
+                      s.createElement(
                         "div",
                         { className: p.FlowSectionTitle },
                         "Jitter",
                       ),
-                      r.createElement("div", { className: p.NumSamples }, d),
+                      s.createElement("div", { className: p.NumSamples }, d),
                       c,
                     ),
                   );
                 })(t),
               )
-            : r.createElement(
+            : s.createElement(
                 "div",
                 { className: p.NoFlowDataAvailable },
                 "(No data available)",
               ),
         );
       }
-      function w(e) {
+      function F(e) {
         const t = e.sess,
           a = e.cxn;
         let n = null,
-          s = null;
+          r = null;
         if (t.client_front || t.router_front) {
           const e =
             "ded" == a.kind
               ? "Front side statistics reported by client"
               : "Front side statistics reported by player";
-          n = r.createElement(
+          n = s.createElement(
             "div",
             { className: p.QualityFlowPairCtr },
-            r.createElement(k, { title: e, flow: t.client_front }),
-            r.createElement(k, {
+            s.createElement(w, { title: e, flow: t.client_front }),
+            s.createElement(w, {
               title: "Front side statistics reported by relay",
               flow: t.router_front,
             }),
@@ -535,49 +536,49 @@
         }
         return (
           (t.router_back || t.gameserver_back) &&
-            (s = r.createElement(
+            (r = s.createElement(
               "div",
               { className: p.QualityFlowPairCtr },
-              r.createElement(k, {
+              s.createElement(w, {
                 title: "Back side statistics reported by relay",
                 flow: t.router_back,
               }),
-              r.createElement(k, {
+              s.createElement(w, {
                 title: "Back side statistics reported by gameserver",
                 flow: t.gameserver_back,
               }),
             )),
-          r.createElement(
+          s.createElement(
             "div",
             { className: p.RelaySessionCtr },
-            r.createElement(
+            s.createElement(
               "div",
               { className: p.RelayInfoCtr },
-              r.createElement(
-                f,
+              s.createElement(
+                g,
                 { label: "Relay address" },
                 t.client.relay_addr,
               ),
-              r.createElement(
-                f,
+              s.createElement(
+                g,
                 { label: "Relay POP" },
                 t.client.relay_cluster,
               ),
-              r.createElement(f, { label: "Active" }, (0, _.R2)(t.active_time)),
+              s.createElement(g, { label: "Active" }, (0, _.R2)(t.active_time)),
             ),
             n,
-            s,
+            r,
           )
         );
       }
-      function F(e) {
+      function P(e) {
         const t = e.cxn,
           a = t.client,
           n = t.peer,
-          s = t.client_e2e,
+          r = t.client_e2e,
           l = t.peer_e2e,
-          [c, o] = r.useState(!1),
-          m = (function (e) {
+          [c, i] = s.useState(!1),
+          d = (function (e) {
             if (!e || !e.length) return null;
             let t = e[0];
             for (let a = 1; a < e.length; ++a) {
@@ -588,29 +589,29 @@
             }
             return t;
           })(t.client_sessions);
-        let d = null,
-          u = null,
+        let u = null,
           E = null,
-          C = null,
-          N = null,
+          f = null,
+          h = null,
           y = null,
           S = null,
-          b = [];
-        if (m) {
+          b = null,
+          k = [];
+        if (d) {
           n &&
-            m.client.connection_id == n.connection_id &&
-            (!a || (m.client.connection_id, a.connection_id));
-          if (m.start_time && m.duration) {
-            const e = new Date(1e3 * m.start_time),
-              t = new Date(1e3 * (m.start_time + m.duration)),
-              a = void 0,
+            d.client.connection_id == n.connection_id &&
+            (!a || (d.client.connection_id, a.connection_id));
+          if (d.start_time && d.duration) {
+            const e = new Date(1e3 * d.start_time),
+              t = new Date(1e3 * (d.start_time + d.duration)),
+              a = m.pf.GetPreferredLocales(),
               n = e.toLocaleString(a, {
                 weekday: "short",
                 year: "numeric",
                 month: "short",
                 day: "numeric",
               }),
-              s = e.toLocaleString(a, {
+              r = e.toLocaleString(a, {
                 hour12: !1,
                 hour: "2-digit",
                 minute: "2-digit",
@@ -623,36 +624,36 @@
                 second: "2-digit",
                 timeZoneName: "short",
               }),
-              c = (0, _.R2)(m.duration);
-            d = r.createElement(
+              c = (0, _.R2)(d.duration);
+            u = s.createElement(
               "span",
               { className: p.CxnTimeAndDuration },
-              r.createElement(f, { label: "Time" }, n, " ", s, "--", l),
-              r.createElement(f, { label: "Duration" }, c),
+              s.createElement(g, { label: "Time" }, n, " ", r, "--", l),
+              s.createElement(g, { label: "Duration" }, c),
             );
           }
           if (
-            (m.close_code &&
-              (u = r.createElement(
-                f,
+            (d.close_code &&
+              (E = s.createElement(
+                g,
                 { label: "Closed", className: p.CxnCloseInfo },
-                m.close_type,
+                d.close_type,
                 " ",
-                m.close_msg,
+                d.close_msg,
                 " (",
-                m.close_code,
+                d.close_code,
                 ")",
               )),
-            m.experience_class)
+            d.experience_class)
           ) {
-            const e = m.class_reason ? ` (${m.class_reason})` : "";
-            E = r.createElement(
-              f,
+            const e = d.class_reason ? ` (${d.class_reason})` : "";
+            f = s.createElement(
+              g,
               { label: "Experience" },
-              r.createElement(
+              s.createElement(
                 "span",
-                { className: "experience_" + m.experience_class },
-                m.experience_class,
+                { className: "experience_" + d.experience_class },
+                d.experience_class,
               ),
               e,
             );
@@ -663,11 +664,11 @@
           if (e.length > 0) {
             e.sort();
             let a = [];
-            for (let n of e) a.push(r.createElement(f, { label: n }, t.app[n]));
-            C = r.createElement(
+            for (let n of e) a.push(s.createElement(g, { label: n }, t.app[n]));
+            h = s.createElement(
               "div",
               { className: p.AppFieldsCtr },
-              r.createElement(
+              s.createElement(
                 "span",
                 { className: p.AppFieldsTitle },
                 "Application fields:",
@@ -676,9 +677,9 @@
             );
           }
         }
-        if (s || l) {
-          const [e, a] = h(s),
-            [n, o] = h(l),
+        if (r || l) {
+          const [e, a] = v(r),
+            [n, o] = v(l),
             i = Math.min(e, n),
             m = Math.max(a, o);
           if (i <= m) {
@@ -686,16 +687,16 @@
               0.03 * i + 2 < m
                 ? `${i}--${m}ms`
                 : Math.floor((i + m) / 2 + 0.5) + "ms";
-            N = r.createElement(f, { label: "Ping" }, e);
+            y = s.createElement(g, { label: "Ping" }, e);
           }
-          const d = v(s),
-            u = v(l),
+          const d = N(r),
+            u = N(l),
             E = Math.min(d, u);
           if (
             (E >= 0 &&
               E <= 100 &&
-              (y = r.createElement(
-                f,
+              (S = s.createElement(
+                g,
                 { label: "Packet delivery" },
                 `${E.toFixed(2)}%`,
               )),
@@ -706,11 +707,11 @@
                 "ded" == t.kind
                   ? "End-to-end statistics reported by gameserver"
                   : "End-to-end statistics reported by peer";
-            S = r.createElement(
+            b = s.createElement(
               "div",
               { className: p.QualityFlowPairCtr },
-              r.createElement(k, { title: e, flow: s }),
-              r.createElement(k, { title: a, flow: l }),
+              s.createElement(w, { title: e, flow: r }),
+              s.createElement(w, { title: a, flow: l }),
             );
           }
         }
@@ -725,162 +726,162 @@
             n = t.peer_sessions && t.peer_sessions.length > 0;
           if (a) {
             "p2p" == t.kind || n
-              ? b.push(
-                  r.createElement(
+              ? k.push(
+                  s.createElement(
                     "div",
                     { className: p.SessionsGroupHeader },
                     "Client relay sessions",
                   ),
                 )
-              : b.push(
-                  r.createElement(
+              : k.push(
+                  s.createElement(
                     "div",
                     { className: p.SessionsGroupHeader },
                     "Relay sessions",
                   ),
                 );
             for (const a of e(t.client_sessions))
-              b.push(
-                r.createElement(w, { cxn: t, sess: a, host_role: "client" }),
+              k.push(
+                s.createElement(F, { cxn: t, sess: a, host_role: "client" }),
               );
           }
           if (n) {
-            b.push(
-              r.createElement(
+            k.push(
+              s.createElement(
                 "div",
                 { className: p.SessionsGroupHeader },
                 "Peer relay sessions",
               ),
             );
             for (const a of e(t.peer_sessions))
-              b.push(
-                r.createElement(w, { cxn: t, sess: a, host_role: "peer" }),
+              k.push(
+                s.createElement(F, { cxn: t, sess: a, host_role: "peer" }),
               );
           }
         }
-        return r.createElement(
+        return s.createElement(
           "div",
           { className: p.ConnectionCtr, key: e.key },
-          r.createElement(
+          s.createElement(
             "div",
             { className: p.ConnectionHeader },
-            r.createElement(
+            s.createElement(
               "div",
               { className: p.CxnSummary },
-              d,
-              N,
-              y,
-              E,
-              C,
               u,
+              y,
+              S,
+              f,
+              h,
+              E,
             ),
-            r.createElement(i.Yh, {
+            s.createElement(o.Yh, {
               className: p.ExpandDetailsCheckbox,
               label: "Details",
               checked: c,
-              onChange: o,
+              onChange: i,
             }),
           ),
-          r.createElement(
+          s.createElement(
             "div",
             { className: p.CxnPeersCtr },
-            r.createElement(g, { host: t.client, host_role: "client" }),
-            r.createElement(g, { host: t.peer, host_role: "peer" }),
+            s.createElement(C, { host: t.client, host_role: "client" }),
+            s.createElement(C, { host: t.peer, host_role: "peer" }),
           ),
-          S,
           b,
+          k,
         );
       }
-      function P(e) {
-        const t = (0, o.W6)(),
+      function x(e) {
+        const t = (0, c.W6)(),
           a = e.appId,
-          [n, _] = r.useState(!1),
-          [f, g] = r.useState(""),
-          [C, h] = r.useState(void 0),
-          [v, N] = r.useState(""),
-          [y, S] = r.useState(""),
-          [b, k] = r.useState(""),
-          [w, P] = r.useState(0),
-          [x, R] = r.useState(""),
-          [I, T] = r.useState("");
-        r.useEffect(() => {
+          [n, m] = s.useState(!1),
+          [_, f] = s.useState(""),
+          [g, C] = s.useState(void 0),
+          [h, v] = s.useState(""),
+          [N, y] = s.useState(""),
+          [S, b] = s.useState(""),
+          [k, w] = s.useState(0),
+          [F, x] = s.useState(""),
+          [R, I] = s.useState("");
+        s.useEffect(() => {
           let e = new URLSearchParams(t.location.search);
           const n = e.get("client_id") || "",
-            r = e.get("peer_id") || "",
+            s = e.get("peer_id") || "",
             l = e.get("kind") || "",
-            o = e.get("app_name1") || "",
-            i = e.get("app_value1") || "";
-          if ((N(n), S(r), k(l), R(o), T(i), !e.toString() && 0 == w)) return;
-          _(!0), g(""), a > 0 && e.set("appid", "" + a);
-          const m =
+            c = e.get("app_name1") || "",
+            o = e.get("app_value1") || "";
+          if ((v(n), y(s), b(l), x(c), I(o), !e.toString() && 0 == k)) return;
+          m(!0), f(""), a > 0 && e.set("appid", "" + a);
+          const i =
             u.TS.PARTNER_BASE_URL + "sdr/ajaxsessionsearch?" + e.toString();
           (async () => {
             try {
-              const e = await s().get(m);
-              e?.data?.success == c.d.k_EResultOK
-                ? h(e.data.connections)
+              const e = await r().get(i);
+              1 == e?.data?.success
+                ? C(e.data.connections)
                 : (console.error(
                     "sdrsessionsearch: OnPerformSearch error code  " +
                       e?.data?.success +
                       " msg: " +
                       e?.data?.msg,
                   ),
-                  g(e?.data?.success + " msg: " + e?.data?.msg));
+                  f(e?.data?.success + " msg: " + e?.data?.msg));
             } catch (e) {
               const t = (0, d.H)(e);
               console.error(
                 "sdrsessionsearch: OnPerformSearch " + t.strErrorMsg,
                 t,
               ),
-                g(t.strErrorMsg);
+                f(t.strErrorMsg);
             }
-            _(!1);
+            m(!1);
           })();
-        }, [a, t.location, w]);
-        let D = null;
-        if (void 0 !== C) {
+        }, [a, t.location, k]);
+        let T = null;
+        if (void 0 !== g) {
           let e = [];
-          for (const t of C) {
+          for (const t of g) {
             const a =
               (t.client.id || "") + "-" + (t.client.connection_id || "");
-            e.push(r.createElement(F, { key: a, cxn: t }));
+            e.push(s.createElement(P, { key: a, cxn: t }));
           }
-          D = r.createElement(
+          T = s.createElement(
             "div",
             { className: p.SearchResultsCtr },
-            r.createElement(
+            s.createElement(
               "div",
               { className: p.SearchResultsTitle },
               "Found ",
-              C.length,
+              g.length,
               " connection(s)",
             ),
             e,
           );
         }
-        const M = "ded" == b ? "Gameserver" : "Peer",
-          A = !1,
-          G = r.useId();
-        return r.createElement(
-          m.tH,
+        const D = "ded" == S ? "Gameserver" : "Peer",
+          M = !1,
+          A = s.useId();
+        return s.createElement(
+          i.tH,
           null,
-          r.createElement(
+          s.createElement(
             "div",
             { className: p.SDRConnectionsAppCtn },
-            r.createElement(
+            s.createElement(
               "div",
               { className: p.SDRConnectionsAppTitle },
-              r.createElement(r.Fragment, null, "SDR Connections - "),
+              s.createElement(s.Fragment, null, "SDR Connections - "),
               e.appId > 0
-                ? r.createElement(r.Fragment, null, "App ", e.appId)
-                : r.createElement(r.Fragment, null, "All apps"),
-              r.createElement(r.Fragment, null, " [BETA feature]"),
+                ? s.createElement(s.Fragment, null, "App ", e.appId)
+                : s.createElement(s.Fragment, null, "All apps"),
+              s.createElement(s.Fragment, null, " [BETA feature]"),
             ),
-            f && r.createElement("div", { className: p.ErrMsg }, f),
-            r.createElement(
+            _ && s.createElement("div", { className: p.ErrMsg }, _),
+            s.createElement(
               "div",
               { className: p.SearchParamsCtr },
-              r.createElement(
+              s.createElement(
                 "div",
                 {
                   className: (0, l.A)(
@@ -888,73 +889,73 @@
                     p.ConnectionKindGroup,
                   ),
                 },
-                r.createElement(
+                s.createElement(
                   "div",
-                  { id: G, className: "DialogLabel" },
+                  { id: A, className: "DialogLabel" },
                   "Connection kind",
                 ),
-                r.createElement(
-                  i.zW,
-                  { labelId: G, value: b, onChange: (e) => k(e) },
-                  r.createElement(i.a, { value: "" }, "Any"),
-                  r.createElement(i.a, { value: "ded" }, "Dedicated server"),
-                  r.createElement(i.a, { value: "p2p" }, "Peer-to-Peer"),
+                s.createElement(
+                  o.zW,
+                  { labelId: A, value: S, onChange: (e) => b(e) },
+                  s.createElement(o.a, { value: "" }, "Any"),
+                  s.createElement(o.a, { value: "ded" }, "Dedicated server"),
+                  s.createElement(o.a, { value: "p2p" }, "Peer-to-Peer"),
                 ),
               ),
-              r.createElement(
+              s.createElement(
                 "div",
                 { className: p.AppFieldPair },
-                r.createElement(i.pd, {
+                s.createElement(o.pd, {
                   type: "text",
-                  value: v,
-                  disabled: A,
+                  value: h,
+                  disabled: M,
                   label: "Client",
-                  onChange: (e) => N(e.currentTarget.value),
+                  onChange: (e) => v(e.currentTarget.value),
                 }),
-                r.createElement(i.pd, {
+                s.createElement(o.pd, {
                   type: "text",
-                  value: y,
-                  disabled: A,
-                  label: M,
-                  onChange: (e) => S(e.currentTarget.value),
+                  value: N,
+                  disabled: M,
+                  label: D,
+                  onChange: (e) => y(e.currentTarget.value),
                 }),
               ),
-              r.createElement(
+              s.createElement(
                 "div",
                 { className: p.AppFieldPair },
-                r.createElement(i.pd, {
+                s.createElement(o.pd, {
                   type: "text",
-                  value: x,
-                  disabled: A,
+                  value: F,
+                  disabled: M,
                   label: "App field name 1",
-                  onChange: (e) => R(e.currentTarget.value),
+                  onChange: (e) => x(e.currentTarget.value),
                 }),
-                r.createElement(i.pd, {
+                s.createElement(o.pd, {
                   type: "text",
-                  value: I,
-                  disabled: A,
+                  value: R,
+                  disabled: M,
                   label: "App field value 1",
-                  onChange: (e) => T(e.currentTarget.value),
+                  onChange: (e) => I(e.currentTarget.value),
                 }),
               ),
-              r.createElement(
+              s.createElement(
                 "div",
                 { className: p.SubmitButtonCtn },
-                r.createElement(
-                  i.jn,
+                s.createElement(
+                  o.jn,
                   {
                     onClick: () => {
                       let e = new URLSearchParams();
-                      v && e.set("client_id", v),
-                        y && e.set("peer_id", y),
-                        b && e.set("kind", b),
-                        x &&
-                          I &&
-                          (e.set("app_name1", x), e.set("app_value1", I));
+                      h && e.set("client_id", h),
+                        N && e.set("peer_id", N),
+                        S && e.set("kind", S),
+                        F &&
+                          R &&
+                          (e.set("app_name1", F), e.set("app_value1", R));
                       let a = { ...t.location };
                       (a.search = e.toString()),
                         a != t.location && t.push(a),
-                        P(w + 1);
+                        w(k + 1);
                     },
                     disabled: n,
                   },
@@ -962,25 +963,21 @@
                 ),
               ),
             ),
-            n && r.createElement(E.t, null),
-            D,
+            n && s.createElement(E.t, null),
+            T,
           ),
         );
       }
     },
     68797: (e, t, a) => {
       "use strict";
-      a.d(t, { H: () => c });
-      var n = a(37085),
-        s = a(41735),
-        r = a.n(s),
-        l = a(56545);
-      function c(e) {
+      a.d(t, { H: () => l });
+      var n = a(41735),
+        r = a.n(n),
+        s = a(56545);
+      function l(e) {
         if (r().isCancel(e))
-          return {
-            strErrorMsg: "Action Cancelled:" + e,
-            errorCode: n.d.k_EResultCancelled,
-          };
+          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
           e.response.data &&
@@ -1032,7 +1029,7 @@
               console.warn(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof l.w)
+            if ("object" == typeof e && e instanceof s.w)
               return {
                 strErrorMsg: "" + e.GetErrorMessage(),
                 errorCode: e.GetEResult(),
@@ -1043,12 +1040,9 @@
         return "object" == typeof e && "status" in e
           ? {
               strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
-              errorCode: n.d.k_EResultFail,
+              errorCode: 2,
             }
-          : {
-              strErrorMsg: "Unknown Error: " + e,
-              errorCode: n.d.k_EResultFail,
-            };
+          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
   },

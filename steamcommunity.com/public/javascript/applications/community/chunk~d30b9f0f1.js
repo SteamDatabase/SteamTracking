@@ -722,6 +722,7 @@
         TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
         VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
         ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
+        AutoAdvanceBar: "_3F82OZtnlZ8bcDCZZT1TSF",
         ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
         CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
         ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
@@ -6551,7 +6552,7 @@
     },
     18543: (e, t, a) => {
       "use strict";
-      a.d(t, { x: () => y });
+      a.d(t, { x: () => w });
       var n = a(34629),
         l = a(41735),
         i = a.n(l),
@@ -6661,12 +6662,13 @@
         v = a(9154),
         E = a(22797),
         b = a(26408),
-        f = a(61859);
-      const y = (0, _.PA)((e) => {
+        f = a(61859),
+        y = a(6083);
+      const w = (0, _.PA)((e) => {
           const t = () => e.closeModal && e.closeModal(),
             { onDiscountEventSelected: a } = e,
             [n, l] = (0, o.useState)(null);
-          let i = C.Get().BHasSomethingSelected();
+          let i = D.Get().BHasSomethingSelected();
           return o.createElement(
             S.tH,
             null,
@@ -6690,8 +6692,8 @@
                     o.createElement(
                       "div",
                       { style: { minHeight: 500 } },
-                      o.createElement(w, { fnSetDiscountID: l }),
-                      o.createElement(T, { discountID: n }),
+                      o.createElement(T, { fnSetDiscountID: l }),
+                      o.createElement(C, { discountID: n }),
                     ),
                   ),
                 ),
@@ -6703,7 +6705,7 @@
                     bOKDisabled: !i,
                     strOKText: (0, f.we)("#Sale_New_CreateEvent"),
                     onOK: () => {
-                      C.Get().UpdateSaleSection(a), t();
+                      D.Get().UpdateSaleSection(a), t();
                     },
                   }),
                 ),
@@ -6711,7 +6713,7 @@
             ),
           );
         }),
-        w = (e) => {
+        T = (e) => {
           const { fnSetDiscountID: t } = e,
             [a, n] = (0, o.useState)(!0),
             l = (0, o.useRef)(null);
@@ -6724,7 +6726,7 @@
                   try {
                     (await d.Get().LoadDiscountEvents(e)) &&
                       !e.token.reason &&
-                      (C.Get().Reset(), n(!1));
+                      (D.Get().Reset(), n(!1));
                   } catch (e) {
                     let t = (0, r.H)(e);
                     console.error(
@@ -6772,7 +6774,7 @@
             }),
           );
         },
-        T = (e) => {
+        C = (e) => {
           const { discountID: t } = e,
             [a, n] = (0, o.useState)(!0),
             [l, s] = (0, o.useState)(null),
@@ -6849,8 +6851,8 @@
               null,
               (0, f.we)(
                 "#Sale_DiscountEvent_Contains",
-                _.apps.length.toLocaleString(),
-                _.packages.length.toLocaleString(),
+                (0, y.D)(_.apps.length),
+                (0, y.D)(_.packages.length),
               ),
             ),
             o.createElement(
@@ -6858,9 +6860,9 @@
               null,
               (0, f.we)(
                 "#Sale_New_Selected",
-                C.Get().GetTotalSelectedCount(),
-                C.Get().AppCount().toLocaleString(),
-                C.Get().PackageCount().toLocaleString(),
+                D.Get().GetTotalSelectedCount(),
+                (0, y.D)(D.Get().AppCount()),
+                (0, y.D)(D.Get().PackageCount()),
               ),
             ),
             o.createElement(
@@ -6875,17 +6877,17 @@
               o.createElement("h2", null, "Apps:"),
               o.createElement(
                 g.$n,
-                { onClick: () => C.Get().SelectAllApps(_.apps) },
+                { onClick: () => D.Get().SelectAllApps(_.apps) },
                 "Select All Apps",
               ),
               o.createElement(
                 g.$n,
-                { onClick: () => C.Get().ClearAllSelectedApps() },
+                { onClick: () => D.Get().ClearAllSelectedApps() },
                 "Clear all Selected Apps",
               ),
               Boolean(_.apps)
                 ? _.apps.map((e) =>
-                    o.createElement(D, {
+                    o.createElement(I, {
                       appid: e,
                       key: "appid_" + e,
                       strFilter: l,
@@ -6899,7 +6901,7 @@
               o.createElement("h2", null, "Packages:"),
               Boolean(_.packages)
                 ? _.packages.map((e) =>
-                    o.createElement(I, {
+                    o.createElement(M, {
                       subid: e.subid,
                       key: "subid_" + e.subid,
                       strFilter: l,
@@ -6913,7 +6915,7 @@
             ),
           );
         };
-      class C {
+      class D {
         BIsAppSelected(e) {
           return this.m_selectedApps.has(e);
         }
@@ -6970,10 +6972,10 @@
         }
         static Get() {
           return (
-            C.s_globalSingletonStore ||
-              ((C.s_globalSingletonStore = new C()),
-              C.s_globalSingletonStore.Init()),
-            C.s_globalSingletonStore
+            D.s_globalSingletonStore ||
+              ((D.s_globalSingletonStore = new D()),
+              D.s_globalSingletonStore.Init()),
+            D.s_globalSingletonStore
           );
         }
         Init() {}
@@ -6984,10 +6986,10 @@
             (0, u.Gn)(this);
         }
       }
-      (0, n.Cg)([u.sH], C.prototype, "m_nTotalSelected", void 0),
-        (0, n.Cg)([u.XI], C.prototype, "SelectAllApps", null),
-        (0, n.Cg)([u.XI], C.prototype, "ClearAllSelectedApps", null);
-      const D = (e) => {
+      (0, n.Cg)([u.sH], D.prototype, "m_nTotalSelected", void 0),
+        (0, n.Cg)([u.XI], D.prototype, "SelectAllApps", null),
+        (0, n.Cg)([u.XI], D.prototype, "ClearAllSelectedApps", null);
+      const I = (e) => {
           const { appid: t, strFilter: a } = e,
             [n] = (0, p.t7)("string" == typeof t ? Number.parseInt(t) : t, {});
           if (
@@ -7001,11 +7003,11 @@
             : (0, f.we)("#Sale_DiscountEvent_AppMissing", t);
           return o.createElement(g.Yh, {
             label: l,
-            checked: C.Get().BIsAppSelected(t),
-            onChange: (e) => C.Get().UpdateApp(t, e),
+            checked: D.Get().BIsAppSelected(t),
+            onChange: (e) => D.Get().UpdateApp(t, e),
           });
         },
-        I = (e) => {
+        M = (e) => {
           const { subid: t, strFilter: a } = e,
             [n] = (0, p.Gg)(t, {});
           if (
@@ -7026,8 +7028,8 @@
             : (0, f.we)("#Sale_DiscountEvent_SubMissing", t);
           return o.createElement(g.Yh, {
             label: l,
-            checked: C.Get().BIsAppSelected(t),
-            onChange: (e) => C.Get().UpdatePackage(t, e),
+            checked: D.Get().BIsAppSelected(t),
+            onChange: (e) => D.Get().UpdatePackage(t, e),
           });
         };
     },
@@ -10946,7 +10948,7 @@
     },
     87331: (e, t, a) => {
       "use strict";
-      a.d(t, { i: () => C });
+      a.d(t, { i: () => D });
       var n = a(41735),
         l = a.n(n),
         i = a(88942),
@@ -11011,8 +11013,9 @@
         f = a(84940),
         y = a.n(f),
         w = a(62752),
-        T = a(8527);
-      function C(e) {
+        T = a(8527),
+        C = a(3049);
+      function D(e) {
         const { editModel: t } = e,
           [a, n, l] = (0, E.uD)(),
           [i, o] = (0, c.q3)(() => [t.GetClanSteamID(), t.BHasSaleEnabled()]);
@@ -11028,12 +11031,12 @@
               d.createElement(
                 p.EN,
                 { active: a },
-                d.createElement(D, { editModel: e.editModel, closeModal: l }),
+                d.createElement(I, { editModel: e.editModel, closeModal: l }),
               ),
             )
           : null;
       }
-      function D(e) {
+      function I(e) {
         const { editModel: t, closeModal: a } = e,
           [n, s] = (0, c.q3)(() => [
             t.GetEventModel().clanSteamID,
@@ -11091,7 +11094,7 @@
                   null == u
                     ? void 0
                     : u.map((e, a) =>
-                        d.createElement(M, {
+                        d.createElement(A, {
                           key: e.version_id,
                           version: e,
                           earlierVersion: a + 1 < u.length ? u[a + 1] : void 0,
@@ -11109,10 +11112,13 @@
             )
           : d.createElement(S.t, null);
       }
-      function I(e) {
+      function M(e) {
         const { version: t } = e,
           a = new Date(1e3 * t.time_stamp),
-          n = a.toLocaleDateString() + " " + a.toLocaleTimeString();
+          n =
+            a.toLocaleDateString((0, C.J)()) +
+            " " +
+            a.toLocaleTimeString((0, C.J)());
         return d.createElement(
           "div",
           { className: y().VersionInfoCtn },
@@ -11127,32 +11133,32 @@
           d.createElement("div", { className: y().VersionDate }, n),
         );
       }
-      function M(e) {
+      function A(e) {
         const { version: t, earlierVersion: a, editModel: n } = e;
         return d.createElement(
           "div",
           { className: y().VersionCtn },
-          d.createElement(I, { version: t }),
+          d.createElement(M, { version: t }),
           Boolean(a) &&
             d.createElement(
               d.Fragment,
               null,
-              d.createElement(A, {
+              d.createElement(k, {
                 editModel: n,
                 version: t,
                 earlierVersion: a,
               }),
-              d.createElement(G, {
+              d.createElement(B, {
                 editModel: n,
                 version: t,
                 earlierVersion: a,
               }),
             ),
-          d.createElement(N, { ...e }),
-          d.createElement(O, { ...e }),
+          d.createElement(L, { ...e }),
+          d.createElement(P, { ...e }),
         );
       }
-      function A(e) {
+      function k(e) {
         const [t, a, n] = (0, E.uD)();
         return T.iA.is_support
           ? d.createElement(
@@ -11166,12 +11172,12 @@
               d.createElement(
                 p.EN,
                 { active: t },
-                d.createElement(k, { ...e, closeModal: n }),
+                d.createElement(G, { ...e, closeModal: n }),
               ),
             )
           : null;
       }
-      function k(e) {
+      function G(e) {
         const {
             editModel: t,
             earlierVersion: a,
@@ -11201,9 +11207,9 @@
           d.createElement(
             "div",
             { className: y().TitleDiffBar },
-            d.createElement(I, { version: a }),
+            d.createElement(M, { version: a }),
             d.createElement("span", null, "<---\x3e"),
-            d.createElement(I, { version: n }),
+            d.createElement(M, { version: n }),
           ),
           d.createElement(w.MW, {
             curEventModelJson: m,
@@ -11211,7 +11217,7 @@
           }),
         );
       }
-      function G(e) {
+      function B(e) {
         const [t, a, n] = (0, E.uD)();
         return d.createElement(
           d.Fragment,
@@ -11224,11 +11230,11 @@
           d.createElement(
             p.EN,
             { active: t },
-            d.createElement(B, { ...e, closeModal: n }),
+            d.createElement(N, { ...e, closeModal: n }),
           ),
         );
       }
-      function B(e) {
+      function N(e) {
         const {
             editModel: t,
             earlierVersion: a,
@@ -11250,9 +11256,9 @@
               d.createElement(
                 "div",
                 { className: y().TitleDiffBar },
-                d.createElement(I, { version: a }),
+                d.createElement(M, { version: a }),
                 d.createElement("span", null, "<---\x3e"),
-                d.createElement(I, { version: n }),
+                d.createElement(M, { version: n }),
               ),
               d.createElement(w.MW, {
                 curEventModelJson: u.jsondata,
@@ -11261,7 +11267,7 @@
             )
           : d.createElement(S.t, null);
       }
-      function N(e) {
+      function L(e) {
         const [t, a, n] = (0, E.uD)();
         return d.createElement(
           d.Fragment,
@@ -11274,11 +11280,11 @@
           d.createElement(
             p.EN,
             { active: t },
-            d.createElement(L, { ...e, closeModal: n }),
+            d.createElement(O, { ...e, closeModal: n }),
           ),
         );
       }
-      function L(e) {
+      function O(e) {
         const { editModel: t, version: a, closeModal: n } = e,
           [l, i, o] = (0, c.q3)(() => [
             t.GetClanSteamID(),
@@ -11302,7 +11308,7 @@
             )
           : d.createElement(S.t, null);
       }
-      function O(e) {
+      function P(e) {
         const { version: t, editModel: a } = e,
           [n, l, i] = (0, E.uD)();
         return d.createElement(
@@ -11323,7 +11329,7 @@
               onOK: () =>
                 (function (e, t) {
                   (0, g.pg)(
-                    d.createElement(P, { editModel: e, versionID: t }),
+                    d.createElement(F, { editModel: e, versionID: t }),
                     window,
                   );
                 })(a, t.version_id),
@@ -11331,7 +11337,7 @@
           ),
         );
       }
-      const P = (e) => {
+      const F = (e) => {
         const { editModel: t, versionID: a, closeModal: n } = e,
           [i, o] = d.useState("rollback");
         d.useEffect(() => {
@@ -36511,6 +36517,7 @@
           is_maincap: u,
           is_expanded_maincap: _,
           is_expanded_display: m,
+          show_auto_advance_bar: p,
         } = e;
         if (!t) return null;
         if (a)
@@ -36551,6 +36558,12 @@
                 n.createElement("div", { className: o().ShineCtn }),
               ),
             ),
+            p &&
+              n.createElement(
+                "div",
+                { className: o().AutoAdvanceBar },
+                n.createElement("div", { className: o().ShineCtn }),
+              ),
           );
         if (r)
           return n.createElement(

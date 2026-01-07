@@ -952,6 +952,29 @@ td.wht_wallet_change.wallet_entry_highlight {
 	text-decoration: line-through;
 }
 
+.wht_original_price {
+	text-decoration: line-through;
+	color: #738895;
+}
+.wht_discounted_price {
+	color: #BEEE11;
+}
+.wht_discount_pct {
+	display: flex;
+	align-items: center;
+	padding: 0 4px;
+	border-radius: 1px;
+	color: #BEEE11;
+	background: #4c6b22;
+	margin-right: 2px;
+}
+td.wht_base_price {
+	width: 5%;
+}
+.wht_base_price_discounted {
+	display: flex;
+	flex-direction: row;
+}
 td.wht_total {
 	width: 5%;
 	padding-right: 2em;

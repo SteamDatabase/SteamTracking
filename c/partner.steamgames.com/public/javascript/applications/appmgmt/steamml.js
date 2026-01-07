@@ -329,6 +329,7 @@
         (0, _._)([_._], _.prototype, "m_asyncProblemDetails", void 0),
         (0, _._)([_._], _.prototype, "Init", null);
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const _ = "0" == (0, _._)().schemaid,
@@ -433,7 +434,7 @@
                     "Keep Count:",
                   ),
                   " ",
-                  _.keep_count.toLocaleString(),
+                  (0, _._)(_.keep_count),
                 ),
               ),
             ),
@@ -849,7 +850,7 @@
                   className: _.CreatedDate,
                 },
                 "Created ",
-                new Date(1e3 * _.create_time).toLocaleDateString(),
+                new Date(1e3 * _.create_time).toLocaleDateString(["en-us"]),
               ),
               _.createElement(
                 "div",
@@ -857,7 +858,7 @@
                   className: _.UpdatedDate,
                 },
                 "Last modified ",
-                new Date(1e3 * _.update_time).toLocaleDateString(),
+                new Date(1e3 * _.update_time).toLocaleDateString(["en-us"]),
               ),
             ),
           )
@@ -1166,7 +1167,7 @@
                       className: _.CreatedDate,
                     },
                     "Created ",
-                    new Date(1e3 * _.create_time).toLocaleDateString(),
+                    new Date(1e3 * _.create_time).toLocaleDateString(["en-us"]),
                   ),
                   _.createElement(
                     "div",
@@ -1174,7 +1175,7 @@
                       className: _.UpdatedDate,
                     },
                     "Last modified ",
-                    new Date(1e3 * _.update_time).toLocaleDateString(),
+                    new Date(1e3 * _.update_time).toLocaleDateString(["en-us"]),
                   ),
                 ),
               ),

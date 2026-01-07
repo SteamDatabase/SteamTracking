@@ -70,6 +70,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return _.createElement(
@@ -237,7 +238,7 @@
       function _(_, _) {
         return (
           null == _ && (_ = 0),
-          _.toLocaleString(void 0, {
+          _.toLocaleString((0, _._)(), {
             minimumFractionDigits: _,
             maximumFractionDigits: _,
           })
@@ -807,7 +808,7 @@
           if (_.start_time && _.duration) {
             const _ = new Date(1e3 * _.start_time),
               _ = new Date(1e3 * (_.start_time + _.duration)),
-              _ = void 0,
+              _ = _._.GetPreferredLocales(),
               _ = _.toLocaleString(_, {
                 weekday: "short",
                 year: "numeric",
@@ -1104,7 +1105,7 @@
           (async () => {
             try {
               const _ = await _().get(_);
-              _?.data?.success == _._.k_EResultOK
+              1 == _?.data?.success
                 ? _(_.data.connections)
                 : (console.error(
                     "sdrsessionsearch: OnPerformSearch error code  " +
@@ -1315,14 +1316,13 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
         if (_().isCancel(_))
           return {
             strErrorMsg: "Action Cancelled:" + _,
-            errorCode: _._.k_EResultCancelled,
+            errorCode: 52,
           };
         if (
           void 0 !== _.response &&
@@ -1404,11 +1404,11 @@
         return "object" == typeof _ && "status" in _
           ? {
               strErrorMsg: "Unknown Error: " + _ + "\nStatus Code:" + _.status,
-              errorCode: _._.k_EResultFail,
+              errorCode: 2,
             }
           : {
               strErrorMsg: "Unknown Error: " + _,
-              errorCode: _._.k_EResultFail,
+              errorCode: 2,
             };
       }
     },

@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Dihapus dan diperingatkan",
 	"moderation_resolutionstatus_removeandban": "Dihapus dan di-ban dari hub",
 	"moderation_resolutionstatus_removeandkick": "Dihapus dan dikeluarkan dari grup",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Tidak Diketahui Kompatibilitasnya",
 	"moderationaction_acquitted": "Dibebaskan",
 	"moderationaction_cancelled": "Laporan aktif terakhir dibatalkan",

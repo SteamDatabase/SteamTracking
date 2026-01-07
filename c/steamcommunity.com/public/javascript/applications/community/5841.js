@@ -38,8 +38,8 @@
 	"CommodityExplanation": "该物品为常用商品，所有单个物品的内容都完全相同。架上物品无法个别阅览；但您能够以特定价格发送订单进行购买，最便宜的上架物品将自动匹配最高金额的订购单。",
 	"Search_AmountFound": "找到 %1$s 个搜索结果",
 	"Search_AmountFound_Plural": "找到 %1$s 个搜索结果",
-	"Search_ListingsFound": "找到 %1$s 个上架物品",
-	"Search_ListingsFound_Plural": "找到 %1$s 个上架物品",
+	"Search_ListingsFound": "找到 %2$s 个上架物品",
+	"Search_ListingsFound_Plural": "找到 %2$s 个上架物品",
 	"SortBy_Name_Asc": "名称（从 A 到 Z）",
 	"SortBy_Name_Desc": "名称（从 Z 到 A）",
 	"SortBy_Price_Asc": "价格（从低到高）",
@@ -69,7 +69,7 @@
 	"AdvancedSearch_IncludeDescriptions_Tooltip": "某些较旧的项目会使用文字来描述有意义的项目属性，而这些属性无法通过以下筛选条件访问。此选项可以让您的搜索文本与项目的完整描述文本（而非仅仅是项目名称）进行匹配。",
 	"MarketSearch_FilterColumn_Header": "筛选条件",
 	"MarketSearch_Reset": "重置搜索",
-	"Listings_Filter_Placeholder": "筛选上架物品…",
+	"Listings_TextFilter_Placeholder": "输入自定义筛选条件文本…",
 	"Economy_Market_Purchase_Restrictions": "购买后，这件物品：",
 	"Economy_Market_Purchase_TradableRestriction_1Day": "1 天内不可交易",
 	"Economy_Market_Purchase_TradableRestriction_7Days": "1 周内不可交易",
@@ -193,7 +193,10 @@
 	"Error_Sorry": "抱歉！",
 	"Error_Encountered": "处理您的请求时遇到错误：",
 	"Error_TooManyRequests_Description": "您最近作出的请求太多了。请稍候，然后再重试您的请求。",
-	"Container_ContentsLabel": "可能包含的内容："
+	"Container_ContentsLabel": "可能包含的内容：",
+	"Error_LoadingContent": "载入此内容时出现问题",
+	"Error_LoadingMarketItem": "请求的物品可能不存在，或可能存在暂时性问题导致此物品无法载入。请稍后重试。",
+	"ListingFilter_Title": "筛选上架物品"
 }`);
     },
   },

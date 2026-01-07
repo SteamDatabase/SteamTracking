@@ -89,7 +89,7 @@
     },
     30899: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { SteamMLRoutes: () => w, default: () => B });
+      a.r(t), a.d(t, { SteamMLRoutes: () => B, default: () => R });
       var m,
         s = a(43527),
         l = a(90626),
@@ -322,8 +322,9 @@
         (0, o.Cg)([i.sH], u.prototype, "m_asyncProblemDetails", void 0),
         (0, o.Cg)([i.XI], u.prototype, "Init", null);
       var N = a(75844),
-        _ = a(52038);
-      const D = (0, N.PA)((e) => {
+        D = a(52038),
+        _ = a(6083);
+      const v = (0, N.PA)((e) => {
         const t = "0" == (0, c.g)().schemaid,
           a = [
             { label: "816 - Dota Beta", value: "816" },
@@ -341,7 +342,7 @@
             l.createElement(
               n.N_,
               {
-                to: w.SteamMLSchemas(e.appid, e.schemaid),
+                to: B.SteamMLSchemas(e.appid, e.schemaid),
                 className: r.SchemaElement,
                 key: e.schemaid,
               },
@@ -377,7 +378,7 @@
                     "Keep Count:",
                   ),
                   " ",
-                  e.keep_count.toLocaleString(),
+                  (0, _.D)(e.keep_count),
                 ),
               ),
             ),
@@ -403,7 +404,7 @@
           o,
         );
       });
-      function v(e) {
+      function b(e) {
         switch (e) {
           case 1:
             return "int32";
@@ -420,7 +421,7 @@
         }
         return "";
       }
-      function b(e) {
+      function y(e) {
         switch (e) {
           case 1:
             return r.TypeInt32;
@@ -437,7 +438,7 @@
         }
         return "";
       }
-      function y(e, t, a) {
+      function P(e, t, a) {
         let m;
         const s = t.indexOf(e.name),
           n = -1 == s && !e.count;
@@ -446,7 +447,7 @@
             ? (m = l.createElement(
                 "div",
                 {
-                  className: (0, _.A)(
+                  className: (0, D.A)(
                     r.SchemaDetailsElement,
                     r.SchemaDetailsStruct,
                   ),
@@ -466,7 +467,7 @@
                     },
                     l.createElement(
                       "div",
-                      { className: (0, _.A)(n && r.Collapsed, r.CollapseIcon) },
+                      { className: (0, D.A)(n && r.Collapsed, r.CollapseIcon) },
                       "▼",
                     ),
                     l.createElement(
@@ -488,13 +489,13 @@
                   l.createElement(
                     "div",
                     {
-                      className: (0, _.A)(
+                      className: (0, D.A)(
                         n && r.IndentCollapsed,
                         r.StructIndent,
                       ),
                       key: e.name,
                     },
-                    y(e, t, a),
+                    P(e, t, a),
                   ),
                 ),
               ))
@@ -502,7 +503,7 @@
               ? (m = l.createElement(
                   "div",
                   {
-                    className: (0, _.A)(
+                    className: (0, D.A)(
                       r.SchemaDetailsElement,
                       r.SchemaDetailsArray,
                     ),
@@ -510,9 +511,9 @@
                   l.createElement(
                     "div",
                     {
-                      className: (0, _.A)(
+                      className: (0, D.A)(
                         r.SchemaDetailsElementBody,
-                        b(e.array.primitive.type_info.type),
+                        y(e.array.primitive.type_info.type),
                       ),
                     },
                     l.createElement(
@@ -523,7 +524,7 @@
                     l.createElement(
                       "div",
                       { className: r.TypeName },
-                      v(e.array.primitive.type_info.type),
+                      b(e.array.primitive.type_info.type),
                       " [",
                       e.array.max_length,
                       "]",
@@ -534,7 +535,7 @@
                 ? (m = l.createElement(
                     "div",
                     {
-                      className: (0, _.A)(
+                      className: (0, D.A)(
                         r.SchemaDetailsElement,
                         r.SchemaDetailsArray,
                       ),
@@ -555,7 +556,7 @@
                         l.createElement(
                           "div",
                           {
-                            className: (0, _.A)(
+                            className: (0, D.A)(
                               n && r.Collapsed,
                               r.CollapseIcon,
                             ),
@@ -583,13 +584,13 @@
                       l.createElement(
                         "div",
                         {
-                          className: (0, _.A)(
+                          className: (0, D.A)(
                             n && r.IndentCollapsed,
                             r.StructIndent,
                           ),
                           key: e.name,
                         },
-                        y(e, t, a),
+                        P(e, t, a),
                       ),
                     ),
                   ))
@@ -597,7 +598,7 @@
                   (m = l.createElement(
                     "div",
                     {
-                      className: (0, _.A)(
+                      className: (0, D.A)(
                         r.SchemaDetailsElement,
                         r.SchemaDetailsArray,
                       ),
@@ -605,9 +606,9 @@
                     l.createElement(
                       "div",
                       {
-                        className: (0, _.A)(
+                        className: (0, D.A)(
                           r.SchemaDetailsElementBody,
-                          b(e.primitive.type_info.type),
+                          y(e.primitive.type_info.type),
                         ),
                       },
                       l.createElement(
@@ -618,14 +619,14 @@
                       l.createElement(
                         "div",
                         { className: r.TypeName },
-                        v(e.primitive.type_info.type),
+                        b(e.primitive.type_info.type),
                       ),
                     ),
                   )),
           m
         );
       }
-      const P = (0, N.PA)((e) => {
+      const L = (0, N.PA)((e) => {
           const t = (0, c.g)(),
             a = "0" == t.schemaid,
             [m, s] = (0, l.useState)([]);
@@ -638,7 +639,7 @@
                 { className: r.SchemaDetails },
                 l.createElement(
                   n.N_,
-                  { to: w.SteamMLSchemas("0"), className: r.Back },
+                  { to: B.SteamMLSchemas("0"), className: r.Back },
                   "<< BACK",
                 ),
                 l.createElement(
@@ -663,24 +664,24 @@
                 l.createElement(
                   "div",
                   { className: r.SchemaDetailsElements },
-                  y(o, m, s),
+                  P(o, m, s),
                 ),
               ))
             : null;
         }),
-        L = (0, N.PA)((e) =>
+        g = (0, N.PA)((e) =>
           l.createElement(
             "div",
             { className: r.SchemaPage },
-            l.createElement(D, null),
-            l.createElement(P, null),
+            l.createElement(v, null),
+            l.createElement(L, null),
           ),
         ),
-        g = (e) =>
+        C = (e) =>
           l.createElement(
             "div",
             {
-              className: (0, _.A)(
+              className: (0, D.A)(
                 r.SteamMLButton,
                 e.acceptStyle && r.AcceptButton,
                 e.cancelStyle && r.CancelButton,
@@ -693,11 +694,11 @@
             },
             l.createElement("div", { className: r.Inner }, e.children),
           ),
-        C = ({ problem: e }) => (
+        I = ({ problem: e }) => (
           console.log((0, i.HO)(e)),
           l.createElement(
             n.N_,
-            { to: w.SteamMLProblems(e.problemid), className: r.ProblemEntry },
+            { to: B.SteamMLProblems(e.problemid), className: r.ProblemEntry },
             l.createElement("div", { className: r.ProblemName }, e.name),
             !e.active &&
               l.createElement("div", { className: r.Inactive }, "Inactive"),
@@ -714,18 +715,18 @@
                 "div",
                 { className: r.CreatedDate },
                 "Created ",
-                new Date(1e3 * e.create_time).toLocaleDateString(),
+                new Date(1e3 * e.create_time).toLocaleDateString(["en-us"]),
               ),
               l.createElement(
                 "div",
                 { className: r.UpdatedDate },
                 "Last modified ",
-                new Date(1e3 * e.update_time).toLocaleDateString(),
+                new Date(1e3 * e.update_time).toLocaleDateString(["en-us"]),
               ),
             ),
           )
         ),
-        I = (e) => {
+        T = (e) => {
           const [t, a] = (0, l.useState)(!1),
             [m, s] = (0, l.useState)(""),
             [n, c] = (0, l.useState)(""),
@@ -739,7 +740,7 @@
           return l.createElement(
             "div",
             {
-              className: (0, _.A)(
+              className: (0, D.A)(
                 r.AddNewProblem,
                 !t && r.IsPrompt,
                 t && r.IsHeader,
@@ -802,7 +803,7 @@
                         "div",
                         {
                           key: e.schemaid,
-                          className: (0, _.A)(r.SchemaOption, t && r.Selected),
+                          className: (0, D.A)(r.SchemaOption, t && r.Selected),
                           onClick: () =>
                             o(
                               t
@@ -819,7 +820,7 @@
                 "div",
                 { className: r.ButtonContainer },
                 l.createElement(
-                  g,
+                  C,
                   {
                     acceptStyle: !0,
                     minWidth: 100,
@@ -829,7 +830,7 @@
                   "Create",
                 ),
                 l.createElement(
-                  g,
+                  C,
                   { cancelStyle: !0, minWidth: 100, onClick: () => a(!1) },
                   "Cancel",
                 ),
@@ -837,7 +838,7 @@
             ),
           );
         },
-        T = (0, N.PA)(({ schemaid: e }) => {
+        A = (0, N.PA)(({ schemaid: e }) => {
           const t = u.Get().GetSchemaList(0, !0);
           let a;
           if (t) {
@@ -850,14 +851,14 @@
             a && l.createElement("div", { className: r.SchemaName }, a.name),
           );
         }),
-        A = (0, N.PA)(({ problem: e }) => {
+        f = (0, N.PA)(({ problem: e }) => {
           const [t, a] = (0, l.useState)(!1),
             [m, s] = (0, l.useState)(e.name),
             [i, o] = (0, l.useState)(!1),
             [d, p] = (0, l.useState)(e.problem_description),
             [S, h] = (0, l.useState)(!1),
             [E, N] = (0, l.useState)(e.schemaid),
-            D = (0, c.W6)(),
+            _ = (0, c.W6)(),
             v = (0, l.useRef)(null),
             b = (0, l.useRef)(null),
             y = parseInt(e.problemid),
@@ -867,13 +868,13 @@
               ?.slice()
               .sort((e, t) => (e.name < t.name ? -1 : 1)),
             L = P?.filter((e, t, a) => 0 == t || e.name != a[t - 1].name);
-          var C;
-          (C = () => {
-            I(), A(), p(e.problem_description), o(!1);
+          var g;
+          (g = () => {
+            I(), T(), p(e.problem_description), o(!1);
           }),
             (0, l.useEffect)(() => {
               const e = (e) => {
-                27 === e.keyCode && C();
+                27 === e.keyCode && g();
               };
               return (
                 window.addEventListener("keydown", e),
@@ -881,11 +882,11 @@
                   window.removeEventListener("keydown", e);
                 }
               );
-            }, [C]);
+            }, [g]);
           const I = () => {
               s(e.name), a(!1);
             },
-            A = () => {
+            T = () => {
               p(e.problem_description), o(!1);
             },
             f = () => {
@@ -899,7 +900,7 @@
               { className: r.ProblemDetails },
               l.createElement(
                 n.N_,
-                { to: w.SteamMLProblems(0), className: r.BackButton },
+                { to: B.SteamMLProblems(0), className: r.BackButton },
                 "<< BACK ",
               ),
               l.createElement(
@@ -908,8 +909,8 @@
                 l.createElement(
                   "div",
                   {
-                    className: (0, _.A)(r.ProblemName, t && r.Hidden),
-                    onClick: (e) => (A(), f(), void a(!0)),
+                    className: (0, D.A)(r.ProblemName, t && r.Hidden),
+                    onClick: (e) => (T(), f(), void a(!0)),
                   },
                   e.name,
                 ),
@@ -937,7 +938,7 @@
                 l.createElement(
                   "div",
                   {
-                    className: (0, _.A)(r.ProblemDescription, i && r.Hidden),
+                    className: (0, D.A)(r.ProblemDescription, i && r.Hidden),
                     onClick: (e) => (I(), f(), void o(!0)),
                   },
                   e.problem_description,
@@ -958,7 +959,7 @@
                     className: r.ProblemDescEditing,
                     type: "text",
                     value: d,
-                    onBlur: () => A(),
+                    onBlur: () => T(),
                     onFocus: (e) => e.target.select(),
                     onChange: (e) => p(e.target.value),
                   }),
@@ -971,13 +972,13 @@
                     "div",
                     { className: r.CreatedDate },
                     "Created ",
-                    new Date(1e3 * e.create_time).toLocaleDateString(),
+                    new Date(1e3 * e.create_time).toLocaleDateString(["en-us"]),
                   ),
                   l.createElement(
                     "div",
                     { className: r.UpdatedDate },
                     "Last modified ",
-                    new Date(1e3 * e.update_time).toLocaleDateString(),
+                    new Date(1e3 * e.update_time).toLocaleDateString(["en-us"]),
                   ),
                 ),
               ),
@@ -993,21 +994,21 @@
                   "div",
                   {
                     className: r.SchemaListEdit,
-                    onClick: () => (I(), A(), void h(!0)),
+                    onClick: () => (I(), T(), void h(!0)),
                   },
                   "Edit",
                 ),
                 l.createElement(
                   "div",
-                  { className: (0, _.A)(r.SchemaList, S && r.Hidden) },
+                  { className: (0, D.A)(r.SchemaList, S && r.Hidden) },
                   e.schemaid.map((e) =>
-                    l.createElement(T, { key: e, schemaid: e }),
+                    l.createElement(A, { key: e, schemaid: e }),
                   ),
                 ),
                 l.createElement(
                   "div",
                   {
-                    className: (0, _.A)(
+                    className: (0, D.A)(
                       r.SchemaSelectList,
                       (!S || !L) && r.Hidden,
                     ),
@@ -1019,7 +1020,7 @@
                         "div",
                         {
                           key: e.schemaid,
-                          className: (0, _.A)(r.SchemaOption, t && r.Selected),
+                          className: (0, D.A)(r.SchemaOption, t && r.Selected),
                           onClick: () =>
                             N(
                               t
@@ -1036,7 +1037,7 @@
                     "div",
                     { className: r.ButtonContainer },
                     l.createElement(
-                      g,
+                      C,
                       {
                         minWidth: 100,
                         acceptStyle: !0,
@@ -1050,7 +1051,7 @@
                       "Accept",
                     ),
                     l.createElement(
-                      g,
+                      C,
                       { minWidth: 100, cancelStyle: !0, onClick: () => f() },
                       "Cancel",
                     ),
@@ -1058,10 +1059,10 @@
                 l.createElement(
                   "div",
                   {
-                    className: (0, _.A)(r.DeleteLink, S && r.Hidden),
+                    className: (0, D.A)(r.DeleteLink, S && r.Hidden),
                     onClick: () => (
                       u.Get().DeleteProblem(y),
-                      void D.push(w.SteamMLProblems(0))
+                      void _.push(B.SteamMLProblems(0))
                     ),
                   },
                   "Delete Problem",
@@ -1070,7 +1071,7 @@
             )
           );
         }),
-        f = (0, N.PA)((e) => {
+        w = (0, N.PA)((e) => {
           const t = (0, c.g)(),
             a = "0" == t.problemid;
           let m, s;
@@ -1087,7 +1088,7 @@
                   "div",
                   { className: r.ProblemListContainer },
                   m.map((e) =>
-                    l.createElement(C, { key: e.problemid, problem: e }),
+                    l.createElement(I, { key: e.problemid, problem: e }),
                   ),
                   0 == m.length &&
                     l.createElement(
@@ -1095,70 +1096,70 @@
                       { className: r.NoProblems },
                       "No Existing Problems",
                     ),
-                  l.createElement(I, null),
+                  l.createElement(T, null),
                 ),
               !a &&
                 s &&
                 l.createElement(
                   "div",
                   { className: r.ProblemDetails },
-                  l.createElement(A, { problem: s }),
+                  l.createElement(f, { problem: s }),
                 ),
             )
           );
         }),
-        w = {
+        B = {
           SteamMLBase: () => "steamml",
           SteamMLSchemas: (e, t) => `/schemas/${e ?? "0"}/${t ?? "0"}`,
           SteamMLModels: () => "/models",
           SteamMLProblems: (e) => `/problems/${e ?? "0"}`,
         };
-      class B extends l.Component {
+      class R extends l.Component {
         render() {
           return l.createElement(
             "div",
             { className: r.Background },
             l.createElement(
               n.Kd,
-              { basename: (0, s.C)() + w.SteamMLBase() },
-              l.createElement(R, null),
+              { basename: (0, s.C)() + B.SteamMLBase() },
+              l.createElement(k, null),
               l.createElement(
                 c.dO,
                 null,
                 l.createElement(c.qh, {
                   exact: !0,
-                  path: w.SteamMLSchemas(":appid", ":schemaid"),
-                  component: L,
+                  path: B.SteamMLSchemas(":appid", ":schemaid"),
+                  component: g,
                 }),
                 l.createElement(c.qh, {
                   exact: !0,
-                  path: w.SteamMLModels(),
-                  component: k,
+                  path: B.SteamMLModels(),
+                  component: x,
                 }),
                 l.createElement(c.qh, {
                   exact: !0,
-                  path: w.SteamMLProblems(":problemid"),
-                  component: f,
+                  path: B.SteamMLProblems(":problemid"),
+                  component: w,
                 }),
                 l.createElement(
                   c.qh,
                   { exact: !0, path: "/" },
-                  l.createElement(c.rd, { to: w.SteamMLSchemas() }),
+                  l.createElement(c.rd, { to: B.SteamMLSchemas() }),
                 ),
               ),
             ),
           );
         }
       }
-      const R = (e) => {
+      const k = (e) => {
           const t = (0, c.zy)(),
             a = (0, c.B6)(t.pathname, {
-              path: w.SteamMLSchemas(":appid", ":schemaid"),
+              path: B.SteamMLSchemas(":appid", ":schemaid"),
               exact: !0,
             }),
-            m = (0, c.B6)(t.pathname, { path: w.SteamMLModels(), exact: !0 }),
+            m = (0, c.B6)(t.pathname, { path: B.SteamMLModels(), exact: !0 }),
             s = (0, c.B6)(t.pathname, {
-              path: w.SteamMLProblems(":problemid"),
+              path: B.SteamMLProblems(":problemid"),
               exact: !0,
             });
           return l.createElement(
@@ -1167,30 +1168,30 @@
             l.createElement(
               n.N_,
               {
-                to: w.SteamMLSchemas(),
-                className: (0, _.A)(r.HeaderOption, a && r.Selected),
+                to: B.SteamMLSchemas(),
+                className: (0, D.A)(r.HeaderOption, a && r.Selected),
               },
               "SCHEMAS",
             ),
             l.createElement(
               n.N_,
               {
-                to: w.SteamMLModels(),
-                className: (0, _.A)(r.HeaderOption, m && r.Selected),
+                to: B.SteamMLModels(),
+                className: (0, D.A)(r.HeaderOption, m && r.Selected),
               },
               "MODELS",
             ),
             l.createElement(
               n.N_,
               {
-                to: w.SteamMLProblems(),
-                className: (0, _.A)(r.HeaderOption, s && r.Selected),
+                to: B.SteamMLProblems(),
+                className: (0, D.A)(r.HeaderOption, s && r.Selected),
               },
               "PROBLEMS",
             ),
           );
         },
-        k = (e) => l.createElement("div", null, "MODEL PAGE");
+        x = (e) => l.createElement("div", null, "MODEL PAGE");
     },
   },
 ]);

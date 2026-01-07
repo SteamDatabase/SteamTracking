@@ -307,14 +307,12 @@
 ._2CT-9HYp0yLUhxQviGsEM {
   width: 100%;
   position: relative;
-  display: flex;
+  display: inline-block;
   border-radius: 5px;
   padding: 0;
 }
-@media screen and (max-width: 1200px) {
-  ._2CT-9HYp0yLUhxQviGsEM:not(._2qwt8I2HnbOSGvdebzv4hf) {
-    display: inline-block;
-  }
+._2CT-9HYp0yLUhxQviGsEM._2qwt8I2HnbOSGvdebzv4hf {
+  display: flex;
 }
 .XIDYByW4BEOm-YiOiwGmO {
   position: relative;
@@ -1925,10 +1923,14 @@ html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
 @media screen and (max-width: 910px) {
   ._292IWiCTro5jiTmIxiDfyc {
     min-width: 250px;
+    margin-left: unset;
+    margin-right: unset;
   }
 }
 .BasicUI ._292IWiCTro5jiTmIxiDfyc {
   min-width: 250px;
+  margin-left: unset;
+  margin-right: unset;
 }
 ._292IWiCTro5jiTmIxiDfyc._1mQ-hKJYGkL9gG76spf6uy {
   position: relative;

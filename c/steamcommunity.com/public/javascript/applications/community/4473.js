@@ -181,6 +181,7 @@
 	"moderation_resolutionstatus_removeandwarn": "Verwijderd en gewaarschuwd",
 	"moderation_resolutionstatus_removeandban": "Verwijderd en verbannen van de hub",
 	"moderation_resolutionstatus_removeandkick": "Verwijderd en uit de groep gekickt",
+	"moderation_resolutionstatus_sanctioned": "Sanctioned",
 	"moderation_resolutionstatus_unknown": "Onbekend",
 	"moderationaction_acquitted": "Vrijgesproken",
 	"moderationaction_cancelled": "Laatste open melding geannuleerd",

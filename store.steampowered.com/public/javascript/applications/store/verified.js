@@ -48,6 +48,7 @@
         TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
         VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
         ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
+        AutoAdvanceBar: "_3F82OZtnlZ8bcDCZZT1TSF",
         ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
         CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
         ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
@@ -2417,6 +2418,7 @@
           is_maincap: d,
           is_expanded_maincap: u,
           is_expanded_display: p,
+          show_auto_advance_bar: h,
         } = e;
         if (!t) return null;
         if (a)
@@ -2457,6 +2459,12 @@
                 s.createElement("div", { className: r().ShineCtn }),
               ),
             ),
+            h &&
+              s.createElement(
+                "div",
+                { className: r().AutoAdvanceBar },
+                s.createElement("div", { className: r().ShineCtn }),
+              ),
           );
         if (o)
           return s.createElement(
