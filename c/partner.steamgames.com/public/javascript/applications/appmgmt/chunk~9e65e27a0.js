@@ -335,6 +335,7 @@
             handle: _.handle,
             type: _.type,
             loc_token: _.loc_token,
+            description_loc_token: _.description_loc_token,
             must: _.must?.map((_) => _._) || void 0,
             any: _.any?.map((_) => _._) || void 0,
             mustnot: _.mustnot?.map((_) => _._) || void 0,
