@@ -921,6 +921,16 @@ function LoadAsyncPayPalScript( src ) {
     });
 }
 
+// Populates the Paypal specific purchase tips
+function ShowPaypalPurchaseTips()
+{
+	if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
+	{
+		$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PayPal customers';
+		$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the PayPal website.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the PayPal window before the process is complete.';
+	}
+}
+
 function OnInitializeTransactionSuccess( result, bSaveBillingAddress )
 {
 	try
@@ -968,6 +978,8 @@ function OnInitializeTransactionSuccess( result, bSaveBillingAddress )
 				$J('#submit_payment_info_btn').hide();
 				$J('#submit_payment_info_btn_in_progress').hide();
 				$J('#paypal-button').html('');
+
+				ShowPaypalPurchaseTips();
 
                 // fetch the paypal js sdk appropriate to our checkout type
                 var srcParams = 'client-id=' + result.paypalclientid + '&currency=' + result.paypalcurrency ;
@@ -1493,11 +1505,7 @@ function OnGetFinalPriceSuccess( result )
 					$('purchase_bottom_note_paypalgc').innerHTML = 'PayPal transactions are authorized through the PayPal web site. Click the button below to open a new web browser window to initiate the transaction.';
 					$('purchase_button_bottom_text').innerHTML = 'Begin PayPal Purchase';
 
-					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
-					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for PayPal customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Make sure that you confirm your purchase on the PayPal website.  If you are not returned to Steam after 10 seconds, please click the "Return To Merchant" button and allow the transaction to process.<br/><br/>This process can take up to 60 seconds.  To avoid purchasing failures, please do not hit your back button or close the PayPal window before the process is complete.';
-					}
+					ShowPaypalPurchaseTips();
 				}
 				else if ( method.value == 'sofort' )
 				{
@@ -2863,7 +2871,7 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Nuvei website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}
-      }
+			}
 			else
 			{
 				OnGetFinalPriceFailure( 0 );
