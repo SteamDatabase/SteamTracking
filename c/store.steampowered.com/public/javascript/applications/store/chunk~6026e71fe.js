@@ -16638,8 +16638,35 @@
         );
       }
       const _ = 12;
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (_) => {
+        const {
+          hubtype: _,
+          category: __webpack_require__,
+          tagid: _,
+          prioritize_discounts: _,
+          prune_list_optin_name: _,
+          optin_tagid: _,
+          optin_prune_tagid: _,
+          optin_only: _,
+        } = _;
+        let _ = _;
+        "category" == _
+          ? (_ = __webpack_require__)
+          : "tags" == _ && (_ = void 0);
+        const _ = (0, _._)(_);
+        return "tags" === _ || "adultonly" === _ || null === _
+          ? _.createElement(_, {
+              ..._,
+            })
+          : _
+            ? _.createElement(_, {
+                category: _,
+              })
+            : null;
+      };
+      function _(_) {
         const {
             hubtype: _,
             category: __webpack_require__,
@@ -16718,7 +16745,31 @@
                 )
         );
         var _;
-      };
+      }
+      function _(_) {
+        const { category: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_.ContentHubTitleCtn, "ContentHubTitleCtn"),
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.ContentHubTitle, "ContentHubTitle"),
+            },
+            _.display_name,
+          ),
+          _.hub_description &&
+            _.createElement(
+              "div",
+              {
+                className: _.ContentHubSubtitle,
+              },
+              _.hub_description,
+            ),
+        );
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

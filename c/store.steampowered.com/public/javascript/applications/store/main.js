@@ -38213,6 +38213,99 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 1 / 0;
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)(_(_, _, _, _._.excluded_content_descriptors));
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _, _, _) {
+            return {
+              queryKey: ["CategoryHubDefinitions", _.language, "MapByHandle"],
+              queryFn: async () => {
+                const _ = await _.fetchQuery(_(_, _, _));
+                return new Map(_.map((_) => [_.handle, _]));
+              },
+              staleTime: _,
+            };
+          })(_, _, _, _._.excluded_content_descriptors),
+        );
+      }
+      function _(_) {
+        const { data: _ } = _();
+        if (void 0 !== _) return (_ && _.get(_)) ?? null;
+      }
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _, _, _) {
+            return {
+              queryKey: ["CategoryHubDefinitions", _.language, "MapByTagID"],
+              queryFn: async () => {
+                const _ = await _.fetchQuery(_(_, _, _)),
+                  _ = new Map();
+                for (const _ of _) _.replaces_tags?.forEach((_) => _.set(_, _));
+                return _;
+              },
+              staleTime: _,
+            };
+          })(_, _, _, _._.excluded_content_descriptors),
+        );
+      }
+      function _(_, _, _) {
+        return {
+          queryKey: ["CategoryHubDefinitions", _.language, _],
+          queryFn: () =>
+            (async function (_, _, _) {
+              const _ = _._.Init(_._);
+              (0, _._)(_, _),
+                _.Body().set_excluded_content_descriptorids(
+                  __webpack_require__.slice(),
+                );
+              const _ = await _._.GetContentHubConfig(_, _);
+              if (!_.BSuccess())
+                throw `Error loading category hub definitions: ${_.GetErrorMessage()}`;
+              return _.Body().toObject().hubconfigs || [];
+            })(_, _, _),
+          staleTime: _,
+        };
+      }
+      function _(_, _, _, _) {
+        return {
+          queryKey: ["CategoryHubDefinitions", _.language, "MapByID"],
+          queryFn: async () => {
+            const _ = await _.fetchQuery(_(_, _, _));
+            return new Map(_.map((_) => [_.hubcategoryid, _]));
+          },
+          staleTime: _,
+        };
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -74613,71 +74706,7 @@
             );
           });
       })(_ || (_ = {}));
-      const _ = 1 / 0;
-      function _() {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _, _, _) {
-            return {
-              queryKey: ["CategoryHubDefinitions", _.language, "MapByHandle"],
-              queryFn: async () => {
-                const _ = await _.fetchQuery(_(_, _, _));
-                return new Map(_.map((_) => [_.handle, _]));
-              },
-              staleTime: _,
-            };
-          })(_, _, _, _._.excluded_content_descriptors),
-        );
-      }
-      function _() {
-        const _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _, _, _) {
-            return {
-              queryKey: ["CategoryHubDefinitions", _.language, "MapByTagID"],
-              queryFn: async () => {
-                const _ = await _.fetchQuery(_(_, _, _)),
-                  _ = new Map();
-                for (const _ of _) _.replaces_tags?.forEach((_) => _.set(_, _));
-                return _;
-              },
-              staleTime: _,
-            };
-          })(_, _, _, _._.excluded_content_descriptors),
-        );
-      }
-      function _(_, _, _) {
-        return {
-          queryKey: ["CategoryHubDefinitions", _.language, _],
-          queryFn: () =>
-            (async function (_, _, _) {
-              const _ = _._.Init(_._);
-              (0, _._)(_, _),
-                _.Body().set_excluded_content_descriptorids(
-                  __webpack_require__.slice(),
-                );
-              const _ = await _._.GetContentHubConfig(_, _);
-              if (!_.BSuccess())
-                throw `Error loading category hub definitions: ${_.GetErrorMessage()}`;
-              return _.Body().toObject().hubconfigs || [];
-            })(_, _, _),
-          staleTime: _,
-        };
-      }
-      function _(_, _, _, _) {
-        return {
-          queryKey: ["CategoryHubDefinitions", _.language, "MapByID"],
-          queryFn: async () => {
-            const _ = await _.fetchQuery(_(_, _, _));
-            return new Map(_.map((_) => [_.hubcategoryid, _]));
-          },
-          staleTime: _,
-        };
-      }
+      var _ = __webpack_require__("chunkid");
       function _(_ = !0) {
         const _ = (function (_, _, _, _) {
           return {
@@ -74685,7 +74714,9 @@
             queryFn: async () => {
               const [_, _] = await Promise.all([
                 _.fetchQuery(_(_, _)),
-                _.fetchQuery(_(_, _, _, _._.excluded_content_descriptors)),
+                _.fetchQuery(
+                  (0, _._)(_, _, _, _._.excluded_content_descriptors),
+                ),
               ]);
               return (_.frequent_hubs || [])
                 .map((_) =>
@@ -75673,12 +75704,7 @@
             type: __webpack_require__ = "square",
             className: _,
           } = _,
-          { data: _ } = (function () {
-            const _ = (0, _._)(),
-              _ = (0, _._)(),
-              _ = (0, _._)();
-            return (0, _._)(_(_, _, _, _._.excluded_content_descriptors));
-          })(),
+          { data: _ } = (0, _._)(),
           _ = _?.get(_);
         if (_)
           return _.createElement("img", {
@@ -77112,7 +77138,7 @@
       }
       const _ = _.memo(function (_) {
         const { handle: _, name: __webpack_require__ } = _,
-          { data: _ } = _(),
+          { data: _ } = (0, _._)(),
           _ = _?.get(_);
         return _
           ? _.createElement(
@@ -77152,7 +77178,7 @@
         );
       }
       function _(_) {
-        const { data: _ } = _(),
+        const { data: _ } = (0, _._)(),
           _ = _?.get(_.handle);
         return _
           ? _.createElement(_, {
@@ -77334,7 +77360,7 @@
         const _ = (0, _._)(),
           _ = _(),
           _ = !_ && !_,
-          { data: _ } = _(),
+          { data: _ } = (0, _._)(),
           _ = _?.get("freetoplay"),
           _ = _?.get("demos");
         return _.createElement(
@@ -77481,7 +77507,7 @@
       }
       function _() {
         return (
-          _(),
+          (0, _._)(),
           _(
             {
               count: 10,
@@ -77502,7 +77528,7 @@
       }
       const _ = _._();
       function _() {
-        const { data: _ } = _(),
+        const { data: _ } = (0, _._)(),
           _ = _?.get("freetoplay"),
           _ = _?.get("demos"),
           _ = (0, _._)(),
@@ -78243,7 +78269,7 @@
               { data: __webpack_require__, isError: _ } = _(),
               _ = _(_),
               { data: _ } = (0, _._)(_._.LANGUAGE),
-              { data: _ } = _(),
+              { data: _ } = (0, _._)(),
               _ = _.useMemo(() => _._(_().slice(), 0, _._(_)), []),
               _ = _(),
               _ = _ ? 6 : 4,
@@ -78555,7 +78581,7 @@
             bExpanded: __webpack_require__,
             bHiddenCategory: _,
           } = _,
-          { data: _ } = _(),
+          { data: _ } = (0, _._)(),
           _ = _.useMemo(() => _.map((_) => _?.get(_)).filter(Boolean), [_, _]),
           _ = _ ? [] : _.slice(0, 3),
           _ = _ ? _ : _.slice(3);
@@ -78708,7 +78734,9 @@
         );
       }
       function _() {
-        return (0, _._)(_), (0, _._)(_), (0, _._)(_), (0, _._)(_), _(), null;
+        return (
+          (0, _._)(_), (0, _._)(_), (0, _._)(_), (0, _._)(_), (0, _._)(), null
+        );
       }
       function _() {
         const { data: _ } = (0, _._)(_),
@@ -82704,7 +82732,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 92307), _((_._ = _));
+      return (_ = 80640), _((_._ = _));
       var _;
     });
     _._();

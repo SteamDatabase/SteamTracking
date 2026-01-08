@@ -181,6 +181,8 @@ function ViewTestingReports( appid, test_type, start, count )
 				reportDiv.append( $J( '<div/>', { class: "td", text: reportJSON['result'] == 'Pass' ? 'Passed' : 'Failed' } ) );
 				reportDiv.append( $J( '<div/>', { class: "td", html: reportJSON['help_request_reference_code'] ? '<a href="' + 'https://help.steampowered.com/en/ticketmaster/ticket/' + reportJSON['help_request_reference_code'] + '">' + reportJSON['help_request_reference_code'] + '</a>' : "" } ) );
 				reportDiv.append( $J( '<div/>', { class: "td", text: report['notified_partner'] ? 'Y' : 'N' } ) );
+
+				var actionsDiv = $J( '<div/>', { class: "td" });
 				var btn = $J( '<span/>', { class: "btn_blue_white_innerfade btn_small_thin" } );
 				btn.click(
 					( function(specificReport, reportDate) {
@@ -190,7 +192,22 @@ function ViewTestingReports( appid, test_type, start, count )
 					} )( report, formatted )
 				);
 				btn.append( $J( '<span/>', { text: "Report Details" } ) );
-				reportDiv.append( $J( '<div/>', { class: "td" }).append( btn ) );
+				actionsDiv.append( btn );
+
+				if ( i == 0 && reportJSON['result'] == 'Pass' )
+				{
+					var btnForceFail = $J( '<span/>', { class: "btn_blue_white_innerfade btn_small_thin", style: "margin-left:10px"  } );
+					btnForceFail.click( 
+						( function(specificReport, specificAppName, specificTestType ) {
+							return function() {
+								ForceSubmitAppTestingReport( specificReport['appid'], specificAppName, specificTestType, false );
+							};
+						} )( report, appName, test_type )
+					);
+					btnForceFail.append( $J( '<span/>', { text: "Force Fail" } ) );				
+					actionsDiv.append( btnForceFail );
+				}
+				reportDiv.append( actionsDiv );
 
 				content.append( reportDiv );
 			}
@@ -360,11 +377,14 @@ function ForceSubmitAppTestingReport( appid, appName, testType, bPass )
 {
 	var dialog = ShowPromptWithTextAreaDialog( 'Force ' + ( bPass ? 'Pass' : 'Fail' ) + ' Testing Report for App: ' + appName, "", "OK", null, 5000 );
 
+	var text_area = $J( dialog.m_$Content ).find( "textarea" );
+	text_area.before( $J( "<div/>", { text: "Enter the reason below.  This will be shared with the partner in the build review support ticket.", style: "font-size: 16px; padding-bottom: 10px" } ) );
+	
 	dialog.done( function( data ) {
 		data = v_trim( data );
 		if ( data.length < 1 )
 		{
-			ShowAlertDialog( 'Error', 'Please enter a reason to force pass this app.' );
+			ShowAlertDialog( 'Error', 'Please enter a reason to force ' + ( bPass ? 'pass' : 'fail' ) + ' this app.' );
 			return;
 		}
 
