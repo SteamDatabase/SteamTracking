@@ -2255,13 +2255,13 @@ var _ = [
   },
   {
     rgTagIDs: [1695],
-    _: "open_world",
+    _: "exploration_open_world",
     strLocToken: "#ContentHubby_Hub_adventure_explore_open_world_menu",
     strSalePageURL: "category/exploration_open_world",
   },
   {
     rgTagIDs: [4328, 4736, 6506],
-    _: "fighting",
+    _: "fighting_martial_arts",
     strLocToken: "#ContentHubby_Hub_fighting_menu",
     strSalePageURL: "category/fighting_martial_arts",
   },
@@ -2273,13 +2273,13 @@ var _ = [
   },
   {
     rgTagIDs: [1685],
-    _: "coop",
+    _: "multiplayer_coop",
     strLocToken: "#ContentHubby_Hub_multiplayer_coop_menu",
     strSalePageURL: "category/multiplayer_coop",
   },
   {
     rgTagIDs: [1664, 5537, 1665],
-    _: "puzzle",
+    _: "puzzle_matching",
     strLocToken: "#ContentHubby_Hub_puzzle_menu",
     strSalePageURL: "category/puzzle_matching/",
   },
@@ -2291,7 +2291,7 @@ var _ = [
   },
   {
     rgTagIDs: [42804],
-    _: "roguelike",
+    _: "rogue_like_rogue_lite",
     strLocToken: "#ContentHubby_Hub_rogue_like_rogue_lite_menu",
     strSalePageURL: "category/rogue_like_rogue_lite",
   },
@@ -2303,7 +2303,7 @@ var _ = [
   },
   {
     rgTagIDs: [3942],
-    _: "scifi",
+    _: "science_fiction",
     strLocToken: "#ContentHubby_Hub_science_fiction_menu",
     strSalePageURL: "category/science_fiction",
   },
@@ -2333,7 +2333,7 @@ var _ = [
   },
   {
     rgTagIDs: [9, 4328, 220585],
-    _: "cities_settlements",
+    _: "strategy_cities_settlements",
     strLocToken: "#ContentHubby_Hub_sim_cities_settlements_menu",
     strSalePageURL: "category/strategy_cities_settlements",
   },
@@ -2351,21 +2351,15 @@ var _ = [
   },
   {
     rgTagIDs: [113],
-    _: "f2p",
+    _: "freetoplay",
     strLocToken: "#ContentHubby_Hub_free_to_play",
     strSalePageURL: "genre/Free%20to%20Play",
   },
   {
-    rgTagIDs: [],
-    _: "greatondeck",
-    strLocToken: "#ContentHubby_Hub_greatondeck",
-    strSalePageURL: "greatondeck",
-  },
-  {
-    rgTagIDs: [402, 401],
-    _: "vr",
-    strLocToken: "#Store_VR_MainMenu_Virtual_Reality",
-    strSalePageURL: "vr",
+    rgTagIDs: [113],
+    _: "earlyaccess",
+    strLocToken: "#genre_early_access",
+    strSalePageURL: "genre/Early%20Access",
   },
 ];
 var _ = "./marketing_arabic-XXXXXXXX.json";
@@ -4612,10 +4606,11 @@ var _ = _(_(), 1);
 function _() {
   let _ = _(),
     _ = _(),
-    _ = !_ && !_;
+    _ = _.EREALM != 2,
+    _ = _ && !_ && !_;
   return (0, _.jsxs)(_, {
     children: [
-      _
+      _ || !_
         ? (0, _.jsx)(_, {
             children: _("#Menu_Section_Categories_YourTopCategories"),
           })
