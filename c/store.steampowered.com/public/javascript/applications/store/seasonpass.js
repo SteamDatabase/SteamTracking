@@ -46,7 +46,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = {
         include_assets: !0,
@@ -346,44 +345,41 @@
       }
       function _(_) {
         const { milestone: _ } = _;
-        return _.shipped
-          ? _.createElement(
-              "div",
-              {
-                className: _().Shipped,
-              },
-              (0, _._)(
-                "#SeasonPass_Released_Date",
-                _.createElement("br", null),
-                (0, _._)(_.rtime_complete),
-              ),
-            )
-          : _.createElement(
-              "div",
-              {
-                className: _().Upcoming,
-              },
-              (0, _._)(
-                "#SeasonPass_Release_Date",
-                _.createElement("br", null),
-                [..._.dates].reverse().map((_, _) => {
-                  const _ = (0, _._)(
-                    _.coming_soon_display_type,
-                    _.rtime,
-                    null,
-                    !0,
-                  );
-                  return _.createElement(
-                    "div",
-                    {
-                      key: "dd" + _.rtime + _.coming_soon_display_type,
-                      className: _ + 1 < _.dates.length ? _().Strike : void 0,
-                    },
-                    _,
-                  );
-                }),
-              ),
-            );
+        if (_.shipped)
+          return _.createElement(
+            "div",
+            {
+              className: _().Shipped,
+            },
+            (0, _._)(
+              "#SeasonPass_Released_Date",
+              _.createElement("br", null),
+              (0, _._)(_.rtime_complete),
+            ),
+          );
+        const _ = _.dates[0].rtime,
+          _ = _.dates.filter((_, _) => 0 == _ || _.rtime < _);
+        return _.createElement(
+          "div",
+          {
+            className: _().Upcoming,
+          },
+          (0, _._)(
+            "#SeasonPass_Release_Date",
+            _.createElement("br", null),
+            [..._].reverse().map((_, _) => {
+              const _ = (0, _._)(_.coming_soon_display_type, _.rtime, null, !0);
+              return _.createElement(
+                "div",
+                {
+                  key: "dd" + _.rtime + _.coming_soon_display_type,
+                  className: _ + 1 < _.length ? _().Strike : void 0,
+                },
+                _,
+              );
+            }),
+          ),
+        );
       }
       const _ = {};
       function _(_) {
@@ -455,8 +451,7 @@
                   partnerEventStore: _._,
                   bShowOnlyInitialEvent: !0,
                   showAppHeader: !0,
-                  trackingLocation:
-                    _._.k_EPartnerEventDisplayLocation_StoreAppPage,
+                  trackingLocation: 3,
                 }),
             )
           : _.createElement(
