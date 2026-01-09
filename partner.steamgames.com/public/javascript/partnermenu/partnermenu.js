@@ -40003,7 +40003,7 @@ Error generating stack: ` +
   }
   Gt();
   Gt();
-  var of = Y(ke());
+  var of = Y(ke(), 1);
   var fM = [
       "sc_schinese",
       "schinese",

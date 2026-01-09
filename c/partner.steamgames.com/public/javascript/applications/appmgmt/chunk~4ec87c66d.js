@@ -977,6 +977,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        colorRow: "_19bw8xS_ZKv835gVoRx7EH",
+        colorInput: "FYkeNt_rKJlz1nQo_VqdZ",
+        updateBtn: "krw_dvujjpUNBjJ3DLCwR",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DateCtn: "_13RGKmbd0bFVxkQJdMEX0t",
         PromoCreationCtn: "_1C4jsnZrLZXgz2mDsdVsv0",
         Vacation: "_1RS5BRUx0pdtR2xvd3P2oQ",
@@ -1397,6 +1404,57 @@
     chunkid: (module) => {
       module.exports = {
         HorizontalScrollInDragForceCursor: "_2kFhNSS_ljPFFh8GXnC0to",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        EventEditorArtworkCtn: "_3etoSeNgIJIJoQjVvKBkdK",
+        ArtworkPreview: "_1fBG8S7L5v1-Ll8UMASqW5",
+        EventEditorArtworkBarContainer: "TLT1tvLtG6-1EdFGwToo1",
+        EventEditorButton: "_2EbfH5kGhG6VdMYM0aSFsw",
+        EventEditorInputPaneTopRow: "_3loSsH7QVVzJW4dbA_k8pH",
+        EventCoverImageCtn: "vcULy1uwr1V-xetzQ3t5_",
+        DragTarget: "_2qaqHaHt0FsJ5g6E50Rpbn",
+        DragOnTopOfMe: "_1-0mEm0at-4Czr10kmQ82K",
+        EventEditorArtworkTextCtn: "wbzVx6PSPvY3jxjmybwT7",
+        EventEditorDragTargetArea: "_352Z7ynHHExwu7pbLG0mi3",
+        EventEditorArtworkTitle: "_1BtkzIs3COLhdqubhPqTJa",
+        EventEditorArtworkSubTitle: "_3NsjbDpfSxc8ZHhYE5TuTv",
+        EventEditorArtworkResolution: "pScoegXLiCfPTrVdDHgRc",
+        ReassignCtn: "_2kzxUHYwRnfLZc2qUJp54m",
+        ImagePreviewContainer: "_4M__i4jyU9-VJE6K30Rat",
+        NoneSet: "csDC3rD7ooQ8gGXZhh594",
+        TitleSafePreview: "_2Gel5eBC4smzhCMPJN4poX",
+        TitleSafeCaption: "_2oU3ulhvWy8BrTtr-wLTHL",
+        LanguageSelector: "_33sdnBObDSgcIemY_8d188",
+        LanguageSelectorSelected: "_35iac6gVYl3NbfLM5oGhAp",
+        LanguageSelectorNoData: "_2MrExNFgrVVmzV4_XxWk7m",
+        LanguageContainer: "_1GqYxNpFolOmvCXZZ5SqS9",
+        LanguageOptions: "_1OF4inXEccSHpEi-94BNyB",
+        LanguageListContainer: "_2NKwVWWJzUopyzUpm5K8PU",
+        SelectImageContainerTopRow: "_33RDQ6gt9hW0N3baDbAfnl",
+        SelectImageContainerBottomRow: "_3Mstp8zLfqhPc0yqJGve2N",
+        TextTitle: "_1b_OxtjP85MZc-IlQfnnHR",
+        TextSubTitle: "EqzVNygGbzsiBalSQOtWy",
+        SelectImageEqualColumns: "Qz0mmjcnBMcs99N6fgVCv",
+        SelectImageBlock: "X_wtWeV0nNEF-9Rz0wZRL",
+        MainPreviewBlock: "_3kAV8hXf4G70C4tDE8HDjI",
+        Tips: "_2jAkKq9D5KKOH2cgMu59yN",
+        ExamplesCtn: "WiG3FOkzY58mDmTzVy40z",
+        SelectImageExampleImg: "_3Lcquzc_EacniSS2QxdUHx",
+        SelectImageLanguagesCtn: "_27huHYrHSwivfUIglfRube",
+        SelectImageTitle: "lJEQ6yKHtjwXClD4NVqUY",
+        ArtworkSelectorContainer: "_2dxWXru9IFUHuJgzC9_WwQ",
+        Title: "_2HiqsrLG8k4zf4raXVygUP",
+        SaleHeaderExampleCtn: "_2Nwi2WWTWdc4JkMEiHDFFK",
+        SaleHeaderExampleCol: "_2s4zAjRHJabF47kK9uxCY6",
+        BroadcastPreview: "_3NxzN3dNq98rjVdkyQ9QIH",
+        AssetExampleSpotlightCtn: "_29B1UOzVRMVZSd22IyP43x",
+        BackgroundConfigCtn: "_3SVRvFP-sXikNXmksKkDQ7",
+        OptionCtn: "_2XnObldRTEs5T4Sswyv5Fo",
+        BackgroundColorBtn: "_2YD-avez2pqO4MJHAO5_v0",
+        UploadSuccess: "inXVzuN-asDe-A5jnsvvV",
+        HighlightBox: "_3qTodEPOW76BNBFtgX0AUa",
       };
     },
     chunkid: (module) => {
@@ -4904,6 +4962,26 @@
               this.m_oSalePage.jsondata.localized_title_image,
           };
         }
+        GetPageStylesModel() {
+          return {
+            sale_font: this.m_oSalePage.jsondata.sale_font,
+            sale_font_weight: this.m_oSalePage.jsondata.sale_font_weight,
+            sale_background_color:
+              this.m_oSalePage.jsondata.sale_background_color,
+            sale_background_repeat:
+              this.m_oSalePage.jsondata.sale_background_repeat,
+            sale_carousel_arrow_color:
+              this.m_oSalePage.jsondata.sale_carousel_arrow_color,
+            sale_carousel_arrow_style:
+              this.m_oSalePage.jsondata.sale_carousel_arrow_style,
+            sale_carousel_breadcrumb_color:
+              this.m_oSalePage.jsondata.sale_carousel_breadcrumb_color,
+            sale_carousel_active_breadcrumb_color:
+              this.m_oSalePage.jsondata.sale_carousel_active_breadcrumb_color,
+            sale_carousel_breadcrumb_style:
+              this.m_oSalePage.jsondata.sale_carousel_breadcrumb_style,
+          };
+        }
         GetName(_ = 0) {
           return this.m_oSalePage.name.get(_);
         }
@@ -4958,7 +5036,8 @@
           this.Reset(this.m_originalSalePage), this.m_callback.Dispatch(this);
         }
       }
-      (0, _._)([_._], _.prototype, "m_bDirty", void 0),
+      (0, _._)([_._], _.prototype, "m_oSalePage", void 0),
+        (0, _._)([_._], _.prototype, "m_bDirty", void 0),
         (0, _._)([_._], _.prototype, "SetCurImage", null),
         (0, _._)([_._.bound], _.prototype, "SetImage", null),
         (0, _._)([_._], _.prototype, "ClearAllAssetObjects", null),
@@ -56536,12 +56615,435 @@
           )
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            setting: _,
+            fnUpdateSetting: __webpack_require__,
+            label: _,
+          } = _,
+          _ = _.useMemo(() => {
+            const _ = [];
+            return (
+              _.push({
+                label: (0, _._)("#EventEditor_Tile_NoRepeat"),
+                data: "no-repeat",
+              }),
+              _.push({
+                label: (0, _._)("#EventEditor_Tile_RepeatX"),
+                data: "repeat-x",
+              }),
+              _.push({
+                label: (0, _._)("#EventEditor_Tile_RepeatY"),
+                data: "repeat-y",
+              }),
+              _.push({
+                label: (0, _._)("#EventEditor_Tile_Repeat"),
+                data: "repeat",
+              }),
+              _.push({
+                label: (0, _._)("#EventEditor_Tile_NoRepeatAndBlur"),
+                data: "coverBlur",
+              }),
+              _
+            );
+          }, []);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_._, null, _ || (0, _._)("#EventEditor_Tile_Title")),
+          _.createElement(_._, {
+            strDropDownClassName: _.DropDownScroll,
+            rgOptions: _,
+            selectedOption: _ || "no-repeat",
+            onChange: (_) => __webpack_require__(_.data),
+            bDisableMouseOverlay: !0,
+            contextMenuPositionOptions: {
+              bDisableMouseOverlay: !0,
+            },
+          }),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { model: _, fnOnDirty: __webpack_require__ } = _,
+          [_, _] = (0, _._)(() => [
+            _.sale_background_color,
+            _.sale_background_repeat,
+          ]),
+          [_, _] = _.useState(null == _);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().FlexRowContainer, _().BackgroundConfigCtn),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#Sale_Section_Background_Color"),
+            ),
+            _.createElement(
+              _._,
+              {
+                className: _().BackgroundColorBtn,
+                onClick: (_) => {
+                  (0, _._)(
+                    _.createElement(_._, {
+                      color: _,
+                      onChange: (_) => {
+                        (_.sale_background_color = _), __webpack_require__();
+                      },
+                    }),
+                    _,
+                    {
+                      bDisablePopTop: !0,
+                    },
+                  );
+                },
+                style: {
+                  backgroundColor: _,
+                },
+              },
+              (0, _._)("#Sale_BackgroundColor"),
+            ),
+            Boolean(_._.is_support) &&
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _().ValveOnlyBackground,
+                    _().SaleEditorSpacing,
+                  ),
+                },
+                _.createElement(_._, {
+                  label: "No Background color?",
+                  checked: _,
+                  onChange: (_) => {
+                    _(_),
+                      _ &&
+                        ((_.sale_background_color = void 0),
+                        __webpack_require__());
+                  },
+                }),
+              ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(_, {
+              setting: _,
+              fnUpdateSetting: (_) => {
+                _.sale_background_repeat != _ &&
+                  ((_.sale_background_repeat = _), __webpack_require__());
+              },
+            }),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            strArrowColor: _,
+            fnUpdateArrowColor: __webpack_require__,
+            arrowStyle: _,
+          } = _,
+          [_, _] = _.useState(null == _);
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              className: _().BackgroundColorBtn,
+              onClick: (_) => {
+                (0, _._)(
+                  _.createElement(_._, {
+                    color: _,
+                    onChange: __webpack_require__,
+                  }),
+                  _,
+                  {
+                    bDisablePopTop: !0,
+                  },
+                );
+              },
+            },
+            _.createElement(_._, {
+              direction: "left",
+              arrowFill: _,
+              arrowStyle: _,
+            }),
+            (0, _._)("#EventEditor_BG_Arrow_Color"),
+            _.createElement(_._, {
+              tooltip: (0, _._)("#EventEditor_BG_Arrow_Color_ttip"),
+            }),
+            _.createElement(_._, {
+              direction: "right",
+              arrowFill: _,
+              arrowStyle: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const {
+          label: _,
+          fnUpdateColor: __webpack_require__,
+          strColorToChange: _,
+        } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              className: _().BackgroundColorBtn,
+              onClick: (_) => {
+                (0, _._)(
+                  _.createElement(_._, {
+                    color: _,
+                    onChange: __webpack_require__,
+                  }),
+                  _,
+                  {
+                    bDisablePopTop: !0,
+                  },
+                );
+              },
+            },
+            _,
+            _.createElement(_._, {
+              tooltip: (0, _._)("#EventEditor_BG_Arrow_Color_ttip"),
+            }),
+            _.createElement(_._, {
+              ..._,
+              bIsActive: !1,
+            }),
+            _.createElement(_._, {
+              ..._,
+              bIsActive: !0,
+            }),
+            _.createElement(_._, {
+              ..._,
+              bIsActive: !1,
+            }),
+            _.createElement(_._, {
+              ..._,
+              bIsActive: !1,
+            }),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            ..._,
+          }),
+          _.createElement(_, {
+            ..._,
+          }),
+        );
+      }
+      function _(_) {
+        const { model: _, fnOnDirty: __webpack_require__ } = _,
+          [_, _] = (0, _._)(() => [
+            _.sale_carousel_arrow_color,
+            _.sale_carousel_arrow_style || _._.k_ECutArrowStyle,
+          ]),
+          _ = (0, _.useMemo)(() => {
+            const _ = [];
+            return (
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_CutArrowStyles"),
+                data: _._.k_ECutArrowStyle,
+              }),
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_DoubleArrowStyles"),
+                data: _._.k_EDoubleArrowStyle,
+              }),
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_ChevronStyles"),
+                data: _._.k_EThickChevron,
+              }),
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_FlatArrowStyles"),
+                data: _._.k_EFilledArrow,
+              }),
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_PointyArrowStyles"),
+                data: _._.k_EPointyArrow,
+              }),
+              _
+            );
+          }, []);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().FlexRowContainer, _().BackgroundConfigCtn),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#Sale_Section_Carousel_Colors"),
+            ),
+            _.createElement(_, {
+              strArrowColor: _,
+              arrowStyle: _,
+              fnUpdateArrowColor: (_) => {
+                _.sale_carousel_arrow_color != _ &&
+                  ((_.sale_carousel_arrow_color = _), __webpack_require__());
+              },
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#Sale_Section_Carousel_ArrowStyles"),
+            ),
+            _.createElement(_._, {
+              strDropDownClassName: _().DropDownScroll,
+              rgOptions: _,
+              selectedOption: _,
+              onChange: (_) => {
+                _.sale_carousel_arrow_style != _.data &&
+                  ((_.sale_carousel_arrow_style = _.data),
+                  __webpack_require__());
+              },
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
+              },
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { model: _, fnOnDirty: __webpack_require__ } = _,
+          [_, _, _] = (0, _._)(() => [
+            _.sale_carousel_breadcrumb_color,
+            _.sale_carousel_active_breadcrumb_color,
+            _.sale_carousel_breadcrumb_style || _._.k_EPillCrumb,
+          ]),
+          _ = (0, _.useMemo)(() => {
+            const _ = [];
+            return (
+              _.push({
+                label: (0, _._)("#Sale_Section_Carousel_BreadCrumb_PillStyles"),
+                data: _._.k_EPillCrumb,
+              }),
+              _.push({
+                label: (0, _._)(
+                  "#Sale_Section_Carousel_BreadCrumb_CircularStyles",
+                ),
+                data: _._.k_ECircularCrumb,
+              }),
+              _.push({
+                label: (0, _._)(
+                  "#Sale_Section_Carousel_BreadCrumb_SquareStyles",
+                ),
+                data: _._.k_ESquareCrumb,
+              }),
+              _
+            );
+          }, []);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().FlexRowContainer, _().BackgroundConfigCtn),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#Sale_Section_Carousel_BreadCrumb"),
+            ),
+            _.createElement(_, {
+              label: (0, _._)("#Sale_Section_Carousel_BreadCrumb_Color"),
+              strColorToChange: _,
+              breadcrumbColor: _,
+              breadcrumbActiveColor: _,
+              breadcrumbStyle: _,
+              fnUpdateColor: (_) => {
+                _.sale_carousel_breadcrumb_color != _ &&
+                  ((_.sale_carousel_breadcrumb_color = _),
+                  __webpack_require__());
+              },
+            }),
+            _.createElement(_, {
+              label: (0, _._)("#Sale_Section_Carousel_ActiveBreadCrumb_Color"),
+              strColorToChange: _,
+              breadcrumbColor: _,
+              breadcrumbActiveColor: _,
+              breadcrumbStyle: _,
+              fnUpdateColor: (_) => {
+                _.sale_carousel_active_breadcrumb_color != _ &&
+                  ((_.sale_carousel_active_breadcrumb_color = _),
+                  __webpack_require__());
+              },
+            }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#Sale_Section_Carousel_BreadCrumbStyles"),
+            ),
+            _.createElement(_._, {
+              strDropDownClassName: _().DropDownScroll,
+              rgOptions: _,
+              selectedOption: _,
+              onChange: (_) => {
+                _.sale_carousel_breadcrumb_style != _.data &&
+                  ((_.sale_carousel_breadcrumb_style = _.data),
+                  __webpack_require__());
+              },
+              bDisableMouseOverlay: !0,
+              contextMenuPositionOptions: {
+                bDisableMouseOverlay: !0,
+              },
+            }),
+          ),
+        );
+      }
       function _(_) {
         const {
             gidClanEvent: _,
             rgArtworkToDisplay: __webpack_require__,
             promotionPlanID: _,
             clanAccountID: _,
+            bShowInternalControls: _,
           } = _,
           _ = _(_, _);
         return _
@@ -56571,6 +57073,10 @@
                     {
                       className: _().LeftCol,
                     },
+                    _ &&
+                      _.createElement(_, {
+                        oSaleAssetEdit: _,
+                      }),
                     _.createElement(_, {
                       oSaleAssetEdit: _,
                       rgArtworkToDisplay: __webpack_require__,
@@ -56590,6 +57096,21 @@
               position: "center",
               string: (0, _._)("#Loading"),
             });
+      }
+      function _(_) {
+        const { oSaleAssetEdit: _ } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(_, {
+            model: _.GetModel().jsondata,
+            fnOnDirty: () => _.SetDirty(!0),
+          }),
+          _.createElement(_, {
+            model: _.GetModel().jsondata,
+            fnOnDirty: () => _.SetDirty(!0),
+          }),
+        );
       }
       function _(_) {
         const { oSaleAssetEdit: _, rgArtworkToDisplay: __webpack_require__ } =
@@ -56796,18 +57317,19 @@
       function _(_) {
         const { oSaleAssetEdit: _ } = _,
           { fnSaveSaleAssets: __webpack_require__ } = (0, _._)(),
-          [_, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _] = (0, _._)(() => [
             _.BIsDirty(),
             _.GetGID(),
             _.GetClanAccountID(),
             _.GetAssetModel(),
+            _.GetPageStylesModel(),
           ]);
         return _.createElement(_, {
           bIsDirty: _,
           fnOnRevert: () => _.RevertChanges(),
           bSaveDisabled: !1,
           fnOnSave: async () => {
-            const _ = await __webpack_require__(_, _, _);
+            const _ = await __webpack_require__(_, _, _, _);
             return _ && _.Reset(_._.GetClanEventModel(_)), _;
           },
         });
@@ -57580,6 +58102,59 @@
           _
         );
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+          label: _,
+          colorString: __webpack_require__,
+          fnOnSetColor: _,
+        } = _;
+        return _.createElement(
+          "div",
+          {
+            className: _().colorRow,
+          },
+          _.createElement(_._, {
+            type: "text",
+            className: _().colorInput,
+            disabled: !0,
+            value: __webpack_require__,
+            onChange: (_) => _(_.currentTarget.value),
+            label: _,
+            placeholder: "255,255,255",
+          }),
+          _.createElement(
+            _._,
+            {
+              className: _().updateBtn,
+              onClick: (_) => {
+                (0, _._)(
+                  _.createElement(_._, {
+                    color: __webpack_require__,
+                    onChange: (_) =>
+                      _(
+                        (function (_) {
+                          const _ = _.match(
+                            /rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/,
+                          );
+                          if (!_) throw new Error(`Invalid rgba format: ${_}`);
+                          const [, __webpack_require__, _, _] = _;
+                          return `${__webpack_require__},${_},${_}`;
+                        })(_),
+                      ),
+                  }),
+                  _,
+                  {
+                    bDisablePopTop: !0,
+                  },
+                );
+              },
+            },
+            "Update",
+          ),
+        );
+      }
       function _(_) {
         const {
             bShowInternalControls: _,
@@ -57714,19 +58289,15 @@
             null,
             "Set the background RGB color that extends past the width of the image. A valid format would look like '0,0,0' (without the quotes) for black. Set each to the same value to use one solid background color.",
           ),
-          _.createElement(_._, {
-            type: "text",
-            value: _,
-            onChange: (_) => _.SetColorLeft(_.currentTarget.value),
+          _.createElement(_, {
+            colorString: _,
             label: "Left Background Color",
-            placeholder: "255,255,255",
+            fnOnSetColor: (_) => _.SetColorLeft(_),
           }),
-          _.createElement(_._, {
-            type: "text",
-            value: _,
-            onChange: (_) => _.SetColorRight(_.currentTarget.value),
+          _.createElement(_, {
+            colorString: _,
             label: "Right Background Color",
-            placeholder: "255,255,255",
+            fnOnSetColor: (_) => _.SetColorRight(_),
           }),
         );
       }
@@ -59442,6 +60013,7 @@
               artworkType: "sale_header",
               clanAccountID: _.GetSaleClanAccountID(),
               gidClanEvent: _.GetSaleClanEventGID(),
+              bShowInternalControls: _,
               promotionPlanID: _.GetID(),
             }),
           _.BHasAdvertisingAppID() &&
@@ -59613,6 +60185,7 @@
               rgType: _._,
               component: () =>
                 _.createElement(_, {
+                  bShowInternalControls: _,
                   gidClanEvent: __webpack_require__,
                   rgArtworkToDisplay: _,
                   promotionPlanID: _,

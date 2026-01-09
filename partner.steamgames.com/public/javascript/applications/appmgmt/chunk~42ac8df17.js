@@ -12189,31 +12189,37 @@
           }
           return a;
         }
-        async SavePartnerEventSaleAssets(e, t, r) {
-          let a = null;
+        async SavePartnerEventSaleAssets(e, t, r, a) {
+          let n = null;
           if (!this.m_mapExistingEvents.has(t)) return !1;
           try {
-            const n = `${h.TS.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
-              s = new FormData();
-            s.append("sessionid", h.TS.SESSIONID),
-              s.append("gidclanevent", t),
-              s.append("json", JSON.stringify(r));
-            const o = await i().post(n, s, { withCredentials: !0 });
-            if (1 == o?.data?.success) {
+            const s = `${h.TS.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
+              o = new FormData();
+            o.append("sessionid", h.TS.SESSIONID),
+              o.append("gidclanevent", t),
+              o.append("json", JSON.stringify(r)),
+              o.append("pageStyles", JSON.stringify(a));
+            const l = await i().post(s, o, { withCredentials: !0 });
+            if (1 == l?.data?.success) {
               const e = this.m_mapExistingEvents.get(t);
-              for (const t in r)
-                r.hasOwnProperty(t) && r[t] && (e.jsondata[t] = r[t]);
+              if (e && e.jsondata)
+                for (const t in r)
+                  if (r.hasOwnProperty(t) && r[t]) {
+                    const a = t,
+                      n = r[a];
+                    void 0 !== n && void 0 !== a && (e.jsondata[a] = n);
+                  }
               return this.GetPartnerEventChangeCallback(t).Dispatch(e), !0;
             }
-            a = (0, p.H)(o);
+            n = (0, p.H)(l);
           } catch (e) {
-            a = (0, p.H)(e);
+            n = (0, p.H)(e);
           }
           return (
             console.error(
               "CPartnerEventStore.SavePartnerEventSaleAssets failed: " +
-                a?.strErrorMsg,
-              a,
+                n?.strErrorMsg,
+              n,
             ),
             !1
           );
