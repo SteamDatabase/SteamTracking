@@ -4374,14 +4374,6 @@ enum UnnamedEnum832449b80e67603d
 	inlineCompletionsAccessibilityVerbose = 150;
 }
 
-enum UnnamedEnum83e8cb94545d96a9
-{
-	ReadyToPair = 0;
-	PairingSuccessful = 1;
-	PairingFailed = 2;
-	NoDevices = 3;
-}
-
 enum UnnamedEnum8464db862b909b82
 {
 	LeagueSelect = 0;
@@ -5305,6 +5297,12 @@ enum UnnamedEnumcf102e4532afeb1d
 	CountDown = 0;
 	Calibrating = 1;
 	Complete_Success = 2;
+}
+
+enum UnnamedEnumd129cf629ce3d8c0
+{
+	ReadyToPair = 0;
+	NoDevices = 1;
 }
 
 enum UnnamedEnumd2a1463c68084b87

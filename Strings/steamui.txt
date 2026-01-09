@@ -4299,6 +4299,12 @@ ${LANGUAGE}
 *W\n\fEVideoFormat
 *Xv\v%Wy
 *Z16InitializeChromeP21IHTMLChromeController7EUIModeEUlRK10StringViewE_
+*Z18BDeleteRegistryKey11ERegKeyRoot10StringViewEUlS_E_
+*Z20BDeleteRegistryValue11ERegKeyRoot10StringViewS0_EUlS_E_
+*Z20BSetRegistryValueBin11ERegKeyRoot10StringViewS0_PKhjEUlS_E_
+*Z20BSetRegistryValueStr11ERegKeyRoot10StringViewS0_S0_EUlS_E_
+*Z21BSetRegistryValueUint11ERegKeyRoot10StringViewS0_jEUlS_E_
+*Z23BSetRegistryValueUint6411ERegKeyRoot10StringViewS0_yEUlS_E_
 *Z25GetUserAchievementsForApp7CGameID8CSteamID9CSmartPtrI18CJSCallbackPromiseEEUlP19UserStatsReceived_tbS3_E_
 *ZL24YldGetBrowserProcessInfovEUlPK27CMsgProcessInfoNotificationE_
 *ZL27toggle_idle_suspend_inhibitPvR9ConParamsR10ConCommandEUlvE_
@@ -4322,6 +4328,7 @@ ${LANGUAGE}
 *ZN14CLEDController10InitializeEvEUlRK33CLEDManager_SetBrightness_RequestR34CLEDManager_SetBrightness_ResponseE4_
 *ZN14CLEDController23RequestEnumerateDevicesEvEUlvE_
 *ZN15CSteamOSManager27OnControllerActionTriggeredEP27ControllerActionTriggered_tEUlvE_
+*ZN15CSteamOSManager32OnScreenReaderInterfaceConnectedEvEUlvE_
 *ZN15CWebUITransport16StartHealthCheckEvEUlvE_
 *ZN15CWebUITransport23ThreadedRequestShutdownEvEUlvE_
 *ZN15CWebUITransport29ThreadedBroadcastNotificationEPKcRN6google8protobuf11MessageLiteEEUlvE_
@@ -6568,7 +6575,6 @@ ${LANGUAGE}
 /data/src/common/audio/audio_utils.cpp
 /data/src/common/callbacklist.h
 /data/src/common/childprocessquery.cpp
-/data/src/common/clientregkeys.cpp
 /data/src/common/clipboardhelpers.cpp
 /data/src/common/commonkeycode.cpp
 /data/src/common/completionportmanager.cpp
@@ -6820,9 +6826,9 @@ ${LANGUAGE}
 /data/src/steamUI/serverbrowsercontroller.cpp
 /data/src/steamUI/settinghandler.cpp
 /data/src/steamUI/settingscontroller.cpp
-/data/src/steamUI/settingscontroller.cpp:1531
-/data/src/steamUI/settingscontroller.cpp:1552
-/data/src/steamUI/settingscontroller.cpp:2595
+/data/src/steamUI/settingscontroller.cpp:1529
+/data/src/steamUI/settingscontroller.cpp:1550
+/data/src/steamUI/settingscontroller.cpp:2593
 /data/src/steamUI/settingscontroller.h
 /data/src/steamUI/settingsprofilemanager.cpp
 /data/src/steamUI/sharedconnectioncontroller.cpp
@@ -6831,7 +6837,7 @@ ${LANGUAGE}
 /data/src/steamUI/startupmodemanager.cpp
 /data/src/steamUI/steamoscontroller.cpp
 /data/src/steamUI/steamosmanager.cpp
-/data/src/steamUI/steamosmanager.cpp:588
+/data/src/steamUI/steamosmanager.cpp:592
 /data/src/steamUI/steamuiapicallhelpers.h
 /data/src/steamUI/steamuiappcontroller.cpp
 /data/src/steamUI/steamuibetacontroller.cpp
@@ -7132,11 +7138,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
-00:00:00
-01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -8660,7 +8666,6 @@ ${LANGUAGE}
 16IDynamicFunction
 16IStreamTransport
 16ITCPHostCallback
-16IX11EventHandler
 16InterfaceMapBaseI18IRegistryInterfaceE
 16InterfaceMapBaseI19IClientInstallUtilsE
 16InterfaceMapBaseI20IClientModuleManagerE
@@ -12202,7 +12207,7 @@ ${LANGUAGE}
 59ChatRoomClient_NotifyChatGroupUserStateChanged_Notification
 5Cloud
 5EPX_f
-5FSoftware\Valve\Steam
+5F16IX11EventHandler
 5Itc
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 5O Z
@@ -16829,6 +16834,7 @@ CSteamGamesUIModule::LoadSteamClient
 CSteamOSControllerLinux::OnClientLanguageChanged
 CSteamOSControllerLinux::YldInit
 CSteamOSManager::OnControllerActionTriggered
+CSteamOSManager::OnScreenReaderInterfaceConnected
 CSteamOSManager::YldProcessControllerAction
 CSteamOSManagerLegacy: using session bus
 CSteamOSManagerLegacy: using system bus
@@ -18471,7 +18477,6 @@ Deaccel
 Debit Card (Nodwin)
 Debug
 DebugStatsSystem
-Dec 31 2025 00:45:04
 December
 Decipher Only
 Deckard
@@ -19970,7 +19975,6 @@ Failed to launch executable %s\n
 Failed to load "%s"
 Failed to load SteamUI localization file.\n
 Failed to load config
-Failed to load custom launcher localization file.\n
 Failed to load local steam service module
 Failed to load menu file %s\n
 Failed to load optional module %s\n
@@ -20188,6 +20192,7 @@ ForceQuit
 ForceUpdate
 Forced Off
 Forced create but already created for SharedObjectEvent\n
+Forcing screen reader to focus mode on startup
 Forget
 Format
 FormatCurrencyUTF8
@@ -22840,6 +22845,7 @@ J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 J\nHBF
 J\n\tsummaries
 J\rS%H
+Jan  8 2026 21:48:58
 January
 Japanese
 Javanese
@@ -39310,7 +39316,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen\n
+ggenr
 ghost_
 gidlist
 gidparentcomment
@@ -49345,7 +49351,6 @@ pchData
 pchEncodedData
 pchFaqName && pchFaqName[ 0 ]
 pchInput
-pchKey
 pchMsg
 pchName
 pchQueryString[0] == '?'
@@ -49434,7 +49439,6 @@ pcubDecodedData
 pcubEncryptedData
 pcubPlaintextData
 pcubSignature
-pcubValue
 peer
 peer did not return a certificate
 peer does not accept heartbeats
@@ -50012,7 +50016,6 @@ pubPktSend
 pubPlaintextData
 pubSignature
 pubTextureData
-pubValue
 pubValue || !*pcubValue
 pub_key
 pubkey
@@ -50046,7 +50049,6 @@ publishedfileids
 publisher/
 publisher_group_id
 pulContext
-punValue
 punct
 purchase
 purchase_option_name

@@ -416,6 +416,12 @@ $\nY8O
 *N6google8protobuf12_GLOBAL__N_123StringBaseTextGeneratorE
 *N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
+*Z18BDeleteRegistryKey11ERegKeyRoot10StringViewEUlS_E_
+*Z20BDeleteRegistryValue11ERegKeyRoot10StringViewS0_EUlS_E_
+*Z20BSetRegistryValueBin11ERegKeyRoot10StringViewS0_PKhjEUlS_E_
+*Z20BSetRegistryValueStr11ERegKeyRoot10StringViewS0_S0_EUlS_E_
+*Z21BSetRegistryValueUint11ERegKeyRoot10StringViewS0_jEUlS_E_
+*Z23BSetRegistryValueUint6411ERegKeyRoot10StringViewS0_yEUlS_E_
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN18CSerializedSurfaceC4EvEUlvE_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
@@ -3032,7 +3038,6 @@ WARNING: using plain reboot other\n
 WARNING: using plain set-hostname\n
 WARNING: using plain set-timezone\n
 WARNING: using plain steamos-update\n
-WEKO
 WIN32
 WIN64
 WIN7

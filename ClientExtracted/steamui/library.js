@@ -1,4 +1,4 @@
-var CLSTAMP = "10339929";
+var CLSTAMP = "10352188";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1781,7 +1781,8 @@ var CLSTAMP = "10339929";
             (e[(e.REAR_RIGHT_UPPER = 25)] = "REAR_RIGHT_UPPER"),
             (e[(e.REAR_RIGHT_LOWER = 26)] = "REAR_RIGHT_LOWER"),
             (e[(e.STEAM_GUIDE = 27)] = "STEAM_GUIDE"),
-            (e[(e.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU");
+            (e[(e.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU"),
+            (e[(e.DUMMY_INPUT = 29)] = "DUMMY_INPUT");
         })(i || (i = {})),
           (function (e) {
             (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
@@ -11490,9 +11491,9 @@ var CLSTAMP = "10339929";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Dec 29 2025 : 15:51:32",
-                BUILD_TIME_UTC: "Dec 29 2025 : 23:51:32",
-                BUILD_RTIME_UTC: 1767052292,
+                BUILD_TIME_LOCAL: "Jan 8 2026 : 08:58:38",
+                BUILD_TIME_UTC: "Jan 8 2026 : 16:58:38",
+                BUILD_RTIME_UTC: 1767891518,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -25181,9 +25182,9 @@ var CLSTAMP = "10339929";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Dec 29 2025 : 15:51:32",
-                    BUILD_TIME_UTC: "Dec 29 2025 : 23:51:32",
-                    BUILD_RTIME_UTC: 1767052292,
+                    BUILD_TIME_LOCAL: "Jan 8 2026 : 08:58:38",
+                    BUILD_TIME_UTC: "Jan 8 2026 : 16:58:38",
+                    BUILD_RTIME_UTC: 1767891518,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25798,7 +25799,7 @@ var CLSTAMP = "10339929";
         3350: "25be1c0cde58ecd53fec",
         3366: "049be15e2923de61326d",
         3473: "aa2e2c813e7588319881",
-        3569: "b7ce2107f557b4d1eb65",
+        3569: "0650782991cb857e4a06",
         3583: "f831ab7edbd9ffa591ac",
         3594: "d140b99546df0569f2ca",
         3714: "1c32411f9644bb684e2b",
@@ -25919,7 +25920,7 @@ var CLSTAMP = "10339929";
         9711: "2ed989ee7251a5d19c6f",
         9746: "02bbf44c33adfc258656",
         9779: "59ef76674166d4b9e52e",
-        9858: "0776ba6a6e0b8a6977af",
+        9858: "5d5d07bfc7c2e302a77d",
         9869: "0f5bcdc9b2a986acf0cb",
         9882: "637dab49993fdf9a1ce8",
         9887: "7cf35cb4b8f933215fb9",

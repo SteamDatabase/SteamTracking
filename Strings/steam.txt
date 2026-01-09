@@ -1280,6 +1280,12 @@ $ffn
 *N6google8protobuf12_GLOBAL__N_123StringBaseTextGeneratorE
 *N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
+*Z18BDeleteRegistryKey11ERegKeyRoot10StringViewEUlS_E_
+*Z20BDeleteRegistryValue11ERegKeyRoot10StringViewS0_EUlS_E_
+*Z20BSetRegistryValueBin11ERegKeyRoot10StringViewS0_PKhjEUlS_E_
+*Z20BSetRegistryValueStr11ERegKeyRoot10StringViewS0_S0_EUlS_E_
+*Z21BSetRegistryValueUint11ERegKeyRoot10StringViewS0_jEUlS_E_
+*Z23BSetRegistryValueUint6411ERegKeyRoot10StringViewS0_yEUlS_E_
 *ZN4CNet26CallbackDeleteOnCompletionEvE39CUnbufferedSendCallbackDeleteOnComplete
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
@@ -1696,7 +1702,6 @@ $ffn
 /bin/sh
 /client/
 /data/src/common/clientdirectories.h
-/data/src/common/clientregkeys.cpp
 /data/src/common/clientupdatehostscache.cpp
 /data/src/common/completionportmanager.cpp
 /data/src/common/completionportmanager_posix.cpp
@@ -1909,13 +1914,11 @@ $ffn
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:42:44
-00:43:35
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -1924,6 +1927,7 @@ $ffn
 0?0L
 0A/8
 0F`8
+0MV'
 0Ntl
 0Z@q
 0\n+k_EMsgAMClientRemoveFriendFromGroupResponse
@@ -2227,6 +2231,7 @@ $ffn
 11CWorkThread
 11IFileSystem
 11M|
+123456789
 127.0.0.1
 12CAddressInfo
 12CAutoReleaseI14CMetricsStringE
@@ -2300,6 +2305,7 @@ $ffn
 14ConCommandBase
 14ISSLConnection
 1536
+15000
 15CBaseFileSystem
 15CChatMemberInfo
 15CEC25519KeyBase
@@ -2350,6 +2356,8 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
+18000000
+18446744073709551615
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -2419,10 +2427,6 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
-15000
-18000000
-123456789
-18446744073709551615
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2437,6 +2441,8 @@ $ffn
 20CWorkItemSetFileSize
 20IHTTPRedirectHandler
 20IUniformRandomStream
+21:48:43
+21:48:50
 21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
@@ -2569,7 +2575,6 @@ $ffn
 384:H\n
 38CClientMetrics_ClientBootstrap_Summary
 38CWorkItemNetEncryptionHandshakeEncrypt
-38D&
 3Cn(
 3DES
 3DES(168)
@@ -5073,7 +5078,6 @@ Days
 DcO/lcK+hSK
 Debit Card (Nodwin)
 Debug
-Dec 31 2025
 December
 Decipher Only
 Deckard
@@ -6612,6 +6616,7 @@ JSType
 JZJ{.
 J\nHBF
 J\rS%H
+Jan  8 2026
 January
 Japanese
 Job %llu (%s) aborting.  %s\n
@@ -8899,7 +8904,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Dec 31 2025 00:43:34
+Startup - updater built Jan  8 2026 21:48:50
 State
 StaticFileWriterThread()
 Steam
@@ -13200,7 +13205,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen\n
+ggen
 givenName
 glBegin
 glBindTexture
@@ -17091,7 +17096,6 @@ pchEncodedData
 pchFileName
 pchHaystack != NULL
 pchInput
-pchKey
 pchMsg
 pchName
 pchNeedle != NULL
@@ -17104,7 +17108,6 @@ pcubDecodedData
 pcubEncryptedData
 pcubPlaintextData
 pcubSignature
-pcubValue
 peer
 peer did not return a certificate
 peer does not accept heartbeats
@@ -17468,7 +17471,6 @@ pubMsgStart >= pubCurrent
 pubPktSend
 pubPlaintextData
 pubSignature
-pubValue
 pubValue || !*pcubValue
 pub_key
 pubkey
@@ -17485,7 +17487,6 @@ public_key
 publish
 publisher_group_id
 pulContext
-punValue
 punct
 purchase
 pure virtual method called\n

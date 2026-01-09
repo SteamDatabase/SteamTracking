@@ -666,6 +666,12 @@ $\nY8O
 *N6google8protobuf12_GLOBAL__N_123StringBaseTextGeneratorE
 *N6google8protobuf12_GLOBAL__N_124FieldValuePrinterWrapperE
 *N6google8protobuf12_GLOBAL__N_133FastFieldValuePrinterUtf8EscapingE
+*Z18BDeleteRegistryKey11ERegKeyRoot10StringViewEUlS_E_
+*Z20BDeleteRegistryValue11ERegKeyRoot10StringViewS0_EUlS_E_
+*Z20BSetRegistryValueBin11ERegKeyRoot10StringViewS0_PKhjEUlS_E_
+*Z20BSetRegistryValueStr11ERegKeyRoot10StringViewS0_S0_EUlS_E_
+*Z21BSetRegistryValueUint11ERegKeyRoot10StringViewS0_jEUlS_E_
+*Z23BSetRegistryValueUint6411ERegKeyRoot10StringViewS0_yEUlS_E_
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN17CScreenshotThread3RunEvEUlP10CUtlBufferiiE_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
@@ -1038,7 +1044,6 @@ $\nY8O
 0000000000000000000000000000000000000000
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-00:43:38
 01/01/00
 0123456789
 0123456789ABCDEF
@@ -1500,6 +1505,7 @@ $\nY8O
 20CRefCountServiceBaseILb1E6CRefMTE
 20HTMLFramelessWrapper
 20IJSMethodCallHandler
+21:48:55
 21CClanAnnouncementInfo
 21CHTMLPageSecurityInfo
 21CMsgBrowserSetMinSize
@@ -2822,7 +2828,6 @@ Data Exploit
 Deaccel
 Debit Card (Nodwin)
 Debug
-Dec 31 2025
 December
 Deckard
 Default
@@ -3855,6 +3860,7 @@ JSObjectProperty
 JSType
 JZJ{.
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
+Jan  8 2026
 January
 Japanese
 Javanese
