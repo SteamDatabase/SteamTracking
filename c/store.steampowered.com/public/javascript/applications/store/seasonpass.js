@@ -105,6 +105,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return new _._(new _._(), 0);
@@ -124,7 +125,7 @@
                 ],
               ]),
               _,
-              __webpack_require__,
+              __webpack_require__ || 0,
             ),
           );
         return _.createElement(_.Fragment, null, _.ParseBBCode(_, {}, !0));
@@ -169,6 +170,7 @@
                     _.alt_text?.length > 0 &&
                     ("webm" === _.extension || "webm" === _.extension),
                 )?.alt_text,
+                _ = (0, _._)() || (0, _._)(),
                 _ = (_) => {
                   const _ = _.currentTarget;
                   _.paused ? _.play() : _.pause();
@@ -186,6 +188,7 @@
                   onClick: _,
                 },
                 _ &&
+                  !_ &&
                   _.createElement("source", {
                     src: _,
                     type: "video/webm",

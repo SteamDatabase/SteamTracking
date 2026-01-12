@@ -70243,8 +70243,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       let _ = !1,
+        _ = !1,
         _ = !1,
         _ = !1,
         _ = !1,
@@ -70252,6 +70254,9 @@
         _ = !1;
       function _() {
         return _ || _(), _ || _;
+      }
+      function _() {
+        return _ || _(), _;
       }
       function _() {
         return _ || _(), _;
@@ -70295,6 +70300,7 @@
         (_ = _("Valve Steam Tenfoot", "force_tenfoot_client_view")),
           (_ = _("Valve Steam GameOverlay", "force_overlay_view")),
           (_ = _ || _("Valve Steam Client", "force_client_view")),
+          (_ = _("macintosh", "force_mac_view")),
           (_ =
             _("iphone", "force_ios_view") ||
             _("ipad", "force_ios_view") ||

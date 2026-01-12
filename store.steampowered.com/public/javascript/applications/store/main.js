@@ -63543,29 +63543,34 @@
     79613: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $W: () => m,
-        Ae: () => u,
-        MP: () => d,
-        OO: () => g,
-        ho: () => c,
+        $W: () => g,
+        Ae: () => m,
+        MP: () => p,
+        OO: () => _,
+        Wr: () => d,
+        ho: () => u,
       });
       let i = !1,
         n = !1,
         s = !1,
         a = !1,
         o = !1,
-        l = !1;
-      function c() {
-        return i || _(), n || s;
-      }
+        l = !1,
+        c = !1;
       function u() {
-        return i || _(), l;
+        return i || f(), n || s;
       }
       function m() {
-        return u() || (i || _(), o);
+        return i || f(), l;
       }
       function d() {
-        if (!c()) return 0;
+        return i || f(), c;
+      }
+      function g() {
+        return m() || (i || f(), o);
+      }
+      function p() {
+        if (!u()) return 0;
         if ("undefined" != typeof navigator && navigator.userAgent) {
           let e = navigator.userAgent.match(
             /Valve Steam [^\/]*\/(?:[^/]*\/)?([0-9]+)/,
@@ -63574,12 +63579,12 @@
         }
         return 0;
       }
-      function g() {
+      function _() {
         if (!navigator?.userAgent) return;
         const e = navigator.userAgent.match(/Valve Steam ([^\/]*)\//);
         return e && 2 == e.length ? e[1] : void 0;
       }
-      function p(e, t) {
+      function h(e, t) {
         return (
           !!(
             window &&
@@ -63594,18 +63599,19 @@
           )
         );
       }
-      function _() {
+      function f() {
         let e = navigator,
           t = e && e.maxTouchPoints && e.maxTouchPoints > 1;
-        (a = p("Valve Steam Tenfoot", "force_tenfoot_client_view")),
-          (s = p("Valve Steam GameOverlay", "force_overlay_view")),
-          (n = a || p("Valve Steam Client", "force_client_view")),
+        (a = h("Valve Steam Tenfoot", "force_tenfoot_client_view")),
+          (s = h("Valve Steam GameOverlay", "force_overlay_view")),
+          (n = a || h("Valve Steam Client", "force_client_view")),
+          (c = h("macintosh", "force_mac_view")),
           (l =
-            p("iphone", "force_ios_view") ||
-            p("ipad", "force_ios_view") ||
-            p("ipod", "force_ios_view") ||
-            (p("macintosh", "force_ios_view") && t)),
-          (o = p("android", "force_android_view")),
+            h("iphone", "force_ios_view") ||
+            h("ipad", "force_ios_view") ||
+            h("ipod", "force_ios_view") ||
+            (h("macintosh", "force_ios_view") && t)),
+          (o = h("android", "force_android_view")),
           (i = !0);
       }
     },
