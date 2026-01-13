@@ -69314,13 +69314,13 @@
             );
       }
       const vn = n.memo(function (e) {
-        const { handle: t, name: r } = e,
+        const { handle: t, globalOnly: r } = e,
           { data: i } = (0, jr.ci)(),
           s = i?.get(t);
         return s
           ? n.createElement(
               Cn,
-              { href: `${te.TS.STORE_BASE_URL}${s.url_path}` },
+              { href: `${te.TS.STORE_BASE_URL}${s.url_path}`, globalOnly: r },
               s.display_name,
             )
           : null;
@@ -69382,13 +69382,19 @@
         return n.useContext(Fn).wide && !e;
       }
       function Wn(e) {
-        const { href: t, label: r = cr("#Menu_Popover_ViewAll") } = e;
-        return n.createElement(
-          Ce.Ii,
-          { className: mr()(e.className, hn.ViewAllLink), href: t },
-          r,
-          n.createElement(kn, null),
-        );
+        const {
+          href: t,
+          label: r = cr("#Menu_Popover_ViewAll"),
+          globalOnly: i = !1,
+        } = e;
+        return i && te.TS.EREALM == rn.TU.k_ESteamRealmChina
+          ? null
+          : n.createElement(
+              Ce.Ii,
+              { className: mr()(e.className, hn.ViewAllLink), href: t },
+              r,
+              n.createElement(kn, null),
+            );
       }
       function xn(e) {
         const {
@@ -69524,7 +69530,10 @@
           ),
           n.createElement(
             Cn,
-            { href: `${Zt.TS.STORE_BASE_URL}digitalgiftcards/` },
+            {
+              href: `${Zt.TS.STORE_BASE_URL}digitalgiftcards/`,
+              globalOnly: !0,
+            },
             n.createElement("div", null, cr("#Menu_Popover_GiftCards")),
           ),
         );
@@ -69796,7 +69805,7 @@
                     ),
                     n.createElement(
                       Cn,
-                      { href: `${Zt.TS.STORE_BASE_URL}charts` },
+                      { href: `${Zt.TS.STORE_BASE_URL}charts`, globalOnly: !0 },
                       n.createElement(
                         "div",
                         {
@@ -70229,6 +70238,7 @@
                     className: cs.TopAlign,
                     href: `${Zt.TS.STORE_BASE_URL}tag/browse/`,
                     label: cr("#Menu_Section_Categories_ViewAllTags"),
+                    globalOnly: !0,
                   }),
                 ),
               );
@@ -71031,8 +71041,8 @@
           n.createElement(vn, { handle: "earlyaccess" }),
           n.createElement(Rn, null),
           n.createElement(vn, { handle: "pccafe" }),
-          n.createElement(vn, { handle: "macos" }),
-          n.createElement(vn, { handle: "linux" }),
+          n.createElement(vn, { handle: "macos", globalOnly: !0 }),
+          n.createElement(vn, { handle: "linux", globalOnly: !0 }),
         );
       }
       function fa() {

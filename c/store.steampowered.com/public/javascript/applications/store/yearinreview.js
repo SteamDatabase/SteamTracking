@@ -12044,6 +12044,10 @@
           __webpack_require__
             ._("chunkid")
             .then(__webpack_require__._.bind(__webpack_require__, 64933, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 27503, 19))),
         (_.schinese = () =>
           __webpack_require__
             ._("chunkid")

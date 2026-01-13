@@ -4,24 +4,29 @@ import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
@@ -29,36 +34,31 @@ import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -142,6 +142,7 @@ var _ = "./cookies_polish-XXXXXXXX.json";
 var _ = "./cookies_portuguese-XXXXXXXX.json";
 var _ = "./cookies_romanian-XXXXXXXX.json";
 var _ = "./cookies_russian-XXXXXXXX.json";
+var _ = "./cookies_sc_schinese-XXXXXXXX.json";
 var _ = "./cookies_schinese-XXXXXXXX.json";
 var _ = "./cookies_spanish-XXXXXXXX.json";
 var _ = "./cookies_swedish-XXXXXXXX.json";
@@ -173,6 +174,7 @@ _.polish = _;
 _.portuguese = _;
 _.romanian = _;
 _.russian = _;
+_.sc_schinese = _;
 _.schinese = _;
 _.spanish = _;
 _.swedish = _;
@@ -3847,12 +3849,13 @@ function _(_) {
       });
 }
 var _ = _.default.memo(function (_) {
-  let { handle: _, name: _ } = _,
+  let { handle: _, globalOnly: _ } = _,
     { data: _ } = _(),
     _ = _?.get(_);
   return _
     ? (0, _.jsx)(_, {
         href: `${_.STORE_BASE_URL}${_.url_path}`,
+        globalOnly: _,
         children: _.display_name,
       })
     : null;
@@ -3927,12 +3930,18 @@ function _() {
   return _.default.useContext(_).wide && !_;
 }
 function _(_) {
-  let { href: _, label: _ = _("#Menu_Popover_ViewAll") } = _;
-  return (0, _.jsxs)(_, {
-    className: (0, _.default)(_.className, _),
+  let {
     href: _,
-    children: [_, (0, _.jsx)(_, {})],
-  });
+    label: _ = _("#Menu_Popover_ViewAll"),
+    globalOnly: _ = !1,
+  } = _;
+  return _ && _.EREALM == 2
+    ? null
+    : (0, _.jsxs)(_, {
+        className: (0, _.default)(_.className, _),
+        href: _,
+        children: [_, (0, _.jsx)(_, {})],
+      });
 }
 function _(_) {
   let {
@@ -4056,6 +4065,7 @@ function _() {
       }),
       (0, _.jsx)(_, {
         href: `${_.STORE_BASE_URL}digitalgiftcards/`,
+        globalOnly: !0,
         children: (0, _.jsx)("div", {
           children: _("#Menu_Popover_GiftCards"),
         }),
@@ -4290,6 +4300,7 @@ function _() {
                   }),
                   (0, _.jsx)(_, {
                     href: `${_.STORE_BASE_URL}charts`,
+                    globalOnly: !0,
                     children: (0, _.jsxs)("div", {
                       className: (0, _.default)(_, _),
                       children: [
@@ -4689,6 +4700,7 @@ var _ = _.default.memo(function () {
                   className: _,
                   href: `${_.STORE_BASE_URL}tag/browse/`,
                   label: _("#Menu_Section_Categories_ViewAllTags"),
+                  globalOnly: !0,
                 }),
               ],
             }),
@@ -5950,9 +5962,11 @@ function _() {
       }),
       (0, _.jsx)(_, {
         handle: "macos",
+        globalOnly: !0,
       }),
       (0, _.jsx)(_, {
         handle: "linux",
+        globalOnly: !0,
       }),
     ],
   });

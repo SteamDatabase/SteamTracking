@@ -10856,6 +10856,7 @@
         (Zt.portuguese = () => a.e(6865).then(a.t.bind(a, 96865, 19))),
         (Zt.romanian = () => a.e(1391).then(a.t.bind(a, 71391, 19))),
         (Zt.russian = () => a.e(4933).then(a.t.bind(a, 64933, 19))),
+        (Zt.sc_schinese = () => a.e(7503).then(a.t.bind(a, 27503, 19))),
         (Zt.schinese = () => a.e(4768).then(a.t.bind(a, 44768, 19))),
         (Zt.spanish = () => a.e(876).then(a.t.bind(a, 20876, 19))),
         (Zt.swedish = () => a.e(5181).then(a.t.bind(a, 75181, 19))),

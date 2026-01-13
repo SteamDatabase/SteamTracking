@@ -77136,7 +77136,7 @@
             );
       }
       const _ = _.memo(function (_) {
-        const { handle: _, name: __webpack_require__ } = _,
+        const { handle: _, globalOnly: __webpack_require__ } = _,
           { data: _ } = (0, _._)(),
           _ = _?.get(_);
         return _
@@ -77144,6 +77144,7 @@
               _,
               {
                 href: `${_._.STORE_BASE_URL}${_.url_path}`,
+                globalOnly: __webpack_require__,
               },
               _.display_name,
             )
@@ -77238,16 +77239,19 @@
         const {
           href: _,
           label: __webpack_require__ = _("#Menu_Popover_ViewAll"),
+          globalOnly: _ = !1,
         } = _;
-        return _.createElement(
-          _._,
-          {
-            className: _()(_.className, _.ViewAllLink),
-            href: _,
-          },
-          __webpack_require__,
-          _.createElement(_, null),
-        );
+        return _ && _._.EREALM == _._.k_ESteamRealmChina
+          ? null
+          : _.createElement(
+              _._,
+              {
+                className: _()(_.className, _.ViewAllLink),
+                href: _,
+              },
+              __webpack_require__,
+              _.createElement(_, null),
+            );
       }
       function _(_) {
         const {
@@ -77417,6 +77421,7 @@
             _,
             {
               href: `${_._.STORE_BASE_URL}digitalgiftcards/`,
+              globalOnly: !0,
             },
             _.createElement("div", null, _("#Menu_Popover_GiftCards")),
           ),
@@ -77771,6 +77776,7 @@
                       _,
                       {
                         href: `${_._.STORE_BASE_URL}charts`,
+                        globalOnly: !0,
                       },
                       _.createElement(
                         "div",
@@ -78401,6 +78407,7 @@
                     className: _.TopAlign,
                     href: `${_._.STORE_BASE_URL}tag/browse/`,
                     label: _("#Menu_Section_Categories_ViewAllTags"),
+                    globalOnly: !0,
                   }),
                 ),
               );
@@ -79475,9 +79482,11 @@
           }),
           _.createElement(_, {
             handle: "macos",
+            globalOnly: !0,
           }),
           _.createElement(_, {
             handle: "linux",
+            globalOnly: !0,
           }),
         );
       }
