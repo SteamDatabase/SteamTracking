@@ -28,6 +28,7 @@
         LineItemDetailsCtn: "_3GKl4T2MbvnGPvRzyXC5nQ",
         LineItemCol: "HhD4RK0A4phOlAwZQDckk",
         LineItemDetailsRow: "_1wLomHB2PWPNx7TsNYpdtm",
+        Text: "_2aGDkEAUaGvF4KHHZRRkEj",
         LineItemDetailsRowTop: "_1aXXp4afkXP3Ez03MjTY3D",
         LineItemSpaceBetween: "_3L6hUlrzXOezye2BqWz-T7",
         LineItemTitle: "EflKs0JjldhDSxbUBaiOp",
@@ -357,12 +358,12 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { flex: _, children: __webpack_require__, className: _ } = _;
+        const { text: _, children: __webpack_require__, className: _ } = _;
         return _.createElement(
           _._,
           {
             "flow-children": "row",
-            className: _()(_().LineItemDetailsRow, _ && _().FlexRow, _),
+            className: _()(_().LineItemDetailsRow, _ && _().Text, _),
           },
           __webpack_require__,
         );
@@ -412,7 +413,7 @@
         return _.createElement(
           _,
           {
-            flex: !0,
+            text: !0,
           },
           _.createElement(
             "div",
@@ -2000,7 +2001,6 @@
               _.createElement(
                 _._,
                 {
-                  flex: !0,
                   className: _().LineItemDetailsRowTop,
                 },
                 _.createElement(
@@ -2104,7 +2104,6 @@
                 _.createElement(
                   _._,
                   {
-                    flex: !0,
                     className: _().LineItemDetailsRowTop,
                   },
                   _.createElement(
@@ -2133,7 +2132,7 @@
                   }),
                 ),
                 _.createElement(_, {
-                  storeItem: _,
+                  validatedItem: _,
                 }),
                 _ &&
                   _.createElement(_, {
@@ -2524,56 +2523,52 @@
           ..._,
         });
       }
-      function _(_) {
-        const { storeItem: _ } = _,
-          [__webpack_require__, _] = _.useState([]);
-        return (
-          _.useEffect(() => {
-            if (2 == _.GetStoreItemType()) {
-              let _ = [];
-              _.GetIncludedAppIDs().forEach((_, _) => {
-                const _ = _._.Get().GetApp(_);
-                _ &&
-                  _.push(
-                    _.createElement(
-                      _,
-                      {
-                        key: _,
-                        appid: _,
-                      },
-                      _.createElement(
-                        _._,
-                        {
-                          item: _,
-                          feature: "bundle-contents",
-                          noImpressionTracking: !0,
-                        },
-                        _.GetName(),
-                      ),
-                      _ < _.GetIncludedAppIDs().length - 1 ? ", " : "",
-                    ),
-                  );
+      const _ = _.memo(function (_) {
+        const { validatedItem: _ } = _,
+          _ = _.included_packageids,
+          _ = (0, _._)(),
+          _ = (0, _._)({
+            queries: __webpack_require__.map((_) =>
+              (0, _._)(_, {
+                packageid: _,
               }),
-                _(_);
-            }
-          }, [_]),
-          __webpack_require__.length
-            ? _.createElement(
-                _._,
-                {
-                  flex: !0,
-                },
+            ),
+          }),
+          _ = [
+            ...new Set(
+              _.map((_) => _.data)
+                .filter(Boolean)
+                .flat(),
+            ),
+          ];
+        return _.length && 1 != _.length
+          ? _.createElement(
+              _._,
+              {
+                text: !0,
+              },
+              _.createElement(
+                "span",
+                null,
+                (0, _._)("#Cart_IncludesItems", _.length),
+                ":",
+                " ",
+              ),
+              _.map((_, _) =>
                 _.createElement(
-                  "span",
-                  null,
-                  (0, _._)("#Cart_IncludesItems", __webpack_require__.length),
-                  ": ",
+                  _.Fragment,
+                  {
+                    key: _,
+                  },
+                  _ > 0 && ", ",
+                  _.createElement(_, {
+                    appid: _,
+                  }),
                 ),
-                __webpack_require__,
-              )
-            : null
-        );
-      }
+              ),
+            )
+          : null;
+      });
       function _(_) {
         const { appids: _ } = _,
           _ = _.map((_, _) =>
@@ -2590,9 +2585,7 @@
           );
         return _.createElement(
           _._,
-          {
-            flex: !0,
-          },
+          null,
           _.createElement(
             "span",
             null,
@@ -2951,6 +2944,7 @@
           null,
           __webpack_require__,
           _ && _.createElement("sup", null, _),
+          " ",
           _.createElement(_, {
             rgAppIDs: _,
           }),
@@ -2987,7 +2981,7 @@
                 },
                 _.GetName(),
               ),
-              !__webpack_require__ && _.createElement(_.Fragment, null, ", "),
+              !__webpack_require__ && _.createElement(_.Fragment, null, ", "),
             )
           : null;
       }

@@ -1771,6 +1771,7 @@ html.touch ._3NbZqMjO0na446Hl2elpae ._1gTs9_O1m2-Sibih5GJ43d,
   justify-content: space-between;
   flex-basis: 76%;
   position: relative;
+  backdrop-filter: blur(10px);
 }
 .PZY_7wH_NY7OgzH9MBiB8 .oW0H1sBVE8K8u0qbq_Tm5 ._3lmdEmwrmqe-kicNCZ9v-I {
   cursor: auto;
@@ -3661,7 +3662,8 @@ html.touch
 }
 @container widget-container (500px < width < 800px) {
   .jQ5GanUKBEe7hhgCh6b5z ._1NM531LjOd5QmDktUetCOm {
-    max-height: 7vw;
+    width: 100%;
+    aspect-ratio: 20 / 2.2;
   }
 }
 .jQ5GanUKBEe7hhgCh6b5z

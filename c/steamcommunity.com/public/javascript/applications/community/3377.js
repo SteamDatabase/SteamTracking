@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "Знайдені результати: %1$s",
 	"Search_ListingsFound": "Знайдені пропозиції: %2$s",
 	"Search_ListingsFound_Plural": "Знайдені пропозиції: %2$s",
+	"SortBy_Default": "Популярність (стандартно)",
 	"SortBy_Name_Asc": "Назва (від А до Я)",
 	"SortBy_Name_Desc": "Назва (від Я до А)",
 	"SortBy_Price_Asc": "Ціна (за зростанням)",

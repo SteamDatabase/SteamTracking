@@ -561,6 +561,7 @@ strong {
   max-width: 1200px;
   margin: 0 auto;
   padding: 12px;
+  gap: 12px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

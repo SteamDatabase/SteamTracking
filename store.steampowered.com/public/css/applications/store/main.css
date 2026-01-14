@@ -1245,6 +1245,7 @@ b {
 ._3nYmf7ouiiC2Fb1BBu5Gra {
   display: flex;
   min-height: 34px;
+  gap: 12px;
 }
 .WfVzeWGwNKWJkHrZGYin4 .Ke5f13IVZVzYSmQVJgVyd {
   justify-content: center;
@@ -1277,7 +1278,6 @@ b {
 ._1FhZQ0qnT9Cg5iDVCM4kUM {
   min-width: 100px;
   padding: 4px 20px;
-  margin-left: 12px;
   border-radius: 3px;
   line-height: 26px;
   text-align: center;
@@ -4114,7 +4114,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   padding-bottom: calc(var(--gamepadui-current-footer-height, 0px) + 20px);
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-padding: 56px 0px 60px 0px;
+  scroll-padding: 250px 0px 60px 0px;
   flex-direction: column;
   padding-top: calc(24px + var(--basicui-header-height, 0px));
 }

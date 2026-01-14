@@ -36,6 +36,14 @@
     },
     chunkid: (module) => {
       module.exports = {
+        TitleSplit: "_7qZN_D3j8zauSVGraPezw",
+        ReorderButtons: "_3Kt9sOV54pFtE5sITKC1r5",
+        DisplayOrder: "_3YuVj2MWsdb9QrFB3N9hlZ",
+        selected: "_2CCVMaYC3rOJut0Gizh8Em",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         GridContainer: "_1SvTS_6dUSlT8S7Luqwvx9",
         Grid: "_2mnrnKcnpbatVwvcPd7qq0",
         GridRow: "_2p-sPnCQyUyMFRxQqtj17v",
@@ -67,8 +75,15 @@
         EditInternalTitleIcon: "lwhR25foQqUGcGjD5BVZ9",
         BackgroundCtn: "vp4LbmEgA82T_NL3UpisW",
         AddRowButton: "_10Ji9LIp00tU7iGCpprawK",
-        TitleSplit: "_1oHAcjEQduJfTZko8YNCPg",
-        ReorderButtons: "_1JlVyBNjaipBS1Bgu_ElW_",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Ctn: "_3X_GONfKsnse8GVVJ29-Lv",
+        TopToolbar: "_3Nl-qpL5WtXjrvcbWjHDnU",
+        RightToolBar: "_1u7c4WHAKHJv4ZdgkmBc4F",
+        MediaLayoutPickerCtn: "V6wdbmQ74y50Mec6qmrXb",
+        SelectedDisplay: "vlMxzx-icWidj5u8gIOq-",
       };
     },
     chunkid: (module) => {
@@ -24242,22 +24257,34 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         const {
             rgMediaRows: _,
             fnUpdateMediaRows: __webpack_require__,
             className: _,
+            bShowAsCarousel: _,
           } = _,
           [_, _] = (0, _.useState)([]),
-          [_, _, _] = (0, _._)(!1);
+          [_, _, _] = (0, _._)(!1),
+          _ = (0, _._)(
+            _
+              ? "#Template_Section_Reorder_Pages_ttip"
+              : "#Template_Section_Reorder_Rows_ttip",
+          ),
+          _ = (0, _._)(
+            _
+              ? "#Template_Section_Reorder_Pages"
+              : "#Template_Section_Reorder_Rows",
+          );
         return _.createElement(
           _.Fragment,
           null,
           _.createElement(
             _._,
             {
-              toolTipContent: (0, _._)("#Template_Section_Reorder_Rows_ttip"),
+              toolTipContent: _,
             },
             _.createElement(
               _._,
@@ -24275,7 +24302,7 @@
                     _();
                 },
               },
-              (0, _._)("#Template_Section_Reorder_Rows"),
+              _,
             ),
           ),
           _.createElement(
@@ -24286,8 +24313,8 @@
             _.createElement(
               _._,
               {
-                strTitle: (0, _._)("#Template_Section_Reorder_Rows"),
-                strDescription: (0, _._)("#Template_Section_Reorder_Rows_ttip"),
+                strTitle: _,
+                strDescription: _,
                 closeModal: _,
                 onOK: () => {
                   _.every((_, _) => _ === _) ||
@@ -24373,6 +24400,7 @@
                   ..._,
                   sectionID: _,
                   rowIndex: _,
+                  nRowCount: __webpack_require__.length,
                   mediaRow: _,
                   hovered: _,
                   globalIndex: _,
@@ -24392,6 +24420,7 @@
             selectedMedia: _,
             hovered: _,
             globalIndex: _,
+            nRowCount: _,
           } = _,
           [_, _, _] = (0, _._)(() => [
             __webpack_require__.media_columns,
@@ -24446,6 +24475,7 @@
                         provided: _,
                         snapshot: _,
                         rowIndex: _,
+                        nRowCount: _,
                         colIndex: _,
                         selectedMedia: _,
                         fnSelect: _,
@@ -24473,6 +24503,7 @@
             snapshot: _,
             isHovered: _,
             rowIndex: _,
+            nRowCount: _,
             colIndex: _,
             selectedMedia: _,
             fnSelect: _,
@@ -24522,6 +24553,7 @@
           _.createElement(_, {
             mediaRow: _,
             nRowIndex: _,
+            nRowCount: _,
             nColumnIndex: _,
             fnUpdateColumnsOfMediaRow: _,
             draggableProps: _.dragHandleProps,
@@ -24544,6 +24576,7 @@
             nRowIndex: _,
             draggableProps: _,
             fnJumpToSubsection: _,
+            nRowCount: _,
           } = _,
           [_, _, _, _] = (0, _._)(() => [
             __webpack_require__.media_columns.length < _,
@@ -24667,6 +24700,7 @@
             nColumnIndex: _,
             nRowIndex: __webpack_require__,
             mediaRow: _,
+            nRowCount: _,
             fnUpdateColumnsOfMediaRow: _,
           } = _,
           [_, _, _] = (0, _._)(!1),
@@ -24677,7 +24711,8 @@
                 _.grow_index >= _.media_columns.length) &&
                 (_.grow_index = void 0),
               _(_, _ - 1 >= 0 ? _ - 1 : 0);
-          }, [_, _, _]);
+          }, [_, _, _]),
+          [_] = (0, _._)(() => [_ > 1 || _.media_columns.length > 1]);
         return _.createElement(
           _.Fragment,
           null,
@@ -24685,16 +24720,23 @@
             _._,
             {
               toolTipContent: (0, _._)(
-                "#Template_Section_MediaContent_delete_ttip",
+                _
+                  ? "#Template_Section_MediaContent_delete_ttip"
+                  : "#Template_Section_NoDeleteLast",
               ),
             },
             _.createElement(
               _._,
               {
-                className: (0, _._)(_().Icon, _().RemoveButton),
+                className: (0, _._)({
+                  [_().Icon]: !0,
+                  [_().RemoveButton]: !0,
+                  [_().Disabled]: !_,
+                }),
                 onClick: (_) => {
                   var _, _, _, _, _;
-                  _.preventDefault(),
+                  _ &&
+                    (_.preventDefault(),
                     _.stopPropagation(),
                     (_ = _.media_columns[_]) &&
                     ((null === (_ = _.localized_media_title) || void 0 === _
@@ -24718,7 +24760,7 @@
                             ),
                           )))
                       ? _()
-                      : _();
+                      : _());
                 },
               },
               _.createElement(_._, null),
@@ -24803,6 +24845,369 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            bAllowReorder: _,
+            saleSection: __webpack_require__,
+            rgMediaRows: _,
+            fnUpdateMediaRows: _,
+            selectedMedia: _,
+            setSelectedMedia: _,
+            fnOnDirty: _,
+          } = _,
+          [_] = (0, _._)(() => [__webpack_require__.show_as_carousel]),
+          _ = (0, _._)(
+            _
+              ? "#Template_Section_Builder_Carousel"
+              : "#Template_Section_Builder_Grid",
+          );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().TitleSplit,
+            },
+            _.createElement("h2", null, _),
+            _ &&
+              _.createElement(_, {
+                rgMediaRows: _,
+                fnUpdateMediaRows: _,
+                bShowAsCarousel: _,
+                className: _().ReorderButtons,
+              }),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().GridContainer,
+            },
+            _.createElement(_, {
+              rgMediaRows: _,
+              sectionID: __webpack_require__.unique_id,
+              fnSelect: _,
+              selectedMedia: _,
+              fnUpdateColumnsOfMediaRow: (_, _) => {
+                const _ =
+                  __webpack_require__.media_container.media_rows.findIndex(
+                    (_) => _ === _,
+                  );
+                0 == _.media_columns.length
+                  ? (__webpack_require__.media_container.media_rows.splice(
+                      _,
+                      1,
+                    ),
+                    (__webpack_require__.media_container.media_rows = [
+                      ...__webpack_require__.media_container.media_rows,
+                    ]),
+                    _(null))
+                  : (_.media_columns.forEach((_, _) => {
+                      _.media_columns[_] ||
+                        (_.media_columns[_] = (0, _._)(__webpack_require__));
+                    }),
+                    _ &&
+                      _({
+                        row: _,
+                        col: _,
+                      })),
+                  _();
+              },
+              fnUpdateMediaRows: _,
+            }),
+            _.createElement(_, {
+              saleSection: __webpack_require__,
+              fnOnDirty: _,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { saleSection: _, fnOnDirty: __webpack_require__ } = _,
+          [_, _, _] = (0, _._)(!1),
+          [_, _] = (0, _.useState)(() => 1),
+          _ = (0, _._)(),
+          [_] = (0, _._)(() => [_.show_as_carousel]),
+          _ = (0, _._)(
+            _
+              ? "#Template_Section_MediaContent_add_carousel_row"
+              : "#Template_Section_MediaContent_add_row",
+          );
+        return _.createElement(
+          _.Fragment,
+          null,
+          _.createElement(
+            _._,
+            {
+              onClick: _,
+            },
+            _,
+          ),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(
+              _._,
+              {
+                strTitle: _,
+                onOK: () => (0, _._)(_, _, __webpack_require__, _),
+                closeModal: _,
+              },
+              [1, 2, 3, 4].map((_) =>
+                _.createElement(
+                  "div",
+                  {
+                    key: _.unique_id + "_" + _,
+                    className: (0, _._)({
+                      [_().DisplayOrder]: !0,
+                      [_().selected]: _ == _,
+                    }),
+                    onClick: () => _(_),
+                    onDoubleClick: () => {
+                      (0, _._)(_, _, __webpack_require__, _), _();
+                    },
+                  },
+                  _.createElement(_, {
+                    nColCount: _,
+                  }),
+                ),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        switch (_.nColCount) {
+          case 2:
+            return _.createElement(_.HxD, null);
+          case 3:
+            return _.createElement(_.LsA, null);
+          case 4:
+            return _.createElement(_.xHM, null);
+        }
+        return _.createElement(_.LHj, null);
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      const _ = [
+          {
+            type: _._.k_HorizontalMediaFirst,
+            bHorizontal: !0,
+            bMediaEditor: !0,
+          },
+          {
+            type: _._.k_HorizontalTextFirst,
+            bHorizontal: !0,
+            bMediaEditor: !0,
+          },
+          {
+            type: _._.k_MediaTitleDesc,
+            bHorizontal: !1,
+            bMediaEditor: !0,
+          },
+          {
+            type: _._.k_TitleDescMedia,
+            bHorizontal: !1,
+            bMediaEditor: !0,
+          },
+          {
+            type: _._.k_TitleDescOnly,
+            bHorizontal: !1,
+            bMediaEditor: !1,
+          },
+          {
+            type: _._.k_OverlayMedia,
+            bHorizontal: !1,
+            bMediaEditor: !1,
+          },
+        ],
+        _ = [
+          {
+            type: _._.k_TitleDescOnly,
+            bHorizontal: !1,
+            bMediaEditor: !1,
+          },
+          {
+            type: _._.k_HorizontalMediaFirst,
+            bHorizontal: !0,
+            bMediaEditor: !0,
+          },
+          {
+            type: _._.k_OverlayMedia,
+            bHorizontal: !1,
+            bMediaEditor: !1,
+          },
+          {
+            type: _._.k_MediaOnly,
+            bHorizontal: !1,
+            bMediaEditor: !0,
+          },
+        ];
+      function _(_) {
+        switch (_.displayOrder) {
+          case _._.k_HorizontalTextFirst:
+            return _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)(
+                  "#Template_Section_MediaContent_HorizontalTextFirst_ttip",
+                ),
+              },
+              _.createElement(_.znK, null),
+            );
+          case _._.k_MediaTitleDesc:
+            return _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)(
+                  "#Template_Section_MediaContent_VerticalMediaFirst_ttip",
+                ),
+              },
+              _.createElement(_._bA, null),
+            );
+          case _._.k_TitleDescMedia:
+            return _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)(
+                  "#Template_Section_MediaContent_VerticalTextFirst_ttip",
+                ),
+              },
+              _.createElement(_.Ehx, null),
+            );
+          case _._.k_TitleDescOnly:
+            return _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)(
+                  "#Template_Section_MediaContent_TextOnly_ttip",
+                ),
+              },
+              _.createElement(_.UNh, null),
+            );
+          case _._.k_OverlayMedia:
+            return _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)(
+                  "#Template_Section_MediaContent_Overlay_ttip",
+                ),
+              },
+              _.createElement(_.yGy, null),
+            );
+          case _._.k_MediaOnly:
+            return _.createElement(
+              _._,
+              {
+                toolTipContent: (0, _._)(
+                  "#Template_Section_MediaContent_MediaOnly_ttip",
+                ),
+              },
+              _.createElement(_.Z29, null),
+            );
+        }
+        return _.createElement(
+          _._,
+          {
+            toolTipContent: (0, _._)(
+              "#Template_Section_MediaContent_HorizontalMediaFirst_ttip",
+            ),
+          },
+          _.createElement(_.LHj, null),
+        );
+      }
+      function _(_) {
+        const { rgMediaRows: _ } = _,
+          [__webpack_require__] = (0, _._)(() => [
+            (null == _ ? void 0 : _.length) || 0,
+          ]);
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(
+            "div",
+            {
+              className: _().Ctn,
+            },
+            _.createElement(
+              "div",
+              {
+                className: _().TopToolbar,
+              },
+              _.createElement(_, {
+                ..._,
+              }),
+              _.createElement(_, {
+                ..._,
+              }),
+            ),
+            _.createElement(_, {
+              ..._,
+              bAllowReorder: __webpack_require__ > 1,
+            }),
+          ),
+        );
+      }
+      function _(_) {
+        const { selectedMediaContent: _, fnOnDirty: __webpack_require__ } = _,
+          [_] = (0, _._)(() => [_.display_order || _._.k_MediaTitleDesc]);
+        return _.createElement(
+          "div",
+          null,
+          _.createElement(
+            _._,
+            null,
+            (0, _._)("#Template_Section_ChooseLayout"),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().MediaLayoutPickerCtn,
+            },
+            _.map((_) =>
+              _.createElement(
+                "div",
+                {
+                  key: "displayorder_" + _.type,
+                  className: (0, _._)({
+                    [_().SelectedDisplay]: _ == _.type,
+                  }),
+                  onClick: () => {
+                    _.display_order != _.type &&
+                      ((_.display_order = _.type), __webpack_require__());
+                  },
+                },
+                _.createElement(_, {
+                  displayOrder: _.type,
+                }),
+              ),
+            ),
+          ),
+        );
+      }
+      function _(_) {
+        const { saleSection: _, fnOnDirty: __webpack_require__ } = _,
+          [_] = (0, _._)(() => [_.show_as_carousel]);
+        return _.createElement(
+          "div",
+          {
+            className: _().RightToolBar,
+          },
+          _.createElement(
+            _._,
+            null,
+            (0, _._)("#Template_Section_CarouselMode"),
+          ),
+          _.createElement(_._, {
+            value: _,
+            onChange: (_) => (_.show_as_carousel = _),
+          }),
+        );
+      }
       const _ = {
         col: 0,
         row: 0,
@@ -25076,20 +25481,40 @@
         );
       }
       function _(_) {
+        const { saleSection: _, editModel: __webpack_require__ } = _;
+        return (
+          (0, _.useEffect)(() => {
+            _.media_container ||
+              ((_.media_container = {
+                media_rows: [],
+              }),
+              (0, _._)(
+                __webpack_require__,
+                _,
+                () => {
+                  __webpack_require__.SetDirty(_._.jsondata_sales);
+                },
+                1,
+              ));
+          }, [__webpack_require__, _]),
+          _.media_container
+            ? _.createElement(_, {
+                ..._,
+              })
+            : _.createElement(_._, null)
+        );
+      }
+      function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
-          _ = (0, _._)(),
           _ = (0, _.useCallback)(
             () => __webpack_require__.SetDirty(_._.jsondata_sales),
             [__webpack_require__],
           ),
-          [_, _] = (0, _.useState)(null);
-        (0, _.useEffect)(() => {
-          _.media_container ||
-            (_.media_container = {
-              media_rows: [],
-            });
-        }, [_]);
-        const _ = (0, _._)(() => {
+          [_, _] = (0, _.useState)(() => ({
+            row: 0,
+            col: 0,
+          })),
+          _ = (0, _._)(() => {
             var _, _;
             return null !==
               (_ =
@@ -25120,77 +25545,56 @@
               (_.media_container.media_rows = _), _();
             },
             [_, _.media_container],
-          );
+          ),
+          [_, _] = (0, _._)("neweditor", !1),
+          _ = {
+            saleSection: _,
+            rgMediaRows: _,
+            fnUpdateMediaRows: _,
+            selectedMediaContent: _,
+            selectedMedia: _,
+            setSelectedMedia: _,
+            strOverrideBackgroundColor: _,
+            fnOnDirty: _,
+          };
         return _.createElement(
-          "div",
+          _._,
           null,
-          _.createElement(
-            "h1",
-            null,
-            (0, _._)("#Template_Section_MediaContent"),
-          ),
-          _.createElement(
-            "p",
-            null,
-            (0, _._)("#Template_Section_MediaContent_desc"),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().TitleSplit,
-            },
-            _.createElement(
-              "h2",
-              null,
-              (0, _._)("#Template_Section_MediaContent_row"),
-            ),
+          _.createElement(_._, {
+            label: "New Editor Format?",
+            checked: _,
+            onChange: (_) => _(_),
+          }),
+          _
+            ? _.createElement(_, {
+                ..._,
+              })
+            : _.createElement(_, {
+                ..._,
+              }),
+        );
+      }
+      function _(_) {
+        const {
+            rgMediaRows: _,
+            selectedMediaContent: __webpack_require__,
+            selectedMedia: _,
+            fnOnDirty: _,
+            strOverrideBackgroundColor: _,
+          } = _,
+          _ = (0, _._)(),
+          [_] = (0, _._)(() => [(null == _ ? void 0 : _.length) || 0]);
+        return _.createElement(
+          _._,
+          null,
+          _.createElement(_, {
+            bAllowReorder: _ > 1,
+            ..._,
+          }),
+          Boolean(__webpack_require__) &&
             _.createElement(_, {
-              rgMediaRows: _,
-              fnUpdateMediaRows: _,
-              className: _().ReorderButtons,
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
-              className: _().GridContainer,
-            },
-            _.createElement(_, {
-              rgMediaRows: _,
-              sectionID: _.unique_id,
-              fnSelect: _,
-              selectedMedia: _,
-              fnUpdateColumnsOfMediaRow: (_, _) => {
-                const _ = _.media_container.media_rows.findIndex(
-                  (_) => _ === _,
-                );
-                0 == _.media_columns.length
-                  ? (_.media_container.media_rows.splice(_, 1),
-                    (_.media_container.media_rows = [
-                      ..._.media_container.media_rows,
-                    ]),
-                    _(null))
-                  : (_.media_columns.forEach((_, _) => {
-                      _.media_columns[_] || (_.media_columns[_] = (0, _._)(_));
-                    }),
-                    _ &&
-                      _({
-                        row: _,
-                        col: _,
-                      })),
-                  _();
-              },
-              fnUpdateMediaRows: _,
-            }),
-            _.createElement(_, {
-              saleSection: _,
-              fnOnDirty: _,
-            }),
-          ),
-          Boolean(_) &&
-            _.createElement(_, {
-              mediaContent: _,
-              uniqueID: _.unique_id,
+              mediaContent: __webpack_require__,
+              uniqueID: __webpack_require__.unique_id,
               language: _,
               fnOnDirty: _,
               position: _,
@@ -25198,67 +25602,6 @@
               bAllowMediaAlignmentSettings: !0,
               strOverrideBackgroundColor: _,
             }),
-        );
-      }
-      function _(_) {
-        switch (_.nColCount) {
-          case 2:
-            return _.createElement(_.HxD, null);
-          case 3:
-            return _.createElement(_.LsA, null);
-          case 4:
-            return _.createElement(_.xHM, null);
-        }
-        return _.createElement(_.LHj, null);
-      }
-      function _(_) {
-        const { saleSection: _, fnOnDirty: __webpack_require__ } = _,
-          [_, _, _] = (0, _._)(!1),
-          [_, _] = (0, _.useState)(() => 1),
-          _ = (0, _._)();
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
-              onClick: _,
-            },
-            (0, _._)("#Template_Section_MediaContent_add_row"),
-          ),
-          _.createElement(
-            _._,
-            {
-              active: _,
-            },
-            _.createElement(
-              _._,
-              {
-                strTitle: (0, _._)("#Template_Section_MediaContent_add_row"),
-                onOK: () => (0, _._)(_, _, __webpack_require__, _),
-                closeModal: _,
-              },
-              [1, 2, 3, 4].map((_) =>
-                _.createElement(
-                  "div",
-                  {
-                    key: _.unique_id + "_" + _,
-                    className: (0, _._)({
-                      [_().DisplayOrder]: !0,
-                      [_().selected]: _ == _,
-                    }),
-                    onClick: () => _(_),
-                    onDoubleClick: () => {
-                      (0, _._)(_, _, __webpack_require__, _), _();
-                    },
-                  },
-                  _.createElement(_, {
-                    nColCount: _,
-                  }),
-                ),
-              ),
-            ),
-          ),
         );
       }
       const _ = (_) => _ <= 2;
@@ -25602,101 +25945,6 @@
                   localizedMedia: _,
                 }),
             );
-      }
-      const _ = [
-        {
-          type: _._.k_HorizontalMediaFirst,
-          bHorizontal: !0,
-          bMediaEditor: !0,
-        },
-        {
-          type: _._.k_HorizontalTextFirst,
-          bHorizontal: !0,
-          bMediaEditor: !0,
-        },
-        {
-          type: _._.k_MediaTitleDesc,
-          bHorizontal: !1,
-          bMediaEditor: !0,
-        },
-        {
-          type: _._.k_TitleDescMedia,
-          bHorizontal: !1,
-          bMediaEditor: !0,
-        },
-        {
-          type: _._.k_TitleDescOnly,
-          bHorizontal: !1,
-          bMediaEditor: !1,
-        },
-        {
-          type: _._.k_OverlayMedia,
-          bHorizontal: !1,
-          bMediaEditor: !1,
-        },
-      ];
-      function _(_) {
-        switch (_.displayOrder) {
-          case _._.k_HorizontalTextFirst:
-            return _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)(
-                  "#Template_Section_MediaContent_HorizontalTextFirst_ttip",
-                ),
-              },
-              _.createElement(_.znK, null),
-            );
-          case _._.k_MediaTitleDesc:
-            return _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)(
-                  "#Template_Section_MediaContent_VerticalMediaFirst_ttip",
-                ),
-              },
-              _.createElement(_._bA, null),
-            );
-          case _._.k_TitleDescMedia:
-            return _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)(
-                  "#Template_Section_MediaContent_VerticalTextFirst_ttip",
-                ),
-              },
-              _.createElement(_.Ehx, null),
-            );
-          case _._.k_TitleDescOnly:
-            return _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)(
-                  "#Template_Section_MediaContent_TextOnly_ttip",
-                ),
-              },
-              _.createElement(_.UNh, null),
-            );
-          case _._.k_OverlayMedia:
-            return _.createElement(
-              _._,
-              {
-                toolTipContent: (0, _._)(
-                  "#Template_Section_MediaContent_Overlay_ttip",
-                ),
-              },
-              _.createElement(_.yGy, null),
-            );
-        }
-        return _.createElement(
-          _._,
-          {
-            toolTipContent: (0, _._)(
-              "#Template_Section_MediaContent_HorizontalMediaFirst_ttip",
-            ),
-          },
-          _.createElement(_.LHj, null),
-        );
       }
       function _(_) {
         const {
@@ -27403,8 +27651,8 @@
           _,
         );
       }
-      const _ = (0, _._)((_) => {
-        const _ = _.saleSection.section_type;
+      function _(_) {
+        const _ = (0, _._)(() => _.saleSection.section_type);
         switch (_) {
           case "items":
             return _.createElement(_, {
@@ -27575,7 +27823,7 @@
               ..._,
             });
         }
-      });
+      }
       var _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -28682,6 +28930,23 @@
                 )
               : null;
           let _;
+          const _ = (function (_, _) {
+            return (0, _._)(() => {
+              const _ = _.GetSaleSections().filter(
+                (_) => "trailercarousel" == _.section_type,
+              );
+              return (
+                _.length &&
+                _[0].unique_id == _.unique_id &&
+                _.length > 1 &&
+                __webpack_require__.some(
+                  (_) =>
+                    _.trailer_carousel_intro_video_appid !=
+                    _.trailer_carousel_intro_video_appid,
+                )
+              );
+            });
+          })(_, __webpack_require__);
           return (
             (_ =
               ((0, _._)(__webpack_require__.section_type) &&
@@ -28721,23 +28986,7 @@
                       _ && " - ",
                       _,
                     )
-                  : "trailercarousel" === __webpack_require__.section_type &&
-                      (function (_, _) {
-                        const _ = _.GetSaleSections().filter(
-                            (_) => "trailercarousel" == _.section_type,
-                          ),
-                          _ = _[0].unique_id == _.unique_id;
-                        return (0, _._)(
-                          () =>
-                            _ &&
-                            _.length > 1 &&
-                            __webpack_require__.some(
-                              (_) =>
-                                _.trailer_carousel_intro_video_appid !=
-                                _.trailer_carousel_intro_video_appid,
-                            ),
-                        );
-                      })(_, __webpack_require__)
+                  : "trailercarousel" === __webpack_require__.section_type && _
                     ? _.createElement(
                         _.Fragment,
                         null,
@@ -34024,7 +34273,8 @@
             (_[(_.k_HorizontalMediaFirst = 4)] = "k_HorizontalMediaFirst"),
             (_[(_.k_HorizontalTextFirst = 5)] = "k_HorizontalTextFirst"),
             (_[(_.k_TitleDescOnly = 6)] = "k_TitleDescOnly"),
-            (_[(_.k_OverlayMedia = 7)] = "k_OverlayMedia");
+            (_[(_.k_OverlayMedia = 7)] = "k_OverlayMedia"),
+            (_[(_.k_MediaOnly = 8)] = "k_MediaOnly");
         })(_ || (_ = {})),
         (function (_) {
           (_.k_Header1 = "h1"),
@@ -41199,6 +41449,7 @@
             myInstance: _,
             setIsHovered: _,
             displayStoreItem: _,
+            displayID: _,
             hoverType: _,
             nHoverId: _,
             displayInfo: _,
@@ -41279,7 +41530,7 @@
                       bPreferAssetWithoutOverride: _,
                     }),
                     _.createElement(_._, {
-                      storeItem: _,
+                      _: _,
                     }),
                   ),
                 ),
@@ -41435,7 +41686,7 @@
                     bPreferAssetWithoutOverride: _,
                   }),
                   _.createElement(_._, {
-                    storeItem: _,
+                    _: _,
                   }),
                 ),
               ),
@@ -42168,6 +42419,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "capsule_index_";
       function _(_) {
@@ -42322,6 +42574,7 @@
             bPreferAssetWithoutOverride: _,
           } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
+          _ = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _.useMemo)(
@@ -42374,7 +42627,7 @@
                   bPreferAssetWithoutOverride: _,
                 }),
               _.createElement(_._, {
-                storeItem: _,
+                _: _,
               }),
               Boolean(_) &&
                 _.createElement(_._, {

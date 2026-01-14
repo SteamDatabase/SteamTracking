@@ -40,7 +40,7 @@
     chunkid: (module) => {
       module.exports = {
         PreviewBarContainer: "_2OUix2CrQcndFsj5liSAIF",
-        EventEditButons: "_1h0Zjq-vbIgR-ElktB9EGc",
+        EventEditButtons: "_3M4ymyEgXKxgfE-kbnyxmt",
         FallBackWarning: "_2x0MapAFJaB1a5teVqcg46",
         StoreNavigationPlaceholder: "tHKKN5LiD-CFwUCdX5RcR",
       };
@@ -1699,7 +1699,8 @@
                 let _ = _.ComputeVisibilityStartTime(_, _);
                 _ = _ || _ <= _;
               }
-              const _ = _.GetClanSteamID().ConvertTo64BitString();
+              const _ = _.GetClanSteamID().ConvertTo64BitString(),
+                _ = 36 == _.GetEventType();
               return _.createElement(
                 _._,
                 {
@@ -1717,12 +1718,16 @@
                       onCancel: this.props.closeModal,
                       strOKButtonText: (0, _._)("#Button_Publish"),
                     },
-                    _.createElement(_, {
-                      editModel: _,
-                      bImmediateVisible: _,
-                      rtNow: _,
-                      bHasCrowdInMapping: _,
-                    }),
+                    _
+                      ? _.createElement(_, {
+                          editModel: _,
+                        })
+                      : _.createElement(_, {
+                          editModel: _,
+                          bImmediateVisible: _,
+                          rtNow: _,
+                          bHasCrowdInMapping: _,
+                        }),
                   );
                 },
               );
@@ -1816,6 +1821,20 @@
                 (0, _._)("#EventEditor_Publish_CrowdInEnabled"),
               ),
             ),
+        );
+      }
+      function _(_) {
+        const { editModel: _ } = _;
+        return _.createElement(
+          _.Fragment,
+          null,
+          (0, _._)("#EventEditor_Publish_CreatorHome_Notice1"),
+          _.createElement("br", null),
+          _.createElement("br", null),
+          (0, _._)("#EventEditor_Publish_CreatorHome_Notice2"),
+          _.createElement("br", null),
+          _.createElement("br", null),
+          (0, _._)("#EventEditor_Publish_CreatorHome_Notice3"),
         );
       }
       function _(_) {
@@ -4837,7 +4856,7 @@
             _.createElement(
               "div",
               {
-                className: _().EventEditButons,
+                className: _().EventEditButtons,
               },
               __webpack_require__ &&
                 !_ &&
@@ -17988,6 +18007,7 @@
             backgroundImageEditModel: _,
             bBackgroundImgGroupEditMode: __webpack_require__,
             fnSetBackgroundImgGroupEditMode: _,
+            bShowAsValveOnly: _,
           } = _,
           [_, _] = (0, _.useState)(_.BIsBackgroundImageEnabled()),
           [_, _, _] = (0, _._)(),
@@ -17995,7 +18015,7 @@
         return _.createElement(
           "div",
           {
-            className: _().Ctn,
+            className: (0, _._)(_().Ctn, _ && _.ValveOnlyBackground),
           },
           _.createElement(
             _._,
@@ -18489,6 +18509,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
@@ -18575,7 +18596,16 @@
                 null == _ ? void 0 : _.broadcast_chat_announcement_giveaway,
             }),
             [_, _, _, _, __webpack_require__],
-          );
+          ),
+          _ = (0, _._)(() => {
+            var _;
+            return (
+              null !==
+                (_ = null == _ ? void 0 : _.BIsBackgroundImageEnabled()) &&
+              void 0 !== _ &&
+              _
+            );
+          });
         if (_ && void 0 !== _) {
           const _ =
               (null === (_ = _.jsondata.localized_sale_logo) || void 0 === _
@@ -18603,7 +18633,9 @@
               ? !_ && (null == _ ? void 0 : _.BIsBackgroundImageEnabled())
                 ? _._.EPreviewMode_EditBackground
                 : _._.EPreviewMode_Enabled
-              : _._.EPreviewMode_Disabled;
+              : _._.EPreviewMode_Disabled,
+            _ = _ || 36 != _.GetEventType(),
+            _ = (0, _._)(_.clanSteamID);
           return _.createElement(
             _._,
             null,
@@ -18630,10 +18662,12 @@
                     eventModel: _,
                   }),
                   Boolean(_) &&
+                    (_ || _) &&
                     _.createElement(_, {
                       backgroundImageEditModel: _,
                       bBackgroundImgGroupEditMode: _,
                       fnSetBackgroundImgGroupEditMode: _,
+                      bShowAsValveOnly: !_,
                     }),
                   _.createElement(
                     "div",
@@ -25634,7 +25668,7 @@
           }),
           _.createElement(_._, {
             bAllowOutsideOfDeck: !0,
-            storeItem: __webpack_require__,
+            _: _,
             className: _.CompatIconOverride,
           }),
         );
@@ -29247,8 +29281,83 @@
         );
       }
       const _ = 12;
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = 1 / 0;
+      function _() {
+        const _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _, _, _) {
+            return {
+              queryKey: ["CategoryHubDefinitions", _.language, "MapByHandle"],
+              queryFn: async () => {
+                const _ = await _.fetchQuery(_(_, _, _));
+                return new Map(_.map((_) => [_.handle, _]));
+              },
+              staleTime: _,
+            };
+          })(_, _, _, _._.excluded_content_descriptors),
+        );
+      }
+      function _(_, _, _) {
+        return {
+          queryKey: ["CategoryHubDefinitions", _.language, _],
+          queryFn: () =>
+            (async function (_, _, _) {
+              const _ = _._.Init(_._);
+              (0, _._)(_, _),
+                _.Body().set_excluded_content_descriptorids(
+                  __webpack_require__.slice(),
+                );
+              const _ = await _._.GetContentHubConfig(_, _);
+              if (!_.BSuccess())
+                throw `Error loading category hub definitions: ${_.GetErrorMessage()}`;
+              return _.Body().toObject().hubconfigs || [];
+            })(_, _, _),
+          staleTime: _,
+        };
+      }
       var _ = __webpack_require__("chunkid");
       const _ = (_) => {
+        const {
+          hubtype: _,
+          category: __webpack_require__,
+          tagid: _,
+          prioritize_discounts: _,
+          prune_list_optin_name: _,
+          optin_tagid: _,
+          optin_prune_tagid: _,
+          optin_only: _,
+        } = _;
+        let _ = _;
+        "category" == _
+          ? (_ = __webpack_require__)
+          : "tags" == _ && (_ = void 0);
+        const _ = (function (_) {
+          var _;
+          const { data: __webpack_require__ } = _();
+          if (void 0 !== __webpack_require__)
+            return null !== (_ = _ && __webpack_require__.get(_)) &&
+              void 0 !== _
+              ? _
+              : null;
+        })(_);
+        return "tags" === _ || "adultonly" === _ || null === _
+          ? _.createElement(_, {
+              ..._,
+            })
+          : _
+            ? _.createElement(_, {
+                category: _,
+              })
+            : null;
+      };
+      function _(_) {
         const {
             hubtype: _,
             category: __webpack_require__,
@@ -29327,7 +29436,31 @@
                 )
         );
         var _;
-      };
+      }
+      function _(_) {
+        const { category: _ } = _;
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_.ContentHubTitleCtn, "ContentHubTitleCtn"),
+          },
+          _.createElement(
+            "div",
+            {
+              className: (0, _._)(_.ContentHubTitle, "ContentHubTitle"),
+            },
+            _.display_name,
+          ),
+          _.hub_description &&
+            _.createElement(
+              "div",
+              {
+                className: _.ContentHubSubtitle,
+              },
+              _.hub_description,
+            ),
+        );
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       _._.EUNIVERSE;
@@ -32391,8 +32524,7 @@
             );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__._(_);
       function _(_) {
         var _, _, _, _, _;
         const {
@@ -37788,7 +37920,6 @@
           );
         };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {

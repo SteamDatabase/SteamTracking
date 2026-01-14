@@ -582,7 +582,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	position: relative;
 	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
-	padding: 0px 2px 0px 2px;
+	padding: 0px 4px 0px 2px;
 	margin: 0 2px;
 	line-height: 30px;
 	height: 30px;
@@ -605,6 +605,22 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	font-weight: bold;
 }
 .review_award_count.hidden {
+	display: none;
+}
+
+/* hide some awards */
+.review_award_ctn > .review_award.unpurchaseable {
+	display: none;
+}
+
+.review_award_ctn > .review_award.more_btn {
+	display: inline-block;
+}
+/* unless force shown */
+.review_award_ctn.show_all_awards > .review_award.purchaseable, .review_award_ctn.show_all_awards > .review_award.unpurchaseable {
+	display: inline-block;
+}
+.review_award_ctn.show_all_awards > .review_award.more_btn {
 	display: none;
 }
 

@@ -35,8 +35,9 @@
         PublishedAndNotSelectedState: "_2XhRaA3elALg0OQnynUZu4",
         SelectedSVG: "_3Niy5UbG2M3zTi6wUY2jda",
         HeaderRow: "_2PLSeE9RayjVbZKYqcszIq",
-        ActionsRow: "_27NYV-vucABpZz6K_oGGgu",
         ManageButton: "_2F5-HSU7JNjiVuDm_h_I4D",
+        MustPublish: "oUfRC_JxvbarFSmiUwBCn",
+        ActionsRow: "_27NYV-vucABpZz6K_oGGgu",
         SVGIcon: "_3jIkQOyf1K28G5lxJiiDkV",
       };
     },
@@ -236,14 +237,6 @@
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement("h4", null, (0, _._)("#CreatorHome_EventLink_Title")),
-          _.createElement("p", null, (0, _._)("#CreatorHome_EventLink_Desc")),
-          !_ &&
-            _.createElement(
-              "p",
-              null,
-              (0, _._)("#CreatorHome_EventLink_BasicActive"),
-            ),
           _.createElement(
             _._,
             {
@@ -260,7 +253,14 @@
               (0, _._)("#CreatorHome_EventLink_Create"),
             ),
           ),
-          _.createElement("br", null),
+          _.createElement("h4", null, (0, _._)("#CreatorHome_EventLink_Title")),
+          _.createElement("p", null, (0, _._)("#CreatorHome_EventLink_Desc")),
+          !_ &&
+            _.createElement(
+              "p",
+              null,
+              (0, _._)("#CreatorHome_EventLink_BasicActive"),
+            ),
           _ && _.createElement(_._, null),
           !_ &&
             _.createElement(
@@ -457,14 +457,32 @@
                   },
                   (0, _._)("#CreatorHome_EventLink_PublishedAndNotSelected"),
                 ),
-              _ &&
-                _.createElement(_, {
-                  eventModel: _,
-                  label: (0, _._)("#CreatorHome_EventLink_Select"),
-                  icon: _.createElement(_.FEq, null),
-                  onClick: () => _(!0),
-                  tooltip: (0, _._)("#CreatorHome_EventLink_Select_ttip"),
-                }),
+              _
+                ? _.createElement(_, {
+                    eventModel: _,
+                    label: (0, _._)("#CreatorHome_EventLink_Select"),
+                    icon: _.createElement(_.FEq, null),
+                    onClick: () => _(!0),
+                    tooltip: (0, _._)("#CreatorHome_EventLink_Select_ttip"),
+                  })
+                : !_ &&
+                    _.createElement(
+                      "div",
+                      {
+                        className: _().MustPublish,
+                      },
+                      (0, _._)("#CreatorHome_EventLink_MustPublish"),
+                      " ",
+                      _.createElement(
+                        _._,
+                        {
+                          toolTipContent: (0, _._)(
+                            "#CreatorHome_EventLink_MustPublish_ttip",
+                          ),
+                        },
+                        "(?)",
+                      ),
+                    ),
               _ &&
                 _.createElement(_, {
                   eventModel: _,

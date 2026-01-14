@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "%1$s resultaten gevonden",
 	"Search_ListingsFound": "%2$s vermelding gevonden",
 	"Search_ListingsFound_Plural": "%2$s vermeldingen gevonden",
+	"SortBy_Default": "Populariteit (standaard)",
 	"SortBy_Name_Asc": "Naam (A tot Z)",
 	"SortBy_Name_Desc": "Naam (Z tot A)",
 	"SortBy_Price_Asc": "Prijs (laag naar hoog)",

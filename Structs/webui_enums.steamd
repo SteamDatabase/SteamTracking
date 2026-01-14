@@ -1096,136 +1096,6 @@ enum ELoginUIStyle
 	k_ELoginUIStyleNew = 2;
 }
 
-enum ELoyaltyRewardAuditType
-{
-	k_ELoyaltyRewardAuditType_Invalid = 0;
-	k_ELoyaltyRewardAuditType_Purchase = 1;
-	k_ELoyaltyRewardAuditType_RefundOrChargeback = 2;
-	k_ELoyaltyRewardAuditType_SupportGrant = 3;
-	k_ELoyaltyRewardAuditType_PointRedemption = 4;
-	k_ELoyaltyRewardAuditType_PointClawback = 5;
-	k_ELoyaltyRewardAuditType_PointRedemptionForBadgeLevel = 6;
-	k_ELoyaltyRewardAuditType_SpendingBackfill = 7;
-	k_ELoyaltyRewardAuditType_PointRedemptionForItemUpgrade = 9;
-	k_ELoyaltyRewardAuditType_PointRedemptionForTransaction = 10;
-	k_ELoyaltyRewardAuditType_SupportRegrantItem = 19;
-	k_ELoyaltyRewardAuditType_TransferRequest = 20;
-	k_ELoyaltyRewardAuditType_Transferred = 21;
-	k_ELoyaltyRewardAuditType_UserReviewReaction = 22;
-	k_ELoyaltyRewardAuditType_UserReviewReaction_PointsTransferred = 23;
-	k_ELoyaltyRewardAuditType_LaunchBackfill_Purchase = 24;
-	k_ELoyaltyRewardAuditType_LaunchBackfill_RefundOrChargeback = 25;
-	k_ELoyaltyRewardAuditType_UGCReaction = 26;
-	k_ELoyaltyRewardAuditType_UGCReaction_PointsTransferred = 27;
-	k_ELoyaltyRewardAuditType_SupportSetBadgeLevel = 28;
-	k_ELoyaltyRewardAuditType_UserReviewReaction_Removed = 29;
-	k_ELoyaltyRewardAuditType_UGCReaction_Removed = 30;
-	k_ELoyaltyRewardAuditType_Auction_Bid = 31;
-	k_ELoyaltyRewardAuditType_Auction_BidCancelled = 32;
-	k_ELoyaltyRewardAuditType_Auction_WinningBid = 33;
-	k_ELoyaltyRewardAuditType_GrantedFromPackage = 34;
-	k_ELoyaltyRewardAuditType_PointRedemptionForProfileCustomization = 35;
-	k_ELoyaltyRewardAuditType_ProfileReaction = 36;
-	k_ELoyaltyRewardAuditType_ProfileReaction_PointsTransferred = 37;
-	k_ELoyaltyRewardAuditType_ProfileReaction_Removed = 38;
-	k_ELoyaltyRewardAuditType_PointRedemptionForProfileCustomizationUpgrade = 39;
-	k_ELoyaltyRewardAuditType_ForumTopicReaction = 40;
-	k_ELoyaltyRewardAuditType_ForumTopicReaction_PointsTransferred = 41;
-	k_ELoyaltyRewardAuditType_ForumTopicReaction_Removed = 42;
-	k_ELoyaltyRewardAuditType_CommentReaction = 43;
-	k_ELoyaltyRewardAuditType_CommentReaction_PointsTransferred = 44;
-	k_ELoyaltyRewardAuditType_CommentReaction_Removed = 45;
-	k_ELoyaltyRewardAuditType_SteamDeckRewards = 46;
-	k_ELoyaltyRewardAuditType_SupportGrantReward = 47;
-	k_ELoyaltyRewardAuditType_PointRedemptionForFreeItem = 48;
-}
-
-enum ELoyaltyRewardPointTransferType
-{
-	k_ELoyaltyRewardPointTransferType_Invalid = 0;
-	k_ELoyaltyRewardPointTransferType_Support = 1;
-	k_ELoyaltyRewardPointTransferType_Review = 2;
-	k_ELoyaltyRewardPointTransferType_UGC = 3;
-	k_ELoyaltyRewardPointTransferType_Profile = 4;
-	k_ELoyaltyRewardPointTransferType_ForumTopic = 5;
-	k_ELoyaltyRewardPointTransferType_Comment = 6;
-}
-
-enum ELoyaltyRewardQueryFilter
-{
-	k_ELoyaltyRewardQueryFilter_Animated = 1;
-	k_ELoyaltyRewardQueryFilter_NotAnimated = 2;
-	k_ELoyaltyRewardQueryFilter_Bundle = 3;
-	k_ELoyaltyRewardQueryFilter_Tiled = 4;
-}
-
-enum ELoyaltyRewardReactionTargetType
-{
-	k_ELoyaltyRewardReactionTargetType_Invalid = 0;
-	k_ELoyaltyRewardReactionTargetType_UserReview = 1;
-	k_ELoyaltyRewardReactionTargetType_UGC = 2;
-	k_ELoyaltyRewardReactionTargetType_Profile = 3;
-	k_ELoyaltyRewardReactionTargetType_ForumTopic = 4;
-	k_ELoyaltyRewardReactionTargetType_Comment = 5;
-}
-
-enum ELoyaltyRewardReactionType
-{
-	k_ELoyaltyRewardReactionType_Invalid = 0;
-	k_ELoyaltyRewardReactionType_DeepThoughts = 1;
-	k_ELoyaltyRewardReactionType_Heartwarming = 2;
-	k_ELoyaltyRewardReactionType_Hilarious = 3;
-	k_ELoyaltyRewardReactionType_HotTake = 4;
-	k_ELoyaltyRewardReactionType_Poetry = 5;
-	k_ELoyaltyRewardReactionType_ExtraHelpful = 6;
-	k_ELoyaltyRewardReactionType_GottaHaveIt = 7;
-	k_ELoyaltyRewardReactionType_Michelangelo = 8;
-	k_ELoyaltyRewardReactionType_Treasure = 9;
-	k_ELoyaltyRewardReactionType_MindBlown = 10;
-	k_ELoyaltyRewardReactionType_GoldenUnicorn = 11;
-	k_ELoyaltyRewardReactionType_MadScientist = 12;
-	k_ELoyaltyRewardReactionType_Clever = 13;
-	k_ELoyaltyRewardReactionType_WarmBlanket = 14;
-	k_ELoyaltyRewardReactionType_Saucy = 15;
-	k_ELoyaltyRewardReactionType_SlowClap = 16;
-	k_ELoyaltyRewardReactionType_TakeMyPoints = 17;
-	k_ELoyaltyRewardReactionType_Wholesome = 18;
-	k_ELoyaltyRewardReactionType_Jester = 19;
-	k_ELoyaltyRewardReactionType_FancyPants = 20;
-	k_ELoyaltyRewardReactionType_Whoa = 21;
-	k_ELoyaltyRewardReactionType_SuperStar = 22;
-	k_ELoyaltyRewardReactionType_Wild = 23;
-	k_ELoyaltyRewardReactionType_Award = 24;
-	k_ELoyaltyRewardReactionType_Beautiful = 25;
-	k_ELoyaltyRewardReactionType_VIP = 26;
-	k_ELoyaltyRewardReactionType_OnFire = 27;
-	k_ELoyaltyRewardReactionType_Funny = 28;
-	k_ELoyaltyRewardReactionType_OneHundred = 29;
-	k_ELoyaltyRewardReactionType_LifeSaver = 30;
-	k_ELoyaltyRewardReactionType_Perfect = 31;
-	k_ELoyaltyRewardReactionType_PlusOne = 32;
-	k_ELoyaltyRewardReactionType_Smart = 33;
-	k_ELoyaltyRewardReactionType_PureGold = 34;
-	k_ELoyaltyRewardReactionType_Coffee = 35;
-}
-
-enum ELoyaltyRewardsQuerySort
-{
-	k_ELoyaltyRewardsQuerySort_TimeCreated = 1;
-	k_ELoyaltyRewardsQuerySort_RedemptionRank = 2;
-}
-
-enum ELoyaltyRewardType
-{
-	k_ELoyaltyRewardType_Invalid = 0;
-	k_ELoyaltyRewardType_VirtualItemReward = 1;
-	k_ELoyaltyRewardType_Badge = 2;
-	k_ELoyaltyRewardType_CommunityItemLevelUpgrade = 3;
-	k_ELoyaltyRewardType_CartDiscount = 4;
-	k_ELoyaltyRewardType_Bundle = 5;
-	k_ELoyaltyRewardType_AutoGeneratedBundle = 6;
-}
-
 enum EMarketingMessage
 {
 	k_EMarketingMessageInvalid = 0;
@@ -1726,21 +1596,6 @@ enum ERemoteClientLaunch
 	k_ERemoteClientLaunchInvisible = 27;
 	k_ERemoteClientLaunchRestrictedCountry = 28;
 	k_ERemoteClientLaunchUnauthorized = 29;
-}
-
-enum ERewardDefinitionsAction
-{
-	k_ERewardDefinitionsAction_Invalid = 0;
-	k_ERewardDefinitionsAction_Add = 1;
-	k_ERewardDefinitionsAction_Update = 2;
-	k_ERewardDefinitionsAction_Delete = 3;
-}
-
-enum ESaleRewardDefType
-{
-	k_ESaleRewardDefType_Invalid = 0;
-	k_ESaleRewardDefType_ClaimItem = 1;
-	k_ESaleRewardDefType_DiscoveryQueue = 2;
 }
 
 enum ESection
@@ -4193,6 +4048,18 @@ enum UnnamedEnum798f930648f1159b
 	Cursor = 1;
 }
 
+enum UnnamedEnum7a6400810d0c9c17
+{
+	k_MediaTitleDesc = 1;
+	k_TitleMediaDesc = 2;
+	k_TitleDescMedia = 3;
+	k_HorizontalMediaFirst = 4;
+	k_HorizontalTextFirst = 5;
+	k_TitleDescOnly = 6;
+	k_OverlayMedia = 7;
+	k_MediaOnly = 8;
+}
+
 enum UnnamedEnum7c4ccc7e7f11da9c
 {
 	Invoke = 0;
@@ -5623,17 +5490,6 @@ enum UnnamedEnumee13fc02f2c6851d
 	Snap = 3;
 	Sliding = 4;
 	SlidingEdge = 5;
-}
-
-enum UnnamedEnumee2bf8818bf5319a
-{
-	k_MediaTitleDesc = 1;
-	k_TitleMediaDesc = 2;
-	k_TitleDescMedia = 3;
-	k_HorizontalMediaFirst = 4;
-	k_HorizontalTextFirst = 5;
-	k_TitleDescOnly = 6;
-	k_OverlayMedia = 7;
 }
 
 enum UnnamedEnumf0865f3c163d92e3

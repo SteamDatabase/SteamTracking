@@ -1668,3 +1668,10 @@ function SaveWorkshopSearchQuery( appid, params )
 	} );
 }
 
+function PublishedFile_ShowMoreAwards( elem )
+{
+	elem = $J( elem );
+	var container = elem.closest( ".review_award_ctn" );
+	container.addClass( "show_all_awards" );
+}
+

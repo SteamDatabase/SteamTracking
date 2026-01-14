@@ -1311,6 +1311,7 @@
                     br: n.qM.readInt64String,
                     bw: n.gp.writeInt64String,
                   },
+                  purchaseable: { n: 6, br: n.qM.readBool, bw: n.gp.writeBool },
                 },
               }),
             F.sm_m

@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "%1$s hakutulosta",
 	"Search_ListingsFound": "%2$s listaus löydetty",
 	"Search_ListingsFound_Plural": "%2$s listausta löydetty",
+	"SortBy_Default": "Suosio (oletus)",
 	"SortBy_Name_Asc": "Nimi (A–Ö)",
 	"SortBy_Name_Desc": "Nimi (Ö–A)",
 	"SortBy_Price_Asc": "Hinta (halvin ensin)",

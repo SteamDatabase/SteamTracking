@@ -22,15 +22,15 @@
       "use strict";
       i.r(t),
         i.d(t, {
-          AccessibilityFeatureDisplay: () => m,
-          AccessibilityIcon: () => A,
+          AccessibilityFeatureDisplay: () => y,
+          AccessibilityIcon: () => m,
         });
       var s = i(90626),
         l = i(61859),
         a = i(78327),
         c = i(63404),
         n = i.n(c);
-      const r = {
+      const o = {
           bAccessibilityDifficultyLevels:
             "#Accessibility_Feature_AdjustableDifficulty",
           bAccessibilitySaveAnytime: "#Accessibility_Feature_SaveAnytime",
@@ -56,68 +56,62 @@
           bAccessibilityChatTexttoSpeech: "#Accessibility_Feature_TextToSpeech",
           bAccessibilityChatSpeechtoText: "#Accessibility_Feature_SpeechToText",
         },
-        u = {
-          bAccessibilityDifficultyLevels: "#adjustable_difficulty",
-          bAccessibilitySaveAnytime: "#saving_options",
-          bAccessibilityNarratedMenus: "#narrated_menus",
-          bAccessibilityBackgroundVolumeControls: "#volume_controls",
-          bAccessibilityStereoSound: "#stereo_sound",
-          bAccessibilitySurroundSound: "#surround_sound",
-          bAccessibilityResizableUI: "#adjustable_text_size",
-          bAccessibilitySubtitles: "#subtitles",
-          bAccessibilityColorAlternatives: "#color_alternatives",
-          bAccessibilityCameraComfort: "#camera_comfort",
-          bAccessibilityKeyboardOnlyOption: "#keyboard_only",
-          bAccessibilityMouseOnlyOption: "#mouse_only",
-          bAccessibilityTouchOnlyOption: "#touch_only",
-          bAccessibilityPlayableWithoutQuicktimeEvents: "#without_qte",
-          bAccessibilityChatTexttoSpeech: "#tts",
-          bAccessibilityChatSpeechtoText: "#stt",
-        };
-      var o;
-      !(function (e) {
-        (e.Gameplay = "gameplay"),
-          (e.Visual = "visual"),
-          (e.Audio = "audio"),
-          (e.Input = "input");
-      })(o || (o = {}));
-      const b = {
-          bAccessibilityDifficultyLevels: o.Gameplay,
-          bAccessibilitySaveAnytime: o.Gameplay,
-          bAccessibilityNarratedMenus: o.Audio,
-          bAccessibilityBackgroundVolumeControls: o.Audio,
-          bAccessibilityStereoSound: o.Audio,
-          bAccessibilitySurroundSound: o.Audio,
-          bAccessibilityResizableUI: o.Visual,
-          bAccessibilitySubtitles: o.Visual,
-          bAccessibilityColorAlternatives: o.Visual,
-          bAccessibilityCameraComfort: o.Visual,
-          bAccessibilityKeyboardOnlyOption: o.Input,
-          bAccessibilityMouseOnlyOption: o.Input,
-          bAccessibilityTouchOnlyOption: o.Input,
-          bAccessibilityPlayableWithoutQuicktimeEvents: o.Input,
-          bAccessibilityChatTexttoSpeech: o.Input,
-          bAccessibilityChatSpeechtoText: o.Input,
+        r = {
+          bAccessibilityDifficultyLevels: "adjustable_difficulty",
+          bAccessibilitySaveAnytime: "save_anytime",
+          bAccessibilityNarratedMenus: "narrated_game_menus",
+          bAccessibilityBackgroundVolumeControls: "custom_volume_controls",
+          bAccessibilityStereoSound: "stereo_sound",
+          bAccessibilitySurroundSound: "surround_sound",
+          bAccessibilityResizableUI: "adjustable_text_size",
+          bAccessibilitySubtitles: "subtitle_options",
+          bAccessibilityColorAlternatives: "color_alternatives",
+          bAccessibilityCameraComfort: "camera_comfort",
+          bAccessibilityKeyboardOnlyOption: "keyboard_only_option",
+          bAccessibilityMouseOnlyOption: "mouse_only_option",
+          bAccessibilityTouchOnlyOption: "touch_only_option",
+          bAccessibilityPlayableWithoutQuicktimeEvents:
+            "playable_without_timed_input",
+          bAccessibilityChatTexttoSpeech: "chat_text_to_speech",
+          bAccessibilityChatSpeechtoText: "chat_speech_to_text",
         },
-        y = {
-          [o.Gameplay]: "#Accessibility_Group_Gameplay",
-          [o.Visual]: "#Accessibility_Group_Visual",
-          [o.Audio]: "#Accessibility_Group_Audio",
-          [o.Input]: "#Accessibility_Group_Input",
+        u = {
+          bAccessibilityDifficultyLevels: "gameplay",
+          bAccessibilitySaveAnytime: "gameplay",
+          bAccessibilityNarratedMenus: "audio",
+          bAccessibilityBackgroundVolumeControls: "audio",
+          bAccessibilityStereoSound: "audio",
+          bAccessibilitySurroundSound: "audio",
+          bAccessibilityResizableUI: "visual",
+          bAccessibilitySubtitles: "visual",
+          bAccessibilityColorAlternatives: "visual",
+          bAccessibilityCameraComfort: "visual",
+          bAccessibilityKeyboardOnlyOption: "input",
+          bAccessibilityMouseOnlyOption: "input",
+          bAccessibilityTouchOnlyOption: "input",
+          bAccessibilityPlayableWithoutQuicktimeEvents: "input",
+          bAccessibilityChatTexttoSpeech: "input",
+          bAccessibilityChatSpeechtoText: "input",
+        },
+        b = {
+          gameplay: "#Accessibility_Group_Gameplay",
+          visual: "#Accessibility_Group_Visual",
+          audio: "#Accessibility_Group_Audio",
+          input: "#Accessibility_Group_Input",
         };
-      function m(e) {
+      function y(e) {
         const [t, i] = (0, s.useState)(e.initialOpen ?? !1),
           c = s.useId(),
-          r = Object.entries(e.features)
+          o = Object.entries(e.features)
             .filter(([e, t]) => t)
             .map(([e]) => e);
-        if (0 === r.length) return null;
-        const u = {};
-        r.forEach((e) => {
-          const t = b[e];
-          (u[t] ??= []), u[t].push(e);
+        if (0 === o.length) return null;
+        const r = {};
+        o.forEach((e) => {
+          const t = u[e];
+          (r[t] ??= []), r[t].push(e);
         });
-        const y = Object.keys(u).length > 1;
+        const b = Object.keys(r).length > 1;
         return s.createElement(
           "details",
           {
@@ -134,7 +128,7 @@
             s.createElement(
               "div",
               { className: n().ImageContainer },
-              s.createElement(A, {
+              s.createElement(m, {
                 className: n().CategoryIcon,
                 "aria-label": "",
               }),
@@ -147,7 +141,7 @@
                 { className: n().FeatureName },
                 t
                   ? (0, l.we)("#AccessibilityFeatures")
-                  : (0, l.we)("#AccessibilityFeaturesWithCount", r.length),
+                  : (0, l.we)("#AccessibilityFeaturesWithCount", o.length),
               ),
               s.createElement(
                 "a",
@@ -163,63 +157,63 @@
           s.createElement(
             "ul",
             { className: n().FeatureList, "aria-labelledby": c },
-            y &&
+            b &&
               s.createElement(
                 s.Fragment,
                 null,
-                u.gameplay &&
+                r.gameplay &&
                   s.createElement(
                     "li",
                     null,
                     s.createElement(p, {
-                      group: o.Gameplay,
-                      features: u.gameplay,
+                      group: "gameplay",
+                      features: r.gameplay,
                       open: t,
                     }),
                   ),
-                u.visual &&
+                r.visual &&
                   s.createElement(
                     "li",
                     null,
                     s.createElement(p, {
-                      group: o.Visual,
-                      features: u.visual,
+                      group: "visual",
+                      features: r.visual,
                       open: t,
                     }),
                   ),
-                u.audio &&
+                r.audio &&
                   s.createElement(
                     "li",
                     null,
                     s.createElement(p, {
-                      group: o.Audio,
-                      features: u.audio,
+                      group: "audio",
+                      features: r.audio,
                       open: t,
                     }),
                   ),
-                u.input &&
+                r.input &&
                   s.createElement(
                     "li",
                     null,
                     s.createElement(p, {
-                      group: o.Input,
-                      features: u.input,
+                      group: "input",
+                      features: r.input,
                       open: t,
                     }),
                   ),
               ),
-            !y &&
-              r.map((e) =>
+            !b &&
+              o.map((e) =>
                 s.createElement(
                   "li",
                   { key: e },
-                  s.createElement(d, { feature: e, open: t }),
+                  s.createElement(A, { feature: e, open: t }),
                 ),
               ),
           ),
         );
       }
-      function A(e) {
+      function m(e) {
         return s.createElement(
           "svg",
           {
@@ -253,7 +247,7 @@
           s.createElement(
             "span",
             { className: n().GroupLabel, id: t },
-            (0, l.we)(y[e.group]),
+            (0, l.we)(b[e.group]),
           ),
           s.createElement(
             "ul",
@@ -262,17 +256,17 @@
               s.createElement(
                 "li",
                 { key: t },
-                s.createElement(d, { feature: t, open: e.open }),
+                s.createElement(A, { feature: t, open: e.open }),
               ),
             ),
           ),
         );
       }
-      function d(e) {
+      function A(e) {
         return s.createElement(
           "a",
           {
-            href: `${a.TS.HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36${u[e.feature]}`,
+            href: `${a.TS.STORE_BASE_URL}category/${r[e.feature]}`,
             className: n().InfoRow,
             "data-panel": '{"clickOnActivate": true}',
             "data-gp-focus-disabled": e.open ? void 0 : "true",
@@ -283,7 +277,7 @@
             s.createElement(
               "span",
               { className: n().FeatureName },
-              (0, l.we)(r[e.feature]),
+              (0, l.we)(o[e.feature]),
             ),
           ),
         );

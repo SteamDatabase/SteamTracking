@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "%1$s sonuç bulundu",
 	"Search_ListingsFound": "%2$s ilan bulundu",
 	"Search_ListingsFound_Plural": "%2$s ilan bulundu",
+	"SortBy_Default": "Popülerlik (varsayılan)",
 	"SortBy_Name_Asc": "Ad (A - Z)",
 	"SortBy_Name_Desc": "Ad (Z - A)",
 	"SortBy_Price_Asc": "Fiyat (düşükten yükseğe)",

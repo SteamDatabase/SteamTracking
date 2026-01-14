@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "%1$s treff",
 	"Search_ListingsFound": "Fant %2$s annonse",
 	"Search_ListingsFound_Plural": "Fant %2$s annonser",
+	"SortBy_Default": "Popularitet (standard)",
 	"SortBy_Name_Asc": "Navn (A til Å)",
 	"SortBy_Name_Desc": "Navn (Å til A)",
 	"SortBy_Price_Asc": "Pris (lav til høy)",

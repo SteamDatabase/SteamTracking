@@ -2350,7 +2350,7 @@ GHomepage = {
 	RenderSteamDeckCarouselv2: function()
 	{
 		let $SteamDeckCarousel = $J( '#featured_steam_deck_gamesv2' );
-		const k_nMinItemsInCarousel = 3;
+		const k_nMinItemsInCarousel = 4;
 
 		if ( !$SteamDeckCarousel.length || !GHomepage.oDisplayLists.top_played_deck.length )
 			return;

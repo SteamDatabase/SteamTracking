@@ -1552,6 +1552,12 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:nth-c
 	padding: 6px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	gap: 5px;
+	user-select: none;
 }
 
 .showcase_award_icon {

@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "Hittade %1$s resultat",
 	"Search_ListingsFound": "Hittade %2$s annons",
 	"Search_ListingsFound_Plural": "Hittade %2$s annonser",
+	"SortBy_Default": "Popularitet (standard)",
 	"SortBy_Name_Asc": "Namn (A till Z)",
 	"SortBy_Name_Desc": "Namn (Z till A)",
 	"SortBy_Price_Asc": "Pris (lågt till högt)",

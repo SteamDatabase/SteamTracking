@@ -380,6 +380,10 @@
           __webpack_require__
             ._("chunkid")
             .then(__webpack_require__._.bind(__webpack_require__, 60566, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 57276, 19))),
         (_.schinese = () =>
           __webpack_require__
             ._("chunkid")
@@ -5170,6 +5174,10 @@
           __webpack_require__
             ._("chunkid")
             .then(__webpack_require__._.bind(__webpack_require__, 24482, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 56680, 19))),
         (_.schinese = () =>
           __webpack_require__
             ._("chunkid")
@@ -5663,7 +5671,10 @@
           let _;
           _ &&
             (_ =
-              null !== (_ = _[_.name] && _[_.name][_]) && void 0 !== _ ? _ : 0),
+              null !== (_ = _.counts[_.name] && _.counts[_.name][_]) &&
+              void 0 !== _
+                ? _
+                : 0),
             (_ += null != _ ? _ : 0);
           const _ = _(_.name, _, _[_], _);
           _ && _.push(_);
@@ -5689,6 +5700,7 @@
           } else _ = (0, _._)(_, (_) => _.strLabel);
         }
         if (_ && 0 === _) return null;
+        if (_ && _.total === _) return null;
         return {
           strLabel: _.localized_name,
           rgOptions: _,
@@ -7692,6 +7704,13 @@
               },
             ],
           },
+          {
+            facet: "Tournament",
+            trigger: {
+              facet: "Type",
+              tag: "CSGO_Type_WeaponCase",
+            },
+          },
         ];
       const _ = {
           facet: "",
@@ -8924,7 +8943,7 @@
             facets: _,
             state: __webpack_require__,
             onStateChange: _,
-            facetCounts: _,
+            facetingInfo: _,
             ..._
           } = _,
           _ = {
@@ -10374,19 +10393,10 @@
           _(`listings/${_}/${encodeURIComponent(_)}`, __webpack_require__),
       };
       function _(_, _ = {}) {
-        const _ = (function (_) {
-          const { pref: _ = "infer", bNewOnly: _ } = _;
-          return (
-            !!_ ||
-            "new" === _ ||
-            ("old" !== _ && location.pathname.includes("/newmarket"))
-          );
-        })(_);
         let _ = "";
         (null == _ ? void 0 : _.search) &&
           (_ = "string" == typeof _.search ? _.search : _.search.toString());
-        const _ = _ ? "newmarket/" : "market/";
-        return `${_._.COMMUNITY_BASE_URL}${_}${_}${_ ? "?" + _ : ""}`;
+        return `${_._.COMMUNITY_BASE_URL}market/${_}${_ ? "?" + _ : ""}`;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

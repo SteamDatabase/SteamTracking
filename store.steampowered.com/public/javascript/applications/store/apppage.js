@@ -48,6 +48,7 @@
         Points: "_3k_jxlKBddOAxgSknpHNTq",
         IconCheckMark: "_38WUBpAcqEe6Neu89Kri9T",
         Footer: "_164mmLkSJ91cXzABhIrlZq",
+        Column: "_2ihFd-KfZvzA81NOi3SEEJ",
         Left: "_1v0jLHAK-8P4IONBwuF4kv",
         BalanceIcon: "_3VvvB-r8dZsAaPGZ2nsi1A",
         BalanceDetails: "_209Gyxysjz0vcGVVWuh_Xc",
@@ -59,12 +60,12 @@
         FooterLink: "KId8dCUFbYh_bz-jozERD",
         Divider: "_105pyOdHwQJP6rdcKymwUq",
         ConfirmContainer: "_3rAoeyoUq23O8OYP09P1oz",
-        ConfirmAwardImage: "_1ARgx7wEEFOEolu5lBhrk-",
         ConfirmTextCtn: "j0Jt4NEMft-y_QAF5NFFh",
         ConfirmText: "_1uA9QkRBqGe3Xt5tlGGhlU",
         AwardName: "_25N0xPcslHWWCQovL3Ycpk",
         TimePeriod: "_6mEUOxWKweU9C1C2VmgsZ",
         Visible: "_2QQTWF2AuPKh-8O0fgjl3b",
+        ConfirmAwardImage: "_1ARgx7wEEFOEolu5lBhrk-",
         LoadingContainer: "_1hKG3O3_MI7rp8_HJ7_0fV",
         SuccessContainer: "Uz_0uByMqbJfo6n5oW71y",
         SuccessText: "_1kQzNssyGs4FwglLbkE3mx",
@@ -353,20 +354,20 @@
             strFeatureFirstAppMsg: A,
             setNumberVisibleItems: w,
           } = e,
-          S = (0, l.a4)(910),
-          N = (0, g.Qn)(),
+          N = (0, l.a4)(910),
+          S = (0, g.Qn)(),
           [I, T] = r.useState(i),
           b = (0, c.zX)(i, n.Xh),
           [L, P] = r.useState(null);
         r.useEffect(() => {
           if (1 == b) return;
           const e = i.filter((e) => !s.A.Get().BIsStoreItemMissing(e, 0));
-          if (A && S && !N && e.length > 0 && e[0] == i[0]) {
+          if (A && N && !S && e.length > 0 && e[0] == i[0]) {
             const t = [e[0], f, ...e.slice(1)];
             T(t), P(A), w?.(t.length);
           } else T(e), w?.(e.length);
-        }, [i, N, S, b, w, A]);
-        const R = N;
+        }, [i, S, N, b, w, A]);
+        const k = S;
         return r.createElement(
           d.F,
           {
@@ -381,9 +382,9 @@
             bLazyRenderChildren: !0,
             gap: 12,
             hideArrows: !1,
-            screenIsWide: S,
+            screenIsWide: N,
             navKey: t,
-            bForceSimpleCarousel: R,
+            bForceSimpleCarousel: k,
           },
           (function (e, t, a) {
             const n = o.Fm.Get(),
@@ -1119,7 +1120,7 @@
                 ),
               ),
             Boolean(n && l) &&
-              r.createElement(S, {
+              r.createElement(N, {
                 nUpdateTime: this.state.last_update_event.rtime,
                 announcementGID: l,
                 onClick: this.ShowLatestUpdateModal,
@@ -1172,7 +1173,7 @@
           ),
         );
       }
-      function S(e) {
+      function N(e) {
         const { nUpdateTime: t, announcementGID: a, onClick: n } = e,
           l = a ? u.O3.GetClanEventFromAnnouncementGID(a) : null,
           o = (e) => {
@@ -1208,7 +1209,7 @@
             ),
         );
       }
-      function N(e) {
+      function S(e) {
         const t = (0, n.s4)(),
           a = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
           o = Math.floor(a.getTime() / 1e3),
@@ -1233,8 +1234,8 @@
         b = a.n(T),
         L = a(75844),
         P = a(22837),
-        R = a(68033),
-        k = a(41550),
+        k = a(68033),
+        R = a(41550),
         B = a(56011),
         M = a(76684),
         D = a(738),
@@ -1322,11 +1323,11 @@
                           className: G.TileActionInner,
                           onClick: (e) => {
                             (0, D.pg)(
-                              r.createElement(k.AD, {
+                              r.createElement(R.AD, {
                                 initialEvent: o,
                                 bShowOnlyInitialEvent: !1,
                                 partnerEventStore: u.O3,
-                                emoticonStore: R.A,
+                                emoticonStore: k.A,
                                 showAppHeader: !0,
                               }),
                               B.uX(e),
@@ -1851,7 +1852,7 @@
           ),
         );
       }
-      function Se() {
+      function Ne() {
         return r.createElement(we, {
           tagImage: r.createElement(Z.Moo, {
             className: (0, U.A)(_e.Tilt, _e.SmallerSVG),
@@ -1863,7 +1864,7 @@
             "#Store_ControllerSupport_Tooltip_ControllerRequired",
         });
       }
-      function Ne() {
+      function Se() {
         return r.createElement(
           "div",
           { className: (0, U.A)(_e.PurchaseNoticeContainer) },
@@ -1883,8 +1884,8 @@
         return r.createElement(
           "div",
           { className: (0, U.A)(_e.NoticeContainer) },
-          t && r.createElement(Se, null),
-          a && !t && r.createElement(Ne, null),
+          t && r.createElement(Ne, null),
+          a && !t && r.createElement(Se, null),
         );
       }
       function Te(e) {
@@ -2057,8 +2058,8 @@
       };
       var Le = a(87669),
         Pe = a(75204),
-        Re = a(72034),
-        ke = a(38506),
+        ke = a(72034),
+        Re = a(38506),
         Be = a(56545),
         Me = a(83935);
       class De {
@@ -2113,7 +2114,7 @@
           e.SetBodyFields({ steamid: f.iA.steamid });
           let t = await Me.a9.GetSummary(this.m_transport, e);
           1 == t.GetEResult()
-            ? (this.m_lPointsAvailable = ke.A.fromString(
+            ? (this.m_lPointsAvailable = Re.A.fromString(
                 t.Body().summary().points(),
               ))
             : console.error(
@@ -2283,7 +2284,7 @@
                 }
               })()),
             },
-            a = new Re.D(f.TS.WEBAPI_BASE_URL, t.webapi_token);
+            a = new ke.D(f.TS.WEBAPI_BASE_URL, t.webapi_token);
           (Ue.s_LoyaltyAwardModalStore = new De(a.GetServiceTransport())),
             this.setState({ bLoading: !1 });
         }
@@ -2403,7 +2404,7 @@
               let r = [];
               return (
                 e.forEach(function (e) {
-                  if (e.valid_target_types.includes(t))
+                  if (e.valid_target_types.includes(t) && e.purchaseable)
                     switch (t) {
                       case 1:
                       case 3:
@@ -2537,88 +2538,8 @@
             case We.CONFIRM:
             case We.SUBMITTING:
             case We.DONE:
-              C = r.createElement(
-                r.Fragment,
-                null,
-                r.createElement($e, { description: y }),
-                r.createElement(tt, null),
-                r.createElement(
-                  "div",
-                  { style: { position: "relative" } },
-                  r.createElement(
-                    "div",
-                    {
-                      className: (0, U.A)(
-                        Oe.ConfirmContainer,
-                        i === We.CONFIRM && Oe.Visible,
-                      ),
-                    },
-                    r.createElement(Xe, {
-                      className: Oe.ConfirmAwardImage,
-                      reactionType: o,
-                    }),
-                    r.createElement(
-                      "div",
-                      { className: Oe.ConfirmTextCtn },
-                      r.createElement(
-                        "div",
-                        { className: Oe.ConfirmText },
-                        (0, E.PP)(
-                          "#GrantAward_Confirm",
-                          r.createElement(nt, null, (0, Ke.D)(g)),
-                          r.createElement(
-                            "span",
-                            { className: Oe.AwardName },
-                            Ve(o),
-                          ),
-                        ),
-                      ),
-                      r.createElement(
-                        "div",
-                        { className: Oe.ConfirmText },
-                        (0, E.PP)(
-                          "#GrantAward_Confirm_Details",
-                          r.createElement(nt, null, (0, Ke.D)(v)),
-                          r.createElement(
-                            "span",
-                            { className: Oe.TimePeriod },
-                            (0, E.we)("#GrantAward_Confirm_DetailsTimePeriod"),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  r.createElement(
-                    "div",
-                    {
-                      className: (0, U.A)(
-                        Oe.LoadingContainer,
-                        i === We.SUBMITTING && Oe.Visible,
-                      ),
-                    },
-                    r.createElement(rt, null),
-                  ),
-                  r.createElement(
-                    "div",
-                    {
-                      className: (0, U.A)(
-                        Oe.SuccessContainer,
-                        i === We.DONE && Oe.Visible,
-                      ),
-                    },
-                    r.createElement(Xe, {
-                      className: Oe.ConfirmAwardImage,
-                      reactionType: o,
-                    }),
-                    r.createElement(
-                      "div",
-                      { className: Oe.SuccessText },
-                      (0, E.we)("#GrantAward_Success"),
-                    ),
-                  ),
-                ),
-                r.createElement(tt, null),
-                r.createElement(
+              {
+                let e = r.createElement(
                   et,
                   { store: n },
                   r.createElement(
@@ -2638,8 +2559,105 @@
                     },
                     (0, E.we)("#GrantAwardNowButton"),
                   ),
-                ),
-              );
+                );
+                i === We.DONE &&
+                  (e = r.createElement(
+                    et,
+                    { store: n },
+                    r.createElement(
+                      Ge.$n,
+                      { onClick: l },
+                      (0, E.we)("#Button_Close"),
+                    ),
+                  )),
+                  (C = r.createElement(
+                    r.Fragment,
+                    null,
+                    r.createElement($e, { description: y }),
+                    r.createElement(tt, null),
+                    r.createElement(
+                      "div",
+                      { style: { position: "relative" } },
+                      r.createElement(
+                        "div",
+                        {
+                          className: (0, U.A)(
+                            Oe.ConfirmContainer,
+                            i === We.CONFIRM && Oe.Visible,
+                          ),
+                        },
+                        r.createElement(Xe, {
+                          className: Oe.ConfirmAwardImage,
+                          reactionType: o,
+                        }),
+                        r.createElement(
+                          "div",
+                          { className: Oe.ConfirmTextCtn },
+                          r.createElement(
+                            "div",
+                            { className: Oe.ConfirmText },
+                            (0, E.PP)(
+                              "#GrantAward_Confirm",
+                              r.createElement(nt, null, (0, Ke.D)(g)),
+                              r.createElement(
+                                "span",
+                                { className: Oe.AwardName },
+                                Ve(o),
+                              ),
+                            ),
+                          ),
+                          v > 0 &&
+                            r.createElement(
+                              "div",
+                              { className: Oe.ConfirmText },
+                              (0, E.PP)(
+                                "#GrantAward_Confirm_Details",
+                                r.createElement(nt, null, (0, Ke.D)(v)),
+                                r.createElement(
+                                  "span",
+                                  { className: Oe.TimePeriod },
+                                  (0, E.we)(
+                                    "#GrantAward_Confirm_DetailsTimePeriod",
+                                  ),
+                                ),
+                              ),
+                            ),
+                        ),
+                      ),
+                      r.createElement(
+                        "div",
+                        {
+                          className: (0, U.A)(
+                            Oe.LoadingContainer,
+                            i === We.SUBMITTING && Oe.Visible,
+                          ),
+                        },
+                        r.createElement(rt, null),
+                      ),
+                      r.createElement(
+                        "div",
+                        {
+                          className: (0, U.A)(
+                            Oe.SuccessContainer,
+                            i === We.DONE && Oe.Visible,
+                          ),
+                        },
+                        r.createElement(Xe, {
+                          className: Oe.ConfirmAwardImage,
+                          reactionType: o,
+                          bForceAnimated: !0,
+                        }),
+                        r.createElement(
+                          "div",
+                          { className: Oe.SuccessText },
+                          (0, E.we)("#GrantAward_Success"),
+                        ),
+                      ),
+                    ),
+                    r.createElement(tt, null),
+                    e,
+                  ));
+              }
               break;
             case We.ERROR:
               {
@@ -2780,17 +2798,33 @@
             { className: Oe.Footer },
             r.createElement(
               "div",
-              { className: Oe.Left },
-              r.createElement(h.vrn, { className: Oe.BalanceIcon }),
+              { className: Oe.PointsArea },
               r.createElement(
                 "div",
-                { className: Oe.BalanceDetails },
+                { className: Oe.Left },
+                r.createElement(h.vrn, { className: Oe.BalanceIcon }),
                 r.createElement(
                   "div",
-                  { className: Oe.BalanceLabel },
-                  (0, E.we)("#YourBalance"),
+                  { className: Oe.BalanceDetails },
+                  r.createElement(
+                    "div",
+                    { className: Oe.BalanceLabel },
+                    (0, E.we)("#YourBalance"),
+                  ),
+                  r.createElement("div", { className: Oe.BalanceAmount }, n),
                 ),
-                r.createElement("div", { className: Oe.BalanceAmount }, n),
+              ),
+              r.createElement(
+                "div",
+                { className: Oe.Column },
+                r.createElement(
+                  "a",
+                  {
+                    className: Oe.FooterLink,
+                    href: `${f.TS.STORE_BASE_URL}points/howitworks`,
+                  },
+                  (0, E.we)("#GrantAward_PointsLink"),
+                ),
               ),
             ),
             r.createElement(
@@ -2802,14 +2836,6 @@
                 r.Children.map(t, (e) =>
                   r.createElement("div", { className: Oe.Action }, e),
                 ),
-              ),
-              r.createElement(
-                "a",
-                {
-                  className: Oe.FooterLink,
-                  href: `${f.TS.STORE_BASE_URL}points/howitworks`,
-                },
-                (0, E.we)("#GrantAward_PointsLink"),
               ),
             ),
           );
@@ -3257,8 +3283,8 @@
       }
       var At = a(70600),
         wt = a(7445),
-        St = a(88006),
-        Nt = a(96236);
+        Nt = a(88006),
+        St = a(96236);
       function It(e, t) {
         return (0, r.useMemo)(() => {
           let a = [],
@@ -3291,14 +3317,14 @@
             Tt.QY,
             { supportsFullscreen: !1, supportsTheater: !0 },
             r.createElement(
-              kt,
+              Rt,
               null,
-              r.createElement(Rt, { trailers: t, screenshots: a }),
+              r.createElement(kt, { trailers: t, screenshots: a }),
             ),
           ),
         );
       }
-      function Rt(e) {
+      function kt(e) {
         let { trailers: t, screenshots: a } = e,
           n = (0, Tt.ri)(),
           l = "theater" == n.strMode,
@@ -3368,7 +3394,7 @@
           ),
         );
       }
-      function kt(e) {
+      function Rt(e) {
         let { children: t } = e,
           a = (0, r.useCallback)(() => {}, []),
           [n, l] = (0, r.useState)(!0);
@@ -3476,11 +3502,11 @@
           d = (0, r.useCallback)(
             (e) => {
               let t = a.current;
-              return e.detail.button == St.pR.TRIGGER_LEFT && t
+              return e.detail.button == Nt.pR.TRIGGER_LEFT && t
                 ? ((t.currentTime = Math.max(0, t.currentTime - 10)),
                   e.preventDefault(),
                   void e.stopPropagation())
-                : e.detail.button == St.pR.TRIGGER_RIGHT && t
+                : e.detail.button == Nt.pR.TRIGGER_RIGHT && t
                   ? ((t.currentTime = Math.min(t.duration, t.currentTime + 10)),
                     e.preventDefault(),
                     void e.stopPropagation())
@@ -3533,7 +3559,7 @@
           i.Z,
           { ref: o, className: s, onFocusWithin: n },
           r.createElement(
-            Nt.K,
+            St.K,
             { mode: "JustLoad", horizontal: !0, holdGampadFocus: !0 },
             r.createElement(de.P, {
               dashManifests: t.dashManifests,
@@ -4416,7 +4442,7 @@
           r.createElement(O.X, {
             config: {
               "events-row": () =>
-                r.createElement(ht.d, null, r.createElement(N, { appid: t })),
+                r.createElement(ht.d, null, r.createElement(S, { appid: t })),
               "review-award": () => r.createElement(Ye, null),
               "deck-topplayed-banner": (e) => r.createElement(dt, { ...e }),
               "steamawardsvote-embed": () => r.createElement(Ca, { appID: t }),

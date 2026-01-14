@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "Tìm thấy %1$s kết quả",
 	"Search_ListingsFound": "Tìm thấy %2$s bài đăng bán",
 	"Search_ListingsFound_Plural": "Tìm thấy %2$s bài đăng bán",
+	"SortBy_Default": "Độ phổ biến (mặc định)",
 	"SortBy_Name_Asc": "Tên (A đến Z)",
 	"SortBy_Name_Desc": "Tên (Z đến A)",
 	"SortBy_Price_Asc": "Giá (thấp đến cao)",

@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "%1$s件の検索結果が見つかりました",
 	"Search_ListingsFound": "%2$s件の出品が見つかりました",
 	"Search_ListingsFound_Plural": "%2$s件の出品が見つかりました",
+	"SortBy_Default": "人気度（デフォルト）",
 	"SortBy_Name_Asc": "名前（A～Z）",
 	"SortBy_Name_Desc": "名前（Z～A）",
 	"SortBy_Price_Asc": "価格（低～高）",

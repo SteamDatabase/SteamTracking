@@ -3690,6 +3690,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "capsule_index_";
       function _(_) {
@@ -3840,6 +3841,7 @@
             bPreferAssetWithoutOverride: _,
           } = _,
           [_] = (0, _._)(_._, (0, _._)(_.type), _._),
+          _ = (0, _._)(_),
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _.useMemo)(() => _?.GetIncludedAppIDsOrSelf(), [_]);
@@ -3889,7 +3891,7 @@
                   bPreferAssetWithoutOverride: _,
                 }),
               _.createElement(_._, {
-                storeItem: _,
+                _: _,
               }),
               Boolean(_) &&
                 _.createElement(_._, {

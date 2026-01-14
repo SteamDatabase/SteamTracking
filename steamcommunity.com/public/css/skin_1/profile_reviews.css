@@ -82,7 +82,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	font-size: 13px;
 	vertical-align: middle;
 	font-weight: bold;
-	padding: 3px;
+	padding-right: 3px;
 }
 .review_box .header .review_award_count.hidden {
 	display: none;

@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "Намерени са %1$s резултата",
 	"Search_ListingsFound": "Намерена е %2$s обява",
 	"Search_ListingsFound_Plural": "Намерени са %2$s обяви",
+	"SortBy_Default": "Популярност (по подразбиране)",
 	"SortBy_Name_Asc": "Име (А — Я)",
 	"SortBy_Name_Desc": "Име (Я — А)",
 	"SortBy_Price_Asc": "Цена (възходящо)",

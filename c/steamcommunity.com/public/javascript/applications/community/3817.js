@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "%1$s hasil ditemukan",
 	"Search_ListingsFound": "%2$s iklan penjualan ditemukan",
 	"Search_ListingsFound_Plural": "%2$s iklan penjualan ditemukan",
+	"SortBy_Default": "Popularitas (default)",
 	"SortBy_Name_Asc": "Nama (A ke Z)",
 	"SortBy_Name_Desc": "Nama (Z ke A)",
 	"SortBy_Price_Asc": "Harga (rendah ke tinggi)",

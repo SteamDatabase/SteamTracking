@@ -88521,6 +88521,7 @@
             myInstance: _,
             setIsHovered: __webpack_require__,
             displayStoreItem: _,
+            displayID: _,
             hoverType: _,
             nHoverId: _,
             displayInfo: _,
@@ -88597,7 +88598,7 @@
                       bPreferAssetWithoutOverride: _,
                     }),
                     _.createElement(_._, {
-                      storeItem: _,
+                      _: _,
                     }),
                   ),
                 ),
@@ -88743,7 +88744,7 @@
                     bPreferAssetWithoutOverride: _,
                   }),
                   _.createElement(_._, {
-                    storeItem: _,
+                    _: _,
                   }),
                 ),
               ),

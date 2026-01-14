@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "Fandt %1$s resultater",
 	"Search_ListingsFound": "Fandt %2$s opslag",
 	"Search_ListingsFound_Plural": "Fandt %2$s opslag",
+	"SortBy_Default": "Popularitet (standard)",
 	"SortBy_Name_Asc": "Navn (A til Z)",
 	"SortBy_Name_Desc": "Navn (Z til A)",
 	"SortBy_Price_Asc": "Pris (lav til høj)",

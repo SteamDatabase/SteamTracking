@@ -22731,7 +22731,7 @@
           }
           return _;
         }
-        async SavePartnerEventSaleAssets(_, _, _) {
+        async SavePartnerEventSaleAssets(_, _, _, _) {
           let _ = null;
           if (!this.m_mapExistingEvents.has(_)) return !1;
           try {
@@ -22739,16 +22739,20 @@
               _ = new FormData();
             _.append("sessionid", _._.SESSIONID),
               _.append("gidclanevent", _),
-              _.append("json", JSON.stringify(_));
+              _.append("json", JSON.stringify(_)),
+              _.append("pageStyles", JSON.stringify(_));
             const _ = await _().post(_, _, {
               withCredentials: !0,
             });
             if (1 == _?.data?.success) {
               const _ = this.m_mapExistingEvents.get(_);
-              for (const _ in _)
-                __webpack_require__.hasOwnProperty(_) &&
-                  _[_] &&
-                  (_.jsondata[_] = _[_]);
+              if (_ && _.jsondata)
+                for (const _ in _)
+                  if (__webpack_require__.hasOwnProperty(_) && _[_]) {
+                    const _ = _,
+                      _ = _[_];
+                    void 0 !== _ && void 0 !== _ && (_.jsondata[_] = _);
+                  }
               return this.GetPartnerEventChangeCallback(_).Dispatch(_), !0;
             }
             _ = (0, _._)(_);
@@ -69981,8 +69985,8 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.reports || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
+            _.prototype.frame_rates || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
         }
         static sm_m;
         static sm_mbf;
@@ -69992,11 +69996,15 @@
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  reports: {
-                    _: 1,
+                  frame_rates: {
+                    _: 2,
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  system_info: {
+                    _: 3,
+                    _: _,
                   },
                 },
               }),
@@ -70042,6 +70050,111 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.manufacturer || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  manufacturer: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  model: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dx_video_card: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dx_vendorid: {
+                    _: 4,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  dx_deviceid: {
+                    _: 5,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  num_gpu: {
+                    _: 6,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  system_ram: {
+                    _: 7,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  _: {
+                    _: 8,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  cpu_vendor: {
+                    _: 9,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  cpu_name: {
+                    _: 10,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientMetrics_GamePerformance_Notification_SystemInformation";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.gameid || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -70063,43 +70176,8 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
-                  manufacturer: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  model: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  dx_video_card: {
-                    _: 5,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  dx_vendorid: {
-                    _: 6,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  dx_deviceid: {
-                    _: 7,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  num_gpu: {
-                    _: 8,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  system_ram: {
-                    _: 9,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
                   session_seconds: {
-                    _: 10,
+                    _: 3,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
@@ -70140,7 +70218,7 @@
           return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
         }
         getClassName() {
-          return "CClientMetrics_GamePerformance_Notification_FrameRateReport";
+          return "CClientMetrics_GamePerformance_Notification_FrameRate";
         }
       }
       class _ extends _.Message {

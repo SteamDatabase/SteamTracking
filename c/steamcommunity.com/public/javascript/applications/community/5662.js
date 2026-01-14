@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "%1$s eredményt találtunk",
 	"Search_ListingsFound": "%2$s ajánlatot találtunk",
 	"Search_ListingsFound_Plural": "%2$s ajánlatot találtunk",
+	"SortBy_Default": "Népszerűség (alapértelmezett)",
 	"SortBy_Name_Asc": "Név (A–Z)",
 	"SortBy_Name_Desc": "Név (Z–A)",
 	"SortBy_Price_Asc": "Ár (növekvő)",

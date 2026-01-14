@@ -124,14 +124,15 @@ select {
 }
 
 /* hide some awards */
-.review_award_ctn > .review_award:nth-child(n+4) {
+.review_award_ctn > .review_award.purchaseable:nth-child(n+4), .review_award_ctn > .review_award.unpurchaseable {
 	display: none;
 }
+
 .review_award_ctn > .review_award.more_btn {
 	display: inline-block;
 }
 /* unless force shown */
-.review_award_ctn.show_all_awards > .review_award {
+.review_award_ctn.show_all_awards > .review_award.purchaseable, .review_award_ctn.show_all_awards > .review_award.unpurchaseable {
 	display: inline-block;
 }
 .review_award_ctn.show_all_awards > .review_award.more_btn {

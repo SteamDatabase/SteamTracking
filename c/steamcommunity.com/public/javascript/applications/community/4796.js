@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "Bylo nalezeno %1$s výsledků",
 	"Search_ListingsFound": "Byla nalezena %2$s nabídka",
 	"Search_ListingsFound_Plural": "Bylo nalezeno %2$s nabídek",
+	"SortBy_Default": "Popularita (výchozí)",
 	"SortBy_Name_Asc": "Název (od A do Z)",
 	"SortBy_Name_Desc": "Název (od Z do A)",
 	"SortBy_Price_Asc": "Cena (od nejnižší)",

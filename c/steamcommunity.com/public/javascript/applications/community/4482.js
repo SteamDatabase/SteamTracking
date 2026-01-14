@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "Найдено результатов: %1$s",
 	"Search_ListingsFound": "Найдено заявок на продажу: %2$s",
 	"Search_ListingsFound_Plural": "Найдено заявок на продажу: %2$s",
+	"SortBy_Default": "Популярность (по умолчанию)",
 	"SortBy_Name_Asc": "Название (от А до Я)",
 	"SortBy_Name_Desc": "Название (от Я до А)",
 	"SortBy_Price_Asc": "Цена (по возрастанию)",

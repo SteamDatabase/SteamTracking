@@ -438,17 +438,18 @@ textarea.forumtopic_reply_textarea {
 }
 
 /* hide some awards */
-.forum_op .community_award_ctn > .community_award:nth-child(n+4),
-.commentthread_comment_content .community_award_ctn > .community_award:nth-child(n+4) {
+.forum_op .community_award_ctn > .community_award.purchaseable:nth-child(n+4), .forum_op .community_award_ctn > .community_award.unpurchaseable,
+.commentthread_comment_content .community_award_ctn > .community_award.purchaseable:nth-child(n+4), .commentthread_comment_content .community_award_ctn > .community_award.unpurchaseable {
 	display: none;
 }
+
 .forum_op .community_award_ctn > .community_award.more_btn,
 .commentthread_comment_content .community_award_ctn > .community_award.more_btn {
 	display: block;
 }
 /* unless force shown */
-.forum_op .community_award_ctn.show_all_awards > .community_award,
-.commentthread_comment_content .community_award_ctn.show_all_awards > .community_award {
+.forum_op .community_award_ctn.show_all_awards > .community_award.purchaseable, .forum_op .community_award_ctn.show_all_awards > .community_award.unpurchaseable,
+.commentthread_comment_content .community_award_ctn.show_all_awards > .community_award.purchaseable, .commentthread_comment_content .community_award_ctn.show_all_awards > .community_award.unpurchaseable {
 	display: block;
 }
 .forum_op .community_award_ctn.show_all_awards > .community_award.more_btn,

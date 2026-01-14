@@ -5,9 +5,9 @@ import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 function _(_) {
   return "appid" in _
@@ -369,23 +369,25 @@ function _(_, _, _) {
     ..._(_, _, _),
     enabled: _ && !_,
   });
-  return _ && (_ = _), _(_(_, _ ? _ : _));
+  return (
+    _ &&
+      _.length == 1 &&
+      (_ = {
+        appid: _[0],
+      }),
+    _(_(_, _ ? _ : _))
+  );
 }
 function _(_, _, _) {
-  let _ = _ && "packageid" in _ && !!_.packageid;
+  let _ = _ && "appid" in _ && !!_.appid;
   return {
     queryKey: _(_, "include_included_items"),
-    queryFn: async () => {
-      _ && _(_, _, _);
-      let _ = await _(_, _, "include_included_items");
-      return _.included_appids?.length == 1
-        ? {
-            appid: _.included_appids[0],
-          }
-        : _;
-    },
-    initialData: _ ? void 0 : _,
-    enabled: _,
+    queryFn: async () => (
+      _ && _(_, _, _),
+      (await _(_, _, "include_included_items")).included_appids ?? []
+    ),
+    initialData: _ ? [_.appid] : void 0,
+    enabled: !_,
   };
 }
 function _(_) {

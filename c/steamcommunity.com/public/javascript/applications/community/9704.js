@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "검색 결과 %1$s개",
 	"Search_ListingsFound": "판매 등록 아이템 %2$s개",
 	"Search_ListingsFound_Plural": "판매 등록 아이템 %2$s개",
+	"SortBy_Default": "인기순(기본)",
 	"SortBy_Name_Asc": "이름(알파벳순)",
 	"SortBy_Name_Desc": "이름(역알파벳순)",
 	"SortBy_Price_Asc": "낮은 가격순",

@@ -9008,37 +9008,43 @@
           }
           return m;
         }
-        async SavePartnerEventSaleAssets(e, t, n) {
-          var i;
-          let a = null;
+        async SavePartnerEventSaleAssets(e, t, n, i) {
+          var a;
+          let s = null;
           if (!this.m_mapExistingEvents.has(t)) return !1;
           try {
-            const s = `${v.TS.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
-              o = new FormData();
-            o.append("sessionid", v.TS.SESSIONID),
-              o.append("gidclanevent", t),
-              o.append("json", JSON.stringify(n));
-            const l = await r().post(s, o, { withCredentials: !0 });
+            const o = `${v.TS.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
+              l = new FormData();
+            l.append("sessionid", v.TS.SESSIONID),
+              l.append("gidclanevent", t),
+              l.append("json", JSON.stringify(n)),
+              l.append("pageStyles", JSON.stringify(i));
+            const c = await r().post(o, l, { withCredentials: !0 });
             if (
               1 ==
-              (null === (i = null == l ? void 0 : l.data) || void 0 === i
+              (null === (a = null == c ? void 0 : c.data) || void 0 === a
                 ? void 0
-                : i.success)
+                : a.success)
             ) {
               const e = this.m_mapExistingEvents.get(t);
-              for (const t in n)
-                n.hasOwnProperty(t) && n[t] && (e.jsondata[t] = n[t]);
+              if (e && e.jsondata)
+                for (const t in n)
+                  if (n.hasOwnProperty(t) && n[t]) {
+                    const i = t,
+                      a = n[i];
+                    void 0 !== a && void 0 !== i && (e.jsondata[i] = a);
+                  }
               return this.GetPartnerEventChangeCallback(t).Dispatch(e), !0;
             }
-            a = (0, h.H)(l);
+            s = (0, h.H)(c);
           } catch (e) {
-            a = (0, h.H)(e);
+            s = (0, h.H)(e);
           }
           return (
             console.error(
               "CPartnerEventStore.SavePartnerEventSaleAssets failed: " +
-                (null == a ? void 0 : a.strErrorMsg),
-              a,
+                (null == s ? void 0 : s.strErrorMsg),
+              s,
             ),
             !1
           );

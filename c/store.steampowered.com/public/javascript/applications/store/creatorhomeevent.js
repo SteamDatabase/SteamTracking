@@ -2659,31 +2659,32 @@
         } = _;
         (0, _._)(_.GetAccountID());
         const _ = _.useMemo(() => {
-          let _ = new Array();
-          const _ = _._.GetLanguageListForRealms([
-            _._.k_ESteamRealmGlobal,
-            _._.k_ESteamRealmChina,
-          ]);
-          for (const _ of _) {
-            const _ = __webpack_require__(_);
-            if (_) {
-              const _ = (0, _._)(_),
-                _ = (0, _._)("#Language_" + _);
-              _.push({
-                lang: _,
-                strLang: _,
-                locLang: _,
-                imgHash: _,
-              });
+            let _ = new Array();
+            const _ = _._.GetLanguageListForRealms([
+              _._.k_ESteamRealmGlobal,
+              _._.k_ESteamRealmChina,
+            ]);
+            for (const _ of _) {
+              const _ = __webpack_require__(_);
+              if (_) {
+                const _ = (0, _._)(_),
+                  _ = (0, _._)("#Language_" + _);
+                _.push({
+                  lang: _,
+                  strLang: _,
+                  locLang: _,
+                  imgHash: _,
+                });
+              }
             }
-          }
-          return (
-            (_ = _.sort((_, _) =>
-              _.locLang > _.locLang ? 1 : _.locLang < _.locLang ? -1 : 0,
-            )),
-            _
-          );
-        }, [__webpack_require__]);
+            return (
+              (_ = _.sort((_, _) =>
+                _.locLang > _.locLang ? 1 : _.locLang < _.locLang ? -1 : 0,
+              )),
+              _
+            );
+          }, [__webpack_require__]),
+          [_, _, _] = (0, _._)();
         return _.createElement(
           "div",
           {
@@ -2713,15 +2714,27 @@
             _.createElement(
               _._,
               {
-                onClick: () => {
-                  for (let _ = 0; _ < 31; _++) _(_) && _(_);
-                },
+                onClick: _,
               },
               (0, _._)("#Sale_RemoveAll"),
               _.createElement(_._, {
                 tooltip: (0, _._)("#Sale_RemoveAll_Tooltip"),
               }),
             ),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(_._, {
+              strTitle: (0, _._)("#Dialog_AreYouSure"),
+              strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
+              closeModal: _,
+              onOK: () => {
+                for (let _ = 0; _ < 31; _++) _ && _ && _(_) && _(_);
+              },
+            }),
+          ),
         );
       }
       function _(_) {
@@ -4806,6 +4819,7 @@
             backgroundImageEditModel: _,
             bBackgroundImgGroupEditMode: __webpack_require__,
             fnSetBackgroundImgGroupEditMode: _,
+            bShowAsValveOnly: _,
           } = _,
           [_, _] = (0, _.useState)(_.BIsBackgroundImageEnabled()),
           [_, _, _] = (0, _._)(),
@@ -4813,7 +4827,7 @@
         return _.createElement(
           "div",
           {
-            className: _().Ctn,
+            className: (0, _._)(_().Ctn, _ && _.ValveOnlyBackground),
           },
           _.createElement(
             _._,
@@ -5345,6 +5359,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -5423,7 +5438,8 @@
                 _?.broadcast_chat_announcement_giveaway,
             }),
             [_, __webpack_require__, _, _, _],
-          );
+          ),
+          _ = (0, _._)(() => _?.BIsBackgroundImageEnabled() ?? !1);
         if (__webpack_require__ && void 0 !== _) {
           const _ =
               __webpack_require__.jsondata.localized_sale_logo?.filter(Boolean)
@@ -5450,7 +5466,9 @@
               ? !_ && _?.BIsBackgroundImageEnabled()
                 ? _._.EPreviewMode_EditBackground
                 : _._.EPreviewMode_Enabled
-              : _._.EPreviewMode_Disabled;
+              : _._.EPreviewMode_Disabled,
+            _ = _ || 36 != __webpack_require__.GetEventType(),
+            _ = (0, _._)(__webpack_require__.clanSteamID);
           return _.createElement(
             _._,
             null,
@@ -5477,10 +5495,12 @@
                     eventModel: __webpack_require__,
                   }),
                   Boolean(_) &&
+                    (_ || _) &&
                     _.createElement(_, {
                       backgroundImageEditModel: _,
                       bBackgroundImgGroupEditMode: _,
                       fnSetBackgroundImgGroupEditMode: _,
+                      bShowAsValveOnly: !_,
                     }),
                   _.createElement(
                     "div",

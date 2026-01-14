@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "พบผลลัพธ์ %1$s รายการ",
 	"Search_ListingsFound": "พบ %2$s รายการ",
 	"Search_ListingsFound_Plural": "พบ %2$s รายการ",
+	"SortBy_Default": "ความนิยม (ค่าเริ่มต้น)",
 	"SortBy_Name_Asc": "ชื่อ (จาก A ถึง Z)",
 	"SortBy_Name_Desc": "ชื่อ (จาก Z ถึง A)",
 	"SortBy_Price_Asc": "ราคา (ต่ำไปสูง)",

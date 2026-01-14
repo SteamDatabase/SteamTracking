@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "%1$s résultats trouvés :",
 	"Search_ListingsFound": "%2$s offre trouvée :",
 	"Search_ListingsFound_Plural": "%2$s offres trouvées :",
+	"SortBy_Default": "Popularité (par défaut)",
 	"SortBy_Name_Asc": "Nom (A à Z)",
 	"SortBy_Name_Desc": "Nom (Z à A)",
 	"SortBy_Price_Asc": "Prix (croissant)",

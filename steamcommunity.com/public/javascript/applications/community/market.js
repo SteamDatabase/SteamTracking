@@ -293,6 +293,7 @@
         (_.portuguese = () => n.e(6904).then(n.t.bind(n, 66904, 19))),
         (_.romanian = () => n.e(5298).then(n.t.bind(n, 5298, 19))),
         (_.russian = () => n.e(566).then(n.t.bind(n, 60566, 19))),
+        (_.sc_schinese = () => n.e(7276).then(n.t.bind(n, 57276, 19))),
         (_.schinese = () => n.e(917).then(n.t.bind(n, 30917, 19))),
         (_.spanish = () => n.e(7087).then(n.t.bind(n, 67087, 19))),
         (_.swedish = () => n.e(7486).then(n.t.bind(n, 17486, 19))),
@@ -4210,6 +4211,7 @@
         (Pt.portuguese = () => n.e(8980).then(n.t.bind(n, 18980, 19))),
         (Pt.romanian = () => n.e(8774).then(n.t.bind(n, 28774, 19))),
         (Pt.russian = () => n.e(4482).then(n.t.bind(n, 24482, 19))),
+        (Pt.sc_schinese = () => n.e(6680).then(n.t.bind(n, 56680, 19))),
         (Pt.schinese = () => n.e(5841).then(n.t.bind(n, 55841, 19))),
         (Pt.spanish = () => n.e(8883).then(n.t.bind(n, 38883, 19))),
         (Pt.swedish = () => n.e(5778).then(n.t.bind(n, 15778, 19))),
@@ -4536,7 +4538,10 @@
           let n;
           e &&
             (n =
-              null !== (l = e[t.name] && e[t.name][c]) && void 0 !== l ? l : 0),
+              null !== (l = e.counts[t.name] && e.counts[t.name][c]) &&
+              void 0 !== l
+                ? l
+                : 0),
             (r += null != n ? n : 0);
           const s = nc(t.name, c, o[c], n);
           s && a.push(s);
@@ -4562,6 +4567,7 @@
           } else a = (0, Rt.Z)(a, (t) => t.strLabel);
         }
         if (e && 0 === r) return null;
+        if (e && e.total === r) return null;
         return { strLabel: t.localized_name, rgOptions: a, fieldType: c };
       }
       function nc(t, c, n, e) {
@@ -6217,6 +6223,10 @@
               { facet: "ItemSet" },
             ],
           },
+          {
+            facet: "Tournament",
+            trigger: { facet: "Type", tag: "CSGO_Type_WeaponCase" },
+          },
         ];
       const jn = {
           facet: "",
@@ -7205,7 +7215,7 @@
             facets: c,
             state: n,
             onStateChange: l,
-            facetCounts: a,
+            facetingInfo: a,
             ...o
           } = t,
           s = { ...c },
@@ -8369,19 +8379,10 @@
         Item: (t, c, n = {}) => a(`listings/${t}/${encodeURIComponent(c)}`, n),
       };
       function a(t, c = {}) {
-        const n = (function (t) {
-          const { pref: c = "infer", bNewOnly: n } = t;
-          return (
-            !!n ||
-            "new" === c ||
-            ("old" !== c && location.pathname.includes("/newmarket"))
-          );
-        })(c);
-        let l = "";
+        let n = "";
         (null == c ? void 0 : c.search) &&
-          (l = "string" == typeof c.search ? c.search : c.search.toString());
-        const a = n ? "newmarket/" : "market/";
-        return `${e.TS.COMMUNITY_BASE_URL}${a}${t}${l ? "?" + l : ""}`;
+          (n = "string" == typeof c.search ? c.search : c.search.toString());
+        return `${e.TS.COMMUNITY_BASE_URL}market/${t}${n ? "?" + n : ""}`;
       }
     },
     83281: (t, c, n) => {

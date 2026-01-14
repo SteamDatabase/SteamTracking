@@ -61,12 +61,16 @@
     },
     chunkid: (module) => {
       module.exports = {
+        LivePreview: "eFYn5NNpjD2UUEaetVynq",
+        Button: "_1_mHUKME5i3Y8zoNldiFoQ",
+        DeviceDropdown: "_3k5_ki8-nxIYRWf3FJmYr7",
+        Connected: "_1oL5XzL932fPV06pp5B5w7",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         Ctn: "BTMmbSI5WdBvCQVAgf3-i",
         ButtonIcon: "_21IZDNymOVDf4u4Ont7WVA",
-        LivePreview: "_3ZR1lzEuaXh2XBVuVEh-0J",
-        Connected: "_2ME4vnNY35SFhb8T9N3Bac",
-        Button: "K2C7UN0E4ll0EoPiSoSM9",
-        DeviceDropdown: "_1zrINKOr2-kktSCnf59Xt6",
       };
     },
     chunkid: (module) => {
@@ -5121,9 +5125,90 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { model: _, fnOnDirty: __webpack_require__ } = _,
+          [_, _] = (0, _._)(() => [
+            _.sale_background_color,
+            _.sale_background_repeat,
+          ]),
+          [_, _] = _.useState(null == _);
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().FlexRowContainer, _().BackgroundConfigCtn),
+          },
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(
+              _._,
+              null,
+              (0, _._)("#Sale_Section_Background_Color"),
+            ),
+            _.createElement(
+              _._,
+              {
+                className: _().BackgroundColorBtn,
+                onClick: (_) => {
+                  (0, _._)(
+                    _.createElement(_._, {
+                      color: _,
+                      onChange: (_) => {
+                        (_.sale_background_color = _), __webpack_require__();
+                      },
+                    }),
+                    _,
+                    {
+                      bDisablePopTop: !0,
+                    },
+                  );
+                },
+                style: {
+                  backgroundColor: _,
+                },
+              },
+              (0, _._)("#Sale_BackgroundColor"),
+            ),
+            Boolean(_._.is_support) &&
+              _.createElement(
+                "div",
+                {
+                  className: (0, _._)(
+                    _().ValveOnlyBackground,
+                    _().SaleEditorSpacing,
+                  ),
+                },
+                _.createElement(_._, {
+                  label: "No Background color?",
+                  checked: _,
+                  onChange: (_) => {
+                    _(_),
+                      _ &&
+                        ((_.sale_background_color = void 0),
+                        __webpack_require__());
+                  },
+                }),
+              ),
+          ),
+          _.createElement(
+            "div",
+            {
+              className: _().OptionCtn,
+            },
+            _.createElement(_._, {
+              setting: _,
+              fnUpdateSetting: (_) => {
+                _.sale_background_repeat != _ &&
+                  ((_.sale_background_repeat = _), __webpack_require__());
+              },
+            }),
+          ),
+        );
+      }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             strArrowColor: _,
@@ -5231,11 +5316,10 @@
         );
       }
       function _(_) {
-        const { editModel: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
-            _.GetEventModel().jsondata.sale_carousel_arrow_color,
-            _.GetEventModel().jsondata.sale_carousel_arrow_style ||
-              _._.k_ECutArrowStyle,
+        const { model: _, fnOnDirty: __webpack_require__ } = _,
+          [_, _] = (0, _._)(() => [
+            _.sale_carousel_arrow_color,
+            _.sale_carousel_arrow_style || _._.k_ECutArrowStyle,
           ]),
           _ = (0, _.useMemo)(() => {
             const _ = [];
@@ -5279,12 +5363,11 @@
               (0, _._)("#Sale_Section_Carousel_Colors"),
             ),
             _.createElement(_, {
-              strArrowColor: __webpack_require__,
+              strArrowColor: _,
               arrowStyle: _,
               fnUpdateArrowColor: (_) => {
-                _.GetEventModel().jsondata.sale_carousel_arrow_color != _ &&
-                  ((_.GetEventModel().jsondata.sale_carousel_arrow_color = _),
-                  _.SetDirty(_._.jsondata_sales));
+                _.sale_carousel_arrow_color != _ &&
+                  ((_.sale_carousel_arrow_color = _), __webpack_require__());
               },
             }),
           ),
@@ -5303,11 +5386,9 @@
               rgOptions: _,
               selectedOption: _,
               onChange: (_) => {
-                _.GetEventModel().jsondata.sale_carousel_arrow_style !=
-                  _.data &&
-                  ((_.GetEventModel().jsondata.sale_carousel_arrow_style =
-                    _.data),
-                  _.SetDirty(_._.jsondata_sales));
+                _.sale_carousel_arrow_style != _.data &&
+                  ((_.sale_carousel_arrow_style = _.data),
+                  __webpack_require__());
               },
               bDisableMouseOverlay: !0,
               contextMenuPositionOptions: {
@@ -5318,12 +5399,11 @@
         );
       }
       function _(_) {
-        const { editModel: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(() => [
-            _.GetEventModel().jsondata.sale_carousel_breadcrumb_color,
-            _.GetEventModel().jsondata.sale_carousel_active_breadcrumb_color,
-            _.GetEventModel().jsondata.sale_carousel_breadcrumb_style ||
-              _._.k_EPillCrumb,
+        const { model: _, fnOnDirty: __webpack_require__ } = _,
+          [_, _, _] = (0, _._)(() => [
+            _.sale_carousel_breadcrumb_color,
+            _.sale_carousel_active_breadcrumb_color,
+            _.sale_carousel_breadcrumb_style || _._.k_EPillCrumb,
           ]),
           _ = (0, _.useMemo)(() => {
             const _ = [];
@@ -5364,30 +5444,26 @@
             ),
             _.createElement(_, {
               label: (0, _._)("#Sale_Section_Carousel_BreadCrumb_Color"),
-              strColorToChange: __webpack_require__,
-              breadcrumbColor: __webpack_require__,
+              strColorToChange: _,
+              breadcrumbColor: _,
               breadcrumbActiveColor: _,
               breadcrumbStyle: _,
               fnUpdateColor: (_) => {
-                _.GetEventModel().jsondata.sale_carousel_breadcrumb_color !=
-                  _ &&
-                  ((_.GetEventModel().jsondata.sale_carousel_breadcrumb_color =
-                    _),
-                  _.SetDirty(_._.jsondata_sales));
+                _.sale_carousel_breadcrumb_color != _ &&
+                  ((_.sale_carousel_breadcrumb_color = _),
+                  __webpack_require__());
               },
             }),
             _.createElement(_, {
               label: (0, _._)("#Sale_Section_Carousel_ActiveBreadCrumb_Color"),
               strColorToChange: _,
-              breadcrumbColor: __webpack_require__,
+              breadcrumbColor: _,
               breadcrumbActiveColor: _,
               breadcrumbStyle: _,
               fnUpdateColor: (_) => {
-                _.GetEventModel().jsondata
-                  .sale_carousel_active_breadcrumb_color != _ &&
-                  ((_.GetEventModel().jsondata.sale_carousel_active_breadcrumb_color =
-                    _),
-                  _.SetDirty(_._.jsondata_sales));
+                _.sale_carousel_active_breadcrumb_color != _ &&
+                  ((_.sale_carousel_active_breadcrumb_color = _),
+                  __webpack_require__());
               },
             }),
           ),
@@ -5406,11 +5482,9 @@
               rgOptions: _,
               selectedOption: _,
               onChange: (_) => {
-                _.GetEventModel().jsondata.sale_carousel_breadcrumb_style !=
-                  _.data &&
-                  ((_.GetEventModel().jsondata.sale_carousel_breadcrumb_style =
-                    _.data),
-                  _.SetDirty(_._.jsondata_sales));
+                _.sale_carousel_breadcrumb_style != _.data &&
+                  ((_.sale_carousel_breadcrumb_style = _.data),
+                  __webpack_require__());
               },
               bDisableMouseOverlay: !0,
               contextMenuPositionOptions: {
@@ -5420,6 +5494,7 @@
           ),
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { editModel: _ } = _,
           [__webpack_require__, _, _] = (0, _._)(() => {
@@ -5522,94 +5597,17 @@
           [__webpack_require__, _] = (0, _._)(() => [
             _.GetEventModel().jsondata.sale_background_color,
             _.GetEventModel().jsondata.sale_background_repeat,
-          ]),
-          [_, _] = _.useState(null == __webpack_require__);
+          ]);
         return _.createElement(
           _.Fragment,
           null,
-          _.createElement(
-            "div",
-            {
-              className: (0, _._)(
-                _().FlexRowContainer,
-                _().BackgroundConfigCtn,
-              ),
-            },
-            _.createElement(
-              "div",
-              {
-                className: _().OptionCtn,
-              },
-              _.createElement(
-                _._,
-                null,
-                (0, _._)("#Sale_Section_Background_Color"),
-              ),
-              _.createElement(
-                _._,
-                {
-                  className: _().BackgroundColorBtn,
-                  onClick: (_) => {
-                    (0, _._)(
-                      _.createElement(_._, {
-                        color: __webpack_require__,
-                        onChange: (_) => {
-                          (_.GetEventModel().jsondata.sale_background_color =
-                            _),
-                            _.SetDirty(_._.jsondata_sales);
-                        },
-                      }),
-                      _,
-                      {
-                        bDisablePopTop: !0,
-                      },
-                    );
-                  },
-                  style: {
-                    backgroundColor: __webpack_require__,
-                  },
-                },
-                (0, _._)("#Sale_BackgroundColor"),
-              ),
-              Boolean(_._.is_support) &&
-                _.createElement(
-                  "div",
-                  {
-                    className: (0, _._)(
-                      _().ValveOnlyBackground,
-                      _().SaleEditorSpacing,
-                    ),
-                  },
-                  _.createElement(_._, {
-                    label: "No Background color?",
-                    checked: _,
-                    onChange: (_) => {
-                      _(_),
-                        _ &&
-                          ((_.GetEventModel().jsondata.sale_background_color =
-                            void 0),
-                          _.SetDirty(_._.jsondata_sales));
-                    },
-                  }),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
-                className: _().OptionCtn,
-              },
-              _.createElement(_._, {
-                setting: _,
-                fnUpdateSetting: (_) => {
-                  _.GetEventModel().jsondata.sale_background_repeat != _ &&
-                    ((_.GetEventModel().jsondata.sale_background_repeat = _),
-                    _.SetDirty(_._.jsondata_sales));
-                },
-              }),
-            ),
-          ),
           _.createElement(_, {
-            editModel: _,
+            model: _.GetEventModel().jsondata,
+            fnOnDirty: () => _.SetDirty(_._.jsondata_sales),
+          }),
+          _.createElement(_, {
+            model: _.GetEventModel().jsondata,
+            fnOnDirty: () => _.SetDirty(_._.jsondata_sales),
           }),
           _.createElement(_, {
             editModel: _,
@@ -5959,7 +5957,7 @@
                     artworkType: "sale_header",
                   }),
                   bIsMinimized: _("sale_header"),
-                  fnLangHasData: _.BHasTitleImage,
+                  fnLangHasData: (_) => _.BHasImage("sale_header", _),
                   fnSetImageURL: _.SetImageURL,
                   fnGetImageHashAndExt: _.GetImageHashAndExt,
                   fnToggleMinimize: () => _("sale_header"),
@@ -5991,7 +5989,7 @@
                         artworkType: "sale_logo",
                       }),
                       bIsMinimized: _("sale_logo"),
-                      fnLangHasData: _.BHasTitleImage,
+                      fnLangHasData: (_) => _.BHasImage("sale_logo", _),
                       fnSetImageURL: _.SetImageURL,
                       fnGetImageHashAndExt: _.GetImageHashAndExt,
                       fnToggleMinimize: () => _("sale_logo"),
@@ -6034,7 +6032,7 @@
                     clanSteamID: _.GetClanSteamID(),
                     eventModel: _.GetEventModel(),
                     appid: _,
-                    fnLangHasData: _.BHasTitleImage,
+                    fnLangHasData: (_) => _.BHasImage("product_banner", _),
                     fnSetImageURL: _.SetImageURL,
                     fnGetImageHashAndExt: _.GetImageHashAndExt,
                     title: (0, _._)(
@@ -6079,7 +6077,8 @@
                     artworkType: "product_mobile_banner",
                     bIsMinimized: _("product_mobile_banner"),
                     fnToggleMinimize: () => _("product_mobile_banner"),
-                    fnLangHasData: _.BHasTitleImage,
+                    fnLangHasData: (_) =>
+                      _.BHasImage("product_mobile_banner", _),
                     fnSetImageURL: _.SetImageURL,
                     fnGetImageHashAndExt: _.GetImageHashAndExt,
                     partnerEventStore: _._,
@@ -6123,7 +6122,7 @@
                       }),
                       bIsMinimized: _("sale_overlay"),
                       fnToggleMinimize: () => _("sale_overlay"),
-                      fnLangHasData: _.BHasTitleImage,
+                      fnLangHasData: (_) => _.BHasImage("sale_overlay", _),
                       fnSetImageURL: _.SetImageURL,
                       fnGetImageHashAndExt: _.GetImageHashAndExt,
                       partnerEventStore: _._,
@@ -6144,6 +6143,7 @@
           );
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9583,7 +9583,104 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { editModel: _ } = _,
+          _ = _.GetEventModel(),
+          _ = [
+            {
+              label: (0, _._)("#Sale_Debug_LivePreview_Device_Desktop"),
+              data: "desktop",
+              size: {
+                width: 1500,
+                height: 1100,
+              },
+            },
+            {
+              label: (0, _._)("#Sale_Debug_LivePreview_Device_Mobile"),
+              data: "mobile",
+              size: {
+                width: 402,
+                height: 874,
+              },
+            },
+            {
+              label: (0, _._)("#Sale_Debug_LivePreview_Device_SteamDeck"),
+              data: "steamdeck",
+              size: {
+                width: 852,
+                height: 532,
+              },
+              queryParams: [
+                {
+                  key: "force_gamepad_client_view",
+                  value: "1",
+                },
+              ],
+            },
+            {
+              label: (0, _._)("#Sale_Debug_LivePreview_Device_NewTab"),
+              tooltip: (0, _._)("#Sale_Debug_LivePreview_Device_NewTab_ttip"),
+              data: "window",
+              newWindow: !0,
+            },
+          ],
+          _ = (_) => {
+            var _;
+            const _ = _.find((_) => _.data == _),
+              _ = _.clanSteamID.GetAccountID(),
+              _ =
+                36 == __webpack_require__.GetEventType()
+                  ? `${_._.STORE_BASE_URL}curator/${_}`
+                  : `${_._.STORE_BASE_URL}curator/${_}/sale/${_.jsondata.sale_vanity_id}`,
+              _ = !(
+                null !== (_ = null == _ ? void 0 : _.newWindow) &&
+                void 0 !== _ &&
+                _
+              );
+            _._.Get().ShowPreviewWindow(
+              _,
+              _.GetEventModel(),
+              _,
+              null == _ ? void 0 : _.size,
+              null == _ ? void 0 : _.queryParams,
+            );
+          },
+          _ = (0, _._)();
+        return _.createElement(
+          "div",
+          {
+            className: (0, _._)(_().LivePreview, _ && _().Connected),
+          },
+          _.createElement(
+            _._,
+            {
+              className: (0, _._)(_().Button),
+              onClick: () => _(void 0),
+            },
+            (0, _._)("#Sale_Debug_LivePreview"),
+          ),
+          _.createElement(
+            _._,
+            {
+              className: (0, _._)(_().DeviceDropdown),
+              onClick: (_) =>
+                ((_) => {
+                  const _ = _.createElement(_._, {
+                    rgOptions: _,
+                    onValueSelected: (_, _) => _(_.data),
+                  });
+                  (0, _._)(_, _, {
+                    bOverlapHorizontal: !0,
+                  });
+                })(_),
+            },
+            _.createElement(_.GB9, null),
+          ),
+        );
+      }
       function _(_) {
         return _.createElement(
           _._,
@@ -9899,101 +9996,6 @@
                 onChange: (_) => _(_),
               }),
             ),
-          ),
-        );
-      }
-      function _(_) {
-        const { editModel: _ } = _,
-          _ = _.GetEventModel(),
-          _ = [
-            {
-              label: (0, _._)("#Sale_Debug_LivePreview_Device_Desktop"),
-              data: "desktop",
-              size: {
-                width: 1500,
-                height: 1100,
-              },
-            },
-            {
-              label: (0, _._)("#Sale_Debug_LivePreview_Device_Mobile"),
-              data: "mobile",
-              size: {
-                width: 402,
-                height: 874,
-              },
-            },
-            {
-              label: (0, _._)("#Sale_Debug_LivePreview_Device_SteamDeck"),
-              data: "steamdeck",
-              size: {
-                width: 852,
-                height: 532,
-              },
-              queryParams: [
-                {
-                  key: "force_gamepad_client_view",
-                  value: "1",
-                },
-              ],
-            },
-            {
-              label: (0, _._)("#Sale_Debug_LivePreview_Device_NewTab"),
-              tooltip: (0, _._)("#Sale_Debug_LivePreview_Devuce_NewTab_ttip"),
-              data: "window",
-              newWindow: !0,
-            },
-          ],
-          _ = (_) => {
-            var _;
-            const _ = _.find((_) => _.data == _),
-              _ = _.clanSteamID.GetAccountID(),
-              _ =
-                36 == __webpack_require__.GetEventType()
-                  ? `${_._.STORE_BASE_URL}curator/${_}`
-                  : `${_._.STORE_BASE_URL}curator/${_}/sale/${_.jsondata.sale_vanity_id}`,
-              _ = !(
-                null !== (_ = null == _ ? void 0 : _.newWindow) &&
-                void 0 !== _ &&
-                _
-              );
-            _._.Get().ShowPreviewWindow(
-              _,
-              _.GetEventModel(),
-              _,
-              null == _ ? void 0 : _.size,
-              null == _ ? void 0 : _.queryParams,
-            );
-          },
-          _ = (0, _._)();
-        return _.createElement(
-          "div",
-          {
-            className: (0, _._)(_().LivePreview, _ && _().Connected),
-          },
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(_().Button),
-              onClick: () => _(void 0),
-            },
-            (0, _._)("#Sale_Debug_LivePreview"),
-          ),
-          _.createElement(
-            _._,
-            {
-              className: (0, _._)(_().DeviceDropdown),
-              onClick: (_) =>
-                ((_) => {
-                  const _ = _.createElement(_._, {
-                    rgOptions: _,
-                    onValueSelected: (_, _) => _(_.data),
-                  });
-                  (0, _._)(_, _, {
-                    bOverlapHorizontal: !0,
-                  });
-                })(_),
-            },
-            _.createElement(_.GB9, null),
           ),
         );
       }
@@ -10326,6 +10328,16 @@
                     ? (0, _._)("#EventEditor_PreviewSale_Page")
                     : (0, _._)("#EventEditor_PreviewSale"),
                 ),
+              _.BHasSaleEnabled() &&
+                _.createElement(
+                  _._,
+                  {
+                    toolTipContent: (0, _._)("#Sale_Debug_LivePreview_ttip"),
+                  },
+                  _.createElement(_, {
+                    editModel: _,
+                  }),
+                ),
             ),
           );
         }),
@@ -10361,29 +10373,10 @@
                 },
                 (0, _._)("#EventEditor_Preview"),
               ),
-            _.BHasSaleEnabled() &&
-              _.createElement(
-                _._,
-                {
-                  eventModel: _,
-                  route: _._.k_eCommunityPreviewSale,
-                  className: _().EditPreviewButton,
-                },
-                _
-                  ? (0, _._)("#EventEditor_PreviewSale_Page")
-                  : (0, _._)("#EventEditor_PreviewSale"),
-              ),
             _ &&
               _.createElement(
                 _.Fragment,
                 null,
-                _.createElement(
-                  "span",
-                  {
-                    className: _.DisplayAdminPanel_Spacer,
-                  },
-                  " ",
-                ),
                 _.createElement(
                   _._,
                   {
@@ -11649,8 +11642,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__._(_);
       function _(_) {
         return _.createElement(
           "div",

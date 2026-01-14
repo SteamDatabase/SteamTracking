@@ -4117,31 +4117,32 @@
         } = _;
         (0, _._)(_.GetAccountID());
         const _ = _.useMemo(() => {
-          let _ = new Array();
-          const _ = _._.GetLanguageListForRealms([
-            _._.k_ESteamRealmGlobal,
-            _._.k_ESteamRealmChina,
-          ]);
-          for (const _ of _) {
-            const _ = __webpack_require__(_);
-            if (_) {
-              const _ = (0, _._)(_),
-                _ = (0, _._)("#Language_" + _);
-              _.push({
-                lang: _,
-                strLang: _,
-                locLang: _,
-                imgHash: _,
-              });
+            let _ = new Array();
+            const _ = _._.GetLanguageListForRealms([
+              _._.k_ESteamRealmGlobal,
+              _._.k_ESteamRealmChina,
+            ]);
+            for (const _ of _) {
+              const _ = __webpack_require__(_);
+              if (_) {
+                const _ = (0, _._)(_),
+                  _ = (0, _._)("#Language_" + _);
+                _.push({
+                  lang: _,
+                  strLang: _,
+                  locLang: _,
+                  imgHash: _,
+                });
+              }
             }
-          }
-          return (
-            (_ = _.sort((_, _) =>
-              _.locLang > _.locLang ? 1 : _.locLang < _.locLang ? -1 : 0,
-            )),
-            _
-          );
-        }, [__webpack_require__]);
+            return (
+              (_ = _.sort((_, _) =>
+                _.locLang > _.locLang ? 1 : _.locLang < _.locLang ? -1 : 0,
+              )),
+              _
+            );
+          }, [__webpack_require__]),
+          [_, _, _] = (0, _._)();
         return _.createElement(
           "div",
           {
@@ -4171,15 +4172,27 @@
             _.createElement(
               _._,
               {
-                onClick: () => {
-                  for (let _ = 0; _ < 31; _++) _(_) && _(_);
-                },
+                onClick: _,
               },
               (0, _._)("#Sale_RemoveAll"),
               _.createElement(_._, {
                 tooltip: (0, _._)("#Sale_RemoveAll_Tooltip"),
               }),
             ),
+          _.createElement(
+            _._,
+            {
+              active: _,
+            },
+            _.createElement(_._, {
+              strTitle: (0, _._)("#Dialog_AreYouSure"),
+              strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
+              closeModal: _,
+              onOK: () => {
+                for (let _ = 0; _ < 31; _++) _ && _ && _(_) && _(_);
+              },
+            }),
+          ),
         );
       }
       function _(_) {

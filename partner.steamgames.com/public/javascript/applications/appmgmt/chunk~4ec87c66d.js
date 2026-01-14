@@ -78797,35 +78797,36 @@
             myInstance: t,
             setIsHovered: a,
             displayStoreItem: n,
-            hoverType: r,
-            nHoverId: s,
-            displayInfo: l,
+            displayID: r,
+            hoverType: s,
+            nHoverId: l,
+            displayInfo: o,
           } = (0, Wt.u)(e, { include_all_purchase_options: !0 }),
           {
-            bHidePrice: o,
-            bShowDemoButton: c,
-            bPreferDemoStorePage: m,
-            bShowPurchaseOptionsButton: d,
-            bUseSubscriptionLayout: u,
-            bPreferAssetWithoutOverride: p,
+            bHidePrice: c,
+            bShowDemoButton: m,
+            bPreferDemoStorePage: d,
+            bShowPurchaseOptionsButton: u,
+            bUseSubscriptionLayout: p,
+            bPreferAssetWithoutOverride: _,
           } = e,
-          [_, g] = i.useState(!1),
-          h = () => g(!_),
-          E = (0, At.n9)(),
-          S = i.useMemo(() => n?.GetIncludedAppIDsOrSelf(), [n]);
+          [g, h] = i.useState(!1),
+          E = () => h(!g),
+          S = (0, At.n9)(),
+          v = i.useMemo(() => n?.GetIncludedAppIDsOrSelf(), [n]);
         if (!n)
           return i.createElement(re, {
             capsules_per_row: [1],
             is_expanded_display: !0,
           });
-        const v = (0, ct.L3)(E),
-          y =
-            ((0, xt.tB)(n.GetStorePageURL(m)),
+        const y = (0, ct.L3)(S),
+          f =
+            ((0, xt.tB)(n.GetStorePageURL(d)),
             n.GetName()?.length > 0 && n.GetName(),
-            m && n.HasDemoStandaloneStorePage()
+            d && n.HasDemoStandaloneStorePage()
               ? n.GetDemoStandaloneStorePageAppIDs()[0]
-              : s),
-          f = 0 == n.GetStoreItemType();
+              : l),
+          b = 0 == n.GetStoreItemType();
         return i.createElement(
           "div",
           {
@@ -78837,7 +78838,7 @@
           },
           i.createElement(
             Vt.oj,
-            { appid: f && n.GetAppID() },
+            { appid: b && n.GetAppID() },
             i.createElement(
               "div",
               { className: Mt().StoreSaleWidgetLibraryAssetExtendedTop },
@@ -78846,17 +78847,17 @@
                 { className: (0, te.A)(Mt().StoreSaleWidgetLeft) },
                 i.createElement(
                   Jt.u,
-                  { type: r, id: y, fnHoverState: a },
+                  { type: s, id: f, fnHoverState: a },
                   i.createElement(
                     "div",
                     { className: Mt().StoreSaleWidgetImage },
-                    i.createElement(qt.V, { appids: S }),
+                    i.createElement(qt.V, { appids: v }),
                     i.createElement(Lt.aU, {
-                      info: l,
+                      info: o,
                       imageType: "library",
-                      bPreferAssetWithoutOverride: p,
+                      bPreferAssetWithoutOverride: _,
                     }),
-                    i.createElement(Kt.J, { storeItem: n }),
+                    i.createElement(Kt.J, { id: r }),
                   ),
                 ),
               ),
@@ -78864,12 +78865,12 @@
                 "div",
                 { className: Mt().StoreSaleWidgetCrossCenterRight },
                 i.createElement(Bt.EP, {
-                  appID: f && n.GetAppID(),
+                  appID: b && n.GetAppID(),
                   classOverride: (0, te.A)(
                     zt().WishlistButtonNotTop,
                     "WishlistButton",
                   ),
-                  snr: v,
+                  snr: y,
                 }),
                 i.createElement(
                   "div",
@@ -78935,7 +78936,7 @@
                     "div",
                     { className: Mt().StoreSaleLibraryAssetWidgetRight },
                     i.createElement($t.Yg, {
-                      info: l,
+                      info: o,
                       bPopOutTrailerPlayback: !0,
                     }),
                   ),
@@ -78943,12 +78944,12 @@
                 i.createElement(
                   "div",
                   { className: Mt().StoreSaleItemReview },
-                  i.createElement(Bt.Jz, { appInfo: l }),
+                  i.createElement(Bt.Jz, { appInfo: o }),
                 ),
                 i.createElement(
                   "div",
                   { className: Mt().CapsuleBottomBar },
-                  Boolean(u && f)
+                  Boolean(p && b)
                     ? i.createElement(Yt.E, {
                         appid: n.GetAppID(),
                         bIsMuted: !1,
@@ -78956,13 +78957,13 @@
                     : i.createElement(
                         i.Fragment,
                         null,
-                        i.createElement(Xt.Q, { item: l }),
+                        i.createElement(Xt.Q, { item: o }),
                         i.createElement(jt.wD, {
-                          info: l,
-                          bShowDemoButton: c,
-                          bHidePrice: o,
-                          bShowPurchaseOptionsButton: d,
-                          fnOnPurchaseOptionsClick: h,
+                          info: o,
+                          bShowDemoButton: m,
+                          bHidePrice: c,
+                          bShowPurchaseOptionsButton: u,
+                          fnOnPurchaseOptionsClick: E,
                           bHideWishlistButton: !n.BIsComingSoon(),
                         }),
                       ),
@@ -78971,18 +78972,18 @@
                   "div",
                   { className: Mt().StoreSaleWidgetBgTint },
                   i.createElement(Qt.G, {
-                    info: l,
-                    bPreferAssetWithoutOverride: p,
+                    info: o,
+                    bPreferAssetWithoutOverride: _,
                   }),
-                  i.createElement(Kt.J, { storeItem: n }),
+                  i.createElement(Kt.J, { id: r }),
                 ),
               ),
             ),
             i.createElement(jt.cg, {
               storeItem: n,
-              bPurchaseOptionsExpanded: _,
-              fnCollapseOptions: h,
-              bPreferAssetWithoutOverride: p,
+              bPurchaseOptionsExpanded: g,
+              fnCollapseOptions: E,
+              bPreferAssetWithoutOverride: _,
             }),
           ),
         );

@@ -626,7 +626,7 @@
     },
     46416: (e, t, a) => {
       "use strict";
-      a.d(t, { J: () => R, W: () => B });
+      a.d(t, { J: () => B, W: () => k });
       var n = a(90626),
         r = a(57876),
         o = a(45699),
@@ -656,9 +656,10 @@
         L = a(91291),
         N = a.n(L),
         P = a(99956),
-        G = a(49411);
-      const R = "capsule_index_";
-      function B(e) {
+        G = a(49411),
+        R = a(35380);
+      const B = "capsule_index_";
+      function k(e) {
         const {
             capsule: t,
             bShowParentApp: a,
@@ -675,7 +676,7 @@
           [S] = (0, m.t7)(a ? C?.GetParentAppID() : void 0, r.Xh);
         if (!C) return null;
         const I = Boolean(S),
-          w = n.createElement(F, {
+          w = n.createElement(H, {
             ...e,
             strExtraParams: e.strExtraParams,
             info: t,
@@ -689,7 +690,7 @@
           {
             className: (0, y.A)({
               [v().OuterCapsuleContainer]: !0,
-              [R + i]: 0 == i,
+              [B + i]: 0 == i,
             }),
             navEntryPreferPosition: s.iU.PREFERRED_CHILD,
             navKey: c,
@@ -726,7 +727,7 @@
             Boolean(o) && n.createElement(n.Fragment, null, o),
           ),
           I &&
-            n.createElement(k, {
+            n.createElement(F, {
               strExtraParams: e.strExtraParams,
               parentStoreItem: S,
               childAppType: C.GetAppType(),
@@ -734,7 +735,7 @@
             }),
         );
       }
-      function k(e) {
+      function F(e) {
         const {
             strExtraParams: t,
             parentStoreItem: a,
@@ -772,7 +773,7 @@
           ),
         );
       }
-      function F(e) {
+      function H(e) {
         const {
             info: t,
             bHideStatusBanners: a,
@@ -787,36 +788,37 @@
             bPreferAssetWithoutOverride: b,
           } = e,
           [C] = (0, m.G6)(t.id, (0, u.SW)(t.type), r.Xh),
-          S = (0, w.n9)(),
-          A = (0, G.w)(),
-          T = (0, n.useMemo)(() => C?.GetIncludedAppIDsOrSelf(), [C]);
+          S = (0, R.r)(t),
+          A = (0, w.n9)(),
+          T = (0, G.w)(),
+          L = (0, n.useMemo)(() => C?.GetIncludedAppIDsOrSelf(), [C]);
         if (!C) return null;
-        const L = (0, D.NT)(
-          (0, i.It)(`${C.GetStorePageURL(v)}${l ? `?${l}` : ""}`, S, A),
+        const B = (0, D.NT)(
+          (0, i.It)(`${C.GetStorePageURL(v)}${l ? `?${l}` : ""}`, A, T),
         );
-        let R;
+        let k;
         "overrideNavigation" in t &&
-          (R = (e) => (
+          (k = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const B = Boolean(f);
+        const F = Boolean(f);
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             "div",
-            { className: (0, y.A)({ [N().TwoWidthCtn]: B }) },
+            { className: (0, y.A)({ [N().TwoWidthCtn]: F }) },
             n.createElement(
               o.Ii,
               {
-                href: R ? void 0 : L,
+                href: k ? void 0 : B,
                 style: { display: "block", cursor: "pointer" },
-                className: (0, y.A)({ [N().TwoWidthCapsule]: B }),
+                className: (0, y.A)({ [N().TwoWidthCapsule]: F }),
                 preferredFocus: d,
-                onClick: R,
+                onClick: k,
               },
               n.createElement(g.V, {
-                appids: T,
+                appids: L,
                 hide_status_banners: a,
                 show_early_access: e.bShowEarlyAccessBanner,
               }),
@@ -826,11 +828,11 @@
                   info: t,
                   bPreferAssetWithoutOverride: b,
                 }),
-              n.createElement(I.J, { storeItem: C }),
+              n.createElement(I.J, { id: S }),
               Boolean(p) &&
                 n.createElement(E.m, { appInfo: t, bIsHoverMode: !0 }),
             ),
-            B &&
+            F &&
               n.createElement(
                 "div",
                 {
@@ -853,10 +855,10 @@
                 }),
               ),
           ),
-          n.createElement(H, { ...e }),
+          n.createElement(x, { ...e }),
         );
       }
-      function H(e) {
+      function x(e) {
         const {
             info: t,
             bHidePriceIfOwned: a,

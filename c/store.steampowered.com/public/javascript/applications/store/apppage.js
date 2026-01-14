@@ -46,6 +46,7 @@
         Points: "_3k_jxlKBddOAxgSknpHNTq",
         IconCheckMark: "_38WUBpAcqEe6Neu89Kri9T",
         Footer: "_164mmLkSJ91cXzABhIrlZq",
+        Column: "_2ihFd-KfZvzA81NOi3SEEJ",
         Left: "_1v0jLHAK-8P4IONBwuF4kv",
         BalanceIcon: "_3VvvB-r8dZsAaPGZ2nsi1A",
         BalanceDetails: "_209Gyxysjz0vcGVVWuh_Xc",
@@ -57,12 +58,12 @@
         FooterLink: "KId8dCUFbYh_bz-jozERD",
         Divider: "_105pyOdHwQJP6rdcKymwUq",
         ConfirmContainer: "_3rAoeyoUq23O8OYP09P1oz",
-        ConfirmAwardImage: "_1ARgx7wEEFOEolu5lBhrk-",
         ConfirmTextCtn: "j0Jt4NEMft-y_QAF5NFFh",
         ConfirmText: "_1uA9QkRBqGe3Xt5tlGGhlU",
         AwardName: "_25N0xPcslHWWCQovL3Ycpk",
         TimePeriod: "_6mEUOxWKweU9C1C2VmgsZ",
         Visible: "_2QQTWF2AuPKh-8O0fgjl3b",
+        ConfirmAwardImage: "_1ARgx7wEEFOEolu5lBhrk-",
         LoadingContainer: "_1hKG3O3_MI7rp8_HJ7_0fV",
         SuccessContainer: "Uz_0uByMqbJfo6n5oW71y",
         SuccessText: "_1kQzNssyGs4FwglLbkE3mx",
@@ -2727,7 +2728,7 @@
               let _ = [];
               return (
                 _.forEach(function (_) {
-                  if (_.valid_target_types.includes(_))
+                  if (_.valid_target_types.includes(_) && _.purchaseable)
                     switch (_) {
                       case 1:
                       case 3:
@@ -2875,106 +2876,8 @@
             case _.CONFIRM:
             case _.SUBMITTING:
             case _.DONE:
-              _ = _.createElement(
-                _.Fragment,
-                null,
-                _.createElement(_, {
-                  description: _,
-                }),
-                _.createElement(_, null),
-                _.createElement(
-                  "div",
-                  {
-                    style: {
-                      position: "relative",
-                    },
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _.ConfirmContainer,
-                        _ === _.CONFIRM && _.Visible,
-                      ),
-                    },
-                    _.createElement(_, {
-                      className: _.ConfirmAwardImage,
-                      reactionType: _,
-                    }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.ConfirmTextCtn,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ConfirmText,
-                        },
-                        (0, _._)(
-                          "#GrantAward_Confirm",
-                          _.createElement(_, null, (0, _._)(_)),
-                          _.createElement(
-                            "span",
-                            {
-                              className: _.AwardName,
-                            },
-                            _(_),
-                          ),
-                        ),
-                      ),
-                      _.createElement(
-                        "div",
-                        {
-                          className: _.ConfirmText,
-                        },
-                        (0, _._)(
-                          "#GrantAward_Confirm_Details",
-                          _.createElement(_, null, (0, _._)(_)),
-                          _.createElement(
-                            "span",
-                            {
-                              className: _.TimePeriod,
-                            },
-                            (0, _._)("#GrantAward_Confirm_DetailsTimePeriod"),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _.LoadingContainer,
-                        _ === _.SUBMITTING && _.Visible,
-                      ),
-                    },
-                    _.createElement(_, null),
-                  ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: (0, _._)(
-                        _.SuccessContainer,
-                        _ === _.DONE && _.Visible,
-                      ),
-                    },
-                    _.createElement(_, {
-                      className: _.ConfirmAwardImage,
-                      reactionType: _,
-                    }),
-                    _.createElement(
-                      "div",
-                      {
-                        className: _.SuccessText,
-                      },
-                      (0, _._)("#GrantAward_Success"),
-                    ),
-                  ),
-                ),
-                _.createElement(_, null),
-                _.createElement(
+              {
+                let _ = _.createElement(
                   _,
                   {
                     store: _,
@@ -2999,8 +2902,127 @@
                     },
                     (0, _._)("#GrantAwardNowButton"),
                   ),
-                ),
-              );
+                );
+                _ === _.DONE &&
+                  (_ = _.createElement(
+                    _,
+                    {
+                      store: _,
+                    },
+                    _.createElement(
+                      _._,
+                      {
+                        onClick: _,
+                      },
+                      (0, _._)("#Button_Close"),
+                    ),
+                  )),
+                  (_ = _.createElement(
+                    _.Fragment,
+                    null,
+                    _.createElement(_, {
+                      description: _,
+                    }),
+                    _.createElement(_, null),
+                    _.createElement(
+                      "div",
+                      {
+                        style: {
+                          position: "relative",
+                        },
+                      },
+                      _.createElement(
+                        "div",
+                        {
+                          className: (0, _._)(
+                            _.ConfirmContainer,
+                            _ === _.CONFIRM && _.Visible,
+                          ),
+                        },
+                        _.createElement(_, {
+                          className: _.ConfirmAwardImage,
+                          reactionType: _,
+                        }),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _.ConfirmTextCtn,
+                          },
+                          _.createElement(
+                            "div",
+                            {
+                              className: _.ConfirmText,
+                            },
+                            (0, _._)(
+                              "#GrantAward_Confirm",
+                              _.createElement(_, null, (0, _._)(_)),
+                              _.createElement(
+                                "span",
+                                {
+                                  className: _.AwardName,
+                                },
+                                _(_),
+                              ),
+                            ),
+                          ),
+                          _ > 0 &&
+                            _.createElement(
+                              "div",
+                              {
+                                className: _.ConfirmText,
+                              },
+                              (0, _._)(
+                                "#GrantAward_Confirm_Details",
+                                _.createElement(_, null, (0, _._)(_)),
+                                _.createElement(
+                                  "span",
+                                  {
+                                    className: _.TimePeriod,
+                                  },
+                                  (0, _._)(
+                                    "#GrantAward_Confirm_DetailsTimePeriod",
+                                  ),
+                                ),
+                              ),
+                            ),
+                        ),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: (0, _._)(
+                            _.LoadingContainer,
+                            _ === _.SUBMITTING && _.Visible,
+                          ),
+                        },
+                        _.createElement(_, null),
+                      ),
+                      _.createElement(
+                        "div",
+                        {
+                          className: (0, _._)(
+                            _.SuccessContainer,
+                            _ === _.DONE && _.Visible,
+                          ),
+                        },
+                        _.createElement(_, {
+                          className: _.ConfirmAwardImage,
+                          reactionType: _,
+                          bForceAnimated: !0,
+                        }),
+                        _.createElement(
+                          "div",
+                          {
+                            className: _.SuccessText,
+                          },
+                          (0, _._)("#GrantAward_Success"),
+                        ),
+                      ),
+                    ),
+                    _.createElement(_, null),
+                    _,
+                  ));
+              }
               break;
             case _.ERROR:
               {
@@ -3211,29 +3233,49 @@
             _.createElement(
               "div",
               {
-                className: _.Left,
+                className: _.PointsArea,
               },
-              _.createElement(_.vrn, {
-                className: _.BalanceIcon,
-              }),
               _.createElement(
                 "div",
                 {
-                  className: _.BalanceDetails,
+                  className: _.Left,
+                },
+                _.createElement(_.vrn, {
+                  className: _.BalanceIcon,
+                }),
+                _.createElement(
+                  "div",
+                  {
+                    className: _.BalanceDetails,
+                  },
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.BalanceLabel,
+                    },
+                    (0, _._)("#YourBalance"),
+                  ),
+                  _.createElement(
+                    "div",
+                    {
+                      className: _.BalanceAmount,
+                    },
+                    _,
+                  ),
+                ),
+              ),
+              _.createElement(
+                "div",
+                {
+                  className: _.Column,
                 },
                 _.createElement(
-                  "div",
+                  "a",
                   {
-                    className: _.BalanceLabel,
+                    className: _.FooterLink,
+                    href: `${_._.STORE_BASE_URL}points/howitworks`,
                   },
-                  (0, _._)("#YourBalance"),
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.BalanceAmount,
-                  },
-                  _,
+                  (0, _._)("#GrantAward_PointsLink"),
                 ),
               ),
             ),
@@ -3257,14 +3299,6 @@
                     _,
                   ),
                 ),
-              ),
-              _.createElement(
-                "a",
-                {
-                  className: _.FooterLink,
-                  href: `${_._.STORE_BASE_URL}points/howitworks`,
-                },
-                (0, _._)("#GrantAward_PointsLink"),
               ),
             ),
           );

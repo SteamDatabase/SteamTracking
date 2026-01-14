@@ -2290,6 +2290,7 @@ b {
 .partnereventshared_EventEditButtons_3nYmf {
   display: flex;
   min-height: 34px;
+  gap: 12px;
 }
 .partnereventshared_EventBarTitleCtn_WfVze
   .partnereventshared_FlexRowContainer_Ke5f1 {
@@ -2323,7 +2324,6 @@ b {
 .partnereventshared_EditPreviewButton_1FhZQ {
   min-width: 100px;
   padding: 4px 20px;
-  margin-left: 12px;
   border-radius: 3px;
   line-height: 26px;
   text-align: center;
@@ -4951,7 +4951,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   padding-bottom: calc(var(--gamepadui-current-footer-height, 0px) + 20px);
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-padding: 56px 0px 60px 0px;
+  scroll-padding: 250px 0px 60px 0px;
   flex-direction: column;
   padding-top: calc(24px + var(--basicui-header-height, 0px));
 }
@@ -7967,8 +7967,18 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   border: 1px solid #222;
   padding: 10px;
 }
-.contentmoderationreportdialog_ContentReportDialog_1nRyg.DialogContent {
-  min-width: 350px;
+.contentmoderationreportdialog_ContentReportDialog_1nRyg {
+  max-width: 490px;
+}
+@media screen and (max-width: 500px) {
+  html:not(.force_desktop):not(.force_desktop)
+    .contentmoderationreportdialog_ContentReportDialog_1nRyg {
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    right: 0;
+    position: relative;
+  }
 }
 .contentmoderationreportdialog_ContentReportDialog_1nRyg p {
   margin-top: 0;
@@ -7977,14 +7987,22 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 13px;
 }
 .contentmoderationreportdialog_BlockListItem_2tqpD {
-  display: block;
-  background-color: #777;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  background-color: #3d4450;
   color: #fff;
   padding: 4px 12px;
   cursor: pointer;
+}
+.contentmoderationreportdialog_BlockListItem_2tqpD svg {
+  height: 18px;
+  width: 18px;
 }
 .contentmoderationreportdialog_BlockListItem_2tqpD a {
   text-decoration: none;
@@ -7995,7 +8013,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .contentmoderationreportdialog_BlockListItem_2tqpD
   .contentmoderationreportdialog_BlockListDesc_1Wd-o {
-  font-size: 12px;
+  font-size: 10px;
+  color: #b8bcbf;
+}
+.contentmoderationreportdialog_BlockListItem_2tqpD
+  .contentmoderationreportdialog_BlockListReason_3aAuW {
   color: #dcdedf;
 }
 .contentmoderationreportdialog_BottomButtons_2g3Wv {
@@ -8007,6 +8029,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .contentmoderationreportdialog_BottomButtons_2g3Wv button {
   max-width: 50%;
+}
+.contentmoderationreportdialog_BottomButtons_2g3Wv button:only-child {
+  margin-left: auto;
+  flex-grow: 0;
+  flex-basis: content;
 }
 .contentmoderationreportdialog_ReportAs_22Uov {
   font-weight: bold;
@@ -8117,6 +8144,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   .contentmoderationreportdialog_ExplanationMoreInfo_1IR8K:hover {
   color: #eae3c7;
   border-bottom: 1px dotted rgba(224, 212, 170, 0.8);
+}
+.contentmoderationreportdialog_NamePanel_ovujK {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-block-start: 7px;
+  width: 100%;
+}
+.contentmoderationreportdialog_NamePanel_ovujK > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contentmoderationreportdialog_NamePanel_ovujK
+  > div
+  input.contentmoderationreportdialog_OptionalNameInput_1PFmi {
+  margin-inline-start: 5px;
+  margin-inline-end: 5px;
+  border: .66px solid #767676;
+  border-radius: 0;
 }
 .chatroommenu_ChatRoomContextNoPermission_w04cA {
   opacity: 0.4;

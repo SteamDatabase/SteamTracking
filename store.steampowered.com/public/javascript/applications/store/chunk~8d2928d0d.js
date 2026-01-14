@@ -4,7 +4,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [3615],
   {
-    30756: (e, t, r) => {
+    60092: (e, t, r) => {
       r.d(t, { g: () => Pt });
       var i,
         n,
@@ -5577,13 +5577,9 @@
         ut = r(95695),
         dt = r(738),
         gt = r(52038),
-        Bt = r(56011);
-      function _t(e, t) {
-        if (!e || !e.BIsClanAccount()) return !1;
-        const r = Ke.KN.Get().GetPartnerEventPermissions(e);
-        return !!r && (t ? r.valve_admin : r.valve_admin || r.support_user);
-      }
-      var bt = r(14947),
+        Bt = r(56011),
+        _t = r(64846),
+        bt = r(14947),
         pt = r(1501),
         yt = r(35400),
         Mt = r(36735),
@@ -5817,7 +5813,7 @@
           const s = (0, at.yK)(),
             l = "community" == s,
             u = "store" == s,
-            d = at.iA.is_support && _t(t.clanSteamID, !0),
+            d = at.iA.is_support && (0, _t.m)(t.clanSteamID, !0),
             w = z && !S,
             v = 36 == t.GetEventType(),
             j = v && F?.GetLinkedEventGID() == t.GID,
@@ -6200,6 +6196,17 @@
               ),
             )
           : null;
+      }
+    },
+    64846: (e, t, r) => {
+      r.d(t, { m: () => n });
+      r(90626);
+      var i = r(60746);
+      r(95695);
+      function n(e, t) {
+        if (!e || !e.BIsClanAccount()) return !1;
+        const r = i.KN.Get().GetPartnerEventPermissions(e);
+        return !!r && (t ? r.valve_admin : r.valve_admin || r.support_user);
       }
     },
     44894: (e, t, r) => {

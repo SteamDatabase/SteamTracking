@@ -60,8 +60,6 @@
 	"moderation_reportid": "معرّف البلاغ %1$s",
 	"ReportContent_Title": "الإبلاغ عن المحتوى",
 	"ReportContent_Description": "هذا فقط للإبلاغ عن المحتوى المتكرر والإعلانات والمحتوى غير القانوني والمنشورات المسببة للمشكلات (المضايقة أو القتال أو الوقاحة).",
-	"ReportContent_PickACategory": "اختر سببًا للإبلاغ عن هذا المحتوى:",
-	"ReportContent_PickAReason": "يرجى تقديم مزيد من التفاصيل:",
 	"ReportContent_ReportButton": "إرسال البلاغ",
 	"ReportContent_ReportAs": "الإبلاغ كـ:",
 	"ReportContent_Back": "رجوع",
@@ -86,6 +84,7 @@
 	"ContentReportReasonCategory_CivicDiscourse": "خطاب مدني وانتخابات",
 	"ContentReportReasonCategory_Suspicious": "محتوى مشبوه",
 	"ContentReportReasonCategory_Inappropriate": "محتوى غير لائق",
+	"ContentReportReasonCategory_Other": "أخرى",
 	"ContentReportReasonCategoryDesc_Suspicious": "التصيد الاحتيالي، الاحتيال، انتحال هويات الأصدقاء أو دعم Steam",
 	"ContentReportReasonCategoryDesc_Inappropriate": "المضايقات، الرسائل المزعجة، الصور غير اللائقة",
 	"ContentReportReason_Invalid": "(غير معروف)",
@@ -181,6 +180,7 @@
 	"moderation_resolutionstatus_removeandwarn": "تمت الإزالة والتحذير",
 	"moderation_resolutionstatus_removeandban": "تمت الإزالة والحظر من المركز",
 	"moderation_resolutionstatus_removeandkick": "تم الحذف والطرد من المجموعة",
+	"moderation_resolutionstatus_sanctioned": "تمت المعاقبة",
 	"moderation_resolutionstatus_unknown": "غير معروف",
 	"moderationaction_acquitted": "تمت التبرئة",
 	"moderationaction_cancelled": "تم إلغاء آخر تقرير مفتوح",
@@ -208,7 +208,8 @@
 	"moderatormessage_count_note": "الملحوظات: %1$s",
 	"moderatormessage_count_warning": "التحذيرات: %1$s",
 	"moderatormessage_count_bannotice": "مرات الحظر: %1$s",
-	"moderatormessage_count_contentremoval": "إخطارات إزالة المحتوى: %1$s"
+	"moderatormessage_count_contentremoval": "إخطارات إزالة المحتوى: %1$s",
+	"reportforumpost_reason_notfound": "أخرى"
 }`);
     },
   },

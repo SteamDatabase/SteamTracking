@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "Au fost găsite %1$s rezultate",
 	"Search_ListingsFound": "A fost găsită o listare",
 	"Search_ListingsFound_Plural": "Au fost găsite %2$s listări",
+	"SortBy_Default": "Popularitate (implicit)",
 	"SortBy_Name_Asc": "Nume (A-Z)",
 	"SortBy_Name_Desc": "Nume (Z-A)",
 	"SortBy_Price_Asc": "Preț (crescător)",

@@ -1386,6 +1386,11 @@
                     _: _._.readInt64String,
                     _: _._.writeInt64String,
                   },
+                  purchaseable: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m

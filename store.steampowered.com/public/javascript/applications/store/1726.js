@@ -4429,31 +4429,37 @@
           }
           return n;
         }
-        async SavePartnerEventSaleAssets(e, t, a) {
-          let n = null;
+        async SavePartnerEventSaleAssets(e, t, a, n) {
+          let i = null;
           if (!this.m_mapExistingEvents.has(t)) return !1;
           try {
-            const i = `${v.TS.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
-              r = new FormData();
-            r.append("sessionid", v.TS.SESSIONID),
-              r.append("gidclanevent", t),
-              r.append("json", JSON.stringify(a));
-            const o = await s().post(i, r, { withCredentials: !0 });
-            if (1 == o?.data?.success) {
+            const r = `${v.TS.PARTNER_BASE_URL}promotion/sales/ajaxsaveasset/${e}`,
+              o = new FormData();
+            o.append("sessionid", v.TS.SESSIONID),
+              o.append("gidclanevent", t),
+              o.append("json", JSON.stringify(a)),
+              o.append("pageStyles", JSON.stringify(n));
+            const l = await s().post(r, o, { withCredentials: !0 });
+            if (1 == l?.data?.success) {
               const e = this.m_mapExistingEvents.get(t);
-              for (const t in a)
-                a.hasOwnProperty(t) && a[t] && (e.jsondata[t] = a[t]);
+              if (e && e.jsondata)
+                for (const t in a)
+                  if (a.hasOwnProperty(t) && a[t]) {
+                    const n = t,
+                      i = a[n];
+                    void 0 !== i && void 0 !== n && (e.jsondata[n] = i);
+                  }
               return this.GetPartnerEventChangeCallback(t).Dispatch(e), !0;
             }
-            n = (0, p.H)(o);
+            i = (0, p.H)(l);
           } catch (e) {
-            n = (0, p.H)(e);
+            i = (0, p.H)(e);
           }
           return (
             console.error(
               "CPartnerEventStore.SavePartnerEventSaleAssets failed: " +
-                n?.strErrorMsg,
-              n,
+                i?.strErrorMsg,
+              i,
             ),
             !1
           );

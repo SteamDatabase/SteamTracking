@@ -2086,6 +2086,7 @@
                     br: s.qM.readInt64String,
                     bw: s.gp.writeInt64String,
                   },
+                  purchaseable: { n: 6, br: s.qM.readBool, bw: s.gp.writeBool },
                 },
               }),
             F.sm_m
@@ -27494,6 +27495,7 @@
         (br.portuguese = () => r.e(6865).then(r.t.bind(r, 96865, 19))),
         (br.romanian = () => r.e(1391).then(r.t.bind(r, 71391, 19))),
         (br.russian = () => r.e(4933).then(r.t.bind(r, 64933, 19))),
+        (br.sc_schinese = () => r.e(7503).then(r.t.bind(r, 27503, 19))),
         (br.schinese = () => r.e(4768).then(r.t.bind(r, 44768, 19))),
         (br.spanish = () => r.e(876).then(r.t.bind(r, 20876, 19))),
         (br.swedish = () => r.e(5181).then(r.t.bind(r, 75181, 19))),

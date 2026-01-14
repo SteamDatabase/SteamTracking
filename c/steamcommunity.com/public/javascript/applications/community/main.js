@@ -133,6 +133,7 @@
         BlockList: "_26Mh3pOoHvN94uQqD5U12q",
         BlockListItem: "_2tqpD1Hr0c3LCAUSe4r3Yp",
         BlockListDesc: "_1Wd-oBTdxaR4gdEOCU0Y_c",
+        BlockListReason: "_3aAuWBf6nMD2HeEJd705tm",
         BottomButtons: "_2g3WvB3F6WH2CPUBwVzny3",
         ReportAs: "_22Uov0GdUIzithIQM81W9o",
         DetailedReasonTextArea: "_1PUlL2I2RWFcIXXAWteNhd",
@@ -147,6 +148,8 @@
         ExplanationHeader: "_1mtADWws8sX_GRUMKT9h6b",
         ExplanationBody: "_3eWesiClfi8If1bY0SVd1P",
         ExplanationMoreInfo: "_1IR8K2Mmix7NIM5w8hdbDB",
+        NamePanel: "ovujKSqZqv7MmjE0upPcI",
+        OptionalNameInput: "_1PFmi6hYnRJ7C8r3naWGJw",
       };
     },
     chunkid: (module) => {
@@ -12441,8 +12444,8 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
-            _.prototype.reports || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1], null);
+            _.prototype.frame_rates || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -12450,11 +12453,15 @@
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  reports: {
-                    _: 1,
+                  frame_rates: {
+                    _: 2,
                     _: _,
                     _: !0,
                     _: !0,
+                  },
+                  system_info: {
+                    _: 3,
+                    _: _,
                   },
                 },
               }),
@@ -12500,6 +12507,109 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.manufacturer || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  manufacturer: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  model: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dx_video_card: {
+                    _: 3,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dx_vendorid: {
+                    _: 4,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  dx_deviceid: {
+                    _: 5,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
+                  num_gpu: {
+                    _: 6,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  system_ram: {
+                    _: 7,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
+                  },
+                  _: {
+                    _: 8,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  cpu_vendor: {
+                    _: 9,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  cpu_name: {
+                    _: 10,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientMetrics_GamePerformance_Notification_SystemInformation";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.gameid || _._(_._()),
             _.Message.initialize(this, _, 0, -1, void 0, null);
         }
@@ -12519,43 +12629,8 @@
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
-                  manufacturer: {
-                    _: 3,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  model: {
-                    _: 4,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  dx_video_card: {
-                    _: 5,
-                    _: _._.readString,
-                    _: _._.writeString,
-                  },
-                  dx_vendorid: {
-                    _: 6,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  dx_deviceid: {
-                    _: 7,
-                    _: _._.readInt32,
-                    _: _._.writeInt32,
-                  },
-                  num_gpu: {
-                    _: 8,
-                    _: _._.readUint32,
-                    _: _._.writeUint32,
-                  },
-                  system_ram: {
-                    _: 9,
-                    _: _._.readUint64String,
-                    _: _._.writeUint64String,
-                  },
                   session_seconds: {
-                    _: 10,
+                    _: 3,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
@@ -12596,7 +12671,7 @@
           return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
         }
         getClassName() {
-          return "CClientMetrics_GamePerformance_Notification_FrameRateReport";
+          return "CClientMetrics_GamePerformance_Notification_FrameRate";
         }
       }
       class _ extends _.Message {
@@ -28335,6 +28410,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -35639,6 +35715,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -35657,6 +35734,14 @@
         return (0, _._)(
           (function (_, _) {
             return _(_, _, "include_screenshots", "screenshots");
+          })(_, _),
+        );
+      }
+      function _(_) {
+        const _ = (0, _._)();
+        return (0, _._)(
+          (function (_, _) {
+            return _(_, _, "include_platforms", "platforms");
           })(_, _),
         );
       }
@@ -35804,6 +35889,7 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -35819,18 +35905,6 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
-      function _(_, _) {
-        _.Body().set_context(
-          (function (_) {
-            const _ = new _._();
-            _.bUsePartnerAPI || _.set_country_code(_.country);
-            _.set_language(_.language),
-              _.realm != _._.k_ESteamRealmUnknown && _.set_steam_realm(_.realm);
-            return _;
-          })(_),
-        );
-      }
       function _(_, _, _, _) {
         return new (_())(
           async (_) => {
@@ -35859,10 +35933,8 @@
             const _ = _._.Init(_._);
             let _;
             if (
-              (_(_, _),
-              (function (_, _) {
-                _.Body().set_data_request(_._.fromObject(_));
-              })(_, _),
+              ((0, _._)(_, _),
+              (0, _._)(_, _),
               _.forEach((_) => {
                 const _ = (0, _._)(_);
                 _ && _.Body().add_ids(_._.fromObject(_));
@@ -35921,6 +35993,9 @@
       const _ = _.createContext({});
       function _() {
         return _.useContext(_).dataLoader;
+      }
+      function _() {
+        return _.useContext(_).storeBrowseContext;
       }
       function _(_) {
         const {
@@ -36149,6 +36224,30 @@
               `Unknown EStoreItemType ${_} ${(0, _._)(_)} `,
             );
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_, _) {
+        _.Body().set_context(
+          (function (_) {
+            const _ = new _._();
+            _.bUsePartnerAPI || _.set_country_code(_.country);
+            _.set_language(_.language),
+              _.realm != _._.k_ESteamRealmUnknown && _.set_steam_realm(_.realm);
+            return _;
+          })(_),
+        );
+      }
+      function _(_, _) {
+        _.Body().set_data_request(_._.fromObject(_));
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -64638,6 +64737,10 @@
           __webpack_require__
             ._("chunkid")
             .then(__webpack_require__._.bind(__webpack_require__, 54006, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 70684, 19))),
         (_.schinese = () =>
           __webpack_require__
             ._("chunkid")
@@ -64674,9 +64777,6 @@
         if (_[_]) return _[_]();
       });
       var _;
-      function _(_) {
-        return !!_ && "value" in _;
-      }
       !(function (_) {
         (_[(_.k_EContentModerationAction_None = 0)] =
           "k_EContentModerationAction_None"),
@@ -64685,6 +64785,25 @@
           (_[(_.k_EContentModerationAction_MarkSuspicious = 2)] =
             "k_EContentModerationAction_MarkSuspicious");
       })(_ || (_ = {}));
+      const _ = {
+          url: "https://steamcommunity.com/dmca/create",
+          strLocToken: "#ReportContent_CopyrightInfringement",
+          strWarningBeforeNav: "#WarnBeforeNavigatingToCopyrightReportForm",
+        },
+        _ = {
+          url: "https://steamcommunity.com/trademark/createtrademarkcomplaint/",
+          strLocToken: "#ReportContent_TrademarkComplaint",
+          strWarningBeforeNav: "#WarnBeforeNavigatingToTrademarkReportForm",
+        };
+      function _(_) {
+        return !!_ && "children" in _;
+      }
+      function _(_) {
+        return !!_ && "url" in _;
+      }
+      function _(_) {
+        return !!_ && "value" in _;
+      }
       const _ = [
         {
           strLocToken: "#ContentReportReasonCategory_ScamsAndTheft",
@@ -64911,6 +65030,7 @@
       ];
       function _(_, _) {
         if (!_ || 0 === _.size) return !1;
+        if (_(_)) return !1;
         if (_(_)) return _.has(_.value);
         for (const _ of _.children) if (!_(_, _)) return !1;
         return !0;
@@ -65075,7 +65195,8 @@
             return "";
         }
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { publishedFileId: _ } = _,
           [__webpack_require__, _] = (0, _.useState)(!1),
@@ -65164,19 +65285,95 @@
             });
           })(_.clanSteamId, _.gidForum, _.gidTopic, _.gidComment),
           [__webpack_require__, _] = (0, _.useState)(!1);
-        (0, _.useEffect)(() => {
-          document.getElementById(_.anchorId).onclick = () => _(!0);
-        });
-        const _ = new Set([42, 63, 62]);
-        return _.createElement(_, {
-          reportSubjectMutation: _,
-          subjectType: 1,
-          subjectGroupId: _.gidTopic,
-          subjectId: _.gidComment,
-          showDialog: __webpack_require__,
-          setShowDialog: _,
-          excludedReasons: _,
-        });
+        return (
+          (0, _.useEffect)(() => {
+            document.getElementById(_.anchorId).onclick = () => _(!0);
+          }),
+          _.createElement(_, {
+            reportSubjectMutation: _,
+            subjectType: 1,
+            subjectGroupId: _.gidTopic,
+            subjectId: _.gidComment,
+            showDialog: __webpack_require__,
+            setShowDialog: _,
+            rgReportReasonTree: [
+              {
+                value: 27,
+                strOverrideReasonNameLocToken:
+                  "#reportforumpost_reason_disruptive",
+                strDescriptionLocToken:
+                  "#reportforumpost_description_disruptive",
+                bShowRightArrow: !0,
+              },
+              {
+                value: 16,
+                strOverrideReasonNameLocToken: "#reportforumpost_reason_scams",
+                strDescriptionLocToken: "#reportforumpost_description_scams",
+                bShowRightArrow: !0,
+              },
+              {
+                value: 41,
+                strOverrideReasonNameLocToken:
+                  "#reportforumpost_reason_advertising",
+                strDescriptionLocToken:
+                  "#reportforumpost_description_advertising",
+                bShowRightArrow: !0,
+              },
+              {
+                value: 35,
+                strOverrideReasonNameLocToken:
+                  "#reportforumpost_reason_sensitiveordisturbing",
+                strDescriptionLocToken:
+                  "#reportforumpost_description_sensitiveordisturbing",
+                bShowRightArrow: !0,
+              },
+              {
+                value: 36,
+                strOverrideReasonNameLocToken:
+                  "#reportforumpost_reason_privacy",
+                strDescriptionLocToken: "#reportforumpost_description_privacy",
+                bShowRightArrow: !0,
+              },
+              {
+                value: 11,
+                strOverrideReasonNameLocToken:
+                  "#reportforumpost_reason_promotingviolence",
+                strDescriptionLocToken:
+                  "#reportforumpost_description_promotingviolence",
+                bShowRightArrow: !0,
+              },
+              {
+                value: 34,
+                strOverrideReasonNameLocToken:
+                  "#reportforumpost_reason_childsafety",
+                strDescriptionLocToken:
+                  "#reportforumpost_description_childsafety",
+                bShowRightArrow: !0,
+              },
+              {
+                strLocToken: "#reportforumpost_reason_intellectualproperty",
+                strDescriptionLocToken:
+                  "#reportforumpost_description_intellectualproperty",
+                children: [
+                  {
+                    value: 23,
+                    strOverrideReasonNameLocToken:
+                      "#reportforumpost_reason_cheating",
+                  },
+                  _,
+                  _,
+                ],
+                bShowRightArrow: !0,
+              },
+              {
+                value: 2,
+                strOverrideReasonNameLocToken:
+                  "#reportforumpost_reason_notfound",
+                bShowRightArrow: !0,
+              },
+            ],
+          })
+        );
       }
       new Set([29, 28, 30, 31, 42, 46, 47, 48, 49, 43, 44, 45, 24, 25, 26, 27]);
       function _(_) {
@@ -65184,14 +65381,32 @@
         const [__webpack_require__, _] = (0, _.useState)([]),
           [_, _] = (0, _.useState)("reason"),
           _ = (0, _.useRef)(void 0),
-          _ = _.reportSubjectMutation;
+          _ = (0, _.useRef)(void 0),
+          _ = _.reportSubjectMutation,
+          [_, _] = (0, _.useState)(null),
+          _ = (_) => {
+            let _ = [...__webpack_require__],
+              _ = _;
+            _(_) && 1 === _.children.length && (_ = _.children[0]),
+              _.push(_),
+              _(_),
+              _(_)
+                ? (_.strOverrideReasonNameLocToken
+                    ? _(_.Localize(_.strOverrideReasonNameLocToken))
+                    : _(null),
+                  _("submit"))
+                : _(_) &&
+                  (_.strWarningBeforeNav
+                    ? _("anchorwarning")
+                    : (window.location.href = _.url));
+          };
         if (!_.showDialog) return null;
         const _ = __webpack_require__.length
             ? __webpack_require__[__webpack_require__.length - 1]
             : null,
           _ = _(_) ? _.value : 0;
         let _ = [];
-        __webpack_require__.length && !_(_)
+        __webpack_require__.length && _(_)
           ? (_ = _.children)
           : 0 === __webpack_require__.length &&
             (_ = null !== (_ = _.rgReportReasonTree) && void 0 !== _ ? _ : _);
@@ -65199,30 +65414,39 @@
           const _ = _(_) ? _.value : _.strLocToken;
           let _,
             _ = "";
-          return (
-            _(_)
-              ? (_ = _(_.value))
-              : 1 === _.children.length && !_.bForceLocToken && _(_.children[0])
-                ? (_ = _(_.children[0].value))
-                : ((_ = _.Localize(_.strLocToken)),
-                  (_ = _.strDescriptionLocToken
-                    ? _.Localize(_.strDescriptionLocToken)
-                    : void 0)),
-            _.createElement(_, {
-              key: _,
-              text: _,
-              description: _,
-              onClick: () =>
-                ((_) => {
-                  let _ = [...__webpack_require__],
-                    _ = _;
-                  _(_) || 1 !== _.children.length || (_ = _.children[0]),
-                    _.push(_),
-                    _(_),
-                    _(_) && _("submit");
-                })(_),
-            })
-          );
+          _(_)
+            ? 1 === _.children.length && !_.bForceLocToken && _(_.children[0])
+              ? (_ = _(_.children[0].value))
+              : ((_ = _.Localize(_.strLocToken)),
+                (_ = _.strDescriptionLocToken
+                  ? _.Localize(_.strDescriptionLocToken)
+                  : void 0))
+            : _(_)
+              ? ((_ = _.Localize(_.strLocToken)),
+                (_ = _.strDescriptionLocToken
+                  ? _.Localize(_.strDescriptionLocToken)
+                  : void 0))
+              : ((_ = _.strOverrideReasonNameLocToken
+                  ? _.Localize(_.strOverrideReasonNameLocToken)
+                  : _(_.value)),
+                (_ = _.strDescriptionLocToken
+                  ? _.Localize(_.strDescriptionLocToken)
+                  : void 0));
+          const _ = _(_) || _.bShowRightArrow;
+          return _(_)
+            ? _.createElement(_, {
+                key: _,
+                text: _,
+                description: _,
+                onClick: () => _(_),
+              })
+            : _.createElement(_, {
+                key: _,
+                text: _,
+                description: _,
+                onClick: () => _(_),
+                bShowRightArrow: _,
+              });
         });
         let _ = "";
         return (
@@ -65263,9 +65487,7 @@
                     _.createElement(
                       "p",
                       null,
-                      __webpack_require__.length
-                        ? _.Localize("#ReportContent_PickAReason")
-                        : _.Localize("#ReportContent_PickACategory"),
+                      _.Localize("#ReportContent_PickAReason"),
                     ),
                     _.createElement(
                       _._,
@@ -65274,28 +65496,6 @@
                         className: _().BlockList,
                       },
                       _,
-                      !_.bHideCopyrightReportReasons &&
-                        !!__webpack_require__.length &&
-                        _.createElement(
-                          _.Fragment,
-                          null,
-                          _.createElement(
-                            _._,
-                            {
-                              className: _().BlockListItem,
-                              href: "https://steamcommunity.com/dmca/create",
-                            },
-                            _.Localize("#ReportContent_CopyrightInfringement"),
-                          ),
-                          _.createElement(
-                            _._,
-                            {
-                              className: _().BlockListItem,
-                              href: "https://steamcommunity.com/trademark/createtrademarkcomplaint/",
-                            },
-                            _.Localize("#ReportContent_TrademarkComplaint"),
-                          ),
-                        ),
                     ),
                     !!__webpack_require__.length &&
                       _.createElement(
@@ -65312,29 +65512,34 @@
                           _.Localize("#ReportContent_Back"),
                         ),
                       ),
+                    0 === __webpack_require__.length &&
+                      _.createElement(
+                        _._,
+                        {
+                          className: _().BottomButtons,
+                        },
+                        _.createElement(
+                          _._,
+                          {
+                            onClick: () => _.setShowDialog(!1),
+                          },
+                          _.Localize("#moderation_cancel"),
+                        ),
+                      ),
                   ),
                 "submit" === _ &&
                   _.createElement(
                     _.Fragment,
                     null,
-                    !_.bHideReportAsText &&
-                      _.createElement(
-                        "p",
-                        null,
-                        _.createElement(
-                          "span",
-                          {
-                            className: _().ReportAs,
-                          },
-                          _.Localize("#ReportContent_ReportAs"),
-                        ),
-                        " ",
-                        _(_),
-                      ),
                     _.createElement(
                       "p",
                       null,
                       _.Localize("#ReportContent_Attestation"),
+                    ),
+                    _.createElement(
+                      _._,
+                      null,
+                      _.Localize("#reportforumpost_reasonforreport", _ || _(_)),
                     ),
                     _.createElement(
                       _._,
@@ -65355,6 +65560,26 @@
                     _.createElement(
                       _._,
                       {
+                        className: _().NamePanel,
+                      },
+                      _.createElement(
+                        _._,
+                        null,
+                        _.Localize("#ReportContent_YourNamePlaceholder"),
+                      ),
+                      _.createElement(
+                        _._,
+                        null,
+                        _.createElement(_._, {
+                          className: _().OptionalNameInput,
+                          type: "text",
+                          ref: _,
+                        }),
+                      ),
+                    ),
+                    _.createElement(
+                      _._,
+                      {
                         className: _().BottomButtons,
                       },
                       _.createElement(
@@ -65371,7 +65596,7 @@
                         _._,
                         {
                           onClick: async () => {
-                            var _, _;
+                            var _, _, _, _;
                             const _ = __webpack_require__.length
                               ? __webpack_require__[
                                   __webpack_require__.length - 1
@@ -65382,18 +65607,28 @@
                                 !1,
                                 "Content report submitted with invalid reason tree state",
                               );
-                            const _ =
-                                null !==
-                                  (_ =
-                                    null === (_ = _.current) || void 0 === _
-                                      ? void 0
-                                      : _.value) && void 0 !== _
-                                  ? _
-                                  : "",
-                              _ = {
-                                reason: _.value,
-                                text: _,
-                              };
+                            let _ =
+                              null !==
+                                (_ =
+                                  null === (_ = _.current) || void 0 === _
+                                    ? void 0
+                                    : _.value) && void 0 !== _
+                                ? _
+                                : "";
+                            const _ = (
+                              null !==
+                                (_ =
+                                  null === (_ = _.current) || void 0 === _
+                                    ? void 0
+                                    : _.value) && void 0 !== _
+                                ? _
+                                : ""
+                            ).trim();
+                            _.length > 0 && (_ += " - " + _);
+                            const _ = {
+                              reason: _.value,
+                              text: _,
+                            };
                             _.mutateAsync(_)
                               .then(() => _("submitted"))
                               .then(() => _.onSubmitted && _.onSubmitted())
@@ -65416,6 +65651,41 @@
                     null,
                     _.Localize("#ContentReportSubmissionError_Description"),
                   ),
+                "anchorwarning" === _ &&
+                  _.createElement(
+                    _._,
+                    null,
+                    _.createElement(
+                      "p",
+                      null,
+                      _.Localize(_.strWarningBeforeNav),
+                    ),
+                    _.createElement(
+                      _._,
+                      {
+                        className: _().BottomButtons,
+                      },
+                      _.createElement(
+                        _._,
+                        {
+                          onClick: () => {
+                            _(__webpack_require__.slice(0, -1)), _("reason");
+                          },
+                        },
+                        "« ",
+                        _.Localize("#ReportContent_Back"),
+                      ),
+                      _.createElement(
+                        _._,
+                        {
+                          onClick: () => {
+                            _ && (window.location.href = _.url);
+                          },
+                        },
+                        "Proceed",
+                      ),
+                    ),
+                  ),
               ),
             ),
           )
@@ -65430,14 +65700,32 @@
             className: _().BlockListItem,
             onActivate: _,
           },
-          _.createElement("div", null, _),
-          !!__webpack_require__ &&
+          _.createElement(
+            "div",
+            null,
             _.createElement(
               "div",
               {
-                className: _().BlockListDesc,
+                className: _().BlockListReason,
               },
-              __webpack_require__,
+              _,
+            ),
+            !!__webpack_require__ &&
+              _.createElement(
+                "div",
+                {
+                  className: _().BlockListDesc,
+                },
+                __webpack_require__,
+              ),
+          ),
+          _.bShowRightArrow &&
+            _.createElement(
+              "div",
+              null,
+              _.createElement(_.cLJ, {
+                direction: "right",
+              }),
             ),
         );
       }
@@ -67225,6 +67513,7 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
+        _: () => _._,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -67968,8 +68257,8 @@
         (0, _._)([_._], _.prototype, "OnTouchMove", null),
         (0, _._)([_._], _.prototype, "OnTouchEnd", null),
         (0, _._)([_._], _.prototype, "OnKeyDown", null);
-      __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.createContext({
         setValue: () => {},
@@ -77795,6 +78084,7 @@
         Xz0: () => _,
         YNO: () => _,
         Yoo: () => _,
+        Z29: () => _,
         ZPc: () => _,
         ZWw: () => _,
         ZjT: () => _,
@@ -81934,6 +82224,36 @@
             width: "16",
             height: "3",
             fill: "currentColor",
+          }),
+        );
+      }
+      function _(_) {
+        const [_, __webpack_require__] = (0, _._)();
+        return _.createElement(
+          "svg",
+          {
+            width: "80",
+            height: "50",
+            viewBox: "0 0 80 50",
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            overflow: "visible",
+            ..._,
+          },
+          _.createElement("rect", {
+            _: "6",
+            _: "8",
+            width: "68",
+            height: "34",
+            fill: "currentColor",
+            opacity: "0.35",
+            _: "2",
+            _: "2",
+          }),
+          _.createElement("polygon", {
+            points: "35,18 35,32 47,25",
+            fill: "currentColor",
+            opacity: "0.8",
           }),
         );
       }
@@ -86178,6 +86498,7 @@
         _ = !1,
         _ = !1,
         _ = !1,
+        _ = !1,
         _ = !1;
       function _() {
         return _ || _(), _;
@@ -86216,6 +86537,7 @@
         (_ = _("Valve Steam Tenfoot", "force_tenfoot_client_view")),
           (_ = _("Valve Steam GameOverlay", "force_overlay_view")),
           (_ = _ || _("Valve Steam Client", "force_client_view")),
+          (_ = _("macintosh", "force_mac_view")),
           (_ =
             _("iphone", "force_ios_view") ||
             _("ipad", "force_ios_view") ||

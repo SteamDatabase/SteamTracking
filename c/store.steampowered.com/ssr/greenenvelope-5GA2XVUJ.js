@@ -1,22 +1,12 @@
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -41,9 +31,14 @@ import {
   _,
 } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import {
@@ -67,6 +62,11 @@ import {
   _,
 } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -74,9 +74,9 @@ import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 var _ = _((_, _) => {
@@ -30251,8 +30251,8 @@ var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
-        _.prototype.reports || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [1], null);
+        _.prototype.frame_rates || _(_._()),
+        _.Message.initialize(this, _, 0, -1, [2], null);
     }
     static sm_m;
     static sm_mbf;
@@ -30262,11 +30262,15 @@ var _ = class _ extends _.Message {
           (_.sm_m = {
             proto: _,
             fields: {
-              reports: {
-                _: 1,
+              frame_rates: {
+                _: 2,
                 _: _,
                 _: !0,
                 _: !0,
+              },
+              system_info: {
+                _: 3,
+                _: _,
               },
             },
           }),
@@ -30312,6 +30316,111 @@ var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
       super(),
+        _.prototype.manufacturer || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        _.sm_m ||
+          (_.sm_m = {
+            proto: _,
+            fields: {
+              manufacturer: {
+                _: 1,
+                _: _.readString,
+                _: _.writeString,
+              },
+              model: {
+                _: 2,
+                _: _.readString,
+                _: _.writeString,
+              },
+              dx_video_card: {
+                _: 3,
+                _: _.readString,
+                _: _.writeString,
+              },
+              dx_vendorid: {
+                _: 4,
+                _: _.readInt32,
+                _: _.writeInt32,
+              },
+              dx_deviceid: {
+                _: 5,
+                _: _.readInt32,
+                _: _.writeInt32,
+              },
+              num_gpu: {
+                _: 6,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
+              system_ram: {
+                _: 7,
+                _: _.readUint64String,
+                _: _.writeUint64String,
+              },
+              _: {
+                _: 8,
+                _: _.readString,
+                _: _.writeString,
+              },
+              cpu_vendor: {
+                _: 9,
+                _: _.readString,
+                _: _.writeString,
+              },
+              cpu_name: {
+                _: 10,
+                _: _.readString,
+                _: _.writeString,
+              },
+            },
+          }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.default.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return "CClientMetrics_GamePerformance_Notification_SystemInformation";
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
         _.prototype.gameid || _(_._()),
         _.Message.initialize(this, _, 0, -1, void 0, null);
     }
@@ -30333,43 +30442,8 @@ var _ = class _ extends _.Message {
                 _: _.readUint32,
                 _: _.writeUint32,
               },
-              manufacturer: {
-                _: 3,
-                _: _.readString,
-                _: _.writeString,
-              },
-              model: {
-                _: 4,
-                _: _.readString,
-                _: _.writeString,
-              },
-              dx_video_card: {
-                _: 5,
-                _: _.readString,
-                _: _.writeString,
-              },
-              dx_vendorid: {
-                _: 6,
-                _: _.readInt32,
-                _: _.writeInt32,
-              },
-              dx_deviceid: {
-                _: 7,
-                _: _.readInt32,
-                _: _.writeInt32,
-              },
-              num_gpu: {
-                _: 8,
-                _: _.readUint32,
-                _: _.writeUint32,
-              },
-              system_ram: {
-                _: 9,
-                _: _.readUint64String,
-                _: _.writeUint64String,
-              },
               session_seconds: {
-                _: 10,
+                _: 3,
                 _: _.readInt32,
                 _: _.writeInt32,
               },
@@ -30410,7 +30484,7 @@ var _ = class _ extends _.Message {
       return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
     }
     getClassName() {
-      return "CClientMetrics_GamePerformance_Notification_FrameRateReport";
+      return "CClientMetrics_GamePerformance_Notification_FrameRate";
     }
   },
   _ = class _ extends _.Message {

@@ -13,6 +13,7 @@ ${BASE_URL_SHARED_CDN}store_item_assets/steam/apps/${}/${}
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/backgrounds/${internal_name}.jpg?v=1
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2024/backgrounds/${}.jpg?v=3
 ${BASE_URL_STORE_CDN_ASSETS}promo/steamawards2025/level_0${}.webp
+${BASE_URL_STORE_CDN_ASSETS}rewards/howtoawards/${LANGUAGE}.png
 ${BASE_URL_STORE_CDN_ASSETS}steamdeck/steamdeck_promo_0${}.png?v=4
 ${BASE_URL}${patch_website}
 ${BASE_URL}${}
@@ -134,7 +135,6 @@ ${COMMUNITY_BASE_URL}${spoofProfileUrl}
 ${COMMUNITY_BASE_URL}${url}
 ${COMMUNITY_BASE_URL}${vanity_url ? _ : _}
 ${COMMUNITY_BASE_URL}${}
-${COMMUNITY_BASE_URL}${}${}${_ ? _ : ""}
 ${COMMUNITY_BASE_URL}${}/
 ${COMMUNITY_BASE_URL}/actions/ConvertHTMLToBBCode
 ${COMMUNITY_BASE_URL}/actions/QueryLocations/
@@ -256,6 +256,7 @@ ${COMMUNITY_BASE_URL}invites/ajaxcreate
 ${COMMUNITY_BASE_URL}invites/ajaxgetall
 ${COMMUNITY_BASE_URL}linkfilter/?u=${}
 ${COMMUNITY_BASE_URL}market
+${COMMUNITY_BASE_URL}market/${}${_ ? _ : ""}
 ${COMMUNITY_BASE_URL}market/appaccessories/${}
 ${COMMUNITY_BASE_URL}market/appfilters/${}
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
@@ -270,6 +271,7 @@ ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
 ${COMMUNITY_BASE_URL}miniprofile/${}/json/?origin=${STORE_BASE_URL}
 ${COMMUNITY_BASE_URL}my
+${COMMUNITY_BASE_URL}my/awards
 ${COMMUNITY_BASE_URL}my/badges/
 ${COMMUNITY_BASE_URL}my/badges/${}
 ${COMMUNITY_BASE_URL}my/edit/avatar
@@ -437,7 +439,6 @@ ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}faqs/view/${k_strGRFAQ}
 ${HELP_BASE_URL}faqs/view/${url_code}
 ${HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36
-${HELP_BASE_URL}faqs/view/02F5-ACB2-6038-0F36${}
 ${HELP_BASE_URL}faqs/view/054C-3167-DD7F-49D4
 ${HELP_BASE_URL}faqs/view/0689-74B8-92AC-10F2
 ${HELP_BASE_URL}faqs/view/29A9-9EEE-09F0-75F9

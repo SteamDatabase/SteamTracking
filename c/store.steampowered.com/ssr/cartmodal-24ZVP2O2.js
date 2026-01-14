@@ -1,10 +1,12 @@
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import {
   _,
   _,
@@ -25,18 +27,11 @@ import {
 import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _, _, _, _, _, _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -47,6 +42,11 @@ import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
+import { _, _ } from "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
+import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
@@ -54,8 +54,8 @@ import "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _, _, _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
+import { _ } from "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
 import "./chunk-XXXXXXXX.js";
 import { _ } from "./chunk-XXXXXXXX.js";
@@ -203,6 +203,7 @@ var _ = {
   LineItemDetailsCtn: "_91QY-wpj0-M-",
   LineItemCol: "F0BHC6-tZX8-",
   LineItemDetailsRow: "_0v52-qZWRZU-",
+  Text: "d0qItWvO3cc-",
   LineItemDetailsRowTop: "RIiPxPHZe1c-",
   LineItemSpaceBetween: "jOE56KfWWqY-",
   LineItemTitle: "teMQBj-kyzo-",
@@ -233,10 +234,10 @@ var _ = {
 var _ = _(_(), 1);
 var _ = _(_(), 1);
 function _(_) {
-  let { flex: _, children: _, className: _ } = _;
+  let { text: _, children: _, className: _ } = _;
   return (0, _.jsx)(_, {
     "flow-children": "row",
-    className: (0, _.default)(_.LineItemDetailsRow, _ && _.FlexRow, _),
+    className: (0, _.default)(_.LineItemDetailsRow, _ && _.Text, _),
     children: _,
   });
 }
@@ -266,7 +267,7 @@ function _() {
 function _(_) {
   let { children: _ } = _;
   return (0, _.jsx)(_, {
-    flex: !0,
+    text: !0,
     children: (0, _.jsx)("div", {
       className: _.Warning,
       children: _,
@@ -429,7 +430,6 @@ function _(_) {
                 className: _.LineItemDetailsCtn,
                 children: [
                   (0, _.jsx)(_, {
-                    flex: !0,
                     className: _.LineItemDetailsRowTop,
                     children: (0, _.jsx)("div", {
                       className: _.LineItemTitle,
@@ -498,7 +498,6 @@ function _(_) {
             className: _.LineItemDetailsCtn,
             children: [
               (0, _.jsx)(_, {
-                flex: !0,
                 className: _.LineItemDetailsRowTop,
                 children: (0, _.jsx)("div", {
                   className: _.LineItemTitle,

@@ -922,6 +922,7 @@
         ActionButton: "_2F_4QUeAklbDxE2Gel4nbi",
         Icon: "_2owVAQbqvTJ6G2IzKl41L4",
         TempImage: "_2rzeDDfNBHXTyU1baPKs4i",
+        PageFormatting: "_2RUCDbVGqPGKaRt1JfDfvs",
         PageContainer: "a8CX9BjDuZ_sxVwla9dBv",
         HeaderImage: "_3NJf13jFRdCtio8kNxRKX2",
         HeaderText: "_1xjPBJLnZTq3cO4o1ElJjI",
@@ -946,7 +947,6 @@
         AwardsUiImg: "_31OtFiSvGTkjRlrEmtfos8",
         AwardBadgeContainer: "_2SDnX-VXLTVb4X_sHKJen",
         AwardsApng: "agnGAlTuG_hI5vLj-c7DY",
-        AwardsHotTakeApng: "_3Z7egXtKVK5mBkRwtviiXt",
         SectionSubtitleBadge: "_2sCkupQt-lwdtWtQJ5NAy0",
         SectionSubtitleLeftAlign: "_2NJT7pwZwwkNSv06ajSYOX",
         AwardsLink: "iKicbf3yxYMeWSP4TXUSb",
@@ -9734,6 +9734,14 @@
                 external: !0,
                 props: {
                   iconComponent: _._,
+                  children: (0, _._)("#MyAwardSummary"),
+                  href: _._.COMMUNITY_BASE_URL + "my/awards",
+                },
+              }),
+              _[4].items.push({
+                external: !0,
+                props: {
+                  iconComponent: _._,
                   children: (0, _._)("#RewardsPointsHistoryLink"),
                   href: _._.STORE_BASE_URL + "pointssummary/",
                 },
@@ -15775,43 +15783,43 @@
           __webpack_require__._,
           __webpack_require__._,
           __webpack_require__._ +
-            "images/applications/store/star.png?v=valveisgoodatcaching"),
+            "images/applications/store/header_image.png?v=valveisgoodatcaching"),
         _ =
           __webpack_require__._ +
-          "images/applications/store/heart_warming_anim0000.png?v=valveisgoodatcaching",
+          "images/applications/store/award_anim_225.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/hot_take_apng.png?v=valveisgoodatcaching",
+          "images/applications/store/beautiful_anim_225.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/fancyPants_apng.png?v=valveisgoodatcaching",
+          "images/applications/store/crown_anim_225.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/deep_thoughts_anim0000.png?v=valveisgoodatcaching",
+          "images/applications/store/fire_anim_225.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/hilarious_anim000.png?v=valveisgoodatcaching",
+          "images/applications/store/funny_anim_225.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/hot_take_anim000.png?v=valveisgoodatcaching",
+          "images/applications/store/hundo_anim_225.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/extra_helpful_anim000.png?v=valveisgoodatcaching",
+          "images/applications/store/life_anim_225.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/awards_ui.png?v=valveisgoodatcaching",
+          "images/applications/store/perfect_anim_225.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/header_image.png?v=valveisgoodatcaching",
+          "images/applications/store/plus_anim_225.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/michelangelo_apng.png?v=valveisgoodatcaching",
+          "images/applications/store/smart_anim_225.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/contributor_badge.png?v=valveisgoodatcaching",
+          "images/applications/store/treasure_anim_225.png?v=valveisgoodatcaching",
         _ =
           __webpack_require__._ +
-          "images/applications/store/patron_badge.png?v=valveisgoodatcaching";
+          "images/applications/store/wholesome_anim_225.png?v=valveisgoodatcaching";
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -16251,38 +16259,6 @@
                 src: _,
                 className: _.ScrollIcon,
               }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
-              _.createElement("img", {
-                src: _,
-                className: _.ScrollIcon,
-              }),
             ),
             _.createElement(
               _._,
@@ -16311,7 +16287,10 @@
                 (0, _._)("#HowItWorks_ReviewAwardsWinter_Desc", _),
               ),
               _.createElement("img", {
-                src: _,
+                alt: (0, _._)("#HowItWorks_ReviewAwards"),
+                src:
+                  _._.BASE_URL_STORE_CDN_ASSETS +
+                  `rewards/howtoawards/${_._.LANGUAGE}.png`,
                 className: _.AwardsUiImg,
               }),
             ),
@@ -16336,7 +16315,7 @@
                 },
                 _.createElement("img", {
                   src: _,
-                  className: _.AwardsHotTakeApng,
+                  className: _.AwardsApng,
                 }),
                 _.createElement(
                   _._,
@@ -16424,7 +16403,7 @@
                 },
                 _.createElement("img", {
                   src: _,
-                  className: _.AwardsHotTakeApng,
+                  className: _.AwardsApng,
                 }),
                 _.createElement(
                   _._,
@@ -16445,81 +16424,6 @@
                 ),
               ),
             ),
-            _.createElement(
-              _._,
-              {
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "flex-start",
-                justifyContent: "center",
-                paddingTop: "xlarge",
-                className: _.PageContainer,
-                focusable: !0,
-                noFocusRing: !0,
-              },
-              _.createElement(
-                _._,
-                {
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  paddingTop: "large",
-                  className: _.AwardBadgeContainer,
-                },
-                _.createElement("img", {
-                  src: _,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SectionTitleSmall,
-                    style: {
-                      paddingTop: "32px",
-                    },
-                  },
-                  (0, _._)("#HowItWorks_Patron_Badge"),
-                  " ",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SectionSubtitleBadge,
-                  },
-                  (0, _._)("#HowItWorks_Patron_Badge_Desc"),
-                ),
-              ),
-              _.createElement(
-                _._,
-                {
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  paddingTop: "large",
-                  className: _.AwardBadgeContainer,
-                },
-                _.createElement("img", {
-                  src: _,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SectionTitleSmall,
-                    style: {
-                      paddingTop: "32px",
-                    },
-                  },
-                  (0, _._)("#HowItWorks_Contributor_Badge"),
-                  " ",
-                ),
-                _.createElement(
-                  "div",
-                  {
-                    className: _.SectionSubtitleBadge,
-                  },
-                  (0, _._)("#HowItWorks_Contributor_Badge_Desc"),
-                ),
-              ),
-            ),
           );
         });
       const _ = () => {
@@ -16528,11 +16432,7 @@
             return [
               {
                 question: "#Faq_GetPoints_Q",
-                answer: [
-                  "#Faq_GetPoints_A",
-                  "#Faq_GetPoints_A1",
-                  !_ && "#Faq_GetPoints_A2",
-                ].filter(Boolean),
+                answer: ["#Faq_GetPoints_A", "#Faq_GetPoints_A1"],
               },
               {
                 question: "#Faq_PointsExpire_Q",
@@ -16551,10 +16451,6 @@
                 answer: "#Faq_TradingCards_A",
               },
               {
-                question: "#Faq_TradingCardsStay_Q",
-                answer: "#Faq_TradingCardsStay_A",
-              },
-              {
                 question: "#Faq_Refund_Q",
                 answer: "#Faq_Refund_A",
               },
@@ -16563,16 +16459,16 @@
                 answer: "#Faq_Lunar_A",
               },
               !_ && {
-                question: "#Faq_Profile_Q",
-                answer: "#Faq_Profile_A",
-              },
-              !_ && {
                 question: "#Faq_WhatElse_Q",
                 answer: [
                   "#Faq_WhatElse_A",
                   "#Faq_WhatElse_A1",
                   "#Faq_WhatElse_A2",
                 ],
+              },
+              !_ && {
+                question: "#Faq_SortOrder_Q",
+                answer: "#Faq_SortOrder_A",
               },
             ].filter(Boolean);
           })();
@@ -16677,6 +16573,7 @@
                     width: "100%",
                   },
                   _: "Title",
+                  className: _.PageFormatting,
                 },
                 _.createElement(_, null),
                 _.createElement(_, {

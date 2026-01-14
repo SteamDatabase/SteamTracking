@@ -3577,30 +3577,31 @@
           clanSteamID: t,
           fnGetImageHash: a,
           fnLangHasData: r,
-          fnOnRemoveImage: o,
+          fnOnRemoveImage: i,
         } = e;
         (0, d.mr)(t.GetAccountID());
-        const i = c.useMemo(() => {
-          let e = new Array();
-          const t = w.A0.GetLanguageListForRealms([
-            n.TU.k_ESteamRealmGlobal,
-            n.TU.k_ESteamRealmChina,
-          ]);
-          for (const n of t) {
-            const t = a(n);
-            if (t) {
-              const a = (0, l.Lg)(n),
-                r = (0, w.we)("#Language_" + a);
-              e.push({ lang: n, strLang: a, locLang: r, imgHash: t });
+        const s = c.useMemo(() => {
+            let e = new Array();
+            const t = w.A0.GetLanguageListForRealms([
+              n.TU.k_ESteamRealmGlobal,
+              n.TU.k_ESteamRealmChina,
+            ]);
+            for (const n of t) {
+              const t = a(n);
+              if (t) {
+                const a = (0, l.Lg)(n),
+                  r = (0, w.we)("#Language_" + a);
+                e.push({ lang: n, strLang: a, locLang: r, imgHash: t });
+              }
             }
-          }
-          return (
-            (e = e.sort((e, t) =>
-              e.locLang > t.locLang ? 1 : e.locLang < t.locLang ? -1 : 0,
-            )),
-            e
-          );
-        }, [a]);
+            return (
+              (e = e.sort((e, t) =>
+                e.locLang > t.locLang ? 1 : e.locLang < t.locLang ? -1 : 0,
+              )),
+              e
+            );
+          }, [a]),
+          [m, g, u] = (0, o.uD)();
         return c.createElement(
           "div",
           { className: E().SelectImageLanguagesCtn },
@@ -3612,7 +3613,7 @@
           c.createElement(
             "div",
             { className: E().LanguageListContainer },
-            i.map((a) =>
+            s.map((a) =>
               c.createElement(S, {
                 key: "lang_select_" + t.GetAccountID() + " " + a.strLang,
                 langData: a,
@@ -3620,19 +3621,27 @@
               }),
             ),
           ),
-          !!o &&
+          !!i &&
             c.createElement(
               C.$n,
-              {
-                onClick: () => {
-                  for (let e = 0; e < 31; e++) r(e) && o(e);
-                },
-              },
+              { onClick: g },
               (0, w.we)("#Sale_RemoveAll"),
               c.createElement(f.o, {
                 tooltip: (0, w.we)("#Sale_RemoveAll_Tooltip"),
               }),
             ),
+          c.createElement(
+            v.EN,
+            { active: m },
+            c.createElement(v.o0, {
+              strTitle: (0, w.we)("#Dialog_AreYouSure"),
+              strDescription: (0, w.we)("#ImageUpload_DeleteAll_Confirm"),
+              closeModal: u,
+              onOK: () => {
+                for (let e = 0; e < 31; e++) r && i && r(e) && i(e);
+              },
+            }),
+          ),
         );
       }
       function S(e) {

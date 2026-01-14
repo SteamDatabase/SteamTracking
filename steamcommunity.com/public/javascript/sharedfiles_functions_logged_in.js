@@ -305,7 +305,16 @@ function PublishedFileAward( id, fileType, currentSelection )
 				reward.append( countElem );
 				reward.data( "reaction", award );
 				reward.data( "reactioncount", 1 );
-				rewardsCtn.append( reward );
+
+				let moreBtn = rewardsCtn.find( ".review_award.more_btn" );
+				if ( moreBtn?.length )
+				{
+					moreBtn.before( reward );
+				}
+				else
+				{
+					rewardsCtn.append( reward );
+				}
 			}
 		}
 	};

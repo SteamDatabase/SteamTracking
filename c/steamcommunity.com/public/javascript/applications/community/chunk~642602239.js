@@ -10086,7 +10086,7 @@
           }
           return _;
         }
-        async SavePartnerEventSaleAssets(_, _, _) {
+        async SavePartnerEventSaleAssets(_, _, _, _) {
           var _;
           let _ = null;
           if (!this.m_mapExistingEvents.has(_)) return !1;
@@ -10095,7 +10095,8 @@
               _ = new FormData();
             _.append("sessionid", _._.SESSIONID),
               _.append("gidclanevent", _),
-              _.append("json", JSON.stringify(_));
+              _.append("json", JSON.stringify(_)),
+              _.append("pageStyles", JSON.stringify(_));
             const _ = await _().post(_, _, {
               withCredentials: !0,
             });
@@ -10106,10 +10107,13 @@
                 : _.success)
             ) {
               const _ = this.m_mapExistingEvents.get(_);
-              for (const _ in _)
-                __webpack_require__.hasOwnProperty(_) &&
-                  _[_] &&
-                  (_.jsondata[_] = _[_]);
+              if (_ && _.jsondata)
+                for (const _ in _)
+                  if (__webpack_require__.hasOwnProperty(_) && _[_]) {
+                    const _ = _,
+                      _ = _[_];
+                    void 0 !== _ && void 0 !== _ && (_.jsondata[_] = _);
+                  }
               return this.GetPartnerEventChangeCallback(_).Dispatch(_), !0;
             }
             _ = (0, _._)(_);

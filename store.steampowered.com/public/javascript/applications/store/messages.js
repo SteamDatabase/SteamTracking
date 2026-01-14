@@ -3395,7 +3395,7 @@
     },
     46416: (e, t, r) => {
       "use strict";
-      r.d(t, { J: () => F, W: () => O });
+      r.d(t, { J: () => O, W: () => G });
       var s = r(90626),
         a = r(57876),
         i = r(45699),
@@ -3425,9 +3425,10 @@
         I = r(91291),
         k = r.n(I),
         W = r(99956),
-        C = r(49411);
-      const F = "capsule_index_";
-      function O(e) {
+        C = r(49411),
+        F = r(35380);
+      const O = "capsule_index_";
+      function G(e) {
         const {
             capsule: t,
             bShowParentApp: r,
@@ -3444,7 +3445,7 @@
           [S] = (0, u.t7)(r ? w?.GetParentAppID() : void 0, a.Xh);
         if (!w) return null;
         const h = Boolean(S),
-          v = s.createElement(P, {
+          v = s.createElement(j, {
             ...e,
             strExtraParams: e.strExtraParams,
             info: t,
@@ -3458,7 +3459,7 @@
           {
             className: (0, z.A)({
               [_().OuterCapsuleContainer]: !0,
-              [F + m]: 0 == m,
+              [O + m]: 0 == m,
             }),
             navEntryPreferPosition: l.iU.PREFERRED_CHILD,
             navKey: o,
@@ -3495,7 +3496,7 @@
             Boolean(i) && s.createElement(s.Fragment, null, i),
           ),
           h &&
-            s.createElement(G, {
+            s.createElement(P, {
               strExtraParams: e.strExtraParams,
               parentStoreItem: S,
               childAppType: w.GetAppType(),
@@ -3503,7 +3504,7 @@
             }),
         );
       }
-      function G(e) {
+      function P(e) {
         const {
             strExtraParams: t,
             parentStoreItem: r,
@@ -3541,7 +3542,7 @@
           ),
         );
       }
-      function P(e) {
+      function j(e) {
         const {
             info: t,
             bHideStatusBanners: r,
@@ -3556,36 +3557,37 @@
             bPreferAssetWithoutOverride: f,
           } = e,
           [w] = (0, u.G6)(t.id, (0, c.SW)(t.type), a.Xh),
-          S = (0, v.n9)(),
-          T = (0, C.w)(),
-          R = (0, s.useMemo)(() => w?.GetIncludedAppIDsOrSelf(), [w]);
+          S = (0, F.r)(t),
+          T = (0, v.n9)(),
+          R = (0, C.w)(),
+          I = (0, s.useMemo)(() => w?.GetIncludedAppIDsOrSelf(), [w]);
         if (!w) return null;
-        const I = (0, E.NT)(
-          (0, m.It)(`${w.GetStorePageURL(_)}${n ? `?${n}` : ""}`, S, T),
+        const O = (0, E.NT)(
+          (0, m.It)(`${w.GetStorePageURL(_)}${n ? `?${n}` : ""}`, T, R),
         );
-        let F;
+        let G;
         "overrideNavigation" in t &&
-          (F = (e) => (
+          (G = (e) => (
             t.overrideNavigation(e), e.preventDefault(), e.stopPropagation(), !1
           ));
-        const O = Boolean(p);
+        const P = Boolean(p);
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(
             "div",
-            { className: (0, z.A)({ [k().TwoWidthCtn]: O }) },
+            { className: (0, z.A)({ [k().TwoWidthCtn]: P }) },
             s.createElement(
               i.Ii,
               {
-                href: F ? void 0 : I,
+                href: G ? void 0 : O,
                 style: { display: "block", cursor: "pointer" },
-                className: (0, z.A)({ [k().TwoWidthCapsule]: O }),
+                className: (0, z.A)({ [k().TwoWidthCapsule]: P }),
                 preferredFocus: g,
-                onClick: F,
+                onClick: G,
               },
               s.createElement(y.V, {
-                appids: R,
+                appids: I,
                 hide_status_banners: r,
                 show_early_access: e.bShowEarlyAccessBanner,
               }),
@@ -3595,11 +3597,11 @@
                   info: t,
                   bPreferAssetWithoutOverride: f,
                 }),
-              s.createElement(h.J, { storeItem: w }),
+              s.createElement(h.J, { id: S }),
               Boolean(d) &&
                 s.createElement(B.m, { appInfo: t, bIsHoverMode: !0 }),
             ),
-            O &&
+            P &&
               s.createElement(
                 "div",
                 {
@@ -3622,10 +3624,10 @@
                 }),
               ),
           ),
-          s.createElement(j, { ...e }),
+          s.createElement(A, { ...e }),
         );
       }
-      function j(e) {
+      function A(e) {
         const {
             info: t,
             bHidePriceIfOwned: r,

@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "Znalezione wyniki: %1$s",
 	"Search_ListingsFound": "Znalezione oferty: %2$s",
 	"Search_ListingsFound_Plural": "Znalezione oferty: %2$s",
+	"SortBy_Default": "Popularność (domyślne)",
 	"SortBy_Name_Asc": "Nazwa (od A do Z)",
 	"SortBy_Name_Desc": "Nazwa (od Z do A)",
 	"SortBy_Price_Asc": "Cena (rosnąco)",

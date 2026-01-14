@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "找到 %1$s 个搜索结果",
 	"Search_ListingsFound": "找到 %2$s 个上架物品",
 	"Search_ListingsFound_Plural": "找到 %2$s 个上架物品",
+	"SortBy_Default": "热门程度（默认）",
 	"SortBy_Name_Asc": "名称（从 A 到 Z）",
 	"SortBy_Name_Desc": "名称（从 Z 到 A）",
 	"SortBy_Price_Asc": "价格（从低到高）",

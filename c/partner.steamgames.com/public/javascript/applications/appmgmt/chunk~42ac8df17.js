@@ -5159,6 +5159,39 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (0, _.useMemo)(() => _(_), [_]);
+      }
+      function _(_) {
+        if (_ && _._) {
+          if (!_.type)
+            return {
+              appid: _._,
+            };
+          switch (_.type) {
+            case "sub":
+              return {
+                packageid: _._,
+              };
+            case "bundle":
+              return {
+                bundleid: _._,
+              };
+            default:
+              return {
+                appid: _._,
+              };
+          }
+        }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20867,6 +20900,7 @@
               displayStoreItem: _,
               baseGameStoreItem: _,
               displayInfo: _,
+              displayID: _,
               fallbackStoreItem: _,
               hoverType: _,
               nHoverId: _,
@@ -20997,7 +21031,7 @@
                         bPreferAssetWithoutOverride: _,
                       }),
                       _.createElement(_._, {
-                        storeItem: _,
+                        _: _,
                       }),
                       Boolean(_ && _) &&
                         _.createElement(_._, {
@@ -21814,6 +21848,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         static instance_count = 0;
@@ -21827,13 +21862,13 @@
                 ..._,
               }
             : _._,
-          _ = (0, _.useMemo)(
-            () => ({
+          [_, _] = (0, _.useMemo)(() => {
+            const _ = {
               _: _,
               type: _,
-            }),
-            [_, _],
-          ),
+            };
+            return [_, (0, _._)(_)];
+          }, [_, _]),
           [_] = (0, _._)(_, (0, _._)(_), _),
           _ =
             _ && _.GetIncludedAppIDs()?.length > 0
@@ -21843,16 +21878,16 @@
                 }
               : void 0,
           [_] = (0, _._)(_?._, _?.type, _),
-          _ = (0, _.useMemo)(
-            () => ({
+          [_, _] = (0, _.useMemo)(() => {
+            const _ = {
               _:
                 _?.GetParentAppID() != _?.GetID()
                   ? _?.GetParentAppID()
                   : void 0,
               type: "game",
-            }),
-            [_],
-          ),
+            };
+            return [_, (0, _._)(_)];
+          }, [_]),
           [_] = (0, _._)(_._, _),
           [_] = (0, _.useState)(++_.instance_count),
           [_, _] = (0, _.useState)(!1),
@@ -21868,9 +21903,11 @@
             bIsHovered: _,
             setIsHovered: _,
             displayInfo: _,
+            displayID: _,
             displayStoreItem: _,
             baseGameStoreItem: _,
             baseGameInfo: _,
+            baseGameID: _,
             hoverType: _,
             nHoverId: _,
             fallbackStoreItem: _,
@@ -23209,14 +23246,23 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { bAllowOutsideOfDeck: _, storeItem: __webpack_require__ } = _,
+        const { bAllowOutsideOfDeck: _ } = _;
+        return (0, _._)() || _
+          ? _.createElement(_, {
+              ..._,
+            })
+          : null;
+      }
+      function _(_) {
+        const { className: _, _: __webpack_require__ } = _,
+          _ = (0, _._)(__webpack_require__),
           [_, _] = (0, _._)();
-        if (!(0, _._)() && !_) return null;
         let _ = "unknown";
         if (2 == _)
-          switch (__webpack_require__.GetPlatforms().steam_os_compat_category) {
+          switch (_.data?.steam_os_compat_category) {
             case 2:
               _ = "steamoscompatible";
               break;
@@ -23227,9 +23273,7 @@
               _ = "steamosunknown";
           }
         else
-          switch (
-            __webpack_require__.GetPlatforms().steam_deck_compat_category
-          ) {
+          switch (_.data?.steam_deck_compat_category) {
             case 3:
               _ = "verified";
               break;
@@ -23240,12 +23284,7 @@
               _ = "unsupported";
           }
         return _.createElement("div", {
-          className: (0, _._)(
-            _.CompatIcon,
-            "ds_steam_deck_compat",
-            _,
-            _.className,
-          ),
+          className: (0, _._)(_.CompatIcon, "ds_steam_deck_compat", _, _),
         });
       }
     },

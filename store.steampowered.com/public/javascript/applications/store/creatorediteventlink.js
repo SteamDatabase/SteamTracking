@@ -37,8 +37,9 @@
         PublishedAndNotSelectedState: "_2XhRaA3elALg0OQnynUZu4",
         SelectedSVG: "_3Niy5UbG2M3zTi6wUY2jda",
         HeaderRow: "_2PLSeE9RayjVbZKYqcszIq",
-        ActionsRow: "_27NYV-vucABpZz6K_oGGgu",
         ManageButton: "_2F5-HSU7JNjiVuDm_h_I4D",
+        MustPublish: "oUfRC_JxvbarFSmiUwBCn",
+        ActionsRow: "_27NYV-vucABpZz6K_oGGgu",
         SVGIcon: "_3jIkQOyf1K28G5lxJiiDkV",
       };
     },
@@ -55,7 +56,7 @@
           [a, o] = (0, r.useState)(!1),
           [l, c] = (0, r.useState)(!1),
           [i, s] = (0, r.useState)(null),
-          [E, m] = (0, r.useState)(null),
+          [m, E] = (0, r.useState)(null),
           [u, _] = (0, r.useState)(null),
           [d, S] = (0, r.useState)(null),
           [v, g] = (0, r.useState)(null);
@@ -64,7 +65,7 @@
           bError: a,
           bSuccess: l,
           strError: i,
-          strSuccess: E,
+          strSuccess: m,
           elSuccess: d,
           elError: u,
           strThrobber: v,
@@ -72,7 +73,7 @@
           fnSetError: o,
           fnSetSuccess: c,
           fnSetStrError: s,
-          fnSetStrSuccess: m,
+          fnSetStrSuccess: E,
           fnSetElSuccess: S,
           fnSetElError: _,
           fnSetThrobber: g,
@@ -86,8 +87,8 @@
             strThrobber: s,
           } = e,
           {
-            bLoading: E,
-            bError: m,
+            bLoading: m,
+            bError: E,
             bSuccess: u,
             strError: _,
             strSuccess: d,
@@ -95,7 +96,7 @@
             elError: v,
             strThrobber: g,
           } = n;
-        return m || _ || v
+        return E || _ || v
           ? r.createElement(
               a.o0,
               {
@@ -142,7 +143,7 @@
     },
     87731: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => y });
+      n.r(t), n.d(t, { default: () => p });
       var r = n(90626),
         a = n(78327),
         o = n(41735),
@@ -150,36 +151,36 @@
         c = n(61859),
         i = n(22837),
         s = n(17720),
-        E = n(20194),
-        m = n(51614),
+        m = n(20194),
+        E = n(51614),
         u = n(6379),
         _ = n(84933),
         d = n(22797),
         S = n(93474),
         v = n.n(S),
         g = n(75113),
-        D = n(12155),
-        w = n(81393),
+        w = n(12155),
+        D = n(81393),
         C = n(32754),
-        I = n(53835),
+        h = n(53835),
         L = n(78395),
-        h = n(71298),
+        b = n(71298),
         k = n(21869),
-        b = n(8092),
+        I = n(8092),
         f = n(52038);
-      function y(e) {
+      function p(e) {
         const { clanAccountID: t } = e,
           n = (0, _.YR)(() => new s.b(t, a.TS.EUNIVERSE, 7, 0)),
           {
             bIsFetching: o,
             rgEventModels: i,
-            fnRefetch: m,
+            fnRefetch: E,
           } = (function (e) {
             const {
               data: t,
               isFetching: n,
               refetch: r,
-            } = (0, E.I)({
+            } = (0, m.I)({
               queryKey: [
                 "DraftAndHiddenPartnerEvents",
                 e.ConvertTo64BitString(),
@@ -206,34 +207,22 @@
             return { bIsFetching: n, rgEventModels: t, fnRefetch: r };
           })(n),
           S = `${a.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
-          { creatorHome: g, isFetching: D, refetch: w } = (0, b.FV)(t),
+          { creatorHome: g, isFetching: w, refetch: D } = (0, I.FV)(t),
           L = g?.GetLinkedEventGID(),
-          h = L && i?.some((e) => L == e.GID),
-          k = o || D,
+          b = L && i?.some((e) => L == e.GID),
+          k = o || w,
           f = () => {
-            m(), w();
+            E(), D();
           },
-          y = r.useMemo(
+          p = r.useMemo(
             () => [...(i ?? [])].sort((e, t) => t.startTime - e.startTime),
             [i],
           ),
-          T = y.filter((e) => L && L == e.GID),
-          H = y.filter((e) => !L || L != e.GID);
+          H = p.filter((e) => L && L == e.GID),
+          T = p.filter((e) => !L || L != e.GID);
         return r.createElement(
           r.Fragment,
           null,
-          r.createElement(
-            "h4",
-            null,
-            (0, c.we)("#CreatorHome_EventLink_Title"),
-          ),
-          r.createElement("p", null, (0, c.we)("#CreatorHome_EventLink_Desc")),
-          !h &&
-            r.createElement(
-              "p",
-              null,
-              (0, c.we)("#CreatorHome_EventLink_BasicActive"),
-            ),
           r.createElement(
             C.he,
             {
@@ -241,18 +230,29 @@
               style: { width: "25%" },
             },
             r.createElement(
-              I.jn,
+              h.jn,
               { onClick: () => window.location.assign(S) },
               (0, c.we)("#CreatorHome_EventLink_Create"),
             ),
           ),
-          r.createElement("br", null),
+          r.createElement(
+            "h4",
+            null,
+            (0, c.we)("#CreatorHome_EventLink_Title"),
+          ),
+          r.createElement("p", null, (0, c.we)("#CreatorHome_EventLink_Desc")),
+          !b &&
+            r.createElement(
+              "p",
+              null,
+              (0, c.we)("#CreatorHome_EventLink_BasicActive"),
+            ),
           k && r.createElement(d.t, null),
           !k &&
             r.createElement(
               "div",
               { className: v().ListsCtn },
-              T.length > 0 &&
+              H.length > 0 &&
                 r.createElement(
                   r.Fragment,
                   null,
@@ -264,8 +264,8 @@
                   r.createElement(
                     "div",
                     { className: v().EntryList },
-                    T.map((e) =>
-                      r.createElement(p, {
+                    H.map((e) =>
+                      r.createElement(y, {
                         key: e.GID,
                         creatorHome: g,
                         clanSteamID: n,
@@ -275,7 +275,7 @@
                     ),
                   ),
                 ),
-              H.length > 0 &&
+              T.length > 0 &&
                 r.createElement(
                   r.Fragment,
                   null,
@@ -287,8 +287,8 @@
                   r.createElement(
                     "div",
                     { className: v().EntryList },
-                    H.map((e) =>
-                      r.createElement(p, {
+                    T.map((e) =>
+                      r.createElement(y, {
                         key: e.GID,
                         creatorHome: g,
                         clanSteamID: n,
@@ -301,10 +301,10 @@
             ),
         );
       }
-      function p(e) {
+      function y(e) {
         const { clanSteamID: t, creatorHome: n, eventModel: o, refetch: s } = e,
-          [E, u] = r.useState(!1),
-          _ = (0, m.n)({
+          [m, u] = r.useState(!1),
+          _ = (0, E.n)({
             mutationFn: async (e) => {
               const t =
                   a.TS.STORE_BASE_URL +
@@ -318,8 +318,8 @@
             },
           }),
           [d, S] = r.useState(!1),
-          [w, I] = r.useState(!1),
-          L = (0, m.n)({
+          [D, h] = r.useState(!1),
+          L = (0, E.n)({
             mutationFn: async (e) => {
               const t =
                   a.TS.STORE_BASE_URL +
@@ -332,14 +332,14 @@
               return 1 == r?.data?.success;
             },
           }),
-          h = n?.GetLinkedEventGID(),
-          k = h && h == o.GID,
-          b = !k && o.BIsVisibleEvent();
+          b = n?.GetLinkedEventGID(),
+          k = b && b == o.GID,
+          I = !k && o.BIsVisibleEvent();
         return r.createElement(
           r.Fragment,
           null,
-          r.createElement(T, {
-            active: E,
+          r.createElement(H, {
+            active: m,
             mutateAsync: () => _.mutateAsync({ clanSteamID: t, gid: o.GID }),
             onClose: (e) => {
               u(!1), e && s();
@@ -350,7 +350,7 @@
             ),
             strError: (0, c.we)("#CreatorHome_EventLink_Delete_Dialog_Error"),
           }),
-          r.createElement(T, {
+          r.createElement(H, {
             active: d,
             mutateAsync: () => L.mutateAsync({ clanSteamID: t, gid: o.GID }),
             onClose: (e) => {
@@ -362,11 +362,11 @@
             ),
             strError: (0, c.we)("#CreatorHome_EventLink_Select_Dialog_Error"),
           }),
-          r.createElement(T, {
-            active: w,
+          r.createElement(H, {
+            active: D,
             mutateAsync: () => L.mutateAsync({ clanSteamID: t, gid: "0" }),
             onClose: (e) => {
-              I(!1), e && s();
+              h(!1), e && s();
             },
             strTitle: (0, c.we)("#CreatorHome_EventLink_Clear"),
             strDescription: (0, c.we)(
@@ -408,49 +408,65 @@
                   },
                   (0, c.we)("#CreatorHome_EventLink_PublishedAndNotSelected"),
                 ),
-              b &&
-                r.createElement(H, {
-                  eventModel: o,
-                  label: (0, c.we)("#CreatorHome_EventLink_Select"),
-                  icon: r.createElement(D.FEq, null),
-                  onClick: () => S(!0),
-                  tooltip: (0, c.we)("#CreatorHome_EventLink_Select_ttip"),
-                }),
+              I
+                ? r.createElement(T, {
+                    eventModel: o,
+                    label: (0, c.we)("#CreatorHome_EventLink_Select"),
+                    icon: r.createElement(w.FEq, null),
+                    onClick: () => S(!0),
+                    tooltip: (0, c.we)("#CreatorHome_EventLink_Select_ttip"),
+                  })
+                : !k &&
+                    r.createElement(
+                      "div",
+                      { className: v().MustPublish },
+                      (0, c.we)("#CreatorHome_EventLink_MustPublish"),
+                      " ",
+                      r.createElement(
+                        C.he,
+                        {
+                          toolTipContent: (0, c.we)(
+                            "#CreatorHome_EventLink_MustPublish_ttip",
+                          ),
+                        },
+                        "(?)",
+                      ),
+                    ),
               k &&
-                r.createElement(H, {
+                r.createElement(T, {
                   eventModel: o,
                   label: (0, c.we)("#CreatorHome_EventLink_Clear"),
-                  icon: r.createElement(D.FEq, { filled: !0 }),
-                  onClick: () => I(!0),
+                  icon: r.createElement(w.FEq, { filled: !0 }),
+                  onClick: () => h(!0),
                   tooltip: (0, c.we)("#CreatorHome_EventLink_Clear_ttip"),
                 }),
             ),
             r.createElement(
               "div",
               { className: v().ActionsRow },
-              r.createElement(H, {
+              r.createElement(T, {
                 eventModel: o,
                 label: (0, c.we)("#Button_Edit"),
-                icon: r.createElement(D.ffu, null),
+                icon: r.createElement(w.ffu, null),
                 route: g.PH.k_eCommunityEdit,
               }),
-              r.createElement(H, {
+              r.createElement(T, {
                 eventModel: o,
                 label: (0, c.we)("#Button_Preview"),
-                icon: r.createElement(D.Exy, null),
+                icon: r.createElement(w.Exy, null),
                 route: g.PH.k_eCommunityPreviewSale,
               }),
-              r.createElement(H, {
+              r.createElement(T, {
                 eventModel: o,
                 label: (0, c.we)("#Button_Delete"),
-                icon: r.createElement(D.lMJ, null),
+                icon: r.createElement(w.lMJ, null),
                 onClick: () => u(!0),
               }),
             ),
           ),
         );
       }
-      function T(e) {
+      function H(e) {
         const {
             active: t,
             mutateAsync: n,
@@ -459,13 +475,13 @@
             strDescription: l,
             strError: c,
           } = e,
-          i = (0, h.vs)();
+          i = (0, b.vs)();
         if (t)
           return i.bLoading
             ? r.createElement(
                 k.E,
                 { active: !0 },
-                r.createElement(h.Hh, { state: i, strDialogTitle: o }),
+                r.createElement(b.Hh, { state: i, strDialogTitle: o }),
               )
             : r.createElement(
                 k.E,
@@ -486,7 +502,7 @@
                 }),
               );
       }
-      function H(e) {
+      function T(e) {
         const {
           eventModel: t,
           label: n,
@@ -495,7 +511,7 @@
           route: l,
           onClick: c,
         } = e;
-        (0, w.wT)(l || c, "Must specify route or onClick");
+        (0, D.wT)(l || c, "Must specify route or onClick");
         const i =
           c ||
           (() => {

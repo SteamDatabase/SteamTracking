@@ -40,6 +40,7 @@
 	"Search_AmountFound_Plural": "Βρέθηκαν %1$s αποτελέσματα",
 	"Search_ListingsFound": "Βρέθηκε %2$s καταχώριση",
 	"Search_ListingsFound_Plural": "Βρέθηκαν %2$s καταχωρίσεις",
+	"SortBy_Default": "Απήχηση (προεπιλογή)",
 	"SortBy_Name_Asc": "Όνομα (Α προς Ζ)",
 	"SortBy_Name_Desc": "Όνομα (Ζ προς Α)",
 	"SortBy_Price_Asc": "Τιμή (αύξουσα)",
