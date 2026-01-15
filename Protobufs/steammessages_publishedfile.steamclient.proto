@@ -274,6 +274,7 @@ message CPublishedFile_GetItemInfo_Request {
 	optional uint32 appid = 1;
 	optional uint32 last_time_updated = 2;
 	repeated .CPublishedFile_GetItemInfo_Request.WorkshopItem workshop_items = 3;
+	optional .EPublishedFileRevision desired_revision = 4 [default = k_EPublishedFileRevision_Default];
 }
 
 message CPublishedFile_GetItemInfo_Response {

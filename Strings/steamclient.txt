@@ -7782,11 +7782,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -15818,7 +15818,6 @@ $steammessages_parental_objects.proto"
 83Q2
 83Q3
 84CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_PurchasedCustomization
-86400
 87CUserAccount_GetAvailableValveDiscountPromotions_Response_ValveDiscountPromotionDetails
 88n|
 88pH
@@ -15934,6 +15933,7 @@ $steammessages_parental_objects.proto"
 9.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response"
 9.CUserAccount_GetAvailableValveDiscountPromotions_Request
 9000
+86400
 95th
 961e13c2046fbe474916afdb087db2222535db4e51f34b5fa45b4fd7803abff2
 98th
@@ -16087,6 +16087,7 @@ $steammessages_parental_objects.proto"
 :scheme
 :statu
 :status
+:yRJ
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -28675,6 +28676,7 @@ Mapping AppID %u to tool "%s" with priority %d
 Marathi
 March
 MarkContentCorrupt
+MarkDownloadedItemAsUnused
 MarkMarketingMessageSeen
 MarkMessageClicked
 MarkMessageSeen
@@ -34075,9 +34077,6 @@ SaveControllerPersonalizationFile
 SaveHTTPResponseBodyToDisk
 SaveInstallBaseFolders: rejecting attempt to save with no libraries
 SaveLicensesToDisk
-SaveRegistryVDF FAILED\n
-SaveRegistryVDF completed successfully\n
-SaveRegistryVDF\n
 Saved refresh rate value is outside of range, clamping to: %d -> %d
 Saving local config store failed during shutdown
 Saving personalization\n
@@ -51112,7 +51111,7 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:439
 low-pri yield - /data/src/clientdll/clientjob.cpp:470
 low-pri yield - /data/src/clientdll/clientjob.cpp:779
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
-low-pri yield - /data/src/clientdll/clientugc.cpp:6854
+low-pri yield - /data/src/clientdll/clientugc.cpp:6886
 low-pri yield - /data/src/clientdll/compatmanager.cpp:1949
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2220
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2491
@@ -58437,7 +58436,7 @@ stderr
 stdin
 stdout
 steam
-steam Jan  8 2026 21:48:55
+steam Jan 15 2026 04:07:35
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

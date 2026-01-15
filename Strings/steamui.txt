@@ -4973,7 +4973,7 @@ ${LANGUAGE}
 +\n\vmouse_wheel
 +\n\vscreenshots
 +automatic
-+connect_lobby %s
++connect_lobby %llu
 +en+eo+
 +steammessages_storebrowse.steamclient.proto
 +steammessages_storebrowse.steamclient.proto"`\n5CMarketingMessages_GetActiveMarketingMessages_Request
@@ -7138,11 +7138,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
-0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -12890,6 +12890,7 @@ ${LANGUAGE}
 ;pI3\nAx
 ;rN\n6
 ;xsK
+;}e5d
 < Called by: %s
 < no direct container >
 < or is NULL
@@ -22399,6 +22400,7 @@ Input.GetTouchMenuIconsForApp
 Input.GetXboxDriverInstallState
 Input.IdentifyController
 Input.InitControllerSounds
+Input.InitSDLFuncs
 Input.InitializeControllerPersonalizationSettings
 Input.ModalKeyboardDismissed
 Input.OpenDesktopConfigurator
@@ -22845,7 +22847,7 @@ J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 J\nHBF
 J\n\tsummaries
 J\rS%H
-Jan  8 2026 21:48:58
+Jan 15 2026 04:07:29
 January
 Japanese
 Javanese
@@ -28304,9 +28306,6 @@ SaveChatRoomGroup
 SaveClip
 SaveFile
 SaveFiles
-SaveRegistryVDF FAILED\n
-SaveRegistryVDF completed successfully\n
-SaveRegistryVDF\n
 Saved downloaded file: %s
 Saved to %s\n
 SavedData
@@ -39316,7 +39315,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenr
+ggen
 ghost_
 gidlist
 gidparentcomment

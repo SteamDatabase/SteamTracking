@@ -98,9 +98,9 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 0123456789ABCDEF
+04:07:17
 12CStdMemAlloc
 16CAdHocValidation
-21:48:46
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -298,7 +298,7 @@ IsSpewActive
 IsStackTrackingFiltered
 IsValidBoolValue
 JArray
-Jan  8 2026
+Jan 15 2026
 Jobs/Coroutines
 Leaked mem: %s %s\n
 Logger
@@ -364,6 +364,7 @@ Plat_InternalOverrideArgv
 Plat_IsChromeOS
 Plat_IsGamescope
 Plat_IsInDebugSession
+Plat_IsProcessWOW64
 Plat_IsSteamConsoleMode
 Plat_IsSteamDeck_DoNotUse
 Plat_IsSteamFrame_DoNotUse
@@ -371,6 +372,7 @@ Plat_IsSteamOS
 Plat_IsSteamOS3
 Plat_IsSteamOS3FactoryImage
 Plat_IsTesla
+Plat_IsWOW64
 Plat_IsWSL
 Plat_MSTime
 Plat_MSTime64

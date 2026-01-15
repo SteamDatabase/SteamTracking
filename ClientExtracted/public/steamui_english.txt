@@ -5059,6 +5059,13 @@ Set a category for these games to help you find them quickly and organize your L
 "DownloadRegion_kuwait"         "Kuwait"
 "DownloadRegion_ua_sevastopol"  "Ukraine - Sevastopol"
 "DownloadRegion_lv_riga"		"Latvia"
+"DownloadRegion_br_cuiaba"			"Brazil - Cuiabá"
+"DownloadRegion_br_belohorizonte"		"Brazil - Belo Horizonte"
+"DownloadRegion_br_curitiba"			"Brazil - Curitiba"
+"DownloadRegion_br_campogrande"			"Brazil - Campo Grande"
+"DownloadRegion_br_manaus"			"Brazil - Manaus"
+"DownloadRegion_br_belem"			"Brazil - Belém"
+"DownloadRegion_br_salvador"			"Brazil - Salvador"
 
 "SettingsController_AutosaveName"	"Controller Configuration"
 "ControllerBinding_Offline_Save"	"[Offline AutoSave]"

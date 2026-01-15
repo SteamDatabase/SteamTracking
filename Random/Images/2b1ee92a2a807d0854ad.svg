@@ -75,8 +75,8 @@
       <stop offset="0.73567" stop-color="#1A9FFF"/>
     </radialGradient>
     <radialGradient id="" cx="50%" cy="50%" r="1" gradient-units="objectBoundingBox">
-      <stop offset="0.201923" stop-color="#FF251A"/>
-      <stop offset="1" stop-color="#FF251A" stop-opacity="0"/>
+      <stop offset="0.201923" stop-color="#ffffffff"/>
+      <stop offset="1" stop-color="#ffffffff" stop-opacity="0"/>
     </radialGradient>
   </defs>
 </svg>

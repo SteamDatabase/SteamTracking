@@ -1913,21 +1913,19 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
-00003333
 00:00:00
 01/01/00
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+01V'
+04:07:13
+04:07:21
 08bX
 0?0L
 0A/8
 0F`8
-0MV'
 0Ntl
 0Z@q
 0\n+k_EMsgAMClientRemoveFriendFromGroupResponse
@@ -1967,7 +1965,11 @@ $ffn
 100 127.0.0.1 stale
 1000
 1024
+00003333
 10000
+0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2441,8 +2443,6 @@ $ffn
 20CWorkItemSetFileSize
 20IHTTPRedirectHandler
 20IUniformRandomStream
-21:48:43
-21:48:50
 21CClanAnnouncementInfo
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
@@ -6616,7 +6616,7 @@ JSType
 JZJ{.
 J\nHBF
 J\rS%H
-Jan  8 2026
+Jan 15 2026
 January
 Japanese
 Job %llu (%s) aborting.  %s\n
@@ -8654,9 +8654,6 @@ Sandbox
 Santander Rio
 Saturday
 SaveBufferToFile: couldn't open file "%s" in path "%s".\n
-SaveRegistryVDF FAILED\n
-SaveRegistryVDF completed successfully\n
-SaveRegistryVDF\n
 Saving metrics to disk (%s)
 Saving package (%s) failed.
 Saving unknown chunk:
@@ -8904,7 +8901,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jan  8 2026 21:48:50
+Startup - updater built Jan 15 2026 04:07:21
 State
 StaticFileWriterThread()
 Steam
@@ -13205,7 +13202,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenr
 givenName
 glBegin
 glBindTexture
