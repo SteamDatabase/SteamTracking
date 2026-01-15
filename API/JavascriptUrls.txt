@@ -1103,7 +1103,6 @@ ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${}
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewassetexternal/${}?inputaccesskey=${}
 ${PARTNER_BASE_URL}promotion/assetportal/externalrequest/${}?inputaccesskey=${input_access_key}
 ${PARTNER_BASE_URL}promotion/assetportal/localization/${id}
-${PARTNER_BASE_URL}promotion/assetportal/localization/${planid}
 ${PARTNER_BASE_URL}promotion/assetportal/request/${asset_request_id}
 ${PARTNER_BASE_URL}promotion/assetportal/request/${gid}
 ${PARTNER_BASE_URL}promotion/assetportal/request/${id}
@@ -1146,6 +1145,7 @@ ${PARTNER_BASE_URL}promotion/marketingmessages/edit/${gid}
 ${PARTNER_BASE_URL}promotion/marketingmessages/edit/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/partnerpreview/${gid}
 ${PARTNER_BASE_URL}promotion/marketingmessages/partnerpreview/${}
+${PARTNER_BASE_URL}promotion/mondayapi
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist
@@ -2086,7 +2086,6 @@ https://<url to zoom>
 https://about.steamchina.com/content_report.html
 https://about.steamchina.com/infringement_report.html
 https://about.steamchina.com/parentguardianship_agreement.html
-https://api.monday.com/v2/
 https://avatars.akamai.steamstatic.com/e34e65ef2ef16093d4428c930fbcc42490522ed3_full.jpg
 https://avatars.fastly.steamstatic.com/${hash}
 https://avatars.fastly.steamstatic.com/${strAvatarHash}${}.jpg

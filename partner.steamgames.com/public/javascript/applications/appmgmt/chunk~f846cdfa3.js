@@ -441,7 +441,7 @@
                 ),
             ),
           ),
-          e.rgCandidates.length > 1 &&
+          (e.rgCandidates.length > 1 || e.rgEditions.length > 0) &&
             n.createElement(
               n.Fragment,
               null,

@@ -56225,19 +56225,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 4985300096;
-      function _(_) {
-        const _ = new Date(1e3 * _);
-        return `${_.getFullYear()}-${String(_.getUTCMonth() + 1).padStart(2, "0")}-${String(_.getUTCDate()).padStart(2, "0")}`;
-      }
-      function _(_) {
-        const _ = new Date(1e3 * _);
-        return `${String(_.getUTCHours()).padStart(2, "0")}:${String(_.getUTCMinutes()).padStart(2, "0")}:00`;
-      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -56253,83 +56241,32 @@
             bSteamChinaOnly: _,
           } = _,
           _ = (0, _._)(),
-          _ = (function () {
-            const [_] = (0, _.useState)(() =>
-              (0, _._)("mondays_webapi_token", "application_config"),
-            );
-            return (0, _.useCallback)(
-              async (_) => {
-                const _ = {
-                    date4: {
-                      date: _(_.rtDueDate),
-                      time: _(_.rtDueDate),
-                    },
-                    priority: {
-                      label: _.bHighPriority ? "ASAP ⚠️️" : "Medium",
-                    },
-                    link: {
-                      url: _.strFilesURL,
-                      text: _.strFilesURL,
-                    },
-                    link8: {
-                      url: `${_._.PARTNER_BASE_URL}promotion/assetportal/localization/${_.planid}`,
-                      text: `${_._.PARTNER_BASE_URL}promotion/assetportal/localization/${_.planid}`,
-                    },
-                    date8: {
-                      date: _(_.rtLiveDate),
-                      time: _(_.rtLiveDate),
-                    },
-                    numbers: "" + _.nNumAssets,
-                    long_text: _.strDescription,
-                    text: _.strRequestorName,
-                    link1: {
-                      url: _.strInternalURL || "",
-                      text: _.strInternalURL || "",
-                    },
+          _ = (0, _._)({
+            mutationFn: async (_) => {
+              const _ = await fetch(
+                `${_._.PARTNER_BASE_URL}promotion/mondayapi`,
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
                   },
-                  _ = {
-                    myItemName: _.strEventName,
-                    columnVals: JSON.stringify(_),
-                  },
-                  _ = `mutation ($myItemName: String!, $columnVals: JSON!) { create_item (board_id:${_}, item_name:$myItemName, column_values:$columnVals) { id } }`;
-                try {
-                  const _ = await _().post(
-                    "https://api.monday.com/v2/",
-                    JSON.stringify({
-                      query: _,
-                      variables: _,
-                    }),
-                    {
-                      headers: {
-                        Authorization: _,
-                        "Content-Type": "application/json",
-                        "API-Version": "2024-01",
-                      },
-                    },
-                  );
-                  return (
-                    "dev" == _._.WEB_UNIVERSE &&
-                      console.log(
-                        "asset localization workflow dev debug info: ",
-                        _,
-                      ),
-                    _ && 200 == _.status && _.data?.data?.create_item?._
-                      ? _.data?.data?.create_item?._
-                      : null
-                  );
-                } catch (_) {
-                  console.error(
-                    "useCreateMondayArtLocalizationTask failed",
+                  body: JSON.stringify(_),
+                  credentials: "include",
+                },
+              );
+              if (
+                ("dev" == _._.WEB_UNIVERSE &&
+                  console.log(
+                    "asset localization workflow dev debug info: ",
                     _,
-                    (0, _._)(_),
                   ),
-                    console.error("data", _, _);
-                }
-                return null;
-              },
-              [_],
-            );
-          })(),
+                !_._)
+              )
+                throw new Error("Failed to create Monday Request");
+              const _ = await _.json();
+              return _?.results;
+            },
+          }),
           _ = (0, _._)(_._.accountid),
           [_, _, _, _, _, _, _] = (0, _._)(() => [
             __webpack_require__.GetID(),
@@ -56363,29 +56300,37 @@
                 onOK: async () => {
                   _.fnSetLoading(!0);
                   const _ = {
-                      planid: _,
-                      strEventName: _,
-                      rtDueDate: _,
-                      rtLiveDate: _,
-                      nNumAssets: _,
-                      strDescription: _ || "",
-                      strRequestorName:
-                        _?.data?.m_strPlayerName || "" + _._.accountid,
-                      bHighPriority: _,
-                      strFilesURL: _,
-                      strInternalURL: _,
-                    },
-                    _ = await _(_);
-                  _
-                    ? (__webpack_require__.SetArtworkLocalizationRequestTime(
-                        Math.floor(Date.now() / 1e3),
-                        _,
-                      ),
-                      _.fnSetSuccess(!0))
-                    : (_.fnSetError(!0),
-                      _.fnSetStrError(
-                        "Check console for errors and/or try again shortly",
-                      ));
+                    planid: _,
+                    strEventName: _,
+                    rtDueDate: _,
+                    rtLiveDate: _,
+                    nNumAssets: _,
+                    strDescription: _ || "",
+                    strRequestorName:
+                      _?.data?.m_strPlayerName || "" + _._.accountid,
+                    bHighPriority: _,
+                    strFilesURL: _,
+                    strInternalURL: _,
+                  };
+                  await _.mutateAsync(_)
+                    .then((_) => {
+                      _
+                        ? (__webpack_require__.SetArtworkLocalizationRequestTime(
+                            Math.floor(Date.now() / 1e3),
+                            _,
+                          ),
+                          _.fnSetSuccess(!0))
+                        : (_.fnSetError(!0),
+                          _.fnSetStrError(
+                            "Check console for errors and/or try again shortly",
+                          ));
+                    })
+                    .catch(() => {
+                      _.fnSetError(!0),
+                        _.fnSetStrError(
+                          "Check console for errors and/or try again shortly",
+                        );
+                    });
                 },
               },
               _.createElement("br", null),
@@ -59254,6 +59199,9 @@
             return "main_capsule";
         }
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       class _ {
         m_mapAppAssets = new Map();
         m_mapChangeCallbacks = new Map();
