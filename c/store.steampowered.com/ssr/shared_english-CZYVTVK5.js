@@ -2037,7 +2037,7 @@ Must be a zip file.`,
   _ = "dummy",
   _ = "Your estimated order availability:",
   _ =
-    "Steam Deck is available for purchase in Japan, South Korea, Taiwan, and Hong Kong via Komodo at <1>steamdeck.komodo.jp</1>",
+    "Steam Deck is available for purchase in Japan, South Korea, Taiwan, and Hong Kong via KOMODO at <1>steamdeck.komodo.jp</1>",
   _ = "Reservation Servers are busy, please try again",
   _ = "Available %1$s",
   _ = "%1$s %2$s",
