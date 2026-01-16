@@ -250,20 +250,27 @@ message CClientMetrics_EndGameRecording_Notification {
 }
 
 message CClientMetrics_GamePerformance_Notification {
-	message FrameRateReport {
-		optional fixed64 gameid = 1;
-		optional uint32 frame_rate = 2;
-		optional string manufacturer = 3;
-		optional string model = 4;
-		optional string dx_video_card = 5;
-		optional int32 dx_vendorid = 6;
-		optional int32 dx_deviceid = 7;
-		optional uint32 num_gpu = 8;
-		optional uint64 system_ram = 9;
-		optional int32 session_seconds = 10;
+	message SystemInformation {
+		optional string manufacturer = 1;
+		optional string model = 2;
+		optional string dx_video_card = 3;
+		optional int32 dx_vendorid = 4;
+		optional int32 dx_deviceid = 5;
+		optional uint32 num_gpu = 6;
+		optional uint64 system_ram = 7;
+		optional string os = 8;
+		optional string cpu_vendor = 9;
+		optional string cpu_name = 10;
 	}
 
-	repeated .CClientMetrics_GamePerformance_Notification.FrameRateReport reports = 1;
+	message FrameRate {
+		optional fixed64 gameid = 1;
+		optional uint32 frame_rate = 2;
+		optional int32 session_seconds = 3;
+	}
+
+	repeated .CClientMetrics_GamePerformance_Notification.FrameRate frame_rates = 2;
+	optional .CClientMetrics_GamePerformance_Notification.SystemInformation system_info = 3;
 }
 
 service ClientMetrics {

@@ -4206,6 +4206,7 @@ $steammessages_parental_objects.proto"
 (\v25.CContentServerDirectory_ConnectedSteamPipeServerInfo"
 (\v25.CMsgSteamDatagramClientSwitchedPrimary.RouterQuality
 (\v25.CPublishedFile_GetItemInfo_Response.WorkshopItemInfo
+(\v26.CClientMetrics_GamePerformance_Notification.FrameRate
 (\v26.CContentBuilder_GetMissingDepotChunks_Response.Chunks
 (\v26.CFamilyGroups_GetSharedLibraryApps_Response.SharedApp
 (\v26.CMsgSteamDatagramClientPingSampleReply.POP.AltAddress
@@ -4250,7 +4251,6 @@ $steammessages_parental_objects.proto"
 (\v2;.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token*l\n
 (\v2;.CStoreBrowse_GetContentHubConfig_Response.ContentHubConfig
 (\v2<.CChatUsability_ClientUsabilityMetrics_Notification.Settings
-(\v2<.CClientMetrics_GamePerformance_Notification.FrameRateReport
 (\v2<.CMsgClientAMGetPersonaNameHistoryResponse.NameTableInstance
 (\v2<.CMsgClientChatGetFriendMessageHistoryResponse.FriendMessage
 (\v2<.CPlayer_GetFriendsGameplayInfo_Response.FriendsGameplayInfo
@@ -4258,6 +4258,7 @@ $steammessages_parental_objects.proto"
 (\v2<.CStore_GetTrendingAppsAmongFriends_Response.TrendingAppData
 (\v2=.CCommunity_GetAppRichPresenceLocalization_Response.TokenList
 (\v2=.CPlayer_GetAchievementsProgress_Response.AchievementProgress
+(\v2>.CClientMetrics_GamePerformance_Notification.SystemInformation
 (\v2>.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions
 (\v2>.CFamilyGroupsClient_NotifyRunningApps_Notification.RunningApp
 (\v2>.CGameNotifications_GetSessionDetails_Request.RequestedSession
@@ -8035,7 +8036,7 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryI30HTTPRequestRouteRegistration_tE
 10CUtlMemoryI34ControllerOriginDatastreamFormat_tE
 10CUtlMemoryI37OverlayBrowserProtocalRegistrations_tE
-10CUtlMemoryI59CClientMetrics_GamePerformance_Notification_FrameRateReportE
+10CUtlMemoryI53CClientMetrics_GamePerformance_Notification_FrameRateE
 10CUtlMemoryI7CUtlPtrI14CAutoCloudFileEE
 10CUtlMemoryI7CUtlPtrI16DownloadSource_tEE
 10CUtlMemoryI7CUtlPtrI20IControllerActivatorEE
@@ -8891,7 +8892,7 @@ $steammessages_parental_objects.proto"
 10CUtlVectorI30HTTPRequestRouteRegistration_t10CUtlMemoryIS0_EE
 10CUtlVectorI34ControllerOriginDatastreamFormat_t10CUtlMemoryIS0_EE
 10CUtlVectorI37OverlayBrowserProtocalRegistrations_t10CUtlMemoryIS0_EE
-10CUtlVectorI59CClientMetrics_GamePerformance_Notification_FrameRateReport10CUtlMemoryIS0_EE
+10CUtlVectorI53CClientMetrics_GamePerformance_Notification_FrameRate10CUtlMemoryIS0_EE
 10CUtlVectorI7CUtlPtrI14CAutoCloudFileE10CUtlMemoryIS2_EE
 10CUtlVectorI7CUtlPtrI16DownloadSource_tE10CUtlMemoryIS2_EE
 10CUtlVectorI7CUtlPtrI20IControllerActivatorE10CUtlMemoryIS2_EE
@@ -10877,6 +10878,7 @@ $steammessages_parental_objects.proto"
 18CScheduledFunctionI14CUDPConnectionE
 18CScheduledFunctionI14CUserShortcutsE
 18CScheduledFunctionI16CScreenSaverDBusE
+18CScheduledFunctionI16CSteamControllerE
 18CScheduledFunctionI16CUserMatchmakingE
 18CScheduledFunctionI16CUserScreenshotsE
 18CScheduledFunctionI17CDepotDownloadMgrE
@@ -11255,11 +11257,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-2019
-2048
 20000
 2000000
 200M
+2019
+2048
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -13616,6 +13618,7 @@ $steammessages_parental_objects.proto"
 35CGameRecording_QueryPhases_Response
 35CGetTritonDonglePairingBondWorkItem
 35CInventory_PurchaseFinalize_Request
+35CJobRecordTritonPairingBondLastUsed
 35CMarketingMessageClickedHourlyStats
 35CMsgClientAMGetClanOfficersResponse
 35CMsgClientConnectionStats_Stats_UDP
@@ -15169,6 +15172,7 @@ $steammessages_parental_objects.proto"
 53CAccountHardware_RegisterValveIndexComponent_Response
 53CAccountHardware_UpdateControllerUsageReport_Response
 53CAuthenticationSupport_QueryRefreshTokenByID_Response
+53CClientMetrics_GamePerformance_Notification_FrameRate
 53CCommunity_GetUserPartnerEventsAppPriorities_Response
 53CContentBuilder_GetMissingDepotChunks_Response_Chunks
 53CContentServerDirectory_GetClientUpdateHosts_Response
@@ -15313,7 +15317,6 @@ $steammessages_parental_objects.proto"
 59CAuthenticationSupport_QueryRefreshTokensByAccount_Response
 59CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request
 59CChatUsability_ClientUsabilityMetrics_Notification_Settings
-59CClientMetrics_GamePerformance_Notification_FrameRateReport
 59CDataPublisher_SetVRDeviceInfoAggregationReference_Response
 59CMarketingMessages_GetMarketingMessageClickedStats_Response
 59CMarketingMessages_GetPartnerReadyToPublishMessages_Request
@@ -15412,6 +15415,7 @@ $steammessages_parental_objects.proto"
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
+61CClientMetrics_GamePerformance_Notification_SystemInformation
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
 61CGameNotifications_GetSessionDetails_Request_RequestedSession
@@ -15818,6 +15822,7 @@ $steammessages_parental_objects.proto"
 83Q2
 83Q3
 84CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_PurchasedCustomization
+86400
 87CUserAccount_GetAvailableValveDiscountPromotions_Response_ValveDiscountPromotionDetails
 88n|
 88pH
@@ -15849,7 +15854,7 @@ $steammessages_parental_objects.proto"
 8CAutoPtrI32CMsgCloudPendingRemoteOperationsE
 8CAutoPtrI33CGameNetworkingUI_ConnectionStateE
 8CAutoPtrI41CDockUnsupportedFirmwareWorkaroundManagerE
-8CAutoPtrI59CClientMetrics_GamePerformance_Notification_FrameRateReportE
+8CAutoPtrI61CClientMetrics_GamePerformance_Notification_SystemInformationE
 8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
 8CAutoPtrI7CUtlSetIyi8CDefLessEE
 8CFunctor
@@ -15933,7 +15938,6 @@ $steammessages_parental_objects.proto"
 9.CTwoFactor_RemoveAuthenticatorViaChallengeStart_Response"
 9.CUserAccount_GetAvailableValveDiscountPromotions_Request
 9000
-86400
 95th
 961e13c2046fbe474916afdb087db2222535db4e51f34b5fa45b4fd7803abff2
 98th
@@ -16052,6 +16056,7 @@ $steammessages_parental_objects.proto"
 :EXTERNAL TYPE %s\n
 :LBN
 :LBjI
+:YLJ
 :\n-k_EChildProcessQueryExitCode_ErrorCommandline
 :\n6k_EContentReportReason_GenderedBullyingAndIntimidation
 :\n6k_EContentReportResolution_SuspiciousIncludingUpvoters
@@ -16087,7 +16092,6 @@ $steammessages_parental_objects.proto"
 :scheme
 :statu
 :status
-:yRJ
 ; zp%Jj
 ;!;#;-;9;E;S;Y;_;q;{;
 ;"lY7
@@ -19586,6 +19590,7 @@ CJob::OnCallerDeadlineReached
 CJob::StartJob() called twice on job %s\n
 CJob::WaitForThreadFuncWorkItemBlocking job %s has unexpected work item state
 CJob::WaitForThreadFuncWorkItemBlocking job %s will leak generic heap object
+CJobCheckForTritonOobe
 CJobClientSharedConnectionWaitForResponse
 CJobDownloadSubscribedFile
 CJobEnumerateGameNotifications
@@ -25054,7 +25059,6 @@ Frame index is too large
 Frame requires too much memory for decoding
 Frame::checkEncoding() -- Rendering using UTF16.
 Frame::checkEncoding() -- Rendering using UTF8.
-FrameRateReport
 FramerateLimit
 Fraud Check Failed
 Free
@@ -26401,6 +26405,7 @@ Got SDR config revision %d from %s\n
 Got SDR network config.  %s
 Got a rendezvous candidate at "%s"\n
 Got a single shader of size %u; uploading in single message.
+Got an invalid bond when recording triton pair bond last used\n
 Got bad achievement times for StatID %hu for GameID %llu
 Got bad achievement times for StatID %hu for GameID %llu, The Stat's type is actually %d
 Got call result for type %d, was expecting type %d
@@ -26629,6 +26634,7 @@ H\fJxE\v
 H\n\fExchangeItem
 H\n\fGetInventory
 H\n\tCandidate
+H\n\tFrameRate
 H\n\tJoinParty
 H\n\vMonitorInfo
 H\n\vmemberships
@@ -28015,6 +28021,7 @@ K\n\rbetapasswords
 K\n\rrevoke_action
 K\n\trevisions
 K\n\tyour_info
+K\n\vframe_rates
 K\n\vpersistence
 K\rdSC\td?
 Ka\nTw
@@ -34048,6 +34055,7 @@ S[TR
 S\fWj
 S\n\rtrending_apps
 S\n\tlast_seen
+S\n\vsystem_info
 S\vQN
 S_gO
 SafeMode
@@ -35413,7 +35421,6 @@ SteamInputManager.NotifyGyroAccelerometerStateChanged#1
 SteamInputManager.NotifyGyroCalibrationStateChanged#1
 SteamInputManager.NotifyGyroQuaternionStateChanged#1
 SteamInputManager.NotifyGyroSpeedStateChanged#1
-SteamInputManager.NotifyTritonDonglesChanged#1
 SteamInputManager.NotifyTritonUndocked#1
 SteamInputManager.NotifyUnpairedTritonDocked#1
 SteamInputManager.NotifyUnpairedTritonPluggedIn#1
@@ -35834,6 +35841,7 @@ System
 SystemGoingIntoSuspend_t
 SystemIM
 SystemInfo
+SystemInformation
 SystemManager.Hibernate#1
 SystemManager.WriteFile#1
 SystemManagerBrightnessChange
@@ -36653,10 +36661,13 @@ Tswana
 Tuesday
 Turkish
 Turkmen
+Turn off Steam Controller\n
+Turn off idle controller %d\n
 Turn on/off software gyro anti-drift correction.
 TurnOffAllWirelessControllers
 TurnOffController
 Turning off HORI device before suspending\n
+Turning off all controllers\n
 Turning on early CRC checks for all received data.
 Two-factor activation code mismatch
 Two-factor code mismatch
@@ -36802,6 +36813,7 @@ Unable to read %s\n
 Unable to read VR Path Registry from %s\n
 Unable to read active slot from controller. Pairing in slot 0. %d
 Unable to read bond from docked Triton immediate after it docked
+Unable to read bond when recording triton pair bond last used\n
 Unable to read wake fd\n
 Unable to send encrypted SSL data over connection\n
 Unable to send message to disable license for package: %u. Please try again\n
@@ -37701,7 +37713,6 @@ Warning, couldn't get controller details for SC, PID=%d\n
 Warning, couldn't get controller details for SDL controller, vid=%x, pid=%x\n
 Warning: %s: lsof is required to run steam and it may not be available - please install
 Warning: %s: unexpected number of address fields
-Warning: BReadFeatureReport() has failed multiple times: inner retry %d/%d outer: %d/%d
 Warning: Blocking wait on mutex failed in Clear: %d\n
 Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.\n
 Warning: Calling IsBare() on the empty jid
@@ -40062,6 +40073,7 @@ Zulu
 \n\ncontent_id
 \n\ncontext_id
 \n\ncontroller
+\n\ncpu_vendor
 \n\ncrash_data
 \n\ncurrencyid
 \n\ncurrent_bw
@@ -43989,6 +44001,7 @@ cprt
 cpu_governor_manual_max_mhz
 cpu_governor_manual_mhz
 cpu_governor_manual_min_mhz
+cpu_name
 cpu_power\n
 cpu_stats=0\n
 cpu_stats\n
@@ -52274,6 +52287,7 @@ m_pFirst != pMsg
 m_pFirst == pInsertAfter
 m_pFirst == pInsertBefore
 m_pFirstTask
+m_pFrameRateSystemInformation
 m_pFromChromeStream
 m_pGameDataWrittenEvent
 m_pGameStats
@@ -52293,7 +52307,6 @@ m_pHeader->ip_v6().length() == 16
 m_pICESession == nullptr
 m_pIOThreadPool
 m_pInitializationThread
-m_pInitializedFrameRateReport
 m_pInputGenerator
 m_pInputGenerator == nullptr
 m_pInstallScriptManager
@@ -58436,7 +58449,7 @@ stderr
 stdin
 stdout
 steam
-steam Jan 15 2026 04:07:35
+steam Jan 16 2026 01:11:56
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

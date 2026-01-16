@@ -3668,6 +3668,7 @@ ${LANGUAGE}
 (\v24.CClientMetrics_ReportClientError_Notification.Error
 (\v25.CContentServerDirectory_ConnectedSteamPipeServerInfo"
 (\v25.CPublishedFile_GetItemInfo_Response.WorkshopItemInfo
+(\v26.CClientMetrics_GamePerformance_Notification.FrameRate
 (\v26.CContentBuilder_GetMissingDepotChunks_Response.Chunks
 (\v26.CFamilyGroups_GetSharedLibraryApps_Response.SharedApp
 (\v26.CSteamTV_SetBroadcastChannelLinkRegions_Request.Links
@@ -3707,12 +3708,12 @@ ${LANGUAGE}
 (\v2;.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token*l\n
 (\v2;.CStoreBrowse_GetContentHubConfig_Response.ContentHubConfig
 (\v2<.CChatUsability_ClientUsabilityMetrics_Notification.Settings
-(\v2<.CClientMetrics_GamePerformance_Notification.FrameRateReport
 (\v2<.CPlayer_GetFriendsGameplayInfo_Response.FriendsGameplayInfo
 (\v2<.CPublishedFile_GetAppRelationships_Response.AppRelationship
 (\v2<.CStore_GetTrendingAppsAmongFriends_Response.TrendingAppData
 (\v2=.CCommunity_GetAppRichPresenceLocalization_Response.TokenList
 (\v2=.CPlayer_GetAchievementsProgress_Response.AchievementProgress
+(\v2>.CClientMetrics_GamePerformance_Notification.SystemInformation
 (\v2>.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions
 (\v2>.CFamilyGroupsClient_NotifyRunningApps_Notification.RunningApp
 (\v2>.CGameNotifications_GetSessionDetails_Request.RequestedSession
@@ -9473,7 +9474,6 @@ ${LANGUAGE}
 20CMultipleCallResultsI20CGameActionLaunchApp34CheckShaderDepotManifestIDResult_tE
 20CMultipleCallResultsI20CMarketingController34PendingMarketingMessagesResponse_tE
 20CMultipleCallResultsI21CSteamUIAppController35GlobalAchievementPercentagesReady_tE
-20CMultipleCallResultsI23CValveControllerManager19ControllerDetails_tE
 20CMultipleCallResultsI23CValveControllerManager24SteamUGCQueryCompleted_tE
 20CMultipleCallResultsI9CSteamDoc21DownloadDepotResult_tE
 20CNetFilterEncryption
@@ -12031,7 +12031,6 @@ ${LANGUAGE}
 51CSteamInputService_GyroSoftwareCalibration_Response
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
-524288
 52CAccountHardware_RegisterValveIndexComponent_Request
 52CAccountHardware_UpdateControllerUsageReport_Request
 52CAuthenticationSupport_MarkTokenCompromised_Response
@@ -12057,6 +12056,7 @@ ${LANGUAGE}
 53CAccountHardware_RegisterValveIndexComponent_Response
 53CAccountHardware_UpdateControllerUsageReport_Response
 53CAuthenticationSupport_QueryRefreshTokenByID_Response
+53CClientMetrics_GamePerformance_Notification_FrameRate
 53CCommunity_GetUserPartnerEventsAppPriorities_Response
 53CContentBuilder_GetMissingDepotChunks_Response_Chunks
 53CContentServerDirectory_GetClientUpdateHosts_Response
@@ -12195,7 +12195,6 @@ ${LANGUAGE}
 59CAuthenticationSupport_QueryRefreshTokensByAccount_Response
 59CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request
 59CChatUsability_ClientUsabilityMetrics_Notification_Settings
-59CClientMetrics_GamePerformance_Notification_FrameRateReport
 59CDataPublisher_SetVRDeviceInfoAggregationReference_Response
 59CMarketingMessages_GetMarketingMessageClickedStats_Response
 59CMarketingMessages_GetPartnerReadyToPublishMessages_Request
@@ -12298,6 +12297,7 @@ ${LANGUAGE}
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
+61CClientMetrics_GamePerformance_Notification_SystemInformation
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
 61CGameNotifications_GetSessionDetails_Request_RequestedSession
@@ -12324,10 +12324,8 @@ ${LANGUAGE}
 64CMarketingMessages_DoesUserHavePendingMarketingMessages_Response
 64CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response
 64CSteamInputService_WaitInitialControllerStateEnumerated_Response
-65536
 659D-A19E-018A-81A6
 65CChatRoom_SetUserChatGroupPreferences_Request_ChatRoomPreferences
-666666666666666666666666666666666666666666666666
 66CAuthentication_NotifyRiskQuizResults_Notification_RiskQuizResults
 66CChatRoom_SetUserChatGroupPreferences_Request_ChatGroupPreferences
 66CPlayer_GetRecentPlaytimeSessionsForChild_Response_PlaytimeSession
@@ -12539,6 +12537,9 @@ ${LANGUAGE}
 8000
 80CChatUsability_ClientUsabilityMetrics_Notification_UIState_CategoryCollapseState
 8192
+65536
+524288
+666666666666666666666666666666666666666666666666
 82\n:XPH
 83CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Response_UpgradedCustomization
 83L3
@@ -12890,7 +12891,6 @@ ${LANGUAGE}
 ;pI3\nAx
 ;rN\n6
 ;xsK
-;}e5d
 < Called by: %s
 < no direct container >
 < or is NULL
@@ -17313,6 +17313,7 @@ CValveControllerManager::OnConfigVersionMismatch
 CValveControllerManager::OnControllerActionTriggered
 CValveControllerManager::OnControllerAutosaveBinding
 CValveControllerManager::OnControllerConnected
+CValveControllerManager::OnControllerDetails
 CValveControllerManager::OnControllerDisconnected
 CValveControllerManager::OnControllerDismissKeyboard
 CValveControllerManager::OnControllerDisplayKeyboard
@@ -20225,7 +20226,6 @@ FrameCloseButton
 FrameEnd: capture=%3llu, convert=%3llu, encode=%3llu, pts=%lld, dts=%lld, size=%d %s\n
 FrameMaximizeButton
 FrameMinimizeButton
-FrameRateReport
 FrameRestoreButton
 FrameSystemButton
 FrameSystemButton.DisabledIcon
@@ -21402,7 +21402,6 @@ GetConnectionType() != k_EConnectionTypeUDP
 GetConnectionType() == k_ESSLConnectionType_Client || GetConnectionType() == k_EDTLSConnectionType_Client
 GetContentDescriptors
 GetContentHubConfig
-GetControllerDetails failed for controller %u
 GetCopyCount
 GetCredentialChangeTimeDetails
 GetCubBody() == 0 && m_eStatusCode >= 400 && (int)m_eStatusCode <= 600
@@ -21888,6 +21887,7 @@ H\fJxE\v
 H\n\fExchangeItem
 H\n\fGetInventory
 H\n\tCandidate
+H\n\tFrameRate
 H\n\tJoinParty
 H\n\vMonitorInfo
 H\n\vmemberships
@@ -22847,7 +22847,7 @@ J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 J\nHBF
 J\n\tsummaries
 J\rS%H
-Jan 15 2026 04:07:29
+Jan 16 2026 01:11:51
 January
 Japanese
 Javanese
@@ -23065,6 +23065,7 @@ K\n\nLockClient
 K\n\rrevoke_action
 K\n\trevisions
 K\n\tyour_info
+K\n\vframe_rates
 K\n\vpersistence
 K\rdSC\td?
 Ka\nTw
@@ -24984,6 +24985,7 @@ N23CValveControllerManager24WorkshopCallbackTarget_tE
 N23CValveControllerManager29CachedControllerBindingInfo_tE
 N23CValveControllerManager32CCallbackInternal_OnDisconnectedE
 N23CValveControllerManager34CCallbackInternal_OnPostLogonStateE
+N23CValveControllerManager37CCallbackInternal_OnControllerDetailsE
 N23CValveControllerManager38CCallbackInternal_OnFocusWindowChangedE
 N23CValveControllerManager39CCallbackInternal_OnAppEventStateChangeE
 N23CValveControllerManager39CCallbackInternal_OnControllerConnectedE
@@ -26960,7 +26962,6 @@ PowerA Xbox One Controller
 PowerA Xbox Series X Controller
 PowerOff
 PowerState
-PowerSuspend
 Powered
 Pq?A6
 Pragma
@@ -28283,6 +28284,7 @@ S[TR
 S\fWj
 S\n\rtrending_apps
 S\n\tlast_seen
+S\n\vsystem_info
 S\vQN
 S]OAkewy#-?1
 S_gO
@@ -29860,6 +29862,7 @@ System.UpdateSettings
 System.VideoRecordingDriverCheck
 System/Bluetooth/Enabled
 System/HardwareUpdater/Enabled
+SystemInformation
 SystemReport: found debug wifi trace file. Saving to: %s
 SystemRestartMachine
 SystemResumingFromSuspend_t: resumed from sleep
@@ -30497,6 +30500,8 @@ Tswana
 Tuesday
 Turkish
 Turkmen
+Turning off controller %d from JS\n
+Turning off controller from dongle pair cancel %d\n
 Turns off vprof and halts profiling
 Turns on vprof and begins profiling
 Turns on vprof, and enables automatic dumping of any single frame that contains spikes above the given threshold in milliseconds (use the regular profile_off to stop)
@@ -31034,6 +31039,7 @@ VALVE_CRYPTO_dbg_free
 VALVE_CRYPTO_dbg_malloc
 VALVE_CRYPTO_dbg_realloc
 VARIANT_ID
+VCM: turning off all controllers\n
 VC|i
 VERSION_CODENAME
 VERSION_ID
@@ -33029,6 +33035,7 @@ Zulu
 \n\nconfig_vdf
 \n\ncontent_id
 \n\ncontroller
+\n\ncpu_vendor
 \n\ncurrencyid
 \n\ncurrent_bw
 \n\ncurrent_ts
@@ -36744,6 +36751,7 @@ cpu-scaling1
 cpu_governor_manual_max_mhz
 cpu_governor_manual_mhz
 cpu_governor_manual_min_mhz
+cpu_name
 crashes the Steam client
 crc:
 crc_header_mismatch
