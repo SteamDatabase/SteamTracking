@@ -103,6 +103,13 @@ message CSteamOS_GetUserHasPassword_Response {
 	optional bool has_password = 1;
 }
 
+message CSteamOSManager_PrepareFactoryImageTest_Request {
+	optional bool factory_reset = 1;
+}
+
+message CSteamOSManager_PrepareFactoryImageTest_Response {
+}
+
 message CSteamOSSLSPlugin {
 	optional .ESLSHelper etype = 1 [default = k_ESLSHelper_Invalid];
 	optional bool is_available = 2;
@@ -148,6 +155,7 @@ service SteamOSManager {
 	rpc OptOutOfSideloadedClient (.CSteamOSManager_OptOutOfSideloadedClient_Request) returns (.CSteamOSManager_OptOutOfSideloadedClient_Response);
 	rpc ApplyMandatoryUpdate (.CSteamOSManager_ApplyMandatoryUpdate_Request) returns (.CSteamOSManager_ApplyMandatoryUpdate_Response);
 	rpc FactoryReset (.CSteamOSManager_FactoryReset_Request) returns (.CSteamOSManager_FactoryReset_Response);
+	rpc PrepareFactoryImageTest (.CSteamOSManager_PrepareFactoryImageTest_Request) returns (.CSteamOSManager_PrepareFactoryImageTest_Response);
 	rpc RefreshScreenReaderAutoLocale (.CSteamOSManager_RefreshScreenReaderAutoLocale_Request) returns (.CSteamOSManager_RefreshScreenReaderAutoLocale_Response);
 	rpc SetUserPassword (.CSteamOS_SetUserPassword_Request) returns (.CSteamOS_SetUserPassword_Response);
 	rpc GetUserHasPassword (.CSteamOS_GetUserHasPassword_Request) returns (.CSteamOS_GetUserHasPassword_Response);
