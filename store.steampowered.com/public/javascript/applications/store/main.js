@@ -1320,11 +1320,12 @@
         return f({ select: (e) => e.line_items?.length ?? 0, ...e });
       }
       function B(e, t, r, i, n, s) {
+        const { navData: a, bIsGift: o = !1 } = s ?? {};
         if ((0, l.c2)(r)) {
-          const a = (i || []).map((e) => ({ packageid: e }));
+          const s = (i || []).map((e) => ({ packageid: e, bIsGift: o }));
           return (
-            n && a.push({ bundleid: n }),
-            M(e, _.iA.country_code, a, s).then(
+            n && s.push({ bundleid: n, bIsGift: o }),
+            M(e, _.iA.country_code, s, a).then(
               ([e, i]) => (
                 R(),
                 1 == e
@@ -66787,10 +66788,10 @@
           !u && _ && (0, Dt.U)().then(() => m(!0));
         }, [u, _]);
         const h = n.useCallback(
-          (e, t, i) => {
-            const n = "number" == typeof e ? [e] : e;
+          (e, t, i, n) => {
+            const a = "number" == typeof e ? [e] : e;
             c(!0),
-              (0, zt.iw)(d, g, p, n, t, i).then(
+              (0, zt.iw)(d, g, p, a, t, { navData: i, bIsGift: n }).then(
                 ({
                   success: e,
                   result: t,

@@ -1777,7 +1777,7 @@ function updateQtyCart( formName, id )
 }
 
 // Function to add a bundle to a cart, assumes form setup on the page
-function addBundleToCart( bundleid, dedupe )
+function addBundleToCart( bundleid, dedupe, bIsGift )
 {
 	try
 	{
@@ -1802,7 +1802,7 @@ function addBundleToCart( bundleid, dedupe )
 				if ( typeof GStoreItemData !== 'undefined' )
 					navdata = $Form.find('input[name=originating_snr]').length > 0 ? GStoreItemData.GetPreviousPageNavParamObj() : GStoreItemData.GetCurrentPageNavParamObj();
 
-				window.AddItemToCart( null, bundleid, navdata );
+				window.AddItemToCart( null, bundleid, navdata, bIsGift );
 				return;
 			}
 		}

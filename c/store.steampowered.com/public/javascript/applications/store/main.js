@@ -1344,14 +1344,17 @@
         });
       }
       function _(_, _, _, _, _, _) {
+        const { navData: _, bIsGift: _ = !1 } = _ ?? {};
         if ((0, _._)(_)) {
           const _ = (_ || []).map((_) => ({
             packageid: _,
+            bIsGift: _,
           }));
           return (
             _ &&
               _.push({
                 bundleid: _,
+                bIsGift: _,
               }),
             _(_, _._.country_code, _, _).then(
               ([_, _]) => (
@@ -73770,10 +73773,13 @@
           !_ && _ && (0, _._)().then(() => _(!0));
         }, [_, _]);
         const _ = _.useCallback(
-          (_, _, _) => {
+          (_, _, _, _) => {
             const _ = "number" == typeof _ ? [_] : _;
             _(!0),
-              (0, _._)(_, _, _, _, _, _).then(
+              (0, _._)(_, _, _, _, _, {
+                navData: _,
+                bIsGift: _,
+              }).then(
                 ({
                   success: _,
                   result: _,

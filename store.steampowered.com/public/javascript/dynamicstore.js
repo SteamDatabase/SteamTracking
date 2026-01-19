@@ -700,7 +700,7 @@ GDynamicStore = {
 					strAppIDs = rgAllAppIDsInBundle.join(',');
 				}
 
-				GDynamicStore.UpdateDynamicBundleElements( Bundle, $El );
+				GDynamicStore.UpdateDynamicBundleElements( unBundleID, Bundle, $El );
 			}
 			else if ( unPackageID )
 			{
@@ -1116,7 +1116,7 @@ GDynamicStore = {
 		return GDynamicStore.s_rgPersonalizedBundleData[ unBundleID ];
 	},
 
-	UpdateDynamicBundleElements: function( Bundle, $El )
+	UpdateDynamicBundleElements: function( unBundleID, Bundle, $El )
 	{
 
 		var $CartBtn = $El.find('.btn_addtocart:not(.btn_packageinfo)' ).children();
@@ -1126,10 +1126,11 @@ GDynamicStore = {
 		{
 			var strTooltip = 'This bundle is not available for purchase on your account since you already have all included items.';
 
-			if ( Bundle.m_bMustPurchaseAsSet && !Bundle.m_bRestrictGifting )
+			if ( !Bundle.m_bRestrictGifting )
 			{
 				strTooltip = 'This offer is only available when buying all %s items at the same time.  You may still purchase the bundle as a gift for a friend.'.replace(/%s/, Bundle.m_cTotalItemsInBundle);
 				$CartBtn.find('span').text( 'Purchase as a gift' );
+				$CartBtn.attr( 'href', 'javascript:addBundleToCart( ' + unBundleID + ', undefined, true );' );
 			}
 			else
 			{
