@@ -493,38 +493,38 @@
     89128: (e, t, a) => {
       "use strict";
       a.d(t, {
-        FZ: () => ge,
+        FZ: () => _e,
         A4: () => D,
         iy: () => G,
         ZA: () => H,
         Dn: () => M,
-        CU: () => re,
+        CU: () => se,
         Ay: () => ie,
         ye: () => ne,
-        Fo: () => le,
-        G$: () => ce,
+        Fo: () => oe,
+        G$: () => le,
         Xx: () => z,
-        DJ: () => he,
-        G6: () => de,
+        DJ: () => ue,
+        G6: () => ce,
         zv: () => N,
         IS: () => Q,
         GE: () => q,
         yX: () => Y,
-        w: () => me,
+        w: () => de,
         EE: () => $,
         Zf: () => X,
         jR: () => K,
-        Ac: () => ve,
-        lh: () => Ie,
-        Hc: () => ue,
+        Ac: () => ge,
+        lh: () => fe,
+        Hc: () => me,
         mz: () => te,
         qQ: () => J,
         MW: () => ee,
         W2: () => Z,
-        Pm: () => oe,
+        Pm: () => re,
         qR: () => ae,
         _B: () => V,
-        j3: () => Ee,
+        j3: () => Ie,
         Yw: () => W,
         zK: () => k,
         DU: () => L,
@@ -535,7 +535,7 @@
         GU: () => P,
         bv: () => B,
         Kd: () => j,
-        cB: () => pe,
+        cB: () => he,
       });
       var n = a(34629),
         i = a(79821),
@@ -687,35 +687,35 @@
         }
         return !1;
       }
-      function se(e) {
-        switch (e) {
-          case "items":
-          case "trailercarousel":
-          case "crosspromotesalepage":
-          case "creator_list":
-          case "calendar":
-          case "events":
-          case "sale_events":
-          case "contenthubspecials":
-            return !0;
-        }
-        return !1;
-      }
-      function re(e, t = !1) {
-        return Boolean(
-          t
-            ? e && se(e.section_type) && e.smart_section
-            : e &&
-                se(e.section_type) &&
-                e.smart_section &&
-                null != e.smart_section_type,
+      function se(e, t = !1) {
+        return (
+          !(
+            !e ||
+            !(function (e) {
+              switch (e) {
+                case "items":
+                case "trailercarousel":
+                case "crosspromotesalepage":
+                case "creator_list":
+                case "calendar":
+                case "events":
+                case "sale_events":
+                case "contenthubspecials":
+                  return !0;
+              }
+              return !1;
+            })(e.section_type)
+          ) &&
+          (t
+            ? !!e.sale_tag_filter?.clauses?.length || !!e.smart_section
+            : !!e.smart_section && null != e.smart_section_type)
         );
       }
-      function oe(e) {
-        return re(e) ? e?.smart_section_type : void 0;
+      function re(e) {
+        return se(e) ? e?.smart_section_type : void 0;
       }
-      function le(e, t) {
-        if (!e.BIsNextFest() || ne(t.section_type) || re(t)) return !1;
+      function oe(e, t) {
+        if (!e.BIsNextFest() || ne(t.section_type) || se(t)) return !1;
         return (
           ((e.jsondata.sale_ml_recommender_delay_hours &&
             (e.startTime ?? 0) +
@@ -724,8 +724,8 @@
             0) > 0
         );
       }
-      function ce(e, t) {
-        return !!t.use_random_order || !!le(e, t);
+      function le(e, t) {
+        return !!t.use_random_order || !!oe(e, t);
       }
       !(function (e) {
         (e[(e.k_EStoreFilterClauseTypeOr = 0)] = "k_EStoreFilterClauseTypeOr"),
@@ -773,7 +773,7 @@
           (e.Summary = "summary"),
             (e.SummaryLargeImage = "summary_large_image");
         })(K || (K = {}));
-      const de = {
+      const ce = {
         capsules: [],
         events: [],
         links: [],
@@ -782,8 +782,8 @@
         default_label: "#Sale_default_label",
         section_type: "unselected_empty",
       };
-      var me;
-      function ue(e) {
+      var de;
+      function me(e) {
         return {
           arrowFill: e?.sale_carousel_arrow_color,
           arrowStyle: e?.sale_carousel_arrow_style,
@@ -795,8 +795,8 @@
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
           (e[(e.k_EContentHub = 1)] = "k_EContentHub");
-      })(me || (me = {}));
-      const he = {
+      })(de || (de = {}));
+      const ue = {
           localized_subtitle: new Array(31),
           localized_summary: new Array(31),
           localized_title_image: new Array(31),
@@ -821,8 +821,8 @@
           bScheduleEnabled: !1,
           scheduleEntries: [],
         },
-        pe = "old_announce_",
-        _e = [
+        he = "old_announce_",
+        pe = [
           "workshop",
           "patchnotes",
           "contenthub",
@@ -838,7 +838,7 @@
           "betachannel",
           "previewchannel",
         ],
-        ge = [
+        _e = [
           "steam_blog_featured",
           "workshop",
           "steam_blog",
@@ -881,7 +881,7 @@
           "autocreate_promotools",
           "vo_marketing_message",
         ],
-        ve = [
+        ge = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -895,9 +895,9 @@
           "curator_public",
           "audience_followers",
         ],
-        ye = [20, 31, 34],
-        fe = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
-      class Ie {
+        ve = [20, 31, 34],
+        ye = [9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35];
+      class fe {
         constructor() {
           (0, r.Gn)(this);
         }
@@ -919,7 +919,7 @@
         postTime = void 0;
         visibility_state = N.k_EEventStateUnpublished;
         broadcaster = void 0;
-        jsondata = he;
+        jsondata = ue;
         nCommentCount = 0;
         nVotesUp = 0;
         nVotesDown = 0;
@@ -948,7 +948,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new Ie(),
+          let t = new fe(),
             a = JSON.parse(e);
           return (
             Object.assign(t, a),
@@ -984,7 +984,7 @@
           );
         }
         clone(e = !1) {
-          let t = new Ie();
+          let t = new fe();
           if (
             ((t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -1036,7 +1036,7 @@
                 (t.m_strBuildBranch = this.m_strBuildBranch),
                 this.vecTags.forEach((e) => t.vecTags.push(e)))
               : this.vecTags.forEach((e) => {
-                  _e.includes(e) && t.vecTags.push(e);
+                  pe.includes(e) && t.vecTags.push(e);
                 }),
             t.jsondata.email_setting)
           ) {
@@ -1438,13 +1438,13 @@
         GetSubTitleWithSummaryFallback(e) {
           return (
             v.NT.GetWithFallback(this.jsondata?.localized_subtitle, e) ||
-            Ie.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            fe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
           return (
             v.NT.GetWithFallback(this.jsondata?.localized_summary, e) ||
-            Ie.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            fe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -1485,10 +1485,10 @@
         BShowLibrarySpotlight(e) {
           if (!e) return Boolean(this.jsondata.library_spotlight);
           if (!this.jsondata.library_spotlight) return !1;
-          if (ye.includes(this.type)) return !1;
+          if (ve.includes(this.type)) return !1;
           const t = new Date().getTime() / 1e3;
           return (
-            !(fe.includes(this.type) && this.endTime && t > this.endTime) &&
+            !(ye.includes(this.type) && this.endTime && t > this.endTime) &&
             !(this.startTime && t > this.startTime + 60 * b.Kp.PerDay)
           );
         }
@@ -1742,14 +1742,14 @@
             );
           return (
             this.jsondata.tagged_items?.forEach((e) => {
-              Ie.AccumulateCapsuleListIDs([e.capsule], a, n, t);
+              fe.AccumulateCapsuleListIDs([e.capsule], a, n, t);
             }),
             this.jsondata.sale_sections.forEach((e) => {
               if (ne(e.section_type))
-                Ie.AccumulateCapsuleListIDs(e.capsules, a, n, t);
+                fe.AccumulateCapsuleListIDs(e.capsules, a, n, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const i of e.tabs)
-                  Ie.AccumulateCapsuleListIDs(i.capsules, a, n, t);
+                  fe.AccumulateCapsuleListIDs(i.capsules, a, n, t);
             }),
             n
           );
@@ -1886,7 +1886,7 @@
         }
         BUsesContentHubForItemSource() {
           return (
-            this.jsondata.item_source_type === me.k_EContentHub &&
+            this.jsondata.item_source_type === de.k_EContentHub &&
             Boolean(this.jsondata.source_content_hub)
           );
         }
@@ -2015,52 +2015,52 @@
           };
         }
       }
-      (0, n.Cg)([r.sH], Ie.prototype, "GID", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "AnnouncementGID", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "forumTopicGID", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "type", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "appid", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "name", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "description", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "timestamp_loc_updated", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "startTime", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "endTime", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "visibilityStartTime", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "visibilityEndTime", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "m_nBuildID", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "m_strBuildBranch", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "postTime", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "visibility_state", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "broadcaster", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "jsondata", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "nCommentCount", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "nVotesUp", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "nVotesDown", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "bOldAnnouncement", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "announcementClanSteamID", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "loadedAllLanguages", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "bLoaded", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "deleteInProgress", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "vecTags", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "last_update_steamid", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "rtime32_last_modified", void 0),
+      (0, n.Cg)([r.sH], fe.prototype, "GID", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "AnnouncementGID", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "forumTopicGID", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "type", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "appid", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "name", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "description", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "timestamp_loc_updated", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "startTime", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "endTime", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "visibilityStartTime", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "visibilityEndTime", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "m_nBuildID", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "m_strBuildBranch", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "postTime", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "visibility_state", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "broadcaster", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "jsondata", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "nCommentCount", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "nVotesUp", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "nVotesDown", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "bOldAnnouncement", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "announcementClanSteamID", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "loadedAllLanguages", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "bLoaded", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "deleteInProgress", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "vecTags", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "last_update_steamid", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "rtime32_last_modified", void 0),
         (0, n.Cg)(
           [r.sH],
-          Ie.prototype,
+          fe.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, n.Cg)(
           [r.sH],
-          Ie.prototype,
+          fe.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, n.Cg)([r.sH], Ie.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "video_preview_type", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "video_preview_id", void 0),
-        (0, n.Cg)([r.sH], Ie.prototype, "m_overrideCurrentDay", void 0);
-      function Ee(e) {
+        (0, n.Cg)([r.sH], fe.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "video_preview_type", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "video_preview_id", void 0),
+        (0, n.Cg)([r.sH], fe.prototype, "m_overrideCurrentDay", void 0);
+      function Ie(e) {
         return e?.replace(/[()]/g, "\\$&");
       }
     },
