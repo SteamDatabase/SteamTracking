@@ -1,0 +1,81 @@
+{
+    "name": "IPublishedFileModerationService",
+    "methods": [
+        {
+            "name": "GetAllApprovalRequests",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Get all the approval requests for the given app (claim status is ignored).",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "revision",
+                    "type": "{enum}",
+                    "optional": true,
+                    "description": "Return requests for the specified revision."
+                },
+                {
+                    "name": "start",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "The start index of the query."
+                },
+                {
+                    "name": "count",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Number of requests to return."
+                }
+            ]
+        },
+        {
+            "name": "ProcessApprovalRequest",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Process the approval request",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "publishedfileid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "revision",
+                    "type": "{enum}",
+                    "optional": false
+                },
+                {
+                    "name": "change_number",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "approved",
+                    "type": "bool",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}
