@@ -19185,10 +19185,23 @@
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
           [_] = (0, _._)(() => [_.unique_id]),
-          [_, _] = (0, _._)(() => [_.smart_section, _.smart_section_type]);
+          [_, _, _] = (0, _._)(() => {
+            var _, _;
+            return [
+              _.smart_section,
+              _.smart_section_type,
+              null ===
+                (_ =
+                  null === (_ = _.sale_tag_filter) || void 0 === _
+                    ? void 0
+                    : _.clauses) || void 0 === _
+                ? void 0
+                : _.length,
+            ];
+          });
         let _ = 0;
         return (
-          _ && (_ = null == _ ? 1 : 2),
+          (_ || _) && (_ = null == _ ? 1 : 2),
           _.createElement(
             _.Fragment,
             null,

@@ -17297,10 +17297,23 @@
       function Ga(e) {
         const { saleSection: t, editModel: a } = e,
           [n] = (0, s.q3)(() => [t.unique_id]),
-          [l, i] = (0, s.q3)(() => [t.smart_section, t.smart_section_type]);
-        let o = 0;
+          [l, i, o] = (0, s.q3)(() => {
+            var e, a;
+            return [
+              t.smart_section,
+              t.smart_section_type,
+              null ===
+                (a =
+                  null === (e = t.sale_tag_filter) || void 0 === e
+                    ? void 0
+                    : e.clauses) || void 0 === a
+                ? void 0
+                : a.length,
+            ];
+          });
+        let r = 0;
         return (
-          l && (o = null == i ? 1 : 2),
+          (l || o) && (r = null == i ? 1 : 2),
           c.createElement(
             c.Fragment,
             null,
@@ -17310,7 +17323,7 @@
               uniqueKey: "Section" + n,
               capsuleContainer: t,
               editModel: a,
-              filterMode: o,
+              filterMode: r,
             }),
             c.createElement(Ye, { saleSection: t, ...e }),
           )

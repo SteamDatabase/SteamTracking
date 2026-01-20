@@ -30,8 +30,8 @@ var CLSTAMP = "steamdb";
           "./friendsui_portuguese.json": [77505, 3415],
           "./friendsui_romanian.json": [31807, 7861],
           "./friendsui_russian.json": [30757, 2945],
-          "./friendsui_sc_schinese.json": [91804, 43],
-          "./friendsui_schinese.json": [82803, 9746],
+          "./friendsui_sc_schinese.json": [69423, 43],
+          "./friendsui_schinese.json": [5184, 9746],
           "./friendsui_spanish.json": [86700, 9808],
           "./friendsui_swedish.json": [41005, 6609],
           "./friendsui_tchinese.json": [50195, 8766],
@@ -78,8 +78,8 @@ var CLSTAMP = "steamdb";
           "./friendsui_portuguese.json": [77505, 3415],
           "./friendsui_romanian.json": [31807, 7861],
           "./friendsui_russian.json": [30757, 2945],
-          "./friendsui_sc_schinese.json": [91804, 43],
-          "./friendsui_schinese.json": [82803, 9746],
+          "./friendsui_sc_schinese.json": [69423, 43],
+          "./friendsui_schinese.json": [5184, 9746],
           "./friendsui_spanish.json": [86700, 9808],
           "./friendsui_swedish.json": [41005, 6609],
           "./friendsui_tchinese.json": [50195, 8766],
@@ -2096,7 +2096,7 @@ var CLSTAMP = "steamdb";
       }[_] +
       ".js?contenthash=" +
       {
-        43: "0feb4320dbf41baeee60",
+        43: "34789ff863ce95895f63",
         762: "1381f47764f88e0d31ef",
         976: "8e523dfb870c4a336879",
         1225: "7dd077661d20b4450b4f",
@@ -2156,7 +2156,7 @@ var CLSTAMP = "steamdb";
         9027: "4be2199673ef74249874",
         9152: "2cce3edb2723a3c078e9",
         9712: "1fb2ed3d5873fdec37a1",
-        9746: "1d5cfc440ca47ac1a20f",
+        9746: "f15a8709bf4494bd2d43",
         9808: "267da317af17c07b5ed7",
       }[_]),
     (_.miniCssF = (_) => {}),
@@ -2303,6 +2303,6 @@ var CLSTAMP = "steamdb";
       __webpack_require__.forEach(_.bind(null, 0)),
         (_.push = _.bind(null, _.push.bind(_)));
     })();
-  var _ = _._(void 0, [1068], () => _(10036));
+  var _ = _._(void 0, [1068], () => _(87398));
   _ = _._(_);
 })();

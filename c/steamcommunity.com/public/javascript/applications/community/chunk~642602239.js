@@ -4414,28 +4414,35 @@
         }
         return !1;
       }
-      function _(_) {
-        switch (_) {
-          case "items":
-          case "trailercarousel":
-          case "crosspromotesalepage":
-          case "creator_list":
-          case "calendar":
-          case "events":
-          case "sale_events":
-          case "contenthubspecials":
-            return !0;
-        }
-        return !1;
-      }
       function _(_, _ = !1) {
-        return Boolean(
-          _
-            ? _ && _(_.section_type) && _.smart_section
-            : _ &&
-                _(_.section_type) &&
-                _.smart_section &&
-                null != _.smart_section_type,
+        var _, _;
+        return (
+          !(
+            !_ ||
+            !(function (_) {
+              switch (_) {
+                case "items":
+                case "trailercarousel":
+                case "crosspromotesalepage":
+                case "creator_list":
+                case "calendar":
+                case "events":
+                case "sale_events":
+                case "contenthubspecials":
+                  return !0;
+              }
+              return !1;
+            })(_.section_type)
+          ) &&
+          (_
+            ? !!(null ===
+                (_ =
+                  null === (_ = _.sale_tag_filter) || void 0 === _
+                    ? void 0
+                    : _.clauses) || void 0 === _
+                ? void 0
+                : _.length) || !!_.smart_section
+            : !!_.smart_section && null != _.smart_section_type)
         );
       }
       function _(_) {
