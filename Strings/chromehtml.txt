@@ -490,6 +490,7 @@ $\n k_SystemAudioPortDirection_Input
 *\n&k_EContentReportSubjectAction_Disputed
 *\n&k_EContentReportSubjectAction_Released
 *\n&k_EContentReportSubjectAction_Unlocked
+*\n&k_EGameFrameRateReportingPreference_No
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EResolutionAutomation_FullyAutomated
@@ -602,6 +603,7 @@ $\n k_SystemAudioPortDirection_Input
 -\n)k_EContentReportReason_OtherScamsAndTheft
 -\n)k_EContentReportSubjectAction_TradeBanned
 -\n)k_EContentReportSubjectType_FriendChatMsg
+-\n)k_EGameFrameRateReportingPreference_Unset
 -\n)k_EProfileCustomizationTypeRecommendation
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
 -\n)k_ESystemDisplayCompatibilityMode_Invalid
@@ -1161,6 +1163,7 @@ $\n k_SystemAudioPortDirection_Input
 4\n0k_PublishedFileQueryType_RankedByPublicationDate
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
 5\n1k_EContentReportSubjectAction_BannedFromCommunity
+5\n1k_EGameFrameRateReportingPreference_Yes_Anonymous
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
 5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
@@ -1188,6 +1191,7 @@ $\n k_SystemAudioPortDirection_Input
 8CMsgCopy
 8CMsgFind
 8\n4k_EContentReportReason_GenderedNonConsensualMaterial
+8\n4k_EGameFrameRateReportingPreference_Yes_NonAnonymous
 8\n4k_EProfileCustomizationTypeAchievementsCompletionist
 8\n4k_ESteamDeckCompatibilityResultDisplayType_Invisible
 8\n4k_ESteamOSCompatibilityResultDisplayType_Unsupported
@@ -4007,6 +4011,7 @@ Zulu
 \n EWindowsUpdateInstallationImpact
 \n google/protobuf/descriptor.proto
 \n!CMsgVerticalScrollBarSizeResponse
+\n!EGameFrameRateReportingPreference
 \n!EPublishedFileInappropriateResult
 \n!ESteamDeckCompatibilityTestResult
 \n#CMsgHorizontalScrollBarSizeResponse

@@ -383,7 +383,6 @@
 !STREAM_OLDER_PACKET_ID( cursor, outgoing.GetWindowStart() )
 !STREAM_OLDER_PACKET_ID( cursorStart, outgoing.GetWindowStart() )
 !Software\Valve\Steam\CloudEnabled
-!System/GameFrameRateReportEnabled
 !UI/Display/Current/MaxScaleFactor
 !UI/Display/Current/MinScaleFactor
 !V_isempty( svHostname )
@@ -1001,6 +1000,7 @@
 "z\n CPlayer_GetPostedStatus_Response
 "z\n%CSiteLicense_LCSAuthenticate_Response
 "z\n)CGameRecording_ExportClipPreview_Response
+"z\n,CAccountHardware_ManageSavedHardware_Request
 "z\n,CFamilyGroups_GetInviteCheckResults_Response
 "{\n2CContentServerDirectory_GetDepotPatchInfo_Response
 "|\n)CFamilyGroups_GetPurchaseRequests_Request
@@ -2341,6 +2341,7 @@ ${LANGUAGE}
 &&Lj66lZ??~A
 &'&)&5&;&?&K&S&Y&e&i&o&{&
 &'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+&.CAccountHardware_SaveHardware_Request
 &.CAuthentication_Token_Revoke_Response"
 &.CBluetoothManager_CancelPair_Response
 &.CBluetoothManager_Disconnect_Response
@@ -2597,6 +2598,7 @@ ${LANGUAGE}
 '. Cannot find matching ']' for all '['.
 '. Map keys should be at the end of a path segment.
 '. Map keys should be represented as ["some_key"].
+'.CAccountHardware_SaveHardware_Response"
 '.CBroadcast_EndBroadcastSession_Request
 '.CBroadcast_GetBroadcastStatus_Response"
 '.CBroadcast_GetBuildClipStatus_Response"
@@ -3332,6 +3334,7 @@ ${LANGUAGE}
 (\t",\n*CChatRoom_SetChatRoomGroupTagline_Response"U\n(CChatRoom_SetChatRoomGroupAvatar_Request
 (\t",\n*CClientNotificationDockUnsupportedFirmware"H\n$CClientNotificationPeerContentUpload
 (\t".\n,CSteamTV_SetBroadcastChannelProfile_Response"K\n+CSteamTV_GetBroadcastChannelProfile_Request
+(\t"/\n-CAccountHardware_ManageSavedHardware_Response"@\n-CAccountHardware_GetSavedHardwareList_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
 (\t"/\n-CUserAccount_RevokeFriendInviteToken_Response">\n'CUserAccount_RegisterCompatTool_Request
 (\t"0\n.CBroadcast_SendBroadcastStateToServer_Response"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
@@ -3427,6 +3430,7 @@ ${LANGUAGE}
 (\t"i\n&CInventoryClient_NewItems_Notification
 (\t"i\n)CPublishedFile_AddAppRelationship_Request
 (\t"j\n'CClientMetrics_AppInterfaceMethodCounts
+(\t"k\n%CAccountHardware_SaveHardware_Request
 (\t"l\n7CDepotContentDetection_GetAllDetectedAppContent_Request
 (\t"m\n'CSteamTV_GetBroadcastChannelID_Response
 (\t"m\n9CAccountHardware_QueryAccountsRegisteredToSerial_Accounts
@@ -3551,6 +3555,7 @@ ${LANGUAGE}
 (\v2&.ParentalTemporaryPlaytimeRestrictionsB
 (\v2&.google.protobuf.ExtensionRangeOptions
 (\v2&.google.protobuf.MethodDescriptorProto
+(\v2'.CAccountHardware_SavedHardware_Details*
 (\v2'.CClientMetrics_ClientBootstrap_Summary"
 (\v2'.CClientMetrics_IPv6Connectivity_Result
 (\v2'.CGameRecording_QueryPhases_Request.Tag
@@ -3715,7 +3720,6 @@ ${LANGUAGE}
 (\v2<.CStore_GetTrendingAppsAmongFriends_Response.TrendingAppData
 (\v2=.CCommunity_GetAppRichPresenceLocalization_Response.TokenList
 (\v2=.CPlayer_GetAchievementsProgress_Response.AchievementProgress
-(\v2>.CClientMetrics_GamePerformance_Notification.SystemInformation
 (\v2>.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions
 (\v2>.CFamilyGroupsClient_NotifyRunningApps_Notification.RunningApp
 (\v2>.CGameNotifications_GetSessionDetails_Request.RequestedSession
@@ -4350,6 +4354,7 @@ ${LANGUAGE}
 *ZN17CSteamOSTelemetry10InitializeEvEUlRK30CSteamOSSLS_SetEnabled_RequestR31CSteamOSSLS_SetEnabled_ResponseE0_
 *ZN17CSteamOSTelemetry10InitializeEvEUlRK36CSteamOSSLS_SetPluginEnabled_RequestR37CSteamOSSLS_SetPluginEnabled_ResponseE1_
 *ZN17CSurveyController11JSRunSurveyE9CSmartPtrI15CJSCallbackFuncEEUlvE_
+*ZN17CSurveyController34JSSaveHardwareInformationToAccountEPKc9CSmartPtrI18CJSCallbackPromiseEEUlP26HardwareInformationSaved_tbS4_E_
 *ZN17CSystemController13GetSystemInfoE9CSmartPtrI18CJSCallbackPromiseEEUlvE_
 *ZN17CSystemController14OpenFileDialogEPK9CJSObject9CSmartPtrI18CJSCallbackPromiseEEUlR13CJSMethodArgsRbE0_
 *ZN17CSystemController14OpenFileDialogEPK9CJSObject9CSmartPtrI18CJSCallbackPromiseEEUlvE_
@@ -4361,7 +4366,6 @@ ${LANGUAGE}
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlbE0_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlbE1_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlfE3_
-*ZN19CSettingsController23RegisterSettingHandlersEvEUliE4_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUljE2_
 *ZN19CSettingsController23RegisterSettingHandlersEvEUlvE_
 *ZN19CSettingsController29SetForeignDefaultValueHandlerE10StringViewOSt8functionIFvP18CMsgSettingVariantEEEUlvE_
@@ -4753,6 +4757,7 @@ ${LANGUAGE}
 *\n&k_EContentReportSubjectAction_Unlocked
 *\n&k_EControllerElementTypeTrackpadCenter
 *\n&k_EDeviceDisconnectMethodFeatureReport
+*\n&k_EGameFrameRateReportingPreference_No
 *\n&k_EMarketingMessageClickLocation_Image
 *\n&k_EMarketingMessageTemplate_AutoRender
 *\n&k_ENotificationSettingNotifyUseDefault
@@ -4979,6 +4984,7 @@ ${LANGUAGE}
 +\n\vmethod_type
 +\n\vmouse_wheel
 +\n\vscreenshots
++\n\vsystem_info
 +automatic
 +connect_lobby %llu
 +en+eo+
@@ -5251,6 +5257,7 @@ ${LANGUAGE}
 --title
 --type
 --update-by-serial
+-.CAccountHardware_ManageSavedHardware_Request
 -.CAuthentication_MigrateMobileSession_Request
 -.CAuthentication_RefreshToken_Revoke_Response"
 -.CBluetoothManager_GetAdapterDetails_Response
@@ -5372,6 +5379,7 @@ ${LANGUAGE}
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EControllerElementTypeButtonBumperRight
 -\n)k_EControllerElementTypeButtonTriggerLeft
+-\n)k_EGameFrameRateReportingPreference_Unset
 -\n)k_EPartnerLinkTrackingBackfillSource_None
 -\n)k_EProfileCustomizationTypeRecommendation
 -\n)k_EPublishedFileRevision_ApprovedSnapshot
@@ -5530,6 +5538,8 @@ ${LANGUAGE}
 ../src/clientui/ui/src
 ../steamui
 ../tenfoot/resource/images/library/controller/binding_icons
+..CAccountHardware_GetSavedHardwareList_Request
+..CAccountHardware_ManageSavedHardware_Response"
 ..CAccountHardware_VRCompatibilityCheck_Request
 ..CAuthentication_BeginAuthSessionViaQR_Request
 ..CAuthentication_MigrateMobileSession_Response"
@@ -6059,7 +6069,6 @@ ${LANGUAGE}
 .EFamilyGroupsTwoFactorMethod
 .EFamilyGroupsTwoFactorMethod"l\n0CFamilyGroups_ConfirmInviteToFamilyGroup_Request
 .EFrameAccumulatedStat
-.EFrameRateReportEnabledB-
 .EGPUPerformanceLevel
 .EGRExportLimitTypeB%
 .EGRMode"
@@ -6259,6 +6268,9 @@ ${LANGUAGE}
 .StoreItem.Trailers.Trailer
 .StoreItem.Trailers.VideoSource
 .Too many IDATs found
+.UserSystemInformation
+.UserSystemInformation"=\n&CAccountHardware_SaveHardware_Response
+.UserSystemInformation"q\n.CAccountHardware_GetSavedHardwareList_Response
 .VideoBookmark":\n CVideo_UnlockedH264_Notification
 .VideoBookmark"I\n CVideo_GetVideoBookmarks_Request
 .WebUINoResponse
@@ -6397,6 +6409,7 @@ ${LANGUAGE}
 /'/)/A/E/K/M/Q/W/o/u/}/
 /)IMT
 /+ep+eqU
+/.CAccountHardware_GetSavedHardwareList_Response"
 /.CAccountHardware_VRCompatibilityCheck_Response"
 /.CAuthenticationSupport_GetTokenHistory_Request
 /.CAuthentication_BeginAuthSessionViaQR_Response"
@@ -7146,11 +7159,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
-00:00:00
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+00:00:00
 01/01/00
 0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -9050,6 +9063,7 @@ ${LANGUAGE}
 2!.EMarketingMessageAssociationType
 2!.ERemoteDeviceAuthorizationResult
 2!.ERemoteDeviceAuthorizationResult"
+2".EGameFrameRateReportingPreference"
 2".google.protobuf.Field.Cardinality
 2"7\n&CMsgClientSiteLicenseGetAvailableSeats
 2#.EPartnerLinkTrackingBackfillSource"|\n(CStore_UpdatePackageReservations_Request
@@ -9149,6 +9163,7 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI16CCloudControllerJjbEE
 20CJSMethodCallHandlerI17CSurveyControllerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI17CSurveyControllerJEE
+20CJSMethodCallHandlerI17CSurveyControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI17CSystemControllerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI17CSystemControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI17CSystemControllerJEE
@@ -9541,6 +9556,7 @@ ${LANGUAGE}
 21CAPICallResultPromiseI24SteamUGCQueryCompleted_tE
 21CAPICallResultPromiseI25ScreenshotBatchComplete_tE
 21CAPICallResultPromiseI26ClearAudioDefaultsResult_tE
+21CAPICallResultPromiseI26HardwareInformationSaved_tE
 21CAPICallResultPromiseI26SetPreferredLenderResult_tE
 21CAPICallResultPromiseI26SupportSystemReportReady_tE
 21CAPICallResultPromiseI28NetworkDeviceConnectResult_tE
@@ -9640,6 +9656,7 @@ ${LANGUAGE}
 21StoreItem_ReleaseInfo
 21StoreItem_Screenshots
 21TestExternalPrivilege
+21UserSystemInformation
 22.CBroadcast_WatchBroadcast_Response.EWatchResponse
 22CBaseScheduledFunction
 22CCaptureFramerateStats
@@ -10882,6 +10899,7 @@ ${LANGUAGE}
 36CWorkItemThreadedWriteResponseToDisk
 36ISteamNetworkingSignalingRecvContext
 36StoreItem_Reviews_StoreReviewSummary
+37CAccountHardware_SaveHardware_Request
 37CAuthentication_Token_Revoke_Response
 37CBluetoothManager_CancelPair_Response
 37CBluetoothManager_Disconnect_Response
@@ -10975,6 +10993,8 @@ ${LANGUAGE}
 384 Kbps
 384:H\n
 384K
+38CAccountHardware_SaveHardware_Response
+38CAccountHardware_SavedHardware_Details
 38CBroadcast_EndBroadcastSession_Request
 38CBroadcast_GetBroadcastStatus_Response
 38CBroadcast_GetBuildClipStatus_Response
@@ -11561,6 +11581,7 @@ ${LANGUAGE}
 43CUserAccount_GetClientWalletDetails_Request
 43CUserAccount_GetFriendInviteTokens_Response
 43CUserAccount_ViewFriendInviteToken_Response
+44CAccountHardware_ManageSavedHardware_Request
 44CAuthentication_MigrateMobileSession_Request
 44CAuthentication_RefreshToken_Revoke_Response
 44CBluetoothManager_GetAdapterDetails_Response
@@ -11632,6 +11653,8 @@ ${LANGUAGE}
 44CUserAccount_RevokeFriendInviteToken_Request
 44\r9MMR
 456789:;<=
+45CAccountHardware_GetSavedHardwareList_Request
+45CAccountHardware_ManageSavedHardware_Response
 45CAccountHardware_VRCompatibilityCheck_Request
 45CAuthentication_BeginAuthSessionViaQR_Request
 45CAuthentication_MigrateMobileSession_Response
@@ -11696,6 +11719,7 @@ ${LANGUAGE}
 45LobbyMatchmakingLegacy_GetLobbyStatus_Request
 45SiteServerUI_ClientStatus_Response_ClientInfo
 46$a
+46CAccountHardware_GetSavedHardwareList_Response
 46CAccountHardware_VRCompatibilityCheck_Response
 46CAuthenticationSupport_GetTokenHistory_Request
 46CAuthentication_BeginAuthSessionViaQR_Response
@@ -12237,6 +12261,7 @@ ${LANGUAGE}
 5\n1k_ECloudPendingRemoteOperationAppSessionSuspended
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
 5\n1k_EContentReportSubjectAction_BannedFromCommunity
+5\n1k_EGameFrameRateReportingPreference_Yes_Anonymous
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EPartnerEventDisplayLocation_AppDetailsActivity
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
@@ -12307,7 +12332,6 @@ ${LANGUAGE}
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
-61CClientMetrics_GamePerformance_Notification_SystemInformation
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
 61CGameNotifications_GetSessionDetails_Request_RequestedSession
@@ -12611,6 +12635,7 @@ ${LANGUAGE}
 8\n4k_EAppReportType_MtxWithNonSteamWalletPaymentMethods
 8\n4k_EClientNotificationType_SteamInputActionSetChanged
 8\n4k_EContentReportReason_GenderedNonConsensualMaterial
+8\n4k_EGameFrameRateReportingPreference_Yes_NonAnonymous
 8\n4k_EProfileCustomizationTypeAchievementsCompletionist
 8\n4k_ESteamDeckCompatibilityResultDisplayType_Invisible
 8\n4k_ESteamDeckKeyboardLayout_Chinese_Traditional_Quick
@@ -12768,6 +12793,7 @@ ${LANGUAGE}
 9GameNotes
 9Gamescope
 9GmlF8
+9H4u|
 9IGv
 9Inventory
 9PE,$
@@ -15036,6 +15062,7 @@ CClientJobRequestParentalRecoveryCode
 CClientJobRequestStoreAuthURL
 CClientJobRequestValidateMail
 CClientJobResumeSuspendedGames
+CClientJobSaveDeviceInformation
 CClientJobSendBroadcastPermissionsToServer
 CClientJobSendSignatureCheck
 CClientJobSendSteamServiceCheck
@@ -20297,6 +20324,7 @@ FvP24SteamRuntimeSystemInfo_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP24SteamUGCQueryCompleted_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP25ScreenshotBatchComplete_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP26ClearAudioDefaultsResult_tb9CSmartPtrI18CJSCallbackPromiseEE
+FvP26HardwareInformationSaved_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP26SetPreferredLenderResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP26SupportSystemReportReady_tb9CSmartPtrI18CJSCallbackPromiseEE
 FvP28NetworkDeviceConnectResult_tb9CSmartPtrI18CJSCallbackPromiseEE
@@ -21565,6 +21593,7 @@ GetRichPresenceLoc
 GetRoleActions
 GetRoles
 GetRolesForUser
+GetSavedHardwareList
 GetSecretConfiguration
 GetSendToClientSessions
 GetServerIPsBySteamID
@@ -22857,7 +22886,7 @@ J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
 J\nHBF
 J\n\tsummaries
 J\rS%H
-Jan 17 2026 01:53:14
+Jan 19 2026 20:29:52
 January
 Japanese
 Javanese
@@ -23542,6 +23571,7 @@ Maintenance
 Malay
 Malayalam
 Maltese
+ManageSavedHardware
 Management
 Manager
 Mandaic
@@ -24045,6 +24075,7 @@ Method GetRequests() not implemented.
 Method GetRoleActions() not implemented.
 Method GetRoles() not implemented.
 Method GetRolesForUser() not implemented.
+Method GetSavedHardwareList() not implemented.
 Method GetServerIPsBySteamID() not implemented.
 Method GetServerSteamIDsByIP() not implemented.
 Method GetServersForSteamPipe() not implemented.
@@ -24123,6 +24154,7 @@ Method LCSAuthenticate() not implemented.
 Method LeaveChatRoomGroup() not implemented.
 Method LeaveVoiceChat() not implemented.
 Method LockClient() not implemented.
+Method ManageSavedHardware() not implemented.
 Method ManuallyDeleteRecordingsForApps() not implemented.
 Method MarkMessageClicked() not implemented.
 Method MarkMessageSeen() not implemented.
@@ -24341,6 +24373,7 @@ Method RollbackFamilyGroup() not implemented.
 Method SafeModifyItems() not implemented.
 Method SaveChatRoomGroup() not implemented.
 Method SaveClip() not implemented.
+Method SaveHardware() not implemented.
 Method Search() not implemented.
 Method SearchAppDataCacheByStoreKeywords() not implemented.
 Method SearchForGame() not implemented.
@@ -26506,6 +26539,7 @@ PFvP24SteamRuntimeSystemInfo_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP24SteamUGCQueryCompleted_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP25ScreenshotBatchComplete_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP26ClearAudioDefaultsResult_tb9CSmartPtrI18CJSCallbackPromiseEE
+PFvP26HardwareInformationSaved_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP26SetPreferredLenderResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP26SupportSystemReportReady_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP28NetworkDeviceConnectResult_tb9CSmartPtrI18CJSCallbackPromiseEE
@@ -28295,7 +28329,6 @@ S[TR
 S\fWj
 S\n\rtrending_apps
 S\n\tlast_seen
-S\n\vsystem_info
 S\vQN
 S]OAkewy#-?1
 S_gO
@@ -29872,7 +29905,6 @@ System.UpdateSettings
 System.VideoRecordingDriverCheck
 System/Bluetooth/Enabled
 System/HardwareUpdater/Enabled
-SystemInformation
 SystemReport: found debug wifi trace file. Saving to: %s
 SystemRestartMachine
 SystemResumingFromSuspend_t: resumed from sleep
@@ -31012,6 +31044,7 @@ User.RemoveUser
 User.RequestSupportSystemReport
 User.ResumeSuspendedGames
 User.RunSurvey
+User.SaveHardwareInformationToAccount
 User.SendSurvey
 User.SetAsyncNotificationEnabled
 User.SetLoginCredentials
@@ -31028,6 +31061,7 @@ UserCreateSession
 UserDeleteSession
 UserRemoveTimelineEntry
 UserStatus
+UserSystemInformation
 UserUpdateSession
 UserUpdateTimelineEntry
 Using black frame\n
@@ -32261,6 +32295,7 @@ Zulu
 \n!CStore_GetDiscoveryQueue_Response
 \n!ClientCloudFileUploadBlockDetails
 \n!CommitGameRecordingSegmentsUpload
+\n!EGameFrameRateReportingPreference
 \n!EPublishedFileInappropriateResult
 \n!ESteamDeckCompatibilityTestResult
 \n!GetAllReservationPositionMessages
@@ -32399,6 +32434,7 @@ Zulu
 \n%steammessages_video.steamclient.proto
 \n%steammessages_virtualcontroller.proto"
 \n%u frame functions of type %s:\n\n
+\n&CAccountHardware_SavedHardware_Details
 \n&CBroadcast_GetBroadcastStatus_Response
 \n&CChatRoom_CreateChatRoomGroup_Response
 \n&CChatRoom_MessageReaction_Notification
@@ -33684,6 +33720,7 @@ Zulu
 \n\tvendor_id
 \n\tvideo_url
 \n\tvr_active
+\n\tvram_size
 \n\twebcookie
 \n\tzip_plus4
 \n\vAchievement
@@ -33763,6 +33800,7 @@ Zulu
 \n\vdevice_name
 \n\vdevice_type
 \n\vdpi_scaling
+\n\vdriver_date
 \n\vdriver_desc
 \n\vduration_ms
 \n\vdx_deviceid
@@ -34407,6 +34445,7 @@ aRe.
 aRecord
 aSRP
 aT\v>wB
+a\n\fSaveHardware
 a\n\fprivate_data
 a\n\nAddNumbers
 a\rxg[
@@ -34518,6 +34557,7 @@ ad dvcs
 ad_timestamping
 adapter
 adapter1
+adapter_description
 adapters
 adaptive_trailers
 add signer error
@@ -37361,6 +37401,7 @@ delayed_balance_newest_source
 delete
 delete-shortcut
 delete[]
+delete_hardware
 delete_on_cleanup
 deleted
 deleted_comments
@@ -37756,6 +37797,7 @@ drive
 drive-ata
 drive_id
 driver
+driver_version
 driver_version_major
 driver_version_minor
 driver_version_patch
@@ -37842,6 +37884,8 @@ dwPID
 dx != __null
 dx == 65536 * 2
 dx == 65536 * 4
+dx_driver_name
+dx_driver_version
 dy != __null
 dynamic
 dynamic_cast
@@ -38786,6 +38830,7 @@ friendid
 friendlyCountry
 friendlyCountryName
 friendlyName
+friendly_name_update
 friends
 friends_categorized_count
 friends_category_count
@@ -39150,7 +39195,7 @@ game_description
 game_device_name
 game_device_type
 game_extra_info
-game_framerate_report_enabled
+game_frame_rate_reporting
 game_group_count
 game_groups_collapsed
 game_id
@@ -39335,7 +39380,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenr#n
+ggen2
 ghost_
 gidlist
 gidparentcomment
@@ -42349,6 +42394,7 @@ handleValue
 handle_token
 handshake failure
 hardware
+hardware_cluster_id
 hardware_id
 hardware_updater_enabled
 hasPin
@@ -50836,6 +50882,7 @@ saltLength
 samesite
 sao5
 save_uncompressed_screenshots
+saved_hardware
 saved_revision
 saved_snapshot
 sbgp-autonomousSysNum
@@ -52833,6 +52880,7 @@ timescale
 timestamp
 timestamp_action
 timestamp_added
+timestamp_created
 timestamp_last_email_change
 timestamp_last_password_change
 timestamp_last_password_reset

@@ -1003,7 +1003,6 @@ $ffn
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 ()*+,-./*(((
 (0'yX
-(1ZO
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (INVALID PSS PARAMETERS)\n
@@ -1717,7 +1716,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:51:48
 08bX
 0?0L
 0A/8
@@ -2216,6 +2214,7 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
+20:29:35
 20CAlignedYUV420Buffer
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
@@ -2238,6 +2237,7 @@ $ffn
 21COpenSSLCachedSession
 21CScheduledFunctionMgr
 21CUtlCStringConversion
+21UserSystemInformation
 21VideoRepresentation_t
 22CBaseScheduledFunction
 22CClanMatchEventByRange
@@ -6385,7 +6385,7 @@ JSType
 JZJ{.
 J\nHBF
 J\rS%H
-Jan 17 2026
+Jan 19 2026
 January
 Japanese
 Job %llu (%s) aborting.  %s\n
@@ -6491,7 +6491,6 @@ KxSRP
 Kyrgyz
 L+5d
 L8-\rHO
-L9Z0
 LABEL_OPTIONAL
 LABEL_REPEATED
 LABEL_REQUIRED
@@ -9438,6 +9437,7 @@ User is associated with multiple cafes
 User is not associated with any cafes
 User-Agent
 UserStatus
+UserSystemInformation
 Ut]<E
 UtlThreadSafeQueue
 Uyghur
@@ -10070,6 +10070,7 @@ Zulu
 \n\fk_EMsgFSBase
 \n\fk_EMsgGSDeny
 \n\fk_EMsgGSKick
+\n\fmanufacturer
 \n\fmessage_body
 \n\fplatform_mac
 \n\frtime_before
@@ -10085,6 +10086,7 @@ Zulu
 \n\nTYPE_INT32
 \n\nTYPE_INT64
 \n\nboxed_type
+\n\ncpu_vendor
 \n\ndependency
 \n\ndeprecated
 \n\nevent_name
@@ -10095,6 +10097,7 @@ Zulu
 \n\nk_EMsgExit
 \n\nk_EMsgPing
 \n\nmanage_ceg
+\n\nsystem_ram
 \n\nticket_crc
 \n\ntimeout_ms
 \n\nupdatetime
@@ -10105,6 +10108,7 @@ Zulu
 \n\rTYPE_SFIXED64
 \n\rcomment_count
 \n\rdefault_value
+\n\rdx_video_card
 \n\rerror_message
 \n\rfriendly_name
 \n\rk_EEventStart
@@ -10165,6 +10169,7 @@ Zulu
 \n\ttrace_tag
 \n\ttype="%s"
 \n\ttype_name
+\n\tvram_size
 \n\tzip_plus4
 \n\vEnumOptions
 \n\vFileOptions
@@ -10175,6 +10180,9 @@ Zulu
 \n\vTYPE_UINT32
 \n\vTYPE_UINT64
 \n\vallow_alias
+\n\vdriver_date
+\n\vdx_deviceid
+\n\vdx_vendorid
 \n\vevent_notes
 \n\vk_EMsgAlert
 \n\vk_EMsgMulti
@@ -10458,6 +10466,7 @@ acpt_state
 active
 ad dvcs
 ad_timestamping
+adapter_description
 add signer error
 addProfessionInfo
 add_cert_dir
@@ -11694,6 +11703,7 @@ countryName
 countrycodes
 covalensolutions.com
 covariant return thunk to
+cpu_name
 crashhandler.so
 crashhandler002
 crashhandler003
@@ -12388,6 +12398,7 @@ drbg_bytes
 drbg_get_entropy
 drbg_setup
 driver
+driver_version
 dsa routines
 dsaEncryption
 dsaEncryption-old
@@ -12451,6 +12462,8 @@ dvcs
 dx != __null
 dx == 65536 * 2
 dx == 65536 * 4
+dx_driver_name
+dx_driver_version
 dy != __null
 dynamic
 dynamic_cast
@@ -12979,6 +12992,7 @@ gamepad_fps.vdf
 gamepad_joystick.vdf
 gamepad_platformer.vdf
 gameserver
+gaming_device_type
 gcm_ghash_4bit_mmx
 gcm_ghash_4bit_x86
 gcm_ghash_clmul
@@ -13037,7 +13051,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggenf
 givenName
 global constructors keyed to
 global destructors keyed to
@@ -16053,6 +16067,7 @@ mobile
 mobileTelephoneNumber
 mobilechat
 mode
+model
 modf
 module initialization error
 module=
@@ -16591,6 +16606,7 @@ num > 0
 num threads
 numElements <= m_nAllocationCount
 numElements >= 0
+num_gpu
 num_tickets
 number
 number too large

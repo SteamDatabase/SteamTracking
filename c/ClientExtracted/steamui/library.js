@@ -4913,6 +4913,7 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
+          _: () => _,
         });
         var _ = __webpack_require__("chunkid"),
           _ = __webpack_require__._(_),
@@ -6123,6 +6124,148 @@ var CLSTAMP = "steamdb";
           }
           getClassName() {
             return "UserContentDescriptorPreferences_ContentDescriptor";
+          }
+        }
+        class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.manufacturer || _._(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    manufacturer: {
+                      _: 1,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    model: {
+                      _: 2,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    dx_video_card: {
+                      _: 3,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    dx_vendorid: {
+                      _: 4,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    dx_deviceid: {
+                      _: 5,
+                      _: _._.readInt32,
+                      _: _._.writeInt32,
+                    },
+                    num_gpu: {
+                      _: 6,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    system_ram: {
+                      _: 7,
+                      _: _._.readUint64String,
+                      _: _._.writeUint64String,
+                    },
+                    _: {
+                      _: 8,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    cpu_vendor: {
+                      _: 9,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    cpu_name: {
+                      _: 10,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    gaming_device_type: {
+                      _: 11,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                    dx_driver_version: {
+                      _: 12,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    dx_driver_name: {
+                      _: 13,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    adapter_description: {
+                      _: 14,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    driver_version: {
+                      _: 15,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    driver_date: {
+                      _: 16,
+                      _: _._.readString,
+                      _: _._.writeString,
+                    },
+                    vram_size: {
+                      _: 17,
+                      _: _._.readUint32,
+                      _: _._.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _._(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _._(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new (_().BinaryReader)(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _._(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new (_().BinaryWriter)();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _._(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new (_().BinaryWriter)();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "UserSystemInformation";
           }
         }
       },
@@ -12938,9 +13081,9 @@ var CLSTAMP = "steamdb";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jan 16 2026 : 17:53:32",
-                BUILD_TIME_UTC: "Jan 17 2026 : 01:53:32",
-                BUILD_RTIME_UTC: 1768614812,
+                BUILD_TIME_LOCAL: "Jan 17 2026 : 13:00:57",
+                BUILD_TIME_UTC: "Jan 17 2026 : 21:00:57",
+                BUILD_RTIME_UTC: 1768683657,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -27099,7 +27242,6 @@ var CLSTAMP = "steamdb";
           _: () => _,
           _: () => _,
           _: () => _,
-          _: () => _,
           _: () => _._,
           _: () => _._,
           _: () => _._,
@@ -27424,9 +27566,9 @@ var CLSTAMP = "steamdb";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jan 16 2026 : 17:53:32",
-                    BUILD_TIME_UTC: "Jan 17 2026 : 01:53:32",
-                    BUILD_RTIME_UTC: 1768614812,
+                    BUILD_TIME_LOCAL: "Jan 17 2026 : 13:00:57",
+                    BUILD_TIME_UTC: "Jan 17 2026 : 21:00:57",
+                    BUILD_RTIME_UTC: 1768683657,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(_)
@@ -28244,7 +28386,7 @@ var CLSTAMP = "steamdb";
         9711: "2ed989ee7251a5d19c6f",
         9746: "02bbf44c33adfc258656",
         9779: "59ef76674166d4b9e52e",
-        9858: "0fd36bf169ca879a7e93",
+        9858: "1f96e0137562bb810fbf",
         9869: "0f5bcdc9b2a986acf0cb",
         9882: "637dab49993fdf9a1ce8",
         9887: "7cf35cb4b8f933215fb9",

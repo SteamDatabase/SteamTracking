@@ -690,6 +690,7 @@ $\nY8O
 *\n&k_EContentReportSubjectAction_Disputed
 *\n&k_EContentReportSubjectAction_Released
 *\n&k_EContentReportSubjectAction_Unlocked
+*\n&k_EGameFrameRateReportingPreference_No
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EResolutionAutomation_FullyAutomated
@@ -781,6 +782,7 @@ $\nY8O
 -\n)k_EContentReportReason_OtherScamsAndTheft
 -\n)k_EContentReportSubjectAction_TradeBanned
 -\n)k_EContentReportSubjectType_FriendChatMsg
+-\n)k_EGameFrameRateReportingPreference_Unset
 -\n)k_EProfileCustomizationTypeRecommendation
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
 -\n)k_ESystemDisplayCompatibilityMode_Invalid
@@ -1042,13 +1044,13 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
+1000
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789ABCDEF
 0123456789abcdef
-01:52:15
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
@@ -1063,7 +1065,6 @@ $\nY8O
 0\n,k_EPublishedFileInappropriateResult_Possible
 0\n,k_EPublishedFileInappropriateResult_Unlikely
 0x%llx
-1000
 10BlankImage
 10CBasePanel
 10CHintLabel
@@ -1486,6 +1487,7 @@ $\nY8O
 2*.google.protobuf.FieldDescriptorProto.Type
 2+.google.protobuf.FieldDescriptorProto.Label
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20:29:48
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
@@ -1635,6 +1637,7 @@ $\nY8O
 5T&w&
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
 5\n1k_EContentReportSubjectAction_BannedFromCommunity
+5\n1k_EGameFrameRateReportingPreference_Yes_Anonymous
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
 5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
@@ -1685,6 +1688,7 @@ $\nY8O
 8CMsgFind
 8\foQS
 8\n4k_EContentReportReason_GenderedNonConsensualMaterial
+8\n4k_EGameFrameRateReportingPreference_Yes_NonAnonymous
 8\n4k_EProfileCustomizationTypeAchievementsCompletionist
 8\n4k_ESteamDeckCompatibilityResultDisplayType_Invisible
 8\n4k_ESteamOSCompatibilityResultDisplayType_Unsupported
@@ -3860,7 +3864,7 @@ JSObjectProperty
 JSType
 JZJ{.
 J\nFk_PublishedFileQueryType_CreatedByFollowedUsersRankedByPublicationDate
-Jan 17 2026
+Jan 19 2026
 January
 Japanese
 Javanese
@@ -6125,6 +6129,7 @@ Zulu
 \n EWindowsUpdateInstallationImpact
 \n google/protobuf/descriptor.proto
 \n!CMsgVerticalScrollBarSizeResponse
+\n!EGameFrameRateReportingPreference
 \n!EPublishedFileInappropriateResult
 \n!ESteamDeckCompatibilityTestResult
 \n#CMsgHorizontalScrollBarSizeResponse

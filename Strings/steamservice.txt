@@ -1699,16 +1699,18 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+1000
+1024
+10000
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:51:48
 08bX
 0?0L
 0A/8
@@ -1749,9 +1751,6 @@ $ffn
 10.0.0.0/8
 10.4.252.0/24
 100 127.0.0.1 stale
-1000
-1024
-10000
 10CIPCServer
 10CNetFilter
 10CPipeEvent
@@ -2202,6 +2201,7 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
+20:29:35
 20CCDDBAppDetailCommon
 20CClientModuleManager
 20CClientSecureDesktop
@@ -2230,6 +2230,7 @@ $ffn
 21CWorkThreadPoolSignal
 21IClientProcessMonitor
 21IWorkThreadPoolSignal
+21UserSystemInformation
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -6088,7 +6089,7 @@ JSType
 JZJ{.
 J\nHBF
 J\rS%H
-Jan 17 2026
+Jan 19 2026
 January
 Japanese
 Job %llu (%s) aborting.  %s\n
@@ -8890,6 +8891,7 @@ User is associated with multiple cafes
 User is not associated with any cafes
 User-Agent
 UserStatus
+UserSystemInformation
 Ut]<E
 UtlThreadSafeQueue
 Uyghur
@@ -9407,6 +9409,7 @@ Zulu
 \n\fk_EMsgFSBase
 \n\fk_EMsgGSDeny
 \n\fk_EMsgGSKick
+\n\fmanufacturer
 \n\fmessage_body
 \n\fplatform_mac
 \n\frtime_before
@@ -9422,6 +9425,7 @@ Zulu
 \n\nTYPE_INT32
 \n\nTYPE_INT64
 \n\nboxed_type
+\n\ncpu_vendor
 \n\ndependency
 \n\ndeprecated
 \n\nevent_name
@@ -9432,6 +9436,7 @@ Zulu
 \n\nk_EMsgExit
 \n\nk_EMsgPing
 \n\nmanage_ceg
+\n\nsystem_ram
 \n\nticket_crc
 \n\ntimeout_ms
 \n\nupdatetime
@@ -9442,6 +9447,7 @@ Zulu
 \n\rTYPE_SFIXED64
 \n\rcomment_count
 \n\rdefault_value
+\n\rdx_video_card
 \n\rerror_message
 \n\rfriendly_name
 \n\rk_EEventStart
@@ -9493,6 +9499,7 @@ Zulu
 \n\trtime_end
 \n\ttrace_tag
 \n\ttype_name
+\n\tvram_size
 \n\tzip_plus4
 \n\vEnumOptions
 \n\vFileOptions
@@ -9503,6 +9510,9 @@ Zulu
 \n\vTYPE_UINT32
 \n\vTYPE_UINT64
 \n\vallow_alias
+\n\vdriver_date
+\n\vdx_deviceid
+\n\vdx_vendorid
 \n\vevent_notes
 \n\vk_EMsgAlert
 \n\vk_EMsgMulti
@@ -9782,6 +9792,7 @@ acpt_state
 active
 ad dvcs
 ad_timestamping
+adapter_description
 add signer error
 addProfessionInfo
 add_cert_dir
@@ -10911,6 +10922,7 @@ countryName
 countrycodes
 covalensolutions.com
 covariant return thunk to
+cpu_name
 crashhandler.so
 crashhandler002
 crashhandler003
@@ -11596,6 +11608,7 @@ drbg_bytes
 drbg_get_entropy
 drbg_setup
 driver
+driver_version
 dsa routines
 dsaEncryption
 dsaEncryption-old
@@ -11652,6 +11665,8 @@ duplicate compression id
 duplicate zone id
 dutch
 dvcs
+dx_driver_name
+dx_driver_version
 dynamic_cast
 e exp master
 e+ZQT
@@ -12167,6 +12182,7 @@ gamepad_fps.vdf
 gamepad_joystick.vdf
 gamepad_platformer.vdf
 gameserver
+gaming_device_type
 gcm_ghash_4bit_mmx
 gcm_ghash_4bit_x86
 gcm_ghash_clmul
@@ -12225,7 +12241,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen2$
 givenName
 global constructors keyed to
 global destructors keyed to
@@ -15178,6 +15194,7 @@ mobile
 mobileTelephoneNumber
 mobilechat
 mode
+model
 modf
 module initialization error
 module=
@@ -15710,6 +15727,7 @@ num > 0
 num threads
 numElements <= m_nAllocationCount
 numElements >= 0
+num_gpu
 num_tickets
 number
 number too large

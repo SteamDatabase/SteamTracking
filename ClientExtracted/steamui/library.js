@@ -1,4 +1,4 @@
-var CLSTAMP = "10374260";
+var CLSTAMP = "10375301";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4578,6 +4578,7 @@ var CLSTAMP = "10374260";
         "use strict";
         n.d(t, {
           LH: () => c,
+          Lu: () => w,
           O2: () => d,
           TT: () => u,
           WV: () => m,
@@ -5716,6 +5717,140 @@ var CLSTAMP = "10374260";
           }
           getClassName() {
             return "UserContentDescriptorPreferences_ContentDescriptor";
+          }
+        }
+        class w extends r.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              w.prototype.manufacturer || s.Sg(w.M()),
+              r.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              w.sm_m ||
+                (w.sm_m = {
+                  proto: w,
+                  fields: {
+                    manufacturer: {
+                      n: 1,
+                      br: s.qM.readString,
+                      bw: s.gp.writeString,
+                    },
+                    model: { n: 2, br: s.qM.readString, bw: s.gp.writeString },
+                    dx_video_card: {
+                      n: 3,
+                      br: s.qM.readString,
+                      bw: s.gp.writeString,
+                    },
+                    dx_vendorid: {
+                      n: 4,
+                      br: s.qM.readInt32,
+                      bw: s.gp.writeInt32,
+                    },
+                    dx_deviceid: {
+                      n: 5,
+                      br: s.qM.readInt32,
+                      bw: s.gp.writeInt32,
+                    },
+                    num_gpu: {
+                      n: 6,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    system_ram: {
+                      n: 7,
+                      br: s.qM.readUint64String,
+                      bw: s.gp.writeUint64String,
+                    },
+                    os: { n: 8, br: s.qM.readString, bw: s.gp.writeString },
+                    cpu_vendor: {
+                      n: 9,
+                      br: s.qM.readString,
+                      bw: s.gp.writeString,
+                    },
+                    cpu_name: {
+                      n: 10,
+                      br: s.qM.readString,
+                      bw: s.gp.writeString,
+                    },
+                    gaming_device_type: {
+                      n: 11,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    dx_driver_version: {
+                      n: 12,
+                      br: s.qM.readString,
+                      bw: s.gp.writeString,
+                    },
+                    dx_driver_name: {
+                      n: 13,
+                      br: s.qM.readString,
+                      bw: s.gp.writeString,
+                    },
+                    adapter_description: {
+                      n: 14,
+                      br: s.qM.readString,
+                      bw: s.gp.writeString,
+                    },
+                    driver_version: {
+                      n: 15,
+                      br: s.qM.readString,
+                      bw: s.gp.writeString,
+                    },
+                    driver_date: {
+                      n: 16,
+                      br: s.qM.readString,
+                      bw: s.gp.writeString,
+                    },
+                    vram_size: {
+                      n: 17,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                  },
+                }),
+              w.sm_m
+            );
+          }
+          static MBF() {
+            return w.sm_mbf || (w.sm_mbf = s.w0(w.M())), w.sm_mbf;
+          }
+          toObject(e = !1) {
+            return w.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return s.BT(w.M(), e, t);
+          }
+          static fromObject(e) {
+            return s.Uq(w.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new w();
+            return w.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return s.zj(w.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            s.i0(w.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              w.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "UserSystemInformation";
           }
         }
       },
@@ -11491,9 +11626,9 @@ var CLSTAMP = "10374260";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jan 16 2026 : 17:53:32",
-                BUILD_TIME_UTC: "Jan 17 2026 : 01:53:32",
-                BUILD_RTIME_UTC: 1768614812,
+                BUILD_TIME_LOCAL: "Jan 17 2026 : 13:00:57",
+                BUILD_TIME_UTC: "Jan 17 2026 : 21:00:57",
+                BUILD_RTIME_UTC: 1768683657,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -24874,7 +25009,6 @@ var CLSTAMP = "10374260";
           Hn: () => S,
           IW: () => y,
           NQ: () => L,
-          On: () => B,
           Pr: () => v,
           QO: () => l,
           Qn: () => d,
@@ -25186,9 +25320,9 @@ var CLSTAMP = "10374260";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jan 16 2026 : 17:53:32",
-                    BUILD_TIME_UTC: "Jan 17 2026 : 01:53:32",
-                    BUILD_RTIME_UTC: 1768614812,
+                    BUILD_TIME_LOCAL: "Jan 17 2026 : 13:00:57",
+                    BUILD_TIME_UTC: "Jan 17 2026 : 21:00:57",
+                    BUILD_RTIME_UTC: 1768683657,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25924,7 +26058,7 @@ var CLSTAMP = "10374260";
         9711: "2ed989ee7251a5d19c6f",
         9746: "02bbf44c33adfc258656",
         9779: "59ef76674166d4b9e52e",
-        9858: "0fd36bf169ca879a7e93",
+        9858: "1f96e0137562bb810fbf",
         9869: "0f5bcdc9b2a986acf0cb",
         9882: "637dab49993fdf9a1ce8",
         9887: "7cf35cb4b8f933215fb9",

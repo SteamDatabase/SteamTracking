@@ -98,10 +98,11 @@ $ORIGIN
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 0123456789ABCDEF
-01:51:53
 12CStdMemAlloc
 16CAdHocValidation
+20:29:38
 31CAdHocValidation_SimpleCallback
+3\t6C
 9IMemAlloc
 <family %u, %u bytes>
 <no address info>
@@ -298,7 +299,7 @@ IsSpewActive
 IsStackTrackingFiltered
 IsValidBoolValue
 JArray
-Jan 17 2026
+Jan 19 2026
 Jobs/Coroutines
 Leaked mem: %s %s\n
 Logger

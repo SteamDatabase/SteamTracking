@@ -1913,14 +1913,14 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
+00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:51:48
-01:51:57
 08bX
 0?0L
 0A/8
@@ -1954,6 +1954,7 @@ $ffn
 0\r8np
 0\tzc
 0`P0
+0af'
 0pp@5tqE?|sO541
 1!1'1-191C1E1K1]1a1g1m1s1
 1.2.11
@@ -1964,11 +1965,9 @@ $ffn
 100 127.0.0.1 stale
 1000
 1024
-00003333
 10000
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2428,6 +2427,9 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
+20:29:35
+20:29:43
+20:29:44
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2453,6 +2455,7 @@ $ffn
 21CPurchaseLineItemInfo
 21CScheduledFunctionMgr
 21CUtlCStringConversion
+21UserSystemInformation
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2606,6 +2609,7 @@ $ffn
 49fN
 4@AA
 4CJob
+4Od'
 4T9\n
 4\fZQ
 4\n/k_EMsgAISBroadcastSubordinateContentDescription
@@ -6615,7 +6619,7 @@ JSType
 JZJ{.
 J\nHBF
 J\rS%H
-Jan 17 2026
+Jan 19 2026
 January
 Japanese
 Job %llu (%s) aborting.  %s\n
@@ -8900,7 +8904,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Jan 17 2026 01:51:57
+Startup - updater built Jan 19 2026 20:29:43
 State
 StaticFileWriterThread()
 Steam
@@ -9637,6 +9641,7 @@ User is associated with multiple cafes
 User is not associated with any cafes
 User-Agent
 UserStatus
+UserSystemInformation
 Using the following download hosts for %s, Realm %s
 Using update UI: console
 Using update UI: glx
@@ -10322,6 +10327,7 @@ Zulu
 \n\fk_EMsgFSBase
 \n\fk_EMsgGSDeny
 \n\fk_EMsgGSKick
+\n\fmanufacturer
 \n\fmessage_body
 \n\fplatform_mac
 \n\frtime_before
@@ -10337,6 +10343,7 @@ Zulu
 \n\nTYPE_INT32
 \n\nTYPE_INT64
 \n\nboxed_type
+\n\ncpu_vendor
 \n\ndependency
 \n\ndeprecated
 \n\nevent_name
@@ -10347,6 +10354,7 @@ Zulu
 \n\nk_EMsgExit
 \n\nk_EMsgPing
 \n\nmanage_ceg
+\n\nsystem_ram
 \n\nticket_crc
 \n\ntimeout_ms
 \n\nupdatetime
@@ -10358,6 +10366,7 @@ Zulu
 \n\rclass_unknown
 \n\rcomment_count
 \n\rdefault_value
+\n\rdx_video_card
 \n\rerror_message
 \n\rfriendly_name
 \n\rk_EEventStart
@@ -10417,6 +10426,7 @@ Zulu
 \n\trtime_end
 \n\ttrace_tag
 \n\ttype_name
+\n\tvram_size
 \n\tzip_plus4
 \n\vEnumOptions
 \n\vFileOptions
@@ -10427,6 +10437,9 @@ Zulu
 \n\vTYPE_UINT32
 \n\vTYPE_UINT64
 \n\vallow_alias
+\n\vdriver_date
+\n\vdx_deviceid
+\n\vdx_vendorid
 \n\vevent_notes
 \n\vk_EMsgAlert
 \n\vk_EMsgMulti
@@ -10674,6 +10687,7 @@ active
 actual_hostname
 ad dvcs
 ad_timestamping
+adapter_description
 add signer error
 addProfessionInfo
 add_cert_dir
@@ -11848,6 +11862,7 @@ countrycodes
 counts
 covalensolutions.com
 covariant return thunk to
+cpu_name
 crashhandler.so
 crashhandler002
 crashhandler003
@@ -12538,6 +12553,7 @@ drbg_bytes
 drbg_get_entropy
 drbg_setup
 driver
+driver_version
 dsa routines
 dsaEncryption
 dsaEncryption-old
@@ -12597,6 +12613,8 @@ duplicate sRGB information ignored
 duplicate zone id
 dutch
 dvcs
+dx_driver_name
+dx_driver_version
 dylib
 dynamic_cast
 e exp master
@@ -13143,6 +13161,7 @@ gamepad_fps.vdf
 gamepad_joystick.vdf
 gamepad_platformer.vdf
 gameserver
+gaming_device_type
 gamma table being rebuilt
 gamma value
 gamma value does not match libpng estimate
@@ -13201,7 +13220,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenr
+ggen
 givenName
 glBegin
 glBindTexture
@@ -16285,6 +16304,7 @@ mobile
 mobileTelephoneNumber
 mobilechat
 mode
+model
 modf
 module initialization error
 module=
@@ -16706,6 +16726,7 @@ num > 0
 num threads
 numElements <= m_nAllocationCount
 numElements >= 0
+num_gpu
 num_tickets
 number
 number too large

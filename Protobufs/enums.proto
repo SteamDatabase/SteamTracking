@@ -474,6 +474,13 @@ enum EProvideDeckFeedbackPreference {
 	k_EProvideDeckFeedbackPreference_No = 2;
 }
 
+enum EGameFrameRateReportingPreference {
+	k_EGameFrameRateReportingPreference_Unset = 0;
+	k_EGameFrameRateReportingPreference_No = 1;
+	k_EGameFrameRateReportingPreference_Yes_Anonymous = 2;
+	k_EGameFrameRateReportingPreference_Yes_NonAnonymous = 3;
+}
+
 enum ETouchGesture {
 	k_ETouchGestureNone = 0;
 	k_ETouchGestureTouch = 1;

@@ -168,6 +168,40 @@ message CAccountHardware_GetSteamDeckComponents_Response {
 	optional string json_components = 1;
 }
 
+message CAccountHardware_SaveHardware_Request {
+	optional string friendly_name = 1;
+	optional .UserSystemInformation system_info = 2;
+}
+
+message CAccountHardware_SaveHardware_Response {
+	optional uint64 hardware_id = 1;
+}
+
+message CAccountHardware_ManageSavedHardware_Request {
+	optional uint64 hardware_id = 1;
+	optional bool delete_hardware = 2;
+	optional string friendly_name_update = 3;
+}
+
+message CAccountHardware_ManageSavedHardware_Response {
+}
+
+message CAccountHardware_GetSavedHardwareList_Request {
+	optional fixed64 steamid = 1;
+}
+
+message CAccountHardware_SavedHardware_Details {
+	optional uint64 hardware_id = 1;
+	optional string friendly_name = 2;
+	optional uint32 timestamp_created = 3;
+	optional uint64 hardware_cluster_id = 4;
+	optional .UserSystemInformation system_info = 5;
+}
+
+message CAccountHardware_GetSavedHardwareList_Response {
+	repeated .CAccountHardware_SavedHardware_Details saved_hardware = 1;
+}
+
 service AccountHardware {
 	rpc RegisterSteamController (.CAccountHardware_RegisterSteamController_Request) returns (.CAccountHardware_RegisterSteamController_Response);
 	rpc CompleteSteamControllerRegistration (.CAccountHardware_CompleteSteamControllerRegistration_Request) returns (.CAccountHardware_CompleteSteamControllerRegistration_Response);
@@ -181,4 +215,7 @@ service AccountHardware {
 	rpc VRCompatibilityCheck (.CAccountHardware_VRCompatibilityCheck_Request) returns (.CAccountHardware_VRCompatibilityCheck_Response);
 	rpc RegisterValveIndexComponent (.CAccountHardware_RegisterValveIndexComponent_Request) returns (.CAccountHardware_RegisterValveIndexComponent_Response);
 	rpc GetSteamDeckComponents (.CAccountHardware_GetSteamDeckComponents_Request) returns (.CAccountHardware_GetSteamDeckComponents_Response);
+	rpc SaveHardware (.CAccountHardware_SaveHardware_Request) returns (.CAccountHardware_SaveHardware_Response);
+	rpc ManageSavedHardware (.CAccountHardware_ManageSavedHardware_Request) returns (.CAccountHardware_ManageSavedHardware_Response);
+	rpc GetSavedHardwareList (.CAccountHardware_GetSavedHardwareList_Request) returns (.CAccountHardware_GetSavedHardwareList_Response);
 }

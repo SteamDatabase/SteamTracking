@@ -289,7 +289,6 @@ message CMsgClientSettings {
 	optional int32 system_idle_suspend_ac_sec = 24004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\System\\IdleSuspendACSeconds", (setting_default_int) = 3600];
 	optional bool system_enable_low_power_downloads = 24005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\System\\EnableLowPowerDownloads", (setting_default_bool) = true];
 	optional bool system_allow_battery_low_power_downloads = 24006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Software\\Valve\\Steam\\System\\AllowBatteryLowPowerDownloads", (setting_default_bool) = false];
-	optional .EFrameRateReportEnabled game_framerate_report_enabled = 24007 [default = k_EFrameRateReportEnabled_Unset, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "System/GameFrameRateReportEnabled", (setting_default_int) = 0];
 	optional bool vr_show_perf_graph_in_hmd = 25000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "VR/ShowPerfGraphInHMD", (setting_default_bool) = false];
 	optional bool accessibility_debug_visualizer = 26000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Accessibility/DebugVisualizer", (setting_default_bool) = false];
 	optional bool accessibility_screen_reader_enabled = 26001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Accessibility/ScreenReaderEnabled", (setting_default_bool) = false];

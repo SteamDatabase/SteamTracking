@@ -1222,6 +1222,7 @@
 "z\n CPlayer_GetPostedStatus_Response
 "z\n%CSiteLicense_LCSAuthenticate_Response
 "z\n)CGameRecording_ExportClipPreview_Response
+"z\n,CAccountHardware_ManageSavedHardware_Request
 "z\n,CFamilyGroups_GetInviteCheckResults_Response
 "{\n2CContentServerDirectory_GetDepotPatchInfo_Response
 "|\n)CFamilyGroups_GetPurchaseRequests_Request
@@ -2762,6 +2763,7 @@ $steammessages_parental_objects.proto"
 &&Lj66lZ??~A
 &'&)&5&;&?&K&S&Y&e&i&o&{&
 &'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
+&.CAccountHardware_SaveHardware_Request
 &.CAuthentication_Token_Revoke_Response"
 &.CBluetoothManager_CancelPair_Response
 &.CBluetoothManager_Disconnect_Response
@@ -3028,6 +3030,7 @@ $steammessages_parental_objects.proto"
 ' missing required attribute '
 ' missing required child '
 '%s' appears to be a directory - please specify your actual game binary\r\n
+'.CAccountHardware_SaveHardware_Response"
 '.CBroadcast_EndBroadcastSession_Request
 '.CBroadcast_GetBroadcastStatus_Response"
 '.CBroadcast_GetBuildClipStatus_Response"
@@ -3794,6 +3797,7 @@ $steammessages_parental_objects.proto"
 (\t"+\n)CSleepManager_SwitchToPowerState_Response"$\n"CSleepManager_RequestSleep_Request"%\n#CSleepManager_RequestSleep_Response*
 (\t",\n*CChatRoom_SetChatRoomGroupTagline_Response"U\n(CChatRoom_SetChatRoomGroupAvatar_Request
 (\t".\n,CSteamTV_SetBroadcastChannelProfile_Response"K\n+CSteamTV_GetBroadcastChannelProfile_Request
+(\t"/\n-CAccountHardware_ManageSavedHardware_Response"@\n-CAccountHardware_GetSavedHardwareList_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
 (\t"/\n-CUserAccount_RevokeFriendInviteToken_Response">\n'CUserAccount_RegisterCompatTool_Request
 (\t"0\n.CBroadcast_SendBroadcastStateToServer_Response"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
@@ -3892,6 +3896,7 @@ $steammessages_parental_objects.proto"
 (\t"i\n&CInventoryClient_NewItems_Notification
 (\t"i\n)CPublishedFile_AddAppRelationship_Request
 (\t"j\n'CClientMetrics_AppInterfaceMethodCounts
+(\t"k\n%CAccountHardware_SaveHardware_Request
 (\t"l\n7CDepotContentDetection_GetAllDetectedAppContent_Request
 (\t"m\n'CSteamTV_GetBroadcastChannelID_Response
 (\t"m\n9CAccountHardware_QueryAccountsRegisteredToSerial_Accounts
@@ -4040,6 +4045,7 @@ $steammessages_parental_objects.proto"
 (\v2&.ParentalTemporaryPlaytimeRestrictionsB
 (\v2&.google.protobuf.ExtensionRangeOptions
 (\v2&.google.protobuf.MethodDescriptorProto
+(\v2'.CAccountHardware_SavedHardware_Details*
 (\v2'.CClientMetrics_ClientBootstrap_Summary"
 (\v2'.CClientMetrics_IPv6Connectivity_Result
 (\v2'.CGameRecording_QueryPhases_Request.Tag
@@ -4259,7 +4265,6 @@ $steammessages_parental_objects.proto"
 (\v2<.CStore_GetTrendingAppsAmongFriends_Response.TrendingAppData
 (\v2=.CCommunity_GetAppRichPresenceLocalization_Response.TokenList
 (\v2=.CPlayer_GetAchievementsProgress_Response.AchievementProgress
-(\v2>.CClientMetrics_GamePerformance_Notification.SystemInformation
 (\v2>.CEcon_GetInventoryItemsWithDescriptions_Request.FilterOptions
 (\v2>.CFamilyGroupsClient_NotifyRunningApps_Notification.RunningApp
 (\v2>.CGameNotifications_GetSessionDetails_Request.RequestedSession
@@ -5065,6 +5070,7 @@ $steammessages_parental_objects.proto"
 *\n&k_EContentReportSubjectAction_Unlocked
 *\n&k_EControllerElementTypeTrackpadCenter
 *\n&k_EDeviceDisconnectMethodFeatureReport
+*\n&k_EGameFrameRateReportingPreference_No
 *\n&k_EMarketingMessageClickLocation_Image
 *\n&k_EMarketingMessageTemplate_AutoRender
 *\n&k_ENotificationSettingNotifyUseDefault
@@ -5306,6 +5312,7 @@ $steammessages_parental_objects.proto"
 +\n\vmethod_type
 +\n\vmouse_wheel
 +\n\vscreenshots
++\n\vsystem_info
 +automatic
 +en+eo+
 +k=\fD5K
@@ -5685,6 +5692,7 @@ $steammessages_parental_objects.proto"
 --valve-enable-accessibility
 --valve-enable-site-isolation
 --valve-initial-threadpool-size=%d
+-.CAccountHardware_ManageSavedHardware_Request
 -.CAuthentication_MigrateMobileSession_Request
 -.CAuthentication_RefreshToken_Revoke_Response"
 -.CBluetoothManager_GetAdapterDetails_Response
@@ -5803,6 +5811,7 @@ $steammessages_parental_objects.proto"
 -\n)k_EContentReportSubjectType_FriendChatMsg
 -\n)k_EControllerElementTypeButtonBumperRight
 -\n)k_EControllerElementTypeButtonTriggerLeft
+-\n)k_EGameFrameRateReportingPreference_Unset
 -\n)k_EPartnerLinkTrackingBackfillSource_None
 -\n)k_EProfileCustomizationTypeRecommendation
 -\n)k_EPublishedFileRevision_ApprovedSnapshot
@@ -6018,6 +6027,8 @@ $steammessages_parental_objects.proto"
 ../state_%u_%u.patch
 ../state_%u_%u_%llu.patch
 ../ubuntu12_64/steamwebhelper.sh
+..CAccountHardware_GetSavedHardwareList_Request
+..CAccountHardware_ManageSavedHardware_Response"
 ..CAccountHardware_VRCompatibilityCheck_Request
 ..CAuthentication_BeginAuthSessionViaQR_Request
 ..CAuthentication_MigrateMobileSession_Response"
@@ -6755,6 +6766,9 @@ $steammessages_parental_objects.proto"
 .StoreItem.Trailers.Trailer
 .StoreItem.Trailers.VideoSource
 .Too many IDATs found
+.UserSystemInformation
+.UserSystemInformation"=\n&CAccountHardware_SaveHardware_Response
+.UserSystemInformation"q\n.CAccountHardware_GetSavedHardwareList_Response
 .VideoBookmark":\n CVideo_UnlockedH264_Notification
 .VideoBookmark"I\n CVideo_GetVideoBookmarks_Request
 .WebUINoResponse
@@ -6884,6 +6898,7 @@ $steammessages_parental_objects.proto"
 /'/)/A/E/K/M/Q/W/o/u/}/
 /)IMT
 /+ep+eqU
+/.CAccountHardware_GetSavedHardwareList_Response"
 /.CAccountHardware_VRCompatibilityCheck_Response"
 /.CAuthenticationSupport_GetTokenHistory_Request
 /.CAuthentication_BeginAuthSessionViaQR_Response"
@@ -7784,11 +7799,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -9737,6 +9752,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI36CMsgFSEnumerateFollowingListResponseE
 12CProtoBufMsgI36CMsgRemoteDeviceAuthorizationRequestE
 12CProtoBufMsgI36CPlayer_LastPlayedTimes_NotificationE
+12CProtoBufMsgI37CAccountHardware_SaveHardware_RequestE
 12CProtoBufMsgI37CBroadcast_SessionClosed_NotificationE
 12CProtoBufMsgI37CCloud_ClientGetAppQuotaUsage_RequestE
 12CProtoBufMsgI37CCloud_CompleteAppUploadBatch_RequestE
@@ -9751,6 +9767,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI37CMsgClientUCMDeleteScreenshotResponseE
 12CProtoBufMsgI37CMsgRemoteDeviceAuthorizationResponseE
 12CProtoBufMsgI37CParental_ParentalUnlock_NotificationE
+12CProtoBufMsgI38CAccountHardware_SaveHardware_ResponseE
 12CProtoBufMsgI38CCloud_ClientGetAppQuotaUsage_ResponseE
 12CProtoBufMsgI38CCloud_CompleteAppUploadBatch_ResponseE
 12CProtoBufMsgI38CInventoryClient_NewItems_NotificationE
@@ -11198,6 +11215,7 @@ $steammessages_parental_objects.proto"
 2!.EMarketingMessageAssociationType
 2!.ERemoteDeviceAuthorizationResult
 2!.ERemoteDeviceAuthorizationResult"
+2".EGameFrameRateReportingPreference"
 2"7\n&CMsgClientSiteLicenseGetAvailableSeats
 2"A\n#CMsgGSComputeNewPlayerCompatibility
 2"g\n0CMsgClientUCMEnumeratePublishedFilesByUserAction
@@ -11259,11 +11277,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-20000
-2000000
 200M
 2019
 2048
+20000
+2000000
 20AccountHardware_Stub
 20AppOwnershipTicket_t
 20BroadcastClient_Stub
@@ -11549,6 +11567,7 @@ $steammessages_parental_objects.proto"
 21StoreItem_Screenshots
 21TestExternalPrivilege
 21TradeInviteCanceled_t
+21UserSystemInformation
 22.CBroadcast_WatchBroadcast_Response.EWatchResponse
 22AES_GCM_DecryptContext
 22AES_GCM_EncryptContext
@@ -13079,6 +13098,7 @@ $steammessages_parental_objects.proto"
 31CClientJobNotifyMessageReaction
 31CClientJobP2PConnectionFailInfo
 31CClientJobRemoveFriendFromGroup
+31CClientJobSaveDeviceInformation
 31CClientJobSendSteamServiceCheck
 31CClientJobSubmitOfflinePlaytime
 31CClientJobUpdateGuestPassesList
@@ -13810,6 +13830,7 @@ $steammessages_parental_objects.proto"
 36OverlayNotificationPositionChanged_t
 36RemoteStorage_AppCloudStateChanged_t
 36StoreItem_Reviews_StoreReviewSummary
+37CAccountHardware_SaveHardware_Request
 37CAuthentication_Token_Revoke_Response
 37CBluetoothManager_CancelPair_Response
 37CBluetoothManager_Disconnect_Response
@@ -13932,6 +13953,8 @@ $steammessages_parental_objects.proto"
 38CAPIJobGSComputeNewPlayerCompatibility
 38CAPIJobGetUserPublishedItemVoteDetails
 38CAPIJobUpdateSteamAnnouncementLastRead
+38CAccountHardware_SaveHardware_Response
+38CAccountHardware_SavedHardware_Details
 38CBroadcast_EndBroadcastSession_Request
 38CBroadcast_GetBroadcastStatus_Response
 38CBroadcast_GetBuildClipStatus_Response
@@ -14620,6 +14643,7 @@ $steammessages_parental_objects.proto"
 43CUserAccount_ViewFriendInviteToken_Response
 43RemoteStorage_SteamCloudEnableStateChange_t
 43zV18
+44CAccountHardware_ManageSavedHardware_Request
 44CAuthentication_MigrateMobileSession_Request
 44CAuthentication_RefreshToken_Revoke_Response
 44CBluetoothManager_GetAdapterDetails_Response
@@ -14700,6 +14724,8 @@ $steammessages_parental_objects.proto"
 44RemoteStorage_SubscribedFileDownloadQueued_t
 44\r9MMR
 456789:;<=
+45CAccountHardware_GetSavedHardwareList_Request
+45CAccountHardware_ManageSavedHardware_Response
 45CAccountHardware_VRCompatibilityCheck_Request
 45CAuthentication_BeginAuthSessionViaQR_Request
 45CAuthentication_MigrateMobileSession_Response
@@ -14771,6 +14797,7 @@ $steammessages_parental_objects.proto"
 45SiteServerUI_ClientStatus_Response_ClientInfo
 46$a
 46CAPIJobEnumerateUserSubscribedFilesWithUpdates
+46CAccountHardware_GetSavedHardwareList_Response
 46CAccountHardware_VRCompatibilityCheck_Response
 46CAuthenticationSupport_GetTokenHistory_Request
 46CAuthentication_BeginAuthSessionViaQR_Response
@@ -15345,6 +15372,7 @@ $steammessages_parental_objects.proto"
 5\n1k_ECloudPendingRemoteOperationAppSessionSuspended
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
 5\n1k_EContentReportSubjectAction_BannedFromCommunity
+5\n1k_EGameFrameRateReportingPreference_Yes_Anonymous
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EPartnerEventDisplayLocation_AppDetailsActivity
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
@@ -15417,7 +15445,6 @@ $steammessages_parental_objects.proto"
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
-61CClientMetrics_GamePerformance_Notification_SystemInformation
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
 61CGameNotifications_GetSessionDetails_Request_RequestedSession
@@ -15848,6 +15875,8 @@ $steammessages_parental_objects.proto"
 8CAutoPtrI20CBatteryStateManagerE
 8CAutoPtrI20CDisplayColorManagerE
 8CAutoPtrI21CMsgSystemUpdateStateE
+8CAutoPtrI21UserSystemInformationE
+8CAutoPtrI22CStore_UserPreferencesE
 8CAutoPtrI25CMsgSystemManagerSettingsE
 8CAutoPtrI27CMsgSystemAudioManagerStateE
 8CAutoPtrI28CMsgSystemPerfDiagnosticInfoE
@@ -15856,7 +15885,6 @@ $steammessages_parental_objects.proto"
 8CAutoPtrI32CMsgCloudPendingRemoteOperationsE
 8CAutoPtrI33CGameNetworkingUI_ConnectionStateE
 8CAutoPtrI41CDockUnsupportedFirmwareWorkaroundManagerE
-8CAutoPtrI61CClientMetrics_GamePerformance_Notification_SystemInformationE
 8CAutoPtrI7CUtlSetI10CUtlStringi8CDefLessEE
 8CAutoPtrI7CUtlSetIyi8CDefLessEE
 8CFunctor
@@ -15889,6 +15917,7 @@ $steammessages_parental_objects.proto"
 8\n3k_EMsgDRMWorkerProcessInstallProcessedFilesResponse
 8\n4k_EAppReportType_MtxWithNonSteamWalletPaymentMethods
 8\n4k_EContentReportReason_GenderedNonConsensualMaterial
+8\n4k_EGameFrameRateReportingPreference_Yes_NonAnonymous
 8\n4k_EProfileCustomizationTypeAchievementsCompletionist
 8\n4k_ESteamDeckCompatibilityResultDisplayType_Invisible
 8\n4k_ESteamDeckKeyboardLayout_Chinese_Traditional_Quick
@@ -15997,7 +16026,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9HXm]
 9IClientVR
 9IGv
 9ISteamUGC
@@ -16894,6 +16922,7 @@ AccountHardware.CompleteSteamControllerRegistration#1
 AccountHardware.QueryAccountsRegisteredToController#1
 AccountHardware.RegisterSteamController#1
 AccountHardware.RegisterValveIndexComponent#1
+AccountHardware.SaveHardware#1
 AccountIDCreator
 AccountIDLastUpdated
 AccountID_t
@@ -18766,6 +18795,7 @@ CClientJobRequestStoreAuthURL
 CClientJobRequestValidateMail
 CClientJobResumeSuspendedGames
 CClientJobRichPresenceInfo
+CClientJobSaveDeviceInformation
 CClientJobScreenshotsChangedOnServer
 CClientJobSendBroadcastPermissionsToServer
 CClientJobSendSignatureCheck
@@ -26198,6 +26228,7 @@ GetRolesForUser
 GetRunningGameID
 GetRunningGamePID
 GetSTUNServer
+GetSavedHardwareList
 GetScreenshotVRType
 GetSeat
 GetSecondsSinceAppActive
@@ -28632,6 +28663,7 @@ Malformed TrackerToClientRelayRemoteCandidates, got %llu bytes when expecting %d
 Malformed TrackerToClientRelayRemoteCandidates, got %llu bytes\n
 Malformed TrackerToClientRequestConnectionNack, got %llu bytes\n
 Maltese
+ManageSavedHardware
 Management
 Manager
 Mandaic
@@ -29118,6 +29150,7 @@ Method GetRequests() not implemented.
 Method GetRoleActions() not implemented.
 Method GetRoles() not implemented.
 Method GetRolesForUser() not implemented.
+Method GetSavedHardwareList() not implemented.
 Method GetServerIPsBySteamID() not implemented.
 Method GetServerSteamIDsByIP() not implemented.
 Method GetServersForSteamPipe() not implemented.
@@ -29196,6 +29229,7 @@ Method LCSAuthenticate() not implemented.
 Method LeaveChatRoomGroup() not implemented.
 Method LeaveVoiceChat() not implemented.
 Method LockClient() not implemented.
+Method ManageSavedHardware() not implemented.
 Method ManuallyDeleteRecordingsForApps() not implemented.
 Method MarkMessageClicked() not implemented.
 Method MarkMessageSeen() not implemented.
@@ -29414,6 +29448,7 @@ Method RollbackFamilyGroup() not implemented.
 Method SafeModifyItems() not implemented.
 Method SaveChatRoomGroup() not implemented.
 Method SaveClip() not implemented.
+Method SaveHardware() not implemented.
 Method Search() not implemented.
 Method SearchAppDataCacheByStoreKeywords() not implemented.
 Method SearchForGame() not implemented.
@@ -34055,7 +34090,6 @@ S[TR
 S\fWj
 S\n\rtrending_apps
 S\n\tlast_seen
-S\n\vsystem_info
 S\vQN
 S_gO
 SafeMode
@@ -34083,6 +34117,7 @@ SaveChatRoomGroup
 SaveClip
 SaveControllerPersonalizationFile
 SaveHTTPResponseBodyToDisk
+SaveHardwareInformationToAccount
 SaveInstallBaseFolders: rejecting attempt to save with no libraries
 SaveLicensesToDisk
 Saved refresh rate value is outside of range, clamping to: %d -> %d
@@ -35696,6 +35731,7 @@ Store
 Store / Billing country code mismatch
 Store / Business country code mismatch
 Store Promotion
+Store.GetStorePreferences#1
 StoreBrowseContext
 StoreBrowseFilterFailure
 StoreBrowseItemDataRequest
@@ -35841,7 +35877,6 @@ System
 SystemGoingIntoSuspend_t
 SystemIM
 SystemInfo
-SystemInformation
 SystemManager.Hibernate#1
 SystemManager.WriteFile#1
 SystemManagerBrightnessChange
@@ -36843,6 +36878,7 @@ Underflowing total bytes
 Unencrypted
 Unencrypted addresses only allowed to 'dev' POPID
 Unexpected AvailAnyRouterCommunication %d
+Unexpected EGameFrameRateReportingPreference value: %d\n
 Unexpected IP_TOS cmsg_len %lld
 Unexpected NoConnection
 Unexpected P2PSessionError %d
@@ -37236,6 +37272,7 @@ UserStats() called on incorrect user type
 UserStatsLock
 UserStatus
 UserStopDelayUSec
+UserSystemInformation
 UserUpdateSession
 UserUpdateTimelineEntry
 Using %u/%u chunks from %s
@@ -39164,6 +39201,7 @@ Zulu
 \n!CStore_GetDiscoveryQueue_Response
 \n!ClientCloudFileUploadBlockDetails
 \n!CommitGameRecordingSegmentsUpload
+\n!EGameFrameRateReportingPreference
 \n!EPublishedFileInappropriateResult
 \n!ESteamDeckCompatibilityTestResult
 \n!GetAllReservationPositionMessages
@@ -39323,6 +39361,7 @@ Zulu
 \n%steammessages_virtualcontroller.proto"
 \n%steamnetworkingsockets_messages.proto
 \n%u frame functions of type %s:\n\n
+\n&CAccountHardware_SavedHardware_Details
 \n&CBroadcast_GetBroadcastStatus_Response
 \n&CChatRoom_CreateChatRoomGroup_Response
 \n&CChatRoom_MessageReaction_Notification
@@ -40822,6 +40861,7 @@ Zulu
 \n\tvideo_url
 \n\tvotes_for
 \n\tvr_active
+\n\tvram_size
 \n\twebcookie
 \n\tzip_plus4
 \n\vAchievement
@@ -40910,6 +40950,7 @@ Zulu
 \n\vdlc_context
 \n\vdown_dscp45
 \n\vdpi_scaling
+\n\vdriver_date
 \n\vdriver_desc
 \n\vduration_ms
 \n\vdx_deviceid
@@ -41521,6 +41562,7 @@ aRSA
 aRe.
 aRecord
 aSRP
+a\n\fSaveHardware
 a\n\fprivate_data
 a\n\nAddNumbers
 a\n\rRouterQuality
@@ -41640,6 +41682,7 @@ actual_hostname
 ad dvcs
 ad_timestamping
 adapter
+adapter_description
 adapters
 adaptive_centering
 adaptive_threshold
@@ -44623,6 +44666,7 @@ delayed_balance_in_usd
 delayed_balance_newest_source
 delete
 delete[]
+delete_hardware
 delete_on_cleanup
 deleted
 deleted_comments
@@ -45047,6 +45091,7 @@ drbg_get_entropy
 drbg_setup
 drive_id
 driver
+driver_version
 drives
 drms
 dropping request without auth: %s
@@ -45127,6 +45172,8 @@ durationcontrol_log
 dutch
 dvcs
 dwProcID != 0
+dx_driver_name
+dx_driver_version
 dynamic_cast
 e exp master
 e%LI
@@ -46113,6 +46160,7 @@ friendid
 friendlyCountry
 friendlyCountryName
 friendlyName
+friendly_name_update
 friends
 friends_categorized_count
 friends_category_count
@@ -46471,6 +46519,7 @@ game_device_name
 game_device_type
 game_dir
 game_extra_info
+game_frame_rate_reporting
 game_group_count
 game_groups_collapsed
 game_id
@@ -46622,7 +46671,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen6
 ghjkl
 gidlist
 gidparentcomment
@@ -47040,6 +47089,7 @@ haptic_off_divisor
 haptic_tick_gain_modifier
 haptics
 hardware
+hardware_cluster_id
 has_adult_content
 has_adult_content_sex
 has_adult_content_violence
@@ -52491,6 +52541,7 @@ m_pSteamUserNetworkingSerializer
 m_pSteamUserSerializer
 m_pSteamUserStatsSerializer
 m_pSteamVideoSerializer
+m_pStorePreferences
 m_pStreamingHandler
 m_pSysManager
 m_pSystemAudioManager
@@ -57332,6 +57383,7 @@ samplerate
 sanitize shortcut app id %s: replacing %u with %u, reason: %s\n
 sao5
 saved
+saved_hardware
 saved_revision
 saved_snapshot
 savefiles
@@ -58451,7 +58503,7 @@ stderr
 stdin
 stdout
 steam
-steam Jan 17 2026 01:53:38
+steam Jan 19 2026 20:29:49
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -58743,6 +58795,7 @@ store_country_code
 store_page_filter
 store_url_path
 store_url_path_override
+storepreferences
 str:
 str:%s
 strCacheFilePath
@@ -59241,6 +59294,7 @@ timeout/neterror
 timestamp
 timestamp_action
 timestamp_added
+timestamp_created
 timestamp_last_email_change
 timestamp_last_password_change
 timestamp_last_password_reset

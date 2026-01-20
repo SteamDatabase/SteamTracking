@@ -759,6 +759,7 @@ $\nY8O
 *\n&k_EContentReportSubjectAction_Disputed
 *\n&k_EContentReportSubjectAction_Released
 *\n&k_EContentReportSubjectAction_Unlocked
+*\n&k_EGameFrameRateReportingPreference_No
 *\n&k_EPersonaStateFlag_RemotePlayTogether
 *\n&k_EProvideDeckFeedbackPreference_Unset
 *\n&k_EResolutionAutomation_FullyAutomated
@@ -873,6 +874,7 @@ $\nY8O
 -\n)k_EContentReportReason_OtherScamsAndTheft
 -\n)k_EContentReportSubjectAction_TradeBanned
 -\n)k_EContentReportSubjectType_FriendChatMsg
+-\n)k_EGameFrameRateReportingPreference_Unset
 -\n)k_EProfileCustomizationTypeRecommendation
 -\n)k_ESteamDeckCompatibilityCategory_Unknown
 -\n)k_ESystemDisplayCompatibilityMode_Invalid
@@ -1151,12 +1153,10 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-1000
-123456789
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789ABCDEF
 0123456789abcdef
 0F`8
@@ -1185,6 +1185,7 @@ $\nY8O
 0x%llx
 1.2.11
 1.6.37
+1000
 10BlankImage
 10CHintLabel
 10CMsgGoBack
@@ -1390,6 +1391,7 @@ $\nY8O
 11IVGuiModule
 11KeyValuesAD
 11ParentalApp
+123456789
 12CAudioFormat
 12CAutoReleaseI15CJSCallbackFuncE
 12CAutoReleaseI18CJSCallbackPromiseE
@@ -1955,6 +1957,7 @@ $\nY8O
 5\n1k_EClientNotificationType_RemoteClientStartStream
 5\n1k_EContentReportReason_FakedNonConsensualMaterial
 5\n1k_EContentReportSubjectAction_BannedFromCommunity
+5\n1k_EGameFrameRateReportingPreference_Yes_Anonymous
 5\n1k_ENewSteamAnnouncementState_FeaturedAnnouncement
 5\n1k_EProfileCustomizationTypeLoyaltyRewardReactions
 5\n1k_ESteamDeckCompatibilityTestResult_NotApplicable
@@ -2012,6 +2015,7 @@ $\nY8O
 8\foQS
 8\n4k_EClientNotificationType_SteamInputActionSetChanged
 8\n4k_EContentReportReason_GenderedNonConsensualMaterial
+8\n4k_EGameFrameRateReportingPreference_Yes_NonAnonymous
 8\n4k_EProfileCustomizationTypeAchievementsCompletionist
 8\n4k_ESteamDeckCompatibilityResultDisplayType_Invisible
 8\n4k_ESteamOSCompatibilityResultDisplayType_Unsupported
@@ -5055,6 +5059,7 @@ Zulu
 \n google/protobuf/descriptor.proto
 \n!CMsgVerticalScrollBarSizeResponse
 \n!CRemotePlayTogetherGroupUpdateMsg
+\n!EGameFrameRateReportingPreference
 \n!EPublishedFileInappropriateResult
 \n!ESteamDeckCompatibilityTestResult
 \n#CClientNotificationGroupChatMessage
